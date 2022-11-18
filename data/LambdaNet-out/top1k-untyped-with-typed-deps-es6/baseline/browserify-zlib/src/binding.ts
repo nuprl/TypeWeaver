@@ -23,13 +23,13 @@ exports.DEFLATERAW = 5
 exports.INFLATERAW = 6
 exports.UNZIP = 7
 
-var GZIP_HEADER_ID1: Number = 0x1f
-var GZIP_HEADER_ID2: Number = 0x8b
+var GZIP_HEADER_ID1: number = 0x1f
+var GZIP_HEADER_ID2: number = 0x8b
 
 /**
  * Emulate Node's zlib C++ layer for use by the JS layer in index.js
  */
-function Zlib (mode: Number): Void {
+function Zlib (mode: number): Void {
   if (typeof mode !== 'number' || mode < exports.DEFLATE || mode > exports.UNZIP) {
     throw new TypeError('Bad argument')
   }
@@ -71,15 +71,15 @@ Zlib.prototype.close = function () {
   this.dictionary = null
 }
 
-Zlib.prototype.write = function (flush: String, input: HTMLInputElement, in_off: Number, in_len: Number, out: Array, out_off: Boolean, out_len: Boolean) {
+Zlib.prototype.write = function (flush: string, input: HTMLInputElement, in_off: number, in_len: number, out: any[], out_off: boolean, out_len: boolean) {
   return this._write(true, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype.writeSync = function (flush: String, input: HTMLInputElement, in_off: Number, in_len: Number, out: Array, out_off: Boolean, out_len: Boolean) {
+Zlib.prototype.writeSync = function (flush: string, input: HTMLInputElement, in_off: number, in_len: number, out: any[], out_off: boolean, out_len: boolean) {
   return this._write(false, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype._write = function (async: Boolean, flush: Number, input: Element, in_off: Number, in_len: Number, out: Number, out_off: Function, out_len: Array) {
+Zlib.prototype._write = function (async: boolean, flush: number, input: Element, in_off: number, in_len: number, out: number, out_off: Function, out_len: any[]) {
   assert.equal(arguments.length, 8)
 
   assert(this.init_done, 'write before init')
@@ -146,7 +146,7 @@ Zlib.prototype._afterSync = function () {
 }
 
 Zlib.prototype._process = function () {
-  var next_expected_header_byte: Number = null
+  var next_expected_header_byte: number = null
 
   // If the avail_out is left at 0, then it means that it ran out
   // of room.  If there was avail_out left over, then it means
@@ -286,7 +286,7 @@ Zlib.prototype._after = function () {
   }
 }
 
-Zlib.prototype._error = function (message: String) {
+Zlib.prototype._error = function (message: string) {
   if (this.strm.msg) {
     message = this.strm.msg
   }
@@ -299,7 +299,7 @@ Zlib.prototype._error = function (message: String) {
   }
 }
 
-Zlib.prototype.init = function (windowBits: Number, level: Number, memLevel: Number, strategy: Number, dictionary: Array) {
+Zlib.prototype.init = function (windowBits: number, level: number, memLevel: number, strategy: number, dictionary: any[]) {
   assert(arguments.length === 4 || arguments.length === 5, 'init(windowBits, level, memLevel, strategy, [dictionary])')
 
   assert(windowBits >= 8 && windowBits <= 15, 'invalid windowBits')
@@ -326,7 +326,7 @@ Zlib.prototype.reset = function () {
   this._setDictionary()
 }
 
-Zlib.prototype._init = function (level: Number, windowBits: Object, memLevel: Function, strategy: Function, dictionary: Object) {
+Zlib.prototype._init = function (level: number, windowBits: object, memLevel: Function, strategy: Function, dictionary: object) {
   this.level = level
   this.windowBits = windowBits
   this.memLevel = memLevel

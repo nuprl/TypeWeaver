@@ -6,9 +6,9 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  **/
 
-function toFraction(frac: HTMLElement): Boolean {
+function toFraction(frac: HTMLElement): boolean {
 
-  var map: Object = {
+  var map: object = {
     '1:4': "¼",
     '1:2': "½",
     '3:4': "¾",

@@ -7,12 +7,12 @@
 (function () {
     'use strict';
 
-    var VERSION: Number;
+    var VERSION: number;
 
     VERSION = require('../package.json').version;
     exports.VERSION = VERSION;
 
-    function DoctrineError(message: String): Void {
+    function DoctrineError(message: string): Void {
         this.name = 'DoctrineError';
         this.message = message;
     }
@@ -24,7 +24,7 @@
     DoctrineError.prototype.constructor = DoctrineError;
     exports.DoctrineError = DoctrineError;
 
-    function throwError(message: String): Void {
+    function throwError(message: string): Void {
         throw new DoctrineError(message);
     }
     exports.throwError = throwError;

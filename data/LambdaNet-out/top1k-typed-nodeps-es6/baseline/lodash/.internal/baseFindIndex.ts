@@ -8,9 +8,9 @@
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseFindIndex(array: Array, predicate: Function, fromIndex: Number, fromRight: Boolean): Number {
+function baseFindIndex(array: any[], predicate: Function, fromIndex: number, fromRight: boolean): number {
   const { length } = array
-  let index: Number = fromIndex + (fromRight ? 1 : -1)
+  let index: number = fromIndex + (fromRight ? 1 : -1)
 
   while ((fromRight ? index-- : ++index < length)) {
     if (predicate(array[index], index, array)) {

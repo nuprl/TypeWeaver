@@ -1,13 +1,13 @@
 'use strict';
 
-var valid_variants: Array = ['normal', 'small-caps', 'inherit'];
+var valid_variants: any[] = ['normal', 'small-caps', 'inherit'];
 
-module.exports.isValid = function isValid(v: String): Boolean {
+module.exports.isValid = function isValid(v: string): boolean {
   return valid_variants.indexOf(v.toLowerCase()) !== -1;
 };
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('font-variant', v);
   },
   get: function() {

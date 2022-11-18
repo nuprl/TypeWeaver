@@ -8,7 +8,7 @@ import { Number } from './Number.js';
 import Url from './Url.js';
 import { compressHex, compressIdent, compressFunction } from './color.js';
 
-const handlers: Object = {
+const handlers: object = {
     Atrule,
     AttributeSelector,
     Value,
@@ -21,7 +21,7 @@ const handlers: Object = {
     Function: compressFunction
 };
 
-export default function(ast: Array) {
+export default function(ast: any[]) {
     walk(ast, {
         leave(node, item, list) {
             if (handlers.hasOwnProperty(node.type)) {

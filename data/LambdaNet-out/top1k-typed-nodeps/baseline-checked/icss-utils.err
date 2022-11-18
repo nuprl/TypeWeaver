@@ -1,49 +1,41 @@
-src/createICSSRules.ts(1,68): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/createICSSRules.ts(3,37): error TS2538: Type 'String' cannot be used as an index type.
-src/createICSSRules.ts(4,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/createICSSRules.ts(5,15): error TS2339: Property 'decl' does not exist on type 'Object'.
-src/createICSSRules.ts(7,24): error TS2538: Type 'String' cannot be used as an index type.
-src/createICSSRules.ts(14,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/createICSSRules.ts(15,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-src/createICSSRules.ts(16,19): error TS2339: Property 'rule' does not exist on type 'Object'.
-src/createICSSRules.ts(20,19): error TS2339: Property 'atRule' does not exist on type 'Object'.
-src/createICSSRules.ts(34,68): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/createICSSRules.ts(35,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/createICSSRules.ts(36,13): error TS2339: Property 'decl' does not exist on type 'Object'.
-src/createICSSRules.ts(38,22): error TS2538: Type 'String' cannot be used as an index type.
-src/createICSSRules.ts(46,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/createICSSRules.ts(47,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-src/createICSSRules.ts(48,17): error TS2339: Property 'rule' does not exist on type 'Object'.
-src/createICSSRules.ts(52,17): error TS2339: Property 'atRule' does not exist on type 'Object'.
+src/createICSSRules.ts(1,68): error TS2322: Type 'string' is not assignable to type 'number'.
+src/createICSSRules.ts(5,15): error TS2339: Property 'decl' does not exist on type 'object'.
+src/createICSSRules.ts(15,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+src/createICSSRules.ts(16,19): error TS2339: Property 'rule' does not exist on type 'object'.
+src/createICSSRules.ts(20,19): error TS2339: Property 'atRule' does not exist on type 'object'.
+src/createICSSRules.ts(27,12): error TS2339: Property 'append' does not exist on type 'any[]'.
+src/createICSSRules.ts(34,68): error TS2322: Type 'string' is not assignable to type 'number'.
+src/createICSSRules.ts(36,13): error TS2339: Property 'decl' does not exist on type 'object'.
+src/createICSSRules.ts(47,5): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+src/createICSSRules.ts(48,17): error TS2339: Property 'rule' does not exist on type 'object'.
+src/createICSSRules.ts(52,17): error TS2339: Property 'atRule' does not exist on type 'object'.
+src/createICSSRules.ts(57,8): error TS2339: Property 'append' does not exist on type 'any[]'.
 src/createICSSRules.ts(62,7): error TS2451: Cannot redeclare block-scoped variable 'createICSSRules'.
-src/createICSSRules.ts(62,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/extractICSS.ts(7,8): error TS2339: Property 'walkDecls' does not exist on type 'Object'.
-src/extractICSS.ts(8,33): error TS2339: Property 'raws' does not exist on type 'Object'.
-src/extractICSS.ts(8,52): error TS2339: Property 'raws' does not exist on type 'Object'.
-src/extractICSS.ts(10,26): error TS2339: Property 'prop' does not exist on type 'Object'.
-src/extractICSS.ts(10,39): error TS2339: Property 'value' does not exist on type 'Object'.
+src/extractICSS.ts(7,8): error TS2339: Property 'walkDecls' does not exist on type 'object'.
+src/extractICSS.ts(8,33): error TS2339: Property 'raws' does not exist on type 'object'.
+src/extractICSS.ts(8,52): error TS2339: Property 'raws' does not exist on type 'object'.
+src/extractICSS.ts(10,26): error TS2339: Property 'prop' does not exist on type 'object'.
+src/extractICSS.ts(10,39): error TS2339: Property 'value' does not exist on type 'object'.
 src/extractICSS.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
-src/extractICSS.ts(21,76): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/extractICSS.ts(23,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+src/extractICSS.ts(21,76): error TS2322: Type 'string' is not assignable to type 'number'.
+src/extractICSS.ts(23,9): error TS2322: Type '{}' is not assignable to type 'string'.
 src/extractICSS.ts(25,52): error TS2304: Cannot find name 'Void'.
-src/extractICSS.ts(27,17): error TS2538: Type 'String' cannot be used as an index type.
-src/extractICSS.ts(28,19): error TS2538: Type 'String' cannot be used as an index type.
-src/extractICSS.ts(33,12): error TS2339: Property 'remove' does not exist on type 'Object'.
+src/extractICSS.ts(33,12): error TS2339: Property 'remove' does not exist on type 'object'.
 src/extractICSS.ts(37,38): error TS2304: Cannot find name 'Void'.
-src/extractICSS.ts(40,12): error TS2339: Property 'remove' does not exist on type 'Object'.
+src/extractICSS.ts(40,12): error TS2339: Property 'remove' does not exist on type 'object'.
 src/extractICSS.ts(44,7): error TS2339: Property 'each' does not exist on type 'Function'.
-src/extractICSS.ts(45,14): error TS2339: Property 'type' does not exist on type 'Object'.
-src/extractICSS.ts(45,33): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-src/extractICSS.ts(46,16): error TS2339: Property 'selector' does not exist on type 'Object'.
+src/extractICSS.ts(45,14): error TS2339: Property 'type' does not exist on type 'object'.
+src/extractICSS.ts(45,33): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+src/extractICSS.ts(46,16): error TS2339: Property 'selector' does not exist on type 'object'.
 src/extractICSS.ts(47,24): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/extractICSS.ts(47,58): error TS2339: Property 'selector' does not exist on type 'Object'.
-src/extractICSS.ts(54,16): error TS2339: Property 'selector' does not exist on type 'Object'.
-src/extractICSS.ts(59,14): error TS2339: Property 'type' does not exist on type 'Object'.
-src/extractICSS.ts(59,35): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-src/extractICSS.ts(60,16): error TS2339: Property 'name' does not exist on type 'Object'.
+src/extractICSS.ts(47,58): error TS2339: Property 'selector' does not exist on type 'object'.
+src/extractICSS.ts(54,16): error TS2339: Property 'selector' does not exist on type 'object'.
+src/extractICSS.ts(59,14): error TS2339: Property 'type' does not exist on type 'object'.
+src/extractICSS.ts(59,35): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+src/extractICSS.ts(60,16): error TS2339: Property 'name' does not exist on type 'object'.
 src/extractICSS.ts(61,24): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/extractICSS.ts(61,59): error TS2339: Property 'params' does not exist on type 'Object'.
-src/extractICSS.ts(67,16): error TS2339: Property 'name' does not exist on type 'Object'.
+src/extractICSS.ts(61,59): error TS2339: Property 'params' does not exist on type 'object'.
+src/extractICSS.ts(67,16): error TS2339: Property 'name' does not exist on type 'object'.
 src/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
 src/index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
 src/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
@@ -51,26 +43,24 @@ src/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'createI
 src/replaceSymbols.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
 src/replaceSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
 src/replaceSymbols.ts(4,7): error TS2339: Property 'walk' does not exist on type 'Function'.
-src/replaceSymbols.ts(5,14): error TS2339: Property 'type' does not exist on type 'Object'.
-src/replaceSymbols.ts(5,38): error TS2339: Property 'value' does not exist on type 'Object'.
-src/replaceSymbols.ts(6,12): error TS2339: Property 'value' does not exist on type 'Object'.
+src/replaceSymbols.ts(5,14): error TS2339: Property 'type' does not exist on type 'object'.
+src/replaceSymbols.ts(5,38): error TS2339: Property 'value' does not exist on type 'object'.
+src/replaceSymbols.ts(6,12): error TS2339: Property 'value' does not exist on type 'object'.
 src/replaceSymbols.ts(6,20): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-src/replaceSymbols.ts(6,45): error TS2339: Property 'value' does not exist on type 'Object'.
-src/replaceSymbols.ts(7,21): error TS2339: Property 'type' does not exist on type 'Object'.
-src/replaceSymbols.ts(7,45): error TS2339: Property 'selector' does not exist on type 'Object'.
-src/replaceSymbols.ts(8,12): error TS2339: Property 'selector' does not exist on type 'Object'.
+src/replaceSymbols.ts(6,45): error TS2339: Property 'value' does not exist on type 'object'.
+src/replaceSymbols.ts(7,21): error TS2339: Property 'type' does not exist on type 'object'.
+src/replaceSymbols.ts(7,45): error TS2339: Property 'selector' does not exist on type 'object'.
+src/replaceSymbols.ts(8,12): error TS2339: Property 'selector' does not exist on type 'object'.
 src/replaceSymbols.ts(8,23): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-src/replaceSymbols.ts(9,14): error TS2339: Property 'selector' does not exist on type 'Object'.
-src/replaceSymbols.ts(12,21): error TS2339: Property 'type' does not exist on type 'Object'.
-src/replaceSymbols.ts(12,47): error TS2339: Property 'params' does not exist on type 'Object'.
-src/replaceSymbols.ts(13,12): error TS2339: Property 'params' does not exist on type 'Object'.
+src/replaceSymbols.ts(9,14): error TS2339: Property 'selector' does not exist on type 'object'.
+src/replaceSymbols.ts(12,21): error TS2339: Property 'type' does not exist on type 'object'.
+src/replaceSymbols.ts(12,47): error TS2339: Property 'params' does not exist on type 'object'.
+src/replaceSymbols.ts(13,12): error TS2339: Property 'params' does not exist on type 'object'.
 src/replaceSymbols.ts(13,21): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-src/replaceSymbols.ts(13,46): error TS2339: Property 'params' does not exist on type 'Object'.
+src/replaceSymbols.ts(13,46): error TS2339: Property 'params' does not exist on type 'object'.
 src/replaceValueSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
-src/replaceValueSymbols.ts(6,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/replaceValueSymbols.ts(11,32): error TS2339: Property 'index' does not exist on type 'Object'.
+src/replaceValueSymbols.ts(11,32): error TS2339: Property 'index' does not exist on type 'object'.
 

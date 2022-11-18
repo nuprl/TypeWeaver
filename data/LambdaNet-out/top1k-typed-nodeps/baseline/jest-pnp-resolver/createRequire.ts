@@ -1,6 +1,6 @@
 const nativeModule: HTMLElement = require(`module`);
 
-module.exports = (filename: String) => {
+module.exports = (filename: string) => {
   // Added in Node v12.2.0
   if (nativeModule.createRequire) {
     return nativeModule.createRequire(filename);
@@ -16,7 +16,7 @@ module.exports = (filename: String) => {
 };
 
 // Polyfill
-function _createRequire (filename: String): Array {
+function _createRequire (filename: string): any[] {
   const mod: HTMLElement = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))

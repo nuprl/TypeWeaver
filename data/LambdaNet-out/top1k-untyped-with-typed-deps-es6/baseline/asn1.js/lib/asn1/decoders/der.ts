@@ -8,7 +8,7 @@ import Node from '../base/node';
 // Import DER constants
 import der from '../constants/der';
 
-function DERDecoder(entity: Object): Void {
+function DERDecoder(entity: object): Void {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -19,7 +19,7 @@ function DERDecoder(entity: Object): Void {
 }
 export default DERDecoder;
 
-DERDecoder.prototype.decode = function decode(data: Object, options: Function): String {
+DERDecoder.prototype.decode = function decode(data: object, options: Function): string {
   if (!DecoderBuffer.isDecoderBuffer(data)) {
     data = new DecoderBuffer(data, options);
   }
@@ -29,16 +29,16 @@ DERDecoder.prototype.decode = function decode(data: Object, options: Function): 
 
 // Tree methods
 
-function DERNode(parent: String): Void {
+function DERNode(parent: string): Void {
   Node.call(this, 'der', parent);
 }
 inherits(DERNode, Node);
 
-DERNode.prototype._peekTag = function peekTag(buffer: Object, tag: Number, any: Number): Boolean {
+DERNode.prototype._peekTag = function peekTag(buffer: object, tag: number, any: number): boolean {
   if (buffer.isEmpty())
     return false;
 
-  const state: String = buffer.save();
+  const state: string = buffer.save();
   const decodedTag: Promise = derDecodeTag(buffer, 'Failed to peek tag: "' + tag + '"');
   if (buffer.isError(decodedTag))
     return decodedTag;
@@ -49,13 +49,13 @@ DERNode.prototype._peekTag = function peekTag(buffer: Object, tag: Number, any: 
     (decodedTag.tagStr + 'of') === tag || any;
 };
 
-DERNode.prototype._decodeTag = function decodeTag(buffer: Object, tag: Number, any: Boolean): Boolean {
-  const decodedTag: Object = derDecodeTag(buffer,
+DERNode.prototype._decodeTag = function decodeTag(buffer: object, tag: number, any: boolean): boolean {
+  const decodedTag: object = derDecodeTag(buffer,
     'Failed to decode tag of "' + tag + '"');
   if (buffer.isError(decodedTag))
     return decodedTag;
 
-  let len: Number = derDecodeLen(buffer,
+  let len: number = derDecodeLen(buffer,
     decodedTag.primitive,
     'Failed to get length of "' + tag + '"');
 
@@ -74,8 +74,8 @@ DERNode.prototype._decodeTag = function decodeTag(buffer: Object, tag: Number, a
     return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 
   // Indefinite length... find END tag
-  const state: Object = buffer.save();
-  const res: Array = this._skipUntilEnd(
+  const state: object = buffer.save();
+  const res: any[] = this._skipUntilEnd(
     buffer,
     'Failed to skip indefinite length body: "' + this.tag + '"');
   if (buffer.isError(res))
@@ -86,16 +86,16 @@ DERNode.prototype._decodeTag = function decodeTag(buffer: Object, tag: Number, a
   return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 };
 
-DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Object, fail: String): Object {
+DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: object, fail: string): object {
   for (;;) {
-    const tag: Object = derDecodeTag(buffer, fail);
+    const tag: object = derDecodeTag(buffer, fail);
     if (buffer.isError(tag))
       return tag;
-    const len: Number = derDecodeLen(buffer, tag.primitive, fail);
+    const len: number = derDecodeLen(buffer, tag.primitive, fail);
     if (buffer.isError(len))
       return len;
 
-    let res: Object;
+    let res: object;
     if (tag.primitive || len !== null)
       res = buffer.skip(len);
     else
@@ -110,15 +110,15 @@ DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Object, fail: St
   }
 };
 
-DERNode.prototype._decodeList = function decodeList(buffer: Object, tag: Number, decoder: Object,
-  options: Function): Array {
-  const result: Array = [];
+DERNode.prototype._decodeList = function decodeList(buffer: object, tag: number, decoder: object,
+  options: Function): any[] {
+  const result: any[] = [];
   while (!buffer.isEmpty()) {
-    const possibleEnd: String = this._peekTag(buffer, 'end');
+    const possibleEnd: string = this._peekTag(buffer, 'end');
     if (buffer.isError(possibleEnd))
       return possibleEnd;
 
-    const res: String = decoder.decode(buffer, 'der', options);
+    const res: string = decoder.decode(buffer, 'der', options);
     if (buffer.isError(res) && possibleEnd)
       break;
     result.push(res);
@@ -126,24 +126,24 @@ DERNode.prototype._decodeList = function decodeList(buffer: Object, tag: Number,
   return result;
 };
 
-DERNode.prototype._decodeStr = function decodeStr(buffer: Object, tag: Number): String {
+DERNode.prototype._decodeStr = function decodeStr(buffer: object, tag: number): string {
   if (tag === 'bitstr') {
-    const unused: Number = buffer.readUInt8();
+    const unused: number = buffer.readUInt8();
     if (buffer.isError(unused))
       return unused;
     return { unused: unused, data: buffer.raw() };
   } else if (tag === 'bmpstr') {
-    const raw: Array = buffer.raw();
+    const raw: any[] = buffer.raw();
     if (raw.length % 2 === 1)
       return buffer.error('Decoding of string type: bmpstr length mismatch');
 
-    let str: String = '';
+    let str: string = '';
     for (let i = 0; i < raw.length / 2; i++) {
       str += String.fromCharCode(raw.readUInt16BE(i * 2));
     }
     return str;
   } else if (tag === 'numstr') {
-    const numstr: String = buffer.raw().toString('ascii');
+    const numstr: string = buffer.raw().toString('ascii');
     if (!this._isNumstr(numstr)) {
       return buffer.error('Decoding of string type: ' +
                           'numstr unsupported characters');
@@ -154,7 +154,7 @@ DERNode.prototype._decodeStr = function decodeStr(buffer: Object, tag: Number): 
   } else if (tag === 'objDesc') {
     return buffer.raw();
   } else if (tag === 'printstr') {
-    const printstr: String = buffer.raw().toString('ascii');
+    const printstr: string = buffer.raw().toString('ascii');
     if (!this._isPrintstr(printstr)) {
       return buffer.error('Decoding of string type: ' +
                           'printstr unsupported characters');
@@ -167,11 +167,11 @@ DERNode.prototype._decodeStr = function decodeStr(buffer: Object, tag: Number): 
   }
 };
 
-DERNode.prototype._decodeObjid = function decodeObjid(buffer: Object, values: Object, relative: Boolean): Array {
-  let result: Array;
-  const identifiers: Array = [];
-  let ident: Number = 0;
-  let subident: Number = 0;
+DERNode.prototype._decodeObjid = function decodeObjid(buffer: object, values: object, relative: boolean): any[] {
+  let result: any[];
+  const identifiers: any[] = [];
+  let ident: number = 0;
+  let subident: number = 0;
   while (!buffer.isEmpty()) {
     subident = buffer.readUInt8();
     ident <<= 7;
@@ -184,8 +184,8 @@ DERNode.prototype._decodeObjid = function decodeObjid(buffer: Object, values: Ob
   if (subident & 0x80)
     identifiers.push(ident);
 
-  const first: Number = (identifiers[0] / 40) | 0;
-  const second: Number = identifiers[0] % 40;
+  const first: number = (identifiers[0] / 40) | 0;
+  const second: number = identifiers[0] % 40;
 
   if (relative)
     result = identifiers;
@@ -193,7 +193,7 @@ DERNode.prototype._decodeObjid = function decodeObjid(buffer: Object, values: Ob
     result = [first, second].concat(identifiers.slice(1));
 
   if (values) {
-    let tmp: Array = values[result.join(' ')];
+    let tmp: any[] = values[result.join(' ')];
     if (tmp === undefined)
       tmp = values[result.join('.')];
     if (tmp !== undefined)
@@ -203,15 +203,15 @@ DERNode.prototype._decodeObjid = function decodeObjid(buffer: Object, values: Ob
   return result;
 };
 
-DERNode.prototype._decodeTime = function decodeTime(buffer: Object, tag: Number): Date {
-  const str: String = buffer.raw().toString();
+DERNode.prototype._decodeTime = function decodeTime(buffer: object, tag: number): Date {
+  const str: string = buffer.raw().toString();
 
-  let year: Number;
-  let mon: Number;
-  let day: Number;
-  let hour: Number;
-  let min: Number;
-  let sec: Number;
+  let year: number;
+  let mon: number;
+  let day: number;
+  let hour: number;
+  let min: number;
+  let sec: number;
   if (tag === 'gentime') {
     year = str.slice(0, 4) | 0;
     mon = str.slice(4, 6) | 0;
@@ -237,22 +237,22 @@ DERNode.prototype._decodeTime = function decodeTime(buffer: Object, tag: Number)
   return Date.UTC(year, mon - 1, day, hour, min, sec, 0);
 };
 
-DERNode.prototype._decodeNull = function decodeNull(): Object {
+DERNode.prototype._decodeNull = function decodeNull(): object {
   return null;
 };
 
-DERNode.prototype._decodeBool = function decodeBool(buffer: Object): Boolean {
-  const res: Boolean = buffer.readUInt8();
+DERNode.prototype._decodeBool = function decodeBool(buffer: object): boolean {
+  const res: boolean = buffer.readUInt8();
   if (buffer.isError(res))
     return res;
   else
     return res !== 0;
 };
 
-DERNode.prototype._decodeInt = function decodeInt(buffer: Object, values: Promise): Array {
+DERNode.prototype._decodeInt = function decodeInt(buffer: object, values: Promise): any[] {
   // Bigint, return as it is (assume big endian)
-  const raw: Number = buffer.raw();
-  let res: String = new bignum(raw);
+  const raw: number = buffer.raw();
+  let res: string = new bignum(raw);
 
   if (values)
     res = values[res.toString(10)] || res;
@@ -260,7 +260,7 @@ DERNode.prototype._decodeInt = function decodeInt(buffer: Object, values: Promis
   return res;
 };
 
-DERNode.prototype._use = function use(entity: Function, obj: String): Object {
+DERNode.prototype._use = function use(entity: Function, obj: string): object {
   if (typeof entity === 'function')
     entity = entity(obj);
   return entity._getDecoder('der').tree;
@@ -268,17 +268,17 @@ DERNode.prototype._use = function use(entity: Function, obj: String): Object {
 
 // Utility methods
 
-function derDecodeTag(buf: HTMLElement, fail: String): Number {
-  let tag: Number = buf.readUInt8(fail);
+function derDecodeTag(buf: HTMLElement, fail: string): number {
+  let tag: number = buf.readUInt8(fail);
   if (buf.isError(tag))
     return tag;
 
-  const cls: String = der.tagClass[tag >> 6];
-  const primitive: Number = (tag & 0x20) === 0;
+  const cls: string = der.tagClass[tag >> 6];
+  const primitive: number = (tag & 0x20) === 0;
 
   // Multi-octet tag - load
   if ((tag & 0x1f) === 0x1f) {
-    let oct: Number = tag;
+    let oct: number = tag;
     tag = 0;
     while ((oct & 0x80) === 0x80) {
       oct = buf.readUInt8(fail);
@@ -291,7 +291,7 @@ function derDecodeTag(buf: HTMLElement, fail: String): Number {
   } else {
     tag &= 0x1f;
   }
-  const tagStr: String = der.tag[tag];
+  const tagStr: string = der.tag[tag];
 
   return {
     cls: cls,
@@ -301,8 +301,8 @@ function derDecodeTag(buf: HTMLElement, fail: String): Number {
   };
 }
 
-function derDecodeLen(buf: HTMLElement, primitive: Boolean, fail: Number): Number {
-  let len: Number = buf.readUInt8(fail);
+function derDecodeLen(buf: HTMLElement, primitive: boolean, fail: number): number {
+  let len: number = buf.readUInt8(fail);
   if (buf.isError(len))
     return len;
 
@@ -317,14 +317,14 @@ function derDecodeLen(buf: HTMLElement, primitive: Boolean, fail: Number): Numbe
   }
 
   // Long form
-  const num: Number = len & 0x7f;
+  const num: number = len & 0x7f;
   if (num > 4)
     return buf.error('length octect is too long');
 
   len = 0;
   for (let i = 0; i < num; i++) {
     len <<= 8;
-    const j: Number = buf.readUInt8(fail);
+    const j: number = buf.readUInt8(fail);
     if (buf.isError(j))
       return j;
     len |= j;

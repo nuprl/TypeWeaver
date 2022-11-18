@@ -3,8 +3,8 @@
 var bind: Function = require('function-bind');
 var GetIntrinsic: Function = require('get-intrinsic');
 
-var $apply: String = GetIntrinsic('%Function.prototype.apply%');
-var $call: String = GetIntrinsic('%Function.prototype.call%');
+var $apply: string = GetIntrinsic('%Function.prototype.apply%');
+var $call: string = GetIntrinsic('%Function.prototype.call%');
 var $reflectApply: Function = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
 
 var $gOPD: Function = GetIntrinsic('%Object.getOwnPropertyDescriptor%', true);
@@ -20,10 +20,10 @@ if ($defineProperty) {
 	}
 }
 
-module.exports = function callBind(originalFunction: Array): Array {
-	var func: String = $reflectApply(bind, $call, arguments);
+module.exports = function callBind(originalFunction: any[]): any[] {
+	var func: string = $reflectApply(bind, $call, arguments);
 	if ($gOPD && $defineProperty) {
-		var desc: Array = $gOPD(func, 'length');
+		var desc: any[] = $gOPD(func, 'length');
 		if (desc.configurable) {
 			// original length, plus the receiver, minus any additional arguments (after the receiver)
 			$defineProperty(
@@ -36,7 +36,7 @@ module.exports = function callBind(originalFunction: Array): Array {
 	return func;
 };
 
-var applyBind: String = function applyBind(): Promise {
+var applyBind: string = function applyBind(): Promise {
 	return $reflectApply(bind, $apply, arguments);
 };
 

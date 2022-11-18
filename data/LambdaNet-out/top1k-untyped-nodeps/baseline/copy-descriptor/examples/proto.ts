@@ -6,7 +6,7 @@ function App(): Void {
   this.cache = {};
 }
 
-App.prototype.set = function(key: String, val: String) {
+App.prototype.set = function(key: string, val: string) {
   this.cache[key] = val;
   return this;
 };

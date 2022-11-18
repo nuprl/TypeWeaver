@@ -33,7 +33,7 @@ var UNMATCHED_SURROGATE_PAIR_REGEXP: RegExp = /(^|[^\uD800-\uDBFF])[\uDC00-\uDFF
  * @private
  */
 
-var UNMATCHED_SURROGATE_PAIR_REPLACE: String = '$1\uFFFD$2'
+var UNMATCHED_SURROGATE_PAIR_REPLACE: string = '$1\uFFFD$2'
 
 /**
  * Encode a URL to a percent-encoded form, excluding already-encoded sequences.
@@ -53,7 +53,7 @@ var UNMATCHED_SURROGATE_PAIR_REPLACE: String = '$1\uFFFD$2'
  * @public
  */
 
-function encodeUrl (url: String): String {
+function encodeUrl (url: string): string {
   return String(url)
     .replace(UNMATCHED_SURROGATE_PAIR_REGEXP, UNMATCHED_SURROGATE_PAIR_REPLACE)
     .replace(ENCODE_CHARS_REGEXP, encodeURI)

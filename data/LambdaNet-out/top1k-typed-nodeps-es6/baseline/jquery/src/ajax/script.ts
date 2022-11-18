@@ -3,7 +3,7 @@ import document from "../var/document.js";
 
 import "../ajax.js";
 
-function canUseScriptTag( s: Object ): Boolean {
+function canUseScriptTag( s: object ): boolean {
 
 	// A script tag can only be used for async, cross domain or forced-by-attrs requests.
 	// Sync requests remain handled differently to preserve strict script ordering.
@@ -27,7 +27,7 @@ jQuery.ajaxSetup( {
 			"application/ecmascript, application/x-ecmascript"
 	},
 	converters: {
-		"text script": function( text: String ) {
+		"text script": function( text: string ) {
 			jQuery.globalEval( text );
 			return text;
 		}
@@ -35,7 +35,7 @@ jQuery.ajaxSetup( {
 } );
 
 // Handle cache's special case and crossDomain
-jQuery.ajaxPrefilter( "script", function( s: Object ) {
+jQuery.ajaxPrefilter( "script", function( s: object ) {
 	if ( s.cache === undefined ) {
 		s.cache = false;
 	}
@@ -48,15 +48,15 @@ jQuery.ajaxPrefilter( "script", function( s: Object ) {
 } );
 
 // Bind script tag hack transport
-jQuery.ajaxTransport( "script", function( s: Object ) {
+jQuery.ajaxTransport( "script", function( s: object ) {
 	if ( canUseScriptTag( s ) ) {
-		var script: Object, callback: Function;
+		var script: object, callback: Function;
 		return {
 			send: function( _: Function, complete: Function ) {
 				script = jQuery( "<script>" )
 					.attr( s.scriptAttrs || {} )
 					.prop( { charset: s.scriptCharset, src: s.url } )
-					.on( "load error", callback = function( evt: Object ) {
+					.on( "load error", callback = function( evt: object ) {
 						script.remove();
 						callback = null;
 						if ( evt ) {

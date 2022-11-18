@@ -18,18 +18,18 @@
     typed = require('./typed');
     utility = require('./utility');
 
-    function sliceSource(source: Array, index: Number, last: String): String {
+    function sliceSource(source: any[], index: number, last: string): string {
         return source.slice(index, last);
     }
 
     hasOwnProperty = (function () {
         var func: Function = Object.prototype.hasOwnProperty;
-        return function hasOwnProperty(obj: String, name: String): Boolean {
+        return function hasOwnProperty(obj: string, name: string): boolean {
             return func.call(obj, name);
         };
     }());
-    function shallowCopy(obj: Object): Object {
-        var ret: Object = {}, key: String;
+    function shallowCopy(obj: object): object {
+        var ret: object = {}, key: string;
         for (key in obj) {
             if (obj.hasOwnProperty(key)) {
                 ret[key] = obj[key];
@@ -38,42 +38,42 @@
         return ret;
     }
 
-    function isASCIIAlphanumeric(ch: Number): Boolean {
+    function isASCIIAlphanumeric(ch: number): boolean {
         return (ch >= 0x61  /* 'a' */ && ch <= 0x7A  /* 'z' */) ||
             (ch >= 0x41  /* 'A' */ && ch <= 0x5A  /* 'Z' */) ||
             (ch >= 0x30  /* '0' */ && ch <= 0x39  /* '9' */);
     }
 
-    function isParamTitle(title: String): Boolean {
+    function isParamTitle(title: string): boolean {
         return title === 'param' || title === 'argument' || title === 'arg';
     }
 
-    function isReturnTitle(title: String): Boolean {
+    function isReturnTitle(title: string): boolean {
         return title === 'return' || title === 'returns';
     }
 
-    function isProperty(title: String): Boolean {
+    function isProperty(title: string): boolean {
         return title === 'property' || title === 'prop';
     }
 
-    function isNameParameterRequired(title: String): Boolean {
+    function isNameParameterRequired(title: string): boolean {
         return isParamTitle(title) || isProperty(title) ||
             title === 'alias' || title === 'this' || title === 'mixes' || title === 'requires';
     }
 
-    function isAllowedName(title: String): Boolean {
+    function isAllowedName(title: string): boolean {
         return isNameParameterRequired(title) || title === 'const' || title === 'constant';
     }
 
-    function isAllowedNested(title: String): Boolean {
+    function isAllowedNested(title: string): boolean {
         return isProperty(title) || isParamTitle(title);
     }
 
-    function isAllowedOptional(title: String): Boolean {
+    function isAllowedOptional(title: string): boolean {
         return isProperty(title) || isParamTitle(title);
     }
 
-    function isTypeParameterRequired(title: String): Boolean {
+    function isTypeParameterRequired(title: string): boolean {
         return isParamTitle(title) || isReturnTitle(title) ||
             title === 'define' || title === 'enum' ||
             title === 'implements' || title === 'this' ||
@@ -82,7 +82,7 @@
 
     // Consider deprecation instead using 'isTypeParameterRequired' and 'Rules' declaration to pick when a type is optional/required
     // This would require changes to 'parseType'
-    function isAllowedType(title: String): Boolean {
+    function isAllowedType(title: string): boolean {
         return isTypeParameterRequired(title) || title === 'throws' || title === 'const' || title === 'constant' ||
             title === 'namespace' || title === 'member' || title === 'var' || title === 'module' ||
             title === 'constructor' || title === 'class' || title === 'extends' || title === 'augments' ||
@@ -90,11 +90,11 @@
     }
 
     // A regex character class that contains all whitespace except linebreak characters (\r, \n, \u2028, \u2029)
-    var WHITESPACE: String = '[ \\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]';
+    var WHITESPACE: string = '[ \\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]';
 
-    var STAR_MATCHER: String = '(' + WHITESPACE + '*(?:\\*' + WHITESPACE + '?)?)(.+|[\r\n\u2028\u2029])';
+    var STAR_MATCHER: string = '(' + WHITESPACE + '*(?:\\*' + WHITESPACE + '?)?)(.+|[\r\n\u2028\u2029])';
 
-    function unwrapComment(doc: String): String {
+    function unwrapComment(doc: string): string {
         // JSDoc comment is following form
         //   /**
         //    * .......
@@ -117,11 +117,11 @@
      * @param {number} unwrappedIndex The index of a character in the unwrapped string
      * @returns {number} The index of the corresponding character in the original wrapped string
      */
-    function convertUnwrappedCommentIndex(originalSource: String, unwrappedIndex: String): Number {
-        var replacedSource: String = originalSource.replace(/^\/\*\*?/, '');
-        var numSkippedChars: Number = 0;
+    function convertUnwrappedCommentIndex(originalSource: string, unwrappedIndex: string): number {
+        var replacedSource: string = originalSource.replace(/^\/\*\*?/, '');
+        var numSkippedChars: number = 0;
         var matcher: HTMLElement = new RegExp(STAR_MATCHER, 'g');
-        var match: Object;
+        var match: object;
 
         while ((match = matcher.exec(replacedSource))) {
             numSkippedChars += match[1].length;
@@ -137,18 +137,18 @@
     // JSDoc Tag Parser
 
     (function (exports: HTMLElement) {
-        var Rules: Object,
-            index: Number,
-            lineNumber: Number,
-            length: Number,
-            source: String,
+        var Rules: object,
+            index: number,
+            lineNumber: number,
+            length: number,
+            source: string,
             originalSource: Function,
             recoverable: Function,
-            sloppy: Boolean,
-            strict: Object;
+            sloppy: boolean,
+            strict: object;
 
-        function advance(): Number {
-            var ch: Number = source.charCodeAt(index);
+        function advance(): number {
+            var ch: number = source.charCodeAt(index);
             index += 1;
             if (esutils.code.isLineTerminator(ch) && !(ch === 0x0D  /* '\r' */ && source.charCodeAt(index) === 0x0A  /* '\n' */)) {
                 lineNumber += 1;
@@ -156,8 +156,8 @@
             return String.fromCharCode(ch);
         }
 
-        function scanTitle(): String {
-            var title: String = '';
+        function scanTitle(): string {
+            var title: string = '';
             // waste '@'
             advance();
 
@@ -168,8 +168,8 @@
             return title;
         }
 
-        function seekContent(): String {
-            var ch: Number, waiting: Boolean, last: Number = index;
+        function seekContent(): string {
+            var ch: number, waiting: boolean, last: number = index;
 
             waiting = false;
             while (last < length) {
@@ -193,8 +193,8 @@
         // { { ok: string } }
         //
         // therefore, scanning type expression with balancing braces.
-        function parseType(title: String, last: Number, addRange: String): Array {
-            var ch: Number, brace: Number, type: String, startIndex: Number, direct: Boolean = false;
+        function parseType(title: string, last: number, addRange: string): any[] {
+            var ch: number, brace: number, type: string, startIndex: number, direct: boolean = false;
 
 
             // search '{'
@@ -253,8 +253,8 @@
             return typed.parseType(type, {startIndex: convertIndex(startIndex), range: addRange});
         }
 
-        function scanIdentifier(last: Number): String {
-            var identifier: String;
+        function scanIdentifier(last: number): string {
+            var identifier: string;
             if (!esutils.code.isIdentifierStartES5(source.charCodeAt(index)) && !source[index].match(/[0-9]/)) {
                 return null;
             }
@@ -265,16 +265,16 @@
             return identifier;
         }
 
-        function skipWhiteSpace(last: Number): Void {
+        function skipWhiteSpace(last: number): Void {
             while (index < last && (esutils.code.isWhiteSpace(source.charCodeAt(index)) || esutils.code.isLineTerminator(source.charCodeAt(index)))) {
                 advance();
             }
         }
 
-        function parseName(last: Number, allowBrackets: Boolean, allowNestedParams: Boolean): String {
-            var name: String = '',
-                useBrackets: Boolean,
-                insideString: Number;
+        function parseName(last: number, allowBrackets: boolean, allowNestedParams: boolean): string {
+            var name: string = '',
+                useBrackets: boolean,
+                insideString: number;
 
 
             skipWhiteSpace(last);
@@ -325,8 +325,8 @@
                     name += advance();
                     skipWhiteSpace(last);
 
-                    var ch: Number;
-                    var bracketDepth: Number = 1;
+                    var ch: number;
+                    var bracketDepth: number = 1;
 
                     // scan in the default value
                     while (index < last) {
@@ -384,7 +384,7 @@
             return name;
         }
 
-        function skipToTag(): Boolean {
+        function skipToTag(): boolean {
             while (index < length && source.charCodeAt(index) !== 0x40  /* '@' */) {
                 advance();
             }
@@ -395,14 +395,14 @@
             return true;
         }
 
-        function convertIndex(rangeIndex: String): Boolean {
+        function convertIndex(rangeIndex: string): boolean {
             if (source === originalSource) {
                 return rangeIndex;
             }
             return convertUnwrappedCommentIndex(originalSource, rangeIndex);
         }
 
-        function TagParser(options: Function, title: String): Void {
+        function TagParser(options: Function, title: string): Void {
             this._options = options;
             this._title = title.toLowerCase();
             this._tag = {
@@ -419,11 +419,11 @@
         }
 
         // addError(err, ...)
-        TagParser.prototype.addError = function addError(errorText: String): Object {
-            var args: Array = Array.prototype.slice.call(arguments, 1),
-                msg: String = errorText.replace(
+        TagParser.prototype.addError = function addError(errorText: string): object {
+            var args: any[] = Array.prototype.slice.call(arguments, 1),
+                msg: string = errorText.replace(
                     /%(\d)/g,
-                    function (whole: Function, index: Number) {
+                    function (whole: Function, index: number) {
                         utility.assert(index < args.length, 'Message reference must be in range');
                         return args[index];
                     }
@@ -468,8 +468,8 @@
             return true;
         };
 
-        TagParser.prototype._parseNamePath = function (optional: Boolean) {
-            var name: String;
+        TagParser.prototype._parseNamePath = function (optional: boolean) {
+            var name: string;
             name = parseName(this._last, sloppy && isAllowedOptional(this._title), true);
             if (!name) {
                 if (!optional) {
@@ -492,7 +492,7 @@
 
 
         TagParser.prototype.parseName = function () {
-            var assign: Array, name: String;
+            var assign: any[], name: string;
 
             // param, property requires name
             if (isAllowedName(this._title)) {
@@ -540,8 +540,8 @@
             return true;
         };
 
-        TagParser.prototype.parseDescription = function parseDescription(): Boolean {
-            var description: String = sliceSource(source, index, this._last).trim();
+        TagParser.prototype.parseDescription = function parseDescription(): boolean {
+            var description: string = sliceSource(source, index, this._last).trim();
             if (description) {
                 if ((/^-\s+/).test(description)) {
                     description = description.substring(2);
@@ -551,12 +551,12 @@
             return true;
         };
 
-        TagParser.prototype.parseCaption = function parseDescription(): Boolean {
-            var description: String = sliceSource(source, index, this._last).trim();
-            var captionStartTag: String = '<caption>';
-            var captionEndTag: String = '</caption>';
-            var captionStart: Number = description.indexOf(captionStartTag);
-            var captionEnd: Number = description.indexOf(captionEndTag);
+        TagParser.prototype.parseCaption = function parseDescription(): boolean {
+            var description: string = sliceSource(source, index, this._last).trim();
+            var captionStartTag: string = '<caption>';
+            var captionEndTag: string = '</caption>';
+            var captionStart: number = description.indexOf(captionStartTag);
+            var captionEnd: number = description.indexOf(captionEndTag);
             if (captionStart >= 0 && captionEnd >= 0) {
                 this._tag.caption = description.substring(
                     captionStart + captionStartTag.length, captionEnd).trim();
@@ -567,8 +567,8 @@
             return true;
         };
 
-        TagParser.prototype.parseKind = function parseKind(): Boolean {
-            var kind: String, kinds: Object;
+        TagParser.prototype.parseKind = function parseKind(): boolean {
+            var kind: string, kinds: object;
             kinds = {
                 'class': true,
                 'constant': true,
@@ -592,8 +592,8 @@
             return true;
         };
 
-        TagParser.prototype.parseAccess = function parseAccess(): Boolean {
-            var access: String;
+        TagParser.prototype.parseAccess = function parseAccess(): boolean {
+            var access: string;
             access = sliceSource(source, index, this._last).trim();
             this._tag.access = access;
             if (access !== 'private' && access !== 'protected' && access !== 'public') {
@@ -604,12 +604,12 @@
             return true;
         };
 
-        TagParser.prototype.parseThis = function parseThis(): Boolean {
+        TagParser.prototype.parseThis = function parseThis(): boolean {
             // this name may be a name expression (e.g. {foo.bar}),
             // an union (e.g. {foo.bar|foo.baz}) or a name path (e.g. foo.bar)
-            var value: String = sliceSource(source, index, this._last).trim();
+            var value: string = sliceSource(source, index, this._last).trim();
             if (value && value.charAt(0) === '{') {
-                var gotType: Number = this.parseType();
+                var gotType: number = this.parseType();
                 if (gotType && this._tag.type.type === 'NameExpression' || this._tag.type.type === 'UnionType') {
                     this._tag.name = this._tag.type.name;
                     return true;
@@ -621,8 +621,8 @@
             }
         };
 
-        TagParser.prototype.parseVariation = function parseVariation(): Boolean {
-            var variation: Number, text: String;
+        TagParser.prototype.parseVariation = function parseVariation(): boolean {
+            var variation: number, text: string;
             text = sliceSource(source, index, this._last).trim();
             variation = parseFloat(text, 10);
             this._tag.variation = variation;
@@ -635,7 +635,7 @@
         };
 
         TagParser.prototype.ensureEnd = function () {
-            var shouldBeEmpty: String = sliceSource(source, index, this._last).trim();
+            var shouldBeEmpty: string = sliceSource(source, index, this._last).trim();
             if (shouldBeEmpty) {
                 if (!this.addError('Unknown content \'%0\'', shouldBeEmpty)) {
                     return false;
@@ -644,8 +644,8 @@
             return true;
         };
 
-        TagParser.prototype.epilogue = function epilogue(): Boolean {
-            var description: String;
+        TagParser.prototype.epilogue = function epilogue(): boolean {
+            var description: string;
 
             description = this._tag.description;
             // un-fix potentially sloppy declaration
@@ -739,7 +739,7 @@
         };
 
         TagParser.prototype.parse = function parse(): HTMLElement {
-            var i: Number, iz: Function, sequences: Array, method: String;
+            var i: number, iz: Function, sequences: any[], method: string;
 
 
             // empty title
@@ -773,8 +773,8 @@
             return this._tag;
         };
 
-        function parseTag(options: Object): Object {
-            var title: String, parser: HTMLElement, tag: Function;
+        function parseTag(options: object): object {
+            var title: string, parser: HTMLElement, tag: Function;
 
             // skip to tag
             if (!skipToTag()) {
@@ -800,8 +800,8 @@
         // Parse JSDoc
         //
 
-        function scanJSDocDescription(preserveWhitespace: Boolean): Number {
-            var description: String = '', ch: Number, atAllowed: Boolean;
+        function scanJSDocDescription(preserveWhitespace: boolean): number {
+            var description: string = '', ch: number, atAllowed: boolean;
 
             atAllowed = true;
             while (index < length) {
@@ -823,8 +823,8 @@
             return preserveWhitespace ? description : description.trim();
         }
 
-        function parse(comment: String, options: Object): Object {
-            var tags: Array = [], tag: Object, description: String, interestingTags: Object, i: Number, iz: Function;
+        function parse(comment: string, options: object): object {
+            var tags: any[] = [], tag: object, description: string, interestingTags: object, i: number, iz: Function;
 
             if (options === undefined) {
                 options = {};

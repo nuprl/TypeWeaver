@@ -1,15 +1,4 @@
-benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(23,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(25,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(27,28): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
+benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'object'.
 benchmark/parse-top.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/parse-top.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/parse-top.ts(8,17): error TS2732: Cannot find module './parse-top.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
@@ -18,11 +7,11 @@ benchmark/parse-top.ts(26,7): error TS2339: Property 'on' does not exist on type
 benchmark/parse-top.ts(26,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(30,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(30,53): error TS2304: Cannot find name 'Void'.
-benchmark/parse-top.ts(31,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/parse-top.ts(31,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse-top.ts(34,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(34,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(38,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(43,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
+benchmark/parse-top.ts(43,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/parse.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/parse.ts(17,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -35,40 +24,17 @@ benchmark/parse.ts(53,7): error TS2339: Property 'on' does not exist on type 'HT
 benchmark/parse.ts(53,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(57,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(57,53): error TS2304: Cannot find name 'Void'.
-benchmark/parse.ts(58,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/parse.ts(58,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse.ts(61,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(61,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(65,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
-index.ts(54,25): error TS2339: Property 'decode' does not exist on type 'Object'.
-index.ts(58,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(65,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(71,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(75,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(78,27): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(79,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(79,46): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(86,11): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(86,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-index.ts(89,13): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(112,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(54,25): error TS2339: Property 'decode' does not exist on type 'object'.
+index.ts(86,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+index.ts(112,7): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(113,27): error TS2339: Property 'encode' does not exist on type 'HTMLElement'.
-index.ts(119,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(125,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+index.ts(125,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(131,19): error TS2339: Property 'maxAge' does not exist on type 'HTMLElement'.
 index.ts(132,30): error TS2339: Property 'maxAge' does not exist on type 'HTMLElement'.
-index.ts(134,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(134,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(138,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(141,11): error TS2339: Property 'domain' does not exist on type 'HTMLElement'.
 index.ts(142,38): error TS2339: Property 'domain' does not exist on type 'HTMLElement'.
 index.ts(146,30): error TS2339: Property 'domain' does not exist on type 'HTMLElement'.
@@ -77,11 +43,9 @@ index.ts(150,38): error TS2339: Property 'path' does not exist on type 'HTMLElem
 index.ts(154,28): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
 index.ts(157,11): error TS2339: Property 'expires' does not exist on type 'HTMLElement'.
 index.ts(158,31): error TS2339: Property 'expires' does not exist on type 'HTMLElement'.
-index.ts(160,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+index.ts(160,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 index.ts(160,35): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'number'.
-index.ts(164,35): error TS2339: Property 'toUTCString' does not exist on type 'Object'.
+index.ts(164,35): error TS2339: Property 'toUTCString' does not exist on type 'object'.
 index.ts(167,11): error TS2339: Property 'httpOnly' does not exist on type 'HTMLElement'.
 index.ts(171,11): error TS2339: Property 'secure' does not exist on type 'HTMLElement'.
 index.ts(175,11): error TS2339: Property 'priority' does not exist on type 'HTMLElement'.
@@ -92,59 +56,27 @@ index.ts(195,11): error TS2339: Property 'sameSite' does not exist on type 'HTML
 index.ts(196,39): error TS2339: Property 'sameSite' does not exist on type 'HTMLElement'.
 index.ts(197,13): error TS2339: Property 'sameSite' does not exist on type 'HTMLElement'.
 index.ts(197,42): error TS2339: Property 'sameSite' does not exist on type 'HTMLElement'.
-index.ts(200,12): error TS2678: Type 'boolean' is not comparable to type 'String'.
-index.ts(229,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(241,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | number | boolean'.
+index.ts(200,12): error TS2678: Type 'boolean' is not comparable to type 'string'.
+index.ts(253,5): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 index.ts(264,52): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
-scripts/update-benchmark.ts(16,73): error TS2538: Type 'String' cannot be used as an index type.
-scripts/update-benchmark.ts(19,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 scripts/update-benchmark.ts(22,50): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(23,36): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 4, '(urlString: string, parseQueryString: false, slashesDenoteHost?: boolean): UrlWithStringQuery', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean): Url', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/update-benchmark.ts(26,9): error TS2339: Property 'get' does not exist on type 'Object'.
+scripts/update-benchmark.ts(26,9): error TS2339: Property 'get' does not exist on type 'object'.
 scripts/update-benchmark.ts(29,15): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
-scripts/update-benchmark.ts(30,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/update-benchmark.ts(30,35): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
-scripts/update-benchmark.ts(37,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/update-benchmark.ts(37,60): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-scripts/update-benchmark.ts(42,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'Object'.
-scripts/update-benchmark.ts(46,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'object'.
 scripts/update-benchmark.ts(53,62): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not exist on type 'HTMLElement'.
-scripts/update-benchmark.ts(57,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'Object'.
-scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'object'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
-scripts/version-history.ts(35,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/version-history.ts(38,7): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
 scripts/version-history.ts(40,22): error TS2339: Property 'getFullYear' does not exist on type 'HTMLInputElement'.
 scripts/version-history.ts(41,17): error TS2339: Property 'getMonth' does not exist on type 'HTMLInputElement'.
 scripts/version-history.ts(42,17): error TS2339: Property 'getDate' does not exist on type 'HTMLInputElement'.
-scripts/version-history.ts(48,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-scripts/version-history.ts(49,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+scripts/version-history.ts(48,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 

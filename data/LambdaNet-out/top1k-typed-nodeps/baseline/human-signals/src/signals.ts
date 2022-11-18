@@ -6,8 +6,8 @@ import { getRealtimeSignals } from './realtime.js'
 // Retrieve list of know signals (including realtime) with information about
 // them
 export const getSignals: Function = function () {
-  const realtimeSignals: Array = getRealtimeSignals()
-  const signals: Array = [...SIGNALS, ...realtimeSignals].map(normalizeSignal)
+  const realtimeSignals: any[] = getRealtimeSignals()
+  const signals: any[] = [...SIGNALS, ...realtimeSignals].map(normalizeSignal)
   return signals
 }
 

@@ -4,7 +4,7 @@ import inherits from 'inherits';
 import { Reporter } from '../base/reporter';
 import { Buffer } from 'safer-buffer';
 
-function DecoderBuffer(base: String, options: Function): Void {
+function DecoderBuffer(base: string, options: Function): Void {
   Reporter.call(this, options);
   if (!Buffer.isBuffer(base)) {
     this.error('Input not Buffer');
@@ -18,13 +18,13 @@ function DecoderBuffer(base: String, options: Function): Void {
 inherits(DecoderBuffer, Reporter);
 exports.DecoderBuffer = DecoderBuffer;
 
-DecoderBuffer.isDecoderBuffer = function isDecoderBuffer(data: Object): Boolean {
+DecoderBuffer.isDecoderBuffer = function isDecoderBuffer(data: object): boolean {
   if (data instanceof DecoderBuffer) {
     return true;
   }
 
   // Or accept compatible API
-  const isCompatible: Boolean = typeof data === 'object' &&
+  const isCompatible: boolean = typeof data === 'object' &&
     Buffer.isBuffer(data.base) &&
     data.constructor.name === 'DecoderBuffer' &&
     typeof data.offset === 'number' &&
@@ -39,13 +39,13 @@ DecoderBuffer.isDecoderBuffer = function isDecoderBuffer(data: Object): Boolean 
   return isCompatible;
 };
 
-DecoderBuffer.prototype.save = function save(): Object {
+DecoderBuffer.prototype.save = function save(): object {
   return { offset: this.offset, reporter: Reporter.prototype.save.call(this) };
 };
 
-DecoderBuffer.prototype.restore = function restore(save: Object): Array {
+DecoderBuffer.prototype.restore = function restore(save: object): any[] {
   // Return skipped data
-  const res: Array = new DecoderBuffer(this.base);
+  const res: any[] = new DecoderBuffer(this.base);
   res.offset = save.offset;
   res.length = this.offset;
 
@@ -55,22 +55,22 @@ DecoderBuffer.prototype.restore = function restore(save: Object): Array {
   return res;
 };
 
-DecoderBuffer.prototype.isEmpty = function isEmpty(): Boolean {
+DecoderBuffer.prototype.isEmpty = function isEmpty(): boolean {
   return this.offset === this.length;
 };
 
-DecoderBuffer.prototype.readUInt8 = function readUInt8(fail: Number): Promise {
+DecoderBuffer.prototype.readUInt8 = function readUInt8(fail: number): Promise {
   if (this.offset + 1 <= this.length)
     return this.base.readUInt8(this.offset++, true);
   else
     return this.error(fail || 'DecoderBuffer overrun');
 };
 
-DecoderBuffer.prototype.skip = function skip(bytes: String, fail: Number): Array {
+DecoderBuffer.prototype.skip = function skip(bytes: string, fail: number): any[] {
   if (!(this.offset + bytes <= this.length))
     return this.error(fail || 'DecoderBuffer overrun');
 
-  const res: Array = new DecoderBuffer(this.base);
+  const res: any[] = new DecoderBuffer(this.base);
 
   // Share reporter state
   res._reporterState = this._reporterState;
@@ -81,14 +81,14 @@ DecoderBuffer.prototype.skip = function skip(bytes: String, fail: Number): Array
   return res;
 };
 
-DecoderBuffer.prototype.raw = function raw(save: Object): Array {
+DecoderBuffer.prototype.raw = function raw(save: object): any[] {
   return this.base.slice(save ? save.offset : this.offset, this.length);
 };
 
-function EncoderBuffer(value: String, reporter: Object): Promise {
+function EncoderBuffer(value: string, reporter: object): Promise {
   if (Array.isArray(value)) {
     this.length = 0;
-    this.value = value.map(function(item: Array) {
+    this.value = value.map(function(item: any[]) {
       if (!EncoderBuffer.isEncoderBuffer(item))
         item = new EncoderBuffer(item, reporter);
       this.length += item.length;
@@ -111,13 +111,13 @@ function EncoderBuffer(value: String, reporter: Object): Promise {
 }
 exports.EncoderBuffer = EncoderBuffer;
 
-EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: Array): Boolean {
+EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: any[]): boolean {
   if (data instanceof EncoderBuffer) {
     return true;
   }
 
   // Or accept compatible API
-  const isCompatible: Boolean = typeof data === 'object' &&
+  const isCompatible: boolean = typeof data === 'object' &&
     data.constructor.name === 'EncoderBuffer' &&
     typeof data.length === 'number' &&
     typeof data.join === 'function';
@@ -125,7 +125,7 @@ EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: Array): Boolean {
   return isCompatible;
 };
 
-EncoderBuffer.prototype.join = function join(out: Object, offset: Number): Object {
+EncoderBuffer.prototype.join = function join(out: object, offset: number): object {
   if (!out)
     out = Buffer.alloc(this.length);
   if (!offset)
@@ -135,7 +135,7 @@ EncoderBuffer.prototype.join = function join(out: Object, offset: Number): Objec
     return out;
 
   if (Array.isArray(this.value)) {
-    this.value.forEach(function(item: Array) {
+    this.value.forEach(function(item: any[]) {
       item.join(out, offset);
       offset += item.length;
     });

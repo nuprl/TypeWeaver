@@ -20,7 +20,7 @@ function abort(state: Error): Void
  * @this  state
  * @param {string|number} key - job id to abort
  */
-function clean(key: String): Void
+function clean(key: string): Void
 {
   if (typeof this.jobs[key] == 'function')
   {

@@ -26,8 +26,8 @@
 (function () {
   'use strict';
 
-  export const ast: String = require('./ast');
-  export const code: String = require('./code');
-  export const keyword: String = require('./keyword');
+  export const ast: string = require('./ast');
+  export const code: string = require('./code');
+  export const keyword: string = require('./keyword');
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */

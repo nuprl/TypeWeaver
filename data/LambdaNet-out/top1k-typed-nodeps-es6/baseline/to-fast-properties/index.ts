@@ -1,15 +1,15 @@
-let fastProto: Object = null;
+let fastProto: object = null;
 
 // Creates an object with permanently fast properties in V8. See Toon Verwaest's
 // post https://medium.com/@tverwaes/setting-up-prototypes-in-v8-ec9c9491dfe2#5f62
 // for more details. Use %HasFastProperties(object) and the Node.js flag
 // --allow-natives-syntax to check whether an object has fast properties.
-function FastObject(object: Object): String {
+function FastObject(object: object): string {
 	// A prototype object will have "fast properties" enabled once it is checked
 	// against the inline property cache of a function, e.g. fastProto.property:
 	// https://github.com/v8/v8/blob/6.0.122/test/mjsunit/fast-prototype.js#L48-L63
 	if (fastProto !== null && typeof fastProto.property) {
-		const result: String = fastProto;
+		const result: string = fastProto;
 		fastProto = FastObject.prototype = null;
 		return result;
 	}
@@ -19,13 +19,13 @@ function FastObject(object: Object): String {
 	return new FastObject();
 }
 
-const inlineCacheCutoff: Number = 10;
+const inlineCacheCutoff: number = 10;
 
 // Initialize the inline property cache of FastObject.
 for (let index = 0; index <= inlineCacheCutoff; index++) {
 	FastObject();
 }
 
-export default function toFastproperties(object: Object): Boolean {
+export default function toFastproperties(object: object): boolean {
 	return FastObject(object);
 }

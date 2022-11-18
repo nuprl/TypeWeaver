@@ -3,14 +3,14 @@
 import xnv from 'xml-name-validator';
 import { NAMESPACES } from './constants';
 
-function generatePrefix(map: Object, newNamespace: Number, prefixIndex: String): String {
-  const generatedPrefix: String = `ns${prefixIndex}`;
+function generatePrefix(map: object, newNamespace: number, prefixIndex: string): string {
+  const generatedPrefix: string = `ns${prefixIndex}`;
   map[newNamespace] = [generatedPrefix];
   return generatedPrefix;
 }
 
-function preferredPrefixString(map: Object, ns: String, preferredPrefix: String): Array {
-  const candidateList: Array = map[ns];
+function preferredPrefixString(map: object, ns: string, preferredPrefix: string): any[] {
+  const candidateList: any[] = map[ns];
   if (!candidateList) {
     return null;
   }
@@ -20,7 +20,7 @@ function preferredPrefixString(map: Object, ns: String, preferredPrefix: String)
   return candidateList[candidateList.length - 1];
 }
 
-function serializeAttributeValue(value: String/* , requireWellFormed*/): String {
+function serializeAttributeValue(value: string/* , requireWellFormed*/): string {
   if (value === null) {
     return "";
   }
@@ -37,14 +37,14 @@ function serializeAttributeValue(value: String/* , requireWellFormed*/): String 
 
 function serializeAttributes(
   element: Element,
-  map: Object,
-  localPrefixes: Object,
-  ignoreNamespaceDefAttr: Boolean,
-  requireWellFormed: Boolean,
+  map: object,
+  localPrefixes: object,
+  ignoreNamespaceDefAttr: boolean,
+  requireWellFormed: boolean,
   refs: Element
-): String {
-  let result: String = "";
-  const namespaceLocalnames: Object = Object.create(null);
+): string {
+  let result: string = "";
+  const namespaceLocalnames: object = Object.create(null);
   for (const attr of element.attributes) {
     if (
       requireWellFormed &&
@@ -57,8 +57,8 @@ function serializeAttributes(
       namespaceLocalnames[attr.namespaceURI] = new Set();
     }
     namespaceLocalnames[attr.namespaceURI].add(attr.localName);
-    const attributeNamespace: String = attr.namespaceURI;
-    let candidatePrefix: String = null;
+    const attributeNamespace: string = attr.namespaceURI;
+    let candidatePrefix: string = null;
     if (attributeNamespace !== null) {
       candidatePrefix = preferredPrefixString(
         map,

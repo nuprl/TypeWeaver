@@ -6,27 +6,27 @@ import { unsafeStringify } from './stringify.js';
 // Inspired by https://github.com/LiosK/UUID.js
 // and http://docs.python.org/library/uuid.html
 
-let _nodeId: String;
-let _clockseq: Number;
+let _nodeId: string;
+let _clockseq: number;
 
 // Previous uuid creation time
-let _lastMSecs: Number = 0;
-let _lastNSecs: Number = 0;
+let _lastMSecs: number = 0;
+let _lastNSecs: number = 0;
 
 // See https://github.com/uuidjs/uuid for API details
-function v1(options: HTMLElement, buf: Number, offset: Number): Boolean {
-  let i: Number = (buf && offset) || 0;
-  const b: Object = buf || new Array(16);
+function v1(options: HTMLElement, buf: number, offset: number): boolean {
+  let i: number = (buf && offset) || 0;
+  const b: object = buf || new Array(16);
 
   options = options || {};
-  let node: Object = options.node || _nodeId;
-  let clockseq: Number = options.clockseq !== undefined ? options.clockseq : _clockseq;
+  let node: object = options.node || _nodeId;
+  let clockseq: number = options.clockseq !== undefined ? options.clockseq : _clockseq;
 
   // node and clockseq need to be initialized to random values if they're not
   // specified.  We do this lazily to minimize issues related to insufficient
   // system entropy.  See #189
   if (node == null || clockseq == null) {
-    const seedBytes: Object = options.random || (options.rng || rng)();
+    const seedBytes: object = options.random || (options.rng || rng)();
 
     if (node == null) {
       // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
@@ -50,14 +50,14 @@ function v1(options: HTMLElement, buf: Number, offset: Number): Boolean {
   // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
   // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
   // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
-  let msecs: Number = options.msecs !== undefined ? options.msecs : Date.now();
+  let msecs: number = options.msecs !== undefined ? options.msecs : Date.now();
 
   // Per 4.2.1.2, use count of uuid's generated during the current clock
   // cycle to simulate higher resolution clock
-  let nsecs: Number = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+  let nsecs: number = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
 
   // Time since last uuid creation (in msecs)
-  const dt: String = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000;
+  const dt: string = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000;
 
   // Per 4.2.1.2, Bump clockseq on clock regression
   if (dt < 0 && options.clockseq === undefined) {
@@ -83,14 +83,14 @@ function v1(options: HTMLElement, buf: Number, offset: Number): Boolean {
   msecs += 12219292800000;
 
   // `time_low`
-  const tl: Number = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  const tl: number = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
   b[i++] = (tl >>> 24) & 0xff;
   b[i++] = (tl >>> 16) & 0xff;
   b[i++] = (tl >>> 8) & 0xff;
   b[i++] = tl & 0xff;
 
   // `time_mid`
-  const tmh: Number = ((msecs / 0x100000000) * 10000) & 0xfffffff;
+  const tmh: number = ((msecs / 0x100000000) * 10000) & 0xfffffff;
   b[i++] = (tmh >>> 8) & 0xff;
   b[i++] = tmh & 0xff;
 

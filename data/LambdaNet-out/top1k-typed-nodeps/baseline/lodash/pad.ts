@@ -22,12 +22,12 @@ import stringSize from './.internal/stringSize.js'
  * pad('abc', 2)
  * // => 'abc'
  */
-function pad(string: String, length: Number, chars: String): String {
-  const strLength: Number = length ? stringSize(string) : 0
+function pad(string: string, length: number, chars: string): string {
+  const strLength: number = length ? stringSize(string) : 0
   if (!length || strLength >= length) {
     return (string || '')
   }
-  const mid: Number = (length - strLength) / 2
+  const mid: number = (length - strLength) / 2
   return (
     createPadding(Math.floor(mid), chars) +
     string +

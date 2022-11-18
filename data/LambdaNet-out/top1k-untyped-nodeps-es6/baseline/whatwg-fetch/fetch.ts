@@ -1,10 +1,10 @@
-var global: Object =
+var global: object =
   (typeof globalThis !== 'undefined' && globalThis) ||
   (typeof self !== 'undefined' && self) ||
   (typeof global !== 'undefined' && global) ||
   {}
 
-var support: Object = {
+var support: object = {
   searchParams: 'URLSearchParams' in global,
   iterable: 'Symbol' in global && 'iterator' in Symbol,
   blob:
@@ -22,12 +22,12 @@ var support: Object = {
   arrayBuffer: 'ArrayBuffer' in global
 }
 
-function isDataView(obj: Boolean): Boolean {
+function isDataView(obj: boolean): boolean {
   return obj && DataView.prototype.isPrototypeOf(obj)
 }
 
 if (support.arrayBuffer) {
-  var viewClasses: Array = [
+  var viewClasses: any[] = [
     '[object Int8Array]',
     '[object Uint8Array]',
     '[object Uint8ClampedArray]',
@@ -41,12 +41,12 @@ if (support.arrayBuffer) {
 
   var isArrayBufferView: Function =
     ArrayBuffer.isView ||
-    function(obj: String) {
+    function(obj: string) {
       return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1
     }
 }
 
-function normalizeName(name: String): String {
+function normalizeName(name: string): string {
   if (typeof name !== 'string') {
     name = String(name)
   }
@@ -56,7 +56,7 @@ function normalizeName(name: String): String {
   return name.toLowerCase()
 }
 
-function normalizeValue(value: Number): String {
+function normalizeValue(value: number): string {
   if (typeof value !== 'string') {
     value = String(value)
   }
@@ -64,10 +64,10 @@ function normalizeValue(value: Number): String {
 }
 
 // Build a destructive iterator for the value list
-function iteratorFor(items: Array): Object {
-  var iterator: Object = {
+function iteratorFor(items: any[]): object {
+  var iterator: object = {
     next: function() {
-      var value: String = items.shift()
+      var value: string = items.shift()
       return {done: value === undefined, value: value}
     }
   }
@@ -81,11 +81,11 @@ function iteratorFor(items: Array): Object {
   return iterator
 }
 
-export function Headers(headers: Array): Void {
+export function Headers(headers: any[]): Void {
   this.map = {}
 
   if (headers instanceof Headers) {
-    headers.forEach(function(value: String, name: String) {
+    headers.forEach(function(value: string, name: string) {
       this.append(name, value)
     }, this)
   } else if (Array.isArray(headers)) {
@@ -93,37 +93,37 @@ export function Headers(headers: Array): Void {
       this.append(header[0], header[1])
     }, this)
   } else if (headers) {
-    Object.getOwnPropertyNames(headers).forEach(function(name: String) {
+    Object.getOwnPropertyNames(headers).forEach(function(name: string) {
       this.append(name, headers[name])
     }, this)
   }
 }
 
-Headers.prototype.append = function(name: String, value: Number) {
+Headers.prototype.append = function(name: string, value: number) {
   name = normalizeName(name)
   value = normalizeValue(value)
-  var oldValue: String = this.map[name]
+  var oldValue: string = this.map[name]
   this.map[name] = oldValue ? oldValue + ', ' + value : value
 }
 
-Headers.prototype['delete'] = function(name: String) {
+Headers.prototype['delete'] = function(name: string) {
   delete this.map[normalizeName(name)]
 }
 
-Headers.prototype.get = function(name: String) {
+Headers.prototype.get = function(name: string) {
   name = normalizeName(name)
   return this.has(name) ? this.map[name] : null
 }
 
-Headers.prototype.has = function(name: String) {
+Headers.prototype.has = function(name: string) {
   return this.map.hasOwnProperty(normalizeName(name))
 }
 
-Headers.prototype.set = function(name: String, value: String) {
+Headers.prototype.set = function(name: string, value: string) {
   this.map[normalizeName(name)] = normalizeValue(value)
 }
 
-Headers.prototype.forEach = function(callback: Function, thisArg: Number) {
+Headers.prototype.forEach = function(callback: Function, thisArg: number) {
   for (var name in this.map) {
     if (this.map.hasOwnProperty(name)) {
       callback.call(thisArg, this.map[name], name, this)
@@ -132,24 +132,24 @@ Headers.prototype.forEach = function(callback: Function, thisArg: Number) {
 }
 
 Headers.prototype.keys = function() {
-  var items: Array = []
-  this.forEach(function(value: Number, name: String) {
+  var items: any[] = []
+  this.forEach(function(value: number, name: string) {
     items.push(name)
   })
   return iteratorFor(items)
 }
 
 Headers.prototype.values = function() {
-  var items: Array = []
-  this.forEach(function(value: String) {
+  var items: any[] = []
+  this.forEach(function(value: string) {
     items.push(value)
   })
   return iteratorFor(items)
 }
 
 Headers.prototype.entries = function() {
-  var items: Array = []
-  this.forEach(function(value: String, name: String) {
+  var items: any[] = []
+  this.forEach(function(value: string, name: string) {
     items.push([name, value])
   })
   return iteratorFor(items)
@@ -166,7 +166,7 @@ function consumed(body: HTMLElement): Promise {
   body.bodyUsed = true
 }
 
-function fileReaderReady(reader: Object): Promise {
+function fileReaderReady(reader: object): Promise {
   return new Promise(function(resolve: Function, reject: Function) {
     reader.onload = function() {
       resolve(reader.result)
@@ -177,23 +177,23 @@ function fileReaderReady(reader: Object): Promise {
   })
 }
 
-function readBlobAsArrayBuffer(blob: String): Promise {
+function readBlobAsArrayBuffer(blob: string): Promise {
   var reader: HTMLElement = new FileReader()
   var promise: Promise = fileReaderReady(reader)
   reader.readAsArrayBuffer(blob)
   return promise
 }
 
-function readBlobAsText(blob: String): Promise {
+function readBlobAsText(blob: string): Promise {
   var reader: HTMLElement = new FileReader()
   var promise: Promise = fileReaderReady(reader)
   reader.readAsText(blob)
   return promise
 }
 
-function readArrayBufferAsText(buf: Function): String {
-  var view: Array = new Uint8Array(buf)
-  var chars: Array = new Array(view.length)
+function readArrayBufferAsText(buf: Function): string {
+  var view: any[] = new Uint8Array(buf)
+  var chars: any[] = new Array(view.length)
 
   for (var i = 0; i < view.length; i++) {
     chars[i] = String.fromCharCode(view[i])
@@ -201,20 +201,20 @@ function readArrayBufferAsText(buf: Function): String {
   return chars.join('')
 }
 
-function bufferClone(buf: Array): Array {
+function bufferClone(buf: any[]): any[] {
   if (buf.slice) {
     return buf.slice(0)
   } else {
-    var view: Object = new Uint8Array(buf.byteLength)
+    var view: object = new Uint8Array(buf.byteLength)
     view.set(new Uint8Array(buf))
     return view.buffer
   }
 }
 
-function Body(): String {
+function Body(): string {
   this.bodyUsed = false
 
-  this._initBody = function(body: Object) {
+  this._initBody = function(body: object) {
     /*
       fetch-mock wraps the Response object in an ES6 Proxy to
       provide useful test harness features such as flush. However, on
@@ -260,7 +260,7 @@ function Body(): String {
 
   if (support.blob) {
     this.blob = function() {
-      var rejected: Object = consumed(this)
+      var rejected: object = consumed(this)
       if (rejected) {
         return rejected
       }
@@ -278,7 +278,7 @@ function Body(): String {
 
     this.arrayBuffer = function() {
       if (this._bodyArrayBuffer) {
-        var isConsumed: Boolean = consumed(this)
+        var isConsumed: boolean = consumed(this)
         if (isConsumed) {
           return isConsumed
         }
@@ -299,7 +299,7 @@ function Body(): String {
   }
 
   this.text = function() {
-    var rejected: String = consumed(this)
+    var rejected: string = consumed(this)
     if (rejected) {
       return rejected
     }
@@ -329,14 +329,14 @@ function Body(): String {
 }
 
 // HTTP methods whose capitalization should be normalized
-var methods: Array = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
+var methods: any[] = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
 
-function normalizeMethod(method: String): String {
-  var upcased: String = method.toUpperCase()
+function normalizeMethod(method: string): string {
+  var upcased: string = method.toUpperCase()
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input: HTMLElement, options: Object): Void {
+export function Request(input: HTMLElement, options: object): Void {
   if (!(this instanceof Request)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -403,40 +403,40 @@ Request.prototype.clone = function() {
   return new Request(this, {body: this._bodyInit})
 }
 
-function decode(body: String): Object {
-  var form: Object = new FormData()
+function decode(body: string): object {
+  var form: object = new FormData()
   body
     .trim()
     .split('&')
-    .forEach(function(bytes: String) {
+    .forEach(function(bytes: string) {
       if (bytes) {
-        var split: Array = bytes.split('=')
-        var name: String = split.shift().replace(/\+/g, ' ')
-        var value: String = split.join('=').replace(/\+/g, ' ')
+        var split: any[] = bytes.split('=')
+        var name: string = split.shift().replace(/\+/g, ' ')
+        var value: string = split.join('=').replace(/\+/g, ' ')
         form.append(decodeURIComponent(name), decodeURIComponent(value))
       }
     })
   return form
 }
 
-function parseHeaders(rawHeaders: String): Object {
-  var headers: Object = new Headers()
+function parseHeaders(rawHeaders: string): object {
+  var headers: object = new Headers()
   // Replace instances of \r\n and \n followed by at least one space or horizontal tab with a space
   // https://tools.ietf.org/html/rfc7230#section-3.2
-  var preProcessedHeaders: String = rawHeaders.replace(/\r?\n[\t ]+/g, ' ')
+  var preProcessedHeaders: string = rawHeaders.replace(/\r?\n[\t ]+/g, ' ')
   // Avoiding split via regex to work around a common IE11 bug with the core-js 3.6.0 regex polyfill
   // https://github.com/github/fetch/issues/748
   // https://github.com/zloirock/core-js/issues/751
   preProcessedHeaders
     .split('\r')
-    .map(function(header: String) {
+    .map(function(header: string) {
       return header.indexOf('\n') === 0 ? header.substr(1, header.length) : header
     })
-    .forEach(function(line: String) {
-      var parts: Array = line.split(':')
-      var key: String = parts.shift().trim()
+    .forEach(function(line: string) {
+      var parts: any[] = line.split(':')
+      var key: string = parts.shift().trim()
       if (key) {
-        var value: String = parts.join(':').trim()
+        var value: string = parts.join(':').trim()
         headers.append(key, value)
       }
     })
@@ -445,7 +445,7 @@ function parseHeaders(rawHeaders: String): Object {
 
 Body.call(Request.prototype)
 
-export function Response(bodyInit: Object, options: Object): Void {
+export function Response(bodyInit: object, options: object): Void {
   if (!(this instanceof Response)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -479,9 +479,9 @@ Response.error = function() {
   return response
 }
 
-var redirectStatuses: Array = [301, 302, 303, 307, 308]
+var redirectStatuses: any[] = [301, 302, 303, 307, 308]
 
-Response.redirect = function(url: String, status: Number) {
+Response.redirect = function(url: string, status: number) {
   if (redirectStatuses.indexOf(status) === -1) {
     throw new RangeError('Invalid status code')
   }
@@ -489,7 +489,7 @@ Response.redirect = function(url: String, status: Number) {
   return new Response(null, {status: status, headers: {location: url}})
 }
 
-export var DOMException: Object = global.DOMException
+export var DOMException: object = global.DOMException
 try {
   new DOMException()
 } catch (err) {
@@ -503,7 +503,7 @@ try {
   DOMException.prototype.constructor = DOMException
 }
 
-export function fetch(input: HTMLInputElement, init: Object): Object {
+export function fetch(input: HTMLInputElement, init: object): object {
   return new Promise(function(resolve: Function, reject: Function) {
     var request: Element = new Request(input, init)
 
@@ -518,13 +518,13 @@ export function fetch(input: HTMLInputElement, init: Object): Object {
     }
 
     xhr.onload = function() {
-      var options: Object = {
+      var options: object = {
         status: xhr.status,
         statusText: xhr.statusText,
         headers: parseHeaders(xhr.getAllResponseHeaders() || '')
       }
       options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL')
-      var body: String = 'response' in xhr ? xhr.response : xhr.responseText
+      var body: string = 'response' in xhr ? xhr.response : xhr.responseText
       setTimeout(function() {
         resolve(new Response(body, options))
       }, 0)
@@ -548,7 +548,7 @@ export function fetch(input: HTMLInputElement, init: Object): Object {
       }, 0)
     }
 
-    function fixUrl(url: String): String {
+    function fixUrl(url: string): string {
       try {
         return url === '' && global.location.href ? global.location.href : url
       } catch (e) {
@@ -577,11 +577,11 @@ export function fetch(input: HTMLInputElement, init: Object): Object {
     }
 
     if (init && typeof init.headers === 'object' && !(init.headers instanceof Headers)) {
-      Object.getOwnPropertyNames(init.headers).forEach(function(name: String) {
+      Object.getOwnPropertyNames(init.headers).forEach(function(name: string) {
         xhr.setRequestHeader(name, normalizeValue(init.headers[name]))
       })
     } else {
-      request.headers.forEach(function(value: Number, name: String) {
+      request.headers.forEach(function(value: number, name: string) {
         xhr.setRequestHeader(name, value)
       })
     }

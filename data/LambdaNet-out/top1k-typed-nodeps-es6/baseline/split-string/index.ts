@@ -1,6 +1,6 @@
 'use strict';
 
-export default (input: Array, options: Object = {}, fn: Function) => {
+export default (input: any[], options: object = {}, fn: Function) => {
   if (typeof input !== 'string') throw new TypeError('expected a string');
 
   if (typeof options === 'function') {
@@ -8,21 +8,21 @@ export default (input: Array, options: Object = {}, fn: Function) => {
     options = {};
   }
 
-  let separator: Number = options.separator || '.';
-  let ast: Object = { type: 'root', nodes: [], stash: [''] };
-  let stack: Array = [ast];
-  let state: String = { input, separator, stack };
-  let string: Array = input;
-  let value: String, node: Object;
-  let i: Number = -1;
+  let separator: number = options.separator || '.';
+  let ast: object = { type: 'root', nodes: [], stash: [''] };
+  let stack: any[] = [ast];
+  let state: string = { input, separator, stack };
+  let string: any[] = input;
+  let value: string, node: object;
+  let i: number = -1;
 
   state.bos = () => i === 0;
   state.eos = () => i === string.length;
   state.prev = () => string[i - 1];
   state.next = () => string[i + 1];
 
-  let quotes: Array = options.quotes || [];
-  let openers: Object = options.brackets || {};
+  let quotes: any[] = options.quotes || [];
+  let openers: object = options.brackets || {};
 
   if (options.brackets === true) {
     openers = { '[': ']', '(': ')', '{': '}', '<': '>' };
@@ -31,21 +31,21 @@ export default (input: Array, options: Object = {}, fn: Function) => {
     quotes = ['"', '\'', '`'];
   }
 
-  let closers: Object = invert(openers);
-  let keep: Function = options.keep || ((value: Number) => value !== '\\');
+  let closers: object = invert(openers);
+  let keep: Function = options.keep || ((value: number) => value !== '\\');
 
   const block: Function = () => (state.block = stack[stack.length - 1]);
   const peek: Function = () => string[i + 1];
   const next: Function = () => string[++i];
-  const append: Function = (value: Number) => {
+  const append: Function = (value: number) => {
     state.value = value;
     if (value && keep(value, state) !== false) {
       state.block.stash[state.block.stash.length - 1] += value;
     }
   };
 
-  const closeIndex: Function = (value: String, startIdx: String) => {
-    let idx: Number = string.indexOf(value, startIdx);
+  const closeIndex: Function = (value: string, startIdx: string) => {
+    let idx: number = string.indexOf(value, startIdx);
     if (idx > -1 && string[idx - 1] === '\\') {
       idx = closeIndex(value, idx + 1);
     }
@@ -72,8 +72,8 @@ export default (input: Array, options: Object = {}, fn: Function) => {
 
     // handle quoted strings
     if (quotes.includes(value)) {
-      let pos: String = i + 1;
-      let idx: Number = closeIndex(value, pos);
+      let pos: string = i + 1;
+      let idx: number = closeIndex(value, pos);
 
       if (idx > -1) {
         append(value); // append opening quote
@@ -129,7 +129,7 @@ export default (input: Array, options: Object = {}, fn: Function) => {
 
   while (node !== ast) {
     if (options.strict === true) {
-      let column: String = i - node.stash.length + 1;
+      let column: string = i - node.stash.length + 1;
       throw new SyntaxError(`Unmatched: "${node.stash[0]}", at column ${column}`);
     }
 
@@ -141,8 +141,8 @@ export default (input: Array, options: Object = {}, fn: Function) => {
   return node.stash;
 };
 
-function invert(obj: Object): Object {
-  let inverted: Object = {};
+function invert(obj: object): object {
+  let inverted: object = {};
   for (const key of Object.keys(obj)) inverted[obj[key]] = key;
   return inverted;
 }

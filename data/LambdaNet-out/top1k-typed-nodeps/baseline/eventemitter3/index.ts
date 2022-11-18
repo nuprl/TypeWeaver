@@ -1,7 +1,7 @@
 'use strict';
 
 var has: Function = Object.prototype.hasOwnProperty
-  , prefix: Number = '~';
+  , prefix: number = '~';
 
 /**
  * Constructor to create a storage for our `EE` objects.
@@ -38,7 +38,7 @@ if (Object.create) {
  * @constructor
  * @private
  */
-function EE(fn: String, context: Function, once: String): Void {
+function EE(fn: string, context: Function, once: string): Void {
   this.fn = fn;
   this.context = context;
   this.once = once || false;
@@ -55,13 +55,13 @@ function EE(fn: String, context: Function, once: String): Void {
  * @returns {EventEmitter}
  * @private
  */
-function addListener(emitter: Object, event: Number, fn: String, context: String, once: Number): String {
+function addListener(emitter: object, event: number, fn: string, context: string, once: number): string {
   if (typeof fn !== 'function') {
     throw new TypeError('The listener must be a function');
   }
 
-  var listener: String = new EE(fn, context || emitter, once)
-    , evt: String = prefix ? prefix + event : event;
+  var listener: string = new EE(fn, context || emitter, once)
+    , evt: string = prefix ? prefix + event : event;
 
   if (!emitter._events[evt]) emitter._events[evt] = listener, emitter._eventsCount++;
   else if (!emitter._events[evt].fn) emitter._events[evt].push(listener);
@@ -77,7 +77,7 @@ function addListener(emitter: Object, event: Number, fn: String, context: String
  * @param {(String|Symbol)} evt The Event name.
  * @private
  */
-function clearEvent(emitter: Object, evt: String): Void {
+function clearEvent(emitter: object, evt: string): Void {
   if (--emitter._eventsCount === 0) emitter._events = new Events();
   else delete emitter._events[evt];
 }
@@ -101,10 +101,10 @@ function EventEmitter(): Void {
  * @returns {Array}
  * @public
  */
-EventEmitter.prototype.eventNames = function eventNames(): Array {
-  var names: Array = []
+EventEmitter.prototype.eventNames = function eventNames(): any[] {
+  var names: any[] = []
     , events: Function
-    , name: String;
+    , name: string;
 
   if (this._eventsCount === 0) return names;
 
@@ -126,9 +126,9 @@ EventEmitter.prototype.eventNames = function eventNames(): Array {
  * @returns {Array} The registered listeners.
  * @public
  */
-EventEmitter.prototype.listeners = function listeners(event: String): Array {
-  var evt: String = prefix ? prefix + event : event
-    , handlers: Array = this._events[evt];
+EventEmitter.prototype.listeners = function listeners(event: string): any[] {
+  var evt: string = prefix ? prefix + event : event
+    , handlers: any[] = this._events[evt];
 
   if (!handlers) return [];
   if (handlers.fn) return [handlers.fn];
@@ -147,9 +147,9 @@ EventEmitter.prototype.listeners = function listeners(event: String): Array {
  * @returns {Number} The number of listeners.
  * @public
  */
-EventEmitter.prototype.listenerCount = function listenerCount(event: Number): Number {
-  var evt: String = prefix ? prefix + event : event
-    , listeners: Array = this._events[evt];
+EventEmitter.prototype.listenerCount = function listenerCount(event: number): number {
+  var evt: string = prefix ? prefix + event : event
+    , listeners: any[] = this._events[evt];
 
   if (!listeners) return 0;
   if (listeners.fn) return 1;
@@ -163,15 +163,15 @@ EventEmitter.prototype.listenerCount = function listenerCount(event: Number): Nu
  * @returns {Boolean} `true` if the event had listeners, else `false`.
  * @public
  */
-EventEmitter.prototype.emit = function emit(event: String, a1: String, a2: String, a3: String, a4: String, a5: String): Boolean {
-  var evt: String = prefix ? prefix + event : event;
+EventEmitter.prototype.emit = function emit(event: string, a1: string, a2: string, a3: string, a4: string, a5: string): boolean {
+  var evt: string = prefix ? prefix + event : event;
 
   if (!this._events[evt]) return false;
 
-  var listeners: Object = this._events[evt]
-    , len: Number = arguments.length
-    , args: Object
-    , i: Number;
+  var listeners: object = this._events[evt]
+    , len: number = arguments.length
+    , args: object
+    , i: number;
 
   if (listeners.fn) {
     if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
@@ -191,8 +191,8 @@ EventEmitter.prototype.emit = function emit(event: String, a1: String, a2: Strin
 
     listeners.fn.apply(listeners.context, args);
   } else {
-    var length: Number = listeners.length
-      , j: Number;
+    var length: number = listeners.length
+      , j: number;
 
     for (i = 0; i < length; i++) {
       if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
@@ -224,7 +224,7 @@ EventEmitter.prototype.emit = function emit(event: String, a1: String, a2: Strin
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.on = function on(event: String, fn: String, context: String): String {
+EventEmitter.prototype.on = function on(event: string, fn: string, context: string): string {
   return addListener(this, event, fn, context, false);
 };
 
@@ -237,7 +237,7 @@ EventEmitter.prototype.on = function on(event: String, fn: String, context: Stri
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.once = function once(event: String, fn: String, context: String): String {
+EventEmitter.prototype.once = function once(event: string, fn: string, context: string): string {
   return addListener(this, event, fn, context, true);
 };
 
@@ -251,8 +251,8 @@ EventEmitter.prototype.once = function once(event: String, fn: String, context: 
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.removeListener = function removeListener(event: Number, fn: Number, context: Boolean, once: Boolean): Object {
-  var evt: String = prefix ? prefix + event : event;
+EventEmitter.prototype.removeListener = function removeListener(event: number, fn: number, context: boolean, once: boolean): object {
+  var evt: string = prefix ? prefix + event : event;
 
   if (!this._events[evt]) return this;
   if (!fn) {
@@ -260,7 +260,7 @@ EventEmitter.prototype.removeListener = function removeListener(event: Number, f
     return this;
   }
 
-  var listeners: Object = this._events[evt];
+  var listeners: object = this._events[evt];
 
   if (listeners.fn) {
     if (
@@ -298,8 +298,8 @@ EventEmitter.prototype.removeListener = function removeListener(event: Number, f
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.removeAllListeners = function removeAllListeners(event: Number): Object {
-  var evt: Number;
+EventEmitter.prototype.removeAllListeners = function removeAllListeners(event: number): object {
+  var evt: number;
 
   if (event) {
     evt = prefix ? prefix + event : event;

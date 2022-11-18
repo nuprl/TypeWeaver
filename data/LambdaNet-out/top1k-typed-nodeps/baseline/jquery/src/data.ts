@@ -17,7 +17,7 @@ import dataUser from "./data/var/dataUser.js";
 var rbrace: RegExp = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
 	rmultiDash: RegExp = /[A-Z]/g;
 
-function getData( data: Number ): Boolean {
+function getData( data: number ): boolean {
 	if ( data === "true" ) {
 		return true;
 	}
@@ -42,8 +42,8 @@ function getData( data: Number ): Boolean {
 	return data;
 }
 
-function dataAttr( elem: HTMLElement, key: String, data: String ): String {
-	var name: String;
+function dataAttr( elem: HTMLElement, key: string, data: string ): string {
+	var name: string;
 
 	// If nothing was found internally, try to fetch any
 	// data from the HTML5 data-* attribute
@@ -66,34 +66,34 @@ function dataAttr( elem: HTMLElement, key: String, data: String ): String {
 }
 
 jQuery.extend( {
-	hasData: function( elem: String ) {
+	hasData: function( elem: string ) {
 		return dataUser.hasData( elem ) || dataPriv.hasData( elem );
 	},
 
-	data: function( elem: String, name: String, data: Object ) {
+	data: function( elem: string, name: string, data: object ) {
 		return dataUser.access( elem, name, data );
 	},
 
-	removeData: function( elem: String, name: String ) {
+	removeData: function( elem: string, name: string ) {
 		dataUser.remove( elem, name );
 	},
 
 	// TODO: Now that all calls to _data and _removeData have been replaced
 	// with direct calls to dataPriv methods, these can be deprecated.
-	_data: function( elem: String, name: String, data: Object ) {
+	_data: function( elem: string, name: string, data: object ) {
 		return dataPriv.access( elem, name, data );
 	},
 
-	_removeData: function( elem: String, name: String ) {
+	_removeData: function( elem: string, name: string ) {
 		dataPriv.remove( elem, name );
 	}
 } );
 
 jQuery.fn.extend( {
-	data: function( key: String, value: String ) {
-		var i: Number, name: String, data: Object,
-			elem: String = this[ 0 ],
-			attrs: Array = elem && elem.attributes;
+	data: function( key: string, value: string ) {
+		var i: number, name: string, data: object,
+			elem: string = this[ 0 ],
+			attrs: any[] = elem && elem.attributes;
 
 		// Gets all values
 		if ( key === undefined ) {
@@ -128,8 +128,8 @@ jQuery.fn.extend( {
 			} );
 		}
 
-		return access( this, function( value: Number ) {
-			var data: Array;
+		return access( this, function( value: number ) {
+			var data: any[];
 
 			// The calling jQuery object (element matches) is not empty
 			// (and therefore has an element appears at this[ 0 ]) and the
@@ -165,7 +165,7 @@ jQuery.fn.extend( {
 		}, null, value, arguments.length > 1, null, true );
 	},
 
-	removeData: function( key: String ) {
+	removeData: function( key: string ) {
 		return this.each( function() {
 			dataUser.remove( this, key );
 		} );

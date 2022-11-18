@@ -5,11 +5,11 @@
 
 'use strict';
 
-const NFA: String = require('./nfa/nfa');
-const DFA: String = require('./dfa/dfa');
+const NFA: string = require('./nfa/nfa');
+const DFA: string = require('./dfa/dfa');
 
-const nfaFromRegExp: String = require('./nfa/nfa-from-regexp');
-const builders: String = require('./nfa/builders');
+const nfaFromRegExp: string = require('./nfa/nfa-from-regexp');
+const builders: string = require('./nfa/builders');
 
 module.exports = {
 

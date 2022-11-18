@@ -1,9 +1,9 @@
 import jQuery from "../core.js";
 
 // Note: an element does not contain itself
-jQuery.contains = function( a: HTMLElement, b: Object ) {
+jQuery.contains = function( a: HTMLElement, b: object ) {
 	var adown: HTMLElement = a.nodeType === 9 ? a.documentElement : a,
-		bup: Object = b && b.parentNode;
+		bup: object = b && b.parentNode;
 
 	return a === bup || !!( bup && bup.nodeType === 1 && (
 

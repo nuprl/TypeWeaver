@@ -2,7 +2,7 @@ import isObject from './isObject.js'
 import isSymbol from './isSymbol.js'
 
 /** Used as references for various `Number` constants. */
-const NAN: Number = 0 / 0
+const NAN: number = 0 / 0
 
 /** Used to match leading and trailing whitespace. */
 const reTrim: RegExp = /^\s+|\s+$/g
@@ -17,7 +17,7 @@ const reIsBinary: RegExp = /^0b[01]+$/i
 const reIsOctal: RegExp = /^0o[0-7]+$/i
 
 /** Built-in method references without a dependency on `root`. */
-const freeParseInt: Array = parseInt
+const freeParseInt: any[] = parseInt
 
 /**
  * Converts `value` to a number.
@@ -41,7 +41,7 @@ const freeParseInt: Array = parseInt
  * toNumber('3.2')
  * // => 3.2
  */
-function toNumber(value: String): Number {
+function toNumber(value: string): number {
   if (typeof value === 'number') {
     return value
   }
@@ -49,14 +49,14 @@ function toNumber(value: String): Number {
     return NAN
   }
   if (isObject(value)) {
-    const other: String = typeof value.valueOf === 'function' ? value.valueOf() : value
+    const other: string = typeof value.valueOf === 'function' ? value.valueOf() : value
     value = isObject(other) ? `${other}` : other
   }
   if (typeof value !== 'string') {
     return value === 0 ? value : +value
   }
   value = value.replace(reTrim, '')
-  const isBinary: Boolean = reIsBinary.test(value)
+  const isBinary: boolean = reIsBinary.test(value)
   return (isBinary || reIsOctal.test(value))
     ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
     : (reIsBadHex.test(value) ? NAN : +value)

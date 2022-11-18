@@ -10,10 +10,10 @@ import "../selector.js";
 /**
  * Load a url into a page
  */
-jQuery.fn.load = function( url: String, params: String, callback: Function ) {
-	var selector: String, type: String, response: Boolean,
-		self: Array = this,
-		off: Number = url.indexOf( " " );
+jQuery.fn.load = function( url: string, params: string, callback: Function ) {
+	var selector: string, type: string, response: boolean,
+		self: any[] = this,
+		off: number = url.indexOf( " " );
 
 	if ( off > -1 ) {
 		selector = stripAndCollapse( url.slice( off ) );
@@ -43,7 +43,7 @@ jQuery.fn.load = function( url: String, params: String, callback: Function ) {
 			type: type || "GET",
 			dataType: "html",
 			data: params
-		} ).done( function( responseText: String ) {
+		} ).done( function( responseText: string ) {
 
 			// Save response for use in complete callback
 			response = arguments;
@@ -60,7 +60,7 @@ jQuery.fn.load = function( url: String, params: String, callback: Function ) {
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
 		// but they are ignored because response was set above.
 		// If it fails, this function gets "jqXHR", "status", "error"
-		} ).always( callback && function( jqXHR: Object, status: String ) {
+		} ).always( callback && function( jqXHR: object, status: string ) {
 			self.each( function() {
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
 			} );

@@ -3,7 +3,7 @@
 import Iteration from './iteration';
 
 export default ArrayIterator;
-function ArrayIterator(iterable: Function, start: Number, stop: String, step: Number): Void {
+function ArrayIterator(iterable: Function, start: number, stop: string, step: number): Void {
     this.array = iterable;
     this.start = start || 0;
     this.stop = stop || Infinity;
@@ -11,7 +11,7 @@ function ArrayIterator(iterable: Function, start: Number, stop: String, step: Nu
 }
 
 ArrayIterator.prototype.next = function () {
-    var iteration: Object;
+    var iteration: object;
     if (this.start < Math.min(this.array.length, this.stop)) {
         iteration = new Iteration(this.array[this.start], false, this.start);
         this.start += this.step;

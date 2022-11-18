@@ -2,11 +2,11 @@
 
 import unique from 'array-unique';
 
-export default function diff(init: Array): String {
-  var args: Array = [].slice.call(arguments, 1);
+export default function diff(init: any[]): string {
+  var args: any[] = [].slice.call(arguments, 1);
 
-  args.forEach(function (arr: Array) {
-    arr.forEach(function(ele: String) {
+  args.forEach(function (arr: any[]) {
+    arr.forEach(function(ele: string) {
       init.push(ele);
     });
   });

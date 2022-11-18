@@ -2,7 +2,7 @@ import isIE from "../var/isIE.js";
 import whitespace from "../var/whitespace.js";
 import support from "./support.js";
 
-var rbuggyQSA: Array = [];
+var rbuggyQSA: any[] = [];
 
 if ( isIE ) {
 	rbuggyQSA.push(

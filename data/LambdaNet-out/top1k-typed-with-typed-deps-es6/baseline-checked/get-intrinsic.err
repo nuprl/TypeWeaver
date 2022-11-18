@@ -1,55 +1,56 @@
-index.ts(5,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(5,5): error TS2740: Type 'SyntaxErrorConstructor' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+index.ts(6,5): error TS2740: Type 'FunctionConstructor' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 index.ts(7,5): error TS2740: Type 'TypeErrorConstructor' is missing the following properties from type 'RegExp': exec, test, source, global, and 13 more.
+index.ts(12,10): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
 index.ts(26,12): error TS2351: This expression is not constructable.
   Type 'RegExp' has no construct signatures.
 index.ts(48,85): error TS2339: Property '__proto__' does not exist on type 'Function'.
-index.ts(50,5): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(52,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(130,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(137,25): error TS2339: Property 'prototype' does not exist on type 'Object'.
-index.ts(141,13): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(211,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(214,6): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(214,23): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-index.ts(216,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(216,29): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-index.ts(219,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(50,5): error TS2322: Type '{}' is not assignable to type 'string'.
+index.ts(130,7): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+index.ts(132,15): error TS2339: Property 'prototype' does not exist on type 'any[]'.
+index.ts(137,25): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(214,6): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(214,23): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+index.ts(215,13): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+index.ts(216,13): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(216,29): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+index.ts(217,13): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
 index.ts(220,2): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 index.ts(221,35): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-index.ts(230,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(231,26): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(235,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(236,34): error TS2538: Type 'String' cannot be used as an index type.
+  Type '{}' has no call signatures.
+index.ts(231,3): error TS2322: Type 'unknown' is not assignable to type 'object'.
+index.ts(236,7): error TS2322: Type 'unknown' is not assignable to type 'object'.
+index.ts(237,7): error TS2367: This condition will always return 'false' since the types 'object' and 'string' have no overlap.
 index.ts(238,12): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 index.ts(241,14): error TS2351: This expression is not constructable.
   Type 'RegExp' has no construct signatures.
+index.ts(251,12): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
 index.ts(256,13): error TS2351: This expression is not constructable.
   Type 'RegExp' has no construct signatures.
 index.ts(259,13): error TS2351: This expression is not constructable.
   Type 'RegExp' has no construct signatures.
-index.ts(265,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(269,44): error TS2339: Property 'name' does not exist on type 'Object'.
-index.ts(270,32): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(273,32): error TS2339: Property 'alias' does not exist on type 'Object'.
-index.ts(285,6): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(285,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(285,40): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(286,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(286,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(286,41): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(299,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(300,23): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(302,10): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+index.ts(263,13): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+index.ts(269,44): error TS2339: Property 'name' does not exist on type 'object'.
+index.ts(270,32): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(273,32): error TS2339: Property 'alias' does not exist on type 'object'.
+index.ts(285,6): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(285,23): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(285,40): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(286,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(286,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(286,41): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(290,14): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+index.ts(300,4): error TS2322: Type 'unknown' is not assignable to type 'object'.
 index.ts(304,16): error TS2351: This expression is not constructable.
   Type 'RegExp' has no construct signatures.
-index.ts(319,61): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(320,19): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(322,20): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(325,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(326,19): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(330,16): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(319,61): error TS2339: Property 'get' does not exist on type 'object'.
+index.ts(320,19): error TS2339: Property 'get' does not exist on type 'object'.
 

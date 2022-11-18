@@ -4,7 +4,7 @@ import isRegExp from './isRegExp.js'
 import stringToArray from './.internal/stringToArray.js'
 
 /** Used as references for the maximum length and index of an array. */
-const MAX_ARRAY_LENGTH: Number = 4294967295
+const MAX_ARRAY_LENGTH: number = 4294967295
 
 /**
  * Splits `string` by `separator`.
@@ -23,7 +23,7 @@ const MAX_ARRAY_LENGTH: Number = 4294967295
  * split('a-b-c', '-', 2)
  * // => ['a', 'b']
  */
-function split(string: String, separator: String, limit: Number): Array {
+function split(string: string, separator: string, limit: number): any[] {
   limit = limit === undefined ? MAX_ARRAY_LENGTH : limit >>> 0
   if (!limit) {
     return []

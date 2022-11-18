@@ -1,8 +1,8 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 
-var parse: Function = function parse(v: String): String {
+var parse: Function = function parse(v: string): string {
   if (
     parsers.valueType(v) === parsers.TYPES.KEYWORD &&
     (v.toLowerCase() === 'repeat' ||
@@ -16,12 +16,12 @@ var parse: Function = function parse(v: String): String {
   return undefined;
 };
 
-module.exports.isValid = function isValid(v: Array): Boolean {
+module.exports.isValid = function isValid(v: any[]): boolean {
   return parse(v) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     this._setProperty('background-repeat', parse(v));
   },
   get: function() {

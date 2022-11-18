@@ -1,38 +1,30 @@
-.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-      Type 'String' is not assignable to type 'string | number'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-pseudomap.ts(5,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 pseudomap.ts(5,34): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(14,11): error TS2339: Property 'forEach' does not exist on type '{}'.
+pseudomap.ts(14,19): error TS2345: Argument of type '(value: string, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Types of parameters 'key' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
 pseudomap.ts(18,33): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-pseudomap.ts(28,35): error TS2345: Argument of type '(k: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+pseudomap.ts(28,35): error TS2345: Argument of type '(k: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'k' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'Number'.
-pseudomap.ts(29,9): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-pseudomap.ts(30,33): error TS2538: Type 'Number' cannot be used as an index type.
-pseudomap.ts(30,54): error TS2538: Type 'Number' cannot be used as an index type.
-pseudomap.ts(35,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-pseudomap.ts(39,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-pseudomap.ts(40,21): error TS2339: Property 'value' does not exist on type 'Object'.
-pseudomap.ts(43,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-pseudomap.ts(48,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'Object'.
-pseudomap.ts(56,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+    Type 'string' is not assignable to type 'number'.
+pseudomap.ts(29,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+pseudomap.ts(35,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(39,7): error TS2322: Type 'string' is not assignable to type 'object'.
+pseudomap.ts(39,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(40,21): error TS2339: Property 'value' does not exist on type 'object'.
+pseudomap.ts(44,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+pseudomap.ts(48,7): error TS2322: Type 'string' is not assignable to type 'object'.
+pseudomap.ts(48,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'object'.
+pseudomap.ts(57,8): error TS2339: Property 'size' does not exist on type 'any[]'.
+pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 pseudomap.ts(87,51): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(97,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+pseudomap.ts(97,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 pseudomap.ts(102,52): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'Object'.
+pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'object'.
 pseudomap.ts(112,15): error TS2350: Only a void function can be called with the 'new' keyword.
-pseudomap.ts(112,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+pseudomap.ts(112,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 

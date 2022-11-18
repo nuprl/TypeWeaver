@@ -1,36 +1,27 @@
 ava.config.ts(1,25): error TS2307: Cannot find module '@ehmicky/dev-tasks/ava.config.js' or its corresponding type declarations.
 gulpfile.ts(1,15): error TS2307: Cannot find module '@ehmicky/dev-tasks' or its corresponding type declarations.
-src/core.ts(3,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/main.ts(9,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/main.ts(35,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/main.ts(36,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/main.ts(10,41): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => readonly [PropertyKey, never]'.
+  Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): readonly [PropertyKey, never]'.
+src/main.ts(35,9): error TS2322: Type 'number' is not assignable to type 'string'.
 src/main.ts(36,40): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable: Iterable<Number> | ArrayLike<Number>, mapfn: (v: Number, k: number) => any, thisArg?: any): any[]', gave the following error.
-    Type 'String' is not assignable to type 'number'.
-  Overload 2 of 4, '(arrayLike: ArrayLike<Number>, mapfn: (v: Number, k: number) => any, thisArg?: any): any[]', gave the following error.
-    Type 'String' is not assignable to type 'number'.
-src/main.ts(49,11): error TS2339: Property 'name' does not exist on type 'Object'.
-src/main.ts(49,17): error TS2339: Property 'description' does not exist on type 'Object'.
-src/main.ts(49,30): error TS2339: Property 'supported' does not exist on type 'Object'.
-src/main.ts(49,41): error TS2339: Property 'action' does not exist on type 'Object'.
-src/main.ts(49,49): error TS2339: Property 'forced' does not exist on type 'Object'.
-src/main.ts(49,57): error TS2339: Property 'standard' does not exist on type 'Object'.
-src/main.ts(51,5): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
-src/main.ts(65,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/main.ts(72,52): error TS2339: Property 'number' does not exist on type 'Object'.
-src/realtime.ts(3,9): error TS2322: Type 'number' is not assignable to type 'String'.
-src/realtime.ts(3,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/realtime.ts(3,37): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+  Overload 1 of 4, '(iterable: ArrayLike<number> | Iterable<number>, mapfn: (v: number, k: number) => any, thisArg?: any): any[]', gave the following error.
+    Type 'string' is not assignable to type 'number'.
+  Overload 2 of 4, '(arrayLike: ArrayLike<number>, mapfn: (v: number, k: number) => any, thisArg?: any): any[]', gave the following error.
+    Type 'string' is not assignable to type 'number'.
+src/main.ts(49,11): error TS2339: Property 'name' does not exist on type '{}'.
+src/main.ts(49,17): error TS2339: Property 'description' does not exist on type '{}'.
+src/main.ts(49,30): error TS2339: Property 'supported' does not exist on type '{}'.
+src/main.ts(49,41): error TS2339: Property 'action' does not exist on type '{}'.
+src/main.ts(49,49): error TS2339: Property 'forced' does not exist on type '{}'.
+src/main.ts(49,57): error TS2339: Property 'standard' does not exist on type '{}'.
+src/main.ts(72,52): error TS2339: Property 'number' does not exist on type 'object'.
+src/realtime.ts(3,9): error TS2322: Type 'number' is not assignable to type 'string'.
 src/realtime.ts(4,23): error TS2769: No overload matches this call.
   Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>, mapfn: (v: unknown, k: number) => unknown, thisArg?: any): unknown[]', gave the following error.
-    Type 'String' is not assignable to type 'number'.
+    Type 'string' is not assignable to type 'number'.
   Overload 2 of 4, '(arrayLike: ArrayLike<unknown>, mapfn: (v: unknown, k: number) => unknown, thisArg?: any): unknown[]', gave the following error.
-    Type 'String' is not assignable to type 'number'.
-src/realtime.ts(9,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-src/realtime.ts(10,13): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-src/signals.ts(9,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/signals.ts(10,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/signals.ts(10,63): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
-  Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): unknown'.
+    Type 'string' is not assignable to type 'number'.
+src/signals.ts(10,63): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any'.
+  Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): any'.
 src/signals.ts(29,17): error TS2538: Type 'any' cannot be used as an index type.
 

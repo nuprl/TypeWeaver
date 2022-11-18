@@ -1,7 +1,7 @@
 "use strict"
-var os: String = require("os")
+var os: string = require("os")
 
-var hasUnicode: Number = module.exports = function () {
+var hasUnicode: number = module.exports = function () {
   // Recent Win32 platforms (>XP) CAN support unicode in the console but
   // don't have to, and in non-english locales often use traditional local
   // code pages. There's no way, short of windows system calls or execing
@@ -11,6 +11,6 @@ var hasUnicode: Number = module.exports = function () {
   if (os.type() == "Windows_NT") { return false }
 
   var isUTF8: RegExp = /UTF-?8$/i
-  var ctype: Number = process.env.LC_ALL || process.env.LC_CTYPE || process.env.LANG
+  var ctype: number = process.env.LC_ALL || process.env.LC_CTYPE || process.env.LANG
   return isUTF8.test(ctype)
 }

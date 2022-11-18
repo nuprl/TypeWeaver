@@ -20,7 +20,7 @@
  * endsWith('abc', 'b', 2)
  * // => true
  */
-function endsWith(string: Array, target: Array, position: Number): Boolean {
+function endsWith(string: any[], target: any[], position: number): boolean {
   const { length } = string
   position = position === undefined ? length : +position
   if (position < 0 || position != position) {
@@ -29,7 +29,7 @@ function endsWith(string: Array, target: Array, position: Number): Boolean {
   else if (position > length) {
     position = length
   }
-  const end: Number = position
+  const end: number = position
   position -= target.length
   return position >= 0 && string.slice(position, end) == target
 }

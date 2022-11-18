@@ -19,22 +19,22 @@ class SourceMapSource extends Source {
 		removeOriginalSource
 	) {
 		super();
-		const valueIsBuffer: Boolean = Buffer.isBuffer(value);
+		const valueIsBuffer: boolean = Buffer.isBuffer(value);
 		this._valueAsString = valueIsBuffer ? undefined : value;
 		this._valueAsBuffer = valueIsBuffer ? value : undefined;
 
 		this._name = name;
 
 		this._hasSourceMap = !!sourceMap;
-		const sourceMapIsBuffer: String = Buffer.isBuffer(sourceMap);
-		const sourceMapIsString: Boolean = typeof sourceMap === "string";
+		const sourceMapIsBuffer: string = Buffer.isBuffer(sourceMap);
+		const sourceMapIsString: boolean = typeof sourceMap === "string";
 		this._sourceMapAsObject =
 			sourceMapIsBuffer || sourceMapIsString ? undefined : sourceMap;
 		this._sourceMapAsString = sourceMapIsString ? sourceMap : undefined;
 		this._sourceMapAsBuffer = sourceMapIsBuffer ? sourceMap : undefined;
 
 		this._hasOriginalSource = !!originalSource;
-		const originalSourceIsBuffer: String = Buffer.isBuffer(originalSource);
+		const originalSourceIsBuffer: string = Buffer.isBuffer(originalSource);
 		this._originalSourceAsString = originalSourceIsBuffer
 			? undefined
 			: originalSource;
@@ -44,7 +44,7 @@ class SourceMapSource extends Source {
 
 		this._hasInnerSourceMap = !!innerSourceMap;
 		const innerSourceMapIsBuffer: Function = Buffer.isBuffer(innerSourceMap);
-		const innerSourceMapIsString: Boolean = typeof innerSourceMap === "string";
+		const innerSourceMapIsString: boolean = typeof innerSourceMap === "string";
 		this._innerSourceMapAsObject =
 			innerSourceMapIsBuffer || innerSourceMapIsString
 				? undefined

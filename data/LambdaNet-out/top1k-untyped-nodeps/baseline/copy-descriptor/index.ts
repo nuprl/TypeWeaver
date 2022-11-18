@@ -47,7 +47,7 @@
  * @api public
  */
 
-module.exports = function copyDescriptor(receiver: String, provider: String, from: String, to: String): Void {
+module.exports = function copyDescriptor(receiver: string, provider: string, from: string, to: string): Void {
   if (!isObject(provider) && typeof provider !== 'function') {
     to = from;
     from = provider;
@@ -71,11 +71,11 @@ module.exports = function copyDescriptor(receiver: String, provider: String, fro
     throw new Error('property "' + from + '" does not exist');
   }
 
-  var val: String = Object.getOwnPropertyDescriptor(provider, from);
+  var val: string = Object.getOwnPropertyDescriptor(provider, from);
   if (val) Object.defineProperty(receiver, to, val);
 };
 
-function isObject(val: String): Boolean {
+function isObject(val: string): boolean {
   return {}.toString.call(val) === '[object Object]';
 }
 

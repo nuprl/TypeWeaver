@@ -8,18 +8,18 @@ import isWindow from "../var/isWindow.js";
 import "../event.js";
 
 var rfocusMorph: RegExp = /^(?:focusinfocus|focusoutblur)$/,
-	stopPropagationCallback: Function = function( e: Object ) {
+	stopPropagationCallback: Function = function( e: object ) {
 		e.stopPropagation();
 	};
 
 jQuery.extend( jQuery.event, {
 
-	trigger: function( event: Object, data: String, elem: Object, onlyHandlers: Boolean ) {
+	trigger: function( event: object, data: string, elem: object, onlyHandlers: boolean ) {
 
-		var i: Number, cur: Object, tmp: Object, bubbleType: String, ontype: String, handle: Object, special: Object, lastElement: Element,
-			eventPath: Array = [ elem || document ],
-			type: String = hasOwn.call( event, "type" ) ? event.type : event,
-			namespaces: Array = hasOwn.call( event, "namespace" ) ? event.namespace.split( "." ) : [];
+		var i: number, cur: object, tmp: object, bubbleType: string, ontype: string, handle: object, special: object, lastElement: Element,
+			eventPath: any[] = [ elem || document ],
+			type: string = hasOwn.call( event, "type" ) ? event.type : event,
+			namespaces: any[] = hasOwn.call( event, "namespace" ) ? event.namespace.split( "." ) : [];
 
 		cur = lastElement = tmp = elem = elem || document;
 
@@ -161,8 +161,8 @@ jQuery.extend( jQuery.event, {
 
 	// Piggyback on a donor event to simulate a different one
 	// Used only for `focus(in | out)` events
-	simulate: function( type: String, elem: String, event: String ) {
-		var e: String = jQuery.extend(
+	simulate: function( type: string, elem: string, event: string ) {
+		var e: string = jQuery.extend(
 			new jQuery.Event(),
 			event,
 			{
@@ -178,13 +178,13 @@ jQuery.extend( jQuery.event, {
 
 jQuery.fn.extend( {
 
-	trigger: function( type: String, data: Object ) {
+	trigger: function( type: string, data: object ) {
 		return this.each( function() {
 			jQuery.event.trigger( type, data, this );
 		} );
 	},
-	triggerHandler: function( type: String, data: Object ) {
-		var elem: String = this[ 0 ];
+	triggerHandler: function( type: string, data: object ) {
+		var elem: string = this[ 0 ];
 		if ( elem ) {
 			return jQuery.event.trigger( type, data, elem, true );
 		}

@@ -2,7 +2,7 @@
 const { solelyContainsHTTPTokenCodePoints } = require("./utils.js");
 
 module.exports = (mimeType: Element) => {
-  let serialization: String = `${mimeType.type}/${mimeType.subtype}`;
+  let serialization: string = `${mimeType.type}/${mimeType.subtype}`;
 
   if (mimeType.parameters.size === 0) {
     return serialization;

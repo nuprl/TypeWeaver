@@ -14,7 +14,7 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global global, define, System, Reflect, Promise */
 var __extends: Function;
-var __assign: String;
+var __assign: string;
 var __rest: Function;
 var __decorate: Function;
 var __param: Function;
@@ -39,9 +39,9 @@ var __classPrivateFieldSet: Function;
 var __classPrivateFieldIn: Function;
 var __createBinding: Function;
 (function (factory: Function) {
-    var root: String = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
+    var root: string = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
     if (typeof define === "function" && define.amd) {
-        define("tslib", ["exports"], function (exports: String) { factory(createExporter(root, createExporter(exports))); });
+        define("tslib", ["exports"], function (exports: string) { factory(createExporter(root, createExporter(exports))); });
     }
     else if (typeof module === "object" && typeof module.exports === "object") {
         factory(createExporter(root, createExporter(module.exports)));
@@ -49,7 +49,7 @@ var __createBinding: Function;
     else {
         factory(createExporter(root));
     }
-    function createExporter(exports: Object, previous: Function): Function {
+    function createExporter(exports: object, previous: Function): Function {
         if (exports !== root) {
             if (typeof Object.create === "function") {
                 Object.defineProperty(exports, "__esModule", { value: true });
@@ -58,15 +58,15 @@ var __createBinding: Function;
                 exports.__esModule = true;
             }
         }
-        return function (id: String, v: Number) { return exports[id] = previous ? previous(id, v) : v; };
+        return function (id: string, v: number) { return exports[id] = previous ? previous(id, v) : v; };
     }
 })
-(function (exporter: Object) {
+(function (exporter: object) {
     var extendStatics: Function = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d: Object, b: Array) { d.__proto__ = b; }) ||
-        function (d: Object, b: Object) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        ({ __proto__: [] } instanceof Array && function (d: object, b: any[]) { d.__proto__ = b; }) ||
+        function (d: object, b: object) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
 
-    __extends = function (d: Object, b: Object) {
+    __extends = function (d: object, b: object) {
         if (typeof b !== "function" && b !== null)
             throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
@@ -74,7 +74,7 @@ var __createBinding: Function;
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 
-    __assign = Object.assign || function (t: Object) {
+    __assign = Object.assign || function (t: object) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
             s = arguments[i];
             for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
@@ -82,8 +82,8 @@ var __createBinding: Function;
         return t;
     };
 
-    __rest = function (s: Object, e: String) {
-        var t: Object = {};
+    __rest = function (s: object, e: string) {
+        var t: object = {};
         for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
             t[p] = s[p];
         if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -94,36 +94,36 @@ var __createBinding: Function;
         return t;
     };
 
-    __decorate = function (decorators: Array, target: Array, key: String, desc: Number) {
-        var c: Number = arguments.length, r: String = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d: Function;
+    __decorate = function (decorators: any[], target: any[], key: string, desc: number) {
+        var c: number = arguments.length, r: string = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d: Function;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
 
-    __param = function (paramIndex: Number, decorator: Function) {
-        return function (target: Object, key: String) { decorator(target, key, paramIndex); }
+    __param = function (paramIndex: number, decorator: Function) {
+        return function (target: object, key: string) { decorator(target, key, paramIndex); }
     };
 
-    __metadata = function (metadataKey: String, metadataValue: Number) {
+    __metadata = function (metadataKey: string, metadataValue: number) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
     };
 
-    __awaiter = function (thisArg: Number, _arguments: Object, P: Object, generator: Object) {
-        function adopt(value: String): String { return value instanceof P ? value : new P(function (resolve: Function) { resolve(value); }); }
+    __awaiter = function (thisArg: number, _arguments: object, P: object, generator: object) {
+        function adopt(value: string): string { return value instanceof P ? value : new P(function (resolve: Function) { resolve(value); }); }
         return new (P || (P = Promise))(function (resolve: Function, reject: Function) {
-            function fulfilled(value: String): Void { try { step(generator.next(value)); } catch (e) { reject(e); } }
-            function rejected(value: String): Void { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-            function step(result: Object): Void { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            function fulfilled(value: string): Void { try { step(generator.next(value)); } catch (e) { reject(e); } }
+            function rejected(value: string): Void { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function step(result: object): Void { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
             step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
     };
 
-    __generator = function (thisArg: String, body: Function) {
-        var _: Object = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f: Boolean, y: Object, t: Object, g: Object;
+    __generator = function (thisArg: string, body: Function) {
+        var _: object = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f: boolean, y: object, t: object, g: object;
         return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-        function verb(n: String): Function { return function (v: Function) { return step([n, v]); }; }
-        function step(op: Object): Object {
+        function verb(n: string): Function { return function (v: Function) { return step([n, v]); }; }
+        function step(op: object): object {
             if (f) throw new TypeError("Generator is already executing.");
             while (_) try {
                 if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
@@ -147,24 +147,24 @@ var __createBinding: Function;
         }
     };
 
-    __exportStar = function(m: Array, o: String) {
+    __exportStar = function(m: any[], o: string) {
         for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
     };
 
-    __createBinding = Object.create ? (function(o: Array, m: Object, k: Number, k2: String) {
+    __createBinding = Object.create ? (function(o: any[], m: object, k: number, k2: string) {
         if (k2 === undefined) k2 = k;
-        var desc: Object = Object.getOwnPropertyDescriptor(m, k);
+        var desc: object = Object.getOwnPropertyDescriptor(m, k);
         if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
             desc = { enumerable: true, get: function() { return m[k]; } };
         }
         Object.defineProperty(o, k2, desc);
-    }) : (function(o: Object, m: Object, k: Number, k2: String) {
+    }) : (function(o: object, m: object, k: number, k2: string) {
         if (k2 === undefined) k2 = k;
         o[k2] = m[k];
     });
 
-    __values = function (o: Array) {
-        var s: Boolean = typeof Symbol === "function" && Symbol.iterator, m: Function = s && o[s], i: Number = 0;
+    __values = function (o: any[]) {
+        var s: boolean = typeof Symbol === "function" && Symbol.iterator, m: Function = s && o[s], i: number = 0;
         if (m) return m.call(o);
         if (o && typeof o.length === "number") return {
             next: function () {
@@ -175,10 +175,10 @@ var __createBinding: Function;
         throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     };
 
-    __read = function (o: Object, n: Number) {
+    __read = function (o: object, n: number) {
         var m: Function = typeof Symbol === "function" && o[Symbol.iterator];
         if (!m) return o;
-        var i: Object = m.call(o), r: Object, ar: Array = [], e: Map;
+        var i: object = m.call(o), r: object, ar: any[] = [], e: Map;
         try {
             while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
         }
@@ -208,7 +208,7 @@ var __createBinding: Function;
         return r;
     };
 
-    __spreadArray = function (to: Array, from: Array, pack: String) {
+    __spreadArray = function (to: any[], from: any[], pack: string) {
         if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
             if (ar || !(i in from)) {
                 if (!ar) ar = Array.prototype.slice.call(from, 0, i);
@@ -218,73 +218,73 @@ var __createBinding: Function;
         return to.concat(ar || Array.prototype.slice.call(from));
     };
 
-    __await = function (v: String) {
+    __await = function (v: string) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
     };
 
-    __asyncGenerator = function (thisArg: Number, _arguments: Object, generator: Function) {
+    __asyncGenerator = function (thisArg: number, _arguments: object, generator: Function) {
         if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-        var g: Object = generator.apply(thisArg, _arguments || []), i: Object, q: Array = [];
+        var g: object = generator.apply(thisArg, _arguments || []), i: object, q: any[] = [];
         return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-        function verb(n: String): Void { if (g[n]) i[n] = function (v: String) { return new Promise(function (a: Function, b: Array) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-        function resume(n: String, v: String): Void { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-        function step(r: Object): Void { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);  }
-        function fulfill(value: String): Void { resume("next", value); }
-        function reject(value: String): Void { resume("throw", value); }
-        function settle(f: Function, v: String): Void { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+        function verb(n: string): Void { if (g[n]) i[n] = function (v: string) { return new Promise(function (a: Function, b: any[]) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n: string, v: string): Void { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+        function step(r: object): Void { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);  }
+        function fulfill(value: string): Void { resume("next", value); }
+        function reject(value: string): Void { resume("throw", value); }
+        function settle(f: Function, v: string): Void { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
     };
 
-    __asyncDelegator = function (o: Object) {
-        var i: Object, p: Boolean;
+    __asyncDelegator = function (o: object) {
+        var i: object, p: boolean;
         return i = {}, verb("next"), verb("throw", function (e: Function) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-        function verb(n: String, f: Function): Void { i[n] = o[n] ? function (v: String) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+        function verb(n: string, f: Function): Void { i[n] = o[n] ? function (v: string) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
     };
 
-    __asyncValues = function (o: Object) {
+    __asyncValues = function (o: object) {
         if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-        var m: Function = o[Symbol.asyncIterator], i: Object;
+        var m: Function = o[Symbol.asyncIterator], i: object;
         return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-        function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: String, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-        function settle(resolve: Function, reject: String, d: Boolean, v: Function): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
+        function verb(n: string): Void { i[n] = o[n] && function (v: object) { return new Promise(function (resolve: string, reject: string) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve: Function, reject: string, d: boolean, v: Function): Void { Promise.resolve(v).then(function(v: string) { resolve({ value: v, done: d }); }, reject); }
     };
 
-    __makeTemplateObject = function (cooked: Object, raw: String) {
+    __makeTemplateObject = function (cooked: object, raw: string) {
         if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
         return cooked;
     };
 
-    var __setModuleDefault: Function = Object.create ? (function(o: Array, v: String) {
+    var __setModuleDefault: Function = Object.create ? (function(o: any[], v: string) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
-    }) : function(o: Object, v: String) {
+    }) : function(o: object, v: string) {
         o["default"] = v;
     };
 
-    __importStar = function (mod: Object) {
+    __importStar = function (mod: object) {
         if (mod && mod.__esModule) return mod;
-        var result: Object = {};
+        var result: object = {};
         if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
         __setModuleDefault(result, mod);
         return result;
     };
 
-    __importDefault = function (mod: Object) {
+    __importDefault = function (mod: object) {
         return (mod && mod.__esModule) ? mod : { "default": mod };
     };
 
-    __classPrivateFieldGet = function (receiver: String, state: Map, kind: Number, f: Object) {
+    __classPrivateFieldGet = function (receiver: string, state: Map, kind: number, f: object) {
         if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
         if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
         return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
     };
 
-    __classPrivateFieldSet = function (receiver: String, state: Map, value: String, kind: Number, f: Object) {
+    __classPrivateFieldSet = function (receiver: string, state: Map, value: string, kind: number, f: object) {
         if (kind === "m") throw new TypeError("Private method is not writable");
         if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
         if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
         return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
     };
 
-    __classPrivateFieldIn = function (state: Map, receiver: Number) {
+    __classPrivateFieldIn = function (state: Map, receiver: number) {
         if (receiver === null || (typeof receiver !== "object" && typeof receiver !== "function")) throw new TypeError("Cannot use 'in' operator on non-object");
         return typeof state === "function" ? receiver === state : state.has(receiver);
     };

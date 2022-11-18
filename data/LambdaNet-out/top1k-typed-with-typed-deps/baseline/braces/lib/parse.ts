@@ -28,34 +28,34 @@ const {
  * parse
  */
 
-const parse: Function = (input: Array, options: Object = {}) => {
+const parse: Function = (input: any[], options: object = {}) => {
   if (typeof input !== 'string') {
     throw new TypeError('Expected a string');
   }
 
   let opts: HTMLElement = options || {};
-  let max: Number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
+  let max: number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
   if (input.length > max) {
     throw new SyntaxError(`Input length (${input.length}), exceeds max characters (${max})`);
   }
 
-  let ast: Object = { type: 'root', input, nodes: [] };
-  let stack: Array = [ast];
-  let block: String = ast;
-  let prev: Object = ast;
-  let brackets: Number = 0;
-  let length: Number = input.length;
-  let index: Number = 0;
-  let depth: Number = 0;
-  let value: String;
-  let memo: String = {};
+  let ast: object = { type: 'root', input, nodes: [] };
+  let stack: any[] = [ast];
+  let block: string = ast;
+  let prev: object = ast;
+  let brackets: number = 0;
+  let length: number = input.length;
+  let index: number = 0;
+  let depth: number = 0;
+  let value: string;
+  let memo: string = {};
 
   /**
    * Helpers
    */
 
   const advance: Function = () => input[index++];
-  const push: Function = (node: Object) => {
+  const push: Function = (node: object) => {
     if (node.type === 'text' && prev.type === 'dot') {
       prev.type = 'text';
     }
@@ -111,8 +111,8 @@ const parse: Function = (input: Array, options: Object = {}) => {
     if (value === CHAR_LEFT_SQUARE_BRACKET) {
       brackets++;
 
-      let closed: Boolean = true;
-      let next: Number;
+      let closed: boolean = true;
+      let next: number;
 
       while (index < length && (next = advance())) {
         value += next;
@@ -167,8 +167,8 @@ const parse: Function = (input: Array, options: Object = {}) => {
      */
 
     if (value === CHAR_DOUBLE_QUOTE || value === CHAR_SINGLE_QUOTE || value === CHAR_BACKTICK) {
-      let open: Number = value;
-      let next: Number;
+      let open: number = value;
+      let next: number;
 
       if (options.keepQuotes !== true) {
         value = '';
@@ -199,8 +199,8 @@ const parse: Function = (input: Array, options: Object = {}) => {
     if (value === CHAR_LEFT_CURLY_BRACE) {
       depth++;
 
-      let dollar: Number = prev.value && prev.value.slice(-1) === '$' || block.dollar === true;
-      let brace: Object = {
+      let dollar: number = prev.value && prev.value.slice(-1) === '$' || block.dollar === true;
+      let brace: object = {
         type: 'brace',
         open: true,
         close: false,
@@ -227,7 +227,7 @@ const parse: Function = (input: Array, options: Object = {}) => {
         continue;
       }
 
-      let type: String = 'close';
+      let type: string = 'close';
       block = stack.pop();
       block.close = true;
 
@@ -245,7 +245,7 @@ const parse: Function = (input: Array, options: Object = {}) => {
     if (value === CHAR_COMMA && depth > 0) {
       if (block.ranges > 0) {
         block.ranges = 0;
-        let open: String = block.nodes.shift();
+        let open: string = block.nodes.shift();
         block.nodes = [open, { type: 'text', value: stringify(block) }];
       }
 
@@ -259,7 +259,7 @@ const parse: Function = (input: Array, options: Object = {}) => {
      */
 
     if (value === CHAR_DOT && depth > 0 && block.commas === 0) {
-      let siblings: Array = block.nodes;
+      let siblings: any[] = block.nodes;
 
       if (depth === 0 || siblings.length === 0) {
         push({ type: 'text', value });
@@ -286,7 +286,7 @@ const parse: Function = (input: Array, options: Object = {}) => {
       if (prev.type === 'range') {
         siblings.pop();
 
-        let before: String = siblings[siblings.length - 1];
+        let before: string = siblings[siblings.length - 1];
         before.value += prev.value + value;
         prev = before;
         block.ranges--;
@@ -309,7 +309,7 @@ const parse: Function = (input: Array, options: Object = {}) => {
     block = stack.pop();
 
     if (block.type !== 'root') {
-      block.nodes.forEach((node: Object) => {
+      block.nodes.forEach((node: object) => {
         if (!node.nodes) {
           if (node.type === 'open') node.isOpen = true;
           if (node.type === 'close') node.isClose = true;
@@ -319,8 +319,8 @@ const parse: Function = (input: Array, options: Object = {}) => {
       });
 
       // get the location of the block on parent.nodes (block's siblings)
-      let parent: Object = stack[stack.length - 1];
-      let index: Number = parent.nodes.indexOf(block);
+      let parent: object = stack[stack.length - 1];
+      let index: number = parent.nodes.indexOf(block);
       // replace the (invalid) block with it's nodes
       parent.nodes.splice(index, 1, ...block.nodes);
     }

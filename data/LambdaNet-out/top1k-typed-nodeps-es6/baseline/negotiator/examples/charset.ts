@@ -1,5 +1,5 @@
 (function() {
-  var Buffer: Object, Iconv: Object, Negotiator: Object, availableCharsets: Function, http: Number, iconv: HTMLElement, key: String, message: String, messages: Object, server: Object, val: Function;
+  var Buffer: object, Iconv: object, Negotiator: object, availableCharsets: Function, http: number, iconv: HTMLElement, key: string, message: string, messages: object, server: object, val: Function;
 
   Negotiator = require('../lib/negotiator').Negotiator;
 
@@ -19,7 +19,7 @@
   };
 
   availableCharsets = (function() {
-    var _results: Array;
+    var _results: any[];
     _results = [];
     for (key in messages) {
       val = messages[key];
@@ -28,8 +28,8 @@
     return _results;
   })();
 
-  server = http.createServer(function(req: Object, res: Array) {
-    var charset: String, negotiator: Object;
+  server = http.createServer(function(req: object, res: any[]) {
+    var charset: string, negotiator: object;
     negotiator = new Negotiator(req);
     console.log("Accept-Charset: " + req.headers['accept-charset']);
     console.log("Preferred: " + (negotiator.charsets()));

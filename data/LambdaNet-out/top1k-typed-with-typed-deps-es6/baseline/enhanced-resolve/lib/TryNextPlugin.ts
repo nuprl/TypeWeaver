@@ -25,10 +25,10 @@ export default class TryNextPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("TryNextPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("TryNextPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				resolver.doResolve(
 					target,
 					request,

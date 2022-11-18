@@ -1,24 +1,24 @@
-const request: String = require('request');
-const allElectronVersions: Array = require('electron-releases');
-const fs: String = require('fs');
+const request: string = require('request');
+const allElectronVersions: any[] = require('electron-releases');
+const fs: string = require('fs');
 
-const electronVersions: Object = {};
-const electronFullVersions: Object = {};
-const chromiumVersions: Object = {};
-const chromiumFullVersions: Object = {};
+const electronVersions: object = {};
+const electronFullVersions: object = {};
+const chromiumVersions: object = {};
+const chromiumFullVersions: object = {};
 
-const makePrintable: Function = (mapping: Array) => JSON.stringify(mapping, null, "\t");
+const makePrintable: Function = (mapping: any[]) => JSON.stringify(mapping, null, "\t");
 
 allElectronVersions
   .filter((x: Function) => x.deps)
   .reverse()
-  .forEach((item: Object) => {
+  .forEach((item: object) => {
     const {deps: electron} = item;
 
     if (!electron.version.includes("nightly")) {
       // simple list
-      const simpleVersion: String = electron.version.split(".")[0] + "." + electron.version.split(".")[1];
-      const chromeVersion: String = electron.chrome.split(".")[0];
+      const simpleVersion: string = electron.version.split(".")[0] + "." + electron.version.split(".")[1];
+      const chromeVersion: string = electron.chrome.split(".")[0];
       electronVersions[simpleVersion] = chromeVersion;
       chromiumVersions[chromeVersion] = chromiumVersions[chromeVersion] || simpleVersion;
     }
@@ -36,7 +36,7 @@ allElectronVersions
   {list: electronFullVersions, file: "full-versions"},
   {list: chromiumVersions, file: "chromium-versions"},
   {list: chromiumFullVersions, file: "full-chromium-versions"},
-].forEach((obj: Object) => {
+].forEach((obj: object) => {
   fs.writeFile(`${obj.file}.js`, `module.exports = ${makePrintable(obj.list)};`, function (error: Promise) {
     if (error) {
       throw error;

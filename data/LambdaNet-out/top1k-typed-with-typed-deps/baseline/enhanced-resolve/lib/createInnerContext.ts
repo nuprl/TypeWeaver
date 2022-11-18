@@ -6,15 +6,15 @@
 "use strict";
 
 module.exports = function createInnerContext(
-	options: Object,
-	message: String,
-	messageOptional: Number
-): Object {
-	let messageReported: Boolean = false;
+	options: object,
+	message: string,
+	messageOptional: number
+): object {
+	let messageReported: boolean = false;
 	let innerLog: Function = undefined;
 	if (options.log) {
 		if (message) {
-			innerLog = (msg: String) => {
+			innerLog = (msg: string) => {
 				if (!messageReported) {
 					options.log(message);
 					messageReported = true;
@@ -25,7 +25,7 @@ module.exports = function createInnerContext(
 			innerLog = options.log;
 		}
 	}
-	const childContext: Object = {
+	const childContext: object = {
 		log: innerLog,
 		yield: options.yield,
 		fileDependencies: options.fileDependencies,

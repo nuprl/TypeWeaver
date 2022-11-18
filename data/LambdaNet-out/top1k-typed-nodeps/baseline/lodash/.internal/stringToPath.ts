@@ -1,8 +1,8 @@
 import memoizeCapped from './memoizeCapped.js'
 
-const charCodeOfDot: String = '.'.charCodeAt(0)
+const charCodeOfDot: string = '.'.charCodeAt(0)
 const reEscapeChar: RegExp = /\\(\\)?/g
-const rePropName: String = RegExp(
+const rePropName: string = RegExp(
   // Match anything that isn't a dot or bracket.
   '[^.[\\]]+' + '|' +
   // Or match property names within brackets.
@@ -23,13 +23,13 @@ const rePropName: String = RegExp(
  * @param {string} string The string to convert.
  * @returns {Array} Returns the property path array.
  */
-const stringToPath: String = memoizeCapped((string: String) => {
-  const result: Array = []
+const stringToPath: string = memoizeCapped((string: string) => {
+  const result: any[] = []
   if (string.charCodeAt(0) === charCodeOfDot) {
     result.push('')
   }
-  string.replace(rePropName, (match: String, expression: String, quote: Boolean, subString: String) => {
-    let key: String = match
+  string.replace(rePropName, (match: string, expression: string, quote: boolean, subString: string) => {
+    let key: string = match
     if (quote) {
       key = subString.replace(reEscapeChar, '$1')
     }

@@ -27,7 +27,7 @@ class WatcherManager {
 	}
 
 	watchFile(p, startTime) {
-		const directory: Number = path.dirname(p);
+		const directory: number = path.dirname(p);
 		if (directory === p) return null;
 		return this.getDirectoryWatcher(directory).watch(p, startTime);
 	}
@@ -45,7 +45,7 @@ const watcherManagers: Error = new WeakMap();
 module.exports = (options: Function) => {
 	const watcherManager: WatcherManager = watcherManagers.get(options);
 	if (watcherManager !== undefined) return watcherManager;
-	const newWatcherManager: String = new WatcherManager(options);
+	const newWatcherManager: string = new WatcherManager(options);
 	watcherManagers.set(options, newWatcherManager);
 	return newWatcherManager;
 };

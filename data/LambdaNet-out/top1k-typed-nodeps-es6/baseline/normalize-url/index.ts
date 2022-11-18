@@ -1,10 +1,10 @@
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
-const DATA_URL_DEFAULT_MIME_TYPE: String = 'text/plain';
-const DATA_URL_DEFAULT_CHARSET: String = 'us-ascii';
+const DATA_URL_DEFAULT_MIME_TYPE: string = 'text/plain';
+const DATA_URL_DEFAULT_CHARSET: string = 'us-ascii';
 
-const testParameter: Function = (name: String, filters: Array) => filters.some((filter: Object) => filter instanceof RegExp ? filter.test(name) : filter === name);
+const testParameter: Function = (name: string, filters: any[]) => filters.some((filter: object) => filter instanceof RegExp ? filter.test(name) : filter === name);
 
-const normalizeDataURL: Function = (urlString: String, {stripHash}) => {
+const normalizeDataURL: Function = (urlString: string, {stripHash}) => {
 	const match = /^data:(?<type>[^,]*?),(?<data>[^#]*?)(?:#(?<hash>.*))?$/.exec(urlString);
 
 	if (!match) {
@@ -55,7 +55,7 @@ const normalizeDataURL: Function = (urlString: String, {stripHash}) => {
 	return `data:${normalizedMediaType.join(';')},${isBase64 ? data.trim() : data}${hash ? `#${hash}` : ''}`;
 };
 
-export default function normalizeUrl(urlString: String, options: Object): String {
+export default function normalizeUrl(urlString: string, options: object): string {
 	options = {
 		defaultProtocol: 'http:',
 		normalizeProtocol: true,
@@ -84,15 +84,15 @@ export default function normalizeUrl(urlString: String, options: Object): String
 		throw new Error('`view-source:` is not supported as it is a non-standard protocol');
 	}
 
-	const hasRelativeProtocol: Number = urlString.startsWith('//');
-	const isRelativeUrl: Number = !hasRelativeProtocol && /^\.*\//.test(urlString);
+	const hasRelativeProtocol: number = urlString.startsWith('//');
+	const isRelativeUrl: number = !hasRelativeProtocol && /^\.*\//.test(urlString);
 
 	// Prepend protocol
 	if (!isRelativeUrl) {
 		urlString = urlString.replace(/^(?!(?:\w+:)?\/\/)|^\/\//, options.defaultProtocol);
 	}
 
-	const urlObject: String = new URL(urlString);
+	const urlObject: string = new URL(urlString);
 
 	if (options.forceHttp && options.forceHttps) {
 		throw new Error('The `forceHttp` and `forceHttps` options cannot be used together');
@@ -131,24 +131,24 @@ export default function normalizeUrl(urlString: String, options: Object): String
 		// (if any).
 		const protocolRegex: RegExp = /\b[a-z][a-z\d+\-.]{1,50}:\/\//g;
 
-		let lastIndex: Number = 0;
-		let result: String = '';
+		let lastIndex: number = 0;
+		let result: string = '';
 		for (;;) {
-			const match: Object = protocolRegex.exec(urlObject.pathname);
+			const match: object = protocolRegex.exec(urlObject.pathname);
 			if (!match) {
 				break;
 			}
 
-			const protocol: String = match[0];
-			const protocolAtIndex: Number = match.index;
-			const intermediate: String = urlObject.pathname.slice(lastIndex, protocolAtIndex);
+			const protocol: string = match[0];
+			const protocolAtIndex: number = match.index;
+			const intermediate: string = urlObject.pathname.slice(lastIndex, protocolAtIndex);
 
 			result += intermediate.replace(/\/{2,}/g, '/');
 			result += protocol;
 			lastIndex = protocolAtIndex + protocol.length;
 		}
 
-		const remnant: String = urlObject.pathname.slice(lastIndex, urlObject.pathname.length);
+		const remnant: string = urlObject.pathname.slice(lastIndex, urlObject.pathname.length);
 		result += remnant.replace(/\/{2,}/g, '/');
 
 		urlObject.pathname = result;
@@ -167,8 +167,8 @@ export default function normalizeUrl(urlString: String, options: Object): String
 	}
 
 	if (Array.isArray(options.removeDirectoryIndex) && options.removeDirectoryIndex.length > 0) {
-		let pathComponents: Array = urlObject.pathname.split('/');
-		const lastComponent: Array = pathComponents[pathComponents.length - 1];
+		let pathComponents: any[] = urlObject.pathname.split('/');
+		const lastComponent: any[] = pathComponents[pathComponents.length - 1];
 
 		if (testParameter(lastComponent, options.removeDirectoryIndex)) {
 			pathComponents = pathComponents.slice(0, -1);
@@ -228,7 +228,7 @@ export default function normalizeUrl(urlString: String, options: Object): String
 		urlObject.pathname = urlObject.pathname.replace(/\/$/, '');
 	}
 
-	const oldUrlString: String = urlString;
+	const oldUrlString: string = urlString;
 
 	// Take advantage of many of the Node `url` normalizations
 	urlString = urlObject.toString();

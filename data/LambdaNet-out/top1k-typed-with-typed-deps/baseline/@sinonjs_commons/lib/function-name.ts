@@ -6,7 +6,7 @@
  * @param  {Function} func
  * @returns {string}
  */
-module.exports = function functionName(func: Object): String {
+module.exports = function functionName(func: object): string {
     if (!func) {
         return "";
     }

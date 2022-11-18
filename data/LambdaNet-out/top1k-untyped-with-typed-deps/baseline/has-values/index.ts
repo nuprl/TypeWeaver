@@ -9,7 +9,7 @@
 
 const typeOf: Function = require('kind-of');
 
-module.exports = function has(val: Object): Boolean {
+module.exports = function has(val: object): boolean {
   switch (typeOf(val)) {
     case 'boolean':
     case 'date':

@@ -1,7 +1,7 @@
 // please no
-module['exports'] = function zalgo(text: String, options: Object): String {
+module['exports'] = function zalgo(text: string, options: object): string {
   text = text || '   he is here   ';
-  var soul: Object = {
+  var soul: object = {
     'up': [
       '̍', '̎', '̄', '̅',
       '̿', '̑', '̆', '̐',
@@ -38,25 +38,25 @@ module['exports'] = function zalgo(text: String, options: Object): String {
       '̷', '͡', ' ҉',
     ],
   };
-  var all: Array = [].concat(soul.up, soul.down, soul.mid);
+  var all: any[] = [].concat(soul.up, soul.down, soul.mid);
 
-  function randomNumber(range: Number): Number {
-    var r: Number = Math.floor(Math.random() * range);
+  function randomNumber(range: number): number {
+    var r: number = Math.floor(Math.random() * range);
     return r;
   }
 
-  function isChar(character: Number): Boolean {
-    var bool: Boolean = false;
-    all.filter(function(i: Number) {
+  function isChar(character: number): boolean {
+    var bool: boolean = false;
+    all.filter(function(i: number) {
       bool = (i === character);
     });
     return bool;
   }
 
 
-  function heComes(text: String, options: Object): String {
-    var result: String = '';
-    var counts: Object;
+  function heComes(text: string, options: object): string {
+    var result: string = '';
+    var counts: object;
     var l: Function;
     options = options || {};
     options['up'] =
@@ -92,9 +92,9 @@ module['exports'] = function zalgo(text: String, options: Object): String {
           break;
       }
 
-      var arr: Array = ['up', 'mid', 'down'];
+      var arr: any[] = ['up', 'mid', 'down'];
       for (var d in arr) {
-        var index: String = arr[d];
+        var index: string = arr[d];
         for (var i = 0; i <= counts[index]; i++) {
           if (options[index]) {
             result = result + soul[index][randomNumber(soul[index].length)];

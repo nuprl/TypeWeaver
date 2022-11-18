@@ -2,55 +2,40 @@ benchmark/benchmark.ts(1,23): error TS2307: Cannot find module 'benchmark' or it
 benchmark/benchmark.ts(2,23): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/sprintf-js/src/sprintf.ts' is not a module.
 benchmark/benchmark.ts(6,6): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/benchmark.ts(7,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 benchmark/benchmark.ts(10,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 benchmark/benchmark.ts(13,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 benchmark/benchmark.ts(16,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 benchmark/benchmark.ts(19,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 dist/angular-sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 dist/angular-sprintf.min.ts(2,26): error TS2304: Cannot find name 'angular'.
 dist/angular-sprintf.min.ts(2,108): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
 dist/angular-sprintf.min.ts(2,283): error TS2304: Cannot find name 'vsprintf'.
 dist/sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
-dist/sprintf.min.ts(2,471): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/sprintf.min.ts(2,642): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,735): error TS2538: Type 'Number' cannot be used as an index type.
-dist/sprintf.min.ts(2,746): error TS2339: Property 'keys' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,758): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,790): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+dist/sprintf.min.ts(2,746): error TS2339: Property 'keys' does not exist on type 'object'.
 dist/sprintf.min.ts(2,856): error TS2554: Expected 1 arguments, but got 3.
-dist/sprintf.min.ts(2,858): error TS2339: Property 'keys' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,868): error TS2339: Property 'keys' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,873): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,886): error TS2339: Property 'keys' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,904): error TS2339: Property 'param_no' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,917): error TS2339: Property 'param_no' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,929): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,939): error TS2339: Property 'not_type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,955): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,964): error TS2339: Property 'not_primitive' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,985): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1025): error TS2339: Property 'numeric_arg' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1044): error TS2339: Property 'type' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,858): error TS2339: Property 'keys' does not exist on type 'object'.
+dist/sprintf.min.ts(2,868): error TS2339: Property 'keys' does not exist on type 'object'.
+dist/sprintf.min.ts(2,886): error TS2339: Property 'keys' does not exist on type 'object'.
+dist/sprintf.min.ts(2,904): error TS2339: Property 'param_no' does not exist on type 'object'.
+dist/sprintf.min.ts(2,917): error TS2339: Property 'param_no' does not exist on type 'object'.
+dist/sprintf.min.ts(2,939): error TS2339: Property 'not_type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,955): error TS2339: Property 'type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,964): error TS2339: Property 'not_primitive' does not exist on type 'object'.
+dist/sprintf.min.ts(2,985): error TS2339: Property 'type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1025): error TS2339: Property 'numeric_arg' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1044): error TS2339: Property 'type' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1077): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-dist/sprintf.min.ts(2,1100): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 dist/sprintf.min.ts(2,1144): error TS2554: Expected 1 arguments, but got 2.
-dist/sprintf.min.ts(2,1157): error TS2339: Property 'number' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1171): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1179): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+dist/sprintf.min.ts(2,1157): error TS2339: Property 'number' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1171): error TS2339: Property 'type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1179): error TS2322: Type 'boolean' is not assignable to type 'number'.
 dist/sprintf.min.ts(2,1181): error TS2365: Operator '<=' cannot be applied to types 'number' and 'Function'.
-dist/sprintf.min.ts(2,1189): error TS2339: Property 'type' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1189): error TS2339: Property 'type' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1203): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,1214): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1246): error TS2322: Type 'string' is not assignable to type 'Function'.
@@ -58,95 +43,85 @@ dist/sprintf.min.ts(2,1277): error TS2345: Argument of type 'Function' is not as
 dist/sprintf.min.ts(2,1306): error TS2322: Type 'number' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,1317): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1337): error TS2322: Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1363): error TS2339: Property 'width' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1380): error TS2339: Property 'width' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1363): error TS2339: Property 'width' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1380): error TS2339: Property 'width' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1404): error TS2322: Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1408): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1408): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1429): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-dist/sprintf.min.ts(2,1448): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1448): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1470): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1503): error TS2322: Type 'string | number' is not assignable to type 'Function'.
   Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1507): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1507): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1528): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-dist/sprintf.min.ts(2,1541): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1541): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1563): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1580): error TS2322: Type 'string | number' is not assignable to type 'Function'.
   Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1584): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1584): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1610): error TS2339: Property 'toPrecision' does not exist on type 'Function'.
-dist/sprintf.min.ts(2,1624): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1624): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1648): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1665): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,1677): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,1714): error TS2322: Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1730): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1730): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1742): error TS2339: Property 'substring' does not exist on type 'Function'.
-dist/sprintf.min.ts(2,1756): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1756): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1783): error TS2322: Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,1801): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1801): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1813): error TS2339: Property 'substring' does not exist on type 'Function'.
-dist/sprintf.min.ts(2,1827): error TS2339: Property 'precision' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1920): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1827): error TS2339: Property 'precision' does not exist on type 'object'.
+dist/sprintf.min.ts(2,1920): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1932): error TS2339: Property 'substring' does not exist on type 'Function'.
-dist/sprintf.min.ts(2,1946): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,1946): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,1973): error TS2322: Type 'number' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,1984): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,2008): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-dist/sprintf.min.ts(2,2026): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,2026): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,2038): error TS2339: Property 'substring' does not exist on type 'Function'.
-dist/sprintf.min.ts(2,2052): error TS2339: Property 'precision' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,2052): error TS2339: Property 'precision' does not exist on type 'object'.
 dist/sprintf.min.ts(2,2079): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,2091): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 dist/sprintf.min.ts(2,2129): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,2141): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-dist/sprintf.min.ts(2,2181): error TS2339: Property 'json' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2193): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2199): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Function'.
-dist/sprintf.min.ts(2,2208): error TS2339: Property 'number' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2222): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2235): error TS2339: Property 'sign' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2240): error TS2322: Type 'string' is not assignable to type 'Number'.
-dist/sprintf.min.ts(2,2246): error TS2322: Type 'string' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
+dist/sprintf.min.ts(2,2181): error TS2339: Property 'json' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2193): error TS2339: Property 'type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2208): error TS2339: Property 'number' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2222): error TS2339: Property 'type' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2235): error TS2339: Property 'sign' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2240): error TS2322: Type 'string' is not assignable to type 'number'.
+dist/sprintf.min.ts(2,2246): error TS2322: Type 'string' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
 dist/sprintf.min.ts(2,2258): error TS2322: Type 'string' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,2283): error TS2339: Property 'sign' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2297): error TS2339: Property 'pad_char' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2314): error TS2339: Property 'pad_char' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2329): error TS2339: Property 'pad_char' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,2283): error TS2339: Property 'sign' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2297): error TS2339: Property 'pad_char' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2314): error TS2339: Property 'pad_char' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2329): error TS2339: Property 'pad_char' does not exist on type 'object'.
 dist/sprintf.min.ts(2,2352): error TS2322: Type 'number' is not assignable to type 'Function'.
-dist/sprintf.min.ts(2,2356): error TS2339: Property 'width' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2363): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Function'.
-dist/sprintf.min.ts(2,2379): error TS2339: Property 'width' does not exist on type 'Object'.
+dist/sprintf.min.ts(2,2356): error TS2339: Property 'width' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2363): error TS2365: Operator '+' cannot be applied to types 'number' and 'Function'.
+dist/sprintf.min.ts(2,2379): error TS2339: Property 'width' does not exist on type 'object'.
 dist/sprintf.min.ts(2,2386): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
-dist/sprintf.min.ts(2,2392): error TS2339: Property 'repeat' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2410): error TS2339: Property 'align' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2416): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Function'.
-dist/sprintf.min.ts(2,2430): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-dist/sprintf.min.ts(2,2436): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-dist/sprintf.min.ts(2,2478): error TS2538: Type 'String' cannot be used as an index type.
-dist/sprintf.min.ts(2,2490): error TS2538: Type 'String' cannot be used as an index type.
-dist/sprintf.min.ts(2,2522): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/sprintf.min.ts(2,2567): error TS2339: Property 'text' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2614): error TS2339: Property 'modulo' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2662): error TS2339: Property 'placeholder' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2750): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,2762): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/sprintf.min.ts(2,2814): error TS2339: Property 'key' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2964): error TS2339: Property 'key_access' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3017): error TS2339: Property 'index_access' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3134): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,3399): error TS2538: Type 'String' cannot be used as an index type.
+dist/sprintf.min.ts(2,2392): error TS2339: Property 'repeat' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2410): error TS2339: Property 'align' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2416): error TS2365: Operator '+' cannot be applied to types 'number' and 'Function'.
+dist/sprintf.min.ts(2,2422): error TS2367: This condition will always return 'false' since the types 'string' and 'object' have no overlap.
+dist/sprintf.min.ts(2,2567): error TS2339: Property 'text' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2614): error TS2339: Property 'modulo' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2662): error TS2339: Property 'placeholder' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2814): error TS2339: Property 'key' does not exist on type 'object'.
+dist/sprintf.min.ts(2,2964): error TS2339: Property 'key_access' does not exist on type 'object'.
+dist/sprintf.min.ts(2,3017): error TS2339: Property 'index_access' does not exist on type 'object'.
 dist/sprintf.min.ts(2,3454): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 dist/sprintf.min.ts(2,3493): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<Function>[]): Function[]', gave the following error.
-    Argument of type 'Number | undefined[]' is not assignable to parameter of type 'ConcatArray<Function>'.
-      Type 'Number' is missing the following properties from type 'ConcatArray<Function>': length, join, slice
+    Argument of type 'number | undefined[]' is not assignable to parameter of type 'ConcatArray<Function>'.
+      Type 'number' is not assignable to type 'ConcatArray<Function>'.
   Overload 2 of 2, '(...items: (Function | ConcatArray<Function>)[]): Function[]', gave the following error.
-    Argument of type 'Number | undefined[]' is not assignable to parameter of type 'Function | ConcatArray<Function>'.
-      Type 'Number' is not assignable to type 'Function | ConcatArray<Function>'.
-        Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+    Argument of type 'number | undefined[]' is not assignable to parameter of type 'Function | ConcatArray<Function>'.
+      Type 'number' is not assignable to type 'Function | ConcatArray<Function>'.
 dist/sprintf.min.ts(2,3639): error TS2551: Property 'sprintf' does not exist on type 'Window & typeof globalThis'. Did you mean 'print'?
 dist/sprintf.min.ts(2,3656): error TS2339: Property 'vsprintf' does not exist on type 'Window & typeof globalThis'.
 dist/sprintf.min.ts(2,3686): error TS2304: Cannot find name 'define'.
@@ -166,42 +141,28 @@ src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
 src/angular-sprintf.ts(10,24): error TS2304: Cannot find name 'sprintf'.
 src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
 src/sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+src/sprintf.ts(26,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 src/sprintf.ts(29,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/sprintf.ts(33,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/sprintf.ts(35,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(41,24): error TS2339: Property 'keys' does not exist on type 'Object'.
-src/sprintf.ts(42,32): error TS2538: Type 'Number' cannot be used as an index type.
-src/sprintf.ts(43,40): error TS2339: Property 'keys' does not exist on type 'Object'.
-src/sprintf.ts(43,53): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(45,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/sprintf.ts(41,24): error TS2339: Property 'keys' does not exist on type 'object'.
+src/sprintf.ts(43,40): error TS2339: Property 'keys' does not exist on type 'object'.
 src/sprintf.ts(45,118): error TS2554: Expected 1 arguments, but got 3.
-src/sprintf.ts(45,121): error TS2339: Property 'keys' does not exist on type 'Object'.
-src/sprintf.ts(45,133): error TS2339: Property 'keys' does not exist on type 'Object'.
-src/sprintf.ts(45,138): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(47,38): error TS2339: Property 'keys' does not exist on type 'Object'.
-src/sprintf.ts(50,29): error TS2339: Property 'param_no' does not exist on type 'Object'.
-src/sprintf.ts(51,35): error TS2339: Property 'param_no' does not exist on type 'Object'.
-src/sprintf.ts(54,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(57,24): error TS2339: Property 'not_type' does not exist on type 'Object'.
-src/sprintf.ts(57,41): error TS2339: Property 'type' does not exist on type 'Object'.
-src/sprintf.ts(57,53): error TS2339: Property 'not_primitive' does not exist on type 'Object'.
-src/sprintf.ts(57,75): error TS2339: Property 'type' does not exist on type 'Object'.
-src/sprintf.ts(61,24): error TS2339: Property 'numeric_arg' does not exist on type 'Object'.
-src/sprintf.ts(61,44): error TS2339: Property 'type' does not exist on type 'Object'.
+src/sprintf.ts(45,121): error TS2339: Property 'keys' does not exist on type 'object'.
+src/sprintf.ts(45,133): error TS2339: Property 'keys' does not exist on type 'object'.
+src/sprintf.ts(47,38): error TS2339: Property 'keys' does not exist on type 'object'.
+src/sprintf.ts(50,29): error TS2339: Property 'param_no' does not exist on type 'object'.
+src/sprintf.ts(51,35): error TS2339: Property 'param_no' does not exist on type 'object'.
+src/sprintf.ts(57,24): error TS2339: Property 'not_type' does not exist on type 'object'.
+src/sprintf.ts(57,41): error TS2339: Property 'type' does not exist on type 'object'.
+src/sprintf.ts(57,53): error TS2339: Property 'not_primitive' does not exist on type 'object'.
+src/sprintf.ts(57,75): error TS2339: Property 'type' does not exist on type 'object'.
+src/sprintf.ts(61,24): error TS2339: Property 'numeric_arg' does not exist on type 'object'.
+src/sprintf.ts(61,44): error TS2339: Property 'type' does not exist on type 'object'.
 src/sprintf.ts(61,87): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-src/sprintf.ts(62,41): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/sprintf.ts(62,92): error TS2554: Expected 1 arguments, but got 2.
-src/sprintf.ts(65,24): error TS2339: Property 'number' does not exist on type 'Object'.
-src/sprintf.ts(65,39): error TS2339: Property 'type' does not exist on type 'Object'.
+src/sprintf.ts(65,24): error TS2339: Property 'number' does not exist on type 'object'.
+src/sprintf.ts(65,39): error TS2339: Property 'type' does not exist on type 'object'.
 src/sprintf.ts(66,35): error TS2365: Operator '>=' cannot be applied to types 'Function' and 'number'.
-src/sprintf.ts(69,28): error TS2339: Property 'type' does not exist on type 'Object'.
+src/sprintf.ts(69,28): error TS2339: Property 'type' does not exist on type 'object'.
 src/sprintf.ts(71,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(71,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(74,25): error TS2322: Type 'string' is not assignable to type 'Function'.
@@ -209,82 +170,69 @@ src/sprintf.ts(74,60): error TS2345: Argument of type 'Function' is not assignab
 src/sprintf.ts(78,25): error TS2322: Type 'number' is not assignable to type 'Function'.
 src/sprintf.ts(78,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(81,25): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(81,60): error TS2339: Property 'width' does not exist on type 'Object'.
-src/sprintf.ts(81,80): error TS2339: Property 'width' does not exist on type 'Object'.
+src/sprintf.ts(81,60): error TS2339: Property 'width' does not exist on type 'object'.
+src/sprintf.ts(81,80): error TS2339: Property 'width' does not exist on type 'object'.
 src/sprintf.ts(84,25): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(84,34): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(84,34): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(84,57): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-src/sprintf.ts(84,79): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(84,79): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(84,103): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(87,25): error TS2322: Type 'string | number' is not assignable to type 'Function'.
   Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(87,34): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(87,34): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(87,57): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-src/sprintf.ts(87,73): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(87,73): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(87,97): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(90,25): error TS2322: Type 'string | number' is not assignable to type 'Function'.
   Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(90,34): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(90,34): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(90,64): error TS2339: Property 'toPrecision' does not exist on type 'Function'.
-src/sprintf.ts(90,79): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(90,79): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(90,105): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(93,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(93,41): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(96,25): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(97,35): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(97,35): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(97,51): error TS2339: Property 'substring' does not exist on type 'Function'.
-src/sprintf.ts(97,67): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(97,67): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(100,25): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(101,35): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(101,35): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(101,51): error TS2339: Property 'substring' does not exist on type 'Function'.
-src/sprintf.ts(101,67): error TS2339: Property 'precision' does not exist on type 'Object'.
-src/sprintf.ts(105,35): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(101,67): error TS2339: Property 'precision' does not exist on type 'object'.
+src/sprintf.ts(105,35): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(105,51): error TS2339: Property 'substring' does not exist on type 'Function'.
-src/sprintf.ts(105,67): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(105,67): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(108,25): error TS2322: Type 'number' is not assignable to type 'Function'.
 src/sprintf.ts(108,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(111,25): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/sprintf.ts(112,35): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(112,35): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(112,51): error TS2339: Property 'substring' does not exist on type 'Function'.
-src/sprintf.ts(112,67): error TS2339: Property 'precision' does not exist on type 'Object'.
+src/sprintf.ts(112,67): error TS2339: Property 'precision' does not exist on type 'object'.
 src/sprintf.ts(115,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(115,41): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 src/sprintf.ts(118,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(118,41): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-src/sprintf.ts(121,24): error TS2339: Property 'json' does not exist on type 'Object'.
-src/sprintf.ts(121,37): error TS2339: Property 'type' does not exist on type 'Object'.
-src/sprintf.ts(122,21): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Function'.
-src/sprintf.ts(125,28): error TS2339: Property 'number' does not exist on type 'Object'.
-src/sprintf.ts(125,43): error TS2339: Property 'type' does not exist on type 'Object'.
-src/sprintf.ts(125,72): error TS2339: Property 'sign' does not exist on type 'Object'.
+src/sprintf.ts(121,24): error TS2339: Property 'json' does not exist on type 'object'.
+src/sprintf.ts(121,37): error TS2339: Property 'type' does not exist on type 'object'.
+src/sprintf.ts(125,28): error TS2339: Property 'number' does not exist on type 'object'.
+src/sprintf.ts(125,43): error TS2339: Property 'type' does not exist on type 'object'.
+src/sprintf.ts(125,72): error TS2339: Property 'sign' does not exist on type 'object'.
 src/sprintf.ts(127,25): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/sprintf.ts(127,57): error TS2339: Property 'sign' does not exist on type 'Object'.
-src/sprintf.ts(132,40): error TS2339: Property 'pad_char' does not exist on type 'Object'.
-src/sprintf.ts(132,54): error TS2339: Property 'pad_char' does not exist on type 'Object'.
-src/sprintf.ts(132,82): error TS2339: Property 'pad_char' does not exist on type 'Object'.
-src/sprintf.ts(133,37): error TS2339: Property 'width' does not exist on type 'Object'.
-src/sprintf.ts(133,46): error TS2365: Operator '+' cannot be applied to types 'String' and 'Function'.
-src/sprintf.ts(134,30): error TS2339: Property 'width' does not exist on type 'Object'.
-src/sprintf.ts(134,77): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-src/sprintf.ts(135,34): error TS2339: Property 'align' does not exist on type 'Object'.
-src/sprintf.ts(135,42): error TS2365: Operator '+' cannot be applied to types 'String' and 'Function'.
-src/sprintf.ts(135,86): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-src/sprintf.ts(135,105): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-src/sprintf.ts(145,27): error TS2538: Type 'String' cannot be used as an index type.
-src/sprintf.ts(146,34): error TS2538: Type 'String' cannot be used as an index type.
-src/sprintf.ts(149,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/sprintf.ts(151,29): error TS2339: Property 'text' does not exist on type 'Object'.
-src/sprintf.ts(154,34): error TS2339: Property 'modulo' does not exist on type 'Object'.
-src/sprintf.ts(157,34): error TS2339: Property 'placeholder' does not exist on type 'Object'.
-src/sprintf.ts(159,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(160,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/sprintf.ts(161,43): error TS2339: Property 'key' does not exist on type 'Object'.
-src/sprintf.ts(164,51): error TS2339: Property 'key_access' does not exist on type 'Object'.
-src/sprintf.ts(167,56): error TS2339: Property 'index_access' does not exist on type 'Object'.
-src/sprintf.ts(181,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(206,30): error TS2538: Type 'String' cannot be used as an index type.
+src/sprintf.ts(127,57): error TS2339: Property 'sign' does not exist on type 'object'.
+src/sprintf.ts(132,40): error TS2339: Property 'pad_char' does not exist on type 'object'.
+src/sprintf.ts(132,54): error TS2339: Property 'pad_char' does not exist on type 'object'.
+src/sprintf.ts(132,82): error TS2339: Property 'pad_char' does not exist on type 'object'.
+src/sprintf.ts(133,37): error TS2339: Property 'width' does not exist on type 'object'.
+src/sprintf.ts(134,30): error TS2339: Property 'width' does not exist on type 'object'.
+src/sprintf.ts(135,34): error TS2339: Property 'align' does not exist on type 'object'.
+src/sprintf.ts(151,29): error TS2339: Property 'text' does not exist on type 'object'.
+src/sprintf.ts(154,34): error TS2339: Property 'modulo' does not exist on type 'object'.
+src/sprintf.ts(157,34): error TS2339: Property 'placeholder' does not exist on type 'object'.
+src/sprintf.ts(161,43): error TS2339: Property 'key' does not exist on type 'object'.
+src/sprintf.ts(164,51): error TS2339: Property 'key_access' does not exist on type 'object'.
+src/sprintf.ts(167,56): error TS2339: Property 'index_access' does not exist on type 'object'.
+src/sprintf.ts(206,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 src/sprintf.ts(221,20): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(221,45): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(222,13): error TS2304: Cannot find name 'define'.

@@ -3,10 +3,10 @@
 var getPolyfill: Function = require('./polyfill');
 var define: Function = require('define-properties');
 
-module.exports = function shimEntries(): Boolean {
-	var polyfill: String = getPolyfill();
+module.exports = function shimEntries(): boolean {
+	var polyfill: string = getPolyfill();
 	define(Object, { entries: polyfill }, {
-		entries: function testEntries(): Boolean {
+		entries: function testEntries(): boolean {
 			return Object.entries !== polyfill;
 		}
 	});

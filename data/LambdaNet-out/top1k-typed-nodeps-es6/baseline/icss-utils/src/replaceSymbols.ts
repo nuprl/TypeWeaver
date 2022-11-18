@@ -1,7 +1,7 @@
 import replaceValueSymbols from './replaceValueSymbols.js';
 
-const replaceSymbols: Function = (css: Function, replacements: String) => {
-  css.walk((node: Object) => {
+const replaceSymbols: Function = (css: Function, replacements: string) => {
+  css.walk((node: object) => {
     if (node.type === "decl" && node.value) {
       node.value = replaceValueSymbols(node.value.toString(), replacements);
     } else if (node.type === "rule" && node.selector) {

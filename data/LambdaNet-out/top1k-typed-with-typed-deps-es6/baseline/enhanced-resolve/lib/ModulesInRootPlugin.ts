@@ -25,11 +25,11 @@ export default class ModulesInRootPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("ModulesInRootPlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const obj: Object = {
+			.tapAsync("ModulesInRootPlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const obj: object = {
 					...request,
 					path: this.path,
 					request: "./" + request.request,

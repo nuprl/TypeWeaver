@@ -1,8 +1,8 @@
 const re: RegExp = /^dotenv_config_(encoding|path|debug|override)=(.+)$/
 
-export default function optionMatcher (args: Array): Object {
-  return args.reduce(function (acc: Object, cur: String) {
-    const matches: Object = cur.match(re)
+export default function optionMatcher (args: any[]): object {
+  return args.reduce(function (acc: object, cur: string) {
+    const matches: object = cur.match(re)
     if (matches) {
       acc[matches[1]] = matches[2]
     }

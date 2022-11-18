@@ -19,7 +19,7 @@ import toKey from './.internal/toKey.js'
  * toPath('a[0].b.c')
  * // => ['a', '0', 'b', 'c']
  */
-function toPath(value: String): Array {
+function toPath(value: string): any[] {
   if (Array.isArray(value)) {
     return map(value, toKey)
   }

@@ -7,19 +7,19 @@
  **/
 
 // Another rational approximation, not using Farey Sequences but Binary Search using the mediant
-function approximate(p: Number, precision: Number): String {
+function approximate(p: number, precision: number): string {
 
-  var num1: Number = Math.floor(p);
-  var den1: Number = 1;
+  var num1: number = Math.floor(p);
+  var den1: number = 1;
 
-  var num2: String = num1 + 1;
-  var den2: Number = 1;
+  var num2: string = num1 + 1;
+  var den2: number = 1;
 
   if (p !== num1) {
 
     while (den1 <= precision && den2 <= precision) {
 
-      var m: Number = (num1 + num2) / (den1 + den2);
+      var m: number = (num1 + num2) / (den1 + den2);
 
       if (p === m) {
 

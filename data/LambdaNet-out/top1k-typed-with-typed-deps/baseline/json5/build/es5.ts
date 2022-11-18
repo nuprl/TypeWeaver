@@ -1,6 +1,6 @@
 require('core-js/fn/string/code-point-at')
 require('core-js/fn/string/from-code-point')
 
-const JSON5: Number = require('../lib')
+const JSON5: number = require('../lib')
 
 module.exports = JSON5

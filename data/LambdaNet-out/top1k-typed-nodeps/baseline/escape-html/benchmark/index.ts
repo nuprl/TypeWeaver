@@ -7,8 +7,8 @@ global.escapeHtml = require('..')
 /**
  * Module dependencies.
  */
-var benchmark: String = require('benchmark')
-var benchmarks: Array = require('beautify-benchmark')
+var benchmark: string = require('benchmark')
+var benchmarks: any[] = require('beautify-benchmark')
 
 for (var dep in process.versions) {
   console.log('  %s@%s', dep, process.versions[dep])
@@ -39,7 +39,7 @@ suite.add({
   'setup': 'str = "\'>\'\\"\\"&>h<e>&<y>"'
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 

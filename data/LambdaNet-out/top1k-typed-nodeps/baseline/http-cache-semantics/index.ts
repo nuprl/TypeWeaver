@@ -40,7 +40,7 @@ const errorStatusCodes: Error = new Set([
     504,
 ]);
 
-const hopByHopHeaders: Object = {
+const hopByHopHeaders: object = {
     date: true, // included, because we add Age update Date
     connection: true,
     'keep-alive': true,
@@ -52,7 +52,7 @@ const hopByHopHeaders: Object = {
     upgrade: true,
 };
 
-const excludedFromRevalidationUpdate: Object = {
+const excludedFromRevalidationUpdate: object = {
     // Since the old body is reused, it doesn't make sense to change properties of the body
     'content-length': true,
     'content-encoding': true,
@@ -60,13 +60,13 @@ const excludedFromRevalidationUpdate: Object = {
     'content-range': true,
 };
 
-function toNumberOrZero(s: Number): Number {
-    const n: Number = parseInt(s, 10);
+function toNumberOrZero(s: number): number {
+    const n: number = parseInt(s, 10);
     return isFinite(n) ? n : 0;
 }
 
 // RFC 5861
-function isErrorResponse(response: Object): Boolean {
+function isErrorResponse(response: object): boolean {
     // consider undefined response as faulty
     if(!response) {
         return true
@@ -74,13 +74,13 @@ function isErrorResponse(response: Object): Boolean {
     return errorStatusCodes.has(response.status);
 }
 
-function parseCacheControl(header: String): Object {
-    const cc: Object = {};
+function parseCacheControl(header: string): object {
+    const cc: object = {};
     if (!header) return cc;
 
     // TODO: When there is more than one value present for a given directive (e.g., two Expires header fields, multiple Cache-Control: max-age directives),
     // the directive's value is considered invalid. Caches are encouraged to consider responses that have invalid freshness information to be stale
-    const parts: Array = header.trim().split(/\s*,\s*/); // TODO: lame parsing
+    const parts: any[] = header.trim().split(/\s*,\s*/); // TODO: lame parsing
     for (const part of parts) {
         const [k, v] = part.split(/\s*=\s*/, 2);
         cc[k] = v === undefined ? true : v.replace(/^"|"$/g, ''); // TODO: lame unquoting
@@ -89,10 +89,10 @@ function parseCacheControl(header: String): Object {
     return cc;
 }
 
-function formatCacheControl(cc: Object): Array {
-    let parts: Array = [];
+function formatCacheControl(cc: object): any[] {
+    let parts: any[] = [];
     for (const k in cc) {
-        const v: String = cc[k];
+        const v: string = cc[k];
         parts.push(v === true ? k : k + '=' + v);
     }
     if (!parts.length) {

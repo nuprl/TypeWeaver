@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const Hook: Array = require("./Hook");
+const Hook: any[] = require("./Hook");
 const HookCodeFactory: HookCodeFactory = require("./HookCodeFactory");
 
 class AsyncSeriesBailHookCodeFactory extends HookCodeFactory {
@@ -23,12 +23,12 @@ class AsyncSeriesBailHookCodeFactory extends HookCodeFactory {
 
 const factory: Hook = new AsyncSeriesBailHookCodeFactory();
 
-const COMPILE: Function = function(options: Object) {
+const COMPILE: Function = function(options: object) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function AsyncSeriesBailHook(args: String = [], name: String = undefined): Hook {
+function AsyncSeriesBailHook(args: string = [], name: string = undefined): Hook {
 	const hook: Hook = new Hook(args, name);
 	hook.constructor = AsyncSeriesBailHook;
 	hook.compile = COMPILE;

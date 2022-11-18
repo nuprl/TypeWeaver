@@ -13,6 +13,6 @@ import createMathOperation from './.internal/createMathOperation.js'
  * add(6, 4)
  * // => 10
  */
-const add: String = createMathOperation((augend: Number, addend: Number) => augend + addend, 0)
+const add: string = createMathOperation((augend: number, addend: number) => augend + addend, 0)
 
 export default add

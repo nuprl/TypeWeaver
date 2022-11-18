@@ -24,15 +24,15 @@
 
 'use strict';
 
-var gulp: Array = require('gulp'),
-    git: String = require('gulp-git'),
+var gulp: any[] = require('gulp'),
+    git: string = require('gulp-git'),
     bump: Function = require('gulp-bump'),
     filter: Function = require('gulp-filter'),
     tagVersion: Function = require('gulp-tag-version');
 
-var TEST: Array = [ 'test/*.js' ];
-var POWERED: Array = [ 'powered-test/*.js' ];
-var SOURCE: Array = [ 'src/**/*.js' ];
+var TEST: any[] = [ 'test/*.js' ];
+var POWERED: any[] = [ 'powered-test/*.js' ];
+var SOURCE: any[] = [ 'src/**/*.js' ];
 
 /**
  * Bumping version number and tagging the repository with it.
@@ -48,7 +48,7 @@ var SOURCE: Array = [ 'src/**/*.js' ];
  * introduced a feature or made a backwards-incompatible release.
  */
 
-function inc(importance: String): Array {
+function inc(importance: string): any[] {
     // get all the files to bump version in
     return gulp.src(['./package.json'])
         // bump the version number in those files

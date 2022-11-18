@@ -2,7 +2,7 @@ import ListCache from './ListCache.js'
 import MapCache from './MapCache.js'
 
 /** Used as the size to enable large array optimizations. */
-const LARGE_ARRAY_SIZE: Number = 200
+const LARGE_ARRAY_SIZE: number = 200
 
 class Stack {
 
@@ -36,8 +36,8 @@ class Stack {
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
   delete(key) {
-    const data: Object = this.__data__
-    const result: String = data['delete'](key)
+    const data: object = this.__data__
+    const result: string = data['delete'](key)
 
     this.size = data.size
     return result
@@ -76,7 +76,7 @@ class Stack {
   set(key, value) {
     let data: Hash = this.__data__
     if (data instanceof ListCache) {
-      const pairs: Array = data.__data__
+      const pairs: any[] = data.__data__
       if (pairs.length < LARGE_ARRAY_SIZE - 1) {
         pairs.push([key, value])
         this.size = ++data.size

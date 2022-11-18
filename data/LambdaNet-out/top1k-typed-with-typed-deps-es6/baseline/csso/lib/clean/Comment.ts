@@ -1,3 +1,3 @@
-export default function cleanComment(data: Object, item: String, list: Map): Void {
+export default function cleanComment(data: object, item: string, list: Map): Void {
     list.remove(item);
 };

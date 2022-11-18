@@ -1,8 +1,8 @@
 import baseClone from './.internal/baseClone.js'
 
 /** Used to compose bitmasks for cloning. */
-const CLONE_DEEP_FLAG: Number = 1
-const CLONE_SYMBOLS_FLAG: Number = 4
+const CLONE_DEEP_FLAG: number = 1
+const CLONE_SYMBOLS_FLAG: number = 4
 
 /**
  * This method is like `cloneWith` except that it recursively clones `value`.
@@ -32,7 +32,7 @@ const CLONE_SYMBOLS_FLAG: Number = 4
  * console.log(el.childNodes.length)
  * // => 20
  */
-function cloneDeepWith(value: String, customizer: String): String {
+function cloneDeepWith(value: string, customizer: string): string {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG, customizer)
 }

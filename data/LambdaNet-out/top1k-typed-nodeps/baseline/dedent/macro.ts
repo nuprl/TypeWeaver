@@ -27,7 +27,7 @@ function asTag(quasiPath, { file: { opts: { filename } } }, babel) {
 }
 
 function asFunction(argumentsPaths, { file: { opts: { filename } } }, babel) {
-  const string: Object = argumentsPaths[0].evaluate().value;
+  const string: object = argumentsPaths[0].evaluate().value;
   const { types: t } = babel;
 
   argumentsPaths[0].parentPath.replaceWith(t.stringLiteral(dedent(string)));

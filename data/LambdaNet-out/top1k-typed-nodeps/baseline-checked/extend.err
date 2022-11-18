@@ -1,18 +1,12 @@
 index.ts(36,84): error TS2304: Cannot find name 'Void'.
-index.ts(37,32): error TS2339: Property 'name' does not exist on type 'Object'.
-index.ts(38,34): error TS2339: Property 'name' does not exist on type 'Object'.
-index.ts(41,19): error TS2339: Property 'newValue' does not exist on type 'Object'.
-index.ts(46,18): error TS2339: Property 'name' does not exist on type 'Object'.
-index.ts(46,34): error TS2339: Property 'newValue' does not exist on type 'Object'.
-index.ts(51,78): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(61,13): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(65,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(65,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(65,93): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(79,3): error TS2322: Type '{}' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-index.ts(82,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(83,23): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(37,32): error TS2339: Property 'name' does not exist on type 'object'.
+index.ts(38,34): error TS2339: Property 'name' does not exist on type 'object'.
+index.ts(41,19): error TS2339: Property 'newValue' does not exist on type 'object'.
+index.ts(46,18): error TS2339: Property 'name' does not exist on type 'object'.
+index.ts(46,34): error TS2339: Property 'newValue' does not exist on type 'object'.
+index.ts(79,3): error TS2322: Type '{}' is not assignable to type 'boolean'.
+index.ts(92,9): error TS2367: This condition will always return 'true' since the types 'boolean' and 'any[]' have no overlap.
+index.ts(99,8): error TS2322: Type 'any[] | {}' is not assignable to type 'any[]'.
+  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 index.ts(103,58): error TS2554: Expected 0 arguments, but got 3.
 

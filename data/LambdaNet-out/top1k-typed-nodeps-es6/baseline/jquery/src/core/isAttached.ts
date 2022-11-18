@@ -7,7 +7,7 @@ var isAttached: Function = function( elem: HTMLElement ) {
 		return jQuery.contains( elem.ownerDocument, elem ) ||
 			elem.getRootNode( composed ) === elem.ownerDocument;
 	},
-	composed: Object = { composed: true };
+	composed: object = { composed: true };
 
 // Support: IE 9 - 11+
 // Check attachment across shadow DOM boundaries when possible (gh-3504).

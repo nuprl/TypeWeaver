@@ -5,7 +5,7 @@ const ABSOLUTE_URL_REGEX: RegExp = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/;
 // Windows paths like `c:\`
 const WINDOWS_PATH_REGEX: RegExp = /^[a-zA-Z]:\\/;
 
-export default function isAbsoluteUrl(url: String): Boolean {
+export default function isAbsoluteUrl(url: string): boolean {
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected a \`string\`, got \`${typeof url}\``);
 	}

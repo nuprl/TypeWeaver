@@ -19,12 +19,12 @@
 NW.Dom.registerSelector(
   'jquery:child',
   /^\:((?:(nth|eq|lt|gt)\(([^()]*)\))|(?:even|odd|first|last))(.*)/i,
-  (function(global: String) {
+  (function(global: string) {
 
-    return function(match: Object, source: String, mode: Boolean, callback: Function) {
+    return function(match: object, source: string, mode: boolean, callback: Function) {
 
-      var status: Boolean = true,
-      macro: String = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;
+      var status: boolean = true,
+      macro: string = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;
 
       macro = macro.replace('@', typeof callback == 'function' ? (mode ? NW.Dom.S_TEST : NW.Dom.M_TEST) : '');
 
@@ -77,12 +77,12 @@ NW.Dom.registerSelector(
 NW.Dom.registerSelector(
   'jquery:pseudo',
   /^\:(has|checkbox|file|image|password|radio|reset|submit|text|button|input|header|hidden|visible|parent)(?:\(\s*(["']*)?([^'"()]*)\2\s*\))?(.*)/i,
-  (function(global: String) {
+  (function(global: string) {
 
-    return function(match: Promise, source: Number, mode: Boolean, callback: Function) {
+    return function(match: Promise, source: number, mode: boolean, callback: Function) {
 
-      var status: Boolean = true,
-      macro: String = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;
+      var status: boolean = true,
+      macro: string = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;
 
       macro = macro.replace('@', typeof callback == 'function' ? (mode ? NW.Dom.S_TEST : NW.Dom.M_TEST) : '');
 

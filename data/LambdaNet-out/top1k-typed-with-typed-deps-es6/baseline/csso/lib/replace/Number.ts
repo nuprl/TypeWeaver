@@ -9,9 +9,9 @@ const unsafeToRemovePlusSignAfter: Error = new Set([
     'UnicodeRange'
 ]);
 
-export function packNumber(value: String, item: Object): String {
+export function packNumber(value: string, item: object): string {
     // omit plus sign only if no prev or prev is safe type
-    const regexp: String = item && item.prev !== null && unsafeToRemovePlusSignAfter.has(item.prev.data.type)
+    const regexp: string = item && item.prev !== null && unsafeToRemovePlusSignAfter.has(item.prev.data.type)
         ? KEEP_PLUSSIGN
         : OMIT_PLUSSIGN;
 
@@ -35,6 +35,6 @@ export function packNumber(value: String, item: Object): String {
     return value;
 }
 
-export function Number(node: Object): Void {
+export function Number(node: object): Void {
     node.value = packNumber(node.value);
 };

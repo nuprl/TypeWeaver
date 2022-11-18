@@ -1,13 +1,13 @@
 // Iterator that traverses in the range of [min, max], stepping
 // by distance from a given start position. I.e. for [0, 4], with
 // start of 2, this will iterate 2, 3, 1, 4, 0.
-export default function(start: Number, minLine: Number, maxLine: Number) {
-  let wantForward: Boolean = true,
-      backwardExhausted: Boolean = false,
-      forwardExhausted: Boolean = false,
-      localOffset: Number = 1;
+export default function(start: number, minLine: number, maxLine: number) {
+  let wantForward: boolean = true,
+      backwardExhausted: boolean = false,
+      forwardExhausted: boolean = false,
+      localOffset: number = 1;
 
-  return function iterator(): Number {
+  return function iterator(): number {
     if (wantForward && !forwardExhausted) {
       if (backwardExhausted) {
         localOffset++;

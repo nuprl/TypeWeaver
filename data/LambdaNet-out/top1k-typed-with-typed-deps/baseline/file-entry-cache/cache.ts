@@ -1,23 +1,23 @@
-var path: String = require('path');
-var crypto: String = require('crypto');
+var path: string = require('path');
+var crypto: string = require('crypto');
 
 module.exports = {
-  createFromFile: function (filePath: String, useChecksum: Number) {
-    var fname: String = path.basename(filePath);
-    var dir: String = path.dirname(filePath);
+  createFromFile: function (filePath: string, useChecksum: number) {
+    var fname: string = path.basename(filePath);
+    var dir: string = path.dirname(filePath);
     return this.create(fname, dir, useChecksum);
   },
 
-  create: function (cacheId: String, _path: String, useChecksum: Boolean) {
-    var fs: String = require('fs');
-    var flatCache: Array = require('flat-cache');
+  create: function (cacheId: string, _path: string, useChecksum: boolean) {
+    var fs: string = require('fs');
+    var flatCache: any[] = require('flat-cache');
     var cache: HTMLElement = flatCache.load(cacheId, _path);
-    var normalizedEntries: Object = {};
+    var normalizedEntries: object = {};
 
     var removeNotFoundFiles: Function = function removeNotFoundFiles(): Void {
-      const cachedEntries: Array = cache.keys();
+      const cachedEntries: any[] = cache.keys();
       // remove not found entries
-      cachedEntries.forEach(function remover(fPath: String): Void {
+      cachedEntries.forEach(function remover(fPath: string): Void {
         try {
           fs.statSync(fPath);
         } catch (err) {
@@ -43,7 +43,7 @@ module.exports = {
        * @param  {Buffer} buffer   buffer to calculate hash on
        * @return {String}          content hash digest
        */
-      getHash: function (buffer: Object) {
+      getHash: function (buffer: object) {
         return crypto.createHash('md5').update(buffer).digest('hex');
       },
 
@@ -53,7 +53,7 @@ module.exports = {
        * @param  {String}  file  the filepath to check
        * @return {Boolean}       wheter or not the file has changed
        */
-      hasFileChanged: function (file: String) {
+      hasFileChanged: function (file: string) {
         return this.getFileDescriptor(file).changed;
       },
 
@@ -66,17 +66,17 @@ module.exports = {
        * @param  {Array} files the files to analyze and compare to the previous seen files
        * @return {[type]}       [description]
        */
-      analyzeFiles: function (files: Number) {
-        var me: Array = this;
+      analyzeFiles: function (files: number) {
+        var me: any[] = this;
         files = files || [];
 
-        var res: Object = {
+        var res: object = {
           changedFiles: [],
           notFoundFiles: [],
           notChangedFiles: [],
         };
 
-        me.normalizeEntries(files).forEach(function (entry: Object) {
+        me.normalizeEntries(files).forEach(function (entry: object) {
           if (entry.changed) {
             res.changedFiles.push(entry.key);
             return;
@@ -90,8 +90,8 @@ module.exports = {
         return res;
       },
 
-      getFileDescriptor: function (file: String) {
-        var fstat: Number;
+      getFileDescriptor: function (file: string) {
+        var fstat: number;
 
         try {
           fstat = fs.statSync(file);
@@ -107,15 +107,15 @@ module.exports = {
         return this._getFileDescriptorUsingMtimeAndSize(file, fstat);
       },
 
-      _getFileDescriptorUsingMtimeAndSize: function (file: String, fstat: Object) {
-        var meta: Object = cache.getKey(file);
-        var cacheExists: Boolean = !!meta;
+      _getFileDescriptorUsingMtimeAndSize: function (file: string, fstat: object) {
+        var meta: object = cache.getKey(file);
+        var cacheExists: boolean = !!meta;
 
-        var cSize: Number = fstat.size;
-        var cTime: Number = fstat.mtime.getTime();
+        var cSize: number = fstat.size;
+        var cTime: number = fstat.mtime.getTime();
 
-        var isDifferentDate: Number;
-        var isDifferentSize: Number;
+        var isDifferentDate: number;
+        var isDifferentSize: number;
 
         if (!meta) {
           meta = { size: cSize, mtime: cTime };
@@ -124,7 +124,7 @@ module.exports = {
           isDifferentSize = cSize !== meta.size;
         }
 
-        var nEntry: Number = (normalizedEntries[file] = {
+        var nEntry: number = (normalizedEntries[file] = {
           key: file,
           changed: !cacheExists || isDifferentDate || isDifferentSize,
           meta: meta,
@@ -133,19 +133,19 @@ module.exports = {
         return nEntry;
       },
 
-      _getFileDescriptorUsingChecksum: function (file: String) {
-        var meta: Object = cache.getKey(file);
-        var cacheExists: Boolean = !!meta;
+      _getFileDescriptorUsingChecksum: function (file: string) {
+        var meta: object = cache.getKey(file);
+        var cacheExists: boolean = !!meta;
 
-        var contentBuffer: Number;
+        var contentBuffer: number;
         try {
           contentBuffer = fs.readFileSync(file);
         } catch (ex) {
           contentBuffer = '';
         }
 
-        var isDifferent: Boolean = true;
-        var hash: String = this.getHash(contentBuffer);
+        var isDifferent: boolean = true;
+        var hash: string = this.getHash(contentBuffer);
 
         if (!meta) {
           meta = { hash: hash };
@@ -153,7 +153,7 @@ module.exports = {
           isDifferent = hash !== meta.hash;
         }
 
-        var nEntry: Number = (normalizedEntries[file] = {
+        var nEntry: number = (normalizedEntries[file] = {
           key: file,
           changed: !cacheExists || isDifferent,
           meta: meta,
@@ -170,16 +170,16 @@ module.exports = {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: Number) {
-        var me: Array = this;
+      getUpdatedFiles: function (files: number) {
+        var me: any[] = this;
         files = files || [];
 
         return me
           .normalizeEntries(files)
-          .filter(function (entry: Object) {
+          .filter(function (entry: object) {
             return entry.changed;
           })
-          .map(function (entry: Object) {
+          .map(function (entry: object) {
             return entry.key;
           });
       },
@@ -190,11 +190,11 @@ module.exports = {
        * @param files
        * @returns {*}
        */
-      normalizeEntries: function (files: Array) {
+      normalizeEntries: function (files: any[]) {
         files = files || [];
 
         var me: HTMLElement = this;
-        var nEntries: Array = files.map(function (file: String) {
+        var nEntries: any[] = files.map(function (file: string) {
           return me.getFileDescriptor(file);
         });
 
@@ -209,7 +209,7 @@ module.exports = {
        * @method removeEntry
        * @param entryName
        */
-      removeEntry: function (entryName: String) {
+      removeEntry: function (entryName: string) {
         delete normalizedEntries[entryName];
         cache.removeKey(entryName);
       },
@@ -230,18 +230,18 @@ module.exports = {
         cache.destroy();
       },
 
-      _getMetaForFileUsingCheckSum: function (cacheEntry: Object) {
-        var contentBuffer: String = fs.readFileSync(cacheEntry.key);
-        var hash: String = this.getHash(contentBuffer);
-        var meta: Object = Object.assign(cacheEntry.meta, { hash: hash });
+      _getMetaForFileUsingCheckSum: function (cacheEntry: object) {
+        var contentBuffer: string = fs.readFileSync(cacheEntry.key);
+        var hash: string = this.getHash(contentBuffer);
+        var meta: object = Object.assign(cacheEntry.meta, { hash: hash });
         delete meta.size;
         delete meta.mtime;
         return meta;
       },
 
-      _getMetaForFileUsingMtimeAndSize: function (cacheEntry: Object) {
-        var stat: Object = fs.statSync(cacheEntry.key);
-        var meta: Object = Object.assign(cacheEntry.meta, {
+      _getMetaForFileUsingMtimeAndSize: function (cacheEntry: object) {
+        var stat: object = fs.statSync(cacheEntry.key);
+        var meta: object = Object.assign(cacheEntry.meta, {
           size: stat.size,
           mtime: stat.mtime.getTime(),
         });
@@ -253,13 +253,13 @@ module.exports = {
        * Sync the files and persist them to the cache
        * @method reconcile
        */
-      reconcile: function (noPrune: Number) {
+      reconcile: function (noPrune: number) {
         removeNotFoundFiles();
 
         noPrune = typeof noPrune === 'undefined' ? true : noPrune;
 
-        var entries: Object = normalizedEntries;
-        var keys: Array = Object.keys(entries);
+        var entries: object = normalizedEntries;
+        var keys: any[] = Object.keys(entries);
 
         if (keys.length === 0) {
           return;
@@ -267,11 +267,11 @@ module.exports = {
 
         var me: HTMLElement = this;
 
-        keys.forEach(function (entryName: String) {
-          var cacheEntry: String = entries[entryName];
+        keys.forEach(function (entryName: string) {
+          var cacheEntry: string = entries[entryName];
 
           try {
-            var meta: String = useChecksum
+            var meta: string = useChecksum
               ? me._getMetaForFileUsingCheckSum(cacheEntry)
               : me._getMetaForFileUsingMtimeAndSize(cacheEntry);
             cache.setKey(entryName, meta);

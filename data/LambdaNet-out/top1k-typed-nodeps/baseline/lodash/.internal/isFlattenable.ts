@@ -1,7 +1,7 @@
 import isArguments from '../isArguments.js'
 
 /** Built-in value reference. */
-const spreadableSymbol: Boolean = Symbol.isConcatSpreadable
+const spreadableSymbol: boolean = Symbol.isConcatSpreadable
 
 /**
  * Checks if `value` is a flattenable `arguments` object or array.
@@ -10,7 +10,7 @@ const spreadableSymbol: Boolean = Symbol.isConcatSpreadable
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
  */
-function isFlattenable(value: Object): Boolean {
+function isFlattenable(value: object): boolean {
   return Array.isArray(value) || isArguments(value) ||
     !!(value && value[spreadableSymbol])
 }

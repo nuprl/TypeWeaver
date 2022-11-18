@@ -1,9 +1,9 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 var implicitSetter: Function = require('../parsers').implicitSetter;
 
-module.exports.isValid = function parse(v: String): Boolean {
+module.exports.isValid = function parse(v: string): boolean {
   if (typeof v !== 'string') {
     return false;
   }
@@ -13,7 +13,7 @@ module.exports.isValid = function parse(v: String): Boolean {
 };
 var isValid: Function = module.exports.isValid;
 
-var parser: Function = function(v: String) {
+var parser: Function = function(v: string) {
   if (isValid(v)) {
     return v.toLowerCase();
   }

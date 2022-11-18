@@ -108,8 +108,8 @@ import { normalize, cachedJoin as join, getType, PathType } from './util/path';
  * @param {string} str input string
  * @returns {string} in camel case
  */
-function toCamelCase(str: String): String {
-	return str.replace(/-([a-z])/g, (str: String) => str.substr(1).toUpperCase());
+function toCamelCase(str: string): string {
+	return str.replace(/-([a-z])/g, (str: string) => str.substr(1).toUpperCase());
 }
 
 class Resolver {
@@ -227,9 +227,9 @@ class Resolver {
 		/** @type {Error | null | undefined} */
 		let err: Resolver = undefined;
 		/** @type {string | false | undefined} */
-		let result: String = undefined;
-		let sync: Boolean = false;
-		this.resolve(context, path, request, {}, (e: Resolver, r: String) => {
+		let result: string = undefined;
+		let sync: boolean = false;
+		this.resolve(context, path, request, {}, (e: Resolver, r: string) => {
 			err = e;
 			result = r;
 			sync = true;
@@ -262,18 +262,18 @@ class Resolver {
 		if (!resolveContext)
 			return callback(new Error("resolveContext argument is not set"));
 
-		const obj: Object = {
+		const obj: object = {
 			context: context,
 			path: path,
 			request: request
 		};
 
 		let yield_: Function;
-		let yieldCalled: Boolean = false;
+		let yieldCalled: boolean = false;
 		let finishYield: Function;
 		if (typeof resolveContext.yield === "function") {
 			const old: Function = resolveContext.yield;
-			yield_ = (obj: String) => {
+			yield_ = (obj: string) => {
 				old(obj);
 				yieldCalled = true;
 			};
@@ -283,7 +283,7 @@ class Resolver {
 			};
 		}
 
-		const message: String = `resolve '${request}' in '${path}'`;
+		const message: string = `resolve '${request}' in '${path}'`;
 
 		const finishResolved: Function = (result: CachedInputFileSystem) => {
 			return callback(
@@ -310,13 +310,13 @@ class Resolver {
 		if (resolveContext.log) {
 			// We need log anyway to capture it in case of an error
 			const parentLog: Function = resolveContext.log;
-			const log: Array = [];
+			const log: any[] = [];
 			return this.doResolve(
 				this.hooks.resolve,
 				obj,
 				message,
 				{
-					log: (msg: String) => {
+					log: (msg: string) => {
 						parentLog(msg);
 						log.push(msg);
 					},
@@ -361,14 +361,14 @@ class Resolver {
 					// this is more expensive to the success case
 					// is assumed by default
 
-					const log: Array = [];
+					const log: any[] = [];
 
 					return this.doResolve(
 						this.hooks.resolve,
 						obj,
 						message,
 						{
-							log: (msg: String) => log.push(msg),
+							log: (msg: string) => log.push(msg),
 							yield: yield_,
 							stack: resolveContext.stack
 						},
@@ -387,9 +387,9 @@ class Resolver {
 	}
 
 	doResolve(hook, request, message, resolveContext, callback) {
-		const stackEntry: String = Resolver.createStackEntry(hook, request);
+		const stackEntry: string = Resolver.createStackEntry(hook, request);
 
-		let newStack: Object;
+		let newStack: object;
 		if (resolveContext.stack) {
 			newStack = new Set(resolveContext.stack);
 			if (resolveContext.stack.has(stackEntry)) {
@@ -439,7 +439,7 @@ class Resolver {
 	 * @returns {ParsedIdentifier} parsed identifier
 	 */
 	parse(identifier) {
-		const part: Object = {
+		const part: object = {
 			request: "",
 			query: "",
 			fragment: "",
@@ -449,7 +449,7 @@ class Resolver {
 			internal: false
 		};
 
-		const parsedIdentifier: Array = parseIdentifier(identifier);
+		const parsedIdentifier: any[] = parseIdentifier(identifier);
 
 		if (!parsedIdentifier) return part;
 

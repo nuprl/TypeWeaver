@@ -16,13 +16,13 @@ export default class PromiseHash extends Enumerator {
   }
 
   _enumerate(input) {
-    let keys: Array = Object.keys(input);
+    let keys: any[] = Object.keys(input);
 
-    let length: Number = keys.length;
+    let length: number = keys.length;
     let promise: Promise = this.promise;
     this._remaining = length;
 
-    let key: String, val: Function;
+    let key: string, val: Function;
     for (let i = 0; promise._state === PENDING && i < length; i++) {
       key = keys[i];
       val = input[key];

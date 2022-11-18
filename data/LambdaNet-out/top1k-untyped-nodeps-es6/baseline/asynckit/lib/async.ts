@@ -12,12 +12,12 @@ export default async;
  */
 function async(callback: Function): Function
 {
-  var isAsync: Boolean = false;
+  var isAsync: boolean = false;
 
   // check if async happened
   defer(function() { isAsync = true; });
 
-  return function async_callback(err: String, result: String): Void
+  return function async_callback(err: string, result: string): Void
   {
     if (isAsync)
     {

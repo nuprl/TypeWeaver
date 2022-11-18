@@ -1,45 +1,29 @@
 src/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
 src/index.ts(29,96): error TS2304: Cannot find name 'Void'.
-src/index.ts(33,15): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(34,32): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(35,15): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(38,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(38,37): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(40,29): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(41,13): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(41,31): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(43,13): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(46,13): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist on type 'Object'.
-src/index.ts(57,60): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type 'Object'.
-src/index.ts(59,46): error TS2339: Property 'failOnWrongOrder' does not exist on type 'Object'.
-src/index.ts(80,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/index.ts(120,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist on type 'object'.
+src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type 'object'.
+src/index.ts(59,46): error TS2339: Property 'failOnWrongOrder' does not exist on type 'object'.
+src/index.ts(80,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+src/index.ts(120,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/index.ts(127,44): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/index.ts(137,32): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(7,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(7,32): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(9,36): error TS2538: Type 'Object' cannot be used as an index type.
+src/topologicalSort.ts(7,32): error TS2538: Type 'object' cannot be used as an index type.
+src/topologicalSort.ts(9,36): error TS2538: Type 'object' cannot be used as an index type.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(17,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(18,13): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(22,13): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(24,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/topologicalSort.ts(30,9): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(32,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(32,33): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(36,11): error TS2739: Type 'String' is missing the following properties from type 'Error': name, message
-src/topologicalSort.ts(39,7): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/topologicalSort.ts(43,9): error TS2538: Type 'Object' cannot be used as an index type.
+src/topologicalSort.ts(18,13): error TS2538: Type 'object' cannot be used as an index type.
+src/topologicalSort.ts(22,13): error TS2538: Type 'object' cannot be used as an index type.
+src/topologicalSort.ts(24,7): error TS2322: Type 'object' is not assignable to type 'string'.
+src/topologicalSort.ts(30,9): error TS2538: Type 'object' cannot be used as an index type.
+src/topologicalSort.ts(32,33): error TS2538: Type 'object' cannot be used as an index type.
+src/topologicalSort.ts(36,11): error TS2322: Type 'string' is not assignable to type 'Error'.
+src/topologicalSort.ts(39,7): error TS2322: Type 'Error' is not assignable to type 'string'.
+src/topologicalSort.ts(43,9): error TS2538: Type 'object' cannot be used as an index type.
 src/topologicalSort.ts(48,10): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
-src/topologicalSort.ts(48,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(49,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(50,9): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/topologicalSort.ts(52,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/topologicalSort.ts(58,9): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+src/topologicalSort.ts(59,7): error TS2740: Type 'String & Error' is missing the following properties from type 'any[]': pop, push, join, reverse, and 21 more.
 

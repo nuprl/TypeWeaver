@@ -1,12 +1,12 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 
 // <length> <length>? | inherit
 // if one, it applies to both horizontal and verical spacing
 // if two, the first applies to the horizontal and the second applies to vertical spacing
 
-var parse: Function = function parse(v: String): String {
+var parse: Function = function parse(v: string): string {
   if (v === '' || v === null) {
     return undefined;
   }
@@ -16,11 +16,11 @@ var parse: Function = function parse(v: String): String {
   if (v.toLowerCase() === 'inherit') {
     return v;
   }
-  var parts: Array = v.split(/\s+/);
+  var parts: any[] = v.split(/\s+/);
   if (parts.length !== 1 && parts.length !== 2) {
     return undefined;
   }
-  parts.forEach(function(part: Number) {
+  parts.forEach(function(part: number) {
     if (parsers.valueType(part) !== parsers.TYPES.LENGTH) {
       return undefined;
     }
@@ -30,7 +30,7 @@ var parse: Function = function parse(v: String): String {
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     this._setProperty('border-spacing', parse(v));
   },
   get: function() {

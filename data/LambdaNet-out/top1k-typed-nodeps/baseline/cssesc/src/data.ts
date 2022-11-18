@@ -1,9 +1,9 @@
 var regenerate: Function = require('regenerate');
-var fs: String = require('fs');
+var fs: string = require('fs');
 
 // Characters with special meaning in CSS, except for quotes and backslashes
 // (they get a separate regex)
-var set: Array = regenerate().add(
+var set: any[] = regenerate().add(
 	' ', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.', '/', ';', '<', ':',
 	'=', '>', '?', '@', '[', ']', '^', '`', '{', '|', '}', '~', '"', '\'', '\\'
 );

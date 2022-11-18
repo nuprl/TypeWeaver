@@ -1,7 +1,7 @@
 import path from 'node:path';
 
-export default function isPathInside(childPath: String, parentPath: String): Boolean {
-	const relation: Number = path.relative(parentPath, childPath);
+export default function isPathInside(childPath: string, parentPath: string): boolean {
+	const relation: number = path.relative(parentPath, childPath);
 
 	return Boolean(
 		relation &&

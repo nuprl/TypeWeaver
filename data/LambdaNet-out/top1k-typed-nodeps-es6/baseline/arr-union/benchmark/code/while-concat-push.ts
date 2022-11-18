@@ -1,12 +1,12 @@
 'use strict';
 
-export default function union(): Array {
-  var arr: Array = [].concat.apply([], arguments);
-  var len: Number = arr.length;
-  var res: Array = [];
+export default function union(): any[] {
+  var arr: any[] = [].concat.apply([], arguments);
+  var len: number = arr.length;
+  var res: any[] = [];
 
   while (len--) {
-    var ele: String = arr[len];
+    var ele: string = arr[len];
     if (res.indexOf(ele) === -1) {
       res.push(ele);
     }

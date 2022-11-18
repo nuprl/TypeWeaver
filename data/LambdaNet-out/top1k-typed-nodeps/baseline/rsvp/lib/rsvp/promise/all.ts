@@ -51,7 +51,7 @@ import Enumerator from '../enumerator';
   fulfilled, or rejected if any of them become rejected.
   @static
 */
-export default function all(entries: String, label: String): Array {
+export default function all(entries: string, label: string): any[] {
   if (!Array.isArray(entries)) {
     return this.reject(new TypeError("Promise.all must be called with an array"), label);
   }

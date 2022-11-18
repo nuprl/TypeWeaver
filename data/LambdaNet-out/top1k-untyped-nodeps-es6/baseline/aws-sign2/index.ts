@@ -27,7 +27,7 @@ import { parse } from 'url';
  * Valid keys.
  */
 
-var keys: Array = 
+var keys: any[] = 
   [ 'acl'
   , 'location'
   , 'logging'
@@ -53,7 +53,7 @@ var keys: Array =
  * @api private
  */
 
-function authorization (options: Object): String {
+function authorization (options: object): string {
   return 'AWS ' + options.key + ':' + sign(options)
 }
 
@@ -68,7 +68,7 @@ module.exports.authorization = authorization
  * @api private
  */
 
-function hmacSha1 (options: Object): String {
+function hmacSha1 (options: object): string {
   return crypto.createHmac('sha1', options.secret).update(options.message).digest('base64')
 }
 
@@ -82,7 +82,7 @@ module.exports.hmacSha1 = hmacSha1
  * @api private
  */
 
-function sign (options: Object): String {
+function sign (options: object): string {
   options.message = stringToSign(options)
   return hmacSha1(options)
 }
@@ -98,7 +98,7 @@ module.exports.sign = sign
  * @api private
  */
 
-function signQuery (options: Object): Object {
+function signQuery (options: object): object {
   options.message = queryStringToSign(options)
   return hmacSha1(options)
 }
@@ -121,10 +121,10 @@ module.exports.signQuery= signQuery
  * @api private
  */
 
-function stringToSign (options: HTMLElement): String {
-  var headers: Number = options.amazonHeaders || ''
+function stringToSign (options: HTMLElement): string {
+  var headers: number = options.amazonHeaders || ''
   if (headers) headers += '\n'
-  var r: Array = 
+  var r: any[] = 
     [ options.verb
     , options.md5
     , options.contentType
@@ -149,7 +149,7 @@ module.exports.stringToSign = stringToSign
  * @api private
  */
 
-function queryStringToSign (options: Object): String{
+function queryStringToSign (options: object): string{
   return 'GET\n\n\n' + options.date + '\n' + options.resource
 }
 module.exports.queryStringToSign = queryStringToSign
@@ -168,14 +168,14 @@ module.exports.queryStringToSign = queryStringToSign
  * @api private
  */
 
-function canonicalizeHeaders (headers: Object): String {
-  var buf: Array = []
-    , fields: Array = Object.keys(headers)
+function canonicalizeHeaders (headers: object): string {
+  var buf: any[] = []
+    , fields: any[] = Object.keys(headers)
     ;
   for (var i = 0, len = fields.length; i < len; ++i) {
-    var field: String = fields[i]
-      , val: String = headers[field]
-      , field: String = field.toLowerCase()
+    var field: string = fields[i]
+      , val: string = headers[field]
+      , field: string = field.toLowerCase()
       ;
     if (0 !== field.indexOf('x-amz')) continue
     buf.push(field + ':' + val)
@@ -195,15 +195,15 @@ module.exports.canonicalizeHeaders = canonicalizeHeaders
  * @api private
  */
 
-function canonicalizeResource (resource: String): String {
-  var url: String = parse(resource, true)
-    , path: String = url.pathname
-    , buf: Array = []
+function canonicalizeResource (resource: string): string {
+  var url: string = parse(resource, true)
+    , path: string = url.pathname
+    , buf: any[] = []
     ;
 
-  Object.keys(url.query).forEach(function(key: String){
+  Object.keys(url.query).forEach(function(key: string){
     if (!~keys.indexOf(key)) return
-    var val: String = '' == url.query[key] ? '' : '=' + encodeURIComponent(url.query[key])
+    var val: string = '' == url.query[key] ? '' : '=' + encodeURIComponent(url.query[key])
     buf.push(key + val)
   })
 

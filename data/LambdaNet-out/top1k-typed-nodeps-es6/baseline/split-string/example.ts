@@ -10,7 +10,7 @@ console.log(split('a.b."c.d.e.f.g".h.i'));
 console.log(split('a.b.\\"c.d."e.f.g".h.i', { quotes: ['"']}));
 //=> [ 'a', 'b', '"c.d.e.f.g"', 'h', 'i' ]
 
-let keep: Function = (value: Number, state: Array) => {
+let keep: Function = (value: number, state: any[]) => {
   return value !== '\\' && (value !== '"' || state.prev() === '\\');
 };
 console.log(split('a.b.\\"c.d."e.f.g".h.i', { quotes: ['"'], keep }));

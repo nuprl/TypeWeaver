@@ -11,7 +11,7 @@ export default ReadableSerial;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableSerial(list: Object, iterator: Function, callback: Function): Object
+function ReadableSerial(list: object, iterator: Function, callback: Function): object
 {
   if (!(this instanceof ReadableSerial))
   {

@@ -1,4 +1,4 @@
-var EventSource: String = require('./eventsource')
+var EventSource: string = require('./eventsource')
 
 if (typeof window === 'object') {
   window.EventSourcePolyfill = EventSource

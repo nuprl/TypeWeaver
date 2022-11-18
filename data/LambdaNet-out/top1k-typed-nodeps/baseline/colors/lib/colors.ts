@@ -33,10 +33,10 @@ module['exports'] = colors;
 
 colors.themes = {};
 
-var util: String = require('util');
-var ansiStyles: Object = colors.styles = require('./styles');
+var util: string = require('util');
+var ansiStyles: object = colors.styles = require('./styles');
 var defineProps: Function = Object.defineProperties;
-var newLineRegex: Object = new RegExp(/[\r\n]+/g);
+var newLineRegex: object = new RegExp(/[\r\n]+/g);
 
 colors.supportsColor = require('./system/supports-colors').supportsColor;
 
@@ -52,12 +52,12 @@ colors.disable = function() {
   colors.enabled = false;
 };
 
-colors.stripColors = colors.strip = function(str: String) {
+colors.stripColors = colors.strip = function(str: string) {
   return ('' + str).replace(/\x1B\[\d+m/g, '');
 };
 
 // eslint-disable-next-line no-unused-vars
-var stylize: Boolean = colors.stylize = function stylize(str: String, style: String): String {
+var stylize: boolean = colors.stylize = function stylize(str: string, style: string): string {
   if (!colors.enabled) {
     return str+'';
   }
@@ -75,14 +75,14 @@ var stylize: Boolean = colors.stylize = function stylize(str: String, style: Str
 };
 
 var matchOperatorsRe: RegExp = /[|\\{}()[\]^$+*?.]/g;
-var escapeStringRegexp: Function = function(str: String) {
+var escapeStringRegexp: Function = function(str: string) {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string');
   }
   return str.replace(matchOperatorsRe, '\\$&');
 };
 
-function build(_styles: Function): String {
+function build(_styles: Function): string {
   var builder: HTMLElement = function builder(): Promise {
     return applyStyle.apply(builder, arguments);
   };
@@ -94,9 +94,9 @@ function build(_styles: Function): String {
 }
 
 var styles: Function = (function() {
-  var ret: Object = {};
+  var ret: object = {};
   ansiStyles.grey = ansiStyles.gray;
-  Object.keys(ansiStyles).forEach(function(key: String) {
+  Object.keys(ansiStyles).forEach(function(key: string) {
     ansiStyles[key].closeRe =
       new RegExp(escapeStringRegexp(ansiStyles[key].close), 'g');
     ret[key] = {
@@ -108,12 +108,12 @@ var styles: Function = (function() {
   return ret;
 })();
 
-var proto: Object = defineProps(function colors(): Void {}, styles);
+var proto: object = defineProps(function colors(): Void {}, styles);
 
-function applyStyle(): String {
-  var args: Array = Array.prototype.slice.call(arguments);
+function applyStyle(): string {
+  var args: any[] = Array.prototype.slice.call(arguments);
 
-  var str: String = args.map(function(arg: Object) {
+  var str: string = args.map(function(arg: object) {
     // Use weak equality check so we can colorize null/undefined in safe mode
     if (arg != null && arg.constructor === String) {
       return arg;
@@ -126,16 +126,16 @@ function applyStyle(): String {
     return str;
   }
 
-  var newLinesPresent: Boolean = str.indexOf('\n') != -1;
+  var newLinesPresent: boolean = str.indexOf('\n') != -1;
 
-  var nestedStyles: Array = this._styles;
+  var nestedStyles: any[] = this._styles;
 
-  var i: Number = nestedStyles.length;
+  var i: number = nestedStyles.length;
   while (i--) {
     var code: HTMLElement = ansiStyles[nestedStyles[i]];
     str = code.open + str.replace(code.closeRe, code.open) + code.close;
     if (newLinesPresent) {
-      str = str.replace(newLineRegex, function(match: String) {
+      str = str.replace(newLineRegex, function(match: string) {
         return code.close + match + code.open;
       });
     }
@@ -144,7 +144,7 @@ function applyStyle(): String {
   return str;
 }
 
-colors.setTheme = function(theme: Object) {
+colors.setTheme = function(theme: object) {
   if (typeof theme === 'string') {
     console.log('colors.setTheme now only accepts an object, not a string.  ' +
       'If you are trying to set a theme from a file, it is now your (the ' +
@@ -156,10 +156,10 @@ colors.setTheme = function(theme: Object) {
     return;
   }
   for (var style in theme) {
-    (function(style: String) {
-      colors[style] = function(str: String) {
+    (function(style: string) {
+      colors[style] = function(str: string) {
         if (typeof theme[style] === 'object') {
-          var out: String = str;
+          var out: string = str;
           for (var i in theme[style]) {
             out = colors[theme[style][i]](out);
           }
@@ -171,9 +171,9 @@ colors.setTheme = function(theme: Object) {
   }
 };
 
-function init(): Object {
-  var ret: Object = {};
-  Object.keys(styles).forEach(function(name: String) {
+function init(): object {
+  var ret: object = {};
+  Object.keys(styles).forEach(function(name: string) {
     ret[name] = {
       get: function() {
         return build([name]);
@@ -183,8 +183,8 @@ function init(): Object {
   return ret;
 }
 
-var sequencer: Function = function sequencer(map: Object, str: String): String {
-  var exploded: Array = str.split('');
+var sequencer: Function = function sequencer(map: object, str: string): string {
+  var exploded: any[] = str.split('');
   exploded = exploded.map(map);
   return exploded.join('');
 };
@@ -201,8 +201,8 @@ colors.maps.rainbow = require('./maps/rainbow')(colors);
 colors.maps.random = require('./maps/random')(colors);
 
 for (var map in colors.maps) {
-  (function(map: Object) {
-    colors[map] = function(str: Number) {
+  (function(map: object) {
+    colors[map] = function(str: number) {
       return sequencer(colors.maps[map], str);
     };
   })(map);

@@ -1,5 +1,4 @@
-is-plain-object.ts(13,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-is-plain-object.ts(23,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+is-plain-object.ts(18,3): error TS2740: Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+is-plain-object.ts(22,15): error TS2339: Property 'prototype' does not exist on type 'any[]'.
+is-plain-object.ts(23,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 

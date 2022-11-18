@@ -5,8 +5,8 @@
 
 "use strict";
 
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
-const getInnerRequest: String = require("./getInnerRequest");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
+const getInnerRequest: string = require("./getInnerRequest");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveRequest} ResolveRequest */

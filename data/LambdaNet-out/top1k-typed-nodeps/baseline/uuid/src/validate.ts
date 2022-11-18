@@ -1,6 +1,6 @@
 import REGEX from './regex.js';
 
-function validate(uuid): Number {
+function validate(uuid): number {
   return typeof uuid === 'string' && REGEX.test(uuid);
 }
 

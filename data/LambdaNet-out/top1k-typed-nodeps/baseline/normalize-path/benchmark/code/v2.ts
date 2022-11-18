@@ -7,7 +7,7 @@
 
 var removeTrailingSeparator: Function = require('remove-trailing-separator');
 
-module.exports = function normalizePath(str: String, stripTrailing: Number): String {
+module.exports = function normalizePath(str: string, stripTrailing: number): string {
   if (typeof str !== 'string') {
     throw new TypeError('expected a string');
   }

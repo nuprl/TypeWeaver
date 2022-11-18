@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports = function(arr: Array) {
-  var len: Number = arr.length;
-  var res: Array = [];
-  var o: Object = {};
-  var i: Number;
+module.exports = function(arr: any[]) {
+  var len: number = arr.length;
+  var res: any[] = [];
+  var o: object = {};
+  var i: number;
 
   for (i = 0; i < len; i += 1) {
     o[arr[i]] = arr[i];

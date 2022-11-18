@@ -1,12 +1,12 @@
 "use strict";
 
-const fs: String = require("fs");
-const path: String = require("path");
+const fs: string = require("fs");
+const path: string = require("path");
 const regenerate: Function = require("regenerate");
 const { unicodeVersion } = require("../package.json");
 
 /* eslint-disable global-require */
-const cp: Object = {
+const cp: object = {
   Mark: require(`@unicode/unicode-${unicodeVersion}/General_Category/Mark/code-points.js`),
   JT: require("./unicode/Joining_Type"),
   CombiningClassVirama: require("./unicode/Canonical_Combining_Class").Virama,
@@ -26,8 +26,8 @@ const cp: Object = {
 };
 /* eslint-enable global-require */
 
-function r(strings: Array, ...regs): String {
-  let output: String = "";
+function r(strings: any[], ...regs): string {
+  let output: string = "";
   for (const [i, reg] of regs.entries()) {
     output += strings[i];
     output += reg.toString({ hasUnicodeFlag: true });
@@ -36,7 +36,7 @@ function r(strings: Array, ...regs): String {
   return output;
 }
 
-const regexes: Object = {
+const regexes: object = {
   // Validity criteria
   // https://unicode.org/reports/tr46/#Validity_Criteria
 
@@ -112,7 +112,7 @@ const regexes: Object = {
   bidiS6: r`${regenerate([...cp.L, ...cp.EN])}${regenerate(cp.NSM)}*$`
 };
 
-let out: String = `"use strict";\n\n`;
+let out: string = `"use strict";\n\n`;
 
 for (const name of Object.keys(regexes)) {
   out += `const ${name} = /${regexes[name]}/u;\n`;

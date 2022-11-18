@@ -13,17 +13,17 @@ new base2.Package(this, {
 
 eval(this.imports);
 
-var IGNORE: String = RegGrp.IGNORE;
-var KEYS: String   = "~";
-var REMOVE: String = "";
-var SPACE: String  = " ";
+var IGNORE: string = RegGrp.IGNORE;
+var KEYS: string   = "~";
+var REMOVE: string = "";
+var SPACE: string  = " ";
 
 // =========================================================================
 // packer/Parser.js
 // =========================================================================
 
-var Parser: Object = RegGrp.extend({
-  put: function(expression: String, replacement: String) {
+var Parser: object = RegGrp.extend({
+  put: function(expression: string, replacement: string) {
     if (typeOf(expression) == "string") {
       expression = Parser.dictionary.exec(expression);
     }
@@ -45,8 +45,8 @@ var Parser: Object = RegGrp.extend({
 // packer/Words.js
 // =========================================================================
 
-var Words: Object = Collection.extend({
-  add: function(word: Object) {
+var Words: object = Collection.extend({
+  add: function(word: object) {
     if (!this.has(word)) this.base(word);
     word = this.get(word);
     if (!word.index) {
@@ -56,15 +56,15 @@ var Words: Object = Collection.extend({
     return word;
   },
 
-  sort: function(sorter: String) {
-    return this.base(sorter || function(word1: Object, word2: Object) {
+  sort: function(sorter: string) {
+    return this.base(sorter || function(word1: object, word2: object) {
       // sort by frequency
       return (word2.count - word1.count) || (word1.index - word2.index);
     });
   }
 }, {
   Item: {
-    constructor: function(word: String) {
+    constructor: function(word: string) {
       this.toString = K(word);
     },
 
@@ -78,8 +78,8 @@ var Words: Object = Collection.extend({
 // packer/Encoder.js
 // =========================================================================
 
-var Encoder: Object = Base.extend({
-  constructor: function(pattern: String, encoder: Function, ignore: String) {
+var Encoder: object = Base.extend({
+  constructor: function(pattern: string, encoder: Function, ignore: string) {
     this.parser = new Parser(ignore);
     if (pattern) this.parser.put(pattern, "");
     this.encoder = encoder;
@@ -88,23 +88,23 @@ var Encoder: Object = Base.extend({
   parser: null,
   encoder: Undefined,
 
-  search: function(script: String) {
-    var words: Object = new Words;
-    this.parser.putAt(-1, function(word: String) {
+  search: function(script: string) {
+    var words: object = new Words;
+    this.parser.putAt(-1, function(word: string) {
       words.add(word);
     });
     this.parser.exec(script);
     return words;
   },
 
-  encode: function(script: String) {
-    var words: Object = this.search(script);
+  encode: function(script: string) {
+    var words: object = this.search(script);
     words.sort();
-    var index: Number = 0;
-    forEach (words, function(word: Object) {
+    var index: number = 0;
+    forEach (words, function(word: object) {
       word.encoded = this.encoder(index++);
     }, this);
-    this.parser.putAt(-1, function(word: Array) {
+    this.parser.putAt(-1, function(word: any[]) {
       return words.get(word).encoded;
     });
     return this.parser.exec(script);
@@ -117,7 +117,7 @@ var Encoder: Object = Base.extend({
 
 var Privates: HTMLElement = Encoder.extend({
   constructor: function() {
-    return this.base(Privates.PATTERN, function(index: Number) {
+    return this.base(Privates.PATTERN, function(index: number) {
       return "_" + Packer.encode62(index);
     }, Privates.IGNORE);
   }
@@ -134,25 +134,25 @@ var Privates: HTMLElement = Encoder.extend({
 // packer/Base62.js
 // =========================================================================
 
-var Base62: Object = Encoder.extend({
-  encode: function(script: String) {
-    var words: Array = this.search(script);
+var Base62: object = Encoder.extend({
+  encode: function(script: string) {
+    var words: any[] = this.search(script);
 
     words.sort();
 
     var encoded: Map = new Collection; // a dictionary of base62 -> base10
-    var size: Number = words.size();
+    var size: number = words.size();
     for (var i = 0; i < size; i++) {
       encoded.put(Packer.encode62(i), i);
     }
 
-    function replacement(word: String): String {
+    function replacement(word: string): string {
       return words["#" + word].replacement;
     };
 
-    var empty: Number = K("");
-    var index: Number = 0;
-    forEach (words, function(word: Object) {
+    var empty: number = K("");
+    var index: number = 0;
+    forEach (words, function(word: object) {
       if (encoded.has(word)) {
         word.index = encoded.get(word);
         word.toString = empty;
@@ -170,7 +170,7 @@ var Base62: Object = Encoder.extend({
     });
 
     // sort by encoding
-    words.sort(function(word1: Object, word2: Object) {
+    words.sort(function(word1: object, word2: object) {
       return word1.index - word2.index;
     });
 
@@ -181,42 +181,42 @@ var Base62: Object = Encoder.extend({
 
     /* build the packed script */
 
-    var p: String = this.escape(script);
-    var a: String = "[]";
-    var c: String = this.getCount(words);
-    var k: String = this.getKeyWords(words);
-    var e: String = this.getEncoder(words);
-    var d: String = this.getDecoder(words);
+    var p: string = this.escape(script);
+    var a: string = "[]";
+    var c: string = this.getCount(words);
+    var k: string = this.getKeyWords(words);
+    var e: string = this.getEncoder(words);
+    var d: string = this.getDecoder(words);
 
     // the whole thing
     return format(Base62.UNPACK, p,a,c,k,e,d);
   },
   
-  search: function(script: Object) {
-    var words: Object = new Words;
+  search: function(script: object) {
+    var words: object = new Words;
     forEach (script.match(Base62.WORDS), words.add, words);
     return words;
   },
 
-  escape: function(script: String) {
+  escape: function(script: string) {
     // Single quotes wrap the final string so escape them.
     // Also, escape new lines (required by conditional comments).
     return script.replace(/([\\'])/g, "\\$1").replace(/[\r\n]+/g, "\\n");
   },
 
-  getCount: function(words: Object) {
+  getCount: function(words: object) {
     return words.size() || 1;
   },
 
-  getDecoder: function(words: Array) {
+  getDecoder: function(words: any[]) {
     // returns a pattern used for fast decoding of the packed script
-    var trim: Object = new RegGrp({
+    var trim: object = new RegGrp({
       "(\\d)(\\|\\d)+\\|(\\d)": "$1-$3",
       "([a-z])(\\|[a-z])+\\|([a-z])": "$1-$3",
       "([A-Z])(\\|[A-Z])+\\|([A-Z])": "$1-$3",
       "\\|": ""
     });
-    var pattern: Number = trim.exec(words.map(function(word: Object) {
+    var pattern: number = trim.exec(words.map(function(word: object) {
       if (word.toString()) return word.replacement;
       return "";
     }).slice(0, 62).join("|"));
@@ -225,10 +225,10 @@ var Base62: Object = Encoder.extend({
 
     pattern = "[" + pattern + "]";
 
-    var size: Number = words.size();
+    var size: number = words.size();
     if (size > 62) {
       pattern = "(" + pattern + "|";
-      var c: Number = Packer.encode62(size).charAt(0);
+      var c: number = Packer.encode62(size).charAt(0);
       if (c > "9") {
         pattern += "[\\\\d";
         if (c >= "a") {
@@ -259,16 +259,16 @@ var Base62: Object = Encoder.extend({
     return pattern;
   },
 
-  getEncoder: function(words: Object) {
-    var size: Number = words.size();
+  getEncoder: function(words: object) {
+    var size: number = words.size();
     return Base62["ENCODE" + (size > 10 ? size > 36 ? 62 : 36 : 10)];
   },
 
-  getKeyWords: function(words: Array) {
+  getKeyWords: function(words: any[]) {
     return words.map(String).join("|").replace(/\|+$/, "");
   },
 
-  getPattern: function(words: String) {
+  getPattern: function(words: string) {
     words = words.map(String).join("|").replace(/\|{2,}/g, "|").replace(/^\|+|\|+$/g, "") || "\\x0";
     return new RegExp("\\b(" + words + ")\\b", "g");
   }
@@ -301,7 +301,7 @@ global.Packer = Base.extend({
   privates: null,
   base62:   null,
   
-  pack: function(script: String, base62: Boolean, shrink: Boolean, privates: Boolean) {
+  pack: function(script: string, base62: boolean, shrink: boolean, privates: boolean) {
     script = this.minifier.minify(script);
     if (shrink) script = this.shrinker.shrink(script);
     if (privates) script = this.privates.encode(script);
@@ -322,13 +322,13 @@ global.Packer = Base.extend({
     "(OPERATOR)\\s*(REGEXP)": "$1$2"
   }),
 
-  encode52: function(c: String) {
+  encode52: function(c: string) {
     // Base52 encoding (a-Z)
-    function encode(c: Number): String {
+    function encode(c: number): string {
       return (c < 52 ? '' : encode(parseInt(c / 52))) +
         ((c = c % 52) > 25 ? String.fromCharCode(c + 39) : String.fromCharCode(c + 97));
     };
-    var encoded: String = encode(c);
+    var encoded: string = encode(c);
     if (/^(do|if|in)$/.test(encoded)) encoded = encoded.slice(1) + 0;
     return encoded;
   }
@@ -338,8 +338,8 @@ global.Packer = Base.extend({
 // packer/Minifier.js
 // =========================================================================
 
-var Minifier: Object = Base.extend({
-  minify: function(script: String) {
+var Minifier: object = Base.extend({
+  minify: function(script: string) {
     // packing with no additional options
     script += "\n";
     script = script.replace(Minifier.CONTINUE, "");
@@ -354,15 +354,15 @@ var Minifier: Object = Base.extend({
   
   init: function() {
     this.concat = new Parser(this.concat).merge(Packer.data);
-    extend(this.concat, "exec", function(script: String) {
-      var parsed: String = this.base(script);
+    extend(this.concat, "exec", function(script: string) {
+      var parsed: string = this.base(script);
       while (parsed != script) {
         script = parsed;
         parsed = this.base(script);
       }
       return parsed;
     });
-    forEach.csv("comments,clean,whitespace", function(name: String) {
+    forEach.csv("comments,clean,whitespace", function(name: string) {
       this[name] = Packer.data.union(new Parser(this[name]));
     }, this);
     this.conditionalComments = this.comments.copy();
@@ -380,7 +380,7 @@ var Minifier: Object = Base.extend({
   comments: {
     ";;;[^\\n]*\\n": REMOVE,
     "(COMMENT1)\\n\\s*(REGEXP)?": "\n$3",
-    "(COMMENT2)\\s*(REGEXP)?": function(match: String, comment: String, $2: Function, regexp: String) {
+    "(COMMENT2)\\s*(REGEXP)?": function(match: string, comment: string, $2: Function, regexp: string) {
       if (/^\/\*@/.test(comment) && /@\*\/$/.test(comment)) {
         comment = Minifier.conditionalComments.exec(comment);
       } else {
@@ -391,10 +391,10 @@ var Minifier: Object = Base.extend({
   },
 
   concat: {
-    "(STRING1)\\+(STRING1)": function(match: String, a: Array, $2: String, b: Array) {
+    "(STRING1)\\+(STRING1)": function(match: string, a: any[], $2: string, b: any[]) {
       return a.slice(0, -1) + b.slice(1);
     },
-    "(STRING2)\\+(STRING2)": function(match: String, a: Array, $2: String, b: Array) {
+    "(STRING2)\\+(STRING2)": function(match: string, a: any[], $2: string, b: any[]) {
       return a.slice(0, -1) + b.slice(1);
     }
   },
@@ -420,20 +420,20 @@ var Minifier: Object = Base.extend({
 // =========================================================================
 
 var Shrinker: HTMLElement = Base.extend({
-  decodeData: function(script: String) {
+  decodeData: function(script: string) {
     // put strings and regular expressions back
-    var data: Object = this._data; // encoded strings and regular expressions
+    var data: object = this._data; // encoded strings and regular expressions
     delete this._data;
-    return script.replace(Shrinker.ENCODED_DATA, function(match: Function, index: Number) {
+    return script.replace(Shrinker.ENCODED_DATA, function(match: Function, index: number) {
       return data[index];
     });
   },
 
-  encodeData: function(script: String) {
+  encodeData: function(script: string) {
     // encode strings and regular expressions
-    var data: Array = this._data = []; // encoded strings and regular expressions
-    return Packer.data.exec(script, function(match: String, operator: Number, regexp: String) {
-      var replacement: String = "\x01" + data.length + "\x01";
+    var data: any[] = this._data = []; // encoded strings and regular expressions
+    return Packer.data.exec(script, function(match: string, operator: number, regexp: string) {
+      var replacement: string = "\x01" + data.length + "\x01";
       if (regexp) {
         replacement = operator + replacement;
         match = regexp;
@@ -443,20 +443,20 @@ var Shrinker: HTMLElement = Base.extend({
     });
   },
   
-  shrink: function(script: String) {
+  shrink: function(script: string) {
     script = this.encodeData(script);
     
     // Windows Scripting Host cannot do regexp.test() on global regexps.
-    function global(regexp: Object): Object {
+    function global(regexp: object): object {
       // This function creates a global version of the passed regexp.
       return new RegExp(regexp.source, "g");
     };
         
     // identify blocks, particularly identify function blocks (which define scope)
     var BLOCK: RegExp         = /((catch|do|if|while|with|function)\b[^~{};]*(\(\s*[^{};]*\s*\))\s*)?(\{[^{}]*\})/;
-    var BLOCK_g: String       = global(BLOCK);
+    var BLOCK_g: string       = global(BLOCK);
     var BRACKETS: RegExp      = /\{[^{}]*\}|\[[^\[\]]*\]|\([^\(\)]*\)|~[^~]+~/;
-    var BRACKETS_g: String    = global(BRACKETS);
+    var BRACKETS_g: string    = global(BRACKETS);
     var ENCODED_BLOCK: RegExp = /~#?(\d+)~/;
     var IDENTIFIER: RegExp    = /[a-zA-Z_$][\w\$]*/g;
     var SCOPED: RegExp        = /~#(\d+)~/;
@@ -465,10 +465,10 @@ var Shrinker: HTMLElement = Base.extend({
     var VAR_TIDY: RegExp      = /\b(var|function)\b|\sin\s+[^;]+/g;
     var VAR_EQUAL: RegExp     = /\s*=[^,;]*/g;
     
-    var blocks: Array = []; // store program blocks (anything between braces {})
-    var total: Number = 0;
+    var blocks: any[] = []; // store program blocks (anything between braces {})
+    var total: number = 0;
     // encoder for program blocks
-    function encodeBlocks($: Function, prefix: String, blockType: Number, args: String, block: String): String {
+    function encodeBlocks($: Function, prefix: string, blockType: number, args: string, block: string): string {
       if (!prefix) prefix = "";
       if (blockType == "function") {
         // decode the function block (THIS IS THE IMPORTANT BIT)
@@ -481,7 +481,7 @@ var Shrinker: HTMLElement = Base.extend({
         args = args.slice(1, -1);
         
         if (args != "_no_shrink_") {
-          var vars: String = match(block, VARS).join(";").replace(VAR_g, ";var");
+          var vars: string = match(block, VARS).join(";").replace(VAR_g, ";var");
           while (BRACKETS.test(vars)) {
             vars = vars.replace(BRACKETS_g, "");
           }
@@ -491,9 +491,9 @@ var Shrinker: HTMLElement = Base.extend({
         
         // process each identifier
         if (args != "_no_shrink_") {
-          var count: Number = 0, shortId: String;
-          var ids: Array = match([args, vars], IDENTIFIER);
-          var processed: Object = {};
+          var count: number = 0, shortId: string;
+          var ids: any[] = match([args, vars], IDENTIFIER);
+          var processed: object = {};
           for (var i = 0; i < ids.length; i++) {
             id = ids[i];
             if (!processed["#" + id]) {
@@ -512,19 +512,19 @@ var Shrinker: HTMLElement = Base.extend({
           }
           total = Math.max(total, count);
         }
-        var replacement: String = prefix + "~" + blocks.length + "~";
+        var replacement: string = prefix + "~" + blocks.length + "~";
         blocks.push(block);
       } else {
-        var replacement: String = "~#" + blocks.length + "~";
+        var replacement: string = "~#" + blocks.length + "~";
         blocks.push(prefix + block);
       }
       return replacement;
     };
 
     // decoder for program blocks
-    function decodeBlocks(script: String, encoded: Object): String {
+    function decodeBlocks(script: string, encoded: object): string {
       while (encoded.test(script)) {
-        script = script.replace(global(encoded), function(match: Function, index: Number) {
+        script = script.replace(global(encoded), function(match: Function, index: number) {
           return blocks[index];
         });
       }
@@ -539,7 +539,7 @@ var Shrinker: HTMLElement = Base.extend({
     // put the blocks back
     script = decodeBlocks(script, ENCODED_BLOCK);
     
-    var shortId: String, count: Number = 0;
+    var shortId: string, count: number = 0;
     var shrunk: HTMLElement = new Encoder(Shrinker.SHRUNK, function() {
       // find the next free short name
       do shortId = Packer.encode52(count++);

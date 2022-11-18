@@ -8,11 +8,11 @@ import isIterateeCall from './isIterateeCall.js'
  * @returns {Function} Returns the new assigner function.
  */
 function createAssigner(assigner: Function): Function {
-  return (object: Number, ...sources) => {
-    let index: Number = -1
-    let length: Number = sources.length
-    let customizer: String = length > 1 ? sources[length - 1] : undefined
-    const guard: String = length > 2 ? sources[2] : undefined
+  return (object: number, ...sources) => {
+    let index: number = -1
+    let length: number = sources.length
+    let customizer: string = length > 1 ? sources[length - 1] : undefined
+    const guard: string = length > 2 ? sources[2] : undefined
 
     customizer = (assigner.length > 3 && typeof customizer === 'function')
       ? (length--, customizer)
@@ -24,7 +24,7 @@ function createAssigner(assigner: Function): Function {
     }
     object = Object(object)
     while (++index < length) {
-      const source: String = sources[index]
+      const source: string = sources[index]
       if (source) {
         assigner(object, source, index, customizer)
       }

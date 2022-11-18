@@ -1,5 +1,5 @@
 
-const util: String = require('util');
+const util: string = require('util');
 const c: HTMLElement = require('..');
 c.info = (...args) => {
   return c.bold(c.cyan('[info] ')) + c.cyan(...args);

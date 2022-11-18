@@ -1,28 +1,28 @@
 var aws4: HTMLElement = exports,
-    url: String = require('url'),
-    querystring: String = require('querystring'),
-    crypto: String = require('crypto'),
+    url: string = require('url'),
+    querystring: string = require('querystring'),
+    crypto: string = require('crypto'),
     lru: Function = require('./lru'),
     credentialsCache: Map = lru(1000)
 
 // http://docs.amazonwebservices.com/general/latest/gr/signature-version-4.html
 
-function hmac(key: String, string: String, encoding: Number): String {
+function hmac(key: string, string: string, encoding: number): string {
   return crypto.createHmac('sha256', key).update(string, 'utf8').digest(encoding)
 }
 
-function hash(string: String, encoding: String): String {
+function hash(string: string, encoding: string): string {
   return crypto.createHash('sha256').update(string, 'utf8').digest(encoding)
 }
 
 // This function assumes the string has already been percent encoded
-function encodeRfc3986(urlEncodedString: String): String {
-  return urlEncodedString.replace(/[!'()*]/g, function(c: String) {
+function encodeRfc3986(urlEncodedString: string): string {
+  return urlEncodedString.replace(/[!'()*]/g, function(c: string) {
     return '%' + c.charCodeAt(0).toString(16).toUpperCase()
   })
 }
 
-function encodeRfc3986Full(str: String): String {
+function encodeRfc3986Full(str: string): string {
   return encodeRfc3986(encodeURIComponent(str))
 }
 
@@ -30,7 +30,7 @@ function encodeRfc3986Full(str: String): String {
 // https://github.com/aws/aws-sdk-java-v2/blob/dc695de6ab49ad03934e1b02e7263abbd2354be0/core/auth/src/main/java/software/amazon/awssdk/auth/signer/internal/AbstractAws4Signer.java#L59
 // https://github.com/aws/aws-sdk-js/blob/18cb7e5b463b46239f9fdd4a65e2ff8c81831e8f/lib/signers/v4.js#L191-L199
 // https://github.com/mhart/aws4fetch/blob/b3aed16b6f17384cf36ea33bcba3c1e9f3bdfefd/src/main.js#L25-L34
-var HEADERS_TO_IGNORE: Object = {
+var HEADERS_TO_IGNORE: object = {
   'authorization': true,
   'connection': true,
   'x-amzn-trace-id': true,
@@ -42,12 +42,12 @@ var HEADERS_TO_IGNORE: Object = {
 
 // request: { path | body, [host], [method], [headers], [service], [region] }
 // credentials: { accessKeyId, secretAccessKey, [sessionToken] }
-function RequestSigner(request: Object, credentials: String): Void {
+function RequestSigner(request: object, credentials: string): Void {
 
   if (typeof request === 'string') request = url.parse(request)
 
   var headers: HTMLElement = request.headers = (request.headers || {}),
-      hostParts: Object = (!this.service || !this.region) && this.matchHost(request.hostname || request.host || headers.Host || headers.host)
+      hostParts: object = (!this.service || !this.region) && this.matchHost(request.hostname || request.host || headers.Host || headers.host)
 
   this.request = request
   this.credentials = credentials || this.defaultCredentials()
@@ -74,9 +74,9 @@ function RequestSigner(request: Object, credentials: String): Void {
   this.isCodeCommitGit = this.service === 'codecommit' && request.method === 'GIT'
 }
 
-RequestSigner.prototype.matchHost = function(host: String) {
-  var match: Array = (host || '').match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com(\.cn)?$/)
-  var hostParts: Object = (match || []).slice(1, 3)
+RequestSigner.prototype.matchHost = function(host: string) {
+  var match: any[] = (host || '').match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com(\.cn)?$/)
+  var hostParts: object = (match || []).slice(1, 3)
 
   // ES's hostParts are sometimes the other way round, if the value that is expected
   // to be region equals ‘es’ switch them back
@@ -110,15 +110,15 @@ RequestSigner.prototype.isSingleRegion = function() {
 }
 
 RequestSigner.prototype.createHost = function() {
-  var region: String = this.isSingleRegion() ? '' : '.' + this.region,
-      subdomain: String = this.service === 'ses' ? 'email' : this.service
+  var region: string = this.isSingleRegion() ? '' : '.' + this.region,
+      subdomain: string = this.service === 'ses' ? 'email' : this.service
   return subdomain + region + '.amazonaws.com'
 }
 
 RequestSigner.prototype.prepareRequest = function() {
   this.parsePath()
 
-  var request: Object = this.request, headers: Object = request.headers, query: Object
+  var request: object = this.request, headers: object = request.headers, query: object
 
   if (request.signQuery) {
 
@@ -181,7 +181,7 @@ RequestSigner.prototype.sign = function() {
 
 RequestSigner.prototype.getDateTime = function() {
   if (!this.datetime) {
-    var headers: Object = this.request.headers,
+    var headers: object = this.request.headers,
       date: HTMLInputElement = new Date(headers.Date || headers.date || new Date)
 
     this.datetime = date.toISOString().replace(/[:\-]|\.\d{3}/g, '')
@@ -205,9 +205,9 @@ RequestSigner.prototype.authHeader = function() {
 }
 
 RequestSigner.prototype.signature = function() {
-  var date: Array = this.getDate(),
-      cacheKey: String = [this.credentials.secretAccessKey, date, this.region, this.service].join(),
-      kDate: String, kRegion: String, kService: String, kCredentials: String = credentialsCache.get(cacheKey)
+  var date: any[] = this.getDate(),
+      cacheKey: string = [this.credentials.secretAccessKey, date, this.region, this.service].join(),
+      kDate: string, kRegion: string, kService: string, kCredentials: string = credentialsCache.get(cacheKey)
   if (!kCredentials) {
     kDate = hmac('AWS4' + this.credentials.secretAccessKey, date)
     kRegion = hmac(kDate, this.region)
@@ -230,15 +230,15 @@ RequestSigner.prototype.stringToSign = function() {
 RequestSigner.prototype.canonicalString = function() {
   if (!this.parsedPath) this.prepareRequest()
 
-  var pathStr: String = this.parsedPath.path,
-      query: Object = this.parsedPath.query,
-      headers: Object = this.request.headers,
-      queryStr: String = '',
-      normalizePath: Number = this.service !== 's3',
-      decodePath: Number = this.service === 's3' || this.request.doNotEncodePath,
-      decodeSlashesInPath: Number = this.service === 's3',
-      firstValOnly: Boolean = this.service === 's3',
-      bodyHash: String
+  var pathStr: string = this.parsedPath.path,
+      query: object = this.parsedPath.query,
+      headers: object = this.request.headers,
+      queryStr: string = '',
+      normalizePath: number = this.service !== 's3',
+      decodePath: number = this.service === 's3' || this.request.doNotEncodePath,
+      decodeSlashesInPath: number = this.service === 's3',
+      firstValOnly: boolean = this.service === 's3',
+      bodyHash: string
 
   if (this.service === 's3' && this.request.signQuery) {
     bodyHash = 'UNSIGNED-PAYLOAD'
@@ -250,26 +250,26 @@ RequestSigner.prototype.canonicalString = function() {
   }
 
   if (query) {
-    var reducedQuery: Function = Object.keys(query).reduce(function(obj: Object, key: String) {
+    var reducedQuery: Function = Object.keys(query).reduce(function(obj: object, key: string) {
       if (!key) return obj
       obj[encodeRfc3986Full(key)] = !Array.isArray(query[key]) ? query[key] :
         (firstValOnly ? query[key][0] : query[key])
       return obj
     }, {})
-    var encodedQueryPieces: Array = []
-    Object.keys(reducedQuery).sort().forEach(function(key: String) {
+    var encodedQueryPieces: any[] = []
+    Object.keys(reducedQuery).sort().forEach(function(key: string) {
       if (!Array.isArray(reducedQuery[key])) {
         encodedQueryPieces.push(key + '=' + encodeRfc3986Full(reducedQuery[key]))
       } else {
         reducedQuery[key].map(encodeRfc3986Full).sort()
-          .forEach(function(val: String) { encodedQueryPieces.push(key + '=' + val) })
+          .forEach(function(val: string) { encodedQueryPieces.push(key + '=' + val) })
       }
     })
     queryStr = encodedQueryPieces.join('&')
   }
   if (pathStr !== '/') {
     if (normalizePath) pathStr = pathStr.replace(/\/{2,}/g, '/')
-    pathStr = pathStr.split('/').reduce(function(path: String, piece: String) {
+    pathStr = pathStr.split('/').reduce(function(path: string, piece: string) {
       if (normalizePath && piece === '..') {
         path.pop()
       } else if (!normalizePath || piece !== '.') {
@@ -293,21 +293,21 @@ RequestSigner.prototype.canonicalString = function() {
 }
 
 RequestSigner.prototype.canonicalHeaders = function() {
-  var headers: Object = this.request.headers
-  function trimAll(header: String): String {
+  var headers: object = this.request.headers
+  function trimAll(header: string): string {
     return header.toString().trim().replace(/\s+/g, ' ')
   }
   return Object.keys(headers)
-    .filter(function(key: String) { return HEADERS_TO_IGNORE[key.toLowerCase()] == null })
-    .sort(function(a: String, b: String) { return a.toLowerCase() < b.toLowerCase() ? -1 : 1 })
-    .map(function(key: String) { return key.toLowerCase() + ':' + trimAll(headers[key]) })
+    .filter(function(key: string) { return HEADERS_TO_IGNORE[key.toLowerCase()] == null })
+    .sort(function(a: string, b: string) { return a.toLowerCase() < b.toLowerCase() ? -1 : 1 })
+    .map(function(key: string) { return key.toLowerCase() + ':' + trimAll(headers[key]) })
     .join('\n')
 }
 
 RequestSigner.prototype.signedHeaders = function() {
   return Object.keys(this.request.headers)
-    .map(function(key: String) { return key.toLowerCase() })
-    .filter(function(key: String) { return HEADERS_TO_IGNORE[key] == null })
+    .map(function(key: string) { return key.toLowerCase() })
+    .filter(function(key: string) { return HEADERS_TO_IGNORE[key] == null })
     .sort()
     .join(';')
 }
@@ -331,7 +331,7 @@ RequestSigner.prototype.defaultCredentials = function() {
 }
 
 RequestSigner.prototype.parsePath = function() {
-  var path: String = this.request.path || '/'
+  var path: string = this.request.path || '/'
 
   // S3 doesn't always encode characters > 127 correctly and
   // all services don't encode characters > 255 correctly
@@ -340,8 +340,8 @@ RequestSigner.prototype.parsePath = function() {
     path = encodeURI(decodeURI(path))
   }
 
-  var queryIx: Number = path.indexOf('?'),
-      query: Array = null
+  var queryIx: number = path.indexOf('?'),
+      query: any[] = null
 
   if (queryIx >= 0) {
     query = querystring.parse(path.slice(queryIx + 1))
@@ -355,8 +355,8 @@ RequestSigner.prototype.parsePath = function() {
 }
 
 RequestSigner.prototype.formatPath = function() {
-  var path: String = this.parsedPath.path,
-      query: Object = this.parsedPath.query
+  var path: string = this.parsedPath.path,
+      query: object = this.parsedPath.query
 
   if (!query) return path
 
@@ -368,6 +368,6 @@ RequestSigner.prototype.formatPath = function() {
 
 aws4.RequestSigner = RequestSigner
 
-aws4.sign = function(request: Object, credentials: String) {
+aws4.sign = function(request: object, credentials: string) {
   return new RequestSigner(request, credentials).sign()
 }

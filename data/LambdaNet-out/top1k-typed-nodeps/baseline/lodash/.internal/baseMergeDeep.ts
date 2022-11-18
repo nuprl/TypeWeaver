@@ -26,25 +26,25 @@ import toPlainObject from '../toPlainObject.js'
  * @param {Object} [stack] Tracks traversed source values and their merged
  *  counterparts.
  */
-function baseMergeDeep(object: Object, source: Object, key: String, srcIndex: Number, mergeFunc: Function, customizer: Function, stack: Object): Void {
-  const objValue: Array = object[key]
-  const srcValue: String = source[key]
+function baseMergeDeep(object: object, source: object, key: string, srcIndex: number, mergeFunc: Function, customizer: Function, stack: object): Void {
+  const objValue: any[] = object[key]
+  const srcValue: string = source[key]
   const stacked: Stack = stack.get(srcValue)
 
   if (stacked) {
     assignMergeValue(object, key, stacked)
     return
   }
-  let newValue: Array = customizer
+  let newValue: any[] = customizer
     ? customizer(objValue, srcValue, `${key}`, object, source, stack)
     : undefined
 
-  let isCommon: Boolean = newValue === undefined
+  let isCommon: boolean = newValue === undefined
 
   if (isCommon) {
-    const isArr: Boolean = Array.isArray(srcValue)
-    const isBuff: Boolean = !isArr && isBuffer(srcValue)
-    const isTyped: Boolean = !isArr && !isBuff && isTypedArray(srcValue)
+    const isArr: boolean = Array.isArray(srcValue)
+    const isBuff: boolean = !isArr && isBuffer(srcValue)
+    const isTyped: boolean = !isArr && !isBuff && isTypedArray(srcValue)
 
     newValue = srcValue
     if (isArr || isBuff || isTyped) {

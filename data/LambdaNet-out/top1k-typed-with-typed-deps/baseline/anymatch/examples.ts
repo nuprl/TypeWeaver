@@ -1,22 +1,22 @@
 const inspect: Function = require('util').inspect;
-const i: Function = function (val: String) {return inspect(val, {colors: true})};
+const i: Function = function (val: string) {return inspect(val, {colors: true})};
 
-const origAnymatch: Object = require('./').default;
+const origAnymatch: object = require('./').default;
 console.log("const anymatch = require('anymatch');\n");
 
-const matchers: Array = [
+const matchers: any[] = [
   'path/to/file.js',
   'path/anyjs/**/*.js',
   /foo.js$/,
-  ((string: String) => string.includes('bar') && string.length > 10)
+  ((string: string) => string.includes('bar') && string.length > 10)
 ];
 
 console.log('const matchers =',
   i(matchers).replace('[Function]', matchers[3].toString() + ''), ';\n');
 
 const anymatch: Function = (...args) => {
-  let arg1: String = args[0] === matchers ? `matchers` : i(args[0]);
-  let str: String = `anymatch(${arg1}, ${i(args[1])}`;
+  let arg1: string = args[0] === matchers ? `matchers` : i(args[0]);
+  let str: string = `anymatch(${arg1}, ${i(args[1])}`;
   if (args[2]) str += `, ${i(args[2])}`;
   str += `);`
   console.log(`${str} // ${i(origAnymatch(...args))}`)

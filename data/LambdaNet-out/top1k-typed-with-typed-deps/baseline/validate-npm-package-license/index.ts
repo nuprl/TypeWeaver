@@ -1,7 +1,7 @@
 var parse: Function = require('spdx-expression-parse');
-var correct: String = require('spdx-correct');
+var correct: string = require('spdx-correct');
 
-var genericWarning: String = (
+var genericWarning: string = (
   'license should be ' +
   'a valid SPDX license expression (without "LicenseRef"), ' +
   '"UNLICENSED", or ' +
@@ -10,13 +10,13 @@ var genericWarning: String = (
 
 var fileReferenceRE: RegExp = /^SEE LICEN[CS]E IN (.+)$/;
 
-function startsWith(prefix: Array, string: String): Boolean {
+function startsWith(prefix: any[], string: string): boolean {
   return string.slice(0, prefix.length) === prefix;
 }
 
-function usesLicenseRef(ast: HTMLElement): Boolean {
+function usesLicenseRef(ast: HTMLElement): boolean {
   if (ast.hasOwnProperty('license')) {
-    var license: String = ast.license;
+    var license: string = ast.license;
     return (
       startsWith('LicenseRef', license) ||
       startsWith('DocumentRef', license)
@@ -29,8 +29,8 @@ function usesLicenseRef(ast: HTMLElement): Boolean {
   }
 }
 
-module.exports = function(argument: String) {
-  var ast: String;
+module.exports = function(argument: string) {
+  var ast: string;
 
   try {
     ast = parse(argument);

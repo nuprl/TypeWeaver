@@ -91,9 +91,9 @@ import PromiseHash from './promise-hash';
   @return {Promise} promise that is fulfilled when all properties of `promises`
   have been fulfilled, or rejected if any of them become rejected.
 */
-export default function hash(object: Object, label: String): Promise {
+export default function hash(object: object, label: string): Promise {
   return Promise.resolve(object, label)
-    .then(function(object: Array) {
+    .then(function(object: any[]) {
       if (object === null || typeof object !== 'object') {
         throw new TypeError("Promise.hash must be called with an object");
       }

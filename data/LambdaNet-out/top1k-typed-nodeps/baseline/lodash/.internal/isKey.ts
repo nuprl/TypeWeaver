@@ -12,11 +12,11 @@ const reIsPlainProp: RegExp = /^\w*$/
  * @param {Object} [object] The object to query keys on.
  * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
  */
-function isKey(value: String, object: Array): Boolean {
+function isKey(value: string, object: any[]): boolean {
   if (Array.isArray(value)) {
     return false
   }
-  const type: String = typeof value
+  const type: string = typeof value
   if (type === 'number' || type === 'boolean' || value == null || isSymbol(value)) {
     return true
   }

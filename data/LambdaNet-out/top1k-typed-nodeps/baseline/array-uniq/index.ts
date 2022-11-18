@@ -1,3 +1,3 @@
-export default function arrayUniq(array: Object): Array {
+export default function arrayUniq(array: object): any[] {
 	return [...new Set(array)];
 }

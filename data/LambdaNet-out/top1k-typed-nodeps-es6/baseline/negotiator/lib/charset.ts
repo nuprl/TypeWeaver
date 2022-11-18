@@ -28,11 +28,11 @@ var simpleCharsetRegExp: RegExp = /^\s*([^\s;]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAcceptCharset(accept: String): Array {
-  var accepts: Array = accept.split(',');
+function parseAcceptCharset(accept: string): any[] {
+  var accepts: any[] = accept.split(',');
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
-    var charset: String = parseCharset(accepts[i].trim(), i);
+    var charset: string = parseCharset(accepts[i].trim(), i);
 
     if (charset) {
       accepts[j++] = charset;
@@ -50,16 +50,16 @@ function parseAcceptCharset(accept: String): Array {
  * @private
  */
 
-function parseCharset(str: String, i: Number): Object {
-  var match: Object = simpleCharsetRegExp.exec(str);
+function parseCharset(str: string, i: number): object {
+  var match: object = simpleCharsetRegExp.exec(str);
   if (!match) return null;
 
-  var charset: String = match[1];
-  var q: Number = 1;
+  var charset: string = match[1];
+  var q: number = 1;
   if (match[2]) {
-    var params: Array = match[2].split(';')
+    var params: any[] = match[2].split(';')
     for (var j = 0; j < params.length; j++) {
-      var p: Object = params[j].trim().split('=');
+      var p: object = params[j].trim().split('=');
       if (p[0] === 'q') {
         q = parseFloat(p[1]);
         break;
@@ -79,11 +79,11 @@ function parseCharset(str: String, i: Number): Object {
  * @private
  */
 
-function getCharsetPriority(charset: String, accepted: Array, index: Number): Object {
-  var priority: Object = {o: -1, q: 0, s: 0};
+function getCharsetPriority(charset: string, accepted: any[], index: number): object {
+  var priority: object = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
-    var spec: Object = specify(charset, accepted[i], index);
+    var spec: object = specify(charset, accepted[i], index);
 
     if (spec && (priority.s - spec.s || priority.q - spec.q || priority.o - spec.o) < 0) {
       priority = spec;
@@ -98,8 +98,8 @@ function getCharsetPriority(charset: String, accepted: Array, index: Number): Ob
  * @private
  */
 
-function specify(charset: String, spec: Object, index: Number): Object {
-  var s: Number = 0;
+function specify(charset: string, spec: object, index: number): object {
+  var s: number = 0;
   if(spec.charset.toLowerCase() === charset.toLowerCase()){
     s |= 1;
   } else if (spec.charset !== '*' ) {
@@ -119,9 +119,9 @@ function specify(charset: String, spec: Object, index: Number): Object {
  * @public
  */
 
-function preferredCharsets(accept: Number, provided: Array): Array {
+function preferredCharsets(accept: number, provided: any[]): any[] {
   // RFC 2616 sec 14.2: no header = *
-  var accepts: Array = parseAcceptCharset(accept === undefined ? '*' : accept || '');
+  var accepts: any[] = parseAcceptCharset(accept === undefined ? '*' : accept || '');
 
   if (!provided) {
     // sorted list of all charsets
@@ -131,12 +131,12 @@ function preferredCharsets(accept: Number, provided: Array): Array {
       .map(getFullCharset);
   }
 
-  var priorities: Array = provided.map(function getPriority(type: String, index: Number): Promise {
+  var priorities: any[] = provided.map(function getPriority(type: string, index: number): Promise {
     return getCharsetPriority(type, accepts, index);
   });
 
   // sorted list of accepted charsets
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority: String): String {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority: string): string {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -146,7 +146,7 @@ function preferredCharsets(accept: Number, provided: Array): Array {
  * @private
  */
 
-function compareSpecs(a: Object, b: Object): Boolean {
+function compareSpecs(a: object, b: object): boolean {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -155,7 +155,7 @@ function compareSpecs(a: Object, b: Object): Boolean {
  * @private
  */
 
-function getFullCharset(spec: Object): Array {
+function getFullCharset(spec: object): any[] {
   return spec.charset;
 }
 
@@ -164,6 +164,6 @@ function getFullCharset(spec: Object): Array {
  * @private
  */
 
-function isQuality(spec: Object): Boolean {
+function isQuality(spec: object): boolean {
   return spec.q > 0;
 }

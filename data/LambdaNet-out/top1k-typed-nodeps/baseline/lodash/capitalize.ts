@@ -14,7 +14,7 @@ import toString from './toString.js'
  * capitalize('FRED')
  * // => 'Fred'
  */
-const capitalize: Function = (string: String) => upperFirst(toString(string).toLowerCase())
+const capitalize: Function = (string: string) => upperFirst(toString(string).toLowerCase())
 
 
 export default capitalize

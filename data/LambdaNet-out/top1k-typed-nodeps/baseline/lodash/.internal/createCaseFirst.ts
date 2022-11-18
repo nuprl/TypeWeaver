@@ -9,21 +9,21 @@ import stringToArray from './stringToArray.js'
  * @param {string} methodName The name of the `String` case method to use.
  * @returns {Function} Returns the new case function.
  */
-function createCaseFirst(methodName: String): Function {
-  return (string: Array) => {
+function createCaseFirst(methodName: string): Function {
+  return (string: any[]) => {
     if (!string) {
       return ''
     }
 
-    const strSymbols: Object = hasUnicode(string)
+    const strSymbols: object = hasUnicode(string)
       ? stringToArray(string)
       : undefined
 
-    const chr: Object = strSymbols
+    const chr: object = strSymbols
       ? strSymbols[0]
       : string[0]
 
-    const trailing: String = strSymbols
+    const trailing: string = strSymbols
       ? castSlice(strSymbols, 1).join('')
       : string.slice(1)
 

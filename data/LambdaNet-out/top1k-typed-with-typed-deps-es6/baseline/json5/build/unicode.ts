@@ -5,13 +5,13 @@ import fs from 'fs';
 import path from 'path';
 import regenerate from 'regenerate';
 
-const libDir: String = 'lib'
+const libDir: string = 'lib'
 
-const Space_Separator: Number = regenerate()
+const Space_Separator: number = regenerate()
     .add(require('unicode-10.0.0/General_Category/Space_Separator/code-points'))
     .remove('\t', '\v', '\f', ' ', '\u00A0', '\uFEFF')
 
-const ID_Start: String = regenerate()
+const ID_Start: string = regenerate()
     .add(require('unicode-10.0.0/General_Category/Uppercase_Letter/code-points'))
     .add(require('unicode-10.0.0/General_Category/Lowercase_Letter/code-points'))
     .add(require('unicode-10.0.0/General_Category/Titlecase_Letter/code-points'))
@@ -22,7 +22,7 @@ const ID_Start: String = regenerate()
     .removeRange('A', 'Z')
     .removeRange('a', 'z')
 
-const ID_Continue: String = regenerate()
+const ID_Continue: string = regenerate()
     .add(ID_Start)
     .add(require('unicode-10.0.0/General_Category/Nonspacing_Mark/code-points'))
     .add(require('unicode-10.0.0/General_Category/Spacing_Mark/code-points'))
@@ -33,20 +33,20 @@ const ID_Continue: String = regenerate()
     .removeRange('A', 'Z')
     .removeRange('a', 'z')
 
-const outDir: String = libDir
-const outPath: String = path.join(outDir, 'unicode.js')
+const outDir: string = libDir
+const outPath: string = path.join(outDir, 'unicode.js')
 
 if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir)
 }
 
-const data: Object = {
+const data: object = {
     Space_Separator,
     ID_Start,
     ID_Continue,
 }
 
-let es6: String = '// This is a generated file. Do not edit.\n'
-es6 += Object.keys(data).map((key: String) => `module.exports.${key} = /${data[key]}/\n`).join('')
+let es6: string = '// This is a generated file. Do not edit.\n'
+es6 += Object.keys(data).map((key: string) => `module.exports.${key} = /${data[key]}/\n`).join('')
 
 fs.writeFileSync(outPath, es6)

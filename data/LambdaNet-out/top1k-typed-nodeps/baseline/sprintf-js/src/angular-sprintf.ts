@@ -14,7 +14,7 @@
             return $filter('sprintf')
         }]).
         filter('vsprintf', function() {
-            return function(format: String, argv: String) {
+            return function(format: string, argv: string) {
                 return vsprintf(format, argv)
             }
         }).

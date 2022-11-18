@@ -21,8 +21,8 @@ class CodeNode {
 	}
 
 	getMappings(mappingsContext) {
-		const lines: Number = getNumberOfLines(this.generatedCode);
-		const mapping: String = Array(lines+1).join(";");
+		const lines: number = getNumberOfLines(this.generatedCode);
+		const mapping: string = Array(lines+1).join(";");
 		if(lines > 0) {
 			mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode);
 			if(mappingsContext.unfinishedGeneratedLine > 0) {
@@ -31,7 +31,7 @@ class CodeNode {
 				return mapping;
 			}
 		} else {
-			const prevUnfinished: Number = mappingsContext.unfinishedGeneratedLine;
+			const prevUnfinished: number = mappingsContext.unfinishedGeneratedLine;
 			mappingsContext.unfinishedGeneratedLine += getUnfinishedLine(this.generatedCode);
 			if(prevUnfinished === 0 && mappingsContext.unfinishedGeneratedLine > 0) {
 				return "A";
@@ -46,7 +46,7 @@ class CodeNode {
 	}
 
 	mapGeneratedCode(fn) {
-		const generatedCode: String = fn(this.generatedCode);
+		const generatedCode: string = fn(this.generatedCode);
 		return new CodeNode(generatedCode);
 	}
 

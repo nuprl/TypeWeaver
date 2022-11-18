@@ -10,7 +10,7 @@
 /**
  * Map from state to current set it goes.
  */
-let currentTransitionMap: Object = null;
+let currentTransitionMap: object = null;
 
 /**
  * Takes a DFA, and returns a minimized version of it
@@ -18,18 +18,18 @@ let currentTransitionMap: Object = null;
  * 2-, ... N-equivalence algorithm).
  */
 function minimize(dfa: DFA): DFA {
-  const table: Object = dfa.getTransitionTable();
-  const allStates: Array = Object.keys(table);
-  const alphabet: Array = dfa.getAlphabet();
+  const table: object = dfa.getTransitionTable();
+  const allStates: any[] = Object.keys(table);
+  const alphabet: any[] = dfa.getAlphabet();
   const accepting: Map = dfa.getAcceptingStateNumbers();
 
   currentTransitionMap = {};
 
   const nonAccepting: Error = new Set();
 
-  allStates.forEach((state: Number) => {
+  allStates.forEach((state: number) => {
     state = Number(state);
-    const isAccepting: Boolean = accepting.has(state);
+    const isAccepting: boolean = accepting.has(state);
 
     if (isAccepting) {
       currentTransitionMap[state] = accepting;
@@ -43,14 +43,14 @@ function minimize(dfa: DFA): DFA {
   // Step 1: build equivalent sets.
 
   // All [1..N] equivalent sets.
-  const all: Array = [
+  const all: any[] = [
     // 0-equivalent sets.
     [nonAccepting, accepting]
-      .filter((set: Object) => set.size > 0),
+      .filter((set: object) => set.size > 0),
   ];
 
 
-  let current: Array;
+  let current: any[];
   let previous: Function;
 
   // Top of the stack is the current list of sets to analyze.
@@ -61,11 +61,11 @@ function minimize(dfa: DFA): DFA {
 
   // Until we'll not have the same N and N-1 equivalent rows.
   while (!sameRow(current, previous)) {
-    const newTransitionMap: Object = {};
+    const newTransitionMap: object = {};
 
     for (const set of current) {
       // Handled states for this set.
-      const handledStates: Object = {};
+      const handledStates: object = {};
 
       const [first, ...rest] = set;
       handledStates[first] = new Set([first]);
@@ -113,15 +113,15 @@ function minimize(dfa: DFA): DFA {
 
   // Remap state numbers from sets to index-based.
   const remaped: Map = new Map();
-  let idx: Number = 1;
-  current.forEach((set: String) => remaped.set(set, idx++));
+  let idx: number = 1;
+  current.forEach((set: string) => remaped.set(set, idx++));
 
   // Build the minimized table from the calculated equivalent sets.
-  const minimizedTable: Object = {};
+  const minimizedTable: object = {};
 
   const minimizedAcceptingStates: Error = new Set();
 
-  const updateAcceptingStates: Function = (set: Array, idx: Number) => {
+  const updateAcceptingStates: Function = (set: any[], idx: number) => {
     for (const state of set) {
       if (accepting.has(state)) {
         minimizedAcceptingStates.add(idx);
@@ -135,7 +135,7 @@ function minimize(dfa: DFA): DFA {
       updateAcceptingStates(set, idx);
 
       // Determine original transition for this symbol from the set.
-      let originalTransition: String;
+      let originalTransition: string;
       for (const originalState of set) {
         originalTransition = table[originalState][symbol];
         if (originalTransition) {
@@ -158,7 +158,7 @@ function minimize(dfa: DFA): DFA {
   return dfa;
 }
 
-function sameRow(r1: Array, r2: Array): Boolean {
+function sameRow(r1: any[], r2: any[]): boolean {
   if (!r2) {
     return false;
   }
@@ -168,8 +168,8 @@ function sameRow(r1: Array, r2: Array): Boolean {
   }
 
   for (let i = 0; i < r1.length; i++) {
-    const s1: Object = r1[i];
-    const s2: Object = r2[i];
+    const s1: object = r1[i];
+    const s2: object = r2[i];
 
     if (s1.size !== s2.size) {
       return false;
@@ -187,7 +187,7 @@ function sameRow(r1: Array, r2: Array): Boolean {
  * Checks whether two states are N-equivalent, i.e. whether they go
  * to the same set on a symbol.
  */
-function areEquivalent(s1: Function, s2: Function, table: String, alphabet: Array): Boolean {
+function areEquivalent(s1: Function, s2: Function, table: string, alphabet: any[]): boolean {
   for (const symbol of alphabet) {
     if (!goToSameSet(s1, s2, table, symbol)) {
       return false;
@@ -199,13 +199,13 @@ function areEquivalent(s1: Function, s2: Function, table: String, alphabet: Arra
 /**
  * Checks whether states go to the same set.
  */
-function goToSameSet(s1: String, s2: String, table: Object, symbol: String): Boolean {
+function goToSameSet(s1: string, s2: string, table: object, symbol: string): boolean {
   if (!currentTransitionMap[s1] || !currentTransitionMap[s2]) {
     return false;
   }
 
-  const originalTransitionS1: String = table[s1][symbol];
-  const originalTransitionS2: String = table[s2][symbol];
+  const originalTransitionS1: string = table[s1][symbol];
+  const originalTransitionS2: string = table[s2][symbol];
 
   // If no actual transition on this symbol, treat it as positive.
   if (!originalTransitionS1 && !originalTransitionS2) {

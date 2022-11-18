@@ -1,9 +1,9 @@
 'use strict';
-var token: String = '%[a-f0-9]{2}';
+var token: string = '%[a-f0-9]{2}';
 var singleMatcher: HTMLElement = new RegExp(token, 'gi');
 var multiMatcher: HTMLElement = new RegExp('(' + token + ')+', 'gi');
 
-function decodeComponents(components: Array, split: String): String {
+function decodeComponents(components: any[], split: string): string {
 	try {
 		// Try to decode the entire string first
 		return decodeURIComponent(components.join(''));
@@ -18,13 +18,13 @@ function decodeComponents(components: Array, split: String): String {
 	split = split || 1;
 
 	// Split the array in 2 parts
-	var left: Array = components.slice(0, split);
-	var right: Array = components.slice(split);
+	var left: any[] = components.slice(0, split);
+	var right: any[] = components.slice(split);
 
 	return Array.prototype.concat.call([], decodeComponents(left), decodeComponents(right));
 }
 
-function decode(input: HTMLElement): String {
+function decode(input: HTMLElement): string {
 	try {
 		return decodeURIComponent(input);
 	} catch (err) {
@@ -40,9 +40,9 @@ function decode(input: HTMLElement): String {
 	}
 }
 
-function customDecodeURIComponent(input: String): Array {
+function customDecodeURIComponent(input: string): any[] {
 	// Keep track of all the replacements and prefill the map with the `BOM`
-	var replaceMap: Object = {
+	var replaceMap: object = {
 		'%FE%FF': '\uFFFD\uFFFD',
 		'%FF%FE': '\uFFFD\uFFFD'
 	};
@@ -66,18 +66,18 @@ function customDecodeURIComponent(input: String): Array {
 	// Add `%C2` at the end of the map to make sure it does not replace the combinator before everything else
 	replaceMap['%C2'] = '\uFFFD';
 
-	var entries: Array = Object.keys(replaceMap);
+	var entries: any[] = Object.keys(replaceMap);
 
 	for (var i = 0; i < entries.length; i++) {
 		// Replace all decoded components
-		var key: String = entries[i];
+		var key: string = entries[i];
 		input = input.replace(new RegExp(key, 'g'), replaceMap[key]);
 	}
 
 	return input;
 }
 
-module.exports = function (encodedURI: String) {
+module.exports = function (encodedURI: string) {
 	if (typeof encodedURI !== 'string') {
 		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
 	}

@@ -7,11 +7,11 @@
 
 'use strict';
 
-const isObject: Function = (val: Number) => {
+const isObject: Function = (val: number) => {
   return val !== null && typeof val === 'object' && !Array.isArray(val);
 };
 
-module.exports = (obj: Object, key: String, checkProto: Number) => {
+module.exports = (obj: object, key: string, checkProto: number) => {
   if (!isObject(obj)) return false;
 
   let desc: Function = key ? Object.getOwnPropertyDescriptor(obj, key) : obj;
@@ -22,8 +22,8 @@ module.exports = (obj: Object, key: String, checkProto: Number) => {
 
   if (!isObject(desc)) return false;
 
-  const check: Function = (value: Object) => {
-    let validKeys: Array = ['get', 'set', 'enumerable', 'configurable'];
+  const check: Function = (value: object) => {
+    let validKeys: any[] = ['get', 'set', 'enumerable', 'configurable'];
 
     for (let key of validKeys) {
       if (!desc.hasOwnProperty(key)) {
@@ -33,7 +33,7 @@ module.exports = (obj: Object, key: String, checkProto: Number) => {
 
     for (let key of Object.keys(value)) {
       if (!validKeys.includes(key)) return false;
-      let val: String = value[key];
+      let val: string = value[key];
 
       if (key === 'get' || key === 'set') {
         if (val !== void 0 && typeof val !== 'function') {

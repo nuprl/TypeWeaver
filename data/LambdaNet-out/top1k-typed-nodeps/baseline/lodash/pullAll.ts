@@ -19,7 +19,7 @@ import basePullAll from './.internal/basePullAll.js'
  * console.log(array)
  * // => ['b', 'b']
  */
-function pullAll(array: Array, values: Array): Array {
+function pullAll(array: any[], values: any[]): any[] {
   return (array != null && array.length && values != null && values.length)
     ? basePullAll(array, values)
     : array

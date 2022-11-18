@@ -1,13 +1,13 @@
 /*! https://mths.be/cssesc v3.0.0 by @mathias */
 'use strict';
 
-var object: Object = {};
+var object: object = {};
 var hasOwnProperty: Function = object.hasOwnProperty;
-var merge: Function = function merge(options: Object, defaults: Object): Object {
+var merge: Function = function merge(options: object, defaults: object): object {
 	if (!options) {
 		return defaults;
 	}
-	var result: Object = {};
+	var result: object = {};
 	for (var key in defaults) {
 		// `if (defaults.hasOwnProperty(key) { … }` is not needed here, since
 		// only recognized option names are used.
@@ -22,27 +22,27 @@ var regexAlwaysEscape: RegExp = /['"\\]/;
 var regexExcessiveSpaces: RegExp = /(^|\\+)?(\\[A-F0-9]{1,6})\x20(?![a-fA-F0-9\x20])/g;
 
 // https://mathiasbynens.be/notes/css-escapes#css
-var cssesc: HTMLElement = function cssesc(string: String, options: Object): String {
+var cssesc: HTMLElement = function cssesc(string: string, options: object): string {
 	options = merge(options, cssesc.options);
 	if (options.quotes != 'single' && options.quotes != 'double') {
 		options.quotes = 'single';
 	}
-	var quote: String = options.quotes == 'double' ? '"' : '\'';
-	var isIdentifier: Boolean = options.isIdentifier;
+	var quote: string = options.quotes == 'double' ? '"' : '\'';
+	var isIdentifier: boolean = options.isIdentifier;
 
-	var firstChar: String = string.charAt(0);
-	var output: String = '';
-	var counter: Number = 0;
-	var length: Number = string.length;
+	var firstChar: string = string.charAt(0);
+	var output: string = '';
+	var counter: number = 0;
+	var length: number = string.length;
 	while (counter < length) {
-		var character: String = string.charAt(counter++);
-		var codePoint: Number = character.charCodeAt();
-		var value: Number = void 0;
+		var character: string = string.charAt(counter++);
+		var codePoint: number = character.charCodeAt();
+		var value: number = void 0;
 		// If it’s not a printable ASCII character…
 		if (codePoint < 0x20 || codePoint > 0x7E) {
 			if (codePoint >= 0xD800 && codePoint <= 0xDBFF && counter < length) {
 				// It’s a high surrogate, and there is a next character.
-				var extra: Number = string.charCodeAt(counter++);
+				var extra: number = string.charCodeAt(counter++);
 				if ((extra & 0xFC00) == 0xDC00) {
 					// next character is low surrogate
 					codePoint = ((codePoint & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000;
@@ -82,7 +82,7 @@ var cssesc: HTMLElement = function cssesc(string: String, options: Object): Stri
 	// Remove spaces after `\HEX` escapes that are not followed by a hex digit,
 	// since they’re redundant. Note that this is only possible if the escape
 	// sequence isn’t preceded by an odd number of backslashes.
-	output = output.replace(regexExcessiveSpaces, function ($0: Array, $1: Array, $2: Number) {
+	output = output.replace(regexExcessiveSpaces, function ($0: any[], $1: any[], $2: number) {
 		if ($1 && $1.length % 2) {
 			// It’s not safe to remove the space, so don’t.
 			return $0;

@@ -1,13 +1,13 @@
 'use strict';
 const {PassThrough: PassThroughStream} = require('stream');
 
-module.exports = (options: Object) => {
+module.exports = (options: object) => {
 	options = {...options};
 
 	const {array} = options;
 	let {encoding} = options;
-	const isBuffer: Boolean = encoding === 'buffer';
-	let objectMode: Boolean = false;
+	const isBuffer: boolean = encoding === 'buffer';
+	let objectMode: boolean = false;
 
 	if (array) {
 		objectMode = !(encoding || isBuffer);
@@ -19,16 +19,16 @@ module.exports = (options: Object) => {
 		encoding = null;
 	}
 
-	const stream: Array = new PassThroughStream({objectMode});
+	const stream: any[] = new PassThroughStream({objectMode});
 
 	if (encoding) {
 		stream.setEncoding(encoding);
 	}
 
-	let length: Number = 0;
-	const chunks: Array = [];
+	let length: number = 0;
+	const chunks: any[] = [];
 
-	stream.on('data', (chunk: Array) => {
+	stream.on('data', (chunk: any[]) => {
 		chunks.push(chunk);
 
 		if (objectMode) {

@@ -26,11 +26,11 @@
  * func(10, 5)
  * // => [100, 10]
  */
-function overArgs(func: Function, transforms: Array): Function {
-  const funcsLength: Number = transforms.length
+function overArgs(func: Function, transforms: any[]): Function {
+  const funcsLength: number = transforms.length
   return function(...args) {
-    let index: Number = -1
-    const length: Number = Math.min(args.length, funcsLength)
+    let index: number = -1
+    const length: number = Math.min(args.length, funcsLength)
     while (++index < length) {
       args[index] = transforms[index].call(this, args[index])
     }

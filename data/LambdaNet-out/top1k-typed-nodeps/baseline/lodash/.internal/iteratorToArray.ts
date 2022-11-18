@@ -5,9 +5,9 @@
  * @param {Object} iterator The iterator to convert.
  * @returns {Array} Returns the converted array.
  */
-function iteratorToArray(iterator: Object): Array {
-  let data: Object
-  const result: Array = []
+function iteratorToArray(iterator: object): any[] {
+  let data: object
+  const result: any[] = []
 
   while (!(data = iterator.next()).done) {
     result.push(data.value)

@@ -27,7 +27,7 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 * @return {string} the value of the property if it has been explicitly set for this declaration block.
 	 * Returns the empty string if the property has not been set.
 	 */
-	getPropertyValue: function(name: String) {
+	getPropertyValue: function(name: string) {
 		return this[name] || "";
 	},
 
@@ -38,10 +38,10 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 * @param {string} [priority=null] "important" or null
 	 * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
 	 */
-	setProperty: function(name: String, value: String, priority: String) {
+	setProperty: function(name: string, value: string, priority: string) {
 		if (this[name]) {
 			// Property already exist. Overwrite it.
-			var index: String = Array.prototype.indexOf.call(this, name);
+			var index: string = Array.prototype.indexOf.call(this, name);
 			if (index < 0) {
 				this[this.length] = name;
 				this.length++;
@@ -62,15 +62,15 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 * @return {string} the value of the property if it has been explicitly set for this declaration block.
 	 * Returns the empty string if the property has not been set or the property name does not correspond to a known CSS property.
 	 */
-	removeProperty: function(name: String) {
+	removeProperty: function(name: string) {
 		if (!(name in this)) {
 			return "";
 		}
-		var index: String = Array.prototype.indexOf.call(this, name);
+		var index: string = Array.prototype.indexOf.call(this, name);
 		if (index < 0) {
 			return "";
 		}
-		var prevValue: String = this[name];
+		var prevValue: string = this[name];
 		this[name] = "";
 
 		// That's what WebKit and Opera do
@@ -90,7 +90,7 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 *
 	 * @param {String} name
 	 */
-	getPropertyPriority: function(name: String) {
+	getPropertyPriority: function(name: string) {
 		return this._importants[name] || "";
 	},
 

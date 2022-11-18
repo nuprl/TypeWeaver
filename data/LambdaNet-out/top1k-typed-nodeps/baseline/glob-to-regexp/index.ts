@@ -1,17 +1,17 @@
-module.exports = function (glob: String, opts: Object) {
+module.exports = function (glob: string, opts: object) {
   if (typeof glob !== 'string') {
     throw new TypeError('Expected a string');
   }
 
-  var str: Array = String(glob);
+  var str: any[] = String(glob);
 
   // The regexp we are building, as a string.
-  var reStr: String = "";
+  var reStr: string = "";
 
   // Whether we are matching so called "extended" globs (like bash) and should
   // support single character matching, matching ranges of characters, group
   // matching, etc.
-  var extended: Boolean = opts ? !!opts.extended : false;
+  var extended: boolean = opts ? !!opts.extended : false;
 
   // When globstar is _false_ (default), '/foo/*' is translated a regexp like
   // '^\/foo\/.*$' which will match any string beginning with '/foo/'
@@ -22,16 +22,16 @@ module.exports = function (glob: String, opts: Object) {
   // these will not '/foo/bar/baz', '/foo/bar/baz.txt'
   // Lastely, when globstar is _true_, '/foo/**' is equivelant to '/foo/*' when
   // globstar is _false_
-  var globstar: Boolean = opts ? !!opts.globstar : false;
+  var globstar: boolean = opts ? !!opts.globstar : false;
 
   // If we are doing extended matching, this boolean is true when we are inside
   // a group (eg {*.html,*.js}), and false otherwise.
-  var inGroup: Boolean = false;
+  var inGroup: boolean = false;
 
   // RegExp flags (eg "i" ) to pass in to RegExp constructor.
-  var flags: String = opts && typeof( opts.flags ) === "string" ? opts.flags : "";
+  var flags: string = opts && typeof( opts.flags ) === "string" ? opts.flags : "";
 
-  var c: String;
+  var c: string;
   for (var i = 0, len = str.length; i < len; i++) {
     c = str[i];
 
@@ -87,20 +87,20 @@ module.exports = function (glob: String, opts: Object) {
     case "*":
       // Move over all consecutive "*"'s.
       // Also store the previous and next characters
-      var prevChar: String = str[i - 1];
-      var starCount: Number = 1;
+      var prevChar: string = str[i - 1];
+      var starCount: number = 1;
       while(str[i + 1] === "*") {
         starCount++;
         i++;
       }
-      var nextChar: String = str[i + 1];
+      var nextChar: string = str[i + 1];
 
       if (!globstar) {
         // globstar is disabled, so treat any number of "*" as one
         reStr += ".*";
       } else {
         // globstar is enabled, so determine if this is a globstar segment
-        var isGlobstar: Boolean = starCount > 1                      // multiple "*"'s
+        var isGlobstar: boolean = starCount > 1                      // multiple "*"'s
           && (prevChar === "/" || prevChar === undefined)   // from the start of the segment
           && (nextChar === "/" || nextChar === undefined)   // to the end of the segment
 

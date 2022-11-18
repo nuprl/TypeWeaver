@@ -1,30 +1,10 @@
 benchmark/check.ts(6,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
-benchmark/check.ts(14,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/check.ts(17,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/check.ts(18,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/check.ts(18,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/check.ts(21,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/code/arr-flatten-0.1.0 (do-while).ts(2,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/arr-flatten-0.2.0.ts(5,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/arr-flatten-0.2.0.ts(5,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/arr-flatten-0.2.0.ts(5,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/arr-flatten-0.2.0.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/arr-flatten-0.2.0.ts(10,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/arr-flatten-0.2.0.ts(2,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 benchmark/code/do-while-slice.ts(3,19): error TS2307: Cannot find module 'array-slice' or its corresponding type declarations.
-benchmark/code/do-while-slice.ts(6,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/index.ts(3,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 benchmark/index.ts(11,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/libs.ts(5,19): error TS2307: Cannot find module 'write' or its corresponding type declarations.
 benchmark/libs.ts(20,20): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/libs.ts(21,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-index.ts(14,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(14,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(14,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(17,19): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+  Type '{}' has no call signatures.
+index.ts(11,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 

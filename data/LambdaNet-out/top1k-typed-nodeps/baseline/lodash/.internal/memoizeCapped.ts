@@ -1,7 +1,7 @@
 import memoize from '../memoize.js'
 
 /** Used as the maximum memoize cache size. */
-const MAX_MEMOIZE_SIZE: Number = 500
+const MAX_MEMOIZE_SIZE: number = 500
 
 /**
  * A specialized version of `memoize` which clears the memoized function's
@@ -12,7 +12,7 @@ const MAX_MEMOIZE_SIZE: Number = 500
  * @returns {Function} Returns the new memoized function.
  */
 function memoizeCapped(func: Function): Hash {
-  const result: Hash = memoize(func, (key: String) => {
+  const result: Hash = memoize(func, (key: string) => {
     const { cache } = result
     if (cache.size === MAX_MEMOIZE_SIZE) {
       cache.clear()

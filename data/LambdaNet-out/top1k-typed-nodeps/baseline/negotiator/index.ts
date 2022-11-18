@@ -27,7 +27,7 @@ module.exports.Negotiator = Negotiator;
  * @public
  */
 
-function Negotiator(request: String): String {
+function Negotiator(request: string): string {
   if (!(this instanceof Negotiator)) {
     return new Negotiator(request);
   }
@@ -35,39 +35,39 @@ function Negotiator(request: String): String {
   this.request = request;
 }
 
-Negotiator.prototype.charset = function charset(available: Function): Boolean {
-  var set: Object = this.charsets(available);
+Negotiator.prototype.charset = function charset(available: Function): boolean {
+  var set: object = this.charsets(available);
   return set && set[0];
 };
 
-Negotiator.prototype.charsets = function charsets(available: Function): Boolean {
+Negotiator.prototype.charsets = function charsets(available: Function): boolean {
   return preferredCharsets(this.request.headers['accept-charset'], available);
 };
 
-Negotiator.prototype.encoding = function encoding(available: Function): Boolean {
-  var set: Object = this.encodings(available);
+Negotiator.prototype.encoding = function encoding(available: Function): boolean {
+  var set: object = this.encodings(available);
   return set && set[0];
 };
 
-Negotiator.prototype.encodings = function encodings(available: Function): Boolean {
+Negotiator.prototype.encodings = function encodings(available: Function): boolean {
   return preferredEncodings(this.request.headers['accept-encoding'], available);
 };
 
-Negotiator.prototype.language = function language(available: Function): Boolean {
-  var set: Object = this.languages(available);
+Negotiator.prototype.language = function language(available: Function): boolean {
+  var set: object = this.languages(available);
   return set && set[0];
 };
 
-Negotiator.prototype.languages = function languages(available: Function): Boolean {
+Negotiator.prototype.languages = function languages(available: Function): boolean {
   return preferredLanguages(this.request.headers['accept-language'], available);
 };
 
-Negotiator.prototype.mediaType = function mediaType(available: String): Boolean {
-  var set: Object = this.mediaTypes(available);
+Negotiator.prototype.mediaType = function mediaType(available: string): boolean {
+  var set: object = this.mediaTypes(available);
   return set && set[0];
 };
 
-Negotiator.prototype.mediaTypes = function mediaTypes(available: String): Boolean {
+Negotiator.prototype.mediaTypes = function mediaTypes(available: string): boolean {
   return preferredMediaTypes(this.request.headers.accept, available);
 };
 

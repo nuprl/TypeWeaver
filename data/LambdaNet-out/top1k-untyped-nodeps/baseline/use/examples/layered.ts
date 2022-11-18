@@ -1,25 +1,25 @@
 
-var define: String = require('define-property');
+var define: string = require('define-property');
 var use: Function = require('..');
 
-function App(name: String): Void {
+function App(name: string): Void {
   this.name = name;
   use(this);
 }
 
-App.prototype.create = function(name: String) {
+App.prototype.create = function(name: string) {
   return new App(name);
 };
 
 var a: HTMLElement = new App('a');
-var b: Object = a.create('b');
-var c: Object = b.create('c');
-var d: Object = c.create('d');
-var e: Object = d.create('e');
-var f: Object = e.create('f');
+var b: object = a.create('b');
+var c: object = b.create('c');
+var d: object = c.create('d');
+var e: object = d.create('e');
+var f: object = e.create('f');
 
 a.children = [];
-a.use(function fn(config: Object): Function {
+a.use(function fn(config: object): Function {
   if (!config.name) return fn;
   a.children.push(config.name);
   return fn;

@@ -17,12 +17,12 @@
  * })
  * // => { 'a1': 1, 'b2': 2 }
  */
-function mapKey(object: Object, iteratee: Function): Object {
+function mapKey(object: object, iteratee: Function): object {
   object = Object(object)
-  const result: Object = {}
+  const result: object = {}
 
-  Object.keys(object).forEach((key: String) => {
-    const value: String = object[key]
+  Object.keys(object).forEach((key: string) => {
+    const value: string = object[key]
     result[iteratee(value, key, object)] = value
   })
   return result

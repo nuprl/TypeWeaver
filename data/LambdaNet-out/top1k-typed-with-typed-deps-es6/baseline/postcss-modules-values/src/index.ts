@@ -6,11 +6,11 @@ const matchImports: RegExp = /^(.+?|\([\s\S]+?\))\s+from\s+("[^"]*"|'[^']*'|[\w-
 const matchValueDefinition: RegExp = /(?:\s+|^)([\w-]+):?(.*?)$/;
 const matchImport: RegExp = /^([\w-]+)(?:\s+as\s+([\w-]+))?/;
 
-export default (options: Object) => {
-  let importIndex: Number = 0;
-  const createImportedName: String =
+export default (options: object) => {
+  let importIndex: number = 0;
+  const createImportedName: string =
     (options && options.createImportedName) ||
-    ((importName: String /*, path*/) =>
+    ((importName: string /*, path*/) =>
       `i__const_${importName.replace(/\W/g, "_")}_${importIndex++}`);
 
   return {
@@ -139,4 +139,4 @@ export default (options: Object) => {
   };
 };
 
-export const postcss: Boolean = true;
+export const postcss: boolean = true;

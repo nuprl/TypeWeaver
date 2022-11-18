@@ -10,8 +10,7 @@ lib/mime-type-parameters.ts(57,17): error TS2339: Property '_map' does not exist
 lib/mime-type-parameters.ts(61,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(65,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(69,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type.ts(10,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'MIMEType': essence, type, subtype, parameters, and 3 more.
+lib/mime-type.ts(10,11): error TS2740: Type '{}' is missing the following properties from type 'MIMEType': essence, type, subtype, parameters, and 3 more.
 lib/mime-type.ts(15,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(16,10): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
 lib/mime-type.ts(17,10): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
@@ -31,37 +30,15 @@ lib/mime-type.ts(118,71): error TS2551: Property '_type' does not exist on type 
 lib/mime-type.ts(119,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
 lib/mime-type.ts(122,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
 lib/mime-type.ts(122,45): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
-lib/parser.ts(13,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parser.ts(20,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(32,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(37,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(54,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(57,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(63,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(73,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(81,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(87,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(100,19): error TS2339: Property 'parameters' does not exist on type 'Object'.
-lib/parser.ts(101,16): error TS2339: Property 'parameters' does not exist on type 'Object'.
+lib/parser.ts(100,19): error TS2339: Property 'parameters' does not exist on type 'object'.
+lib/parser.ts(101,16): error TS2339: Property 'parameters' does not exist on type 'object'.
 lib/serializer.ts(4,27): error TS2552: Cannot find name 'MIMEType'. Did you mean 'MimeType'?
-lib/utils.ts(12,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/utils.ts(12,26): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/utils.ts(12,43): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/utils.ts(12,60): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/utils.ts(16,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/utils.ts(20,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/utils.ts(28,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/utils.ts(31,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/utils.ts(36,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/utils.ts(44,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/utils.ts(53,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/utils.ts(12,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/utils.ts(12,26): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/utils.ts(12,43): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/utils.ts(12,60): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 scripts/get-latest-platform-tests.ts(4,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
-scripts/get-latest-platform-tests.ts(17,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/get-latest-platform-tests.ts(19,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 scripts/get-latest-platform-tests.ts(27,16): error TS2304: Cannot find name 'MIMETypeParameters'.
-scripts/get-latest-platform-tests.ts(28,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-scripts/get-latest-platform-tests.ts(33,19): error TS2339: Property 'stack' does not exist on type 'Object'.
+scripts/get-latest-platform-tests.ts(33,19): error TS2339: Property 'stack' does not exist on type 'object'.
 

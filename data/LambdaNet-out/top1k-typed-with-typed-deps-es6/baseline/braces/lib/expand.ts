@@ -4,15 +4,15 @@ import fill from 'fill-range';
 import stringify from './stringify';
 import utils from './utils';
 
-const append: Function = (queue: Array = '', stash: Array = '', enclose: Number = false) => {
-  let result: Array = [];
+const append: Function = (queue: any[] = '', stash: any[] = '', enclose: number = false) => {
+  let result: any[] = [];
 
   queue = [].concat(queue);
   stash = [].concat(stash);
 
   if (!stash.length) return queue;
   if (!queue.length) {
-    return enclose ? utils.flatten(stash).map((ele: String) => `{${ele}}`) : stash;
+    return enclose ? utils.flatten(stash).map((ele: string) => `{${ele}}`) : stash;
   }
 
   for (let item of queue) {
@@ -30,14 +30,14 @@ const append: Function = (queue: Array = '', stash: Array = '', enclose: Number 
   return utils.flatten(result);
 };
 
-const expand: Function = (ast: Array, options: Object = {}) => {
-  let rangeLimit: Number = options.rangeLimit === void 0 ? 1000 : options.rangeLimit;
+const expand: Function = (ast: any[], options: object = {}) => {
+  let rangeLimit: number = options.rangeLimit === void 0 ? 1000 : options.rangeLimit;
 
-  let walk: Function = (node: Object, parent: Object = {}) => {
+  let walk: Function = (node: object, parent: object = {}) => {
     node.queue = [];
 
-    let p: String = parent;
-    let q: Array = parent.queue;
+    let p: string = parent;
+    let q: any[] = parent.queue;
 
     while (p.type !== 'brace' && p.type !== 'root' && p.parent) {
       p = p.parent;
@@ -55,13 +55,13 @@ const expand: Function = (ast: Array, options: Object = {}) => {
     }
 
     if (node.nodes && node.ranges > 0) {
-      let args: Array = utils.reduce(node.nodes);
+      let args: any[] = utils.reduce(node.nodes);
 
       if (utils.exceedsLimit(...args, options.step, rangeLimit)) {
         throw new RangeError('expanded array length exceeds range limit. Use options.rangeLimit to increase or disable the limit.');
       }
 
-      let range: Array = fill(...args, options);
+      let range: any[] = fill(...args, options);
       if (range.length === 0) {
         range = stringify(node, options);
       }
@@ -71,8 +71,8 @@ const expand: Function = (ast: Array, options: Object = {}) => {
       return;
     }
 
-    let enclose: String = utils.encloseBrace(node);
-    let queue: Array = node.queue;
+    let enclose: string = utils.encloseBrace(node);
+    let queue: any[] = node.queue;
     let block: HTMLElement = node;
 
     while (block.type !== 'brace' && block.type !== 'root' && block.parent) {
@@ -81,7 +81,7 @@ const expand: Function = (ast: Array, options: Object = {}) => {
     }
 
     for (let i = 0; i < node.nodes.length; i++) {
-      let child: Object = node.nodes[i];
+      let child: object = node.nodes[i];
 
       if (child.type === 'comma' && node.type === 'brace') {
         if (i === 1) queue.push('');

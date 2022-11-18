@@ -3,13 +3,13 @@
  * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>
  */
 
-const colors: Array = require('colors');
+const colors: any[] = require('colors');
 const shell: Element = require('shelljs');
 
 // Whether we're in the watch mode (continuous JS code transpiling).
-const watchMode: Boolean = process.argv[2] || '';
+const watchMode: boolean = process.argv[2] || '';
 
-let watchMsg: String = '';
+let watchMsg: string = '';
 if (watchMode) {
   watchMsg = ` (watch mode)`;
 }

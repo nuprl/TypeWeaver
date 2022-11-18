@@ -21,8 +21,8 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * groupBy([6.1, 4.2, 6.3], Math.floor)
  * // => { '4': [4.2], '6': [6.1, 6.3] }
  */
-function groupBy(collection: String, iteratee: Function): Stack {
-  return reduce(collection, (result: Object, value: String, key: String) => {
+function groupBy(collection: string, iteratee: Function): Stack {
+  return reduce(collection, (result: object, value: string, key: string) => {
     key = iteratee(value)
     if (hasOwnProperty.call(result, key)) {
       result[key].push(value)

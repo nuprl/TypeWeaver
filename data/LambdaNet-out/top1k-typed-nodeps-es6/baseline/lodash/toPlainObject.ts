@@ -20,9 +20,9 @@
  * assign({ 'a': 1 }, toPlainObject(new Foo))
  * // => { 'a': 1, 'b': 2, 'c': 3 }
  */
-function toPlainObject(value: Array): Object {
+function toPlainObject(value: any[]): object {
   value = Object(value)
-  const result: Object = {}
+  const result: object = {}
   for (const key in value) {
     result[key] = value[key]
   }

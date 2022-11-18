@@ -10,10 +10,10 @@ module.exports = state;
  *                                     or `null` to keep them as is
  * @returns {object} - initial state object
  */
-function state(list: Array, sortMethod: Function): Object
+function state(list: any[], sortMethod: Function): object
 {
-  var isNamedList: Boolean = !Array.isArray(list)
-    , initState: Object =
+  var isNamedList: boolean = !Array.isArray(list)
+    , initState: object =
     {
       index    : 0,
       keyedList: isNamedList || sortMethod ? Object.keys(list) : null,
@@ -27,7 +27,7 @@ function state(list: Array, sortMethod: Function): Object
   {
     // sort array keys based on it's values
     // sort object's keys just on own merit
-    initState.keyedList.sort(isNamedList ? sortMethod : function(a: Array, b: Array)
+    initState.keyedList.sort(isNamedList ? sortMethod : function(a: any[], b: any[])
     {
       return sortMethod(list[a], list[b]);
     });

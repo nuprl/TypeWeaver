@@ -1,10 +1,9 @@
-index.ts(8,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(8,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(11,15): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
 index.ts(11,38): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-index.ts(25,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(31,10): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
 index.ts(31,39): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
+index.ts(32,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+  Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 index.ts(36,35): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
 index.ts(37,44): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
 index.ts(39,10): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.

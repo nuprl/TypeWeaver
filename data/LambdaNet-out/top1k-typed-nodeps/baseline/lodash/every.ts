@@ -19,9 +19,9 @@
  * every([true, 1, null, 'yes'], Boolean)
  * // => false
  */
-function every(array: Array, predicate: Function): Boolean {
-  let index: Number = -1
-  const length: Number = array == null ? 0 : array.length
+function every(array: any[], predicate: Function): boolean {
+  let index: number = -1
+  const length: number = array == null ? 0 : array.length
 
   while (++index < length) {
     if (!predicate(array[index], index, array)) {

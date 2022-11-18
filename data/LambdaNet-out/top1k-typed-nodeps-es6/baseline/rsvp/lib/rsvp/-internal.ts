@@ -5,34 +5,34 @@ import instrument from './instrument';
 import { config } from './config';
 import Promise from './promise';
 
-function withOwnPromise(): Object {
+function withOwnPromise(): object {
   return new TypeError('A promises callback cannot return that same promise.');
 }
 
-function objectOrFunction(x: String): Boolean {
-  let type: String = typeof x;
+function objectOrFunction(x: string): boolean {
+  let type: string = typeof x;
   return x !== null && (type === 'object' || type === 'function');
 }
 
 export function noop(): Void {}
 
-export const PENDING: Boolean   = void 0;
-export const FULFILLED: Number = 1;
-export const REJECTED: Number  = 2;
+export const PENDING: boolean   = void 0;
+export const FULFILLED: number = 1;
+export const REJECTED: number  = 2;
 
-function tryThen(then: Function, value: String, fulfillmentHandler: Object, rejectionHandler: Object): Void {
+function tryThen(then: Function, value: string, fulfillmentHandler: object, rejectionHandler: object): Void {
   try {
     then.call(value, fulfillmentHandler, rejectionHandler);
   } catch(e) {
     return e;
   }
 }
-function handleForeignThenable(promise: Promise, thenable: Number, then: String): Void {
+function handleForeignThenable(promise: Promise, thenable: number, then: string): Void {
   config.async((promise: Promise) => {
-    let sealed: Boolean = false;
-    let error: Object = tryThen(then,
+    let sealed: boolean = false;
+    let error: object = tryThen(then,
       thenable,
-      (value: String) => {
+      (value: string) => {
         if (sealed) { return; }
         sealed = true;
         if (thenable === value) {
@@ -41,7 +41,7 @@ function handleForeignThenable(promise: Promise, thenable: Number, then: String)
           resolve(promise, value);
         }
       },
-      (reason: String) => {
+      (reason: string) => {
         if (sealed) { return; }
         sealed = true;
 
@@ -63,18 +63,18 @@ function handleOwnThenable(promise: Promise, thenable: Promise): Void {
     thenable._onError = null;
     reject(promise, thenable._result);
   } else {
-    subscribe(thenable, undefined, (value: String) => {
+    subscribe(thenable, undefined, (value: string) => {
       if (thenable === value) {
         fulfill(promise, value);
       } else {
         resolve(promise, value);
       }
-    }, (reason: String) => reject(promise, reason));
+    }, (reason: string) => reject(promise, reason));
   }
 }
 
-export function handleMaybeThenable(promise: Promise, maybeThenable: Object, then: String): Void {
-  let isOwnThenable: Boolean =
+export function handleMaybeThenable(promise: Promise, maybeThenable: object, then: string): Void {
+  let isOwnThenable: boolean =
     maybeThenable.constructor === promise.constructor &&
     then === originalThen &&
     promise.constructor.resolve === originalResolve;
@@ -88,11 +88,11 @@ export function handleMaybeThenable(promise: Promise, maybeThenable: Object, the
   }
 }
 
-export function resolve(promise: Promise, value: Array): Void {
+export function resolve(promise: Promise, value: any[]): Void {
   if (promise === value) {
     fulfill(promise, value);
   } else if (objectOrFunction(value)) {
-    let then: String;
+    let then: string;
     try {
       then = value.then;
     } catch (error) {
@@ -113,7 +113,7 @@ export function publishRejection(promise: Promise): Void {
   publish(promise);
 }
 
-export function fulfill(promise: Promise, value: String): Void {
+export function fulfill(promise: Promise, value: string): Void {
   if (promise._state !== PENDING) { return; }
 
   promise._result = value;
@@ -135,9 +135,9 @@ export function reject(promise: Promise, reason: Function): Void {
   config.async(publishRejection, promise);
 }
 
-export function subscribe(parent: Promise, child: Object, onFulfillment: String, onRejection: String): Void {
-  let subscribers: Array = parent._subscribers;
-  let length: Number = subscribers.length;
+export function subscribe(parent: Promise, child: object, onFulfillment: string, onRejection: string): Void {
+  let subscribers: any[] = parent._subscribers;
+  let length: number = subscribers.length;
 
   parent._onError = null;
 
@@ -151,8 +151,8 @@ export function subscribe(parent: Promise, child: Object, onFulfillment: String,
 }
 
 export function publish(promise: Promise): Void {
-  let subscribers: Array = promise._subscribers;
-  let settled: String = promise._state;
+  let subscribers: any[] = promise._subscribers;
+  let settled: string = promise._state;
 
   if (config.instrument) {
     instrument(settled === FULFILLED ? 'fulfilled' : 'rejected', promise);
@@ -160,7 +160,7 @@ export function publish(promise: Promise): Void {
 
   if (subscribers.length === 0) { return; }
 
-  let child: Object, callback: Function, result: Array = promise._result;
+  let child: object, callback: Function, result: any[] = promise._result;
 
   for (let i = 0; i < subscribers.length; i += 3) {
     child = subscribers[i];
@@ -176,9 +176,9 @@ export function publish(promise: Promise): Void {
   promise._subscribers.length = 0;
 }
 
-export function invokeCallback(state: String, promise: Promise, callback: Function, result: Number): Void {
-  let hasCallback: Boolean = typeof callback === 'function';
-  let value: String, succeeded: Boolean = true, error: Object;
+export function invokeCallback(state: string, promise: Promise, callback: Function, result: number): Void {
+  let hasCallback: boolean = typeof callback === 'function';
+  let value: string, succeeded: boolean = true, error: object;
 
   if (hasCallback) {
     try {
@@ -207,13 +207,13 @@ export function invokeCallback(state: String, promise: Promise, callback: Functi
 }
 
 export function initializePromise(promise: Promise, resolver: Function): Void {
-  let resolved: Boolean = false;
+  let resolved: boolean = false;
   try {
-    resolver((value: String) => {
+    resolver((value: string) => {
       if (resolved) { return; }
       resolved = true;
       resolve(promise, value);
-    }, (reason: String) => {
+    }, (reason: string) => {
       if (resolved) { return; }
       resolved = true;
       reject(promise, reason);

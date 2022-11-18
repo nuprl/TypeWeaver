@@ -15,7 +15,7 @@ import isObject from '../isObject.js'
  *  counterparts.
  * @returns {*} Returns the value to assign.
  */
-function customDefaultsMerge(objValue: Function, srcValue: String, key: String, object: Object, source: String, stack: Object): Array {
+function customDefaultsMerge(objValue: Function, srcValue: string, key: string, object: object, source: string, stack: object): any[] {
   if (isObject(objValue) && isObject(srcValue)) {
     // Recursively merge objects and arrays (susceptible to call stack limits).
     stack.set(srcValue, objValue)

@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: Object = {
+var CSSOM: object = {
 	CSSStyleSheet: require("./CSSStyleSheet").CSSStyleSheet,
 	CSSRule: require("./CSSRule").CSSRule,
 	CSSStyleRule: require("./CSSStyleRule").CSSStyleRule,
@@ -24,7 +24,7 @@ CSSOM.clone = function clone(stylesheet: HTMLElement): Element {
 
 	var cloned: HTMLElement = new CSSOM.CSSStyleSheet();
 
-	var rules: Array = stylesheet.cssRules;
+	var rules: any[] = stylesheet.cssRules;
 	if (!rules) {
 		return cloned;
 	}
@@ -33,11 +33,11 @@ CSSOM.clone = function clone(stylesheet: HTMLElement): Element {
 		var rule: HTMLElement = rules[i];
 		var ruleClone: HTMLElement = cloned.cssRules[i] = new rule.constructor();
 
-		var style: Object = rule.style;
+		var style: object = rule.style;
 		if (style) {
-			var styleClone: Array = ruleClone.style = new CSSOM.CSSStyleDeclaration();
+			var styleClone: any[] = ruleClone.style = new CSSOM.CSSStyleDeclaration();
 			for (var j = 0, styleLength = style.length; j < styleLength; j++) {
-				var name: String = styleClone[j] = style[j];
+				var name: string = styleClone[j] = style[j];
 				styleClone[name] = style[name];
 				styleClone._importants[name] = style.getPropertyPriority(name);
 			}

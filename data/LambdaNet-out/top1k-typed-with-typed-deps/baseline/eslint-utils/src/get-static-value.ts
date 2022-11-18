@@ -79,8 +79,8 @@ const callAllowed: Error = new Set(
         isNaN,
         isPrototypeOf,
         ...Object.getOwnPropertyNames(Math)
-            .map((k: Number) => Math[k])
-            .filter((f: String) => typeof f === "function"),
+            .map((k: number) => Math[k])
+            .filter((f: string) => typeof f === "function"),
         Number,
         Number.isFinite,
         Number.isNaN,
@@ -104,7 +104,7 @@ const callAllowed: Error = new Set(
         Symbol.for,
         Symbol.keyFor,
         unescape,
-    ].filter((f: String) => typeof f === "function"),
+    ].filter((f: string) => typeof f === "function"),
 )
 const callPassThrough: Error = new Set([
     Object.freeze,
@@ -117,8 +117,8 @@ const callPassThrough: Error = new Set([
  * @param {object} object The object to get.
  * @param {string|number|symbol} name The property name to get.
  */
-function getPropertyDescriptor(object: Function, name: String): Object {
-    let x: Array = object
+function getPropertyDescriptor(object: Function, name: string): object {
+    let x: any[] = object
     while ((typeof x === "object" || typeof x === "function") && x !== null) {
         const d: PatternMatcher = Object.getOwnPropertyDescriptor(x, name)
         if (d) {
@@ -134,8 +134,8 @@ function getPropertyDescriptor(object: Function, name: String): Object {
  * @param {object} object The object to check.
  * @param {string|number|symbol} name The property name to check.
  */
-function isGetter(object: Object, name: String): Boolean {
-    const d: Object = getPropertyDescriptor(object, name)
+function isGetter(object: object, name: string): boolean {
+    const d: object = getPropertyDescriptor(object, name)
     return d != null && d.get != null
 }
 
@@ -145,8 +145,8 @@ function isGetter(object: Object, name: String): Boolean {
  * @param {Scope|undefined} initialScope The initial scope to find variables.
  * @returns {any[]|null} The value list if all nodes are constant. Otherwise, null.
  */
-function getElementValues(nodeList: Array, initialScope: String): Array {
-    const valueList: Array = []
+function getElementValues(nodeList: any[], initialScope: string): any[] {
+    const valueList: any[] = []
 
     for (let i = 0; i < nodeList.length; ++i) {
         const elementNode: Element = nodeList[i]
@@ -154,7 +154,7 @@ function getElementValues(nodeList: Array, initialScope: String): Array {
         if (elementNode == null) {
             valueList.length = i + 1
         } else if (elementNode.type === "SpreadElement") {
-            const argument: Object = getStaticValueR(elementNode.argument, initialScope)
+            const argument: object = getStaticValueR(elementNode.argument, initialScope)
             if (argument == null) {
                 return null
             }
@@ -171,7 +171,7 @@ function getElementValues(nodeList: Array, initialScope: String): Array {
     return valueList
 }
 
-const operations: Object = Object.freeze({
+const operations: object = Object.freeze({
     ArrayExpression(node, initialScope) {
         const elements = getElementValues(node.elements, initialScope)
         return elements != null ? { value: elements } : null
@@ -521,7 +521,7 @@ const operations: Object = Object.freeze({
  * @param {Scope|undefined} initialScope The scope to start finding variable.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the node, or `null`.
  */
-function getStaticValueR(node: Object, initialScope: String): Promise {
+function getStaticValueR(node: object, initialScope: string): Promise {
     if (node != null && Object.hasOwnProperty.call(operations, node.type)) {
         return operations[node.type](node, initialScope)
     }
@@ -534,7 +534,7 @@ function getStaticValueR(node: Object, initialScope: String): Promise {
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If the node is a computed property node and this scope was given, this checks the computed property name by the `getStringIfConstant` function with the scope, and returns the value of it.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the property name of the node, or `null`.
  */
-function getStaticPropertyNameValue(node: Object, initialScope: String): Object {
+function getStaticPropertyNameValue(node: object, initialScope: string): object {
     const nameNode: Function = node.type === "Property" ? node.key : node.property
 
     if (node.computed) {
@@ -561,7 +561,7 @@ function getStaticPropertyNameValue(node: Object, initialScope: String): Object 
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If this scope was given, this tries to resolve identifier references which are in the given node as much as possible.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the node, or `null`.
  */
-export function getStaticValue(node: Object, initialScope: String = null): Promise {
+export function getStaticValue(node: object, initialScope: string = null): Promise {
     try {
         return getStaticValueR(node, initialScope)
     } catch (_error) {

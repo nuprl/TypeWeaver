@@ -8,7 +8,7 @@ const symbolValueOf: Function = Symbol.prototype.valueOf
  * @param {Object} symbol The symbol object to clone.
  * @returns {Object} Returns the cloned symbol object.
  */
-function cloneSymbol(symbol: String): Boolean {
+function cloneSymbol(symbol: string): boolean {
   return Object(symbolValueOf.call(symbol))
 }
 

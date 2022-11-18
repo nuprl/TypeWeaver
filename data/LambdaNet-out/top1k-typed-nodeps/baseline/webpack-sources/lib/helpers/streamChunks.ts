@@ -8,7 +8,7 @@
 const streamChunksOfRawSource: Function = require("./streamChunksOfRawSource");
 const streamChunksOfSourceMap: Function = require("./streamChunksOfSourceMap");
 
-module.exports = (source: OriginalSource, options: Object, onChunk: String, onSource: String, onName: String) => {
+module.exports = (source: OriginalSource, options: object, onChunk: string, onSource: string, onName: string) => {
 	if (typeof source.streamChunks === "function") {
 		return source.streamChunks(options, onChunk, onSource, onName);
 	} else {

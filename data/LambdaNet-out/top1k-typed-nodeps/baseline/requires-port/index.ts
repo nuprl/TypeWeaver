@@ -9,7 +9,7 @@
  * @returns {Boolean} Is it a default port for the given protocol
  * @api private
  */
-module.exports = function required(port: Number, protocol: String): Boolean {
+module.exports = function required(port: number, protocol: string): boolean {
   protocol = protocol.split(':')[0];
   port = +port;
 

@@ -1,8 +1,8 @@
 /* istanbul ignore next  */
 const replaceText: Function = (function replaceText(): Function {
-  const textStore: Array = [];
+  const textStore: any[] = [];
 
-  return function replace(index: String, replacement: String): String {
+  return function replace(index: string, replacement: string): string {
     textStore[index] = replacement;
 
     return textStore.filter(Boolean).join("\n");
@@ -10,8 +10,8 @@ const replaceText: Function = (function replaceText(): Function {
 })();
 
 /* istanbul ignore next  */
-function apply(styleElement: Element, index: String, remove: Boolean, obj: Object): Void {
-  let css: String;
+function apply(styleElement: Element, index: string, remove: boolean, obj: object): Void {
+  let css: string;
 
   if (remove) {
     css = "";
@@ -26,7 +26,7 @@ function apply(styleElement: Element, index: String, remove: Boolean, obj: Objec
       css += `@media ${obj.media} {`;
     }
 
-    const needLayer: Boolean = typeof obj.layer !== "undefined";
+    const needLayer: boolean = typeof obj.layer !== "undefined";
 
     if (needLayer) {
       css += `@layer${obj.layer.length > 0 ? ` ${obj.layer}` : ""} {`;
@@ -53,7 +53,7 @@ function apply(styleElement: Element, index: String, remove: Boolean, obj: Objec
     styleElement.styleSheet.cssText = replaceText(index, css);
   } else {
     const cssNode: Error = document.createTextNode(css);
-    const childNodes: Array = styleElement.childNodes;
+    const childNodes: any[] = styleElement.childNodes;
 
     if (childNodes[index]) {
       styleElement.removeChild(childNodes[index]);
@@ -67,15 +67,15 @@ function apply(styleElement: Element, index: String, remove: Boolean, obj: Objec
   }
 }
 
-const singletonData: Object = {
+const singletonData: object = {
   singleton: null,
   singletonCounter: 0,
 };
 
 /* istanbul ignore next  */
-function domAPI(options: Function): Object {
+function domAPI(options: Function): object {
   // eslint-disable-next-line no-undef,no-use-before-define
-  const styleIndex: Number = singletonData.singletonCounter++;
+  const styleIndex: number = singletonData.singletonCounter++;
   const styleElement: Element =
     // eslint-disable-next-line no-undef,no-use-before-define
     singletonData.singleton ||
@@ -83,10 +83,10 @@ function domAPI(options: Function): Object {
     (singletonData.singleton = options.insertStyleElement(options));
 
   return {
-    update: (obj: String) => {
+    update: (obj: string) => {
       apply(styleElement, styleIndex, false, obj);
     },
-    remove: (obj: String) => {
+    remove: (obj: string) => {
       apply(styleElement, styleIndex, true, obj);
     },
   };

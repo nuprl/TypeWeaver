@@ -1,7 +1,7 @@
 'use strict';
 
-export default function repeat(str: String, count: Number): String {
-  var res: String = '';
+export default function repeat(str: string, count: number): string {
+  var res: string = '';
 
   while (count > 0) {
     if (count & 1) {

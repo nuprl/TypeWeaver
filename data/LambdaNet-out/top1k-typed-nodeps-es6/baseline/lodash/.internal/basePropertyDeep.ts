@@ -7,8 +7,8 @@ import baseGet from './baseGet.js'
  * @param {Array|string} path The path of the property to get.
  * @returns {Function} Returns the new accessor function.
  */
-function basePropertyDeep(path: String): Function {
-  return (object: Object) => baseGet(object, path)
+function basePropertyDeep(path: string): Function {
+  return (object: object) => baseGet(object, path)
 }
 
 export default basePropertyDeep

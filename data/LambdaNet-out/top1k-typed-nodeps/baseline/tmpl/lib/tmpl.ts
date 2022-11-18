@@ -1,11 +1,11 @@
 var INTERPOLATE: RegExp = /{([^{]+?)}/g
 
-module.exports = function(str: String, data: Object) {
-  var tmpl: String = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
+module.exports = function(str: string, data: object) {
+  var tmpl: string = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
     'with(obj||{}){__p.push(\'' +
     str.replace(/\\/g, '\\\\')
        .replace(/'/g, "\\'")
-       .replace(INTERPOLATE, function(match: Function, code: String) {
+       .replace(INTERPOLATE, function(match: Function, code: string) {
          return "'," + code.replace(/\\'/g, "'") + ",'"
        })
        .replace(/\r/g, '\\r')

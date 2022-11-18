@@ -4,13 +4,13 @@ import safeToString from './safe-to-string';
 
 var reNewLine: RegExp = /[\n\r\u2028\u2029]/g;
 
-export default function (value: String) {
-	var string: String = safeToString(value);
+export default function (value: string) {
+	var string: string = safeToString(value);
 	if (string === null) return "<Non-coercible to string value>";
 	// Trim if too long
 	if (string.length > 100) string = string.slice(0, 99) + "…";
 	// Replace eventual new lines
-	string = string.replace(reNewLine, function (char: String) {
+	string = string.replace(reNewLine, function (char: string) {
 		switch (char) {
 			case "\n":
 				return "\\n";

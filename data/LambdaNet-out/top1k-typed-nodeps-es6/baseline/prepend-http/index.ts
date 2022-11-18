@@ -1,4 +1,4 @@
-export default function prependHttp(url: String, {https = true} = {}): Void {
+export default function prependHttp(url: string, {https = true} = {}): Void {
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof url}\``);
 	}

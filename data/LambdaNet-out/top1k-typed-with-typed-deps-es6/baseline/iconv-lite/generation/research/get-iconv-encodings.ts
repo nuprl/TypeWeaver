@@ -9,18 +9,18 @@ import crypto from 'crypto';
 import { Buffer } from 'safer-buffer';
 
 
-var skipEncodings: Object = {};
+var skipEncodings: object = {};
 
 
-var input: String = "";
+var input: string = "";
 process.stdin.setEncoding("utf8");
-process.stdin.on("data", function(data: Number) {input += data});
+process.stdin.on("data", function(data: number) {input += data});
 
 process.stdin.on("end", function() {
     input = input.replace(/\s|\n/g, " ");
-    encodings = input.split(",").map(function(s: String) {return s.trim();}).filter(Boolean);
-    encodings = input.split(" ").map(function(s: String) {return s.trim();}).filter(Boolean);
-    encodings = encodings.filter(function(enc: String) {
+    encodings = input.split(",").map(function(s: string) {return s.trim();}).filter(Boolean);
+    encodings = input.split(" ").map(function(s: string) {return s.trim();}).filter(Boolean);
+    encodings = encodings.filter(function(enc: string) {
         try {
             new iconv.Iconv("utf-8", enc).convert(Buffer.from("hello!"));
             if (skipEncodings[enc]) {
@@ -34,14 +34,14 @@ process.stdin.on("end", function() {
         return true;
     });
 
-    var hashes: Object = {};
+    var hashes: object = {};
 
-    encodings = encodings.map(function(enc: String) {
+    encodings = encodings.map(function(enc: string) {
         process.stderr.write("Checking "+enc+": ");
         var hash: Map = crypto.createHash("sha1");
 
-        var converter: String = new iconv.Iconv(enc, "utf-8"), buf: String = Buffer.alloc(10);
-        var res: Object = {
+        var converter: string = new iconv.Iconv(enc, "utf-8"), buf: string = Buffer.alloc(10);
+        var res: object = {
             enc: [enc],
             isDBCS: true,
             isSBCS: true,
@@ -53,7 +53,7 @@ process.stdin.on("end", function() {
         }
 
         try {
-            forAllChars(converter, function(valid: Boolean, inp: Array, outp: Object) {
+            forAllChars(converter, function(valid: boolean, inp: any[], outp: object) {
                 res.isASCII = res.isASCII && (inp[0] >= 0x80 || (valid && (inp[0] == outp[0])));
                 res.isSBCS = res.isSBCS && (inp.length == 1);
                 res.isDBCS = res.isDBCS && (((inp.length == 1) && (inp[0] < 0x80 || !valid)) || ((inp.length == 2) && inp[0] >= 0x80));
@@ -84,7 +84,7 @@ process.stdin.on("end", function() {
         return res;
     });
 
-    hashes = Object.keys(hashes).map(function(key: String) {return hashes[key];});
+    hashes = Object.keys(hashes).map(function(key: string) {return hashes[key];});
     console.log(JSON.stringify(hashes, undefined, 2));
 
 });
@@ -92,11 +92,11 @@ process.stdin.resume();
 
 // Make all valid input combinations for a given encoding and call fn with it.
 // fn(valid, input, output)
-function forAllChars(converter: Object, fn: Function, origbuf: Array, len: Number): Void {
-    var buf: Object = origbuf.slice(0, len);
+function forAllChars(converter: object, fn: Function, origbuf: any[], len: number): Void {
+    var buf: object = origbuf.slice(0, len);
     for (var i = 0; i < 0x100; i++) {
         buf[len-1] = i;
-        var res: String = undefined;
+        var res: string = undefined;
         try {
             res = converter.convert(buf);
         } catch (e) {

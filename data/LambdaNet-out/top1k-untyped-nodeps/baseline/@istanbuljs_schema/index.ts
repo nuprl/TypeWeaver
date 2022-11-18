@@ -1,7 +1,7 @@
 'use strict';
 
-const defaultExclude: String = require('./default-exclude.js');
-const defaultExtension: String = require('./default-extension.js');
+const defaultExclude: string = require('./default-exclude.js');
+const defaultExtension: string = require('./default-extension.js');
 
 const nycCommands: HTMLInputElement = {
 	all: [null, 'check-coverage', 'instrument', 'merge', 'report'],
@@ -13,7 +13,7 @@ const nycCommands: HTMLInputElement = {
 	instrumentOnly: ['instrument']
 };
 
-const cwd: Object = {
+const cwd: object = {
 	description: 'working directory used when resolving paths',
 	type: 'string',
 	get default() {
@@ -22,12 +22,12 @@ const cwd: Object = {
 	nycCommands: nycCommands.all
 };
 
-const nycrcPath: Object = {
+const nycrcPath: object = {
 	description: 'specify an explicit path to find nyc configuration',
 	nycCommands: nycCommands.all
 };
 
-const tempDir: Object = {
+const tempDir: object = {
 	description: 'directory to output raw coverage information to',
 	type: 'string',
 	default: './.nyc_output',
@@ -36,7 +36,7 @@ const tempDir: Object = {
 	nycCommands: [null, 'check-coverage', 'merge', 'report']
 };
 
-const testExclude: Object = {
+const testExclude: object = {
 	exclude: {
 		description: 'a list of specific files and directories that should be excluded from coverage, glob patterns are supported',
 		type: 'array',
@@ -75,7 +75,7 @@ const testExclude: Object = {
 	}
 };
 
-const instrumentVisitor: Object = {
+const instrumentVisitor: object = {
 	coverageVariable: {
 		description: 'variable to store coverage',
 		type: 'string',
@@ -105,7 +105,7 @@ const instrumentVisitor: Object = {
 	}
 };
 
-const instrumentParseGen: Object = {
+const instrumentParseGen: object = {
 	autoWrap: {
 		description: 'allow `return` statements outside of functions',
 		type: 'boolean',
@@ -161,7 +161,7 @@ const instrumentParseGen: Object = {
 	}
 };
 
-const checkCoverage: Object = {
+const checkCoverage: object = {
 	excludeAfterRemap: {
 		description: 'should exclude logic be performed after the source-map remaps filenames?',
 		type: 'boolean',
@@ -208,7 +208,7 @@ const checkCoverage: Object = {
 	}
 };
 
-const report: Object = {
+const report: object = {
 	checkCoverage: {
 		description: 'check whether coverage is within thresholds provided',
 		type: 'boolean',
@@ -251,7 +251,7 @@ const report: Object = {
 	}
 };
 
-const nycMain: Object = {
+const nycMain: object = {
 	silent: {
 		description: 'don\'t output a report after tests finish running',
 		type: 'boolean',
@@ -322,7 +322,7 @@ const nycMain: Object = {
 	}
 };
 
-const instrumentOnly: Object = {
+const instrumentOnly: object = {
 	inPlace: {
 		description: 'should nyc run the instrumentation in place?',
 		type: 'boolean',
@@ -349,7 +349,7 @@ const instrumentOnly: Object = {
 	}
 };
 
-const nyc: Object = {
+const nyc: object = {
 	description: 'nyc configuration options',
 	type: 'object',
 	properties: {
@@ -402,7 +402,7 @@ const nyc: Object = {
 	}
 };
 
-const configs: Object = {
+const configs: object = {
 	nyc,
 	testExclude: {
 		description: 'test-exclude options',
@@ -436,7 +436,7 @@ const configs: Object = {
 	}
 };
 
-function defaultsReducer(defaults: String, [name, {default: value}]): Void {
+function defaultsReducer(defaults: string, [name, {default: value}]): Void {
 	/* Modifying arrays in defaults is safe, does not change schema. */
 	if (Array.isArray(value)) {
 		value = [...value];
@@ -448,7 +448,7 @@ function defaultsReducer(defaults: String, [name, {default: value}]): Void {
 module.exports = {
 	...configs,
 	defaults: Object.keys(configs).reduce(
-		(defaults: String, id: String) => {
+		(defaults: string, id: string) => {
 			Object.defineProperty(defaults, id, {
 				enumerable: true,
 				get() {

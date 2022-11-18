@@ -1,20 +1,20 @@
-export function detectNewline(string: String): String {
+export function detectNewline(string: string): string {
 	if (typeof string !== 'string') {
 		throw new TypeError('Expected a string');
 	}
 
-	const newlines: Array = string.match(/(?:\r?\n)/g) || [];
+	const newlines: any[] = string.match(/(?:\r?\n)/g) || [];
 
 	if (newlines.length === 0) {
 		return;
 	}
 
-	const crlf: Number = newlines.filter((newline: String) => newline === '\r\n').length;
-	const lf: Number = newlines.length - crlf;
+	const crlf: number = newlines.filter((newline: string) => newline === '\r\n').length;
+	const lf: number = newlines.length - crlf;
 
 	return crlf > lf ? '\r\n' : '\n';
 }
 
-export function detectNewlineGraceful(string: String): Boolean {
+export function detectNewlineGraceful(string: string): boolean {
 	return (typeof string === 'string' && detectNewline(string)) || '\n';
 }

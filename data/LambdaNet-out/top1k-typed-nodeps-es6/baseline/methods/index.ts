@@ -26,8 +26,8 @@ export default getCurrentNodeMethods() || getBasicNodeMethods();
  * @private
  */
 
-function getCurrentNodeMethods (): Boolean {
-  return http.METHODS && http.METHODS.map(function lowerCaseMethod (method: String): String {
+function getCurrentNodeMethods (): boolean {
+  return http.METHODS && http.METHODS.map(function lowerCaseMethod (method: string): string {
     return method.toLowerCase()
   })
 }
@@ -37,7 +37,7 @@ function getCurrentNodeMethods (): Boolean {
  * @private
  */
 
-function getBasicNodeMethods (): Array {
+function getBasicNodeMethods (): any[] {
   return [
     'get',
     'post',

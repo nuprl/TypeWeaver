@@ -1,7 +1,7 @@
 import {parsePatch} from './parse';
 import distanceIterator from '../util/distance-iterator';
 
-export function applyPatch(source: String, uniDiff: Array, options: Object = {}): Boolean {
+export function applyPatch(source: string, uniDiff: any[], options: object = {}): boolean {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
@@ -15,27 +15,27 @@ export function applyPatch(source: String, uniDiff: Array, options: Object = {})
   }
 
   // Apply the diff to the input
-  let lines: Array = source.split(/\r\n|[\n\v\f\r\x85]/),
-      delimiters: Array = source.match(/\r\n|[\n\v\f\r\x85]/g) || [],
-      hunks: Array = uniDiff.hunks,
+  let lines: any[] = source.split(/\r\n|[\n\v\f\r\x85]/),
+      delimiters: any[] = source.match(/\r\n|[\n\v\f\r\x85]/g) || [],
+      hunks: any[] = uniDiff.hunks,
 
-      compareLine: Function = options.compareLine || ((lineNumber: Number, line: Number, operation: Function, patchContent: Number) => line === patchContent),
-      errorCount: Number = 0,
-      fuzzFactor: Number = options.fuzzFactor || 0,
-      minLine: Number = 0,
-      offset: Number = 0,
+      compareLine: Function = options.compareLine || ((lineNumber: number, line: number, operation: Function, patchContent: number) => line === patchContent),
+      errorCount: number = 0,
+      fuzzFactor: number = options.fuzzFactor || 0,
+      minLine: number = 0,
+      offset: number = 0,
 
-      removeEOFNL: Boolean,
-      addEOFNL: Boolean;
+      removeEOFNL: boolean,
+      addEOFNL: boolean;
 
   /**
    * Checks if the hunk exactly fits on the provided location
    */
-  function hunkFits(hunk: Object, toPos: Number): Boolean {
+  function hunkFits(hunk: object, toPos: number): boolean {
     for (let j = 0; j < hunk.lines.length; j++) {
-      let line: String = hunk.lines[j],
-          operation: String = (line.length > 0 ? line[0] : ' '),
-          content: String = (line.length > 0 ? line.substr(1) : line);
+      let line: string = hunk.lines[j],
+          operation: string = (line.length > 0 ? line[0] : ' '),
+          content: string = (line.length > 0 ? line.substr(1) : line);
 
       if (operation === ' ' || operation === '-') {
         // Context sanity check
@@ -55,10 +55,10 @@ export function applyPatch(source: String, uniDiff: Array, options: Object = {})
 
   // Search best fit offsets for each hunk based on the previous ones
   for (let i = 0; i < hunks.length; i++) {
-    let hunk: String = hunks[i],
-        maxLine: Number = lines.length - hunk.oldLines,
-        localOffset: Number = 0,
-        toPos: Number = offset + hunk.oldStart - 1;
+    let hunk: string = hunks[i],
+        maxLine: number = lines.length - hunk.oldLines,
+        localOffset: number = 0,
+        toPos: number = offset + hunk.oldStart - 1;
 
     let iterator: Function = distanceIterator(toPos, minLine, maxLine);
 
@@ -79,17 +79,17 @@ export function applyPatch(source: String, uniDiff: Array, options: Object = {})
   }
 
   // Apply patch hunks
-  let diffOffset: Number = 0;
+  let diffOffset: number = 0;
   for (let i = 0; i < hunks.length; i++) {
-    let hunk: Object = hunks[i],
-        toPos: Number = hunk.oldStart + hunk.offset + diffOffset - 1;
+    let hunk: object = hunks[i],
+        toPos: number = hunk.oldStart + hunk.offset + diffOffset - 1;
     diffOffset += hunk.newLines - hunk.oldLines;
 
     for (let j = 0; j < hunk.lines.length; j++) {
-      let line: String = hunk.lines[j],
-          operation: String = (line.length > 0 ? line[0] : ' '),
-          content: String = (line.length > 0 ? line.substr(1) : line),
-          delimiter: String = hunk.linedelimiters[j];
+      let line: string = hunk.lines[j],
+          operation: string = (line.length > 0 ? line[0] : ' '),
+          content: string = (line.length > 0 ? line.substr(1) : line),
+          delimiter: string = hunk.linedelimiters[j];
 
       if (operation === ' ') {
         toPos++;
@@ -102,7 +102,7 @@ export function applyPatch(source: String, uniDiff: Array, options: Object = {})
         delimiters.splice(toPos, 0, delimiter);
         toPos++;
       } else if (operation === '\\') {
-        let previousOperation: String = hunk.lines[j - 1] ? hunk.lines[j - 1][0] : null;
+        let previousOperation: string = hunk.lines[j - 1] ? hunk.lines[j - 1][0] : null;
         if (previousOperation === '+') {
           removeEOFNL = true;
         } else if (previousOperation === '-') {
@@ -129,19 +129,19 @@ export function applyPatch(source: String, uniDiff: Array, options: Object = {})
 }
 
 // Wrapper that supports multiple file patches via callbacks.
-export function applyPatches(uniDiff: Object, options: Array): Void {
+export function applyPatches(uniDiff: object, options: any[]): Void {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
 
-  let currentIndex: Number = 0;
-  function processIndex(): Boolean {
-    let index: String = uniDiff[currentIndex++];
+  let currentIndex: number = 0;
+  function processIndex(): boolean {
+    let index: string = uniDiff[currentIndex++];
     if (!index) {
       return options.complete();
     }
 
-    options.loadFile(index, function(err: Function, data: Object) {
+    options.loadFile(index, function(err: Function, data: object) {
       if (err) {
         return options.complete(err);
       }

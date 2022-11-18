@@ -1,4 +1,4 @@
-export default function escapeStringRegexp(string: String): String {
+export default function escapeStringRegexp(string: string): string {
 	if (typeof string !== 'string') {
 		throw new TypeError('Expected a string');
 	}

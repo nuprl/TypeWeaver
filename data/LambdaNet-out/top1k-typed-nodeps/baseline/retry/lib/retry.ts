@@ -1,7 +1,7 @@
-var RetryOperation: Array = require('./retry_operation');
+var RetryOperation: any[] = require('./retry_operation');
 
-exports.operation = function(options: Object) {
-  var timeouts: Array = exports.timeouts(options);
+exports.operation = function(options: object) {
+  var timeouts: any[] = exports.timeouts(options);
   return new RetryOperation(timeouts, {
       forever: options && (options.forever || options.retries === Infinity),
       unref: options && options.unref,
@@ -9,12 +9,12 @@ exports.operation = function(options: Object) {
   });
 };
 
-exports.timeouts = function(options: Object) {
+exports.timeouts = function(options: object) {
   if (options instanceof Array) {
     return [].concat(options);
   }
 
-  var opts: Object = {
+  var opts: object = {
     retries: 10,
     factor: 2,
     minTimeout: 1 * 1000,
@@ -29,7 +29,7 @@ exports.timeouts = function(options: Object) {
     throw new Error('minTimeout is greater than maxTimeout');
   }
 
-  var timeouts: Array = [];
+  var timeouts: any[] = [];
   for (var i = 0; i < opts.retries; i++) {
     timeouts.push(this.createTimeout(i, opts));
   }
@@ -39,25 +39,25 @@ exports.timeouts = function(options: Object) {
   }
 
   // sort the array numerically ascending
-  timeouts.sort(function(a: Number,b: Number) {
+  timeouts.sort(function(a: number,b: number) {
     return a - b;
   });
 
   return timeouts;
 };
 
-exports.createTimeout = function(attempt: Number, opts: Object) {
-  var random: Number = (opts.randomize)
+exports.createTimeout = function(attempt: number, opts: object) {
+  var random: number = (opts.randomize)
     ? (Math.random() + 1)
     : 1;
 
-  var timeout: Number = Math.round(random * Math.max(opts.minTimeout, 1) * Math.pow(opts.factor, attempt));
+  var timeout: number = Math.round(random * Math.max(opts.minTimeout, 1) * Math.pow(opts.factor, attempt));
   timeout = Math.min(timeout, opts.maxTimeout);
 
   return timeout;
 };
 
-exports.wrap = function(obj: Object, options: Array, methods: Array) {
+exports.wrap = function(obj: object, options: any[], methods: any[]) {
   if (options instanceof Array) {
     methods = options;
     options = null;
@@ -73,12 +73,12 @@ exports.wrap = function(obj: Object, options: Array, methods: Array) {
   }
 
   for (var i = 0; i < methods.length; i++) {
-    var method: String   = methods[i];
-    var original: String = obj[method];
+    var method: string   = methods[i];
+    var original: string = obj[method];
 
     obj[method] = function retryWrapper(original: Function): Void {
       var op: HTMLElement       = exports.operation(options);
-      var args: Array     = Array.prototype.slice.call(arguments, 1);
+      var args: any[]     = Array.prototype.slice.call(arguments, 1);
       var callback: Function = args.pop();
 
       args.push(function(err: Function) {

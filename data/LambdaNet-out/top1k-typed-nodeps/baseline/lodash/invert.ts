@@ -16,10 +16,10 @@ const toString: Function = Object.prototype.toString
  * invert(object)
  * // => { '1': 'c', '2': 'b' }
  */
-function invert(object: Object): Object {
-  const result: Object = {}
-  Object.keys(object).forEach((key: String) => {
-    let value: String = object[key]
+function invert(object: object): object {
+  const result: object = {}
+  Object.keys(object).forEach((key: string) => {
+    let value: string = object[key]
     if (value != null && typeof value.toString !== 'function') {
       value = toString.call(value)
     }

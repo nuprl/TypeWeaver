@@ -11,7 +11,7 @@ var hasUnicode: Function = function () {
   if (os.type() == "Windows_NT") { return false }
 
   var isUTF8: RegExp = /UTF-?8$/i
-  var ctype: Number = process.env.LC_ALL || process.env.LC_CTYPE || process.env.LANG
+  var ctype: number = process.env.LC_ALL || process.env.LC_CTYPE || process.env.LANG
   return isUTF8.test(ctype)
 }
 export default hasUnicode;

@@ -5,15 +5,15 @@ var RequireObjectCoercible: Function = require('es-abstract/2021/RequireObjectCo
 var callBind: Function = require('call-bind');
 var callBound: Function = require('call-bind/callBound');
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 var getPolyfill: Function = require('./polyfill');
 var polyfill: Function = callBind.apply(getPolyfill());
-var shim: String = require('./shim');
+var shim: string = require('./shim');
 
 var $slice: Function = callBound('Array.prototype.slice');
 
 /* eslint-disable no-unused-vars */
-var boundShim: Function = function includes(array: Array, searchElement: Element): Promise {
+var boundShim: Function = function includes(array: any[], searchElement: Element): Promise {
 /* eslint-enable no-unused-vars */
 	RequireObjectCoercible(array);
 	return polyfill(array, $slice(arguments, 1));

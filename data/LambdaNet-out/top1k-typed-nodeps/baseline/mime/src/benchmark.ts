@@ -1,13 +1,13 @@
 'use strict';
 
-const Benchmark: Array = require('benchmark');
-const mime: Array = require('..');
-const mimeLite: Array = require('../lite');
+const Benchmark: any[] = require('benchmark');
+const mime: any[] = require('..');
+const mimeLite: any[] = require('../lite');
 
 const suite: HTMLElement = new Benchmark.Suite();
 
-const extensions: Array = Object.keys(mime._types);
-let idx: Number = 0;
+const extensions: any[] = Object.keys(mime._types);
+let idx: number = 0;
 
 suite
   .add('mime.getType',
@@ -22,7 +22,7 @@ suite
       if (idx >= extensions.length) idx = 0;
     }
   )
-  .on('cycle', function(event: Object) {
+  .on('cycle', function(event: object) {
     console.log(String(event.target));
   })
   .run();

@@ -5,36 +5,36 @@
 
 "use strict";
 
-const ALPHABET: Object = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(
+const ALPHABET: object = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(
 	""
 );
 
-const CONTINUATION_BIT: Number = 0x20;
+const CONTINUATION_BIT: number = 0x20;
 
-const createMappingsSerializer: Function = (options: Object) => {
-	const linesOnly: Boolean = options && options.columns === false;
+const createMappingsSerializer: Function = (options: object) => {
+	const linesOnly: boolean = options && options.columns === false;
 	return linesOnly
 		? createLinesOnlyMappingsSerializer()
 		: createFullMappingsSerializer();
 };
 
 const createFullMappingsSerializer: Function = () => {
-	let currentLine: Number = 1;
-	let currentColumn: Number = 0;
-	let currentSourceIndex: Number = 0;
-	let currentOriginalLine: Number = 1;
-	let currentOriginalColumn: Number = 0;
-	let currentNameIndex: Number = 0;
-	let activeMapping: Boolean = false;
-	let activeName: Boolean = false;
-	let initial: Boolean = true;
+	let currentLine: number = 1;
+	let currentColumn: number = 0;
+	let currentSourceIndex: number = 0;
+	let currentOriginalLine: number = 1;
+	let currentOriginalColumn: number = 0;
+	let currentNameIndex: number = 0;
+	let activeMapping: boolean = false;
+	let activeName: boolean = false;
+	let initial: boolean = true;
 	return (
-		generatedLine: Number,
-		generatedColumn: Number,
-		sourceIndex: Number,
-		originalLine: Number,
-		originalColumn: Number,
-		nameIndex: Number
+		generatedLine: number,
+		generatedColumn: number,
+		sourceIndex: number,
+		originalLine: number,
+		originalColumn: number,
+		nameIndex: number
 	) => {
 		if (activeMapping && currentLine === generatedLine) {
 			// A mapping is still active
@@ -56,7 +56,7 @@ const createFullMappingsSerializer: Function = () => {
 			}
 		}
 
-		let str: String;
+		let str: string;
 		if (currentLine < generatedLine) {
 			str = ";".repeat(generatedLine - currentLine);
 			currentLine = generatedLine;
@@ -69,13 +69,13 @@ const createFullMappingsSerializer: Function = () => {
 			str = ",";
 		}
 
-		const writeValue: Function = (value: Number) => {
-			const sign: Number = (value >>> 31) & 1;
-			const mask: Number = value >> 31;
-			const absValue: Number = (value + mask) ^ mask;
-			let data: Number = (absValue << 1) | sign;
+		const writeValue: Function = (value: number) => {
+			const sign: number = (value >>> 31) & 1;
+			const mask: number = value >> 31;
+			const absValue: number = (value + mask) ^ mask;
+			let data: number = (absValue << 1) | sign;
 			for (;;) {
-				const sextet: Number = data & 0x1f;
+				const sextet: number = data & 0x1f;
 				data >>= 5;
 				if (data === 0) {
 					str += ALPHABET[sextet];
@@ -118,17 +118,17 @@ const createFullMappingsSerializer: Function = () => {
 };
 
 const createLinesOnlyMappingsSerializer: Function = () => {
-	let lastWrittenLine: Number = 0;
-	let currentLine: Number = 1;
-	let currentSourceIndex: Number = 0;
-	let currentOriginalLine: Number = 1;
+	let lastWrittenLine: number = 0;
+	let currentLine: number = 1;
+	let currentSourceIndex: number = 0;
+	let currentOriginalLine: number = 1;
 	return (
-		generatedLine: Number,
-		_generatedColumn: Number,
-		sourceIndex: Number,
-		originalLine: Number,
+		generatedLine: number,
+		_generatedColumn: number,
+		sourceIndex: number,
+		originalLine: number,
 		_originalColumn: OriginalSource,
-		_nameIndex: String
+		_nameIndex: string
 	) => {
 		if (sourceIndex < 0) {
 			// avoid writing generated mappings at all
@@ -138,14 +138,14 @@ const createLinesOnlyMappingsSerializer: Function = () => {
 			// avoid writing multiple original mappings per line
 			return "";
 		}
-		let str: String;
-		const writeValue: Function = (value: Number) => {
-			const sign: Number = (value >>> 31) & 1;
-			const mask: Number = value >> 31;
-			const absValue: Number = (value + mask) ^ mask;
-			let data: Number = (absValue << 1) | sign;
+		let str: string;
+		const writeValue: Function = (value: number) => {
+			const sign: number = (value >>> 31) & 1;
+			const mask: number = value >> 31;
+			const absValue: number = (value + mask) ^ mask;
+			let data: number = (absValue << 1) | sign;
 			for (;;) {
-				const sextet: Number = data & 0x1f;
+				const sextet: number = data & 0x1f;
 				data >>= 5;
 				if (data === 0) {
 					str += ALPHABET[sextet];

@@ -4,21 +4,21 @@ import deburrLetter from './.internal/deburrLetter.js'
 const reLatin: RegExp = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g
 
 /** Used to compose unicode character classes. */
-const rsComboMarksRange: String = '\\u0300-\\u036f'
-const reComboHalfMarksRange: String = '\\ufe20-\\ufe2f'
-const rsComboSymbolsRange: String = '\\u20d0-\\u20ff'
-const rsComboMarksExtendedRange: String = '\\u1ab0-\\u1aff'
-const rsComboMarksSupplementRange: String = '\\u1dc0-\\u1dff'
-const rsComboRange: String = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange + rsComboMarksExtendedRange + rsComboMarksSupplementRange
+const rsComboMarksRange: string = '\\u0300-\\u036f'
+const reComboHalfMarksRange: string = '\\ufe20-\\ufe2f'
+const rsComboSymbolsRange: string = '\\u20d0-\\u20ff'
+const rsComboMarksExtendedRange: string = '\\u1ab0-\\u1aff'
+const rsComboMarksSupplementRange: string = '\\u1dc0-\\u1dff'
+const rsComboRange: string = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange + rsComboMarksExtendedRange + rsComboMarksSupplementRange
 
 /** Used to compose unicode capture groups. */
-const rsCombo: String = `[${rsComboRange}]`
+const rsCombo: string = `[${rsComboRange}]`
 
 /**
  * Used to match [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) and
  * [combining diacritical marks for symbols](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols).
  */
-const reComboMark: Number = RegExp(rsCombo, 'g')
+const reComboMark: number = RegExp(rsCombo, 'g')
 
 /**
  * Deburrs `string` by converting
@@ -36,7 +36,7 @@ const reComboMark: Number = RegExp(rsCombo, 'g')
  * deburr('déjà vu')
  * // => 'deja vu'
  */
-function deburr(string: String): Boolean {
+function deburr(string: string): boolean {
   return string && string.replace(reLatin, deburrLetter).replace(reComboMark, '')
 }
 

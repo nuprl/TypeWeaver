@@ -14,14 +14,14 @@ function handle(): Void {
   if (arguments.length > 100) console.log('damn');
 }
 
-var ee1: Array = new EventEmitter1()
+var ee1: any[] = new EventEmitter1()
   , ee2: HTMLElement = new EventEmitter2()
   , ee3: HTMLElement = new EventEmitter3()
   , master: HTMLElement = new Master()
   , drip: HTMLElement = new Drip()
   , fe: HTMLElement = new FE()
-  , ce: Object = CE()
-  , ee: Object = EE();
+  , ce: object = CE()
+  , ee: object = EE();
 
 (
   new benchmark.Suite()

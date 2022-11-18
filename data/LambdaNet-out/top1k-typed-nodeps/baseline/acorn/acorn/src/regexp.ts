@@ -26,7 +26,7 @@ export class RegExpValidationState {
   }
 
   reset(start, pattern, flags) {
-    const unicode: Boolean = flags.indexOf("u") !== -1
+    const unicode: boolean = flags.indexOf("u") !== -1
     this.start = start | 0
     this.source = pattern + ""
     this.flags = flags
@@ -41,26 +41,26 @@ export class RegExpValidationState {
   // If u flag is given, this returns the code point at the index (it combines a surrogate pair).
   // Otherwise, this returns the code unit of the index (can be a part of a surrogate pair).
   at(i, forceU = false) {
-    const s: String = this.source
-    const l: Number = s.length
+    const s: string = this.source
+    const l: number = s.length
     if (i >= l) {
       return -1
     }
-    const c: Number = s.charCodeAt(i)
+    const c: number = s.charCodeAt(i)
     if (!(forceU || this.switchU) || c <= 0xD7FF || c >= 0xE000 || i + 1 >= l) {
       return c
     }
-    const next: Number = s.charCodeAt(i + 1)
+    const next: number = s.charCodeAt(i + 1)
     return next >= 0xDC00 && next <= 0xDFFF ? (c << 10) + next - 0x35FDC00 : c
   }
 
   nextIndex(i, forceU = false) {
-    const s: String = this.source
-    const l: Number = s.length
+    const s: string = this.source
+    const l: number = s.length
     if (i >= l) {
       return l
     }
-    let c: Number = s.charCodeAt(i), next: Number
+    let c: number = s.charCodeAt(i), next: number
     if (!(forceU || this.switchU) || c <= 0xD7FF || c >= 0xE000 || i + 1 >= l ||
         (next = s.charCodeAt(i + 1)) < 0xDC00 || next > 0xDFFF) {
       return i + 1
@@ -96,11 +96,11 @@ export class RegExpValidationState {
  * @returns {void}
  */
 pp.validateRegExpFlags = function(state: RegExpValidationState) {
-  const validFlags: Array = state.validFlags
-  const flags: String = state.flags
+  const validFlags: any[] = state.validFlags
+  const flags: string = state.flags
 
   for (let i = 0; i < flags.length; i++) {
-    const flag: String = flags.charAt(i)
+    const flag: string = flags.charAt(i)
     if (validFlags.indexOf(flag) === -1) {
       this.raise(state.start, "Invalid regular expression flag")
     }
@@ -227,7 +227,7 @@ pp.regexp_eatAssertion = function(state: RegExpValidationState) {
 
   // Lookahead / Lookbehind
   if (state.eat(0x28 /* ( */) && state.eat(0x3F /* ? */)) {
-    let lookbehind: Boolean = false
+    let lookbehind: boolean = false
     if (this.options.ecmaVersion >= 9) {
       lookbehind = state.eat(0x3C /* < */)
     }
@@ -246,7 +246,7 @@ pp.regexp_eatAssertion = function(state: RegExpValidationState) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-Quantifier
-pp.regexp_eatQuantifier = function(state: RegExpValidationState, noError: Object = false) {
+pp.regexp_eatQuantifier = function(state: RegExpValidationState, noError: object = false) {
   if (this.regexp_eatQuantifierPrefix(state, noError)) {
     state.eat(0x3F /* ? */)
     return true
@@ -255,7 +255,7 @@ pp.regexp_eatQuantifier = function(state: RegExpValidationState, noError: Object
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-QuantifierPrefix
-pp.regexp_eatQuantifierPrefix = function(state: RegExpValidationState, noError: Object) {
+pp.regexp_eatQuantifierPrefix = function(state: RegExpValidationState, noError: object) {
   return (
     state.eat(0x2A /* * */) ||
     state.eat(0x2B /* + */) ||
@@ -263,10 +263,10 @@ pp.regexp_eatQuantifierPrefix = function(state: RegExpValidationState, noError: 
     this.regexp_eatBracedQuantifier(state, noError)
   )
 }
-pp.regexp_eatBracedQuantifier = function(state: RegExpValidationState, noError: Boolean) {
+pp.regexp_eatBracedQuantifier = function(state: RegExpValidationState, noError: boolean) {
   const start: Found = state.pos
   if (state.eat(0x7B /* { */)) {
-    let min: Number = 0, max: Number = -1
+    let min: number = 0, max: number = -1
     if (this.regexp_eatDecimalDigits(state)) {
       min = state.lastIntValue
       if (state.eat(0x2C /* , */) && this.regexp_eatDecimalDigits(state)) {
@@ -371,7 +371,7 @@ pp.regexp_eatSyntaxCharacter = function(state: RegExpValidationState) {
   }
   return false
 }
-function isSyntaxCharacter(ch: Number): Boolean {
+function isSyntaxCharacter(ch: number): boolean {
   return (
     ch === 0x24 /* $ */ ||
     ch >= 0x28 /* ( */ && ch <= 0x2B /* + */ ||
@@ -386,7 +386,7 @@ function isSyntaxCharacter(ch: Number): Boolean {
 // But eat eager.
 pp.regexp_eatPatternCharacters = function(state: RegExpValidationState) {
   const start: Found = state.pos
-  let ch: Number = 0
+  let ch: number = 0
   while ((ch = state.current()) !== -1 && !isSyntaxCharacter(ch)) {
     state.advance()
   }
@@ -395,7 +395,7 @@ pp.regexp_eatPatternCharacters = function(state: RegExpValidationState) {
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-ExtendedPatternCharacter
 pp.regexp_eatExtendedPatternCharacter = function(state: RegExpValidationState) {
-  const ch: Number = state.current()
+  const ch: number = state.current()
   if (
     ch !== -1 &&
     ch !== 0x24 /* $ */ &&
@@ -465,7 +465,7 @@ pp.regexp_eatRegExpIdentifierName = function(state: RegExpValidationState) {
 //   `\` RegExpUnicodeEscapeSequence[+U]
 pp.regexp_eatRegExpIdentifierStart = function(state: RegExpValidationState) {
   const start: Found = state.pos
-  const forceU: Boolean = this.options.ecmaVersion >= 11
+  const forceU: boolean = this.options.ecmaVersion >= 11
   let ch: Found = state.current(forceU)
   state.advance(forceU)
 
@@ -480,7 +480,7 @@ pp.regexp_eatRegExpIdentifierStart = function(state: RegExpValidationState) {
   state.pos = start
   return false
 }
-function isRegExpIdentifierStart(ch: String): Boolean {
+function isRegExpIdentifierStart(ch: string): boolean {
   return isIdentifierStart(ch, true) || ch === 0x24 /* $ */ || ch === 0x5F /* _ */
 }
 
@@ -493,7 +493,7 @@ function isRegExpIdentifierStart(ch: String): Boolean {
 //   <ZWJ>
 pp.regexp_eatRegExpIdentifierPart = function(state: RegExpValidationState) {
   const start: Found = state.pos
-  const forceU: Boolean = this.options.ecmaVersion >= 11
+  const forceU: boolean = this.options.ecmaVersion >= 11
   let ch: Found = state.current(forceU)
   state.advance(forceU)
 
@@ -508,7 +508,7 @@ pp.regexp_eatRegExpIdentifierPart = function(state: RegExpValidationState) {
   state.pos = start
   return false
 }
-function isRegExpIdentifierPart(ch: Number): Boolean {
+function isRegExpIdentifierPart(ch: number): boolean {
   return isIdentifierChar(ch, true) || ch === 0x24 /* $ */ || ch === 0x5F /* _ */ || ch === 0x200C /* <ZWNJ> */ || ch === 0x200D /* <ZWJ> */
 }
 
@@ -534,7 +534,7 @@ pp.regexp_eatAtomEscape = function(state: RegExpValidationState) {
 pp.regexp_eatBackReference = function(state: RegExpValidationState) {
   const start: Found = state.pos
   if (this.regexp_eatDecimalEscape(state)) {
-    const n: Number = state.lastIntValue
+    const n: number = state.lastIntValue
     if (state.switchU) {
       // For SyntaxError in https://www.ecma-international.org/ecma-262/8.0/#sec-atomescape
       if (n > state.maxBackReference) {
@@ -593,7 +593,7 @@ pp.regexp_eatZero = function(state: RegExpValidationState) {
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlEscape
 pp.regexp_eatControlEscape = function(state: RegExpValidationState) {
-  const ch: Number = state.current()
+  const ch: number = state.current()
   if (ch === 0x74 /* t */) {
     state.lastIntValue = 0x09 /* \t */
     state.advance()
@@ -624,7 +624,7 @@ pp.regexp_eatControlEscape = function(state: RegExpValidationState) {
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlLetter
 pp.regexp_eatControlLetter = function(state: RegExpValidationState) {
-  const ch: Number = state.current()
+  const ch: number = state.current()
   if (isControlLetter(ch)) {
     state.lastIntValue = ch % 0x20
     state.advance()
@@ -632,7 +632,7 @@ pp.regexp_eatControlLetter = function(state: RegExpValidationState) {
   }
   return false
 }
-function isControlLetter(ch: Number): Boolean {
+function isControlLetter(ch: number): boolean {
   return (
     (ch >= 0x41 /* A */ && ch <= 0x5A /* Z */) ||
     (ch >= 0x61 /* a */ && ch <= 0x7A /* z */)
@@ -640,17 +640,17 @@ function isControlLetter(ch: Number): Boolean {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-RegExpUnicodeEscapeSequence
-pp.regexp_eatRegExpUnicodeEscapeSequence = function(state: RegExpValidationState, forceU: Array = false) {
+pp.regexp_eatRegExpUnicodeEscapeSequence = function(state: RegExpValidationState, forceU: any[] = false) {
   const start: Found = state.pos
-  const switchU: Boolean = forceU || state.switchU
+  const switchU: boolean = forceU || state.switchU
 
   if (state.eat(0x75 /* u */)) {
     if (this.regexp_eatFixedHexDigits(state, 4)) {
-      const lead: Number = state.lastIntValue
+      const lead: number = state.lastIntValue
       if (switchU && lead >= 0xD800 && lead <= 0xDBFF) {
         const leadSurrogateEnd: Function = state.pos
         if (state.eat(0x5C /* \ */) && state.eat(0x75 /* u */) && this.regexp_eatFixedHexDigits(state, 4)) {
-          const trail: Number = state.lastIntValue
+          const trail: number = state.lastIntValue
           if (trail >= 0xDC00 && trail <= 0xDFFF) {
             state.lastIntValue = (lead - 0xD800) * 0x400 + (trail - 0xDC00) + 0x10000
             return true
@@ -678,7 +678,7 @@ pp.regexp_eatRegExpUnicodeEscapeSequence = function(state: RegExpValidationState
 
   return false
 }
-function isValidUnicode(ch: Number): Boolean {
+function isValidUnicode(ch: number): boolean {
   return ch >= 0 && ch <= 0x10FFFF
 }
 
@@ -695,7 +695,7 @@ pp.regexp_eatIdentityEscape = function(state: RegExpValidationState) {
     return false
   }
 
-  const ch: Boolean = state.current()
+  const ch: boolean = state.current()
   if (ch !== 0x63 /* c */ && (!state.switchN || ch !== 0x6B /* k */)) {
     state.lastIntValue = ch
     state.advance()
@@ -708,7 +708,7 @@ pp.regexp_eatIdentityEscape = function(state: RegExpValidationState) {
 // https://www.ecma-international.org/ecma-262/8.0/#prod-DecimalEscape
 pp.regexp_eatDecimalEscape = function(state: RegExpValidationState) {
   state.lastIntValue = 0
-  let ch: Number = state.current()
+  let ch: number = state.current()
   if (ch >= 0x31 /* 1 */ && ch <= 0x39 /* 9 */) {
     do {
       state.lastIntValue = 10 * state.lastIntValue + (ch - 0x30 /* 0 */)
@@ -721,7 +721,7 @@ pp.regexp_eatDecimalEscape = function(state: RegExpValidationState) {
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-CharacterClassEscape
 pp.regexp_eatCharacterClassEscape = function(state: RegExpValidationState) {
-  const ch: String = state.current()
+  const ch: string = state.current()
 
   if (isCharacterClassEscape(ch)) {
     state.lastIntValue = -1
@@ -748,7 +748,7 @@ pp.regexp_eatCharacterClassEscape = function(state: RegExpValidationState) {
 
   return false
 }
-function isCharacterClassEscape(ch: Number): Boolean {
+function isCharacterClassEscape(ch: number): boolean {
   return (
     ch === 0x64 /* d */ ||
     ch === 0x44 /* D */ ||
@@ -767,7 +767,7 @@ pp.regexp_eatUnicodePropertyValueExpression = function(state: RegExpValidationSt
 
   // UnicodePropertyName `=` UnicodePropertyValue
   if (this.regexp_eatUnicodePropertyName(state) && state.eat(0x3D /* = */)) {
-    const name: String = state.lastStringValue
+    const name: string = state.lastStringValue
     if (this.regexp_eatUnicodePropertyValue(state)) {
       const value: HTMLElement = state.lastStringValue
       this.regexp_validateUnicodePropertyNameAndValue(state, name, value)
@@ -778,19 +778,19 @@ pp.regexp_eatUnicodePropertyValueExpression = function(state: RegExpValidationSt
 
   // LoneUnicodePropertyNameOrValue
   if (this.regexp_eatLoneUnicodePropertyNameOrValue(state)) {
-    const nameOrValue: String = state.lastStringValue
+    const nameOrValue: string = state.lastStringValue
     this.regexp_validateUnicodePropertyNameOrValue(state, nameOrValue)
     return true
   }
   return false
 }
-pp.regexp_validateUnicodePropertyNameAndValue = function(state: RegExpValidationState, name: String, value: String) {
+pp.regexp_validateUnicodePropertyNameAndValue = function(state: RegExpValidationState, name: string, value: string) {
   if (!hasOwn(state.unicodeProperties.nonBinary, name))
     state.raise("Invalid property name")
   if (!state.unicodeProperties.nonBinary[name].test(value))
     state.raise("Invalid property value")
 }
-pp.regexp_validateUnicodePropertyNameOrValue = function(state: RegExpValidationState, nameOrValue: String) {
+pp.regexp_validateUnicodePropertyNameOrValue = function(state: RegExpValidationState, nameOrValue: string) {
   if (!state.unicodeProperties.binary.test(nameOrValue))
     state.raise("Invalid property name")
 }
@@ -798,7 +798,7 @@ pp.regexp_validateUnicodePropertyNameOrValue = function(state: RegExpValidationS
 // UnicodePropertyName ::
 //   UnicodePropertyNameCharacters
 pp.regexp_eatUnicodePropertyName = function(state: RegExpValidationState) {
-  let ch: Number = 0
+  let ch: number = 0
   state.lastStringValue = ""
   while (isUnicodePropertyNameCharacter(ch = state.current())) {
     state.lastStringValue += codePointToString(ch)
@@ -806,14 +806,14 @@ pp.regexp_eatUnicodePropertyName = function(state: RegExpValidationState) {
   }
   return state.lastStringValue !== ""
 }
-function isUnicodePropertyNameCharacter(ch: String): Boolean {
+function isUnicodePropertyNameCharacter(ch: string): boolean {
   return isControlLetter(ch) || ch === 0x5F /* _ */
 }
 
 // UnicodePropertyValue ::
 //   UnicodePropertyValueCharacters
 pp.regexp_eatUnicodePropertyValue = function(state: RegExpValidationState) {
-  let ch: Number = 0
+  let ch: number = 0
   state.lastStringValue = ""
   while (isUnicodePropertyValueCharacter(ch = state.current())) {
     state.lastStringValue += codePointToString(ch)
@@ -821,7 +821,7 @@ pp.regexp_eatUnicodePropertyValue = function(state: RegExpValidationState) {
   }
   return state.lastStringValue !== ""
 }
-function isUnicodePropertyValueCharacter(ch: String): Boolean {
+function isUnicodePropertyValueCharacter(ch: string): boolean {
   return isUnicodePropertyNameCharacter(ch) || isDecimalDigit(ch)
 }
 
@@ -850,9 +850,9 @@ pp.regexp_eatCharacterClass = function(state: RegExpValidationState) {
 // https://www.ecma-international.org/ecma-262/8.0/#prod-NonemptyClassRangesNoDash
 pp.regexp_classRanges = function(state: RegExpValidationState) {
   while (this.regexp_eatClassAtom(state)) {
-    const left: Number = state.lastIntValue
+    const left: number = state.lastIntValue
     if (state.eat(0x2D /* - */) && this.regexp_eatClassAtom(state)) {
-      const right: Number = state.lastIntValue
+      const right: number = state.lastIntValue
       if (state.switchU && (left === -1 || right === -1)) {
         state.raise("Invalid character class")
       }
@@ -874,7 +874,7 @@ pp.regexp_eatClassAtom = function(state: RegExpValidationState) {
     }
     if (state.switchU) {
       // Make the same message as V8.
-      const ch: String = state.current()
+      const ch: string = state.current()
       if (ch === 0x63 /* c */ || isOctalDigit(ch)) {
         state.raise("Invalid class escape")
       }
@@ -883,7 +883,7 @@ pp.regexp_eatClassAtom = function(state: RegExpValidationState) {
     state.pos = start
   }
 
-  const ch: Boolean = state.current()
+  const ch: boolean = state.current()
   if (ch !== 0x5D /* ] */) {
     state.lastIntValue = ch
     state.advance()
@@ -922,7 +922,7 @@ pp.regexp_eatClassEscape = function(state: RegExpValidationState) {
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-ClassControlLetter
 pp.regexp_eatClassControlLetter = function(state: RegExpValidationState) {
-  const ch: Number = state.current()
+  const ch: number = state.current()
   if (isDecimalDigit(ch) || ch === 0x5F /* _ */) {
     state.lastIntValue = ch % 0x20
     state.advance()
@@ -949,7 +949,7 @@ pp.regexp_eatHexEscapeSequence = function(state: RegExpValidationState) {
 // https://www.ecma-international.org/ecma-262/8.0/#prod-DecimalDigits
 pp.regexp_eatDecimalDigits = function(state: RegExpValidationState) {
   const start: Found = state.pos
-  let ch: Number = 0
+  let ch: number = 0
   state.lastIntValue = 0
   while (isDecimalDigit(ch = state.current())) {
     state.lastIntValue = 10 * state.lastIntValue + (ch - 0x30 /* 0 */)
@@ -957,14 +957,14 @@ pp.regexp_eatDecimalDigits = function(state: RegExpValidationState) {
   }
   return state.pos !== start
 }
-function isDecimalDigit(ch: Number): Boolean {
+function isDecimalDigit(ch: number): boolean {
   return ch >= 0x30 /* 0 */ && ch <= 0x39 /* 9 */
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-HexDigits
 pp.regexp_eatHexDigits = function(state: RegExpValidationState) {
   const start: Found = state.pos
-  let ch: Number = 0
+  let ch: number = 0
   state.lastIntValue = 0
   while (isHexDigit(ch = state.current())) {
     state.lastIntValue = 16 * state.lastIntValue + hexToInt(ch)
@@ -972,14 +972,14 @@ pp.regexp_eatHexDigits = function(state: RegExpValidationState) {
   }
   return state.pos !== start
 }
-function isHexDigit(ch: Number): Boolean {
+function isHexDigit(ch: number): boolean {
   return (
     (ch >= 0x30 /* 0 */ && ch <= 0x39 /* 9 */) ||
     (ch >= 0x41 /* A */ && ch <= 0x46 /* F */) ||
     (ch >= 0x61 /* a */ && ch <= 0x66 /* f */)
   )
 }
-function hexToInt(ch: Number): Number {
+function hexToInt(ch: number): number {
   if (ch >= 0x41 /* A */ && ch <= 0x46 /* F */) {
     return 10 + (ch - 0x41 /* A */)
   }
@@ -993,9 +993,9 @@ function hexToInt(ch: Number): Number {
 // Allows only 0-377(octal) i.e. 0-255(decimal).
 pp.regexp_eatLegacyOctalEscapeSequence = function(state: RegExpValidationState) {
   if (this.regexp_eatOctalDigit(state)) {
-    const n1: Number = state.lastIntValue
+    const n1: number = state.lastIntValue
     if (this.regexp_eatOctalDigit(state)) {
-      const n2: Number = state.lastIntValue
+      const n2: number = state.lastIntValue
       if (n1 <= 3 && this.regexp_eatOctalDigit(state)) {
         state.lastIntValue = n1 * 64 + n2 * 8 + state.lastIntValue
       } else {
@@ -1011,7 +1011,7 @@ pp.regexp_eatLegacyOctalEscapeSequence = function(state: RegExpValidationState) 
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-OctalDigit
 pp.regexp_eatOctalDigit = function(state: RegExpValidationState) {
-  const ch: Number = state.current()
+  const ch: number = state.current()
   if (isOctalDigit(ch)) {
     state.lastIntValue = ch - 0x30 /* 0 */
     state.advance()
@@ -1020,18 +1020,18 @@ pp.regexp_eatOctalDigit = function(state: RegExpValidationState) {
   state.lastIntValue = 0
   return false
 }
-function isOctalDigit(ch: Number): Boolean {
+function isOctalDigit(ch: number): boolean {
   return ch >= 0x30 /* 0 */ && ch <= 0x37 /* 7 */
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-Hex4Digits
 // https://www.ecma-international.org/ecma-262/8.0/#prod-HexDigit
 // And HexDigit HexDigit in https://www.ecma-international.org/ecma-262/8.0/#prod-HexEscapeSequence
-pp.regexp_eatFixedHexDigits = function(state: RegExpValidationState, length: Number) {
+pp.regexp_eatFixedHexDigits = function(state: RegExpValidationState, length: number) {
   const start: Found = state.pos
   state.lastIntValue = 0
   for (let i = 0; i < length; ++i) {
-    const ch: String = state.current()
+    const ch: string = state.current()
     if (!isHexDigit(ch)) {
       state.pos = start
       return false

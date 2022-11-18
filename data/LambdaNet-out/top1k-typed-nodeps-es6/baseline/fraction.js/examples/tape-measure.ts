@@ -5,7 +5,7 @@
  * Copyright (c) 2015, Robert Eisele (robert@xarg.org)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  **/
-function closestTapeMeasure(frac: String): String {
+function closestTapeMeasure(frac: string): string {
 
     /*
     k/16 ≤ a/b < (k+1)/16

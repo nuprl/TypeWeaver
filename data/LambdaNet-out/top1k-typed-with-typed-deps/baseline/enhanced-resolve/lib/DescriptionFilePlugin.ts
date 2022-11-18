@@ -5,7 +5,7 @@
 
 "use strict";
 
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */

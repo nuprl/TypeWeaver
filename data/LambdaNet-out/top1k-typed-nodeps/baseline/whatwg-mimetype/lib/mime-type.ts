@@ -1,7 +1,7 @@
 "use strict";
-const MIMETypeParameters: String = require("./mime-type-parameters.js");
-const parse: String = require("./parser.js");
-const serialize: String = require("./serializer.js");
+const MIMETypeParameters: string = require("./mime-type-parameters.js");
+const parse: string = require("./parser.js");
+const serialize: string = require("./serializer.js");
 const {
   asciiLowercase,
   solelyContainsHTTPTokenCodePoints

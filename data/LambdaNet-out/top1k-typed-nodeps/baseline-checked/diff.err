@@ -15,486 +15,364 @@ Gruntfile.ts(146,9): error TS2339: Property 'task' does not exist on type 'HTMLE
 Gruntfile.ts(148,9): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 Gruntfile.ts(153,9): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 Gruntfile.ts(154,9): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
-examples/node_example.ts(7,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/node_example.ts(7,24): error TS2339: Property 'diffChars' does not exist on type 'String'.
+examples/node_example.ts(7,24): error TS2339: Property 'diffChars' does not exist on type 'string'.
 examples/node_example.ts(12,28): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 examples/node_example.ts(13,10): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
 examples/node_example.ts(14,29): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-karma.conf.ts(24,10): error TS2339: Property 'set' does not exist on type 'Object'.
-karma.conf.ts(61,22): error TS2339: Property 'LOG_INFO' does not exist on type 'Object'.
+karma.conf.ts(24,10): error TS2339: Property 'set' does not exist on type 'object'.
+karma.conf.ts(61,22): error TS2339: Property 'LOG_INFO' does not exist on type 'object'.
 rollup.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup.config.ts(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-src/convert/dmp.ts(2,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/convert/dmp.ts(2,54): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/convert/dmp.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/convert/dmp.ts(8,16): error TS2339: Property 'added' does not exist on type 'Object'.
-src/convert/dmp.ts(10,23): error TS2339: Property 'removed' does not exist on type 'Object'.
-src/convert/dmp.ts(16,33): error TS2339: Property 'value' does not exist on type 'Object'.
-src/convert/xml.ts(1,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/convert/xml.ts(2,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/convert/dmp.ts(8,16): error TS2339: Property 'added' does not exist on type 'object'.
+src/convert/dmp.ts(10,23): error TS2339: Property 'removed' does not exist on type 'object'.
+src/convert/dmp.ts(16,33): error TS2339: Property 'value' does not exist on type 'object'.
 src/convert/xml.ts(5,16): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 src/convert/xml.ts(7,23): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
 src/convert/xml.ts(11,32): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
 src/convert/xml.ts(13,16): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 src/convert/xml.ts(15,23): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
-src/convert/xml.ts(22,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/convert/xml.ts(23,7): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/convert/xml.ts(23,7): error TS2322: Type 'object' is not assignable to type 'string'.
+src/convert/xml.ts(29,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/diff/array.ts(3,25): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 src/diff/array.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/array.ts(4,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(1,33): error TS2304: Cannot find name 'Void'.
 src/diff/base.ts(5,28): error TS2339: Property 'callback' does not exist on type '{}'.
 src/diff/base.ts(33,16): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
 src/diff/base.ts(34,55): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
-src/diff/base.ts(70,32): error TS2345: Argument of type '{ newPos: number; components: any[]; }' is not assignable to parameter of type 'String'.
-  Type '{ newPos: number; components: any[]; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/diff/base.ts(177,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(177,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(177,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(177,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(183,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/diff/base.ts(70,32): error TS2345: Argument of type '{ newPos: number; components: any[]; }' is not assignable to parameter of type 'string'.
 src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
 src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
-src/diff/base.ts(187,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(188,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(189,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(189,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
+src/diff/base.ts(188,27): error TS2345: Argument of type '(value: any[], i: string) => any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any[]'.
+  Types of parameters 'i' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
 src/diff/base.ts(193,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(193,37): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/diff/base.ts(195,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(195,37): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(204,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(204,35): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(210,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(211,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(212,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(221,47): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(223,31): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
 src/diff/base.ts(224,25): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 src/diff/base.ts(224,48): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
+src/diff/base.ts(225,15): error TS2339: Property 'equals' does not exist on type 'any[]'.
 src/diff/base.ts(225,40): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(226,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(226,57): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(234,25): error TS2339: Property 'newPos' does not exist on type 'String'.
-src/diff/base.ts(234,50): error TS2339: Property 'components' does not exist on type 'String'.
-src/diff/character.ts(3,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/base.ts(234,25): error TS2339: Property 'newPos' does not exist on type 'string'.
+src/diff/base.ts(234,50): error TS2339: Property 'components' does not exist on type 'string'.
 src/diff/character.ts(3,37): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/css.ts(3,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/character.ts(4,107): error TS2339: Property 'diff' does not exist on type 'any[]'.
 src/diff/css.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
+src/diff/css.ts(4,9): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
+src/diff/css.ts(8,101): error TS2339: Property 'diff' does not exist on type 'any[]'.
 src/diff/json.ts(7,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/json.ts(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
+src/diff/json.ts(12,30): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
 src/diff/json.ts(13,10): error TS2339: Property 'castInput' does not exist on type 'HTMLElement'.
 src/diff/json.ts(16,61): error TS2554: Expected 5 arguments, but got 4.
 src/diff/json.ts(18,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
 src/diff/json.ts(22,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
-src/diff/json.ts(26,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/json.ts(26,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/json.ts(36,33): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/diff/json.ts(46,38): error TS2339: Property 'length' does not exist on type 'Object'.
-src/diff/json.ts(48,25): error TS2339: Property 'length' does not exist on type 'Object'.
-src/diff/json.ts(48,33): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/diff/json.ts(49,24): error TS2538: Type 'Number' cannot be used as an index type.
-src/diff/json.ts(49,46): error TS2538: Type 'Number' cannot be used as an index type.
-src/diff/json.ts(56,18): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-src/diff/json.ts(57,15): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-src/diff/json.ts(64,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/json.ts(68,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-src/diff/json.ts(73,40): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/diff/json.ts(75,24): error TS2538: Type 'String' cannot be used as an index type.
-src/diff/json.ts(75,48): error TS2538: Type 'String' cannot be used as an index type.
-src/diff/line.ts(4,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/json.ts(46,38): error TS2339: Property 'length' does not exist on type 'object'.
+src/diff/json.ts(48,25): error TS2339: Property 'length' does not exist on type 'object'.
+src/diff/json.ts(56,18): error TS2339: Property 'toJSON' does not exist on type 'object'.
+src/diff/json.ts(57,15): error TS2339: Property 'toJSON' does not exist on type 'object'.
 src/diff/line.ts(4,32): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/line.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(32,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/line.ts(5,10): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
+src/diff/line.ts(31,106): error TS2339: Property 'diff' does not exist on type 'any[]'.
+src/diff/line.ts(34,19): error TS2339: Property 'diff' does not exist on type 'any[]'.
 src/diff/sentence.ts(4,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/sentence.ts(5,14): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/sentence.ts(9,114): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/word.ts(26,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/word.ts(27,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
-src/diff/word.ts(32,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/diff/word.ts(32,109): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/diff/word.ts(34,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
-src/diff/word.ts(36,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/word.ts(53,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/word.ts(54,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 src/diff/word.ts(55,19): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/word.ts(59,19): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
-src/patch/apply.ts(4,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/apply.ts(18,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/apply.ts(19,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/apply.ts(20,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/apply.ts(22,39): error TS2339: Property 'compareLine' does not exist on type 'Object'.
-src/patch/apply.ts(24,36): error TS2339: Property 'fuzzFactor' does not exist on type 'Object'.
-src/patch/apply.ts(35,30): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(36,31): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(42,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/apply.ts(43,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/apply.ts(49,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/apply.ts(59,47): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/apply.ts(61,39): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/apply.ts(66,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-src/patch/apply.ts(67,14): error TS2339: Property 'offset' does not exist on type 'String'.
-src/patch/apply.ts(67,23): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-src/patch/apply.ts(78,20): error TS2339: Property 'offset' does not exist on type 'String'.
-src/patch/apply.ts(78,34): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/apply.ts(78,50): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/apply.ts(85,30): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/apply.ts(85,46): error TS2339: Property 'offset' does not exist on type 'Object'.
-src/patch/apply.ts(86,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/patch/apply.ts(86,24): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/apply.ts(86,40): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/apply.ts(88,30): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(89,31): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(92,36): error TS2339: Property 'linedelimiters' does not exist on type 'Object'.
-src/patch/apply.ts(95,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/apply.ts(103,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/apply.ts(105,46): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(105,66): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(132,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/patch/apply.ts(20,30): error TS2339: Property 'hunks' does not exist on type 'any[]'.
+src/patch/apply.ts(22,39): error TS2339: Property 'compareLine' does not exist on type 'object'.
+src/patch/apply.ts(24,36): error TS2339: Property 'fuzzFactor' does not exist on type 'object'.
+src/patch/apply.ts(35,30): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(36,31): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(59,47): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/apply.ts(61,39): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/apply.ts(66,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/apply.ts(67,14): error TS2339: Property 'offset' does not exist on type 'string'.
+src/patch/apply.ts(78,20): error TS2339: Property 'offset' does not exist on type 'string'.
+src/patch/apply.ts(78,34): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/apply.ts(78,50): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/apply.ts(85,30): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/apply.ts(85,46): error TS2339: Property 'offset' does not exist on type 'object'.
+src/patch/apply.ts(86,24): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/apply.ts(86,40): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/apply.ts(88,30): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(89,31): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(92,36): error TS2339: Property 'linedelimiters' does not exist on type 'object'.
+src/patch/apply.ts(105,46): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(105,66): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/apply.ts(128,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 src/patch/apply.ts(132,64): error TS2304: Cannot find name 'Void'.
-src/patch/apply.ts(139,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/apply.ts(149,11): error TS2740: Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/patch/apply.ts(149,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/patch/create.ts(7,22): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(8,13): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(11,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(11,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/patch/create.ts(18,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(18,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(22,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(23,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(27,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(27,34): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/create.ts(27,51): error TS2339: Property 'value' does not exist on type 'Object'.
-src/patch/create.ts(28,13): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/create.ts(30,17): error TS2339: Property 'added' does not exist on type 'Object'.
-src/patch/create.ts(30,34): error TS2339: Property 'removed' does not exist on type 'Object'.
-src/patch/create.ts(38,30): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(38,62): error TS2339: Property 'lines' does not exist on type 'String'.
-src/patch/create.ts(38,83): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(39,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(40,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(46,25): error TS2339: Property 'added' does not exist on type 'Object'.
-src/patch/create.ts(50,19): error TS2339: Property 'added' does not exist on type 'Object'.
-src/patch/create.ts(59,37): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(64,68): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(69,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(69,24): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-src/patch/create.ts(69,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(71,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(71,24): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-src/patch/create.ts(71,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(74,63): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(76,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/create.ts(77,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/create.ts(78,87): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/create.ts(82,36): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/create.ts(108,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(109,12): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/create.ts(109,32): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/create.ts(110,31): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/create.ts(113,26): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/create.ts(113,53): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/create.ts(113,98): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/create.ts(114,26): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/create.ts(114,53): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/create.ts(114,98): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/create.ts(116,28): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/create.ts(117,31): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/create.ts(121,14): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/create.ts(122,12): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/create.ts(124,14): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/create.ts(125,12): error TS2339: Property 'newStart' does not exist on type 'String'.
-src/patch/create.ts(128,21): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/create.ts(128,43): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/create.ts(129,21): error TS2339: Property 'newStart' does not exist on type 'String'.
-src/patch/create.ts(129,43): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/create.ts(132,30): error TS2339: Property 'lines' does not exist on type 'String'.
-src/patch/create.ts(139,72): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/patch/create.ts(143,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/patch/apply.ts(141,22): error TS2339: Property 'complete' does not exist on type 'any[]'.
+src/patch/apply.ts(144,13): error TS2339: Property 'loadFile' does not exist on type 'any[]'.
+src/patch/apply.ts(146,24): error TS2339: Property 'complete' does not exist on type 'any[]'.
+src/patch/apply.ts(149,11): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+src/patch/apply.ts(149,49): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/apply.ts(150,15): error TS2339: Property 'patched' does not exist on type 'any[]'.
+src/patch/apply.ts(152,26): error TS2339: Property 'complete' does not exist on type 'any[]'.
+src/patch/create.ts(7,22): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(8,13): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(11,9): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+src/patch/create.ts(11,49): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+  Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+src/patch/create.ts(27,34): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/create.ts(27,51): error TS2339: Property 'value' does not exist on type 'object'.
+src/patch/create.ts(28,13): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/create.ts(30,17): error TS2339: Property 'added' does not exist on type 'object'.
+src/patch/create.ts(30,34): error TS2339: Property 'removed' does not exist on type 'object'.
+src/patch/create.ts(38,30): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(38,62): error TS2339: Property 'lines' does not exist on type 'string'.
+src/patch/create.ts(38,83): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(46,25): error TS2339: Property 'added' does not exist on type 'object'.
+src/patch/create.ts(50,19): error TS2339: Property 'added' does not exist on type 'object'.
+src/patch/create.ts(59,37): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(64,68): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(74,63): error TS2339: Property 'context' does not exist on type 'object'.
+src/patch/create.ts(78,87): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/create.ts(82,36): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/create.ts(109,12): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/create.ts(109,32): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/create.ts(110,31): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/create.ts(113,26): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/create.ts(113,53): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/create.ts(113,98): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/create.ts(114,26): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/create.ts(114,53): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/create.ts(114,98): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/create.ts(116,28): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/create.ts(117,31): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/create.ts(121,14): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/create.ts(122,12): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/create.ts(124,14): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/create.ts(125,12): error TS2339: Property 'newStart' does not exist on type 'string'.
+src/patch/create.ts(128,21): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/create.ts(128,43): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/create.ts(129,21): error TS2339: Property 'newStart' does not exist on type 'string'.
+src/patch/create.ts(129,43): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/create.ts(132,30): error TS2339: Property 'lines' does not exist on type 'string'.
+src/patch/create.ts(139,72): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/patch/create.ts(143,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/patch/merge.ts(6,46): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(7,10): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/merge.ts(7,20): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/merge.ts(7,57): error TS2339: Property 'lines' does not exist on type 'String'.
-src/patch/merge.ts(10,10): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(12,17): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(16,10): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(18,17): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(23,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(24,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(31,12): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(31,28): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(32,9): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(32,22): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(32,38): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(35,12): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(35,34): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(38,11): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(38,32): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(38,52): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(39,11): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(39,32): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(39,52): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(40,11): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(40,30): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(40,48): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(41,11): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(41,30): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(41,48): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(44,11): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(44,30): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(45,11): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(45,30): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(46,11): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(46,28): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(47,11): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(47,28): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(50,11): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(50,47): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(50,67): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(51,11): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(51,47): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(51,67): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(52,11): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(52,45): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(52,63): error TS2339: Property 'oldHeader' does not exist on type 'Object'.
-src/patch/merge.ts(53,11): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(53,45): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(53,63): error TS2339: Property 'newHeader' does not exist on type 'Object'.
-src/patch/merge.ts(57,7): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(64,27): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(64,64): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(65,36): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(66,40): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(68,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(70,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(70,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-src/patch/merge.ts(71,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(72,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/patch/merge.ts(72,35): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/merge.ts(72,58): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/merge.ts(73,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(75,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(75,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-src/patch/merge.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(77,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-src/patch/merge.ts(77,35): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/merge.ts(77,60): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/merge.ts(81,40): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(81,64): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(83,40): error TS2339: Property 'newStart' does not exist on type 'Object'.
-src/patch/merge.ts(83,77): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(87,42): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(87,64): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(87,85): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(87,109): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(88,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(89,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(91,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(95,3): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(107,5): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/patch/merge.ts(7,10): error TS2339: Property 'oldLines' does not exist on type '{}'.
+src/patch/merge.ts(7,20): error TS2339: Property 'newLines' does not exist on type '{}'.
+src/patch/merge.ts(7,57): error TS2339: Property 'lines' does not exist on type 'string'.
+src/patch/merge.ts(10,10): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(12,17): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(16,10): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/merge.ts(18,17): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/merge.ts(23,3): error TS2322: Type 'string' is not assignable to type 'object'.
+src/patch/merge.ts(23,20): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(24,3): error TS2322: Type 'string' is not assignable to type 'object'.
+src/patch/merge.ts(24,22): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(31,12): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(31,28): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(32,9): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(32,22): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(32,38): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(35,12): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(35,34): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(38,11): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(38,32): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(38,52): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(39,11): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(39,32): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(39,52): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(40,11): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(40,30): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(40,48): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(41,11): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(41,30): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(41,48): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(44,11): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(44,30): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(45,11): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(45,30): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(46,11): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(46,28): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(47,11): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(47,28): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(50,11): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(50,47): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(50,67): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(51,11): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(51,47): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(51,67): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(52,11): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(52,45): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(52,63): error TS2339: Property 'oldHeader' does not exist on type 'object'.
+src/patch/merge.ts(53,11): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(53,45): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(53,63): error TS2339: Property 'newHeader' does not exist on type 'object'.
+src/patch/merge.ts(57,7): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(64,27): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(64,64): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(65,36): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(66,40): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(68,20): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(70,11): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(70,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(72,35): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/merge.ts(72,58): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/merge.ts(73,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(75,11): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(75,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(77,35): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/merge.ts(77,60): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/merge.ts(81,40): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(81,64): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(83,40): error TS2339: Property 'newStart' does not exist on type 'object'.
+src/patch/merge.ts(83,77): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(87,42): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(87,64): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(87,85): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(87,109): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(91,11): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/merge.ts(95,3): error TS2322: Type 'object' is not assignable to type 'string'.
+src/patch/merge.ts(107,5): error TS2322: Type 'object' is not assignable to type 'string'.
 src/patch/merge.ts(107,12): error TS2554: Expected 7 arguments, but got 4.
-src/patch/merge.ts(114,16): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(114,37): error TS2339: Property 'newFileName' does not exist on type 'Object'.
-src/patch/merge.ts(114,59): error TS2339: Property 'oldFileName' does not exist on type 'Object'.
-src/patch/merge.ts(121,11): error TS2339: Property 'conflict' does not exist on type 'Object'.
-src/patch/merge.ts(127,15): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/merge.ts(127,32): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(128,14): error TS2339: Property 'oldStart' does not exist on type 'String'.
-src/patch/merge.ts(128,30): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(128,48): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(133,20): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/merge.ts(133,45): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/merge.ts(134,20): error TS2339: Property 'newStart' does not exist on type 'Object'.
-src/patch/merge.ts(134,54): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/merge.ts(135,17): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(139,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(139,106): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/patch/merge.ts(114,16): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(114,37): error TS2339: Property 'newFileName' does not exist on type 'object'.
+src/patch/merge.ts(114,59): error TS2339: Property 'oldFileName' does not exist on type 'object'.
+src/patch/merge.ts(119,5): error TS2322: Type 'string' is not assignable to type 'object'.
+src/patch/merge.ts(121,11): error TS2339: Property 'conflict' does not exist on type 'object'.
+src/patch/merge.ts(127,15): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/merge.ts(127,32): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(128,14): error TS2339: Property 'oldStart' does not exist on type 'string'.
+src/patch/merge.ts(128,30): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(128,48): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(133,20): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/merge.ts(133,45): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/merge.ts(134,20): error TS2339: Property 'newStart' does not exist on type 'object'.
+src/patch/merge.ts(134,54): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/merge.ts(135,17): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(139,114): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(150,15): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(150,28): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(150,50): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(150,64): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(151,36): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(151,47): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(152,38): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(152,50): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(157,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(160,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(163,12): error TS2339: Property 'lines' does not exist on type 'Object'.
+src/patch/merge.ts(150,15): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(150,28): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(150,50): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(150,64): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(151,36): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(151,47): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(152,38): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(152,50): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(157,26): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(160,12): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(163,12): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(166,7): error TS2554: Expected 4 arguments, but got 3.
-src/patch/merge.ts(169,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(172,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(173,12): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(174,13): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(185,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/patch/merge.ts(169,21): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+src/patch/merge.ts(172,12): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(173,12): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(174,13): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(177,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+src/patch/merge.ts(185,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 src/patch/merge.ts(188,67): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(189,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(190,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(196,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(200,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(204,10): error TS2339: Property 'lines' does not exist on type 'Object'.
+src/patch/merge.ts(189,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/merge.ts(190,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/merge.ts(195,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/merge.ts(196,12): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(199,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/merge.ts(200,12): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(204,10): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(208,18): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/patch/merge.ts(211,79): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(214,20): error TS2339: Property 'merged' does not exist on type 'Object'.
-src/patch/merge.ts(215,10): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(215,38): error TS2339: Property 'merged' does not exist on type 'Object'.
-src/patch/merge.ts(217,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/patch/merge.ts(212,7): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+src/patch/merge.ts(213,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+src/patch/merge.ts(214,20): error TS2339: Property 'merged' does not exist on type 'object'.
+src/patch/merge.ts(215,10): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(215,38): error TS2339: Property 'merged' does not exist on type 'object'.
+src/patch/merge.ts(217,20): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 src/patch/merge.ts(221,63): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(222,8): error TS2339: Property 'conflict' does not exist on type 'Object'.
-src/patch/merge.ts(223,8): error TS2339: Property 'lines' does not exist on type 'Object'.
+src/patch/merge.ts(222,8): error TS2339: Property 'conflict' does not exist on type 'object'.
+src/patch/merge.ts(223,8): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(230,70): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(231,17): error TS2339: Property 'offset' does not exist on type 'Object'.
-src/patch/merge.ts(231,32): error TS2339: Property 'offset' does not exist on type 'Object'.
-src/patch/merge.ts(231,49): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(231,64): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(232,31): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(232,44): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(233,10): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(234,12): error TS2339: Property 'offset' does not exist on type 'Object'.
+src/patch/merge.ts(231,17): error TS2339: Property 'offset' does not exist on type 'object'.
+src/patch/merge.ts(231,32): error TS2339: Property 'offset' does not exist on type 'object'.
+src/patch/merge.ts(231,49): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(231,64): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(232,31): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(232,44): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(233,10): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(234,12): error TS2339: Property 'offset' does not exist on type 'object'.
 src/patch/merge.ts(237,56): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(238,17): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(238,32): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(239,31): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(239,44): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(240,10): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(244,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(245,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(246,33): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(246,45): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(247,16): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(247,30): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(248,30): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(248,42): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(257,13): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(265,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(265,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(266,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(267,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(272,18): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(272,32): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(273,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(273,31): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(273,43): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(284,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(293,24): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(293,38): error TS2339: Property 'index' does not exist on type 'Object'.
+src/patch/merge.ts(238,17): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(238,32): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(239,31): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(239,44): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(240,10): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(246,33): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(246,45): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(247,16): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(247,30): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(248,30): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(248,42): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(257,13): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(272,18): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(272,32): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(273,31): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(273,43): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(293,24): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(293,38): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/merge.ts(297,15): error TS2339: Property 'substr' does not exist on type 'Function'.
-src/patch/merge.ts(299,13): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(315,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(324,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(324,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(329,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(331,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(332,15): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(332,27): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(337,9): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(341,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(347,11): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(347,54): error TS2339: Property 'mine' does not exist on type 'Object'.
-src/patch/merge.ts(348,11): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(348,57): error TS2339: Property 'theirs' does not exist on type 'Object'.
-src/patch/merge.ts(351,21): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(351,45): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(352,31): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(359,21): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(359,45): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(360,31): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(367,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/merge.ts(370,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(1,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/parse.ts(2,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/parse.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/patch/merge.ts(297,36): error TS2339: Property 'substr' does not exist on type 'any[]'.
+src/patch/merge.ts(299,13): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(319,5): error TS2322: Type '{ merged: any[]; changes: any[]; }' is not assignable to type 'any[]'.
+  Object literal may only specify known properties, and 'merged' does not exist in type 'any[]'.
+src/patch/merge.ts(332,15): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/merge.ts(332,27): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(337,9): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/merge.ts(347,11): error TS2322: Type 'object' is not assignable to type 'string'.
+src/patch/merge.ts(347,54): error TS2339: Property 'mine' does not exist on type 'object'.
+src/patch/merge.ts(348,11): error TS2322: Type 'object' is not assignable to type 'string'.
+src/patch/merge.ts(348,57): error TS2339: Property 'theirs' does not exist on type 'object'.
+src/patch/merge.ts(351,21): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(351,45): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(352,31): error TS2339: Property 'oldLines' does not exist on type 'string'.
+src/patch/merge.ts(359,21): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/merge.ts(359,45): error TS2339: Property 'newLines' does not exist on type 'string'.
+src/patch/merge.ts(360,31): error TS2339: Property 'newLines' does not exist on type 'string'.
 src/patch/parse.ts(7,26): error TS2304: Cannot find name 'Void'.
-src/patch/parse.ts(16,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patch/parse.ts(21,19): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/patch/parse.ts(21,79): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/parse.ts(23,15): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/parse.ts(26,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(35,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/parse.ts(40,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/parse.ts(42,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/parse.ts(43,15): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/parse.ts(44,34): error TS2339: Property 'strict' does not exist on type 'Object'.
-src/patch/parse.ts(46,44): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(48,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/patch/parse.ts(23,15): error TS2339: Property 'index' does not exist on type 'object'.
+src/patch/parse.ts(35,11): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/parse.ts(43,15): error TS2339: Property 'hunks' does not exist on type 'object'.
+src/patch/parse.ts(44,34): error TS2339: Property 'strict' does not exist on type 'object'.
 src/patch/parse.ts(55,44): error TS2304: Cannot find name 'Void'.
-src/patch/parse.ts(61,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/parse.ts(67,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(75,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(90,14): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/parse.ts(91,12): error TS2339: Property 'oldStart' does not exist on type 'Object'.
-src/patch/parse.ts(93,14): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/parse.ts(94,12): error TS2339: Property 'newStart' does not exist on type 'Object'.
-src/patch/parse.ts(99,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(103,17): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(104,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(105,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(111,14): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/parse.ts(112,14): error TS2339: Property 'linedelimiters' does not exist on type 'Object'.
-src/patch/parse.ts(112,45): error TS2538: Type 'Number' cannot be used as an index type.
-src/patch/parse.ts(115,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(117,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(119,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(120,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(128,27): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/parse.ts(129,12): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/parse.ts(131,30): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/parse.ts(132,12): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/parse.ts(136,17): error TS2339: Property 'strict' does not exist on type 'Object'.
-src/patch/parse.ts(137,29): error TS2339: Property 'newLines' does not exist on type 'Object'.
-src/patch/parse.ts(138,79): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(140,32): error TS2339: Property 'oldLines' does not exist on type 'Object'.
-src/patch/parse.ts(141,81): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-src/patch/parse.ts(145,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-src/util/array.ts(1,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/util/array.ts(1,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/util/array.ts(9,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/util/array.ts(9,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/util/distance-iterator.ts(13,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/util/distance-iterator.ts(20,11): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-src/util/distance-iterator.ts(34,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/util/distance-iterator.ts(34,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/util/distance-iterator.ts(35,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/util/params.ts(3,14): error TS2339: Property 'callback' does not exist on type 'Object'.
+src/patch/parse.ts(90,14): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/parse.ts(91,12): error TS2339: Property 'oldStart' does not exist on type 'object'.
+src/patch/parse.ts(93,14): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/parse.ts(94,12): error TS2339: Property 'newStart' does not exist on type 'object'.
+src/patch/parse.ts(111,14): error TS2339: Property 'lines' does not exist on type 'object'.
+src/patch/parse.ts(112,14): error TS2339: Property 'linedelimiters' does not exist on type 'object'.
+src/patch/parse.ts(128,27): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/parse.ts(129,12): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/parse.ts(131,30): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/parse.ts(132,12): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/parse.ts(136,17): error TS2339: Property 'strict' does not exist on type 'object'.
+src/patch/parse.ts(137,29): error TS2339: Property 'newLines' does not exist on type 'object'.
+src/patch/parse.ts(140,32): error TS2339: Property 'oldLines' does not exist on type 'object'.
+src/patch/parse.ts(145,5): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/util/params.ts(3,14): error TS2339: Property 'callback' does not exist on type 'object'.
 tasks/version.ts(4,9): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 tasks/version.ts(6,29): error TS2339: Property 'config' does not exist on type 'HTMLElement'.
 tasks/version.ts(7,33): error TS2339: Property 'option' does not exist on type 'HTMLElement'.
-tasks/version.ts(9,17): error TS2339: Property 'valid' does not exist on type 'String'.
-tasks/version.ts(13,9): error TS2339: Property 'version' does not exist on type 'Object'.
+tasks/version.ts(9,17): error TS2339: Property 'valid' does not exist on type 'string'.
+tasks/version.ts(13,9): error TS2339: Property 'version' does not exist on type 'object'.
 tasks/version.ts(14,11): error TS2339: Property 'config' does not exist on type 'HTMLElement'.
 tasks/version.ts(16,11): error TS2339: Property 'log' does not exist on type 'HTMLElement'.
 tasks/version.ts(18,11): error TS2339: Property 'task' does not exist on type 'HTMLElement'.

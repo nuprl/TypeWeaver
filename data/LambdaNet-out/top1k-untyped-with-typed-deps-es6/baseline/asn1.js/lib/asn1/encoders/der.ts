@@ -7,7 +7,7 @@ import Node from '../base/node';
 // Import DER constants
 import der from '../constants/der';
 
-function DEREncoder(entity: Object): Void {
+function DEREncoder(entity: object): Void {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -18,26 +18,26 @@ function DEREncoder(entity: Object): Void {
 }
 export default DEREncoder;
 
-DEREncoder.prototype.encode = function encode(data: Object, reporter: String): String {
+DEREncoder.prototype.encode = function encode(data: object, reporter: string): string {
   return this.tree._encode(data, reporter).join();
 };
 
 // Tree methods
 
-function DERNode(parent: String): Void {
+function DERNode(parent: string): Void {
   Node.call(this, 'der', parent);
 }
 inherits(DERNode, Node);
 
-DERNode.prototype._encodeComposite = function encodeComposite(tag: String,
-  primitive: String,
-  cls: String,
-  content: Array): String {
+DERNode.prototype._encodeComposite = function encodeComposite(tag: string,
+  primitive: string,
+  cls: string,
+  content: any[]): string {
   const encodedTag: Function = encodeTag(tag, primitive, cls, this.reporter);
 
   // Short form
   if (content.length < 0x80) {
-    const header: Object = Buffer.alloc(2);
+    const header: object = Buffer.alloc(2);
     header[0] = encodedTag;
     header[1] = content.length;
     return this._createEncoderBuffer([ header, content ]);
@@ -45,11 +45,11 @@ DERNode.prototype._encodeComposite = function encodeComposite(tag: String,
 
   // Long form
   // Count octets required to store length
-  let lenOctets: Number = 1;
+  let lenOctets: number = 1;
   for (let i = content.length; i >= 0x100; i >>= 8)
     lenOctets++;
 
-  const header: Object = Buffer.alloc(1 + 1 + lenOctets);
+  const header: object = Buffer.alloc(1 + 1 + lenOctets);
   header[0] = encodedTag;
   header[1] = 0x80 | lenOctets;
 
@@ -59,11 +59,11 @@ DERNode.prototype._encodeComposite = function encodeComposite(tag: String,
   return this._createEncoderBuffer([ header, content ]);
 };
 
-DERNode.prototype._encodeStr = function encodeStr(str: String, tag: Number): Object {
+DERNode.prototype._encodeStr = function encodeStr(str: string, tag: number): object {
   if (tag === 'bitstr') {
     return this._createEncoderBuffer([ str.unused | 0, str.data ]);
   } else if (tag === 'bmpstr') {
-    const buf: Array = Buffer.alloc(str.length * 2);
+    const buf: any[] = Buffer.alloc(str.length * 2);
     for (let i = 0; i < str.length; i++) {
       buf.writeUInt16BE(str.charCodeAt(i), i * 2);
     }
@@ -94,7 +94,7 @@ DERNode.prototype._encodeStr = function encodeStr(str: String, tag: Number): Obj
   }
 };
 
-DERNode.prototype._encodeObjid = function encodeObjid(id: Array, values: Object, relative: Boolean): Promise {
+DERNode.prototype._encodeObjid = function encodeObjid(id: any[], values: object, relative: boolean): Promise {
   if (typeof id === 'string') {
     if (!values)
       return this.reporter.error('string objid given, but no values map found');
@@ -121,17 +121,17 @@ DERNode.prototype._encodeObjid = function encodeObjid(id: Array, values: Object,
   }
 
   // Count number of octets
-  let size: Number = 0;
+  let size: number = 0;
   for (let i = 0; i < id.length; i++) {
-    let ident: Number = id[i];
+    let ident: number = id[i];
     for (size++; ident >= 0x80; ident >>= 7)
       size++;
   }
 
-  const objid: Array = Buffer.alloc(size);
-  let offset: Number = objid.length - 1;
+  const objid: any[] = Buffer.alloc(size);
+  let offset: number = objid.length - 1;
   for (let i = id.length - 1; i >= 0; i--) {
-    let ident: Number = id[i];
+    let ident: number = id[i];
     objid[offset--] = ident & 0x7f;
     while ((ident >>= 7) > 0)
       objid[offset--] = 0x80 | (ident & 0x7f);
@@ -140,15 +140,15 @@ DERNode.prototype._encodeObjid = function encodeObjid(id: Array, values: Object,
   return this._createEncoderBuffer(objid);
 };
 
-function two(num: String): String {
+function two(num: string): string {
   if (num < 10)
     return '0' + num;
   else
     return num;
 }
 
-DERNode.prototype._encodeTime = function encodeTime(time: String, tag: Number): String {
-  let str: String;
+DERNode.prototype._encodeTime = function encodeTime(time: string, tag: number): string {
+  let str: string;
   const date: HTMLInputElement = new Date(time);
 
   if (tag === 'gentime') {
@@ -182,7 +182,7 @@ DERNode.prototype._encodeNull = function encodeNull(): Promise {
   return this._createEncoderBuffer('');
 };
 
-DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): Object {
+DERNode.prototype._encodeInt = function encodeInt(num: string, values: object): object {
   if (typeof num === 'string') {
     if (!values)
       return this.reporter.error('String int or enum given, but no values map');
@@ -195,7 +195,7 @@ DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): 
 
   // Bignum, assume big endian
   if (typeof num !== 'number' && !Buffer.isBuffer(num)) {
-    const numArray: Array = num.toArray();
+    const numArray: any[] = num.toArray();
     if (!num.sign && numArray[0] & 0x80) {
       numArray.unshift(0);
     }
@@ -203,11 +203,11 @@ DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): 
   }
 
   if (Buffer.isBuffer(num)) {
-    let size: Number = num.length;
+    let size: number = num.length;
     if (num.length === 0)
       size++;
 
-    const out: Object = Buffer.alloc(size);
+    const out: object = Buffer.alloc(size);
     num.copy(out);
     if (num.length === 0)
       out[0] = 0;
@@ -220,11 +220,11 @@ DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): 
   if (num < 0x100)
     return this._createEncoderBuffer([0, num]);
 
-  let size: Number = 1;
+  let size: number = 1;
   for (let i = num; i >= 0x100; i >>= 8)
     size++;
 
-  const out: Array = new Array(size);
+  const out: any[] = new Array(size);
   for (let i = out.length - 1; i >= 0; i--) {
     out[i] = num & 0xff;
     num >>= 8;
@@ -236,23 +236,23 @@ DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): 
   return this._createEncoderBuffer(Buffer.from(out));
 };
 
-DERNode.prototype._encodeBool = function encodeBool(value: Boolean): Object {
+DERNode.prototype._encodeBool = function encodeBool(value: boolean): object {
   return this._createEncoderBuffer(value ? 0xff : 0);
 };
 
-DERNode.prototype._use = function use(entity: Function, obj: String): Object {
+DERNode.prototype._use = function use(entity: Function, obj: string): object {
   if (typeof entity === 'function')
     entity = entity(obj);
   return entity._getEncoder('der').tree;
 };
 
-DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Array, reporter: String, parent: Function): Boolean {
-  const state: Object = this._baseState;
-  let i: Number;
+DERNode.prototype._skipDefault = function skipDefault(dataBuffer: any[], reporter: string, parent: Function): boolean {
+  const state: object = this._baseState;
+  let i: number;
   if (state['default'] === null)
     return false;
 
-  const data: String = dataBuffer.join();
+  const data: string = dataBuffer.join();
   if (state.defaultBuffer === undefined)
     state.defaultBuffer = this._encodeValue(state['default'], reporter, parent).join();
 
@@ -268,8 +268,8 @@ DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Array, reporte
 
 // Utility methods
 
-function encodeTag(tag: Number, primitive: Boolean, cls: String, reporter: Object): Number {
-  let res: Number;
+function encodeTag(tag: number, primitive: boolean, cls: string, reporter: object): number {
+  let res: number;
 
   if (tag === 'seqof')
     tag = 'seq';

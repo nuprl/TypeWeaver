@@ -1,11 +1,8 @@
-index.ts(1,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(2,21): error TS2769: No overload matches this call.
   Overload 1 of 2, '(iterable?: Iterable<unknown>): Set<unknown>', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'Iterable<unknown>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Property '[Symbol.iterator]' is missing in type 'Object' but required in type 'Iterable<unknown>'.
+    Argument of type 'object' is not assignable to parameter of type 'Iterable<unknown>'.
+      Property '[Symbol.iterator]' is missing in type '{}' but required in type 'Iterable<unknown>'.
   Overload 2 of 2, '(values?: readonly any[]): Set<any>', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'readonly any[]'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Type 'Object' is missing the following properties from type 'readonly any[]': length, concat, join, slice, and 18 more.
+    Argument of type 'object' is not assignable to parameter of type 'readonly any[]'.
+      Type '{}' is missing the following properties from type 'readonly any[]': length, concat, join, slice, and 18 more.
 

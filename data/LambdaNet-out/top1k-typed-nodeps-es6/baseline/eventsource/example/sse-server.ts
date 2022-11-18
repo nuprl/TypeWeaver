@@ -2,14 +2,14 @@ import express from 'express';
 import serveStatic from 'serve-static';
 import SseStream from 'ssestream';
 
-const app: Object = express()
+const app: object = express()
 app.use(serveStatic(__dirname))
-app.get('/sse', (req: Array, res: HTMLElement) => {
+app.get('/sse', (req: any[], res: HTMLElement) => {
   console.log('new connection')
 
   const sseStream: Map = new SseStream(req)
   sseStream.pipe(res)
-  const pusher: Number = setInterval(() => {
+  const pusher: number = setInterval(() => {
     sseStream.write({
       event: 'server-time',
       data: new Date().toTimeString()
@@ -23,7 +23,7 @@ app.get('/sse', (req: Array, res: HTMLElement) => {
   })
 })
 
-app.listen(8080, (err: Boolean) => {
+app.listen(8080, (err: boolean) => {
   if (err) throw err
   console.log('server ready on http://localhost:8080')
 })

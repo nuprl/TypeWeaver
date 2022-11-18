@@ -3,24 +3,24 @@
 
 var utils: HTMLElement = require("../utils"),
     errTo: Function = require("errto"),
-    async: String = require("async");
+    async: string = require("async");
 
-var baseUrl: String = "http://www.unicode.org/Public/6.3.0/ucd/";
+var baseUrl: string = "http://www.unicode.org/Public/6.3.0/ucd/";
 
 async.parallel({
     data:       utils.getFile.bind(null, baseUrl + "UnicodeData.txt"),
     exclusions: utils.getFile.bind(null, baseUrl + "CompositionExclusions.txt")
-}, errTo(console.log, function(data: Object) {
+}, errTo(console.log, function(data: object) {
 
-    var features: Object = {};
+    var features: object = {};
     utils.parseText(data.data, ";").map(function(a: Promise) {
-        var ch: Number = parseInt(a[0], 16);
-        var combiningClass: Number = parseInt(a[3], 10) || 0;
-        var decompStr: String = a[5].trim();
-        var canonical: Boolean, decomp: Array;
+        var ch: number = parseInt(a[0], 16);
+        var combiningClass: number = parseInt(a[3], 10) || 0;
+        var decompStr: string = a[5].trim();
+        var canonical: boolean, decomp: any[];
 
         if (decompStr.length > 0) {
-            decomp = decompStr.split(" ").map(function(s: Number) {return parseInt(s, 16)});;
+            decomp = decompStr.split(" ").map(function(s: number) {return parseInt(s, 16)});;
             canonical = true;
             if (isNaN(decomp[0])) {  // When first item is a tag (unparsable as int), this is a 'compatibility decomposition'
                 canonical = false;
@@ -40,13 +40,13 @@ async.parallel({
 
     // Process CompositionExclusions.txt
     utils.parseText(data.exclusions).map(function(a: Promise) { 
-        var ch: Number = parseInt(a[0], 16);
+        var ch: number = parseInt(a[0], 16);
         features[ch].noCompose = true;
     });
 
     // Exclude Non-Starter Decompositions and Singleton Decompositions (CompositionExclusions.txt parts 3, 4)
     for (var ch in features) {
-        var feat: Object = features[ch];
+        var feat: object = features[ch];
         if (feat.canonical && (feat.decomp.length == 1 || feat.combiningClass || (features[feat.decomp[0]] || {}).combiningClass)) {
             //console.log("Excluded:", (+ch).toString(16));
             feat.noCompose = true;
@@ -54,12 +54,12 @@ async.parallel({
     }
 
     // Add Jamo decompositions (see part 3.12 of http://www.unicode.org/versions/Unicode6.3.0/ch03.pdf)
-    var LBase: Number = 0x1100, VBase: Number = 0x1161, TBase: Number = 0x11A7, SBase: Number = 0xAC00;
-    var LCount: Number = 19, VCount: Number = 21, TCount: Number = 28;
+    var LBase: number = 0x1100, VBase: number = 0x1161, TBase: number = 0x11A7, SBase: number = 0xAC00;
+    var LCount: number = 19, VCount: number = 21, TCount: number = 28;
 
     for (var l = 0; l < LCount; l++)
         for (var v = 0; v < VCount; v++) {
-            var lv: String = l * VCount * TCount + v * TCount + SBase;
+            var lv: string = l * VCount * TCount + v * TCount + SBase;
             features[lv] = {
                 decomp: [l + LBase, v + VBase],
                 canonical: true,
@@ -76,13 +76,13 @@ async.parallel({
 
     // -------------------------------------------------------------------------
     
-    function f(ch: String): Boolean { return features[ch] || {combiningClass: 0}; }
-    function hex(ch: String): String { return (+ch).toString(16);}
+    function f(ch: string): boolean { return features[ch] || {combiningClass: 0}; }
+    function hex(ch: string): string { return (+ch).toString(16);}
 
-    function decompose(ch: String, canonical: Boolean): Array {
-        var feat: Object = f(ch);
+    function decompose(ch: string, canonical: boolean): any[] {
+        var feat: object = f(ch);
         if (feat.decomp && (feat.canonical || !canonical)) {
-            return [].concat.apply([], feat.decomp.map(function(c: String) {return decompose(c, canonical)}));
+            return [].concat.apply([], feat.decomp.map(function(c: string) {return decompose(c, canonical)}));
         } else return [ch];
     }
     /*
@@ -136,7 +136,7 @@ async.parallel({
     // }
 
     for (var charCode in features) {
-        var feat: Object = f(charCode);
+        var feat: object = f(charCode);
         if (feat.decomp && feat.canonical) {
             if (feat.decomp.length == 1) {
                 if (f(feat.decomp[0]).combiningClass != feat.combiningClass)

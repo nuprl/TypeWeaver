@@ -23,11 +23,11 @@ export default class JoinRequestPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("JoinRequestPlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const obj: Object = {
+			.tapAsync("JoinRequestPlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const obj: object = {
 					...request,
 					path: resolver.join(request.path, request.request),
 					relativePath:

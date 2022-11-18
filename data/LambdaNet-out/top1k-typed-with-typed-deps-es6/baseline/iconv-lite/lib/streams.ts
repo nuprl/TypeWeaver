@@ -4,12 +4,12 @@ import { Buffer } from 'safer-buffer';
 
 // NOTE: Due to 'stream' module being pretty large (~100Kb, significant in browser environments), 
 // we opt to dependency-inject it instead of creating a hard dependency.
-export default function(stream_module: Object) {
+export default function(stream_module: object) {
     var Transform: Function = stream_module.Transform;
 
     // == Encoder stream =======================================================
 
-    function IconvLiteEncoderStream(conv: Object, options: Object): Void {
+    function IconvLiteEncoderStream(conv: object, options: object): Void {
         this.conv = conv;
         options = options || {};
         options.decodeStrings = false; // We accept only strings, so we don't need to decode them.
@@ -20,11 +20,11 @@ export default function(stream_module: Object) {
         constructor: { value: IconvLiteEncoderStream }
     });
 
-    IconvLiteEncoderStream.prototype._transform = function(chunk: String, encoding: Number, done: Function) {
+    IconvLiteEncoderStream.prototype._transform = function(chunk: string, encoding: number, done: Function) {
         if (typeof chunk != 'string')
             return done(new Error("Iconv encoding stream needs strings as its input."));
         try {
-            var res: Array = this.conv.write(chunk);
+            var res: any[] = this.conv.write(chunk);
             if (res && res.length) this.push(res);
             done();
         }
@@ -35,7 +35,7 @@ export default function(stream_module: Object) {
 
     IconvLiteEncoderStream.prototype._flush = function(done: Function) {
         try {
-            var res: Array = this.conv.end();
+            var res: any[] = this.conv.end();
             if (res && res.length) this.push(res);
             done();
         }
@@ -45,9 +45,9 @@ export default function(stream_module: Object) {
     }
 
     IconvLiteEncoderStream.prototype.collect = function(cb: Function) {
-        var chunks: Array = [];
+        var chunks: any[] = [];
         this.on('error', cb);
-        this.on('data', function(chunk: String) { chunks.push(chunk); });
+        this.on('data', function(chunk: string) { chunks.push(chunk); });
         this.on('end', function() {
             cb(null, Buffer.concat(chunks));
         });
@@ -57,7 +57,7 @@ export default function(stream_module: Object) {
 
     // == Decoder stream =======================================================
 
-    function IconvLiteDecoderStream(conv: Object, options: Object): Void {
+    function IconvLiteDecoderStream(conv: object, options: object): Void {
         this.conv = conv;
         options = options || {};
         options.encoding = this.encoding = 'utf8'; // We output strings.
@@ -68,11 +68,11 @@ export default function(stream_module: Object) {
         constructor: { value: IconvLiteDecoderStream }
     });
 
-    IconvLiteDecoderStream.prototype._transform = function(chunk: String, encoding: Number, done: Function) {
+    IconvLiteDecoderStream.prototype._transform = function(chunk: string, encoding: number, done: Function) {
         if (!Buffer.isBuffer(chunk) && !(chunk instanceof Uint8Array))
             return done(new Error("Iconv decoding stream needs buffers as its input."));
         try {
-            var res: Array = this.conv.write(chunk);
+            var res: any[] = this.conv.write(chunk);
             if (res && res.length) this.push(res, this.encoding);
             done();
         }
@@ -83,7 +83,7 @@ export default function(stream_module: Object) {
 
     IconvLiteDecoderStream.prototype._flush = function(done: Function) {
         try {
-            var res: Array = this.conv.end();
+            var res: any[] = this.conv.end();
             if (res && res.length) this.push(res, this.encoding);                
             done();
         }
@@ -93,9 +93,9 @@ export default function(stream_module: Object) {
     }
 
     IconvLiteDecoderStream.prototype.collect = function(cb: Function) {
-        var res: String = '';
+        var res: string = '';
         this.on('error', cb);
-        this.on('data', function(chunk: Number) { res += chunk; });
+        this.on('data', function(chunk: number) { res += chunk; });
         this.on('end', function() {
             cb(null, res);
         });

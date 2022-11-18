@@ -11,7 +11,7 @@ import Source from './Source';
 class RawSource extends Source {
 	constructor(value, convertToString = false) {
 		super();
-		const isBuffer: Boolean = Buffer.isBuffer(value);
+		const isBuffer: boolean = Buffer.isBuffer(value);
 		if (!isBuffer && typeof value !== "string") {
 			throw new TypeError("argument 'value' must be either string of Buffer");
 		}

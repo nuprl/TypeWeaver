@@ -2,13 +2,13 @@ import jQuery from "../core.js";
 import dataPriv from "../data/var/dataPriv.js";
 import isHiddenWithinTree from "../css/var/isHiddenWithinTree.js";
 
-var defaultDisplayMap: Object = {};
+var defaultDisplayMap: object = {};
 
-function getDefaultDisplay( elem: HTMLElement ): String {
-	var temp: String,
+function getDefaultDisplay( elem: HTMLElement ): string {
+	var temp: string,
 		doc: HTMLElement = elem.ownerDocument,
-		nodeName: String = elem.nodeName,
-		display: String = defaultDisplayMap[ nodeName ];
+		nodeName: string = elem.nodeName,
+		display: string = defaultDisplayMap[ nodeName ];
 
 	if ( display ) {
 		return display;
@@ -27,11 +27,11 @@ function getDefaultDisplay( elem: HTMLElement ): String {
 	return display;
 }
 
-function showHide( elements: Array, show: Boolean ): Object {
-	var display: String, elem: Object,
-		values: Object = [],
-		index: Number = 0,
-		length: Number = elements.length;
+function showHide( elements: any[], show: boolean ): object {
+	var display: string, elem: object,
+		values: object = [],
+		index: number = 0,
+		length: number = elements.length;
 
 	// Determine new display value for elements that need to change
 	for ( ; index < length; index++ ) {
@@ -82,7 +82,7 @@ jQuery.fn.extend( {
 	hide: function() {
 		return showHide( this );
 	},
-	toggle: function( state: String ) {
+	toggle: function( state: string ) {
 		if ( typeof state === "boolean" ) {
 			return state ? this.show() : this.hide();
 		}

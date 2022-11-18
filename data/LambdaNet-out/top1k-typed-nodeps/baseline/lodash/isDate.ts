@@ -21,7 +21,7 @@ const nodeIsDate: Function = nodeTypes && nodeTypes.isDate
  * // => false
  */
 const isDate: Function = nodeIsDate
-  ? (value: String) => nodeIsDate(value)
-  : (value: String) => isObjectLike(value) && getTag(value) == '[object Date]'
+  ? (value: string) => nodeIsDate(value)
+  : (value: string) => isObjectLike(value) && getTag(value) == '[object Date]'
 
 export default isDate

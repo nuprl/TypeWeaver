@@ -19,13 +19,13 @@ const {
  * Helpers
  */
 
-const expandRange: Function = (args: Array, options: Object) => {
+const expandRange: Function = (args: any[], options: object) => {
   if (typeof options.expandRange === 'function') {
     return options.expandRange(...args, options);
   }
 
   args.sort();
-  const value: String = `[${args.join('-')}]`;
+  const value: string = `[${args.join('-')}]`;
 
   try {
     /* eslint-disable-next-line no-new */
@@ -41,7 +41,7 @@ const expandRange: Function = (args: Array, options: Object) => {
  * Create the message for a syntax error
  */
 
-const syntaxError: Function = (type: String, char: String) => {
+const syntaxError: Function = (type: string, char: string) => {
   return `Missing ${type}: "${char}" - use "\\\\${char}" to match literal characters`;
 };
 
@@ -52,7 +52,7 @@ const syntaxError: Function = (type: String, char: String) => {
  * @return {Object}
  */
 
-const parse: Function = (input: Array, options: Object) => {
+const parse: Function = (input: any[], options: object) => {
   if (typeof input !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -60,22 +60,22 @@ const parse: Function = (input: Array, options: Object) => {
   input = REPLACEMENTS[input] || input;
 
   const opts: HTMLElement = { ...options };
-  const max: Number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
+  const max: number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
 
-  let len: Number = input.length;
+  let len: number = input.length;
   if (len > max) {
     throw new SyntaxError(`Input length: ${len}, exceeds maximum allowed length: ${max}`);
   }
 
-  const bos: Object = { type: 'bos', value: '', output: opts.prepend || '' };
-  const tokens: Array = [bos];
+  const bos: object = { type: 'bos', value: '', output: opts.prepend || '' };
+  const tokens: any[] = [bos];
 
-  const capture: String = opts.capture ? '' : '?:';
-  const win32: Boolean = utils.isWindows(options);
+  const capture: string = opts.capture ? '' : '?:';
+  const win32: boolean = utils.isWindows(options);
 
   // create constants based on platform, for windows or posix
-  const PLATFORM_CHARS: Object = constants.globChars(win32);
-  const EXTGLOB_CHARS: Boolean = constants.extglobChars(PLATFORM_CHARS);
+  const PLATFORM_CHARS: object = constants.globChars(win32);
+  const EXTGLOB_CHARS: boolean = constants.extglobChars(PLATFORM_CHARS);
 
   const {
     DOT_LITERAL,
@@ -92,13 +92,13 @@ const parse: Function = (input: Array, options: Object) => {
     START_ANCHOR
   } = PLATFORM_CHARS;
 
-  const globstar: Function = (opts: String) => {
+  const globstar: Function = (opts: string) => {
     return `(${capture}(?:(?!${START_ANCHOR}${opts.dot ? DOTS_SLASH : DOT_LITERAL}).)*?)`;
   };
 
-  const nodot: String = opts.dot ? '' : NO_DOT;
-  const qmarkNoDot: String = opts.dot ? QMARK : QMARK_NO_DOT;
-  let star: String = opts.bash === true ? globstar(opts) : STAR;
+  const nodot: string = opts.dot ? '' : NO_DOT;
+  const qmarkNoDot: string = opts.dot ? QMARK : QMARK_NO_DOT;
+  let star: string = opts.bash === true ? globstar(opts) : STAR;
 
   if (opts.capture) {
     star = `(${star})`;
@@ -109,7 +109,7 @@ const parse: Function = (input: Array, options: Object) => {
     opts.noextglob = opts.noext;
   }
 
-  const state: Object = {
+  const state: object = {
     input,
     index: -1,
     start: 0,
@@ -130,32 +130,32 @@ const parse: Function = (input: Array, options: Object) => {
   input = utils.removePrefix(input, state);
   len = input.length;
 
-  const extglobs: Array = [];
-  const braces: Array = [];
-  const stack: Array = [];
-  let prev: Object = bos;
-  let value: String;
+  const extglobs: any[] = [];
+  const braces: any[] = [];
+  const stack: any[] = [];
+  let prev: object = bos;
+  let value: string;
 
   /**
    * Tokenizing helpers
    */
 
   const eos: Function = () => state.index === len - 1;
-  const peek: Object = state.peek = (n: Number = 1) => input[state.index + n];
+  const peek: object = state.peek = (n: number = 1) => input[state.index + n];
   const advance: Function = state.advance = () => input[++state.index] || '';
   const remaining: Function = () => input.slice(state.index + 1);
-  const consume: Function = (value: Number = '', num: Number = 0) => {
+  const consume: Function = (value: number = '', num: number = 0) => {
     state.consumed += value;
     state.index += num;
   };
 
-  const append: Function = (token: Object) => {
+  const append: Function = (token: object) => {
     state.output += token.output != null ? token.output : token.value;
     consume(token.value);
   };
 
   const negate: Function = () => {
-    let count: Number = 1;
+    let count: number = 1;
 
     while (peek() === '!' && (peek(2) !== '(' || peek(3) === '?')) {
       advance();
@@ -172,12 +172,12 @@ const parse: Function = (input: Array, options: Object) => {
     return true;
   };
 
-  const increment: Function = (type: String) => {
+  const increment: Function = (type: string) => {
     state[type]++;
     stack.push(type);
   };
 
-  const decrement: Function = (type: String) => {
+  const decrement: Function = (type: string) => {
     state[type]--;
     stack.pop();
   };
@@ -190,10 +190,10 @@ const parse: Function = (input: Array, options: Object) => {
    * lookbehinds.
    */
 
-  const push: Function = (tok: Object) => {
+  const push: Function = (tok: object) => {
     if (prev.type === 'globstar') {
-      const isBrace: Boolean = state.braces > 0 && (tok.type === 'comma' || tok.type === 'brace');
-      const isExtglob: Boolean = tok.extglob === true || (extglobs.length && (tok.type === 'pipe' || tok.type === 'paren'));
+      const isBrace: boolean = state.braces > 0 && (tok.type === 'comma' || tok.type === 'brace');
+      const isExtglob: boolean = tok.extglob === true || (extglobs.length && (tok.type === 'pipe' || tok.type === 'paren'));
 
       if (tok.type !== 'slash' && tok.type !== 'paren' && !isBrace && !isExtglob) {
         state.output = state.output.slice(0, -prev.output.length);
@@ -220,13 +220,13 @@ const parse: Function = (input: Array, options: Object) => {
     prev = tok;
   };
 
-  const extglobOpen: Function = (type: String, value: String) => {
-    const token: Object = { ...EXTGLOB_CHARS[value], conditions: 1, inner: '' };
+  const extglobOpen: Function = (type: string, value: string) => {
+    const token: object = { ...EXTGLOB_CHARS[value], conditions: 1, inner: '' };
 
     token.prev = prev;
     token.parens = state.parens;
     token.output = state.output;
-    const output: String = (opts.capture ? '(' : '') + token.open;
+    const output: string = (opts.capture ? '(' : '') + token.open;
 
     increment('parens');
     push({ type, value, output: state.output ? '' : ONE_CHAR });
@@ -235,11 +235,11 @@ const parse: Function = (input: Array, options: Object) => {
   };
 
   const extglobClose: Function = (token: HTMLElement) => {
-    let output: String = token.close + (opts.capture ? ')' : '');
-    let rest: String;
+    let output: string = token.close + (opts.capture ? ')' : '');
+    let rest: string;
 
     if (token.type === 'negate') {
-      let extglobStar: String = star;
+      let extglobStar: string = star;
 
       if (token.inner && token.inner.length > 1 && token.inner.includes('/')) {
         extglobStar = globstar(opts);
@@ -255,7 +255,7 @@ const parse: Function = (input: Array, options: Object) => {
         // Suitable patterns: `/!(*.d).ts`, `/!(*.d).{ts,tsx}`, `**/!(*-dbg).@(js)`.
         //
         // Disabling the `fastpaths` option due to a problem with parsing strings as `.ts` in the pattern like `**/!(*.d).ts`.
-        const expression: String = parse(rest, { ...options, fastpaths: false }).output;
+        const expression: string = parse(rest, { ...options, fastpaths: false }).output;
 
         output = token.close = `)${expression})${extglobStar})`;
       }
@@ -274,9 +274,9 @@ const parse: Function = (input: Array, options: Object) => {
    */
 
   if (opts.fastpaths !== false && !/(^[*!]|[/()[\]{}"])/.test(input)) {
-    let backslashes: Boolean = false;
+    let backslashes: boolean = false;
 
-    let output: String = input.replace(REGEX_SPECIAL_CHARS_BACKREF, (m: Array, esc: Number, chars: Array, first: Number, rest: Array, index: Number) => {
+    let output: string = input.replace(REGEX_SPECIAL_CHARS_BACKREF, (m: any[], esc: number, chars: any[], first: number, rest: any[], index: number) => {
       if (first === '\\') {
         backslashes = true;
         return m;
@@ -309,7 +309,7 @@ const parse: Function = (input: Array, options: Object) => {
       if (opts.unescape === true) {
         output = output.replace(/\\/g, '');
       } else {
-        output = output.replace(/\\+/g, (m: String) => {
+        output = output.replace(/\\+/g, (m: string) => {
           return m.length % 2 === 0 ? '\\\\' : (m ? '\\' : '');
         });
       }
@@ -340,7 +340,7 @@ const parse: Function = (input: Array, options: Object) => {
      */
 
     if (value === '\\') {
-      const next: Number = peek();
+      const next: number = peek();
 
       if (next === '/' && opts.bash !== true) {
         continue;
@@ -358,7 +358,7 @@ const parse: Function = (input: Array, options: Object) => {
 
       // collapse slashes to reduce potential for exploits
       const match: Promise = /^\\+/.exec(remaining());
-      let slashes: Number = 0;
+      let slashes: number = 0;
 
       if (match && match[0].length > 2) {
         slashes = match[0].length;
@@ -387,15 +387,15 @@ const parse: Function = (input: Array, options: Object) => {
 
     if (state.brackets > 0 && (value !== ']' || prev.value === '[' || prev.value === '[^')) {
       if (opts.posix !== false && value === ':') {
-        const inner: String = prev.value.slice(1);
+        const inner: string = prev.value.slice(1);
         if (inner.includes('[')) {
           prev.posix = true;
 
           if (inner.includes(':')) {
-            const idx: Number = prev.value.lastIndexOf('[');
-            const pre: String = prev.value.slice(0, idx);
-            const rest: Array = prev.value.slice(idx + 2);
-            const posix: String = POSIX_REGEX_SOURCE[rest];
+            const idx: number = prev.value.lastIndexOf('[');
+            const pre: string = prev.value.slice(0, idx);
+            const rest: any[] = prev.value.slice(idx + 2);
+            const posix: string = POSIX_REGEX_SOURCE[rest];
             if (posix) {
               prev.value = pre + posix;
               state.backtrack = true;
@@ -466,7 +466,7 @@ const parse: Function = (input: Array, options: Object) => {
         throw new SyntaxError(syntaxError('opening', '('));
       }
 
-      const extglob: String = extglobs[extglobs.length - 1];
+      const extglob: string = extglobs[extglobs.length - 1];
       if (extglob && state.parens === extglob.parens + 1) {
         extglobClose(extglobs.pop());
         continue;
@@ -513,7 +513,7 @@ const parse: Function = (input: Array, options: Object) => {
 
       decrement('brackets');
 
-      const prevValue: Array = prev.value.slice(1);
+      const prevValue: any[] = prev.value.slice(1);
       if (prev.posix !== true && prevValue[0] === '^' && !prevValue.includes('/')) {
         value = `/${value}`;
       }
@@ -527,7 +527,7 @@ const parse: Function = (input: Array, options: Object) => {
         continue;
       }
 
-      const escaped: String = utils.escapeRegex(prev.value);
+      const escaped: string = utils.escapeRegex(prev.value);
       state.output = state.output.slice(0, -prev.value.length);
 
       // when literal brackets are explicitly enabled
@@ -551,7 +551,7 @@ const parse: Function = (input: Array, options: Object) => {
     if (value === '{' && opts.nobrace !== true) {
       increment('braces');
 
-      const open: Object = {
+      const open: object = {
         type: 'brace',
         value,
         output: '(',
@@ -565,18 +565,18 @@ const parse: Function = (input: Array, options: Object) => {
     }
 
     if (value === '}') {
-      const brace: Object = braces[braces.length - 1];
+      const brace: object = braces[braces.length - 1];
 
       if (opts.nobrace === true || !brace) {
         push({ type: 'text', value, output: value });
         continue;
       }
 
-      let output: String = ')';
+      let output: string = ')';
 
       if (brace.dots === true) {
-        const arr: Array = tokens.slice();
-        const range: Array = [];
+        const arr: any[] = tokens.slice();
+        const range: any[] = [];
 
         for (let i = arr.length - 1; i >= 0; i--) {
           tokens.pop();
@@ -593,8 +593,8 @@ const parse: Function = (input: Array, options: Object) => {
       }
 
       if (brace.comma !== true && brace.dots !== true) {
-        const out: String = state.output.slice(0, brace.outputIndex);
-        const toks: Array = state.tokens.slice(brace.tokensIndex);
+        const out: string = state.output.slice(0, brace.outputIndex);
+        const toks: any[] = state.tokens.slice(brace.tokensIndex);
         brace.value = brace.output = '\\{';
         value = output = '\\}';
         state.output = out;
@@ -626,7 +626,7 @@ const parse: Function = (input: Array, options: Object) => {
      */
 
     if (value === ',') {
-      let output: String = value;
+      let output: string = value;
 
       const brace: HTMLElement = braces[braces.length - 1];
       if (brace && stack[stack.length - 1] === 'braces') {
@@ -689,15 +689,15 @@ const parse: Function = (input: Array, options: Object) => {
      */
 
     if (value === '?') {
-      const isGroup: Boolean = prev && prev.value === '(';
+      const isGroup: boolean = prev && prev.value === '(';
       if (!isGroup && opts.noextglob !== true && peek() === '(' && peek(2) !== '?') {
         extglobOpen('qmark', value);
         continue;
       }
 
       if (prev && prev.type === 'paren') {
-        const next: Number = peek();
-        let output: String = value;
+        const next: number = peek();
+        let output: string = value;
 
         if (next === '<' && !utils.supportsLookbehinds()) {
           throw new Error('Node.js v10 or higher is required for regex lookbehinds');
@@ -785,7 +785,7 @@ const parse: Function = (input: Array, options: Object) => {
         value = `\\${value}`;
       }
 
-      const match: Object = REGEX_NON_SPECIAL_CHARS.exec(remaining());
+      const match: object = REGEX_NON_SPECIAL_CHARS.exec(remaining());
       if (match) {
         value += match[0];
         state.index += match[0].length;
@@ -810,7 +810,7 @@ const parse: Function = (input: Array, options: Object) => {
       continue;
     }
 
-    let rest: Array = remaining();
+    let rest: any[] = remaining();
     if (opts.noextglob !== true && /^\([^?]/.test(rest)) {
       extglobOpen('star', value);
       continue;
@@ -822,18 +822,18 @@ const parse: Function = (input: Array, options: Object) => {
         continue;
       }
 
-      const prior: Object = prev.prev;
-      const before: Object = prior.prev;
-      const isStart: Boolean = prior.type === 'slash' || prior.type === 'bos';
-      const afterStar: Boolean = before && (before.type === 'star' || before.type === 'globstar');
+      const prior: object = prev.prev;
+      const before: object = prior.prev;
+      const isStart: boolean = prior.type === 'slash' || prior.type === 'bos';
+      const afterStar: boolean = before && (before.type === 'star' || before.type === 'globstar');
 
       if (opts.bash === true && (!isStart || (rest[0] && rest[0] !== '/'))) {
         push({ type: 'star', value, output: '' });
         continue;
       }
 
-      const isBrace: Boolean = state.braces > 0 && (prior.type === 'comma' || prior.type === 'brace');
-      const isExtglob: Boolean = extglobs.length && (prior.type === 'pipe' || prior.type === 'paren');
+      const isBrace: boolean = state.braces > 0 && (prior.type === 'comma' || prior.type === 'brace');
+      const isExtglob: boolean = extglobs.length && (prior.type === 'pipe' || prior.type === 'paren');
       if (!isStart && prior.type !== 'paren' && !isBrace && !isExtglob) {
         push({ type: 'star', value, output: '' });
         continue;
@@ -841,7 +841,7 @@ const parse: Function = (input: Array, options: Object) => {
 
       // strip consecutive `/**/`
       while (rest.slice(0, 3) === '/**') {
-        const after: String = input[state.index + 4];
+        const after: string = input[state.index + 4];
         if (after && after !== '/') {
           break;
         }
@@ -873,7 +873,7 @@ const parse: Function = (input: Array, options: Object) => {
       }
 
       if (prior.type === 'slash' && prior.prev.type !== 'bos' && rest[0] === '/') {
-        const end: String = rest[1] !== void 0 ? '|$' : '';
+        const end: string = rest[1] !== void 0 ? '|$' : '';
 
         state.output = state.output.slice(0, -(prior.output + prev.output).length);
         prior.output = `(?:${prior.output}`;
@@ -917,7 +917,7 @@ const parse: Function = (input: Array, options: Object) => {
       continue;
     }
 
-    const token: Object = { type: 'star', value, output: star };
+    const token: object = { type: 'star', value, output: star };
 
     if (opts.bash === true) {
       token.output = '.*?';
@@ -1001,16 +1001,16 @@ const parse: Function = (input: Array, options: Object) => {
  * impact when none of the fast paths match.
  */
 
-parse.fastpaths = (input: Array, options: Object) => {
+parse.fastpaths = (input: any[], options: object) => {
   const opts: HTMLElement = { ...options };
-  const max: Number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
-  const len: Number = input.length;
+  const max: number = typeof opts.maxLength === 'number' ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
+  const len: number = input.length;
   if (len > max) {
     throw new SyntaxError(`Input length: ${len}, exceeds maximum allowed length: ${max}`);
   }
 
   input = REPLACEMENTS[input] || input;
-  const win32: Number = utils.isWindows(options);
+  const win32: number = utils.isWindows(options);
 
   // create constants based on platform, for windows or posix
   const {
@@ -1025,11 +1025,11 @@ parse.fastpaths = (input: Array, options: Object) => {
     START_ANCHOR
   } = constants.globChars(win32);
 
-  const nodot: String = opts.dot ? NO_DOTS : NO_DOT;
-  const slashDot: String = opts.dot ? NO_DOTS_SLASH : NO_DOT;
-  const capture: String = opts.capture ? '' : '?:';
-  const state: Object = { negated: false, prefix: '' };
-  let star: String = opts.bash === true ? '.*?' : STAR;
+  const nodot: string = opts.dot ? NO_DOTS : NO_DOT;
+  const slashDot: string = opts.dot ? NO_DOTS_SLASH : NO_DOT;
+  const capture: string = opts.capture ? '' : '?:';
+  const state: object = { negated: false, prefix: '' };
+  let star: string = opts.bash === true ? '.*?' : STAR;
 
   if (opts.capture) {
     star = `(${star})`;
@@ -1040,7 +1040,7 @@ parse.fastpaths = (input: Array, options: Object) => {
     return `(${capture}(?:(?!${START_ANCHOR}${opts.dot ? DOTS_SLASH : DOT_LITERAL}).)*?)`;
   };
 
-  const create: Function = (str: String) => {
+  const create: Function = (str: string) => {
     switch (str) {
       case '*':
         return `${nodot}${ONE_CHAR}${star}`;
@@ -1067,10 +1067,10 @@ parse.fastpaths = (input: Array, options: Object) => {
         return `(?:${nodot}${globstar(opts)}${SLASH_LITERAL})?${DOT_LITERAL}${ONE_CHAR}${star}`;
 
       default: {
-        const match: Object = /^(.*?)\.(\w+)$/.exec(str);
+        const match: object = /^(.*?)\.(\w+)$/.exec(str);
         if (!match) return;
 
-        const source: Number = create(match[1]);
+        const source: number = create(match[1]);
         if (!source) return;
 
         return source + DOT_LITERAL + match[2];
@@ -1078,8 +1078,8 @@ parse.fastpaths = (input: Array, options: Object) => {
     }
   };
 
-  const output: String = utils.removePrefix(input, state);
-  let source: Number = create(output);
+  const output: string = utils.removePrefix(input, state);
+  let source: number = create(output);
 
   if (source && opts.strictSlashes !== true) {
     source += `${SLASH_LITERAL}?`;

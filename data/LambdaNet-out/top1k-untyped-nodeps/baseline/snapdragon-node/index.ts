@@ -66,8 +66,8 @@ class Node {
    */
 
   stringify(fn = n => n.value) {
-    let str: String = '';
-    visit(this, (n: Number) => (str += fn(n)));
+    let str: string = '';
+    visit(this, (n: number) => (str += fn(n)));
     return str;
   }
 
@@ -199,7 +199,7 @@ class Node {
     assert(this.constructor.isNode(node), 'expected an instance of Node');
     assert(node !== this, 'cannot remove a node from itself');
 
-    const idx: Number = this.nodes.indexOf(node);
+    const idx: number = this.nodes.indexOf(node);
     node.index = -1;
 
     if (idx !== -1) {
@@ -551,19 +551,19 @@ class Node {
  * Simplified assertion. Throws an error is `value` is not true.
  */
 
-function assert(value: Number, message: String): Void {
+function assert(value: number, message: string): Void {
   if (value !== true) throw new Error(message);
 }
 
-function expect(value: String, name: String): Void {
+function expect(value: string, name: string): Void {
   assert(value, 'expected ' + name + ' to be an instance of Node');
 }
 
-function hasOwn(obj: Node, prop: String): Boolean {
+function hasOwn(obj: Node, prop: string): boolean {
   return Object.hasOwnProperty.call(obj, prop);
 }
 
-function isEmpty(node: Array, fn: Function): Boolean {
+function isEmpty(node: any[], fn: Function): boolean {
   expect(Node.isNode(node), 'node');
 
   if (!Array.isArray(node.nodes)) {
@@ -586,7 +586,7 @@ function isEmpty(node: Array, fn: Function): Boolean {
   return true;
 }
 
-function isType(node: Node, type: Array): Boolean {
+function isType(node: Node, type: any[]): boolean {
   expect(Node.isNode(node), 'node');
 
   switch (typeOf(type)) {
@@ -607,11 +607,11 @@ function isType(node: Node, type: Array): Boolean {
   }
 }
 
-function isObject(val: String): Boolean {
+function isObject(val: string): boolean {
   return typeOf(val) === 'object';
 }
 
-function typeOf(val: Number): String {
+function typeOf(val: number): string {
   if (typeof val === 'string') return 'string';
   if (Array.isArray(val)) return 'array';
   if (val instanceof RegExp) {
@@ -626,7 +626,7 @@ function typeOf(val: Number): String {
  * assign `token` properties to `node`
  */
 
-function assign(node: Node, token: Node, clone: String): Void {
+function assign(node: Node, token: Node, clone: string): Void {
   copy(node, token, clone);
   ensureNodes(node, clone);
 
@@ -635,8 +635,8 @@ function assign(node: Node, token: Node, clone: String): Void {
   }
 }
 
-function copy(receiver: String, provider: String, clone: Number): Void {
-  const descriptors: Object = Object.getOwnPropertyDescriptors(provider);
+function copy(receiver: string, provider: string, clone: number): Void {
+  const descriptors: object = Object.getOwnPropertyDescriptors(provider);
   for (const key in descriptors) {
     if (key === 'constructor' || key in receiver) continue;
     const desc: Node = descriptors[key];
@@ -648,11 +648,11 @@ function copy(receiver: String, provider: String, clone: Number): Void {
   }
 }
 
-function ensureNodes(node: Array, clone: String): Void {
+function ensureNodes(node: any[], clone: string): Void {
   if (!node.nodes) return;
 
   if (Array.isArray(node.nodes)) {
-    const len: Number = node.nodes.length;
+    const len: number = node.nodes.length;
     for (let i = 0; i < len; i++) {
       let child: Node = node.nodes[i];
       if (!Node.isNode(child)) {
@@ -670,11 +670,11 @@ function ensureNodes(node: Array, clone: String): Void {
  * Deeply clone plain objects and arrays.
  */
 
-function cloneDeep(value: Array): Array {
-  const obj: Object = {};
+function cloneDeep(value: any[]): any[] {
+  const obj: object = {};
   switch (typeOf(value)) {
     case 'array':
-      return value.map((ele: String) => cloneDeep(ele));
+      return value.map((ele: string) => cloneDeep(ele));
     case 'object':
       for (const key of Object.keys(value)) {
         obj[key] = cloneDeep(value[key]);
@@ -686,17 +686,17 @@ function cloneDeep(value: Array): Array {
   }
 }
 
-function visit(node: Array, fn: Function): String {
+function visit(node: any[], fn: Function): string {
   fn(node);
   return node.nodes ? mapVisit(node, fn) : node;
 }
 
-function mapVisit(node: Node, fn: Number): Array {
-  node.nodes.forEach((n: Number) => visit(n, fn));
+function mapVisit(node: Node, fn: number): any[] {
+  node.nodes.forEach((n: number) => visit(n, fn));
   return node;
 }
 
-function define(obj: Node, key: String, value: String): Void {
+function define(obj: Node, key: string, value: string): Void {
   Object.defineProperty(obj, key, {
     configurable: true,
     enumerable: false,

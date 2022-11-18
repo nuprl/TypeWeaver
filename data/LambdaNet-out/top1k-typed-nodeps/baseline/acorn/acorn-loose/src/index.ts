@@ -40,6 +40,6 @@ export {isDummy} from "./parseutil.js"
 
 defaultOptions.tabSize = 4
 
-export function parse(input: Parser, options: Object): RegExpValidationState {
+export function parse(input: Parser, options: object): RegExpValidationState {
   return LooseParser.parse(input, options)
 }

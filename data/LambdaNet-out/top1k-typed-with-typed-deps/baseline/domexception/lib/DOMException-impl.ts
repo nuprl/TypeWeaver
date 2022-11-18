@@ -1,6 +1,6 @@
 "use strict";
-const legacyErrorCodes: String = require("./legacy-error-codes.json");
-const idlUtils: String = require("./utils.js");
+const legacyErrorCodes: string = require("./legacy-error-codes.json");
+const idlUtils: string = require("./utils.js");
 
 exports.implementation = class DOMExceptionImpl {
   constructor(globalObject, [message, name]) {
@@ -14,9 +14,9 @@ exports.implementation = class DOMExceptionImpl {
 };
 
 // A proprietary V8 extension that causes the stack property to appear.
-exports.init = (impl: Boolean) => {
+exports.init = (impl: boolean) => {
   if (Error.captureStackTrace) {
-    const wrapper: Object = idlUtils.wrapperForImpl(impl);
+    const wrapper: object = idlUtils.wrapperForImpl(impl);
     Error.captureStackTrace(wrapper, wrapper.constructor);
   }
 };

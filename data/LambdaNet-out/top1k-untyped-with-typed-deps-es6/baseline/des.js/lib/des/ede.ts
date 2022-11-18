@@ -5,12 +5,12 @@ import inherits from 'inherits';
 import Cipher from './cipher';
 import DES from './des';
 
-function EDEState(type: String, key: String): Void {
+function EDEState(type: string, key: string): Void {
   assert.equal(key.length, 24, 'Invalid key length');
 
-  var k1: String = key.slice(0, 8);
-  var k2: String = key.slice(8, 16);
-  var k3: String = key.slice(16, 24);
+  var k1: string = key.slice(0, 8);
+  var k2: string = key.slice(8, 16);
+  var k3: string = key.slice(16, 24);
 
   if (type === 'encrypt') {
     this.ciphers = [
@@ -27,21 +27,21 @@ function EDEState(type: String, key: String): Void {
   }
 }
 
-function EDE(options: Object): Void {
+function EDE(options: object): Void {
   Cipher.call(this, options);
 
-  var state: String = new EDEState(this.type, this.options.key);
+  var state: string = new EDEState(this.type, this.options.key);
   this._edeState = state;
 }
 inherits(EDE, Cipher);
 
 export default EDE;
 
-EDE.create = function create(options: Object): String {
+EDE.create = function create(options: object): string {
   return new EDE(options);
 };
 
-EDE.prototype._update = function _update(inp: Function, inOff: String, out: Function, outOff: Function): Void {
+EDE.prototype._update = function _update(inp: Function, inOff: string, out: Function, outOff: Function): Void {
   var state: HTMLElement = this._edeState;
 
   state.ciphers[0]._update(inp, inOff, out, outOff);

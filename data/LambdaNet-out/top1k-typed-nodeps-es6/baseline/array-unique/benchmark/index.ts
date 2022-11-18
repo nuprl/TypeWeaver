@@ -1,7 +1,7 @@
 'use';
 
 import Suite from 'benchmarked';
-var suite: Object = new Suite({
+var suite: object = new Suite({
   add: 'code/*.js',
   fixtures: 'fixtures/*.js',
   cwd: __dirname

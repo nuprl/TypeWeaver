@@ -31,7 +31,7 @@ import {isIdentifierChar, isIdentifierStart} from "./identifier.js"
 import {Token} from "./tokenize.js"
 import {isNewLine, lineBreak, lineBreakG, nonASCIIwhitespace} from "./whitespace.js"
 
-export const version: String = "8.8.0"
+export const version: string = "8.8.0"
 export {
   Parser,
   defaultOptions,
@@ -82,7 +82,7 @@ Parser.acorn = {
 //
 // [api]: https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API
 
-export function parse(input: Parser, options: Object): RegExpValidationState {
+export function parse(input: Parser, options: object): RegExpValidationState {
   return Parser.parse(input, options)
 }
 
@@ -90,13 +90,13 @@ export function parse(input: Parser, options: Object): RegExpValidationState {
 // offset in a string. Useful for parsing mixed-language formats
 // that embed JavaScript expressions.
 
-export function parseExpressionAt(input: Parser, pos: Position, options: Object): Promise {
+export function parseExpressionAt(input: Parser, pos: Position, options: object): Promise {
   return Parser.parseExpressionAt(input, pos, options)
 }
 
 // Acorn is organized as a tokenizer and a recursive-descent parser.
 // The `tokenizer` export provides an interface to the tokenizer.
 
-export function tokenizer(input: HTMLInputElement, options: Object): RegExpValidationState {
+export function tokenizer(input: HTMLInputElement, options: object): RegExpValidationState {
   return Parser.tokenizer(input, options)
 }

@@ -1,14 +1,14 @@
-const word: String = '[a-fA-F\\d:]';
+const word: string = '[a-fA-F\\d:]';
 
-const boundry: Function = (options: Object) => options && options.includeBoundaries
+const boundry: Function = (options: object) => options && options.includeBoundaries
 	? `(?:(?<=\\s|^)(?=${word})|(?<=${word})(?=\\s|$))`
 	: '';
 
-const v4: String = '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}';
+const v4: string = '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}';
 
-const v6segment: String = '[a-fA-F\\d]{1,4}';
+const v6segment: string = '[a-fA-F\\d]{1,4}';
 
-const v6: String = `
+const v6: string = `
 (?:
 (?:${v6segment}:){7}(?:${v6segment}|:)|                                    // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
 (?:${v6segment}:){6}(?:${v4}|:${v6segment}|:)|                             // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
@@ -26,11 +26,11 @@ const v46Exact: HTMLElement = new RegExp(`(?:^${v4}$)|(?:^${v6}$)`);
 const v4exact: HTMLElement = new RegExp(`^${v4}$`);
 const v6exact: HTMLElement = new RegExp(`^${v6}$`);
 
-const ipRegex: Function = (options: Object) => options && options.exact
+const ipRegex: Function = (options: object) => options && options.exact
 	? v46Exact
 	: new RegExp(`(?:${boundry(options)}${v4}${boundry(options)})|(?:${boundry(options)}${v6}${boundry(options)})`, 'g');
 
-ipRegex.v4 = (options: Object) => options && options.exact ? v4exact : new RegExp(`${boundry(options)}${v4}${boundry(options)}`, 'g');
-ipRegex.v6 = (options: Object) => options && options.exact ? v6exact : new RegExp(`${boundry(options)}${v6}${boundry(options)}`, 'g');
+ipRegex.v4 = (options: object) => options && options.exact ? v4exact : new RegExp(`${boundry(options)}${v4}${boundry(options)}`, 'g');
+ipRegex.v6 = (options: object) => options && options.exact ? v6exact : new RegExp(`${boundry(options)}${v6}${boundry(options)}`, 'g');
 
 export default ipRegex;

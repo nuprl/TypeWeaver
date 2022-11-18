@@ -1,7 +1,7 @@
 'use strict';
 const hardRejection: Function = require('.');
 
-hardRejection((string: String) => {
+hardRejection((string: string) => {
 	console.log('custom-log', string);
 });
 

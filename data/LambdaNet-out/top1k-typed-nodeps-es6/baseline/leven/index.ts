@@ -1,12 +1,12 @@
-const array: Object = [];
-const characterCodeCache: Object = [];
+const array: object = [];
+const characterCodeCache: object = [];
 
-export default function leven(first: String, second: String): Number {
+export default function leven(first: string, second: string): number {
 	if (first === second) {
 		return 0;
 	}
 
-	const swap: Array = first;
+	const swap: any[] = first;
 
 	// Swapping the strings if `a` is longer than `b` so we know which one is the
 	// shortest & which one is the longest
@@ -15,8 +15,8 @@ export default function leven(first: String, second: String): Number {
 		second = swap;
 	}
 
-	let firstLength: Number = first.length;
-	let secondLength: Number = second.length;
+	let firstLength: number = first.length;
+	let secondLength: number = second.length;
 
 	// Performing suffix trimming:
 	// We can linearly drop suffix common to both strings since they
@@ -30,7 +30,7 @@ export default function leven(first: String, second: String): Number {
 	// Performing prefix trimming
 	// We can linearly drop prefix common to both strings since they
 	// don't increase distance at all
-	let start: Number = 0;
+	let start: number = 0;
 
 	while (start < firstLength && (first.charCodeAt(start) === second.charCodeAt(start))) {
 		start++;
@@ -43,12 +43,12 @@ export default function leven(first: String, second: String): Number {
 		return secondLength;
 	}
 
-	let bCharacterCode: Number;
-	let result: Number;
-	let temporary: Number;
-	let temporary2: Number;
-	let index: Number = 0;
-	let index2: Number = 0;
+	let bCharacterCode: number;
+	let result: number;
+	let temporary: number;
+	let temporary2: number;
+	let index: number = 0;
+	let index2: number = 0;
 
 	while (index < firstLength) {
 		characterCodeCache[index] = first.charCodeAt(start + index);

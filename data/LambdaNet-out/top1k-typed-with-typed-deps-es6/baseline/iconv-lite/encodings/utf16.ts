@@ -20,10 +20,10 @@ Utf16BECodec.prototype.bomAware = true;
 function Utf16BEEncoder(): Void {
 }
 
-Utf16BEEncoder.prototype.write = function(str: String) {
-    var buf: Array = Buffer.from(str, 'ucs2');
+Utf16BEEncoder.prototype.write = function(str: string) {
+    var buf: any[] = Buffer.from(str, 'ucs2');
     for (var i = 0; i < buf.length; i += 2) {
-        var tmp: String = buf[i]; buf[i] = buf[i+1]; buf[i+1] = tmp;
+        var tmp: string = buf[i]; buf[i] = buf[i+1]; buf[i+1] = tmp;
     }
     return buf;
 }
@@ -38,12 +38,12 @@ function Utf16BEDecoder(): Void {
     this.overflowByte = -1;
 }
 
-Utf16BEDecoder.prototype.write = function(buf: Array) {
+Utf16BEDecoder.prototype.write = function(buf: any[]) {
     if (buf.length == 0)
         return '';
 
-    var buf2: Array = Buffer.alloc(buf.length + 1),
-        i: Number = 0, j: Number = 0;
+    var buf2: any[] = Buffer.alloc(buf.length + 1),
+        i: number = 0, j: number = 0;
 
     if (this.overflowByte !== -1) {
         buf2[0] = buf[0];
@@ -86,14 +86,14 @@ Utf16Codec.prototype.decoder = Utf16Decoder;
 
 // -- Encoding (pass-through)
 
-function Utf16Encoder(options: Object, codec: Object): Void {
+function Utf16Encoder(options: object, codec: object): Void {
     options = options || {};
     if (options.addBOM === undefined)
         options.addBOM = true;
     this.encoder = codec.iconv.getEncoder('utf-16le', options);
 }
 
-Utf16Encoder.prototype.write = function(str: String) {
+Utf16Encoder.prototype.write = function(str: string) {
     return this.encoder.write(str);
 }
 
@@ -104,7 +104,7 @@ Utf16Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf16Decoder(options: Object, codec: Object): Void {
+function Utf16Decoder(options: object, codec: object): Void {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;
@@ -113,7 +113,7 @@ function Utf16Decoder(options: Object, codec: Object): Void {
     this.iconv = codec.iconv;
 }
 
-Utf16Decoder.prototype.write = function(buf: Array) {
+Utf16Decoder.prototype.write = function(buf: any[]) {
     if (!this.decoder) {
         // Codec is not chosen yet. Accumulate initial bytes.
         this.initialBufs.push(buf);
@@ -123,10 +123,10 @@ Utf16Decoder.prototype.write = function(buf: Array) {
             return '';
 
         // We have enough bytes -> detect endianness.
-        var encoding: String = detectEncoding(this.initialBufs, this.options.defaultEncoding);
+        var encoding: string = detectEncoding(this.initialBufs, this.options.defaultEncoding);
         this.decoder = this.iconv.getDecoder(encoding, this.options);
 
-        var resStr: String = '';
+        var resStr: string = '';
         for (var i = 0; i < this.initialBufs.length; i++)
             resStr += this.decoder.write(this.initialBufs[i]);
 
@@ -139,14 +139,14 @@ Utf16Decoder.prototype.write = function(buf: Array) {
 
 Utf16Decoder.prototype.end = function() {
     if (!this.decoder) {
-        var encoding: String = detectEncoding(this.initialBufs, this.options.defaultEncoding);
+        var encoding: string = detectEncoding(this.initialBufs, this.options.defaultEncoding);
         this.decoder = this.iconv.getDecoder(encoding, this.options);
 
-        var resStr: String = '';
+        var resStr: string = '';
         for (var i = 0; i < this.initialBufs.length; i++)
             resStr += this.decoder.write(this.initialBufs[i]);
 
-        var trail: Number = this.decoder.end();
+        var trail: number = this.decoder.end();
         if (trail)
             resStr += trail;
 
@@ -156,14 +156,14 @@ Utf16Decoder.prototype.end = function() {
     return this.decoder.end();
 }
 
-function detectEncoding(bufs: Array, defaultEncoding: Number): String {
-    var b: Array = [];
-    var charsProcessed: Number = 0;
-    var asciiCharsLE: Number = 0, asciiCharsBE: Number = 0; // Number of ASCII chars when decoded as LE or BE.
+function detectEncoding(bufs: any[], defaultEncoding: number): string {
+    var b: any[] = [];
+    var charsProcessed: number = 0;
+    var asciiCharsLE: number = 0, asciiCharsBE: number = 0; // Number of ASCII chars when decoded as LE or BE.
 
     outer_loop:
     for (var i = 0; i < bufs.length; i++) {
-        var buf: Array = bufs[i];
+        var buf: any[] = bufs[i];
         for (var j = 0; j < buf.length; j++) {
             b.push(buf[j]);
             if (b.length === 2) {

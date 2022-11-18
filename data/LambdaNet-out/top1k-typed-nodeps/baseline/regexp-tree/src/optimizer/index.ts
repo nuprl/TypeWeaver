@@ -5,10 +5,10 @@
 
 'use strict';
 
-const clone: String = require('../utils/clone');
-const parser: String = require('../parser');
-const transform: String = require('../transform');
-const optimizationTransforms: String = require('./transforms');
+const clone: string = require('../utils/clone');
+const parser: string = require('../parser');
+const transform: string = require('../transform');
+const optimizationTransforms: string = require('./transforms');
 
 module.exports = {
   /**

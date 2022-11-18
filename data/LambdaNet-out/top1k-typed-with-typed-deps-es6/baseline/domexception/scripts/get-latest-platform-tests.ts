@@ -14,15 +14,15 @@ if (process.env.NO_UPDATE) {
 // 1. Go to https://github.com/web-platform-tests/wpt/tree/master/webidl/ecmascript-binding/es-exceptions
 // 2. Press "y" on your keyboard to get a permalink
 // 3. Copy the commit hash
-const commitHash: String = "904652fbaa979e6ac1e3c28b6ca0402b0179f62e";
+const commitHash: string = "904652fbaa979e6ac1e3c28b6ca0402b0179f62e";
 
-const urlPrefix: String = `https://raw.githubusercontent.com/w3c/web-platform-tests/${commitHash}/` +
+const urlPrefix: string = `https://raw.githubusercontent.com/w3c/web-platform-tests/${commitHash}/` +
                   `webidl/ecmascript-binding/es-exceptions/`;
-const targetDir: String = path.resolve(__dirname, "..", "test", "web-platform-tests");
+const targetDir: string = path.resolve(__dirname, "..", "test", "web-platform-tests");
 
 fs.mkdirSync(targetDir, { recursive: true });
 
-const files: Array = [
+const files: any[] = [
   "DOMException-constants.any.js",
   "DOMException-constructor-and-prototype.any.js",
   "DOMException-constructor-behavior.any.js",
@@ -30,13 +30,13 @@ const files: Array = [
 ];
 
 async function main(): Map {
-  await Promise.all(files.map(async (file: Array) => {
+  await Promise.all(files.map(async (file: any[]) => {
     const res: HTMLElement = await fetch(`${urlPrefix}${file}`);
     res.body.pipe(fs.createWriteStream(path.resolve(targetDir, file)));
   }));
 }
 
-main().catch((err: Object) => {
+main().catch((err: object) => {
   console.error(err.stack);
   process.exit(1);
 });

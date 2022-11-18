@@ -1,14 +1,14 @@
-var minus: Number = "-".charCodeAt(0);
-var plus: Number = "+".charCodeAt(0);
-var dot: Number = ".".charCodeAt(0);
-var exp: Number = "e".charCodeAt(0);
-var EXP: Number = "E".charCodeAt(0);
+var minus: number = "-".charCodeAt(0);
+var plus: number = "+".charCodeAt(0);
+var dot: number = ".".charCodeAt(0);
+var exp: number = "e".charCodeAt(0);
+var EXP: number = "E".charCodeAt(0);
 
 // Check if three code points would start a number
 // https://www.w3.org/TR/css-syntax-3/#starts-with-a-number
-function likeNumber(value: String): Boolean {
-  var code: Number = value.charCodeAt(0);
-  var nextCode: Number;
+function likeNumber(value: string): boolean {
+  var code: number = value.charCodeAt(0);
+  var nextCode: number;
 
   if (code === plus || code === minus) {
     nextCode = value.charCodeAt(1);
@@ -17,7 +17,7 @@ function likeNumber(value: String): Boolean {
       return true;
     }
 
-    var nextNextCode: Number = value.charCodeAt(2);
+    var nextNextCode: number = value.charCodeAt(2);
 
     if (nextCode === dot && nextNextCode >= 48 && nextNextCode <= 57) {
       return true;
@@ -45,12 +45,12 @@ function likeNumber(value: String): Boolean {
 
 // Consume a number
 // https://www.w3.org/TR/css-syntax-3/#consume-number
-export default function(value: String) {
-  var pos: Number = 0;
-  var length: Number = value.length;
-  var code: Number;
-  var nextCode: Number;
-  var nextNextCode: Number;
+export default function(value: string) {
+  var pos: number = 0;
+  var length: number = value.length;
+  var code: number;
+  var nextCode: number;
+  var nextNextCode: number;
 
   if (length === 0 || !likeNumber(value)) {
     return false;

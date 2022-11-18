@@ -18,7 +18,7 @@ import nth from './nth.js'
  * func('a', 'b', 'c', 'd')
  * // => 'c'
  */
-function nthArg(n: String): Function {
+function nthArg(n: string): Function {
   return (...args) => nth(args, n)
 }
 

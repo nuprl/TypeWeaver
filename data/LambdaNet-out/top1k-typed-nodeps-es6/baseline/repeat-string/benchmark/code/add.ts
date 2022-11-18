@@ -1,12 +1,12 @@
 export default repeat;
 
-function repeat(str: String, num: Number): String {
+function repeat(str: string, num: number): string {
   if (typeof str !== 'string') {
     throw new TypeError('repeat-string expects a string.');
   }
 
-  var len: Number = str.length;
-  var max: Number = len * num;
+  var len: number = str.length;
+  var max: number = len * num;
 
   if (num === 1 || len === max) return str;
   if (num === 2) return str + str;
@@ -16,7 +16,7 @@ function repeat(str: String, num: Number): String {
     num--;
   }
 
-  var rlen: Number = res.length;
+  var rlen: number = res.length;
   while (max > rlen && num > 0) {
     if (num & 1) {
       res += str;
@@ -31,5 +31,5 @@ function repeat(str: String, num: Number): String {
  * Results cache
  */
 
-var res: String = '';
-var cache: String;
+var res: string = '';
+var cache: string;

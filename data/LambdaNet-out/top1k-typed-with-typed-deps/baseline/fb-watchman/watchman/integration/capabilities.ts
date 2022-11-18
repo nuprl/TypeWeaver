@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var assert: String = require('assert');
-var watchman: Array = require('fb-watchman');
+var assert: string = require('assert');
+var watchman: any[] = require('fb-watchman');
 
 function optional(): Void {
   var client: HTMLElement = new watchman.Client();
   client.capabilityCheck({optional: ['will-never-exist']},
-      function (error: Object, resp: Object) {
+      function (error: object, resp: object) {
         assert.equal(error, null, 'no errors');
         assert.equal(resp.capabilities['will-never-exist'], false);
         client.end();

@@ -8,12 +8,12 @@
 /**
  * Epsilon, the empty string.
  */
-const EPSILON: String = 'ε';
+const EPSILON: string = 'ε';
 
 /**
  * Epsilon-closure.
  */
-const EPSILON_CLOSURE: String = `${EPSILON}*`;
+const EPSILON_CLOSURE: string = `${EPSILON}*`;
 
 module.exports = {
   EPSILON,

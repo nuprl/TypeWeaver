@@ -2,9 +2,9 @@
 
 var call: Function = Function.call;
 
-module.exports = function copyPrototypeMethods(prototype: Object): Array {
+module.exports = function copyPrototypeMethods(prototype: object): any[] {
     // eslint-disable-next-line @sinonjs/no-prototype-methods/no-prototype-methods
-    return Object.getOwnPropertyNames(prototype).reduce(function(result: Object, name: String) {
+    return Object.getOwnPropertyNames(prototype).reduce(function(result: object, name: string) {
         // ignore size because it throws from Map
         if (
             name !== "size" &&

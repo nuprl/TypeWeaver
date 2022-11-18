@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function diff(arr: Array, arrays: String): Array {
+module.exports = function diff(arr: any[], arrays: string): any[] {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
 
-  return arr.reduce(function(acc: Array, ele: String, i: String) {
+  return arr.reduce(function(acc: any[], ele: string, i: string) {
     if (arrays.indexOf(ele) === -1) {
       acc.push(ele);
     }

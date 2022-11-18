@@ -27,7 +27,7 @@ import baseSet from './.internal/baseSet.js'
  * console.log(object.x[0].y.z)
  * // => 5
  */
-function set(object: Object, path: String, value: String): Stack {
+function set(object: object, path: string, value: string): Stack {
   return object == null ? object : baseSet(object, path, value)
 }
 

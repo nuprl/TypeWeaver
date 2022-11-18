@@ -7,7 +7,7 @@ import Rule from './Rule.js';
 import TypeSelector from './TypeSelector.js';
 import WhiteSpace from './WhiteSpace.js';
 
-const handlers: Object = {
+const handlers: object = {
     Atrule,
     Comment,
     Declaration,
@@ -17,7 +17,7 @@ const handlers: Object = {
     WhiteSpace
 };
 
-export default function(ast: Array, options: Object) {
+export default function(ast: any[], options: object) {
     walk(ast, {
         leave(node, item, list) {
             if (handlers.hasOwnProperty(node.type)) {

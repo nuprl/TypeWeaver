@@ -10,37 +10,37 @@
 import util from 'util';
 import toRegexRange from 'to-regex-range';
 
-const isObject: Function = (val: Number) => val !== null && typeof val === 'object' && !Array.isArray(val);
+const isObject: Function = (val: number) => val !== null && typeof val === 'object' && !Array.isArray(val);
 
-const transform: Function = (toNumber: Number) => {
-  return (value: Number) => toNumber === true ? Number(value) : String(value);
+const transform: Function = (toNumber: number) => {
+  return (value: number) => toNumber === true ? Number(value) : String(value);
 };
 
-const isValidValue: Function = (value: String) => {
+const isValidValue: Function = (value: string) => {
   return typeof value === 'number' || (typeof value === 'string' && value !== '');
 };
 
-const isNumber: Function = (num: Number) => Number.isInteger(+num);
+const isNumber: Function = (num: number) => Number.isInteger(+num);
 
-const zeros: Function = (input: String) => {
-  let value: Array = `${input}`;
-  let index: Number = -1;
+const zeros: Function = (input: string) => {
+  let value: any[] = `${input}`;
+  let index: number = -1;
   if (value[0] === '-') value = value.slice(1);
   if (value === '0') return false;
   while (value[++index] === '0');
   return index > 0;
 };
 
-const stringify: Function = (start: String, end: String, options: Array) => {
+const stringify: Function = (start: string, end: string, options: any[]) => {
   if (typeof start === 'string' || typeof end === 'string') {
     return true;
   }
   return options.stringify === true;
 };
 
-const pad: Function = (input: Array, maxLength: Number, toNumber: Number) => {
+const pad: Function = (input: any[], maxLength: number, toNumber: number) => {
   if (maxLength > 0) {
-    let dash: String = input[0] === '-' ? '-' : '';
+    let dash: string = input[0] === '-' ? '-' : '';
     if (dash) input = input.slice(1);
     input = (dash + input.padStart(dash ? maxLength - 1 : maxLength, '0'));
   }
@@ -50,8 +50,8 @@ const pad: Function = (input: Array, maxLength: Number, toNumber: Number) => {
   return input;
 };
 
-const toMaxLen: Function = (input: String, maxLength: Number) => {
-  let negative: String = input[0] === '-' ? '-' : '';
+const toMaxLen: Function = (input: string, maxLength: number) => {
+  let negative: string = input[0] === '-' ? '-' : '';
   if (negative) {
     input = input.slice(1);
     maxLength--;
@@ -60,14 +60,14 @@ const toMaxLen: Function = (input: String, maxLength: Number) => {
   return negative ? ('-' + input) : input;
 };
 
-const toSequence: Function = (parts: Object, options: Map) => {
-  parts.negatives.sort((a: Number, b: Number) => a < b ? -1 : a > b ? 1 : 0);
-  parts.positives.sort((a: Number, b: Number) => a < b ? -1 : a > b ? 1 : 0);
+const toSequence: Function = (parts: object, options: Map) => {
+  parts.negatives.sort((a: number, b: number) => a < b ? -1 : a > b ? 1 : 0);
+  parts.positives.sort((a: number, b: number) => a < b ? -1 : a > b ? 1 : 0);
 
-  let prefix: String = options.capture ? '' : '?:';
-  let positives: String = '';
-  let negatives: String = '';
-  let result: String;
+  let prefix: string = options.capture ? '' : '?:';
+  let positives: string = '';
+  let negatives: string = '';
+  let result: string;
 
   if (parts.positives.length) {
     positives = parts.positives.join('|');
@@ -90,22 +90,22 @@ const toSequence: Function = (parts: Object, options: Map) => {
   return result;
 };
 
-const toRange: Function = (a: String, b: String, isNumbers: Boolean, options: Object) => {
+const toRange: Function = (a: string, b: string, isNumbers: boolean, options: object) => {
   if (isNumbers) {
     return toRegexRange(a, b, { wrap: false, ...options });
   }
 
-  let start: String = String.fromCharCode(a);
+  let start: string = String.fromCharCode(a);
   if (a === b) return start;
 
-  let stop: String = String.fromCharCode(b);
+  let stop: string = String.fromCharCode(b);
   return `[${start}-${stop}]`;
 };
 
-const toRegex: Function = (start: Array, end: Number, options: Map) => {
+const toRegex: Function = (start: any[], end: number, options: Map) => {
   if (Array.isArray(start)) {
-    let wrap: Boolean = options.wrap === true;
-    let prefix: String = options.capture ? '' : '?:';
+    let wrap: boolean = options.wrap === true;
+    let prefix: string = options.capture ? '' : '?:';
     return wrap ? `(${prefix}${start.join('|')})` : start.join('|');
   }
   return toRegexRange(start, end, options);
@@ -115,21 +115,21 @@ const rangeError: Function = (...args) => {
   return new RangeError('Invalid range arguments: ' + util.inspect(...args));
 };
 
-const invalidRange: Function = (start: String, end: String, options: Object) => {
+const invalidRange: Function = (start: string, end: string, options: object) => {
   if (options.strictRanges === true) throw rangeError([start, end]);
   return [];
 };
 
-const invalidStep: Function = (step: String, options: Object) => {
+const invalidStep: Function = (step: string, options: object) => {
   if (options.strictRanges === true) {
     throw new TypeError(`Expected step "${step}" to be a number`);
   }
   return [];
 };
 
-const fillNumbers: Function = (start: Number, end: Number, step: Number = 1, options: Object = {}) => {
-  let a: Number = Number(start);
-  let b: Number = Number(end);
+const fillNumbers: Function = (start: number, end: number, step: number = 1, options: object = {}) => {
+  let a: number = Number(start);
+  let b: number = Number(end);
 
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     if (options.strictRanges === true) throw rangeError([start, end]);
@@ -140,25 +140,25 @@ const fillNumbers: Function = (start: Number, end: Number, step: Number = 1, opt
   if (a === 0) a = 0;
   if (b === 0) b = 0;
 
-  let descending: Boolean = a > b;
-  let startString: String = String(start);
-  let endString: String = String(end);
-  let stepString: String = String(step);
+  let descending: boolean = a > b;
+  let startString: string = String(start);
+  let endString: string = String(end);
+  let stepString: string = String(step);
   step = Math.max(Math.abs(step), 1);
 
-  let padded: Boolean = zeros(startString) || zeros(endString) || zeros(stepString);
-  let maxLen: Number = padded ? Math.max(startString.length, endString.length, stepString.length) : 0;
-  let toNumber: Number = padded === false && stringify(start, end, options) === false;
+  let padded: boolean = zeros(startString) || zeros(endString) || zeros(stepString);
+  let maxLen: number = padded ? Math.max(startString.length, endString.length, stepString.length) : 0;
+  let toNumber: number = padded === false && stringify(start, end, options) === false;
   let format: Function = options.transform || transform(toNumber);
 
   if (options.toRegex && step === 1) {
     return toRange(toMaxLen(start, maxLen), toMaxLen(end, maxLen), true, options);
   }
 
-  let parts: Object = { negatives: [], positives: [] };
-  let push: Function = (num: Number) => parts[num < 0 ? 'negatives' : 'positives'].push(Math.abs(num));
-  let range: Array = [];
-  let index: Number = 0;
+  let parts: object = { negatives: [], positives: [] };
+  let push: Function = (num: number) => parts[num < 0 ? 'negatives' : 'positives'].push(Math.abs(num));
+  let range: any[] = [];
+  let index: number = 0;
 
   while (descending ? a >= b : a <= b) {
     if (options.toRegex === true && step > 1) {
@@ -179,26 +179,26 @@ const fillNumbers: Function = (start: Number, end: Number, step: Number = 1, opt
   return range;
 };
 
-const fillLetters: Function = (start: String, end: String, step: Number = 1, options: Object = {}) => {
+const fillLetters: Function = (start: string, end: string, step: number = 1, options: object = {}) => {
   if ((!isNumber(start) && start.length > 1) || (!isNumber(end) && end.length > 1)) {
     return invalidRange(start, end, options);
   }
 
 
-  let format: Function = options.transform || ((val: String) => String.fromCharCode(val));
-  let a: Number = `${start}`.charCodeAt(0);
-  let b: Number = `${end}`.charCodeAt(0);
+  let format: Function = options.transform || ((val: string) => String.fromCharCode(val));
+  let a: number = `${start}`.charCodeAt(0);
+  let b: number = `${end}`.charCodeAt(0);
 
-  let descending: Boolean = a > b;
-  let min: Number = Math.min(a, b);
-  let max: Number = Math.max(a, b);
+  let descending: boolean = a > b;
+  let min: number = Math.min(a, b);
+  let max: number = Math.max(a, b);
 
   if (options.toRegex && step === 1) {
     return toRange(min, max, false, options);
   }
 
-  let range: Array = [];
-  let index: Number = 0;
+  let range: any[] = [];
+  let index: number = 0;
 
   while (descending ? a >= b : a <= b) {
     range.push(format(a, index));
@@ -213,7 +213,7 @@ const fillLetters: Function = (start: String, end: String, step: Number = 1, opt
   return range;
 };
 
-const fill: Function = (start: String, end: String, step: Number, options: Object = {}) => {
+const fill: Function = (start: string, end: string, step: number, options: object = {}) => {
   if (end == null && isValidValue(start)) {
     return [start];
   }
@@ -230,7 +230,7 @@ const fill: Function = (start: String, end: String, step: Number, options: Objec
     return fill(start, end, 0, step);
   }
 
-  let opts: Object = { ...options };
+  let opts: object = { ...options };
   if (opts.capture === true) opts.wrap = true;
   step = step || opts.step || 1;
 

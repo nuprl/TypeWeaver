@@ -3,10 +3,10 @@
 var resolveException: Function = require("../lib/resolve-exception")
   , is: Function               = require("./is");
 
-module.exports = function (value: String /*, options*/) {
+module.exports = function (value: string /*, options*/) {
 	if (is(value)) return value;
-	var options: Object = arguments[1];
-	var errorMessage: String =
+	var options: object = arguments[1];
+	var errorMessage: string =
 		options && options.name ? "Expected a set for %n, received %v" : "%v is not a set";
 	return resolveException(value, errorMessage, options);
 };

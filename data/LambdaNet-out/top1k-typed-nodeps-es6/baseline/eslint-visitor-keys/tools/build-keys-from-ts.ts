@@ -22,7 +22,7 @@ const { promises: { writeFile } } = fs;
         }
     );
 
-    const mergedKeys: String = alphabetizeKeyInterfaces({ ...keys, ...jsxKeys, ...backwardCompatibleKeys });
+    const mergedKeys: string = alphabetizeKeyInterfaces({ ...keys, ...jsxKeys, ...backwardCompatibleKeys });
 
     // eslint-disable-next-line no-console -- CLI
     console.log("keys", mergedKeys);

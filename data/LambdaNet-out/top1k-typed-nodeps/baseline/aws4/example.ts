@@ -1,11 +1,11 @@
-var http: String = require('https')
+var http: string = require('https')
 var aws4: HTMLElement  = require('.')
 
 // to illustrate usage, we'll create a utility function to request and pipe to stdout
-function request(opts: Object): Void { http.request(opts, function(res: Object) { res.pipe(process.stdout) }).end(opts.body || '') }
+function request(opts: object): Void { http.request(opts, function(res: object) { res.pipe(process.stdout) }).end(opts.body || '') }
 
 // aws4 will sign an options object as you'd pass to http.request, with an AWS service and region
-var opts: Object = { host: 'my-bucket.s3.us-west-1.amazonaws.com', path: '/my-object', service: 's3', region: 'us-west-1' }
+var opts: object = { host: 'my-bucket.s3.us-west-1.amazonaws.com', path: '/my-object', service: 's3', region: 'us-west-1' }
 
 // aws4.sign() will sign and modify these options, ready to pass to http.request
 aws4.sign(opts, { accessKeyId: '', secretAccessKey: '' })

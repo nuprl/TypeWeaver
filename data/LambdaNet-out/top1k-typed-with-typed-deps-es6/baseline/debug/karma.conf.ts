@@ -1,4 +1,4 @@
-export default function (config: Object) {
+export default function (config: object) {
 	config.set({
 		// Frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter

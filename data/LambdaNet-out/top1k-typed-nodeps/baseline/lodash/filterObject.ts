@@ -18,12 +18,12 @@
  * filterObject(object, (n) => !(n % 5))
  * // => [5, 10]
  */
-function filterObject(object: Object, predicate: Function): Array {
+function filterObject(object: object, predicate: Function): any[] {
   object = Object(object)
-  const result: Array = []
+  const result: any[] = []
 
-  Object.keys(object).forEach((key: String) => {
-    const value: String = object[key]
+  Object.keys(object).forEach((key: string) => {
+    const value: string = object[key]
     if (predicate(value, key, object)) {
       result.push(value)
     }

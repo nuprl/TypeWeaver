@@ -6,19 +6,19 @@ jQuery.ajaxSettings.xhr = function() {
 	return new window.XMLHttpRequest();
 };
 
-var xhrSuccessStatus: Object = {
+var xhrSuccessStatus: object = {
 
 	// File protocol always yields status code 0, assume 200
 	0: 200
 };
 
-jQuery.ajaxTransport( function( options: Object ) {
+jQuery.ajaxTransport( function( options: object ) {
 	var callback: Function;
 
 	// Cross domain only allowed if supported through XMLHttpRequest
 	return {
-		send: function( headers: Object, complete: Function ) {
-			var i: String,
+		send: function( headers: object, complete: Function ) {
+			var i: string,
 				xhr: HTMLElement = options.xhr();
 
 			xhr.open(
@@ -56,7 +56,7 @@ jQuery.ajaxTransport( function( options: Object ) {
 			}
 
 			// Callback
-			callback = function( type: Number ) {
+			callback = function( type: number ) {
 				return function() {
 					if ( callback ) {
 						callback = xhr.onload = xhr.onerror = xhr.onabort = xhr.ontimeout = null;

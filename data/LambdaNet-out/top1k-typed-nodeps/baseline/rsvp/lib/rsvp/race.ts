@@ -11,6 +11,6 @@ import Promise from './promise';
   @param {String} [label] An optional label. This is useful
   for tooling.
  */
-export default function race(array: Array, label: String): String {
+export default function race(array: any[], label: string): string {
   return Promise.race(array, label);
 }

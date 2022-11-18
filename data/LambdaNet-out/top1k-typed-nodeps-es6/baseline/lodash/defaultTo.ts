@@ -16,7 +16,7 @@
  * defaultTo(undefined, 10)
  * // => 10
  */
-function defaultTo(value: Number, defaultValue: Number): Number {
+function defaultTo(value: number, defaultValue: number): number {
   return (value == null || value !== value) ? defaultValue : value
 }
 

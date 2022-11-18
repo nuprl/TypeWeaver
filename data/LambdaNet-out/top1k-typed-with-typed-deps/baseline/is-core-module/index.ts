@@ -2,15 +2,15 @@
 
 var has: Function = require('has');
 
-function specifierIncluded(current: String, specifier: String): Boolean {
-	var nodeParts: Object = current.split('.');
-	var parts: Array = specifier.split(' ');
-	var op: String = parts.length > 1 ? parts[0] : '=';
-	var versionParts: Object = (parts.length > 1 ? parts[1] : parts[0]).split('.');
+function specifierIncluded(current: string, specifier: string): boolean {
+	var nodeParts: object = current.split('.');
+	var parts: any[] = specifier.split(' ');
+	var op: string = parts.length > 1 ? parts[0] : '=';
+	var versionParts: object = (parts.length > 1 ? parts[1] : parts[0]).split('.');
 
 	for (var i = 0; i < 3; ++i) {
-		var cur: Number = parseInt(nodeParts[i] || 0, 10);
-		var ver: Number = parseInt(versionParts[i] || 0, 10);
+		var cur: number = parseInt(nodeParts[i] || 0, 10);
+		var ver: number = parseInt(versionParts[i] || 0, 10);
 		if (cur === ver) {
 			continue; // eslint-disable-line no-restricted-syntax, no-continue
 		}
@@ -25,8 +25,8 @@ function specifierIncluded(current: String, specifier: String): Boolean {
 	return op === '>=';
 }
 
-function matchesRange(current: String, range: String): Boolean {
-	var specifiers: Array = range.split(/ ?&& ?/);
+function matchesRange(current: string, range: string): boolean {
+	var specifiers: any[] = range.split(/ ?&& ?/);
 	if (specifiers.length === 0) {
 		return false;
 	}
@@ -38,12 +38,12 @@ function matchesRange(current: String, range: String): Boolean {
 	return true;
 }
 
-function versionIncluded(nodeVersion: String, specifierValue: Array): Boolean {
+function versionIncluded(nodeVersion: string, specifierValue: any[]): boolean {
 	if (typeof specifierValue === 'boolean') {
 		return specifierValue;
 	}
 
-	var current: String = typeof nodeVersion === 'undefined'
+	var current: string = typeof nodeVersion === 'undefined'
 		? process.versions && process.versions.node
 		: nodeVersion;
 
@@ -62,8 +62,8 @@ function versionIncluded(nodeVersion: String, specifierValue: Array): Boolean {
 	return matchesRange(current, specifierValue);
 }
 
-var data: Object = require('./core.json');
+var data: object = require('./core.json');
 
-module.exports = function isCore(x: String, nodeVersion: Array): Boolean {
+module.exports = function isCore(x: string, nodeVersion: any[]): boolean {
 	return has(data, x) && versionIncluded(nodeVersion, data[x]);
 };

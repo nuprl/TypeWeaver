@@ -1,712 +1,269 @@
-build.ts(6,10): error TS2339: Property 'mkdirSync' does not exist on type 'String'.
-build.ts(9,31): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-build.ts(10,29): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-build.ts(11,37): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+build.ts(6,10): error TS2339: Property 'mkdirSync' does not exist on type 'string'.
+build.ts(9,31): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+build.ts(10,29): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+build.ts(11,37): error TS2339: Property 'readFileSync' does not exist on type 'string'.
 build.ts(13,87): error TS2554: Expected 0 arguments, but got 1.
-build.ts(15,48): error TS2339: Property 'minify' does not exist on type 'String'.
-build.ts(18,44): error TS2339: Property 'version' does not exist on type 'Object'.
-build.ts(22,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+build.ts(15,48): error TS2339: Property 'minify' does not exist on type 'string'.
+build.ts(18,44): error TS2339: Property 'version' does not exist on type 'object'.
+build.ts(22,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 build.ts(22,58): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lexer.ts(14,18): error TS2314: Generic type 'Set<T>' requires 1 type argument(s).
 lexer.ts(17,25): error TS2304: Cannot find name 'Void'.
 lexer.ts(30,3): error TS2740: Type 'Set<unknown>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lexer.ts(32,3): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
-lexer.ts(43,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-lexer.ts(46,52): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(46,79): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(46,110): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lexer.ts(43,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 lexer.ts(50,41): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
 lexer.ts(50,140): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-lexer.ts(58,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-lexer.ts(86,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lexer.ts(95,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(96,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(97,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(103,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(104,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(112,42): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(118,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lexer.ts(119,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(123,59): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(123,111): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(125,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(126,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(127,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(128,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(129,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(130,50): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(134,49): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(134,101): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(135,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(136,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(137,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(138,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(139,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(140,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(141,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(151,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(152,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(159,60): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(159,99): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(163,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(167,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(171,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(176,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(179,27): error TS2538: Type 'Number' cannot be used as an index type.
-lexer.ts(181,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(186,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(187,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(203,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(219,55): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(221,61): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(221,111): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(222,60): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(222,139): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(223,73): error TS2538: Type 'Number' cannot be used as an index type.
-lexer.ts(224,83): error TS2538: Type 'Number' cannot be used as an index type.
-lexer.ts(224,121): error TS2538: Type 'Number' cannot be used as an index type.
+lexer.ts(58,41): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+lexer.ts(76,7): error TS2322: Type 'string' is not assignable to type 'object'.
+lexer.ts(86,3): error TS2322: Type 'Function' is not assignable to type 'string'.
+lexer.ts(118,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(129,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(141,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lexer.ts(251,59): error TS2304: Cannot find name 'Void'.
-lexer.ts(252,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(253,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(254,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(255,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(256,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(257,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(261,13): error TS2322: Type 'Number' is not assignable to type 'String'.
-lexer.ts(262,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(264,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lexer.ts(266,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lexer.ts(267,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(267,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(269,46): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(270,49): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(270,59): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(271,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(272,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(273,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(275,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(279,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(279,80): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(284,21): error TS2538: Type 'String' cannot be used as an index type.
+lexer.ts(261,13): error TS2322: Type 'number' is not assignable to type 'string'.
+lexer.ts(262,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(264,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lexer.ts(266,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lexer.ts(291,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(292,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(292,53): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(293,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(294,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(295,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(296,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(297,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(298,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(299,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(300,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(301,5): error TS2304: Cannot find name 'ch'.
 lexer.ts(302,9): error TS2304: Cannot find name 'ch'.
-lexer.ts(303,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(304,5): error TS2304: Cannot find name 'ch'.
 lexer.ts(306,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(306,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(307,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(308,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(309,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(310,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(311,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(312,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(312,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(313,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(314,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(315,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(316,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(317,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(319,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(320,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(321,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(322,3): error TS2304: Cannot find name 'ch'.
-lexer.ts(323,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(324,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(325,3): error TS2304: Cannot find name 'ch'.
 lexer.ts(326,7): error TS2304: Cannot find name 'ch'.
-lexer.ts(327,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(331,54): error TS2304: Cannot find name 'Void'.
-lexer.ts(332,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(333,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(335,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(336,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(338,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(338,63): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(341,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(342,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(344,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(345,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(349,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(350,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(352,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(352,31): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(355,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(355,42): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(357,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(358,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(360,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(361,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(363,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(364,47): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(365,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(367,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(368,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(370,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(370,60): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(371,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(373,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(374,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(377,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(378,42): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(379,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(381,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
+lexer.ts(335,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(338,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(344,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(349,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(352,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(352,31): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(357,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(360,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(363,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(367,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(370,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(373,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(377,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(381,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lexer.ts(382,20): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(386,18): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(387,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(388,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(390,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(391,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(393,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(394,47): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(395,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(398,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(401,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(402,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(404,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(405,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(407,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(408,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(410,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(411,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(412,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(416,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(417,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(422,20): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(423,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(425,17): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(425,35): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(427,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(429,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(430,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(433,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(434,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(437,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(438,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(440,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(441,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(444,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(445,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(447,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
+lexer.ts(382,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(386,18): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(390,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(393,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(398,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(401,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(404,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(407,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(410,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(416,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(422,20): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(425,17): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(425,35): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(429,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(433,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(437,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(440,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(444,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(447,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lexer.ts(448,20): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(457,22): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(457,66): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(459,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(460,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(462,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(463,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(467,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(469,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(471,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(473,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(474,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(476,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(476,61): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(477,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(479,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(480,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(481,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(483,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(483,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(484,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(486,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(487,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(491,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(493,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(494,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(496,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(497,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(499,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(499,50): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(500,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(502,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(503,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(505,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(506,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(509,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(510,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(511,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(513,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(513,33): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(515,45): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(516,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(518,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
-lexer.ts(519,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(521,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(521,52): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(522,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(524,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(524,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(525,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(527,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(527,46): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(527,55): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(528,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(530,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(530,33): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(532,48): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(533,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(535,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
-lexer.ts(536,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(538,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(539,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(541,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(541,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(542,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(544,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(545,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(549,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(549,52): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(551,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(553,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(554,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(559,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(560,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(562,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(562,66): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(563,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(565,19): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(566,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(569,19): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(569,56): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(570,17): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(572,21): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(573,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(585,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(586,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(588,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(588,63): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(589,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(593,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(593,55): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(594,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(598,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(599,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(601,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(602,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(604,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(605,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(607,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(607,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(608,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(610,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(611,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(613,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(614,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(616,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(617,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(619,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(620,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(622,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(623,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(625,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(625,66): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(626,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(628,19): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(629,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(635,18): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(636,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(637,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(639,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(639,33): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(641,45): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(642,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(645,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(647,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(648,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(649,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(651,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(652,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(654,17): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(654,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(654,81): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(659,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(660,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(662,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(662,74): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(663,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(665,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(666,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(668,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(669,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(671,19): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(672,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(677,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(678,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(686,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(687,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(689,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(689,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(690,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(692,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(693,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(695,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(696,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(698,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(698,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(699,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(701,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(702,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(704,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(704,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(705,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(707,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(708,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(710,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(711,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(716,18): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(717,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(717,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(718,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(720,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(721,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(723,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(723,70): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(724,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(726,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(727,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(731,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(732,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(734,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(735,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(737,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(738,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(740,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(741,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(743,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(743,66): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(744,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(746,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(747,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(749,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(749,60): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(750,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(752,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(753,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(755,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(755,59): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(756,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(758,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(759,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(761,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(762,47): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(763,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(766,17): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(769,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(770,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(772,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(773,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(775,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(776,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(778,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(778,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(779,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(781,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(782,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(784,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(785,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(787,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(788,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(790,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(791,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(793,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(794,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(797,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(798,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(800,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(801,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(804,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(805,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(807,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(808,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(810,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(811,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(817,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(818,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(820,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(822,59): error TS2538: Type 'String' cannot be used as an index type.
+lexer.ts(448,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(454,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(457,22): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(462,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(469,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(473,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(476,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(480,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(483,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(486,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(493,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(496,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(499,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(502,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(509,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(513,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(513,33): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(518,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(521,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(527,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(530,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(530,33): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(535,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(538,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(541,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(544,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(549,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(553,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(559,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(562,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(565,19): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(569,19): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(572,21): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(588,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(593,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(598,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(604,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(607,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(613,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(619,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(622,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(625,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(628,19): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(635,18): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(639,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(639,33): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(647,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(651,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(654,17): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(659,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(662,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(665,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(671,19): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(677,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(686,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(692,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(695,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(701,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(707,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(710,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(716,18): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(720,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(723,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(726,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(731,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(737,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(740,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(743,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(746,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(749,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(752,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(755,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(758,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(761,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(766,17): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(769,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(772,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(775,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(778,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(784,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(790,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(793,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(797,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(800,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(804,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(807,15): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(810,15): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(817,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(820,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lexer.ts(824,21): error TS2339: Property 'add' does not exist on type 'Error'.
-lexer.ts(837,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(837,53): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(838,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(840,9): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(844,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(847,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(847,54): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(848,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lexer.ts(824,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(837,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(840,9): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(847,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lexer.ts(857,45): error TS2304: Cannot find name 'Void'.
-lexer.ts(858,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(859,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(861,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(862,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(864,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(864,56): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lexer.ts(861,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(864,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lexer.ts(872,54): error TS2304: Cannot find name 'Void'.
-lexer.ts(873,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(874,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(878,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(879,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(885,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
+lexer.ts(878,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(885,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lexer.ts(886,20): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(886,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(893,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(894,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(896,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(896,29): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(899,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(901,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lexer.ts(902,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(904,13): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
+lexer.ts(886,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(893,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(896,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(896,29): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(901,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lexer.ts(904,13): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lexer.ts(905,18): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(905,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(910,10): error TS2678: Type 'number' is not comparable to type 'String'.
+lexer.ts(905,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(910,10): error TS2678: Type 'number' is not comparable to type 'string'.
 lexer.ts(912,23): error TS2339: Property 'size' does not exist on type 'Error'.
 lexer.ts(913,11): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
-lexer.ts(914,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(917,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(923,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(924,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(934,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(935,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(937,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(938,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(941,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(941,29): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(943,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(945,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(947,18): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lexer.ts(917,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(923,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(924,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(937,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(941,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(941,29): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(945,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(947,18): error TS2678: Type 'number' is not comparable to type 'string'.
 lexer.ts(948,25): error TS2339: Property 'add' does not exist on type 'Error'.
-lexer.ts(948,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(950,18): error TS2678: Type 'Number' is not comparable to type 'String'.
+lexer.ts(948,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(950,18): error TS2678: Type 'number' is not comparable to type 'string'.
 lexer.ts(951,25): error TS2339: Property 'add' does not exist on type 'Error'.
-lexer.ts(951,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(954,15): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lexer.ts(954,61): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lexer.ts(951,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(954,15): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lexer.ts(954,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lexer.ts(965,37): error TS2304: Cannot find name 'Void'.
-lexer.ts(966,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(967,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(973,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(974,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(981,9): error TS2322: Type 'number' is not assignable to type 'String'.
-lexer.ts(981,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lexer.ts(973,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(981,9): error TS2322: Type 'number' is not assignable to type 'string'.
 lexer.ts(983,16): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(983,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(985,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(985,56): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(986,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(987,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(987,66): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(988,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(996,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(996,32): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(999,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1001,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(1002,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1009,9): error TS2322: Type 'number' is not assignable to type 'String'.
-lexer.ts(1009,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lexer.ts(983,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(985,14): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(987,66): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(996,14): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(996,32): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(1001,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(1009,9): error TS2322: Type 'number' is not assignable to type 'string'.
 lexer.ts(1010,18): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(1010,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1018,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(1021,9): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
+lexer.ts(1010,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lexer.ts(1018,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lexer.ts(1021,9): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lexer.ts(1063,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lexer.ts(1064,7): error TS2322: Type 'RegExp' is not assignable to type 'HTMLElement'.
-lexer.ts(1075,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lexer.ts(1078,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lexer.ts(1083,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lexer.ts(1100,70): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
-lexer.ts(1100,95): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1101,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+lexer.ts(1101,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 lexer.ts(1114,65): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
-lexer.ts(1114,90): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1115,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-lexer.ts(1120,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1121,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-lexer.ts(1121,39): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lexer.ts(1123,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lexer.ts(1123,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(1124,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1125,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-lexer.ts(1126,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lexer.ts(1126,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(1128,14): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lexer.ts(1140,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
-lexer.ts(1146,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1147,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1148,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1148,62): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lexer.ts(1115,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+lexer.ts(1121,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+lexer.ts(1121,39): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lexer.ts(1123,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(1125,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+lexer.ts(1126,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lexer.ts(1128,14): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lexer.ts(1140,7): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 lexer.ts(1152,37): error TS2304: Cannot find name 'Void'.
-lexer.ts(1154,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1158,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1159,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1162,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1167,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1169,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1170,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1171,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1172,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1175,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lexer.ts(1158,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(1162,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(1169,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(1170,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(1171,10): error TS2678: Type 'number' is not comparable to type 'string'.
+lexer.ts(1172,10): error TS2678: Type 'number' is not comparable to type 'string'.
 lexer.ts(1183,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lexer.ts(1184,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1187,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lexer.ts(1195,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1197,49): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1203,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lexer.ts(1206,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lexer.ts(1208,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1209,3): error TS2322: Type 'Number' is not assignable to type 'String'.
+lexer.ts(1187,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lexer.ts(1203,9): error TS2322: Type 'number' is not assignable to type 'string'.
+lexer.ts(1206,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lexer.ts(1209,3): error TS2322: Type 'number' is not assignable to type 'string'.
 lexer.ts(1212,29): error TS2304: Cannot find name 'Void'.
-lexer.ts(1213,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1214,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1215,45): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1216,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1217,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1218,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1224,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1226,3): error TS2304: Cannot find name 'syntaxError'.
 lexer.ts(1229,27): error TS2304: Cannot find name 'Void'.
-lexer.ts(1230,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1231,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1232,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1233,45): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1234,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1240,26): error TS2304: Cannot find name 'Void'.
-lexer.ts(1241,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1242,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(1248,41): error TS2304: Cannot find name 'Void'.
-lexer.ts(1249,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1250,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1254,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1255,48): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(1256,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1265,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1266,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1270,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1277,32): error TS2304: Cannot find name 'Void'.
-lexer.ts(1278,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1279,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1285,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1307,68): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1313,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lexer.ts(1313,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1313,121): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1317,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1317,102): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1323,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1325,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1328,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1331,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1336,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1338,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1341,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1344,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1350,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1355,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1355,72): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1357,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1360,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1363,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1369,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1369,79): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1372,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1375,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1378,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1380,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1383,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1386,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1395,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1395,78): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1396,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1396,73): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1397,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1397,71): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1419,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(1421,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1426,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1428,42): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1430,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1435,20): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/lexer.ts(12,34): error TS2339: Property '__heap_base' does not exist on type 'HTMLElement'.
 src/lexer.ts(12,60): error TS2339: Property '__heap_base' does not exist on type 'HTMLElement'.
-src/lexer.ts(12,75): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.ts(12,90): error TS2339: Property 'memory' does not exist on type 'HTMLElement'.
 src/lexer.ts(14,10): error TS2339: Property 'memory' does not exist on type 'HTMLElement'.
-src/lexer.ts(14,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.ts(16,29): error TS2339: Property 'sa' does not exist on type 'HTMLElement'.
 src/lexer.ts(17,57): error TS2339: Property 'memory' does not exist on type 'HTMLElement'.
-src/lexer.ts(17,72): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+src/lexer.ts(17,72): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/lexer.ts(19,13): error TS2339: Property 'parseCJS' does not exist on type 'HTMLElement'.
 src/lexer.ts(20,62): error TS2339: Property 'e' does not exist on type 'HTMLElement'.
 src/lexer.ts(20,90): error TS2339: Property 'e' does not exist on type 'HTMLElement'.
@@ -717,48 +274,32 @@ src/lexer.ts(22,7): error TS2322: Type 'Set<unknown>' is not assignable to type 
 src/lexer.ts(22,35): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 src/lexer.ts(22,65): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 src/lexer.ts(24,15): error TS2339: Property 'rre' does not exist on type 'HTMLElement'.
-src/lexer.ts(25,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+src/lexer.ts(25,11): error TS2322: Type 'object' is not assignable to type 'string'.
+src/lexer.ts(25,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/lexer.ts(25,56): error TS2339: Property 'res' does not exist on type 'HTMLElement'.
 src/lexer.ts(25,68): error TS2339: Property 'ree' does not exist on type 'HTMLElement'.
 src/lexer.ts(27,17): error TS2339: Property 'add' does not exist on type 'Error'.
 src/lexer.ts(29,15): error TS2339: Property 'ru' does not exist on type 'HTMLElement'.
 src/lexer.ts(30,19): error TS2339: Property 'add' does not exist on type 'Error'.
+src/lexer.ts(30,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/lexer.ts(30,48): error TS2339: Property 'us' does not exist on type 'HTMLElement'.
 src/lexer.ts(30,59): error TS2339: Property 'ue' does not exist on type 'HTMLElement'.
 src/lexer.ts(31,15): error TS2339: Property 're' does not exist on type 'HTMLElement'.
-src/lexer.ts(32,9): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/lexer.ts(32,9): error TS2322: Type 'object' is not assignable to type 'string'.
+src/lexer.ts(32,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/lexer.ts(32,52): error TS2339: Property 'es' does not exist on type 'HTMLElement'.
 src/lexer.ts(32,63): error TS2339: Property 'ee' does not exist on type 'HTMLElement'.
 src/lexer.ts(33,49): error TS2339: Property 'has' does not exist on type 'Error'.
 src/lexer.ts(34,15): error TS2339: Property 'add' does not exist on type 'Error'.
 src/lexer.ts(37,25): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/lexer.ts(37,50): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-src/lexer.ts(43,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+src/lexer.ts(43,41): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+src/lexer.ts(61,7): error TS2322: Type 'string' is not assignable to type 'object'.
 src/lexer.ts(70,50): error TS2304: Cannot find name 'Void'.
-src/lexer.ts(74,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-src/lexer.ts(75,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/lexer.ts(75,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/lexer.ts(75,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.ts(79,50): error TS2304: Cannot find name 'Void'.
-src/lexer.ts(83,14): error TS2538: Type 'Number' cannot be used as an index type.
-src/lexer.ts(83,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/lexer.ts(89,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-src/lexer.ts(90,3): error TS2322: Type 'Promise<void>' is not assignable to type 'Boolean'.
-  Types of property 'valueOf' are incompatible.
-    Type '() => Object' is not assignable to type '() => boolean'.
+src/lexer.ts(89,5): error TS2322: Type 'Function' is not assignable to type 'boolean'.
+src/lexer.ts(90,3): error TS2322: Type 'Promise<void>' is not assignable to type 'boolean'.
 src/lexer.ts(90,10): error TS2740: Type 'Promise<void>' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/lexer.ts(91,11): error TS2740: Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/lexer.ts(92,111): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(data: string): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(data: string): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/lexer.ts(91,11): error TS2322: Type 'Module' is not assignable to type 'string'.
 src/lexer.ts(96,5): error TS2740: Type 'Exports' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 

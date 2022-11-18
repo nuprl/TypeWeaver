@@ -1,40 +1,40 @@
-(function (global: HTMLElement, undefined: Array) {
+(function (global: HTMLElement, undefined: any[]) {
     "use strict";
 
     if (global.setImmediate) {
         return;
     }
 
-    var nextHandle: Number = 1; // Spec says greater than zero
-    var tasksByHandle: Object = {};
-    var currentlyRunningATask: Boolean = false;
+    var nextHandle: number = 1; // Spec says greater than zero
+    var tasksByHandle: object = {};
+    var currentlyRunningATask: boolean = false;
     var doc: Element = global.document;
     var registerImmediate: Function;
 
-    function setImmediate(callback: Function): Number {
+    function setImmediate(callback: Function): number {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
       }
       // Copy function arguments
-      var args: Object = new Array(arguments.length - 1);
+      var args: object = new Array(arguments.length - 1);
       for (var i = 0; i < args.length; i++) {
           args[i] = arguments[i + 1];
       }
       // Store and register the task
-      var task: Object = { callback: callback, args: args };
+      var task: object = { callback: callback, args: args };
       tasksByHandle[nextHandle] = task;
       registerImmediate(nextHandle);
       return nextHandle++;
     }
 
-    function clearImmediate(handle: String): Void {
+    function clearImmediate(handle: string): Void {
         delete tasksByHandle[handle];
     }
 
-    function run(task: Object): Void {
+    function run(task: object): Void {
         var callback: Function = task.callback;
-        var args: Array = task.args;
+        var args: any[] = task.args;
         switch (args.length) {
         case 0:
             callback();
@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: Number): Void {
+    function runIfPresent(handle: number): Void {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -62,7 +62,7 @@
             // "too much recursion" error.
             setTimeout(runIfPresent, 0, handle);
         } else {
-            var task: String = tasksByHandle[handle];
+            var task: string = tasksByHandle[handle];
             if (task) {
                 currentlyRunningATask = true;
                 try {
@@ -76,17 +76,17 @@
     }
 
     function installNextTickImplementation(): Void {
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             process.nextTick(function () { runIfPresent(handle); });
         };
     }
 
-    function canUsePostMessage(): Boolean {
+    function canUsePostMessage(): boolean {
         // The test against `importScripts` prevents this implementation from being installed inside a web worker,
         // where `global.postMessage` means something completely different and can't be used for this purpose.
         if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous: Boolean = true;
-            var oldOnMessage: String = global.onmessage;
+            var postMessageIsAsynchronous: boolean = true;
+            var oldOnMessage: string = global.onmessage;
             global.onmessage = function() {
                 postMessageIsAsynchronous = false;
             };
@@ -101,8 +101,8 @@
         // * https://developer.mozilla.org/en/DOM/window.postMessage
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
 
-        var messagePrefix: String = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage: Function = function(event: Object) {
+        var messagePrefix: string = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage: Function = function(event: object) {
             if (event.source === global &&
                 typeof event.data === "string" &&
                 event.data.indexOf(messagePrefix) === 0) {
@@ -116,26 +116,26 @@
             global.attachEvent("onmessage", onGlobalMessage);
         }
 
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             global.postMessage(messagePrefix + handle, "*");
         };
     }
 
     function installMessageChannelImplementation(): Void {
         var channel: HTMLElement = new MessageChannel();
-        channel.port1.onmessage = function(event: Object) {
-            var handle: Number = event.data;
+        channel.port1.onmessage = function(event: object) {
+            var handle: number = event.data;
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             channel.port2.postMessage(handle);
         };
     }
 
     function installReadyStateChangeImplementation(): Void {
         var html: Element = doc.documentElement;
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
             // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
             var script: HTMLElement = doc.createElement("script");
@@ -150,13 +150,13 @@
     }
 
     function installSetTimeoutImplementation(): Void {
-        registerImmediate = function(handle: Number) {
+        registerImmediate = function(handle: number) {
             setTimeout(runIfPresent, 0, handle);
         };
     }
 
     // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo: Object = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    var attachTo: object = Object.getPrototypeOf && Object.getPrototypeOf(global);
     attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
 
     // Don't get fooled by e.g. browserify environments.

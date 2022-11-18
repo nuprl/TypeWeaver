@@ -33,9 +33,9 @@ import isTypedArray from './isTypedArray.js'
  * }, {})
  * // => { '1': ['a', 'c'], '2': ['b'] }
  */
-function transform(object: Object, iteratee: Function, accumulator: Array): Object {
-  const isArr: Boolean = Array.isArray(object)
-  const isArrLike: Boolean = isArr || isBuffer(object) || isTypedArray(object)
+function transform(object: object, iteratee: Function, accumulator: any[]): object {
+  const isArr: boolean = Array.isArray(object)
+  const isArrLike: boolean = isArr || isBuffer(object) || isTypedArray(object)
 
   if (accumulator == null) {
     const Ctor: Function = object && object.constructor
@@ -51,7 +51,7 @@ function transform(object: Object, iteratee: Function, accumulator: Array): Obje
       accumulator = {}
     }
   }
-  (isArrLike ? arrayEach : baseForOwn)(object, (value: Number, index: Number, object: Object) =>
+  (isArrLike ? arrayEach : baseForOwn)(object, (value: number, index: number, object: object) =>
     iteratee(accumulator, value, index, object))
   return accumulator
 }

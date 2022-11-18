@@ -1,6 +1,6 @@
 "use strict";
 
-export default function (value: String) {
+export default function (value: string) {
 	try {
 		return value.toString();
 	} catch (error) {

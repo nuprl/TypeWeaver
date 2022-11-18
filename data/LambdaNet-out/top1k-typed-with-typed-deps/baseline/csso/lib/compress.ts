@@ -4,12 +4,12 @@ import clean from './clean/index.js';
 import replace from './replace/index.js';
 import restructure from './restructure/index.js';
 
-function readChunk(input: HTMLInputElement, specialComments: Boolean): Object {
-    const children: Array = new List();
-    let nonSpaceTokenInBuffer: Boolean = false;
+function readChunk(input: HTMLInputElement, specialComments: boolean): object {
+    const children: any[] = new List();
+    let nonSpaceTokenInBuffer: boolean = false;
     let protectedComment: Function;
 
-    input.nextUntil(input.head, (node: Object, item: String, list: Map) => {
+    input.nextUntil(input.head, (node: object, item: string, list: Map) => {
         if (node.type === 'Comment') {
             if (!specialComments || node.value.charAt(0) !== '!') {
                 list.remove(item);
@@ -43,10 +43,10 @@ function readChunk(input: HTMLInputElement, specialComments: Boolean): Object {
     };
 }
 
-function compressChunk(ast: Object, firstAtrulesAllowed: Function, num: String, options: Object): TRBL {
+function compressChunk(ast: object, firstAtrulesAllowed: Function, num: string, options: object): TRBL {
     options.logger(`Compress block #${num}`, null, true);
 
-    let seed: Number = 1;
+    let seed: number = 1;
 
     if (ast.type === 'StyleSheet') {
         ast.firstAtrulesAllowed = firstAtrulesAllowed;
@@ -79,8 +79,8 @@ function compressChunk(ast: Object, firstAtrulesAllowed: Function, num: String, 
     return ast;
 }
 
-function getCommentsOption(options: Object): Boolean {
-    let comments: Number = 'comments' in options ? options.comments : 'exclamation';
+function getCommentsOption(options: object): boolean {
+    let comments: number = 'comments' in options ? options.comments : 'exclamation';
 
     if (typeof comments === 'boolean') {
         comments = comments ? 'exclamation' : false;
@@ -91,7 +91,7 @@ function getCommentsOption(options: Object): Boolean {
     return comments;
 }
 
-function getRestructureOption(options: Object): Boolean {
+function getRestructureOption(options: object): boolean {
     if ('restructure' in options) {
         return options.restructure;
     }
@@ -99,7 +99,7 @@ function getRestructureOption(options: Object): Boolean {
     return 'restructuring' in options ? options.restructuring : true;
 }
 
-function wrapBlock(block: Object): String {
+function wrapBlock(block: object): string {
     return new List().appendData({
         type: 'Rule',
         loc: null,
@@ -120,23 +120,23 @@ function wrapBlock(block: Object): String {
     });
 }
 
-export default function compress(ast: Object, options: Object): Object {
+export default function compress(ast: object, options: object): object {
     ast = ast || { type: 'StyleSheet', loc: null, children: new List() };
     options = options || {};
 
-    const compressOptions: Object = {
+    const compressOptions: object = {
         logger: typeof options.logger === 'function' ? options.logger : function() {},
         restructuring: getRestructureOption(options),
         forceMediaMerge: Boolean(options.forceMediaMerge),
         usage: options.usage ? buildIndex(options.usage) : false
     };
     const output: TRBL = new List();
-    let specialComments: Boolean = getCommentsOption(options);
-    let firstAtrulesAllowed: Boolean = true;
+    let specialComments: boolean = getCommentsOption(options);
+    let firstAtrulesAllowed: boolean = true;
     let input: HTMLInputElement;
-    let chunk: Object;
-    let chunkNum: Number = 1;
-    let chunkChildren: Object;
+    let chunk: object;
+    let chunkNum: number = 1;
+    let chunkChildren: object;
 
     if (options.clone) {
         ast = clone(ast);
@@ -175,7 +175,7 @@ export default function compress(ast: Object, options: Object): Object {
         }
 
         if (firstAtrulesAllowed && !chunkChildren.isEmpty) {
-            const lastRule: Object = chunkChildren.last;
+            const lastRule: object = chunkChildren.last;
 
             if (lastRule.type !== 'Atrule' ||
                (lastRule.name !== 'import' && lastRule.name !== 'charset')) {

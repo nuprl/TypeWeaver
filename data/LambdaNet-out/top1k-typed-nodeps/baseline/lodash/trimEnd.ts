@@ -2,7 +2,7 @@ import castSlice from './.internal/castSlice.js'
 import charsEndIndex from './.internal/charsEndIndex.js'
 import stringToArray from './.internal/stringToArray.js'
 
-const methodName: String = ''.trimRight ? 'trimRight': 'trimEnd'
+const methodName: string = ''.trimRight ? 'trimRight': 'trimEnd'
 
 /**
  * Removes trailing whitespace or specified characters from `string`.
@@ -21,15 +21,15 @@ const methodName: String = ''.trimRight ? 'trimRight': 'trimEnd'
  * trimEnd('-_-abc-_-', '_-')
  * // => '-_-abc'
  */
-function trimEnd(string: Array, chars: Number): String {
+function trimEnd(string: any[], chars: number): string {
   if (string && chars === undefined) {
     return string[methodName]()
   }
   if (!string || !chars) {
     return (string || '')
   }
-  const strSymbols: String = stringToArray(string)
-  const end: String = charsEndIndex(strSymbols, stringToArray(chars)) + 1
+  const strSymbols: string = stringToArray(string)
+  const end: string = charsEndIndex(strSymbols, stringToArray(chars)) + 1
   return castSlice(strSymbols, 0, end).join('')
 }
 

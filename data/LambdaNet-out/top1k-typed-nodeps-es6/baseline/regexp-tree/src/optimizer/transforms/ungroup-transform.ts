@@ -62,7 +62,7 @@ export default {
   },
 };
 
-function hasAppropriateSiblings(path: String): Boolean {
+function hasAppropriateSiblings(path: string): boolean {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {

@@ -2,7 +2,7 @@ import {readFileSync, promises as fs} from 'node:fs';
 
 const {readFile} = fs;
 
-const parse: Function = (buffer: Object, {beforeParse, reviver} = {}) => {
+const parse: Function = (buffer: object, {beforeParse, reviver} = {}) => {
 	// Unlike `buffer.toString()` and `fs.readFile(path, 'utf8')`, `TextDecoder`` will remove BOM.
 	let data = new TextDecoder().decode(buffer);
 
@@ -13,12 +13,12 @@ const parse: Function = (buffer: Object, {beforeParse, reviver} = {}) => {
 	return JSON.parse(data, reviver);
 };
 
-export async function loadJsonFile(filePath: String, options: HTMLElement): Array {
-	const buffer: Object = await readFile(filePath);
+export async function loadJsonFile(filePath: string, options: HTMLElement): any[] {
+	const buffer: object = await readFile(filePath);
 	return parse(buffer, options);
 }
 
-export function loadJsonFileSync(filePath: String, options: Object): Promise {
-	const buffer: Object = readFileSync(filePath);
+export function loadJsonFileSync(filePath: string, options: object): Promise {
+	const buffer: object = readFileSync(filePath);
 	return parse(buffer, options);
 }

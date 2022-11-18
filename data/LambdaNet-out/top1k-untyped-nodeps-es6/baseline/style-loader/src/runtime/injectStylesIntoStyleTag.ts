@@ -1,7 +1,7 @@
-const stylesInDOM: Array = [];
+const stylesInDOM: any[] = [];
 
-function getIndexByIdentifier(identifier: Number): Number {
-  let result: Number = -1;
+function getIndexByIdentifier(identifier: number): number {
+  let result: number = -1;
 
   for (let i = 0; i < stylesInDOM.length; i++) {
     if (stylesInDOM[i].identifier === identifier) {
@@ -13,20 +13,20 @@ function getIndexByIdentifier(identifier: Number): Number {
   return result;
 }
 
-function modulesToDom(list: Array, options: Object): Array {
+function modulesToDom(list: any[], options: object): any[] {
   const idCountMap: Function = {};
-  const identifiers: Array = [];
+  const identifiers: any[] = [];
 
   for (let i = 0; i < list.length; i++) {
-    const item: Object = list[i];
-    const id: String = options.base ? item[0] + options.base : item[0];
-    const count: Number = idCountMap[id] || 0;
-    const identifier: String = `${id} ${count}`;
+    const item: object = list[i];
+    const id: string = options.base ? item[0] + options.base : item[0];
+    const count: number = idCountMap[id] || 0;
+    const identifier: string = `${id} ${count}`;
 
     idCountMap[id] = count + 1;
 
-    const indexByIdentifier: Number = getIndexByIdentifier(identifier);
-    const obj: Object = {
+    const indexByIdentifier: number = getIndexByIdentifier(identifier);
+    const obj: object = {
       css: item[1],
       media: item[2],
       sourceMap: item[3],
@@ -38,7 +38,7 @@ function modulesToDom(list: Array, options: Object): Array {
       stylesInDOM[indexByIdentifier].references++;
       stylesInDOM[indexByIdentifier].updater(obj);
     } else {
-      const updater: Object = addElementStyle(obj, options);
+      const updater: object = addElementStyle(obj, options);
 
       options.byIndex = i;
 
@@ -55,12 +55,12 @@ function modulesToDom(list: Array, options: Object): Array {
   return identifiers;
 }
 
-function addElementStyle(obj: Object, options: Object): Function {
-  const api: Object = options.domAPI(options);
+function addElementStyle(obj: object, options: object): Function {
+  const api: object = options.domAPI(options);
 
   api.update(obj);
 
-  const updater: Function = (newObj: Object) => {
+  const updater: Function = (newObj: object) => {
     if (newObj) {
       if (
         newObj.css === obj.css &&
@@ -81,28 +81,28 @@ function addElementStyle(obj: Object, options: Object): Function {
   return updater;
 }
 
-export default (list: Object, options: Array) => {
+export default (list: object, options: any[]) => {
   options = options || {};
 
   list = list || [];
 
-  let lastIdentifiers: Array = modulesToDom(list, options);
+  let lastIdentifiers: any[] = modulesToDom(list, options);
 
-  return function update(newList: Array): Void {
+  return function update(newList: any[]): Void {
     newList = newList || [];
 
     for (let i = 0; i < lastIdentifiers.length; i++) {
-      const identifier: String = lastIdentifiers[i];
-      const index: String = getIndexByIdentifier(identifier);
+      const identifier: string = lastIdentifiers[i];
+      const index: string = getIndexByIdentifier(identifier);
 
       stylesInDOM[index].references--;
     }
 
-    const newLastIdentifiers: Array = modulesToDom(newList, options);
+    const newLastIdentifiers: any[] = modulesToDom(newList, options);
 
     for (let i = 0; i < lastIdentifiers.length; i++) {
-      const identifier: String = lastIdentifiers[i];
-      const index: String = getIndexByIdentifier(identifier);
+      const identifier: string = lastIdentifiers[i];
+      const index: string = getIndexByIdentifier(identifier);
 
       if (stylesInDOM[index].references === 0) {
         stylesInDOM[index].updater();

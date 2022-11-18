@@ -1,7 +1,7 @@
 'use strict';
 
 var required: Function = require('requires-port')
-  , qs: Array = require('querystringify')
+  , qs: any[] = require('querystringify')
   , controlOrWhitespace: RegExp = /^[\x00-\x20\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+/
   , CRHTLF: RegExp = /[\n\r\t]/g
   , slashes: RegExp = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//
@@ -17,7 +17,7 @@ var required: Function = require('requires-port')
  *     characters and whitespace from its beginning.
  * @public
  */
-function trimLeft(str: String): String {
+function trimLeft(str: string): string {
   return (str ? str : '').toString().replace(controlOrWhitespace, '');
 }
 
@@ -29,9 +29,9 @@ function trimLeft(str: String): String {
  *     characters and whitespace from both its beginning and end.
  * @private
  */
-function trim(str: String): Array {
-  var trimmed: String = trimLeft(str);
-  var i: Number = trimmed.length;
+function trim(str: string): any[] {
+  var trimmed: string = trimLeft(str);
+  var i: number = trimmed.length;
 
   if (i === 0) return trimmed;
 
@@ -61,10 +61,10 @@ function trim(str: String): Array {
  * 3. Inherit from location if non existing in the parser.
  * 4. `toLowerCase` the resulting value.
  */
-var rules: Array = [
+var rules: any[] = [
   ['#', 'hash'],                        // Extract from the back.
   ['?', 'query'],                       // Extract from the back.
-  function sanitize(address: String, url: String): String {     // Sanitize what is left of the address
+  function sanitize(address: string, url: string): string {     // Sanitize what is left of the address
     return isSpecial(url.protocol) ? address.replace(/\\/g, '/') : address;
   },
   ['/', 'pathname'],                    // Extract from the back.
@@ -82,7 +82,7 @@ var rules: Array = [
  * @type {Object}
  * @private
  */
-var ignore: Object = { hash: 1, query: 1 };
+var ignore: object = { hash: 1, query: 1 };
 
 /**
  * The location object differs when your code is loaded through a normal page,
@@ -96,20 +96,20 @@ var ignore: Object = { hash: 1, query: 1 };
  * @returns {Object} lolcation object.
  * @public
  */
-function lolcation(loc: Object): Object {
-  var globalVar: Object;
+function lolcation(loc: object): object {
+  var globalVar: object;
 
   if (typeof window !== 'undefined') globalVar = window;
   else if (typeof global !== 'undefined') globalVar = global;
   else if (typeof self !== 'undefined') globalVar = self;
   else globalVar = {};
 
-  var location: Boolean = globalVar.location || {};
+  var location: boolean = globalVar.location || {};
   loc = loc || location;
 
-  var finaldestination: Object = {}
-    , type: String = typeof loc
-    , key: String;
+  var finaldestination: object = {}
+    , type: string = typeof loc
+    , key: string;
 
   if ('blob:' === loc.protocol) {
     finaldestination = new Url(unescape(loc.pathname), {});
@@ -137,7 +137,7 @@ function lolcation(loc: Object): Object {
  * @return {Boolean} `true` if the protocol scheme is special, else `false`
  * @private
  */
-function isSpecial(scheme: Number): Boolean {
+function isSpecial(scheme: number): boolean {
   return (
     scheme === 'file:' ||
     scheme === 'ftp:' ||
@@ -164,17 +164,17 @@ function isSpecial(scheme: Number): Boolean {
  * @return {ProtocolExtract} Extracted information.
  * @private
  */
-function extractProtocol(address: String, location: Object): Object {
+function extractProtocol(address: string, location: object): object {
   address = trim(address);
   address = address.replace(CRHTLF, '');
   location = location || {};
 
-  var match: Object = protocolre.exec(address);
-  var protocol: String = match[1] ? match[1].toLowerCase() : '';
-  var forwardSlashes: Boolean = !!match[2];
-  var otherSlashes: Boolean = !!match[3];
-  var slashesCount: Number = 0;
-  var rest: String;
+  var match: object = protocolre.exec(address);
+  var protocol: string = match[1] ? match[1].toLowerCase() : '';
+  var forwardSlashes: boolean = !!match[2];
+  var otherSlashes: boolean = !!match[3];
+  var slashesCount: number = 0;
+  var rest: string;
 
   if (forwardSlashes) {
     if (otherSlashes) {
@@ -223,14 +223,14 @@ function extractProtocol(address: String, location: Object): Object {
  * @return {String} Resolved pathname.
  * @private
  */
-function resolve(relative: String, base: String): String {
+function resolve(relative: string, base: string): string {
   if (relative === '') return base;
 
-  var path: Array = (base || '/').split('/').slice(0, -1).concat(relative.split('/'))
-    , i: Number = path.length
-    , last: Number = path[i - 1]
-    , unshift: Boolean = false
-    , up: Number = 0;
+  var path: any[] = (base || '/').split('/').slice(0, -1).concat(relative.split('/'))
+    , i: number = path.length
+    , last: number = path[i - 1]
+    , unshift: boolean = false
+    , up: number = 0;
 
   while (i--) {
     if (path[i] === '.') {
@@ -265,16 +265,16 @@ function resolve(relative: String, base: String): String {
  * @param {Boolean|Function} [parser] Parser for the query string.
  * @private
  */
-function Url(address: String, location: Object, parser: Function): String {
+function Url(address: string, location: object, parser: Function): string {
   if (!(this instanceof Url)) {
     return new Url(address, location, parser);
   }
 
-  var relative: Boolean, extracted: Object, parse: Function, instruction: Function, index: Function, key: String
-    , instructions: Array = rules.slice()
-    , type: String = typeof location
-    , url: String = this
-    , i: Number = 0;
+  var relative: boolean, extracted: object, parse: Function, instruction: Function, index: Function, key: string
+    , instructions: any[] = rules.slice()
+    , type: string = typeof location
+    , url: string = this
+    , i: number = 0;
 
   //
   // The following if statements allows this module two have compatibility with
@@ -447,8 +447,8 @@ function Url(address: String, location: Object, parser: Function): String {
  * @returns {URL} URL instance for chaining.
  * @public
  */
-function set(part: Number, value: String, fn: Boolean): String {
-  var url: String = this;
+function set(part: number, value: string, fn: boolean): string {
+  var url: string = this;
 
   switch (part) {
     case 'query':
@@ -508,7 +508,7 @@ function set(part: Number, value: String, fn: Boolean): String {
     case 'pathname':
     case 'hash':
       if (value && !fn) {
-        var char: String = part === 'pathname' ? '/' : '#';
+        var char: string = part === 'pathname' ? '/' : '#';
         url[part] = value.charAt(0) !== char ? char + value : value;
       } else {
         url[part] = value;
@@ -521,7 +521,7 @@ function set(part: Number, value: String, fn: Boolean): String {
       break;
 
     case 'auth':
-      var index: Number = value.indexOf(':');
+      var index: number = value.indexOf(':');
 
       if (~index) {
         url.username = value.slice(0, index);
@@ -535,7 +535,7 @@ function set(part: Number, value: String, fn: Boolean): String {
   }
 
   for (var i = 0; i < rules.length; i++) {
-    var ins: Object = rules[i];
+    var ins: object = rules[i];
 
     if (ins[4]) url[ins[1]] = url[ins[1]].toLowerCase();
   }
@@ -558,17 +558,17 @@ function set(part: Number, value: String, fn: Boolean): String {
  * @returns {String} Compiled version of the URL.
  * @public
  */
-function toString(stringify: Object): String {
+function toString(stringify: object): string {
   if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
 
-  var query: String
-    , url: String = this
-    , host: String = url.host
-    , protocol: String = url.protocol;
+  var query: string
+    , url: string = this
+    , host: string = url.host
+    , protocol: string = url.protocol;
 
   if (protocol && protocol.charAt(protocol.length - 1) !== ':') protocol += ':';
 
-  var result: String =
+  var result: string =
     protocol +
     ((protocol && url.slashes) || isSpecial(protocol) ? '//' : '');
 

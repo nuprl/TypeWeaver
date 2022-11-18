@@ -2,11 +2,11 @@
 
 import utils from './utils';
 
-export default (ast: Array, options: Object = {}) => {
-  let stringify: Function = (node: Object, parent: Array = {}) => {
-    let invalidBlock: Boolean = options.escapeInvalid && utils.isInvalidBrace(parent);
-    let invalidNode: Boolean = node.invalid === true && options.escapeInvalid === true;
-    let output: String = '';
+export default (ast: any[], options: object = {}) => {
+  let stringify: Function = (node: object, parent: any[] = {}) => {
+    let invalidBlock: boolean = options.escapeInvalid && utils.isInvalidBrace(parent);
+    let invalidNode: boolean = node.invalid === true && options.escapeInvalid === true;
+    let output: string = '';
 
     if (node.value) {
       if ((invalidBlock || invalidNode) && utils.isOpenOrClose(node)) {

@@ -15,7 +15,7 @@ lp.parseTopLevel = function() {
 }
 
 lp.parseStatement = function() {
-  let starttype: String = this.tok.type, node: TokContext = this.startNode(), kind: String
+  let starttype: string = this.tok.type, node: TokContext = this.startNode(), kind: string
 
   if (this.toks.isLet()) {
     starttype = tt._var
@@ -25,7 +25,7 @@ lp.parseStatement = function() {
   switch (starttype) {
   case tt._break: case tt._continue:
     this.next()
-    let isBreak: Boolean = starttype === tt._break
+    let isBreak: boolean = starttype === tt._break
     if (this.semicolon() || this.canInsertSemicolon()) {
       node.label = null
     } else {
@@ -48,12 +48,12 @@ lp.parseStatement = function() {
 
   case tt._for:
     this.next() // `for` keyword
-    let isAwait: Boolean = this.options.ecmaVersion >= 9 && this.eatContextual("await")
+    let isAwait: boolean = this.options.ecmaVersion >= 9 && this.eatContextual("await")
 
     this.pushCx()
     this.expect(tt.parenL)
     if (this.tok.type === tt.semi) return this.parseFor(node, null)
-    let isLet: Boolean = this.toks.isLet()
+    let isLet: boolean = this.toks.isLet()
     if (isLet || this.tok.type === tt._var || this.tok.type === tt._const) {
       let init: Position = this.parseVar(this.startNode(), true, isLet ? "let" : this.tok.value)
       if (init.declarations.length === 1 && (this.tok.type === tt._in || this.isContextual("of"))) {
@@ -101,7 +101,7 @@ lp.parseStatement = function() {
     let cur: Parser
     while (!this.closes(tt.braceR, blockIndent, line, true)) {
       if (this.tok.type === tt._case || this.tok.type === tt._default) {
-        let isCase: Boolean = this.tok.type === tt._case
+        let isCase: boolean = this.tok.type === tt._case
         if (cur) this.finishNode(cur, "SwitchCase")
         node.cases.push(cur = this.startNode())
         cur.consequent = []
@@ -177,7 +177,7 @@ lp.parseStatement = function() {
 
   case tt._import:
     if (this.options.ecmaVersion > 10) {
-      const nextType: String = this.lookAhead(1).type
+      const nextType: string = this.lookAhead(1).type
       if (nextType === tt.parenL || nextType === tt.dot) {
         node.expression = this.parseExpression()
         this.semicolon()
@@ -226,7 +226,7 @@ lp.parseBlock = function() {
   return this.finishNode(node, "BlockStatement")
 }
 
-lp.parseFor = function(node: TokenType, init: Boolean) {
+lp.parseFor = function(node: TokenType, init: boolean) {
   node.init = init
   node.test = node.update = null
   if (this.eat(tt.semi) && this.tok.type !== tt.semi) node.test = this.parseExpression()
@@ -237,8 +237,8 @@ lp.parseFor = function(node: TokenType, init: Boolean) {
   return this.finishNode(node, "ForStatement")
 }
 
-lp.parseForIn = function(node: String, init: Number) {
-  let type: String = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
+lp.parseForIn = function(node: string, init: number) {
+  let type: string = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
   this.next()
   node.left = init
   node.right = this.parseExpression()
@@ -248,7 +248,7 @@ lp.parseForIn = function(node: String, init: Number) {
   return this.finishNode(node, type)
 }
 
-lp.parseVar = function(node: TokenType, noIn: Boolean, kind: String) {
+lp.parseVar = function(node: TokenType, noIn: boolean, kind: string) {
   node.kind = kind
   this.next()
   node.declarations = []
@@ -267,7 +267,7 @@ lp.parseVar = function(node: TokenType, noIn: Boolean, kind: String) {
   return this.finishNode(node, "VariableDeclaration")
 }
 
-lp.parseClass = function(isStatement: Boolean) {
+lp.parseClass = function(isStatement: boolean) {
   let node: TokenType = this.startNode()
   this.next()
   if (this.tok.type === tt.name) node.id = this.parseIdent()
@@ -277,7 +277,7 @@ lp.parseClass = function(isStatement: Boolean) {
   node.body = this.startNode()
   node.body.body = []
   this.pushCx()
-  let indent: String = this.curIndent + 1, line: Position = this.curLineStart
+  let indent: string = this.curIndent + 1, line: Position = this.curLineStart
   this.eat(tt.braceL)
   if (this.curIndent + 1 < indent) { indent = this.curIndent; line = this.curLineStart }
   while (!this.closes(tt.braceR, indent, line)) {
@@ -300,14 +300,14 @@ lp.parseClassElement = function() {
   if (this.eat(tt.semi)) return null
 
   const {ecmaVersion, locations} = this.options
-  const indent: Number = this.curIndent
+  const indent: number = this.curIndent
   const line: Position = this.curLineStart
   const node: Found = this.startNode()
-  let keyName: String = ""
-  let isGenerator: Boolean = false
-  let isAsync: Boolean = false
-  let kind: String = "method"
-  let isStatic: Boolean = false
+  let keyName: string = ""
+  let isGenerator: boolean = false
+  let isAsync: boolean = false
+  let kind: string = "method"
+  let isStatic: boolean = false
 
   if (this.eatContextual("static")) {
     // Parse static init block
@@ -331,7 +331,7 @@ lp.parseClassElement = function() {
   }
   if (!keyName) {
     isGenerator = this.eat(tt.star)
-    const lastValue: String = this.toks.value
+    const lastValue: string = this.toks.value
     if (this.eatContextual("get") || this.eatContextual("set")) {
       if (this.isClassElementNameStart()) {
         kind = lastValue
@@ -364,7 +364,7 @@ lp.parseClassElement = function() {
   // Parse element value
   if (ecmaVersion < 13 || this.toks.type === tt.parenL || kind !== "method" || isGenerator || isAsync) {
     // Method
-    const isConstructor: Boolean =
+    const isConstructor: boolean =
       !node.computed &&
       !node.static &&
       !isGenerator &&
@@ -383,7 +383,7 @@ lp.parseClassElement = function() {
         // Estimated the next line is the next class element by indentations.
         node.value = null
       } else {
-        const oldInAsync: String = this.inAsync
+        const oldInAsync: string = this.inAsync
         const oldInGenerator: Position = this.inGenerator
         this.inAsync = false
         this.inGenerator = false
@@ -426,8 +426,8 @@ lp.parseClassElementName = function(element: LooseParser) {
   }
 }
 
-lp.parseFunction = function(node: TokenType, isStatement: Boolean, isAsync: Boolean) {
-  let oldInAsync: String = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: Boolean = this.inFunction
+lp.parseFunction = function(node: TokenType, isStatement: boolean, isAsync: boolean) {
+  let oldInAsync: string = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: boolean = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6) {
     node.generator = this.eat(tt.star)
@@ -466,7 +466,7 @@ lp.parseExport = function() {
   }
   if (this.eat(tt._default)) {
     // export default (function foo() {}) // This is FunctionExpression.
-    let isAsync: Boolean
+    let isAsync: boolean
     if (this.tok.type === tt._function || (isAsync = this.toks.isAsyncFunction())) {
       let fNode: TokenType = this.startNode()
       this.next()
@@ -516,14 +516,14 @@ lp.parseImport = function() {
 }
 
 lp.parseImportSpecifiers = function() {
-  let elts: Array = []
+  let elts: any[] = []
   if (this.tok.type === tt.star) {
     let elt: Position = this.startNode()
     this.next()
     elt.local = this.eatContextual("as") ? this.parseIdent() : this.dummyIdent()
     elts.push(this.finishNode(elt, "ImportNamespaceSpecifier"))
   } else {
-    let indent: String = this.curIndent, line: Position = this.curLineStart, continuedLine: Number = this.nextLineStart
+    let indent: string = this.curIndent, line: Position = this.curLineStart, continuedLine: number = this.nextLineStart
     this.pushCx()
     this.eat(tt.braceL)
     if (this.curLineStart > continuedLine) continuedLine = this.curLineStart
@@ -549,8 +549,8 @@ lp.parseImportSpecifiers = function() {
 }
 
 lp.parseExportSpecifierList = function() {
-  let elts: Array = []
-  let indent: String = this.curIndent, line: Position = this.curLineStart, continuedLine: Number = this.nextLineStart
+  let elts: any[] = []
+  let indent: string = this.curIndent, line: Position = this.curLineStart, continuedLine: number = this.nextLineStart
   this.pushCx()
   this.eat(tt.braceL)
   if (this.curLineStart > continuedLine) continuedLine = this.curLineStart

@@ -1,5 +1,5 @@
 /** Used to map HTML entities to characters. */
-const htmlUnescapes: Object = {
+const htmlUnescapes: object = {
   '&amp;': '&',
   '&lt;': '<',
   '&gt;': '>',
@@ -9,7 +9,7 @@ const htmlUnescapes: Object = {
 
 /** Used to match HTML entities and HTML characters. */
 const reEscapedHtml: RegExp = /&(?:amp|lt|gt|quot|#(0+)?39);/g
-const reHasEscapedHtml: Number = RegExp(reEscapedHtml.source)
+const reHasEscapedHtml: number = RegExp(reEscapedHtml.source)
 
 /**
  * The inverse of `escape`this method converts the HTML entities
@@ -29,9 +29,9 @@ const reHasEscapedHtml: Number = RegExp(reEscapedHtml.source)
  * unescape('fred, barney, &amp; pebbles')
  * // => 'fred, barney, & pebbles'
  */
-function unescape(string: String): String {
+function unescape(string: string): string {
   return (string && reHasEscapedHtml.test(string))
-    ? string.replace(reEscapedHtml, (entity: Number) => (htmlUnescapes[entity] || "'"))
+    ? string.replace(reEscapedHtml, (entity: number) => (htmlUnescapes[entity] || "'"))
     : (string || '')
 }
 

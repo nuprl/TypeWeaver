@@ -5,18 +5,18 @@ import { join } from 'path';
 import { resolve } from 'path';
 import { dirname } from 'path';
 
-var defaultOptions: Object = {
+var defaultOptions: object = {
   extensions: ['js', 'json', 'coffee'],
   recurse: true,
-  rename: function (name: String) {
+  rename: function (name: string) {
     return name;
   },
-  visit: function (obj: String) {
+  visit: function (obj: string) {
     return obj;
   }
 };
 
-function checkFileInclusion(path: String, filename: String, options: HTMLElement): Boolean {
+function checkFileInclusion(path: string, filename: string, options: HTMLElement): boolean {
   return (
     // verify file has valid extension
     (new RegExp('\\.(' + options.extensions.join('|') + ')$', 'i').test(filename)) &&
@@ -35,8 +35,8 @@ function checkFileInclusion(path: String, filename: String, options: HTMLElement
   );
 }
 
-function requireDirectory(m: HTMLElement, path: String, options: Array): Object {
-  var retval: Object = {};
+function requireDirectory(m: HTMLElement, path: string, options: any[]): object {
+  var retval: object = {};
 
   // path is optional
   if (path && !options && typeof path !== 'string') {
@@ -57,11 +57,11 @@ function requireDirectory(m: HTMLElement, path: String, options: Array): Object 
   path = !path ? dirname(m.filename) : resolve(dirname(m.filename), path);
 
   // get the path of each file in specified directory, append to current tree node, recurse
-  fs.readdirSync(path).forEach(function (filename: String) {
-    var joined: String = join(path, filename),
+  fs.readdirSync(path).forEach(function (filename: string) {
+    var joined: string = join(path, filename),
       files: Function,
-      key: String,
-      obj: String;
+      key: string,
+      obj: string;
 
     if (fs.statSync(joined).isDirectory() && options.recurse) {
       // this node is a directory; recurse
@@ -84,4 +84,4 @@ function requireDirectory(m: HTMLElement, path: String, options: Array): Object 
 }
 
 export default requireDirectory;
-export const defaults: Object = defaultOptions;
+export const defaults: object = defaultOptions;

@@ -1,6 +1,4 @@
-index.ts(9,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(16,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(17,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(10,38): error TS2339: Property 'PassThrough' does not exist on type 'any[]'.
 index.ts(21,53): error TS2339: Property 'pipe' does not exist on type 'HTMLElement'.
 index.ts(24,5): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(27,34): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
@@ -10,7 +8,7 @@ index.ts(30,13): error TS2339: Property 'objectMode' does not exist on type 'HTM
 index.ts(32,15): error TS2339: Property 'highWaterMark' does not exist on type 'HTMLElement'.
 index.ts(33,13): error TS2339: Property 'highWaterMark' does not exist on type 'HTMLElement'.
 index.ts(45,28): error TS2304: Cannot find name 'Void'.
-index.ts(51,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(60,9): error TS2322: Type 'number' is not assignable to type 'string'.
 index.ts(62,23): error TS2304: Cannot find name 'Void'.
 index.ts(63,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(71,26): error TS2304: Cannot find name 'Void'.
@@ -31,13 +29,13 @@ index.ts(111,20): error TS2551: Property 'end' does not exist on type 'WebSocket
 index.ts(115,16): error TS2339: Property 'setMaxListeners' does not exist on type 'WebSocket'.
 index.ts(116,16): error TS2339: Property 'add' does not exist on type 'WebSocket'.
 index.ts(117,16): error TS2339: Property 'on' does not exist on type 'WebSocket'.
-index.ts(118,12): error TS2339: Property 'emit' does not exist on type 'Boolean'.
+index.ts(118,12): error TS2339: Property 'emit' does not exist on type 'boolean'.
 index.ts(124,3): error TS2740: Type 'WebSocket' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 157 more.
-index.ts(131,18): error TS2339: Property '_readableState' does not exist on type 'Object'.
-index.ts(131,44): error TS2339: Property 'pipe' does not exist on type 'Object'.
-index.ts(132,25): error TS2339: Property 'pipe' does not exist on type 'Object'.
-index.ts(134,18): error TS2339: Property '_readableState' does not exist on type 'Object'.
-index.ts(134,45): error TS2339: Property 'pause' does not exist on type 'Object'.
-index.ts(134,63): error TS2339: Property 'pipe' does not exist on type 'Object'.
-index.ts(137,13): error TS2339: Property 'pause' does not exist on type 'Object'.
+index.ts(131,18): error TS2339: Property '_readableState' does not exist on type 'object'.
+index.ts(131,44): error TS2339: Property 'pipe' does not exist on type 'object'.
+index.ts(132,25): error TS2339: Property 'pipe' does not exist on type 'object'.
+index.ts(134,18): error TS2339: Property '_readableState' does not exist on type 'object'.
+index.ts(134,45): error TS2339: Property 'pause' does not exist on type 'object'.
+index.ts(134,63): error TS2339: Property 'pipe' does not exist on type 'object'.
+index.ts(137,13): error TS2339: Property 'pause' does not exist on type 'object'.
 

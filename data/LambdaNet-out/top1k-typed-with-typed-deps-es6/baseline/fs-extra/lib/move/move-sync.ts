@@ -7,9 +7,9 @@ import { removeSync } from '../remove';
 import { mkdirpSync } from '../mkdirs';
 import stat from '../util/stat';
 
-function moveSync (src: String, dest: String, opts: Object): Promise {
+function moveSync (src: string, dest: string, opts: object): Promise {
   opts = opts || {}
-  const overwrite: Number = opts.overwrite || opts.clobber || false
+  const overwrite: number = opts.overwrite || opts.clobber || false
 
   const { srcStat, isChangingCase = false } = stat.checkPathsSync(src, dest, 'move', opts)
   stat.checkParentPathsSync(src, srcStat, dest, 'move')
@@ -17,13 +17,13 @@ function moveSync (src: String, dest: String, opts: Object): Promise {
   return doRename(src, dest, overwrite, isChangingCase)
 }
 
-function isParentRoot (dest: String): Boolean {
-  const parent: Number = path.dirname(dest)
-  const parsedPath: String = path.parse(parent)
+function isParentRoot (dest: string): boolean {
+  const parent: number = path.dirname(dest)
+  const parsedPath: string = path.parse(parent)
   return parsedPath.root === parent
 }
 
-function doRename (src: String, dest: String, overwrite: String, isChangingCase: Boolean): String {
+function doRename (src: string, dest: string, overwrite: string, isChangingCase: boolean): string {
   if (isChangingCase) return rename(src, dest, overwrite)
   if (overwrite) {
     removeSync(dest)
@@ -33,7 +33,7 @@ function doRename (src: String, dest: String, overwrite: String, isChangingCase:
   return rename(src, dest, overwrite)
 }
 
-function rename (src: String, dest: String, overwrite: String): Void {
+function rename (src: string, dest: string, overwrite: string): Void {
   try {
     fs.renameSync(src, dest)
   } catch (err) {
@@ -42,8 +42,8 @@ function rename (src: String, dest: String, overwrite: String): Void {
   }
 }
 
-function moveAcrossDevice (src: String, dest: Number, overwrite: Number): Promise {
-  const opts: Object = {
+function moveAcrossDevice (src: string, dest: number, overwrite: number): Promise {
+  const opts: object = {
     overwrite,
     errorOnExist: true
   }

@@ -1,13 +1,13 @@
 'use strict';
 
 var inspect: Function = require('../');
-var Buffer: Array = require('safer-buffer').Buffer;
+var Buffer: any[] = require('safer-buffer').Buffer;
 
-var holes: Array = ['a', 'b'];
+var holes: any[] = ['a', 'b'];
 holes[4] = 'e';
 holes[6] = 'g';
 
-var obj: Object = {
+var obj: object = {
     a: 1,
     b: [3, 4, undefined, null],
     c: undefined,

@@ -26,7 +26,7 @@ import baseUnset from './.internal/baseUnset.js'
  * console.log(object)
  * // => { 'a': [{ 'b': {} }] }
  */
-function unset(object: Object, path: String): Boolean {
+function unset(object: object, path: string): boolean {
   return object == null ? true : baseUnset(object, path)
 }
 

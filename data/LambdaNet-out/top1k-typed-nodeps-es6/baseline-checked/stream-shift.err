@@ -3,5 +3,10 @@ index.ts(6,14): error TS2339: Property 'objectMode' does not exist on type 'Date
 index.ts(6,42): error TS2339: Property '_duplexState' does not exist on type 'Function'.
 index.ts(6,78): error TS2339: Property 'read' does not exist on type 'Function'.
 index.ts(6,94): error TS2339: Property 'read' does not exist on type 'Function'.
-index.ts(9,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(6,114): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'any[]'.
+  Type 'Date' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+index.ts(10,13): error TS2339: Property 'buffer' does not exist on type 'any[]'.
+index.ts(12,15): error TS2339: Property 'buffer' does not exist on type 'any[]'.
+index.ts(13,20): error TS2339: Property 'buffer' does not exist on type 'any[]'.
+index.ts(16,18): error TS2339: Property 'buffer' does not exist on type 'any[]'.
 

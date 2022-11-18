@@ -16,7 +16,7 @@ import isObjectLike from './isObjectLike.js'
  * isWeakMap(new Map)
  * // => false
  */
-function isWeakMap(value: String): Boolean {
+function isWeakMap(value: string): boolean {
   return isObjectLike(value) && getTag(value) == '[object WeakMap]'
 }
 

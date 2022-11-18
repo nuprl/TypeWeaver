@@ -6,8 +6,8 @@ import parser from './parser.js';
 * @typedef {"LEFT_SIDE"|"RIGHT_SIDE"} Side
 */
 
-const LEFT_SIDE: String = 'LEFT_SIDE';
-const RIGHT_SIDE: String = 'RIGHT_SIDE';
+const LEFT_SIDE: string = 'LEFT_SIDE';
+const RIGHT_SIDE: string = 'RIGHT_SIDE';
 
 /**
  * @external AST
@@ -32,8 +32,8 @@ const RIGHT_SIDE: String = 'RIGHT_SIDE';
  * @param {string} key
  * @returns {undefined|boolean|string|number|external:AST}
  */
-function getPath(obj: Object, key: String): Object {
-    const keys: Array = key.split('.');
+function getPath(obj: object, key: string): object {
+    const keys: any[] = key.split('.');
     for (const key of keys) {
         if (obj == null) { return obj; }
         obj = obj[key];
@@ -49,11 +49,11 @@ function getPath(obj: Object, key: String): Object {
  * @param {string[]} path
  * @returns {boolean}
  */
-function inPath(node: Object, ancestor: Object, path: String): Boolean {
+function inPath(node: object, ancestor: object, path: string): boolean {
     if (path.length === 0) { return node === ancestor; }
     if (ancestor == null) { return false; }
-    const field: Array = ancestor[path[0]];
-    const remainingPath: String = path.slice(1);
+    const field: any[] = ancestor[path[0]];
+    const remainingPath: string = path.slice(1);
     if (Array.isArray(field)) {
         for (const component of field) {
             if (inPath(node, component, remainingPath)) { return true; }
@@ -86,7 +86,7 @@ function inPath(node: Object, ancestor: Object, path: String): Boolean {
  * selector value type)
  * @returns {boolean}
  */
-function matches(node: Object, selector: Object, ancestry: Array, options: Object): Boolean {
+function matches(node: object, selector: object, ancestry: any[], options: object): boolean {
     if (!selector) { return true; }
     if (!node) { return false; }
     if (!ancestry) { ancestry = []; }
@@ -99,8 +99,8 @@ function matches(node: Object, selector: Object, ancestry: Array, options: Objec
             return selector.value.toLowerCase() === node.type.toLowerCase();
 
         case 'field': {
-            const path: String = selector.name.split('.');
-            const ancestor: String = ancestry[path.length - 1];
+            const path: string = selector.name.split('.');
+            const ancestor: string = ancestry[path.length - 1];
             return inPath(node, ancestor, path);
 
         }
@@ -123,9 +123,9 @@ function matches(node: Object, selector: Object, ancestry: Array, options: Objec
             return true;
 
         case 'has': {
-            const collector: Array = [];
+            const collector: any[] = [];
             for (const sel of selector.selectors) {
-                const a: Array = [];
+                const a: any[] = [];
                 estraverse.traverse(node, {
                     enter (node, parent) {
                         if (parent != null) { a.unshift(parent); }
@@ -158,7 +158,7 @@ function matches(node: Object, selector: Object, ancestry: Array, options: Objec
             return false;
 
         case 'attribute': {
-            const p: Number = getPath(node, selector.name);
+            const p: number = getPath(node, selector.name);
             switch (selector.operator) {
                 case void 0:
                     return p != null;
@@ -204,7 +204,7 @@ function matches(node: Object, selector: Object, ancestry: Array, options: Objec
 
         case 'nth-last-child':
             return matches(node, selector.right, ancestry, options) &&
-                nthChild(node, ancestry, function (length: Number) {
+                nthChild(node, ancestry, function (length: number) {
                     return length - selector.index.value;
                 }, options);
 
@@ -243,8 +243,8 @@ function matches(node: Object, selector: Object, ancestry: Array, options: Objec
  * @param {ESQueryOptions|undefined} options
  * @returns {string[]} Visitor keys of the node.
  */
-function getVisitorKeys(node: Object, options: Object): Array {
-    const nodeType: String = node.type;
+function getVisitorKeys(node: object, options: object): any[] {
+    const nodeType: string = node.type;
     if (options && options.visitorKeys && options.visitorKeys[nodeType]) {
         return options.visitorKeys[nodeType];
     }
@@ -255,7 +255,7 @@ function getVisitorKeys(node: Object, options: Object): Array {
         return options.fallback(node);
     }
     // 'iteration' fallback
-    return Object.keys(node).filter(function (key: String) {
+    return Object.keys(node).filter(function (key: string) {
         return key !== 'type';
     });
 }
@@ -266,7 +266,7 @@ function getVisitorKeys(node: Object, options: Object): Array {
  * @param {any} node The value to check.
  * @returns {boolean} `true` if the value is an ASTNode.
  */
-function isNode(node: Object): Boolean {
+function isNode(node: object): boolean {
     return node !== null && typeof node === 'object' && typeof node.type === 'string';
 }
 
@@ -280,16 +280,16 @@ function isNode(node: Object): Boolean {
  * @param {ESQueryOptions|undefined} options
  * @returns {boolean}
  */
-function sibling(node: Function, selector: String, ancestry: Array, side: Number, options: Object): Boolean {
+function sibling(node: Function, selector: string, ancestry: any[], side: number, options: object): boolean {
     const [parent] = ancestry;
     if (!parent) { return false; }
-    const keys: Array = getVisitorKeys(parent, options);
+    const keys: any[] = getVisitorKeys(parent, options);
     for (const key of keys) {
-        const listProp: Array = parent[key];
+        const listProp: any[] = parent[key];
         if (Array.isArray(listProp)) {
-            const startIndex: Number = listProp.indexOf(node);
+            const startIndex: number = listProp.indexOf(node);
             if (startIndex < 0) { continue; }
-            let lowerBound: Number, upperBound: Number;
+            let lowerBound: number, upperBound: number;
             if (side === LEFT_SIDE) {
                 lowerBound = 0;
                 upperBound = startIndex;
@@ -317,14 +317,14 @@ function sibling(node: Function, selector: String, ancestry: Array, side: Number
  * @param {ESQueryOptions|undefined} options
  * @returns {boolean}
  */
-function adjacent(node: Function, selector: String, ancestry: Array, side: Number, options: Object): Boolean {
+function adjacent(node: Function, selector: string, ancestry: any[], side: number, options: object): boolean {
     const [parent] = ancestry;
     if (!parent) { return false; }
-    const keys: Array = getVisitorKeys(parent, options);
+    const keys: any[] = getVisitorKeys(parent, options);
     for (const key of keys) {
-        const listProp: Array = parent[key];
+        const listProp: any[] = parent[key];
         if (Array.isArray(listProp)) {
-            const idx: Number = listProp.indexOf(node);
+            const idx: number = listProp.indexOf(node);
             if (idx < 0) { continue; }
             if (side === LEFT_SIDE && idx > 0 && isNode(listProp[idx - 1]) && matches(listProp[idx - 1], selector, ancestry, options)) {
                 return true;
@@ -352,14 +352,14 @@ function adjacent(node: Function, selector: String, ancestry: Array, side: Numbe
  * @param {ESQueryOptions|undefined} options
  * @returns {boolean}
  */
-function nthChild(node: String, ancestry: Array, idxFn: Function, options: Object): Boolean {
+function nthChild(node: string, ancestry: any[], idxFn: Function, options: object): boolean {
     const [parent] = ancestry;
     if (!parent) { return false; }
-    const keys: Array = getVisitorKeys(parent, options);
+    const keys: any[] = getVisitorKeys(parent, options);
     for (const key of keys) {
-        const listProp: String = parent[key];
+        const listProp: string = parent[key];
         if (Array.isArray(listProp)) {
-            const idx: Number = listProp.indexOf(node);
+            const idx: number = listProp.indexOf(node);
             if (idx >= 0 && idx === idxFn(listProp.length)) { return true; }
         }
     }
@@ -373,10 +373,10 @@ function nthChild(node: String, ancestry: Array, idxFn: Function, options: Objec
  * @param {SelectorAST} [ancestor] Defaults to `selector`
  * @returns {SelectorAST[]}
  */
-function subjects(selector: Function, ancestor: String): Array {
+function subjects(selector: Function, ancestor: string): any[] {
     if (selector == null || typeof selector != 'object') { return []; }
     if (ancestor == null) { ancestor = selector; }
-    const results: Array = selector.subject ? [ancestor] : [];
+    const results: any[] = selector.subject ? [ancestor] : [];
     for (const [p, sel] of Object.entries(selector)) {
         results.push(...subjects(sel, p === 'left' ? sel : ancestor));
     }
@@ -399,9 +399,9 @@ function subjects(selector: Function, ancestor: String): Array {
  * @param {ESQueryOptions} [options]
  * @returns {external:AST[]}
  */
-function traverse(ast: Function, selector: Number, visitor: String, options: Object): Void {
+function traverse(ast: Function, selector: number, visitor: string, options: object): Void {
     if (!selector) { return; }
-    const ancestry: Array = [];
+    const ancestry: any[] = [];
     const altSubjects: Function = subjects(selector);
     estraverse.traverse(ast, {
         enter (node, parent) {
@@ -439,9 +439,9 @@ function traverse(ast: Function, selector: Number, visitor: String, options: Obj
  * @param {ESQueryOptions} [options]
  * @returns {external:AST[]}
  */
-function match(ast: String, selector: String, options: Object): Array {
-    const results: Array = [];
-    traverse(ast, selector, function (node: Object) {
+function match(ast: string, selector: string, options: object): any[] {
+    const results: any[] = [];
+    traverse(ast, selector, function (node: object) {
         results.push(node);
     }, options);
     return results;
@@ -452,7 +452,7 @@ function match(ast: String, selector: String, options: Object): Array {
  * @param {string} selector
  * @returns {SelectorAST}
  */
-function parse(selector: String): Void {
+function parse(selector: string): Void {
     return parser.parse(selector);
 }
 
@@ -463,7 +463,7 @@ function parse(selector: String): Void {
  * @param {ESQueryOptions} [options]
  * @returns {external:AST[]}
  */
-function query(ast: String, selector: String, options: Object): String {
+function query(ast: string, selector: string, options: object): string {
     return match(ast, parse(selector), options);
 }
 

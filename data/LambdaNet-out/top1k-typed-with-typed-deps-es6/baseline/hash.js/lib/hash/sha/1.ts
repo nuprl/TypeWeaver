@@ -4,18 +4,18 @@ import utils from '../utils';
 import common from '../common';
 import shaCommon from './common';
 
-var rotl32: Object = utils.rotl32;
-var sum32: Object = utils.sum32;
+var rotl32: object = utils.rotl32;
+var sum32: object = utils.sum32;
 var sum32_5: Function = utils.sum32_5;
 var ft_1: Function = shaCommon.ft_1;
 var BlockHash: Function = common.BlockHash;
 
-var sha1_K: Array = [
+var sha1_K: any[] = [
   0x5A827999, 0x6ED9EBA1,
   0x8F1BBCDC, 0xCA62C1D6
 ];
 
-function SHA1(): String {
+function SHA1(): string {
   if (!(this instanceof SHA1))
     return new SHA1();
 
@@ -34,8 +34,8 @@ SHA1.outSize = 160;
 SHA1.hmacStrength = 80;
 SHA1.padLength = 64;
 
-SHA1.prototype._update = function _update(msg: Object, start: Number): Void {
-  var W: Array = this.W;
+SHA1.prototype._update = function _update(msg: object, start: number): Void {
+  var W: any[] = this.W;
 
   for (var i = 0; i < 16; i++)
     W[i] = msg[start + i];
@@ -43,15 +43,15 @@ SHA1.prototype._update = function _update(msg: Object, start: Number): Void {
   for(; i < W.length; i++)
     W[i] = rotl32(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16], 1);
 
-  var a: String = this.h[0];
-  var b: String = this.h[1];
-  var c: String = this.h[2];
-  var d: String = this.h[3];
-  var e: String = this.h[4];
+  var a: string = this.h[0];
+  var b: string = this.h[1];
+  var c: string = this.h[2];
+  var d: string = this.h[3];
+  var e: string = this.h[4];
 
   for (i = 0; i < W.length; i++) {
-    var s: Number = ~~(i / 20);
-    var t: String = sum32_5(rotl32(a, 5), ft_1(s, b, c, d), e, W[i], sha1_K[s]);
+    var s: number = ~~(i / 20);
+    var t: string = sum32_5(rotl32(a, 5), ft_1(s, b, c, d), e, W[i], sha1_K[s]);
     e = d;
     d = c;
     c = rotl32(b, 30);
@@ -66,7 +66,7 @@ SHA1.prototype._update = function _update(msg: Object, start: Number): Void {
   this.h[4] = sum32(this.h[4], e);
 };
 
-SHA1.prototype._digest = function digest(enc: Number): String {
+SHA1.prototype._digest = function digest(enc: number): string {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

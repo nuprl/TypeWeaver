@@ -5,9 +5,9 @@
 import readdirp from '..';
 
 const read: Function = async (directory: HTMLElement) => {
-  const stream: Array = readdirp(directory, {type: 'all'});
-  let i: Number = 0;
-  const start: Number = Date.now();
+  const stream: any[] = readdirp(directory, {type: 'all'});
+  let i: number = 0;
+  const start: number = Date.now();
   for await (const chunk of stream) {
     i++;
     // Check memory usage with this line. It should be 10MB or so.

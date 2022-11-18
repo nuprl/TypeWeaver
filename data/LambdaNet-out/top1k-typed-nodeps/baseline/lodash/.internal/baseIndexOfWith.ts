@@ -8,8 +8,8 @@
  * @param {Function} comparator The comparator invoked per element.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseIndexOfWith(array: Array, value: Number, fromIndex: Number, comparator: Function): Number {
-  let index: Number = fromIndex - 1
+function baseIndexOfWith(array: any[], value: number, fromIndex: number, comparator: Function): number {
+  let index: number = fromIndex - 1
   const { length } = array
 
   while (++index < length) {

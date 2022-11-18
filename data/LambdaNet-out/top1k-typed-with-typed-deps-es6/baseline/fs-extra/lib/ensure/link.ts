@@ -7,27 +7,27 @@ import mkdir from '../mkdirs';
 import { pathExists } from '../path-exists';
 import { areIdentical } from '../util/stat';
 
-function createLink (srcpath: String, dstpath: String, callback: Function): Void {
-  function makeLink (srcpath: String, dstpath: String): Void {
-    fs.link(srcpath, dstpath, (err: String) => {
+function createLink (srcpath: string, dstpath: string, callback: Function): Void {
+  function makeLink (srcpath: string, dstpath: string): Void {
+    fs.link(srcpath, dstpath, (err: string) => {
       if (err) return callback(err)
       callback(null)
     })
   }
 
-  fs.lstat(dstpath, (_: Function, dstStat: Boolean) => {
-    fs.lstat(srcpath, (err: Map, srcStat: Number) => {
+  fs.lstat(dstpath, (_: Function, dstStat: boolean) => {
+    fs.lstat(srcpath, (err: Map, srcStat: number) => {
       if (err) {
         err.message = err.message.replace('lstat', 'ensureLink')
         return callback(err)
       }
       if (dstStat && areIdentical(srcStat, dstStat)) return callback(null)
 
-      const dir: String = path.dirname(dstpath)
-      pathExists(dir, (err: Function, dirExists: Boolean) => {
+      const dir: string = path.dirname(dstpath)
+      pathExists(dir, (err: Function, dirExists: boolean) => {
         if (err) return callback(err)
         if (dirExists) return makeLink(srcpath, dstpath)
-        mkdir.mkdirs(dir, (err: String) => {
+        mkdir.mkdirs(dir, (err: string) => {
           if (err) return callback(err)
           makeLink(srcpath, dstpath)
         })
@@ -36,22 +36,22 @@ function createLink (srcpath: String, dstpath: String, callback: Function): Void
   })
 }
 
-function createLinkSync (srcpath: String, dstpath: String): Boolean {
-  let dstStat: Number
+function createLinkSync (srcpath: string, dstpath: string): boolean {
+  let dstStat: number
   try {
     dstStat = fs.lstatSync(dstpath)
   } catch {}
 
   try {
-    const srcStat: String = fs.lstatSync(srcpath)
+    const srcStat: string = fs.lstatSync(srcpath)
     if (dstStat && areIdentical(srcStat, dstStat)) return
   } catch (err) {
     err.message = err.message.replace('lstat', 'ensureLink')
     throw err
   }
 
-  const dir: String = path.dirname(dstpath)
-  const dirExists: Boolean = fs.existsSync(dir)
+  const dir: string = path.dirname(dstpath)
+  const dirExists: boolean = fs.existsSync(dir)
   if (dirExists) return fs.linkSync(srcpath, dstpath)
   mkdir.mkdirsSync(dir)
 

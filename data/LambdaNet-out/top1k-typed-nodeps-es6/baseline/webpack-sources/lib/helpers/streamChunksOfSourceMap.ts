@@ -11,13 +11,13 @@ import readMappings from './readMappings';
 import splitIntoLines from './splitIntoLines';
 
 const streamChunksOfSourceMapFull: Function = (
-	source: String,
+	source: string,
 	sourceMap: CachedSource,
-	onChunk: Object,
+	onChunk: object,
 	onSource: Function,
 	onName: Function
 ) => {
-	const lines: Array = splitIntoLines(source);
+	const lines: any[] = splitIntoLines(source);
 	if (lines.length === 0) {
 		return {
 			generatedLine: 1,
@@ -38,33 +38,33 @@ const streamChunksOfSourceMapFull: Function = (
 		}
 	}
 
-	const lastLine: Array = lines[lines.length - 1];
-	const lastNewLine: Boolean = lastLine.endsWith("\n");
-	const finalLine: Number = lastNewLine ? lines.length + 1 : lines.length;
-	const finalColumn: Number = lastNewLine ? 0 : lastLine.length;
+	const lastLine: any[] = lines[lines.length - 1];
+	const lastNewLine: boolean = lastLine.endsWith("\n");
+	const finalLine: number = lastNewLine ? lines.length + 1 : lines.length;
+	const finalColumn: number = lastNewLine ? 0 : lastLine.length;
 
-	let currentGeneratedLine: Number = 1;
-	let currentGeneratedColumn: Number = 0;
+	let currentGeneratedLine: number = 1;
+	let currentGeneratedColumn: number = 0;
 
-	let mappingActive: Boolean = false;
-	let activeMappingSourceIndex: Number = -1;
-	let activeMappingOriginalLine: Number = -1;
-	let activeMappingOriginalColumn: Number = -1;
-	let activeMappingNameIndex: String = -1;
+	let mappingActive: boolean = false;
+	let activeMappingSourceIndex: number = -1;
+	let activeMappingOriginalLine: number = -1;
+	let activeMappingOriginalColumn: number = -1;
+	let activeMappingNameIndex: string = -1;
 
 	const onMapping: Function = (
-		generatedLine: Number,
-		generatedColumn: Boolean,
-		sourceIndex: Number,
-		originalLine: Number,
-		originalColumn: Number,
-		nameIndex: Number
+		generatedLine: number,
+		generatedColumn: boolean,
+		sourceIndex: number,
+		originalLine: number,
+		originalColumn: number,
+		nameIndex: number
 	) => {
 		if (mappingActive && currentGeneratedLine <= lines.length) {
-			let chunk: Array;
-			const mappingLine: Number = currentGeneratedLine;
-			const mappingColumn: Number = currentGeneratedColumn;
-			const line: Array = lines[currentGeneratedLine - 1];
+			let chunk: any[];
+			const mappingLine: number = currentGeneratedLine;
+			const mappingColumn: number = currentGeneratedColumn;
+			const line: any[] = lines[currentGeneratedLine - 1];
 			if (generatedLine !== currentGeneratedLine) {
 				chunk = line.slice(currentGeneratedColumn);
 				currentGeneratedLine++;
@@ -88,7 +88,7 @@ const streamChunksOfSourceMapFull: Function = (
 		}
 		if (generatedLine > currentGeneratedLine && currentGeneratedColumn > 0) {
 			if (currentGeneratedLine <= lines.length) {
-				const chunk: Array = lines[currentGeneratedLine - 1].slice(
+				const chunk: any[] = lines[currentGeneratedLine - 1].slice(
 					currentGeneratedColumn
 				);
 				onChunk(
@@ -120,7 +120,7 @@ const streamChunksOfSourceMapFull: Function = (
 		}
 		if (generatedColumn > currentGeneratedColumn) {
 			if (currentGeneratedLine <= lines.length) {
-				const chunk: Array = lines[currentGeneratedLine - 1].slice(
+				const chunk: any[] = lines[currentGeneratedLine - 1].slice(
 					currentGeneratedColumn,
 					generatedColumn
 				);
@@ -157,13 +157,13 @@ const streamChunksOfSourceMapFull: Function = (
 };
 
 const streamChunksOfSourceMapLinesFull: Function = (
-	source: String,
+	source: string,
 	sourceMap: SourceMapSource,
-	onChunk: Object,
+	onChunk: object,
 	onSource: Function,
-	_onName: String
+	_onName: string
 ) => {
-	const lines: Array = splitIntoLines(source);
+	const lines: any[] = splitIntoLines(source);
 	if (lines.length === 0) {
 		return {
 			generatedLine: 1,
@@ -179,15 +179,15 @@ const streamChunksOfSourceMapLinesFull: Function = (
 		);
 	}
 
-	let currentGeneratedLine: Number = 1;
+	let currentGeneratedLine: number = 1;
 
 	const onMapping: Function = (
-		generatedLine: Number,
-		_generatedColumn: Number,
-		sourceIndex: String,
+		generatedLine: number,
+		_generatedColumn: number,
+		sourceIndex: string,
 		originalLine: OriginalSource,
 		originalColumn: OriginalSource,
-		_nameIndex: String
+		_nameIndex: string
 	) => {
 		if (
 			sourceIndex < 0 ||
@@ -236,11 +236,11 @@ const streamChunksOfSourceMapLinesFull: Function = (
 		);
 	}
 
-	const lastLine: Array = lines[lines.length - 1];
-	const lastNewLine: Boolean = lastLine.endsWith("\n");
+	const lastLine: any[] = lines[lines.length - 1];
+	const lastNewLine: boolean = lastLine.endsWith("\n");
 
-	const finalLine: Number = lastNewLine ? lines.length + 1 : lines.length;
-	const finalColumn: Number = lastNewLine ? 0 : lastLine.length;
+	const finalLine: number = lastNewLine ? lines.length + 1 : lines.length;
+	const finalColumn: number = lastNewLine ? 0 : lastLine.length;
 
 	return {
 		generatedLine: finalLine,
@@ -249,13 +249,13 @@ const streamChunksOfSourceMapLinesFull: Function = (
 };
 
 const streamChunksOfSourceMapFinal: Function = (
-	source: String,
+	source: string,
 	sourceMap: CachedSource,
 	onChunk: Function,
 	onSource: Function,
 	onName: Function
 ) => {
-	const result: Object = getGeneratedSourceInfo(source);
+	const result: object = getGeneratedSourceInfo(source);
 	const { generatedLine: finalLine, generatedColumn: finalColumn } = result;
 
 	if (finalLine === 1 && finalColumn === 0) return result;
@@ -273,15 +273,15 @@ const streamChunksOfSourceMapFinal: Function = (
 		}
 	}
 
-	let mappingActiveLine: Number = 0;
+	let mappingActiveLine: number = 0;
 
 	const onMapping: Function = (
-		generatedLine: Boolean,
-		generatedColumn: Number,
-		sourceIndex: Number,
+		generatedLine: boolean,
+		generatedColumn: number,
+		sourceIndex: number,
 		originalLine: OriginalSource,
 		originalColumn: OriginalSource,
-		nameIndex: String
+		nameIndex: string
 	) => {
 		if (
 			generatedLine >= finalLine &&
@@ -310,13 +310,13 @@ const streamChunksOfSourceMapFinal: Function = (
 };
 
 const streamChunksOfSourceMapLinesFinal: Function = (
-	source: String,
+	source: string,
 	sourceMap: SourceMapSource,
 	onChunk: Function,
 	onSource: Function,
-	_onName: String
+	_onName: string
 ) => {
-	const result: Object = getGeneratedSourceInfo(source);
+	const result: object = getGeneratedSourceInfo(source);
 	const { generatedLine, generatedColumn } = result;
 	if (generatedLine === 1 && generatedColumn === 0) {
 		return {
@@ -334,17 +334,17 @@ const streamChunksOfSourceMapLinesFinal: Function = (
 		);
 	}
 
-	const finalLine: Number = generatedColumn === 0 ? generatedLine - 1 : generatedLine;
+	const finalLine: number = generatedColumn === 0 ? generatedLine - 1 : generatedLine;
 
-	let currentGeneratedLine: Number = 1;
+	let currentGeneratedLine: number = 1;
 
 	const onMapping: Function = (
-		generatedLine: Number,
-		_generatedColumn: Number,
-		sourceIndex: Number,
+		generatedLine: number,
+		_generatedColumn: number,
+		sourceIndex: number,
 		originalLine: OriginalSource,
 		originalColumn: OriginalSource,
-		_nameIndex: String
+		_nameIndex: string
 	) => {
 		if (
 			sourceIndex >= 0 &&
@@ -368,13 +368,13 @@ const streamChunksOfSourceMapLinesFinal: Function = (
 };
 
 export default (
-	source: String,
+	source: string,
 	sourceMap: SourceMapSource,
-	onChunk: String,
-	onSource: String,
-	onName: String,
+	onChunk: string,
+	onSource: string,
+	onName: string,
 	finalSource: CachedSource,
-	columns: Boolean
+	columns: boolean
 ) => {
 	if (columns) {
 		return finalSource

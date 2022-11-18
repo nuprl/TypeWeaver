@@ -1,13 +1,13 @@
 (function(f: Function){if(typeof exports==="object"&&typeof module!=="undefined"){
   export default f();
-}else if(typeof define==="function"&&define.amd){define([],f)}else{var g: Array;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.index = f()}})(function(){var define: Function,module: String,exports: String;return (function(){function r(e: Object,n: Object,t: Array): Function{function o(i: String,f: Boolean): String{if(!n[i]){if(!e[i]){var c: Function="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a: Error=new Error("Cannot find module '"+i+"'");throw (a.code="MODULE_NOT_FOUND", a)}var p: Object=n[i]={exports:{}};e[i][0].call(p.exports,function(r: String){var n: String=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require: Function,module: Function,exports: Number){
+}else if(typeof define==="function"&&define.amd){define([],f)}else{var g: any[];if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.index = f()}})(function(){var define: Function,module: string,exports: string;return (function(){function r(e: object,n: object,t: any[]): Function{function o(i: string,f: boolean): string{if(!n[i]){if(!e[i]){var c: Function="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a: Error=new Error("Cannot find module '"+i+"'");throw (a.code="MODULE_NOT_FOUND", a)}var p: object=n[i]={exports:{}};e[i][0].call(p.exports,function(r: string){var n: string=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require: Function,module: Function,exports: number){
   var toString: Function = Object.prototype.toString;
 
-  export default function kindOf(val: String): String {
+  export default function kindOf(val: string): string {
     if (val === void 0) return 'undefined';
     if (val === null) return 'null';
 
-    var type: String = typeof val;
+    var type: string = typeof val;
     if (type === 'boolean') return 'boolean';
     if (type === 'string') return 'string';
     if (type === 'number') return 'number';
@@ -68,27 +68,27 @@
     return type.slice(8, -1).toLowerCase().replace(/\s/g, '');
   };
 
-  function ctorName(val: Object): String {
+  function ctorName(val: object): string {
     return typeof val.constructor === 'function' ? val.constructor.name : null;
   }
 
-  function isArray(val: Number): Boolean {
+  function isArray(val: number): boolean {
     if (Array.isArray) return Array.isArray(val);
     return val instanceof Array;
   }
 
-  function isError(val: Object): Boolean {
+  function isError(val: object): boolean {
     return val instanceof Error || (typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number');
   }
 
-  function isDate(val: HTMLElement): Boolean {
+  function isDate(val: HTMLElement): boolean {
     if (val instanceof Date) return true;
     return typeof val.toDateString === 'function'
       && typeof val.getDate === 'function'
       && typeof val.setDate === 'function';
   }
 
-  function isRegexp(val: HTMLElement): Boolean {
+  function isRegexp(val: HTMLElement): boolean {
     if (val instanceof RegExp) return true;
     return typeof val.flags === 'string'
       && typeof val.ignoreCase === 'boolean'
@@ -96,17 +96,17 @@
       && typeof val.global === 'boolean';
   }
 
-  function isGeneratorFn(name: String, val: Number): Boolean {
+  function isGeneratorFn(name: string, val: number): boolean {
     return ctorName(name) === 'GeneratorFunction';
   }
 
-  function isGeneratorObj(val: Map): Boolean {
+  function isGeneratorObj(val: Map): boolean {
     return typeof val.throw === 'function'
       && typeof val.return === 'function'
       && typeof val.next === 'function';
   }
 
-  function isArguments(val: Array): Boolean {
+  function isArguments(val: any[]): boolean {
     try {
       if (typeof val.length === 'number' && typeof val.callee === 'function') {
         return true;
@@ -124,7 +124,7 @@
    * take a look at https://github.com/feross/is-buffer
    */
 
-  function isBuffer(val: Object): Boolean {
+  function isBuffer(val: object): boolean {
     if (val.constructor && typeof val.constructor.isBuffer === 'function') {
       return val.constructor.isBuffer(val);
     }

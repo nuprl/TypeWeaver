@@ -9,18 +9,18 @@ import path from 'path';
 import { EventEmitter } from 'events';
 import reducePlan from './reducePlan';
 
-const IS_OSX: Boolean = require("os").platform() === "darwin";
-const IS_WIN: Boolean = require("os").platform() === "win32";
-const SUPPORTS_RECURSIVE_WATCHING: Number = IS_OSX || IS_WIN;
+const IS_OSX: boolean = require("os").platform() === "darwin";
+const IS_WIN: boolean = require("os").platform() === "win32";
+const SUPPORTS_RECURSIVE_WATCHING: number = IS_OSX || IS_WIN;
 
-const watcherLimit: Number =
+const watcherLimit: number =
 	+process.env.WATCHPACK_WATCHER_LIMIT || (IS_OSX ? 2000 : 10000);
 
 const recursiveWatcherLogging: RecursiveWatcher = !!process.env
 	.WATCHPACK_RECURSIVE_WATCHER_LOGGING;
 
-let isBatch: Boolean = false;
-let watcherCount: Number = 0;
+let isBatch: boolean = false;
+let watcherCount: number = 0;
 
 /** @type {Map<Watcher, string>} */
 const pendingWatchers: Map = new Map();
@@ -42,12 +42,12 @@ class DirectWatcher {
 		try {
 			const watcher: DirectoryWatcher = fs.watch(filePath);
 			this.watcher = watcher;
-			watcher.on("change", (type: String, filename: String) => {
+			watcher.on("change", (type: string, filename: string) => {
 				for (const w of this.watchers) {
 					w.emit("change", type, filename);
 				}
 			});
-			watcher.on("error", (error: Object) => {
+			watcher.on("error", (error: object) => {
 				for (const w of this.watchers) {
 					w.emit("error", error);
 				}
@@ -94,7 +94,7 @@ class RecursiveWatcher {
 				recursive: true
 			});
 			this.watcher = watcher;
-			watcher.on("change", (type: String, filename: Number) => {
+			watcher.on("change", (type: string, filename: number) => {
 				if (!filename) {
 					if (recursiveWatcherLogging) {
 						process.stderr.write(
@@ -107,8 +107,8 @@ class RecursiveWatcher {
 						w.emit("change", type);
 					}
 				} else {
-					const dir: String = path.dirname(filename);
-					const watchers: Array = this.mapPathToWatchers.get(dir);
+					const dir: string = path.dirname(filename);
+					const watchers: any[] = this.mapPathToWatchers.get(dir);
 					if (recursiveWatcherLogging) {
 						process.stderr.write(
 							`[watchpack] dispatch ${type} event in recursive watcher (${
@@ -124,7 +124,7 @@ class RecursiveWatcher {
 					}
 				}
 			});
-			watcher.on("error", (error: Object) => {
+			watcher.on("error", (error: object) => {
 				for (const w of this.mapWatcherToPath.keys()) {
 					w.emit("error", error);
 				}
@@ -146,7 +146,7 @@ class RecursiveWatcher {
 
 	add(filePath, watcher) {
 		underlyingWatcher.set(watcher, this);
-		const subpath: String = filePath.slice(this.rootPath.length + 1) || ".";
+		const subpath: string = filePath.slice(this.rootPath.length + 1) || ".";
 		this.mapWatcherToPath.set(watcher, subpath);
 		const set: RecursiveWatcher = this.mapPathToWatchers.get(subpath);
 		if (set === undefined) {
@@ -159,7 +159,7 @@ class RecursiveWatcher {
 	}
 
 	remove(watcher) {
-		const subpath: String = this.mapWatcherToPath.get(watcher);
+		const subpath: string = this.mapWatcherToPath.get(watcher);
 		if (!subpath) return;
 		this.mapWatcherToPath.delete(watcher);
 		const set: Map = this.mapPathToWatchers.get(subpath);
@@ -196,16 +196,16 @@ class Watcher extends EventEmitter {
 	}
 }
 
-const createDirectWatcher: Function = (filePath: String) => {
-	const existing: String = directWatchers.get(filePath);
+const createDirectWatcher: Function = (filePath: string) => {
+	const existing: string = directWatchers.get(filePath);
 	if (existing !== undefined) return existing;
 	const w: Watchpack = new DirectWatcher(filePath);
 	directWatchers.set(filePath, w);
 	return w;
 };
 
-const createRecursiveWatcher: Function = (rootPath: String) => {
-	const existing: String = recursiveWatchers.get(rootPath);
+const createRecursiveWatcher: Function = (rootPath: string) => {
+	const existing: string = recursiveWatchers.get(rootPath);
 	if (existing !== undefined) return existing;
 	const w: Watchpack = new RecursiveWatcher(rootPath);
 	recursiveWatchers.set(rootPath, w);
@@ -215,8 +215,8 @@ const createRecursiveWatcher: Function = (rootPath: String) => {
 const execute: Function = () => {
 	/** @type {Map<string, Watcher[] | Watcher>} */
 	const map: Map = new Map();
-	const addWatcher: Function = (watcher: DirectoryWatcher, filePath: String) => {
-		const entry: Array = map.get(filePath);
+	const addWatcher: Function = (watcher: DirectoryWatcher, filePath: string) => {
+		const entry: any[] = map.get(filePath);
 		if (entry === undefined) {
 			map.set(filePath, watcher);
 		} else if (Array.isArray(entry)) {
@@ -258,7 +258,7 @@ const execute: Function = () => {
 
 	// Merge map entries to keep watcher limit
 	// Create a 10% buffer to be able to enter fast case more often
-	const plan: Array = reducePlan(map, watcherLimit * 0.9);
+	const plan: any[] = reducePlan(map, watcherLimit * 0.9);
 
 	// Update watchers for all entries in the map
 	for (const [filePath, entry] of plan) {
@@ -295,7 +295,7 @@ const execute: Function = () => {
 	}
 };
 
-export const watch: Function = (filePath: String) => {
+export const watch: Function = (filePath: string) => {
 	const watcher: Watchpack = new Watcher();
 	// Find an existing watcher
 	const directWatcher: DirectWatcher = directWatchers.get(filePath);
@@ -303,14 +303,14 @@ export const watch: Function = (filePath: String) => {
 		directWatcher.add(watcher);
 		return watcher;
 	}
-	let current: Number = filePath;
+	let current: number = filePath;
 	for (;;) {
 		const recursiveWatcher: RecursiveWatcher = recursiveWatchers.get(current);
 		if (recursiveWatcher !== undefined) {
 			recursiveWatcher.add(filePath, watcher);
 			return watcher;
 		}
-		const parent: String = path.dirname(current);
+		const parent: string = path.dirname(current);
 		if (parent === current) break;
 		current = parent;
 	}

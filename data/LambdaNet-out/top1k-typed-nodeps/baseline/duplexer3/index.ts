@@ -1,6 +1,6 @@
 import stream from 'node:stream';
 
-export function DuplexWrapper(options: Object, writable: Request, readable: Object): Void {
+export function DuplexWrapper(options: object, writable: Request, readable: object): Void {
 	if (typeof readable === 'undefined') {
 		readable = writable;
 		writable = options;
@@ -37,11 +37,11 @@ export function DuplexWrapper(options: Object, writable: Request, readable: Obje
 	});
 
 	if (!options || typeof options.bubbleErrors === 'undefined' || options.bubbleErrors) {
-		writable.on('error', (error: Object) => {
+		writable.on('error', (error: object) => {
 			this.emit('error', error);
 		});
 
-		readable.on('error', (error: Object) => {
+		readable.on('error', (error: object) => {
 			this.emit('error', error);
 		});
 	}
@@ -49,13 +49,13 @@ export function DuplexWrapper(options: Object, writable: Request, readable: Obje
 
 DuplexWrapper.prototype = Object.create(stream.Duplex.prototype, {constructor: {value: DuplexWrapper}});
 
-DuplexWrapper.prototype._write = function (input: HTMLInputElement, encoding: String, done: String) {
+DuplexWrapper.prototype._write = function (input: HTMLInputElement, encoding: string, done: string) {
 	this._writable.write(input, encoding, done);
 };
 
 DuplexWrapper.prototype._read = function () {
 	let buffer: Function;
-	let readCount: Number = 0;
+	let readCount: number = 0;
 	while ((buffer = this._readable.read()) !== null) {
 		this.push(buffer);
 		readCount++;
@@ -66,6 +66,6 @@ DuplexWrapper.prototype._read = function () {
 	}
 };
 
-export default function duplexer(options: Object, writable: Object, readable: String): String {
+export default function duplexer(options: object, writable: object, readable: string): string {
 	return new DuplexWrapper(options, writable, readable);
 }

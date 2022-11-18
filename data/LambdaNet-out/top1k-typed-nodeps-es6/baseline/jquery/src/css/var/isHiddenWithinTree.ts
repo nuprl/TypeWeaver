@@ -7,7 +7,7 @@ import jQuery from "../../core.js";
 // * Being disconnected from the document does not force an element to be classified as hidden.
 // These differences improve the behavior of .toggle() et al. when applied to elements that are
 // detached or contained within hidden ancestors (gh-2404, gh-2863).
-export default function( elem: Object, el: String ) {
+export default function( elem: object, el: string ) {
 
 	// isHiddenWithinTree might be called from jQuery#filter function;
 	// in that case, element will be second argument

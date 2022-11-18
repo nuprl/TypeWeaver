@@ -3,9 +3,9 @@ import stream from 'node:stream';
 import duplexer from './index.js';
 
 const writable: HTMLElement = new stream.Writable({objectMode: true});
-const readable: Array = new stream.Readable({objectMode: true});
+const readable: any[] = new stream.Readable({objectMode: true});
 
-writable._write = function (input: HTMLInputElement, encoding: Number, done: Function) {
+writable._write = function (input: HTMLInputElement, encoding: number, done: Function) {
 	if (readable.push(input)) {
 		return done();
 	}
@@ -26,7 +26,7 @@ writable.once('finish', () => {
 
 const duplex: HTMLElement = duplexer(writable, readable);
 
-duplex.on('data', (data: Object) => {
+duplex.on('data', (data: object) => {
 	console.log('got data', JSON.stringify(data));
 });
 

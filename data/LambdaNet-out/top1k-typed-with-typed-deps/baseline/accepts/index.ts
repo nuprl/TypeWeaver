@@ -12,8 +12,8 @@
  * @private
  */
 
-var Negotiator: Array = require('negotiator')
-var mime: Array = require('mime-types')
+var Negotiator: any[] = require('negotiator')
+var mime: any[] = require('mime-types')
 
 /**
  * Module exports.
@@ -29,7 +29,7 @@ module.exports = Accepts
  * @public
  */
 
-function Accepts (req: Object): String {
+function Accepts (req: object): string {
   if (!(this instanceof Accepts)) {
     return new Accepts(req)
   }
@@ -80,8 +80,8 @@ function Accepts (req: Object): String {
  */
 
 Accepts.prototype.type =
-Accepts.prototype.types = function (types_: Array) {
-  var types: Array = types_
+Accepts.prototype.types = function (types_: any[]) {
+  var types: any[] = types_
 
   // support flattened arguments
   if (types && !Array.isArray(types)) {
@@ -101,9 +101,9 @@ Accepts.prototype.types = function (types_: Array) {
     return types[0]
   }
 
-  var mimes: Array = types.map(extToMime)
-  var accepts: Object = this.negotiator.mediaTypes(mimes.filter(validMime))
-  var first: String = accepts[0]
+  var mimes: any[] = types.map(extToMime)
+  var accepts: object = this.negotiator.mediaTypes(mimes.filter(validMime))
+  var first: string = accepts[0]
 
   return first
     ? types[mimes.indexOf(first)]
@@ -124,8 +124,8 @@ Accepts.prototype.types = function (types_: Array) {
  */
 
 Accepts.prototype.encoding =
-Accepts.prototype.encodings = function (encodings_: Array) {
-  var encodings: Array = encodings_
+Accepts.prototype.encodings = function (encodings_: any[]) {
+  var encodings: any[] = encodings_
 
   // support flattened arguments
   if (encodings && !Array.isArray(encodings)) {
@@ -157,8 +157,8 @@ Accepts.prototype.encodings = function (encodings_: Array) {
  */
 
 Accepts.prototype.charset =
-Accepts.prototype.charsets = function (charsets_: Array) {
-  var charsets: Array = charsets_
+Accepts.prototype.charsets = function (charsets_: any[]) {
+  var charsets: any[] = charsets_
 
   // support flattened arguments
   if (charsets && !Array.isArray(charsets)) {
@@ -192,8 +192,8 @@ Accepts.prototype.charsets = function (charsets_: Array) {
 Accepts.prototype.lang =
 Accepts.prototype.langs =
 Accepts.prototype.language =
-Accepts.prototype.languages = function (languages_: Array) {
-  var languages: Array = languages_
+Accepts.prototype.languages = function (languages_: any[]) {
+  var languages: any[] = languages_
 
   // support flattened arguments
   if (languages && !Array.isArray(languages)) {
@@ -219,7 +219,7 @@ Accepts.prototype.languages = function (languages_: Array) {
  * @private
  */
 
-function extToMime (type: String): Array {
+function extToMime (type: string): any[] {
   return type.indexOf('/') === -1
     ? mime.lookup(type)
     : type
@@ -233,6 +233,6 @@ function extToMime (type: String): Array {
  * @private
  */
 
-function validMime (type: String): Boolean {
+function validMime (type: string): boolean {
   return typeof type === 'string'
 }

@@ -2,12 +2,12 @@
 
 'use strict'
 
-var buffer: String = require('buffer')
+var buffer: string = require('buffer')
 var Buffer: Function = buffer.Buffer
 
-var safer: Object = {}
+var safer: object = {}
 
-var key: String
+var key: string
 
 for (key in buffer) {
   if (!buffer.hasOwnProperty(key)) continue
@@ -15,7 +15,7 @@ for (key in buffer) {
   safer[key] = buffer[key]
 }
 
-var Safer: Object = safer.Buffer = {}
+var Safer: object = safer.Buffer = {}
 for (key in Buffer) {
   if (!Buffer.hasOwnProperty(key)) continue
   if (key === 'allocUnsafe' || key === 'allocUnsafeSlow') continue
@@ -25,7 +25,7 @@ for (key in Buffer) {
 safer.Buffer.prototype = Buffer.prototype
 
 if (!Safer.from || Safer.from === Uint8Array.from) {
-  Safer.from = function (value: String, encodingOrOffset: Number, length: Number) {
+  Safer.from = function (value: string, encodingOrOffset: number, length: number) {
     if (typeof value === 'number') {
       throw new TypeError('The "value" argument must not be of type number. Received type ' + typeof value)
     }
@@ -37,7 +37,7 @@ if (!Safer.from || Safer.from === Uint8Array.from) {
 }
 
 if (!Safer.alloc) {
-  Safer.alloc = function (size: Number, fill: Array, encoding: String) {
+  Safer.alloc = function (size: number, fill: any[], encoding: string) {
     if (typeof size !== 'number') {
       throw new TypeError('The "size" argument must be of type number. Received type ' + typeof size)
     }

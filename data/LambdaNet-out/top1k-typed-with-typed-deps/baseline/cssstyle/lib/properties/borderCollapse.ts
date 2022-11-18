@@ -1,8 +1,8 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 
-var parse: Function = function parse(v: String): String {
+var parse: Function = function parse(v: string): string {
   if (
     parsers.valueType(v) === parsers.TYPES.KEYWORD &&
     (v.toLowerCase() === 'collapse' ||
@@ -15,7 +15,7 @@ var parse: Function = function parse(v: String): String {
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     this._setProperty('border-collapse', parse(v));
   },
   get: function() {

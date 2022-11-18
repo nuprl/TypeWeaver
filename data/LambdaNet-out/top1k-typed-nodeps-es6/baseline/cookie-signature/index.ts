@@ -13,7 +13,7 @@ import crypto from 'crypto';
  * @api private
  */
 
-export const sign: Function = function(val: String, secret: Number){
+export const sign: Function = function(val: string, secret: number){
   if ('string' != typeof val) throw new TypeError("Cookie value must be provided as a string.");
   if (null == secret) throw new TypeError("Secret key must be provided.");
   return val + '.' + crypto
@@ -33,13 +33,13 @@ export const sign: Function = function(val: String, secret: Number){
  * @api private
  */
 
-export const unsign: Function = function(input: String, secret: Number){
+export const unsign: Function = function(input: string, secret: number){
   if ('string' != typeof input) throw new TypeError("Signed cookie string must be provided.");
   if (null == secret) throw new TypeError("Secret key must be provided.");
-  var tentativeValue: String = input.slice(0, input.lastIndexOf('.')),
-      expectedInput: Object = sign(tentativeValue, secret),
-      expectedBuffer: Array = Buffer.from(expectedInput),
-      inputBuffer: Array = Buffer.from(input);
+  var tentativeValue: string = input.slice(0, input.lastIndexOf('.')),
+      expectedInput: object = sign(tentativeValue, secret),
+      expectedBuffer: any[] = Buffer.from(expectedInput),
+      inputBuffer: any[] = Buffer.from(input);
   return (
     expectedBuffer.length === inputBuffer.length &&
     crypto.timingSafeEqual(expectedBuffer, inputBuffer)

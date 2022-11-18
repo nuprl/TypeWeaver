@@ -1,7 +1,7 @@
 import ProgressBar from '../';
-var bar: Object         = new ProgressBar('  [:bar]', 10);
+var bar: object         = new ProgressBar('  [:bar]', 10);
 
-var id: Number = setInterval(function (){
+var id: number = setInterval(function (){
   bar.tick();
   if (bar.complete) {
     clearInterval(id);

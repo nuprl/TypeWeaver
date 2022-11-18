@@ -14,15 +14,15 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * @param {boolean} inherited Specify returning inherited property names.
  * @returns {Array} Returns the array of property names.
  */
-function arrayLikeKeys(value: Array, inherited: Number): Array {
-  const isArr: Boolean = Array.isArray(value)
-  const isArg: Boolean = !isArr && isArguments(value)
-  const isBuff: Boolean = !isArr && !isArg && isBuffer(value)
-  const isType: Boolean = !isArr && !isArg && !isBuff && isTypedArray(value)
-  const skipIndexes: Boolean = isArr || isArg || isBuff || isType
-  const length: Number = value.length
-  const result: Array = new Array(skipIndexes ? length : 0)
-  let index: Number = skipIndexes ? -1 : length
+function arrayLikeKeys(value: any[], inherited: number): any[] {
+  const isArr: boolean = Array.isArray(value)
+  const isArg: boolean = !isArr && isArguments(value)
+  const isBuff: boolean = !isArr && !isArg && isBuffer(value)
+  const isType: boolean = !isArr && !isArg && !isBuff && isTypedArray(value)
+  const skipIndexes: boolean = isArr || isArg || isBuff || isType
+  const length: number = value.length
+  const result: any[] = new Array(skipIndexes ? length : 0)
+  let index: number = skipIndexes ? -1 : length
   while (++index < length) {
     result[index] = `${index}`
   }

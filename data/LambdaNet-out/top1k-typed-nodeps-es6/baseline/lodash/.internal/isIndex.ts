@@ -1,5 +1,5 @@
 /** Used as references for various `Number` constants. */
-const MAX_SAFE_INTEGER: Number = 9007199254740991
+const MAX_SAFE_INTEGER: number = 9007199254740991
 
 /** Used to detect unsigned integer values. */
 const reIsUint: RegExp = /^(?:0|[1-9]\d*)$/
@@ -12,8 +12,8 @@ const reIsUint: RegExp = /^(?:0|[1-9]\d*)$/
  * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
  * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
  */
-function isIndex(value: Number, length: Number): Boolean {
-  const type: String = typeof value
+function isIndex(value: number, length: number): boolean {
+  const type: string = typeof value
   length = length == null ? MAX_SAFE_INTEGER : length
 
   return !!length &&

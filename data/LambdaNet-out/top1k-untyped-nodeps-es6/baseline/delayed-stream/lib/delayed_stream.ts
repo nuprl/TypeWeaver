@@ -14,8 +14,8 @@ function DelayedStream(): Void {
 }
 util.inherits(DelayedStream, Stream);
 
-DelayedStream.create = function(source: HTMLElement, options: Object) {
-  var delayedStream: Object = new this();
+DelayedStream.create = function(source: HTMLElement, options: object) {
+  var delayedStream: object = new this();
 
   options = options || {};
   for (var option in options) {
@@ -65,19 +65,19 @@ DelayedStream.prototype.pause = function() {
 DelayedStream.prototype.release = function() {
   this._released = true;
 
-  this._bufferedEvents.forEach(function(args: Array) {
+  this._bufferedEvents.forEach(function(args: any[]) {
     this.emit.apply(this, args);
   }.bind(this));
   this._bufferedEvents = [];
 };
 
 DelayedStream.prototype.pipe = function() {
-  var r: Array = Stream.prototype.pipe.apply(this, arguments);
+  var r: any[] = Stream.prototype.pipe.apply(this, arguments);
   this.resume();
   return r;
 };
 
-DelayedStream.prototype._handleEmit = function(args: Object) {
+DelayedStream.prototype._handleEmit = function(args: object) {
   if (this._released) {
     this.emit.apply(this, args);
     return;
@@ -101,7 +101,7 @@ DelayedStream.prototype._checkIfMaxDataSizeExceeded = function() {
   }
 
   this._maxDataSizeExceeded = true;
-  var message: String =
+  var message: string =
     'DelayedStream#maxDataSize of ' + this.maxDataSize + ' bytes exceeded.'
   this.emit('error', new Error(message));
 };

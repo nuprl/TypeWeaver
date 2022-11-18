@@ -3,7 +3,7 @@ import isObjectLike from './isObjectLike.js'
 import nodeTypes from './.internal/nodeTypes.js'
 
 /* Node.js helper references. */
-const nodeIsRegExp: Object = nodeTypes && nodeTypes.isRegExp
+const nodeIsRegExp: object = nodeTypes && nodeTypes.isRegExp
 
 /**
  * Checks if `value` is classified as a `RegExp` object.
@@ -21,7 +21,7 @@ const nodeIsRegExp: Object = nodeTypes && nodeTypes.isRegExp
  * // => false
  */
 const isRegExp: Function = nodeIsRegExp
-  ? (value: String) => nodeIsRegExp(value)
-  : (value: String) => isObjectLike(value) && getTag(value) == '[object RegExp]'
+  ? (value: string) => nodeIsRegExp(value)
+  : (value: string) => isObjectLike(value) && getTag(value) == '[object RegExp]'
 
 export default isRegExp

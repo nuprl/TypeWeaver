@@ -28,30 +28,30 @@ SOFTWARE.
 "use strict";
 
 /* Validation functions copied from check-types package - https://www.npmjs.com/package/check-types */
-function isFunction(data: Object): Boolean {
+function isFunction(data: object): boolean {
   return typeof data === "function";
 }
 
-function isNonEmptyString(data: Array): Boolean {
+function isNonEmptyString(data: any[]): boolean {
   return isString(data) && data !== "";
 }
 
-function isDate(data: Object): Boolean {
+function isDate(data: object): boolean {
   return isInstanceStrict(data, Date) && isInteger(data.getTime());
 }
 
-function isEmptyString(data: String): Boolean {
+function isEmptyString(data: string): boolean {
   return data === "" || (data instanceof String && data.toString() === "");
 }
 
-function isString(data: Object): Boolean {
+function isString(data: object): boolean {
   return typeof data === "string" || data instanceof String;
 }
 
-function isObject(data: Object): Boolean {
+function isObject(data: object): boolean {
   return toString.call(data) === "[object Object]";
 }
-function isInstanceStrict(data: Object, prototype: String): Boolean {
+function isInstanceStrict(data: object, prototype: string): boolean {
   try {
     return data instanceof prototype;
   } catch (error) {
@@ -59,12 +59,12 @@ function isInstanceStrict(data: Object, prototype: String): Boolean {
   }
 }
 
-function isInteger(data: Number): Boolean {
+function isInteger(data: number): boolean {
   return typeof data === "number" && data % 1 === 0;
 }
 /* End validation functions */
 
-function validate(bool: Boolean, cb: Function, options: Object): Void {
+function validate(bool: boolean, cb: Function, options: object): Void {
   if (!isFunction(cb)) {
     options = cb;
     cb = null;

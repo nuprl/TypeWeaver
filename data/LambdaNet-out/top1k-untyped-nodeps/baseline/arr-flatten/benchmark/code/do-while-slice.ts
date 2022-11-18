@@ -3,7 +3,7 @@
 var slice: Function = require('array-slice');
 
 module.exports = function () {
-  var args: Array = slice(arguments);
+  var args: any[] = slice(arguments);
 
   do {
     args = [].concat.apply([], args);

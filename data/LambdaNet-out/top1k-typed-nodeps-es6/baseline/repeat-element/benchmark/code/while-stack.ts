@@ -1,8 +1,8 @@
 'use strict';
 
-export default function repeat(ele: Function, num: Number): String {
-  var res: Array = [ele];
-  var max: Number = num;
+export default function repeat(ele: Function, num: number): string {
+  var res: any[] = [ele];
+  var max: number = num;
 
   while (num--) {
     res.push.apply(res, res);

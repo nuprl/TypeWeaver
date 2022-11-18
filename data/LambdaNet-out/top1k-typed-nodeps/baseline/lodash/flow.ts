@@ -21,16 +21,16 @@
  * // => 9
  */
 function flow(...funcs): Function {
-  const length: Number = funcs.length
-  let index: Number = length
+  const length: number = funcs.length
+  let index: number = length
   while (index--) {
     if (typeof funcs[index] !== 'function') {
       throw new TypeError('Expected a function')
     }
   }
   return function(...args) {
-    let index: Number = 0
-    let result: String = length ? funcs[index].apply(this, args) : args[0]
+    let index: number = 0
+    let result: string = length ? funcs[index].apply(this, args) : args[0]
     while (++index < length) {
       result = funcs[index].call(this, result)
     }

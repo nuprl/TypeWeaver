@@ -33,7 +33,7 @@ export default destroy;
  * @public
  */
 
-function destroy (stream: Function, suppress: Boolean): String {
+function destroy (stream: Function, suppress: boolean): string {
   if (isFsReadStream(stream)) {
     destroyReadStream(stream)
   } else if (isZlibStream(stream)) {
@@ -57,7 +57,7 @@ function destroy (stream: Function, suppress: Boolean): String {
  * @private
  */
 
-function destroyReadStream (stream: Number): Void {
+function destroyReadStream (stream: number): Void {
   stream.destroy()
 
   if (typeof stream.close === 'function') {
@@ -76,9 +76,9 @@ function destroyReadStream (stream: Number): Void {
  * @private
  */
 
-function closeZlibStream (stream: Number): Void {
+function closeZlibStream (stream: number): Void {
   if (stream._hadError === true) {
-    var prop: String = stream._binding === null
+    var prop: string = stream._binding === null
       ? '_binding'
       : '_handle'
 
@@ -106,7 +106,7 @@ function closeZlibStream (stream: Number): Void {
  * @private
  */
 
-function destroyZlibStream (stream: String): Void {
+function destroyZlibStream (stream: string): Void {
   if (typeof stream.destroy === 'function') {
     // node.js core bug work-around
     // istanbul ignore if: node.js 0.8
@@ -142,7 +142,7 @@ function destroyZlibStream (stream: String): Void {
  * @private
  */
 
-function hasDestroy (stream: Number): Boolean {
+function hasDestroy (stream: number): boolean {
   return stream instanceof Stream &&
     typeof stream.destroy === 'function'
 }
@@ -152,7 +152,7 @@ function hasDestroy (stream: Number): Boolean {
  * @private
  */
 
-function isEventEmitter (val: String): Boolean {
+function isEventEmitter (val: string): boolean {
   return val instanceof EventEmitter
 }
 
@@ -161,7 +161,7 @@ function isEventEmitter (val: String): Boolean {
  * @private
  */
 
-function isFsReadStream (stream: Number): Boolean {
+function isFsReadStream (stream: number): boolean {
   return stream instanceof ReadStream
 }
 
@@ -170,7 +170,7 @@ function isFsReadStream (stream: Number): Boolean {
  * @private
  */
 
-function isZlibStream (stream: Function): Boolean {
+function isZlibStream (stream: Function): boolean {
   return stream instanceof Zlib.Gzip ||
     stream instanceof Zlib.Gunzip ||
     stream instanceof Zlib.Deflate ||

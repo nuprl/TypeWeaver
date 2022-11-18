@@ -1,4 +1,4 @@
-function requireUtil(): String {
+function requireUtil(): string {
   try {
     // eslint-disable-next-line no-restricted-modules
     return require("util");
@@ -13,21 +13,21 @@ function lookupCustomInspectSymbol(): Promise {
 }
 
 // for older node environments
-function tryReadingCustomSymbolFromUtilInspect(options: Object): Number {
+function tryReadingCustomSymbolFromUtilInspect(options: object): number {
   const _requireUtil: Function = options.requireUtil || requireUtil;
-  const util: Boolean = _requireUtil();
+  const util: boolean = _requireUtil();
   return util ? util.inspect.custom : null;
 }
 
-exports.getUtilInspect = function getUtilInspect(fallback: Function, options: Object = {}): Function {
+exports.getUtilInspect = function getUtilInspect(fallback: Function, options: object = {}): Function {
   const _requireUtil: Function = options.requireUtil || requireUtil;
-  const util: Boolean = _requireUtil();
-  return function inspect(value: String, showHidden: String, depth: String): String {
+  const util: boolean = _requireUtil();
+  return function inspect(value: string, showHidden: string, depth: string): string {
     return util ? util.inspect(value, showHidden, depth) : fallback(value);
   };
 };
 
-exports.getCustomInspectSymbol = function getCustomInspectSymbol(options: Object = {}): Boolean {
+exports.getCustomInspectSymbol = function getCustomInspectSymbol(options: object = {}): boolean {
   const _lookupCustomInspectSymbol: Function =
     options.lookupCustomInspectSymbol || lookupCustomInspectSymbol;
 

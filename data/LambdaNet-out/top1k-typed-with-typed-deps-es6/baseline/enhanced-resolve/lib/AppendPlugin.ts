@@ -25,11 +25,11 @@ export default class AppendPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("AppendPlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const obj: Object = {
+			.tapAsync("AppendPlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const obj: object = {
 					...request,
 					path: request.path + this.appending,
 					relativePath:

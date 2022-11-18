@@ -5,7 +5,7 @@
 
 "use strict";
 
-const forEachBail: String = require("./forEachBail");
+const forEachBail: string = require("./forEachBail");
 const { PathType, getType } = require("./util/path");
 
 /** @typedef {import("./Resolver")} Resolver */

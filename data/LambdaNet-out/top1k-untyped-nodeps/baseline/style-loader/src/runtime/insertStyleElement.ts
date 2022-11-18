@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function insertStyleElement(options: Object): Object {
+function insertStyleElement(options: object): object {
   const element: Error = document.createElement("style");
 
   options.setAttributes(element, options.attributes);

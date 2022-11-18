@@ -1,6 +1,6 @@
 'use strict';
 
-const path: String = require('path');
+const path: string = require('path');
 const pm: HTMLElement = require('..');
 const { sep } = path;
 

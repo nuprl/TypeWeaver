@@ -1,4 +1,4 @@
-const conversions: Object = require('./conversions');
+const conversions: object = require('./conversions');
 
 /*
 	This function routes a model to all other models.
@@ -11,10 +11,10 @@ const conversions: Object = require('./conversions');
 	conversions that are not possible simply are not included.
 */
 
-function buildGraph(): Object {
-	const graph: Object = {};
+function buildGraph(): object {
+	const graph: object = {};
 	// https://jsperf.com/object-keys-vs-for-in-with-closure/3
-	const models: Array = Object.keys(conversions);
+	const models: any[] = Object.keys(conversions);
 
 	for (let len = models.length, i = 0; i < len; i++) {
 		graph[models[i]] = {
@@ -29,19 +29,19 @@ function buildGraph(): Object {
 }
 
 // https://en.wikipedia.org/wiki/Breadth-first_search
-function deriveBFS(fromModel: String): Object {
-	const graph: Object = buildGraph();
-	const queue: Array = [fromModel]; // Unshift -> queue -> pop
+function deriveBFS(fromModel: string): object {
+	const graph: object = buildGraph();
+	const queue: any[] = [fromModel]; // Unshift -> queue -> pop
 
 	graph[fromModel].distance = 0;
 
 	while (queue.length) {
-		const current: String = queue.pop();
-		const adjacents: Array = Object.keys(conversions[current]);
+		const current: string = queue.pop();
+		const adjacents: any[] = Object.keys(conversions[current]);
 
 		for (let len = adjacents.length, i = 0; i < len; i++) {
-			const adjacent: String = adjacents[i];
-			const node: Object = graph[adjacent];
+			const adjacent: string = adjacents[i];
+			const node: object = graph[adjacent];
 
 			if (node.distance === -1) {
 				node.distance = graph[current].distance + 1;
@@ -55,16 +55,16 @@ function deriveBFS(fromModel: String): Object {
 }
 
 function link(from: Function, to: Function): Function {
-	return function (args: Array) {
+	return function (args: any[]) {
 		return to(from(args));
 	};
 }
 
-function wrapConversion(toModel: String, graph: Object): String {
-	const path: Array = [graph[toModel].parent, toModel];
-	let fn: String = conversions[graph[toModel].parent][toModel];
+function wrapConversion(toModel: string, graph: object): string {
+	const path: any[] = [graph[toModel].parent, toModel];
+	let fn: string = conversions[graph[toModel].parent][toModel];
 
-	let cur: String = graph[toModel].parent;
+	let cur: string = graph[toModel].parent;
 	while (graph[cur].parent) {
 		path.unshift(graph[cur].parent);
 		fn = link(conversions[graph[cur].parent][cur], fn);
@@ -76,13 +76,13 @@ function wrapConversion(toModel: String, graph: Object): String {
 }
 
 module.exports = function (fromModel: Function) {
-	const graph: Object = deriveBFS(fromModel);
-	const conversion: Object = {};
+	const graph: object = deriveBFS(fromModel);
+	const conversion: object = {};
 
-	const models: Array = Object.keys(graph);
+	const models: any[] = Object.keys(graph);
 	for (let len = models.length, i = 0; i < len; i++) {
-		const toModel: String = models[i];
-		const node: Object = graph[toModel];
+		const toModel: string = models[i];
+		const node: object = graph[toModel];
 
 		if (node.parent === null) {
 			// No possible conversion, or this node is the source model.

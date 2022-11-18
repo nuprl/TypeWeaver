@@ -4,10 +4,10 @@
  * progress intact
  */
 
-var ProgressBar: Array = require('../');
+var ProgressBar: any[] = require('../');
 
 var bar: HTMLElement = new ProgressBar(':bar :current/:total', { total: 10 });
-var timer: Number = setInterval(function () {
+var timer: number = setInterval(function () {
     bar.tick();
     if (bar.complete) {
         clearInterval(timer);

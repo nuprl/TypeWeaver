@@ -1,6 +1,6 @@
-export default function trimNewlines(string: Array): String {
-	let start: Number = 0;
-	let end: Number = string.length;
+export default function trimNewlines(string: any[]): string {
+	let start: number = 0;
+	let end: number = string.length;
 
 	while (start < end && (string[start] === '\r' || string[start] === '\n')) {
 		start++;
@@ -13,9 +13,9 @@ export default function trimNewlines(string: Array): String {
 	return (start > 0 || end < string.length) ? string.slice(start, end) : string;
 }
 
-trimNewlines.start = (string: Array) => {
-	const end: Number = string.length;
-	let start: Number = 0;
+trimNewlines.start = (string: any[]) => {
+	const end: number = string.length;
+	let start: number = 0;
 
 	while (start < end && (string[start] === '\r' || string[start] === '\n')) {
 		start++;
@@ -24,8 +24,8 @@ trimNewlines.start = (string: Array) => {
 	return start > 0 ? string.slice(start, end) : string;
 };
 
-trimNewlines.end = (string: Array) => {
-	let end: Number = string.length;
+trimNewlines.end = (string: any[]) => {
+	let end: number = string.length;
 
 	while (end > 0 && (string[end - 1] === '\r' || string[end - 1] === '\n')) {
 		end--;

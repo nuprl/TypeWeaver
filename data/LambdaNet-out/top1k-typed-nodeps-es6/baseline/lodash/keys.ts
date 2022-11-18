@@ -28,7 +28,7 @@ import isArrayLike from './isArrayLike.js'
  * keys('hi')
  * // => ['0', '1']
  */
-function keys(object: Object): String {
+function keys(object: object): string {
   return isArrayLike(object)
     ? arrayLikeKeys(object)
     : Object.keys(Object(object))

@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function diff(a: Array, b: Array, c: Boolean): Array {
-  var len: Number = a.length;
-  var arr: Array = [];
-  var rest: Array;
+module.exports = function diff(a: any[], b: any[], c: boolean): any[] {
+  var len: number = a.length;
+  var arr: any[] = [];
+  var rest: any[];
 
   if (!b) {
     return a;
@@ -16,7 +16,7 @@ module.exports = function diff(a: Array, b: Array, c: Boolean): Array {
   }
 
   while (len--) {
-    var ele: String = arr[len];
+    var ele: string = arr[len];
     if (rest.indexOf(ele) === -1) {
       arr.unshift(ele);
     }

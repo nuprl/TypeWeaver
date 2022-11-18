@@ -1,8 +1,8 @@
 import toNumber from './toNumber.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
-const MAX_INTEGER: Number = 1.7976931348623157e+308
+const INFINITY: number = 1 / 0
+const MAX_INTEGER: number = 1.7976931348623157e+308
 
 /**
  * Converts `value` to a finite number.
@@ -25,13 +25,13 @@ const MAX_INTEGER: Number = 1.7976931348623157e+308
  * toFinite('3.2')
  * // => 3.2
  */
-function toFinite(value: Number): Number {
+function toFinite(value: number): number {
   if (!value) {
     return value === 0 ? value : 0
   }
   value = toNumber(value)
   if (value === INFINITY || value === -INFINITY) {
-    const sign: Number = (value < 0 ? -1 : 1)
+    const sign: number = (value < 0 ? -1 : 1)
     return sign * MAX_INTEGER
   }
   return value === value ? value : 0

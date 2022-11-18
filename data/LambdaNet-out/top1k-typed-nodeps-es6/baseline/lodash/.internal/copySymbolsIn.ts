@@ -9,7 +9,7 @@ import getSymbolsIn from './getSymbolsIn.js'
  * @param {Object} [object={}] The object to copy symbols to.
  * @returns {Object} Returns `object`.
  */
-function copySymbolsIn(source: String, object: Object): Promise {
+function copySymbolsIn(source: string, object: object): Promise {
   return copyObject(source, getSymbolsIn(source), object)
 }
 

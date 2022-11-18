@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var crypto: String = require('crypto');
+var crypto: string = require('crypto');
 
 /**
  * Sign the given `val` with `secret`.
@@ -13,7 +13,7 @@ var crypto: String = require('crypto');
  * @api private
  */
 
-exports.sign = function(val: String, secret: Number){
+exports.sign = function(val: string, secret: number){
   if ('string' != typeof val) throw new TypeError("Cookie value must be provided as a string.");
   if (null == secret) throw new TypeError("Secret key must be provided.");
   return val + '.' + crypto
@@ -33,13 +33,13 @@ exports.sign = function(val: String, secret: Number){
  * @api private
  */
 
-exports.unsign = function(input: String, secret: Number){
+exports.unsign = function(input: string, secret: number){
   if ('string' != typeof input) throw new TypeError("Signed cookie string must be provided.");
   if (null == secret) throw new TypeError("Secret key must be provided.");
-  var tentativeValue: String = input.slice(0, input.lastIndexOf('.')),
+  var tentativeValue: string = input.slice(0, input.lastIndexOf('.')),
       expectedInput: HTMLElement = exports.sign(tentativeValue, secret),
-      expectedBuffer: Array = Buffer.from(expectedInput),
-      inputBuffer: Array = Buffer.from(input);
+      expectedBuffer: any[] = Buffer.from(expectedInput),
+      inputBuffer: any[] = Buffer.from(input);
   return (
     expectedBuffer.length === inputBuffer.length &&
     crypto.timingSafeEqual(expectedBuffer, inputBuffer)

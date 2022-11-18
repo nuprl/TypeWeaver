@@ -1,8 +1,8 @@
 'use strict';
 
 function throatInternal(size) {
-  var queue: Number = new Queue();
-  var s: Array = size | 0;
+  var queue: number = new Queue();
+  var s: any[] = size | 0;
 
   function run(fn, self, args) {
     if ((s | 0) !== 0) {

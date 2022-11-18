@@ -5,20 +5,20 @@ import {
   reject,
 } from './-internal';
 
-function makeObject(_: Promise, argumentNames: Array): Object {
-  let obj: Object = {};
+function makeObject(_: Promise, argumentNames: any[]): object {
+  let obj: object = {};
 
   for (let i = 0; i < argumentNames.length; i++) {
-    let name: String = argumentNames[i];
+    let name: string = argumentNames[i];
     obj[name] = _[i + 1];
   }
 
   return obj;
 }
 
-function arrayResult(_: Array): Object {
-  let length: Number = _.length;
-  let args: Object = new Array(length - 1);
+function arrayResult(_: any[]): object {
+  let length: number = _.length;
+  let args: object = new Array(length - 1);
 
   for (let i = 1; i < length; i++) {
     args[i - 1] = _[i];
@@ -27,7 +27,7 @@ function arrayResult(_: Array): Object {
   return args;
 }
 
-function wrapThenable(then: String, promise: Promise): Object {
+function wrapThenable(then: string, promise: Promise): object {
   return {
     then(onFulFillment, onRejection) {
       return then.call(promise, onFulFillment, onRejection);
@@ -162,15 +162,15 @@ function wrapThenable(then: String, promise: Promise): Object {
   values.
   @return {Function} a function that wraps `nodeFunc` to return a `Promise`
 */
-export default function denodeify(nodeFunc: HTMLElement, options: String): Function {
+export default function denodeify(nodeFunc: HTMLElement, options: string): Function {
   let fn: Function = function() {
-    let l: Number = arguments.length;
-    let args: Object = new Array(l + 1);
-    let promiseInput: Boolean = false;
+    let l: number = arguments.length;
+    let args: object = new Array(l + 1);
+    let promiseInput: boolean = false;
 
     for (let i = 0; i < l; ++i) {
-      let arg: Object = arguments[i];
-      let then: String;
+      let arg: object = arguments[i];
+      let then: string;
 
       // TODO: this code really needs to be cleaned up
       if (!promiseInput) {
@@ -198,7 +198,7 @@ export default function denodeify(nodeFunc: HTMLElement, options: String): Funct
 
     let promise: Promise = new Promise(noop);
 
-    args[l] = function(err: Boolean, val: Number) {
+    args[l] = function(err: boolean, val: number) {
       if (err) {
         reject(promise, err);
       } else if (options === undefined) {
@@ -224,7 +224,7 @@ export default function denodeify(nodeFunc: HTMLElement, options: String): Funct
   return fn;
 }
 
-function handleValueInput(promise: Promise, args: Array, nodeFunc: Object, self: String): Array {
+function handleValueInput(promise: Promise, args: any[], nodeFunc: object, self: string): any[] {
   try {
     nodeFunc.apply(self, args);
   } catch (error) {
@@ -233,7 +233,7 @@ function handleValueInput(promise: Promise, args: Array, nodeFunc: Object, self:
   return promise;
 }
 
-function handlePromiseInput(promise: Promise, args: Array, nodeFunc: Object, self: String): Promise{
+function handlePromiseInput(promise: Promise, args: any[], nodeFunc: object, self: string): Promise{
   return Promise.all(args)
-    .then((args: Array) => handleValueInput(promise, args, nodeFunc, self));
+    .then((args: any[]) => handleValueInput(promise, args, nodeFunc, self));
 }

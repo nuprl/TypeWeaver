@@ -4,10 +4,10 @@ import fs from 'graceful-fs';
 import path from 'path';
 import assert from 'assert';
 
-const isWindows: Boolean = (process.platform === 'win32')
+const isWindows: boolean = (process.platform === 'win32')
 
-function defaults (options: Object): Void {
-  const methods: Array = [
+function defaults (options: object): Void {
+  const methods: any[] = [
     'unlink',
     'chmod',
     'stat',
@@ -15,7 +15,7 @@ function defaults (options: Object): Void {
     'rmdir',
     'readdir'
   ]
-  methods.forEach((m: Number) => {
+  methods.forEach((m: number) => {
     options[m] = options[m] || fs[m]
     m = m + 'Sync'
     options[m] = options[m] || fs[m]
@@ -24,8 +24,8 @@ function defaults (options: Object): Void {
   options.maxBusyTries = options.maxBusyTries || 3
 }
 
-function rimraf (p: String, options: Object, cb: Function): Void {
-  let busyTries: Number = 0
+function rimraf (p: string, options: object, cb: Function): Void {
+  let busyTries: number = 0
 
   if (typeof options === 'function') {
     cb = options
@@ -40,12 +40,12 @@ function rimraf (p: String, options: Object, cb: Function): Void {
 
   defaults(options)
 
-  rimraf_(p, options, function CB (er: HTMLElement): Number {
+  rimraf_(p, options, function CB (er: HTMLElement): number {
     if (er) {
       if ((er.code === 'EBUSY' || er.code === 'ENOTEMPTY' || er.code === 'EPERM') &&
           busyTries < options.maxBusyTries) {
         busyTries++
-        const time: Number = busyTries * 100
+        const time: number = busyTries * 100
         // try again, with the same exact callback as this one.
         return setTimeout(() => rimraf_(p, options, CB), time)
       }
@@ -69,14 +69,14 @@ function rimraf (p: String, options: Object, cb: Function): Void {
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-function rimraf_ (p: Function, options: Object, cb: Function): Void {
+function rimraf_ (p: Function, options: object, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
   // sunos lets the root user unlink directories, which is... weird.
   // so we have to lstat here and make sure it's not a dir.
-  options.lstat(p, (er: Object, st: Array) => {
+  options.lstat(p, (er: object, st: any[]) => {
     if (er && er.code === 'ENOENT') {
       return cb(null)
     }
@@ -90,7 +90,7 @@ function rimraf_ (p: Function, options: Object, cb: Function): Void {
       return rmdir(p, options, er, cb)
     }
 
-    options.unlink(p, (er: Object) => {
+    options.unlink(p, (er: object) => {
       if (er) {
         if (er.code === 'ENOENT') {
           return cb(null)
@@ -109,16 +109,16 @@ function rimraf_ (p: Function, options: Object, cb: Function): Void {
   })
 }
 
-function fixWinEPERM (p: Function, options: Object, er: String, cb: Function): Void {
+function fixWinEPERM (p: Function, options: object, er: string, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
-  options.chmod(p, 0o666, (er2: Object) => {
+  options.chmod(p, 0o666, (er2: object) => {
     if (er2) {
       cb(er2.code === 'ENOENT' ? null : er)
     } else {
-      options.stat(p, (er3: Object, stats: Array) => {
+      options.stat(p, (er3: object, stats: any[]) => {
         if (er3) {
           cb(er3.code === 'ENOENT' ? null : er)
         } else if (stats.isDirectory()) {
@@ -131,8 +131,8 @@ function fixWinEPERM (p: Function, options: Object, er: String, cb: Function): V
   })
 }
 
-function fixWinEPERMSync (p: String, options: Object, er: String): Promise {
-  let stats: Array
+function fixWinEPERMSync (p: string, options: object, er: string): Promise {
+  let stats: any[]
 
   assert(p)
   assert(options)
@@ -164,7 +164,7 @@ function fixWinEPERMSync (p: String, options: Object, er: String): Promise {
   }
 }
 
-function rmdir (p: String, options: Array, originalEr: Number, cb: Function): Void {
+function rmdir (p: string, options: any[], originalEr: number, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -172,7 +172,7 @@ function rmdir (p: String, options: Array, originalEr: Number, cb: Function): Vo
   // try to rmdir first, and only readdir on ENOTEMPTY or EEXIST (SunOS)
   // if we guessed wrong, and it's not a directory, then
   // raise the original error.
-  options.rmdir(p, (er: Object) => {
+  options.rmdir(p, (er: object) => {
     if (er && (er.code === 'ENOTEMPTY' || er.code === 'EEXIST' || er.code === 'EPERM')) {
       rmkids(p, options, cb)
     } else if (er && er.code === 'ENOTDIR') {
@@ -183,21 +183,21 @@ function rmdir (p: String, options: Array, originalEr: Number, cb: Function): Vo
   })
 }
 
-function rmkids (p: String, options: Object, cb: Function): Void {
+function rmkids (p: string, options: object, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
-  options.readdir(p, (er: Number, files: Array) => {
+  options.readdir(p, (er: number, files: any[]) => {
     if (er) return cb(er)
 
-    let n: Number = files.length
-    let errState: Boolean
+    let n: number = files.length
+    let errState: boolean
 
     if (n === 0) return options.rmdir(p, cb)
 
-    files.forEach((f: String) => {
-      rimraf(path.join(p, f), options, (er: Boolean) => {
+    files.forEach((f: string) => {
+      rimraf(path.join(p, f), options, (er: boolean) => {
         if (errState) {
           return
         }
@@ -213,8 +213,8 @@ function rmkids (p: String, options: Object, cb: Function): Void {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-function rimrafSync (p: String, options: Object): Void {
-  let st: Array
+function rimrafSync (p: string, options: object): Void {
+  let st: any[]
 
   options = options || {}
   defaults(options)
@@ -256,7 +256,7 @@ function rimrafSync (p: String, options: Object): Void {
   }
 }
 
-function rmdirSync (p: Function, options: Object, originalEr: Number): Void {
+function rmdirSync (p: Function, options: object, originalEr: number): Void {
   assert(p)
   assert(options)
 
@@ -273,10 +273,10 @@ function rmdirSync (p: Function, options: Object, originalEr: Number): Void {
   }
 }
 
-function rmkidsSync (p: String, options: Object): Promise {
+function rmkidsSync (p: string, options: object): Promise {
   assert(p)
   assert(options)
-  options.readdirSync(p).forEach((f: String) => rimrafSync(path.join(p, f), options))
+  options.readdirSync(p).forEach((f: string) => rimrafSync(path.join(p, f), options))
 
   if (isWindows) {
     // We only end up here once we got ENOTEMPTY at least once, and
@@ -285,15 +285,15 @@ function rmkidsSync (p: String, options: Object): Promise {
     // try really hard to delete stuff on windows, because it has a
     // PROFOUNDLY annoying habit of not closing handles promptly when
     // files are deleted, resulting in spurious ENOTEMPTY errors.
-    const startTime: Number = Date.now()
+    const startTime: number = Date.now()
     do {
       try {
-        const ret: Array = options.rmdirSync(p, options)
+        const ret: any[] = options.rmdirSync(p, options)
         return ret
       } catch {}
     } while (Date.now() - startTime < 500) // give up after 500ms
   } else {
-    const ret: Array = options.rmdirSync(p, options)
+    const ret: any[] = options.rmdirSync(p, options)
     return ret
   }
 }

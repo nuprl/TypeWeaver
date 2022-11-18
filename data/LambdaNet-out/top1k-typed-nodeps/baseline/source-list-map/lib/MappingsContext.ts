@@ -15,7 +15,7 @@ class MappingsContext {
 	}
 
 	ensureSource(source, originalSource) {
-		let idx: String = this.sourcesIndices.get(source);
+		let idx: string = this.sourcesIndices.get(source);
 		if(typeof idx === "number") {
 			return idx;
 		}
@@ -28,8 +28,8 @@ class MappingsContext {
 	}
 
 	getArrays() {
-		const sources: Array = [];
-		const sourcesContent: Array = [];
+		const sources: any[] = [];
+		const sourcesContent: any[] = [];
 
 		for(const pair of this.sourcesContent) {
 			sources.push(pair[0]);

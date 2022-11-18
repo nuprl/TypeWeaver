@@ -10,8 +10,8 @@ import hasIn from '../hasIn.js'
  * @param {string[]} paths The property paths to pick.
  * @returns {Object} Returns the new object.
  */
-function basePick(object: Object, paths: Number): Promise {
-  return basePickBy(object, paths, (value: Number, path: String) => hasIn(object, path))
+function basePick(object: object, paths: number): Promise {
+  return basePickBy(object, paths, (value: number, path: string) => hasIn(object, path))
 }
 
 export default basePick

@@ -30,12 +30,12 @@ export default class ConditionalPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		const { test, message, allowAlternatives } = this;
-		const keys: Array = Object.keys(test);
+		const keys: any[] = Object.keys(test);
 		resolver
 			.getHook(this.source)
-			.tapAsync("ConditionalPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("ConditionalPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				for (const prop of keys) {
 					if (request[prop] !== test[prop]) return callback();
 				}
@@ -46,7 +46,7 @@ export default class ConditionalPlugin {
 					resolveContext,
 					allowAlternatives
 						? callback
-						: (err: String, result: CachedInputFileSystem) => {
+						: (err: string, result: CachedInputFileSystem) => {
 								if (err) return callback(err);
 
 								// Don't allow other alternatives

@@ -8,7 +8,7 @@
 
     // browserify (web worker)
     if ('function' === typeof Buffer) {
-      return function atobBrowserify(a: Function): String {
+      return function atobBrowserify(a: Function): string {
         //!! Deliberately using an API that's deprecated in node.js because
         //!! this file is for browsers and we expect them to cope with it.
         //!! Discussion: github.com/node-browser-compat/atob/pull/9
@@ -20,9 +20,9 @@
     if ('object' === typeof w.base64js) {
       // bufferToBinaryString
       // https://git.coolaj86.com/coolaj86/unibabel.js/blob/master/index.js#L50
-      return function atobWebWorker_iOS(a: String): String {
-        var buf: String = w.base64js.b64ToByteArray(a);
-        return Array.prototype.map.call(buf, function (ch: String) {
+      return function atobWebWorker_iOS(a: string): string {
+        var buf: string = w.base64js.b64ToByteArray(a);
+        return Array.prototype.map.call(buf, function (ch: string) {
           return String.fromCharCode(ch);
         }).join('');
       };

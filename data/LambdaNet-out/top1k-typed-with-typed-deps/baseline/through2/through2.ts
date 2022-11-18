@@ -1,6 +1,6 @@
 const { Transform } = require('readable-stream')
 
-function inherits (fn: Object, sup: Object): Void {
+function inherits (fn: object, sup: object): Void {
   fn.super_ = sup
   fn.prototype = Object.create(sup.prototype, {
     constructor: { value: fn, enumerable: false, writable: true, configurable: true }
@@ -10,7 +10,7 @@ function inherits (fn: Object, sup: Object): Void {
 // create a new export function, used by both the main export and
 // the .ctor export, contains common logic for dealing with arguments
 function through2 (construct: Function): Function {
-  return (options: Object, transform: Function, flush: String) => {
+  return (options: object, transform: Function, flush: string) => {
     if (typeof options === 'function') {
       flush = transform
       transform = options
@@ -19,7 +19,7 @@ function through2 (construct: Function): Function {
 
     if (typeof transform !== 'function') {
       // noop
-      transform = (chunk: String, enc: Function, cb: Function) => cb(null, chunk)
+      transform = (chunk: string, enc: Function, cb: Function) => cb(null, chunk)
     }
 
     if (typeof flush !== 'function') {
@@ -31,7 +31,7 @@ function through2 (construct: Function): Function {
 }
 
 // main export, just make me a transform stream!
-const make: Boolean = through2((options: Object, transform: Number, flush: Number) => {
+const make: boolean = through2((options: object, transform: number, flush: number) => {
   const t2: HTMLElement = new Transform(options)
 
   t2._transform = transform
@@ -45,8 +45,8 @@ const make: Boolean = through2((options: Object, transform: Number, flush: Numbe
 
 // make me a reusable prototype that I can `new`, or implicitly `new`
 // with a constructor call
-const ctor: String = through2((options: Object, transform: String, flush: Number) => {
-  function Through2 (override: Object): String {
+const ctor: string = through2((options: object, transform: string, flush: number) => {
+  function Through2 (override: object): string {
     if (!(this instanceof Through2)) {
       return new Through2(override)
     }
@@ -66,7 +66,7 @@ const ctor: String = through2((options: Object, transform: String, flush: Number
   return Through2
 })
 
-const obj: Object = through2(function (options: Object, transform: Number, flush: Number) {
+const obj: object = through2(function (options: object, transform: number, flush: number) {
   const t2: HTMLElement = new Transform(Object.assign({ objectMode: true, highWaterMark: 16 }, options))
 
   t2._transform = transform

@@ -7,8 +7,8 @@
  * @param {*} srcValue The value to match.
  * @returns {Function} Returns the new spec function.
  */
-function matchesStrictComparable(key: String, srcValue: Number): Function {
-  return (object: Object) => {
+function matchesStrictComparable(key: string, srcValue: number): Function {
+  return (object: object) => {
     if (object == null) {
       return false
     }

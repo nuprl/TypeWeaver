@@ -1,21 +1,21 @@
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
-var assert: String = require('assert');
+var assert: string = require('assert');
 var Buffer: HTMLElement = require('safer-buffer').Buffer;
 
-var ASN1: Object = require('./types');
-var errors: String = require('./errors');
+var ASN1: object = require('./types');
+var errors: string = require('./errors');
 
 
 // --- Globals
 
-var newInvalidAsn1Error: Object = errors.newInvalidAsn1Error;
+var newInvalidAsn1Error: object = errors.newInvalidAsn1Error;
 
 
 
 // --- API
 
-function Reader(data: Array): Void {
+function Reader(data: any[]): Void {
   if (!data || !Buffer.isBuffer(data))
     throw new TypeError('data must be a node Buffer');
 
@@ -53,11 +53,11 @@ Object.defineProperty(Reader.prototype, 'buffer', {
  * @param {Boolean} peek true means don't move offset.
  * @return {Number} the next byte, null if not enough data.
  */
-Reader.prototype.readByte = function (peek: Boolean) {
+Reader.prototype.readByte = function (peek: boolean) {
   if (this._size - this._offset < 1)
     return null;
 
-  var b: Number = this._buf[this._offset] & 0xff;
+  var b: number = this._buf[this._offset] & 0xff;
 
   if (!peek)
     this._offset += 1;
@@ -82,14 +82,14 @@ Reader.prototype.peek = function () {
  * @return {Number} the amount of offset to advance the buffer.
  * @throws {InvalidAsn1Error} on bad ASN.1
  */
-Reader.prototype.readLength = function (offset: Number) {
+Reader.prototype.readLength = function (offset: number) {
   if (offset === undefined)
     offset = this._offset;
 
   if (offset >= this._size)
     return null;
 
-  var lenB: Number = this._buf[offset++] & 0xff;
+  var lenB: number = this._buf[offset++] & 0xff;
   if (lenB === null)
     return null;
 
@@ -125,15 +125,15 @@ Reader.prototype.readLength = function (offset: Number) {
  *
  * @return {Number} the sequence's tag.
  */
-Reader.prototype.readSequence = function (tag: Number) {
-  var seq: String = this.peek();
+Reader.prototype.readSequence = function (tag: number) {
+  var seq: string = this.peek();
   if (seq === null)
     return null;
   if (tag !== undefined && tag !== seq)
     throw newInvalidAsn1Error('Expected 0x' + tag.toString(16) +
                               ': got 0x' + seq.toString(16));
 
-  var o: String = this.readLength(this._offset + 1); // stored in `length`
+  var o: string = this.readLength(this._offset + 1); // stored in `length`
   if (o === null)
     return null;
 
@@ -157,11 +157,11 @@ Reader.prototype.readEnumeration = function () {
 };
 
 
-Reader.prototype.readString = function (tag: Number, retbuf: Boolean) {
+Reader.prototype.readString = function (tag: number, retbuf: boolean) {
   if (!tag)
     tag = ASN1.OctetString;
 
-  var b: String = this.peek();
+  var b: string = this.peek();
   if (b === null)
     return null;
 
@@ -169,7 +169,7 @@ Reader.prototype.readString = function (tag: Number, retbuf: Boolean) {
     throw newInvalidAsn1Error('Expected 0x' + tag.toString(16) +
                               ': got 0x' + b.toString(16));
 
-  var o: Number = this.readLength(this._offset + 1); // stored in `length`
+  var o: number = this.readLength(this._offset + 1); // stored in `length`
 
   if (o === null)
     return null;
@@ -182,25 +182,25 @@ Reader.prototype.readString = function (tag: Number, retbuf: Boolean) {
   if (this.length === 0)
     return retbuf ? Buffer.alloc(0) : '';
 
-  var str: String = this._buf.slice(this._offset, this._offset + this.length);
+  var str: string = this._buf.slice(this._offset, this._offset + this.length);
   this._offset += this.length;
 
   return retbuf ? str : str.toString('utf8');
 };
 
-Reader.prototype.readOID = function (tag: Number) {
+Reader.prototype.readOID = function (tag: number) {
   if (!tag)
     tag = ASN1.OID;
 
-  var b: Array = this.readString(tag, true);
+  var b: any[] = this.readString(tag, true);
   if (b === null)
     return null;
 
-  var values: Array = [];
-  var value: Number = 0;
+  var values: any[] = [];
+  var value: number = 0;
 
   for (var i = 0; i < b.length; i++) {
-    var byte: Number = b[i] & 0xff;
+    var byte: number = b[i] & 0xff;
 
     value <<= 7;
     value += byte & 0x7f;
@@ -218,10 +218,10 @@ Reader.prototype.readOID = function (tag: Number) {
 };
 
 
-Reader.prototype._readTag = function (tag: Number) {
+Reader.prototype._readTag = function (tag: number) {
   assert.ok(tag !== undefined);
 
-  var b: String = this.peek();
+  var b: string = this.peek();
 
   if (b === null)
     return null;
@@ -230,7 +230,7 @@ Reader.prototype._readTag = function (tag: Number) {
     throw newInvalidAsn1Error('Expected 0x' + tag.toString(16) +
                               ': got 0x' + b.toString(16));
 
-  var o: Number = this.readLength(this._offset + 1); // stored in `length`
+  var o: number = this.readLength(this._offset + 1); // stored in `length`
   if (o === null)
     return null;
 
@@ -241,8 +241,8 @@ Reader.prototype._readTag = function (tag: Number) {
     return null;
   this._offset = o;
 
-  var fb: Number = this._buf[this._offset];
-  var value: Number = 0;
+  var fb: number = this._buf[this._offset];
+  var value: number = 0;
 
   for (var i = 0; i < this.length; i++) {
     value <<= 8;

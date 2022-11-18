@@ -1,6 +1,6 @@
 import { List } from 'css-tree';
 
-export default function compressBackground(node: Object): Void {
+export default function compressBackground(node: object): Void {
     function flush(): Void {
         if (!buffer.length) {
             buffer.unshift(
@@ -22,10 +22,10 @@ export default function compressBackground(node: Object): Void {
         buffer = [];
     }
 
-    let newValue: Array = [];
-    let buffer: Array = [];
+    let newValue: any[] = [];
+    let buffer: any[] = [];
 
-    node.children.forEach((node: Object) => {
+    node.children.forEach((node: object) => {
         if (node.type === 'Operator' && node.value === ',') {
             flush();
             newValue.push(node);

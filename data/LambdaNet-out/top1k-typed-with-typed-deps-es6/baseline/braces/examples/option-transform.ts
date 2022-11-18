@@ -1,7 +1,7 @@
 'use strict';
 
 import braces from '..';
-const alpha: String = braces.expand('x/{a..e}/y', {
+const alpha: string = braces.expand('x/{a..e}/y', {
   transform(code, index) {
     // when non-numeric values are passed, "code" is a character code,
     return 'foo/' + String.fromCharCode(code) + '-' + index;
@@ -10,7 +10,7 @@ const alpha: String = braces.expand('x/{a..e}/y', {
 console.log(alpha);
 //=> [ 'x/foo/a-0/y', 'x/foo/b-1/y', 'x/foo/c-2/y', 'x/foo/d-3/y', 'x/foo/e-4/y' ]
 
-const numeric: String = braces.expand('{1..5}', {
+const numeric: string = braces.expand('{1..5}', {
   transform(value, index) {
     return 'foo/' + value * 2;
   }

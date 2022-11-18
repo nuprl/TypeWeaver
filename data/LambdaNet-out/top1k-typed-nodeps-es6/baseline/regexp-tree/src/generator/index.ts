@@ -8,14 +8,14 @@
 /**
  * Helper `gen` function calls node type handler.
  */
-function gen(node: NodePath): String {
+function gen(node: NodePath): string {
   return node ? generator[node.type](node) : '';
 }
 
 /**
  * AST handler.
  */
-const generator: Object = {
+const generator: object = {
   RegExp(node) {
     return `/${gen(node.body)}/${node.flags}`;
   },

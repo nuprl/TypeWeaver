@@ -21,7 +21,7 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * has(other, 'a')
  * // => false
  */
-function has(object: Object, key: String): Boolean {
+function has(object: object, key: string): boolean {
   return object != null && hasOwnProperty.call(object, key)
 }
 

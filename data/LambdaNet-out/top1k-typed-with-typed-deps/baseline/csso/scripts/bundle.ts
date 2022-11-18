@@ -6,12 +6,12 @@ import { createRequire } from 'module';
 const { version } = createRequire(import.meta.url)('../package.json');
 
 async function build(): Promise {
-    const genModules: Object = {
+    const genModules: object = {
         [resolve('lib/version.js')]: `export const version = "${version}";`,
         [resolve('cjs/version.cjs')]: `module.exports = "${version}";`
     };
-    const genModulesFilter: Object = new RegExp('(' + Object.keys(genModules).join('|').replace(/\./g, '\\.') + ')$');
-    const plugins: Array = [{
+    const genModulesFilter: object = new RegExp('(' + Object.keys(genModules).join('|').replace(/\./g, '\\.') + ')$');
+    const plugins: any[] = [{
         name: 'replace',
         setup({ onLoad }) {
             onLoad({ filter: genModulesFilter }, args => ({
@@ -44,7 +44,7 @@ async function build(): Promise {
     ]);
 
     for (const [key, value] of Object.entries(genModules)) {
-        const fn: String = basename(key);
+        const fn: string = basename(key);
 
         writeFileSync(`dist/${fn}`, value);
     }

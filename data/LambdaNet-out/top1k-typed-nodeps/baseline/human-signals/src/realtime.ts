@@ -1,10 +1,10 @@
 // List of realtime signals with information about them
 export const getRealtimeSignals: Function = function () {
-  const length: String = SIGRTMAX - SIGRTMIN + 1
+  const length: string = SIGRTMAX - SIGRTMIN + 1
   return Array.from({ length }, getRealtimeSignal)
 }
 
-const getRealtimeSignal: Function = function (value: Number, index: String) {
+const getRealtimeSignal: Function = function (value: number, index: string) {
   return {
     name: `SIGRT${index + 1}`,
     number: SIGRTMIN + index,
@@ -14,5 +14,5 @@ const getRealtimeSignal: Function = function (value: Number, index: String) {
   }
 }
 
-const SIGRTMIN: Number = 34
-export const SIGRTMAX: Number = 64
+const SIGRTMIN: number = 34
+export const SIGRTMAX: number = 64

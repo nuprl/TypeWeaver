@@ -23,8 +23,8 @@ import reduce from './reduce.js'
  * keyBy(array, ({ code }) => String.fromCharCode(code))
  * // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
  */
-function keyBy(collection: String, iteratee: Function): Array {
-  return reduce(collection, (result: String, value: String, key: String) => (
+function keyBy(collection: string, iteratee: Function): any[] {
+  return reduce(collection, (result: string, value: string, key: string) => (
     baseAssignValue(result, iteratee(value), value), result
   ), {})
 }

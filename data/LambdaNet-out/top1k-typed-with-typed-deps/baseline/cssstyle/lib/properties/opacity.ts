@@ -3,7 +3,7 @@
 var parseNumber: Function = require('../parsers').parseNumber;
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('opacity', parseNumber(v));
   },
   get: function() {

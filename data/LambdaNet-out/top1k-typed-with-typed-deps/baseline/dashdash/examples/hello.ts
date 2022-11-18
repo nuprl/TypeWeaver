@@ -3,10 +3,10 @@
  * The smallest example using dashdash for option processing.
  */
 
-var dashdash: String = require('../lib/dashdash');
+var dashdash: string = require('../lib/dashdash');
 
 // Define your options.
-var options: Array = [
+var options: any[] = [
     {
         names: ['verbose', 'v'],        // first name is opts key
         type: 'bool',

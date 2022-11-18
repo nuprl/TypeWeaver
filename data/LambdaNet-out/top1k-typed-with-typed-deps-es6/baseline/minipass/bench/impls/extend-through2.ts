@@ -9,7 +9,7 @@ export default function (opts: PushThrough) {
   }
   return s
 
-  function func (data: Object, enc: String, done: Function): Void {
+  function func (data: object, enc: string, done: Function): Void {
     this.push(data, enc)
     done()
   }

@@ -2,7 +2,7 @@
 
 var isObject: Function = require("../object/is");
 
-module.exports = function (value: Object) {
+module.exports = function (value: object) {
 	if (!isObject(value)) return false;
 	try {
 		if (!value.constructor) return false;

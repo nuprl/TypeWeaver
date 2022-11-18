@@ -3,10 +3,10 @@
 import getPolyfill from './polyfill';
 import define from 'define-properties';
 
-export default function shimEntries(): Boolean {
-	var polyfill: String = getPolyfill();
+export default function shimEntries(): boolean {
+	var polyfill: string = getPolyfill();
 	define(Object, { entries: polyfill }, {
-		entries: function testEntries(): Boolean {
+		entries: function testEntries(): boolean {
 			return Object.entries !== polyfill;
 		}
 	});

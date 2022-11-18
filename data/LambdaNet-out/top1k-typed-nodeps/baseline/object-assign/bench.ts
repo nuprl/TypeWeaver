@@ -1,15 +1,15 @@
 'use strict';
 /* globals bench suite */
-var lodash: Array = require('lodash');
+var lodash: any[] = require('lodash');
 var objectAssign: Function = require('./');
 
-var source1: Object = {
+var source1: object = {
 	a: 1,
 	b: 2,
 	c: 3
 };
 
-var source2: Object = {
+var source2: object = {
 	c: 3,
 	d: 4,
 	e: 5,

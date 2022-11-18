@@ -11,7 +11,7 @@ class FilterEnumerator extends MapEnumerator {
 
   _checkFullfillment() {
     if (this._remaining === 0 && this._result !== null) {
-      let result: Array = this._result.filter((val: Number) => val !== EMPTY_OBJECT);
+      let result: any[] = this._result.filter((val: number) => val !== EMPTY_OBJECT);
       fulfill(this.promise, result);
       this._result = null;
     }
@@ -20,7 +20,7 @@ class FilterEnumerator extends MapEnumerator {
   _setResultAt(state, i, value, firstPass) {
     if (firstPass) {
       this._result[i] = value;
-      let val: String, succeeded: Boolean = true;
+      let val: string, succeeded: boolean = true;
       try {
         val = this._mapFn(value, i);
       } catch (error) {
@@ -130,13 +130,13 @@ class FilterEnumerator extends MapEnumerator {
   @return {Promise}
 */
 
-export default function filter(promises: Function, filterFn: Function, label: String): Array {
+export default function filter(promises: Function, filterFn: Function, label: string): any[] {
   if (typeof filterFn !== 'function') {
     return Promise.reject(new TypeError("filter expects function as a second argument"), label);
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Array) {
+    .then(function(promises: any[]) {
       if (!Array.isArray(promises)) {
         throw new TypeError("filter must be called with an array");
       }

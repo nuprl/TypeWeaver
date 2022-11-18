@@ -28,7 +28,7 @@
  * eq(NaN, NaN)
  * // => true
  */
-function eq(value: String, other: Number): Boolean {
+function eq(value: string, other: number): boolean {
   return value === other || (value !== value && other !== other)
 }
 

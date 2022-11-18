@@ -5,7 +5,7 @@
 
 "use strict";
 
-const forEachBail: String = require("./forEachBail");
+const forEachBail: string = require("./forEachBail");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveRequest} ResolveRequest */

@@ -18,9 +18,9 @@
  * Distributed under the BSD License
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
-function md5(bytes: Array): String {
+function md5(bytes: any[]): string {
   if (typeof bytes === 'string') {
-    const msg: String = unescape(encodeURIComponent(bytes)); // UTF8 escape
+    const msg: string = unescape(encodeURIComponent(bytes)); // UTF8 escape
 
     bytes = new Uint8Array(msg.length);
 
@@ -35,15 +35,15 @@ function md5(bytes: Array): String {
 /*
  * Convert an array of little-endian words to an array of bytes
  */
-function md5ToHexEncodedArray(input: Array): Array {
-  const output: Array = [];
-  const length32: Number = input.length * 32;
-  const hexTab: String = '0123456789abcdef';
+function md5ToHexEncodedArray(input: any[]): any[] {
+  const output: any[] = [];
+  const length32: number = input.length * 32;
+  const hexTab: string = '0123456789abcdef';
 
   for (let i = 0; i < length32; i += 8) {
-    const x: Number = (input[i >> 5] >>> i % 32) & 0xff;
+    const x: number = (input[i >> 5] >>> i % 32) & 0xff;
 
-    const hex: Number = parseInt(hexTab.charAt((x >>> 4) & 0x0f) + hexTab.charAt(x & 0x0f), 16);
+    const hex: number = parseInt(hexTab.charAt((x >>> 4) & 0x0f) + hexTab.charAt(x & 0x0f), 16);
 
     output.push(hex);
   }
@@ -54,28 +54,28 @@ function md5ToHexEncodedArray(input: Array): Array {
 /**
  * Calculate output length with padding and bit length
  */
-function getOutputLength(inputLength8: String): Number {
+function getOutputLength(inputLength8: string): number {
   return (((inputLength8 + 64) >>> 9) << 4) + 14 + 1;
 }
 
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length.
  */
-function wordsToMd5(x: Object, len: Number): Array {
+function wordsToMd5(x: object, len: number): any[] {
   /* append padding */
   x[len >> 5] |= 0x80 << len % 32;
   x[getOutputLength(len) - 1] = len;
 
-  let a: Number = 1732584193;
-  let b: Number = -271733879;
-  let c: Number = -1732584194;
-  let d: Number = 271733878;
+  let a: number = 1732584193;
+  let b: number = -271733879;
+  let c: number = -1732584194;
+  let d: number = 271733878;
 
   for (let i = 0; i < x.length; i += 16) {
-    const olda: Number = a;
-    const oldb: Number = b;
-    const oldc: Number = c;
-    const oldd: Number = d;
+    const olda: number = a;
+    const oldb: number = b;
+    const oldc: number = c;
+    const oldd: number = d;
 
     a = md5ff(a, b, c, d, x[i], 7, -680876936);
     d = md5ff(d, a, b, c, x[i + 1], 12, -389564586);
@@ -158,14 +158,14 @@ function wordsToMd5(x: Object, len: Number): Array {
  * Convert an array bytes to an array of little-endian words
  * Characters >255 have their high-byte silently ignored.
  */
-function bytesToWords(input: Array): Array {
+function bytesToWords(input: any[]): any[] {
   if (input.length === 0) {
     return [];
   }
 
-  const length8: Number = input.length * 8;
+  const length8: number = input.length * 8;
 
-  const output: Object = new Uint32Array(getOutputLength(length8));
+  const output: object = new Uint32Array(getOutputLength(length8));
 
   for (let i = 0; i < length8; i += 8) {
     output[i >> 5] |= (input[i / 8] & 0xff) << i % 32;
@@ -178,39 +178,39 @@ function bytesToWords(input: Array): Array {
  * Add integers, wrapping at 2^32. This uses 16-bit operations internally
  * to work around bugs in some JS interpreters.
  */
-function safeAdd(x: Number, y: Number): Number {
-  const lsw: Number = (x & 0xffff) + (y & 0xffff);
-  const msw: Number = (x >> 16) + (y >> 16) + (lsw >> 16);
+function safeAdd(x: number, y: number): number {
+  const lsw: number = (x & 0xffff) + (y & 0xffff);
+  const msw: number = (x >> 16) + (y >> 16) + (lsw >> 16);
   return (msw << 16) | (lsw & 0xffff);
 }
 
 /*
  * Bitwise rotate a 32-bit number to the left.
  */
-function bitRotateLeft(num: Number, cnt: Number): Number {
+function bitRotateLeft(num: number, cnt: number): number {
   return (num << cnt) | (num >>> (32 - cnt));
 }
 
 /*
  * These functions implement the four basic operations the algorithm uses.
  */
-function md5cmn(q: String, a: Function, b: String, x: String, s: String, t: String): String {
+function md5cmn(q: string, a: Function, b: string, x: string, s: string, t: string): string {
   return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b);
 }
 
-function md5ff(a: String, b: Number, c: Number, d: Number, x: String, s: String, t: String): String {
+function md5ff(a: string, b: number, c: number, d: number, x: string, s: string, t: string): string {
   return md5cmn((b & c) | (~b & d), a, b, x, s, t);
 }
 
-function md5gg(a: String, b: Number, c: Number, d: Number, x: String, s: String, t: String): String {
+function md5gg(a: string, b: number, c: number, d: number, x: string, s: string, t: string): string {
   return md5cmn((b & d) | (c & ~d), a, b, x, s, t);
 }
 
-function md5hh(a: String, b: Number, c: Number, d: Number, x: String, s: String, t: String): String {
+function md5hh(a: string, b: number, c: number, d: number, x: string, s: string, t: string): string {
   return md5cmn(b ^ c ^ d, a, b, x, s, t);
 }
 
-function md5ii(a: String, b: Number, c: Number, d: Number, x: String, s: String, t: String): String {
+function md5ii(a: string, b: number, c: number, d: number, x: string, s: string, t: string): string {
   return md5cmn(c ^ (b | ~d), a, b, x, s, t);
 }
 

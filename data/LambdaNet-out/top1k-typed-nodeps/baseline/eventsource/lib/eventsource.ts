@@ -1,26 +1,26 @@
 var parse: Function = require('url').parse
-var events: String = require('events')
-var https: String = require('https')
-var http: String = require('http')
-var util: String = require('util')
+var events: string = require('events')
+var https: string = require('https')
+var http: string = require('http')
+var util: string = require('util')
 
-var httpsOptions: Array = [
+var httpsOptions: any[] = [
   'pfx', 'key', 'passphrase', 'cert', 'ca', 'ciphers',
   'rejectUnauthorized', 'secureProtocol', 'servername', 'checkServerIdentity'
 ]
 
-var bom: Array = [239, 187, 191]
-var colon: Number = 58
-var space: Number = 32
-var lineFeed: Number = 10
-var carriageReturn: Number = 13
+var bom: any[] = [239, 187, 191]
+var colon: number = 58
+var space: number = 32
+var lineFeed: number = 10
+var carriageReturn: number = 13
 // Beyond 256KB we could not observe any gain in performance
-var maxBufferAheadAllocation: Number = 1024 * 256
+var maxBufferAheadAllocation: number = 1024 * 256
 // Headers matching the pattern should be removed when redirecting to different origin
 var reUnsafeHeader: RegExp = /^(cookie|authorization)$/i
 
-function hasBom (buf: Object): Boolean {
-  return bom.every(function (charCode: String, index: Number) {
+function hasBom (buf: object): boolean {
+  return bom.every(function (charCode: string, index: number) {
     return buf[index] === charCode
   })
 }
@@ -32,10 +32,10 @@ function hasBom (buf: Object): Boolean {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: String, eventSourceInitDict: Object): Void {
-  var readyState: Number = EventSource.CONNECTING
-  var headers: Object = eventSourceInitDict && eventSourceInitDict.headers
-  var hasNewOrigin: Boolean = false
+function EventSource (url: string, eventSourceInitDict: object): Void {
+  var readyState: number = EventSource.CONNECTING
+  var headers: object = eventSourceInitDict && eventSourceInitDict.headers
+  var hasNewOrigin: boolean = false
   Object.defineProperty(this, 'readyState', {
     get: function () {
       return readyState
@@ -52,7 +52,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: String): Void {
+  function onConnectionClosed (message: string): Void {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -74,27 +74,27 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
   }
 
   var req: HTMLElement
-  var lastEventId: String = ''
+  var lastEventId: string = ''
   if (headers && headers['Last-Event-ID']) {
     lastEventId = headers['Last-Event-ID']
     delete headers['Last-Event-ID']
   }
 
-  var discardTrailingNewline: Boolean = false
-  var data: String = ''
-  var eventName: String = ''
+  var discardTrailingNewline: boolean = false
+  var data: string = ''
+  var eventName: string = ''
 
-  var reconnectUrl: String = null
+  var reconnectUrl: string = null
 
   function connect (): Void {
-    var options: Object = parse(url)
-    var isSecure: Boolean = options.protocol === 'https:'
+    var options: object = parse(url)
+    var isSecure: boolean = options.protocol === 'https:'
     options.headers = { 'Cache-Control': 'no-cache', 'Accept': 'text/event-stream' }
     if (lastEventId) options.headers['Last-Event-ID'] = lastEventId
     if (headers) {
       var reqHeaders: Promise = hasNewOrigin ? removeUnsafeHeaders(headers) : headers
       for (var i in reqHeaders) {
-        var header: String = reqHeaders[i]
+        var header: string = reqHeaders[i]
         if (header) {
           options.headers[i] = header
         }
@@ -111,7 +111,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
     // If specify http proxy, make the request to sent to the proxy server,
     // and include the original url in path and Host headers
-    var useProxy: Boolean = eventSourceInitDict && eventSourceInitDict.proxy
+    var useProxy: boolean = eventSourceInitDict && eventSourceInitDict.proxy
     if (useProxy) {
       var proxy: HTMLElement = parse(eventSourceInitDict.proxy)
       isSecure = proxy.protocol === 'https:'
@@ -131,7 +131,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
           continue
         }
 
-        var option: String = eventSourceInitDict.https[optName]
+        var option: string = eventSourceInitDict.https[optName]
         if (option !== undefined) {
           options[optName] = option
         }
@@ -154,14 +154,14 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
       // Handle HTTP redirects
       if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 307) {
-        var location: String = res.headers.location
+        var location: string = res.headers.location
         if (!location) {
           // Server sent redirect response without Location header.
           _emit('error', new Event('error', {status: res.statusCode, message: res.statusMessage}))
           return
         }
-        var prevOrigin: String = new URL(url).origin
-        var nextOrigin: String = new URL(location).origin
+        var prevOrigin: string = new URL(url).origin
+        var nextOrigin: string = new URL(location).origin
         hasNewOrigin = prevOrigin !== nextOrigin
         if (res.statusCode === 307) reconnectUrl = url
         url = location
@@ -190,14 +190,14 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
       // text/event-stream parser adapted from webkit's
       // Source/WebCore/page/EventSource.cpp
-      var buf: Array
-      var newBuffer: Array
-      var startingPos: Number = 0
-      var startingFieldLength: Number = -1
-      var newBufferSize: Number = 0
-      var bytesUsed: Number = 0
+      var buf: any[]
+      var newBuffer: any[]
+      var startingPos: number = 0
+      var startingFieldLength: number = -1
+      var newBufferSize: number = 0
+      var bytesUsed: number = 0
 
-      res.on('data', function (chunk: Array) {
+      res.on('data', function (chunk: any[]) {
         if (!buf) {
           buf = chunk
           if (hasBom(buf)) {
@@ -218,8 +218,8 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
           bytesUsed += chunk.length
         }
 
-        var pos: Number = 0
-        var length: Number = bytesUsed
+        var pos: number = 0
+        var length: number = bytesUsed
 
         while (pos < length) {
           if (discardTrailingNewline) {
@@ -229,9 +229,9 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
             discardTrailingNewline = false
           }
 
-          var lineLength: Number = -1
-          var fieldLength: Number = startingFieldLength
-          var c: Number
+          var lineLength: number = -1
+          var fieldLength: number = startingFieldLength
+          var c: number
 
           for (var i = startingPos; lineLength < 0 && i < length; ++i) {
             c = buf[i]
@@ -271,7 +271,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       })
     })
 
-    req.on('error', function (err: Object) {
+    req.on('error', function (err: object) {
       self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
@@ -295,10 +295,10 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: Array, pos: String, fieldLength: Number, lineLength: Number): Void {
+  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): Void {
     if (lineLength === 0) {
       if (data.length > 0) {
-        var type: String = eventName || 'message'
+        var type: string = eventName || 'message'
         _emit(type, new MessageEvent(type, {
           data: data.slice(0, -1), // remove trailing newline
           lastEventId: lastEventId,
@@ -308,9 +308,9 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       }
       eventName = void 0
     } else if (fieldLength > 0) {
-      var noValue: Boolean = fieldLength < 0
-      var step: Number = 0
-      var field: String = buf.slice(pos, pos + (noValue ? lineLength : fieldLength)).toString()
+      var noValue: boolean = fieldLength < 0
+      var step: number = 0
+      var field: string = buf.slice(pos, pos + (noValue ? lineLength : fieldLength)).toString()
 
       if (noValue) {
         step = lineLength
@@ -321,8 +321,8 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       }
       pos += step
 
-      var valueLength: Number = lineLength - step
-      var value: String = buf.slice(pos, pos + valueLength).toString()
+      var valueLength: number = lineLength - step
+      var value: string = buf.slice(pos, pos + valueLength).toString()
 
       if (field === 'data') {
         data += value + '\n'
@@ -331,7 +331,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       } else if (field === 'id') {
         lastEventId = value
       } else if (field === 'retry') {
-        var retry: Number = parseInt(value, 10)
+        var retry: number = parseInt(value, 10)
         if (!Number.isNaN(retry)) {
           self.reconnectInterval = retry
         }
@@ -345,7 +345,7 @@ module.exports = EventSource
 util.inherits(EventSource, events.EventEmitter)
 EventSource.prototype.constructor = EventSource; // make stacktraces readable
 
-['open', 'error', 'message'].forEach(function (method: String) {
+['open', 'error', 'message'].forEach(function (method: string) {
   Object.defineProperty(EventSource.prototype, 'on' + method, {
     /**
      * Returns the current listener
@@ -353,8 +353,8 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    get: function get (): String {
-      var listener: String = this.listeners(method)[0]
+    get: function get (): string {
+      var listener: string = this.listeners(method)[0]
       return listener ? (listener._listener ? listener._listener : listener) : undefined
     },
 
@@ -365,7 +365,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: String): Void {
+    set: function set (listener: string): Void {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -402,7 +402,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: String, listener: Function): Void {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): Void {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -417,7 +417,7 @@ EventSource.prototype.addEventListener = function addEventListener (type: String
  * @see https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent
  * @api public
  */
-EventSource.prototype.dispatchEvent = function dispatchEvent (event: Object): Void {
+EventSource.prototype.dispatchEvent = function dispatchEvent (event: object): Void {
   if (!event.type) {
     throw new Error('UNSPECIFIED_EVENT_TYPE_ERR')
   }
@@ -434,7 +434,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: Object): Vo
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: String, listener: String): Void {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): Void {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -447,7 +447,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: String, optionalProperties: Object): Void {
+function Event (type: string, optionalProperties: object): Void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {
@@ -464,7 +464,7 @@ function Event (type: String, optionalProperties: Object): Void {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: String, eventInitDict: Object): Void {
+function MessageEvent (type: string, eventInitDict: object): Void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -480,8 +480,8 @@ function MessageEvent (type: String, eventInitDict: Object): Void {
  * @return {Object} a new object of headers
  * @api private
  */
-function removeUnsafeHeaders (headers: Object): Object {
-  var safe: Object = {}
+function removeUnsafeHeaders (headers: object): object {
+  var safe: object = {}
   for (var key in headers) {
     if (reUnsafeHeader.test(key)) {
       continue

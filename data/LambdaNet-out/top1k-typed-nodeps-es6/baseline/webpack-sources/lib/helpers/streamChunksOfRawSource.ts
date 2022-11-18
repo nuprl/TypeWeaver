@@ -8,10 +8,10 @@
 import getGeneratedSourceInfo from './getGeneratedSourceInfo';
 import splitIntoLines from './splitIntoLines';
 
-const streamChunksOfRawSource: Function = (source: String, onChunk: Function, onSource: String, onName: String) => {
-	let line: Number = 1;
-	const matches: Array = splitIntoLines(source);
-	let match: Array;
+const streamChunksOfRawSource: Function = (source: string, onChunk: Function, onSource: string, onName: string) => {
+	let line: number = 1;
+	const matches: any[] = splitIntoLines(source);
+	let match: any[];
 	for (match of matches) {
 		onChunk(match, line, 0, -1, -1, -1, -1);
 		line++;
@@ -27,7 +27,7 @@ const streamChunksOfRawSource: Function = (source: String, onChunk: Function, on
 		  };
 };
 
-export default (source: String, onChunk: String, onSource: String, onName: String, finalSource: CachedSource) => {
+export default (source: string, onChunk: string, onSource: string, onName: string, finalSource: CachedSource) => {
 	return finalSource
 		? getGeneratedSourceInfo(source)
 		: streamChunksOfRawSource(source, onChunk, onSource, onName);

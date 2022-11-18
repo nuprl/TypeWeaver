@@ -9,7 +9,7 @@ import asn1 from 'asn1.js';
 const rfc5280: HTMLElement = exports;
 
 // OIDs
-const x509OIDs: Object = {
+const x509OIDs: object = {
   '2 5 29 9': 'subjectDirectoryAttributes',
   '2 5 29 14': 'subjectKeyIdentifier',
   '2 5 29 15': 'keyUsage',
@@ -39,7 +39,7 @@ const x509OIDs: Object = {
 //      tbsCertList          TBSCertList,
 //      signatureAlgorithm   AlgorithmIdentifier,
 //      signature            BIT STRING  }
-const CertificateList: Array = asn1.define('CertificateList', function() {
+const CertificateList: any[] = asn1.define('CertificateList', function() {
   this.seq().obj(
     this.key('tbsCertList').use(TBSCertList),
     this.key('signatureAlgorithm').use(AlgorithmIdentifier),
@@ -51,7 +51,7 @@ rfc5280.CertificateList = CertificateList;
 // AlgorithmIdentifier  ::=  SEQUENCE  {
 //      algorithm               OBJECT IDENTIFIER,
 //      parameters              ANY DEFINED BY algorithm OPTIONAL  }
-const AlgorithmIdentifier: String = asn1.define('AlgorithmIdentifier', function() {
+const AlgorithmIdentifier: string = asn1.define('AlgorithmIdentifier', function() {
   this.seq().obj(
     this.key('algorithm').objid(),
     this.key('parameters').optional().any()
@@ -63,7 +63,7 @@ rfc5280.AlgorithmIdentifier = AlgorithmIdentifier;
 //      tbsCertificate       TBSCertificate,
 //      signatureAlgorithm   AlgorithmIdentifier,
 //      signature            BIT STRING  }
-const Certificate: String = asn1.define('Certificate', function() {
+const Certificate: string = asn1.define('Certificate', function() {
   this.seq().obj(
     this.key('tbsCertificate').use(TBSCertificate),
     this.key('signatureAlgorithm').use(AlgorithmIdentifier),
@@ -83,7 +83,7 @@ rfc5280.Certificate = Certificate;
 //      issuerUniqueID  [1]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      subjectUniqueID [2]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      extensions      [3]  Extensions OPTIONAL
-const TBSCertificate: String = asn1.define('TBSCertificate', function() {
+const TBSCertificate: string = asn1.define('TBSCertificate', function() {
   this.seq().obj(
     this.key('version').def('v1').explicit(0).use(Version),
     this.key('serialNumber').int(),
@@ -100,7 +100,7 @@ const TBSCertificate: String = asn1.define('TBSCertificate', function() {
 rfc5280.TBSCertificate = TBSCertificate;
 
 // Version  ::=  INTEGER  {  v1(0), v2(1), v3(2)  }
-const Version: Array = asn1.define('Version', function() {
+const Version: any[] = asn1.define('Version', function() {
   this.int({
     0: 'v1',
     1: 'v2',
@@ -112,7 +112,7 @@ rfc5280.Version = Version;
 // Validity ::= SEQUENCE {
 //      notBefore      Time,
 //      notAfter       Time  }
-const Validity: String = asn1.define('Validity', function() {
+const Validity: string = asn1.define('Validity', function() {
   this.seq().obj(
     this.key('notBefore').use(Time),
     this.key('notAfter').use(Time)
@@ -123,7 +123,7 @@ rfc5280.Validity = Validity;
 // Time ::= CHOICE {
 //      utcTime        UTCTime,
 //      generalTime    GeneralizedTime }
-const Time: String = asn1.define('Time', function() {
+const Time: string = asn1.define('Time', function() {
   this.choice({
     utcTime: this.utctime(),
     genTime: this.gentime()
@@ -154,7 +154,7 @@ rfc5280.SubjectPublicKeyInfo = SubjectPublicKeyInfo;
 //           crlEntryExtensions      Extensions OPTIONAL
 //      }  OPTIONAL,
 //      crlExtensions           [0] Extensions OPTIONAL }
-const TBSCertList: String = asn1.define('TBSCertList', function() {
+const TBSCertList: string = asn1.define('TBSCertList', function() {
   this.seq().obj(
     this.key('version').optional().int(),
     this.key('signature').use(AlgorithmIdentifier),
@@ -167,7 +167,7 @@ const TBSCertList: String = asn1.define('TBSCertList', function() {
 });
 rfc5280.TBSCertList = TBSCertList;
 
-const RevokedCertificate: String = asn1.define('RevokedCertificate', function() {
+const RevokedCertificate: string = asn1.define('RevokedCertificate', function() {
   this.seq().obj(
     this.key('userCertificate').use(CertificateSerialNumber),
     this.key('revocationDate').use(Time),
@@ -179,12 +179,12 @@ const RevokedCertificate: String = asn1.define('RevokedCertificate', function() 
 //      extnID      OBJECT IDENTIFIER,
 //      critical    BOOLEAN DEFAULT FALSE,
 //      extnValue   OCTET STRING }
-const Extension: String = asn1.define('Extension', function() {
+const Extension: string = asn1.define('Extension', function() {
   this.seq().obj(
     this.key('extnID').objid(x509OIDs),
     this.key('critical').bool().def(false),
-    this.key('extnValue').octstr().contains(function(obj: Object) {
-      const out: String = x509Extensions[obj.extnID];
+    this.key('extnValue').octstr().contains(function(obj: object) {
+      const out: string = x509Extensions[obj.extnID];
       // Cope with unknown extensions
       return out ? out : asn1.define('OctString', function() { this.any(); });
     })
@@ -194,7 +194,7 @@ rfc5280.Extension = Extension;
 
 // Name ::= CHOICE { -- only one possibility for now --
 //      rdnSequence  RDNSequence }
-const Name: String = asn1.define('Name', function() {
+const Name: string = asn1.define('Name', function() {
   this.choice({
     rdnSequence: this.use(RDNSequence)
   });
@@ -211,7 +211,7 @@ rfc5280.Name = Name;
 //      uniformResourceIdentifier [6]  IA5String,
 //      iPAddress                 [7]  OCTET STRING,
 //      registeredID              [8]  OBJECT IDENTIFIER }
-const GeneralName: String = asn1.define('GeneralName', function() {
+const GeneralName: string = asn1.define('GeneralName', function() {
   this.choice({
     otherName: this.implicit(0).use(AnotherName),
     rfc822Name: this.implicit(1).ia5str(),
@@ -226,7 +226,7 @@ const GeneralName: String = asn1.define('GeneralName', function() {
 rfc5280.GeneralName = GeneralName;
 
 // GeneralNames ::= SEQUENCE SIZE (1..MAX) OF GeneralName
-const GeneralNames: String = asn1.define('GeneralNames', function() {
+const GeneralNames: string = asn1.define('GeneralNames', function() {
   this.seqof(GeneralName);
 });
 rfc5280.GeneralNames = GeneralNames;
@@ -234,7 +234,7 @@ rfc5280.GeneralNames = GeneralNames;
 // AnotherName ::= SEQUENCE {
 //      type-id    OBJECT IDENTIFIER,
 //      value      [0] EXPLICIT ANY DEFINED BY type-id }
-const AnotherName: String = asn1.define('AnotherName', function() {
+const AnotherName: string = asn1.define('AnotherName', function() {
   this.seq().obj(
     this.key('type-id').objid(),
     this.key('value').explicit(0).any()
@@ -245,7 +245,7 @@ rfc5280.AnotherName = AnotherName;
 // EDIPartyName ::= SEQUENCE {
 //      nameAssigner              [0]  DirectoryString OPTIONAL,
 //      partyName                 [1]  DirectoryString }
-const EDIPartyName: String = asn1.define('EDIPartyName', function() {
+const EDIPartyName: string = asn1.define('EDIPartyName', function() {
   this.seq().obj(
     this.key('nameAssigner').implicit(0).optional().use(DirectoryString),
     this.key('partyName').implicit(1).use(DirectoryString)
@@ -254,14 +254,14 @@ const EDIPartyName: String = asn1.define('EDIPartyName', function() {
 rfc5280.EDIPartyName = EDIPartyName;
 
 // RDNSequence ::= SEQUENCE OF RelativeDistinguishedName
-const RDNSequence: String = asn1.define('RDNSequence', function() {
+const RDNSequence: string = asn1.define('RDNSequence', function() {
   this.seqof(RelativeDistinguishedName);
 });
 rfc5280.RDNSequence = RDNSequence;
 
 // RelativeDistinguishedName ::=
 //      SET SIZE (1..MAX) OF AttributeTypeAndValue
-const RelativeDistinguishedName: String = asn1.define('RelativeDistinguishedName',
+const RelativeDistinguishedName: string = asn1.define('RelativeDistinguishedName',
   function() {
     this.setof(AttributeTypeAndValue);
   });
@@ -270,7 +270,7 @@ rfc5280.RelativeDistinguishedName = RelativeDistinguishedName;
 // AttributeTypeAndValue ::= SEQUENCE {
 //      type     AttributeType,
 //      value    AttributeValue }
-const AttributeTypeAndValue: String = asn1.define('AttributeTypeAndValue', function() {
+const AttributeTypeAndValue: string = asn1.define('AttributeTypeAndValue', function() {
   this.seq().obj(
     this.key('type').use(AttributeType),
     this.key('value').use(AttributeValue)
@@ -281,7 +281,7 @@ rfc5280.AttributeTypeAndValue = AttributeTypeAndValue;
 // Attribute               ::= SEQUENCE {
 //       type             AttributeType,
 //       values    SET OF AttributeValue }
-const Attribute: String = asn1.define('Attribute', function() {
+const Attribute: string = asn1.define('Attribute', function() {
   this.seq().obj(
     this.key('type').use(AttributeType),
     this.key('values').setof(AttributeValue)
@@ -290,13 +290,13 @@ const Attribute: String = asn1.define('Attribute', function() {
 rfc5280.Attribute = Attribute;
 
 // AttributeType ::= OBJECT IDENTIFIER
-const AttributeType: String = asn1.define('AttributeType', function() {
+const AttributeType: string = asn1.define('AttributeType', function() {
   this.objid();
 });
 rfc5280.AttributeType = AttributeType;
 
 // AttributeValue ::= ANY -- DEFINED BY AttributeType
-const AttributeValue: String = asn1.define('AttributeValue', function() {
+const AttributeValue: string = asn1.define('AttributeValue', function() {
   this.any();
 });
 rfc5280.AttributeValue = AttributeValue;
@@ -307,7 +307,7 @@ rfc5280.AttributeValue = AttributeValue;
 //       universalString         UniversalString (SIZE (1..MAX)),
 //       utf8String              UTF8String (SIZE (1..MAX)),
 //       bmpString               BMPString (SIZE (1..MAX)) }
-const DirectoryString: Array = asn1.define('DirectoryString', function() {
+const DirectoryString: any[] = asn1.define('DirectoryString', function() {
   this.choice({
     teletexString: this.t61str(),
     printableString: this.printstr(),
@@ -322,7 +322,7 @@ rfc5280.DirectoryString = DirectoryString;
 //     keyIdentifier             [0] KeyIdentifier            OPTIONAL,
 //     authorityCertIssuer       [1] GeneralNames             OPTIONAL,
 //     authorityCertSerialNumber [2] CertificateSerialNumber  OPTIONAL }
-const AuthorityKeyIdentifier: String = asn1.define('AuthorityKeyIdentifier', function() {
+const AuthorityKeyIdentifier: string = asn1.define('AuthorityKeyIdentifier', function() {
   this.seq().obj(
     this.key('keyIdentifier').implicit(0).optional().use(KeyIdentifier),
     this.key('authorityCertIssuer').implicit(1).optional().use(GeneralNames),
@@ -333,13 +333,13 @@ const AuthorityKeyIdentifier: String = asn1.define('AuthorityKeyIdentifier', fun
 rfc5280.AuthorityKeyIdentifier = AuthorityKeyIdentifier;
 
 // KeyIdentifier ::= OCTET STRING
-const KeyIdentifier: String = asn1.define('KeyIdentifier', function() {
+const KeyIdentifier: string = asn1.define('KeyIdentifier', function() {
   this.octstr();
 });
 rfc5280.KeyIdentifier = KeyIdentifier;
 
 // CertificateSerialNumber  ::=  INTEGER
-const CertificateSerialNumber: String = asn1.define('CertificateSerialNumber',
+const CertificateSerialNumber: string = asn1.define('CertificateSerialNumber',
   function() {
     this.int();
   });
@@ -350,7 +350,7 @@ rfc5280.CertificateSerialNumber = CertificateSerialNumber;
 //    built-in-domain-defined-attributes    BuiltInDomainDefinedAttributes
 //                                            OPTIONAL,
 //    extension-attributes ExtensionAttributes OPTIONAL }
-const ORAddress: String = asn1.define('ORAddress', function() {
+const ORAddress: string = asn1.define('ORAddress', function() {
   this.seq().obj(
     this.key('builtInStandardAttributes').use(BuiltInStandardAttributes),
     this.key('builtInDomainDefinedAttributes').optional()
@@ -393,7 +393,7 @@ rfc5280.BuiltInStandardAttributes = BuiltInStandardAttributes;
 // CountryName ::= CHOICE {
 //    x121-dcc-code         NumericString,
 //    iso-3166-alpha2-code  PrintableString }
-const CountryName: String = asn1.define('CountryName', function() {
+const CountryName: string = asn1.define('CountryName', function() {
   this.choice({
     x121DccCode: this.numstr(),
     iso3166Alpha2Code: this.printstr()
@@ -405,7 +405,7 @@ rfc5280.CountryName = CountryName;
 // AdministrationDomainName ::= CHOICE {
 //    numeric   NumericString,
 //    printable PrintableString }
-const AdministrationDomainName: String = asn1.define('AdministrationDomainName',
+const AdministrationDomainName: string = asn1.define('AdministrationDomainName',
   function() {
     this.choice({
       numeric: this.numstr(),
@@ -415,19 +415,19 @@ const AdministrationDomainName: String = asn1.define('AdministrationDomainName',
 rfc5280.AdministrationDomainName = AdministrationDomainName;
 
 // NetworkAddress ::= X121Address
-const NetworkAddress: String = asn1.define('NetworkAddress', function() {
+const NetworkAddress: string = asn1.define('NetworkAddress', function() {
   this.use(X121Address);
 });
 rfc5280.NetworkAddress = NetworkAddress;
 
 // X121Address ::= NumericString
-const X121Address: String = asn1.define('X121Address', function() {
+const X121Address: string = asn1.define('X121Address', function() {
   this.numstr();
 });
 rfc5280.X121Address = X121Address;
 
 // TerminalIdentifier ::= PrintableString
-const TerminalIdentifier: String = asn1.define('TerminalIdentifier', function() {
+const TerminalIdentifier: string = asn1.define('TerminalIdentifier', function() {
   this.printstr();
 });
 rfc5280.TerminalIdentifier = TerminalIdentifier;
@@ -435,7 +435,7 @@ rfc5280.TerminalIdentifier = TerminalIdentifier;
 // PrivateDomainName ::= CHOICE {
 //    numeric   NumericString,
 //    printable PrintableString }
-const PrivateDomainName: String = asn1.define('PrivateDomainName', function() {
+const PrivateDomainName: string = asn1.define('PrivateDomainName', function() {
   this.choice({
     numeric: this.numstr(),
     printable: this.printstr()
@@ -444,13 +444,13 @@ const PrivateDomainName: String = asn1.define('PrivateDomainName', function() {
 rfc5280.PrivateDomainName = PrivateDomainName;
 
 // OrganizationName ::= PrintableString
-const OrganizationName: String = asn1.define('OrganizationName', function() {
+const OrganizationName: string = asn1.define('OrganizationName', function() {
   this.printstr();
 });
 rfc5280.OrganizationName = OrganizationName;
 
 // NumericUserIdentifier ::= NumericString
-const NumericUserIdentifier: String = asn1.define('NumericUserIdentifier', function() {
+const NumericUserIdentifier: string = asn1.define('NumericUserIdentifier', function() {
   this.numstr();
 });
 rfc5280.NumericUserIdentifier = NumericUserIdentifier;
@@ -460,7 +460,7 @@ rfc5280.NumericUserIdentifier = NumericUserIdentifier;
 //    given-name  [1] IMPLICIT PrintableString OPTIONAL,
 //    initials    [2] IMPLICIT PrintableString OPTIONAL,
 //    generation-qualifier [3] IMPLICIT PrintableString OPTIONAL }
-const PersonalName: String = asn1.define('PersonalName', function() {
+const PersonalName: string = asn1.define('PersonalName', function() {
   this.set().obj(
     this.key('surname').implicit(0).printstr(),
     this.key('givenName').implicit(1).printstr(),
@@ -472,7 +472,7 @@ rfc5280.PersonalName = PersonalName;
 
 // OrganizationalUnitNames ::= SEQUENCE SIZE (1..ub-organizational-units)
 //                              OF OrganizationalUnitName
-const OrganizationalUnitNames: Array = asn1.define('OrganizationalUnitNames',
+const OrganizationalUnitNames: any[] = asn1.define('OrganizationalUnitNames',
   function() {
     this.seqof(OrganizationalUnitName);
   });
@@ -480,7 +480,7 @@ rfc5280.OrganizationalUnitNames = OrganizationalUnitNames;
 
 // OrganizationalUnitName ::= PrintableString (SIZE
 //                     (1..ub-organizational-unit-name-length))
-const OrganizationalUnitName: String = asn1.define('OrganizationalUnitName', function() {
+const OrganizationalUnitName: string = asn1.define('OrganizationalUnitName', function() {
   this.printstr();
 });
 rfc5280.OrganizationalUnitName = OrganizationalUnitName;
@@ -510,7 +510,7 @@ rfc5280.BuiltInDomainDefinedAttribute = BuiltInDomainDefinedAttribute;
 
 // ExtensionAttributes ::= SET SIZE (1..ub-extension-attributes) OF
 //                ExtensionAttribute
-const ExtensionAttributes: String = asn1.define('ExtensionAttributes', function() {
+const ExtensionAttributes: string = asn1.define('ExtensionAttributes', function() {
   this.seqof(ExtensionAttribute);
 });
 rfc5280.ExtensionAttributes = ExtensionAttributes;
@@ -518,7 +518,7 @@ rfc5280.ExtensionAttributes = ExtensionAttributes;
 // ExtensionAttribute ::=  SEQUENCE {
 //    extension-attribute-type [0] IMPLICIT INTEGER,
 //    extension-attribute-value [1] ANY DEFINED BY extension-attribute-type }
-const ExtensionAttribute: String = asn1.define('ExtensionAttribute', function() {
+const ExtensionAttribute: string = asn1.define('ExtensionAttribute', function() {
   this.seq().obj(
     this.key('extensionAttributeType').implicit(0).int(),
     this.key('extensionAttributeValue').any().explicit(1).int()
@@ -527,7 +527,7 @@ const ExtensionAttribute: String = asn1.define('ExtensionAttribute', function() 
 rfc5280.ExtensionAttribute = ExtensionAttribute;
 
 // SubjectKeyIdentifier ::= KeyIdentifier
-const SubjectKeyIdentifier: String = asn1.define('SubjectKeyIdentifier', function() {
+const SubjectKeyIdentifier: string = asn1.define('SubjectKeyIdentifier', function() {
   this.use(KeyIdentifier);
 });
 rfc5280.SubjectKeyIdentifier = SubjectKeyIdentifier;
@@ -543,13 +543,13 @@ rfc5280.SubjectKeyIdentifier = SubjectKeyIdentifier;
 //      cRLSign                 (6),
 //      encipherOnly            (7),
 //      decipherOnly            (8) }
-const KeyUsage: String = asn1.define('KeyUsage', function() {
+const KeyUsage: string = asn1.define('KeyUsage', function() {
   this.bitstr();
 });
 rfc5280.KeyUsage = KeyUsage;
 
 // CertificatePolicies ::= SEQUENCE SIZE (1..MAX) OF PolicyInformation
-const CertificatePolicies: String = asn1.define('CertificatePolicies', function() {
+const CertificatePolicies: string = asn1.define('CertificatePolicies', function() {
   this.seqof(PolicyInformation);
 });
 rfc5280.CertificatePolicies = CertificatePolicies;
@@ -558,7 +558,7 @@ rfc5280.CertificatePolicies = CertificatePolicies;
 //      policyIdentifier   CertPolicyId,
 //      policyQualifiers   SEQUENCE SIZE (1..MAX) OF PolicyQualifierInfo
 //                           OPTIONAL }
-const PolicyInformation: String = asn1.define('PolicyInformation', function() {
+const PolicyInformation: string = asn1.define('PolicyInformation', function() {
   this.seq().obj(
     this.key('policyIdentifier').use(CertPolicyId),
     this.key('policyQualifiers').optional().use(PolicyQualifiers)
@@ -567,12 +567,12 @@ const PolicyInformation: String = asn1.define('PolicyInformation', function() {
 rfc5280.PolicyInformation = PolicyInformation;
 
 // CertPolicyId ::= OBJECT IDENTIFIER
-const CertPolicyId: String = asn1.define('CertPolicyId', function() {
+const CertPolicyId: string = asn1.define('CertPolicyId', function() {
   this.objid();
 });
 rfc5280.CertPolicyId = CertPolicyId;
 
-const PolicyQualifiers: String = asn1.define('PolicyQualifiers', function() {
+const PolicyQualifiers: string = asn1.define('PolicyQualifiers', function() {
   this.seqof(PolicyQualifierInfo);
 });
 rfc5280.PolicyQualifiers = PolicyQualifiers;
@@ -580,7 +580,7 @@ rfc5280.PolicyQualifiers = PolicyQualifiers;
 // PolicyQualifierInfo ::= SEQUENCE {
 //      policyQualifierId  PolicyQualifierId,
 //      qualifier          ANY DEFINED BY policyQualifierId }
-const PolicyQualifierInfo: Array = asn1.define('PolicyQualifierInfo', function() {
+const PolicyQualifierInfo: any[] = asn1.define('PolicyQualifierInfo', function() {
   this.seq().obj(
     this.key('policyQualifierId').use(PolicyQualifierId),
     this.key('qualifier').any()
@@ -589,7 +589,7 @@ const PolicyQualifierInfo: Array = asn1.define('PolicyQualifierInfo', function()
 rfc5280.PolicyQualifierInfo = PolicyQualifierInfo;
 
 // PolicyQualifierId ::= OBJECT IDENTIFIER
-const PolicyQualifierId: String = asn1.define('PolicyQualifierId', function() {
+const PolicyQualifierId: string = asn1.define('PolicyQualifierId', function() {
   this.objid();
 });
 rfc5280.PolicyQualifierId = PolicyQualifierId;
@@ -597,12 +597,12 @@ rfc5280.PolicyQualifierId = PolicyQualifierId;
 // PolicyMappings ::= SEQUENCE SIZE (1..MAX) OF SEQUENCE {
 //      issuerDomainPolicy      CertPolicyId,
 //      subjectDomainPolicy     CertPolicyId }
-const PolicyMappings: String = asn1.define('PolicyMappings', function() {
+const PolicyMappings: string = asn1.define('PolicyMappings', function() {
   this.seqof(PolicyMapping);
 });
 rfc5280.PolicyMappings = PolicyMappings;
 
-const PolicyMapping: String = asn1.define('PolicyMapping', function() {
+const PolicyMapping: string = asn1.define('PolicyMapping', function() {
   this.seq().obj(
     this.key('issuerDomainPolicy').use(CertPolicyId),
     this.key('subjectDomainPolicy').use(CertPolicyId)
@@ -611,19 +611,19 @@ const PolicyMapping: String = asn1.define('PolicyMapping', function() {
 rfc5280.PolicyMapping = PolicyMapping;
 
 // SubjectAltName ::= GeneralNames
-const SubjectAlternativeName: String = asn1.define('SubjectAlternativeName', function() {
+const SubjectAlternativeName: string = asn1.define('SubjectAlternativeName', function() {
   this.use(GeneralNames);
 });
 rfc5280.SubjectAlternativeName = SubjectAlternativeName;
 
 // IssuerAltName ::= GeneralNames
-const IssuerAlternativeName: String = asn1.define('IssuerAlternativeName', function() {
+const IssuerAlternativeName: string = asn1.define('IssuerAlternativeName', function() {
   this.use(GeneralNames);
 });
 rfc5280.IssuerAlternativeName = IssuerAlternativeName;
 
 // SubjectDirectoryAttributes ::= SEQUENCE SIZE (1..MAX) OF Attribute
-const SubjectDirectoryAttributes: Number = asn1.define('SubjectDirectoryAttributes',
+const SubjectDirectoryAttributes: number = asn1.define('SubjectDirectoryAttributes',
   function() {
     this.seqof(Attribute);
   });
@@ -632,7 +632,7 @@ rfc5280.SubjectDirectoryAttributes = SubjectDirectoryAttributes;
 // BasicConstraints ::= SEQUENCE {
 //         cA                      BOOLEAN DEFAULT FALSE,
 //         pathLenConstraint       INTEGER (0..MAX) OPTIONAL }
-const BasicConstraints: String = asn1.define('BasicConstraints', function() {
+const BasicConstraints: string = asn1.define('BasicConstraints', function() {
   this.seq().obj(
     this.key('cA').bool().def(false),
     this.key('pathLenConstraint').optional().int()
@@ -643,7 +643,7 @@ rfc5280.BasicConstraints = BasicConstraints;
 // NameConstraints ::= SEQUENCE {
 //            permittedSubtrees       [0]     GeneralSubtrees OPTIONAL,
 //            excludedSubtrees        [1]     GeneralSubtrees OPTIONAL }
-const NameConstraints: String = asn1.define('NameConstraints', function() {
+const NameConstraints: string = asn1.define('NameConstraints', function() {
   this.seq().obj(
     this.key('permittedSubtrees').implicit(0).optional().use(GeneralSubtrees),
     this.key('excludedSubtrees').implicit(1).optional().use(GeneralSubtrees)
@@ -652,7 +652,7 @@ const NameConstraints: String = asn1.define('NameConstraints', function() {
 rfc5280.NameConstraints = NameConstraints;
 
 // GeneralSubtrees ::= SEQUENCE SIZE (1..MAX) OF GeneralSubtree
-const GeneralSubtrees: String = asn1.define('GeneralSubtrees', function() {
+const GeneralSubtrees: string = asn1.define('GeneralSubtrees', function() {
   this.seqof(GeneralSubtree);
 });
 rfc5280.GeneralSubtrees = GeneralSubtrees;
@@ -661,7 +661,7 @@ rfc5280.GeneralSubtrees = GeneralSubtrees;
 //            base                    GeneralName,
 //            minimum         [0]     BaseDistance DEFAULT 0,
 //            maximum         [1]     BaseDistance OPTIONAL }
-const GeneralSubtree: String = asn1.define('GeneralSubtree', function() {
+const GeneralSubtree: string = asn1.define('GeneralSubtree', function() {
   this.seq().obj(
     this.key('base').use(GeneralName),
     this.key('minimum').implicit(0).def(0).use(BaseDistance),
@@ -671,7 +671,7 @@ const GeneralSubtree: String = asn1.define('GeneralSubtree', function() {
 rfc5280.GeneralSubtree = GeneralSubtree;
 
 // BaseDistance ::= INTEGER
-const BaseDistance: String = asn1.define('BaseDistance', function() {
+const BaseDistance: string = asn1.define('BaseDistance', function() {
   this.int();
 });
 rfc5280.BaseDistance = BaseDistance;
@@ -679,7 +679,7 @@ rfc5280.BaseDistance = BaseDistance;
 // PolicyConstraints ::= SEQUENCE {
 //         requireExplicitPolicy           [0] SkipCerts OPTIONAL,
 //         inhibitPolicyMapping            [1] SkipCerts OPTIONAL }
-const PolicyConstraints: String = asn1.define('PolicyConstraints', function() {
+const PolicyConstraints: string = asn1.define('PolicyConstraints', function() {
   this.seq().obj(
     this.key('requireExplicitPolicy').implicit(0).optional().use(SkipCerts),
     this.key('inhibitPolicyMapping').implicit(1).optional().use(SkipCerts)
@@ -688,25 +688,25 @@ const PolicyConstraints: String = asn1.define('PolicyConstraints', function() {
 rfc5280.PolicyConstraints = PolicyConstraints;
 
 // SkipCerts ::= INTEGER
-const SkipCerts: String = asn1.define('SkipCerts', function() {
+const SkipCerts: string = asn1.define('SkipCerts', function() {
   this.int();
 });
 rfc5280.SkipCerts = SkipCerts;
 
 // ExtKeyUsageSyntax ::= SEQUENCE SIZE (1..MAX) OF KeyPurposeId
-const ExtendedKeyUsage: String = asn1.define('ExtendedKeyUsage', function() {
+const ExtendedKeyUsage: string = asn1.define('ExtendedKeyUsage', function() {
   this.seqof(KeyPurposeId);
 });
 rfc5280.ExtendedKeyUsage = ExtendedKeyUsage;
 
 // KeyPurposeId ::= OBJECT IDENTIFIER
-const KeyPurposeId: String = asn1.define('KeyPurposeId', function() {
+const KeyPurposeId: string = asn1.define('KeyPurposeId', function() {
   this.objid();
 });
 rfc5280.KeyPurposeId = KeyPurposeId;
 
 // RLDistributionPoints ::= SEQUENCE SIZE (1..MAX) OF DistributionPoint
-const CRLDistributionPoints: String = asn1.define('CRLDistributionPoints', function() {
+const CRLDistributionPoints: string = asn1.define('CRLDistributionPoints', function() {
   this.seqof(DistributionPoint);
 });
 rfc5280.CRLDistributionPoints = CRLDistributionPoints;
@@ -715,7 +715,7 @@ rfc5280.CRLDistributionPoints = CRLDistributionPoints;
 //         distributionPoint       [0]     DistributionPointName OPTIONAL,
 //         reasons                 [1]     ReasonFlags OPTIONAL,
 //         cRLIssuer               [2]     GeneralNames OPTIONAL }
-const DistributionPoint: String = asn1.define('DistributionPoint', function() {
+const DistributionPoint: string = asn1.define('DistributionPoint', function() {
   this.seq().obj(
     this.key('distributionPoint').optional().explicit(0)
       .use(DistributionPointName),
@@ -728,7 +728,7 @@ rfc5280.DistributionPoint = DistributionPoint;
 // DistributionPointName ::= CHOICE {
 //         fullName                [0]     GeneralNames,
 //         nameRelativeToCRLIssuer [1]     RelativeDistinguishedName }
-const DistributionPointName: String = asn1.define('DistributionPointName', function() {
+const DistributionPointName: string = asn1.define('DistributionPointName', function() {
   this.choice({
     fullName: this.implicit(0).use(GeneralNames),
     nameRelativeToCRLIssuer: this.implicit(1).use(RelativeDistinguishedName)
@@ -746,26 +746,26 @@ rfc5280.DistributionPointName = DistributionPointName;
 //         certificateHold         (6),
 //         privilegeWithdrawn      (7),
 //         aACompromise            (8) }
-const ReasonFlags: Array = asn1.define('ReasonFlags', function() {
+const ReasonFlags: any[] = asn1.define('ReasonFlags', function() {
   this.bitstr();
 });
 rfc5280.ReasonFlags = ReasonFlags;
 
 // InhibitAnyPolicy ::= SkipCerts
-const InhibitAnyPolicy: String = asn1.define('InhibitAnyPolicy', function() {
+const InhibitAnyPolicy: string = asn1.define('InhibitAnyPolicy', function() {
   this.use(SkipCerts);
 });
 rfc5280.InhibitAnyPolicy = InhibitAnyPolicy;
 
 // FreshestCRL ::= CRLDistributionPoints
-const FreshestCRL: String = asn1.define('FreshestCRL', function() {
+const FreshestCRL: string = asn1.define('FreshestCRL', function() {
   this.use(CRLDistributionPoints);
 });
 rfc5280.FreshestCRL = FreshestCRL;
 
 // AuthorityInfoAccessSyntax  ::=
 //         SEQUENCE SIZE (1..MAX) OF AccessDescription
-const AuthorityInfoAccessSyntax: Number = asn1.define('AuthorityInfoAccessSyntax',
+const AuthorityInfoAccessSyntax: number = asn1.define('AuthorityInfoAccessSyntax',
   function() {
     this.seqof(AccessDescription);
   });
@@ -774,7 +774,7 @@ rfc5280.AuthorityInfoAccessSyntax = AuthorityInfoAccessSyntax;
 // AccessDescription  ::=  SEQUENCE {
 //         accessMethod          OBJECT IDENTIFIER,
 //         accessLocation        GeneralName  }
-const AccessDescription: String = asn1.define('AccessDescription', function() {
+const AccessDescription: string = asn1.define('AccessDescription', function() {
   this.seq().obj(
     this.key('accessMethod').objid(),
     this.key('accessLocation').use(GeneralName)
@@ -784,7 +784,7 @@ rfc5280.AccessDescription = AccessDescription;
 
 // SubjectInfoAccessSyntax  ::=
 //            SEQUENCE SIZE (1..MAX) OF AccessDescription
-const SubjectInformationAccess: Number = asn1.define('SubjectInformationAccess',
+const SubjectInformationAccess: number = asn1.define('SubjectInformationAccess',
   function() {
     this.seqof(AccessDescription);
   });
@@ -795,12 +795,12 @@ rfc5280.SubjectInformationAccess = SubjectInformationAccess;
  */
 
 // CRLNumber ::= INTEGER
-const CRLNumber: Number = asn1.define('CRLNumber', function() {
+const CRLNumber: number = asn1.define('CRLNumber', function() {
   this.int();
 });
 rfc5280.CRLNumber = CRLNumber;
 
-const DeltaCRLIndicator: String = asn1.define('DeltaCRLIndicator', function() {
+const DeltaCRLIndicator: string = asn1.define('DeltaCRLIndicator', function() {
   this.use(CRLNumber);
 });
 rfc5280.DeltaCRLIndicator = DeltaCRLIndicator;
@@ -812,7 +812,7 @@ rfc5280.DeltaCRLIndicator = DeltaCRLIndicator;
 //         onlySomeReasons            [3] ReasonFlags OPTIONAL,
 //         indirectCRL                [4] BOOLEAN DEFAULT FALSE,
 //         onlyContainsAttributeCerts [5] BOOLEAN DEFAULT FALSE }
-const IssuingDistributionPoint: String = asn1.define('IssuingDistributionPoint',
+const IssuingDistributionPoint: string = asn1.define('IssuingDistributionPoint',
   function() {
     this.seq().obj(
       this.key('distributionPoint').explicit(0).optional()
@@ -838,7 +838,7 @@ rfc5280.IssuingDistributionPoint = IssuingDistributionPoint;
 //         removeFromCRL           (8),
 //         privilegeWithdrawn      (9),
 //         aACompromise           (10) }
-const ReasonCode: String = asn1.define('ReasonCode', function() {
+const ReasonCode: string = asn1.define('ReasonCode', function() {
   this.enum({
     0: 'unspecified',
     1: 'keyCompromise',
@@ -855,19 +855,19 @@ const ReasonCode: String = asn1.define('ReasonCode', function() {
 rfc5280.ReasonCode = ReasonCode;
 
 // InvalidityDate ::=  GeneralizedTime
-const InvalidityDate: String = asn1.define('InvalidityDate', function() {
+const InvalidityDate: string = asn1.define('InvalidityDate', function() {
   this.gentime();
 });
 rfc5280.InvalidityDate = InvalidityDate;
 
 // CertificateIssuer ::=     GeneralNames
-const CertificateIssuer: String = asn1.define('CertificateIssuer', function() {
+const CertificateIssuer: string = asn1.define('CertificateIssuer', function() {
   this.use(GeneralNames);
 });
 rfc5280.CertificateIssuer = CertificateIssuer;
 
 // OID label to extension model mapping
-const x509Extensions: Object = {
+const x509Extensions: object = {
   subjectDirectoryAttributes: SubjectDirectoryAttributes,
   subjectKeyIdentifier: SubjectKeyIdentifier,
   keyUsage: KeyUsage,

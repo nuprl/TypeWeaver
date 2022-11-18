@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-export default function (input: HTMLElement, copy: Object) {
+export default function (input: HTMLElement, copy: object) {
 	assert.deepStrictEqual(copy, input, 'initial copy');
 
 	// RegExp
@@ -54,7 +54,7 @@ export default function (input: HTMLElement, copy: Object) {
 	copy.buffer[1] = 11;
 	assert.notEqual(input.buffer[1], copy.buffer[1], 'Buffer #2');
 
-	const current: String = copy.buffer.toString();
+	const current: string = copy.buffer.toString();
 	input.buffer.write('hello');
 	assert.equal(copy.buffer.toString(), current, 'Buffer #3');
 

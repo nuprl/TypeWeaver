@@ -1,5 +1,5 @@
 import ecstaticFactory from 'ecstatic';
-const ecstatic: String = ecstaticFactory(__dirname);
+const ecstatic: string = ecstaticFactory(__dirname);
 import http from 'http';
 http.createServer(ecstatic).listen(8000);
 

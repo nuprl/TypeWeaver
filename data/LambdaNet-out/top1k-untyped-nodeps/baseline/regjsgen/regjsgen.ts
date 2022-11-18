@@ -7,7 +7,7 @@
   'use strict';
 
   // Used to determine if values are of the language type `Object`.
-  var objectTypes: Object = {
+  var objectTypes: object = {
     'function': true,
     'object': true
   };
@@ -16,13 +16,13 @@
   var root: HTMLElement = (objectTypes[typeof window] && window) || this;
 
   // Detect free variable `exports`.
-  var freeExports: Object = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
+  var freeExports: object = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
 
   // Detect free variable `module`.
-  var hasFreeModule: Boolean = objectTypes[typeof module] && module && !module.nodeType;
+  var hasFreeModule: boolean = objectTypes[typeof module] && module && !module.nodeType;
 
   // Detect free variable `global` from Node.js or Browserified code and use it as `root`.
-  var freeGlobal: Object = freeExports && hasFreeModule && typeof global == 'object' && global;
+  var freeGlobal: object = freeExports && hasFreeModule && typeof global == 'object' && global;
   if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal || freeGlobal.self === freeGlobal)) {
     root = freeGlobal;
   }
@@ -34,8 +34,8 @@
 
   // Generates a string based on the given code point.
   // Based on https://mths.be/fromcodepoint by @mathias.
-  function fromCodePoint(): Number {
-    var codePoint: Number = Number(arguments[0]);
+  function fromCodePoint(): number {
+    var codePoint: number = Number(arguments[0]);
 
     if (
       !isFinite(codePoint) || // `NaN`, `+Infinity`, or `-Infinity`
@@ -53,8 +53,8 @@
       // Astral code point; split in surrogate halves
       // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
       codePoint -= 0x10000;
-      var highSurrogate: String = (codePoint >> 10) + 0xD800;
-      var lowSurrogate: String = (codePoint % 0x400) + 0xDC00;
+      var highSurrogate: string = (codePoint >> 10) + 0xD800;
+      var lowSurrogate: string = (codePoint % 0x400) + 0xDC00;
       return String.fromCharCode(highSurrogate, lowSurrogate);
     }
   }
@@ -62,8 +62,8 @@
   /*--------------------------------------------------------------------------*/
 
   // Ensures that nodes have the correct types.
-  var assertTypeRegexMap: Object = {};
-  function assertType(type: String, expected: String): Void {
+  var assertTypeRegexMap: object = {};
+  function assertType(type: string, expected: string): Void {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;
@@ -86,8 +86,8 @@
   /*--------------------------------------------------------------------------*/
 
   // Generates a regular expression string based on an AST.
-  function generate(node: Object): Promise {
-    var type: String = node.type;
+  function generate(node: object): Promise {
+    var type: string = node.type;
 
     if (hasOwnProperty.call(generators, type)) {
       return generators[type](node);
@@ -97,11 +97,11 @@
   }
 
   // Constructs a string by concatentating the output of each term.
-  function generateSequence(generator: Function, terms: Object, /* optional */  separator: Number): String {
-    var i: Number = -1,
-        length: Number = terms.length,
-        result: String = '',
-        term: String;
+  function generateSequence(generator: Function, terms: object, /* optional */  separator: number): string {
+    var i: number = -1,
+        length: number = terms.length,
+        result: string = '',
+        term: string;
 
     while (++i < length) {
       term = terms[i];
@@ -131,13 +131,13 @@
 
   /*--------------------------------------------------------------------------*/
 
-  function generateAlternative(node: Object): String {
+  function generateAlternative(node: object): string {
     assertType(node.type, 'alternative');
 
     return generateSequence(generateTerm, node.body);
   }
 
-  function generateAnchor(node: Object): String {
+  function generateAnchor(node: object): string {
     assertType(node.type, 'anchor');
 
     switch (node.kind) {
@@ -154,19 +154,19 @@
     }
   }
 
-  var atomType: String = 'anchor|characterClass|characterClassEscape|dot|group|reference|unicodePropertyEscape|value';
+  var atomType: string = 'anchor|characterClass|characterClassEscape|dot|group|reference|unicodePropertyEscape|value';
 
-  function generateAtom(node: Object): Promise {
+  function generateAtom(node: object): Promise {
     assertType(node.type, atomType);
 
     return generate(node);
   }
 
-  function generateCharacterClass(node: Object): String {
+  function generateCharacterClass(node: object): string {
     assertType(node.type, 'characterClass');
 
-    var kind: Number = node.kind;
-    var separator: String = kind === 'intersection' ? '&&' : kind === 'subtraction' ? '--' : '';
+    var kind: number = node.kind;
+    var separator: string = kind === 'intersection' ? '&&' : kind === 'subtraction' ? '--' : '';
 
     return '[' +
       (node.negative ? '^' : '') +
@@ -174,17 +174,17 @@
     ']';
   }
 
-  function generateCharacterClassEscape(node: Object): String {
+  function generateCharacterClassEscape(node: object): string {
     assertType(node.type, 'characterClassEscape');
 
     return '\\' + node.value;
   }
 
-  function generateCharacterClassRange(node: Object): String {
+  function generateCharacterClassRange(node: object): string {
     assertType(node.type, 'characterClassRange');
 
-    var min: Object = node.min,
-        max: Object = node.max;
+    var min: object = node.min,
+        max: object = node.max;
 
     if (min.type == 'characterClassRange' || max.type == 'characterClassRange') {
       throw Error('Invalid character class range');
@@ -193,41 +193,41 @@
     return generateClassAtom(min) + '-' + generateClassAtom(max);
   }
 
-  function generateClassAtom(node: Object): Promise {
+  function generateClassAtom(node: object): Promise {
     assertType(node.type, 'anchor|characterClass|characterClassEscape|characterClassRange|dot|value|unicodePropertyEscape|classStrings');
 
     return generate(node);
   }
 
-  function generateClassStrings(node: Object): String {
+  function generateClassStrings(node: object): string {
     assertType(node.type, 'classStrings');
 
     return '\\q{' + generateSequence(generateClassString, node.strings, '|') + '}';
   }
 
-  function generateClassString(node: Object): String {
+  function generateClassString(node: object): string {
     assertType(node.type, 'classString');
 
     return generateSequence(generate, node.characters);
   }
 
-  function generateDisjunction(node: Object): String {
+  function generateDisjunction(node: object): string {
     assertType(node.type, 'disjunction');
 
     return generateSequence(generate, node.body, '|');
   }
 
 
-  function generateDot(node: Object): String {
+  function generateDot(node: object): string {
     assertType(node.type, 'dot');
 
     return '.';
   }
 
-  function generateGroup(node: Object): String {
+  function generateGroup(node: object): string {
     assertType(node.type, 'group');
 
-    var result: String = '';
+    var result: string = '';
 
     switch (node.behavior) {
       case 'normal':
@@ -259,18 +259,18 @@
     return '(' + result + ')';
   }
 
-  function generateIdentifier(node: Object): String {
+  function generateIdentifier(node: object): string {
     assertType(node.type, 'identifier');
 
     return node.value;
   }
 
-  function generateQuantifier(node: Object): String {
+  function generateQuantifier(node: object): string {
     assertType(node.type, 'quantifier');
 
-    var quantifier: String = '',
-        min: Number = node.min,
-        max: Number = node.max;
+    var quantifier: string = '',
+        min: number = node.min,
+        max: number = node.max;
 
     if (max == null) {
       if (min == 0) {
@@ -295,7 +295,7 @@
     return generateAtom(node.body[0]) + quantifier;
   }
 
-  function generateReference(node: Object): String {
+  function generateReference(node: object): string {
     assertType(node.type, 'reference');
 
     if (node.matchIndex) {
@@ -308,23 +308,23 @@
     throw new Error('Unknown reference type');
   }
 
-  function generateTerm(node: Object): Promise {
+  function generateTerm(node: object): Promise {
     assertType(node.type, atomType + '|empty|quantifier');
 
     return generate(node);
   }
 
-  function generateUnicodePropertyEscape(node: Object): String {
+  function generateUnicodePropertyEscape(node: object): string {
     assertType(node.type, 'unicodePropertyEscape');
 
     return '\\' + (node.negative ? 'P' : 'p') + '{' + node.value + '}';
   }
 
-  function generateValue(node: Object): String {
+  function generateValue(node: object): string {
     assertType(node.type, 'value');
 
-    var kind: String = node.kind,
-        codePoint: String = node.codePoint;
+    var kind: string = node.kind,
+        codePoint: string = node.codePoint;
 
     if (typeof codePoint != 'number') {
       throw new Error('Invalid code point: ' + codePoint);
@@ -374,7 +374,7 @@
   /*--------------------------------------------------------------------------*/
 
   // Used to generate strings for each node type.
-  var generators: Object = {
+  var generators: object = {
     'alternative': generateAlternative,
     'anchor': generateAnchor,
     'characterClass': generateCharacterClass,
@@ -393,7 +393,7 @@
   /*--------------------------------------------------------------------------*/
 
   // Export regjsgen.
-  var regjsgen: Object = {
+  var regjsgen: object = {
     'generate': generate
   };
 

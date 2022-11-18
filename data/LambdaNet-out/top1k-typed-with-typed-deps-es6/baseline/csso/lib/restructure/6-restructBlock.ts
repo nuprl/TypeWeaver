@@ -5,19 +5,19 @@ import {
     keyword as resolveKeyword
 } from 'css-tree';
 
-let fingerprintId: Number = 1;
+let fingerprintId: number = 1;
 const dontRestructure: Error = new Set([
     'src' // https://github.com/afelix/csso/issues/50
 ]);
 
-const DONT_MIX_VALUE: Object = {
+const DONT_MIX_VALUE: object = {
     // https://developer.mozilla.org/en-US/docs/Web/CSS/display#Browser_compatibility
     'display': /table|ruby|flex|-(flex)?box$|grid|contents|run-in/i,
     // https://developer.mozilla.org/en/docs/Web/CSS/text-align
     'text-align': /^(start|end|match-parent|justify-all)$/i
 };
 
-const SAFE_VALUES: Object = {
+const SAFE_VALUES: object = {
     cursor: [
         'auto', 'crosshair', 'default', 'move', 'text', 'wait', 'help',
         'n-resize', 'e-resize', 's-resize', 'w-resize',
@@ -33,7 +33,7 @@ const SAFE_VALUES: Object = {
     ]
 };
 
-const NEEDLESS_TABLE: Object = {
+const NEEDLESS_TABLE: object = {
     'border-width': ['border'],
     'border-style': ['border'],
     'border-color': ['border'],
@@ -71,25 +71,25 @@ const NEEDLESS_TABLE: Object = {
     'list-style-image': ['list-style']
 };
 
-function getPropertyFingerprint(propertyName: String, declaration: Object, fingerprints: Object): String {
-    const realName: String = resolveProperty(propertyName).basename;
+function getPropertyFingerprint(propertyName: string, declaration: object, fingerprints: object): string {
+    const realName: string = resolveProperty(propertyName).basename;
 
     if (realName === 'background') {
         return propertyName + ':' + generate(declaration.value);
     }
 
-    const declarationId: String = declaration.id;
-    let fingerprint: Number = fingerprints[declarationId];
+    const declarationId: string = declaration.id;
+    let fingerprint: number = fingerprints[declarationId];
 
     if (!fingerprint) {
         switch (declaration.value.type) {
             case 'Value':
-                const special: Object = {};
-                let vendorId: String = '';
-                let iehack: String = '';
-                let raw: Boolean = false;
+                const special: object = {};
+                let vendorId: string = '';
+                let iehack: string = '';
+                let raw: boolean = false;
 
-                declaration.value.children.forEach(function walk(node: Object): Void {
+                declaration.value.children.forEach(function walk(node: object): Void {
                     switch (node.type) {
                         case 'Value':
                         case 'Brackets':
@@ -137,7 +137,7 @@ function getPropertyFingerprint(propertyName: String, declaration: Object, finge
                                 //   rect(<top>, <right>, <bottom>, <left>) - standart
                                 //   rect(<top> <right> <bottom> <left>) – backwards compatible syntax
                                 // only the same form values can be merged
-                                const hasComma: Boolean = node.children.some((node: Object) =>
+                                const hasComma: boolean = node.children.some((node: object) =>
                                     node.type === 'Operator' && node.value === ','
                                 );
 
@@ -200,14 +200,14 @@ function getPropertyFingerprint(propertyName: String, declaration: Object, finge
     return propertyName + fingerprint;
 }
 
-function needless(props: Object, declaration: Object, fingerprints: String): TRBL {
+function needless(props: object, declaration: object, fingerprints: string): TRBL {
     const property: HTMLElement = resolveProperty(declaration.property);
 
     if (NEEDLESS_TABLE.hasOwnProperty(property.basename)) {
-        const table: Array = NEEDLESS_TABLE[property.basename];
+        const table: any[] = NEEDLESS_TABLE[property.basename];
 
         for (const entry of table) {
-            const ppre: String = getPropertyFingerprint(property.prefix + entry, declaration, fingerprints);
+            const ppre: string = getPropertyFingerprint(property.prefix + entry, declaration, fingerprints);
             const prev: TRBL = props.hasOwnProperty(ppre) ? props[ppre] : null;
 
             if (prev && (!declaration.important || prev.item.data.important)) {
@@ -217,13 +217,13 @@ function needless(props: Object, declaration: Object, fingerprints: String): TRB
     }
 }
 
-function processRule(rule: Object, item: String, list: Map, props: Object, fingerprints: String): Void {
-    const declarations: Array = rule.block.children;
+function processRule(rule: object, item: string, list: Map, props: object, fingerprints: string): Void {
+    const declarations: any[] = rule.block.children;
 
-    declarations.forEachRight(function(declaration: Object, declarationItem: String) {
+    declarations.forEachRight(function(declaration: object, declarationItem: string) {
         const { property } = declaration;
-        const fingerprint: Array = getPropertyFingerprint(property, declaration, fingerprints);
-        const prev: Object = props[fingerprint];
+        const fingerprint: any[] = getPropertyFingerprint(property, declaration, fingerprints);
+        const prev: object = props[fingerprint];
 
         if (prev && !dontRestructure.has(property)) {
             if (declaration.important && !prev.item.data.important) {
@@ -249,7 +249,7 @@ function processRule(rule: Object, item: String, list: Map, props: Object, finge
                 // };
             }
         } else {
-            const prev: Boolean = needless(props, declaration, fingerprints);
+            const prev: boolean = needless(props, declaration, fingerprints);
 
             if (prev) {
                 declarations.remove(declarationItem);
@@ -277,7 +277,7 @@ function processRule(rule: Object, item: String, list: Map, props: Object, finge
 
 export default function restructBlock(ast: Function): Void {
     const stylesheetMap: Function = {};
-    const fingerprints: Object = Object.create(null);
+    const fingerprints: object = Object.create(null);
 
     walk(ast, {
         visit: 'Rule',

@@ -4,15 +4,15 @@
 // var typeOf = require('typeof');
 var toString: Function = Object.prototype.toString;
 
-module.exports = function(val: Number) {
+module.exports = function(val: number) {
   if (val === 'arguments') {
     return typeOf(arguments);
   }
   return typeOf(val);
 };
 
-function typeOf(object: Object): String {
-  var type: String = typeof object;
+function typeOf(object: object): string {
+  var type: string = typeof object;
   if (type === 'undefined') {
     return 'undefined';
   }

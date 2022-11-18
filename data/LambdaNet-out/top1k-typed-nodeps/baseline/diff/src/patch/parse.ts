@@ -1,16 +1,16 @@
-export function parsePatch(uniDiff: String, options: Object = {}): Array {
-  let diffstr: Array = uniDiff.split(/\r\n|[\n\v\f\r\x85]/),
-      delimiters: Object = uniDiff.match(/\r\n|[\n\v\f\r\x85]/g) || [],
-      list: Array = [],
-      i: Number = 0;
+export function parsePatch(uniDiff: string, options: object = {}): any[] {
+  let diffstr: any[] = uniDiff.split(/\r\n|[\n\v\f\r\x85]/),
+      delimiters: object = uniDiff.match(/\r\n|[\n\v\f\r\x85]/g) || [],
+      list: any[] = [],
+      i: number = 0;
 
   function parseIndex(): Void {
-    let index: Object = {};
+    let index: object = {};
     list.push(index);
 
     // Parse diff metadata
     while (i < diffstr.length) {
-      let line: String = diffstr[i];
+      let line: string = diffstr[i];
 
       // File header found, end parsing diff metadata
       if ((/^(\-\-\-|\+\+\+|@@)\s/).test(line)) {
@@ -35,7 +35,7 @@ export function parsePatch(uniDiff: String, options: Object = {}): Array {
     index.hunks = [];
 
     while (i < diffstr.length) {
-      let line: String = diffstr[i];
+      let line: string = diffstr[i];
 
       if ((/^(Index:|diff|\-\-\-|\+\+\+)\s/).test(line)) {
         break;
@@ -52,12 +52,12 @@ export function parsePatch(uniDiff: String, options: Object = {}): Array {
 
   // Parses the --- and +++ headers, if none are found, no lines
   // are consumed.
-  function parseFileHeader(index: Object): Void {
-    const fileHeader: Object = (/^(---|\+\+\+)\s+(.*)$/).exec(diffstr[i]);
+  function parseFileHeader(index: object): Void {
+    const fileHeader: object = (/^(---|\+\+\+)\s+(.*)$/).exec(diffstr[i]);
     if (fileHeader) {
-      let keyPrefix: String = fileHeader[1] === '---' ? 'old' : 'new';
-      const data: Object = fileHeader[2].split('\t', 2);
-      let fileName: String = data[0].replace(/\\\\/g, '\\');
+      let keyPrefix: string = fileHeader[1] === '---' ? 'old' : 'new';
+      const data: object = fileHeader[2].split('\t', 2);
+      let fileName: string = data[0].replace(/\\\\/g, '\\');
       if ((/^".*"$/).test(fileName)) {
         fileName = fileName.substr(1, fileName.length - 2);
       }
@@ -71,11 +71,11 @@ export function parsePatch(uniDiff: String, options: Object = {}): Array {
   // Parses a hunk
   // This assumes that we are at the start of a hunk.
   function parseHunk(): HTMLElement {
-    let chunkHeaderIndex: Number = i,
-        chunkHeaderLine: String = diffstr[i++],
-        chunkHeader: Object = chunkHeaderLine.split(/@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/);
+    let chunkHeaderIndex: number = i,
+        chunkHeaderLine: string = diffstr[i++],
+        chunkHeader: object = chunkHeaderLine.split(/@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/);
 
-    let hunk: Object = {
+    let hunk: object = {
       oldStart: +chunkHeader[1],
       oldLines: typeof chunkHeader[2] === 'undefined' ? 1 : +chunkHeader[2],
       newStart: +chunkHeader[3],
@@ -94,8 +94,8 @@ export function parsePatch(uniDiff: String, options: Object = {}): Array {
       hunk.newStart += 1;
     }
 
-    let addCount: Number = 0,
-        removeCount: Number = 0;
+    let addCount: number = 0,
+        removeCount: number = 0;
     for (; i < diffstr.length; i++) {
       // Lines starting with '---' could be mistaken for the "remove line" operation
       // But they could be the header for the next file. Therefore prune such cases out.
@@ -105,7 +105,7 @@ export function parsePatch(uniDiff: String, options: Object = {}): Array {
             && diffstr[i + 2].indexOf('@@') === 0) {
           break;
       }
-      let operation: String = (diffstr[i].length == 0 && i != (diffstr.length - 1)) ? ' ' : diffstr[i][0];
+      let operation: string = (diffstr[i].length == 0 && i != (diffstr.length - 1)) ? ' ' : diffstr[i][0];
 
       if (operation === '+' || operation === '-' || operation === ' ' || operation === '\\') {
         hunk.lines.push(diffstr[i]);

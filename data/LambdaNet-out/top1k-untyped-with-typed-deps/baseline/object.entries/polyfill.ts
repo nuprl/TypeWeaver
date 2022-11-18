@@ -1,7 +1,7 @@
 'use strict';
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 
-module.exports = function getPolyfill(): String {
+module.exports = function getPolyfill(): string {
 	return typeof Object.entries === 'function' ? Object.entries : implementation;
 };

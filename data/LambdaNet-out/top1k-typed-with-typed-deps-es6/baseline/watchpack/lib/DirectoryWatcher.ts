@@ -11,20 +11,20 @@ import watchEventSource from './watchEventSource';
 
 const EXISTANCE_ONLY_TIME_ENTRY: Function = Object.freeze({});
 
-let FS_ACCURACY: Number = 2000;
+let FS_ACCURACY: number = 2000;
 
-const IS_OSX: Boolean = require("os").platform() === "darwin";
-const WATCHPACK_POLLING: Number = process.env.WATCHPACK_POLLING;
-const FORCE_POLLING: String =
+const IS_OSX: boolean = require("os").platform() === "darwin";
+const WATCHPACK_POLLING: number = process.env.WATCHPACK_POLLING;
+const FORCE_POLLING: string =
 	`${+WATCHPACK_POLLING}` === WATCHPACK_POLLING
 		? +WATCHPACK_POLLING
 		: !!WATCHPACK_POLLING && WATCHPACK_POLLING !== "false";
 
-function withoutCase(str: String): String {
+function withoutCase(str: string): string {
 	return str.toLowerCase();
 }
 
-function needCalls(times: Number, callback: Function): Function {
+function needCalls(times: number, callback: Function): Function {
 	return function() {
 		if (--times === 0) {
 			return callback();
@@ -41,7 +41,7 @@ class Watcher extends EventEmitter {
 	}
 
 	checkStartTime(mtime, initial) {
-		const startTime: Number = this.startTime;
+		const startTime: number = this.startTime;
 		if (typeof startTime !== "number") return !initial;
 		return startTime <= mtime;
 	}
@@ -119,7 +119,7 @@ class DirectoryWatcher extends EventEmitter {
 	}
 
 	forEachWatcher(path, fn) {
-		const watchers: Array = this.watchers.get(withoutCase(path));
+		const watchers: any[] = this.watchers.get(withoutCase(path));
 		if (watchers !== undefined) {
 			for (const w of watchers) {
 				fn(w);
@@ -145,11 +145,11 @@ class DirectoryWatcher extends EventEmitter {
 			}
 		}
 
-		const oldFile: String = this.files.get(itemPath);
+		const oldFile: string = this.files.get(itemPath);
 		if (oldFile) {
 			this.files.delete(itemPath);
-			const key: String = withoutCase(itemPath);
-			const count: Number = this.filesWithoutCase.get(key) - 1;
+			const key: string = withoutCase(itemPath);
+			const count: number = this.filesWithoutCase.get(key) - 1;
 			if (count <= 0) {
 				this.filesWithoutCase.delete(key);
 				this.forEachWatcher(itemPath, (w: DirectoryWatcher) => w.emit("remove", type));
@@ -166,13 +166,13 @@ class DirectoryWatcher extends EventEmitter {
 	}
 
 	setFileTime(filePath, mtime, initial, ignoreWhenEqual, type) {
-		const now: Number = Date.now();
+		const now: number = Date.now();
 
 		if (this.ignored(filePath)) return;
 
-		const old: Object = this.files.get(filePath);
+		const old: object = this.files.get(filePath);
 
-		let safeTime: Number, accuracy: Number;
+		let safeTime: number, accuracy: number;
 		if (initial) {
 			safeTime = Math.min(now, mtime) + FS_ACCURACY;
 			accuracy = FS_ACCURACY;
@@ -198,8 +198,8 @@ class DirectoryWatcher extends EventEmitter {
 		});
 
 		if (!old) {
-			const key: String = withoutCase(filePath);
-			const count: String = this.filesWithoutCase.get(key);
+			const key: string = withoutCase(filePath);
+			const count: string = this.filesWithoutCase.get(key);
 			this.filesWithoutCase.set(key, (count || 0) + 1);
 			if (count !== undefined) {
 				// There is already a file with case-insensitive-equal name
@@ -234,9 +234,9 @@ class DirectoryWatcher extends EventEmitter {
 				);
 			}
 		} else {
-			const old: String = this.directories.get(directoryPath);
+			const old: string = this.directories.get(directoryPath);
 			if (!old) {
-				const now: Number = Date.now();
+				const now: number = Date.now();
 
 				if (this.nestedWatching) {
 					this.createNestedWatcher(directoryPath);
@@ -244,7 +244,7 @@ class DirectoryWatcher extends EventEmitter {
 					this.directories.set(directoryPath, true);
 				}
 
-				let safeTime: Number;
+				let safeTime: number;
 				if (initial) {
 					safeTime = Math.min(now, birthtime) + FS_ACCURACY;
 				} else {
@@ -267,7 +267,7 @@ class DirectoryWatcher extends EventEmitter {
 
 	createNestedWatcher(directoryPath) {
 		const watcher: DirectoryWatcher = this.watcherManager.watchDirectory(directoryPath, 1);
-		watcher.on("change", (filePath: String, mtime: String, type: String, initial: Number) => {
+		watcher.on("change", (filePath: string, mtime: string, type: string, initial: number) => {
 			this.forEachWatcher(this.path, (w: Watcher) => {
 				if (!initial || w.checkStartTime(mtime, initial)) {
 					w.emit("change", filePath, mtime, type, initial);
@@ -294,7 +294,7 @@ class DirectoryWatcher extends EventEmitter {
 	}
 
 	watch(filePath, startTime) {
-		const key: String = withoutCase(filePath);
+		const key: string = withoutCase(filePath);
 		let watchers: Map = this.watchers.get(key);
 		if (watchers === undefined) {
 			watchers = new Set();
@@ -314,7 +314,7 @@ class DirectoryWatcher extends EventEmitter {
 			}
 		});
 		watchers.add(watcher);
-		let safeTime: Number;
+		let safeTime: number;
 		if (filePath === this.path) {
 			this.setNestedWatching(true);
 			safeTime = this.lastWatchEvent;
@@ -383,7 +383,7 @@ class DirectoryWatcher extends EventEmitter {
 			return;
 		}
 
-		const filePath: String = path.join(this.path, filename);
+		const filePath: string = path.join(this.path, filename);
 		if (this.ignored(filePath)) return;
 
 		if (this._activeEvents.get(filename) === undefined) {
@@ -391,7 +391,7 @@ class DirectoryWatcher extends EventEmitter {
 			const checkStats: Function = () => {
 				if (this.closed) return;
 				this._activeEvents.set(filename, false);
-				fs.lstat(filePath, (err: HTMLElement, stats: Array) => {
+				fs.lstat(filePath, (err: HTMLElement, stats: any[]) => {
 					if (this.closed) return;
 					if (this._activeEvents.get(filename) === true) {
 						process.nextTick(checkStats);
@@ -484,7 +484,7 @@ class DirectoryWatcher extends EventEmitter {
 			this.watcher = null;
 		}
 		this.watchInParentDirectory();
-		const type: String = `directory-removed (${reason})`;
+		const type: string = `directory-removed (${reason})`;
 		for (const directory of this.directories.keys()) {
 			this.setMissing(directory, null, type);
 		}
@@ -495,13 +495,13 @@ class DirectoryWatcher extends EventEmitter {
 
 	watchInParentDirectory() {
 		if (!this.parentWatcher) {
-			const parentDir: Number = path.dirname(this.path);
+			const parentDir: number = path.dirname(this.path);
 			// avoid watching in the root directory
 			// removing directories in the root directory is not supported
 			if (path.dirname(parentDir) === parentDir) return;
 
 			this.parentWatcher = this.watcherManager.watchFile(this.path, 1);
-			this.parentWatcher.on("change", (mtime: String, type: String) => {
+			this.parentWatcher.on("change", (mtime: string, type: string) => {
 				if (this.closed) return;
 
 				// On non-osx platforms we don't need this watcher to detect
@@ -544,7 +544,7 @@ class DirectoryWatcher extends EventEmitter {
 		}
 		process.nextTick(() => {
 			if (this.closed) return;
-			fs.readdir(this.path, (err: Object, items: Array) => {
+			fs.readdir(this.path, (err: object, items: any[]) => {
 				if (this.closed) return;
 				if (err) {
 					if (err.code === "ENOENT" || err.code === "EPERM") {
@@ -575,7 +575,7 @@ class DirectoryWatcher extends EventEmitter {
 					return;
 				}
 				const itemPaths: Map = new Set(
-					items.map((item: String) => path.join(this.path, item.normalize("NFC")))
+					items.map((item: string) => path.join(this.path, item.normalize("NFC")))
 				);
 				for (const file of this.files.keys()) {
 					if (!itemPaths.has(file)) {
@@ -624,7 +624,7 @@ class DirectoryWatcher extends EventEmitter {
 					}
 				});
 				for (const itemPath of itemPaths) {
-					fs.lstat(itemPath, (err2: HTMLElement, stats: Array) => {
+					fs.lstat(itemPath, (err2: HTMLElement, stats: any[]) => {
 						if (this.closed) return;
 						if (err2) {
 							if (
@@ -669,8 +669,8 @@ class DirectoryWatcher extends EventEmitter {
 	}
 
 	getTimes() {
-		const obj: Object = Object.create(null);
-		let safeTime: Number = this.lastWatchEvent;
+		const obj: object = Object.create(null);
+		let safeTime: number = this.lastWatchEvent;
 		for (const [file, entry] of this.files) {
 			fixupEntryAccuracy(entry);
 			safeTime = Math.max(safeTime, entry.safeTime);
@@ -678,9 +678,9 @@ class DirectoryWatcher extends EventEmitter {
 		}
 		if (this.nestedWatching) {
 			for (const w of this.directories.values()) {
-				const times: Object = w.directoryWatcher.getTimes();
+				const times: object = w.directoryWatcher.getTimes();
 				for (const file of Object.keys(times)) {
-					const time: String = times[file];
+					const time: string = times[file];
 					safeTime = Math.max(safeTime, time);
 					obj[file] = time;
 				}
@@ -690,7 +690,7 @@ class DirectoryWatcher extends EventEmitter {
 		if (!this.initialScan) {
 			for (const watchers of this.watchers.values()) {
 				for (const watcher of watchers) {
-					const path: String = watcher.path;
+					const path: string = watcher.path;
 					if (!Object.prototype.hasOwnProperty.call(obj, path)) {
 						obj[path] = null;
 					}
@@ -701,7 +701,7 @@ class DirectoryWatcher extends EventEmitter {
 	}
 
 	collectTimeInfoEntries(fileTimestamps, directoryTimestamps) {
-		let safeTime: Number = this.lastWatchEvent;
+		let safeTime: number = this.lastWatchEvent;
 		for (const [file, entry] of this.files) {
 			fixupEntryAccuracy(entry);
 			safeTime = Math.max(safeTime, entry.safeTime);
@@ -735,7 +735,7 @@ class DirectoryWatcher extends EventEmitter {
 		if (!this.initialScan) {
 			for (const watchers of this.watchers.values()) {
 				for (const watcher of watchers) {
-					const path: String = watcher.path;
+					const path: string = watcher.path;
 					if (!fileTimestamps.has(path)) {
 						fileTimestamps.set(path, null);
 					}
@@ -769,14 +769,14 @@ class DirectoryWatcher extends EventEmitter {
 module.exports = DirectoryWatcher;
 module.exports.EXISTANCE_ONLY_TIME_ENTRY = EXISTANCE_ONLY_TIME_ENTRY;
 
-function fixupEntryAccuracy(entry: Object): Void {
+function fixupEntryAccuracy(entry: object): Void {
 	if (entry.accuracy > FS_ACCURACY) {
 		entry.safeTime = entry.safeTime - entry.accuracy + FS_ACCURACY;
 		entry.accuracy = FS_ACCURACY;
 	}
 }
 
-function ensureFsAccuracy(mtime: Number): Void {
+function ensureFsAccuracy(mtime: number): Void {
 	if (!mtime) return;
 	if (FS_ACCURACY > 1 && mtime % 1 !== 0) FS_ACCURACY = 1;
 	else if (FS_ACCURACY > 10 && mtime % 10 !== 0) FS_ACCURACY = 10;

@@ -2,11 +2,11 @@
 
 import vendors from './vendors.json';
 
-const env: Object = process.env
+const env: object = process.env
 
 // Used for testing only
 Object.defineProperty(exports, '_vendors', {
-  value: vendors.map(function (v: Object) {
+  value: vendors.map(function (v: object) {
     return v.constant
   })
 })
@@ -15,8 +15,8 @@ exports.name = null
 exports.isPR = null
 
 vendors.forEach(function (vendor: HTMLElement) {
-  const envs: Array = Array.isArray(vendor.env) ? vendor.env : [vendor.env]
-  const isCI: Boolean = envs.every(function (obj: String) {
+  const envs: any[] = Array.isArray(vendor.env) ? vendor.env : [vendor.env]
+  const isCI: boolean = envs.every(function (obj: string) {
     return checkEnv(obj)
   })
 
@@ -39,7 +39,7 @@ vendors.forEach(function (vendor: HTMLElement) {
         exports.isPR = vendor.pr.env in env && env[vendor.pr.env] !== vendor.pr.ne
       } else if ('any' in vendor.pr) {
         // "pr": { "any": ["ghprbPullId", "CHANGE_ID"] }
-        exports.isPR = vendor.pr.any.some(function (key: String) {
+        exports.isPR = vendor.pr.any.some(function (key: string) {
           return !!env[key]
         })
       } else {
@@ -65,9 +65,9 @@ exports.isCI = !!(
   false
 )
 
-function checkEnv (obj: Object): Boolean {
+function checkEnv (obj: object): boolean {
   if (typeof obj === 'string') return !!env[obj]
-  return Object.keys(obj).every(function (k: String) {
+  return Object.keys(obj).every(function (k: string) {
     return env[k] === obj[k]
   })
 }

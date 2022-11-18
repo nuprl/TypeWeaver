@@ -26,7 +26,7 @@ function Growly(): Void {
  */
 
 Growly.prototype.getLabels = function() {
-    return this.notifications.map(function(notif: Object) {
+    return this.notifications.map(function(notif: object) {
         return notif.label;
     });
 };
@@ -39,7 +39,7 @@ Growly.prototype.getLabels = function() {
  * @api public
  */
 
-Growly.prototype.setHost = function(host: Function, port: Number) {
+Growly.prototype.setHost = function(host: Function, port: number) {
     this.host = host;
     this.port = port;
 };
@@ -72,7 +72,7 @@ Growly.prototype.setHost = function(host: Function, port: Number) {
  * @api public
  */
 
-Growly.prototype.register = function(appname: Array, appicon: Array, notifications: Array, callback: Function) {
+Growly.prototype.register = function(appname: any[], appicon: any[], notifications: any[], callback: Function) {
     var gntp: HTMLElement;
 
     if (typeof appicon === 'object') {
@@ -101,7 +101,7 @@ Growly.prototype.register = function(appname: Array, appicon: Array, notificatio
     gntp.add('Notifications-Count', notifications.length);
     gntp.newline();
 
-    notifications.forEach(function(notif: Object) {
+    notifications.forEach(function(notif: object) {
         if (notif.enabled === undefined) notif.enabled = true;
         gntp.add('Notification-Name', notif.label);
         gntp.add('Notification-Display-Name', notif.dispname);
@@ -142,13 +142,13 @@ Growly.prototype.register = function(appname: Array, appicon: Array, notificatio
  * @api public
  */
 
-Growly.prototype.notify = function(text: String, opts: Object, callback: Function) {
-    var self: Array = this,
+Growly.prototype.notify = function(text: string, opts: object, callback: Function) {
+    var self: any[] = this,
         gntp: HTMLElement;
 
     /* Lazy registration. */
     if (!this.registered) {
-        this.register(this.appname, function(err: Boolean) {
+        this.register(this.appname, function(err: boolean) {
             if (err) console.log(err);
             self.notify.call(self, text, opts, callback);
         });
@@ -177,7 +177,7 @@ Growly.prototype.notify = function(text: String, opts: Object, callback: Functio
     gntp.add('Notification-Callback-Target', undefined);
     gntp.newline();
 
-    gntp.send(function(err: String, resp: Object) {
+    gntp.send(function(err: string, resp: object) {
         if (callback && err) {
             callback(err);
         } else if (callback && resp.state === 'CALLBACK') {

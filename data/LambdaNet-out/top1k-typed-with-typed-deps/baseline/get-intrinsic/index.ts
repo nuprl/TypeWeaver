@@ -1,13 +1,13 @@
 'use strict';
 
-var undefined: String;
+var undefined: string;
 
-var $SyntaxError: Array = SyntaxError;
-var $Function: Array = Function;
+var $SyntaxError: any[] = SyntaxError;
+var $Function: any[] = Function;
 var $TypeError: RegExp = TypeError;
 
 // eslint-disable-next-line consistent-return
-var getEvalledConstructor: Function = function (expressionSyntax: Number) {
+var getEvalledConstructor: Function = function (expressionSyntax: number) {
 	try {
 		return $Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
 	} catch (e) {}
@@ -42,15 +42,15 @@ var ThrowTypeError: Function = $gOPD
 	}())
 	: throwTypeError;
 
-var hasSymbols: Boolean = require('has-symbols')();
+var hasSymbols: boolean = require('has-symbols')();
 
 var getProto: Function = Object.getPrototypeOf || function (x: Function) { return x.__proto__; }; // eslint-disable-line no-proto
 
-var needsEval: String = {};
+var needsEval: string = {};
 
-var TypedArray: Array = typeof Uint8Array === 'undefined' ? undefined : getProto(Uint8Array);
+var TypedArray: any[] = typeof Uint8Array === 'undefined' ? undefined : getProto(Uint8Array);
 
-var INTRINSICS: Object = {
+var INTRINSICS: object = {
 	'%AggregateError%': typeof AggregateError === 'undefined' ? undefined : AggregateError,
 	'%Array%': Array,
 	'%ArrayBuffer%': typeof ArrayBuffer === 'undefined' ? undefined : ArrayBuffer,
@@ -117,7 +117,7 @@ var INTRINSICS: Object = {
 	'%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
 };
 
-var doEval: Object = function doEval(name: String): Object {
+var doEval: object = function doEval(name: string): object {
 	var value: Function;
 	if (name === '%AsyncFunction%') {
 		value = getEvalledConstructor('async function () {}');
@@ -126,12 +126,12 @@ var doEval: Object = function doEval(name: String): Object {
 	} else if (name === '%AsyncGeneratorFunction%') {
 		value = getEvalledConstructor('async function* () {}');
 	} else if (name === '%AsyncGenerator%') {
-		var fn: Array = doEval('%AsyncGeneratorFunction%');
+		var fn: any[] = doEval('%AsyncGeneratorFunction%');
 		if (fn) {
 			value = fn.prototype;
 		}
 	} else if (name === '%AsyncIteratorPrototype%') {
-		var gen: Object = doEval('%AsyncGenerator%');
+		var gen: object = doEval('%AsyncGenerator%');
 		if (gen) {
 			value = getProto(gen.prototype);
 		}
@@ -142,7 +142,7 @@ var doEval: Object = function doEval(name: String): Object {
 	return value;
 };
 
-var LEGACY_ALIASES: Object = {
+var LEGACY_ALIASES: object = {
 	'%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
 	'%ArrayPrototype%': ['Array', 'prototype'],
 	'%ArrayProto_entries%': ['Array', 'prototype', 'entries'],
@@ -200,39 +200,39 @@ var bind: Function = require('function-bind');
 var hasOwn: Function = require('has');
 var $concat: Function = bind.call(Function.call, Array.prototype.concat);
 var $spliceApply: Function = bind.call(Function.apply, Array.prototype.splice);
-var $replace: Object = bind.call(Function.call, String.prototype.replace);
+var $replace: object = bind.call(Function.call, String.prototype.replace);
 var $strSlice: Function = bind.call(Function.call, String.prototype.slice);
 var $exec: Function = bind.call(Function.call, RegExp.prototype.exec);
 
 /* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
 var rePropName: RegExp = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
 var reEscapeChar: RegExp = /\\(\\)?/g; /** Used to match backslashes in property paths. */
-var stringToPath: Function = function stringToPath(string: String): Array {
-	var first: Number = $strSlice(string, 0, 1);
-	var last: Number = $strSlice(string, -1);
+var stringToPath: Function = function stringToPath(string: string): any[] {
+	var first: number = $strSlice(string, 0, 1);
+	var last: number = $strSlice(string, -1);
 	if (first === '%' && last !== '%') {
 		throw new $SyntaxError('invalid intrinsic syntax, expected closing `%`');
 	} else if (last === '%' && first !== '%') {
 		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
 	}
-	var result: Array = [];
-	$replace(string, rePropName, function (match: Number, number: Number, quote: Boolean, subString: String) {
+	var result: any[] = [];
+	$replace(string, rePropName, function (match: number, number: number, quote: boolean, subString: string) {
 		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
 	});
 	return result;
 };
 /* end adaptation */
 
-var getBaseIntrinsic: Function = function getBaseIntrinsic(name: String, allowMissing: Boolean): Object {
-	var intrinsicName: String = name;
-	var alias: Object;
+var getBaseIntrinsic: Function = function getBaseIntrinsic(name: string, allowMissing: boolean): object {
+	var intrinsicName: string = name;
+	var alias: object;
 	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
 		alias = LEGACY_ALIASES[intrinsicName];
 		intrinsicName = '%' + alias[0] + '%';
 	}
 
 	if (hasOwn(INTRINSICS, intrinsicName)) {
-		var value: Object = INTRINSICS[intrinsicName];
+		var value: object = INTRINSICS[intrinsicName];
 		if (value === needsEval) {
 			value = doEval(intrinsicName);
 		}
@@ -250,7 +250,7 @@ var getBaseIntrinsic: Function = function getBaseIntrinsic(name: String, allowMi
 	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
 };
 
-module.exports = function GetIntrinsic(name: String, allowMissing: Boolean): Object {
+module.exports = function GetIntrinsic(name: string, allowMissing: boolean): object {
 	if (typeof name !== 'string' || name.length === 0) {
 		throw new $TypeError('intrinsic name must be a non-empty string');
 	}
@@ -261,24 +261,24 @@ module.exports = function GetIntrinsic(name: String, allowMissing: Boolean): Obj
 	if ($exec(/^%?[^%]*%?$/g, name) === null) {
 		throw new $SyntaxError('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
 	}
-	var parts: Array = stringToPath(name);
-	var intrinsicBaseName: String = parts.length > 0 ? parts[0] : '';
+	var parts: any[] = stringToPath(name);
+	var intrinsicBaseName: string = parts.length > 0 ? parts[0] : '';
 
-	var intrinsic: Object = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
-	var intrinsicRealName: String = intrinsic.name;
-	var value: Object = intrinsic.value;
-	var skipFurtherCaching: Boolean = false;
+	var intrinsic: object = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
+	var intrinsicRealName: string = intrinsic.name;
+	var value: object = intrinsic.value;
+	var skipFurtherCaching: boolean = false;
 
-	var alias: Object = intrinsic.alias;
+	var alias: object = intrinsic.alias;
 	if (alias) {
 		intrinsicBaseName = alias[0];
 		$spliceApply(parts, $concat([0, 1], alias));
 	}
 
 	for (var i = 1, isOwn = true; i < parts.length; i += 1) {
-		var part: String = parts[i];
-		var first: Number = $strSlice(part, 0, 1);
-		var last: Number = $strSlice(part, -1);
+		var part: string = parts[i];
+		var first: number = $strSlice(part, 0, 1);
+		var last: number = $strSlice(part, -1);
 		if (
 			(
 				(first === '"' || first === "'" || first === '`')
@@ -305,7 +305,7 @@ module.exports = function GetIntrinsic(name: String, allowMissing: Boolean): Obj
 				return void undefined;
 			}
 			if ($gOPD && (i + 1) >= parts.length) {
-				var desc: Object = $gOPD(value, part);
+				var desc: object = $gOPD(value, part);
 				isOwn = !!desc;
 
 				// By convention, when a data property is converted to an accessor

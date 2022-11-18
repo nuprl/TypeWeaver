@@ -2,7 +2,7 @@
 import { fromPromise as u } from 'universalify';
 import fs from '../fs';
 
-function pathExists (path: String): Promise {
+function pathExists (path: string): Promise {
   return fs.access(path).then(() => true).catch(() => false)
 }
 

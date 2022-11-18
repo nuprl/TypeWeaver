@@ -14,14 +14,14 @@ import stringToArray from './stringToArray.js'
  * @param {string} [chars=' '] The string used as padding.
  * @returns {string} Returns the padding for `string`.
  */
-function createPadding(length: Number, chars: String): String {
+function createPadding(length: number, chars: string): string {
   chars = chars === undefined ? ' ' : baseToString(chars)
 
-  const charsLength: Number = chars.length
+  const charsLength: number = chars.length
   if (charsLength < 2) {
     return charsLength ? repeat(chars, length) : chars
   }
-  const result: Array = repeat(chars, Math.ceil(length / stringSize(chars)))
+  const result: any[] = repeat(chars, Math.ceil(length / stringSize(chars)))
   return hasUnicode(chars)
     ? castSlice(stringToArray(result), 0, length).join('')
     : result.slice(0, length)

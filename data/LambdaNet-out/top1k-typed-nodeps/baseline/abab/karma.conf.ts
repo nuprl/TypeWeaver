@@ -1,6 +1,6 @@
 "use strict";
 
-const webpack: String = require("webpack");
+const webpack: string = require("webpack");
 
 module.exports = function (config: Map) {
   config.set({

@@ -1,6 +1,6 @@
 export default async function pFinally(
 	promise: Promise,
-	onFinally: Array = (() => {})
+	onFinally: any[] = (() => {})
 ): HTMLElement {
 	let value: Function;
 	try {

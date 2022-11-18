@@ -1,25 +1,25 @@
 'use strict';
 
-module.exports = function(arr: String, arrays: Function) {
+module.exports = function(arr: string, arrays: Function) {
   for (var i = 1; i < arguments.length; i++) {
     diff(arr, arguments[i]);
   }
   return arr;
 };
 
-function diff(one: String, two: Array): Void {
+function diff(one: string, two: any[]): Void {
   if (!Array.isArray(two)) return;
-  var len: Number = two.length;
-  var idx: Number = -1;
+  var len: number = two.length;
+  var idx: number = -1;
   while (++idx < len) {
     remove(one, two[idx]);
   }
 }
 
-function remove(arr: Array, ele: String): String {
-  var idx: Number = arr.indexOf(ele);
+function remove(arr: any[], ele: string): string {
+  var idx: number = arr.indexOf(ele);
   if (idx === -1) return;
-  var item: String = arr.pop();
+  var item: string = arr.pop();
   if (item !== ele) {
     arr[idx] = item;
   }

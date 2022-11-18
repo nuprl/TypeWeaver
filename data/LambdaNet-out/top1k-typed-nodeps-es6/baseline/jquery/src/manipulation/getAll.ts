@@ -1,11 +1,11 @@
 import jQuery from "../core.js";
 import nodeName from "../core/nodeName.js";
 
-function getAll( context: HTMLElement, tag: Number ): Array {
+function getAll( context: HTMLElement, tag: number ): any[] {
 
 	// Support: IE <=9 - 11+
 	// Use typeof to avoid zero-argument method invocation on host objects (trac-15151)
-	var ret: Array;
+	var ret: any[];
 
 	if ( typeof context.getElementsByTagName !== "undefined" ) {
 		ret = context.getElementsByTagName( tag || "*" );

@@ -3,8 +3,8 @@
 import bind from 'function-bind';
 import GetIntrinsic from 'get-intrinsic';
 
-var $apply: String = GetIntrinsic('%Function.prototype.apply%');
-var $call: String = GetIntrinsic('%Function.prototype.call%');
+var $apply: string = GetIntrinsic('%Function.prototype.apply%');
+var $call: string = GetIntrinsic('%Function.prototype.call%');
 var $reflectApply: Function = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
 
 var $gOPD: Function = GetIntrinsic('%Object.getOwnPropertyDescriptor%', true);
@@ -20,10 +20,10 @@ if ($defineProperty) {
 	}
 }
 
-export default function callBind(originalFunction: Array): Array {
-	var func: Array = $reflectApply(bind, $call, arguments);
+export default function callBind(originalFunction: any[]): any[] {
+	var func: any[] = $reflectApply(bind, $call, arguments);
 	if ($gOPD && $defineProperty) {
-		var desc: Array = $gOPD(func, 'length');
+		var desc: any[] = $gOPD(func, 'length');
 		if (desc.configurable) {
 			// original length, plus the receiver, minus any additional arguments (after the receiver)
 			$defineProperty(

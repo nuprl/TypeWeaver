@@ -2,7 +2,7 @@
 
 import colors from '..';
 import justified from 'justified';
-let str: String = '';
+let str: string = '';
 
 /**
  * this is inspired by and modified from the
@@ -10,7 +10,7 @@ let str: String = '';
  */
 
 for (const key of Object.keys(colors.styles)) {
-  let res: String = key;
+  let res: string = key;
 
   if (key === 'reset' || key === 'hidden' || key === 'grey' || key === 'verbose') {
     continue;

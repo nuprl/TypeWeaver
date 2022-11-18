@@ -2,8 +2,8 @@
 
 import { parseNumber } from '../parsers';
 
-export const definition: Object = {
-  set: function(v: Array) {
+export const definition: object = {
+  set: function(v: any[]) {
     this._setProperty('opacity', parseNumber(v));
   },
   get: function() {

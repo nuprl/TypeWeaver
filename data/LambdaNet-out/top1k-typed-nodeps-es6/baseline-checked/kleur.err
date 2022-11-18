@@ -3,12 +3,10 @@ bench/colors.ts(2,18): error TS2307: Cannot find module 'ansi-colors' or its cor
 bench/colors.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 bench/colors.ts(4,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
 bench/colors.ts(5,19): error TS2307: Cannot find module '../index' or its corresponding type declarations.
-bench/colors.ts(8,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/colors.ts(13,35): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/colors.ts(14,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/colors.ts(14,61): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 bench/colors.ts(15,8): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-bench/colors.ts(15,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/colors.ts(21,3): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/colors.ts(37,3): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/colors.ts(53,3): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -68,7 +66,6 @@ bench/dryrun.ts(1,19): error TS2307: Cannot find module 'chalk' or its correspon
 bench/dryrun.ts(2,18): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
 bench/dryrun.ts(3,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
 bench/dryrun.ts(4,19): error TS2307: Cannot find module '../index' or its corresponding type declarations.
-bench/dryrun.ts(18,20): error TS2538: Type 'String' cannot be used as an index type.
 bench/dryrun.ts(22,19): error TS2339: Property 'bold' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(22,30): error TS2339: Property 'cyan' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(22,53): error TS2339: Property 'cyan' does not exist on type 'HTMLElement'.
@@ -136,13 +133,4 @@ bench/load.ts(6,19): error TS2307: Cannot find module '../index' or its correspo
 bench/load.ts(10,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
 bench/load.ts(14,19): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
 build/index.ts(3,49): error TS2304: Cannot find name 'Void'.
-build/index.ts(6,37): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-build/index.ts(10,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 

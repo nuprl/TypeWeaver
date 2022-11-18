@@ -1,15 +1,15 @@
 'use strict';
 
 const fill: Function = require('fill-range');
-const utils: String = require('./utils');
+const utils: string = require('./utils');
 
-const compile: Function = (ast: Array, options: Object = {}) => {
-  let walk: Function = (node: Object, parent: Array = {}) => {
-    let invalidBlock: Number = utils.isInvalidBrace(parent);
-    let invalidNode: Number = node.invalid === true && options.escapeInvalid === true;
-    let invalid: Boolean = invalidBlock === true || invalidNode === true;
-    let prefix: String = options.escapeInvalid === true ? '\\' : '';
-    let output: String = '';
+const compile: Function = (ast: any[], options: object = {}) => {
+  let walk: Function = (node: object, parent: any[] = {}) => {
+    let invalidBlock: number = utils.isInvalidBrace(parent);
+    let invalidNode: number = node.invalid === true && options.escapeInvalid === true;
+    let invalid: boolean = invalidBlock === true || invalidNode === true;
+    let prefix: string = options.escapeInvalid === true ? '\\' : '';
+    let output: string = '';
 
     if (node.isOpen === true) {
       return prefix + node.value;
@@ -35,8 +35,8 @@ const compile: Function = (ast: Array, options: Object = {}) => {
     }
 
     if (node.nodes && node.ranges > 0) {
-      let args: Array = utils.reduce(node.nodes);
-      let range: String = fill(...args, { ...options, wrap: false, toRegex: true });
+      let args: any[] = utils.reduce(node.nodes);
+      let range: string = fill(...args, { ...options, wrap: false, toRegex: true });
 
       if (range.length !== 0) {
         return args.length > 1 && range.length > 1 ? `(${range})` : range;

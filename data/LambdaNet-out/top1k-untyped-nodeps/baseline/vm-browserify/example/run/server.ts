@@ -1,5 +1,5 @@
-var ecstatic: Array = require('ecstatic')(__dirname);
-var http: String = require('http');
+var ecstatic: any[] = require('ecstatic')(__dirname);
+var http: string = require('http');
 http.createServer(ecstatic).listen(8000);
 
 console.log('listening on :8000');

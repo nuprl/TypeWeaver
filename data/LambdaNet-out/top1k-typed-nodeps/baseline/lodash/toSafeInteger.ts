@@ -1,7 +1,7 @@
 import toInteger from './toInteger.js'
 
 /** Used as references for various `Number` constants. */
-const MAX_SAFE_INTEGER: Number = 9007199254740991
+const MAX_SAFE_INTEGER: number = 9007199254740991
 
 /**
  * Converts `value` to a safe integer. A safe integer can be compared and
@@ -25,7 +25,7 @@ const MAX_SAFE_INTEGER: Number = 9007199254740991
  * toSafeInteger('3.2')
  * // => 3
  */
-function toSafeInteger(value: Number): Boolean {
+function toSafeInteger(value: number): boolean {
   if (!value) {
     return value === 0 ? value : 0
   }

@@ -13,8 +13,8 @@
  * jQuery(element).on('click', before(5, addContactToList))
  * // => Allows adding up to 4 contacts to the list.
  */
-function before(n: Number, func: Function): Function {
-  let result: Object
+function before(n: number, func: Function): Function {
+  let result: object
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
   }

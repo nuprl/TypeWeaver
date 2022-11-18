@@ -6,18 +6,18 @@
 
 const { getMap, getSourceAndMap } = require("./helpers/getFromStreamChunks");
 const streamChunks: Function = require("./helpers/streamChunks");
-const Source: String = require("./Source");
+const Source: string = require("./Source");
 const splitIntoLines: Function = require("./helpers/splitIntoLines");
 
 // since v8 7.0, Array.prototype.sort is stable
-const hasStableSort: Boolean =
+const hasStableSort: boolean =
 	typeof process === "object" &&
 	process.versions &&
 	typeof process.versions.v8 === "string" &&
 	!/^[0-6]\./.test(process.versions.v8);
 
 // This is larger than max string length
-const MAX_SOURCE_POSITION: Number = 0x20000000;
+const MAX_SOURCE_POSITION: number = 0x20000000;
 
 class Replacement {
 	constructor(start, end, content, name) {
@@ -75,23 +75,23 @@ class ReplaceSource extends Source {
 		if (this._replacements.length === 0) {
 			return this._source.source();
 		}
-		let current: Array = this._source.source();
-		let pos: Number = 0;
-		const result: Array = [];
+		let current: any[] = this._source.source();
+		let pos: number = 0;
+		const result: any[] = [];
 
 		this._sortReplacements();
 		for (const replacement of this._replacements) {
-			const start: Number = Math.floor(replacement.start);
-			const end: Number = Math.floor(replacement.end + 1);
+			const start: number = Math.floor(replacement.start);
+			const end: number = Math.floor(replacement.end + 1);
 			if (pos < start) {
-				const offset: Number = start - pos;
+				const offset: number = start - pos;
 				result.push(current.slice(0, offset));
 				current = current.slice(offset);
 				pos = start;
 			}
 			result.push(replacement.content);
 			if (pos < end) {
-				const offset: Number = end - pos;
+				const offset: number = end - pos;
 				current = current.slice(offset);
 				pos = end;
 			}
@@ -121,19 +121,19 @@ class ReplaceSource extends Source {
 	_sortReplacements() {
 		if (this._isSorted) return;
 		if (hasStableSort) {
-			this._replacements.sort(function (a: Object, b: Object) {
-				const diff1: Number = a.start - b.start;
+			this._replacements.sort(function (a: object, b: object) {
+				const diff1: number = a.start - b.start;
 				if (diff1 !== 0) return diff1;
-				const diff2: Number = a.end - b.end;
+				const diff2: number = a.end - b.end;
 				if (diff2 !== 0) return diff2;
 				return 0;
 			});
 		} else {
-			this._replacements.forEach((repl: Function, i: String) => (repl.index = i));
-			this._replacements.sort(function (a: Object, b: Object) {
-				const diff1: Number = a.start - b.start;
+			this._replacements.forEach((repl: Function, i: string) => (repl.index = i));
+			this._replacements.sort(function (a: object, b: object) {
+				const diff1: number = a.start - b.start;
 				if (diff1 !== 0) return diff1;
-				const diff2: Number = a.end - b.end;
+				const diff2: number = a.end - b.end;
 				if (diff2 !== 0) return diff2;
 				return a.index - b.index;
 			});
@@ -143,20 +143,20 @@ class ReplaceSource extends Source {
 
 	streamChunks(options, onChunk, onSource, onName) {
 		this._sortReplacements();
-		const repls: Array = this._replacements;
-		let pos: Number = 0;
-		let i: Number = 0;
-		let replacmentEnd: Number = -1;
-		let nextReplacement: Number =
+		const repls: any[] = this._replacements;
+		let pos: number = 0;
+		let i: number = 0;
+		let replacmentEnd: number = -1;
+		let nextReplacement: number =
 			i < repls.length ? Math.floor(repls[i].start) : MAX_SOURCE_POSITION;
-		let generatedLineOffset: Number = 0;
-		let generatedColumnOffset: Number = 0;
-		let generatedColumnOffsetLine: Number = 0;
-		const sourceContents: Array = [];
+		let generatedLineOffset: number = 0;
+		let generatedColumnOffset: number = 0;
+		let generatedColumnOffsetLine: number = 0;
+		const sourceContents: any[] = [];
 		const nameMapping: Map = new Map();
-		const nameIndexMapping: String = [];
-		const checkOriginalContent: Function = (sourceIndex: String, line: Number, column: String, expectedChunk: Array) => {
-			let content: Array =
+		const nameIndexMapping: string = [];
+		const checkOriginalContent: Function = (sourceIndex: string, line: number, column: string, expectedChunk: any[]) => {
+			let content: any[] =
 				sourceIndex < sourceContents.length
 					? sourceContents[sourceIndex]
 					: undefined;
@@ -165,7 +165,7 @@ class ReplaceSource extends Source {
 				content = splitIntoLines(content);
 				sourceContents[sourceIndex] = content;
 			}
-			const contentLine: String = line <= content.length ? content[line - 1] : null;
+			const contentLine: string = line <= content.length ? content[line - 1] : null;
 			if (contentLine === null) return false;
 			return (
 				contentLine.slice(column, column + expectedChunk.length) ===
@@ -176,22 +176,22 @@ class ReplaceSource extends Source {
 			this._source,
 			Object.assign({}, options, { finalSource: false }),
 			(
-				chunk: Array,
-				generatedLine: Number,
-				generatedColumn: Number,
-				sourceIndex: Number,
+				chunk: any[],
+				generatedLine: number,
+				generatedColumn: number,
+				sourceIndex: number,
 				originalLine: OriginalSource,
-				originalColumn: Number,
-				nameIndex: String
+				originalColumn: number,
+				nameIndex: string
 			) => {
-				let chunkPos: Number = 0;
-				let endPos: Number = pos + chunk.length;
+				let chunkPos: number = 0;
+				let endPos: number = pos + chunk.length;
 
 				// Skip over when it has been replaced
 				if (replacmentEnd > pos) {
 					// Skip over the whole chunk
 					if (replacmentEnd >= endPos) {
-						const line: Number = generatedLine + generatedLineOffset;
+						const line: number = generatedLine + generatedLineOffset;
 						if (chunk.endsWith("\n")) {
 							generatedLineOffset--;
 							if (generatedColumnOffsetLine === line) {
@@ -221,7 +221,7 @@ class ReplaceSource extends Source {
 						originalColumn += chunkPos;
 					}
 					pos += chunkPos;
-					const line: Number = generatedLine + generatedLineOffset;
+					const line: number = generatedLine + generatedLineOffset;
 					if (generatedColumnOffsetLine === line) {
 						generatedColumnOffset -= chunkPos;
 					} else {
@@ -234,11 +234,11 @@ class ReplaceSource extends Source {
 				// Is a replacement in the chunk?
 				if (nextReplacement < endPos) {
 					do {
-						let line: Number = generatedLine + generatedLineOffset;
+						let line: number = generatedLine + generatedLineOffset;
 						if (nextReplacement > pos) {
 							// Emit chunk until replacement
-							const offset: Number = nextReplacement - pos;
-							const chunkSlice: Array = chunk.slice(chunkPos, chunkPos + offset);
+							const offset: number = nextReplacement - pos;
+							const chunkSlice: any[] = chunk.slice(chunkPos, chunkPos + offset);
 							onChunk(
 								chunkSlice,
 								line,
@@ -270,10 +270,10 @@ class ReplaceSource extends Source {
 
 						// Insert replacement content splitted into chunks by lines
 						const { content, name } = repls[i];
-						let matches: Array = splitIntoLines(content);
-						let replacementNameIndex: String = nameIndex;
+						let matches: any[] = splitIntoLines(content);
+						let replacementNameIndex: string = nameIndex;
 						if (sourceIndex >= 0 && name) {
-							let globalIndex: Number = nameMapping.get(name);
+							let globalIndex: number = nameMapping.get(name);
 							if (globalIndex === undefined) {
 								globalIndex = nameMapping.size;
 								nameMapping.set(name, globalIndex);
@@ -282,7 +282,7 @@ class ReplaceSource extends Source {
 							replacementNameIndex = globalIndex;
 						}
 						for (let m = 0; m < matches.length; m++) {
-							const contentLine: Array = matches[m];
+							const contentLine: any[] = matches[m];
 							onChunk(
 								contentLine,
 								line,
@@ -328,11 +328,11 @@ class ReplaceSource extends Source {
 								: MAX_SOURCE_POSITION;
 
 						// Skip over when it has been replaced
-						const offset: Number = chunk.length - endPos + replacmentEnd - chunkPos;
+						const offset: number = chunk.length - endPos + replacmentEnd - chunkPos;
 						if (offset > 0) {
 							// Skip over whole chunk
 							if (replacmentEnd >= endPos) {
-								let line: Number = generatedLine + generatedLineOffset;
+								let line: number = generatedLine + generatedLineOffset;
 								if (chunk.endsWith("\n")) {
 									generatedLineOffset--;
 									if (generatedColumnOffsetLine === line) {
@@ -350,7 +350,7 @@ class ReplaceSource extends Source {
 							}
 
 							// Partially skip over chunk
-							const line: Number = generatedLine + generatedLineOffset;
+							const line: number = generatedLine + generatedLineOffset;
 							if (
 								checkOriginalContent(
 									sourceIndex,
@@ -376,8 +376,8 @@ class ReplaceSource extends Source {
 
 				// Emit remaining chunk
 				if (chunkPos < chunk.length) {
-					const chunkSlice: String = chunkPos === 0 ? chunk : chunk.slice(chunkPos);
-					const line: Number = generatedLine + generatedLineOffset;
+					const chunkSlice: string = chunkPos === 0 ? chunk : chunk.slice(chunkPos);
+					const line: number = generatedLine + generatedLineOffset;
 					onChunk(
 						chunkSlice,
 						line,
@@ -391,14 +391,14 @@ class ReplaceSource extends Source {
 				}
 				pos = endPos;
 			},
-			(sourceIndex: String, source: String, sourceContent: String) => {
+			(sourceIndex: string, source: string, sourceContent: string) => {
 				while (sourceContents.length < sourceIndex)
 					sourceContents.push(undefined);
 				sourceContents[sourceIndex] = sourceContent;
 				onSource(sourceIndex, source, sourceContent);
 			},
-			(nameIndex: String, name: String) => {
-				let globalIndex: String = nameMapping.get(name);
+			(nameIndex: string, name: string) => {
+				let globalIndex: string = nameMapping.get(name);
 				if (globalIndex === undefined) {
 					globalIndex = nameMapping.size;
 					nameMapping.set(name, globalIndex);
@@ -409,16 +409,16 @@ class ReplaceSource extends Source {
 		);
 
 		// Handle remaining replacements
-		let remainer: String = "";
+		let remainer: string = "";
 		for (; i < repls.length; i++) {
 			remainer += repls[i].content;
 		}
 
 		// Insert remaining replacements content splitted into chunks by lines
-		let line: Number = generatedLine + generatedLineOffset;
-		let matches: Array = splitIntoLines(remainer);
+		let line: number = generatedLine + generatedLineOffset;
+		let matches: any[] = splitIntoLines(remainer);
 		for (let m = 0; m < matches.length; m++) {
-			const contentLine: Array = matches[m];
+			const contentLine: any[] = matches[m];
 			onChunk(
 				contentLine,
 				line,

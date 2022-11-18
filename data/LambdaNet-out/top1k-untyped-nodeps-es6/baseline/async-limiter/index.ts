@@ -1,6 +1,6 @@
 'use strict';
 
-function Queue(options: Object): String {
+function Queue(options: object): string {
   if (!(this instanceof Queue)) {
     return new Queue(options);
   }
@@ -38,9 +38,9 @@ function run(): Void {
 }
 
 // Replicate popular array methods to queue up jobs.
-['push', 'splice', 'unshift'].forEach(function(method: String) {
+['push', 'splice', 'unshift'].forEach(function(method: string) {
   Queue.prototype[method] = function() {
-    var methodResult: Array = Array.prototype[method].apply(this.jobs, arguments);
+    var methodResult: any[] = Array.prototype[method].apply(this.jobs, arguments);
     process.nextTick(this._run);
     return methodResult;
   };
@@ -53,7 +53,7 @@ Object.defineProperty(Queue.prototype, 'length', {
 });
 
 // Simply adds a callback to the end of the job list
-Queue.prototype.onDone = function(cb: String) {
+Queue.prototype.onDone = function(cb: string) {
   if (typeof cb === 'function') this.onDoneCbs.push(cb);
   // If there are no jobs in the queue, this will call `cb()` in the next tick.
   // This is intended for that there is predictable behavior even when running a

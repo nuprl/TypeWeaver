@@ -22,8 +22,8 @@ import slice from './slice.js'
  * takeRight([1, 2, 3], 0)
  * // => []
  */
-function takeRight(array: Array, n: Number=1): Array {
-  const length: Number = array == null ? 0 : array.length
+function takeRight(array: any[], n: number=1): any[] {
+  const length: number = array == null ? 0 : array.length
   if (!length) {
     return []
   }

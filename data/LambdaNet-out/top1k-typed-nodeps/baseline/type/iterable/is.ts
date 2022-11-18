@@ -4,13 +4,13 @@
 
 var isObject: Function = require("../object/is");
 
-var iteratorSymbol: String = Symbol.iterator;
+var iteratorSymbol: string = Symbol.iterator;
 
 if (!iteratorSymbol) {
 	throw new Error("Cannot initialize iterator/is due to Symbol.iterator not being implemented");
 }
 
-module.exports = function (value: Object/*, options*/) {
+module.exports = function (value: object/*, options*/) {
 	var options: HTMLElement = arguments[1];
 	if (!isObject(value)) {
 		if (!isObject(options) || !options.allowString || typeof value !== "string") return false;

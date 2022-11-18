@@ -10,10 +10,10 @@ function DESState(): Void {
   this.keys = null;
 }
 
-function DES(options: Object): Void {
+function DES(options: object): Void {
   Cipher.call(this, options);
 
-  var state: String = new DESState();
+  var state: string = new DESState();
   this._desState = state;
 
   this.deriveKeys(state, options.key);
@@ -21,39 +21,39 @@ function DES(options: Object): Void {
 inherits(DES, Cipher);
 export default DES;
 
-DES.create = function create(options: Object): String {
+DES.create = function create(options: object): string {
   return new DES(options);
 };
 
-var shiftTable: Array = [
+var shiftTable: any[] = [
   1, 1, 2, 2, 2, 2, 2, 2,
   1, 2, 2, 2, 2, 2, 2, 1
 ];
 
-DES.prototype.deriveKeys = function deriveKeys(state: Map, key: String): Void {
+DES.prototype.deriveKeys = function deriveKeys(state: Map, key: string): Void {
   state.keys = new Array(16 * 2);
 
   assert.equal(key.length, this.blockSize, 'Invalid key length');
 
-  var kL: String = utils.readUInt32BE(key, 0);
-  var kR: String = utils.readUInt32BE(key, 4);
+  var kL: string = utils.readUInt32BE(key, 0);
+  var kR: string = utils.readUInt32BE(key, 4);
 
   utils.pc1(kL, kR, state.tmp, 0);
   kL = state.tmp[0];
   kR = state.tmp[1];
   for (var i = 0; i < state.keys.length; i += 2) {
-    var shift: String = shiftTable[i >>> 1];
+    var shift: string = shiftTable[i >>> 1];
     kL = utils.r28shl(kL, shift);
     kR = utils.r28shl(kR, shift);
     utils.pc2(kL, kR, state.keys, i);
   }
 };
 
-DES.prototype._update = function _update(inp: String, inOff: Number, out: String, outOff: Number): Void {
+DES.prototype._update = function _update(inp: string, inOff: number, out: string, outOff: number): Void {
   var state: HTMLElement = this._desState;
 
-  var l: String = utils.readUInt32BE(inp, inOff);
-  var r: String = utils.readUInt32BE(inp, inOff + 4);
+  var l: string = utils.readUInt32BE(inp, inOff);
+  var r: string = utils.readUInt32BE(inp, inOff + 4);
 
   // Initial Permutation
   utils.ip(l, r, state.tmp, 0);
@@ -72,40 +72,40 @@ DES.prototype._update = function _update(inp: String, inOff: Number, out: String
   utils.writeUInt32BE(out, r, outOff + 4);
 };
 
-DES.prototype._pad = function _pad(buffer: Object, off: Number): Boolean {
-  var value: Number = buffer.length - off;
+DES.prototype._pad = function _pad(buffer: object, off: number): boolean {
+  var value: number = buffer.length - off;
   for (var i = off; i < buffer.length; i++)
     buffer[i] = value;
 
   return true;
 };
 
-DES.prototype._unpad = function _unpad(buffer: Object): Boolean {
-  var pad: Number = buffer[buffer.length - 1];
+DES.prototype._unpad = function _unpad(buffer: object): boolean {
+  var pad: number = buffer[buffer.length - 1];
   for (var i = buffer.length - pad; i < buffer.length; i++)
     assert.equal(buffer[i], pad);
 
   return buffer.slice(0, buffer.length - pad);
 };
 
-DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: String, rStart: String, out: Function, off: String): Void {
-  var l: String = lStart;
-  var r: String = rStart;
+DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): Void {
+  var l: string = lStart;
+  var r: string = rStart;
 
   // Apply f() x16 times
   for (var i = 0; i < state.keys.length; i += 2) {
-    var keyL: String = state.keys[i];
-    var keyR: String = state.keys[i + 1];
+    var keyL: string = state.keys[i];
+    var keyR: string = state.keys[i + 1];
 
     // f(r, k)
     utils.expand(r, state.tmp, 0);
 
     keyL ^= state.tmp[0];
     keyR ^= state.tmp[1];
-    var s: String = utils.substitute(keyL, keyR);
-    var f: String = utils.permute(s);
+    var s: string = utils.substitute(keyL, keyR);
+    var f: string = utils.permute(s);
 
-    var t: String = r;
+    var t: string = r;
     r = (l ^ f) >>> 0;
     l = t;
   }
@@ -114,24 +114,24 @@ DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: String, r
   utils.rip(r, l, out, off);
 };
 
-DES.prototype._decrypt = function _decrypt(state: HTMLElement, lStart: String, rStart: String, out: Function, off: String): Void {
-  var l: String = rStart;
-  var r: String = lStart;
+DES.prototype._decrypt = function _decrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): Void {
+  var l: string = rStart;
+  var r: string = lStart;
 
   // Apply f() x16 times
   for (var i = state.keys.length - 2; i >= 0; i -= 2) {
-    var keyL: String = state.keys[i];
-    var keyR: String = state.keys[i + 1];
+    var keyL: string = state.keys[i];
+    var keyR: string = state.keys[i + 1];
 
     // f(r, k)
     utils.expand(l, state.tmp, 0);
 
     keyL ^= state.tmp[0];
     keyR ^= state.tmp[1];
-    var s: String = utils.substitute(keyL, keyR);
-    var f: String = utils.permute(s);
+    var s: string = utils.substitute(keyL, keyR);
+    var f: string = utils.permute(s);
 
-    var t: String = l;
+    var t: string = l;
     l = (r ^ f) >>> 0;
     r = t;
   }

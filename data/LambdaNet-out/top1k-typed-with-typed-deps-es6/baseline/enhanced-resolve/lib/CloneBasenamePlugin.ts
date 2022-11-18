@@ -20,13 +20,13 @@ export default class CloneBasenamePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("CloneBasenamePlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const filename: String = basename(request.path);
-				const filePath: String = resolver.join(request.path, filename);
-				const obj: Object = {
+			.tapAsync("CloneBasenamePlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const filename: string = basename(request.path);
+				const filePath: string = resolver.join(request.path, filename);
+				const obj: object = {
 					...request,
 					path: filePath,
 					relativePath:

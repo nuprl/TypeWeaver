@@ -1,15 +1,15 @@
-var fs: String = require('fs'),
-  util: String = require('util'),
-  path: String = require('path'),
-  xml: String = fs.readFileSync(path.join(__dirname, 'test.xml'), 'utf8'),
-  sax: String = require('../lib/sax'),
-  strict: String = sax.parser(true),
-  loose: Object = sax.parser(false, {trim: true}),
-  inspector: Function = function (ev: String) { return function (data: Object) {
+var fs: string = require('fs'),
+  util: string = require('util'),
+  path: string = require('path'),
+  xml: string = fs.readFileSync(path.join(__dirname, 'test.xml'), 'utf8'),
+  sax: string = require('../lib/sax'),
+  strict: string = sax.parser(true),
+  loose: object = sax.parser(false, {trim: true}),
+  inspector: Function = function (ev: string) { return function (data: object) {
       console.error('%s %s %j', this.line + ':' + this.column, ev, data)
     }}
 
-sax.EVENTS.forEach(function (ev: String) {
+sax.EVENTS.forEach(function (ev: string) {
   loose['on' + ev] = inspector(ev)
 })
 loose.onend = function () {
@@ -20,7 +20,7 @@ loose.onend = function () {
 // do this in random bits at a time to verify that it works.
 (function () {
   if (xml) {
-    var c: Number = Math.ceil(Math.random() * 1000)
+    var c: number = Math.ceil(Math.random() * 1000)
     loose.write(xml.substr(0, c))
     xml = xml.substr(c)
     process.nextTick(arguments.callee)

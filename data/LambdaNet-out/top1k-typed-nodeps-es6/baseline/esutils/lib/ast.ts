@@ -25,7 +25,7 @@
 (function () {
     'use strict';
 
-    function isExpression(node: Object): Boolean {
+    function isExpression(node: object): boolean {
         if (node == null) { return false; }
         switch (node.type) {
             case 'ArrayExpression':
@@ -49,7 +49,7 @@
         return false;
     }
 
-    function isIterationStatement(node: Object): Boolean {
+    function isIterationStatement(node: object): boolean {
         if (node == null) { return false; }
         switch (node.type) {
             case 'DoWhileStatement':
@@ -61,7 +61,7 @@
         return false;
     }
 
-    function isStatement(node: Object): Boolean {
+    function isStatement(node: object): boolean {
         if (node == null) { return false; }
         switch (node.type) {
             case 'BlockStatement':
@@ -87,11 +87,11 @@
         return false;
     }
 
-    function isSourceElement(node: Object): Boolean {
+    function isSourceElement(node: object): boolean {
       return isStatement(node) || node != null && node.type === 'FunctionDeclaration';
     }
 
-    function trailingStatement(node: Object): Array {
+    function trailingStatement(node: object): any[] {
         switch (node.type) {
         case 'IfStatement':
             if (node.alternate != null) {
@@ -109,8 +109,8 @@
         return null;
     }
 
-    function isProblematicIfStatement(node: Object): Boolean {
-        var current: Object;
+    function isProblematicIfStatement(node: object): boolean {
+        var current: object;
 
         if (node.type !== 'IfStatement') {
             return false;

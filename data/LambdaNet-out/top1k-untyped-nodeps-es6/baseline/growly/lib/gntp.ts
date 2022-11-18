@@ -3,7 +3,7 @@ import crypto from 'crypto';
 import { format } from 'util';
 import fs from 'fs';
 
-var nl: String = '\r\n';
+var nl: string = '\r\n';
 
 /**
  * Create a new GNTP request of the given `type`.
@@ -12,7 +12,7 @@ var nl: String = '\r\n';
  * @api private
  */
 
-function GNTP(type: String, opts: Object): String {
+function GNTP(type: string, opts: object): string {
     opts = opts || {};
     this.type = type;
     this.host = opts.host || 'localhost';
@@ -44,14 +44,14 @@ function GNTP(type: String, opts: Object): String {
  * @api private
  */
 
-GNTP.prototype.parseResp = function(resp: Array) {
-    var parsed: Object = {}, head: String, body: Array;
+GNTP.prototype.parseResp = function(resp: any[]) {
+    var parsed: object = {}, head: string, body: any[];
     resp = resp.slice(0, resp.indexOf(nl + nl)).split(nl);
     head = resp[0];
     body = resp.slice(1);
 
     parsed.state = head.match(/-(OK|ERROR|CALLBACK)/)[0].slice(1);
-    body.forEach(function(ln: Array) {
+    body.forEach(function(ln: any[]) {
         ln = ln.split(': ');
         parsed[ln[0]] = ln[1];
     });
@@ -82,9 +82,9 @@ GNTP.prototype.retry = function() {
  * @api private
  */
 
-GNTP.prototype.addResource = function(file: String) {
-    var id: String = crypto.createHash('md5').update(file).digest('hex'),
-        header: String = 'Identifier: ' + id + nl + 'Length: ' + file.length + nl + nl;
+GNTP.prototype.addResource = function(file: string) {
+    var id: string = crypto.createHash('md5').update(file).digest('hex'),
+        header: string = 'Identifier: ' + id + nl + 'Length: ' + file.length + nl + nl;
     this.resources.push({ header: header, file: file });
     return 'x-growl-resource://' + id;
 };
@@ -98,7 +98,7 @@ GNTP.prototype.addResource = function(file: String) {
  * @api public
  */
 
-GNTP.prototype.add = function(name: String, val: String) {
+GNTP.prototype.add = function(name: string, val: string) {
     if (val === undefined) 
         return;
 
@@ -145,7 +145,7 @@ GNTP.prototype.newline = function() {
 GNTP.prototype.send = function(callback: Function) {
     var self: HTMLElement = this,
         socket: HTMLInputElement = net.connect(this.port, this.host),
-        resp: String = '';
+        resp: string = '';
 
     callback = callback || function() {};
 
@@ -154,14 +154,14 @@ GNTP.prototype.send = function(callback: Function) {
     socket.on('connect', function() {
         socket.write(self.request);
 
-        self.resources.forEach(function(res: Object) {
+        self.resources.forEach(function(res: object) {
             socket.write(res.header);
             socket.write(res.file);
             socket.write(nl + nl);
         });
     });
 
-    socket.on('data', function(data: Array) {
+    socket.on('data', function(data: any[]) {
         resp += data.toString();
 
         /* Wait until we have a complete response which is signaled by two CRLF's. */
@@ -183,7 +183,7 @@ GNTP.prototype.send = function(callback: Function) {
             if (self.attempts <= self.maxAttempts) {
                 self.retry(callback);
             } else {
-                var msg: String = 'GNTP request to "%s:%d" failed with error code %s (%s)';
+                var msg: string = 'GNTP request to "%s:%d" failed with error code %s (%s)';
                 callback(new Error(format(msg, self.host, self.port, resp['Error-Code'], resp['Error-Description'])));
             }
         } else {

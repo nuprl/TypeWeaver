@@ -7,18 +7,18 @@ const pp: LooseParser = Parser.prototype
 // ## Parser utilities
 
 const literal: RegExp = /^(?:'((?:\\.|[^'\\])*?)'|"((?:\\.|[^"\\])*?)")/
-pp.strictDirective = function(start: Number) {
+pp.strictDirective = function(start: number) {
   if (this.options.ecmaVersion < 5) return false
   for (;;) {
     // Try to find string literal.
     skipWhiteSpace.lastIndex = start
     start += skipWhiteSpace.exec(this.input)[0].length
-    let match: Object = literal.exec(this.input.slice(start))
+    let match: object = literal.exec(this.input.slice(start))
     if (!match) return false
     if ((match[1] || match[2]) === "use strict") {
       skipWhiteSpace.lastIndex = start + match[0].length
-      let spaceAfter: Object = skipWhiteSpace.exec(this.input), end: String = spaceAfter.index + spaceAfter[0].length
-      let next: Number = this.input.charAt(end)
+      let spaceAfter: object = skipWhiteSpace.exec(this.input), end: string = spaceAfter.index + spaceAfter[0].length
+      let next: number = this.input.charAt(end)
       return next === ";" || next === "}" ||
         (lineBreak.test(spaceAfter[0]) &&
          !(/[(`.[+\-/*%<>=,?^&]/.test(next) || next === "!" && this.input.charAt(end + 1) === "="))
@@ -36,7 +36,7 @@ pp.strictDirective = function(start: Number) {
 // Predicate that tests whether the next token is of the given
 // type, and if yes, consumes it as a side effect.
 
-pp.eat = function(type: String) {
+pp.eat = function(type: string) {
   if (this.type === type) {
     this.next()
     return true
@@ -47,13 +47,13 @@ pp.eat = function(type: String) {
 
 // Tests whether parsed token is a contextual keyword.
 
-pp.isContextual = function(name: String) {
+pp.isContextual = function(name: string) {
   return this.type === tt.name && this.value === name && !this.containsEsc
 }
 
 // Consumes contextual keyword if possible.
 
-pp.eatContextual = function(name: String) {
+pp.eatContextual = function(name: string) {
   if (!this.isContextual(name)) return false
   this.next()
   return true
@@ -61,7 +61,7 @@ pp.eatContextual = function(name: String) {
 
 // Asserts that following token is given contextual keyword.
 
-pp.expectContextual = function(name: String) {
+pp.expectContextual = function(name: string) {
   if (!this.eatContextual(name)) this.unexpected()
 }
 
@@ -88,7 +88,7 @@ pp.semicolon = function() {
   if (!this.eat(tt.semi) && !this.insertSemicolon()) this.unexpected()
 }
 
-pp.afterTrailingComma = function(tokType: Number, notNext: Object) {
+pp.afterTrailingComma = function(tokType: number, notNext: object) {
   if (this.type === tokType) {
     if (this.options.onTrailingComma)
       this.options.onTrailingComma(this.lastTokStart, this.lastTokStartLoc)
@@ -101,13 +101,13 @@ pp.afterTrailingComma = function(tokType: Number, notNext: Object) {
 // Expect a token of a given type. If found, consume it, otherwise,
 // raise an unexpected token error.
 
-pp.expect = function(type: String) {
+pp.expect = function(type: string) {
   this.eat(type) || this.unexpected()
 }
 
 // Raise an unexpected token error.
 
-pp.unexpected = function(pos: Number) {
+pp.unexpected = function(pos: number) {
   this.raise(pos != null ? pos : this.start, "Unexpected token")
 }
 
@@ -122,15 +122,15 @@ export class DestructuringErrors {
   }
 }
 
-pp.checkPatternErrors = function(refDestructuringErrors: String, isAssign: Boolean) {
+pp.checkPatternErrors = function(refDestructuringErrors: string, isAssign: boolean) {
   if (!refDestructuringErrors) return
   if (refDestructuringErrors.trailingComma > -1)
     this.raiseRecoverable(refDestructuringErrors.trailingComma, "Comma is not permitted after the rest element")
-  let parens: String = isAssign ? refDestructuringErrors.parenthesizedAssign : refDestructuringErrors.parenthesizedBind
+  let parens: string = isAssign ? refDestructuringErrors.parenthesizedAssign : refDestructuringErrors.parenthesizedBind
   if (parens > -1) this.raiseRecoverable(parens, isAssign ? "Assigning to rvalue" : "Parenthesized pattern")
 }
 
-pp.checkExpressionErrors = function(refDestructuringErrors: String, andThrow: Boolean) {
+pp.checkExpressionErrors = function(refDestructuringErrors: string, andThrow: boolean) {
   if (!refDestructuringErrors) return false
   let {shorthandAssign, doubleProto} = refDestructuringErrors
   if (!andThrow) return shorthandAssign >= 0 || doubleProto >= 0

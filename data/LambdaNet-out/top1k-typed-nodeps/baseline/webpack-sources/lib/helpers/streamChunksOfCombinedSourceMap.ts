@@ -9,38 +9,38 @@ const streamChunksOfSourceMap: Function = require("./streamChunksOfSourceMap");
 const splitIntoLines: Function = require("./splitIntoLines");
 
 const streamChunksOfCombinedSourceMap: Function = (
-	source: String,
+	source: string,
 	sourceMap: SourceMapSource,
-	innerSourceName: String,
-	innerSource: String,
-	innerSourceMap: String,
+	innerSourceName: string,
+	innerSource: string,
+	innerSourceMap: string,
 	removeInnerSource: SourceMapSource,
-	onChunk: Object,
+	onChunk: object,
 	onSource: Function,
 	onName: Function,
-	finalSource: String,
-	columns: String
+	finalSource: string,
+	columns: string
 ) => {
 	let sourceMapping: Map = new Map();
 	let nameMapping: Map = new Map();
-	const sourceIndexMapping: Array = [];
-	const nameIndexMapping: String = [];
+	const sourceIndexMapping: any[] = [];
+	const nameIndexMapping: string = [];
 	const nameIndexValueMapping: Function = [];
-	let innerSourceIndex: Number = -2;
-	const innerSourceIndexMapping: String = [];
+	let innerSourceIndex: number = -2;
+	const innerSourceIndexMapping: string = [];
 	const innerSourceIndexValueMapping: Function = [];
-	const innerSourceContents: Array = [];
-	const innerSourceContentLines: Array = [];
+	const innerSourceContents: any[] = [];
+	const innerSourceContentLines: any[] = [];
 	const innerNameIndexMapping: Function = [];
 	const innerNameIndexValueMapping: Function = [];
-	const innerSourceMapLineData: Array = [];
-	const findInnerMapping: Function = (line: Number, column: Number) => {
+	const innerSourceMapLineData: any[] = [];
+	const findInnerMapping: Function = (line: number, column: number) => {
 		if (line > innerSourceMapLineData.length) return -1;
 		const { mappingsData } = innerSourceMapLineData[line - 1];
-		let l: Number = 0;
-		let r: Number = mappingsData.length / 5;
+		let l: number = 0;
+		let r: number = mappingsData.length / 5;
 		while (l < r) {
-			let m: Number = (l + r) >> 1;
+			let m: number = (l + r) >> 1;
 			if (mappingsData[m * 5] <= column) {
 				l = m + 1;
 			} else {
@@ -54,35 +54,35 @@ const streamChunksOfCombinedSourceMap: Function = (
 		source,
 		sourceMap,
 		(
-			chunk: String,
-			generatedLine: String,
-			generatedColumn: String,
-			sourceIndex: Number,
-			originalLine: Number,
-			originalColumn: Number,
-			nameIndex: Number
+			chunk: string,
+			generatedLine: string,
+			generatedColumn: string,
+			sourceIndex: number,
+			originalLine: number,
+			originalColumn: number,
+			nameIndex: number
 		) => {
 			// Check if this is a mapping to the inner source
 			if (sourceIndex === innerSourceIndex) {
 				// Check if there is a mapping in the inner source
-				const idx: Number = findInnerMapping(originalLine, originalColumn);
+				const idx: number = findInnerMapping(originalLine, originalColumn);
 				if (idx !== -1) {
 					const { chunks, mappingsData } = innerSourceMapLineData[
 						originalLine - 1
 					];
-					const mi: Number = idx * 5;
-					const innerSourceIndex: String = mappingsData[mi + 1];
-					const innerOriginalLine: Number = mappingsData[mi + 2];
-					let innerOriginalColumn: String = mappingsData[mi + 3];
-					let innerNameIndex: String = mappingsData[mi + 4];
+					const mi: number = idx * 5;
+					const innerSourceIndex: string = mappingsData[mi + 1];
+					const innerOriginalLine: number = mappingsData[mi + 2];
+					let innerOriginalColumn: string = mappingsData[mi + 3];
+					let innerNameIndex: string = mappingsData[mi + 4];
 					if (innerSourceIndex >= 0) {
 						// Check for an identity mapping
 						// where we are allowed to adjust the original column
-						const innerChunk: Array = chunks[idx];
-						const innerGeneratedColumn: Number = mappingsData[mi];
-						const locationInChunk: Number = originalColumn - innerGeneratedColumn;
+						const innerChunk: any[] = chunks[idx];
+						const innerGeneratedColumn: number = mappingsData[mi];
+						const locationInChunk: number = originalColumn - innerGeneratedColumn;
 						if (locationInChunk > 0) {
-							let originalSourceLines: Array =
+							let originalSourceLines: any[] =
 								innerSourceIndex < innerSourceContentLines.length
 									? innerSourceContentLines[innerSourceIndex]
 									: null;
@@ -94,7 +94,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 								innerSourceContentLines[innerSourceIndex] = originalSourceLines;
 							}
 							if (originalSourceLines !== null) {
-								const originalChunk: String =
+								const originalChunk: string =
 									innerOriginalLine <= originalSourceLines.length
 										? originalSourceLines[innerOriginalLine - 1].slice(
 												innerOriginalColumn,
@@ -111,7 +111,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 						// We have a inner mapping to original source
 
 						// emit source when needed and compute global source index
-						let sourceIndex: Number =
+						let sourceIndex: number =
 							innerSourceIndex < innerSourceIndexMapping.length
 								? innerSourceIndexMapping[innerSourceIndex]
 								: -2;
@@ -120,7 +120,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 								innerSourceIndex < innerSourceIndexValueMapping.length
 									? innerSourceIndexValueMapping[innerSourceIndex]
 									: [null, undefined];
-							let globalIndex: Number = sourceMapping.get(source);
+							let globalIndex: number = sourceMapping.get(source);
 							if (globalIndex === undefined) {
 								sourceMapping.set(source, (globalIndex = sourceMapping.size));
 								onSource(globalIndex, source, sourceContent);
@@ -130,7 +130,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 						}
 
 						// emit name when needed and compute global name index
-						let finalNameIndex: Number = -1;
+						let finalNameIndex: number = -1;
 						if (innerNameIndex >= 0) {
 							// when we have a inner name
 							finalNameIndex =
@@ -138,12 +138,12 @@ const streamChunksOfCombinedSourceMap: Function = (
 									? innerNameIndexMapping[innerNameIndex]
 									: -2;
 							if (finalNameIndex === -2) {
-								const name: String =
+								const name: string =
 									innerNameIndex < innerNameIndexValueMapping.length
 										? innerNameIndexValueMapping[innerNameIndex]
 										: undefined;
 								if (name) {
-									let globalIndex: Number = nameMapping.get(name);
+									let globalIndex: number = nameMapping.get(name);
 									if (globalIndex === undefined) {
 										nameMapping.set(name, (globalIndex = nameMapping.size));
 										onName(globalIndex, name);
@@ -158,7 +158,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 							// when we don't have an inner name,
 							// but we have an outer name
 							// it can be used when inner original code equals to the name
-							let originalSourceLines: Array =
+							let originalSourceLines: any[] =
 								innerSourceContentLines[innerSourceIndex];
 							if (originalSourceLines === undefined) {
 								const originalSource: OriginalSource = innerSourceContents[innerSourceIndex];
@@ -168,8 +168,8 @@ const streamChunksOfCombinedSourceMap: Function = (
 								innerSourceContentLines[innerSourceIndex] = originalSourceLines;
 							}
 							if (originalSourceLines !== null) {
-								const name: String = nameIndexValueMapping[nameIndex];
-								const originalName: String =
+								const name: string = nameIndexValueMapping[nameIndex];
+								const originalName: string =
 									innerOriginalLine <= originalSourceLines.length
 										? originalSourceLines[innerOriginalLine - 1].slice(
 												innerOriginalColumn,
@@ -182,9 +182,9 @@ const streamChunksOfCombinedSourceMap: Function = (
 											? nameIndexMapping[nameIndex]
 											: -2;
 									if (finalNameIndex === -2) {
-										const name: String = nameIndexValueMapping[nameIndex];
+										const name: string = nameIndexValueMapping[nameIndex];
 										if (name) {
-											let globalIndex: Number = nameMapping.get(name);
+											let globalIndex: number = nameMapping.get(name);
 											if (globalIndex === undefined) {
 												nameMapping.set(name, (globalIndex = nameMapping.size));
 												onName(globalIndex, name);
@@ -217,7 +217,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 					return;
 				} else {
 					if (sourceIndexMapping[sourceIndex] === -2) {
-						let globalIndex: String = sourceMapping.get(innerSourceName);
+						let globalIndex: string = sourceMapping.get(innerSourceName);
 						if (globalIndex === undefined) {
 							sourceMapping.set(source, (globalIndex = sourceMapping.size));
 							onSource(globalIndex, innerSourceName, innerSource);
@@ -227,7 +227,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 				}
 			}
 
-			const finalSourceIndex: Number =
+			const finalSourceIndex: number =
 				sourceIndex < 0 || sourceIndex >= sourceIndexMapping.length
 					? -1
 					: sourceIndexMapping[sourceIndex];
@@ -236,12 +236,12 @@ const streamChunksOfCombinedSourceMap: Function = (
 				onChunk(chunk, generatedLine, generatedColumn, -1, -1, -1, -1);
 			} else {
 				// Pass through the chunk with mapping
-				let finalNameIndex: String = -1;
+				let finalNameIndex: string = -1;
 				if (nameIndex >= 0 && nameIndex < nameIndexMapping.length) {
 					finalNameIndex = nameIndexMapping[nameIndex];
 					if (finalNameIndex === -2) {
-						const name: String = nameIndexValueMapping[nameIndex];
-						let globalIndex: Number = nameMapping.get(name);
+						const name: string = nameIndexValueMapping[nameIndex];
+						let globalIndex: number = nameMapping.get(name);
 						if (globalIndex === undefined) {
 							nameMapping.set(name, (globalIndex = nameMapping.size));
 							onName(globalIndex, name);
@@ -261,7 +261,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 				);
 			}
 		},
-		(i: Number, source: String, sourceContent: String) => {
+		(i: number, source: string, sourceContent: string) => {
 			if (source === innerSourceName) {
 				innerSourceIndex = i;
 				if (innerSource !== undefined) sourceContent = innerSource;
@@ -271,13 +271,13 @@ const streamChunksOfCombinedSourceMap: Function = (
 					sourceContent,
 					innerSourceMap,
 					(
-						chunk: String,
-						generatedLine: Number,
-						generatedColumn: String,
-						sourceIndex: String,
+						chunk: string,
+						generatedLine: number,
+						generatedColumn: string,
+						sourceIndex: string,
 						originalLine: OriginalSource,
-						originalColumn: String,
-						nameIndex: String
+						originalColumn: string,
+						nameIndex: string
 					) => {
 						while (innerSourceMapLineData.length < generatedLine) {
 							innerSourceMapLineData.push({
@@ -285,7 +285,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 								chunks: []
 							});
 						}
-						const data: Object = innerSourceMapLineData[generatedLine - 1];
+						const data: object = innerSourceMapLineData[generatedLine - 1];
 						data.mappingsData.push(
 							generatedColumn,
 							sourceIndex,
@@ -295,13 +295,13 @@ const streamChunksOfCombinedSourceMap: Function = (
 						);
 						data.chunks.push(chunk);
 					},
-					(i: String, source: String, sourceContent: String) => {
+					(i: string, source: string, sourceContent: string) => {
 						innerSourceContents[i] = sourceContent;
 						innerSourceContentLines[i] = undefined;
 						innerSourceIndexMapping[i] = -2;
 						innerSourceIndexValueMapping[i] = [source, sourceContent];
 					},
-					(i: String, name: String) => {
+					(i: string, name: string) => {
 						innerNameIndexMapping[i] = -2;
 						innerNameIndexValueMapping[i] = name;
 					},
@@ -309,7 +309,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 					columns
 				);
 			} else {
-				let globalIndex: String = sourceMapping.get(source);
+				let globalIndex: string = sourceMapping.get(source);
 				if (globalIndex === undefined) {
 					sourceMapping.set(source, (globalIndex = sourceMapping.size));
 					onSource(globalIndex, source, sourceContent);
@@ -317,7 +317,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 				sourceIndexMapping[i] = globalIndex;
 			}
 		},
-		(i: String, name: String) => {
+		(i: string, name: string) => {
 			nameIndexMapping[i] = -2;
 			nameIndexValueMapping[i] = name;
 		},

@@ -5,7 +5,7 @@
 
 'use strict';
 
-const regexpTreeParser: Object = require('./generated/regexp-tree');
+const regexpTreeParser: object = require('./generated/regexp-tree');
 
 /**
  * Original parse function.
@@ -18,7 +18,7 @@ const generatedParseFn: Function = regexpTreeParser.parse.bind(regexpTreeParser)
  * Override original `regexpTreeParser.parse` to convert a value to a string,
  * since in regexp-tree we may pass strings, and RegExp instance.
  */
-regexpTreeParser.parse = function(regexp: String, options: Object) {
+regexpTreeParser.parse = function(regexp: string, options: object) {
   return generatedParseFn(`${regexp}`, options);
 };
 

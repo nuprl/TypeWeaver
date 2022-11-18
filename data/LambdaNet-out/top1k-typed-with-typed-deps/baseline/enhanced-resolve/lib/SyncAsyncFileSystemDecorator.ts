@@ -19,8 +19,8 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 	this.lstatSync = undefined;
 	const lstatSync: Function = fs.lstatSync;
 	if (lstatSync) {
-		this.lstat = (arg: String, options: Object, callback: Number) => {
-			let result: Array;
+		this.lstat = (arg: string, options: object, callback: number) => {
+			let result: any[];
 			try {
 				result = lstatSync.call(fs, arg);
 			} catch (e) {
@@ -28,11 +28,11 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 			}
 			(callback || options)(null, result);
 		};
-		this.lstatSync = (arg: String, options: Object) => lstatSync.call(fs, arg, options);
+		this.lstatSync = (arg: string, options: object) => lstatSync.call(fs, arg, options);
 	}
 
-	this.stat = (arg: String, options: Object, callback: Boolean) => {
-		let result: Number;
+	this.stat = (arg: string, options: object, callback: boolean) => {
+		let result: number;
 		try {
 			result = callback ? fs.statSync(arg, options) : fs.statSync(arg);
 		} catch (e) {
@@ -40,10 +40,10 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 		}
 		(callback || options)(null, result);
 	};
-	this.statSync = (arg: String, options: Object) => fs.statSync(arg, options);
+	this.statSync = (arg: string, options: object) => fs.statSync(arg, options);
 
-	this.readdir = (arg: String, options: Object, callback: Number) => {
-		let result: Number;
+	this.readdir = (arg: string, options: object, callback: number) => {
+		let result: number;
 		try {
 			result = fs.readdirSync(arg);
 		} catch (e) {
@@ -51,10 +51,10 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 		}
 		(callback || options)(null, result);
 	};
-	this.readdirSync = (arg: String, options: Object) => fs.readdirSync(arg, options);
+	this.readdirSync = (arg: string, options: object) => fs.readdirSync(arg, options);
 
-	this.readFile = (arg: String, options: Object, callback: Number) => {
-		let result: Number;
+	this.readFile = (arg: string, options: object, callback: number) => {
+		let result: number;
 		try {
 			result = fs.readFileSync(arg);
 		} catch (e) {
@@ -62,10 +62,10 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 		}
 		(callback || options)(null, result);
 	};
-	this.readFileSync = (arg: String, options: String) => fs.readFileSync(arg, options);
+	this.readFileSync = (arg: string, options: string) => fs.readFileSync(arg, options);
 
-	this.readlink = (arg: String, options: Object, callback: Number) => {
-		let result: Number;
+	this.readlink = (arg: string, options: object, callback: number) => {
+		let result: number;
 		try {
 			result = fs.readlinkSync(arg);
 		} catch (e) {
@@ -73,14 +73,14 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 		}
 		(callback || options)(null, result);
 	};
-	this.readlinkSync = (arg: String, options: Object) => fs.readlinkSync(arg, options);
+	this.readlinkSync = (arg: string, options: object) => fs.readlinkSync(arg, options);
 
 	this.readJson = undefined;
 	this.readJsonSync = undefined;
 	const readJsonSync: Function = fs.readJsonSync;
 	if (readJsonSync) {
-		this.readJson = (arg: String, options: Object, callback: Number) => {
-			let result: String;
+		this.readJson = (arg: string, options: object, callback: number) => {
+			let result: string;
 			try {
 				result = readJsonSync.call(fs, arg);
 			} catch (e) {
@@ -89,7 +89,7 @@ function SyncAsyncFileSystemDecorator(fs: Resolver): Void {
 			(callback || options)(null, result);
 		};
 
-		this.readJsonSync = (arg: String, options: Object) => readJsonSync.call(fs, arg, options);
+		this.readJsonSync = (arg: string, options: object) => readJsonSync.call(fs, arg, options);
 	}
 }
 module.exports = SyncAsyncFileSystemDecorator;

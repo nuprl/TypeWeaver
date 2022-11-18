@@ -1,9 +1,9 @@
 'use strict';
 
-var parsers: Array = require('../parsers');
+var parsers: any[] = require('../parsers');
 
-var parse: Function = function parse(v: String): String {
-  var parsed: String = parsers.parseColor(v);
+var parse: Function = function parse(v: string): string {
+  var parsed: string = parsers.parseColor(v);
   if (parsed !== undefined) {
     return parsed;
   }
@@ -16,13 +16,13 @@ var parse: Function = function parse(v: String): String {
   return undefined;
 };
 
-module.exports.isValid = function isValid(v: Array): Boolean {
+module.exports.isValid = function isValid(v: any[]): boolean {
   return parse(v) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
-    var parsed: String = parse(v);
+  set: function(v: any[]) {
+    var parsed: string = parse(v);
     if (parsed === undefined) {
       return;
     }

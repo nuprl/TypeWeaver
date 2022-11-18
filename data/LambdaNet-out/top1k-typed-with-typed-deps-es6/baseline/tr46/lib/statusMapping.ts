@@ -1,6 +1,6 @@
 "use strict";
 
-export const STATUS_MAPPING: Object = {
+export const STATUS_MAPPING: object = {
   mapped: 1,
   valid: 2,
   disallowed: 3,

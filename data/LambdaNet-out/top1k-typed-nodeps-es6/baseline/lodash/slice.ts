@@ -18,8 +18,8 @@
  * _.slice(array, 2)
  * // => [3, 4]
  */
-function slice(array: Array, start: Number, end: Number): Array {
-  let length: Number = array == null ? 0 : array.length
+function slice(array: any[], start: number, end: number): any[] {
+  let length: number = array == null ? 0 : array.length
   if (!length) {
     return []
   }
@@ -36,8 +36,8 @@ function slice(array: Array, start: Number, end: Number): Array {
   length = start > end ? 0 : ((end - start) >>> 0)
   start >>>= 0
 
-  let index: Number = -1
-  const result: Object = new Array(length)
+  let index: number = -1
+  const result: object = new Array(length)
   while (++index < length) {
     result[index] = array[index + start]
   }

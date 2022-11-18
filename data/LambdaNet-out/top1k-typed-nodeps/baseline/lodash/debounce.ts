@@ -62,21 +62,21 @@ import root from './.internal/root.js'
  * // Check for pending invocations.
  * const status = debounced.pending() ? "Pending..." : "Ready"
  */
-function debounce(func: Function, wait: Number, options: Object): Hash {
+function debounce(func: Function, wait: number, options: object): Hash {
   let lastArgs: Function,
-    lastThis: Array,
-    maxWait: Number,
-    result: Object,
-    timerId: String,
-    lastCallTime: Number
+    lastThis: any[],
+    maxWait: number,
+    result: object,
+    timerId: string,
+    lastCallTime: number
 
-  let lastInvokeTime: Number = 0
-  let leading: Boolean = false
-  let maxing: Boolean = false
-  let trailing: Boolean = true
+  let lastInvokeTime: number = 0
+  let leading: boolean = false
+  let maxing: boolean = false
+  let trailing: boolean = true
 
   // Bypass `requestAnimationFrame` by explicitly setting `wait=0`.
-  const useRAF: Boolean = (!wait && wait !== 0 && typeof root.requestAnimationFrame === 'function')
+  const useRAF: boolean = (!wait && wait !== 0 && typeof root.requestAnimationFrame === 'function')
 
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
@@ -89,8 +89,8 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     trailing = 'trailing' in options ? !!options.trailing : trailing
   }
 
-  function invokeFunc(time: Number): Object {
-    const args: String = lastArgs
+  function invokeFunc(time: number): object {
+    const args: string = lastArgs
     const thisArg: Function = lastThis
 
     lastArgs = lastThis = undefined
@@ -99,7 +99,7 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     return result
   }
 
-  function startTimer(pendingFunc: Number, wait: Number): Number {
+  function startTimer(pendingFunc: number, wait: number): number {
     if (useRAF) {
       root.cancelAnimationFrame(timerId)
       return root.requestAnimationFrame(pendingFunc)
@@ -107,14 +107,14 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     return setTimeout(pendingFunc, wait)
   }
 
-  function cancelTimer(id: String): Promise {
+  function cancelTimer(id: string): Promise {
     if (useRAF) {
       return root.cancelAnimationFrame(id)
     }
     clearTimeout(id)
   }
 
-  function leadingEdge(time: Number): Array {
+  function leadingEdge(time: number): any[] {
     // Reset any `maxWait` timer.
     lastInvokeTime = time
     // Start the timer for the trailing edge.
@@ -123,19 +123,19 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     return leading ? invokeFunc(time) : result
   }
 
-  function remainingWait(time: Number): Number {
-    const timeSinceLastCall: Number = time - lastCallTime
-    const timeSinceLastInvoke: Number = time - lastInvokeTime
-    const timeWaiting: Number = wait - timeSinceLastCall
+  function remainingWait(time: number): number {
+    const timeSinceLastCall: number = time - lastCallTime
+    const timeSinceLastInvoke: number = time - lastInvokeTime
+    const timeWaiting: number = wait - timeSinceLastCall
 
     return maxing
       ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke)
       : timeWaiting
   }
 
-  function shouldInvoke(time: Number): Boolean {
-    const timeSinceLastCall: Number = time - lastCallTime
-    const timeSinceLastInvoke: Number = time - lastInvokeTime
+  function shouldInvoke(time: number): boolean {
+    const timeSinceLastCall: number = time - lastCallTime
+    const timeSinceLastInvoke: number = time - lastInvokeTime
 
     // Either this is the first call, activity has stopped and we're at the
     // trailing edge, the system time has gone backwards and we're treating
@@ -145,7 +145,7 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
   }
 
   function timerExpired(): Promise {
-    const time: Number = Date.now()
+    const time: number = Date.now()
     if (shouldInvoke(time)) {
       return trailingEdge(time)
     }
@@ -153,7 +153,7 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     timerId = startTimer(timerExpired, remainingWait(time))
   }
 
-  function trailingEdge(time: String): Object {
+  function trailingEdge(time: string): object {
     timerId = undefined
 
     // Only invoke if we have `lastArgs` which means `func` has been
@@ -177,13 +177,13 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     return timerId === undefined ? result : trailingEdge(Date.now())
   }
 
-  function pending(): Boolean {
+  function pending(): boolean {
     return timerId !== undefined
   }
 
-  function debounced(...args): Object {
-    const time: Number = Date.now()
-    const isInvoking: Boolean = shouldInvoke(time)
+  function debounced(...args): object {
+    const time: number = Date.now()
+    const isInvoking: boolean = shouldInvoke(time)
 
     lastArgs = args
     lastThis = this

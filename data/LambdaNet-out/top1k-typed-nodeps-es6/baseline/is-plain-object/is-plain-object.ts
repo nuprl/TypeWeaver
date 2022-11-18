@@ -5,12 +5,12 @@
  * Released under the MIT License.
  */
 
-function isObject(o: String): Boolean {
+function isObject(o: string): boolean {
   return Object.prototype.toString.call(o) === '[object Object]';
 }
 
-export function isPlainObject(o: String): Boolean {
-  var ctor: Array,prot: Object;
+export function isPlainObject(o: string): boolean {
+  var ctor: any[],prot: object;
 
   if (isObject(o) === false) return false;
 

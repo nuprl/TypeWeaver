@@ -1,4 +1,4 @@
 'use strict';
 export const foo: Function = () => 'foo';
-export const bar: Function = (ho: String, ge: String) => `bar${ho}${ge}`;
-export const baz: String = 'baz';
+export const bar: Function = (ho: string, ge: string) => `bar${ho}${ge}`;
+export const baz: string = 'baz';

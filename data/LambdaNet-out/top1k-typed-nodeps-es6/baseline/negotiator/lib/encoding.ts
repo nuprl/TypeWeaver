@@ -28,13 +28,13 @@ var simpleEncodingRegExp: RegExp = /^\s*([^\s;]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAcceptEncoding(accept: String): Array {
-  var accepts: Array = accept.split(',');
-  var hasIdentity: Boolean = false;
-  var minQuality: Number = 1;
+function parseAcceptEncoding(accept: string): any[] {
+  var accepts: any[] = accept.split(',');
+  var hasIdentity: boolean = false;
+  var minQuality: number = 1;
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
-    var encoding: Object = parseEncoding(accepts[i].trim(), i);
+    var encoding: object = parseEncoding(accepts[i].trim(), i);
 
     if (encoding) {
       accepts[j++] = encoding;
@@ -66,16 +66,16 @@ function parseAcceptEncoding(accept: String): Array {
  * @private
  */
 
-function parseEncoding(str: String, i: Number): Object {
-  var match: Object = simpleEncodingRegExp.exec(str);
+function parseEncoding(str: string, i: number): object {
+  var match: object = simpleEncodingRegExp.exec(str);
   if (!match) return null;
 
-  var encoding: String = match[1];
-  var q: Number = 1;
+  var encoding: string = match[1];
+  var q: number = 1;
   if (match[2]) {
-    var params: Array = match[2].split(';');
+    var params: any[] = match[2].split(';');
     for (var j = 0; j < params.length; j++) {
-      var p: Object = params[j].trim().split('=');
+      var p: object = params[j].trim().split('=');
       if (p[0] === 'q') {
         q = parseFloat(p[1]);
         break;
@@ -95,11 +95,11 @@ function parseEncoding(str: String, i: Number): Object {
  * @private
  */
 
-function getEncodingPriority(encoding: String, accepted: Array, index: Number): Object {
-  var priority: Object = {o: -1, q: 0, s: 0};
+function getEncodingPriority(encoding: string, accepted: any[], index: number): object {
+  var priority: object = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
-    var spec: Object = specify(encoding, accepted[i], index);
+    var spec: object = specify(encoding, accepted[i], index);
 
     if (spec && (priority.s - spec.s || priority.q - spec.q || priority.o - spec.o) < 0) {
       priority = spec;
@@ -114,8 +114,8 @@ function getEncodingPriority(encoding: String, accepted: Array, index: Number): 
  * @private
  */
 
-function specify(encoding: String, spec: Object, index: Number): Object {
-  var s: Number = 0;
+function specify(encoding: string, spec: object, index: number): object {
+  var s: number = 0;
   if(spec.encoding.toLowerCase() === encoding.toLowerCase()){
     s |= 1;
   } else if (spec.encoding !== '*' ) {
@@ -135,8 +135,8 @@ function specify(encoding: String, spec: Object, index: Number): Object {
  * @public
  */
 
-function preferredEncodings(accept: Number, provided: Array): Array {
-  var accepts: Array = parseAcceptEncoding(accept || '');
+function preferredEncodings(accept: number, provided: any[]): any[] {
+  var accepts: any[] = parseAcceptEncoding(accept || '');
 
   if (!provided) {
     // sorted list of all encodings
@@ -146,12 +146,12 @@ function preferredEncodings(accept: Number, provided: Array): Array {
       .map(getFullEncoding);
   }
 
-  var priorities: Array = provided.map(function getPriority(type: String, index: Number): String {
+  var priorities: any[] = provided.map(function getPriority(type: string, index: number): string {
     return getEncodingPriority(type, accepts, index);
   });
 
   // sorted list of accepted encodings
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority: String): Object {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority: string): object {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -161,7 +161,7 @@ function preferredEncodings(accept: Number, provided: Array): Array {
  * @private
  */
 
-function compareSpecs(a: Object, b: Object): Boolean {
+function compareSpecs(a: object, b: object): boolean {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -170,7 +170,7 @@ function compareSpecs(a: Object, b: Object): Boolean {
  * @private
  */
 
-function getFullEncoding(spec: Object): String {
+function getFullEncoding(spec: object): string {
   return spec.encoding;
 }
 
@@ -179,6 +179,6 @@ function getFullEncoding(spec: Object): String {
  * @private
  */
 
-function isQuality(spec: Object): Boolean {
+function isQuality(spec: object): boolean {
   return spec.q > 0;
 }

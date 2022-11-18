@@ -2,7 +2,6 @@ createRequire.ts(5,20): error TS2339: Property 'createRequire' does not exist on
 createRequire.ts(6,25): error TS2339: Property 'createRequire' does not exist on type 'HTMLElement'.
 createRequire.ts(10,20): error TS2339: Property 'createRequireFromPath' does not exist on type 'HTMLElement'.
 createRequire.ts(11,25): error TS2339: Property 'createRequireFromPath' does not exist on type 'HTMLElement'.
-createRequire.ts(19,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 createRequire.ts(20,45): error TS2339: Property 'Module' does not exist on type 'HTMLElement'.
 createRequire.ts(21,7): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
 createRequire.ts(22,7): error TS2339: Property 'paths' does not exist on type 'HTMLElement'.
@@ -10,10 +9,10 @@ createRequire.ts(22,28): error TS2339: Property 'Module' does not exist on type 
 createRequire.ts(22,52): error TS2304: Cannot find name 'path'.
 createRequire.ts(23,7): error TS2339: Property '_compile' does not exist on type 'HTMLElement'.
 createRequire.ts(24,14): error TS2339: Property 'exports' does not exist on type 'HTMLElement'.
-index.ts(13,10): error TS2339: Property 'basedir' does not exist on type 'Object'.
-index.ts(13,19): error TS2339: Property 'defaultResolver' does not exist on type 'Object'.
-index.ts(13,36): error TS2339: Property 'extensions' does not exist on type 'Object'.
-index.ts(16,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(35,41): error TS2339: Property 'resolveRequest' does not exist on type 'String'.
+index.ts(13,10): error TS2339: Property 'basedir' does not exist on type '{}'.
+index.ts(13,19): error TS2339: Property 'defaultResolver' does not exist on type '{}'.
+index.ts(13,36): error TS2339: Property 'extensions' does not exist on type '{}'.
+index.ts(16,9): error TS2322: Type 'number' is not assignable to type 'string'.
+index.ts(35,41): error TS2339: Property 'resolveRequest' does not exist on type 'string'.
 index.ts(46,5): error TS2588: Cannot assign to 'defaultResolver' because it is a constant.
 

@@ -11,12 +11,12 @@ const nativeGetSymbols: Function = Object.getOwnPropertySymbols
  * @param {Object} object The object to query.
  * @returns {Array} Returns the array of symbols.
  */
-function getSymbols(object: Number): Array {
+function getSymbols(object: number): any[] {
   if (object == null) {
     return []
   }
   object = Object(object)
-  return nativeGetSymbols(object).filter((symbol: String) => propertyIsEnumerable.call(object, symbol))
+  return nativeGetSymbols(object).filter((symbol: string) => propertyIsEnumerable.call(object, symbol))
 }
 
 export default getSymbols

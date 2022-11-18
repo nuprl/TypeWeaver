@@ -1,9 +1,9 @@
 "use strict";
 
-var Iteration: Array = require("./iteration");
+var Iteration: any[] = require("./iteration");
 
 module.exports = ArrayIterator;
-function ArrayIterator(iterable: Function, start: Number, stop: String, step: Number): Void {
+function ArrayIterator(iterable: Function, start: number, stop: string, step: number): Void {
     this.array = iterable;
     this.start = start || 0;
     this.stop = stop || Infinity;

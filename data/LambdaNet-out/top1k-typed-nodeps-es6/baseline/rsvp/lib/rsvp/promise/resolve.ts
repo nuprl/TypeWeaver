@@ -40,9 +40,9 @@ import {
   @return {Promise} a promise that will become fulfilled with the given
   `value`
 */
-export default function resolve(object: Object, label: String): Object {
+export default function resolve(object: object, label: string): object {
   /*jshint validthis:true */
-  let Constructor: Object = this;
+  let Constructor: object = this;
 
   if (object && typeof object === 'object' && object.constructor === Constructor) {
     return object;

@@ -1,24 +1,24 @@
 const { Suite } = require('benchmark');
 const cursor: HTMLElement = require('ansi')(process.stdout);
-const fixtures: Object = require('./fixtures');
+const fixtures: object = require('./fixtures');
 
-const cycle: Function = (e: HTMLElement, nl: Boolean) => {
+const cycle: Function = (e: HTMLElement, nl: boolean) => {
   cursor.eraseLine();
   cursor.horizontalAbsolute();
   cursor.write('' + e.target);
   if (nl) cursor.write('\n');
 };
 
-function bench(name: String): Object {
-  const suite: Array = new Suite()
+function bench(name: string): object {
+  const suite: any[] = new Suite()
     .on('start', () => console.log(`# ${name}`))
     .on('complete', function(e: Function) {
-      const fastest: String = this.filter('fastest').map('name').toString();
+      const fastest: string = this.filter('fastest').map('name').toString();
       console.log(`fastest is '${fastest}'`);
       console.log();
     })
 
-  const res: Object = {
+  const res: object = {
     run: suite.run.bind(suite),
     add(key, fn) {
       suite.add(key, {
@@ -32,8 +32,8 @@ function bench(name: String): Object {
   return res;
 }
 
-function run(fn: Function, prop: String = 'all'): Void {
-  [].concat(fixtures[prop]).forEach((val: Number) => fn(val));
+function run(fn: Function, prop: string = 'all'): Void {
+  [].concat(fixtures[prop]).forEach((val: number) => fn(val));
 }
 
 bench('all')
@@ -54,7 +54,7 @@ bench('number')
   .add('parseFloat', () => run(isNumberParseFloat, 'number'))
   .run()
 
-function isNumberParseFloat(n: Number): Boolean {
+function isNumberParseFloat(n: number): boolean {
   if (typeof num === 'number') {
     return num - num === 0;
   }
@@ -64,8 +64,8 @@ function isNumberParseFloat(n: Number): Boolean {
   return false;
 }
 
-function isNumber60(val: String): Boolean {
-  let number: Number = +val;
+function isNumber60(val: string): boolean {
+  let number: number = +val;
   // Discard Infinity and NaN
   if ((number - number) !== 0) return false;
   if (number === val) return true;
@@ -80,7 +80,7 @@ function isNumber60(val: String): Boolean {
   return false;
 }
 
-function isNumber61(val: Number): Boolean {
+function isNumber61(val: number): boolean {
   if (typeof num === 'number') {
     return num - num === 0;
   }

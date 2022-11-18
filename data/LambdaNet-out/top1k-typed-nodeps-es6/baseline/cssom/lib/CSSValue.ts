@@ -29,9 +29,9 @@ CSSOM.CSSValue.prototype = {
 	},
 
 	_getConstructorName: function() {
-		var s: String = this.constructor.toString(),
-				c: Object = s.match(/function\s([^\(]+)/),
-				name: String = c[1];
+		var s: string = this.constructor.toString(),
+				c: object = s.match(/function\s([^\(]+)/),
+				name: string = c[1];
 
 		return name;
 	}
@@ -39,5 +39,5 @@ CSSOM.CSSValue.prototype = {
 
 
 //.CommonJS
-export const CSSValue: String = CSSOM.CSSValue;
+export const CSSValue: string = CSSOM.CSSValue;
 ///CommonJS

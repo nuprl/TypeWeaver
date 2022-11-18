@@ -3,7 +3,7 @@ import isObjectLike from './isObjectLike.js'
 import nodeTypes from './.internal/nodeTypes.js'
 
 /* Node.js helper references. */
-const nodeIsMap: Object = nodeTypes && nodeTypes.isMap
+const nodeIsMap: object = nodeTypes && nodeTypes.isMap
 
 /**
  * Checks if `value` is classified as a `Map` object.
@@ -21,7 +21,7 @@ const nodeIsMap: Object = nodeTypes && nodeTypes.isMap
  * // => false
  */
 const isMap: Function = nodeIsMap
-  ? (value: String) => nodeIsMap(value)
-  : (value: String) => isObjectLike(value) && getTag(value) == '[object Map]'
+  ? (value: string) => nodeIsMap(value)
+  : (value: string) => isObjectLike(value) && getTag(value) == '[object Map]'
 
 export default isMap

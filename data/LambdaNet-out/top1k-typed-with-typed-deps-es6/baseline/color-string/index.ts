@@ -4,7 +4,7 @@ import colorNames from 'color-name';
 import swizzle from 'simple-swizzle';
 var hasOwnProperty: Function = Object.hasOwnProperty;
 
-var reverseNames: Object = Object.create(null);
+var reverseNames: object = Object.create(null);
 
 // create a list of reverse color names
 for (var name in colorNames) {
@@ -13,17 +13,17 @@ for (var name in colorNames) {
 	}
 }
 
-var cs: Object = {
+var cs: object = {
 	to: {},
 	get: {}
 };
 
 export default cs;
 
-cs.get = function (string: String) {
-	var prefix: String = string.substring(0, 3).toLowerCase();
-	var val: String;
-	var model: String;
+cs.get = function (string: string) {
+	var prefix: string = string.substring(0, 3).toLowerCase();
+	var val: string;
+	var model: string;
 	switch (prefix) {
 		case 'hsl':
 			val = cs.get.hsl(string);
@@ -46,7 +46,7 @@ cs.get = function (string: String) {
 	return {model: model, value: val};
 };
 
-cs.get.rgb = function (string: String) {
+cs.get.rgb = function (string: string) {
 	if (!string) {
 		return null;
 	}
@@ -57,10 +57,10 @@ cs.get.rgb = function (string: String) {
 	var per: RegExp = /^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/;
 	var keyword: RegExp = /^(\w+)$/;
 
-	var rgb: Object = [0, 0, 0, 1];
-	var match: Array;
-	var i: Number;
-	var hexAlpha: String;
+	var rgb: object = [0, 0, 0, 1];
+	var match: any[];
+	var i: number;
+	var hexAlpha: string;
 
 	if (match = string.match(hex)) {
 		hexAlpha = match[2];
@@ -68,7 +68,7 @@ cs.get.rgb = function (string: String) {
 
 		for (i = 0; i < 3; i++) {
 			// https://jsperf.com/slice-vs-substr-vs-substring-methods-long-string/19
-			var i2: Number = i * 2;
+			var i2: number = i * 2;
 			rgb[i] = parseInt(match.slice(i2, i2 + 2), 16);
 		}
 
@@ -135,20 +135,20 @@ cs.get.rgb = function (string: String) {
 	return rgb;
 };
 
-cs.get.hsl = function (string: String) {
+cs.get.hsl = function (string: string) {
 	if (!string) {
 		return null;
 	}
 
 	var hsl: RegExp = /^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/;
-	var match: Object = string.match(hsl);
+	var match: object = string.match(hsl);
 
 	if (match) {
-		var alpha: Number = parseFloat(match[4]);
-		var h: Number = ((parseFloat(match[1]) % 360) + 360) % 360;
-		var s: String = clamp(parseFloat(match[2]), 0, 100);
-		var l: String = clamp(parseFloat(match[3]), 0, 100);
-		var a: String = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
+		var alpha: number = parseFloat(match[4]);
+		var h: number = ((parseFloat(match[1]) % 360) + 360) % 360;
+		var s: string = clamp(parseFloat(match[2]), 0, 100);
+		var l: string = clamp(parseFloat(match[3]), 0, 100);
+		var a: string = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
 
 		return [h, s, l, a];
 	}
@@ -156,20 +156,20 @@ cs.get.hsl = function (string: String) {
 	return null;
 };
 
-cs.get.hwb = function (string: String) {
+cs.get.hwb = function (string: string) {
 	if (!string) {
 		return null;
 	}
 
 	var hwb: RegExp = /^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/;
-	var match: Object = string.match(hwb);
+	var match: object = string.match(hwb);
 
 	if (match) {
-		var alpha: Number = parseFloat(match[4]);
-		var h: Number = ((parseFloat(match[1]) % 360) + 360) % 360;
-		var w: String = clamp(parseFloat(match[2]), 0, 100);
-		var b: String = clamp(parseFloat(match[3]), 0, 100);
-		var a: String = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
+		var alpha: number = parseFloat(match[4]);
+		var h: number = ((parseFloat(match[1]) % 360) + 360) % 360;
+		var w: string = clamp(parseFloat(match[2]), 0, 100);
+		var b: string = clamp(parseFloat(match[3]), 0, 100);
+		var a: string = clamp(isNaN(alpha) ? 1 : alpha, 0, 1);
 		return [h, w, b, a];
 	}
 
@@ -177,7 +177,7 @@ cs.get.hwb = function (string: String) {
 };
 
 cs.to.hex = function () {
-	var rgba: Object = swizzle(arguments);
+	var rgba: object = swizzle(arguments);
 
 	return (
 		'#' +
@@ -191,7 +191,7 @@ cs.to.hex = function () {
 };
 
 cs.to.rgb = function () {
-	var rgba: Object = swizzle(arguments);
+	var rgba: object = swizzle(arguments);
 
 	return rgba.length < 4 || rgba[3] === 1
 		? 'rgb(' + Math.round(rgba[0]) + ', ' + Math.round(rgba[1]) + ', ' + Math.round(rgba[2]) + ')'
@@ -199,11 +199,11 @@ cs.to.rgb = function () {
 };
 
 cs.to.rgb.percent = function () {
-	var rgba: Array = swizzle(arguments);
+	var rgba: any[] = swizzle(arguments);
 
-	var r: Number = Math.round(rgba[0] / 255 * 100);
-	var g: Number = Math.round(rgba[1] / 255 * 100);
-	var b: Number = Math.round(rgba[2] / 255 * 100);
+	var r: number = Math.round(rgba[0] / 255 * 100);
+	var g: number = Math.round(rgba[1] / 255 * 100);
+	var b: number = Math.round(rgba[2] / 255 * 100);
 
 	return rgba.length < 4 || rgba[3] === 1
 		? 'rgb(' + r + '%, ' + g + '%, ' + b + '%)'
@@ -211,7 +211,7 @@ cs.to.rgb.percent = function () {
 };
 
 cs.to.hsl = function () {
-	var hsla: Object = swizzle(arguments);
+	var hsla: object = swizzle(arguments);
 	return hsla.length < 4 || hsla[3] === 1
 		? 'hsl(' + hsla[0] + ', ' + hsla[1] + '%, ' + hsla[2] + '%)'
 		: 'hsla(' + hsla[0] + ', ' + hsla[1] + '%, ' + hsla[2] + '%, ' + hsla[3] + ')';
@@ -220,9 +220,9 @@ cs.to.hsl = function () {
 // hwb is a bit different than rgb(a) & hsl(a) since there is no alpha specific syntax
 // (hwb have alpha optional & 1 is default value)
 cs.to.hwb = function () {
-	var hwba: Object = swizzle(arguments);
+	var hwba: object = swizzle(arguments);
 
-	var a: String = '';
+	var a: string = '';
 	if (hwba.length >= 4 && hwba[3] !== 1) {
 		a = ', ' + hwba[3];
 	}
@@ -230,16 +230,16 @@ cs.to.hwb = function () {
 	return 'hwb(' + hwba[0] + ', ' + hwba[1] + '%, ' + hwba[2] + '%' + a + ')';
 };
 
-cs.to.keyword = function (rgb: Array) {
+cs.to.keyword = function (rgb: any[]) {
 	return reverseNames[rgb.slice(0, 3)];
 };
 
 // helpers
-function clamp(num: Number, min: Number, max: Number): Number {
+function clamp(num: number, min: number, max: number): number {
 	return Math.min(Math.max(min, num), max);
 }
 
-function hexDouble(num: Number): Number {
-	var str: String = Math.round(num).toString(16).toUpperCase();
+function hexDouble(num: number): number {
+	var str: string = Math.round(num).toString(16).toUpperCase();
 	return (str.length < 2) ? '0' + str : str;
 }

@@ -17,7 +17,7 @@ var utils: HTMLElement = module.exports;
  * @api public
  */
 
-utils.isNode = function(node: Object) {
+utils.isNode = function(node: object) {
   return typeOf(node) === 'object' && node.isNode === true;
 };
 
@@ -33,7 +33,7 @@ utils.isNode = function(node: Object) {
  * @api public
  */
 
-utils.noop = function(node: Object) {
+utils.noop = function(node: object) {
   append(this, '', node);
 };
 
@@ -51,7 +51,7 @@ utils.noop = function(node: Object) {
  * @api public
  */
 
-utils.value = function(node: Object) {
+utils.value = function(node: object) {
   if (typeof node.value === 'string') {
     return node.value;
   }
@@ -69,7 +69,7 @@ utils.value = function(node: Object) {
  * @api public
  */
 
-utils.identity = function(node: Object) {
+utils.identity = function(node: object) {
   append(this, utils.value(node), node);
 };
 
@@ -92,8 +92,8 @@ utils.identity = function(node: Object) {
  * @api public
  */
 
-utils.append = function(value: Number) {
-  return function(node: Object) {
+utils.append = function(value: number) {
+  return function(node: object) {
     append(this, value, node);
   };
 };
@@ -115,7 +115,7 @@ utils.append = function(value: Number) {
  * @api public
  */
 
-utils.toNoop = function(node: HTMLElement, nodes: Boolean) {
+utils.toNoop = function(node: HTMLElement, nodes: boolean) {
   if (nodes) {
     node.nodes = nodes;
   } else {
@@ -144,7 +144,7 @@ utils.toNoop = function(node: HTMLElement, nodes: Boolean) {
  * @api public
  */
 
-utils.visit = function(node: Array, fn: Function) {
+utils.visit = function(node: any[], fn: Function) {
   assert(isFunction(fn), 'expected a visitor function');
   expect(node, 'node');
   fn(node);
@@ -171,7 +171,7 @@ utils.visit = function(node: Array, fn: Function) {
  * @api public
  */
 
-utils.mapVisit = function(node: Array, fn: String) {
+utils.mapVisit = function(node: any[], fn: string) {
   assert(isFunction(fn), 'expected a visitor function');
   expect(node, 'node');
   assert(isArray(node.nodes), 'expected node.nodes to be an array');
@@ -210,7 +210,7 @@ utils.mapVisit = function(node: Array, fn: String) {
  * @api public
  */
 
-utils.addOpen = function(node: Map, Node: Object, value: Function, filter: Function) {
+utils.addOpen = function(node: Map, Node: object, value: Function, filter: Function) {
   expect(node, 'node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -220,7 +220,7 @@ utils.addOpen = function(node: Map, Node: Object, value: Function, filter: Funct
   }
 
   if (typeof filter === 'function' && !filter(node)) return;
-  var open: String = new Node({ type: node.type + '.open', value: value});
+  var open: string = new Node({ type: node.type + '.open', value: value});
   var unshift: Function = node.unshift || node.unshiftNode;
   if (typeof unshift === 'function') {
     unshift.call(node, open);
@@ -260,7 +260,7 @@ utils.addOpen = function(node: Map, Node: Object, value: Function, filter: Funct
  * @api public
  */
 
-utils.addClose = function(node: Object, Node: Object, value: Function, filter: Function) {
+utils.addClose = function(node: object, Node: object, value: Function, filter: Function) {
   assert(isFunction(Node), 'expected Node to be a constructor function');
   expect(node, 'node', Node);
 
@@ -270,7 +270,7 @@ utils.addClose = function(node: Object, Node: Object, value: Function, filter: F
   }
 
   if (typeof filter === 'function' && !filter(node)) return;
-  var close: String = new Node({ type: node.type + '.close', value: value});
+  var close: string = new Node({ type: node.type + '.close', value: value});
   var push: Function = node.push || node.pushNode;
   if (typeof push === 'function') {
     push.call(node, close);
@@ -290,7 +290,7 @@ utils.addClose = function(node: Object, Node: Object, value: Function, filter: F
  * @api public
  */
 
-utils.wrapNodes = function(node: Object, Node: Object, filter: String) {
+utils.wrapNodes = function(node: object, Node: object, filter: string) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -315,7 +315,7 @@ utils.wrapNodes = function(node: Object, Node: Object, filter: String) {
  * @api public
  */
 
-utils.pushNode = function(parent: Array, node: Object) {
+utils.pushNode = function(parent: any[], node: object) {
   assert(utils.isNode(parent), 'expected parent node to be an instance of Node');
   if (!node) return;
 
@@ -345,7 +345,7 @@ utils.pushNode = function(parent: Array, node: Object) {
  * @api public
  */
 
-utils.unshiftNode = function(parent: Array, node: Object) {
+utils.unshiftNode = function(parent: any[], node: object) {
   assert(utils.isNode(parent), 'expected parent node to be an instance of Node');
   if (!node) return;
 
@@ -378,7 +378,7 @@ utils.unshiftNode = function(parent: Array, node: Object) {
  * @api public
  */
 
-utils.popNode = function(node: Array) {
+utils.popNode = function(node: any[]) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   if (typeof node.pop === 'function') {
     return node.pop();
@@ -406,7 +406,7 @@ utils.popNode = function(node: Array) {
  * @api public
  */
 
-utils.shiftNode = function(node: Array) {
+utils.shiftNode = function(node: any[]) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   if (typeof node.shift === 'function') {
     return node.shift();
@@ -433,7 +433,7 @@ utils.shiftNode = function(node: Array) {
  * @api public
  */
 
-utils.removeNode = function(parent: HTMLElement, node: Object) {
+utils.removeNode = function(parent: HTMLElement, node: object) {
   assert(utils.isNode(parent), 'expected parent to be an instance of Node');
   if (!parent.nodes) return;
   if (!node) return;
@@ -442,7 +442,7 @@ utils.removeNode = function(parent: HTMLElement, node: Object) {
     return parent.remove(node);
   }
 
-  var idx: Number = parent.nodes.indexOf(node);
+  var idx: number = parent.nodes.indexOf(node);
   if (idx !== -1) {
     return parent.nodes.splice(idx, 1);
   }
@@ -464,7 +464,7 @@ utils.removeNode = function(parent: HTMLElement, node: Object) {
  * @api public
  */
 
-utils.isType = function(node: Object, type: Array) {
+utils.isType = function(node: object, type: any[]) {
   if (!utils.isNode(node)) return false;
   switch (typeOf(type)) {
     case 'string':
@@ -506,7 +506,7 @@ utils.isType = function(node: Object, type: Array) {
  * @api public
  */
 
-utils.hasType = function(node: Array, type: Number) {
+utils.hasType = function(node: any[], type: number) {
   if (!utils.isNode(node)) return false;
   if (!Array.isArray(node.nodes)) return false;
   for (const child of node.nodes) {
@@ -539,7 +539,7 @@ utils.hasType = function(node: Array, type: Number) {
  * @api public
  */
 
-utils.firstOfType = function(nodes: Array, type: Number) {
+utils.firstOfType = function(nodes: any[], type: number) {
   for (const node of nodes) {
     if (utils.isType(node, type)) {
       return node;
@@ -575,7 +575,7 @@ utils.firstOfType = function(nodes: Array, type: Number) {
  * @api public
  */
 
-utils.findNode = function(nodes: Object, type: String) {
+utils.findNode = function(nodes: object, type: string) {
   if (!Array.isArray(nodes)) return null;
   if (typeof type === 'number') return nodes[type];
   return utils.firstOfType(nodes, type);
@@ -599,7 +599,7 @@ utils.findNode = function(nodes: Object, type: String) {
  * @api public
  */
 
-utils.isOpen = function(node: Object) {
+utils.isOpen = function(node: object) {
   if (!node) return false;
   if (node.parent && typeof node.parent.isOpen === 'function') {
     return node.parent.isOpen(node);
@@ -628,7 +628,7 @@ utils.isOpen = function(node: Object) {
  * @api public
  */
 
-utils.isClose = function(node: Object) {
+utils.isClose = function(node: object) {
   if (!node) return false;
   if (node.parent && typeof node.parent.isClose === 'function') {
     return node.parent.isClose(node);
@@ -659,7 +659,7 @@ utils.isClose = function(node: Object) {
  * @api public
  */
 
-utils.isBlock = function(node: Object) {
+utils.isBlock = function(node: object) {
   if (!node || !utils.isNode(node)) return false;
   if (!Array.isArray(node.nodes)) {
     return false;
@@ -688,7 +688,7 @@ utils.isBlock = function(node: Object) {
  * @api public
  */
 
-utils.hasNode = function(node: Map, child: Object) {
+utils.hasNode = function(node: Map, child: object) {
   if (!utils.isNode(node)) return false;
   if (typeof node.has === 'function') {
     return node.has(child);
@@ -720,9 +720,9 @@ utils.hasNode = function(node: Map, child: Object) {
  * @api public
  */
 
-utils.hasOpen = function(node: Array) {
+utils.hasOpen = function(node: any[]) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
-  var first: Object = node.first || node.nodes ? node.nodes[0] : null;
+  var first: object = node.first || node.nodes ? node.nodes[0] : null;
   if (!utils.isNode(first)) return false;
   if (node.isOpen === 'function') {
     return node.isOpen(first);
@@ -751,9 +751,9 @@ utils.hasOpen = function(node: Array) {
  * @api public
  */
 
-utils.hasClose = function(node: Array) {
+utils.hasClose = function(node: any[]) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
-  var last: Object = node.last || node.nodes ? node.nodes[node.nodes.length - 1] : null;
+  var last: object = node.last || node.nodes ? node.nodes[node.nodes.length - 1] : null;
   if (!utils.isNode(last)) return false;
   if (typeof node.isClose === 'function') {
     return node.isClose(last);
@@ -786,7 +786,7 @@ utils.hasClose = function(node: Array) {
  * @api public
  */
 
-utils.hasOpenAndClose = function(node: Object) {
+utils.hasOpenAndClose = function(node: object) {
   return utils.hasOpen(node) && utils.hasClose(node);
 };
 
@@ -808,11 +808,11 @@ utils.hasOpenAndClose = function(node: Object) {
  * @api public
  */
 
-utils.addType = function(state: HTMLElement, node: Object) {
+utils.addType = function(state: HTMLElement, node: object) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
-  var type: String = node.parent
+  var type: string = node.parent
     ? node.parent.type
     : node.type.replace(/\.open$/, '');
 
@@ -823,7 +823,7 @@ utils.addType = function(state: HTMLElement, node: Object) {
     state.inside[type] = [];
   }
 
-  var arr: Array = state.inside[type];
+  var arr: any[] = state.inside[type];
   arr.push(node);
   return arr;
 };
@@ -848,11 +848,11 @@ utils.addType = function(state: HTMLElement, node: Object) {
  * @api public
  */
 
-utils.removeType = function(state: HTMLElement, node: Object) {
+utils.removeType = function(state: HTMLElement, node: object) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
-  var type: String = node.parent
+  var type: string = node.parent
     ? node.parent.type
     : node.type.replace(/\.close$/, '');
 
@@ -877,7 +877,7 @@ utils.removeType = function(state: HTMLElement, node: Object) {
  * @api public
  */
 
-utils.isEmpty = function(node: Array, fn: Function) {
+utils.isEmpty = function(node: any[], fn: Function) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
 
   if (!Array.isArray(node.nodes)) {
@@ -919,7 +919,7 @@ utils.isEmpty = function(node: Array, fn: Function) {
  * @api public
  */
 
-utils.isInsideType = function(state: HTMLElement, type: String) {
+utils.isInsideType = function(state: HTMLElement, type: string) {
   assert(isObject(state), 'expected state to be an object');
   assert(isString(type), 'expected type to be a string');
 
@@ -953,7 +953,7 @@ utils.isInsideType = function(state: HTMLElement, type: String) {
  * @api public
  */
 
-utils.isInside = function(state: Object, node: Object, type: Array) {
+utils.isInside = function(state: object, node: object, type: any[]) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -966,7 +966,7 @@ utils.isInside = function(state: Object, node: Object, type: Array) {
     return false;
   }
 
-  var parent: Object = node.parent;
+  var parent: object = node.parent;
   if (typeof type === 'string') {
     return (parent && parent.type === type) || utils.isInsideType(state, type);
   }
@@ -976,12 +976,12 @@ utils.isInside = function(state: Object, node: Object, type: Array) {
       return true;
     }
 
-    var keys: Array = Object.keys(state.inside);
-    var len: Number = keys.length;
-    var idx: Number = -1;
+    var keys: any[] = Object.keys(state.inside);
+    var len: number = keys.length;
+    var idx: number = -1;
     while (++idx < len) {
-      var key: String = keys[idx];
-      var value: Array = state.inside[key];
+      var key: string = keys[idx];
+      var value: any[] = state.inside[key];
 
       if (Array.isArray(value) && value.length !== 0 && type.test(key)) {
         return true;
@@ -1001,7 +1001,7 @@ utils.isInside = function(state: Object, node: Object, type: Array) {
  * @api public
  */
 
-utils.last = function(arr: Array, n: Number) {
+utils.last = function(arr: any[], n: number) {
   return Array.isArray(arr) ? arr[arr.length - (n || 1)] : null;
 };
 
@@ -1025,7 +1025,7 @@ utils.lastNode = function(node: Map) {
  * @api public
  */
 
-utils.arrayify = function(value: Array) {
+utils.arrayify = function(value: any[]) {
   if (typeof value === 'string' && value !== '') {
     return [value];
   }
@@ -1044,7 +1044,7 @@ utils.arrayify = function(value: Array) {
  * @api public
  */
 
-utils.stringify = function(value: Number) {
+utils.stringify = function(value: number) {
   return utils.arrayify(value).join(',');
 };
 
@@ -1057,7 +1057,7 @@ utils.stringify = function(value: Number) {
  * @api public
  */
 
-utils.trim = function(str: String) {
+utils.trim = function(str: string) {
   return typeof str === 'string' ? str.trim() : '';
 };
 
@@ -1065,7 +1065,7 @@ utils.trim = function(str: String) {
  * Return true if value is an object
  */
 
-function isObject(value: String): Boolean {
+function isObject(value: string): boolean {
   return typeOf(value) === 'object';
 }
 
@@ -1073,7 +1073,7 @@ function isObject(value: String): Boolean {
  * Return true if value is a string
  */
 
-function isString(value: String): Boolean {
+function isString(value: string): boolean {
   return typeof value === 'string';
 }
 
@@ -1081,7 +1081,7 @@ function isString(value: String): Boolean {
  * Return true if value is a function
  */
 
-function isFunction(value: String): Boolean {
+function isFunction(value: string): boolean {
   return typeof value === 'function';
 }
 
@@ -1089,7 +1089,7 @@ function isFunction(value: String): Boolean {
  * Return true if value is an array
  */
 
-function isArray(value: Number): Boolean {
+function isArray(value: number): boolean {
   return Array.isArray(value);
 }
 
@@ -1097,7 +1097,7 @@ function isArray(value: Number): Boolean {
  * Shim to ensure the `.append` methods work with any version of snapdragon
  */
 
-function append(compiler: Object, value: String, node: Object): String {
+function append(compiler: object, value: string, node: object): string {
   if (typeof compiler.append !== 'function') {
     return compiler.emit(value, node);
   }
@@ -1108,10 +1108,10 @@ function append(compiler: Object, value: String, node: Object): String {
  * Simplified assertion. Throws an error is `value` is falsey.
  */
 
-function assert(value: Number, message: String): Void {
+function assert(value: number, message: string): Void {
   if (!value) throw new Error(message);
 }
-function expect(node: Object, name: String, Node: Object): Void {
+function expect(node: object, name: string, Node: object): Void {
   const isNode: Function = (Node && Node.isNode) ? Node.isNode : utils.isNode;
   assert(isNode(node), `expected ${name} to be an instance of Node`);
 }

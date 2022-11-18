@@ -10,11 +10,11 @@
 
 import Fraction from '../fraction.min.js';
 
-var tab: Array = [];
+var tab: any[] = [];
 for (var d = 1; d <= 360; d++) {
 
    var pi: HTMLElement = Fraction(2, 360).mul(d);
-   var tau: Object = Fraction(1, 360).mul(d);
+   var tau: object = Fraction(1, 360).mul(d);
   
    if (pi.d <= 6 && pi.d != 5)
       tab.push([

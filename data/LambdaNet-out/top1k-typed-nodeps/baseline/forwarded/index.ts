@@ -21,15 +21,15 @@ module.exports = forwarded
  * @public
  */
 
-function forwarded (req: Object): Array {
+function forwarded (req: object): any[] {
   if (!req) {
     throw new TypeError('argument req is required')
   }
 
   // simple header parsing
-  var proxyAddrs: Array = parse(req.headers['x-forwarded-for'] || '')
-  var socketAddr: Object = getSocketAddr(req)
-  var addrs: Array = [socketAddr].concat(proxyAddrs)
+  var proxyAddrs: any[] = parse(req.headers['x-forwarded-for'] || '')
+  var socketAddr: object = getSocketAddr(req)
+  var addrs: any[] = [socketAddr].concat(proxyAddrs)
 
   // return all addresses
   return addrs
@@ -43,7 +43,7 @@ function forwarded (req: Object): Array {
  * @private
  */
 
-function getSocketAddr (req: Object): String {
+function getSocketAddr (req: object): string {
   return req.socket
     ? req.socket.remoteAddress
     : req.connection.remoteAddress
@@ -56,10 +56,10 @@ function getSocketAddr (req: Object): String {
  * @private
  */
 
-function parse (header: String): Array {
-  var end: Number = header.length
-  var list: Array = []
-  var start: Number = header.length
+function parse (header: string): any[] {
+  var end: number = header.length
+  var list: any[] = []
+  var start: number = header.length
 
   // gather addresses, backwards
   for (var i = header.length - 1; i >= 0; i--) {

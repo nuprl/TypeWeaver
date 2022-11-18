@@ -10,14 +10,14 @@ var lacksProperEnumerationOrder: Function = function () {
 	 * v8, specifically in node 4.x, has a bug with incorrect property enumeration order
 	 * note: this does not detect the bug unless there's 20 characters
 	 */
-	var str: String = 'abcdefghijklmnopqrst';
-	var letters: Array = str.split('');
-	var map: Object = {};
+	var str: string = 'abcdefghijklmnopqrst';
+	var letters: any[] = str.split('');
+	var map: object = {};
 	for (var i = 0; i < letters.length; ++i) {
 		map[letters[i]] = letters[i];
 	}
-	var obj: Object = Object.assign({}, map);
-	var actual: String = '';
+	var obj: object = Object.assign({}, map);
+	var actual: string = '';
 	for (var k in obj) {
 		actual += k;
 	}
@@ -32,7 +32,7 @@ var assignHasPendingExceptions: Function = function () {
 	 * Firefox 37 still has "pending exception" logic in its Object.assign implementation,
 	 * which is 72% slower than our shim, and Firefox 40's native implementation.
 	 */
-	var thrower: Object = Object.preventExtensions({ 1: 2 });
+	var thrower: object = Object.preventExtensions({ 1: 2 });
 	try {
 		Object.assign(thrower, 'xy');
 	} catch (e) {
@@ -41,7 +41,7 @@ var assignHasPendingExceptions: Function = function () {
 	return false;
 };
 
-export default function getPolyfill(): Object {
+export default function getPolyfill(): object {
 	if (!Object.assign) {
 		return implementation;
 	}

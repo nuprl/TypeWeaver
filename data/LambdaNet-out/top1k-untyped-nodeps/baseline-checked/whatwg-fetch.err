@@ -1,34 +1,23 @@
-fetch.ts(29,13): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
-fetch.ts(30,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(53,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-fetch.ts(61,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-fetch.ts(63,3): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-fetch.ts(67,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(75,15): error TS2339: Property 'iterable' does not exist on type 'Object'.
-fetch.ts(84,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+fetch.ts(29,13): error TS2339: Property 'arrayBuffer' does not exist on type 'object'.
+fetch.ts(61,5): error TS2322: Type 'string' is not assignable to type 'number'.
+fetch.ts(63,3): error TS2322: Type 'number' is not assignable to type 'string'.
+fetch.ts(75,15): error TS2339: Property 'iterable' does not exist on type 'object'.
 fetch.ts(84,42): error TS2304: Cannot find name 'Void'.
-fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
+fetch.ts(88,21): error TS2345: Argument of type '(value: string, name: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Types of parameters 'name' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
 fetch.ts(92,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-fetch.ts(104,3): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-fetch.ts(105,35): error TS2538: Type 'String' cannot be used as an index type.
-fetch.ts(106,12): error TS2538: Type 'String' cannot be used as an index type.
-fetch.ts(110,19): error TS2538: Type 'String' cannot be used as an index type.
-fetch.ts(115,36): error TS2538: Type 'String' cannot be used as an index type.
-fetch.ts(123,12): error TS2538: Type 'String' cannot be used as an index type.
-fetch.ts(123,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-fetch.ts(135,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(143,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(151,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(158,13): error TS2339: Property 'iterable' does not exist on type 'Object'.
+fetch.ts(104,3): error TS2322: Type 'string' is not assignable to type 'number'.
+fetch.ts(123,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+fetch.ts(158,13): error TS2339: Property 'iterable' does not exist on type 'object'.
 fetch.ts(162,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 fetch.ts(163,12): error TS2339: Property 'bodyUsed' does not exist on type 'HTMLElement'.
 fetch.ts(166,8): error TS2339: Property 'bodyUsed' does not exist on type 'HTMLElement'.
 fetch.ts(169,43): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-fetch.ts(171,12): error TS2339: Property 'onload' does not exist on type 'Object'.
-fetch.ts(172,22): error TS2339: Property 'result' does not exist on type 'Object'.
-fetch.ts(174,12): error TS2339: Property 'onerror' does not exist on type 'Object'.
-fetch.ts(175,21): error TS2339: Property 'error' does not exist on type 'Object'.
+fetch.ts(171,12): error TS2339: Property 'onload' does not exist on type 'object'.
+fetch.ts(172,22): error TS2339: Property 'result' does not exist on type 'object'.
+fetch.ts(174,12): error TS2339: Property 'onerror' does not exist on type 'object'.
+fetch.ts(175,21): error TS2339: Property 'error' does not exist on type 'object'.
 fetch.ts(180,47): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 fetch.ts(181,7): error TS2740: Type 'FileReader' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 269 more.
 fetch.ts(182,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -37,32 +26,30 @@ fetch.ts(187,40): error TS2314: Generic type 'Promise<T>' requires 1 type argume
 fetch.ts(188,7): error TS2322: Type 'FileReader' is not assignable to type 'HTMLElement'.
 fetch.ts(189,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 fetch.ts(190,10): error TS2339: Property 'readAsText' does not exist on type 'HTMLElement'.
-fetch.ts(195,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+fetch.ts(195,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 fetch.ts(195,36): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'ArrayBufferLike'.
-fetch.ts(196,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(204,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(204,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(209,10): error TS2339: Property 'set' does not exist on type 'Object'.
-fetch.ts(210,17): error TS2339: Property 'buffer' does not exist on type 'Object'.
-fetch.ts(217,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(234,24): error TS2339: Property 'blob' does not exist on type 'Object'.
-fetch.ts(236,24): error TS2339: Property 'formData' does not exist on type 'Object'.
-fetch.ts(238,24): error TS2339: Property 'searchParams' does not exist on type 'Object'.
-fetch.ts(240,24): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
-fetch.ts(240,47): error TS2339: Property 'blob' does not exist on type 'Object'.
-fetch.ts(244,24): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
-fetch.ts(255,26): error TS2339: Property 'searchParams' does not exist on type 'Object'.
-fetch.ts(261,15): error TS2339: Property 'blob' does not exist on type 'Object'.
-fetch.ts(318,15): error TS2339: Property 'formData' does not exist on type 'Object'.
-fetch.ts(332,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+fetch.ts(208,43): error TS2339: Property 'byteLength' does not exist on type 'any[]'.
+fetch.ts(209,10): error TS2339: Property 'set' does not exist on type 'object'.
+fetch.ts(210,17): error TS2339: Property 'buffer' does not exist on type 'object'.
+fetch.ts(234,24): error TS2339: Property 'blob' does not exist on type 'object'.
+fetch.ts(236,24): error TS2339: Property 'formData' does not exist on type 'object'.
+fetch.ts(238,24): error TS2339: Property 'searchParams' does not exist on type 'object'.
+fetch.ts(240,24): error TS2339: Property 'arrayBuffer' does not exist on type 'object'.
+fetch.ts(240,47): error TS2339: Property 'blob' does not exist on type 'object'.
+fetch.ts(240,66): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'boolean'.
+fetch.ts(241,48): error TS2339: Property 'buffer' does not exist on type 'any[]'.
+fetch.ts(244,24): error TS2339: Property 'arrayBuffer' does not exist on type 'object'.
+fetch.ts(255,26): error TS2339: Property 'searchParams' does not exist on type 'object'.
+fetch.ts(261,15): error TS2339: Property 'blob' does not exist on type 'object'.
+fetch.ts(318,15): error TS2339: Property 'formData' does not exist on type 'object'.
 fetch.ts(339,63): error TS2304: Cannot find name 'Void'.
-fetch.ts(345,32): error TS2339: Property 'body' does not exist on type 'Object'.
+fetch.ts(345,32): error TS2339: Property 'body' does not exist on type 'object'.
 fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type 'HTMLElement'.
 fetch.ts(351,22): error TS2339: Property 'url' does not exist on type 'HTMLElement'.
 fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type 'HTMLElement'.
-fetch.ts(353,18): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(353,18): error TS2339: Property 'headers' does not exist on type 'object'.
 fetch.ts(354,22): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 fetch.ts(356,25): error TS2339: Property 'method' does not exist on type 'HTMLElement'.
@@ -71,69 +58,63 @@ fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type 'HTMLEl
 fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type 'HTMLElement'.
 fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type 'HTMLElement'.
 fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type 'HTMLElement'.
-fetch.ts(367,30): error TS2339: Property 'credentials' does not exist on type 'Object'.
-fetch.ts(368,15): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(367,30): error TS2339: Property 'credentials' does not exist on type 'object'.
+fetch.ts(368,15): error TS2339: Property 'headers' does not exist on type 'object'.
 fetch.ts(369,20): error TS2350: Only a void function can be called with the 'new' keyword.
-fetch.ts(369,40): error TS2339: Property 'headers' does not exist on type 'Object'.
-fetch.ts(371,41): error TS2339: Property 'method' does not exist on type 'Object'.
-fetch.ts(372,23): error TS2339: Property 'mode' does not exist on type 'Object'.
-fetch.ts(373,25): error TS2339: Property 'signal' does not exist on type 'Object'.
+fetch.ts(369,40): error TS2339: Property 'headers' does not exist on type 'object'.
+fetch.ts(371,41): error TS2339: Property 'method' does not exist on type 'object'.
+fetch.ts(372,23): error TS2339: Property 'mode' does not exist on type 'object'.
+fetch.ts(373,25): error TS2339: Property 'signal' does not exist on type 'object'.
 fetch.ts(375,11): error TS2740: Type 'AbortController' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 fetch.ts(376,19): error TS2339: Property 'signal' does not exist on type 'HTMLElement'.
-fetch.ts(387,17): error TS2339: Property 'cache' does not exist on type 'Object'.
-fetch.ts(387,49): error TS2339: Property 'cache' does not exist on type 'Object'.
+fetch.ts(387,17): error TS2339: Property 'cache' does not exist on type 'object'.
+fetch.ts(387,49): error TS2339: Property 'cache' does not exist on type 'object'.
 fetch.ts(403,10): error TS2350: Only a void function can be called with the 'new' keyword.
-fetch.ts(413,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(416,14): error TS2339: Property 'append' does not exist on type 'Object'.
-fetch.ts(416,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-fetch.ts(416,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+fetch.ts(416,14): error TS2339: Property 'append' does not exist on type 'object'.
 fetch.ts(423,25): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(423,25): error TS2554: Expected 1 arguments, but got 0.
-fetch.ts(436,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fetch.ts(440,17): error TS2339: Property 'append' does not exist on type 'Object'.
+fetch.ts(440,17): error TS2339: Property 'append' does not exist on type 'object'.
 fetch.ts(448,62): error TS2304: Cannot find name 'Void'.
-fetch.ts(457,25): error TS2339: Property 'status' does not exist on type 'Object'.
-fetch.ts(457,62): error TS2339: Property 'status' does not exist on type 'Object'.
-fetch.ts(459,29): error TS2339: Property 'statusText' does not exist on type 'Object'.
-fetch.ts(459,74): error TS2339: Property 'statusText' does not exist on type 'Object'.
+fetch.ts(457,25): error TS2339: Property 'status' does not exist on type 'object'.
+fetch.ts(457,62): error TS2339: Property 'status' does not exist on type 'object'.
+fetch.ts(459,29): error TS2339: Property 'statusText' does not exist on type 'object'.
+fetch.ts(459,74): error TS2339: Property 'statusText' does not exist on type 'object'.
 fetch.ts(460,18): error TS2350: Only a void function can be called with the 'new' keyword.
-fetch.ts(460,38): error TS2339: Property 'headers' does not exist on type 'Object'.
-fetch.ts(461,22): error TS2339: Property 'url' does not exist on type 'Object'.
+fetch.ts(460,38): error TS2339: Property 'headers' does not exist on type 'object'.
+fetch.ts(461,22): error TS2339: Property 'url' does not exist on type 'object'.
 fetch.ts(468,10): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(471,14): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(477,27): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(478,12): error TS2339: Property 'type' does not exist on type 'Element'.
-fetch.ts(482,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fetch.ts(489,10): error TS2350: Only a void function can be called with the 'new' keyword.
-fetch.ts(492,42): error TS2339: Property 'DOMException' does not exist on type 'Object'.
+fetch.ts(492,42): error TS2339: Property 'DOMException' does not exist on type 'object'.
 fetch.ts(494,7): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-fetch.ts(502,16): error TS2339: Property 'prototype' does not exist on type 'Object'.
-fetch.ts(503,16): error TS2339: Property 'prototype' does not exist on type 'Object'.
+  Type '{}' has no construct signatures.
+fetch.ts(502,16): error TS2339: Property 'prototype' does not exist on type 'object'.
+fetch.ts(503,16): error TS2339: Property 'prototype' does not exist on type 'object'.
 fetch.ts(508,28): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(510,17): error TS2339: Property 'signal' does not exist on type 'Element'.
 fetch.ts(510,35): error TS2339: Property 'signal' does not exist on type 'Element'.
 fetch.ts(511,25): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 fetch.ts(514,9): error TS2740: Type 'XMLHttpRequest' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 269 more.
 fetch.ts(516,26): error TS2304: Cannot find name 'Void'.
 fetch.ts(517,11): error TS2339: Property 'abort' does not exist on type 'HTMLElement'.
 fetch.ts(522,21): error TS2339: Property 'status' does not exist on type 'HTMLElement'.
 fetch.ts(523,25): error TS2339: Property 'statusText' does not exist on type 'HTMLElement'.
 fetch.ts(524,35): error TS2339: Property 'getAllResponseHeaders' does not exist on type 'HTMLElement'.
-fetch.ts(526,15): error TS2339: Property 'url' does not exist on type 'Object'.
+fetch.ts(526,15): error TS2339: Property 'url' does not exist on type 'object'.
 fetch.ts(526,48): error TS2339: Property 'responseURL' does not exist on type 'HTMLElement'.
-fetch.ts(526,70): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(526,70): error TS2339: Property 'headers' does not exist on type 'object'.
 fetch.ts(527,50): error TS2339: Property 'response' does not exist on type 'HTMLElement'.
 fetch.ts(527,65): error TS2339: Property 'responseText' does not exist on type 'HTMLElement'.
 fetch.ts(529,17): error TS2350: Only a void function can be called with the 'new' keyword.
+fetch.ts(529,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 fetch.ts(539,9): error TS2339: Property 'ontimeout' does not exist on type 'HTMLElement'.
 fetch.ts(547,20): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-fetch.ts(553,37): error TS2339: Property 'location' does not exist on type 'Object'.
-fetch.ts(553,60): error TS2339: Property 'location' does not exist on type 'Object'.
+  Type '{}' has no construct signatures.
+fetch.ts(553,37): error TS2339: Property 'location' does not exist on type 'object'.
+fetch.ts(553,60): error TS2339: Property 'location' does not exist on type 'object'.
 fetch.ts(559,9): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
 fetch.ts(559,22): error TS2339: Property 'method' does not exist on type 'Element'.
 fetch.ts(559,45): error TS2339: Property 'url' does not exist on type 'Element'.
@@ -141,17 +122,17 @@ fetch.ts(561,17): error TS2339: Property 'credentials' does not exist on type 'E
 fetch.ts(562,11): error TS2339: Property 'withCredentials' does not exist on type 'HTMLElement'.
 fetch.ts(563,24): error TS2339: Property 'credentials' does not exist on type 'Element'.
 fetch.ts(564,11): error TS2339: Property 'withCredentials' does not exist on type 'HTMLElement'.
-fetch.ts(568,19): error TS2339: Property 'blob' does not exist on type 'Object'.
+fetch.ts(568,19): error TS2339: Property 'blob' does not exist on type 'object'.
 fetch.ts(569,13): error TS2339: Property 'responseType' does not exist on type 'HTMLElement'.
-fetch.ts(571,17): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
+fetch.ts(571,17): error TS2339: Property 'arrayBuffer' does not exist on type 'object'.
 fetch.ts(572,17): error TS2339: Property 'headers' does not exist on type 'Element'.
 fetch.ts(573,17): error TS2339: Property 'headers' does not exist on type 'Element'.
 fetch.ts(575,13): error TS2339: Property 'responseType' does not exist on type 'HTMLElement'.
-fetch.ts(579,29): error TS2339: Property 'headers' does not exist on type 'Object'.
-fetch.ts(579,60): error TS2339: Property 'headers' does not exist on type 'Object'.
-fetch.ts(580,39): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(579,29): error TS2339: Property 'headers' does not exist on type 'object'.
+fetch.ts(579,60): error TS2339: Property 'headers' does not exist on type 'object'.
+fetch.ts(580,39): error TS2339: Property 'headers' does not exist on type 'object'.
 fetch.ts(581,13): error TS2339: Property 'setRequestHeader' does not exist on type 'HTMLElement'.
-fetch.ts(581,56): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(581,56): error TS2339: Property 'headers' does not exist on type 'object'.
 fetch.ts(584,15): error TS2339: Property 'headers' does not exist on type 'Element'.
 fetch.ts(585,13): error TS2339: Property 'setRequestHeader' does not exist on type 'HTMLElement'.
 fetch.ts(589,17): error TS2339: Property 'signal' does not exist on type 'Element'.
@@ -162,9 +143,9 @@ fetch.ts(595,19): error TS2339: Property 'signal' does not exist on type 'Elemen
 fetch.ts(600,9): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 fetch.ts(600,29): error TS2339: Property '_bodyInit' does not exist on type 'Element'.
 fetch.ts(600,72): error TS2339: Property '_bodyInit' does not exist on type 'Element'.
-fetch.ts(606,13): error TS2339: Property 'fetch' does not exist on type 'Object'.
-fetch.ts(607,10): error TS2339: Property 'fetch' does not exist on type 'Object'.
-fetch.ts(608,10): error TS2339: Property 'Headers' does not exist on type 'Object'.
-fetch.ts(609,10): error TS2339: Property 'Request' does not exist on type 'Object'.
-fetch.ts(610,10): error TS2339: Property 'Response' does not exist on type 'Object'.
+fetch.ts(606,13): error TS2339: Property 'fetch' does not exist on type 'object'.
+fetch.ts(607,10): error TS2339: Property 'fetch' does not exist on type 'object'.
+fetch.ts(608,10): error TS2339: Property 'Headers' does not exist on type 'object'.
+fetch.ts(609,10): error TS2339: Property 'Request' does not exist on type 'object'.
+fetch.ts(610,10): error TS2339: Property 'Response' does not exist on type 'object'.
 

@@ -5,7 +5,7 @@ import map from '../map.js'
 import cacheHas from './cacheHas.js'
 
 /** Used as the size to enable large array optimizations. */
-const LARGE_ARRAY_SIZE: Number = 200
+const LARGE_ARRAY_SIZE: number = 200
 
 /**
  * The base implementation of methods like `difference` without support
@@ -18,17 +18,17 @@ const LARGE_ARRAY_SIZE: Number = 200
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns the new array of filtered values.
  */
-function baseDifference(array: Array, values: Array, iteratee: Function, comparator: Number): Array {
+function baseDifference(array: any[], values: any[], iteratee: Function, comparator: number): any[] {
   let includes: Function = arrayIncludes
-  let isCommon: Boolean = true
-  const result: Array = []
-  const valuesLength: Number = values.length
+  let isCommon: boolean = true
+  const result: any[] = []
+  const valuesLength: number = values.length
 
   if (!array.length) {
     return result
   }
   if (iteratee) {
-    values = map(values, (value: Number) => iteratee(value))
+    values = map(values, (value: number) => iteratee(value))
   }
   if (comparator) {
     includes = arrayIncludesWith
@@ -41,11 +41,11 @@ function baseDifference(array: Array, values: Array, iteratee: Function, compara
   }
   outer:
   for (let value of array) {
-    const computed: Number = iteratee == null ? value : iteratee(value)
+    const computed: number = iteratee == null ? value : iteratee(value)
 
     value = (comparator || value !== 0) ? value : 0
     if (isCommon && computed === computed) {
-      let valuesIndex: Number = valuesLength
+      let valuesIndex: number = valuesLength
       while (valuesIndex--) {
         if (values[valuesIndex] === computed) {
           continue outer

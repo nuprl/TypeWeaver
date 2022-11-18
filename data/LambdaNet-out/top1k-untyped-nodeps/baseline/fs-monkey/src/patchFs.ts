@@ -1,15 +1,15 @@
 import {fsProps, fsAsyncMethods, fsSyncMethods} from './util/lists';
 
 
-export default function patchFs(vol: Object, fs: String = require('fs')): Function {
-    const bkp: Object = {};
+export default function patchFs(vol: object, fs: string = require('fs')): Function {
+    const bkp: object = {};
 
-    const patch: Function = (key: String, newValue: Number) => {
+    const patch: Function = (key: string, newValue: number) => {
         bkp[key] = fs[key];
         fs[key] = newValue;
     };
 
-    const patchMethod: Function = (key: String) => patch(key, vol[key].bind(vol));
+    const patchMethod: Function = (key: string) => patch(key, vol[key].bind(vol));
 
     // General properties
     for(let prop of fsProps)

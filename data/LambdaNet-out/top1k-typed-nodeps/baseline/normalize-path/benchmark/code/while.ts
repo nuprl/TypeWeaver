@@ -1,10 +1,10 @@
-module.exports = function normalize(str: Array, strip: Number): String {
-  var len: Number = str.length, i: Number = -1;
-  var res: String = '';
-  var prev: Number;
+module.exports = function normalize(str: any[], strip: number): string {
+  var len: number = str.length, i: number = -1;
+  var res: string = '';
+  var prev: number;
 
   while (++i < len) {
-    var ch: Number = str[i];
+    var ch: number = str[i];
 
     if (i === 0) {
       if (ch === '.' && str[i + 1] === '/') {
@@ -13,7 +13,7 @@ module.exports = function normalize(str: Array, strip: Number): String {
       }
     }
 
-    var is: Boolean = isSlash(ch);
+    var is: boolean = isSlash(ch);
     if (i === len - 1 && is) {
       if (strip !== false) {
         if (prev) res = res.slice(0, res.length -1);
@@ -35,6 +35,6 @@ module.exports = function normalize(str: Array, strip: Number): String {
 };
 
 
-function isSlash(ch: Number): Boolean {
+function isSlash(ch: number): boolean {
   return ch === '\\' || ch === '/';
 }

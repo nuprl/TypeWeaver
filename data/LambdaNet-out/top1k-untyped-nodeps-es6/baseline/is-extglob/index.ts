@@ -7,12 +7,12 @@
 
 var regex: RegExp = /(\\).|([@?!+*]\(.*\))/;
 
-export default function isExtglob(str: String): Boolean {
+export default function isExtglob(str: string): boolean {
   if (typeof str !== 'string' || str === '') {
     return false;
   }
 
-  var match: Object;
+  var match: object;
   while ((match = regex.exec(str))) {
     if (match[2]) return true;
     str = str.slice(match.index + match[0].length);

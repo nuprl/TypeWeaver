@@ -2,8 +2,8 @@ import Stack from './Stack.js'
 import baseIsEqual from './baseIsEqual.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
-const COMPARE_UNORDERED_FLAG: Number = 2
+const COMPARE_PARTIAL_FLAG: number = 1
+const COMPARE_UNORDERED_FLAG: number = 2
 
 /**
  * The base implementation of `isMatch`.
@@ -15,16 +15,16 @@ const COMPARE_UNORDERED_FLAG: Number = 2
  * @param {Function} [customizer] The function to customize comparisons.
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  */
-function baseIsMatch(object: Object, source: Number, matchData: Array, customizer: Function): Boolean {
-  let index: Number = matchData.length
-  const length: Number = index
-  const noCustomizer: Boolean = !customizer
+function baseIsMatch(object: object, source: number, matchData: any[], customizer: Function): boolean {
+  let index: number = matchData.length
+  const length: number = index
+  const noCustomizer: boolean = !customizer
 
   if (object == null) {
     return !length
   }
-  let data: Object
-  let result: Number
+  let data: object
+  let result: number
   object = Object(object)
   while (index--) {
     data = matchData[index]
@@ -37,9 +37,9 @@ function baseIsMatch(object: Object, source: Number, matchData: Array, customize
   }
   while (++index < length) {
     data = matchData[index]
-    const key: String = data[0]
-    const objValue: String = object[key]
-    const srcValue: String = data[1]
+    const key: string = data[0]
+    const objValue: string = object[key]
+    const srcValue: string = data[1]
 
     if (noCustomizer && data[2]) {
       if (objValue === undefined && !(key in object)) {

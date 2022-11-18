@@ -42,11 +42,11 @@ exports = module.exports = ProgressBar;
  * @api public
  */
 
-function ProgressBar(fmt: Function, options: Object): Void {
+function ProgressBar(fmt: Function, options: object): Void {
   this.stream = options.stream || process.stderr;
 
   if (typeof(options) == 'number') {
-    var total: Number = options;
+    var total: number = options;
     options = {};
     options.total = total;
   } else {
@@ -80,7 +80,7 @@ function ProgressBar(fmt: Function, options: Object): Void {
  * @api public
  */
 
-ProgressBar.prototype.tick = function(len: Number, tokens: String){
+ProgressBar.prototype.tick = function(len: number, tokens: string){
   if (len !== 0)
     len = len || 1;
 
@@ -114,31 +114,31 @@ ProgressBar.prototype.tick = function(len: Number, tokens: String){
  * @api public
  */
 
-ProgressBar.prototype.render = function (tokens: Function, force: Boolean) {
+ProgressBar.prototype.render = function (tokens: Function, force: boolean) {
   force = force !== undefined ? force : false;
   if (tokens) this.tokens = tokens;
 
   if (!this.stream.isTTY) return;
 
-  var now: Number = Date.now();
-  var delta: Number = now - this.lastRender;
+  var now: number = Date.now();
+  var delta: number = now - this.lastRender;
   if (!force && (delta < this.renderThrottle)) {
     return;
   } else {
     this.lastRender = now;
   }
 
-  var ratio: Number = this.curr / this.total;
+  var ratio: number = this.curr / this.total;
   ratio = Math.min(Math.max(ratio, 0), 1);
 
-  var percent: Number = Math.floor(ratio * 100);
-  var incomplete: String, complete: String, completeLength: Number;
-  var elapsed: Number = new Date - this.start;
-  var eta: Number = (percent == 100) ? 0 : elapsed * (this.total / this.curr - 1);
-  var rate: Number = this.curr / (elapsed / 1000);
+  var percent: number = Math.floor(ratio * 100);
+  var incomplete: string, complete: string, completeLength: number;
+  var elapsed: number = new Date - this.start;
+  var eta: number = (percent == 100) ? 0 : elapsed * (this.total / this.curr - 1);
+  var rate: number = this.curr / (elapsed / 1000);
 
   /* populate the bar template with percentages and timestamps */
-  var str: String = this.fmt
+  var str: string = this.fmt
     .replace(':current', this.curr)
     .replace(':total', this.total)
     .replace(':elapsed', isNaN(elapsed) ? '0.0' : (elapsed / 1000).toFixed(1))
@@ -148,12 +148,12 @@ ProgressBar.prototype.render = function (tokens: Function, force: Boolean) {
     .replace(':rate', Math.round(rate));
 
   /* compute the available space (non-zero) for the bar */
-  var availableSpace: Number = Math.max(0, this.stream.columns - str.replace(':bar', '').length);
+  var availableSpace: number = Math.max(0, this.stream.columns - str.replace(':bar', '').length);
   if(availableSpace && process.platform === 'win32'){
     availableSpace = availableSpace - 1;
   }
 
-  var width: Number = Math.min(this.width, availableSpace);
+  var width: number = Math.min(this.width, availableSpace);
 
   /* TODO: the following assumes the user has one ':bar' token */
   completeLength = Math.round(width * ratio);
@@ -192,9 +192,9 @@ ProgressBar.prototype.render = function (tokens: Function, force: Boolean) {
  * @api public
  */
 
-ProgressBar.prototype.update = function (ratio: Number, tokens: String) {
-  var goal: Number = Math.floor(ratio * this.total);
-  var delta: Number = goal - this.curr;
+ProgressBar.prototype.update = function (ratio: number, tokens: string) {
+  var goal: number = Math.floor(ratio * this.total);
+  var delta: number = goal - this.curr;
 
   this.tick(delta, tokens);
 };
@@ -205,7 +205,7 @@ ProgressBar.prototype.update = function (ratio: Number, tokens: String) {
  * @api public
  */
 
-ProgressBar.prototype.interrupt = function (message: String) {
+ProgressBar.prototype.interrupt = function (message: string) {
   // clear the current line
   this.stream.clearLine();
   // move the cursor to the start of the line

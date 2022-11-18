@@ -1,17 +1,10 @@
-implementation.ts(14,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(80,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(80,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(85,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'keysShim' must be of type 'Function', but here has type 'String'.
+index.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'keysShim' must be of type 'Function', but here has type 'string'.
 index.ts(9,10): error TS2339: Property 'shim' does not exist on type 'Function'.
-index.ts(13,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(15,5): error TS2554: Expected 0 arguments, but got 2.
-index.ts(17,4): error TS2322: Type '(object: Function) => String' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
-  Type 'String' is missing the following properties from type 'string[]': pop, push, join, reverse, and 21 more.
+index.ts(17,4): error TS2322: Type '(object: Function) => string' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+  Type 'string' is not assignable to type 'string[]'.
 index.ts(25,3): error TS2322: Type 'Function' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
   Type 'Function' provides no match for the signature '(o: object): string[]'.
-index.ts(27,2): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-isArguments.ts(5,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,2): error TS2322: Type 'Function' is not assignable to type 'boolean'.
+isArguments.ts(14,24): error TS2339: Property 'callee' does not exist on type 'any[]'.
 

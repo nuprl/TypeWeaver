@@ -117,7 +117,7 @@
    * Do not apply this function to anything which is not a genuine
    * fresh WeakMap.
    */
-  function weakMapPermitHostObjects(map: Object): Void {
+  function weakMapPermitHostObjects(map: object): Void {
     // identity of function used as a secret -- good enough and cheap
     if (map.permitHostObjects___) {
       map.permitHostObjects___(weakMapPermitHostObjects);
@@ -129,7 +129,7 @@
 
   // IE 11 has no Proxy but has a broken WeakMap such that we need to patch
   // it using DoubleWeakMap; this flag tells DoubleWeakMap so.
-  var doubleWeakMapCheckSilentFailure: Boolean = false;
+  var doubleWeakMapCheckSilentFailure: boolean = false;
 
   // Check if there is already a good-enough WeakMap implementation, and if so
   // exit without replacing it.
@@ -157,7 +157,7 @@
     } else {
       // IE 11 bug: WeakMaps silently fail to store frozen objects.
       var testMap: Map = new HostWeakMap();
-      var testObject: Object = Object.freeze({});
+      var testObject: object = Object.freeze({});
       testMap.set(testObject, 1);
       if (testMap.get(testObject) !== 1) {
         doubleWeakMapCheckSilentFailure = true;
@@ -169,9 +169,9 @@
     }
   }
 
-  var hop: Number = Object.prototype.hasOwnProperty;
+  var hop: number = Object.prototype.hasOwnProperty;
   var gopn: Function = Object.getOwnPropertyNames;
-  var defProp: Object = Object.defineProperty;
+  var defProp: object = Object.defineProperty;
   var isExtensible: Function = Object.isExtensible;
 
   /**
@@ -210,23 +210,23 @@
    * goals. In addition, because the name need not be a guarded
    * secret, we could efficiently handle cross-frame frozen keys.
    */
-  var HIDDEN_NAME_PREFIX: String = 'weakmap:';
-  var HIDDEN_NAME: String = HIDDEN_NAME_PREFIX + 'ident:' + Math.random() + '___';
+  var HIDDEN_NAME_PREFIX: string = 'weakmap:';
+  var HIDDEN_NAME: string = HIDDEN_NAME_PREFIX + 'ident:' + Math.random() + '___';
 
   if (typeof crypto !== 'undefined' &&
       typeof crypto.getRandomValues === 'function' &&
       typeof ArrayBuffer === 'function' &&
       typeof Uint8Array === 'function') {
-    var ab: Array = new ArrayBuffer(25);
-    var u8s: String = new Uint8Array(ab);
+    var ab: any[] = new ArrayBuffer(25);
+    var u8s: string = new Uint8Array(ab);
     crypto.getRandomValues(u8s);
     HIDDEN_NAME = HIDDEN_NAME_PREFIX + 'rand:' +
-      Array.prototype.map.call(u8s, function(u8: Number) {
+      Array.prototype.map.call(u8s, function(u8: number) {
         return (u8 % 36).toString(36);
       }).join('') + '___';
   }
 
-  function isNotHiddenName(name: String): Boolean {
+  function isNotHiddenName(name: string): boolean {
     return !(
         name.substr(0, HIDDEN_NAME_PREFIX.length) == HIDDEN_NAME_PREFIX &&
         name.substr(name.length - 3) === '___');
@@ -245,7 +245,7 @@
    * without providing built-in ES6 WeakMaps.
    */
   defProp(Object, 'getOwnPropertyNames', {
-    value: function fakeGetOwnPropertyNames(obj: String): Array {
+    value: function fakeGetOwnPropertyNames(obj: string): any[] {
       return gopn(obj).filter(isNotHiddenName);
     }
   });
@@ -257,7 +257,7 @@
   if ('getPropertyNames' in Object) {
     var originalGetPropertyNames: Function = Object.getPropertyNames;
     defProp(Object, 'getPropertyNames', {
-      value: function fakeGetPropertyNames(obj: Function): Array {
+      value: function fakeGetPropertyNames(obj: Function): any[] {
         return originalGetPropertyNames(obj).filter(isNotHiddenName);
       }
     });
@@ -302,11 +302,11 @@
    * force leaky map stored in the weak map, losing all the advantages
    * of weakness for these.
    */
-  function getHiddenRecord(key: String): Array {
+  function getHiddenRecord(key: string): any[] {
     if (key !== Object(key)) {
       throw new TypeError('Not an object: ' + key);
     }
-    var hiddenRecord: Object = key[HIDDEN_NAME];
+    var hiddenRecord: object = key[HIDDEN_NAME];
     if (hiddenRecord && hiddenRecord.key === key) { return hiddenRecord; }
     if (!isExtensible(key)) {
       // Weak map must brute force, as explained in doc-comment above.
@@ -368,14 +368,14 @@
   (function(){
     var oldFreeze: Function = Object.freeze;
     defProp(Object, 'freeze', {
-      value: function identifyingFreeze(obj: Function): Object {
+      value: function identifyingFreeze(obj: Function): object {
         getHiddenRecord(obj);
         return oldFreeze(obj);
       }
     });
     var oldSeal: Function = Object.seal;
     defProp(Object, 'seal', {
-      value: function identifyingSeal(obj: Function): Array {
+      value: function identifyingSeal(obj: Function): any[] {
         getHiddenRecord(obj);
         return oldSeal(obj);
       }
@@ -389,12 +389,12 @@
     });
   })();
 
-  function constFunc(func: Object): Object {
+  function constFunc(func: object): object {
     func.prototype = null;
     return Object.freeze(func);
   }
 
-  var calledAsFunctionWarningDone: Boolean = false;
+  var calledAsFunctionWarningDone: boolean = false;
   function calledAsFunctionWarning(): Void {
     // Future ES6 WeakMap is currently (2013-09-10) expected to reject WeakMap()
     // but we used to permit it and do it ourselves, so warn only.
@@ -405,7 +405,7 @@
     }
   }
 
-  var nextId: Number = 0;
+  var nextId: number = 0;
 
   var OurWeakMap: Function = function() {
     if (!(this instanceof OurWeakMap)) {  // approximate test for new ...()
@@ -414,13 +414,13 @@
 
     // We are currently (12/25/2012) never encountering any prematurely
     // non-extensible keys.
-    var keys: String = []; // brute force for prematurely non-extensible keys.
-    var values: Array = []; // brute force for corresponding values.
-    var id: Number = nextId++;
+    var keys: string = []; // brute force for prematurely non-extensible keys.
+    var values: any[] = []; // brute force for corresponding values.
+    var id: number = nextId++;
 
-    function get___(key: String, opt_default: String): String {
-      var index: Number;
-      var hiddenRecord: Object = getHiddenRecord(key);
+    function get___(key: string, opt_default: string): string {
+      var index: number;
+      var hiddenRecord: object = getHiddenRecord(key);
       if (hiddenRecord) {
         return id in hiddenRecord ? hiddenRecord[id] : opt_default;
       } else {
@@ -429,8 +429,8 @@
       }
     }
 
-    function has___(key: String): Boolean {
-      var hiddenRecord: Number = getHiddenRecord(key);
+    function has___(key: string): boolean {
+      var hiddenRecord: number = getHiddenRecord(key);
       if (hiddenRecord) {
         return id in hiddenRecord;
       } else {
@@ -438,9 +438,9 @@
       }
     }
 
-    function set___(key: String, value: String): Object {
-      var index: Number;
-      var hiddenRecord: Object = getHiddenRecord(key);
+    function set___(key: string, value: string): object {
+      var index: number;
+      var hiddenRecord: object = getHiddenRecord(key);
       if (hiddenRecord) {
         hiddenRecord[id] = value;
       } else {
@@ -462,9 +462,9 @@
       return this;
     }
 
-    function delete___(key: String): Boolean {
-      var hiddenRecord: Object = getHiddenRecord(key);
-      var index: Number, lastIndex: Number;
+    function delete___(key: string): boolean {
+      var hiddenRecord: object = getHiddenRecord(key);
+      var index: number, lastIndex: number;
       if (hiddenRecord) {
         return id in hiddenRecord && delete hiddenRecord[id];
       } else {
@@ -512,7 +512,7 @@
        * Return the value most recently associated with key, or
        * opt_default if none.
        */
-      value: function get(key: String, opt_default: Function): String {
+      value: function get(key: string, opt_default: Function): string {
         return this.get___(key, opt_default);
       },
       writable: true,
@@ -523,7 +523,7 @@
       /**
        * Is there a value associated with key in this WeakMap?
        */
-      value: function has(key: String): String {
+      value: function has(key: string): string {
         return this.has___(key);
       },
       writable: true,
@@ -535,7 +535,7 @@
        * Associate value with key in this WeakMap, overwriting any
        * previous association if present.
        */
-      value: function set(key: String, value: String): String {
+      value: function set(key: string, value: string): string {
         return this.set___(key, value);
       },
       writable: true,
@@ -555,7 +555,7 @@
        * absent, whereas this {@code delete} method returns false if
        * the association was already absent.
        */
-      value: function remove(key: String): String {
+      value: function remove(key: string): string {
         return this.delete___(key);
       },
       writable: true,
@@ -576,18 +576,18 @@
         Proxy = undefined;
       }
 
-      function DoubleWeakMap(): Object {
+      function DoubleWeakMap(): object {
         if (!(this instanceof OurWeakMap)) {  // approximate test for new ...()
           calledAsFunctionWarning();
         }
 
         // Preferable, truly weak map.
-        var hmap: Object = new HostWeakMap();
+        var hmap: object = new HostWeakMap();
 
         // Our hidden-property-based pseudo-weak-map. Lazily initialized in the
         // 'set' implementation; thus we can avoid performing extra lookups if
         // we know all entries actually stored are entered in 'hmap'.
-        var omap: Object = undefined;
+        var omap: object = undefined;
 
         // Hidden-property maps are not compatible with proxies because proxies
         // can observe the hidden name and either accidentally expose it or fail
@@ -598,9 +598,9 @@
         //
         // (Except in doubleWeakMapCheckSilentFailure mode in which case we
         // disable proxies.)
-        var enableSwitching: Boolean = false;
+        var enableSwitching: boolean = false;
 
-        function dget(key: String, opt_default: Function): String {
+        function dget(key: string, opt_default: Function): string {
           if (omap) {
             return hmap.has(key) ? hmap.get(key)
                 : omap.get___(key, opt_default);
@@ -609,13 +609,13 @@
           }
         }
 
-        function dhas(key: String): Boolean {
+        function dhas(key: string): boolean {
           return hmap.has(key) || (omap ? omap.has___(key) : false);
         }
 
         var dset: Function;
         if (doubleWeakMapCheckSilentFailure) {
-          dset = function(key: String, value: String) {
+          dset = function(key: string, value: string) {
             hmap.set(key, value);
             if (!hmap.has(key)) {
               if (!omap) { omap = new OurWeakMap(); }
@@ -624,7 +624,7 @@
             return this;
           };
         } else {
-          dset = function(key: String, value: String) {
+          dset = function(key: string, value: string) {
             if (enableSwitching) {
               try {
                 hmap.set(key, value);
@@ -639,8 +639,8 @@
           };
         }
 
-        function ddelete(key: String): Boolean {
-          var result: Boolean = !!hmap['delete'](key);
+        function ddelete(key: string): boolean {
+          var result: boolean = !!hmap['delete'](key);
           if (omap) { return omap.delete___(key) || result; }
           return result;
         }
@@ -650,7 +650,7 @@
           has___:    { value: constFunc(dhas) },
           set___:    { value: constFunc(dset) },
           delete___: { value: constFunc(ddelete) },
-          permitHostObjects___: { value: constFunc(function(token: Number) {
+          permitHostObjects___: { value: constFunc(function(token: number) {
             if (token === weakMapPermitHostObjects) {
               enableSwitching = true;
             } else {

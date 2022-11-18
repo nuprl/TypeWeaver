@@ -1,9 +1,9 @@
-var constants: String = require('constants')
+var constants: string = require('constants')
 
 var origCwd: Function = process.cwd
-var cwd: String = null
+var cwd: string = null
 
-var platform: Number = process.env.GRACEFUL_FS_PLATFORM || process.platform
+var platform: number = process.env.GRACEFUL_FS_PLATFORM || process.platform
 
 process.cwd = function() {
   if (!cwd)
@@ -17,7 +17,7 @@ try {
 // This check is needed until node.js 12 is required
 if (typeof process.chdir === 'function') {
   var chdir: Function = process.chdir
-  process.chdir = function (d: String) {
+  process.chdir = function (d: string) {
     cwd = null
     chdir.call(process, d)
   }
@@ -26,7 +26,7 @@ if (typeof process.chdir === 'function') {
 
 module.exports = patch
 
-function patch (fs: String): Void {
+function patch (fs: string): Void {
   // (re-)implement some things that are known busted or missing.
 
   // lchmod, broken prior to 0.6.2
@@ -72,13 +72,13 @@ function patch (fs: String): Void {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: String, mode: Number, cb: Boolean) {
+    fs.lchmod = function (path: string, mode: number, cb: boolean) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}
   }
   if (fs.chown && !fs.lchown) {
-    fs.lchown = function (path: String, uid: Function, gid: Function, cb: Boolean) {
+    fs.lchown = function (path: string, uid: Function, gid: Function, cb: boolean) {
       if (cb) process.nextTick(cb)
     }
     fs.lchownSync = function () {}
@@ -96,15 +96,15 @@ function patch (fs: String): Void {
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
     : (function (fs$rename: Function) {
-      function rename (from: String, to: String, cb: Function): Void {
-        var start: Number = Date.now()
-        var backoff: Number = 0;
-        fs$rename(from, to, function CB (er: Object): Void {
+      function rename (from: string, to: string, cb: Function): Void {
+        var start: number = Date.now()
+        var backoff: number = 0;
+        fs$rename(from, to, function CB (er: object): Void {
           if (er
               && (er.code === "EACCES" || er.code === "EPERM")
               && Date.now() - start < 60000) {
             setTimeout(function() {
-              fs.stat(to, function (stater: Object, st: Array) {
+              fs.stat(to, function (stater: object, st: any[]) {
                 if (stater && stater.code === "ENOENT")
                   fs$rename(from, to, CB);
                 else
@@ -126,11 +126,11 @@ function patch (fs: String): Void {
   // if read() returns EAGAIN, then just try it again.
   fs.read = typeof fs.read !== 'function' ? fs.read
   : (function (fs$read: Function) {
-    function read (fd: String, buffer: Object, offset: String, length: String, position: String, callback_: Function): String {
+    function read (fd: string, buffer: object, offset: string, length: string, position: string, callback_: Function): string {
       var callback: Function
       if (callback_ && typeof callback_ === 'function') {
-        var eagCounter: Number = 0
-        callback = function (er: Object, _: Function, __: Function) {
+        var eagCounter: number = 0
+        callback = function (er: object, _: Function, __: Function) {
           if (er && er.code === 'EAGAIN' && eagCounter < 10) {
             eagCounter ++
             return fs$read.call(fs, fd, buffer, offset, length, position, callback)
@@ -147,8 +147,8 @@ function patch (fs: String): Void {
   })(fs.read)
 
   fs.readSync = typeof fs.readSync !== 'function' ? fs.readSync
-  : (function (fs$readSync: Function) { return function (fd: String, buffer: Object, offset: String, length: String, position: String) {
-    var eagCounter: Number = 0
+  : (function (fs$readSync: Function) { return function (fd: string, buffer: object, offset: string, length: string, position: string) {
+    var eagCounter: number = 0
     while (true) {
       try {
         return fs$readSync.call(fs, fd, buffer, offset, length, position)
@@ -162,33 +162,33 @@ function patch (fs: String): Void {
     }
   }})(fs.readSync)
 
-  function patchLchmod (fs: String): Void {
-    fs.lchmod = function (path: String, mode: String, callback: Function) {
+  function patchLchmod (fs: string): Void {
+    fs.lchmod = function (path: string, mode: string, callback: Function) {
       fs.open( path
              , constants.O_WRONLY | constants.O_SYMLINK
              , mode
-             , function (err: String, fd: String) {
+             , function (err: string, fd: string) {
         if (err) {
           if (callback) callback(err)
           return
         }
         // prefer to return the chmod error, if one occurs,
         // but still try to close, and report closing errors if they occur.
-        fs.fchmod(fd, mode, function (err: String) {
-          fs.close(fd, function(err2: String) {
+        fs.fchmod(fd, mode, function (err: string) {
+          fs.close(fd, function(err2: string) {
             if (callback) callback(err || err2)
           })
         })
       })
     }
 
-    fs.lchmodSync = function (path: String, mode: String) {
-      var fd: Number = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
+    fs.lchmodSync = function (path: string, mode: string) {
+      var fd: number = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
 
       // prefer to return the chmod error, if one occurs,
       // but still try to close, and report closing errors if they occur.
-      var threw: Boolean = true
-      var ret: Number
+      var threw: boolean = true
+      var ret: number
       try {
         ret = fs.fchmodSync(fd, mode)
         threw = false
@@ -205,26 +205,26 @@ function patch (fs: String): Void {
     }
   }
 
-  function patchLutimes (fs: String): Void {
+  function patchLutimes (fs: string): Void {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
-      fs.lutimes = function (path: String, at: String, mt: String, cb: Function) {
-        fs.open(path, constants.O_SYMLINK, function (er: Number, fd: String) {
+      fs.lutimes = function (path: string, at: string, mt: string, cb: Function) {
+        fs.open(path, constants.O_SYMLINK, function (er: number, fd: string) {
           if (er) {
             if (cb) cb(er)
             return
           }
-          fs.futimes(fd, at, mt, function (er: Number) {
-            fs.close(fd, function (er2: Boolean) {
+          fs.futimes(fd, at, mt, function (er: number) {
+            fs.close(fd, function (er2: boolean) {
               if (cb) cb(er || er2)
             })
           })
         })
       }
 
-      fs.lutimesSync = function (path: String, at: String, mt: String) {
-        var fd: Number = fs.openSync(path, constants.O_SYMLINK)
-        var ret: Number
-        var threw: Boolean = true
+      fs.lutimesSync = function (path: string, at: string, mt: string) {
+        var fd: number = fs.openSync(path, constants.O_SYMLINK)
+        var ret: number
+        var threw: boolean = true
         try {
           ret = fs.futimesSync(fd, at, mt)
           threw = false
@@ -241,15 +241,15 @@ function patch (fs: String): Void {
       }
 
     } else if (fs.futimes) {
-      fs.lutimes = function (_a: Function, _b: Function, _c: Number, cb: Boolean) { if (cb) process.nextTick(cb) }
+      fs.lutimes = function (_a: Function, _b: Function, _c: number, cb: boolean) { if (cb) process.nextTick(cb) }
       fs.lutimesSync = function () {}
     }
   }
 
   function chmodFix (orig: Function): Function {
     if (!orig) return orig
-    return function (target: Object, mode: String, cb: Array) {
-      return orig.call(fs, target, mode, function (er: Array) {
+    return function (target: object, mode: string, cb: any[]) {
+      return orig.call(fs, target, mode, function (er: any[]) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
@@ -258,7 +258,7 @@ function patch (fs: String): Void {
 
   function chmodFixSync (orig: Function): Function {
     if (!orig) return orig
-    return function (target: Object, mode: String) {
+    return function (target: object, mode: string) {
       try {
         return orig.call(fs, target, mode)
       } catch (er) {
@@ -270,8 +270,8 @@ function patch (fs: String): Void {
 
   function chownFix (orig: Function): Function {
     if (!orig) return orig
-    return function (target: Object, uid: String, gid: String, cb: Array) {
-      return orig.call(fs, target, uid, gid, function (er: Array) {
+    return function (target: object, uid: string, gid: string, cb: any[]) {
+      return orig.call(fs, target, uid, gid, function (er: any[]) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
@@ -280,7 +280,7 @@ function patch (fs: String): Void {
 
   function chownFixSync (orig: Function): Function {
     if (!orig) return orig
-    return function (target: Object, uid: String, gid: String) {
+    return function (target: object, uid: string, gid: string) {
       try {
         return orig.call(fs, target, uid, gid)
       } catch (er) {
@@ -293,12 +293,12 @@ function patch (fs: String): Void {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
-    return function (target: Object, options: Array, cb: Function) {
+    return function (target: object, options: any[], cb: Function) {
       if (typeof options === 'function') {
         cb = options
         options = null
       }
-      function callback (er: Function, stats: Array): Void {
+      function callback (er: Function, stats: any[]): Void {
         if (stats) {
           if (stats.uid < 0) stats.uid += 0x100000000
           if (stats.gid < 0) stats.gid += 0x100000000
@@ -314,8 +314,8 @@ function patch (fs: String): Void {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
-    return function (target: Object, options: Object) {
-      var stats: Array = options ? orig.call(fs, target, options)
+    return function (target: object, options: object) {
+      var stats: any[] = options ? orig.call(fs, target, options)
         : orig.call(fs, target)
       if (stats) {
         if (stats.uid < 0) stats.uid += 0x100000000
@@ -337,14 +337,14 @@ function patch (fs: String): Void {
   //
   // When running as root, or if other types of errors are
   // encountered, then it's strict.
-  function chownErOk (er: Object): Boolean {
+  function chownErOk (er: object): boolean {
     if (!er)
       return true
 
     if (er.code === "ENOSYS")
       return true
 
-    var nonroot: Boolean = !process.getuid || process.getuid() !== 0
+    var nonroot: boolean = !process.getuid || process.getuid() !== 0
     if (nonroot) {
       if (er.code === "EINVAL" || er.code === "EPERM")
         return true

@@ -1,8 +1,8 @@
-var aws4: Array = require('aws4')
+var aws4: any[] = require('aws4')
 
-var CREDS: Object = { accessKeyId: 'a', secretAccessKey: 'b' }
+var CREDS: object = { accessKeyId: 'a', secretAccessKey: 'b' }
 
-var sigs: Object = {
+var sigs: object = {
   s3: aws4.sign({ host: 'my-bucket.s3.amazonaws.com', path: '/whatever?X-Amz-Expires=1234', signQuery: true }, CREDS),
   sqs: aws4.sign({ service: 'sqs' }, CREDS),
   codedeploy: aws4.sign({ service: 'codedeploy', body: '{}', headers: {

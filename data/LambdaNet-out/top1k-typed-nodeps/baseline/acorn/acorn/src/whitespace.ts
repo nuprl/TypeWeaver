@@ -2,15 +2,15 @@
 // line break). Used to count lines.
 
 export const lineBreak: RegExp = /\r\n?|\n|\u2028|\u2029/
-export const lineBreakG: Object = new RegExp(lineBreak.source, "g")
+export const lineBreakG: object = new RegExp(lineBreak.source, "g")
 
-export function isNewLine(code: String): Boolean {
+export function isNewLine(code: string): boolean {
   return code === 10 || code === 13 || code === 0x2028 || code === 0x2029
 }
 
-export function nextLineBreak(code: Position, from: Number, end: Number = code.length): Number {
+export function nextLineBreak(code: Position, from: number, end: number = code.length): number {
   for (let i = from; i < end; i++) {
-    let next: Number = code.charCodeAt(i)
+    let next: number = code.charCodeAt(i)
     if (isNewLine(next))
       return i < end - 1 && next === 13 && code.charCodeAt(i + 1) === 10 ? i + 2 : i + 1
   }

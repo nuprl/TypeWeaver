@@ -38,14 +38,14 @@ export default compressible;
  * @public
  */
 
-function compressible (type: String): Boolean {
+function compressible (type: string): boolean {
   if (!type || typeof type !== 'string') {
     return false
   }
 
   // strip parameters
-  var match: Object = EXTRACT_TYPE_REGEXP.exec(type)
-  var mime: Number = match && match[1].toLowerCase()
+  var match: object = EXTRACT_TYPE_REGEXP.exec(type)
+  var mime: number = match && match[1].toLowerCase()
   var data: Element = db[mime]
 
   // return database information

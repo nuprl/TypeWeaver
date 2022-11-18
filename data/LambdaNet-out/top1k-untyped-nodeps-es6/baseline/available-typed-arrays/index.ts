@@ -1,6 +1,6 @@
 'use strict';
 
-var possibleNames: Array = [
+var possibleNames: any[] = [
 	'BigInt64Array',
 	'BigUint64Array',
 	'Float32Array',
@@ -14,10 +14,10 @@ var possibleNames: Array = [
 	'Uint8ClampedArray'
 ];
 
-var g: Object = typeof globalThis === 'undefined' ? global : globalThis;
+var g: object = typeof globalThis === 'undefined' ? global : globalThis;
 
-export default function availableTypedArrays(): Array {
-	var out: Array = [];
+export default function availableTypedArrays(): any[] {
+	var out: any[] = [];
 	for (var i = 0; i < possibleNames.length; i++) {
 		if (typeof g[possibleNames[i]] === 'function') {
 			out[out.length] = possibleNames[i];

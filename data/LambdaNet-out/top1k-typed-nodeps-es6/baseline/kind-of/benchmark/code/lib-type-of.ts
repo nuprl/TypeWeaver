@@ -4,14 +4,14 @@
 // var typeOf = require('type-of');
 var toString: Function = Object.prototype.toString;
 
-export default function(val: String) {
+export default function(val: string) {
   if (val === 'arguments') {
     return typeOf(arguments);
   }
   return typeOf(val);
 };
 
-function typeOf(val: Array): String {
+function typeOf(val: any[]): string {
   switch (toString.call(val)) {
     case '[object Function]':
       return 'function';

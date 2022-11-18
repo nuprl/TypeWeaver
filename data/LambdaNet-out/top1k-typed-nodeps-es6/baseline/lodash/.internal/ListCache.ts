@@ -10,12 +10,12 @@ class ListCache {
    * @param {Array} [entries] The key-value pairs to cache.
    */
   constructor(entries) {
-    let index: Number = -1
-    const length: Number = entries == null ? 0 : entries.length
+    let index: number = -1
+    const length: number = entries == null ? 0 : entries.length
 
     this.clear()
     while (++index < length) {
-      const entry: Object = entries[index]
+      const entry: object = entries[index]
       this.set(entry[0], entry[1])
     }
   }
@@ -38,13 +38,13 @@ class ListCache {
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
   delete(key) {
-    const data: Array = this.__data__
-    const index: String = assocIndexOf(data, key)
+    const data: any[] = this.__data__
+    const index: string = assocIndexOf(data, key)
 
     if (index < 0) {
       return false
     }
-    const lastIndex: Number = data.length - 1
+    const lastIndex: number = data.length - 1
     if (index == lastIndex) {
       data.pop()
     } else {
@@ -62,8 +62,8 @@ class ListCache {
    * @returns {*} Returns the entry value.
    */
   get(key) {
-    const data: Object = this.__data__
-    const index: String = assocIndexOf(data, key)
+    const data: object = this.__data__
+    const index: string = assocIndexOf(data, key)
     return index < 0 ? undefined : data[index][1]
   }
 
@@ -87,8 +87,8 @@ class ListCache {
    * @returns {Object} Returns the list cache instance.
    */
   set(key, value) {
-    const data: Array = this.__data__
-    const index: String = assocIndexOf(data, key)
+    const data: any[] = this.__data__
+    const index: string = assocIndexOf(data, key)
 
     if (index < 0) {
       ++this.size

@@ -115,7 +115,7 @@ import UseFilePlugin from './UseFilePlugin';
  * @param {PnpApi | null=} option option
  * @returns {PnpApi | null} processed option
  */
-function processPnpApiOption(option: Number): Number {
+function processPnpApiOption(option: number): number {
 	if (
 		option === undefined &&
 		/** @type {NodeJS.ProcessVersions & {pnp: string}} */ versions.pnp
@@ -131,11 +131,11 @@ function processPnpApiOption(option: Number): Number {
  * @param {AliasOptions | AliasOptionEntry[] | undefined} alias alias
  * @returns {AliasOptionEntry[]} normalized aliases
  */
-function normalizeAlias(alias: Object): String {
+function normalizeAlias(alias: object): string {
 	return typeof alias === "object" && !Array.isArray(alias) && alias !== null
-		? Object.keys(alias).map((key: String) => {
+		? Object.keys(alias).map((key: string) => {
 				/** @type {AliasOptionEntry} */
-				const obj: Object = { name: key, onlyModule: false, alias: alias[key] };
+				const obj: object = { name: key, onlyModule: false, alias: alias[key] };
 
 				if (/\$$/.test(key)) {
 					obj.onlyModule = true;
@@ -151,9 +151,9 @@ function normalizeAlias(alias: Object): String {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: Object): Object {
+function createOptions(options: object): object {
 	const mainFieldsSet: Error = new Set(options.mainFields || ["main"]);
-	const mainFields: Array = [];
+	const mainFields: any[] = [];
 
 	for (const item of mainFieldsSet) {
 		if (typeof item === "string") {
@@ -201,7 +201,7 @@ function createOptions(options: Object): Object {
 				: options.enforceExtension,
 		extensions: new Set(options.extensions || [".js", ".json", ".node"]),
 		extensionAlias: options.extensionAlias
-			? Object.keys(options.extensionAlias).map((k: String) => ({
+			? Object.keys(options.extensionAlias).map((k: string) => ({
 					extension: k,
 					alias: /** @type {ExtensionAliasOptions} */ (options.extensionAlias)[
 						k
@@ -227,8 +227,8 @@ function createOptions(options: Object): Object {
 				: options.modules
 				? [options.modules]
 				: ["node_modules"],
-			(item: String) => {
-				const type: String = getType(item);
+			(item: string) => {
+				const type: string = getType(item);
 				return type === PathType.Normal || type === PathType.Relative;
 			}
 		),
@@ -249,8 +249,8 @@ function createOptions(options: Object): Object {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-export const createResolver: Function = function (options: Object) {
-	const normalizedOptions: Object = createOptions(options);
+export const createResolver: Function = function (options: object) {
+	const normalizedOptions: object = createOptions(options);
 
 	const {
 		alias,
@@ -282,7 +282,7 @@ export const createResolver: Function = function (options: Object) {
 		roots
 	} = normalizedOptions;
 
-	const plugins: Array = userPlugins.slice();
+	const plugins: any[] = userPlugins.slice();
 
 	const resolver: Resolver = customResolver
 		? customResolver
@@ -367,10 +367,10 @@ export const createResolver: Function = function (options: Object) {
 	if (alias.length > 0) {
 		plugins.push(new AliasPlugin("raw-resolve", alias, "internal-resolve"));
 	}
-	aliasFields.forEach((item: String) => {
+	aliasFields.forEach((item: string) => {
 		plugins.push(new AliasFieldPlugin("raw-resolve", item, "internal-resolve"));
 	});
-	extensionAlias.forEach((item: String) =>
+	extensionAlias.forEach((item: string) =>
 		plugins.push(
 			new ExtensionAliasPlugin("raw-resolve", item, "normal-resolve")
 		)
@@ -410,7 +410,7 @@ export const createResolver: Function = function (options: Object) {
 	}
 
 	// internal
-	importsFields.forEach((importsField: Number) => {
+	importsFields.forEach((importsField: number) => {
 		plugins.push(
 			new ImportsFieldPlugin(
 				"internal",
@@ -423,18 +423,18 @@ export const createResolver: Function = function (options: Object) {
 	});
 
 	// raw-module
-	exportsFields.forEach((exportsField: String) => {
+	exportsFields.forEach((exportsField: string) => {
 		plugins.push(
 			new SelfReferencePlugin("raw-module", exportsField, "resolve-as-module")
 		);
 	});
-	modules.forEach((item: Array) => {
+	modules.forEach((item: any[]) => {
 		if (Array.isArray(item)) {
 			if (item.includes("node_modules") && pnpApi) {
 				plugins.push(
 					new ModulesInHierarchicalDirectoriesPlugin(
 						"raw-module",
-						item.filter((i: Number) => i !== "node_modules"),
+						item.filter((i: number) => i !== "node_modules"),
 						"module"
 					)
 				);
@@ -491,7 +491,7 @@ export const createResolver: Function = function (options: Object) {
 	);
 
 	// resolve-in-package
-	exportsFields.forEach((exportsField: String) => {
+	exportsFields.forEach((exportsField: string) => {
 		plugins.push(
 			new ExportsFieldPlugin(
 				"resolve-in-package",
@@ -563,7 +563,7 @@ export const createResolver: Function = function (options: Object) {
 				"existing-directory"
 			)
 		);
-		mainFiles.forEach((item: String) => {
+		mainFiles.forEach((item: string) => {
 			plugins.push(
 				new UseFilePlugin(
 					"undescribed-existing-directory",
@@ -574,7 +574,7 @@ export const createResolver: Function = function (options: Object) {
 		});
 
 		// described-existing-directory
-		mainFields.forEach((item: String) => {
+		mainFields.forEach((item: string) => {
 			plugins.push(
 				new MainFieldPlugin(
 					"existing-directory",
@@ -583,7 +583,7 @@ export const createResolver: Function = function (options: Object) {
 				)
 			);
 		});
-		mainFiles.forEach((item: String) => {
+		mainFiles.forEach((item: string) => {
 			plugins.push(
 				new UseFilePlugin("existing-directory", item, "undescribed-raw-file")
 			);
@@ -613,14 +613,14 @@ export const createResolver: Function = function (options: Object) {
 		if (!enforceExtension) {
 			plugins.push(new TryNextPlugin("raw-file", "no extension", "file"));
 		}
-		extensions.forEach((item: String) => {
+		extensions.forEach((item: string) => {
 			plugins.push(new AppendPlugin("raw-file", item, "file"));
 		});
 
 		// file
 		if (alias.length > 0)
 			plugins.push(new AliasPlugin("file", alias, "internal-resolve"));
-		aliasFields.forEach((item: String) => {
+		aliasFields.forEach((item: string) => {
 			plugins.push(new AliasFieldPlugin("file", item, "internal-resolve"));
 		});
 		plugins.push(new NextPlugin("file", "final-file"));
@@ -659,14 +659,14 @@ export const createResolver: Function = function (options: Object) {
  * @param {function(string): boolean} filter predicate
  * @returns {Array<string | string[]>} merge result
  */
-function mergeFilteredToArray(array: Object, filter: Function): Array {
+function mergeFilteredToArray(array: object, filter: Function): any[] {
 	/** @type {Array<string | string[]>} */
-	const result: Array = [];
+	const result: any[] = [];
 	const set: Error = new Set(array);
 
 	for (const item of set) {
 		if (filter(item)) {
-			const lastElement: Array =
+			const lastElement: any[] =
 				result.length > 0 ? result[result.length - 1] : undefined;
 			if (Array.isArray(lastElement)) {
 				lastElement.push(item);

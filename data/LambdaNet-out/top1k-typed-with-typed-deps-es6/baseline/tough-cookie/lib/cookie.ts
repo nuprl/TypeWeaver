@@ -49,7 +49,7 @@ const CONTROL_CHARS: RegExp = /[\x00-\x1F]/;
 // From Chromium // '\r', '\n' and '\0' should be treated as a terminator in
 // the "relaxed" mode, see:
 // https://github.com/ChromiumWebApps/chromium/blob/b3d3b4da8bb94c1b2e061600df106d590fda3620/net/cookies/parsed_cookie.cc#L60
-const TERMINATORS: Array = ["\n", "\r", "\0"];
+const TERMINATORS: any[] = ["\n", "\r", "\0"];
 
 // RFC6265 S4.1.1 defines path value as 'any CHAR except CTLs or ";"'
 // Note ';' is \x3B
@@ -59,7 +59,7 @@ const PATH_VALUE: RegExp = /[\x20-\x3A\x3C-\x7E]+/;
 
 const DATE_DELIM: RegExp = /[\x09\x20-\x2F\x3B-\x40\x5B-\x60\x7B-\x7E]/;
 
-const MONTH_TO_NUM: Object = {
+const MONTH_TO_NUM: object = {
   jan: 0,
   feb: 1,
   mar: 2,
@@ -74,14 +74,14 @@ const MONTH_TO_NUM: Object = {
   dec: 11
 };
 
-const MAX_TIME: Number = 2147483647000; // 31-bit max
-const MIN_TIME: Number = 0; // 31-bit min
-const SAME_SITE_CONTEXT_VAL_ERR: String =
+const MAX_TIME: number = 2147483647000; // 31-bit max
+const MIN_TIME: number = 0; // 31-bit min
+const SAME_SITE_CONTEXT_VAL_ERR: string =
   'Invalid sameSiteContext option for getCookies(); expected one of "strict", "lax", or "none"';
 
-function checkSameSiteContext(value: String): Number {
+function checkSameSiteContext(value: string): number {
   validators.validate(validators.isNonEmptyString(value), value);
-  const context: Number = String(value).toLowerCase();
+  const context: number = String(value).toLowerCase();
   if (context === "none" || context === "lax" || context === "strict") {
     return context;
   } else {
@@ -89,7 +89,7 @@ function checkSameSiteContext(value: String): Number {
   }
 }
 
-const PrefixSecurityEnum: Object = Object.freeze({
+const PrefixSecurityEnum: object = Object.freeze({
   SILENT: "silent",
   STRICT: "strict",
   DISABLED: "unsafe-disabled"
@@ -100,7 +100,7 @@ const PrefixSecurityEnum: Object = Object.freeze({
 // * support for IPv6 Scoped Literal ("%eth1") removed
 // * lowercase hexadecimal only
 const IP_REGEX_LOWERCASE: RegExp = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-f\d]{1,4}:){7}(?:[a-f\d]{1,4}|:)|(?:[a-f\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-f\d]{1,4}|:)|(?:[a-f\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,2}|:)|(?:[a-f\d]{1,4}:){4}(?:(?::[a-f\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,3}|:)|(?:[a-f\d]{1,4}:){3}(?:(?::[a-f\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,4}|:)|(?:[a-f\d]{1,4}:){2}(?:(?::[a-f\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,5}|:)|(?:[a-f\d]{1,4}:){1}(?:(?::[a-f\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,6}|:)|(?::(?:(?::[a-f\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,7}|:)))$)/;
-const IP_V6_REGEX: String = `
+const IP_V6_REGEX: string = `
 \\[?(?:
 (?:[a-fA-F\\d]{1,4}:){7}(?:[a-fA-F\\d]{1,4}|:)|
 (?:[a-fA-F\\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|:[a-fA-F\\d]{1,4}|:)|
@@ -127,10 +127,10 @@ const IP_V6_REGEX_OBJECT: HTMLElement = new RegExp(`^${IP_V6_REGEX}$`);
  * The "trailingOK" boolean controls if the grammar accepts a
  * "( non-digit *OCTET )" trailer.
  */
-function parseDigits(token: String, minDigits: Number, maxDigits: Number, trailingOK: Boolean): Number {
-  let count: Number = 0;
+function parseDigits(token: string, minDigits: number, maxDigits: number, trailingOK: boolean): number {
+  let count: number = 0;
   while (count < token.length) {
-    const c: Number = token.charCodeAt(count);
+    const c: number = token.charCodeAt(count);
     // "non-digit = %x00-2F / %x3A-FF"
     if (c <= 0x2f || c >= 0x3a) {
       break;
@@ -150,8 +150,8 @@ function parseDigits(token: String, minDigits: Number, maxDigits: Number, traili
   return parseInt(token.substr(0, count), 10);
 }
 
-function parseTime(token: String): Object {
-  const parts: Array = token.split(":");
+function parseTime(token: string): object {
+  const parts: any[] = token.split(":");
   const result: Promise = [0, 0, 0];
 
   /* RF6256 S5.1.1:
@@ -168,8 +168,8 @@ function parseTime(token: String): Object {
     // "time-field" must be strictly "1*2DIGIT", HOWEVER, "hms-time" can be
     // followed by "( non-digit *OCTET )" so therefore the last time-field can
     // have a trailer
-    const trailingOK: Boolean = i == 2;
-    const num: String = parseDigits(parts[i], 1, 2, trailingOK);
+    const trailingOK: boolean = i == 2;
+    const num: string = parseDigits(parts[i], 1, 2, trailingOK);
     if (num === null) {
       return null;
     }
@@ -179,18 +179,18 @@ function parseTime(token: String): Object {
   return result;
 }
 
-function parseMonth(token: String): Number {
+function parseMonth(token: string): number {
   token = String(token)
     .substr(0, 3)
     .toLowerCase();
-  const num: Number = MONTH_TO_NUM[token];
+  const num: number = MONTH_TO_NUM[token];
   return num >= 0 ? num : null;
 }
 
 /*
  * RFC6265 S5.1.1 date parser (see RFC for full grammar)
  */
-function parseDate(str: String): HTMLDivElement {
+function parseDate(str: string): HTMLDivElement {
   if (!str) {
     return;
   }
@@ -199,25 +199,25 @@ function parseDate(str: String): HTMLDivElement {
    * 2. Process each date-token sequentially in the order the date-tokens
    * appear in the cookie-date
    */
-  const tokens: Array = str.split(DATE_DELIM);
+  const tokens: any[] = str.split(DATE_DELIM);
   if (!tokens) {
     return;
   }
 
-  let hour: Number = null;
-  let minute: Number = null;
-  let second: Array = null;
-  let dayOfMonth: String = null;
+  let hour: number = null;
+  let minute: number = null;
+  let second: any[] = null;
+  let dayOfMonth: string = null;
   let month: Function = null;
-  let year: Number = null;
+  let year: number = null;
 
   for (let i = 0; i < tokens.length; i++) {
-    const token: String = tokens[i].trim();
+    const token: string = tokens[i].trim();
     if (!token.length) {
       continue;
     }
 
-    let result: Object;
+    let result: object;
 
     /* 2.1. If the found-time flag is not set and the token matches the time
      * production, set the found-time flag and set the hour- value,
@@ -318,13 +318,13 @@ function parseDate(str: String): HTMLDivElement {
   return new Date(Date.UTC(year, month, dayOfMonth, hour, minute, second));
 }
 
-function formatDate(date: Cookie): String {
+function formatDate(date: Cookie): string {
   validators.validate(validators.isDate(date), date);
   return date.toUTCString();
 }
 
 // S5.1.2 Canonicalized Host Names
-function canonicalDomain(str: String): Array {
+function canonicalDomain(str: string): any[] {
   if (str == null) {
     return null;
   }
@@ -343,7 +343,7 @@ function canonicalDomain(str: String): Array {
 }
 
 // S5.1.3 Domain Matching
-function domainMatch(str: String, domStr: String, canonicalize: Number): Boolean {
+function domainMatch(str: string, domStr: string, canonicalize: number): boolean {
   if (str == null || domStr == null) {
     return null;
   }
@@ -368,7 +368,7 @@ function domainMatch(str: String, domStr: String, canonicalize: Number): Boolean
   /* " o All of the following [three] conditions hold:" */
 
   /* "* The domain string is a suffix of the string" */
-  const idx: Number = str.lastIndexOf(domStr);
+  const idx: number = str.lastIndexOf(domStr);
   if (idx <= 0) {
     return false; // it's a non-match (-1) or prefix (0)
   }
@@ -402,7 +402,7 @@ function domainMatch(str: String, domStr: String, canonicalize: Number): Boolean
  *
  * Assumption: the path (and not query part or absolute uri) is passed in.
  */
-function defaultPath(path: Number): String {
+function defaultPath(path: number): string {
   // "2. If the uri-path is empty or if the first character of the uri-path is not
   // a %x2F ("/") character, output %x2F ("/") and skip the remaining steps.
   if (!path || path.substr(0, 1) !== "/") {
@@ -415,7 +415,7 @@ function defaultPath(path: Number): String {
     return path;
   }
 
-  const rightSlash: Number = path.lastIndexOf("/");
+  const rightSlash: number = path.lastIndexOf("/");
   if (rightSlash === 0) {
     return "/";
   }
@@ -425,10 +425,10 @@ function defaultPath(path: Number): String {
   return path.slice(0, rightSlash);
 }
 
-function trimTerminator(str: String): Array {
+function trimTerminator(str: string): any[] {
   if (validators.isEmptyString(str)) return str;
   for (let t = 0; t < TERMINATORS.length; t++) {
-    const terminatorIdx: Number = str.indexOf(TERMINATORS[t]);
+    const terminatorIdx: number = str.indexOf(TERMINATORS[t]);
     if (terminatorIdx !== -1) {
       str = str.substr(0, terminatorIdx);
     }
@@ -437,11 +437,11 @@ function trimTerminator(str: String): Array {
   return str;
 }
 
-function parseCookiePair(cookiePair: String, looseMode: Boolean): Store {
+function parseCookiePair(cookiePair: string, looseMode: boolean): Store {
   cookiePair = trimTerminator(cookiePair);
   validators.validate(validators.isString(cookiePair), cookiePair);
 
-  let firstEq: Number = cookiePair.indexOf("=");
+  let firstEq: number = cookiePair.indexOf("=");
   if (looseMode) {
     if (firstEq === 0) {
       // '=' is immediately at start
@@ -456,7 +456,7 @@ function parseCookiePair(cookiePair: String, looseMode: Boolean): Store {
     }
   }
 
-  let cookieName: String, cookieValue: Number;
+  let cookieName: string, cookieValue: number;
   if (firstEq <= 0) {
     cookieName = "";
     cookieValue = cookiePair.trim();
@@ -475,7 +475,7 @@ function parseCookiePair(cookiePair: String, looseMode: Boolean): Store {
   return c;
 }
 
-function parse(str: String, options: Object): Store {
+function parse(str: string, options: object): Store {
   if (!options || typeof options !== "object") {
     options = {};
   }
@@ -487,8 +487,8 @@ function parse(str: String, options: Object): Store {
   str = str.trim();
 
   // We use a regex to parse the "name-value-pair" part of S5.2
-  const firstSemi: Number = str.indexOf(";"); // S5.2 step 1
-  const cookiePair: String = firstSemi === -1 ? str : str.substr(0, firstSemi);
+  const firstSemi: number = str.indexOf(";"); // S5.2 step 1
+  const cookiePair: string = firstSemi === -1 ? str : str.substr(0, firstSemi);
   const c: Cookie = parseCookiePair(cookiePair, !!options.loose);
   if (!c) {
     return;
@@ -501,7 +501,7 @@ function parse(str: String, options: Object): Store {
   // S5.2.3 "unparsed-attributes consist of the remainder of the set-cookie-string
   // (including the %x3B (";") in question)." plus later on in the same section
   // "discard the first ";" and trim".
-  const unparsed: String = str.slice(firstSemi + 1).trim();
+  const unparsed: string = str.slice(firstSemi + 1).trim();
 
   // "If the unparsed-attributes string is empty, skip the rest of these
   // steps."
@@ -517,15 +517,15 @@ function parse(str: String, options: Object): Store {
    * cookie-attribute-list".  Therefore, in this implementation, we overwrite
    * the previous value.
    */
-  const cookie_avs: Array = unparsed.split(";");
+  const cookie_avs: any[] = unparsed.split(";");
   while (cookie_avs.length) {
-    const av: String = cookie_avs.shift().trim();
+    const av: string = cookie_avs.shift().trim();
     if (av.length === 0) {
       // happens if ";;" appears
       continue;
     }
-    const av_sep: Number = av.indexOf("=");
-    let av_key: String, av_value: String;
+    const av_sep: number = av.indexOf("=");
+    let av_key: string, av_value: string;
 
     if (av_sep === -1) {
       av_key = av;
@@ -544,7 +544,7 @@ function parse(str: String, options: Object): Store {
     switch (av_key) {
       case "expires": // S5.2.1
         if (av_value) {
-          const exp: String = parseDate(av_value);
+          const exp: string = parseDate(av_value);
           // "If the attribute-value failed to parse as a cookie date, ignore the
           // cookie-av."
           if (exp) {
@@ -561,7 +561,7 @@ function parse(str: String, options: Object): Store {
           // character ...[or]... If the remainder of attribute-value contains a
           // non-DIGIT character, ignore the cookie-av."
           if (/^-?[0-9]+$/.test(av_value)) {
-            const delta: Number = parseInt(av_value, 10);
+            const delta: number = parseInt(av_value, 10);
             // "If delta-seconds is less than or equal to zero (0), let expiry-time
             // be the earliest representable date and time."
             c.setMaxAge(delta);
@@ -575,7 +575,7 @@ function parse(str: String, options: Object): Store {
         if (av_value) {
           // S5.2.3 "Let cookie-domain be the attribute-value without the leading %x2E
           // (".") character."
-          const domain: String = av_value.trim().replace(/^\./, "");
+          const domain: string = av_value.trim().replace(/^\./, "");
           if (domain) {
             // "Convert the cookie-domain to lower case."
             c.domain = domain.toLowerCase();
@@ -611,7 +611,7 @@ function parse(str: String, options: Object): Store {
         break;
 
       case "samesite": // RFC6265bis-02 S5.3.7
-        const enforcement: String = av_value ? av_value.toLowerCase() : "";
+        const enforcement: string = av_value ? av_value.toLowerCase() : "";
         switch (enforcement) {
           case "strict":
             c.sameSite = "strict";
@@ -645,7 +645,7 @@ function parse(str: String, options: Object): Store {
  * @param cookie
  * @returns boolean
  */
-function isSecurePrefixConditionMet(cookie: Cookie): Boolean {
+function isSecurePrefixConditionMet(cookie: Cookie): boolean {
   validators.validate(validators.isObject(cookie), cookie);
   return !cookie.key.startsWith("__Secure-") || cookie.secure;
 }
@@ -661,7 +661,7 @@ function isSecurePrefixConditionMet(cookie: Cookie): Boolean {
  * @param cookie
  * @returns boolean
  */
-function isHostPrefixConditionMet(cookie: Cookie): Boolean {
+function isHostPrefixConditionMet(cookie: Cookie): boolean {
   validators.validate(validators.isObject(cookie));
   return (
     !cookie.key.startsWith("__Host-") ||
@@ -673,8 +673,8 @@ function isHostPrefixConditionMet(cookie: Cookie): Boolean {
 }
 
 // avoid the V8 deoptimization monster!
-function jsonParse(str: String): Object {
-  let obj: Array;
+function jsonParse(str: string): object {
+  let obj: any[];
   try {
     obj = JSON.parse(str);
   } catch (e) {
@@ -683,12 +683,12 @@ function jsonParse(str: String): Object {
   return obj;
 }
 
-function fromJSON(str: Array): Object {
+function fromJSON(str: any[]): object {
   if (!str || validators.isEmptyString(str)) {
     return null;
   }
 
-  let obj: Object;
+  let obj: object;
   if (typeof str === "string") {
     obj = jsonParse(str);
     if (obj instanceof Error) {
@@ -699,9 +699,9 @@ function fromJSON(str: Array): Object {
     obj = str;
   }
 
-  const c: Object = new Cookie();
+  const c: object = new Cookie();
   for (let i = 0; i < Cookie.serializableProperties.length; i++) {
-    const prop: String = Cookie.serializableProperties[i];
+    const prop: string = Cookie.serializableProperties[i];
     if (obj[prop] === undefined || obj[prop] === cookieDefaults[prop]) {
       continue; // leave as prototype default
     }
@@ -729,22 +729,22 @@ function fromJSON(str: Array): Object {
  *     creation-times."
  */
 
-function cookieCompare(a: Object, b: Object): Boolean {
+function cookieCompare(a: object, b: object): boolean {
   validators.validate(validators.isObject(a), a);
   validators.validate(validators.isObject(b), b);
-  let cmp: Number = 0;
+  let cmp: number = 0;
 
   // descending for length: b CMP a
-  const aPathLen: Number = a.path ? a.path.length : 0;
-  const bPathLen: Number = b.path ? b.path.length : 0;
+  const aPathLen: number = a.path ? a.path.length : 0;
+  const bPathLen: number = b.path ? b.path.length : 0;
   cmp = bPathLen - aPathLen;
   if (cmp !== 0) {
     return cmp;
   }
 
   // ascending for time: a CMP b
-  const aTime: Number = a.creation ? a.creation.getTime() : MAX_TIME;
-  const bTime: Number = b.creation ? b.creation.getTime() : MAX_TIME;
+  const aTime: number = a.creation ? a.creation.getTime() : MAX_TIME;
+  const bTime: number = b.creation ? b.creation.getTime() : MAX_TIME;
   cmp = aTime - bTime;
   if (cmp !== 0) {
     return cmp;
@@ -758,14 +758,14 @@ function cookieCompare(a: Object, b: Object): Boolean {
 
 // Gives the permutation of all possible pathMatch()es of a given path. The
 // array is in longest-to-shortest order.  Handy for indexing.
-function permutePath(path: String): Array {
+function permutePath(path: string): any[] {
   validators.validate(validators.isString(path));
   if (path === "/") {
     return ["/"];
   }
-  const permutations: Array = [path];
+  const permutations: any[] = [path];
   while (path.length > 1) {
-    const lindex: Number = path.lastIndexOf("/");
+    const lindex: number = path.lastIndexOf("/");
     if (lindex === 0) {
       break;
     }
@@ -776,7 +776,7 @@ function permutePath(path: String): Array {
   return permutations;
 }
 
-function getCookieContext(url: String): Array {
+function getCookieContext(url: string): any[] {
   if (url instanceof Object) {
     return url;
   }
@@ -791,7 +791,7 @@ function getCookieContext(url: String): Array {
   return urlParse(url);
 }
 
-const cookieDefaults: Object = {
+const cookieDefaults: object = {
   // the order in which the RFC has them:
   key: "",
   value: "",
@@ -812,7 +812,7 @@ const cookieDefaults: Object = {
 
 class Cookie {
   constructor(options = {}) {
-    const customInspectSymbol: Boolean = getCustomInspectSymbol();
+    const customInspectSymbol: boolean = getCustomInspectSymbol();
     if (customInspectSymbol) {
       this[customInspectSymbol] = this.inspect;
     }
@@ -830,19 +830,19 @@ class Cookie {
   }
 
   inspect() {
-    const now: Number = Date.now();
-    const hostOnly: String = this.hostOnly != null ? this.hostOnly : "?";
-    const createAge: String = this.creation
+    const now: number = Date.now();
+    const hostOnly: string = this.hostOnly != null ? this.hostOnly : "?";
+    const createAge: string = this.creation
       ? `${now - this.creation.getTime()}ms`
       : "?";
-    const accessAge: String = this.lastAccessed
+    const accessAge: string = this.lastAccessed
       ? `${now - this.lastAccessed.getTime()}ms`
       : "?";
     return `Cookie="${this.toString()}; hostOnly=${hostOnly}; aAge=${accessAge}; cAge=${createAge}"`;
   }
 
   toJSON() {
-    const obj: Object = {};
+    const obj: object = {};
 
     for (const prop of Cookie.serializableProperties) {
       if (this[prop] === cookieDefaults[prop]) {
@@ -902,12 +902,12 @@ class Cookie {
       return false;
     }
 
-    const cdomain: String = this.cdomain();
+    const cdomain: string = this.cdomain();
     if (cdomain) {
       if (cdomain.match(/\.$/)) {
         return false; // S4.1.2.3 suggests that this is bad. domainMatch() tests confirm this
       }
-      const suffix: String = pubsuffix.getPublicSuffix(cdomain);
+      const suffix: string = pubsuffix.getPublicSuffix(cdomain);
       if (suffix == null) {
         // it's a public suffix
         return false;
@@ -933,7 +933,7 @@ class Cookie {
   }
 
   cookieString() {
-    let val: String = this.value;
+    let val: string = this.value;
     if (val == null) {
       val = "";
     }
@@ -945,7 +945,7 @@ class Cookie {
 
   // gives Set-Cookie header format
   toString() {
-    let str: String = this.cookieString();
+    let str: string = this.cookieString();
 
     if (this.expires != Infinity) {
       if (this.expires instanceof Date) {
@@ -973,11 +973,11 @@ class Cookie {
       str += "; HttpOnly";
     }
     if (this.sameSite && this.sameSite !== "none") {
-      const ssCanon: String = Cookie.sameSiteCanonical[this.sameSite.toLowerCase()];
+      const ssCanon: string = Cookie.sameSiteCanonical[this.sameSite.toLowerCase()];
       str += `; SameSite=${ssCanon ? ssCanon : this.sameSite}`;
     }
     if (this.extensions) {
-      this.extensions.forEach((ext: String) => {
+      this.extensions.forEach((ext: string) => {
         str += `; ${ext}`;
       });
     }
@@ -999,7 +999,7 @@ class Cookie {
       return this.maxAge <= 0 ? 0 : this.maxAge * 1000;
     }
 
-    let expires: String = this.expires;
+    let expires: string = this.expires;
     if (expires != Infinity) {
       if (!(expires instanceof Date)) {
         expires = parseDate(expires) || Infinity;
@@ -1020,7 +1020,7 @@ class Cookie {
   expiryTime(now) {
     if (this.maxAge != null) {
       const relativeTo: HTMLElement = now || this.creation || new Date();
-      const age: Number = this.maxAge <= 0 ? -Infinity : this.maxAge * 1000;
+      const age: number = this.maxAge <= 0 ? -Infinity : this.maxAge * 1000;
       return relativeTo.getTime() + age;
     }
 
@@ -1033,7 +1033,7 @@ class Cookie {
   // expiryDate() replaces the "expiry-time" parts of S5.3 step 3 (setCookie()
   // elsewhere), except it returns a Date
   expiryDate(now) {
-    const millisec: String = this.expiryTime(now);
+    const millisec: string = this.expiryTime(now);
     if (millisec == Infinity) {
       return new Date(MAX_TIME);
     } else if (millisec == -Infinity) {
@@ -1076,9 +1076,9 @@ Cookie.sameSiteCanonical = {
   lax: "Lax"
 };
 
-function getNormalizedPrefixSecurity(prefixSecurity: String): String {
+function getNormalizedPrefixSecurity(prefixSecurity: string): string {
   if (prefixSecurity != null) {
-    const normalizedPrefixSecurity: String = prefixSecurity.toLowerCase();
+    const normalizedPrefixSecurity: string = prefixSecurity.toLowerCase();
     /* The three supported options */
     switch (normalizedPrefixSecurity) {
       case PrefixSecurityEnum.STRICT:
@@ -1117,7 +1117,7 @@ class CookieJar {
 
   setCookie(cookie, url, options, cb) {
     validators.validate(validators.isNonEmptyString(url), cb, options);
-    let err: Object;
+    let err: object;
 
     if (validators.isFunction(url)) {
       cb = url;
@@ -1141,10 +1141,10 @@ class CookieJar {
       return cb(null);
     }
 
-    const host: String = canonicalDomain(context.hostname);
-    const loose: Number = options.loose || this.enableLooseMode;
+    const host: string = canonicalDomain(context.hostname);
+    const loose: number = options.loose || this.enableLooseMode;
 
-    let sameSiteContext: Number = null;
+    let sameSiteContext: number = null;
     if (options.sameSiteContext) {
       sameSiteContext = checkSameSiteContext(options.sameSiteContext);
       if (!sameSiteContext) {
@@ -1169,7 +1169,7 @@ class CookieJar {
     }
 
     // S5.3 step 2
-    const now: Number = options.now || new Date(); // will assign later to save effort in the face of errors
+    const now: number = options.now || new Date(); // will assign later to save effort in the face of errors
 
     // S5.3 step 3: NOOP; persistent-flag and expiry-time is handled by getCookie()
 
@@ -1177,7 +1177,7 @@ class CookieJar {
 
     // S5.3 step 5: public suffixes
     if (this.rejectPublicSuffixes && cookie.domain) {
-      const suffix: String = pubsuffix.getPublicSuffix(cookie.cdomain(), {
+      const suffix: string = pubsuffix.getPublicSuffix(cookie.cdomain(), {
         allowSpecialUseDomain: this.allowSpecialUseDomain,
         ignoreError: options.ignoreError
       });
@@ -1242,14 +1242,14 @@ class CookieJar {
     }
 
     /* 6265bis-02 S5.4 Steps 15 & 16 */
-    const ignoreErrorForPrefixSecurity: Boolean =
+    const ignoreErrorForPrefixSecurity: boolean =
       this.prefixSecurity === PrefixSecurityEnum.SILENT;
-    const prefixSecurityDisabled: Boolean =
+    const prefixSecurityDisabled: boolean =
       this.prefixSecurity === PrefixSecurityEnum.DISABLED;
     /* If prefix checking is not disabled ...*/
     if (!prefixSecurityDisabled) {
-      let errorFound: Boolean = false;
-      let errorMsg: String;
+      let errorFound: boolean = false;
+      let errorMsg: string;
       /* Check secure prefix condition */
       if (!isSecurePrefixConditionMet(cookie)) {
         errorFound = true;
@@ -1277,12 +1277,12 @@ class CookieJar {
       };
     }
 
-    function withCookie(err: Object, oldCookie: Cookie): Array {
+    function withCookie(err: object, oldCookie: Cookie): any[] {
       if (err) {
         return cb(err);
       }
 
-      const next: Function = function(err: Array) {
+      const next: Function = function(err: any[]) {
         if (err) {
           return cb(err);
         } else {
@@ -1323,10 +1323,10 @@ class CookieJar {
     validators.validate(validators.isObject(options), cb, options);
     validators.validate(validators.isFunction(cb), cb);
 
-    const host: String = canonicalDomain(context.hostname);
-    const path: String = context.pathname || "/";
+    const host: string = canonicalDomain(context.hostname);
+    const path: string = context.pathname || "/";
 
-    let secure: Boolean = options.secure;
+    let secure: boolean = options.secure;
     if (
       secure == null &&
       context.protocol &&
@@ -1335,26 +1335,26 @@ class CookieJar {
       secure = true;
     }
 
-    let sameSiteLevel: Number = 0;
+    let sameSiteLevel: number = 0;
     if (options.sameSiteContext) {
-      const sameSiteContext: Number = checkSameSiteContext(options.sameSiteContext);
+      const sameSiteContext: number = checkSameSiteContext(options.sameSiteContext);
       sameSiteLevel = Cookie.sameSiteLevel[sameSiteContext];
       if (!sameSiteLevel) {
         return cb(new Error(SAME_SITE_CONTEXT_VAL_ERR));
       }
     }
 
-    let http: Boolean = options.http;
+    let http: boolean = options.http;
     if (http == null) {
       http = true;
     }
 
-    const now: Number = options.now || Date.now();
-    const expireCheck: Boolean = options.expire !== false;
-    const allPaths: Boolean = !!options.allPaths;
+    const now: number = options.now || Date.now();
+    const expireCheck: boolean = options.expire !== false;
+    const allPaths: boolean = !!options.allPaths;
     const store: Store = this.store;
 
-    function matchingCookie(c: Cookie): Boolean {
+    function matchingCookie(c: Cookie): boolean {
       // "Either:
       //   The cookie's host-only-flag is true and the canonicalized
       //   request-host is identical to the cookie's domain.
@@ -1390,7 +1390,7 @@ class CookieJar {
 
       // RFC6265bis-02 S5.3.7
       if (sameSiteLevel) {
-        const cookieLevel: String = Cookie.sameSiteLevel[c.sameSite || "none"];
+        const cookieLevel: string = Cookie.sameSiteLevel[c.sameSite || "none"];
         if (cookieLevel > sameSiteLevel) {
           // only allow cookies at or below the request level
           return false;
@@ -1411,7 +1411,7 @@ class CookieJar {
       host,
       allPaths ? null : path,
       this.allowSpecialUseDomain,
-      (err: String, cookies: Array) => {
+      (err: string, cookies: any[]) => {
         if (err) {
           return cb(err);
         }
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Function, cookies: any[]) {
       if (err) {
         cb(err);
       } else {
@@ -1458,13 +1458,13 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Function, cookies: any[]) {
       if (err) {
         cb(err);
       } else {
         cb(
           null,
-          cookies.map((c: String) => {
+          cookies.map((c: string) => {
             return c.toString();
           })
         );
@@ -1476,13 +1476,13 @@ class CookieJar {
 
   serialize(cb) {
     validators.validate(validators.isFunction(cb), cb);
-    let type: String = this.store.constructor.name;
+    let type: string = this.store.constructor.name;
     if (validators.isObject(type)) {
       type = null;
     }
 
     // update README.md "Serialization Format" if you change this, please!
-    const serialized: Object = {
+    const serialized: object = {
       // The version of tough-cookie that serialized this jar. Generally a good
       // practice since future versions can make data import decisions based on
       // known past behavior. When/if this matters, use `semver`.
@@ -1514,7 +1514,7 @@ class CookieJar {
       );
     }
 
-    this.store.getAllCookies((err: String, cookies: Array) => {
+    this.store.getAllCookies((err: string, cookies: any[]) => {
       if (err) {
         return cb(err);
       }
@@ -1539,13 +1539,13 @@ class CookieJar {
 
   // use the class method CookieJar.deserialize instead of calling this directly
   _importCookies(serialized, cb) {
-    let cookies: Array = serialized.cookies;
+    let cookies: any[] = serialized.cookies;
     if (!cookies || !Array.isArray(cookies)) {
       return cb(new Error("serialized jar has no cookies array"));
     }
     cookies = cookies.slice(); // do not modify the original
 
-    const putNext: Function = (err: String) => {
+    const putNext: Function = (err: string) => {
       if (err) {
         return cb(err);
       }
@@ -1577,7 +1577,7 @@ class CookieJar {
       newStore = null;
     }
 
-    this.serialize((err: String, serialized: Array) => {
+    this.serialize((err: string, serialized: any[]) => {
       if (err) {
         return cb(err);
       }
@@ -1611,7 +1611,7 @@ class CookieJar {
       return store.removeAllCookies(cb);
     }
 
-    store.getAllCookies((err: String, cookies: Array) => {
+    store.getAllCookies((err: string, cookies: any[]) => {
       if (err) {
         return cb(err);
       }
@@ -1620,8 +1620,8 @@ class CookieJar {
         return cb(null);
       }
 
-      let completedCount: Number = 0;
-      const removeErrors: Array = [];
+      let completedCount: number = 0;
+      const removeErrors: any[] = [];
 
       function removeCookieCb(removeErr: Cookie): Void {
         if (removeErr) {
@@ -1670,7 +1670,7 @@ class CookieJar {
       allowSpecialUseDomain: serialized.allowSpecialUseDomain,
       prefixSecurity: serialized.prefixSecurity
     });
-    jar._importCookies(serialized, (err: String) => {
+    jar._importCookies(serialized, (err: string) => {
       if (err) {
         return cb(err);
       }
@@ -1679,7 +1679,7 @@ class CookieJar {
   }
 
   static deserializeSync(strOrObj, store) {
-    const serialized: Object =
+    const serialized: object =
       typeof strOrObj === "string" ? JSON.parse(strOrObj) : strOrObj;
     const jar: Store = new CookieJar(store, {
       rejectPublicSuffixes: serialized.rejectPublicSuffixes,
@@ -1708,13 +1708,13 @@ CookieJar.fromJSON = CookieJar.deserializeSync;
   "removeAllCookies",
   "serialize",
   "setCookie"
-].forEach((name: String) => {
+].forEach((name: string) => {
   CookieJar.prototype[name] = fromCallback(CookieJar.prototype[name]);
 });
 CookieJar.deserialize = fromCallback(CookieJar.deserialize);
 
 // Use a closure to provide a true imperative API for synchronous stores.
-function syncWrap(method: String): Function {
+function syncWrap(method: string): Function {
   return function(...args) {
     if (!this.store.synchronous) {
       throw new Error(
@@ -1722,8 +1722,8 @@ function syncWrap(method: String): Function {
       );
     }
 
-    let syncErr: Boolean, syncResult: Function;
-    this[method](...args, (err: Boolean, result: Function) => {
+    let syncErr: boolean, syncResult: Function;
+    this[method](...args, (err: boolean, result: Function) => {
       syncErr = err;
       syncResult = result;
     });

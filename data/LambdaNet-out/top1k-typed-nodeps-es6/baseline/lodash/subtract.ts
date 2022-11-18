@@ -13,6 +13,6 @@ import createMathOperation from './.internal/createMathOperation.js'
  * subtract(6, 4)
  * // => 2
  */
-const subtract: Function = createMathOperation((minuend: Number, subtrahend: Number) => minuend - subtrahend, 0)
+const subtract: Function = createMathOperation((minuend: number, subtrahend: number) => minuend - subtrahend, 0)
 
 export default subtract

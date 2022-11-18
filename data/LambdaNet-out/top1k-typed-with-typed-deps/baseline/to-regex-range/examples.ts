@@ -2,15 +2,15 @@
 
 const toRegexRange: Function = require('./');
 const table: Function = require('text-table');
-const Time: Array = require('time-diff');
+const Time: any[] = require('time-diff');
 const time: HTMLElement = new Time();
 
 /**
  * $ node examples.js
  */
 
-const toRange: Function = (min: String, max: String) => {
-  let key: String = 'to-range' + min + max;
+const toRange: Function = (min: string, max: string) => {
+  let key: string = 'to-range' + min + max;
   time.start(key);
 
   return [
@@ -24,7 +24,7 @@ const toRange: Function = (min: String, max: String) => {
 
 toRange('1', '3');
 
-let rows: Array = [
+let rows: any[] = [
   ['', '**Range**', '**Result**', '**Compile time**', ''],
   ['', '--- ', '--- ', '---', ''],
 ];
@@ -57,11 +57,11 @@ let examples: Promise = [
   ['1', '100000'],
   ['1', '1000000'],
   ['1', '10000000'],
-].forEach((args: Array) => {
+].forEach((args: any[]) => {
   rows.push(toRange.apply(null, args));
 });
 
-let text: String = table(rows, { hsep: ' | ' });
+let text: string = table(rows, { hsep: ' | ' });
 console.log(text);
 
 /**
@@ -70,6 +70,6 @@ console.log(text);
  */
 
 module.exports = () => {
-  return text.split('\n').map((line: String) => line.replace(/^ +/, '')).join('\n');
+  return text.split('\n').map((line: string) => line.replace(/^ +/, '')).join('\n');
 };
 

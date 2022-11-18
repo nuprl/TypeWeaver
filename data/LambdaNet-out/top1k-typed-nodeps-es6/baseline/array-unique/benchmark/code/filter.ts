@@ -1,8 +1,8 @@
 'use strict';
 
-export default function (arr: Array) {
-  var stack: Array = [];
-  return arr.filter(function (ele: String) {
+export default function (arr: any[]) {
+  var stack: any[] = [];
+  return arr.filter(function (ele: string) {
     if (stack.indexOf(ele) > -1) {
       return false;
     }

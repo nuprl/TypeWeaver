@@ -7,21 +7,21 @@
 
 "use strict";
 
-var fs: String = require('fs'),
-    os: String = require('os'),
-    net: String = require('net'),
-    path: String = require('path'),
-    _async: String = require('async'),
+var fs: string = require('fs'),
+    os: string = require('os'),
+    net: string = require('net'),
+    path: string = require('path'),
+    _async: string = require('async'),
     debug: Function = require('debug'),
     mkdirp: Function = require('mkdirp').mkdirp;
 
-var debugTestPort: Object = debug('portfinder:testPort'),
-    debugGetPort: Object = debug('portfinder:getPort'),
+var debugTestPort: object = debug('portfinder:testPort'),
+    debugGetPort: object = debug('portfinder:getPort'),
     debugDefaultHosts: Function = debug('portfinder:defaultHosts');
 
 var internals: HTMLElement = {};
 
-internals.testPort = function(options: Object, callback: Function) {
+internals.testPort = function(options: object, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -52,7 +52,7 @@ internals.testPort = function(options: Object, callback: Function) {
       return callback(err);
     }
 
-    var nextPort: Number = exports.nextPort(options.port);
+    var nextPort: number = exports.nextPort(options.port);
 
     if (nextPort > exports.highestPort) {
       return callback(new Error('No open ports available'));
@@ -90,7 +90,7 @@ exports.basePort = 8000;
 // ### function setBasePort (port)
 // #### @port {Number} The new base port
 //
-exports.setBasePort = function (port: Number) {
+exports.setBasePort = function (port: number) {
   exports.basePort = port;
 }
 
@@ -104,7 +104,7 @@ exports.highestPort = 65535;
 // ### function setHighestPort (port)
 // #### @port {Number} The new highest port
 //
-exports.setHighestPort = function (port: Array) {
+exports.setHighestPort = function (port: any[]) {
   exports.highestPort = port;
 }
 
@@ -120,7 +120,7 @@ exports.basePath = '/tmp/portfinder'
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound port on the current machine.
 //
-exports.getPort = function (options: Object, callback: Function) {
+exports.getPort = function (options: object, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -147,11 +147,11 @@ exports.getPort = function (options: Object, callback: Function) {
     }
   }
 
-  var openPorts: Array = [], currentHost: String;
-  return _async.eachSeries(exports._defaultHosts, function(host: String, next: Function) {
+  var openPorts: any[] = [], currentHost: string;
+  return _async.eachSeries(exports._defaultHosts, function(host: string, next: Function) {
     debugGetPort("in eachSeries() iteration callback: host is", host);
 
-    return internals.testPort({ host: host, port: options.port }, function(err: Object, port: String) {
+    return internals.testPort({ host: host, port: options.port }, function(err: object, port: string) {
       if (err) {
         debugGetPort("in eachSeries() iteration callback testPort() callback", "with an err:", err.code);
         currentHost = host;
@@ -163,7 +163,7 @@ exports.getPort = function (options: Object, callback: Function) {
         return next();
       }
     });
-  }, function(err: Object) {
+  }, function(err: object) {
 
     if (err) {
       debugGetPort("in eachSeries() result callback: err is", err);
@@ -176,10 +176,10 @@ exports.getPort = function (options: Object, callback: Function) {
           // NOTE: We may need to one day handle `my-non-existent-host.local` if users
           // report frustration with passing in hostnames that DONT map to bindable
           // hosts, without showing them a good error.
-          var msg: Number = 'Provided host ' + options.host + ' could NOT be bound. Please provide a different host address or hostname';
+          var msg: number = 'Provided host ' + options.host + ' could NOT be bound. Please provide a different host address or hostname';
           return callback(Error(msg));
         } else {
-          var idx: Number = exports._defaultHosts.indexOf(currentHost);
+          var idx: number = exports._defaultHosts.indexOf(currentHost);
           exports._defaultHosts.splice(idx, 1);
           return exports.getPort(options, callback);
         }
@@ -190,7 +190,7 @@ exports.getPort = function (options: Object, callback: Function) {
     }
 
     // sort so we can compare first host to last host
-    openPorts.sort(function(a: Number, b: Number) {
+    openPorts.sort(function(a: number, b: number) {
       return a - b;
     });
 
@@ -202,7 +202,7 @@ exports.getPort = function (options: Object, callback: Function) {
         return callback(null, openPorts[0]);
       }
       else {
-        var msg: Number = 'No open ports found in between '+ options.startPort + ' and ' + options.stopPort;
+        var msg: number = 'No open ports found in between '+ options.startPort + ' and ' + options.stopPort;
         return callback(Error(msg));
       }
     } else {
@@ -218,7 +218,7 @@ exports.getPort = function (options: Object, callback: Function) {
 // #### @options {Object} Settings to use when finding the necessary port
 // Responds a promise to an unbound port on the current machine.
 //
-exports.getPortPromise = function (options: Object) {
+exports.getPortPromise = function (options: object) {
   if (typeof Promise !== 'function') {
     throw Error('Native promise support is not available in this version of node.' +
       'Please install a polyfill and assign Promise to global.Promise before calling this method');
@@ -227,7 +227,7 @@ exports.getPortPromise = function (options: Object) {
     options = {};
   }
   return new Promise(function(resolve: Function, reject: Function) {
-    exports.getPort(options, function(err: String, port: Number) {
+    exports.getPort(options, function(err: string, port: number) {
       if (err) {
         return reject(err);
       }
@@ -243,19 +243,19 @@ exports.getPortPromise = function (options: Object) {
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with an array of unbound ports on the current machine.
 //
-exports.getPorts = function (count: Number, options: Object, callback: Function) {
+exports.getPorts = function (count: number, options: object, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
   }
 
-  var lastPort: String = null;
-  _async.timesSeries(count, function(index: Number, asyncCallback: Function) {
+  var lastPort: string = null;
+  _async.timesSeries(count, function(index: number, asyncCallback: Function) {
     if (lastPort) {
       options.port = exports.nextPort(lastPort);
     }
 
-    exports.getPort(options, function (err: String, port: Number) {
+    exports.getPort(options, function (err: string, port: number) {
       if (err) {
         asyncCallback(err);
       } else {
@@ -273,7 +273,7 @@ exports.getPorts = function (count: Number, options: Object, callback: Function)
 // Responds with a unbound socket using the specified directory and base
 // name on the current machine.
 //
-exports.getSocket = function (options: Object, callback: Function) {
+exports.getSocket = function (options: object, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -286,7 +286,7 @@ exports.getSocket = function (options: Object, callback: Function) {
   // Tests the specified socket
   //
   function testSocket (): Void {
-    fs.stat(options.path, function (err: Object) {
+    fs.stat(options.path, function (err: object) {
       //
       // If file we're checking doesn't exist (thus, stating it emits ENOENT),
       // we should be OK with listening on this socket.
@@ -314,8 +314,8 @@ exports.getSocket = function (options: Object, callback: Function) {
   // Create the target `dir` then test connection
   // against the socket.
   //
-  function createAndTestSocket (dir: String): Void {
-    mkdirp(dir, options.mod, function (err: String) {
+  function createAndTestSocket (dir: string): Void {
+    mkdirp(dir, options.mod, function (err: string) {
       if (err) {
         return callback(err);
       }
@@ -332,9 +332,9 @@ exports.getSocket = function (options: Object, callback: Function) {
   // then test connection.
   //
   function checkAndTestSocket (): Void {
-    var dir: String = path.dirname(options.path);
+    var dir: string = path.dirname(options.path);
 
-    fs.stat(dir, function (err: String, stats: Array) {
+    fs.stat(dir, function (err: string, stats: any[]) {
       if (err || !stats.isDirectory()) {
         return createAndTestSocket(dir);
       }
@@ -360,7 +360,7 @@ exports.getSocket = function (options: Object, callback: Function) {
 // Gets the next port in sequence from the
 // specified `port`.
 //
-exports.nextPort = function (port: Number) {
+exports.nextPort = function (port: number) {
   return port + 1;
 };
 
@@ -370,12 +370,12 @@ exports.nextPort = function (port: Number) {
 // Gets the next socket path in sequence from the
 // specified `socketPath`.
 //
-exports.nextSocket = function (socketPath: String) {
-  var dir: String = path.dirname(socketPath),
-      name: String = path.basename(socketPath, '.sock'),
-      match: Object = name.match(/^([a-zA-z]+)(\d*)$/i),
-      index: Number = parseInt(match[2]),
-      base: String = match[1];
+exports.nextSocket = function (socketPath: string) {
+  var dir: string = path.dirname(socketPath),
+      name: string = path.basename(socketPath, '.sock'),
+      match: object = name.match(/^([a-zA-z]+)(\d*)$/i),
+      index: number = parseInt(match[2]),
+      base: string = match[1];
   if (isNaN(index)) {
     index = 0;
   }
@@ -461,7 +461,7 @@ exports.nextSocket = function (socketPath: String) {
  *     Note we export this so we can use it in our tests, otherwise this API is private
  */
 exports._defaultHosts = (function() {
-  var interfaces: Object = {};
+  var interfaces: object = {};
   try{
     interfaces = os.networkInterfaces();
   }
@@ -483,11 +483,11 @@ exports._defaultHosts = (function() {
     }
   }
 
-  var interfaceNames: Array = Object.keys(interfaces),
-      hiddenButImportantHost: String = '0.0.0.0', // !important - dont remove, hence the naming :)
-      results: Array = [hiddenButImportantHost];
+  var interfaceNames: any[] = Object.keys(interfaces),
+      hiddenButImportantHost: string = '0.0.0.0', // !important - dont remove, hence the naming :)
+      results: any[] = [hiddenButImportantHost];
   for (var i = 0; i < interfaceNames.length; i++) {
-    var _interface: Array = interfaces[interfaceNames[i]];
+    var _interface: any[] = interfaces[interfaceNames[i]];
     for (var j = 0; j < _interface.length; j++) {
       var curr: Element = _interface[j];
       results.push(curr.address);

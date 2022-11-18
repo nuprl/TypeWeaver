@@ -4,29 +4,29 @@
 const {parse: $parse, stringify: $stringify} = JSON;
 const {keys} = Object;
 
-const Primitive: String = String;   // it could be Number
-const primitive: String = 'string'; // it could be 'number'
+const Primitive: string = String;   // it could be Number
+const primitive: string = 'string'; // it could be 'number'
 
 const ignore: Function = {};
-const object: String = 'object';
+const object: string = 'object';
 
-const noop: Function = (_: String, value: String) => value;
+const noop: Function = (_: string, value: string) => value;
 
-const primitives: Function = (value: String) => (
+const primitives: Function = (value: string) => (
   value instanceof Primitive ? Primitive(value) : value
 );
 
-const Primitives: Function = (_: String, value: String) => (
+const Primitives: Function = (_: string, value: string) => (
   typeof value === primitive ? new Primitive(value) : value
 );
 
-const revive: Function = (input: Object, parsed: Map, output: Object, $: Function) => {
-  const lazy: Array = [];
+const revive: Function = (input: object, parsed: Map, output: object, $: Function) => {
+  const lazy: any[] = [];
   for (let ke = keys(output), {length} = ke, y = 0; y < length; y++) {
-    const k: String = ke[y];
-    const value: String = output[k];
+    const k: string = ke[y];
+    const value: string = output[k];
     if (value instanceof Primitive) {
-      const tmp: String = input[value];
+      const tmp: string = input[value];
       if (typeof tmp === object && !parsed.has(tmp)) {
         parsed.add(tmp);
         output[k] = ignore;
@@ -45,43 +45,43 @@ const revive: Function = (input: Object, parsed: Map, output: Object, $: Functio
   return output;
 };
 
-const set: Function = (known: Map, input: Array, value: String) => {
-  const index: Number = Primitive(input.push(value) - 1);
+const set: Function = (known: Map, input: any[], value: string) => {
+  const index: number = Primitive(input.push(value) - 1);
   known.set(value, index);
   return index;
 };
 
-const parse: Function = (text: String, reviver: String) => {
-  const input: Object = $parse(text, Primitives).map(primitives);
-  const value: String = input[0];
+const parse: Function = (text: string, reviver: string) => {
+  const input: object = $parse(text, Primitives).map(primitives);
+  const value: string = input[0];
   const $: Function = reviver || noop;
-  const tmp: String = typeof value === object && value ?
+  const tmp: string = typeof value === object && value ?
               revive(input, new Set, value, $) :
               value;
   return $.call({'': tmp}, '', tmp);
 };
 exports.parse = parse;
 
-const stringify: Function = (value: String, replacer: String, space: Array) => {
+const stringify: Function = (value: string, replacer: string, space: any[]) => {
   const $: Function = replacer && typeof replacer === object ?
-            (k: String, v: Number) => (k === '' || -1 < replacer.indexOf(k) ? v : void 0) :
+            (k: string, v: number) => (k === '' || -1 < replacer.indexOf(k) ? v : void 0) :
             (replacer || noop);
   const known: Map = new Map;
-  const input: Array = [];
-  const output: Array = [];
-  let i: Number = +set(known, input, $.call({'': value}, '', value));
-  let firstRun: Boolean = !i;
+  const input: any[] = [];
+  const output: any[] = [];
+  let i: number = +set(known, input, $.call({'': value}, '', value));
+  let firstRun: boolean = !i;
   while (i < input.length) {
     firstRun = true;
     output[i] = $stringify(input[i++], replace, space);
   }
   return '[' + output.join(',') + ']';
-  function replace(key: String, value: String): String {
+  function replace(key: string, value: string): string {
     if (firstRun) {
       firstRun = !firstRun;
       return value;
     }
-    const after: String = $.call(this, key, value);
+    const after: string = $.call(this, key, value);
     switch (typeof after) {
       case object:
         if (after === null) return after;
@@ -93,7 +93,7 @@ const stringify: Function = (value: String, replacer: String, space: Array) => {
 };
 exports.stringify = stringify;
 
-const toJSON: Function = (any: Array) => $parse(stringify(any));
+const toJSON: Function = (any: any[]) => $parse(stringify(any));
 exports.toJSON = toJSON;
-const fromJSON: Function = (any: Array) => parse($stringify(any));
+const fromJSON: Function = (any: any[]) => parse($stringify(any));
 exports.fromJSON = fromJSON;

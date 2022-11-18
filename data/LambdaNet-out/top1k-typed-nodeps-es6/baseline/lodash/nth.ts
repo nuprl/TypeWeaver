@@ -19,8 +19,8 @@ import isIndex from './.internal/isIndex.js'
  * nth(array, -2)
  * // => 'c'
  */
-function nth(array: Array, n: Number): Stack {
-  const length: Boolean = array == null ? 0 : array.length
+function nth(array: any[], n: number): Stack {
+  const length: boolean = array == null ? 0 : array.length
   if (!length) {
     return
   }

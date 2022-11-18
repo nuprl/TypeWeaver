@@ -1,11 +1,11 @@
 const importPattern: RegExp = /^:import\(("[^"]*"|'[^']*'|[^"']+)\)$/;
 const balancedQuotes: RegExp = /^("[^"]*"|'[^']*'|[^"']+)$/;
 
-const getDeclsObject: Function = (rule: Object) => {
-  const object: Object = {};
+const getDeclsObject: Function = (rule: object) => {
+  const object: object = {};
 
-  rule.walkDecls((decl: Object) => {
-    const before: String = decl.raws.before ? decl.raws.before.trim() : "";
+  rule.walkDecls((decl: object) => {
+    const before: string = decl.raws.before ? decl.raws.before.trim() : "";
 
     object[before + decl.prop] = decl.value;
   });
@@ -18,12 +18,12 @@ const getDeclsObject: Function = (rule: Object) => {
  * @param {boolean} removeRules
  * @param {'auto' | 'rule' | 'at-rule'} mode
  */
-const extractICSS: Function = (css: Function, removeRules: Boolean = true, mode: Number = "auto") => {
-  const icssImports: Object = {};
-  const icssExports: String = {};
+const extractICSS: Function = (css: Function, removeRules: boolean = true, mode: number = "auto") => {
+  const icssImports: object = {};
+  const icssExports: string = {};
 
-  function addImports(node: Object, path: String): Void {
-    const unquoted: String = path.replace(/'|"/g, "");
+  function addImports(node: object, path: string): Void {
+    const unquoted: string = path.replace(/'|"/g, "");
     icssImports[unquoted] = Object.assign(
       icssImports[unquoted] || {},
       getDeclsObject(node)
@@ -34,14 +34,14 @@ const extractICSS: Function = (css: Function, removeRules: Boolean = true, mode:
     }
   }
 
-  function addExports(node: Object): Void {
+  function addExports(node: object): Void {
     Object.assign(icssExports, getDeclsObject(node));
     if (removeRules) {
       node.remove();
     }
   }
 
-  css.each((node: Object) => {
+  css.each((node: object) => {
     if (node.type === "rule" && mode !== "at-rule") {
       if (node.selector.slice(0, 7) === ":import") {
         const matches: Promise = importPattern.exec(node.selector);

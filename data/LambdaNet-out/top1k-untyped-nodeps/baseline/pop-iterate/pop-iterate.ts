@@ -1,10 +1,10 @@
 "use strict";
 
-var ArrayIterator: Array = require("./array-iterator");
-var ObjectIterator: Array = require("./object-iterator");
+var ArrayIterator: any[] = require("./array-iterator");
+var ObjectIterator: any[] = require("./object-iterator");
 
 module.exports = iterate;
-function iterate(iterable: Function, start: String, stop: Function, step: String): Array {
+function iterate(iterable: Function, start: string, stop: Function, step: string): any[] {
     if (!iterable) {
         return empty;
     } else if (Array.isArray(iterable)) {

@@ -1,7 +1,7 @@
 "use strict";
-const usm: String = require("./url-state-machine");
-const urlencoded: String = require("./urlencoded");
-const URLSearchParams: String = require("./URLSearchParams");
+const usm: string = require("./url-state-machine");
+const urlencoded: string = require("./urlencoded");
+const URLSearchParams: string = require("./URLSearchParams");
 
 exports.implementation = class URLImpl {
   constructor(globalObject, constructorArgs) {

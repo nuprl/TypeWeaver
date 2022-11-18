@@ -1,13 +1,13 @@
-module.exports = function (arr: String) {
+module.exports = function (arr: string) {
   return flatten(arr, []);
 };
 
-function flatten(arr: Array, res: Array): Array {
-  var len: Number = arr.length;
-  var num: Number = 0;
+function flatten(arr: any[], res: any[]): any[] {
+  var len: number = arr.length;
+  var num: number = 0;
 
   while (len--) {
-    var i: Number = num++;
+    var i: number = num++;
 
     if (Array.isArray(arr[i])) {
       flatten(arr[i], res);

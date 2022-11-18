@@ -1,10 +1,10 @@
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api, no-var */
-var buffer: Number = require('buffer')
+var buffer: number = require('buffer')
 var Buffer: Function = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: Object, dst: Object): Void {
+function copyProps (src: object, dst: object): Void {
   for (var key in src) {
     dst[key] = src[key]
   }
@@ -17,7 +17,7 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   exports.Buffer = SafeBuffer
 }
 
-function SafeBuffer (arg: String, encodingOrOffset: String, length: String): String {
+function SafeBuffer (arg: string, encodingOrOffset: string, length: string): string {
   return Buffer(arg, encodingOrOffset, length)
 }
 
@@ -26,14 +26,14 @@ SafeBuffer.prototype = Object.create(Buffer.prototype)
 // Copy static methods from Buffer
 copyProps(Buffer, SafeBuffer)
 
-SafeBuffer.from = function (arg: String, encodingOrOffset: Number, length: Number) {
+SafeBuffer.from = function (arg: string, encodingOrOffset: number, length: number) {
   if (typeof arg === 'number') {
     throw new TypeError('Argument must not be a number')
   }
   return Buffer(arg, encodingOrOffset, length)
 }
 
-SafeBuffer.alloc = function (size: String, fill: String, encoding: String) {
+SafeBuffer.alloc = function (size: string, fill: string, encoding: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
@@ -50,14 +50,14 @@ SafeBuffer.alloc = function (size: String, fill: String, encoding: String) {
   return buf
 }
 
-SafeBuffer.allocUnsafe = function (size: String) {
+SafeBuffer.allocUnsafe = function (size: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
   return Buffer(size)
 }
 
-SafeBuffer.allocUnsafeSlow = function (size: String) {
+SafeBuffer.allocUnsafeSlow = function (size: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }

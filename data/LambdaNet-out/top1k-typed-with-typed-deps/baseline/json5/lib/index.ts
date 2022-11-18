@@ -1,7 +1,7 @@
-const parse: String = require('./parse')
-const stringify: Array = require('./stringify')
+const parse: string = require('./parse')
+const stringify: any[] = require('./stringify')
 
-const JSON5: Object = {
+const JSON5: object = {
     parse,
     stringify,
 }

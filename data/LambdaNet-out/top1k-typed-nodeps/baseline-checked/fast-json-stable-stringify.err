@@ -1,29 +1,18 @@
-benchmark/index.ts(4,42): error TS2339: Property 'Suite' does not exist on type 'String'.
+benchmark/index.ts(4,42): error TS2339: Property 'Suite' does not exist on type 'string'.
 benchmark/index.ts(19,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
 benchmark/index.ts(21,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/index.ts(27,4): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/index.ts(27,60): error TS2339: Property 'target' does not exist on type 'Object'.
-example/key_cmp.ts(4,8): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-example/key_cmp.ts(5,14): error TS2339: Property 'key' does not exist on type 'Object'.
-example/key_cmp.ts(5,22): error TS2339: Property 'key' does not exist on type 'Object'.
-example/value_cmp.ts(4,8): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-example/value_cmp.ts(5,14): error TS2339: Property 'value' does not exist on type 'Object'.
-example/value_cmp.ts(5,24): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(6,40): error TS2339: Property 'cycles' does not exist on type 'Object'.
-index.ts(6,69): error TS2339: Property 'cycles' does not exist on type 'Object'.
-index.ts(8,30): error TS2339: Property 'cmp' does not exist on type 'Object'.
-index.ts(11,58): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(12,58): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(16,13): error TS2339: Property 'cmp' does not exist on type 'Object'.
-index.ts(18,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(20,26): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(20,48): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(21,25): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(31,42): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(33,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'string | String'.
-index.ts(33,39): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(46,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(48,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(50,17): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(50,48): error TS2538: Type 'String' cannot be used as an index type.
+benchmark/index.ts(27,60): error TS2339: Property 'target' does not exist on type 'object'.
+example/key_cmp.ts(5,14): error TS2339: Property 'key' does not exist on type 'object'.
+example/key_cmp.ts(5,22): error TS2339: Property 'key' does not exist on type 'object'.
+example/value_cmp.ts(5,14): error TS2339: Property 'value' does not exist on type 'object'.
+example/value_cmp.ts(5,24): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(6,40): error TS2339: Property 'cycles' does not exist on type 'object'.
+index.ts(6,69): error TS2339: Property 'cycles' does not exist on type 'object'.
+index.ts(8,30): error TS2339: Property 'cmp' does not exist on type 'object'.
+index.ts(16,13): error TS2339: Property 'cmp' does not exist on type 'object'.
+index.ts(20,26): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(20,48): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(21,25): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(50,17): error TS2322: Type 'string' is not assignable to type 'number'.
 

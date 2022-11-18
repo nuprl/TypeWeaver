@@ -1,7 +1,7 @@
 'use strict';
 
-var fs: String = require('fs');
-var doT: Array = require('dot');
+var fs: string = require('fs');
+var doT: any[] = require('dot');
 doT.templateSettings.strip = false;
 
 var jst: Function = doT.compile(fs.readFileSync('./src/index.jst', 'utf8'));

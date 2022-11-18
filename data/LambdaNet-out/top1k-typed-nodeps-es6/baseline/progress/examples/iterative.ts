@@ -5,7 +5,7 @@
 
 import ProgressBar from '../';
 
-var len: Number = 10000000; // Adjust to your machine's speed
+var len: number = 10000000; // Adjust to your machine's speed
 var bar: HTMLElement = new ProgressBar('[:bar]', {total: len, renderThrottle: 100});
 
 for (var i = 0; i <= len; i++) {

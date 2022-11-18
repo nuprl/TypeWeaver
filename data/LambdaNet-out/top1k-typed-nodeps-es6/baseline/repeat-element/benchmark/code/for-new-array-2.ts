@@ -1,7 +1,7 @@
 export default repeat;
 
-function repeat(ele: String, num: Number): Object {
-  var arr: Object = new Array(num);
+function repeat(ele: string, num: number): object {
+  var arr: object = new Array(num);
 
   for (var i = num - 1; i >= 0; i--) {
     arr[i] = ele;

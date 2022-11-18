@@ -34,10 +34,10 @@ import Promise from "./promise";
   @return {Object}
  */
 
-export default function defer(label: String): Enumerator {
-  let deferred: Object = { resolve: undefined, reject: undefined };
+export default function defer(label: string): Enumerator {
+  let deferred: object = { resolve: undefined, reject: undefined };
 
-  deferred.promise = new Promise((resolve: Enumerator, reject: String) => {
+  deferred.promise = new Promise((resolve: Enumerator, reject: string) => {
     deferred.resolve = resolve;
     deferred.reject = reject;
   }, label);

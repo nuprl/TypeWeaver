@@ -10,10 +10,10 @@ import { nextTick } from 'process';
 /** @typedef {import("./Resolver").FileSystem} FileSystem */
 /** @typedef {import("./Resolver").SyncFileSystem} SyncFileSystem */
 
-const dirname: Function = (path: String) => {
-	let idx: Number = path.length - 1;
+const dirname: Function = (path: string) => {
+	let idx: number = path.length - 1;
 	while (idx >= 0) {
-		const c: Number = path.charCodeAt(idx);
+		const c: number = path.charCodeAt(idx);
 		// slash or backslash
 		if (c === 47 || c === 92) break;
 		idx--;
@@ -22,13 +22,13 @@ const dirname: Function = (path: String) => {
 	return path.slice(0, idx);
 };
 
-const runCallbacks: Function = (callbacks: Array, err: Array, result: CachedInputFileSystem) => {
+const runCallbacks: Function = (callbacks: any[], err: any[], result: CachedInputFileSystem) => {
 	if (callbacks.length === 1) {
 		callbacks[0](err, result);
 		callbacks.length = 0;
 		return;
 	}
-	let error: Object;
+	let error: object;
 	for (const callback of callbacks) {
 		try {
 			callback(err, result);
@@ -53,7 +53,7 @@ class OperationMergerBackend {
 		this._activeAsyncOperations = new Map();
 
 		this.provide = this._provider
-			? (path: String, options: String, callback: Function) => {
+			? (path: string, options: string, callback: Function) => {
 					if (typeof options === "function") {
 						callback = options;
 						options = undefined;
@@ -70,7 +70,7 @@ class OperationMergerBackend {
 						callback(new TypeError("path must be a string"));
 						return;
 					}
-					let callbacks: Array = this._activeAsyncOperations.get(path);
+					let callbacks: any[] = this._activeAsyncOperations.get(path);
 					if (callbacks) {
 						callbacks.push(callback);
 						return;
@@ -83,7 +83,7 @@ class OperationMergerBackend {
 			  }
 			: null;
 		this.provideSync = this._syncProvider
-			? (path: String, options: Object) => {
+			? (path: string, options: object) => {
 					return this._syncProvider.call(this._providerContext, path, options);
 			  }
 			: null;
@@ -113,9 +113,9 @@ IDLE --[insert data]--> SYNC --[event loop tick]--> ASYNC_ACTIVE --[interval tic
                                                           +---------[insert data]-------+
 */
 
-const STORAGE_MODE_IDLE: Number = 0;
-const STORAGE_MODE_SYNC: Number = 1;
-const STORAGE_MODE_ASYNC: Number = 2;
+const STORAGE_MODE_IDLE: number = 0;
+const STORAGE_MODE_SYNC: number = 1;
+const STORAGE_MODE_ASYNC: number = 2;
 
 class CacheBackend {
 	/**
@@ -182,7 +182,7 @@ class CacheBackend {
 		}
 
 		// Check if there is already the same operation running
-		let callbacks: Array = this._activeAsyncOperations.get(path);
+		let callbacks: any[] = this._activeAsyncOperations.get(path);
 		if (callbacks !== undefined) {
 			callbacks.push(callback);
 			return;
@@ -294,14 +294,14 @@ class CacheBackend {
 
 	_storeResult(path, err, result) {
 		if (this._data.has(path)) return;
-		const level: Object = this._levels[this._currentLevel];
+		const level: object = this._levels[this._currentLevel];
 		this._data.set(path, { err, result, level });
 		level.add(path);
 	}
 
 	_decayLevel() {
-		const nextLevel: Number = (this._currentLevel + 1) % this._levels.length;
-		const decay: Object = this._levels[nextLevel];
+		const nextLevel: number = (this._currentLevel + 1) % this._levels.length;
+		const decay: object = this._levels[nextLevel];
 		this._currentLevel = nextLevel;
 		for (let item of decay) {
 			this._data.delete(item);
@@ -325,7 +325,7 @@ class CacheBackend {
 	}
 
 	_enterAsyncMode() {
-		let timeout: Number = 0;
+		let timeout: number = 0;
 		switch (this._mode) {
 			case STORAGE_MODE_ASYNC:
 				return;
@@ -344,7 +344,7 @@ class CacheBackend {
 				break;
 		}
 		this._mode = STORAGE_MODE_ASYNC;
-		const ref: Number = setTimeout(() => {
+		const ref: number = setTimeout(() => {
 			this._mode = STORAGE_MODE_SYNC;
 			this._runDecays();
 		}, timeout);
@@ -366,7 +366,7 @@ class CacheBackend {
 	}
 }
 
-const createBackend: Function = (duration: Number, provider: String, syncProvider: Number, providerContext: Boolean) => {
+const createBackend: Function = (duration: number, provider: string, syncProvider: number, providerContext: boolean) => {
 	if (duration > 0) {
 		return new CacheBackend(duration, provider, syncProvider, providerContext);
 	}
@@ -383,7 +383,7 @@ export default class CachedInputFileSystem {
 			this.fileSystem.lstatSync,
 			this.fileSystem
 		);
-		const lstat: Array = this._lstatBackend.provide;
+		const lstat: any[] = this._lstatBackend.provide;
 		this.lstat = /** @type {FileSystem["lstat"]} */ (lstat);
 		const lstatSync: Function = this._lstatBackend.provideSync;
 		this.lstatSync = /** @type {SyncFileSystem["lstatSync"]} */ (lstatSync);
@@ -394,7 +394,7 @@ export default class CachedInputFileSystem {
 			this.fileSystem.statSync,
 			this.fileSystem
 		);
-		const stat: Array = this._statBackend.provide;
+		const stat: any[] = this._statBackend.provide;
 		this.stat = /** @type {FileSystem["stat"]} */ (stat);
 		const statSync: Function = this._statBackend.provideSync;
 		this.statSync = /** @type {SyncFileSystem["statSync"]} */ (statSync);
@@ -405,7 +405,7 @@ export default class CachedInputFileSystem {
 			this.fileSystem.readdirSync,
 			this.fileSystem
 		);
-		const readdir: Array = this._readdirBackend.provide;
+		const readdir: any[] = this._readdirBackend.provide;
 		this.readdir = /** @type {FileSystem["readdir"]} */ (readdir);
 		const readdirSync: Function = this._readdirBackend.provideSync;
 		this.readdirSync = /** @type {SyncFileSystem["readdirSync"]} */ (readdirSync);
@@ -416,22 +416,22 @@ export default class CachedInputFileSystem {
 			this.fileSystem.readFileSync,
 			this.fileSystem
 		);
-		const readFile: String = this._readFileBackend.provide;
+		const readFile: string = this._readFileBackend.provide;
 		this.readFile = /** @type {FileSystem["readFile"]} */ (readFile);
-		const readFileSync: String = this._readFileBackend.provideSync;
+		const readFileSync: string = this._readFileBackend.provideSync;
 		this.readFileSync = /** @type {SyncFileSystem["readFileSync"]} */ (readFileSync);
 
 		this._readJsonBackend = createBackend(
 			duration,
 			this.fileSystem.readJson ||
 				(this.readFile &&
-					((path: String, callback: Function) => {
+					((path: string, callback: Function) => {
 						// @ts-ignore
-						this.readFile(path, (err: String, buffer: Object) => {
+						this.readFile(path, (err: string, buffer: object) => {
 							if (err) return callback(err);
 							if (!buffer || buffer.length === 0)
 								return callback(new Error("No file content"));
-							let data: Array;
+							let data: any[];
 							try {
 								data = JSON.parse(buffer.toString("utf-8"));
 							} catch (e) {
@@ -442,16 +442,16 @@ export default class CachedInputFileSystem {
 					})),
 			this.fileSystem.readJsonSync ||
 				(this.readFileSync &&
-					((path: String) => {
+					((path: string) => {
 						const buffer: Element = this.readFileSync(path);
-						const data: Array = JSON.parse(buffer.toString("utf-8"));
+						const data: any[] = JSON.parse(buffer.toString("utf-8"));
 						return data;
 					})),
 			this.fileSystem
 		);
 		const readJson: Function = this._readJsonBackend.provide;
 		this.readJson = /** @type {FileSystem["readJson"]} */ (readJson);
-		const readJsonSync: String = this._readJsonBackend.provideSync;
+		const readJsonSync: string = this._readJsonBackend.provideSync;
 		this.readJsonSync = /** @type {SyncFileSystem["readJsonSync"]} */ (readJsonSync);
 
 		this._readlinkBackend = createBackend(
@@ -460,7 +460,7 @@ export default class CachedInputFileSystem {
 			this.fileSystem.readlinkSync,
 			this.fileSystem
 		);
-		const readlink: Array = this._readlinkBackend.provide;
+		const readlink: any[] = this._readlinkBackend.provide;
 		this.readlink = /** @type {FileSystem["readlink"]} */ (readlink);
 		const readlinkSync: Function = this._readlinkBackend.provideSync;
 		this.readlinkSync = /** @type {SyncFileSystem["readlinkSync"]} */ (readlinkSync);

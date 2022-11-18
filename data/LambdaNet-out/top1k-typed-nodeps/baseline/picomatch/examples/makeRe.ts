@@ -1,6 +1,6 @@
 'use strict';
 
-const pm: String = require('..');
+const pm: string = require('..');
 
 console.log(pm.makeRe('*'));
 // /^(?:(?!\.)(?=.)[^\\\/]*?\/?)$/

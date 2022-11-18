@@ -1,10 +1,10 @@
 "use strict";
 
 const { URL, URLSearchParams } = require("./webidl2js-wrapper");
-const urlStateMachine: String = require("./lib/url-state-machine");
-const percentEncoding: Object = require("./lib/percent-encoding");
+const urlStateMachine: string = require("./lib/url-state-machine");
+const percentEncoding: object = require("./lib/percent-encoding");
 
-const sharedGlobalObject: Object = { Array, Object, Promise, String, TypeError };
+const sharedGlobalObject: object = { Array, Object, Promise, String, TypeError };
 URL.install(sharedGlobalObject, ["Window"]);
 URLSearchParams.install(sharedGlobalObject, ["Window"]);
 

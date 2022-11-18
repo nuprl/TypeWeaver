@@ -8,17 +8,17 @@ exports.fromCallback = function (fn: Function) {
         fn.call(
           this,
           ...args,
-          (err: String, res: Array) => (err != null) ? reject(err) : resolve(res)
+          (err: string, res: any[]) => (err != null) ? reject(err) : resolve(res)
         )
       })
     }
   }, 'name', { value: fn.name })
 }
 
-exports.fromPromise = function (fn: Object) {
+exports.fromPromise = function (fn: object) {
   return Object.defineProperty(function (...args) {
     const cb: Function = args[args.length - 1]
     if (typeof cb !== 'function') return fn.apply(this, args)
-    else fn.apply(this, args.slice(0, -1)).then((r: Number) => cb(null, r), cb)
+    else fn.apply(this, args.slice(0, -1)).then((r: number) => cb(null, r), cb)
   }, 'name', { value: fn.name })
 }

@@ -6,7 +6,7 @@ import "./traversing.js"; // parent, contents
 
 jQuery.fn.extend( {
 	wrapAll: function( html: HTMLElement ) {
-		var wrap: Object;
+		var wrap: object;
 
 		if ( this[ 0 ] ) {
 			if ( typeof html === "function" ) {
@@ -36,14 +36,14 @@ jQuery.fn.extend( {
 
 	wrapInner: function( html: HTMLElement ) {
 		if ( typeof html === "function" ) {
-			return this.each( function( i: String ) {
+			return this.each( function( i: string ) {
 				jQuery( this ).wrapInner( html.call( this, i ) );
 			} );
 		}
 
 		return this.each( function() {
-			var self: Object = jQuery( this ),
-				contents: Array = self.contents();
+			var self: object = jQuery( this ),
+				contents: any[] = self.contents();
 
 			if ( contents.length ) {
 				contents.wrapAll( html );
@@ -55,14 +55,14 @@ jQuery.fn.extend( {
 	},
 
 	wrap: function( html: HTMLElement ) {
-		var htmlIsFunction: Boolean = typeof html === "function";
+		var htmlIsFunction: boolean = typeof html === "function";
 
-		return this.each( function( i: String ) {
+		return this.each( function( i: string ) {
 			jQuery( this ).wrapAll( htmlIsFunction ? html.call( this, i ) : html );
 		} );
 	},
 
-	unwrap: function( selector: String ) {
+	unwrap: function( selector: string ) {
 		this.parent( selector ).not( "body" ).each( function() {
 			jQuery( this ).replaceWith( this.childNodes );
 		} );

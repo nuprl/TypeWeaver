@@ -1,10 +1,10 @@
-export default function typeOf(val: Number): String {
+export default function typeOf(val: number): string {
   if (val === null) return 'null';
   if (val === undefined) {
     return 'undefined';
   }
 
-  var type: String = typeof val;
+  var type: string = typeof val;
   switch (type) {
     case 'string':
     case 'number':

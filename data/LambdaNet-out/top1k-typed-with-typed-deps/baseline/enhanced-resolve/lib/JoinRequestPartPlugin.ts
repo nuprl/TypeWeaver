@@ -8,7 +8,7 @@
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 
-const namespaceStartCharCode: String = "@".charCodeAt(0);
+const namespaceStartCharCode: string = "@".charCodeAt(0);
 
 module.exports = class JoinRequestPartPlugin {
 	/**

@@ -1,7 +1,7 @@
 import isSymbol from '../isSymbol.js'
 
 /** Used as references for various `Number` constants. */
-const NAN: Number = 0 / 0
+const NAN: number = 0 / 0
 
 /**
  * The base implementation of `toNumber` which doesn't ensure correct
@@ -11,7 +11,7 @@ const NAN: Number = 0 / 0
  * @param {*} value The value to process.
  * @returns {number} Returns the number.
  */
-function baseToNumber(value: Number): Number {
+function baseToNumber(value: number): number {
   if (typeof value === 'number') {
     return value
   }

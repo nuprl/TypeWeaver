@@ -1,7 +1,7 @@
 import MapCache from './MapCache.js'
 
 /** Used to stand-in for `undefined` hash values. */
-const HASH_UNDEFINED: String = '__lodash_hash_undefined__'
+const HASH_UNDEFINED: string = '__lodash_hash_undefined__'
 
 class SetCache {
 
@@ -13,8 +13,8 @@ class SetCache {
    * @param {Array} [values] The values to cache.
    */
   constructor(values) {
-    let index: Number = -1
-    const length: Number = values == null ? 0 : values.length
+    let index: number = -1
+    const length: number = values == null ? 0 : values.length
 
     this.__data__ = new MapCache
     while (++index < length) {

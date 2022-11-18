@@ -2,8 +2,8 @@
 
 export default repeat;
 
-function repeat(str: String, num: Number): String {
-  var res: String = '';
+function repeat(str: string, num: number): string {
+  var res: string = '';
 
   while (num > 0) {
     if (num & 1) {

@@ -15,7 +15,7 @@ global.cookie = require('..')
 
 var suite: HTMLElement = new benchmark.Suite()
 
-Object.keys(top).forEach(function (domain: String) {
+Object.keys(top).forEach(function (domain: string) {
   suite.add({
     name: 'parse ' + domain,
     minSamples: 100,
@@ -23,11 +23,11 @@ Object.keys(top).forEach(function (domain: String) {
   })
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  cookie.parse - top sites\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 
@@ -37,8 +37,8 @@ suite.on('complete', function onComplete (): Void {
 
 suite.run({async: false})
 
-function gencookies (num: String): String {
-  var str: String = ''
+function gencookies (num: string): string {
+  var str: string = ''
 
   for (var i = 0; i < num; i++) {
     str += '; foo' + i + '=bar'

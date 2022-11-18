@@ -3,7 +3,7 @@
 /**
  * Benchmark related modules.
  */
-var benchmark: Array = require('benchmark');
+var benchmark: any[] = require('benchmark');
 
 /**
  * Preparation code.

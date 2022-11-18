@@ -10,13 +10,13 @@ import EE from 'event-emitter';
 import FE from 'fastemitter';
 import Master from '../../';
 
-var ctx: Object = { foo: 'bar' };
+var ctx: object = { foo: 'bar' };
 
 function handle(): Void {
   if (arguments.length > 100) console.log('damn');
 }
 
-var ee1: Object = new EventEmitter1()
+var ee1: object = new EventEmitter1()
   , ee2: HTMLElement = new EventEmitter2()
   , ee3: HTMLElement = new EventEmitter3()
   , master: HTMLElement = new Master()

@@ -34,8 +34,8 @@ import pubsuffix from './pubsuffix-psl';
 // Gives the permutation of all possible domainMatch()es of a given domain. The
 // array is in shortest-to-longest order.  Handy for indexing.
 
-function permuteDomain(domain: String, allowSpecialUseDomain: String): Array {
-  const pubSuf: Array = pubsuffix.getPublicSuffix(domain, {
+function permuteDomain(domain: string, allowSpecialUseDomain: string): any[] {
+  const pubSuf: any[] = pubsuffix.getPublicSuffix(domain, {
     allowSpecialUseDomain: allowSpecialUseDomain
   });
 
@@ -51,10 +51,10 @@ function permuteDomain(domain: String, allowSpecialUseDomain: String): Array {
     domain = domain.slice(0, -1);
   }
 
-  const prefix: String = domain.slice(0, -(pubSuf.length + 1)); // ".example.com"
-  const parts: Array = prefix.split(".").reverse();
-  let cur: String = pubSuf;
-  const permutations: Array = [cur];
+  const prefix: string = domain.slice(0, -(pubSuf.length + 1)); // ".example.com"
+  const parts: any[] = prefix.split(".").reverse();
+  let cur: string = pubSuf;
+  const permutations: any[] = [cur];
   while (parts.length) {
     cur = `${parts.shift()}.${cur}`;
     permutations.push(cur);

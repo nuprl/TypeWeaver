@@ -6,13 +6,13 @@ import EventEmitter3 from 'eventemitter3';
 import FE from 'fastemitter';
 import Master from '../../';
 
-var MAX_LISTENERS: Number = Math.pow(2, 32) - 1;
+var MAX_LISTENERS: number = Math.pow(2, 32) - 1;
 
 function handle(): Void {
   if (arguments.length > 100) console.log('damn');
 }
 
-var ee1: Object = new EventEmitter1()
+var ee1: object = new EventEmitter1()
   , ee3: HTMLElement = new EventEmitter3()
   , master: HTMLElement = new Master()
   , fe: HTMLElement = new FE();

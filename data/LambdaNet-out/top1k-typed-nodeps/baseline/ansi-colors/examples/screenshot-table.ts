@@ -1,10 +1,10 @@
 'use strict';
 
 const table: Function = require('text-table');
-const colors: Array = require('..');
-const styles: Array = colors.styles;
-let arr: Array = [[]];
-let idx: Number = 0;
+const colors: any[] = require('..');
+const styles: any[] = colors.styles;
+let arr: any[] = [[]];
+let idx: number = 0;
 
 /**
  * this is inspired by and modified from the
@@ -12,7 +12,7 @@ let idx: Number = 0;
  */
 
 for (const key of Object.keys(styles)) {
-  let prop: String = key;
+  let prop: string = key;
 
   if (key === 'reset' || key === 'hidden' || key === 'grey' || key === 'verbose') {
     continue;
@@ -33,5 +33,5 @@ for (const key of Object.keys(styles)) {
   }
 }
 
-const stringLength: Function = (str: String) => colors.unstyle(str).length;
+const stringLength: Function = (str: string) => colors.unstyle(str).length;
 console.log(table(arr, { stringLength }))

@@ -1,7 +1,7 @@
 'use strict';
 
-export default function repeat(val: String, amount: Number): String {
-  var str: String = '';
+export default function repeat(val: string, amount: number): string {
+  var str: string = '';
   while (amount--) {
     str += val;
   }

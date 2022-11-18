@@ -1,7 +1,7 @@
 'use strict';
 
-export const utils: String = require('./des/utils');
-export const Cipher: String = require('./des/cipher');
-export const DES: String = require('./des/des');
-export const CBC: String = require('./des/cbc');
-export const EDE: String = require('./des/ede');
+export const utils: string = require('./des/utils');
+export const Cipher: string = require('./des/cipher');
+export const DES: string = require('./des/des');
+export const CBC: string = require('./des/cbc');
+export const EDE: string = require('./des/ede');

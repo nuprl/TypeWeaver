@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 
-let isDockerCached: Boolean;
+let isDockerCached: boolean;
 
-function hasDockerEnv(): Boolean {
+function hasDockerEnv(): boolean {
 	try {
 		fs.statSync('/.dockerenv');
 		return true;
@@ -11,7 +11,7 @@ function hasDockerEnv(): Boolean {
 	}
 }
 
-function hasDockerCGroup(): Boolean {
+function hasDockerCGroup(): boolean {
 	try {
 		return fs.readFileSync('/proc/self/cgroup', 'utf8').includes('docker');
 	} catch {
@@ -19,7 +19,7 @@ function hasDockerCGroup(): Boolean {
 	}
 }
 
-export default function isDocker(): Boolean {
+export default function isDocker(): boolean {
 	// TODO: Use `??=` when targeting Node.js 16.
 	if (isDockerCached === undefined) {
 		isDockerCached = hasDockerEnv() || hasDockerCGroup();

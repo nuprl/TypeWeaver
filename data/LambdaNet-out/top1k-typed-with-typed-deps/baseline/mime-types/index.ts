@@ -12,7 +12,7 @@
  * @private
  */
 
-var db: Object = require('mime-db')
+var db: object = require('mime-db')
 var extname: Function = require('path').extname
 
 /**
@@ -46,13 +46,13 @@ populateMaps(exports.extensions, exports.types)
  * @return {boolean|string}
  */
 
-function charset (type: String): Boolean {
+function charset (type: string): boolean {
   if (!type || typeof type !== 'string') {
     return false
   }
 
   // TODO: use media-typer
-  var match: Object = EXTRACT_TYPE_REGEXP.exec(type)
+  var match: object = EXTRACT_TYPE_REGEXP.exec(type)
   var mime: HTMLElement = match && db[match[1].toLowerCase()]
 
   if (mime && mime.charset) {
@@ -74,13 +74,13 @@ function charset (type: String): Boolean {
  * @return {boolean|string}
  */
 
-function contentType (str: String): Boolean {
+function contentType (str: string): boolean {
   // TODO: should this even be in this module?
   if (!str || typeof str !== 'string') {
     return false
   }
 
-  var mime: String = str.indexOf('/') === -1
+  var mime: string = str.indexOf('/') === -1
     ? exports.lookup(str)
     : str
 
@@ -90,7 +90,7 @@ function contentType (str: String): Boolean {
 
   // TODO: use content-type or other module
   if (mime.indexOf('charset') === -1) {
-    var charset: String = exports.charset(mime)
+    var charset: string = exports.charset(mime)
     if (charset) mime += '; charset=' + charset.toLowerCase()
   }
 
@@ -104,16 +104,16 @@ function contentType (str: String): Boolean {
  * @return {boolean|string}
  */
 
-function extension (type: String): Boolean {
+function extension (type: string): boolean {
   if (!type || typeof type !== 'string') {
     return false
   }
 
   // TODO: use media-typer
-  var match: Object = EXTRACT_TYPE_REGEXP.exec(type)
+  var match: object = EXTRACT_TYPE_REGEXP.exec(type)
 
   // get extensions
-  var exts: Array = match && exports.extensions[match[1].toLowerCase()]
+  var exts: any[] = match && exports.extensions[match[1].toLowerCase()]
 
   if (!exts || !exts.length) {
     return false
@@ -129,13 +129,13 @@ function extension (type: String): Boolean {
  * @return {boolean|string}
  */
 
-function lookup (path: String): Boolean {
+function lookup (path: string): boolean {
   if (!path || typeof path !== 'string') {
     return false
   }
 
   // get the extension ("ext" or ".ext" or full path)
-  var extension: String = extname('x.' + path)
+  var extension: string = extname('x.' + path)
     .toLowerCase()
     .substr(1)
 
@@ -151,13 +151,13 @@ function lookup (path: String): Boolean {
  * @private
  */
 
-function populateMaps (extensions: Object, types: Object): Void {
+function populateMaps (extensions: object, types: object): Void {
   // source preference (least -> most)
-  var preference: Array = ['nginx', 'apache', undefined, 'iana']
+  var preference: any[] = ['nginx', 'apache', undefined, 'iana']
 
-  Object.keys(db).forEach(function forEachMimeType (type: String): Void {
+  Object.keys(db).forEach(function forEachMimeType (type: string): Void {
     var mime: HTMLElement = db[type]
-    var exts: Array = mime.extensions
+    var exts: any[] = mime.extensions
 
     if (!exts || !exts.length) {
       return
@@ -168,11 +168,11 @@ function populateMaps (extensions: Object, types: Object): Void {
 
     // extension -> mime
     for (var i = 0; i < exts.length; i++) {
-      var extension: String = exts[i]
+      var extension: string = exts[i]
 
       if (types[extension]) {
-        var from: Number = preference.indexOf(db[types[extension]].source)
-        var to: Number = preference.indexOf(mime.source)
+        var from: number = preference.indexOf(db[types[extension]].source)
+        var to: number = preference.indexOf(mime.source)
 
         if (types[extension] !== 'application/octet-stream' &&
           (from > to || (from === to && types[extension].substr(0, 12) === 'application/'))) {

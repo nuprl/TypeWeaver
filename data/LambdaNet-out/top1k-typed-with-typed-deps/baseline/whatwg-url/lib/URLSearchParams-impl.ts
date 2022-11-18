@@ -1,5 +1,5 @@
 "use strict";
-const urlencoded: String = require("./urlencoded");
+const urlencoded: string = require("./urlencoded");
 
 exports.implementation = class URLSearchParamsImpl {
   constructor(globalObject, constructorArgs, { doNotStripQMark = false }) {

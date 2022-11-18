@@ -21,8 +21,8 @@ import toString from './toString.js'
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-const camelCase: Function = (string: String) => (
-  words(toString(string).replace(/['\u2019]/g, '')).reduce((result: Number, word: String, index: Boolean) => {
+const camelCase: Function = (string: string) => (
+  words(toString(string).replace(/['\u2019]/g, '')).reduce((result: number, word: string, index: boolean) => {
     word = word.toLowerCase()
     return result + (index ? upperFirst(word) : word)
   }, '')

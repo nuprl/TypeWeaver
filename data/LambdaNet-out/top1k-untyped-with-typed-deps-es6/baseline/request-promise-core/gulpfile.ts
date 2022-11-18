@@ -13,7 +13,7 @@ import chai from 'chai';
 global.expect = chai.expect;
 
 
-var paths: Object = {
+var paths: object = {
     libJsFiles: ['./configure/**/*.js', './lib/**/*.js', './errors.js'],
     specFiles: './test/spec/**/*.js',
     fixtureFiles: './test/fixtures/**/*.js',
@@ -43,7 +43,7 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('validate', function (done: String) {
+gulp.task('validate', function (done: string) {
     runSequence('lint', 'test', done);
 });
 
@@ -64,7 +64,7 @@ gulp.task('lint', function () {
 
 gulp.task('test', ['clean'], function (done: Function) {
 
-    var coverageVariable: String = '$$cov_' + new Date().getTime() + '$$';
+    var coverageVariable: string = '$$cov_' + new Date().getTime() + '$$';
 
     gulp.src(paths.libJsFiles)
         .pipe(istanbul({
@@ -102,15 +102,15 @@ gulp.task('test-without-coverage', function () {
 
 gulp.task('clean', ['clean-coverage']);
 
-gulp.task('clean-coverage', function (done: Number) {
+gulp.task('clean-coverage', function (done: number) {
     rimraf('./coverage', done);
 });
 
-gulp.task('ci', function (done: Number) {
+gulp.task('ci', function (done: number) {
     runSequence('validate', 'coveralls', 'test-without-coverage', done);
 });
 
-gulp.task('ci-no-cov', function (done: String) {
+gulp.task('ci-no-cov', function (done: string) {
     runSequence('validate', 'test-without-coverage', done);
 });
 

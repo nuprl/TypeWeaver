@@ -1,4 +1,4 @@
-export default function indentString(string: String, count: String = 1, options: Object = {}): String {
+export default function indentString(string: string, count: string = 1, options: object = {}): string {
 	const {
 		indent = ' ',
 		includeEmptyLines = false
@@ -32,7 +32,7 @@ export default function indentString(string: String, count: String = 1, options:
 		return string;
 	}
 
-	const regex: Number = includeEmptyLines ? /^/gm : /^(?!\s*$)/gm;
+	const regex: number = includeEmptyLines ? /^/gm : /^(?!\s*$)/gm;
 
 	return string.replace(regex, indent.repeat(count));
 }

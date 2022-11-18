@@ -5,7 +5,7 @@ import isPrototype from '../prototype/is';
 // In theory we could rely on Symbol.toStringTag directly,
 // still early native implementation (e.g. in FF) predated symbols
 var objectToString: Function = Object.prototype.toString
-  , objectTaggedString: Number = objectToString.call(Promise.resolve());
+  , objectTaggedString: number = objectToString.call(Promise.resolve());
 
 export default function (value: Promise) {
 	if (!value) return false;

@@ -13,7 +13,7 @@
  * @api public
  */
 
-exports = module.exports = function(a: Object, b: Object){
+exports = module.exports = function(a: object, b: object){
   if (a && b) {
     for (var key in b) {
       a[key] = b[key];

@@ -2,7 +2,7 @@
 
 const { Suite } = require('benchmark');
 const { green } = require('ansi-colors');
-const argv: Object = require('minimist')(process.argv.slice(2));
+const argv: object = require('minimist')(process.argv.slice(2));
 const mm: HTMLElement = require('minimatch');
 const mi: HTMLElement = require('..');
 
@@ -10,13 +10,13 @@ const mi: HTMLElement = require('..');
  * Setup
  */
 
-const cycle: Function = (e: HTMLElement, newline: Boolean) => {
+const cycle: Function = (e: HTMLElement, newline: boolean) => {
   process.stdout.write(`\u001b[G  ${e.target}${newline ? '\n' : ''}`);
 };
 
-const bench: Function = (name: String, options: Object) => {
-  const config: Object = { name, ...options };
-  const suite: Object = new Suite(config);
+const bench: Function = (name: string, options: object) => {
+  const config: object = { name, ...options };
+  const suite: object = new Suite(config);
   const add: Function = suite.add.bind(suite);
   suite.on('error', console.error);
 
@@ -26,12 +26,12 @@ const bench: Function = (name: String, options: Object) => {
   }
 
   console.log(`\n# ${config.name}`);
-  suite.add = (key: String, fn: String, opts: Function) => {
+  suite.add = (key: string, fn: string, opts: Function) => {
     if (typeof fn !== 'function') opts = fn;
 
     add(key, {
-      onCycle: (e: Array) => cycle(e),
-      onComplete: (e: String) => cycle(e, true),
+      onCycle: (e: any[]) => cycle(e),
+      onComplete: (e: string) => cycle(e, true),
       fn,
       ...opts
     });

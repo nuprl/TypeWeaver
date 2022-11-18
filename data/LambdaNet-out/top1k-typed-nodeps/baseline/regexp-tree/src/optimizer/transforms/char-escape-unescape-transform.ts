@@ -30,7 +30,7 @@ module.exports = {
   },
 };
 
-function shouldUnescape(path: String, hasXFlag: String): Boolean {
+function shouldUnescape(path: string, hasXFlag: string): boolean {
   const {
     node: {value},
     index,
@@ -48,7 +48,7 @@ function shouldUnescape(path: String, hasXFlag: String): Boolean {
 /**
  * \], \\, \^, \-
  */
-function preservesInCharClass(value: String, index: Number, parent: Object): Boolean {
+function preservesInCharClass(value: string, index: number, parent: object): boolean {
   if (value === '^') {
     // Avoid [\^a] turning into [^a]
     return index === 0 && !parent.negative;
@@ -60,7 +60,7 @@ function preservesInCharClass(value: String, index: Number, parent: Object): Boo
   return /[\]\\]/.test(value);
 }
 
-function preservesEscape(value: String, index: String, parent: String, hasXFlag: Number): Boolean {
+function preservesEscape(value: string, index: string, parent: string, hasXFlag: number): boolean {
   if (value === '{') {
     return preservesOpeningCurlyBraceEscape(index, parent);
   }
@@ -76,8 +76,8 @@ function preservesEscape(value: String, index: String, parent: String, hasXFlag:
   return /[*[()+?^$./\\|]/.test(value);
 }
 
-function consumeNumbers(startIndex: Number, parent: Object, rtl: Boolean): Number {
-  let i: Number = startIndex;
+function consumeNumbers(startIndex: number, parent: object, rtl: boolean): number {
+  let i: number = startIndex;
   let siblingNode: NodePath =
     (rtl ? i >= 0 : i < parent.expressions.length) && parent.expressions[i];
 
@@ -96,7 +96,7 @@ function consumeNumbers(startIndex: Number, parent: Object, rtl: Boolean): Numbe
   return Math.abs(startIndex - i);
 }
 
-function isSimpleChar(node: NodePath, value: Number): Boolean {
+function isSimpleChar(node: NodePath, value: number): boolean {
   return (
     node &&
     node.type === 'Char' &&
@@ -106,14 +106,14 @@ function isSimpleChar(node: NodePath, value: Number): Boolean {
   );
 }
 
-function preservesOpeningCurlyBraceEscape(index: Number, parent: Object): Boolean {
+function preservesOpeningCurlyBraceEscape(index: number, parent: object): boolean {
   // (?:\{) -> (?:{)
   if (index == null) {
     return false;
   }
 
-  let nbFollowingNumbers: String = consumeNumbers(index + 1, parent);
-  let i: String = index + nbFollowingNumbers + 1;
+  let nbFollowingNumbers: string = consumeNumbers(index + 1, parent);
+  let i: string = index + nbFollowingNumbers + 1;
   let nextSiblingNode: NodePath = i < parent.expressions.length && parent.expressions[i];
 
   if (nbFollowingNumbers) {
@@ -134,14 +134,14 @@ function preservesOpeningCurlyBraceEscape(index: Number, parent: Object): Boolea
   return false;
 }
 
-function preservesClosingCurlyBraceEscape(index: Number, parent: Object): Boolean {
+function preservesClosingCurlyBraceEscape(index: number, parent: object): boolean {
   // (?:\{) -> (?:{)
   if (index == null) {
     return false;
   }
 
-  let nbPrecedingNumbers: Number = consumeNumbers(index - 1, parent, true);
-  let i: Number = index - nbPrecedingNumbers - 1;
+  let nbPrecedingNumbers: number = consumeNumbers(index - 1, parent, true);
+  let i: number = index - nbPrecedingNumbers - 1;
   let previousSiblingNode: NodePath = i >= 0 && parent.expressions[i];
 
   // Avoid {3\} turning into {3}

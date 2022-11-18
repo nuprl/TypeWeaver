@@ -28,7 +28,7 @@ function deprecate (fn: Function, msg: Function): Function {
     return fn;
   }
 
-  var warned: Boolean = false;
+  var warned: boolean = false;
   function deprecated(): Promise {
     if (!warned) {
       if (config('throwDeprecation')) {
@@ -54,14 +54,14 @@ function deprecate (fn: Function, msg: Function): Function {
  * @api private
  */
 
-function config (name: String): Boolean {
+function config (name: string): boolean {
   // accessing global.localStorage can trigger a DOMException in sandboxed iframes
   try {
     if (!global.localStorage) return false;
   } catch (_) {
     return false;
   }
-  var val: String = global.localStorage[name];
+  var val: string = global.localStorage[name];
   if (null == val) return false;
   return String(val).toLowerCase() === 'true';
 }

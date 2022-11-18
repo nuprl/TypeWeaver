@@ -1,32 +1,32 @@
 "use strict";
 
-exports.removeLeadingAndTrailingHTTPWhitespace = (string: String) => {
+exports.removeLeadingAndTrailingHTTPWhitespace = (string: string) => {
   return string.replace(/^[ \t\n\r]+/u, "").replace(/[ \t\n\r]+$/u, "");
 };
 
-exports.removeTrailingHTTPWhitespace = (string: String) => {
+exports.removeTrailingHTTPWhitespace = (string: string) => {
   return string.replace(/[ \t\n\r]+$/u, "");
 };
 
-exports.isHTTPWhitespaceChar = (char: Number) => {
+exports.isHTTPWhitespaceChar = (char: number) => {
   return char === " " || char === "\t" || char === "\n" || char === "\r";
 };
 
-exports.solelyContainsHTTPTokenCodePoints = (string: String) => {
+exports.solelyContainsHTTPTokenCodePoints = (string: string) => {
   return /^[-!#$%&'*+.^_`|~A-Za-z0-9]*$/u.test(string);
 };
 
-exports.soleyContainsHTTPQuotedStringTokenCodePoints = (string: String) => {
+exports.soleyContainsHTTPQuotedStringTokenCodePoints = (string: string) => {
   return /^[\t\u0020-\u007E\u0080-\u00FF]*$/u.test(string);
 };
 
-exports.asciiLowercase = (string: String) => {
-  return string.replace(/[A-Z]/ug, (l: String) => l.toLowerCase());
+exports.asciiLowercase = (string: string) => {
+  return string.replace(/[A-Z]/ug, (l: string) => l.toLowerCase());
 };
 
 // This variant only implements it with the extract-value flag set.
-exports.collectAnHTTPQuotedString = (input: Array, position: Number) => {
-  let value: String = "";
+exports.collectAnHTTPQuotedString = (input: any[], position: number) => {
+  let value: string = "";
 
   position++;
 
@@ -40,7 +40,7 @@ exports.collectAnHTTPQuotedString = (input: Array, position: Number) => {
       break;
     }
 
-    const quoteOrBackslash: String = input[position];
+    const quoteOrBackslash: string = input[position];
     ++position;
 
     if (quoteOrBackslash === "\\") {

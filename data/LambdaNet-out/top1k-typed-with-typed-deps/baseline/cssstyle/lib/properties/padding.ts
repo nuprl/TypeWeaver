@@ -1,10 +1,10 @@
 'use strict';
 
-var parsers: Array = require('../parsers.js');
-var TYPES: Object = parsers.TYPES;
+var parsers: any[] = require('../parsers.js');
+var TYPES: object = parsers.TYPES;
 
-var isValid: Function = function(v: String) {
-  var type: String = parsers.valueType(v);
+var isValid: Function = function(v: string) {
+  var type: string = parsers.valueType(v);
   return (
     type === TYPES.LENGTH ||
     type === TYPES.PERCENT ||
@@ -12,7 +12,7 @@ var isValid: Function = function(v: String) {
   );
 };
 
-var parser: Function = function(v: Array) {
+var parser: Function = function(v: any[]) {
   return parsers.parseMeasurement(v);
 };
 
@@ -23,20 +23,20 @@ var myGlobal: Function = parsers.implicitSetter(
   function() {
     return true;
   },
-  function(v: Array) {
+  function(v: any[]) {
     return v;
   }
 );
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     if (typeof v === 'number') {
       v = String(v);
     }
     if (typeof v !== 'string') {
       return;
     }
-    var V: String = v.toLowerCase();
+    var V: string = v.toLowerCase();
     switch (V) {
       case 'inherit':
       case 'initial':

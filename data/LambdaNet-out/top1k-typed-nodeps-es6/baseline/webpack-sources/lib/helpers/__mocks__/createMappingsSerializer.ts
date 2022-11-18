@@ -4,17 +4,17 @@ const createMappingsSerializer: Function = jest.requireActual(
 	"../createMappingsSerializer"
 );
 
-export default (options: Object) => {
+export default (options: object) => {
 	const fn: Function = createMappingsSerializer(options);
-	let lastLine: Number = 1;
-	let lastColumn: Number = -1;
+	let lastLine: number = 1;
+	let lastColumn: number = -1;
 	return (
-		generatedLine: Number,
-		generatedColumn: Number,
-		sourceIndex: Number,
-		originalLine: Number,
-		originalColumn: Number,
-		nameIndex: Number
+		generatedLine: number,
+		generatedColumn: number,
+		sourceIndex: number,
+		originalLine: number,
+		originalColumn: number,
+		nameIndex: number
 	) => {
 		if (
 			generatedLine >= lastLine &&

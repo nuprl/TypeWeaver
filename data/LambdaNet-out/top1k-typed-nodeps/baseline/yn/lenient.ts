@@ -1,5 +1,5 @@
-const YES_MATCH_SCORE_THRESHOLD: Number = 2;
-const NO_MATCH_SCORE_THRESHOLD: Number = 1.25;
+const YES_MATCH_SCORE_THRESHOLD: number = 2;
+const NO_MATCH_SCORE_THRESHOLD: number = 1.25;
 
 const yMatch: Map = new Map([
 	[5, 0.25],
@@ -57,10 +57,10 @@ const oMatch: Map = new Map([
 	['l', 0.25],
 ]);
 
-function getYesMatchScore(value: Array): Number {
+function getYesMatchScore(value: any[]): number {
 	// eslint-disable-next-line unicorn/prevent-abbreviations
 	const [y, e, s] = value;
-	let score: Number = 0;
+	let score: number = 0;
 
 	if (yMatch.has(y)) {
 		score += yMatch.get(y);
@@ -77,9 +77,9 @@ function getYesMatchScore(value: Array): Number {
 	return score;
 }
 
-function getNoMatchScore(value: Array): Number {
+function getNoMatchScore(value: any[]): number {
 	const [n, o] = value;
-	let score: Number = 0;
+	let score: number = 0;
 
 	if (nMatch.has(n)) {
 		score += nMatch.get(n);
@@ -92,7 +92,7 @@ function getNoMatchScore(value: Array): Number {
 	return score;
 }
 
-export default function lenient(input: HTMLInputElement, default_: Boolean): Boolean {
+export default function lenient(input: HTMLInputElement, default_: boolean): boolean {
 	if (getYesMatchScore(input) >= YES_MATCH_SCORE_THRESHOLD) {
 		return true;
 	}

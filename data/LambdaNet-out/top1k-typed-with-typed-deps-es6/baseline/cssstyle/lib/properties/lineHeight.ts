@@ -4,7 +4,7 @@ import { TYPES } from '../parsers';
 import { valueType } from '../parsers';
 
 export const isValid = function isValid(v) {
-  var type: String = valueType(v);
+  var type: string = valueType(v);
   return (
     (type === TYPES.KEYWORD && v.toLowerCase() === 'normal') ||
     v.toLowerCase() === 'inherit' ||

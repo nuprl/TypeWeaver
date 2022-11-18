@@ -1,26 +1,15 @@
-callBound.ts(8,82): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-callBound.ts(9,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-callBound.ts(9,38): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(name: keyof Intrinsics, allowMissing?: false): string | number | Object | Function | String | Number | Boolean | RegExp | ... 463 more ... | ((value: object) => WeakSet<...>)', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
-  Overload 2 of 3, '(name: keyof Intrinsics, allowMissing?: boolean): string | number | Object | Function | String | Number | Boolean | ... 464 more ... | ((value: object) => WeakSet<...>)', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
-  Overload 3 of 3, '(name: string, allowMissing?: boolean): unknown', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(6,5): error TS2322: Type '(this: Function, thisArg: any, argArray?: any) => any' is not assignable to type 'String'.
-index.ts(7,5): error TS2322: Type '(this: Function, thisArg: any, ...argArray: any[]) => any' is not assignable to type 'String'.
+callBound.ts(6,5): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+callBound.ts(6,35): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'any[]'.
+  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+callBound.ts(9,6): error TS2322: Type 'unknown' is not assignable to type 'any[]'.
+index.ts(6,5): error TS2322: Type '(this: Function, thisArg: any, argArray?: any) => any' is not assignable to type 'string'.
+index.ts(7,5): error TS2322: Type '(this: Function, thisArg: any, ...argArray: any[]) => any' is not assignable to type 'string'.
 index.ts(8,82): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(func: (this: String, ...args: unknown[]) => unknown, thisArg: String): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '(this: String, ...args: unknown[]) => unknown'.
-      Type 'String' provides no match for the signature '(this: String, ...args: unknown[]): unknown'.
+  Overload 1 of 2, '(func: (this: string, ...args: unknown[]) => unknown, thisArg: string): (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type '(this: string, ...args: unknown[]) => unknown'.
   Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
-      Type 'String' provides no match for the signature 'new (...args: unknown[]): unknown'.
-index.ts(23,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(23,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(24,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(26,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+    Argument of type 'string' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+index.ts(27,12): error TS2339: Property 'configurable' does not exist on type 'any[]'.
 index.ts(39,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(46,5): error TS1184: Modifiers cannot appear here.
 

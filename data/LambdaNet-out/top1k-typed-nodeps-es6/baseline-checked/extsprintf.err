@@ -1,43 +1,20 @@
 lib/extsprintf.ts(47,6): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/extsprintf.ts(47,35): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string | RegExp): RegExp', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 3 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/extsprintf.ts(50,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/extsprintf.ts(55,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extsprintf.ts(73,21): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
-lib/extsprintf.ts(105,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/extsprintf.ts(107,13): error TS2339: Property 'match' does not exist on type 'Element'.
 lib/extsprintf.ts(117,13): error TS2339: Property 'match' does not exist on type 'Element'.
 lib/extsprintf.ts(120,13): error TS2339: Property 'match' does not exist on type 'Element'.
 lib/extsprintf.ts(123,13): error TS2339: Property 'match' does not exist on type 'Element'.
-lib/extsprintf.ts(134,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(138,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/extsprintf.ts(141,4): error TS2322: Type 'string' is not assignable to type 'Boolean'.
-  Type 'string' is not assignable to type 'Boolean'.
-lib/extsprintf.ts(142,11): error TS2365: Operator '+' cannot be applied to types 'Boolean' and 'String'.
-lib/extsprintf.ts(147,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(153,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/extsprintf.ts(157,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(166,2): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(141,4): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+lib/extsprintf.ts(157,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'object'.
 lib/extsprintf.ts(180,22): error TS2304: Cannot find name 'Void'.
-lib/extsprintf.ts(181,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/extsprintf.ts(188,17): error TS2339: Property 'write' does not exist on type 'Number'.
-lib/extsprintf.ts(197,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(199,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(214,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/extsprintf.ts(188,17): error TS2339: Property 'write' does not exist on type 'number'.
 lib/extsprintf.ts(214,58): error TS2554: Expected 1 arguments, but got 2.
-lib/extsprintf.ts(217,2): error TS2322: Type 'string' is not assignable to type 'Number'.
+lib/extsprintf.ts(217,2): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/extsprintf.ts(219,9): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
 lib/extsprintf.ts(219,29): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
 lib/extsprintf.ts(220,24): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
-lib/extsprintf.ts(222,4): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/extsprintf.ts(226,2): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/extsprintf.ts(222,4): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/extsprintf.ts(222,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/extsprintf.ts(226,2): error TS2322: Type 'number' is not assignable to type 'string'.
 

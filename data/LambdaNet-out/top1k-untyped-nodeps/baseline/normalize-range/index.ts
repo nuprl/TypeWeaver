@@ -8,23 +8,23 @@ module.exports = {
   name: name
 };
 
-function wrapRange(min: Number, max: Number, value: Number): String {
-  var maxLessMin: Number = max - min;
+function wrapRange(min: number, max: number, value: number): string {
+  var maxLessMin: number = max - min;
   return ((value - min) % maxLessMin + maxLessMin) % maxLessMin + min;
 }
 
-function limitRange(min: Number, max: Number, value: Number): Number {
+function limitRange(min: number, max: number, value: number): number {
   return Math.max(min, Math.min(max, value));
 }
 
-function validateRange(min: String, max: String, value: String, minExclusive: Number, maxExclusive: String): String {
+function validateRange(min: string, max: string, value: string, minExclusive: number, maxExclusive: string): string {
   if (!testRange(min, max, value, minExclusive, maxExclusive)) {
     throw new Error(value + ' is outside of range [' + min + ',' + max + ')');
   }
   return value;
 }
 
-function testRange(min: Number, max: Number, value: Number, minExclusive: Boolean, maxExclusive: Boolean): Boolean {
+function testRange(min: number, max: number, value: number, minExclusive: boolean, maxExclusive: boolean): boolean {
   return !(
        value < min ||
        value > max ||
@@ -33,19 +33,19 @@ function testRange(min: Number, max: Number, value: Number, minExclusive: Boolea
   );
 }
 
-function name(min: String, max: Number, minExcl: Boolean, maxExcl: Boolean): String {
+function name(min: string, max: number, minExcl: boolean, maxExcl: boolean): string {
   return (minExcl ? '(' : '[') + min + ',' + max + (maxExcl ? ')' : ']');
 }
 
-function curry(min: String, max: String, minExclusive: String, maxExclusive: String): Object {
-  var boundNameFn: String = name.bind(null, min, max, minExclusive, maxExclusive);
+function curry(min: string, max: string, minExclusive: string, maxExclusive: string): object {
+  var boundNameFn: string = name.bind(null, min, max, minExclusive, maxExclusive);
   return {
     wrap: wrapRange.bind(null, min, max),
     limit: limitRange.bind(null, min, max),
-    validate: function(value: String) {
+    validate: function(value: string) {
       return validateRange(min, max, value, minExclusive, maxExclusive);
     },
-    test: function(value: String) {
+    test: function(value: string) {
       return testRange(min, max, value, minExclusive, maxExclusive);
     },
     toString: boundNameFn,

@@ -1,19 +1,18 @@
-buffer-stream.ts(7,9): error TS2339: Property 'array' does not exist on type 'Object'.
-buffer-stream.ts(8,7): error TS2339: Property 'encoding' does not exist on type 'Object'.
-buffer-stream.ts(22,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-buffer-stream.ts(29,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-buffer-stream.ts(31,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-buffer-stream.ts(46,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(7,62): error TS2339: Property 'pipeline' does not exist on type 'String'.
+buffer-stream.ts(7,9): error TS2339: Property 'array' does not exist on type '{}'.
+buffer-stream.ts(8,7): error TS2339: Property 'encoding' does not exist on type '{}'.
+buffer-stream.ts(25,10): error TS2339: Property 'setEncoding' does not exist on type 'any[]'.
+buffer-stream.ts(31,9): error TS2339: Property 'on' does not exist on type 'any[]'.
+buffer-stream.ts(41,9): error TS2339: Property 'getBufferedValue' does not exist on type 'any[]'.
+buffer-stream.ts(49,9): error TS2339: Property 'getBufferedLength' does not exist on type 'any[]'.
+index.ts(7,62): error TS2339: Property 'pipeline' does not exist on type 'string'.
 index.ts(16,66): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<HTMLElement>'?
-index.ts(26,9): error TS2339: Property 'maxBuffer' does not exist on type 'Object'.
-index.ts(27,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(33,11): error TS2339: Property 'bufferedData' does not exist on type 'Object'.
-index.ts(59,72): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Boolean'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    The types returned by 'valueOf()' are incompatible between these types.
-      Type 'Object' is not assignable to type 'boolean'.
-index.ts(60,71): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Boolean'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(26,9): error TS2339: Property 'maxBuffer' does not exist on type '{}'.
+index.ts(32,24): error TS2339: Property 'getBufferedLength' does not exist on type 'any[]'.
+index.ts(33,11): error TS2339: Property 'bufferedData' does not exist on type 'object'.
+index.ts(33,33): error TS2339: Property 'getBufferedValue' does not exist on type 'any[]'.
+index.ts(48,10): error TS2339: Property 'on' does not exist on type 'any[]'.
+index.ts(49,15): error TS2339: Property 'getBufferedLength' does not exist on type 'any[]'.
+index.ts(55,16): error TS2339: Property 'getBufferedValue' does not exist on type 'any[]'.
+index.ts(59,72): error TS2345: Argument of type 'object' is not assignable to parameter of type 'boolean'.
+index.ts(60,71): error TS2345: Argument of type 'object' is not assignable to parameter of type 'boolean'.
 

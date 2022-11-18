@@ -2,21 +2,21 @@
 
 'use strict'
 
-var buffer: String = require('buffer')
+var buffer: string = require('buffer')
 var Buffer: Function = buffer.Buffer
-var safer: Object = require('./safer.js')
-var Safer: Object = safer.Buffer
+var safer: object = require('./safer.js')
+var Safer: object = safer.Buffer
 
-var dangerous: Object = {}
+var dangerous: object = {}
 
-var key: String
+var key: string
 
 for (key in safer) {
   if (!safer.hasOwnProperty(key)) continue
   dangerous[key] = safer[key]
 }
 
-var Dangereous: Object = dangerous.Buffer = {}
+var Dangereous: object = dangerous.Buffer = {}
 
 // Copy Safer API
 for (key in Safer) {
@@ -32,7 +32,7 @@ for (key in Buffer) {
 }
 
 if (!Dangereous.allocUnsafe) {
-  Dangereous.allocUnsafe = function (size: Number) {
+  Dangereous.allocUnsafe = function (size: number) {
     if (typeof size !== 'number') {
       throw new TypeError('The "size" argument must be of type number. Received type ' + typeof size)
     }
@@ -44,7 +44,7 @@ if (!Dangereous.allocUnsafe) {
 }
 
 if (!Dangereous.allocUnsafeSlow) {
-  Dangereous.allocUnsafeSlow = function (size: Number) {
+  Dangereous.allocUnsafeSlow = function (size: number) {
     if (typeof size !== 'number') {
       throw new TypeError('The "size" argument must be of type number. Received type ' + typeof size)
     }

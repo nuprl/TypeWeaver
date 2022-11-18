@@ -1,5 +1,5 @@
 /** Used to stand-in for `undefined` hash values. */
-const HASH_UNDEFINED: String = '__lodash_hash_undefined__'
+const HASH_UNDEFINED: string = '__lodash_hash_undefined__'
 
 class Hash {
 
@@ -11,12 +11,12 @@ class Hash {
    * @param {Array} [entries] The key-value pairs to cache.
    */
   constructor(entries) {
-    let index: Number = -1
-    const length: Number = entries == null ? 0 : entries.length
+    let index: number = -1
+    const length: number = entries == null ? 0 : entries.length
 
     this.clear()
     while (++index < length) {
-      const entry: Object = entries[index]
+      const entry: object = entries[index]
       this.set(entry[0], entry[1])
     }
   }
@@ -39,7 +39,7 @@ class Hash {
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
   delete(key) {
-    const result: Boolean = this.has(key) && delete this.__data__[key]
+    const result: boolean = this.has(key) && delete this.__data__[key]
     this.size -= result ? 1 : 0
     return result
   }
@@ -52,8 +52,8 @@ class Hash {
    * @returns {*} Returns the entry value.
    */
   get(key) {
-    const data: Object = this.__data__
-    const result: String = data[key]
+    const data: object = this.__data__
+    const result: string = data[key]
     return result === HASH_UNDEFINED ? undefined : result
   }
 
@@ -65,7 +65,7 @@ class Hash {
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
   has(key) {
-    const data: Object = this.__data__
+    const data: object = this.__data__
     return data[key] !== undefined
   }
 
@@ -78,7 +78,7 @@ class Hash {
    * @returns {Object} Returns the hash instance.
    */
   set(key, value) {
-    const data: Object = this.__data__
+    const data: object = this.__data__
     this.size += this.has(key) ? 0 : 1
     data[key] = value === undefined ? HASH_UNDEFINED : value
     return this

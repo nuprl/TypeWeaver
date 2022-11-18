@@ -1,7 +1,7 @@
 import basePropertyOf from './basePropertyOf.js'
 
 /** Used to map Latin Unicode letters to basic Latin letters. */
-const deburredLetters: Object = {
+const deburredLetters: object = {
   // Latin-1 Supplement block.
   '\xc0': 'A',  '\xc1': 'A', '\xc2': 'A', '\xc3': 'A', '\xc4': 'A', '\xc5': 'A',
   '\xe0': 'a',  '\xe1': 'a', '\xe2': 'a', '\xe3': 'a', '\xe4': 'a', '\xe5': 'a',
@@ -66,6 +66,6 @@ const deburredLetters: Object = {
  * @param {string} letter The matched letter to deburr.
  * @returns {string} Returns the deburred letter.
  */
-const deburrLetter: Array = basePropertyOf(deburredLetters)
+const deburrLetter: any[] = basePropertyOf(deburredLetters)
 
 export default deburrLetter

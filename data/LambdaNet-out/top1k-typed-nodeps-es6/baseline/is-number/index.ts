@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function(num: Number) {
+export default function(num: number) {
   if (typeof num === 'number') {
     return num - num === 0;
   }

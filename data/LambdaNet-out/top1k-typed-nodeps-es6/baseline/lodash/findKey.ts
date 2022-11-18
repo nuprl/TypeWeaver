@@ -20,13 +20,13 @@
  * findKey(users, ({ age }) => age < 40)
  * // => 'barney' (iteration order is not guaranteed)
  */
-function findKey(object: Object, predicate: Function): Object {
+function findKey(object: object, predicate: Function): object {
   let result: Function
   if (object == null) {
     return result
   }
-  Object.keys(object).some((key: String) => {
-    const value: String = object[key]
+  Object.keys(object).some((key: string) => {
+    const value: string = object[key]
     if (predicate(value, key, object)) {
       result = key
       return true

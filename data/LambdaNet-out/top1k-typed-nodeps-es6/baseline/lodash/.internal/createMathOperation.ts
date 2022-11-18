@@ -10,7 +10,7 @@ import baseToString from './baseToString.js'
  * @returns {Function} Returns the new mathematical operation function.
  */
 function createMathOperation(operator: Function, defaultValue: Function): Function {
-  return (value: Number, other: Number) => {
+  return (value: number, other: number) => {
     if (value === undefined && other === undefined) {
       return defaultValue
     }

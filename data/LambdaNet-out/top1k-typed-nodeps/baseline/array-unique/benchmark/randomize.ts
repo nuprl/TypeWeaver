@@ -2,9 +2,9 @@
  * Source: http://jsperf.com/array-unique2/15
  */
 
-module.exports = function randomize(n: Number): Array {
-  var values: Array = [];
-  var rand: Number;
+module.exports = function randomize(n: number): any[] {
+  var values: any[] = [];
+  var rand: number;
   while (n--) {
     rand = Math.random() * n * 2 | 0;
     if (rand < values.length) {

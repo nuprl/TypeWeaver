@@ -1,4 +1,6 @@
-default-exclude.ts(5,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+default-exclude.ts(5,7): error TS2345: Argument of type '(extension: any[]) => any[]' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any[]'.
+  Types of parameters 'extension' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'any[]'.
 index.ts(7,2): error TS2322: Type '{ all: string[]; testExclude: string[]; instrument: string[]; checkCoverage: string[]; report: string[]; main: null[]; instrumentOnly: string[]; }' is not assignable to type 'HTMLInputElement'.
   Object literal may only specify known properties, and 'all' does not exist in type 'HTMLInputElement'.
 index.ts(22,27): error TS2339: Property 'all' does not exist on type 'HTMLInputElement'.
@@ -48,15 +50,10 @@ index.ts(372,29): error TS2339: Property 'instrument' does not exist on type 'HT
 index.ts(381,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(388,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(439,71): error TS2304: Cannot find name 'Void'.
-index.ts(450,12): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
-    Argument of type '(defaults: String, id: String) => String' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
-      Type 'String' is not assignable to type 'string'.
-        'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 3, '(callbackfn: (previousValue: String, currentValue: string, currentIndex: number, array: string[]) => String, initialValue: String): String', gave the following error.
-    Argument of type '{}' is not assignable to parameter of type 'String'.
-      Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(452,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(456,36): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(457,42): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+index.ts(464,3): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
+    Argument of type '{}' is not assignable to parameter of type 'string'.
+  Overload 2 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
+    Argument of type '{}' is not assignable to parameter of type 'string'.
 

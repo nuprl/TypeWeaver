@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const util: String = require("util");
+const util: string = require("util");
 
 const deprecateContext: Function = util.deprecate(() => {},
 "Hook.context is deprecated and will be removed");
@@ -89,7 +89,7 @@ class Hook {
 	_runRegisterInterceptors(options) {
 		for (const interceptor of this.interceptors) {
 			if (interceptor.register) {
-				const newOptions: Array = interceptor.register(options);
+				const newOptions: any[] = interceptor.register(options);
 				if (newOptions !== undefined) {
 					options = newOptions;
 				}
@@ -99,17 +99,17 @@ class Hook {
 	}
 
 	withOptions(options) {
-		const mergeOptions: Function = (opt: String) =>
+		const mergeOptions: Function = (opt: string) =>
 			Object.assign({}, options, typeof opt === "string" ? { name: opt } : opt);
 
 		return {
 			name: this.name,
-			tap: (opt: String, fn: Number) => this.tap(mergeOptions(opt), fn),
-			tapAsync: (opt: String, fn: Number) => this.tapAsync(mergeOptions(opt), fn),
-			tapPromise: (opt: String, fn: Number) => this.tapPromise(mergeOptions(opt), fn),
-			intercept: (interceptor: String) => this.intercept(interceptor),
+			tap: (opt: string, fn: number) => this.tap(mergeOptions(opt), fn),
+			tapAsync: (opt: string, fn: number) => this.tapAsync(mergeOptions(opt), fn),
+			tapPromise: (opt: string, fn: number) => this.tapPromise(mergeOptions(opt), fn),
+			intercept: (interceptor: string) => this.intercept(interceptor),
 			isUsed: () => this.isUsed(),
-			withOptions: (opt: String) => this.withOptions(mergeOptions(opt))
+			withOptions: (opt: string) => this.withOptions(mergeOptions(opt))
 		};
 	}
 
@@ -141,16 +141,16 @@ class Hook {
 		} else if (Array.isArray(item.before)) {
 			before = new Set(item.before);
 		}
-		let stage: Number = 0;
+		let stage: number = 0;
 		if (typeof item.stage === "number") {
 			stage = item.stage;
 		}
-		let i: Number = this.taps.length;
+		let i: number = this.taps.length;
 		while (i > 0) {
 			i--;
-			const x: Object = this.taps[i];
+			const x: object = this.taps[i];
 			this.taps[i + 1] = x;
-			const xStage: Number = x.stage || 0;
+			const xStage: number = x.stage || 0;
 			if (before) {
 				if (before.has(x.name)) {
 					before.delete(x.name);

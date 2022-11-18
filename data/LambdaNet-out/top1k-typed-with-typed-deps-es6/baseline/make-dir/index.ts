@@ -4,13 +4,13 @@ import path from 'path';
 import { promisify } from 'util';
 import semverGte from 'semver/functions/gte';
 
-const useNativeRecursiveOption: Boolean = semverGte(process.version, '10.12.0');
+const useNativeRecursiveOption: boolean = semverGte(process.version, '10.12.0');
 
 // https://github.com/nodejs/node/issues/8987
 // https://github.com/libuv/libuv/pull/1088
-const checkPath: Function = (pth: String) => {
+const checkPath: Function = (pth: string) => {
 	if (process.platform === 'win32') {
-		const pathHasInvalidWinCharacters: Number = /[<>:"|?*]/.test(pth.replace(path.parse(pth).root, ''));
+		const pathHasInvalidWinCharacters: number = /[<>:"|?*]/.test(pth.replace(path.parse(pth).root, ''));
 
 		if (pathHasInvalidWinCharacters) {
 			const error: Error = new Error(`Path contains invalid characters: ${pth}`);
@@ -20,8 +20,8 @@ const checkPath: Function = (pth: String) => {
 	}
 };
 
-const processOptions: Function = (options: Object) => {
-	const defaults: Object = {
+const processOptions: Function = (options: object) => {
+	const defaults: object = {
 		mode: 0o777,
 		fs
 	};
@@ -32,7 +32,7 @@ const processOptions: Function = (options: Object) => {
 	};
 };
 
-const permissionError: Function = (pth: String) => {
+const permissionError: Function = (pth: string) => {
 	// This replicates the exception of `fs.mkdir` with native the
 	// `recusive` option when run on an invalid drive under Windows.
 	const error: Error = new Error(`operation not permitted, mkdir '${pth}'`);
@@ -43,15 +43,15 @@ const permissionError: Function = (pth: String) => {
 	return error;
 };
 
-const makeDir: Function = async (input: HTMLElement, options: Object) => {
+const makeDir: Function = async (input: HTMLElement, options: object) => {
 	checkPath(input);
 	options = processOptions(options);
 
 	const mkdir: Function = promisify(options.fs.mkdir);
-	const stat: String = promisify(options.fs.stat);
+	const stat: string = promisify(options.fs.stat);
 
 	if (useNativeRecursiveOption && options.fs.mkdir === fs.mkdir) {
-		const pth: Array = path.resolve(input);
+		const pth: any[] = path.resolve(input);
 
 		await mkdir(pth, {
 			mode: options.mode,
@@ -103,12 +103,12 @@ const makeDir: Function = async (input: HTMLElement, options: Object) => {
 
 export default makeDir;
 
-export const sync: Function = (input: String, options: Object) => {
+export const sync: Function = (input: string, options: object) => {
 	checkPath(input);
 	options = processOptions(options);
 
 	if (useNativeRecursiveOption && options.fs.mkdirSync === fs.mkdirSync) {
-		const pth: String = path.resolve(input);
+		const pth: string = path.resolve(input);
 
 		fs.mkdirSync(pth, {
 			mode: options.mode,
@@ -118,7 +118,7 @@ export const sync: Function = (input: String, options: Object) => {
 		return pth;
 	}
 
-	const make: Function = (pth: Array) => {
+	const make: Function = (pth: any[]) => {
 		try {
 			options.fs.mkdirSync(pth, options.mode);
 		} catch (error) {

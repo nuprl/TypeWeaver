@@ -13,7 +13,7 @@ import "./selector.js";
 var rparentsprev: RegExp = /^(?:parents|prev(?:Until|All))/,
 
 	// Methods guaranteed to produce a unique set when starting from a unique set
-	guaranteedUnique: Object = {
+	guaranteedUnique: object = {
 		children: true,
 		contents: true,
 		next: true,
@@ -21,12 +21,12 @@ var rparentsprev: RegExp = /^(?:parents|prev(?:Until|All))/,
 	};
 
 jQuery.fn.extend( {
-	has: function( target: Array ) {
-		var targets: Array = jQuery( target, this ),
-			l: Number = targets.length;
+	has: function( target: any[] ) {
+		var targets: any[] = jQuery( target, this ),
+			l: number = targets.length;
 
 		return this.filter( function() {
-			var i: Number = 0;
+			var i: number = 0;
 			for ( ; i < l; i++ ) {
 				if ( jQuery.contains( this, targets[ i ] ) ) {
 					return true;
@@ -35,12 +35,12 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	closest: function( selectors: String, context: String ) {
-		var cur: Object,
-			i: Number = 0,
-			l: Number = this.length,
-			matched: Array = [],
-			targets: Array = typeof selectors !== "string" && jQuery( selectors );
+	closest: function( selectors: string, context: string ) {
+		var cur: object,
+			i: number = 0,
+			l: number = this.length,
+			matched: any[] = [],
+			targets: any[] = typeof selectors !== "string" && jQuery( selectors );
 
 		// Positional selectors never match, since there's no _selection_ context
 		if ( !rneedsContext.test( selectors ) ) {
@@ -66,7 +66,7 @@ jQuery.fn.extend( {
 	},
 
 	// Determine the position of an element within the set
-	index: function( elem: Object ) {
+	index: function( elem: object ) {
 
 		// No argument, return index in parent
 		if ( !elem ) {
@@ -86,7 +86,7 @@ jQuery.fn.extend( {
 		);
 	},
 
-	add: function( selector: String, context: Function ) {
+	add: function( selector: string, context: Function ) {
 		return this.pushStack(
 			jQuery.uniqueSort(
 				jQuery.merge( this.get(), jQuery( selector, context ) )
@@ -94,54 +94,54 @@ jQuery.fn.extend( {
 		);
 	},
 
-	addBack: function( selector: String ) {
+	addBack: function( selector: string ) {
 		return this.add( selector == null ?
 			this.prevObject : this.prevObject.filter( selector )
 		);
 	}
 } );
 
-function sibling( cur: Object, dir: String ): Object {
+function sibling( cur: object, dir: string ): object {
 	while ( ( cur = cur[ dir ] ) && cur.nodeType !== 1 ) {}
 	return cur;
 }
 
 jQuery.each( {
-	parent: function( elem: Object ) {
-		var parent: Object = elem.parentNode;
+	parent: function( elem: object ) {
+		var parent: object = elem.parentNode;
 		return parent && parent.nodeType !== 11 ? parent : null;
 	},
-	parents: function( elem: String ) {
+	parents: function( elem: string ) {
 		return dir( elem, "parentNode" );
 	},
-	parentsUntil: function( elem: String, _i: String, until: String ) {
+	parentsUntil: function( elem: string, _i: string, until: string ) {
 		return dir( elem, "parentNode", until );
 	},
-	next: function( elem: String ) {
+	next: function( elem: string ) {
 		return sibling( elem, "nextSibling" );
 	},
-	prev: function( elem: String ) {
+	prev: function( elem: string ) {
 		return sibling( elem, "previousSibling" );
 	},
-	nextAll: function( elem: String ) {
+	nextAll: function( elem: string ) {
 		return dir( elem, "nextSibling" );
 	},
-	prevAll: function( elem: String ) {
+	prevAll: function( elem: string ) {
 		return dir( elem, "previousSibling" );
 	},
-	nextUntil: function( elem: String, _i: String, until: String ) {
+	nextUntil: function( elem: string, _i: string, until: string ) {
 		return dir( elem, "nextSibling", until );
 	},
-	prevUntil: function( elem: String, _i: String, until: String ) {
+	prevUntil: function( elem: string, _i: string, until: string ) {
 		return dir( elem, "previousSibling", until );
 	},
-	siblings: function( elem: Object ) {
+	siblings: function( elem: object ) {
 		return siblings( ( elem.parentNode || {} ).firstChild, elem );
 	},
-	children: function( elem: Object ) {
+	children: function( elem: object ) {
 		return siblings( elem.firstChild );
 	},
-	contents: function( elem: Object ) {
+	contents: function( elem: object ) {
 		if ( elem.contentDocument != null &&
 
 			// Support: IE 11+
@@ -161,9 +161,9 @@ jQuery.each( {
 
 		return jQuery.merge( [], elem.childNodes );
 	}
-}, function( name: String, fn: Number ) {
-	jQuery.fn[ name ] = function( until: Number, selector: String ) {
-		var matched: Array = jQuery.map( this, fn, until );
+}, function( name: string, fn: number ) {
+	jQuery.fn[ name ] = function( until: number, selector: string ) {
+		var matched: any[] = jQuery.map( this, fn, until );
 
 		if ( name.slice( -5 ) !== "Until" ) {
 			selector = until;

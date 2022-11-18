@@ -14,8 +14,8 @@
 
 import url from 'url';
 
-var parse: Array = url.parse // eslint-disable-line
-var Url: String = url.Url
+var parse: any[] = url.parse // eslint-disable-line
+var Url: string = url.Url
 
 /**
  * Module exports.
@@ -34,15 +34,15 @@ export const original: Function = originalurl;
  * @public
  */
 
-function parseurl (req: HTMLElement): String {
-  var url: String = req.url
+function parseurl (req: HTMLElement): string {
+  var url: string = req.url
 
   if (url === undefined) {
     // URL is undefined
     return undefined
   }
 
-  var parsed: Number = req._parsedUrl
+  var parsed: number = req._parsedUrl
 
   if (fresh(url, parsed)) {
     // Return cached URL parse
@@ -64,15 +64,15 @@ function parseurl (req: HTMLElement): String {
  * @public
  */
 
-function originalurl (req: HTMLElement): String {
-  var url: String = req.originalUrl
+function originalurl (req: HTMLElement): string {
+  var url: string = req.originalUrl
 
   if (typeof url !== 'string') {
     // Fallback
     return parseurl(req)
   }
 
-  var parsed: Number = req._parsedOriginalUrl
+  var parsed: number = req._parsedOriginalUrl
 
   if (fresh(url, parsed)) {
     // Return cached URL parse
@@ -94,14 +94,14 @@ function originalurl (req: HTMLElement): String {
  * @private
  */
 
-function fastparse (str: String): String {
+function fastparse (str: string): string {
   if (typeof str !== 'string' || str.charCodeAt(0) !== 0x2f /* / */) {
     return parse(str)
   }
 
-  var pathname: String = str
-  var query: String = null
-  var search: String = null
+  var pathname: string = str
+  var query: string = null
+  var search: string = null
 
   // This takes the regexp from https://github.com/joyent/node/pull/7878
   // Which is /^(\/[^?#\s]*)(\?[^#\s]*)?$/
@@ -127,7 +127,7 @@ function fastparse (str: String): String {
     }
   }
 
-  var url: String = Url !== undefined
+  var url: string = Url !== undefined
     ? new Url()
     : {}
 
@@ -152,7 +152,7 @@ function fastparse (str: String): String {
  * @private
  */
 
-function fresh (url: String, parsedUrl: String): Boolean {
+function fresh (url: string, parsedUrl: string): boolean {
   return typeof parsedUrl === 'object' &&
     parsedUrl !== null &&
     (Url === undefined || parsedUrl instanceof Url) &&

@@ -1,10 +1,10 @@
 const matchValueName: RegExp = /[$]?[\w-]+/g;
 
-const replaceValueSymbols: Function = (value: String, replacements: Object) => {
-  let matches: Object;
+const replaceValueSymbols: Function = (value: string, replacements: object) => {
+  let matches: object;
 
   while ((matches = matchValueName.exec(value))) {
-    const replacement: String = replacements[matches[0]];
+    const replacement: string = replacements[matches[0]];
 
     if (replacement) {
       value =

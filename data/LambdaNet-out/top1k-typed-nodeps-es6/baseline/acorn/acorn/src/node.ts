@@ -23,13 +23,13 @@ pp.startNode = function() {
   return new Node(this, this.start, this.startLoc)
 }
 
-pp.startNodeAt = function(pos: String, loc: String) {
+pp.startNodeAt = function(pos: string, loc: string) {
   return new Node(this, pos, loc)
 }
 
 // Finish an AST node, adding `type` and `end` properties.
 
-function finishNodeAt(node: Node, type: String, pos: Number, loc: Number): RegExpValidationState {
+function finishNodeAt(node: Node, type: string, pos: number, loc: number): RegExpValidationState {
   node.type = type
   node.end = pos
   if (this.options.locations)
@@ -39,13 +39,13 @@ function finishNodeAt(node: Node, type: String, pos: Number, loc: Number): RegEx
   return node
 }
 
-pp.finishNode = function(node: Node, type: String) {
+pp.finishNode = function(node: Node, type: string) {
   return finishNodeAt.call(this, node, type, this.lastTokEnd, this.lastTokEndLoc)
 }
 
 // Finish node at given position
 
-pp.finishNodeAt = function(node: Node, type: String, pos: String, loc: String) {
+pp.finishNodeAt = function(node: Node, type: string, pos: string, loc: string) {
   return finishNodeAt.call(this, node, type, pos, loc)
 }
 

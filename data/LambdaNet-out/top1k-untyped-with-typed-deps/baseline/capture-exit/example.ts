@@ -1,7 +1,7 @@
 // remove the next line, and "cleanup" prints.
 //
 
-var exit: Array = require('./');
+var exit: any[] = require('./');
 exit.captureExit();
 require('ora')('Loading unicorns').start().stop();
 

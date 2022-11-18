@@ -1,14 +1,14 @@
 "use strict";
 
-var BOMChar: String = '\uFEFF';
+var BOMChar: string = '\uFEFF';
 
 exports.PrependBOM = PrependBOMWrapper
-function PrependBOMWrapper(encoder: String, options: Object): Void {
+function PrependBOMWrapper(encoder: string, options: object): Void {
     this.encoder = encoder;
     this.addBOM = true;
 }
 
-PrependBOMWrapper.prototype.write = function(str: Number) {
+PrependBOMWrapper.prototype.write = function(str: number) {
     if (this.addBOM) {
         str = BOMChar + str;
         this.addBOM = false;
@@ -25,14 +25,14 @@ PrependBOMWrapper.prototype.end = function() {
 //------------------------------------------------------------------------------
 
 exports.StripBOM = StripBOMWrapper;
-function StripBOMWrapper(decoder: String, options: Object): Void {
+function StripBOMWrapper(decoder: string, options: object): Void {
     this.decoder = decoder;
     this.pass = false;
     this.options = options || {};
 }
 
-StripBOMWrapper.prototype.write = function(buf: String) {
-    var res: Array = this.decoder.write(buf);
+StripBOMWrapper.prototype.write = function(buf: string) {
+    var res: any[] = this.decoder.write(buf);
     if (this.pass || !res)
         return res;
 

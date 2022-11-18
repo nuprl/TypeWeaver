@@ -19,8 +19,8 @@ import baseGet from './.internal/baseGet.js'
  * map([['a', '2'], ['c', '0']], propertyOf(object))
  * // => [2, 0]
  */
-function propertyOf(object: Object): Function {
-  return (path: String) => object == null ? undefined : baseGet(object, path)
+function propertyOf(object: object): Function {
+  return (path: string) => object == null ? undefined : baseGet(object, path)
 }
 
 export default propertyOf

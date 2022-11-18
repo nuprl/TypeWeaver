@@ -1,10 +1,10 @@
 'use strict';
 
-export default function(arr: Array) {
-  var i: Number = arr.length;
+export default function(arr: any[]) {
+  var i: number = arr.length;
 
-  var hash: Object = Object.create(null);
-  var res: Array = [];
+  var hash: object = Object.create(null);
+  var res: any[] = [];
 
   while (i--) {
     if (!hash[arr[i]]) {

@@ -1,4 +1,4 @@
-const backwardCompatibleKeys: Object = {
+const backwardCompatibleKeys: object = {
     ExperimentalRestProperty: [
         "argument"
     ],

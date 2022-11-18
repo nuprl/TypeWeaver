@@ -6,26 +6,26 @@ import path from 'path';
 import mkdir from '../mkdirs';
 import remove from '../remove';
 
-const emptyDir: String = u(async function emptyDir (dir: Array): Map {
-  let items: Array
+const emptyDir: string = u(async function emptyDir (dir: any[]): Map {
+  let items: any[]
   try {
     items = await fs.readdir(dir)
   } catch {
     return mkdir.mkdirs(dir)
   }
 
-  return Promise.all(items.map((item: String) => remove.remove(path.join(dir, item))))
+  return Promise.all(items.map((item: string) => remove.remove(path.join(dir, item))))
 })
 
-function emptyDirSync (dir: String): Void {
-  let items: Array
+function emptyDirSync (dir: string): Void {
+  let items: any[]
   try {
     items = fs.readdirSync(dir)
   } catch {
     return mkdir.mkdirsSync(dir)
   }
 
-  items.forEach((item: String) => {
+  items.forEach((item: string) => {
     item = path.join(dir, item)
     remove.removeSync(item)
   })

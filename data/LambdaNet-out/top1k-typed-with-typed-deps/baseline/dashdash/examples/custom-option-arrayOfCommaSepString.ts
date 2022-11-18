@@ -8,14 +8,14 @@
  *   uses of the option
  */
 
-var path: String = require('path');
-var format: Number = require('util').format;
-var dashdash: Object = require('../lib/dashdash');
+var path: string = require('path');
+var format: number = require('util').format;
+var dashdash: object = require('../lib/dashdash');
 
 
-function parseCommaSepStringNoEmpties(option: String, optstr: Array, arg: String): Array {
+function parseCommaSepStringNoEmpties(option: string, optstr: any[], arg: string): any[] {
     return arg.trim().split(/\s*,\s*/g)
-        .filter(function (part: Array) { return part; });
+        .filter(function (part: any[]) { return part; });
 }
 
 dashdash.addOptionType({
@@ -35,7 +35,7 @@ dashdash.addOptionType({
 });
 
 
-var options: Array = [
+var options: any[] = [
     { names: ['single', 's'], type: 'commaSepString' },
     { names: ['multi', 'm'], type: 'arrayOfCommaSepString' }
 ];

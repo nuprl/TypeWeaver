@@ -11,7 +11,7 @@ import { alt, char, or, rep, plusRep, questionRep } from './builders';
 /**
  * Helper `gen` function calls node type handler.
  */
-function gen(node: NodePath): String {
+function gen(node: NodePath): string {
   if (node && !generator[node.type]) {
     throw new Error(`${node.type} is not supported in NFA/DFA interpreter.`);
   }
@@ -22,7 +22,7 @@ function gen(node: NodePath): String {
 /**
  * AST handler.
  */
-const generator: Object = {
+const generator: object = {
   RegExp(node) {
     if (node.flags !== '') {
       throw new Error(`NFA/DFA: Flags are not supported yet.`);

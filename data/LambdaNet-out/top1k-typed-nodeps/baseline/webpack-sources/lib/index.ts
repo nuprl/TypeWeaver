@@ -3,8 +3,8 @@
 	Author Tobias Koppers @sokra
 */
 
-const defineExport: Function = (name: String, fn: Function) => {
-	let value: String;
+const defineExport: Function = (name: string, fn: Function) => {
+	let value: string;
 	Object.defineProperty(exports, name, {
 		get: () => {
 			if (fn !== undefined) {

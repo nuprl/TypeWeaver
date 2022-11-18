@@ -2,8 +2,8 @@
 
 import { parseColor } from '../parsers';
 
-export const definition: Object = {
-  set: function(v: Array) {
+export const definition: object = {
+  set: function(v: any[]) {
     this._setProperty('outline-color', parseColor(v));
   },
   get: function() {

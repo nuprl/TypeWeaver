@@ -9,16 +9,16 @@ import isArrayLike from '../isArrayLike.js'
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array|Object} Returns `collection`.
  */
-function baseEach(collection: Array, iteratee: Function): Array {
+function baseEach(collection: any[], iteratee: Function): any[] {
   if (collection == null) {
     return collection
   }
   if (!isArrayLike(collection)) {
     return baseForOwn(collection, iteratee)
   }
-  const length: Number = collection.length
-  const iterable: Object = Object(collection)
-  let index: Number = -1
+  const length: number = collection.length
+  const iterable: object = Object(collection)
+  let index: number = -1
 
   while (++index < length) {
     if (iteratee(iterable[index], index, iterable) === false) {

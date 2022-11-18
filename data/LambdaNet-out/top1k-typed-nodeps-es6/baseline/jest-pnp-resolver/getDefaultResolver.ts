@@ -1,4 +1,4 @@
-let defaultResolver: Object;
+let defaultResolver: object;
 
 export default () => {
   if (!defaultResolver) {

@@ -25,7 +25,7 @@
  * isFunction(/abc/)
  * // => false
  */
-function isFunction(value: String): Boolean {
+function isFunction(value: string): boolean {
   return typeof value === 'function'
 }
 

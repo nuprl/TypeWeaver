@@ -1,5 +1,5 @@
-let len: Number = 0;
-export default function asap(callback: String, arg: String): Void {
+let len: number = 0;
+export default function asap(callback: string, arg: string): Void {
   queue[len] = callback;
   queue[len + 1] = arg;
   len += 2;
@@ -11,14 +11,14 @@ export default function asap(callback: String, arg: String): Void {
   }
 }
 
-const browserWindow: Object = (typeof window !== 'undefined') ? window : undefined;
-const browserGlobal: Object = browserWindow || {};
-const BrowserMutationObserver: Boolean = browserGlobal.MutationObserver || browserGlobal.WebKitMutationObserver;
-const isNode: Boolean = typeof self === 'undefined' &&
+const browserWindow: object = (typeof window !== 'undefined') ? window : undefined;
+const browserGlobal: object = browserWindow || {};
+const BrowserMutationObserver: boolean = browserGlobal.MutationObserver || browserGlobal.WebKitMutationObserver;
+const isNode: boolean = typeof self === 'undefined' &&
   typeof process !== 'undefined' && {}.toString.call(process) === '[object process]';
 
 // test for web worker but not in IE10
-const hasWorker: Boolean = typeof Uint8ClampedArray !== 'undefined' &&
+const hasWorker: boolean = typeof Uint8ClampedArray !== 'undefined' &&
   typeof importScripts !== 'undefined' &&
   typeof MessageChannel !== 'undefined';
 
@@ -40,7 +40,7 @@ function useVertxTimer(): Function {
 }
 
 function useMutationObserver(): Function {
-  let iterations: Number = 0;
+  let iterations: number = 0;
   let observer: Map = new BrowserMutationObserver(flush);
   let node: Error = document.createTextNode('');
   observer.observe(node, { characterData: true });
@@ -59,12 +59,12 @@ function useSetTimeout(): Function {
   return () => setTimeout(flush, 1);
 }
 
-const queue: Object = new Array(1000);
+const queue: object = new Array(1000);
 
 function flush(): Void {
   for (let i = 0; i < len; i+=2) {
     let callback: Function = queue[i];
-    let arg: String = queue[i+1];
+    let arg: string = queue[i+1];
 
     callback(arg);
 
@@ -75,7 +75,7 @@ function flush(): Void {
   len = 0;
 }
 
-function attemptVertex(): Boolean {
+function attemptVertex(): boolean {
   try {
     const vertx: Enumerator = Function('return this')().require('vertx');
     vertxNext = vertx.runOnLoop || vertx.runOnContext;

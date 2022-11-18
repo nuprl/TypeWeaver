@@ -1,5 +1,5 @@
-export function convertChangesToXML(changes: Array): String {
-  let ret: Array = [];
+export function convertChangesToXML(changes: any[]): string {
+  let ret: any[] = [];
   for (let i = 0; i < changes.length; i++) {
     let change: HTMLElement = changes[i];
     if (change.added) {
@@ -19,8 +19,8 @@ export function convertChangesToXML(changes: Array): String {
   return ret.join('');
 }
 
-function escapeHTML(s: Object): Array {
-  let n: String = s;
+function escapeHTML(s: object): any[] {
+  let n: string = s;
   n = n.replace(/&/g, '&amp;');
   n = n.replace(/</g, '&lt;');
   n = n.replace(/>/g, '&gt;');

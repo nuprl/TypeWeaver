@@ -1,5 +1,5 @@
 "use strict";
-var Buffer: Object = require("safer-buffer").Buffer;
+var Buffer: object = require("safer-buffer").Buffer;
 
 // Export Node.js internal encodings.
 
@@ -22,7 +22,7 @@ module.exports = {
 
 //------------------------------------------------------------------------------
 
-function InternalCodec(codecOptions: Object, iconv: Object): Void {
+function InternalCodec(codecOptions: object, iconv: object): Void {
     this.enc = codecOptions.encodingName;
     this.bomAware = codecOptions.bomAware;
 
@@ -48,17 +48,17 @@ InternalCodec.prototype.decoder = InternalDecoder;
 //------------------------------------------------------------------------------
 
 // We use node.js internal decoder. Its signature is the same as ours.
-var StringDecoder: Array = require('string_decoder').StringDecoder;
+var StringDecoder: any[] = require('string_decoder').StringDecoder;
 
 if (!StringDecoder.prototype.end) // Node v0.8 doesn't have this method.
     StringDecoder.prototype.end = function() {};
 
 
-function InternalDecoder(options: Object, codec: Object): Void {
+function InternalDecoder(options: object, codec: object): Void {
     this.decoder = new StringDecoder(codec.enc);
 }
 
-InternalDecoder.prototype.write = function(buf: Array) {
+InternalDecoder.prototype.write = function(buf: any[]) {
     if (!Buffer.isBuffer(buf)) {
         buf = Buffer.from(buf);
     }
@@ -74,11 +74,11 @@ InternalDecoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Encoder is mostly trivial
 
-function InternalEncoder(options: Object, codec: Object): Void {
+function InternalEncoder(options: object, codec: object): Void {
     this.enc = codec.enc;
 }
 
-InternalEncoder.prototype.write = function(str: String) {
+InternalEncoder.prototype.write = function(str: string) {
     return Buffer.from(str, this.enc);
 }
 
@@ -89,13 +89,13 @@ InternalEncoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Except base64 encoder, which must keep its state.
 
-function InternalEncoderBase64(options: Object, codec: Function): Void {
+function InternalEncoderBase64(options: object, codec: Function): Void {
     this.prevStr = '';
 }
 
-InternalEncoderBase64.prototype.write = function(str: String) {
+InternalEncoderBase64.prototype.write = function(str: string) {
     str = this.prevStr + str;
-    var completeQuads: Number = str.length - (str.length % 4);
+    var completeQuads: number = str.length - (str.length % 4);
     this.prevStr = str.slice(completeQuads);
     str = str.slice(0, completeQuads);
 
@@ -110,13 +110,13 @@ InternalEncoderBase64.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 encoder is also special.
 
-function InternalEncoderCesu8(options: Object, codec: Function): Void {
+function InternalEncoderCesu8(options: object, codec: Function): Void {
 }
 
-InternalEncoderCesu8.prototype.write = function(str: String) {
-    var buf: Array = Buffer.alloc(str.length * 3), bufIdx: Number = 0;
+InternalEncoderCesu8.prototype.write = function(str: string) {
+    var buf: any[] = Buffer.alloc(str.length * 3), bufIdx: number = 0;
     for (var i = 0; i < str.length; i++) {
-        var charCode: String = str.charCodeAt(i);
+        var charCode: string = str.charCodeAt(i);
         // Naive implementation, but it works because CESU-8 is especially easy
         // to convert from UTF-16 (which all JS strings are encoded in).
         if (charCode < 0x80)
@@ -140,18 +140,18 @@ InternalEncoderCesu8.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 decoder is not implemented in Node v4.0+
 
-function InternalDecoderCesu8(options: Object, codec: Object): Void {
+function InternalDecoderCesu8(options: object, codec: object): Void {
     this.acc = 0;
     this.contBytes = 0;
     this.accBytes = 0;
     this.defaultCharUnicode = codec.defaultCharUnicode;
 }
 
-InternalDecoderCesu8.prototype.write = function(buf: Array) {
-    var acc: Number = this.acc, contBytes: Number = this.contBytes, accBytes: Number = this.accBytes, 
-        res: String = '';
+InternalDecoderCesu8.prototype.write = function(buf: any[]) {
+    var acc: number = this.acc, contBytes: number = this.contBytes, accBytes: number = this.accBytes, 
+        res: string = '';
     for (var i = 0; i < buf.length; i++) {
-        var curByte: Number = buf[i];
+        var curByte: number = buf[i];
         if ((curByte & 0xC0) !== 0x80) { // Leading byte
             if (contBytes > 0) { // Previous code is invalid
                 res += this.defaultCharUnicode;
@@ -193,7 +193,7 @@ InternalDecoderCesu8.prototype.write = function(buf: Array) {
 }
 
 InternalDecoderCesu8.prototype.end = function() {
-    var res: Number = 0;
+    var res: number = 0;
     if (this.contBytes > 0)
         res += this.defaultCharUnicode;
     return res;
@@ -202,18 +202,18 @@ InternalDecoderCesu8.prototype.end = function() {
 //------------------------------------------------------------------------------
 // check the chunk boundaries for surrogate pair
 
-function InternalEncoderUtf8(options: Object, codec: Function): Void {
+function InternalEncoderUtf8(options: object, codec: Function): Void {
     this.highSurrogate = '';
 }
 
-InternalEncoderUtf8.prototype.write = function (str: String) {
+InternalEncoderUtf8.prototype.write = function (str: string) {
     if (this.highSurrogate) {
         str = this.highSurrogate + str;
         this.highSurrogate = '';
     }
 
     if (str.length > 0) {
-        var charCode: Number = str.charCodeAt(str.length - 1);
+        var charCode: number = str.charCodeAt(str.length - 1);
         if (0xd800 <= charCode && charCode < 0xdc00) {
             this.highSurrogate = str[str.length - 1];
             str = str.slice(0, str.length - 1);

@@ -15,12 +15,12 @@ export default {
  */
 function wrapIterator(iterator: Function): Function
 {
-  var stream: Array = this;
+  var stream: any[] = this;
 
-  return function(item: String, key: String, cb: String)
+  return function(item: string, key: string, cb: string)
   {
-    var aborter: Array
-      , wrappedCb: Array = async(wrapIteratorCallback.call(stream, cb, key))
+    var aborter: any[]
+      , wrappedCb: any[] = async(wrapIteratorCallback.call(stream, cb, key))
       ;
 
     stream.jobs[key] = wrappedCb;
@@ -49,11 +49,11 @@ function wrapIterator(iterator: Function): Function
  * @param   {function} callback - function to wrap
  * @returns {function} - wrapped function
  */
-function wrapCallback(callback: String): Function
+function wrapCallback(callback: string): Function
 {
-  var stream: Array = this;
+  var stream: any[] = this;
 
-  var wrapped: Function = function(error: Object, result: String)
+  var wrapped: Function = function(error: object, result: string)
   {
     return finisher.call(stream, error, result, callback);
   };
@@ -71,11 +71,11 @@ function wrapCallback(callback: String): Function
  * @param   {number|string} key - iteration key
  * @returns {function} wrapped callback
  */
-function wrapIteratorCallback(callback: Function, key: String): Function
+function wrapIteratorCallback(callback: Function, key: string): Function
 {
-  var stream: Array = this;
+  var stream: any[] = this;
 
-  return function(error: Object, output: Number)
+  return function(error: object, output: number)
   {
     // don't repeat yourself
     if (!(key in stream.jobs))
@@ -99,7 +99,7 @@ function wrapIteratorCallback(callback: Function, key: String): Function
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects iterator results
  */
-function streamer(error: Object, output: Object, callback: Function): Void
+function streamer(error: object, output: object, callback: Function): Void
 {
   if (error && !this.error)
   {
@@ -127,7 +127,7 @@ function streamer(error: Object, output: Object, callback: Function): Void
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects final results
  */
-function finisher(error: Object, output: String, callback: Function): Void
+function finisher(error: object, output: string, callback: Function): Void
 {
   // signal end of the stream
   // only for successfully finished streams

@@ -1,11 +1,11 @@
 'use strict';
 import expand from '..';
 import fs from 'fs';
-const resfile: String = __dirname + '/../test/cases.txt';
-const cases: Array = fs.readFileSync(resfile, 'utf8').split('\n');
+const resfile: string = __dirname + '/../test/cases.txt';
+const cases: any[] = fs.readFileSync(resfile, 'utf8').split('\n');
 
 bench('Average', function() {
-  cases.forEach(function(testcase: Array) {
+  cases.forEach(function(testcase: any[]) {
     expand(testcase);
   });
 });

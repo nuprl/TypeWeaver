@@ -1,4 +1,4 @@
-const colors: Object = require('..');
+const colors: object = require('..');
 
 colors.theme({
   success: 'blue',

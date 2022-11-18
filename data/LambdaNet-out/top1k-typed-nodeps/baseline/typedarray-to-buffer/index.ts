@@ -8,7 +8,7 @@
  * `npm install typedarray-to-buffer`
  */
 
-module.exports = function typedarrayToBuffer (arr: Object): Object {
+module.exports = function typedarrayToBuffer (arr: object): object {
   return ArrayBuffer.isView(arr)
     // To avoid a copy, use the typed array's underlying ArrayBuffer to back
     // new Buffer, respecting the "view", i.e. byteOffset and byteLength

@@ -27,13 +27,13 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * hasPath(object, ['a', 'b'])
  * // => true
  */
-function hasPath(object: Array, path: String): Boolean {
+function hasPath(object: any[], path: string): boolean {
   path = castPath(path, object)
 
-  let index: Number = -1
+  let index: number = -1
   let { length } = path
-  let result: Boolean = false
-  let key: String
+  let result: boolean = false
+  let key: string
 
   while (++index < length) {
     key = toKey(path[index])

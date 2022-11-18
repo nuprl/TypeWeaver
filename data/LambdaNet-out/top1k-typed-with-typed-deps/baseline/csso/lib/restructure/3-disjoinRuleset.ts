@@ -1,7 +1,7 @@
 import { List, walk } from 'css-tree';
 
-function processRule(node: Object, item: String, list: Object): Void {
-    const selectors: Object = node.prelude.children;
+function processRule(node: object, item: string, list: object): Void {
+    const selectors: object = node.prelude.children;
 
     // generate new rule sets:
     // .a, .b { color: red; }
@@ -11,7 +11,7 @@ function processRule(node: Object, item: String, list: Object): Void {
 
     // while there are more than 1 simple selector split for rulesets
     while (selectors.head !== selectors.tail) {
-        const newSelectors: Array = new List();
+        const newSelectors: any[] = new List();
 
         newSelectors.insert(selectors.remove(selectors.head));
 
@@ -33,7 +33,7 @@ function processRule(node: Object, item: String, list: Object): Void {
     }
 }
 
-export default function disjoinRule(ast: Array): Void {
+export default function disjoinRule(ast: any[]): Void {
     walk(ast, {
         visit: 'Rule',
         reverse: true,

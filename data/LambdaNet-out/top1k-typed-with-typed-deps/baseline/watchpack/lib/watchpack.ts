@@ -5,15 +5,15 @@
 "use strict";
 
 const getWatcherManager: Function = require("./getWatcherManager");
-const LinkResolver: Array = require("./LinkResolver");
-const EventEmitter: String = require("events").EventEmitter;
+const LinkResolver: any[] = require("./LinkResolver");
+const EventEmitter: string = require("events").EventEmitter;
 const globToRegExp: Function = require("glob-to-regexp");
-const watchEventSource: String = require("./watchEventSource");
+const watchEventSource: string = require("./watchEventSource");
 
-const EMPTY_ARRAY: Array = [];
+const EMPTY_ARRAY: any[] = [];
 const EMPTY_OPTIONS: Function = {};
 
-function addWatchersToSet(watchers: Array, set: RecursiveWatcher): Void {
+function addWatchersToSet(watchers: any[], set: RecursiveWatcher): Void {
 	for (const ww of watchers) {
 		const w: HTMLElement = ww.watcher;
 		if (!set.has(w.directoryWatcher)) {
@@ -22,22 +22,22 @@ function addWatchersToSet(watchers: Array, set: RecursiveWatcher): Void {
 	}
 }
 
-const stringToRegexp: Function = (ignored: Array) => {
-	const source: Array = globToRegExp(ignored, { globstar: true, extended: true })
+const stringToRegexp: Function = (ignored: any[]) => {
+	const source: any[] = globToRegExp(ignored, { globstar: true, extended: true })
 		.source;
-	const matchingStart: String = source.slice(0, source.length - 1) + "(?:$|\\/)";
+	const matchingStart: string = source.slice(0, source.length - 1) + "(?:$|\\/)";
 	return matchingStart;
 };
 
-const ignoredToFunction: Function = (ignored: Array) => {
+const ignoredToFunction: Function = (ignored: any[]) => {
 	if (Array.isArray(ignored)) {
-		const regexp: HTMLElement = new RegExp(ignored.map((i: String) => stringToRegexp(i)).join("|"));
-		return (x: String) => regexp.test(x.replace(/\\/g, "/"));
+		const regexp: HTMLElement = new RegExp(ignored.map((i: string) => stringToRegexp(i)).join("|"));
+		return (x: string) => regexp.test(x.replace(/\\/g, "/"));
 	} else if (typeof ignored === "string") {
 		const regexp: HTMLElement = new RegExp(stringToRegexp(ignored));
-		return (x: String) => regexp.test(x.replace(/\\/g, "/"));
+		return (x: string) => regexp.test(x.replace(/\\/g, "/"));
 	} else if (ignored instanceof RegExp) {
-		return (x: String) => ignored.test(x.replace(/\\/g, "/"));
+		return (x: string) => ignored.test(x.replace(/\\/g, "/"));
 	} else if (ignored instanceof Function) {
 		return ignored;
 	} else if (ignored) {
@@ -47,7 +47,7 @@ const ignoredToFunction: Function = (ignored: Array) => {
 	}
 };
 
-const normalizeOptions: Function = (options: Object) => {
+const normalizeOptions: Function = (options: object) => {
 	return {
 		followSymlinks: !!options.followSymlinks,
 		ignored: ignoredToFunction(options.ignored),
@@ -57,9 +57,9 @@ const normalizeOptions: Function = (options: Object) => {
 
 const normalizeCache: Error = new WeakMap();
 const cachedNormalizeOptions: Function = (options: Function) => {
-	const cacheEntry: Array = normalizeCache.get(options);
+	const cacheEntry: any[] = normalizeCache.get(options);
 	if (cacheEntry !== undefined) return cacheEntry;
-	const normalized: String = normalizeOptions(options);
+	const normalized: string = normalizeOptions(options);
 	normalizeCache.set(options, normalized);
 	return normalized;
 };
@@ -68,18 +68,18 @@ class WatchpackFileWatcher {
 	constructor(watchpack, watcher, files) {
 		this.files = Array.isArray(files) ? files : [files];
 		this.watcher = watcher;
-		watcher.on("initial-missing", (type: Number) => {
+		watcher.on("initial-missing", (type: number) => {
 			for (const file of this.files) {
 				if (!watchpack._missing.has(file))
 					watchpack._onRemove(file, file, type);
 			}
 		});
-		watcher.on("change", (mtime: String, type: Number) => {
+		watcher.on("change", (mtime: string, type: number) => {
 			for (const file of this.files) {
 				watchpack._onChange(file, mtime, file, type);
 			}
 		});
-		watcher.on("remove", (type: Number) => {
+		watcher.on("remove", (type: number) => {
 			for (const file of this.files) {
 				watchpack._onRemove(file, file, type);
 			}
@@ -107,17 +107,17 @@ class WatchpackDirectoryWatcher {
 	constructor(watchpack, watcher, directories) {
 		this.directories = Array.isArray(directories) ? directories : [directories];
 		this.watcher = watcher;
-		watcher.on("initial-missing", (type: Number) => {
+		watcher.on("initial-missing", (type: number) => {
 			for (const item of this.directories) {
 				watchpack._onRemove(item, item, type);
 			}
 		});
-		watcher.on("change", (file: String, mtime: Number, type: Number) => {
+		watcher.on("change", (file: string, mtime: number, type: number) => {
 			for (const item of this.directories) {
 				watchpack._onChange(item, mtime, file, type);
 			}
 		});
-		watcher.on("remove", (type: Number) => {
+		watcher.on("remove", (type: number) => {
 			for (const item of this.directories) {
 				watchpack._onRemove(item, item, type);
 			}
@@ -164,7 +164,7 @@ class Watchpack extends EventEmitter {
 	}
 
 	watch(arg1, arg2, arg3) {
-		let files: Function, directories: Array, missing: Array, startTime: Number;
+		let files: Function, directories: any[], missing: any[], startTime: number;
 		if (!arg2) {
 			({
 				files = EMPTY_ARRAY,
@@ -182,9 +182,9 @@ class Watchpack extends EventEmitter {
 		const fileWatchers: Map = this.fileWatchers;
 		const directoryWatchers: Map = this.directoryWatchers;
 		const ignored: Function = this.watcherOptions.ignored;
-		const filter: Function = (path: String) => !ignored(path);
-		const addToMap: Function = (map: Map, key: String, item: String) => {
-			const list: Array = map.get(key);
+		const filter: Function = (path: string) => !ignored(path);
+		const addToMap: Function = (map: Map, key: string, item: string) => {
+			const list: any[] = map.get(key);
 			if (list === undefined) {
 				map.set(key, item);
 			} else if (Array.isArray(list)) {
@@ -219,7 +219,7 @@ class Watchpack extends EventEmitter {
 			}
 			for (const dir of directories) {
 				if (filter(dir)) {
-					let first: Boolean = true;
+					let first: boolean = true;
 					for (const innerItem of resolver.resolve(dir)) {
 						if (filter(innerItem)) {
 							addToMap(
@@ -253,7 +253,7 @@ class Watchpack extends EventEmitter {
 		// Close unneeded old watchers
 		// and update existing watchers
 		for (const [key, w] of fileWatchers) {
-			const needed: String = fileWatchersNeeded.get(key);
+			const needed: string = fileWatchersNeeded.get(key);
 			if (needed === undefined) {
 				w.close();
 				fileWatchers.delete(key);
@@ -263,7 +263,7 @@ class Watchpack extends EventEmitter {
 			}
 		}
 		for (const [key, w] of directoryWatchers) {
-			const needed: String = directoryWatchersNeeded.get(key);
+			const needed: string = directoryWatchersNeeded.get(key);
 			if (needed === undefined) {
 				w.close();
 				directoryWatchers.delete(key);
@@ -312,9 +312,9 @@ class Watchpack extends EventEmitter {
 		const directoryWatchers: HTMLElement = new Set();
 		addWatchersToSet(this.fileWatchers.values(), directoryWatchers);
 		addWatchersToSet(this.directoryWatchers.values(), directoryWatchers);
-		const obj: Object = Object.create(null);
+		const obj: object = Object.create(null);
 		for (const w of directoryWatchers) {
-			const times: Object = w.getTimes();
+			const times: object = w.getTimes();
 			for (const file of Object.keys(times)) obj[file] = times[file];
 		}
 		return obj;
@@ -330,7 +330,7 @@ class Watchpack extends EventEmitter {
 		const allWatchers: Error = new Set();
 		addWatchersToSet(this.fileWatchers.values(), allWatchers);
 		addWatchersToSet(this.directoryWatchers.values(), allWatchers);
-		const safeTime: Object = { value: 0 };
+		const safeTime: object = { value: 0 };
 		for (const w of allWatchers) {
 			w.collectTimeInfoEntries(fileTimestamps, directoryTimestamps, safeTime);
 		}
@@ -342,7 +342,7 @@ class Watchpack extends EventEmitter {
 			this.aggregateTimer = undefined;
 		}
 		const changes: Function = this.aggregatedChanges;
-		const removals: Number = this.aggregatedRemovals;
+		const removals: number = this.aggregatedRemovals;
 		this.aggregatedChanges = new Set();
 		this.aggregatedRemovals = new Set();
 		return { changes, removals };

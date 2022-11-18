@@ -2,7 +2,7 @@
 
 var isValue: Function = require("../value/is");
 
-module.exports = function (value: Number) {
+module.exports = function (value: number) {
 	if (!isValue(value)) return null;
 	try {
 		value = +value; // Ensure implicit coercion

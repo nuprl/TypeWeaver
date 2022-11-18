@@ -1,5 +1,5 @@
 // ../config.js accepts options via environment variables
-const options: Object = {}
+const options: object = {}
 
 if (process.env.DOTENV_CONFIG_ENCODING != null) {
   options.encoding = process.env.DOTENV_CONFIG_ENCODING

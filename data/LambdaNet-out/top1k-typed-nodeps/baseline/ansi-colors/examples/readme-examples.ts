@@ -1,5 +1,5 @@
 'use strict';
-const util: String = require('util');
+const util: string = require('util');
 const c: HTMLElement = require('..');
 console.log(c);
 

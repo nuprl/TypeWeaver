@@ -1,7 +1,7 @@
-const symbol1: String = Symbol('foo');
-const symbol2: String = Symbol('bar');
+const symbol1: string = Symbol('foo');
+const symbol2: string = Symbol('bar');
 
-const item: Object = {
+const item: object = {
 	regexp: /foo[\\\/](?=\d)/,
 	array: [
 		new Date(),

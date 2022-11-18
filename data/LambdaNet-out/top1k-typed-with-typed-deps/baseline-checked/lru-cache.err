@@ -1,22 +1,15 @@
-.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-      Type 'String' is not assignable to type 'string | number'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-index.ts(1,7): error TS2322: Type 'DateConstructor | Performance' is not assignable to type 'Number'.
-  Type 'DateConstructor' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+index.ts(1,7): error TS2322: Type 'DateConstructor | Performance' is not assignable to type 'number'.
+  Type 'DateConstructor' is not assignable to type 'number'.
 index.ts(18,14): error TS2339: Property 'signal' does not exist on type 'AbortController'.
 index.ts(18,27): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 index.ts(21,14): error TS2339: Property 'signal' does not exist on type 'AbortController'.
-index.ts(27,45): error TS2339: Property 'AbortSignal' does not exist on type 'Object'.
-index.ts(31,8): error TS2339: Property 'AbortController' does not exist on type 'Object'.
+index.ts(27,45): error TS2339: Property 'AbortSignal' does not exist on type 'object'.
+index.ts(31,8): error TS2339: Property 'AbortController' does not exist on type 'object'.
 index.ts(34,14): error TS2339: Property 'aborted' does not exist on type 'AbortSignal'.
 index.ts(35,14): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
 index.ts(39,16): error TS2339: Property 'aborted' does not exist on type 'AbortSignal'.
@@ -26,15 +19,9 @@ index.ts(48,16): error TS2339: Property '_listeners' does not exist on type 'Abo
 index.ts(53,16): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
 index.ts(53,34): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
 index.ts(58,7): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
-index.ts(69,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(77,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(86,27): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 index.ts(90,56): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(93,10): error TS2339: Property 'add' does not exist on type 'Error'.
-index.ts(98,65): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(98,89): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(134,10): error TS2339: Property 'heap' does not exist on type 'Stack'.
 index.ts(134,21): error TS2351: This expression is not constructable.
   Type 'HTMLElement' has no construct signatures.
@@ -67,7 +54,6 @@ index.ts(170,21): error TS2339: Property 'maxAge' does not exist on type '{}'.
 index.ts(170,21): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(170,29): error TS2339: Property 'stale' does not exist on type '{}'.
 index.ts(170,29): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(177,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(182,10): error TS2339: Property 'max' does not exist on type 'LRUCache'.
 index.ts(183,10): error TS2339: Property 'maxSize' does not exist on type 'LRUCache'.
 index.ts(184,10): error TS2339: Property 'maxEntrySize' does not exist on type 'LRUCache'.
@@ -86,7 +72,11 @@ index.ts(211,10): error TS2339: Property 'keyMap' does not exist on type 'LRUCac
 index.ts(212,10): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(213,10): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(214,10): error TS2339: Property 'next' does not exist on type 'LRUCache'.
+index.ts(214,21): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
 index.ts(215,10): error TS2339: Property 'prev' does not exist on type 'LRUCache'.
+index.ts(215,21): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
 index.ts(216,10): error TS2339: Property 'head' does not exist on type 'LRUCache'.
 index.ts(217,10): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
 index.ts(218,10): error TS2339: Property 'free' does not exist on type 'LRUCache'.
@@ -123,24 +113,23 @@ index.ts(305,10): error TS2339: Property 'ttls' does not exist on type 'LRUCache
 index.ts(305,36): error TS2339: Property 'max' does not exist on type 'LRUCache'.
 index.ts(306,10): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(306,38): error TS2339: Property 'max' does not exist on type 'LRUCache'.
-index.ts(308,73): error TS2339: Property 'now' does not exist on type 'Number'.
+index.ts(308,73): error TS2339: Property 'now' does not exist on type 'number'.
 index.ts(309,12): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(310,12): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
 index.ts(311,29): error TS2339: Property 'ttlAutopurge' does not exist on type 'LRUCache'.
-index.ts(312,15): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(312,15): error TS2322: Type 'Timeout' is not assignable to type 'number'.
 index.ts(314,30): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
-index.ts(316,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(318,15): error TS2339: Property 'unref' does not exist on type 'Number'.
-index.ts(319,13): error TS2339: Property 'unref' does not exist on type 'Number'.
+index.ts(318,15): error TS2339: Property 'unref' does not exist on type 'number'.
+index.ts(319,13): error TS2339: Property 'unref' does not exist on type 'number'.
 index.ts(325,12): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(325,33): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(325,58): error TS2339: Property 'now' does not exist on type 'Number'.
-index.ts(332,30): error TS2339: Property 'now' does not exist on type 'Number'.
+index.ts(325,58): error TS2339: Property 'now' does not exist on type 'number'.
+index.ts(332,30): error TS2339: Property 'now' does not exist on type 'number'.
 index.ts(333,16): error TS2339: Property 'ttlResolution' does not exist on type 'LRUCache'.
-index.ts(335,15): error TS2322: Type 'Timeout' is not assignable to type 'Number'.
+index.ts(335,15): error TS2322: Type 'Timeout' is not assignable to type 'number'.
 index.ts(337,16): error TS2339: Property 'ttlResolution' does not exist on type 'LRUCache'.
-index.ts(340,15): error TS2339: Property 'unref' does not exist on type 'Number'.
-index.ts(341,13): error TS2339: Property 'unref' does not exist on type 'Number'.
+index.ts(340,15): error TS2339: Property 'unref' does not exist on type 'number'.
+index.ts(341,13): error TS2339: Property 'unref' does not exist on type 'number'.
 index.ts(348,34): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(352,19): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
 index.ts(352,45): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
@@ -156,7 +145,6 @@ index.ts(376,37): error TS2339: Property 'max' does not exist on type 'LRUCache'
 index.ts(378,12): error TS2339: Property 'calculatedSize' does not exist on type 'LRUCache'.
 index.ts(378,35): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
 index.ts(379,12): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(381,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(402,12): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
 index.ts(403,36): error TS2339: Property 'maxSize' does not exist on type 'LRUCache'.
 index.ts(403,51): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
@@ -191,22 +179,19 @@ index.ts(507,44): error TS2339: Property 'keyList' does not exist on type 'LRUCa
 index.ts(513,27): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(513,44): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(526,26): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
-index.ts(534,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(536,32): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(537,32): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(539,13): error TS2339: Property '__staleWhileFetching' does not exist on type 'LRUCache'.
 index.ts(542,16): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(543,15): error TS2339: Property 'ttl' does not exist on type 'Object'.
+index.ts(543,15): error TS2339: Property 'ttl' does not exist on type 'object'.
 index.ts(543,26): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(546,34): error TS2339: Property 'now' does not exist on type 'Number'.
+index.ts(546,34): error TS2339: Property 'now' does not exist on type 'number'.
 index.ts(546,47): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
-index.ts(547,15): error TS2339: Property 'start' does not exist on type 'Object'.
-index.ts(547,47): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(547,15): error TS2339: Property 'start' does not exist on type 'object'.
 index.ts(549,16): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(550,15): error TS2339: Property 'size' does not exist on type 'Object'.
+index.ts(550,15): error TS2339: Property 'size' does not exist on type 'object'.
 index.ts(550,27): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(565,28): error TS2339: Property 'now' does not exist on type 'Number'.
-index.ts(565,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(565,28): error TS2339: Property 'now' does not exist on type 'number'.
 index.ts(577,18): error TS2339: Property 'ttl' does not exist on type 'LRUCache'.
 index.ts(578,7): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(579,29): error TS2339: Property 'noDisposeOnSet' does not exist on type 'LRUCache'.
@@ -267,11 +252,10 @@ index.ts(700,24): error TS2339: Property 'keyMap' does not exist on type 'LRUCac
 index.ts(702,22): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(709,62): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(713,30): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 index.ts(715,18): error TS2339: Property 'signal' does not exist on type 'LRUCache'.
-index.ts(719,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(720,15): error TS2339: Property 'signal' does not exist on type 'LRUCache'.
-index.ts(721,34): error TS2339: Property 'options' does not exist on type 'Object'.
+index.ts(721,34): error TS2339: Property 'options' does not exist on type 'object'.
 index.ts(726,16): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(729,13): error TS2339: Property '__staleWhileFetching' does not exist on type 'LRUCache'.
 index.ts(735,16): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
@@ -286,7 +270,7 @@ index.ts(743,49): error TS2345: Argument of type 'Function' is not assignable to
 index.ts(744,7): error TS2339: Property '__abortController' does not exist on type 'LRUCache'.
 index.ts(745,7): error TS2339: Property '__staleWhileFetching' does not exist on type 'LRUCache'.
 index.ts(746,7): error TS2339: Property '__returned' does not exist on type 'LRUCache'.
-index.ts(748,32): error TS2339: Property 'options' does not exist on type 'Object'.
+index.ts(748,32): error TS2339: Property 'options' does not exist on type 'object'.
 index.ts(749,20): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(751,12): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(775,25): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
@@ -300,15 +284,15 @@ index.ts(785,39): error TS2339: Property 'noDeleteOnFetchRejection' does not exi
 index.ts(786,27): error TS2339: Property 'fetchContext' does not exist on type 'LRUCache'.
 index.ts(790,15): error TS2339: Property 'fetchMethod' does not exist on type 'LRUCache'.
 index.ts(810,22): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
-index.ts(813,17): error TS2339: Property '__returned' does not exist on type 'String | LRUCache'.
-  Property '__returned' does not exist on type 'String'.
+index.ts(813,17): error TS2339: Property '__returned' does not exist on type 'string | LRUCache'.
+  Property '__returned' does not exist on type 'string'.
 index.ts(816,22): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(836,30): error TS2339: Property '__staleWhileFetching' does not exist on type 'String | LRUCache'.
-  Property '__staleWhileFetching' does not exist on type 'String'.
-index.ts(837,13): error TS2339: Property '__staleWhileFetching' does not exist on type 'String | LRUCache'.
-  Property '__staleWhileFetching' does not exist on type 'String'.
-index.ts(838,14): error TS2339: Property '__returned' does not exist on type 'String | LRUCache'.
-  Property '__returned' does not exist on type 'String'.
+index.ts(836,30): error TS2339: Property '__staleWhileFetching' does not exist on type 'string | LRUCache'.
+  Property '__staleWhileFetching' does not exist on type 'string'.
+index.ts(837,13): error TS2339: Property '__staleWhileFetching' does not exist on type 'string | LRUCache'.
+  Property '__staleWhileFetching' does not exist on type 'string'.
+index.ts(838,14): error TS2339: Property '__returned' does not exist on type 'string | LRUCache'.
+  Property '__returned' does not exist on type 'string'.
 index.ts(845,25): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
 index.ts(846,29): error TS2339: Property 'updateAgeOnGet' does not exist on type 'LRUCache'.
 index.ts(847,33): error TS2339: Property 'noDeleteOnStaleGet' does not exist on type 'LRUCache'.

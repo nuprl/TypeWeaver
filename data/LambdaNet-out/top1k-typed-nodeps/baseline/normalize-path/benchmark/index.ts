@@ -1,12 +1,12 @@
 'use strict';
 
-const path: String = require('path');
-const suite: Array = require('benchmarked');
-const argv: Object = process.argv.slice(2);
-const code: String = argv[0] || '{current,v2}';
+const path: string = require('path');
+const suite: any[] = require('benchmarked');
+const argv: object = process.argv.slice(2);
+const code: string = argv[0] || '{current,v2}';
 
 suite.run({ code: `code/${code}.js`, fixtures: 'fixtures/*.js' })
-  .then(function(stats: Object) {
+  .then(function(stats: object) {
     console.log(suite.render(stats));
   })
   .catch(console.error);

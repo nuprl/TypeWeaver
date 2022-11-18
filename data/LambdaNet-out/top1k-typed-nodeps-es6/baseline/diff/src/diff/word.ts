@@ -24,16 +24,16 @@ const extendedWordChars: RegExp = /^[a-zA-Z\u{C0}-\u{FF}\u{D8}-\u{F6}\u{F8}-\u{2
 const reWhitespace: RegExp = /\S/;
 
 export const wordDiff: HTMLElement = new Diff();
-wordDiff.equals = function(left: String, right: String) {
+wordDiff.equals = function(left: string, right: string) {
   if (this.options.ignoreCase) {
     left = left.toLowerCase();
     right = right.toLowerCase();
   }
   return left === right || (this.options.ignoreWhitespace && !reWhitespace.test(left) && !reWhitespace.test(right));
 };
-wordDiff.tokenize = function(value: String) {
+wordDiff.tokenize = function(value: string) {
   // All whitespace symbols except newline group into one token, each newline - in separate token
-  let tokens: Array = value.split(/([^\S\r\n]+|[()[\]{}'"\r\n]|\b)/);
+  let tokens: any[] = value.split(/([^\S\r\n]+|[()[\]{}'"\r\n]|\b)/);
 
   // Join the boundary splits that we do not consider to be boundaries. This is primarily the extended Latin character set.
   for (let i = 0; i < tokens.length - 1; i++) {
@@ -50,11 +50,11 @@ wordDiff.tokenize = function(value: String) {
   return tokens;
 };
 
-export function diffWords(oldStr: String, newStr: String, options: Array): Boolean {
+export function diffWords(oldStr: string, newStr: string, options: any[]): boolean {
   options = generateOptions(options, {ignoreWhitespace: true});
   return wordDiff.diff(oldStr, newStr, options);
 }
 
-export function diffWordsWithSpace(oldStr: String, newStr: String, options: Object): Boolean {
+export function diffWordsWithSpace(oldStr: string, newStr: string, options: object): boolean {
   return wordDiff.diff(oldStr, newStr, options);
 }

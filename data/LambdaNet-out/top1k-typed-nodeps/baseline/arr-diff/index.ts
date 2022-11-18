@@ -7,31 +7,31 @@
 
 'use strict';
 
-module.exports = function diff(arr: String/*, arrays*/): String {
-  var len: Number = arguments.length;
-  var idx: Number = 0;
+module.exports = function diff(arr: string/*, arrays*/): string {
+  var len: number = arguments.length;
+  var idx: number = 0;
   while (++idx < len) {
     arr = diffArray(arr, arguments[idx]);
   }
   return arr;
 };
 
-function diffArray(one: Array, two: Array): Array {
+function diffArray(one: any[], two: any[]): any[] {
   if (!Array.isArray(two)) {
     return one.slice();
   }
 
-  var tlen: Number = two.length
-  var olen: Number = one.length;
-  var idx: Number = -1;
-  var arr: Array = [];
+  var tlen: number = two.length
+  var olen: number = one.length;
+  var idx: number = -1;
+  var arr: any[] = [];
 
   while (++idx < olen) {
-    var ele: String = one[idx];
+    var ele: string = one[idx];
 
-    var hasEle: Boolean = false;
+    var hasEle: boolean = false;
     for (var i = 0; i < tlen; i++) {
-      var val: String = two[i];
+      var val: string = two[i];
 
       if (ele === val) {
         hasEle = true;

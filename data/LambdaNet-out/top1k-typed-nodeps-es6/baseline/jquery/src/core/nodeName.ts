@@ -1,4 +1,4 @@
-function nodeName( elem: HTMLElement, name: String ): Boolean {
+function nodeName( elem: HTMLElement, name: string ): boolean {
 
 	return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 

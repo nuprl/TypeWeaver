@@ -11,7 +11,7 @@ import errors from './errors';
 
 var newInvalidAsn1Error: Function = errors.newInvalidAsn1Error;
 
-var DEFAULT_OPTS: Object = {
+var DEFAULT_OPTS: object = {
   size: 1024,
   growthFactor: 8
 };
@@ -19,18 +19,18 @@ var DEFAULT_OPTS: Object = {
 
 // --- Helpers
 
-function merge(from: Function, to: Object): Object {
+function merge(from: Function, to: object): object {
   assert.ok(from);
   assert.equal(typeof (from), 'object');
   assert.ok(to);
   assert.equal(typeof (to), 'object');
 
-  var keys: Array = Object.getOwnPropertyNames(from);
-  keys.forEach(function (key: String) {
+  var keys: any[] = Object.getOwnPropertyNames(from);
+  keys.forEach(function (key: string) {
     if (to[key])
       return;
 
-    var value: String = Object.getOwnPropertyDescriptor(from, key);
+    var value: string = Object.getOwnPropertyDescriptor(from, key);
     Object.defineProperty(to, key, value);
   });
 
@@ -41,7 +41,7 @@ function merge(from: Function, to: Object): Object {
 
 // --- API
 
-function Writer(options: Object): Void {
+function Writer(options: object): Void {
   options = merge(DEFAULT_OPTS, options || {});
 
   this._buf = Buffer.alloc(options.size || 1024);
@@ -63,7 +63,7 @@ Object.defineProperty(Writer.prototype, 'buffer', {
   }
 });
 
-Writer.prototype.writeByte = function (b: Array) {
+Writer.prototype.writeByte = function (b: any[]) {
   if (typeof (b) !== 'number')
     throw new TypeError('argument must be a Number');
 
@@ -72,13 +72,13 @@ Writer.prototype.writeByte = function (b: Array) {
 };
 
 
-Writer.prototype.writeInt = function (i: Number, tag: Number) {
+Writer.prototype.writeInt = function (i: number, tag: number) {
   if (typeof (i) !== 'number')
     throw new TypeError('argument must be a Number');
   if (typeof (tag) !== 'number')
     tag = ASN1.Integer;
 
-  var sz: Number = 4;
+  var sz: number = 4;
 
   while ((((i & 0xff800000) === 0) || ((i & 0xff800000) === 0xff800000 >> 0)) &&
         (sz > 1)) {
@@ -107,7 +107,7 @@ Writer.prototype.writeNull = function () {
 };
 
 
-Writer.prototype.writeEnumeration = function (i: String, tag: Number) {
+Writer.prototype.writeEnumeration = function (i: string, tag: number) {
   if (typeof (i) !== 'number')
     throw new TypeError('argument must be a Number');
   if (typeof (tag) !== 'number')
@@ -117,7 +117,7 @@ Writer.prototype.writeEnumeration = function (i: String, tag: Number) {
 };
 
 
-Writer.prototype.writeBoolean = function (b: String, tag: Number) {
+Writer.prototype.writeBoolean = function (b: string, tag: number) {
   if (typeof (b) !== 'boolean')
     throw new TypeError('argument must be a Boolean');
   if (typeof (tag) !== 'number')
@@ -130,13 +130,13 @@ Writer.prototype.writeBoolean = function (b: String, tag: Number) {
 };
 
 
-Writer.prototype.writeString = function (s: String, tag: Number) {
+Writer.prototype.writeString = function (s: string, tag: number) {
   if (typeof (s) !== 'string')
     throw new TypeError('argument must be a string (was: ' + typeof (s) + ')');
   if (typeof (tag) !== 'number')
     tag = ASN1.OctetString;
 
-  var len: Number = Buffer.byteLength(s);
+  var len: number = Buffer.byteLength(s);
   this.writeByte(tag);
   this.writeLength(len);
   if (len) {
@@ -147,7 +147,7 @@ Writer.prototype.writeString = function (s: String, tag: Number) {
 };
 
 
-Writer.prototype.writeBuffer = function (buf: Array, tag: String) {
+Writer.prototype.writeBuffer = function (buf: any[], tag: string) {
   if (typeof (tag) !== 'number')
     throw new TypeError('tag must be a number');
   if (!Buffer.isBuffer(buf))
@@ -161,18 +161,18 @@ Writer.prototype.writeBuffer = function (buf: Array, tag: String) {
 };
 
 
-Writer.prototype.writeStringArray = function (strings: Array) {
+Writer.prototype.writeStringArray = function (strings: any[]) {
   if ((!strings instanceof Array))
     throw new TypeError('argument must be an Array[String]');
 
-  var self: Array = this;
-  strings.forEach(function (s: String) {
+  var self: any[] = this;
+  strings.forEach(function (s: string) {
     self.writeString(s);
   });
 };
 
 // This is really to solve DER cases, but whatever for now
-Writer.prototype.writeOID = function (s: String, tag: Number) {
+Writer.prototype.writeOID = function (s: string, tag: number) {
   if (typeof (s) !== 'string')
     throw new TypeError('argument must be a string');
   if (typeof (tag) !== 'number')
@@ -181,7 +181,7 @@ Writer.prototype.writeOID = function (s: String, tag: Number) {
   if (!/^([0-9]+\.){3,}[0-9]+$/.test(s))
     throw new Error('argument is not a valid OID string');
 
-  function encodeOctet(bytes: Array, octet: Number): Void {
+  function encodeOctet(bytes: any[], octet: number): Void {
     if (octet < 128) {
         bytes.push(octet);
     } else if (octet < 16384) {
@@ -205,24 +205,24 @@ Writer.prototype.writeOID = function (s: String, tag: Number) {
     }
   }
 
-  var tmp: Array = s.split('.');
-  var bytes: Array = [];
+  var tmp: any[] = s.split('.');
+  var bytes: any[] = [];
   bytes.push(parseInt(tmp[0], 10) * 40 + parseInt(tmp[1], 10));
-  tmp.slice(2).forEach(function (b: String) {
+  tmp.slice(2).forEach(function (b: string) {
     encodeOctet(bytes, parseInt(b, 10));
   });
 
-  var self: Array = this;
+  var self: any[] = this;
   this._ensure(2 + bytes.length);
   this.writeByte(tag);
   this.writeLength(bytes.length);
-  bytes.forEach(function (b: Array) {
+  bytes.forEach(function (b: any[]) {
     self.writeByte(b);
   });
 };
 
 
-Writer.prototype.writeLength = function (len: Number) {
+Writer.prototype.writeLength = function (len: number) {
   if (typeof (len) !== 'number')
     throw new TypeError('argument must be a Number');
 
@@ -247,7 +247,7 @@ Writer.prototype.writeLength = function (len: Number) {
   }
 };
 
-Writer.prototype.startSequence = function (tag: Number) {
+Writer.prototype.startSequence = function (tag: number) {
   if (typeof (tag) !== 'number')
     tag = ASN1.Sequence | ASN1.Constructor;
 
@@ -259,9 +259,9 @@ Writer.prototype.startSequence = function (tag: Number) {
 
 
 Writer.prototype.endSequence = function () {
-  var seq: String = this._seq.pop();
-  var start: Number = seq + 3;
-  var len: Number = this._offset - start;
+  var seq: string = this._seq.pop();
+  var start: number = seq + 3;
+  var len: number = this._offset - start;
 
   if (len <= 0x7f) {
     this._shift(start, len, -2);
@@ -286,7 +286,7 @@ Writer.prototype.endSequence = function () {
 };
 
 
-Writer.prototype._shift = function (start: Number, len: Number, shift: Number) {
+Writer.prototype._shift = function (start: number, len: number, shift: number) {
   assert.ok(start !== undefined);
   assert.ok(len !== undefined);
   assert.ok(shift);
@@ -295,15 +295,15 @@ Writer.prototype._shift = function (start: Number, len: Number, shift: Number) {
   this._offset += shift;
 };
 
-Writer.prototype._ensure = function (len: Number) {
+Writer.prototype._ensure = function (len: number) {
   assert.ok(len);
 
   if (this._size - this._offset < len) {
-    var sz: Number = this._size * this._options.growthFactor;
+    var sz: number = this._size * this._options.growthFactor;
     if (sz - this._offset < len)
       sz += len;
 
-    var buf: String = Buffer.alloc(sz);
+    var buf: string = Buffer.alloc(sz);
 
     this._buf.copy(buf, 0, 0, this._offset);
     this._buf = buf;

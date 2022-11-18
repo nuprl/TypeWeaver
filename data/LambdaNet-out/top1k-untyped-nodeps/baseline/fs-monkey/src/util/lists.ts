@@ -1,5 +1,5 @@
 
-export const fsProps: Array = [
+export const fsProps: any[] = [
     'constants',
     'F_OK',
     'R_OK',
@@ -8,7 +8,7 @@ export const fsProps: Array = [
     'Stats',
 ];
 
-export const fsSyncMethods: Array = [
+export const fsSyncMethods: any[] = [
     'renameSync',
     'ftruncateSync',
     'truncateSync',
@@ -51,7 +51,7 @@ export const fsSyncMethods: Array = [
     'createWriteStream',
 ];
 
-export const fsAsyncMethods: Array = [
+export const fsAsyncMethods: any[] = [
     'rename',
     'ftruncate',
     'truncate',

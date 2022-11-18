@@ -1,3 +1,3 @@
-const set: Array = require('regenerate')();
+const set: any[] = require('regenerate')();
 set.addRange(0x10F70, 0x10F89);
 exports.characters = set;

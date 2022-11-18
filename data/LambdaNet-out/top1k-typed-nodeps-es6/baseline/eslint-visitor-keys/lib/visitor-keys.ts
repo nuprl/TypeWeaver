@@ -5,7 +5,7 @@
 /**
  * @type {VisitorKeys}
  */
-const KEYS: Object = {
+const KEYS: object = {
     ArrayExpression: [
         "elements"
     ],
@@ -304,7 +304,7 @@ const KEYS: Object = {
 };
 
 // Types.
-const NODE_TYPES: Array = Object.keys(KEYS);
+const NODE_TYPES: any[] = Object.keys(KEYS);
 
 // Freeze the keys.
 for (const type of NODE_TYPES) {

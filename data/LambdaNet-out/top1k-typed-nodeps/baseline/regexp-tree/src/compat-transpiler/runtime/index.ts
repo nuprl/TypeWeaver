@@ -78,7 +78,7 @@ class RegExpTree {
    * Facade wrapper for RegExp `exec` method.
    */
   exec(string) {
-    const result: Object = this._re.exec(string);
+    const result: object = this._re.exec(string);
 
     if (!this._groups || !result) {
       return result;
@@ -87,7 +87,7 @@ class RegExpTree {
     result.groups = {};
 
     for (const group in this._groups) {
-      const groupNumber: String = this._groups[group];
+      const groupNumber: string = this._groups[group];
       result.groups[group] = result[groupNumber];
     }
 

@@ -1,4 +1,4 @@
-const Minipass: String = require('../..')
+const Minipass: string = require('../..')
 
 module.exports = class ExtendMinipass extends Minipass {
   constructor (opts) {

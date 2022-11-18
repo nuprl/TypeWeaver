@@ -1,24 +1,24 @@
 const ip: HTMLElement = exports;
 const { Buffer } = require('buffer');
-const os: String = require('os');
+const os: string = require('os');
 
-ip.toBuffer = function (ip: String, buff: Number, offset: Number) {
+ip.toBuffer = function (ip: string, buff: number, offset: number) {
   offset = ~~offset;
 
-  let result: Object;
+  let result: object;
 
   if (this.isV4Format(ip)) {
     result = buff || Buffer.alloc(offset + 4);
-    ip.split(/\./g).map((byte: Number) => {
+    ip.split(/\./g).map((byte: number) => {
       result[offset++] = parseInt(byte, 10) & 0xff;
     });
   } else if (this.isV6Format(ip)) {
-    const sections: Array = ip.split(':', 8);
+    const sections: any[] = ip.split(':', 8);
 
-    let i: Number;
+    let i: number;
     for (i = 0; i < sections.length; i++) {
-      const isv4: Boolean = this.isV4Format(sections[i]);
-      let v4Buffer: Array;
+      const isv4: boolean = this.isV4Format(sections[i]);
+      let v4Buffer: any[];
 
       if (isv4) {
         v4Buffer = this.toBuffer(sections[i]);
@@ -36,7 +36,7 @@ ip.toBuffer = function (ip: String, buff: Number, offset: Number) {
       while (sections.length < 8) sections.push('0');
     } else if (sections.length < 8) {
       for (i = 0; i < sections.length && sections[i] !== ''; i++);
-      const argv: Array = [i, 1];
+      const argv: any[] = [i, 1];
       for (i = 9 - sections.length; i > 0; i--) {
         argv.push('0');
       }
@@ -45,7 +45,7 @@ ip.toBuffer = function (ip: String, buff: Number, offset: Number) {
 
     result = buff || Buffer.alloc(offset + 16);
     for (i = 0; i < sections.length; i++) {
-      const word: Number = parseInt(sections[i], 16);
+      const word: number = parseInt(sections[i], 16);
       result[offset++] = (word >> 8) & 0xff;
       result[offset++] = word & 0xff;
     }
@@ -58,11 +58,11 @@ ip.toBuffer = function (ip: String, buff: Number, offset: Number) {
   return result;
 };
 
-ip.toString = function (buff: Array, offset: Number, length: String) {
+ip.toString = function (buff: any[], offset: number, length: string) {
   offset = ~~offset;
   length = length || (buff.length - offset);
 
-  let result: String = [];
+  let result: string = [];
   if (length === 4) {
     // IPv4
     for (let i = 0; i < length; i++) {
@@ -85,15 +85,15 @@ ip.toString = function (buff: Array, offset: Number, length: String) {
 const ipv4Regex: RegExp = /^(\d{1,3}\.){3,3}\d{1,3}$/;
 const ipv6Regex: RegExp = /^(::)?(((\d{1,3}\.){3}(\d{1,3}){1})?([0-9a-f]){0,4}:{0,2}){1,8}(::)?$/i;
 
-ip.isV4Format = function (ip: String) {
+ip.isV4Format = function (ip: string) {
   return ipv4Regex.test(ip);
 };
 
-ip.isV6Format = function (ip: String) {
+ip.isV6Format = function (ip: string) {
   return ipv6Regex.test(ip);
 };
 
-function _normalizeFamily(family: String): String {
+function _normalizeFamily(family: string): string {
   if (family === 4) {
     return 'ipv4';
   }
@@ -103,21 +103,21 @@ function _normalizeFamily(family: String): String {
   return family ? family.toLowerCase() : 'ipv4';
 }
 
-ip.fromPrefixLen = function (prefixlen: Number, family: String) {
+ip.fromPrefixLen = function (prefixlen: number, family: string) {
   if (prefixlen > 32) {
     family = 'ipv6';
   } else {
     family = _normalizeFamily(family);
   }
 
-  let len: Number = 4;
+  let len: number = 4;
   if (family === 'ipv6') {
     len = 16;
   }
-  const buff: Array = Buffer.alloc(len);
+  const buff: any[] = Buffer.alloc(len);
 
   for (let i = 0, n = buff.length; i < n; ++i) {
-    let bits: Number = 8;
+    let bits: number = 8;
     if (prefixlen < 8) {
       bits = prefixlen;
     }
@@ -129,14 +129,14 @@ ip.fromPrefixLen = function (prefixlen: Number, family: String) {
   return ip.toString(buff);
 };
 
-ip.mask = function (addr: Array, mask: Array) {
+ip.mask = function (addr: any[], mask: any[]) {
   addr = ip.toBuffer(addr);
   mask = ip.toBuffer(mask);
 
-  const result: Object = Buffer.alloc(Math.max(addr.length, mask.length));
+  const result: object = Buffer.alloc(Math.max(addr.length, mask.length));
 
   // Same protocol - do bitwise and
-  let i: Number;
+  let i: number;
   if (addr.length === mask.length) {
     for (i = 0; i < addr.length; i++) {
       result[i] = addr[i] & mask[i];
@@ -168,31 +168,31 @@ ip.mask = function (addr: Array, mask: Array) {
   return ip.toString(result);
 };
 
-ip.cidr = function (cidrString: String) {
-  const cidrParts: Array = cidrString.split('/');
+ip.cidr = function (cidrString: string) {
+  const cidrParts: any[] = cidrString.split('/');
 
-  const addr: String = cidrParts[0];
+  const addr: string = cidrParts[0];
   if (cidrParts.length !== 2) {
     throw new Error(`invalid CIDR subnet: ${addr}`);
   }
 
-  const mask: String = ip.fromPrefixLen(parseInt(cidrParts[1], 10));
+  const mask: string = ip.fromPrefixLen(parseInt(cidrParts[1], 10));
 
   return ip.mask(addr, mask);
 };
 
-ip.subnet = function (addr: String, mask: String) {
-  const networkAddress: String = ip.toLong(ip.mask(addr, mask));
+ip.subnet = function (addr: string, mask: string) {
+  const networkAddress: string = ip.toLong(ip.mask(addr, mask));
 
   // Calculate the mask's length.
-  const maskBuffer: Array = ip.toBuffer(mask);
-  let maskLength: Number = 0;
+  const maskBuffer: any[] = ip.toBuffer(mask);
+  let maskLength: number = 0;
 
   for (let i = 0; i < maskBuffer.length; i++) {
     if (maskBuffer[i] === 0xff) {
       maskLength += 8;
     } else {
-      let octet: Number = maskBuffer[i] & 0xff;
+      let octet: number = maskBuffer[i] & 0xff;
       while (octet) {
         octet = (octet << 1) & 0xff;
         maskLength++;
@@ -200,7 +200,7 @@ ip.subnet = function (addr: String, mask: String) {
     }
   }
 
-  const numberOfAddresses: Number = 2 ** (32 - maskLength);
+  const numberOfAddresses: number = 2 ** (32 - maskLength);
 
   return {
     networkAddress: ip.fromLong(networkAddress),
@@ -222,28 +222,28 @@ ip.subnet = function (addr: String, mask: String) {
   };
 };
 
-ip.cidrSubnet = function (cidrString: String) {
-  const cidrParts: Array = cidrString.split('/');
+ip.cidrSubnet = function (cidrString: string) {
+  const cidrParts: any[] = cidrString.split('/');
 
-  const addr: String = cidrParts[0];
+  const addr: string = cidrParts[0];
   if (cidrParts.length !== 2) {
     throw new Error(`invalid CIDR subnet: ${addr}`);
   }
 
-  const mask: String = ip.fromPrefixLen(parseInt(cidrParts[1], 10));
+  const mask: string = ip.fromPrefixLen(parseInt(cidrParts[1], 10));
 
   return ip.subnet(addr, mask);
 };
 
-ip.not = function (addr: String) {
-  const buff: Array = ip.toBuffer(addr);
+ip.not = function (addr: string) {
+  const buff: any[] = ip.toBuffer(addr);
   for (let i = 0; i < buff.length; i++) {
     buff[i] = 0xff ^ buff[i];
   }
   return ip.toString(buff);
 };
 
-ip.or = function (a: Array, b: Array) {
+ip.or = function (a: any[], b: any[]) {
   a = ip.toBuffer(a);
   b = ip.toBuffer(b);
 
@@ -256,14 +256,14 @@ ip.or = function (a: Array, b: Array) {
 
   // mixed protocols
   }
-  let buff: Array = a;
-  let other: Array = b;
+  let buff: any[] = a;
+  let other: any[] = b;
   if (b.length > a.length) {
     buff = b;
     other = a;
   }
 
-  const offset: Number = buff.length - other.length;
+  const offset: number = buff.length - other.length;
   for (let i = offset; i < buff.length; ++i) {
     buff[i] |= other[i - offset];
   }
@@ -271,7 +271,7 @@ ip.or = function (a: Array, b: Array) {
   return ip.toString(buff);
 };
 
-ip.isEqual = function (a: Array, b: Array) {
+ip.isEqual = function (a: any[], b: any[]) {
   a = ip.toBuffer(a);
   b = ip.toBuffer(b);
 
@@ -285,7 +285,7 @@ ip.isEqual = function (a: Array, b: Array) {
 
   // Swap
   if (b.length === 4) {
-    const t: Array = b;
+    const t: any[] = b;
     b = a;
     a = t;
   }
@@ -295,7 +295,7 @@ ip.isEqual = function (a: Array, b: Array) {
     if (b[i] !== 0) return false;
   }
 
-  const word: Number = b.readUInt16BE(10);
+  const word: number = b.readUInt16BE(10);
   if (word !== 0 && word !== 0xffff) return false;
 
   for (let i = 0; i < 4; i++) {
@@ -305,7 +305,7 @@ ip.isEqual = function (a: Array, b: Array) {
   return true;
 };
 
-ip.isPrivate = function (addr: String) {
+ip.isPrivate = function (addr: string) {
   return /^(::f{4}:)?10\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/i
     .test(addr)
     || /^(::f{4}:)?192\.168\.([0-9]{1,3})\.([0-9]{1,3})$/i.test(addr)
@@ -319,11 +319,11 @@ ip.isPrivate = function (addr: String) {
     || /^::$/.test(addr);
 };
 
-ip.isPublic = function (addr: Array) {
+ip.isPublic = function (addr: any[]) {
   return !ip.isPrivate(addr);
 };
 
-ip.isLoopback = function (addr: String) {
+ip.isLoopback = function (addr: string) {
   return /^(::f{4}:)?127\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})/
     .test(addr)
     || /^fe80::1$/.test(addr)
@@ -331,7 +331,7 @@ ip.isLoopback = function (addr: String) {
     || /^::$/.test(addr);
 };
 
-ip.loopback = function (family: Number) {
+ip.loopback = function (family: number) {
   //
   // Default to `ipv4`
   //
@@ -359,8 +359,8 @@ ip.loopback = function (family: Number) {
 //   * 'private': the first private ip address of family.
 //   * undefined: First address with `ipv4` or loopback address `127.0.0.1`.
 //
-ip.address = function (name: String, family: Number) {
-  const interfaces: Object = os.networkInterfaces();
+ip.address = function (name: string, family: number) {
+  const interfaces: object = os.networkInterfaces();
 
   //
   // Default to `ipv4`
@@ -372,8 +372,8 @@ ip.address = function (name: String, family: Number) {
   // return the address.
   //
   if (name && name !== 'private' && name !== 'public') {
-    const res: Array = interfaces[name].filter((details: Object) => {
-      const itemFamily: String = _normalizeFamily(details.family);
+    const res: any[] = interfaces[name].filter((details: object) => {
+      const itemFamily: string = _normalizeFamily(details.family);
       return itemFamily === family;
     });
     if (res.length === 0) {
@@ -382,12 +382,12 @@ ip.address = function (name: String, family: Number) {
     return res[0].address;
   }
 
-  const all: Array = Object.keys(interfaces).map((nic: String) => {
+  const all: any[] = Object.keys(interfaces).map((nic: string) => {
     //
     // Note: name will only be `public` or `private`
     // when this is called.
     //
-    const addresses: Array = interfaces[nic].filter((details: HTMLElement) => {
+    const addresses: any[] = interfaces[nic].filter((details: HTMLElement) => {
       details.family = _normalizeFamily(details.family);
       if (details.family !== family || ip.isLoopback(details.address)) {
         return false;
@@ -405,16 +405,16 @@ ip.address = function (name: String, family: Number) {
   return !all.length ? ip.loopback(family) : all[0];
 };
 
-ip.toLong = function (ip: String) {
-  let ipl: Number = 0;
-  ip.split('.').forEach((octet: Number) => {
+ip.toLong = function (ip: string) {
+  let ipl: number = 0;
+  ip.split('.').forEach((octet: number) => {
     ipl <<= 8;
     ipl += parseInt(octet);
   });
   return (ipl >>> 0);
 };
 
-ip.fromLong = function (ipl: Number) {
+ip.fromLong = function (ipl: number) {
   return (`${ipl >>> 24}.${
     ipl >> 16 & 255}.${
     ipl >> 8 & 255}.${

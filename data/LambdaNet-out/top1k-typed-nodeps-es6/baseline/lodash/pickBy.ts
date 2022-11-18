@@ -18,12 +18,12 @@ import getAllKeysIn from './.internal/getAllKeysIn.js'
  * pickBy(object, isNumber)
  * // => { 'a': 1, 'c': 3 }
  */
-function pickBy(object: Object, predicate: Function): Object {
+function pickBy(object: object, predicate: Function): object {
   if (object == null) {
     return {}
   }
-  const props: Object = map(getAllKeysIn(object), (prop: String) => [prop])
-  return basePickBy(object, props, (value: Number, path: String) => predicate(value, path[0]))
+  const props: object = map(getAllKeysIn(object), (prop: string) => [prop])
+  return basePickBy(object, props, (value: number, path: string) => predicate(value, path[0]))
 }
 
 export default pickBy

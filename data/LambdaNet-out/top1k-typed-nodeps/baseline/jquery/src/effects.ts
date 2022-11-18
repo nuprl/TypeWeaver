@@ -18,7 +18,7 @@ import "./css.js";
 import "./effects/Tween.js";
 
 var
-	fxNow: Number, inProgress: Boolean,
+	fxNow: number, inProgress: boolean,
 	rfxtypes: RegExp = /^(?:toggle|show|hide)$/,
 	rrun: RegExp = /queueHooks$/;
 
@@ -35,7 +35,7 @@ function schedule(): Void {
 }
 
 // Animations created synchronously will run synchronously
-function createFxNow(): Boolean {
+function createFxNow(): boolean {
 	window.setTimeout( function() {
 		fxNow = undefined;
 	} );
@@ -43,10 +43,10 @@ function createFxNow(): Boolean {
 }
 
 // Generate parameters to create a standard animation
-function genFx( type: String, includeWidth: Number ): Object {
-	var which: String,
-		i: Number = 0,
-		attrs: Object = { height: type };
+function genFx( type: string, includeWidth: number ): object {
+	var which: string,
+		i: number = 0,
+		attrs: object = { height: type };
 
 	// If we include width, step value is 1 to do all cssExpand values,
 	// otherwise step value is 2 to skip over Left and Right
@@ -63,11 +63,11 @@ function genFx( type: String, includeWidth: Number ): Object {
 	return attrs;
 }
 
-function createTween( value: String, prop: String, animation: String ): Object {
+function createTween( value: string, prop: string, animation: string ): object {
 	var tween: Function,
-		collection: Array = ( Animation.tweeners[ prop ] || [] ).concat( Animation.tweeners[ "*" ] ),
-		index: Number = 0,
-		length: Number = collection.length;
+		collection: any[] = ( Animation.tweeners[ prop ] || [] ).concat( Animation.tweeners[ "*" ] ),
+		index: number = 0,
+		length: number = collection.length;
 	for ( ; index < length; index++ ) {
 		if ( ( tween = collection[ index ].call( animation, prop, value ) ) ) {
 
@@ -77,14 +77,14 @@ function createTween( value: String, prop: String, animation: String ): Object {
 	}
 }
 
-function defaultPrefilter( elem: Object, props: Object, opts: HTMLElement ): Void {
-	var prop: Function, value: Number, toggle: Boolean, hooks: HTMLElement, oldfire: Function, propTween: Boolean, restoreDisplay: String, display: String,
-		isBox: Boolean = "width" in props || "height" in props,
-		anim: Array = this,
-		orig: Object = {},
-		style: Object = elem.style,
-		hidden: Boolean = elem.nodeType && isHiddenWithinTree( elem ),
-		dataShow: Object = dataPriv.get( elem, "fxshow" );
+function defaultPrefilter( elem: object, props: object, opts: HTMLElement ): Void {
+	var prop: Function, value: number, toggle: boolean, hooks: HTMLElement, oldfire: Function, propTween: boolean, restoreDisplay: string, display: string,
+		isBox: boolean = "width" in props || "height" in props,
+		anim: any[] = this,
+		orig: object = {},
+		style: object = elem.style,
+		hidden: boolean = elem.nodeType && isHiddenWithinTree( elem ),
+		dataShow: object = dataPriv.get( elem, "fxshow" );
 
 	// Queue-skipping animations hijack the fx hooks
 	if ( !opts.queue ) {
@@ -245,8 +245,8 @@ function defaultPrefilter( elem: Object, props: Object, opts: HTMLElement ): Voi
 	}
 }
 
-function propFilter( props: Object, specialEasing: Object ): Void {
-	var index: String, name: String, easing: Function, value: Object, hooks: Object;
+function propFilter( props: object, specialEasing: object ): Void {
+	var index: string, name: string, easing: Function, value: object, hooks: object;
 
 	// camelCase, specialEasing and expand cssHook pass
 	for ( index in props ) {
@@ -282,11 +282,11 @@ function propFilter( props: Object, specialEasing: Object ): Void {
 	}
 }
 
-function Animation( elem: Function, properties: String, options: Object ): String {
-	var result: Object,
-		stopped: Boolean,
-		index: Number = 0,
-		length: Number = Animation.prefilters.length,
+function Animation( elem: Function, properties: string, options: object ): string {
+	var result: object,
+		stopped: boolean,
+		index: number = 0,
+		length: number = Animation.prefilters.length,
 		deferred: HTMLElement = jQuery.Deferred().always( function() {
 
 			// Don't match elem in the :animated selector
@@ -296,12 +296,12 @@ function Animation( elem: Function, properties: String, options: Object ): Strin
 			if ( stopped ) {
 				return false;
 			}
-			var currentTime: Number = fxNow || createFxNow(),
-				remaining: Number = Math.max( 0, animation.startTime + animation.duration - currentTime ),
+			var currentTime: number = fxNow || createFxNow(),
+				remaining: number = Math.max( 0, animation.startTime + animation.duration - currentTime ),
 
-				percent: Number = 1 - ( remaining / animation.duration || 0 ),
-				index: Number = 0,
-				length: Number = animation.tweens.length;
+				percent: number = 1 - ( remaining / animation.duration || 0 ),
+				index: number = 0,
+				length: number = animation.tweens.length;
 
 			for ( ; index < length; index++ ) {
 				animation.tweens[ index ].run( percent );
@@ -323,7 +323,7 @@ function Animation( elem: Function, properties: String, options: Object ): Strin
 			deferred.resolveWith( elem, [ animation ] );
 			return false;
 		},
-		animation: Object = deferred.promise( {
+		animation: object = deferred.promise( {
 			elem: elem,
 			props: jQuery.extend( {}, properties ),
 			opts: jQuery.extend( true, {
@@ -335,18 +335,18 @@ function Animation( elem: Function, properties: String, options: Object ): Strin
 			startTime: fxNow || createFxNow(),
 			duration: options.duration,
 			tweens: [],
-			createTween: function( prop: String, end: String ) {
-				var tween: String = jQuery.Tween( elem, animation.opts, prop, end,
+			createTween: function( prop: string, end: string ) {
+				var tween: string = jQuery.Tween( elem, animation.opts, prop, end,
 					animation.opts.specialEasing[ prop ] || animation.opts.easing );
 				animation.tweens.push( tween );
 				return tween;
 			},
-			stop: function( gotoEnd: String ) {
-				var index: Number = 0,
+			stop: function( gotoEnd: string ) {
+				var index: number = 0,
 
 					// If we are going to the end, we want to run all the tweens
 					// otherwise we skip this part
-					length: Number = gotoEnd ? animation.tweens.length : 0;
+					length: number = gotoEnd ? animation.tweens.length : 0;
 				if ( stopped ) {
 					return this;
 				}
@@ -365,7 +365,7 @@ function Animation( elem: Function, properties: String, options: Object ): Strin
 				return this;
 			}
 		} ),
-		props: Number = animation.props;
+		props: number = animation.props;
 
 	propFilter( props, animation.opts.specialEasing );
 
@@ -407,14 +407,14 @@ function Animation( elem: Function, properties: String, options: Object ): Strin
 jQuery.Animation = jQuery.extend( Animation, {
 
 	tweeners: {
-		"*": [ function( prop: String, value: String ) {
-			var tween: Object = this.createTween( prop, value );
+		"*": [ function( prop: string, value: string ) {
+			var tween: object = this.createTween( prop, value );
 			adjustCSS( tween.elem, prop, rcssNum.exec( value ), tween );
 			return tween;
 		} ]
 	},
 
-	tweener: function( props: Array, callback: Array ) {
+	tweener: function( props: any[], callback: any[] ) {
 		if ( typeof props === "function" ) {
 			callback = props;
 			props = [ "*" ];
@@ -422,9 +422,9 @@ jQuery.Animation = jQuery.extend( Animation, {
 			props = props.match( rnothtmlwhite );
 		}
 
-		var prop: String,
-			index: Number = 0,
-			length: Number = props.length;
+		var prop: string,
+			index: number = 0,
+			length: number = props.length;
 
 		for ( ; index < length; index++ ) {
 			prop = props[ index ];
@@ -435,7 +435,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 
 	prefilters: [ defaultPrefilter ],
 
-	prefilter: function( callback: String, prepend: Boolean ) {
+	prefilter: function( callback: string, prepend: boolean ) {
 		if ( prepend ) {
 			Animation.prefilters.unshift( callback );
 		} else {
@@ -444,8 +444,8 @@ jQuery.Animation = jQuery.extend( Animation, {
 	}
 } );
 
-jQuery.speed = function( speed: Number, easing: Boolean, fn: Boolean ) {
-	var opt: Object = speed && typeof speed === "object" ? jQuery.extend( {}, speed ) : {
+jQuery.speed = function( speed: number, easing: boolean, fn: boolean ) {
+	var opt: object = speed && typeof speed === "object" ? jQuery.extend( {}, speed ) : {
 		complete: fn || !fn && easing ||
 			typeof speed === "function" && speed,
 		duration: speed,
@@ -489,7 +489,7 @@ jQuery.speed = function( speed: Number, easing: Boolean, fn: Boolean ) {
 };
 
 jQuery.fn.extend( {
-	fadeTo: function( speed: Function, to: String, easing: String, callback: Function ) {
+	fadeTo: function( speed: Function, to: string, easing: string, callback: Function ) {
 
 		// Show any hidden elements after setting opacity to 0
 		return this.filter( isHiddenWithinTree ).css( "opacity", 0 ).show()
@@ -497,13 +497,13 @@ jQuery.fn.extend( {
 			// Animate to the value specified
 			.end().animate( { opacity: to }, speed, easing, callback );
 	},
-	animate: function( prop: Number, speed: Function, easing: String, callback: Function ) {
-		var empty: Number = jQuery.isEmptyObject( prop ),
-			optall: Object = jQuery.speed( speed, easing, callback ),
+	animate: function( prop: number, speed: Function, easing: string, callback: Function ) {
+		var empty: number = jQuery.isEmptyObject( prop ),
+			optall: object = jQuery.speed( speed, easing, callback ),
 			doAnimation: Function = function() {
 
 				// Operate on a copy of prop so per-property easing won't be lost
-				var anim: Object = Animation( this, jQuery.extend( {}, prop ), optall );
+				var anim: object = Animation( this, jQuery.extend( {}, prop ), optall );
 
 				// Empty animations, or finishing resolves immediately
 				if ( empty || dataPriv.get( this, "finish" ) ) {
@@ -517,8 +517,8 @@ jQuery.fn.extend( {
 			this.each( doAnimation ) :
 			this.queue( optall.queue, doAnimation );
 	},
-	stop: function( type: Number, clearQueue: Number, gotoEnd: Number ) {
-		var stopQueue: Function = function( hooks: Object ) {
+	stop: function( type: number, clearQueue: number, gotoEnd: number ) {
+		var stopQueue: Function = function( hooks: object ) {
 			var stop: Function = hooks.stop;
 			delete hooks.stop;
 			stop( gotoEnd );
@@ -534,10 +534,10 @@ jQuery.fn.extend( {
 		}
 
 		return this.each( function() {
-			var dequeue: Boolean = true,
-				index: Number = type != null && type + "queueHooks",
+			var dequeue: boolean = true,
+				index: number = type != null && type + "queueHooks",
 				timers: Function = jQuery.timers,
-				data: Object = dataPriv.get( this );
+				data: object = dataPriv.get( this );
 
 			if ( index ) {
 				if ( data[ index ] && data[ index ].stop ) {
@@ -569,17 +569,17 @@ jQuery.fn.extend( {
 			}
 		} );
 	},
-	finish: function( type: Number ) {
+	finish: function( type: number ) {
 		if ( type !== false ) {
 			type = type || "fx";
 		}
 		return this.each( function() {
-			var index: Number,
-				data: Object = dataPriv.get( this ),
-				queue: Array = data[ type + "queue" ],
-				hooks: Object = data[ type + "queueHooks" ],
+			var index: number,
+				data: object = dataPriv.get( this ),
+				queue: any[] = data[ type + "queue" ],
+				hooks: object = data[ type + "queueHooks" ],
 				timers: Function = jQuery.timers,
-				length: Number = queue ? queue.length : 0;
+				length: number = queue ? queue.length : 0;
 
 			// Enable finishing flag on private data
 			data.finish = true;
@@ -612,9 +612,9 @@ jQuery.fn.extend( {
 	}
 } );
 
-jQuery.each( [ "toggle", "show", "hide" ], function( _i: String, name: String ) {
+jQuery.each( [ "toggle", "show", "hide" ], function( _i: string, name: string ) {
 	var cssFn: Function = jQuery.fn[ name ];
-	jQuery.fn[ name ] = function( speed: String, easing: String, callback: Number ) {
+	jQuery.fn[ name ] = function( speed: string, easing: string, callback: number ) {
 		return speed == null || typeof speed === "boolean" ?
 			cssFn.apply( this, arguments ) :
 			this.animate( genFx( name, true ), speed, easing, callback );
@@ -629,8 +629,8 @@ jQuery.each( {
 	fadeIn: { opacity: "show" },
 	fadeOut: { opacity: "hide" },
 	fadeToggle: { opacity: "toggle" }
-}, function( name: String, props: Object ) {
-	jQuery.fn[ name ] = function( speed: String, easing: String, callback: Number ) {
+}, function( name: string, props: object ) {
+	jQuery.fn[ name ] = function( speed: string, easing: string, callback: number ) {
 		return this.animate( props, speed, easing, callback );
 	};
 } );
@@ -638,7 +638,7 @@ jQuery.each( {
 jQuery.timers = [];
 jQuery.fx.tick = function() {
 	var timer: Function,
-		i: Number = 0,
+		i: number = 0,
 		timers: Function = jQuery.timers;
 
 	fxNow = Date.now();
@@ -658,7 +658,7 @@ jQuery.fx.tick = function() {
 	fxNow = undefined;
 };
 
-jQuery.fx.timer = function( timer: String ) {
+jQuery.fx.timer = function( timer: string ) {
 	jQuery.timers.push( timer );
 	jQuery.fx.start();
 };

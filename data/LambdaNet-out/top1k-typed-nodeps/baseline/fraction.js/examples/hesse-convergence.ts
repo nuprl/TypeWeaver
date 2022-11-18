@@ -6,7 +6,7 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  **/
 
-var Fraction: Object = require('../fraction.min.js');
+var Fraction: object = require('../fraction.min.js');
 
 /*
 We have the polynom f(x) = 1/3x_1^2 + x_2^2 + x_1 * x_2 + 3
@@ -29,9 +29,9 @@ We now want to find lim ->oo x[n], with the starting element of (3 2)^T
 */
 
 // Get the Hesse Matrix
-function H(x: Object): Array {
+function H(x: object): any[] {
 
-  var z: String = new Fraction(1).sub(new Fraction(4).mul(x[0]));
+  var z: string = new Fraction(1).sub(new Fraction(4).mul(x[0]));
 
   return [
   new Fraction(-2).div(z),
@@ -42,7 +42,7 @@ function H(x: Object): Array {
 }
 
 // Get the gradient of f(x)
-function grad(x: Object): Array {
+function grad(x: object): any[] {
 
   return [
   new Fraction(x[0]).mul(x[0]).add(x[1]),
@@ -51,7 +51,7 @@ function grad(x: Object): Array {
 }
 
 // A simple matrix multiplication helper
-function matrMult(m: Promise, v: Promise): Array {
+function matrMult(m: Promise, v: Promise): any[] {
 
   return [
   new Fraction(m[0]).mul(v[0]).add(new Fraction(m[1]).mul(v[1])),
@@ -60,7 +60,7 @@ function matrMult(m: Promise, v: Promise): Array {
 }
 
 // A simple vector subtraction helper
-function vecSub(a: Promise, b: Promise): Array {
+function vecSub(a: Promise, b: Promise): any[] {
 
   return [
   new Fraction(a[0]).sub(b[0]),
@@ -69,16 +69,16 @@ function vecSub(a: Promise, b: Promise): Array {
 }
 
 // Main function, gets a vector and the actual index
-function run(V: String, j: String): Object {
+function run(V: string, j: string): object {
 
-  var t: Array = H(V);
+  var t: any[] = H(V);
   //console.log("H(X)");
   for (var i in t) {
 
     //	console.log(t[i].toFraction());
   }
 
-  var s: Array = grad(V);
+  var s: any[] = grad(V);
   //console.log("vf(X)");
   for (var i in s) {
 
@@ -86,13 +86,13 @@ function run(V: String, j: String): Object {
   }
 
   //console.log("multiplication");
-  var r: Array = matrMult(t, s);
+  var r: any[] = matrMult(t, s);
   for (var i in r) {
 
     //	console.log(r[i].toFraction());
   }
 
-  var R: Object = (vecSub(V, r));
+  var R: object = (vecSub(V, r));
 
   console.log("X"+j);
   console.log(R[0].toFraction(), "= "+R[0].valueOf());
@@ -104,7 +104,7 @@ function run(V: String, j: String): Object {
 
 
 // Set the starting vector
-var v: Array = [3, 2];
+var v: any[] = [3, 2];
 
 for (var i = 0; i < 15; i++) {
 

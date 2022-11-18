@@ -1,11 +1,10 @@
-benchmark/body0-100b.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body0-100b.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body0-100b.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/body0-100b.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/body0-100b.ts(19,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/body0-100b.ts(21,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(27,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(33,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -14,24 +13,23 @@ benchmark/body0-100b.ts(45,7): error TS2339: Property 'on' does not exist on typ
 benchmark/body0-100b.ts(45,53): error TS2304: Cannot find name 'Void'.
 benchmark/body0-100b.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(49,53): error TS2304: Cannot find name 'Void'.
-benchmark/body0-100b.ts(50,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/body0-100b.ts(50,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/body0-100b.ts(50,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/body0-100b.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(53,46): error TS2304: Cannot find name 'Void'.
+benchmark/body0-100b.ts(54,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/body0-100b.ts(57,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(59,10): error TS2393: Duplicate function implementation.
-benchmark/body0-100b.ts(59,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body0-100b.ts(60,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body0-100b.ts(60,30): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(64,18): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/body1-1kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body1-1kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no call signatures.
 benchmark/body1-1kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/body1-1kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/body1-1kb.ts(19,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/body1-1kb.ts(21,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(27,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(33,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -40,24 +38,23 @@ benchmark/body1-1kb.ts(45,7): error TS2339: Property 'on' does not exist on type
 benchmark/body1-1kb.ts(45,53): error TS2304: Cannot find name 'Void'.
 benchmark/body1-1kb.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(49,53): error TS2304: Cannot find name 'Void'.
-benchmark/body1-1kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/body1-1kb.ts(50,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/body1-1kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/body1-1kb.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(53,46): error TS2304: Cannot find name 'Void'.
+benchmark/body1-1kb.ts(54,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/body1-1kb.ts(57,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(59,10): error TS2393: Duplicate function implementation.
-benchmark/body1-1kb.ts(59,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body1-1kb.ts(60,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body1-1kb.ts(60,30): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(64,18): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/body2-5kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body2-5kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no call signatures.
 benchmark/body2-5kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/body2-5kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/body2-5kb.ts(19,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/body2-5kb.ts(21,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(27,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(33,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -66,24 +63,23 @@ benchmark/body2-5kb.ts(45,7): error TS2339: Property 'on' does not exist on type
 benchmark/body2-5kb.ts(45,53): error TS2304: Cannot find name 'Void'.
 benchmark/body2-5kb.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(49,53): error TS2304: Cannot find name 'Void'.
-benchmark/body2-5kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/body2-5kb.ts(50,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/body2-5kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/body2-5kb.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(53,46): error TS2304: Cannot find name 'Void'.
+benchmark/body2-5kb.ts(54,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/body2-5kb.ts(57,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(59,10): error TS2393: Duplicate function implementation.
-benchmark/body2-5kb.ts(59,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body2-5kb.ts(60,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body2-5kb.ts(60,30): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(64,18): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/body3-10kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body3-10kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no call signatures.
 benchmark/body3-10kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/body3-10kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/body3-10kb.ts(19,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/body3-10kb.ts(21,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(27,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(33,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -92,24 +88,23 @@ benchmark/body3-10kb.ts(45,7): error TS2339: Property 'on' does not exist on typ
 benchmark/body3-10kb.ts(45,53): error TS2304: Cannot find name 'Void'.
 benchmark/body3-10kb.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(49,53): error TS2304: Cannot find name 'Void'.
-benchmark/body3-10kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/body3-10kb.ts(50,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/body3-10kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/body3-10kb.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(53,46): error TS2304: Cannot find name 'Void'.
+benchmark/body3-10kb.ts(54,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/body3-10kb.ts(57,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(59,10): error TS2393: Duplicate function implementation.
-benchmark/body3-10kb.ts(59,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body3-10kb.ts(60,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body3-10kb.ts(60,30): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 benchmark/body3-10kb.ts(64,18): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/body4-100kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body4-100kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no call signatures.
 benchmark/body4-100kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/body4-100kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'number' is not assignable to parameter of type 'String'.
+    Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/body4-100kb.ts(19,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/body4-100kb.ts(21,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(27,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(33,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -118,25 +113,21 @@ benchmark/body4-100kb.ts(45,7): error TS2339: Property 'on' does not exist on ty
 benchmark/body4-100kb.ts(45,53): error TS2304: Cannot find name 'Void'.
 benchmark/body4-100kb.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(49,53): error TS2304: Cannot find name 'Void'.
-benchmark/body4-100kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/body4-100kb.ts(50,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/body4-100kb.ts(50,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/body4-100kb.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(53,46): error TS2304: Cannot find name 'Void'.
+benchmark/body4-100kb.ts(54,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/body4-100kb.ts(57,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(59,10): error TS2393: Duplicate function implementation.
-benchmark/body4-100kb.ts(59,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body4-100kb.ts(60,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body4-100kb.ts(60,30): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 benchmark/body4-100kb.ts(64,18): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'String'.
-benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'String'.
-benchmark/index.ts(25,36): error TS2339: Property 'relative' does not exist on type 'String'.
-benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
-benchmark/stats.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/stats.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no call signatures.
+benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'string'.
+benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'string'.
+benchmark/index.ts(25,36): error TS2339: Property 'relative' does not exist on type 'string'.
+benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'object'.
+benchmark/stats.ts(18,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/stats.ts(20,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(26,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(32,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -145,28 +136,31 @@ benchmark/stats.ts(44,7): error TS2339: Property 'on' does not exist on type 'HT
 benchmark/stats.ts(44,53): error TS2304: Cannot find name 'Void'.
 benchmark/stats.ts(48,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(48,53): error TS2304: Cannot find name 'Void'.
-benchmark/stats.ts(49,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/stats.ts(49,14): error TS2339: Property 'add' does not exist on type 'any[]'.
+benchmark/stats.ts(49,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/stats.ts(52,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(52,46): error TS2304: Cannot find name 'Void'.
+benchmark/stats.ts(53,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/stats.ts(56,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
-benchmark/stats.ts(60,15): error TS2339: Property 'statSync' does not exist on type 'String'.
-benchmark/stats.ts(64,5): error TS2322: Type '{ ctime: Date; mtime: Date; ino: number; size: number; }' is not assignable to type 'String'.
-  Object literal may only specify known properties, and 'ctime' does not exist in type 'String'.
-index.ts(21,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
+benchmark/stats.ts(60,15): error TS2339: Property 'statSync' does not exist on type 'string'.
+benchmark/stats.ts(63,3): error TS2322: Type '{ ctime: Date; mtime: Date; ino: number; size: number; }' is not assignable to type 'string'.
+index.ts(21,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'string'.
 index.ts(29,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(47,6): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 index.ts(54,14): error TS2339: Property 'byteLength' does not exist on type 'HTMLElement'.
-index.ts(77,48): error TS2339: Property 'weak' does not exist on type 'Object'.
-index.ts(78,15): error TS2339: Property 'weak' does not exist on type 'Object'.
+index.ts(55,14): error TS2339: Property 'length' does not exist on type 'never'.
+index.ts(76,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(77,48): error TS2339: Property 'weak' does not exist on type 'object'.
+index.ts(78,15): error TS2339: Property 'weak' does not exist on type 'object'.
 index.ts(82,57): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-index.ts(91,3): error TS2322: Type 'string | String' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
-index.ts(112,41): error TS2339: Property 'ctime' does not exist on type 'Object'.
-index.ts(113,41): error TS2339: Property 'mtime' does not exist on type 'Object'.
-index.ts(114,32): error TS2339: Property 'ino' does not exist on type 'Object'.
-index.ts(115,33): error TS2339: Property 'size' does not exist on type 'Object'.
-index.ts(127,28): error TS2339: Property 'mtime' does not exist on type 'Object'.
-index.ts(128,27): error TS2339: Property 'size' does not exist on type 'Object'.
+index.ts(88,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(91,3): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(112,41): error TS2339: Property 'ctime' does not exist on type 'object'.
+index.ts(113,41): error TS2339: Property 'mtime' does not exist on type 'object'.
+index.ts(114,32): error TS2339: Property 'ino' does not exist on type 'object'.
+index.ts(115,33): error TS2339: Property 'size' does not exist on type 'object'.
+index.ts(127,28): error TS2339: Property 'mtime' does not exist on type 'object'.
+index.ts(128,27): error TS2339: Property 'size' does not exist on type 'object'.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'HTMLElement', but here has type 'BufferConstructor'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.

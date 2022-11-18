@@ -5,12 +5,12 @@
 
 "use strict";
 
-export default function getPaths(path: String): Object {
+export default function getPaths(path: string): object {
 	if (path === "/") return { paths: ["/"], segments: [""] };
-	const parts: Array = path.split(/(.*?[\\/]+)/);
-	const paths: Array = [path];
-	const segments: Array = [parts[parts.length - 1]];
-	let part: String = parts[parts.length - 1];
+	const parts: any[] = path.split(/(.*?[\\/]+)/);
+	const paths: any[] = [path];
+	const segments: any[] = [parts[parts.length - 1]];
+	let part: string = parts[parts.length - 1];
 	path = path.substr(0, path.length - part.length - 1);
 	for (let i = parts.length - 2; i > 2; i -= 2) {
 		paths.push(path);
@@ -27,10 +27,10 @@ export default function getPaths(path: String): Object {
 	};
 };
 
-export const basename: AppendPlugin = function basename(path: String): Resolver {
-	const i: Number = path.lastIndexOf("/"),
-		j: Number = path.lastIndexOf("\\");
-	const p: Number = i < 0 ? j : j < 0 ? i : i < j ? j : i;
+export const basename: AppendPlugin = function basename(path: string): Resolver {
+	const i: number = path.lastIndexOf("/"),
+		j: number = path.lastIndexOf("\\");
+	const p: number = i < 0 ? j : j < 0 ? i : i < j ? j : i;
 	if (p < 0) return null;
 	const s: Resolver = path.substr(p + 1);
 	return s;

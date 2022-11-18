@@ -3,12 +3,12 @@
 class FiggyPudding {
   constructor (specs, opts, providers) {
     this.__specs = specs || {}
-    Object.keys(this.__specs).forEach((alias: String) => {
+    Object.keys(this.__specs).forEach((alias: string) => {
       if (typeof this.__specs[alias] === 'string') {
-        const key: String = this.__specs[alias]
+        const key: string = this.__specs[alias]
         const realSpec: HTMLElement = this.__specs[key]
         if (realSpec) {
-          const aliasArr: Array = realSpec.aliases || []
+          const aliasArr: any[] = realSpec.aliases || []
           aliasArr.push(alias, key)
           realSpec.aliases = [...(new Set(aliasArr))]
           this.__specs[alias] = realSpec
@@ -19,7 +19,7 @@ class FiggyPudding {
     })
     this.__opts = opts || {}
     this.__providers = reverse((providers).filter(
-      (x: String) => x != null && typeof x === 'object'
+      (x: string) => x != null && typeof x === 'object'
     ))
     this.__isFiggyPudding = true
   }
@@ -33,8 +33,8 @@ class FiggyPudding {
     }
   }
   toJSON () {
-    const obj: Object = {}
-    this.forEach((val: String, key: String) => {
+    const obj: object = {}
+    this.forEach((val: string, key: string) => {
       obj[key] = val
     })
     return obj
@@ -47,7 +47,7 @@ class FiggyPudding {
     if (matcher) {
       const seen: Error = new Set()
       for (let p of this.__providers) {
-        const iter: Array = p.entries ? p.entries(matcher) : entries(p)
+        const iter: any[] = p.entries ? p.entries(matcher) : entries(p)
         for (let [key, val] of iter) {
           if (matcher(key) && !seen.has(key)) {
             seen.add(key)
@@ -81,27 +81,27 @@ class FiggyPudding {
   }
 }
 try {
-  const util: String = require('util')
-  FiggyPudding.prototype[util.inspect.custom] = function (depth: String, opts: Function) {
+  const util: string = require('util')
+  FiggyPudding.prototype[util.inspect.custom] = function (depth: string, opts: Function) {
     return (
       this[Symbol.toStringTag] + ' '
     ) + util.inspect(this.toJSON(), opts)
   }
 } catch (e) {}
 
-function BadKeyError (key: String): Void {
+function BadKeyError (key: string): Void {
   throw Object.assign(new Error(
     `invalid config key requested: ${key}`
   ), {code: 'EBADKEY'})
 }
 
-function pudGet (pud: HTMLElement, key: String, validate: Boolean): Array {
+function pudGet (pud: HTMLElement, key: string, validate: boolean): any[] {
   let spec: HTMLElement = pud.__specs[key]
   if (validate && !spec && (!pud.__opts.other || !pud.__opts.other(key))) {
     BadKeyError(key)
   } else {
     if (!spec) { spec = {} }
-    let ret: String
+    let ret: string
     for (let p of pud.__providers) {
       ret = tryGet(key, p)
       if (ret === undefined && spec.aliases && spec.aliases.length) {
@@ -129,8 +129,8 @@ function pudGet (pud: HTMLElement, key: String, validate: Boolean): Array {
   }
 }
 
-function tryGet (key: String, p: Object): Object {
-  let ret: Object
+function tryGet (key: string, p: object): object {
+  let ret: object
   if (p.__isFiggyPudding) {
     ret = pudGet(p, key, false)
   } else if (typeof p.get === 'function') {
@@ -141,7 +141,7 @@ function tryGet (key: String, p: Object): Object {
   return ret
 }
 
-const proxyHandler: Object = {
+const proxyHandler: object = {
   has (obj, prop) {
     return prop in obj.__specs && pudGet(obj, prop, false) !== undefined
   },
@@ -175,8 +175,8 @@ const proxyHandler: Object = {
 }
 
 export default figgyPudding;
-function figgyPudding (specs: String, opts: String): Function {
-  function factory (...providers): Object {
+function figgyPudding (specs: string, opts: string): Function {
+  function factory (...providers): object {
     return new Proxy(new FiggyPudding(
       specs,
       opts,
@@ -186,12 +186,12 @@ function figgyPudding (specs: String, opts: String): Function {
   return factory
 }
 
-function reverse (arr: Array): Array {
-  const ret: Array = []
-  arr.forEach((x: String) => ret.unshift(x))
+function reverse (arr: any[]): any[] {
+  const ret: any[] = []
+  arr.forEach((x: string) => ret.unshift(x))
   return ret
 }
 
-function entries (obj: Object): Array {
-  return Object.keys(obj).map((k: String) => [k, obj[k]])
+function entries (obj: object): any[] {
+  return Object.keys(obj).map((k: string) => [k, obj[k]])
 }

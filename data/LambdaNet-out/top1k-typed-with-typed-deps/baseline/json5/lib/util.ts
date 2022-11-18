@@ -1,4 +1,4 @@
-const unicode: String = require('../lib/unicode')
+const unicode: string = require('../lib/unicode')
 
 module.exports = {
     isSpaceSeparator (c) {

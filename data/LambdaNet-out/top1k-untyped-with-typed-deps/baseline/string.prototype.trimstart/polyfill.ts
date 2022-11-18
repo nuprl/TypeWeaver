@@ -1,13 +1,13 @@
 'use strict';
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 
-module.exports = function getPolyfill(): String {
+module.exports = function getPolyfill(): string {
 	if (!String.prototype.trimStart && !String.prototype.trimLeft) {
 		return implementation;
 	}
-	var zeroWidthSpace: String = '\u200b';
-	var trimmed: String = zeroWidthSpace.trimStart ? zeroWidthSpace.trimStart() : zeroWidthSpace.trimLeft();
+	var zeroWidthSpace: string = '\u200b';
+	var trimmed: string = zeroWidthSpace.trimStart ? zeroWidthSpace.trimStart() : zeroWidthSpace.trimLeft();
 	if (trimmed !== zeroWidthSpace) {
 		return implementation;
 	}

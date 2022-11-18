@@ -9,7 +9,7 @@ import unicodeToArray from './unicodeToArray.js'
  * @param {string} string The string to convert.
  * @returns {Array} Returns the converted array.
  */
-function stringToArray(string: String): Array {
+function stringToArray(string: string): any[] {
   return hasUnicode(string)
     ? unicodeToArray(string)
     : asciiToArray(string)

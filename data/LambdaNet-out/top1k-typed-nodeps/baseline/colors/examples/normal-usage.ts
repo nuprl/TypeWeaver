@@ -1,4 +1,4 @@
-var colors: Array = require('../lib/index');
+var colors: any[] = require('../lib/index');
 
 console.log('First some yellow text'.yellow);
 

@@ -1,4 +1,4 @@
-const colors: Object = require('..');
+const colors: object = require('..');
 
 colors.alias('primary', colors.yellow);
 colors.alias('strong', colors.bold);

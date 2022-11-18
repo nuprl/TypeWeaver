@@ -1,12 +1,12 @@
 import EventTarget from './events';
 
-const config: Object = {
+const config: object = {
   instrument: false
 };
 
 EventTarget['mixin'](config);
 
-function configure(name: String, value: String): String {
+function configure(name: string, value: string): string {
   if (arguments.length === 2) {
     config[name] = value;
   } else {

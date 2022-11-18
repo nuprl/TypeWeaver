@@ -1,24 +1,24 @@
 'use strict';
 import Limiter from '../';
 
-const concurrency: Number = 1;
+const concurrency: number = 1;
 console.log(`Running async-limiter demo with concurrency '${concurrency}'. ` +
   'Edit example/index.js to try other configurations.');
 
 // When concurrency != 1, async-limiter makes no ordering guarantees.
 // Try playing with concurrency to see how it behaves.
-const t: Array = new Limiter({ concurrency });
-const results: Array = [];
+const t: any[] = new Limiter({ concurrency });
+const results: any[] = [];
 
-function delay(ms: Number): Promise {
-  return new Promise((resolve: Number) => setTimeout(resolve, ms));
+function delay(ms: number): Promise {
+  return new Promise((resolve: number) => setTimeout(resolve, ms));
 }
 
-function random(upperBound: Function, lowerBound: Number = 0): String {
+function random(upperBound: Function, lowerBound: number = 0): string {
   return Math.floor(Math.random() * 200) + lowerBound;
 }
 
-function done(result: String): Void {
+function done(result: string): Void {
   results.push(result);
   console.log(new Date().toISOString() + ' ' + result);
 }

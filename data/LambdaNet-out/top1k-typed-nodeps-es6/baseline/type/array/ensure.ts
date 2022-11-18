@@ -6,18 +6,18 @@ import toShortString from '../lib/to-short-string';
 import ensurePlainFunction from '../plain-function/ensure';
 import is from './is';
 
-var objHasOwnProperty: Function = Object.prototype.hasOwnProperty, invalidItemsLimit: Number = 3;
+var objHasOwnProperty: Function = Object.prototype.hasOwnProperty, invalidItemsLimit: number = 3;
 
-export default function (value: Array /*, options*/) {
-	var options: Object = arguments[1];
-	var mainErrorMessage: String =
+export default function (value: any[] /*, options*/) {
+	var options: object = arguments[1];
+	var mainErrorMessage: string =
 		options && options.name ? "Expected an array for %n, received %v" : "%v is not an array";
 	if (!is(value)) return resolveException(value, mainErrorMessage, options);
 	if (!options) return value;
 
 	var ensureItem: Function = ensurePlainFunction(options.ensureItem, { isOptional: true });
 	if (ensureItem) {
-		var coercedValue: Object = [], invalidItems: Array;
+		var coercedValue: object = [], invalidItems: any[];
 		for (var index = 0, length = value.length; index < length; ++index) {
 			if (!objHasOwnProperty.call(value, index)) continue;
 			var coercedItem: Function;

@@ -138,7 +138,7 @@ class TextWrapper {
          *    'use', ' ', 'the', ' ', '-b', ' ', option!'
          *  otherwise.
          */
-        let chunks: Array = text.split(wordsep_simple_re)
+        let chunks: any[] = text.split(wordsep_simple_re)
         chunks = chunks.filter(Boolean)
         return chunks
     }
@@ -154,7 +154,7 @@ class TextWrapper {
          */
         // Figure out when indent is larger than the specified width, and make
         // sure at least one character is stripped off on every pass
-        let space_left: Number
+        let space_left: number
         if (width < 1) {
             space_left = 1
         } else {
@@ -195,8 +195,8 @@ class TextWrapper {
          *  Whitespace chunks will be removed from the beginning and end of
          *  lines, but apart from that whitespace is preserved.
          */
-        let lines: Array = []
-        let indent: Array
+        let lines: any[] = []
+        let indent: any[]
         if (this.width <= 0) {
             throw Error(`invalid width ${this.width} (must be > 0)`)
         }
@@ -219,11 +219,11 @@ class TextWrapper {
 
             // Start the list of chunks that will make up the current line.
             // cur_len is just the length of all the chunks in cur_line.
-            let cur_line: Array = []
-            let cur_len: Number = 0
+            let cur_line: any[] = []
+            let cur_len: number = 0
 
             // Figure out which static string will prefix this line.
-            let indent: String
+            let indent: string
             if (lines) {
                 indent = this.subsequent_indent
             } else {
@@ -231,7 +231,7 @@ class TextWrapper {
             }
 
             // Maximum width for this line.
-            let width: Number = this.width - indent.length
+            let width: number = this.width - indent.length
 
             // First chunk on line is whitespace -- drop it, unless this
             // is the very beginning of the text (ie. no lines started yet).
@@ -240,7 +240,7 @@ class TextWrapper {
             }
 
             while (chunks.length > 0) {
-                let l: Number = chunks[chunks.length - 1].length
+                let l: number = chunks[chunks.length - 1].length
 
                 // Can at least squeeze this chunk onto the current line.
                 if (cur_len + l <= width) {
@@ -257,7 +257,7 @@ class TextWrapper {
             // fit on *any* line (not just this one).
             if (chunks.length && chunks[chunks.length - 1].length > width) {
                 this._handle_long_word(chunks, cur_line, cur_len, width)
-                cur_len = cur_line.map((l: Array) => l.length).reduce((a: Number, b: Number) => a + b, 0)
+                cur_len = cur_line.map((l: any[]) => l.length).reduce((a: number, b: number) => a + b, 0)
             }
 
             // If the last chunk on this line is all whitespace, drop it.
@@ -277,7 +277,7 @@ class TextWrapper {
                     // list of all lines (return value).
                     lines.push(indent + cur_line.join(''))
                 } else {
-                    let had_break: Boolean = false
+                    let had_break: boolean = false
                     while (cur_line) {
                         if (cur_line[cur_line.length - 1].trim() &&
                             cur_len + this.placeholder.length <= width) {
@@ -291,7 +291,7 @@ class TextWrapper {
                     }
                     if (!had_break) {
                         if (lines) {
-                            let prev_line: String = lines[lines.length - 1].trimEnd()
+                            let prev_line: string = lines[lines.length - 1].trimEnd()
                             if (prev_line.length + this.placeholder.length <=
                                     this.width) {
                                 lines[lines.length - 1] = prev_line + this.placeholder
@@ -325,7 +325,7 @@ class TextWrapper {
          *  and all other whitespace characters (including newline) are
          *  converted to space.
          */
-        let chunks: String = this._split_chunks(text)
+        let chunks: string = this._split_chunks(text)
         // not implemented in js
         //if (this.fix_sentence_endings) {
         //    this._fix_sentence_endings(chunks)
@@ -348,7 +348,7 @@ class TextWrapper {
 
 // -- Convenience interface ---------------------------------------------
 
-function wrap(text: String, options: Object = {}): String {
+function wrap(text: string, options: object = {}): string {
     /*
      *  Wrap a single paragraph of text, returning a list of wrapped lines.
      *
@@ -364,7 +364,7 @@ function wrap(text: String, options: Object = {}): String {
     return w.wrap(text)
 }
 
-function fill(text: String, options: Object = {}): String {
+function fill(text: string, options: object = {}): string {
     /*
      *  Fill a single paragraph of text, returning a new string.
      *
@@ -384,7 +384,7 @@ function fill(text: String, options: Object = {}): String {
 let _whitespace_only_re: RegExp = /^[ \t]+$/mg
 let _leading_whitespace_re: RegExp = /(^[ \t]*)(?:[^ \t\n])/mg
 
-function dedent(text: String): String {
+function dedent(text: string): string {
     /*
      *  Remove any common leading whitespace from every line in `text`.
      *
@@ -400,9 +400,9 @@ function dedent(text: String): String {
      */
     // Look for the longest leading string of spaces and tabs common to
     // all lines.
-    let margin: Array = undefined
+    let margin: any[] = undefined
     text = text.replace(_whitespace_only_re, '')
-    let indents: Array = text.match(_leading_whitespace_re) || []
+    let indents: any[] = text.match(_leading_whitespace_re) || []
     for (let indent of indents) {
         indent = indent.slice(0, -1)
 

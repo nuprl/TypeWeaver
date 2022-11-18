@@ -3,15 +3,10 @@ rollup.config.ts(3,19): error TS2307: Cannot find module 'rollup-plugin-babel' o
 rollup.config.ts(4,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
 rollup.config.ts(5,24): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
 rollup.config.ts(6,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-rollup.config.ts(11,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-rollup.config.ts(16,84): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/index.ts(69,120): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(75,55): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
-  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(79,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(90,32): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(91,46): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(92,50): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(93,50): error TS2538: Type 'String' cannot be used as an index type.
+rollup.config.ts(11,27): error TS2345: Argument of type '(str: any[]) => any' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any'.
+  Types of parameters 'str' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'any[]'.
+src/index.ts(74,39): error TS2367: This condition will always return 'true' since the types 'boolean' and 'object' have no overlap.
+src/index.ts(75,55): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
+src/index.ts(103,5): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 

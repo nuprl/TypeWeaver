@@ -17,8 +17,8 @@ load("build/packer/base2.js");
 load("build/packer/packer.js");
 
 // read file from stdin
-function _readFile(from: String): String {
-  var outstr: String = '', line: String = '';
+function _readFile(from: string): string {
+  var outstr: string = '', line: string = '';
   while ((line = readline()) != null) {
       outstr += line + '\x0a';
   }

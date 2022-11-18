@@ -5,7 +5,7 @@
 
 'use strict';
 
-const NodePath: String = require('../../traverse/node-path');
+const NodePath: string = require('../../traverse/node-path');
 
 const {
   disjunctionToList,

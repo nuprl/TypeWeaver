@@ -13,7 +13,7 @@
  * @private
  */
 
-var db: Object = require('mime-db')
+var db: object = require('mime-db')
 
 /**
  * Module variables.
@@ -38,14 +38,14 @@ module.exports = compressible
  * @public
  */
 
-function compressible (type: Number): Boolean {
+function compressible (type: number): boolean {
   if (!type || typeof type !== 'string') {
     return false
   }
 
   // strip parameters
-  var match: Object = EXTRACT_TYPE_REGEXP.exec(type)
-  var mime: Number = match && match[1].toLowerCase()
+  var match: object = EXTRACT_TYPE_REGEXP.exec(type)
+  var mime: number = match && match[1].toLowerCase()
   var data: Element = db[mime]
 
   // return database information

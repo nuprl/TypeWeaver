@@ -4,9 +4,9 @@
  * Here we'll add a 'timeAgo' option type. See the comment below.
  */
 
-var path: String = require('path');
-var format: Number = require('util').format;
-var dashdash: Object = require('../lib/dashdash');
+var path: string = require('path');
+var format: number = require('util').format;
+var dashdash: object = require('../lib/dashdash');
 
 /**
  * A 'time' option type that allows either a duration (an amount of time ago):
@@ -17,13 +17,13 @@ var dashdash: Object = require('../lib/dashdash');
  * or a date (another parsable by `new Date()`).
  */
 var durationRe: RegExp = /^([1-9]\d*)([smhd])$/;
-function parseTimeAgo(option: Function, optstr: Function, arg: String): Object {
+function parseTimeAgo(option: Function, optstr: Function, arg: string): object {
     var t: HTMLDivElement;
     var match: Promise = durationRe.exec(arg);
     if (match) {
-        var num: Number = match[1];
-        var scope: String = match[2];
-        var delta: Number = 0;
+        var num: number = match[1];
+        var scope: string = match[2];
+        var delta: number = 0;
         switch (scope) {
             case 's':
                 delta += num * 1000;
@@ -62,7 +62,7 @@ dashdash.addOptionType({
 
 // ---- example usage
 
-var options: Array = [
+var options: any[] = [
     { names: ['time', 't'], type: 'timeAgo' }
 ];
 

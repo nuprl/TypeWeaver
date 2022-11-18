@@ -7,7 +7,7 @@ import "../core/init.js";
 
 jQuery.fn.extend( {
 	val: function( value: Function ) {
-		var hooks: Object, ret: String, valueIsFunction: Boolean,
+		var hooks: object, ret: string, valueIsFunction: boolean,
 			elem: HTMLElement = this[ 0 ];
 
 		if ( !arguments.length ) {
@@ -33,8 +33,8 @@ jQuery.fn.extend( {
 
 		valueIsFunction = typeof value === "function";
 
-		return this.each( function( i: String ) {
-			var val: String;
+		return this.each( function( i: string ) {
+			var val: string;
 
 			if ( this.nodeType !== 1 ) {
 				return;
@@ -54,7 +54,7 @@ jQuery.fn.extend( {
 				val += "";
 
 			} else if ( Array.isArray( val ) ) {
-				val = jQuery.map( val, function( value: Number ) {
+				val = jQuery.map( val, function( value: number ) {
 					return value == null ? "" : value + "";
 				} );
 			}
@@ -72,13 +72,13 @@ jQuery.fn.extend( {
 jQuery.extend( {
 	valHooks: {
 		select: {
-			get: function( elem: Object ) {
-				var value: String, option: Object, i: Number,
-					options: Array = elem.options,
-					index: Number = elem.selectedIndex,
-					one: Boolean = elem.type === "select-one",
-					values: Array = one ? null : [],
-					max: Number = one ? index + 1 : options.length;
+			get: function( elem: object ) {
+				var value: string, option: object, i: number,
+					options: any[] = elem.options,
+					index: number = elem.selectedIndex,
+					one: boolean = elem.type === "select-one",
+					values: any[] = one ? null : [],
+					max: number = one ? index + 1 : options.length;
 
 				if ( index < 0 ) {
 					i = max;
@@ -114,11 +114,11 @@ jQuery.extend( {
 				return values;
 			},
 
-			set: function( elem: Object, value: String ) {
-				var optionSet: Boolean, option: Object,
-					options: Array = elem.options,
-					values: String = jQuery.makeArray( value ),
-					i: Number = options.length;
+			set: function( elem: object, value: string ) {
+				var optionSet: boolean, option: object,
+					options: any[] = elem.options,
+					values: string = jQuery.makeArray( value ),
+					i: number = options.length;
 
 				while ( i-- ) {
 					option = options[ i ];
@@ -142,9 +142,9 @@ jQuery.extend( {
 
 if ( isIE ) {
 	jQuery.valHooks.option = {
-		get: function( elem: String ) {
+		get: function( elem: string ) {
 
-			var val: String = elem.getAttribute( "value" );
+			var val: string = elem.getAttribute( "value" );
 			return val != null ?
 				val :
 
@@ -160,7 +160,7 @@ if ( isIE ) {
 // Radios and checkboxes getter/setter
 jQuery.each( [ "radio", "checkbox" ], function() {
 	jQuery.valHooks[ this ] = {
-		set: function( elem: Object, value: String ) {
+		set: function( elem: object, value: string ) {
 			if ( Array.isArray( value ) ) {
 				return ( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
 			}

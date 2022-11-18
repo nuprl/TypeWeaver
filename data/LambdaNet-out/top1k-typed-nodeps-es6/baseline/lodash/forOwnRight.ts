@@ -22,12 +22,12 @@
  * })
  * // => Logs 'b' then 'a' assuming `forOwn` logs 'a' then 'b'.
  */
-function forOwnRight(object: Object, iteratee: Function): Void {
+function forOwnRight(object: object, iteratee: Function): Void {
   if (object == null) {
     return
   }
-  const props: Array = Object.keys(object)
-  let length: Number = props.length
+  const props: any[] = Object.keys(object)
+  let length: number = props.length
   while (length--) {
     iteratee(object[props[length]], iteratee, object)
   }

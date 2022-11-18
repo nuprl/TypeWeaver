@@ -21,10 +21,10 @@
 
 'use strict';
 
-var R: Object = typeof Reflect === 'object' ? Reflect : null
+var R: object = typeof Reflect === 'object' ? Reflect : null
 var ReflectApply: Function = R && typeof R.apply === 'function'
   ? R.apply
-  : function ReflectApply(target: Object, receiver: String, args: String): Boolean {
+  : function ReflectApply(target: object, receiver: string, args: string): boolean {
     return Function.prototype.apply.call(target, receiver, args);
   }
 
@@ -32,21 +32,21 @@ var ReflectOwnKeys: Function
 if (R && typeof R.ownKeys === 'function') {
   ReflectOwnKeys = R.ownKeys
 } else if (Object.getOwnPropertySymbols) {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Array): Array {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any[]): any[] {
     return Object.getOwnPropertyNames(target)
       .concat(Object.getOwnPropertySymbols(target));
   };
 } else {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Array): Array {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any[]): any[] {
     return Object.getOwnPropertyNames(target);
   };
 }
 
-function ProcessEmitWarning(warning: String): Void {
+function ProcessEmitWarning(warning: string): Void {
   if (console && console.warn) console.warn(warning);
 }
 
-var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: Number): Boolean {
+var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: number): boolean {
   return value !== value;
 }
 
@@ -65,9 +65,9 @@ EventEmitter.prototype._maxListeners = undefined;
 
 // By default EventEmitters will print a warning if more than 10 listeners are
 // added to it. This is a useful default which helps finding memory leaks.
-var defaultMaxListeners: Number = 10;
+var defaultMaxListeners: number = 10;
 
-function checkListener(listener: String): Void {
+function checkListener(listener: string): Void {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -78,7 +78,7 @@ Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
   get: function() {
     return defaultMaxListeners;
   },
-  set: function(arg: Number) {
+  set: function(arg: number) {
     if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
       throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
     }
@@ -99,7 +99,7 @@ EventEmitter.init = function() {
 
 // Obviously not all Emitters should be limited to 10. This function allows
 // that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: String): Object {
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: string): object {
   if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
     throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
   }
@@ -107,7 +107,7 @@ EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: String): Ob
   return this;
 };
 
-function _getMaxListeners(that: HTMLElement): Object {
+function _getMaxListeners(that: HTMLElement): object {
   if (that._maxListeners === undefined)
     return EventEmitter.defaultMaxListeners;
   return that._maxListeners;
@@ -117,12 +117,12 @@ EventEmitter.prototype.getMaxListeners = function getMaxListeners(): Promise {
   return _getMaxListeners(this);
 };
 
-EventEmitter.prototype.emit = function emit(type: String): Boolean {
-  var args: Array = [];
+EventEmitter.prototype.emit = function emit(type: string): boolean {
+  var args: any[] = [];
   for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
-  var doError: Boolean = (type === 'error');
+  var doError: boolean = (type === 'error');
 
-  var events: Number = this._events;
+  var events: number = this._events;
   if (events !== undefined)
     doError = (doError && events.error === undefined);
   else if (!doError)
@@ -144,7 +144,7 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
     throw err; // Unhandled 'error' event
   }
 
-  var handler: String = events[type];
+  var handler: string = events[type];
 
   if (handler === undefined)
     return false;
@@ -152,8 +152,8 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
   if (typeof handler === 'function') {
     ReflectApply(handler, this, args);
   } else {
-    var len: Number = handler.length;
-    var listeners: Object = arrayClone(handler, len);
+    var len: number = handler.length;
+    var listeners: object = arrayClone(handler, len);
     for (var i = 0; i < len; ++i)
       ReflectApply(listeners[i], this, args);
   }
@@ -161,10 +161,10 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
   return true;
 };
 
-function _addListener(target: Element, type: String, listener: Object, prepend: Boolean): Object {
-  var m: Number;
-  var events: String;
-  var existing: Array;
+function _addListener(target: Element, type: string, listener: object, prepend: boolean): object {
+  var m: number;
+  var events: string;
+  var existing: any[];
 
   checkListener(listener);
 
@@ -208,7 +208,7 @@ function _addListener(target: Element, type: String, listener: Object, prepend: 
       existing.warned = true;
       // No error code for this since it is a Warning
       // eslint-disable-next-line no-restricted-syntax
-      var w: Object = new Error('Possible EventEmitter memory leak detected. ' +
+      var w: object = new Error('Possible EventEmitter memory leak detected. ' +
                           existing.length + ' ' + String(type) + ' listeners ' +
                           'added. Use emitter.setMaxListeners() to ' +
                           'increase limit');
@@ -223,18 +223,18 @@ function _addListener(target: Element, type: String, listener: Object, prepend: 
   return target;
 }
 
-EventEmitter.prototype.addListener = function addListener(type: String, listener: String): Promise {
+EventEmitter.prototype.addListener = function addListener(type: string, listener: string): Promise {
   return _addListener(this, type, listener, false);
 };
 
 EventEmitter.prototype.on = EventEmitter.prototype.addListener;
 
 EventEmitter.prototype.prependListener =
-    function prependListener(type: String, listener: String): Promise {
+    function prependListener(type: string, listener: string): Promise {
       return _addListener(this, type, listener, true);
     };
 
-function onceWrapper(): Array {
+function onceWrapper(): any[] {
   if (!this.fired) {
     this.target.removeListener(this.type, this.wrapFn);
     this.fired = true;
@@ -244,22 +244,22 @@ function onceWrapper(): Array {
   }
 }
 
-function _onceWrap(target: Object, type: String, listener: String): Object {
-  var state: Object = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
-  var wrapped: Object = onceWrapper.bind(state);
+function _onceWrap(target: object, type: string, listener: string): object {
+  var state: object = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped: object = onceWrapper.bind(state);
   wrapped.listener = listener;
   state.wrapFn = wrapped;
   return wrapped;
 }
 
-EventEmitter.prototype.once = function once(type: String, listener: String): String {
+EventEmitter.prototype.once = function once(type: string, listener: string): string {
   checkListener(listener);
   this.on(type, _onceWrap(this, type, listener));
   return this;
 };
 
 EventEmitter.prototype.prependOnceListener =
-    function prependOnceListener(type: String, listener: String): Object {
+    function prependOnceListener(type: string, listener: string): object {
       checkListener(listener);
       this.prependListener(type, _onceWrap(this, type, listener));
       return this;
@@ -267,8 +267,8 @@ EventEmitter.prototype.prependOnceListener =
 
 // Emits a 'removeListener' event if and only if the listener was removed.
 EventEmitter.prototype.removeListener =
-    function removeListener(type: String, listener: String): Object {
-      var list: Array, events: Number, position: Number, i: Number, originalListener: String;
+    function removeListener(type: string, listener: string): object {
+      var list: any[], events: number, position: number, i: number, originalListener: string;
 
       checkListener(listener);
 
@@ -321,8 +321,8 @@ EventEmitter.prototype.removeListener =
 EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
 
 EventEmitter.prototype.removeAllListeners =
-    function removeAllListeners(type: String): Object {
-      var listeners: Array, events: String, i: Number;
+    function removeAllListeners(type: string): object {
+      var listeners: any[], events: string, i: number;
 
       events = this._events;
       if (events === undefined)
@@ -344,8 +344,8 @@ EventEmitter.prototype.removeAllListeners =
 
       // emit removeListener for all listeners on all events
       if (arguments.length === 0) {
-        var keys: Array = Object.keys(events);
-        var key: String;
+        var keys: any[] = Object.keys(events);
+        var key: string;
         for (i = 0; i < keys.length; ++i) {
           key = keys[i];
           if (key === 'removeListener') continue;
@@ -371,13 +371,13 @@ EventEmitter.prototype.removeAllListeners =
       return this;
     };
 
-function _listeners(target: NextFunction, type: String, unwrap: Boolean): Array {
-  var events: Number = target._events;
+function _listeners(target: NextFunction, type: string, unwrap: boolean): any[] {
+  var events: number = target._events;
 
   if (events === undefined)
     return [];
 
-  var evlistener: Array = events[type];
+  var evlistener: any[] = events[type];
   if (evlistener === undefined)
     return [];
 
@@ -388,15 +388,15 @@ function _listeners(target: NextFunction, type: String, unwrap: Boolean): Array 
     unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
 }
 
-EventEmitter.prototype.listeners = function listeners(type: String): String {
+EventEmitter.prototype.listeners = function listeners(type: string): string {
   return _listeners(this, type, true);
 };
 
-EventEmitter.prototype.rawListeners = function rawListeners(type: String): Object {
+EventEmitter.prototype.rawListeners = function rawListeners(type: string): object {
   return _listeners(this, type, false);
 };
 
-EventEmitter.listenerCount = function(emitter: Element, type: String) {
+EventEmitter.listenerCount = function(emitter: Element, type: string) {
   if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
@@ -405,11 +405,11 @@ EventEmitter.listenerCount = function(emitter: Element, type: String) {
 };
 
 EventEmitter.prototype.listenerCount = listenerCount;
-function listenerCount(type: String): Number {
-  var events: Number = this._events;
+function listenerCount(type: string): number {
+  var events: number = this._events;
 
   if (events !== undefined) {
-    var evlistener: Array = events[type];
+    var evlistener: any[] = events[type];
 
     if (typeof evlistener === 'function') {
       return 1;
@@ -421,34 +421,34 @@ function listenerCount(type: String): Number {
   return 0;
 }
 
-EventEmitter.prototype.eventNames = function eventNames(): Array {
+EventEmitter.prototype.eventNames = function eventNames(): any[] {
   return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
 };
 
-function arrayClone(arr: Promise, n: String): Object {
-  var copy: Object = new Array(n);
+function arrayClone(arr: Promise, n: string): object {
+  var copy: object = new Array(n);
   for (var i = 0; i < n; ++i)
     copy[i] = arr[i];
   return copy;
 }
 
-function spliceOne(list: Array, index: Number): Void {
+function spliceOne(list: any[], index: number): Void {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
 }
 
-function unwrapListeners(arr: Array): Array {
-  var ret: Array = new Array(arr.length);
+function unwrapListeners(arr: any[]): any[] {
+  var ret: any[] = new Array(arr.length);
   for (var i = 0; i < ret.length; ++i) {
     ret[i] = arr[i].listener || arr[i];
   }
   return ret;
 }
 
-function once(emitter: Object, name: String): Object {
+function once(emitter: object, name: string): object {
   return new Promise(function (resolve: Function, reject: Function) {
-    function errorListener(err: String): Void {
+    function errorListener(err: string): Void {
       emitter.removeListener(name, resolver);
       reject(err);
     }
@@ -467,13 +467,13 @@ function once(emitter: Object, name: String): Object {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: Object, handler: Object, flags: Function): Void {
+function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): Void {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
 }
 
-function eventTargetAgnosticAddListener(emitter: HTMLElement, name: String, listener: Function, flags: Object): Void {
+function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): Void {
   if (typeof emitter.on === 'function') {
     if (flags.once) {
       emitter.once(name, listener);
@@ -483,7 +483,7 @@ function eventTargetAgnosticAddListener(emitter: HTMLElement, name: String, list
   } else if (typeof emitter.addEventListener === 'function') {
     // EventTarget does not have `error` event semantics like Node
     // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg: String): Void {
+    emitter.addEventListener(name, function wrapListener(arg: string): Void {
       // IE does not have builtin `{ once: true }` support so we
       // have to do it manually.
       if (flags.once) {

@@ -1,6 +1,6 @@
 'use strict';
 
-const path: String = require('path');
+const path: string = require('path');
 // const assert = require('assert');
 const pm: Function = require('..');
 
@@ -8,8 +8,8 @@ const pm: Function = require('..');
  * Example function for matching an array of strings
  */
 
-const match: Function = (list: Array, pattern: String, options: Object = {}) => {
-  let normalize: Boolean = false;
+const match: Function = (list: any[], pattern: string, options: object = {}) => {
+  let normalize: boolean = false;
   if (pattern.startsWith('./')) {
     pattern = pattern.slice(2);
     normalize = true;
@@ -28,7 +28,7 @@ const match: Function = (list: Array, pattern: String, options: Object = {}) => 
   return [...matches];
 };
 
-const fixtures: Array = ['a.md', 'a/b.md', './a.md', './a/b.md', 'a/b/c.md', './a/b/c.md', '.\\a\\b\\c.md', 'a\\b\\c.md'];
+const fixtures: any[] = ['a.md', 'a/b.md', './a.md', './a/b.md', 'a/b/c.md', './a/b/c.md', '.\\a\\b\\c.md', 'a\\b\\c.md'];
 
 console.log(path.posix.normalize('./{a,b,c}/*.md'));
 console.log(match(fixtures, './**/*.md'));

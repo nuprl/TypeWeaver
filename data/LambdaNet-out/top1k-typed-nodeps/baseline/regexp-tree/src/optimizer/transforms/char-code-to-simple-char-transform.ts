@@ -5,12 +5,12 @@
 
 'use strict';
 
-const UPPER_A_CP: Number = 'A'.codePointAt(0);
-const UPPER_Z_CP: Number = 'Z'.codePointAt(0);
-const LOWER_A_CP: Number = 'a'.codePointAt(0);
-const LOWER_Z_CP: Number = 'z'.codePointAt(0);
-const DIGIT_0_CP: Number = '0'.codePointAt(0);
-const DIGIT_9_CP: Number = '9'.codePointAt(0);
+const UPPER_A_CP: number = 'A'.codePointAt(0);
+const UPPER_Z_CP: number = 'Z'.codePointAt(0);
+const LOWER_A_CP: number = 'a'.codePointAt(0);
+const LOWER_Z_CP: number = 'z'.codePointAt(0);
+const DIGIT_0_CP: number = '0'.codePointAt(0);
+const DIGIT_9_CP: number = '9'.codePointAt(0);
 
 /**
  * A regexp-tree plugin to transform coded chars into simple chars.
@@ -54,7 +54,7 @@ module.exports = {
  * @param classRange
  * @returns {boolean}
  */
-function isSimpleRange(classRange: TrailSurrogateRange): Boolean {
+function isSimpleRange(classRange: TrailSurrogateRange): boolean {
   const {from, to} = classRange;
   return (
     from.codePoint >= DIGIT_0_CP && from.codePoint <= DIGIT_9_CP &&
@@ -74,11 +74,11 @@ function isSimpleRange(classRange: TrailSurrogateRange): Boolean {
  * @param codePoint
  * @returns {boolean}
  */
-function isPrintableASCIIChar(codePoint: Number): Boolean {
+function isPrintableASCIIChar(codePoint: number): boolean {
   return codePoint >= 0x20 && codePoint <= 0x7e;
 }
 
-function needsEscape(symbol: String, parentType: Number): Boolean {
+function needsEscape(symbol: string, parentType: number): boolean {
   if (parentType === 'ClassRange' || parentType === 'CharacterClass') {
     return /[\]\\^-]/.test(symbol);
   }

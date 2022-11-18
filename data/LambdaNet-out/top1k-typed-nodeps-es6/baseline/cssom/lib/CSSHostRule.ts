@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: String = {
+var CSSOM: string = {
 	CSSRule: require("./CSSRule").CSSRule
 };
 ///CommonJS
@@ -23,7 +23,7 @@ CSSOM.CSSHostRule.prototype.type = 1001;
 
 Object.defineProperty(CSSOM.CSSHostRule.prototype, "cssText", {
 	get: function() {
-		var cssTexts: Array = [];
+		var cssTexts: any[] = [];
 		for (var i=0, length=this.cssRules.length; i < length; i++) {
 			cssTexts.push(this.cssRules[i].cssText);
 		}
@@ -33,5 +33,5 @@ Object.defineProperty(CSSOM.CSSHostRule.prototype, "cssText", {
 
 
 //.CommonJS
-export const CSSHostRule: String = CSSOM.CSSHostRule;
+export const CSSHostRule: string = CSSOM.CSSHostRule;
 ///CommonJS

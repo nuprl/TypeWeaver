@@ -1,7 +1,7 @@
 import eq from './eq.js'
 
 /** Used for built-in method references. */
-const objectProto: Object = Object.prototype
+const objectProto: object = Object.prototype
 
 /** Used to check objects for own properties. */
 const hasOwnProperty: Function = objectProto.hasOwnProperty
@@ -25,13 +25,13 @@ const hasOwnProperty: Function = objectProto.hasOwnProperty
  * defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 })
  * // => { 'a': 1, 'b': 2 }
  */
-function defaults(object: Object, ...sources): Object {
+function defaults(object: object, ...sources): object {
   object = Object(object)
-  sources.forEach((source: Array) => {
+  sources.forEach((source: any[]) => {
     if (source != null) {
       source = Object(source)
       for (const key in source) {
-        const value: String = object[key]
+        const value: string = object[key]
         if (value === undefined ||
             (eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {
           object[key] = source[key]

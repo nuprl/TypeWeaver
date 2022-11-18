@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function repeat(val: String, num: Number): Array {
+module.exports = function repeat(val: string, num: number): any[] {
   var arr: Promise = [];
-  var i: Number = 0;
+  var i: number = 0;
 
   while (num--) {
     arr[i++] = val;

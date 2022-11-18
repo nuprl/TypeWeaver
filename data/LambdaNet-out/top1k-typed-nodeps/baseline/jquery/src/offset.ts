@@ -8,11 +8,11 @@ import "./css.js";
 import "./selector.js"; // contains
 
 jQuery.offset = {
-	setOffset: function( elem: Object, options: Object, i: String ) {
-		var curPosition: Object, curLeft: Number, curCSSTop: String, curTop: Number, curOffset: Object, curCSSLeft: String, calculatePosition: Boolean,
-			position: String = jQuery.css( elem, "position" ),
-			curElem: Object = jQuery( elem ),
-			props: Object = {};
+	setOffset: function( elem: object, options: object, i: string ) {
+		var curPosition: object, curLeft: number, curCSSTop: string, curTop: number, curOffset: object, curCSSLeft: string, calculatePosition: boolean,
+			position: string = jQuery.css( elem, "position" ),
+			curElem: object = jQuery( elem ),
+			props: object = {};
 
 		// Set position first, in-case top/left are set even on static elem
 		if ( position === "static" ) {
@@ -62,18 +62,18 @@ jQuery.offset = {
 jQuery.fn.extend( {
 
 	// offset() relates an element's border box to the document origin
-	offset: function( options: String ) {
+	offset: function( options: string ) {
 
 		// Preserve chaining for setter
 		if ( arguments.length ) {
 			return options === undefined ?
 				this :
-				this.each( function( i: String ) {
+				this.each( function( i: string ) {
 					jQuery.offset.setOffset( this, options, i );
 				} );
 		}
 
-		var rect: Object, win: Element,
+		var rect: object, win: Element,
 			elem: Element = this[ 0 ];
 
 		if ( !elem ) {
@@ -104,9 +104,9 @@ jQuery.fn.extend( {
 			return;
 		}
 
-		var offsetParent: Object, offset: Object, doc: HTMLElement,
+		var offsetParent: object, offset: object, doc: HTMLElement,
 			elem: HTMLElement = this[ 0 ],
-			parentOffset: Object = { top: 0, left: 0 };
+			parentOffset: object = { top: 0, left: 0 };
 
 		// position:fixed elements are offset from the viewport, which itself always has zero offset
 		if ( jQuery.css( elem, "position" ) === "fixed" ) {
@@ -155,7 +155,7 @@ jQuery.fn.extend( {
 	// This logic, however, is not guaranteed and can change at any point in the future
 	offsetParent: function() {
 		return this.map( function() {
-			var offsetParent: Object = this.offsetParent;
+			var offsetParent: object = this.offsetParent;
 
 			while ( offsetParent && jQuery.css( offsetParent, "position" ) === "static" ) {
 				offsetParent = offsetParent.offsetParent;
@@ -167,14 +167,14 @@ jQuery.fn.extend( {
 } );
 
 // Create scrollLeft and scrollTop methods
-jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method: String, prop: Number ) {
-	var top: Boolean = "pageYOffset" === prop;
+jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method: string, prop: number ) {
+	var top: boolean = "pageYOffset" === prop;
 
-	jQuery.fn[ method ] = function( val: String ) {
-		return access( this, function( elem: Object, method: String, val: String ) {
+	jQuery.fn[ method ] = function( val: string ) {
+		return access( this, function( elem: object, method: string, val: string ) {
 
 			// Coalesce documents and windows
-			var win: Object;
+			var win: object;
 			if ( isWindow( elem ) ) {
 				win = elem;
 			} else if ( elem.nodeType === 9 ) {

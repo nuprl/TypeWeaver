@@ -22,12 +22,12 @@ import toInteger from './toInteger.js'
  * indexOf([1, 2, 1, 2], 2, 2)
  * // => 3
  */
-function indexOf(array: Array, value: String, fromIndex: Number): Number {
-  const length: Number = array == null ? 0 : array.length
+function indexOf(array: any[], value: string, fromIndex: number): number {
+  const length: number = array == null ? 0 : array.length
   if (!length) {
     return -1
   }
-  let index: Number = fromIndex == null ? 0 : toInteger(fromIndex)
+  let index: number = fromIndex == null ? 0 : toInteger(fromIndex)
   if (index < 0) {
     index = Math.max(length + index, 0)
   }

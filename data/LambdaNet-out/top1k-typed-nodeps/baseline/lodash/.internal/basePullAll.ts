@@ -13,23 +13,23 @@ import copyArray from './copyArray.js'
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns `array`.
  */
-function basePullAll(array: Array, values: Array, iteratee: Function, comparator: Number): Promise {
+function basePullAll(array: any[], values: any[], iteratee: Function, comparator: number): Promise {
   const indexOf: Function = comparator ? baseIndexOfWith : baseIndexOf
-  const length: Number = values.length
+  const length: number = values.length
 
-  let index: Number = -1
-  let seen: Array = array
+  let index: number = -1
+  let seen: any[] = array
 
   if (array === values) {
     values = copyArray(values)
   }
   if (iteratee) {
-    seen = map(array, (value: Number) => iteratee(value))
+    seen = map(array, (value: number) => iteratee(value))
   }
   while (++index < length) {
-    let fromIndex: Number = 0
-    const value: String = values[index]
-    const computed: Array = iteratee ? iteratee(value) : value
+    let fromIndex: number = 0
+    const value: string = values[index]
+    const computed: any[] = iteratee ? iteratee(value) : value
 
     while ((fromIndex = indexOf(seen, computed, fromIndex, comparator)) > -1) {
       if (seen !== array) {

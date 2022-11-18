@@ -5,11 +5,11 @@
  * @param {string | RegExp} b
  * @param {string} str
  */
-function balanced (a: Array, b: String, str: Array): Boolean {
+function balanced (a: any[], b: string, str: any[]): boolean {
   if (a instanceof RegExp) a = maybeMatch(a, str)
   if (b instanceof RegExp) b = maybeMatch(b, str)
 
-  const r: Object = range(a, b, str)
+  const r: object = range(a, b, str)
 
   return (
     r && {
@@ -26,8 +26,8 @@ function balanced (a: Array, b: String, str: Array): Boolean {
  * @param {RegExp} reg
  * @param {string} str
  */
-function maybeMatch (reg: Object, str: String): String {
-  const m: Object = str.match(reg)
+function maybeMatch (reg: object, str: string): string {
+  const m: object = str.match(reg)
   return m ? m[0] : null
 }
 
@@ -38,11 +38,11 @@ balanced.range = range
  * @param {string} b
  * @param {string} str
  */
-function range (a: String, b: String, str: String): Array {
-  let begs: Array, beg: Boolean, left: Number, right: Number, result: Array
-  let ai: Number = str.indexOf(a)
-  let bi: Number = str.indexOf(b, ai + 1)
-  let i: Number = ai
+function range (a: string, b: string, str: string): any[] {
+  let begs: any[], beg: boolean, left: number, right: number, result: any[]
+  let ai: number = str.indexOf(a)
+  let bi: number = str.indexOf(b, ai + 1)
+  let i: number = ai
 
   if (ai >= 0 && bi > 0) {
     if (a === b) {

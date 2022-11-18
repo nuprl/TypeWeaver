@@ -1,24 +1,14 @@
-cjs/index.ts(37,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+cjs/index.ts(37,41): error TS2538: Type 'any[]' cannot be used as an index type.
 cjs/index.ts(46,7): error TS2451: Cannot redeclare block-scoped variable 'escape'.
-cjs/index.ts(46,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-cjs/index.ts(63,44): error TS2538: Type 'String' cannot be used as an index type.
 cjs/index.ts(73,7): error TS2451: Cannot redeclare block-scoped variable 'unescape'.
-esm/index.ts(36,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-esm/index.ts(45,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-esm/index.ts(61,44): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(1,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
-index.ts(39,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(48,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(64,46): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(76,11): error TS2339: Property 'escape' does not exist on type 'Object'.
-index.ts(77,11): error TS2339: Property 'unescape' does not exist on type 'Object'.
-min.ts(1,5): error TS2322: Type 'Object' is not assignable to type 'Element'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-min.ts(1,250): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(1,412): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(1,424): error TS2339: Property 'escape' does not exist on type 'Object'.
-min.ts(1,462): error TS2339: Property 'unescape' does not exist on type 'Object'.
+esm/index.ts(36,41): error TS2538: Type 'any[]' cannot be used as an index type.
+index.ts(1,5): error TS2740: Type '{}' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+index.ts(39,43): error TS2538: Type 'any[]' cannot be used as an index type.
+index.ts(76,11): error TS2339: Property 'escape' does not exist on type 'object'.
+index.ts(77,11): error TS2339: Property 'unescape' does not exist on type 'object'.
+min.ts(1,5): error TS2322: Type 'object' is not assignable to type 'Element'.
+min.ts(1,424): error TS2339: Property 'escape' does not exist on type 'object'.
+min.ts(1,462): error TS2339: Property 'unescape' does not exist on type 'object'.
 ../../../../../tools/node_modules/typescript/lib/lib.es5.d.ts(90,18): error TS2451: Cannot redeclare block-scoped variable 'escape'.
 ../../../../../tools/node_modules/typescript/lib/lib.es5.d.ts(97,18): error TS2451: Cannot redeclare block-scoped variable 'unescape'.
 

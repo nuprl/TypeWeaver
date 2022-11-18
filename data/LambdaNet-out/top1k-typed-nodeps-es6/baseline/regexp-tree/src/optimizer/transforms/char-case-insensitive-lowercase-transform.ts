@@ -5,8 +5,8 @@
 
 'use strict';
 
-const UPPER_A_CP: Number = 'A'.codePointAt(0);
-const UPPER_Z_CP: Number = 'Z'.codePointAt(0);
+const UPPER_A_CP: number = 'A'.codePointAt(0);
+const UPPER_Z_CP: number = 'Z'.codePointAt(0);
 
 /**
  * Transforms case-insensitive regexp to lowercase
@@ -55,15 +55,15 @@ export default {
   }
 };
 
-function isAZClassRange(classRange: NonSurrogateRange): Boolean {
+function isAZClassRange(classRange: NonSurrogateRange): boolean {
   const {from, to} = classRange;
   // A-Z
   return from.codePoint >= UPPER_A_CP && from.codePoint <= UPPER_Z_CP &&
     to.codePoint >= UPPER_A_CP && to.codePoint <= UPPER_Z_CP;
 }
 
-function displaySymbolAsValue(symbol: String, node: NodePath): String {
-  const codePoint: String = symbol.codePointAt(0);
+function displaySymbolAsValue(symbol: string, node: NodePath): string {
+  const codePoint: string = symbol.codePointAt(0);
   if (node.kind === 'decimal') {
     return '\\' + codePoint;
   }
@@ -80,7 +80,7 @@ function displaySymbolAsValue(symbol: String, node: NodePath): String {
     } else if (node.value.includes('{')) {
       return '\\u{' + codePoint.toString(16) + '}';
     } else {
-      const code: String = codePoint.toString(16);
+      const code: string = codePoint.toString(16);
       return '\\u' + '0'.repeat(4 - code.length) + code;
     }
   }
@@ -95,9 +95,9 @@ function displaySymbolAsValue(symbol: String, node: NodePath): String {
  * @param {number} codePoint - Between 0x10000 and 0x10ffff
  * @returns {{lead: string, trail: string}}
  */
-function getSurrogatePairFromCodePoint(codePoint: Number): Object {
-  const lead: Number = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
-  const trail: Number = (codePoint - 0x10000) % 0x400 + 0xdc00;
+function getSurrogatePairFromCodePoint(codePoint: number): object {
+  const lead: number = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
+  const trail: number = (codePoint - 0x10000) % 0x400 + 0xdc00;
   return {
     lead: lead.toString(16),
     trail: trail.toString(16)

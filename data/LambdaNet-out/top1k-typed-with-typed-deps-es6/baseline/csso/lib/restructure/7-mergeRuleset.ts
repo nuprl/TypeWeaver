@@ -13,13 +13,13 @@ import { unsafeToSkipNode, isEqualDeclarations} from './utils.js';
     b { ... }
 */
 
-function processRule(node: Object, item: Object, list: Map): Void {
-    const selectors: Array = node.prelude.children;
-    const declarations: Object = node.block.children;
-    const nodeCompareMarker: Number = selectors.first.compareMarker;
-    const skippedCompareMarkers: Object = {};
+function processRule(node: object, item: object, list: Map): Void {
+    const selectors: any[] = node.prelude.children;
+    const declarations: object = node.block.children;
+    const nodeCompareMarker: number = selectors.first.compareMarker;
+    const skippedCompareMarkers: object = {};
 
-    list.nextUntil(item.next, function(next: Object, nextItem: Object) {
+    list.nextUntil(item.next, function(next: object, nextItem: object) {
         // skip non-ruleset node if safe
         if (next.type !== 'Rule') {
             return unsafeToSkipNode.call(selectors, next);
@@ -29,9 +29,9 @@ function processRule(node: Object, item: Object, list: Map): Void {
             return true;
         }
 
-        const nextFirstSelector: Object = next.prelude.children.head;
-        const nextDeclarations: Array = next.block.children;
-        const nextCompareMarker: Number = nextFirstSelector.data.compareMarker;
+        const nextFirstSelector: object = next.prelude.children.head;
+        const nextDeclarations: any[] = next.block.children;
+        const nextCompareMarker: number = nextFirstSelector.data.compareMarker;
 
         // if next ruleset has same marked as one of skipped then stop joining
         if (nextCompareMarker in skippedCompareMarkers) {
@@ -49,10 +49,10 @@ function processRule(node: Object, item: Object, list: Map): Void {
 
         // try to join by properties
         if (isEqualDeclarations(declarations, nextDeclarations)) {
-            const nextStr: String = nextFirstSelector.data.id;
+            const nextStr: string = nextFirstSelector.data.id;
 
-            selectors.some((data: Object, item: Object) => {
-                const curStr: String = data.id;
+            selectors.some((data: object, item: object) => {
+                const curStr: string = data.id;
 
                 if (nextStr < curStr) {
                     selectors.insert(nextFirstSelector, item);
@@ -78,7 +78,7 @@ function processRule(node: Object, item: Object, list: Map): Void {
     });
 }
 
-export default function mergeRule(ast: Array): Void {
+export default function mergeRule(ast: any[]): Void {
     walk(ast, {
         visit: 'Rule',
         enter: processRule

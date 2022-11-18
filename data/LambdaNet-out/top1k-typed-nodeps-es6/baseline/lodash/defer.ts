@@ -12,7 +12,7 @@
  * defer(text => console.log(text), 'deferred')
  * // => Logs 'deferred' after one millisecond.
  */
-function defer(func: Number, ...args): Number {
+function defer(func: number, ...args): number {
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
   }

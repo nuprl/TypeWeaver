@@ -1,7 +1,7 @@
-export default function compressFont(node: Object): Void {
+export default function compressFont(node: object): Void {
     const list: HTMLElement = node.children;
 
-    list.forEachRight(function(node: Object, item: Object) {
+    list.forEachRight(function(node: object, item: object) {
         if (node.type === 'Identifier') {
             if (node.name === 'bold') {
                 item.data = {

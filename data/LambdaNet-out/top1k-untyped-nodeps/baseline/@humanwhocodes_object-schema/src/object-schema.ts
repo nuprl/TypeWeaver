@@ -15,8 +15,8 @@ const { ValidationStrategy } = require("./validation-strategy");
 // Private
 //-----------------------------------------------------------------------------
 
-const strategies: String = Symbol("strategies");
-const requiredKeys: String = Symbol("requiredKeys");
+const strategies: string = Symbol("strategies");
+const requiredKeys: string = Symbol("requiredKeys");
 
 /**
  * Validates a schema strategy.
@@ -34,9 +34,9 @@ const requiredKeys: String = Symbol("requiredKeys");
  * @throws {Error} When the strategy is missing a merge() method.
  * @throws {Error} When the strategy is missing a validate() method.
  */
-function validateDefinition(name: String, strategy: ObjectSchema): Void {
+function validateDefinition(name: string, strategy: ObjectSchema): Void {
 
-    let hasSchema: Boolean = false;
+    let hasSchema: boolean = false;
     if (strategy.schema) {
         if (typeof strategy.schema === "object") {
             hasSchema = true;
@@ -101,7 +101,7 @@ class ObjectSchema {
 
             // normalize merge and validate methods if subschema is present
             if (typeof definitions[key].schema === "object") {
-                const schema: String = new ObjectSchema(definitions[key].schema);
+                const schema: string = new ObjectSchema(definitions[key].schema);
                 definitions[key] = {
                     ...definitions[key],
                     merge(first = {}, second = {}) {
@@ -162,18 +162,18 @@ class ObjectSchema {
             throw new Error("merge() requires at least two arguments.");
         }
 
-        if (objects.some((object: Object) => (object == null || typeof object !== "object"))) {
+        if (objects.some((object: object) => (object == null || typeof object !== "object"))) {
             throw new Error("All arguments must be objects.");
         }
 
-        return objects.reduce((result: Object, object: Object) => {
+        return objects.reduce((result: object, object: object) => {
             
             this.validate(object);
             
             for (const [key, strategy] of this[strategies]) {
                 try {
                     if (key in result || key in object) {
-                        const value: String = strategy.merge.call(this, result[key], object[key]);
+                        const value: string = strategy.merge.call(this, result[key], object[key]);
                         if (value !== undefined) {
                             result[key] = value;
                         }
@@ -208,7 +208,7 @@ class ObjectSchema {
 
             // first check to see if any other keys are required
             if (Array.isArray(strategy.requires)) {
-                if (!strategy.requires.every((otherKey: String) => otherKey in object)) {
+                if (!strategy.requires.every((otherKey: string) => otherKey in object)) {
                     throw new Error(`Key "${key}" requires keys "${strategy.requires.join("\", \"")}".`);
                 }
             }

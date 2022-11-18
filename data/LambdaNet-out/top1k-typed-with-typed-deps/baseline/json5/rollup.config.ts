@@ -2,7 +2,7 @@ const resolve: Function = require('rollup-plugin-node-resolve')
 const commonjs: Function = require('rollup-plugin-commonjs')
 const buble: Function = require('rollup-plugin-buble')
 const terser: Function = require('rollup-plugin-terser').terser
-const pkg: String = require('./package.json')
+const pkg: string = require('./package.json')
 
 module.exports = [
     // ES5 Non-minified

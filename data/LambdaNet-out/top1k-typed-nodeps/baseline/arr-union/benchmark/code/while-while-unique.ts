@@ -2,12 +2,12 @@
 
 var unique: Function = require('array-unique');
 
-module.exports = function union(init: Array): Void {
-  var len: Number = arguments.length, i: Number = 0;
+module.exports = function union(init: any[]): Void {
+  var len: number = arguments.length, i: number = 0;
 
   while (++i < len) {
-    var arg: Array = arguments[i];
-    var alen: Number = arg.length;
+    var arg: any[] = arguments[i];
+    var alen: number = arg.length;
 
     while (alen--) {
       init.push(arg[alen]);

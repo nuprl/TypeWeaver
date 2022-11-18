@@ -7,13 +7,13 @@ import { getPropertyName } from "./get-property-name"
  * @returns {string} The name and kind of the function node.
  */
 // eslint-disable-next-line complexity
-export function getFunctionNameWithKind(node: Object, sourceCode: String): String {
+export function getFunctionNameWithKind(node: object, sourceCode: string): string {
     const parent: HTMLElement = node.parent
-    const tokens: Array = []
-    const isObjectMethod: Boolean = parent.type === "Property" && parent.value === node
-    const isClassMethod: Boolean =
+    const tokens: any[] = []
+    const isObjectMethod: boolean = parent.type === "Property" && parent.value === node
+    const isClassMethod: boolean =
         parent.type === "MethodDefinition" && parent.value === node
-    const isClassFieldMethod: Boolean =
+    const isClassFieldMethod: boolean =
         parent.type === "PropertyDefinition" && parent.value === node
 
     // Modifiers.
@@ -58,11 +58,11 @@ export function getFunctionNameWithKind(node: Object, sourceCode: String): Strin
         if (parent.key.type === "PrivateIdentifier") {
             tokens.push(`#${parent.key.name}`)
         } else {
-            const name: String = getPropertyName(parent)
+            const name: string = getPropertyName(parent)
             if (name) {
                 tokens.push(`'${name}'`)
             } else if (sourceCode) {
-                const keyText: String = sourceCode.getText(parent.key)
+                const keyText: string = sourceCode.getText(parent.key)
                 if (!keyText.includes("\n")) {
                     tokens.push(`[${keyText}]`)
                 }

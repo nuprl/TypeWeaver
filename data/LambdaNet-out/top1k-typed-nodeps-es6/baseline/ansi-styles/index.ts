@@ -1,14 +1,14 @@
-const ANSI_BACKGROUND_OFFSET: Number = 10;
+const ANSI_BACKGROUND_OFFSET: number = 10;
 
-const wrapAnsi16: Function = (offset: String = 0) => (code: String) => `\u001B[${code + offset}m`;
+const wrapAnsi16: Function = (offset: string = 0) => (code: string) => `\u001B[${code + offset}m`;
 
-const wrapAnsi256: Function = (offset: String = 0) => (code: String) => `\u001B[${38 + offset};5;${code}m`;
+const wrapAnsi256: Function = (offset: string = 0) => (code: string) => `\u001B[${38 + offset};5;${code}m`;
 
-const wrapAnsi16m: Function = (offset: String = 0) => (red: String, green: String, blue: String) => `\u001B[${38 + offset};2;${red};${green};${blue}m`;
+const wrapAnsi16m: Function = (offset: string = 0) => (red: string, green: string, blue: string) => `\u001B[${38 + offset};2;${red};${green};${blue}m`;
 
 function assembleStyles(): HTMLElement {
 	const codes: Map = new Map();
-	const styles: Object = {
+	const styles: object = {
 		modifier: {
 			reset: [0, 0],
 			// 21 isn't widely supported and 22 does the same thing
@@ -105,7 +105,7 @@ function assembleStyles(): HTMLElement {
 	// From https://github.com/Qix-/color-convert/blob/3f0e0d4e92e235796ccb17f6e85c72094a651f49/conversions.js
 	Object.defineProperties(styles, {
 		rgbToAnsi256: {
-			value: (red: Number, green: Number, blue: Number) => {
+			value: (red: number, green: number, blue: number) => {
 				// We use the extended greyscale palette here, with the exception of
 				// black and white. normal palette only has 4 greyscale shades.
 				if (red === green && green === blue) {
@@ -128,8 +128,8 @@ function assembleStyles(): HTMLElement {
 			enumerable: false,
 		},
 		hexToRgb: {
-			value: (hex: String) => {
-				const matches: Boolean = /[a-f\d]{6}|[a-f\d]{3}/i.exec(hex.toString(16));
+			value: (hex: string) => {
+				const matches: boolean = /[a-f\d]{6}|[a-f\d]{3}/i.exec(hex.toString(16));
 				if (!matches) {
 					return [0, 0, 0];
 				}
@@ -137,10 +137,10 @@ function assembleStyles(): HTMLElement {
 				let [colorString] = matches;
 
 				if (colorString.length === 3) {
-					colorString = [...colorString].map((character: Number) => character + character).join('');
+					colorString = [...colorString].map((character: number) => character + character).join('');
 				}
 
-				const integer: Number = Number.parseInt(colorString, 16);
+				const integer: number = Number.parseInt(colorString, 16);
 
 				return [
 					/* eslint-disable no-bitwise */
@@ -153,11 +153,11 @@ function assembleStyles(): HTMLElement {
 			enumerable: false,
 		},
 		hexToAnsi256: {
-			value: (hex: String) => styles.rgbToAnsi256(...styles.hexToRgb(hex)),
+			value: (hex: string) => styles.rgbToAnsi256(...styles.hexToRgb(hex)),
 			enumerable: false,
 		},
 		ansi256ToAnsi: {
-			value: (code: Number) => {
+			value: (code: number) => {
 				if (code < 8) {
 					return 30 + code;
 				}
@@ -166,9 +166,9 @@ function assembleStyles(): HTMLElement {
 					return 90 + (code - 8);
 				}
 
-				let red: Number;
-				let green: Number;
-				let blue: Number;
+				let red: number;
+				let green: number;
+				let blue: number;
 
 				if (code >= 232) {
 					red = (((code - 232) * 10) + 8) / 255;
@@ -177,21 +177,21 @@ function assembleStyles(): HTMLElement {
 				} else {
 					code -= 16;
 
-					const remainder: Number = code % 36;
+					const remainder: number = code % 36;
 
 					red = Math.floor(code / 36) / 5;
 					green = Math.floor(remainder / 6) / 5;
 					blue = (remainder % 6) / 5;
 				}
 
-				const value: Number = Math.max(red, green, blue) * 2;
+				const value: number = Math.max(red, green, blue) * 2;
 
 				if (value === 0) {
 					return 30;
 				}
 
 				// eslint-disable-next-line no-bitwise
-				let result: Number = 30 + ((Math.round(blue) << 2) | (Math.round(green) << 1) | Math.round(red));
+				let result: number = 30 + ((Math.round(blue) << 2) | (Math.round(green) << 1) | Math.round(red));
 
 				if (value === 2) {
 					result += 60;
@@ -202,11 +202,11 @@ function assembleStyles(): HTMLElement {
 			enumerable: false,
 		},
 		rgbToAnsi: {
-			value: (red: String, green: Number, blue: String) => styles.ansi256ToAnsi(styles.rgbToAnsi256(red, green, blue)),
+			value: (red: string, green: number, blue: string) => styles.ansi256ToAnsi(styles.rgbToAnsi256(red, green, blue)),
 			enumerable: false,
 		},
 		hexToAnsi: {
-			value: (hex: String) => styles.ansi256ToAnsi(styles.hexToAnsi256(hex)),
+			value: (hex: string) => styles.ansi256ToAnsi(styles.hexToAnsi256(hex)),
 			enumerable: false,
 		},
 	});
@@ -214,6 +214,6 @@ function assembleStyles(): HTMLElement {
 	return styles;
 }
 
-const ansiStyles: Array = assembleStyles();
+const ansiStyles: any[] = assembleStyles();
 
 export default ansiStyles;

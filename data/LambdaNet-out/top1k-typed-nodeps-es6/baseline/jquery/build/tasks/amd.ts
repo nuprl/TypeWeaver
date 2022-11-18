@@ -5,19 +5,19 @@
 "use strict";
 
 export default function( grunt: HTMLElement ) {
-	const path: String = require( "path" );
+	const path: string = require( "path" );
 	const rimraf: Function = require( "rimraf" );
-	const rollup: String = require( "rollup" );
-	const srcFolder: String = path.resolve( __dirname, "..", "..", "src" );
-	const amdFolder: String = path.resolve( srcFolder, "..", "amd" );
-	const inputFileName: String = "jquery.js";
+	const rollup: string = require( "rollup" );
+	const srcFolder: string = path.resolve( __dirname, "..", "..", "src" );
+	const amdFolder: string = path.resolve( srcFolder, "..", "amd" );
+	const inputFileName: string = "jquery.js";
 
-	const inputRollupOptions: Object = {
+	const inputRollupOptions: object = {
 		input: path.resolve( srcFolder, inputFileName ),
 		preserveModules: true
 	};
 
-	const outputRollupOptions: Object = {
+	const outputRollupOptions: object = {
 		format: "amd",
 		dir: "amd",
 		indent: false

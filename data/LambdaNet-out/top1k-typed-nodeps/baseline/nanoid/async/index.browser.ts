@@ -1,12 +1,12 @@
 export let random: Function = async (bytes: HTMLElement) => crypto.getRandomValues(new Uint8Array(bytes))
 
-export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21) => {
+export let customAlphabet: Function = (alphabet: any[], defaultSize: number = 21) => {
   // First, a bitmask is necessary to generate the ID. The bitmask makes bytes
   // values closer to the alphabet size. The bitmask calculates the closest
   // `2^31 - 1` number, which exceeds the alphabet size.
   // For example, the bitmask for the alphabet size 30 is 31 (00011111).
   // `Math.clz32` is not used, because it is not available in browsers.
-  let mask: Number = (2 << (Math.log(alphabet.length - 1) / Math.LN2)) - 1
+  let mask: number = (2 << (Math.log(alphabet.length - 1) / Math.LN2)) - 1
   // Though, the bitmask solution is not perfect since the bytes exceeding
   // the alphabet size are refused. Therefore, to reliably generate the ID,
   // the random bytes redundancy has to be satisfied.
@@ -22,14 +22,14 @@ export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21
 
   // `-~f => Math.ceil(f)` if f is a float
   // `-~i => i + 1` if i is an integer
-  let step: Number = -~((1.6 * mask * defaultSize) / alphabet.length)
+  let step: number = -~((1.6 * mask * defaultSize) / alphabet.length)
 
-  return async (size: Array = defaultSize) => {
-    let id: String = ''
+  return async (size: any[] = defaultSize) => {
+    let id: string = ''
     while (true) {
-      let bytes: Object = crypto.getRandomValues(new Uint8Array(step))
+      let bytes: object = crypto.getRandomValues(new Uint8Array(step))
       // A compact alternative for `for (var i = 0; i < step; i++)`.
-      let i: Number = step
+      let i: number = step
       while (i--) {
         // Adding `|| ''` refuses a random byte that exceeds the alphabet size.
         id += alphabet[bytes[i] & mask] || ''
@@ -39,9 +39,9 @@ export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21
   }
 }
 
-export let nanoid: Function = async (size: String = 21) => {
-  let id: String = ''
-  let bytes: Object = crypto.getRandomValues(new Uint8Array(size))
+export let nanoid: Function = async (size: string = 21) => {
+  let id: string = ''
+  let bytes: object = crypto.getRandomValues(new Uint8Array(size))
 
   // A compact alternative for `for (var i = 0; i < step; i++)`.
   while (size--) {
@@ -50,7 +50,7 @@ export let nanoid: Function = async (size: String = 21) => {
     // range to the 0-63 value range. Therefore, adding hacks, such
     // as empty string fallback or magic numbers, is unneccessary because
     // the bitmask trims bytes down to the alphabet size.
-    let byte: Number = bytes[size] & 63
+    let byte: number = bytes[size] & 63
     if (byte < 36) {
       // `0-9a-z`
       id += byte.toString(36)

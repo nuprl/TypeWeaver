@@ -20,18 +20,18 @@ module.exports = depd
  * Get the path to base files on.
  */
 
-var basePath: String = process.cwd()
+var basePath: string = process.cwd()
 
 /**
  * Determine if namespace is contained in the string.
  */
 
-function containsNamespace (str: String, namespace: String): Boolean {
-  var vals: Array = str.split(/[ ,]+/)
-  var ns: String = String(namespace).toLowerCase()
+function containsNamespace (str: string, namespace: string): boolean {
+  var vals: any[] = str.split(/[ ,]+/)
+  var ns: string = String(namespace).toLowerCase()
 
   for (var i = 0; i < vals.length; i++) {
-    var val: String = vals[i]
+    var val: string = vals[i]
 
     // namespace contained
     if (val && (val === '*' || val.toLowerCase() === ns)) {
@@ -46,14 +46,14 @@ function containsNamespace (str: String, namespace: String): Boolean {
  * Convert a data descriptor to accessor descriptor.
  */
 
-function convertDataDescriptorToAccessor (obj: Array, prop: String, message: String): Object {
-  var descriptor: Object = Object.getOwnPropertyDescriptor(obj, prop)
-  var value: String = descriptor.value
+function convertDataDescriptorToAccessor (obj: any[], prop: string, message: string): object {
+  var descriptor: object = Object.getOwnPropertyDescriptor(obj, prop)
+  var value: string = descriptor.value
 
-  descriptor.get = function getter (): String { return value }
+  descriptor.get = function getter (): string { return value }
 
   if (descriptor.writable) {
-    descriptor.set = function setter (val: String): Boolean { return (value = val) }
+    descriptor.set = function setter (val: string): boolean { return (value = val) }
   }
 
   delete descriptor.value
@@ -68,8 +68,8 @@ function convertDataDescriptorToAccessor (obj: Array, prop: String, message: Str
  * Create arguments string to keep arity.
  */
 
-function createArgumentsString (arity: String): String {
-  var str: String = ''
+function createArgumentsString (arity: string): string {
+  var str: string = ''
 
   for (var i = 0; i < arity; i++) {
     str += ', arg' + i
@@ -82,8 +82,8 @@ function createArgumentsString (arity: String): String {
  * Create stack string from stack.
  */
 
-function createStackString (stack: Array): String {
-  var str: String = this.name + ': ' + this.namespace
+function createStackString (stack: any[]): string {
+  var str: string = this.name + ': ' + this.namespace
 
   if (this.message) {
     str += ' deprecated ' + this.message
@@ -100,16 +100,16 @@ function createStackString (stack: Array): String {
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: Number): String {
+function depd (namespace: number): string {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }
 
-  var stack: Object = getStack()
-  var site: Object = callSiteLocation(stack[1])
-  var file: String = site[0]
+  var stack: object = getStack()
+  var site: object = callSiteLocation(stack[1])
+  var file: string = site[0]
 
-  function deprecate (message: String): Void {
+  function deprecate (message: string): Void {
     // call to self as log
     log.call(deprecate, message)
   }
@@ -138,8 +138,8 @@ function depd (namespace: Number): String {
  * @private
  */
 
-function eehaslisteners (emitter: HTMLElement, type: String): Boolean {
-  var count: Number = typeof emitter.listenerCount !== 'function'
+function eehaslisteners (emitter: HTMLElement, type: string): boolean {
+  var count: number = typeof emitter.listenerCount !== 'function'
     ? emitter.listeners(type).length
     : emitter.listenerCount(type)
 
@@ -150,13 +150,13 @@ function eehaslisteners (emitter: HTMLElement, type: String): Boolean {
  * Determine if namespace is ignored.
  */
 
-function isignored (namespace: String): Boolean {
+function isignored (namespace: string): boolean {
   if (process.noDeprecation) {
     // --no-deprecation support
     return true
   }
 
-  var str: String = process.env.NO_DEPRECATION || ''
+  var str: string = process.env.NO_DEPRECATION || ''
 
   // namespace ignored
   return containsNamespace(str, namespace)
@@ -166,13 +166,13 @@ function isignored (namespace: String): Boolean {
  * Determine if namespace is traced.
  */
 
-function istraced (namespace: String): Boolean {
+function istraced (namespace: string): boolean {
   if (process.traceDeprecation) {
     // --trace-deprecation support
     return true
   }
 
-  var str: String = process.env.TRACE_DEPRECATION || ''
+  var str: string = process.env.TRACE_DEPRECATION || ''
 
   // namespace traced
   return containsNamespace(str, namespace)
@@ -182,22 +182,22 @@ function istraced (namespace: String): Boolean {
  * Display deprecation message.
  */
 
-function log (message: String, site: Array): Void {
-  var haslisteners: Boolean = eehaslisteners(process, 'deprecation')
+function log (message: string, site: any[]): Void {
+  var haslisteners: boolean = eehaslisteners(process, 'deprecation')
 
   // abort early if no destination
   if (!haslisteners && this._ignored) {
     return
   }
 
-  var caller: Array
-  var callFile: String
-  var callSite: Object
-  var depSite: Array
-  var i: Number = 0
-  var seen: Boolean = false
-  var stack: Array = getStack()
-  var file: String = this._file
+  var caller: any[]
+  var callFile: string
+  var callSite: object
+  var depSite: any[]
+  var i: number = 0
+  var seen: boolean = false
+  var stack: any[] = getStack()
+  var file: string = this._file
 
   if (site) {
     // provided site
@@ -226,7 +226,7 @@ function log (message: String, site: Array): Void {
     }
   }
 
-  var key: String = caller
+  var key: string = caller
     ? depSite.join(':') + '__' + caller.join(':')
     : undefined
 
@@ -238,7 +238,7 @@ function log (message: String, site: Array): Void {
   this._warned[key] = true
 
   // generate automatic message from call site
-  var msg: String = message
+  var msg: string = message
   if (!msg) {
     msg = callSite === depSite || !callSite.name
       ? defaultMessage(depSite)
@@ -247,7 +247,7 @@ function log (message: String, site: Array): Void {
 
   // emit deprecation if listeners exist
   if (haslisteners) {
-    var err: String = DeprecationError(this._namespace, msg, stack.slice(i))
+    var err: string = DeprecationError(this._namespace, msg, stack.slice(i))
     process.emit('deprecation', err)
     return
   }
@@ -256,7 +256,7 @@ function log (message: String, site: Array): Void {
   var format: Function = process.stderr.isTTY
     ? formatColor
     : formatPlain
-  var output: String = format.call(this, msg, caller, stack.slice(i))
+  var output: string = format.call(this, msg, caller, stack.slice(i))
   process.stderr.write(output + '\n', 'utf8')
 }
 
@@ -264,16 +264,16 @@ function log (message: String, site: Array): Void {
  * Get call site location as array.
  */
 
-function callSiteLocation (callSite: HTMLElement): Array {
-  var file: String = callSite.getFileName() || '<anonymous>'
-  var line: String = callSite.getLineNumber()
-  var colm: String = callSite.getColumnNumber()
+function callSiteLocation (callSite: HTMLElement): any[] {
+  var file: string = callSite.getFileName() || '<anonymous>'
+  var line: string = callSite.getLineNumber()
+  var colm: string = callSite.getColumnNumber()
 
   if (callSite.isEval()) {
     file = callSite.getEvalOrigin() + ', ' + file
   }
 
-  var site: Array = [file, line, colm]
+  var site: any[] = [file, line, colm]
 
   site.callSite = callSite
   site.name = callSite.getFunctionName()
@@ -285,17 +285,17 @@ function callSiteLocation (callSite: HTMLElement): Array {
  * Generate a default message from the site.
  */
 
-function defaultMessage (site: Object): Number {
+function defaultMessage (site: object): number {
   var callSite: HTMLInputElement = site.callSite
-  var funcName: String = site.name
+  var funcName: string = site.name
 
   // make useful anonymous name
   if (!funcName) {
     funcName = '<anonymous@' + formatLocation(site) + '>'
   }
 
-  var context: Object = callSite.getThis()
-  var typeName: String = context && callSite.getTypeName()
+  var context: object = callSite.getThis()
+  var typeName: string = context && callSite.getTypeName()
 
   // ignore useless type name
   if (typeName === 'Object') {
@@ -316,10 +316,10 @@ function defaultMessage (site: Object): Number {
  * Format deprecation message without color.
  */
 
-function formatPlain (msg: String, caller: Number, stack: Array): String {
-  var timestamp: String = new Date().toUTCString()
+function formatPlain (msg: string, caller: number, stack: any[]): string {
+  var timestamp: string = new Date().toUTCString()
 
-  var formatted: String = timestamp +
+  var formatted: string = timestamp +
     ' ' + this._namespace +
     ' deprecated ' + msg
 
@@ -343,8 +343,8 @@ function formatPlain (msg: String, caller: Number, stack: Array): String {
  * Format deprecation message with color.
  */
 
-function formatColor (msg: String, caller: Number, stack: Array): String {
-  var formatted: String = '\x1b[36;1m' + this._namespace + '\x1b[22;39m' + // bold cyan
+function formatColor (msg: string, caller: number, stack: any[]): string {
+  var formatted: string = '\x1b[36;1m' + this._namespace + '\x1b[22;39m' + // bold cyan
     ' \x1b[33;1mdeprecated\x1b[22;39m' + // bold yellow
     ' \x1b[0m' + msg + '\x1b[39m' // reset
 
@@ -368,7 +368,7 @@ function formatColor (msg: String, caller: Number, stack: Array): String {
  * Format call site location.
  */
 
-function formatLocation (callSite: Object): String {
+function formatLocation (callSite: object): string {
   return relative(basePath, callSite[0]) +
     ':' + callSite[1] +
     ':' + callSite[2]
@@ -378,10 +378,10 @@ function formatLocation (callSite: Object): String {
  * Get the stack as array of call sites.
  */
 
-function getStack (): Array {
-  var limit: Boolean = Error.stackTraceLimit
+function getStack (): any[] {
+  var limit: boolean = Error.stackTraceLimit
   var obj: HTMLElement = {}
-  var prep: Object = Error.prepareStackTrace
+  var prep: object = Error.prepareStackTrace
 
   Error.prepareStackTrace = prepareObjectStackTrace
   Error.stackTraceLimit = Math.max(10, limit)
@@ -390,7 +390,7 @@ function getStack (): Array {
   Error.captureStackTrace(obj)
 
   // slice this function off the top
-  var stack: Array = obj.stack.slice(1)
+  var stack: any[] = obj.stack.slice(1)
 
   Error.prepareStackTrace = prep
   Error.stackTraceLimit = limit
@@ -402,7 +402,7 @@ function getStack (): Array {
  * Capture call site stack from v8.
  */
 
-function prepareObjectStackTrace (obj: Function, stack: Number): String {
+function prepareObjectStackTrace (obj: Function, stack: number): string {
   return stack
 }
 
@@ -410,19 +410,19 @@ function prepareObjectStackTrace (obj: Function, stack: Number): String {
  * Return a wrapped function in a deprecation message.
  */
 
-function wrapfunction (fn: Array, message: String): Object {
+function wrapfunction (fn: any[], message: string): object {
   if (typeof fn !== 'function') {
     throw new TypeError('argument fn must be a function')
   }
 
-  var args: String = createArgumentsString(fn.length)
-  var stack: Object = getStack()
-  var site: Object = callSiteLocation(stack[1])
+  var args: string = createArgumentsString(fn.length)
+  var stack: object = getStack()
+  var site: object = callSiteLocation(stack[1])
 
   site.name = fn.name
 
   // eslint-disable-next-line no-new-func
-  var deprecatedfn: String = new Function('fn', 'log', 'deprecate', 'message', 'site',
+  var deprecatedfn: string = new Function('fn', 'log', 'deprecate', 'message', 'site',
     '"use strict"\n' +
     'return function (' + args + ') {' +
     'log.call(deprecate, message, site)\n' +
@@ -436,12 +436,12 @@ function wrapfunction (fn: Array, message: String): Object {
  * Wrap property in a deprecation message.
  */
 
-function wrapproperty (obj: String, prop: String, message: String): Void {
+function wrapproperty (obj: string, prop: string, message: string): Void {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw new TypeError('argument obj must be object')
   }
 
-  var descriptor: Object = Object.getOwnPropertyDescriptor(obj, prop)
+  var descriptor: object = Object.getOwnPropertyDescriptor(obj, prop)
 
   if (!descriptor) {
     throw new TypeError('must call property on owner object')
@@ -451,9 +451,9 @@ function wrapproperty (obj: String, prop: String, message: String): Void {
     throw new TypeError('property must be configurable')
   }
 
-  var deprecate: Array = this
-  var stack: Object = getStack()
-  var site: Object = callSiteLocation(stack[1])
+  var deprecate: any[] = this
+  var stack: object = getStack()
+  var site: object = callSiteLocation(stack[1])
 
   // set site name
   site.name = prop
@@ -489,9 +489,9 @@ function wrapproperty (obj: String, prop: String, message: String): Void {
  * Create DeprecationError for deprecation
  */
 
-function DeprecationError (namespace: String, message: String, stack: String): Object {
+function DeprecationError (namespace: string, message: string, stack: string): object {
   var error: Error = new Error()
-  var stackString: String
+  var stackString: string
 
   Object.defineProperty(error, 'constructor', {
     value: DeprecationError
@@ -529,7 +529,7 @@ function DeprecationError (namespace: String, message: String, stack: String): O
       // prepare stack trace
       return (stackString = createStackString.call(this, stack))
     },
-    set: function setter (val: Number): Void {
+    set: function setter (val: number): Void {
       stackString = val
     }
   })

@@ -29,14 +29,14 @@ export default class ExtensionAliasPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		const { extension, alias } = this.options;
 		resolver
 			.getHook(this.source)
-			.tapAsync("ExtensionAliasPlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const requestPath: String = request.request;
+			.tapAsync("ExtensionAliasPlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const requestPath: string = request.request;
 				if (!requestPath || !requestPath.endsWith(extension)) return callback();
-				const resolve: Function = (alias: String, callback: Array) => {
+				const resolve: Function = (alias: string, callback: any[]) => {
 					resolver.doResolve(
 						target,
 						{
@@ -50,7 +50,7 @@ export default class ExtensionAliasPlugin {
 					);
 				};
 
-				const stoppingCallback: Function = (err: String, result: ResultPlugin) => {
+				const stoppingCallback: Function = (err: string, result: ResultPlugin) => {
 					if (err) return callback(err);
 					if (result) return callback(null, result);
 					// Don't allow other aliasing or raw request

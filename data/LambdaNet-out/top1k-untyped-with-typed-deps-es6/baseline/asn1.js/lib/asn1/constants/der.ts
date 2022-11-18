@@ -1,31 +1,31 @@
 'use strict';
 
 // Helper
-function reverse(map: Object): Object {
-  const res: Object = {};
+function reverse(map: object): object {
+  const res: object = {};
 
-  Object.keys(map).forEach(function(key: Number) {
+  Object.keys(map).forEach(function(key: number) {
     // Convert key to integer if it is stringified
     if ((key | 0) == key)
       key = key | 0;
 
-    const value: String = map[key];
+    const value: string = map[key];
     res[value] = key;
   });
 
   return res;
 }
 
-export const tagClass: Object = {
+export const tagClass: object = {
   0: 'universal',
   1: 'application',
   2: 'context',
   3: 'private'
 };
 
-export const tagClassByName: String = reverse(exports.tagClass);
+export const tagClassByName: string = reverse(exports.tagClass);
 
-export const tag: Object = {
+export const tag: object = {
   0x00: 'end',
   0x01: 'bool',
   0x02: 'int',
@@ -57,4 +57,4 @@ export const tag: Object = {
   0x1e: 'bmpstr'
 };
 
-export const tagByName: String = reverse(exports.tag);
+export const tagByName: string = reverse(exports.tag);

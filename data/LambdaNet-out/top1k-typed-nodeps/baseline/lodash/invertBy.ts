@@ -20,10 +20,10 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * invertBy(object, value => `group${value}`)
  * // => { 'group1': ['a', 'c'], 'group2': ['b'] }
  */
-function invertBy(object: Object, iteratee: Function): Object {
-  const result: Object = {}
-  Object.keys(object).forEach((key: String) => {
-    const value: String = iteratee(object[key])
+function invertBy(object: object, iteratee: Function): object {
+  const result: object = {}
+  Object.keys(object).forEach((key: string) => {
+    const value: string = iteratee(object[key])
     if (hasOwnProperty.call(result, value)) {
       result[value].push(key)
     } else {

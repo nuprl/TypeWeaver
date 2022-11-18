@@ -3,16 +3,16 @@ import fs from 'fs';
 import path from 'path';
 
 /* istanbul ignore next */
-const LCHOWN: String = fs.lchown ? 'lchown' : 'chown'
+const LCHOWN: string = fs.lchown ? 'lchown' : 'chown'
 /* istanbul ignore next */
-const LCHOWNSYNC: String = fs.lchownSync ? 'lchownSync' : 'chownSync'
+const LCHOWNSYNC: string = fs.lchownSync ? 'lchownSync' : 'chownSync'
 
 /* istanbul ignore next */
-const needEISDIRHandled: Boolean = fs.lchown &&
+const needEISDIRHandled: boolean = fs.lchown &&
   !process.version.match(/v1[1-9]+\./) &&
   !process.version.match(/v10\.[6-9]/)
 
-const lchownSync: Function = (path: String, uid: String, gid: String) => {
+const lchownSync: Function = (path: string, uid: string, gid: string) => {
   try {
     return fs[LCHOWNSYNC](path, uid, gid)
   } catch (er) {
@@ -22,7 +22,7 @@ const lchownSync: Function = (path: String, uid: String, gid: String) => {
 }
 
 /* istanbul ignore next */
-const chownSync: Function = (path: String, uid: String, gid: String) => {
+const chownSync: Function = (path: string, uid: string, gid: string) => {
   try {
     return fs.chownSync(path, uid, gid)
   } catch (er) {
@@ -33,7 +33,7 @@ const chownSync: Function = (path: String, uid: String, gid: String) => {
 
 /* istanbul ignore next */
 const handleEISDIR: Function =
-  needEISDIRHandled ? (path: String, uid: String, gid: String, cb: Function) => (er: Object) => {
+  needEISDIRHandled ? (path: string, uid: string, gid: string, cb: Function) => (er: object) => {
     // Node prior to v10 had a very questionable implementation of
     // fs.lchown, which would always try to call fs.open on a directory
     // Fall back to fs.chown in those cases.
@@ -42,11 +42,11 @@ const handleEISDIR: Function =
     else
       fs.chown(path, uid, gid, cb)
   }
-  : (_: String, __: String, ___: String, cb: String) => cb
+  : (_: string, __: string, ___: string, cb: string) => cb
 
 /* istanbul ignore next */
 const handleEISDirSync: Function =
-  needEISDIRHandled ? (path: String, uid: String, gid: String) => {
+  needEISDIRHandled ? (path: string, uid: string, gid: string) => {
     try {
       return lchownSync(path, uid, gid)
     } catch (er) {
@@ -55,26 +55,26 @@ const handleEISDirSync: Function =
       chownSync(path, uid, gid)
     }
   }
-  : (path: String, uid: String, gid: String) => lchownSync(path, uid, gid)
+  : (path: string, uid: string, gid: string) => lchownSync(path, uid, gid)
 
 // fs.readdir could only accept an options object as of node v6
 const nodeVersion: Function = process.version
-let readdir: Function = (path: String, options: Object, cb: String) => fs.readdir(path, options, cb)
-let readdirSync: Function = (path: String, options: Object) => fs.readdirSync(path, options)
+let readdir: Function = (path: string, options: object, cb: string) => fs.readdir(path, options, cb)
+let readdirSync: Function = (path: string, options: object) => fs.readdirSync(path, options)
 /* istanbul ignore next */
 if (/^v4\./.test(nodeVersion))
-  readdir = (path: String, options: Object, cb: String) => fs.readdir(path, cb)
+  readdir = (path: string, options: object, cb: string) => fs.readdir(path, cb)
 
-const chown: Function = (cpath: String, uid: String, gid: String, cb: Function) => {
-  fs[LCHOWN](cpath, uid, gid, handleEISDIR(cpath, uid, gid, (er: Object) => {
+const chown: Function = (cpath: string, uid: string, gid: string, cb: Function) => {
+  fs[LCHOWN](cpath, uid, gid, handleEISDIR(cpath, uid, gid, (er: object) => {
     // Skip ENOENT error
     cb(er && er.code !== 'ENOENT' ? er : null)
   }))
 }
 
-const chownrKid: Function = (p: String, child: Function, uid: String, gid: String, cb: Function) => {
+const chownrKid: Function = (p: string, child: Function, uid: string, gid: string, cb: Function) => {
   if (typeof child === 'string')
-    return fs.lstat(path.resolve(p, child), (er: Object, stats: Object) => {
+    return fs.lstat(path.resolve(p, child), (er: object, stats: object) => {
       // Skip ENOENT error
       if (er)
         return cb(er.code !== 'ENOENT' ? er : null)
@@ -83,21 +83,21 @@ const chownrKid: Function = (p: String, child: Function, uid: String, gid: Strin
     })
 
   if (child.isDirectory()) {
-    chownr(path.resolve(p, child.name), uid, gid, (er: String) => {
+    chownr(path.resolve(p, child.name), uid, gid, (er: string) => {
       if (er)
         return cb(er)
-      const cpath: String = path.resolve(p, child.name)
+      const cpath: string = path.resolve(p, child.name)
       chown(cpath, uid, gid, cb)
     })
   } else {
-    const cpath: String = path.resolve(p, child.name)
+    const cpath: string = path.resolve(p, child.name)
     chown(cpath, uid, gid, cb)
   }
 }
 
 
-const chownr: Function = (p: String, uid: String, gid: String, cb: Function) => {
-  readdir(p, { withFileTypes: true }, (er: Object, children: Array) => {
+const chownr: Function = (p: string, uid: string, gid: string, cb: Function) => {
+  readdir(p, { withFileTypes: true }, (er: object, children: any[]) => {
     // any error other than ENOTDIR or ENOTSUP means it's not readable,
     // or doesn't exist.  give up.
     if (er) {
@@ -109,9 +109,9 @@ const chownr: Function = (p: String, uid: String, gid: String, cb: Function) => 
     if (er || !children.length)
       return chown(p, uid, gid, cb)
 
-    let len: Number = children.length
-    let errState: String = null
-    const then: Function = (er: Boolean) => {
+    let len: number = children.length
+    let errState: string = null
+    const then: Function = (er: boolean) => {
       if (errState)
         return
       if (er)
@@ -120,14 +120,14 @@ const chownr: Function = (p: String, uid: String, gid: String, cb: Function) => 
         return chown(p, uid, gid, cb)
     }
 
-    children.forEach((child: Object) => chownrKid(p, child, uid, gid, then))
+    children.forEach((child: object) => chownrKid(p, child, uid, gid, then))
   })
 }
 
-const chownrKidSync: Function = (p: String, child: Function, uid: String, gid: String) => {
+const chownrKidSync: Function = (p: string, child: Function, uid: string, gid: string) => {
   if (typeof child === 'string') {
     try {
-      const stats: Array = fs.lstatSync(path.resolve(p, child))
+      const stats: any[] = fs.lstatSync(path.resolve(p, child))
       stats.name = child
       child = stats
     } catch (er) {
@@ -144,8 +144,8 @@ const chownrKidSync: Function = (p: String, child: Function, uid: String, gid: S
   handleEISDirSync(path.resolve(p, child.name), uid, gid)
 }
 
-const chownrSync: Function = (p: String, uid: String, gid: String) => {
-  let children: Array
+const chownrSync: Function = (p: string, uid: string, gid: string) => {
+  let children: any[]
   try {
     children = readdirSync(p, { withFileTypes: true })
   } catch (er) {
@@ -158,7 +158,7 @@ const chownrSync: Function = (p: String, uid: String, gid: String) => {
   }
 
   if (children && children.length)
-    children.forEach((child: Object) => chownrKidSync(p, child, uid, gid))
+    children.forEach((child: object) => chownrKidSync(p, child, uid, gid))
 
   return handleEISDirSync(p, uid, gid)
 }

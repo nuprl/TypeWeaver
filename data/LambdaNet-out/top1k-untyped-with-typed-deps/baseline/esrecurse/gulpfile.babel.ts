@@ -30,11 +30,11 @@ import filter from 'gulp-filter';
 import tagVersion from 'gulp-tag-version';
 import 'babel-register';
 
-const SOURCE: Array = [
+const SOURCE: any[] = [
     '*.js'
 ];
 
-let ESLINT_OPTION: Object = {
+let ESLINT_OPTION: object = {
     parser: 'babel-eslint',
     parserOptions: {
         'sourceType': 'module'
@@ -73,7 +73,7 @@ gulp.task('lint', () =>
     .pipe(eslint.failOnError())
 );
 
-let inc: Function = (importance: String) =>
+let inc: Function = (importance: string) =>
     gulp.src(['./package.json'])
         .pipe(bump({type: importance}))
         .pipe(gulp.dest('./'))

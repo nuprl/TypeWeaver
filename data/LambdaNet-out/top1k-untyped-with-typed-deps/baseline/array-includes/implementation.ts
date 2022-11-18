@@ -11,21 +11,21 @@ var callBound: Function = require('call-bind/callBound');
 var isString: Function = require('is-string');
 
 var $charAt: Function = callBound('String.prototype.charAt');
-var $indexOf: Array = GetIntrinsic('%Array.prototype.indexOf%'); // TODO: use callBind.apply without breaking IE 8
+var $indexOf: any[] = GetIntrinsic('%Array.prototype.indexOf%'); // TODO: use callBind.apply without breaking IE 8
 var $max: Function = GetIntrinsic('%Math.max%');
 
-module.exports = function includes(searchElement: HTMLElement): Boolean {
-	var fromIndex: Number = arguments.length > 1 ? ToIntegerOrInfinity(arguments[1]) : 0;
+module.exports = function includes(searchElement: HTMLElement): boolean {
+	var fromIndex: number = arguments.length > 1 ? ToIntegerOrInfinity(arguments[1]) : 0;
 	if ($indexOf && !$isNaN(searchElement) && $isFinite(fromIndex) && typeof searchElement !== 'undefined') {
 		return $indexOf.apply(this, arguments) > -1;
 	}
 
-	var O: Array = ToObject(this);
-	var length: Number = ToLength(O.length);
+	var O: any[] = ToObject(this);
+	var length: number = ToLength(O.length);
 	if (length === 0) {
 		return false;
 	}
-	var k: Number = fromIndex >= 0 ? fromIndex : $max(0, length + fromIndex);
+	var k: number = fromIndex >= 0 ? fromIndex : $max(0, length + fromIndex);
 	while (k < length) {
 		if (SameValueZero(searchElement, isString(O) ? $charAt(O, k) : O[k])) {
 			return true;

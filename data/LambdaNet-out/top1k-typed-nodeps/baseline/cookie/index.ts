@@ -44,25 +44,25 @@ var fieldContentRegExp: RegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
  * @public
  */
 
-function parse(str: String, options: Object): Object {
+function parse(str: string, options: object): object {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string');
   }
 
-  var obj: Object = {}
-  var opt: Object = options || {};
-  var dec: String = opt.decode || decode;
+  var obj: object = {}
+  var opt: object = options || {};
+  var dec: string = opt.decode || decode;
 
-  var index: Number = 0
+  var index: number = 0
   while (index < str.length) {
-    var eqIdx: Number = str.indexOf('=', index)
+    var eqIdx: number = str.indexOf('=', index)
 
     // no more cookie pairs
     if (eqIdx === -1) {
       break
     }
 
-    var endIdx: Number = str.indexOf(';', index)
+    var endIdx: number = str.indexOf(';', index)
 
     if (endIdx === -1) {
       endIdx = str.length
@@ -72,11 +72,11 @@ function parse(str: String, options: Object): Object {
       continue
     }
 
-    var key: String = str.slice(index, eqIdx).trim()
+    var key: string = str.slice(index, eqIdx).trim()
 
     // only assign once
     if (undefined === obj[key]) {
-      var val: String = str.slice(eqIdx + 1, endIdx).trim()
+      var val: string = str.slice(eqIdx + 1, endIdx).trim()
 
       // quoted values
       if (val.charCodeAt(0) === 0x22) {
@@ -108,7 +108,7 @@ function parse(str: String, options: Object): Object {
  * @public
  */
 
-function serialize(name: String, val: String, options: Object): String {
+function serialize(name: string, val: string, options: object): string {
   var opt: HTMLElement = options || {};
   var enc: Function = opt.encode || encode;
 
@@ -120,16 +120,16 @@ function serialize(name: String, val: String, options: Object): String {
     throw new TypeError('argument name is invalid');
   }
 
-  var value: Number = enc(val);
+  var value: number = enc(val);
 
   if (value && !fieldContentRegExp.test(value)) {
     throw new TypeError('argument val is invalid');
   }
 
-  var str: String = name + '=' + value;
+  var str: string = name + '=' + value;
 
   if (null != opt.maxAge) {
-    var maxAge: Number = opt.maxAge - 0;
+    var maxAge: number = opt.maxAge - 0;
 
     if (isNaN(maxAge) || !isFinite(maxAge)) {
       throw new TypeError('option maxAge is invalid')
@@ -155,7 +155,7 @@ function serialize(name: String, val: String, options: Object): String {
   }
 
   if (opt.expires) {
-    var expires: Object = opt.expires
+    var expires: object = opt.expires
 
     if (!isDate(expires) || isNaN(expires.valueOf())) {
       throw new TypeError('option expires is invalid');
@@ -173,7 +173,7 @@ function serialize(name: String, val: String, options: Object): String {
   }
 
   if (opt.priority) {
-    var priority: String = typeof opt.priority === 'string'
+    var priority: string = typeof opt.priority === 'string'
       ? opt.priority.toLowerCase()
       : opt.priority
 
@@ -193,7 +193,7 @@ function serialize(name: String, val: String, options: Object): String {
   }
 
   if (opt.sameSite) {
-    var sameSite: String = typeof opt.sameSite === 'string'
+    var sameSite: string = typeof opt.sameSite === 'string'
       ? opt.sameSite.toLowerCase() : opt.sameSite;
 
     switch (sameSite) {
@@ -224,7 +224,7 @@ function serialize(name: String, val: String, options: Object): String {
  * @returns {string}
  */
 
-function decode (str: String): String {
+function decode (str: string): string {
   return str.indexOf('%') !== -1
     ? decodeURIComponent(str)
     : str
@@ -237,7 +237,7 @@ function decode (str: String): String {
  * @returns {string}
  */
 
-function encode (val: String): String {
+function encode (val: string): string {
   return encodeURIComponent(val)
 }
 
@@ -248,7 +248,7 @@ function encode (val: String): String {
  * @private
  */
 
-function isDate (val: String): Boolean {
+function isDate (val: string): boolean {
   return __toString.call(val) === '[object Date]' ||
     val instanceof Date
 }
@@ -261,7 +261,7 @@ function isDate (val: String): Boolean {
  * @private
  */
 
-function tryDecode(str: String, decode: Function): Void {
+function tryDecode(str: string, decode: Function): Void {
   try {
     return decode(str);
   } catch (e) {

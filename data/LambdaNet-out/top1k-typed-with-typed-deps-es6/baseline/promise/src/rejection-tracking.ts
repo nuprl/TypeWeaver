@@ -2,13 +2,13 @@
 
 import Promise from './core';
 
-var DEFAULT_WHITELIST: Array = [
+var DEFAULT_WHITELIST: any[] = [
   ReferenceError,
   TypeError,
   RangeError
 ];
 
-var enabled: Boolean = false;
+var enabled: boolean = false;
 exports.disable = disable;
 function disable(): Void {
   enabled = false;
@@ -21,9 +21,9 @@ function enable(options: HTMLElement): Void {
   options = options || {};
   if (enabled) disable();
   enabled = true;
-  var id: Number = 0;
-  var displayId: Number = 0;
-  var rejections: Object = {};
+  var id: number = 0;
+  var displayId: number = 0;
+  var rejections: object = {};
   Promise._onHandle = function (promise: HTMLElement) {
     if (
       promise._state === 2 && // IS REJECTED
@@ -57,7 +57,7 @@ function enable(options: HTMLElement): Void {
       };
     }
   };
-  function onUnhandled(id: String): Void {
+  function onUnhandled(id: string): Void {
     if (
       options.allRejections ||
       matchWhitelist(
@@ -81,7 +81,7 @@ function enable(options: HTMLElement): Void {
       }
     }
   }
-  function onHandled(id: String): Void {
+  function onHandled(id: string): Void {
     if (rejections[id].logged) {
       if (options.onHandled) {
         options.onHandled(rejections[id].displayId, rejections[id].error);
@@ -98,16 +98,16 @@ function enable(options: HTMLElement): Void {
   }
 }
 
-function logError(id: String, error: Error): Void {
+function logError(id: string, error: Error): Void {
   console.warn('Possible Unhandled Promise Rejection (id: ' + id + '):');
-  var errStr: String = (error && (error.stack || error)) + '';
-  errStr.split('\n').forEach(function (line: String) {
+  var errStr: string = (error && (error.stack || error)) + '';
+  errStr.split('\n').forEach(function (line: string) {
     console.warn('  ' + line);
   });
 }
 
-function matchWhitelist(error: Object, list: Array): Boolean {
-  return list.some(function (cls: String) {
+function matchWhitelist(error: object, list: any[]): boolean {
+  return list.some(function (cls: string) {
     return error instanceof cls;
   });
 }

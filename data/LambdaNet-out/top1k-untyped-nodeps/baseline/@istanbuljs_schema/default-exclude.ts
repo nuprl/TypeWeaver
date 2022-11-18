@@ -1,8 +1,8 @@
 'use strict';
 
-const defaultExtension: Array = require('./default-extension.js');
-const testFileExtensions: String = defaultExtension
-	.map((extension: Array) => extension.slice(1))
+const defaultExtension: any[] = require('./default-extension.js');
+const testFileExtensions: string = defaultExtension
+	.map((extension: any[]) => extension.slice(1))
 	.join(',');
 
 module.exports = [

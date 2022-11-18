@@ -45,13 +45,13 @@ function memoize(func: Function, resolver: Function): Hash {
     throw new TypeError('Expected a function')
   }
   const memoized: Function = function(...args) {
-    const key: String = resolver ? resolver.apply(this, args) : args[0]
+    const key: string = resolver ? resolver.apply(this, args) : args[0]
     const cache: ListCache = memoized.cache
 
     if (cache.has(key)) {
       return cache.get(key)
     }
-    const result: Array = func.apply(this, args)
+    const result: any[] = func.apply(this, args)
     memoized.cache = cache.set(key, result) || cache
     return result
   }

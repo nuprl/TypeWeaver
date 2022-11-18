@@ -3,8 +3,8 @@ import some from '../some.js'
 import cacheHas from './cacheHas.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
-const COMPARE_UNORDERED_FLAG: Number = 2
+const COMPARE_PARTIAL_FLAG: number = 1
+const COMPARE_UNORDERED_FLAG: number = 2
 
 /**
  * A specialized version of `baseIsEqualDeep` for arrays with support for
@@ -19,10 +19,10 @@ const COMPARE_UNORDERED_FLAG: Number = 2
  * @param {Object} stack Tracks traversed `array` and `other` objects.
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  */
-function equalArrays(array: Array, other: Array, bitmask: Number, customizer: Function, equalFunc: Function, stack: Object): Boolean {
-  const isPartial: Boolean = bitmask & COMPARE_PARTIAL_FLAG
-  const arrLength: Number = array.length
-  const othLength: Number = other.length
+function equalArrays(array: any[], other: any[], bitmask: number, customizer: Function, equalFunc: Function, stack: object): boolean {
+  const isPartial: boolean = bitmask & COMPARE_PARTIAL_FLAG
+  const arrLength: number = array.length
+  const othLength: number = other.length
 
   if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
     return false
@@ -32,18 +32,18 @@ function equalArrays(array: Array, other: Array, bitmask: Number, customizer: Fu
   if (stacked && stack.get(other)) {
     return stacked == other
   }
-  let index: Number = -1
-  let result: Boolean = true
-  const seen: Array = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined
+  let index: number = -1
+  let result: boolean = true
+  const seen: any[] = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined
 
   stack.set(array, other)
   stack.set(other, array)
 
   // Ignore non-index properties.
   while (++index < arrLength) {
-    let compared: Number
-    const arrValue: String = array[index]
-    const othValue: String = other[index]
+    let compared: number
+    const arrValue: string = array[index]
+    const othValue: string = other[index]
 
     if (customizer) {
       compared = isPartial
@@ -59,7 +59,7 @@ function equalArrays(array: Array, other: Array, bitmask: Number, customizer: Fu
     }
     // Recursively compare arrays (susceptible to call stack limits).
     if (seen) {
-      if (!some(other, (othValue: Number, othIndex: String) => {
+      if (!some(other, (othValue: number, othIndex: string) => {
         if (!cacheHas(seen, othIndex) &&
           (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
           return seen.push(othIndex)

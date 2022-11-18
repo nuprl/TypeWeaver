@@ -22,12 +22,12 @@ import toInteger from './toInteger.js'
  * lastIndexOf([1, 2, 1, 2], 2, 2)
  * // => 1
  */
-function lastIndexOf(array: Array, value: String, fromIndex: Boolean): Number {
-  const length: Number = array == null ? 0 : array.length
+function lastIndexOf(array: any[], value: string, fromIndex: boolean): number {
+  const length: number = array == null ? 0 : array.length
   if (!length) {
     return -1
   }
-  let index: Number = length
+  let index: number = length
   if (fromIndex !== undefined) {
     index = toInteger(fromIndex)
     index = index < 0 ? Math.max(length + index, 0) : Math.min(index, length - 1)

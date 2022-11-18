@@ -6,7 +6,7 @@ import binding from './binding';
 import util from 'util';
 import { ok as assert } from 'assert';
 import { kMaxLength } from 'buffer';
-const kRangeErrorMessage: String = 'Cannot create final Buffer. It would be larger ' +
+const kRangeErrorMessage: string = 'Cannot create final Buffer. It would be larger ' +
                            'than 0x' + kMaxLength.toString(16) + ' bytes';
 
 // zlib doesn't provide these, so kludge them in following the same
@@ -31,9 +31,9 @@ binding.Z_MAX_LEVEL = 9;
 binding.Z_DEFAULT_LEVEL = binding.Z_DEFAULT_COMPRESSION;
 
 // expose all the zlib constants
-const bkeys: Array = Object.keys(binding);
+const bkeys: any[] = Object.keys(binding);
 for (var bk = 0; bk < bkeys.length; bk++) {
-  var bkey: String = bkeys[bk];
+  var bkey: string = bkeys[bk];
   if (bkey.match(/^Z/)) {
     Object.defineProperty(exports, bkey, {
       enumerable: true, value: binding[bkey], writable: false
@@ -42,7 +42,7 @@ for (var bk = 0; bk < bkeys.length; bk++) {
 }
 
 // translation table for return codes.
-const codes: Object = {
+const codes: object = {
   Z_OK: binding.Z_OK,
   Z_STREAM_END: binding.Z_STREAM_END,
   Z_NEED_DICT: binding.Z_NEED_DICT,
@@ -54,9 +54,9 @@ const codes: Object = {
   Z_VERSION_ERROR: binding.Z_VERSION_ERROR
 };
 
-const ckeys: Array = Object.keys(codes);
+const ckeys: any[] = Object.keys(codes);
 for (var ck = 0; ck < ckeys.length; ck++) {
-  var ckey: String = ckeys[ck];
+  var ckey: string = ckeys[ck];
   codes[codes[ckey]] = ckey;
 }
 
@@ -72,38 +72,38 @@ exports.DeflateRaw = DeflateRaw;
 exports.InflateRaw = InflateRaw;
 exports.Unzip = Unzip;
 
-exports.createDeflate = function(o: String) {
+exports.createDeflate = function(o: string) {
   return new Deflate(o);
 };
 
-exports.createInflate = function(o: String) {
+exports.createInflate = function(o: string) {
   return new Inflate(o);
 };
 
-exports.createDeflateRaw = function(o: String) {
+exports.createDeflateRaw = function(o: string) {
   return new DeflateRaw(o);
 };
 
-exports.createInflateRaw = function(o: String) {
+exports.createInflateRaw = function(o: string) {
   return new InflateRaw(o);
 };
 
-exports.createGzip = function(o: String) {
+exports.createGzip = function(o: string) {
   return new Gzip(o);
 };
 
-exports.createGunzip = function(o: String) {
+exports.createGunzip = function(o: string) {
   return new Gunzip(o);
 };
 
-exports.createUnzip = function(o: String) {
+exports.createUnzip = function(o: string) {
   return new Unzip(o);
 };
 
 
 // Convenience methods.
 // compress/decompress a string or buffer in one step.
-exports.deflate = function(buffer: Object, opts: Function, callback: Function) {
+exports.deflate = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -111,11 +111,11 @@ exports.deflate = function(buffer: Object, opts: Function, callback: Function) {
   return zlibBuffer(new Deflate(opts), buffer, callback);
 };
 
-exports.deflateSync = function(buffer: Object, opts: Array) {
+exports.deflateSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new Deflate(opts), buffer);
 };
 
-exports.gzip = function(buffer: Object, opts: Function, callback: Function) {
+exports.gzip = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -123,11 +123,11 @@ exports.gzip = function(buffer: Object, opts: Function, callback: Function) {
   return zlibBuffer(new Gzip(opts), buffer, callback);
 };
 
-exports.gzipSync = function(buffer: Object, opts: Array) {
+exports.gzipSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new Gzip(opts), buffer);
 };
 
-exports.deflateRaw = function(buffer: Object, opts: Function, callback: Function) {
+exports.deflateRaw = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -135,11 +135,11 @@ exports.deflateRaw = function(buffer: Object, opts: Function, callback: Function
   return zlibBuffer(new DeflateRaw(opts), buffer, callback);
 };
 
-exports.deflateRawSync = function(buffer: Object, opts: Array) {
+exports.deflateRawSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new DeflateRaw(opts), buffer);
 };
 
-exports.unzip = function(buffer: Object, opts: Function, callback: Function) {
+exports.unzip = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -147,11 +147,11 @@ exports.unzip = function(buffer: Object, opts: Function, callback: Function) {
   return zlibBuffer(new Unzip(opts), buffer, callback);
 };
 
-exports.unzipSync = function(buffer: Object, opts: Array) {
+exports.unzipSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new Unzip(opts), buffer);
 };
 
-exports.inflate = function(buffer: Object, opts: Function, callback: Function) {
+exports.inflate = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -159,11 +159,11 @@ exports.inflate = function(buffer: Object, opts: Function, callback: Function) {
   return zlibBuffer(new Inflate(opts), buffer, callback);
 };
 
-exports.inflateSync = function(buffer: Object, opts: Array) {
+exports.inflateSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new Inflate(opts), buffer);
 };
 
-exports.gunzip = function(buffer: Object, opts: Function, callback: Function) {
+exports.gunzip = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -171,11 +171,11 @@ exports.gunzip = function(buffer: Object, opts: Function, callback: Function) {
   return zlibBuffer(new Gunzip(opts), buffer, callback);
 };
 
-exports.gunzipSync = function(buffer: Object, opts: Array) {
+exports.gunzipSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new Gunzip(opts), buffer);
 };
 
-exports.inflateRaw = function(buffer: Object, opts: Function, callback: Function) {
+exports.inflateRaw = function(buffer: object, opts: Function, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -183,13 +183,13 @@ exports.inflateRaw = function(buffer: Object, opts: Function, callback: Function
   return zlibBuffer(new InflateRaw(opts), buffer, callback);
 };
 
-exports.inflateRawSync = function(buffer: Object, opts: Array) {
+exports.inflateRawSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new InflateRaw(opts), buffer);
 };
 
-function zlibBuffer(engine: HTMLElement, buffer: Object, callback: Function): Void {
-  var buffers: Array = [];
-  var nread: Number = 0;
+function zlibBuffer(engine: HTMLElement, buffer: object, callback: Function): Void {
+  var buffers: any[] = [];
+  var nread: number = 0;
 
   engine.on('error', onError);
   engine.on('end', onEnd);
@@ -198,7 +198,7 @@ function zlibBuffer(engine: HTMLElement, buffer: Object, callback: Function): Vo
   flow();
 
   function flow(): Void {
-    var chunk: String;
+    var chunk: string;
     while (null !== (chunk = engine.read())) {
       buffers.push(chunk);
       nread += chunk.length;
@@ -206,15 +206,15 @@ function zlibBuffer(engine: HTMLElement, buffer: Object, callback: Function): Vo
     engine.once('readable', flow);
   }
 
-  function onError(err: String): Void {
+  function onError(err: string): Void {
     engine.removeListener('end', onEnd);
     engine.removeListener('readable', flow);
     callback(err);
   }
 
   function onEnd(): Void {
-    var buf: Array;
-    var err: Object = null;
+    var buf: any[];
+    var err: object = null;
 
     if (nread >= kMaxLength) {
       err = new RangeError(kRangeErrorMessage);
@@ -228,7 +228,7 @@ function zlibBuffer(engine: HTMLElement, buffer: Object, callback: Function): Vo
   }
 }
 
-function zlibBufferSync(engine: HTMLElement, buffer: Array): Array {
+function zlibBufferSync(engine: HTMLElement, buffer: any[]): any[] {
   if (typeof buffer === 'string')
     buffer = Buffer.from(buffer);
 
@@ -242,48 +242,48 @@ function zlibBufferSync(engine: HTMLElement, buffer: Array): Array {
 
 // generic zlib
 // minimal 2-byte header
-function Deflate(opts: String): String {
+function Deflate(opts: string): string {
   if (!(this instanceof Deflate)) return new Deflate(opts);
   Zlib.call(this, opts, binding.DEFLATE);
 }
 
-function Inflate(opts: String): String {
+function Inflate(opts: string): string {
   if (!(this instanceof Inflate)) return new Inflate(opts);
   Zlib.call(this, opts, binding.INFLATE);
 }
 
 
 // gzip - bigger header, same deflate compression
-function Gzip(opts: String): String {
+function Gzip(opts: string): string {
   if (!(this instanceof Gzip)) return new Gzip(opts);
   Zlib.call(this, opts, binding.GZIP);
 }
 
-function Gunzip(opts: String): String {
+function Gunzip(opts: string): string {
   if (!(this instanceof Gunzip)) return new Gunzip(opts);
   Zlib.call(this, opts, binding.GUNZIP);
 }
 
 
 // raw - no header
-function DeflateRaw(opts: String): String {
+function DeflateRaw(opts: string): string {
   if (!(this instanceof DeflateRaw)) return new DeflateRaw(opts);
   Zlib.call(this, opts, binding.DEFLATERAW);
 }
 
-function InflateRaw(opts: String): String {
+function InflateRaw(opts: string): string {
   if (!(this instanceof InflateRaw)) return new InflateRaw(opts);
   Zlib.call(this, opts, binding.INFLATERAW);
 }
 
 
 // auto-detect header.
-function Unzip(opts: String): String {
+function Unzip(opts: string): string {
   if (!(this instanceof Unzip)) return new Unzip(opts);
   Zlib.call(this, opts, binding.UNZIP);
 }
 
-function isValidFlushFlag(flag: Number): Boolean {
+function isValidFlushFlag(flag: number): boolean {
   return flag === binding.Z_NO_FLUSH ||
          flag === binding.Z_PARTIAL_FLUSH ||
          flag === binding.Z_SYNC_FLUSH ||
@@ -297,7 +297,7 @@ function isValidFlushFlag(flag: Number): Boolean {
 // true or false if there is anything in the queue when
 // you call the .write() method.
 
-function Zlib(opts: HTMLElement, mode: String): Void {
+function Zlib(opts: HTMLElement, mode: string): Void {
   this._opts = opts = opts || {};
   this._chunkSize = opts.chunkSize || exports.Z_DEFAULT_CHUNK;
 
@@ -362,7 +362,7 @@ function Zlib(opts: HTMLElement, mode: String): Void {
 
   var self: HTMLElement = this;
   this._hadError = false;
-  this._handle.onerror = function(message: String, errno: Array) {
+  this._handle.onerror = function(message: string, errno: any[]) {
     // there is no way to cleanly recover.
     // continuing only obscures problems.
     _close(self);
@@ -374,7 +374,7 @@ function Zlib(opts: HTMLElement, mode: String): Void {
     self.emit('error', error);
   };
 
-  var level: String = exports.Z_DEFAULT_COMPRESSION;
+  var level: string = exports.Z_DEFAULT_COMPRESSION;
   if (typeof opts.level === 'number') level = opts.level;
 
   var strategy: Function = exports.Z_DEFAULT_STRATEGY;
@@ -402,7 +402,7 @@ function Zlib(opts: HTMLElement, mode: String): Void {
 
 util.inherits(Zlib, Transform);
 
-Zlib.prototype.params = function(level: Number, strategy: Number, callback: Function) {
+Zlib.prototype.params = function(level: number, strategy: number, callback: Function) {
   if (level < exports.Z_MIN_LEVEL ||
       level > exports.Z_MAX_LEVEL) {
     throw new RangeError('Invalid compression level: ' + level);
@@ -442,7 +442,7 @@ Zlib.prototype._flush = function(callback: Function) {
   this._transform(Buffer.alloc(0), '', callback);
 };
 
-Zlib.prototype.flush = function(kind: String, callback: String) {
+Zlib.prototype.flush = function(kind: string, callback: string) {
   var ws: HTMLElement = this._writableState;
 
   if (typeof kind === 'function' || (kind === undefined && !callback)) {
@@ -471,7 +471,7 @@ Zlib.prototype.close = function(callback: Function) {
   process.nextTick(emitCloseNT, this);
 };
 
-function _close(engine: HTMLElement, callback: Boolean): Void {
+function _close(engine: HTMLElement, callback: boolean): Void {
   if (callback)
     process.nextTick(callback);
 
@@ -483,15 +483,15 @@ function _close(engine: HTMLElement, callback: Boolean): Void {
   engine._handle = null;
 }
 
-function emitCloseNT(self: Object): Void {
+function emitCloseNT(self: object): Void {
   self.emit('close');
 }
 
-Zlib.prototype._transform = function(chunk: Array, encoding: Number, cb: Function) {
+Zlib.prototype._transform = function(chunk: any[], encoding: number, cb: Function) {
   var flushFlag: Function;
-  var ws: Array = this._writableState;
-  var ending: Boolean = ws.ending || ws.ended;
-  var last: Boolean = ending && (!chunk || ws.length === chunk.length);
+  var ws: any[] = this._writableState;
+  var ending: boolean = ws.ending || ws.ended;
+  var last: boolean = ending && (!chunk || ws.length === chunk.length);
 
   if (chunk !== null && !Buffer.isBuffer(chunk))
     return cb(new Error('invalid input'));
@@ -518,27 +518,27 @@ Zlib.prototype._transform = function(chunk: Array, encoding: Number, cb: Functio
   this._processChunk(chunk, flushFlag, cb);
 };
 
-Zlib.prototype._processChunk = function(chunk: Array, flushFlag: String, cb: Function) {
-  var availInBefore: Number = chunk && chunk.length;
-  var availOutBefore: Number = this._chunkSize - this._offset;
-  var inOff: Number = 0;
+Zlib.prototype._processChunk = function(chunk: any[], flushFlag: string, cb: Function) {
+  var availInBefore: number = chunk && chunk.length;
+  var availOutBefore: number = this._chunkSize - this._offset;
+  var inOff: number = 0;
 
   var self: HTMLElement = this;
 
-  var async: Boolean = typeof cb === 'function';
+  var async: boolean = typeof cb === 'function';
 
   if (!async) {
-    var buffers: Array = [];
-    var nread: Number = 0;
+    var buffers: any[] = [];
+    var nread: number = 0;
 
-    var error: Object;
+    var error: object;
     this.on('error', function(er: Function) {
       error = er;
     });
 
     assert(this._handle, 'zlib binding closed');
     do {
-      var res: Object = this._handle.writeSync(flushFlag,
+      var res: object = this._handle.writeSync(flushFlag,
                                        chunk, // in
                                        inOff, // in_off
                                        availInBefore, // in_len
@@ -556,14 +556,14 @@ Zlib.prototype._processChunk = function(chunk: Array, flushFlag: String, cb: Fun
       throw new RangeError(kRangeErrorMessage);
     }
 
-    var buf: Array = Buffer.concat(buffers, nread);
+    var buf: any[] = Buffer.concat(buffers, nread);
     _close(this);
 
     return buf;
   }
 
   assert(this._handle, 'zlib binding closed');
-  var req: Object = this._handle.write(flushFlag,
+  var req: object = this._handle.write(flushFlag,
                                chunk, // in
                                inOff, // in_off
                                availInBefore, // in_len
@@ -574,7 +574,7 @@ Zlib.prototype._processChunk = function(chunk: Array, flushFlag: String, cb: Fun
   req.buffer = chunk;
   req.callback = callback;
 
-  function callback(availInAfter: Number, availOutAfter: Number): Boolean {
+  function callback(availInAfter: number, availOutAfter: number): boolean {
     // When the callback is used in an async write, the callback's
     // context is the `req` object that was created. The req object
     // is === this._handle, and that's why it's important to null
@@ -588,11 +588,11 @@ Zlib.prototype._processChunk = function(chunk: Array, flushFlag: String, cb: Fun
     if (self._hadError)
       return;
 
-    var have: Number = availOutBefore - availOutAfter;
+    var have: number = availOutBefore - availOutAfter;
     assert(have >= 0, 'have should not go down');
 
     if (have > 0) {
-      var out: Array = self._buffer.slice(self._offset, self._offset + have);
+      var out: any[] = self._buffer.slice(self._offset, self._offset + have);
       self._offset += have;
       // serve some output to the consumer.
       if (async) {
@@ -621,7 +621,7 @@ Zlib.prototype._processChunk = function(chunk: Array, flushFlag: String, cb: Fun
       if (!async)
         return true;
 
-      var newReq: Object = self._handle.write(flushFlag,
+      var newReq: object = self._handle.write(flushFlag,
                                       chunk,
                                       inOff,
                                       availInBefore,

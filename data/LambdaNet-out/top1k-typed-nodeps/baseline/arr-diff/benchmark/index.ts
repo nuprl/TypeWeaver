@@ -1,9 +1,9 @@
 'use strict';
 
-var opts: Object = {alias: {fixtures: 'f', code: 'c'}};
-var argv: Object = require('minimist')(process.argv.slice(2), opts);
-var path: String = require('path');
-var Suite: Array = require('benchmarked');
+var opts: object = {alias: {fixtures: 'f', code: 'c'}};
+var argv: object = require('minimist')(process.argv.slice(2), opts);
+var path: string = require('path');
+var Suite: any[] = require('benchmarked');
 
 var suite: HTMLElement = new Suite({
   fixtures: path.resolve(__dirname, 'fixtures', argv.f || '*.js'),

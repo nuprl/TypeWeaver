@@ -1,33 +1,33 @@
 'use strict';
 /* jshint node:true, undef:true, unused:true */
-const Rollup: Array = require('broccoli-rollup');
-const Babel: Array = require('broccoli-babel-transpiler');
+const Rollup: any[] = require('broccoli-rollup');
+const Babel: any[] = require('broccoli-babel-transpiler');
 const merge: Function = require('broccoli-merge-trees');
 const funnel: Function = require('broccoli-funnel');
 const uglify: Function = require('broccoli-uglify-js');
 const version: Function = require('git-repo-version');
 const watchify: Function = require('broccoli-watchify');
 const concat: Function = require('broccoli-concat');
-const stew: Array = require('broccoli-stew');
+const stew: any[] = require('broccoli-stew');
 
-const env: Object = stew.env;
+const env: object = stew.env;
 const map: Function = stew.map;
 
 module.exports = function (app: Function) {
-  const lib: String = funnel('lib', { destDir: 'lib' });
+  const lib: string = funnel('lib', { destDir: 'lib' });
 
-  const testDir: Array = funnel('test', { destDir: 'test' });
-  const testFiles: Array = funnel('test', {
+  const testDir: any[] = funnel('test', { destDir: 'test' });
+  const testFiles: any[] = funnel('test', {
     files: ['index.html','worker.js'],
     destDir: 'test'
   });
 
-  const mocha: Array = funnel('node_modules/mocha', {
+  const mocha: any[] = funnel('node_modules/mocha', {
     files: ['mocha.css','mocha.js'],
     destDir: 'test'
   });
 
-  const es5: String = new Babel(lib, {
+  const es5: string = new Babel(lib, {
     plugins: [
       'transform-es2015-arrow-functions',
       'transform-es2015-computed-properties',
@@ -44,7 +44,7 @@ module.exports = function (app: Function) {
   });
 
   // build RSVP itself
-  const rsvp: String = new Rollup(es5, {
+  const rsvp: string = new Rollup(es5, {
     rollup: {
       input: 'lib/rsvp.js',
       output: [
@@ -76,19 +76,19 @@ module.exports = function (app: Function) {
     }
   });
 
-  const testBundle: Array = watchify(merge([
+  const testBundle: any[] = watchify(merge([
     funnel(rsvp, { destDir: 'test' }),
     testDir
   ]), {
     browserify: { debug: true, entries: ['./test/index.js'] }
   });
 
-  const header: String = map(
+  const header: string = map(
     funnel('config', { files: ['versionTemplate.txt'], destDir: 'config' }),
-    (content: String) => content.replace(/VERSION_PLACEHOLDER_STRING/, version())
+    (content: string) => content.replace(/VERSION_PLACEHOLDER_STRING/, version())
   );
 
-  function concatAs(tree: String, outputFile: String): Boolean {
+  function concatAs(tree: string, outputFile: string): boolean {
     return concat(merge([tree, header]), {
       headerFiles: ['config/versionTemplate.txt'],
       inputFiles: ['rsvp.js'],
@@ -96,8 +96,8 @@ module.exports = function (app: Function) {
     });
   }
 
-  function production(dist: String, header: String): Object {
-    let result: Array;
+  function production(dist: string, header: string): object {
+    let result: any[];
     env('production', () => {
       result = uglify(concatAs(dist, 'rsvp.min.js'), {
         compress: {
@@ -110,7 +110,7 @@ module.exports = function (app: Function) {
     return result;
   }
 
-  function development(dist: String, header: String): String {
+  function development(dist: string, header: string): string {
     return concatAs(dist, 'rsvp.js');
   }
 

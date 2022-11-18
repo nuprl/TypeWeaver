@@ -5,7 +5,7 @@
 
 import path from 'path';
 
-function urix(aPath: String): String {
+function urix(aPath: string): string {
   if (path.sep === "\\") {
     return aPath
       .replace(/\\/g, "/")

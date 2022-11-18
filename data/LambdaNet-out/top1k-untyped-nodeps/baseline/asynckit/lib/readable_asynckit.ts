@@ -1,4 +1,4 @@
-var streamify: String = require('./streamify.js')
+var streamify: string = require('./streamify.js')
   , defer: Function     = require('./defer.js')
   ;
 
@@ -51,9 +51,9 @@ function destroy(): Void
 function _start(): Void
 {
   // first argument – runner function
-  var runner: Object = arguments[0]
+  var runner: object = arguments[0]
     // take away first argument
-    , args: Array   = Array.prototype.slice.call(arguments, 1)
+    , args: any[]   = Array.prototype.slice.call(arguments, 1)
       // second argument - input data
     , input: HTMLElement  = args[0]
       // last argument - result callback

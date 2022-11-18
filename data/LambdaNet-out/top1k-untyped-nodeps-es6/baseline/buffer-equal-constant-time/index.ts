@@ -5,7 +5,7 @@ import { SlowBuffer } from 'buffer';
 
 export default bufferEq;
 
-function bufferEq(a: Array, b: Array): Boolean {
+function bufferEq(a: any[], b: any[]): boolean {
 
   // shortcutting on type is necessary for correctness
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
@@ -19,7 +19,7 @@ function bufferEq(a: Array, b: Array): Boolean {
     return false;
   }
 
-  var c: Number = 0;
+  var c: number = 0;
   for (var i = 0; i < a.length; i++) {
     /*jshint bitwise:false */
     c |= a[i] ^ b[i]; // XOR
@@ -33,7 +33,7 @@ bufferEq.install = function() {
   };
 };
 
-var origBufEqual: Number = Buffer.prototype.equal;
+var origBufEqual: number = Buffer.prototype.equal;
 var origSlowBufEqual: Function = SlowBuffer.prototype.equal;
 bufferEq.restore = function() {
   Buffer.prototype.equal = origBufEqual;

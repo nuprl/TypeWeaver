@@ -1,4 +1,4 @@
-let globalPnpApi: Number;
+let globalPnpApi: number;
 try {
     globalPnpApi = require(`pnpapi`);
 } catch {
@@ -9,11 +9,11 @@ try {
 const createRequire: Function = require(`./createRequire`);
 const getDefaultResolver: Function = require(`./getDefaultResolver`);
 
-module.exports = (request: Object, options: Object) => {
+module.exports = (request: object, options: object) => {
   const {basedir, defaultResolver, extensions} = options;
 
   if (process.versions.pnp) {
-    let pnpApi: String = globalPnpApi;
+    let pnpApi: string = globalPnpApi;
 
     // While technically it would be more correct to run this code
     // everytime (since they file being run *may* belong to a
@@ -32,7 +32,7 @@ module.exports = (request: Object, options: Object) => {
     }
 
     if (pnpApi) {
-      const resolution: String = pnpApi.resolveRequest(request, `${basedir}/`, {extensions});
+      const resolution: string = pnpApi.resolveRequest(request, `${basedir}/`, {extensions});
 
       // When the request is a native module, Jest expects to get the string back unmodified, but pnp returns null instead.
       if (resolution === null)

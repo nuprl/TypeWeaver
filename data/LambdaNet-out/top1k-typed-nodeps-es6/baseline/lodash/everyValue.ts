@@ -19,9 +19,9 @@
  * everyValue({ 'a': 0, 'b': 'yes', 'c': false }, Boolean)
  * // => false
  */
-function everyValue(object: Object, predicate: Function): Boolean {
+function everyValue(object: object, predicate: Function): boolean {
   object = Object(object)
-  const props: Array = Object.keys(object)
+  const props: any[] = Object.keys(object)
 
   for (const key of props) {
     if (!predicate(object[key], key, object)) {

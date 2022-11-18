@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import write from 'write';
-var cwd: Object = path.join.bind(path, __dirname, 'code');
+var cwd: object = path.join.bind(path, __dirname, 'code');
 
 [
   'compute-flatten',
@@ -16,8 +16,8 @@ var cwd: Object = path.join.bind(path, __dirname, 'code');
   'm_flattened',
   'reduce-flatten',
   'utils-flatten'
-].forEach(function(name: String) {
-  var fp: String = cwd(name + '.js');
+].forEach(function(name: string) {
+  var fp: string = cwd(name + '.js');
   if (!fs.existsSync(fp)) {
     write.sync(fp, `module.exports = require('${name}');\n`);
   }

@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = function repeat(val: String, amount: Number): String {
-  var res: Array = [];
+module.exports = function repeat(val: string, amount: number): string {
+  var res: any[] = [];
 
   while (amount--) {
     res.unshift(val);

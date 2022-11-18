@@ -1,11 +1,11 @@
-var clone: Object = (function() {
+var clone: object = (function() {
 'use strict';
 
-function _instanceof(obj: Function, type: String): Boolean {
+function _instanceof(obj: Function, type: string): boolean {
   return type != null && obj instanceof type;
 }
 
-var nativeMap: Array;
+var nativeMap: any[];
 try {
   nativeMap = Map;
 } catch(_) {
@@ -14,14 +14,14 @@ try {
   nativeMap = function() {};
 }
 
-var nativeSet: Number;
+var nativeSet: number;
 try {
   nativeSet = Set;
 } catch(_) {
   nativeSet = function() {};
 }
 
-var nativePromise: Array;
+var nativePromise: any[];
 try {
   nativePromise = Promise;
 } catch(_) {
@@ -49,7 +49,7 @@ try {
  *    should be cloned as well. Non-enumerable properties on the prototype
  *    chain will be ignored. (optional - false by default)
 */
-function clone(parent: String, circular: Boolean, depth: Number, prototype: Object, includeNonEnumerable: Boolean): String {
+function clone(parent: string, circular: boolean, depth: number, prototype: object, includeNonEnumerable: boolean): string {
   if (typeof circular === 'object') {
     depth = circular.depth;
     prototype = circular.prototype;
@@ -58,10 +58,10 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
   }
   // maintain two arrays for circular references, where corresponding parents
   // and children have the same index
-  var allParents: Array = [];
-  var allChildren: Array = [];
+  var allParents: any[] = [];
+  var allChildren: any[] = [];
 
-  var useBuffer: Boolean = typeof Buffer != 'undefined';
+  var useBuffer: boolean = typeof Buffer != 'undefined';
 
   if (typeof circular == 'undefined')
     circular = true;
@@ -70,7 +70,7 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     depth = Infinity;
 
   // recurse this function so we don't reset allParents and allChildren
-  function _clone(parent: Array, depth: Number): Array {
+  function _clone(parent: any[], depth: number): any[] {
     // cloning null always returns null
     if (parent === null)
       return null;
@@ -78,8 +78,8 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     if (depth === 0)
       return parent;
 
-    var child: Object;
-    var proto: Object;
+    var child: object;
+    var proto: object;
     if (typeof parent != 'object') {
       return parent;
     }
@@ -90,9 +90,9 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
       child = new nativeSet();
     } else if (_instanceof(parent, nativePromise)) {
       child = new nativePromise(function (resolve: Function, reject: Function) {
-        parent.then(function(value: String) {
+        parent.then(function(value: string) {
           resolve(_clone(value, depth - 1));
-        }, function(err: Array) {
+        }, function(err: any[]) {
           reject(_clone(err, depth - 1));
         });
       });
@@ -127,7 +127,7 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     }
 
     if (circular) {
-      var index: Number = allParents.indexOf(parent);
+      var index: number = allParents.indexOf(parent);
 
       if (index != -1) {
         return allChildren[index];
@@ -137,27 +137,27 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     }
 
     if (_instanceof(parent, nativeMap)) {
-      parent.forEach(function(value: String, key: String) {
-        var keyChild: String = _clone(key, depth - 1);
-        var valueChild: String = _clone(value, depth - 1);
+      parent.forEach(function(value: string, key: string) {
+        var keyChild: string = _clone(key, depth - 1);
+        var valueChild: string = _clone(value, depth - 1);
         child.set(keyChild, valueChild);
       });
     }
     if (_instanceof(parent, nativeSet)) {
-      parent.forEach(function(value: String) {
-        var entryChild: String = _clone(value, depth - 1);
+      parent.forEach(function(value: string) {
+        var entryChild: string = _clone(value, depth - 1);
         child.add(entryChild);
       });
     }
 
     for (var i in parent) {
-      var attrs: String = Object.getOwnPropertyDescriptor(parent, i);
+      var attrs: string = Object.getOwnPropertyDescriptor(parent, i);
       if (attrs) {
         child[i] = _clone(parent[i], depth - 1);
       }
 
       try {
-        var objProperty: Object = Object.getOwnPropertyDescriptor(parent, i);
+        var objProperty: object = Object.getOwnPropertyDescriptor(parent, i);
         if (objProperty.set === 'undefined') {
           // no setter defined. Skip cloning this property
           continue;
@@ -177,11 +177,11 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     }
 
     if (Object.getOwnPropertySymbols) {
-      var symbols: Array = Object.getOwnPropertySymbols(parent);
+      var symbols: any[] = Object.getOwnPropertySymbols(parent);
       for (var i = 0; i < symbols.length; i++) {
         // Don't need to worry about cloning a symbol because it is a primitive,
         // like a number or string.
-        var symbol: String = symbols[i];
+        var symbol: string = symbols[i];
         var descriptor: Element = Object.getOwnPropertyDescriptor(parent, symbol);
         if (descriptor && !descriptor.enumerable && !includeNonEnumerable) {
           continue;
@@ -192,9 +192,9 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
     }
 
     if (includeNonEnumerable) {
-      var allPropertyNames: Array = Object.getOwnPropertyNames(parent);
+      var allPropertyNames: any[] = Object.getOwnPropertyNames(parent);
       for (var i = 0; i < allPropertyNames.length; i++) {
-        var propertyName: String = allPropertyNames[i];
+        var propertyName: string = allPropertyNames[i];
         var descriptor: Element = Object.getOwnPropertyDescriptor(parent, propertyName);
         if (descriptor && descriptor.enumerable) {
           continue;
@@ -217,7 +217,7 @@ function clone(parent: String, circular: Boolean, depth: Number, prototype: Obje
  * USE WITH CAUTION! This may not behave as you wish if you do not know how this
  * works.
  */
-clone.clonePrototype = function clonePrototype(parent: String): Promise {
+clone.clonePrototype = function clonePrototype(parent: string): Promise {
   if (parent === null)
     return null;
 
@@ -228,28 +228,28 @@ clone.clonePrototype = function clonePrototype(parent: String): Promise {
 
 // private utility functions
 
-function __objToStr(o: String): Boolean {
+function __objToStr(o: string): boolean {
   return Object.prototype.toString.call(o);
 }
 clone.__objToStr = __objToStr;
 
-function __isDate(o: String): Boolean {
+function __isDate(o: string): boolean {
   return typeof o === 'object' && __objToStr(o) === '[object Date]';
 }
 clone.__isDate = __isDate;
 
-function __isArray(o: String): Boolean {
+function __isArray(o: string): boolean {
   return typeof o === 'object' && __objToStr(o) === '[object Array]';
 }
 clone.__isArray = __isArray;
 
-function __isRegExp(o: String): Boolean {
+function __isRegExp(o: string): boolean {
   return typeof o === 'object' && __objToStr(o) === '[object RegExp]';
 }
 clone.__isRegExp = __isRegExp;
 
-function __getRegExpFlags(re: HTMLElement): String {
-  var flags: String = '';
+function __getRegExpFlags(re: HTMLElement): string {
+  var flags: string = '';
   if (re.global) flags += 'g';
   if (re.ignoreCase) flags += 'i';
   if (re.multiline) flags += 'm';

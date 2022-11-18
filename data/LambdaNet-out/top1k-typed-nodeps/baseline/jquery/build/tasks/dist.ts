@@ -1,9 +1,9 @@
 "use strict";
 
 module.exports = function( grunt: HTMLElement ) {
-	var	fs: String = require( "fs" ),
-		filename: String = grunt.option( "filename" ),
-		distpaths: Array = [
+	var	fs: string = require( "fs" ),
+		filename: string = grunt.option( "filename" ),
+		distpaths: any[] = [
 			"dist/" + filename,
 			"dist/" + filename.replace( ".js", ".min.map" ),
 			"dist/" + filename.replace( ".js", ".min.js" )
@@ -11,7 +11,7 @@ module.exports = function( grunt: HTMLElement ) {
 
 	// Process files for distribution
 	grunt.registerTask( "dist", function() {
-		var stored: Array, flags: Array, paths: Array, nonascii: Boolean;
+		var stored: any[], flags: any[], paths: any[], nonascii: boolean;
 
 		// Check for stored destination paths
 		// ( set in dist/.destination.json )
@@ -21,16 +21,16 @@ module.exports = function( grunt: HTMLElement ) {
 		flags = Object.keys( this.flags );
 
 		// Combine all output target paths
-		paths = [].concat( stored, flags ).filter( function( path: String ) {
+		paths = [].concat( stored, flags ).filter( function( path: string ) {
 			return path !== "*";
 		} );
 
 		// Ensure the dist files are pure ASCII
 		nonascii = false;
 
-		distpaths.forEach( function( filename: String ) {
-			var i: Number, c: Number,
-				text: String = fs.readFileSync( filename, "utf8" );
+		distpaths.forEach( function( filename: string ) {
+			var i: number, c: number,
+				text: string = fs.readFileSync( filename, "utf8" );
 
 			// Ensure files use only \n for line endings, not \r\n
 			if ( /\x0d\x0a/.test( text ) ) {
@@ -53,8 +53,8 @@ module.exports = function( grunt: HTMLElement ) {
 			}
 
 			// Optionally copy dist files to other locations
-			paths.forEach( function( path: String ) {
-				var created: String;
+			paths.forEach( function( path: string ) {
+				var created: string;
 
 				if ( !/\/$/.test( path ) ) {
 					path += "/";

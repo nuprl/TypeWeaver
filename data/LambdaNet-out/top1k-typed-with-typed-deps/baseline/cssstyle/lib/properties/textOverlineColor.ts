@@ -3,7 +3,7 @@
 var parseColor: Function = require('../parsers').parseColor;
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('text-overline-color', parseColor(v));
   },
   get: function() {

@@ -1,12 +1,12 @@
 /*global document */
 (() => {
-    const source: Object = document.getElementsByClassName('prettyprint source linenums');
-    let i: Number = 0;
-    let lineNumber: Number = 0;
-    let lineId: String;
-    let lines: Array;
-    let totalLines: Number;
-    let anchorHash: String;
+    const source: object = document.getElementsByClassName('prettyprint source linenums');
+    let i: number = 0;
+    let lineNumber: number = 0;
+    let lineId: string;
+    let lines: any[];
+    let totalLines: number;
+    let anchorHash: string;
 
     if (source && source[0]) {
         anchorHash = document.location.hash.substring(1);

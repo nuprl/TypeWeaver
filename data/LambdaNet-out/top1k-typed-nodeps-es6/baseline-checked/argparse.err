@@ -1,126 +1,49 @@
-argparse.ts(90,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(92,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(108,43): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(90,7): error TS2740: Type 'typeof inspect' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 argparse.ts(111,64): error TS2304: Cannot find name 'Void'.
-argparse.ts(112,12): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(116,40): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(117,19): error TS2538: Type 'String' cannot be used as an index type.
 argparse.ts(120,49): error TS2304: Cannot find name 'Void'.
-argparse.ts(121,19): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(124,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(126,35): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-argparse.ts(126,39): error TS2322: Type 'number' is not assignable to type 'String'.
-argparse.ts(132,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(126,35): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(126,39): error TS2322: Type 'number' is not assignable to type 'string'.
 argparse.ts(134,36): error TS2322: Type 'number' is not assignable to type 'never'.
 argparse.ts(136,36): error TS2322: Type 'number' is not assignable to type 'never'.
-argparse.ts(141,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(142,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(147,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(156,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(158,71): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-argparse.ts(162,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(163,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(163,38): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
-      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-argparse.ts(170,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(170,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(178,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(159,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
 argparse.ts(178,53): error TS2304: Cannot find name 'Void'.
-argparse.ts(180,41): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(187,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 argparse.ts(193,27): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>): unknown[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'Iterable<unknown> | ArrayLike<unknown>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Overload 2 of 4, '(arrayLike: ArrayLike<unknown>): unknown[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ArrayLike<unknown>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Property 'length' is missing in type 'Object' but required in type 'ArrayLike<unknown>'.
-argparse.ts(197,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(204,14): error TS2339: Property 'name' does not exist on type 'Object'.
-argparse.ts(206,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-argparse.ts(209,16): error TS2339: Property 'name' does not exist on type 'Object'.
-argparse.ts(209,38): error TS2339: Property 'prototype' does not exist on type 'Object'.
-argparse.ts(211,9): error TS2339: Property 'prototype' does not exist on type 'Object'.
-argparse.ts(211,45): error TS2339: Property 'name' does not exist on type 'Object'.
-argparse.ts(212,23): error TS2339: Property 'name' does not exist on type 'Object'.
+  Overload 1 of 4, '(iterable: ArrayLike<any> | Iterable<any>): any[]', gave the following error.
+    Argument of type 'object' is not assignable to parameter of type 'ArrayLike<any> | Iterable<any>'.
+  Overload 2 of 4, '(arrayLike: ArrayLike<any>): any[]', gave the following error.
+    Argument of type 'object' is not assignable to parameter of type 'ArrayLike<any>'.
+      Property 'length' is missing in type '{}' but required in type 'ArrayLike<any>'.
+argparse.ts(204,14): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(206,38): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+  Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+argparse.ts(209,16): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(209,38): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(211,9): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(211,45): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(212,23): error TS2339: Property 'name' does not exist on type 'object'.
 argparse.ts(215,60): error TS2304: Cannot find name 'Void'.
-argparse.ts(218,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-argparse.ts(219,42): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(219,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(228,56): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(228,56): error TS2339: Property 'prototype' does not exist on type 'object'.
 argparse.ts(229,63): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-argparse.ts(230,47): error TS2339: Property 'prototype' does not exist on type 'Object'.
-argparse.ts(232,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+argparse.ts(230,47): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(232,5): error TS2322: Type 'object' is not assignable to type 'string'.
 argparse.ts(236,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-argparse.ts(250,5): error TS2322: Type 'symbol' is not assignable to type 'Number'.
-argparse.ts(251,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(251,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(253,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(250,5): error TS2322: Type 'symbol' is not assignable to type 'number'.
 argparse.ts(256,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-argparse.ts(266,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(275,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(278,34): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-argparse.ts(283,38): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(286,27): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(296,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(303,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(307,29): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-argparse.ts(311,36): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(330,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(344,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(351,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(360,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(363,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(360,51): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): any'.
 argparse.ts(371,49): error TS2304: Cannot find name 'Void'.
-argparse.ts(372,19): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(372,39): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(372,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(373,19): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(380,27): error TS2740: Type 'ObjectConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-argparse.ts(390,43): error TS2507: Type 'String' is not a constructor function type.
-argparse.ts(426,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-argparse.ts(460,41): error TS2339: Property 'columns' does not exist on type 'Object'.
+argparse.ts(380,27): error TS2322: Type 'ObjectConstructor' is not assignable to type 'string'.
+argparse.ts(390,43): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(396,34): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+argparse.ts(406,46): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+argparse.ts(430,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
+argparse.ts(437,7): error TS2322: Type 'string' is not assignable to type 'object'.
+argparse.ts(437,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(451,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+  Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
+argparse.ts(460,41): error TS2339: Property 'columns' does not exist on type 'object'.
 argparse.ts(464,14): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
 argparse.ts(465,14): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
 argparse.ts(466,14): error TS2339: Property '_max_help_position' does not exist on type 'HelpFormatter'.
@@ -177,10 +100,9 @@ argparse.ts(823,30): error TS2339: Property '_current_indent' does not exist on 
 argparse.ts(829,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
 argparse.ts(934,27): error TS2554: Expected 2-3 arguments, but got 1.
 argparse.ts(944,49): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
-argparse.ts(963,24): error TS2538: Type 'String' cannot be used as an index type.
 argparse.ts(979,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
 argparse.ts(987,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
-argparse.ts(1007,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(1007,15): error TS2339: Property 'prototype' does not exist on type 'object'.
 argparse.ts(1010,14): error TS2339: Property 'formatter' does not exist on type '_Section'.
 argparse.ts(1011,14): error TS2339: Property 'parent' does not exist on type '_Section'.
 argparse.ts(1012,14): error TS2339: Property 'heading' does not exist on type '_Section'.
@@ -196,13 +118,17 @@ argparse.ts(1033,47): error TS2339: Property 'heading' does not exist on type '_
 argparse.ts(1034,39): error TS2339: Property 'formatter' does not exist on type '_Section'.
 argparse.ts(1035,64): error TS2339: Property 'heading' does not exist on type '_Section'.
 argparse.ts(1041,21): error TS2339: Property 'formatter' does not exist on type '_Section'.
-argparse.ts(1046,7): error TS2322: Type 'String' is not assignable to type 'Number'.
-argparse.ts(1046,114): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(1060,100): error TS2507: Type 'Number' is not a constructor function type.
-argparse.ts(1074,7): error TS2322: Type 'String' is not assignable to type 'Number'.
-argparse.ts(1074,118): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(1098,7): error TS2322: Type 'String' is not assignable to type 'Number'.
-argparse.ts(1098,108): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1046,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(1046,62): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1046,114): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1060,55): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1060,100): error TS2507: Type 'number' is not a constructor function type.
+argparse.ts(1074,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(1074,64): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1074,118): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1098,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(1098,59): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1098,108): error TS2507: Type 'object' is not a constructor function type.
 argparse.ts(1120,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 argparse.ts(1123,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
 argparse.ts(1124,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
@@ -212,14 +138,13 @@ argparse.ts(1127,59): error TS2339: Property 'dest' does not exist on type 'HTML
 argparse.ts(1128,25): error TS2339: Property 'dest' does not exist on type 'HTMLElement'.
 argparse.ts(1146,14): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
 argparse.ts(1147,14): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
-argparse.ts(1148,9): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(1153,18): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
 argparse.ts(1158,44): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
 argparse.ts(1159,50): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
-argparse.ts(1179,72): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(1179,89): error TS2345: Argument of type 'FunctionConstructor' is not assignable to parameter of type 'String'.
-  Type 'FunctionConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+argparse.ts(1179,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1179,72): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1179,89): error TS2345: Argument of type 'FunctionConstructor' is not assignable to parameter of type 'string'.
+argparse.ts(1243,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1259,14): error TS2339: Property 'option_strings' does not exist on type 'Action'.
 argparse.ts(1260,14): error TS2339: Property 'dest' does not exist on type 'Action'.
 argparse.ts(1261,14): error TS2339: Property 'nargs' does not exist on type 'Action'.
@@ -232,68 +157,69 @@ argparse.ts(1267,14): error TS2339: Property 'help' does not exist on type 'Acti
 argparse.ts(1268,14): error TS2339: Property 'metavar' does not exist on type 'Action'.
 argparse.ts(1283,42): error TS2554: Expected 3 arguments, but got 2.
 argparse.ts(1287,21): error TS2339: Property 'option_strings' does not exist on type 'Action'.
-argparse.ts(1296,7): error TS2322: Type 'String' is not assignable to type 'Number'.
-argparse.ts(1296,102): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1296,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(1296,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1296,102): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1308,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1347,18): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
 argparse.ts(1348,37): error TS2339: Property 'dest' does not exist on type 'BooleanOptionalAction'.
-argparse.ts(1348,43): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+argparse.ts(1348,43): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 argparse.ts(1353,21): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
-argparse.ts(1358,7): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-argparse.ts(1358,69): error TS2507: Type 'String' is not a constructor function type.
-argparse.ts(1391,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1358,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1358,69): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1372,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1408,33): error TS2339: Property 'dest' does not exist on type '_StoreAction'.
-argparse.ts(1413,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1413,79): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1413,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1413,79): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1424,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1446,33): error TS2339: Property 'dest' does not exist on type '_StoreConstAction'.
 argparse.ts(1446,44): error TS2339: Property 'const' does not exist on type '_StoreConstAction'.
-argparse.ts(1451,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1451,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 argparse.ts(1451,77): error TS2507: Type 'Function' is not a constructor function type.
-argparse.ts(1480,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1460,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1480,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 argparse.ts(1480,79): error TS2507: Type 'Function' is not a constructor function type.
-argparse.ts(1509,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1509,71): error TS2507: Type 'String' is not a constructor function type.
-argparse.ts(1542,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1489,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1509,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1509,71): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1523,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1559,45): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
-argparse.ts(1561,15): error TS2339: Property 'push' does not exist on type 'String'.
+argparse.ts(1560,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(1561,15): error TS2339: Property 'push' does not exist on type 'string'.
 argparse.ts(1562,33): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
-argparse.ts(1567,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1567,81): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1567,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1567,81): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1578,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1601,45): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
-argparse.ts(1603,15): error TS2339: Property 'push' does not exist on type 'String'.
+argparse.ts(1602,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(1603,15): error TS2339: Property 'push' does not exist on type 'string'.
 argparse.ts(1603,25): error TS2339: Property 'const' does not exist on type '_AppendConstAction'.
 argparse.ts(1604,33): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
-argparse.ts(1609,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1609,69): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1609,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1609,69): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1618,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1637,45): error TS2339: Property 'dest' does not exist on type '_CountAction'.
-argparse.ts(1639,13): error TS2322: Type 'number' is not assignable to type 'String'.
+argparse.ts(1639,13): error TS2322: Type 'number' is not assignable to type 'string'.
 argparse.ts(1641,33): error TS2339: Property 'dest' does not exist on type '_CountAction'.
-argparse.ts(1641,39): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-argparse.ts(1646,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1646,67): error TS2507: Type 'String' is not a constructor function type.
-argparse.ts(1677,7): error TS2322: Type 'String' is not assignable to type 'Function'.
-argparse.ts(1677,73): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1646,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1646,67): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1654,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1677,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1677,73): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1686,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1701,14): error TS2339: Property 'version' does not exist on type '_VersionAction'.
 argparse.ts(1705,28): error TS2339: Property 'version' does not exist on type '_VersionAction'.
-argparse.ts(1717,94): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1717,7): error TS2322: Type 'string' is not assignable to type 'object'.
+argparse.ts(1717,52): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1717,94): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1728,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1750,14): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
 argparse.ts(1751,14): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
 argparse.ts(1752,14): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
 argparse.ts(1753,14): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1760,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1767,45): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
-argparse.ts(1770,50): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'String'.
-  Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+argparse.ts(1770,50): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'string'.
 argparse.ts(1777,38): error TS2339: Property '_ChoicesPseudoAction' does not exist on type '_SubParsersAction'.
 argparse.ts(1778,18): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
 argparse.ts(1782,31): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
@@ -307,17 +233,18 @@ argparse.ts(1808,27): error TS2339: Property '_name_parser_map' does not exist o
 argparse.ts(1811,39): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
 argparse.ts(1813,23): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
-argparse.ts(1826,37): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'String'.
-  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-argparse.ts(1830,60): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'String'.
+argparse.ts(1826,37): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
+argparse.ts(1830,60): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'string'.
 argparse.ts(1831,13): error TS2554: Expected 3 arguments, but got 2.
-argparse.ts(1831,57): error TS2339: Property 'push' does not exist on type 'String'.
-argparse.ts(1837,19): error TS2339: Property 'prototype' does not exist on type 'Object'.
-argparse.ts(1837,97): error TS2507: Type 'String' is not a constructor function type.
-argparse.ts(1848,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1831,57): error TS2339: Property 'push' does not exist on type 'string'.
+argparse.ts(1837,19): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(1837,97): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1848,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 argparse.ts(1848,71): error TS2507: Type 'Function' is not a constructor function type.
 argparse.ts(1850,45): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1851,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 argparse.ts(1853,33): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1890,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(1910,14): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1911,14): error TS2339: Property '_options' does not exist on type 'FileType'.
 argparse.ts(1912,42): error TS2339: Property '_options' does not exist on type 'FileType'.
@@ -331,13 +258,6 @@ argparse.ts(1919,36): error TS2339: Property '_options' does not exist on type '
 argparse.ts(1925,22): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1927,29): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1930,65): error TS2339: Property '_flags' does not exist on type 'FileType'.
-argparse.ts(1931,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(1938,43): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1938,56): error TS2339: Property '_options' does not exist on type 'FileType'.
 argparse.ts(1942,23): error TS2351: This expression is not constructable.
@@ -347,28 +267,22 @@ argparse.ts(1945,70): error TS2339: Property '_options' does not exist on type '
 argparse.ts(1946,18): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1948,25): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1951,70): error TS2339: Property '_flags' does not exist on type 'FileType'.
-argparse.ts(1952,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(1957,27): error TS2339: Property '_flags' does not exist on type 'FileType'.
 argparse.ts(1958,42): error TS2339: Property '_options' does not exist on type 'FileType'.
-argparse.ts(1970,5): error TS2416: Property 'toString' in type 'FileType' is not assignable to the same property in base type 'Function'.
-  Type '() => String' is not assignable to type '() => string'.
-    Type 'String' is not assignable to type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(1978,61): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(1993,11): error TS2339: Property 'prototype' does not exist on type 'Object'.
-argparse.ts(1996,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1963,60): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): any'.
+argparse.ts(1978,7): error TS2322: Type 'string' is not assignable to type 'object'.
+argparse.ts(1978,61): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1993,11): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(1996,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1996,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(2004,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2011,14): error TS2339: Property 'description' does not exist on type '_ActionsContainer'.
 argparse.ts(2012,14): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
 argparse.ts(2013,14): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
 argparse.ts(2014,14): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
 argparse.ts(2017,14): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
-argparse.ts(2035,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+argparse.ts(2035,62): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 argparse.ts(2044,14): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2045,14): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2048,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
@@ -377,14 +291,14 @@ argparse.ts(2052,14): error TS2339: Property '_defaults' does not exist on type 
 argparse.ts(2055,14): error TS2339: Property '_negative_number_matcher' does not exist on type '_ActionsContainer'.
 argparse.ts(2059,14): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
 argparse.ts(2066,40): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
-argparse.ts(2066,68): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
-  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+argparse.ts(2066,68): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
 argparse.ts(2067,9): error TS2542: Index signature in type 'String' only permits reading.
 argparse.ts(2071,29): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
 argparse.ts(2078,28): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
 argparse.ts(2082,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2090,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2095,21): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2110,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2127,26): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
 argparse.ts(2132,50): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 argparse.ts(2136,48): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
@@ -392,29 +306,8 @@ argparse.ts(2142,30): error TS2339: Property '_defaults' does not exist on type 
 argparse.ts(2143,39): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
 argparse.ts(2144,29): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
 argparse.ts(2145,39): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
-argparse.ts(2152,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2155,26): error TS2351: This expression is not constructable.
   Type 'never' has no construct signatures.
-argparse.ts(2160,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-argparse.ts(2164,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2171,22): error TS2339: Property '_get_formatter' does not exist on type 'never'.
 argparse.ts(2187,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
 argparse.ts(2194,14): error TS2551: Property '_mutually_exclusive_groups' does not exist on type '_ActionsContainer'. Did you mean 'add_mutually_exclusive_group'?
@@ -425,51 +318,24 @@ argparse.ts(2214,27): error TS2339: Property '_has_negative_number_optionals' do
 argparse.ts(2215,26): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
 argparse.ts(2225,28): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2231,32): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
-argparse.ts(2234,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2246,72): error TS2554: Expected 0 arguments, but got 1.
 argparse.ts(2263,65): error TS2554: Expected 0 arguments, but got 1.
+argparse.ts(2283,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2311,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2322,23): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
 argparse.ts(2324,48): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
-argparse.ts(2327,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2332,50): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
 argparse.ts(2347,60): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
-argparse.ts(2350,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2367,65): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
-argparse.ts(2368,25): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(2369,25): error TS2538: Type 'String' cannot be used as an index type.
-argparse.ts(2372,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2372,47): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
 argparse.ts(2381,30): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2382,43): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
 argparse.ts(2399,19): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 argparse.ts(2409,25): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
-argparse.ts(2421,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(2421,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 argparse.ts(2421,73): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2429,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2443,14): error TS2339: Property 'title' does not exist on type '_ArgumentGroup'.
 argparse.ts(2444,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
 argparse.ts(2447,14): error TS2339: Property '_registries' does not exist on type '_ArgumentGroup'.
@@ -480,18 +346,20 @@ argparse.ts(2451,14): error TS2339: Property '_has_negative_number_optionals' do
 argparse.ts(2453,14): error TS2339: Property '_mutually_exclusive_groups' does not exist on type '_ArgumentGroup'.
 argparse.ts(2458,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
 argparse.ts(2464,28): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
-argparse.ts(2469,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(2469,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 argparse.ts(2469,91): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2475,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2481,14): error TS2339: Property 'required' does not exist on type '_MutuallyExclusiveGroup'.
 argparse.ts(2482,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
 argparse.ts(2490,23): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
 argparse.ts(2491,14): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
 argparse.ts(2496,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
 argparse.ts(2497,28): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
-argparse.ts(2502,7): error TS2322: Type 'String' is not assignable to type 'Number'.
-argparse.ts(2502,88): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(2502,105): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+argparse.ts(2502,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(2502,49): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(2502,88): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(2502,105): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+argparse.ts(2541,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2587,14): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
 argparse.ts(2588,14): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
 argparse.ts(2589,14): error TS2339: Property 'epilog' does not exist on type 'ArgumentParser'.
@@ -510,21 +378,7 @@ argparse.ts(2607,14): error TS2339: Property 'register' does not exist on type '
 argparse.ts(2608,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
 argparse.ts(2609,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
 argparse.ts(2610,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
-argparse.ts(2613,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2617,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
-argparse.ts(2620,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(2624,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
 argparse.ts(2626,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
 argparse.ts(2633,18): error TS2339: Property 'add_help' does not exist on type 'ArgumentParser'.
@@ -534,8 +388,9 @@ argparse.ts(2652,35): error TS2339: Property 'version' does not exist on type 'A
 argparse.ts(2661,18): error TS2339: Property '_add_container_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(2662,32): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
 argparse.ts(2678,42): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(2687,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 argparse.ts(2691,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
-argparse.ts(2696,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+argparse.ts(2696,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 argparse.ts(2703,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
 argparse.ts(2703,37): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
 argparse.ts(2705,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
@@ -549,7 +404,7 @@ argparse.ts(2732,18): error TS2339: Property '_positionals' does not exist on ty
 argparse.ts(2738,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(2742,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(2765,29): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 argparse.ts(2769,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(2780,43): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
 argparse.ts(2782,47): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
@@ -570,8 +425,6 @@ argparse.ts(3043,33): error TS2339: Property '_actions' does not exist on type '
 argparse.ts(3055,44): error TS2554: Expected 3 arguments, but got 2.
 argparse.ts(3069,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
 argparse.ts(3100,38): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
-argparse.ts(3138,17): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
-argparse.ts(3139,17): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
 argparse.ts(3145,23): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 argparse.ts(3177,19): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
@@ -588,13 +441,6 @@ argparse.ts(3255,43): error TS2339: Property '_option_string_actions' does not e
 argparse.ts(3271,56): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(3273,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
 argparse.ts(3277,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
-argparse.ts(3372,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string): Error', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 argparse.ts(3376,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
 argparse.ts(3387,31): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
 argparse.ts(3390,26): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
@@ -609,8 +455,12 @@ argparse.ts(3519,23): error TS2351: This expression is not constructable.
 argparse.ts(3542,32): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 argparse.ts(3545,27): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
+argparse.ts(3549,57): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
 argparse.ts(3552,27): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
+argparse.ts(3566,72): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): unknown'.
 argparse.ts(3568,23): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 argparse.ts(3577,34): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
@@ -626,19 +476,7 @@ argparse.ts(3609,25): error TS2339: Property 'formatter_class' does not exist on
 argparse.ts(3609,54): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
 argparse.ts(3654,18): error TS2339: Property 'debug' does not exist on type 'ArgumentParser'.
 argparse.ts(3657,32): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
-lib/sub.ts(12,49): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(_: String, is_literal: Boolean, is_left_align: Boolean, is_padded: Boolean, name: String, format: String) => string | String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'string | String' is not assignable to type 'string'.
-        Type 'String' is not assignable to type 'string'.
-          'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/sub.ts(26,19): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-lib/sub.ts(27,24): error TS2538: Type 'String' cannot be used as an index type.
 lib/sub.ts(45,34): error TS2339: Property 'toFixed' does not exist on type 'never'.
-lib/sub.ts(52,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/sub.ts(52,76): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/textwrap.ts(76,13): error TS2339: Property 'width' does not exist on type '{}'.
 lib/textwrap.ts(77,13): error TS2339: Property 'initial_indent' does not exist on type '{}'.
 lib/textwrap.ts(78,13): error TS2339: Property 'subsequent_indent' does not exist on type '{}'.
@@ -666,10 +504,7 @@ lib/textwrap.ts(101,14): error TS2339: Property 'placeholder' does not exist on 
 lib/textwrap.ts(116,18): error TS2339: Property 'expand_tabs' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(117,56): error TS2339: Property 'tabsize' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(119,18): error TS2339: Property 'replace_whitespace' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(141,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/textwrap.ts(166,18): error TS2339: Property 'break_long_words' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(198,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/textwrap.ts(199,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/textwrap.ts(200,18): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(201,47): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(203,18): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
@@ -678,33 +513,26 @@ lib/textwrap.ts(205,31): error TS2339: Property 'subsequent_indent' does not exi
 lib/textwrap.ts(207,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(209,38): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(209,76): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(222,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/textwrap.ts(228,31): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(230,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(234,38): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(238,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(246,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-lib/textwrap.ts(248,21): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lib/textwrap.ts(260,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/textwrap.ts(260,97): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/textwrap.ts(264,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(265,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/textwrap.ts(270,26): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(271,45): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(273,27): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(283,44): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(284,48): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(289,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/textwrap.ts(295,57): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(296,42): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(297,76): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(301,50): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
-lib/textwrap.ts(362,11): error TS2339: Property 'width' does not exist on type 'Object'.
-lib/textwrap.ts(363,9): error TS2740: Type 'TextWrapper' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/textwrap.ts(364,14): error TS2339: Property 'wrap' does not exist on type 'String'.
-lib/textwrap.ts(377,11): error TS2339: Property 'width' does not exist on type 'Object'.
-lib/textwrap.ts(378,9): error TS2322: Type 'TextWrapper' is not assignable to type 'String'.
-lib/textwrap.ts(379,14): error TS2339: Property 'fill' does not exist on type 'String'.
-lib/textwrap.ts(403,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/textwrap.ts(405,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(328,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/textwrap.ts(362,11): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(363,9): error TS2322: Type 'TextWrapper' is not assignable to type 'string'.
+lib/textwrap.ts(364,14): error TS2339: Property 'wrap' does not exist on type 'string'.
+lib/textwrap.ts(377,11): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(378,9): error TS2322: Type 'TextWrapper' is not assignable to type 'string'.
+lib/textwrap.ts(379,14): error TS2339: Property 'fill' does not exist on type 'string'.
+lib/textwrap.ts(419,27): error TS2339: Property 'startsWith' does not exist on type 'any[]'.
 

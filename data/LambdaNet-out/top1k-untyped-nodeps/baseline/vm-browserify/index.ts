@@ -1,20 +1,20 @@
-var indexOf: Function = function (xs: String, item: String) {
+var indexOf: Function = function (xs: string, item: string) {
     if (xs.indexOf) return xs.indexOf(item);
     else for (var i = 0; i < xs.length; i++) {
         if (xs[i] === item) return i;
     }
     return -1;
 };
-var Object_keys: Function = function (obj: Array) {
+var Object_keys: Function = function (obj: any[]) {
     if (Object.keys) return Object.keys(obj)
     else {
-        var res: Array = [];
+        var res: any[] = [];
         for (var key in obj) res.push(key)
         return res;
     }
 };
 
-var forEach: Function = function (xs: Array, fn: Function) {
+var forEach: Function = function (xs: any[], fn: Function) {
     if (xs.forEach) return xs.forEach(fn)
     else for (var i = 0; i < xs.length; i++) {
         fn(xs[i], i, xs);
@@ -24,7 +24,7 @@ var forEach: Function = function (xs: Array, fn: Function) {
 var defineProp: Function = (function() {
     try {
         Object.defineProperty({}, '_', {});
-        return function(obj: Function, name: String, value: String) {
+        return function(obj: Function, name: string, value: string) {
             Object.defineProperty(obj, name, {
                 writable: true,
                 enumerable: false,
@@ -39,7 +39,7 @@ var defineProp: Function = (function() {
     }
 }());
 
-var globals: Array = ['Array', 'Boolean', 'Date', 'Error', 'EvalError', 'Function',
+var globals: any[] = ['Array', 'Boolean', 'Date', 'Error', 'EvalError', 'Function',
 'Infinity', 'JSON', 'Math', 'NaN', 'Number', 'Object', 'RangeError',
 'ReferenceError', 'RegExp', 'String', 'SyntaxError', 'TypeError', 'URIError',
 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape',
@@ -48,12 +48,12 @@ var globals: Array = ['Array', 'Boolean', 'Date', 'Error', 'EvalError', 'Functio
 function Context(): Void {}
 Context.prototype = {};
 
-var Script: Object = exports.Script = function NodeScript (code: String): String {
+var Script: object = exports.Script = function NodeScript (code: string): string {
     if (!(this instanceof Script)) return new Script(code);
     this.code = code;
 };
 
-Script.prototype.runInContext = function (context: Object) {
+Script.prototype.runInContext = function (context: object) {
     if (!(context instanceof Context)) {
         throw new TypeError("needs a 'context' argument.");
     }
@@ -64,7 +64,7 @@ Script.prototype.runInContext = function (context: Object) {
     
     document.body.appendChild(iframe);
     
-    var win: Object = iframe.contentWindow;
+    var win: object = iframe.contentWindow;
     var wEval: Function = win.eval, wExecScript: Function = win.execScript;
 
     if (!wEval && wExecScript) {
@@ -73,20 +73,20 @@ Script.prototype.runInContext = function (context: Object) {
         wEval = win.eval;
     }
     
-    forEach(Object_keys(context), function (key: String) {
+    forEach(Object_keys(context), function (key: string) {
         win[key] = context[key];
     });
-    forEach(globals, function (key: String) {
+    forEach(globals, function (key: string) {
         if (context[key]) {
             win[key] = context[key];
         }
     });
     
-    var winKeys: String = Object_keys(win);
+    var winKeys: string = Object_keys(win);
 
-    var res: Array = wEval.call(win, this.code);
+    var res: any[] = wEval.call(win, this.code);
     
-    forEach(Object_keys(win), function (key: String) {
+    forEach(Object_keys(win), function (key: string) {
         // Avoid copying circular objects like `top` and `window` by only
         // updating existing context properties or new properties in the `win`
         // that was only introduced after the eval.
@@ -95,7 +95,7 @@ Script.prototype.runInContext = function (context: Object) {
         }
     });
 
-    forEach(globals, function (key: String) {
+    forEach(globals, function (key: string) {
         if (!(key in context)) {
             defineProp(context, key, win[key]);
         }
@@ -110,12 +110,12 @@ Script.prototype.runInThisContext = function () {
     return eval(this.code); // maybe...
 };
 
-Script.prototype.runInNewContext = function (context: Object) {
-    var ctx: Object = Script.createContext(context);
+Script.prototype.runInNewContext = function (context: object) {
+    var ctx: object = Script.createContext(context);
     var res: Promise = this.runInContext(ctx);
 
     if (context) {
-        forEach(Object_keys(ctx), function (key: String) {
+        forEach(Object_keys(ctx), function (key: string) {
             context[key] = ctx[key];
         });
     }
@@ -123,25 +123,25 @@ Script.prototype.runInNewContext = function (context: Object) {
     return res;
 };
 
-forEach(Object_keys(Script.prototype), function (name: String) {
-    exports[name] = Script[name] = function (code: String) {
-        var s: Object = Script(code);
+forEach(Object_keys(Script.prototype), function (name: string) {
+    exports[name] = Script[name] = function (code: string) {
+        var s: object = Script(code);
         return s[name].apply(s, [].slice.call(arguments, 1));
     };
 });
 
-exports.isContext = function (context: String) {
+exports.isContext = function (context: string) {
     return context instanceof Context;
 };
 
-exports.createScript = function (code: String) {
+exports.createScript = function (code: string) {
     return exports.Script(code);
 };
 
-exports.createContext = Script.createContext = function (context: Object) {
-    var copy: Object = new Context();
+exports.createContext = Script.createContext = function (context: object) {
+    var copy: object = new Context();
     if(typeof context === 'object') {
-        forEach(Object_keys(context), function (key: String) {
+        forEach(Object_keys(context), function (key: string) {
             copy[key] = context[key];
         });
     }

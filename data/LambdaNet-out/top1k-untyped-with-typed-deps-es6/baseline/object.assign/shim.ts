@@ -3,8 +3,8 @@
 import define from 'define-properties';
 import getPolyfill from './polyfill';
 
-export default function shimAssign(): String {
-	var polyfill: String = getPolyfill();
+export default function shimAssign(): string {
+	var polyfill: string = getPolyfill();
 	define(
 		Object,
 		{ assign: polyfill },

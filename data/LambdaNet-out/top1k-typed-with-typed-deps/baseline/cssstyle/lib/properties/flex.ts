@@ -4,7 +4,7 @@ var shorthandParser: Function = require('../parsers').shorthandParser;
 var shorthandSetter: Function = require('../parsers').shorthandSetter;
 var shorthandGetter: Function = require('../parsers').shorthandGetter;
 
-var shorthand_for: Object = {
+var shorthand_for: object = {
   'flex-grow': require('./flexGrow'),
   'flex-shrink': require('./flexShrink'),
   'flex-basis': require('./flexBasis'),
@@ -12,13 +12,13 @@ var shorthand_for: Object = {
 
 var myShorthandSetter: Function = shorthandSetter('flex', shorthand_for);
 
-module.exports.isValid = function isValid(v: Array): Boolean {
+module.exports.isValid = function isValid(v: any[]): boolean {
   return shorthandParser(v, shorthand_for) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: String) {
-    var normalizedValue: String = String(v)
+  set: function(v: string) {
+    var normalizedValue: string = String(v)
       .trim()
       .toLowerCase();
 

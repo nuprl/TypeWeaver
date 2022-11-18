@@ -2,18 +2,18 @@ var Stream: Function = require('stream').Stream
 
 module.exports = legacy
 
-function legacy (fs: Number): Object {
+function legacy (fs: number): object {
   return {
     ReadStream: ReadStream,
     WriteStream: WriteStream
   }
 
-  function ReadStream (path: String, options: Object): String {
+  function ReadStream (path: string, options: object): string {
     if (!(this instanceof ReadStream)) return new ReadStream(path, options);
 
     Stream.call(this);
 
-    var self: Array = this;
+    var self: any[] = this;
 
     this.path = path;
     this.fd = null;
@@ -27,9 +27,9 @@ function legacy (fs: Number): Object {
     options = options || {};
 
     // Mixin options into this
-    var keys: Array = Object.keys(options);
+    var keys: any[] = Object.keys(options);
     for (var index = 0, length = keys.length; index < length; index++) {
-      var key: String = keys[index];
+      var key: string = keys[index];
       this[key] = options[key];
     }
 
@@ -59,7 +59,7 @@ function legacy (fs: Number): Object {
       return;
     }
 
-    fs.open(this.path, this.flags, this.mode, function (err: Function, fd: Array) {
+    fs.open(this.path, this.flags, this.mode, function (err: Function, fd: any[]) {
       if (err) {
         self.emit('error', err);
         self.readable = false;
@@ -72,7 +72,7 @@ function legacy (fs: Number): Object {
     })
   }
 
-  function WriteStream (path: String, options: Object): String {
+  function WriteStream (path: string, options: object): string {
     if (!(this instanceof WriteStream)) return new WriteStream(path, options);
 
     Stream.call(this);
@@ -89,9 +89,9 @@ function legacy (fs: Number): Object {
     options = options || {};
 
     // Mixin options into this
-    var keys: Array = Object.keys(options);
+    var keys: any[] = Object.keys(options);
     for (var index = 0, length = keys.length; index < length; index++) {
-      var key: String = keys[index];
+      var key: string = keys[index];
       this[key] = options[key];
     }
 

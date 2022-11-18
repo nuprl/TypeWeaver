@@ -7,13 +7,13 @@
 
 'use strict';
 
-var fs: String = require('fs');
+var fs: string = require('fs');
 
 /**
  * async
  */
 
-function isDirectory(filepath: String, cb: Function): Void {
+function isDirectory(filepath: string, cb: Function): Void {
   if (typeof cb !== 'function') {
     throw new Error('expected a callback function');
   }
@@ -23,7 +23,7 @@ function isDirectory(filepath: String, cb: Function): Void {
     return;
   }
 
-  fs.stat(filepath, function(err: Object, stats: Array) {
+  fs.stat(filepath, function(err: object, stats: any[]) {
     if (err) {
       if (err.code === 'ENOENT') {
         cb(null, false);
@@ -40,13 +40,13 @@ function isDirectory(filepath: String, cb: Function): Void {
  * sync
  */
 
-isDirectory.sync = function isDirectorySync(filepath: String): Boolean {
+isDirectory.sync = function isDirectorySync(filepath: string): boolean {
   if (typeof filepath !== 'string') {
     throw new Error('expected filepath to be a string');
   }
 
   try {
-    var stat: String = fs.statSync(filepath);
+    var stat: string = fs.statSync(filepath);
     return stat.isDirectory();
   } catch (err) {
     if (err.code === 'ENOENT') {

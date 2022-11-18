@@ -6,11 +6,11 @@
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {number} Returns the sum.
  */
-function baseSum(array: Array, iteratee: Function): Number {
-  let result: Number
+function baseSum(array: any[], iteratee: Function): number {
+  let result: number
 
   for (const value of array) {
-    const current: Number = iteratee(value)
+    const current: number = iteratee(value)
     if (current !== undefined) {
       result = result === undefined ? current : (result + current)
     }

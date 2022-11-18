@@ -14,21 +14,21 @@ import cacheHas from './cacheHas.js'
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns the new array of shared values.
  */
-function baseIntersection(arrays: Array, iteratee: Function, comparator: Number): Array {
+function baseIntersection(arrays: any[], iteratee: Function, comparator: number): any[] {
   const includes: Function = comparator ? arrayIncludesWith : arrayIncludes
-  const length: Number = arrays[0].length
-  const othLength: Number = arrays.length
-  const caches: Object = new Array(othLength)
-  const result: Array = []
+  const length: number = arrays[0].length
+  const othLength: number = arrays.length
+  const caches: object = new Array(othLength)
+  const result: any[] = []
 
-  let array: Array
-  let maxLength: Number = Infinity
-  let othIndex: Number = othLength
+  let array: any[]
+  let maxLength: number = Infinity
+  let othIndex: number = othLength
 
   while (othIndex--) {
     array = arrays[othIndex]
     if (othIndex && iteratee) {
-      array = map(array, (value: Number) => iteratee(value))
+      array = map(array, (value: number) => iteratee(value))
     }
     maxLength = Math.min(array.length, maxLength)
     caches[othIndex] = !comparator && (iteratee || (length >= 120 && array.length >= 120))
@@ -37,13 +37,13 @@ function baseIntersection(arrays: Array, iteratee: Function, comparator: Number)
   }
   array = arrays[0]
 
-  let index: Number = -1
-  const seen: Array = caches[0]
+  let index: number = -1
+  const seen: any[] = caches[0]
 
   outer:
   while (++index < length && result.length < maxLength) {
-    let value: Number = array[index]
-    const computed: Number = iteratee ? iteratee(value) : value
+    let value: number = array[index]
+    const computed: number = iteratee ? iteratee(value) : value
 
     value = (comparator || value !== 0) ? value : 0
     if (!(seen

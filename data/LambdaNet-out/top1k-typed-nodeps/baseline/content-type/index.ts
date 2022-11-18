@@ -62,24 +62,24 @@ exports.parse = parse
  * @public
  */
 
-function format (obj: Object): String {
+function format (obj: object): string {
   if (!obj || typeof obj !== 'object') {
     throw new TypeError('argument obj is required')
   }
 
-  var parameters: Object = obj.parameters
-  var type: String = obj.type
+  var parameters: object = obj.parameters
+  var type: string = obj.type
 
   if (!type || !TYPE_REGEXP.test(type)) {
     throw new TypeError('invalid type')
   }
 
-  var string: Number = type
+  var string: number = type
 
   // append parameters
   if (parameters && typeof parameters === 'object') {
-    var param: String
-    var params: Array = Object.keys(parameters).sort()
+    var param: string
+    var params: any[] = Object.keys(parameters).sort()
 
     for (var i = 0; i < params.length; i++) {
       param = params[i]
@@ -103,13 +103,13 @@ function format (obj: Object): String {
  * @public
  */
 
-function parse (string: String): Object {
+function parse (string: string): object {
   if (!string) {
     throw new TypeError('argument string is required')
   }
 
   // support req/res-like objects as argument
-  var header: String = typeof string === 'object'
+  var header: string = typeof string === 'object'
     ? getcontenttype(string)
     : string
 
@@ -117,8 +117,8 @@ function parse (string: String): Object {
     throw new TypeError('argument string is required to be a string')
   }
 
-  var index: Number = header.indexOf(';')
-  var type: String = index !== -1
+  var index: number = header.indexOf(';')
+  var type: string = index !== -1
     ? header.substr(0, index).trim()
     : header.trim()
 
@@ -130,9 +130,9 @@ function parse (string: String): Object {
 
   // parse parameters
   if (index !== -1) {
-    var key: String
-    var match: Object
-    var value: String
+    var key: string
+    var match: object
+    var value: string
 
     PARAM_REGEXP.lastIndex = index
 
@@ -171,8 +171,8 @@ function parse (string: String): Object {
  * @private
  */
 
-function getcontenttype (obj: HTMLElement): String {
-  var header: String
+function getcontenttype (obj: HTMLElement): string {
+  var header: string
 
   if (typeof obj.getHeader === 'function') {
     // res-like
@@ -197,8 +197,8 @@ function getcontenttype (obj: HTMLElement): String {
  * @private
  */
 
-function qstring (val: String): String {
-  var str: String = String(val)
+function qstring (val: string): string {
+  var str: string = String(val)
 
   // no need to quote tokens
   if (TOKEN_REGEXP.test(str)) {
@@ -216,7 +216,7 @@ function qstring (val: String): String {
  * Class to represent a content type.
  * @private
  */
-function ContentType (type: String): Void {
+function ContentType (type: string): Void {
   this.parameters = Object.create(null)
   this.type = type
 }

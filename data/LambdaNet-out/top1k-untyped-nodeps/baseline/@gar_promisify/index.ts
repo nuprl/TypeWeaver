@@ -2,8 +2,8 @@
 
 const { promisify } = require('util')
 
-const handler: Object = {
-  get: function (target: Object, prop: String, receiver: String) {
+const handler: object = {
+  get: function (target: object, prop: string, receiver: string) {
     if (typeof target[prop] !== 'function') {
       return target[prop]
     }
@@ -14,7 +14,7 @@ const handler: Object = {
     }
     return function () {
       return new Promise((resolve: Function, reject: Function) => {
-        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: Boolean, result: Array) {
+        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: boolean, result: any[]) {
           if (err) {
             return reject(err)
           }
@@ -25,7 +25,7 @@ const handler: Object = {
   }
 }
 
-module.exports = function (thingToPromisify: String) {
+module.exports = function (thingToPromisify: string) {
   if (typeof thingToPromisify === 'function') {
     return promisify(thingToPromisify)
   }

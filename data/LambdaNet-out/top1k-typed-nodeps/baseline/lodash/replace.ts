@@ -16,8 +16,8 @@
  * replace('Hi Fred', 'Fred', 'Barney')
  * // => 'Hi Barney'
  */
-function replace(...args): String {
-  const string: String = `${args[0]}`
+function replace(...args): string {
+  const string: string = `${args[0]}`
   return args.length < 3 ? string : string.replace(args[1], args[2])
 }
 

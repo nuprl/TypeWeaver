@@ -9,7 +9,7 @@ import getSymbols from './getSymbols.js'
  * @param {Object} [object={}] The object to copy symbols to.
  * @returns {Object} Returns `object`.
  */
-function copySymbols(source: String, object: Object): String {
+function copySymbols(source: string, object: object): string {
   return copyObject(source, getSymbols(source), object)
 }
 

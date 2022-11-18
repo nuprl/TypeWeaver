@@ -3,7 +3,7 @@
 import margin from './margin.js';
 import parsers from '../parsers.js';
 
-export const definition: Object = {
+export const definition: object = {
   set: parsers.subImplicitSetter('margin', 'left', margin.isValid, margin.parser),
   get: function() {
     return this.getPropertyValue('margin-left');

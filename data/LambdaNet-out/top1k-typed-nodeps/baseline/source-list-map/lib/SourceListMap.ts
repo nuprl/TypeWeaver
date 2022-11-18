@@ -4,10 +4,10 @@
 */
 "use strict";
 
-const CodeNode: String = require("./CodeNode");
-const SourceNode: String = require("./SourceNode");
-const MappingsContext: Array = require("./MappingsContext");
-const getNumberOfLines: String = require("./helpers").getNumberOfLines;
+const CodeNode: string = require("./CodeNode");
+const SourceNode: string = require("./SourceNode");
+const MappingsContext: any[] = require("./MappingsContext");
+const getNumberOfLines: string = require("./helpers").getNumberOfLines;
 
 class SourceListMap {
 
@@ -33,7 +33,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.push(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.forEach(function(sln: String) {
+			generatedCode.children.forEach(function(sln: string) {
 				this.children.push(sln);
 			}, this);
 		} else {
@@ -53,7 +53,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.unshift(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.slice().reverse().forEach(function(sln: String) {
+			generatedCode.children.slice().reverse().forEach(function(sln: string) {
 				this.children.unshift(sln);
 			}, this);
 		} else {
@@ -62,13 +62,13 @@ class SourceListMap {
 	};
 
 	mapGeneratedCode(fn) {
-		const normalizedNodes: Array = [];
+		const normalizedNodes: any[] = [];
 		this.children.forEach(function(sln: CodeNode) {
 			sln.getNormalizedNodes().forEach(function(newNode: CodeNode) {
 				normalizedNodes.push(newNode);
 			});
 		});
-		const optimizedNodes: Array = [];
+		const optimizedNodes: any[] = [];
 		normalizedNodes.forEach(function(sln: SourceNode) {
 			sln = sln.mapGeneratedCode(fn);
 			if(optimizedNodes.length === 0) {
@@ -94,13 +94,13 @@ class SourceListMap {
 
 	toStringWithSourceMap(options) {
 		const mappingsContext: MappingsContext = new MappingsContext();
-		const source: String = this.children.map(function(sln: SingleLineNode) {
+		const source: string = this.children.map(function(sln: SingleLineNode) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings: String = this.children.map(function(sln: SingleLineNode) {
+		const mappings: string = this.children.map(function(sln: SingleLineNode) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
-		const arrays: Object = mappingsContext.getArrays();
+		const arrays: object = mappingsContext.getArrays();
 		return {
 			source,
 			map: {

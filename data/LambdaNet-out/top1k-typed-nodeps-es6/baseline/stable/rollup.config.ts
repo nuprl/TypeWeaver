@@ -1,7 +1,7 @@
 import fs from 'fs';
 import pkg from './package.json';
 
-const banner: String = fs.readFileSync('./src/banner.js', 'utf8')
+const banner: string = fs.readFileSync('./src/banner.js', 'utf8')
     .replace('${version}', pkg.version);
 
 export default {

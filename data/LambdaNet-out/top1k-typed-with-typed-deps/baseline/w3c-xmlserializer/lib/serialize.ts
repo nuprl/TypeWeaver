@@ -1,14 +1,14 @@
 "use strict";
 
-const xnv: Array = require("xml-name-validator");
+const xnv: any[] = require("xml-name-validator");
 
-const attributeUtils: Array = require("./attributes");
+const attributeUtils: any[] = require("./attributes");
 const { NAMESPACES, VOID_ELEMENTS, NODE_TYPES } = require("./constants");
 
 const XML_CHAR: RegExp = /^(\x09|\x0A|\x0D|[\x20-\uD7FF]|[\uE000-\uFFFD]|(?:[\uD800-\uDBFF][\uDC00-\uDFFF]))*$/u;
 const PUBID_CHAR: RegExp = /^(\x20|\x0D|\x0A|[a-zA-Z0-9]|[-'()+,./:=?;!*#@$_%])*$/u;
 
-function asciiCaseInsensitiveMatch(a: String, b: String): Boolean {
+function asciiCaseInsensitiveMatch(a: string, b: string): boolean {
   if (a.length !== b.length) {
     return false;
   }
@@ -22,8 +22,8 @@ function asciiCaseInsensitiveMatch(a: String, b: String): Boolean {
   return true;
 }
 
-function recordNamespaceInformation(element: Element, map: Object, prefixMap: Object): String {
-  let defaultNamespaceAttrValue: Array = null;
+function recordNamespaceInformation(element: Element, map: object, prefixMap: object): string {
+  let defaultNamespaceAttrValue: any[] = null;
   for (let i = 0; i < element.attributes.length; ++i) {
     const attr: HTMLElement = element.attributes[i];
     if (attr.namespaceURI === NAMESPACES.XMLNS) {
@@ -31,7 +31,7 @@ function recordNamespaceInformation(element: Element, map: Object, prefixMap: Ob
         defaultNamespaceAttrValue = attr.value;
         continue;
       }
-      let namespaceDefinition: String = attr.value;
+      let namespaceDefinition: string = attr.value;
       if (namespaceDefinition === NAMESPACES.XML) {
         continue;
       }
@@ -58,7 +58,7 @@ function recordNamespaceInformation(element: Element, map: Object, prefixMap: Ob
   return defaultNamespaceAttrValue;
 }
 
-function serializeDocumentType(node: Object, namespace: String, prefixMap: String, requireWellFormed: Boolean): String {
+function serializeDocumentType(node: object, namespace: string, prefixMap: string, requireWellFormed: boolean): string {
   if (requireWellFormed && !PUBID_CHAR.test(node.publicId)) {
     throw new Error("Failed to serialize XML: document type node publicId is not well-formed.");
   }
@@ -71,7 +71,7 @@ function serializeDocumentType(node: Object, namespace: String, prefixMap: Strin
     throw new Error("Failed to serialize XML: document type node systemId is not well-formed.");
   }
 
-  let markup: String = `<!DOCTYPE ${node.name}`;
+  let markup: string = `<!DOCTYPE ${node.name}`;
   if (node.publicId !== "") {
     markup += ` PUBLIC "${node.publicId}"`;
   } else if (node.systemId !== "") {
@@ -85,10 +85,10 @@ function serializeDocumentType(node: Object, namespace: String, prefixMap: Strin
 
 function serializeProcessingInstruction(
   node: HTMLElement,
-  namespace: String,
-  prefixMap: String,
-  requireWellFormed: Boolean
-): String {
+  namespace: string,
+  prefixMap: string,
+  requireWellFormed: boolean
+): string {
   if (
     requireWellFormed &&
     (node.target.includes(":") || asciiCaseInsensitiveMatch(node.target, "xml"))
@@ -105,16 +105,16 @@ function serializeProcessingInstruction(
 }
 
 function serializeDocument(
-  node: Object,
-  namespace: String,
-  prefixMap: String,
-  requireWellFormed: Boolean,
-  refs: String
-): String {
+  node: object,
+  namespace: string,
+  prefixMap: string,
+  requireWellFormed: boolean,
+  refs: string
+): string {
   if (requireWellFormed && node.documentElement === null) {
     throw new Error("Failed to serialize XML: document does not have a document element.");
   }
-  let serializedDocument: String = "";
+  let serializedDocument: string = "";
   for (const child of node.childNodes) {
     serializedDocument += xmlSerialization(
       child,
@@ -128,13 +128,13 @@ function serializeDocument(
 }
 
 function serializeDocumentFragment(
-  node: Object,
-  namespace: String,
-  prefixMap: String,
-  requireWellFormed: Boolean,
-  refs: String
-): String {
-  let markup: String = "";
+  node: object,
+  namespace: string,
+  prefixMap: string,
+  requireWellFormed: boolean,
+  refs: string
+): string {
+  let markup: string = "";
   for (const child of node.childNodes) {
     markup += xmlSerialization(
       child,
@@ -147,7 +147,7 @@ function serializeDocumentFragment(
   return markup;
 }
 
-function serializeText(node: Object, namespace: String, prefixMap: String, requireWellFormed: Boolean): String {
+function serializeText(node: object, namespace: string, prefixMap: string, requireWellFormed: boolean): string {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: text node data is not well-formed.");
   }
@@ -158,7 +158,7 @@ function serializeText(node: Object, namespace: String, prefixMap: String, requi
     .replace(/>/ug, "&gt;");
 }
 
-function serializeComment(node: Object, namespace: String, prefixMap: String, requireWellFormed: Boolean): String {
+function serializeComment(node: object, namespace: string, prefixMap: string, requireWellFormed: boolean): string {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: comment node data is not well-formed.");
   }
@@ -172,26 +172,26 @@ function serializeComment(node: Object, namespace: String, prefixMap: String, re
   return `<!--${node.data}-->`;
 }
 
-function serializeElement(node: HTMLElement, namespace: String, prefixMap: String, requireWellFormed: Number, refs: HTMLElement): String {
+function serializeElement(node: HTMLElement, namespace: string, prefixMap: string, requireWellFormed: number, refs: HTMLElement): string {
   if (
     requireWellFormed &&
     (node.localName.includes(":") || !xnv.name(node.localName))
   ) {
     throw new Error("Failed to serialize XML: element node localName is not a valid XML name.");
   }
-  let markup: String = "<";
-  let qualifiedName: String = "";
-  let skipEndTag: Boolean = false;
-  let ignoreNamespaceDefinitionAttr: Boolean = false;
-  const map: Object = { ...prefixMap };
-  const localPrefixesMap: Object = Object.create(null);
-  const localDefaultNamespace: Number = recordNamespaceInformation(
+  let markup: string = "<";
+  let qualifiedName: string = "";
+  let skipEndTag: boolean = false;
+  let ignoreNamespaceDefinitionAttr: boolean = false;
+  const map: object = { ...prefixMap };
+  const localPrefixesMap: object = Object.create(null);
+  const localDefaultNamespace: number = recordNamespaceInformation(
     node,
     map,
     localPrefixesMap
   );
-  let inheritedNs: String = namespace;
-  const ns: Number = node.namespaceURI;
+  let inheritedNs: string = namespace;
+  const ns: number = node.namespaceURI;
   if (inheritedNs === ns) {
     if (localDefaultNamespace !== null) {
       ignoreNamespaceDefinitionAttr = true;
@@ -204,7 +204,7 @@ function serializeElement(node: HTMLElement, namespace: String, prefixMap: Strin
     markup += qualifiedName;
   } else {
     let { prefix } = node;
-    let candidatePrefix: String = attributeUtils.preferredPrefixString(map, ns, prefix);
+    let candidatePrefix: string = attributeUtils.preferredPrefixString(map, ns, prefix);
     if (prefix === "xmlns") {
       if (requireWellFormed) {
         throw new Error("Failed to serialize XML: element nodes can't have a prefix of \"xmlns\".");
@@ -296,14 +296,14 @@ function serializeElement(node: HTMLElement, namespace: String, prefixMap: Strin
   return markup;
 }
 
-function serializeCDATASection(node: Object): String {
+function serializeCDATASection(node: object): string {
   return `<![CDATA[${node.data}]]>`;
 }
 
 /**
  * @param {{prefixIndex: number}} refs
  */
-function xmlSerialization(node: Object, namespace: String, prefixMap: String, requireWellFormed: Function, refs: String): String {
+function xmlSerialization(node: object, namespace: string, prefixMap: string, requireWellFormed: Function, refs: string): string {
   switch (node.nodeType) {
     case NODE_TYPES.ELEMENT_NODE:
       return serializeElement(

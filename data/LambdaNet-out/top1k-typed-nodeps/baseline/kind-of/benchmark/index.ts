@@ -1,14 +1,14 @@
 'use strict';
 
-var path: String = require('path');
-var suite: Array = require('benchmarked');
-var write: Array = require('write');
+var path: string = require('path');
+var suite: any[] = require('benchmarked');
+var write: any[] = require('write');
 
 suite.run({
   fixtures: 'fixtures/*.js',
   code: 'code/{kind-of,lib-*}.js'
 })
-  .then(function(stats: Object) {
+  .then(function(stats: object) {
     write.sync(path.join(__dirname, 'stats.json'), JSON.stringify(stats, null, 2))
     write.sync(path.join(__dirname, 'stats.md'), suite.render(stats));
   })

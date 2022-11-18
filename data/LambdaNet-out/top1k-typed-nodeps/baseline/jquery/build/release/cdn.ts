@@ -1,13 +1,13 @@
 "use strict";
 
 var
-	fs: String = require( "fs" ),
-	shell: String = require( "shelljs" ),
-	path: String = require( "path" ),
+	fs: string = require( "fs" ),
+	shell: string = require( "shelljs" ),
+	path: string = require( "path" ),
 
-	cdnFolder: String = "dist/cdn",
+	cdnFolder: string = "dist/cdn",
 
-	releaseFiles: Object = {
+	releaseFiles: object = {
 		"jquery-VER.js": "dist/jquery.js",
 		"jquery-VER.min.js": "dist/jquery.min.js",
 		"jquery-VER.min.map": "dist/jquery.min.map",
@@ -16,12 +16,12 @@ var
 		"jquery-VER.slim.min.map": "dist/jquery.slim.min.map"
 	},
 
-	googleFilesCDN: Array = [
+	googleFilesCDN: any[] = [
 		"jquery.js", "jquery.min.js", "jquery.min.map",
 		"jquery.slim.js", "jquery.slim.min.js", "jquery.slim.min.map"
 	],
 
-	msFilesCDN: Array = [
+	msFilesCDN: any[] = [
 		"jquery-VER.js", "jquery-VER.min.js", "jquery-VER.min.map",
 		"jquery-VER.slim.js", "jquery-VER.slim.min.js", "jquery-VER.slim.min.map"
 	];
@@ -29,14 +29,14 @@ var
 /**
  * Generates copies for the CDNs
  */
-function makeReleaseCopies( Release: Object ): Void {
+function makeReleaseCopies( Release: object ): Void {
 	shell.mkdir( "-p", cdnFolder );
 
-	Object.keys( releaseFiles ).forEach( function( key: String ) {
-		var text: String,
-			builtFile: String = releaseFiles[ key ],
-			unpathedFile: String = key.replace( /VER/g, Release.newVersion ),
-			releaseFile: String = cdnFolder + "/" + unpathedFile;
+	Object.keys( releaseFiles ).forEach( function( key: string ) {
+		var text: string,
+			builtFile: string = releaseFiles[ key ],
+			unpathedFile: string = key.replace( /VER/g, Release.newVersion ),
+			releaseFile: string = cdnFolder + "/" + unpathedFile;
 
 		if ( /\.map$/.test( releaseFile ) ) {
 
@@ -59,7 +59,7 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 
 	Release.chdir( Release.dir.repo );
 
-	function makeArchive( cdn: String, files: Array, callback: Function ): Void {
+	function makeArchive( cdn: string, files: any[], callback: Function ): Void {
 		if ( Release.preRelease ) {
 			console.log( "Skipping archive creation for " + cdn + "; this is a beta release." );
 			callback();
@@ -68,10 +68,10 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 
 		console.log( "Creating production archive for " + cdn );
 
-		var sum: String,
-			archiver: Object = require( "archiver" )( "zip" ),
-			md5file: String = cdnFolder + "/" + cdn + "-md5.txt",
-			output: String = fs.createWriteStream(
+		var sum: string,
+			archiver: object = require( "archiver" )( "zip" ),
+			md5file: string = cdnFolder + "/" + cdn + "-md5.txt",
+			output: string = fs.createWriteStream(
 				cdnFolder + "/" + cdn + "-jquery-" + Release.newVersion + ".zip"
 			),
 			rver: RegExp = /VER/;
@@ -84,7 +84,7 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 
 		archiver.pipe( output );
 
-		files = files.map( function( item: String ) {
+		files = files.map( function( item: string ) {
 			return "dist" + ( rver.test( item ) ? "/cdn" : "" ) + "/" +
 				item.replace( rver, Release.newVersion );
 		} );
@@ -93,7 +93,7 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 		fs.writeFileSync( md5file, sum );
 		files.push( md5file );
 
-		files.forEach( function( file: String ) {
+		files.forEach( function( file: string ) {
 			archiver.append( fs.createReadStream( file ),
 				{ name: path.basename( file ) } );
 		} );
@@ -101,11 +101,11 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 		archiver.finalize();
 	}
 
-	function buildGoogleCDN( callback: String ): Void {
+	function buildGoogleCDN( callback: string ): Void {
 		makeArchive( "googlecdn", googleFilesCDN, callback );
 	}
 
-	function buildMicrosoftCDN( callback: String ): Void {
+	function buildMicrosoftCDN( callback: string ): Void {
 		makeArchive( "mscdn", msFilesCDN, callback );
 	}
 

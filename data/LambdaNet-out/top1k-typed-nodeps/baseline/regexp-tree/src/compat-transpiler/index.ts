@@ -5,8 +5,8 @@
 
 'use strict';
 
-const compatTransforms: String = require('./transforms');
-const transform: String = require('../transform');
+const compatTransforms: string = require('./transforms');
+const transform: string = require('../transform');
 
 module.exports = {
   /**

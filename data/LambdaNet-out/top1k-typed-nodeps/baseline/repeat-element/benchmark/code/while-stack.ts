@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function repeat(ele: String, num: Number): String {
-  var res: Array = [ele];
-  var max: Number = num;
+module.exports = function repeat(ele: string, num: number): string {
+  var res: any[] = [ele];
+  var max: number = num;
 
   while (num--) {
     res.push.apply(res, res);

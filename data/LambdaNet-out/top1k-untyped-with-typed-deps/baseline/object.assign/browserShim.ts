@@ -1,9 +1,9 @@
 'use strict';
 
-var keys: Object = require('object-keys').shim();
+var keys: object = require('object-keys').shim();
 delete keys.shim;
 
-var assign: Array = require('./');
+var assign: any[] = require('./');
 
 module.exports = assign.shim();
 

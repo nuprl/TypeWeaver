@@ -29,15 +29,15 @@ export default class DescriptionFilePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
 			.tapAsync(
 				"DescriptionFilePlugin",
-				(request: Object, resolveContext: Object, callback: Function) => {
-					const path: Number = request.path;
+				(request: object, resolveContext: object, callback: Function) => {
+					const path: number = request.path;
 					if (!path) return callback();
-					const directory: Number = this.pathIsFile
+					const directory: number = this.pathIsFile
 						? DescriptionFileUtils.cdUp(path)
 						: path;
 					if (!directory) return callback();
@@ -62,9 +62,9 @@ export default class DescriptionFilePlugin {
 									);
 								return callback();
 							}
-							const relativePath: String =
+							const relativePath: string =
 								"." + path.substr(result.directory.length).replace(/\\/g, "/");
-							const obj: Object = {
+							const obj: object = {
 								...request,
 								descriptionFilePath: result.path,
 								descriptionFileData: result.content,

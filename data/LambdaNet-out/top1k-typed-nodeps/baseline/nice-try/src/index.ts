@@ -16,7 +16,7 @@ module.exports = function(fn: Function) {
  * @param {Function} fn - Asynchronous function that might or might not throw an error.
  * @returns {?*} Promise which resolves with the return-value of the asynchronous function when no error occurred.
  */
-module.exports.promise = async function (fn: Array) {
+module.exports.promise = async function (fn: any[]) {
 
 	try { return await fn() } catch (e) {}
 

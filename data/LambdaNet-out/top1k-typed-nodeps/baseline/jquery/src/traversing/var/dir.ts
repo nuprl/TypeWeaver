@@ -1,8 +1,8 @@
 import jQuery from "../../core.js";
 
-export default function( elem: Object, dir: String, until: Number ) {
-	var matched: Array = [],
-		truncate: Boolean = until !== undefined;
+export default function( elem: object, dir: string, until: number ) {
+	var matched: any[] = [],
+		truncate: boolean = until !== undefined;
 
 	while ( ( elem = elem[ dir ] ) && elem.nodeType !== 9 ) {
 		if ( elem.nodeType === 1 ) {

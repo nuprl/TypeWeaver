@@ -3,22 +3,22 @@ import fs from 'fs';
 import { dirname, resolve } from 'path';
 
 
-const lstat: Function = (path: String) => new Promise((res: Function, rej: Function) =>
-  fs.lstat(path, (er: Number, st: Number) => er ? rej(er) : res(st)))
+const lstat: Function = (path: string) => new Promise((res: Function, rej: Function) =>
+  fs.lstat(path, (er: number, st: number) => er ? rej(er) : res(st)))
 
-const inferOwner: Function = (path: String) => {
+const inferOwner: Function = (path: string) => {
   path = resolve(path)
   if (cache.has(path))
     return Promise.resolve(cache.get(path))
 
-  const statThen: Function = (st: Object) => {
+  const statThen: Function = (st: object) => {
     const { uid, gid } = st
     cache.set(path, { uid, gid })
     return { uid, gid }
   }
-  const parent: Number = dirname(path)
-  const parentTrap: Function = parent === path ? null : (er: String) => {
-    return inferOwner(parent).then((owner: Array) => {
+  const parent: number = dirname(path)
+  const parentTrap: Function = parent === path ? null : (er: string) => {
+    return inferOwner(parent).then((owner: any[]) => {
       cache.set(path, owner)
       return owner
     })
@@ -26,26 +26,26 @@ const inferOwner: Function = (path: String) => {
   return lstat(path).then(statThen, parentTrap)
 }
 
-const inferOwnerSync: Function = (path: String) => {
+const inferOwnerSync: Function = (path: string) => {
   path = resolve(path)
   if (cache.has(path))
     return cache.get(path)
 
-  const parent: Number = dirname(path)
+  const parent: number = dirname(path)
 
   // avoid obscuring call site by re-throwing
   // "catch" the error by returning from a finally,
   // only if we're not at the root, and the parent call works.
-  let threw: Boolean = true
+  let threw: boolean = true
   try {
-    const st: Object = fs.lstatSync(path)
+    const st: object = fs.lstatSync(path)
     threw = false
     const { uid, gid } = st
     cache.set(path, { uid, gid })
     return { uid, gid }
   } finally {
     if (threw && parent !== path) {
-      const owner: Array = inferOwnerSync(parent)
+      const owner: any[] = inferOwnerSync(parent)
       cache.set(path, owner)
       return owner // eslint-disable-line no-unsafe-finally
     }
@@ -54,11 +54,11 @@ const inferOwnerSync: Function = (path: String) => {
 
 const inflight: Map = new Map()
 
-export default (path: String) => {
+export default (path: string) => {
   path = resolve(path)
   if (inflight.has(path))
     return Promise.resolve(inflight.get(path))
-  const p: Array = inferOwner(path).then((owner: Array) => {
+  const p: any[] = inferOwner(path).then((owner: any[]) => {
     inflight.delete(path)
     return owner
   })

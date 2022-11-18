@@ -35,7 +35,7 @@ var FIELD_NAME_REGEXP: RegExp = /^[!#$%&'*+\-.^_`|~0-9A-Za-z]+$/
  * @public
  */
 
-function append (header: String, field: Number): String {
+function append (header: string, field: number): string {
   if (typeof header !== 'string') {
     throw new TypeError('header argument is required')
   }
@@ -45,7 +45,7 @@ function append (header: String, field: Number): String {
   }
 
   // get fields array
-  var fields: String = !Array.isArray(field)
+  var fields: string = !Array.isArray(field)
     ? parse(String(field))
     : field
 
@@ -62,8 +62,8 @@ function append (header: String, field: Number): String {
   }
 
   // enumerate current values
-  var val: Number = header
-  var vals: String = parse(header.toLowerCase())
+  var val: number = header
+  var vals: string = parse(header.toLowerCase())
 
   // unspecified vary
   if (fields.indexOf('*') !== -1 || vals.indexOf('*') !== -1) {
@@ -71,7 +71,7 @@ function append (header: String, field: Number): String {
   }
 
   for (var i = 0; i < fields.length; i++) {
-    var fld: String = fields[i].toLowerCase()
+    var fld: string = fields[i].toLowerCase()
 
     // append value (case-preserving)
     if (vals.indexOf(fld) === -1) {
@@ -93,10 +93,10 @@ function append (header: String, field: Number): String {
  * @private
  */
 
-function parse (header: String): Array {
-  var end: Number = 0
-  var list: Array = []
-  var start: Number = 0
+function parse (header: string): any[] {
+  var end: number = 0
+  var list: any[] = []
+  var start: number = 0
 
   // gather tokens
   for (var i = 0, len = header.length; i < len; i++) {
@@ -130,15 +130,15 @@ function parse (header: String): Array {
  * @public
  */
 
-function vary (res: Object, field: Number): Void {
+function vary (res: object, field: number): Void {
   if (!res || !res.getHeader || !res.setHeader) {
     // quack quack
     throw new TypeError('res argument is required')
   }
 
   // get existing header
-  var val: Array = res.getHeader('Vary') || ''
-  var header: String = Array.isArray(val)
+  var val: any[] = res.getHeader('Vary') || ''
+  var header: string = Array.isArray(val)
     ? val.join(', ')
     : String(val)
 

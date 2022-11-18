@@ -6,7 +6,7 @@ import { getStaticValue } from "./get-static-value"
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If the node is an Identifier node and this scope was given, this checks the variable of the identifier, and returns the value of it if the variable is a constant.
  * @returns {string|null} The value of the node, or `null`.
  */
-export function getStringIfConstant(node: Object, initialScope: String = null): Array {
+export function getStringIfConstant(node: object, initialScope: string = null): any[] {
     // Handle the literals that the platform doesn't support natively.
     if (node && node.type === "Literal" && node.value === null) {
         if (node.regex) {
@@ -17,6 +17,6 @@ export function getStringIfConstant(node: Object, initialScope: String = null): 
         }
     }
 
-    const evaluated: Object = getStaticValue(node, initialScope)
+    const evaluated: object = getStaticValue(node, initialScope)
     return evaluated && String(evaluated.value)
 }

@@ -5,8 +5,8 @@ const getStdinBuffer: Function = async () => {
 		return Buffer.alloc(0);
 	}
 
-	const result: Array = [];
-	let length: Number = 0;
+	const result: any[] = [];
+	let length: number = 0;
 
 	for await (const chunk of stdin) {
 		result.push(chunk);
@@ -17,7 +17,7 @@ const getStdinBuffer: Function = async () => {
 };
 
 export default async function getStdin(): HTMLElement {
-	const buffer: Object = await getStdinBuffer();
+	const buffer: object = await getStdinBuffer();
 	return buffer.toString();
 }
 

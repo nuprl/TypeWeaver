@@ -1,9 +1,9 @@
 import lenientFunction from './lenient.js';
 
-export default function yn(value: String, {
+export default function yn(value: string, {
 	lenient = false,
 	default: default_,
-} = {}): String {
+} = {}): string {
 	if (default_ !== undefined && typeof default_ !== 'boolean') {
 		throw new TypeError(`Expected the \`default\` option to be of type \`boolean\`, got \`${typeof default_}\``);
 	}

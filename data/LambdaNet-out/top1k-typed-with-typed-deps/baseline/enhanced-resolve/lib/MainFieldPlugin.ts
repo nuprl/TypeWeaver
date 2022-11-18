@@ -5,14 +5,14 @@
 
 "use strict";
 
-const path: String = require("path");
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
+const path: string = require("path");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /** @typedef {{name: string|Array<string>, forceRelative: boolean}} MainFieldOptions */
 
-const alreadyTriedMainField: Number = Symbol("alreadyTriedMainField");
+const alreadyTriedMainField: number = Symbol("alreadyTriedMainField");
 
 module.exports = class MainFieldPlugin {
 	/**

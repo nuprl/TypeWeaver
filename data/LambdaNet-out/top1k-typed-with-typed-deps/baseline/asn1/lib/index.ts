@@ -3,7 +3,7 @@
 // If you have no idea what ASN.1 or BER is, see this:
 // ftp://ftp.rsa.com/pub/pkcs/ascii/layman.asc
 
-var Ber: Array = require('./ber/index');
+var Ber: any[] = require('./ber/index');
 
 
 

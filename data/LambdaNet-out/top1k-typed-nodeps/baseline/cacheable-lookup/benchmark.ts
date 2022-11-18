@@ -1,48 +1,48 @@
 'use strict';
-const dns: String = require('dns');
-const Benchmark: Array = require('benchmark');
-const CacheableLookup: Array = require('.');
+const dns: string = require('dns');
+const Benchmark: any[] = require('benchmark');
+const CacheableLookup: any[] = require('.');
 
 const cacheable: CacheableLookup = new CacheableLookup();
 const suite: HTMLElement = new Benchmark.Suite();
 
-const options: Object = {
+const options: object = {
 	defer: true
 };
 
-const lookupOptions: Object = {
+const lookupOptions: object = {
 	all: true
 };
 
-const lookupOptionsADDRCONFIG: Object = {
+const lookupOptionsADDRCONFIG: object = {
 	...lookupOptions,
 	hints: dns.ADDRCONFIG
 };
 
-const query: String = 'example.com';
+const query: string = 'example.com';
 
-suite.add('CacheableLookup#lookupAsync', (deferred: Array) => {
+suite.add('CacheableLookup#lookupAsync', (deferred: any[]) => {
 	// eslint-disable-next-line promise/prefer-await-to-then
 	cacheable.lookupAsync(query).then(() => deferred.resolve());
-}, options).add('CacheableLookup#lookupAsync.all', (deferred: Array) => {
+}, options).add('CacheableLookup#lookupAsync.all', (deferred: any[]) => {
 	// eslint-disable-next-line promise/prefer-await-to-then
 	cacheable.lookupAsync(query, lookupOptions).then(() => deferred.resolve());
-}, options).add('CacheableLookup#lookupAsync.all.ADDRCONFIG', (deferred: Array) => {
+}, options).add('CacheableLookup#lookupAsync.all.ADDRCONFIG', (deferred: any[]) => {
 	// eslint-disable-next-line promise/prefer-await-to-then
 	cacheable.lookupAsync(query, lookupOptionsADDRCONFIG).then(() => deferred.resolve());
-}, options).add('CacheableLookup#lookup', (deferred: Array) => {
+}, options).add('CacheableLookup#lookup', (deferred: any[]) => {
 	cacheable.lookup(query, lookupOptions, () => deferred.resolve());
-}, options).add('CacheableLookup#lookup.all', (deferred: Array) => {
+}, options).add('CacheableLookup#lookup.all', (deferred: any[]) => {
 	cacheable.lookup(query, lookupOptions, () => deferred.resolve());
-}, options).add('CacheableLookup#lookup.all.ADDRCONFIG', (deferred: Array) => {
+}, options).add('CacheableLookup#lookup.all.ADDRCONFIG', (deferred: any[]) => {
 	cacheable.lookup(query, lookupOptionsADDRCONFIG, () => deferred.resolve());
-}, options).add('dns#lookup', (deferred: Array) => {
+}, options).add('dns#lookup', (deferred: any[]) => {
 	dns.lookup(query, () => deferred.resolve());
-}, options).add('dns#lookup.all', (deferred: Array) => {
+}, options).add('dns#lookup.all', (deferred: any[]) => {
 	dns.lookup(query, lookupOptions, () => deferred.resolve());
-}, options).add('dns#lookup.all.ADDRCONFIG', (deferred: Array) => {
+}, options).add('dns#lookup.all.ADDRCONFIG', (deferred: any[]) => {
 	dns.lookup(query, lookupOptionsADDRCONFIG, () => deferred.resolve());
-}, options).on('cycle', (event: Object) => {
+}, options).on('cycle', (event: object) => {
 	console.log(String(event.target));
 }).on('complete', function () {
 	console.log(`Fastest is ${this.filter('fastest').map('name')}`);
@@ -51,7 +51,7 @@ suite.add('CacheableLookup#lookupAsync', (deferred: Array) => {
 (async () => {
 	await cacheable.lookupAsync(query);
 
-	await new Promise((resolve: Number) => setTimeout(resolve, 150));
+	await new Promise((resolve: number) => setTimeout(resolve, 150));
 
 	suite.run();
 })();

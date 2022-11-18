@@ -1,6 +1,6 @@
 const { promisify } = require('util')
 const fs: Function = require('fs')
-const optsArg: Function = (opts: Object) => {
+const optsArg: Function = (opts: object) => {
   if (!opts)
     opts = { mode: 0o777, fs }
   else if (typeof opts === 'object')

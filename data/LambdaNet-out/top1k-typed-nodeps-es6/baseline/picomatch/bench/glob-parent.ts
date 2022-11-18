@@ -3,7 +3,7 @@
 import { Suite } from 'benchmark';
 import { red } from 'ansi-colors';
 import argvFactory from 'minimist';
-const argv: Object = argvFactory(process.argv.slice(2));
+const argv: object = argvFactory(process.argv.slice(2));
 import parent from 'glob-parent';
 import scan from '../lib/scan';
 
@@ -11,12 +11,12 @@ import scan from '../lib/scan';
  * Setup
  */
 
-const cycle: Function = (e: HTMLElement, newline: Boolean) => {
+const cycle: Function = (e: HTMLElement, newline: boolean) => {
   process.stdout.write(`\u001b[G  ${e.target}${newline ? '\n' : ''}`);
 };
 
-function bench(name: String, options: Object): HTMLElement {
-  const config: Object = { name, ...options };
+function bench(name: string, options: object): HTMLElement {
+  const config: object = { name, ...options };
 
   const suite: HTMLElement = new Suite(config);
   const add: Function = suite.add.bind(suite);
@@ -28,12 +28,12 @@ function bench(name: String, options: Object): HTMLElement {
   }
 
   console.log(`\n${red(config.name)}`);
-  suite.add = (key: String, fn: String, opts: Function) => {
+  suite.add = (key: string, fn: string, opts: Function) => {
     if (typeof fn !== 'function') opts = fn;
 
     add(key, {
-      onCycle: (e: Array) => cycle(e),
-      onComplete: (e: String) => cycle(e, true),
+      onCycle: (e: any[]) => cycle(e),
+      onComplete: (e: string) => cycle(e, true),
       fn,
       ...opts
     });

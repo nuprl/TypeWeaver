@@ -1,7 +1,7 @@
-export function hasNoChildren(node: Object): Boolean {
+export function hasNoChildren(node: object): boolean {
     return !node || !node.children || node.children.isEmpty;
 }
 
-export function isNodeChildrenList(node: Object, list: Object): Boolean {
+export function isNodeChildrenList(node: object, list: object): boolean {
     return node !== null && node.children === list;
 }

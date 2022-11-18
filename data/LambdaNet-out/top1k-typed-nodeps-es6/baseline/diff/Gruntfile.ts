@@ -92,7 +92,7 @@ export default function(grunt: HTMLElement) {
           expand: true,
           src: ['*.js', '!*.min.js'],
           dest: 'dist/',
-          rename: function(dest: String, src: String) {
+          rename: function(dest: string, src: string) {
             return dest + src.replace(/\.js$/, '.min.js');
           }
         }]
@@ -102,7 +102,7 @@ export default function(grunt: HTMLElement) {
     copy: {
       dist: {
         options: {
-          processContent: function(content: String) {
+          processContent: function(content: string) {
             return grunt.template.process('/*!\n\n <%= pkg.name %> v<%= pkg.version %>\n\n<%= grunt.file.read("LICENSE") %>\n@license\n*/\n')
                 + content;
           }

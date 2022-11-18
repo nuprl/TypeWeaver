@@ -1,10 +1,10 @@
 'use strict';
 
-var res: String = '';
-var cache: Number;
+var res: string = '';
+var cache: number;
 
-module.exports = function repeat(str: String, num: Number): String {
-  var max: Number = str.length * num;
+module.exports = function repeat(str: string, num: number): string {
+  var max: number = str.length * num;
 
   cache = cache || str;
   if (cache !== str) {

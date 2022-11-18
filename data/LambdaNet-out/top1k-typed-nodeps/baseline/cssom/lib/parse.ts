@@ -6,9 +6,9 @@ var CSSOM: HTMLInputElement = {};
 /**
  * @param {string} token
  */
-CSSOM.parse = function parse(token: String): Object {
+CSSOM.parse = function parse(token: string): object {
 
-	var i: Number = 0;
+	var i: number = 0;
 
 	/**
 		"before-selector" or
@@ -21,13 +21,13 @@ CSSOM.parse = function parse(token: String): Object {
 		"before-value" or
 		"value"
 	*/
-	var state: String = "before-selector";
+	var state: string = "before-selector";
 
-	var index: Number;
-	var buffer: String = "";
-	var valueParenthesisDepth: Number = 0;
+	var index: number;
+	var buffer: string = "";
+	var valueParenthesisDepth: number = 0;
 
-	var SIGNIFICANT_WHITESPACE: Object = {
+	var SIGNIFICANT_WHITESPACE: object = {
 		"selector": true,
 		"value": true,
 		"value-parenthesis": true,
@@ -39,26 +39,26 @@ CSSOM.parse = function parse(token: String): Object {
 		'documentRule-begin': true
 	};
 
-	var styleSheet: Object = new CSSOM.CSSStyleSheet();
+	var styleSheet: object = new CSSOM.CSSStyleSheet();
 
 	// @type CSSStyleSheet|CSSMediaRule|CSSSupportsRule|CSSFontFaceRule|CSSKeyframesRule|CSSDocumentRule
-	var currentScope: String = styleSheet;
+	var currentScope: string = styleSheet;
 
 	// @type CSSMediaRule|CSSSupportsRule|CSSKeyframesRule|CSSDocumentRule
 	var parentRule: Function;
 
-	var ancestorRules: Array = [];
-	var hasAncestors: Boolean = false;
-	var prevScope: String;
+	var ancestorRules: any[] = [];
+	var hasAncestors: boolean = false;
+	var prevScope: string;
 
-	var name: String, priority: String="", styleRule: HTMLElement, mediaRule: HTMLElement, supportsRule: HTMLElement, importRule: HTMLElement, fontFaceRule: HTMLElement, keyframesRule: HTMLElement, documentRule: Element, hostRule: HTMLElement;
+	var name: string, priority: string="", styleRule: HTMLElement, mediaRule: HTMLElement, supportsRule: HTMLElement, importRule: HTMLElement, fontFaceRule: HTMLElement, keyframesRule: HTMLElement, documentRule: Element, hostRule: HTMLElement;
 
 	var atKeyframesRegExp: RegExp = /@(-(?:\w+-)+)?keyframes/g;
 
-	var parseError: Function = function(message: String) {
-		var lines: Array = token.substring(0, i).split('\n');
-		var lineCount: Number = lines.length;
-		var charCount: String = lines.pop().length + 1;
+	var parseError: Function = function(message: string) {
+		var lines: any[] = token.substring(0, i).split('\n');
+		var lineCount: number = lines.length;
+		var charCount: string = lines.pop().length + 1;
 		var error: Error = new Error(message + ' (line ' + lineCount + ', char ' + charCount + ')');
 		error.line = lineCount;
 		/* jshint sub : true */
@@ -185,7 +185,7 @@ CSSOM.parse = function parse(token: String): Object {
 				break;
 			} else {
 				atKeyframesRegExp.lastIndex = i;
-				var matchKeyframes: Object = atKeyframesRegExp.exec(token);
+				var matchKeyframes: object = atKeyframesRegExp.exec(token);
 				if (matchKeyframes && matchKeyframes.index === i) {
 					state = "keyframesRule-begin";
 					keyframesRule = new CSSOM.CSSKeyframesRule();
@@ -290,7 +290,7 @@ CSSOM.parse = function parse(token: String): Object {
 			if (state === 'value') {
 				// ie css expression mode
 				if (buffer.trim() === 'expression') {
-					var info: Object = (new CSSOM.CSSValueExpression(token, i)).parse();
+					var info: object = (new CSSOM.CSSValueExpression(token, i)).parse();
 
 					if (info.error) {
 						parseError(info.error);

@@ -13,8 +13,8 @@ import baseFlatten from './.internal/baseFlatten.js'
  * flatten([1, [2, [3, [4]], 5]])
  * // => [1, 2, [3, [4]], 5]
  */
-function flatten(array: Array): Array {
-  const length: Number = array == null ? 0 : array.length
+function flatten(array: any[]): any[] {
+  const length: number = array == null ? 0 : array.length
   return length ? baseFlatten(array, 1) : []
 }
 

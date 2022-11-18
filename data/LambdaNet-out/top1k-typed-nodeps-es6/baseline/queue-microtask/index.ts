@@ -1,5 +1,5 @@
 /*! queue-microtask. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
-let promise: Object
+let promise: object
 
 export default typeof queueMicrotask === 'function'
   ? queueMicrotask.bind(typeof window !== 'undefined' ? window : global)

@@ -2,7 +2,7 @@
 
 import { parseMeasurement } from '../parsers';
 
-export const definition: Object = {
+export const definition: object = {
   set: function(v: Function) {
     this._setProperty('left', parseMeasurement(v));
   },

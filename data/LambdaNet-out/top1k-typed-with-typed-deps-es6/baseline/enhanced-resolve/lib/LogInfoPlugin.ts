@@ -17,13 +17,13 @@ export default class LogInfoPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const source: String = this.source;
+		const source: string = this.source;
 		resolver
 			.getHook(this.source)
-			.tapAsync("LogInfoPlugin", (request: Object, resolveContext: Object, callback: Function) => {
+			.tapAsync("LogInfoPlugin", (request: object, resolveContext: object, callback: Function) => {
 				if (!resolveContext.log) return callback();
 				const log: Function = resolveContext.log;
-				const prefix: String = "[" + source + "] ";
+				const prefix: string = "[" + source + "] ";
 				if (request.path)
 					log(prefix + "Resolving in directory: " + request.path);
 				if (request.request)

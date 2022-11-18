@@ -1,5 +1,5 @@
-export default function walk(nodes: Array, cb: Function, bubble: Boolean): Void {
-  var i: Number, max: String, node: HTMLElement, result: String;
+export default function walk(nodes: any[], cb: Function, bubble: boolean): Void {
+  var i: number, max: string, node: HTMLElement, result: string;
 
   for (i = 0, max = nodes.length; i < max; i += 1) {
     node = nodes[i];

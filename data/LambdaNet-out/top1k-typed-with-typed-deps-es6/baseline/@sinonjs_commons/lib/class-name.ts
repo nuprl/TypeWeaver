@@ -8,7 +8,7 @@ import functionName from './function-name';
  * @param  {object} value A value to examine
  * @returns {(string|null)} A string or null
  */
-function className(value: Object): Boolean {
+function className(value: object): boolean {
     return (
         (value.constructor && value.constructor.name) ||
         // The next branch is for IE11 support only:

@@ -11,9 +11,9 @@ if (process.platform !== "darwin") {
 }
 
 const Native: HTMLElement = require("./fsevents.node");
-const events: Array = Native.constants;
+const events: any[] = Native.constants;
 
-function watch(path: String, since: String, handler: String): Function {
+function watch(path: string, since: string, handler: string): Function {
   if (typeof path !== "string") {
     throw new TypeError(`fsevents argument 1 must be a string and not a ${typeof path}`);
   }
@@ -28,7 +28,7 @@ function watch(path: String, since: String, handler: String): Function {
     throw new TypeError(`fsevents argument 3 must be a function and not a ${typeof handler}`);
   }
 
-  let instance: Boolean = Native.start(Native.global, path, since, handler);
+  let instance: boolean = Native.start(Native.global, path, since, handler);
   if (!instance) throw new Error(`could not watch: ${path}`);
   return () => {
     const result: Promise = instance ? Promise.resolve(instance).then(Native.stop) : Promise.resolve(undefined);
@@ -37,7 +37,7 @@ function watch(path: String, since: String, handler: String): Function {
   };
 }
 
-function getInfo(path: String, flags: Object): Object {
+function getInfo(path: string, flags: object): object {
   return {
     path,
     flags,
@@ -47,18 +47,18 @@ function getInfo(path: String, flags: Object): Object {
   };
 }
 
-function getFileType(flags: Number): String {
+function getFileType(flags: number): string {
   if (events.ItemIsFile & flags) return "file";
   if (events.ItemIsDir & flags) return "directory";
   if (events.ItemIsSymlink & flags) return "symlink";
 }
-function anyIsTrue(obj: Object): Boolean {
+function anyIsTrue(obj: object): boolean {
   for (let key in obj) {
     if (obj[key]) return true;
   }
   return false;
 }
-function getEventType(flags: Number): String {
+function getEventType(flags: number): string {
   if (events.ItemRemoved & flags) return "deleted";
   if (events.ItemRenamed & flags) return "moved";
   if (events.ItemCreated & flags) return "created";
@@ -68,7 +68,7 @@ function getEventType(flags: Number): String {
   if (anyIsTrue(flags)) return "modified";
   return "unknown";
 }
-function getFileChanges(flags: Number): Object {
+function getFileChanges(flags: number): object {
   return {
     inode: !!(events.ItemInodeMetaMod & flags),
     finder: !!(events.ItemFinderInfoMod & flags),

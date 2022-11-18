@@ -1,20 +1,5 @@
-index.ts(16,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(17,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(19,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(28,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(36,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(37,55): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(40,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(45,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(51,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(59,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLInputElement'.
-  Type 'String' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 332 more.
-index.ts(60,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(69,18): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Buffer'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+index.ts(19,31): error TS2339: Property 'byteLength' does not exist on type 'any[]'.
+index.ts(49,3): error TS2740: Type 'Buffer' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
+index.ts(59,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLInputElement'.
+index.ts(60,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 

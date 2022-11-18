@@ -4,9 +4,9 @@ import isPrototype from '../prototype/is';
 
 // In theory we could rely on Symbol.toStringTag directly,
 // still early native implementation (e.g. in FF) predated symbols
-var objectToString: Function = Object.prototype.toString, objectTaggedString: Number = objectToString.call(new Map());
+var objectToString: Function = Object.prototype.toString, objectTaggedString: number = objectToString.call(new Map());
 
-export default function (value: Object) {
+export default function (value: object) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common Promise interface)

@@ -1,26 +1,26 @@
-let source: String, pos: Number, end: Number,
-  openTokenDepth: Number,
-  lastTokenPos: Number,
-  openTokenPosStack: Object,
-  openClassPosStack: Object,
-  curDynamicImport: Object,
-  templateStackDepth: Number,
-  facade: Boolean,
-  lastSlashWasDivision: Boolean,
-  nextBraceIsClass: Boolean,
-  templateDepth: Number,
-  templateStack: Object,
-  imports: Array,
-  exports: Array,
-  name: String;
+let source: string, pos: number, end: number,
+  openTokenDepth: number,
+  lastTokenPos: number,
+  openTokenPosStack: object,
+  openClassPosStack: object,
+  curDynamicImport: object,
+  templateStackDepth: number,
+  facade: boolean,
+  lastSlashWasDivision: boolean,
+  nextBraceIsClass: boolean,
+  templateDepth: number,
+  templateStack: object,
+  imports: any[],
+  exports: any[],
+  name: string;
 
-function addImport (ss: Function, s: Number, e: String, d: Number): Object {
-  const impt: Object = { ss, se: d === -2 ? e : d === -1 ? e + 1 : 0, s, e, d, a: -1, n: undefined };
+function addImport (ss: Function, s: number, e: string, d: number): object {
+  const impt: object = { ss, se: d === -2 ? e : d === -1 ? e + 1 : 0, s, e, d, a: -1, n: undefined };
   imports.push(impt);
   return impt;
 }
 
-function addExport (s: Number, e: Function, ls: Object, le: String): Void {
+function addExport (s: number, e: Function, ls: object, le: string): Void {
   exports.push({
     s,
     e,
@@ -31,7 +31,7 @@ function addExport (s: Number, e: Function, ls: Object, le: String): Void {
   });
 }
 
-function readName (impt: Object): Void {
+function readName (impt: object): Void {
   let { d, s } = impt;
   if (d !== -1)
     s++;
@@ -39,7 +39,7 @@ function readName (impt: Object): Void {
 }
 
 // Note: parsing is based on the _assumption_ that the source is already valid
-export function parse (_source: Function, _name: String): Array {
+export function parse (_source: Function, _name: string): any[] {
   openTokenDepth = 0;
   curDynamicImport = null;
   templateDepth = -1;
@@ -59,7 +59,7 @@ export function parse (_source: Function, _name: String): Array {
   source = _source;
   pos = -1;
   end = source.length - 1;
-  let ch: Number = 0;
+  let ch: number = 0;
 
   // start with a pure "module-only" parser
   m: while (pos++ < end) {
@@ -86,7 +86,7 @@ export function parse (_source: Function, _name: String): Array {
       case 59/*;*/:
         break;
       case 47/*/*/: {
-        const next_ch: Number = source.charCodeAt(pos + 1);
+        const next_ch: number = source.charCodeAt(pos + 1);
         if (next_ch === 47/*/*/) {
           lineComment();
           // dont update lastToken
@@ -169,7 +169,7 @@ export function parse (_source: Function, _name: String): Array {
         stringLiteral(ch);
         break;
       case 47/*/*/: {
-        const next_ch: Number = source.charCodeAt(pos + 1);
+        const next_ch: number = source.charCodeAt(pos + 1);
         if (next_ch === 47/*/*/) {
           lineComment();
           // dont update lastToken
@@ -185,7 +185,7 @@ export function parse (_source: Function, _name: String): Array {
           // - what token came previously (lastToken)
           // - if a closing brace or paren, what token came before the corresponding
           //   opening brace or paren (lastOpenTokenIndex)
-          const lastToken: Number = source.charCodeAt(lastTokenPos);
+          const lastToken: number = source.charCodeAt(lastTokenPos);
           if (isExpressionPunctuator(lastToken) &&
               !(lastToken === 46/*.*/ && (source.charCodeAt(lastTokenPos - 1) >= 48/*0*/ && source.charCodeAt(lastTokenPos - 1) <= 57/*9*/)) &&
               !(lastToken === 43/*+*/ && source.charCodeAt(lastTokenPos - 1) === 43/*+*/) && !(lastToken === 45/*-*/ && source.charCodeAt(lastTokenPos - 1) === 45/*-*/) ||
@@ -217,11 +217,11 @@ export function parse (_source: Function, _name: String): Array {
 }
 
 function tryParseImportStatement (): Void {
-  const startPos: Number = pos;
+  const startPos: number = pos;
 
   pos += 6;
 
-  let ch: String = commentWhitespace(true);
+  let ch: string = commentWhitespace(true);
   
   switch (ch) {
     // dynamic import
@@ -230,7 +230,7 @@ function tryParseImportStatement (): Void {
       if (source.charCodeAt(lastTokenPos) === 46/*.*/)
         return;
       // dynamic import indicated by positive d
-      const impt: Object = addImport(startPos, pos + 1, 0, startPos);
+      const impt: object = addImport(startPos, pos + 1, 0, startPos);
       curDynamicImport = impt;
       // try parse a string, to record a safe dynamic import string
       pos++;
@@ -297,14 +297,14 @@ function tryParseImportStatement (): Void {
 }
 
 function tryParseExportStatement (): Promise {
-  const sStartPos: Number = pos;
-  const prevExport: Number = exports.length;
+  const sStartPos: number = pos;
+  const prevExport: number = exports.length;
 
   pos += 6;
 
-  const curPos: Number = pos;
+  const curPos: number = pos;
 
-  let ch: String = commentWhitespace(true);
+  let ch: string = commentWhitespace(true);
 
   if (pos === curPos && !isPunctuator(ch))
     return;
@@ -327,7 +327,7 @@ function tryParseExportStatement (): Promise {
         pos++;
         ch = commentWhitespace(true);
       }
-      const startPos: Number = pos;
+      const startPos: number = pos;
       ch = readToWsOrPunctuator(ch);
       addExport(startPos, pos, startPos, pos);
       pos--;
@@ -338,7 +338,7 @@ function tryParseExportStatement (): Promise {
       if (source.startsWith('lass', pos + 1) && isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos + 5))) {
         pos += 5;
         ch = commentWhitespace(true);
-        const startPos: Number = pos;
+        const startPos: number = pos;
         ch = readToWsOrPunctuator(ch);
         addExport(startPos, pos, startPos, pos);
         pos--;
@@ -357,7 +357,7 @@ function tryParseExportStatement (): Promise {
       do {
         pos++;
         ch = commentWhitespace(true);
-        const startPos: Number = pos;
+        const startPos: number = pos;
         ch = readToWsOrPunctuator(ch);
         // dont yet handle [ { destructurings
         if (ch === 123/*{*/ || ch === 91/*[*/) {
@@ -382,9 +382,9 @@ function tryParseExportStatement (): Promise {
       pos++;
       ch = commentWhitespace(true);
       while (true) {
-        const startPos: Number = pos;
+        const startPos: number = pos;
         readToWsOrPunctuator(ch);
-        const endPos: Number = pos;
+        const endPos: number = pos;
         commentWhitespace(true);
         ch = readExportAs(startPos, endPos);
         // ,
@@ -454,13 +454,13 @@ function tryParseExportStatement (): Promise {
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-let acornPos: Number;
-function readString (start: Number, quote: Number): String {
+let acornPos: number;
+function readString (start: number, quote: number): string {
   acornPos = start;
-  let out: String = '', chunkStart: Number = acornPos;
+  let out: string = '', chunkStart: number = acornPos;
   for (;;) {
     if (acornPos >= source.length) syntaxError();
-    const ch: Number = source.charCodeAt(acornPos);
+    const ch: number = source.charCodeAt(acornPos);
     if (ch === quote) break;
     if (ch === 92) { // '\'
       out += source.slice(chunkStart, acornPos);
@@ -481,8 +481,8 @@ function readString (start: Number, quote: Number): String {
 
 // Used to read escaped characters
 
-function readEscapedChar (): Number {
-  let ch: Number = source.charCodeAt(++acornPos);
+function readEscapedChar (): number {
+  let ch: number = source.charCodeAt(++acornPos);
   ++acornPos;
   switch (ch) {
     case 110: return '\n'; // 'n' -> '\n'
@@ -501,8 +501,8 @@ function readEscapedChar (): Number {
       syntaxError();
     default:
       if (ch >= 48 && ch <= 55) {
-        let octalStr: String = source.substr(acornPos - 1, 3).match(/^[0-7]+/)[0];
-        let octal: Number = parseInt(octalStr, 8);
+        let octalStr: string = source.substr(acornPos - 1, 3).match(/^[0-7]+/)[0];
+        let octal: number = parseInt(octalStr, 8);
         if (octal > 255) {
           octalStr = octalStr.slice(0, -1);
           octal = parseInt(octalStr, 8);
@@ -524,11 +524,11 @@ function readEscapedChar (): Number {
 
 // Used to read character escape sequences ('\x', '\u', '\U').
 
-function readHexChar (len: Number): Number {
-  const start: Number = acornPos;
-  let total: Number = 0, lastCode: Number = 0;
+function readHexChar (len: number): number {
+  const start: number = acornPos;
+  let total: number = 0, lastCode: number = 0;
   for (let i = 0; i < len; ++i, ++acornPos) {
-    let code: Number = source.charCodeAt(acornPos), val: Number;
+    let code: number = source.charCodeAt(acornPos), val: number;
 
     if (code === 95) {
       if (lastCode === 95 || i === 0) syntaxError();
@@ -552,9 +552,9 @@ function readHexChar (len: Number): Number {
 
 // Read a string value, interpreting backslash-escapes.
 
-function readCodePointToString (): Number {
-  const ch: Number = source.charCodeAt(acornPos);
-  let code: Number;
+function readCodePointToString (): number {
+  const ch: number = source.charCodeAt(acornPos);
+  let code: number;
   if (ch === 123) { // '{'
     ++acornPos;
     code = readHexChar(source.indexOf('}', acornPos) - acornPos);
@@ -573,9 +573,9 @@ function readCodePointToString (): Number {
  * </ Acorn Port>
  */
 
-function readExportAs (startPos: Number, endPos: Number): Number {
-  let ch: Number = source.charCodeAt(pos);
-  let ls: Number = startPos, le: String = endPos;
+function readExportAs (startPos: number, endPos: number): number {
+  let ch: number = source.charCodeAt(pos);
+  let ls: number = startPos, le: string = endPos;
   if (ch === 97 /*a*/) {
     pos += 2;
     ch = commentWhitespace(true);
@@ -589,8 +589,8 @@ function readExportAs (startPos: Number, endPos: Number): Number {
   return ch;
 }
 
-function readImportString (ss: String, ch: String): Void {
-  const startPos: String = pos + 1;
+function readImportString (ss: string, ch: string): Void {
+  const startPos: string = pos + 1;
   if (ch === 39/*'*/ || ch === 34/*"*/) {
     stringLiteral(ch);
   }
@@ -598,7 +598,7 @@ function readImportString (ss: String, ch: String): Void {
     syntaxError();
     return;
   }
-  const impt: Object = addImport(ss, startPos, pos, -1);
+  const impt: object = addImport(ss, startPos, pos, -1);
   readName(impt);
   pos++;
   ch = commentWhitespace(false);
@@ -606,7 +606,7 @@ function readImportString (ss: String, ch: String): Void {
     pos--;
     return;
   }
-  const assertIndex: Number = pos;
+  const assertIndex: number = pos;
 
   pos += 6;
   ch = commentWhitespace(true);
@@ -614,7 +614,7 @@ function readImportString (ss: String, ch: String): Void {
     pos = assertIndex;
     return;
   }
-  const assertStart: Number = pos;
+  const assertStart: number = pos;
   do {
     pos++;
     ch = commentWhitespace(true);
@@ -657,12 +657,12 @@ function readImportString (ss: String, ch: String): Void {
   impt.se = pos + 1;
 }
 
-function commentWhitespace (br: String): String {
-  let ch: Number;
+function commentWhitespace (br: string): string {
+  let ch: number;
   do {
     ch = source.charCodeAt(pos);
     if (ch === 47/*/*/) {
-      const next_ch: Number = source.charCodeAt(pos + 1);
+      const next_ch: number = source.charCodeAt(pos + 1);
       if (next_ch === 47/*/*/)
         lineComment();
       else if (next_ch === 42/***/)
@@ -679,7 +679,7 @@ function commentWhitespace (br: String): String {
 
 function templateString (): Void {
   while (pos++ < end) {
-    const ch: Number = source.charCodeAt(pos);
+    const ch: number = source.charCodeAt(pos);
     if (ch === 36/*$*/ && source.charCodeAt(pos + 1) === 123/*{*/) {
       pos++;
       templateStack[templateStackDepth++] = templateDepth;
@@ -694,10 +694,10 @@ function templateString (): Void {
   syntaxError();
 }
 
-function blockComment (br: Boolean): Void {
+function blockComment (br: boolean): Void {
   pos++;
   while (pos++ < end) {
-    const ch: Number = source.charCodeAt(pos);
+    const ch: number = source.charCodeAt(pos);
     if (!br && isBr(ch))
       return;
     if (ch === 42/***/ && source.charCodeAt(pos + 1) === 47/*/*/) {
@@ -709,15 +709,15 @@ function blockComment (br: Boolean): Void {
 
 function lineComment (): Void {
   while (pos++ < end) {
-    const ch: Number = source.charCodeAt(pos);
+    const ch: number = source.charCodeAt(pos);
     if (ch === 10/*\n*/ || ch === 13/*\r*/)
       return;
   }
 }
 
-function stringLiteral (quote: Number): Void {
+function stringLiteral (quote: number): Void {
   while (pos++ < end) {
-    let ch: Number = source.charCodeAt(pos);
+    let ch: number = source.charCodeAt(pos);
     if (ch === quote)
       return;
     if (ch === 92/*\*/) {
@@ -731,9 +731,9 @@ function stringLiteral (quote: Number): Void {
   syntaxError();
 }
 
-function regexCharacterClass (): Number {
+function regexCharacterClass (): number {
   while (pos++ < end) {
-    let ch: Number = source.charCodeAt(pos);
+    let ch: number = source.charCodeAt(pos);
     if (ch === 93/*]*/)
       return ch;
     if (ch === 92/*\*/)
@@ -746,7 +746,7 @@ function regexCharacterClass (): Number {
 
 function regularExpression (): Void {
   while (pos++ < end) {
-    let ch: Number = source.charCodeAt(pos);
+    let ch: number = source.charCodeAt(pos);
     if (ch === 47/*/*/)
       return;
     if (ch === 91/*[*/)
@@ -759,7 +759,7 @@ function regularExpression (): Void {
   syntaxError();
 }
 
-function readToWsOrPunctuator (ch: String): String {
+function readToWsOrPunctuator (ch: string): string {
   do {
     if (isBrOrWs(ch) || isPunctuator(ch))
       return ch;
@@ -769,39 +769,39 @@ function readToWsOrPunctuator (ch: String): String {
 
 // Note: non-asii BR and whitespace checks omitted for perf / footprint
 // if there is a significant user need this can be reconsidered
-function isBr (c: Number): Boolean {
+function isBr (c: number): boolean {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 
-function isWsNotBr (c: Number): Boolean {
+function isWsNotBr (c: number): boolean {
   return c === 9 || c === 11 || c === 12 || c === 32 || c === 160;
 }
 
-function isBrOrWs (c: Number): Boolean {
+function isBrOrWs (c: number): boolean {
   return c > 8 && c < 14 || c === 32 || c === 160;
 }
 
-function isBrOrWsOrPunctuatorNotDot (c: Number): Boolean {
+function isBrOrWsOrPunctuatorNotDot (c: number): boolean {
   return c > 8 && c < 14 || c === 32 || c === 160 || isPunctuator(c) && c !== 46/*.*/;
 }
 
-function keywordStart (pos: Number): Boolean {
+function keywordStart (pos: number): boolean {
   return pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1));
 }
 
-function readPrecedingKeyword (pos: Number, match: String): Boolean {
+function readPrecedingKeyword (pos: number, match: string): boolean {
   if (pos < match.length - 1)
     return false;
   return source.startsWith(match, pos - match.length + 1) && (pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - match.length)));
 }
 
-function readPrecedingKeyword1 (pos: Number, ch: Number): Boolean {
+function readPrecedingKeyword1 (pos: number, ch: number): boolean {
   return source.charCodeAt(pos) === ch && (pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1)));
 }
 
 // Detects one of case, debugger, delete, do, else, in, instanceof, new,
 //   return, throw, typeof, void, yield, await
-function isExpressionKeyword (pos: Number): Boolean {
+function isExpressionKeyword (pos: number): boolean {
   switch (source.charCodeAt(pos)) {
     case 100/*d*/:
       switch (source.charCodeAt(pos - 1)) {
@@ -873,13 +873,13 @@ function isExpressionKeyword (pos: Number): Boolean {
   return false;
 }
 
-function isParenKeyword (curPos: Number): Boolean {
+function isParenKeyword (curPos: number): boolean {
   return source.charCodeAt(curPos) === 101/*e*/ && source.startsWith('whil', curPos - 4) ||
       source.charCodeAt(curPos) === 114/*r*/ && source.startsWith('fo', curPos - 2) ||
       source.charCodeAt(curPos - 1) === 105/*i*/ && source.charCodeAt(curPos) === 102/*f*/;
 }
 
-function isPunctuator (ch: Number): Boolean {
+function isPunctuator (ch: number): boolean {
   // 23 possible punctuator endings: !%&()*+,-./:;<=>?[]^{}|~
   return ch === 33/*!*/ || ch === 37/*%*/ || ch === 38/*&*/ ||
     ch > 39 && ch < 48 || ch > 57 && ch < 64 ||
@@ -887,14 +887,14 @@ function isPunctuator (ch: Number): Boolean {
     ch > 122 && ch < 127;
 }
 
-function isExpressionPunctuator (ch: Number): Boolean {
+function isExpressionPunctuator (ch: number): boolean {
   // 20 possible expression endings: !%&(*+,-.:;<=>?[^{|~
   return ch === 33/*!*/ || ch === 37/*%*/ || ch === 38/*&*/ ||
     ch > 39 && ch < 47 && ch !== 41 || ch > 57 && ch < 64 ||
     ch === 91/*[*/ || ch === 94/*^*/ || ch > 122 && ch < 127 && ch !== 125/*}*/;
 }
 
-function isExpressionTerminator (curPos: Number): Boolean {
+function isExpressionTerminator (curPos: number): boolean {
   // detects:
   // => ; ) finally catch else
   // as all of these followed by a { will indicate a statement brace

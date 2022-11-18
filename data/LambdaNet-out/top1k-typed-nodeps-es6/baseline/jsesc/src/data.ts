@@ -2,14 +2,14 @@
 
 import regenerate from 'regenerate';
 
-const set: Array = regenerate()
+const set: any[] = regenerate()
 	.addRange(0x20, 0x7E) // printable ASCII symbols
 	.remove('"')          // not `"`
 	.remove('\'')         // not `'`
 	.remove('\\')         // not `\`
 	.remove('`');         // not '`'
 
-const whitespace: Array = regenerate()
+const whitespace: any[] = regenerate()
 	.add(require('unicode-13.0.0/General_Category/Space_Separator/code-points.js'))
 	.removeRange(0x20, 0x7E) // printable ASCII symbols
 	.add(0x2028, 0x2029);

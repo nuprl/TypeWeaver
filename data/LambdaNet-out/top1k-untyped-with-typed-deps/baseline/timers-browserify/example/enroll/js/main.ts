@@ -1,6 +1,6 @@
-var timers: String = require('timers');
+var timers: string = require('timers');
 
-var obj: Object = {
+var obj: object = {
   _onTimeout: function() {
     console.log('Timer ran for: ' + (new Date().getTime() - obj.now) + ' ms');
   },

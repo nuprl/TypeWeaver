@@ -17,7 +17,7 @@ import baseEachRight from './.internal/baseEachRight.js'
  * forEachRight([1, 2], value => console.log(value))
  * // => Logs `2` then `1`.
  */
-function forEachRight(collection: Array, iteratee: String): Promise {
+function forEachRight(collection: any[], iteratee: string): Promise {
   const func: Function = Array.isArray(collection) ? arrayEachRight : baseEachRight
   return func(collection, iteratee)
 }

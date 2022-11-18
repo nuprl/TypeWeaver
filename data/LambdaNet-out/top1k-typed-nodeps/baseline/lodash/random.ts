@@ -33,7 +33,7 @@ const freeParseFloat: Promise = parseFloat
  * random(1.2, 5.2)
  * // => a floating-point number between 1.2 and 5.2
  */
-function random(lower: Number, upper: Number, floating: Number): Number {
+function random(lower: number, upper: number, floating: number): number {
   if (floating === undefined) {
     if (typeof upper === 'boolean') {
       floating = upper
@@ -58,13 +58,13 @@ function random(lower: Number, upper: Number, floating: Number): Number {
     }
   }
   if (lower > upper) {
-    const temp: Number = lower
+    const temp: number = lower
     lower = upper
     upper = temp
   }
   if (floating || lower % 1 || upper % 1) {
-    const rand: Number = Math.random()
-    const randLength: Number = `${rand}`.length - 1
+    const rand: number = Math.random()
+    const randLength: number = `${rand}`.length - 1
     return Math.min(lower + (rand * (upper - lower + freeParseFloat(`1e-${randLength}`))), upper)
   }
   return lower + Math.floor(Math.random() * (upper - lower + 1))

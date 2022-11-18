@@ -1,11 +1,11 @@
 'use strict';
 
 var assert: Function = require('minimalistic-assert');
-var inherits: String = require('inherits');
+var inherits: string = require('inherits');
 
 exports.inherits = inherits;
 
-function isSurrogatePair(msg: String, i: Number): Boolean {
+function isSurrogatePair(msg: string, i: number): boolean {
   if ((msg.charCodeAt(i) & 0xFC00) !== 0xD800) {
     return false;
   }
@@ -15,21 +15,21 @@ function isSurrogatePair(msg: String, i: Number): Boolean {
   return (msg.charCodeAt(i + 1) & 0xFC00) === 0xDC00;
 }
 
-function toArray(msg: String, enc: Boolean): Array {
+function toArray(msg: string, enc: boolean): any[] {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
     return [];
-  var res: Array = [];
+  var res: any[] = [];
   if (typeof msg === 'string') {
     if (!enc) {
       // Inspired by stringToUtf8ByteArray() in closure-library by Google
       // https://github.com/google/closure-library/blob/8598d87242af59aac233270742c8984e2b2bdbe0/closure/goog/crypt/crypt.js#L117-L143
       // Apache License 2.0
       // https://github.com/google/closure-library/blob/master/LICENSE
-      var p: Number = 0;
+      var p: number = 0;
       for (var i = 0; i < msg.length; i++) {
-        var c: Number = msg.charCodeAt(i);
+        var c: number = msg.charCodeAt(i);
         if (c < 128) {
           res[p++] = c;
         } else if (c < 2048) {
@@ -62,16 +62,16 @@ function toArray(msg: String, enc: Boolean): Array {
 }
 exports.toArray = toArray;
 
-function toHex(msg: Array): String {
-  var res: String = '';
+function toHex(msg: any[]): string {
+  var res: string = '';
   for (var i = 0; i < msg.length; i++)
     res += zero2(msg[i].toString(16));
   return res;
 }
 exports.toHex = toHex;
 
-function htonl(w: Number): Number {
-  var res: Number = (w >>> 24) |
+function htonl(w: number): number {
+  var res: number = (w >>> 24) |
             ((w >>> 8) & 0xff00) |
             ((w << 8) & 0xff0000) |
             ((w & 0xff) << 24);
@@ -79,10 +79,10 @@ function htonl(w: Number): Number {
 }
 exports.htonl = htonl;
 
-function toHex32(msg: Array, endian: Number): String {
-  var res: String = '';
+function toHex32(msg: any[], endian: number): string {
+  var res: string = '';
   for (var i = 0; i < msg.length; i++) {
-    var w: String = msg[i];
+    var w: string = msg[i];
     if (endian === 'little')
       w = htonl(w);
     res += zero8(w.toString(16));
@@ -91,7 +91,7 @@ function toHex32(msg: Array, endian: Number): String {
 }
 exports.toHex32 = toHex32;
 
-function zero2(word: String): String {
+function zero2(word: string): string {
   if (word.length === 1)
     return '0' + word;
   else
@@ -99,7 +99,7 @@ function zero2(word: String): String {
 }
 exports.zero2 = zero2;
 
-function zero8(word: String): String {
+function zero8(word: string): string {
   if (word.length === 7)
     return '0' + word;
   else if (word.length === 6)
@@ -119,12 +119,12 @@ function zero8(word: String): String {
 }
 exports.zero8 = zero8;
 
-function join32(msg: Object, start: Number, end: Number, endian: Number): Array {
-  var len: Number = end - start;
+function join32(msg: object, start: number, end: number, endian: number): any[] {
+  var len: number = end - start;
   assert(len % 4 === 0);
-  var res: Array = new Array(len / 4);
+  var res: any[] = new Array(len / 4);
   for (var i = 0, k = start; i < res.length; i++, k += 4) {
-    var w: Number;
+    var w: number;
     if (endian === 'big')
       w = (msg[k] << 24) | (msg[k + 1] << 16) | (msg[k + 2] << 8) | msg[k + 3];
     else
@@ -135,10 +135,10 @@ function join32(msg: Object, start: Number, end: Number, endian: Number): Array 
 }
 exports.join32 = join32;
 
-function split32(msg: Array, endian: Number): Object {
-  var res: Object = new Array(msg.length * 4);
+function split32(msg: any[], endian: number): object {
+  var res: object = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
-    var m: String = msg[i];
+    var m: string = msg[i];
     if (endian === 'big') {
       res[k] = m >>> 24;
       res[k + 1] = (m >>> 16) & 0xff;
@@ -155,63 +155,63 @@ function split32(msg: Array, endian: Number): Object {
 }
 exports.split32 = split32;
 
-function rotr32(w: Number, b: Number): Number {
+function rotr32(w: number, b: number): number {
   return (w >>> b) | (w << (32 - b));
 }
 exports.rotr32 = rotr32;
 
-function rotl32(w: Number, b: Number): Number {
+function rotl32(w: number, b: number): number {
   return (w << b) | (w >>> (32 - b));
 }
 exports.rotl32 = rotl32;
 
-function sum32(a: String, b: String): Number {
+function sum32(a: string, b: string): number {
   return (a + b) >>> 0;
 }
 exports.sum32 = sum32;
 
-function sum32_3(a: String, b: String, c: String): Number {
+function sum32_3(a: string, b: string, c: string): number {
   return (a + b + c) >>> 0;
 }
 exports.sum32_3 = sum32_3;
 
-function sum32_4(a: String, b: String, c: String, d: String): Number {
+function sum32_4(a: string, b: string, c: string, d: string): number {
   return (a + b + c + d) >>> 0;
 }
 exports.sum32_4 = sum32_4;
 
-function sum32_5(a: String, b: String, c: String, d: String, e: String): Number {
+function sum32_5(a: string, b: string, c: string, d: string, e: string): number {
   return (a + b + c + d + e) >>> 0;
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: Object, pos: Number, ah: String, al: Number): Void {
-  var bh: String = buf[pos];
-  var bl: String = buf[pos + 1];
+function sum64(buf: object, pos: number, ah: string, al: number): Void {
+  var bh: string = buf[pos];
+  var bl: string = buf[pos + 1];
 
-  var lo: Number = (al + bl) >>> 0;
-  var hi: String = (lo < al ? 1 : 0) + ah + bh;
+  var lo: number = (al + bl) >>> 0;
+  var hi: string = (lo < al ? 1 : 0) + ah + bh;
   buf[pos] = hi >>> 0;
   buf[pos + 1] = lo;
 }
 exports.sum64 = sum64;
 
-function sum64_hi(ah: String, al: Number, bh: Number, bl: Number): Number {
-  var lo: Number = (al + bl) >>> 0;
-  var hi: String = (lo < al ? 1 : 0) + ah + bh;
+function sum64_hi(ah: string, al: number, bh: number, bl: number): number {
+  var lo: number = (al + bl) >>> 0;
+  var hi: string = (lo < al ? 1 : 0) + ah + bh;
   return hi >>> 0;
 }
 exports.sum64_hi = sum64_hi;
 
-function sum64_lo(ah: Function, al: Number, bh: Function, bl: Number): Number {
-  var lo: String = al + bl;
+function sum64_lo(ah: Function, al: number, bh: Function, bl: number): number {
+  var lo: string = al + bl;
   return lo >>> 0;
 }
 exports.sum64_lo = sum64_lo;
 
-function sum64_4_hi(ah: String, al: String, bh: String, bl: String, ch: String, cl: String, dh: String, dl: String): Number {
-  var carry: Number = 0;
-  var lo: Number = al;
+function sum64_4_hi(ah: string, al: string, bh: string, bl: string, ch: string, cl: string, dh: string, dl: string): number {
+  var carry: number = 0;
+  var lo: number = al;
   lo = (lo + bl) >>> 0;
   carry += lo < al ? 1 : 0;
   lo = (lo + cl) >>> 0;
@@ -219,20 +219,20 @@ function sum64_4_hi(ah: String, al: String, bh: String, bl: String, ch: String, 
   lo = (lo + dl) >>> 0;
   carry += lo < dl ? 1 : 0;
 
-  var hi: String = ah + bh + ch + dh + carry;
+  var hi: string = ah + bh + ch + dh + carry;
   return hi >>> 0;
 }
 exports.sum64_4_hi = sum64_4_hi;
 
-function sum64_4_lo(ah: Function, al: String, bh: Function, bl: String, ch: String, cl: String, dh: Function, dl: String): Number {
-  var lo: String = al + bl + cl + dl;
+function sum64_4_lo(ah: Function, al: string, bh: Function, bl: string, ch: string, cl: string, dh: Function, dl: string): number {
+  var lo: string = al + bl + cl + dl;
   return lo >>> 0;
 }
 exports.sum64_4_lo = sum64_4_lo;
 
-function sum64_5_hi(ah: String, al: String, bh: String, bl: String, ch: String, cl: String, dh: String, dl: String, eh: String, el: String): Number {
-  var carry: Number = 0;
-  var lo: Number = al;
+function sum64_5_hi(ah: string, al: string, bh: string, bl: string, ch: string, cl: string, dh: string, dl: string, eh: string, el: string): number {
+  var carry: number = 0;
+  var lo: number = al;
   lo = (lo + bl) >>> 0;
   carry += lo < al ? 1 : 0;
   lo = (lo + cl) >>> 0;
@@ -242,37 +242,37 @@ function sum64_5_hi(ah: String, al: String, bh: String, bl: String, ch: String, 
   lo = (lo + el) >>> 0;
   carry += lo < el ? 1 : 0;
 
-  var hi: String = ah + bh + ch + dh + eh + carry;
+  var hi: string = ah + bh + ch + dh + eh + carry;
   return hi >>> 0;
 }
 exports.sum64_5_hi = sum64_5_hi;
 
-function sum64_5_lo(ah: Function, al: String, bh: Function, bl: String, ch: String, cl: String, dh: Function, dl: String, eh: Function, el: String): Number {
-  var lo: String = al + bl + cl + dl + el;
+function sum64_5_lo(ah: Function, al: string, bh: Function, bl: string, ch: string, cl: string, dh: Function, dl: string, eh: Function, el: string): number {
+  var lo: string = al + bl + cl + dl + el;
 
   return lo >>> 0;
 }
 exports.sum64_5_lo = sum64_5_lo;
 
-function rotr64_hi(ah: String, al: Number, num: Number): Number {
-  var r: Number = (al << (32 - num)) | (ah >>> num);
+function rotr64_hi(ah: string, al: number, num: number): number {
+  var r: number = (al << (32 - num)) | (ah >>> num);
   return r >>> 0;
 }
 exports.rotr64_hi = rotr64_hi;
 
-function rotr64_lo(ah: Number, al: Number, num: Number): Number {
-  var r: Number = (ah << (32 - num)) | (al >>> num);
+function rotr64_lo(ah: number, al: number, num: number): number {
+  var r: number = (ah << (32 - num)) | (al >>> num);
   return r >>> 0;
 }
 exports.rotr64_lo = rotr64_lo;
 
-function shr64_hi(ah: String, al: Function, num: Number): Number {
+function shr64_hi(ah: string, al: Function, num: number): number {
   return ah >>> num;
 }
 exports.shr64_hi = shr64_hi;
 
-function shr64_lo(ah: Number, al: Number, num: Number): Number {
-  var r: Number = (ah << (32 - num)) | (al >>> num);
+function shr64_lo(ah: number, al: number, num: number): number {
+  var r: number = (ah << (32 - num)) | (al >>> num);
   return r >>> 0;
 }
 exports.shr64_lo = shr64_lo;

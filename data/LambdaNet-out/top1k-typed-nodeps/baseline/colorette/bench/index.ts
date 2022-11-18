@@ -7,7 +7,7 @@ import colors from "colors"
 import picocolors from "picocolors"
 import ansicolors from "ansi-colors"
 
-const test: Function = (c: Object) =>
+const test: Function = (c: object) =>
   c.red(`${c.bold(`${c.cyan(`${c.yellow("yellow")}cyan`)}`)}red`)
 
 new bench.Suite()

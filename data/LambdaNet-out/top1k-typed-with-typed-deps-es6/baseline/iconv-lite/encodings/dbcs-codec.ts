@@ -7,19 +7,19 @@ import { Buffer } from 'safer-buffer';
 
 export const _dbcs: Function = DBCSCodec;
 
-var UNASSIGNED: Number = -1,
-    GB18030_CODE: Number = -2,
-    SEQ_START: Number  = -10,
-    NODE_START: Number = -1000,
-    UNASSIGNED_NODE: Array = new Array(0x100),
-    DEF_CHAR: Number = -1;
+var UNASSIGNED: number = -1,
+    GB18030_CODE: number = -2,
+    SEQ_START: number  = -10,
+    NODE_START: number = -1000,
+    UNASSIGNED_NODE: any[] = new Array(0x100),
+    DEF_CHAR: number = -1;
 
 for (var i = 0; i < 0x100; i++)
     UNASSIGNED_NODE[i] = UNASSIGNED;
 
 
 // Class DBCSCodec reads and initializes mapping tables.
-function DBCSCodec(codecOptions: Object, iconv: Object): Void {
+function DBCSCodec(codecOptions: object, iconv: object): Void {
     this.encodingName = codecOptions.encodingName;
     if (!codecOptions)
         throw new Error("DBCS codec is called without the data.")
@@ -27,7 +27,7 @@ function DBCSCodec(codecOptions: Object, iconv: Object): Void {
         throw new Error("Encoding '" + this.encodingName + "' has no data.");
 
     // Load tables.
-    var mappingTable: Array = codecOptions.table();
+    var mappingTable: any[] = codecOptions.table();
 
 
     // Decode tables: MBCS -> Unicode.
@@ -54,16 +54,16 @@ function DBCSCodec(codecOptions: Object, iconv: Object): Void {
         this.gb18030 = codecOptions.gb18030(); // Load GB18030 ranges.
 
         // Add GB18030 common decode nodes.
-        var commonThirdByteNodeIdx: Number = this.decodeTables.length;
+        var commonThirdByteNodeIdx: number = this.decodeTables.length;
         this.decodeTables.push(UNASSIGNED_NODE.slice(0));
 
-        var commonFourthByteNodeIdx: Number = this.decodeTables.length;
+        var commonFourthByteNodeIdx: number = this.decodeTables.length;
         this.decodeTables.push(UNASSIGNED_NODE.slice(0));
 
         // Fill out the tree
-        var firstByteNode: Object = this.decodeTables[0];
+        var firstByteNode: object = this.decodeTables[0];
         for (var i = 0x81; i <= 0xFE; i++) {
-            var secondByteNode: Object = this.decodeTables[NODE_START - firstByteNode[i]];
+            var secondByteNode: object = this.decodeTables[NODE_START - firstByteNode[i]];
             for (var j = 0x30; j <= 0x39; j++) {
                 if (secondByteNode[j] === UNASSIGNED) {
                     secondByteNode[j] = NODE_START - commonThirdByteNodeIdx;
@@ -71,7 +71,7 @@ function DBCSCodec(codecOptions: Object, iconv: Object): Void {
                     throw new Error("gb18030 decode tables conflict at byte 2");
                 }
 
-                var thirdByteNode: Object = this.decodeTables[NODE_START - secondByteNode[j]];
+                var thirdByteNode: object = this.decodeTables[NODE_START - secondByteNode[j]];
                 for (var k = 0x81; k <= 0xFE; k++) {
                     if (thirdByteNode[k] === UNASSIGNED) {
                         thirdByteNode[k] = NODE_START - commonFourthByteNodeIdx;
@@ -81,7 +81,7 @@ function DBCSCodec(codecOptions: Object, iconv: Object): Void {
                         throw new Error("gb18030 decode tables conflict at byte 3");
                     }
 
-                    var fourthByteNode: Object = this.decodeTables[NODE_START - thirdByteNode[k]];
+                    var fourthByteNode: object = this.decodeTables[NODE_START - thirdByteNode[k]];
                     for (var l = 0x30; l <= 0x39; l++) {
                         if (fourthByteNode[l] === UNASSIGNED)
                             fourthByteNode[l] = GB18030_CODE;
@@ -110,10 +110,10 @@ function DBCSCodec(codecOptions: Object, iconv: Object): Void {
     this.encodeTableSeq = [];
 
     // Some chars can be decoded, but need not be encoded.
-    var skipEncodeChars: Object = {};
+    var skipEncodeChars: object = {};
     if (codecOptions.encodeSkipVals)
         for (var i = 0; i < codecOptions.encodeSkipVals.length; i++) {
-            var val: Object = codecOptions.encodeSkipVals[i];
+            var val: object = codecOptions.encodeSkipVals[i];
             if (typeof val === 'number')
                 skipEncodeChars[val] = true;
             else
@@ -140,16 +140,16 @@ DBCSCodec.prototype.encoder = DBCSEncoder;
 DBCSCodec.prototype.decoder = DBCSDecoder;
 
 // Decoder helpers
-DBCSCodec.prototype._getDecodeTrieNode = function(addr: Number) {
-    var bytes: Array = [];
+DBCSCodec.prototype._getDecodeTrieNode = function(addr: number) {
+    var bytes: any[] = [];
     for (; addr > 0; addr >>>= 8)
         bytes.push(addr & 0xFF);
     if (bytes.length == 0)
         bytes.push(0);
 
-    var node: Object = this.decodeTables[0];
+    var node: object = this.decodeTables[0];
     for (var i = bytes.length-1; i > 0; i--) { // Traverse nodes deeper into the trie.
-        var val: Number = node[bytes[i]];
+        var val: number = node[bytes[i]];
 
         if (val == UNASSIGNED) { // Create new node.
             node[bytes[i]] = NODE_START - this.decodeTables.length;
@@ -165,30 +165,30 @@ DBCSCodec.prototype._getDecodeTrieNode = function(addr: Number) {
 }
 
 
-DBCSCodec.prototype._addDecodeChunk = function(chunk: Array) {
+DBCSCodec.prototype._addDecodeChunk = function(chunk: any[]) {
     // First element of chunk is the hex mbcs code where we start.
-    var curAddr: Number = parseInt(chunk[0], 16);
+    var curAddr: number = parseInt(chunk[0], 16);
 
     // Choose the decoding node where we'll write our chars.
-    var writeTable: Object = this._getDecodeTrieNode(curAddr);
+    var writeTable: object = this._getDecodeTrieNode(curAddr);
     curAddr = curAddr & 0xFF;
 
     // Write all other elements of the chunk to the table.
     for (var k = 1; k < chunk.length; k++) {
-        var part: String = chunk[k];
+        var part: string = chunk[k];
         if (typeof part === "string") { // String, write as-is.
             for (var l = 0; l < part.length;) {
-                var code: Number = part.charCodeAt(l++);
+                var code: number = part.charCodeAt(l++);
                 if (0xD800 <= code && code < 0xDC00) { // Decode surrogate
-                    var codeTrail: Number = part.charCodeAt(l++);
+                    var codeTrail: number = part.charCodeAt(l++);
                     if (0xDC00 <= codeTrail && codeTrail < 0xE000)
                         writeTable[curAddr++] = 0x10000 + (code - 0xD800) * 0x400 + (codeTrail - 0xDC00);
                     else
                         throw new Error("Incorrect surrogate pair in "  + this.encodingName + " at chunk " + chunk[0]);
                 }
                 else if (0x0FF0 < code && code <= 0x0FFF) { // Character sequence (our own encoding used)
-                    var len: String = 0xFFF - code + 2;
-                    var seq: Array = [];
+                    var len: string = 0xFFF - code + 2;
+                    var seq: any[] = [];
                     for (var m = 0; m < len; m++)
                         seq.push(part.charCodeAt(l++)); // Simple variation: don't support surrogates or subsequences in seq.
 
@@ -200,7 +200,7 @@ DBCSCodec.prototype._addDecodeChunk = function(chunk: Array) {
             }
         } 
         else if (typeof part === "number") { // Integer, meaning increasing sequence starting with prev character.
-            var charCode: Number = writeTable[curAddr - 1] + 1;
+            var charCode: number = writeTable[curAddr - 1] + 1;
             for (var l = 0; l < part; l++)
                 writeTable[curAddr++] = charCode++;
         }
@@ -212,30 +212,30 @@ DBCSCodec.prototype._addDecodeChunk = function(chunk: Array) {
 }
 
 // Encoder helpers
-DBCSCodec.prototype._getEncodeBucket = function(uCode: Number) {
-    var high: Number = uCode >> 8; // This could be > 0xFF because of astral characters.
+DBCSCodec.prototype._getEncodeBucket = function(uCode: number) {
+    var high: number = uCode >> 8; // This could be > 0xFF because of astral characters.
     if (this.encodeTable[high] === undefined)
         this.encodeTable[high] = UNASSIGNED_NODE.slice(0); // Create bucket on demand.
     return this.encodeTable[high];
 }
 
-DBCSCodec.prototype._setEncodeChar = function(uCode: Number, dbcsCode: String) {
-    var bucket: Object = this._getEncodeBucket(uCode);
-    var low: Number = uCode & 0xFF;
+DBCSCodec.prototype._setEncodeChar = function(uCode: number, dbcsCode: string) {
+    var bucket: object = this._getEncodeBucket(uCode);
+    var low: number = uCode & 0xFF;
     if (bucket[low] <= SEQ_START)
         this.encodeTableSeq[SEQ_START-bucket[low]][DEF_CHAR] = dbcsCode; // There's already a sequence, set a single-char subsequence of it.
     else if (bucket[low] == UNASSIGNED)
         bucket[low] = dbcsCode;
 }
 
-DBCSCodec.prototype._setEncodeSequence = function(seq: Array, dbcsCode: String) {
+DBCSCodec.prototype._setEncodeSequence = function(seq: any[], dbcsCode: string) {
     
     // Get the root of character tree according to first character of the sequence.
-    var uCode: String = seq[0];
-    var bucket: Object = this._getEncodeBucket(uCode);
-    var low: Number = uCode & 0xFF;
+    var uCode: string = seq[0];
+    var bucket: object = this._getEncodeBucket(uCode);
+    var low: number = uCode & 0xFF;
 
-    var node: Object;
+    var node: object;
     if (bucket[low] <= SEQ_START) {
         // There's already a sequence with  - use it.
         node = this.encodeTableSeq[SEQ_START-bucket[low]];
@@ -250,7 +250,7 @@ DBCSCodec.prototype._setEncodeSequence = function(seq: Array, dbcsCode: String) 
 
     // Traverse the character tree, allocating new nodes as needed.
     for (var j = 1; j < seq.length-1; j++) {
-        var oldVal: Object = node[uCode];
+        var oldVal: object = node[uCode];
         if (typeof oldVal === 'object')
             node = oldVal;
         else {
@@ -265,13 +265,13 @@ DBCSCodec.prototype._setEncodeSequence = function(seq: Array, dbcsCode: String) 
     node[uCode] = dbcsCode;
 }
 
-DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: Array, prefix: String, skipEncodeChars: Object) {
-    var node: Object = this.decodeTables[nodeIdx];
-    var hasValues: Boolean = false;
-    var subNodeEmpty: Object = {};
+DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: any[], prefix: string, skipEncodeChars: object) {
+    var node: object = this.decodeTables[nodeIdx];
+    var hasValues: boolean = false;
+    var subNodeEmpty: object = {};
     for (var i = 0; i < 0x100; i++) {
-        var uCode: Number = node[i];
-        var mbCode: String = prefix + i;
+        var uCode: number = node[i];
+        var mbCode: string = prefix + i;
         if (skipEncodeChars[mbCode])
             continue;
 
@@ -279,9 +279,9 @@ DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: Array, prefix: String, 
             this._setEncodeChar(uCode, mbCode);
             hasValues = true;
         } else if (uCode <= NODE_START) {
-            var subNodeIdx: Number = NODE_START - uCode;
+            var subNodeIdx: number = NODE_START - uCode;
             if (!subNodeEmpty[subNodeIdx]) {  // Skip empty subtrees (they are too large in gb18030).
-                var newPrefix: Number = (mbCode << 8) >>> 0;  // NOTE: '>>> 0' keeps 32-bit num positive.
+                var newPrefix: number = (mbCode << 8) >>> 0;  // NOTE: '>>> 0' keeps 32-bit num positive.
                 if (this._fillEncodeTable(subNodeIdx, newPrefix, skipEncodeChars))
                     hasValues = true;
                 else
@@ -299,7 +299,7 @@ DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: Array, prefix: String, 
 
 // == Encoder ==================================================================
 
-function DBCSEncoder(options: Object, codec: Object): Void {
+function DBCSEncoder(options: object, codec: object): Void {
     // Encoder state
     this.leadSurrogate = -1;
     this.seqObj = undefined;
@@ -311,20 +311,20 @@ function DBCSEncoder(options: Object, codec: Object): Void {
     this.gb18030 = codec.gb18030;
 }
 
-DBCSEncoder.prototype.write = function(str: String) {
-    var newBuf: Array = Buffer.alloc(str.length * (this.gb18030 ? 4 : 3)),
-        leadSurrogate: Number = this.leadSurrogate,
-        seqObj: Object = this.seqObj, nextChar: Number = -1,
-        i: Number = 0, j: Number = 0;
+DBCSEncoder.prototype.write = function(str: string) {
+    var newBuf: any[] = Buffer.alloc(str.length * (this.gb18030 ? 4 : 3)),
+        leadSurrogate: number = this.leadSurrogate,
+        seqObj: object = this.seqObj, nextChar: number = -1,
+        i: number = 0, j: number = 0;
 
     while (true) {
         // 0. Get next character.
         if (nextChar === -1) {
             if (i == str.length) break;
-            var uCode: Number = str.charCodeAt(i++);
+            var uCode: number = str.charCodeAt(i++);
         }
         else {
-            var uCode: Number = nextChar;
+            var uCode: number = nextChar;
             nextChar = -1;    
         }
 
@@ -357,9 +357,9 @@ DBCSEncoder.prototype.write = function(str: String) {
         }
 
         // 2. Convert uCode character.
-        var dbcsCode: Number = UNASSIGNED;
+        var dbcsCode: number = UNASSIGNED;
         if (seqObj !== undefined && uCode != UNASSIGNED) { // We are in the middle of the sequence
-            var resCode: Number = seqObj[uCode];
+            var resCode: number = seqObj[uCode];
             if (typeof resCode === 'object') { // Sequence continues.
                 seqObj = resCode;
                 continue;
@@ -385,7 +385,7 @@ DBCSEncoder.prototype.write = function(str: String) {
             seqObj = undefined;
         }
         else if (uCode >= 0) {  // Regular character
-            var subtable: Object = this.encodeTable[uCode >> 8];
+            var subtable: object = this.encodeTable[uCode >> 8];
             if (subtable !== undefined)
                 dbcsCode = subtable[uCode & 0xFF];
             
@@ -396,9 +396,9 @@ DBCSEncoder.prototype.write = function(str: String) {
 
             if (dbcsCode == UNASSIGNED && this.gb18030) {
                 // Use GB18030 algorithm to find character(s) to write.
-                var idx: String = findIdx(this.gb18030.uChars, uCode);
+                var idx: string = findIdx(this.gb18030.uChars, uCode);
                 if (idx != -1) {
-                    var dbcsCode: Number = this.gb18030.gbChars[idx] + (uCode - this.gb18030.uChars[idx]);
+                    var dbcsCode: number = this.gb18030.gbChars[idx] + (uCode - this.gb18030.uChars[idx]);
                     newBuf[j++] = 0x81 + Math.floor(dbcsCode / 12600); dbcsCode = dbcsCode % 12600;
                     newBuf[j++] = 0x30 + Math.floor(dbcsCode / 1260); dbcsCode = dbcsCode % 1260;
                     newBuf[j++] = 0x81 + Math.floor(dbcsCode / 10); dbcsCode = dbcsCode % 10;
@@ -440,10 +440,10 @@ DBCSEncoder.prototype.end = function() {
     if (this.leadSurrogate === -1 && this.seqObj === undefined)
         return; // All clean. Most often case.
 
-    var newBuf: Array = Buffer.alloc(10), j: Number = 0;
+    var newBuf: any[] = Buffer.alloc(10), j: number = 0;
 
     if (this.seqObj) { // We're in the sequence.
-        var dbcsCode: String = this.seqObj[DEF_CHAR];
+        var dbcsCode: string = this.seqObj[DEF_CHAR];
         if (dbcsCode !== undefined) { // Write beginning of the sequence.
             if (dbcsCode < 0x100) {
                 newBuf[j++] = dbcsCode;
@@ -473,7 +473,7 @@ DBCSEncoder.prototype.findIdx = findIdx;
 
 // == Decoder ==================================================================
 
-function DBCSDecoder(options: Object, codec: Object): Void {
+function DBCSDecoder(options: object, codec: object): Void {
     // Decoder state
     this.nodeIdx = 0;
     this.prevBytes = [];
@@ -485,18 +485,18 @@ function DBCSDecoder(options: Object, codec: Object): Void {
     this.gb18030 = codec.gb18030;
 }
 
-DBCSDecoder.prototype.write = function(buf: Array) {
-    var newBuf: Array = Buffer.alloc(buf.length*2),
-        nodeIdx: Number = this.nodeIdx, 
-        prevBytes: Array = this.prevBytes, prevOffset: Number = this.prevBytes.length,
-        seqStart: Number = -this.prevBytes.length, // idx of the start of current parsed sequence.
-        uCode: String;
+DBCSDecoder.prototype.write = function(buf: any[]) {
+    var newBuf: any[] = Buffer.alloc(buf.length*2),
+        nodeIdx: number = this.nodeIdx, 
+        prevBytes: any[] = this.prevBytes, prevOffset: number = this.prevBytes.length,
+        seqStart: number = -this.prevBytes.length, // idx of the start of current parsed sequence.
+        uCode: string;
 
     for (var i = 0, j = 0; i < buf.length; i++) {
-        var curByte: Number = (i >= 0) ? buf[i] : prevBytes[i + prevOffset];
+        var curByte: number = (i >= 0) ? buf[i] : prevBytes[i + prevOffset];
 
         // Lookup in current trie node.
-        var uCode: Number = this.decodeTables[nodeIdx][curByte];
+        var uCode: number = this.decodeTables[nodeIdx][curByte];
 
         if (uCode >= 0) { 
             // Normal character, just use it.
@@ -508,14 +508,14 @@ DBCSDecoder.prototype.write = function(buf: Array) {
         }
         else if (uCode === GB18030_CODE) {
             if (i >= 3) {
-                var ptr: String = (buf[i-3]-0x81)*12600 + (buf[i-2]-0x30)*1260 + (buf[i-1]-0x81)*10 + (curByte-0x30);
+                var ptr: string = (buf[i-3]-0x81)*12600 + (buf[i-2]-0x30)*1260 + (buf[i-1]-0x81)*10 + (curByte-0x30);
             } else {
-                var ptr: String = (prevBytes[i-3+prevOffset]-0x81)*12600 + 
+                var ptr: string = (prevBytes[i-3+prevOffset]-0x81)*12600 + 
                           (((i-2 >= 0) ? buf[i-2] : prevBytes[i-2+prevOffset])-0x30)*1260 + 
                           (((i-1 >= 0) ? buf[i-1] : prevBytes[i-1+prevOffset])-0x81)*10 + 
                           (curByte-0x30);
             }
-            var idx: String = findIdx(this.gb18030.gbChars, ptr);
+            var idx: string = findIdx(this.gb18030.gbChars, ptr);
             uCode = this.gb18030.uChars[idx] + ptr - this.gb18030.gbChars[idx];
         }
         else if (uCode <= NODE_START) { // Go to next trie node.
@@ -523,7 +523,7 @@ DBCSDecoder.prototype.write = function(buf: Array) {
             continue;
         }
         else if (uCode <= SEQ_START) { // Output a sequence of chars.
-            var seq: Array = this.decodeTableSeq[SEQ_START - uCode];
+            var seq: any[] = this.decodeTableSeq[SEQ_START - uCode];
             for (var k = 0; k < seq.length - 1; k++) {
                 uCode = seq[k];
                 newBuf[j++] = uCode & 0xFF;
@@ -537,7 +537,7 @@ DBCSDecoder.prototype.write = function(buf: Array) {
         // Write the character to buffer, handling higher planes using surrogate pair.
         if (uCode >= 0x10000) { 
             uCode -= 0x10000;
-            var uCodeLead: Number = 0xD800 | (uCode >> 10);
+            var uCodeLead: number = 0xD800 | (uCode >> 10);
             newBuf[j++] = uCodeLead & 0xFF;
             newBuf[j++] = uCodeLead >> 8;
 
@@ -559,13 +559,13 @@ DBCSDecoder.prototype.write = function(buf: Array) {
 }
 
 DBCSDecoder.prototype.end = function() {
-    var ret: String = '';
+    var ret: string = '';
 
     // Try to parse all remaining chars.
     while (this.prevBytes.length > 0) {
         // Skip 1 character in the buffer.
         ret += this.defaultCharUnicode;
-        var bytesArr: Array = this.prevBytes.slice(1);
+        var bytesArr: any[] = this.prevBytes.slice(1);
 
         // Parse remaining as usual.
         this.prevBytes = [];
@@ -580,13 +580,13 @@ DBCSDecoder.prototype.end = function() {
 }
 
 // Binary search for GB18030. Returns largest i such that table[i] <= val.
-function findIdx(table: Array, val: Number): Number {
+function findIdx(table: any[], val: number): number {
     if (table[0] > val)
         return -1;
 
-    var l: Number = 0, r: Number = table.length;
+    var l: number = 0, r: number = table.length;
     while (l < r-1) { // always table[l] <= val < table[r]
-        var mid: Number = l + ((r-l+1) >> 1);
+        var mid: number = l + ((r-l+1) >> 1);
         if (table[mid] <= val)
             l = mid;
         else

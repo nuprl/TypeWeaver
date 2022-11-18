@@ -21,19 +21,19 @@ import isArrayLikeObject from './isArrayLikeObject.js'
  * unzip(zipped)
  * // => [['a', 'b'], [1, 2], [true, false]]
  */
-function unzip(array: Array): Array {
+function unzip(array: any[]): any[] {
   if (!(array != null && array.length)) {
     return []
   }
-  let length: Number = 0
-  array = filter(array, (group: Array) => {
+  let length: number = 0
+  array = filter(array, (group: any[]) => {
     if (isArrayLikeObject(group)) {
       length = Math.max(group.length, length)
       return true
     }
   })
-  let index: Number = -1
-  const result: Object = new Array(length)
+  let index: number = -1
+  const result: object = new Array(length)
   while (++index < length) {
     result[index] = map(array, baseProperty(index))
   }

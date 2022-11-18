@@ -5,7 +5,7 @@
  *
  * @type {object} globalObject
  */
-var globalObject: String;
+var globalObject: string;
 
 /* istanbul ignore else */
 if (typeof global !== "undefined") {

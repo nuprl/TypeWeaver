@@ -1,9 +1,9 @@
-const Benchmark: String = require('benchmark');
+const Benchmark: string = require('benchmark');
 const suite: HTMLElement = new Benchmark.Suite();
 
-const array: Object = { boolean: true, number: true, string: true, symbol: true, undefined: true };
-const object: Array = ['boolean', 'number', 'string', 'symbol', 'undefined'];
-const values: Array = [
+const array: object = { boolean: true, number: true, string: true, symbol: true, undefined: true };
+const object: any[] = ['boolean', 'number', 'string', 'symbol', 'undefined'];
+const values: any[] = [
   'foo',
   1,
   function() {},
@@ -21,31 +21,31 @@ const values: Array = [
 ];
 
 suite
-  .add('current', () => values.forEach((v: String) => current(v)))
-  .add('if', () => values.forEach((v: Array) => isPrimitiveIf(v)))
-  .add('negation', () => values.forEach((v: String) => negation(v)))
-  .add('equals', () => values.forEach((v: Array) => isPrimitiveEquals(v)))
-  .add('equalsNot', () => values.forEach((v: Array) => isPrimitiveEqualsNot(v)))
-  .add('switch', () => values.forEach((v: Array) => isPrimitiveSwitch(v)))
-  .add('object', () => values.forEach((v: Array) => isPrimitiveObjectLookup(v)))
-  .add('object - in', () => values.forEach((v: Array) => isPrimitiveObjectIn(v)))
-  .add('object - own', () => values.forEach((v: Array) => isPrimitiveObjectOwn(v)))
-  .add('array', () => values.forEach((v: Array) => isPrimitiveArray(v)))
+  .add('current', () => values.forEach((v: string) => current(v)))
+  .add('if', () => values.forEach((v: any[]) => isPrimitiveIf(v)))
+  .add('negation', () => values.forEach((v: string) => negation(v)))
+  .add('equals', () => values.forEach((v: any[]) => isPrimitiveEquals(v)))
+  .add('equalsNot', () => values.forEach((v: any[]) => isPrimitiveEqualsNot(v)))
+  .add('switch', () => values.forEach((v: any[]) => isPrimitiveSwitch(v)))
+  .add('object', () => values.forEach((v: any[]) => isPrimitiveObjectLookup(v)))
+  .add('object - in', () => values.forEach((v: any[]) => isPrimitiveObjectIn(v)))
+  .add('object - own', () => values.forEach((v: any[]) => isPrimitiveObjectOwn(v)))
+  .add('array', () => values.forEach((v: any[]) => isPrimitiveArray(v)))
 
-  .on('cycle', (event: Object) => console.log(String(event.target)))
+  .on('cycle', (event: object) => console.log(String(event.target)))
   .on('complete', function() {
     console.log('Fastest is ' + this.filter('fastest').map('name'));
   })
   .run();
 
-function current(val: String): Boolean {
+function current(val: string): boolean {
   if (typeof val === 'object') {
     return val === null;
   }
   return typeof val !== 'function';
 }
 
-function negation(val: String): Boolean {
+function negation(val: string): boolean {
   if (val === null) {
     return true;
   }
@@ -58,7 +58,7 @@ function negation(val: String): Boolean {
   return true;
 }
 
-function isPrimitiveEquals(val: String): Boolean {
+function isPrimitiveEquals(val: string): boolean {
   return val === null || val === void 0
     || typeof val === 'string'
     || typeof val === 'number'
@@ -66,11 +66,11 @@ function isPrimitiveEquals(val: String): Boolean {
     || typeof val === 'symbol';
 }
 
-function isPrimitiveEqualsNot(val: Number): Boolean {
+function isPrimitiveEqualsNot(val: number): boolean {
   return val === null || val === void 0 || (typeof val !== 'function' && typeof val !== 'object');
 }
 
-function isPrimitiveIf(val: String): Boolean {
+function isPrimitiveIf(val: string): boolean {
   if (val === null
     || typeof val === 'boolean'
     || typeof val === 'number'
@@ -82,23 +82,23 @@ function isPrimitiveIf(val: String): Boolean {
   return false;
 }
 
-function isPrimitiveArray(val: String): Boolean {
+function isPrimitiveArray(val: string): boolean {
   return val === null || object.indexOf(typeof val) > -1;
 }
 
-function isPrimitiveObjectOwn(val: Number): Boolean {
+function isPrimitiveObjectOwn(val: number): boolean {
   return val === null || array.hasOwnProperty(typeof val);
 }
 
-function isPrimitiveObjectLookup(val: Number): Boolean {
+function isPrimitiveObjectLookup(val: number): boolean {
   return val === null || !!array[typeof val];
 }
 
-function isPrimitiveObjectIn(val: Number): Boolean {
+function isPrimitiveObjectIn(val: number): boolean {
   return val === null || (typeof val) in array;
 }
 
-function isPrimitiveSwitch(val: Number): Boolean {
+function isPrimitiveSwitch(val: number): boolean {
   switch (typeof val) {
     case 'boolean':
     case 'number':

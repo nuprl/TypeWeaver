@@ -7,12 +7,12 @@
 
 'use strict';
 
-module.exports = function repeat(ele: String, num: Function): Object {
+module.exports = function repeat(ele: string, num: Function): object {
   if (Array.prototype.fill) {
     return new Array(num).fill(ele);
   }
 
-  var arr: Object = new Array(num);
+  var arr: object = new Array(num);
 
   for (var i = 0; i < num; i++) {
     arr[i] = ele;

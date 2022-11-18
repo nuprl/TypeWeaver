@@ -20,10 +20,10 @@ import asap from './rsvp/asap';
 
 // defaults
 config.async = asap;
-config.after = (cb: Number) => setTimeout(cb, 0);
-const cast: Array = resolve;
+config.after = (cb: number) => setTimeout(cb, 0);
+const cast: any[] = resolve;
 
-const async: Function = (callback: String, arg: String) => config.async(callback, arg);
+const async: Function = (callback: string, arg: string) => config.async(callback, arg);
 
 function on(): Void {
   config.on(...arguments);
@@ -35,7 +35,7 @@ function off(): Void {
 
 // Set up instrumentation through `window.__PROMISE_INTRUMENTATION__`
 if (typeof window !== 'undefined' && typeof window['__PROMISE_INSTRUMENTATION__'] === 'object') {
-  let callbacks: Object = window['__PROMISE_INSTRUMENTATION__'];
+  let callbacks: object = window['__PROMISE_INSTRUMENTATION__'];
   configure('instrument', true);
   for (let eventName in callbacks) {
     if (callbacks.hasOwnProperty(eventName)) {

@@ -1,6 +1,6 @@
 import {diffLines} from '../diff/line';
 
-export function structuredPatch(oldFileName: String, newFileName: String, oldStr: String, newStr: String, oldHeader: String, newHeader: String, options: Object): Object {
+export function structuredPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: object): object {
   if (!options) {
     options = {};
   }
@@ -8,29 +8,29 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
     options.context = 4;
   }
 
-  const diff: Array = diffLines(oldStr, newStr, options);
+  const diff: any[] = diffLines(oldStr, newStr, options);
   if(!diff) {
     return;
   }
 
   diff.push({value: '', lines: []}); // Append an empty value to make cleanup easier
 
-  function contextLines(lines: Array): Array {
-    return lines.map(function(entry: String) { return ' ' + entry; });
+  function contextLines(lines: any[]): any[] {
+    return lines.map(function(entry: string) { return ' ' + entry; });
   }
 
-  let hunks: Array = [];
-  let oldRangeStart: Number = 0, newRangeStart: Number = 0, curRange: Array = [],
-      oldLine: Number = 1, newLine: Number = 1;
+  let hunks: any[] = [];
+  let oldRangeStart: number = 0, newRangeStart: number = 0, curRange: any[] = [],
+      oldLine: number = 1, newLine: number = 1;
   for (let i = 0; i < diff.length; i++) {
-    const current: Object = diff[i],
-          lines: Array = current.lines || current.value.replace(/\n$/, '').split('\n');
+    const current: object = diff[i],
+          lines: any[] = current.lines || current.value.replace(/\n$/, '').split('\n');
     current.lines = lines;
 
     if (current.added || current.removed) {
       // If we have previous context, start with that
       if (!oldRangeStart) {
-        const prev: String = diff[i - 1];
+        const prev: string = diff[i - 1];
         oldRangeStart = oldLine;
         newRangeStart = newLine;
 
@@ -42,7 +42,7 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
       }
 
       // Output our changes
-      curRange.push(... lines.map(function(entry: String) {
+      curRange.push(... lines.map(function(entry: string) {
         return (current.added ? '+' : '-') + entry;
       }));
 
@@ -61,10 +61,10 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
           curRange.push(... contextLines(lines));
         } else {
           // end the range and output
-          let contextSize: Number = Math.min(lines.length, options.context);
+          let contextSize: number = Math.min(lines.length, options.context);
           curRange.push(... contextLines(lines.slice(0, contextSize)));
 
-          let hunk: Object = {
+          let hunk: object = {
             oldStart: oldRangeStart,
             oldLines: (oldLine - oldRangeStart + contextSize),
             newStart: newRangeStart,
@@ -73,9 +73,9 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
           };
           if (i >= diff.length - 2 && lines.length <= options.context) {
             // EOF is inside this hunk
-            let oldEOFNewline: Boolean = ((/\n$/).test(oldStr));
-            let newEOFNewline: Boolean = ((/\n$/).test(newStr));
-            let noNlBeforeAdds: Boolean = lines.length == 0 && curRange.length > hunk.oldLines;
+            let oldEOFNewline: boolean = ((/\n$/).test(oldStr));
+            let newEOFNewline: boolean = ((/\n$/).test(newStr));
+            let noNlBeforeAdds: boolean = lines.length == 0 && curRange.length > hunk.oldLines;
             if (!oldEOFNewline && noNlBeforeAdds && oldStr.length > 0) {
               // special case: old has no eol and no trailing context; no-nl can end up before adds
               // however, if the old file is empty, do not output the no-nl line
@@ -104,8 +104,8 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
   };
 }
 
-export function formatPatch(diff: Object): String {
-  const ret: Array = [];
+export function formatPatch(diff: object): string {
+  const ret: any[] = [];
   if (diff.oldFileName == diff.newFileName) {
     ret.push('Index: ' + diff.oldFileName);
   }
@@ -114,7 +114,7 @@ export function formatPatch(diff: Object): String {
   ret.push('+++ ' + diff.newFileName + (typeof diff.newHeader === 'undefined' ? '' : '\t' + diff.newHeader));
 
   for (let i = 0; i < diff.hunks.length; i++) {
-    const hunk: String = diff.hunks[i];
+    const hunk: string = diff.hunks[i];
     // Unified Diff Format quirk: If the chunk size is 0,
     // the first number is one lower than one would expect.
     // https://www.artima.com/weblogs/viewpost.jsp?thread=164293
@@ -135,10 +135,10 @@ export function formatPatch(diff: Object): String {
   return ret.join('\n') + '\n';
 }
 
-export function createTwoFilesPatch(oldFileName: String, newFileName: String, oldStr: String, newStr: Number, oldHeader: Number, newHeader: Number, options: Object): String {
+export function createTwoFilesPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: number, oldHeader: number, newHeader: number, options: object): string {
   return formatPatch(structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options));
 }
 
-export function createPatch(fileName: String, oldStr: String, newStr: String, oldHeader: String, newHeader: Number, options: Object): String {
+export function createPatch(fileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: number, options: object): string {
   return createTwoFilesPatch(fileName, fileName, oldStr, newStr, oldHeader, newHeader, options);
 }

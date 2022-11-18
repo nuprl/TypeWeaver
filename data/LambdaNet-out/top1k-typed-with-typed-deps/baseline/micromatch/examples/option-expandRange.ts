@@ -1,7 +1,7 @@
 'use strict';
 
-const fill: String = require('fill-range');
-const micromatch: String = require('..');
+const fill: string = require('fill-range');
+const micromatch: string = require('..');
 const regex: HTMLElement = micromatch.makeRe('foo/{01..25}/bar', {
   expandRange(a, b) {
     return `(${fill(a, b, { toRegex: true })})`;

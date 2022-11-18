@@ -1,1 +1,1 @@
-export let nanoid: Function=(t: Array=21)=>crypto.getRandomValues(new Uint8Array(t)).reduce(((t: Number,e: Number)=>t+=(e&=63)<36?e.toString(36):e<62?(e-26).toString(36).toUpperCase():e>62?"-":"_"),"");
+export let nanoid: Function=(t: any[]=21)=>crypto.getRandomValues(new Uint8Array(t)).reduce(((t: number,e: number)=>t+=(e&=63)<36?e.toString(36):e<62?(e-26).toString(36).toUpperCase():e>62?"-":"_"),"");

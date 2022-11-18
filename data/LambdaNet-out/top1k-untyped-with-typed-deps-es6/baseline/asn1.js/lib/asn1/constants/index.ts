@@ -3,15 +3,15 @@
 const constants: RegExp = exports;
 
 // Helper
-constants._reverse = function reverse(map: Object): Object {
-  const res: Object = {};
+constants._reverse = function reverse(map: object): object {
+  const res: object = {};
 
-  Object.keys(map).forEach(function(key: Number) {
+  Object.keys(map).forEach(function(key: number) {
     // Convert key to integer if it is stringified
     if ((key | 0) == key)
       key = key | 0;
 
-    const value: String = map[key];
+    const value: string = map[key];
     res[value] = key;
   });
 

@@ -3,7 +3,7 @@
  * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
  */
 const reRegExpChar: RegExp = /[\\^$.*+?()[\]{}|]/g
-const reHasRegExpChar: Number = RegExp(reRegExpChar.source)
+const reHasRegExpChar: number = RegExp(reRegExpChar.source)
 
 /**
  * Escapes the `RegExp` special characters "^", "$", "\", ".", "*", "+",
@@ -19,7 +19,7 @@ const reHasRegExpChar: Number = RegExp(reRegExpChar.source)
  * escapeRegExp('[lodash](https://lodash.com/)')
  * // => '\[lodash\]\(https://lodash\.com/\)'
  */
-function escapeRegExp(string: String): String {
+function escapeRegExp(string: string): string {
   return (string && reHasRegExpChar.test(string))
     ? string.replace(reRegExpChar, '\\$&')
     : (string || '')

@@ -7,7 +7,7 @@
  *
  * @param {Map<string, string>} fileOverrides
  */
-module.exports = ( fileOverrides: String ) => {
+module.exports = ( fileOverrides: string ) => {
 	return {
 		name: "jquery-file-overrides",
 		load( id ) {

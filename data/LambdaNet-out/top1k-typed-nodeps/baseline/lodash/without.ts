@@ -19,7 +19,7 @@ import isArrayLikeObject from './isArrayLikeObject.js'
  * without([2, 1, 2, 3], 1, 2)
  * // => [3]
  */
-function without(array: Array, ...values): Array {
+function without(array: any[], ...values): any[] {
   return isArrayLikeObject(array) ? baseDifference(array, values) : []
 }
 

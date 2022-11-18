@@ -1,10 +1,10 @@
 import { dirname } from 'path';
 
-const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) => {
+const mkdirpManual: Function = (path: string, opts: HTMLElement, made: string) => {
   opts.recursive = false
-  const parent: Number = dirname(path)
+  const parent: number = dirname(path)
   if (parent === path) {
-    return opts.mkdirAsync(path, opts).catch((er: Object) => {
+    return opts.mkdirAsync(path, opts).catch((er: object) => {
       // swallowed by recursive implementation on posix systems
       // any other error is a failure
       if (er.code !== 'EISDIR')
@@ -15,10 +15,10 @@ const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) =
   return opts.mkdirAsync(path, opts).then(() => made || path, (er: HTMLElement) => {
     if (er.code === 'ENOENT')
       return mkdirpManual(parent, opts)
-        .then((made: String) => mkdirpManual(path, opts, made))
+        .then((made: string) => mkdirpManual(path, opts, made))
     if (er.code !== 'EEXIST' && er.code !== 'EROFS')
       throw er
-    return opts.statAsync(path).then((st: Array) => {
+    return opts.statAsync(path).then((st: any[]) => {
       if (st.isDirectory())
         return made
       else
@@ -27,8 +27,8 @@ const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) =
   })
 }
 
-const mkdirpManualSync: Function = (path: String, opts: HTMLElement, made: String) => {
-  const parent: Number = dirname(path)
+const mkdirpManualSync: Function = (path: string, opts: HTMLElement, made: string) => {
+  const parent: number = dirname(path)
   opts.recursive = false
 
   if (parent === path) {

@@ -1,8 +1,8 @@
 console.log();
 
 import { bold, cyan, gray, green, red, symbols } from './';
-const good: String = green(symbols.check);
-const bad: String = red(symbols.cross);
+const good: string = green(symbols.check);
+const bad: string = red(symbols.cross);
 
 console.log(bold(`foo ${cyan.dim('bar')} baz`), good, gray('(ansi-colors)'));
 

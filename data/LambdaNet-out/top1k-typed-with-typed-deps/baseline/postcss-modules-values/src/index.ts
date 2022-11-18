@@ -1,16 +1,16 @@
 "use strict";
 
-const ICSSUtils: String = require("icss-utils");
+const ICSSUtils: string = require("icss-utils");
 
 const matchImports: RegExp = /^(.+?|\([\s\S]+?\))\s+from\s+("[^"]*"|'[^']*'|[\w-]+)$/;
 const matchValueDefinition: RegExp = /(?:\s+|^)([\w-]+):?(.*?)$/;
 const matchImport: RegExp = /^([\w-]+)(?:\s+as\s+([\w-]+))?/;
 
-module.exports = (options: Object) => {
-  let importIndex: Number = 0;
-  const createImportedName: String =
+module.exports = (options: object) => {
+  let importIndex: number = 0;
+  const createImportedName: string =
     (options && options.createImportedName) ||
-    ((importName: String /*, path*/) =>
+    ((importName: string /*, path*/) =>
       `i__const_${importName.replace(/\W/g, "_")}_${importIndex++}`);
 
   return {

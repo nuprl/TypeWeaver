@@ -1,7 +1,7 @@
 "use strict";
 
-const atob: String = require("./lib/atob");
-const btoa: String = require("./lib/btoa");
+const atob: string = require("./lib/atob");
+const btoa: string = require("./lib/btoa");
 
 module.exports = {
   atob,

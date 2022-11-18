@@ -27,14 +27,14 @@ const {replace} = '';
 const es: RegExp = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34);/g;
 const ca: RegExp = /[&<>'"]/g;
 
-const esca: Object = {
+const esca: object = {
   '&': '&amp;',
   '<': '&lt;',
   '>': '&gt;',
   "'": '&#39;',
   '"': '&quot;'
 };
-const pe: Function = (m: Array) => esca[m];
+const pe: Function = (m: any[]) => esca[m];
 
 /**
  * Safely escape HTML entities such as `&`, `<`, `>`, `"`, and `'`.
@@ -43,12 +43,12 @@ const pe: Function = (m: Array) => esca[m];
  *  the input type is unexpected, except for boolean and numbers,
  *  converted as string.
  */
-const escape: Function = (es: Array) => replace.call(es, ca, pe);
+const escape: Function = (es: any[]) => replace.call(es, ca, pe);
 exports.escape = escape;
 
 
 // unescape
-const unes: Object = {
+const unes: object = {
   '&amp;': '&',
   '&#38;': '&',
   '&lt;': '<',
@@ -60,7 +60,7 @@ const unes: Object = {
   '&quot;': '"',
   '&#34;': '"'
 };
-const cape: Function = (m: String) => unes[m];
+const cape: Function = (m: string) => unes[m];
 
 /**
  * Safely unescape previously escaped entities such as `&`, `<`, `>`, `"`,
@@ -70,5 +70,5 @@ const cape: Function = (m: String) => unes[m];
  *  the input type is unexpected, except for boolean and numbers,
  *  converted as string.
  */
-const unescape: Function = (un: String) => replace.call(un, es, cape);
+const unescape: Function = (un: string) => replace.call(un, es, cape);
 exports.unescape = unescape;

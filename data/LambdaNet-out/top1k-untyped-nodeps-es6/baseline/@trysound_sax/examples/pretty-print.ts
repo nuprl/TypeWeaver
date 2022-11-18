@@ -2,7 +2,7 @@ import sax from '../lib/sax';
 import fs from 'fs';
 var printer: HTMLElement = sax.createStream(false, {lowercasetags: true, trim: true});
 
-function entity (str: String): String {
+function entity (str: string): string {
   return str.replace('"', '&quot;')
 }
 
@@ -16,7 +16,7 @@ printer.indent = function () {
     }
   }
 }
-printer.on('opentag', function (tag: Object) {
+printer.on('opentag', function (tag: object) {
   this.indent()
   this.level++
   print('<' + tag.name)
@@ -28,28 +28,28 @@ printer.on('opentag', function (tag: Object) {
 
 printer.on('text', ontext)
 printer.on('doctype', ontext)
-function ontext (text: String): Void {
+function ontext (text: string): Void {
   this.indent()
   print(text)
 }
 
-printer.on('closetag', function (tag: String) {
+printer.on('closetag', function (tag: string) {
   this.level--
   this.indent()
   print('</' + tag + '>')
 })
 
-printer.on('cdata', function (data: String) {
+printer.on('cdata', function (data: string) {
   this.indent()
   print('<![CDATA[' + data + ']]>')
 })
 
-printer.on('comment', function (comment: Number) {
+printer.on('comment', function (comment: number) {
   this.indent()
   print('<!--' + comment + '-->')
 })
 
-printer.on('error', function (error: Object) {
+printer.on('error', function (error: object) {
   console.error(error)
   throw error
 })
@@ -58,10 +58,10 @@ if (!process.argv[2]) {
   throw new Error('Please provide an xml file to prettify\n' +
     'TODO: read from stdin or take a file')
 }
-var xmlfile: String = require('path').join(process.cwd(), process.argv[2])
-var fstr: Array = fs.createReadStream(xmlfile, { encoding: 'utf8' })
+var xmlfile: string = require('path').join(process.cwd(), process.argv[2])
+var fstr: any[] = fs.createReadStream(xmlfile, { encoding: 'utf8' })
 
-function print (c: String): Void {
+function print (c: string): Void {
   if (!process.stdout.write(c)) {
     fstr.pause()
   }

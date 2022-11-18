@@ -7,11 +7,11 @@ import isIE from "../var/isIE.js";
 import "../selector.js";
 
 jQuery.fn.extend( {
-	attr: function( name: String, value: String ) {
+	attr: function( name: string, value: string ) {
 		return access( this, jQuery.attr, name, value, arguments.length > 1 );
 	},
 
-	removeAttr: function( name: String ) {
+	removeAttr: function( name: string ) {
 		return this.each( function() {
 			jQuery.removeAttr( this, name );
 		} );
@@ -19,9 +19,9 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	attr: function( elem: HTMLElement, name: String, value: String ) {
-		var ret: String, hooks: Object,
-			nType: Number = elem.nodeType;
+	attr: function( elem: HTMLElement, name: string, value: string ) {
+		var ret: string, hooks: object,
+			nType: number = elem.nodeType;
 
 		// Don't get/set attributes on text, comment and attribute nodes
 		if ( nType === 3 || nType === 8 || nType === 2 ) {
@@ -66,13 +66,13 @@ jQuery.extend( {
 
 	attrHooks: {},
 
-	removeAttr: function( elem: HTMLElement, value: String ) {
-		var name: String,
-			i: Number = 0,
+	removeAttr: function( elem: HTMLElement, value: string ) {
+		var name: string,
+			i: number = 0,
 
 			// Attribute names can contain non-HTML whitespace characters
 			// https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
-			attrNames: Object = value && value.match( rnothtmlwhite );
+			attrNames: object = value && value.match( rnothtmlwhite );
 
 		if ( attrNames && elem.nodeType === 1 ) {
 			while ( ( name = attrNames[ i++ ] ) ) {
@@ -86,9 +86,9 @@ jQuery.extend( {
 // An input loses its value after becoming a radio
 if ( isIE ) {
 	jQuery.attrHooks.type = {
-		set: function( elem: Object, value: String ) {
+		set: function( elem: object, value: string ) {
 			if ( value === "radio" && nodeName( elem, "input" ) ) {
-				var val: Number = elem.value;
+				var val: number = elem.value;
 				elem.setAttribute( "type", value );
 				if ( val ) {
 					elem.value = val;
@@ -99,12 +99,12 @@ if ( isIE ) {
 	};
 }
 
-jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: String, name: String ) {
+jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: string, name: string ) {
 	jQuery.attrHooks[ name ] = {
-		get: function( elem: Object ) {
+		get: function( elem: object ) {
 			var ret: Function,
-				isXML: Boolean = jQuery.isXMLDoc( elem ),
-				lowercaseName: String = name.toLowerCase();
+				isXML: boolean = jQuery.isXMLDoc( elem ),
+				lowercaseName: string = name.toLowerCase();
 
 			if ( !isXML ) {
 				ret = elem.getAttribute( name ) != null ?
@@ -114,7 +114,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: String
 			return ret;
 		},
 
-		set: function( elem: Object, value: Number, name: String ) {
+		set: function( elem: object, value: number, name: string ) {
 			if ( value === false ) {
 
 				// Remove boolean attributes when set to false

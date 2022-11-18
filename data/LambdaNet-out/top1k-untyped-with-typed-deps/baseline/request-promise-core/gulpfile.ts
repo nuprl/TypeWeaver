@@ -1,20 +1,20 @@
 'use strict';
 
 var gulp: HTMLElement = require('gulp');
-var runSequence: Object = require('run-sequence');
+var runSequence: object = require('run-sequence');
 var istanbul: Function = require('gulp-istanbul');
 var mocha: Function = require('gulp-mocha');
-var chalk: Array = require('chalk');
+var chalk: any[] = require('chalk');
 var rimraf: Function = require('rimraf');
 var coveralls: Function = require('gulp-coveralls');
 var eslint: Function = require('gulp-eslint');
-var _: Array = require('lodash');
+var _: any[] = require('lodash');
 
-var chai: String = require('chai');
+var chai: string = require('chai');
 global.expect = chai.expect;
 
 
-var paths: Object = {
+var paths: object = {
     libJsFiles: ['./configure/**/*.js', './lib/**/*.js', './errors.js'],
     specFiles: './test/spec/**/*.js',
     fixtureFiles: './test/fixtures/**/*.js',
@@ -44,7 +44,7 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('validate', function (done: String) {
+gulp.task('validate', function (done: string) {
     runSequence('lint', 'test', done);
 });
 
@@ -65,7 +65,7 @@ gulp.task('lint', function () {
 
 gulp.task('test', ['clean'], function (done: Function) {
 
-    var coverageVariable: String = '$$cov_' + new Date().getTime() + '$$';
+    var coverageVariable: string = '$$cov_' + new Date().getTime() + '$$';
 
     gulp.src(paths.libJsFiles)
         .pipe(istanbul({
@@ -103,15 +103,15 @@ gulp.task('test-without-coverage', function () {
 
 gulp.task('clean', ['clean-coverage']);
 
-gulp.task('clean-coverage', function (done: Number) {
+gulp.task('clean-coverage', function (done: number) {
     rimraf('./coverage', done);
 });
 
-gulp.task('ci', function (done: Number) {
+gulp.task('ci', function (done: number) {
     runSequence('validate', 'coveralls', 'test-without-coverage', done);
 });
 
-gulp.task('ci-no-cov', function (done: String) {
+gulp.task('ci-no-cov', function (done: string) {
     runSequence('validate', 'test-without-coverage', done);
 });
 

@@ -1,7 +1,7 @@
 // call it on itself so we can test the export val for basic stuff
 export default colorSupport({ alwaysReturn: true }, colorSupport);
 
-function hasNone (obj: HTMLElement, options: Object): Boolean {
+function hasNone (obj: HTMLElement, options: object): boolean {
   obj.level = 0
   obj.hasBasic = false
   obj.has256 = false
@@ -36,7 +36,7 @@ function has16m (obj: HTMLElement): HTMLElement {
   return obj
 }
 
-function colorSupport (options: Object, obj: Object): String {
+function colorSupport (options: object, obj: object): string {
   options = options || {}
 
   obj = obj || {}
@@ -69,9 +69,9 @@ function colorSupport (options: Object, obj: Object): String {
   }
 
   var env: HTMLElement = options.env || process.env
-  var stream: Boolean = options.stream || process.stdout
-  var term: Number = options.term || env.TERM || ''
-  var platform: Number = options.platform || process.platform
+  var stream: boolean = options.stream || process.stdout
+  var term: number = options.term || env.TERM || ''
+  var platform: number = options.platform || process.platform
 
   if (!options.ignoreTTY && !stream.isTTY) {
     return hasNone(obj, options)
@@ -100,7 +100,7 @@ function colorSupport (options: Object, obj: Object): String {
   // TODO: add more term programs
   switch (env.TERM_PROGRAM) {
     case 'iTerm.app':
-      var ver: String = env.TERM_PROGRAM_VERSION || '0.'
+      var ver: string = env.TERM_PROGRAM_VERSION || '0.'
       if (/^[0-2]\./.test(ver)) {
         return has256(obj)
       } else {

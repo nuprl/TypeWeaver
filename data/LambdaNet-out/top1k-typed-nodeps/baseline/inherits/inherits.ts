@@ -1,5 +1,5 @@
 try {
-  var util: String = require('util');
+  var util: string = require('util');
   /* istanbul ignore next */
   if (typeof util.inherits !== 'function') throw '';
   module.exports = util.inherits;

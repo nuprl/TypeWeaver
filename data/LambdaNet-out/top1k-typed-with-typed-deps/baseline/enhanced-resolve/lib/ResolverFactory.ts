@@ -5,38 +5,38 @@
 
 "use strict";
 
-const versions: Object = require("process").versions;
-const Resolver: Array = require("./Resolver");
+const versions: object = require("process").versions;
+const Resolver: any[] = require("./Resolver");
 const { getType, PathType } = require("./util/path");
 
-const SyncAsyncFileSystemDecorator: String = require("./SyncAsyncFileSystemDecorator");
+const SyncAsyncFileSystemDecorator: string = require("./SyncAsyncFileSystemDecorator");
 
-const AliasFieldPlugin: String = require("./AliasFieldPlugin");
-const AliasPlugin: Array = require("./AliasPlugin");
-const AppendPlugin: Array = require("./AppendPlugin");
-const ConditionalPlugin: Array = require("./ConditionalPlugin");
+const AliasFieldPlugin: string = require("./AliasFieldPlugin");
+const AliasPlugin: any[] = require("./AliasPlugin");
+const AppendPlugin: any[] = require("./AppendPlugin");
+const ConditionalPlugin: any[] = require("./ConditionalPlugin");
 const DescriptionFilePlugin: Function = require("./DescriptionFilePlugin");
-const DirectoryExistsPlugin: Array = require("./DirectoryExistsPlugin");
-const ExportsFieldPlugin: String = require("./ExportsFieldPlugin");
-const ExtensionAliasPlugin: String = require("./ExtensionAliasPlugin");
-const FileExistsPlugin: String = require("./FileExistsPlugin");
-const ImportsFieldPlugin: Array = require("./ImportsFieldPlugin");
-const JoinRequestPartPlugin: String = require("./JoinRequestPartPlugin");
-const JoinRequestPlugin: Array = require("./JoinRequestPlugin");
-const MainFieldPlugin: Array = require("./MainFieldPlugin");
-const ModulesInHierarchicalDirectoriesPlugin: Array = require("./ModulesInHierarchicalDirectoriesPlugin");
-const ModulesInRootPlugin: Array = require("./ModulesInRootPlugin");
-const NextPlugin: Object = require("./NextPlugin");
-const ParsePlugin: Array = require("./ParsePlugin");
-const PnpPlugin: Array = require("./PnpPlugin");
-const RestrictionsPlugin: Array = require("./RestrictionsPlugin");
-const ResultPlugin: Array = require("./ResultPlugin");
-const RootsPlugin: String = require("./RootsPlugin");
-const SelfReferencePlugin: Array = require("./SelfReferencePlugin");
-const SymlinkPlugin: Array = require("./SymlinkPlugin");
-const TryNextPlugin: Array = require("./TryNextPlugin");
-const UnsafeCachePlugin: Array = require("./UnsafeCachePlugin");
-const UseFilePlugin: Array = require("./UseFilePlugin");
+const DirectoryExistsPlugin: any[] = require("./DirectoryExistsPlugin");
+const ExportsFieldPlugin: string = require("./ExportsFieldPlugin");
+const ExtensionAliasPlugin: string = require("./ExtensionAliasPlugin");
+const FileExistsPlugin: string = require("./FileExistsPlugin");
+const ImportsFieldPlugin: any[] = require("./ImportsFieldPlugin");
+const JoinRequestPartPlugin: string = require("./JoinRequestPartPlugin");
+const JoinRequestPlugin: any[] = require("./JoinRequestPlugin");
+const MainFieldPlugin: any[] = require("./MainFieldPlugin");
+const ModulesInHierarchicalDirectoriesPlugin: any[] = require("./ModulesInHierarchicalDirectoriesPlugin");
+const ModulesInRootPlugin: any[] = require("./ModulesInRootPlugin");
+const NextPlugin: object = require("./NextPlugin");
+const ParsePlugin: any[] = require("./ParsePlugin");
+const PnpPlugin: any[] = require("./PnpPlugin");
+const RestrictionsPlugin: any[] = require("./RestrictionsPlugin");
+const ResultPlugin: any[] = require("./ResultPlugin");
+const RootsPlugin: string = require("./RootsPlugin");
+const SelfReferencePlugin: any[] = require("./SelfReferencePlugin");
+const SymlinkPlugin: any[] = require("./SymlinkPlugin");
+const TryNextPlugin: any[] = require("./TryNextPlugin");
+const UnsafeCachePlugin: any[] = require("./UnsafeCachePlugin");
+const UseFilePlugin: any[] = require("./UseFilePlugin");
 
 /** @typedef {import("./AliasPlugin").AliasOption} AliasOptionEntry */
 /** @typedef {import("./ExtensionAliasPlugin").ExtensionAliasOption} ExtensionAliasOption */
@@ -117,7 +117,7 @@ const UseFilePlugin: Array = require("./UseFilePlugin");
  * @param {PnpApi | null=} option option
  * @returns {PnpApi | null} processed option
  */
-function processPnpApiOption(option: Number): Number {
+function processPnpApiOption(option: number): number {
 	if (
 		option === undefined &&
 		/** @type {NodeJS.ProcessVersions & {pnp: string}} */ versions.pnp
@@ -133,11 +133,11 @@ function processPnpApiOption(option: Number): Number {
  * @param {AliasOptions | AliasOptionEntry[] | undefined} alias alias
  * @returns {AliasOptionEntry[]} normalized aliases
  */
-function normalizeAlias(alias: Object): String {
+function normalizeAlias(alias: object): string {
 	return typeof alias === "object" && !Array.isArray(alias) && alias !== null
-		? Object.keys(alias).map((key: String) => {
+		? Object.keys(alias).map((key: string) => {
 				/** @type {AliasOptionEntry} */
-				const obj: Object = { name: key, onlyModule: false, alias: alias[key] };
+				const obj: object = { name: key, onlyModule: false, alias: alias[key] };
 
 				if (/\$$/.test(key)) {
 					obj.onlyModule = true;
@@ -153,9 +153,9 @@ function normalizeAlias(alias: Object): String {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: Object): Object {
+function createOptions(options: object): object {
 	const mainFieldsSet: Error = new Set(options.mainFields || ["main"]);
-	const mainFields: Array = [];
+	const mainFields: any[] = [];
 
 	for (const item of mainFieldsSet) {
 		if (typeof item === "string") {
@@ -203,7 +203,7 @@ function createOptions(options: Object): Object {
 				: options.enforceExtension,
 		extensions: new Set(options.extensions || [".js", ".json", ".node"]),
 		extensionAlias: options.extensionAlias
-			? Object.keys(options.extensionAlias).map((k: String) => ({
+			? Object.keys(options.extensionAlias).map((k: string) => ({
 					extension: k,
 					alias: /** @type {ExtensionAliasOptions} */ (options.extensionAlias)[
 						k
@@ -229,8 +229,8 @@ function createOptions(options: Object): Object {
 				: options.modules
 				? [options.modules]
 				: ["node_modules"],
-			(item: String) => {
-				const type: Number = getType(item);
+			(item: string) => {
+				const type: number = getType(item);
 				return type === PathType.Normal || type === PathType.Relative;
 			}
 		),
@@ -251,8 +251,8 @@ function createOptions(options: Object): Object {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-exports.createResolver = function (options: Object) {
-	const normalizedOptions: Object = createOptions(options);
+exports.createResolver = function (options: object) {
+	const normalizedOptions: object = createOptions(options);
 
 	const {
 		alias,
@@ -284,7 +284,7 @@ exports.createResolver = function (options: Object) {
 		roots
 	} = normalizedOptions;
 
-	const plugins: Array = userPlugins.slice();
+	const plugins: any[] = userPlugins.slice();
 
 	const resolver: Resolver = customResolver
 		? customResolver
@@ -369,10 +369,10 @@ exports.createResolver = function (options: Object) {
 	if (alias.length > 0) {
 		plugins.push(new AliasPlugin("raw-resolve", alias, "internal-resolve"));
 	}
-	aliasFields.forEach((item: String) => {
+	aliasFields.forEach((item: string) => {
 		plugins.push(new AliasFieldPlugin("raw-resolve", item, "internal-resolve"));
 	});
-	extensionAlias.forEach((item: String) =>
+	extensionAlias.forEach((item: string) =>
 		plugins.push(
 			new ExtensionAliasPlugin("raw-resolve", item, "normal-resolve")
 		)
@@ -412,7 +412,7 @@ exports.createResolver = function (options: Object) {
 	}
 
 	// internal
-	importsFields.forEach((importsField: String) => {
+	importsFields.forEach((importsField: string) => {
 		plugins.push(
 			new ImportsFieldPlugin(
 				"internal",
@@ -425,18 +425,18 @@ exports.createResolver = function (options: Object) {
 	});
 
 	// raw-module
-	exportsFields.forEach((exportsField: String) => {
+	exportsFields.forEach((exportsField: string) => {
 		plugins.push(
 			new SelfReferencePlugin("raw-module", exportsField, "resolve-as-module")
 		);
 	});
-	modules.forEach((item: Array) => {
+	modules.forEach((item: any[]) => {
 		if (Array.isArray(item)) {
 			if (item.includes("node_modules") && pnpApi) {
 				plugins.push(
 					new ModulesInHierarchicalDirectoriesPlugin(
 						"raw-module",
-						item.filter((i: Number) => i !== "node_modules"),
+						item.filter((i: number) => i !== "node_modules"),
 						"module"
 					)
 				);
@@ -493,7 +493,7 @@ exports.createResolver = function (options: Object) {
 	);
 
 	// resolve-in-package
-	exportsFields.forEach((exportsField: String) => {
+	exportsFields.forEach((exportsField: string) => {
 		plugins.push(
 			new ExportsFieldPlugin(
 				"resolve-in-package",
@@ -565,7 +565,7 @@ exports.createResolver = function (options: Object) {
 				"existing-directory"
 			)
 		);
-		mainFiles.forEach((item: String) => {
+		mainFiles.forEach((item: string) => {
 			plugins.push(
 				new UseFilePlugin(
 					"undescribed-existing-directory",
@@ -576,7 +576,7 @@ exports.createResolver = function (options: Object) {
 		});
 
 		// described-existing-directory
-		mainFields.forEach((item: String) => {
+		mainFields.forEach((item: string) => {
 			plugins.push(
 				new MainFieldPlugin(
 					"existing-directory",
@@ -585,7 +585,7 @@ exports.createResolver = function (options: Object) {
 				)
 			);
 		});
-		mainFiles.forEach((item: String) => {
+		mainFiles.forEach((item: string) => {
 			plugins.push(
 				new UseFilePlugin("existing-directory", item, "undescribed-raw-file")
 			);
@@ -615,14 +615,14 @@ exports.createResolver = function (options: Object) {
 		if (!enforceExtension) {
 			plugins.push(new TryNextPlugin("raw-file", "no extension", "file"));
 		}
-		extensions.forEach((item: String) => {
+		extensions.forEach((item: string) => {
 			plugins.push(new AppendPlugin("raw-file", item, "file"));
 		});
 
 		// file
 		if (alias.length > 0)
 			plugins.push(new AliasPlugin("file", alias, "internal-resolve"));
-		aliasFields.forEach((item: String) => {
+		aliasFields.forEach((item: string) => {
 			plugins.push(new AliasFieldPlugin("file", item, "internal-resolve"));
 		});
 		plugins.push(new NextPlugin("file", "final-file"));
@@ -661,14 +661,14 @@ exports.createResolver = function (options: Object) {
  * @param {function(string): boolean} filter predicate
  * @returns {Array<string | string[]>} merge result
  */
-function mergeFilteredToArray(array: Object, filter: Function): Array {
+function mergeFilteredToArray(array: object, filter: Function): any[] {
 	/** @type {Array<string | string[]>} */
-	const result: Array = [];
+	const result: any[] = [];
 	const set: Error = new Set(array);
 
 	for (const item of set) {
 		if (filter(item)) {
-			const lastElement: Array =
+			const lastElement: any[] =
 				result.length > 0 ? result[result.length - 1] : undefined;
 			if (Array.isArray(lastElement)) {
 				lastElement.push(item);

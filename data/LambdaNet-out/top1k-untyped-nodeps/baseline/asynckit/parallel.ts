@@ -14,13 +14,13 @@ module.exports = parallel;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function parallel(list: Object, iterator: String, callback: Function): Promise
+function parallel(list: object, iterator: string, callback: Function): Promise
 {
-  var state: Object = initState(list);
+  var state: object = initState(list);
 
   while (state.index < (state['keyedList'] || list).length)
   {
-    iterate(list, iterator, state, function(error: Object, result: Array)
+    iterate(list, iterator, state, function(error: object, result: any[])
     {
       if (error)
       {

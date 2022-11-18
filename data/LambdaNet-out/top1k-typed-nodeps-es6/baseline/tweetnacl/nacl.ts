@@ -7,9 +7,9 @@
 // Implementation derived from TweetNaCl version 20140427.
 // See for details: http://tweetnacl.cr.yp.to/
 
-var u64: Function = function(h: Number, l: Number) { this.hi = h|0 >>> 0; this.lo = l|0 >>> 0; };
-var gf: Function = function(init: Array) {
-  var i: Number, r: Object = new Float64Array(16);
+var u64: Function = function(h: number, l: number) { this.hi = h|0 >>> 0; this.lo = l|0 >>> 0; };
+var gf: Function = function(init: any[]) {
+  var i: number, r: object = new Float64Array(16);
   if (init) for (i = 0; i < init.length; i++) r[i] = init[i];
   return r;
 };
@@ -17,39 +17,39 @@ var gf: Function = function(init: Array) {
 //  Pluggable, initialized in high-level API below.
 var randombytes: Function = function(/* x, n */) { throw new Error('no PRNG'); };
 
-var _0: String = new Uint8Array(16);
-var _9: Object = new Uint8Array(32); _9[0] = 9;
+var _0: string = new Uint8Array(16);
+var _9: object = new Uint8Array(32); _9[0] = 9;
 
-var gf0: String = gf(),
-    gf1: String = gf([1]),
-    _121665: String = gf([0xdb41, 1]),
-    D: String = gf([0x78a3, 0x1359, 0x4dca, 0x75eb, 0xd8ab, 0x4141, 0x0a4d, 0x0070, 0xe898, 0x7779, 0x4079, 0x8cc7, 0xfe73, 0x2b6f, 0x6cee, 0x5203]),
-    D2: String = gf([0xf159, 0x26b2, 0x9b94, 0xebd6, 0xb156, 0x8283, 0x149a, 0x00e0, 0xd130, 0xeef3, 0x80f2, 0x198e, 0xfce7, 0x56df, 0xd9dc, 0x2406]),
-    X: String = gf([0xd51a, 0x8f25, 0x2d60, 0xc956, 0xa7b2, 0x9525, 0xc760, 0x692c, 0xdc5c, 0xfdd6, 0xe231, 0xc0a4, 0x53fe, 0xcd6e, 0x36d3, 0x2169]),
-    Y: String = gf([0x6658, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666]),
-    I: String = gf([0xa0b0, 0x4a0e, 0x1b27, 0xc4ee, 0xe478, 0xad2f, 0x1806, 0x2f43, 0xd7a7, 0x3dfb, 0x0099, 0x2b4d, 0xdf0b, 0x4fc1, 0x2480, 0x2b83]);
+var gf0: string = gf(),
+    gf1: string = gf([1]),
+    _121665: string = gf([0xdb41, 1]),
+    D: string = gf([0x78a3, 0x1359, 0x4dca, 0x75eb, 0xd8ab, 0x4141, 0x0a4d, 0x0070, 0xe898, 0x7779, 0x4079, 0x8cc7, 0xfe73, 0x2b6f, 0x6cee, 0x5203]),
+    D2: string = gf([0xf159, 0x26b2, 0x9b94, 0xebd6, 0xb156, 0x8283, 0x149a, 0x00e0, 0xd130, 0xeef3, 0x80f2, 0x198e, 0xfce7, 0x56df, 0xd9dc, 0x2406]),
+    X: string = gf([0xd51a, 0x8f25, 0x2d60, 0xc956, 0xa7b2, 0x9525, 0xc760, 0x692c, 0xdc5c, 0xfdd6, 0xe231, 0xc0a4, 0x53fe, 0xcd6e, 0x36d3, 0x2169]),
+    Y: string = gf([0x6658, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666]),
+    I: string = gf([0xa0b0, 0x4a0e, 0x1b27, 0xc4ee, 0xe478, 0xad2f, 0x1806, 0x2f43, 0xd7a7, 0x3dfb, 0x0099, 0x2b4d, 0xdf0b, 0x4fc1, 0x2480, 0x2b83]);
 
-function L32(x: Number, c: Number): Number { return (x << c) | (x >>> (32 - c)); }
+function L32(x: number, c: number): number { return (x << c) | (x >>> (32 - c)); }
 
-function ld32(x: Object, i: String): Number {
-  var u: Number = x[i+3] & 0xff;
+function ld32(x: object, i: string): number {
+  var u: number = x[i+3] & 0xff;
   u = (u<<8)|(x[i+2] & 0xff);
   u = (u<<8)|(x[i+1] & 0xff);
   return (u<<8)|(x[i+0] & 0xff);
 }
 
-function dl64(x: Object, i: String): String {
-  var h: Number = (x[i] << 24) | (x[i+1] << 16) | (x[i+2] << 8) | x[i+3];
-  var l: Number = (x[i+4] << 24) | (x[i+5] << 16) | (x[i+6] << 8) | x[i+7];
+function dl64(x: object, i: string): string {
+  var h: number = (x[i] << 24) | (x[i+1] << 16) | (x[i+2] << 8) | x[i+3];
+  var l: number = (x[i+4] << 24) | (x[i+5] << 16) | (x[i+6] << 8) | x[i+7];
   return new u64(h, l);
 }
 
-function st32(x: Object, j: Number, u: Number): Void {
-  var i: Number;
+function st32(x: object, j: number, u: number): Void {
+  var i: number;
   for (i = 0; i < 4; i++) { x[j+i] = u & 255; u >>>= 8; }
 }
 
-function ts64(x: Object, i: String, u: HTMLElement): Void {
+function ts64(x: object, i: string, u: HTMLElement): Void {
   x[i]   = (u.hi >> 24) & 0xff;
   x[i+1] = (u.hi >> 16) & 0xff;
   x[i+2] = (u.hi >>  8) & 0xff;
@@ -60,24 +60,24 @@ function ts64(x: Object, i: String, u: HTMLElement): Void {
   x[i+7] = u.lo & 0xff;
 }
 
-function vn(x: Object, xi: String, y: Object, yi: String, n: Number): Number {
-  var i: Number,d: Number = 0;
+function vn(x: object, xi: string, y: object, yi: string, n: number): number {
+  var i: number,d: number = 0;
   for (i = 0; i < n; i++) d |= x[xi+i]^y[yi+i];
   return (1 & ((d - 1) >>> 8)) - 1;
 }
 
-function crypto_verify_16(x: String, xi: String, y: String, yi: String): String {
+function crypto_verify_16(x: string, xi: string, y: string, yi: string): string {
   return vn(x,xi,y,yi,16);
 }
 
-function crypto_verify_32(x: String, xi: String, y: String, yi: String): String {
+function crypto_verify_32(x: string, xi: string, y: string, yi: string): string {
   return vn(x,xi,y,yi,32);
 }
 
-function core(out: String,inp: String,k: String,c: String,h: Boolean): Void {
-  var w: Object = new Uint32Array(16), x: Object = new Uint32Array(16),
-      y: Object = new Uint32Array(16), t: Object = new Uint32Array(4);
-  var i: Number, j: Number, m: Number;
+function core(out: string,inp: string,k: string,c: string,h: boolean): Void {
+  var w: object = new Uint32Array(16), x: object = new Uint32Array(16),
+      y: object = new Uint32Array(16), t: object = new Uint32Array(4);
+  var i: number, j: number, m: number;
 
   for (i = 0; i < 4; i++) {
     x[5*i] = ld32(c, 4*i);
@@ -115,22 +115,22 @@ function core(out: String,inp: String,k: String,c: String,h: Boolean): Void {
   }
 }
 
-function crypto_core_salsa20(out: String,inp: String,k: Number,c: String): Number {
+function crypto_core_salsa20(out: string,inp: string,k: number,c: string): number {
   core(out,inp,k,c,false);
   return 0;
 }
 
-function crypto_core_hsalsa20(out: String,inp: String,k: Number,c: String): Number {
+function crypto_core_hsalsa20(out: string,inp: string,k: number,c: string): number {
   core(out,inp,k,c,true);
   return 0;
 }
 
-var sigma: String = new Uint8Array([101, 120, 112, 97, 110, 100, 32, 51, 50, 45, 98, 121, 116, 101, 32, 107]);
+var sigma: string = new Uint8Array([101, 120, 112, 97, 110, 100, 32, 51, 50, 45, 98, 121, 116, 101, 32, 107]);
             // "expand 32-byte k"
 
-function crypto_stream_salsa20_xor(c: Object,cpos: String,m: Object,mpos: String,b: Number,n: Object,k: Number): Number {
-  var z: Object = new Uint8Array(16), x: Object = new Uint8Array(64);
-  var u: Number, i: Number;
+function crypto_stream_salsa20_xor(c: object,cpos: string,m: object,mpos: string,b: number,n: object,k: number): number {
+  var z: object = new Uint8Array(16), x: object = new Uint8Array(64);
+  var u: number, i: number;
   if (!b) return 0;
   for (i = 0; i < 16; i++) z[i] = 0;
   for (i = 0; i < 8; i++) z[i] = n[i];
@@ -154,24 +154,24 @@ function crypto_stream_salsa20_xor(c: Object,cpos: String,m: Object,mpos: String
   return 0;
 }
 
-function crypto_stream_salsa20(c: String,cpos: Function,d: String,n: Number,k: Number): Boolean {
+function crypto_stream_salsa20(c: string,cpos: Function,d: string,n: number,k: number): boolean {
   return crypto_stream_salsa20_xor(c,cpos,null,0,d,n,k);
 }
 
-function crypto_stream(c: String,cpos: Function,d: String,n: Array,k: Number): String {
-  var s: String = new Uint8Array(32);
+function crypto_stream(c: string,cpos: Function,d: string,n: any[],k: number): string {
+  var s: string = new Uint8Array(32);
   crypto_core_hsalsa20(s,n,k,sigma);
   return crypto_stream_salsa20(c,cpos,d,n.subarray(16),s);
 }
 
-function crypto_stream_xor(c: String,cpos: Function,m: String,mpos: String,d: Number,n: Array,k: Number): Boolean {
-  var s: String = new Uint8Array(32);
+function crypto_stream_xor(c: string,cpos: Function,m: string,mpos: string,d: number,n: any[],k: number): boolean {
+  var s: string = new Uint8Array(32);
   crypto_core_hsalsa20(s,n,k,sigma);
   return crypto_stream_salsa20_xor(c,cpos,m,mpos,d,n.subarray(16),s);
 }
 
-function add1305(h: Object, c: Object): Void {
-  var j: Number, u: Number = 0;
+function add1305(h: object, c: object): Void {
+  var j: number, u: number = 0;
   for (j = 0; j < 17; j++) {
     u = (u + ((h[j] + c[j]) | 0)) | 0;
     h[j] = u & 255;
@@ -179,15 +179,15 @@ function add1305(h: Object, c: Object): Void {
   }
 }
 
-var minusp: String = new Uint32Array([
+var minusp: string = new Uint32Array([
   5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 252
 ]);
 
-function crypto_onetimeauth(out: Object, outpos: String, m: Object, mpos: String, n: Number, k: Object): Number {
-  var s: Number, i: Number, j: Number, u: Number;
-  var x: Object = new Uint32Array(17), r: Object = new Uint32Array(17),
-      h: Object = new Uint32Array(17), c: Object = new Uint32Array(17),
-      g: Object = new Uint32Array(17);
+function crypto_onetimeauth(out: object, outpos: string, m: object, mpos: string, n: number, k: object): number {
+  var s: number, i: number, j: number, u: number;
+  var x: object = new Uint32Array(17), r: object = new Uint32Array(17),
+      h: object = new Uint32Array(17), c: object = new Uint32Array(17),
+      g: object = new Uint32Array(17);
   for (j = 0; j < 17; j++) r[j]=h[j]=0;
   for (j = 0; j < 16; j++) r[j]=k[j];
   r[3]&=15;
@@ -237,14 +237,14 @@ function crypto_onetimeauth(out: Object, outpos: String, m: Object, mpos: String
   return 0;
 }
 
-function crypto_onetimeauth_verify(h: String, hpos: String, m: String, mpos: String, n: Number, k: String): String {
-  var x: String = new Uint8Array(16);
+function crypto_onetimeauth_verify(h: string, hpos: string, m: string, mpos: string, n: number, k: string): string {
+  var x: string = new Uint8Array(16);
   crypto_onetimeauth(x,0,m,mpos,n,k);
   return crypto_verify_16(h,hpos,x,0);
 }
 
-function crypto_secretbox(c: Object,m: String,d: Number,n: String,k: Number): Number {
-  var i: Number;
+function crypto_secretbox(c: object,m: string,d: number,n: string,k: number): number {
+  var i: number;
   if (d < 32) return -1;
   crypto_stream_xor(c,0,m,0,d,n,k);
   crypto_onetimeauth(c, 16, c, 32, d - 32, c);
@@ -252,9 +252,9 @@ function crypto_secretbox(c: Object,m: String,d: Number,n: String,k: Number): Nu
   return 0;
 }
 
-function crypto_secretbox_open(m: Object,c: String,d: Number,n: String,k: String): Number {
-  var i: Number;
-  var x: String = new Uint8Array(32);
+function crypto_secretbox_open(m: object,c: string,d: number,n: string,k: string): number {
+  var i: number;
+  var x: string = new Uint8Array(32);
   if (d < 32) return -1;
   crypto_stream(x,0,32,n,k);
   if (crypto_onetimeauth_verify(c, 16,c, 32,d - 32,x) !== 0) return -1;
@@ -263,14 +263,14 @@ function crypto_secretbox_open(m: Object,c: String,d: Number,n: String,k: String
   return 0;
 }
 
-function set25519(r: Object, a: Promise): Void {
-  var i: Number;
+function set25519(r: object, a: Promise): Void {
+  var i: number;
   for (i = 0; i < 16; i++) r[i] = a[i]|0;
 }
 
-function car25519(o: Object): Void {
-  var c: Number;
-  var i: Number;
+function car25519(o: object): Void {
+  var c: number;
+  var i: number;
   for (i = 0; i < 16; i++) {
       o[i] += 65536;
       c = Math.floor(o[i] / 65536);
@@ -279,8 +279,8 @@ function car25519(o: Object): Void {
   }
 }
 
-function sel25519(p: Object, q: Object, b: Number): Void {
-  var t: Number, c: Number = ~(b-1);
+function sel25519(p: object, q: object, b: number): Void {
+  var t: number, c: number = ~(b-1);
   for (var i = 0; i < 16; i++) {
     t = c & (p[i] ^ q[i]);
     p[i] ^= t;
@@ -288,9 +288,9 @@ function sel25519(p: Object, q: Object, b: Number): Void {
   }
 }
 
-function pack25519(o: Object, n: Object): Void {
-  var i: Number, j: Number, b: Number;
-  var m: Object = gf(), t: Object = gf();
+function pack25519(o: object, n: object): Void {
+  var i: number, j: number, b: number;
+  var m: object = gf(), t: object = gf();
   for (i = 0; i < 16; i++) t[i] = n[i];
   car25519(t);
   car25519(t);
@@ -312,37 +312,37 @@ function pack25519(o: Object, n: Object): Void {
   }
 }
 
-function neq25519(a: Function, b: String): String {
-  var c: String = new Uint8Array(32), d: String = new Uint8Array(32);
+function neq25519(a: Function, b: string): string {
+  var c: string = new Uint8Array(32), d: string = new Uint8Array(32);
   pack25519(c, a);
   pack25519(d, b);
   return crypto_verify_32(c, 0, d, 0);
 }
 
-function par25519(a: String): Number {
-  var d: Object = new Uint8Array(32);
+function par25519(a: string): number {
+  var d: object = new Uint8Array(32);
   pack25519(d, a);
   return d[0] & 1;
 }
 
-function unpack25519(o: Promise, n: Object): Void {
-  var i: Number;
+function unpack25519(o: Promise, n: object): Void {
+  var i: number;
   for (i = 0; i < 16; i++) o[i] = n[2*i] + (n[2*i+1] << 8);
   o[15] &= 0x7fff;
 }
 
-function A(o: Object, a: Promise, b: Object): Void {
-  var i: Number;
+function A(o: object, a: Promise, b: object): Void {
+  var i: number;
   for (i = 0; i < 16; i++) o[i] = (a[i] + b[i])|0;
 }
 
-function Z(o: Object, a: Promise, b: Promise): Void {
-  var i: Number;
+function Z(o: object, a: Promise, b: Promise): Void {
+  var i: number;
   for (i = 0; i < 16; i++) o[i] = (a[i] - b[i])|0;
 }
 
-function M(o: Object, a: Promise, b: Object): Void {
-  var i: Number, j: Number, t: Object = new Float64Array(31);
+function M(o: object, a: Promise, b: object): Void {
+  var i: number, j: number, t: object = new Float64Array(31);
   for (i = 0; i < 31; i++) t[i] = 0;
   for (i = 0; i < 16; i++) {
     for (j = 0; j < 16; j++) {
@@ -357,13 +357,13 @@ function M(o: Object, a: Promise, b: Object): Void {
   car25519(o);
 }
 
-function S(o: String, a: Function): Void {
+function S(o: string, a: Function): Void {
   M(o, a, a);
 }
 
-function inv25519(o: Object, i: Object): Void {
-  var c: Object = gf();
-  var a: Number;
+function inv25519(o: object, i: object): Void {
+  var c: object = gf();
+  var a: number;
   for (a = 0; a < 16; a++) c[a] = i[a];
   for (a = 253; a >= 0; a--) {
     S(c, c);
@@ -372,9 +372,9 @@ function inv25519(o: Object, i: Object): Void {
   for (a = 0; a < 16; a++) o[a] = c[a];
 }
 
-function pow2523(o: Object, i: Object): Void {
-  var c: Object = gf();
-  var a: Number;
+function pow2523(o: object, i: object): Void {
+  var c: object = gf();
+  var a: number;
   for (a = 0; a < 16; a++) c[a] = i[a];
   for (a = 250; a >= 0; a--) {
       S(c, c);
@@ -383,11 +383,11 @@ function pow2523(o: Object, i: Object): Void {
   for (a = 0; a < 16; a++) o[a] = c[a];
 }
 
-function crypto_scalarmult(q: String, n: Promise, p: Function): Number {
-  var z: Object = new Uint8Array(32);
-  var x: Array = new Float64Array(80), r: Number, i: Number;
-  var a: Object = gf(), b: Object = gf(), c: Object = gf(),
-      d: Object = gf(), e: String = gf(), f: String = gf();
+function crypto_scalarmult(q: string, n: Promise, p: Function): number {
+  var z: object = new Uint8Array(32);
+  var x: any[] = new Float64Array(80), r: number, i: number;
+  var a: object = gf(), b: object = gf(), c: object = gf(),
+      d: object = gf(), e: string = gf(), f: string = gf();
   for (i = 0; i < 31; i++) z[i] = n[i];
   z[31]=(n[31]&127)|64;
   z[0]&=248;
@@ -428,25 +428,25 @@ function crypto_scalarmult(q: String, n: Promise, p: Function): Number {
     x[i+48]=b[i];
     x[i+64]=d[i];
   }
-  var x32: String = x.subarray(32);
-  var x16: String = x.subarray(16);
+  var x32: string = x.subarray(32);
+  var x16: string = x.subarray(16);
   inv25519(x32,x32);
   M(x16,x16,x32);
   pack25519(q,x16);
   return 0;
 }
 
-function crypto_scalarmult_base(q: String, n: Number): Void {
+function crypto_scalarmult_base(q: string, n: number): Void {
   return crypto_scalarmult(q, n, _9);
 }
 
-function crypto_box_keypair(y: String, x: String): Boolean {
+function crypto_box_keypair(y: string, x: string): boolean {
   randombytes(x, 32);
   return crypto_scalarmult_base(y, x);
 }
 
-function crypto_box_beforenm(k: String, y: String, x: String): String {
-  var s: String = new Uint8Array(32);
+function crypto_box_beforenm(k: string, y: string, x: string): string {
+  var s: string = new Uint8Array(32);
   crypto_scalarmult(s, x, y);
   return crypto_core_hsalsa20(k, _0, s, sigma);
 }
@@ -454,20 +454,20 @@ function crypto_box_beforenm(k: String, y: String, x: String): String {
 var crypto_box_afternm: Function = crypto_secretbox;
 var crypto_box_open_afternm: Function = crypto_secretbox_open;
 
-function crypto_box(c: String, m: Function, d: String, n: String, y: String, x: String): Boolean {
-  var k: String = new Uint8Array(32);
+function crypto_box(c: string, m: Function, d: string, n: string, y: string, x: string): boolean {
+  var k: string = new Uint8Array(32);
   crypto_box_beforenm(k, y, x);
   return crypto_box_afternm(c, m, d, n, k);
 }
 
-function crypto_box_open(m: Function, c: String, d: String, n: Number, y: String, x: String): Boolean {
-  var k: String = new Uint8Array(32);
+function crypto_box_open(m: Function, c: string, d: string, n: number, y: string, x: string): boolean {
+  var k: string = new Uint8Array(32);
   crypto_box_beforenm(k, y, x);
   return crypto_box_open_afternm(m, c, d, n, k);
 }
 
-function add64(): String {
-  var a: Number = 0, b: Number = 0, c: Number = 0, d: Number = 0, m16: Number = 65535, l: Number, h: Number, i: Number;
+function add64(): string {
+  var a: number = 0, b: number = 0, c: number = 0, d: number = 0, m16: number = 65535, l: number, h: number, i: number;
   for (i = 0; i < arguments.length; i++) {
     l = arguments[i].lo;
     h = arguments[i].hi;
@@ -482,12 +482,12 @@ function add64(): String {
   return new u64((c & m16) | (d << 16), (a & m16) | (b << 16));
 }
 
-function shr64(x: HTMLElement, c: Number): String {
+function shr64(x: HTMLElement, c: number): string {
   return new u64((x.hi >>> c), (x.lo >>> c) | (x.hi << (32 - c)));
 }
 
-function xor64(): Array {
-  var l: Number = 0, h: Number = 0, i: Number;
+function xor64(): any[] {
+  var l: number = 0, h: number = 0, i: number;
   for (i = 0; i < arguments.length; i++) {
     l ^= arguments[i].lo;
     h ^= arguments[i].hi;
@@ -495,8 +495,8 @@ function xor64(): Array {
   return new u64(h, l);
 }
 
-function R(x: HTMLElement, c: Number): String {
-  var h: Number, l: Number, c1: Number = 32 - c;
+function R(x: HTMLElement, c: number): string {
+  var h: number, l: number, c1: number = 32 - c;
   if (c < 32) {
     h = (x.hi >>> c) | (x.lo << c1);
     l = (x.lo >>> c) | (x.hi << c1);
@@ -507,24 +507,24 @@ function R(x: HTMLElement, c: Number): String {
   return new u64(h, l);
 }
 
-function Ch(x: HTMLElement, y: Object, z: HTMLElement): String {
-  var h: Number = (x.hi & y.hi) ^ (~x.hi & z.hi),
-      l: Number = (x.lo & y.lo) ^ (~x.lo & z.lo);
+function Ch(x: HTMLElement, y: object, z: HTMLElement): string {
+  var h: number = (x.hi & y.hi) ^ (~x.hi & z.hi),
+      l: number = (x.lo & y.lo) ^ (~x.lo & z.lo);
   return new u64(h, l);
 }
 
-function Maj(x: HTMLElement, y: HTMLElement, z: HTMLElement): String {
-  var h: Number = (x.hi & y.hi) ^ (x.hi & z.hi) ^ (y.hi & z.hi),
-      l: Number = (x.lo & y.lo) ^ (x.lo & z.lo) ^ (y.lo & z.lo);
+function Maj(x: HTMLElement, y: HTMLElement, z: HTMLElement): string {
+  var h: number = (x.hi & y.hi) ^ (x.hi & z.hi) ^ (y.hi & z.hi),
+      l: number = (x.lo & y.lo) ^ (x.lo & z.lo) ^ (y.lo & z.lo);
   return new u64(h, l);
 }
 
-function Sigma0(x: String): String { return xor64(R(x,28), R(x,34), R(x,39)); }
-function Sigma1(x: String): String { return xor64(R(x,14), R(x,18), R(x,41)); }
-function sigma0(x: String): String { return xor64(R(x, 1), R(x, 8), shr64(x,7)); }
-function sigma1(x: String): String { return xor64(R(x,19), R(x,61), shr64(x,6)); }
+function Sigma0(x: string): string { return xor64(R(x,28), R(x,34), R(x,39)); }
+function Sigma1(x: string): string { return xor64(R(x,14), R(x,18), R(x,41)); }
+function sigma0(x: string): string { return xor64(R(x, 1), R(x, 8), shr64(x,7)); }
+function sigma1(x: string): string { return xor64(R(x,19), R(x,61), shr64(x,6)); }
 
-var K: Array = [
+var K: any[] = [
   new u64(0x428a2f98, 0xd728ae22), new u64(0x71374491, 0x23ef65cd),
   new u64(0xb5c0fbcf, 0xec4d3b2f), new u64(0xe9b5dba5, 0x8189dbbc),
   new u64(0x3956c25b, 0xf348b538), new u64(0x59f111f1, 0xb605d019),
@@ -567,12 +567,12 @@ var K: Array = [
   new u64(0x5fcb6fab, 0x3ad6faec), new u64(0x6c44198c, 0x4a475817)
 ];
 
-function crypto_hashblocks(x: String, m: String, n: Number): Number {
-  var z: Object = [], b: Object = [], a: Object = [], w: Object = [], t: String, i: Number, j: Number;
+function crypto_hashblocks(x: string, m: string, n: number): number {
+  var z: object = [], b: object = [], a: object = [], w: object = [], t: string, i: number, j: number;
 
   for (i = 0; i < 8; i++) z[i] = a[i] = dl64(x, 8*i);
 
-  var pos: Number = 0;
+  var pos: number = 0;
   while (n >= 128) {
     for (i = 0; i < 16; i++) w[i] = dl64(m, 8*i+pos);
     for (i = 0; i < 80; i++) {
@@ -601,7 +601,7 @@ function crypto_hashblocks(x: String, m: String, n: Number): Number {
   return n;
 }
 
-var iv: Object = new Uint8Array([
+var iv: object = new Uint8Array([
   0x6a,0x09,0xe6,0x67,0xf3,0xbc,0xc9,0x08,
   0xbb,0x67,0xae,0x85,0x84,0xca,0xa7,0x3b,
   0x3c,0x6e,0xf3,0x72,0xfe,0x94,0xf8,0x2b,
@@ -612,9 +612,9 @@ var iv: Object = new Uint8Array([
   0x5b,0xe0,0xcd,0x19,0x13,0x7e,0x21,0x79
 ]);
 
-function crypto_hash(out: Promise, m: Object, n: Number): Number {
-  var h: Object = new Uint8Array(64), x: Object = new Uint8Array(256);
-  var i: Number, b: Number = n;
+function crypto_hash(out: Promise, m: object, n: number): number {
+  var h: object = new Uint8Array(64), x: object = new Uint8Array(256);
+  var i: number, b: number = n;
 
   for (i = 0; i < 64; i++) h[i] = iv[i];
 
@@ -635,10 +635,10 @@ function crypto_hash(out: Promise, m: Object, n: Number): Number {
   return 0;
 }
 
-function add(p: Object, q: Promise): Void {
-  var a: String = gf(), b: String = gf(), c: String = gf(),
-      d: String = gf(), e: String = gf(), f: String = gf(),
-      g: String = gf(), h: String = gf(), t: String = gf();
+function add(p: object, q: Promise): Void {
+  var a: string = gf(), b: string = gf(), c: string = gf(),
+      d: string = gf(), e: string = gf(), f: string = gf(),
+      g: string = gf(), h: string = gf(), t: string = gf();
 
   Z(a, p[1], p[0]);
   Z(t, q[1], q[0]);
@@ -661,15 +661,15 @@ function add(p: Object, q: Promise): Void {
   M(p[3], e, h);
 }
 
-function cswap(p: Object, q: Object, b: String): Void {
-  var i: Number;
+function cswap(p: object, q: object, b: string): Void {
+  var i: number;
   for (i = 0; i < 4; i++) {
     sel25519(p[i], q[i], b);
   }
 }
 
-function pack(r: Object, p: Promise): Void {
-  var tx: String = gf(), ty: String = gf(), zi: String = gf();
+function pack(r: object, p: Promise): Void {
+  var tx: string = gf(), ty: string = gf(), zi: string = gf();
   inv25519(zi, p[2]);
   M(tx, p[0], zi);
   M(ty, p[1], zi);
@@ -677,8 +677,8 @@ function pack(r: Object, p: Promise): Void {
   r[31] ^= par25519(tx) << 7;
 }
 
-function scalarmult(p: Object, q: String, s: Object): Void {
-  var b: Number, i: Number;
+function scalarmult(p: object, q: string, s: object): Void {
+  var b: number, i: number;
   set25519(p[0], gf0);
   set25519(p[1], gf1);
   set25519(p[2], gf1);
@@ -692,8 +692,8 @@ function scalarmult(p: Object, q: String, s: Object): Void {
   }
 }
 
-function scalarbase(p: String, s: String): Void {
-  var q: Object = [gf(), gf(), gf(), gf()];
+function scalarbase(p: string, s: string): Void {
+  var q: object = [gf(), gf(), gf(), gf()];
   set25519(q[0], X);
   set25519(q[1], Y);
   set25519(q[2], gf1);
@@ -701,10 +701,10 @@ function scalarbase(p: String, s: String): Void {
   scalarmult(p, q, s);
 }
 
-function crypto_sign_keypair(pk: Object, sk: Object, seeded: Boolean): Number {
-  var d: Object = new Uint8Array(64);
-  var p: Array = [gf(), gf(), gf(), gf()];
-  var i: Number;
+function crypto_sign_keypair(pk: object, sk: object, seeded: boolean): number {
+  var d: object = new Uint8Array(64);
+  var p: any[] = [gf(), gf(), gf(), gf()];
+  var i: number;
 
   if (!seeded) randombytes(sk, 32);
   crypto_hash(d, sk, 32);
@@ -719,10 +719,10 @@ function crypto_sign_keypair(pk: Object, sk: Object, seeded: Boolean): Number {
   return 0;
 }
 
-var L: Object = new Float64Array([0xed, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x10]);
+var L: object = new Float64Array([0xed, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x10]);
 
-function modL(r: Promise, x: Object): Void {
-  var carry: Number, i: Number, j: Number, k: Function;
+function modL(r: Promise, x: object): Void {
+  var carry: number, i: number, j: number, k: Function;
   for (i = 63; i >= 32; --i) {
     carry = 0;
     for (j = i - 32, k = i - 12; j < k; ++j) {
@@ -746,25 +746,25 @@ function modL(r: Promise, x: Object): Void {
   }
 }
 
-function reduce(r: Object): Void {
-  var x: Object = new Float64Array(64), i: Number;
+function reduce(r: object): Void {
+  var x: object = new Float64Array(64), i: number;
   for (i = 0; i < 64; i++) x[i] = r[i];
   for (i = 0; i < 64; i++) r[i] = 0;
   modL(r, x);
 }
 
 // Note: difference from C - smlen returned, not passed as argument.
-function crypto_sign(sm: Array, m: Promise, n: Number, sk: Object): String {
-  var d: Object = new Uint8Array(64), h: Object = new Uint8Array(64), r: Object = new Uint8Array(64);
-  var i: Number, j: Number, x: Object = new Float64Array(64);
-  var p: Array = [gf(), gf(), gf(), gf()];
+function crypto_sign(sm: any[], m: Promise, n: number, sk: object): string {
+  var d: object = new Uint8Array(64), h: object = new Uint8Array(64), r: object = new Uint8Array(64);
+  var i: number, j: number, x: object = new Float64Array(64);
+  var p: any[] = [gf(), gf(), gf(), gf()];
 
   crypto_hash(d, sk, 32);
   d[0] &= 248;
   d[31] &= 127;
   d[31] |= 64;
 
-  var smlen: String = n + 64;
+  var smlen: string = n + 64;
   for (i = 0; i < n; i++) sm[64 + i] = m[i];
   for (i = 0; i < 32; i++) sm[32 + i] = d[32 + i];
 
@@ -789,10 +789,10 @@ function crypto_sign(sm: Array, m: Promise, n: Number, sk: Object): String {
   return smlen;
 }
 
-function unpackneg(r: Object, p: Object): Number {
-  var t: String = gf(), chk: String = gf(), num: String = gf(),
-      den: String = gf(), den2: String = gf(), den4: String = gf(),
-      den6: String = gf();
+function unpackneg(r: object, p: object): number {
+  var t: string = gf(), chk: string = gf(), num: string = gf(),
+      den: string = gf(), den2: string = gf(), den4: string = gf(),
+      den6: string = gf();
 
   set25519(r[2], gf1);
   unpack25519(r[1], p);
@@ -827,11 +827,11 @@ function unpackneg(r: Object, p: Object): Number {
   return 0;
 }
 
-function crypto_sign_open(m: Object, sm: Array, n: Number, pk: Object): Number {
-  var i: Number;
-  var t: String = new Uint8Array(32), h: String = new Uint8Array(64);
-  var p: Array = [gf(), gf(), gf(), gf()],
-      q: Array = [gf(), gf(), gf(), gf()];
+function crypto_sign_open(m: object, sm: any[], n: number, pk: object): number {
+  var i: number;
+  var t: string = new Uint8Array(32), h: string = new Uint8Array(64);
+  var p: any[] = [gf(), gf(), gf(), gf()],
+      q: any[] = [gf(), gf(), gf(), gf()];
 
   if (n < 64) return -1;
 
@@ -857,23 +857,23 @@ function crypto_sign_open(m: Object, sm: Array, n: Number, pk: Object): Number {
   return n;
 }
 
-var crypto_secretbox_KEYBYTES: Number = 32,
-    crypto_secretbox_NONCEBYTES: Number = 24,
-    crypto_secretbox_ZEROBYTES: Number = 32,
-    crypto_secretbox_BOXZEROBYTES: Number = 16,
-    crypto_scalarmult_BYTES: Number = 32,
-    crypto_scalarmult_SCALARBYTES: Number = 32,
-    crypto_box_PUBLICKEYBYTES: Number = 32,
-    crypto_box_SECRETKEYBYTES: Number = 32,
-    crypto_box_BEFORENMBYTES: Number = 32,
-    crypto_box_NONCEBYTES: Number = crypto_secretbox_NONCEBYTES,
-    crypto_box_ZEROBYTES: Number = crypto_secretbox_ZEROBYTES,
-    crypto_box_BOXZEROBYTES: Number = crypto_secretbox_BOXZEROBYTES,
-    crypto_sign_BYTES: Number = 64,
-    crypto_sign_PUBLICKEYBYTES: Number = 32,
-    crypto_sign_SECRETKEYBYTES: Number = 64,
-    crypto_sign_SEEDBYTES: Number = 32,
-    crypto_hash_BYTES: Number = 64;
+var crypto_secretbox_KEYBYTES: number = 32,
+    crypto_secretbox_NONCEBYTES: number = 24,
+    crypto_secretbox_ZEROBYTES: number = 32,
+    crypto_secretbox_BOXZEROBYTES: number = 16,
+    crypto_scalarmult_BYTES: number = 32,
+    crypto_scalarmult_SCALARBYTES: number = 32,
+    crypto_box_PUBLICKEYBYTES: number = 32,
+    crypto_box_SECRETKEYBYTES: number = 32,
+    crypto_box_BEFORENMBYTES: number = 32,
+    crypto_box_NONCEBYTES: number = crypto_secretbox_NONCEBYTES,
+    crypto_box_ZEROBYTES: number = crypto_secretbox_ZEROBYTES,
+    crypto_box_BOXZEROBYTES: number = crypto_secretbox_BOXZEROBYTES,
+    crypto_sign_BYTES: number = 64,
+    crypto_sign_PUBLICKEYBYTES: number = 32,
+    crypto_sign_SECRETKEYBYTES: number = 64,
+    crypto_sign_SEEDBYTES: number = 32,
+    crypto_hash_BYTES: number = 64;
 
 nacl.lowlevel = {
   crypto_core_hsalsa20: crypto_core_hsalsa20,
@@ -936,12 +936,12 @@ nacl.lowlevel = {
 
 /* High-level API */
 
-function checkLengths(k: Array, n: Array): Void {
+function checkLengths(k: any[], n: any[]): Void {
   if (k.length !== crypto_secretbox_KEYBYTES) throw new Error('bad key size');
   if (n.length !== crypto_secretbox_NONCEBYTES) throw new Error('bad nonce size');
 }
 
-function checkBoxLengths(pk: Array, sk: Array): Void {
+function checkBoxLengths(pk: any[], sk: any[]): Void {
   if (pk.length !== crypto_box_PUBLICKEYBYTES) throw new Error('bad public key size');
   if (sk.length !== crypto_box_SECRETKEYBYTES) throw new Error('bad secret key size');
 }
@@ -953,30 +953,30 @@ function checkArrayTypes(): Void {
   }
 }
 
-function cleanup(arr: Array): Void {
+function cleanup(arr: any[]): Void {
   for (var i = 0; i < arr.length; i++) arr[i] = 0;
 }
 
-nacl.randomBytes = function(n: String) {
-  var b: Object = new Uint8Array(n);
+nacl.randomBytes = function(n: string) {
+  var b: object = new Uint8Array(n);
   randombytes(b, n);
   return b;
 };
 
-nacl.secretbox = function(msg: Array, nonce: String, key: String) {
+nacl.secretbox = function(msg: any[], nonce: string, key: string) {
   checkArrayTypes(msg, nonce, key);
   checkLengths(key, nonce);
-  var m: Array = new Uint8Array(crypto_secretbox_ZEROBYTES + msg.length);
+  var m: any[] = new Uint8Array(crypto_secretbox_ZEROBYTES + msg.length);
   var c: HTMLElement = new Uint8Array(m.length);
   for (var i = 0; i < msg.length; i++) m[i+crypto_secretbox_ZEROBYTES] = msg[i];
   crypto_secretbox(c, m, m.length, nonce, key);
   return c.subarray(crypto_secretbox_BOXZEROBYTES);
 };
 
-nacl.secretbox.open = function(box: Array, nonce: String, key: String) {
+nacl.secretbox.open = function(box: any[], nonce: string, key: string) {
   checkArrayTypes(box, nonce, key);
   checkLengths(key, nonce);
-  var c: Array = new Uint8Array(crypto_secretbox_BOXZEROBYTES + box.length);
+  var c: any[] = new Uint8Array(crypto_secretbox_BOXZEROBYTES + box.length);
   var m: HTMLElement = new Uint8Array(c.length);
   for (var i = 0; i < box.length; i++) c[i+crypto_secretbox_BOXZEROBYTES] = box[i];
   if (c.length < 32) return null;
@@ -988,19 +988,19 @@ nacl.secretbox.keyLength = crypto_secretbox_KEYBYTES;
 nacl.secretbox.nonceLength = crypto_secretbox_NONCEBYTES;
 nacl.secretbox.overheadLength = crypto_secretbox_BOXZEROBYTES;
 
-nacl.scalarMult = function(n: Array, p: Array) {
+nacl.scalarMult = function(n: any[], p: any[]) {
   checkArrayTypes(n, p);
   if (n.length !== crypto_scalarmult_SCALARBYTES) throw new Error('bad n size');
   if (p.length !== crypto_scalarmult_BYTES) throw new Error('bad p size');
-  var q: Object = new Uint8Array(crypto_scalarmult_BYTES);
+  var q: object = new Uint8Array(crypto_scalarmult_BYTES);
   crypto_scalarmult(q, n, p);
   return q;
 };
 
-nacl.scalarMult.base = function(n: Array) {
+nacl.scalarMult.base = function(n: any[]) {
   checkArrayTypes(n);
   if (n.length !== crypto_scalarmult_SCALARBYTES) throw new Error('bad n size');
-  var q: Object = new Uint8Array(crypto_scalarmult_BYTES);
+  var q: object = new Uint8Array(crypto_scalarmult_BYTES);
   crypto_scalarmult_base(q, n);
   return q;
 };
@@ -1008,23 +1008,23 @@ nacl.scalarMult.base = function(n: Array) {
 nacl.scalarMult.scalarLength = crypto_scalarmult_SCALARBYTES;
 nacl.scalarMult.groupElementLength = crypto_scalarmult_BYTES;
 
-nacl.box = function(msg: String, nonce: Array, publicKey: String, secretKey: String) {
-  var k: String = nacl.box.before(publicKey, secretKey);
+nacl.box = function(msg: string, nonce: any[], publicKey: string, secretKey: string) {
+  var k: string = nacl.box.before(publicKey, secretKey);
   return nacl.secretbox(msg, nonce, k);
 };
 
-nacl.box.before = function(publicKey: String, secretKey: String) {
+nacl.box.before = function(publicKey: string, secretKey: string) {
   checkArrayTypes(publicKey, secretKey);
   checkBoxLengths(publicKey, secretKey);
-  var k: Array = new Uint8Array(crypto_box_BEFORENMBYTES);
+  var k: any[] = new Uint8Array(crypto_box_BEFORENMBYTES);
   crypto_box_beforenm(k, publicKey, secretKey);
   return k;
 };
 
 nacl.box.after = nacl.secretbox;
 
-nacl.box.open = function(msg: String, nonce: Array, publicKey: String, secretKey: String) {
-  var k: String = nacl.box.before(publicKey, secretKey);
+nacl.box.open = function(msg: string, nonce: any[], publicKey: string, secretKey: string) {
+  var k: string = nacl.box.before(publicKey, secretKey);
   return nacl.secretbox.open(msg, nonce, k);
 };
 
@@ -1037,7 +1037,7 @@ nacl.box.keyPair = function() {
   return {publicKey: pk, secretKey: sk};
 };
 
-nacl.box.keyPair.fromSecretKey = function(secretKey: String) {
+nacl.box.keyPair.fromSecretKey = function(secretKey: string) {
   checkArrayTypes(secretKey);
   if (secretKey.length !== crypto_box_SECRETKEYBYTES)
     throw new Error('bad secret key size');
@@ -1052,43 +1052,43 @@ nacl.box.sharedKeyLength = crypto_box_BEFORENMBYTES;
 nacl.box.nonceLength = crypto_box_NONCEBYTES;
 nacl.box.overheadLength = nacl.secretbox.overheadLength;
 
-nacl.sign = function(msg: Array, secretKey: String) {
+nacl.sign = function(msg: any[], secretKey: string) {
   checkArrayTypes(msg, secretKey);
   if (secretKey.length !== crypto_sign_SECRETKEYBYTES)
     throw new Error('bad secret key size');
-  var signedMsg: String = new Uint8Array(crypto_sign_BYTES+msg.length);
+  var signedMsg: string = new Uint8Array(crypto_sign_BYTES+msg.length);
   crypto_sign(signedMsg, msg, msg.length, secretKey);
   return signedMsg;
 };
 
-nacl.sign.open = function(signedMsg: Array, publicKey: String) {
+nacl.sign.open = function(signedMsg: any[], publicKey: string) {
   checkArrayTypes(signedMsg, publicKey);
   if (publicKey.length !== crypto_sign_PUBLICKEYBYTES)
     throw new Error('bad public key size');
-  var tmp: Object = new Uint8Array(signedMsg.length);
+  var tmp: object = new Uint8Array(signedMsg.length);
   var mlen: Function = crypto_sign_open(tmp, signedMsg, signedMsg.length, publicKey);
   if (mlen < 0) return null;
-  var m: Array = new Uint8Array(mlen);
+  var m: any[] = new Uint8Array(mlen);
   for (var i = 0; i < m.length; i++) m[i] = tmp[i];
   return m;
 };
 
-nacl.sign.detached = function(msg: String, secretKey: String) {
-  var signedMsg: Object = nacl.sign(msg, secretKey);
-  var sig: Array = new Uint8Array(crypto_sign_BYTES);
+nacl.sign.detached = function(msg: string, secretKey: string) {
+  var signedMsg: object = nacl.sign(msg, secretKey);
+  var sig: any[] = new Uint8Array(crypto_sign_BYTES);
   for (var i = 0; i < sig.length; i++) sig[i] = signedMsg[i];
   return sig;
 };
 
-nacl.sign.detached.verify = function(msg: Array, sig: Array, publicKey: String) {
+nacl.sign.detached.verify = function(msg: any[], sig: any[], publicKey: string) {
   checkArrayTypes(msg, sig, publicKey);
   if (sig.length !== crypto_sign_BYTES)
     throw new Error('bad signature size');
   if (publicKey.length !== crypto_sign_PUBLICKEYBYTES)
     throw new Error('bad public key size');
-  var sm: Array = new Uint8Array(crypto_sign_BYTES + msg.length);
-  var m: String = new Uint8Array(crypto_sign_BYTES + msg.length);
-  var i: Number;
+  var sm: any[] = new Uint8Array(crypto_sign_BYTES + msg.length);
+  var m: string = new Uint8Array(crypto_sign_BYTES + msg.length);
+  var i: number;
   for (i = 0; i < crypto_sign_BYTES; i++) sm[i] = sig[i];
   for (i = 0; i < msg.length; i++) sm[i+crypto_sign_BYTES] = msg[i];
   return (crypto_sign_open(m, sm, sm.length, publicKey) >= 0);
@@ -1101,21 +1101,21 @@ nacl.sign.keyPair = function() {
   return {publicKey: pk, secretKey: sk};
 };
 
-nacl.sign.keyPair.fromSecretKey = function(secretKey: String) {
+nacl.sign.keyPair.fromSecretKey = function(secretKey: string) {
   checkArrayTypes(secretKey);
   if (secretKey.length !== crypto_sign_SECRETKEYBYTES)
     throw new Error('bad secret key size');
-  var pk: Array = new Uint8Array(crypto_sign_PUBLICKEYBYTES);
+  var pk: any[] = new Uint8Array(crypto_sign_PUBLICKEYBYTES);
   for (var i = 0; i < pk.length; i++) pk[i] = secretKey[32+i];
   return {publicKey: pk, secretKey: new Uint8Array(secretKey)};
 };
 
-nacl.sign.keyPair.fromSeed = function(seed: Array) {
+nacl.sign.keyPair.fromSeed = function(seed: any[]) {
   checkArrayTypes(seed);
   if (seed.length !== crypto_sign_SEEDBYTES)
     throw new Error('bad seed size');
   var pk: Function = new Uint8Array(crypto_sign_PUBLICKEYBYTES);
-  var sk: Object = new Uint8Array(crypto_sign_SECRETKEYBYTES);
+  var sk: object = new Uint8Array(crypto_sign_SECRETKEYBYTES);
   for (var i = 0; i < 32; i++) sk[i] = seed[i];
   crypto_sign_keypair(pk, sk, true);
   return {publicKey: pk, secretKey: sk};
@@ -1126,16 +1126,16 @@ nacl.sign.secretKeyLength = crypto_sign_SECRETKEYBYTES;
 nacl.sign.seedLength = crypto_sign_SEEDBYTES;
 nacl.sign.signatureLength = crypto_sign_BYTES;
 
-nacl.hash = function(msg: Array) {
+nacl.hash = function(msg: any[]) {
   checkArrayTypes(msg);
-  var h: Array = new Uint8Array(crypto_hash_BYTES);
+  var h: any[] = new Uint8Array(crypto_hash_BYTES);
   crypto_hash(h, msg, msg.length);
   return h;
 };
 
 nacl.hash.hashLength = crypto_hash_BYTES;
 
-nacl.verify = function(x: Array, y: Array) {
+nacl.verify = function(x: any[], y: any[]) {
   checkArrayTypes(x, y);
   // Zero length arguments are considered not equal.
   if (x.length === 0 || y.length === 0) return false;
@@ -1150,12 +1150,12 @@ nacl.setPRNG = function(fn: Function) {
 (function() {
   // Initialize PRNG if environment provides CSPRNG.
   // If not, methods calling randombytes will throw.
-  var crypto: Number = typeof self !== 'undefined' ? (self.crypto || self.msCrypto) : null;
+  var crypto: number = typeof self !== 'undefined' ? (self.crypto || self.msCrypto) : null;
   if (crypto && crypto.getRandomValues) {
     // Browsers.
-    var QUOTA: Number = 65536;
-    nacl.setPRNG(function(x: Object, n: Number) {
-      var i: Number, v: Array = new Uint8Array(n);
+    var QUOTA: number = 65536;
+    nacl.setPRNG(function(x: object, n: number) {
+      var i: number, v: any[] = new Uint8Array(n);
       for (i = 0; i < n; i += QUOTA) {
         crypto.getRandomValues(v.subarray(i, i + Math.min(n - i, QUOTA)));
       }
@@ -1166,8 +1166,8 @@ nacl.setPRNG = function(fn: Function) {
     // Node.js.
     crypto = require('crypto');
     if (crypto && crypto.randomBytes) {
-      nacl.setPRNG(function(x: Object, n: String) {
-        var i: Number, v: Object = crypto.randomBytes(n);
+      nacl.setPRNG(function(x: object, n: string) {
+        var i: number, v: object = crypto.randomBytes(n);
         for (i = 0; i < n; i++) x[i] = v[i];
         cleanup(v);
       });

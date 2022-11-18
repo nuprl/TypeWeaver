@@ -17,7 +17,7 @@ import { RegExpTree } from './compat-transpiler/runtime';
 /**
  * An API object for RegExp processing (parsing/transform/generation).
  */
-const regexpTree: Object = {
+const regexpTree: object = {
   /**
    * Parser module exposed.
    */

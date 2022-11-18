@@ -3,7 +3,7 @@
 var shorthandSetter: Function = require('../parsers').shorthandSetter;
 var shorthandGetter: Function = require('../parsers').shorthandGetter;
 
-var shorthand_for: Object = {
+var shorthand_for: object = {
   'border-right-width': require('./borderRightWidth'),
   'border-right-style': require('./borderRightStyle'),
   'border-right-color': require('./borderRightColor'),

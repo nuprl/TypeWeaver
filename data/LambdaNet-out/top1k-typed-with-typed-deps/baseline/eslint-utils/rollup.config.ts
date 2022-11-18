@@ -10,7 +10,7 @@ import packageInfo from "./package.json"
  * @param {string} ext The extension for generated files.
  * @returns {object} The output configuration
  */
-function config(ext: String): Object {
+function config(ext: string): object {
     return {
         input: "src/index.js",
         output: {

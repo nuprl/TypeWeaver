@@ -4,7 +4,7 @@ const { Suite } = require('benchmark');
 console.log('Load times: ');
 
 console.time('lodash/clonedeep');
-const lodash: String = require('lodash/clonedeep');
+const lodash: string = require('lodash/clonedeep');
 console.timeEnd('lodash/clonedeep');
 
 console.time('rfdc');
@@ -16,40 +16,40 @@ const clone: Function = require('clone');
 console.timeEnd('clone');
 
 console.time('clone-deep');
-const clonedeep: String = require('clone-deep');
+const clonedeep: string = require('clone-deep');
 console.timeEnd('clone-deep');
 
 console.time('deep-copy');
-const deepcopy: String = require('deep-copy');
+const deepcopy: string = require('deep-copy');
 console.timeEnd('deep-copy');
 
 console.time('klona/full');
-const full: Array = require('klona/full');
+const full: any[] = require('klona/full');
 console.timeEnd('klona/full');
 
 console.time('klona');
-const klona: Array = require('klona');
+const klona: any[] = require('klona');
 console.timeEnd('klona');
 
 console.time('klona/lite');
-const lite: Array = require('klona/lite');
+const lite: any[] = require('klona/lite');
 console.timeEnd('klona/lite');
 
 console.time('klona/json');
-const json: String = require('klona/json');
+const json: string = require('klona/json');
 console.timeEnd('klona/json');
 
-const naiive: Function = (x: String) => JSON.parse(JSON.stringify(x));
-const clone_full: Function = (x: String) => clone(x, { includeNonEnumerable: true });
+const naiive: Function = (x: string) => JSON.parse(JSON.stringify(x));
+const clone_full: Function = (x: string) => clone(x, { includeNonEnumerable: true });
 
-function runner(name: String, contenders: Object): Void {
-	const fixture: String = join(__dirname, 'fixtures', name + '.js');
-	const validator: String = join(__dirname, 'validate', name + '.js');
+function runner(name: string, contenders: object): Void {
+	const fixture: string = join(__dirname, 'fixtures', name + '.js');
+	const validator: string = join(__dirname, 'validate', name + '.js');
 
 	console.log('\nValidation :: %s', name);
-	Object.keys(contenders).forEach((name: String) => {
+	Object.keys(contenders).forEach((name: string) => {
 		const isValid: Function = require(validator);
-		const INPUT: String = require(fixture);
+		const INPUT: string = require(fixture);
 
 		try {
 			isValid(INPUT, contenders[name](INPUT));
@@ -61,13 +61,13 @@ function runner(name: String, contenders: Object): Void {
 		}
 	});
 
-	const INPUT: String = require(fixture);
+	const INPUT: string = require(fixture);
 	console.log('\nBenchmark :: %s', name);
-	const bench: Array = new Suite().on('cycle', (e: Test) => {
+	const bench: any[] = new Suite().on('cycle', (e: Test) => {
 		console.log('  ' + e.target);
 	});
 
-	Object.keys(contenders).forEach((name: String) => {
+	Object.keys(contenders).forEach((name: string) => {
 		bench.add(name + ' '.repeat(22 - name.length), () => contenders[name](INPUT))
 	});
 

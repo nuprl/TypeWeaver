@@ -2,46 +2,46 @@
 
 // These tables borrowed from `ansi`
 
-var prefix: String = '\x1b['
+var prefix: string = '\x1b['
 
-export const up: Function = function up (num: String): String {
+export const up: Function = function up (num: string): string {
   return prefix + (num || '') + 'A'
 };
 
-export const down: Function = function down (num: Number): String {
+export const down: Function = function down (num: number): string {
   return prefix + (num || '') + 'B'
 };
 
-export const forward: Function = function forward (num: String): String {
+export const forward: Function = function forward (num: string): string {
   return prefix + (num || '') + 'C'
 };
 
-export const back: Function = function back (num: Number): String {
+export const back: Function = function back (num: number): string {
   return prefix + (num || '') + 'D'
 };
 
-export const nextLine: Object = function nextLine (num: Number): String {
+export const nextLine: object = function nextLine (num: number): string {
   return prefix + (num || '') + 'E'
 };
 
-export const previousLine: Function = function previousLine (num: String): String {
+export const previousLine: Function = function previousLine (num: string): string {
   return prefix + (num || '') + 'F'
 };
 
-export const horizontalAbsolute: String = function horizontalAbsolute (num: Number): String {
+export const horizontalAbsolute: string = function horizontalAbsolute (num: number): string {
   if (num == null) throw new Error('horizontalAboslute requires a column to position to')
   return prefix + num + 'G'
 };
 
-export const eraseData: Function = function eraseData (): String {
+export const eraseData: Function = function eraseData (): string {
   return prefix + 'J'
 };
 
-export const eraseLine: Function = function eraseLine (): String {
+export const eraseLine: Function = function eraseLine (): string {
   return prefix + 'K'
 };
 
-export const goto: Function = function (x: String, y: String) {
+export const goto: Function = function (x: string, y: string) {
   return prefix + y + ';' + x + 'H'
 };
 
@@ -53,15 +53,15 @@ export const beep: Function = function () {
   return '\x07'
 };
 
-export const hideCursor: String = function hideCursor (): String {
+export const hideCursor: string = function hideCursor (): string {
   return prefix + '?25l'
 };
 
-export const showCursor: String = function showCursor (): String {
+export const showCursor: string = function showCursor (): string {
   return prefix + '?25h'
 };
 
-var colors: Object = {
+var colors: object = {
   reset: 0,
 // styles
   bold: 1,
@@ -112,14 +112,14 @@ var colors: Object = {
   bgBrightWhite: 107
 }
 
-export const color: String = function color (colorWith: Array): String {
+export const color: string = function color (colorWith: any[]): string {
   if (arguments.length !== 1 || !Array.isArray(colorWith)) {
     colorWith = Array.prototype.slice.call(arguments)
   }
   return prefix + colorWith.map(colorNameToCode).join(';') + 'm'
 };
 
-function colorNameToCode (color: String): String {
+function colorNameToCode (color: string): string {
   if (colors[color] != null) return colors[color]
   throw new Error('Unknown color or style name: ' + color)
 }

@@ -33,10 +33,10 @@ import forEachBail from './forEachBail';
  */
 function loadDescriptionFile(
 	resolver: Resolver,
-	directory: Boolean,
+	directory: boolean,
 	filenames: Function,
-	oldInfo: Object,
-	resolveContext: Object,
+	oldInfo: object,
+	resolveContext: object,
 	callback: Function
 ): Void {
 	(function findDescriptionFile(): Promise {
@@ -46,10 +46,10 @@ function loadDescriptionFile(
 		}
 		forEachBail(
 			filenames,
-			(filename: String, callback: Function) => {
-				const descriptionFilePath: String = resolver.join(directory, filename);
+			(filename: string, callback: Function) => {
+				const descriptionFilePath: string = resolver.join(directory, filename);
 				if (resolver.fileSystem.readJson) {
-					resolver.fileSystem.readJson(descriptionFilePath, (err: Object, content: String) => {
+					resolver.fileSystem.readJson(descriptionFilePath, (err: object, content: string) => {
 						if (err) {
 							if (typeof err.code !== "undefined") {
 								if (resolveContext.missingDependencies) {
@@ -68,7 +68,7 @@ function loadDescriptionFile(
 						onJson(null, content);
 					});
 				} else {
-					resolver.fileSystem.readFile(descriptionFilePath, (err: Boolean, content: Number) => {
+					resolver.fileSystem.readFile(descriptionFilePath, (err: boolean, content: number) => {
 						if (err) {
 							if (resolveContext.missingDependencies) {
 								resolveContext.missingDependencies.add(descriptionFilePath);
@@ -78,7 +78,7 @@ function loadDescriptionFile(
 						if (resolveContext.fileDependencies) {
 							resolveContext.fileDependencies.add(descriptionFilePath);
 						}
-						let json: Number;
+						let json: number;
 
 						if (content) {
 							try {
@@ -94,7 +94,7 @@ function loadDescriptionFile(
 					});
 				}
 
-				function onJson(err: Array, content: String): Void {
+				function onJson(err: any[], content: string): Void {
 					if (err) {
 						if (resolveContext.log)
 							resolveContext.log(
@@ -135,10 +135,10 @@ function loadDescriptionFile(
  * @param {string|string[]} field field
  * @returns {object|string|number|boolean|undefined} field data
  */
-function getField(content: Object, field: Array): Object {
+function getField(content: object, field: any[]): object {
 	if (!content) return undefined;
 	if (Array.isArray(field)) {
-		let current: Object = content;
+		let current: object = content;
 		for (let j = 0; j < field.length; j++) {
 			if (current === null || typeof current !== "object") {
 				current = null;
@@ -156,11 +156,11 @@ function getField(content: Object, field: Array): Object {
  * @param {string} directory directory
  * @returns {string|null} parent directory or null
  */
-function cdUp(directory: String): String {
+function cdUp(directory: string): string {
 	if (directory === "/") return null;
-	const i: Number = directory.lastIndexOf("/"),
-		j: Number = directory.lastIndexOf("\\");
-	const p: Number = i < 0 ? j : j < 0 ? i : i < j ? j : i;
+	const i: number = directory.lastIndexOf("/"),
+		j: number = directory.lastIndexOf("\\");
+	const p: number = i < 0 ? j : j < 0 ? i : i < j ? j : i;
 	if (p < 0) return null;
 	return directory.substr(0, p || 1);
 }

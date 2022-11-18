@@ -2,7 +2,7 @@
 
 import micromatch from '..';
 
-const isMatch: Object = micromatch.matcher('*', { ignore: 'f*' });
+const isMatch: object = micromatch.matcher('*', { ignore: 'f*' });
 console.log(isMatch('foo')); //=> false
 console.log(isMatch('bar')); //=> true
 console.log(isMatch('baz')); //=> true

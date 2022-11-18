@@ -17,8 +17,8 @@
  * repeat('abc', 0)
  * // => ''
  */
-function repeat(string: Number, n: Number): String {
-  let result: String = ''
+function repeat(string: number, n: number): string {
+  let result: string = ''
   if (!string || n < 1 || n > Number.MAX_SAFE_INTEGER) {
     return result
   }

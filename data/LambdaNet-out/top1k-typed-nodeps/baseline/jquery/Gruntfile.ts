@@ -1,9 +1,9 @@
 "use strict";
 
 module.exports = function( grunt: HTMLElement ) {
-	function readOptionalJSON( filepath: String ): Promise {
+	function readOptionalJSON( filepath: string ): Promise {
 		var stripJSONComments: Function = require( "strip-json-comments" ),
-			data: Object = {};
+			data: object = {};
 		try {
 			data = JSON.parse( stripJSONComments(
 				fs.readFileSync( filepath, { encoding: "utf8" } )
@@ -15,16 +15,16 @@ module.exports = function( grunt: HTMLElement ) {
 	// Support: Node.js <12
 	// Skip running tasks that dropped support for Node.js 10
 	// in this Node version.
-	function runIfNewNode( task: Number ): Number {
+	function runIfNewNode( task: number ): number {
 		return oldNode ? "print_old_node_message:" + task : task;
 	}
 
-	var fs: String = require( "fs" ),
-		gzip: String = require( "gzip-js" ),
-		oldNode: Boolean = /^v10\./.test( process.version ),
-		nodeV17OrNewer: Boolean = !/^v1[0246]\./.test( process.version ),
-		isCi: Boolean = process.env.GITHUB_ACTION,
-		ciBrowsers: Boolean = process.env.BROWSERS && process.env.BROWSERS.split( "," );
+	var fs: string = require( "fs" ),
+		gzip: string = require( "gzip-js" ),
+		oldNode: boolean = /^v10\./.test( process.version ),
+		nodeV17OrNewer: boolean = !/^v1[0246]\./.test( process.version ),
+		isCi: boolean = process.env.GITHUB_ACTION,
+		ciBrowsers: boolean = process.env.BROWSERS && process.env.BROWSERS.split( "," );
 
 	if ( !grunt.option( "filename" ) ) {
 		grunt.option( "filename", "jquery.js" );
@@ -37,7 +37,7 @@ module.exports = function( grunt: HTMLElement ) {
 			files: [ "dist/jquery.js", "dist/jquery.min.js" ],
 			options: {
 				compress: {
-					gz: function( contents: Array ) {
+					gz: function( contents: any[] ) {
 						return gzip.zip( contents, {} ).length;
 					}
 				},
@@ -128,8 +128,8 @@ module.exports = function( grunt: HTMLElement ) {
 					...fs
 						.readFileSync( `${ __dirname }/.eslintignore`, "utf-8" )
 						.split( "\n" )
-						.filter( (filePath: String) => filePath )
-						.map( (filePath: String) => filePath[ 0 ] === "!" ?
+						.filter( (filePath: string) => filePath )
+						.map( (filePath: string) => filePath[ 0 ] === "!" ?
 							filePath.slice( 1 ) :
 							`!${ filePath }`
 						)
@@ -359,7 +359,7 @@ module.exports = function( grunt: HTMLElement ) {
 	grunt.loadTasks( "build/tasks" );
 
 	grunt.registerTask( "print_old_node_message", ( ...args ) => {
-		var task: String = args.join( ":" );
+		var task: string = args.join( ":" );
 		grunt.log.writeln( "Old Node.js detected, running the task \"" + task + "\" skipped..." );
 	} );
 

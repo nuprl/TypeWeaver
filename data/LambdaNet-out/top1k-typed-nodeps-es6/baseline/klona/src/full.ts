@@ -1,14 +1,14 @@
-function set(obj: Object, key: String, val: Object): Void {
+function set(obj: object, key: string, val: object): Void {
 	if (typeof val.value === 'object') val.value = klona(val.value);
 	if (!val.enumerable || val.get || val.set || !val.configurable || !val.writable || key === '__proto__') {
 		Object.defineProperty(obj, key, val);
 	} else obj[key] = val.value;
 }
 
-export function klona(x: Array): Array {
+export function klona(x: any[]): any[] {
 	if (typeof x !== 'object') return x;
 
-	var i: Number=0, k: Function, list: Array, tmp: HTMLDivElement, str: String=Object.prototype.toString.call(x);
+	var i: number=0, k: Function, list: any[], tmp: HTMLDivElement, str: string=Object.prototype.toString.call(x);
 
 	if (str === '[object Object]') {
 		tmp = Object.create(x.__proto__ || null);
@@ -16,12 +16,12 @@ export function klona(x: Array): Array {
 		tmp = Array(x.length);
 	} else if (str === '[object Set]') {
 		tmp = new Set;
-		x.forEach(function (val: String) {
+		x.forEach(function (val: string) {
 			tmp.add(klona(val));
 		});
 	} else if (str === '[object Map]') {
 		tmp = new Map;
-		x.forEach(function (val: String, key: String) {
+		x.forEach(function (val: string, key: string) {
 			tmp.set(klona(key), klona(val));
 		});
 	} else if (str === '[object Date]') {

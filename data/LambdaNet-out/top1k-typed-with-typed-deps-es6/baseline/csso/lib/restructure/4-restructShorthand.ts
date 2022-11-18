@@ -1,13 +1,13 @@
 import { List, generate, walk } from 'css-tree';
 
-const REPLACE: Number = 1;
-const REMOVE: Number = 2;
-const TOP: Number = 0;
-const RIGHT: Number = 1;
-const BOTTOM: Number = 2;
-const LEFT: Number = 3;
+const REPLACE: number = 1;
+const REMOVE: number = 2;
+const TOP: number = 0;
+const RIGHT: number = 1;
+const BOTTOM: number = 2;
+const LEFT: number = 3;
 const SIDES: Promise = ['top', 'right', 'bottom', 'left'];
-const SIDE: Object = {
+const SIDE: object = {
     'margin-top': 'top',
     'margin-right': 'right',
     'margin-bottom': 'bottom',
@@ -31,7 +31,7 @@ const SIDE: Object = {
     'border-bottom-style': 'bottom',
     'border-left-style': 'left'
 };
-const MAIN_PROPERTY: Object = {
+const MAIN_PROPERTY: object = {
     'margin': 'margin',
     'margin-top': 'margin',
     'margin-right': 'margin',
@@ -75,10 +75,10 @@ class TRBL {
     }
 
     getValueSequence(declaration, count) {
-        const values: Array = [];
-        let iehack: String = '';
-        const hasBadValues: Number = declaration.value.type !== 'Value' || declaration.value.children.some(function(child: Object) {
-            let special: Boolean = false;
+        const values: any[] = [];
+        let iehack: string = '';
+        const hasBadValues: number = declaration.value.type !== 'Value' || declaration.value.children.some(function(child: object) {
+            let special: boolean = false;
 
             switch (child.type) {
                 case 'Identifier':
@@ -152,22 +152,22 @@ class TRBL {
     }
 
     canOverride(side, value) {
-        const currentValue: Object = this.sides[side];
+        const currentValue: object = this.sides[side];
 
         return !currentValue || (value.important && !currentValue.important);
     }
 
     add(name, declaration) {
-        function attemptToAdd(): Boolean {
-            const sides: Object = this.sides;
-            const side: String = SIDE[name];
+        function attemptToAdd(): boolean {
+            const sides: object = this.sides;
+            const side: string = SIDE[name];
 
             if (side) {
                 if (side in sides === false) {
                     return false;
                 }
 
-                const values: Object = this.getValueSequence(declaration, 1);
+                const values: object = this.getValueSequence(declaration, 1);
 
                 if (!values || !values.length) {
                     return false;
@@ -188,7 +188,7 @@ class TRBL {
 
                 return true;
             } else if (name === this.name) {
-                const values: Object = this.getValueSequence(declaration, 4);
+                const values: object = this.getValueSequence(declaration, 4);
 
                 if (!values || !values.length) {
                     return false;
@@ -251,13 +251,13 @@ class TRBL {
     }
 
     isOkToMinimize() {
-        const top: Object = this.sides.top;
-        const right: Object = this.sides.right;
-        const bottom: Object = this.sides.bottom;
-        const left: Object = this.sides.left;
+        const top: object = this.sides.top;
+        const right: object = this.sides.right;
+        const bottom: object = this.sides.bottom;
+        const left: object = this.sides.left;
 
         if (top && right && bottom && left) {
-            const important: Number =
+            const important: number =
                 top.important +
                 right.important +
                 bottom.important +
@@ -270,15 +270,15 @@ class TRBL {
     }
 
     getValue() {
-        const result: Object = new List();
+        const result: object = new List();
         const sides: HTMLElement = this.sides;
-        const values: Array = [
+        const values: any[] = [
             sides.top,
             sides.right,
             sides.bottom,
             sides.left
         ];
-        const stringValues: Object = [
+        const stringValues: object = [
             generate(sides.top.node),
             generate(sides.right.node),
             generate(sides.bottom.node),
@@ -325,20 +325,20 @@ class TRBL {
     }
 }
 
-function processRule(rule: Object, shorts: Object, shortDeclarations: Array, lastShortSelector: Number): Boolean {
-    const declarations: Object = rule.block.children;
-    const selector: String = rule.prelude.children.first.id;
+function processRule(rule: object, shorts: object, shortDeclarations: any[], lastShortSelector: number): boolean {
+    const declarations: object = rule.block.children;
+    const selector: string = rule.prelude.children.first.id;
 
-    rule.block.children.forEachRight(function(declaration: Object, item: String) {
-        const property: String = declaration.property;
+    rule.block.children.forEachRight(function(declaration: object, item: string) {
+        const property: string = declaration.property;
 
         if (!MAIN_PROPERTY.hasOwnProperty(property)) {
             return;
         }
 
-        const key: String = MAIN_PROPERTY[property];
+        const key: string = MAIN_PROPERTY[property];
         let shorthand: TRBL;
-        let operation: Number;
+        let operation: number;
 
         if (!lastShortSelector || selector === lastShortSelector) {
             if (key in shorts) {
@@ -372,8 +372,8 @@ function processRule(rule: Object, shorts: Object, shortDeclarations: Array, las
     return lastShortSelector;
 }
 
-function processShorthands(shortDeclarations: Array, markDeclaration: Function): Void {
-    shortDeclarations.forEach(function(item: Object) {
+function processShorthands(shortDeclarations: any[], markDeclaration: Function): Void {
+    shortDeclarations.forEach(function(item: object) {
         const shorthand: TRBL = item.shorthand;
 
         if (!shorthand.isOkToMinimize()) {
@@ -388,9 +388,9 @@ function processShorthands(shortDeclarations: Array, markDeclaration: Function):
     });
 }
 
-export default function restructBlock(ast: Function, indexer: Object): Void {
+export default function restructBlock(ast: Function, indexer: object): Void {
     const stylesheetMap: Function = {};
-    const shortDeclarations: Array = [];
+    const shortDeclarations: any[] = [];
 
     walk(ast, {
         visit: 'Rule',

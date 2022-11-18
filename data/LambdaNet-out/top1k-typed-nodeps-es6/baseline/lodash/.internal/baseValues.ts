@@ -8,8 +8,8 @@
  * @param {Array} props The property names to get values for.
  * @returns {Object} Returns the array of property values.
  */
-function baseValues(object: Object, props: Array): Array {
-  return props == null ? [] : props.map((key: String) => object[key])
+function baseValues(object: object, props: any[]): any[] {
+  return props == null ? [] : props.map((key: string) => object[key])
 }
 
 export default baseValues

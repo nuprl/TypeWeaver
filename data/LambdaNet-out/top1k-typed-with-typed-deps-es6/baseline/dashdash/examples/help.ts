@@ -6,7 +6,7 @@
 
 import dashdash from '../lib/dashdash';
 
-var options: Array = [
+var options: any[] = [
     {
         names: ['verbose', 'v'],
         type: 'bool',
@@ -20,9 +20,9 @@ var options: Array = [
 ];
 
 // We'll use this `parser` to parse and to generate help output.
-var parser: Object = dashdash.createParser({options: options});
+var parser: object = dashdash.createParser({options: options});
 try {
-    var opts: Object = parser.parse(process.argv);
+    var opts: object = parser.parse(process.argv);
 } catch (e) {
     console.error('help: error: %s', e.message);
     process.exit(1);
@@ -30,7 +30,7 @@ try {
 
 // Use `parser.help()` for formatted options help.
 if (opts.help) {
-    var help: String = parser.help().trimRight();
+    var help: string = parser.help().trimRight();
     console.log('usage: node help.js [OPTIONS]\n'
                 + 'options:\n'
                 + help);

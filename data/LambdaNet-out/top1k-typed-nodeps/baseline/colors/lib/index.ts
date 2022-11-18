@@ -1,4 +1,4 @@
-var colors: String = require('./colors');
+var colors: string = require('./colors');
 module['exports'] = colors;
 
 // Remark: By default, colors will add style properties to String.prototype.

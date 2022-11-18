@@ -6,10 +6,10 @@
  * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  ********************************************************************/
 
-var addon: String = require('./build/Release/addon');
-var calculations: Number = process.argv[2] || 100000000;
+var addon: string = require('./build/Release/addon');
+var calculations: number = process.argv[2] || 100000000;
 
-function printResult(type: String, pi: Number, ms: Number): Void {
+function printResult(type: string, pi: number, ms: number): Void {
   console.log(type, 'method:');
   console.log('\tπ ≈ ' + pi +
               ' (' + Math.abs(pi - Math.PI) + ' away from actual)');
@@ -18,21 +18,21 @@ function printResult(type: String, pi: Number, ms: Number): Void {
 }
 
 function runSync(): Promise {
-  var start: Number = Date.now();
+  var start: number = Date.now();
   // Estimate() will execute in the current thread,
   // the next line won't return until it is finished
-  var result: String = addon.calculateSync(calculations);
+  var result: string = addon.calculateSync(calculations);
   printResult('Sync', result, Date.now() - start);
 }
 
 function runAsync(): Void {
   // how many batches should we split the work in to?
-  var batches: Number = process.argv[3] || 16;
-  var ended: Number = 0;
-  var total: Number = 0;
-  var start: Number = Date.now();
+  var batches: number = process.argv[3] || 16;
+  var ended: number = 0;
+  var total: number = 0;
+  var start: number = Date.now();
 
-  function done (err: Function, result: Number): Void {
+  function done (err: Function, result: number): Void {
     total += result;
     
     // have all the batches finished executing?

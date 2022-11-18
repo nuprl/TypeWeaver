@@ -1,29 +1,29 @@
 'use strict';
 
-var $Map: Boolean = typeof Map === 'function' && Map.prototype ? Map : null;
-var $Set: Boolean = typeof Set === 'function' && Set.prototype ? Set : null;
+var $Map: boolean = typeof Map === 'function' && Map.prototype ? Map : null;
+var $Set: boolean = typeof Set === 'function' && Set.prototype ? Set : null;
 
 var exported: Function;
 
 if (!$Map) {
 	// eslint-disable-next-line no-unused-vars
-	exported = function isMap(x: String): Boolean {
+	exported = function isMap(x: string): boolean {
 		// `Map` is not present in this environment.
 		return false;
 	};
 }
 
-var $mapHas: String = $Map ? Map.prototype.has : null;
-var $setHas: String = $Set ? Set.prototype.has : null;
+var $mapHas: string = $Map ? Map.prototype.has : null;
+var $setHas: string = $Set ? Set.prototype.has : null;
 if (!exported && !$mapHas) {
 	// eslint-disable-next-line no-unused-vars
-	exported = function isMap(x: String): Boolean {
+	exported = function isMap(x: string): boolean {
 		// `Map` does not have a `has` method
 		return false;
 	};
 }
 
-module.exports = exported || function isMap(x: String): Boolean {
+module.exports = exported || function isMap(x: string): boolean {
 	if (!x || typeof x !== 'object') {
 		return false;
 	}

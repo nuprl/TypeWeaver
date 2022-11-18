@@ -40,14 +40,14 @@ class MemoryCookieStore extends Store {
     super();
     this.synchronous = true;
     this.idx = {};
-    const customInspectSymbol: Boolean = getCustomInspectSymbol();
+    const customInspectSymbol: boolean = getCustomInspectSymbol();
     if (customInspectSymbol) {
       this[customInspectSymbol] = this.inspect;
     }
   }
 
   inspect() {
-    const util: Object = { inspect: getUtilInspect(inspectFallback) };
+    const util: object = { inspect: getUtilInspect(inspectFallback) };
     return `{ idx: ${util.inspect(this.idx, false, 2)} }`;
   }
 
@@ -61,7 +61,7 @@ class MemoryCookieStore extends Store {
     return cb(null, this.idx[domain][path][key] || null);
   }
   findCookies(domain, path, allowSpecialUseDomain, cb) {
-    const results: Array = [];
+    const results: any[] = [];
     if (typeof allowSpecialUseDomain === "function") {
       cb = allowSpecialUseDomain;
       allowSpecialUseDomain = true;
@@ -85,7 +85,7 @@ class MemoryCookieStore extends Store {
       pathMatcher = function matchRFC(domainIndex: Function): Void {
         //NOTE: we should use path-match algorithm from S5.1.4 here
         //(see : https://github.com/ChromiumWebApps/chromium/blob/b3d3b4da8bb94c1b2e061600df106d590fda3620/net/cookies/canonical_cookie.cc#L299)
-        Object.keys(domainIndex).forEach((cookiePath: String) => {
+        Object.keys(domainIndex).forEach((cookiePath: string) => {
           if (pathMatch(path, cookiePath)) {
             const pathIndex: Function = domainIndex[cookiePath];
             for (const key in pathIndex) {
@@ -96,10 +96,10 @@ class MemoryCookieStore extends Store {
       };
     }
 
-    const domains: Array = permuteDomain(domain, allowSpecialUseDomain) || [domain];
-    const idx: Object = this.idx;
-    domains.forEach((curDomain: String) => {
-      const domainIndex: String = idx[curDomain];
+    const domains: any[] = permuteDomain(domain, allowSpecialUseDomain) || [domain];
+    const idx: object = this.idx;
+    domains.forEach((curDomain: string) => {
+      const domainIndex: string = idx[curDomain];
       if (!domainIndex) {
         return;
       }
@@ -150,15 +150,15 @@ class MemoryCookieStore extends Store {
     return cb(null);
   }
   getAllCookies(cb) {
-    const cookies: Array = [];
-    const idx: Object = this.idx;
+    const cookies: any[] = [];
+    const idx: object = this.idx;
 
-    const domains: Array = Object.keys(idx);
-    domains.forEach((domain: String) => {
-      const paths: Array = Object.keys(idx[domain]);
-      paths.forEach((path: String) => {
-        const keys: Array = Object.keys(idx[domain][path]);
-        keys.forEach((key: String) => {
+    const domains: any[] = Object.keys(idx);
+    domains.forEach((domain: string) => {
+      const paths: any[] = Object.keys(idx[domain]);
+      paths.forEach((path: string) => {
+        const keys: any[] = Object.keys(idx[domain][path]);
+        keys.forEach((key: string) => {
           if (key !== null) {
             cookies.push(idx[domain][path][key]);
           }
@@ -168,7 +168,7 @@ class MemoryCookieStore extends Store {
 
     // Sort by creationIndex so deserializing retains the creation order.
     // When implementing your own store, this SHOULD retain the order too
-    cookies.sort((a: Object, b: Object) => {
+    cookies.sort((a: object, b: object) => {
       return (a.creationIndex || 0) - (b.creationIndex || 0);
     });
 
@@ -185,7 +185,7 @@ class MemoryCookieStore extends Store {
   "removeCookies",
   "removeAllCookies",
   "getAllCookies"
-].forEach((name: String) => {
+].forEach((name: string) => {
   MemoryCookieStore.prototype[name] = fromCallback(
     MemoryCookieStore.prototype[name]
   );
@@ -193,13 +193,13 @@ class MemoryCookieStore extends Store {
 
 exports.MemoryCookieStore = MemoryCookieStore;
 
-function inspectFallback(val: Object): String {
-  const domains: Array = Object.keys(val);
+function inspectFallback(val: object): string {
+  const domains: any[] = Object.keys(val);
   if (domains.length === 0) {
     return "{}";
   }
-  let result: String = "{\n";
-  Object.keys(val).forEach((domain: String, i: String) => {
+  let result: string = "{\n";
+  Object.keys(val).forEach((domain: string, i: string) => {
     result += formatDomain(domain, val[domain]);
     if (i < domains.length - 1) {
       result += ",";
@@ -210,10 +210,10 @@ function inspectFallback(val: Object): String {
   return result;
 }
 
-function formatDomain(domainName: String, domainValue: Function): String {
-  const indent: String = "  ";
-  let result: String = `${indent}'${domainName}': {\n`;
-  Object.keys(domainValue).forEach((path: String, i: String, paths: Array) => {
+function formatDomain(domainName: string, domainValue: Function): string {
+  const indent: string = "  ";
+  let result: string = `${indent}'${domainName}': {\n`;
+  Object.keys(domainValue).forEach((path: string, i: string, paths: any[]) => {
     result += formatPath(path, domainValue[path]);
     if (i < paths.length - 1) {
       result += ",";
@@ -224,10 +224,10 @@ function formatDomain(domainName: String, domainValue: Function): String {
   return result;
 }
 
-function formatPath(pathName: String, pathValue: Function): String {
-  const indent: String = "    ";
-  let result: String = `${indent}'${pathName}': {\n`;
-  Object.keys(pathValue).forEach((cookieName: String, i: String, cookieNames: String) => {
+function formatPath(pathName: string, pathValue: Function): string {
+  const indent: string = "    ";
+  let result: string = `${indent}'${pathName}': {\n`;
+  Object.keys(pathValue).forEach((cookieName: string, i: string, cookieNames: string) => {
     const cookie: Cookie = pathValue[cookieName];
     result += `      ${cookieName}: ${cookie.inspect()}`;
     if (i < cookieNames.length - 1) {

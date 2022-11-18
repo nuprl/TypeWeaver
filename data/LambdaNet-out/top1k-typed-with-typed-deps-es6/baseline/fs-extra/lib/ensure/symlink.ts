@@ -18,11 +18,11 @@ const symlinkTypeSync: Function = _symlinkType.symlinkTypeSync
 import { pathExists } from '../path-exists';
 import { areIdentical } from '../util/stat';
 
-function createSymlink (srcpath: String, dstpath: String, type: Number, callback: String): Void {
+function createSymlink (srcpath: string, dstpath: string, type: number, callback: string): Void {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
 
-  fs.lstat(dstpath, (err: Boolean, stats: String) => {
+  fs.lstat(dstpath, (err: boolean, stats: string) => {
     if (!err && stats.isSymbolicLink()) {
       Promise.all([
         fs.stat(srcpath),
@@ -35,17 +35,17 @@ function createSymlink (srcpath: String, dstpath: String, type: Number, callback
   })
 }
 
-function _createSymlink (srcpath: Array, dstpath: String, type: String, callback: Function): Void {
-  symlinkPaths(srcpath, dstpath, (err: String, relative: Object) => {
+function _createSymlink (srcpath: any[], dstpath: string, type: string, callback: Function): Void {
+  symlinkPaths(srcpath, dstpath, (err: string, relative: object) => {
     if (err) return callback(err)
     srcpath = relative.toDst
-    symlinkType(relative.toCwd, type, (err: String, type: String) => {
+    symlinkType(relative.toCwd, type, (err: string, type: string) => {
       if (err) return callback(err)
-      const dir: String = path.dirname(dstpath)
-      pathExists(dir, (err: String, dirExists: Boolean) => {
+      const dir: string = path.dirname(dstpath)
+      pathExists(dir, (err: string, dirExists: boolean) => {
         if (err) return callback(err)
         if (dirExists) return fs.symlink(srcpath, dstpath, type, callback)
-        mkdirs(dir, (err: String) => {
+        mkdirs(dir, (err: string) => {
           if (err) return callback(err)
           fs.symlink(srcpath, dstpath, type, callback)
         })
@@ -54,22 +54,22 @@ function _createSymlink (srcpath: Array, dstpath: String, type: String, callback
   })
 }
 
-function createSymlinkSync (srcpath: Array, dstpath: String, type: String): Boolean {
-  let stats: String
+function createSymlinkSync (srcpath: any[], dstpath: string, type: string): boolean {
+  let stats: string
   try {
     stats = fs.lstatSync(dstpath)
   } catch {}
   if (stats && stats.isSymbolicLink()) {
-    const srcStat: String = fs.statSync(srcpath)
-    const dstStat: Number = fs.statSync(dstpath)
+    const srcStat: string = fs.statSync(srcpath)
+    const dstStat: number = fs.statSync(dstpath)
     if (areIdentical(srcStat, dstStat)) return
   }
 
-  const relative: Object = symlinkPathsSync(srcpath, dstpath)
+  const relative: object = symlinkPathsSync(srcpath, dstpath)
   srcpath = relative.toDst
   type = symlinkTypeSync(relative.toCwd, type)
-  const dir: String = path.dirname(dstpath)
-  const exists: Boolean = fs.existsSync(dir)
+  const dir: string = path.dirname(dstpath)
+  const exists: boolean = fs.existsSync(dir)
   if (exists) return fs.symlinkSync(srcpath, dstpath, type)
   mkdirsSync(dir)
   return fs.symlinkSync(srcpath, dstpath, type)

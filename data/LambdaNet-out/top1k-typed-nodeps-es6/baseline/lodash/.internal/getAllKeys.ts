@@ -8,8 +8,8 @@ import keys from '../keys.js'
  * @param {Object} object The object to query.
  * @returns {Array} Returns the array of property names and symbols.
  */
-function getAllKeys(object: Object): Array {
-  const result: Array = keys(object)
+function getAllKeys(object: object): any[] {
+  const result: any[] = keys(object)
   if (!Array.isArray(object)) {
     result.push(...getSymbols(object))
   }

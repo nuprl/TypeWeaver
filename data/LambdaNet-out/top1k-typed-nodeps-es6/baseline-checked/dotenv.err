@@ -1,37 +1,29 @@
-lib/cli-options.ts(3,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/env-options.ts(5,11): error TS2339: Property 'encoding' does not exist on type 'Object'.
-lib/env-options.ts(9,11): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/env-options.ts(13,11): error TS2339: Property 'debug' does not exist on type 'Object'.
-lib/env-options.ts(17,11): error TS2339: Property 'override' does not exist on type 'Object'.
+lib/env-options.ts(5,11): error TS2339: Property 'encoding' does not exist on type 'object'.
+lib/env-options.ts(9,11): error TS2339: Property 'path' does not exist on type 'object'.
+lib/env-options.ts(13,11): error TS2339: Property 'debug' does not exist on type 'object'.
+lib/env-options.ts(17,11): error TS2339: Property 'override' does not exist on type 'object'.
 lib/main.ts(8,10): error TS2300: Duplicate identifier 'parse'.
-lib/main.ts(18,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/main.ts(40,9): error TS2538: Type 'String' cannot be used as an index type.
 lib/main.ts(46,34): error TS2304: Cannot find name 'Void'.
-lib/main.ts(50,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/main.ts(51,3): error TS2322: Type 'string | any[]' is not assignable to type 'string'.
+  Type 'any[]' is not assignable to type 'string'.
+lib/main.ts(51,55): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 lib/main.ts(55,10): error TS2300: Duplicate identifier 'config'.
-lib/main.ts(58,53): error TS2339: Property 'debug' does not exist on type 'Object'.
-lib/main.ts(59,56): error TS2339: Property 'override' does not exist on type 'Object'.
-lib/main.ts(62,17): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/main.ts(63,41): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/main.ts(65,17): error TS2339: Property 'encoding' does not exist on type 'Object'.
-lib/main.ts(66,26): error TS2339: Property 'encoding' does not exist on type 'Object'.
-lib/main.ts(72,41): error TS2339: Property 'parse' does not exist on type 'Object'.
-lib/main.ts(72,63): error TS2769: No overload matches this call.
+lib/main.ts(58,53): error TS2339: Property 'debug' does not exist on type 'object'.
+lib/main.ts(59,56): error TS2339: Property 'override' does not exist on type 'object'.
+lib/main.ts(62,17): error TS2339: Property 'path' does not exist on type 'object'.
+lib/main.ts(63,41): error TS2339: Property 'path' does not exist on type 'object'.
+lib/main.ts(65,17): error TS2339: Property 'encoding' does not exist on type 'object'.
+lib/main.ts(66,26): error TS2339: Property 'encoding' does not exist on type 'object'.
+lib/main.ts(72,41): error TS2339: Property 'parse' does not exist on type 'object'.
+lib/main.ts(72,77): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+    Type 'string' is not assignable to type 'null'.
   Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+    Type 'string' is not assignable to type 'BufferEncoding'.
   Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-lib/main.ts(76,21): error TS2538: Type 'String' cannot be used as an index type.
-lib/main.ts(76,35): error TS2538: Type 'String' cannot be used as an index type.
-lib/main.ts(79,23): error TS2538: Type 'String' cannot be used as an index type.
-lib/main.ts(79,37): error TS2538: Type 'String' cannot be used as an index type.
+    Type 'string' is not assignable to type 'BufferEncoding'.
 lib/main.ts(107,14): error TS2300: Duplicate identifier 'config'.
-lib/main.ts(107,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/main.ts(107,43): error TS2339: Property 'config' does not exist on type 'Object'.
+lib/main.ts(107,43): error TS2339: Property 'config' does not exist on type 'object'.
 lib/main.ts(108,14): error TS2300: Duplicate identifier 'parse'.
-lib/main.ts(108,43): error TS2339: Property 'parse' does not exist on type 'Object'.
+lib/main.ts(108,43): error TS2339: Property 'parse' does not exist on type 'object'.
 

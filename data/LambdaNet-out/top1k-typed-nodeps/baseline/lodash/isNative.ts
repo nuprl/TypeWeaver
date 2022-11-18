@@ -7,7 +7,7 @@ import isObject from './isObject.js'
 const reRegExpChar: RegExp = /[\\^$.*+?()[\]{}|]/g
 
 /** Used to detect if a method is native. */
-const reIsNative: Number = RegExp(`^${
+const reIsNative: number = RegExp(`^${
   Function.prototype.toString.call(Object.prototype.hasOwnProperty)
     .replace(reRegExpChar, '\\$&')
     .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?')
@@ -29,7 +29,7 @@ const reIsNative: Number = RegExp(`^${
  * isNative(isDate)
  * // => false
  */
-function isNative(value: String): Boolean {
+function isNative(value: string): boolean {
   return isObject(value) && reIsNative.test(value)
 }
 

@@ -13,12 +13,12 @@ import support from "./var/support.js";
 import isArrayLike from "./core/isArrayLike.js";
 import DOMEval from "./core/DOMEval.js";
 
-var version: String = "@VERSION",
+var version: string = "@VERSION",
 
 	rhtmlSuffix: RegExp = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery: Function = function( selector: String, context: Array ) {
+	jQuery: Function = function( selector: string, context: any[] ) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -41,7 +41,7 @@ jQuery.fn = jQuery.prototype = {
 
 	// Get the Nth element in the matched element set OR
 	// Get the whole matched element set as a clean array
-	get: function( num: Number ) {
+	get: function( num: number ) {
 
 		// Return all the elements in a clean array
 		if ( num == null ) {
@@ -54,10 +54,10 @@ jQuery.fn = jQuery.prototype = {
 
 	// Take an array of elements and push it onto the stack
 	// (returning the new matched element set)
-	pushStack: function( elems: String ) {
+	pushStack: function( elems: string ) {
 
 		// Build a new jQuery matched element set
-		var ret: String = jQuery.merge( this.constructor(), elems );
+		var ret: string = jQuery.merge( this.constructor(), elems );
 
 		// Add the old object onto the stack (as a reference)
 		ret.prevObject = this;
@@ -72,7 +72,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	map: function( callback: Function ) {
-		return this.pushStack( jQuery.map( this, function( elem: String, i: String ) {
+		return this.pushStack( jQuery.map( this, function( elem: string, i: string ) {
 			return callback.call( elem, i, elem );
 		} ) );
 	},
@@ -90,20 +90,20 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	even: function() {
-		return this.pushStack( jQuery.grep( this, function( _elem: Function, i: Number ) {
+		return this.pushStack( jQuery.grep( this, function( _elem: Function, i: number ) {
 			return ( i + 1 ) % 2;
 		} ) );
 	},
 
 	odd: function() {
-		return this.pushStack( jQuery.grep( this, function( _elem: Function, i: Number ) {
+		return this.pushStack( jQuery.grep( this, function( _elem: Function, i: number ) {
 			return i % 2;
 		} ) );
 	},
 
-	eq: function( i: Number ) {
-		var len: Number = this.length,
-			j: Number = +i + ( i < 0 ? len : 0 );
+	eq: function( i: number ) {
+		var len: number = this.length,
+			j: number = +i + ( i < 0 ? len : 0 );
 		return this.pushStack( j >= 0 && j < len ? [ this[ j ] ] : [] );
 	},
 
@@ -113,11 +113,11 @@ jQuery.fn = jQuery.prototype = {
 };
 
 jQuery.extend = jQuery.fn.extend = function() {
-	var options: Object, name: String, src: Function, copy: String, copyIsArray: Boolean, clone: Array,
-		target: Object = arguments[ 0 ] || {},
-		i: Number = 1,
-		length: Number = arguments.length,
-		deep: Boolean = false;
+	var options: object, name: string, src: Function, copy: string, copyIsArray: boolean, clone: any[],
+		target: object = arguments[ 0 ] || {},
+		i: number = 1,
+		length: number = arguments.length,
+		deep: boolean = false;
 
 	// Handle a deep copy situation
 	if ( typeof target === "boolean" ) {
@@ -192,14 +192,14 @@ jQuery.extend( {
 	// Assume jQuery is ready without the ready module
 	isReady: true,
 
-	error: function( msg: String ) {
+	error: function( msg: string ) {
 		throw new Error( msg );
 	},
 
 	noop: function() {},
 
-	isPlainObject: function( obj: String ) {
-		var proto: Object, Ctor: String;
+	isPlainObject: function( obj: string ) {
+		var proto: object, Ctor: string;
 
 		// Detect obvious negatives
 		// Use toString instead of jQuery.type to catch host objects
@@ -220,7 +220,7 @@ jQuery.extend( {
 	},
 
 	isEmptyObject: function( obj: Function ) {
-		var name: String;
+		var name: string;
 
 		for ( name in obj ) {
 			return false;
@@ -230,12 +230,12 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: String, options: Object, doc: Function ) {
+	globalEval: function( code: string, options: object, doc: Function ) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
-	each: function( obj: Array, callback: Function ) {
-		var length: Number, i: Number = 0;
+	each: function( obj: any[], callback: Function ) {
+		var length: number, i: number = 0;
 
 		if ( isArrayLike( obj ) ) {
 			length = obj.length;
@@ -257,11 +257,11 @@ jQuery.extend( {
 
 
 	// Retrieve the text value of an array of DOM nodes
-	text: function( elem: Object ) {
-		var node: Object,
-			ret: String = "",
-			i: Number = 0,
-			nodeType: Number = elem.nodeType;
+	text: function( elem: object ) {
+		var node: object,
+			ret: string = "",
+			i: number = 0,
+			nodeType: number = elem.nodeType;
 
 		if ( !nodeType ) {
 
@@ -284,8 +284,8 @@ jQuery.extend( {
 
 
 	// results is for internal usage only
-	makeArray: function( arr: String, results: String ) {
-		var ret: String = results || [];
+	makeArray: function( arr: string, results: string ) {
+		var ret: string = results || [];
 
 		if ( arr != null ) {
 			if ( isArrayLike( Object( arr ) ) ) {
@@ -301,23 +301,23 @@ jQuery.extend( {
 		return ret;
 	},
 
-	inArray: function( elem: String, arr: Number, i: String ) {
+	inArray: function( elem: string, arr: number, i: string ) {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
-	isXMLDoc: function( elem: Object ) {
-		var namespace: Number = elem && elem.namespaceURI,
-			docElem: Object = elem && ( elem.ownerDocument || elem ).documentElement;
+	isXMLDoc: function( elem: object ) {
+		var namespace: number = elem && elem.namespaceURI,
+			docElem: object = elem && ( elem.ownerDocument || elem ).documentElement;
 
 		// Assume HTML when documentElement doesn't yet exist, such as inside
 		// document fragments.
 		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "HTML" );
 	},
 
-	merge: function( first: Array, second: Array ) {
-		var len: String = +second.length,
-			j: Number = 0,
-			i: Number = first.length;
+	merge: function( first: any[], second: any[] ) {
+		var len: string = +second.length,
+			j: number = 0,
+			i: number = first.length;
 
 		for ( ; j < len; j++ ) {
 			first[ i++ ] = second[ j ];
@@ -328,12 +328,12 @@ jQuery.extend( {
 		return first;
 	},
 
-	grep: function( elems: Array, callback: Function, invert: Boolean ) {
-		var callbackInverse: Boolean,
-			matches: Array = [],
-			i: Number = 0,
-			length: Number = elems.length,
-			callbackExpect: Boolean = !invert;
+	grep: function( elems: any[], callback: Function, invert: boolean ) {
+		var callbackInverse: boolean,
+			matches: any[] = [],
+			i: number = 0,
+			length: number = elems.length,
+			callbackExpect: boolean = !invert;
 
 		// Go through the array, only saving the items
 		// that pass the validator function
@@ -348,10 +348,10 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: Array, callback: Function, arg: Number ) {
-		var length: Number, value: String,
-			i: Number = 0,
-			ret: Array = [];
+	map: function( elems: any[], callback: Function, arg: number ) {
+		var length: number, value: string,
+			i: number = 0,
+			ret: any[] = [];
 
 		// Go through the array, translating each of the items to their new values
 		if ( isArrayLike( elems ) ) {
@@ -393,7 +393,7 @@ if ( typeof Symbol === "function" ) {
 
 // Populate the class2type map
 jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
-	function( _i: String, name: String ) {
+	function( _i: string, name: string ) {
 		class2type[ "[object " + name + "]" ] = name.toLowerCase();
 	} );
 

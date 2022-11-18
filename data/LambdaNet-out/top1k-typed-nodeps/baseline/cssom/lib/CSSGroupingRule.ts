@@ -34,7 +34,7 @@ CSSOM.CSSGroupingRule.prototype.constructor = CSSOM.CSSGroupingRule;
  * @see https://www.w3.org/TR/cssom-1/#dom-cssgroupingrule-insertrule
  * @return {number} The index within the grouping rule's collection of the newly inserted rule.
  */
- CSSOM.CSSGroupingRule.prototype.insertRule = function insertRule(rule: String, index: Number): Number {
+ CSSOM.CSSGroupingRule.prototype.insertRule = function insertRule(rule: string, index: number): number {
 	if (index < 0 || index > this.cssRules.length) {
 		throw new RangeError("INDEX_SIZE_ERR");
 	}
@@ -56,7 +56,7 @@ CSSOM.CSSGroupingRule.prototype.constructor = CSSOM.CSSGroupingRule;
  * @param {number} index within the grouping rule's rule list of the rule to remove.
  * @see https://www.w3.org/TR/cssom-1/#dom-cssgroupingrule-deleterule
  */
- CSSOM.CSSGroupingRule.prototype.deleteRule = function deleteRule(index: Number): Void {
+ CSSOM.CSSGroupingRule.prototype.deleteRule = function deleteRule(index: number): Void {
 	if (index < 0 || index >= this.cssRules.length) {
 		throw new RangeError("INDEX_SIZE_ERR");
 	}

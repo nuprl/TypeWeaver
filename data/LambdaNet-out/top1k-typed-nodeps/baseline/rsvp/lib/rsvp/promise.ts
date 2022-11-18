@@ -12,8 +12,8 @@ import race from './promise/race';
 import Resolve from './promise/resolve';
 import Reject from './promise/reject';
 
-const guidKey: String = 'rsvp_' + Date.now() + '-';
-let counter: Number = 0;
+const guidKey: string = 'rsvp_' + Date.now() + '-';
+let counter: number = 0;
 
 function needsResolver(): Void {
   throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
@@ -226,10 +226,10 @@ class Promise {
 */
   finally(callback, label) {
     let promise: Promise = this;
-    let constructor: Object = promise.constructor;
+    let constructor: object = promise.constructor;
 
     if (typeof callback === 'function') {
-      return promise.then((value: String) => constructor.resolve(callback()).then(() => value),
+      return promise.then((value: string) => constructor.resolve(callback()).then(() => value),
                          (reason: Function) => constructor.resolve(callback()).then(() => { throw reason; }));
     }
 

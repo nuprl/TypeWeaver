@@ -4,9 +4,9 @@ import GetIntrinsic from 'get-intrinsic';
 import callBound from 'call-bind/callBound';
 import inspect from 'object-inspect';
 
-var $TypeError: Object = GetIntrinsic('%TypeError%');
-var $WeakMap: Object = GetIntrinsic('%WeakMap%', true);
-var $Map: Object = GetIntrinsic('%Map%', true);
+var $TypeError: object = GetIntrinsic('%TypeError%');
+var $WeakMap: object = GetIntrinsic('%WeakMap%', true);
+var $Map: object = GetIntrinsic('%Map%', true);
 
 var $weakMapGet: Function = callBound('WeakMap.prototype.get', true);
 var $weakMapSet: Function = callBound('WeakMap.prototype.set', true);
@@ -20,7 +20,7 @@ var $mapHas: Function = callBound('Map.prototype.has', true);
 *
 * That node is also moved to the head of the list, so that if it's accessed again we don't need to traverse the whole list. By doing so, all the recently used nodes can be accessed relatively quickly.
 */
-var listGetNode: Function = function (list: Object, key: String) { // eslint-disable-line consistent-return
+var listGetNode: Function = function (list: object, key: string) { // eslint-disable-line consistent-return
 	for (var prev = list, curr; (curr = prev.next) !== null; prev = curr) {
 		if (curr.key === key) {
 			prev.next = curr.next;
@@ -31,12 +31,12 @@ var listGetNode: Function = function (list: Object, key: String) { // eslint-dis
 	}
 };
 
-var listGet: Function = function (objects: Array, key: String) {
-	var node: Object = listGetNode(objects, key);
+var listGet: Function = function (objects: any[], key: string) {
+	var node: object = listGetNode(objects, key);
 	return node && node.value;
 };
-var listSet: Function = function (objects: Object, key: String, value: Number) {
-	var node: Object = listGetNode(objects, key);
+var listSet: Function = function (objects: object, key: string, value: number) {
+	var node: object = listGetNode(objects, key);
 	if (node) {
 		node.value = value;
 	} else {
@@ -48,21 +48,21 @@ var listSet: Function = function (objects: Object, key: String, value: Number) {
 		};
 	}
 };
-var listHas: Function = function (objects: Array, key: String) {
+var listHas: Function = function (objects: any[], key: string) {
 	return !!listGetNode(objects, key);
 };
 
-export default function getSideChannel(): Object {
+export default function getSideChannel(): object {
 	var $wm: Function;
-	var $m: String;
-	var $o: Object;
-	var channel: Object = {
-		assert: function (key: String) {
+	var $m: string;
+	var $o: object;
+	var channel: object = {
+		assert: function (key: string) {
 			if (!channel.has(key)) {
 				throw new $TypeError('Side channel does not contain ' + inspect(key));
 			}
 		},
-		get: function (key: String) { // eslint-disable-line consistent-return
+		get: function (key: string) { // eslint-disable-line consistent-return
 			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
 				if ($wm) {
 					return $weakMapGet($wm, key);
@@ -77,7 +77,7 @@ export default function getSideChannel(): Object {
 				}
 			}
 		},
-		has: function (key: String) {
+		has: function (key: string) {
 			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
 				if ($wm) {
 					return $weakMapHas($wm, key);
@@ -93,7 +93,7 @@ export default function getSideChannel(): Object {
 			}
 			return false;
 		},
-		set: function (key: String, value: String) {
+		set: function (key: string, value: string) {
 			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
 				if (!$wm) {
 					$wm = new $WeakMap();

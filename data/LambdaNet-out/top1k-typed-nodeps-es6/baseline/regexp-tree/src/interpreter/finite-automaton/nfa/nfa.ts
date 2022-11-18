@@ -37,9 +37,9 @@ class NFA {
   getAlphabet() {
     if (!this._alphabet) {
       this._alphabet = new Set();
-      const table: Object = this.getTransitionTable();
+      const table: object = this.getTransitionTable();
       for (const state in table) {
-        const transitions: Array = table[state];
+        const transitions: any[] = table[state];
         for (const symbol in transitions)
           if (symbol !== EPSILON_CLOSURE) {
             this._alphabet.add(symbol);
@@ -97,10 +97,10 @@ class NFA {
           this._acceptingStates.add(state);
         }
 
-        const transitions: Array = state.getTransitions();
+        const transitions: any[] = state.getTransitions();
 
         for (const [symbol, symbolTransitions] of transitions) {
-          let combinedState: Array = [];
+          let combinedState: any[] = [];
           symbols.add(symbol);
           for (const nextState of symbolTransitions) {
             visitState(nextState);
@@ -118,7 +118,7 @@ class NFA {
         delete this._transitionTable[state.number][EPSILON];
         this._transitionTable[state.number][EPSILON_CLOSURE] = [
           ...state.getEpsilonClosure(),
-        ].map((s: Object) => s.number);
+        ].map((s: object) => s.number);
       });
     }
 

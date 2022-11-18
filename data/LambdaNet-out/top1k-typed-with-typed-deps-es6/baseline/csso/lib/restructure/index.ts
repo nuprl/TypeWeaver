@@ -7,9 +7,9 @@ import restructBlock from './6-restructBlock.js';
 import mergeRuleset from './7-mergeRuleset.js';
 import restructRuleset from './8-restructRuleset.js';
 
-export default function(ast: Object, options: Object) {
+export default function(ast: object, options: object) {
     // prepare ast for restructing
-    const indexer: String = prepare(ast, options);
+    const indexer: string = prepare(ast, options);
     options.logger('prepare', ast);
 
     mergeAtrule(ast, options);

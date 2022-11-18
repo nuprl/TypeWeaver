@@ -1,6 +1,6 @@
 module.exports = colorSupport({ alwaysReturn: true }, colorSupport)
 
-function colorSupport(options: Object, obj: Boolean): Boolean {
+function colorSupport(options: object, obj: boolean): boolean {
   obj = obj || {}
   options = options || {}
   obj.level = 0

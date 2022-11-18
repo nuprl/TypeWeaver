@@ -30,28 +30,28 @@ export default class AliasPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
-		const getAbsolutePathWithSlashEnding: Function = (maybeAbsolutePath: String) => {
-			const type: String = getType(maybeAbsolutePath);
+		const target: any[] = resolver.ensureHook(this.target);
+		const getAbsolutePathWithSlashEnding: Function = (maybeAbsolutePath: string) => {
+			const type: string = getType(maybeAbsolutePath);
 			if (type === PathType.AbsolutePosix || type === PathType.AbsoluteWin) {
 				return resolver.join(maybeAbsolutePath, "_").slice(0, -1);
 			}
 			return null;
 		};
-		const isSubPath: Function = (path: String, maybeSubPath: String) => {
-			const absolutePath: Number = getAbsolutePathWithSlashEnding(maybeSubPath);
+		const isSubPath: Function = (path: string, maybeSubPath: string) => {
+			const absolutePath: number = getAbsolutePathWithSlashEnding(maybeSubPath);
 			if (!absolutePath) return false;
 			return path.startsWith(absolutePath);
 		};
 		resolver
 			.getHook(this.source)
-			.tapAsync("AliasPlugin", (request: Object, resolveContext: Object, callback: Function) => {
-				const innerRequest: String = request.request || request.path;
+			.tapAsync("AliasPlugin", (request: object, resolveContext: object, callback: Function) => {
+				const innerRequest: string = request.request || request.path;
 				if (!innerRequest) return callback();
 				forEachBail(
 					this.options,
-					(item: Object, callback: Function) => {
-						let shouldStop: Boolean = false;
+					(item: object, callback: Function) => {
+						let shouldStop: boolean = false;
 						if (
 							innerRequest === item.name ||
 							(!item.onlyModule &&
@@ -59,11 +59,11 @@ export default class AliasPlugin {
 									? innerRequest.startsWith(`${item.name}/`)
 									: isSubPath(innerRequest, item.name)))
 						) {
-							const remainingRequest: String = innerRequest.substr(item.name.length);
-							const resolveWithAlias: Function = (alias: Number, callback: Function) => {
+							const remainingRequest: string = innerRequest.substr(item.name.length);
+							const resolveWithAlias: Function = (alias: number, callback: Function) => {
 								if (alias === false) {
 									/** @type {ResolveRequest} */
-									const ignoreObj: Object = {
+									const ignoreObj: object = {
 										...request,
 										path: false
 									};
@@ -78,8 +78,8 @@ export default class AliasPlugin {
 									!innerRequest.startsWith(alias + "/")
 								) {
 									shouldStop = true;
-									const newRequestStr: String = alias + remainingRequest;
-									const obj: Object = {
+									const newRequestStr: string = alias + remainingRequest;
+									const obj: object = {
 										...request,
 										request: newRequestStr,
 										fullySpecified: false
@@ -104,7 +104,7 @@ export default class AliasPlugin {
 								}
 								return callback();
 							};
-							const stoppingCallback: Function = (err: String, result: ResultPlugin) => {
+							const stoppingCallback: Function = (err: string, result: ResultPlugin) => {
 								if (err) return callback(err);
 
 								if (result) return callback(null, result);

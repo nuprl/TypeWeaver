@@ -1,7 +1,7 @@
 import baseClone from './.internal/baseClone.js'
 
 /** Used to compose bitmasks for cloning. */
-const CLONE_SYMBOLS_FLAG: Number = 4
+const CLONE_SYMBOLS_FLAG: number = 4
 
 /**
  * Creates a shallow clone of `value`.
@@ -28,7 +28,7 @@ const CLONE_SYMBOLS_FLAG: Number = 4
  * console.log(shallow[0] === objects[0])
  * // => true
  */
-function clone(value: String): String {
+function clone(value: string): string {
   return baseClone(value, CLONE_SYMBOLS_FLAG)
 }
 

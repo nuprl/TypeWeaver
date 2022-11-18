@@ -29,13 +29,13 @@ const LENGTH_UNIT: Error = new Set([
     'vm'
 ]);
 
-export default function compressDimension(node: Object, item: Array): Void {
-    const value: String = packNumber(node.value);
+export default function compressDimension(node: object, item: any[]): Void {
+    const value: string = packNumber(node.value);
 
     node.value = value;
 
     if (value === '0' && this.declaration !== null && this.atrulePrelude === null) {
-        const unit: String = node.unit.toLowerCase();
+        const unit: string = node.unit.toLowerCase();
 
         // only length values can be compressed
         if (!LENGTH_UNIT.has(unit)) {

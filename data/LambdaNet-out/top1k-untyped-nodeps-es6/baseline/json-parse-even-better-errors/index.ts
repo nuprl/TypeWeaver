@@ -1,11 +1,11 @@
 'use strict'
 
-const hexify: Function = (char: String) => {
-  const h: String = char.charCodeAt(0).toString(16).toUpperCase()
+const hexify: Function = (char: string) => {
+  const h: string = char.charCodeAt(0).toString(16).toUpperCase()
   return '0x' + (h.length % 2 ? '0' : '') + h
 }
 
-const parseError: Function = (e: Object, txt: Array, context: Number) => {
+const parseError: Function = (e: object, txt: any[], context: number) => {
   if (!txt) {
     return {
       message: e.message + ' while parsing empty string',
@@ -13,27 +13,27 @@ const parseError: Function = (e: Object, txt: Array, context: Number) => {
     }
   }
   const badToken: Promise = e.message.match(/^Unexpected token (.) .*position\s+(\d+)/i)
-  const errIdx: Number = badToken ? +badToken[2]
+  const errIdx: number = badToken ? +badToken[2]
     : e.message.match(/^Unexpected end of JSON.*/i) ? txt.length - 1
     : null
 
-  const msg: String = badToken ? e.message.replace(/^Unexpected token ./, `Unexpected token ${
+  const msg: string = badToken ? e.message.replace(/^Unexpected token ./, `Unexpected token ${
       JSON.stringify(badToken[1])
     } (${hexify(badToken[1])})`)
     : e.message
 
   if (errIdx !== null && errIdx !== undefined) {
-    const start: Number = errIdx <= context ? 0
+    const start: number = errIdx <= context ? 0
       : errIdx - context
 
-    const end: Number = errIdx + context >= txt.length ? txt.length
+    const end: number = errIdx + context >= txt.length ? txt.length
       : errIdx + context
 
-    const slice: Number = (start === 0 ? '' : '...') +
+    const slice: number = (start === 0 ? '' : '...') +
       txt.slice(start, end) +
       (end === txt.length ? '' : '...')
 
-    const near: String = txt === slice ? '' : 'near '
+    const near: string = txt === slice ? '' : 'near '
 
     return {
       message: msg + ` while parsing ${near}${JSON.stringify(slice)}`,
@@ -50,7 +50,7 @@ const parseError: Function = (e: Object, txt: Array, context: Number) => {
 class JSONParseError extends SyntaxError {
   constructor (er, txt, context, caller) {
     context = context || 20
-    const metadata: Object = parseError(er, txt, context)
+    const metadata: object = parseError(er, txt, context)
     super(metadata.message)
     Object.assign(this, metadata)
     this.code = 'EJSONPARSE'
@@ -62,8 +62,8 @@ class JSONParseError extends SyntaxError {
   get [Symbol.toStringTag] () { return this.constructor.name }
 }
 
-const kIndent: String = Symbol.for('indent')
-const kNewline: String = Symbol.for('newline')
+const kIndent: string = Symbol.for('indent')
+const kNewline: string = Symbol.for('newline')
 // only respect indentation if we got a line break, otherwise squash it
 // things other than objects and arrays aren't indented, so ignore those
 // Important: in both of these regexps, the $1 capture group is the newline
@@ -71,8 +71,8 @@ const kNewline: String = Symbol.for('newline')
 const formatRE: RegExp = /^\s*[{\[]((?:\r?\n)+)([\s\t]*)/
 const emptyRE: RegExp = /^(?:\{\}|\[\])((?:\r?\n)+)?$/
 
-const parseJson: Function = (txt: String, reviver: String, context: String) => {
-  const parseText: String = stripBOM(txt)
+const parseJson: Function = (txt: string, reviver: string, context: string) => {
+  const parseText: string = stripBOM(txt)
   context = context || 20
   try {
     // get the indentation so that we can save it back nicely
@@ -85,7 +85,7 @@ const parseJson: Function = (txt: String, reviver: String, context: String) => {
       parseText.match(formatRE) ||
       [, '', '']
 
-    const result: Object = JSON.parse(parseText, reviver)
+    const result: object = JSON.parse(parseText, reviver)
     if (result && typeof result === 'object') {
       result[kNewline] = newline
       result[kIndent] = indent
@@ -109,12 +109,12 @@ const parseJson: Function = (txt: String, reviver: String, context: String) => {
 // Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
 // because the buffer-to-string conversion in `fs.readFileSync()`
 // translates it to FEFF, the UTF-16 BOM.
-const stripBOM: Function = (txt: String) => String(txt).replace(/^\uFEFF/, '')
+const stripBOM: Function = (txt: string) => String(txt).replace(/^\uFEFF/, '')
 
 export default parseJson;
 parseJson.JSONParseError = JSONParseError
 
-parseJson.noExceptions = (txt: String, reviver: String) => {
+parseJson.noExceptions = (txt: string, reviver: string) => {
   try {
     return JSON.parse(stripBOM(txt), reviver)
   } catch (e) {}

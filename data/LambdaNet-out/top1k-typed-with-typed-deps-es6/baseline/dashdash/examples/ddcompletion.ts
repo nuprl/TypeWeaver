@@ -20,7 +20,7 @@
 
 import dashdash from '../lib/dashdash';
 
-var options: Array = [
+var options: any[] = [
     { name: 'version', type: 'bool', help: 'Print tool version and exit.' },
     { names: ['help', 'h'], type: 'bool', help: 'Print this help and exit.' },
     { names: ['verbose', 'v'], type: 'arrayOfBool', help: 'Verbose output.' },
@@ -51,7 +51,7 @@ var options: Array = [
 ];
 
 
-var completionFuncs: String = [
+var completionFuncs: string = [
     // A 'knownhosts' completer function.
     'function complete_knownhosts {',
     '    local word="$1"',
@@ -67,16 +67,16 @@ var completionFuncs: String = [
 ].join('\n');
 
 
-var parser: Object = dashdash.createParser({options: options});
+var parser: object = dashdash.createParser({options: options});
 try {
-    var opts: Object = parser.parse(process.argv);
+    var opts: object = parser.parse(process.argv);
 } catch (e) {
     console.error('foo: error: %s', e.message);
     process.exit(1);
 }
 
 if (opts.help) {
-    var help: String = parser.help({includeEnv: true}).trimRight();
+    var help: string = parser.help({includeEnv: true}).trimRight();
     console.log('usage: node ddcompletion.js [OPTIONS]\n'
                 + 'options:\n'
                 + help);

@@ -1,7 +1,7 @@
 import class2type from "../var/class2type.js";
 import toString from "../var/toString.js";
 
-function toType( obj: String ): String {
+function toType( obj: string ): string {
 	if ( obj == null ) {
 		return obj + "";
 	}

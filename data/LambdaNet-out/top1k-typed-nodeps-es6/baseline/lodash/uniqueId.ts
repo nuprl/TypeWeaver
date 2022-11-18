@@ -1,5 +1,5 @@
 /** Used to generate unique IDs. */
-const idCounter: Object = {}
+const idCounter: object = {}
 
 /**
  * Generates a unique ID. If `prefix` is given, the ID is appended to it.
@@ -17,12 +17,12 @@ const idCounter: Object = {}
  * uniqueId()
  * // => '105'
  */
-function uniqueId(prefix: String='$lodash$'): String {
+function uniqueId(prefix: string='$lodash$'): string {
   if (!idCounter[prefix]) {
     idCounter[prefix] = 0
   }
 
-  const id: Number =++idCounter[prefix]
+  const id: number =++idCounter[prefix]
   if (prefix === '$lodash$') {
     return `${id}`
   }

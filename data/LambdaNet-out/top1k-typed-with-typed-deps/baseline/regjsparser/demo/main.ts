@@ -1,17 +1,17 @@
 (function(window: Element, document: Element) {
 
-  var inputs: Object = document.getElementsByTagName('input');
-  var textareas: Object = document.getElementsByTagName('textarea');
-  var regex: Object = inputs[0];
-  var flags: Object = inputs[1];
-  var ast: Object = textareas[0];
+  var inputs: object = document.getElementsByTagName('input');
+  var textareas: object = document.getElementsByTagName('textarea');
+  var regex: object = inputs[0];
+  var flags: object = inputs[1];
+  var ast: object = textareas[0];
   var regjsparser: HTMLElement = window.regjsparser;
   var permalink: HTMLElement = document.getElementById('permalink');
   // https://mathiasbynens.be/notes/localstorage-pattern
   var storage: HTMLElement = (function() {
     var uid: HTMLDivElement = new Date;
     var storage: HTMLElement;
-    var result: Boolean;
+    var result: boolean;
     try {
       (storage = window.localStorage).setItem(uid, uid);
       result = storage.getItem(uid) == uid;
@@ -20,18 +20,18 @@
     } catch (exception) {}
   }());
 
-  function encode(string: String): String {
+  function encode(string: string): string {
     // URL-encode some more characters to avoid issues when using permalink URLs in Markdown
-    return encodeURIComponent(string).replace(/['()_*]/g, function(character: Object) {
+    return encodeURIComponent(string).replace(/['()_*]/g, function(character: object) {
       return '%' + character.charCodeAt().toString(16);
     });
   }
 
   function update(): Void {
-    var regexSource: String = regex.value;
-    var regexFlags: String = flags.value;
-    var regexAst: String;
-    var isError: Boolean = false;
+    var regexSource: string = regex.value;
+    var regexFlags: string = flags.value;
+    var regexAst: string;
+    var isError: boolean = false;
     try {
       regexAst = regjsparser.parse(regexSource, regexFlags);
     } catch (exception) {
@@ -56,8 +56,8 @@
   }
 
   window.onhashchange = function() {
-    var value: String = decodeURIComponent(location.hash.slice(1));
-    var lastSlashIndex: Number = value.lastIndexOf('/');
+    var value: string = decodeURIComponent(location.hash.slice(1));
+    var lastSlashIndex: number = value.lastIndexOf('/');
     regex.value = value.slice(1, lastSlashIndex);
     flags.value = value.slice(lastSlashIndex + 1);
     update();

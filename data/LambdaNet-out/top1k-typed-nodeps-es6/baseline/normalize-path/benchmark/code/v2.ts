@@ -7,7 +7,7 @@
 
 import removeTrailingSeparator from 'remove-trailing-separator';
 
-export default function normalizePath(str: String, stripTrailing: Number): Array {
+export default function normalizePath(str: string, stripTrailing: number): any[] {
   if (typeof str !== 'string') {
     throw new TypeError('expected a string');
   }

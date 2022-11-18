@@ -1,9 +1,9 @@
 
 module.exports = repeat;
 
-function repeat(ele: String, num: Number): Array {
-  var arr: Array = [ele];
-  var res: Array = [];
+function repeat(ele: string, num: number): any[] {
+  var arr: any[] = [ele];
+  var res: any[] = [];
 
   while (num > 0) {
     if (num & 1) {

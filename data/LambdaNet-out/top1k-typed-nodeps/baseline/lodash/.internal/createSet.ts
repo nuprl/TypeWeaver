@@ -1,7 +1,7 @@
 import setToArray from './setToArray.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
+const INFINITY: number = 1 / 0
 
 /**
  * Creates a set object of `values`.
@@ -11,7 +11,7 @@ const INFINITY: Number = 1 / 0
  * @returns {Object} Returns the new set.
  */
 const createSet: Function = (Set && (1 / setToArray(new Set([,-0]))[1]) == INFINITY)
-  ? (values: Array) => new Set(values)
+  ? (values: any[]) => new Set(values)
   : () => {}
 
 export default createSet

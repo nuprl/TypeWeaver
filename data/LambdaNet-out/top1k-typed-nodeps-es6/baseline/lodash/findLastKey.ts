@@ -23,7 +23,7 @@ import baseForOwnRight from './.internal/baseForOwnRight.js'
  * findLastKey(users, ({ age }) => age < 40)
  * // => returns 'pebbles' assuming `findKey` returns 'barney'
  */
-function findLastKey(object: Object, predicate: Function): Promise {
+function findLastKey(object: object, predicate: Function): Promise {
   return baseFindKey(object, predicate, baseForOwnRight)
 }
 

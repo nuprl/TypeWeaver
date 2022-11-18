@@ -25,12 +25,12 @@ export default class UseFilePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("UseFilePlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const filePath: String = resolver.join(request.path, this.filename);
-				const obj: Object = {
+			.tapAsync("UseFilePlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const filePath: string = resolver.join(request.path, this.filename);
+				const obj: object = {
 					...request,
 					path: filePath,
 					relativePath:

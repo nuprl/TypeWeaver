@@ -1,8 +1,8 @@
 import jQuery from "../core.js";
 import document from "../var/document.js";
 
-var readyCallbacks: Array = [],
-	whenReady: Function = function( fn: String ) {
+var readyCallbacks: any[] = [],
+	whenReady: Function = function( fn: string ) {
 		readyCallbacks.push( fn );
 	},
 	executeReady: Function = function( fn: Function ) {
@@ -14,7 +14,7 @@ var readyCallbacks: Array = [],
 		} );
 	};
 
-jQuery.fn.ready = function( fn: Number ) {
+jQuery.fn.ready = function( fn: number ) {
 	whenReady( fn );
 	return this;
 };
@@ -28,7 +28,7 @@ jQuery.extend( {
 	// the ready event fires. See trac-6781
 	readyWait: 1,
 
-	ready: function( wait: Number ) {
+	ready: function( wait: number ) {
 
 		// Abort if there are pending holds or we're already ready
 		if ( wait === true ? --jQuery.readyWait : jQuery.isReady ) {
@@ -43,7 +43,7 @@ jQuery.extend( {
 			return;
 		}
 
-		whenReady = function( fn: String ) {
+		whenReady = function( fn: string ) {
 			readyCallbacks.push( fn );
 
 			while ( readyCallbacks.length ) {

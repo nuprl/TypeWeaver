@@ -20,17 +20,17 @@ import stringToArray from './.internal/stringToArray.js'
  * trim('-_-abc-_-', '_-')
  * // => 'abc'
  */
-function trim(string: String, chars: Number): String {
+function trim(string: string, chars: number): string {
   if (string && chars === undefined) {
     return string.trim()
   }
   if (!string || !chars) {
     return (string || '')
   }
-  const strSymbols: String = stringToArray(string)
-  const chrSymbols: Array = stringToArray(chars)
-  const start: String = charsStartIndex(strSymbols, chrSymbols)
-  const end: String = charsEndIndex(strSymbols, chrSymbols) + 1
+  const strSymbols: string = stringToArray(string)
+  const chrSymbols: any[] = stringToArray(chars)
+  const start: string = charsStartIndex(strSymbols, chrSymbols)
+  const end: string = charsEndIndex(strSymbols, chrSymbols) + 1
 
   return castSlice(strSymbols, start, end).join('')
 }

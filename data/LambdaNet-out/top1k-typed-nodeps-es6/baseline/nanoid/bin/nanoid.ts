@@ -2,11 +2,11 @@
 
 import { nanoid, customAlphabet } from '../index.js'
 
-function print(msg: String): Void {
+function print(msg: string): Void {
   process.stdout.write(msg + '\n')
 }
 
-function error(msg: String): Void {
+function error(msg: string): Void {
   process.stderr.write(msg + '\n')
   process.exit(1)
 }
@@ -30,9 +30,9 @@ if (process.argv.includes('--help') || process.argv.includes('-h')) {
   process.exit()
 }
 
-let alphabet: Function, size: Number
+let alphabet: Function, size: number
 for (let i = 2; i < process.argv.length; i++) {
-  let arg: String = process.argv[i]
+  let arg: string = process.argv[i]
   if (arg === '--size' || arg === '-s') {
     size = Number(process.argv[i + 1])
     i += 1

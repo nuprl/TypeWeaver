@@ -1,7 +1,7 @@
 import getAllKeys from './getAllKeys.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
+const COMPARE_PARTIAL_FLAG: number = 1
 
 /** Used to check objects for own properties. */
 const hasOwnProperty: Function = Object.prototype.hasOwnProperty
@@ -19,18 +19,18 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalObjects(object: Object, other: Object, bitmask: Number, customizer: Function, equalFunc: Function, stack: Object): Boolean {
-  const isPartial: Number = bitmask & COMPARE_PARTIAL_FLAG
-  const objProps: Array = getAllKeys(object)
-  const objLength: Number = objProps.length
-  const othProps: Array = getAllKeys(other)
-  const othLength: Number = othProps.length
+function equalObjects(object: object, other: object, bitmask: number, customizer: Function, equalFunc: Function, stack: object): boolean {
+  const isPartial: number = bitmask & COMPARE_PARTIAL_FLAG
+  const objProps: any[] = getAllKeys(object)
+  const objLength: number = objProps.length
+  const othProps: any[] = getAllKeys(other)
+  const othLength: number = othProps.length
 
   if (objLength != othLength && !isPartial) {
     return false
   }
-  let key: String
-  let index: Number = objLength
+  let key: string
+  let index: number = objLength
   while (index--) {
     key = objProps[index]
     if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
@@ -42,16 +42,16 @@ function equalObjects(object: Object, other: Object, bitmask: Number, customizer
   if (stacked && stack.get(other)) {
     return stacked == other
   }
-  let result: Boolean = true
+  let result: boolean = true
   stack.set(object, other)
   stack.set(other, object)
 
-  let compared: Number
-  let skipCtor: Number = isPartial
+  let compared: number
+  let skipCtor: number = isPartial
   while (++index < objLength) {
     key = objProps[index]
-    const objValue: String = object[key]
-    const othValue: String = other[key]
+    const objValue: string = object[key]
+    const othValue: string = other[key]
 
     if (customizer) {
       compared = isPartial
@@ -70,7 +70,7 @@ function equalObjects(object: Object, other: Object, bitmask: Number, customizer
   }
   if (result && !skipCtor) {
     const objCtor: Function = object.constructor
-    const othCtor: String = other.constructor
+    const othCtor: string = other.constructor
 
     // Non `Object` object instances with different constructors are not equal.
     if (objCtor != othCtor &&

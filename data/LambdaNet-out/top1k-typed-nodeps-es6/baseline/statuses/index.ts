@@ -60,12 +60,12 @@ status.retry = {
  * @private
  */
 
-function createMessageToStatusCodeMap (codes: Object): Object {
-  var map: Object = {}
+function createMessageToStatusCodeMap (codes: object): object {
+  var map: object = {}
 
-  Object.keys(codes).forEach(function forEachCode (code: String): Void {
-    var message: String = codes[code]
-    var status: Number = Number(code)
+  Object.keys(codes).forEach(function forEachCode (code: string): Void {
+    var message: string = codes[code]
+    var status: number = Number(code)
 
     // populate map
     map[message.toLowerCase()] = status
@@ -79,8 +79,8 @@ function createMessageToStatusCodeMap (codes: Object): Object {
  * @private
  */
 
-function createStatusCodeList (codes: String): Array {
-  return Object.keys(codes).map(function mapCode (code: String): Number {
+function createStatusCodeList (codes: string): any[] {
+  return Object.keys(codes).map(function mapCode (code: string): number {
     return Number(code)
   })
 }
@@ -90,8 +90,8 @@ function createStatusCodeList (codes: String): Array {
  * @private
  */
 
-function getStatusCode (message: String): Array {
-  var msg: String = message.toLowerCase()
+function getStatusCode (message: string): any[] {
+  var msg: string = message.toLowerCase()
 
   if (!Object.prototype.hasOwnProperty.call(status.code, msg)) {
     throw new Error('invalid status message: "' + message + '"')
@@ -105,7 +105,7 @@ function getStatusCode (message: String): Array {
  * @private
  */
 
-function getStatusMessage (code: String): Array {
+function getStatusMessage (code: string): any[] {
   if (!Object.prototype.hasOwnProperty.call(status.message, code)) {
     throw new Error('invalid status code: ' + code)
   }
@@ -127,7 +127,7 @@ function getStatusMessage (code: String): Array {
  * @public
  */
 
-function status (code: String): String {
+function status (code: string): string {
   if (typeof code === 'number') {
     return getStatusMessage(code)
   }
@@ -137,7 +137,7 @@ function status (code: String): String {
   }
 
   // '403'
-  var n: Number = parseInt(code, 10)
+  var n: number = parseInt(code, 10)
   if (!isNaN(n)) {
     return getStatusMessage(n)
   }

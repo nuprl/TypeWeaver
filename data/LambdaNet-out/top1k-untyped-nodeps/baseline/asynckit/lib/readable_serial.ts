@@ -1,4 +1,4 @@
-var serial: String = require('../serial.js');
+var serial: string = require('../serial.js');
 
 // API
 module.exports = ReadableSerial;
@@ -11,7 +11,7 @@ module.exports = ReadableSerial;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableSerial(list: Object, iterator: String, callback: Function): Object
+function ReadableSerial(list: object, iterator: string, callback: Function): object
 {
   if (!(this instanceof ReadableSerial))
   {

@@ -3,9 +3,9 @@
 
 "use strict"
 
-var path: String = require("path")
+var path: string = require("path")
 
-function urix(aPath: String): String {
+function urix(aPath: string): string {
   if (path.sep === "\\") {
     return aPath
       .replace(/\\/g, "/")

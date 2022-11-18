@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: String = {
+var CSSOM: string = {
 	StyleSheet: require("./StyleSheet").StyleSheet,
 	CSSStyleRule: require("./CSSStyleRule").CSSStyleRule
 };
@@ -36,7 +36,7 @@ CSSOM.CSSStyleSheet.prototype.constructor = CSSOM.CSSStyleSheet;
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-insertRule
  * @return {number} The index within the style sheet's rule collection of the newly inserted rule.
  */
-CSSOM.CSSStyleSheet.prototype.insertRule = function(rule: String, index: Number) {
+CSSOM.CSSStyleSheet.prototype.insertRule = function(rule: string, index: number) {
 	if (index < 0 || index > this.cssRules.length) {
 		throw new RangeError("INDEX_SIZE_ERR");
 	}
@@ -60,7 +60,7 @@ CSSOM.CSSStyleSheet.prototype.insertRule = function(rule: String, index: Number)
  * @param {number} index within the style sheet's rule list of the rule to remove.
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-deleteRule
  */
-CSSOM.CSSStyleSheet.prototype.deleteRule = function(index: Number) {
+CSSOM.CSSStyleSheet.prototype.deleteRule = function(index: number) {
 	if (index < 0 || index >= this.cssRules.length) {
 		throw new RangeError("INDEX_SIZE_ERR");
 	}
@@ -73,8 +73,8 @@ CSSOM.CSSStyleSheet.prototype.deleteRule = function(index: Number) {
  * @return {string} serialize stylesheet
  */
 CSSOM.CSSStyleSheet.prototype.toString = function() {
-	var result: String = "";
-	var rules: Array = this.cssRules;
+	var result: string = "";
+	var rules: any[] = this.cssRules;
 	for (var i=0; i<rules.length; i++) {
 		result += rules[i].cssText + "\n";
 	}

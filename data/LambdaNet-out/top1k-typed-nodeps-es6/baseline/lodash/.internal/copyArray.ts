@@ -6,9 +6,9 @@
  * @param {Array} [array=[]] The array to copy values to.
  * @returns {Array} Returns `array`.
  */
-function copyArray(source: Array, array: Object): Object {
-  let index: Number = -1
-  const length: Number = source.length
+function copyArray(source: any[], array: object): object {
+  let index: number = -1
+  const length: number = source.length
 
   array || (array = new Array(length))
   while (++index < length) {

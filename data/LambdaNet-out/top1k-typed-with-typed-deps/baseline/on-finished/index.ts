@@ -43,7 +43,7 @@ var defer: Function = typeof setImmediate === 'function'
  * @public
  */
 
-function onFinished (msg: String, listener: String): String {
+function onFinished (msg: string, listener: string): string {
   if (isFinished(msg) !== false) {
     defer(listener, null, msg)
     return msg
@@ -63,8 +63,8 @@ function onFinished (msg: String, listener: String): String {
  * @public
  */
 
-function isFinished (msg: Array): Boolean {
-  var socket: Array = msg.socket
+function isFinished (msg: any[]): boolean {
+  var socket: any[] = msg.socket
 
   if (typeof msg.finished === 'boolean') {
     // OutgoingMessage
@@ -88,12 +88,12 @@ function isFinished (msg: Array): Boolean {
  * @private
  */
 
-function attachFinishedListener (msg: Object, callback: Function): Void {
-  var eeMsg: Array
+function attachFinishedListener (msg: object, callback: Function): Void {
+  var eeMsg: any[]
   var eeSocket: Map
-  var finished: Boolean = false
+  var finished: boolean = false
 
-  function onFinish (error: Object): Void {
+  function onFinish (error: object): Void {
     eeMsg.cancel()
     eeSocket.cancel()
 
@@ -104,7 +104,7 @@ function attachFinishedListener (msg: Object, callback: Function): Void {
   // finished on first message event
   eeMsg = eeSocket = first([[msg, 'end', 'finish']], onFinish)
 
-  function onSocket (socket: Object): Void {
+  function onSocket (socket: object): Void {
     // remove listener
     msg.removeListener('socket', onSocket)
 
@@ -138,7 +138,7 @@ function attachFinishedListener (msg: Object, callback: Function): Void {
  * @private
  */
 
-function attachListener (msg: Object, listener: String): Void {
+function attachListener (msg: object, listener: string): Void {
   var attached: HTMLElement = msg.__onFinished
 
   // create a private single listener with queue
@@ -158,12 +158,12 @@ function attachListener (msg: Object, listener: String): Void {
  * @private
  */
 
-function createListener (msg: Object): Object {
+function createListener (msg: object): object {
   function listener (err: Function): Void {
     if (msg.__onFinished === listener) msg.__onFinished = null
     if (!listener.queue) return
 
-    var queue: Array = listener.queue
+    var queue: any[] = listener.queue
     listener.queue = null
 
     for (var i = 0; i < queue.length; i++) {
@@ -191,7 +191,7 @@ function patchAssignSocket (res: Map, callback: Function): Void {
   if (typeof assignSocket !== 'function') return
 
   // res.on('socket', callback) is broken in 0.8
-  res.assignSocket = function _assignSocket (socket: Object): Void {
+  res.assignSocket = function _assignSocket (socket: object): Void {
     assignSocket.call(this, socket)
     callback(socket)
   }
@@ -202,7 +202,7 @@ function patchAssignSocket (res: Map, callback: Function): Void {
  * @private
  */
 
-function tryRequireAsyncHooks (): Number {
+function tryRequireAsyncHooks (): number {
   try {
     return require('async_hooks')
   } catch (e) {
@@ -216,7 +216,7 @@ function tryRequireAsyncHooks (): Number {
  * @private
  */
 
-function wrap (fn: Object): Object {
+function wrap (fn: object): object {
   var res: Element
 
   // create anonymous resource

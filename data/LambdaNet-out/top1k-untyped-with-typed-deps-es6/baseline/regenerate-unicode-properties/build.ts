@@ -4,26 +4,26 @@ import fs from 'fs';
 import jsesc from 'jsesc';
 import { emptyDirSync } from 'fs-extra';
 import regenerate from 'regenerate';
-const UNICODE_VERSION: String = '14.0.0';
-const unicode: Object = require(`@unicode/unicode-${ UNICODE_VERSION }`);
+const UNICODE_VERSION: string = '14.0.0';
+const unicode: object = require(`@unicode/unicode-${ UNICODE_VERSION }`);
 
 /*----------------------------------------------------------------------------*/
 
-const codePointToString: Function = function(codePoint: String) {
+const codePointToString: Function = function(codePoint: string) {
 	return '0x' + codePoint.toString(16).toUpperCase();
 };
 
 // Regenerate plugin that turns a set into some JavaScript source code that
 // generates that set.
 regenerate.prototype.toCode = function() {
-	const data: Array = this.data;
+	const data: any[] = this.data;
 	// Iterate over the data per `(start, end)` pair.
-	let index: Number = 0;
-	let start: String;
-	let end: Number;
-	const length: Number = data.length;
-	const loneCodePoints: Array = [];
-	const ranges: Array = [];
+	let index: number = 0;
+	let start: string;
+	let end: number;
+	const length: number = data.length;
+	const loneCodePoints: any[] = [];
+	const ranges: any[] = [];
 	while (index < length) {
 		start = data[index];
 		end = data[index + 1] - 1; // Note: the `- 1` makes `end` inclusive.
@@ -37,13 +37,13 @@ regenerate.prototype.toCode = function() {
 		}
 		index += 2;
 	}
-	let output: String = 'const set = require(\'regenerate\')(' + loneCodePoints.join(', ') + ');\n';
+	let output: string = 'const set = require(\'regenerate\')(' + loneCodePoints.join(', ') + ');\n';
 	if (ranges.length > 0) {
-		let i: Number = 0;
+		let i: number = 0;
 		output += 'set';
 		// Avoid deeply-nested ASTs.
 		// https://github.com/babel/babel/issues/8278
-		const MAX_CHAINED_CALLS: Number = 50;
+		const MAX_CHAINED_CALLS: number = 50;
 		for (const range of ranges) {
 			if (i++ == MAX_CHAINED_CALLS) {
 				i = 0;
@@ -61,28 +61,28 @@ const INDEX: Map = new Map();
 
 /*----------------------------------------------------------------------------*/
 
-const nonBinaryProperties: Array = [
+const nonBinaryProperties: any[] = [
 	'General_Category',
 	'Script',
 	'Script_Extensions',
 ];
 
 for (const property of nonBinaryProperties) {
-	const values: Array = [];
+	const values: any[] = [];
 	// Empty the target directory, or create it if it doesn’t exist yet.
-	const directory: String = `${ property }`;
+	const directory: string = `${ property }`;
 	console.log(`Emptying ${ directory }…`);
 	emptyDirSync(directory);
 	console.assert(unicode[property], `Property ${ property } not found.`);
 	for (const value of unicode[property]) {
 		values.push(value);
-		const fileName: String = `${ directory }/${ value }.js`;
+		const fileName: string = `${ directory }/${ value }.js`;
 		console.log(`Creating ${ fileName }…`);
-		const codePoints: String = require(
+		const codePoints: string = require(
 			`@unicode/unicode-${ UNICODE_VERSION }/${ property }/${ value }/code-points.js`
 		);
-		const set: Array = regenerate(codePoints);
-		const output: String = `${ set.toCode() }\nexports.characters = set;\n`;
+		const set: any[] = regenerate(codePoints);
+		const output: string = `${ set.toCode() }\nexports.characters = set;\n`;
 		fs.writeFileSync(fileName, output);
 	}
 	INDEX.set(property, values.sort());
@@ -95,29 +95,29 @@ import supportedProperties from 'unicode-canonical-property-names-ecmascript';
 for (const property of nonBinaryProperties) {
 	supportedProperties.delete(property);
 }
-const binaryProperties: Array = [...supportedProperties];
+const binaryProperties: any[] = [...supportedProperties];
 
 // Empty the target directory, or create it if it doesn’t exist yet.
-const directory: String = 'Binary_Property';
+const directory: string = 'Binary_Property';
 console.log(`Emptying ${ directory }…`);
 emptyDirSync(directory);
 for (const property of binaryProperties) {
-	const fileName: String = `${ directory }/${ property }.js`;
+	const fileName: string = `${ directory }/${ property }.js`;
 	console.log(`Creating ${ fileName }…`);
-	const codePoints: String = require(
+	const codePoints: string = require(
 		`@unicode/unicode-${ UNICODE_VERSION }/Binary_Property/${ property }/code-points.js`
 	);
-	const set: Array = regenerate(codePoints);
-	const output: String = `${ set.toCode() }\nexports.characters = set;\n`;
+	const set: any[] = regenerate(codePoints);
+	const output: string = `${ set.toCode() }\nexports.characters = set;\n`;
 	fs.writeFileSync(fileName, output);
 }
 
-const allBinaryProperties: Array = binaryProperties.sort();
+const allBinaryProperties: any[] = binaryProperties.sort();
 INDEX.set('Binary_Property', allBinaryProperties);
 
 /*----------------------------------------------------------------------------*/
 
-const propertiesOfStrings: String = [
+const propertiesOfStrings: string = [
 	'Basic_Emoji',
 	'Emoji_Keycap_Sequence',
 	'RGI_Emoji_Modifier_Sequence',
@@ -128,16 +128,16 @@ const propertiesOfStrings: String = [
 ].sort();
 
 // Empty the target directory, or create it if it doesn’t exist yet.
-const posDirectory: String = 'Property_of_Strings';
+const posDirectory: string = 'Property_of_Strings';
 console.log(`Emptying ${ posDirectory }…`);
 emptyDirSync(posDirectory);
 
 for (const property of propertiesOfStrings) {
-	const fileName: String = `${ posDirectory }/${ property }.js`;
+	const fileName: string = `${ posDirectory }/${ property }.js`;
 	console.log(`Creating ${ fileName }…`);
-	const rawStrings: String = require(`@unicode/unicode-${ UNICODE_VERSION }/Sequence_Property/${ property }/index.js`);
-	const codePoints: Array = [];
-	const strings: Array = [];
+	const rawStrings: string = require(`@unicode/unicode-${ UNICODE_VERSION }/Sequence_Property/${ property }/index.js`);
+	const codePoints: any[] = [];
+	const strings: any[] = [];
 	for (const rawString of rawStrings) {
 		if (rawString.length === 1 || (rawString.length === 2 && rawString.codePointAt(0) > 0xFFFF)) {
 			codePoints.push(rawString.codePointAt(0));
@@ -145,15 +145,15 @@ for (const property of propertiesOfStrings) {
 			strings.push(rawString);
 		}
 	}
-	const set: Array = regenerate(codePoints);
-	const output: String = `${ set.toCode() }\nexports.characters = set;\nexports.strings = ${ jsesc(strings, { es6: true }) };\n`;
+	const set: any[] = regenerate(codePoints);
+	const output: string = `${ set.toCode() }\nexports.characters = set;\nexports.strings = ${ jsesc(strings, { es6: true }) };\n`;
 	fs.writeFileSync(fileName, output);
 }
 INDEX.set('Property_of_Strings', propertiesOfStrings);
 
 /*----------------------------------------------------------------------------*/
 
-const output: String = `module.exports = ${
+const output: string = `module.exports = ${
 	jsesc(INDEX, {
 		'compact': false
 	})
@@ -164,10 +164,10 @@ fs.writeFileSync('index.js', output);
 
 import packageData from './package.json';
 
-const dependencies: Array = Object.keys(packageData.devDependencies);
-const unicodePackage: Array = dependencies.find((name: String) =>/^@unicode\/unicode-\d/.test(name));
-const unicodeVersion: String = unicodePackage.replace(/^@unicode\/unicode-/g, '');
-const versionOutput: String = `module.exports = ${
+const dependencies: any[] = Object.keys(packageData.devDependencies);
+const unicodePackage: any[] = dependencies.find((name: string) =>/^@unicode\/unicode-\d/.test(name));
+const unicodeVersion: string = unicodePackage.replace(/^@unicode\/unicode-/g, '');
+const versionOutput: string = `module.exports = ${
 	jsesc(unicodeVersion, {
 		'wrap': true
 	})

@@ -1,7 +1,7 @@
 const emitter: Function = require('./');
 const obj: Emitter = {};
-let n: Number = 0;
-const log: Function = (msg: String) => console.log(msg, ++n);
+let n: number = 0;
+const log: Function = (msg: string) => console.log(msg, ++n);
 
 emitter(obj);
 obj.on('status', log);

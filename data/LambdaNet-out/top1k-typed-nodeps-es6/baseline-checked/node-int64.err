@@ -1,44 +1,20 @@
-Int64.ts(62,30): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Buffer'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+Int64.ts(54,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 Int64.ts(76,7): error TS2339: Property 'MAX_INT' does not exist on type 'Function'.
 Int64.ts(79,7): error TS2339: Property 'MIN_INT' does not exist on type 'Function'.
-Int64.ts(91,18): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-Int64.ts(92,23): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-Int64.ts(93,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(94,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(112,9): error TS2322: Type 'number' is not assignable to type 'String'.
+Int64.ts(112,9): error TS2322: Type 'number' is not assignable to type 'string'.
 Int64.ts(113,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(113,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(114,9): error TS2322: Type 'number' is not assignable to type 'String'.
+Int64.ts(114,9): error TS2322: Type 'number' is not assignable to type 'string'.
 Int64.ts(114,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(114,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(115,13): error TS2365: Operator '>' cannot be applied to types 'String' and 'Number'.
-Int64.ts(116,9): error TS2322: Type 'number' is not assignable to type 'String'.
+Int64.ts(115,13): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
+Int64.ts(116,9): error TS2322: Type 'number' is not assignable to type 'string'.
 Int64.ts(116,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(119,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-Int64.ts(121,9): error TS2322: Type 'number' is not assignable to type 'String'.
-Int64.ts(121,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-Int64.ts(122,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-Int64.ts(134,9): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-Int64.ts(134,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(135,7): error TS2322: Type 'number | String' is not assignable to type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-Int64.ts(135,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(157,28): error TS2538: Type 'String' cannot be used as an index type.
-Int64.ts(159,25): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-Int64.ts(163,13): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-Int64.ts(163,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(164,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(165,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-Int64.ts(168,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-Int64.ts(168,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+Int64.ts(119,9): error TS2322: Type 'string' is not assignable to type 'number'.
+Int64.ts(121,9): error TS2322: Type 'number' is not assignable to type 'string'.
+Int64.ts(122,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+Int64.ts(135,7): error TS2322: Type 'string | number' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
 Int64.ts(172,39): error TS2339: Property 'MAX_INT' does not exist on type 'Function'.
-Int64.ts(202,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-Int64.ts(205,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-Int64.ts(219,9): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
+Int64.ts(219,9): error TS2322: Type 'Buffer' is not assignable to type 'string'.
 Int64.ts(243,53): error TS2339: Property 'buffer' does not exist on type 'HTMLElement'.
 Int64.ts(243,66): error TS2339: Property 'offset' does not exist on type 'HTMLElement'.
 Int64.ts(244,20): error TS2339: Property 'buffer' does not exist on type 'HTMLElement'.

@@ -2,7 +2,7 @@ import nativeModule from 'module';
 import path from 'path';
 import fs from 'fs';
 
-function createRequire (filename: String): Promise {
+function createRequire (filename: string): Promise {
   // Fallback to process.cwd() if no filename passed
   if (!filename) {
     filename = process.cwd()
@@ -28,7 +28,7 @@ function createRequire (filename: String): Promise {
 }
 
 // Polyfill
-function _createRequire (filename: String): Array {
+function _createRequire (filename: string): any[] {
   const mod: HTMLElement = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))
@@ -36,9 +36,9 @@ function _createRequire (filename: String): Array {
   return mod.exports
 }
 
-function isDir (path: String): Boolean {
+function isDir (path: string): boolean {
   try {
-    const stat: Array = fs.lstatSync(path)
+    const stat: any[] = fs.lstatSync(path)
     return stat.isDirectory()
   } catch (e) {
     // lstatSync throws an error if path doesn't exist

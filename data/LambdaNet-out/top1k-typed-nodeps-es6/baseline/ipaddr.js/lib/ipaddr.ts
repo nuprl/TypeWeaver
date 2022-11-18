@@ -1,10 +1,10 @@
-(function (root: Object) {
+(function (root: object) {
     'use strict';
     // A list of regular expressions that match arbitrary IPv4 addresses,
     // for which a number of weird notations exist.
     // Note that an address like 0010.0xa5.1.1 is considered legal.
-    const ipv4Part: String = '(0?\\d+|0x[a-f0-9]+)';
-    const ipv4Regexes: Object = {
+    const ipv4Part: string = '(0?\\d+|0x[a-f0-9]+)';
+    const ipv4Regexes: object = {
         fourOctet: new RegExp(`^${ipv4Part}\\.${ipv4Part}\\.${ipv4Part}\\.${ipv4Part}$`, 'i'),
         threeOctet: new RegExp(`^${ipv4Part}\\.${ipv4Part}\\.${ipv4Part}$`, 'i'),
         twoOctet: new RegExp(`^${ipv4Part}\\.${ipv4Part}$`, 'i'),
@@ -15,14 +15,14 @@
     const octalRegex: HTMLElement = new RegExp(`^0[0-7]+$`, 'i');
     const hexRegex: HTMLElement = new RegExp(`^0x[a-f0-9]+$`, 'i');
 
-    const zoneIndex: String = '%[0-9a-z]{1,}';
+    const zoneIndex: string = '%[0-9a-z]{1,}';
 
     // IPv6-matching regular expressions.
     // For IPv6, the task is simpler: it is enough to match the colon-delimited
     // hexadecimal IPv6 and a transitional variant with dotted-decimal IPv4 at
     // the end.
-    const ipv6Part: String = '(?:[0-9a-f]+::?)+';
-    const ipv6Regexes: Object = {
+    const ipv6Part: string = '(?:[0-9a-f]+::?)+';
+    const ipv6Regexes: object = {
         zoneIndex: new RegExp(zoneIndex, 'i'),
         'native': new RegExp(`^(::)?(${ipv6Part})?([0-9a-f]+)?(::)?(${zoneIndex})?$`, 'i'),
         deprecatedTransitional: new RegExp(`^(?:::)(${ipv4Part}\\.${ipv4Part}\\.${ipv4Part}\\.${ipv4Part}(${zoneIndex})?)$`, 'i'),
@@ -30,16 +30,16 @@
     };
 
     // Expand :: in an IPv6 address or address part consisting of `parts` groups.
-    function expandIPv6 (string: String, parts: Number): Object {
+    function expandIPv6 (string: string, parts: number): object {
         // More than one '::' means invalid adddress
         if (string.indexOf('::') !== string.lastIndexOf('::')) {
             return null;
         }
 
-        let colonCount: Number = 0;
-        let lastColon: Number = -1;
-        let zoneId: String = (string.match(ipv6Regexes.zoneIndex) || [])[0];
-        let replacement: String, replacementCount: Number;
+        let colonCount: number = 0;
+        let lastColon: number = -1;
+        let zoneId: string = (string.match(ipv6Regexes.zoneIndex) || [])[0];
+        let replacement: string, replacementCount: number;
 
         // Remove zone index and save it for later
         if (zoneId) {
@@ -87,8 +87,8 @@
         }
 
         parts = (function () {
-            const ref: Array = string.split(':');
-            const results: Array = [];
+            const ref: any[] = string.split(':');
+            const results: any[] = [];
 
             for (let i = 0; i < ref.length; i++) {
                 results.push(parseInt(ref[i], 16));
@@ -104,13 +104,13 @@
     }
 
     // A generic CIDR (Classless Inter-Domain Routing) RFC1518 range matcher.
-    function matchCIDR (first: Array, second: Array, partSize: Number, cidrBits: Number): Boolean {
+    function matchCIDR (first: any[], second: any[], partSize: number, cidrBits: number): boolean {
         if (first.length !== second.length) {
             throw new Error('ipaddr: cannot match CIDR for objects with different lengths');
         }
 
-        let part: Number = 0;
-        let shift: Number;
+        let part: number = 0;
+        let shift: number;
 
         while (cidrBits > 0) {
             shift = partSize - cidrBits;
@@ -129,7 +129,7 @@
         return true;
     }
 
-    function parseIntAuto (string: Function): Number {
+    function parseIntAuto (string: Function): number {
         // Hexadedimal base 16 (0x#)
         if (hexRegex.test(string)) {
             return parseInt(string, 16);
@@ -147,7 +147,7 @@
         return parseInt(string, 10);
     }
 
-    function padPart (part: String, length: Number): String {
+    function padPart (part: string, length: number): string {
         while (part.length < length) {
             part = `0${part}`;
         }
@@ -162,12 +162,12 @@
         // Constructs a new IPv4 address from an array of four octets
         // in network order (MSB first)
         // Verifies the input.
-        function IPv4 (octets: Array): Void {
+        function IPv4 (octets: any[]): Void {
             if (octets.length !== 4) {
                 throw new Error('ipaddr: ipv4 octet count should be 4');
             }
 
-            let i: Number, octet: Number;
+            let i: number, octet: number;
 
             for (i = 0; i < octets.length; i++) {
                 octet = octets[i];
@@ -216,8 +216,8 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv4.prototype.match = function (other: Object, cidrRange: Number) {
-            let ref: Object;
+        IPv4.prototype.match = function (other: object, cidrRange: number) {
+            let ref: object;
             if (cidrRange === undefined) {
                 ref = other;
                 other = ref[0];
@@ -235,11 +235,11 @@
         // the rest is a solid sequence of 0's (valid netmask)
         // returns either the CIDR length or null if mask is not valid
         IPv4.prototype.prefixLengthFromSubnetMask = function () {
-            let cidr: Number = 0;
+            let cidr: number = 0;
             // non-zero encountered stop scanning for zeroes
-            let stop: Boolean = false;
+            let stop: boolean = false;
             // number of zeroes in octet
-            const zerotable: Object = {
+            const zerotable: object = {
                 0: 8,
                 128: 7,
                 192: 6,
@@ -250,7 +250,7 @@
                 254: 1,
                 255: 0
             };
-            let i: Number, octet: String, zeros: Number;
+            let i: number, octet: string, zeros: number;
 
             for (i = 3; i >= 0; i -= 1) {
                 octet = this.octets[i];
@@ -302,14 +302,14 @@
     })();
 
     // A utility function to return broadcast address given the IPv4 interface and prefix length in CIDR notation
-    ipaddr.IPv4.broadcastAddressFromCIDR = function (string: String) {
+    ipaddr.IPv4.broadcastAddressFromCIDR = function (string: string) {
 
         try {
-            const cidr: Object = this.parseCIDR(string);
-            const ipInterfaceOctets: Object = cidr[0].toByteArray();
-            const subnetMaskOctets: Object = this.subnetMaskFromPrefixLength(cidr[1]).toByteArray();
-            const octets: Array = [];
-            let i: Number = 0;
+            const cidr: object = this.parseCIDR(string);
+            const ipInterfaceOctets: object = cidr[0].toByteArray();
+            const subnetMaskOctets: object = this.subnetMaskFromPrefixLength(cidr[1]).toByteArray();
+            const octets: any[] = [];
+            let i: number = 0;
             while (i < 4) {
                 // Broadcast address is bitwise OR between ip interface and inverted mask
                 octets.push(parseInt(ipInterfaceOctets[i], 10) | parseInt(subnetMaskOctets[i], 10) ^ 255);
@@ -323,12 +323,12 @@
     };
 
     // Checks if a given string is formatted like IPv4 address.
-    ipaddr.IPv4.isIPv4 = function (string: String) {
+    ipaddr.IPv4.isIPv4 = function (string: string) {
         return this.parser(string) !== null;
     };
 
     // Checks if a given string is a valid IPv4 address.
-    ipaddr.IPv4.isValid = function (string: String) {
+    ipaddr.IPv4.isValid = function (string: string) {
         try {
             new this(this.parser(string));
             return true;
@@ -338,7 +338,7 @@
     };
 
     // Checks if a given string is a full four-part IPv4 Address.
-    ipaddr.IPv4.isValidFourPartDecimal = function (string: String) {
+    ipaddr.IPv4.isValidFourPartDecimal = function (string: string) {
         if (ipaddr.IPv4.isValid(string) && string.match(/^(0|[1-9]\d*)(\.(0|[1-9]\d*)){3}$/)) {
             return true;
         } else {
@@ -347,8 +347,8 @@
     };
 
     // A utility function to return network address given the IPv4 interface and prefix length in CIDR notation
-    ipaddr.IPv4.networkAddressFromCIDR = function (string: String) {
-        let cidr: Object, i: Number, ipInterfaceOctets: Object, octets: Array, subnetMaskOctets: Object;
+    ipaddr.IPv4.networkAddressFromCIDR = function (string: string) {
+        let cidr: object, i: number, ipInterfaceOctets: object, octets: any[], subnetMaskOctets: object;
 
         try {
             cidr = this.parseCIDR(string);
@@ -370,8 +370,8 @@
 
     // Tries to parse and validate a string with IPv4 address.
     // Throws an error if it fails.
-    ipaddr.IPv4.parse = function (string: String) {
-        const parts: String = this.parser(string);
+    ipaddr.IPv4.parse = function (string: string) {
+        const parts: string = this.parser(string);
 
         if (parts === null) {
             throw new Error('ipaddr: string is not formatted like an IPv4 Address');
@@ -381,13 +381,13 @@
     };
 
     // Parses the string as an IPv4 Address with CIDR Notation.
-    ipaddr.IPv4.parseCIDR = function (string: String) {
-        let match: Object;
+    ipaddr.IPv4.parseCIDR = function (string: string) {
+        let match: object;
 
         if ((match = string.match(/^(.+)\/(\d+)$/))) {
-            const maskLength: Number = parseInt(match[2]);
+            const maskLength: number = parseInt(match[2]);
             if (maskLength >= 0 && maskLength <= 32) {
-                const parsed: Array = [this.parse(match[1]), maskLength];
+                const parsed: any[] = [this.parse(match[1]), maskLength];
                 Object.defineProperty(parsed, 'toString', {
                     value: function () {
                         return this.join('/');
@@ -403,14 +403,14 @@
     // Classful variants (like a.b, where a is an octet, and b is a 24-bit
     // value representing last three octets; this corresponds to a class C
     // address) are omitted due to classless nature of modern Internet.
-    ipaddr.IPv4.parser = function (string: String) {
-        let match: Array, part: Function, value: Number;
+    ipaddr.IPv4.parser = function (string: string) {
+        let match: any[], part: Function, value: number;
 
         // parseInt recognizes all that octal & hexadecimal weirdness for us
         if ((match = string.match(ipv4Regexes.fourOctet))) {
             return (function () {
-                const ref: Array = match.slice(1, 6);
-                const results: Array = [];
+                const ref: any[] = match.slice(1, 6);
+                const results: any[] = [];
 
                 for (let i = 0; i < ref.length; i++) {
                     part = ref[i];
@@ -426,8 +426,8 @@
             }
 
             return ((function () {
-                const results: Array = [];
-                let shift: Number;
+                const results: any[] = [];
+                let shift: number;
 
                 for (shift = 0; shift <= 24; shift += 8) {
                     results.push((value >> shift) & 0xff);
@@ -437,8 +437,8 @@
             })()).reverse();
         } else if ((match = string.match(ipv4Regexes.twoOctet))) {
             return (function () {
-                const ref: Object = match.slice(1, 4);
-                const results: Array = [];
+                const ref: object = match.slice(1, 4);
+                const results: any[] = [];
 
                 value = parseIntAuto(ref[1]);
                 if (value > 0xffffff || value < 0) {
@@ -454,8 +454,8 @@
             })();
         } else if ((match = string.match(ipv4Regexes.threeOctet))) {
             return (function () {
-                const ref: Object = match.slice(1, 5);
-                const results: Array = [];
+                const ref: object = match.slice(1, 5);
+                const results: any[] = [];
 
                 value = parseIntAuto(ref[2]);
                 if (value > 0xffff || value < 0) {
@@ -475,15 +475,15 @@
     };
 
     // A utility function to return subnet mask in IPv4 format given the prefix length
-    ipaddr.IPv4.subnetMaskFromPrefixLength = function (prefix: Number) {
+    ipaddr.IPv4.subnetMaskFromPrefixLength = function (prefix: number) {
         prefix = parseInt(prefix);
         if (prefix < 0 || prefix > 32) {
             throw new Error('ipaddr: invalid IPv4 prefix length');
         }
 
-        const octets: Object = [0, 0, 0, 0];
-        let j: Number = 0;
-        const filledOctetCount: Number = Math.floor(prefix / 8);
+        const octets: object = [0, 0, 0, 0];
+        let j: number = 0;
+        const filledOctetCount: number = Math.floor(prefix / 8);
 
         while (j < filledOctetCount) {
             octets[j] = 255;
@@ -502,8 +502,8 @@
         // Constructs an IPv6 address from an array of eight 16 - bit parts
         // or sixteen 8 - bit parts in network order(MSB first).
         // Throws an error if the input is invalid.
-        function IPv6 (parts: Array, zoneId: Number): Void {
-            let i: Number, part: Number;
+        function IPv6 (parts: any[], zoneId: number): Void {
+            let i: number, part: number;
 
             if (parts.length === 16) {
                 this.parts = [];
@@ -565,8 +565,8 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv6.prototype.match = function (other: Object, cidrRange: Number) {
-            let ref: Object;
+        IPv6.prototype.match = function (other: object, cidrRange: number) {
+            let ref: object;
 
             if (cidrRange === undefined) {
                 ref = other;
@@ -585,11 +585,11 @@
         // the rest is a solid sequence of 0's (valid netmask)
         // returns either the CIDR length or null if mask is not valid
         IPv6.prototype.prefixLengthFromSubnetMask = function () {
-            let cidr: Number = 0;
+            let cidr: number = 0;
             // non-zero encountered stop scanning for zeroes
-            let stop: Boolean = false;
+            let stop: boolean = false;
             // number of zeroes in octet
-            const zerotable: Object = {
+            const zerotable: object = {
                 0: 16,
                 32768: 15,
                 49152: 14,
@@ -608,7 +608,7 @@
                 65534: 1,
                 65535: 0
             };
-            let part: Function, zeros: Number;
+            let part: Function, zeros: number;
 
             for (let i = 7; i >= 0; i -= 1) {
                 part = this.parts[i];
@@ -639,9 +639,9 @@
 
         // Returns an array of byte-sized values in network order (MSB first)
         IPv6.prototype.toByteArray = function () {
-            let part: Number;
-            const bytes: Array = [];
-            const ref: Array = this.parts;
+            let part: number;
+            const bytes: any[] = [];
+            const ref: any[] = this.parts;
             for (let i = 0; i < ref.length; i++) {
                 part = ref[i];
                 bytes.push(part >> 8);
@@ -654,8 +654,8 @@
         // Returns the address in expanded format with all zeroes included, like
         // 2001:0db8:0008:0066:0000:0000:0000:0001
         IPv6.prototype.toFixedLengthString = function () {
-            const addr: String = ((function () {
-                const results: Array = [];
+            const addr: string = ((function () {
+                const results: any[] = [];
                 for (let i = 0; i < this.parts.length; i++) {
                     results.push(padPart(this.parts[i].toString(16), 4));
                 }
@@ -663,7 +663,7 @@
                 return results;
             }).call(this)).join(':');
 
-            let suffix: String = '';
+            let suffix: string = '';
 
             if (this.zoneId) {
                 suffix = `%${this.zoneId}`;
@@ -679,9 +679,9 @@
                 throw new Error('ipaddr: trying to convert a generic ipv6 address to ipv4');
             }
 
-            const ref: Object = this.parts.slice(-2);
-            const high: Number = ref[0];
-            const low: Number = ref[1];
+            const ref: object = this.parts.slice(-2);
+            const high: number = ref[0];
+            const low: number = ref[1];
 
             return new ipaddr.IPv4([high >> 8, high & 0xff, low >> 8, low & 0xff]);
         };
@@ -691,8 +691,8 @@
         //
         // Deprecated: use toFixedLengthString() instead.
         IPv6.prototype.toNormalizedString = function () {
-            const addr: String = ((function () {
-                const results: Array = [];
+            const addr: string = ((function () {
+                const results: any[] = [];
 
                 for (let i = 0; i < this.parts.length; i++) {
                     results.push(this.parts[i].toString(16));
@@ -701,7 +701,7 @@
                 return results;
             }).call(this)).join(':');
 
-            let suffix: String = '';
+            let suffix: string = '';
 
             if (this.zoneId) {
                 suffix = `%${this.zoneId}`;
@@ -715,10 +715,10 @@
         // in line with RFC 5952 (see https://tools.ietf.org/html/rfc5952#section-4)
         IPv6.prototype.toRFC5952String = function () {
             const regex: RegExp = /((^|:)(0(:|$)){2,})/g;
-            const string: String = this.toNormalizedString();
-            let bestMatchIndex: Number = 0;
-            let bestMatchLength: Number = -1;
-            let match: Object;
+            const string: string = this.toNormalizedString();
+            let bestMatchIndex: number = 0;
+            let bestMatchLength: number = -1;
+            let match: object;
 
             while ((match = regex.exec(string))) {
                 if (match[0].length > bestMatchLength) {
@@ -746,13 +746,13 @@
     })();
 
     // A utility function to return broadcast address given the IPv6 interface and prefix length in CIDR notation
-    ipaddr.IPv6.broadcastAddressFromCIDR = function (string: String) {
+    ipaddr.IPv6.broadcastAddressFromCIDR = function (string: string) {
         try {
-            const cidr: Object = this.parseCIDR(string);
-            const ipInterfaceOctets: Object = cidr[0].toByteArray();
-            const subnetMaskOctets: Object = this.subnetMaskFromPrefixLength(cidr[1]).toByteArray();
-            const octets: Array = [];
-            let i: Number = 0;
+            const cidr: object = this.parseCIDR(string);
+            const ipInterfaceOctets: object = cidr[0].toByteArray();
+            const subnetMaskOctets: object = this.subnetMaskFromPrefixLength(cidr[1]).toByteArray();
+            const octets: any[] = [];
+            let i: number = 0;
             while (i < 16) {
                 // Broadcast address is bitwise OR between ip interface and inverted mask
                 octets.push(parseInt(ipInterfaceOctets[i], 10) | parseInt(subnetMaskOctets[i], 10) ^ 255);
@@ -766,12 +766,12 @@
     };
 
     // Checks if a given string is formatted like IPv6 address.
-    ipaddr.IPv6.isIPv6 = function (string: String) {
+    ipaddr.IPv6.isIPv6 = function (string: string) {
         return this.parser(string) !== null;
     };
 
     // Checks to see if string is a valid IPv6 Address
-    ipaddr.IPv6.isValid = function (string: String) {
+    ipaddr.IPv6.isValid = function (string: string) {
 
         // Since IPv6.isValid is always called first, this shortcut
         // provides a substantial performance gain.
@@ -780,7 +780,7 @@
         }
 
         try {
-            const addr: Object = this.parser(string);
+            const addr: object = this.parser(string);
             new this(addr.parts, addr.zoneId);
             return true;
         } catch (e) {
@@ -789,8 +789,8 @@
     };
 
     // A utility function to return network address given the IPv6 interface and prefix length in CIDR notation
-    ipaddr.IPv6.networkAddressFromCIDR = function (string: String) {
-        let cidr: Object, i: Number, ipInterfaceOctets: Object, octets: Array, subnetMaskOctets: Object;
+    ipaddr.IPv6.networkAddressFromCIDR = function (string: string) {
+        let cidr: object, i: number, ipInterfaceOctets: object, octets: any[], subnetMaskOctets: object;
 
         try {
             cidr = this.parseCIDR(string);
@@ -812,8 +812,8 @@
 
     // Tries to parse and validate a string with IPv6 address.
     // Throws an error if it fails.
-    ipaddr.IPv6.parse = function (string: String) {
-        const addr: Object = this.parser(string);
+    ipaddr.IPv6.parse = function (string: string) {
+        const addr: object = this.parser(string);
 
         if (addr.parts === null) {
             throw new Error('ipaddr: string is not formatted like an IPv6 Address');
@@ -822,8 +822,8 @@
         return new this(addr.parts, addr.zoneId);
     };
 
-    ipaddr.IPv6.parseCIDR = function (string: String) {
-        let maskLength: Number, match: Object, parsed: Array;
+    ipaddr.IPv6.parseCIDR = function (string: string) {
+        let maskLength: number, match: object, parsed: any[];
 
         if ((match = string.match(/^(.+)\/(\d+)$/))) {
             maskLength = parseInt(match[2]);
@@ -842,8 +842,8 @@
     };
 
     // Parse an IPv6 address.
-    ipaddr.IPv6.parser = function (string: String) {
-        let addr: Object, i: Number, match: Object, octet: Number, octets: Array, zoneId: String;
+    ipaddr.IPv6.parser = function (string: string) {
+        let addr: object, i: number, match: object, octet: number, octets: any[], zoneId: string;
 
         if ((match = string.match(ipv6Regexes.deprecatedTransitional))) {
             return this.parser(`::ffff:${match[1]}`);
@@ -881,15 +881,15 @@
     };
 
     // A utility function to return subnet mask in IPv6 format given the prefix length
-    ipaddr.IPv6.subnetMaskFromPrefixLength = function (prefix: Number) {
+    ipaddr.IPv6.subnetMaskFromPrefixLength = function (prefix: number) {
         prefix = parseInt(prefix);
         if (prefix < 0 || prefix > 128) {
             throw new Error('ipaddr: invalid IPv6 prefix length');
         }
 
-        const octets: Object = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        let j: Number = 0;
-        const filledOctetCount: Number = Math.floor(prefix / 8);
+        const octets: object = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let j: number = 0;
+        const filledOctetCount: number = Math.floor(prefix / 8);
 
         while (j < filledOctetCount) {
             octets[j] = 255;
@@ -904,8 +904,8 @@
     };
 
     // Try to parse an array in network order (MSB first) for IPv4 and IPv6
-    ipaddr.fromByteArray = function (bytes: Array) {
-        const length: Number = bytes.length;
+    ipaddr.fromByteArray = function (bytes: any[]) {
+        const length: number = bytes.length;
 
         if (length === 4) {
             return new ipaddr.IPv4(bytes);
@@ -917,14 +917,14 @@
     };
 
     // Checks if the address is valid IP address
-    ipaddr.isValid = function (string: String) {
+    ipaddr.isValid = function (string: string) {
         return ipaddr.IPv6.isValid(string) || ipaddr.IPv4.isValid(string);
     };
 
 
     // Attempts to parse an IP Address, first through IPv6 then IPv4.
     // Throws an error if it could not be parsed.
-    ipaddr.parse = function (string: String) {
+    ipaddr.parse = function (string: string) {
         if (ipaddr.IPv6.isValid(string)) {
             return ipaddr.IPv6.parse(string);
         } else if (ipaddr.IPv4.isValid(string)) {
@@ -936,7 +936,7 @@
 
     // Attempt to parse CIDR notation, first through IPv6 then IPv4.
     // Throws an error if it could not be parsed.
-    ipaddr.parseCIDR = function (string: String) {
+    ipaddr.parseCIDR = function (string: string) {
         try {
             return ipaddr.IPv6.parseCIDR(string);
         } catch (e) {
@@ -949,7 +949,7 @@
     };
 
     // Parse an address and return plain IPv4 address if it is an IPv4-mapped address
-    ipaddr.process = function (string: String) {
+    ipaddr.process = function (string: string) {
         const addr: HTMLElement = this.parse(string);
 
         if (addr.kind() === 'ipv6' && addr.isIPv4MappedAddress()) {
@@ -962,8 +962,8 @@
     // An utility function to ease named range matching. See examples below.
     // rangeList can contain both IPv4 and IPv6 subnet entries and will not throw errors
     // on matching IPv4 addresses to IPv6 ranges or vice versa.
-    ipaddr.subnetMatch = function (address: Object, rangeList: Object, defaultName: String) {
-        let i: Number, rangeName: String, rangeSubnets: Array, subnet: Object;
+    ipaddr.subnetMatch = function (address: object, rangeList: object, defaultName: string) {
+        let i: number, rangeName: string, rangeSubnets: any[], subnet: object;
 
         if (defaultName === undefined || defaultName === null) {
             defaultName = 'unicast';

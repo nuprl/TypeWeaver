@@ -4,14 +4,14 @@ import finalPropName from "../css/finalPropName.js";
 
 import "../css.js";
 
-function Tween( elem: String, options: Function, prop: String, end: String, easing: Function ): String {
+function Tween( elem: string, options: Function, prop: string, end: string, easing: Function ): string {
 	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
 jQuery.Tween = Tween;
 
 Tween.prototype = {
 	constructor: Tween,
-	init: function( elem: Function, options: Array, prop: Array, end: String, easing: String, unit: String ) {
+	init: function( elem: Function, options: any[], prop: any[], end: string, easing: string, unit: string ) {
 		this.elem = elem;
 		this.prop = prop;
 		this.easing = easing || jQuery.easing._default;
@@ -21,15 +21,15 @@ Tween.prototype = {
 		this.unit = unit || ( isAutoPx( prop ) ? "px" : "" );
 	},
 	cur: function() {
-		var hooks: Object = Tween.propHooks[ this.prop ];
+		var hooks: object = Tween.propHooks[ this.prop ];
 
 		return hooks && hooks.get ?
 			hooks.get( this ) :
 			Tween.propHooks._default.get( this );
 	},
-	run: function( percent: Number ) {
-		var eased: Number,
-			hooks: Object = Tween.propHooks[ this.prop ];
+	run: function( percent: number ) {
+		var eased: number,
+			hooks: object = Tween.propHooks[ this.prop ];
 
 		if ( this.options.duration ) {
 			this.pos = eased = jQuery.easing[ this.easing ](
@@ -57,8 +57,8 @@ Tween.prototype.init.prototype = Tween.prototype;
 
 Tween.propHooks = {
 	_default: {
-		get: function( tween: Object ) {
-			var result: Number;
+		get: function( tween: object ) {
+			var result: number;
 
 			// Use a property on the element directly when it is not a DOM element,
 			// or when there is no matching style property that exists.
@@ -76,7 +76,7 @@ Tween.propHooks = {
 			// Empty strings, null, undefined and "auto" are converted to 0.
 			return !result || result === "auto" ? 0 : result;
 		},
-		set: function( tween: Object ) {
+		set: function( tween: object ) {
 
 			// Use step hook for back compat.
 			// Use cssHook if its there.
@@ -98,7 +98,7 @@ jQuery.easing = {
 	linear: function( p: Function ) {
 		return p;
 	},
-	swing: function( p: Number ) {
+	swing: function( p: number ) {
 		return 0.5 - Math.cos( p * Math.PI ) / 2;
 	},
 	_default: "swing"

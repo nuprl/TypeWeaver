@@ -1,6 +1,6 @@
 'use strict';
 
-var getInferredName: String;
+var getInferredName: string;
 try {
 	// eslint-disable-next-line no-new-func
 	getInferredName = Function('s', 'return { [s]() {} }[s].name;');

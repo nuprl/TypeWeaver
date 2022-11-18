@@ -25,13 +25,13 @@ module.exports = {
 	getPass: getPass
 };
 
-const mod_tty: Array = require('tty');
-const mod_fs: Array = require('fs');
-const mod_assert: String = require('assert-plus');
+const mod_tty: any[] = require('tty');
+const mod_fs: any[] = require('fs');
+const mod_assert: string = require('assert-plus');
 
-var BACKSPACE: String = String.fromCharCode(127);
-var CTRLC: String = '\u0003';
-var CTRLD: String = '\u0004';
+var BACKSPACE: string = String.fromCharCode(127);
+var CTRLC: string = '\u0003';
+var CTRLD: string = '\u0004';
 
 function getPass(opts: Function, cb: Function): Void {
 	if (typeof (opts) === 'function' && cb === undefined) {
@@ -45,7 +45,7 @@ function getPass(opts: Function, cb: Function): Void {
 	if (opts.prompt === undefined)
 		opts.prompt = 'Password';
 
-	openTTY(function (err: String, rfd: Number, wfd: Number, rtty: HTMLElement, wtty: HTMLElement) {
+	openTTY(function (err: string, rfd: number, wfd: number, rtty: HTMLElement, wtty: HTMLElement) {
 		if (err) {
 			cb(err);
 			return;
@@ -57,13 +57,13 @@ function getPass(opts: Function, cb: Function): Void {
 		rtty.resume();
 		rtty.setEncoding('utf8');
 
-		var pw: String = '';
+		var pw: string = '';
 		rtty.on('data', onData);
 
-		function onData(data: String): Void {
-			var str: String = data.toString('utf8');
+		function onData(data: string): Void {
+			var str: string = data.toString('utf8');
 			for (var i = 0; i < str.length; ++i) {
-				var ch: String = str[i];
+				var ch: string = str[i];
 				switch (ch) {
 				case '\r':
 				case '\n':
@@ -103,16 +103,16 @@ function getPass(opts: Function, cb: Function): Void {
 }
 
 function openTTY(cb: Function): Void {
-	mod_fs.open('/dev/tty', 'r+', function (err: Object, rttyfd: String) {
+	mod_fs.open('/dev/tty', 'r+', function (err: object, rttyfd: string) {
 		if ((err && (err.code === 'ENOENT' || err.code === 'EACCES')) ||
 		    (process.version.match(/^v0[.][0-8][.]/))) {
 			cb(null, undefined, undefined, process.stdin,
 			    process.stdout);
 			return;
 		}
-		var rtty: String = new mod_tty.ReadStream(rttyfd);
-		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: String) {
-			var wtty: String = new mod_tty.WriteStream(wttyfd);
+		var rtty: string = new mod_tty.ReadStream(rttyfd);
+		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: string) {
+			var wtty: string = new mod_tty.WriteStream(wttyfd);
 			if (err3) {
 				cb(err3);
 				return;

@@ -2,8 +2,8 @@
 
 import parsers from '../parsers';
 
-var parse: Function = function parse(v: String): String {
-  var parsed: Number = parsers.parseColor(v);
+var parse: Function = function parse(v: string): string {
+  var parsed: number = parsers.parseColor(v);
   if (parsed !== undefined) {
     return parsed;
   }
@@ -16,12 +16,12 @@ var parse: Function = function parse(v: String): String {
   return undefined;
 };
 
-export const isValid: String = function isValid(v: Array): Boolean {
+export const isValid: string = function isValid(v: any[]): boolean {
   return parse(v) !== undefined;
 };
 
-export const definition: Object = {
-  set: function(v: Array) {
+export const definition: object = {
+  set: function(v: any[]) {
     var parsed = parse(v);
     if (parsed === undefined) {
       return;

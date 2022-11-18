@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function setAttributesWithoutAttributes(styleElement: Element, attributes: Object): Void {
+function setAttributesWithoutAttributes(styleElement: Element, attributes: object): Void {
   const nonce: Function =
     typeof __webpack_nonce__ !== "undefined" ? __webpack_nonce__ : null;
 
@@ -7,7 +7,7 @@ function setAttributesWithoutAttributes(styleElement: Element, attributes: Objec
     attributes.nonce = nonce;
   }
 
-  Object.keys(attributes).forEach((key: String) => {
+  Object.keys(attributes).forEach((key: string) => {
     styleElement.setAttribute(key, attributes[key]);
   });
 }

@@ -15,7 +15,7 @@
  * clamp(10, -5, 5)
  * // => 5
  */
-function clamp(number: Number, lower: Number, upper: Number): Number {
+function clamp(number: number, lower: number, upper: number): number {
   number = +number
   lower = +lower
   upper = +upper

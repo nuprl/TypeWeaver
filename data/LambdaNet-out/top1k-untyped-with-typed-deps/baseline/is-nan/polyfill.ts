@@ -1,8 +1,8 @@
 'use strict';
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 
-module.exports = function getPolyfill(): Boolean {
+module.exports = function getPolyfill(): boolean {
 	if (Number.isNaN && Number.isNaN(NaN) && !Number.isNaN('a')) {
 		return Number.isNaN;
 	}

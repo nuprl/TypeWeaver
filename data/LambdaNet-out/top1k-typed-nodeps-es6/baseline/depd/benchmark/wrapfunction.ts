@@ -34,7 +34,7 @@ suite.add({
   fn: 'mylib.old()'
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 

@@ -5,14 +5,14 @@
 
 "use strict";
 
-module.exports = function getInnerRequest(resolver: Resolver, request: HTMLElement): String {
+module.exports = function getInnerRequest(resolver: Resolver, request: HTMLElement): string {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&
 		request.__innerRequest_relativePath === request.relativePath
 	)
 		return request.__innerRequest;
-	let innerRequest: String;
+	let innerRequest: string;
 	if (request.request) {
 		innerRequest = request.request;
 		if (/^\.\.?(?:\/|$)/.test(innerRequest) && request.relativePath) {

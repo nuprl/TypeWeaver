@@ -37,23 +37,23 @@
  *
  */
 
-(function(root: Object) {
+(function(root: object) {
 
   "use strict";
 
   // Maximum search depth for cyclic rational numbers. 2000 should be more than enough.
   // Example: 1/7 = 0.(142857) has 6 repeating decimal places.
   // If MAX_CYCLE_LEN gets reduced, long cycles will not be detected and toString() only gets the first 10 digits
-  var MAX_CYCLE_LEN: Number = 2000;
+  var MAX_CYCLE_LEN: number = 2000;
 
   // Parsed data to avoid calling "new" all the time
-  var P: Object = {
+  var P: object = {
     "s": 1,
     "n": 0,
     "d": 1
   };
 
-  function assign(n: Number, s: Number): Number {
+  function assign(n: number, s: number): number {
 
     if (isNaN(n = parseInt(n, 10))) {
       throw Fraction['InvalidParameter'];
@@ -62,31 +62,31 @@
   }
 
   // Creates a new Fraction internally without the need of the bulky constructor
-  function newFraction(n: Number, d: Number): Object {
+  function newFraction(n: number, d: number): object {
 
     if (d === 0) {
       throw Fraction['DivisionByZero'];
     }
 
-    var f: Object = Object.create(Fraction.prototype);
+    var f: object = Object.create(Fraction.prototype);
     f["s"] = n < 0 ? -1 : 1;
 
     n = n < 0 ? -n : n;
 
-    var a: Number = gcd(n, d);
+    var a: number = gcd(n, d);
 
     f["n"] = n / a;
     f["d"] = d / a;
     return f;
   }
 
-  function factorize(num: Number): Object {
+  function factorize(num: number): object {
 
-    var factors: Object = {};
+    var factors: object = {};
 
-    var n: Number = num;
-    var i: Number = 2;
-    var s: Number = 4;
+    var n: number = num;
+    var i: number = 2;
+    var s: number = 4;
 
     while (s <= n) {
 
@@ -106,16 +106,16 @@
     return factors;
   }
 
-  var parse: Function = function(p1: Number, p2: Boolean) {
+  var parse: Function = function(p1: number, p2: boolean) {
 
-    var n: Number = 0, d: Number = 1, s: Number = 1;
-    var v: Number = 0, w: Number = 0, x: Number = 0, y: Number = 1, z: Number = 1;
+    var n: number = 0, d: number = 1, s: number = 1;
+    var v: number = 0, w: number = 0, x: number = 0, y: number = 1, z: number = 1;
 
-    var A: Number = 0, B: Number = 1;
-    var C: Number = 1, D: Number = 1;
+    var A: number = 0, B: number = 1;
+    var C: number = 1, D: number = 1;
 
-    var N: Number = 10000000;
-    var M: Number;
+    var N: number = 10000000;
+    var M: number;
 
     if (p1 === undefined || p1 === null) {
       /* void */
@@ -278,9 +278,9 @@
     P["d"] = Math.abs(d);
   };
 
-  function modpow(b: Number, e: Number, m: Number): Number {
+  function modpow(b: number, e: number, m: number): number {
 
-    var r: Number = 1;
+    var r: number = 1;
     for (; e > 0; b = (b * b) % m, e >>= 1) {
 
       if (e & 1) {
@@ -291,7 +291,7 @@
   }
 
 
-  function cycleLen(n: Number, d: Number): Number {
+  function cycleLen(n: number, d: number): number {
 
     for (; d % 2 === 0;
       d/= 2) {
@@ -309,8 +309,8 @@
     // However, we don't need such large numbers and MAX_CYCLE_LEN should be the capstone,
     // as we want to translate the numbers to strings.
 
-    var rem: Number = 10 % d;
-    var t: Number = 1;
+    var rem: number = 10 % d;
+    var t: number = 1;
 
     for (; rem !== 1; t++) {
       rem = rem * 10 % d;
@@ -322,10 +322,10 @@
   }
 
 
-  function cycleStart(n: String, d: Number, len: String): Number {
+  function cycleStart(n: string, d: number, len: string): number {
 
-    var rem1: Number = 1;
-    var rem2: Number = modpow(10, len, d);
+    var rem1: number = 1;
+    var rem2: number = modpow(10, len, d);
 
     for (var t = 0; t < 300; t++) { // s < ~log10(Number.MAX_VALUE)
       // Solve 10^s == 10^(s+t) (mod d)
@@ -339,7 +339,7 @@
     return 0;
   }
 
-  function gcd(a: Number, b: Boolean): Number {
+  function gcd(a: number, b: boolean): number {
 
     if (!a)
       return b;
@@ -363,7 +363,7 @@
    * @param {number|Fraction=} a
    * @param {number=} b
    */
-  function Fraction(a: Number, b: String): String {
+  function Fraction(a: number, b: string): string {
 
     parse(a, b);
 
@@ -412,7 +412,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => 467 / 30
      **/
-    "add": function(a: Array, b: String) {
+    "add": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -426,7 +426,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => -427 / 30
      **/
-    "sub": function(a: Array, b: String) {
+    "sub": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -440,7 +440,7 @@
      *
      * Ex: new Fraction("-17.(345)").mul(3) => 5776 / 111
      **/
-    "mul": function(a: Array, b: String) {
+    "mul": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -454,7 +454,7 @@
      *
      * Ex: new Fraction("-17.(345)").inverse().div(3)
      **/
-    "div": function(a: Array, b: String) {
+    "div": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -477,7 +477,7 @@
      *
      * Ex: new Fraction('4.(3)').mod([7, 8]) => (13/3) % (7/8) = (5/6)
      **/
-    "mod": function(a: String, b: String) {
+    "mod": function(a: string, b: string) {
 
       if (isNaN(this['n']) || isNaN(this['d'])) {
         return new Fraction(NaN);
@@ -517,7 +517,7 @@
      *
      * Ex: new Fraction(5,8).gcd(3,7) => 1/56
      */
-    "gcd": function(a: Array, b: String) {
+    "gcd": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -531,7 +531,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: Array, b: String) {
+    "lcm": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -548,7 +548,7 @@
      *
      * Ex: new Fraction('4.(3)').ceil() => (5 / 1)
      **/
-    "ceil": function(places: Number) {
+    "ceil": function(places: number) {
 
       places = Math.pow(10, places || 0);
 
@@ -563,7 +563,7 @@
      *
      * Ex: new Fraction('4.(3)').floor() => (4 / 1)
      **/
-    "floor": function(places: Number) {
+    "floor": function(places: number) {
 
       places = Math.pow(10, places || 0);
 
@@ -578,7 +578,7 @@
      *
      * Ex: new Fraction('4.(3)').round() => (4 / 1)
      **/
-    "round": function(places: Number) {
+    "round": function(places: number) {
 
       places = Math.pow(10, places || 0);
 
@@ -603,7 +603,7 @@
      *
      * Ex: new Fraction(-1,2).pow(-3) => -8
      */
-    "pow": function(a: Array, b: String) {
+    "pow": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -627,12 +627,12 @@
       if (this['s'] < 0) return null;
 
       // Now prime factor n and d
-      var N: Object = factorize(this['n']);
-      var D: Object = factorize(this['d']);
+      var N: object = factorize(this['n']);
+      var D: object = factorize(this['d']);
 
       // Exponentiate and take root for n and d individually
-      var n: Number = 1;
-      var d: Number = 1;
+      var n: number = 1;
+      var d: number = 1;
       for (var k in N) {
         if (k === '1') continue;
         if (k === '0') {
@@ -668,7 +668,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: Array, b: String) {
+    "equals": function(a: any[], b: string) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0
@@ -679,14 +679,14 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "compare": function(a: Array, b: String) {
+    "compare": function(a: any[], b: string) {
 
       parse(a, b);
-      var t: Number = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
+      var t: number = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
       return (0 < t) - (t < 0);
     },
 
-    "simplify": function(eps: String) {
+    "simplify": function(eps: string) {
 
       if (isNaN(this['n']) || isNaN(this['d'])) {
         return this;
@@ -694,12 +694,12 @@
 
       eps = eps || 0.001;
 
-      var thisABS: Object = this['abs']();
-      var cont: Array = thisABS['toContinued']();
+      var thisABS: object = this['abs']();
+      var cont: any[] = thisABS['toContinued']();
 
       for (var i = 1; i < cont.length; i++) {
 
-        var s: Object = newFraction(cont[i - 1], 1);
+        var s: object = newFraction(cont[i - 1], 1);
         for (var k = i - 2; k >= 0; k--) {
           s = s['inverse']()['add'](cont[k]);
         }
@@ -716,7 +716,7 @@
      *
      * Ex: new Fraction(19.6).divisible(1.5);
      */
-    "divisible": function(a: Array, b: String) {
+    "divisible": function(a: any[], b: string) {
 
       parse(a, b);
       return !(!(P["n"] * this["d"]) || ((this["n"] * P["d"]) % (P["n"] * this["d"])));
@@ -737,11 +737,11 @@
      *
      * Ex: new Fraction("1.'3'").toFraction(true) => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: Boolean) {
+    'toFraction': function(excludeWhole: boolean) {
 
-      var whole: Number, str: String = "";
-      var n: Number = this["n"];
-      var d: Number = this["d"];
+      var whole: number, str: string = "";
+      var n: number = this["n"];
+      var d: number = this["d"];
       if (this["s"] < 0) {
         str+= '-';
       }
@@ -768,11 +768,11 @@
      *
      * Ex: new Fraction("1.'3'").toLatex() => "\frac{4}{3}"
      **/
-    'toLatex': function(excludeWhole: Boolean) {
+    'toLatex': function(excludeWhole: boolean) {
 
-      var whole: Number, str: String = "";
-      var n: Number = this["n"];
-      var d: Number = this["d"];
+      var whole: number, str: string = "";
+      var n: number = this["n"];
+      var d: number = this["d"];
       if (this["s"] < 0) {
         str+= '-';
       }
@@ -802,10 +802,10 @@
      */
     'toContinued': function() {
 
-      var t: Number;
-      var a: Number = this['n'];
-      var b: Number = this['d'];
-      var res: Array = [];
+      var t: number;
+      var a: number = this['n'];
+      var b: number = this['d'];
+      var res: any[] = [];
 
       if (isNaN(a) || isNaN(b)) {
         return res;
@@ -826,10 +826,10 @@
      *
      * Ex: new Fraction("100.'91823'").toString() => "100.(91823)"
      **/
-    'toString': function(dec: Number) {
+    'toString': function(dec: number) {
 
-      var N: Number = this["n"];
-      var D: Number = this["d"];
+      var N: number = this["n"];
+      var D: number = this["d"];
 
       if (isNaN(N) || isNaN(D)) {
         return "NaN";
@@ -837,10 +837,10 @@
 
       dec = dec || 15; // 15 = decimal places when no repetation
 
-      var cycLen: Number = cycleLen(N, D); // Cycle length
-      var cycOff: Number = cycleStart(N, D, cycLen); // Cycle start
+      var cycLen: number = cycleLen(N, D); // Cycle length
+      var cycOff: number = cycleStart(N, D, cycLen); // Cycle start
 
-      var str: String = this['s'] < 0 ? "-" : "";
+      var str: string = this['s'] < 0 ? "-" : "";
 
       str+= N / D | 0;
 

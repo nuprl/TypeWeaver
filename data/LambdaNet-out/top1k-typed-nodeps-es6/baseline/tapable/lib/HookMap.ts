@@ -6,7 +6,7 @@
 
 import util from 'util';
 
-const defaultFactory: Function = (key: String, hook: Hook) => hook;
+const defaultFactory: Function = (key: string, hook: Hook) => hook;
 
 class HookMap {
 	constructor(factory, name = undefined) {
@@ -26,7 +26,7 @@ class HookMap {
 			return hook;
 		}
 		let newHook: Hook = this._factory(key);
-		const interceptors: Array = this._interceptors;
+		const interceptors: any[] = this._interceptors;
 		for (let i = 0; i < interceptors.length; i++) {
 			newHook = interceptors[i].factory(key, newHook);
 		}
@@ -46,15 +46,15 @@ class HookMap {
 	}
 }
 
-HookMap.prototype.tap = util.deprecate(function(key: String, options: Object, fn: Number) {
+HookMap.prototype.tap = util.deprecate(function(key: string, options: object, fn: number) {
 	return this.for(key).tap(options, fn);
 }, "HookMap#tap(key,…) is deprecated. Use HookMap#for(key).tap(…) instead.");
 
-HookMap.prototype.tapAsync = util.deprecate(function(key: String, options: Object, fn: Number) {
+HookMap.prototype.tapAsync = util.deprecate(function(key: string, options: object, fn: number) {
 	return this.for(key).tapAsync(options, fn);
 }, "HookMap#tapAsync(key,…) is deprecated. Use HookMap#for(key).tapAsync(…) instead.");
 
-HookMap.prototype.tapPromise = util.deprecate(function(key: String, options: Object, fn: Number) {
+HookMap.prototype.tapPromise = util.deprecate(function(key: string, options: object, fn: number) {
 	return this.for(key).tapPromise(options, fn);
 }, "HookMap#tapPromise(key,…) is deprecated. Use HookMap#for(key).tapPromise(…) instead.");
 

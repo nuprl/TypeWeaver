@@ -4,9 +4,9 @@
 */
 "use strict";
 
-const Source: String = require("./Source");
-const RawSource: String = require("./RawSource");
-const streamChunks: Object = require("./helpers/streamChunks");
+const Source: string = require("./Source");
+const RawSource: string = require("./RawSource");
+const streamChunks: object = require("./helpers/streamChunks");
 const { getMap, getSourceAndMap } = require("./helpers/getFromStreamChunks");
 
 const stringsAsRawSources: HTMLElement = new WeakSet();
@@ -52,12 +52,12 @@ class ConcatSource extends Source {
 
 	buffer() {
 		if (!this._isOptimized) this._optimize();
-		const buffers: Array = [];
+		const buffers: any[] = [];
 		for (const child of this._children) {
 			if (typeof child.buffer === "function") {
 				buffers.push(child.buffer());
 			} else {
-				const bufferOrString: String = child.source();
+				const bufferOrString: string = child.source();
 				if (Buffer.isBuffer(bufferOrString)) {
 					buffers.push(bufferOrString);
 				} else {
@@ -71,7 +71,7 @@ class ConcatSource extends Source {
 
 	source() {
 		if (!this._isOptimized) this._optimize();
-		let source: String = "";
+		let source: string = "";
 		for (const child of this._children) {
 			source += child.source();
 		}
@@ -80,7 +80,7 @@ class ConcatSource extends Source {
 
 	size() {
 		if (!this._isOptimized) this._optimize();
-		let size: Number = 0;
+		let size: number = 0;
 		for (const child of this._children) {
 			size += child.size();
 		}
@@ -99,32 +99,32 @@ class ConcatSource extends Source {
 		if (!this._isOptimized) this._optimize();
 		if (this._children.length === 1)
 			return this._children[0].streamChunks(options, onChunk, onSource, onName);
-		let currentLineOffset: Number = 0;
-		let currentColumnOffset: Number = 0;
+		let currentLineOffset: number = 0;
+		let currentColumnOffset: number = 0;
 		let sourceMapping: Map = new Map();
 		let nameMapping: Map = new Map();
 		const finalSource: Source = !!(options && options.finalSource);
-		let code: String = "";
-		let needToCloseMapping: Boolean = false;
+		let code: string = "";
+		let needToCloseMapping: boolean = false;
 		for (const item of this._children) {
-			const sourceIndexMapping: Array = [];
-			const nameIndexMapping: String = [];
-			let lastMappingLine: Number = 0;
+			const sourceIndexMapping: any[] = [];
+			const nameIndexMapping: string = [];
+			let lastMappingLine: number = 0;
 			const { generatedLine, generatedColumn, source } = streamChunks(
 				item,
 				options,
 				// eslint-disable-next-line no-loop-func
 				(
-					chunk: Number,
-					generatedLine: Number,
-					generatedColumn: Number,
-					sourceIndex: Number,
+					chunk: number,
+					generatedLine: number,
+					generatedColumn: number,
+					sourceIndex: number,
 					originalLine: OriginalSource,
-					originalColumn: String,
-					nameIndex: Number
+					originalColumn: string,
+					nameIndex: number
 				) => {
-					const line: String = generatedLine + currentLineOffset;
-					const column: String =
+					const line: string = generatedLine + currentLineOffset;
+					const column: string =
 						generatedLine === 1
 							? generatedColumn + currentColumnOffset
 							: generatedColumn;
@@ -142,11 +142,11 @@ class ConcatSource extends Source {
 						}
 						needToCloseMapping = false;
 					}
-					const resultSourceIndex: Number =
+					const resultSourceIndex: number =
 						sourceIndex < 0 || sourceIndex >= sourceIndexMapping.length
 							? -1
 							: sourceIndexMapping[sourceIndex];
-					const resultNameIndex: String =
+					const resultNameIndex: string =
 						nameIndex < 0 || nameIndex >= nameIndexMapping.length
 							? -1
 							: nameIndexMapping[nameIndex];
@@ -180,16 +180,16 @@ class ConcatSource extends Source {
 						}
 					}
 				},
-				(i: String, source: String, sourceContent: String) => {
-					let globalIndex: String = sourceMapping.get(source);
+				(i: string, source: string, sourceContent: string) => {
+					let globalIndex: string = sourceMapping.get(source);
 					if (globalIndex === undefined) {
 						sourceMapping.set(source, (globalIndex = sourceMapping.size));
 						onSource(globalIndex, source, sourceContent);
 					}
 					sourceIndexMapping[i] = globalIndex;
 				},
-				(i: String, name: String) => {
-					let globalIndex: String = nameMapping.get(name);
+				(i: string, name: string) => {
+					let globalIndex: string = nameMapping.get(name);
 					if (globalIndex === undefined) {
 						nameMapping.set(name, (globalIndex = nameMapping.size));
 						onName(globalIndex, name);
@@ -238,10 +238,10 @@ class ConcatSource extends Source {
 	}
 
 	_optimize() {
-		const newChildren: Array = [];
-		let currentString: String = undefined;
-		let currentRawSources: Array = undefined;
-		const addStringToRawSources: Function = (string: Array) => {
+		const newChildren: any[] = [];
+		let currentString: string = undefined;
+		let currentRawSources: any[] = undefined;
+		const addStringToRawSources: Function = (string: any[]) => {
 			if (currentRawSources === undefined) {
 				currentRawSources = string;
 			} else if (Array.isArray(currentRawSources)) {
@@ -271,11 +271,11 @@ class ConcatSource extends Source {
 		};
 		const mergeRawSources: Function = () => {
 			if (Array.isArray(currentRawSources)) {
-				const rawSource: String = new RawSource(currentRawSources.join(""));
+				const rawSource: string = new RawSource(currentRawSources.join(""));
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else if (typeof currentRawSources === "string") {
-				const rawSource: String = new RawSource(currentRawSources);
+				const rawSource: string = new RawSource(currentRawSources);
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else {

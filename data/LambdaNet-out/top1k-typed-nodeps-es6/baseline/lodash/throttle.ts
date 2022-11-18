@@ -49,9 +49,9 @@ import isObject from './isObject.js'
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel)
  */
-function throttle(func: String, wait: String, options: Object): Stack {
-  let leading: Boolean = true
-  let trailing: Boolean = true
+function throttle(func: string, wait: string, options: object): Stack {
+  let leading: boolean = true
+  let trailing: boolean = true
 
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')

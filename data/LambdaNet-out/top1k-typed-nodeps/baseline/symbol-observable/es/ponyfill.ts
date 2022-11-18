@@ -1,5 +1,5 @@
-export default function symbolObservablePonyfill(root: Object): Function {
-	var result: String;
+export default function symbolObservablePonyfill(root: object): Function {
+	var result: string;
 	var Symbol: Function = root.Symbol;
 
 	if (typeof Symbol === 'function') {

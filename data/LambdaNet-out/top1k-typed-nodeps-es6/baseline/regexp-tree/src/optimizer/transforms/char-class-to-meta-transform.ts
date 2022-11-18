@@ -31,10 +31,10 @@ export default {
 /**
  * Rewrites number ranges: [0-9] -> \d
  */
-function rewriteNumberRanges(path: String): Void {
+function rewriteNumberRanges(path: string): Void {
   const {node} = path;
 
-  node.expressions.forEach((expression: Function, i: String) => {
+  node.expressions.forEach((expression: Function, i: string) => {
     if (isFullNumberRange(expression)) {
       path.getChild(i).replace({
         type: 'Char',
@@ -50,17 +50,17 @@ function rewriteNumberRanges(path: String): Void {
  * Thus, the ranges may go in any order, and other symbols/ranges
  * are kept untouched, e.g. [a-z_\dA-Z$] -> [\w$]
  */
-function rewriteWordRanges(path: String, hasIFlag: Number, hasUFlag: Number): Void {
+function rewriteWordRanges(path: string, hasIFlag: number, hasUFlag: number): Void {
   const {node} = path;
 
-  let numberPath: String = null;
-  let lowerCasePath: String = null;
-  let upperCasePath: String = null;
-  let underscorePath: String = null;
-  let u017fPath: String = null;
-  let u212aPath: String = null;
+  let numberPath: string = null;
+  let lowerCasePath: string = null;
+  let upperCasePath: string = null;
+  let underscorePath: string = null;
+  let u017fPath: string = null;
+  let u212aPath: string = null;
 
-  node.expressions.forEach((expression: Function, i: String) => {
+  node.expressions.forEach((expression: Function, i: string) => {
     // \d
     if (isMetaChar(expression, '\\d')) {
       numberPath = path.getChild(i);
@@ -121,9 +121,9 @@ function rewriteWordRanges(path: String, hasIFlag: Number, hasUFlag: Number): Vo
 /**
  * Rewrites whitespace ranges: [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff] -> \s.
  */
-const whitespaceRangeTests: Array = [
+const whitespaceRangeTests: any[] = [
   (node: NodePath) => isChar(node, ' '),
-  ...['\\f', '\\n', '\\r', '\\t', '\\v'].map((char: String) => (node: NodePath) =>
+  ...['\\f', '\\n', '\\r', '\\t', '\\v'].map((char: string) => (node: NodePath) =>
     isMetaChar(node, char)
   ),
   ...[
@@ -135,20 +135,20 @@ const whitespaceRangeTests: Array = [
     0x205f,
     0x3000,
     0xfeff,
-  ].map((codePoint: String) => (node: NodePath) => isCodePoint(node, codePoint)),
+  ].map((codePoint: string) => (node: NodePath) => isCodePoint(node, codePoint)),
   (node: NodePath) =>
     node.type === 'ClassRange' &&
     isCodePoint(node.from, 0x2000) &&
     isCodePoint(node.to, 0x200a),
 ];
 
-function rewriteWhitespaceRanges(path: String): Void {
+function rewriteWhitespaceRanges(path: string): Void {
   const {node} = path;
 
   if (
     node.expressions.length < whitespaceRangeTests.length ||
     !whitespaceRangeTests.every((test: Function) =>
-      node.expressions.some((expression: String) => test(expression))
+      node.expressions.some((expression: string) => test(expression))
     )
   ) {
     return;
@@ -157,7 +157,7 @@ function rewriteWhitespaceRanges(path: String): Void {
   // If we found the whole pattern, replace it.
 
   // Put \s in place of \n.
-  const nNode: NodePath = node.expressions.find((expression: Array) =>
+  const nNode: NodePath = node.expressions.find((expression: any[]) =>
     isMetaChar(expression, '\\n')
   );
   nNode.value = '\\s';
@@ -166,16 +166,16 @@ function rewriteWhitespaceRanges(path: String): Void {
 
   // Other paths are removed.
   node.expressions
-    .map((expression: String, i: String) =>
+    .map((expression: string, i: string) =>
       whitespaceRangeTests.some((test: Function) => test(expression))
         ? path.getChild(i)
         : undefined
     )
     .filter(Boolean)
-    .forEach((path: String) => path.remove());
+    .forEach((path: string) => path.remove());
 }
 
-function isFullNumberRange(node: NodePath): Boolean {
+function isFullNumberRange(node: NodePath): boolean {
   return (
     node.type === 'ClassRange' &&
     node.from.value === '0' &&
@@ -183,15 +183,15 @@ function isFullNumberRange(node: NodePath): Boolean {
   );
 }
 
-function isChar(node: NodePath, value: Number, kind: Number = 'simple'): Boolean {
+function isChar(node: NodePath, value: number, kind: number = 'simple'): boolean {
   return node.type === 'Char' && node.value === value && node.kind === kind;
 }
 
-function isMetaChar(node: NodePath, value: String): Boolean {
+function isMetaChar(node: NodePath, value: string): boolean {
   return isChar(node, value, 'meta');
 }
 
-function isLowerCaseRange(node: NodePath): Boolean {
+function isLowerCaseRange(node: NodePath): boolean {
   return (
     node.type === 'ClassRange' &&
     node.from.value === 'a' &&
@@ -199,7 +199,7 @@ function isLowerCaseRange(node: NodePath): Boolean {
   );
 }
 
-function isUpperCaseRange(node: NodePath): Boolean {
+function isUpperCaseRange(node: NodePath): boolean {
   return (
     node.type === 'ClassRange' &&
     node.from.value === 'A' &&
@@ -207,11 +207,11 @@ function isUpperCaseRange(node: NodePath): Boolean {
   );
 }
 
-function isUnderscore(node: NodePath): Boolean {
+function isUnderscore(node: NodePath): boolean {
   return node.type === 'Char' && node.value === '_' && node.kind === 'simple';
 }
 
-function isCodePoint(node: NodePath, codePoint: Number): Boolean {
+function isCodePoint(node: NodePath, codePoint: number): boolean {
   return (
     node.type === 'Char' &&
     node.kind === 'unicode' &&

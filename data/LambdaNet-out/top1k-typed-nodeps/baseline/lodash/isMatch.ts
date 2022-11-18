@@ -27,7 +27,7 @@ import getMatchData from './.internal/getMatchData.js'
  * isMatch(object, { 'b': 1 })
  * // => false
  */
-function isMatch(object: Array, source: String): Boolean {
+function isMatch(object: any[], source: string): boolean {
   return object === source || baseIsMatch(object, source, getMatchData(source))
 }
 

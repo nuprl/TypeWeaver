@@ -23,10 +23,10 @@ THE SOFTWARE.
 
 */
 
-var styles: Object = {};
+var styles: object = {};
 module['exports'] = styles;
 
-var codes: Object = {
+var codes: object = {
   reset: [0, 0],
 
   bold: [1, 22],
@@ -87,8 +87,8 @@ var codes: Object = {
 
 };
 
-Object.keys(codes).forEach(function(key: String) {
-  var val: Object = codes[key];
+Object.keys(codes).forEach(function(key: string) {
+  var val: object = codes[key];
   var style: HTMLElement = styles[key] = [];
   style.open = '\u001b[' + val[0] + 'm';
   style.close = '\u001b[' + val[1] + 'm';

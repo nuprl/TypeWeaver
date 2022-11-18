@@ -14,7 +14,7 @@ import Master from '../../';
 // This is used to prevent the functions below from being transformed into
 // noops.
 //
-var emitter: String;
+var emitter: string;
 
 (
   new benchmark.Suite()

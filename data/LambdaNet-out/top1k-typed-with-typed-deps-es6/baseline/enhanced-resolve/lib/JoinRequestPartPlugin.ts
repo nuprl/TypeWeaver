@@ -8,7 +8,7 @@
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 
-const namespaceStartCharCode: String = "@".charCodeAt(0);
+const namespaceStartCharCode: string = "@".charCodeAt(0);
 
 export default class JoinRequestPartPlugin {
 	/**
@@ -25,20 +25,20 @@ export default class JoinRequestPartPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
 			.tapAsync(
 				"JoinRequestPartPlugin",
-				(request: Object, resolveContext: Function, callback: Function) => {
-					const req: String = request.request || "";
-					let i: Number = req.indexOf("/", 3);
+				(request: object, resolveContext: Function, callback: Function) => {
+					const req: string = request.request || "";
+					let i: number = req.indexOf("/", 3);
 
 					if (i >= 0 && req.charCodeAt(2) === namespaceStartCharCode) {
 						i = req.indexOf("/", i + 1);
 					}
 
-					let moduleName: String, remainingRequest: String, fullySpecified: Boolean;
+					let moduleName: string, remainingRequest: string, fullySpecified: boolean;
 					if (i < 0) {
 						moduleName = req;
 						remainingRequest = ".";
@@ -48,7 +48,7 @@ export default class JoinRequestPartPlugin {
 						remainingRequest = "." + req.slice(i);
 						fullySpecified = request.fullySpecified;
 					}
-					const obj: Object = {
+					const obj: object = {
 						...request,
 						path: resolver.join(request.path, moduleName),
 						relativePath:

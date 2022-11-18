@@ -1,8 +1,8 @@
 import isSymbol from '../isSymbol.js'
 
 /** Used as references for the maximum length and index of an array. */
-const MAX_ARRAY_LENGTH: Number = 4294967295
-const MAX_ARRAY_INDEX: Number = MAX_ARRAY_LENGTH - 1
+const MAX_ARRAY_LENGTH: number = 4294967295
+const MAX_ARRAY_INDEX: number = MAX_ARRAY_LENGTH - 1
 
 /**
  * The base implementation of `sortedIndexBy` and `sortedLastIndexBy`
@@ -17,28 +17,28 @@ const MAX_ARRAY_INDEX: Number = MAX_ARRAY_LENGTH - 1
  * @returns {number} Returns the index at which `value` should be inserted
  *  into `array`.
  */
-function baseSortedIndexBy(array: Array, value: Number, iteratee: Function, retHighest: Boolean): Number {
-  let low: Number = 0
-  let high: Number = array == null ? 0 : array.length
+function baseSortedIndexBy(array: any[], value: number, iteratee: Function, retHighest: boolean): number {
+  let low: number = 0
+  let high: number = array == null ? 0 : array.length
   if (high == 0) {
     return 0
   }
 
   value = iteratee(value)
 
-  const valIsNaN: Boolean = value !== value
-  const valIsNull: Boolean = value === null
-  const valIsSymbol: Boolean = isSymbol(value)
-  const valIsUndefined: Boolean = value === undefined
+  const valIsNaN: boolean = value !== value
+  const valIsNull: boolean = value === null
+  const valIsSymbol: boolean = isSymbol(value)
+  const valIsUndefined: boolean = value === undefined
 
   while (low < high) {
-    let setLow: Boolean
-    const mid: Number = Math.floor((low + high) / 2)
-    const computed: Number = iteratee(array[mid])
-    const othIsDefined: Boolean = computed !== undefined
-    const othIsNull: Boolean = computed === null
-    const othIsReflexive: Boolean = computed === computed
-    const othIsSymbol: Boolean = isSymbol(computed)
+    let setLow: boolean
+    const mid: number = Math.floor((low + high) / 2)
+    const computed: number = iteratee(array[mid])
+    const othIsDefined: boolean = computed !== undefined
+    const othIsNull: boolean = computed === null
+    const othIsReflexive: boolean = computed === computed
+    const othIsSymbol: boolean = isSymbol(computed)
 
     if (valIsNaN) {
       setLow = retHighest || othIsReflexive

@@ -1,6 +1,6 @@
 import setFactory from 'regenerate';
 
-const set: Object = setFactory(
+const set: object = setFactory(
   0xBB,
   0x2019,
   0x201D,
@@ -13,4 +13,4 @@ const set: Object = setFactory(
   0x2E21
 );
 
-export const characters: String = set;
+export const characters: string = set;

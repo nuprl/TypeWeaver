@@ -30,11 +30,11 @@
  * console.log(castArray(array) === array)
  * // => true
  */
-function castArray(...args): Array {
+function castArray(...args): any[] {
   if (!args.length) {
     return []
   }
-  const value: Array = args[0]
+  const value: any[] = args[0]
   return Array.isArray(value) ? value : [value]
 }
 

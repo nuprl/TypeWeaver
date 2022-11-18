@@ -5,22 +5,22 @@ import path from 'path';
 import fs from 'graceful-fs';
 import mkdir from '../mkdirs';
 
-function createFile (file: String, callback: Function): Void {
+function createFile (file: string, callback: Function): Void {
   function makeFile (): Void {
-    fs.writeFile(file, '', (err: Boolean) => {
+    fs.writeFile(file, '', (err: boolean) => {
       if (err) return callback(err)
       callback()
     })
   }
 
-  fs.stat(file, (err: Boolean, stats: Array) => { // eslint-disable-line handle-callback-err
+  fs.stat(file, (err: boolean, stats: any[]) => { // eslint-disable-line handle-callback-err
     if (!err && stats.isFile()) return callback()
-    const dir: String = path.dirname(file)
-    fs.stat(dir, (err: Object, stats: Array) => {
+    const dir: string = path.dirname(file)
+    fs.stat(dir, (err: object, stats: any[]) => {
       if (err) {
         // if the directory doesn't exist, make it
         if (err.code === 'ENOENT') {
-          return mkdir.mkdirs(dir, (err: String) => {
+          return mkdir.mkdirs(dir, (err: string) => {
             if (err) return callback(err)
             makeFile()
           })
@@ -32,7 +32,7 @@ function createFile (file: String, callback: Function): Void {
       else {
         // parent is not a directory
         // This is just to cause an internal ENOTDIR error to be thrown
-        fs.readdir(dir, (err: String) => {
+        fs.readdir(dir, (err: string) => {
           if (err) return callback(err)
         })
       }
@@ -40,14 +40,14 @@ function createFile (file: String, callback: Function): Void {
   })
 }
 
-function createFileSync (file: String): Void {
-  let stats: Array
+function createFileSync (file: string): Void {
+  let stats: any[]
   try {
     stats = fs.statSync(file)
   } catch {}
   if (stats && stats.isFile()) return
 
-  const dir: String = path.dirname(file)
+  const dir: string = path.dirname(file)
   try {
     if (!fs.statSync(dir).isDirectory()) {
       // parent is not a directory

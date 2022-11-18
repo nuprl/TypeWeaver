@@ -6,14 +6,14 @@
   // Basic JavaScript BN library - subset useful for RSA encryption.
 
   // Bits per digit
-  var dbits: Number;
+  var dbits: number;
 
   // JavaScript engine analysis
-  var canary: Number = 0xdeadbeefcafe;
-  var j_lm: Number = (canary & 0xffffff) == 0xefcafe;
+  var canary: number = 0xdeadbeefcafe;
+  var j_lm: number = (canary & 0xffffff) == 0xefcafe;
 
   // (public) Constructor
-  function BigInteger(a: String, b: String, c: String): Void {
+  function BigInteger(a: string, b: string, c: string): Void {
     if (a != null)
       if ('number' == typeof a) this.fromNumber(a, b, c);
       else if (b == null && 'string' != typeof a) this.fromString(a, 256);
@@ -21,7 +21,7 @@
   }
 
   // return new, unset BigInteger
-  function nbi(): Array {
+  function nbi(): any[] {
     return new BigInteger(null);
   }
 
@@ -33,9 +33,9 @@
   // am1: use a single mult and divide to get the high bits,
   // max digit bits should be 26 because
   // max internal value = 2*dvalue^2-2*dvalue (< 2^53)
-  function am1(i: Number, x: Number, w: Object, j: Number, c: Number, n: Number): String {
+  function am1(i: number, x: number, w: object, j: number, c: number, n: number): string {
     while (--n >= 0) {
-      var v: Number = x * this[i++] + w[j] + c;
+      var v: number = x * this[i++] + w[j] + c;
       c = Math.floor(v / 0x4000000);
       w[j++] = v & 0x3ffffff;
     }
@@ -44,13 +44,13 @@
   // am2 avoids a big mult-and-extract completely.
   // Max digit bits should be <= 30 because we do bitwise ops
   // on values up to 2*hdvalue^2-hdvalue-1 (< 2^31)
-  function am2(i: Number, x: Number, w: Object, j: Number, c: Number, n: Number): String {
-    var xl: Number = x & 0x7fff,
-      xh: Number = x >> 15;
+  function am2(i: number, x: number, w: object, j: number, c: number, n: number): string {
+    var xl: number = x & 0x7fff,
+      xh: number = x >> 15;
     while (--n >= 0) {
-      var l: Number = this[i] & 0x7fff;
-      var h: Number = this[i++] >> 15;
-      var m: Number = xh * l + h * xl;
+      var l: number = this[i] & 0x7fff;
+      var h: number = this[i++] >> 15;
+      var m: number = xh * l + h * xl;
       l = xl * l + ((m & 0x7fff) << 15) + w[j] + (c & 0x3fffffff);
       c = (l >>> 30) + (m >>> 15) + xh * h + (c >>> 30);
       w[j++] = l & 0x3fffffff;
@@ -59,20 +59,20 @@
   }
   // Alternately, set max digit bits to 28 since some
   // browsers slow down when dealing with 32-bit numbers.
-  function am3(i: Number, x: Number, w: Object, j: Number, c: Number, n: Number): String {
-    var xl: Number = x & 0x3fff,
-      xh: Number = x >> 14;
+  function am3(i: number, x: number, w: object, j: number, c: number, n: number): string {
+    var xl: number = x & 0x3fff,
+      xh: number = x >> 14;
     while (--n >= 0) {
-      var l: Number = this[i] & 0x3fff;
-      var h: Number = this[i++] >> 14;
-      var m: Number = xh * l + h * xl;
+      var l: number = this[i] & 0x3fff;
+      var h: number = this[i++] >> 14;
+      var m: number = xh * l + h * xl;
       l = xl * l + ((m & 0x3fff) << 14) + w[j] + c;
       c = (l >> 28) + (m >> 14) + xh * h;
       w[j++] = l & 0xfffffff;
     }
     return c;
   }
-  var inBrowser: Boolean = typeof navigator !== 'undefined';
+  var inBrowser: boolean = typeof navigator !== 'undefined';
   if (inBrowser && j_lm && navigator.appName == 'Microsoft Internet Explorer') {
     BigInteger.prototype.am = am2;
     dbits = 30;
@@ -89,15 +89,15 @@
   BigInteger.prototype.DM = (1 << dbits) - 1;
   BigInteger.prototype.DV = 1 << dbits;
 
-  var BI_FP: Number = 52;
+  var BI_FP: number = 52;
   BigInteger.prototype.FV = Math.pow(2, BI_FP);
   BigInteger.prototype.F1 = BI_FP - dbits;
   BigInteger.prototype.F2 = 2 * dbits - BI_FP;
 
   // Digit conversions
-  var BI_RM: String = '0123456789abcdefghijklmnopqrstuvwxyz';
-  var BI_RC: Object = new Array();
-  var rr: Number, vv: Number;
+  var BI_RM: string = '0123456789abcdefghijklmnopqrstuvwxyz';
+  var BI_RC: object = new Array();
+  var rr: number, vv: number;
   rr = '0'.charCodeAt(0);
   for (vv = 0; vv <= 9; ++vv) BI_RC[rr++] = vv;
   rr = 'a'.charCodeAt(0);
@@ -105,23 +105,23 @@
   rr = 'A'.charCodeAt(0);
   for (vv = 10; vv < 36; ++vv) BI_RC[rr++] = vv;
 
-  function int2char(n: Number): String {
+  function int2char(n: number): string {
     return BI_RM.charAt(n);
   }
-  function intAt(s: Function, i: String): Number {
-    var c: Number = BI_RC[s.charCodeAt(i)];
+  function intAt(s: Function, i: string): number {
+    var c: number = BI_RC[s.charCodeAt(i)];
     return c == null ? -1 : c;
   }
 
   // (protected) copy this to r
-  function bnpCopyTo(r: Object): Void {
+  function bnpCopyTo(r: object): Void {
     for (var i = this.t - 1; i >= 0; --i) r[i] = this[i];
     r.t = this.t;
     r.s = this.s;
   }
 
   // (protected) set from integer value x, -DV <= x < DV
-  function bnpFromInt(x: Number): Void {
+  function bnpFromInt(x: number): Void {
     this.t = 1;
     this.s = x < 0 ? -1 : 0;
     if (x > 0) this[0] = x;
@@ -130,17 +130,17 @@
   }
 
   // return bigint initialized to value
-  function nbv(i: String): String {
-    var r: Object = nbi();
+  function nbv(i: string): string {
+    var r: object = nbi();
     r.fromInt(i);
     return r;
   }
 
   // (protected) set from string and radix
-  function bnpFromString(s: Array, b: Number): Void {
+  function bnpFromString(s: any[], b: number): Void {
     // Auto-detect string notations
     if (!b && s.length >= 2 && s[0] === '0') {
-      var isDetected: Boolean = true;
+      var isDetected: boolean = true;
       switch (s[1]) {
         case 'x': // Hexadecimal notation
           b = 16;
@@ -161,7 +161,7 @@
       }
     }
 
-    var k: Number;
+    var k: number;
     if (b == 16) k = 4;
     else if (b == 8) k = 3;
     else if (b == 256) k = 8;
@@ -175,11 +175,11 @@
     }
     this.t = 0;
     this.s = 0;
-    var i: Number = s.length,
-      mi: Boolean = false,
-      sh: Number = 0;
+    var i: number = s.length,
+      mi: boolean = false,
+      sh: number = 0;
     while (--i >= 0) {
-      var x: Number = k == 8 ? s[i] & 0xff : intAt(s, i);
+      var x: number = k == 8 ? s[i] & 0xff : intAt(s, i);
       if (x < 0) {
         if (s.charAt(i) == '-') mi = true;
         continue;
@@ -203,26 +203,26 @@
 
   // (protected) clamp off excess high words
   function bnpClamp(): Void {
-    var c: Number = this.s & this.DM;
+    var c: number = this.s & this.DM;
     while (this.t > 0 && this[this.t - 1] == c) --this.t;
   }
 
   // (public) return string representation in given radix
-  function bnToString(b: String): String {
+  function bnToString(b: string): string {
     if (this.s < 0) return '-' + this.negate().toString(b);
-    var k: Number;
+    var k: number;
     if (b == 16) k = 4;
     else if (b == 8) k = 3;
     else if (b == 2) k = 1;
     else if (b == 32) k = 5;
     else if (b == 4) k = 2;
     else return this.toRadix(b);
-    var km: Number = (1 << k) - 1,
-      d: Number,
-      m: Boolean = false,
-      r: String = '',
-      i: Number = this.t;
-    var p: Number = this.DB - ((i * this.DB) % k);
+    var km: number = (1 << k) - 1,
+      d: number,
+      m: boolean = false,
+      r: string = '',
+      i: number = this.t;
+    var p: number = this.DB - ((i * this.DB) % k);
     if (i-- > 0) {
       if (p < this.DB && (d = this[i] >> p) > 0) {
         m = true;
@@ -247,22 +247,22 @@
   }
 
   // (public) -this
-  function bnNegate(): String {
-    var r: String = nbi();
+  function bnNegate(): string {
+    var r: string = nbi();
     BigInteger.ZERO.subTo(this, r);
     return r;
   }
 
   // (public) |this|
-  function bnAbs(): Object {
+  function bnAbs(): object {
     return this.s < 0 ? this.negate() : this;
   }
 
   // (public) return + if this > a, - if this < a, 0 if equal
-  function bnCompareTo(a: Object): Number {
-    var r: Number = this.s - a.s;
+  function bnCompareTo(a: object): number {
+    var r: number = this.s - a.s;
     if (r != 0) return r;
-    var i: Number = this.t;
+    var i: number = this.t;
     r = i - a.t;
     if (r != 0) return this.s < 0 ? -r : r;
     while (--i >= 0) if ((r = this[i] - a[i]) != 0) return r;
@@ -270,9 +270,9 @@
   }
 
   // returns bit length of the integer x
-  function nbits(x: Number): Number {
-    var r: Number = 1,
-      t: Number;
+  function nbits(x: number): number {
+    var r: number = 1,
+      t: number;
     if ((t = x >>> 16) != 0) {
       x = t;
       r += 16;
@@ -297,7 +297,7 @@
   }
 
   // (public) return the number of bits in "this"
-  function bnBitLength(): Number {
+  function bnBitLength(): number {
     if (this.t <= 0) return 0;
     return (
       this.DB * (this.t - 1) + nbits(this[this.t - 1] ^ (this.s & this.DM))
@@ -305,8 +305,8 @@
   }
 
   // (protected) r = this << n*DB
-  function bnpDLShiftTo(n: Number, r: Object): Void {
-    var i: Number;
+  function bnpDLShiftTo(n: number, r: object): Void {
+    var i: number;
     for (i = this.t - 1; i >= 0; --i) r[i + n] = this[i];
     for (i = n - 1; i >= 0; --i) r[i] = 0;
     r.t = this.t + n;
@@ -314,20 +314,20 @@
   }
 
   // (protected) r = this >> n*DB
-  function bnpDRShiftTo(n: Number, r: Object): Void {
+  function bnpDRShiftTo(n: number, r: object): Void {
     for (var i = n; i < this.t; ++i) r[i - n] = this[i];
     r.t = Math.max(this.t - n, 0);
     r.s = this.s;
   }
 
   // (protected) r = this << n
-  function bnpLShiftTo(n: Number, r: Object): Void {
-    var bs: Number = n % this.DB;
-    var cbs: Number = this.DB - bs;
-    var bm: Number = (1 << cbs) - 1;
-    var ds: Number = Math.floor(n / this.DB),
-      c: Number = (this.s << bs) & this.DM,
-      i: Number;
+  function bnpLShiftTo(n: number, r: object): Void {
+    var bs: number = n % this.DB;
+    var cbs: number = this.DB - bs;
+    var bm: number = (1 << cbs) - 1;
+    var ds: number = Math.floor(n / this.DB),
+      c: number = (this.s << bs) & this.DM,
+      i: number;
     for (i = this.t - 1; i >= 0; --i) {
       r[i + ds + 1] = (this[i] >> cbs) | c;
       c = (this[i] & bm) << bs;
@@ -340,16 +340,16 @@
   }
 
   // (protected) r = this >> n
-  function bnpRShiftTo(n: Number, r: Object): Void {
+  function bnpRShiftTo(n: number, r: object): Void {
     r.s = this.s;
-    var ds: Number = Math.floor(n / this.DB);
+    var ds: number = Math.floor(n / this.DB);
     if (ds >= this.t) {
       r.t = 0;
       return;
     }
-    var bs: Number = n % this.DB;
-    var cbs: Number = this.DB - bs;
-    var bm: Number = (1 << bs) - 1;
+    var bs: number = n % this.DB;
+    var cbs: number = this.DB - bs;
+    var bm: number = (1 << bs) - 1;
     r[0] = this[ds] >> bs;
     for (var i = ds + 1; i < this.t; ++i) {
       r[i - ds - 1] |= (this[i] & bm) << cbs;
@@ -361,10 +361,10 @@
   }
 
   // (protected) r = this - a
-  function bnpSubTo(a: Object, r: Object): Void {
-    var i: Number = 0,
-      c: Number = 0,
-      m: Number = Math.min(a.t, this.t);
+  function bnpSubTo(a: object, r: object): Void {
+    var i: number = 0,
+      c: number = 0,
+      m: number = Math.min(a.t, this.t);
     while (i < m) {
       c += this[i] - a[i];
       r[i++] = c & this.DM;
@@ -396,10 +396,10 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: HTMLElement, r: Object): Void {
+  function bnpMultiplyTo(a: HTMLElement, r: object): Void {
     var x: HTMLElement = this.abs(),
-      y: Object = a.abs();
-    var i: Number = x.t;
+      y: object = a.abs();
+    var i: number = x.t;
     r.t = i + y.t;
     while (--i >= 0) r[i] = 0;
     for (i = 0; i < y.t; ++i) r[i + x.t] = x.am(0, y[i], r, i, 0, x.t);
@@ -409,12 +409,12 @@
   }
 
   // (protected) r = this^2, r != this (HAC 14.16)
-  function bnpSquareTo(r: Object): Void {
-    var x: Object = this.abs();
-    var i: Number = (r.t = 2 * x.t);
+  function bnpSquareTo(r: object): Void {
+    var x: object = this.abs();
+    var i: number = (r.t = 2 * x.t);
     while (--i >= 0) r[i] = 0;
     for (i = 0; i < x.t - 1; ++i) {
-      var c: String = x.am(i, x[i], r, 2 * i, 0, 1);
+      var c: string = x.am(i, x[i], r, 2 * i, 0, 1);
       if (
         (r[i + x.t] += x.am(i + 1, 2 * x[i], r, 2 * i + 1, c, x.t - i - 1)) >=
         x.DV
@@ -430,8 +430,8 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: HTMLElement, q: String, r: Function): Void {
-    var pm: Object = m.abs();
+  function bnpDivRemTo(m: HTMLElement, q: string, r: Function): Void {
+    var pm: object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
     if (pt.t < pm.t) {
@@ -440,10 +440,10 @@
       return;
     }
     if (r == null) r = nbi();
-    var y: Object = nbi(),
+    var y: object = nbi(),
       ts: Function = this.s,
-      ms: Array = m.s;
-    var nsh: Number = this.DB - nbits(pm[pm.t - 1]); // normalize modulus
+      ms: any[] = m.s;
+    var nsh: number = this.DB - nbits(pm[pm.t - 1]); // normalize modulus
     if (nsh > 0) {
       pm.lShiftTo(nsh, y);
       pt.lShiftTo(nsh, r);
@@ -451,16 +451,16 @@
       pm.copyTo(y);
       pt.copyTo(r);
     }
-    var ys: Number = y.t;
-    var y0: Number = y[ys - 1];
+    var ys: number = y.t;
+    var y0: number = y[ys - 1];
     if (y0 == 0) return;
-    var yt: Number = y0 * (1 << this.F1) + (ys > 1 ? y[ys - 2] >> this.F2 : 0);
-    var d1: Number = this.FV / yt,
-      d2: Number = (1 << this.F1) / yt,
-      e: Number = 1 << this.F2;
-    var i: Number = r.t,
-      j: Number = i - ys,
-      t: String = q == null ? nbi() : q;
+    var yt: number = y0 * (1 << this.F1) + (ys > 1 ? y[ys - 2] >> this.F2 : 0);
+    var d1: number = this.FV / yt,
+      d2: number = (1 << this.F1) / yt,
+      e: number = 1 << this.F2;
+    var i: number = r.t,
+      j: number = i - ys,
+      t: string = q == null ? nbi() : q;
     y.dlShiftTo(j, t);
     if (r.compareTo(t) >= 0) {
       r[r.t++] = 1;
@@ -471,7 +471,7 @@
     while (y.t < ys) y[y.t++] = 0;
     while (--j >= 0) {
       // Estimate quotient digit
-      var qd: Number =
+      var qd: number =
         r[--i] == y0 ? this.DM : Math.floor(r[i] * d1 + (r[i - 1] + e) * d2);
       if ((r[i] += y.am(0, qd, r, j, 0, ys)) < qd) {
         // Try it out
@@ -491,32 +491,32 @@
   }
 
   // (public) this mod a
-  function bnMod(a: Array): String {
-    var r: Object = nbi();
+  function bnMod(a: any[]): string {
+    var r: object = nbi();
     this.abs().divRemTo(a, null, r);
     if (this.s < 0 && r.compareTo(BigInteger.ZERO) > 0) a.subTo(r, r);
     return r;
   }
 
   // Modular reduction using "classic" algorithm
-  function Classic(m: Object): String {
+  function Classic(m: object): string {
     this.m = m;
   }
-  function cConvert(x: String): Object {
+  function cConvert(x: string): object {
     if (x.s < 0 || x.compareTo(this.m) >= 0) return x.mod(this.m);
     else return x;
   }
-  function cRevert(x: String): String {
+  function cRevert(x: string): string {
     return x;
   }
-  function cReduce(x: String): Void {
+  function cReduce(x: string): Void {
     x.divRemTo(this.m, null, x);
   }
-  function cMulTo(x: String, y: String, r: Function): Void {
+  function cMulTo(x: string, y: string, r: Function): Void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
-  function cSqrTo(x: String, r: String): Void {
+  function cSqrTo(x: string, r: string): Void {
     x.squareTo(r);
     this.reduce(r);
   }
@@ -537,11 +537,11 @@
   // if y is 1/x mod m, then y(2-xy) is 1/x mod m^2
   // should reduce x and y(2-xy) by m^2 at each step to keep size bounded.
   // JS multiply "overflows" differently from C/C++, so care is needed here.
-  function bnpInvDigit(): Number {
+  function bnpInvDigit(): number {
     if (this.t < 1) return 0;
-    var x: Number = this[0];
+    var x: number = this[0];
     if ((x & 1) == 0) return 0;
-    var y: Number = x & 3; // y == 1/x mod 2^2
+    var y: number = x & 3; // y == 1/x mod 2^2
     y = (y * (2 - (x & 0xf) * y)) & 0xf; // y == 1/x mod 2^4
     y = (y * (2 - (x & 0xff) * y)) & 0xff; // y == 1/x mod 2^8
     y = (y * (2 - (((x & 0xffff) * y) & 0xffff))) & 0xffff; // y == 1/x mod 2^16
@@ -553,7 +553,7 @@
   }
 
   // Montgomery reduction
-  function Montgomery(m: Object): Void {
+  function Montgomery(m: object): Void {
     this.m = m;
     this.mp = m.invDigit();
     this.mpl = this.mp & 0x7fff;
@@ -563,7 +563,7 @@
   }
 
   // xR mod m
-  function montConvert(x: Function): String {
+  function montConvert(x: Function): string {
     var r: Function = nbi();
     x.abs().dlShiftTo(this.m.t, r);
     r.divRemTo(this.m, null, r);
@@ -572,23 +572,23 @@
   }
 
   // x/R mod m
-  function montRevert(x: String): String {
-    var r: String = nbi();
+  function montRevert(x: string): string {
+    var r: string = nbi();
     x.copyTo(r);
     this.reduce(r);
     return r;
   }
 
   // x = x/R mod m (HAC 14.32)
-  function montReduce(x: Object): Void {
+  function montReduce(x: object): Void {
     while (
       x.t <= this.mt2 // pad x so am has enough room later
     )
       x[x.t++] = 0;
     for (var i = 0; i < this.m.t; ++i) {
       // faster way of calculating u0 = x[i]*mp mod DV
-      var j: Number = x[i] & 0x7fff;
-      var u0: Number =
+      var j: number = x[i] & 0x7fff;
+      var u0: number =
         (j * this.mpl +
           (((j * this.mph + (x[i] >> 15) * this.mpl) & this.um) << 15)) &
         x.DM;
@@ -607,13 +607,13 @@
   }
 
   // r = "x^2/R mod m"; x != r
-  function montSqrTo(x: String, r: String): Void {
+  function montSqrTo(x: string, r: string): Void {
     x.squareTo(r);
     this.reduce(r);
   }
 
   // r = "xy/R mod m"; x,y != r
-  function montMulTo(x: String, y: String, r: Function): Void {
+  function montMulTo(x: string, y: string, r: Function): Void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
@@ -625,23 +625,23 @@
   Montgomery.prototype.sqrTo = montSqrTo;
 
   // (protected) true iff this is even
-  function bnpIsEven(): Boolean {
+  function bnpIsEven(): boolean {
     return (this.t > 0 ? this[0] & 1 : this.s) == 0;
   }
 
   // (protected) this^e, e < 2^32, doing sqr and mul with "r" (HAC 14.79)
-  function bnpExp(e: Number, z: HTMLElement): Array {
+  function bnpExp(e: number, z: HTMLElement): any[] {
     if (e > 0xffffffff || e < 1) return BigInteger.ONE;
-    var r: String = nbi(),
-      r2: String = nbi(),
-      g: Array = z.convert(this),
-      i: Number = nbits(e) - 1;
+    var r: string = nbi(),
+      r2: string = nbi(),
+      g: any[] = z.convert(this),
+      i: number = nbits(e) - 1;
     g.copyTo(r);
     while (--i >= 0) {
       z.sqrTo(r, r2);
       if ((e & (1 << i)) > 0) z.mulTo(r2, g, r);
       else {
-        var t: String = r;
+        var t: string = r;
         r = r2;
         r2 = t;
       }
@@ -650,7 +650,7 @@
   }
 
   // (public) this^e % m, 0 <= e < 2^32
-  function bnModPowInt(e: String, m: String): Promise {
+  function bnModPowInt(e: string, m: string): Promise {
     var z: Function;
     if (e < 256 || m.isEven()) z = new Classic(m);
     else z = new Montgomery(m);
@@ -697,14 +697,14 @@
   // Version 1.2: square() API, isProbablePrime fix
 
   // (public)
-  function bnClone(): String {
-    var r: String = nbi();
+  function bnClone(): string {
+    var r: string = nbi();
     this.copyTo(r);
     return r;
   }
 
   // (public) return value as integer
-  function bnIntValue(): Number {
+  function bnIntValue(): number {
     if (this.s < 0) {
       if (this.t == 1) return this[0] - this.DV;
       else if (this.t == 0) return -1;
@@ -715,37 +715,37 @@
   }
 
   // (public) return value as byte
-  function bnByteValue(): Number {
+  function bnByteValue(): number {
     return this.t == 0 ? this.s : (this[0] << 24) >> 24;
   }
 
   // (public) return value as short (assumes DB>=16)
-  function bnShortValue(): Number {
+  function bnShortValue(): number {
     return this.t == 0 ? this.s : (this[0] << 16) >> 16;
   }
 
   // (protected) return x s.t. r^x < DV
-  function bnpChunkSize(r: Number): Number {
+  function bnpChunkSize(r: number): number {
     return Math.floor((Math.LN2 * this.DB) / Math.log(r));
   }
 
   // (public) 0 if this == 0, 1 if this > 0
-  function bnSigNum(): Number {
+  function bnSigNum(): number {
     if (this.s < 0) return -1;
     else if (this.t <= 0 || (this.t == 1 && this[0] <= 0)) return 0;
     else return 1;
   }
 
   // (protected) convert to radix string
-  function bnpToRadix(b: Number): String {
+  function bnpToRadix(b: number): string {
     if (b == null) b = 10;
     if (this.signum() == 0 || b < 2 || b > 36) return '0';
-    var cs: Number = this.chunkSize(b);
-    var a: Number = Math.pow(b, cs);
-    var d: String = nbv(a),
+    var cs: number = this.chunkSize(b);
+    var a: number = Math.pow(b, cs);
+    var d: string = nbv(a),
       y: Function = nbi(),
-      z: Object = nbi(),
-      r: String = '';
+      z: object = nbi(),
+      r: string = '';
     this.divRemTo(d, y, z);
     while (y.signum() > 0) {
       r = (a + z.intValue()).toString(b).substr(1) + r;
@@ -755,16 +755,16 @@
   }
 
   // (protected) convert from radix string
-  function bnpFromRadix(s: String, b: Number): Void {
+  function bnpFromRadix(s: string, b: number): Void {
     this.fromInt(0);
     if (b == null) b = 10;
-    var cs: Number = this.chunkSize(b);
-    var d: Number = Math.pow(b, cs),
-      mi: Boolean = false,
-      j: Number = 0,
-      w: Number = 0;
+    var cs: number = this.chunkSize(b);
+    var d: number = Math.pow(b, cs),
+      mi: boolean = false,
+      j: number = 0,
+      w: number = 0;
     for (var i = 0; i < s.length; ++i) {
-      var x: String = intAt(s, i);
+      var x: string = intAt(s, i);
       if (x < 0) {
         if (s.charAt(i) == '-' && this.signum() == 0) mi = true;
         continue;
@@ -785,7 +785,7 @@
   }
 
   // (protected) alternate constructor
-  function bnpFromNumber(a: Number, b: Array, c: Number): Void {
+  function bnpFromNumber(a: number, b: any[], c: number): Void {
     if ('number' == typeof b) {
       // new BigInteger(int,int,RNG)
       if (a < 2) this.fromInt(1);
@@ -803,8 +803,8 @@
       }
     } else {
       // new BigInteger(int,RNG)
-      var x: Array = new Array(),
-        t: Number = a & 7;
+      var x: any[] = new Array(),
+        t: number = a & 7;
       x.length = (a >> 3) + 1;
       b.nextBytes(x);
       if (t > 0) x[0] &= (1 << t) - 1;
@@ -814,13 +814,13 @@
   }
 
   // (public) convert to bigendian byte array
-  function bnToByteArray(): Object {
-    var i: Number = this.t,
-      r: Object = new Array();
+  function bnToByteArray(): object {
+    var i: number = this.t,
+      r: object = new Array();
     r[0] = this.s;
-    var p: Number = this.DB - ((i * this.DB) % 8),
-      d: Number,
-      k: Number = 0;
+    var p: number = this.DB - ((i * this.DB) % 8),
+      d: number,
+      k: number = 0;
     if (i-- > 0) {
       if (p < this.DB && (d = this[i] >> p) != (this.s & this.DM) >> p)
         r[k++] = d | (this.s << (this.DB - p));
@@ -843,21 +843,21 @@
     return r;
   }
 
-  function bnEquals(a: String): Boolean {
+  function bnEquals(a: string): boolean {
     return this.compareTo(a) == 0;
   }
-  function bnMin(a: String): String {
+  function bnMin(a: string): string {
     return this.compareTo(a) < 0 ? this : a;
   }
-  function bnMax(a: String): String {
+  function bnMax(a: string): string {
     return this.compareTo(a) > 0 ? this : a;
   }
 
   // (protected) r = this op a (bitwise)
-  function bnpBitwiseTo(a: Object, op: Function, r: Object): Void {
-    var i: Number,
-      f: Number,
-      m: Number = Math.min(a.t, this.t);
+  function bnpBitwiseTo(a: object, op: Function, r: object): Void {
+    var i: number,
+      f: number,
+      m: number = Math.min(a.t, this.t);
     for (i = 0; i < m; ++i) r[i] = op(this[i], a[i]);
     if (a.t < this.t) {
       f = a.s & this.DM;
@@ -873,48 +873,48 @@
   }
 
   // (public) this & a
-  function op_and(x: Number, y: Number): Number {
+  function op_and(x: number, y: number): number {
     return x & y;
   }
-  function bnAnd(a: Function): String {
-    var r: String = nbi();
+  function bnAnd(a: Function): string {
+    var r: string = nbi();
     this.bitwiseTo(a, op_and, r);
     return r;
   }
 
   // (public) this | a
-  function op_or(x: Number, y: Number): Number {
+  function op_or(x: number, y: number): number {
     return x | y;
   }
-  function bnOr(a: Function): String {
-    var r: String = nbi();
+  function bnOr(a: Function): string {
+    var r: string = nbi();
     this.bitwiseTo(a, op_or, r);
     return r;
   }
 
   // (public) this ^ a
-  function op_xor(x: String, y: String): Number {
+  function op_xor(x: string, y: string): number {
     return x ^ y;
   }
-  function bnXor(a: Function): String {
-    var r: String = nbi();
+  function bnXor(a: Function): string {
+    var r: string = nbi();
     this.bitwiseTo(a, op_xor, r);
     return r;
   }
 
   // (public) this & ~a
-  function op_andnot(x: Number, y: String): Number {
+  function op_andnot(x: number, y: string): number {
     return x & ~y;
   }
-  function bnAndNot(a: Function): String {
-    var r: String = nbi();
+  function bnAndNot(a: Function): string {
+    var r: string = nbi();
     this.bitwiseTo(a, op_andnot, r);
     return r;
   }
 
   // (public) ~this
-  function bnNot(): Object {
-    var r: Object = nbi();
+  function bnNot(): object {
+    var r: object = nbi();
     for (var i = 0; i < this.t; ++i) r[i] = this.DM & ~this[i];
     r.t = this.t;
     r.s = ~this.s;
@@ -922,25 +922,25 @@
   }
 
   // (public) this << n
-  function bnShiftLeft(n: Number): String {
-    var r: String = nbi();
+  function bnShiftLeft(n: number): string {
+    var r: string = nbi();
     if (n < 0) this.rShiftTo(-n, r);
     else this.lShiftTo(n, r);
     return r;
   }
 
   // (public) this >> n
-  function bnShiftRight(n: Number): String {
-    var r: String = nbi();
+  function bnShiftRight(n: number): string {
+    var r: string = nbi();
     if (n < 0) this.lShiftTo(-n, r);
     else this.rShiftTo(n, r);
     return r;
   }
 
   // return index of lowest 1-bit in x, x < 2^31
-  function lbit(x: Number): Number {
+  function lbit(x: number): number {
     if (x == 0) return -1;
-    var r: Number = 0;
+    var r: number = 0;
     if ((x & 0xffff) == 0) {
       x >>= 16;
       r += 16;
@@ -962,7 +962,7 @@
   }
 
   // (public) returns index of lowest 1-bit (or -1 if none)
-  function bnGetLowestSetBit(): Number {
+  function bnGetLowestSetBit(): number {
     for (var i = 0; i < this.t; ++i)
       if (this[i] != 0) return i * this.DB + lbit(this[i]);
     if (this.s < 0) return this.t * this.DB;
@@ -970,8 +970,8 @@
   }
 
   // return number of 1 bits in x
-  function cbit(x: Number): Number {
-    var r: Number = 0;
+  function cbit(x: number): number {
+    var r: number = 0;
     while (x != 0) {
       x &= x - 1;
       ++r;
@@ -980,47 +980,47 @@
   }
 
   // (public) return number of set bits
-  function bnBitCount(): Number {
-    var r: Number = 0,
-      x: Number = this.s & this.DM;
+  function bnBitCount(): number {
+    var r: number = 0,
+      x: number = this.s & this.DM;
     for (var i = 0; i < this.t; ++i) r += cbit(this[i] ^ x);
     return r;
   }
 
   // (public) true iff nth bit is set
-  function bnTestBit(n: Number): Boolean {
-    var j: Number = Math.floor(n / this.DB);
+  function bnTestBit(n: number): boolean {
+    var j: number = Math.floor(n / this.DB);
     if (j >= this.t) return this.s != 0;
     return (this[j] & (1 << n % this.DB)) != 0;
   }
 
   // (protected) this op (1<<n)
-  function bnpChangeBit(n: Number, op: Number): Array {
-    var r: String = BigInteger.ONE.shiftLeft(n);
+  function bnpChangeBit(n: number, op: number): any[] {
+    var r: string = BigInteger.ONE.shiftLeft(n);
     this.bitwiseTo(r, op, r);
     return r;
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: Number): Promise {
+  function bnSetBit(n: number): Promise {
     return this.changeBit(n, op_or);
   }
 
   // (public) this & ~(1<<n)
-  function bnClearBit(n: Number): Promise {
+  function bnClearBit(n: number): Promise {
     return this.changeBit(n, op_andnot);
   }
 
   // (public) this ^ (1<<n)
-  function bnFlipBit(n: Number): Promise {
+  function bnFlipBit(n: number): Promise {
     return this.changeBit(n, op_xor);
   }
 
   // (protected) r = this + a
-  function bnpAddTo(a: Object, r: Object): Void {
-    var i: Number = 0,
-      c: Number = 0,
-      m: Number = Math.min(a.t, this.t);
+  function bnpAddTo(a: object, r: object): Void {
+    var i: number = 0,
+      c: number = 0,
+      m: number = Math.min(a.t, this.t);
     while (i < m) {
       c += this[i] + a[i];
       r[i++] = c & this.DM;
@@ -1051,64 +1051,64 @@
   }
 
   // (public) this + a
-  function bnAdd(a: Function): String {
-    var r: String = nbi();
+  function bnAdd(a: Function): string {
+    var r: string = nbi();
     this.addTo(a, r);
     return r;
   }
 
   // (public) this - a
-  function bnSubtract(a: Function): String {
-    var r: String = nbi();
+  function bnSubtract(a: Function): string {
+    var r: string = nbi();
     this.subTo(a, r);
     return r;
   }
 
   // (public) this * a
-  function bnMultiply(a: Function): String {
-    var r: String = nbi();
+  function bnMultiply(a: Function): string {
+    var r: string = nbi();
     this.multiplyTo(a, r);
     return r;
   }
 
   // (public) this^2
-  function bnSquare(): String {
-    var r: String = nbi();
+  function bnSquare(): string {
+    var r: string = nbi();
     this.squareTo(r);
     return r;
   }
 
   // (public) this / a
-  function bnDivide(a: Function): String {
-    var r: String = nbi();
+  function bnDivide(a: Function): string {
+    var r: string = nbi();
     this.divRemTo(a, r, null);
     return r;
   }
 
   // (public) this % a
-  function bnRemainder(a: Function): String {
-    var r: String = nbi();
+  function bnRemainder(a: Function): string {
+    var r: string = nbi();
     this.divRemTo(a, null, r);
     return r;
   }
 
   // (public) [this/a,this%a]
-  function bnDivideAndRemainder(a: Function): Array {
-    var q: String = nbi(),
-      r: String = nbi();
+  function bnDivideAndRemainder(a: Function): any[] {
+    var q: string = nbi(),
+      r: string = nbi();
     this.divRemTo(a, q, r);
     return new Array(q, r);
   }
 
   // (protected) this *= n, this >= 0, 1 < n < DV
-  function bnpDMultiply(n: Number): Void {
+  function bnpDMultiply(n: number): Void {
     this[this.t] = this.am(0, n - 1, this, 0, 0, this.t);
     ++this.t;
     this.clamp();
   }
 
   // (protected) this += n << w words, this >= 0
-  function bnpDAddOffset(n: Number, w: Number): Void {
+  function bnpDAddOffset(n: number, w: number): Void {
     if (n == 0) return;
     while (this.t <= w) this[this.t++] = 0;
     this[w] += n;
@@ -1121,13 +1121,13 @@
 
   // A "null" reducer
   function NullExp(): Void {}
-  function nNop(x: String): String {
+  function nNop(x: string): string {
     return x;
   }
-  function nMulTo(x: String, y: String, r: Number): Void {
+  function nMulTo(x: string, y: string, r: number): Void {
     x.multiplyTo(y, r);
   }
-  function nSqrTo(x: String, r: String): Void {
+  function nSqrTo(x: string, r: string): Void {
     x.squareTo(r);
   }
 
@@ -1137,18 +1137,18 @@
   NullExp.prototype.sqrTo = nSqrTo;
 
   // (public) this^e
-  function bnPow(e: Array): Object {
+  function bnPow(e: any[]): object {
     return this.exp(e, new NullExp());
   }
 
   // (protected) r = lower n words of "this * a", a.t <= n
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyLowerTo(a: Object, n: Number, r: Object): Void {
-    var i: Number = Math.min(this.t + a.t, n);
+  function bnpMultiplyLowerTo(a: object, n: number, r: object): Void {
+    var i: number = Math.min(this.t + a.t, n);
     r.s = 0; // assumes a,this >= 0
     r.t = i;
     while (i > 0) r[--i] = 0;
-    var j: String;
+    var j: string;
     for (j = r.t - this.t; i < j; ++i)
       r[i + this.t] = this.am(0, a[i], r, i, 0, this.t);
     for (j = Math.min(a.t, n); i < j; ++i) this.am(0, a[i], r, i, 0, n - i);
@@ -1157,9 +1157,9 @@
 
   // (protected) r = "this * a" without lower n words, n > 0
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyUpperTo(a: Object, n: Number, r: Object): Void {
+  function bnpMultiplyUpperTo(a: object, n: number, r: object): Void {
     --n;
-    var i: Number = (r.t = this.t + a.t - n);
+    var i: number = (r.t = this.t + a.t - n);
     r.s = 0; // assumes a,this >= 0
     while (--i >= 0) r[i] = 0;
     for (i = Math.max(n - this.t, 0); i < a.t; ++i)
@@ -1169,7 +1169,7 @@
   }
 
   // Barrett modular reduction
-  function Barrett(m: Object): Void {
+  function Barrett(m: object): Void {
     // setup Barrett
     this.r2 = nbi();
     this.q3 = nbi();
@@ -1178,18 +1178,18 @@
     this.m = m;
   }
 
-  function barrettConvert(x: String): Object {
+  function barrettConvert(x: string): object {
     if (x.s < 0 || x.t > 2 * this.m.t) return x.mod(this.m);
     else if (x.compareTo(this.m) < 0) return x;
     else {
-      var r: String = nbi();
+      var r: string = nbi();
       x.copyTo(r);
       this.reduce(r);
       return r;
     }
   }
 
-  function barrettRevert(x: String): String {
+  function barrettRevert(x: string): string {
     return x;
   }
 
@@ -1208,13 +1208,13 @@
   }
 
   // r = x^2 mod m; x != r
-  function barrettSqrTo(x: String, r: String): Void {
+  function barrettSqrTo(x: string, r: string): Void {
     x.squareTo(r);
     this.reduce(r);
   }
 
   // r = x*y mod m; x,y != r
-  function barrettMulTo(x: String, y: String, r: Function): Void {
+  function barrettMulTo(x: string, y: string, r: Function): Void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
@@ -1226,10 +1226,10 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: Function): String {
-    var i: Number = e.bitLength(),
-      k: Number,
-      r: String = nbv(1),
+  function bnModPow(e: any[], m: Function): string {
+    var i: number = e.bitLength(),
+      k: number,
+      r: string = nbv(1),
       z: HTMLElement;
     if (i <= 0) return r;
     else if (i < 18) k = 1;
@@ -1242,13 +1242,13 @@
     else z = new Montgomery(m);
 
     // precomputation
-    var g: Object = new Array(),
-      n: Number = 3,
-      k1: Number = k - 1,
-      km: Number = (1 << k) - 1;
+    var g: object = new Array(),
+      n: number = 3,
+      k1: number = k - 1,
+      km: number = (1 << k) - 1;
     g[1] = z.convert(this);
     if (k > 1) {
-      var g2: String = nbi();
+      var g2: string = nbi();
       z.sqrTo(g[1], g2);
       while (n <= km) {
         g[n] = nbi();
@@ -1257,10 +1257,10 @@
       }
     }
 
-    var j: Number = e.t - 1,
-      w: Number,
-      is1: Boolean = true,
-      r2: String = nbi(),
+    var j: number = e.t - 1,
+      w: number,
+      is1: boolean = true,
+      r2: string = nbi(),
       t: Function;
     i = nbits(e[j]) - 1;
     while (j >= 0) {
@@ -1313,16 +1313,16 @@
   }
 
   // (public) gcd(this,a) (HAC 14.54)
-  function bnGCD(a: HTMLElement): String {
-    var x: String = this.s < 0 ? this.negate() : this.clone();
-    var y: String = a.s < 0 ? a.negate() : a.clone();
+  function bnGCD(a: HTMLElement): string {
+    var x: string = this.s < 0 ? this.negate() : this.clone();
+    var y: string = a.s < 0 ? a.negate() : a.clone();
     if (x.compareTo(y) < 0) {
-      var t: String = x;
+      var t: string = x;
       x = y;
       y = t;
     }
-    var i: Number = x.getLowestSetBit(),
-      g: Number = y.getLowestSetBit();
+    var i: number = x.getLowestSetBit(),
+      g: number = y.getLowestSetBit();
     if (g < 0) return x;
     if (i < g) g = i;
     if (g > 0) {
@@ -1345,10 +1345,10 @@
   }
 
   // (protected) this % n, n < 2^26
-  function bnpModInt(n: Number): Number {
+  function bnpModInt(n: number): number {
     if (n <= 0) return 0;
-    var d: Number = this.DV % n,
-      r: Number = this.s < 0 ? n - 1 : 0;
+    var d: number = this.DV % n,
+      r: number = this.s < 0 ? n - 1 : 0;
     if (this.t > 0)
       if (d == 0) r = this[0] % n;
       else for (var i = this.t - 1; i >= 0; --i) r = (d * r + this[i]) % n;
@@ -1356,14 +1356,14 @@
   }
 
   // (public) 1/this % m (HAC 14.61)
-  function bnModInverse(m: Object): Object {
-    var ac: Boolean = m.isEven();
+  function bnModInverse(m: object): object {
+    var ac: boolean = m.isEven();
     if ((this.isEven() && ac) || m.signum() == 0) return BigInteger.ZERO;
     var u: HTMLElement = m.clone(),
       v: HTMLElement = this.clone();
-    var a: Object = nbv(1),
-      b: Object = nbv(0),
-      c: Object = nbv(0),
+    var a: object = nbv(1),
+      b: object = nbv(0),
+      c: object = nbv(0),
       d: HTMLElement = nbv(1);
     while (u.signum() != 0) {
       while (u.isEven()) {
@@ -1406,7 +1406,7 @@
     else return d;
   }
 
-  var lowprimes: Array = [
+  var lowprimes: any[] = [
     2,
     3,
     5,
@@ -1576,11 +1576,11 @@
     991,
     997,
   ];
-  var lplim: Number = (1 << 26) / lowprimes[lowprimes.length - 1];
+  var lplim: number = (1 << 26) / lowprimes[lowprimes.length - 1];
 
   // (public) test primality with certainty >= 1-.5^t
-  function bnIsProbablePrime(t: String): Boolean {
-    var i: Number,
+  function bnIsProbablePrime(t: string): boolean {
+    var i: number,
       x: Function = this.abs();
     if (x.t == 1 && x[0] <= lowprimes[lowprimes.length - 1]) {
       for (i = 0; i < lowprimes.length; ++i)
@@ -1590,8 +1590,8 @@
     if (x.isEven()) return false;
     i = 1;
     while (i < lowprimes.length) {
-      var m: String = lowprimes[i],
-        j: Number = i + 1;
+      var m: string = lowprimes[i],
+        j: number = i + 1;
       while (j < lowprimes.length && m < lplim) m *= lowprimes[j++];
       m = x.modInt(m);
       while (i < j) if (m % lowprimes[i++] == 0) return false;
@@ -1600,11 +1600,11 @@
   }
 
   // (protected) true if probably prime (HAC 4.24, Miller-Rabin)
-  function bnpMillerRabin(t: Number): Boolean {
+  function bnpMillerRabin(t: number): boolean {
     var n1: HTMLElement = this.subtract(BigInteger.ONE);
-    var k: Number = n1.getLowestSetBit();
+    var k: number = n1.getLowestSetBit();
     if (k <= 0) return false;
-    var r: String = n1.shiftRight(k);
+    var r: string = n1.shiftRight(k);
     t = (t + 1) >> 1;
     if (t > lowprimes.length) t = lowprimes.length;
     var a: HTMLElement = nbi();
@@ -1613,7 +1613,7 @@
       a.fromInt(lowprimes[Math.floor(Math.random() * lowprimes.length)]);
       var y: HTMLElement = a.modPow(r, this);
       if (y.compareTo(BigInteger.ONE) != 0 && y.compareTo(n1) != 0) {
-        var j: Number = 1;
+        var j: number = 1;
         while (j++ < k && y.compareTo(n1) != 0) {
           y = y.modPowInt(2, this);
           if (y.compareTo(BigInteger.ONE) == 0) return false;
@@ -1695,12 +1695,12 @@
   // <body onClick='rng_seed_time();' onKeyPress='rng_seed_time();'>
   // in your main HTML document.
 
-  var rng_state: Object;
-  var rng_pool: Object;
-  var rng_pptr: Number;
+  var rng_state: object;
+  var rng_pool: object;
+  var rng_pptr: number;
 
   // Mix in a 32-bit integer into the pool
-  function rng_seed_int(x: Number): Void {
+  function rng_seed_int(x: number): Void {
     rng_pool[rng_pptr++] ^= x & 255;
     rng_pool[rng_pptr++] ^= (x >> 8) & 255;
     rng_pool[rng_pptr++] ^= (x >> 16) & 255;
@@ -1717,11 +1717,11 @@
   if (rng_pool == null) {
     rng_pool = new Array();
     rng_pptr = 0;
-    var t: Number;
+    var t: number;
     if (typeof window !== 'undefined' && window.crypto) {
       if (window.crypto.getRandomValues) {
         // Use webcrypto if available
-        var ua: Object = new Uint8Array(32);
+        var ua: object = new Uint8Array(32);
         window.crypto.getRandomValues(ua);
         for (t = 0; t < 32; ++t) rng_pool[rng_pptr++] = ua[t];
       } else if (
@@ -1729,7 +1729,7 @@
         navigator.appVersion < '5'
       ) {
         // Extract entropy (256 bits) from NS4 RNG if available
-        var z: String = window.crypto.random(32);
+        var z: string = window.crypto.random(32);
         for (t = 0; t < z.length; ++t)
           rng_pool[rng_pptr++] = z.charCodeAt(t) & 255;
       }
@@ -1760,8 +1760,8 @@
     return rng_state.next();
   }
 
-  function rng_get_bytes(ba: Array): Void {
-    var i: Number;
+  function rng_get_bytes(ba: any[]): Void {
+    var i: number;
     for (i = 0; i < ba.length; ++i) ba[i] = rng_get_byte();
   }
 
@@ -1778,8 +1778,8 @@
   }
 
   // Initialize arcfour context from key, an array of ints, each from [0..255]
-  function ARC4init(key: String): Void {
-    var i: Number, j: Number, t: Function;
+  function ARC4init(key: string): Void {
+    var i: number, j: number, t: Function;
     for (i = 0; i < 256; ++i) this.S[i] = i;
     j = 0;
     for (i = 0; i < 256; ++i) {
@@ -1792,8 +1792,8 @@
     this.j = 0;
   }
 
-  function ARC4next(): String {
-    var t: String;
+  function ARC4next(): string {
+    var t: string;
     this.i = (this.i + 1) & 255;
     this.j = (this.j + this.S[this.i]) & 255;
     t = this.S[this.i];
@@ -1806,13 +1806,13 @@
   Arcfour.prototype.next = ARC4next;
 
   // Plug in your RNG constructor here
-  function prng_newstate(): String {
+  function prng_newstate(): string {
     return new Arcfour();
   }
 
   // Pool size must be a multiple of 4 and greater than 32.
   // An array of bytes the size of the pool will be passed to init()
-  var rng_psize: Number = 256;
+  var rng_psize: number = 256;
 
   if (typeof exports !== 'undefined') {
     exports = module.exports = {

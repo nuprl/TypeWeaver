@@ -22,10 +22,10 @@ process.on("unhandledRejection", (err: Function) => {
 // 1. Go to https://github.com/web-platform-tests/wpt/tree/master/url
 // 2. Press "y" on your keyboard to get a permalink
 // 3. Copy the commit hash
-const commitHash: String = "681773c2a927f936b71b4163469942080fbd5fab";
+const commitHash: string = "681773c2a927f936b71b4163469942080fbd5fab";
 
-const urlPrefix: String = `https://raw.githubusercontent.com/web-platform-tests/wpt/${commitHash}/url/`;
-const targetDir: String = path.resolve(__dirname, "..", "test", "web-platform-tests");
+const urlPrefix: string = `https://raw.githubusercontent.com/web-platform-tests/wpt/${commitHash}/url/`;
+const targetDir: string = path.resolve(__dirname, "..", "test", "web-platform-tests");
 
 (fs.rmSync || fs.rmdirSync)(targetDir, { recursive: true, force: true });
 fs.mkdirSync(path.resolve(targetDir, "resources"), { recursive: true });

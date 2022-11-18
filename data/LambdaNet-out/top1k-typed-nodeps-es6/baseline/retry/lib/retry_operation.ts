@@ -1,4 +1,4 @@
-function RetryOperation(timeouts: Object, options: Object): Void {
+function RetryOperation(timeouts: object, options: object): Void {
   // Compatibility for the old (timeouts, retryForever) signature
   if (typeof options === 'boolean') {
     options = { forever: options };
@@ -40,7 +40,7 @@ RetryOperation.prototype.stop = function() {
   this._cachedTimeouts = null;
 };
 
-RetryOperation.prototype.retry = function(err: String) {
+RetryOperation.prototype.retry = function(err: string) {
   if (this._timeout) {
     clearTimeout(this._timeout);
   }
@@ -48,7 +48,7 @@ RetryOperation.prototype.retry = function(err: String) {
   if (!err) {
     return false;
   }
-  var currentTime: Number = new Date().getTime();
+  var currentTime: number = new Date().getTime();
   if (err && currentTime - this._operationStart >= this._maxRetryTime) {
     this._errors.push(err);
     this._errors.unshift(new Error('RetryOperation timeout occurred'));
@@ -57,7 +57,7 @@ RetryOperation.prototype.retry = function(err: String) {
 
   this._errors.push(err);
 
-  var timeout: Number = this._timeouts.shift();
+  var timeout: number = this._timeouts.shift();
   if (timeout === undefined) {
     if (this._cachedTimeouts) {
       // retry forever, only keep last error
@@ -92,7 +92,7 @@ RetryOperation.prototype.retry = function(err: String) {
   return true;
 };
 
-RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: Array) {
+RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: any[]) {
   this._fn = fn;
 
   if (timeoutOps) {
@@ -116,12 +116,12 @@ RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: Array) {
   this._fn(this._attempts);
 };
 
-RetryOperation.prototype.try = function(fn: Number) {
+RetryOperation.prototype.try = function(fn: number) {
   console.log('Using RetryOperation.try() is deprecated');
   this.attempt(fn);
 };
 
-RetryOperation.prototype.start = function(fn: Number) {
+RetryOperation.prototype.start = function(fn: number) {
   console.log('Using RetryOperation.start() is deprecated');
   this.attempt(fn);
 };
@@ -141,14 +141,14 @@ RetryOperation.prototype.mainError = function() {
     return null;
   }
 
-  var counts: Object = {};
+  var counts: object = {};
   var mainError: HTMLElement = null;
-  var mainErrorCount: Number = 0;
+  var mainErrorCount: number = 0;
 
   for (var i = 0; i < this._errors.length; i++) {
     var error: Map = this._errors[i];
-    var message: String = error.message;
-    var count: Number = (counts[message] || 0) + 1;
+    var message: string = error.message;
+    var count: number = (counts[message] || 0) + 1;
 
     counts[message] = count;
 

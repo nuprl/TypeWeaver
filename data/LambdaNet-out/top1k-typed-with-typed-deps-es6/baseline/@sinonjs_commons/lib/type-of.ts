@@ -8,6 +8,6 @@ import type from 'type-detect';
  * @param  {*} value
  * @returns {string}
  */
-export default function typeOf(value: String): String {
+export default function typeOf(value: string): string {
     return type(value).toLowerCase();
 };

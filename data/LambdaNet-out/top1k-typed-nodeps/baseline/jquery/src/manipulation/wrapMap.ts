@@ -1,4 +1,4 @@
-var wrapMap: Object = {
+var wrapMap: object = {
 
 	// Table parts need to be wrapped with `<table>` or they're
 	// stripped to their contents when put in a div.

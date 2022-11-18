@@ -9,22 +9,22 @@ const decimalNumber: RegExp = /^\d+$/;
 const acornJsxMap: Error = new WeakMap();
 
 // Get the original tokens for the given `acorn` namespace object.
-function getJsxTokens(acorn: HTMLElement): Object {
+function getJsxTokens(acorn: HTMLElement): object {
   acorn = acorn.Parser.acorn || acorn;
-  let acornJsx: Object = acornJsxMap.get(acorn);
+  let acornJsx: object = acornJsxMap.get(acorn);
   if (!acornJsx) {
     const tt: HTMLInputElement = acorn.tokTypes;
-    const TokContext: Object = acorn.TokContext;
+    const TokContext: object = acorn.TokContext;
     const TokenType: Function = acorn.TokenType;
-    const tc_oTag: String = new TokContext('<tag', false);
-    const tc_cTag: String = new TokContext('</tag', false);
-    const tc_expr: String = new TokContext('<tag>...</tag>', true, true);
-    const tokContexts: Object = {
+    const tc_oTag: string = new TokContext('<tag', false);
+    const tc_cTag: string = new TokContext('</tag', false);
+    const tc_expr: string = new TokContext('<tag>...</tag>', true, true);
+    const tokContexts: object = {
       tc_oTag: tc_oTag,
       tc_cTag: tc_cTag,
       tc_expr: tc_expr
     };
-    const tokTypes: Object = {
+    const tokTypes: object = {
       jsxName: new TokenType('jsxName'),
       jsxText: new TokenType('jsxText', {beforeExpr: true}),
       jsxTagStart: new TokenType('jsxTagStart', {startsExpr: true}),
@@ -36,8 +36,8 @@ function getJsxTokens(acorn: HTMLElement): Object {
       this.context.push(tc_oTag); // start opening tag context
       this.exprAllowed = false;
     };
-    tokTypes.jsxTagEnd.updateContext = function(prevType: Number) {
-      let out: String = this.context.pop();
+    tokTypes.jsxTagEnd.updateContext = function(prevType: number) {
+      let out: string = this.context.pop();
       if (out === tc_oTag && prevType === tt.slash || out === tc_cTag) {
         this.context.pop();
         this.exprAllowed = this.curContext() === tc_expr;
@@ -55,7 +55,7 @@ function getJsxTokens(acorn: HTMLElement): Object {
 
 // Transforms JSX element name to string.
 
-function getQualifiedJSXName(object: Array): String {
+function getQualifiedJSXName(object: any[]): string {
   if (!object)
     return object;
 
@@ -70,7 +70,7 @@ function getQualifiedJSXName(object: Array): String {
     getQualifiedJSXName(object.property);
 }
 
-export default function(options: Object) {
+export default function(options: object) {
   options = options || {};
   return function(Parser: Function) {
     return plugin({
@@ -83,25 +83,25 @@ export default function(options: Object) {
 // This is `tokTypes` of the peer dep.
 // This can be different instances from the actual `tokTypes` this plugin uses.
 Object.defineProperty(module.exports, "tokTypes", {
-  get: function get_tokTypes(): String {
+  get: function get_tokTypes(): string {
     return getJsxTokens(require("acorn")).tokTypes;
   },
   configurable: true,
   enumerable: true
 });
 
-function plugin(options: Object, Parser: Object): Object {
+function plugin(options: object, Parser: object): object {
   const acorn: HTMLElement = Parser.acorn || require("acorn");
   const acornJsx: HTMLElement = getJsxTokens(acorn);
   const tt: HTMLInputElement = acorn.tokTypes;
   const tok: Function = acornJsx.tokTypes;
   const tokContexts: Function = acorn.tokContexts;
   const tc_oTag: Function = acornJsx.tokContexts.tc_oTag;
-  const tc_cTag: String = acornJsx.tokContexts.tc_cTag;
+  const tc_cTag: string = acornJsx.tokContexts.tc_cTag;
   const tc_expr: Function = acornJsx.tokContexts.tc_expr;
-  const isNewLine: Boolean = acorn.isNewLine;
-  const isIdentifierStart: Boolean = acorn.isIdentifierStart;
-  const isIdentifierChar: Boolean = acorn.isIdentifierChar;
+  const isNewLine: boolean = acorn.isNewLine;
+  const isIdentifierStart: boolean = acorn.isIdentifierStart;
+  const isIdentifierChar: boolean = acorn.isIdentifierChar;
 
   return class extends Parser {
     // Expose actual `tokTypes` and `tokContexts` to other plugins.

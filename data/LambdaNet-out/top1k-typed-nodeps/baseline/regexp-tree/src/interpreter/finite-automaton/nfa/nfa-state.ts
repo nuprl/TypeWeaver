@@ -5,7 +5,7 @@
 
 'use strict';
 
-const State: String = require('../state');
+const State: string = require('../state');
 const {EPSILON} = require('../special-symbols');
 
 /**
@@ -51,10 +51,10 @@ class NFAState extends State {
     }
 
     // Else, we get some symbols.
-    const symbol: String = string[0];
-    const rest: Array = string.slice(1);
+    const symbol: string = string[0];
+    const rest: any[] = string.slice(1);
 
-    const symbolTransitions: Array = this.getTransitionsOnSymbol(symbol);
+    const symbolTransitions: any[] = this.getTransitionsOnSymbol(symbol);
     for (const nextState of symbolTransitions) {
       if (nextState.matches(rest)) {
         return true;
@@ -78,13 +78,13 @@ class NFAState extends State {
    */
   getEpsilonClosure() {
     if (!this._epsilonClosure) {
-      const epsilonTransitions: Array = this.getTransitionsOnSymbol(EPSILON);
+      const epsilonTransitions: any[] = this.getTransitionsOnSymbol(EPSILON);
       const closure: HTMLElement = this._epsilonClosure = new Set();
       closure.add(this);
       for (const nextState of epsilonTransitions) {
         if (!closure.has(nextState)) {
           closure.add(nextState);
-          const nextClosure: Array = nextState.getEpsilonClosure();
+          const nextClosure: any[] = nextState.getEpsilonClosure();
           nextClosure.forEach((state: State) => closure.add(state));
         }
       }

@@ -25,9 +25,9 @@
 (function () {
     'use strict';
 
-    var code: Object = require('./code');
+    var code: object = require('./code');
 
-    function isStrictModeReservedWordES6(id: String): Boolean {
+    function isStrictModeReservedWordES6(id: string): boolean {
         switch (id) {
         case 'implements':
         case 'interface':
@@ -43,7 +43,7 @@
         }
     }
 
-    function isKeywordES5(id: String, strict: Boolean): Boolean {
+    function isKeywordES5(id: string, strict: boolean): boolean {
         // yield should not be treated as keyword under non-strict mode.
         if (!strict && id === 'yield') {
             return false;
@@ -51,7 +51,7 @@
         return isKeywordES6(id, strict);
     }
 
-    function isKeywordES6(id: String, strict: Boolean): Boolean {
+    function isKeywordES6(id: string, strict: boolean): boolean {
         if (strict && isStrictModeReservedWordES6(id)) {
             return true;
         }
@@ -82,20 +82,20 @@
         }
     }
 
-    function isReservedWordES5(id: String, strict: String): Boolean {
+    function isReservedWordES5(id: string, strict: string): boolean {
         return id === 'null' || id === 'true' || id === 'false' || isKeywordES5(id, strict);
     }
 
-    function isReservedWordES6(id: String, strict: String): Boolean {
+    function isReservedWordES6(id: string, strict: string): boolean {
         return id === 'null' || id === 'true' || id === 'false' || isKeywordES6(id, strict);
     }
 
-    function isRestrictedWord(id: String): Boolean {
+    function isRestrictedWord(id: string): boolean {
         return id === 'eval' || id === 'arguments';
     }
 
-    function isIdentifierNameES5(id: String): Boolean {
-        var i: Number, iz: Function, ch: Number;
+    function isIdentifierNameES5(id: string): boolean {
+        var i: number, iz: Function, ch: number;
 
         if (id.length === 0) { return false; }
 
@@ -113,12 +113,12 @@
         return true;
     }
 
-    function decodeUtf16(lead: Number, trail: Number): String {
+    function decodeUtf16(lead: number, trail: number): string {
         return (lead - 0xD800) * 0x400 + (trail - 0xDC00) + 0x10000;
     }
 
-    function isIdentifierNameES6(id: String): Boolean {
-        var i: Number, iz: Number, ch: Number, lowCh: Number, check: Function;
+    function isIdentifierNameES6(id: string): boolean {
+        var i: number, iz: number, ch: number, lowCh: number, check: Function;
 
         if (id.length === 0) { return false; }
 
@@ -142,11 +142,11 @@
         return true;
     }
 
-    function isIdentifierES5(id: String, strict: String): Boolean {
+    function isIdentifierES5(id: string, strict: string): boolean {
         return isIdentifierNameES5(id) && !isReservedWordES5(id, strict);
     }
 
-    function isIdentifierES6(id: String, strict: String): Boolean {
+    function isIdentifierES6(id: string, strict: string): boolean {
         return isIdentifierNameES6(id) && !isReservedWordES6(id, strict);
     }
 

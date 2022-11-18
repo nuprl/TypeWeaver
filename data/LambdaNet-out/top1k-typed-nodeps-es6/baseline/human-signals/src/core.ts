@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 // List of known process signals with information about them
-export const SIGNALS: Array = [
+export const SIGNALS: any[] = [
   {
     name: 'SIGHUP',
     number: 1,

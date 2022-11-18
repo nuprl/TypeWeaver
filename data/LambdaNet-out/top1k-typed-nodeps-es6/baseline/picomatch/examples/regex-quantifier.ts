@@ -6,7 +6,7 @@ import pico from '..';
  * See: https://github.com/gulpjs/glob-parent/issues/39#issuecomment-794075641
  */
 
-const files: Array = [
+const files: any[] = [
   'data/100-123a_files/0/',
   'data/100-123a_files/1/',
   'data/100-123a_files/2/',
@@ -35,9 +35,9 @@ const files: Array = [
 // a brace pattern.
 
 const isMatch: Function = pico('data/100-123?\\{0,3}_files/{0..3}/', { unescape: true });
-console.log(files.filter((name: String) => isMatch(name)));
+console.log(files.filter((name: string) => isMatch(name)));
 
 // Alternatively, we can use a regex character class to be more specific
 // In the following example, we'll only match uppercase alpha characters
 const isMatch2: Function = pico('data/100-123[A-Z]*_files/{0..3}/', { unescape: true });
-console.log(files.filter((name: String) => isMatch2(name)));
+console.log(files.filter((name: string) => isMatch2(name)));

@@ -2,7 +2,7 @@
 
 import isValue from '../value/is';
 
-export default function (value: Number) {
+export default function (value: number) {
 	if (!isValue(value)) return null;
 	try {
 		value = +value; // Ensure implicit coercion

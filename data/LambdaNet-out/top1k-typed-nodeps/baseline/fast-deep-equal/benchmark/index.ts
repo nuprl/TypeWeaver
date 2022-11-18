@@ -1,12 +1,12 @@
 'use strict';
 
 const assertDeepStrictEqual: Function = require('assert').deepStrictEqual;
-const tests: Array = require('../spec/tests');
-const Benchmark: String = require('benchmark');
+const tests: any[] = require('../spec/tests');
+const Benchmark: string = require('benchmark');
 const suite: HTMLElement = new Benchmark.Suite;
 
 
-const equalPackages: Object = {
+const equalPackages: object = {
   'fast-deep-equal': require('..'),
   'fast-deep-equal/es6': require('../es6'),
   'fast-equals': require('fast-equals').deepEqual,
@@ -18,7 +18,7 @@ const equalPackages: Object = {
   'deep-eql': true,
   'ramda.equals': require('ramda').equals,
   'util.isDeepStrictEqual': require('util').isDeepStrictEqual,
-  'assert.deepStrictEqual': (a: Function, b: String) => {
+  'assert.deepStrictEqual': (a: Function, b: string) => {
     try { assertDeepStrictEqual(a, b); return true; }
     catch(e) { return false; }
   }
@@ -53,7 +53,7 @@ for (const equalName in equalPackages) {
 console.log();
 
 suite
-  .on('cycle', (event: Object) => console.log(String(event.target)))
+  .on('cycle', (event: object) => console.log(String(event.target)))
   .on('complete', function () {
     console.log('The fastest is ' + this.filter('fastest').map('name'));
   })

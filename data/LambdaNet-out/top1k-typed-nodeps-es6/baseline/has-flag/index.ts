@@ -1,8 +1,8 @@
 import process from 'process'; // eslint-disable-line node/prefer-global/process
 
-export default function hasFlag(flag: String, argv: String = process.argv): Boolean {
-	const prefix: String = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
-	const position: Number = argv.indexOf(prefix + flag);
-	const terminatorPosition: Number = argv.indexOf('--');
+export default function hasFlag(flag: string, argv: string = process.argv): boolean {
+	const prefix: string = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
+	const position: number = argv.indexOf(prefix + flag);
+	const terminatorPosition: number = argv.indexOf('--');
 	return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
 }

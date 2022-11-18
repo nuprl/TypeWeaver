@@ -8,7 +8,7 @@ import isObviousHtml from "./isObviousHtml.js";
 // context (optional): If specified, the fragment will be created in this context,
 // defaults to document
 // keepScripts (optional): If true, will include scripts passed in the html string
-jQuery.parseHTML = function( data: String, context: Number, keepScripts: Boolean ) {
+jQuery.parseHTML = function( data: string, context: number, keepScripts: boolean ) {
 	if ( typeof data !== "string" && !isObviousHtml( data + "" ) ) {
 		return [];
 	}
@@ -17,7 +17,7 @@ jQuery.parseHTML = function( data: String, context: Number, keepScripts: Boolean
 		context = false;
 	}
 
-	var base: Function, parsed: Object, scripts: Array;
+	var base: Function, parsed: object, scripts: any[];
 
 	if ( !context ) {
 

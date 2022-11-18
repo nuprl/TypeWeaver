@@ -24,8 +24,8 @@ import last from './last.js'
  * differenceWith(objects, [{ 'x': 1, 'y': 2 }], isEqual)
  * // => [{ 'x': 2, 'y': 1 }]
  */
-function differenceWith(array: Array, ...values): Array {
-  let comparator: String = last(values)
+function differenceWith(array: any[], ...values): any[] {
+  let comparator: string = last(values)
   if (isArrayLikeObject(comparator)) {
     comparator = undefined
   }

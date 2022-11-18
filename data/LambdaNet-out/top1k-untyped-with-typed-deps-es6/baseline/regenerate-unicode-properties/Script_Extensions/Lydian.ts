@@ -1,4 +1,4 @@
 import setFactory from 'regenerate';
-const set: Object = setFactory(0x1093F);
+const set: object = setFactory(0x1093F);
 set.addRange(0x10920, 0x10939);
-export const characters: String = set;
+export const characters: string = set;

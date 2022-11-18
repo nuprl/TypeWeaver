@@ -5,20 +5,20 @@
  * MIT Licensed
  */
 
-var fs: String = require('fs')
+var fs: string = require('fs')
 
-module.exports = function writeDatabaseSync (fileName: String, obj: Object): Void {
-  var fd: Number = fs.openSync(fileName, 'w')
-  var keys: Array = Object.keys(obj).sort()
+module.exports = function writeDatabaseSync (fileName: string, obj: object): Void {
+  var fd: number = fs.openSync(fileName, 'w')
+  var keys: any[] = Object.keys(obj).sort()
 
   fs.writeSync(fd, '{\n')
 
-  keys.forEach(function (key: String, i: String, arr: Function) {
+  keys.forEach(function (key: string, i: string, arr: Function) {
     fs.writeSync(fd, '  ' + JSON.stringify(key) + ': {')
 
-    var end: String = endLine.apply(this, arguments)
-    var data: Object = obj[key]
-    var keys: Array = Object.keys(data).sort(sortDataKeys)
+    var end: string = endLine.apply(this, arguments)
+    var data: object = obj[key]
+    var keys: any[] = Object.keys(data).sort(sortDataKeys)
 
     if (keys.length === 0) {
       fs.writeSync(fd, '}' + end)
@@ -26,12 +26,12 @@ module.exports = function writeDatabaseSync (fileName: String, obj: Object): Voi
     }
 
     fs.writeSync(fd, '\n')
-    keys.forEach(function (key: String, i: String, arr: Function) {
-      var end: String = endLine.apply(this, arguments)
-      var val: Array = data[key]
+    keys.forEach(function (key: string, i: string, arr: Function) {
+      var end: string = endLine.apply(this, arguments)
+      var val: any[] = data[key]
 
       if (val !== undefined) {
-        var str: String = Array.isArray(val) && val.some(function (v: Function) { return String(v).length > 15 })
+        var str: string = Array.isArray(val) && val.some(function (v: Function) { return String(v).length > 15 })
           ? JSON.stringify(val, null, 2).split('\n').join('\n    ')
           : JSON.stringify(val)
 
@@ -47,15 +47,15 @@ module.exports = function writeDatabaseSync (fileName: String, obj: Object): Voi
   fs.closeSync(fd)
 }
 
-function endLine (key: String, i: Number, arr: Array): String {
-  var comma: String = i + 1 === arr.length
+function endLine (key: string, i: number, arr: any[]): string {
+  var comma: string = i + 1 === arr.length
     ? ''
     : ','
   return comma + '\n'
 }
 
-function sortDataKeys (a: Array, b: Number): Boolean {
-  var cmp: Number = a.localeCompare(b)
+function sortDataKeys (a: any[], b: number): boolean {
+  var cmp: number = a.localeCompare(b)
 
   return cmp && (a === 'source' || b === 'source')
     ? (a === 'source' ? -1 : 1)

@@ -1,10 +1,10 @@
 "use strict";
 
-var fs: String = require( "fs" );
+var fs: string = require( "fs" );
 
-module.exports = function( Release: Object ) {
+module.exports = function( Release: object ) {
 
-	const distFiles: Array = [
+	const distFiles: any[] = [
 		"dist/jquery.js",
 		"dist/jquery.min.js",
 		"dist/jquery.min.map",
@@ -12,17 +12,17 @@ module.exports = function( Release: Object ) {
 		"dist/jquery.slim.min.js",
 		"dist/jquery.slim.min.map"
 	];
-	const filesToCommit: Array = [
+	const filesToCommit: any[] = [
 		...distFiles,
 		"src/core.js"
 	];
-	const cdn: String = require( "./release/cdn" );
+	const cdn: string = require( "./release/cdn" );
 	const dist: Function = require( "./release/dist" );
 
 	const npmTags: Function = Release.npmTags;
 
-	function setSrcVersion( filepath: String ): Void {
-		var contents: String = fs.readFileSync( filepath, "utf8" );
+	function setSrcVersion( filepath: string ): Void {
+		var contents: string = fs.readFileSync( filepath, "utf8" );
 		contents = contents.replace( /@VERSION/g, Release.newVersion );
 		fs.writeFileSync( filepath, contents, "utf8" );
 	}
@@ -74,7 +74,7 @@ module.exports = function( Release: Object ) {
 		 * Publish to distribution repo and npm
 		 * @param {Function} callback
 		 */
-		dist: function( callback: String ) {
+		dist: function( callback: string ) {
 			cdn.makeArchives( Release, function() {
 				dist( Release, distFiles, callback );
 			} );

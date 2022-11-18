@@ -14,7 +14,7 @@
  * @api public
  */
 
-module.exports = function(options: Object) {
+module.exports = function(options: object) {
   return function(snapdragon: HTMLElement) {
     if (snapdragon.isSnapdragon) {
       snapdragon.parser.define('capture', capture);
@@ -52,7 +52,7 @@ module.exports = function(options: Object) {
  * @api public
  */
 
-function capture(type: String, regex: String): Array {
+function capture(type: string, regex: string): any[] {
   if (typeof regex === 'function') {
     return this.set.apply(this, arguments);
   }
@@ -60,9 +60,9 @@ function capture(type: String, regex: String): Array {
   this.regex.set(type, regex);
   this.set(type, function() {
     var pos: Function = this.position();
-    var match: Object = this.match(regex);
+    var match: object = this.match(regex);
     if (match) {
-      var node: Object = pos(this.node(match[0], type));
+      var node: object = pos(this.node(match[0], type));
       node.match = match;
       return node;
     }

@@ -1,7 +1,7 @@
 import baseClone from './.internal/baseClone.js'
 
 /** Used to compose bitmasks for cloning. */
-const CLONE_SYMBOLS_FLAG: Number = 4
+const CLONE_SYMBOLS_FLAG: number = 4
 
 /**
  * This method is like `clone` except that it accepts `customizer` which
@@ -32,7 +32,7 @@ const CLONE_SYMBOLS_FLAG: Number = 4
  * console.log(el.childNodes.length)
  * // => 0
  */
-function cloneWith(value: String, customizer: String): String {
+function cloneWith(value: string, customizer: string): string {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseClone(value, CLONE_SYMBOLS_FLAG, customizer)
 }

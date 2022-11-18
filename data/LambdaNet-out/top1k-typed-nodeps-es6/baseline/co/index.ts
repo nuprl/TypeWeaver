@@ -40,9 +40,9 @@ co.wrap = function (fn: Function) {
  * @api public
  */
 
-function co(gen: Object): Promise {
-  var ctx: Array = this;
-  var args: String = slice.call(arguments, 1);
+function co(gen: object): Promise {
+  var ctx: any[] = this;
+  var args: string = slice.call(arguments, 1);
 
   // we wrap everything in a promise to avoid promise chaining,
   // which leads to memory leak errors.
@@ -59,8 +59,8 @@ function co(gen: Object): Promise {
      * @api private
      */
 
-    function onFulfilled(res: String): Object {
-      var ret: String;
+    function onFulfilled(res: string): object {
+      var ret: string;
       try {
         ret = gen.next(res);
       } catch (e) {
@@ -76,8 +76,8 @@ function co(gen: Object): Promise {
      * @api private
      */
 
-    function onRejected(err: Array): Void {
-      var ret: Object;
+    function onRejected(err: any[]): Void {
+      var ret: object;
       try {
         ret = gen.throw(err);
       } catch (e) {
@@ -95,7 +95,7 @@ function co(gen: Object): Promise {
      * @api private
      */
 
-    function next(ret: Object): Promise {
+    function next(ret: object): Promise {
       if (ret.done) return resolve(ret.value);
       var value: Promise = toPromise.call(ctx, ret.value);
       if (value && isPromise(value)) return value.then(onFulfilled, onRejected);
@@ -113,7 +113,7 @@ function co(gen: Object): Promise {
  * @api private
  */
 
-function toPromise(obj: String): String {
+function toPromise(obj: string): string {
   if (!obj) return obj;
   if (isPromise(obj)) return obj;
   if (isGeneratorFunction(obj) || isGenerator(obj)) return co.call(this, obj);
@@ -132,9 +132,9 @@ function toPromise(obj: String): String {
  */
 
 function thunkToPromise(fn: Function): Promise {
-  var ctx: Array = this;
+  var ctx: any[] = this;
   return new Promise(function (resolve: Function, reject: Function) {
-    fn.call(ctx, function (err: String, res: String) {
+    fn.call(ctx, function (err: string, res: string) {
       if (err) return reject(err);
       if (arguments.length > 2) res = slice.call(arguments, 1);
       resolve(res);
@@ -151,7 +151,7 @@ function thunkToPromise(fn: Function): Promise {
  * @api private
  */
 
-function arrayToPromise(obj: Array): Promise {
+function arrayToPromise(obj: any[]): Promise {
   return Promise.all(obj.map(toPromise, this));
 }
 
@@ -164,13 +164,13 @@ function arrayToPromise(obj: Array): Promise {
  * @api private
  */
 
-function objectToPromise(obj: Object): Promise{
-  var results: Object = new obj.constructor();
-  var keys: Array = Object.keys(obj);
-  var promises: Array = [];
+function objectToPromise(obj: object): Promise{
+  var results: object = new obj.constructor();
+  var keys: any[] = Object.keys(obj);
+  var promises: any[] = [];
   for (var i = 0; i < keys.length; i++) {
-    var key: String = keys[i];
-    var promise: Array = toPromise.call(this, obj[key]);
+    var key: string = keys[i];
+    var promise: any[] = toPromise.call(this, obj[key]);
     if (promise && isPromise(promise)) defer(promise, key);
     else results[key] = obj[key];
   }
@@ -178,10 +178,10 @@ function objectToPromise(obj: Object): Promise{
     return results;
   });
 
-  function defer(promise: Promise, key: String): Void {
+  function defer(promise: Promise, key: string): Void {
     // predefine the key in the result
     results[key] = undefined;
-    promises.push(promise.then(function (res: String) {
+    promises.push(promise.then(function (res: string) {
       results[key] = res;
     }));
   }
@@ -195,7 +195,7 @@ function objectToPromise(obj: Object): Promise{
  * @api private
  */
 
-function isPromise(obj: Promise): Boolean {
+function isPromise(obj: Promise): boolean {
   return 'function' == typeof obj.then;
 }
 
@@ -207,7 +207,7 @@ function isPromise(obj: Promise): Boolean {
  * @api private
  */
 
-function isGenerator(obj: Object): Boolean {
+function isGenerator(obj: object): boolean {
   return 'function' == typeof obj.next && 'function' == typeof obj.throw;
 }
 
@@ -219,8 +219,8 @@ function isGenerator(obj: Object): Boolean {
  * @api private
  */
 
-function isGeneratorFunction(obj: Object): Boolean {
-  var constructor: Object = obj.constructor;
+function isGeneratorFunction(obj: object): boolean {
+  var constructor: object = obj.constructor;
   if (!constructor) return false;
   if ('GeneratorFunction' === constructor.name || 'GeneratorFunction' === constructor.displayName) return true;
   return isGenerator(constructor.prototype);
@@ -234,6 +234,6 @@ function isGeneratorFunction(obj: Object): Boolean {
  * @api private
  */
 
-function isObject(val: Object): Boolean {
+function isObject(val: object): boolean {
   return Object == val.constructor;
 }

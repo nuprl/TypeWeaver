@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var watchman: Array = require('fb-watchman');
+var watchman: any[] = require('fb-watchman');
 var client: HTMLElement = new watchman.Client();
 
 client.on('end', function() {
@@ -13,11 +13,11 @@ client.on('end', function() {
   console.log('client ended');
 });
 
-client.on('error', function(error: Object) {
+client.on('error', function(error: object) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: Object, resp: Object) {
+client.capabilityCheck({required:['relative_root']}, function (error: object, resp: object) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;
@@ -26,7 +26,7 @@ client.capabilityCheck({required:['relative_root']}, function (error: Object, re
 });
 
 // Example of the error case
-client.command(['invalid-command-never-will-work'], function(error: Object, resp: Function) {
+client.command(['invalid-command-never-will-work'], function(error: object, resp: Function) {
   if (error) {
     console.error('failed to subscribe: ', error);
     return;
@@ -35,7 +35,7 @@ client.command(['invalid-command-never-will-work'], function(error: Object, resp
 
 // Initiate a watch.  You can repeatedly ask to watch the same dir without
 // error; Watchman will re-use an existing watch.
-client.command(['watch-project', process.cwd()], function(error: Object, resp: HTMLElement) {
+client.command(['watch-project', process.cwd()], function(error: object, resp: HTMLElement) {
   if (error) {
     console.error('Error initiating watch:', error);
     return;
@@ -56,7 +56,7 @@ client.command(['watch-project', process.cwd()], function(error: Object, resp: H
   // watch-project may re-use an existing watch at a higher level in the
   // filesystem.  It will tell us the relative path to the directory that
   // we expressed interest in, so we need to adjust for it in our results
-  var path_prefix: String = '';
+  var path_prefix: string = '';
   var root: Function = resp.watch;
   if ('relative_path' in resp) {
     path_prefix = resp.relative_path;
@@ -79,7 +79,7 @@ client.command(['watch-project', process.cwd()], function(error: Object, resp: H
       // Which fields we're interested in
       fields: ["name", "size", "exists", "type"]
     }],
-    function(error: Object, resp: Object) {
+    function(error: object, resp: object) {
       if (error) {
         // Probably an error in the subscription criteria
         console.error('failed to subscribe: ', error);
@@ -115,14 +115,14 @@ client.command(['watch-project', process.cwd()], function(error: Object, resp: H
     //       mode: 33188 } ] }
     console.log(resp.root, resp.subscription);
     for (var i in resp.files) {
-      var f: String = resp.files[i];
+      var f: string = resp.files[i];
       console.log(f);
     }
   });
 
   // Here's an example of just subscribing for notifications after the
   // current point in time
-  client.command(['clock', root], function(error: Object, resp: Object) {
+  client.command(['clock', root], function(error: object, resp: object) {
     if (error) {
       console.error('Failed to query clock:', error);
       return;
@@ -142,7 +142,7 @@ client.command(['watch-project', process.cwd()], function(error: Object, resp: H
         fields: ["name"],
         since: resp.clock // time constraint
       }],
-      function(error: Object, resp: Object) {
+      function(error: object, resp: object) {
         if (error) {
           console.error('failed to subscribe: ', error);
           return;

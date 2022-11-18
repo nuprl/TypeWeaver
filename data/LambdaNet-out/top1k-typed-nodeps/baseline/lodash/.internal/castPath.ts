@@ -9,7 +9,7 @@ import stringToPath from './stringToPath.js'
  * @param {Object} [object] The object to query keys on.
  * @returns {Array} Returns the cast property path array.
  */
-function castPath(value: String, object: Object): Array {
+function castPath(value: string, object: object): any[] {
   if (Array.isArray(value)) {
     return value
   }

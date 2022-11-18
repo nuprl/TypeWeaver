@@ -1,8 +1,8 @@
-function stringifyNode(node: Object, custom: Function): String {
-  var type: String = node.type;
-  var value: String = node.value;
-  var buf: String;
-  var customResult: String;
+function stringifyNode(node: object, custom: Function): string {
+  var type: string = node.type;
+  var value: string = node.value;
+  var buf: string;
+  var customResult: string;
 
   if (custom && (customResult = custom(node)) !== undefined) {
     return customResult;
@@ -32,8 +32,8 @@ function stringifyNode(node: Object, custom: Function): String {
   return value;
 }
 
-function stringify(nodes: Array, custom: String): String {
-  var result: String, i: Number;
+function stringify(nodes: any[], custom: string): string {
+  var result: string, i: number;
 
   if (Array.isArray(nodes)) {
     result = "";

@@ -1,4 +1,4 @@
-const isWin: Boolean = process.platform === 'win32';
+const isWin: boolean = process.platform === 'win32';
 
 /*!
  * removeTrailingSeparator <https://github.com/darsain/remove-trailing-separator>
@@ -7,8 +7,8 @@ const isWin: Boolean = process.platform === 'win32';
  * Copyright (c) darsain.
  * Released under the ISC License.
  */
-function removeTrailingSeparator(str: String): Array {
-	let i: Number = str.length - 1;
+function removeTrailingSeparator(str: string): any[] {
+	let i: number = str.length - 1;
 	if (i < 2) {
 		return str;
 	}
@@ -18,8 +18,8 @@ function removeTrailingSeparator(str: String): Array {
 	return str.substr(0, i + 1);
 }
 
-function isSeparator(str: Object, i: Number): Boolean {
-    let char: String = str[i];
+function isSeparator(str: object, i: number): boolean {
+    let char: string = str[i];
     return i > 0 && (char === '/' || (isWin && char === '\\'));
 }
 
@@ -30,7 +30,7 @@ function isSeparator(str: Object, i: Number): Boolean {
  * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
-function normalizePath(str: String, stripTrailing: Number): String {
+function normalizePath(str: string, stripTrailing: number): string {
   if (typeof str !== 'string') {
     throw new TypeError('expected a string');
   }
@@ -48,7 +48,7 @@ function normalizePath(str: String, stripTrailing: Number): String {
  * Copyright (c) 2014, 2017, Jon Schlinkert.
  * Released under the MIT License.
  */
-export function unixify(filepath: String, stripTrailing: String = true): String {
+export function unixify(filepath: string, stripTrailing: string = true): string {
   if(isWin) {
     filepath = normalizePath(filepath, stripTrailing);
     return filepath.replace(/^([a-zA-Z]+:|\.\/)/, '');
@@ -59,6 +59,6 @@ export function unixify(filepath: String, stripTrailing: String = true): String 
 /*
 * Corrects a windows path to unix format (including \\?\c:...)
 */
-export function correctPath(filepath: String): Object {
+export function correctPath(filepath: string): object {
     return unixify(filepath.replace(/^\\\\\?\\.:\\/,'\\'));
 }

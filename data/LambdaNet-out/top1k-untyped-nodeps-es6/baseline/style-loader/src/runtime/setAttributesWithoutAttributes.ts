@@ -1,6 +1,6 @@
 /* istanbul ignore next  */
 function setAttributesWithoutAttributes(styleElement: Element): Void {
-  const nonce: String =
+  const nonce: string =
     typeof __webpack_nonce__ !== "undefined" ? __webpack_nonce__ : null;
 
   if (nonce) {

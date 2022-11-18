@@ -1,8 +1,8 @@
 'use strict';
 
-export default function repeat(val: String, num: Number): String {
-  var arr: Array = [];
-  var i: Number = 0;
+export default function repeat(val: string, num: number): string {
+  var arr: any[] = [];
+  var i: number = 0;
 
   while (num--) {
     arr[i++] = val;

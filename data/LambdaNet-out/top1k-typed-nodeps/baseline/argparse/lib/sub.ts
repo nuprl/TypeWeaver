@@ -6,22 +6,22 @@
 const { inspect } = require('util')
 
 
-module.exports = function sub(pattern: String, ...values): String {
+module.exports = function sub(pattern: string, ...values): string {
     let regex: RegExp = /%(?:(%)|(-)?(\*)?(?:\((\w+)\))?([A-Za-z]))/g
 
-    let result: String = pattern.replace(regex, function (_: TextWrapper, is_literal: Boolean, is_left_align: Boolean, is_padded: Boolean, name: String, format: String) {
+    let result: string = pattern.replace(regex, function (_: TextWrapper, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) {
         if (is_literal) return '%'
 
-        let padded_count: Number = 0
+        let padded_count: number = 0
         if (is_padded) {
             if (values.length === 0) throw new TypeError('not enough arguments for format string')
             padded_count = values.shift()
             if (!Number.isInteger(padded_count)) throw new TypeError('* wants int')
         }
 
-        let str: String
+        let str: string
         if (name !== undefined) {
-            let dict: Object = values[0]
+            let dict: object = values[0]
             if (typeof dict !== 'object' || dict === null) throw new TypeError('format requires a mapping')
             if (!(name in dict)) throw new TypeError(`no such key: '${name}'`)
             str = dict[name]

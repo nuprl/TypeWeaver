@@ -2,9 +2,9 @@
 
 var isGlob: Function = require('is-glob');
 var pathPosixDirname: Function = require('path').posix.dirname;
-var isWin32: Boolean = require('os').platform() === 'win32';
+var isWin32: boolean = require('os').platform() === 'win32';
 
-var slash: String = '/';
+var slash: string = '/';
 var backslash: RegExp = /\\/g;
 var escaped: RegExp = /\\([!*?|[\](){}])/g;
 
@@ -13,8 +13,8 @@ var escaped: RegExp = /\\([!*?|[\](){}])/g;
  * @param {Object} opts
  * @param {boolean} [opts.flipBackslashes=true]
  */
-module.exports = function globParent(str: String, opts: Object): String {
-  var options: Object = Object.assign({ flipBackslashes: true }, opts);
+module.exports = function globParent(str: string, opts: object): string {
+  var options: object = Object.assign({ flipBackslashes: true }, opts);
 
   // flip windows path separators
   if (options.flipBackslashes && isWin32 && str.indexOf(slash) < 0) {
@@ -38,10 +38,10 @@ module.exports = function globParent(str: String, opts: Object): String {
   return str.replace(escaped, '$1');
 };
 
-function isEnclosure(str: String): Boolean {
-  var lastChar: String = str.slice(-1);
+function isEnclosure(str: string): boolean {
+  var lastChar: string = str.slice(-1);
 
-  var enclosureStart: String;
+  var enclosureStart: string;
   switch (lastChar) {
     case '}':
       enclosureStart = '{';
@@ -53,7 +53,7 @@ function isEnclosure(str: String): Boolean {
       return false;
   }
 
-  var foundIndex: Number = str.indexOf(enclosureStart);
+  var foundIndex: number = str.indexOf(enclosureStart);
   if (foundIndex < 0) {
     return false;
   }
@@ -61,7 +61,7 @@ function isEnclosure(str: String): Boolean {
   return str.slice(foundIndex + 1, -1).includes(slash);
 }
 
-function isGlobby(str: Object): Boolean {
+function isGlobby(str: object): boolean {
   if (/\([^()]+$/.test(str)) {
     return true;
   }

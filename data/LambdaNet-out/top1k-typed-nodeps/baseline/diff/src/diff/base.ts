@@ -174,19 +174,19 @@ Diff.prototype = {
   }
 };
 
-function buildValues(diff: Array, components: Array, newString: Array, oldString: Array, useLongestToken: String): Object {
-  let componentPos: Number = 0,
-      componentLen: Number = components.length,
-      newPos: Number = 0,
-      oldPos: Number = 0;
+function buildValues(diff: any[], components: any[], newString: any[], oldString: any[], useLongestToken: string): object {
+  let componentPos: number = 0,
+      componentLen: number = components.length,
+      newPos: number = 0,
+      oldPos: number = 0;
 
   for (; componentPos < componentLen; componentPos++) {
     let component: HTMLElement = components[componentPos];
     if (!component.removed) {
       if (!component.added && useLongestToken) {
-        let value: Array = newString.slice(newPos, newPos + component.count);
-        value = value.map(function(value: Array, i: String) {
-          let oldValue: Array = oldString[oldPos + i];
+        let value: any[] = newString.slice(newPos, newPos + component.count);
+        value = value.map(function(value: any[], i: string) {
+          let oldValue: any[] = oldString[oldPos + i];
           return oldValue.length > value.length ? oldValue : value;
         });
 
@@ -208,7 +208,7 @@ function buildValues(diff: Array, components: Array, newString: Array, oldString
       // The diffing algorithm is tied to add then remove output and this is the simplest
       // route to get the desired output with minimal overhead.
       if (componentPos && components[componentPos - 1].added) {
-        let tmp: String = components[componentPos - 1];
+        let tmp: string = components[componentPos - 1];
         components[componentPos - 1] = components[componentPos];
         components[componentPos] = tmp;
       }
@@ -230,6 +230,6 @@ function buildValues(diff: Array, components: Array, newString: Array, oldString
   return components;
 }
 
-function clonePath(path: String): Object {
+function clonePath(path: string): object {
   return { newPos: path.newPos, components: path.components.slice(0) };
 }

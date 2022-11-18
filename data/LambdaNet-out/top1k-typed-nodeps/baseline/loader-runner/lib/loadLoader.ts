@@ -1,13 +1,13 @@
-var LoaderLoadingError: Array = require("./LoaderLoadingError");
-var url: String;
+var LoaderLoadingError: any[] = require("./LoaderLoadingError");
+var url: string;
 
-module.exports = function loadLoader(loader: Object, callback: Function): String {
+module.exports = function loadLoader(loader: object, callback: Function): string {
 	if(loader.type === "module") {
 		try {
 			if(url === undefined) url = require("url");
-			var loaderUrl: String = url.pathToFileURL(loader.path);
+			var loaderUrl: string = url.pathToFileURL(loader.path);
 			var modulePromise: Promise = eval("import(" + JSON.stringify(loaderUrl.toString()) + ")");
-			modulePromise.then(function(module: Number) {
+			modulePromise.then(function(module: number) {
 				handleResult(loader, module, callback);
 			}, callback);
 			return;
@@ -16,7 +16,7 @@ module.exports = function loadLoader(loader: Object, callback: Function): String
 		}
 	} else {
 		try {
-			var module: String = require(loader.path);
+			var module: string = require(loader.path);
 		} catch(e) {
 			// it is possible for node to choke on a require if the FD descriptor
 			// limit has been reached. give it a chance to recover.
@@ -36,7 +36,7 @@ module.exports = function loadLoader(loader: Object, callback: Function): String
 	}
 };
 
-function handleResult(loader: Element, module: String, callback: Function): Void {
+function handleResult(loader: Element, module: string, callback: Function): Void {
 	if(typeof module !== "function" && typeof module !== "object") {
 		return callback(new LoaderLoadingError(
 			"Module '" + loader.path + "' is not a loader (export function or es6 module)"

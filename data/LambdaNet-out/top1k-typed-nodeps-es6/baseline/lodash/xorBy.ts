@@ -20,8 +20,8 @@ import last from './last.js'
  * xorBy([2.1, 1.2], [2.3, 3.4], Math.floor)
  * // => [1.2, 3.4]
  */
-function xorBy(...arrays): String {
-  let iteratee: String = last(arrays)
+function xorBy(...arrays): string {
+  let iteratee: string = last(arrays)
   if (isArrayLikeObject(iteratee)) {
     iteratee = undefined
   }

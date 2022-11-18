@@ -22,7 +22,7 @@ import negate from './negate.js'
  * reject(users, ({ active }) => active)
  * // => objects for ['fred']
  */
-function reject(collection: String, predicate: Function): Stack {
+function reject(collection: string, predicate: Function): Stack {
   const func: Function = Array.isArray(collection) ? filter : filterObject
   return func(collection, negate(predicate))
 }

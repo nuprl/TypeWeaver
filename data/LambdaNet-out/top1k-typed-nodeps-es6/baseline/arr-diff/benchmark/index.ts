@@ -1,8 +1,8 @@
 'use strict';
 
-var opts: Object = {alias: {fixtures: 'f', code: 'c'}};
+var opts: object = {alias: {fixtures: 'f', code: 'c'}};
 import argvFactory from 'minimist';
-const argv: Object = argvFactory(process.argv.slice(2), opts);
+const argv: object = argvFactory(process.argv.slice(2), opts);
 import path from 'path';
 import Suite from 'benchmarked';
 

@@ -7,15 +7,15 @@
 
 import path from 'path';
 
-const CHAR_HASH: String = "#".charCodeAt(0);
-const CHAR_SLASH: String = "/".charCodeAt(0);
-const CHAR_BACKSLASH: Number = "\\".charCodeAt(0);
-const CHAR_A: Number = "A".charCodeAt(0);
-const CHAR_Z: Number = "Z".charCodeAt(0);
-const CHAR_LOWER_A: Number = "a".charCodeAt(0);
-const CHAR_LOWER_Z: Number = "z".charCodeAt(0);
-const CHAR_DOT: String = ".".charCodeAt(0);
-const CHAR_COLON: Number = ":".charCodeAt(0);
+const CHAR_HASH: string = "#".charCodeAt(0);
+const CHAR_SLASH: string = "/".charCodeAt(0);
+const CHAR_BACKSLASH: number = "\\".charCodeAt(0);
+const CHAR_A: number = "A".charCodeAt(0);
+const CHAR_Z: number = "Z".charCodeAt(0);
+const CHAR_LOWER_A: number = "a".charCodeAt(0);
+const CHAR_LOWER_Z: number = "z".charCodeAt(0);
+const CHAR_DOT: string = ".".charCodeAt(0);
+const CHAR_COLON: number = ":".charCodeAt(0);
 
 const posixNormalize: Function = path.posix.normalize;
 const winNormalize: Function = path.win32.normalize;
@@ -37,12 +37,12 @@ exports.PathType = PathType;
  * @param {string} p a path
  * @returns {PathType} type of path
  */
-const getType: Function = (p: String) => {
+const getType: Function = (p: string) => {
 	switch (p.length) {
 		case 0:
 			return PathType.Empty;
 		case 1: {
-			const c0: String = p.charCodeAt(0);
+			const c0: string = p.charCodeAt(0);
 			switch (c0) {
 				case CHAR_DOT:
 					return PathType.Relative;
@@ -54,10 +54,10 @@ const getType: Function = (p: String) => {
 			return PathType.Normal;
 		}
 		case 2: {
-			const c0: Number = p.charCodeAt(0);
+			const c0: number = p.charCodeAt(0);
 			switch (c0) {
 				case CHAR_DOT: {
-					const c1: String = p.charCodeAt(1);
+					const c1: string = p.charCodeAt(1);
 					switch (c1) {
 						case CHAR_DOT:
 						case CHAR_SLASH:
@@ -70,7 +70,7 @@ const getType: Function = (p: String) => {
 				case CHAR_HASH:
 					return PathType.Internal;
 			}
-			const c1: Number = p.charCodeAt(1);
+			const c1: number = p.charCodeAt(1);
 			if (c1 === CHAR_COLON) {
 				if (
 					(c0 >= CHAR_A && c0 <= CHAR_Z) ||
@@ -82,15 +82,15 @@ const getType: Function = (p: String) => {
 			return PathType.Normal;
 		}
 	}
-	const c0: Number = p.charCodeAt(0);
+	const c0: number = p.charCodeAt(0);
 	switch (c0) {
 		case CHAR_DOT: {
-			const c1: String = p.charCodeAt(1);
+			const c1: string = p.charCodeAt(1);
 			switch (c1) {
 				case CHAR_SLASH:
 					return PathType.Relative;
 				case CHAR_DOT: {
-					const c2: Number = p.charCodeAt(2);
+					const c2: number = p.charCodeAt(2);
 					if (c2 === CHAR_SLASH) return PathType.Relative;
 					return PathType.Normal;
 				}
@@ -102,9 +102,9 @@ const getType: Function = (p: String) => {
 		case CHAR_HASH:
 			return PathType.Internal;
 	}
-	const c1: Number = p.charCodeAt(1);
+	const c1: number = p.charCodeAt(1);
 	if (c1 === CHAR_COLON) {
-		const c2: Number = p.charCodeAt(2);
+		const c2: number = p.charCodeAt(2);
 		if (
 			(c2 === CHAR_BACKSLASH || c2 === CHAR_SLASH) &&
 			((c0 >= CHAR_A && c0 <= CHAR_Z) ||
@@ -121,14 +121,14 @@ exports.getType = getType;
  * @param {string} p a path
  * @returns {string} the normalized path
  */
-const normalize: Function = (p: Array) => {
+const normalize: Function = (p: any[]) => {
 	switch (getType(p)) {
 		case PathType.Empty:
 			return p;
 		case PathType.AbsoluteWin:
 			return winNormalize(p);
 		case PathType.Relative: {
-			const r: String = posixNormalize(p);
+			const r: string = posixNormalize(p);
 			return getType(r) === PathType.Relative ? r : `./${r}`;
 		}
 	}
@@ -141,9 +141,9 @@ exports.normalize = normalize;
  * @param {string | undefined} request the request path
  * @returns {string} the joined path
  */
-const join: Function = (rootPath: String, request: String) => {
+const join: Function = (rootPath: string, request: string) => {
 	if (!request) return normalize(rootPath);
-	const requestType: String = getType(request);
+	const requestType: string = getType(request);
 	switch (requestType) {
 		case PathType.AbsolutePosix:
 			return posixNormalize(request);
@@ -162,7 +162,7 @@ const join: Function = (rootPath: String, request: String) => {
 		case PathType.Empty:
 			return rootPath;
 		case PathType.Relative: {
-			const r: String = posixNormalize(rootPath);
+			const r: string = posixNormalize(rootPath);
 			return getType(r) === PathType.Relative ? r : `./${r}`;
 		}
 	}
@@ -177,9 +177,9 @@ const joinCache: Map = new Map();
  * @param {string | undefined} request the request path
  * @returns {string} the joined path
  */
-const cachedJoin: Function = (rootPath: String, request: Object) => {
+const cachedJoin: Function = (rootPath: string, request: object) => {
 	let cacheEntry: Function;
-	let cache: Object = joinCache.get(rootPath);
+	let cache: object = joinCache.get(rootPath);
 	if (cache === undefined) {
 		joinCache.set(rootPath, (cache = new Map()));
 	} else {
@@ -192,13 +192,13 @@ const cachedJoin: Function = (rootPath: String, request: Object) => {
 };
 exports.cachedJoin = cachedJoin;
 
-const checkImportsExportsFieldTarget: Function = (relativePath: String) => {
-	let lastNonSlashIndex: Number = 0;
-	let slashIndex: Number = relativePath.indexOf("/", 1);
-	let cd: Number = 0;
+const checkImportsExportsFieldTarget: Function = (relativePath: string) => {
+	let lastNonSlashIndex: number = 0;
+	let slashIndex: number = relativePath.indexOf("/", 1);
+	let cd: number = 0;
 
 	while (slashIndex !== -1) {
-		const folder: String = relativePath.slice(lastNonSlashIndex, slashIndex);
+		const folder: string = relativePath.slice(lastNonSlashIndex, slashIndex);
 
 		switch (folder) {
 			case "..": {

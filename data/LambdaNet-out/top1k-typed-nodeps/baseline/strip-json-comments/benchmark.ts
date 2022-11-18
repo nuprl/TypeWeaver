@@ -2,8 +2,8 @@
 import fs from 'node:fs';
 import stripJsonComments from './index.js';
 
-const json: String = fs.readFileSync('sample.json', 'utf8');
-const bigJson: String = fs.readFileSync('sample-big.json', 'utf8');
+const json: string = fs.readFileSync('sample.json', 'utf8');
+const bigJson: string = fs.readFileSync('sample-big.json', 'utf8');
 
 bench('strip JSON comments', () => {
 	set('type', 'static');

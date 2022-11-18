@@ -1,15 +1,15 @@
 'use strict';
 
-module.exports = function unique(init: Array): Array {
-  var args: Array = [].slice.call(arguments);
-  var len: Number = args.length;
+module.exports = function unique(init: any[]): any[] {
+  var args: any[] = [].slice.call(arguments);
+  var len: number = args.length;
 
   for (var i = 1; i < len; i++) {
-    var arr: Array = args[i];
+    var arr: any[] = args[i];
 
-    var alen: Number = arr.length;
+    var alen: number = arr.length;
     while (alen--) {
-      var ele: String = arr[alen];
+      var ele: string = arr[alen];
       if (init.indexOf(ele) === -1) {
         init.push(ele);
       }

@@ -1,14 +1,14 @@
-var crypto: String = require('crypto')
+var crypto: string = require('crypto')
 
-function sha (key: String, body: String, algorithm: String): String {
+function sha (key: string, body: string, algorithm: string): string {
   return crypto.createHmac(algorithm, key).update(body).digest('base64')
 }
 
-function rsa (key: String, body: String): String {
+function rsa (key: string, body: string): string {
   return crypto.createSign('RSA-SHA1').update(body).sign(key, 'base64')
 }
 
-function rfc3986 (str: String): String {
+function rfc3986 (str: string): string {
   return encodeURIComponent(str)
     .replace(/!/g,'%21')
     .replace(/\*/g,'%2A')
@@ -20,8 +20,8 @@ function rfc3986 (str: String): String {
 // Maps object to bi-dimensional array
 // Converts { foo: 'A', bar: [ 'b', 'B' ]} to
 // [ ['foo', 'A'], ['bar', 'b'], ['bar', 'B'] ]
-function map (obj: Object): Array {
-  var key: String, val: Array, arr: Array = []
+function map (obj: object): any[] {
+  var key: string, val: any[], arr: any[] = []
   for (key in obj) {
     val = obj[key]
     if (Array.isArray(val))
@@ -37,17 +37,17 @@ function map (obj: Object): Array {
 }
 
 // Compare function for sort
-function compare (a: Number, b: Number): Number {
+function compare (a: number, b: number): number {
   return a > b ? 1 : a < b ? -1 : 0
 }
 
-function generateBase (httpMethod: String, base_uri: String, params: Array): String {
+function generateBase (httpMethod: string, base_uri: string, params: any[]): string {
   // adapted from https://dev.twitter.com/docs/auth/oauth and 
   // https://dev.twitter.com/docs/auth/creating-signature
 
   // Parameter normalization
   // http://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
-  var normalized: String = map(params)
+  var normalized: string = map(params)
   // 1.  First, the name and value of each parameter are encoded
   .map(function (p: Promise) {
     return [ rfc3986(p[0]), rfc3986(p[1] || '') ]
@@ -61,13 +61,13 @@ function generateBase (httpMethod: String, base_uri: String, params: Array): Str
   // 3.  The name of each parameter is concatenated to its corresponding
   //     value using an "=" character (ASCII code 61) as a separator, even
   //     if the value is empty.
-  .map(function (p: Array) { return p.join('=') })
+  .map(function (p: any[]) { return p.join('=') })
    // 4.  The sorted name/value pairs are concatenated together into a
    //     single string by using an "&" character (ASCII code 38) as
    //     separator.
   .join('&')
 
-  var base: String = [
+  var base: string = [
     rfc3986(httpMethod ? httpMethod.toUpperCase() : 'GET'),
     rfc3986(base_uri),
     rfc3986(normalized)
@@ -76,9 +76,9 @@ function generateBase (httpMethod: String, base_uri: String, params: Array): Str
   return base
 }
 
-function hmacsign (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: String): String {
-  var base: String = generateBase(httpMethod, base_uri, params)
-  var key: String = [
+function hmacsign (httpMethod: string, base_uri: string, params: Function, consumer_secret: number, token_secret: string): string {
+  var base: string = generateBase(httpMethod, base_uri, params)
+  var key: string = [
     consumer_secret || '',
     token_secret || ''
   ].map(rfc3986).join('&')
@@ -86,9 +86,9 @@ function hmacsign (httpMethod: String, base_uri: String, params: Function, consu
   return sha(key, base, 'sha1')
 }
 
-function hmacsign256 (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: Number): String {
-  var base: String = generateBase(httpMethod, base_uri, params)
-  var key: String = [
+function hmacsign256 (httpMethod: string, base_uri: string, params: Function, consumer_secret: number, token_secret: number): string {
+  var base: string = generateBase(httpMethod, base_uri, params)
+  var key: string = [
     consumer_secret || '',
     token_secret || ''
   ].map(rfc3986).join('&')
@@ -96,15 +96,15 @@ function hmacsign256 (httpMethod: String, base_uri: String, params: Function, co
   return sha(key, base, 'sha256')
 }
 
-function rsasign (httpMethod: String, base_uri: String, params: Function, private_key: String, token_secret: String): String {
-  var base: String = generateBase(httpMethod, base_uri, params)
-  var key: String = private_key || ''
+function rsasign (httpMethod: string, base_uri: string, params: Function, private_key: string, token_secret: string): string {
+  var base: string = generateBase(httpMethod, base_uri, params)
+  var key: string = private_key || ''
 
   return rsa(key, base)
 }
 
-function plaintext (consumer_secret: Number, token_secret: Number): String {
-  var key: String = [
+function plaintext (consumer_secret: number, token_secret: number): string {
+  var key: string = [
     consumer_secret || '',
     token_secret || ''
   ].map(rfc3986).join('&')
@@ -112,9 +112,9 @@ function plaintext (consumer_secret: Number, token_secret: Number): String {
   return key
 }
 
-function sign (signMethod: String, httpMethod: String, base_uri: String, params: Function, consumer_secret: String, token_secret: String): Promise {
+function sign (signMethod: string, httpMethod: string, base_uri: string, params: Function, consumer_secret: string, token_secret: string): Promise {
   var method: Function
-  var skipArgs: Number = 1
+  var skipArgs: number = 1
 
   switch (signMethod) {
     case 'RSA-SHA1':

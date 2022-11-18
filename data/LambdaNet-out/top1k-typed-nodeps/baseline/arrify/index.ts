@@ -1,4 +1,4 @@
-export default function arrify(value: Object): Array {
+export default function arrify(value: object): any[] {
 	if (value === null || value === undefined) {
 		return [];
 	}

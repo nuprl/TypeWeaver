@@ -1,5 +1,5 @@
-module['exports'] = function(colors: Object) {
-  return function(letter: String, i: Number, exploded: Function) {
+module['exports'] = function(colors: object) {
+  return function(letter: string, i: number, exploded: Function) {
     if (letter === ' ') return letter;
     switch (i%3) {
       case 0: return colors.red(letter);

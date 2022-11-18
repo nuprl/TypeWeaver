@@ -4,8 +4,8 @@ import support from "../var/support.js";
 
 ( function() {
 
-var reliableTrDimensionsVal: Boolean,
-	div: Object = document.createElement( "div" );
+var reliableTrDimensionsVal: boolean,
+	div: object = document.createElement( "div" );
 
 // Finish early in limited (non-browser) environments
 if ( !div.style ) {
@@ -19,7 +19,7 @@ if ( !div.style ) {
 // Only Firefox includes border widths
 // in computed dimensions. (gh-4529)
 support.reliableTrDimensions = function() {
-	var table: Object, tr: Object, trStyle: HTMLElement;
+	var table: object, tr: object, trStyle: HTMLElement;
 	if ( reliableTrDimensionsVal == null ) {
 		table = document.createElement( "table" );
 		tr = document.createElement( "tr" );

@@ -13,7 +13,7 @@ import nonASCIIidentifierStartChars from "./generated/nonASCIIidentifierStartCha
 
 // Reserved word lists for various dialects of the language
 
-export const reservedWords: Object = {
+export const reservedWords: object = {
   3: "abstract boolean byte char class double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile",
   5: "class enum extends super const export import",
   6: "enum",
@@ -23,9 +23,9 @@ export const reservedWords: Object = {
 
 // And the keywords
 
-const ecma5AndLessKeywords: String = "break case catch continue debugger default do else finally for function if return switch throw try var while with null true false instanceof typeof void delete new in this"
+const ecma5AndLessKeywords: string = "break case catch continue debugger default do else finally for function if return switch throw try var while with null true false instanceof typeof void delete new in this"
 
-export const keywords: Object = {
+export const keywords: object = {
   5: ecma5AndLessKeywords,
   "5module": ecma5AndLessKeywords + " export import",
   6: ecma5AndLessKeywords + " const class extends export import super"
@@ -41,8 +41,8 @@ const nonASCIIidentifier: HTMLElement = new RegExp("[" + nonASCIIidentifierStart
 // This has a complexity linear to the value of the code. The
 // assumption is that looking up astral identifier characters is
 // rare.
-function isInAstralSet(code: Number, set: Array): Boolean {
-  let pos: Number = 0x10000
+function isInAstralSet(code: number, set: any[]): boolean {
+  let pos: number = 0x10000
   for (let i = 0; i < set.length; i += 2) {
     pos += set[i]
     if (pos > code) return false
@@ -53,7 +53,7 @@ function isInAstralSet(code: Number, set: Array): Boolean {
 
 // Test whether a given character code starts an identifier.
 
-export function isIdentifierStart(code: Number, astral: Number): Boolean {
+export function isIdentifierStart(code: number, astral: number): boolean {
   if (code < 65) return code === 36
   if (code < 91) return true
   if (code < 97) return code === 95
@@ -65,7 +65,7 @@ export function isIdentifierStart(code: Number, astral: Number): Boolean {
 
 // Test whether a given character is part of an identifier.
 
-export function isIdentifierChar(code: Number, astral: Number): Boolean {
+export function isIdentifierChar(code: number, astral: number): boolean {
   if (code < 48) return code === 36
   if (code < 58) return true
   if (code < 65) return false

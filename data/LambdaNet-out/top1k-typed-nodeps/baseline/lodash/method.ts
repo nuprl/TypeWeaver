@@ -22,8 +22,8 @@ import invoke from './invoke.js'
  * map(objects, method(['a', 'b']))
  * // => [2, 1]
  */
-function method(path: String, args: Function): Function {
-  return (object: Object) => invoke(object, path, args)
+function method(path: string, args: Function): Function {
+  return (object: object) => invoke(object, path, args)
 }
 
 export default method

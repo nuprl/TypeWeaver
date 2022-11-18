@@ -1,8 +1,8 @@
 // See: http://code.google.com/p/google-diff-match-patch/wiki/API
-export function convertChangesToDMP(changes: Array): Array {
-  let ret: Array = [],
-      change: Object,
-      operation: Number;
+export function convertChangesToDMP(changes: any[]): any[] {
+  let ret: any[] = [],
+      change: object,
+      operation: number;
   for (let i = 0; i < changes.length; i++) {
     change = changes[i];
     if (change.added) {

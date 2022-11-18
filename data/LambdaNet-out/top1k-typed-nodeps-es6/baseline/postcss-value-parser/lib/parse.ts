@@ -1,39 +1,39 @@
-var openParentheses: Number = "(".charCodeAt(0);
-var closeParentheses: Number = ")".charCodeAt(0);
-var singleQuote: Number = "'".charCodeAt(0);
-var doubleQuote: Number = '"'.charCodeAt(0);
-var backslash: Number = "\\".charCodeAt(0);
-var slash: Number = "/".charCodeAt(0);
-var comma: Number = ",".charCodeAt(0);
-var colon: Number = ":".charCodeAt(0);
-var star: Number = "*".charCodeAt(0);
-var uLower: Number = "u".charCodeAt(0);
-var uUpper: Number = "U".charCodeAt(0);
-var plus: Number = "+".charCodeAt(0);
+var openParentheses: number = "(".charCodeAt(0);
+var closeParentheses: number = ")".charCodeAt(0);
+var singleQuote: number = "'".charCodeAt(0);
+var doubleQuote: number = '"'.charCodeAt(0);
+var backslash: number = "\\".charCodeAt(0);
+var slash: number = "/".charCodeAt(0);
+var comma: number = ",".charCodeAt(0);
+var colon: number = ":".charCodeAt(0);
+var star: number = "*".charCodeAt(0);
+var uLower: number = "u".charCodeAt(0);
+var uUpper: number = "U".charCodeAt(0);
+var plus: number = "+".charCodeAt(0);
 var isUnicodeRange: RegExp = /^[a-f0-9?-]+$/i;
 
-export default function(input: Object) {
-  var tokens: Array = [];
-  var value: String = input;
+export default function(input: object) {
+  var tokens: any[] = [];
+  var value: string = input;
 
-  var next: Number,
-    quote: String,
-    prev: Object,
-    token: String,
-    escape: Boolean,
-    escapePos: Number,
-    whitespacePos: Number,
-    parenthesesOpenPos: Number;
-  var pos: Number = 0;
-  var code: Number = value.charCodeAt(pos);
-  var max: Number = value.length;
-  var stack: Array = [{ nodes: tokens }];
-  var balanced: Number = 0;
-  var parent: Object;
+  var next: number,
+    quote: string,
+    prev: object,
+    token: string,
+    escape: boolean,
+    escapePos: number,
+    whitespacePos: number,
+    parenthesesOpenPos: number;
+  var pos: number = 0;
+  var code: number = value.charCodeAt(pos);
+  var max: number = value.length;
+  var stack: any[] = [{ nodes: tokens }];
+  var balanced: number = 0;
+  var parent: object;
 
-  var name: String = "";
-  var before: String = "";
-  var after: String = "";
+  var name: string = "";
+  var before: string = "";
+  var after: string = "";
 
   while (pos < max) {
     // Whitespaces

@@ -1,17 +1,17 @@
-const perf: Number =
+const perf: number =
   typeof performance === 'object' &&
   performance &&
   typeof performance.now === 'function'
     ? performance
     : Date
 
-const hasAbortController: Boolean = typeof AbortController === 'function'
+const hasAbortController: boolean = typeof AbortController === 'function'
 
 // minimal backwards-compatibility polyfill
 // this doesn't have nearly all the checks and whatnot that
 // actual AbortController/Signal has, but it's enough for
 // our purposes, and if used properly, behaves the same.
-const AC: Object = hasAbortController
+const AC: object = hasAbortController
   ? AbortController
   : class AbortController {
       constructor() {
@@ -22,10 +22,10 @@ const AC: Object = hasAbortController
       }
     }
 
-const hasAbortSignal: Boolean = typeof AbortSignal === 'function'
+const hasAbortSignal: boolean = typeof AbortSignal === 'function'
 // Some polyfills put this on the AC class, not global
-const hasACAbortSignal: Boolean = typeof AC.AbortSignal === 'function'
-const AS: String = hasAbortSignal
+const hasACAbortSignal: boolean = typeof AC.AbortSignal === 'function'
+const AS: string = hasAbortSignal
   ? AbortSignal
   : hasACAbortSignal
   ? AC.AbortController
@@ -56,22 +56,22 @@ const AS: String = hasAbortSignal
     }
 
 const warned: Error = new Set()
-const deprecatedOption: Function = (opt: String, instead: String) => {
-  const code: String = `LRU_CACHE_OPTION_${opt}`
+const deprecatedOption: Function = (opt: string, instead: string) => {
+  const code: string = `LRU_CACHE_OPTION_${opt}`
   if (shouldWarn(code)) {
     warn(code, `${opt} option`, `options.${instead}`, LRUCache)
   }
 }
-const deprecatedMethod: Function = (method: String, instead: String) => {
-  const code: String = `LRU_CACHE_METHOD_${method}`
+const deprecatedMethod: Function = (method: string, instead: string) => {
+  const code: string = `LRU_CACHE_METHOD_${method}`
   if (shouldWarn(code)) {
     const { prototype } = LRUCache
     const { get } = Object.getOwnPropertyDescriptor(prototype, method)
     warn(code, `${method} method`, `cache.${instead}()`, get)
   }
 }
-const deprecatedProperty: Function = (field: String, instead: String) => {
-  const code: String = `LRU_CACHE_PROPERTY_${field}`
+const deprecatedProperty: Function = (field: string, instead: string) => {
+  const code: string = `LRU_CACHE_PROPERTY_${field}`
   if (shouldWarn(code)) {
     const { prototype } = LRUCache
     const { get } = Object.getOwnPropertyDescriptor(prototype, field)
@@ -87,15 +87,15 @@ const emitWarning: Function = (...a) => {
     : console.error(...a)
 }
 
-const shouldWarn: Function = (code: String) => !warned.has(code)
+const shouldWarn: Function = (code: string) => !warned.has(code)
 
-const warn: Function = (code: String, what: String, instead: String, fn: Number) => {
+const warn: Function = (code: string, what: string, instead: string, fn: number) => {
   warned.add(code)
-  const msg: String = `The ${what} is deprecated. Please use ${instead} instead.`
+  const msg: string = `The ${what} is deprecated. Please use ${instead} instead.`
   emitWarning(msg, 'DeprecationWarning', code, fn)
 }
 
-const isPosInt: Function = (n: Number) => n && n === Math.floor(n) && n > 0 && isFinite(n)
+const isPosInt: Function = (n: number) => n && n === Math.floor(n) && n > 0 && isFinite(n)
 
 /* istanbul ignore next - This is a little bit ridiculous, tbh.
  * The maximum array length is 2^32-1 or thereabouts on most JS impls.
@@ -105,7 +105,7 @@ const isPosInt: Function = (n: Number) => n && n === Math.floor(n) && n > 0 && i
  * zeroes at init time is brutal when you get that big.
  * But why not be complete?
  * Maybe in the future, these limits will have expanded. */
-const getUintArray: Function = (max: Number) =>
+const getUintArray: Function = (max: number) =>
   !isPosInt(max)
     ? null
     : max <= Math.pow(2, 8)
@@ -174,7 +174,7 @@ class LRUCache {
       throw new TypeError('max option must be a nonnegative integer')
     }
 
-    const UintArray: Array = max ? getUintArray(max) : Array
+    const UintArray: any[] = max ? getUintArray(max) : Array
     if (!UintArray) {
       throw new Error('invalid max value: ' + max)
     }
@@ -276,10 +276,10 @@ class LRUCache {
       )
     }
     if (!this.ttlAutopurge && !this.max && !this.maxSize) {
-      const code: String = 'LRU_CACHE_UNBOUNDED'
+      const code: string = 'LRU_CACHE_UNBOUNDED'
       if (shouldWarn(code)) {
         warned.add(code)
-        const msg: String =
+        const msg: string =
           'TTL caching without ttlAutopurge, max, or maxSize can ' +
           'result in unbounded memory consumption.'
         emitWarning(msg, 'UnboundedCacheWarning', code, LRUCache)
@@ -305,11 +305,11 @@ class LRUCache {
     this.ttls = new ZeroArray(this.max)
     this.starts = new ZeroArray(this.max)
 
-    this.setItemTTL = (index: String, ttl: Number, start: Number = perf.now()) => {
+    this.setItemTTL = (index: string, ttl: number, start: number = perf.now()) => {
       this.starts[index] = ttl !== 0 ? start : 0
       this.ttls[index] = ttl
       if (ttl !== 0 && this.ttlAutopurge) {
-        const t: Number = setTimeout(() => {
+        const t: number = setTimeout(() => {
           if (this.isStale(index)) {
             this.delete(this.keyList[index])
           }
@@ -321,18 +321,18 @@ class LRUCache {
       }
     }
 
-    this.updateItemAge = (index: Number) => {
+    this.updateItemAge = (index: number) => {
       this.starts[index] = this.ttls[index] !== 0 ? perf.now() : 0
     }
 
     // debounce calls to perf.now() to 1s so we're not hitting
     // that costly call repeatedly.
-    let cachedNow: Number = 0
+    let cachedNow: number = 0
     const getNow: Function = () => {
-      const n: Number = perf.now()
+      const n: number = perf.now()
       if (this.ttlResolution > 0) {
         cachedNow = n
-        const t: Number = setTimeout(
+        const t: number = setTimeout(
           () => (cachedNow = 0),
           this.ttlResolution
         )
@@ -344,8 +344,8 @@ class LRUCache {
       return n
     }
 
-    this.getRemainingTTL = (key: String) => {
-      const index: String = this.keyMap.get(key)
+    this.getRemainingTTL = (key: string) => {
+      const index: string = this.keyMap.get(key)
       if (index === undefined) {
         return 0
       }
@@ -356,7 +356,7 @@ class LRUCache {
             (cachedNow || getNow())
     }
 
-    this.isStale = (index: String) => {
+    this.isStale = (index: string) => {
       return (
         this.ttls[index] !== 0 &&
         this.starts[index] !== 0 &&
@@ -374,11 +374,11 @@ class LRUCache {
   initializeSizeTracking() {
     this.calculatedSize = 0
     this.sizes = new ZeroArray(this.max)
-    this.removeItemSize = (index: Number) => {
+    this.removeItemSize = (index: number) => {
       this.calculatedSize -= this.sizes[index]
       this.sizes[index] = 0
     }
-    this.requireSize = (k: Number, v: Array, size: String, sizeCalculation: Function) => {
+    this.requireSize = (k: number, v: any[], size: string, sizeCalculation: Function) => {
       if (!isPosInt(size)) {
         if (sizeCalculation) {
           if (typeof sizeCalculation !== 'function') {
@@ -398,9 +398,9 @@ class LRUCache {
       }
       return size
     }
-    this.addItemSize = (index: String, size: String) => {
+    this.addItemSize = (index: string, size: string) => {
       this.sizes[index] = size
-      const maxSize: Number = this.maxSize - this.sizes[index]
+      const maxSize: number = this.maxSize - this.sizes[index]
       while (this.calculatedSize > maxSize) {
         this.evict(true)
       }
@@ -520,7 +520,7 @@ class LRUCache {
   }
 
   purgeStale() {
-    let deleted: Boolean = false
+    let deleted: boolean = false
     for (const i of this.rindexes({ allowStale: true })) {
       if (this.isStale(i)) {
         this.delete(this.keyList[i])
@@ -531,11 +531,11 @@ class LRUCache {
   }
 
   dump() {
-    const arr: Array = []
+    const arr: any[] = []
     for (const i of this.indexes({ allowStale: true })) {
-      const key: String = this.keyList[i]
+      const key: string = this.keyList[i]
       const v: LRUCache = this.valList[i]
-      const value: String = this.isBackgroundFetch(v)
+      const value: string = this.isBackgroundFetch(v)
         ? v.__staleWhileFetching
         : v
       const entry: LRUCache = { value }
@@ -543,7 +543,7 @@ class LRUCache {
         entry.ttl = this.ttls[i]
         // always dump the start relative to a portable timestamp
         // it's ok for this to be a bit slow, it's a rare operation.
-        const age: Number = perf.now() - this.starts[i]
+        const age: number = perf.now() - this.starts[i]
         entry.start = Math.floor(Date.now() - age)
       }
       if (this.sizes) {
@@ -561,7 +561,7 @@ class LRUCache {
         // entry.start is a portable timestamp, but we may be using
         // node's performance.now(), so calculate the offset.
         // it's ok for this to be a bit slow, it's a rare operation.
-        const age: Number = Date.now() - entry.start
+        const age: number = Date.now() - entry.start
         entry.start = perf.now() - age
       }
       this.set(key, entry.value, entry)
@@ -651,15 +651,15 @@ class LRUCache {
 
   pop() {
     if (this.size) {
-      const val: String = this.valList[this.head]
+      const val: string = this.valList[this.head]
       this.evict(true)
       return val
     }
   }
 
   evict(free) {
-    const head: String = this.head
-    const k: String = this.keyList[head]
+    const head: string = this.head
+    const k: string = this.keyList[head]
     const v: LRUCache = this.valList[head]
     if (this.isBackgroundFetch(v)) {
       v.__abortController.abort()
@@ -706,25 +706,25 @@ class LRUCache {
   }
 
   backgroundFetch(k, index, options, context) {
-    const v: String = index === undefined ? undefined : this.valList[index]
+    const v: string = index === undefined ? undefined : this.valList[index]
     if (this.isBackgroundFetch(v)) {
       return v
     }
     const ac: LRUCache = new AC()
-    const fetchOpts: Object = {
+    const fetchOpts: object = {
       signal: ac.signal,
       options,
       context,
     }
-    const cb: Function = (v: Array) => {
+    const cb: Function = (v: any[]) => {
       if (!ac.signal.aborted) {
         this.set(k, v, fetchOpts.options)
       }
       return v
     }
-    const eb: Function = (er: String) => {
+    const eb: Function = (er: string) => {
       if (this.valList[index] === p) {
-        const del: Boolean =
+        const del: boolean =
           !options.noDeleteOnFetchRejection ||
           p.__staleWhileFetching === undefined
         if (del) {
@@ -908,9 +908,9 @@ class LRUCache {
   }
 
   delete(k) {
-    let deleted: Boolean = false
+    let deleted: boolean = false
     if (this.size !== 0) {
-      const index: String = this.keyMap.get(k)
+      const index: string = this.keyMap.get(k)
       if (index !== undefined) {
         deleted = true
         if (this.size === 1) {
@@ -956,7 +956,7 @@ class LRUCache {
       if (this.isBackgroundFetch(v)) {
         v.__abortController.abort()
       } else {
-        const k: String = this.keyList[index]
+        const k: string = this.keyList[index]
         this.dispose(v, k, 'delete')
         if (this.disposeAfter) {
           this.disposed.push([v, k, 'delete'])

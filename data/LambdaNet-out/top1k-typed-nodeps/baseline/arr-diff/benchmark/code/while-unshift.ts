@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports = function diff(arr: Array, arrays: String): Array {
+module.exports = function diff(arr: any[], arrays: string): any[] {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
 
-  var len: Number = arr.length;
-  var result: Array = [];
+  var len: number = arr.length;
+  var result: any[] = [];
 
   while (len--) {
     if (arrays.indexOf(arr[len]) === -1) {

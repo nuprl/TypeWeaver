@@ -5,8 +5,8 @@
  * @param {Object} object The object to query.
  * @returns {Function} Returns the new accessor function.
  */
-function basePropertyOf(object: Object): Function {
-  return (key: String) => object == null ? undefined : object[key]
+function basePropertyOf(object: object): Function {
+  return (key: string) => object == null ? undefined : object[key]
 }
 
 export default basePropertyOf

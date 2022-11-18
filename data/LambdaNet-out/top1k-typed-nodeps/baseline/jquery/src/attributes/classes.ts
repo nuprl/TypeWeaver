@@ -4,11 +4,11 @@ import rnothtmlwhite from "../var/rnothtmlwhite.js";
 
 import "../core/init.js";
 
-function getClass( elem: HTMLElement ): Boolean {
+function getClass( elem: HTMLElement ): boolean {
 	return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
-function classesToArray( value: Array ): Array {
+function classesToArray( value: any[] ): any[] {
 	if ( Array.isArray( value ) ) {
 		return value;
 	}
@@ -20,10 +20,10 @@ function classesToArray( value: Array ): Array {
 
 jQuery.fn.extend( {
 	addClass: function( value: Function ) {
-		var classNames: Array, cur: String, curValue: String, className: String, i: Number, finalValue: Number;
+		var classNames: any[], cur: string, curValue: string, className: string, i: number, finalValue: number;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( j: String ) {
+			return this.each( function( j: string ) {
 				jQuery( this ).addClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
@@ -56,10 +56,10 @@ jQuery.fn.extend( {
 	},
 
 	removeClass: function( value: Function ) {
-		var classNames: Array, cur: String, curValue: String, className: String, i: Number, finalValue: Number;
+		var classNames: any[], cur: string, curValue: string, className: string, i: number, finalValue: number;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( j: String ) {
+			return this.each( function( j: string ) {
 				jQuery( this ).removeClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
@@ -99,11 +99,11 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	toggleClass: function( value: Function, stateVal: String ) {
-		var classNames: Array, className: String, i: Number, self: HTMLElement;
+	toggleClass: function( value: Function, stateVal: string ) {
+		var classNames: any[], className: string, i: number, self: HTMLElement;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( i: String ) {
+			return this.each( function( i: string ) {
 				jQuery( this ).toggleClass(
 					value.call( this, i, getClass( this ), stateVal ),
 					stateVal
@@ -139,9 +139,9 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	hasClass: function( selector: String ) {
-		var className: String, elem: HTMLElement,
-			i: Number = 0;
+	hasClass: function( selector: string ) {
+		var className: string, elem: HTMLElement,
+			i: number = 0;
 
 		className = " " + selector + " ";
 		while ( ( elem = this[ i++ ] ) ) {

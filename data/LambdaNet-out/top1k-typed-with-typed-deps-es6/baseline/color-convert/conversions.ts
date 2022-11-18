@@ -6,12 +6,12 @@ import cssKeywords from 'color-name';
 //       values that give correct `typeof` results).
 //       do not use box values types (i.e. Number(), String(), etc.)
 
-const reverseKeywords: Object = {};
+const reverseKeywords: object = {};
 for (const key of Object.keys(cssKeywords)) {
 	reverseKeywords[cssKeywords[key]] = key;
 }
 
-const convert: Object = {
+const convert: object = {
 	rgb: {channels: 3, labels: 'rgb'},
 	hsl: {channels: 3, labels: 'hsl'},
 	hsv: {channels: 3, labels: 'hsv'},
@@ -32,7 +32,7 @@ const convert: Object = {
 export default convert;
 
 // LAB f(t) constant
-const LAB_FT: Number = Math.pow(6 / 29, 3);
+const LAB_FT: number = Math.pow(6 / 29, 3);
 
 // Hide .channels and .labels properties
 for (const model of Object.keys(convert)) {
@@ -56,14 +56,14 @@ for (const model of Object.keys(convert)) {
 }
 
 convert.rgb.hsl = function (rgb: Promise) {
-	const r: Number = rgb[0] / 255;
-	const g: Number = rgb[1] / 255;
-	const b: Number = rgb[2] / 255;
-	const min: Number = Math.min(r, g, b);
-	const max: Number = Math.max(r, g, b);
-	const delta: Number = max - min;
-	let h: Number;
-	let s: Number;
+	const r: number = rgb[0] / 255;
+	const g: number = rgb[1] / 255;
+	const b: number = rgb[2] / 255;
+	const min: number = Math.min(r, g, b);
+	const max: number = Math.max(r, g, b);
+	const delta: number = max - min;
+	let h: number;
+	let s: number;
 
 	if (max === min) {
 		h = 0;
@@ -81,7 +81,7 @@ convert.rgb.hsl = function (rgb: Promise) {
 		h += 360;
 	}
 
-	const l: Number = (min + max) / 2;
+	const l: number = (min + max) / 2;
 
 	if (max === min) {
 		s = 0;
@@ -95,18 +95,18 @@ convert.rgb.hsl = function (rgb: Promise) {
 };
 
 convert.rgb.hsv = function (rgb: Promise) {
-	let rdif: Number;
-	let gdif: Number;
-	let bdif: Number;
-	let h: Number;
-	let s: Number;
+	let rdif: number;
+	let gdif: number;
+	let bdif: number;
+	let h: number;
+	let s: number;
 
-	const r: Number = rgb[0] / 255;
-	const g: Number = rgb[1] / 255;
-	const b: Number = rgb[2] / 255;
-	const v: Number = Math.max(r, g, b);
-	const diff: Number = v - Math.min(r, g, b);
-	const diffc: Function = function (c: Number) {
+	const r: number = rgb[0] / 255;
+	const g: number = rgb[1] / 255;
+	const b: number = rgb[2] / 255;
+	const v: number = Math.max(r, g, b);
+	const diff: number = v - Math.min(r, g, b);
+	const diffc: Function = function (c: number) {
 		return (v - c) / 6 / diff + 1 / 2;
 	};
 
@@ -141,12 +141,12 @@ convert.rgb.hsv = function (rgb: Promise) {
 	];
 };
 
-convert.rgb.hwb = function (rgb: Object) {
-	const r: Number = rgb[0];
-	const g: Number = rgb[1];
-	let b: Number = rgb[2];
-	const h: String = convert.rgb.hsl(rgb)[0];
-	const w: Number = 1 / 255 * Math.min(r, Math.min(g, b));
+convert.rgb.hwb = function (rgb: object) {
+	const r: number = rgb[0];
+	const g: number = rgb[1];
+	let b: number = rgb[2];
+	const h: string = convert.rgb.hsl(rgb)[0];
+	const w: number = 1 / 255 * Math.min(r, Math.min(g, b));
 
 	b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
 
@@ -154,19 +154,19 @@ convert.rgb.hwb = function (rgb: Object) {
 };
 
 convert.rgb.cmyk = function (rgb: Promise) {
-	const r: Number = rgb[0] / 255;
-	const g: Number = rgb[1] / 255;
-	const b: Number = rgb[2] / 255;
+	const r: number = rgb[0] / 255;
+	const g: number = rgb[1] / 255;
+	const b: number = rgb[2] / 255;
 
-	const k: Number = Math.min(1 - r, 1 - g, 1 - b);
-	const c: Number = (1 - r - k) / (1 - k) || 0;
-	const m: Number = (1 - g - k) / (1 - k) || 0;
-	const y: Number = (1 - b - k) / (1 - k) || 0;
+	const k: number = Math.min(1 - r, 1 - g, 1 - b);
+	const c: number = (1 - r - k) / (1 - k) || 0;
+	const m: number = (1 - g - k) / (1 - k) || 0;
+	const y: number = (1 - b - k) / (1 - k) || 0;
 
 	return [c * 100, m * 100, y * 100, k * 100];
 };
 
-function comparativeDistance(x: Promise, y: Promise): String {
+function comparativeDistance(x: Promise, y: Promise): string {
 	/*
 		See https://en.m.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance
 	*/
@@ -177,20 +177,20 @@ function comparativeDistance(x: Promise, y: Promise): String {
 	);
 }
 
-convert.rgb.keyword = function (rgb: String) {
-	const reversed: Array = reverseKeywords[rgb];
+convert.rgb.keyword = function (rgb: string) {
+	const reversed: any[] = reverseKeywords[rgb];
 	if (reversed) {
 		return reversed;
 	}
 
-	let currentClosestDistance: Number = Infinity;
+	let currentClosestDistance: number = Infinity;
 	let currentClosestKeyword: Function;
 
 	for (const keyword of Object.keys(cssKeywords)) {
-		const value: String = cssKeywords[keyword];
+		const value: string = cssKeywords[keyword];
 
 		// Compute comparative distance
-		const distance: Number = comparativeDistance(rgb, value);
+		const distance: number = comparativeDistance(rgb, value);
 
 		// Check if its less, if so set as closest
 		if (distance < currentClosestDistance) {
@@ -202,32 +202,32 @@ convert.rgb.keyword = function (rgb: String) {
 	return currentClosestKeyword;
 };
 
-convert.keyword.rgb = function (keyword: String) {
+convert.keyword.rgb = function (keyword: string) {
 	return cssKeywords[keyword];
 };
 
 convert.rgb.xyz = function (rgb: Promise) {
-	let r: Number = rgb[0] / 255;
-	let g: Number = rgb[1] / 255;
-	let b: Number = rgb[2] / 255;
+	let r: number = rgb[0] / 255;
+	let g: number = rgb[1] / 255;
+	let b: number = rgb[2] / 255;
 
 	// Assume sRGB
 	r = r > 0.04045 ? (((r + 0.055) / 1.055) ** 2.4) : (r / 12.92);
 	g = g > 0.04045 ? (((g + 0.055) / 1.055) ** 2.4) : (g / 12.92);
 	b = b > 0.04045 ? (((b + 0.055) / 1.055) ** 2.4) : (b / 12.92);
 
-	const x: Number = (r * 0.4124564) + (g * 0.3575761) + (b * 0.1804375);
-	const y: Number = (r * 0.2126729) + (g * 0.7151522) + (b * 0.072175);
-	const z: Number = (r * 0.0193339) + (g * 0.119192) + (b * 0.9503041);
+	const x: number = (r * 0.4124564) + (g * 0.3575761) + (b * 0.1804375);
+	const y: number = (r * 0.2126729) + (g * 0.7151522) + (b * 0.072175);
+	const z: number = (r * 0.0193339) + (g * 0.119192) + (b * 0.9503041);
 
 	return [x * 100, y * 100, z * 100];
 };
 
-convert.rgb.lab = function (rgb: String) {
+convert.rgb.lab = function (rgb: string) {
 	const xyz: Promise = convert.rgb.xyz(rgb);
-	let x: Number = xyz[0];
-	let y: Number = xyz[1];
-	let z: Number = xyz[2];
+	let x: number = xyz[0];
+	let y: number = xyz[1];
+	let z: number = xyz[2];
 
 	x /= 95.047;
 	y /= 100;
@@ -237,20 +237,20 @@ convert.rgb.lab = function (rgb: String) {
 	y = y > LAB_FT ? (y ** (1 / 3)) : (7.787 * y) + (16 / 116);
 	z = z > LAB_FT ? (z ** (1 / 3)) : (7.787 * z) + (16 / 116);
 
-	const l: Number = (116 * y) - 16;
-	const a: Number = 500 * (x - y);
-	const b: Number = 200 * (y - z);
+	const l: number = (116 * y) - 16;
+	const a: number = 500 * (x - y);
+	const b: number = 200 * (y - z);
 
 	return [l, a, b];
 };
 
 convert.hsl.rgb = function (hsl: Promise) {
-	const h: Number = hsl[0] / 360;
-	const s: Number = hsl[1] / 100;
-	const l: Number = hsl[2] / 100;
-	let t2: Number;
-	let t3: Number;
-	let val: Number;
+	const h: number = hsl[0] / 360;
+	const s: number = hsl[1] / 100;
+	const l: number = hsl[2] / 100;
+	let t2: number;
+	let t3: number;
+	let val: number;
 
 	if (s === 0) {
 		val = l * 255;
@@ -263,9 +263,9 @@ convert.hsl.rgb = function (hsl: Promise) {
 		t2 = l + s - l * s;
 	}
 
-	const t1: Number = 2 * l - t2;
+	const t1: number = 2 * l - t2;
 
-	const rgb: Object = [0, 0, 0];
+	const rgb: object = [0, 0, 0];
 	for (let i = 0; i < 3; i++) {
 		t3 = h + 1 / 3 * -(i - 1);
 		if (t3 < 0) {
@@ -293,31 +293,31 @@ convert.hsl.rgb = function (hsl: Promise) {
 };
 
 convert.hsl.hsv = function (hsl: Promise) {
-	const h: String = hsl[0];
-	let s: Number = hsl[1] / 100;
-	let l: Number = hsl[2] / 100;
-	let smin: Number = s;
-	const lmin: Number = Math.max(l, 0.01);
+	const h: string = hsl[0];
+	let s: number = hsl[1] / 100;
+	let l: number = hsl[2] / 100;
+	let smin: number = s;
+	const lmin: number = Math.max(l, 0.01);
 
 	l *= 2;
 	s *= (l <= 1) ? l : 2 - l;
 	smin *= lmin <= 1 ? lmin : 2 - lmin;
-	const v: Number = (l + s) / 2;
-	const sv: Number = l === 0 ? (2 * smin) / (lmin + smin) : (2 * s) / (l + s);
+	const v: number = (l + s) / 2;
+	const sv: number = l === 0 ? (2 * smin) / (lmin + smin) : (2 * s) / (l + s);
 
 	return [h, sv * 100, v * 100];
 };
 
 convert.hsv.rgb = function (hsv: Promise) {
-	const h: Number = hsv[0] / 60;
-	const s: Number = hsv[1] / 100;
-	let v: Number = hsv[2] / 100;
-	const hi: Number = Math.floor(h) % 6;
+	const h: number = hsv[0] / 60;
+	const s: number = hsv[1] / 100;
+	let v: number = hsv[2] / 100;
+	const hi: number = Math.floor(h) % 6;
 
-	const f: Number = h - Math.floor(h);
-	const p: Number = 255 * v * (1 - s);
-	const q: Number = 255 * v * (1 - (s * f));
-	const t: Number = 255 * v * (1 - (s * (1 - f)));
+	const f: number = h - Math.floor(h);
+	const p: number = 255 * v * (1 - s);
+	const q: number = 255 * v * (1 - (s * f));
+	const t: number = 255 * v * (1 - (s * (1 - f)));
 	v *= 255;
 
 	switch (hi) {
@@ -337,15 +337,15 @@ convert.hsv.rgb = function (hsv: Promise) {
 };
 
 convert.hsv.hsl = function (hsv: Promise) {
-	const h: String = hsv[0];
-	const s: Number = hsv[1] / 100;
-	const v: Number = hsv[2] / 100;
-	const vmin: Number = Math.max(v, 0.01);
-	let sl: Number;
-	let l: Number;
+	const h: string = hsv[0];
+	const s: number = hsv[1] / 100;
+	const v: number = hsv[2] / 100;
+	const vmin: number = Math.max(v, 0.01);
+	let sl: number;
+	let l: number;
 
 	l = (2 - s) * v;
-	const lmin: Number = (2 - s) * vmin;
+	const lmin: number = (2 - s) * vmin;
 	sl = s * vmin;
 	sl /= (lmin <= 1) ? lmin : 2 - lmin;
 	sl = sl || 0;
@@ -356,11 +356,11 @@ convert.hsv.hsl = function (hsv: Promise) {
 
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
 convert.hwb.rgb = function (hwb: Promise) {
-	const h: Number = hwb[0] / 360;
-	let wh: Number = hwb[1] / 100;
-	let bl: Number = hwb[2] / 100;
-	const ratio: Number = wh + bl;
-	let f: Number;
+	const h: number = hwb[0] / 360;
+	let wh: number = hwb[1] / 100;
+	let bl: number = hwb[2] / 100;
+	const ratio: number = wh + bl;
+	let f: number;
 
 	// Wh + bl cant be > 1
 	if (ratio > 1) {
@@ -368,19 +368,19 @@ convert.hwb.rgb = function (hwb: Promise) {
 		bl /= ratio;
 	}
 
-	const i: Number = Math.floor(6 * h);
-	const v: Number = 1 - bl;
+	const i: number = Math.floor(6 * h);
+	const v: number = 1 - bl;
 	f = 6 * h - i;
 
 	if ((i & 0x01) !== 0) {
 		f = 1 - f;
 	}
 
-	const n: Number = wh + f * (v - wh); // Linear interpolation
+	const n: number = wh + f * (v - wh); // Linear interpolation
 
-	let r: Number;
-	let g: Number;
-	let b: Number;
+	let r: number;
+	let g: number;
+	let b: number;
 	/* eslint-disable max-statements-per-line,no-multi-spaces */
 	switch (i) {
 		default:
@@ -398,25 +398,25 @@ convert.hwb.rgb = function (hwb: Promise) {
 };
 
 convert.cmyk.rgb = function (cmyk: Promise) {
-	const c: Number = cmyk[0] / 100;
-	const m: Number = cmyk[1] / 100;
-	const y: Number = cmyk[2] / 100;
-	const k: Number = cmyk[3] / 100;
+	const c: number = cmyk[0] / 100;
+	const m: number = cmyk[1] / 100;
+	const y: number = cmyk[2] / 100;
+	const k: number = cmyk[3] / 100;
 
-	const r: Number = 1 - Math.min(1, c * (1 - k) + k);
-	const g: Number = 1 - Math.min(1, m * (1 - k) + k);
-	const b: Number = 1 - Math.min(1, y * (1 - k) + k);
+	const r: number = 1 - Math.min(1, c * (1 - k) + k);
+	const g: number = 1 - Math.min(1, m * (1 - k) + k);
+	const b: number = 1 - Math.min(1, y * (1 - k) + k);
 
 	return [r * 255, g * 255, b * 255];
 };
 
 convert.xyz.rgb = function (xyz: Promise) {
-	const x: Number = xyz[0] / 100;
-	const y: Number = xyz[1] / 100;
-	const z: Number = xyz[2] / 100;
-	let r: Number;
-	let g: Number;
-	let b: Number;
+	const x: number = xyz[0] / 100;
+	const y: number = xyz[1] / 100;
+	const z: number = xyz[2] / 100;
+	let r: number;
+	let g: number;
+	let b: number;
 
 	r = (x * 3.2404542) + (y * -1.5371385) + (z * -0.4985314);
 	g = (x * -0.969266) + (y * 1.8760108) + (z * 0.041556);
@@ -443,9 +443,9 @@ convert.xyz.rgb = function (xyz: Promise) {
 };
 
 convert.xyz.lab = function (xyz: Promise) {
-	let x: Number = xyz[0];
-	let y: Number = xyz[1];
-	let z: Number = xyz[2];
+	let x: number = xyz[0];
+	let y: number = xyz[1];
+	let z: number = xyz[2];
 
 	x /= 95.047;
 	y /= 100;
@@ -455,28 +455,28 @@ convert.xyz.lab = function (xyz: Promise) {
 	y = y > LAB_FT ? (y ** (1 / 3)) : (7.787 * y) + (16 / 116);
 	z = z > LAB_FT ? (z ** (1 / 3)) : (7.787 * z) + (16 / 116);
 
-	const l: Number = (116 * y) - 16;
-	const a: Number = 500 * (x - y);
-	const b: Number = 200 * (y - z);
+	const l: number = (116 * y) - 16;
+	const a: number = 500 * (x - y);
+	const b: number = 200 * (y - z);
 
 	return [l, a, b];
 };
 
 convert.lab.xyz = function (lab: Promise) {
-	const l: String = lab[0];
-	const a: Number = lab[1];
-	const b: Number = lab[2];
-	let x: Number;
-	let y: Number;
-	let z: Number;
+	const l: string = lab[0];
+	const a: number = lab[1];
+	const b: number = lab[2];
+	let x: number;
+	let y: number;
+	let z: number;
 
 	y = (l + 16) / 116;
 	x = a / 500 + y;
 	z = y - b / 200;
 
-	const y2: Number = y ** 3;
-	const x2: Number = x ** 3;
-	const z2: Number = z ** 3;
+	const y2: number = y ** 3;
+	const x2: number = x ** 3;
+	const z2: number = z ** 3;
 	y = y2 > LAB_FT ? y2 : (y - 16 / 116) / 7.787;
 	x = x2 > LAB_FT ? x2 : (x - 16 / 116) / 7.787;
 	z = z2 > LAB_FT ? z2 : (z - 16 / 116) / 7.787;
@@ -491,38 +491,38 @@ convert.lab.xyz = function (lab: Promise) {
 };
 
 convert.lab.lch = function (lab: Promise) {
-	const l: String = lab[0];
-	const a: Number = lab[1];
-	const b: Number = lab[2];
-	let h: Number;
+	const l: string = lab[0];
+	const a: number = lab[1];
+	const b: number = lab[2];
+	let h: number;
 
-	const hr: Number = Math.atan2(b, a);
+	const hr: number = Math.atan2(b, a);
 	h = hr * 360 / 2 / Math.PI;
 
 	if (h < 0) {
 		h += 360;
 	}
 
-	const c: Number = Math.sqrt(a * a + b * b);
+	const c: number = Math.sqrt(a * a + b * b);
 
 	return [l, c, h];
 };
 
 convert.lch.lab = function (lch: Promise) {
-	const l: String = lch[0];
-	const c: Number = lch[1];
-	const h: Number = lch[2];
+	const l: string = lch[0];
+	const c: number = lch[1];
+	const h: number = lch[2];
 
-	const hr: Number = h / 360 * 2 * Math.PI;
-	const a: Number = c * Math.cos(hr);
-	const b: Number = c * Math.sin(hr);
+	const hr: number = h / 360 * 2 * Math.PI;
+	const a: number = c * Math.cos(hr);
+	const b: number = c * Math.sin(hr);
 
 	return [l, a, b];
 };
 
-convert.rgb.ansi16 = function (args: Array, saturation: Number = null) {
+convert.rgb.ansi16 = function (args: any[], saturation: number = null) {
 	const [r, g, b] = args;
-	let value: Number = saturation === null ? convert.rgb.hsv(args)[2] : saturation; // Hsv -> ansi16 optimization
+	let value: number = saturation === null ? convert.rgb.hsv(args)[2] : saturation; // Hsv -> ansi16 optimization
 
 	value = Math.round(value / 50);
 
@@ -530,7 +530,7 @@ convert.rgb.ansi16 = function (args: Array, saturation: Number = null) {
 		return 30;
 	}
 
-	let ansi: Number = 30
+	let ansi: number = 30
 		+ ((Math.round(b / 255) << 2)
 		| (Math.round(g / 255) << 1)
 		| Math.round(r / 255));
@@ -542,16 +542,16 @@ convert.rgb.ansi16 = function (args: Array, saturation: Number = null) {
 	return ansi;
 };
 
-convert.hsv.ansi16 = function (args: Object) {
+convert.hsv.ansi16 = function (args: object) {
 	// Optimization here; we already know the value and don't need to get
 	// it converted for us.
 	return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
 };
 
 convert.rgb.ansi256 = function (args: Promise) {
-	const r: Number = args[0];
-	const g: Number = args[1];
-	const b: Number = args[2];
+	const r: number = args[0];
+	const g: number = args[1];
+	const b: number = args[2];
 
 	// We use the extended greyscale palette here, with the exception of
 	// black and white. normal palette only has 4 greyscale shades.
@@ -567,7 +567,7 @@ convert.rgb.ansi256 = function (args: Promise) {
 		return Math.round(((r - 8) / 247) * 24) + 232;
 	}
 
-	const ansi: Number = 16
+	const ansi: number = 16
 		+ (36 * Math.round(r / 255 * 5))
 		+ (6 * Math.round(g / 255 * 5))
 		+ Math.round(b / 255 * 5);
@@ -575,10 +575,10 @@ convert.rgb.ansi256 = function (args: Promise) {
 	return ansi;
 };
 
-convert.ansi16.rgb = function (args: Number) {
+convert.ansi16.rgb = function (args: number) {
 	args = args[0];
 
-	let color: Number = args % 10;
+	let color: number = args % 10;
 
 	// Handle greyscale
 	if (color === 0 || color === 7) {
@@ -591,73 +591,73 @@ convert.ansi16.rgb = function (args: Number) {
 		return [color, color, color];
 	}
 
-	const mult: Number = (~~(args > 50) + 1) * 0.5;
-	const r: Number = ((color & 1) * mult) * 255;
-	const g: Number = (((color >> 1) & 1) * mult) * 255;
-	const b: Number = (((color >> 2) & 1) * mult) * 255;
+	const mult: number = (~~(args > 50) + 1) * 0.5;
+	const r: number = ((color & 1) * mult) * 255;
+	const g: number = (((color >> 1) & 1) * mult) * 255;
+	const b: number = (((color >> 2) & 1) * mult) * 255;
 
 	return [r, g, b];
 };
 
-convert.ansi256.rgb = function (args: Number) {
+convert.ansi256.rgb = function (args: number) {
 	args = args[0];
 
 	// Handle greyscale
 	if (args >= 232) {
-		const c: String = (args - 232) * 10 + 8;
+		const c: string = (args - 232) * 10 + 8;
 		return [c, c, c];
 	}
 
 	args -= 16;
 
-	let rem: Number;
-	const r: Number = Math.floor(args / 36) / 5 * 255;
-	const g: Number = Math.floor((rem = args % 36) / 6) / 5 * 255;
-	const b: Number = (rem % 6) / 5 * 255;
+	let rem: number;
+	const r: number = Math.floor(args / 36) / 5 * 255;
+	const g: number = Math.floor((rem = args % 36) / 6) / 5 * 255;
+	const b: number = (rem % 6) / 5 * 255;
 
 	return [r, g, b];
 };
 
 convert.rgb.hex = function (args: Promise) {
-	const integer: String = ((Math.round(args[0]) & 0xFF) << 16)
+	const integer: string = ((Math.round(args[0]) & 0xFF) << 16)
 		+ ((Math.round(args[1]) & 0xFF) << 8)
 		+ (Math.round(args[2]) & 0xFF);
 
-	const string: String = integer.toString(16).toUpperCase();
+	const string: string = integer.toString(16).toUpperCase();
 	return '000000'.substring(string.length) + string;
 };
 
-convert.hex.rgb = function (args: String) {
-	const match: Object = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+convert.hex.rgb = function (args: string) {
+	const match: object = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
 	if (!match) {
 		return [0, 0, 0];
 	}
 
-	let colorString: String = match[0];
+	let colorString: string = match[0];
 
 	if (match[0].length === 3) {
-		colorString = colorString.split('').map((char: Number) => {
+		colorString = colorString.split('').map((char: number) => {
 			return char + char;
 		}).join('');
 	}
 
-	const integer: Number = parseInt(colorString, 16);
-	const r: Number = (integer >> 16) & 0xFF;
-	const g: Number = (integer >> 8) & 0xFF;
-	const b: Number = integer & 0xFF;
+	const integer: number = parseInt(colorString, 16);
+	const r: number = (integer >> 16) & 0xFF;
+	const g: number = (integer >> 8) & 0xFF;
+	const b: number = integer & 0xFF;
 
 	return [r, g, b];
 };
 
 convert.rgb.hcg = function (rgb: Promise) {
-	const r: Number = rgb[0] / 255;
-	const g: Number = rgb[1] / 255;
-	const b: Number = rgb[2] / 255;
-	const max: Number = Math.max(Math.max(r, g), b);
-	const min: Number = Math.min(Math.min(r, g), b);
-	const chroma: Number = (max - min);
-	let grayscale: Number;
-	let hue: Number;
+	const r: number = rgb[0] / 255;
+	const g: number = rgb[1] / 255;
+	const b: number = rgb[2] / 255;
+	const max: number = Math.max(Math.max(r, g), b);
+	const min: number = Math.min(Math.min(r, g), b);
+	const chroma: number = (max - min);
+	let grayscale: number;
+	let hue: number;
 
 	if (chroma < 1) {
 		grayscale = min / (1 - chroma);
@@ -684,12 +684,12 @@ convert.rgb.hcg = function (rgb: Promise) {
 };
 
 convert.hsl.hcg = function (hsl: Promise) {
-	const s: Number = hsl[1] / 100;
-	const l: Number = hsl[2] / 100;
+	const s: number = hsl[1] / 100;
+	const l: number = hsl[2] / 100;
 
-	const c: Number = l < 0.5 ? (2.0 * s * l) : (2.0 * s * (1.0 - l));
+	const c: number = l < 0.5 ? (2.0 * s * l) : (2.0 * s * (1.0 - l));
 
-	let f: Number = 0;
+	let f: number = 0;
 	if (c < 1.0) {
 		f = (l - 0.5 * c) / (1.0 - c);
 	}
@@ -698,11 +698,11 @@ convert.hsl.hcg = function (hsl: Promise) {
 };
 
 convert.hsv.hcg = function (hsv: Promise) {
-	const s: Number = hsv[1] / 100;
-	const v: Number = hsv[2] / 100;
+	const s: number = hsv[1] / 100;
+	const v: number = hsv[2] / 100;
 
-	const c: Number = s * v;
-	let f: Number = 0;
+	const c: number = s * v;
+	let f: number = 0;
 
 	if (c < 1.0) {
 		f = (v - c) / (1 - c);
@@ -712,19 +712,19 @@ convert.hsv.hcg = function (hsv: Promise) {
 };
 
 convert.hcg.rgb = function (hcg: Promise) {
-	const h: Number = hcg[0] / 360;
-	const c: Number = hcg[1] / 100;
-	const g: Number = hcg[2] / 100;
+	const h: number = hcg[0] / 360;
+	const c: number = hcg[1] / 100;
+	const g: number = hcg[2] / 100;
 
 	if (c === 0.0) {
 		return [g * 255, g * 255, g * 255];
 	}
 
-	const pure: Object = [0, 0, 0];
-	const hi: Number = (h % 1) * 6;
-	const v: Number = hi % 1;
-	const w: Number = 1 - v;
-	let mg: Number = 0;
+	const pure: object = [0, 0, 0];
+	const hi: number = (h % 1) * 6;
+	const v: number = hi % 1;
+	const w: number = 1 - v;
+	let mg: number = 0;
 
 	/* eslint-disable max-statements-per-line */
 	switch (Math.floor(hi)) {
@@ -753,11 +753,11 @@ convert.hcg.rgb = function (hcg: Promise) {
 };
 
 convert.hcg.hsv = function (hcg: Promise) {
-	const c: Number = hcg[1] / 100;
-	const g: Number = hcg[2] / 100;
+	const c: number = hcg[1] / 100;
+	const g: number = hcg[2] / 100;
 
-	const v: Number = c + g * (1.0 - c);
-	let f: Number = 0;
+	const v: number = c + g * (1.0 - c);
+	let f: number = 0;
 
 	if (v > 0.0) {
 		f = c / v;
@@ -767,11 +767,11 @@ convert.hcg.hsv = function (hcg: Promise) {
 };
 
 convert.hcg.hsl = function (hcg: Promise) {
-	const c: Number = hcg[1] / 100;
-	const g: Number = hcg[2] / 100;
+	const c: number = hcg[1] / 100;
+	const g: number = hcg[2] / 100;
 
-	const l: Number = g * (1.0 - c) + 0.5 * c;
-	let s: Number = 0;
+	const l: number = g * (1.0 - c) + 0.5 * c;
+	let s: number = 0;
 
 	if (l > 0.0 && l < 0.5) {
 		s = c / (2 * l);
@@ -784,18 +784,18 @@ convert.hcg.hsl = function (hcg: Promise) {
 };
 
 convert.hcg.hwb = function (hcg: Promise) {
-	const c: Number = hcg[1] / 100;
-	const g: Number = hcg[2] / 100;
-	const v: Number = c + g * (1.0 - c);
+	const c: number = hcg[1] / 100;
+	const g: number = hcg[2] / 100;
+	const v: number = c + g * (1.0 - c);
 	return [hcg[0], (v - c) * 100, (1 - v) * 100];
 };
 
 convert.hwb.hcg = function (hwb: Promise) {
-	const w: Number = hwb[1] / 100;
-	const b: Number = hwb[2] / 100;
-	const v: Number = 1 - b;
-	const c: Number = v - w;
-	let g: Number = 0;
+	const w: number = hwb[1] / 100;
+	const b: number = hwb[2] / 100;
+	const v: number = 1 - b;
+	const c: number = v - w;
+	let g: number = 0;
 
 	if (c < 1) {
 		g = (v - c) / (1 - c);
@@ -835,14 +835,14 @@ convert.gray.lab = function (gray: Promise) {
 };
 
 convert.gray.hex = function (gray: Promise) {
-	const val: Number = Math.round(gray[0] / 100 * 255) & 0xFF;
-	const integer: String = (val << 16) + (val << 8) + val;
+	const val: number = Math.round(gray[0] / 100 * 255) & 0xFF;
+	const integer: string = (val << 16) + (val << 8) + val;
 
-	const string: String = integer.toString(16).toUpperCase();
+	const string: string = integer.toString(16).toUpperCase();
 	return '000000'.substring(string.length) + string;
 };
 
 convert.rgb.gray = function (rgb: Promise) {
-	const val: Number = (rgb[0] + rgb[1] + rgb[2]) / 3;
+	const val: number = (rgb[0] + rgb[1] + rgb[2]) / 3;
 	return [val / 255 * 100];
 };

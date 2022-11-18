@@ -11,20 +11,20 @@
 
 import Fraction from '../fraction.min.js';
 
-function integrate(poly: String): String {
+function integrate(poly: string): string {
 
     poly = poly.replace(/\s+/g, "");
 
     var regex: RegExp = /(\([+-]?[0-9/]+\)|[+-]?[0-9/]+)x(?:\^(\([+-]?[0-9/]+\)|[+-]?[0-9]+))?/g;
-    var arr: Object;
-    var res: Object = {};
+    var arr: object;
+    var res: object = {};
     while (null !== (arr = regex.exec(poly))) {
 
-        var a: Array = (arr[1] || "1").replace("(", "").replace(")", "").split("/");
-        var b: Array = (arr[2] || "1").replace("(", "").replace(")", "").split("/");
+        var a: any[] = (arr[1] || "1").replace("(", "").replace(")", "").split("/");
+        var b: any[] = (arr[2] || "1").replace("(", "").replace(")", "").split("/");
 
-        var exp: String = new Fraction(b).add(1);
-        var key: String = "" + exp;
+        var exp: string = new Fraction(b).add(1);
+        var key: string = "" + exp;
 
         if (res[key] !== undefined) {
             res[key] = {x: new Fraction(a).div(exp).add(res[key].x), e: exp};
@@ -33,8 +33,8 @@ function integrate(poly: String): String {
         }
     }
 
-    var str: String = "";
-    var c: Number = 0;
+    var str: string = "";
+    var c: number = 0;
     for (var i in res) {
         if (res[i].x.s !== -1 && c > 0) {
             str += ("+");
@@ -62,7 +62,7 @@ function integrate(poly: String): String {
     return str;
 }
 
-var poly: String = "-2/3x^3-2x^2+3x+8x^3-1/3x^(4/8)";
+var poly: string = "-2/3x^3-2x^2+3x+8x^3-1/3x^(4/8)";
 
 console.log("f(x): " + poly);
 console.log("F(x): " + integrate(poly));

@@ -1,10 +1,10 @@
 'use strict';
 
-const isHyper: Boolean = typeof process !== 'undefined' && process.env.TERM_PROGRAM === 'Hyper';
-const isWindows: Boolean = typeof process !== 'undefined' && process.platform === 'win32';
-const isLinux: Boolean = typeof process !== 'undefined' && process.platform === 'linux';
+const isHyper: boolean = typeof process !== 'undefined' && process.env.TERM_PROGRAM === 'Hyper';
+const isWindows: boolean = typeof process !== 'undefined' && process.platform === 'win32';
+const isLinux: boolean = typeof process !== 'undefined' && process.platform === 'linux';
 
-const common: Object = {
+const common: object = {
   ballotDisabled: '☒',
   ballotOff: '☐',
   ballotOn: '☑',
@@ -33,7 +33,7 @@ const common: Object = {
   upDownArrow: '↕'
 };
 
-const windows: String = Object.assign({}, common, {
+const windows: string = Object.assign({}, common, {
   check: '√',
   cross: '×',
   ellipsisLarge: '...',
@@ -47,7 +47,7 @@ const windows: String = Object.assign({}, common, {
   warning: '‼'
 });
 
-const other: String = Object.assign({}, common, {
+const other: string = Object.assign({}, common, {
   ballotCross: '✘',
   check: '✔',
   cross: '✖',

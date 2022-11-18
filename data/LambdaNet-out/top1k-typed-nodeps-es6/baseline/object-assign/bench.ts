@@ -5,13 +5,13 @@ import lodash from 'lodash';
 
 import objectAssign from './';
 
-var source1: Object = {
+var source1: object = {
 	a: 1,
 	b: 2,
 	c: 3
 };
 
-var source2: Object = {
+var source2: object = {
 	c: 3,
 	d: 4,
 	e: 5,

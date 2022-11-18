@@ -31,7 +31,7 @@ class PrefixSource extends Source {
 
 	source() {
 		const node: ConcatSource = this._source.source();
-		const prefix: Number = this._prefix;
+		const prefix: number = this._prefix;
 		return prefix + node.replace(REPLACE_REGEX, "\n" + prefix);
 	}
 
@@ -46,20 +46,20 @@ class PrefixSource extends Source {
 	}
 
 	streamChunks(options, onChunk, onSource, onName) {
-		const prefix: String = this._prefix;
-		const prefixOffset: Number = prefix.length;
-		const linesOnly: Boolean = !!(options && options.columns === false);
+		const prefix: string = this._prefix;
+		const prefixOffset: number = prefix.length;
+		const linesOnly: boolean = !!(options && options.columns === false);
 		const { generatedLine, generatedColumn, source } = streamChunks(
 			this._source,
 			options,
 			(
-				chunk: Number,
-				generatedLine: Number,
-				generatedColumn: Number,
-				sourceIndex: String,
+				chunk: number,
+				generatedLine: number,
+				generatedColumn: number,
+				sourceIndex: string,
 				originalLine: OriginalSource,
-				originalColumn: String,
-				nameIndex: String
+				originalColumn: string,
+				nameIndex: string
 			) => {
 				if (generatedColumn !== 0) {
 					// In the middle of the line, we just adject the column

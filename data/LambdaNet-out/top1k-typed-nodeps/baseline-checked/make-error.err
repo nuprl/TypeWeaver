@@ -2,17 +2,12 @@ index.ts(14,66): error TS2304: Cannot find name 'Void'.
 index.ts(31,46): error TS2304: Cannot find name 'Void'.
 index.ts(44,38): error TS2304: Cannot find name 'Void'.
 index.ts(62,3): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-index.ts(86,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(127,15): error TS2339: Property 'super_' does not exist on type 'Object'.
-index.ts(131,7): error TS2322: Type '{ configurable: true; value: Object; writable: true; }' is not assignable to type 'Function'.
-  Object literal may only specify known properties, and 'configurable' does not exist in type 'Function'.
-index.ts(140,16): error TS2339: Property 'name' does not exist on type 'Object'.
-index.ts(146,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
-index.ts(146,59): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is not assignable to type 'PropertyDescriptorMap'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Index signature for type 'string' is missing in type 'Object'.
+  Type '{}' has no call signatures.
+index.ts(86,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+index.ts(127,15): error TS2339: Property 'super_' does not exist on type 'object'.
+index.ts(140,16): error TS2339: Property 'name' does not exist on type 'object'.
+index.ts(146,15): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(146,59): error TS2345: Argument of type 'object' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
+  Type 'object' is not assignable to type 'PropertyDescriptorMap'.
+    Index signature for type 'string' is missing in type '{}'.
 

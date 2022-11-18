@@ -17,14 +17,14 @@ import isSymbol from './isSymbol.js'
  * minBy(objects, ({ n }) => n)
  * // => { 'n': 1 }
  */
-function minBy(array: Array, iteratee: Function): Object {
+function minBy(array: any[], iteratee: Function): object {
   let result: Function
   if (array == null) {
     return result
   }
-  let computed: Number
+  let computed: number
   for (const value of array) {
-    const current: Number = iteratee(value)
+    const current: number = iteratee(value)
 
     if (current != null && (computed === undefined
       ? (current === current && !isSymbol(current))

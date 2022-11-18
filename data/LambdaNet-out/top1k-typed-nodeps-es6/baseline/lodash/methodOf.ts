@@ -21,8 +21,8 @@ import invoke from './invoke.js'
  * map([['a', '2'], ['c', '0']], methodOf(object))
  * // => [2, 0]f
  */
-function methodOf(object: Object, args: Array): Function {
-  return (path: String) => invoke(object, path, args)
+function methodOf(object: object, args: any[]): Function {
+  return (path: string) => invoke(object, path, args)
 }
 
 export default methodOf

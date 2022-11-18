@@ -1,12 +1,12 @@
 import * as _acorn from "acorn";
 
-const leftCurlyBrace: Number = "{".charCodeAt(0);
-const space: Number = " ".charCodeAt(0);
+const leftCurlyBrace: number = "{".charCodeAt(0);
+const space: number = " ".charCodeAt(0);
 
-const keyword: String = "assert";
-const FUNC_STATEMENT: Number = 1, FUNC_HANGING_STATEMENT: Number = 2, FUNC_NULLABLE_ID: Number = 4
+const keyword: string = "assert";
+const FUNC_STATEMENT: number = 1, FUNC_HANGING_STATEMENT: number = 2, FUNC_NULLABLE_ID: number = 4
 
-export function importAssertions(Parser: Object): Object {
+export function importAssertions(Parser: object): object {
   // Use supplied version acorn version if present, to avoid
   // reference mismatches due to different acorn versions. This
   // allows this plugin to be used with Rollup which supplies

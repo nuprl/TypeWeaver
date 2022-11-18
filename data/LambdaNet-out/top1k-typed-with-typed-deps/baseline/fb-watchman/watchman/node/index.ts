@@ -7,14 +7,14 @@
 
 'use strict';
 
-var net: String = require('net');
+var net: string = require('net');
 var EE: Function = require('events').EventEmitter;
-var util: String = require('util');
-var childProcess: Array = require('child_process');
-var bser: Array = require('bser');
+var util: string = require('util');
+var childProcess: any[] = require('child_process');
+var bser: any[] = require('bser');
 
 // We'll emit the responses to these when they get sent down to us
-var unilateralTags: Array = ['subscription', 'log'];
+var unilateralTags: any[] = ['subscription', 'log'];
 
 /**
  * @param options An object with the following optional keys:
@@ -22,8 +22,8 @@ var unilateralTags: Array = ['subscription', 'log'];
  *     If not provided, the Client locates the binary using the PATH specified
  *     by the node child_process's default env.
  */
-function Client(options: Object): Void {
-  var self: Array = this;
+function Client(options: object): Void {
+  var self: any[] = this;
   EE.call(this);
 
   this.watchmanBinaryPath = 'watchman';
@@ -52,12 +52,12 @@ Client.prototype.sendNextCommand = function() {
   this.socket.write(bser.dumpToBuffer(this.currentCommand.cmd));
 }
 
-Client.prototype.cancelCommands = function(why: Array) {
+Client.prototype.cancelCommands = function(why: any[]) {
   var error: Error = new Error(why);
 
   // Steal all pending commands before we start cancellation, in
   // case something decides to schedule more commands
-  var cmds: Array = this.commands;
+  var cmds: any[] = this.commands;
   this.commands = [];
 
   if (this.currentCommand) {
@@ -66,7 +66,7 @@ Client.prototype.cancelCommands = function(why: Array) {
   }
 
   // Synthesize an error condition for any commands that were queued
-  cmds.forEach(function(cmd: Object) {
+  cmds.forEach(function(cmd: object) {
     cmd.cb(error);
   });
 }
@@ -74,17 +74,17 @@ Client.prototype.cancelCommands = function(why: Array) {
 Client.prototype.connect = function() {
   var self: HTMLElement = this;
 
-  function makeSock(sockname: String): Void {
+  function makeSock(sockname: string): Void {
     // bunser will decode the watchman BSER protocol for us
     self.bunser = new bser.BunserBuf();
     // For each decoded line:
-    self.bunser.on('value', function(obj: Object) {
+    self.bunser.on('value', function(obj: object) {
       // Figure out if this is a unliteral response or if it is the
       // response portion of a request-response sequence.  At the time
       // of writing, there are only two possible unilateral responses.
-      var unilateral: Boolean = false;
+      var unilateral: boolean = false;
       for (var i = 0; i < unilateralTags.length; i++) {
-        var tag: Boolean = unilateralTags[i];
+        var tag: boolean = unilateralTags[i];
         if (tag in obj) {
           unilateral = tag;
         }
@@ -93,7 +93,7 @@ Client.prototype.connect = function() {
       if (unilateral) {
         self.emit(unilateral, obj);
       } else if (self.currentCommand) {
-        var cmd: Object = self.currentCommand;
+        var cmd: object = self.currentCommand;
         self.currentCommand = null;
         if ('error' in obj) {
           var error: Error = new Error(obj.error);
@@ -121,7 +121,7 @@ Client.prototype.connect = function() {
       self.connecting = false;
       self.emit('error', err);
     });
-    self.socket.on('data', function(buf: String) {
+    self.socket.on('data', function(buf: string) {
       if (self.bunser) {
         self.bunser.append(buf);
       }
@@ -146,14 +146,14 @@ Client.prototype.connect = function() {
   // We need to ask the client binary where to find it.
   // This will cause the service to start for us if it isn't
   // already running.
-  var args: Array = ['--no-pretty', 'get-sockname'];
+  var args: any[] = ['--no-pretty', 'get-sockname'];
 
   // We use the more elaborate spawn rather than exec because there
   // are some error cases on Windows where process spawning can hang.
   // It is desirable to pipe stderr directly to stderr live so that
   // we can discover the problem.
   var proc: HTMLElement = null;
-  var spawnFailed: Boolean = false;
+  var spawnFailed: boolean = false;
 
   function spawnError(error: HTMLElement): Void {
     if (spawnFailed) {
@@ -183,21 +183,21 @@ Client.prototype.connect = function() {
     return;
   }
 
-  var stdout: Array = [];
-  var stderr: Array = [];
-  proc.stdout.on('data', function(data: Object) {
+  var stdout: any[] = [];
+  var stderr: any[] = [];
+  proc.stdout.on('data', function(data: object) {
     stdout.push(data);
   });
-  proc.stderr.on('data', function(data: String) {
+  proc.stderr.on('data', function(data: string) {
     data = data.toString('utf8');
     stderr.push(data);
     console.error(data);
   });
-  proc.on('error', function(error: Object) {
+  proc.on('error', function(error: object) {
     spawnError(error);
   });
 
-  proc.on('close', function (code: String, signal: Number) {
+  proc.on('close', function (code: string, signal: number) {
     if (code !== 0) {
       spawnError(new Error(
           self.watchmanBinaryPath + ' ' + args.join(' ') +
@@ -206,7 +206,7 @@ Client.prototype.connect = function() {
       return;
     }
     try {
-      var obj: Array = JSON.parse(stdout.join(''));
+      var obj: any[] = JSON.parse(stdout.join(''));
       if ('error' in obj) {
         var error: Error = new Error(obj.error);
         error.watchmanResponse = obj;
@@ -220,7 +220,7 @@ Client.prototype.connect = function() {
   });
 }
 
-Client.prototype.command = function(args: Array, done: Function) {
+Client.prototype.command = function(args: any[], done: Function) {
   done = done || function() {};
 
   // Queue up the command
@@ -240,7 +240,7 @@ Client.prototype.command = function(args: Array, done: Function) {
   this.sendNextCommand();
 }
 
-var cap_versions: Object = {
+var cap_versions: object = {
     "cmd-watch-del-all": "3.1.1",
     "cmd-watch-project": "3.1",
     "relative_root": "3.3",
@@ -250,11 +250,11 @@ var cap_versions: Object = {
 }
 
 // Compares a vs b, returns < 0 if a < b, > 0 if b > b, 0 if a == b
-function vers_compare(a: Array, b: Array): Number {
+function vers_compare(a: any[], b: any[]): number {
   a = a.split('.');
   b = b.split('.');
   for (var i = 0; i < 3; i++) {
-    var d: Number = parseInt(a[i] || '0') - parseInt(b[i] || '0');
+    var d: number = parseInt(a[i] || '0') - parseInt(b[i] || '0');
     if (d != 0) {
       return d;
     }
@@ -262,7 +262,7 @@ function vers_compare(a: Array, b: Array): Number {
   return 0; // Equal
 }
 
-function have_cap(vers: String, name: String): Boolean {
+function have_cap(vers: string, name: string): boolean {
   if (name in cap_versions) {
     return vers_compare(vers, cap_versions[name]) >= 0;
   }
@@ -271,14 +271,14 @@ function have_cap(vers: String, name: String): Boolean {
 
 // This is a helper that we expose for testing purposes
 Client.prototype._synthesizeCapabilityCheck = function(
-    resp: HTMLElement, optional: Array, required: Array) {
+    resp: HTMLElement, optional: any[], required: any[]) {
   resp.capabilities = {}
-  var version: String = resp.version;
-  optional.forEach(function (name: String) {
+  var version: string = resp.version;
+  optional.forEach(function (name: string) {
     resp.capabilities[name] = have_cap(version, name);
   });
-  required.forEach(function (name: String) {
-    var have: String = have_cap(version, name);
+  required.forEach(function (name: string) {
+    var have: string = have_cap(version, name);
     resp.capabilities[name] = have;
     if (!have) {
       resp.error = 'client required capability `' + name +
@@ -288,14 +288,14 @@ Client.prototype._synthesizeCapabilityCheck = function(
   return resp;
 }
 
-Client.prototype.capabilityCheck = function(caps: Object, done: Function) {
-  var optional: Number = caps.optional || [];
-  var required: String = caps.required || [];
+Client.prototype.capabilityCheck = function(caps: object, done: Function) {
+  var optional: number = caps.optional || [];
+  var required: string = caps.required || [];
   var self: HTMLElement = this;
   this.command(['version', {
       optional: optional,
       required: required
-  }], function (error: Object, resp: Object) {
+  }], function (error: object, resp: object) {
     if (error) {
       done(error);
       return;

@@ -5,7 +5,7 @@ var toStr: Function = Object.prototype.toString;
 var defineProperty: Function = Object.defineProperty;
 var gOPD: Function = Object.getOwnPropertyDescriptor;
 
-var isArray: Function = function isArray(arr: String): Boolean {
+var isArray: Function = function isArray(arr: string): boolean {
 	if (typeof Array.isArray === 'function') {
 		return Array.isArray(arr);
 	}
@@ -13,27 +13,27 @@ var isArray: Function = function isArray(arr: String): Boolean {
 	return toStr.call(arr) === '[object Array]';
 };
 
-var isPlainObject: Function = function isPlainObject(obj: Object): Boolean {
+var isPlainObject: Function = function isPlainObject(obj: object): boolean {
 	if (!obj || toStr.call(obj) !== '[object Object]') {
 		return false;
 	}
 
-	var hasOwnConstructor: Number = hasOwn.call(obj, 'constructor');
-	var hasIsPrototypeOf: Boolean = obj.constructor && obj.constructor.prototype && hasOwn.call(obj.constructor.prototype, 'isPrototypeOf');
+	var hasOwnConstructor: number = hasOwn.call(obj, 'constructor');
+	var hasIsPrototypeOf: boolean = obj.constructor && obj.constructor.prototype && hasOwn.call(obj.constructor.prototype, 'isPrototypeOf');
 	// Not own constructor property must be Object
 	if (obj.constructor && !hasOwnConstructor && !hasIsPrototypeOf) {
 		return false;
 	}
 
 	// Own properties are enumerated firstly, so to speed up, if last one is own, then all properties are own.
-	var key: String;
+	var key: string;
 	for (key in obj) { /**/ }
 
 	return typeof key === 'undefined' || hasOwn.call(obj, key);
 };
 
 // If name is '__proto__', and Object.defineProperty is available, define __proto__ as an own property on target
-var setProperty: Function = function setProperty(target: Object, options: Object): Void {
+var setProperty: Function = function setProperty(target: object, options: object): Void {
 	if (defineProperty && options.name === '__proto__') {
 		defineProperty(target, options.name, {
 			enumerable: true,
@@ -48,7 +48,7 @@ var setProperty: Function = function setProperty(target: Object, options: Object
 };
 
 // Return undefined instead of __proto__ if '__proto__' is not an own property
-var getProperty: Function = function getProperty(obj: Object, name: String): Array {
+var getProperty: Function = function getProperty(obj: object, name: string): any[] {
 	if (name === '__proto__') {
 		if (!hasOwn.call(obj, name)) {
 			return void 0;
@@ -61,12 +61,12 @@ var getProperty: Function = function getProperty(obj: Object, name: String): Arr
 	return obj[name];
 };
 
-module.exports = function extend(): Boolean {
-	var options: Function, name: String, src: Array, copy: Array, copyIsArray: Boolean, clone: Array;
-	var target: Boolean = arguments[0];
-	var i: Number = 1;
-	var length: Number = arguments.length;
-	var deep: Boolean = false;
+module.exports = function extend(): boolean {
+	var options: Function, name: string, src: any[], copy: any[], copyIsArray: boolean, clone: any[];
+	var target: boolean = arguments[0];
+	var i: number = 1;
+	var length: number = arguments.length;
+	var deep: boolean = false;
 
 	// Handle a deep copy situation
 	if (typeof target === 'boolean') {

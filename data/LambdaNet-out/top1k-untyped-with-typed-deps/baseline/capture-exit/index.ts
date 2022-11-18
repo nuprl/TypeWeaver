@@ -1,14 +1,14 @@
-var RSVP: Array = require('rsvp');
+var RSVP: any[] = require('rsvp');
 
 var exit: Function;
-var handlers: Array = [];
-var lastTime: String;
-var isExiting: Boolean = false;
+var handlers: any[] = [];
+var lastTime: string;
+var isExiting: boolean = false;
 
-process.on('beforeExit', function (code: String) {
+process.on('beforeExit', function (code: string) {
   if (handlers.length === 0) { return; }
 
-  var own: Number = lastTime = module.exports._flush(lastTime, code)
+  var own: number = lastTime = module.exports._flush(lastTime, code)
     .finally(function () {
       // if an onExit handler has called process.exit, do not disturb
       // `lastTime`.
@@ -51,7 +51,7 @@ module.exports.releaseExit = function() {
   }
 };
 
-var firstExitCode: String;
+var firstExitCode: string;
 
 module.exports.captureExit = function() {
   if (exit) {
@@ -60,7 +60,7 @@ module.exports.captureExit = function() {
   }
   exit = process.exit;
 
-  process.exit = function(code: Number) {
+  process.exit = function(code: number) {
     if (handlers.length === 0 && lastTime === undefined) {
       // synchronously exit.
       //
@@ -83,13 +83,13 @@ module.exports.captureExit = function() {
     if (firstExitCode === undefined) {
       firstExitCode = code;
     }
-    var own: Number = lastTime = module.exports._flush(lastTime, firstExitCode)
+    var own: number = lastTime = module.exports._flush(lastTime, firstExitCode)
       .then(function() {
         // if another chain has started, let it exit
         if (own !== lastTime) { return; }
         exit.call(process, firstExitCode);
       })
-      .catch(function(error: Object) {
+      .catch(function(error: object) {
         // if another chain has started, let it exit
         if (own !== lastTime) {
           throw error;
@@ -101,15 +101,15 @@ module.exports.captureExit = function() {
 };
 
 module.exports._handlers = handlers;
-module.exports._flush = function(lastTime: String, code: String) {
+module.exports._flush = function(lastTime: string, code: string) {
   isExiting = true;
-  var work: Array = handlers.splice(0, handlers.length);
+  var work: any[] = handlers.splice(0, handlers.length);
 
   return RSVP.Promise.resolve(lastTime).
     then(function() {
-      var firstRejected: Boolean;
+      var firstRejected: boolean;
       return RSVP.allSettled(work.map(function(handler: Function) {
-        return RSVP.resolve(handler.call(null, code)).catch(function(e: Boolean) {
+        return RSVP.resolve(handler.call(null, code)).catch(function(e: boolean) {
           if (!firstRejected) {
             firstRejected = e;
           }
@@ -123,21 +123,21 @@ module.exports._flush = function(lastTime: String, code: String) {
     });
 };
 
-module.exports.onExit = function(cb: String) {
+module.exports.onExit = function(cb: string) {
   if (!exit) {
     throw new Error('Cannot install handler when exit is not captured.  Call `captureExit()` first');
   }
   if (isExiting) {
     throw new Error('Cannot install handler while `onExit` handlers are running.');
   }
-  var index: Number = handlers.indexOf(cb);
+  var index: number = handlers.indexOf(cb);
 
   if (index > -1) { return; }
   handlers.push(cb);
 };
 
-module.exports.offExit = function(cb: String) {
-  var index: Number = handlers.indexOf(cb);
+module.exports.offExit = function(cb: string) {
+  var index: number = handlers.indexOf(cb);
 
   if (index < 0) { return; }
 

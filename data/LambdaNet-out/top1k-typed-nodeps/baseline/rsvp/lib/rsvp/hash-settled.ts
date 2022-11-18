@@ -122,9 +122,9 @@ HashSettled.prototype._setResultAt = setSettledResult;
   @static
 */
 
-export default function hashSettled(object: Object, label: String): Promise {
+export default function hashSettled(object: object, label: string): Promise {
   return Promise.resolve(object, label)
-    .then(function(object: Array) {
+    .then(function(object: any[]) {
       if (object === null || typeof object !== 'object') {
         throw new TypeError("hashSettled must be called with an object");
       }

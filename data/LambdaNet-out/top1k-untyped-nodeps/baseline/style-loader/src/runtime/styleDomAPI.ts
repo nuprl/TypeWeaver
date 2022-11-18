@@ -1,6 +1,6 @@
 /* istanbul ignore next  */
-function apply(styleElement: HTMLElement, options: Object, obj: Object): Void {
-  let css: String = "";
+function apply(styleElement: HTMLElement, options: object, obj: object): Void {
+  let css: string = "";
 
   if (obj.supports) {
     css += `@supports (${obj.supports}) {`;
@@ -10,7 +10,7 @@ function apply(styleElement: HTMLElement, options: Object, obj: Object): Void {
     css += `@media ${obj.media} {`;
   }
 
-  const needLayer: Boolean = typeof obj.layer !== "undefined";
+  const needLayer: boolean = typeof obj.layer !== "undefined";
 
   if (needLayer) {
     css += `@layer${obj.layer.length > 0 ? ` ${obj.layer}` : ""} {`;
@@ -30,7 +30,7 @@ function apply(styleElement: HTMLElement, options: Object, obj: Object): Void {
     css += "}";
   }
 
-  const sourceMap: Array = obj.sourceMap;
+  const sourceMap: any[] = obj.sourceMap;
 
   if (sourceMap && typeof btoa !== "undefined") {
     css += `\n/*# sourceMappingURL=data:application/json;base64,${btoa(
@@ -43,7 +43,7 @@ function apply(styleElement: HTMLElement, options: Object, obj: Object): Void {
   options.styleTagTransform(css, styleElement, options.options);
 }
 
-function removeStyleElement(styleElement: Element): Boolean {
+function removeStyleElement(styleElement: Element): boolean {
   // istanbul ignore if
   if (styleElement.parentNode === null) {
     return false;
@@ -53,11 +53,11 @@ function removeStyleElement(styleElement: Element): Boolean {
 }
 
 /* istanbul ignore next  */
-function domAPI(options: Function): Object {
+function domAPI(options: Function): object {
   const styleElement: Element = options.insertStyleElement(options);
 
   return {
-    update: (obj: String) => {
+    update: (obj: string) => {
       apply(styleElement, options, obj);
     },
     remove: () => {

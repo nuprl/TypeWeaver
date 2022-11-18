@@ -7,13 +7,13 @@
 
 'use strict';
 
-export default function base(app: Object, options: Object): Object {
+export default function base(app: object, options: object): object {
   if (!isObject(app) && typeof app !== 'function') {
     throw new TypeError('expected an object or function');
   }
 
-  var opts: Object = isObject(options) ? options : {};
-  var prop: String = typeof opts.prop === 'string' ? opts.prop : 'fns';
+  var opts: object = isObject(options) ? options : {};
+  var prop: string = typeof opts.prop === 'string' ? opts.prop : 'fns';
   if (!Array.isArray(app[prop])) {
     define(app, prop, []);
   }
@@ -64,7 +64,7 @@ export default function base(app: Object, options: Object): Object {
    * @api public
    */
 
-  define(app, 'run', function(val: Object) {
+  define(app, 'run', function(val: object) {
     if (!isObject(val)) return;
 
     if (!val.use || !val.run) {
@@ -76,10 +76,10 @@ export default function base(app: Object, options: Object): Object {
       val.use(base);
     }
 
-    var self: Object = this || app;
-    var fns: Array = self[prop];
-    var len: Number = fns.length;
-    var idx: Number = -1;
+    var self: object = this || app;
+    var fns: any[] = self[prop];
+    var len: number = fns.length;
+    var idx: number = -1;
 
     while (++idx < len) {
       val.use(fns[idx]);
@@ -92,8 +92,8 @@ export default function base(app: Object, options: Object): Object {
    * `fns` array to be called by the `run` method.
    */
 
-  function use(type: Array, fn: Function, options: Object): Object {
-    var offset: Number = 1;
+  function use(type: any[], fn: Function, options: object): object {
+    var offset: number = 1;
 
     if (typeof type === 'string' || Array.isArray(type)) {
       fn = wrap(type, fn);
@@ -107,17 +107,17 @@ export default function base(app: Object, options: Object): Object {
       throw new TypeError('expected a function');
     }
 
-    var self: Object = this || app;
-    var fns: Array = self[prop];
+    var self: object = this || app;
+    var fns: any[] = self[prop];
 
-    var args: Array = [].slice.call(arguments, offset);
+    var args: any[] = [].slice.call(arguments, offset);
     args.unshift(self);
 
     if (typeof opts.hook === 'function') {
       opts.hook.apply(self, args);
     }
 
-    var val: String = fn.apply(self, args);
+    var val: string = fn.apply(self, args);
     if (typeof val === 'function' && fns.indexOf(val) === -1) {
       fns.push(val);
     }
@@ -133,8 +133,8 @@ export default function base(app: Object, options: Object): Object {
    * @return {Function}
    */
 
-  function wrap(type: String, fn: Function): Function {
-    return function plugin(): String {
+  function wrap(type: string, fn: Function): Function {
+    return function plugin(): string {
       return this.type === type ? fn.apply(this, arguments) : plugin;
     };
   }
@@ -142,11 +142,11 @@ export default function base(app: Object, options: Object): Object {
   return app;
 };
 
-function isObject(val: Number): Boolean {
+function isObject(val: number): boolean {
   return val && typeof val === 'object' && !Array.isArray(val);
 }
 
-function define(obj: String, key: String, val: String): Void {
+function define(obj: string, key: string, val: string): Void {
   Object.defineProperty(obj, key, {
     configurable: true,
     writable: true,

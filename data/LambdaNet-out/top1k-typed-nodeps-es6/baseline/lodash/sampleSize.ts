@@ -18,19 +18,19 @@ import slice from './slice.js'
  * sampleSize([1, 2, 3], 4)
  * // => [2, 3, 1]
  */
-function sampleSize(array: Array, n: Number): Array {
+function sampleSize(array: any[], n: number): any[] {
   n = n == null ? 1 : n
-  const length: Number = array == null ? 0 : array.length
+  const length: number = array == null ? 0 : array.length
   if (!length || n < 1) {
     return []
   }
   n = n > length ? length : n
-  let index: Number = -1
-  const lastIndex: Number = length - 1
-  const result: Object = copyArray(array)
+  let index: number = -1
+  const lastIndex: number = length - 1
+  const result: object = copyArray(array)
   while (++index < n) {
-    const rand: String = index + Math.floor(Math.random() * (lastIndex - index + 1))
-    const value: String = result[rand]
+    const rand: string = index + Math.floor(Math.random() * (lastIndex - index + 1))
+    const value: string = result[rand]
     result[rand] = result[index]
     result[index] = value
   }

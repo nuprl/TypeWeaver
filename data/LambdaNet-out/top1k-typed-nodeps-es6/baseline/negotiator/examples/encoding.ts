@@ -1,5 +1,5 @@
 (function() {
-  var Negotiator: Object, gbuf: String, http: Number, messages: Object;
+  var Negotiator: object, gbuf: string, http: number, messages: object;
 
   Negotiator = require('../lib/negotiator').Negotiator;
 
@@ -11,11 +11,11 @@
     identity: 'Hello World'
   };
 
-  gbuf.gzip(messages.identity, function(zipped: Array) {
-    var availableEncodings: Function, key: String, server: Object, val: Function;
+  gbuf.gzip(messages.identity, function(zipped: any[]) {
+    var availableEncodings: Function, key: string, server: object, val: Function;
     messages.gzip = zipped;
     availableEncodings = (function() {
-      var _results: Array;
+      var _results: any[];
       _results = [];
       for (key in messages) {
         val = messages[key];
@@ -24,8 +24,8 @@
       return _results;
     })();
     console.log(availableEncodings);
-    server = http.createServer(function(req: Object, res: Array) {
-      var encoding: String, negotiator: Object;
+    server = http.createServer(function(req: object, res: any[]) {
+      var encoding: string, negotiator: object;
       negotiator = new Negotiator(req);
       console.log("Accept-Encoding: " + req.headers['accept-encoding']);
       console.log("Preferred: " + (negotiator.encodings()));

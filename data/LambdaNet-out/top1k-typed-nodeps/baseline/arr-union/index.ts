@@ -1,15 +1,15 @@
 'use strict';
 
-module.exports = function union(init: Array): Array {
+module.exports = function union(init: any[]): any[] {
   if (!Array.isArray(init)) {
     throw new TypeError('arr-union expects the first argument to be an array.');
   }
 
-  var len: Number = arguments.length;
-  var i: Number = 0;
+  var len: number = arguments.length;
+  var i: number = 0;
 
   while (++i < len) {
-    var arg: Array = arguments[i];
+    var arg: any[] = arguments[i];
     if (!arg) continue;
 
     if (!Array.isArray(arg)) {
@@ -17,7 +17,7 @@ module.exports = function union(init: Array): Array {
     }
 
     for (var j = 0; j < arg.length; j++) {
-      var ele: String = arg[j];
+      var ele: string = arg[j];
 
       if (init.indexOf(ele) >= 0) {
         continue;

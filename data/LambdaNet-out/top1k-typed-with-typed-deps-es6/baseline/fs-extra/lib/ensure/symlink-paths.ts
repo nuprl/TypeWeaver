@@ -26,7 +26,7 @@ import { pathExists } from '../path-exists';
  * the ability to pass in `relative to current working direcotry` paths.
  */
 
-function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): Number {
+function symlinkPaths (srcpath: any[], dstpath: string, callback: Function): number {
   if (path.isAbsolute(srcpath)) {
     return fs.lstat(srcpath, (err: Map) => {
       if (err) {
@@ -39,9 +39,9 @@ function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): Num
       })
     })
   } else {
-    const dstdir: String = path.dirname(dstpath)
-    const relativeToDst: String = path.join(dstdir, srcpath)
-    return pathExists(relativeToDst, (err: Function, exists: Boolean) => {
+    const dstdir: string = path.dirname(dstpath)
+    const relativeToDst: string = path.join(dstdir, srcpath)
+    return pathExists(relativeToDst, (err: Function, exists: boolean) => {
       if (err) return callback(err)
       if (exists) {
         return callback(null, {
@@ -64,8 +64,8 @@ function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): Num
   }
 }
 
-function symlinkPathsSync (srcpath: String, dstpath: String): Object {
-  let exists: Number
+function symlinkPathsSync (srcpath: string, dstpath: string): object {
+  let exists: number
   if (path.isAbsolute(srcpath)) {
     exists = fs.existsSync(srcpath)
     if (!exists) throw new Error('absolute srcpath does not exist')
@@ -74,8 +74,8 @@ function symlinkPathsSync (srcpath: String, dstpath: String): Object {
       toDst: srcpath
     }
   } else {
-    const dstdir: String = path.dirname(dstpath)
-    const relativeToDst: String = path.join(dstdir, srcpath)
+    const dstdir: string = path.dirname(dstpath)
+    const relativeToDst: string = path.join(dstdir, srcpath)
     exists = fs.existsSync(relativeToDst)
     if (exists) {
       return {

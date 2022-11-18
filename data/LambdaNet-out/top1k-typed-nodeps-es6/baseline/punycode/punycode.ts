@@ -1,17 +1,17 @@
 'use strict';
 
 /** Highest positive signed 32-bit float value */
-const maxInt: Number = 2147483647; // aka. 0x7FFFFFFF or 2^31-1
+const maxInt: number = 2147483647; // aka. 0x7FFFFFFF or 2^31-1
 
 /** Bootstring parameters */
-const base: Number = 36;
-const tMin: Number = 1;
-const tMax: Number = 26;
-const skew: Number = 38;
-const damp: Number = 700;
-const initialBias: Number = 72;
-const initialN: Number = 128; // 0x80
-const delimiter: String = '-'; // '\x2D'
+const base: number = 36;
+const tMin: number = 1;
+const tMax: number = 26;
+const skew: number = 38;
+const damp: number = 700;
+const initialBias: number = 72;
+const initialN: number = 128; // 0x80
+const delimiter: string = '-'; // '\x2D'
 
 /** Regular expressions */
 const regexPunycode: RegExp = /^xn--/;
@@ -19,14 +19,14 @@ const regexNonASCII: RegExp = /[^\0-\x7E]/; // non-ASCII chars
 const regexSeparators: RegExp = /[\x2E\u3002\uFF0E\uFF61]/g; // RFC 3490 separators
 
 /** Error messages */
-const errors: Object = {
+const errors: object = {
 	'overflow': 'Overflow: input needs wider integers to process',
 	'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
 	'invalid-input': 'Invalid input'
 };
 
 /** Convenience shortcuts */
-const baseMinusTMin: Number = base - tMin;
+const baseMinusTMin: number = base - tMin;
 const floor: Function = Math.floor;
 const stringFromCharCode: Function = String.fromCharCode;
 
@@ -38,7 +38,7 @@ const stringFromCharCode: Function = String.fromCharCode;
  * @param {String} type The error type.
  * @returns {Error} Throws a `RangeError` with the applicable error message.
  */
-function error(type: String): Void {
+function error(type: string): Void {
 	throw new RangeError(errors[type]);
 }
 
@@ -50,9 +50,9 @@ function error(type: String): Void {
  * item.
  * @returns {Array} A new array of values returned by the callback function.
  */
-function map(array: Array, fn: Function): Object {
+function map(array: any[], fn: Function): object {
 	const result: Promise = [];
-	let length: Number = array.length;
+	let length: number = array.length;
 	while (length--) {
 		result[length] = fn(array[length]);
 	}
@@ -69,9 +69,9 @@ function map(array: Array, fn: Function): Object {
  * @returns {Array} A new string of characters returned by the callback
  * function.
  */
-function mapDomain(string: String, fn: Number): String {
-	const parts: Array = string.split('@');
-	let result: String = '';
+function mapDomain(string: string, fn: number): string {
+	const parts: any[] = string.split('@');
+	let result: string = '';
 	if (parts.length > 1) {
 		// In email addresses, only the domain name should be punycoded. Leave
 		// the local part (i.e. everything up to `@`) intact.
@@ -80,8 +80,8 @@ function mapDomain(string: String, fn: Number): String {
 	}
 	// Avoid `split(regex)` for IE8 compatibility. See #17.
 	string = string.replace(regexSeparators, '\x2E');
-	const labels: Array = string.split('.');
-	const encoded: String = map(labels, fn).join('.');
+	const labels: any[] = string.split('.');
+	const encoded: string = map(labels, fn).join('.');
 	return result + encoded;
 }
 
@@ -98,15 +98,15 @@ function mapDomain(string: String, fn: Number): String {
  * @param {String} string The Unicode input string (UCS-2).
  * @returns {Array} The new array of code points.
  */
-function ucs2decode(string: String): Array {
-	const output: Array = [];
-	let counter: Number = 0;
-	const length: Number = string.length;
+function ucs2decode(string: string): any[] {
+	const output: any[] = [];
+	let counter: number = 0;
+	const length: number = string.length;
 	while (counter < length) {
-		const value: Number = string.charCodeAt(counter++);
+		const value: number = string.charCodeAt(counter++);
 		if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
 			// It's a high surrogate, and there is a next character.
-			const extra: Number = string.charCodeAt(counter++);
+			const extra: number = string.charCodeAt(counter++);
 			if ((extra & 0xFC00) == 0xDC00) { // Low surrogate.
 				output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
 			} else {
@@ -130,7 +130,7 @@ function ucs2decode(string: String): Array {
  * @param {Array} codePoints The array of numeric code points.
  * @returns {String} The new Unicode string (UCS-2).
  */
-const ucs2encode: Function = (array: Array) => String.fromCodePoint(...array);
+const ucs2encode: Function = (array: any[]) => String.fromCodePoint(...array);
 
 /**
  * Converts a basic code point into a digit/integer.
@@ -141,7 +141,7 @@ const ucs2encode: Function = (array: Array) => String.fromCodePoint(...array);
  * representing integers) in the range `0` to `base - 1`, or `base` if
  * the code point does not represent a value.
  */
-const basicToDigit: Function = function(codePoint: Number) {
+const basicToDigit: Function = function(codePoint: number) {
 	if (codePoint - 0x30 < 0x0A) {
 		return codePoint - 0x16;
 	}
@@ -165,7 +165,7 @@ const basicToDigit: Function = function(codePoint: Number) {
  * used; else, the lowercase form is used. The behavior is undefined
  * if `flag` is non-zero and `digit` has no uppercase form.
  */
-const digitToBasic: Function = function(digit: Number, flag: Number) {
+const digitToBasic: Function = function(digit: number, flag: number) {
 	//  0..25 map to ASCII a..z or A..Z
 	// 26..35 map to ASCII 0..9
 	return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
@@ -176,8 +176,8 @@ const digitToBasic: Function = function(digit: Number, flag: Number) {
  * https://tools.ietf.org/html/rfc3492#section-3.4
  * @private
  */
-const adapt: Function = function(delta: Number, numPoints: Number, firstTime: Boolean) {
-	let k: Number = 0;
+const adapt: Function = function(delta: number, numPoints: number, firstTime: boolean) {
+	let k: number = 0;
 	delta = firstTime ? floor(delta / damp) : delta >> 1;
 	delta += floor(delta / numPoints);
 	for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
@@ -193,19 +193,19 @@ const adapt: Function = function(delta: Number, numPoints: Number, firstTime: Bo
  * @param {String} input The Punycode string of ASCII-only symbols.
  * @returns {String} The resulting string of Unicode symbols.
  */
-const decode: Function = function(input: String) {
+const decode: Function = function(input: string) {
 	// Don't use UCS-2.
-	const output: Array = [];
-	const inputLength: Number = input.length;
-	let i: Number = 0;
-	let n: Number = initialN;
-	let bias: Number = initialBias;
+	const output: any[] = [];
+	const inputLength: number = input.length;
+	let i: number = 0;
+	let n: number = initialN;
+	let bias: number = initialBias;
 
 	// Handle the basic code points: let `basic` be the number of input code
 	// points before the last delimiter, or `0` if there is none, then copy
 	// the first basic code points to the output.
 
-	let basic: Number = input.lastIndexOf(delimiter);
+	let basic: number = input.lastIndexOf(delimiter);
 	if (basic < 0) {
 		basic = 0;
 	}
@@ -228,27 +228,27 @@ const decode: Function = function(input: String) {
 		// which gets added to `i`. The overflow checking is easier
 		// if we increase `i` as we go, then subtract off its starting
 		// value at the end to obtain `delta`.
-		let oldi: Number = i;
+		let oldi: number = i;
 		for (let w = 1, k = base; /* no condition */; k += base) {
 
 			if (index >= inputLength) {
 				error('invalid-input');
 			}
 
-			const digit: Number = basicToDigit(input.charCodeAt(index++));
+			const digit: number = basicToDigit(input.charCodeAt(index++));
 
 			if (digit >= base || digit > floor((maxInt - i) / w)) {
 				error('overflow');
 			}
 
 			i += digit * w;
-			const t: Number = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+			const t: number = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
 
 			if (digit < t) {
 				break;
 			}
 
-			const baseMinusT: Number = base - t;
+			const baseMinusT: number = base - t;
 			if (w > floor(maxInt / baseMinusT)) {
 				error('overflow');
 			}
@@ -257,7 +257,7 @@ const decode: Function = function(input: String) {
 
 		}
 
-		const out: Number = output.length + 1;
+		const out: number = output.length + 1;
 		bias = adapt(i - oldi, out, oldi == 0);
 
 		// `i` was supposed to wrap around from `out` to `0`,
@@ -284,19 +284,19 @@ const decode: Function = function(input: String) {
  * @param {String} input The string of Unicode symbols.
  * @returns {String} The resulting Punycode string of ASCII-only symbols.
  */
-const encode: Function = function(input: Array) {
-	const output: Array = [];
+const encode: Function = function(input: any[]) {
+	const output: any[] = [];
 
 	// Convert the input in UCS-2 to an array of Unicode code points.
 	input = ucs2decode(input);
 
 	// Cache the length.
-	let inputLength: Number = input.length;
+	let inputLength: number = input.length;
 
 	// Initialize the state.
-	let n: Number = initialN;
-	let delta: Number = 0;
-	let bias: Number = initialBias;
+	let n: number = initialN;
+	let delta: number = 0;
+	let bias: number = initialBias;
 
 	// Handle the basic code points.
 	for (const currentValue of input) {
@@ -305,8 +305,8 @@ const encode: Function = function(input: Array) {
 		}
 	}
 
-	let basicLength: Number = output.length;
-	let handledCPCount: Number = basicLength;
+	let basicLength: number = output.length;
+	let handledCPCount: number = basicLength;
 
 	// `handledCPCount` is the number of code points that have been handled;
 	// `basicLength` is the number of basic code points.
@@ -321,7 +321,7 @@ const encode: Function = function(input: Array) {
 
 		// All non-basic code points < n have been handled already. Find the next
 		// larger one:
-		let m: Number = maxInt;
+		let m: number = maxInt;
 		for (const currentValue of input) {
 			if (currentValue >= n && currentValue < m) {
 				m = currentValue;
@@ -330,7 +330,7 @@ const encode: Function = function(input: Array) {
 
 		// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
 		// but guard against overflow.
-		const handledCPCountPlusOne: Number = handledCPCount + 1;
+		const handledCPCountPlusOne: number = handledCPCount + 1;
 		if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
 			error('overflow');
 		}
@@ -344,14 +344,14 @@ const encode: Function = function(input: Array) {
 			}
 			if (currentValue == n) {
 				// Represent delta as a generalized variable-length integer.
-				let q: Number = delta;
+				let q: number = delta;
 				for (let k = base; /* no condition */; k += base) {
-					const t: Number = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+					const t: number = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
 					if (q < t) {
 						break;
 					}
-					const qMinusT: Number = q - t;
-					const baseMinusT: Number = base - t;
+					const qMinusT: number = q - t;
+					const baseMinusT: number = base - t;
 					output.push(
 						stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
 					);
@@ -384,7 +384,7 @@ const encode: Function = function(input: Array) {
  * string.
  */
 const toUnicode: Function = function(input: Element) {
-	return mapDomain(input, function(string: String) {
+	return mapDomain(input, function(string: string) {
 		return regexPunycode.test(string)
 			? decode(string.slice(4).toLowerCase())
 			: string;
@@ -403,7 +403,7 @@ const toUnicode: Function = function(input: Element) {
  * email address.
  */
 const toASCII: Function = function(input: Element) {
-	return mapDomain(input, function(string: String) {
+	return mapDomain(input, function(string: string) {
 		return regexNonASCII.test(string)
 			? 'xn--' + encode(string)
 			: string;
@@ -413,7 +413,7 @@ const toASCII: Function = function(input: Element) {
 /*--------------------------------------------------------------------------*/
 
 /** Define the public API */
-const punycode: Object = {
+const punycode: object = {
 	/**
 	 * A string representing the current Punycode.js version number.
 	 * @memberOf punycode

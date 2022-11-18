@@ -6,26 +6,26 @@ import got from 'got';
 import fs from 'fs';
 var log: HTMLElement = Acho()
 
-var CONST: Object = {
+var CONST: object = {
   URL: 'https://twitter.github.io/twemoji/2/test/preview.html',
   MAIN_FILE: 'index.js'
 }
 
-function exitOnError (err: Object): Void {
+function exitOnError (err: object): Void {
   log.error(err)
   process.exit(err.code || 1)
 }
 
-function stringify (val: String): String {
+function stringify (val: string): string {
   return JSON.stringify(val, null, 2)
 }
 
-got(CONST.URL, function (err: Function, data: Object, res: Function) {
+got(CONST.URL, function (err: Function, data: object, res: Function) {
   if (err) return exitOnError(err)
   var $: Function = cheerio.load(data)
 
-  var emojis: Array = $('li').map(function (i: String, el: Function) {
-    var emoji: Number = $(this).text()
+  var emojis: any[] = $('li').map(function (i: string, el: Function) {
+    var emoji: number = $(this).text()
     log.debug('detected', emoji)
     return emoji
   }).get()

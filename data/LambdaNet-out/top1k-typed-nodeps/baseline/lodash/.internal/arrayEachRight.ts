@@ -6,8 +6,8 @@
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array} Returns `array`.
  */
-function arrayEachRight(array: Array, iteratee: Function): Array {
-  let length: Number = array == null ? 0 : array.length
+function arrayEachRight(array: any[], iteratee: Function): any[] {
+  let length: number = array == null ? 0 : array.length
 
   while (length--) {
     if (iteratee(array[length], length, array) === false) {

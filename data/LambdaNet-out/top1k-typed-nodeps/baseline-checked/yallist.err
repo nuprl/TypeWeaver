@@ -1,81 +1,74 @@
-.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-      Type 'String' is not assignable to type 'string | number'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-iterator.ts(3,11): error TS2339: Property 'prototype' does not exist on type 'Object'.
-yallist.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-yallist.ts(8,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+iterator.ts(3,11): error TS2339: Property 'prototype' does not exist on type 'object'.
 yallist.ts(10,12): error TS2350: Only a void function can be called with the 'new' keyword.
 yallist.ts(10,12): error TS2554: Expected 1 arguments, but got 0.
-yallist.ts(31,12): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(35,29): error TS2339: Property 'next' does not exist on type 'Object'.
-yallist.ts(36,32): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(13,8): error TS2339: Property 'tail' does not exist on type 'any[]'.
+yallist.ts(14,8): error TS2339: Property 'head' does not exist on type 'any[]'.
+yallist.ts(27,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+yallist.ts(31,12): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(35,29): error TS2339: Property 'next' does not exist on type 'object'.
+yallist.ts(36,32): error TS2339: Property 'prev' does not exist on type 'object'.
 yallist.ts(39,10): error TS2339: Property 'prev' does not exist on type 'Function'.
 yallist.ts(43,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
-yallist.ts(53,8): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(54,8): error TS2339: Property 'next' does not exist on type 'Object'.
-yallist.ts(55,8): error TS2339: Property 'prev' does not exist on type 'Object'.
-yallist.ts(56,8): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(66,12): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(67,10): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(71,8): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(72,8): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(53,8): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(54,8): error TS2339: Property 'next' does not exist on type 'object'.
+yallist.ts(55,8): error TS2339: Property 'prev' does not exist on type 'object'.
+yallist.ts(56,8): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(66,12): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(67,10): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(71,8): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(72,8): error TS2339: Property 'next' does not exist on type 'object'.
 yallist.ts(74,10): error TS2339: Property 'prev' does not exist on type 'Function'.
-yallist.ts(89,12): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(90,10): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(94,8): error TS2339: Property 'list' does not exist on type 'Object'.
-yallist.ts(95,8): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(89,12): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(90,10): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(94,8): error TS2339: Property 'list' does not exist on type 'object'.
+yallist.ts(95,8): error TS2339: Property 'prev' does not exist on type 'object'.
 yallist.ts(97,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
-yallist.ts(126,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-yallist.ts(142,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-yallist.ts(191,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 yallist.ts(191,20): error TS2350: Only a void function can be called with the 'new' keyword.
 yallist.ts(191,20): error TS2554: Expected 1 arguments, but got 0.
-yallist.ts(201,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 yallist.ts(201,20): error TS2350: Only a void function can be called with the 'new' keyword.
 yallist.ts(201,20): error TS2554: Expected 1 arguments, but got 0.
-yallist.ts(222,26): error TS2339: Property 'value' does not exist on type 'Object'.
-yallist.ts(223,21): error TS2339: Property 'next' does not exist on type 'Object'.
-yallist.ts(242,26): error TS2339: Property 'value' does not exist on type 'Object'.
-yallist.ts(243,21): error TS2339: Property 'prev' does not exist on type 'Object'.
-yallist.ts(276,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(222,26): error TS2339: Property 'value' does not exist on type 'object'.
+yallist.ts(223,21): error TS2339: Property 'next' does not exist on type 'object'.
+yallist.ts(242,26): error TS2339: Property 'value' does not exist on type 'object'.
+yallist.ts(243,21): error TS2339: Property 'prev' does not exist on type 'object'.
 yallist.ts(276,20): error TS2350: Only a void function can be called with the 'new' keyword.
 yallist.ts(276,20): error TS2554: Expected 1 arguments, but got 0.
-yallist.ts(304,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 yallist.ts(304,20): error TS2350: Only a void function can be called with the 'new' keyword.
 yallist.ts(304,20): error TS2554: Expected 1 arguments, but got 0.
-yallist.ts(335,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 yallist.ts(357,60): error TS2339: Property 'prev' does not exist on type 'Function'.
 yallist.ts(358,30): error TS2339: Property 'prev' does not exist on type 'Function'.
 yallist.ts(359,12): error TS2339: Property 'prev' does not exist on type 'Function'.
 yallist.ts(359,26): error TS2339: Property 'next' does not exist on type 'Function'.
 yallist.ts(360,12): error TS2339: Property 'next' does not exist on type 'Function'.
-yallist.ts(367,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(368,40): error TS2339: Property 'head' does not exist on type 'any[]'.
 yallist.ts(369,14): error TS2554: Expected 0 arguments, but got 4.
 yallist.ts(370,14): error TS2554: Expected 0 arguments, but got 4.
-yallist.ts(370,32): error TS2339: Property 'next' does not exist on type 'Object'.
-yallist.ts(372,16): error TS2339: Property 'next' does not exist on type 'Object'.
-yallist.ts(375,16): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(370,32): error TS2339: Property 'next' does not exist on type 'object'.
+yallist.ts(372,16): error TS2339: Property 'next' does not exist on type 'object'.
+yallist.ts(373,10): error TS2339: Property 'tail' does not exist on type 'any[]'.
+yallist.ts(375,16): error TS2339: Property 'prev' does not exist on type 'object'.
+yallist.ts(376,10): error TS2339: Property 'head' does not exist on type 'any[]'.
 yallist.ts(384,45): error TS2304: Cannot find name 'Void'.
-yallist.ts(385,8): error TS2339: Property 'tail' does not exist on type 'Object'.
+yallist.ts(385,8): error TS2339: Property 'tail' does not exist on type 'object'.
 yallist.ts(385,24): error TS2554: Expected 0 arguments, but got 4.
-yallist.ts(385,35): error TS2339: Property 'tail' does not exist on type 'Object'.
-yallist.ts(386,13): error TS2339: Property 'head' does not exist on type 'Object'.
-yallist.ts(387,10): error TS2339: Property 'head' does not exist on type 'Object'.
-yallist.ts(387,22): error TS2339: Property 'tail' does not exist on type 'Object'.
-yallist.ts(389,8): error TS2339: Property 'length' does not exist on type 'Object'.
-yallist.ts(392,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(385,35): error TS2339: Property 'tail' does not exist on type 'object'.
+yallist.ts(386,13): error TS2339: Property 'head' does not exist on type 'object'.
+yallist.ts(387,10): error TS2339: Property 'head' does not exist on type 'object'.
+yallist.ts(387,22): error TS2339: Property 'tail' does not exist on type 'object'.
+yallist.ts(389,8): error TS2339: Property 'length' does not exist on type 'object'.
 yallist.ts(392,47): error TS2304: Cannot find name 'Void'.
+yallist.ts(393,8): error TS2339: Property 'head' does not exist on type 'any[]'.
 yallist.ts(393,24): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(393,41): error TS2339: Property 'head' does not exist on type 'any[]'.
+yallist.ts(394,13): error TS2339: Property 'tail' does not exist on type 'any[]'.
+yallist.ts(395,10): error TS2339: Property 'tail' does not exist on type 'any[]'.
+yallist.ts(395,22): error TS2339: Property 'head' does not exist on type 'any[]'.
 yallist.ts(400,10): error TS2300: Duplicate identifier 'Node'.
-yallist.ts(402,5): error TS2740: Type 'Node' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+yallist.ts(402,5): error TS2322: Type 'Node' is not assignable to type 'string'.
 yallist.ts(402,21): error TS2554: Expected 0 arguments, but got 4.
 yallist.ts(409,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
 yallist.ts(416,10): error TS2339: Property 'prev' does not exist on type 'Function'.

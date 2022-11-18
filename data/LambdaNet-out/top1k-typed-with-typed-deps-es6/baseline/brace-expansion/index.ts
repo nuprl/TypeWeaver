@@ -1,15 +1,15 @@
 import balanced from 'balanced-match';
 
-const escSlash: String = '\0SLASH'+Math.random()+'\0';
-const escOpen: String = '\0OPEN'+Math.random()+'\0';
-const escClose: String = '\0CLOSE'+Math.random()+'\0';
-const escComma: String = '\0COMMA'+Math.random()+'\0';
-const escPeriod: String = '\0PERIOD'+Math.random()+'\0';
+const escSlash: string = '\0SLASH'+Math.random()+'\0';
+const escOpen: string = '\0OPEN'+Math.random()+'\0';
+const escClose: string = '\0CLOSE'+Math.random()+'\0';
+const escComma: string = '\0COMMA'+Math.random()+'\0';
+const escPeriod: string = '\0PERIOD'+Math.random()+'\0';
 
 /**
  * @return {number}
  */
-function numeric(str: String): Number {
+function numeric(str: string): number {
   return parseInt(str, 10) == str
     ? parseInt(str, 10)
     : str.charCodeAt(0);
@@ -18,7 +18,7 @@ function numeric(str: String): Number {
 /**
  * @param {string} str
  */
-function escapeBraces(str: String): String {
+function escapeBraces(str: string): string {
   return str.split('\\\\').join(escSlash)
             .split('\\{').join(escOpen)
             .split('\\}').join(escClose)
@@ -29,7 +29,7 @@ function escapeBraces(str: String): String {
 /**
  * @param {string} str
  */
-function unescapeBraces(str: String): String {
+function unescapeBraces(str: string): string {
   return str.split(escSlash).join('\\')
             .split(escOpen).join('{')
             .split(escClose).join('}')
@@ -43,21 +43,21 @@ function unescapeBraces(str: String): String {
  * treated as individual members, like {a,{b,c},d}
  * @param {string} str
  */
-function parseCommaParts(str: String): Array {
+function parseCommaParts(str: string): any[] {
   if (!str)
     return [''];
 
-  const parts: Array = [];
+  const parts: any[] = [];
   const m: HTMLElement = balanced('{', '}', str);
 
   if (!m)
     return str.split(',');
 
   const {pre, body, post} = m;
-  const p: Array = pre.split(',');
+  const p: any[] = pre.split(',');
 
   p[p.length-1] += '{' + body + '}';
-  const postParts: Array = parseCommaParts(post);
+  const postParts: any[] = parseCommaParts(post);
   if (post.length) {
     p[p.length-1] += postParts.shift();
     p.push.apply(p, postParts);
@@ -71,7 +71,7 @@ function parseCommaParts(str: String): Array {
 /**
  * @param {string} str
  */
-function expandTop(str: String): Array {
+function expandTop(str: string): any[] {
   if (!str)
     return [];
 
@@ -91,14 +91,14 @@ function expandTop(str: String): Array {
 /**
  * @param {string} str
  */
-function embrace(str: String): String {
+function embrace(str: string): string {
   return '{' + str + '}';
 }
 
 /**
  * @param {string} el
  */
-function isPadded(el: String): Boolean {
+function isPadded(el: string): boolean {
   return /^-?0\d/.test(el);
 }
 
@@ -106,7 +106,7 @@ function isPadded(el: String): Boolean {
  * @param {number} i
  * @param {number} y
  */
-function lte(i: Number, y: Number): Boolean {
+function lte(i: number, y: number): boolean {
   return i <= y;
 }
 
@@ -114,7 +114,7 @@ function lte(i: Number, y: Number): Boolean {
  * @param {number} i
  * @param {number} y
  */
-function gte(i: Number, y: Number): Boolean {
+function gte(i: number, y: number): boolean {
   return i >= y;
 }
 
@@ -122,29 +122,29 @@ function gte(i: Number, y: Number): Boolean {
  * @param {string} str
  * @param {boolean} [isTop]
  */
-function expand(str: Number, isTop: Boolean): Array {
+function expand(str: number, isTop: boolean): any[] {
   /** @type {string[]} */
-  const expansions: Array = [];
+  const expansions: any[] = [];
 
   const m: HTMLElement = balanced('{', '}', str);
   if (!m) return [str];
 
   // no need to expand pre, since it is guaranteed to be free of brace-sets
-  const pre: Number = m.pre;
-  const post: Array = m.post.length
+  const pre: number = m.pre;
+  const post: any[] = m.post.length
     ? expand(m.post, false)
     : [''];
 
   if (/\$$/.test(m.pre)) {
     for (let k = 0; k < post.length; k++) {
-      const expansion: String = pre+ '{' + m.body + '}' + post[k];
+      const expansion: string = pre+ '{' + m.body + '}' + post[k];
       expansions.push(expansion);
     }
   } else {
-    const isNumericSequence: Boolean = /^-?\d+\.\.-?\d+(?:\.\.-?\d+)?$/.test(m.body);
-    const isAlphaSequence: Boolean = /^[a-zA-Z]\.\.[a-zA-Z](?:\.\.-?\d+)?$/.test(m.body);
-    const isSequence: Boolean = isNumericSequence || isAlphaSequence;
-    const isOptions: Boolean = m.body.indexOf(',') >= 0;
+    const isNumericSequence: boolean = /^-?\d+\.\.-?\d+(?:\.\.-?\d+)?$/.test(m.body);
+    const isAlphaSequence: boolean = /^[a-zA-Z]\.\.[a-zA-Z](?:\.\.-?\d+)?$/.test(m.body);
+    const isSequence: boolean = isNumericSequence || isAlphaSequence;
+    const isOptions: boolean = m.body.indexOf(',') >= 0;
     if (!isSequence && !isOptions) {
       // {a},b}
       if (m.post.match(/,.*\}/)) {
@@ -154,7 +154,7 @@ function expand(str: Number, isTop: Boolean): Array {
       return [str];
     }
 
-    let n: Array;
+    let n: any[];
     if (isSequence) {
       n = m.body.split(/\.\./);
     } else {
@@ -163,7 +163,7 @@ function expand(str: Number, isTop: Boolean): Array {
         // x{{a,b}}y ==> x{a}y x{b}y
         n = expand(n[0], false).map(embrace);
         if (n.length === 1) {
-          return post.map(function(p: String) {
+          return post.map(function(p: string) {
             return m.pre + n[0] + p;
           });
         }
@@ -172,27 +172,27 @@ function expand(str: Number, isTop: Boolean): Array {
 
     // at this point, n is the parts, and we know it's not a comma set
     // with a single entry.
-    let N: Array;
+    let N: any[];
 
     if (isSequence) {
-      const x: String = numeric(n[0]);
-      const y: String = numeric(n[1]);
-      const width: Number = Math.max(n[0].length, n[1].length)
-      let incr: Number = n.length == 3
+      const x: string = numeric(n[0]);
+      const y: string = numeric(n[1]);
+      const width: number = Math.max(n[0].length, n[1].length)
+      let incr: number = n.length == 3
         ? Math.abs(numeric(n[2]))
         : 1;
       let test: Function = lte;
-      const reverse: Boolean = y < x;
+      const reverse: boolean = y < x;
       if (reverse) {
         incr *= -1;
         test = gte;
       }
-      const pad: Boolean = n.some(isPadded);
+      const pad: boolean = n.some(isPadded);
 
       N = [];
 
       for (let i = x; test(i, y); i += incr) {
-        let c: String;
+        let c: string;
         if (isAlphaSequence) {
           c = String.fromCharCode(i);
           if (c === '\\')
@@ -200,9 +200,9 @@ function expand(str: Number, isTop: Boolean): Array {
         } else {
           c = String(i);
           if (pad) {
-            const need: Number = width - c.length;
+            const need: number = width - c.length;
             if (need > 0) {
-              const z: String = new Array(need + 1).join('0');
+              const z: string = new Array(need + 1).join('0');
               if (i < 0)
                 c = '-' + z + c.slice(1);
               else
@@ -222,7 +222,7 @@ function expand(str: Number, isTop: Boolean): Array {
 
     for (let j = 0; j < N.length; j++) {
       for (let k = 0; k < post.length; k++) {
-        const expansion: String = pre + N[j] + post[k];
+        const expansion: string = pre + N[j] + post[k];
         if (!isTop || isSequence || expansion)
           expansions.push(expansion);
       }

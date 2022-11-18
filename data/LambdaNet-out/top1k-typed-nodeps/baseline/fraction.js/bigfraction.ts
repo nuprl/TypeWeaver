@@ -37,32 +37,32 @@
  *
  */
 
-(function(root: Object) {
+(function(root: object) {
 
   "use strict";
 
   // Set Identity function to downgrade BigInt to Number if needed
-  if (!BigInt) BigInt = function(n: Number) { if (isNaN(n)) throw new Error(""); return n; };
+  if (!BigInt) BigInt = function(n: number) { if (isNaN(n)) throw new Error(""); return n; };
 
-  const C_ONE: Number = BigInt(1);
-  const C_ZERO: String = BigInt(0);
-  const C_TEN: Number = BigInt(10);
-  const C_TWO: Number = BigInt(2);
-  const C_FIVE: Number = BigInt(5);
+  const C_ONE: number = BigInt(1);
+  const C_ZERO: string = BigInt(0);
+  const C_TEN: number = BigInt(10);
+  const C_TWO: number = BigInt(2);
+  const C_FIVE: number = BigInt(5);
 
   // Maximum search depth for cyclic rational numbers. 2000 should be more than enough.
   // Example: 1/7 = 0.(142857) has 6 repeating decimal places.
   // If MAX_CYCLE_LEN gets reduced, long cycles will not be detected and toString() only gets the first 10 digits
-  const MAX_CYCLE_LEN: Number = 2000;
+  const MAX_CYCLE_LEN: number = 2000;
 
   // Parsed data to avoid calling "new" all the time
-  const P: Object = {
+  const P: object = {
     "s": C_ONE,
     "n": C_ZERO,
     "d": C_ONE
   };
 
-  function assign(n: Number, s: Number): Number {
+  function assign(n: number, s: number): number {
 
     try {
       n = BigInt(n);
@@ -73,31 +73,31 @@
   }
 
   // Creates a new Fraction internally without the need of the bulky constructor
-  function newFraction(n: Number, d: Number): Object {
+  function newFraction(n: number, d: number): object {
 
     if (d === C_ZERO) {
       throw Fraction['DivisionByZero'];
     }
 
-    const f: Object = Object.create(Fraction.prototype);
+    const f: object = Object.create(Fraction.prototype);
     f["s"] = n < C_ZERO ? -C_ONE : C_ONE;
 
     n = n < C_ZERO ? -n : n;
 
-    const a: Number = gcd(n, d);
+    const a: number = gcd(n, d);
 
     f["n"] = n / a;
     f["d"] = d / a;
     return f;
   }
 
-  function factorize(num: Number): Object {
+  function factorize(num: number): object {
 
-    const factors: Object = {};
+    const factors: object = {};
 
-    let n: Number = num;
-    let i: Number = C_TWO;
-    let s: Number = C_FIVE - C_ONE;
+    let n: number = num;
+    let i: number = C_TWO;
+    let s: number = C_FIVE - C_ONE;
 
     while (s <= n) {
 
@@ -117,9 +117,9 @@
     return factors;
   }
 
-  const parse: Function = function(p1: Number, p2: String) {
+  const parse: Function = function(p1: number, p2: string) {
 
-    let n: Number = C_ZERO, d: Number = C_ONE, s: Number = C_ONE;
+    let n: number = C_ZERO, d: number = C_ONE, s: number = C_ONE;
 
     if (p1 === undefined || p1 === null) {
       /* void */
@@ -167,12 +167,12 @@
         n = BigInt(p1);
       } else if (p1 > 0) { // check for != 0, scale would become NaN (log(0)), which converges really slow
 
-        let z: Number = 1;
+        let z: number = 1;
 
-        let A: Number = 0, B: Number = 1;
-        let C: Number = 1, D: Number = 1;
+        let A: number = 0, B: number = 1;
+        let C: number = 1, D: number = 1;
 
-        let N: Number = 10000000;
+        let N: number = 10000000;
 
         if (p1 >= 1) {
           z = 10 ** Math.floor(1 + Math.log10(p1));
@@ -182,7 +182,7 @@
         // Using Farey Sequences
 
         while (B <= N && D <= N) {
-          let M: Number = (A + C) / (B + D);
+          let M: number = (A + C) / (B + D);
 
           if (p1 === M) {
             if (B + D <= N) {
@@ -223,11 +223,11 @@
 
     } else if (typeof p1 === "string") {
 
-      let ndx: Number = 0;
+      let ndx: number = 0;
 
-      let v: Number = C_ZERO, w: Number = C_ZERO, x: String = C_ZERO, y: Number = C_ONE, z: Number = C_ONE;
+      let v: number = C_ZERO, w: number = C_ZERO, x: string = C_ZERO, y: number = C_ONE, z: number = C_ONE;
 
-      let match: Object = p1.match(/\d+|./g);
+      let match: object = p1.match(/\d+|./g);
 
       if (match === null)
         throw Fraction['InvalidParameter'];
@@ -294,9 +294,9 @@
     P["d"] = d < C_ZERO ? -d : d;
   };
 
-  function modpow(b: Number, e: Number, m: Number): Number {
+  function modpow(b: number, e: number, m: number): number {
 
-    let r: Number = C_ONE;
+    let r: number = C_ONE;
     for (; e > C_ZERO; b = (b * b) % m, e >>= C_ONE) {
 
       if (e & C_ONE) {
@@ -306,7 +306,7 @@
     return r;
   }
 
-  function cycleLen(n: Number, d: Number): Number {
+  function cycleLen(n: number, d: number): number {
 
     for (; d % C_TWO === C_ZERO;
       d/= C_TWO) {
@@ -324,8 +324,8 @@
     // However, we don't need such large numbers and MAX_CYCLE_LEN should be the capstone,
     // as we want to translate the numbers to strings.
 
-    let rem: Number = C_TEN % d;
-    let t: Number = 1;
+    let rem: number = C_TEN % d;
+    let t: number = 1;
 
     for (; rem !== C_ONE; t++) {
       rem = rem * C_TEN % d;
@@ -336,10 +336,10 @@
     return BigInt(t);
   }
 
-  function cycleStart(n: String, d: Number, len: Number): Number {
+  function cycleStart(n: string, d: number, len: number): number {
 
-    let rem1: Number = C_ONE;
-    let rem2: Number = modpow(C_TEN, len, d);
+    let rem1: number = C_ONE;
+    let rem2: number = modpow(C_TEN, len, d);
 
     for (let t = 0; t < 300; t++) { // s < ~log10(Number.MAX_VALUE)
       // Solve 10^s == 10^(s+t) (mod d)
@@ -353,7 +353,7 @@
     return 0;
   }
 
-  function gcd(a: Number, b: Boolean): Number {
+  function gcd(a: number, b: boolean): number {
 
     if (!a)
       return b;
@@ -377,7 +377,7 @@
    * @param {number|Fraction=} a
    * @param {number=} b
    */
-  function Fraction(a: Number, b: String): String {
+  function Fraction(a: number, b: string): string {
 
     parse(a, b);
 
@@ -426,7 +426,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => 467 / 30
      **/
-    "add": function(a: Array, b: String) {
+    "add": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -440,7 +440,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => -427 / 30
      **/
-    "sub": function(a: Array, b: String) {
+    "sub": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -454,7 +454,7 @@
      *
      * Ex: new Fraction("-17.(345)").mul(3) => 5776 / 111
      **/
-    "mul": function(a: Array, b: String) {
+    "mul": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -468,7 +468,7 @@
      *
      * Ex: new Fraction("-17.(345)").inverse().div(3)
      **/
-    "div": function(a: Array, b: String) {
+    "div": function(a: any[], b: string) {
 
       parse(a, b);
       return newFraction(
@@ -491,7 +491,7 @@
      *
      * Ex: new Fraction('4.(3)').mod([7, 8]) => (13/3) % (7/8) = (5/6)
      **/
-    "mod": function(a: String, b: String) {
+    "mod": function(a: string, b: string) {
 
       if (a === undefined) {
         return newFraction(this["s"] * this["n"] % this["d"], C_ONE);
@@ -527,7 +527,7 @@
      *
      * Ex: new Fraction(5,8).gcd(3,7) => 1/56
      */
-    "gcd": function(a: Array, b: String) {
+    "gcd": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -541,7 +541,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: Array, b: String) {
+    "lcm": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -567,7 +567,7 @@
      *
      * Ex: new Fraction(-1,2).pow(-3) => -8
      */
-    "pow": function(a: Array, b: String) {
+    "pow": function(a: any[], b: string) {
 
       parse(a, b);
 
@@ -591,12 +591,12 @@
       if (this['s'] < C_ZERO) return null;
 
       // Now prime factor n and d
-      let N: Object = factorize(this['n']);
-      let D: Object = factorize(this['d']);
+      let N: object = factorize(this['n']);
+      let D: object = factorize(this['d']);
 
       // Exponentiate and take root for n and d individually
-      let n: Number = C_ONE;
-      let d: Number = C_ONE;
+      let n: number = C_ONE;
+      let d: number = C_ONE;
       for (let k in N) {
         if (k === '1') continue;
         if (k === '0') {
@@ -632,7 +632,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: Array, b: String) {
+    "equals": function(a: any[], b: string) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0
@@ -643,10 +643,10 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "compare": function(a: Array, b: String) {
+    "compare": function(a: any[], b: string) {
 
       parse(a, b);
-      let t: Number = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
+      let t: number = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
 
       return (C_ZERO < t) - (t < C_ZERO);
     },
@@ -656,7 +656,7 @@
      *
      * Ex: new Fraction('4.(3)').ceil() => (5 / 1)
      **/
-    "ceil": function(places: Number) {
+    "ceil": function(places: number) {
 
       places = C_TEN ** BigInt(places || 0);
 
@@ -670,7 +670,7 @@
      *
      * Ex: new Fraction('4.(3)').floor() => (4 / 1)
      **/
-    "floor": function(places: Number) {
+    "floor": function(places: number) {
 
       places = C_TEN ** BigInt(places || 0);
 
@@ -684,7 +684,7 @@
      *
      * Ex: new Fraction('4.(3)').round() => (4 / 1)
      **/
-    "round": function(places: Number) {
+    "round": function(places: number) {
 
       places = C_TEN ** BigInt(places || 0);
 
@@ -713,7 +713,7 @@
      *
      * Ex: new Fraction(19.6).divisible(1.5);
      */
-    "divisible": function(a: Array, b: String) {
+    "divisible": function(a: any[], b: string) {
 
       parse(a, b);
       return !(!(P["n"] * this["d"]) || ((this["n"] * P["d"]) % (P["n"] * this["d"])));
@@ -734,21 +734,21 @@
      *
      * Ex: new Fraction("100.'91823'").toString() => "100.(91823)"
      **/
-    'toString': function(dec: Number) {
+    'toString': function(dec: number) {
 
-      let N: Number = this["n"];
-      let D: Number = this["d"];
+      let N: number = this["n"];
+      let D: number = this["d"];
 
-      function trunc(x: Number): Number {
+      function trunc(x: number): number {
           return typeof x === 'bigint' ? x : Math.floor(x);
       }
 
       dec = dec || 15; // 15 = decimal places when no repetition
 
-      let cycLen: Number = cycleLen(N, D); // Cycle length
-      let cycOff: Number = cycleStart(N, D, cycLen); // Cycle start
+      let cycLen: number = cycleLen(N, D); // Cycle length
+      let cycOff: number = cycleStart(N, D, cycLen); // Cycle start
 
-      let str: String = this['s'] < C_ZERO ? "-" : "";
+      let str: string = this['s'] < C_ZERO ? "-" : "";
 
       // Append integer part
       str+= trunc(N / D);
@@ -788,16 +788,16 @@
      *
      * Ex: new Fraction("1.'3'").toFraction() => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: Boolean) {
+    'toFraction': function(excludeWhole: boolean) {
 
-      let n: Number = this["n"];
-      let d: Number = this["d"];
-      let str: String = this['s'] < C_ZERO ? "-" : "";
+      let n: number = this["n"];
+      let d: number = this["d"];
+      let str: string = this['s'] < C_ZERO ? "-" : "";
 
       if (d === C_ONE) {
         str+= n;
       } else {
-        let whole: Number = n / d;
+        let whole: number = n / d;
         if (excludeWhole && whole > C_ZERO) {
           str+= whole;
           str+= " ";
@@ -816,16 +816,16 @@
      *
      * Ex: new Fraction("1.'3'").toLatex() => "\frac{4}{3}"
      **/
-    'toLatex': function(excludeWhole: Boolean) {
+    'toLatex': function(excludeWhole: boolean) {
 
-      let n: Number = this["n"];
-      let d: Number = this["d"];
-      let str: String = this['s'] < C_ZERO ? "-" : "";
+      let n: number = this["n"];
+      let d: number = this["d"];
+      let str: string = this['s'] < C_ZERO ? "-" : "";
 
       if (d === C_ONE) {
         str+= n;
       } else {
-        let whole: Number = n / d;
+        let whole: number = n / d;
         if (excludeWhole && whole > C_ZERO) {
           str+= whole;
           n%= d;
@@ -847,13 +847,13 @@
      */
     'toContinued': function() {
 
-      let a: Number = this['n'];
-      let b: Number = this['d'];
-      let res: Array = [];
+      let a: number = this['n'];
+      let b: number = this['d'];
+      let res: any[] = [];
 
       do {
         res.push(a / b);
-        let t: Number = a % b;
+        let t: number = a % b;
         a = b;
         b = t;
       } while (a !== C_ONE);
@@ -861,16 +861,16 @@
       return res;
     },
 
-    "simplify": function(eps: String) {
+    "simplify": function(eps: string) {
 
       eps = eps || 0.001;
 
-      const thisABS: Object = this['abs']();
-      const cont: Array = thisABS['toContinued']();
+      const thisABS: object = this['abs']();
+      const cont: any[] = thisABS['toContinued']();
 
       for (let i = 1; i < cont.length; i++) {
 
-        let s: Object = newFraction(cont[i - 1], C_ONE);
+        let s: object = newFraction(cont[i - 1], C_ONE);
         for (let k = i - 2; k >= 0; k--) {
           s = s['inverse']()['add'](cont[k]);
         }

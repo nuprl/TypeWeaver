@@ -12,7 +12,7 @@ const { Barrett } = BigInteger.prototype;
 class SecureRandom {
   nextBytes(bytes) {
     const { length } = bytes;
-    const rand: Object = randomBytes(length);
+    const rand: object = randomBytes(length);
     for (let i = 0; i < length; ++i) {
       bytes.push(rand[i]);
     }
@@ -23,48 +23,48 @@ class SecureRandom {
 // ECFieldElementFp
 
 // constructor
-function ECFieldElementFp(q: Object, x: Number): Void {
+function ECFieldElementFp(q: object, x: number): Void {
   this.x = x;
   // TODO if(x.compareTo(this.q) >= 0) error
   this.q = q;
 }
 
-function feFpEquals(other: String): Boolean {
+function feFpEquals(other: string): boolean {
   if (other == this) return true;
   return this.q.equals(other.q) && this.x.equals(other.x);
 }
 
-function feFpToBigInteger(): Number {
+function feFpToBigInteger(): number {
   return this.x;
 }
 
-function feFpNegate(): Object {
+function feFpNegate(): object {
   return new ECFieldElementFp(this.q, this.x.negate().mod(this.q));
 }
 
-function feFpAdd(b: Object): Promise {
+function feFpAdd(b: object): Promise {
   return new ECFieldElementFp(this.q, this.x.add(b.toBigInteger()).mod(this.q));
 }
 
-function feFpSubtract(b: Object): Object {
+function feFpSubtract(b: object): object {
   return new ECFieldElementFp(
     this.q,
     this.x.subtract(b.toBigInteger()).mod(this.q)
   );
 }
 
-function feFpMultiply(b: Object): Promise {
+function feFpMultiply(b: object): Promise {
   return new ECFieldElementFp(
     this.q,
     this.x.multiply(b.toBigInteger()).mod(this.q)
   );
 }
 
-function feFpSquare(): Object {
+function feFpSquare(): object {
   return new ECFieldElementFp(this.q, this.x.square().mod(this.q));
 }
 
-function feFpDivide(b: Object): Object {
+function feFpDivide(b: object): object {
   return new ECFieldElementFp(
     this.q,
     this.x.multiply(b.toBigInteger().modInverse(this.q)).mod(this.q)
@@ -79,8 +79,8 @@ ECFieldElementFp.prototype.subtract = feFpSubtract;
 ECFieldElementFp.prototype.multiply = feFpMultiply;
 ECFieldElementFp.prototype.square = feFpSquare;
 ECFieldElementFp.prototype.divide = feFpDivide;
-ECFieldElementFp.prototype.modDouble = function(x: String) {
-  let _2x: String = x.shiftLeft(1);
+ECFieldElementFp.prototype.modDouble = function(x: string) {
+  let _2x: string = x.shiftLeft(1);
   if (_2x.compareTo(this.q) >= 0) {
     _2x = _2x.subtract(this.q);
   }
@@ -91,7 +91,7 @@ ECFieldElementFp.prototype.modDouble = function(x: String) {
 // ECPointFp
 
 // constructor
-function ECPointFp(curve: Object, x: Number, y: Number, z: String): Void {
+function ECPointFp(curve: object, x: number, y: number, z: string): Void {
   this.curve = curve;
   this.x = x;
   this.y = y;
@@ -110,7 +110,7 @@ function pointFpGetX(): Promise {
   if (this.zinv == null) {
     this.zinv = this.z.modInverse(this.curve.q);
   }
-  var r: String = this.x.toBigInteger().multiply(this.zinv);
+  var r: string = this.x.toBigInteger().multiply(this.zinv);
   this.curve.reduce(r);
   return this.curve.fromBigInteger(r);
 }
@@ -119,16 +119,16 @@ function pointFpGetY(): Promise {
   if (this.zinv == null) {
     this.zinv = this.z.modInverse(this.curve.q);
   }
-  var r: String = this.y.toBigInteger().multiply(this.zinv);
+  var r: string = this.y.toBigInteger().multiply(this.zinv);
   this.curve.reduce(r);
   return this.curve.fromBigInteger(r);
 }
 
-function pointFpEquals(other: HTMLElement): Boolean {
+function pointFpEquals(other: HTMLElement): boolean {
   if (other == this) return true;
   if (this.isInfinity()) return other.isInfinity();
   if (other.isInfinity()) return this.isInfinity();
-  var u: Object, v: Object;
+  var u: object, v: object;
   // u = Y2 * Z1 - Y1 * Z2
   u = other.y
     .toBigInteger()
@@ -145,7 +145,7 @@ function pointFpEquals(other: HTMLElement): Boolean {
   return v.equals(BigInteger.ZERO);
 }
 
-function pointFpIsInfinity(): Boolean {
+function pointFpIsInfinity(): boolean {
   if (this.x == null && this.y == null) return true;
   return (
     this.z.equals(BigInteger.ZERO) &&
@@ -153,7 +153,7 @@ function pointFpIsInfinity(): Boolean {
   );
 }
 
-function pointFpNegate(): Object {
+function pointFpNegate(): object {
   return new ECPointFp(this.curve, this.x, this.y.negate(), this.z);
 }
 
@@ -162,13 +162,13 @@ function pointFpAdd(b: HTMLElement): Promise {
   if (b.isInfinity()) return this;
 
   // u = Y2 * Z1 - Y1 * Z2
-  var u: Object = b.y
+  var u: object = b.y
     .toBigInteger()
     .multiply(this.z)
     .subtract(this.y.toBigInteger().multiply(b.z))
     .mod(this.curve.q);
   // v = X2 * Z1 - X1 * Z2
-  var v: String = b.x
+  var v: string = b.x
     .toBigInteger()
     .multiply(this.z)
     .subtract(this.x.toBigInteger().multiply(b.z))
@@ -181,26 +181,26 @@ function pointFpAdd(b: HTMLElement): Promise {
     return this.curve.getInfinity(); // this = -b, so infinity
   }
 
-  var THREE: String = new BigInteger("3");
-  var x1: Array = this.x.toBigInteger();
-  var y1: Array = this.y.toBigInteger();
-  var x2: String = b.x.toBigInteger();
-  var y2: String = b.y.toBigInteger();
+  var THREE: string = new BigInteger("3");
+  var x1: any[] = this.x.toBigInteger();
+  var y1: any[] = this.y.toBigInteger();
+  var x2: string = b.x.toBigInteger();
+  var y2: string = b.y.toBigInteger();
 
-  var v2: Object = v.square();
-  var v3: Object = v2.multiply(v);
-  var x1v2: Array = x1.multiply(v2);
+  var v2: object = v.square();
+  var v3: object = v2.multiply(v);
+  var x1v2: any[] = x1.multiply(v2);
   var zu2: HTMLElement = u.square().multiply(this.z);
 
   // x3 = v * (z2 * (z1 * u^2 - 2 * x1 * v^2) - v^3)
-  var x3: String = zu2
+  var x3: string = zu2
     .subtract(x1v2.shiftLeft(1))
     .multiply(b.z)
     .subtract(v3)
     .multiply(v)
     .mod(this.curve.q);
   // y3 = z2 * (3 * x1 * u * v^2 - y1 * v^3 - z1 * u^3) + u * v^3
-  var y3: String = x1v2
+  var y3: string = x1v2
     .multiply(THREE)
     .multiply(u)
     .subtract(y1.multiply(v3))
@@ -209,7 +209,7 @@ function pointFpAdd(b: HTMLElement): Promise {
     .add(u.multiply(v3))
     .mod(this.curve.q);
   // z3 = v^3 * z1 * z2
-  var z3: String = v3
+  var z3: string = v3
     .multiply(this.z)
     .multiply(b.z)
     .mod(this.curve.q);
@@ -227,13 +227,13 @@ function pointFpTwice(): Promise {
   if (this.y.toBigInteger().signum() == 0) return this.curve.getInfinity();
 
   // TODO: optimized handling of constants
-  var THREE: String = new BigInteger("3");
-  var x1: String = this.x.toBigInteger();
-  var y1: Array = this.y.toBigInteger();
+  var THREE: string = new BigInteger("3");
+  var x1: string = this.x.toBigInteger();
+  var y1: any[] = this.y.toBigInteger();
 
   var y1z1: Function = y1.multiply(this.z);
-  var y1sqz1: Array = y1z1.multiply(y1).mod(this.curve.q);
-  var a: String = this.curve.a.toBigInteger();
+  var y1sqz1: any[] = y1z1.multiply(y1).mod(this.curve.q);
+  var a: string = this.curve.a.toBigInteger();
 
   // w = 3 * x1^2 + a * z1^2
   var w: HTMLElement = x1.square().multiply(THREE);
@@ -243,14 +243,14 @@ function pointFpTwice(): Promise {
   w = w.mod(this.curve.q);
   //this.curve.reduce(w);
   // x3 = 2 * y1 * z1 * (w^2 - 8 * x1 * y1^2 * z1)
-  var x3: String = w
+  var x3: string = w
     .square()
     .subtract(x1.shiftLeft(3).multiply(y1sqz1))
     .shiftLeft(1)
     .multiply(y1z1)
     .mod(this.curve.q);
   // y3 = 4 * y1^2 * z1 * (3 * w * x1 - 2 * y1^2 * z1) - w^3
-  var y3: String = w
+  var y3: string = w
     .multiply(THREE)
     .multiply(x1)
     .subtract(y1sqz1.shiftLeft(1))
@@ -259,7 +259,7 @@ function pointFpTwice(): Promise {
     .subtract(w.square().multiply(w))
     .mod(this.curve.q);
   // z3 = 8 * (y1 * z1)^3
-  var z3: String = y1z1
+  var z3: string = y1z1
     .square()
     .multiply(y1z1)
     .shiftLeft(3)
@@ -275,22 +275,22 @@ function pointFpTwice(): Promise {
 
 // Simple NAF (Non-Adjacent Form) multiplication algorithm
 // TODO: modularize the multiplication algorithm
-function pointFpMultiply(k: Object): Promise {
+function pointFpMultiply(k: object): Promise {
   if (this.isInfinity()) return this;
   if (k.signum() == 0) return this.curve.getInfinity();
 
   var e: HTMLElement = k;
   var h: HTMLElement = e.multiply(new BigInteger("3"));
 
-  var neg: String = this.negate();
+  var neg: string = this.negate();
   var R: HTMLElement = this;
 
-  var i: Number;
+  var i: number;
   for (i = h.bitLength() - 2; i > 0; --i) {
     R = R.twice();
 
-    var hBit: String = h.testBit(i);
-    var eBit: String = e.testBit(i);
+    var hBit: string = h.testBit(i);
+    var eBit: string = e.testBit(i);
 
     if (hBit != eBit) {
       R = R.add(hBit ? this : neg);
@@ -301,13 +301,13 @@ function pointFpMultiply(k: Object): Promise {
 }
 
 // Compute this*j + x*k (simultaneous multiplication)
-function pointFpMultiplyTwo(j: HTMLElement, x: String, k: HTMLElement): Promise {
-  var i: Number;
+function pointFpMultiplyTwo(j: HTMLElement, x: string, k: HTMLElement): Promise {
+  var i: number;
   if (j.bitLength() > k.bitLength()) i = j.bitLength() - 1;
   else i = k.bitLength() - 1;
 
   var R: HTMLElement = this.curve.getInfinity();
-  var both: Array = this.add(x);
+  var both: any[] = this.add(x);
   while (i >= 0) {
     R = R.twice();
     if (j.testBit(i)) {
@@ -341,7 +341,7 @@ ECPointFp.prototype.multiplyTwo = pointFpMultiplyTwo;
 // ECCurveFp
 
 // constructor
-function ECCurveFp(q: Object, a: Function, b: String): Void {
+function ECCurveFp(q: object, a: Function, b: string): Void {
   this.q = q;
   this.a = this.fromBigInteger(a);
   this.b = this.fromBigInteger(b);
@@ -353,44 +353,44 @@ function curveFpGetQ(): Promise {
   return this.q;
 }
 
-function curveFpGetA(): Object {
+function curveFpGetA(): object {
   return this.a;
 }
 
-function curveFpGetB(): Object {
+function curveFpGetB(): object {
   return this.b;
 }
 
-function curveFpEquals(other: Object): Boolean {
+function curveFpEquals(other: object): boolean {
   if (other == this) return true;
   return (
     this.q.equals(other.q) && this.a.equals(other.a) && this.b.equals(other.b)
   );
 }
 
-function curveFpGetInfinity(): Object {
+function curveFpGetInfinity(): object {
   return this.infinity;
 }
 
-function curveFpFromBigInteger(x: String): Promise {
+function curveFpFromBigInteger(x: string): Promise {
   return new ECFieldElementFp(this.q, x);
 }
 
-function curveReduce(x: String): Void {
+function curveReduce(x: string): Void {
   this.reducer.reduce(x);
 }
 
-function curveFpEncodePointHex(p: HTMLElement): String {
+function curveFpEncodePointHex(p: HTMLElement): string {
   if (p.isInfinity()) return "00";
-  var xHex: String = p
+  var xHex: string = p
     .getX()
     .toBigInteger()
     .toString(16);
-  var yHex: String = p
+  var yHex: string = p
     .getY()
     .toBigInteger()
     .toString(16);
-  var oLen: Number = this.getQ().toString(16).length;
+  var oLen: number = this.getQ().toString(16).length;
   if (oLen % 2 != 0) oLen++;
   while (xHex.length < oLen) {
     xHex = "0" + xHex;
@@ -411,8 +411,8 @@ ECCurveFp.prototype.reduce = curveReduce;
 ECCurveFp.prototype.encodePointHex = curveFpEncodePointHex;
 
 // from: https://github.com/kaielvin/jsbn-ec-point-compression
-ECCurveFp.prototype.decodePointHex = function(s: String) {
-  var yIsEven: Boolean;
+ECCurveFp.prototype.decodePointHex = function(s: string) {
+  var yIsEven: boolean;
   switch (
     parseInt(s.substr(0, 2), 16) // first byte
   ) {
@@ -422,15 +422,15 @@ ECCurveFp.prototype.decodePointHex = function(s: String) {
       yIsEven = false;
     case 3:
       if (yIsEven == undefined) yIsEven = true;
-      var len: Number = s.length - 2;
-      var xHex: String = s.substr(2, len);
-      var x: String = this.fromBigInteger(new BigInteger(xHex, 16));
+      var len: number = s.length - 2;
+      var xHex: string = s.substr(2, len);
+      var x: string = this.fromBigInteger(new BigInteger(xHex, 16));
       var alpha: HTMLElement = x.multiply(x.square().add(this.getA())).add(this.getB());
-      var beta: Array = alpha.sqrt();
+      var beta: any[] = alpha.sqrt();
 
       if (beta == null) throw "Invalid point compression";
 
-      var betaValue: Array = beta.toBigInteger();
+      var betaValue: any[] = beta.toBigInteger();
       if (betaValue.testBit(0) != yIsEven) {
         // Use the other root
         beta = this.fromBigInteger(this.getQ().subtract(betaValue));
@@ -439,9 +439,9 @@ ECCurveFp.prototype.decodePointHex = function(s: String) {
     case 4:
     case 6:
     case 7:
-      var len: Number = (s.length - 2) / 2;
-      var xHex: String = s.substr(2, len);
-      var yHex: String = s.substr(len + 2, len);
+      var len: number = (s.length - 2) / 2;
+      var xHex: string = s.substr(2, len);
+      var yHex: string = s.substr(len + 2, len);
 
       return new ECPointFp(
         this,
@@ -456,14 +456,14 @@ ECCurveFp.prototype.decodePointHex = function(s: String) {
 };
 ECCurveFp.prototype.encodeCompressedPointHex = function(p: HTMLElement) {
   if (p.isInfinity()) return "00";
-  var xHex: String = p
+  var xHex: string = p
     .getX()
     .toBigInteger()
     .toString(16);
-  var oLen: Number = this.getQ().toString(16).length;
+  var oLen: number = this.getQ().toString(16).length;
   if (oLen % 2 != 0) oLen++;
   while (xHex.length < oLen) xHex = "0" + xHex;
-  var yPrefix: String;
+  var yPrefix: string;
   if (
     p
       .getY()
@@ -480,7 +480,7 @@ ECFieldElementFp.prototype.getR = function() {
   if (this.r != undefined) return this.r;
 
   this.r = null;
-  var bitLength: Number = this.q.bitLength();
+  var bitLength: number = this.q.bitLength();
   if (bitLength > 128) {
     var firstWord: HTMLElement = this.q.shiftRight(bitLength - 64);
     if (firstWord.intValue() == -1) {
@@ -489,15 +489,15 @@ ECFieldElementFp.prototype.getR = function() {
   }
   return this.r;
 };
-ECFieldElementFp.prototype.modMult = function(x1: Array, x2: String) {
+ECFieldElementFp.prototype.modMult = function(x1: any[], x2: string) {
   return this.modReduce(x1.multiply(x2));
 };
-ECFieldElementFp.prototype.modReduce = function(x: String) {
+ECFieldElementFp.prototype.modReduce = function(x: string) {
   if (this.getR() != null) {
-    var qLen: String = this.q.bitLength();
+    var qLen: string = this.q.bitLength();
     while (x.bitLength() > qLen + 1) {
       var u: HTMLElement = x.shiftRight(qLen);
-      var v: String = x.subtract(u.shiftLeft(qLen));
+      var v: string = x.subtract(u.shiftLeft(qLen));
       if (!this.getR().equals(BigInteger.ONE)) {
         u = u.multiply(this.getR());
       }
@@ -516,7 +516,7 @@ ECFieldElementFp.prototype.sqrt = function() {
 
   // p mod 4 == 3
   if (this.q.testBit(1)) {
-    var z: String = new ECFieldElementFp(
+    var z: string = new ECFieldElementFp(
       this.q,
       this.x.modPow(this.q.shiftRight(2).add(BigInteger.ONE), this.q)
     );
@@ -526,20 +526,20 @@ ECFieldElementFp.prototype.sqrt = function() {
   // p mod 4 == 1
   var qMinusOne: HTMLElement = this.q.subtract(BigInteger.ONE);
 
-  var legendreExponent: String = qMinusOne.shiftRight(1);
+  var legendreExponent: string = qMinusOne.shiftRight(1);
   if (!this.x.modPow(legendreExponent, this.q).equals(BigInteger.ONE)) {
     return null;
   }
 
-  var u: Array = qMinusOne.shiftRight(2);
-  var k: Array = u.shiftLeft(1).add(BigInteger.ONE);
+  var u: any[] = qMinusOne.shiftRight(2);
+  var k: any[] = u.shiftLeft(1).add(BigInteger.ONE);
 
-  var Q: Number = this.x;
-  var fourQ: String = this.modDouble(this.modDouble(Q));
+  var Q: number = this.x;
+  var fourQ: string = this.modDouble(this.modDouble(Q));
 
-  var U: String, V: String;
+  var U: string, V: string;
   do {
-    var P: Object;
+    var P: object;
     do {
       P = new BigInteger(this.q.bitLength(), new SecureRandom());
     } while (
@@ -568,15 +568,15 @@ ECFieldElementFp.prototype.sqrt = function() {
 
   return null;
 };
-ECFieldElementFp.prototype.lucasSequence = function(P: Object, Q: String, k: HTMLElement) {
-  var n: Number = k.bitLength();
-  var s: Number = k.getLowestSetBit();
+ECFieldElementFp.prototype.lucasSequence = function(P: object, Q: string, k: HTMLElement) {
+  var n: number = k.bitLength();
+  var s: number = k.getLowestSetBit();
 
-  var Uh: Object = BigInteger.ONE;
-  var Vl: Object = BigInteger.ONE.add(BigInteger.ONE);
-  var Vh: Object = P;
-  var Ql: Array = BigInteger.ONE;
-  var Qh: Array = BigInteger.ONE;
+  var Uh: object = BigInteger.ONE;
+  var Vl: object = BigInteger.ONE.add(BigInteger.ONE);
+  var Vh: object = P;
+  var Ql: any[] = BigInteger.ONE;
+  var Qh: any[] = BigInteger.ONE;
 
   for (var j = n - 1; j >= s + 1; --j) {
     Ql = this.modMult(Ql, Qh);

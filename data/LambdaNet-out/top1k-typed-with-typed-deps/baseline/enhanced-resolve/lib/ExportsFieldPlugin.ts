@@ -5,9 +5,9 @@
 
 "use strict";
 
-const path: String = require("path");
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
-const forEachBail: String = require("./forEachBail");
+const path: string = require("path");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
+const forEachBail: string = require("./forEachBail");
 const { processExportsField } = require("./util/entrypoints");
 const { parseIdentifier } = require("./util/identifier");
 const { checkImportsExportsFieldTarget } = require("./util/path");

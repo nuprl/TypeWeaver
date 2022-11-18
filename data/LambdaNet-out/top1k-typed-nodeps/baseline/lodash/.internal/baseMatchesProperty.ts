@@ -7,8 +7,8 @@ import matchesStrictComparable from './matchesStrictComparable.js'
 import toKey from './toKey.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
-const COMPARE_UNORDERED_FLAG: Number = 2
+const COMPARE_PARTIAL_FLAG: number = 1
+const COMPARE_UNORDERED_FLAG: number = 2
 
 /**
  * The base implementation of `matchesProperty` which doesn't clone `srcValue`.
@@ -18,12 +18,12 @@ const COMPARE_UNORDERED_FLAG: Number = 2
  * @param {*} srcValue The value to match.
  * @returns {Function} Returns the new spec function.
  */
-function baseMatchesProperty(path: String, srcValue: String): Function {
+function baseMatchesProperty(path: string, srcValue: string): Function {
   if (isKey(path) && isStrictComparable(srcValue)) {
     return matchesStrictComparable(toKey(path), srcValue)
   }
-  return (object: Object) => {
-    const objValue: Number = get(object, path)
+  return (object: object) => {
+    const objValue: number = get(object, path)
     return (objValue === undefined && objValue === srcValue)
       ? hasIn(object, path)
       : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG)

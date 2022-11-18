@@ -1,6 +1,6 @@
 import fs, {promises as fsPromises} from 'node:fs';
 
-export async function pathExists(path: Array): Promise {
+export async function pathExists(path: any[]): Promise {
 	try {
 		await fsPromises.access(path);
 		return true;
@@ -9,7 +9,7 @@ export async function pathExists(path: Array): Promise {
 	}
 }
 
-export function pathExistsSync(path: String): Boolean {
+export function pathExistsSync(path: string): boolean {
 	try {
 		fs.accessSync(path);
 		return true;

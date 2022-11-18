@@ -1,12 +1,12 @@
 "use strict";
 
-export const NAMESPACES: Object = {
+export const NAMESPACES: object = {
   HTML: "http://www.w3.org/1999/xhtml",
   XML: "http://www.w3.org/XML/1998/namespace",
   XMLNS: "http://www.w3.org/2000/xmlns/"
 };
 
-export const NODE_TYPES: Object = {
+export const NODE_TYPES: object = {
   ELEMENT_NODE: 1,
   ATTRIBUTE_NODE: 2, // historical
   TEXT_NODE: 3,

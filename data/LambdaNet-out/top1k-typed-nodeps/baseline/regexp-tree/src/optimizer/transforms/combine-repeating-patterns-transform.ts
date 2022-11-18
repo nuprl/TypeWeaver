@@ -5,7 +5,7 @@
 
 'use strict';
 
-const NodePath: String = require('../../traverse/node-path');
+const NodePath: string = require('../../traverse/node-path');
 
 const {increaseQuantifierByOne} = require('../../transform/utils');
 
@@ -47,15 +47,15 @@ module.exports = {
 };
 
 // abcabc -> (?:abc){2}
-function combineRepeatingPatternLeft(alternative: NodePath, child: NodePath, index: Number): Number {
+function combineRepeatingPatternLeft(alternative: NodePath, child: NodePath, index: number): number {
   const {node} = alternative;
 
-  const nbPossibleLengths: Number = Math.ceil(index / 2);
-  let i: Number = 0;
+  const nbPossibleLengths: number = Math.ceil(index / 2);
+  let i: number = 0;
 
   while (i < nbPossibleLengths) {
-    const startIndex: Number = index - 2 * i - 1;
-    let right: NodePath, left: String;
+    const startIndex: number = index - 2 * i - 1;
+    let right: NodePath, left: string;
 
     if (i === 0) {
       right = child;
@@ -105,10 +105,10 @@ function combineRepeatingPatternLeft(alternative: NodePath, child: NodePath, ind
 }
 
 // (?:abc){2}abc -> (?:abc){3}
-function combineWithPreviousRepetition(alternative: NodePath, child: Object, index: Number): Number {
+function combineWithPreviousRepetition(alternative: NodePath, child: object, index: number): number {
   const {node} = alternative;
 
-  let i: Number = 0;
+  let i: number = 0;
   while (i < index) {
     let previousChild: NodePath = alternative.getChild(i);
 
@@ -152,7 +152,7 @@ function combineWithPreviousRepetition(alternative: NodePath, child: Object, ind
 }
 
 // abc(?:abc){2} -> (?:abc){3}
-function combineRepetitionWithPrevious(alternative: NodePath, child: NodePath, index: Number): Number {
+function combineRepetitionWithPrevious(alternative: NodePath, child: NodePath, index: number): number {
   const {node} = alternative;
 
   if (child.node.type === 'Repetition' && child.node.quantifier.greedy) {
@@ -163,7 +163,7 @@ function combineRepetitionWithPrevious(alternative: NodePath, child: NodePath, i
       right = right.getChild();
     }
 
-    let rightLength: Number;
+    let rightLength: number;
     if (right.node.type === 'Alternative') {
       rightLength = right.node.expressions.length;
       left = NodePath.getForNode({

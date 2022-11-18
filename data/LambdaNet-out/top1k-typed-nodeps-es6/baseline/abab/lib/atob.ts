@@ -4,7 +4,7 @@
  * Implementation of atob() according to the HTML and Infra specs, except that
  * instead of throwing INVALID_CHARACTER_ERR we return null.
  */
-function atob(data: String): String {
+function atob(data: string): string {
   if (arguments.length === 0) {
     throw new TypeError("1 argument required, but only 0 present.");
   }
@@ -33,13 +33,13 @@ function atob(data: String): String {
     return null;
   }
   // "Let output be an empty byte sequence."
-  let output: String = "";
+  let output: string = "";
   // "Let buffer be an empty buffer that can have bits appended to it."
   //
   // We append bits via left-shift and or.  accumulatedBits is used to track
   // when we've gotten to 24 bits.
-  let buffer: Number = 0;
-  let accumulatedBits: Number = 0;
+  let buffer: number = 0;
+  let accumulatedBits: number = 0;
   // "Let position be a position variable for data, initially pointing at the
   // start of data."
   //
@@ -89,11 +89,11 @@ function atob(data: String): String {
  * corresponding six-bit number.
  */
 
-const keystr: String =
+const keystr: string =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-function atobLookup(chr: String): Number {
-  const index: Number = keystr.indexOf(chr);
+function atobLookup(chr: string): number {
+  const index: number = keystr.indexOf(chr);
   // Throw exception if character is not in the lookup string; should not be hit in tests
   return index < 0 ? undefined : index;
 }

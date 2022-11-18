@@ -3,13 +3,13 @@
 var gulp: HTMLElement = require('gulp');
 var istanbul: Function = require('gulp-istanbul');
 var mocha: Function = require('gulp-mocha');
-var chalk: Array = require('chalk');
+var chalk: any[] = require('chalk');
 var rimraf: Function = require('rimraf');
 var eslint: Function = require('gulp-eslint');
 var mkdirp: Function = require('mkdirp');
 
 
-var paths: Object = {
+var paths: object = {
     libJsFiles: './lib/**/*.js',
     specFiles: './test/spec/**/*.js',
     fixtureFiles: './test/fixtures/**/*.js',
@@ -18,7 +18,7 @@ var paths: Object = {
 };
 
 
-function lint(): Array {
+function lint(): any[] {
 
     return gulp.src([
         paths.libJsFiles,
@@ -33,12 +33,12 @@ function lint(): Array {
 
 }
 
-function cleanCoverage(done: String): Void {
+function cleanCoverage(done: string): Void {
     rimraf('./coverage', done);
 }
 
 function cleanResults(done: Function): Void {
-    rimraf('./test/results', function (err: String) {
+    rimraf('./test/results', function (err: string) {
         if (err) {
             return done(err);
         }
@@ -46,7 +46,7 @@ function cleanResults(done: Function): Void {
     });
 }
 
-function instrument(): Array {
+function instrument(): any[] {
     return gulp.src(paths.libJsFiles)
         .pipe(istanbul())
         .pipe(istanbul.hookRequire());
@@ -62,11 +62,11 @@ function runTest(): Promise {
         .pipe(istanbul.writeReports());
 }
 
-function test(): String {
+function test(): string {
     return gulp.series(cleanCoverage, cleanResults, instrument, runTest);
 }
 
-function testNoCov(): Array {
+function testNoCov(): any[] {
 
     return gulp.src(paths.specFiles)
         .pipe(mocha())

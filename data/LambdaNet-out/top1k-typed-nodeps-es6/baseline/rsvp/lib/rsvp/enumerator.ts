@@ -26,7 +26,7 @@ export default class Enumerator {
   }
 
   _init(Constructor, input) {
-    let len: Number = input.length || 0;
+    let len: number = input.length || 0;
     this.length     = len;
     this._remaining = len;
     this._result = new Array(len);
@@ -35,8 +35,8 @@ export default class Enumerator {
   }
 
   _enumerate(input) {
-    let length: Number  = this.length;
-    let promise: String = this.promise;
+    let length: number  = this.length;
+    let promise: string = this.promise;
 
     for (let i = 0; promise._state === PENDING && i < length; i++) {
       this._eachEntry(input[i], i, true);
@@ -53,10 +53,10 @@ export default class Enumerator {
   }
 
   _settleMaybeThenable(entry, i, firstPass) {
-    let c: Object = this._instanceConstructor;
+    let c: object = this._instanceConstructor;
 
     if (this._isUsingOwnResolve) {
-      let then: String, error: Object, succeeded: Boolean = true;
+      let then: string, error: object, succeeded: boolean = true;
       try {
         then = entry.then;
       } catch (e) {
@@ -94,7 +94,7 @@ export default class Enumerator {
   }
 
   _settledAt(state, i, value, firstPass) {
-    let promise: String = this.promise;
+    let promise: string = this.promise;
 
     if (promise._state === PENDING) {
       if (this._abortOnReject && state === REJECTED) {
@@ -114,13 +114,13 @@ export default class Enumerator {
   _willSettleAt(promise, i, firstPass) {
     subscribe(
       promise, undefined,
-      (value: Number)  => this._settledAt(FULFILLED, i, value, firstPass),
-      (reason: String) => this._settledAt(REJECTED,  i, reason, firstPass)
+      (value: number)  => this._settledAt(FULFILLED, i, value, firstPass),
+      (reason: string) => this._settledAt(REJECTED,  i, reason, firstPass)
     );
   }
 }
 
-export function setSettledResult(state: String, i: String, value: String): Void {
+export function setSettledResult(state: string, i: string, value: string): Void {
   this._remaining--;
   if (state === FULFILLED) {
     this._result[i] = {

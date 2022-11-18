@@ -1,6 +1,6 @@
 import {patchFs} from 'fs-monkey';
 
-const myfs: Object = {
+const myfs: object = {
     readFileSync: () => 'hello world',
 };
 

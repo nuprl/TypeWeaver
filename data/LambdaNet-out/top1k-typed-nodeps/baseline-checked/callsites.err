@@ -1,9 +1,7 @@
-index.ts(1,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(3,2): error TS2322: Type '(_: Function, stack: String) => String' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+index.ts(3,2): error TS2322: Type '(_: Function, stack: string) => string' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
   Types of parameters '_' and 'err' are incompatible.
     Type 'Error' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-index.ts(4,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(5,2): error TS2322: Type 'Object' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' provides no match for the signature '(err: Error, stackTraces: CallSite[]): any'.
+index.ts(4,8): error TS2322: Type 'string' is not assignable to type 'any[]'.
+index.ts(5,2): error TS2322: Type 'object' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+  Type '{}' provides no match for the signature '(err: Error, stackTraces: CallSite[]): any'.
 

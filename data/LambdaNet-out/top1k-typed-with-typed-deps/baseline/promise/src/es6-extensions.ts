@@ -2,26 +2,26 @@
 
 //This file contains the ES6 extensions to the core Promises/A+ API
 
-var Promise: Object = require('./core.js');
+var Promise: object = require('./core.js');
 
 module.exports = Promise;
 
 /* Static Functions */
 
-var TRUE: Array = valuePromise(true);
-var FALSE: Array = valuePromise(false);
-var NULL: Array = valuePromise(null);
-var UNDEFINED: Array = valuePromise(undefined);
-var ZERO: Array = valuePromise(0);
-var EMPTYSTRING: Array = valuePromise('');
+var TRUE: any[] = valuePromise(true);
+var FALSE: any[] = valuePromise(false);
+var NULL: any[] = valuePromise(null);
+var UNDEFINED: any[] = valuePromise(undefined);
+var ZERO: any[] = valuePromise(0);
+var EMPTYSTRING: any[] = valuePromise('');
 
-function valuePromise(value: String): String {
+function valuePromise(value: string): string {
   var p: HTMLElement = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;
   return p;
 }
-Promise.resolve = function (value: Array) {
+Promise.resolve = function (value: any[]) {
   if (value instanceof Promise) return value;
 
   if (value === null) return NULL;
@@ -46,7 +46,7 @@ Promise.resolve = function (value: Array) {
   return valuePromise(value);
 };
 
-var iterableToArray: Function = function (iterable: String) {
+var iterableToArray: Function = function (iterable: string) {
   if (typeof Array.from === 'function') {
     // ES2015+, iterables exist
     iterableToArray = Array.from;
@@ -54,17 +54,17 @@ var iterableToArray: Function = function (iterable: String) {
   }
 
   // ES5, only arrays and array-likes exist
-  iterableToArray = function (x: String) { return Array.prototype.slice.call(x); };
+  iterableToArray = function (x: string) { return Array.prototype.slice.call(x); };
   return Array.prototype.slice.call(iterable);
 }
 
-Promise.all = function (arr: Array) {
-  var args: Array = iterableToArray(arr);
+Promise.all = function (arr: any[]) {
+  var args: any[] = iterableToArray(arr);
 
   return new Promise(function (resolve: Function, reject: Function) {
     if (args.length === 0) return resolve([]);
-    var remaining: Number = args.length;
-    function res(i: String, val: Object): String {
+    var remaining: number = args.length;
+    function res(i: string, val: object): string {
       if (val && (typeof val === 'object' || typeof val === 'function')) {
         if (val instanceof Promise && val.then === Promise.prototype.then) {
           while (val._state === 3) {
@@ -72,7 +72,7 @@ Promise.all = function (arr: Array) {
           }
           if (val._state === 1) return res(i, val._value);
           if (val._state === 2) reject(val._value);
-          val.then(function (val: String) {
+          val.then(function (val: string) {
             res(i, val);
           }, reject);
           return;
@@ -80,7 +80,7 @@ Promise.all = function (arr: Array) {
           var then: Function = val.then;
           if (typeof then === 'function') {
             var p: Promise = new Promise(then.bind(val));
-            p.then(function (val: String) {
+            p.then(function (val: string) {
               res(i, val);
             }, reject);
             return;
@@ -98,13 +98,13 @@ Promise.all = function (arr: Array) {
   });
 };
 
-function onSettledFulfill(value: String): Object {
+function onSettledFulfill(value: string): object {
   return { status: 'fulfilled', value: value };
 }
-function onSettledReject(reason: String): Object {
+function onSettledReject(reason: string): object {
   return { status: 'rejected', reason: reason };
 }
-function mapAllSettled(item: Array): Promise {
+function mapAllSettled(item: any[]): Promise {
   if(item && (typeof item === 'object' || typeof item === 'function')){
     if(item instanceof Promise && item.then === Promise.prototype.then){
       return item.then(onSettledFulfill, onSettledReject);
@@ -117,19 +117,19 @@ function mapAllSettled(item: Array): Promise {
 
   return onSettledFulfill(item);
 }
-Promise.allSettled = function (iterable: String) {
+Promise.allSettled = function (iterable: string) {
   return Promise.all(iterableToArray(iterable).map(mapAllSettled));
 };
 
-Promise.reject = function (value: Number) {
+Promise.reject = function (value: number) {
   return new Promise(function (resolve: Function, reject: Function) {
     reject(value);
   });
 };
 
-Promise.race = function (values: Array) {
-  return new Promise(function (resolve: Function, reject: String) {
-    iterableToArray(values).forEach(function(value: String){
+Promise.race = function (values: any[]) {
+  return new Promise(function (resolve: Function, reject: string) {
+    iterableToArray(values).forEach(function(value: string){
       Promise.resolve(value).then(resolve, reject);
     });
   });
@@ -137,6 +137,6 @@ Promise.race = function (values: Array) {
 
 /* Prototype Methods */
 
-Promise.prototype['catch'] = function (onRejected: String) {
+Promise.prototype['catch'] = function (onRejected: string) {
   return this.then(null, onRejected);
 };

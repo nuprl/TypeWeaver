@@ -1,13 +1,13 @@
 "use strict";
 
-var isToStringTagSupported: Boolean = require("../lib/is-to-string-tag-supported")
+var isToStringTagSupported: boolean = require("../lib/is-to-string-tag-supported")
   , isPrototype: Function            = require("../prototype/is");
 
-var regExpTest: String = RegExp.prototype.test
+var regExpTest: string = RegExp.prototype.test
   , objectToString: Function = Object.prototype.toString
-  , objectTaggedString: Number = objectToString.call(/a/);
+  , objectTaggedString: number = objectToString.call(/a/);
 
-module.exports = function (value: Object) {
+module.exports = function (value: object) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common RegExp interface)
@@ -24,7 +24,7 @@ module.exports = function (value: Object) {
 	if (isToStringTagSupported && typeof value[Symbol.toStringTag] === "string") {
 		// Edge case (possibly a regExp with custom Symbol.toStringTag)
 		try {
-			var lastIndex: Boolean = value.lastIndex;
+			var lastIndex: boolean = value.lastIndex;
 			regExpTest.call(value, "");
 			if (value.lastIndex !== lastIndex) value.lastIndex = lastIndex;
 			return true;

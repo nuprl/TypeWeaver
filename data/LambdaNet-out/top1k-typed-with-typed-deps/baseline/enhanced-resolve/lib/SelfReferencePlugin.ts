@@ -5,12 +5,12 @@
 
 "use strict";
 
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 
-const slashCode: Number = "/".charCodeAt(0);
+const slashCode: number = "/".charCodeAt(0);
 
 module.exports = class SelfReferencePlugin {
 	/**

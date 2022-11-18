@@ -1,7 +1,7 @@
 
-const util: String = require('util');
+const util: string = require('util');
 console.time('time');
-const colors: Object = require('..');
+const colors: object = require('..');
 colors.success = (...args) => colors.bold.green(util.format(...args));
 colors.ok = (...args) => `${colors.success('✔')} ${colors.bold(util.format(...args))}`;
 console.log(colors.yellow('this is a message'))

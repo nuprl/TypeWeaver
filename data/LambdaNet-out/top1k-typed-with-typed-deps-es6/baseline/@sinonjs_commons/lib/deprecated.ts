@@ -9,7 +9,7 @@
  * @param  {string} msg
  * @returns {Function}
  */
-export const wrap: Function = function(func: Object, msg: String) {
+export const wrap: Function = function(func: object, msg: string) {
     var wrapped: Function = function() {
         printWarning(msg);
         return func.apply(this, arguments);
@@ -28,7 +28,7 @@ export const wrap: Function = function(func: Object, msg: String) {
  * @param  {string} funcName
  * @returns {string}
  */
-export const defaultMsg: Function = function(packageName: String, funcName: String) {
+export const defaultMsg: Function = function(packageName: string, funcName: string) {
     return (
         packageName +
         "." +
@@ -45,7 +45,7 @@ export const defaultMsg: Function = function(packageName: String, funcName: Stri
  * @param  {string} msg
  * @returns {undefined}
  */
-export const printWarning: Function = function(msg: String) {
+export const printWarning: Function = function(msg: string) {
     /* istanbul ignore next */
     if (typeof process === "object" && process.emitWarning) {
         // Emit Warnings in Node

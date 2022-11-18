@@ -2,10 +2,10 @@
 
 var parseKeyword: Function = require('../parsers').parseKeyword;
 
-var clear_keywords: Array = ['none', 'left', 'right', 'both', 'inherit'];
+var clear_keywords: any[] = ['none', 'left', 'right', 'both', 'inherit'];
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('clear', parseKeyword(v, clear_keywords));
   },
   get: function() {

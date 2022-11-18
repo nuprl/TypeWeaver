@@ -1,6 +1,6 @@
 // Adapted from Chris Veness' SHA1 code at
 // http://www.movable-type.co.uk/scripts/sha1.html
-function f(s: String, x: Number, y: Number, z: Number): Number {
+function f(s: string, x: number, y: number, z: number): number {
   switch (s) {
     case 0:
       return (x & y) ^ (~x & z);
@@ -13,16 +13,16 @@ function f(s: String, x: Number, y: Number, z: Number): Number {
   }
 }
 
-function ROTL(x: Number, n: Number): Number {
+function ROTL(x: number, n: number): number {
   return (x << n) | (x >>> (32 - n));
 }
 
-function sha1(bytes: Array): Array {
-  const K: Array = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
-  const H: Object = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476, 0xc3d2e1f0];
+function sha1(bytes: any[]): any[] {
+  const K: any[] = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
+  const H: object = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476, 0xc3d2e1f0];
 
   if (typeof bytes === 'string') {
-    const msg: String = unescape(encodeURIComponent(bytes)); // UTF8 escape
+    const msg: string = unescape(encodeURIComponent(bytes)); // UTF8 escape
 
     bytes = [];
 
@@ -36,12 +36,12 @@ function sha1(bytes: Array): Array {
 
   bytes.push(0x80);
 
-  const l: Number = bytes.length / 4 + 2;
-  const N: Number = Math.ceil(l / 16);
-  const M: Object = new Array(N);
+  const l: number = bytes.length / 4 + 2;
+  const N: number = Math.ceil(l / 16);
+  const M: object = new Array(N);
 
   for (let i = 0; i < N; ++i) {
-    const arr: Object = new Uint32Array(16);
+    const arr: object = new Uint32Array(16);
 
     for (let j = 0; j < 16; ++j) {
       arr[j] =
@@ -59,7 +59,7 @@ function sha1(bytes: Array): Array {
   M[N - 1][15] = ((bytes.length - 1) * 8) & 0xffffffff;
 
   for (let i = 0; i < N; ++i) {
-    const W: Object = new Uint32Array(80);
+    const W: object = new Uint32Array(80);
 
     for (let t = 0; t < 16; ++t) {
       W[t] = M[i][t];
@@ -69,15 +69,15 @@ function sha1(bytes: Array): Array {
       W[t] = ROTL(W[t - 3] ^ W[t - 8] ^ W[t - 14] ^ W[t - 16], 1);
     }
 
-    let a: String = H[0];
-    let b: String = H[1];
-    let c: Number = H[2];
-    let d: String = H[3];
-    let e: String = H[4];
+    let a: string = H[0];
+    let b: string = H[1];
+    let c: number = H[2];
+    let d: string = H[3];
+    let e: string = H[4];
 
     for (let t = 0; t < 80; ++t) {
-      const s: Number = Math.floor(t / 20);
-      const T: Number = (ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[t]) >>> 0;
+      const s: number = Math.floor(t / 20);
+      const T: number = (ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[t]) >>> 0;
       e = d;
       d = c;
       c = ROTL(b, 30) >>> 0;

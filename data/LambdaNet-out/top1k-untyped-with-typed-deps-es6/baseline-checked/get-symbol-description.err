@@ -1,9 +1,11 @@
-getInferredName.ts(6,2): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(14,116): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+getInferredName.ts(6,2): error TS2322: Type 'Function' is not assignable to type 'string'.
 index.ts(16,13): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 index.ts(20,20): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
+  Type '{}' has no call signatures.
 index.ts(23,22): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
+index.ts(27,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
+index.ts(34,4): error TS2322: Type 'string' is not assignable to type 'any[]'.
+index.ts(40,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
 

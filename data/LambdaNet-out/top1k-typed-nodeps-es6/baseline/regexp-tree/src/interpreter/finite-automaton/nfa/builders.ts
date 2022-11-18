@@ -19,7 +19,7 @@ import { EPSILON } from '../special-symbols';
  *
  * [in] --c--> [out]
  */
-function char(c: String): State {
+function char(c: string): State {
   const inState: State = new NFAState();
   const outState: State = new NFAState({
     accepting: true,
@@ -64,7 +64,7 @@ function altPair(first: Writer, second: Writer): DFA {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: DFA, ...fragments): String {
+function alt(first: DFA, ...fragments): string {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }

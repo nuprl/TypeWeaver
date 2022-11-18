@@ -25,17 +25,17 @@ import basePullAt from './.internal/basePullAt.js'
  * console.log(evens)
  * // => [2, 4]
  */
-function remove(array: Array, predicate: Function): Array {
-  const result: Array = []
+function remove(array: any[], predicate: Function): any[] {
+  const result: any[] = []
   if (!(array != null && array.length)) {
     return result
   }
-  let index: Number = -1
-  const indexes: Array = []
+  let index: number = -1
+  const indexes: any[] = []
   const { length } = array
 
   while (++index < length) {
-    const value: String = array[index]
+    const value: string = array[index]
     if (predicate(value, index, array)) {
       result.push(value)
       indexes.push(index)

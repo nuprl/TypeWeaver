@@ -5,7 +5,7 @@
 
 "use strict";
 
-const getName: Function = (sourceMap: SourceMapSource, index: Number) => {
+const getName: Function = (sourceMap: SourceMapSource, index: number) => {
 	if (index < 0) return null;
 	const { names } = sourceMap;
 	return names[index];

@@ -1,10 +1,10 @@
 // if you go much higher the core streams just choke and take forever lol
-const N: Number = Math.floor(128*1024 / Math.PI)
-const fs: String = require('fs')
+const N: number = Math.floor(128*1024 / Math.PI)
+const fs: string = require('fs')
 // const { basename } = require('path')
 // const impls = fs.readdirSync(__dirname + '/impls')
 //   .filter(f => /\.js$/.test(f)).map(f => basename(f, '.js'))
-const impls: Array = [
+const impls: any[] = [
   'baseline',
   'minipass-latest',
   'minipass-current',
@@ -18,14 +18,14 @@ const promiseSpawn: Function = require('@npmcli/promise-spawn')
 
 const main: Function = async () => {
   const [node, _, impl, cse, len, type] = process.argv
-  const opt: Object = { stdioString: true, stdio: ['ignore', 'pipe', 'inherit'] }
-  const results: Object = {}
+  const opt: object = { stdioString: true, stdio: ['ignore', 'pipe', 'inherit'] }
+  const results: object = {}
   if (impl === undefined) {
     // run against all implementations
-    const a: Array = [__filename]
+    const a: any[] = [__filename]
     for (const i of impls) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, i], opt)
-        .catch((e: Array) => e)
+        .catch((e: any[]) => e)
       try {
         results[i] = JSON.parse(res.stdout)
       } catch (e) {
@@ -33,10 +33,10 @@ const main: Function = async () => {
       }
     }
   } else if (cse === undefined) {
-    const a: Array = [__filename, impl]
+    const a: any[] = [__filename, impl]
     for (const c of cases) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, c], opt)
-        .catch((e: Array) => e)
+        .catch((e: any[]) => e)
       try {
         results[c] = JSON.parse(res.stdout)
       } catch (e) {
@@ -44,10 +44,10 @@ const main: Function = async () => {
       }
     }
   } else if (len === undefined) {
-    const a: Array = [__filename, impl, cse]
+    const a: any[] = [__filename, impl, cse]
     for (const l of pipeLen) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, l], opt)
-        .catch((e: Array) => e)
+        .catch((e: any[]) => e)
       try {
         results[l] = JSON.parse(res.stdout)
       } catch (e) {
@@ -55,29 +55,29 @@ const main: Function = async () => {
       }
     }
   } else {
-    const fs: String = require('fs')
-    const dir: String = __dirname + '/results'
+    const fs: string = require('fs')
+    const dir: string = __dirname + '/results'
     fs.mkdirSync(dir, { recursive: true })
 
     // ok, actually run this one case and return the score
-    const opts: Object = {
+    const opts: object = {
       defaults: {},
       str: {encoding:'utf8'},
       obj: {objectMode: true},
     }
-    const typeOpts: Array = type ? [[type, opts[type]]] : Object.entries(opts)
+    const typeOpts: any[] = type ? [[type, opts[type]]] : Object.entries(opts)
     for (const [name, opt] of typeOpts) {
-      await new Promise((res: Function, rej: String) => {
+      await new Promise((res: Function, rej: string) => {
         process.stderr.write(`${impl} ${cse} ${len} ${name} ... `)
         const { src, start, dest, dest2 } = setupPipeline(impl, len, cse, opt)
         const end: Function = () => {
-          const result: Number = performance.now() - startTime
+          const result: number = performance.now() - startTime
           results[name] = result
           console.error(result)
           res()
         }
-        let ended1: Boolean = false
-        let ended2: Boolean = !dest2
+        let ended1: boolean = false
+        let ended2: boolean = !dest2
         if (dest2) {
           dest2.on('finish', () => {
             if (ended2) throw new Error('emitted multiple dest2.finish')
@@ -95,7 +95,7 @@ const main: Function = async () => {
           }
         })
         // kick it off!
-        const startTime: Number = performance.now()
+        const startTime: number = performance.now()
         src.pipe(start).on('error', rej)
       }).catch((e: Function) => results[name] = e)
     }
@@ -108,9 +108,9 @@ const main: Function = async () => {
 
   // write out the results.tab from the top level
   if (impl === undefined) {
-    const header: Array = ['impl', 'case', 'pipeline', 'type', 'time', 'score']
-    const rows: Array = []
-    let max: Number = -1
+    const header: any[] = ['impl', 'case', 'pipeline', 'type', 'time', 'score']
+    const rows: any[] = []
+    let max: number = -1
     for (const [impl, iRes] of Object.entries(results)) {
       for (const [cse, cRes] of Object.entries(iRes)) {
         for (const [len, lRes] of Object.entries(cRes)) {
@@ -124,15 +124,15 @@ const main: Function = async () => {
     for (const row of rows) {
       row.push(max / row[row.length - 1])
     }
-    const output: String = [header].concat(rows.sort((a: Array, b: Array) => a[a.length-1] - b[b.length-1]))
-      .map((row: Array) => row.join('\t'))
+    const output: string = [header].concat(rows.sort((a: any[], b: any[]) => a[a.length-1] - b[b.length-1]))
+      .map((row: any[]) => row.join('\t'))
       .join('\n') + '\n'
     fs.writeFileSync(__dirname + '/results.tab', output)
   }
 }
 
 // is the src and dest fast or slow?
-const cases: Array = [
+const cases: any[] = [
   'fast-fast',
   'fast-slow',
   'slow-fast',
@@ -141,14 +141,14 @@ const cases: Array = [
 ]
 
 // how many of the stream under test piped together?
-const pipeLen: Array = [ 1, 20 ]
+const pipeLen: any[] = [ 1, 20 ]
 
-const EE: String = require('events')
+const EE: string = require('events')
 
-const setupPipeline: Function = (impl: String, len: Number, cse: String, opt: String) => {
-  const Cls: Array = require(`./impls/${impl}.js`)
+const setupPipeline: Function = (impl: string, len: number, cse: string, opt: string) => {
+  const Cls: any[] = require(`./impls/${impl}.js`)
   let s: Pipe = new Cls(opt)
-  let start: String = s
+  let start: string = s
   while (len > 1) {
     s = s.pipe(new Cls(opt))
     len --
@@ -202,7 +202,7 @@ class Src extends EE {
   }
   pipe (dest) {
     dest.on('drain', () => this.resume())
-    this.on('data', (c: String) => dest.write(c) === false ? this.pause() : true)
+    this.on('data', (c: string) => dest.write(c) === false ? this.pause() : true)
     this.on('end', () => dest.end())
     this.resume()
     return dest

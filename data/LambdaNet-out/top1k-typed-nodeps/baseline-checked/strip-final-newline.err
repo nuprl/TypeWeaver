@@ -1,9 +1,8 @@
-index.ts(1,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1,58): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(2,8): error TS2322: Type 'number | "\n"' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
+index.ts(2,8): error TS2322: Type 'number | "\n"' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
 index.ts(2,61): error TS2554: Expected 1 arguments, but got 0.
-index.ts(3,8): error TS2322: Type 'number | "\r"' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
+index.ts(3,8): error TS2322: Type 'number | "\r"' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
 index.ts(3,61): error TS2554: Expected 1 arguments, but got 0.
 

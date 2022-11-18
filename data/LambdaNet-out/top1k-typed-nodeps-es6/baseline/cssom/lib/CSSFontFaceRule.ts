@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: String = {
+var CSSOM: string = {
 	CSSStyleDeclaration: require("./CSSStyleDeclaration").CSSStyleDeclaration,
 	CSSRule: require("./CSSRule").CSSRule
 };

@@ -10,19 +10,19 @@ import resolve from 'resolve';
 import { camelToDashed } from '../lib/parsers';
 
 var basename: Function = path.basename;
-var dirname: Array = path.dirname;
+var dirname: any[] = path.dirname;
 
-var uniqueIndex: Number = 0;
-function getUniqueIndex(): Number {
+var uniqueIndex: number = 0;
+function getUniqueIndex(): number {
   return uniqueIndex++;
 }
 
-var property_files: Array = fs
+var property_files: any[] = fs
   .readdirSync(path.resolve(__dirname, '../lib/properties'))
-  .filter(function(property: Array) {
+  .filter(function(property: any[]) {
     return property.substr(-3) === '.js';
   });
-var out_file: String = fs.createWriteStream(path.resolve(__dirname, '../lib/properties.js'), {
+var out_file: string = fs.createWriteStream(path.resolve(__dirname, '../lib/properties.js'), {
   encoding: 'utf-8',
 });
 var date_today: HTMLInputElement = new Date();
@@ -33,22 +33,22 @@ out_file.write(
 );
 out_file.write('/*\n *\n * https://www.w3.org/Style/CSS/all-properties.en.html\n */\n\n');
 
-function isModuleDotExports(node: Object): Boolean {
+function isModuleDotExports(node: object): boolean {
   return (
     t.isMemberExpression(node, { computed: false }) &&
     t.isIdentifier(node.object, { name: 'module' }) &&
     t.isIdentifier(node.property, { name: 'exports' })
   );
 }
-function isRequire(node: HTMLElement, filename: String): Boolean {
+function isRequire(node: HTMLElement, filename: string): boolean {
   if (
     t.isCallExpression(node) &&
     t.isIdentifier(node.callee, { name: 'require' }) &&
     node.arguments.length === 1 &&
     t.isStringLiteral(node.arguments[0])
   ) {
-    var relative: String = node.arguments[0].value;
-    var fullPath: String = resolve.sync(relative, { basedir: dirname(filename) });
+    var relative: string = node.arguments[0].value;
+    var fullPath: string = resolve.sync(relative, { basedir: dirname(filename) });
     return { relative: relative, fullPath: fullPath };
   } else {
     return false;
@@ -56,13 +56,13 @@ function isRequire(node: HTMLElement, filename: String): Boolean {
 }
 
 // step 1: parse all files and figure out their dependencies
-var parsedFilesByPath: Object = {};
-property_files.map(function(property: String) {
-  var filename: String = path.resolve(__dirname, '../lib/properties/' + property);
-  var src: String = fs.readFileSync(filename, 'utf8');
+var parsedFilesByPath: object = {};
+property_files.map(function(property: string) {
+  var filename: string = path.resolve(__dirname, '../lib/properties/' + property);
+  var src: string = fs.readFileSync(filename, 'utf8');
   property = basename(property, '.js');
-  var ast: Object = babylon.parse(src);
-  var dependencies: Array = [];
+  var ast: object = babylon.parse(src);
+  var dependencies: any[] = [];
   traverse(ast, {
     enter(path) {
       var r;
@@ -81,10 +81,10 @@ property_files.map(function(property: String) {
 
 // step 2: serialize the files in an order where dependencies are always above
 //         the files they depend on
-var externalDependencies: Array = [];
-var parsedFiles: Array = [];
-var addedFiles: Object = {};
-function addFile(filename: String, dependencyPath: String): Void {
+var externalDependencies: any[] = [];
+var parsedFiles: any[] = [];
+var addedFiles: object = {};
+function addFile(filename: string, dependencyPath: string): Void {
   if (dependencyPath.indexOf(filename) !== -1) {
     throw new Error(
       'Circular dependency: ' +
@@ -94,34 +94,34 @@ function addFile(filename: String, dependencyPath: String): Void {
           .join(' -> ')
     );
   }
-  var file: Object = parsedFilesByPath[filename];
+  var file: object = parsedFilesByPath[filename];
   if (addedFiles[filename]) {
     return;
   }
   if (!file) {
     externalDependencies.push(filename);
   } else {
-    file.dependencies.forEach(function(dependency: String) {
+    file.dependencies.forEach(function(dependency: string) {
       addFile(dependency, dependencyPath.concat([filename]));
     });
     parsedFiles.push(parsedFilesByPath[filename]);
   }
   addedFiles[filename] = true;
 }
-Object.keys(parsedFilesByPath).forEach(function(filename: String) {
+Object.keys(parsedFilesByPath).forEach(function(filename: string) {
   addFile(filename, []);
 });
 // Step 3: add files to output
 // renaming exports to local variables `moduleName_export_exportName`
 // and updating require calls as appropriate
 var moduleExportsByPath: Function = {};
-var statements: Array = [];
-externalDependencies.forEach(function(filename: String, i: String) {
-  var id: String = t.identifier(
+var statements: any[] = [];
+externalDependencies.forEach(function(filename: string, i: string) {
+  var id: string = t.identifier(
     'external_dependency_' + basename(filename, '.js').replace(/[^A-Za-z]/g, '') + '_' + i
   );
   moduleExportsByPath[filename] = { defaultExports: id };
-  var relativePath: String = path.relative(path.resolve(__dirname + '/../lib'), filename);
+  var relativePath: string = path.relative(path.resolve(__dirname + '/../lib'), filename);
   if (relativePath[0] !== '.') {
     relativePath = './' + relativePath;
   }
@@ -134,8 +134,8 @@ externalDependencies.forEach(function(filename: String, i: String) {
     ])
   );
 });
-function getRequireValue(node: Object, file: Object): Promise {
-  var r: Object, e: Object;
+function getRequireValue(node: object, file: object): Promise {
+  var r: object, e: object;
   // replace require("./foo").bar with the named export from foo
   if (
     t.isMemberExpression(node, { computed: false }) &&
@@ -165,9 +165,9 @@ function getRequireValue(node: Object, file: Object): Promise {
     return e.defaultExports;
   }
 }
-parsedFiles.forEach(function(file: Object) {
-  var namedExports: Object = {};
-  var localVariableMap: String = {};
+parsedFiles.forEach(function(file: object) {
+  var namedExports: object = {};
+  var localVariableMap: string = {};
 
   traverse(file.ast, {
     enter(path) {
@@ -232,8 +232,8 @@ parsedFiles.forEach(function(file: Object) {
       }
     },
   });
-  var defaultExports: Array = t.objectExpression(
-    Object.keys(namedExports).map(function(name: String) {
+  var defaultExports: any[] = t.objectExpression(
+    Object.keys(namedExports).map(function(name: string) {
       return t.objectProperty(t.identifier(name), namedExports[name]);
     })
   );
@@ -244,16 +244,16 @@ parsedFiles.forEach(function(file: Object) {
   statements.push(
     t.variableDeclaration(
       'var',
-      Object.keys(namedExports).map(function(name: String) {
+      Object.keys(namedExports).map(function(name: string) {
         return t.variableDeclarator(namedExports[name]);
       })
     )
   );
   statements.push.apply(statements, file.ast.program.body);
 });
-var propertyDefinitions: Array = [];
-parsedFiles.forEach(function(file: Object) {
-  var dashed: String = camelToDashed(file.property);
+var propertyDefinitions: any[] = [];
+parsedFiles.forEach(function(file: object) {
+  var dashed: string = camelToDashed(file.property);
   propertyDefinitions.push(
     t.objectProperty(
       t.identifier(file.property),
@@ -266,7 +266,7 @@ parsedFiles.forEach(function(file: Object) {
     );
   }
 });
-var definePropertiesCall: String = t.callExpression(
+var definePropertiesCall: string = t.callExpression(
   t.memberExpression(t.identifier('Object'), t.identifier('defineProperties')),
   [t.identifier('prototype'), t.objectExpression(propertyDefinitions)]
 );
@@ -284,7 +284,7 @@ statements.push(
   )
 );
 out_file.write(generate(t.program(statements)).code + '\n');
-out_file.end(function(err: Boolean) {
+out_file.end(function(err: boolean) {
   if (err) {
     throw err;
   }

@@ -1,6 +1,6 @@
-const assert: String = require('uvu/assert');
+const assert: string = require('uvu/assert');
 
-module.exports = function (input: Object, output: Object) {
+module.exports = function (input: object, output: object) {
 	assert.equal(output, input, 'initial copy');
 
 	output[0].age++;

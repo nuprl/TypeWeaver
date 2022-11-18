@@ -7,23 +7,23 @@
 
 import createMappingsSerializer from './createMappingsSerializer';
 
-export const getSourceAndMap: Function = (inputSource: OriginalSource, options: Object) => {
-	let code: String = "";
-	let mappings: String = "";
-	let sources: Array = [];
-	let sourcesContent: Array = [];
-	let names: Array = [];
+export const getSourceAndMap: Function = (inputSource: OriginalSource, options: object) => {
+	let code: string = "";
+	let mappings: string = "";
+	let sources: any[] = [];
+	let sourcesContent: any[] = [];
+	let names: any[] = [];
 	const addMapping: Function = createMappingsSerializer(options);
 	const { source } = inputSource.streamChunks(
 		Object.assign({}, options, { finalSource: true }),
 		(
-			chunk: Number,
-			generatedLine: String,
-			generatedColumn: Number,
-			sourceIndex: String,
+			chunk: number,
+			generatedLine: string,
+			generatedColumn: number,
+			sourceIndex: string,
 			originalLine: OriginalSource,
-			originalColumn: String,
-			nameIndex: String
+			originalColumn: string,
+			nameIndex: string
 		) => {
 			if (chunk !== undefined) code += chunk;
 			mappings += addMapping(
@@ -35,7 +35,7 @@ export const getSourceAndMap: Function = (inputSource: OriginalSource, options: 
 				nameIndex
 			);
 		},
-		(sourceIndex: String, source: String, sourceContent: String) => {
+		(sourceIndex: string, source: string, sourceContent: string) => {
 			while (sources.length < sourceIndex) {
 				sources.push(null);
 			}
@@ -47,7 +47,7 @@ export const getSourceAndMap: Function = (inputSource: OriginalSource, options: 
 				sourcesContent[sourceIndex] = sourceContent;
 			}
 		},
-		(nameIndex: String, name: String) => {
+		(nameIndex: string, name: string) => {
 			while (names.length < nameIndex) {
 				names.push(null);
 			}
@@ -71,22 +71,22 @@ export const getSourceAndMap: Function = (inputSource: OriginalSource, options: 
 	};
 };
 
-export const getMap: Function = (source: OriginalSource, options: Object) => {
-	let mappings: String = "";
-	let sources: Array = [];
-	let sourcesContent: Array = [];
-	let names: Array = [];
+export const getMap: Function = (source: OriginalSource, options: object) => {
+	let mappings: string = "";
+	let sources: any[] = [];
+	let sourcesContent: any[] = [];
+	let names: any[] = [];
 	const addMapping: Function = createMappingsSerializer(options);
 	source.streamChunks(
 		Object.assign({}, options, { source: false, finalSource: true }),
 		(
 			chunk: Function,
-			generatedLine: String,
-			generatedColumn: Number,
-			sourceIndex: String,
+			generatedLine: string,
+			generatedColumn: number,
+			sourceIndex: string,
 			originalLine: OriginalSource,
-			originalColumn: String,
-			nameIndex: String
+			originalColumn: string,
+			nameIndex: string
 		) => {
 			mappings += addMapping(
 				generatedLine,
@@ -97,7 +97,7 @@ export const getMap: Function = (source: OriginalSource, options: Object) => {
 				nameIndex
 			);
 		},
-		(sourceIndex: String, source: String, sourceContent: String) => {
+		(sourceIndex: string, source: string, sourceContent: string) => {
 			while (sources.length < sourceIndex) {
 				sources.push(null);
 			}
@@ -109,7 +109,7 @@ export const getMap: Function = (source: OriginalSource, options: Object) => {
 				sourcesContent[sourceIndex] = sourceContent;
 			}
 		},
-		(nameIndex: String, name: String) => {
+		(nameIndex: string, name: string) => {
 			while (names.length < nameIndex) {
 				names.push(null);
 			}

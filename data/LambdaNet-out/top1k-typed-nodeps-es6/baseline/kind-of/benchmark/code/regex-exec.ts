@@ -1,6 +1,6 @@
 var re: RegExp = /^\[object (\w+)\]$/;
 
-export default function typeOf(val: String): String {
+export default function typeOf(val: string): string {
   if (val === null) {
     return 'null';
   }

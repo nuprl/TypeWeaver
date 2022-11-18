@@ -1,4 +1,4 @@
-var scope: String = (typeof global !== "undefined" && global) ||
+var scope: string = (typeof global !== "undefined" && global) ||
             (typeof self !== "undefined" && self) ||
             window;
 var apply: Function = Function.prototype.apply;
@@ -18,7 +18,7 @@ exports.clearInterval = function(timeout: Function) {
   }
 };
 
-function Timeout(id: String, clearFn: String): Void {
+function Timeout(id: string, clearFn: string): Void {
   this._id = id;
   this._clearFn = clearFn;
 }
@@ -28,12 +28,12 @@ Timeout.prototype.close = function() {
 };
 
 // Does not start the time, just sets up the members needed.
-exports.enroll = function(item: Object, msecs: Boolean) {
+exports.enroll = function(item: object, msecs: boolean) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = msecs;
 };
 
-exports.unenroll = function(item: Object) {
+exports.unenroll = function(item: object) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };
@@ -41,7 +41,7 @@ exports.unenroll = function(item: Object) {
 exports._unrefActive = exports.active = function(item: HTMLElement) {
   clearTimeout(item._idleTimeoutId);
 
-  var msecs: Number = item._idleTimeout;
+  var msecs: number = item._idleTimeout;
   if (msecs >= 0) {
     item._idleTimeoutId = setTimeout(function onTimeout(): Void {
       if (item._onTimeout)

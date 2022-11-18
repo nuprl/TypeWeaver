@@ -4,11 +4,11 @@
 */
 import fs from 'fs';
 
-var readFile: String = fs.readFile.bind(fs);
+var readFile: string = fs.readFile.bind(fs);
 import loadLoader from './loadLoader';
 
-function utf8BufferToString(buf: String): Array {
-	var str: String = buf.toString("utf-8");
+function utf8BufferToString(buf: string): any[] {
+	var str: string = buf.toString("utf-8");
 	if(str.charCodeAt(0) === 0xFEFF) {
 		return str.slice(1);
 	} else {
@@ -22,7 +22,7 @@ const PATH_QUERY_FRAGMENT_REGEXP: RegExp = /^((?:\0.|[^?#\0])*)(\?(?:\0.|[^#\0])
  * @param {string} str the path with query and fragment
  * @returns {{ path: string, query: string, fragment: string }} parsed parts
  */
-function parsePathQueryFragment(str: String): Object {
+function parsePathQueryFragment(str: string): object {
 	var match: Promise = PATH_QUERY_FRAGMENT_REGEXP.exec(str);
 	return {
 		path: match[1].replace(/\0(.)/g, "$1"),
@@ -31,21 +31,21 @@ function parsePathQueryFragment(str: String): Object {
 	};
 }
 
-function dirname(path: String): String {
+function dirname(path: string): string {
 	if(path === "/") return "/";
-	var i: Number = path.lastIndexOf("/");
-	var j: Number = path.lastIndexOf("\\");
-	var i2: Number = path.indexOf("/");
-	var j2: Number = path.indexOf("\\");
-	var idx: Number = i > j ? i : j;
-	var idx2: Number = i > j ? i2 : j2;
+	var i: number = path.lastIndexOf("/");
+	var j: number = path.lastIndexOf("\\");
+	var i2: number = path.indexOf("/");
+	var j2: number = path.indexOf("\\");
+	var idx: number = i > j ? i : j;
+	var idx2: number = i > j ? i2 : j2;
 	if(idx < 0) return path;
 	if(idx === idx2) return path.slice(0, idx + 1);
 	return path.slice(0, idx);
 }
 
-function createLoaderObject(loader: Function): String {
-	var obj: String = {
+function createLoaderObject(loader: Function): string {
+	var obj: string = {
 		path: null,
 		query: null,
 		fragment: null,
@@ -63,9 +63,9 @@ function createLoaderObject(loader: Function): String {
 		get: function() {
 			return obj.path.replace(/#/g, "\0#") + obj.query.replace(/#/g, "\0#") + obj.fragment;
 		},
-		set: function(value: Object) {
+		set: function(value: object) {
 			if(typeof value === "string") {
-				var splittedRequest: Object = parsePathQueryFragment(value);
+				var splittedRequest: object = parsePathQueryFragment(value);
 				obj.path = splittedRequest.path;
 				obj.query = splittedRequest.query;
 				obj.fragment = splittedRequest.fragment;
@@ -101,12 +101,12 @@ function createLoaderObject(loader: Function): String {
 	return obj;
 }
 
-function runSyncOrAsync(fn: Function, context: Object, args: String, callback: Function): Promise {
-	var isSync: Boolean = true;
-	var isDone: Boolean = false;
-	var isError: Boolean = false; // internal error
-	var reportedError: Boolean = false;
-	context.async = function async(): Boolean {
+function runSyncOrAsync(fn: Function, context: object, args: string, callback: Function): Promise {
+	var isSync: boolean = true;
+	var isDone: boolean = false;
+	var isError: boolean = false; // internal error
+	var reportedError: boolean = false;
+	context.async = function async(): boolean {
 		if(isDone) {
 			if(reportedError) return; // ignore
 			throw new Error("async(): The callback was already called.");
@@ -114,7 +114,7 @@ function runSyncOrAsync(fn: Function, context: Object, args: String, callback: F
 		isSync = false;
 		return innerCallback;
 	};
-	var innerCallback: Boolean = context.callback = function() {
+	var innerCallback: boolean = context.callback = function() {
 		if(isDone) {
 			if(reportedError) return; // ignore
 			throw new Error("callback(): The callback was already called.");
@@ -137,7 +137,7 @@ function runSyncOrAsync(fn: Function, context: Object, args: String, callback: F
 			if(result === undefined)
 				return callback();
 			if(result && typeof result === "object" && typeof result.then === "function") {
-				return result.then(function(r: Number) {
+				return result.then(function(r: number) {
 					callback(null, r);
 				}, callback);
 			}
@@ -159,14 +159,14 @@ function runSyncOrAsync(fn: Function, context: Object, args: String, callback: F
 
 }
 
-function convertArgs(args: Promise, raw: Boolean): Void {
+function convertArgs(args: Promise, raw: boolean): Void {
 	if(!raw && Buffer.isBuffer(args[0]))
 		args[0] = utf8BufferToString(args[0]);
 	else if(raw && typeof args[0] === "string")
 		args[0] = Buffer.from(args[0], "utf-8");
 }
 
-function iteratePitchingLoaders(options: Object, loaderContext: HTMLElement, callback: Function): String {
+function iteratePitchingLoaders(options: object, loaderContext: HTMLElement, callback: Function): string {
 	// abort after last loader
 	if(loaderContext.loaderIndex >= loaderContext.loaders.length)
 		return processResource(options, loaderContext, callback);
@@ -180,25 +180,25 @@ function iteratePitchingLoaders(options: Object, loaderContext: HTMLElement, cal
 	}
 
 	// load loader module
-	loadLoader(currentLoaderObject, function(err: String) {
+	loadLoader(currentLoaderObject, function(err: string) {
 		if(err) {
 			loaderContext.cacheable(false);
 			return callback(err);
 		}
-		var fn: Number = currentLoaderObject.pitch;
+		var fn: number = currentLoaderObject.pitch;
 		currentLoaderObject.pitchExecuted = true;
 		if(!fn) return iteratePitchingLoaders(options, loaderContext, callback);
 
 		runSyncOrAsync(
 			fn,
 			loaderContext, [loaderContext.remainingRequest, loaderContext.previousRequest, currentLoaderObject.data = {}],
-			function(err: String) {
+			function(err: string) {
 				if(err) return callback(err);
-				var args: Array = Array.prototype.slice.call(arguments, 1);
+				var args: any[] = Array.prototype.slice.call(arguments, 1);
 				// Determine whether to continue the pitching process based on
 				// argument values (as opposed to argument presence) in order
 				// to support synchronous and asynchronous usages.
-				var hasArg: Boolean = args.some(function(value: Number) {
+				var hasArg: boolean = args.some(function(value: number) {
 					return value !== undefined;
 				});
 				if(hasArg) {
@@ -212,15 +212,15 @@ function iteratePitchingLoaders(options: Object, loaderContext: HTMLElement, cal
 	});
 }
 
-function processResource(options: Object, loaderContext: HTMLElement, callback: Function): Void {
+function processResource(options: object, loaderContext: HTMLElement, callback: Function): Void {
 	// set loader index to last loader
 	loaderContext.loaderIndex = loaderContext.loaders.length - 1;
 
-	var resourcePath: String = loaderContext.resourcePath;
+	var resourcePath: string = loaderContext.resourcePath;
 	if(resourcePath) {
-		options.processResource(loaderContext, resourcePath, function(err: String) {
+		options.processResource(loaderContext, resourcePath, function(err: string) {
 			if(err) return callback(err);
-			var args: Object = Array.prototype.slice.call(arguments, 1);
+			var args: object = Array.prototype.slice.call(arguments, 1);
 			options.resourceBuffer = args[0];
 			iterateNormalLoaders(options, loaderContext, args, callback);
 		});
@@ -229,7 +229,7 @@ function processResource(options: Object, loaderContext: HTMLElement, callback: 
 	}
 }
 
-function iterateNormalLoaders(options: Object, loaderContext: HTMLElement, args: String, callback: Function): String {
+function iterateNormalLoaders(options: object, loaderContext: HTMLElement, args: string, callback: Function): string {
 	if(loaderContext.loaderIndex < 0)
 		return callback(null, args);
 
@@ -241,7 +241,7 @@ function iterateNormalLoaders(options: Object, loaderContext: HTMLElement, args:
 		return iterateNormalLoaders(options, loaderContext, args, callback);
 	}
 
-	var fn: Number = currentLoaderObject.normal;
+	var fn: number = currentLoaderObject.normal;
 	currentLoaderObject.normalExecuted = true;
 	if(!fn) {
 		return iterateNormalLoaders(options, loaderContext, args, callback);
@@ -249,41 +249,41 @@ function iterateNormalLoaders(options: Object, loaderContext: HTMLElement, args:
 
 	convertArgs(args, currentLoaderObject.raw);
 
-	runSyncOrAsync(fn, loaderContext, args, function(err: String) {
+	runSyncOrAsync(fn, loaderContext, args, function(err: string) {
 		if(err) return callback(err);
 
-		var args: String = Array.prototype.slice.call(arguments, 1);
+		var args: string = Array.prototype.slice.call(arguments, 1);
 		iterateNormalLoaders(options, loaderContext, args, callback);
 	});
 }
 
-export const getContext: String = function getContext(resource: String): String {
-	var path: String = parsePathQueryFragment(resource).path;
+export const getContext: string = function getContext(resource: string): string {
+	var path: string = parsePathQueryFragment(resource).path;
 	return dirname(path);
 };
 
-export const runLoaders: String = function runLoaders(options: Object, callback: Function): Void {
+export const runLoaders: string = function runLoaders(options: object, callback: Function): Void {
 	// read options
-	var resource: Number = options.resource || "";
-	var loaders: Array = options.loaders || [];
+	var resource: number = options.resource || "";
+	var loaders: any[] = options.loaders || [];
 	var loaderContext: HTMLElement = options.context || {};
-	var processResource: String = options.processResource || ((readResource: Function, context: HTMLElement, resource: String, callback: Boolean) => {
+	var processResource: string = options.processResource || ((readResource: Function, context: HTMLElement, resource: string, callback: boolean) => {
 		context.addDependency(resource);
 		readResource(resource, callback);
 	}).bind(null, options.readResource || readFile);
 
 	//
-	var splittedResource: Object = resource && parsePathQueryFragment(resource);
-	var resourcePath: String = splittedResource ? splittedResource.path : undefined;
-	var resourceQuery: String = splittedResource ? splittedResource.query : undefined;
+	var splittedResource: object = resource && parsePathQueryFragment(resource);
+	var resourcePath: string = splittedResource ? splittedResource.path : undefined;
+	var resourceQuery: string = splittedResource ? splittedResource.query : undefined;
 	var resourceFragment: Function = splittedResource ? splittedResource.fragment : undefined;
-	var contextDirectory: Object = resourcePath ? dirname(resourcePath) : null;
+	var contextDirectory: object = resourcePath ? dirname(resourcePath) : null;
 
 	// execution state
-	var requestCacheable: Boolean = true;
-	var fileDependencies: Array = [];
-	var contextDependencies: Array = [];
-	var missingDependencies: Array = [];
+	var requestCacheable: boolean = true;
+	var fileDependencies: any[] = [];
+	var contextDependencies: any[] = [];
+	var missingDependencies: any[] = [];
 
 	// prepare loader objects
 	loaders = loaders.map(createLoaderObject);
@@ -296,27 +296,27 @@ export const runLoaders: String = function runLoaders(options: Object, callback:
 	loaderContext.resourceFragment = resourceFragment;
 	loaderContext.async = null;
 	loaderContext.callback = null;
-	loaderContext.cacheable = function cacheable(flag: Number): Void {
+	loaderContext.cacheable = function cacheable(flag: number): Void {
 		if(flag === false) {
 			requestCacheable = false;
 		}
 	};
-	loaderContext.dependency = loaderContext.addDependency = function addDependency(file: String): Void {
+	loaderContext.dependency = loaderContext.addDependency = function addDependency(file: string): Void {
 		fileDependencies.push(file);
 	};
-	loaderContext.addContextDependency = function addContextDependency(context: String): Void {
+	loaderContext.addContextDependency = function addContextDependency(context: string): Void {
 		contextDependencies.push(context);
 	};
-	loaderContext.addMissingDependency = function addMissingDependency(context: String): Void {
+	loaderContext.addMissingDependency = function addMissingDependency(context: string): Void {
 		missingDependencies.push(context);
 	};
-	loaderContext.getDependencies = function getDependencies(): Array {
+	loaderContext.getDependencies = function getDependencies(): any[] {
 		return fileDependencies.slice();
 	};
 	loaderContext.getContextDependencies = function getContextDependencies(): Promise {
 		return contextDependencies.slice();
 	};
-	loaderContext.getMissingDependencies = function getMissingDependencies(): Array {
+	loaderContext.getMissingDependencies = function getMissingDependencies(): any[] {
 		return missingDependencies.slice();
 	};
 	loaderContext.clearDependencies = function clearDependencies(): Void {
@@ -332,8 +332,8 @@ export const runLoaders: String = function runLoaders(options: Object, callback:
 				return undefined;
 			return loaderContext.resourcePath.replace(/#/g, "\0#") + loaderContext.resourceQuery.replace(/#/g, "\0#") + loaderContext.resourceFragment;
 		},
-		set: function(value: Number) {
-			var splittedResource: Object = value && parsePathQueryFragment(value);
+		set: function(value: number) {
+			var splittedResource: object = value && parsePathQueryFragment(value);
 			loaderContext.resourcePath = splittedResource ? splittedResource.path : undefined;
 			loaderContext.resourceQuery = splittedResource ? splittedResource.query : undefined;
 			loaderContext.resourceFragment = splittedResource ? splittedResource.fragment : undefined;
@@ -392,11 +392,11 @@ export const runLoaders: String = function runLoaders(options: Object, callback:
 		Object.preventExtensions(loaderContext);
 	}
 
-	var processOptions: Object = {
+	var processOptions: object = {
 		resourceBuffer: null,
 		processResource: processResource
 	};
-	iteratePitchingLoaders(processOptions, loaderContext, function(err: String, result: String) {
+	iteratePitchingLoaders(processOptions, loaderContext, function(err: string, result: string) {
 		if(err) {
 			return callback(err, {
 				cacheable: requestCacheable,

@@ -1,11 +1,11 @@
 import Diff from './base';
 
 export const arrayDiff: Map = new Diff();
-arrayDiff.tokenize = function(value: Array) {
+arrayDiff.tokenize = function(value: any[]) {
   return value.slice();
 };
-arrayDiff.join = arrayDiff.removeEmpty = function(value: Number) {
+arrayDiff.join = arrayDiff.removeEmpty = function(value: number) {
   return value;
 };
 
-export function diffArrays(oldArr: String, newArr: String, callback: Function): Boolean { return arrayDiff.diff(oldArr, newArr, callback); }
+export function diffArrays(oldArr: string, newArr: string, callback: Function): boolean { return arrayDiff.diff(oldArr, newArr, callback); }

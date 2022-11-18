@@ -9,10 +9,10 @@ const pp: RegExpValidationState = Parser.prototype
 // of the error message, and then raises a `SyntaxError` with that
 // message.
 
-pp.raise = function(pos: Position, message: String) {
+pp.raise = function(pos: Position, message: string) {
   let loc: RegExpValidationState = getLineInfo(this.input, pos)
   message += " (" + loc.line + ":" + loc.column + ")"
-  let err: Object = new SyntaxError(message)
+  let err: object = new SyntaxError(message)
   err.pos = pos; err.loc = loc; err.raisedAt = this.pos
   throw err
 }

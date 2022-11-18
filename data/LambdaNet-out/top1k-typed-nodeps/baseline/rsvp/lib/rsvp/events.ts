@@ -1,6 +1,6 @@
 
-function callbacksFor(object: Object): String {
-  let callbacks: Number = object._promiseCallbacks;
+function callbacksFor(object: object): string {
+  let callbacks: number = object._promiseCallbacks;
 
   if (!callbacks) {
     callbacks = object._promiseCallbacks = {};

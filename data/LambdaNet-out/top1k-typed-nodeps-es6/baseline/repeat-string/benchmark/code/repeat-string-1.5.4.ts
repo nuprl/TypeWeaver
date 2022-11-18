@@ -11,8 +11,8 @@
  * Results cache
  */
 
-var res: String = '';
-var cache: String;
+var res: string = '';
+var cache: string;
 
 /**
  * Expose `repeat`
@@ -38,7 +38,7 @@ export default repeat;
  * @api public
  */
 
-function repeat(str: String, num: Number): String {
+function repeat(str: string, num: number): string {
   if (typeof str !== 'string') {
     throw new TypeError('repeat-string expects a string.');
   }
@@ -47,7 +47,7 @@ function repeat(str: String, num: Number): String {
   if (num === 1) return str;
   if (num === 2) return str + str;
 
-  var max: Number = str.length * num;
+  var max: number = str.length * num;
   if (cache !== str || typeof cache === 'undefined') {
     cache = str;
     res = '';

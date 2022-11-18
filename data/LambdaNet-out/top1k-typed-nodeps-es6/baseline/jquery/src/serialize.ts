@@ -12,13 +12,13 @@ var
 	rsubmitterTypes: RegExp = /^(?:submit|button|image|reset|file)$/i,
 	rsubmittable: RegExp = /^(?:input|select|textarea|keygen)/i;
 
-function buildParams( prefix: String, obj: Object, traditional: Number, add: Function ): Void {
-	var name: String;
+function buildParams( prefix: string, obj: object, traditional: number, add: Function ): Void {
+	var name: string;
 
 	if ( Array.isArray( obj ) ) {
 
 		// Serialize array item.
-		jQuery.each( obj, function( i: String, v: String ) {
+		jQuery.each( obj, function( i: string, v: string ) {
 			if ( traditional || rbracket.test( prefix ) ) {
 
 				// Treat each array item as a scalar.
@@ -52,13 +52,13 @@ function buildParams( prefix: String, obj: Object, traditional: Number, add: Fun
 
 // Serialize an array of form elements or a set of
 // key/values into a query string
-jQuery.param = function( a: Object, traditional: String ) {
-	var prefix: String,
-		s: Array = [],
-		add: Function = function( key: String, valueOrFunction: Function ) {
+jQuery.param = function( a: object, traditional: string ) {
+	var prefix: string,
+		s: any[] = [],
+		add: Function = function( key: string, valueOrFunction: Function ) {
 
 			// If value is a function, invoke it and use its return value
-			var value: String = typeof valueOrFunction === "function" ?
+			var value: string = typeof valueOrFunction === "function" ?
 				valueOrFunction() :
 				valueOrFunction;
 
@@ -99,24 +99,24 @@ jQuery.fn.extend( {
 		return this.map( function() {
 
 			// Can add propHook for "elements" to filter or add form elements
-			var elements: String = jQuery.prop( this, "elements" );
+			var elements: string = jQuery.prop( this, "elements" );
 			return elements ? jQuery.makeArray( elements ) : this;
 		} ).filter( function() {
-			var type: String = this.type;
+			var type: string = this.type;
 
 			// Use .is( ":disabled" ) so that fieldset[disabled] works
 			return this.name && !jQuery( this ).is( ":disabled" ) &&
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );
-		} ).map( function( _i: String, elem: Object ) {
-			var val: String = jQuery( this ).val();
+		} ).map( function( _i: string, elem: object ) {
+			var val: string = jQuery( this ).val();
 
 			if ( val == null ) {
 				return null;
 			}
 
 			if ( Array.isArray( val ) ) {
-				return jQuery.map( val, function( val: String ) {
+				return jQuery.map( val, function( val: string ) {
 					return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 				} );
 			}

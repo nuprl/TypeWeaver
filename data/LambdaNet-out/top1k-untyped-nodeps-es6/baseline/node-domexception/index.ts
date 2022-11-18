@@ -4,7 +4,7 @@ if (!globalThis.DOMException) {
   try {
     const { MessageChannel } = require('worker_threads'),
     port: HTMLElement = new MessageChannel().port1,
-    ab: Object = new ArrayBuffer()
+    ab: object = new ArrayBuffer()
     port.postMessage(ab, [ab, ab])
   } catch (err) {
     err.constructor.name === 'DOMException' && (

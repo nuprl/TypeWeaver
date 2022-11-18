@@ -1,8 +1,8 @@
 /** Used as references for various `Number` constants. */
-const MAX_SAFE_INTEGER: Number = 9007199254740991
+const MAX_SAFE_INTEGER: number = 9007199254740991
 
 /** Used as references for the maximum length and index of an array. */
-const MAX_ARRAY_LENGTH: Number = 4294967295
+const MAX_ARRAY_LENGTH: number = 4294967295
 
 /**
  * Invokes the iteratee `n` times, returning an array of the results of
@@ -21,13 +21,13 @@ const MAX_ARRAY_LENGTH: Number = 4294967295
  *  times(4, () => 0)
  * // => [0, 0, 0, 0]
  */
-function times(n: Number, iteratee: Function): Array {
+function times(n: number, iteratee: Function): any[] {
   if (n < 1 || n > MAX_SAFE_INTEGER) {
     return []
   }
-  let index: Number = -1
-  const length: Number = Math.min(n, MAX_ARRAY_LENGTH)
-  const result: Object = new Array(length)
+  let index: number = -1
+  const length: number = Math.min(n, MAX_ARRAY_LENGTH)
+  const result: object = new Array(length)
   while (++index < length) {
     result[index] = iteratee(index)
   }

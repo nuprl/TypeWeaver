@@ -1,25 +1,10 @@
-index.ts(4,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(4,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BinaryLike'.
-  Type 'String' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
-index.ts(8,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BinaryLike'.
-index.ts(8,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'KeyLike | SignKeyObjectInput | SignPrivateKeyInput'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-index.ts(12,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | number | boolean'.
-index.ts(23,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(24,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(24,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(26,15): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(44,70): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(31,24): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'never'.
 index.ts(52,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(58,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(58,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(64,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(84,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: string | Number, index: number, array: (string | Number)[]) => String'.
-  Types of parameters 'str' and 'value' are incompatible.
-    Type 'string | Number' is not assignable to type 'String'.
-      Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(94,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: string | Number, index: number, array: (string | Number)[]) => String'.
-index.ts(110,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: string | Number, index: number, array: (string | Number)[]) => String'.
+index.ts(80,57): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+  Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+index.ts(90,57): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+index.ts(100,57): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
 index.ts(115,140): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 

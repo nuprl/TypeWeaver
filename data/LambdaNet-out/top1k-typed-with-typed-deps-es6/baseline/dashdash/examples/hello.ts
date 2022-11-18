@@ -6,7 +6,7 @@
 import dashdash from '../lib/dashdash';
 
 // Define your options.
-var options: Array = [
+var options: any[] = [
     {
         names: ['verbose', 'v'],        // first name is opts key
         type: 'bool',

@@ -1,5 +1,5 @@
 /** Used to map characters to HTML entities. */
-const htmlEscapes: Object = {
+const htmlEscapes: object = {
   '&': '&amp;',
   '<': '&lt;',
   '>': '&gt;',
@@ -9,7 +9,7 @@ const htmlEscapes: Object = {
 
 /** Used to match HTML entities and HTML characters. */
 const reUnescapedHtml: RegExp = /[&<>"']/g
-const reHasUnescapedHtml: Number = RegExp(reUnescapedHtml.source)
+const reHasUnescapedHtml: number = RegExp(reUnescapedHtml.source)
 
 /**
  * Converts the characters "&", "<", ">", '"', and "'" in `string` to their
@@ -38,9 +38,9 @@ const reHasUnescapedHtml: Number = RegExp(reUnescapedHtml.source)
  * escape('fred, barney, & pebbles')
  * // => 'fred, barney, &amp; pebbles'
  */
-function escape(string: String): String {
+function escape(string: string): string {
   return (string && reHasUnescapedHtml.test(string))
-    ? string.replace(reUnescapedHtml, (chr: Array) => htmlEscapes[chr])
+    ? string.replace(reUnescapedHtml, (chr: any[]) => htmlEscapes[chr])
     : (string || '')
 }
 

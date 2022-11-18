@@ -1,4 +1,4 @@
-let defaultResolver: Object;
+let defaultResolver: object;
 
 module.exports = () => {
   if (!defaultResolver) {

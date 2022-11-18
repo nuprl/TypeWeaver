@@ -3,11 +3,11 @@
  * which exceed the number of columns in the terminal
  */
 
-var ProgressBar: Array = require('../');
+var ProgressBar: any[] = require('../');
 
 // simulated download, passing the chunk lengths to tick()
 
-var bar: Object = new ProgressBar('  downloading [:bar] :percent :etas', {
+var bar: object = new ProgressBar('  downloading [:bar] :percent :etas', {
     complete: '='
   , incomplete: ' '
   , width: 1024     /* something longer than the terminal width */

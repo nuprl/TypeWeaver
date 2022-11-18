@@ -1,14 +1,14 @@
 'use strict';
 
-const isObject: Function = (val: String) => {
+const isObject: Function = (val: string) => {
   return typeof val === 'function' || (typeof val === 'object' && val !== null && !Array.isArray(val));
 };
 
-const isValidKey: Function = (key: String) => {
+const isValidKey: Function = (key: string) => {
   return key !== '__proto__' && key !== 'constructor' && key !== 'prototype';
 };
 
-const mixinDeep: Function = (target: Object, ...rest) => {
+const mixinDeep: Function = (target: object, ...rest) => {
   for (let obj of rest) {
     if (isObject(obj)) {
       for (let key in obj) {
@@ -21,8 +21,8 @@ const mixinDeep: Function = (target: Object, ...rest) => {
   return target;
 };
 
-function mixin(target: Object, val: String, key: String): Void {
-  let obj: String = target[key];
+function mixin(target: object, val: string, key: string): Void {
+  let obj: string = target[key];
   if (isObject(val) && isObject(obj)) {
     mixinDeep(obj, val);
   } else {

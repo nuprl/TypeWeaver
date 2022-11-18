@@ -1,8 +1,8 @@
 // based on https://github.com/microsoft/TypeScript/tree/master/scripts/regenerate-unicode-identifier-parts.js
 
 /** @param {number} i */
-function toHex4Digits(i: NonSurrogateRange): String {
-  let s: String = i.toString(16);
+function toHex4Digits(i: NonSurrogateRange): string {
+  let s: string = i.toString(16);
   while (s.length < 4) {
     s = '0' + s;
   }
@@ -17,7 +17,7 @@ class NonSurrogateRange {
     this.lastCodePoint = codePoint;
   }
   toString() {
-    let text: String = '\\u' + toHex4Digits(this.firstCodePoint);
+    let text: string = '\\u' + toHex4Digits(this.firstCodePoint);
     if (this.lastCodePoint !== this.firstCodePoint) {
       text += '-\\u' + toHex4Digits(this.lastCodePoint);
     }
@@ -51,7 +51,7 @@ class TrailSurrogateRange {
     this.lastTrailSurrogate = trailSurrogate;
   }
   toString() {
-    let text: String = '\\u' + toHex4Digits(this.firstTrailSurrogate);
+    let text: string = '\\u' + toHex4Digits(this.firstTrailSurrogate);
     if (this.lastTrailSurrogate !== this.firstTrailSurrogate) {
       text += '-\\u' + toHex4Digits(this.lastTrailSurrogate);
     }
@@ -92,8 +92,8 @@ class Writer {
       this.nonSurrogateRange = new NonSurrogateRange(codePoint);
       this.nonSurrogateRanges.push(this.nonSurrogateRange);
     } else {
-      const leadSurrogate: Number = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
-      const trailSurrogate: Number = ((codePoint - 0x10000) % 0x400) + 0xdc00;
+      const leadSurrogate: number = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
+      const trailSurrogate: number = ((codePoint - 0x10000) % 0x400) + 0xdc00;
       if (
         !this.leadSurrogateRange ||
         this.leadSurrogateRange.leadSurrogate !== leadSurrogate
@@ -117,8 +117,8 @@ class Writer {
   }
 
   toString() {
-    let first: String = this.nonSurrogateRanges.join('');
-    let second: String = this.surrogateRanges.join('|');
+    let first: string = this.nonSurrogateRanges.join('');
+    let second: string = this.surrogateRanges.join('|');
     return first && second
       ? `([${first}]|${second})`
       : first
@@ -129,16 +129,16 @@ class Writer {
   }
 }
 
-const MAX_UNICODE_NON_SURROGATE: Number = 0xffff;
-const MAX_UNICODE_CODEPOINT: Number = 0x10ffff;
-const isStart: Function = (c: String) => /\p{ID_Start}/u.test(c);
-const isContinue: Function = (c: String) => /\p{ID_Continue}/u.test(c);
+const MAX_UNICODE_NON_SURROGATE: number = 0xffff;
+const MAX_UNICODE_CODEPOINT: number = 0x10ffff;
+const isStart: Function = (c: string) => /\p{ID_Start}/u.test(c);
+const isContinue: Function = (c: string) => /\p{ID_Continue}/u.test(c);
 
-let idStartWriter: Array = new Writer();
-let idContinueWriter: Array = new Writer();
+let idStartWriter: any[] = new Writer();
+let idContinueWriter: any[] = new Writer();
 
 for (let cp = 0; cp <= MAX_UNICODE_CODEPOINT; cp++) {
-  const ch: String = String.fromCodePoint(cp);
+  const ch: string = String.fromCodePoint(cp);
   if (isStart(ch)) {
     idStartWriter.push(cp);
   }

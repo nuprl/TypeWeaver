@@ -43,7 +43,7 @@ suite.add({
   fn: 'var addrs = forwarded(req5)'
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 
@@ -53,7 +53,7 @@ suite.on('complete', function onComplete (): Void {
 
 suite.run({ async: false })
 
-function fakerequest (headers: Object): Object {
+function fakerequest (headers: object): object {
   return {
     headers: headers,
     connection: {

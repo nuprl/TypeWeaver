@@ -13,7 +13,7 @@
  * delay(text => console.log(text), 1000, 'later')
  * // => Logs 'later' after one second.
  */
-function delay(func: Number, wait: Number, ...args): Number {
+function delay(func: number, wait: number, ...args): number {
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
   }

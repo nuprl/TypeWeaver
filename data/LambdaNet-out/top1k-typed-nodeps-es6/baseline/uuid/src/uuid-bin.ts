@@ -18,14 +18,14 @@ function usage(): Void {
   );
 }
 
-const args: String = process.argv.slice(2);
+const args: string = process.argv.slice(2);
 
 if (args.indexOf('--help') >= 0) {
   usage();
   process.exit(0);
 }
 
-const version: Number = args.shift() || 'v4';
+const version: number = args.shift() || 'v4';
 
 switch (version) {
   case 'v1':
@@ -33,8 +33,8 @@ switch (version) {
     break;
 
   case 'v3': {
-    const name: String = args.shift();
-    let namespace: String = args.shift();
+    const name: string = args.shift();
+    let namespace: string = args.shift();
 
     assert(name != null, 'v3 name not specified');
     assert(namespace != null, 'v3 namespace not specified');
@@ -56,8 +56,8 @@ switch (version) {
     break;
 
   case 'v5': {
-    const name: String = args.shift();
-    let namespace: Number = args.shift();
+    const name: string = args.shift();
+    let namespace: number = args.shift();
 
     assert(name != null, 'v5 name not specified');
     assert(namespace != null, 'v5 namespace not specified');

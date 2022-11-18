@@ -12,8 +12,8 @@
  * @private
  */
 
-var typer: Array = require('media-typer')
-var mime: Array = require('mime-types')
+var typer: any[] = require('media-typer')
+var mime: any[] = require('mime-types')
 
 /**
  * Module exports.
@@ -40,12 +40,12 @@ module.exports.match = mimeMatch
  * @public
  */
 
-function typeis (value: String, types_: Array): Boolean {
-  var i: Number
-  var types: Array = types_
+function typeis (value: string, types_: any[]): boolean {
+  var i: number
+  var types: any[] = types_
 
   // remove parameters and normalize
-  var val: Boolean = tryNormalizeType(value)
+  var val: boolean = tryNormalizeType(value)
 
   // no type or invalid
   if (!val) {
@@ -65,7 +65,7 @@ function typeis (value: String, types_: Array): Boolean {
     return val
   }
 
-  var type: Array
+  var type: any[]
   for (i = 0; i < types.length; i++) {
     if (mimeMatch(normalize(type = types[i]), val)) {
       return type[0] === '+' || type.indexOf('*') !== -1
@@ -89,7 +89,7 @@ function typeis (value: String, types_: Array): Boolean {
  * @public
  */
 
-function hasbody (req: HTMLElement): Boolean {
+function hasbody (req: HTMLElement): boolean {
   return req.headers['transfer-encoding'] !== undefined ||
     !isNaN(req.headers['content-length'])
 }
@@ -120,8 +120,8 @@ function hasbody (req: HTMLElement): Boolean {
  * @public
  */
 
-function typeofrequest (req: Object, types_: Array): Array {
-  var types: Array = types_
+function typeofrequest (req: object, types_: any[]): any[] {
+  var types: any[] = types_
 
   // no body
   if (!hasbody(req)) {
@@ -137,7 +137,7 @@ function typeofrequest (req: Object, types_: Array): Array {
   }
 
   // request content type
-  var value: String = req.headers['content-type']
+  var value: string = req.headers['content-type']
 
   return typeis(value, types)
 }
@@ -159,7 +159,7 @@ function typeofrequest (req: Object, types_: Array): Array {
  * @public
  */
 
-function normalize (type: String): Boolean {
+function normalize (type: string): boolean {
   if (typeof type !== 'string') {
     // invalid type
     return false
@@ -193,15 +193,15 @@ function normalize (type: String): Boolean {
  * @public
  */
 
-function mimeMatch (expected: String, actual: String): Boolean {
+function mimeMatch (expected: string, actual: string): boolean {
   // invalid type
   if (expected === false) {
     return false
   }
 
   // split types
-  var actualParts: Array = actual.split('/')
-  var expectedParts: Object = expected.split('/')
+  var actualParts: any[] = actual.split('/')
+  var expectedParts: object = expected.split('/')
 
   // invalid format
   if (actualParts.length !== 2 || expectedParts.length !== 2) {
@@ -235,9 +235,9 @@ function mimeMatch (expected: String, actual: String): Boolean {
  * @private
  */
 
-function normalizeType (value: String): String {
+function normalizeType (value: string): string {
   // parse the type
-  var type: String = typer.parse(value)
+  var type: string = typer.parse(value)
 
   // remove the parameters
   type.parameters = undefined
@@ -254,7 +254,7 @@ function normalizeType (value: String): String {
  * @private
  */
 
-function tryNormalizeType (value: Number): Promise {
+function tryNormalizeType (value: number): Promise {
   if (!value) {
     return null
   }

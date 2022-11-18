@@ -2,10 +2,10 @@ import { List, walk, keyword as resolveKeyword } from 'css-tree';
 
 const { hasOwnProperty } = Object.prototype;
 
-function addRuleToMap(map: Object, item: Array, list: Map, single: Boolean): Void {
-    const node: Object = item.data;
-    const name: String = resolveKeyword(node.name).basename;
-    const id: String = node.name.toLowerCase() + '/' + (node.prelude ? node.prelude.id : null);
+function addRuleToMap(map: object, item: any[], list: Map, single: boolean): Void {
+    const node: object = item.data;
+    const name: string = resolveKeyword(node.name).basename;
+    const id: string = node.name.toLowerCase() + '/' + (node.prelude ? node.prelude.id : null);
 
     if (!hasOwnProperty.call(map, name)) {
         map[name] = Object.create(null);
@@ -22,13 +22,13 @@ function addRuleToMap(map: Object, item: Array, list: Map, single: Boolean): Voi
     map[name][id].append(list.remove(item));
 }
 
-function relocateAtrules(ast: Object, options: Object): Void {
-    const collected: Object = Object.create(null);
-    let topInjectPoint: String = null;
+function relocateAtrules(ast: object, options: object): Void {
+    const collected: object = Object.create(null);
+    let topInjectPoint: string = null;
 
-    ast.children.forEach(function(node: Object, item: Number, list: Object) {
+    ast.children.forEach(function(node: object, item: number, list: object) {
         if (node.type === 'Atrule') {
-            const name: String = resolveKeyword(node.name).basename;
+            const name: string = resolveKeyword(node.name).basename;
 
             switch (name) {
                 case 'keyframes':
@@ -65,16 +65,16 @@ function relocateAtrules(ast: Object, options: Object): Void {
     }
 };
 
-function isMediaRule(node: Object): Boolean {
+function isMediaRule(node: object): boolean {
     return node.type === 'Atrule' && node.name === 'media';
 }
 
-function processAtrule(node: Object, item: Object, list: Map): Void {
+function processAtrule(node: object, item: object, list: Map): Void {
     if (!isMediaRule(node)) {
         return;
     }
 
-    const prev: Object = item.prev && item.prev.data;
+    const prev: object = item.prev && item.prev.data;
 
     if (!prev || !isMediaRule(prev)) {
         return;
@@ -95,7 +95,7 @@ function processAtrule(node: Object, item: Object, list: Map): Void {
     }
 }
 
-export default function rejoinAtrule(ast: String, options: Object): Void {
+export default function rejoinAtrule(ast: string, options: object): Void {
     relocateAtrules(ast, options);
 
     walk(ast, {

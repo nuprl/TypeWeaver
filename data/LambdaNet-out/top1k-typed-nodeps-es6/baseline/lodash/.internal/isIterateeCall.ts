@@ -14,11 +14,11 @@ import eq from '../eq.js'
  *  else `false`.
  */
 
-function isIterateeCall(value: String, index: String, object: Array): Boolean {
+function isIterateeCall(value: string, index: string, object: any[]): boolean {
   if (!isObject(object)) {
     return false
   }
-  const type: String = typeof index
+  const type: string = typeof index
   if (type === 'number'
     ? (isArrayLike(object) && isIndex(index, object.length))
     : (type === 'string' && index in object)

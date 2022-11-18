@@ -11,7 +11,7 @@ empty list will be returned. A validation error will have two properties:
 "property" which indicates which property had the error
 "message" which indicates what the error was
  */
-(function (root: Object, factory: Function) {
+(function (root: object, factory: Function) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], function () {
@@ -29,7 +29,7 @@ empty list will be returned. A validation error will have two properties:
 }(this, function () {// setup primitive classes to be JSON Schema types
 var exports: HTMLElement = validate
 exports.Integer = {type:"integer"};
-var primitiveConstructors: Object = {
+var primitiveConstructors: object = {
 	String: String,
 	Boolean: Boolean,
 	Number: Number,
@@ -38,7 +38,7 @@ var primitiveConstructors: Object = {
 	Date: Date
 }
 exports.validate = validate;
-function validate(/*Any*/instance: Function,/*Object*/schema: String): String {
+function validate(/*Any*/instance: Function,/*Object*/schema: string): string {
 		// Summary:
 		//  	To use the validator call JSONSchema.validate with an instance object and an optional schema object.
 		// 		If a schema is provided, it will be used to validate. If the instance object refers to a schema (self-validating),
@@ -53,7 +53,7 @@ function validate(/*Any*/instance: Function,/*Object*/schema: String): String {
 		//
 		return validate(instance, schema, {changing: false});//, coerce: false, existingOnly: false});
 	};
-exports.checkPropertyChange = function(/*Any*/value: String,/*Object*/schema: Number, /*String*/property: String) {
+exports.checkPropertyChange = function(/*Any*/value: string,/*Object*/schema: number, /*String*/property: string) {
 		// Summary:
 		// 		The checkPropertyChange method will check to see if an value can legally be in property with the given schema
 		// 		This is slightly different than the validate method in that it will fail if the schema is readonly and it will
@@ -63,21 +63,21 @@ exports.checkPropertyChange = function(/*Any*/value: String,/*Object*/schema: Nu
 		//
 		return validate(value, schema, {changing: property || "property"});
 	};
-var validate: Function = exports._validate = function(/*Any*/instance: Object,/*Object*/schema: Number,/*Object*/options: Array) {
+var validate: Function = exports._validate = function(/*Any*/instance: object,/*Object*/schema: number,/*Object*/options: any[]) {
 
 	if (!options) options = {};
-	var _changing: Boolean = options.changing;
+	var _changing: boolean = options.changing;
 
-	function getType(schema: Object): Boolean{
+	function getType(schema: object): boolean{
 		return schema.type || (primitiveConstructors[schema.name] == schema && schema.name.toLowerCase());
 	}
-	var errors: Array = [];
+	var errors: any[] = [];
 	// validate a value against a property definition
-	function checkProp(value: Array, schema: Object, path: String,i: String): String{
+	function checkProp(value: any[], schema: object, path: string,i: string): string{
 
-		var l: Number;
+		var l: number;
 		path += path ? typeof i == 'number' ? '[' + i + ']' : typeof i == 'undefined' ? '' : '.' + i : i;
-		function addError(message: String): Void{
+		function addError(message: string): Void{
 			errors.push({property:path,message:message});
 		}
 
@@ -98,7 +98,7 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 			checkProp(value,schema['extends'],path,i);
 		}
 		// validate a value against a type definition
-		function checkType(type: Array,value: Number): Array{
+		function checkType(type: any[],value: number): any[]{
 			if(type){
 				if(typeof type == 'string' && type != 'any' &&
 						(type == 'null' ? value !== null : typeof value != type) &&
@@ -108,7 +108,7 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 					return [{property:path,message:value + " - " + (typeof value) + " value found, but a " + type + " is required"}];
 				}
 				if(type instanceof Array){
-					var unionErrors: Array=[];
+					var unionErrors: any[]=[];
 					for(var j = 0; j < type.length; j++){ // a union type
 						if(!(unionErrors=checkType(type[j],value)).length){
 							break;
@@ -118,10 +118,10 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 						return unionErrors;
 					}
 				}else if(typeof type == 'object'){
-					var priorErrors: Array = errors;
+					var priorErrors: any[] = errors;
 					errors = [];
 					checkProp(value,type,path);
-					var theseErrors: String = errors;
+					var theseErrors: string = errors;
 					errors = priorErrors;
 					return theseErrors;
 				}
@@ -140,8 +140,8 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 			if(value !== null){
 				if(value instanceof Array){
 					if(schema.items){
-						var itemsIsArray: Boolean = schema.items instanceof Array;
-						var propDef: Array = schema.items;
+						var itemsIsArray: boolean = schema.items instanceof Array;
+						var propDef: any[] = schema.items;
 						for (i = 0, l = value.length; i < l; i += 1) {
 							if (itemsIsArray)
 								propDef = schema.items[i];
@@ -177,9 +177,9 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 					addError("must have a maximum value of " + schema.maximum);
 				}
 				if(schema['enum']){
-					var enumer: Array = schema['enum'];
+					var enumer: any[] = schema['enum'];
 					l = enumer.length;
-					var found: Number;
+					var found: number;
 					for(var j = 0; j < l; j++){
 						if(enumer[j]===value){
 							found=1;
@@ -199,7 +199,7 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 		return null;
 	}
 	// validate an object against a schema
-	function checkObj(instance: Object,objTypeDef: Object,path: String,additionalProp: Number): Array{
+	function checkObj(instance: object,objTypeDef: object,path: string,additionalProp: number): any[]{
 
 		if(typeof objTypeDef =='object'){
 			if(typeof instance != 'object' || instance instanceof Array){
@@ -208,10 +208,10 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 			
 			for(var i in objTypeDef){ 
 				if(Object.prototype.hasOwnProperty.call(objTypeDef, i) && i != '__proto__' && i != 'constructor'){
-					var value: String = Object.prototype.hasOwnProperty.call(instance, i) ? instance[i] : undefined;
+					var value: string = Object.prototype.hasOwnProperty.call(instance, i) ? instance[i] : undefined;
 					// skip _not_ specified properties
 					if (value === undefined && options.existingOnly) continue;
-					var propDef: Object = objTypeDef[i];
+					var propDef: object = objTypeDef[i];
 					// set default
 					if(value === undefined && propDef["default"]){
 						value = instance[i] = propDef["default"];
@@ -233,7 +233,7 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 						" is not defined in the schema and the schema does not allow additional properties"});
 				}
 			}
-			var requires: Number = objTypeDef && objTypeDef[i] && objTypeDef[i].requires;
+			var requires: number = objTypeDef && objTypeDef[i] && objTypeDef[i].requires;
 			if(requires && !(requires in instance)){
 				errors.push({property:path,message:"the presence of the property " + i + " requires that " + requires + " also be present"});
 			}
@@ -258,12 +258,12 @@ var validate: Function = exports._validate = function(/*Any*/instance: Object,/*
 	}
 	return {valid:!errors.length,errors:errors};
 };
-exports.mustBeValid = function(result: Object){
+exports.mustBeValid = function(result: object){
 	//	summary:
 	//		This checks to ensure that the result is valid and will throw an appropriate error message if it is not
 	// result: the result returned from checkPropertyChange or validate
 	if(!result.valid){
-		throw new TypeError(result.errors.map(function(error: Object){return "for property " + error.property + ': ' + error.message;}).join(", \n"));
+		throw new TypeError(result.errors.map(function(error: object){return "for property " + error.property + ': ' + error.message;}).join(", \n"));
 	}
 }
 

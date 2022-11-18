@@ -1,4 +1,4 @@
-var serialOrdered: Array = require('../serialOrdered.js');
+var serialOrdered: any[] = require('../serialOrdered.js');
 
 // API
 module.exports = ReadableSerialOrdered;
@@ -15,7 +15,7 @@ module.exports.descending = serialOrdered.descending;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableSerialOrdered(list: Object, iterator: String, sortMethod: String, callback: Object): Object
+function ReadableSerialOrdered(list: object, iterator: string, sortMethod: string, callback: object): object
 {
   if (!(this instanceof ReadableSerialOrdered))
   {

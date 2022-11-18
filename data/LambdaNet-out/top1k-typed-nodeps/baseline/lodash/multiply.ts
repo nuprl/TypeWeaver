@@ -13,6 +13,6 @@ import createMathOperation from './.internal/createMathOperation.js'
  * multiply(6, 4)
  * // => 24
  */
-const multiply: Object = createMathOperation((multiplier: Number, multiplicand: Number) => multiplier * multiplicand, 1)
+const multiply: object = createMathOperation((multiplier: number, multiplicand: number) => multiplier * multiplicand, 1)
 
 export default multiply

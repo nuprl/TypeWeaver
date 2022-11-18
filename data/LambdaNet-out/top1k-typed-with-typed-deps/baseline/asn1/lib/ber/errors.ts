@@ -3,7 +3,7 @@
 
 module.exports = {
 
-  newInvalidAsn1Error: function (msg: String) {
+  newInvalidAsn1Error: function (msg: string) {
     var e: Error = new Error();
     e.name = 'InvalidAsn1Error';
     e.message = msg || '';

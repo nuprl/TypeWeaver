@@ -9,11 +9,11 @@ import stringToArray from './.internal/stringToArray.js'
 import values from './values.js'
 
 /** `Object#toString` result references. */
-const mapTag: String = '[object Map]'
-const setTag: String = '[object Set]'
+const mapTag: string = '[object Map]'
+const setTag: string = '[object Set]'
 
 /** Built-in value references. */
-const symIterator: String = Symbol.iterator
+const symIterator: string = Symbol.iterator
 
 /**
  * Converts `value` to an array.
@@ -36,7 +36,7 @@ const symIterator: String = Symbol.iterator
  * toArray(null)
  * // => []
  */
-function toArray(value: Object): Array {
+function toArray(value: object): any[] {
   if (!value) {
     return []
   }
@@ -46,7 +46,7 @@ function toArray(value: Object): Array {
   if (symIterator && value[symIterator]) {
     return iteratorToArray(value[symIterator]())
   }
-  const tag: String = getTag(value)
+  const tag: string = getTag(value)
   const func: Function = tag == mapTag ? mapToArray : (tag == setTag ? setToArray : values)
 
   return func(value)

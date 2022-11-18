@@ -28,11 +28,11 @@
  */
 
 // Useful masks and values for bit twiddling
-var MASK31: Number =  0x7fffffff, VAL31: Number = 0x80000000;
-var MASK32: Number =  0xffffffff, VAL32: Number = 0x100000000;
+var MASK31: number =  0x7fffffff, VAL31: number = 0x80000000;
+var MASK32: number =  0xffffffff, VAL32: number = 0x100000000;
 
 // Map for converting hex octets to strings
-var _HEX: Object = [];
+var _HEX: object = [];
 for (var i = 0; i < 256; i++) {
   _HEX[i] = (i > 0xF ? '' : '0') + i.toString(16);
 }
@@ -50,7 +50,7 @@ for (var i = 0; i < 256; i++) {
  * new Int64(number)             - Number (throws if n is outside int64 range)
  * new Int64(hi, lo)             - Raw bits as two 32-bit values
  */
-var Int64: Object = module.exports = function(a1: String, a2: String) {
+var Int64: object = module.exports = function(a1: string, a2: string) {
   if (a1 instanceof Buffer) {
     this.buffer = a1;
     this.offset = a2 || 0;
@@ -84,9 +84,9 @@ Int64.prototype = {
    * http://en.wikipedia.org/wiki/Two's_complement
    */
   _2scomp: function() {
-    var b: Object = this.buffer, o: Number = this.offset, carry: Number = 1;
+    var b: object = this.buffer, o: number = this.offset, carry: number = 1;
     for (var i = o + 7; i >= o; i--) {
-      var v: Number = (b[i] ^ 0xff) + carry;
+      var v: number = (b[i] ^ 0xff) + carry;
       b[i] = v & 0xff;
       carry = v >> 8;
     }
@@ -99,8 +99,8 @@ Int64.prototype = {
    * setValue(number) - Number (throws if n is outside int64 range)
    * setValue(hi, lo) - Raw bits as two 32-bit values
    */
-  setValue: function(hi: String, lo: Number) {
-    var negate: Boolean = false;
+  setValue: function(hi: string, lo: number) {
+    var negate: boolean = false;
     if (arguments.length == 1) {
       if (typeof(hi) == 'number') {
         // Simplify bitfield retrieval by using abs() value.  We restore sign
@@ -126,7 +126,7 @@ Int64.prototype = {
     // it's not worth the effort. Anything past the 32'nd bit is ignored.
 
     // Copy bytes to buffer
-    var b: Object = this.buffer, o: String = this.offset;
+    var b: object = this.buffer, o: string = this.offset;
     for (var i = 7; i >= 0; i--) {
       b[o+i] = lo & 0xff;
       lo = i == 4 ? hi : lo >>> 8;
@@ -147,13 +147,13 @@ Int64.prototype = {
    * numbers (very large positive or negative numbers) will be forced to +/-
    * Infinity.
    */
-  toNumber: function(allowImprecise: Boolean) {
-    var b: Object = this.buffer, o: String = this.offset;
+  toNumber: function(allowImprecise: boolean) {
+    var b: object = this.buffer, o: string = this.offset;
 
     // Running sum of octets, doing a 2's complement
-    var negate: Number = b[o] & 0x80, x: Number = 0, carry: Number = 1;
+    var negate: number = b[o] & 0x80, x: number = 0, carry: number = 1;
     for (var i = 7, m = 1; i >= 0; i--, m *= 256) {
-      var v: Number = b[o+i];
+      var v: number = b[o+i];
 
       // 2's complement for negative numbers
       if (negate) {
@@ -186,7 +186,7 @@ Int64.prototype = {
    *
    * @param radix Just like Number#toString()'s radix
    */
-  toString: function(radix: Number) {
+  toString: function(radix: number) {
     return this.valueOf().toString(radix || 10);
   },
 
@@ -195,9 +195,9 @@ Int64.prototype = {
    *
    * @param sep separator string. default is '' (empty string)
    */
-  toOctetString: function(sep: String) {
-    var out: Array = new Array(8);
-    var b: Object = this.buffer, o: String = this.offset;
+  toOctetString: function(sep: string) {
+    var out: any[] = new Array(8);
+    var b: object = this.buffer, o: string = this.offset;
     for (var i = 0; i < 8; i++) {
       out[i] = _HEX[b[o+i]];
     }
@@ -210,10 +210,10 @@ Int64.prototype = {
    * @param {bool} [rawBuffer=false]  If no offset and this is true, return the internal buffer.  Should only be used if
    *                                  you're discarding the Int64 afterwards, as it breaks encapsulation.
    */
-  toBuffer: function(rawBuffer: Boolean) {
+  toBuffer: function(rawBuffer: boolean) {
     if (rawBuffer && this.offset === 0) return this.buffer;
 
-    var out: String = new Buffer(8);
+    var out: string = new Buffer(8);
     this.buffer.copy(out, 0, this.offset, this.offset + 8);
     return out;
   },
@@ -224,7 +224,7 @@ Int64.prototype = {
    * @param {Buffer} targetBuffer       Buffer to copy into.
    * @param {number} [targetOffset=0]   Offset into target buffer.
    */
-  copy: function(targetBuffer: String, targetOffset: Number) {
+  copy: function(targetBuffer: string, targetOffset: number) {
     this.buffer.copy(targetBuffer, targetOffset || 0, this.offset, this.offset + 8);
   },
 
@@ -255,7 +255,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  equals: function(other: String) {
+  equals: function(other: string) {
     return this.compare(other) === 0;
   },
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const WITH_CACHE: Boolean = true;
+const WITH_CACHE: boolean = true;
 
 require('./_measure.js')('require-yarn', WITH_CACHE, () => {
   process.argv.push('config', 'get', 'init.author.name');

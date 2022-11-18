@@ -5,7 +5,7 @@
  * MIT Licensed
  */
 
-var db: Object = {}
+var db: object = {}
 
 // initialize with all the IANA types
 addData(db, require('../src/iana-types.json'), 'iana')
@@ -22,10 +22,10 @@ addData(db, require('../src/custom-types.json'))
 // finally, all custom suffix defaults
 import mime from '../src/custom-suffix.json';
 
-Object.keys(mime).forEach(function (suffix: Array) {
+Object.keys(mime).forEach(function (suffix: any[]) {
   var s: HTMLElement = mime[suffix]
 
-  Object.keys(db).forEach(function (type: Array) {
+  Object.keys(db).forEach(function (type: any[]) {
     if (type.slice(-suffix.length) !== suffix) {
       return
     }
@@ -41,11 +41,11 @@ require('./lib/write-db')('db.json', db)
 /**
  * Add mime data to the db, marked as a given source.
  */
-function addData (db: Object, mime: Object, source: String): Void {
-  Object.keys(mime).forEach(function (key: String) {
-    var data: Object = mime[key]
-    var type: String = key.toLowerCase()
-    var obj: String = db[type] = db[type] || createTypeEntry(source)
+function addData (db: object, mime: object, source: string): Void {
+  Object.keys(mime).forEach(function (key: string) {
+    var data: object = mime[key]
+    var type: string = key.toLowerCase()
+    var obj: string = db[type] = db[type] || createTypeEntry(source)
 
     // add missing data
     setValue(obj, 'charset', data.charset)
@@ -59,7 +59,7 @@ function addData (db: Object, mime: Object, source: String): Void {
 /**
  * Append an extension to an object.
  */
-function appendExtension (obj: Object, extension: String): Void {
+function appendExtension (obj: object, extension: string): Void {
   if (!obj.extensions) {
     obj.extensions = []
   }
@@ -72,13 +72,13 @@ function appendExtension (obj: Object, extension: String): Void {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: String, extensions: Array): Void {
+function appendExtensions (obj: string, extensions: any[]): Void {
   if (!extensions) {
     return
   }
 
   for (var i = 0; i < extensions.length; i++) {
-    var extension: String = extensions[i]
+    var extension: string = extensions[i]
 
     // add extension to the type entry
     appendExtension(obj, extension)
@@ -88,8 +88,8 @@ function appendExtensions (obj: String, extensions: Array): Void {
 /**
  * Create a new type entry, optionally marked from a source.
  */
-function createTypeEntry (source: Number): Object {
-  var obj: Object = {}
+function createTypeEntry (source: number): object {
+  var obj: object = {}
 
   if (source !== undefined) {
     obj.source = source
@@ -101,7 +101,7 @@ function createTypeEntry (source: Number): Object {
 /**
  * Set a value on an object, if not already set.
  */
-function setValue (obj: Object, prop: String, value: String): Void {
+function setValue (obj: object, prop: string, value: string): Void {
   if (value !== undefined && obj[prop] === undefined) {
     obj[prop] = value
   }

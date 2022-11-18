@@ -6,15 +6,15 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 import * as ReactIs from 'react-is';
 
-const camelCase: Function = (string: String) => {
-  const [first, ...rest] = string.split('-').map((str: String) => str.toLowerCase());
-  return first + rest.map((str: Array) => str[0].toUpperCase() + str.slice(1)).join('')
+const camelCase: Function = (string: string) => {
+  const [first, ...rest] = string.split('-').map((str: string) => str.toLowerCase());
+  return first + rest.map((str: any[]) => str[0].toUpperCase() + str.slice(1)).join('')
 };
 
-const input: String = 'src/index.js';
-const name: String = camelCase(pkg.name);
-const external: Function = (id: String) => !id.startsWith('.') && !path.isAbsolute(id);
-const commonjsOptions: Object = {
+const input: string = 'src/index.js';
+const name: string = camelCase(pkg.name);
+const external: Function = (id: string) => !id.startsWith('.') && !path.isAbsolute(id);
+const commonjsOptions: object = {
   namedExports: {
     'react-is': Object.keys(ReactIs)
   }

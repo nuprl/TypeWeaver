@@ -19,7 +19,7 @@ class Scope {
 
 // The functions in this module keep track of declared variables in the current scope in order to detect duplicate variable names.
 
-pp.enterScope = function(flags: String) {
+pp.enterScope = function(flags: string) {
   this.scopeStack.push(new Scope(flags))
 }
 
@@ -34,8 +34,8 @@ pp.treatFunctionsAsVarInScope = function(scope: Scope) {
   return (scope.flags & SCOPE_FUNCTION) || !this.inModule && (scope.flags & SCOPE_TOP)
 }
 
-pp.declareName = function(name: String, bindingType: Number, pos: Array) {
-  let redeclared: Boolean = false
+pp.declareName = function(name: string, bindingType: number, pos: any[]) {
+  let redeclared: boolean = false
   if (bindingType === BIND_LEXICAL) {
     const scope: RegExpValidationState = this.currentScope()
     redeclared = scope.lexical.indexOf(name) > -1 || scope.functions.indexOf(name) > -1 || scope.var.indexOf(name) > -1
@@ -69,7 +69,7 @@ pp.declareName = function(name: String, bindingType: Number, pos: Array) {
   if (redeclared) this.raiseRecoverable(pos, `Identifier '${name}' has already been declared`)
 }
 
-pp.checkLocalExport = function(id: Object) {
+pp.checkLocalExport = function(id: object) {
   // scope.functions must be empty as Module code is always strict.
   if (this.scopeStack[0].lexical.indexOf(id.name) === -1 &&
       this.scopeStack[0].var.indexOf(id.name) === -1) {
@@ -83,7 +83,7 @@ pp.currentScope = function() {
 
 pp.currentVarScope = function() {
   for (let i = this.scopeStack.length - 1;; i--) {
-    let scope: String = this.scopeStack[i]
+    let scope: string = this.scopeStack[i]
     if (scope.flags & SCOPE_VAR) return scope
   }
 }

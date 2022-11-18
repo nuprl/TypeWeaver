@@ -2,7 +2,7 @@
 
 import assert from 'minimalistic-assert';
 
-function Cipher(options: String): String {
+function Cipher(options: string): string {
   this.options = options;
 
   this.type = this.options.type;
@@ -18,7 +18,7 @@ Cipher.prototype._init = function _init(): Void {
   // Might be overrided
 };
 
-Cipher.prototype.update = function update(data: Array): Array {
+Cipher.prototype.update = function update(data: any[]): any[] {
   if (data.length === 0)
     return [];
 
@@ -28,9 +28,9 @@ Cipher.prototype.update = function update(data: Array): Array {
     return this._updateEncrypt(data);
 };
 
-Cipher.prototype._buffer = function _buffer(data: Array, off: Number): Number {
+Cipher.prototype._buffer = function _buffer(data: any[], off: number): number {
   // Append data to buffer
-  var min: Number = Math.min(this.buffer.length - this.bufferOff, data.length - off);
+  var min: number = Math.min(this.buffer.length - this.bufferOff, data.length - off);
   for (var i = 0; i < min; i++)
     this.buffer[this.bufferOff + i] = data[off + i];
   this.bufferOff += min;
@@ -39,18 +39,18 @@ Cipher.prototype._buffer = function _buffer(data: Array, off: Number): Number {
   return min;
 };
 
-Cipher.prototype._flushBuffer = function _flushBuffer(out: Function, off: Number): Object {
+Cipher.prototype._flushBuffer = function _flushBuffer(out: Function, off: number): object {
   this._update(this.buffer, 0, out, off);
   this.bufferOff = 0;
   return this.blockSize;
 };
 
-Cipher.prototype._updateEncrypt = function _updateEncrypt(data: Array): Array {
-  var inputOff: Number = 0;
-  var outputOff: Number = 0;
+Cipher.prototype._updateEncrypt = function _updateEncrypt(data: any[]): any[] {
+  var inputOff: number = 0;
+  var outputOff: number = 0;
 
-  var count: Number = ((this.bufferOff + data.length) / this.blockSize) | 0;
-  var out: Array = new Array(count * this.blockSize);
+  var count: number = ((this.bufferOff + data.length) / this.blockSize) | 0;
+  var out: any[] = new Array(count * this.blockSize);
 
   if (this.bufferOff !== 0) {
     inputOff += this._buffer(data, inputOff);
@@ -60,7 +60,7 @@ Cipher.prototype._updateEncrypt = function _updateEncrypt(data: Array): Array {
   }
 
   // Write blocks
-  var max: Number = data.length - ((data.length - inputOff) % this.blockSize);
+  var max: number = data.length - ((data.length - inputOff) % this.blockSize);
   for (; inputOff < max; inputOff += this.blockSize) {
     this._update(data, inputOff, out, outputOff);
     outputOff += this.blockSize;
@@ -73,12 +73,12 @@ Cipher.prototype._updateEncrypt = function _updateEncrypt(data: Array): Array {
   return out;
 };
 
-Cipher.prototype._updateDecrypt = function _updateDecrypt(data: Array): Array {
-  var inputOff: Number = 0;
-  var outputOff: Number = 0;
+Cipher.prototype._updateDecrypt = function _updateDecrypt(data: any[]): any[] {
+  var inputOff: number = 0;
+  var outputOff: number = 0;
 
-  var count: Number = Math.ceil((this.bufferOff + data.length) / this.blockSize) - 1;
-  var out: Array = new Array(count * this.blockSize);
+  var count: number = Math.ceil((this.bufferOff + data.length) / this.blockSize) - 1;
+  var out: any[] = new Array(count * this.blockSize);
 
   // TODO(indutny): optimize it, this is far from optimal
   for (; count > 0; count--) {
@@ -92,12 +92,12 @@ Cipher.prototype._updateDecrypt = function _updateDecrypt(data: Array): Array {
   return out;
 };
 
-Cipher.prototype.final = function final(buffer: Object): Function {
+Cipher.prototype.final = function final(buffer: object): Function {
   var first: Map;
   if (buffer)
     first = this.update(buffer);
 
-  var last: Array;
+  var last: any[];
   if (this.type === 'encrypt')
     last = this._finalEncrypt();
   else
@@ -109,7 +109,7 @@ Cipher.prototype.final = function final(buffer: Object): Function {
     return last;
 };
 
-Cipher.prototype._pad = function _pad(buffer: Object, off: Number): Boolean {
+Cipher.prototype._pad = function _pad(buffer: object, off: number): boolean {
   if (off === 0)
     return false;
 
@@ -119,22 +119,22 @@ Cipher.prototype._pad = function _pad(buffer: Object, off: Number): Boolean {
   return true;
 };
 
-Cipher.prototype._finalEncrypt = function _finalEncrypt(): Array {
+Cipher.prototype._finalEncrypt = function _finalEncrypt(): any[] {
   if (!this._pad(this.buffer, this.bufferOff))
     return [];
 
-  var out: Array = new Array(this.blockSize);
+  var out: any[] = new Array(this.blockSize);
   this._update(this.buffer, 0, out, 0);
   return out;
 };
 
-Cipher.prototype._unpad = function _unpad(buffer: Object): Object {
+Cipher.prototype._unpad = function _unpad(buffer: object): object {
   return buffer;
 };
 
-Cipher.prototype._finalDecrypt = function _finalDecrypt(): Object {
+Cipher.prototype._finalDecrypt = function _finalDecrypt(): object {
   assert.equal(this.bufferOff, this.blockSize, 'Not enough data to decrypt');
-  var out: Array = new Array(this.blockSize);
+  var out: any[] = new Array(this.blockSize);
   this._flushBuffer(out, 0);
 
   return this._unpad(out);

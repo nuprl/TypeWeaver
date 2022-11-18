@@ -1,7 +1,7 @@
-const colorString: Array = require('color-string');
-const convert: Object = require('color-convert');
+const colorString: any[] = require('color-string');
+const convert: object = require('color-convert');
 
-const skippedModels: Array = [
+const skippedModels: any[] = [
 	// To be honest, I don't really feel like keyword belongs in color convert, but eh.
 	'keyword',
 
@@ -12,14 +12,14 @@ const skippedModels: Array = [
 	'hex',
 ];
 
-const hashedModelKeys: Object = {};
+const hashedModelKeys: object = {};
 for (const model of Object.keys(convert)) {
 	hashedModelKeys[[...convert[model].labels].sort().join('')] = model;
 }
 
-const limiters: Object = {};
+const limiters: object = {};
 
-function Color(object: Function, model: String): String {
+function Color(object: Function, model: string): string {
 	if (!(this instanceof Color)) {
 		return new Color(object, model);
 	}
@@ -32,8 +32,8 @@ function Color(object: Function, model: String): String {
 		throw new Error('Unknown model: ' + model);
 	}
 
-	let i: Number;
-	let channels: Object;
+	let i: number;
+	let channels: object;
 
 	if (object == null) { // eslint-disable-line no-eq-null,eqeqeq
 		this.model = 'rgb';
@@ -44,7 +44,7 @@ function Color(object: Function, model: String): String {
 		this.color = [...object.color];
 		this.valpha = object.valpha;
 	} else if (typeof object === 'string') {
-		const result: Object = colorString.get(object);
+		const result: object = colorString.get(object);
 		if (result === null) {
 			throw new Error('Unable to parse color from string: ' + object);
 		}
@@ -56,7 +56,7 @@ function Color(object: Function, model: String): String {
 	} else if (object.length > 0) {
 		this.model = model || 'rgb';
 		channels = convert[this.model].channels;
-		const newArray: Array = Array.prototype.slice.call(object, 0, channels);
+		const newArray: any[] = Array.prototype.slice.call(object, 0, channels);
 		this.color = zeroArray(newArray, channels);
 		this.valpha = typeof object[channels] === 'number' ? object[channels] : 1;
 	} else if (typeof object === 'number') {
@@ -71,13 +71,13 @@ function Color(object: Function, model: String): String {
 	} else {
 		this.valpha = 1;
 
-		const keys: String = Object.keys(object);
+		const keys: string = Object.keys(object);
 		if ('alpha' in object) {
 			keys.splice(keys.indexOf('alpha'), 1);
 			this.valpha = typeof object.alpha === 'number' ? object.alpha : 0;
 		}
 
-		const hashedKeys: String = keys.sort().join('');
+		const hashedKeys: string = keys.sort().join('');
 		if (!(hashedKeys in hashedModelKeys)) {
 			throw new Error('Unable to parse color from object: ' + JSON.stringify(object));
 		}
@@ -85,7 +85,7 @@ function Color(object: Function, model: String): String {
 		this.model = hashedModelKeys[hashedKeys];
 
 		const {labels} = convert[this.model];
-		const color: Array = [];
+		const color: any[] = [];
 		for (i = 0; i < labels.length; i++) {
 			color.push(object[labels[i]]);
 		}
@@ -197,7 +197,7 @@ Color.prototype = {
 	green: getset('rgb', 1, maxfn(255)),
 	blue: getset('rgb', 2, maxfn(255)),
 
-	hue: getset(['hsl', 'hsv', 'hsl', 'hwb', 'hcg'], 0, (value: Number) => ((value % 360) + 360) % 360),
+	hue: getset(['hsl', 'hsv', 'hsl', 'hwb', 'hcg'], 0, (value: number) => ((value % 360) + 360) % 360),
 
 	saturationl: getset('hsl', 1, maxfn(100)),
 	lightness: getset('hsl', 2, maxfn(100)),
@@ -423,7 +423,7 @@ for (const model of Object.keys(convert)) {
 
 	// 'static' construction methods
 	Color[model] = function (...args) {
-		let color: String = args[0];
+		let color: string = args[0];
 		if (typeof color === 'number') {
 			color = zeroArray(args, channels);
 		}
@@ -432,17 +432,17 @@ for (const model of Object.keys(convert)) {
 	};
 }
 
-function roundTo(number: Array, places: String): Number {
+function roundTo(number: any[], places: string): number {
 	return Number(number.toFixed(places));
 }
 
-function roundToPlace(places: String): Function {
-	return function (number: Number) {
+function roundToPlace(places: string): Function {
+	return function (number: number) {
 		return roundTo(number, places);
 	};
 }
 
-function getset(model: Object, channel: String, modifier: Function): Function {
+function getset(model: object, channel: string, modifier: Function): Function {
 	model = Array.isArray(model) ? model : [model];
 
 	for (const m of model) {
@@ -451,8 +451,8 @@ function getset(model: Object, channel: String, modifier: Function): Function {
 
 	model = model[0];
 
-	return function (value: String) {
-		let result: Object;
+	return function (value: string) {
+		let result: object;
 
 		if (value !== undefined) {
 			if (modifier) {
@@ -473,17 +473,17 @@ function getset(model: Object, channel: String, modifier: Function): Function {
 	};
 }
 
-function maxfn(max: Number): Function {
-	return function (v: Number) {
+function maxfn(max: number): Function {
+	return function (v: number) {
 		return Math.max(0, Math.min(max, v));
 	};
 }
 
-function assertArray(value: String): Array {
+function assertArray(value: string): any[] {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: Object, length: Number): Object {
+function zeroArray(array: object, length: number): object {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

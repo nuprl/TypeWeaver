@@ -17,15 +17,15 @@ import isArrayLike from './isArrayLike.js'
  * findLast([1, 2, 3, 4], n => n % 2 == 1)
  * // => 3
  */
-function findLast(collection: Object, predicate: Function, fromIndex: Boolean): String {
+function findLast(collection: object, predicate: Function, fromIndex: boolean): string {
   let iteratee: Function
-  const iterable: Object = Object(collection)
+  const iterable: object = Object(collection)
   if (!isArrayLike(collection)) {
     collection = Object.keys(collection)
     iteratee = predicate
-    predicate = (key: String) => iteratee(iterable[key], key, iterable)
+    predicate = (key: string) => iteratee(iterable[key], key, iterable)
   }
-  const index: Number = findLastIndex(collection, predicate, fromIndex)
+  const index: number = findLastIndex(collection, predicate, fromIndex)
   return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined
 }
 

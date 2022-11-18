@@ -14,10 +14,10 @@ var suite: HTMLElement = new Suite({
 
 if (argv.dry) {
   console.log();
-  suite.dryRun(function(code: Object, fixture: HTMLElement) {
+  suite.dryRun(function(code: object, fixture: HTMLElement) {
     console.log(cyan('%s > %s'), code.key, fixture.key);
-    var args: String = require(fixture.path);
-    var res: Array = code.run.apply(null, args);
+    var args: string = require(fixture.path);
+    var res: any[] = code.run.apply(null, args);
     console.log(util.inspect(res, {depth: null}));
     if (Array.isArray(res)) {
       console.log();

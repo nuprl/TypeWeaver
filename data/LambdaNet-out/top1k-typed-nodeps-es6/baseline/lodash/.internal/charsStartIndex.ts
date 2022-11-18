@@ -9,9 +9,9 @@ import baseIndexOf from './baseIndexOf.js'
  * @param {Array} chrSymbols The character symbols to find.
  * @returns {number} Returns the index of the first unmatched string symbol.
  */
-function charsStartIndex(strSymbols: Array, chrSymbols: Number): Number {
-  let index: Number = -1
-  const length: Number = strSymbols.length
+function charsStartIndex(strSymbols: any[], chrSymbols: number): number {
+  let index: number = -1
+  const length: number = strSymbols.length
 
   while (++index < length && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
   return index

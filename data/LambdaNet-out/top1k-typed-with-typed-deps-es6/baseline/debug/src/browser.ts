@@ -10,7 +10,7 @@ exports.load = load;
 exports.useColors = useColors;
 exports.storage = localstorage();
 exports.destroy = (() => {
-	let warned: Boolean = false;
+	let warned: boolean = false;
 
 	return () => {
 		if (!warned) {
@@ -112,7 +112,7 @@ exports.colors = [
  */
 
 // eslint-disable-next-line complexity
-function useColors(): Boolean {
+function useColors(): boolean {
 	// NB: In an Electron preload script, document will be defined but not fully
 	// initialized. Since we know we're in Chrome, we'll just detect this case
 	// explicitly
@@ -143,7 +143,7 @@ function useColors(): Boolean {
  * @api public
  */
 
-function formatArgs(args: Object): Void {
+function formatArgs(args: object): Void {
 	args[0] = (this.useColors ? '%c' : '') +
 		this.namespace +
 		(this.useColors ? ' %c' : ' ') +
@@ -155,15 +155,15 @@ function formatArgs(args: Object): Void {
 		return;
 	}
 
-	const c: String = 'color: ' + this.color;
+	const c: string = 'color: ' + this.color;
 	args.splice(1, 0, c, 'color: inherit');
 
 	// The final "%c" is somewhat tricky, because there could be other
 	// arguments passed either before or after the %c, so we need to
 	// figure out the correct index to insert the CSS into
-	let index: Number = 0;
-	let lastC: Number = 0;
-	args[0].replace(/%[a-zA-Z%]/g, (match: Number) => {
+	let index: number = 0;
+	let lastC: number = 0;
+	args[0].replace(/%[a-zA-Z%]/g, (match: number) => {
 		if (match === '%%') {
 			return;
 		}
@@ -194,7 +194,7 @@ exports.log = console.debug || console.log || (() => {});
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: Number): Void {
+function save(namespaces: number): Void {
 	try {
 		if (namespaces) {
 			exports.storage.setItem('debug', namespaces);
@@ -213,8 +213,8 @@ function save(namespaces: Number): Void {
  * @return {String} returns the previously persisted debug modes
  * @api private
  */
-function load(): Object {
-	let r: String;
+function load(): object {
+	let r: string;
 	try {
 		r = exports.storage.getItem('debug');
 	} catch (error) {
@@ -241,7 +241,7 @@ function load(): Object {
  * @api private
  */
 
-function localstorage(): String {
+function localstorage(): string {
 	try {
 		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
 		// The Browser also has localStorage in the global context.
@@ -260,7 +260,7 @@ const {formatters} = module.exports;
  * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
  */
 
-formatters.j = function (v: Array) {
+formatters.j = function (v: any[]) {
 	try {
 		return JSON.stringify(v);
 	} catch (error) {

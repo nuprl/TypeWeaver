@@ -3,7 +3,7 @@ import isObjectLike from './isObjectLike.js'
 import nodeTypes from './.internal/nodeTypes.js'
 
 /* Node.js helper references. */
-const nodeIsArrayBuffer: Object = nodeTypes && nodeTypes.isArrayBuffer
+const nodeIsArrayBuffer: object = nodeTypes && nodeTypes.isArrayBuffer
 
 /**
  * Checks if `value` is classified as an `ArrayBuffer` object.
@@ -21,7 +21,7 @@ const nodeIsArrayBuffer: Object = nodeTypes && nodeTypes.isArrayBuffer
  * // => false
  */
 const isArrayBuffer: Function = nodeIsArrayBuffer
-  ? (value: String) => nodeIsArrayBuffer(value)
-  : (value: String) => isObjectLike(value) && getTag(value) == '[object ArrayBuffer]'
+  ? (value: string) => nodeIsArrayBuffer(value)
+  : (value: string) => isObjectLike(value) && getTag(value) == '[object ArrayBuffer]'
 
 export default isArrayBuffer

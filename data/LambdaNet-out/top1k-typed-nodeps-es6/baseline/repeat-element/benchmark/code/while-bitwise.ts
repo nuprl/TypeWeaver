@@ -1,9 +1,9 @@
 
 export default repeat;
 
-function repeat(ele: Function, num: Number): Array {
-  var arr: Array = [ele];
-  var res: Array = [];
+function repeat(ele: Function, num: number): any[] {
+  var arr: any[] = [ele];
+  var res: any[] = [];
 
   while (num > 0) {
     if (num & 1) {

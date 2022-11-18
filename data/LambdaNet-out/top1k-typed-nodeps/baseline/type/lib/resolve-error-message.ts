@@ -3,18 +3,18 @@
 var stringCoerce: Function  = require("../string/coerce")
   , toShortString: Function = require("./to-short-string");
 
-module.exports = function (errorMessage: String, value: String, inputOptions: Element) {
+module.exports = function (errorMessage: string, value: string, inputOptions: Element) {
 	if (inputOptions && inputOptions.errorMessage) {
 		errorMessage = stringCoerce(inputOptions.errorMessage);
 	}
 
-	var valueInsertIndex: Number = errorMessage.indexOf("%v");
-	var valueToken: Number = valueInsertIndex > -1 ? toShortString(value) : null;
+	var valueInsertIndex: number = errorMessage.indexOf("%v");
+	var valueToken: number = valueInsertIndex > -1 ? toShortString(value) : null;
 	if (inputOptions && inputOptions.name) {
-		var nameInsertIndex: String = errorMessage.indexOf("%n");
+		var nameInsertIndex: string = errorMessage.indexOf("%n");
 		if (nameInsertIndex > -1) {
 			if (valueInsertIndex > -1) {
-				var firstToken: String, secondToken: String, firstInsertIndex: Number, secondInsertIndex: Number;
+				var firstToken: string, secondToken: string, firstInsertIndex: number, secondInsertIndex: number;
 				if (nameInsertIndex > valueInsertIndex) {
 					firstToken = valueToken;
 					firstInsertIndex = valueInsertIndex;

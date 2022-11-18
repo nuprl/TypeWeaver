@@ -2,7 +2,7 @@ import parse from './parse';
 import walk from './walk';
 import stringify from './stringify';
 
-function ValueParser(value: String): HTMLElement {
+function ValueParser(value: string): HTMLElement {
   if (this instanceof ValueParser) {
     this.nodes = parse(value);
     return this;
@@ -14,7 +14,7 @@ ValueParser.prototype.toString = function() {
   return Array.isArray(this.nodes) ? stringify(this.nodes) : "";
 };
 
-ValueParser.prototype.walk = function(cb: Array, bubble: Array) {
+ValueParser.prototype.walk = function(cb: any[], bubble: any[]) {
   walk(this.nodes, cb, bubble);
   return this;
 };

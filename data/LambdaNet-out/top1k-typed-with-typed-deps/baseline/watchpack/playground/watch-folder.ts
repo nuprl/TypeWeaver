@@ -1,30 +1,30 @@
 "use strict";
 
-var path: String = require("path");
-var Watchpack: Array = require("../");
+var path: string = require("path");
+var Watchpack: any[] = require("../");
 
-var folder: String = path.join(__dirname, "folder");
+var folder: string = path.join(__dirname, "folder");
 
-function startWatcher(name: String, files: String, folders: String): Void {
+function startWatcher(name: string, files: string, folders: string): Void {
 	var w: DirectoryWatcher = new Watchpack({
 		aggregateTimeout: 3000
 	});
 
-	w.on("change", function(file: String, mtime: Function) {
+	w.on("change", function(file: string, mtime: Function) {
 		console.log(name, "change", path.relative(folder, file), mtime);
 	});
 
-	w.on("aggregated", function(changes: Array) {
-		var times: Object = w.getTimes();
-		console.log(name, "aggregated", Array.from(changes, function(file: String) {
+	w.on("aggregated", function(changes: any[]) {
+		var times: object = w.getTimes();
+		console.log(name, "aggregated", Array.from(changes, function(file: string) {
 			return path.relative(folder, file);
-		}), Object.keys(times).reduce(function(obj: Object, file: String) {
+		}), Object.keys(times).reduce(function(obj: object, file: string) {
 			obj[path.relative(folder, file)] = times[file];
 			return obj
 		}, {}));
 	});
 
-	var startTime: Number = Date.now() - 10000;
+	var startTime: number = Date.now() - 10000;
 	console.log(name, startTime);
 	w.watch(files, folders, startTime);
 }

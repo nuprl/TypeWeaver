@@ -1,4 +1,4 @@
-module.exports = (url: String, options: Object) => {
+module.exports = (url: string, options: object) => {
   options = options || {};
   options.attributes =
     typeof options.attributes === "object" ? options.attributes : {};
@@ -17,13 +17,13 @@ module.exports = (url: String, options: Object) => {
   linkElement.rel = "stylesheet";
   linkElement.href = url;
 
-  Object.keys(options.attributes).forEach((key: String) => {
+  Object.keys(options.attributes).forEach((key: string) => {
     linkElement.setAttribute(key, options.attributes[key]);
   });
 
   options.insert(linkElement);
 
-  return (newUrl: String) => {
+  return (newUrl: string) => {
     if (typeof newUrl === "string") {
       linkElement.href = newUrl;
     } else {

@@ -3,18 +3,18 @@
 import crypto from 'crypto';
 import { BigInteger } from 'jsbn';
 
-export const ECCurves: String = require("./lib/sec.js");
+export const ECCurves: string = require("./lib/sec.js");
 
 // zero prepad
-function unstupid(hex: String, len: Number): Number {
+function unstupid(hex: string, len: number): number {
   return hex.length >= len ? hex : unstupid("0" + hex, len);
 }
 
-export const ECKey: Function = function(curve: Function, key: String, isPublic: Boolean) {
-  var priv: String;
+export const ECKey: Function = function(curve: Function, key: string, isPublic: boolean) {
+  var priv: string;
   var c: HTMLElement = curve();
   var n: HTMLElement = c.getN();
-  var bytes: Number = Math.floor(n.bitLength() / 8);
+  var bytes: number = Math.floor(n.bitLength() / 8);
 
   if (key) {
     if (isPublic) {
@@ -30,7 +30,7 @@ export const ECKey: Function = function(curve: Function, key: String, isPublic: 
       priv = new BigInteger(key.toString("hex"), 16);
     }
   } else {
-    var n1: String = n.subtract(BigInteger.ONE);
+    var n1: string = n.subtract(BigInteger.ONE);
     var r: HTMLElement = new BigInteger(crypto.randomBytes(n.bitLength()));
     priv = r.mod(n1).add(BigInteger.ONE);
     this.P = c.getG().multiply(priv);
@@ -48,7 +48,7 @@ export const ECKey: Function = function(curve: Function, key: String, isPublic: 
       unstupid(priv.toString(16), bytes * 2),
       "hex"
     );
-    this.deriveSharedSecret = function(key: String) {
+    this.deriveSharedSecret = function(key: string) {
       if (!key || !key.P) return false;
       var S: HTMLElement = key.P.multiply(priv);
       return Buffer.from(

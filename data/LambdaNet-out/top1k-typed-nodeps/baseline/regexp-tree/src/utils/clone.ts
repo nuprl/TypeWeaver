@@ -11,11 +11,11 @@
  *
  * @param obj Object
  */
-module.exports = function clone (obj: Object): Object {
+module.exports = function clone (obj: object): object {
   if (obj === null || typeof obj !== 'object') {
     return obj;
   }
-  let res: Object;
+  let res: object;
   if (Array.isArray(obj)) {
     res = [];
   } else {

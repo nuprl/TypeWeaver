@@ -1,13 +1,13 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 var implicitSetter: Function = require('../parsers').implicitSetter;
 
 // the valid border-widths:
-var widths: Array = ['thin', 'medium', 'thick'];
+var widths: any[] = ['thin', 'medium', 'thick'];
 
-module.exports.isValid = function parse(v: String): Boolean {
-  var length: String = parsers.parseLength(v);
+module.exports.isValid = function parse(v: string): boolean {
+  var length: string = parsers.parseLength(v);
   if (length !== undefined) {
     return true;
   }
@@ -25,8 +25,8 @@ module.exports.isValid = function parse(v: String): Boolean {
 };
 var isValid: Function = module.exports.isValid;
 
-var parser: Function = function(v: String) {
-  var length: String = parsers.parseLength(v);
+var parser: Function = function(v: string) {
+  var length: string = parsers.parseLength(v);
   if (length !== undefined) {
     return length;
   }

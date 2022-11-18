@@ -2,10 +2,10 @@ import {basename} from "path"
 import {readFileSync as readFile} from "fs"
 import * as acorn from "acorn"
 
-let inputFilePaths: Array = [], forceFileName: Boolean = false, fileMode: Boolean = false, silent: Boolean = false, compact: Boolean = false, tokenize: Boolean = false
-const options: Object = {}
+let inputFilePaths: any[] = [], forceFileName: boolean = false, fileMode: boolean = false, silent: boolean = false, compact: boolean = false, tokenize: boolean = false
+const options: object = {}
 
-function help(status: String): Void {
+function help(status: string): Void {
   const print: Function = (status === 0) ? console.log : console.error
   print("usage: " + basename(process.argv[1]) + " [--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|...|--ecma2015|--ecma2016|--ecma2017|--ecma2018|...]")
   print("        [--tokenize] [--locations] [--allow-hash-bang] [--allow-await-outside-function] [--compact] [--silent] [--module] [--help] [--] [<infile>...]")
@@ -13,7 +13,7 @@ function help(status: String): Void {
 }
 
 for (let i = 2; i < process.argv.length; ++i) {
-  const arg: Array = process.argv[i]
+  const arg: any[] = process.argv[i]
   if (arg[0] !== "-" || arg === "-") inputFilePaths.push(arg)
   else if (arg === "--") {
     inputFilePaths.push(...process.argv.slice(i + 1))
@@ -28,7 +28,7 @@ for (let i = 2; i < process.argv.length; ++i) {
   else if (arg === "--tokenize") tokenize = true
   else if (arg === "--module") options.sourceType = "module"
   else {
-    let match: Object = arg.match(/^--ecma(\d+)$/)
+    let match: object = arg.match(/^--ecma(\d+)$/)
     if (match)
       options.ecmaVersion = +match[1]
     else
@@ -36,10 +36,10 @@ for (let i = 2; i < process.argv.length; ++i) {
   }
 }
 
-function run(codeList: Array): Void {
-  let result: Array = [], fileIdx: Number = 0
+function run(codeList: any[]): Void {
+  let result: any[] = [], fileIdx: number = 0
   try {
-    codeList.forEach((code: String, idx: Number) => {
+    codeList.forEach((code: string, idx: number) => {
       fileIdx = idx
       if (!tokenize) {
         result = acorn.parse(code, options)
@@ -60,10 +60,10 @@ function run(codeList: Array): Void {
 }
 
 if (fileMode = inputFilePaths.length && (forceFileName || !inputFilePaths.includes("-") || inputFilePaths.length !== 1)) {
-  run(inputFilePaths.map((path: String) => readFile(path, "utf8")))
+  run(inputFilePaths.map((path: string) => readFile(path, "utf8")))
 } else {
-  let code: String = ""
+  let code: string = ""
   process.stdin.resume()
-  process.stdin.on("data", (chunk: Number) => code += chunk)
+  process.stdin.on("data", (chunk: number) => code += chunk)
   process.stdin.on("end", () => run([code]))
 }

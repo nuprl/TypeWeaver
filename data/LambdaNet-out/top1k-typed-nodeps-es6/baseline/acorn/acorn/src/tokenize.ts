@@ -29,7 +29,7 @@ const pp: Parser = Parser.prototype
 
 // Move to the next token
 
-pp.next = function(ignoreEscapeSequenceInKeyword: Boolean) {
+pp.next = function(ignoreEscapeSequenceInKeyword: boolean) {
   if (!ignoreEscapeSequenceInKeyword && this.type.keyword && this.containsEsc)
     this.raiseRecoverable(this.start, "Escape sequence in keyword " + this.type.keyword)
   if (this.options.onToken)
@@ -79,7 +79,7 @@ pp.nextToken = function() {
   else this.readToken(this.fullCharCodeAtPos())
 }
 
-pp.readToken = function(code: String) {
+pp.readToken = function(code: string) {
   // Identifier or keyword. '\uXXXX' sequences are allowed in
   // identifiers, so '\' also dispatches to that.
   if (isIdentifierStart(code, this.options.ecmaVersion >= 6) || code === 92 /* '\' */)
@@ -89,15 +89,15 @@ pp.readToken = function(code: String) {
 }
 
 pp.fullCharCodeAtPos = function() {
-  let code: Number = this.input.charCodeAt(this.pos)
+  let code: number = this.input.charCodeAt(this.pos)
   if (code <= 0xd7ff || code >= 0xdc00) return code
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+  let next: number = this.input.charCodeAt(this.pos + 1)
   return next <= 0xdbff || next >= 0xe000 ? code : (code << 10) + next - 0x35fdc00
 }
 
 pp.skipBlockComment = function() {
-  let startLoc: Boolean = this.options.onComment && this.curPosition()
-  let start: String = this.pos, end: Number = this.input.indexOf("*/", this.pos += 2)
+  let startLoc: boolean = this.options.onComment && this.curPosition()
+  let start: string = this.pos, end: number = this.input.indexOf("*/", this.pos += 2)
   if (end === -1) this.raise(this.pos - 2, "Unterminated comment")
   this.pos = end + 2
   if (this.options.locations) {
@@ -111,10 +111,10 @@ pp.skipBlockComment = function() {
                            startLoc, this.curPosition())
 }
 
-pp.skipLineComment = function(startSkip: Number) {
-  let start: String = this.pos
-  let startLoc: Boolean = this.options.onComment && this.curPosition()
-  let ch: Number = this.input.charCodeAt(this.pos += startSkip)
+pp.skipLineComment = function(startSkip: number) {
+  let start: string = this.pos
+  let startLoc: boolean = this.options.onComment && this.curPosition()
+  let ch: number = this.input.charCodeAt(this.pos += startSkip)
   while (this.pos < this.input.length && !isNewLine(ch)) {
     ch = this.input.charCodeAt(++this.pos)
   }
@@ -128,7 +128,7 @@ pp.skipLineComment = function(startSkip: Number) {
 
 pp.skipSpace = function() {
   loop: while (this.pos < this.input.length) {
-    let ch: Number = this.input.charCodeAt(this.pos)
+    let ch: number = this.input.charCodeAt(this.pos)
     switch (ch) {
     case 32: case 160: // ' '
       ++this.pos
@@ -171,10 +171,10 @@ pp.skipSpace = function() {
 // the token, so that the next one's `start` will point at the
 // right position.
 
-pp.finishToken = function(type: String, val: String) {
+pp.finishToken = function(type: string, val: string) {
   this.end = this.pos
   if (this.options.locations) this.endLoc = this.curPosition()
-  let prevType: String = this.type
+  let prevType: string = this.type
   this.type = type
   this.value = val
 
@@ -191,9 +191,9 @@ pp.finishToken = function(type: String, val: String) {
 // All in the name of speed.
 //
 pp.readToken_dot = function() {
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (next >= 48 && next <= 57) return this.readNumber(true)
-  let next2: Number = this.input.charCodeAt(this.pos + 2)
+  let next2: number = this.input.charCodeAt(this.pos + 2)
   if (this.options.ecmaVersion >= 6 && next === 46 && next2 === 46) { // 46 = dot '.'
     this.pos += 3
     return this.finishToken(tt.ellipsis)
@@ -204,16 +204,16 @@ pp.readToken_dot = function() {
 }
 
 pp.readToken_slash = function() { // '/'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (this.exprAllowed) { ++this.pos; return this.readRegexp() }
   if (next === 61) return this.finishOp(tt.assign, 2)
   return this.finishOp(tt.slash, 1)
 }
 
-pp.readToken_mult_modulo_exp = function(code: String) { // '%*'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
-  let size: Number = 1
-  let tokentype: String = code === 42 ? tt.star : tt.modulo
+pp.readToken_mult_modulo_exp = function(code: string) { // '%*'
+  let next: number = this.input.charCodeAt(this.pos + 1)
+  let size: number = 1
+  let tokentype: string = code === 42 ? tt.star : tt.modulo
 
   // exponentiation operator ** and **=
   if (this.options.ecmaVersion >= 7 && code === 42 && next === 42) {
@@ -226,11 +226,11 @@ pp.readToken_mult_modulo_exp = function(code: String) { // '%*'
   return this.finishOp(tokentype, size)
 }
 
-pp.readToken_pipe_amp = function(code: String) { // '|&'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+pp.readToken_pipe_amp = function(code: string) { // '|&'
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (next === code) {
     if (this.options.ecmaVersion >= 12) {
-      let next2: Number = this.input.charCodeAt(this.pos + 2)
+      let next2: number = this.input.charCodeAt(this.pos + 2)
       if (next2 === 61) return this.finishOp(tt.assign, 3)
     }
     return this.finishOp(code === 124 ? tt.logicalOR : tt.logicalAND, 2)
@@ -240,13 +240,13 @@ pp.readToken_pipe_amp = function(code: String) { // '|&'
 }
 
 pp.readToken_caret = function() { // '^'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (next === 61) return this.finishOp(tt.assign, 2)
   return this.finishOp(tt.bitwiseXOR, 1)
 }
 
-pp.readToken_plus_min = function(code: String) { // '+-'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+pp.readToken_plus_min = function(code: string) { // '+-'
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (next === code) {
     if (next === 45 && !this.inModule && this.input.charCodeAt(this.pos + 2) === 62 &&
         (this.lastTokEnd === 0 || lineBreak.test(this.input.slice(this.lastTokEnd, this.pos)))) {
@@ -261,9 +261,9 @@ pp.readToken_plus_min = function(code: String) { // '+-'
   return this.finishOp(tt.plusMin, 1)
 }
 
-pp.readToken_lt_gt = function(code: String) { // '<>'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
-  let size: Number = 1
+pp.readToken_lt_gt = function(code: string) { // '<>'
+  let next: number = this.input.charCodeAt(this.pos + 1)
+  let size: number = 1
   if (next === code) {
     size = code === 62 && this.input.charCodeAt(this.pos + 2) === 62 ? 3 : 2
     if (this.input.charCodeAt(this.pos + size) === 61) return this.finishOp(tt.assign, size + 1)
@@ -280,8 +280,8 @@ pp.readToken_lt_gt = function(code: String) { // '<>'
   return this.finishOp(tt.relational, size)
 }
 
-pp.readToken_eq_excl = function(code: String) { // '=!'
-  let next: Number = this.input.charCodeAt(this.pos + 1)
+pp.readToken_eq_excl = function(code: string) { // '=!'
+  let next: number = this.input.charCodeAt(this.pos + 1)
   if (next === 61) return this.finishOp(tt.equality, this.input.charCodeAt(this.pos + 2) === 61 ? 3 : 2)
   if (code === 61 && next === 62 && this.options.ecmaVersion >= 6) { // '=>'
     this.pos += 2
@@ -291,16 +291,16 @@ pp.readToken_eq_excl = function(code: String) { // '=!'
 }
 
 pp.readToken_question = function() { // '?'
-  const ecmaVersion: Number = this.options.ecmaVersion
+  const ecmaVersion: number = this.options.ecmaVersion
   if (ecmaVersion >= 11) {
-    let next: Number = this.input.charCodeAt(this.pos + 1)
+    let next: number = this.input.charCodeAt(this.pos + 1)
     if (next === 46) {
-      let next2: Number = this.input.charCodeAt(this.pos + 2)
+      let next2: number = this.input.charCodeAt(this.pos + 2)
       if (next2 < 48 || next2 > 57) return this.finishOp(tt.questionDot, 2)
     }
     if (next === 63) {
       if (ecmaVersion >= 12) {
-        let next2: Number = this.input.charCodeAt(this.pos + 2)
+        let next2: number = this.input.charCodeAt(this.pos + 2)
         if (next2 === 61) return this.finishOp(tt.assign, 3)
       }
       return this.finishOp(tt.coalesce, 2)
@@ -310,8 +310,8 @@ pp.readToken_question = function() { // '?'
 }
 
 pp.readToken_numberSign = function() { // '#'
-  const ecmaVersion: Number = this.options.ecmaVersion
-  let code: Number = 35 // '#'
+  const ecmaVersion: number = this.options.ecmaVersion
+  let code: number = 35 // '#'
   if (ecmaVersion >= 13) {
     ++this.pos
     code = this.fullCharCodeAtPos()
@@ -323,7 +323,7 @@ pp.readToken_numberSign = function() { // '#'
   this.raise(this.pos, "Unexpected character '" + codePointToString(code) + "'")
 }
 
-pp.getTokenFromCode = function(code: String) {
+pp.getTokenFromCode = function(code: string) {
   switch (code) {
   // The interpretation of a dot depends on whether it is followed
   // by a digit or another two dots.
@@ -347,7 +347,7 @@ pp.getTokenFromCode = function(code: String) {
     return this.finishToken(tt.backQuote)
 
   case 48: // '0'
-    let next: Number = this.input.charCodeAt(this.pos + 1)
+    let next: number = this.input.charCodeAt(this.pos + 1)
     if (next === 120 || next === 88) return this.readRadixNumber(16) // '0x', '0X' - hex number
     if (this.options.ecmaVersion >= 6) {
       if (next === 111 || next === 79) return this.readRadixNumber(8) // '0o', '0O' - octal number
@@ -401,17 +401,17 @@ pp.getTokenFromCode = function(code: String) {
   this.raise(this.pos, "Unexpected character '" + codePointToString(code) + "'")
 }
 
-pp.finishOp = function(type: Number, size: Number) {
-  let str: String = this.input.slice(this.pos, this.pos + size)
+pp.finishOp = function(type: number, size: number) {
+  let str: string = this.input.slice(this.pos, this.pos + size)
   this.pos += size
   return this.finishToken(type, str)
 }
 
 pp.readRegexp = function() {
-  let escaped: Boolean, inClass: Boolean, start: Function = this.pos
+  let escaped: boolean, inClass: boolean, start: Function = this.pos
   for (;;) {
     if (this.pos >= this.input.length) this.raise(start, "Unterminated regular expression")
-    let ch: Number = this.input.charAt(this.pos)
+    let ch: number = this.input.charAt(this.pos)
     if (lineBreak.test(ch)) this.raise(start, "Unterminated regular expression")
     if (!escaped) {
       if (ch === "[") inClass = true
@@ -421,10 +421,10 @@ pp.readRegexp = function() {
     } else escaped = false
     ++this.pos
   }
-  let pattern: String = this.input.slice(start, this.pos)
+  let pattern: string = this.input.slice(start, this.pos)
   ++this.pos
   let flagsStart: Function = this.pos
-  let flags: Number = this.readWord1()
+  let flags: number = this.readWord1()
   if (this.containsEsc) this.unexpected(flagsStart)
 
   // Validate pattern
@@ -434,7 +434,7 @@ pp.readRegexp = function() {
   this.validateRegExpPattern(state)
 
   // Create Literal#value property value.
-  let value: Array = null
+  let value: any[] = null
   try {
     value = new RegExp(pattern, flags)
   } catch (e) {
@@ -449,18 +449,18 @@ pp.readRegexp = function() {
 // were read, the integer value otherwise. When `len` is given, this
 // will return `null` unless the integer has exactly `len` digits.
 
-pp.readInt = function(radix: Number, len: Number, maybeLegacyOctalNumericLiteral: Boolean) {
+pp.readInt = function(radix: number, len: number, maybeLegacyOctalNumericLiteral: boolean) {
   // `len` is used for character escape sequences. In that case, disallow separators.
-  const allowSeparators: Boolean = this.options.ecmaVersion >= 12 && len === undefined
+  const allowSeparators: boolean = this.options.ecmaVersion >= 12 && len === undefined
 
   // `maybeLegacyOctalNumericLiteral` is true if it doesn't have prefix (0x,0o,0b)
   // and isn't fraction part nor exponent part. In that case, if the first digit
   // is zero then disallow separators.
-  const isLegacyOctalNumericLiteral: Boolean = maybeLegacyOctalNumericLiteral && this.input.charCodeAt(this.pos) === 48
+  const isLegacyOctalNumericLiteral: boolean = maybeLegacyOctalNumericLiteral && this.input.charCodeAt(this.pos) === 48
 
-  let start: Number = this.pos, total: Number = 0, lastCode: Number = 0
+  let start: number = this.pos, total: number = 0, lastCode: number = 0
   for (let i = 0, e = len == null ? Infinity : len; i < e; ++i, ++this.pos) {
-    let code: Number = this.input.charCodeAt(this.pos), val: Number
+    let code: number = this.input.charCodeAt(this.pos), val: number
 
     if (allowSeparators && code === 95) {
       if (isLegacyOctalNumericLiteral) this.raiseRecoverable(this.pos, "Numeric separator is not allowed in legacy octal numeric literals")
@@ -485,7 +485,7 @@ pp.readInt = function(radix: Number, len: Number, maybeLegacyOctalNumericLiteral
   return total
 }
 
-function stringToNumber(str: String, isLegacyOctalNumericLiteral: Boolean): Number {
+function stringToNumber(str: string, isLegacyOctalNumericLiteral: boolean): number {
   if (isLegacyOctalNumericLiteral) {
     return parseInt(str, 8)
   }
@@ -494,7 +494,7 @@ function stringToNumber(str: String, isLegacyOctalNumericLiteral: Boolean): Numb
   return parseFloat(str.replace(/_/g, ""))
 }
 
-function stringToBigInt(str: String): Number {
+function stringToBigInt(str: string): number {
   if (typeof BigInt !== "function") {
     return null
   }
@@ -503,10 +503,10 @@ function stringToBigInt(str: String): Number {
   return BigInt(str.replace(/_/g, ""))
 }
 
-pp.readRadixNumber = function(radix: String) {
+pp.readRadixNumber = function(radix: string) {
   let start: Function = this.pos
   this.pos += 2 // 0x
-  let val: String = this.readInt(radix)
+  let val: string = this.readInt(radix)
   if (val == null) this.raise(this.start + 2, "Expected number in radix " + radix)
   if (this.options.ecmaVersion >= 11 && this.input.charCodeAt(this.pos) === 110) {
     val = stringToBigInt(this.input.slice(start, this.pos))
@@ -517,14 +517,14 @@ pp.readRadixNumber = function(radix: String) {
 
 // Read an integer, octal integer, or floating-point number.
 
-pp.readNumber = function(startsWithDot: Boolean) {
-  let start: Number = this.pos
+pp.readNumber = function(startsWithDot: boolean) {
+  let start: number = this.pos
   if (!startsWithDot && this.readInt(10, undefined, true) === null) this.raise(start, "Invalid number")
-  let octal: Boolean = this.pos - start >= 2 && this.input.charCodeAt(start) === 48
+  let octal: boolean = this.pos - start >= 2 && this.input.charCodeAt(start) === 48
   if (octal && this.strict) this.raise(start, "Invalid number")
-  let next: Number = this.input.charCodeAt(this.pos)
+  let next: number = this.input.charCodeAt(this.pos)
   if (!octal && !startsWithDot && this.options.ecmaVersion >= 11 && next === 110) {
-    let val: String = stringToBigInt(this.input.slice(start, this.pos))
+    let val: string = stringToBigInt(this.input.slice(start, this.pos))
     ++this.pos
     if (isIdentifierStart(this.fullCharCodeAtPos())) this.raise(this.pos, "Identifier directly after number")
     return this.finishToken(tt.num, val)
@@ -542,18 +542,18 @@ pp.readNumber = function(startsWithDot: Boolean) {
   }
   if (isIdentifierStart(this.fullCharCodeAtPos())) this.raise(this.pos, "Identifier directly after number")
 
-  let val: Array = stringToNumber(this.input.slice(start, this.pos), octal)
+  let val: any[] = stringToNumber(this.input.slice(start, this.pos), octal)
   return this.finishToken(tt.num, val)
 }
 
 // Read a string value, interpreting backslash-escapes.
 
 pp.readCodePoint = function() {
-  let ch: Number = this.input.charCodeAt(this.pos), code: Number
+  let ch: number = this.input.charCodeAt(this.pos), code: number
 
   if (ch === 123) { // '{'
     if (this.options.ecmaVersion < 6) this.unexpected()
-    let codePos: Number = ++this.pos
+    let codePos: number = ++this.pos
     code = this.readHexChar(this.input.indexOf("}", this.pos) - this.pos)
     ++this.pos
     if (code > 0x10FFFF) this.invalidStringToken(codePos, "Code point out of bounds")
@@ -563,11 +563,11 @@ pp.readCodePoint = function() {
   return code
 }
 
-pp.readString = function(quote: String) {
-  let out: String = "", chunkStart: Number = ++this.pos
+pp.readString = function(quote: string) {
+  let out: string = "", chunkStart: number = ++this.pos
   for (;;) {
     if (this.pos >= this.input.length) this.raise(this.start, "Unterminated string constant")
-    let ch: Number = this.input.charCodeAt(this.pos)
+    let ch: number = this.input.charCodeAt(this.pos)
     if (ch === quote) break
     if (ch === 92) { // '\'
       out += this.input.slice(chunkStart, this.pos)
@@ -591,7 +591,7 @@ pp.readString = function(quote: String) {
 
 // Reads template string tokens.
 
-const INVALID_TEMPLATE_ESCAPE_ERROR: String = {}
+const INVALID_TEMPLATE_ESCAPE_ERROR: string = {}
 
 pp.tryReadTemplateToken = function() {
   this.inTemplateElement = true
@@ -608,7 +608,7 @@ pp.tryReadTemplateToken = function() {
   this.inTemplateElement = false
 }
 
-pp.invalidStringToken = function(position: Position, message: String) {
+pp.invalidStringToken = function(position: Position, message: string) {
   if (this.inTemplateElement && this.options.ecmaVersion >= 9) {
     throw INVALID_TEMPLATE_ESCAPE_ERROR
   } else {
@@ -617,10 +617,10 @@ pp.invalidStringToken = function(position: Position, message: String) {
 }
 
 pp.readTmplToken = function() {
-  let out: String = "", chunkStart: Object = this.pos
+  let out: string = "", chunkStart: object = this.pos
   for (;;) {
     if (this.pos >= this.input.length) this.raise(this.start, "Unterminated template")
-    let ch: Number = this.input.charCodeAt(this.pos)
+    let ch: number = this.input.charCodeAt(this.pos)
     if (ch === 96 || ch === 36 && this.input.charCodeAt(this.pos + 1) === 123) { // '`', '${'
       if (this.pos === this.start && (this.type === tt.template || this.type === tt.invalidTemplate)) {
         if (ch === 36) {
@@ -687,8 +687,8 @@ pp.readInvalidTemplateToken = function() {
 
 // Used to read escaped characters
 
-pp.readEscapedChar = function(inTemplate: Number) {
-  let ch: Number = this.input.charCodeAt(++this.pos)
+pp.readEscapedChar = function(inTemplate: number) {
+  let ch: number = this.input.charCodeAt(++this.pos)
   ++this.pos
   switch (ch) {
   case 110: return "\n" // 'n' -> '\n'
@@ -712,7 +712,7 @@ pp.readEscapedChar = function(inTemplate: Number) {
       )
     }
     if (inTemplate) {
-      const codePos: Number = this.pos - 1
+      const codePos: number = this.pos - 1
 
       this.invalidStringToken(
         codePos,
@@ -723,8 +723,8 @@ pp.readEscapedChar = function(inTemplate: Number) {
     }
   default:
     if (ch >= 48 && ch <= 55) {
-      let octalStr: String = this.input.substr(this.pos - 1, 3).match(/^[0-7]+/)[0]
-      let octal: Number = parseInt(octalStr, 8)
+      let octalStr: string = this.input.substr(this.pos - 1, 3).match(/^[0-7]+/)[0]
+      let octal: number = parseInt(octalStr, 8)
       if (octal > 255) {
         octalStr = octalStr.slice(0, -1)
         octal = parseInt(octalStr, 8)
@@ -752,9 +752,9 @@ pp.readEscapedChar = function(inTemplate: Number) {
 
 // Used to read character escape sequences ('\x', '\u', '\U').
 
-pp.readHexChar = function(len: Number) {
+pp.readHexChar = function(len: number) {
   let codePos: Function = this.pos
-  let n: String = this.readInt(16, len)
+  let n: string = this.readInt(16, len)
   if (n === null) this.invalidStringToken(codePos, "Bad character escape sequence")
   return n
 }
@@ -767,10 +767,10 @@ pp.readHexChar = function(len: Number) {
 
 pp.readWord1 = function() {
   this.containsEsc = false
-  let word: String = "", first: Boolean = true, chunkStart: Object = this.pos
-  let astral: Boolean = this.options.ecmaVersion >= 6
+  let word: string = "", first: boolean = true, chunkStart: object = this.pos
+  let astral: boolean = this.options.ecmaVersion >= 6
   while (this.pos < this.input.length) {
-    let ch: Number = this.fullCharCodeAtPos()
+    let ch: number = this.fullCharCodeAtPos()
     if (isIdentifierChar(ch, astral)) {
       this.pos += ch <= 0xffff ? 1 : 2
     } else if (ch === 92) { // "\"
@@ -780,7 +780,7 @@ pp.readWord1 = function() {
       if (this.input.charCodeAt(++this.pos) !== 117) // "u"
         this.invalidStringToken(this.pos, "Expecting Unicode escape sequence \\uXXXX")
       ++this.pos
-      let esc: String = this.readCodePoint()
+      let esc: string = this.readCodePoint()
       if (!(first ? isIdentifierStart : isIdentifierChar)(esc, astral))
         this.invalidStringToken(escStart, "Invalid Unicode escape")
       word += codePointToString(esc)
@@ -797,7 +797,7 @@ pp.readWord1 = function() {
 // words when necessary.
 
 pp.readWord = function() {
-  let word: String = this.readWord1()
+  let word: string = this.readWord1()
   let type: RegExpValidationState = tt.name
   if (this.keywords.test(word)) {
     type = keywordTypes[word]

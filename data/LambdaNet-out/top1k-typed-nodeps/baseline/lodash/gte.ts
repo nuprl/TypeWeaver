@@ -19,7 +19,7 @@
  * gte(1, 3)
  * // => false
  */
-function gte(value: Number, other: Number): Boolean {
+function gte(value: number, other: number): boolean {
   if (!(typeof value === 'string' && typeof other === 'string')) {
     value = +value
     other = +other

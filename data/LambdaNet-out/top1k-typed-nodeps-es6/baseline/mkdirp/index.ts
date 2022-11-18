@@ -5,7 +5,7 @@ import { mkdirpManual, mkdirpManualSync } from './lib/mkdirp-manual.js';
 import { useNative, useNativeSync } from './lib/use-native.js';
 
 
-const mkdirp: Function = (path: String, opts: String) => {
+const mkdirp: Function = (path: string, opts: string) => {
   path = pathArg(path)
   opts = optsArg(opts)
   return useNative(opts)
@@ -13,7 +13,7 @@ const mkdirp: Function = (path: String, opts: String) => {
     : mkdirpManual(path, opts)
 }
 
-const mkdirpSync: Function = (path: String, opts: String) => {
+const mkdirpSync: Function = (path: string, opts: string) => {
   path = pathArg(path)
   opts = optsArg(opts)
   return useNativeSync(opts)
@@ -22,9 +22,9 @@ const mkdirpSync: Function = (path: String, opts: String) => {
 }
 
 mkdirp.sync = mkdirpSync
-mkdirp.native = (path: String, opts: Array) => mkdirpNative(pathArg(path), optsArg(opts))
-mkdirp.manual = (path: String, opts: Array) => mkdirpManual(pathArg(path), optsArg(opts))
-mkdirp.nativeSync = (path: String, opts: Array) => mkdirpNativeSync(pathArg(path), optsArg(opts))
-mkdirp.manualSync = (path: String, opts: Array) => mkdirpManualSync(pathArg(path), optsArg(opts))
+mkdirp.native = (path: string, opts: any[]) => mkdirpNative(pathArg(path), optsArg(opts))
+mkdirp.manual = (path: string, opts: any[]) => mkdirpManual(pathArg(path), optsArg(opts))
+mkdirp.nativeSync = (path: string, opts: any[]) => mkdirpNativeSync(pathArg(path), optsArg(opts))
+mkdirp.manualSync = (path: string, opts: any[]) => mkdirpManualSync(pathArg(path), optsArg(opts))
 
 export default mkdirp;

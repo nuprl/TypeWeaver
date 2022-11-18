@@ -7,7 +7,7 @@ import isObviousHtml from "./isObviousHtml.js";
 import "../traversing/findFilter.js";
 
 // A central reference to the root jQuery(document)
-var rootjQuery: Object,
+var rootjQuery: object,
 
 	// A simple way to check for HTML strings
 	// Prioritize #id over <tag> to avoid XSS via location.hash (trac-9521)
@@ -15,8 +15,8 @@ var rootjQuery: Object,
 	// Shortcut simple #id case for speed
 	rquickExpr: RegExp = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,
 
-	init: Object = jQuery.fn.init = function( selector: Function, context: Object ) {
-		var match: Array, elem: Function;
+	init: object = jQuery.fn.init = function( selector: Function, context: object ) {
+		var match: any[], elem: Function;
 
 		// HANDLE: $(""), $(null), $(undefined), $(false)
 		if ( !selector ) {

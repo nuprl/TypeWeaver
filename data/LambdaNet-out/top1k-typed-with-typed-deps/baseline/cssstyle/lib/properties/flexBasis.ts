@@ -2,7 +2,7 @@
 
 var parseMeasurement: Function = require('../parsers').parseMeasurement;
 
-function parse(v: String): String {
+function parse(v: string): string {
   if (String(v).toLowerCase() === 'auto') {
     return 'auto';
   }
@@ -12,12 +12,12 @@ function parse(v: String): String {
   return parseMeasurement(v);
 }
 
-module.exports.isValid = function isValid(v: String): Boolean {
+module.exports.isValid = function isValid(v: string): boolean {
   return parse(v) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('flex-basis', parse(v));
   },
   get: function() {

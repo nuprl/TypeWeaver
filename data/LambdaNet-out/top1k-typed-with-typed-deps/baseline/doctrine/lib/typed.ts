@@ -10,18 +10,18 @@
 (function () {
     'use strict';
 
-    var Syntax: Object,
-        Token: Object,
-        source: Array,
-        length: Number,
-        index: Number,
-        previous: Number,
-        token: Number,
-        value: String,
+    var Syntax: object,
+        Token: object,
+        source: any[],
+        length: number,
+        index: number,
+        previous: number,
+        token: number,
+        value: string,
         esutils: HTMLElement,
         utility: HTMLElement,
-        rangeOffset: Number,
-        addRange: Number;
+        rangeOffset: number,
+        addRange: number;
 
     esutils = require('esutils');
     utility = require('./utility');
@@ -74,11 +74,11 @@
         EOF: 21
     };
 
-    function isTypeName(ch: String): Boolean {
+    function isTypeName(ch: string): boolean {
         return '><(){}[],:*|?!='.indexOf(String.fromCharCode(ch)) === -1 && !esutils.code.isWhiteSpace(ch) && !esutils.code.isLineTerminator(ch);
     }
 
-    function Context(previous: Object, index: String, token: Function, value: Function): String {
+    function Context(previous: object, index: string, token: Function, value: Function): string {
         this._previous = previous;
         this._index = index;
         this._token = token;
@@ -96,21 +96,21 @@
         return new Context(previous, index, token, value);
     };
 
-    function maybeAddRange(node: Object, range: Promise): String {
+    function maybeAddRange(node: object, range: Promise): string {
         if (addRange) {
             node.range = [range[0] + rangeOffset, range[1] + rangeOffset];
         }
         return node;
     }
 
-    function advance(): String {
-        var ch: String = source.charAt(index);
+    function advance(): string {
+        var ch: string = source.charAt(index);
         index += 1;
         return ch;
     }
 
-    function scanHexEscape(prefix: Number): String {
-        var i: Number, len: Number, ch: String, code: Number = 0;
+    function scanHexEscape(prefix: number): string {
+        var i: number, len: number, ch: string, code: number = 0;
 
         len = (prefix === 'u') ? 4 : 2;
         for (i = 0; i < len; ++i) {
@@ -124,8 +124,8 @@
         return String.fromCharCode(code);
     }
 
-    function scanString(): Number {
-        var str: String = '', quote: String, ch: String, code: Number, unescaped: Number, restore: Number; //TODO review removal octal = false
+    function scanString(): number {
+        var str: string = '', quote: string, ch: string, code: number, unescaped: number, restore: number; //TODO review removal octal = false
         quote = source.charAt(index);
         ++index;
 
@@ -217,8 +217,8 @@
         return Token.STRING;
     }
 
-    function scanNumber(): String {
-        var number: String, ch: Number;
+    function scanNumber(): string {
+        var number: string, ch: number;
 
         number = '';
         ch = source.charCodeAt(index);
@@ -333,8 +333,8 @@
     }
 
 
-    function scanTypeName(): String {
-        var ch: Number, ch2: Number;
+    function scanTypeName(): string {
+        var ch: number, ch2: number;
 
         value = advance();
         while (index < length && isTypeName(source.charCodeAt(index))) {
@@ -353,8 +353,8 @@
         return Token.NAME;
     }
 
-    function next(): Number {
-        var ch: Number;
+    function next(): number {
+        var ch: number;
 
         previous = index;
 
@@ -495,12 +495,12 @@
         }
     }
 
-    function consume(target: Object, text: String): Void {
+    function consume(target: object, text: string): Void {
         utility.assert(token === target, text || 'consumed token not matched');
         next();
     }
 
-    function expect(target: Object, message: String): Void {
+    function expect(target: object, message: string): Void {
         if (token !== target) {
             utility.throwError(message || 'unexpected token');
         }
@@ -516,8 +516,8 @@
     // NonemptyTypeUnionList :=
     //     TypeExpression
     //   | TypeExpression '|' NonemptyTypeUnionList
-    function parseUnionType(): Array {
-        var elements: Array, startIndex: Number = index - 1;
+    function parseUnionType(): any[] {
+        var elements: any[], startIndex: number = index - 1;
         consume(Token.LPAREN, 'UnionType should start with (');
         elements = [];
         if (token !== Token.RPAREN) {
@@ -543,8 +543,8 @@
     //  | TypeExpression
     //  | '...' TypeExpression
     //  | TypeExpression ',' ElementTypeList
-    function parseArrayType(): String {
-        var elements: Array, startIndex: Number = index - 1, restStartIndex: Number;
+    function parseArrayType(): string {
+        var elements: any[], startIndex: number = index - 1, restStartIndex: number;
         consume(Token.LBRACK, 'ArrayType should start with [');
         elements = [];
         while (token !== Token.RBRACK) {
@@ -570,8 +570,8 @@
         }, [startIndex, previous]);
     }
 
-    function parseFieldName(): String {
-        var v: Number = value;
+    function parseFieldName(): string {
+        var v: number = value;
         if (token === Token.NAME || token === Token.STRING) {
             next();
             return v;
@@ -594,8 +594,8 @@
     //   | StringLiteral
     //   | NumberLiteral
     //   | ReservedIdentifier
-    function parseFieldType(): Array {
-        var key: String, rangeStart: Number = previous;
+    function parseFieldType(): any[] {
+        var key: string, rangeStart: number = previous;
 
         key = parseFieldName();
         if (token === Token.COLON) {
@@ -619,8 +619,8 @@
     //     <<empty>>
     //   | FieldType
     //   | FieldType ',' FieldTypeList
-    function parseRecordType(): Array {
-        var fields: Array, rangeStart: Number = index - 1, rangeEnd: Number;
+    function parseRecordType(): any[] {
+        var fields: any[], rangeStart: number = index - 1, rangeEnd: number;
 
         consume(Token.LBRACE, 'RecordType should start with {');
         fields = [];
@@ -649,8 +649,8 @@
     // Tag identifier is one of "module", "external" or "event"
     // Identifier is the same as Token.NAME, including any dots, something like
     // namespace.module.MyClass
-    function parseNameExpression(): Array {
-        var name: String = value, rangeStart: Number = index - name.length;
+    function parseNameExpression(): any[] {
+        var name: string = value, rangeStart: number = index - name.length;
         expect(Token.NAME);
 
         if (token === Token.COLON && (
@@ -671,8 +671,8 @@
     // TypeExpressionList :=
     //     TopLevelTypeExpression
     //   | TopLevelTypeExpression ',' TypeExpressionList
-    function parseTypeExpressionList(): Array {
-        var elements: Array = [];
+    function parseTypeExpressionList(): any[] {
+        var elements: any[] = [];
 
         elements.push(parseTop());
         while (token === Token.COMMA) {
@@ -689,8 +689,8 @@
     // TypeApplication :=
     //     '.<' TypeExpressionList '>'
     //   | '<' TypeExpressionList '>'   // this is extension of doctrine
-    function parseTypeName(): Array {
-        var expr: Array, applications: Array, startIndex: Number = index - value.length;
+    function parseTypeName(): any[] {
+        var expr: any[], applications: any[], startIndex: number = index - value.length;
 
         expr = parseNameExpression();
         if (token === Token.DOT_LT || token === Token.LT) {
@@ -713,7 +713,7 @@
     //
     // BNF is above
     // but, we remove <<empty>> pattern, so token is always TypeToken::COLON
-    function parseResultType(): Object {
+    function parseResultType(): object {
         consume(Token.COLON, 'ResultType should start with :');
         if (token === Token.NAME && value === 'void') {
             consume(Token.NAME);
@@ -747,8 +747,8 @@
     // ParameterType := TypeExpression | Identifier ':' TypeExpression
     //
     // Identifier is "new" or "this"
-    function parseParametersType(): Array {
-        var params: Array = [], optionalSequence: Boolean = false, expr: Object, rest: Boolean = false, startIndex: Number, restStartIndex: Number = index - 3, nameStartIndex: String;
+    function parseParametersType(): any[] {
+        var params: any[] = [], optionalSequence: boolean = false, expr: object, rest: boolean = false, startIndex: number, restStartIndex: number = index - 3, nameStartIndex: string;
 
         while (token !== Token.RPAREN) {
             if (token === Token.REST) {
@@ -803,8 +803,8 @@
     //   | TypeParameters '(' ParametersType ')' ResultType
     //   | TypeParameters '(' 'this' ':' TypeName ')' ResultType
     //   | TypeParameters '(' 'this' ':' TypeName ',' ParametersType ')' ResultType
-    function parseFunctionType(): Object {
-        var isNew: Boolean, thisBinding: Function, params: Array, result: Array, fnType: Object, startIndex: Number = index - value.length;
+    function parseFunctionType(): object {
+        var isNew: boolean, thisBinding: Function, params: any[], result: any[], fnType: object, startIndex: number = index - value.length;
         utility.assert(token === Token.NAME && value === 'function', 'FunctionType should start with \'function\'');
         consume(Token.NAME);
 
@@ -865,8 +865,8 @@
     //   | UnionType
     //   | RecordType
     //   | ArrayType
-    function parseBasicTypeExpression(): Array {
-        var context: String, startIndex: Number;
+    function parseBasicTypeExpression(): any[] {
+        var context: string, startIndex: number;
         switch (token) {
         case Token.STAR:
             consume(Token.STAR);
@@ -946,8 +946,8 @@
     //   | BasicTypeExpression '!'
     //   | '?'
     //   | BasicTypeExpression '[]'
-    function parseTypeExpression(): Array {
-        var expr: Array, rangeStart: Number;
+    function parseTypeExpression(): any[] {
+        var expr: any[], rangeStart: number;
 
         if (token === Token.QUESTION) {
             rangeStart = index - 1;
@@ -1020,8 +1020,8 @@
     //   { number | string }
     // If strict to ES4, we should write it as
     //   { (number|string) }
-    function parseTop(): Object {
-        var expr: String, elements: Array;
+    function parseTop(): object {
+        var expr: string, elements: any[];
 
         expr = parseTypeExpression();
         if (token !== Token.PIPE) {
@@ -1044,8 +1044,8 @@
         }, [0, index]);
     }
 
-    function parseTopParamType(): Array {
-        var expr: Array;
+    function parseTopParamType(): any[] {
+        var expr: any[];
 
         if (token === Token.REST) {
             consume(Token.REST);
@@ -1067,8 +1067,8 @@
         return expr;
     }
 
-    function parseType(src: String, opt: Object): Object {
-        var expr: Array;
+    function parseType(src: string, opt: object): object {
+        var expr: any[];
 
         source = src;
         length = source.length;
@@ -1094,8 +1094,8 @@
         return expr;
     }
 
-    function parseParamType(src: String, opt: Object): Object {
-        var expr: Array;
+    function parseParamType(src: string, opt: object): object {
+        var expr: any[];
 
         source = src;
         length = source.length;
@@ -1121,8 +1121,8 @@
         return expr;
     }
 
-    function stringifyImpl(node: Object, compact: String, topLevel: Boolean): String {
-        var result: String, i: Number, iz: Number;
+    function stringifyImpl(node: object, compact: string, topLevel: boolean): string {
+        var result: string, i: number, iz: number;
 
         switch (node.type) {
         case Syntax.NullableLiteral:
@@ -1290,7 +1290,7 @@
         return result;
     }
 
-    function stringify(node: Object, options: Object): String {
+    function stringify(node: object, options: object): string {
         if (options == null) {
             options = {};
         }

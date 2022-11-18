@@ -8,9 +8,9 @@ import colors from 'colors';
 import shell from 'shelljs';
 
 // Whether we're in the watch mode (continuous JS code transpiling).
-const watchMode: Boolean = process.argv[2] || '';
+const watchMode: boolean = process.argv[2] || '';
 
-let watchMsg: String = '';
+let watchMsg: string = '';
 if (watchMode) {
   watchMsg = ` (watch mode)`;
 }

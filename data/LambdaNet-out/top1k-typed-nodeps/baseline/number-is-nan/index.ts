@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function (value: String) {
+module.exports = function (value: string) {
 	return typeof value === 'number' && value !== value;
 };

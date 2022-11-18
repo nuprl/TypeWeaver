@@ -1,13 +1,13 @@
 "use strict";
 
-function makeException(ErrorType: Object, message: String, options: Object): String {
+function makeException(ErrorType: object, message: string, options: object): string {
   if (options.globals) {
     ErrorType = options.globals[ErrorType.name];
   }
   return new ErrorType(`${options.context ? options.context : "Value"} ${message}.`);
 }
 
-function toNumber(value: Number, options: Object): Number {
+function toNumber(value: number, options: object): number {
   if (typeof value === "bigint") {
     throw makeException(TypeError, "is a BigInt which cannot be converted to a number", options);
   }
@@ -18,7 +18,7 @@ function toNumber(value: Number, options: Object): Number {
 }
 
 // Round x to the nearest integer, choosing the even integer if it lies halfway between two.
-function evenRound(x: Number): String {
+function evenRound(x: number): string {
   // There are four cases for numbers with fractional part being .5:
   //
   // case |     x     | floor(x) | round(x) | expected | x <> 0 | x % 1 | x & 1 |   example
@@ -37,29 +37,29 @@ function evenRound(x: Number): String {
   return censorNegativeZero(Math.round(x));
 }
 
-function integerPart(n: Number): Boolean {
+function integerPart(n: number): boolean {
   return censorNegativeZero(Math.trunc(n));
 }
 
-function sign(x: String): Number {
+function sign(x: string): number {
   return x < 0 ? -1 : 1;
 }
 
-function modulo(x: String, y: String): Number {
+function modulo(x: string, y: string): number {
   // https://tc39.github.io/ecma262/#eqn-modulo
   // Note that http://stackoverflow.com/a/4467559/3191 does NOT work for large modulos
-  const signMightNotMatch: Number = x % y;
+  const signMightNotMatch: number = x % y;
   if (sign(y) !== sign(signMightNotMatch)) {
     return signMightNotMatch + y;
   }
   return signMightNotMatch;
 }
 
-function censorNegativeZero(x: Number): Number {
+function censorNegativeZero(x: number): number {
   return x === 0 ? 0 : x;
 }
 
-function createIntegerConversion(bitLength: Number, { unsigned }): Void {
+function createIntegerConversion(bitLength: number, { unsigned }): Void {
   let lowerBound, upperBound;
   if (unsigned) {
     lowerBound = 0;
@@ -120,7 +120,7 @@ function createIntegerConversion(bitLength: Number, { unsigned }): Void {
   };
 }
 
-function createLongLongConversion(bitLength: Number, { unsigned }): Promise {
+function createLongLongConversion(bitLength: number, { unsigned }): Promise {
   const upperBound = Number.MAX_SAFE_INTEGER;
   const lowerBound = unsigned ? 0 : Number.MIN_SAFE_INTEGER;
   const asBigIntN = unsigned ? BigInt.asUintN : BigInt.asIntN;
@@ -163,7 +163,7 @@ function createLongLongConversion(bitLength: Number, { unsigned }): Promise {
   };
 }
 
-exports.any = (value: String) => {
+exports.any = (value: string) => {
   return value;
 };
 
@@ -171,7 +171,7 @@ exports.undefined = () => {
   return undefined;
 };
 
-exports.boolean = (value: Boolean) => {
+exports.boolean = (value: boolean) => {
   return Boolean(value);
 };
 
@@ -187,8 +187,8 @@ exports["unsigned long"] = createIntegerConversion(32, { unsigned: true });
 exports["long long"] = createLongLongConversion(64, { unsigned: false });
 exports["unsigned long long"] = createLongLongConversion(64, { unsigned: true });
 
-exports.double = (value: String, options: Object = {}) => {
-  const x: Array = toNumber(value, options);
+exports.double = (value: string, options: object = {}) => {
+  const x: any[] = toNumber(value, options);
 
   if (!Number.isFinite(x)) {
     throw makeException(TypeError, "is not a finite floating-point value", options);
@@ -197,14 +197,14 @@ exports.double = (value: String, options: Object = {}) => {
   return x;
 };
 
-exports["unrestricted double"] = (value: String, options: Object = {}) => {
-  const x: String = toNumber(value, options);
+exports["unrestricted double"] = (value: string, options: object = {}) => {
+  const x: string = toNumber(value, options);
 
   return x;
 };
 
-exports.float = (value: String, options: Object = {}) => {
-  const x: Number = toNumber(value, options);
+exports.float = (value: string, options: object = {}) => {
+  const x: number = toNumber(value, options);
 
   if (!Number.isFinite(x)) {
     throw makeException(TypeError, "is not a finite floating-point value", options);
@@ -214,7 +214,7 @@ exports.float = (value: String, options: Object = {}) => {
     return x;
   }
 
-  const y: Number = Math.fround(x);
+  const y: number = Math.fround(x);
 
   if (!Number.isFinite(y)) {
     throw makeException(TypeError, "is outside the range of a single-precision floating-point value", options);
@@ -223,8 +223,8 @@ exports.float = (value: String, options: Object = {}) => {
   return y;
 };
 
-exports["unrestricted float"] = (value: String, options: Object = {}) => {
-  const x: Number = toNumber(value, options);
+exports["unrestricted float"] = (value: string, options: object = {}) => {
+  const x: number = toNumber(value, options);
 
   if (isNaN(x)) {
     return x;
@@ -237,7 +237,7 @@ exports["unrestricted float"] = (value: String, options: Object = {}) => {
   return Math.fround(x);
 };
 
-exports.DOMString = (value: String, options: Object = {}) => {
+exports.DOMString = (value: string, options: object = {}) => {
   if (options.treatNullAsEmptyString && value === null) {
     return "";
   }
@@ -250,9 +250,9 @@ exports.DOMString = (value: String, options: Object = {}) => {
   return StringCtor(value);
 };
 
-exports.ByteString = (value: Number, options: Object = {}) => {
-  const x: Array = exports.DOMString(value, options);
-  let c: Number;
+exports.ByteString = (value: number, options: object = {}) => {
+  const x: any[] = exports.DOMString(value, options);
+  let c: number;
   for (let i = 0; (c = x.codePointAt(i)) !== undefined; ++i) {
     if (c > 255) {
       throw makeException(TypeError, "is not a valid ByteString", options);
@@ -262,12 +262,12 @@ exports.ByteString = (value: Number, options: Object = {}) => {
   return x;
 };
 
-exports.USVString = (value: Number, options: Object = {}) => {
-  const S: String = exports.DOMString(value, options);
-  const n: Number = S.length;
-  const U: Array = [];
+exports.USVString = (value: number, options: object = {}) => {
+  const S: string = exports.DOMString(value, options);
+  const n: number = S.length;
+  const U: any[] = [];
   for (let i = 0; i < n; ++i) {
-    const c: Number = S.charCodeAt(i);
+    const c: number = S.charCodeAt(i);
     if (c < 0xD800 || c > 0xDFFF) {
       U.push(String.fromCodePoint(c));
     } else if (0xDC00 <= c && c <= 0xDFFF) {
@@ -275,10 +275,10 @@ exports.USVString = (value: Number, options: Object = {}) => {
     } else if (i === n - 1) {
       U.push(String.fromCodePoint(0xFFFD));
     } else {
-      const d: Number = S.charCodeAt(i + 1);
+      const d: number = S.charCodeAt(i + 1);
       if (0xDC00 <= d && d <= 0xDFFF) {
-        const a: Number = c & 0x3FF;
-        const b: Number = d & 0x3FF;
+        const a: number = c & 0x3FF;
+        const b: number = d & 0x3FF;
         U.push(String.fromCodePoint((2 << 15) + ((2 << 9) * a) + b));
         ++i;
       } else {
@@ -290,7 +290,7 @@ exports.USVString = (value: Number, options: Object = {}) => {
   return U.join("");
 };
 
-exports.object = (value: String, options: Object = {}) => {
+exports.object = (value: string, options: object = {}) => {
   if (value === null || (typeof value !== "object" && typeof value !== "function")) {
     throw makeException(TypeError, "is not an object", options);
   }
@@ -305,7 +305,7 @@ const sabByteLengthGetter: Function =
       Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, "byteLength").get :
       null;
 
-function isNonSharedArrayBuffer(value: String): Boolean {
+function isNonSharedArrayBuffer(value: string): boolean {
   try {
     // This will throw on SharedArrayBuffers, but not detached ArrayBuffers.
     // (The spec says it should throw, but the spec conflicts with implementations: https://github.com/tc39/ecma262/issues/678)
@@ -317,7 +317,7 @@ function isNonSharedArrayBuffer(value: String): Boolean {
   }
 }
 
-function isSharedArrayBuffer(value: String): Boolean {
+function isSharedArrayBuffer(value: string): boolean {
   try {
     sabByteLengthGetter.call(value);
     return true;
@@ -326,7 +326,7 @@ function isSharedArrayBuffer(value: String): Boolean {
   }
 }
 
-function isArrayBufferDetached(value: String): Boolean {
+function isArrayBufferDetached(value: string): boolean {
   try {
     // eslint-disable-next-line no-new
     new Uint8Array(value);
@@ -336,7 +336,7 @@ function isArrayBufferDetached(value: String): Boolean {
   }
 }
 
-exports.ArrayBuffer = (value: String, options: Object = {}) => {
+exports.ArrayBuffer = (value: string, options: object = {}) => {
   if (!isNonSharedArrayBuffer(value)) {
     if (options.allowShared && !isSharedArrayBuffer(value)) {
       throw makeException(TypeError, "is not an ArrayBuffer or SharedArrayBuffer", options);
@@ -352,7 +352,7 @@ exports.ArrayBuffer = (value: String, options: Object = {}) => {
 
 const dvByteLengthGetter: Function =
     Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
-exports.DataView = (value: Object, options: Object = {}) => {
+exports.DataView = (value: object, options: object = {}) => {
   try {
     dvByteLengthGetter.call(value);
   } catch (e) {
@@ -387,10 +387,10 @@ const typedArrayNameGetter: Function = Object.getOwnPropertyDescriptor(
   Uint8ClampedArray,
   Float32Array,
   Float64Array
-].forEach((func: Object) => {
+].forEach((func: object) => {
   const { name } = func;
-  const article: String = /^[AEIOU]/u.test(name) ? "an" : "a";
-  exports[name] = (value: Object, options: Object = {}) => {
+  const article: string = /^[AEIOU]/u.test(name) ? "an" : "a";
+  exports[name] = (value: object, options: object = {}) => {
     if (!ArrayBuffer.isView(value) || typedArrayNameGetter.call(value) !== name) {
       throw makeException(TypeError, `is not ${article} ${name} object`, options);
     }
@@ -407,7 +407,7 @@ const typedArrayNameGetter: Function = Object.getOwnPropertyDescriptor(
 
 // Common definitions
 
-exports.ArrayBufferView = (value: Object, options: Object = {}) => {
+exports.ArrayBufferView = (value: object, options: object = {}) => {
   if (!ArrayBuffer.isView(value)) {
     throw makeException(TypeError, "is not a view on an ArrayBuffer or SharedArrayBuffer", options);
   }
@@ -422,7 +422,7 @@ exports.ArrayBufferView = (value: Object, options: Object = {}) => {
   return value;
 };
 
-exports.BufferSource = (value: Object, options: Object = {}) => {
+exports.BufferSource = (value: object, options: object = {}) => {
   if (ArrayBuffer.isView(value)) {
     if (!options.allowShared && isSharedArrayBuffer(value.buffer)) {
       throw makeException(TypeError, "is a view on a SharedArrayBuffer, which is not allowed", options);

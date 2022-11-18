@@ -9,7 +9,7 @@
 
 import isNumber from 'is-number';
 
-const toRegexRange: Function = (min: Number, max: Number, options: Object) => {
+const toRegexRange: Function = (min: number, max: number, options: object) => {
   if (isNumber(min) === false) {
     throw new TypeError('toRegexRange: expected the first argument to be a number');
   }
@@ -22,26 +22,26 @@ const toRegexRange: Function = (min: Number, max: Number, options: Object) => {
     throw new TypeError('toRegexRange: expected the second argument to be a number.');
   }
 
-  let opts: Object = { relaxZeros: true, ...options };
+  let opts: object = { relaxZeros: true, ...options };
   if (typeof opts.strictZeros === 'boolean') {
     opts.relaxZeros = opts.strictZeros === false;
   }
 
-  let relax: String = String(opts.relaxZeros);
-  let shorthand: String = String(opts.shorthand);
-  let capture: String = String(opts.capture);
-  let wrap: String = String(opts.wrap);
-  let cacheKey: String = min + ':' + max + '=' + relax + shorthand + capture + wrap;
+  let relax: string = String(opts.relaxZeros);
+  let shorthand: string = String(opts.shorthand);
+  let capture: string = String(opts.capture);
+  let wrap: string = String(opts.wrap);
+  let cacheKey: string = min + ':' + max + '=' + relax + shorthand + capture + wrap;
 
   if (toRegexRange.cache.hasOwnProperty(cacheKey)) {
     return toRegexRange.cache[cacheKey].result;
   }
 
-  let a: Number = Math.min(min, max);
-  let b: Number = Math.max(min, max);
+  let a: number = Math.min(min, max);
+  let b: number = Math.max(min, max);
 
   if (Math.abs(a - b) === 1) {
-    let result: String = min + '|' + max;
+    let result: string = min + '|' + max;
     if (opts.capture) {
       return `(${result})`;
     }
@@ -51,10 +51,10 @@ const toRegexRange: Function = (min: Number, max: Number, options: Object) => {
     return `(?:${result})`;
   }
 
-  let isPadded: Boolean = hasPadding(min) || hasPadding(max);
-  let state: Object = { min, max, a, b };
-  let positives: Array = [];
-  let negatives: Array = [];
+  let isPadded: boolean = hasPadding(min) || hasPadding(max);
+  let state: object = { min, max, a, b };
+  let positives: any[] = [];
+  let negatives: any[] = [];
 
   if (isPadded) {
     state.isPadded = isPadded;
@@ -62,7 +62,7 @@ const toRegexRange: Function = (min: Number, max: Number, options: Object) => {
   }
 
   if (a < 0) {
-    let newMin: Number = b < 0 ? Math.abs(b) : 1;
+    let newMin: number = b < 0 ? Math.abs(b) : 1;
     negatives = splitToPatterns(newMin, Math.abs(a), state, opts);
     a = state.a = 0;
   }
@@ -85,19 +85,19 @@ const toRegexRange: Function = (min: Number, max: Number, options: Object) => {
   return state.result;
 };
 
-function collatePatterns(neg: String, pos: String, options: Object): String {
-  let onlyNegative: Array = filterPatterns(neg, pos, '-', false, options) || [];
-  let onlyPositive: Array = filterPatterns(pos, neg, '', false, options) || [];
-  let intersected: Array = filterPatterns(neg, pos, '-?', true, options) || [];
-  let subpatterns: Array = onlyNegative.concat(intersected).concat(onlyPositive);
+function collatePatterns(neg: string, pos: string, options: object): string {
+  let onlyNegative: any[] = filterPatterns(neg, pos, '-', false, options) || [];
+  let onlyPositive: any[] = filterPatterns(pos, neg, '', false, options) || [];
+  let intersected: any[] = filterPatterns(neg, pos, '-?', true, options) || [];
+  let subpatterns: any[] = onlyNegative.concat(intersected).concat(onlyPositive);
   return subpatterns.join('|');
 }
 
-function splitToRanges(min: Number, max: Number): Map {
-  let nines: Number = 1;
-  let zeros: Number = 1;
+function splitToRanges(min: number, max: number): Map {
+  let nines: number = 1;
+  let zeros: number = 1;
 
-  let stop: Number = countNines(min, nines);
+  let stop: number = countNines(min, nines);
   let stops: Map = new Set([max]);
 
   while (min <= stop && stop <= max) {
@@ -126,15 +126,15 @@ function splitToRanges(min: Number, max: Number): Map {
  * @return {String}
  */
 
-function rangeToPattern(start: Number, stop: String, options: Object): Object {
+function rangeToPattern(start: number, stop: string, options: object): object {
   if (start === stop) {
     return { pattern: start, count: [], digits: 0 };
   }
 
-  let zipped: Array = zip(start, stop);
-  let digits: Number = zipped.length;
-  let pattern: String = '';
-  let count: Number = 0;
+  let zipped: any[] = zip(start, stop);
+  let digits: number = zipped.length;
+  let pattern: string = '';
+  let count: number = 0;
 
   for (let i = 0; i < digits; i++) {
     let [startDigit, stopDigit] = zipped[i];
@@ -157,16 +157,16 @@ function rangeToPattern(start: Number, stop: String, options: Object): Object {
   return { pattern, count: [count], digits };
 }
 
-function splitToPatterns(min: String, max: String, tok: String, options: Object): Array {
-  let ranges: Array = splitToRanges(min, max);
-  let tokens: Array = [];
-  let start: String = min;
-  let prev: Object;
+function splitToPatterns(min: string, max: string, tok: string, options: object): any[] {
+  let ranges: any[] = splitToRanges(min, max);
+  let tokens: any[] = [];
+  let start: string = min;
+  let prev: object;
 
   for (let i = 0; i < ranges.length; i++) {
-    let max: String = ranges[i];
-    let obj: Object = rangeToPattern(String(start), String(max), options);
-    let zeros: String = '';
+    let max: string = ranges[i];
+    let obj: object = rangeToPattern(String(start), String(max), options);
+    let zeros: string = '';
 
     if (!tok.isPadded && prev && prev.pattern === obj.pattern) {
       if (prev.count.length > 1) {
@@ -192,8 +192,8 @@ function splitToPatterns(min: String, max: String, tok: String, options: Object)
   return tokens;
 }
 
-function filterPatterns(arr: Array, comparison: String, prefix: String, intersection: Number, options: Object): Array {
-  let result: Array = [];
+function filterPatterns(arr: any[], comparison: string, prefix: string, intersection: number, options: object): any[] {
+  let result: any[] = [];
 
   for (let ele of arr) {
     let { string } = ele;
@@ -215,29 +215,29 @@ function filterPatterns(arr: Array, comparison: String, prefix: String, intersec
  * Zip strings
  */
 
-function zip(a: Array, b: Object): Array {
-  let arr: Array = [];
+function zip(a: any[], b: object): any[] {
+  let arr: any[] = [];
   for (let i = 0; i < a.length; i++) arr.push([a[i], b[i]]);
   return arr;
 }
 
-function compare(a: Number, b: Number): Number {
+function compare(a: number, b: number): number {
   return a > b ? 1 : b > a ? -1 : 0;
 }
 
-function contains(arr: Array, key: String, val: Number): Boolean {
-  return arr.some((ele: Object) => ele[key] === val);
+function contains(arr: any[], key: string, val: number): boolean {
+  return arr.some((ele: object) => ele[key] === val);
 }
 
-function countNines(min: String, len: Number): Number {
+function countNines(min: string, len: number): number {
   return Number(String(min).slice(0, -len) + '9'.repeat(len));
 }
 
-function countZeros(integer: Number, zeros: Number): Number {
+function countZeros(integer: number, zeros: number): number {
   return integer - (integer % Math.pow(10, zeros));
 }
 
-function toQuantifier(digits: Array): String {
+function toQuantifier(digits: any[]): string {
   let [start = 0, stop = ''] = digits;
   if (stop || start > 1) {
     return `{${start + (stop ? ',' + stop : '')}}`;
@@ -245,21 +245,21 @@ function toQuantifier(digits: Array): String {
   return '';
 }
 
-function toCharacterClass(a: Number, b: Number, options: Object): String {
+function toCharacterClass(a: number, b: number, options: object): string {
   return `[${a}${(b - a === 1) ? '' : '-'}${b}]`;
 }
 
-function hasPadding(str: String): Boolean {
+function hasPadding(str: string): boolean {
   return /^-?(0+)\d/.test(str);
 }
 
-function padZeros(value: String, tok: HTMLElement, options: Element): String {
+function padZeros(value: string, tok: HTMLElement, options: Element): string {
   if (!tok.isPadded) {
     return value;
   }
 
-  let diff: Number = Math.abs(tok.maxLen - String(value).length);
-  let relax: Boolean = options.relaxZeros !== false;
+  let diff: number = Math.abs(tok.maxLen - String(value).length);
+  let relax: boolean = options.relaxZeros !== false;
 
   switch (diff) {
     case 0:

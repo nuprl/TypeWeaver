@@ -1,6 +1,6 @@
-const MIN_BABEL_VERSION: Number = 7;
+const MIN_BABEL_VERSION: number = 7;
 
-export default (api: Object) => {
+export default (api: object) => {
   api.assertVersion(MIN_BABEL_VERSION);
   api.cache(true);
 

@@ -9,14 +9,14 @@
  * @param {Function} keysFunc The function to get the keys of `object`.
  * @returns {Object} Returns `object`.
  */
-function baseFor(object: Object, iteratee: Function, keysFunc: Function): Array {
-  const iterable: Object = Object(object)
-  const props: Array = keysFunc(object)
+function baseFor(object: object, iteratee: Function, keysFunc: Function): any[] {
+  const iterable: object = Object(object)
+  const props: any[] = keysFunc(object)
   let { length } = props
-  let index: Number = -1
+  let index: number = -1
 
   while (length--) {
-    const key: String = props[++index]
+    const key: string = props[++index]
     if (iteratee(iterable[key], key, iterable) === false) {
       break
     }

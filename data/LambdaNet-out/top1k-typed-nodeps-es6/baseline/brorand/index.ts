@@ -1,6 +1,6 @@
-var r: Object;
+var r: object;
 
-module.exports = function rand(len: String): Boolean {
+module.exports = function rand(len: string): boolean {
   if (!r)
     r = new Rand(null);
 
@@ -12,16 +12,16 @@ function Rand(rand: Function): Void {
 }
 module.exports.Rand = Rand;
 
-Rand.prototype.generate = function generate(len: String): String {
+Rand.prototype.generate = function generate(len: string): string {
   return this._rand(len);
 };
 
 // Emulate crypto API using randy
-Rand.prototype._rand = function _rand(n: String): Array {
+Rand.prototype._rand = function _rand(n: string): any[] {
   if (this.rand.getBytes)
     return this.rand.getBytes(n);
 
-  var res: Array = new Uint8Array(n);
+  var res: any[] = new Uint8Array(n);
   for (var i = 0; i < res.length; i++)
     res[i] = this.rand.getByte();
   return res;
@@ -30,15 +30,15 @@ Rand.prototype._rand = function _rand(n: String): Array {
 if (typeof self === 'object') {
   if (self.crypto && self.crypto.getRandomValues) {
     // Modern browsers
-    Rand.prototype._rand = function _rand(n: String): Object {
-      var arr: Object = new Uint8Array(n);
+    Rand.prototype._rand = function _rand(n: string): object {
+      var arr: object = new Uint8Array(n);
       self.crypto.getRandomValues(arr);
       return arr;
     };
   } else if (self.msCrypto && self.msCrypto.getRandomValues) {
     // IE
-    Rand.prototype._rand = function _rand(n: String): Object {
-      var arr: Object = new Uint8Array(n);
+    Rand.prototype._rand = function _rand(n: string): object {
+      var arr: object = new Uint8Array(n);
       self.msCrypto.getRandomValues(arr);
       return arr;
     };
@@ -53,11 +53,11 @@ if (typeof self === 'object') {
 } else {
   // Node.js or Web worker with no crypto support
   try {
-    var crypto: String = require('crypto');
+    var crypto: string = require('crypto');
     if (typeof crypto.randomBytes !== 'function')
       throw new Error('Not supported');
 
-    Rand.prototype._rand = function _rand(n: String): Number {
+    Rand.prototype._rand = function _rand(n: string): number {
       return crypto.randomBytes(n);
     };
   } catch (e) {

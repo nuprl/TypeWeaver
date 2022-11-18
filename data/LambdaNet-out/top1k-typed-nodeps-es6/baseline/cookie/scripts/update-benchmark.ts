@@ -7,21 +7,21 @@ import path from 'path';
 import topSites from 'top-sites';
 import url from 'url';
 
-var BENCH_COOKIES_FILE: String = path.join(__dirname, '..', 'benchmark', 'parse-top.json')
+var BENCH_COOKIES_FILE: string = path.join(__dirname, '..', 'benchmark', 'parse-top.json')
 
-getAllCookies(topSites.slice(0, 20), function (err: Boolean, cookies: Object) {
+getAllCookies(topSites.slice(0, 20), function (err: boolean, cookies: object) {
   if (err) throw err
-  var str: String = '{\n' +
-    Object.keys(cookies).sort().map(function (key: String) {
+  var str: string = '{\n' +
+    Object.keys(cookies).sort().map(function (key: string) {
       return '  ' + JSON.stringify(key) + ': ' + JSON.stringify(cookies[key])
     }).join(',\n') +
     '\n}\n'
   fs.writeFileSync(BENCH_COOKIES_FILE, str)
 })
 
-function get (href: String, callback: Function): Void {
-  var protocol: String = url.parse(href, false, true).protocol
-  var proto: Object = protocol === 'https:' ? https : http
+function get (href: string, callback: Function): Void {
+  var protocol: string = url.parse(href, false, true).protocol
+  var proto: object = protocol === 'https:' ? https : http
 
   proto.get(href)
     .on('error', callback)
@@ -34,12 +34,12 @@ function get (href: String, callback: Function): Void {
     })
 }
 
-function getAllCookies (sites: Array, callback: Function): Void {
-  var all: Object = Object.create(null)
-  var wait: Number = sites.length
+function getAllCookies (sites: any[], callback: Function): Void {
+  var all: object = Object.create(null)
+  var wait: number = sites.length
 
-  sites.forEach(function (site: Object) {
-    getCookies(site, function (err: Boolean, cookies: Array) {
+  sites.forEach(function (site: object) {
+    getCookies(site, function (err: boolean, cookies: any[]) {
       if (!err && cookies.length) {
         all[site.rootDomain] = cookies.map(obfuscate).join('; ')
       }
@@ -51,15 +51,15 @@ function getAllCookies (sites: Array, callback: Function): Void {
 }
 
 function getCookies (site: HTMLElement, callback: Function): Void {
-  var href: String = url.format({ hostname: site.rootDomain, protocol: 'http' })
-  get(href, function (err: String, res: Object) {
+  var href: string = url.format({ hostname: site.rootDomain, protocol: 'http' })
+  get(href, function (err: string, res: object) {
     if (err) return callback(err)
-    var cookies: Array = (res.headers['set-cookie'] || []).map(function (c: String) { return c.split(';')[0] })
+    var cookies: any[] = (res.headers['set-cookie'] || []).map(function (c: string) { return c.split(';')[0] })
     callback(null, cookies)
   })
 }
 
-function obfuscate (str: String): String {
+function obfuscate (str: string): string {
   return str
     .replace(/%[0-9a-f]{2}/gi, function () { return '%__' })
     .replace(/[a-z]/g, function () { return 'l' })

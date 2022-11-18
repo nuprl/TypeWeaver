@@ -16,10 +16,10 @@
 // walker, and state can be used to give this walked an initial
 // state.
 
-export function simple(node: TokenType, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: Position): Position {
+export function simple(node: TokenType, visitors: object, baseVisitor: object, state: RegExpValidationState, override: Position): Position {
   if (!baseVisitor) baseVisitor = base
   ;(function c(node: TokenType, st: Position, override: Position): Void {
-    let type: String = override || node.type, found: Function = visitors[type]
+    let type: string = override || node.type, found: Function = visitors[type]
     baseVisitor[type](node, st, c)
     if (found) found(node, st)
   })(node, state, override)
@@ -28,12 +28,12 @@ export function simple(node: TokenType, visitors: Object, baseVisitor: Object, s
 // An ancestor walk keeps an array of ancestor nodes (including the
 // current node) and passes them to the callback as third parameter
 // (and also as state parameter when no other state is present).
-export function ancestor(node: TokenType, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: Position): Position {
-  let ancestors: Array = []
+export function ancestor(node: TokenType, visitors: object, baseVisitor: object, state: RegExpValidationState, override: Position): Position {
+  let ancestors: any[] = []
   if (!baseVisitor) baseVisitor = base
   ;(function c(node: TokenType, st: Position, override: Position): Void {
-    let type: String = override || node.type, found: Function = visitors[type]
-    let isNew: Boolean = node !== ancestors[ancestors.length - 1]
+    let type: string = override || node.type, found: Function = visitors[type]
+    let isNew: boolean = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
     baseVisitor[type](node, st, c)
     if (found) found(node, st || ancestors, ancestors)
@@ -46,8 +46,8 @@ export function ancestor(node: TokenType, visitors: Object, baseVisitor: Object,
 // threaded through the walk, and can opt how and whether to walk
 // their child nodes (by calling their third argument on these
 // nodes).
-export function recursive(node: TokenType, state: RegExpValidationState, funcs: Position, baseVisitor: String, override: Position): Position {
-  let visitor: Object = funcs ? make(funcs, baseVisitor || undefined) : baseVisitor
+export function recursive(node: TokenType, state: RegExpValidationState, funcs: Position, baseVisitor: string, override: Position): Position {
+  let visitor: object = funcs ? make(funcs, baseVisitor || undefined) : baseVisitor
   ;(function c(node: TokenType, st: Position, override: Position): Void {
     visitor[override || node.type](node, st, c)
   })(node, state, override)
@@ -67,11 +67,11 @@ class Found {
 }
 
 // A full walk triggers the callback on each node
-export function full(node: TokenType, callback: Function, baseVisitor: Object, state: RegExpValidationState, override: Position): Position {
+export function full(node: TokenType, callback: Function, baseVisitor: object, state: RegExpValidationState, override: Position): Position {
   if (!baseVisitor) baseVisitor = base
   let last: Position
   ;(function c(node: TokenType, st: Position, override: Position): Void {
-    let type: Number = override || node.type
+    let type: number = override || node.type
     baseVisitor[type](node, st, c)
     if (last !== node) {
       callback(node, st, type)
@@ -82,12 +82,12 @@ export function full(node: TokenType, callback: Function, baseVisitor: Object, s
 
 // An fullAncestor walk is like an ancestor walk, but triggers
 // the callback on each node
-export function fullAncestor(node: TokenType, callback: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function fullAncestor(node: TokenType, callback: Function, baseVisitor: object, state: RegExpValidationState): Void {
   if (!baseVisitor) baseVisitor = base
-  let ancestors: Array = [], last: String
+  let ancestors: any[] = [], last: string
   ;(function c(node: TokenType, st: Position, override: Position): Void {
-    let type: Number = override || node.type
-    let isNew: Boolean = node !== ancestors[ancestors.length - 1]
+    let type: number = override || node.type
+    let isNew: boolean = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
     baseVisitor[type](node, st, c)
     if (last !== node) {
@@ -101,12 +101,12 @@ export function fullAncestor(node: TokenType, callback: Function, baseVisitor: O
 // Find a node with a given start, end, and type (all are optional,
 // null can be used as wildcard). Returns a {node, state} object, or
 // undefined when it doesn't find a matching node.
-export function findNodeAt(node: TokenType, start: Number, end: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAt(node: TokenType, start: number, end: number, test: Function, baseVisitor: object, state: RegExpValidationState): Void {
   if (!baseVisitor) baseVisitor = base
   test = makeTest(test)
   try {
-    (function c(node: TokenType, st: String, override: Position): Void {
-      let type: Number = override || node.type
+    (function c(node: TokenType, st: string, override: Position): Void {
+      let type: number = override || node.type
       if ((start == null || node.start <= start) &&
           (end == null || node.end >= end))
         baseVisitor[type](node, st, c)
@@ -123,12 +123,12 @@ export function findNodeAt(node: TokenType, start: Number, end: Number, test: Fu
 
 // Find the innermost node of a given type that contains the given
 // position. Interface similar to findNodeAt.
-export function findNodeAround(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAround(node: TokenType, pos: number, test: Function, baseVisitor: object, state: RegExpValidationState): Void {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: TokenType, st: String, override: Position): Void {
-      let type: Number = override || node.type
+    (function c(node: TokenType, st: string, override: Position): Void {
+      let type: number = override || node.type
       if (node.start > pos || node.end < pos) return
       baseVisitor[type](node, st, c)
       if (test(type, node)) throw new Found(node, st)
@@ -140,13 +140,13 @@ export function findNodeAround(node: TokenType, pos: Number, test: Function, bas
 }
 
 // Find the outermost matching node after a given position.
-export function findNodeAfter(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAfter(node: TokenType, pos: number, test: Function, baseVisitor: object, state: RegExpValidationState): Void {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: TokenType, st: String, override: Position): Void {
+    (function c(node: TokenType, st: string, override: Position): Void {
       if (node.end < pos) return
-      let type: Number = override || node.type
+      let type: number = override || node.type
       if (node.start >= pos && test(type, node)) throw new Found(node, st)
       baseVisitor[type](node, st, c)
     })(node, state)
@@ -157,13 +157,13 @@ export function findNodeAfter(node: TokenType, pos: Number, test: Function, base
 }
 
 // Find the outermost matching node before a given position.
-export function findNodeBefore(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Position {
+export function findNodeBefore(node: TokenType, pos: number, test: Function, baseVisitor: object, state: RegExpValidationState): Position {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   let max: RegExpValidationState
-  ;(function c(node: TokenType, st: String, override: Position): Void {
+  ;(function c(node: TokenType, st: string, override: Position): Void {
     if (node.start > pos) return
-    let type: Number = override || node.type
+    let type: number = override || node.type
     if (node.end <= pos && (!max || max.node.end < node.end) && test(type, node))
       max = new Found(node, st)
     baseVisitor[type](node, st, c)
@@ -173,18 +173,18 @@ export function findNodeBefore(node: TokenType, pos: Number, test: Function, bas
 
 // Used to create a custom walker. Will fill in all missing node
 // type properties with the defaults.
-export function make(funcs: Object, baseVisitor: Number): Object {
-  let visitor: Object = Object.create(baseVisitor || base)
+export function make(funcs: object, baseVisitor: number): object {
+  let visitor: object = Object.create(baseVisitor || base)
   for (let type in funcs) visitor[type] = funcs[type]
   return visitor
 }
 
 function skipThrough(node: TokenType, st: Position, c: Function): Void { c(node, st) }
-function ignore(_node: TokenType, _st: Array, _c: Number): Void {}
+function ignore(_node: TokenType, _st: any[], _c: number): Void {}
 
 // Node walkers.
 
-export const base: Object = {}
+export const base: object = {}
 
 base.Program = base.BlockStatement = base.StaticBlock = (node: TokenType, st: Position, c: Function) => {
   for (let stmt of node.body)
@@ -236,13 +236,13 @@ base.WhileStatement = base.DoWhileStatement = (node: TokenType, st: Position, c:
   c(node.test, st, "Expression")
   c(node.body, st, "Statement")
 }
-base.ForStatement = (node: TokenType, st: String, c: Function) => {
+base.ForStatement = (node: TokenType, st: string, c: Function) => {
   if (node.init) c(node.init, st, "ForInit")
   if (node.test) c(node.test, st, "Expression")
   if (node.update) c(node.update, st, "Expression")
   c(node.body, st, "Statement")
 }
-base.ForInStatement = base.ForOfStatement = (node: String, st: Position, c: Function) => {
+base.ForInStatement = base.ForOfStatement = (node: string, st: Position, c: Function) => {
   c(node.left, st, "ForInit")
   c(node.right, st, "Expression")
   c(node.body, st, "Statement")

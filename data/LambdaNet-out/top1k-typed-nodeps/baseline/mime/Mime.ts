@@ -36,15 +36,15 @@ function Mime(): Void {
  * @param map (Object) type definitions
  * @param force (Boolean) if true, force overriding of existing definitions
  */
-Mime.prototype.define = function(typeMap: Object, force: Boolean) {
+Mime.prototype.define = function(typeMap: object, force: boolean) {
   for (let type in typeMap) {
-    let extensions: Array = typeMap[type].map(function(t: String) {
+    let extensions: any[] = typeMap[type].map(function(t: string) {
       return t.toLowerCase();
     });
     type = type.toLowerCase();
 
     for (let i = 0; i < extensions.length; i++) {
-      const ext: Object = extensions[i];
+      const ext: object = extensions[i];
 
       // '*' prefix = not the preferred type for this extension.  So fixup the
       // extension, and skip it.
@@ -66,7 +66,7 @@ Mime.prototype.define = function(typeMap: Object, force: Boolean) {
 
     // Use first extension as default
     if (force || !this._extensions[type]) {
-      const ext: Array = extensions[0];
+      const ext: any[] = extensions[0];
       this._extensions[type] = (ext[0] !== '*') ? ext : ext.slice(1);
     }
   }
@@ -75,13 +75,13 @@ Mime.prototype.define = function(typeMap: Object, force: Boolean) {
 /**
  * Lookup a mime type based on extension
  */
-Mime.prototype.getType = function(path: String) {
+Mime.prototype.getType = function(path: string) {
   path = String(path);
-  let last: String = path.replace(/^.*[/\\]/, '').toLowerCase();
-  let ext: String = last.replace(/^.*\./, '').toLowerCase();
+  let last: string = path.replace(/^.*[/\\]/, '').toLowerCase();
+  let ext: string = last.replace(/^.*\./, '').toLowerCase();
 
-  let hasPath: Number = last.length < path.length;
-  let hasDot: Number = ext.length < last.length - 1;
+  let hasPath: number = last.length < path.length;
+  let hasDot: number = ext.length < last.length - 1;
 
   return (hasDot || !hasPath) && this._types[ext] || null;
 };
@@ -89,7 +89,7 @@ Mime.prototype.getType = function(path: String) {
 /**
  * Return file extension associated with a mime type
  */
-Mime.prototype.getExtension = function(type: String) {
+Mime.prototype.getExtension = function(type: string) {
   type = /^\s*([^;\s]*)/.test(type) && RegExp.$1;
   return type && this._extensions[type.toLowerCase()] || null;
 };

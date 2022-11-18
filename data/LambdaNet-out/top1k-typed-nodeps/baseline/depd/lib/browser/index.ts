@@ -17,12 +17,12 @@ module.exports = depd
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: Number): Element {
+function depd (namespace: number): Element {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }
 
-  function deprecate (message: String): Void {
+  function deprecate (message: string): Void {
     // no-op in browser
   }
 
@@ -45,7 +45,7 @@ function depd (namespace: Number): Element {
  * validation.
  */
 
-function wrapfunction (fn: String, message: String): String {
+function wrapfunction (fn: string, message: string): string {
   if (typeof fn !== 'function') {
     throw new TypeError('argument fn must be a function')
   }
@@ -60,7 +60,7 @@ function wrapfunction (fn: String, message: String): String {
  * validation.
  */
 
-function wrapproperty (obj: String, prop: String, message: String): Void {
+function wrapproperty (obj: string, prop: string, message: string): Void {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw new TypeError('argument obj must be object')
   }

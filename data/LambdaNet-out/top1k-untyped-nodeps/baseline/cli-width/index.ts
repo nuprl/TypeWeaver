@@ -2,8 +2,8 @@
 
 module.exports = cliWidth;
 
-function normalizeOpts(options: Object): Object {
-  const defaultOpts: Object = {
+function normalizeOpts(options: object): object {
+  const defaultOpts: object = {
     defaultWidth: 0,
     output: process.stdout,
     tty: require('tty'),
@@ -13,7 +13,7 @@ function normalizeOpts(options: Object): Object {
     return defaultOpts;
   }
 
-  Object.keys(defaultOpts).forEach(function (key: String) {
+  Object.keys(defaultOpts).forEach(function (key: string) {
     if (!options[key]) {
       options[key] = defaultOpts[key];
     }
@@ -22,7 +22,7 @@ function normalizeOpts(options: Object): Object {
   return options;
 }
 
-function cliWidth(options: Object): Number {
+function cliWidth(options: object): number {
   const opts: HTMLElement = normalizeOpts(options);
 
   if (opts.output.getWindowSize) {
@@ -38,7 +38,7 @@ function cliWidth(options: Object): Number {
   }
 
   if (process.env.CLI_WIDTH) {
-    const width: Number = parseInt(process.env.CLI_WIDTH, 10);
+    const width: number = parseInt(process.env.CLI_WIDTH, 10);
 
     if (!isNaN(width) && width !== 0) {
       return width;

@@ -1,96 +1,23 @@
-benchmark/check.ts(12,4): error TS2339: Property 'readdirSync' does not exist on type 'String'.
-benchmark/check.ts(13,33): error TS2339: Property 'resolve' does not exist on type 'String'.
-benchmark/check.ts(14,27): error TS2339: Property 'basename' does not exist on type 'String'.
-benchmark/check.ts(14,45): error TS2339: Property 'extname' does not exist on type 'String'.
-benchmark/check.ts(16,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/check.ts(17,8): error TS2339: Property 'readdirSync' does not exist on type 'String'.
-benchmark/check.ts(18,22): error TS2339: Property 'resolve' does not exist on type 'String'.
-benchmark/check.ts(19,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/check.ts(20,42): error TS2339: Property 'apply' does not exist on type 'String'.
-benchmark/check.ts(20,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/code/2-1-0.ts(1,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/2-1-0.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/2-1-0.ts(5,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/2-1-0.ts(6,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/2-1-0.ts(6,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/check.ts(12,4): error TS2339: Property 'readdirSync' does not exist on type 'string'.
+benchmark/check.ts(13,33): error TS2339: Property 'resolve' does not exist on type 'string'.
+benchmark/check.ts(14,27): error TS2339: Property 'basename' does not exist on type 'string'.
+benchmark/check.ts(14,45): error TS2339: Property 'extname' does not exist on type 'string'.
+benchmark/check.ts(17,8): error TS2339: Property 'readdirSync' does not exist on type 'string'.
+benchmark/check.ts(18,22): error TS2339: Property 'resolve' does not exist on type 'string'.
+benchmark/check.ts(20,42): error TS2339: Property 'apply' does not exist on type 'string'.
 benchmark/code/2-1-0.ts(19,10): error TS2393: Duplicate function implementation.
-benchmark/code/2-1-0.ts(19,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/2-1-0.ts(19,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/concat-apply.ts(5,49): error TS2304: Cannot find name 'Void'.
 benchmark/code/for-concat.ts(5,48): error TS2304: Cannot find name 'Void'.
-benchmark/code/for-concat.ts(9,17): error TS2339: Property 'concat' does not exist on type 'Object'.
-benchmark/code/for-each.ts(5,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-concat.ts(9,17): error TS2339: Property 'concat' does not exist on type 'object'.
 benchmark/code/for-each.ts(5,46): error TS2304: Cannot find name 'Void'.
-benchmark/code/for-each.ts(6,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-each.ts(8,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-in.ts(3,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-in.ts(3,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-in.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-in.ts(8,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-in.ts(11,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/for.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for.ts(10,17): error TS2339: Property 'concat' does not exist on type 'Object'.
+benchmark/code/for.ts(10,17): error TS2339: Property 'concat' does not exist on type 'object'.
 benchmark/code/reduce.ts(5,60): error TS2304: Cannot find name 'Void'.
-benchmark/code/reduce.ts(6,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/reduce.ts(8,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/reduce.ts(8,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat-push.ts(3,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat-push.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat-push.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat-push.ts(8,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-concat.ts(5,36): error TS2304: Cannot find name 'Void'.
-benchmark/code/while-concat.ts(7,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-concat.ts(10,32): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-continue-for.ts(3,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-continue-for.ts(3,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-continue-for.ts(6,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-continue-for.ts(7,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-continue-for.ts(7,32): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-for-unique.ts(5,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-for-unique.ts(5,47): error TS2304: Cannot find name 'Void'.
-benchmark/code/while-for-unique.ts(8,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-for-unique.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-for-unique.ts(9,32): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-for.ts(3,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-for.ts(3,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-for.ts(6,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-for.ts(7,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-for.ts(7,32): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-push-apply.ts(5,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-push-apply.ts(5,47): error TS2304: Cannot find name 'Void'.
-benchmark/code/while-push-apply.ts(8,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-push-apply.ts(9,37): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-seen.ts(3,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-seen.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-seen.ts(7,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-seen.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-seen.ts(11,16): error TS2538: Type 'String' cannot be used as an index type.
-benchmark/code/while-seen.ts(14,19): error TS2538: Type 'String' cannot be used as an index type.
-benchmark/code/while-while-unique.ts(5,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-while-unique.ts(5,47): error TS2304: Cannot find name 'Void'.
-benchmark/code/while-while-unique.ts(8,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-while-unique.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-while-unique.ts(9,32): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-while-unique.ts(12,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-while.ts(3,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-while.ts(3,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-while.ts(6,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-while.ts(7,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-while.ts(7,41): error TS2538: Type 'Number' cannot be used as an index type.
-benchmark/code/while-while.ts(10,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-while.ts(11,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-while.ts(21,10): error TS2393: Duplicate function implementation.
-benchmark/code/while-while.ts(21,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-while.ts(21,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(11,7): error TS2339: Property 'run' does not exist on type 'Object'.
-index.ts(3,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(3,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(11,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(12,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(12,32): error TS2538: Type 'Number' cannot be used as an index type.
+benchmark/index.ts(4,25): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+benchmark/index.ts(11,7): error TS2339: Property 'run' does not exist on type 'object'.
 

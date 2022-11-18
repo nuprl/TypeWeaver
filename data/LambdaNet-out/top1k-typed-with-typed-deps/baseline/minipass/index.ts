@@ -1,60 +1,60 @@
 'use strict'
-const proc: Object = typeof process === 'object' && process ? process : {
+const proc: object = typeof process === 'object' && process ? process : {
   stdout: null,
   stderr: null,
 }
-const EE: String = require('events')
-const Stream: String = require('stream')
-const SD: Object = require('string_decoder').StringDecoder
+const EE: string = require('events')
+const Stream: string = require('stream')
+const SD: object = require('string_decoder').StringDecoder
 
-const EOF: Number = Symbol('EOF')
-const MAYBE_EMIT_END: Number = Symbol('maybeEmitEnd')
-const EMITTED_END: Number = Symbol('emittedEnd')
-const EMITTING_END: Number = Symbol('emittingEnd')
-const EMITTED_ERROR: Number = Symbol('emittedError')
-const CLOSED: Number = Symbol('closed')
-const READ: String = Symbol('read')
-const FLUSH: Number = Symbol('flush')
-const FLUSHCHUNK: Number = Symbol('flushChunk')
-const ENCODING: Number = Symbol('encoding')
-const DECODER: Number = Symbol('decoder')
-const FLOWING: Number = Symbol('flowing')
-const PAUSED: Number = Symbol('paused')
-const RESUME: Number = Symbol('resume')
-const BUFFERLENGTH: Number = Symbol('bufferLength')
-const BUFFERPUSH: Number = Symbol('bufferPush')
-const BUFFERSHIFT: Number = Symbol('bufferShift')
-const OBJECTMODE: Number = Symbol('objectMode')
-const DESTROYED: Number = Symbol('destroyed')
-const EMITDATA: Number = Symbol('emitData')
-const EMITEND: Number = Symbol('emitEnd')
-const EMITEND2: Number = Symbol('emitEnd2')
-const ASYNC: Number = Symbol('async')
+const EOF: number = Symbol('EOF')
+const MAYBE_EMIT_END: number = Symbol('maybeEmitEnd')
+const EMITTED_END: number = Symbol('emittedEnd')
+const EMITTING_END: number = Symbol('emittingEnd')
+const EMITTED_ERROR: number = Symbol('emittedError')
+const CLOSED: number = Symbol('closed')
+const READ: string = Symbol('read')
+const FLUSH: number = Symbol('flush')
+const FLUSHCHUNK: number = Symbol('flushChunk')
+const ENCODING: number = Symbol('encoding')
+const DECODER: number = Symbol('decoder')
+const FLOWING: number = Symbol('flowing')
+const PAUSED: number = Symbol('paused')
+const RESUME: number = Symbol('resume')
+const BUFFERLENGTH: number = Symbol('bufferLength')
+const BUFFERPUSH: number = Symbol('bufferPush')
+const BUFFERSHIFT: number = Symbol('bufferShift')
+const OBJECTMODE: number = Symbol('objectMode')
+const DESTROYED: number = Symbol('destroyed')
+const EMITDATA: number = Symbol('emitData')
+const EMITEND: number = Symbol('emitEnd')
+const EMITEND2: number = Symbol('emitEnd2')
+const ASYNC: number = Symbol('async')
 
-const defer: Function = (fn: String) => Promise.resolve().then(fn)
+const defer: Function = (fn: string) => Promise.resolve().then(fn)
 
 // TODO remove when Node v8 support drops
-const doIter: Boolean = global._MP_NO_ITERATOR_SYMBOLS_  !== '1'
-const ASYNCITERATOR: Boolean = doIter && Symbol.asyncIterator
+const doIter: boolean = global._MP_NO_ITERATOR_SYMBOLS_  !== '1'
+const ASYNCITERATOR: boolean = doIter && Symbol.asyncIterator
   || Symbol('asyncIterator not implemented')
-const ITERATOR: Boolean = doIter && Symbol.iterator
+const ITERATOR: boolean = doIter && Symbol.iterator
   || Symbol('iterator not implemented')
 
 // events that mean 'the stream is over'
 // these are treated specially, and re-emitted
 // if they are listened for after emitting.
-const isEndish: Function = (ev: Number) =>
+const isEndish: Function = (ev: number) =>
   ev === 'end' ||
   ev === 'finish' ||
   ev === 'prefinish'
 
-const isArrayBuffer: Function = (b: Object) => b instanceof ArrayBuffer ||
+const isArrayBuffer: Function = (b: object) => b instanceof ArrayBuffer ||
   typeof b === 'object' &&
   b.constructor &&
   b.constructor.name === 'ArrayBuffer' &&
   b.byteLength >= 0
 
-const isArrayBufferView: Function = (b: Array) => !Buffer.isBuffer(b) && ArrayBuffer.isView(b)
+const isArrayBufferView: Function = (b: any[]) => !Buffer.isBuffer(b) && ArrayBuffer.isView(b)
 
 class Pipe {
   constructor (src, dest, opts) {
@@ -83,7 +83,7 @@ class PipeProxyErrors extends Pipe {
   }
   constructor (src, dest, opts) {
     super(src, dest, opts)
-    this.proxyErrors = (er: String) => dest.emit('error', er)
+    this.proxyErrors = (er: string) => dest.emit('error', er)
     src.on('error', this.proxyErrors)
   }
 }

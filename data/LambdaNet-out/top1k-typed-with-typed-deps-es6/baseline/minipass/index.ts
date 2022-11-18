@@ -1,5 +1,5 @@
 'use strict'
-const proc: Object = typeof process === 'object' && process ? process : {
+const proc: object = typeof process === 'object' && process ? process : {
   stdout: null,
   stderr: null,
 }
@@ -7,54 +7,54 @@ import EE from 'events';
 import Stream from 'stream';
 import { StringDecoder as SD } from 'string_decoder';
 
-const EOF: String = Symbol('EOF')
-const MAYBE_EMIT_END: String = Symbol('maybeEmitEnd')
-const EMITTED_END: String = Symbol('emittedEnd')
-const EMITTING_END: Number = Symbol('emittingEnd')
-const EMITTED_ERROR: String = Symbol('emittedError')
-const CLOSED: String = Symbol('closed')
-const READ: String = Symbol('read')
-const FLUSH: String = Symbol('flush')
-const FLUSHCHUNK: Number = Symbol('flushChunk')
-const ENCODING: String = Symbol('encoding')
-const DECODER: String = Symbol('decoder')
-const FLOWING: String = Symbol('flowing')
-const PAUSED: String = Symbol('paused')
-const RESUME: String = Symbol('resume')
-const BUFFERLENGTH: String = Symbol('bufferLength')
-const BUFFERPUSH: String = Symbol('bufferPush')
-const BUFFERSHIFT: Number = Symbol('bufferShift')
-const OBJECTMODE: String = Symbol('objectMode')
-const DESTROYED: String = Symbol('destroyed')
-const EMITDATA: String = Symbol('emitData')
-const EMITEND: Number = Symbol('emitEnd')
-const EMITEND2: Number = Symbol('emitEnd2')
-const ASYNC: String = Symbol('async')
+const EOF: string = Symbol('EOF')
+const MAYBE_EMIT_END: string = Symbol('maybeEmitEnd')
+const EMITTED_END: string = Symbol('emittedEnd')
+const EMITTING_END: number = Symbol('emittingEnd')
+const EMITTED_ERROR: string = Symbol('emittedError')
+const CLOSED: string = Symbol('closed')
+const READ: string = Symbol('read')
+const FLUSH: string = Symbol('flush')
+const FLUSHCHUNK: number = Symbol('flushChunk')
+const ENCODING: string = Symbol('encoding')
+const DECODER: string = Symbol('decoder')
+const FLOWING: string = Symbol('flowing')
+const PAUSED: string = Symbol('paused')
+const RESUME: string = Symbol('resume')
+const BUFFERLENGTH: string = Symbol('bufferLength')
+const BUFFERPUSH: string = Symbol('bufferPush')
+const BUFFERSHIFT: number = Symbol('bufferShift')
+const OBJECTMODE: string = Symbol('objectMode')
+const DESTROYED: string = Symbol('destroyed')
+const EMITDATA: string = Symbol('emitData')
+const EMITEND: number = Symbol('emitEnd')
+const EMITEND2: number = Symbol('emitEnd2')
+const ASYNC: string = Symbol('async')
 
-const defer: Function = (fn: String) => Promise.resolve().then(fn)
+const defer: Function = (fn: string) => Promise.resolve().then(fn)
 
 // TODO remove when Node v8 support drops
-const doIter: Boolean = global._MP_NO_ITERATOR_SYMBOLS_  !== '1'
-const ASYNCITERATOR: Boolean = doIter && Symbol.asyncIterator
+const doIter: boolean = global._MP_NO_ITERATOR_SYMBOLS_  !== '1'
+const ASYNCITERATOR: boolean = doIter && Symbol.asyncIterator
   || Symbol('asyncIterator not implemented')
-const ITERATOR: Boolean = doIter && Symbol.iterator
+const ITERATOR: boolean = doIter && Symbol.iterator
   || Symbol('iterator not implemented')
 
 // events that mean 'the stream is over'
 // these are treated specially, and re-emitted
 // if they are listened for after emitting.
-const isEndish: Function = (ev: Number) =>
+const isEndish: Function = (ev: number) =>
   ev === 'end' ||
   ev === 'finish' ||
   ev === 'prefinish'
 
-const isArrayBuffer: Function = (b: Object) => b instanceof ArrayBuffer ||
+const isArrayBuffer: Function = (b: object) => b instanceof ArrayBuffer ||
   typeof b === 'object' &&
   b.constructor &&
   b.constructor.name === 'ArrayBuffer' &&
   b.byteLength >= 0
 
-const isArrayBufferView: Function = (b: Array) => !Buffer.isBuffer(b) && ArrayBuffer.isView(b)
+const isArrayBufferView: Function = (b: any[]) => !Buffer.isBuffer(b) && ArrayBuffer.isView(b)
 
 class Pipe {
   constructor (src, dest, opts) {
@@ -83,7 +83,7 @@ class PipeProxyErrors extends Pipe {
   }
   constructor (src, dest, opts) {
     super(src, dest, opts)
-    this.proxyErrors = (er: String) => dest.emit('error', er)
+    this.proxyErrors = (er: string) => dest.emit('error', er)
     src.on('error', this.proxyErrors)
   }
 }
@@ -130,7 +130,7 @@ export default class Minipass extends Stream {
     if (this[ENCODING] !== enc) {
       this[DECODER] = enc ? new SD(enc) : null
       if (this.buffer.length)
-        this.buffer = this.buffer.map((chunk: String) => this[DECODER].write(chunk))
+        this.buffer = this.buffer.map((chunk: string) => this[DECODER].write(chunk))
     }
 
     this[ENCODING] = enc
@@ -372,7 +372,7 @@ export default class Minipass extends Stream {
     if (this[DESTROYED])
       return
 
-    const ended: String = this[EMITTED_END]
+    const ended: string = this[EMITTED_END]
     opts = opts || {}
     if (dest === proc.stdout || dest === proc.stderr)
       opts.end = false
@@ -397,7 +397,7 @@ export default class Minipass extends Stream {
   }
 
   unpipe (dest) {
-    const p: Minipass = this.pipes.find((p: Object) => p.dest === dest)
+    const p: Minipass = this.pipes.find((p: object) => p.dest === dest)
     if (p) {
       this.pipes.splice(this.pipes.indexOf(p), 1)
       p.unpipe()
@@ -409,7 +409,7 @@ export default class Minipass extends Stream {
   }
 
   on (ev, fn) {
-    const ret: Array = super.on(ev, fn)
+    const ret: any[] = super.on(ev, fn)
     if (ev === 'data' && !this.pipes.length && !this.flowing)
       this[RESUME]()
     else if (ev === 'readable' && this[BUFFERLENGTH] !== 0)
@@ -461,26 +461,26 @@ export default class Minipass extends Stream {
       // don't emit close before 'end' and 'finish'
       if (!this[EMITTED_END] && !this[DESTROYED])
         return
-      const ret: Number = super.emit('close')
+      const ret: number = super.emit('close')
       this.removeAllListeners('close')
       return ret
     } else if (ev === 'error') {
       this[EMITTED_ERROR] = data
-      const ret: Number = super.emit('error', data)
+      const ret: number = super.emit('error', data)
       this[MAYBE_EMIT_END]()
       return ret
     } else if (ev === 'resume') {
-      const ret: Number = super.emit('resume')
+      const ret: number = super.emit('resume')
       this[MAYBE_EMIT_END]()
       return ret
     } else if (ev === 'finish' || ev === 'prefinish') {
-      const ret: Number = super.emit(ev)
+      const ret: number = super.emit(ev)
       this.removeAllListeners(ev)
       return ret
     }
 
     // Some other unknown event
-    const ret: String = super.emit(ev, data, ...extra)
+    const ret: string = super.emit(ev, data, ...extra)
     this[MAYBE_EMIT_END]()
     return ret
   }
@@ -509,7 +509,7 @@ export default class Minipass extends Stream {
 
   [EMITEND2] () {
     if (this[DECODER]) {
-      const data: Object = this[DECODER].end()
+      const data: object = this[DECODER].end()
       if (data) {
         for (const p of this.pipes) {
           p.dest.write(data)
@@ -528,13 +528,13 @@ export default class Minipass extends Stream {
 
   // const all = await stream.collect()
   collect () {
-    const buf: Array = []
+    const buf: any[] = []
     if (!this[OBJECTMODE])
       buf.dataLength = 0
     // set the promise first, in case an error is raised
     // by triggering the flow here.
     const p: Promise = this.promise()
-    this.on('data', (c: Array) => {
+    this.on('data', (c: any[]) => {
       buf.push(c)
       if (!this[OBJECTMODE])
         buf.dataLength += c.length
@@ -546,7 +546,7 @@ export default class Minipass extends Stream {
   concat () {
     return this[OBJECTMODE]
       ? Promise.reject(new Error('cannot concat in objectMode'))
-      : this.collect().then((buf: Array) =>
+      : this.collect().then((buf: any[]) =>
           this[OBJECTMODE]
             ? Promise.reject(new Error('cannot concat in objectMode'))
             : this[ENCODING] ? buf.join('') : Buffer.concat(buf, buf.dataLength))
@@ -556,14 +556,14 @@ export default class Minipass extends Stream {
   promise () {
     return new Promise((resolve: Function, reject: Function) => {
       this.on(DESTROYED, () => reject(new Error('stream destroyed')))
-      this.on('error', (er: String) => reject(er))
+      this.on('error', (er: string) => reject(er))
       this.on('end', () => resolve())
     })
   }
 
   // for await (let chunk of stream)
   [ASYNCITERATOR] () {
-    const next: Object = () => {
+    const next: object = () => {
       const res: Function = this.read()
       if (res !== null)
         return Promise.resolve({ done: false, value: res })
@@ -578,7 +578,7 @@ export default class Minipass extends Stream {
         this.removeListener('end', onend)
         reject(er)
       }
-      const ondata: Function = (value: String) => {
+      const ondata: Function = (value: string) => {
         this.removeListener('error', onerr)
         this.removeListener('end', onend)
         this.pause()
@@ -606,8 +606,8 @@ export default class Minipass extends Stream {
   // for (let chunk of stream)
   [ITERATOR] () {
     const next: Function = () => {
-      const value: Number = this.read()
-      const done: Boolean = value === null
+      const value: number = this.read()
+      const done: boolean = value === null
       return { value, done }
     }
     return { next }

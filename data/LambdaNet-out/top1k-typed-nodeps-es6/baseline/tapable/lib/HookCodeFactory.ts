@@ -13,7 +13,7 @@ class HookCodeFactory {
 
 	create(options) {
 		this.init(options);
-		let fn: Object;
+		let fn: object;
 		switch (this.options.type) {
 			case "sync":
 				fn = new Function(
@@ -21,8 +21,8 @@ class HookCodeFactory {
 					'"use strict";\n' +
 						this.header() +
 						this.contentWithInterceptors({
-							onError: (err: String) => `throw ${err};\n`,
-							onResult: (result: String) => `return ${result};\n`,
+							onError: (err: string) => `throw ${err};\n`,
+							onResult: (result: string) => `return ${result};\n`,
 							resultReturns: true,
 							onDone: () => "",
 							rethrowIfPossible: true
@@ -37,23 +37,23 @@ class HookCodeFactory {
 					'"use strict";\n' +
 						this.header() +
 						this.contentWithInterceptors({
-							onError: (err: String) => `_callback(${err});\n`,
-							onResult: (result: String) => `_callback(null, ${result});\n`,
+							onError: (err: string) => `_callback(${err});\n`,
+							onResult: (result: string) => `_callback(null, ${result});\n`,
 							onDone: () => "_callback();\n"
 						})
 				);
 				break;
 			case "promise":
-				let errorHelperUsed: Boolean = false;
-				const content: String = this.contentWithInterceptors({
-					onError: (err: String) => {
+				let errorHelperUsed: boolean = false;
+				const content: string = this.contentWithInterceptors({
+					onError: (err: string) => {
 						errorHelperUsed = true;
 						return `_error(${err});\n`;
 					},
-					onResult: (result: String) => `_resolve(${result});\n`,
+					onResult: (result: string) => `_resolve(${result});\n`,
 					onDone: () => "_resolve();\n"
 				});
-				let code: String = "";
+				let code: string = "";
 				code += '"use strict";\n';
 				code += this.header();
 				code += "return new Promise((function(_resolve, _reject) {\n";
@@ -80,7 +80,7 @@ class HookCodeFactory {
 	}
 
 	setup(instance, options) {
-		instance._x = options.taps.map((t: Object) => t.fn);
+		instance._x = options.taps.map((t: object) => t.fn);
 	}
 
 	/**
@@ -101,9 +101,9 @@ class HookCodeFactory {
 			const onError: Function = options.onError;
 			const onResult: Function = options.onResult;
 			const onDone: Function = options.onDone;
-			let code: String = "";
+			let code: string = "";
 			for (let i = 0; i < this.options.interceptors.length; i++) {
-				const interceptor: Object = this.options.interceptors[i];
+				const interceptor: object = this.options.interceptors[i];
 				if (interceptor.call) {
 					code += `${this.getInterceptor(i)}.call(${this.args({
 						before: interceptor.context ? "_context" : undefined
@@ -114,10 +114,10 @@ class HookCodeFactory {
 				Object.assign(options, {
 					onError:
 						onError &&
-						((err: String) => {
-							let code: String = "";
+						((err: string) => {
+							let code: string = "";
 							for (let i = 0; i < this.options.interceptors.length; i++) {
-								const interceptor: Object = this.options.interceptors[i];
+								const interceptor: object = this.options.interceptors[i];
 								if (interceptor.error) {
 									code += `${this.getInterceptor(i)}.error(${err});\n`;
 								}
@@ -127,8 +127,8 @@ class HookCodeFactory {
 						}),
 					onResult:
 						onResult &&
-						((result: String) => {
-							let code: String = "";
+						((result: string) => {
+							let code: string = "";
 							for (let i = 0; i < this.options.interceptors.length; i++) {
 								const interceptor: Hook = this.options.interceptors[i];
 								if (interceptor.result) {
@@ -141,9 +141,9 @@ class HookCodeFactory {
 					onDone:
 						onDone &&
 						(() => {
-							let code: String = "";
+							let code: string = "";
 							for (let i = 0; i < this.options.interceptors.length; i++) {
-								const interceptor: Object = this.options.interceptors[i];
+								const interceptor: object = this.options.interceptors[i];
 								if (interceptor.done) {
 									code += `${this.getInterceptor(i)}.done();\n`;
 								}
@@ -160,7 +160,7 @@ class HookCodeFactory {
 	}
 
 	header() {
-		let code: String = "";
+		let code: string = "";
 		if (this.needContext()) {
 			code += "var _context = {};\n";
 		} else {

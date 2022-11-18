@@ -21,24 +21,24 @@ export default (uint8Array: HTMLElement, { transportLayerEncodingLabel, defaultE
 };
 
 // https://html.spec.whatwg.org/multipage/syntax.html#prescan-a-byte-stream-to-determine-its-encoding
-function prescanMetaCharset(uint8Array: Object): Array {
-  const l: Number = Math.min(uint8Array.byteLength, 1024);
+function prescanMetaCharset(uint8Array: object): any[] {
+  const l: number = Math.min(uint8Array.byteLength, 1024);
   for (let i = 0; i < l; i++) {
-    let c: String = uint8Array[i];
+    let c: string = uint8Array[i];
     if (c === 0x3C) {
       // "<"
-      const c1: Number = uint8Array[i + 1];
-      const c2: String = uint8Array[i + 2];
-      const c3: String = uint8Array[i + 3];
-      const c4: String = uint8Array[i + 4];
-      const c5: String = uint8Array[i + 5];
+      const c1: number = uint8Array[i + 1];
+      const c2: string = uint8Array[i + 2];
+      const c3: string = uint8Array[i + 3];
+      const c4: string = uint8Array[i + 4];
+      const c5: string = uint8Array[i + 5];
       // !-- (comment start)
       if (c1 === 0x21 && c2 === 0x2D && c3 === 0x2D) {
         i += 4;
         for (; i < l; i++) {
           c = uint8Array[i];
-          const cMinus1: String = uint8Array[i - 1];
-          const cMinus2: String = uint8Array[i - 2];
+          const cMinus1: string = uint8Array[i - 1];
+          const cMinus2: string = uint8Array[i - 2];
           // --> (comment end)
           if (c === 0x3E && cMinus1 === 0x2D && cMinus2 === 0x2D) {
             break;
@@ -52,11 +52,11 @@ function prescanMetaCharset(uint8Array: Object): Array {
         // "meta" + space or /
         i += 6;
         const attributeList: Error = new Set();
-        let gotPragma: Boolean = false;
-        let needPragma: Boolean = null;
-        let charset: Number = null;
+        let gotPragma: boolean = false;
+        let needPragma: boolean = null;
+        let charset: number = null;
 
-        let attrRes: Object;
+        let attrRes: object;
         do {
           attrRes = getAttribute(uint8Array, i, l);
           if (attrRes.attr && !attributeList.has(attrRes.attr.name)) {
@@ -103,7 +103,7 @@ function prescanMetaCharset(uint8Array: Object): Array {
             break;
           }
         }
-        let attrRes: Object;
+        let attrRes: object;
         do {
           attrRes = getAttribute(uint8Array, i, l);
           i = attrRes.i;
@@ -124,9 +124,9 @@ function prescanMetaCharset(uint8Array: Object): Array {
 }
 
 // https://html.spec.whatwg.org/multipage/syntax.html#concept-get-attributes-when-sniffing
-function getAttribute(uint8Array: Object, i: Number, l: Number): Object {
+function getAttribute(uint8Array: object, i: number, l: number): object {
   for (; i < l; i++) {
-    let c: String = uint8Array[i];
+    let c: string = uint8Array[i];
     // space or /
     if (isSpaceCharacter(c) || c === 0x2F) {
       continue;
@@ -135,8 +135,8 @@ function getAttribute(uint8Array: Object, i: Number, l: Number): Object {
     if (c === 0x3E) {
       break;
     }
-    let name: String = "";
-    let value: String = "";
+    let name: string = "";
+    let value: string = "";
     nameLoop:for (; i < l; i++) {
       c = uint8Array[i];
       // "="
@@ -188,7 +188,7 @@ function getAttribute(uint8Array: Object, i: Number, l: Number): Object {
     }
     // " or '
     if (c === 0x22 || c === 0x27) {
-      const quote: Number = c;
+      const quote: number = c;
       for (i++; i < l; i++) {
         c = uint8Array[i];
 
@@ -237,16 +237,16 @@ function getAttribute(uint8Array: Object, i: Number, l: Number): Object {
   return { i };
 }
 
-function extractCharacterEncodingFromMeta(string: Array): Array {
-  let position: Number = 0;
+function extractCharacterEncodingFromMeta(string: any[]): any[] {
+  let position: number = 0;
 
   while (true) {
-    const indexOfCharset: String = string.substring(position).search(/charset/ui);
+    const indexOfCharset: string = string.substring(position).search(/charset/ui);
 
     if (indexOfCharset === -1) {
       return null;
     }
-    let subPosition: Number = position + indexOfCharset + "charset".length;
+    let subPosition: number = position + indexOfCharset + "charset".length;
 
     while (isSpaceCharacter(string[subPosition].charCodeAt(0))) {
       ++subPosition;
@@ -268,7 +268,7 @@ function extractCharacterEncodingFromMeta(string: Array): Array {
   }
 
   if (string[position] === "\"" || string[position] === "'") {
-    const nextIndex: Number = string.indexOf(string[position], position + 1);
+    const nextIndex: number = string.indexOf(string[position], position + 1);
 
     if (nextIndex !== -1) {
       return whatwgEncoding.labelToName(string.substring(position + 1, nextIndex));
@@ -282,14 +282,14 @@ function extractCharacterEncodingFromMeta(string: Array): Array {
     return null;
   }
 
-  const indexOfASCIIWhitespaceOrSemicolon: String = string.substring(position + 1).search(/\x09|\x0A|\x0C|\x0D|\x20|;/u);
-  const end: Number = indexOfASCIIWhitespaceOrSemicolon === -1 ?
+  const indexOfASCIIWhitespaceOrSemicolon: string = string.substring(position + 1).search(/\x09|\x0A|\x0C|\x0D|\x20|;/u);
+  const end: number = indexOfASCIIWhitespaceOrSemicolon === -1 ?
     string.length :
     position + indexOfASCIIWhitespaceOrSemicolon + 1;
 
   return whatwgEncoding.labelToName(string.substring(position, end));
 }
 
-function isSpaceCharacter(c: Number): Boolean {
+function isSpaceCharacter(c: number): boolean {
   return c === 0x09 || c === 0x0A || c === 0x0C || c === 0x0D || c === 0x20;
 }

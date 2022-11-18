@@ -1,6 +1,5 @@
 fixtures/class.ts(5,8): error TS2339: Property 'message' does not exist on type 'TestClass'.
-index.ts(12,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(16,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-index.ts(20,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+index.ts(12,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(16,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+index.ts(20,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 

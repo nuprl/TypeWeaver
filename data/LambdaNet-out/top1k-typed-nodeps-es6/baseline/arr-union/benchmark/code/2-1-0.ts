@@ -1,12 +1,12 @@
-export default function union(arr: String): Array {
-  var len: Number = arguments.length;
-  var res: Array = [], i: Number = 0;
+export default function union(arr: string): any[] {
+  var len: number = arguments.length;
+  var res: any[] = [], i: number = 0;
 
   while (len--) {
-    var arg: Array = arrayify(arguments[i++]);
+    var arg: any[] = arrayify(arguments[i++]);
 
     for (var j = 0; j < arg.length; j++) {
-      var ele: String = arg[j];
+      var ele: string = arg[j];
 
       if (res.indexOf(ele) === -1) {
         res.push(ele);
@@ -16,6 +16,6 @@ export default function union(arr: String): Array {
   return res;
 };
 
-function arrayify(val: Array): Array {
+function arrayify(val: any[]): any[] {
   return Array.isArray(val) ? val : [val];
 }

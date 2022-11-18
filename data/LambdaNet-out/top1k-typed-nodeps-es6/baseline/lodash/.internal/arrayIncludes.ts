@@ -9,8 +9,8 @@ import baseIndexOf from './baseIndexOf.js'
  * @param {*} target The value to search for.
  * @returns {boolean} Returns `true` if `target` is found, else `false`.
  */
-function arrayIncludes(array: Array, value: String): Boolean {
-  const length: Boolean = array == null ? 0 : array.length
+function arrayIncludes(array: any[], value: string): boolean {
+  const length: boolean = array == null ? 0 : array.length
   return !!length && baseIndexOf(array, value, 0) > -1
 }
 

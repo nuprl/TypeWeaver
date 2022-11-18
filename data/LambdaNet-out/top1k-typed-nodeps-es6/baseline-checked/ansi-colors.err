@@ -1,14 +1,12 @@
 bench/colors.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 bench/colors.ts(4,19): error TS2307: Cannot find module 'chalk' or its corresponding type declarations.
 bench/colors.ts(5,20): error TS2306: File 'index.ts' is not a module.
-bench/colors.ts(6,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/colors.ts(35,31): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
-bench/colors.ts(42,16): error TS2339: Property 'run' does not exist on type 'Object'.
-bench/colors.ts(44,13): error TS2339: Property 'add' does not exist on type 'Object'.
-bench/colors.ts(45,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bench/colors.ts(56,4): error TS2339: Property 'add' does not exist on type 'Object'.
-bench/colors.ts(65,4): error TS2339: Property 'add' does not exist on type 'Object'.
-bench/colors.ts(74,4): error TS2339: Property 'add' does not exist on type 'Object'.
+bench/colors.ts(42,16): error TS2339: Property 'run' does not exist on type 'object'.
+bench/colors.ts(44,13): error TS2339: Property 'add' does not exist on type 'object'.
+bench/colors.ts(56,4): error TS2339: Property 'add' does not exist on type 'object'.
+bench/colors.ts(65,4): error TS2339: Property 'add' does not exist on type 'object'.
+bench/colors.ts(74,4): error TS2339: Property 'add' does not exist on type 'object'.
 bench/colors.ts(79,14): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/colors.ts(79,31): error TS2339: Property 'white' does not exist on type 'HTMLElement'.
 bench/colors.ts(79,55): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
@@ -63,7 +61,6 @@ bench/colors.ts(79,1120): error TS2339: Property 'red' does not exist on type 'H
 bench/colors.ts(79,1142): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(2,19): error TS2307: Cannot find module 'chalk' or its corresponding type declarations.
 bench/dryrun.ts(3,20): error TS2306: File 'index.ts' is not a module.
-bench/dryrun.ts(8,33): error TS2538: Type 'String' cannot be used as an index type.
 bench/dryrun.ts(10,31): error TS2339: Property 'bgBlack' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(11,30): error TS2339: Property 'bgBlue' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(12,30): error TS2339: Property 'bgCyan' does not exist on type 'HTMLElement'.
@@ -165,9 +162,6 @@ examples/ok.ts(2,17): error TS2306: File 'index.ts' is not a module.
 examples/readme-examples.ts(3,15): error TS2306: File 'index.ts' is not a module.
 examples/screenshot-table.ts(3,19): error TS2307: Cannot find module 'text-table' or its corresponding type declarations.
 examples/screenshot-table.ts(4,20): error TS2306: File 'index.ts' is not a module.
-examples/screenshot-table.ts(5,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/screenshot-table.ts(6,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/screenshot-table.ts(30,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 examples/screenshot.ts(3,20): error TS2306: File 'index.ts' is not a module.
 examples/screenshot.ts(4,23): error TS2307: Cannot find module 'justified' or its corresponding type declarations.
 examples/styles.ts(3,15): error TS2306: File 'index.ts' is not a module.
@@ -177,36 +171,30 @@ examples/theme2.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/unstyle.ts(1,20): error TS2306: File 'index.ts' is not a module.
 index.ts(18,5): error TS2322: Type '{ enabled: any; visible: boolean; styles: {}; keys: {}; }' is not assignable to type 'HTMLElement'.
   Object literal may only specify known properties, and 'enabled' does not exist in type 'HTMLElement'.
-index.ts(25,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(25,30): error TS2339: Property 'open' does not exist on type 'Object'.
-index.ts(25,53): error TS2339: Property 'codes' does not exist on type 'Object'.
-index.ts(26,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(26,31): error TS2339: Property 'close' does not exist on type 'Object'.
-index.ts(26,55): error TS2339: Property 'codes' does not exist on type 'Object'.
-index.ts(27,9): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(27,31): error TS2339: Property 'regex' does not exist on type 'Object'.
-index.ts(27,69): error TS2339: Property 'codes' does not exist on type 'Object'.
-index.ts(28,11): error TS2339: Property 'wrap' does not exist on type 'Object'.
-index.ts(29,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-index.ts(29,56): error TS2769: No overload matches this call.
+index.ts(25,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(25,30): error TS2339: Property 'open' does not exist on type 'object'.
+index.ts(25,53): error TS2339: Property 'codes' does not exist on type 'object'.
+index.ts(26,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(26,31): error TS2339: Property 'close' does not exist on type 'object'.
+index.ts(26,55): error TS2339: Property 'codes' does not exist on type 'object'.
+index.ts(27,9): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+index.ts(27,31): error TS2339: Property 'regex' does not exist on type 'object'.
+index.ts(27,69): error TS2339: Property 'codes' does not exist on type 'object'.
+index.ts(28,11): error TS2339: Property 'wrap' does not exist on type 'object'.
+index.ts(29,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(29,63): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-index.ts(29,63): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(30,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
+    Argument of type 'number' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
 index.ts(40,63): error TS2339: Property 'wrap' does not exist on type 'never'.
-index.ts(43,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(44,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(44,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 index.ts(45,16): error TS2339: Property 'enabled' does not exist on type 'HTMLElement'.
 index.ts(46,16): error TS2339: Property 'visible' does not exist on type 'HTMLElement'.
-index.ts(48,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-index.ts(53,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(48,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
 index.ts(53,39): error TS2551: Property 'styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(57,50): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(58,12): error TS2551: Property 'styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
-index.ts(59,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(59,30): error TS2339: Property 'keys' does not exist on type 'HTMLElement'.
 index.ts(59,52): error TS2339: Property 'keys' does not exist on type 'HTMLElement'.
-index.ts(62,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(66,16): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
 index.ts(69,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(71,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
@@ -219,7 +207,6 @@ index.ts(130,10): error TS2339: Property 'alias' does not exist on type 'HTMLEle
 index.ts(137,13): error TS2339: Property 'stack' does not exist on type 'Function'.
 index.ts(139,14): error TS2551: Property 'styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(140,10): error TS2339: Property 'stack' does not exist on type 'Function'.
-index.ts(143,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(147,16): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
 index.ts(150,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(152,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
@@ -238,6 +225,6 @@ index.ts(177,10): error TS2339: Property 'stripColor' does not exist on type 'HT
 index.ts(177,30): error TS2551: Property 'unstyle' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(178,10): error TS2339: Property 'symbols' does not exist on type 'HTMLElement'.
 index.ts(179,10): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-symbols.ts(36,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-symbols.ts(50,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+symbols.ts(36,7): error TS2740: Type '{ check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+symbols.ts(50,7): error TS2740: Type '{ ballotCross: string; check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionFull: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 

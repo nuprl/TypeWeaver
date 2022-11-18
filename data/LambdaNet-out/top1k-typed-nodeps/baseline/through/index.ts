@@ -1,4 +1,4 @@
-var Stream: Array = require('stream')
+var Stream: any[] = require('stream')
 
 // through
 //
@@ -10,26 +10,26 @@ through.through = through
 
 //create a readable writable stream.
 
-function through (write: Function, end: Function, opts: Object): String {
-  write = write || function (data: Object) { this.queue(data) }
+function through (write: Function, end: Function, opts: object): string {
+  write = write || function (data: object) { this.queue(data) }
   end = end || function () { this.queue(null) }
 
-  var ended: Boolean = false, destroyed: Boolean = false, buffer: Array = [], _ended: Boolean = false
-  var stream: Object = new Stream()
+  var ended: boolean = false, destroyed: boolean = false, buffer: any[] = [], _ended: boolean = false
+  var stream: object = new Stream()
   stream.readable = stream.writable = true
   stream.paused = false
 
 //  stream.autoPause   = !(opts && opts.autoPause   === false)
   stream.autoDestroy = !(opts && opts.autoDestroy === false)
 
-  stream.write = function (data: Object) {
+  stream.write = function (data: object) {
     write.call(this, data)
     return !stream.paused
   }
 
-  function drain(): Number {
+  function drain(): number {
     while(buffer.length && !stream.paused) {
-      var data: Number = buffer.shift()
+      var data: number = buffer.shift()
       if(null === data)
         return stream.emit('end')
       else
@@ -37,7 +37,7 @@ function through (write: Function, end: Function, opts: Object): String {
     }
   }
 
-  stream.queue = stream.push = function (data: Object) {
+  stream.queue = stream.push = function (data: object) {
 //    console.error(ended)
     if(_ended) return stream
     if(data === null) _ended = true
@@ -67,7 +67,7 @@ function through (write: Function, end: Function, opts: Object): String {
       stream.destroy()
   }
 
-  stream.end = function (data: String) {
+  stream.end = function (data: string) {
     if(ended) return
     ended = true
     if(arguments.length) stream.write(data)

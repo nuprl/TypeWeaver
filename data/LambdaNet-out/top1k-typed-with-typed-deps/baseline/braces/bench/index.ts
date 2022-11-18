@@ -1,22 +1,22 @@
 'use strict';
 
 const { Suite } = require('benchmark');
-const colors: Array = require('ansi-colors');
-const argv: Object = require('minimist')(process.argv.slice(2));
+const colors: any[] = require('ansi-colors');
+const argv: object = require('minimist')(process.argv.slice(2));
 const minimatch: HTMLElement = require('minimatch');
-const braces: Object = require('..');
+const braces: object = require('..');
 
 /**
  * Setup
  */
 
-const cycle: Function = (e: HTMLElement, newline: Boolean) => {
+const cycle: Function = (e: HTMLElement, newline: boolean) => {
   process.stdout.write(`\u001b[G  ${e.target}${newline ? `\n` : ''}`);
 };
 
-const bench: Function = (name: String, options: Object) => {
-  const config: Object = { name, ...options };
-  const suite: Object = new Suite(config);
+const bench: Function = (name: string, options: object) => {
+  const config: object = { name, ...options };
+  const suite: object = new Suite(config);
   const add: Function = suite.add.bind(suite);
   suite.on('error', console.error);
 
@@ -27,12 +27,12 @@ const bench: Function = (name: String, options: Object) => {
 
   console.log(colors.green(`● ${config.name}`));
 
-  suite.add = (key: String, fn: String, opts: Function) => {
+  suite.add = (key: string, fn: string, opts: Function) => {
     if (typeof fn !== 'function') opts = fn;
 
     add(key, {
-      onCycle: (e: Array) => cycle(e),
-      onComplete: (e: String) => cycle(e, true),
+      onCycle: (e: any[]) => cycle(e),
+      onComplete: (e: string) => cycle(e, true),
       fn,
       ...opts
     });
@@ -45,7 +45,7 @@ const bench: Function = (name: String, options: Object) => {
 const skip: Function = () => {};
 skip.add = () => skip;
 skip.run = () => skip;
-bench.skip = (name: String) => {
+bench.skip = (name: string) => {
   console.log(colors.cyan('● ' + colors.unstyle(name) + ' (skipped)'));
   return skip;
 };

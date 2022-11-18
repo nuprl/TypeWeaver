@@ -4,22 +4,22 @@
 */
 "use strict";
 
-const base64VLQ: String = require("./base64-vlq");
-const SourceNode: String = require("./SourceNode");
-const CodeNode: String = require("./CodeNode");
+const base64VLQ: string = require("./base64-vlq");
+const SourceNode: string = require("./SourceNode");
+const CodeNode: string = require("./CodeNode");
 const SourceListMap: SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: String, map: Object): SourceNode {
-	const sources: Object = map.sources;
-	const sourcesContent: Object = map.sourcesContent;
-	const mappings: Array = map.mappings.split(";");
-	const lines: Array = code.split("\n");
-	const nodes: Array = [];
+module.exports = function fromStringWithSourceMap(code: string, map: object): SourceNode {
+	const sources: object = map.sources;
+	const sourcesContent: object = map.sourcesContent;
+	const mappings: any[] = map.mappings.split(";");
+	const lines: any[] = code.split("\n");
+	const nodes: any[] = [];
 	let currentNode: SingleLineNode = null;
-	let currentLine: Number = 1;
-	let currentSourceIdx: Number = 0;
-	let currentSourceNodeLine: Number;
-	function addCode(generatedCode: String): Void {
+	let currentLine: number = 1;
+	let currentSourceIdx: number = 0;
+	let currentSourceNodeLine: number;
+	function addCode(generatedCode: string): Void {
 		if(currentNode && currentNode instanceof CodeNode) {
 			currentNode.addGeneratedCode(generatedCode);
 		} else if(currentNode && currentNode instanceof SourceNode && !generatedCode.trim()) {
@@ -30,7 +30,7 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 			nodes.push(currentNode);
 		}
 	}
-	function addSource(generatedCode: String, source: SourceNode, originalSource: SourceNode, linePosition: Number): Void {
+	function addSource(generatedCode: string, source: SourceNode, originalSource: SourceNode, linePosition: number): Void {
 		if(currentNode && currentNode instanceof SourceNode &&
 			currentNode.source === source &&
 			currentSourceNodeLine === linePosition
@@ -43,21 +43,21 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 			nodes.push(currentNode);
 		}
 	}
-	mappings.forEach(function(mapping: Object, idx: Number) {
-		let line: String = lines[idx];
+	mappings.forEach(function(mapping: object, idx: number) {
+		let line: string = lines[idx];
 		if(typeof line === 'undefined') return;
 		if(idx !== lines.length - 1) line += "\n";
 		if(!mapping)
 			return addCode(line);
 		mapping = { value: 0, rest: mapping };
-		let lineAdded: Boolean = false;
+		let lineAdded: boolean = false;
 		while(mapping.rest)
 			lineAdded = processMapping(mapping, line, lineAdded) || lineAdded;
 		if(!lineAdded)
 			addCode(line);
 	});
 	if(mappings.length < lines.length) {
-		let idx: Number = mappings.length;
+		let idx: number = mappings.length;
 		while(!lines[idx].trim() && idx < lines.length-1) {
 			addCode(lines[idx] + "\n");
 			idx++;
@@ -65,7 +65,7 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 		addCode(lines.slice(idx).join("\n"));
 	}
 	return new SourceListMap(nodes);
-	function processMapping(mapping: Object, line: SingleLineNode, ignore: Boolean): Boolean {
+	function processMapping(mapping: object, line: SingleLineNode, ignore: boolean): boolean {
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 		}
@@ -77,10 +77,10 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 		}
 
 		base64VLQ.decode(mapping.rest, mapping);
-		const sourceIdx: Number = mapping.value + currentSourceIdx;
+		const sourceIdx: number = mapping.value + currentSourceIdx;
 		currentSourceIdx = sourceIdx;
 
-		let linePosition: Number;
+		let linePosition: number;
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 			linePosition = mapping.value + currentLine;
@@ -90,7 +90,7 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 		}
 
 		if(mapping.rest) {
-			const next: Number = mapping.rest.indexOf(",");
+			const next: number = mapping.rest.indexOf(",");
 			mapping.rest = next === -1 ? "" : mapping.rest.substr(next);
 		}
 

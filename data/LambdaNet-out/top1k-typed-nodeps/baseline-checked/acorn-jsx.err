@@ -5,11 +5,11 @@ index.ts(16,35): error TS2339: Property 'tokTypes' does not exist on type 'HTMLE
 index.ts(17,38): error TS2339: Property 'TokContext' does not exist on type 'HTMLElement'.
 index.ts(18,39): error TS2339: Property 'TokenType' does not exist on type 'HTMLElement'.
 index.ts(19,33): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 index.ts(20,33): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 index.ts(21,33): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+  Type '{}' has no construct signatures.
 index.ts(28,20): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 index.ts(29,20): error TS2351: This expression is not constructable.
@@ -18,17 +18,24 @@ index.ts(30,24): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 index.ts(31,22): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-index.ts(34,14): error TS2339: Property 'jsxTagStart' does not exist on type 'Object'.
-index.ts(39,14): error TS2339: Property 'jsxTagEnd' does not exist on type 'Object'.
+index.ts(34,14): error TS2339: Property 'jsxTagStart' does not exist on type 'object'.
+index.ts(39,14): error TS2339: Property 'jsxTagEnd' does not exist on type 'object'.
 index.ts(41,46): error TS2339: Property 'slash' does not exist on type 'HTMLElement'.
 index.ts(50,17): error TS2339: Property 'set' does not exist on type 'Error'.
-index.ts(58,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(77,32): error TS2339: Property 'allowNamespaces' does not exist on type 'Object'.
-index.ts(78,41): error TS2339: Property 'allowNamespacedObjects' does not exist on type 'Object'.
-index.ts(87,43): error TS2339: Property 'tokTypes' does not exist on type 'Object'.
-index.ts(94,37): error TS2339: Property 'acorn' does not exist on type 'Object'.
-index.ts(95,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(60,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+index.ts(62,14): error TS2339: Property 'type' does not exist on type 'any[]'.
+index.ts(63,19): error TS2339: Property 'name' does not exist on type 'any[]'.
+index.ts(65,14): error TS2339: Property 'type' does not exist on type 'any[]'.
+index.ts(66,19): error TS2339: Property 'namespace' does not exist on type 'any[]'.
+index.ts(66,49): error TS2339: Property 'name' does not exist on type 'any[]'.
+index.ts(68,14): error TS2339: Property 'type' does not exist on type 'any[]'.
+index.ts(69,39): error TS2339: Property 'object' does not exist on type 'any[]'.
+index.ts(70,32): error TS2339: Property 'property' does not exist on type 'any[]'.
+index.ts(77,32): error TS2339: Property 'allowNamespaces' does not exist on type 'object'.
+index.ts(78,41): error TS2339: Property 'allowNamespacedObjects' does not exist on type 'object'.
+index.ts(87,43): error TS2339: Property 'tokTypes' does not exist on type 'object'.
+index.ts(94,37): error TS2339: Property 'acorn' does not exist on type 'object'.
+index.ts(95,9): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(96,38): error TS2339: Property 'tokTypes' does not exist on type 'HTMLElement'.
 index.ts(97,34): error TS2339: Property 'tokTypes' does not exist on type 'HTMLElement'.
 index.ts(98,39): error TS2339: Property 'tokContexts' does not exist on type 'HTMLElement'.
@@ -38,7 +45,7 @@ index.ts(101,38): error TS2339: Property 'tokContexts' does not exist on type 'H
 index.ts(102,36): error TS2339: Property 'isNewLine' does not exist on type 'HTMLElement'.
 index.ts(103,44): error TS2339: Property 'isIdentifierStart' does not exist on type 'HTMLElement'.
 index.ts(104,43): error TS2339: Property 'isIdentifierChar' does not exist on type 'HTMLElement'.
-index.ts(106,24): error TS2507: Type 'Object' is not a constructor function type.
+index.ts(106,24): error TS2507: Type 'object' is not a constructor function type.
 index.ts(114,39): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(116,18): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(116,30): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
@@ -132,7 +139,7 @@ index.ts(258,12): error TS2339: Property 'next' does not exist on type '(Anonymo
 index.ts(259,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
 index.ts(265,27): error TS2339: Property 'start' does not exist on type '(Anonymous class)'.
 index.ts(265,50): error TS2339: Property 'startLoc' does not exist on type '(Anonymous class)'.
-index.ts(267,20): error TS2339: Property 'allowNamespaces' does not exist on type 'Object'.
+index.ts(267,20): error TS2339: Property 'allowNamespaces' does not exist on type 'object'.
 index.ts(267,45): error TS2339: Property 'eat' does not exist on type '(Anonymous class)'.
 index.ts(267,52): error TS2339: Property 'colon' does not exist on type 'HTMLInputElement'.
 index.ts(268,23): error TS2339: Property 'startNodeAt' does not exist on type '(Anonymous class)'.
@@ -143,7 +150,7 @@ index.ts(279,27): error TS2339: Property 'start' does not exist on type '(Anonym
 index.ts(279,50): error TS2339: Property 'startLoc' does not exist on type '(Anonymous class)'.
 index.ts(281,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(281,28): error TS2339: Property 'dot' does not exist on type 'HTMLInputElement'.
-index.ts(281,81): error TS2339: Property 'allowNamespacedObjects' does not exist on type 'Object'.
+index.ts(281,81): error TS2339: Property 'allowNamespacedObjects' does not exist on type 'object'.
 index.ts(282,14): error TS2339: Property 'unexpected' does not exist on type '(Anonymous class)'.
 index.ts(284,19): error TS2339: Property 'eat' does not exist on type '(Anonymous class)'.
 index.ts(284,26): error TS2339: Property 'dot' does not exist on type 'HTMLInputElement'.

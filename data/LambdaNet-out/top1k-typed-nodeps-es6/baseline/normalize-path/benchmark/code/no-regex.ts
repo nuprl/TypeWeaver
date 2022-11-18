@@ -1,8 +1,8 @@
-export default function normalize(str: String): String {
+export default function normalize(str: string): string {
   str = replace(str, '\\', '/');
   str = replace(str, '//', '/');
 
-  var last: String = str[str.length - 1];
+  var last: string = str[str.length - 1];
 
   if (str[0] === '.' && str[1] === '/') {
     str = str.substr(2, str.length - 1);
@@ -16,8 +16,8 @@ export default function normalize(str: String): String {
 };
 
 
-function replace(str: String, pattern: String, replacement: String): String {
-  var i: Number, from: Number = 0;
+function replace(str: string, pattern: string, replacement: string): string {
+  var i: number, from: number = 0;
 
   while (str.indexOf(pattern, from) !== -1) {
     i = str.indexOf(pattern, from);

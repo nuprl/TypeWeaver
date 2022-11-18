@@ -5,7 +5,7 @@
 
 import dashdash from '../lib/dashdash';
 
-var options: Array = [
+var options: any[] = [
     { names: ['start', 's'], type: 'date' },
     { names: ['end', 'e'], type: 'date' }
 ];

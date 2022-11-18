@@ -36,22 +36,22 @@ export class TokenType {
   }
 }
 
-function binop(name: String, prec: Number): RegExpValidationState {
+function binop(name: string, prec: number): RegExpValidationState {
   return new TokenType(name, {beforeExpr: true, binop: prec})
 }
-const beforeExpr: Object = {beforeExpr: true}, startsExpr: Object = {startsExpr: true}
+const beforeExpr: object = {beforeExpr: true}, startsExpr: object = {startsExpr: true}
 
 // Map keyword names to token types.
 
-export const keywords: Object = {}
+export const keywords: object = {}
 
 // Succinct definitions of keyword token types
-function kw(name: String, options: Object = {}): Boolean {
+function kw(name: string, options: object = {}): boolean {
   options.keyword = name
   return keywords[name] = new TokenType(name, options)
 }
 
-export const types: Object = {
+export const types: object = {
   num: new TokenType("num", startsExpr),
   regexp: new TokenType("regexp", startsExpr),
   string: new TokenType("string", startsExpr),

@@ -30,18 +30,18 @@ module.exports = escapeHtml
  * @public
  */
 
-function escapeHtml (string: String): String {
-  var str: String = '' + string
-  var match: Array = matchHtmlRegExp.exec(str)
+function escapeHtml (string: string): string {
+  var str: string = '' + string
+  var match: any[] = matchHtmlRegExp.exec(str)
 
   if (!match) {
     return str
   }
 
-  var escape: String
-  var html: String = ''
-  var index: Number = 0
-  var lastIndex: Number = 0
+  var escape: string
+  var html: string = ''
+  var index: number = 0
+  var lastIndex: number = 0
 
   for (index = match.index; index < str.length; index++) {
     switch (str.charCodeAt(index)) {

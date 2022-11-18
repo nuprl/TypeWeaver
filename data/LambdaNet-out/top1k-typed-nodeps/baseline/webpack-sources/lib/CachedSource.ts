@@ -4,20 +4,20 @@
 */
 "use strict";
 
-const Source: String = require("./Source");
+const Source: string = require("./Source");
 const streamChunksOfSourceMap: Function = require("./helpers/streamChunksOfSourceMap");
 const streamChunksOfRawSource: Function = require("./helpers/streamChunksOfRawSource");
 const streamAndGetSourceAndMap: Function = require("./helpers/streamAndGetSourceAndMap");
 
 const mapToBufferedMap: Function = (map: Function) => {
 	if (typeof map !== "object" || !map) return map;
-	const bufferedMap: Object = Object.assign({}, map);
+	const bufferedMap: object = Object.assign({}, map);
 	if (map.mappings) {
 		bufferedMap.mappings = Buffer.from(map.mappings, "utf-8");
 	}
 	if (map.sourcesContent) {
 		bufferedMap.sourcesContent = map.sourcesContent.map(
-			(str: Number) => str && Buffer.from(str, "utf-8")
+			(str: number) => str && Buffer.from(str, "utf-8")
 		);
 	}
 	return bufferedMap;
@@ -31,7 +31,7 @@ const bufferedMapToMap: Function = (bufferedMap: Function) => {
 	}
 	if (bufferedMap.sourcesContent) {
 		map.sourcesContent = bufferedMap.sourcesContent.map(
-			(buffer: Object) => buffer && buffer.toString("utf-8")
+			(buffer: object) => buffer && buffer.toString("utf-8")
 		);
 	}
 	return map;
@@ -52,7 +52,7 @@ class CachedSource extends Source {
 	getCachedData() {
 		const bufferedMaps: Map = new Map();
 		for (const pair of this._cachedMaps) {
-			let cacheEntry: Object = pair[1];
+			let cacheEntry: object = pair[1];
 			if (cacheEntry.bufferedMap === undefined) {
 				cacheEntry.bufferedMap = mapToBufferedMap(
 					this._getMapFromCacheEntry(cacheEntry)
@@ -129,7 +129,7 @@ class CachedSource extends Source {
 		if (typeof this.original().buffer === "function") {
 			return (this._cachedBuffer = this.original().buffer());
 		}
-		const bufferOrString: String = this.source();
+		const bufferOrString: string = this.source();
 		if (Buffer.isBuffer(bufferOrString)) {
 			return (this._cachedBuffer = bufferOrString);
 		}
@@ -149,19 +149,19 @@ class CachedSource extends Source {
 	}
 
 	sourceAndMap(options) {
-		const key: String = options ? JSON.stringify(options) : "{}";
-		const cacheEntry: String = this._cachedMaps.get(key);
+		const key: string = options ? JSON.stringify(options) : "{}";
+		const cacheEntry: string = this._cachedMaps.get(key);
 		// Look for a cached map
 		if (cacheEntry !== undefined) {
 			// We have a cached map in some representation
-			const map: Array = this._getMapFromCacheEntry(cacheEntry);
+			const map: any[] = this._getMapFromCacheEntry(cacheEntry);
 			// Either get the cached source or compute it
 			return { source: this.source(), map };
 		}
 		// Look for a cached source
-		let source: String = this._getCachedSource();
+		let source: string = this._getCachedSource();
 		// Compute the map
-		let map: String;
+		let map: string;
 		if (source !== undefined) {
 			map = this.original().map(options);
 		} else {
@@ -179,7 +179,7 @@ class CachedSource extends Source {
 	}
 
 	streamChunks(options, onChunk, onSource, onName) {
-		const key: String = options ? JSON.stringify(options) : "{}";
+		const key: string = options ? JSON.stringify(options) : "{}";
 		if (
 			this._cachedMaps.has(key) &&
 			(this._cachedBuffer !== undefined || this._cachedSource !== undefined)
@@ -221,12 +221,12 @@ class CachedSource extends Source {
 	}
 
 	map(options) {
-		const key: String = options ? JSON.stringify(options) : "{}";
-		const cacheEntry: String = this._cachedMaps.get(key);
+		const key: string = options ? JSON.stringify(options) : "{}";
+		const cacheEntry: string = this._cachedMaps.get(key);
 		if (cacheEntry !== undefined) {
 			return this._getMapFromCacheEntry(cacheEntry);
 		}
-		const map: String = this.original().map(options);
+		const map: string = this.original().map(options);
 		this._cachedMaps.set(key, {
 			map,
 			bufferedMap: undefined
@@ -239,10 +239,10 @@ class CachedSource extends Source {
 			for (const item of this._cachedHashUpdate) hash.update(item);
 			return;
 		}
-		const update: Array = [];
-		let currentString: String = undefined;
-		const tracker: Object = {
-			update: (item: String) => {
+		const update: any[] = [];
+		let currentString: string = undefined;
+		const tracker: object = {
+			update: (item: string) => {
 				if (typeof item === "string" && item.length < 10240) {
 					if (currentString === undefined) {
 						currentString = item;

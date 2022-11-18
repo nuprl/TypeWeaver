@@ -28,9 +28,9 @@ export class SourceLocation {
 // offset. `input` should be the code string that the offset refers
 // into.
 
-export function getLineInfo(input: Parser, offset: Number): RegExpValidationState {
+export function getLineInfo(input: Parser, offset: number): RegExpValidationState {
   for (let line = 1, cur = 0;;) {
-    let nextBreak: Number = nextLineBreak(input, cur, offset)
+    let nextBreak: number = nextLineBreak(input, cur, offset)
     if (nextBreak < 0) return new Position(line, offset - cur)
     ++line
     cur = nextBreak

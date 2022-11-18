@@ -3,7 +3,7 @@ import topologicalSort from './topologicalSort';
 const matchImports: RegExp = /^(.+?)\s+from\s+(?:"([^"]+)"|'([^']+)'|(global))$/;
 const icssImport: RegExp = /^:import\((?:"([^"]+)"|'([^']+)')\)/;
 
-const VISITED_MARKER: Number = 1;
+const VISITED_MARKER: number = 1;
 
 /**
  * :import('G') {}
@@ -26,16 +26,16 @@ const VISITED_MARKER: Number = 1;
  *   C: ['A'],
  * }
  */
-function addImportToGraph(importId: String, parentId: Number, graph: Object, visited: Object): Void {
-  const siblingsId: String = parentId + "_" + "siblings";
-  const visitedId: String = parentId + "_" + importId;
+function addImportToGraph(importId: string, parentId: number, graph: object, visited: object): Void {
+  const siblingsId: string = parentId + "_" + "siblings";
+  const visitedId: string = parentId + "_" + importId;
 
   if (visited[visitedId] !== VISITED_MARKER) {
     if (!Array.isArray(visited[siblingsId])) {
       visited[siblingsId] = [];
     }
 
-    const siblings: Array = visited[siblingsId];
+    const siblings: any[] = visited[siblingsId];
 
     if (Array.isArray(graph[importId])) {
       graph[importId] = graph[importId].concat(siblings);
@@ -49,11 +49,11 @@ function addImportToGraph(importId: String, parentId: Number, graph: Object, vis
   }
 }
 
-export default (options: Object = {}) => {
-  let importIndex: Number = 0;
-  const createImportedName: String =
+export default (options: object = {}) => {
+  let importIndex: number = 0;
+  const createImportedName: string =
     typeof options.createImportedName !== "function"
-      ? (importName: String /*, path*/) =>
+      ? (importName: string /*, path*/) =>
           `i__imported_${importName.replace(/\W/g, "_")}_${importIndex++}`
       : options.createImportedName;
   const failOnWrongOrder: Function = options.failOnWrongOrder;
@@ -197,4 +197,4 @@ export default (options: Object = {}) => {
   };
 };
 
-export const postcss: Boolean = true;
+export const postcss: boolean = true;

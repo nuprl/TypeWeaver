@@ -1,5 +1,5 @@
-const processFunction: Function = (function_: String, options: Object, proxy: Number, unwrapped: Number) => (function(...arguments_) {
-	const P: Array = options.promiseModule;
+const processFunction: Function = (function_: string, options: object, proxy: number, unwrapped: number) => (function(...arguments_) {
+	const P: any[] = options.promiseModule;
 
 	return new P((resolve: Function, reject: Function) => {
 		if (options.multiArgs) {
@@ -16,7 +16,7 @@ const processFunction: Function = (function_: String, options: Object, proxy: Nu
 				}
 			});
 		} else if (options.errorFirst) {
-			arguments_.push((error: Object, result: Array) => {
+			arguments_.push((error: object, result: any[]) => {
 				if (error) {
 					reject(error);
 				} else {
@@ -27,14 +27,14 @@ const processFunction: Function = (function_: String, options: Object, proxy: Nu
 			arguments_.push(resolve);
 		}
 
-		const self: String = this === proxy ? unwrapped : this;
+		const self: string = this === proxy ? unwrapped : this;
 		Reflect.apply(function_, self, arguments_);
 	});
 });
 
 const filterCache: Error = new WeakMap();
 
-export default function pify(input: HTMLElement, options: Object): Object {
+export default function pify(input: HTMLElement, options: object): object {
 	options = {
 		exclude: [/.+(?:Sync|Stream)$/],
 		errorFirst: true,
@@ -42,13 +42,13 @@ export default function pify(input: HTMLElement, options: Object): Object {
 		...options,
 	};
 
-	const objectType: String = typeof input;
+	const objectType: string = typeof input;
 	if (!(input !== null && (objectType === 'object' || objectType === 'function'))) {
 		throw new TypeError(`Expected \`input\` to be a \`Function\` or \`Object\`, got \`${input === null ? 'null' : objectType}\``);
 	}
 
-	const filter: Function = (target: Array, key: String) => {
-		let cached: Object = filterCache.get(target);
+	const filter: Function = (target: any[], key: string) => {
+		let cached: object = filterCache.get(target);
 
 		if (!cached) {
 			cached = {};
@@ -59,11 +59,11 @@ export default function pify(input: HTMLElement, options: Object): Object {
 			return cached[key];
 		}
 
-		const match: Function = (pattern: Array) => (typeof pattern === 'string' || typeof key === 'symbol') ? key === pattern : pattern.test(key);
-		const descriptor: Array = Reflect.getOwnPropertyDescriptor(target, key);
-		const writableOrConfigurableOwn: Boolean = (descriptor === undefined || descriptor.writable || descriptor.configurable);
-		const included: Boolean = options.include ? options.include.some((element: Element) => match(element)) : !options.exclude.some((element: Element) => match(element));
-		const shouldFilter: String = included && writableOrConfigurableOwn;
+		const match: Function = (pattern: any[]) => (typeof pattern === 'string' || typeof key === 'symbol') ? key === pattern : pattern.test(key);
+		const descriptor: any[] = Reflect.getOwnPropertyDescriptor(target, key);
+		const writableOrConfigurableOwn: boolean = (descriptor === undefined || descriptor.writable || descriptor.configurable);
+		const included: boolean = options.include ? options.include.some((element: Element) => match(element)) : !options.exclude.some((element: Element) => match(element));
+		const shouldFilter: string = included && writableOrConfigurableOwn;
 		cached[key] = shouldFilter;
 		return shouldFilter;
 	};

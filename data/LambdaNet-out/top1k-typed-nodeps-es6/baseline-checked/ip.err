@@ -1,173 +1,90 @@
 lib/ip.ts(5,4): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
-lib/ip.ts(11,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(12,25): error TS2345: Argument of type '(byte: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+lib/ip.ts(11,5): error TS2322: Type 'number | Buffer' is not assignable to type 'object'.
+  Type 'number' is not assignable to type 'object'.
+lib/ip.ts(12,25): error TS2345: Argument of type '(byte: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'byte' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'Number'.
-lib/ip.ts(13,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(13,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-lib/ip.ts(16,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(19,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(21,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(28,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(38,62): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(39,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(40,44): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(46,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(47,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(49,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(49,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(50,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(50,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(61,1): error TS2322: Type '(buff: any, offset: Number, length: String) => String' is not assignable to type '() => string'.
-lib/ip.ts(61,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(63,3): error TS2322: Type 'number | String' is not assignable to type 'String'.
-  Type 'number' is not assignable to type 'String'.
-lib/ip.ts(63,37): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(65,7): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
-lib/ip.ts(66,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lib/ip.ts(69,14): error TS2339: Property 'push' does not exist on type 'String'.
-lib/ip.ts(69,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(71,21): error TS2339: Property 'join' does not exist on type 'String'.
-lib/ip.ts(72,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lib/ip.ts(75,14): error TS2339: Property 'push' does not exist on type 'String'.
-lib/ip.ts(75,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(77,21): error TS2339: Property 'join' does not exist on type 'String'.
+    Type 'string' is not assignable to type 'number'.
+lib/ip.ts(13,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(25,53): error TS2554: Expected 0 arguments, but got 1.
+lib/ip.ts(29,61): error TS2554: Expected 0 arguments, but got 1.
+lib/ip.ts(43,23): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+lib/ip.ts(46,5): error TS2322: Type 'number | Buffer' is not assignable to type 'object'.
+  Type 'number' is not assignable to type 'object'.
+lib/ip.ts(61,1): error TS2322: Type '(buff: any[], offset: number, length: string) => string' is not assignable to type '() => string'.
+lib/ip.ts(63,3): error TS2322: Type 'string | number' is not assignable to type 'string'.
+  Type 'number' is not assignable to type 'string'.
+lib/ip.ts(65,7): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/ip.ts(66,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/ip.ts(69,14): error TS2339: Property 'push' does not exist on type 'string'.
+lib/ip.ts(71,21): error TS2339: Property 'join' does not exist on type 'string'.
+lib/ip.ts(72,14): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/ip.ts(75,14): error TS2339: Property 'push' does not exist on type 'string'.
+lib/ip.ts(75,24): error TS2339: Property 'readUInt16BE' does not exist on type 'any[]'.
+lib/ip.ts(77,21): error TS2339: Property 'join' does not exist on type 'string'.
 lib/ip.ts(88,4): error TS2339: Property 'isV4Format' does not exist on type 'HTMLElement'.
-lib/ip.ts(89,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ip.ts(92,4): error TS2339: Property 'isV6Format' does not exist on type 'HTMLElement'.
-lib/ip.ts(93,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(97,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lib/ip.ts(100,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
+lib/ip.ts(97,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/ip.ts(100,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/ip.ts(106,4): error TS2339: Property 'fromPrefixLen' does not exist on type 'HTMLElement'.
-lib/ip.ts(117,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(117,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/ip.ts(124,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(124,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(126,25): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ip.ts(117,9): error TS2740: Type 'Buffer' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 lib/ip.ts(129,22): error TS2554: Expected 0 arguments, but got 1.
 lib/ip.ts(132,4): error TS2339: Property 'mask' does not exist on type 'HTMLElement'.
-lib/ip.ts(132,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(132,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(133,13): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
 lib/ip.ts(134,13): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
-lib/ip.ts(141,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(142,14): error TS2538: Type 'Number' cannot be used as an index type.
-lib/ip.ts(147,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(148,14): error TS2538: Type 'Number' cannot be used as an index type.
-lib/ip.ts(148,24): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-lib/ip.ts(152,28): error TS2339: Property 'length' does not exist on type 'Object'.
-lib/ip.ts(152,40): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(153,14): error TS2538: Type 'Number' cannot be used as an index type.
-lib/ip.ts(159,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(160,14): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(160,39): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(162,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(164,21): error TS2339: Property 'length' does not exist on type 'Object'.
-lib/ip.ts(164,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(165,12): error TS2538: Type 'Number' cannot be used as an index type.
+lib/ip.ts(152,28): error TS2339: Property 'length' does not exist on type 'object'.
+lib/ip.ts(164,21): error TS2339: Property 'length' does not exist on type 'object'.
 lib/ip.ts(168,22): error TS2554: Expected 0 arguments, but got 1.
 lib/ip.ts(171,4): error TS2339: Property 'cidr' does not exist on type 'HTMLElement'.
-lib/ip.ts(172,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(179,27): error TS2339: Property 'fromPrefixLen' does not exist on type 'HTMLElement'.
 lib/ip.ts(181,13): error TS2339: Property 'mask' does not exist on type 'HTMLElement'.
 lib/ip.ts(184,4): error TS2339: Property 'subnet' does not exist on type 'HTMLElement'.
 lib/ip.ts(185,37): error TS2339: Property 'toLong' does not exist on type 'HTMLElement'.
 lib/ip.ts(185,47): error TS2339: Property 'mask' does not exist on type 'HTMLElement'.
-lib/ip.ts(188,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(188,32): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
-lib/ip.ts(193,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(197,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(198,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(203,48): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(206,24): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
 lib/ip.ts(208,12): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
 lib/ip.ts(209,12): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(209,21): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 lib/ip.ts(211,12): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(211,21): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ip.ts(211,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(212,12): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(212,21): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ip.ts(212,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(213,26): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(213,35): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-lib/ip.ts(217,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ip.ts(213,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(220,36): error TS2339: Property 'toLong' does not exist on type 'HTMLElement'.
 lib/ip.ts(220,46): error TS2339: Property 'mask' does not exist on type 'HTMLElement'.
 lib/ip.ts(225,4): error TS2339: Property 'cidrSubnet' does not exist on type 'HTMLElement'.
-lib/ip.ts(226,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(233,27): error TS2339: Property 'fromPrefixLen' does not exist on type 'HTMLElement'.
 lib/ip.ts(235,13): error TS2339: Property 'subnet' does not exist on type 'HTMLElement'.
 lib/ip.ts(238,4): error TS2339: Property 'not' does not exist on type 'HTMLElement'.
-lib/ip.ts(239,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(239,26): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
 lib/ip.ts(243,22): error TS2554: Expected 0 arguments, but got 1.
 lib/ip.ts(246,4): error TS2339: Property 'or' does not exist on type 'HTMLElement'.
-lib/ip.ts(246,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(246,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(247,10): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
 lib/ip.ts(248,10): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
 lib/ip.ts(255,24): error TS2554: Expected 0 arguments, but got 1.
-lib/ip.ts(259,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(260,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(267,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(268,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(268,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(271,22): error TS2554: Expected 0 arguments, but got 1.
 lib/ip.ts(274,4): error TS2339: Property 'isEqual' does not exist on type 'HTMLElement'.
-lib/ip.ts(274,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(274,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(275,10): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
 lib/ip.ts(276,10): error TS2339: Property 'toBuffer' does not exist on type 'HTMLElement'.
-lib/ip.ts(288,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ip.ts(298,26): error TS2339: Property 'readUInt16BE' does not exist on type 'any[]'.
 lib/ip.ts(308,4): error TS2339: Property 'isPrivate' does not exist on type 'HTMLElement'.
-lib/ip.ts(310,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(311,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(313,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(314,74): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(315,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(316,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(317,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(318,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(319,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ip.ts(322,4): error TS2339: Property 'isPublic' does not exist on type 'HTMLElement'.
-lib/ip.ts(322,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ip.ts(323,14): error TS2339: Property 'isPrivate' does not exist on type 'HTMLElement'.
 lib/ip.ts(326,4): error TS2339: Property 'isLoopback' does not exist on type 'HTMLElement'.
-lib/ip.ts(328,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(329,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(330,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ip.ts(331,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ip.ts(334,4): error TS2339: Property 'loopback' does not exist on type 'HTMLElement'.
-lib/ip.ts(338,3): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/ip.ts(338,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/ip.ts(340,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-lib/ip.ts(340,28): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+lib/ip.ts(338,3): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/ip.ts(338,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(340,7): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+lib/ip.ts(340,28): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
 lib/ip.ts(362,4): error TS2339: Property 'address' does not exist on type 'HTMLElement'.
-lib/ip.ts(368,3): error TS2322: Type 'String' is not assignable to type 'Number'.
-lib/ip.ts(368,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lib/ip.ts(375,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(375,35): error TS2538: Type 'String' cannot be used as an index type.
-lib/ip.ts(376,59): error TS2339: Property 'family' does not exist on type 'Object'.
-lib/ip.ts(377,14): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
-lib/ip.ts(385,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(385,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ip.ts(390,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ip.ts(368,3): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/ip.ts(368,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(376,59): error TS2339: Property 'family' does not exist on type 'object'.
+lib/ip.ts(377,14): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/ip.ts(385,50): error TS2345: Argument of type '(nic: any[]) => any' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any'.
+  Types of parameters 'nic' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'any[]'.
+lib/ip.ts(390,41): error TS2538: Type 'any[]' cannot be used as an index type.
 lib/ip.ts(391,15): error TS2339: Property 'family' does not exist on type 'HTMLElement'.
 lib/ip.ts(391,49): error TS2339: Property 'family' does not exist on type 'HTMLElement'.
 lib/ip.ts(392,19): error TS2339: Property 'family' does not exist on type 'HTMLElement'.
@@ -179,16 +96,9 @@ lib/ip.ts(399,14): error TS2339: Property 'isPublic' does not exist on type 'HTM
 lib/ip.ts(399,31): error TS2339: Property 'address' does not exist on type 'HTMLElement'.
 lib/ip.ts(405,27): error TS2339: Property 'loopback' does not exist on type 'HTMLElement'.
 lib/ip.ts(408,4): error TS2339: Property 'toLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(410,25): error TS2345: Argument of type '(octet: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+lib/ip.ts(410,25): error TS2345: Argument of type '(octet: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'octet' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'Number'.
-lib/ip.ts(411,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(412,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(412,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-lib/ip.ts(414,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+    Type 'string' is not assignable to type 'number'.
+lib/ip.ts(412,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ip.ts(417,4): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
-lib/ip.ts(418,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(419,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(420,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ip.ts(421,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 

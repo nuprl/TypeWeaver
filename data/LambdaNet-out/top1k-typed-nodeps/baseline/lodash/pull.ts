@@ -22,7 +22,7 @@ import pullAll from './pullAll.js'
  * console.log(array)
  * // => ['b', 'b']
  */
-function pull(array: Array, ...values): Promise {
+function pull(array: any[], ...values): Promise {
   return pullAll(array, values)
 }
 

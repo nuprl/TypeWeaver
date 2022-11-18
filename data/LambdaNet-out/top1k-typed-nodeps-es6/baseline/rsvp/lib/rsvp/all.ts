@@ -11,6 +11,6 @@ import Promise from "./promise";
   @param {String} [label] An optional label. This is useful
   for tooling.
 */
-export default function all(array: Array, label: String): String {
+export default function all(array: any[], label: string): string {
   return Promise.all(array, label);
 }

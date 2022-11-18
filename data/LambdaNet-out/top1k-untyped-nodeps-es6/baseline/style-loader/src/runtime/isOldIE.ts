@@ -1,7 +1,7 @@
-let memo: Boolean;
+let memo: boolean;
 
 /* istanbul ignore next  */
-function isOldIE(): Boolean {
+function isOldIE(): boolean {
   if (typeof memo === "undefined") {
     // Test for IE <= 9 as proposed by Browserhacks
     // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805

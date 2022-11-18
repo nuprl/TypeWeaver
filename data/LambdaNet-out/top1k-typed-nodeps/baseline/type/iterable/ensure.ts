@@ -6,11 +6,11 @@ var resolveException: Function    = require("../lib/resolve-exception")
   , ensurePlainFunction: Function = require("../plain-function/ensure")
   , is: Function                  = require("./is");
 
-var invalidItemsLimit: Number = 3;
+var invalidItemsLimit: number = 3;
 
-module.exports = function (value: Object/*, options*/) {
-	var options: Object = arguments[1];
-	var mainErrorMessage: String =
+module.exports = function (value: object/*, options*/) {
+	var options: object = arguments[1];
+	var mainErrorMessage: string =
 		options && options.name
 			? "Expected an iterable for %n, received %v"
 			: "%v is not expected iterable";
@@ -19,11 +19,11 @@ module.exports = function (value: Object/*, options*/) {
 
 	var ensureItem: Function = ensurePlainFunction(options.ensureItem, { isOptional: true });
 	if (ensureItem) {
-		var coercedValue: Array = [];
-		var iterator: Object = value[Symbol.iterator]();
-		var item: HTMLElement, invalidItems: Array;
+		var coercedValue: any[] = [];
+		var iterator: object = value[Symbol.iterator]();
+		var item: HTMLElement, invalidItems: any[];
 		while (!(item = iterator.next()).done) {
-			var newItemValue: String;
+			var newItemValue: string;
 			try {
 				newItemValue = ensureItem(item.value);
 			} catch (error) {
@@ -34,7 +34,7 @@ module.exports = function (value: Object/*, options*/) {
 			coercedValue.push(newItemValue);
 		}
 		if (invalidItems) {
-			var errorMessage: String =
+			var errorMessage: string =
 				resolveErrorMessage(mainErrorMessage, value, options) +
 				".\n           Following items are invalid:";
 			for (var i = 0; i < invalidItems.length; ++i) {

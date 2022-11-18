@@ -12,7 +12,7 @@ import DescriptionFileUtils from './DescriptionFileUtils';
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /** @typedef {{name: string|Array<string>, forceRelative: boolean}} MainFieldOptions */
 
-const alreadyTriedMainField: String = Symbol("alreadyTriedMainField");
+const alreadyTriedMainField: string = Symbol("alreadyTriedMainField");
 
 export default class MainFieldPlugin {
 	/**
@@ -31,18 +31,18 @@ export default class MainFieldPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("MainFieldPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("MainFieldPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				if (
 					request.path !== request.descriptionFileRoot ||
 					request[alreadyTriedMainField] === request.descriptionFilePath ||
 					!request.descriptionFilePath
 				)
 					return callback();
-				const filename: String = path.basename(request.descriptionFilePath);
-				let mainModule: String = DescriptionFileUtils.getField(
+				const filename: string = path.basename(request.descriptionFilePath);
+				let mainModule: string = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					this.options.name
 				);
@@ -57,7 +57,7 @@ export default class MainFieldPlugin {
 				}
 				if (this.options.forceRelative && !/^\.\.?\//.test(mainModule))
 					mainModule = "./" + mainModule;
-				const obj: Object = {
+				const obj: object = {
 					...request,
 					request: mainModule,
 					module: false,

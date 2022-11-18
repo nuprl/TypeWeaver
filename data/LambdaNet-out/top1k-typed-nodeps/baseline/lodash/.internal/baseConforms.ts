@@ -8,9 +8,9 @@ import keys from '../keys.js'
  * @param {Object} source The object of property predicates to conform to.
  * @returns {Function} Returns the new spec function.
  */
-function baseConforms(source: String): Function {
-  const props: Object = keys(source)
-  return (object: Object) => baseConformsTo(object, source, props)
+function baseConforms(source: string): Function {
+  const props: object = keys(source)
+  return (object: object) => baseConformsTo(object, source, props)
 }
 
 export default baseConforms

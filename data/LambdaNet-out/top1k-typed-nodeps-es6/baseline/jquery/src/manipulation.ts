@@ -28,7 +28,7 @@ var
 	rnoInnerhtml: RegExp = /<script|<style|<link/i;
 
 // Prefer a tbody over its parent table for containing new rows
-function manipulationTarget( elem: String, content: Object ): String {
+function manipulationTarget( elem: string, content: object ): string {
 	if ( nodeName( elem, "table" ) &&
 		nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ) {
 
@@ -39,11 +39,11 @@ function manipulationTarget( elem: String, content: Object ): String {
 }
 
 // Replace/restore the type attribute of script elements for safe DOM manipulation
-function disableScript( elem: Object ): Object {
+function disableScript( elem: object ): object {
 	elem.type = ( elem.getAttribute( "type" ) !== null ) + "/" + elem.type;
 	return elem;
 }
-function restoreScript( elem: Object ): String {
+function restoreScript( elem: object ): string {
 	if ( ( elem.type || "" ).slice( 0, 5 ) === "true/" ) {
 		elem.type = elem.type.slice( 5 );
 	} else {
@@ -53,8 +53,8 @@ function restoreScript( elem: Object ): String {
 	return elem;
 }
 
-function cloneCopyEvent( src: String, dest: Object ): Void {
-	var i: Number, l: Function, type: String, pdataOld: Object, udataOld: Function, udataCur: String, events: Number;
+function cloneCopyEvent( src: string, dest: object ): Void {
+	var i: number, l: Function, type: string, pdataOld: object, udataOld: Function, udataCur: string, events: number;
 
 	if ( dest.nodeType !== 1 ) {
 		return;
@@ -85,21 +85,21 @@ function cloneCopyEvent( src: String, dest: Object ): Void {
 	}
 }
 
-function domManip( collection: Array, args: Object, callback: Function, ignored: String ): Array {
+function domManip( collection: any[], args: object, callback: Function, ignored: string ): any[] {
 
 	// Flatten any nested arrays
 	args = flat( args );
 
-	var fragment: Object, first: Object, scripts: Array, hasScripts: Number, node: Object, doc: String,
-		i: Number = 0,
-		l: Number = collection.length,
-		iNoClone: Number = l - 1,
+	var fragment: object, first: object, scripts: any[], hasScripts: number, node: object, doc: string,
+		i: number = 0,
+		l: number = collection.length,
+		iNoClone: number = l - 1,
 		value: Function = args[ 0 ],
-		valueIsFunction: Boolean = typeof value === "function";
+		valueIsFunction: boolean = typeof value === "function";
 
 	if ( valueIsFunction ) {
-		return collection.each( function( index: String ) {
-			var self: Object = collection.eq( index );
+		return collection.each( function( index: string ) {
+			var self: object = collection.eq( index );
 			args[ 0 ] = value.call( this, index, self.html() );
 			domManip( self, args, callback, ignored );
 		} );
@@ -170,10 +170,10 @@ function domManip( collection: Array, args: Object, callback: Function, ignored:
 	return collection;
 }
 
-function remove( elem: Array, selector: String, keepData: Object ): String {
-	var node: Object,
-		nodes: Object = selector ? jQuery.filter( selector, elem ) : elem,
-		i: Number = 0;
+function remove( elem: any[], selector: string, keepData: object ): string {
+	var node: object,
+		nodes: object = selector ? jQuery.filter( selector, elem ) : elem,
+		i: number = 0;
 
 	for ( ; ( node = nodes[ i ] ) != null; i++ ) {
 		if ( !keepData && node.nodeType === 1 ) {
@@ -196,10 +196,10 @@ jQuery.extend( {
 		return html;
 	},
 
-	clone: function( elem: Array, dataAndEvents: Boolean, deepDataAndEvents: Boolean ) {
-		var i: Number, l: Function, srcElements: Array, destElements: Object,
-			clone: String = elem.cloneNode( true ),
-			inPage: Number = isAttached( elem );
+	clone: function( elem: any[], dataAndEvents: boolean, deepDataAndEvents: boolean ) {
+		var i: number, l: Function, srcElements: any[], destElements: object,
+			clone: string = elem.cloneNode( true ),
+			inPage: number = isAttached( elem );
 
 		// Fix IE cloning issues
 		if ( isIE && ( elem.nodeType === 1 || elem.nodeType === 11 ) &&
@@ -246,9 +246,9 @@ jQuery.extend( {
 	},
 
 	cleanData: function( elems: Promise ) {
-		var data: Object, elem: Object, type: String,
-			special: Object = jQuery.event.special,
-			i: Number = 0;
+		var data: object, elem: object, type: string,
+			special: object = jQuery.event.special,
+			i: number = 0;
 
 		for ( ; ( elem = elems[ i ] ) !== undefined; i++ ) {
 			if ( acceptData( elem ) ) {
@@ -281,16 +281,16 @@ jQuery.extend( {
 } );
 
 jQuery.fn.extend( {
-	detach: function( selector: String ) {
+	detach: function( selector: string ) {
 		return remove( this, selector, true );
 	},
 
-	remove: function( selector: String ) {
+	remove: function( selector: string ) {
 		return remove( this, selector );
 	},
 
-	text: function( value: String ) {
-		return access( this, function( value: String ) {
+	text: function( value: string ) {
+		return access( this, function( value: string ) {
 			return value === undefined ?
 				jQuery.text( this ) :
 				this.empty().each( function() {
@@ -302,25 +302,25 @@ jQuery.fn.extend( {
 	},
 
 	append: function() {
-		return domManip( this, arguments, function( elem: String ) {
+		return domManip( this, arguments, function( elem: string ) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
-				var target: Object = manipulationTarget( this, elem );
+				var target: object = manipulationTarget( this, elem );
 				target.appendChild( elem );
 			}
 		} );
 	},
 
 	prepend: function() {
-		return domManip( this, arguments, function( elem: String ) {
+		return domManip( this, arguments, function( elem: string ) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
-				var target: Object = manipulationTarget( this, elem );
+				var target: object = manipulationTarget( this, elem );
 				target.insertBefore( elem, target.firstChild );
 			}
 		} );
 	},
 
 	before: function() {
-		return domManip( this, arguments, function( elem: String ) {
+		return domManip( this, arguments, function( elem: string ) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this );
 			}
@@ -328,7 +328,7 @@ jQuery.fn.extend( {
 	},
 
 	after: function() {
-		return domManip( this, arguments, function( elem: String ) {
+		return domManip( this, arguments, function( elem: string ) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this.nextSibling );
 			}
@@ -337,7 +337,7 @@ jQuery.fn.extend( {
 
 	empty: function() {
 		var elem: HTMLElement,
-			i: Number = 0;
+			i: number = 0;
 
 		for ( ; ( elem = this[ i ] ) != null; i++ ) {
 			if ( elem.nodeType === 1 ) {
@@ -353,7 +353,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	clone: function( dataAndEvents: Number, deepDataAndEvents: Number ) {
+	clone: function( dataAndEvents: number, deepDataAndEvents: number ) {
 		dataAndEvents = dataAndEvents == null ? false : dataAndEvents;
 		deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;
 
@@ -362,11 +362,11 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	html: function( value: String ) {
-		return access( this, function( value: Number ) {
-			var elem: Number = this[ 0 ] || {},
-				i: Number = 0,
-				l: Number = this.length;
+	html: function( value: string ) {
+		return access( this, function( value: number ) {
+			var elem: number = this[ 0 ] || {},
+				i: number = 0,
+				l: number = this.length;
 
 			if ( value === undefined && elem.nodeType === 1 ) {
 				return elem.innerHTML;
@@ -402,10 +402,10 @@ jQuery.fn.extend( {
 	},
 
 	replaceWith: function() {
-		var ignored: Array = [];
+		var ignored: any[] = [];
 
 		// Make the changes, replacing each non-ignored context element with the new content
-		return domManip( this, arguments, function( elem: Array ) {
+		return domManip( this, arguments, function( elem: any[] ) {
 			var parent: Function = this.parentNode;
 
 			if ( jQuery.inArray( this, ignored ) < 0 ) {
@@ -426,13 +426,13 @@ jQuery.each( {
 	insertBefore: "before",
 	insertAfter: "after",
 	replaceAll: "replaceWith"
-}, function( name: String, original: Array ) {
-	jQuery.fn[ name ] = function( selector: String ) {
-		var elems: Object,
-			ret: Array = [],
-			insert: Array = jQuery( selector ),
-			last: Number = insert.length - 1,
-			i: Number = 0;
+}, function( name: string, original: any[] ) {
+	jQuery.fn[ name ] = function( selector: string ) {
+		var elems: object,
+			ret: any[] = [],
+			insert: any[] = jQuery( selector ),
+			last: number = insert.length - 1,
+			i: number = 0;
 
 		for ( ; i <= last; i++ ) {
 			elems = i === last ? this : this.clone( true );

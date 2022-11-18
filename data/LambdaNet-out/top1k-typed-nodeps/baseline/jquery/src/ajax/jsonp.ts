@@ -4,24 +4,24 @@ import rquery from "./var/rquery.js";
 
 import "../ajax.js";
 
-var oldCallbacks: Array = [],
+var oldCallbacks: any[] = [],
 	rjsonp: RegExp = /(=)\?(?=&|$)|\?\?/;
 
 // Default jsonp settings
 jQuery.ajaxSetup( {
 	jsonp: "callback",
 	jsonpCallback: function() {
-		var callback: Number = oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce.guid++ ) );
+		var callback: number = oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce.guid++ ) );
 		this[ callback ] = true;
 		return callback;
 	}
 } );
 
 // Detect, normalize options and install callbacks for jsonp requests
-jQuery.ajaxPrefilter( "jsonp", function( s: Object, originalSettings: Object, jqXHR: Object ) {
+jQuery.ajaxPrefilter( "jsonp", function( s: object, originalSettings: object, jqXHR: object ) {
 
-	var callbackName: String, overwritten: Function, responseContainer: Object,
-		jsonProp: Number = s.jsonp !== false && ( rjsonp.test( s.url ) ?
+	var callbackName: string, overwritten: Function, responseContainer: object,
+		jsonProp: number = s.jsonp !== false && ( rjsonp.test( s.url ) ?
 			"url" :
 			typeof s.data === "string" &&
 				( s.contentType || "" )

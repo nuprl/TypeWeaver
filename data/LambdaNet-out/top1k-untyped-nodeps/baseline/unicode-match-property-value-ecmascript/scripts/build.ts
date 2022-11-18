@@ -1,6 +1,6 @@
 'use strict';
 
-const valueAliases: String = require('unicode-property-value-aliases-ecmascript');
+const valueAliases: string = require('unicode-property-value-aliases-ecmascript');
 const jsesc: Function = require('jsesc');
 
 const propertyToValueAliases: Map = new Map(valueAliases);
@@ -11,7 +11,7 @@ for (const [property, values] of valueAliases) {
 	}
 }
 
-const output: String = `module.exports = ${
+const output: string = `module.exports = ${
 	jsesc(propertyToValueAliases, {
 		'compact': false
 	})

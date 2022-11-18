@@ -22,8 +22,8 @@ const reQuotes: RegExp = /['\u2019]/g
  * lowerCase('__FOO_BAR__')
  * // => 'foo bar'
  */
-const lowerCase: Function = (string: String) => (
-  words(toString(string).replace(reQuotes, '')).reduce((result: Number, word: String, index: Boolean) => (
+const lowerCase: Function = (string: string) => (
+  words(toString(string).replace(reQuotes, '')).reduce((result: number, word: string, index: boolean) => (
     result + (index ? ' ' : '') + word.toLowerCase()
   ), '')
 )

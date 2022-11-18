@@ -1,12 +1,12 @@
 'use strict';
 
-const isObject: Function = (val: String) => val !== null && typeof val === 'object';
+const isObject: Function = (val: string) => val !== null && typeof val === 'object';
 const dataDesc: Error = new Set(['configurable', 'enumerable', 'get', 'set']);
 const accDesc: Error = new Set(['configurable', 'enumerable', 'writable', 'value']);
 
-module.exports = (obj: Object, key: String, checkProto: Number) => {
+module.exports = (obj: object, key: string, checkProto: number) => {
   if (!isObject(obj)) return false;
-  let desc: Object = key ? Object.getOwnPropertyDescriptor(obj, key) : obj;
+  let desc: object = key ? Object.getOwnPropertyDescriptor(obj, key) : obj;
 
   if (!desc && key && checkProto !== false && obj.constructor) {
     desc = Object.getOwnPropertyDescriptor(obj.constructor.prototype, key);
@@ -17,7 +17,7 @@ module.exports = (obj: Object, key: String, checkProto: Number) => {
     return false;
   }
 
-  let keys: Array = Object.keys(desc);
+  let keys: any[] = Object.keys(desc);
   if (isDataDesc(keys)) {
     if (typeof desc.get !== 'function' && desc.get !== void 0) return false;
     if (typeof desc.set !== 'function' && desc.set !== void 0) return false;
@@ -30,10 +30,10 @@ module.exports = (obj: Object, key: String, checkProto: Number) => {
   return false;
 };
 
-function isDataDesc(keys: Array): Boolean {
-  return keys.every((k: Number) => dataDesc.has(k));
+function isDataDesc(keys: any[]): boolean {
+  return keys.every((k: number) => dataDesc.has(k));
 }
 
-function isAccessorDesc(keys: Array): Boolean {
-  return keys.every((k: Number) => accDesc.has(k));
+function isAccessorDesc(keys: any[]): boolean {
+  return keys.every((k: number) => accDesc.has(k));
 }

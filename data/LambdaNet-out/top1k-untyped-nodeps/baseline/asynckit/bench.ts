@@ -1,15 +1,15 @@
 /* eslint no-console: "off" */
 
-var asynckit: String = require('./')
-  , async: Array    = require('async')
-  , assert: String   = require('assert')
-  , expected: Number = 0
+var asynckit: string = require('./')
+  , async: any[]    = require('async')
+  , assert: string   = require('assert')
+  , expected: number = 0
   ;
 
-var Benchmark: Array = require('benchmark');
+var Benchmark: any[] = require('benchmark');
 var suite: HTMLElement = new Benchmark.Suite;
 
-var source: Array = [];
+var source: any[] = [];
 for (var z = 1; z < 100; z++)
 {
   source.push(z);
@@ -19,12 +19,12 @@ for (var z = 1; z < 100; z++)
 suite
 // add tests
 
-.add('async.map', function(deferred: Array)
+.add('async.map', function(deferred: any[])
 {
-  var total: Number = 0;
+  var total: number = 0;
 
   async.map(source,
-  function(i: String, cb: Function)
+  function(i: string, cb: Function)
   {
     setImmediate(function()
     {
@@ -32,7 +32,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: String, result: Array)
+  function(err: string, result: any[])
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);
@@ -41,12 +41,12 @@ suite
 }, {'defer': true})
 
 
-.add('asynckit.parallel', function(deferred: Array)
+.add('asynckit.parallel', function(deferred: any[])
 {
-  var total: Number = 0;
+  var total: number = 0;
 
   asynckit.parallel(source,
-  function(i: String, cb: Function)
+  function(i: string, cb: Function)
   {
     setImmediate(function()
     {
@@ -54,7 +54,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: String, result: Array)
+  function(err: string, result: any[])
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);

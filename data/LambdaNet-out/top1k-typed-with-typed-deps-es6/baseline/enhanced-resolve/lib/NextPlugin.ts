@@ -23,10 +23,10 @@ export default class NextPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("NextPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("NextPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				resolver.doResolve(target, request, null, resolveContext, callback);
 			});
 	}

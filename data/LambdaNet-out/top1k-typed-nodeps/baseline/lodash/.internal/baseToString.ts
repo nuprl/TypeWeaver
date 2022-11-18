@@ -1,10 +1,10 @@
 import isSymbol from '../isSymbol.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
+const INFINITY: number = 1 / 0
 
 /** Used to convert symbols to primitives and strings. */
-const symbolToString: String = Symbol.prototype.toString
+const symbolToString: string = Symbol.prototype.toString
 
 /**
  * The base implementation of `toString` which doesn't convert nullish
@@ -14,7 +14,7 @@ const symbolToString: String = Symbol.prototype.toString
  * @param {*} value The value to process.
  * @returns {string} Returns the string.
  */
-function baseToString(value: Number): String {
+function baseToString(value: number): string {
   // Exit early for strings to avoid a performance hit in some environments.
   if (typeof value === 'string') {
     return value
@@ -26,7 +26,7 @@ function baseToString(value: Number): String {
   if (isSymbol(value)) {
     return symbolToString ? symbolToString.call(value) : ''
   }
-  const result: String = `${value}`
+  const result: string = `${value}`
   return (result === '0' && (1 / value) === -INFINITY) ? '-0' : result
 }
 

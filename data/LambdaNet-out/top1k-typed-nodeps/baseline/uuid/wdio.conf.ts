@@ -1,19 +1,19 @@
 /* eslint-disable camelcase */
 
-const PORT: Number = 9000;
-const PROJECT: String = process.env.GITHUB_REPOSITORY || 'node-uuid';
-const GITHUB_SHA: String = process.env.GITHUB_SHA || '';
-const GITHUB_REF: String = process.env.GITHUB_REF || '';
-const BUILD: String = GITHUB_SHA || GITHUB_REF ? `${GITHUB_REF} ${GITHUB_SHA}` : 'manual build';
+const PORT: number = 9000;
+const PROJECT: string = process.env.GITHUB_REPOSITORY || 'node-uuid';
+const GITHUB_SHA: string = process.env.GITHUB_SHA || '';
+const GITHUB_REF: string = process.env.GITHUB_REF || '';
+const BUILD: string = GITHUB_SHA || GITHUB_REF ? `${GITHUB_REF} ${GITHUB_SHA}` : 'manual build';
 
-const commonCapabilities: Object = {
+const commonCapabilities: object = {
   projectName: PROJECT,
   buildName: BUILD,
   sessionName: 'browser test',
   resolution: '1024x768',
 };
 
-const capabilities: Array = [
+const capabilities: any[] = [
   // Chrome
   // Latest
   {

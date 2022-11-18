@@ -1,10 +1,10 @@
 'use strict';
 import os from 'os';
 
-function homedir(): Boolean {
+function homedir(): boolean {
 	var env: HTMLElement = process.env;
-	var home: Number = env.HOME;
-	var user: Number = env.LOGNAME || env.USER || env.LNAME || env.USERNAME;
+	var home: number = env.HOME;
+	var user: number = env.LOGNAME || env.USER || env.LNAME || env.USERNAME;
 
 	if (process.platform === 'win32') {
 		return env.USERPROFILE || env.HOMEDRIVE + env.HOMEPATH || home || null;

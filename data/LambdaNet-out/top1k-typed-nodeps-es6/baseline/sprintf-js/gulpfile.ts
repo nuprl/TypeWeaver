@@ -10,7 +10,7 @@ import eslint from 'gulp-eslint';
 import mocha from 'gulp-mocha';
 import benchmark from 'gulp-benchmark';
 
-var banner: String      = '/*! <%= pkg.name %> v<%= pkg.version %> | Copyright (c) 2007-present, <%= pkg.author %> | <%= pkg.license %> */\n';
+var banner: string      = '/*! <%= pkg.name %> v<%= pkg.version %> | Copyright (c) 2007-present, <%= pkg.author %> | <%= pkg.license %> */\n';
 
 gulp.task('benchmark', function () {
     return gulp

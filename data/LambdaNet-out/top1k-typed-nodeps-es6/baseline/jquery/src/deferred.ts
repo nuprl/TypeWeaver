@@ -3,14 +3,14 @@ import slice from "./var/slice.js";
 
 import "./callbacks.js";
 
-function Identity( v: String ): String {
+function Identity( v: string ): string {
 	return v;
 }
 function Thrower( ex: Function ): Void {
 	throw ex;
 }
 
-function adoptValue( value: Object, resolve: Function, reject: String, noValue: String ): Void {
+function adoptValue( value: object, resolve: Function, reject: string, noValue: string ): Void {
 	var method: Function;
 
 	try {
@@ -43,7 +43,7 @@ function adoptValue( value: Object, resolve: Function, reject: String, noValue: 
 jQuery.extend( {
 
 	Deferred: function( func: Function ) {
-		var tuples: Object = [
+		var tuples: object = [
 
 				// action, add listener, callbacks,
 				// ... .then handlers, argument index, [final state]
@@ -54,8 +54,8 @@ jQuery.extend( {
 				[ "reject", "fail", jQuery.Callbacks( "once memory" ),
 					jQuery.Callbacks( "once memory" ), 1, "rejected" ]
 			],
-			state: String = "pending",
-			promise: Object = {
+			state: string = "pending",
+			promise: object = {
 				state: function() {
 					return state;
 				},
@@ -63,26 +63,26 @@ jQuery.extend( {
 					deferred.done( arguments ).fail( arguments );
 					return this;
 				},
-				catch: function( fn: String ) {
+				catch: function( fn: string ) {
 					return promise.then( null, fn );
 				},
 
 				// Keep pipe for back-compat
 				pipe: function( /* fnDone, fnFail, fnProgress */ ) {
-					var fns: Object = arguments;
+					var fns: object = arguments;
 
-					return jQuery.Deferred( function( newDefer: Object ) {
-						jQuery.each( tuples, function( _i: String, tuple: Promise ) {
+					return jQuery.Deferred( function( newDefer: object ) {
+						jQuery.each( tuples, function( _i: string, tuple: Promise ) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
-							var fn: Array = typeof fns[ tuple[ 4 ] ] === "function" &&
+							var fn: any[] = typeof fns[ tuple[ 4 ] ] === "function" &&
 								fns[ tuple[ 4 ] ];
 
 							// deferred.progress(function() { bind to newDefer or newDefer.notify })
 							// deferred.done(function() { bind to newDefer or newDefer.resolve })
 							// deferred.fail(function() { bind to newDefer or newDefer.reject })
 							deferred[ tuple[ 1 ] ]( function() {
-								var returned: Object = fn && fn.apply( this, arguments );
+								var returned: object = fn && fn.apply( this, arguments );
 								if ( returned && typeof returned.promise === "function" ) {
 									returned.promise()
 										.progress( newDefer.notify )
@@ -99,14 +99,14 @@ jQuery.extend( {
 						fns = null;
 					} ).promise();
 				},
-				then: function( onFulfilled: String, onRejected: String, onProgress: String ) {
-					var maxDepth: Number = 0;
-					function resolve( depth: Number, deferred: Object, handler: Function, special: String ): Function {
+				then: function( onFulfilled: string, onRejected: string, onProgress: string ) {
+					var maxDepth: number = 0;
+					function resolve( depth: number, deferred: object, handler: Function, special: string ): Function {
 						return function() {
-							var that: Array = this,
+							var that: any[] = this,
 								args: Element = arguments,
 								mightThrow: Function = function() {
-									var returned: Object, then: Function;
+									var returned: object, then: Function;
 
 									// Support: Promises/A+ section 2.3.3.3.3
 									// https://promisesaplus.com/#point-59
@@ -226,7 +226,7 @@ jQuery.extend( {
 						};
 					}
 
-					return jQuery.Deferred( function( newDefer: Object ) {
+					return jQuery.Deferred( function( newDefer: object ) {
 
 						// progress_handlers.add( ... )
 						tuples[ 0 ][ 3 ].add(
@@ -266,16 +266,16 @@ jQuery.extend( {
 
 				// Get a promise for this deferred
 				// If obj is provided, the promise aspect is added to the object
-				promise: function( obj: String ) {
+				promise: function( obj: string ) {
 					return obj != null ? jQuery.extend( obj, promise ) : promise;
 				}
 			},
-			deferred: Object = {};
+			deferred: object = {};
 
 		// Add list-specific methods
-		jQuery.each( tuples, function( i: Number, tuple: Promise ) {
-			var list: Object = tuple[ 2 ],
-				stateString: String = tuple[ 5 ];
+		jQuery.each( tuples, function( i: number, tuple: Promise ) {
+			var list: object = tuple[ 2 ],
+				stateString: string = tuple[ 5 ];
 
 			// promise.progress = list.add
 			// promise.done = list.add
@@ -340,25 +340,25 @@ jQuery.extend( {
 	},
 
 	// Deferred helper
-	when: function( singleValue: String ) {
+	when: function( singleValue: string ) {
 		var
 
 			// count of uncompleted subordinates
-			remaining: Number = arguments.length,
+			remaining: number = arguments.length,
 
 			// count of unprocessed arguments
-			i: Number = remaining,
+			i: number = remaining,
 
 			// subordinate fulfillment data
-			resolveContexts: Object = Array( i ),
-			resolveValues: Object = slice.call( arguments ),
+			resolveContexts: object = Array( i ),
+			resolveValues: object = slice.call( arguments ),
 
 			// the primary Deferred
-			primary: Object = jQuery.Deferred(),
+			primary: object = jQuery.Deferred(),
 
 			// subordinate callback factory
-			updateFunc: Function = function( i: String ) {
-				return function( value: String ) {
+			updateFunc: Function = function( i: string ) {
+				return function( value: string ) {
 					resolveContexts[ i ] = this;
 					resolveValues[ i ] = arguments.length > 1 ? slice.call( arguments ) : value;
 					if ( !( --remaining ) ) {

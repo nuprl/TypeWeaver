@@ -8,7 +8,7 @@ import base64VLQ from './base64-vlq';
 import { getNumberOfLines } from './helpers';
 import { getUnfinishedLine } from './helpers';
 
-const LINE_MAPPING: String = ";AAAA";
+const LINE_MAPPING: string = ";AAAA";
 
 class SingleLineNode {
 
@@ -32,9 +32,9 @@ class SingleLineNode {
 	getMappings(mappingsContext) {
 		if(!this.generatedCode)
 			return "";
-		const lines: String = this._numberOfLines;
-		const sourceIdx: Number = mappingsContext.ensureSource(this.source, this.originalSource);
-		let mappings: String = "A"; // generated column 0
+		const lines: string = this._numberOfLines;
+		const sourceIdx: number = mappingsContext.ensureSource(this.source, this.originalSource);
+		let mappings: string = "A"; // generated column 0
 		if(mappingsContext.unfinishedGeneratedLine)
 			mappings = "," + base64VLQ.encode(mappingsContext.unfinishedGeneratedLine);
 		mappings += base64VLQ.encode(sourceIdx - mappingsContext.currentSource); // source index
@@ -42,7 +42,7 @@ class SingleLineNode {
 		mappings += "A"; // original column 0
 		mappingsContext.currentSource = sourceIdx;
 		mappingsContext.currentOriginalLine = this.line;
-		const unfinishedGeneratedLine: Number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
+		const unfinishedGeneratedLine: number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
 		mappings += Array(lines).join(LINE_MAPPING);
 		if(unfinishedGeneratedLine === 0) {
 			mappings += ";";
@@ -58,7 +58,7 @@ class SingleLineNode {
 	}
 
 	mapGeneratedCode(fn) {
-		const generatedCode: String = fn(this.generatedCode);
+		const generatedCode: string = fn(this.generatedCode);
 		return new SingleLineNode(generatedCode, this.source, this.originalSource, this.line);
 	}
 

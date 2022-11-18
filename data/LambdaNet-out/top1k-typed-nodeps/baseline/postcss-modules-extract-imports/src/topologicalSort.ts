@@ -1,12 +1,12 @@
-const PERMANENT_MARKER: Number = 2;
-const TEMPORARY_MARKER: Number = 1;
+const PERMANENT_MARKER: number = 2;
+const TEMPORARY_MARKER: number = 1;
 
-function createError(node: Object, graph: Object): Object {
+function createError(node: object, graph: object): object {
   const er: Error = new Error("Nondeterministic import's order");
 
-  const related: Array = graph[node];
-  const relatedNode: Object = related.find(
-    (relatedNode: Object) => graph[relatedNode].indexOf(node) > -1
+  const related: any[] = graph[node];
+  const relatedNode: object = related.find(
+    (relatedNode: object) => graph[relatedNode].indexOf(node) > -1
   );
 
   er.nodes = [node, relatedNode];
@@ -14,7 +14,7 @@ function createError(node: Object, graph: Object): Object {
   return er;
 }
 
-function walkGraph(node: Object, graph: Object, state: Object, result: Array, strict: String): String {
+function walkGraph(node: object, graph: object, state: object, result: any[], strict: string): string {
   if (state[node] === PERMANENT_MARKER) {
     return;
   }
@@ -29,8 +29,8 @@ function walkGraph(node: Object, graph: Object, state: Object, result: Array, st
 
   state[node] = TEMPORARY_MARKER;
 
-  const children: Array = graph[node];
-  const length: Number = children.length;
+  const children: any[] = graph[node];
+  const length: number = children.length;
 
   for (let i = 0; i < length; ++i) {
     const error: Error = walkGraph(children[i], graph, state, result, strict);
@@ -45,15 +45,15 @@ function walkGraph(node: Object, graph: Object, state: Object, result: Array, st
   result.push(node);
 }
 
-function topologicalSort(graph: Function, strict: String): Array {
-  const result: Array = [];
+function topologicalSort(graph: Function, strict: string): any[] {
+  const result: any[] = [];
   const state: Function = {};
 
-  const nodes: Array = Object.keys(graph);
-  const length: Number = nodes.length;
+  const nodes: any[] = Object.keys(graph);
+  const length: number = nodes.length;
 
   for (let i = 0; i < length; ++i) {
-    const er: String = walkGraph(nodes[i], graph, state, result, strict);
+    const er: string = walkGraph(nodes[i], graph, state, result, strict);
 
     if (er instanceof Error) {
       return er;

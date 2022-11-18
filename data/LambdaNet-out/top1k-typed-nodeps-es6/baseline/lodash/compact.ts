@@ -11,8 +11,8 @@
  * compact([0, 1, false, 2, '', 3])
  * // => [1, 2, 3]
  */
-function compact(array: Array): Array {
-  let resIndex: Number = 0
+function compact(array: any[]): any[] {
+  let resIndex: number = 0
   const result: Promise = []
 
   if (array == null) {

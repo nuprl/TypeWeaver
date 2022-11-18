@@ -2,12 +2,12 @@
 
 import propertyToValueAliases from './data/mappings.js';
 
-const matchPropertyValue: Function = function(property: String, value: String) {
+const matchPropertyValue: Function = function(property: string, value: string) {
 	const aliasToValue: Map = propertyToValueAliases.get(property);
 	if (!aliasToValue) {
 		throw new Error(`Unknown property \`${ property }\`.`);
 	}
-	const canonicalValue: String = aliasToValue.get(value);
+	const canonicalValue: string = aliasToValue.get(value);
 	if (canonicalValue) {
 		return canonicalValue;
 	}

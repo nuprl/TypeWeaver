@@ -2,9 +2,9 @@
 
 import fs from 'fs';
 
-export default function( Release: Object ) {
+export default function( Release: object ) {
 
-	const distFiles: Array = [
+	const distFiles: any[] = [
 		"dist/jquery.js",
 		"dist/jquery.min.js",
 		"dist/jquery.min.map",
@@ -12,7 +12,7 @@ export default function( Release: Object ) {
 		"dist/jquery.slim.min.js",
 		"dist/jquery.slim.min.map"
 	];
-	const filesToCommit: Array = [
+	const filesToCommit: any[] = [
 		...distFiles,
 		"src/core.js"
 	];
@@ -21,8 +21,8 @@ export default function( Release: Object ) {
 
 	const npmTags: Function = Release.npmTags;
 
-	function setSrcVersion( filepath: String ): Void {
-		var contents: String = fs.readFileSync( filepath, "utf8" );
+	function setSrcVersion( filepath: string ): Void {
+		var contents: string = fs.readFileSync( filepath, "utf8" );
 		contents = contents.replace( /@VERSION/g, Release.newVersion );
 		fs.writeFileSync( filepath, contents, "utf8" );
 	}
@@ -74,7 +74,7 @@ export default function( Release: Object ) {
 		 * Publish to distribution repo and npm
 		 * @param {Function} callback
 		 */
-		dist: function( callback: String ) {
+		dist: function( callback: string ) {
 			cdn.makeArchives( Release, function() {
 				dist( Release, distFiles, callback );
 			} );
@@ -82,7 +82,7 @@ export default function( Release: Object ) {
 	} );
 };
 
-export const dependencies: Array = [
+export const dependencies: any[] = [
 	"archiver@5.2.0",
 	"shelljs@0.8.4",
 	"inquirer@8.0.0"

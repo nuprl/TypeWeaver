@@ -19,9 +19,9 @@ import glob from 'glob';
  * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  ********************************************************************/
 
-var groups: Array = [], total: Number = 0, warning1: String = '/* ERROR: Rewrite using Buffer */\n', warning2: String = '\\/\\* ERROR\\: Rewrite using Buffer \\*\\/\\n', length: String, i: Number;
+var groups: any[] = [], total: number = 0, warning1: string = '/* ERROR: Rewrite using Buffer */\n', warning2: string = '\\/\\* ERROR\\: Rewrite using Buffer \\*\\/\\n', length: string, i: number;
 
-fs.readFile(__dirname + '/package.json', 'utf8', function (err: Boolean, data: Object) {
+fs.readFile(__dirname + '/package.json', 'utf8', function (err: boolean, data: object) {
   if (err) {
     throw err;
   }
@@ -175,9 +175,9 @@ groups.push([2, '(\\W)(?:v8\\:\\:)?(Persistent)(\\W)']);
 
 /* counts the number of capturing groups in a well-formed regular expression,
    ignoring non-capturing groups and escaped parentheses */
-function groupcount(s: String): Number {
-  var positive: Array = s.match(/\((?!\?)/g),
-      negative: Array = s.match(/\\\(/g);
+function groupcount(s: string): number {
+  var positive: any[] = s.match(/\((?!\?)/g),
+      negative: any[] = s.match(/\\\(/g);
   return (positive ? positive.length : 0) - (negative ? negative.length : 0);
 }
 
@@ -191,7 +191,7 @@ for (i = 1, length = groups.length; i < length; i++) {
 master = new RegExp(groups.map(function (a: Promise) { return a[1]; }).join('|'), 'gm');
 
 /* replacement function for String.replace, receives 21 arguments */
-function replace(): String {
+function replace(): string {
 	/* simple expressions */
       switch (arguments[groups[0][0]]) {
         case '_NAN_':
@@ -390,14 +390,14 @@ function replace(): String {
 }
 
 /* reads a file, runs replacement and writes it back */
-function processFile(file: String): Void {
-  fs.readFile(file, {encoding: 'utf8'}, function (err: Boolean, data: String) {
+function processFile(file: string): Void {
+  fs.readFile(file, {encoding: 'utf8'}, function (err: boolean, data: string) {
     if (err) {
       throw err;
     }
 
     /* run replacement twice, might need more runs */
-    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: Boolean) {
+    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: boolean) {
       if (err) {
         throw err;
       }
@@ -407,7 +407,7 @@ function processFile(file: String): Void {
 
 /* process file names from command line and process the identified files */
 for (i = 2, length = process.argv.length; i < length; i++) {
-  glob(process.argv[i], function (err: Boolean, matches: Array) {
+  glob(process.argv[i], function (err: boolean, matches: any[]) {
     if (err) {
       throw err;
     }

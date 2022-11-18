@@ -1,11 +1,11 @@
 'use strict';
 
-const path: String = require('path');
+const path: string = require('path');
 const scan: Function = require('./scan');
 const parse: Function = require('./parse');
-const utils: String = require('./utils');
-const constants: String = require('./constants');
-const isObject: Function = (val: Number) => val && typeof val === 'object' && !Array.isArray(val);
+const utils: string = require('./utils');
+const constants: string = require('./constants');
+const isObject: Function = (val: number) => val && typeof val === 'object' && !Array.isArray(val);
 
 /**
  * Creates a matcher function from one or more glob patterns. The
@@ -29,12 +29,12 @@ const isObject: Function = (val: Number) => val && typeof val === 'object' && !A
  * @api public
  */
 
-const picomatch: Function = (glob: Array, options: String, returnState: Boolean = false) => {
+const picomatch: Function = (glob: any[], options: string, returnState: boolean = false) => {
   if (Array.isArray(glob)) {
-    const fns: Array = glob.map((input: Element) => picomatch(input, options, returnState));
-    const arrayMatcher: Function = (str: String) => {
+    const fns: any[] = glob.map((input: Element) => picomatch(input, options, returnState));
+    const arrayMatcher: Function = (str: string) => {
       for (const isMatch of fns) {
-        const state: Boolean = isMatch(str);
+        const state: boolean = isMatch(str);
         if (state) return state;
       }
       return false;
@@ -42,30 +42,30 @@ const picomatch: Function = (glob: Array, options: String, returnState: Boolean 
     return arrayMatcher;
   }
 
-  const isState: Boolean = isObject(glob) && glob.tokens && glob.input;
+  const isState: boolean = isObject(glob) && glob.tokens && glob.input;
 
   if (glob === '' || (typeof glob !== 'string' && !isState)) {
     throw new TypeError('Expected pattern to be a non-empty string');
   }
 
-  const opts: Object = options || {};
-  const posix: Boolean = utils.isWindows(options);
+  const opts: object = options || {};
+  const posix: boolean = utils.isWindows(options);
   const regex: Function = isState
     ? picomatch.compileRe(glob, options)
     : picomatch.makeRe(glob, options, false, true);
 
-  const state: String = regex.state;
+  const state: string = regex.state;
   delete regex.state;
 
   let isIgnored: Function = () => false;
   if (opts.ignore) {
-    const ignoreOpts: Object = { ...options, ignore: null, onMatch: null, onResult: null };
+    const ignoreOpts: object = { ...options, ignore: null, onMatch: null, onResult: null };
     isIgnored = picomatch(opts.ignore, ignoreOpts, returnState);
   }
 
-  const matcher: Function = (input: Array, returnObject: Boolean = false) => {
+  const matcher: Function = (input: any[], returnObject: boolean = false) => {
     const { isMatch, match, output } = picomatch.test(input, regex, options, { glob, posix });
-    const result: Object = { glob, state, regex, posix, input, output, match, isMatch };
+    const result: object = { glob, state, regex, posix, input, output, match, isMatch };
 
     if (typeof opts.onResult === 'function') {
       opts.onResult(result);
@@ -114,7 +114,7 @@ const picomatch: Function = (glob: Array, options: String, returnState: Boolean 
  * @api public
  */
 
-picomatch.test = (input: HTMLInputElement, regex: Function, options: Object, { glob, posix } = {}) => {
+picomatch.test = (input: HTMLInputElement, regex: Function, options: object, { glob, posix } = {}) => {
   if (typeof input !== 'string') {
     throw new TypeError('Expected input to be a string');
   }
@@ -158,8 +158,8 @@ picomatch.test = (input: HTMLInputElement, regex: Function, options: Object, { g
  * @api public
  */
 
-picomatch.matchBase = (input: HTMLInputElement, glob: Array, options: Object, posix: Function = utils.isWindows(options)) => {
-  const regex: Array = glob instanceof RegExp ? glob : picomatch.makeRe(glob, options);
+picomatch.matchBase = (input: HTMLInputElement, glob: any[], options: object, posix: Function = utils.isWindows(options)) => {
+  const regex: any[] = glob instanceof RegExp ? glob : picomatch.makeRe(glob, options);
   return regex.test(path.basename(input));
 };
 
@@ -180,7 +180,7 @@ picomatch.matchBase = (input: HTMLInputElement, glob: Array, options: Object, po
  * @api public
  */
 
-picomatch.isMatch = (str: String, patterns: Array, options: Object) => picomatch(patterns, options)(str);
+picomatch.isMatch = (str: string, patterns: any[], options: object) => picomatch(patterns, options)(str);
 
 /**
  * Parse a glob pattern to create the source string for a regular
@@ -196,8 +196,8 @@ picomatch.isMatch = (str: String, patterns: Array, options: Object) => picomatch
  * @api public
  */
 
-picomatch.parse = (pattern: Array, options: Object) => {
-  if (Array.isArray(pattern)) return pattern.map((p: String) => picomatch.parse(p, options));
+picomatch.parse = (pattern: any[], options: object) => {
+  if (Array.isArray(pattern)) return pattern.map((p: string) => picomatch.parse(p, options));
   return parse(pattern, { ...options, fastpaths: false });
 };
 
@@ -228,7 +228,7 @@ picomatch.parse = (pattern: Array, options: Object) => {
  * @api public
  */
 
-picomatch.scan = (input: HTMLInputElement, options: Object) => scan(input, options);
+picomatch.scan = (input: HTMLInputElement, options: object) => scan(input, options);
 
 /**
  * Compile a regular expression from the `state` object returned by the
@@ -242,21 +242,21 @@ picomatch.scan = (input: HTMLInputElement, options: Object) => scan(input, optio
  * @api public
  */
 
-picomatch.compileRe = (state: Object, options: Object, returnOutput: Number = false, returnState: Boolean = false) => {
+picomatch.compileRe = (state: object, options: object, returnOutput: number = false, returnState: boolean = false) => {
   if (returnOutput === true) {
     return state.output;
   }
 
   const opts: HTMLElement = options || {};
-  const prepend: String = opts.contains ? '' : '^';
-  const append: String = opts.contains ? '' : '$';
+  const prepend: string = opts.contains ? '' : '^';
+  const append: string = opts.contains ? '' : '$';
 
-  let source: String = `${prepend}(?:${state.output})${append}`;
+  let source: string = `${prepend}(?:${state.output})${append}`;
   if (state && state.negated === true) {
     source = `^(?!${source}).*$`;
   }
 
-  const regex: String = picomatch.toRegex(source, options);
+  const regex: string = picomatch.toRegex(source, options);
   if (returnState === true) {
     regex.state = state;
   }
@@ -283,12 +283,12 @@ picomatch.compileRe = (state: Object, options: Object, returnOutput: Number = fa
  * @api public
  */
 
-picomatch.makeRe = (input: Object, options: Object = {}, returnOutput: Number = false, returnState: Function = false) => {
+picomatch.makeRe = (input: object, options: object = {}, returnOutput: number = false, returnState: Function = false) => {
   if (!input || typeof input !== 'string') {
     throw new TypeError('Expected a non-empty string');
   }
 
-  let parsed: Object = { negated: false, fastpaths: true };
+  let parsed: object = { negated: false, fastpaths: true };
 
   if (options.fastpaths !== false && (input[0] === '.' || input[0] === '*')) {
     parsed.output = parse.fastpaths(input, options);
@@ -318,7 +318,7 @@ picomatch.makeRe = (input: Object, options: Object = {}, returnOutput: Number = 
  * @api public
  */
 
-picomatch.toRegex = (source: Array, options: Object) => {
+picomatch.toRegex = (source: any[], options: object) => {
   try {
     const opts: HTMLElement = options || {};
     return new RegExp(source, opts.flags || (opts.nocase ? 'i' : ''));

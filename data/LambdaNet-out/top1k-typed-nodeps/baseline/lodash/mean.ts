@@ -12,8 +12,8 @@ import baseMean from './meanBy.js'
  * mean([4, 2, 8, 6])
  * // => 5
  */
-function mean(array: Array): Stack {
-  return baseMean(array, (value: String) => value)
+function mean(array: any[]): Stack {
+  return baseMean(array, (value: string) => value)
 }
 
 export default mean

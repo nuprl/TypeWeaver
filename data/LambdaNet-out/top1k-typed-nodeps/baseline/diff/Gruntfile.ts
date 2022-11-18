@@ -1,7 +1,7 @@
 /* eslint-env node */
 /* eslint-disable no-process-env, camelcase */
-const pkg: String = require('./package.json');
-const babel: String = require('rollup-plugin-babel');
+const pkg: string = require('./package.json');
+const babel: string = require('rollup-plugin-babel');
 
 module.exports = function(grunt: HTMLElement) {
 
@@ -91,7 +91,7 @@ module.exports = function(grunt: HTMLElement) {
           expand: true,
           src: ['*.js', '!*.min.js'],
           dest: 'dist/',
-          rename: function(dest: String, src: String) {
+          rename: function(dest: string, src: string) {
             return dest + src.replace(/\.js$/, '.min.js');
           }
         }]
@@ -101,7 +101,7 @@ module.exports = function(grunt: HTMLElement) {
     copy: {
       dist: {
         options: {
-          processContent: function(content: String) {
+          processContent: function(content: string) {
             return grunt.template.process('/*!\n\n <%= pkg.name %> v<%= pkg.version %>\n\n<%= grunt.file.read("LICENSE") %>\n@license\n*/\n')
                 + content;
           }

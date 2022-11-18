@@ -21,7 +21,7 @@ import map from './map.js'
  * flatMap([1, 2], duplicate)
  * // => [1, 1, 2, 2]
  */
-function flatMap(collection: String, iteratee: String): String {
+function flatMap(collection: string, iteratee: string): string {
   return baseFlatten(map(collection, iteratee), 1)
 }
 

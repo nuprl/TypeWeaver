@@ -8,7 +8,7 @@ import { mkdirp } from '../mkdirs';
 import { pathExists } from '../path-exists';
 import stat from '../util/stat';
 
-function move (src: String, dest: String, opts: Object, cb: Function): Void {
+function move (src: string, dest: string, opts: object, cb: Function): Void {
   if (typeof opts === 'function') {
     cb = opts
     opts = {}
@@ -16,15 +16,15 @@ function move (src: String, dest: String, opts: Object, cb: Function): Void {
 
   opts = opts || {}
 
-  const overwrite: String = opts.overwrite || opts.clobber || false
+  const overwrite: string = opts.overwrite || opts.clobber || false
 
-  stat.checkPaths(src, dest, 'move', opts, (err: String, stats: Object) => {
+  stat.checkPaths(src, dest, 'move', opts, (err: string, stats: object) => {
     if (err) return cb(err)
     const { srcStat, isChangingCase = false } = stats
-    stat.checkParentPaths(src, srcStat, dest, 'move', (err: String) => {
+    stat.checkParentPaths(src, srcStat, dest, 'move', (err: string) => {
       if (err) return cb(err)
       if (isParentRoot(dest)) return doRename(src, dest, overwrite, isChangingCase, cb)
-      mkdirp(path.dirname(dest), (err: String) => {
+      mkdirp(path.dirname(dest), (err: string) => {
         if (err) return cb(err)
         return doRename(src, dest, overwrite, isChangingCase, cb)
       })
@@ -32,41 +32,41 @@ function move (src: String, dest: String, opts: Object, cb: Function): Void {
   })
 }
 
-function isParentRoot (dest: String): Boolean {
-  const parent: Number = path.dirname(dest)
-  const parsedPath: String = path.parse(parent)
+function isParentRoot (dest: string): boolean {
+  const parent: number = path.dirname(dest)
+  const parsedPath: string = path.parse(parent)
   return parsedPath.root === parent
 }
 
-function doRename (src: String, dest: String, overwrite: String, isChangingCase: Boolean, cb: Function): Array {
+function doRename (src: string, dest: string, overwrite: string, isChangingCase: boolean, cb: Function): any[] {
   if (isChangingCase) return rename(src, dest, overwrite, cb)
   if (overwrite) {
-    return remove(dest, (err: String) => {
+    return remove(dest, (err: string) => {
       if (err) return cb(err)
       return rename(src, dest, overwrite, cb)
     })
   }
-  pathExists(dest, (err: String, destExists: Boolean) => {
+  pathExists(dest, (err: string, destExists: boolean) => {
     if (err) return cb(err)
     if (destExists) return cb(new Error('dest already exists.'))
     return rename(src, dest, overwrite, cb)
   })
 }
 
-function rename (src: String, dest: String, overwrite: String, cb: Function): Void {
-  fs.rename(src, dest, (err: Object) => {
+function rename (src: string, dest: string, overwrite: string, cb: Function): Void {
+  fs.rename(src, dest, (err: object) => {
     if (!err) return cb()
     if (err.code !== 'EXDEV') return cb(err)
     return moveAcrossDevice(src, dest, overwrite, cb)
   })
 }
 
-function moveAcrossDevice (src: String, dest: String, overwrite: Number, cb: Function): Void {
-  const opts: Object = {
+function moveAcrossDevice (src: string, dest: string, overwrite: number, cb: Function): Void {
+  const opts: object = {
     overwrite,
     errorOnExist: true
   }
-  copy(src, dest, opts, (err: String) => {
+  copy(src, dest, opts, (err: string) => {
     if (err) return cb(err)
     return remove(src, cb)
   })

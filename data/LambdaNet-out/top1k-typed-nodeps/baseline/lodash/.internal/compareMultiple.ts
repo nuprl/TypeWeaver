@@ -14,17 +14,17 @@ import compareAscending from './compareAscending.js'
  * @param {(string|function)[]} orders The order to sort by for each property.
  * @returns {number} Returns the sort order indicator for `object`.
  */
-function compareMultiple(object: Object, other: Object, orders: Array): Number {
-  let index: Number = -1
-  const objCriteria: Array = object.criteria
-  const othCriteria: Object = other.criteria
-  const length: Number = objCriteria.length
-  const ordersLength: Number = orders.length
+function compareMultiple(object: object, other: object, orders: any[]): number {
+  let index: number = -1
+  const objCriteria: any[] = object.criteria
+  const othCriteria: object = other.criteria
+  const length: number = objCriteria.length
+  const ordersLength: number = orders.length
 
   while (++index < length) {
-    const order: String = index < ordersLength ? orders[index] : null
+    const order: string = index < ordersLength ? orders[index] : null
     const cmpFn: Function = (order && typeof order === 'function') ? order: compareAscending
-    const result: Number = cmpFn(objCriteria[index], othCriteria[index])
+    const result: number = cmpFn(objCriteria[index], othCriteria[index])
     if (result) {
       if (order && typeof order !== 'function') {
         return result * (order == 'desc' ? -1 : 1)

@@ -1,13 +1,13 @@
 'use strict';
 
-var benchmark: Array = require('benchmark');
+var benchmark: any[] = require('benchmark');
 
-var EventEmitter1: Object = require('events').EventEmitter
-  , EventEmitter3: Array = require('eventemitter3')
-  , FE: Array = require('fastemitter')
-  , Master: Array = require('../../');
+var EventEmitter1: object = require('events').EventEmitter
+  , EventEmitter3: any[] = require('eventemitter3')
+  , FE: any[] = require('fastemitter')
+  , Master: any[] = require('../../');
 
-var MAX_LISTENERS: Number = Math.pow(2, 32) - 1;
+var MAX_LISTENERS: number = Math.pow(2, 32) - 1;
 
 function handle(): Void {
   if (arguments.length > 100) console.log('damn');

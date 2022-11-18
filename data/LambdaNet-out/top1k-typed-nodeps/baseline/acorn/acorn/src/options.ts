@@ -4,7 +4,7 @@ import {SourceLocation} from "./locutil.js"
 // A second argument must be given to configure the parser process.
 // These options are recognized (only `ecmaVersion` is required):
 
-export const defaultOptions: Object = {
+export const defaultOptions: object = {
   // `ecmaVersion` indicates the ECMAScript version to parse. Must be
   // either 3, 5, 6 (or 2015), 7 (2016), 8 (2017), 9 (2018), 10
   // (2019), 11 (2020), 12 (2021), 13 (2022), 14 (2023), or `"latest"`
@@ -98,10 +98,10 @@ export const defaultOptions: Object = {
 
 // Interpret and default an options object
 
-let warnedAboutEcmaVersion: Boolean = false
+let warnedAboutEcmaVersion: boolean = false
 
-export function getOptions(opts: Object): Parser {
-  let options: Object = {}
+export function getOptions(opts: object): Parser {
+  let options: object = {}
 
   for (let opt in defaultOptions)
     options[opt] = opts && hasOwn(opts, opt) ? opts[opt] : defaultOptions[opt]
@@ -125,7 +125,7 @@ export function getOptions(opts: Object): Parser {
     options.allowHashBang = options.ecmaVersion >= 14
 
   if (isArray(options.onToken)) {
-    let tokens: Array = options.onToken
+    let tokens: any[] = options.onToken
     options.onToken = (token: TokenType) => tokens.push(token)
   }
   if (isArray(options.onComment))
@@ -134,9 +134,9 @@ export function getOptions(opts: Object): Parser {
   return options
 }
 
-function pushComment(options: Object, array: Array): Function {
-  return function(block: Boolean, text: String, start: Number, end: Number, startLoc: Number, endLoc: Number) {
-    let comment: Object = {
+function pushComment(options: object, array: any[]): Function {
+  return function(block: boolean, text: string, start: number, end: number, startLoc: number, endLoc: number) {
+    let comment: object = {
       type: block ? "Block" : "Line",
       value: text,
       start: start,

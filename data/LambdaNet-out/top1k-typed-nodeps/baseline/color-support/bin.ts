@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-var colorSupport: Array = require('./')({alwaysReturn: true })
+var colorSupport: any[] = require('./')({alwaysReturn: true })
 console.log(JSON.stringify(colorSupport, null, 2))

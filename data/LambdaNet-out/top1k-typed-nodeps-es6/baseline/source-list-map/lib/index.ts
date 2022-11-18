@@ -1,6 +1,6 @@
 export const SourceListMap: SourceListMap = require("./SourceListMap");
-export const SourceNode: String = require("./SourceNode");
+export const SourceNode: string = require("./SourceNode");
 export const SingleLineNode: SingleLineNode = require("./SingleLineNode");
-export const CodeNode: String = require("./CodeNode");
-export const MappingsContext: String = require("./MappingsContext");
-export const fromStringWithSourceMap: String = require("./fromStringWithSourceMap");
+export const CodeNode: string = require("./CodeNode");
+export const MappingsContext: string = require("./MappingsContext");
+export const fromStringWithSourceMap: string = require("./fromStringWithSourceMap");

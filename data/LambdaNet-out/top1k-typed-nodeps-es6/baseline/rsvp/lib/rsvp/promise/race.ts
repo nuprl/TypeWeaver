@@ -79,9 +79,9 @@ import {
   @return {Promise} a promise which settles in the same way as the first passed
   promise to settle.
 */
-export default function race(entries: Array, label: String): Promise {
+export default function race(entries: any[], label: string): Promise {
   /*jshint validthis:true */
-  let Constructor: Object = this;
+  let Constructor: object = this;
 
   let promise: Promise = new Constructor(noop, label);
 
@@ -93,8 +93,8 @@ export default function race(entries: Array, label: String): Promise {
   for (let i = 0; promise._state === PENDING && i < entries.length; i++) {
     subscribe(
       Constructor.resolve(entries[i]), undefined,
-      (value: Number)  => resolve(promise, value),
-      (reason: String) => reject(promise, reason)
+      (value: number)  => resolve(promise, value),
+      (reason: string) => reject(promise, reason)
     );
   }
 

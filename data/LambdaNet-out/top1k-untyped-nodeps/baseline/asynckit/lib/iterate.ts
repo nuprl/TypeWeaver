@@ -13,12 +13,12 @@ module.exports = iterate;
  * @param {object} state - current job status
  * @param {function} callback - invoked when all elements processed
  */
-function iterate(list: Object, iterator: String, state: Object, callback: Function): Void
+function iterate(list: object, iterator: string, state: object, callback: Function): Void
 {
   // store current index
-  var key: String = state['keyedList'] ? state['keyedList'][state.index] : state.index;
+  var key: string = state['keyedList'] ? state['keyedList'][state.index] : state.index;
 
-  state.jobs[key] = runJob(iterator, key, list[key], function(error: Object, output: String)
+  state.jobs[key] = runJob(iterator, key, list[key], function(error: object, output: string)
   {
     // don't repeat yourself
     // skip secondary callbacks
@@ -56,9 +56,9 @@ function iterate(list: Object, iterator: String, state: Object, callback: Functi
  * @param   {function} callback - invoked after iterator is done with the job
  * @returns {function|mixed} - job abort function or something else
  */
-function runJob(iterator: Function, key: String, item: String, callback: String): Object
+function runJob(iterator: Function, key: string, item: string, callback: string): object
 {
-  var aborter: Array;
+  var aborter: any[];
 
   // allow shortcut if iterator expects only two arguments
   if (iterator.length == 2)

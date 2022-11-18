@@ -1,17 +1,17 @@
 "use strict";
-const tr46: String = require("tr46");
+const tr46: string = require("tr46");
 
-const infra: Object = require("./infra");
+const infra: object = require("./infra");
 const { utf8DecodeWithoutBOM } = require("./encoding");
 const { percentDecodeString, utf8PercentEncodeCodePoint, utf8PercentEncodeString, isC0ControlPercentEncode,
   isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode,
   isUserinfoPercentEncode } = require("./percent-encoding");
 
-function p(char: String): Number {
+function p(char: string): number {
   return char.codePointAt(0);
 }
 
-const specialSchemes: Object = {
+const specialSchemes: object = {
   ftp: 21,
   file: null,
   http: 80,
@@ -20,68 +20,68 @@ const specialSchemes: Object = {
   wss: 443
 };
 
-const failure: Number = Symbol("failure");
+const failure: number = Symbol("failure");
 
-function countSymbols(str: Array): Number {
+function countSymbols(str: any[]): number {
   return [...str].length;
 }
 
-function at(input: Object, idx: String): String {
-  const c: String = input[idx];
+function at(input: object, idx: string): string {
+  const c: string = input[idx];
   return isNaN(c) ? undefined : String.fromCodePoint(c);
 }
 
-function isSingleDot(buffer: Object): Boolean {
+function isSingleDot(buffer: object): boolean {
   return buffer === "." || buffer.toLowerCase() === "%2e";
 }
 
-function isDoubleDot(buffer: Number): Boolean {
+function isDoubleDot(buffer: number): boolean {
   buffer = buffer.toLowerCase();
   return buffer === ".." || buffer === "%2e." || buffer === ".%2e" || buffer === "%2e%2e";
 }
 
-function isWindowsDriveLetterCodePoints(cp1: String, cp2: Number): Boolean {
+function isWindowsDriveLetterCodePoints(cp1: string, cp2: number): boolean {
   return infra.isASCIIAlpha(cp1) && (cp2 === p(":") || cp2 === p("|"));
 }
 
-function isWindowsDriveLetterString(string: Array): Boolean {
+function isWindowsDriveLetterString(string: any[]): boolean {
   return string.length === 2 && infra.isASCIIAlpha(string.codePointAt(0)) && (string[1] === ":" || string[1] === "|");
 }
 
-function isNormalizedWindowsDriveLetterString(string: String): Boolean {
+function isNormalizedWindowsDriveLetterString(string: string): boolean {
   return string.length === 2 && infra.isASCIIAlpha(string.codePointAt(0)) && string[1] === ":";
 }
 
-function containsForbiddenHostCodePoint(string: String): Boolean {
+function containsForbiddenHostCodePoint(string: string): boolean {
   return string.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|\/|:|<|>|\?|@|\[|\\|\]|\^|\|/u) !== -1;
 }
 
-function containsForbiddenDomainCodePoint(string: String): Boolean {
+function containsForbiddenDomainCodePoint(string: string): boolean {
   return containsForbiddenHostCodePoint(string) || string.search(/[\u0000-\u001F]|%|\u007F/u) !== -1;
 }
 
-function isSpecialScheme(scheme: String): Boolean {
+function isSpecialScheme(scheme: string): boolean {
   return specialSchemes[scheme] !== undefined;
 }
 
-function isSpecial(url: String): Boolean {
+function isSpecial(url: string): boolean {
   return isSpecialScheme(url.scheme);
 }
 
-function isNotSpecial(url: String): Boolean {
+function isNotSpecial(url: string): boolean {
   return !isSpecialScheme(url.scheme);
 }
 
-function defaultPort(scheme: String): String {
+function defaultPort(scheme: string): string {
   return specialSchemes[scheme];
 }
 
-function parseIPv4Number(input: String): Number {
+function parseIPv4Number(input: string): number {
   if (input === "") {
     return failure;
   }
 
-  let R: Number = 10;
+  let R: number = 10;
 
   if (input.length >= 2 && input.charAt(0) === "0" && input.charAt(1).toLowerCase() === "x") {
     input = input.substring(2);
@@ -110,8 +110,8 @@ function parseIPv4Number(input: String): Number {
   return parseInt(input, R);
 }
 
-function parseIPv4(input: HTMLElement): Number {
-  const parts: Array = input.split(".");
+function parseIPv4(input: HTMLElement): number {
+  const parts: any[] = input.split(".");
   if (parts[parts.length - 1] === "") {
     if (parts.length > 1) {
       parts.pop();
@@ -122,9 +122,9 @@ function parseIPv4(input: HTMLElement): Number {
     return failure;
   }
 
-  const numbers: Array = [];
+  const numbers: any[] = [];
   for (const part of parts) {
-    const n: String = parseIPv4Number(part);
+    const n: string = parseIPv4Number(part);
     if (n === failure) {
       return failure;
     }
@@ -141,8 +141,8 @@ function parseIPv4(input: HTMLElement): Number {
     return failure;
   }
 
-  let ipv4: String = numbers.pop();
-  let counter: Number = 0;
+  let ipv4: string = numbers.pop();
+  let counter: number = 0;
 
   for (const n of numbers) {
     ipv4 += n * 256 ** (3 - counter);
@@ -152,9 +152,9 @@ function parseIPv4(input: HTMLElement): Number {
   return ipv4;
 }
 
-function serializeIPv4(address: Number): String {
-  let output: String = "";
-  let n: Number = address;
+function serializeIPv4(address: number): string {
+  let output: string = "";
+  let n: number = address;
 
   for (let i = 1; i <= 4; ++i) {
     output = String(n % 256) + output;
@@ -167,13 +167,13 @@ function serializeIPv4(address: Number): String {
   return output;
 }
 
-function parseIPv6(input: Object): Object {
-  const address: Object = [0, 0, 0, 0, 0, 0, 0, 0];
-  let pieceIndex: Number = 0;
-  let compress: Number = null;
-  let pointer: Number = 0;
+function parseIPv6(input: object): object {
+  const address: object = [0, 0, 0, 0, 0, 0, 0, 0];
+  let pieceIndex: number = 0;
+  let compress: number = null;
+  let pointer: number = 0;
 
-  input = Array.from(input, (c: Array) => c.codePointAt(0));
+  input = Array.from(input, (c: any[]) => c.codePointAt(0));
 
   if (input[pointer] === p(":")) {
     if (input[pointer + 1] !== p(":")) {
@@ -200,8 +200,8 @@ function parseIPv6(input: Object): Object {
       continue;
     }
 
-    let value: Number = 0;
-    let length: Number = 0;
+    let value: number = 0;
+    let length: number = 0;
 
     while (length < 4 && infra.isASCIIHex(input[pointer])) {
       value = value * 0x10 + parseInt(at(input, pointer), 16);
@@ -220,10 +220,10 @@ function parseIPv6(input: Object): Object {
         return failure;
       }
 
-      let numbersSeen: Number = 0;
+      let numbersSeen: number = 0;
 
       while (input[pointer] !== undefined) {
-        let ipv4Piece: Number = null;
+        let ipv4Piece: number = null;
 
         if (numbersSeen > 0) {
           if (input[pointer] === p(".") && numbersSeen < 4) {
@@ -238,7 +238,7 @@ function parseIPv6(input: Object): Object {
         }
 
         while (infra.isASCIIDigit(input[pointer])) {
-          const number: Number = parseInt(at(input, pointer));
+          const number: number = parseInt(at(input, pointer));
           if (ipv4Piece === null) {
             ipv4Piece = number;
           } else if (ipv4Piece === 0) {
@@ -280,10 +280,10 @@ function parseIPv6(input: Object): Object {
   }
 
   if (compress !== null) {
-    let swaps: Number = pieceIndex - compress;
+    let swaps: number = pieceIndex - compress;
     pieceIndex = 7;
     while (pieceIndex !== 0 && swaps > 0) {
-      const temp: String = address[compress + swaps - 1];
+      const temp: string = address[compress + swaps - 1];
       address[compress + swaps - 1] = address[pieceIndex];
       address[pieceIndex] = temp;
       --pieceIndex;
@@ -296,10 +296,10 @@ function parseIPv6(input: Object): Object {
   return address;
 }
 
-function serializeIPv6(address: Object): String {
-  let output: String = "";
-  const compress: Number = findLongestZeroSequence(address);
-  let ignore0: Boolean = false;
+function serializeIPv6(address: object): string {
+  let output: string = "";
+  const compress: number = findLongestZeroSequence(address);
+  let ignore0: boolean = false;
 
   for (let pieceIndex = 0; pieceIndex <= 7; ++pieceIndex) {
     if (ignore0 && address[pieceIndex] === 0) {
@@ -309,7 +309,7 @@ function serializeIPv6(address: Object): String {
     }
 
     if (compress === pieceIndex) {
-      const separator: String = pieceIndex === 0 ? "::" : ":";
+      const separator: string = pieceIndex === 0 ? "::" : ":";
       output += separator;
       ignore0 = true;
       continue;
@@ -325,7 +325,7 @@ function serializeIPv6(address: Object): String {
   return output;
 }
 
-function parseHost(input: Array, isNotSpecialArg: Boolean = false): Number {
+function parseHost(input: any[], isNotSpecialArg: boolean = false): number {
   if (input[0] === "[") {
     if (input[input.length - 1] !== "]") {
       return failure;
@@ -338,8 +338,8 @@ function parseHost(input: Array, isNotSpecialArg: Boolean = false): Number {
     return parseOpaqueHost(input);
   }
 
-  const domain: String = utf8DecodeWithoutBOM(percentDecodeString(input));
-  const asciiDomain: String = domainToASCII(domain);
+  const domain: string = utf8DecodeWithoutBOM(percentDecodeString(input));
+  const asciiDomain: string = domainToASCII(domain);
   if (asciiDomain === failure) {
     return failure;
   }
@@ -355,8 +355,8 @@ function parseHost(input: Array, isNotSpecialArg: Boolean = false): Number {
   return asciiDomain;
 }
 
-function endsInANumber(input: Array): Boolean {
-  const parts: Array = input.split(".");
+function endsInANumber(input: any[]): boolean {
+  const parts: any[] = input.split(".");
   if (parts[parts.length - 1] === "") {
     if (parts.length === 1) {
       return false;
@@ -364,7 +364,7 @@ function endsInANumber(input: Array): Boolean {
     parts.pop();
   }
 
-  const last: String = parts[parts.length - 1];
+  const last: string = parts[parts.length - 1];
   if (parseIPv4Number(last) !== failure) {
     return true;
   }
@@ -376,7 +376,7 @@ function endsInANumber(input: Array): Boolean {
   return false;
 }
 
-function parseOpaqueHost(input: Element): Boolean {
+function parseOpaqueHost(input: Element): boolean {
   if (containsForbiddenHostCodePoint(input)) {
     return failure;
   }
@@ -384,11 +384,11 @@ function parseOpaqueHost(input: Element): Boolean {
   return utf8PercentEncodeString(input, isC0ControlPercentEncode);
 }
 
-function findLongestZeroSequence(arr: Array): Number {
-  let maxIdx: String = null;
-  let maxLen: Number = 1; // only find elements > 1
-  let currStart: Number = null;
-  let currLen: Number = 0;
+function findLongestZeroSequence(arr: any[]): number {
+  let maxIdx: string = null;
+  let maxLen: number = 1; // only find elements > 1
+  let currStart: number = null;
+  let currLen: number = 0;
 
   for (let i = 0; i < arr.length; ++i) {
     if (arr[i] !== 0) {
@@ -415,7 +415,7 @@ function findLongestZeroSequence(arr: Array): Number {
   return maxIdx;
 }
 
-function serializeHost(host: String): String {
+function serializeHost(host: string): string {
   if (typeof host === "number") {
     return serializeIPv4(host);
   }
@@ -428,8 +428,8 @@ function serializeHost(host: String): String {
   return host;
 }
 
-function domainToASCII(domain: String, beStrict: String = false): Boolean {
-  const result: Number = tr46.toASCII(domain, {
+function domainToASCII(domain: string, beStrict: string = false): boolean {
+  const result: number = tr46.toASCII(domain, {
     checkBidi: true,
     checkHyphens: false,
     checkJoiners: true,
@@ -442,15 +442,15 @@ function domainToASCII(domain: String, beStrict: String = false): Boolean {
   return result;
 }
 
-function trimControlChars(url: String): Boolean {
+function trimControlChars(url: string): boolean {
   return url.replace(/^[\u0000-\u001F\u0020]+|[\u0000-\u001F\u0020]+$/ug, "");
 }
 
-function trimTabAndNewline(url: String): Boolean {
+function trimTabAndNewline(url: string): boolean {
   return url.replace(/\u0009|\u000A|\u000D/ug, "");
 }
 
-function shortenPath(url: String): Void {
+function shortenPath(url: string): Void {
   const { path } = url;
   if (path.length === 0) {
     return;
@@ -462,23 +462,23 @@ function shortenPath(url: String): Void {
   path.pop();
 }
 
-function includesCredentials(url: String): Boolean {
+function includesCredentials(url: string): boolean {
   return url.username !== "" || url.password !== "";
 }
 
-function cannotHaveAUsernamePasswordPort(url: String): Boolean {
+function cannotHaveAUsernamePasswordPort(url: string): boolean {
   return url.host === null || url.host === "" || url.scheme === "file";
 }
 
-function hasAnOpaquePath(url: String): Boolean {
+function hasAnOpaquePath(url: string): boolean {
   return typeof url.path === "string";
 }
 
-function isNormalizedWindowsDriveLetter(string: String): Boolean {
+function isNormalizedWindowsDriveLetter(string: string): boolean {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: Element, base: String, encodingOverride: Number, url: String, stateOverride: String): Void {
+function URLStateMachine(input: Element, base: string, encodingOverride: number, url: string, stateOverride: string): Void {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;
@@ -500,14 +500,14 @@ function URLStateMachine(input: Element, base: String, encodingOverride: Number,
       fragment: null
     };
 
-    const res: String = trimControlChars(this.input);
+    const res: string = trimControlChars(this.input);
     if (res !== this.input) {
       this.parseError = true;
     }
     this.input = res;
   }
 
-  const res: String = trimTabAndNewline(this.input);
+  const res: string = trimTabAndNewline(this.input);
   if (res !== this.input) {
     this.parseError = true;
   }
@@ -520,14 +520,14 @@ function URLStateMachine(input: Element, base: String, encodingOverride: Number,
   this.arrFlag = false;
   this.passwordTokenSeenFlag = false;
 
-  this.input = Array.from(this.input, (c: Array) => c.codePointAt(0));
+  this.input = Array.from(this.input, (c: any[]) => c.codePointAt(0));
 
   for (; this.pointer <= this.input.length; ++this.pointer) {
-    const c: String = this.input[this.pointer];
-    const cStr: String = isNaN(c) ? undefined : String.fromCodePoint(c);
+    const c: string = this.input[this.pointer];
+    const cStr: string = isNaN(c) ? undefined : String.fromCodePoint(c);
 
     // exec state machine
-    const ret: Boolean = this[`parse ${this.state}`](c, cStr);
+    const ret: boolean = this[`parse ${this.state}`](c, cStr);
     if (!ret) {
       break; // terminate algorithm
     } else if (ret === failure) {
@@ -537,7 +537,7 @@ function URLStateMachine(input: Element, base: String, encodingOverride: Number,
   }
 }
 
-URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: number, cStr: string): boolean {
   if (infra.isASCIIAlpha(c)) {
     this.buffer += cStr.toLowerCase();
     this.state = "scheme";
@@ -552,7 +552,7 @@ URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: N
   return true;
 };
 
-URLStateMachine.prototype["parse scheme"] = function parseScheme(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse scheme"] = function parseScheme(c: number, cStr: string): boolean {
   if (infra.isASCIIAlphanumeric(c) || c === p("+") || c === p("-") || c === p(".")) {
     this.buffer += cStr.toLowerCase();
   } else if (c === p(":")) {
@@ -609,7 +609,7 @@ URLStateMachine.prototype["parse scheme"] = function parseScheme(c: Number, cStr
   return true;
 };
 
-URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: Number): Boolean {
+URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: number): boolean {
   if (this.base === null || (hasAnOpaquePath(this.base) && c !== p("#"))) {
     return failure;
   } else if (hasAnOpaquePath(this.base) && c === p("#")) {
@@ -629,7 +629,7 @@ URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: Number)
   return true;
 };
 
-URLStateMachine.prototype["parse special relative or authority"] = function parseSpecialRelativeOrAuthority(c: Number): Boolean {
+URLStateMachine.prototype["parse special relative or authority"] = function parseSpecialRelativeOrAuthority(c: number): boolean {
   if (c === p("/") && this.input[this.pointer + 1] === p("/")) {
     this.state = "special authority ignore slashes";
     ++this.pointer;
@@ -642,7 +642,7 @@ URLStateMachine.prototype["parse special relative or authority"] = function pars
   return true;
 };
 
-URLStateMachine.prototype["parse path or authority"] = function parsePathOrAuthority(c: Number): Boolean {
+URLStateMachine.prototype["parse path or authority"] = function parsePathOrAuthority(c: number): boolean {
   if (c === p("/")) {
     this.state = "authority";
   } else {
@@ -653,7 +653,7 @@ URLStateMachine.prototype["parse path or authority"] = function parsePathOrAutho
   return true;
 };
 
-URLStateMachine.prototype["parse relative"] = function parseRelative(c: Number): Boolean {
+URLStateMachine.prototype["parse relative"] = function parseRelative(c: number): boolean {
   this.url.scheme = this.base.scheme;
   if (c === p("/")) {
     this.state = "relative slash";
@@ -684,7 +684,7 @@ URLStateMachine.prototype["parse relative"] = function parseRelative(c: Number):
   return true;
 };
 
-URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: Number): Boolean {
+URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: number): boolean {
   if (isSpecial(this.url) && (c === p("/") || c === p("\\"))) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -704,7 +704,7 @@ URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(
   return true;
 };
 
-URLStateMachine.prototype["parse special authority slashes"] = function parseSpecialAuthoritySlashes(c: Number): Boolean {
+URLStateMachine.prototype["parse special authority slashes"] = function parseSpecialAuthoritySlashes(c: number): boolean {
   if (c === p("/") && this.input[this.pointer + 1] === p("/")) {
     this.state = "special authority ignore slashes";
     ++this.pointer;
@@ -717,7 +717,7 @@ URLStateMachine.prototype["parse special authority slashes"] = function parseSpe
   return true;
 };
 
-URLStateMachine.prototype["parse special authority ignore slashes"] = function parseSpecialAuthorityIgnoreSlashes(c: Number): Boolean {
+URLStateMachine.prototype["parse special authority ignore slashes"] = function parseSpecialAuthorityIgnoreSlashes(c: number): boolean {
   if (c !== p("/") && c !== p("\\")) {
     this.state = "authority";
     --this.pointer;
@@ -728,7 +728,7 @@ URLStateMachine.prototype["parse special authority ignore slashes"] = function p
   return true;
 };
 
-URLStateMachine.prototype["parse authority"] = function parseAuthority(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse authority"] = function parseAuthority(c: number, cStr: string): boolean {
   if (c === p("@")) {
     this.parseError = true;
     if (this.atFlag) {
@@ -737,15 +737,15 @@ URLStateMachine.prototype["parse authority"] = function parseAuthority(c: Number
     this.atFlag = true;
 
     // careful, this is based on buffer and has its own pointer (this.pointer != pointer) and inner chars
-    const len: String = countSymbols(this.buffer);
+    const len: string = countSymbols(this.buffer);
     for (let pointer = 0; pointer < len; ++pointer) {
-      const codePoint: String = this.buffer.codePointAt(pointer);
+      const codePoint: string = this.buffer.codePointAt(pointer);
 
       if (codePoint === p(":") && !this.passwordTokenSeenFlag) {
         this.passwordTokenSeenFlag = true;
         continue;
       }
-      const encodedCodePoints: String = utf8PercentEncodeCodePoint(codePoint, isUserinfoPercentEncode);
+      const encodedCodePoints: string = utf8PercentEncodeCodePoint(codePoint, isUserinfoPercentEncode);
       if (this.passwordTokenSeenFlag) {
         this.url.password += encodedCodePoints;
       } else {
@@ -770,7 +770,7 @@ URLStateMachine.prototype["parse authority"] = function parseAuthority(c: Number
 };
 
 URLStateMachine.prototype["parse hostname"] =
-URLStateMachine.prototype["parse host"] = function parseHostName(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse host"] = function parseHostName(c: number, cStr: string): boolean {
   if (this.stateOverride && this.url.scheme === "file") {
     --this.pointer;
     this.state = "file host";
@@ -784,7 +784,7 @@ URLStateMachine.prototype["parse host"] = function parseHostName(c: Number, cStr
       return false;
     }
 
-    const host: String = parseHost(this.buffer, isNotSpecial(this.url));
+    const host: string = parseHost(this.buffer, isNotSpecial(this.url));
     if (host === failure) {
       return failure;
     }
@@ -804,7 +804,7 @@ URLStateMachine.prototype["parse host"] = function parseHostName(c: Number, cStr
       return false;
     }
 
-    const host: String = parseHost(this.buffer, isNotSpecial(this.url));
+    const host: string = parseHost(this.buffer, isNotSpecial(this.url));
     if (host === failure) {
       return failure;
     }
@@ -827,14 +827,14 @@ URLStateMachine.prototype["parse host"] = function parseHostName(c: Number, cStr
   return true;
 };
 
-URLStateMachine.prototype["parse port"] = function parsePort(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse port"] = function parsePort(c: number, cStr: string): boolean {
   if (infra.isASCIIDigit(c)) {
     this.buffer += cStr;
   } else if (isNaN(c) || c === p("/") || c === p("?") || c === p("#") ||
              (isSpecial(this.url) && c === p("\\")) ||
              this.stateOverride) {
     if (this.buffer !== "") {
-      const port: Number = parseInt(this.buffer);
+      const port: number = parseInt(this.buffer);
       if (port > 2 ** 16 - 1) {
         this.parseError = true;
         return failure;
@@ -857,14 +857,14 @@ URLStateMachine.prototype["parse port"] = function parsePort(c: Number, cStr: St
 
 const fileOtherwiseCodePoints: Map = new Set([p("/"), p("\\"), p("?"), p("#")]);
 
-function startsWithWindowsDriveLetter(input: Array, pointer: Number): Boolean {
-  const length: Number = input.length - pointer;
+function startsWithWindowsDriveLetter(input: any[], pointer: number): boolean {
+  const length: number = input.length - pointer;
   return length >= 2 &&
     isWindowsDriveLetterCodePoints(input[pointer], input[pointer + 1]) &&
     (length === 2 || fileOtherwiseCodePoints.has(input[pointer + 2]));
 }
 
-URLStateMachine.prototype["parse file"] = function parseFile(c: Number): Boolean {
+URLStateMachine.prototype["parse file"] = function parseFile(c: number): boolean {
   this.url.scheme = "file";
   this.url.host = "";
 
@@ -903,7 +903,7 @@ URLStateMachine.prototype["parse file"] = function parseFile(c: Number): Boolean
   return true;
 };
 
-URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: Number): Boolean {
+URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: number): boolean {
   if (c === p("/") || c === p("\\")) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -924,7 +924,7 @@ URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: Numbe
   return true;
 };
 
-URLStateMachine.prototype["parse file host"] = function parseFileHost(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse file host"] = function parseFileHost(c: number, cStr: string): boolean {
   if (isNaN(c) || c === p("/") || c === p("\\") || c === p("?") || c === p("#")) {
     --this.pointer;
     if (!this.stateOverride && isWindowsDriveLetterString(this.buffer)) {
@@ -937,7 +937,7 @@ URLStateMachine.prototype["parse file host"] = function parseFileHost(c: Number,
       }
       this.state = "path start";
     } else {
-      let host: String = parseHost(this.buffer, isNotSpecial(this.url));
+      let host: string = parseHost(this.buffer, isNotSpecial(this.url));
       if (host === failure) {
         return failure;
       }
@@ -960,7 +960,7 @@ URLStateMachine.prototype["parse file host"] = function parseFileHost(c: Number,
   return true;
 };
 
-URLStateMachine.prototype["parse path start"] = function parsePathStart(c: Number): Boolean {
+URLStateMachine.prototype["parse path start"] = function parsePathStart(c: number): boolean {
   if (isSpecial(this.url)) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -988,7 +988,7 @@ URLStateMachine.prototype["parse path start"] = function parsePathStart(c: Numbe
   return true;
 };
 
-URLStateMachine.prototype["parse path"] = function parsePath(c: Number): Boolean {
+URLStateMachine.prototype["parse path"] = function parsePath(c: number): boolean {
   if (isNaN(c) || c === p("/") || (isSpecial(this.url) && c === p("\\")) ||
       (!this.stateOverride && (c === p("?") || c === p("#")))) {
     if (isSpecial(this.url) && c === p("\\")) {
@@ -1033,7 +1033,7 @@ URLStateMachine.prototype["parse path"] = function parsePath(c: Number): Boolean
   return true;
 };
 
-URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: Number): Boolean {
+URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: number): boolean {
   if (c === p("?")) {
     this.url.query = "";
     this.state = "query";
@@ -1060,7 +1060,7 @@ URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: Num
   return true;
 };
 
-URLStateMachine.prototype["parse query"] = function parseQuery(c: Number, cStr: String): Boolean {
+URLStateMachine.prototype["parse query"] = function parseQuery(c: number, cStr: string): boolean {
   if (!isSpecial(this.url) || this.url.scheme === "ws" || this.url.scheme === "wss") {
     this.encodingOverride = "utf-8";
   }
@@ -1090,7 +1090,7 @@ URLStateMachine.prototype["parse query"] = function parseQuery(c: Number, cStr: 
   return true;
 };
 
-URLStateMachine.prototype["parse fragment"] = function parseFragment(c: Number): Boolean {
+URLStateMachine.prototype["parse fragment"] = function parseFragment(c: number): boolean {
   if (!isNaN(c)) {
     // TODO: If c is not a URL code point and not "%", parse error.
     if (c === p("%") &&
@@ -1105,8 +1105,8 @@ URLStateMachine.prototype["parse fragment"] = function parseFragment(c: Number):
   return true;
 };
 
-function serializeURL(url: String, excludeFragment: Boolean): String {
-  let output: String = `${url.scheme}:`;
+function serializeURL(url: string, excludeFragment: boolean): string {
+  let output: string = `${url.scheme}:`;
   if (url.host !== null) {
     output += "//";
 
@@ -1141,8 +1141,8 @@ function serializeURL(url: String, excludeFragment: Boolean): String {
   return output;
 }
 
-function serializeOrigin(tuple: Object): String {
-  let result: String = `${tuple.scheme}://`;
+function serializeOrigin(tuple: object): string {
+  let result: string = `${tuple.scheme}://`;
   result += serializeHost(tuple.host);
 
   if (tuple.port !== null) {
@@ -1152,12 +1152,12 @@ function serializeOrigin(tuple: Object): String {
   return result;
 }
 
-function serializePath(url: String): String {
+function serializePath(url: string): string {
   if (hasAnOpaquePath(url)) {
     return url.path;
   }
 
-  let output: String = "";
+  let output: string = "";
   for (const segment of url.path) {
     output += `/${segment}`;
   }
@@ -1168,7 +1168,7 @@ module.exports.serializeURL = serializeURL;
 
 module.exports.serializePath = serializePath;
 
-module.exports.serializeURLOrigin = function (url: String) {
+module.exports.serializeURLOrigin = function (url: string) {
   // https://url.spec.whatwg.org/#concept-url-origin
   switch (url.scheme) {
     case "blob":
@@ -1203,7 +1203,7 @@ module.exports.serializeURLOrigin = function (url: String) {
   }
 };
 
-module.exports.basicURLParse = function (input: Element, options: Object) {
+module.exports.basicURLParse = function (input: Element, options: object) {
   if (options === undefined) {
     options = {};
   }
@@ -1216,11 +1216,11 @@ module.exports.basicURLParse = function (input: Element, options: Object) {
   return usm.url;
 };
 
-module.exports.setTheUsername = function (url: String, username: String) {
+module.exports.setTheUsername = function (url: string, username: string) {
   url.username = utf8PercentEncodeString(username, isUserinfoPercentEncode);
 };
 
-module.exports.setThePassword = function (url: String, password: String) {
+module.exports.setThePassword = function (url: string, password: string) {
   url.password = utf8PercentEncodeString(password, isUserinfoPercentEncode);
 };
 
@@ -1230,11 +1230,11 @@ module.exports.cannotHaveAUsernamePasswordPort = cannotHaveAUsernamePasswordPort
 
 module.exports.hasAnOpaquePath = hasAnOpaquePath;
 
-module.exports.serializeInteger = function (integer: String) {
+module.exports.serializeInteger = function (integer: string) {
   return String(integer);
 };
 
-module.exports.parseURL = function (input: HTMLElement, options: Object) {
+module.exports.parseURL = function (input: HTMLElement, options: object) {
   if (options === undefined) {
     options = {};
   }

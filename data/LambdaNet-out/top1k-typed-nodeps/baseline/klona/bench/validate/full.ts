@@ -1,6 +1,6 @@
-const assert: String = require('assert');
+const assert: string = require('assert');
 
-module.exports = function (input: Object, copy: Object) {
+module.exports = function (input: object, copy: object) {
 	// assert.deepStrictEqual(copy, input, 'initial copy');
 
 	// RegExp
@@ -44,7 +44,7 @@ module.exports = function (input: Object, copy: Object) {
 	copy.buffer[1] = 11;
 	assert.notEqual(input.buffer[1], copy.buffer[1], 'Buffer #2');
 
-	const current: String = copy.buffer.toString();
+	const current: string = copy.buffer.toString();
 	input.buffer.write('hello');
 	assert.equal(copy.buffer.toString(), current, 'Buffer #3');
 

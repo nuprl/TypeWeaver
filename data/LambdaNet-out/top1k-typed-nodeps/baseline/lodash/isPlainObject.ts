@@ -27,14 +27,14 @@ import isObjectLike from './isObjectLike.js'
  * isPlainObject(Object.create(null))
  * // => true
  */
-function isPlainObject(value: String): Boolean {
+function isPlainObject(value: string): boolean {
   if (!isObjectLike(value) || getTag(value) != '[object Object]') {
     return false
   }
   if (Object.getPrototypeOf(value) === null) {
     return true
   }
-  let proto: Array = value
+  let proto: any[] = value
   while (Object.getPrototypeOf(proto) !== null) {
     proto = Object.getPrototypeOf(proto)
   }

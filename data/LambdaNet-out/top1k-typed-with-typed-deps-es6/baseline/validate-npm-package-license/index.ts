@@ -1,7 +1,7 @@
 import parse from 'spdx-expression-parse';
 import correct from 'spdx-correct';
 
-var genericWarning: String = (
+var genericWarning: string = (
   'license should be ' +
   'a valid SPDX license expression (without "LicenseRef"), ' +
   '"UNLICENSED", or ' +
@@ -10,13 +10,13 @@ var genericWarning: String = (
 
 var fileReferenceRE: RegExp = /^SEE LICEN[CS]E IN (.+)$/;
 
-function startsWith(prefix: String, string: String): Boolean {
+function startsWith(prefix: string, string: string): boolean {
   return string.slice(0, prefix.length) === prefix;
 }
 
-function usesLicenseRef(ast: HTMLElement): Boolean {
+function usesLicenseRef(ast: HTMLElement): boolean {
   if (ast.hasOwnProperty('license')) {
-    var license: String = ast.license;
+    var license: string = ast.license;
     return (
       startsWith('LicenseRef', license) ||
       startsWith('DocumentRef', license)
@@ -29,8 +29,8 @@ function usesLicenseRef(ast: HTMLElement): Boolean {
   }
 }
 
-export default function(argument: String) {
-  var ast: String;
+export default function(argument: string) {
+  var ast: string;
 
   try {
     ast = parse(argument);

@@ -4,11 +4,11 @@
 */
 "use strict";
 
-const base64VLQ: Array = require("./base64-vlq");
+const base64VLQ: any[] = require("./base64-vlq");
 const getNumberOfLines: Function = require("./helpers").getNumberOfLines;
 const getUnfinishedLine: Function = require("./helpers").getUnfinishedLine;
 
-const LINE_MAPPING: String = ";AACA";
+const LINE_MAPPING: string = ";AACA";
 
 class SourceNode {
 
@@ -38,9 +38,9 @@ class SourceNode {
 	getMappings(mappingsContext) {
 		if(!this.generatedCode)
 			return "";
-		const lines: Number = this._numberOfLines;
-		const sourceIdx: Number = mappingsContext.ensureSource(this.source, this.originalSource);
-		let mappings: String = "A"; // generated column 0
+		const lines: number = this._numberOfLines;
+		const sourceIdx: number = mappingsContext.ensureSource(this.source, this.originalSource);
+		let mappings: string = "A"; // generated column 0
 		if(mappingsContext.unfinishedGeneratedLine)
 			mappings = "," + base64VLQ.encode(mappingsContext.unfinishedGeneratedLine);
 		mappings += base64VLQ.encode(sourceIdx - mappingsContext.currentSource); // source index
@@ -48,7 +48,7 @@ class SourceNode {
 		mappings += "A"; // original column 0
 		mappingsContext.currentSource = sourceIdx;
 		mappingsContext.currentOriginalLine = this.startingLine + lines - 1;
-		const unfinishedGeneratedLine: Number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
+		const unfinishedGeneratedLine: number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
 		mappings += Array(lines).join(LINE_MAPPING);
 		if(unfinishedGeneratedLine === 0) {
 			mappings += ";";
@@ -66,16 +66,16 @@ class SourceNode {
 	}
 
 	getNormalizedNodes() {
-		var results: Array = [];
-		var currentLine: Number = this.startingLine;
-		var generatedCode: String = this.generatedCode;
-		var index: Number = 0;
-		var indexEnd: Number = generatedCode.length;
+		var results: any[] = [];
+		var currentLine: number = this.startingLine;
+		var generatedCode: string = this.generatedCode;
+		var index: number = 0;
+		var indexEnd: number = generatedCode.length;
 		while(index < indexEnd) {
 			// get one generated line
-			var nextLine: Number = generatedCode.indexOf("\n", index) + 1;
+			var nextLine: number = generatedCode.indexOf("\n", index) + 1;
 			if(nextLine === 0) nextLine = indexEnd;
-			var lineGenerated: String = generatedCode.substr(index, nextLine - index);
+			var lineGenerated: string = generatedCode.substr(index, nextLine - index);
 
 			results.push(new SingleLineNode(lineGenerated, this.source, this.originalSource, currentLine));
 

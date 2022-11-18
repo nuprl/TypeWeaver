@@ -21,14 +21,14 @@
  * filter(users, ({ active }) => active)
  * // => objects for ['barney']
  */
-function filter(array: Array, predicate: Function): Array {
-  let index: Number = -1
-  let resIndex: Number = 0
-  const length: Number = array == null ? 0 : array.length
+function filter(array: any[], predicate: Function): any[] {
+  let index: number = -1
+  let resIndex: number = 0
+  const length: number = array == null ? 0 : array.length
   const result: Promise = []
 
   while (++index < length) {
-    const value: String = array[index]
+    const value: string = array[index]
     if (predicate(value, index, array)) {
       result[resIndex++] = value
     }

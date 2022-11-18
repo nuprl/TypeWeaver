@@ -2,7 +2,7 @@
 
 var isNative: RegExp = /\.node$/;
 
-function forEach(obj: Array, callback: Function): Void {
+function forEach(obj: any[], callback: Function): Void {
     for ( var key in obj ) {
         if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             continue;
@@ -11,35 +11,35 @@ function forEach(obj: Array, callback: Function): Void {
     }
 }
 
-function assign(target: Object, source: Object): Object {
-    forEach(source, function (key: String) {
+function assign(target: object, source: object): object {
+    forEach(source, function (key: string) {
         target[key] = source[key];
     });
     return target;
 }
 
-function clearCache(requireCache: Object): Void {
-    forEach(requireCache, function (resolvedPath: String) {
+function clearCache(requireCache: object): Void {
+    forEach(requireCache, function (resolvedPath: string) {
         if (!isNative.test(resolvedPath)) {
             delete requireCache[resolvedPath];
         }
     });
 }
 
-export default function (requireCache: Object, callback: Function, callbackForModulesToKeep: Object, module: String) {
+export default function (requireCache: object, callback: Function, callbackForModulesToKeep: object, module: string) {
 
-    var originalCache: Object = assign({}, requireCache);
+    var originalCache: object = assign({}, requireCache);
     clearCache(requireCache);
 
     if (callbackForModulesToKeep) {
 
-        var originalModuleChildren: Object = module.children ? module.children.slice() : false; // Creates a shallow copy of module.children
+        var originalModuleChildren: object = module.children ? module.children.slice() : false; // Creates a shallow copy of module.children
 
         callbackForModulesToKeep();
 
         // Lists the cache entries made by callbackForModulesToKeep()
-        var modulesToKeep: Array = [];
-        forEach(requireCache, function (key: String) {
+        var modulesToKeep: any[] = [];
+        forEach(requireCache, function (key: string) {
             modulesToKeep.push(key);
         });
 
@@ -59,9 +59,9 @@ export default function (requireCache: Object, callback: Function, callbackForMo
 
     }
 
-    var freshModule: Boolean = callback();
+    var freshModule: boolean = callback();
 
-    var stealthCache: Object = callbackForModulesToKeep ? assign({}, requireCache) : false;
+    var stealthCache: object = callbackForModulesToKeep ? assign({}, requireCache) : false;
 
     clearCache(requireCache);
 

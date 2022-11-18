@@ -21,7 +21,7 @@ import map from './map.js'
  * flatMapDepth([1, 2], duplicate, 2)
  * // => [[1, 1], [2, 2]]
  */
-function flatMapDepth(collection: String, iteratee: Function, depth: Number): String {
+function flatMapDepth(collection: string, iteratee: Function, depth: number): string {
   depth = depth === undefined ? 1 : +depth
   return baseFlatten(map(collection, iteratee), depth)
 }

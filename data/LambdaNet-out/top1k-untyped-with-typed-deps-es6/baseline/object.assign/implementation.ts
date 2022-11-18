@@ -4,30 +4,30 @@
 import objectKeys from 'object-keys';
 
 import hasSymbolsFactory from 'has-symbols/shams';
-const hasSymbols: Boolean = hasSymbolsFactory();
+const hasSymbols: boolean = hasSymbolsFactory();
 import callBound from 'call-bind/callBound';
-var toObject: Array = Object;
+var toObject: any[] = Object;
 var $push: Function = callBound('Array.prototype.push');
 var $propIsEnumerable: Function = callBound('Object.prototype.propertyIsEnumerable');
-var originalGetSymbols: Array = hasSymbols ? Object.getOwnPropertySymbols : null;
+var originalGetSymbols: any[] = hasSymbols ? Object.getOwnPropertySymbols : null;
 
 // eslint-disable-next-line no-unused-vars
-export default function assign(target: Function, source1: Function): Object {
+export default function assign(target: Function, source1: Function): object {
 	if (target == null) { throw new TypeError('target must be an object'); }
-	var to: Object = toObject(target); // step 1
+	var to: object = toObject(target); // step 1
 	if (arguments.length === 1) {
 		return to; // step 2
 	}
 	for (var s = 1; s < arguments.length; ++s) {
-		var from: Object = toObject(arguments[s]); // step 3.a.i
+		var from: object = toObject(arguments[s]); // step 3.a.i
 
 		// step 3.a.ii:
-		var keys: Array = objectKeys(from);
+		var keys: any[] = objectKeys(from);
 		var getSymbols: Function = hasSymbols && (Object.getOwnPropertySymbols || originalGetSymbols);
 		if (getSymbols) {
-			var syms: Array = getSymbols(from);
+			var syms: any[] = getSymbols(from);
 			for (var j = 0; j < syms.length; ++j) {
-				var key: String = syms[j];
+				var key: string = syms[j];
 				if ($propIsEnumerable(from, key)) {
 					$push(keys, key);
 				}
@@ -36,9 +36,9 @@ export default function assign(target: Function, source1: Function): Object {
 
 		// step 3.a.iii:
 		for (var i = 0; i < keys.length; ++i) {
-			var nextKey: String = keys[i];
+			var nextKey: string = keys[i];
 			if ($propIsEnumerable(from, nextKey)) { // step 3.a.iii.2
-				var propValue: String = from[nextKey]; // step 3.a.iii.2.a
+				var propValue: string = from[nextKey]; // step 3.a.iii.2.a
 				to[nextKey] = propValue; // step 3.a.iii.2.b
 			}
 		}

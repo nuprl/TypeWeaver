@@ -3,21 +3,21 @@ import { getPropertyName } from "./get-property-name"
 import { getStringIfConstant } from "./get-string-if-constant"
 
 const IMPORT_TYPE: RegExp = /^(?:Import|Export(?:All|Default|Named))Declaration$/u
-const has: Object = Function.call.bind(Object.hasOwnProperty)
+const has: object = Function.call.bind(Object.hasOwnProperty)
 
-export const READ: String = Symbol("read")
-export const CALL: String = Symbol("call")
-export const CONSTRUCT: String = Symbol("construct")
-export const ESM: String = Symbol("esm")
+export const READ: string = Symbol("read")
+export const CALL: string = Symbol("call")
+export const CONSTRUCT: string = Symbol("construct")
+export const ESM: string = Symbol("esm")
 
-const requireCall: Object = { require: { [CALL]: true } }
+const requireCall: object = { require: { [CALL]: true } }
 
 /**
  * Check whether a given variable is modified or not.
  * @param {Variable} variable The variable to check.
  * @returns {boolean} `true` if the variable is modified.
  */
-function isModifiedGlobal(variable: PatternMatcher): Boolean {
+function isModifiedGlobal(variable: PatternMatcher): boolean {
     return (
         variable == null ||
         variable.defs.length !== 0 ||
@@ -31,7 +31,7 @@ function isModifiedGlobal(variable: PatternMatcher): Boolean {
  * @param {Node} node A node to check.
  * @returns {boolean} `true` if the node is passed through.
  */
-function isPassThrough(node: Object): Boolean {
+function isPassThrough(node: object): boolean {
     const parent: HTMLElement = node.parent
 
     switch (parent && parent.type) {
@@ -80,8 +80,8 @@ export class ReferenceTracker {
      */
     *iterateGlobalReferences(traceMap) {
         for (const key of Object.keys(traceMap)) {
-            const nextTraceMap: Array = traceMap[key]
-            const path: Array = [key]
+            const nextTraceMap: any[] = traceMap[key]
+            const path: any[] = [key]
             const variable: PatternMatcher = this.globalScope.set.get(key)
 
             if (isModifiedGlobal(variable)) {
@@ -97,7 +97,7 @@ export class ReferenceTracker {
         }
 
         for (const key of this.globalObjectNames) {
-            const path: Array = []
+            const path: any[] = []
             const variable: PatternMatcher = this.globalScope.set.get(key)
 
             if (isModifiedGlobal(variable)) {
@@ -120,13 +120,13 @@ export class ReferenceTracker {
      */
     *iterateCjsReferences(traceMap) {
         for (const { node } of this.iterateGlobalReferences(requireCall)) {
-            const key: String = getStringIfConstant(node.arguments[0])
+            const key: string = getStringIfConstant(node.arguments[0])
             if (key == null || !has(traceMap, key)) {
                 continue
             }
 
-            const nextTraceMap: Object = traceMap[key]
-            const path: Array = [key]
+            const nextTraceMap: object = traceMap[key]
+            const path: any[] = [key]
 
             if (nextTraceMap[READ]) {
                 yield {
@@ -152,13 +152,13 @@ export class ReferenceTracker {
             if (!IMPORT_TYPE.test(node.type) || node.source == null) {
                 continue
             }
-            const moduleId: String = node.source.value
+            const moduleId: string = node.source.value
 
             if (!has(traceMap, moduleId)) {
                 continue
             }
-            const nextTraceMap: Object = traceMap[moduleId]
-            const path: Array = [moduleId]
+            const nextTraceMap: object = traceMap[moduleId]
+            const path: any[] = [moduleId]
 
             if (nextTraceMap[READ]) {
                 yield { node, path, type: READ, info: nextTraceMap[READ] }
@@ -166,7 +166,7 @@ export class ReferenceTracker {
 
             if (node.type === "ExportAllDeclaration") {
                 for (const key of Object.keys(nextTraceMap)) {
-                    const exportTraceMap: Object = nextTraceMap[key]
+                    const exportTraceMap: object = nextTraceMap[key]
                     if (exportTraceMap[READ]) {
                         yield {
                             node,
@@ -178,8 +178,8 @@ export class ReferenceTracker {
                 }
             } else {
                 for (const specifier of node.specifiers) {
-                    const esm: Boolean = has(nextTraceMap, ESM)
-                    const it: Array = this._iterateImportReferences(
+                    const esm: boolean = has(nextTraceMap, ESM)
+                    const it: any[] = this._iterateImportReferences(
                         specifier,
                         path,
                         esm
@@ -246,21 +246,21 @@ export class ReferenceTracker {
      */
     //eslint-disable-next-line complexity
     *_iteratePropertyReferences(rootNode, path, traceMap) {
-        let node: Object = rootNode
+        let node: object = rootNode
         while (isPassThrough(node)) {
             node = node.parent
         }
 
-        const parent: Object = node.parent
+        const parent: object = node.parent
         if (parent.type === "MemberExpression") {
             if (parent.object === node) {
-                const key: String = getPropertyName(parent)
+                const key: string = getPropertyName(parent)
                 if (key == null || !has(traceMap, key)) {
                     return
                 }
 
                 path = path.concat(key) //eslint-disable-line no-param-reassign
-                const nextTraceMap: Object = traceMap[key]
+                const nextTraceMap: object = traceMap[key]
                 if (nextTraceMap[READ]) {
                     yield {
                         node: parent,
@@ -323,7 +323,7 @@ export class ReferenceTracker {
      */
     *_iterateLhsReferences(patternNode, path, traceMap) {
         if (patternNode.type === "Identifier") {
-            const variable: String = findVariable(this.globalScope, patternNode)
+            const variable: string = findVariable(this.globalScope, patternNode)
             if (variable != null) {
                 yield* this._iterateVariableReferences(
                     variable,
@@ -336,14 +336,14 @@ export class ReferenceTracker {
         }
         if (patternNode.type === "ObjectPattern") {
             for (const property of patternNode.properties) {
-                const key: String = getPropertyName(property)
+                const key: string = getPropertyName(property)
 
                 if (key == null || !has(traceMap, key)) {
                     continue
                 }
 
-                const nextPath: Array = path.concat(key)
-                const nextTraceMap: Object = traceMap[key]
+                const nextPath: any[] = path.concat(key)
+                const nextTraceMap: object = traceMap[key]
                 if (nextTraceMap[READ]) {
                     yield {
                         node: property,
@@ -373,10 +373,10 @@ export class ReferenceTracker {
      * @returns {IterableIterator<{node:Node,path:string[],type:symbol,info:any}>} The iterator to iterate references.
      */
     *_iterateImportReferences(specifierNode, path, traceMap) {
-        const type: String = specifierNode.type
+        const type: string = specifierNode.type
 
         if (type === "ImportSpecifier" || type === "ImportDefaultSpecifier") {
-            const key: String =
+            const key: string =
                 type === "ImportDefaultSpecifier"
                     ? "default"
                     : specifierNode.imported.name
@@ -385,7 +385,7 @@ export class ReferenceTracker {
             }
 
             path = path.concat(key) //eslint-disable-line no-param-reassign
-            const nextTraceMap: Object = traceMap[key]
+            const nextTraceMap: object = traceMap[key]
             if (nextTraceMap[READ]) {
                 yield {
                     node: specifierNode,
@@ -415,13 +415,13 @@ export class ReferenceTracker {
         }
 
         if (type === "ExportSpecifier") {
-            const key: String = specifierNode.local.name
+            const key: string = specifierNode.local.name
             if (!has(traceMap, key)) {
                 return
             }
 
             path = path.concat(key) //eslint-disable-line no-param-reassign
-            const nextTraceMap: Object = traceMap[key]
+            const nextTraceMap: object = traceMap[key]
             if (nextTraceMap[READ]) {
                 yield {
                     node: specifierNode,
@@ -445,6 +445,6 @@ ReferenceTracker.ESM = ESM
  * @param {number} index The index of the name.
  * @returns {boolean} `false` if it's default.
  */
-function exceptDefault(name: String, index: Number): Boolean {
+function exceptDefault(name: string, index: number): boolean {
     return !(index === 1 && name === "default")
 }

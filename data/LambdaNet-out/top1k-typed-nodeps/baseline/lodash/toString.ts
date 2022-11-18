@@ -1,7 +1,7 @@
 import isSymbol from './isSymbol.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
+const INFINITY: number = 1 / 0
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -22,7 +22,7 @@ const INFINITY: Number = 1 / 0
  * toString([1, 2, 3])
  * // => '1,2,3'
  */
-function toString(value: String): String {
+function toString(value: string): string {
   if (value == null) {
     return ''
   }
@@ -32,12 +32,12 @@ function toString(value: String): String {
   }
   if (Array.isArray(value)) {
     // Recursively convert values (susceptible to call stack limits).
-    return `${value.map((other: String) => other == null ? other : toString(other))}`
+    return `${value.map((other: string) => other == null ? other : toString(other))}`
   }
   if (isSymbol(value)) {
     return value.toString()
   }
-  const result: String = `${value}`
+  const result: string = `${value}`
   return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result
 }
 

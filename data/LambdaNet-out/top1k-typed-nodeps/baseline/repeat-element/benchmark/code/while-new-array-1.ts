@@ -1,7 +1,7 @@
 module.exports = repeat;
 
-function repeat(ele: String, num: Number): Object {
-  var arr: Object = new Array(num);
+function repeat(ele: string, num: number): object {
+  var arr: object = new Array(num);
 
   while (num--) {
     arr[num] = ele;

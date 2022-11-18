@@ -10,7 +10,7 @@
  * @see http://sites.google.com/site/murmurhash/
  */
 (function(){
-    var cache: Object;
+    var cache: object;
 
     // Call this function without `new` to use the cached object (good for
     // single-threaded environments), or with `new` to create a new object.
@@ -18,8 +18,8 @@
     // @param {string} key A UTF-16 or ASCII string
     // @param {number} seed An optional positive integer
     // @return {object} A MurmurHash3 object for incremental hashing
-    function MurmurHash3(key: String, seed: String): String {
-        var m: Object = this instanceof MurmurHash3 ? this : cache;
+    function MurmurHash3(key: string, seed: string): string {
+        var m: object = this instanceof MurmurHash3 ? this : cache;
         m.reset(seed)
         if (typeof key === 'string' && key.length > 0) {
             m.hash(key);
@@ -34,8 +34,8 @@
     //
     // @param {string} key A UTF-16 or ASCII string
     // @return {object} this
-    MurmurHash3.prototype.hash = function(key: String) {
-        var h1: Number, k1: Number, i: Number, top: Number, len: Number;
+    MurmurHash3.prototype.hash = function(key: string) {
+        var h1: number, k1: number, i: number, top: number, len: number;
 
         len = key.length;
         this.len += len;
@@ -94,7 +94,7 @@
     //
     // @return {number} The 32-bit hash
     MurmurHash3.prototype.result = function() {
-        var k1: Number, h1: Number;
+        var k1: number, h1: number;
         
         k1 = this.k1;
         h1 = this.h1;
@@ -120,7 +120,7 @@
     // Reset the hash object for reuse
     //
     // @param {number} seed An optional positive integer
-    MurmurHash3.prototype.reset = function(seed: Number) {
+    MurmurHash3.prototype.reset = function(seed: number) {
         this.h1 = typeof seed === 'number' ? seed : 0;
         this.rem = this.k1 = this.len = 0;
         return this;

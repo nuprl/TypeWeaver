@@ -1,9 +1,9 @@
-const pEachSeries: HTMLElement = async (iterable: Object, iterator: Object) => {
-	let index: Number = 0;
+const pEachSeries: HTMLElement = async (iterable: object, iterator: object) => {
+	let index: number = 0;
 
 	for (const value of iterable) {
 		// eslint-disable-next-line no-await-in-loop
-		const returnValue: Number = await iterator(await value, index++);
+		const returnValue: number = await iterator(await value, index++);
 
 		if (returnValue === pEachSeries.stop) {
 			break;

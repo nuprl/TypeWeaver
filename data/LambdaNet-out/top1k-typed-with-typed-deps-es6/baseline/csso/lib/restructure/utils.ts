@@ -1,8 +1,8 @@
 const { hasOwnProperty } = Object.prototype;
 
-export function isEqualSelectors(a: Object, b: Object): Boolean {
-    let cursor1: Object = a.head;
-    let cursor2: Object = b.head;
+export function isEqualSelectors(a: object, b: object): boolean {
+    let cursor1: object = a.head;
+    let cursor2: object = b.head;
 
     while (cursor1 !== null && cursor2 !== null && cursor1.data.id === cursor2.data.id) {
         cursor1 = cursor1.next;
@@ -12,9 +12,9 @@ export function isEqualSelectors(a: Object, b: Object): Boolean {
     return cursor1 === null && cursor2 === null;
 }
 
-export function isEqualDeclarations(a: Object, b: Object): Boolean {
-    let cursor1: Object = a.head;
-    let cursor2: Object = b.head;
+export function isEqualDeclarations(a: object, b: object): boolean {
+    let cursor1: object = a.head;
+    let cursor2: object = b.head;
 
     while (cursor1 !== null && cursor2 !== null && cursor1.data.id === cursor2.data.id) {
         cursor1 = cursor1.next;
@@ -24,16 +24,16 @@ export function isEqualDeclarations(a: Object, b: Object): Boolean {
     return cursor1 === null && cursor2 === null;
 }
 
-export function compareDeclarations(declarations1: Function, declarations2: Object): TRBL {
-    const result: Object = {
+export function compareDeclarations(declarations1: Function, declarations2: object): TRBL {
+    const result: object = {
         eq: [],
         ne1: [],
         ne2: [],
         ne2overrided: []
     };
 
-    const fingerprints: Object = Object.create(null);
-    const declarations2hash: Object = Object.create(null);
+    const fingerprints: object = Object.create(null);
+    const declarations2hash: object = Object.create(null);
 
     for (let cursor = declarations2.head; cursor; cursor = cursor.next)  {
         declarations2hash[cursor.data.id] = true;
@@ -72,13 +72,13 @@ export function compareDeclarations(declarations1: Function, declarations2: Obje
     return result;
 }
 
-export function addSelectors(dest: TRBL, source: Array): TRBL {
-    source.forEach((sourceData: Object) => {
-        const newStr: String = sourceData.id;
-        let cursor: Object = dest.head;
+export function addSelectors(dest: TRBL, source: any[]): TRBL {
+    source.forEach((sourceData: object) => {
+        const newStr: string = sourceData.id;
+        let cursor: object = dest.head;
 
         while (cursor) {
-            const nextStr: String = cursor.data.id;
+            const nextStr: string = cursor.data.id;
 
             if (nextStr === newStr) {
                 return;
@@ -98,11 +98,11 @@ export function addSelectors(dest: TRBL, source: Array): TRBL {
 }
 
 // check if simpleselectors has no equal specificity and element selector
-export function hasSimilarSelectors(selectors1: Object, selectors2: Object): Boolean {
-    let cursor1: Object = selectors1.head;
+export function hasSimilarSelectors(selectors1: object, selectors2: object): boolean {
+    let cursor1: object = selectors1.head;
 
     while (cursor1 !== null) {
-        let cursor2: Object = selectors2.head;
+        let cursor2: object = selectors2.head;
 
         while (cursor2 !== null) {
             if (cursor1.data.compareMarker === cursor2.data.compareMarker) {
@@ -119,7 +119,7 @@ export function hasSimilarSelectors(selectors1: Object, selectors2: Object): Boo
 }
 
 // test node can't to be skipped
-export function unsafeToSkipNode(node: Object): Boolean {
+export function unsafeToSkipNode(node: object): boolean {
     switch (node.type) {
         case 'Rule':
             // unsafe skip ruleset with selector similarities

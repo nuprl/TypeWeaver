@@ -1,10 +1,10 @@
 'use strict';
-var isWindows: Boolean = process.platform === 'win32';
+var isWindows: boolean = process.platform === 'win32';
 var trailingSlashRe: HTMLElement = isWindows ? /[^:]\\$/ : /.\/$/;
 
 // https://github.com/nodejs/node/blob/3e7a14381497a3b73dda68d05b5130563cdab420/lib/os.js#L25-L43
 export default function () {
-	var path: String;
+	var path: string;
 
 	if (isWindows) {
 		path = process.env.TEMP ||

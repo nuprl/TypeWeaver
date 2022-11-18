@@ -1,6 +1,6 @@
 'use strict';
 
-function isPromise(obj: Array): Boolean {
+function isPromise(obj: any[]): boolean {
   return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
 }
 
@@ -24,8 +24,8 @@ var runAsync: Function = function (func: Function, cb: Function) {
     var args: Element = arguments;
 
     var promise: Promise = new Promise(function (resolve: Function, reject: Function) {
-      var resolved: Boolean = false;
-      const wrappedResolve: Function = function (value: String) {
+      var resolved: boolean = false;
+      const wrappedResolve: Function = function (value: string) {
         if (resolved) {
           console.warn('Run-async promise already resolved.')
         }
@@ -33,8 +33,8 @@ var runAsync: Function = function (func: Function, cb: Function) {
         resolve(value);
       }
 
-      var rejected: Boolean = false;
-      const wrappedReject: Function = function (value: String) {
+      var rejected: boolean = false;
+      const wrappedReject: Function = function (value: string) {
         if (rejected) {
           console.warn('Run-async promise already rejected.')
         }
@@ -42,9 +42,9 @@ var runAsync: Function = function (func: Function, cb: Function) {
         reject(value);
       }
 
-      var usingCallback: Boolean = false;
-      var callbackConflict: Boolean = false;
-      var contextEnded: Boolean = false;
+      var usingCallback: boolean = false;
+      var callbackConflict: boolean = false;
+      var contextEnded: boolean = false;
 
       var answer: Promise = func.apply({
         async: function () {
@@ -56,7 +56,7 @@ var runAsync: Function = function (func: Function, cb: Function) {
             console.warn('Run-async wrapped function (async) returned a promise.\nCalls to async() callback can have unexpected results.');
           }
           usingCallback = true;
-          return function (err: Function, value: String) {
+          return function (err: Function, value: string) {
             if (err) {
               wrappedReject(err);
             } else {
@@ -89,9 +89,9 @@ var runAsync: Function = function (func: Function, cb: Function) {
 
 export default runAsync;
 
-runAsync.cb = function (func: Array, cb: Function) {
+runAsync.cb = function (func: any[], cb: Function) {
   return runAsync(function () {
-    var args: Array = Array.prototype.slice.call(arguments);
+    var args: any[] = Array.prototype.slice.call(arguments);
     if (args.length === func.length - 1) {
       args.push(this.async());
     }

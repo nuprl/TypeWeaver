@@ -8,6 +8,6 @@ var type: Function = require("type-detect");
  * @param  {*} value
  * @returns {string}
  */
-module.exports = function typeOf(value: String): String {
+module.exports = function typeOf(value: string): string {
     return type(value).toLowerCase();
 };

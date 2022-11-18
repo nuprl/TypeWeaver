@@ -2,9 +2,9 @@
  * Copyright (c) 2018, Joyent, Inc. and assert-plus authors
  */
 
-var assert: String = require('assert');
-var Stream: Number = require('stream').Stream;
-var util: String = require('util');
+var assert: string = require('assert');
+var Stream: number = require('stream').Stream;
+var util: string = require('util');
 
 
 ///--- Globals
@@ -15,11 +15,11 @@ var UUID_REGEXP: RegExp = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F
 
 ///--- Internal
 
-function _capitalize(str: String): String {
+function _capitalize(str: string): string {
     return (str.charAt(0).toUpperCase() + str.slice(1));
 }
 
-function _toss(name: String, expected: String, oper: String, arg: String, actual: Function): Void {
+function _toss(name: string, expected: string, oper: string, arg: string, actual: Function): Void {
     throw new assert.AssertionError({
         message: util.format('%s (%s) is required', name, expected),
         actual: (actual === undefined) ? typeof (arg) : actual(arg),
@@ -29,7 +29,7 @@ function _toss(name: String, expected: String, oper: String, arg: String, actual
     });
 }
 
-function _getClass(arg: String): String {
+function _getClass(arg: string): string {
     return (Object.prototype.toString.call(arg).slice(8, -1));
 }
 
@@ -40,71 +40,71 @@ function noop(): Void {
 
 ///--- Exports
 
-var types: Object = {
+var types: object = {
     bool: {
-        check: function (arg: String) { return typeof (arg) === 'boolean'; }
+        check: function (arg: string) { return typeof (arg) === 'boolean'; }
     },
     func: {
-        check: function (arg: String) { return typeof (arg) === 'function'; }
+        check: function (arg: string) { return typeof (arg) === 'function'; }
     },
     string: {
-        check: function (arg: String) { return typeof (arg) === 'string'; }
+        check: function (arg: string) { return typeof (arg) === 'string'; }
     },
     object: {
-        check: function (arg: String) {
+        check: function (arg: string) {
             return typeof (arg) === 'object' && arg !== null;
         }
     },
     number: {
-        check: function (arg: Number) {
+        check: function (arg: number) {
             return typeof (arg) === 'number' && !isNaN(arg);
         }
     },
     finite: {
-        check: function (arg: String) {
+        check: function (arg: string) {
             return typeof (arg) === 'number' && !isNaN(arg) && isFinite(arg);
         }
     },
     buffer: {
-        check: function (arg: String) { return Buffer.isBuffer(arg); },
+        check: function (arg: string) { return Buffer.isBuffer(arg); },
         operator: 'Buffer.isBuffer'
     },
     array: {
-        check: function (arg: Array) { return Array.isArray(arg); },
+        check: function (arg: any[]) { return Array.isArray(arg); },
         operator: 'Array.isArray'
     },
     stream: {
-        check: function (arg: String) { return arg instanceof Stream; },
+        check: function (arg: string) { return arg instanceof Stream; },
         operator: 'instanceof',
         actual: _getClass
     },
     date: {
-        check: function (arg: String) { return arg instanceof Date; },
+        check: function (arg: string) { return arg instanceof Date; },
         operator: 'instanceof',
         actual: _getClass
     },
     regexp: {
-        check: function (arg: String) { return arg instanceof RegExp; },
+        check: function (arg: string) { return arg instanceof RegExp; },
         operator: 'instanceof',
         actual: _getClass
     },
     uuid: {
-        check: function (arg: String) {
+        check: function (arg: string) {
             return typeof (arg) === 'string' && UUID_REGEXP.test(arg);
         },
         operator: 'isUUID'
     }
 };
 
-function _setExports(ndebug: Boolean): Object {
-    var keys: Array = Object.keys(types);
-    var out: Object;
+function _setExports(ndebug: boolean): object {
+    var keys: any[] = Object.keys(types);
+    var out: object;
 
     /* re-export standard assert */
     if (process.env.NODE_NDEBUG) {
         out = noop;
     } else {
-        out = function (arg: Boolean, msg: String) {
+        out = function (arg: boolean, msg: string) {
             if (!arg) {
                 _toss(msg, 'true', arg);
             }
@@ -112,13 +112,13 @@ function _setExports(ndebug: Boolean): Object {
     }
 
     /* standard checks */
-    keys.forEach(function (k: String) {
+    keys.forEach(function (k: string) {
         if (ndebug) {
             out[k] = noop;
             return;
         }
-        var type: Object = types[k];
-        out[k] = function (arg: String, msg: String) {
+        var type: object = types[k];
+        out[k] = function (arg: string, msg: string) {
             if (!type.check(arg)) {
                 _toss(msg, k, type.operator, arg, type.actual);
             }
@@ -126,14 +126,14 @@ function _setExports(ndebug: Boolean): Object {
     });
 
     /* optional checks */
-    keys.forEach(function (k: String) {
-        var name: String = 'optional' + _capitalize(k);
+    keys.forEach(function (k: string) {
+        var name: string = 'optional' + _capitalize(k);
         if (ndebug) {
             out[name] = noop;
             return;
         }
-        var type: Object = types[k];
-        out[name] = function (arg: Number, msg: String) {
+        var type: object = types[k];
+        out[name] = function (arg: number, msg: string) {
             if (arg === undefined || arg === null) {
                 return;
             }
@@ -144,19 +144,19 @@ function _setExports(ndebug: Boolean): Object {
     });
 
     /* arrayOf checks */
-    keys.forEach(function (k: String) {
-        var name: String = 'arrayOf' + _capitalize(k);
+    keys.forEach(function (k: string) {
+        var name: string = 'arrayOf' + _capitalize(k);
         if (ndebug) {
             out[name] = noop;
             return;
         }
-        var type: Object = types[k];
-        var expected: String = '[' + k + ']';
-        out[name] = function (arg: Array, msg: String) {
+        var type: object = types[k];
+        var expected: string = '[' + k + ']';
+        out[name] = function (arg: any[], msg: string) {
             if (!Array.isArray(arg)) {
                 _toss(msg, expected, type.operator, arg, type.actual);
             }
-            var i: Number;
+            var i: number;
             for (i = 0; i < arg.length; i++) {
                 if (!type.check(arg[i])) {
                     _toss(msg, expected, type.operator, arg, type.actual);
@@ -166,22 +166,22 @@ function _setExports(ndebug: Boolean): Object {
     });
 
     /* optionalArrayOf checks */
-    keys.forEach(function (k: String) {
-        var name: String = 'optionalArrayOf' + _capitalize(k);
+    keys.forEach(function (k: string) {
+        var name: string = 'optionalArrayOf' + _capitalize(k);
         if (ndebug) {
             out[name] = noop;
             return;
         }
-        var type: Object = types[k];
-        var expected: String = '[' + k + ']';
-        out[name] = function (arg: Array, msg: String) {
+        var type: object = types[k];
+        var expected: string = '[' + k + ']';
+        out[name] = function (arg: any[], msg: string) {
             if (arg === undefined || arg === null) {
                 return;
             }
             if (!Array.isArray(arg)) {
                 _toss(msg, expected, type.operator, arg, type.actual);
             }
-            var i: Number;
+            var i: number;
             for (i = 0; i < arg.length; i++) {
                 if (!type.check(arg[i])) {
                     _toss(msg, expected, type.operator, arg, type.actual);
@@ -191,7 +191,7 @@ function _setExports(ndebug: Boolean): Object {
     });
 
     /* re-export built-in assertions */
-    Object.keys(assert).forEach(function (k: String) {
+    Object.keys(assert).forEach(function (k: string) {
         if (k === 'AssertionError') {
             out[k] = assert[k];
             return;

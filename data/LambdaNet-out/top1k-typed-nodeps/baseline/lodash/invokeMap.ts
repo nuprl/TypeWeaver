@@ -23,12 +23,12 @@ import isArrayLike from './isArrayLike.js'
  * invokeMap([123, 456], String.prototype.split, [''])
  * // => [['1', '2', '3'], ['4', '5', '6']]
  */
-function invokeMap(collection: Array, path: String, args: String): Object {
-  let index: Number = -1
-  const isFunc: Boolean = typeof path === 'function'
-  const result: Array = isArrayLike(collection) ? new Array(collection.length) : []
+function invokeMap(collection: any[], path: string, args: string): object {
+  let index: number = -1
+  const isFunc: boolean = typeof path === 'function'
+  const result: any[] = isArrayLike(collection) ? new Array(collection.length) : []
 
-  baseEach(collection, (value: String) => {
+  baseEach(collection, (value: string) => {
     result[++index] = isFunc ? path.apply(value, args) : invoke(value, path, args)
   })
   return result

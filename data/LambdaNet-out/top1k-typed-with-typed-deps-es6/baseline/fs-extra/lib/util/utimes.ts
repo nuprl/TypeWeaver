@@ -2,20 +2,20 @@
 
 import fs from 'graceful-fs';
 
-function utimesMillis (path: String, atime: String, mtime: String, callback: Function): Void {
+function utimesMillis (path: string, atime: string, mtime: string, callback: Function): Void {
   // if (!HAS_MILLIS_RES) return fs.utimes(path, atime, mtime, callback)
-  fs.open(path, 'r+', (err: String, fd: String) => {
+  fs.open(path, 'r+', (err: string, fd: string) => {
     if (err) return callback(err)
     fs.futimes(fd, atime, mtime, (futimesErr: Function) => {
-      fs.close(fd, (closeErr: Boolean) => {
+      fs.close(fd, (closeErr: boolean) => {
         if (callback) callback(futimesErr || closeErr)
       })
     })
   })
 }
 
-function utimesMillisSync (path: String, atime: String, mtime: String): Number {
-  const fd: Number = fs.openSync(path, 'r+')
+function utimesMillisSync (path: string, atime: string, mtime: string): number {
+  const fd: number = fs.openSync(path, 'r+')
   fs.futimesSync(fd, atime, mtime)
   return fs.closeSync(fd)
 }

@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-const isWin32: Boolean = process.platform === 'win32';
+const isWin32: boolean = process.platform === 'win32';
 const correctPath: Function = isWin32 ? require('./correctPath').correctPath : (p: Function) => p;
 
 /**
@@ -8,7 +8,7 @@ const correctPath: Function = isWin32 ? require('./correctPath').correctPath : (
  * because the buffer-to-string conversion in `fs.readFileSync()`
  * translates it to FEFF, the UTF-16 BOM.
  */
-function stripBOM(content: String): Array {
+function stripBOM(content: string): any[] {
     if (content.charCodeAt(0) === 0xFEFF) {
         content = content.slice(1);
     }
@@ -34,21 +34,21 @@ function stripBOM(content: String): Array {
  * @param {boolean} [unixifyPaths=false]
  * @param {Object} Module Module loader to patch.
  */
-export default function patchRequire(vol: Object, unixifyPaths: Boolean = false, Module: HTMLElement = require('module')): Void {
+export default function patchRequire(vol: object, unixifyPaths: boolean = false, Module: HTMLElement = require('module')): Void {
 
     // ensure all paths are corrected before use.
     if(isWin32 && unixifyPaths) {
-        const original: Object = vol;
+        const original: object = vol;
         vol = {
-            readFileSync: (path: String,options: Function) => {
+            readFileSync: (path: string,options: Function) => {
                 return original.readFileSync(correctPath(path),options);
             },
 
-            realpathSync: (path: String) => {
+            realpathSync: (path: string) => {
                 return original.realpathSync(correctPath(path));
             },
 
-            statSync: (path: String) => {
+            statSync: (path: string) => {
                 return original.statSync(correctPath(path));
             }
         };
@@ -57,7 +57,7 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
     // Used to speed up module loading.  Returns the contents of the file as
     // a string or undefined when the file cannot be opened.  The speedup
     // comes from not creating Error objects on failure.
-    function internalModuleReadFile(path: String): Promise {
+    function internalModuleReadFile(path: string): Promise {
         try {
             return vol.readFileSync(path, 'utf8');
         } catch(err) {
@@ -68,7 +68,7 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
     // Used to speed up module loading.  Returns 0 if the path refers to
     // a file, 1 when it's a directory or < 0 on error (usually -ENOENT.)
     // The speedup comes from not creating thousands of Stat and Error objects.
-    function internalModuleStat(filename: Number): Boolean {
+    function internalModuleStat(filename: number): boolean {
         try {
             return vol.statSync(filename).isDirectory() ? 1 : 0;
         } catch(err) {
@@ -76,42 +76,42 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
         }
     }
 
-    function stat(filename: String): String {
+    function stat(filename: string): string {
         filename = path._makeLong(filename);
-        const cache: Object = stat.cache;
+        const cache: object = stat.cache;
         if (cache !== null) {
-            const result: String = cache.get(filename);
+            const result: string = cache.get(filename);
             if (result !== undefined) return result;
         }
-        const result: Object = internalModuleStat(filename);
+        const result: object = internalModuleStat(filename);
         if (cache !== null) cache.set(filename, result);
         return result;
     }
     stat.cache = null;
 
 
-    const preserveSymlinks: Boolean = false;
+    const preserveSymlinks: boolean = false;
 
 
-    function toRealPath(requestPath: String): Promise {
+    function toRealPath(requestPath: string): Promise {
         return vol.realpathSync(requestPath);
     }
 
 
-    const packageMainCache: Object = Object.create(null);
-    function readPackage(requestPath: String): Boolean {
-        const entry: Boolean = packageMainCache[requestPath];
+    const packageMainCache: object = Object.create(null);
+    function readPackage(requestPath: string): boolean {
+        const entry: boolean = packageMainCache[requestPath];
         if (entry)
             return entry;
 
-        const jsonPath: String = path.resolve(requestPath, 'package.json');
-        const json: Number = internalModuleReadFile(path._makeLong(jsonPath));
+        const jsonPath: string = path.resolve(requestPath, 'package.json');
+        const json: number = internalModuleReadFile(path._makeLong(jsonPath));
 
         if (json === undefined) {
             return false;
         }
 
-        let pkg: Boolean;
+        let pkg: boolean;
         try {
             pkg = packageMainCache[requestPath] = JSON.parse(json).main;
         } catch (e) {
@@ -123,8 +123,8 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
     }
 
 
-    function tryFile(requestPath: String, isMain: Boolean): Boolean {
-        const rc: Number = stat(requestPath);
+    function tryFile(requestPath: string, isMain: boolean): boolean {
+        const rc: number = stat(requestPath);
         if (preserveSymlinks && !isMain) {
             return rc === 0 && path.resolve(requestPath);
         }
@@ -133,9 +133,9 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
 
 
     // given a path check a the file exists with any of the set extensions
-    function tryExtensions(p: String, exts: Array, isMain: Boolean): Boolean {
+    function tryExtensions(p: string, exts: any[], isMain: boolean): boolean {
         for (var i = 0; i < exts.length; i++) {
-            const filename: Boolean = tryFile(p + exts[i], isMain);
+            const filename: boolean = tryFile(p + exts[i], isMain);
 
             if (filename) {
                 return filename;
@@ -145,12 +145,12 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
     }
 
 
-    function tryPackage(requestPath: String, exts: String, isMain: Boolean): Boolean {
-        let pkg: Number = readPackage(requestPath);
+    function tryPackage(requestPath: string, exts: string, isMain: boolean): boolean {
+        let pkg: number = readPackage(requestPath);
 
         if (!pkg) return false;
 
-        let filename: String = path.resolve(requestPath, pkg);
+        let filename: string = path.resolve(requestPath, pkg);
         return tryFile(filename, isMain) ||
             tryExtensions(filename, exts, isMain) ||
             tryExtensions(path.resolve(filename, 'index'), exts, isMain);
@@ -158,14 +158,14 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
 
 
     // Native extension for .js
-    Module._extensions['.js'] = function(module: String, filename: Number) {
-        let content: String = vol.readFileSync(filename, 'utf8');
+    Module._extensions['.js'] = function(module: string, filename: number) {
+        let content: string = vol.readFileSync(filename, 'utf8');
         module._compile(stripBOM(content), filename);
     };
 
     // Native extension for .json
-    Module._extensions['.json'] = function(module: String, filename: Number) {
-        let content: String = vol.readFileSync(filename, 'utf8');
+    Module._extensions['.json'] = function(module: string, filename: number) {
+        let content: string = vol.readFileSync(filename, 'utf8');
         try {
             module.exports = JSON.parse(stripBOM(content));
         } catch (err) {
@@ -174,33 +174,33 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
         }
     };
 
-    let warned: Boolean = true;
-    Module._findPath = function(request: String, paths: Array, isMain: Boolean) {
+    let warned: boolean = true;
+    Module._findPath = function(request: string, paths: any[], isMain: boolean) {
         if (path.isAbsolute(request)) {
             paths = [''];
         } else if (!paths || paths.length === 0) {
             return false;
         }
 
-        var cacheKey: String = request + '\x00' +
+        var cacheKey: string = request + '\x00' +
             (paths.length === 1 ? paths[0] : paths.join('\x00'));
-        var entry: Boolean = Module._pathCache[cacheKey];
+        var entry: boolean = Module._pathCache[cacheKey];
         if (entry)
             return entry;
 
-        var exts: String;
-        var trailingSlash: Boolean = request.length > 0 &&
+        var exts: string;
+        var trailingSlash: boolean = request.length > 0 &&
             request.charCodeAt(request.length - 1) === 47/*/*/;
 
         // For each path
         for (var i = 0; i < paths.length; i++) {
             // Don't search further if path doesn't exist
-            const curPath: String = paths[i];
+            const curPath: string = paths[i];
             if (curPath && stat(curPath) < 1) continue;
-            var basePath: String = correctPath( path.resolve(curPath, request) );
-            var filename: Number;
+            var basePath: string = correctPath( path.resolve(curPath, request) );
+            var filename: number;
 
-            var rc: Number = stat(basePath);
+            var rc: number = stat(basePath);
             if (!trailingSlash) {
                 if (rc === 0) {  // File.
                     if (preserveSymlinks && !isMain) {

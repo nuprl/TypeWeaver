@@ -26,7 +26,7 @@ import keys from './keys.js'
  * values('hi')
  * // => ['h', 'i']
  */
-function values(object: Object): Array {
+function values(object: object): any[] {
   return object == null ? [] : baseValues(object, keys(object))
 }
 

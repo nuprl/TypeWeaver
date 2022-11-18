@@ -1,10 +1,10 @@
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
-var errors: Object = require('./errors');
-var types: Object = require('./types');
+var errors: object = require('./errors');
+var types: object = require('./types');
 
-var Reader: String = require('./reader');
-var Writer: String = require('./writer');
+var Reader: string = require('./reader');
+var Writer: string = require('./writer');
 
 
 // --- Exports

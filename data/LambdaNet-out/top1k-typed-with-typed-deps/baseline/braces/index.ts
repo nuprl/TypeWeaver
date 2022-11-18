@@ -19,12 +19,12 @@ const parse: Function = require('./lib/parse');
  * @api public
  */
 
-const braces: Function = (input: Array, options: Object = {}) => {
-  let output: Array = [];
+const braces: Function = (input: any[], options: object = {}) => {
+  let output: any[] = [];
 
   if (Array.isArray(input)) {
     for (let pattern of input) {
-      let result: Array = braces.create(pattern, options);
+      let result: any[] = braces.create(pattern, options);
       if (Array.isArray(result)) {
         output.push(...result);
       } else {
@@ -55,7 +55,7 @@ const braces: Function = (input: Array, options: Object = {}) => {
  * @api public
  */
 
-braces.parse = (input: HTMLInputElement, options: Object = {}) => parse(input, options);
+braces.parse = (input: HTMLInputElement, options: object = {}) => parse(input, options);
 
 /**
  * Creates a braces string from an AST, or an AST node.
@@ -93,7 +93,7 @@ braces.stringify = (input: HTMLElement, options: Function = {}) => {
  * @api public
  */
 
-braces.compile = (input: Element, options: Object = {}) => {
+braces.compile = (input: Element, options: object = {}) => {
   if (typeof input === 'string') {
     input = braces.parse(input, options);
   }
@@ -117,12 +117,12 @@ braces.compile = (input: Element, options: Object = {}) => {
  * @api public
  */
 
-braces.expand = (input: Element, options: Object = {}) => {
+braces.expand = (input: Element, options: object = {}) => {
   if (typeof input === 'string') {
     input = braces.parse(input, options);
   }
 
-  let result: Array = expand(input, options);
+  let result: any[] = expand(input, options);
 
   // filter out empty strings if specified
   if (options.noempty === true) {
@@ -153,7 +153,7 @@ braces.expand = (input: Element, options: Object = {}) => {
  * @api public
  */
 
-braces.create = (input: Array, options: Object = {}) => {
+braces.create = (input: any[], options: object = {}) => {
   if (input === '' || input.length < 3) {
     return [input];
   }

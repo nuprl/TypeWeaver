@@ -1,15 +1,15 @@
 'use strict'
 
-var pkg: String         = require('./package.json'),
+var pkg: string         = require('./package.json'),
     gulp: HTMLElement        = require('gulp'),
     uglify: Function      = require('gulp-uglify'),
     rename: Function      = require('gulp-rename'),
-    sourcemaps: String  = require('gulp-sourcemaps'),
+    sourcemaps: string  = require('gulp-sourcemaps'),
     header: Function      = require('gulp-header'),
     eslint: Function      = require('gulp-eslint'),
     mocha: Function       = require('gulp-mocha'),
     benchmark: Function   = require('gulp-benchmark'),
-    banner: String      = '/*! <%= pkg.name %> v<%= pkg.version %> | Copyright (c) 2007-present, <%= pkg.author %> | <%= pkg.license %> */\n'
+    banner: string      = '/*! <%= pkg.name %> v<%= pkg.version %> | Copyright (c) 2007-present, <%= pkg.author %> | <%= pkg.license %> */\n'
 
 gulp.task('benchmark', function () {
     return gulp

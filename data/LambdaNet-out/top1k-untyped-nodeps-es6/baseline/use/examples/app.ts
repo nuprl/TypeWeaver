@@ -18,8 +18,8 @@ function Multi(): Void {
 }
 util.inherits(Factory, Multi);
 
-Multi.prototype.app = function(name: String) {
-  var app: String = this.apps[name] = new App();
+Multi.prototype.app = function(name: string) {
+  var app: string = this.apps[name] = new App();
   this.run(app);
   return app;
 };
@@ -32,8 +32,8 @@ function App(): Void {
 }
 util.inherits(Factory, App);
 
-App.prototype.collection = function(name: String) {
-  var collection: String = this.collections[name] = new Collection();
+App.prototype.collection = function(name: string) {
+  var collection: string = this.collections[name] = new Collection();
   this.run(collection);
   return collection;
 };
@@ -46,8 +46,8 @@ function Collection(): Void {
 }
 util.inherits(Factory, Collection);
 
-Collection.prototype.item = function(name: String) {
-  var item: String = this.items[name] = new Item();
+Collection.prototype.item = function(name: string) {
+  var item: string = this.items[name] = new Item();
   this.run(item);
   return item;
 };
@@ -60,8 +60,8 @@ function Item(): Void {
 }
 util.inherits(Factory, Item);
 
-Item.prototype.field = function(name: String) {
-  var field: String = this.fields[name] = new Field();
+Item.prototype.field = function(name: string) {
+  var field: string = this.fields[name] = new Field();
   this.run(field);
   return field;
 };
@@ -73,7 +73,7 @@ function Field(): Void {
 }
 util.inherits(Factory, Field);
 
-Field.prototype.field = function(key: String, val: Array) {
+Field.prototype.field = function(key: string, val: any[]) {
   this[key] = val;
   this.run(val);
   return this;
@@ -81,13 +81,13 @@ Field.prototype.field = function(key: String, val: Array) {
 
 
 var multi: HTMLElement = new Multi();
-multi.use(function fn(app: Object): Function {
+multi.use(function fn(app: object): Function {
   if (!app.isItem) return fn;
   console.log(app)
 });
 
 var app: HTMLElement = multi.app('b');
 var collection: HTMLElement = app.collection('c');
-var item: Array = collection.item('d');
-var field: String = item.field('e');
+var item: any[] = collection.item('d');
+var field: string = item.field('e');
 

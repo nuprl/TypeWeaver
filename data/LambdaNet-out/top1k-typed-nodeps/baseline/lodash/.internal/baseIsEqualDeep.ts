@@ -7,12 +7,12 @@ import isBuffer from '../isBuffer.js'
 import isTypedArray from '../isTypedArray.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
+const COMPARE_PARTIAL_FLAG: number = 1
 
 /** `Object#toString` result references. */
-const argsTag: String = '[object Arguments]'
-const arrayTag: String = '[object Array]'
-const objectTag: String = '[object Object]'
+const argsTag: string = '[object Arguments]'
+const arrayTag: string = '[object Array]'
+const objectTag: string = '[object Object]'
 
 /** Used to check objects for own properties. */
 const hasOwnProperty: Function = Object.prototype.hasOwnProperty
@@ -31,18 +31,18 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * @param {Object} [stack] Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function baseIsEqualDeep(object: Object, other: Object, bitmask: Number, customizer: String, equalFunc: Function, stack: Stack): Boolean {
-  let objIsArr: Boolean = Array.isArray(object)
-  const othIsArr: Boolean = Array.isArray(other)
-  let objTag: String = objIsArr ? arrayTag : getTag(object)
-  let othTag: String = othIsArr ? arrayTag : getTag(other)
+function baseIsEqualDeep(object: object, other: object, bitmask: number, customizer: string, equalFunc: Function, stack: Stack): boolean {
+  let objIsArr: boolean = Array.isArray(object)
+  const othIsArr: boolean = Array.isArray(other)
+  let objTag: string = objIsArr ? arrayTag : getTag(object)
+  let othTag: string = othIsArr ? arrayTag : getTag(other)
 
   objTag = objTag == argsTag ? objectTag : objTag
   othTag = othTag == argsTag ? objectTag : othTag
 
-  let objIsObj: Boolean = objTag == objectTag
-  const othIsObj: Boolean = othTag == objectTag
-  const isSameTag: Boolean = objTag == othTag
+  let objIsObj: boolean = objTag == objectTag
+  const othIsObj: boolean = othTag == objectTag
+  const isSameTag: boolean = objTag == othTag
 
   if (isSameTag && isBuffer(object)) {
     if (!isBuffer(other)) {
@@ -58,12 +58,12 @@ function baseIsEqualDeep(object: Object, other: Object, bitmask: Number, customi
       : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack)
   }
   if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
-    const objIsWrapped: Boolean = objIsObj && hasOwnProperty.call(object, '__wrapped__')
-    const othIsWrapped: Boolean = othIsObj && hasOwnProperty.call(other, '__wrapped__')
+    const objIsWrapped: boolean = objIsObj && hasOwnProperty.call(object, '__wrapped__')
+    const othIsWrapped: boolean = othIsObj && hasOwnProperty.call(other, '__wrapped__')
 
     if (objIsWrapped || othIsWrapped) {
-      const objUnwrapped: Array = objIsWrapped ? object.value() : object
-      const othUnwrapped: String = othIsWrapped ? other.value() : other
+      const objUnwrapped: any[] = objIsWrapped ? object.value() : object
+      const othUnwrapped: string = othIsWrapped ? other.value() : other
 
       stack || (stack = new Stack)
       return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack)

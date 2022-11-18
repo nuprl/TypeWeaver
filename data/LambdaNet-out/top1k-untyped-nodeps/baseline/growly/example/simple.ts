@@ -1,3 +1,3 @@
-var growly: String = require('../lib/growly.js');
+var growly: string = require('../lib/growly.js');
 
 growly.notify('Hello, world!');

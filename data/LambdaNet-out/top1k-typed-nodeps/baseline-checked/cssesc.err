@@ -1,280 +1,153 @@
-Gruntfile.ts(3,8): error TS2339: Property 'initConfig' does not exist on type 'Object'.
-Gruntfile.ts(17,8): error TS2339: Property 'loadNpmTasks' does not exist on type 'Object'.
-Gruntfile.ts(19,8): error TS2339: Property 'registerTask' does not exist on type 'Object'.
+Gruntfile.ts(3,8): error TS2339: Property 'initConfig' does not exist on type 'object'.
+Gruntfile.ts(17,8): error TS2339: Property 'loadNpmTasks' does not exist on type 'object'.
+Gruntfile.ts(19,8): error TS2339: Property 'registerTask' does not exist on type 'object'.
 coverage/prettify.ts(1,8): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
-coverage/prettify.ts(1,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,119): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,293): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,406): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
-coverage/prettify.ts(1,679): error TS2322: Type 'any[]' is not assignable to type 'String'.
-coverage/prettify.ts(1,848): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-coverage/prettify.ts(1,1293): error TS2322: Type 'any[]' is not assignable to type 'String'.
-coverage/prettify.ts(1,1579): error TS2322: Type 'any[]' is not assignable to type 'String'.
-coverage/prettify.ts(1,1751): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,1937): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,2017): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,2030): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-coverage/prettify.ts(1,2757): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,2890): error TS2339: Property 'ignoreCase' does not exist on type 'Object'.
-coverage/prettify.ts(1,2935): error TS2339: Property 'source' does not exist on type 'Object'.
+coverage/prettify.ts(1,406): error TS2322: Type '(string | any[])[]' is not assignable to type 'string'.
+coverage/prettify.ts(1,679): error TS2322: Type '(string | any[])[]' is not assignable to type 'string'.
+coverage/prettify.ts(1,837): error TS2322: Type 'string[]' is not assignable to type 'string'.
+coverage/prettify.ts(1,1293): error TS2322: Type '(string | any[])[]' is not assignable to type 'string'.
+coverage/prettify.ts(1,1579): error TS2322: Type '(string | any[])[]' is not assignable to type 'string'.
+coverage/prettify.ts(1,2890): error TS2339: Property 'ignoreCase' does not exist on type 'object'.
+coverage/prettify.ts(1,2935): error TS2339: Property 'source' does not exist on type 'object'.
 coverage/prettify.ts(1,3121): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,3175): error TS2339: Property 'charAt' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,3190): error TS2538: Type 'Number' cannot be used as an index type.
-coverage/prettify.ts(1,3219): error TS2365: Operator '<=' cannot be applied to types 'string' and 'Number'.
-coverage/prettify.ts(1,3228): error TS2365: Operator '<=' cannot be applied to types 'Number' and 'string'.
+coverage/prettify.ts(1,3219): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
+coverage/prettify.ts(1,3228): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
 coverage/prettify.ts(1,3256): error TS2339: Property 'substring' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,3280): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-coverage/prettify.ts(1,3290): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+coverage/prettify.ts(1,3280): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+coverage/prettify.ts(1,3290): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 coverage/prettify.ts(1,3319): error TS2339: Property 'substring' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,3351): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,3402): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
-coverage/prettify.ts(1,3416): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
+coverage/prettify.ts(1,3402): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+coverage/prettify.ts(1,3416): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 coverage/prettify.ts(1,3448): error TS2554: Expected 0 arguments, but got 1.
-coverage/prettify.ts(1,3456): error TS2322: Type 'string' is not assignable to type 'Number'.
-coverage/prettify.ts(1,3487): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-coverage/prettify.ts(1,3494): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-coverage/prettify.ts(1,3505): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-coverage/prettify.ts(1,3515): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-coverage/prettify.ts(1,3525): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-coverage/prettify.ts(1,3535): error TS2322: Type 'string' is not assignable to type 'Number'.
-coverage/prettify.ts(1,3546): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-coverage/prettify.ts(1,3595): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,3761): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,3778): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,3900): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-coverage/prettify.ts(1,3940): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
-coverage/prettify.ts(1,4099): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,4115): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,4169): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,4186): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+coverage/prettify.ts(1,3456): error TS2322: Type 'string' is not assignable to type 'number'.
+coverage/prettify.ts(1,3487): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+coverage/prettify.ts(1,3494): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+coverage/prettify.ts(1,3505): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+coverage/prettify.ts(1,3515): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+coverage/prettify.ts(1,3525): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+coverage/prettify.ts(1,3535): error TS2322: Type 'string' is not assignable to type 'number'.
+coverage/prettify.ts(1,3546): error TS2322: Type 'number' is not assignable to type 'string'.
+coverage/prettify.ts(1,3940): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 coverage/prettify.ts(1,4224): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,4236): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,4290): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,4454): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,4716): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,4725): error TS2339: Property 'source' does not exist on type 'Object'.
-coverage/prettify.ts(1,4944): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,5169): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,5458): error TS2339: Property 'ignoreCase' does not exist on type 'Object'.
-coverage/prettify.ts(1,5720): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,5727): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,5770): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,5815): error TS2403: Subsequent variable declarations must have the same type.  Variable 'ae' must be of type 'Object', but here has type 'Function'.
-coverage/prettify.ts(1,5839): error TS2339: Property 'global' does not exist on type 'Object'.
-coverage/prettify.ts(1,5850): error TS2339: Property 'multiline' does not exist on type 'Object'.
-coverage/prettify.ts(1,6034): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+coverage/prettify.ts(1,4725): error TS2339: Property 'source' does not exist on type 'object'.
+coverage/prettify.ts(1,5458): error TS2339: Property 'ignoreCase' does not exist on type 'object'.
+coverage/prettify.ts(1,5815): error TS2403: Subsequent variable declarations must have the same type.  Variable 'ae' must be of type 'object', but here has type 'Function'.
+coverage/prettify.ts(1,5839): error TS2339: Property 'global' does not exist on type 'object'.
+coverage/prettify.ts(1,5850): error TS2339: Property 'multiline' does not exist on type 'object'.
 coverage/prettify.ts(1,6111): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,6129): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,6271): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+coverage/prettify.ts(1,6271): error TS2322: Type 'boolean' is not assignable to type 'number'.
 coverage/prettify.ts(1,6339): error TS2304: Cannot find name 'Void'.
 coverage/prettify.ts(1,6453): error TS2345: Argument of type 'ChildNode' is not assignable to parameter of type 'HTMLElement'.
   Type 'ChildNode' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 223 more.
-coverage/prettify.ts(1,6521): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,6527): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,6534): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,6694): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,6702): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,6718): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,6847): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,6855): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,6935): error TS2339: Property 'decorations' does not exist on type 'Object'.
-coverage/prettify.ts(1,7033): error TS2339: Property 'firstChild' does not exist on type 'Object'.
-coverage/prettify.ts(1,7181): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,7190): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,7260): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,7286): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,7511): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-coverage/prettify.ts(1,7531): error TS2538: Type 'String' cannot be used as an index type.
-coverage/prettify.ts(1,7564): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-coverage/prettify.ts(1,7653): error TS2339: Property 'sourceCode' does not exist on type 'Object'.
-coverage/prettify.ts(1,7677): error TS2339: Property 'basePos' does not exist on type 'Object'.
-coverage/prettify.ts(1,7693): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,7730): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+coverage/prettify.ts(1,6935): error TS2339: Property 'decorations' does not exist on type 'object'.
+coverage/prettify.ts(1,7033): error TS2339: Property 'firstChild' does not exist on type 'object'.
+coverage/prettify.ts(1,7149): error TS2367: This condition will always return 'false' since the types 'string' and 'object' have no overlap.
+coverage/prettify.ts(1,7564): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+coverage/prettify.ts(1,7653): error TS2339: Property 'sourceCode' does not exist on type 'object'.
+coverage/prettify.ts(1,7677): error TS2339: Property 'basePos' does not exist on type 'object'.
 coverage/prettify.ts(1,7744): error TS2769: No overload matches this call.
   Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
       Property '[Symbol.match]' is missing in type 'Function' but required in type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
   Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'string | RegExp'.
-coverage/prettify.ts(1,7847): error TS2538: Type 'String' cannot be used as an index type.
-coverage/prettify.ts(1,8197): error TS2538: Type 'String' cannot be used as an index type.
-coverage/prettify.ts(1,8223): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,8253): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-coverage/prettify.ts(1,8275): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,8384): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,8430): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-coverage/prettify.ts(1,8450): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,8462): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-coverage/prettify.ts(1,8473): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-coverage/prettify.ts(1,8488): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-coverage/prettify.ts(1,8509): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,8523): error TS2339: Property 'decorations' does not exist on type 'Object'.
-coverage/prettify.ts(1,8585): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,8597): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,8611): error TS2339: Property 'tripleQuotedStrings' does not exist on type 'Object'.
-coverage/prettify.ts(1,8850): error TS2339: Property 'multiLineStrings' does not exist on type 'Object'.
-coverage/prettify.ts(1,9098): error TS2339: Property 'verbatimStrings' does not exist on type 'Object'.
-coverage/prettify.ts(1,9179): error TS2339: Property 'hashComments' does not exist on type 'Object'.
-coverage/prettify.ts(1,9203): error TS2339: Property 'cStyleComments' does not exist on type 'Object'.
-coverage/prettify.ts(1,9222): error TS2365: Operator '>' cannot be applied to types 'Boolean' and 'number'.
-coverage/prettify.ts(1,9546): error TS2339: Property 'cStyleComments' does not exist on type 'Object'.
-coverage/prettify.ts(1,9643): error TS2339: Property 'regexLiterals' does not exist on type 'Object'.
-coverage/prettify.ts(1,9837): error TS2339: Property 'types' does not exist on type 'Object'.
-coverage/prettify.ts(1,9883): error TS2339: Property 'keywords' does not exist on type 'Object'.
-coverage/prettify.ts(1,10348): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+coverage/prettify.ts(1,8313): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,8470): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,8478): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,8523): error TS2339: Property 'decorations' does not exist on type 'object'.
+coverage/prettify.ts(1,8611): error TS2339: Property 'tripleQuotedStrings' does not exist on type 'object'.
+coverage/prettify.ts(1,8850): error TS2339: Property 'multiLineStrings' does not exist on type 'object'.
+coverage/prettify.ts(1,9098): error TS2339: Property 'verbatimStrings' does not exist on type 'object'.
+coverage/prettify.ts(1,9179): error TS2339: Property 'hashComments' does not exist on type 'object'.
+coverage/prettify.ts(1,9203): error TS2339: Property 'cStyleComments' does not exist on type 'object'.
+coverage/prettify.ts(1,9222): error TS2365: Operator '>' cannot be applied to types 'boolean' and 'number'.
+coverage/prettify.ts(1,9546): error TS2339: Property 'cStyleComments' does not exist on type 'object'.
+coverage/prettify.ts(1,9643): error TS2339: Property 'regexLiterals' does not exist on type 'object'.
+coverage/prettify.ts(1,9837): error TS2339: Property 'types' does not exist on type 'object'.
+coverage/prettify.ts(1,9883): error TS2339: Property 'keywords' does not exist on type 'object'.
+coverage/prettify.ts(1,10348): error TS2322: Type 'Function' is not assignable to type 'string'.
 coverage/prettify.ts(1,10510): error TS2304: Cannot find name 'Void'.
 coverage/prettify.ts(1,10584): error TS2740: Type 'Document' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, draggable, and 121 more.
 coverage/prettify.ts(1,10635): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,10653): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,10715): error TS2339: Property 'defaultView' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,10851): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,10927): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,10968): error TS2304: Cannot find name 'Void'.
 coverage/prettify.ts(1,11165): error TS2345: Argument of type 'ChildNode' is not assignable to parameter of type 'HTMLElement'.
 coverage/prettify.ts(1,11200): error TS2322: Type 'string' is not assignable to type 'Function'.
 coverage/prettify.ts(1,11244): error TS2339: Property 'match' does not exist on type 'Function'.
 coverage/prettify.ts(1,11279): error TS2339: Property 'substring' does not exist on type 'Function'.
-coverage/prettify.ts(1,11294): error TS2339: Property 'index' does not exist on type 'Object'.
-coverage/prettify.ts(1,11301): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+coverage/prettify.ts(1,11294): error TS2339: Property 'index' does not exist on type 'object'.
 coverage/prettify.ts(1,11335): error TS2339: Property 'substring' does not exist on type 'Function'.
-coverage/prettify.ts(1,11348): error TS2339: Property 'index' does not exist on type 'Object'.
+coverage/prettify.ts(1,11348): error TS2339: Property 'index' does not exist on type 'object'.
 coverage/prettify.ts(1,11379): error TS2740: Type 'ParentNode' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 218 more.
 coverage/prettify.ts(1,11428): error TS2339: Property 'createTextNode' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,11542): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,11557): error TS2339: Property 'nextSibling' does not exist on type 'Object'.
-coverage/prettify.ts(1,11576): error TS2339: Property 'parentNode' does not exist on type 'Object'.
-coverage/prettify.ts(1,11668): error TS2339: Property 'cloneNode' does not exist on type 'Object'.
-coverage/prettify.ts(1,11708): error TS2339: Property 'parentNode' does not exist on type 'Object'.
-coverage/prettify.ts(1,11730): error TS2322: Type 'String' is not assignable to type 'HTMLElement'.
-coverage/prettify.ts(1,11752): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
-coverage/prettify.ts(1,11775): error TS2339: Property 'nextSibling' does not exist on type 'Object'.
-coverage/prettify.ts(1,11802): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Node'.
-  Type 'String' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 45 more.
+coverage/prettify.ts(1,11557): error TS2339: Property 'nextSibling' does not exist on type 'object'.
+coverage/prettify.ts(1,11576): error TS2339: Property 'parentNode' does not exist on type 'object'.
+coverage/prettify.ts(1,11668): error TS2339: Property 'cloneNode' does not exist on type 'object'.
+coverage/prettify.ts(1,11708): error TS2339: Property 'parentNode' does not exist on type 'object'.
+coverage/prettify.ts(1,11730): error TS2322: Type 'string' is not assignable to type 'HTMLElement'.
+coverage/prettify.ts(1,11752): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+coverage/prettify.ts(1,11775): error TS2339: Property 'nextSibling' does not exist on type 'object'.
+coverage/prettify.ts(1,11802): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 coverage/prettify.ts(1,11836): error TS2339: Property 'nextSibling' does not exist on type 'Function'.
 coverage/prettify.ts(1,11863): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Node'.
   Type 'Function' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
-coverage/prettify.ts(1,11882): error TS2322: Type 'String' is not assignable to type 'HTMLElement'.
-coverage/prettify.ts(1,11904): error TS2339: Property 'nextSibling' does not exist on type 'Object'.
-coverage/prettify.ts(1,11916): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
-coverage/prettify.ts(1,12031): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+coverage/prettify.ts(1,11882): error TS2322: Type 'string' is not assignable to type 'HTMLElement'.
+coverage/prettify.ts(1,11904): error TS2339: Property 'nextSibling' does not exist on type 'object'.
+coverage/prettify.ts(1,11916): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
 coverage/prettify.ts(1,12091): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,12162): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12234): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 coverage/prettify.ts(1,12280): error TS2339: Property 'createTextNode' does not exist on type 'HTMLElement'.
 coverage/prettify.ts(1,12365): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,12462): error TS2339: Property 'sourceCode' does not exist on type 'Object'.
-coverage/prettify.ts(1,12522): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,12531): error TS2339: Property 'spans' does not exist on type 'Object'.
-coverage/prettify.ts(1,12595): error TS2339: Property 'decorations' does not exist on type 'Object'.
-coverage/prettify.ts(1,12623): error TS2339: Property 'length' does not exist on type 'Object'.
-coverage/prettify.ts(1,12648): error TS2538: Type 'Number' cannot be used as an index type.
-coverage/prettify.ts(1,12704): error TS2538: Type 'Number' cannot be used as an index type.
-coverage/prettify.ts(1,12712): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12721): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12729): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12737): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12745): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12756): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12804): error TS2538: Type 'Number' cannot be used as an index type.
-coverage/prettify.ts(1,12825): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12845): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12856): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12866): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12877): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,12884): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12895): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,12913): error TS2339: Property 'length' does not exist on type 'Object'.
-coverage/prettify.ts(1,12931): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,12993): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,13020): error TS2538: Type 'Number' cannot be used as an index type.
-coverage/prettify.ts(1,13040): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,13072): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,13101): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,13157): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,13192): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+coverage/prettify.ts(1,12462): error TS2339: Property 'sourceCode' does not exist on type 'object'.
+coverage/prettify.ts(1,12531): error TS2339: Property 'spans' does not exist on type 'object'.
+coverage/prettify.ts(1,12595): error TS2339: Property 'decorations' does not exist on type 'object'.
+coverage/prettify.ts(1,12623): error TS2339: Property 'length' does not exist on type 'object'.
+coverage/prettify.ts(1,12913): error TS2339: Property 'length' does not exist on type 'object'.
 coverage/prettify.ts(1,13211): error TS2322: Type 'Document' is not assignable to type 'HTMLElement'.
 coverage/prettify.ts(1,13267): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,13304): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 coverage/prettify.ts(1,13313): error TS2322: Type 'ParentNode' is not assignable to type 'HTMLElement'.
-coverage/prettify.ts(1,13396): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 coverage/prettify.ts(1,13408): error TS2339: Property 'createTextNode' does not exist on type 'HTMLElement'.
-coverage/prettify.ts(1,13436): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-coverage/prettify.ts(1,13491): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,13507): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-coverage/prettify.ts(1,13555): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,13563): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,13636): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-coverage/prettify.ts(1,13642): error TS2538: Type 'String' cannot be used as an index type.
-coverage/prettify.ts(1,13793): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-coverage/prettify.ts(1,13813): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-coverage/prettify.ts(1,13857): error TS2538: Type 'String' cannot be used as an index type.
-coverage/prettify.ts(1,13884): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-coverage/prettify.ts(1,14327): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-coverage/prettify.ts(1,14836): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-coverage/prettify.ts(1,15708): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+coverage/prettify.ts(1,13884): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,14327): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,14836): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,15708): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 coverage/prettify.ts(1,15765): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,15777): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,15785): error TS2339: Property 'langExtension' does not exist on type 'Object'.
-coverage/prettify.ts(1,15821): error TS2339: Property 'sourceNode' does not exist on type 'Object'.
-coverage/prettify.ts(1,15849): error TS2339: Property 'sourceCode' does not exist on type 'Object'.
-coverage/prettify.ts(1,15862): error TS2339: Property 'sourceCode' does not exist on type 'Object'.
-coverage/prettify.ts(1,15877): error TS2339: Property 'spans' does not exist on type 'Object'.
-coverage/prettify.ts(1,15885): error TS2339: Property 'spans' does not exist on type 'Object'.
-coverage/prettify.ts(1,15893): error TS2339: Property 'basePos' does not exist on type 'Object'.
+coverage/prettify.ts(1,15785): error TS2339: Property 'langExtension' does not exist on type 'object'.
+coverage/prettify.ts(1,15821): error TS2339: Property 'sourceNode' does not exist on type 'object'.
+coverage/prettify.ts(1,15849): error TS2339: Property 'sourceCode' does not exist on type 'object'.
+coverage/prettify.ts(1,15862): error TS2339: Property 'sourceCode' does not exist on type 'object'.
+coverage/prettify.ts(1,15877): error TS2339: Property 'spans' does not exist on type 'object'.
+coverage/prettify.ts(1,15885): error TS2339: Property 'spans' does not exist on type 'object'.
+coverage/prettify.ts(1,15893): error TS2339: Property 'basePos' does not exist on type 'object'.
 coverage/prettify.ts(1,15903): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-coverage/prettify.ts(1,16086): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-coverage/prettify.ts(1,16110): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+coverage/prettify.ts(1,15905): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+coverage/prettify.ts(1,16110): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 coverage/prettify.ts(1,16222): error TS2304: Cannot find name 'Void'.
-coverage/prettify.ts(1,16295): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(qualifiedName: keyof HTMLElementTagNameMap): HTMLCollectionOf<HTMLElement | HTMLCanvasElement | HTMLImageElement | ... 65 more ... | HTMLUListElement>', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'keyof HTMLElementTagNameMap'.
-  Overload 2 of 3, '(qualifiedName: keyof SVGElementTagNameMap): HTMLCollectionOf<SVGImageElement | SVGScriptElement | SVGSVGElement | ... 59 more ... | SVGUseElement>', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'keyof SVGElementTagNameMap'.
-  Overload 3 of 3, '(qualifiedName: string): HTMLCollectionOf<Element>', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-coverage/prettify.ts(1,16307): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,16350): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,16459): error TS2322: Type 'DateConstructor' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-coverage/prettify.ts(1,16481): error TS2339: Property 'now' does not exist on type 'Boolean'.
-coverage/prettify.ts(1,16489): error TS2322: Type '{ now: () => number; }' is not assignable to type 'Boolean'.
-  Object literal may only specify known properties, and 'now' does not exist in type 'Boolean'.
+coverage/prettify.ts(1,16459): error TS2322: Type 'DateConstructor' is not assignable to type 'boolean'.
+coverage/prettify.ts(1,16481): error TS2339: Property 'now' does not exist on type 'boolean'.
+coverage/prettify.ts(1,16486): error TS2322: Type '{ now: () => number; }' is not assignable to type 'boolean'.
 coverage/prettify.ts(1,16650): error TS2304: Cannot find name 'Void'.
 coverage/prettify.ts(1,16678): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
-coverage/prettify.ts(1,16707): error TS2339: Property 'now' does not exist on type 'Boolean'.
-coverage/prettify.ts(1,16746): error TS2339: Property 'now' does not exist on type 'Boolean'.
-coverage/prettify.ts(1,16755): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-coverage/prettify.ts(1,16854): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,16902): error TS2322: Type 'String' is not assignable to type 'HTMLElement'.
+coverage/prettify.ts(1,16707): error TS2339: Property 'now' does not exist on type 'boolean'.
+coverage/prettify.ts(1,16746): error TS2339: Property 'now' does not exist on type 'boolean'.
+coverage/prettify.ts(1,16902): error TS2322: Type 'string' is not assignable to type 'HTMLElement'.
 coverage/prettify.ts(1,17051): error TS2339: Property 'tagName' does not exist on type 'ParentNode'.
 coverage/prettify.ts(1,17071): error TS2339: Property 'tagName' does not exist on type 'ParentNode'.
 coverage/prettify.ts(1,17092): error TS2339: Property 'tagName' does not exist on type 'ParentNode'.
 coverage/prettify.ts(1,17113): error TS2339: Property 'className' does not exist on type 'ParentNode'.
 coverage/prettify.ts(1,17127): error TS2339: Property 'className' does not exist on type 'ParentNode'.
-coverage/prettify.ts(1,17304): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+coverage/prettify.ts(1,17248): error TS2322: Type 'number | boolean' is not assignable to type 'object'.
+  Type 'number' is not assignable to type 'object'.
+coverage/prettify.ts(1,17304): error TS2345: Argument of type 'object' is not assignable to parameter of type 'number'.
 coverage/prettify.ts(1,17428): error TS2339: Property 'prettyPrintOne' does not exist on type 'Window & typeof globalThis'.
 coverage/prettify.ts(1,17452): error TS2339: Property 'prettyPrint' does not exist on type 'Window & typeof globalThis'.
 coverage/prettify.ts(1,17473): error TS2339: Property 'PR' does not exist on type 'Window & typeof globalThis'.
@@ -312,42 +185,28 @@ cssesc.ts(19,5): error TS2451: Cannot redeclare block-scoped variable 'regexAnyS
 cssesc.ts(20,5): error TS2451: Cannot redeclare block-scoped variable 'regexSingleEscape'.
 cssesc.ts(21,5): error TS2451: Cannot redeclare block-scoped variable 'regexAlwaysEscape'.
 cssesc.ts(22,5): error TS2451: Cannot redeclare block-scoped variable 'regexExcessiveSpaces'.
-cssesc.ts(25,5): error TS2322: Type '(string: String, options: Object) => String' is not assignable to type 'HTMLElement'.
-cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: String, options: Object) => String'.
-cssesc.ts(27,14): error TS2339: Property 'quotes' does not exist on type 'Object'.
-cssesc.ts(27,44): error TS2339: Property 'quotes' does not exist on type 'Object'.
-cssesc.ts(28,11): error TS2339: Property 'quotes' does not exist on type 'Object'.
-cssesc.ts(30,30): error TS2339: Property 'quotes' does not exist on type 'Object'.
-cssesc.ts(31,38): error TS2339: Property 'isIdentifier' does not exist on type 'Object'.
-cssesc.ts(38,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+cssesc.ts(25,5): error TS2322: Type '(string: string, options: object) => string' is not assignable to type 'HTMLElement'.
+cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: string, options: object) => string'.
+cssesc.ts(27,14): error TS2339: Property 'quotes' does not exist on type 'object'.
+cssesc.ts(27,44): error TS2339: Property 'quotes' does not exist on type 'object'.
+cssesc.ts(28,11): error TS2339: Property 'quotes' does not exist on type 'object'.
+cssesc.ts(30,30): error TS2339: Property 'quotes' does not exist on type 'object'.
+cssesc.ts(31,38): error TS2339: Property 'isIdentifier' does not exist on type 'object'.
 cssesc.ts(39,37): error TS2554: Expected 1 arguments, but got 0.
-cssesc.ts(45,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-cssesc.ts(46,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-cssesc.ts(48,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-cssesc.ts(48,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-cssesc.ts(52,6): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-cssesc.ts(55,4): error TS2322: Type 'string' is not assignable to type 'Number'.
-cssesc.ts(57,16): error TS2339: Property 'escapeEverything' does not exist on type 'Object'.
-cssesc.ts(58,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-cssesc.ts(59,6): error TS2322: Type 'string' is not assignable to type 'Number'.
-cssesc.ts(61,6): error TS2322: Type 'string' is not assignable to type 'Number'.
-cssesc.ts(63,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-cssesc.ts(64,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-cssesc.ts(65,179): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-cssesc.ts(66,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-cssesc.ts(68,5): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-cssesc.ts(71,3): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
-cssesc.ts(75,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-cssesc.ts(77,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-cssesc.ts(85,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-cssesc.ts(85,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-cssesc.ts(94,31): error TS2339: Property 'wrap' does not exist on type 'Object'.
-cssesc.ts(95,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+cssesc.ts(55,4): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(57,16): error TS2339: Property 'escapeEverything' does not exist on type 'object'.
+cssesc.ts(59,6): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(61,6): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(64,5): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(66,5): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(68,5): error TS2322: Type 'string' is not assignable to type 'number'.
+cssesc.ts(85,48): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '($0: any[], $1: any[], $2: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters '$0' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'any[]'.
+cssesc.ts(91,10): error TS2365: Operator '+' cannot be applied to types 'string | any[]' and 'number'.
+cssesc.ts(94,31): error TS2339: Property 'wrap' does not exist on type 'object'.
 cssesc.ts(101,8): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 cssesc.ts(108,8): error TS2339: Property 'version' does not exist on type 'HTMLElement'.
 src/cssesc.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'object'.
@@ -358,42 +217,28 @@ src/cssesc.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'regex
 src/cssesc.ts(23,7): error TS2451: Cannot redeclare block-scoped variable 'regexAlwaysEscape'.
 src/cssesc.ts(24,7): error TS2451: Cannot redeclare block-scoped variable 'regexExcessiveSpaces'.
 src/cssesc.ts(28,34): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
-src/cssesc.ts(29,14): error TS2339: Property 'quotes' does not exist on type 'Object'.
-src/cssesc.ts(29,44): error TS2339: Property 'quotes' does not exist on type 'Object'.
-src/cssesc.ts(30,11): error TS2339: Property 'quotes' does not exist on type 'Object'.
-src/cssesc.ts(32,32): error TS2339: Property 'quotes' does not exist on type 'Object'.
-src/cssesc.ts(33,40): error TS2339: Property 'isIdentifier' does not exist on type 'Object'.
-src/cssesc.ts(40,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/cssesc.ts(29,14): error TS2339: Property 'quotes' does not exist on type 'object'.
+src/cssesc.ts(29,44): error TS2339: Property 'quotes' does not exist on type 'object'.
+src/cssesc.ts(30,11): error TS2339: Property 'quotes' does not exist on type 'object'.
+src/cssesc.ts(32,32): error TS2339: Property 'quotes' does not exist on type 'object'.
+src/cssesc.ts(33,40): error TS2339: Property 'isIdentifier' does not exist on type 'object'.
 src/cssesc.ts(41,37): error TS2554: Expected 1 arguments, but got 0.
-src/cssesc.ts(47,45): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/cssesc.ts(48,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/cssesc.ts(49,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/cssesc.ts(49,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/cssesc.ts(53,6): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/cssesc.ts(56,4): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/cssesc.ts(58,16): error TS2339: Property 'escapeEverything' does not exist on type 'Object'.
-src/cssesc.ts(59,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/cssesc.ts(60,6): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/cssesc.ts(62,6): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/cssesc.ts(64,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/cssesc.ts(65,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/cssesc.ts(75,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/cssesc.ts(77,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/cssesc.ts(79,5): error TS2322: Type 'String' is not assignable to type 'Number'.
-src/cssesc.ts(82,3): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
-src/cssesc.ts(86,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/cssesc.ts(88,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/cssesc.ts(96,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/cssesc.ts(96,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/cssesc.ts(105,31): error TS2339: Property 'wrap' does not exist on type 'Object'.
-src/cssesc.ts(106,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+src/cssesc.ts(56,4): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(58,16): error TS2339: Property 'escapeEverything' does not exist on type 'object'.
+src/cssesc.ts(60,6): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(62,6): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(65,5): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(77,5): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(79,5): error TS2322: Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(96,48): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '($0: any[], $1: any[], $2: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters '$0' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'any[]'.
+src/cssesc.ts(102,10): error TS2365: Operator '+' cannot be applied to types 'string | any[]' and 'number'.
+src/cssesc.ts(105,31): error TS2339: Property 'wrap' does not exist on type 'object'.
 src/cssesc.ts(112,8): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 src/cssesc.ts(119,8): error TS2339: Property 'version' does not exist on type 'HTMLElement'.
-src/data.ts(6,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/data.ts(14,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+src/data.ts(13,23): error TS2339: Property 'remove' does not exist on type 'any[]'.
+src/data.ts(14,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
 

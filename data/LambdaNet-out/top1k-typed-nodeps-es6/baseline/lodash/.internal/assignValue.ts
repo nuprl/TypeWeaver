@@ -12,8 +12,8 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * @param {string} key The key of the property to assign.
  * @param {*} value The value to assign.
  */
-function assignValue(object: Object, key: String, value: Number): Void {
-  const objValue: Number = object[key]
+function assignValue(object: object, key: string, value: number): Void {
+  const objValue: number = object[key]
 
   if (!(hasOwnProperty.call(object, key) && eq(objValue, value))) {
     if (value !== 0 || (1 / value) === (1 / objValue)) {

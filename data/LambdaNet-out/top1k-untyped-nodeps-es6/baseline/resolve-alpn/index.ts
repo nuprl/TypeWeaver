@@ -1,10 +1,10 @@
 'use strict';
 import tls from 'tls';
 
-export default (options: Object = {}, connect: Function = tls.connect) => new Promise((resolve: Function, reject: String) => {
-	let timeout: Boolean = false;
+export default (options: object = {}, connect: Function = tls.connect) => new Promise((resolve: Function, reject: string) => {
+	let timeout: boolean = false;
 
-	let socket: Object;
+	let socket: object;
 
 	const callback: Function = async () => {
 		await socketPromise;
@@ -30,7 +30,7 @@ export default (options: Object = {}, connect: Function = tls.connect) => new Pr
 		callback();
 	};
 
-	const socketPromise: Object = (async () => {
+	const socketPromise: object = (async () => {
 		try {
 			socket = await connect(options, callback);
 

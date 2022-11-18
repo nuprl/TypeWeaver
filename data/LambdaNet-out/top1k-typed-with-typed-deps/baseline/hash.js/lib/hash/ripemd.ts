@@ -1,15 +1,15 @@
 'use strict';
 
-var utils: Array = require('./utils');
-var common: String = require('./common');
+var utils: any[] = require('./utils');
+var common: string = require('./common');
 
-var rotl32: Object = utils.rotl32;
+var rotl32: object = utils.rotl32;
 var sum32: Function = utils.sum32;
-var sum32_3: Object = utils.sum32_3;
+var sum32_3: object = utils.sum32_3;
 var sum32_4: Function = utils.sum32_4;
 var BlockHash: Function = common.BlockHash;
 
-function RIPEMD160(): String {
+function RIPEMD160(): string {
   if (!(this instanceof RIPEMD160))
     return new RIPEMD160();
 
@@ -26,19 +26,19 @@ RIPEMD160.outSize = 160;
 RIPEMD160.hmacStrength = 192;
 RIPEMD160.padLength = 64;
 
-RIPEMD160.prototype._update = function update(msg: Object, start: Number): Void {
-  var A: String = this.h[0];
-  var B: String = this.h[1];
-  var C: String = this.h[2];
-  var D: String = this.h[3];
-  var E: String = this.h[4];
-  var Ah: String = A;
-  var Bh: String = B;
-  var Ch: String = C;
-  var Dh: String = D;
-  var Eh: String = E;
+RIPEMD160.prototype._update = function update(msg: object, start: number): Void {
+  var A: string = this.h[0];
+  var B: string = this.h[1];
+  var C: string = this.h[2];
+  var D: string = this.h[3];
+  var E: string = this.h[4];
+  var Ah: string = A;
+  var Bh: string = B;
+  var Ch: string = C;
+  var Dh: string = D;
+  var Eh: string = E;
   for (var j = 0; j < 80; j++) {
-    var T: String = sum32(
+    var T: string = sum32(
       rotl32(
         sum32_4(A, f(j, B, C, D), msg[r[j] + start], K(j)),
         s[j]),
@@ -67,14 +67,14 @@ RIPEMD160.prototype._update = function update(msg: Object, start: Number): Void 
   this.h[0] = T;
 };
 
-RIPEMD160.prototype._digest = function digest(enc: Number): String {
+RIPEMD160.prototype._digest = function digest(enc: number): string {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'little');
   else
     return utils.split32(this.h, 'little');
 };
 
-function f(j: Number, x: Number, y: Number, z: Number): Number {
+function f(j: number, x: number, y: number, z: number): number {
   if (j <= 15)
     return x ^ y ^ z;
   else if (j <= 31)
@@ -87,7 +87,7 @@ function f(j: Number, x: Number, y: Number, z: Number): Number {
     return x ^ (y | (~z));
 }
 
-function K(j: Number): Number {
+function K(j: number): number {
   if (j <= 15)
     return 0x00000000;
   else if (j <= 31)
@@ -100,7 +100,7 @@ function K(j: Number): Number {
     return 0xa953fd4e;
 }
 
-function Kh(j: Number): Number {
+function Kh(j: number): number {
   if (j <= 15)
     return 0x50a28be6;
   else if (j <= 31)

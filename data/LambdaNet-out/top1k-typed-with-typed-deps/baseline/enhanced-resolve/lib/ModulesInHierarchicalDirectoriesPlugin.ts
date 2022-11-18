@@ -5,8 +5,8 @@
 
 "use strict";
 
-const forEachBail: String = require("./forEachBail");
-const getPaths: String = require("./getPaths");
+const forEachBail: string = require("./forEachBail");
+const getPaths: string = require("./getPaths");
 
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */

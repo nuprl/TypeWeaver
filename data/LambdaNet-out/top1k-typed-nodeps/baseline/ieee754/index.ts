@@ -1,13 +1,13 @@
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
-exports.read = function (buffer: Object, offset: Number, isLE: Boolean, mLen: Number, nBytes: Number) {
-  let e: Number, m: Number
-  const eLen: Number = (nBytes * 8) - mLen - 1
-  const eMax: Number = (1 << eLen) - 1
-  const eBias: Number = eMax >> 1
-  let nBits: Number = -7
-  let i: Number = isLE ? (nBytes - 1) : 0
-  const d: Number = isLE ? -1 : 1
-  let s: Number = buffer[offset + i]
+exports.read = function (buffer: object, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+  let e: number, m: number
+  const eLen: number = (nBytes * 8) - mLen - 1
+  const eMax: number = (1 << eLen) - 1
+  const eBias: number = eMax >> 1
+  let nBits: number = -7
+  let i: number = isLE ? (nBytes - 1) : 0
+  const d: number = isLE ? -1 : 1
+  let s: number = buffer[offset + i]
 
   i += d
 
@@ -40,15 +40,15 @@ exports.read = function (buffer: Object, offset: Number, isLE: Boolean, mLen: Nu
   return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
 }
 
-exports.write = function (buffer: Object, value: Number, offset: Number, isLE: Boolean, mLen: Number, nBytes: Number) {
-  let e: Number, m: Number, c: Number
-  let eLen: Number = (nBytes * 8) - mLen - 1
-  const eMax: Number = (1 << eLen) - 1
-  const eBias: Number = eMax >> 1
-  const rt: Number = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
-  let i: Number = isLE ? 0 : (nBytes - 1)
-  const d: Number = isLE ? 1 : -1
-  const s: Number = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+exports.write = function (buffer: object, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+  let e: number, m: number, c: number
+  let eLen: number = (nBytes * 8) - mLen - 1
+  const eMax: number = (1 << eLen) - 1
+  const eBias: number = eMax >> 1
+  const rt: number = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  let i: number = isLE ? 0 : (nBytes - 1)
+  const d: number = isLE ? 1 : -1
+  const s: number = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
 
   value = Math.abs(value)
 

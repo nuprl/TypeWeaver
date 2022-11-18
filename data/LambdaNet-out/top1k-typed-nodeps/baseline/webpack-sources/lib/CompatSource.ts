@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const Source: String = require("./Source");
+const Source: string = require("./Source");
 
 class CompatSource extends Source {
 	static from(sourceLike) {

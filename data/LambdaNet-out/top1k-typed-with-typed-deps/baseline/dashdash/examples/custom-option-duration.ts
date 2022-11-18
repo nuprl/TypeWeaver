@@ -16,22 +16,22 @@
  * then be added/subtracted from a current Date).
  */
 
-var path: String = require('path');
+var path: string = require('path');
 var format: Function = require('util').format;
-var dashdash: Object = require('../lib/dashdash');
+var dashdash: object = require('../lib/dashdash');
 
 
 var durationRe: RegExp = /^([1-9]\d*)([smhd])$/;
-function parseDuration(option: Function, optstr: String, arg: String): Number {
+function parseDuration(option: Function, optstr: string, arg: string): number {
     var d: Function;
-    var match: Object = durationRe.exec(arg);
+    var match: object = durationRe.exec(arg);
     if (!match) {
         throw new Error(format('arg for "%s" is not a valid duration: "%s"',
             optstr, arg));
     }
-    var num: Number = match[1];
-    var scope: String = match[2];
-    var t: Number = 0;
+    var num: number = match[1];
+    var scope: string = match[2];
+    var t: number = 0;
     switch (scope) {
         case 's':
             t += num * 1000;
@@ -58,7 +58,7 @@ dashdash.addOptionType({
 });
 
 
-var options: Array = [
+var options: any[] = [
     { names: ['time', 't'], type: 'duration' }
 ];
 

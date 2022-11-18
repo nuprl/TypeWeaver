@@ -1,21 +1,21 @@
 'use strict';
 
-var fs: String = require('fs');
-var path: String = require('path');
+var fs: string = require('fs');
+var path: string = require('path');
 var repeat: Function = require('repeat-string');
 var isObject: Function = require('isobject');
 var text: Function = require('text-table');
-var table: Array = [];
+var table: any[] = [];
 
-function bench(): Boolean {
-  var filepath: String = path.join(__dirname, 'last.md');
-  var str: String = fs.readFileSync(filepath, 'utf8');
-  var sections: Array = str.split(/\n(?=\n?(?:# benchmark))/);
+function bench(): boolean {
+  var filepath: string = path.join(__dirname, 'last.md');
+  var str: string = fs.readFileSync(filepath, 'utf8');
+  var sections: any[] = str.split(/\n(?=\n?(?:# benchmark))/);
   sections.shift();
 
-  var len: Number = sections.length;
-  var idx: Number = -1;
-  var res: Array = [];
+  var len: number = sections.length;
+  var idx: number = -1;
+  var res: any[] = [];
 
   while (++idx < len) {
     parseSection(sections[idx].trim());
@@ -24,33 +24,33 @@ function bench(): Boolean {
   return text(table);
 }
 
-function parseSection(str: String): String {
-  var lines: Array = str.split('\n').filter(Boolean);
+function parseSection(str: string): string {
+  var lines: any[] = str.split('\n').filter(Boolean);
   lines.pop();
 
   if (!lines.length) return;
-  var heading: String = lines.shift().trim();
+  var heading: string = lines.shift().trim();
   var m: Promise = /^.*\/fixtures\/([^(]+)/.exec(heading);
 
-  var title: String = (m ? m[1] : heading).trim();
-  var tok: Object = {title: title};
+  var title: string = (m ? m[1] : heading).trim();
+  var tok: object = {title: title};
   tok.title = path.basename(title, path.extname(title)) + 'x';
 
   return createLines(tok, lines);
 }
 
-function createLines(tok: Object, lines: Array): Void {
-  var len: Number = lines.length;
-  var idx: Number = -1;
+function createLines(tok: object, lines: any[]): Void {
+  var len: number = lines.length;
+  var idx: number = -1;
   while (++idx < len) {
-    var line: String = lines[idx];
+    var line: string = lines[idx];
 
     var obj: HTMLElement = parseStats(line);
     tok[obj.name] = obj;
   }
 
-  var vals: String = values(tok);
-  var max: String = Math.max.apply(Math, vals);
+  var vals: string = values(tok);
+  var max: string = Math.max.apply(Math, vals);
 
   table.push([], ['# ' + tok.title])
   for (var key in tok) {
@@ -62,14 +62,14 @@ function createLines(tok: Object, lines: Array): Void {
   }
 }
 
-function format(tok: HTMLElement, max: String, diff: String): Array {
+function format(tok: HTMLElement, max: string, diff: string): any[] {
   return [tok.name.trim(), bar(tok, max, diff).trim(), '(' + tok.val + ' ops/sec)'];
 }
 
-function parseStats(line: String): Object {
-  var str: String = line.trim();
-  var m: Object = /^([^ ]+) x ([\d,.]+)/.exec(str);
-  var tok: Object = {num: 0, val: ''};
+function parseStats(line: string): object {
+  var str: string = line.trim();
+  var m: object = /^([^ ]+) x ([\d,.]+)/.exec(str);
+  var tok: object = {num: 0, val: ''};
   if (!m) return tok;
   tok.name = m[1];
   tok.val = m[2];
@@ -77,8 +77,8 @@ function parseStats(line: String): Object {
   return tok;
 }
 
-function values(obj: Object): Array {
-  var vals: Array = [];
+function values(obj: object): any[] {
+  var vals: any[] = [];
   for (var key in obj) {
     if (key === 'title') continue;
     vals.push(obj[key].num);
@@ -86,7 +86,7 @@ function values(obj: Object): Array {
   return vals;
 }
 
-function bar(tok: Promise, longest: Number): Boolean {
+function bar(tok: Promise, longest: number): boolean {
   return repeat('█', (tok.num / longest) * 25);
 }
 

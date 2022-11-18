@@ -1,16 +1,16 @@
-const isObject: Function = (value: String) => typeof value === 'object' && value !== null;
+const isObject: Function = (value: string) => typeof value === 'object' && value !== null;
 
 // Customized for this use-case
-const isObjectCustom: Function = (value: String) =>
+const isObjectCustom: Function = (value: string) =>
 	isObject(value)
 	&& !(value instanceof RegExp)
 	&& !(value instanceof Error)
 	&& !(value instanceof Date)
 	&& !(globalThis.Blob && value instanceof globalThis.Blob);
 
-export const mapObjectSkip: String = Symbol('mapObjectSkip');
+export const mapObjectSkip: string = Symbol('mapObjectSkip');
 
-const _mapObject: Function = (object: Function, mapper: Function, options: Object, isSeen: Map = new WeakMap()) => {
+const _mapObject: Function = (object: Function, mapper: Function, options: object, isSeen: Map = new WeakMap()) => {
 	options = {
 		deep: false,
 		target: {},
@@ -26,13 +26,13 @@ const _mapObject: Function = (object: Function, mapper: Function, options: Objec
 	const {target} = options;
 	delete options.target;
 
-	const mapArray: Function = (array: Array) => array.map((element: Element) => isObjectCustom(element) ? _mapObject(element, mapper, options, isSeen) : element);
+	const mapArray: Function = (array: any[]) => array.map((element: Element) => isObjectCustom(element) ? _mapObject(element, mapper, options, isSeen) : element);
 	if (Array.isArray(object)) {
 		return mapArray(object);
 	}
 
 	for (const [key, value] of Object.entries(object)) {
-		const mapResult: Array = mapper(key, value, object);
+		const mapResult: any[] = mapper(key, value, object);
 
 		if (mapResult === mapObjectSkip) {
 			continue;
@@ -57,7 +57,7 @@ const _mapObject: Function = (object: Function, mapper: Function, options: Objec
 	return target;
 };
 
-export default function mapObject(object: String, mapper: Function, options: Object): String {
+export default function mapObject(object: string, mapper: Function, options: object): string {
 	if (!isObject(object)) {
 		throw new TypeError(`Expected an object, got \`${object}\` (${typeof object})`);
 	}

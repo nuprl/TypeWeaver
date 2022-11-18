@@ -16,10 +16,10 @@
  * map([4, 8], square)
  * // => [16, 64]
  */
-function map(array: Array, iteratee: Function): Object {
-  let index: Number = -1
-  const length: Number = array == null ? 0 : array.length
-  const result: Object = new Array(length)
+function map(array: any[], iteratee: Function): object {
+  let index: number = -1
+  const length: number = array == null ? 0 : array.length
+  const result: object = new Array(length)
 
   while (++index < length) {
     result[index] = iteratee(array[index], index, array)

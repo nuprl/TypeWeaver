@@ -1,13 +1,13 @@
 // A simple implementation of make-array
-function makeArray (subject: Array): Array {
+function makeArray (subject: any[]): any[] {
   return Array.isArray(subject)
     ? subject
     : [subject]
 }
 
-const EMPTY: String = ''
-const SPACE: String = ' '
-const ESCAPE: String = '\\'
+const EMPTY: string = ''
+const SPACE: string = ' '
+const ESCAPE: string = '\\'
 const REGEX_TEST_BLANK_LINE: RegExp = /^\s+$/
 const REGEX_REPLACE_LEADING_EXCAPED_EXCLAMATION: RegExp = /^\\!/
 const REGEX_REPLACE_LEADING_EXCAPED_HASH: RegExp = /^\\#/
@@ -19,13 +19,13 @@ const REGEX_SPLITALL_CRLF: RegExp = /\r?\n/g
 // ..
 const REGEX_TEST_INVALID_PATH: RegExp = /^\.*\/|^\.+$/
 
-const SLASH: String = '/'
-const KEY_IGNORE: String = typeof Symbol !== 'undefined'
+const SLASH: string = '/'
+const KEY_IGNORE: string = typeof Symbol !== 'undefined'
   ? Symbol.for('node-ignore')
   /* istanbul ignore next */
   : 'node-ignore'
 
-const define: Function = (object: Object, key: String, value: String) =>
+const define: Function = (object: object, key: string, value: string) =>
   Object.defineProperty(object, key, {value})
 
 const REGEX_REGEXP_RANGE: RegExp = /([0-z])-([0-z])/g
@@ -34,9 +34,9 @@ const RETURN_FALSE: Function = () => false
 
 // Sanitize the range of a regular expression
 // The cases are complicated, see test cases for details
-const sanitizeRange: Function = (range: String) => range.replace(
+const sanitizeRange: Function = (range: string) => range.replace(
   REGEX_REGEXP_RANGE,
-  (match: Number, from: String, to: String) => from.charCodeAt(0) <= to.charCodeAt(0)
+  (match: number, from: string, to: string) => from.charCodeAt(0) <= to.charCodeAt(0)
     ? match
     // Invalid range (out of order) which is ok for gitignore rules but
     //   fatal for JavaScript regular expression, so eliminate it.
@@ -44,7 +44,7 @@ const sanitizeRange: Function = (range: String) => range.replace(
 )
 
 // See fixtures #59
-const cleanRangeBackSlash: Function = (slashes: Array) => {
+const cleanRangeBackSlash: Function = (slashes: any[]) => {
   const {length} = slashes
   return slashes.slice(0, length - length % 2)
 }
@@ -60,7 +60,7 @@ const cleanRangeBackSlash: Function = (slashes: Array) => {
 //      you could use option `mark: true` with `glob`
 
 // '`foo/`' should not continue with the '`..`'
-const REPLACERS: Array = [
+const REPLACERS: any[] = [
 
   // > Trailing spaces are ignored unless they are quoted with backslash ("\")
   [
@@ -68,7 +68,7 @@ const REPLACERS: Array = [
     // (a  ) -> (a)
     // (a \ ) -> (a  )
     /\\?\s+$/,
-    (match: String) => match.indexOf('\\') === 0
+    (match: string) => match.indexOf('\\') === 0
       ? SPACE
       : EMPTY
   ],
@@ -98,7 +98,7 @@ const REPLACERS: Array = [
   // > These special characters are often called "metacharacters".
   [
     /[\\$.|*+(){^]/g,
-    (match: String) => `\\${match}`
+    (match: string) => `\\${match}`
   ],
 
   [
@@ -142,7 +142,7 @@ const REPLACERS: Array = [
     //   (which has been replaced by section "leading slash")
     // If starts with '**', adding a '^' to the regular expression also works
     /^(?=[^^])/,
-    function startingReplacer (): String {
+    function startingReplacer (): string {
       // If has a slash `/` at the beginning or middle
       return !/\/(?!$)/.test(this)
         // > Prior to 2.22.1
@@ -174,7 +174,7 @@ const REPLACERS: Array = [
     // should not use '*', or it will be replaced by the next replacer
 
     // Check if it is not the last `'/**'`
-    (_: Ignore, index: Number, str: Array) => index + 6 < str.length
+    (_: Ignore, index: number, str: any[]) => index + 6 < str.length
 
       // case: /**/
       // > A slash followed by two consecutive asterisks then a slash matches
@@ -201,7 +201,7 @@ const REPLACERS: Array = [
 
     // '*.js' matches '.js'
     // '*.js' doesn't match 'abc'
-    (_: Ignore, p1: String) => `${p1}[^\\/]*`
+    (_: Ignore, p1: string) => `${p1}[^\\/]*`
   ],
 
   [
@@ -224,7 +224,7 @@ const REPLACERS: Array = [
 
     // `\` is escaped by step 3
     /(\\)?\[([^\]/]*?)(\\*)($|\])/g,
-    (match: Function, leadEscape: Number, range: String, endEscape: String, close: Number) => leadEscape === ESCAPE
+    (match: Function, leadEscape: number, range: string, endEscape: string, close: number) => leadEscape === ESCAPE
       // '\\[bar]' -> '\\\\[bar\\]'
       ? `\\[${range}${cleanRangeBackSlash(endEscape)}${close}`
       : close === ']'
@@ -257,7 +257,7 @@ const REPLACERS: Array = [
     // 'js*' will not match 'a.js'
     // 'js/' will not match 'a.js'
     // 'js' will match 'a.js' and 'a.js/'
-    (match: String) => /\/$/.test(match)
+    (match: string) => /\/$/.test(match)
       // foo/ will not match 'foo'
       ? `${match}$`
       // foo matches 'foo' and 'foo/'
@@ -267,8 +267,8 @@ const REPLACERS: Array = [
   // trailing wildcard
   [
     /(\^|\\\/)?\\\*$/,
-    (_: Ignore, p1: String) => {
-      const prefix: String = p1
+    (_: Ignore, p1: string) => {
+      const prefix: string = p1
         // '\^':
         // '/*' does not match EMPTY
         // '/*' does not match everything
@@ -287,15 +287,15 @@ const REPLACERS: Array = [
 ]
 
 // A simple cache, because an ignore rule only has only one certain meaning
-const regexCache: Object = Object.create(null)
+const regexCache: object = Object.create(null)
 
 // @param {pattern}
-const makeRegex: Function = (pattern: String, ignoreCase: Ignore) => {
-  let source: Array = regexCache[pattern]
+const makeRegex: Function = (pattern: string, ignoreCase: Ignore) => {
+  let source: any[] = regexCache[pattern]
 
   if (!source) {
     source = REPLACERS.reduce(
-      (prev: String, current: Promise) => prev.replace(current[0], current[1].bind(pattern)),
+      (prev: string, current: Promise) => prev.replace(current[0], current[1].bind(pattern)),
       pattern
     )
     regexCache[pattern] = source
@@ -306,17 +306,17 @@ const makeRegex: Function = (pattern: String, ignoreCase: Ignore) => {
     : new RegExp(source)
 }
 
-const isString: Function = (subject: String) => typeof subject === 'string'
+const isString: Function = (subject: string) => typeof subject === 'string'
 
 // > A blank line matches no files, so it can serve as a separator for readability.
-const checkPattern: Function = (pattern: String) => pattern
+const checkPattern: Function = (pattern: string) => pattern
   && isString(pattern)
   && !REGEX_TEST_BLANK_LINE.test(pattern)
 
   // > A line starting with # serves as a comment.
   && pattern.indexOf('#') !== 0
 
-const splitPattern: Function = (pattern: String) => pattern.split(REGEX_SPLITALL_CRLF)
+const splitPattern: Function = (pattern: string) => pattern.split(REGEX_SPLITALL_CRLF)
 
 class IgnoreRule {
   constructor (
@@ -332,9 +332,9 @@ class IgnoreRule {
   }
 }
 
-const createRule: Function = (pattern: String, ignoreCase: Ignore) => {
-  const origin: String = pattern
-  let negative: Boolean = false
+const createRule: Function = (pattern: string, ignoreCase: Ignore) => {
+  const origin: string = pattern
+  let negative: boolean = false
 
   // > An optional prefix "!" which negates the pattern;
   if (pattern.indexOf('!') === 0) {
@@ -350,7 +350,7 @@ const createRule: Function = (pattern: String, ignoreCase: Ignore) => {
   // >   begin with a hash.
   .replace(REGEX_REPLACE_LEADING_EXCAPED_HASH, '#')
 
-  const regex: String = makeRegex(pattern, ignoreCase)
+  const regex: string = makeRegex(pattern, ignoreCase)
 
   return new IgnoreRule(
     origin,
@@ -360,11 +360,11 @@ const createRule: Function = (pattern: String, ignoreCase: Ignore) => {
   )
 }
 
-const throwError: Function = (message: String, Ctor: Object) => {
+const throwError: Function = (message: string, Ctor: object) => {
   throw new Ctor(message)
 }
 
-const checkPath: Function = (path: String, originalPath: String, doThrow: Function) => {
+const checkPath: Function = (path: string, originalPath: string, doThrow: Function) => {
   if (!isString(path)) {
     return doThrow(
       `path must be a string, but got \`${originalPath}\``,
@@ -379,7 +379,7 @@ const checkPath: Function = (path: String, originalPath: String, doThrow: Functi
 
   // Check if it is a relative path
   if (checkPath.isNotRelative(path)) {
-    const r: String = '`path.relative()`d'
+    const r: string = '`path.relative()`d'
     return doThrow(
       `path should be a ${r} string, but got "${originalPath}"`,
       RangeError
@@ -389,7 +389,7 @@ const checkPath: Function = (path: String, originalPath: String, doThrow: Functi
   return true
 }
 
-const isNotRelative: Function = (path: String) => REGEX_TEST_INVALID_PATH.test(path)
+const isNotRelative: Function = (path: string) => REGEX_TEST_INVALID_PATH.test(path)
 
 checkPath.isNotRelative = isNotRelative
 checkPath.convert = (p: Ignore) => p
@@ -422,7 +422,7 @@ class Ignore {
     }
 
     if (checkPattern(pattern)) {
-      const rule: String = createRule(pattern, this._ignoreCase)
+      const rule: string = createRule(pattern, this._ignoreCase)
       this._added = true
       this._rules.push(rule)
     }
@@ -469,8 +469,8 @@ class Ignore {
 
   // @returns {TestResult} true if a file is ignored
   _testOne (path, checkUnignored) {
-    let ignored: Boolean = false
-    let unignored: Boolean = false
+    let ignored: boolean = false
+    let unignored: boolean = false
 
     this._rules.forEach((rule: IgnoreRule) => {
       const {negative} = rule
@@ -481,7 +481,7 @@ class Ignore {
         return
       }
 
-      const matched: Boolean = rule.regex.test(path)
+      const matched: boolean = rule.regex.test(path)
 
       if (matched) {
         ignored = !negative
@@ -497,7 +497,7 @@ class Ignore {
 
   // @returns {TestResult}
   _test (originalPath, cache, checkUnignored, slices) {
-    const path: String = originalPath
+    const path: string = originalPath
       // Supports nullable path
       && checkPath.convert(originalPath)
 
@@ -530,7 +530,7 @@ class Ignore {
       return cache[path] = this._testOne(path, checkUnignored)
     }
 
-    const parent: Object = this._t(
+    const parent: object = this._t(
       slices.join(SLASH) + SLASH,
       cache,
       checkUnignored,
@@ -550,7 +550,7 @@ class Ignore {
   }
 
   createFilter () {
-    return (path: String) => !this.ignores(path)
+    return (path: string) => !this.ignores(path)
   }
 
   filter (paths) {
@@ -563,9 +563,9 @@ class Ignore {
   }
 }
 
-const factory: Function = (options: Object) => new Ignore(options)
+const factory: Function = (options: object) => new Ignore(options)
 
-const isPathValid: Function = (path: String) =>
+const isPathValid: Function = (path: string) =>
   checkPath(path && checkPath.convert(path), path, RETURN_FALSE)
 
 factory.isPathValid = isPathValid
@@ -587,7 +587,7 @@ if (
   )
 ) {
   /* eslint no-control-regex: "off" */
-  const makePosix: Function = (str: String) => /^\\\\\?\\/.test(str)
+  const makePosix: Function = (str: string) => /^\\\\\?\\/.test(str)
   || /["<>|\u0000-\u001F]+/u.test(str)
     ? str
     : str.replace(/\\/g, '/')
@@ -597,7 +597,7 @@ if (
   // 'C:\\foo'     <- 'C:\\foo' has been converted to 'C:/'
   // 'd:\\foo'
   const REGIX_IS_WINDOWS_PATH_ABSOLUTE: RegExp = /^[a-z]:\//i
-  checkPath.isNotRelative = (path: String) =>
+  checkPath.isNotRelative = (path: string) =>
     REGIX_IS_WINDOWS_PATH_ABSOLUTE.test(path)
     || isNotRelative(path)
 }

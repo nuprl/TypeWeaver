@@ -2,11 +2,11 @@
 
 const rimraf: Function = require('./')
 
-const path: String = require('path')
+const path: string = require('path')
 
-const isRoot: Function = (arg: String) => /^(\/|[a-zA-Z]:\\)$/.test(path.resolve(arg))
-const filterOutRoot: Function = (arg: String) => {
-  const ok: Boolean = preserveRoot === false || !isRoot(arg)
+const isRoot: Function = (arg: string) => /^(\/|[a-zA-Z]:\\)$/.test(path.resolve(arg))
+const filterOutRoot: Function = (arg: string) => {
+  const ok: boolean = preserveRoot === false || !isRoot(arg)
   if (!ok) {
     console.error(`refusing to remove ${arg}`)
     console.error('Set --no-preserve-root to allow this')
@@ -14,11 +14,11 @@ const filterOutRoot: Function = (arg: String) => {
   return ok
 }
 
-let help: Boolean = false
-let dashdash: Boolean = false
-let noglob: Boolean = false
-let preserveRoot: Boolean = true
-const args: Array = process.argv.slice(2).filter((arg: String) => {
+let help: boolean = false
+let dashdash: boolean = false
+let noglob: boolean = false
+let preserveRoot: boolean = true
+const args: any[] = process.argv.slice(2).filter((arg: string) => {
   if (dashdash)
     return !!arg
   else if (arg === '--')
@@ -35,13 +35,13 @@ const args: Array = process.argv.slice(2).filter((arg: String) => {
     preserveRoot = false
   else
     return !!arg
-}).filter((arg: String) => !preserveRoot || filterOutRoot(arg))
+}).filter((arg: string) => !preserveRoot || filterOutRoot(arg))
 
-const go: Function = (n: Number) => {
+const go: Function = (n: number) => {
   if (n >= args.length)
     return
-  const options: Object = noglob ? { glob: false } : {}
-  rimraf(args[n], options, (er: Boolean) => {
+  const options: object = noglob ? { glob: false } : {}
+  rimraf(args[n], options, (er: boolean) => {
     if (er)
       throw er
     go(n+1)
@@ -50,7 +50,7 @@ const go: Function = (n: Number) => {
 
 if (help || args.length === 0) {
   // If they didn't ask for help, then this is not a "success"
-  const log: Object = help ? console.log : console.error
+  const log: object = help ? console.log : console.error
   log('Usage: rimraf <path> [<path> ...]')
   log('')
   log('  Deletes all files and folders at "path" recursively.')

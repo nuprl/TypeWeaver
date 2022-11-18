@@ -30,9 +30,9 @@ import baseIsEqual from './.internal/baseIsEqual.js'
  * isEqualWith(array, other, customizer)
  * // => true
  */
-function isEqualWith(value: String, other: Number, customizer: Function): Boolean {
+function isEqualWith(value: string, other: number, customizer: Function): boolean {
   customizer = typeof customizer === 'function' ? customizer : undefined
-  const result: String = customizer ? customizer(value, other) : undefined
+  const result: string = customizer ? customizer(value, other) : undefined
   return result === undefined ? baseIsEqual(value, other, undefined, customizer) : !!result
 }
 

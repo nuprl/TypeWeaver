@@ -1,7 +1,7 @@
 import toInteger from './toInteger.js'
 
 /** Used as references for the maximum length and index of an array. */
-const MAX_ARRAY_LENGTH: Number = 4294967295
+const MAX_ARRAY_LENGTH: number = 4294967295
 
 /**
  * Converts `value` to an integer suitable for use as the length of an
@@ -28,7 +28,7 @@ const MAX_ARRAY_LENGTH: Number = 4294967295
  * toLength('3.2')
  * // => 3
  */
-function toLength(value: Boolean): Boolean {
+function toLength(value: boolean): boolean {
   if (!value) {
     return 0
   }

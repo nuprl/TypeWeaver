@@ -6,9 +6,9 @@ import { getInnermostScope } from "./get-innermost-scope"
  * @param {string|Node} nameOrNode The variable name to find. If this is a Node object then it should be an Identifier node.
  * @returns {Variable|null} The found variable or null.
  */
-export function findVariable(initialScope: Function, nameOrNode: String): Array {
-    let name: String = ""
-    let scope: Object = initialScope
+export function findVariable(initialScope: Function, nameOrNode: string): any[] {
+    let name: string = ""
+    let scope: object = initialScope
 
     if (typeof nameOrNode === "string") {
         name = nameOrNode
@@ -18,7 +18,7 @@ export function findVariable(initialScope: Function, nameOrNode: String): Array 
     }
 
     while (scope != null) {
-        const variable: String = scope.set.get(name)
+        const variable: string = scope.set.get(name)
         if (variable != null) {
             return variable
         }

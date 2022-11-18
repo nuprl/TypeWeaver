@@ -2,11 +2,11 @@
 
 var unique: Function = require('array-unique');
 
-module.exports = function diff(init: Array): Void {
-  var args: Array = [].slice.call(arguments, 1);
+module.exports = function diff(init: any[]): Void {
+  var args: any[] = [].slice.call(arguments, 1);
 
-  args.forEach(function (arr: Array) {
-    arr.forEach(function(ele: String) {
+  args.forEach(function (arr: any[]) {
+    arr.forEach(function(ele: string) {
       init.push(ele);
     });
   });

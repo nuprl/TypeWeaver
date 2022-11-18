@@ -25,13 +25,13 @@ var
 	// except "table", "table-cell", or "table-caption"
 	// See here for display values: https://developer.mozilla.org/en-US/docs/CSS/display
 	rdisplayswap: RegExp = /^(none|table(?!-c[ea]).+)/,
-	cssShow: Object = { position: "absolute", visibility: "hidden", display: "block" },
-	cssNormalTransform: Object = {
+	cssShow: object = { position: "absolute", visibility: "hidden", display: "block" },
+	cssNormalTransform: object = {
 		letterSpacing: "0",
 		fontWeight: "400"
 	};
 
-function setPositiveNumber( _elem: Number, value: Number, subtract: Number ): Number {
+function setPositiveNumber( _elem: number, value: number, subtract: number ): number {
 
 	// Any relative (+/-) values have already been
 	// normalized at this point
@@ -43,10 +43,10 @@ function setPositiveNumber( _elem: Number, value: Number, subtract: Number ): Nu
 		value;
 }
 
-function boxModelAdjustment( elem: Object, dimension: Array, box: Number, isBorderBox: Boolean, styles: String, computedVal: Number ): Number {
-	var i: Number = dimension === "width" ? 1 : 0,
-		extra: Number = 0,
-		delta: Number = 0;
+function boxModelAdjustment( elem: object, dimension: any[], box: number, isBorderBox: boolean, styles: string, computedVal: number ): number {
+	var i: number = dimension === "width" ? 1 : 0,
+		extra: number = 0,
+		delta: number = 0;
 
 	// Adjustment may not be necessary
 	if ( box === ( isBorderBox ? "border" : "content" ) ) {
@@ -111,20 +111,20 @@ function boxModelAdjustment( elem: Object, dimension: Array, box: Number, isBord
 	return delta;
 }
 
-function getWidthOrHeight( elem: Object, dimension: Array, extra: Boolean ): String {
+function getWidthOrHeight( elem: object, dimension: any[], extra: boolean ): string {
 
 	// Start with computed style
-	var styles: String = getStyles( elem ),
+	var styles: string = getStyles( elem ),
 
 		// To avoid forcing a reflow, only fetch boxSizing if we need it (gh-4322).
 		// Fake content-box until we know it's needed to know the true value.
-		boxSizingNeeded: Boolean = isIE || extra,
-		isBorderBox: Boolean = boxSizingNeeded &&
+		boxSizingNeeded: boolean = isIE || extra,
+		isBorderBox: boolean = boxSizingNeeded &&
 			jQuery.css( elem, "boxSizing", false, styles ) === "border-box",
-		valueIsBorderBox: Boolean = isBorderBox,
+		valueIsBorderBox: boolean = isBorderBox,
 
-		val: String = curCSS( elem, dimension, styles ),
-		offsetProp: String = "offset" + dimension[ 0 ].toUpperCase() + dimension.slice( 1 );
+		val: string = curCSS( elem, dimension, styles ),
+		offsetProp: string = "offset" + dimension[ 0 ].toUpperCase() + dimension.slice( 1 );
 
 	// Return a confounding non-pixel value or feign ignorance, as appropriate.
 	if ( rnumnonpx.test( val ) ) {
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: Object, name: String, value: Number, extra: String ) {
+	style: function( elem: object, name: string, value: number, extra: string ) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -201,10 +201,10 @@ jQuery.extend( {
 		}
 
 		// Make sure that we're working with the right name
-		var ret: Object, type: String, hooks: Object,
-			origName: String = cssCamelCase( name ),
-			isCustomProp: Boolean = rcustomProp.test( name ),
-			style: Object = elem.style;
+		var ret: object, type: string, hooks: object,
+			origName: string = cssCamelCase( name ),
+			isCustomProp: boolean = rcustomProp.test( name ),
+			style: object = elem.style;
 
 		// Make sure that we're working with the right name. We don't
 		// want to query the value if it is a CSS custom property
@@ -269,10 +269,10 @@ jQuery.extend( {
 		}
 	},
 
-	css: function( elem: String, name: String, extra: Number, styles: Number ) {
-		var val: String, num: Number, hooks: Object,
-			origName: String = cssCamelCase( name ),
-			isCustomProp: Boolean = rcustomProp.test( name );
+	css: function( elem: string, name: string, extra: number, styles: number ) {
+		var val: string, num: number, hooks: object,
+			origName: string = cssCamelCase( name ),
+			isCustomProp: boolean = rcustomProp.test( name );
 
 		// Make sure that we're working with the right name. We don't
 		// want to modify the value if it is a CSS custom property
@@ -309,9 +309,9 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "height", "width" ], function( _i: String, dimension: String ) {
+jQuery.each( [ "height", "width" ], function( _i: string, dimension: string ) {
 	jQuery.cssHooks[ dimension ] = {
-		get: function( elem: Object, computed: Boolean, extra: String ) {
+		get: function( elem: object, computed: boolean, extra: string ) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
@@ -332,14 +332,14 @@ jQuery.each( [ "height", "width" ], function( _i: String, dimension: String ) {
 			}
 		},
 
-		set: function( elem: Object, value: String, extra: Boolean ) {
-			var matches: Object,
-				styles: String = getStyles( elem ),
+		set: function( elem: object, value: string, extra: boolean ) {
+			var matches: object,
+				styles: string = getStyles( elem ),
 
 				// To avoid forcing a reflow, only fetch boxSizing if we need it (gh-3991)
-				isBorderBox: Boolean = extra &&
+				isBorderBox: boolean = extra &&
 					jQuery.css( elem, "boxSizing", false, styles ) === "border-box",
-				subtract: Number = extra ?
+				subtract: number = extra ?
 					boxModelAdjustment(
 						elem,
 						dimension,
@@ -367,14 +367,14 @@ jQuery.each( {
 	margin: "",
 	padding: "",
 	border: "Width"
-}, function( prefix: Number, suffix: Number ) {
+}, function( prefix: number, suffix: number ) {
 	jQuery.cssHooks[ prefix + suffix ] = {
-		expand: function( value: String ) {
-			var i: Number = 0,
-				expanded: Object = {},
+		expand: function( value: string ) {
+			var i: number = 0,
+				expanded: object = {},
 
 				// Assumes a single number if not a string
-				parts: Object = typeof value === "string" ? value.split( " " ) : [ value ];
+				parts: object = typeof value === "string" ? value.split( " " ) : [ value ];
 
 			for ( ; i < 4; i++ ) {
 				expanded[ prefix + cssExpand[ i ] + suffix ] =
@@ -391,11 +391,11 @@ jQuery.each( {
 } );
 
 jQuery.fn.extend( {
-	css: function( name: String, value: String ) {
-		return access( this, function( elem: String, name: Array, value: Number ) {
-			var styles: String, len: Number,
-				map: Object = {},
-				i: Number = 0;
+	css: function( name: string, value: string ) {
+		return access( this, function( elem: string, name: any[], value: number ) {
+			var styles: string, len: number,
+				map: object = {},
+				i: number = 0;
 
 			if ( Array.isArray( name ) ) {
 				styles = getStyles( elem );

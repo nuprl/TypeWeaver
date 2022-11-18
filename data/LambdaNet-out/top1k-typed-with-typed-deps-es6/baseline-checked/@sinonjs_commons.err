@@ -1,40 +1,29 @@
 lib/called-in-order.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'every'. Did you mean to use 'import every from "./prototypes/array"' instead?
-lib/called-in-order.ts(9,21): error TS2339: Property 'id' does not exist on type 'Object'.
-lib/called-in-order.ts(10,21): error TS2339: Property 'id' does not exist on type 'Object'.
-lib/called-in-order.ts(13,24): error TS2339: Property 'id' does not exist on type 'Object'.
-lib/called-in-order.ts(13,34): error TS2339: Property 'callCount' does not exist on type 'Object'.
-lib/called-in-order.ts(19,81): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/called-in-order.ts(23,32): error TS2339: Property 'calledBefore' does not exist on type 'Object'.
-lib/called-in-order.ts(23,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/called-in-order.ts(27,21): error TS2339: Property 'id' does not exist on type 'Object'.
+lib/called-in-order.ts(9,21): error TS2339: Property 'id' does not exist on type 'object'.
+lib/called-in-order.ts(10,21): error TS2339: Property 'id' does not exist on type 'object'.
+lib/called-in-order.ts(13,24): error TS2339: Property 'id' does not exist on type 'object'.
+lib/called-in-order.ts(13,34): error TS2339: Property 'callCount' does not exist on type 'object'.
+lib/called-in-order.ts(23,32): error TS2339: Property 'calledBefore' does not exist on type 'object'.
+lib/called-in-order.ts(27,21): error TS2339: Property 'id' does not exist on type 'object'.
 lib/called-in-order.ts(49,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/called-in-order.ts(50,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/called-in-order.ts(52,9): error TS2322: Type 'IArguments | String' is not assignable to type 'String'.
-  Type 'IArguments' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
-lib/class-name.ts(12,5): error TS2322: Type 'string | String' is not assignable to type 'Boolean'.
-  Type 'string' is not assignable to type 'Boolean'.
-lib/deprecated.ts(15,21): error TS2339: Property 'apply' does not exist on type 'Object'.
-lib/deprecated.ts(17,14): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/deprecated.ts(18,34): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/deprecated.ts(52,29): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | Error'.
-lib/every.ts(11,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'Object'.
-lib/function-name.ts(17,18): error TS2339: Property 'name' does not exist on type 'Object'.
-lib/global.ts(13,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/global.ts(16,5): error TS2740: Type 'Window & typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/global.ts(19,5): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'String'.
+lib/called-in-order.ts(50,9): error TS2322: Type '{}' is not assignable to type 'string'.
+lib/called-in-order.ts(52,9): error TS2322: Type 'string | IArguments' is not assignable to type 'string'.
+  Type 'IArguments' is not assignable to type 'string'.
+lib/class-name.ts(12,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+lib/deprecated.ts(15,21): error TS2339: Property 'apply' does not exist on type 'object'.
+lib/deprecated.ts(17,14): error TS2339: Property 'prototype' does not exist on type 'object'.
+lib/deprecated.ts(18,34): error TS2339: Property 'prototype' does not exist on type 'object'.
+lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'object'.
+lib/function-name.ts(17,18): error TS2339: Property 'name' does not exist on type 'object'.
+lib/global.ts(13,5): error TS2322: Type 'typeof globalThis' is not assignable to type 'string'.
+lib/global.ts(16,5): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'string'.
+lib/global.ts(19,5): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'string'.
 lib/order-by-first-call.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'sort'. Did you mean to use 'import sort from "./prototypes/array"' instead?
 lib/order-by-first-call.ts(4,10): error TS2614: Module '"./prototypes/array"' has no exported member 'slice'. Did you mean to use 'import slice from "./prototypes/array"' instead?
 lib/order-by-first-call.ts(11,27): error TS2339: Property 'getCall' does not exist on type 'HTMLElement'.
-lib/order-by-first-call.ts(12,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/order-by-first-call.ts(12,26): error TS2339: Property 'getCall' does not exist on type 'Function'.
-lib/order-by-first-call.ts(13,39): error TS2339: Property 'callId' does not exist on type 'Object'.
-lib/order-by-first-call.ts(32,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/order-by-first-call.ts(13,39): error TS2339: Property 'callId' does not exist on type 'object'.
+lib/order-by-first-call.ts(14,39): error TS2339: Property 'callId' does not exist on type 'any[]'.
 lib/order-by-first-call.ts(32,42): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/prototypes/copy-prototype.ts(5,66): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/prototypes/copy-prototype.ts(14,30): error TS2538: Type 'String' cannot be used as an index type.
-lib/prototypes/copy-prototype.ts(16,20): error TS2538: Type 'String' cannot be used as an index type.
-lib/prototypes/copy-prototype.ts(16,48): error TS2538: Type 'String' cannot be used as an index type.
 

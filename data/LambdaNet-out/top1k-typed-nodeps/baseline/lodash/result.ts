@@ -28,11 +28,11 @@ import toKey from './.internal/toKey.js'
  * result(object, 'a[0].b.c3', () => 'default')
  * // => 'default'
  */
-function result(object: Object, path: String, defaultValue: Function): Object {
+function result(object: object, path: string, defaultValue: Function): object {
   path = castPath(path, object)
 
-  let index: Number = -1
-  let length: Number = path.length
+  let index: number = -1
+  let length: number = path.length
 
   // Ensure the loop is entered when path is empty.
   if (!length) {

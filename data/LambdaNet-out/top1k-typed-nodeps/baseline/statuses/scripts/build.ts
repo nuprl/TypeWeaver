@@ -1,6 +1,6 @@
 'use strict'
 
-var path: String = require('path')
+var path: string = require('path')
 var write: Function = require('./lib/write')
 
 // all codes
@@ -21,8 +21,8 @@ addData(codes, require('../src/apache.json'))
 // write the JSON object
 write(path.join(__dirname, '../codes.json'), codes)
 
-function addData (db: Object, obj: Object): Void {
-  Object.keys(obj).forEach(function (key: String) {
+function addData (db: object, obj: object): Void {
+  Object.keys(obj).forEach(function (key: string) {
     db[key] = db[key] || obj[key]
   })
 }

@@ -11,8 +11,8 @@
  * @param {Function} eachFunc The function to iterate over `collection`.
  * @returns {*} Returns the accumulated value.
  */
-function baseReduce(collection: String, iteratee: Function, accumulator: String, initAccum: Boolean, eachFunc: Function): String {
-  eachFunc(collection, (value: String, index: Number, collection: Number) => {
+function baseReduce(collection: string, iteratee: Function, accumulator: string, initAccum: boolean, eachFunc: Function): string {
+  eachFunc(collection, (value: string, index: number, collection: number) => {
     accumulator = initAccum
       ? (initAccum = false, value)
       : iteratee(accumulator, value, index, collection)

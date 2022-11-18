@@ -9,7 +9,7 @@ if (!which('npm')) {
   exit(1);
 }
 
-exec('npm update electron-releases && npm run build && npm test', {silent:true}, function(code: String, stdout: Number, stderr: Number) {
+exec('npm update electron-releases && npm run build && npm test', {silent:true}, function(code: string, stdout: number, stderr: number) {
   if(code === 1) {
 
     exec('echo "' + stdout + stderr + '"| aha | mail -a "Content-type: text/html" -s "[e2c] Automated update failed" root');
@@ -22,8 +22,8 @@ exec('npm update electron-releases && npm run build && npm test', {silent:true},
     exec('git commit -m "bump electron-releases"', {silent:true});
     exec('git push origin master', {silent:true});
 
-    exec('git status --porcelain', {silent:true}, function(code: Number, stdout: Array, stderr: Function) {
-      const indexHasUpdated: Boolean = !!stdout.length;
+    exec('git status --porcelain', {silent:true}, function(code: number, stdout: any[], stderr: Function) {
+      const indexHasUpdated: boolean = !!stdout.length;
       if(indexHasUpdated) {
         exec('git add versions.js full-versions.js chromium-versions.js full-chromium-versions.js versions.json full-versions.json chromium-versions.json full-chromium-versions.json', {silent:true});
         exec('git commit -m "generate new version"', {silent:true});

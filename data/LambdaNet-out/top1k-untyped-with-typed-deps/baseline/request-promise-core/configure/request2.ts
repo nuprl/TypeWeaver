@@ -6,9 +6,9 @@ var core: Function = require('../'),
     isObjectLike: Function = require('lodash/isObjectLike');
 
 
-module.exports = function (options: Object) {
+module.exports = function (options: object) {
 
-    var errorText: String = 'Please verify options'; // For better minification because this string is repeating
+    var errorText: string = 'Please verify options'; // For better minification because this string is repeating
 
     if (!isObjectLike(options)) {
         throw new TypeError(errorText);
@@ -23,7 +23,7 @@ module.exports = function (options: Object) {
     }
 
 
-    var plumbing: Object = core({
+    var plumbing: object = core({
         PromiseImpl: options.PromiseImpl,
         constructorMixin: options.constructorMixin
     });
@@ -33,7 +33,7 @@ module.exports = function (options: Object) {
 
     var originalInit: Function = options.request.Request.prototype.init;
 
-    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: String): Promise {
+    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: string): Promise {
 
         // Init may be called again - currently in case of redirects
         if (isObjectLike(requestOptions) && !this._callback && !this._rp_promise) {
@@ -49,10 +49,10 @@ module.exports = function (options: Object) {
 
     // Exposing the Promise capabilities
 
-    var thenExposed: Boolean = false;
+    var thenExposed: boolean = false;
     for ( var i = 0; i < options.expose.length; i+=1 ) {
 
-        var method: String = options.expose[i];
+        var method: string = options.expose[i];
 
         plumbing[ method === 'promise' ? 'exposePromise' : 'exposePromiseMethod' ](
             options.request.Request.prototype,

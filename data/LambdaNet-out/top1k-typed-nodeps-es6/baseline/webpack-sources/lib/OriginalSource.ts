@@ -13,7 +13,7 @@ import splitIntoPotentialTokens from './helpers/splitIntoPotentialTokens';
 class OriginalSource extends Source {
 	constructor(value, name) {
 		super();
-		const isBuffer: Boolean = Buffer.isBuffer(value);
+		const isBuffer: boolean = Buffer.isBuffer(value);
 		this._value = isBuffer ? undefined : value;
 		this._valueAsBuffer = isBuffer ? value : undefined;
 		this._name = name;
@@ -60,16 +60,16 @@ class OriginalSource extends Source {
 		const finalSource: Source = !!(options && options.finalSource);
 		if (!options || options.columns !== false) {
 			// With column info we need to read all lines and split them
-			const matches: String = splitIntoPotentialTokens(this._value);
-			let line: Number = 1;
-			let column: Number = 0;
+			const matches: string = splitIntoPotentialTokens(this._value);
+			let line: number = 1;
+			let column: number = 0;
 			if (matches !== null) {
 				for (const match of matches) {
-					const isEndOfLine: Boolean = match.endsWith("\n");
+					const isEndOfLine: boolean = match.endsWith("\n");
 					if (isEndOfLine && match.length === 1) {
 						if (!finalSource) onChunk(match, line, column, -1, -1, -1, -1);
 					} else {
-						const chunk: String = finalSource ? undefined : match;
+						const chunk: string = finalSource ? undefined : match;
 						onChunk(chunk, line, column, 0, line, column, -1);
 					}
 					if (isEndOfLine) {
@@ -88,7 +88,7 @@ class OriginalSource extends Source {
 		} else if (finalSource) {
 			// Without column info and with final source we only
 			// need meta info to generate mapping
-			const result: Object = getGeneratedSourceInfo(this._value);
+			const result: object = getGeneratedSourceInfo(this._value);
 			const { generatedLine, generatedColumn } = result;
 			if (generatedColumn === 0) {
 				for (let line = 1; line < generatedLine; line++)
@@ -101,9 +101,9 @@ class OriginalSource extends Source {
 		} else {
 			// Without column info, but also without final source
 			// we need to split source by lines
-			let line: Number = 1;
-			const matches: Array = splitIntoLines(this._value);
-			let match: Array;
+			let line: number = 1;
+			const matches: any[] = splitIntoLines(this._value);
+			let match: any[];
 			for (match of matches) {
 				onChunk(finalSource ? undefined : match, line, 0, 0, line, 0, -1);
 				line++;

@@ -1,9 +1,9 @@
-function isEqualLocals(a: Object, b: Object, isNamedExport: Boolean): Boolean {
+function isEqualLocals(a: object, b: object, isNamedExport: boolean): boolean {
   if ((!a && b) || (a && !b)) {
     return false;
   }
 
-  let p: String;
+  let p: string;
 
   for (p in a) {
     if (isNamedExport && p === "default") {

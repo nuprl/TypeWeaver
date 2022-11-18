@@ -1,17 +1,10 @@
 index.ts(9,5): error TS2300: Duplicate identifier 'win32'.
 index.ts(9,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-index.ts(11,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(12,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(15,7): error TS2339: Property 'parse' does not exist on type 'Function'.
-index.ts(22,29): error TS2339: Property 'length' does not exist on type 'Object'.
+index.ts(22,29): error TS2339: Property 'length' does not exist on type 'object'.
 index.ts(40,5): error TS2300: Duplicate identifier 'posix'.
 index.ts(40,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-index.ts(43,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(44,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(48,7): error TS2339: Property 'parse' does not exist on type 'Function'.
-index.ts(54,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(70,26): error TS2339: Property 'parse' does not exist on type 'Function'.
 index.ts(72,26): error TS2339: Property 'parse' does not exist on type 'Function'.
 index.ts(74,14): error TS2300: Duplicate identifier 'posix'.
@@ -19,8 +12,7 @@ index.ts(74,41): error TS2339: Property 'parse' does not exist on type 'Function
 index.ts(75,14): error TS2300: Duplicate identifier 'win32'.
 index.ts(75,41): error TS2339: Property 'parse' does not exist on type 'Function'.
 redos.ts(1,8): error TS1192: Module '"index"' has no default export.
-redos.ts(5,21): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-redos.ts(14,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-redos.ts(14,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-redos.ts(17,46): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+redos.ts(5,21): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+redos.ts(14,13): error TS2322: Type 'string' is not assignable to type 'any[]'.
+redos.ts(14,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 

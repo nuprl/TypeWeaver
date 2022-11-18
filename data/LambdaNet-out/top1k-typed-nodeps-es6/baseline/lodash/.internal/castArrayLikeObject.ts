@@ -7,7 +7,7 @@ import isArrayLikeObject from '../isArrayLikeObject.js'
  * @param {*} value The value to inspect.
  * @returns {Array|Object} Returns the cast array-like object.
  */
-function castArrayLikeObject(value: String): Array {
+function castArrayLikeObject(value: string): any[] {
   return isArrayLikeObject(value) ? value : []
 }
 

@@ -1,14 +1,16 @@
-index.ts(6,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(13,10): error TS2339: Property 'on' does not exist on type 'Function'.
 index.ts(16,15): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Stream'.
   Type 'Function' is missing the following properties from type 'WritableStream': writable, write, end, addListener, and 13 more.
+index.ts(17,3): error TS2740: Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 index.ts(19,32): error TS2304: Cannot find name 'Void'.
+index.ts(20,17): error TS2322: Type 'string' is not assignable to type 'object'.
 index.ts(25,27): error TS2304: Cannot find name 'Void'.
 index.ts(29,37): error TS2304: Cannot find name 'Void'.
+index.ts(33,7): error TS2322: Type 'string' is not assignable to type 'object'.
 index.ts(35,14): error TS2339: Property 'destroy' does not exist on type 'Function'.
 index.ts(42,21): error TS2304: Cannot find name 'Void'.
-index.ts(46,11): error TS2322: Type 'string | Buffer' is not assignable to type 'String'.
-  Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
+index.ts(46,11): error TS2322: Type 'string | Buffer' is not assignable to type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
 index.ts(46,32): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'ReadableStream'.
   Type 'Function' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 21 more.
 

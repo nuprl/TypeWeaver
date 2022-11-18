@@ -8,11 +8,11 @@ var rfocusable: RegExp = /^(?:input|select|textarea|button)$/i,
 	rclickable: RegExp = /^(?:a|area)$/i;
 
 jQuery.fn.extend( {
-	prop: function( name: String, value: String ) {
+	prop: function( name: string, value: string ) {
 		return access( this, jQuery.prop, name, value, arguments.length > 1 );
 	},
 
-	removeProp: function( name: String ) {
+	removeProp: function( name: string ) {
 		return this.each( function() {
 			delete this[ jQuery.propFix[ name ] || name ];
 		} );
@@ -20,9 +20,9 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	prop: function( elem: Object, name: String, value: String ) {
-		var ret: Function, hooks: Object,
-			nType: Number = elem.nodeType;
+	prop: function( elem: object, name: string, value: string ) {
+		var ret: Function, hooks: object,
+			nType: number = elem.nodeType;
 
 		// Don't get/set properties on text, comment and attribute nodes
 		if ( nType === 3 || nType === 8 || nType === 2 ) {
@@ -60,7 +60,7 @@ jQuery.extend( {
 				// elem.tabIndex doesn't always return the
 				// correct value when it hasn't been explicitly set
 				// Use proper attribute retrieval (trac-12072)
-				var tabindex: String = elem.getAttribute( "tabindex" );
+				var tabindex: string = elem.getAttribute( "tabindex" );
 
 				if ( tabindex ) {
 					return parseInt( tabindex, 10 );
@@ -94,7 +94,7 @@ jQuery.extend( {
 // is disabled for this code since it considers such accessions noop.
 if ( isIE ) {
 	jQuery.propHooks.selected = {
-		get: function( elem: Object ) {
+		get: function( elem: object ) {
 
 			var parent: HTMLElement = elem.parentNode;
 			if ( parent && parent.parentNode ) {
@@ -103,7 +103,7 @@ if ( isIE ) {
 			}
 			return null;
 		},
-		set: function( elem: Object ) {
+		set: function( elem: object ) {
 
 
 			var parent: HTMLElement = elem.parentNode;

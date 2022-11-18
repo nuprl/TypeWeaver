@@ -5,9 +5,9 @@
 
 'use strict';
 
-const generator: String = require('../generator');
-const parser: String = require('../parser');
-const traverse: String = require('../traverse');
+const generator: string = require('../generator');
+const parser: string = require('../parser');
+const traverse: string = require('../traverse');
 
 /**
  * Transform result.

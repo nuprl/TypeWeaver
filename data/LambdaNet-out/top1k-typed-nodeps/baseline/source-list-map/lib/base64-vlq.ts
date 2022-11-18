@@ -37,21 +37,21 @@
 
 /*eslint no-bitwise:0,quotes:0,global-strict:0*/
 
-var charToIntMap: Object = {};
-var intToCharMap: Object = {};
+var charToIntMap: object = {};
+var intToCharMap: object = {};
 
 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
   .split('')
-  .forEach(function (ch: Array, index: String) {
+  .forEach(function (ch: any[], index: string) {
     charToIntMap[ch] = index;
     intToCharMap[index] = ch;
   });
 
-var base64: Object = {};
+var base64: object = {};
 /**
  * Encode an integer in the range of 0 to 63 to a single base 64 digit.
  */
-base64.encode = function base64_encode(aNumber: Number): SingleLineNode {
+base64.encode = function base64_encode(aNumber: number): SingleLineNode {
   if (aNumber in intToCharMap) {
     return intToCharMap[aNumber];
   }
@@ -61,7 +61,7 @@ base64.encode = function base64_encode(aNumber: Number): SingleLineNode {
 /**
  * Decode a single base 64 digit to an integer.
  */
-base64.decode = function base64_decode(aChar: Number): CodeNode {
+base64.decode = function base64_decode(aChar: number): CodeNode {
   if (aChar in charToIntMap) {
     return charToIntMap[aChar];
   }
@@ -82,16 +82,16 @@ base64.decode = function base64_decode(aChar: Number): CodeNode {
 //   V    V
 //   101011
 
-var VLQ_BASE_SHIFT: Number = 5;
+var VLQ_BASE_SHIFT: number = 5;
 
 // binary: 100000
-var VLQ_BASE: Number = 1 << VLQ_BASE_SHIFT;
+var VLQ_BASE: number = 1 << VLQ_BASE_SHIFT;
 
 // binary: 011111
-var VLQ_BASE_MASK: Number = VLQ_BASE - 1;
+var VLQ_BASE_MASK: number = VLQ_BASE - 1;
 
 // binary: 100000
-var VLQ_CONTINUATION_BIT: Number = VLQ_BASE;
+var VLQ_CONTINUATION_BIT: number = VLQ_BASE;
 
 /**
  * Converts from a two-complement value to a value where the sign bit is
@@ -99,7 +99,7 @@ var VLQ_CONTINUATION_BIT: Number = VLQ_BASE;
  *   1 becomes 2 (10 binary), -1 becomes 3 (11 binary)
  *   2 becomes 4 (100 binary), -2 becomes 5 (101 binary)
  */
-function toVLQSigned(aValue: Number): Number {
+function toVLQSigned(aValue: number): number {
   return aValue < 0
     ? ((-aValue) << 1) + 1
     : (aValue << 1) + 0;
@@ -111,9 +111,9 @@ function toVLQSigned(aValue: Number): Number {
  *   2 (10 binary) becomes 1, 3 (11 binary) becomes -1
  *   4 (100 binary) becomes 2, 5 (101 binary) becomes -2
  */
-function fromVLQSigned(aValue: Number): Number {
-  var isNegative: Boolean = (aValue & 1) === 1;
-  var shifted: Number = aValue >> 1;
+function fromVLQSigned(aValue: number): number {
+  var isNegative: boolean = (aValue & 1) === 1;
+  var shifted: number = aValue >> 1;
   return isNegative
     ? -shifted
     : shifted;
@@ -122,11 +122,11 @@ function fromVLQSigned(aValue: Number): Number {
 /**
  * Returns the base 64 VLQ encoded value.
  */
-exports.encode = function base64VLQ_encode(aValue: String): String {
-  var encoded: String = "";
-  var digit: Number;
+exports.encode = function base64VLQ_encode(aValue: string): string {
+  var encoded: string = "";
+  var digit: number;
 
-  var vlq: Number = toVLQSigned(aValue);
+  var vlq: number = toVLQSigned(aValue);
 
   do {
     digit = vlq & VLQ_BASE_MASK;
@@ -146,12 +146,12 @@ exports.encode = function base64VLQ_encode(aValue: String): String {
  * Decodes the next base 64 VLQ value from the given string and returns the
  * value and the rest of the string via the out parameter.
  */
-exports.decode = function base64VLQ_decode(aStr: String, aOutParam: Object): Void {
-  var i: Number = 0;
-  var strLen: Number = aStr.length;
-  var result: Number = 0;
-  var shift: Number = 0;
-  var continuation: Boolean, digit: Number;
+exports.decode = function base64VLQ_decode(aStr: string, aOutParam: object): Void {
+  var i: number = 0;
+  var strLen: number = aStr.length;
+  var result: number = 0;
+  var shift: number = 0;
+  var continuation: boolean, digit: number;
 
   do {
     if (i >= strLen) {

@@ -10,10 +10,10 @@ const nextTick: Function = require("process").nextTick;
 /** @typedef {import("./Resolver").FileSystem} FileSystem */
 /** @typedef {import("./Resolver").SyncFileSystem} SyncFileSystem */
 
-const dirname: Function = (path: String) => {
-	let idx: Number = path.length - 1;
+const dirname: Function = (path: string) => {
+	let idx: number = path.length - 1;
 	while (idx >= 0) {
-		const c: Number = path.charCodeAt(idx);
+		const c: number = path.charCodeAt(idx);
 		// slash or backslash
 		if (c === 47 || c === 92) break;
 		idx--;
@@ -22,13 +22,13 @@ const dirname: Function = (path: String) => {
 	return path.slice(0, idx);
 };
 
-const runCallbacks: Function = (callbacks: Array, err: Array, result: String) => {
+const runCallbacks: Function = (callbacks: any[], err: any[], result: string) => {
 	if (callbacks.length === 1) {
 		callbacks[0](err, result);
 		callbacks.length = 0;
 		return;
 	}
-	let error: Object;
+	let error: object;
 	for (const callback of callbacks) {
 		try {
 			callback(err, result);
@@ -53,7 +53,7 @@ class OperationMergerBackend {
 		this._activeAsyncOperations = new Map();
 
 		this.provide = this._provider
-			? (path: String, options: String, callback: Function) => {
+			? (path: string, options: string, callback: Function) => {
 					if (typeof options === "function") {
 						callback = options;
 						options = undefined;
@@ -70,20 +70,20 @@ class OperationMergerBackend {
 						callback(new TypeError("path must be a string"));
 						return;
 					}
-					let callbacks: Array = this._activeAsyncOperations.get(path);
+					let callbacks: any[] = this._activeAsyncOperations.get(path);
 					if (callbacks) {
 						callbacks.push(callback);
 						return;
 					}
 					this._activeAsyncOperations.set(path, (callbacks = [callback]));
-					provider(path, (err: Function, result: Array) => {
+					provider(path, (err: Function, result: any[]) => {
 						this._activeAsyncOperations.delete(path);
 						runCallbacks(callbacks, err, result);
 					});
 			  }
 			: null;
 		this.provideSync = this._syncProvider
-			? (path: String, options: Object) => {
+			? (path: string, options: object) => {
 					return this._syncProvider.call(this._providerContext, path, options);
 			  }
 			: null;
@@ -113,9 +113,9 @@ IDLE --[insert data]--> SYNC --[event loop tick]--> ASYNC_ACTIVE --[interval tic
                                                           +---------[insert data]-------+
 */
 
-const STORAGE_MODE_IDLE: Number = 0;
-const STORAGE_MODE_SYNC: Number = 1;
-const STORAGE_MODE_ASYNC: Number = 2;
+const STORAGE_MODE_IDLE: number = 0;
+const STORAGE_MODE_SYNC: number = 1;
+const STORAGE_MODE_ASYNC: number = 2;
 
 class CacheBackend {
 	/**
@@ -182,7 +182,7 @@ class CacheBackend {
 		}
 
 		// Check if there is already the same operation running
-		let callbacks: Array = this._activeAsyncOperations.get(path);
+		let callbacks: any[] = this._activeAsyncOperations.get(path);
 		if (callbacks !== undefined) {
 			callbacks.push(callback);
 			return;
@@ -190,7 +190,7 @@ class CacheBackend {
 		this._activeAsyncOperations.set(path, (callbacks = [callback]));
 
 		// Run the operation
-		this._provider.call(this._providerContext, path, (err: Function, result: String) => {
+		this._provider.call(this._providerContext, path, (err: Function, result: string) => {
 			this._activeAsyncOperations.delete(path);
 			this._storeResult(path, err, result);
 
@@ -228,7 +228,7 @@ class CacheBackend {
 
 		// Run the operation
 		// When in idle mode, we will enter sync mode
-		let result: String;
+		let result: string;
 		try {
 			result = this._syncProvider.call(this._providerContext, path);
 		} catch (err) {
@@ -294,14 +294,14 @@ class CacheBackend {
 
 	_storeResult(path, err, result) {
 		if (this._data.has(path)) return;
-		const level: Object = this._levels[this._currentLevel];
+		const level: object = this._levels[this._currentLevel];
 		this._data.set(path, { err, result, level });
 		level.add(path);
 	}
 
 	_decayLevel() {
-		const nextLevel: Number = (this._currentLevel + 1) % this._levels.length;
-		const decay: Object = this._levels[nextLevel];
+		const nextLevel: number = (this._currentLevel + 1) % this._levels.length;
+		const decay: object = this._levels[nextLevel];
 		this._currentLevel = nextLevel;
 		for (let item of decay) {
 			this._data.delete(item);
@@ -325,7 +325,7 @@ class CacheBackend {
 	}
 
 	_enterAsyncMode() {
-		let timeout: Number = 0;
+		let timeout: number = 0;
 		switch (this._mode) {
 			case STORAGE_MODE_ASYNC:
 				return;
@@ -344,7 +344,7 @@ class CacheBackend {
 				break;
 		}
 		this._mode = STORAGE_MODE_ASYNC;
-		const ref: Number = setTimeout(() => {
+		const ref: number = setTimeout(() => {
 			this._mode = STORAGE_MODE_SYNC;
 			this._runDecays();
 		}, timeout);
@@ -366,7 +366,7 @@ class CacheBackend {
 	}
 }
 
-const createBackend: Function = (duration: Number, provider: String, syncProvider: Number, providerContext: Boolean) => {
+const createBackend: Function = (duration: number, provider: string, syncProvider: number, providerContext: boolean) => {
 	if (duration > 0) {
 		return new CacheBackend(duration, provider, syncProvider, providerContext);
 	}

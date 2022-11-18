@@ -25,9 +25,9 @@ import toFinite from './toFinite.js'
  * toInteger('3.2')
  * // => 3
  */
-function toInteger(value: String): Number {
-  const result: Number = toFinite(value)
-  const remainder: Number = result % 1
+function toInteger(value: string): number {
+  const result: number = toFinite(value)
+  const remainder: number = result % 1
 
   return remainder ? result - remainder : result
 }

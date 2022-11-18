@@ -5,9 +5,5 @@ stringify.ts(5,30): error TS2769: No overload matches this call.
   Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '(string | number)[]'.
       Type 'Function' is missing the following properties from type '(string | number)[]': pop, push, concat, join, and 28 more.
-stringify.ts(5,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-stringify.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-stringify.ts(9,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-stringify.ts(19,31): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+stringify.ts(5,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 

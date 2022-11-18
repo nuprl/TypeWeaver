@@ -9,13 +9,13 @@ const {
 	lookup: dnsLookup
 } = require('dns');
 const {promisify} = require('util');
-const os: String = require('os');
+const os: string = require('os');
 
-const kCacheableLookupCreateConnection: String = Symbol('cacheableLookupCreateConnection');
-const kCacheableLookupInstance: Array = Symbol('cacheableLookupInstance');
-const kExpires: String = Symbol('expires');
+const kCacheableLookupCreateConnection: string = Symbol('cacheableLookupCreateConnection');
+const kCacheableLookupInstance: any[] = Symbol('cacheableLookupInstance');
+const kExpires: string = Symbol('expires');
 
-const supportsALL: Boolean = typeof ALL === 'number';
+const supportsALL: boolean = typeof ALL === 'number';
 
 const verifyAgent: Function = (agent: CacheableLookup) => {
 	if (!(agent && typeof agent.createConnection === 'function')) {
@@ -23,7 +23,7 @@ const verifyAgent: Function = (agent: CacheableLookup) => {
 	}
 };
 
-const map4to6: Function = (entries: Array) => {
+const map4to6: Function = (entries: any[]) => {
 	for (const entry of entries) {
 		if (entry.family === 6) {
 			continue;
@@ -35,8 +35,8 @@ const map4to6: Function = (entries: Array) => {
 };
 
 const getIfaceInfo: Function = () => {
-	let has4: Boolean = false;
-	let has6: Boolean = false;
+	let has4: boolean = false;
+	let has6: boolean = false;
 
 	for (const device of Object.values(os.networkInterfaces())) {
 		for (const iface of device) {
@@ -59,12 +59,12 @@ const getIfaceInfo: Function = () => {
 	return {has4, has6};
 };
 
-const isIterable: Function = (map: Object) => {
+const isIterable: Function = (map: object) => {
 	return Symbol.iterator in map;
 };
 
 const ignoreNoResultErrors: Function = (dnsPromise: Promise) => {
-	return dnsPromise.catch((error: Object) => {
+	return dnsPromise.catch((error: object) => {
 		if (
 			error.code === 'ENODATA' ||
 			error.code === 'ENOTFOUND' ||
@@ -77,10 +77,10 @@ const ignoreNoResultErrors: Function = (dnsPromise: Promise) => {
 	});
 };
 
-const ttl: Object = {ttl: true};
-const all: Object = {all: true};
-const all4: Object = {all: true, family: 4};
-const all6: Object = {all: true, family: 6};
+const ttl: object = {ttl: true};
+const all: object = {all: true};
+const all4: object = {all: true, family: 4};
+const all6: object = {all: true, family: 6};
 
 class CacheableLookup {
 	constructor({
@@ -176,10 +176,10 @@ class CacheableLookup {
 			};
 		}
 
-		let cached: Array = await this.query(hostname);
+		let cached: any[] = await this.query(hostname);
 
 		if (options.family === 6) {
-			const filtered: Array = cached.filter((entry: Object) => entry.family === 6);
+			const filtered: any[] = cached.filter((entry: object) => entry.family === 6);
 
 			if (options.hints & V4MAPPED) {
 				if ((supportsALL && options.hints & ALL) || filtered.length === 0) {
@@ -191,12 +191,12 @@ class CacheableLookup {
 				cached = filtered;
 			}
 		} else if (options.family === 4) {
-			cached = cached.filter((entry: Object) => entry.family === 4);
+			cached = cached.filter((entry: object) => entry.family === 4);
 		}
 
 		if (options.hints & ADDRCONFIG) {
 			const {_iface} = this;
-			cached = cached.filter((entry: Object) => entry.family === 6 ? _iface.has6 : _iface.has4);
+			cached = cached.filter((entry: object) => entry.family === 6 ? _iface.has6 : _iface.has4);
 		}
 
 		if (cached.length === 0) {
@@ -215,21 +215,21 @@ class CacheableLookup {
 	}
 
 	async query(hostname) {
-		let source: String = 'cache';
-		let cached: Array = await this._cache.get(hostname);
+		let source: string = 'cache';
+		let cached: any[] = await this._cache.get(hostname);
 
 		if (cached) {
 			this.stats.cache++;
 		}
 
 		if (!cached) {
-			const pending: Array = this._pending[hostname];
+			const pending: any[] = this._pending[hostname];
 			if (pending) {
 				this.stats.cache++;
 				cached = await pending;
 			} else {
 				source = 'query';
-				const newPromise: Array = this.queryAndCache(hostname);
+				const newPromise: any[] = this.queryAndCache(hostname);
 				this._pending[hostname] = newPromise;
 				this.stats.query++;
 				try {
@@ -240,7 +240,7 @@ class CacheableLookup {
 			}
 		}
 
-		cached = cached.map((entry: Number) => {
+		cached = cached.map((entry: number) => {
 			return {...entry, source};
 		});
 
@@ -254,11 +254,11 @@ class CacheableLookup {
 			ignoreNoResultErrors(this._resolve6(hostname, ttl))
 		]);
 
-		let aTtl: Number = 0;
-		let aaaaTtl: Number = 0;
-		let cacheTtl: Number = 0;
+		let aTtl: number = 0;
+		let aaaaTtl: number = 0;
+		let cacheTtl: number = 0;
 
-		const now: Number = Date.now();
+		const now: number = Date.now();
 
 		for (const entry of A) {
 			entry.family = 4;
@@ -344,7 +344,7 @@ class CacheableLookup {
 			return this._dnsLookup(hostname, all);
 		}
 
-		let query: Object = await this._resolve(hostname);
+		let query: object = await this._resolve(hostname);
 
 		if (query.entries.length === 0 && this._dnsLookup) {
 			query = await this._lookup(hostname);
@@ -355,14 +355,14 @@ class CacheableLookup {
 			}
 		}
 
-		const cacheTtl: Array = query.entries.length === 0 ? this.errorTtl : query.cacheTtl;
+		const cacheTtl: any[] = query.entries.length === 0 ? this.errorTtl : query.cacheTtl;
 		await this._set(hostname, query.entries, cacheTtl);
 
 		return query.entries;
 	}
 
 	_tick(ms) {
-		const nextRemovalTime: Boolean = this._nextRemovalTime;
+		const nextRemovalTime: boolean = this._nextRemovalTime;
 
 		if (!nextRemovalTime || ms < nextRemovalTime) {
 			clearTimeout(this._removalTimeout);
@@ -372,12 +372,12 @@ class CacheableLookup {
 			this._removalTimeout = setTimeout(() => {
 				this._nextRemovalTime = false;
 
-				let nextExpiry: Number = Infinity;
+				let nextExpiry: number = Infinity;
 
-				const now: Number = Date.now();
+				const now: number = Date.now();
 
 				for (const [hostname, entries] of this._cache) {
-					const expires: Number = entries[kExpires];
+					const expires: number = entries[kExpires];
 
 					if (now >= expires) {
 						this._cache.delete(hostname);
@@ -408,7 +408,7 @@ class CacheableLookup {
 		agent[kCacheableLookupCreateConnection] = agent.createConnection;
 		agent[kCacheableLookupInstance] = this;
 
-		agent.createConnection = (options: Object, callback: Function) => {
+		agent.createConnection = (options: object, callback: Function) => {
 			if (!('lookup' in options)) {
 				options.lookup = this.lookup;
 			}

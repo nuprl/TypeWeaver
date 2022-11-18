@@ -2,9 +2,9 @@ import jQuery from "../core.js";
 import isAutoPx from "./isAutoPx.js";
 import rcssNum from "../var/rcssNum.js";
 
-function adjustCSS( elem: Object, prop: String, valueParts: Object, tween: Object ): Array {
-	var adjusted: String, scale: Number,
-		maxIterations: Number = 20,
+function adjustCSS( elem: object, prop: string, valueParts: object, tween: object ): any[] {
+	var adjusted: string, scale: number,
+		maxIterations: number = 20,
 		currentValue: Function = tween ?
 			function() {
 				return tween.cur();
@@ -12,11 +12,11 @@ function adjustCSS( elem: Object, prop: String, valueParts: Object, tween: Objec
 			function() {
 				return jQuery.css( elem, prop, "" );
 			},
-		initial: Number = currentValue(),
-		unit: Number = valueParts && valueParts[ 3 ] || ( isAutoPx( prop ) ? "px" : "" ),
+		initial: number = currentValue(),
+		unit: number = valueParts && valueParts[ 3 ] || ( isAutoPx( prop ) ? "px" : "" ),
 
 		// Starting value computation is required for potential unit mismatches
-		initialInUnit: Number = elem.nodeType &&
+		initialInUnit: number = elem.nodeType &&
 			( !isAutoPx( prop ) || unit !== "px" && +initial ) &&
 			rcssNum.exec( jQuery.css( elem, prop ) );
 

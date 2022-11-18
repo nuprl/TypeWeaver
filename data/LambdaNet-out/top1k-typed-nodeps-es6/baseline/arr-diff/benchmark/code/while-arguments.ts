@@ -2,26 +2,26 @@
 
 export default diff;
 
-function diff(arr: String/*, arrays*/): Object {
-  var len: Number = arguments.length;
-  var idx: Number = 0;
+function diff(arr: string/*, arrays*/): object {
+  var len: number = arguments.length;
+  var idx: number = 0;
   while (++idx < len) {
     arr = diffArray(arr, arguments[idx]);
   }
   return arr;
 }
 
-function diffArray(one: Array, two: String): Array {
+function diffArray(one: any[], two: string): any[] {
   if (!Array.isArray(two)) {
     return one.slice();
   }
 
-  var len: Number = one.length;
-  var idx: Number = -1;
-  var arr: Array = [];
+  var len: number = one.length;
+  var idx: number = -1;
+  var arr: any[] = [];
 
   while (++idx < len) {
-    var ele: String = one[idx];
+    var ele: string = one[idx];
     if (two.indexOf(ele) === -1) {
       arr.push(ele);
     }

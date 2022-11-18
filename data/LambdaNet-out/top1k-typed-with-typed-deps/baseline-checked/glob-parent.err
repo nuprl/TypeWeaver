@@ -1,16 +1,5 @@
-index.ts(20,15): error TS2339: Property 'flipBackslashes' does not exist on type 'Object'.
-index.ts(20,57): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(21,34): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'String' provides no match for the signature '(substring: string, ...args: any[]): string'.
-index.ts(26,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-index.ts(56,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(61,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(61,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(65,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-index.ts(71,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+index.ts(20,15): error TS2339: Property 'flipBackslashes' does not exist on type 'object'.
+index.ts(35,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(65,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+index.ts(71,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 

@@ -2,9 +2,9 @@
 
 var reusify: Function = require('../')
 var fib: Function = require('./fib')
-var instance: Object = reusify(MyObject)
-var max: Number = 100000000
-var start: Number = Date.now()
+var instance: object = reusify(MyObject)
+var max: number = 100000000
+var start: number = Date.now()
 
 function reuseNoCodeFunction (): Void {
   var obj: HTMLElement = instance.get()
@@ -16,7 +16,7 @@ function reuseNoCodeFunction (): Void {
 
 function MyObject (): Void {
   this.next = null
-  var that: Array = this
+  var that: any[] = this
   this.num = 0
   this.func = function () {
     /* eslint no-constant-condition: "off" */
@@ -32,7 +32,7 @@ for (var i = 0; i < max; i++) {
   reuseNoCodeFunction()
 }
 
-var time: Number = Date.now() - start
+var time: number = Date.now() - start
 console.log('Total time', time)
 console.log('Total iterations', max)
 console.log('Iteration/s', max / time * 1000)

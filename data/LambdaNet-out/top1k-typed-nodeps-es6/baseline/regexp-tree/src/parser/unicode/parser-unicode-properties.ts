@@ -3,17 +3,17 @@
  * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>
  */
 
-const NON_BINARY_PROP_NAMES_TO_ALIASES: Object = {
+const NON_BINARY_PROP_NAMES_TO_ALIASES: object = {
   General_Category: 'gc',
   Script: 'sc',
   Script_Extensions: 'scx',
 };
 
-const NON_BINARY_ALIASES_TO_PROP_NAMES: Object = inverseMap(
+const NON_BINARY_ALIASES_TO_PROP_NAMES: object = inverseMap(
   NON_BINARY_PROP_NAMES_TO_ALIASES
 );
 
-const BINARY_PROP_NAMES_TO_ALIASES: Object = {
+const BINARY_PROP_NAMES_TO_ALIASES: object = {
   ASCII: 'ASCII',
   ASCII_Hex_Digit: 'AHex',
   Alphabetic: 'Alpha',
@@ -69,9 +69,9 @@ const BINARY_PROP_NAMES_TO_ALIASES: Object = {
   XID_Start: 'XIDS',
 };
 
-const BINARY_ALIASES_TO_PROP_NAMES: Object = inverseMap(BINARY_PROP_NAMES_TO_ALIASES);
+const BINARY_ALIASES_TO_PROP_NAMES: object = inverseMap(BINARY_PROP_NAMES_TO_ALIASES);
 
-const GENERAL_CATEGORY_VALUE_TO_ALIASES: Object = {
+const GENERAL_CATEGORY_VALUE_TO_ALIASES: object = {
   Cased_Letter: 'LC',
   Close_Punctuation: 'Pe',
   Connector_Punctuation: 'Pc',
@@ -112,11 +112,11 @@ const GENERAL_CATEGORY_VALUE_TO_ALIASES: Object = {
   Uppercase_Letter: 'Lu',
 };
 
-const GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES: Object = inverseMap(
+const GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES: object = inverseMap(
   GENERAL_CATEGORY_VALUE_TO_ALIASES
 );
 
-const SCRIPT_VALUE_TO_ALIASES: Object = {
+const SCRIPT_VALUE_TO_ALIASES: object = {
   Adlam: 'Adlm',
   Ahom: 'Ahom',
   Anatolian_Hieroglyphs: 'Hluw',
@@ -269,14 +269,14 @@ const SCRIPT_VALUE_TO_ALIASES: Object = {
 
 const SCRIPT_VALUE_ALIASES_TO_VALUE: Function = inverseMap(SCRIPT_VALUE_TO_ALIASES);
 
-function inverseMap(data: Object): Object {
-  const inverse: Object = {};
+function inverseMap(data: object): object {
+  const inverse: object = {};
 
   for (let name in data) {
     if (!data.hasOwnProperty(name)) {
       continue;
     }
-    const value: Array = data[name];
+    const value: any[] = data[name];
     if (Array.isArray(value)) {
       for (let i = 0; i < value.length; i++) {
         inverse[value[i]] = name;
@@ -289,7 +289,7 @@ function inverseMap(data: Object): Object {
   return inverse;
 }
 
-function isValidName(name: String): Boolean {
+function isValidName(name: string): boolean {
   return (
     NON_BINARY_PROP_NAMES_TO_ALIASES.hasOwnProperty(name) ||
     NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name) ||
@@ -298,7 +298,7 @@ function isValidName(name: String): Boolean {
   );
 }
 
-function isValidValue(name: String, value: String): Boolean {
+function isValidValue(name: string, value: string): boolean {
   if (isGeneralCategoryName(name)) {
     return isGeneralCategoryValue(value);
   }
@@ -310,18 +310,18 @@ function isValidValue(name: String, value: String): Boolean {
   return false;
 }
 
-function isAlias(name: String): Boolean {
+function isAlias(name: string): boolean {
   return (
     NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name) ||
     BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)
   );
 }
 
-function isGeneralCategoryName(name: String): Boolean {
+function isGeneralCategoryName(name: string): boolean {
   return name === 'General_Category' || name == 'gc';
 }
 
-function isScriptCategoryName(name: String): Boolean {
+function isScriptCategoryName(name: string): boolean {
   return (
     name === 'Script' ||
     name === 'Script_Extensions' ||
@@ -330,28 +330,28 @@ function isScriptCategoryName(name: String): Boolean {
   );
 }
 
-function isGeneralCategoryValue(value: String): Boolean {
+function isGeneralCategoryValue(value: string): boolean {
   return (
     GENERAL_CATEGORY_VALUE_TO_ALIASES.hasOwnProperty(value) ||
     GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES.hasOwnProperty(value)
   );
 }
 
-function isScriptCategoryValue(value: String): Boolean {
+function isScriptCategoryValue(value: string): boolean {
   return (
     SCRIPT_VALUE_TO_ALIASES.hasOwnProperty(value) ||
     SCRIPT_VALUE_ALIASES_TO_VALUE.hasOwnProperty(value)
   );
 }
 
-function isBinaryPropertyName(name: String): Boolean {
+function isBinaryPropertyName(name: string): boolean {
   return (
     BINARY_PROP_NAMES_TO_ALIASES.hasOwnProperty(name) ||
     BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)
   );
 }
 
-function getCanonicalName(name: String): Array {
+function getCanonicalName(name: string): any[] {
   if (NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)) {
     return NON_BINARY_ALIASES_TO_PROP_NAMES[name];
   }
@@ -363,7 +363,7 @@ function getCanonicalName(name: String): Array {
   return null;
 }
 
-function getCanonicalValue(value: String): Array {
+function getCanonicalValue(value: string): any[] {
   if (GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES.hasOwnProperty(value)) {
     return GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES[value];
   }

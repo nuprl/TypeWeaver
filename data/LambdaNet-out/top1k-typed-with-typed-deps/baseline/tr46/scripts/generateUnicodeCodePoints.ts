@@ -1,5 +1,5 @@
 "use strict";
-const fs: String = require("fs");
+const fs: string = require("fs");
 
 if (process.argv.length < 3) {
   /* eslint-disable no-console */
@@ -9,21 +9,21 @@ if (process.argv.length < 3) {
   return;
 }
 
-const sourceFile: String = process.argv[2];
+const sourceFile: string = process.argv[2];
 const interestedValues: Error = new Set(process.argv.slice(3));
 
-const source: String = fs.readFileSync(sourceFile, "utf8");
-const lines: Array = source.split("\n");
+const source: string = fs.readFileSync(sourceFile, "utf8");
+const lines: any[] = source.split("\n");
 
-const map: Object = {};
+const map: object = {};
 
 for (const line of lines) {
   if (/^#/u.test(line) || !/;\x20/u.test(line)) {
     continue;
   }
-  const data: Object = line.trim().split(";");
-  const category: String = data[1].split("#")[0].trim();
-  const [begin, end = begin] = data[0].trim().split("..").map((str: String) => parseInt(str, 16));
+  const data: object = line.trim().split(";");
+  const category: string = data[1].split("#")[0].trim();
+  const [begin, end = begin] = data[0].trim().split("..").map((str: string) => parseInt(str, 16));
 
   for (const i of range(begin, end)) {
     if (!map[category]) {
@@ -40,7 +40,7 @@ for (const line of lines) {
 process.stdout.write(JSON.stringify(map));
 process.stdout.write("\n");
 
-function* range(begin: Number, end: Number): String {
+function* range(begin: number, end: number): string {
   for (let i = begin; i <= end; i++) {
     yield i;
   }

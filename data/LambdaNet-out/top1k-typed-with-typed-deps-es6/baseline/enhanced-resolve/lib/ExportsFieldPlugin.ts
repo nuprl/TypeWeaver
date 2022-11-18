@@ -38,10 +38,10 @@ export default class ExportsFieldPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("ExportsFieldPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("ExportsFieldPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				// When there is no description file, abort
 				if (!request.descriptionFilePath) return callback();
 				if (
@@ -52,14 +52,14 @@ export default class ExportsFieldPlugin {
 				)
 					return callback();
 
-				const remainingRequest: String =
+				const remainingRequest: string =
 					request.query || request.fragment
 						? (request.request === "." ? "./" : request.request) +
 						  request.query +
 						  request.fragment
 						: request.request;
 				/** @type {ExportsField|null} */
-				const exportsField: String = DescriptionFileUtils.getField(
+				const exportsField: string = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					this.fieldName
 				);
@@ -73,7 +73,7 @@ export default class ExportsFieldPlugin {
 					);
 				}
 
-				let paths: Array;
+				let paths: any[];
 
 				try {
 					// We attach the cache to the description file instead of the exportsField value
@@ -109,20 +109,20 @@ export default class ExportsFieldPlugin {
 
 				forEachBail(
 					paths,
-					(p: String, callback: Function) => {
-						const parsedIdentifier: Array = parseIdentifier(p);
+					(p: string, callback: Function) => {
+						const parsedIdentifier: any[] = parseIdentifier(p);
 
 						if (!parsedIdentifier) return callback();
 
 						const [relativePath, query, fragment] = parsedIdentifier;
 
-						const error: Object = checkImportsExportsFieldTarget(relativePath);
+						const error: object = checkImportsExportsFieldTarget(relativePath);
 
 						if (error) {
 							return callback(error);
 						}
 
-						const obj: Object = {
+						const obj: object = {
 							...request,
 							request: undefined,
 							path: path.join(
@@ -142,7 +142,7 @@ export default class ExportsFieldPlugin {
 							callback
 						);
 					},
-					(err: Array, result: CachedInputFileSystem) => callback(err, result || null)
+					(err: any[], result: CachedInputFileSystem) => callback(err, result || null)
 				);
 			});
 	}

@@ -4,7 +4,7 @@ import {dummyValue} from "./parseutil.js"
 
 const lp: HTMLElement = LooseParser.prototype
 
-function isSpace(ch: Number): Boolean {
+function isSpace(ch: number): boolean {
   return (ch < 14 && ch > 8) || ch === 32 || ch === 160 || isNewLine(ch)
 }
 
@@ -87,10 +87,10 @@ lp.readToken = function() {
   }
 }
 
-lp.resetTo = function(pos: Number) {
+lp.resetTo = function(pos: number) {
   this.toks.pos = pos
   this.toks.containsEsc = false
-  let ch: Number = this.input.charAt(pos - 1)
+  let ch: number = this.input.charAt(pos - 1)
   this.toks.exprAllowed = !ch || /[[{(,;:?/*=+\-~!|&%^<>]/.test(ch) ||
     /[enwfd]/.test(ch) &&
     /\b(case|else|return|throw|new|in|(instance|type)?of|delete|void)$/.test(this.input.slice(pos - 10, pos))
@@ -98,7 +98,7 @@ lp.resetTo = function(pos: Number) {
   if (this.options.locations) {
     this.toks.curLine = 1
     this.toks.lineStart = lineBreakG.lastIndex = 0
-    let match: Object
+    let match: object
     while ((match = lineBreakG.exec(this.input)) && match.index < pos) {
       ++this.toks.curLine
       this.toks.lineStart = match.index + match[0].length
@@ -106,7 +106,7 @@ lp.resetTo = function(pos: Number) {
   }
 }
 
-lp.lookAhead = function(n: Number) {
+lp.lookAhead = function(n: number) {
   while (n > this.ahead.length)
     this.ahead.push(this.readToken())
   return this.ahead[n - 1]

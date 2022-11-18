@@ -3,12 +3,12 @@ import shift from 'stream-shift';
 
 export default each;
 
-function each (stream: Function, fn: Function, cb: Function): Array {
-  var want: Boolean = true
-  var error: Object = null
-  var ended: Boolean = false
-  var running: Boolean = false
-  var calling: Boolean = false
+function each (stream: Function, fn: Function, cb: Function): any[] {
+  var want: boolean = true
+  var error: object = null
+  var ended: boolean = false
+  var running: boolean = false
+  var calling: boolean = false
 
   stream.on('readable', onreadable)
   onreadable()
@@ -16,7 +16,7 @@ function each (stream: Function, fn: Function, cb: Function): Array {
   if (cb) eos(stream, {readable: true, writable: false}, done)
   return stream
 
-  function done (err: String): Void {
+  function done (err: string): Void {
     if (!error) error = err
     ended = true
     if (!running) cb(error)
@@ -26,7 +26,7 @@ function each (stream: Function, fn: Function, cb: Function): Array {
     if (want) read()
   }
 
-  function afterRead (err: String): Void {
+  function afterRead (err: string): Void {
     running = false
 
     if (err) {
@@ -43,7 +43,7 @@ function each (stream: Function, fn: Function, cb: Function): Array {
     while (!running && !ended) {
       want = false
 
-      var data: String = shift(stream)
+      var data: string = shift(stream)
       if (ended) return
       if (data === null) {
         want = true

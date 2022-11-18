@@ -18,11 +18,11 @@ import isPlainObject from './isPlainObject.js'
  * isError(Error)
  * // => false
  */
-function isError(value: Object): Boolean {
+function isError(value: object): boolean {
   if (!isObjectLike(value)) {
     return false
   }
-  const tag: String = getTag(value)
+  const tag: string = getTag(value)
   return tag == '[object Error]' || tag == '[object DOMException]' ||
     (typeof value.message === 'string' && typeof value.name === 'string' && !isPlainObject(value))
 }

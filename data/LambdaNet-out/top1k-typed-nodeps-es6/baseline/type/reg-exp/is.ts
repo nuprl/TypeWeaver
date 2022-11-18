@@ -3,11 +3,11 @@
 import isToStringTagSupported from '../lib/is-to-string-tag-supported';
 import isPrototype from '../prototype/is';
 
-var regExpTest: String = RegExp.prototype.test
+var regExpTest: string = RegExp.prototype.test
   , objectToString: Function = Object.prototype.toString
-  , objectTaggedString: Number = objectToString.call(/a/);
+  , objectTaggedString: number = objectToString.call(/a/);
 
-export default function (value: Object) {
+export default function (value: object) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common RegExp interface)
@@ -24,7 +24,7 @@ export default function (value: Object) {
 	if (isToStringTagSupported && typeof value[Symbol.toStringTag] === "string") {
 		// Edge case (possibly a regExp with custom Symbol.toStringTag)
 		try {
-			var lastIndex: Boolean = value.lastIndex;
+			var lastIndex: boolean = value.lastIndex;
 			regExpTest.call(value, "");
 			if (value.lastIndex !== lastIndex) value.lastIndex = lastIndex;
 			return true;

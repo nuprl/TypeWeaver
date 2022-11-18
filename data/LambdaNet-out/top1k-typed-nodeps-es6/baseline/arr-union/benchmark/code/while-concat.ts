@@ -2,9 +2,9 @@
 
 import unique from 'array-unique';
 
-export default function union(): Array {
-  var len: Number = arguments.length;
-  var res: Array = [];
+export default function union(): any[] {
+  var len: number = arguments.length;
+  var res: any[] = [];
 
   while (len--) {
     res = res.concat(arguments[len]);

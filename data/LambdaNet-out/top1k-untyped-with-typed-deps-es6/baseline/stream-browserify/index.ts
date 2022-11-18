@@ -45,10 +45,10 @@ function Stream(): Void {
   EE.call(this);
 }
 
-Stream.prototype.pipe = function(dest: Element, options: Object) {
-  var source: Array = this;
+Stream.prototype.pipe = function(dest: Element, options: object) {
+  var source: any[] = this;
 
-  function ondata(chunk: String): Void {
+  function ondata(chunk: string): Void {
     if (dest.writable) {
       if (false === dest.write(chunk) && source.pause) {
         source.pause();
@@ -73,7 +73,7 @@ Stream.prototype.pipe = function(dest: Element, options: Object) {
     source.on('close', onclose);
   }
 
-  var didOnEnd: Boolean = false;
+  var didOnEnd: boolean = false;
   function onend(): Void {
     if (didOnEnd) return;
     didOnEnd = true;

@@ -1,8 +1,8 @@
 'use strict';
 
-var parsers: String = require('../parsers');
+var parsers: string = require('../parsers');
 
-var isValid: Function = (module.exports.isValid = function isValid(v: String): Boolean {
+var isValid: Function = (module.exports.isValid = function isValid(v: string): boolean {
   return (
     parsers.valueType(v) === parsers.TYPES.KEYWORD &&
     (v.toLowerCase() === 'scroll' || v.toLowerCase() === 'fixed' || v.toLowerCase() === 'inherit')
@@ -10,7 +10,7 @@ var isValid: Function = (module.exports.isValid = function isValid(v: String): B
 });
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     if (!isValid(v)) {
       return;
     }

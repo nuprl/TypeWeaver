@@ -17,7 +17,7 @@ import { checkImportsExportsFieldTarget } from './util/path';
 /** @typedef {import("./util/entrypoints").FieldProcessor} FieldProcessor */
 /** @typedef {import("./util/entrypoints").ImportsField} ImportsField */
 
-const dotCode: String = ".".charCodeAt(0);
+const dotCode: string = ".".charCodeAt(0);
 
 export default class ImportsFieldPlugin {
 	/**
@@ -48,21 +48,21 @@ export default class ImportsFieldPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const targetFile: String = resolver.ensureHook(this.targetFile);
-		const targetPackage: Array = resolver.ensureHook(this.targetPackage);
+		const targetFile: string = resolver.ensureHook(this.targetFile);
+		const targetPackage: any[] = resolver.ensureHook(this.targetPackage);
 
 		resolver
 			.getHook(this.source)
-			.tapAsync("ImportsFieldPlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("ImportsFieldPlugin", (request: object, resolveContext: Function, callback: Function) => {
 				// When there is no description file, abort
 				if (!request.descriptionFilePath || request.request === undefined) {
 					return callback();
 				}
 
-				const remainingRequest: String =
+				const remainingRequest: string =
 					request.request + request.query + request.fragment;
 				/** @type {ImportsField|null} */
-				const importsField: String = DescriptionFileUtils.getField(
+				const importsField: string = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					this.fieldName
 				);
@@ -76,7 +76,7 @@ export default class ImportsFieldPlugin {
 					);
 				}
 
-				let paths: Array;
+				let paths: any[];
 
 				try {
 					// We attach the cache to the description file instead of the importsField value
@@ -112,14 +112,14 @@ export default class ImportsFieldPlugin {
 
 				forEachBail(
 					paths,
-					(p: Number, callback: Function) => {
-						const parsedIdentifier: Array = parseIdentifier(p);
+					(p: number, callback: Function) => {
+						const parsedIdentifier: any[] = parseIdentifier(p);
 
 						if (!parsedIdentifier) return callback();
 
 						const [path_, query, fragment] = parsedIdentifier;
 
-						const error: Object = checkImportsExportsFieldTarget(path_);
+						const error: object = checkImportsExportsFieldTarget(path_);
 
 						if (error) {
 							return callback(error);
@@ -128,7 +128,7 @@ export default class ImportsFieldPlugin {
 						switch (path_.charCodeAt(0)) {
 							// should be relative
 							case dotCode: {
-								const obj: Object = {
+								const obj: object = {
 									...request,
 									request: undefined,
 									path: path.join(
@@ -152,7 +152,7 @@ export default class ImportsFieldPlugin {
 
 							// package resolving
 							default: {
-								const obj: Object = {
+								const obj: object = {
 									...request,
 									request: path_,
 									relativePath: path_,
@@ -171,7 +171,7 @@ export default class ImportsFieldPlugin {
 							}
 						}
 					},
-					(err: Array, result: CachedInputFileSystem) => callback(err, result || null)
+					(err: any[], result: CachedInputFileSystem) => callback(err, result || null)
 				);
 			});
 	}

@@ -43,9 +43,9 @@ import {
   Useful for tooling.
   @return {Promise} a promise rejected with the given `reason`.
 */
-export default function reject(reason: String, label: String): String {
+export default function reject(reason: string, label: string): string {
   /*jshint validthis:true */
-  let Constructor: Array = this;
+  let Constructor: any[] = this;
   let promise: Promise = new Constructor(noop, label);
   _reject(promise, reason);
   return promise;

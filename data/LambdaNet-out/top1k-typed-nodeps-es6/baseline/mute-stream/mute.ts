@@ -4,7 +4,7 @@ export default MuteStream;
 
 // var out = new MuteStream(process.stdout)
 // argument auto-pipes
-function MuteStream (opts: String): Void {
+function MuteStream (opts: string): Void {
   Stream.apply(this)
   opts = opts || {}
   this.writable = this.readable = true
@@ -52,7 +52,7 @@ Object.defineProperty(MuteStream.prototype, 'isTTY', {
   configurable: true
 })
 
-function getIsTTY (): Boolean {
+function getIsTTY (): boolean {
   return( (this._dest) ? this._dest.isTTY
         : (this._src) ? this._src.isTTY
         : false
@@ -60,7 +60,7 @@ function getIsTTY (): Boolean {
 }
 
 // basically just get replace the getter/setter with a regular value
-function setIsTTY (isTTY: Number): Void {
+function setIsTTY (isTTY: number): Void {
   Object.defineProperty(this, 'isTTY', {
     value: isTTY,
     enumerable: true,
@@ -84,7 +84,7 @@ Object.defineProperty(MuteStream.prototype, 'columns', {
   }, enumerable: true, configurable: true })
 
 
-MuteStream.prototype.pipe = function (dest: Function, options: Object) {
+MuteStream.prototype.pipe = function (dest: Function, options: object) {
   this._dest = dest
   return Stream.prototype.pipe.call(this, dest, options)
 }
@@ -97,7 +97,7 @@ MuteStream.prototype.resume = function () {
   if (this._src) return this._src.resume()
 }
 
-MuteStream.prototype.write = function (c: String) {
+MuteStream.prototype.write = function (c: string) {
   if (this.muted) {
     if (!this.replace) return true
     if (c.match(/^\u001b/)) {
@@ -121,7 +121,7 @@ MuteStream.prototype.write = function (c: String) {
   this.emit('data', c)
 }
 
-MuteStream.prototype.end = function (c: String) {
+MuteStream.prototype.end = function (c: string) {
   if (this.muted) {
     if (c && this.replace) {
       c = c.toString().replace(/./g, this.replace)
@@ -133,9 +133,9 @@ MuteStream.prototype.end = function (c: String) {
   this.emit('end')
 }
 
-function proxy (fn: String): Function { return function () {
-  var d: Object = this._dest
-  var s: Object = this._src
+function proxy (fn: string): Function { return function () {
+  var d: object = this._dest
+  var s: object = this._src
   if (d && d[fn]) d[fn].apply(d, arguments)
   if (s && s[fn]) s[fn].apply(s, arguments)
 }}

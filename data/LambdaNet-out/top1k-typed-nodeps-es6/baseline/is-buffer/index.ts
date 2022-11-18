@@ -5,7 +5,7 @@
  * @license  MIT
  */
 
-export default function isBuffer (obj: Object): Boolean {
+export default function isBuffer (obj: object): boolean {
   return obj != null && obj.constructor != null &&
     typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 };

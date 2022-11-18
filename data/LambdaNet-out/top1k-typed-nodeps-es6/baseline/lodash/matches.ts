@@ -2,7 +2,7 @@ import baseClone from './.internal/baseClone.js'
 import baseMatches from './.internal/baseMatches.js'
 
 /** Used to compose bitmasks for cloning. */
-const CLONE_DEEP_FLAG: Number = 1
+const CLONE_DEEP_FLAG: number = 1
 
 /**
  * Creates a function that performs a partial deep comparison between a given
@@ -30,7 +30,7 @@ const CLONE_DEEP_FLAG: Number = 1
  * filter(objects, matches({ 'a': 4, 'c': 6 }))
  * // => [{ 'a': 4, 'b': 5, 'c': 6 }]
  */
-function matches(source: String): Stack {
+function matches(source: string): Stack {
   return baseMatches(baseClone(source, CLONE_DEEP_FLAG))
 }
 

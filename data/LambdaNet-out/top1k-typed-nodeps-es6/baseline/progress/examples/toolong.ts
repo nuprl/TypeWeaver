@@ -7,7 +7,7 @@ import ProgressBar from '../';
 
 // simulated download, passing the chunk lengths to tick()
 
-var bar: Object = new ProgressBar('  downloading [:bar] :percent :etas', {
+var bar: object = new ProgressBar('  downloading [:bar] :percent :etas', {
     complete: '='
   , incomplete: ' '
   , width: 1024     /* something longer than the terminal width */

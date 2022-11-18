@@ -4,9 +4,9 @@ var isPrototype: Function = require("../prototype/is");
 
 // In theory we could rely on Symbol.toStringTag directly,
 // still early native implementation (e.g. in FF) predated symbols
-var objectToString: Function = Object.prototype.toString, objectTaggedString: Number = objectToString.call(new Set());
+var objectToString: Function = Object.prototype.toString, objectTaggedString: number = objectToString.call(new Set());
 
-module.exports = function (value: Object) {
+module.exports = function (value: object) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common Set interface)

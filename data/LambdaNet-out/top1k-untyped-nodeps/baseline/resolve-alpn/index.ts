@@ -1,10 +1,10 @@
 'use strict';
-const tls: String = require('tls');
+const tls: string = require('tls');
 
-module.exports = (options: Object = {}, connect: Function = tls.connect) => new Promise((resolve: Function, reject: String) => {
-	let timeout: Boolean = false;
+module.exports = (options: object = {}, connect: Function = tls.connect) => new Promise((resolve: Function, reject: string) => {
+	let timeout: boolean = false;
 
-	let socket: Object;
+	let socket: object;
 
 	const callback: Function = async () => {
 		await socketPromise;
@@ -30,7 +30,7 @@ module.exports = (options: Object = {}, connect: Function = tls.connect) => new 
 		callback();
 	};
 
-	const socketPromise: Object = (async () => {
+	const socketPromise: object = (async () => {
 		try {
 			socket = await connect(options, callback);
 

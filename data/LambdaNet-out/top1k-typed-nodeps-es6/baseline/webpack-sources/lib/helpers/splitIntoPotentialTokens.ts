@@ -6,15 +6,15 @@
 // \r = 13
 // \t = 9
 
-const splitIntoPotentialTokens: Function = (str: String) => {
-	const len: Number = str.length;
+const splitIntoPotentialTokens: Function = (str: string) => {
+	const len: number = str.length;
 	if (len === 0) return null;
-	const results: Array = [];
-	let i: Number = 0;
+	const results: any[] = [];
+	let i: number = 0;
 	for (; i < len; ) {
-		const s: Number = i;
+		const s: number = i;
 		block: {
-			let cc: Number = str.charCodeAt(i);
+			let cc: number = str.charCodeAt(i);
 			while (cc !== 10 && cc !== 59 && cc !== 123 && cc !== 125) {
 				if (++i >= len) break block;
 				cc = str.charCodeAt(i);

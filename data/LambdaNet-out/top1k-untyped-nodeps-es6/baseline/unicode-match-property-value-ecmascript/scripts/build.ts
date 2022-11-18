@@ -11,7 +11,7 @@ for (const [property, values] of valueAliases) {
 	}
 }
 
-const output: String = `module.exports = ${
+const output: string = `module.exports = ${
 	jsesc(propertyToValueAliases, {
 		'compact': false
 	})

@@ -1,20 +1,20 @@
 "use strict";
 
-const fs: String = require("fs");
-const path: String = require("path");
+const fs: string = require("fs");
+const path: string = require("path");
 const fetch: Function = require("minipass-fetch");
 const { unicodeVersion } = require("../package.json");
 const { STATUS_MAPPING } = require("../lib/statusMapping.js");
 
 async function main(): Map {
   const response: Element = await fetch(`https://unicode.org/Public/idna/${unicodeVersion}/IdnaMappingTable.txt`);
-  const body: String = await response.text();
+  const body: string = await response.text();
 
-  const lines: Array = [];
+  const lines: any[] = [];
 
-  body.split("\n").forEach((l: String) => {
+  body.split("\n").forEach((l: string) => {
     l = l.split("#")[0]; // Remove comments
-    const cells: Array = l.split(";").map((c: String) => {
+    const cells: any[] = l.split(";").map((c: string) => {
       return c.trim();
     });
     if (cells.length === 1) {
@@ -22,9 +22,9 @@ async function main(): Map {
     }
 
     // Parse ranges to int[2] array
-    const range: Object = cells[0].split("..");
-    const start: Number = parseInt(range[0], 16);
-    const end: Number = parseInt(range[1] || range[0], 16);
+    const range: object = cells[0].split("..");
+    const start: number = parseInt(range[0], 16);
+    const end: number = parseInt(range[1] || range[0], 16);
     cells[0] = end === start ? start : [start, end];
 
     cells[1] = STATUS_MAPPING[cells[1]];
@@ -36,12 +36,12 @@ async function main(): Map {
 
     if (cells[2] !== undefined) {
       // Parse replacement to int[] array
-      let replacement: Array = cells[2].split(" ");
+      let replacement: any[] = cells[2].split(" ");
       if (replacement[0] === "") { // Empty array
         replacement = [];
       }
 
-      replacement = replacement.map((r: Number) => {
+      replacement = replacement.map((r: number) => {
         return parseInt(r, 16);
       });
 

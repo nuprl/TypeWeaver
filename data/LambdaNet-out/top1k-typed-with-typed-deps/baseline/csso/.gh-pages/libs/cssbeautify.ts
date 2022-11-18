@@ -32,13 +32,13 @@
 
     'use strict';
 
-    function cssbeautify(style: String, opt: Number): String {
+    function cssbeautify(style: string, opt: number): string {
 
-        var options: HTMLElement, index: Number = 0, length: Number = style.length, blocks: Array, formatted: String = '',
-            ch: String, ch2: String, str: String, state: Number, State: Object, depth: Number, quote: Number, comment: Boolean,
-            openbracesuffix: Boolean = true,
-            autosemicolon: Boolean = false,
-            trimRight: Object;
+        var options: HTMLElement, index: number = 0, length: number = style.length, blocks: any[], formatted: string = '',
+            ch: string, ch2: string, str: string, state: number, State: object, depth: number, quote: number, comment: boolean,
+            openbracesuffix: boolean = true,
+            autosemicolon: boolean = false,
+            trimRight: object;
 
         options = arguments.length > 1 ? opt : {};
         if (typeof options.indent === 'undefined') {
@@ -51,16 +51,16 @@
             autosemicolon = options.autosemicolon;
         }
 
-        function isWhitespace(c: Number): Boolean {
+        function isWhitespace(c: number): boolean {
             return (c === ' ') || (c === '\n') || (c === '\t') || (c === '\r') || (c === '\f');
         }
 
-        function isQuote(c: Number): Boolean {
+        function isQuote(c: number): boolean {
             return (c === '\'') || (c === '"');
         }
 
         // FIXME: handle Unicode characters
-        function isName(c: String): Boolean {
+        function isName(c: string): boolean {
             return (ch >= 'a' && ch <= 'z') ||
                 (ch >= 'A' && ch <= 'Z') ||
                 (ch >= '0' && ch <= '9') ||
@@ -68,7 +68,7 @@
         }
 
         function appendIndent(): Void {
-            var i: Number;
+            var i: number;
             for (i = depth; i > 0; i -= 1) {
                 formatted += options.indent;
             }
@@ -90,7 +90,7 @@
         }
 
         function closeBlock(): Void {
-            var last: Number;
+            var last: number;
             depth -= 1;
             formatted = trimRight(formatted);
 
@@ -109,12 +109,12 @@
         }
 
         if (String.prototype.trimRight) {
-            trimRight = function (s: Object) {
+            trimRight = function (s: object) {
                 return s.trimRight();
             };
         } else {
             // old Internet Explorer
-            trimRight = function (s: String) {
+            trimRight = function (s: string) {
                 return s.replace(/\s+$/, '');
             };
         }

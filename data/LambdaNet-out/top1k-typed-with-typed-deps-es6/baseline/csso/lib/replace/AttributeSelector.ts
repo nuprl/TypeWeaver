@@ -3,7 +3,7 @@
 // https://github.com/mathiasbynens/mothereff.in/blob/master/unquoted-attributes/eff.js
 const blockUnquoteRx: RegExp = /^(-?\d|--)|[\u0000-\u002c\u002e\u002f\u003A-\u0040\u005B-\u005E\u0060\u007B-\u009f]/;
 
-function canUnquote(value: Number): Boolean {
+function canUnquote(value: number): boolean {
     if (value === '' || value === '-') {
         return false;
     }
@@ -11,8 +11,8 @@ function canUnquote(value: Number): Boolean {
     return !blockUnquoteRx.test(value);
 }
 
-export default function(node: Object) {
-    const attrValue: Object = node.value;
+export default function(node: object) {
+    const attrValue: object = node.value;
 
     if (!attrValue || attrValue.type !== 'String') {
         return;

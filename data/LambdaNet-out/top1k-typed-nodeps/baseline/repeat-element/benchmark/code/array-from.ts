@@ -1,9 +1,9 @@
 'use strict';
 
-function getThis(): Object {
+function getThis(): object {
   return this;
 }
 
-module.exports = function repeat(ele: Function, num: Number): Array {
+module.exports = function repeat(ele: Function, num: number): any[] {
   return Array.from({length: num}, getThis, ele);
 };

@@ -28,11 +28,11 @@ var simpleLanguageRegExp: RegExp = /^\s*([^\s\-;]+)(?:-([^\s;]+))?\s*(?:;(.*))?$
  * @private
  */
 
-function parseAcceptLanguage(accept: String): Array {
-  var accepts: Array = accept.split(',');
+function parseAcceptLanguage(accept: string): any[] {
+  var accepts: any[] = accept.split(',');
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
-    var language: String = parseLanguage(accepts[i].trim(), i);
+    var language: string = parseLanguage(accepts[i].trim(), i);
 
     if (language) {
       accepts[j++] = language;
@@ -50,21 +50,21 @@ function parseAcceptLanguage(accept: String): Array {
  * @private
  */
 
-function parseLanguage(str: String, i: Number): Object {
-  var match: Object = simpleLanguageRegExp.exec(str);
+function parseLanguage(str: string, i: number): object {
+  var match: object = simpleLanguageRegExp.exec(str);
   if (!match) return null;
 
-  var prefix: String = match[1]
-  var suffix: String = match[2]
-  var full: String = prefix
+  var prefix: string = match[1]
+  var suffix: string = match[2]
+  var full: string = prefix
 
   if (suffix) full += "-" + suffix;
 
-  var q: Number = 1;
+  var q: number = 1;
   if (match[3]) {
-    var params: Array = match[3].split(';')
+    var params: any[] = match[3].split(';')
     for (var j = 0; j < params.length; j++) {
-      var p: Object = params[j].split('=');
+      var p: object = params[j].split('=');
       if (p[0] === 'q') q = parseFloat(p[1]);
     }
   }
@@ -83,11 +83,11 @@ function parseLanguage(str: String, i: Number): Object {
  * @private
  */
 
-function getLanguagePriority(language: String, accepted: Array, index: Number): Object {
-  var priority: Object = {o: -1, q: 0, s: 0};
+function getLanguagePriority(language: string, accepted: any[], index: number): object {
+  var priority: object = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
-    var spec: Object = specify(language, accepted[i], index);
+    var spec: object = specify(language, accepted[i], index);
 
     if (spec && (priority.s - spec.s || priority.q - spec.q || priority.o - spec.o) < 0) {
       priority = spec;
@@ -102,10 +102,10 @@ function getLanguagePriority(language: String, accepted: Array, index: Number): 
  * @private
  */
 
-function specify(language: String, spec: Object, index: Number): Object {
-  var p: Object = parseLanguage(language)
+function specify(language: string, spec: object, index: number): object {
+  var p: object = parseLanguage(language)
   if (!p) return null;
-  var s: Number = 0;
+  var s: number = 0;
   if(spec.full.toLowerCase() === p.full.toLowerCase()){
     s |= 4;
   } else if (spec.prefix.toLowerCase() === p.full.toLowerCase()) {
@@ -129,9 +129,9 @@ function specify(language: String, spec: Object, index: Number): Object {
  * @public
  */
 
-function preferredLanguages(accept: Number, provided: Array): Array {
+function preferredLanguages(accept: number, provided: any[]): any[] {
   // RFC 2616 sec 14.4: no header = *
-  var accepts: Array = parseAcceptLanguage(accept === undefined ? '*' : accept || '');
+  var accepts: any[] = parseAcceptLanguage(accept === undefined ? '*' : accept || '');
 
   if (!provided) {
     // sorted list of all languages
@@ -141,12 +141,12 @@ function preferredLanguages(accept: Number, provided: Array): Array {
       .map(getFullLanguage);
   }
 
-  var priorities: Array = provided.map(function getPriority(type: String, index: Number): String {
+  var priorities: any[] = provided.map(function getPriority(type: string, index: number): string {
     return getLanguagePriority(type, accepts, index);
   });
 
   // sorted list of accepted languages
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority: String): String {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority: string): string {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -156,7 +156,7 @@ function preferredLanguages(accept: Number, provided: Array): Array {
  * @private
  */
 
-function compareSpecs(a: Object, b: Object): Boolean {
+function compareSpecs(a: object, b: object): boolean {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -165,7 +165,7 @@ function compareSpecs(a: Object, b: Object): Boolean {
  * @private
  */
 
-function getFullLanguage(spec: Object): Boolean {
+function getFullLanguage(spec: object): boolean {
   return spec.full;
 }
 
@@ -174,6 +174,6 @@ function getFullLanguage(spec: Object): Boolean {
  * @private
  */
 
-function isQuality(spec: Object): Boolean {
+function isQuality(spec: object): boolean {
   return spec.q > 0;
 }

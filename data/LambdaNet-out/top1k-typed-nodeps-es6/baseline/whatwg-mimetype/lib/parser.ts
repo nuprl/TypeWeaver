@@ -10,11 +10,11 @@ import {
   collectAnHTTPQuotedString,
 } from './utils.js';
 
-export default (input: Array) => {
+export default (input: any[]) => {
   input = removeLeadingAndTrailingHTTPWhitespace(input);
 
-  let position: Number = 0;
-  let type: String = "";
+  let position: number = 0;
+  let type: string = "";
   while (position < input.length && input[position] !== "/") {
     type += input[position];
     ++position;
@@ -31,7 +31,7 @@ export default (input: Array) => {
   // Skips past "/"
   ++position;
 
-  let subtype: String = "";
+  let subtype: string = "";
   while (position < input.length && input[position] !== ";") {
     subtype += input[position];
     ++position;
@@ -43,7 +43,7 @@ export default (input: Array) => {
     return null;
   }
 
-  const mimeType: Object = {
+  const mimeType: object = {
     type: asciiLowercase(type),
     subtype: asciiLowercase(subtype),
     parameters: new Map()
@@ -57,7 +57,7 @@ export default (input: Array) => {
       ++position;
     }
 
-    let parameterName: String = "";
+    let parameterName: string = "";
     while (position < input.length && input[position] !== ";" && input[position] !== "=") {
       parameterName += input[position];
       ++position;
@@ -73,7 +73,7 @@ export default (input: Array) => {
       ++position;
     }
 
-    let parameterValue: String = null;
+    let parameterValue: string = null;
     if (input[position] === "\"") {
       [parameterValue, position] = collectAnHTTPQuotedString(input, position);
 

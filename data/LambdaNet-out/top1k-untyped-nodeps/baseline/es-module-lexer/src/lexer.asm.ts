@@ -1,28 +1,28 @@
-let asm: Object, asmBuffer: Object, allocSize: Number = 2<<19, addr: String;
+let asm: object, asmBuffer: object, allocSize: number = 2<<19, addr: string;
 
-const copy: Function = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1 ? function (src: String, outBuf16: Object) {
-  const len: Number = src.length;
-  let i: Number = 0;
+const copy: Function = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1 ? function (src: string, outBuf16: object) {
+  const len: number = src.length;
+  let i: number = 0;
   while (i < len)
     outBuf16[i] = src.charCodeAt(i++);
-} : function (src: String, outBuf16: Object) {
-  const len: Number = src.length;
-  let i: Number = 0;
+} : function (src: string, outBuf16: object) {
+  const len: number = src.length;
+  let i: number = 0;
   while (i < len) {
-    const ch: Number = src.charCodeAt(i);
+    const ch: number = src.charCodeAt(i);
     outBuf16[i++] = (ch & 0xff) << 8 | ch >>> 8;
   }
 };
-const words: String = 'xportmportlassetafromsyncunctionssertvoyiedelecontininstantybreareturdebuggeawaithrwhileforifcatcfinallels';
+const words: string = 'xportmportlassetafromsyncunctionssertvoyiedelecontininstantybreareturdebuggeawaithrwhileforifcatcfinallels';
 
-let source: String, name: String;
-export function parse (_source: Array, _name: String = '@'): Array {
+let source: string, name: string;
+export function parse (_source: any[], _name: string = '@'): any[] {
   source = _source;
   name = _name;
   // 2 bytes per string code point
   // + analysis space (2^17)
   // remaining space is EMCC stack space (2^17)
-  const memBound: Number = source.length * 2 + (2 << 18);
+  const memBound: number = source.length * 2 + (2 << 18);
   if (memBound > allocSize || !asm) {
     while (memBound > allocSize) allocSize *= 2;
     asmBuffer = new ArrayBuffer(allocSize);
@@ -31,7 +31,7 @@ export function parse (_source: Array, _name: String = '@'): Array {
     // lexer.c bulk allocates string space + analysis space
     addr = asm.su(allocSize - (2<<17));
   }
-  const len: Number = source.length + 1;
+  const len: number = source.length + 1;
   asm.ses(addr);
   asm.sa(len - 1);
 
@@ -42,18 +42,18 @@ export function parse (_source: Array, _name: String = '@'): Array {
     syntaxError();
   }
 
-  const imports: Array = [], exports: Array = [];
+  const imports: any[] = [], exports: any[] = [];
   while (asm.ri()) {
-    const s: Number = asm.is(), e: Function = asm.ie(), a: String = asm.ai(), d: Number = asm.id(), ss: Function = asm.ss(), se: Array = asm.se();
-    let n: Array;
+    const s: number = asm.is(), e: Function = asm.ie(), a: string = asm.ai(), d: number = asm.id(), ss: Function = asm.ss(), se: any[] = asm.se();
+    let n: any[];
     if (asm.ip())
       n = readString(d === -1 ? s : s + 1, source.charCodeAt(d === -1 ? s - 1 : s));
     imports.push({ n, s, e, ss, se, d, a });
   }
   while (asm.re()) {
-    const s: Number = asm.es(), e: Function = asm.ee(), ls: Number = asm.els(), le: String = asm.ele();
-    const ch: Number = source.charCodeAt(s);
-    const lch: Number = ls >= 0 ? source.charCodeAt(ls) : -1;
+    const s: number = asm.es(), e: Function = asm.ee(), ls: number = asm.els(), le: string = asm.ele();
+    const ch: number = source.charCodeAt(s);
+    const lch: number = ls >= 0 ? source.charCodeAt(ls) : -1;
     exports.push({
       s, e, ls, le,
       n: (ch === 34 || ch === 39) ? readString(s + 1, ch) : source.slice(s, e),
@@ -89,13 +89,13 @@ export function parse (_source: Array, _name: String = '@'): Array {
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-let acornPos: Number;
-function readString (start: Number, quote: Number): String {
+let acornPos: number;
+function readString (start: number, quote: number): string {
   acornPos = start;
-  let out: String = '', chunkStart: Number = acornPos;
+  let out: string = '', chunkStart: number = acornPos;
   for (;;) {
     if (acornPos >= source.length) syntaxError();
-    const ch: Number = source.charCodeAt(acornPos);
+    const ch: number = source.charCodeAt(acornPos);
     if (ch === quote) break;
     if (ch === 92) { // '\'
       out += source.slice(chunkStart, acornPos);
@@ -116,8 +116,8 @@ function readString (start: Number, quote: Number): String {
 
 // Used to read escaped characters
 
-function readEscapedChar (): Number {
-  let ch: Number = source.charCodeAt(++acornPos);
+function readEscapedChar (): number {
+  let ch: number = source.charCodeAt(++acornPos);
   ++acornPos;
   switch (ch) {
     case 110: return '\n'; // 'n' -> '\n'
@@ -136,8 +136,8 @@ function readEscapedChar (): Number {
       syntaxError();
     default:
       if (ch >= 48 && ch <= 55) {
-        let octalStr: String = source.substr(acornPos - 1, 3).match(/^[0-7]+/)[0];
-        let octal: Number = parseInt(octalStr, 8);
+        let octalStr: string = source.substr(acornPos - 1, 3).match(/^[0-7]+/)[0];
+        let octal: number = parseInt(octalStr, 8);
         if (octal > 255) {
           octalStr = octalStr.slice(0, -1);
           octal = parseInt(octalStr, 8);
@@ -159,11 +159,11 @@ function readEscapedChar (): Number {
 
 // Used to read character escape sequences ('\x', '\u', '\U').
 
-function readHexChar (len: Number): Number {
-  const start: Number = acornPos;
-  let total: Number = 0, lastCode: Number = 0;
+function readHexChar (len: number): number {
+  const start: number = acornPos;
+  let total: number = 0, lastCode: number = 0;
   for (let i = 0; i < len; ++i, ++acornPos) {
-    let code: Number = source.charCodeAt(acornPos), val: Number;
+    let code: number = source.charCodeAt(acornPos), val: number;
 
     if (code === 95) {
       if (lastCode === 95 || i === 0) syntaxError();
@@ -187,9 +187,9 @@ function readHexChar (len: Number): Number {
 
 // Read a string value, interpreting backslash-escapes.
 
-function readCodePointToString (): Number {
-  const ch: Number = source.charCodeAt(acornPos);
-  let code: Number;
+function readCodePointToString (): number {
+  const ch: number = source.charCodeAt(acornPos);
+  let code: number;
   if (ch === 123) { // '{'
     ++acornPos;
     code = readHexChar(source.indexOf('}', acornPos) - acornPos);
@@ -204,7 +204,7 @@ function readCodePointToString (): Number {
   return String.fromCharCode((code >> 10) + 0xD800, (code & 1023) + 0xDC00);
 }
 
-function isBr (c: Number): Boolean {
+function isBr (c: number): boolean {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 

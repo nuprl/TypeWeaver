@@ -1,10 +1,8 @@
-post-build.ts(6,14): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 src/index.ts(1,25): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
-src/index.ts(15,37): error TS2339: Property 'acorn' does not exist on type 'Object'.
+src/index.ts(15,37): error TS2339: Property 'acorn' does not exist on type 'object'.
 src/index.ts(16,11): error TS2339: Property 'tokTypes' does not exist on type 'HTMLElement'.
 src/index.ts(16,25): error TS2339: Property 'TokenType' does not exist on type 'HTMLElement'.
-src/index.ts(18,24): error TS2507: Type 'Object' is not a constructor function type.
+src/index.ts(18,24): error TS2507: Type 'object' is not a constructor function type.
 src/index.ts(21,12): error TS2339: Property 'assertToken' does not exist on type '(Anonymous class)'.
 src/index.ts(25,19): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
 src/index.ts(29,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
@@ -47,8 +45,6 @@ src/index.ts(114,28): error TS2339: Property 'startNode' does not exist on type 
 src/index.ts(115,16): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
 src/index.ts(116,31): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
 src/index.ts(117,35): error TS2339: Property 'parseFunction' does not exist on type '(Anonymous class)'.
-src/index.ts(117,56): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/index.ts(117,73): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/index.ts(118,25): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 src/index.ts(119,28): error TS2339: Property 'startNode' does not exist on type '(Anonymous class)'.
 src/index.ts(120,35): error TS2339: Property 'parseClass' does not exist on type '(Anonymous class)'.

@@ -3,7 +3,7 @@
 import utils from '../utils';
 import SHA512 from './512';
 
-function SHA384(): String {
+function SHA384(): string {
   if (!(this instanceof SHA384))
     return new SHA384();
 
@@ -26,7 +26,7 @@ SHA384.outSize = 384;
 SHA384.hmacStrength = 192;
 SHA384.padLength = 128;
 
-SHA384.prototype._digest = function digest(enc: Number): String {
+SHA384.prototype._digest = function digest(enc: number): string {
   if (enc === 'hex')
     return utils.toHex32(this.h.slice(0, 12), 'big');
   else

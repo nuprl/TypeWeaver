@@ -2,7 +2,7 @@
 
 var parseMeasurement: Function = require('../parsers').parseMeasurement;
 
-function parse(v: String): String {
+function parse(v: string): string {
   if (String(v).toLowerCase() === 'auto') {
     return 'auto';
   }
@@ -13,7 +13,7 @@ function parse(v: String): String {
 }
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('height', parse(v));
   },
   get: function() {

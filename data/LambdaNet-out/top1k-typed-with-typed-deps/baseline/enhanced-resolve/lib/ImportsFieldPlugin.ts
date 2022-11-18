@@ -5,9 +5,9 @@
 
 "use strict";
 
-const path: String = require("path");
-const DescriptionFileUtils: String = require("./DescriptionFileUtils");
-const forEachBail: String = require("./forEachBail");
+const path: string = require("path");
+const DescriptionFileUtils: string = require("./DescriptionFileUtils");
+const forEachBail: string = require("./forEachBail");
 const { processImportsField } = require("./util/entrypoints");
 const { parseIdentifier } = require("./util/identifier");
 const { checkImportsExportsFieldTarget } = require("./util/path");
@@ -17,7 +17,7 @@ const { checkImportsExportsFieldTarget } = require("./util/path");
 /** @typedef {import("./util/entrypoints").FieldProcessor} FieldProcessor */
 /** @typedef {import("./util/entrypoints").ImportsField} ImportsField */
 
-const dotCode: Number = ".".charCodeAt(0);
+const dotCode: number = ".".charCodeAt(0);
 
 module.exports = class ImportsFieldPlugin {
 	/**

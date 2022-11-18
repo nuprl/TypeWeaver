@@ -1,14 +1,14 @@
 var pSlice: Function = Array.prototype.slice;
 var Object_keys: Function = typeof Object.keys === 'function'
     ? Object.keys
-    : function (obj: Array) {
-        var keys: Array = [];
+    : function (obj: any[]) {
+        var keys: any[] = [];
         for (var key in obj) keys.push(key);
         return keys;
     }
 ;
 
-var deepEqual: Function = function (actual: Array, expected: Array) {
+var deepEqual: Function = function (actual: any[], expected: any[]) {
   // enforce Object.is +0 !== -0
   if (actual === 0 && expected === 0) {
     return areZerosEqual(actual, expected);
@@ -41,25 +41,25 @@ var deepEqual: Function = function (actual: Array, expected: Array) {
 
 export default deepEqual;
 
-function isUndefinedOrNull(value: String): Boolean {
+function isUndefinedOrNull(value: string): boolean {
   return value === null || value === undefined;
 }
 
-function isArguments(object: Function): Boolean {
+function isArguments(object: Function): boolean {
   return Object.prototype.toString.call(object) == '[object Arguments]';
 }
 
-function isNumberNaN(value: String): Boolean {
+function isNumberNaN(value: string): boolean {
   // NaN === NaN -> false
   return typeof value == 'number' && value !== value;
 }
 
-function areZerosEqual(zeroA: Number, zeroB: Number): Boolean {
+function areZerosEqual(zeroA: number, zeroB: number): boolean {
   // (1 / +0|0) -> Infinity, but (1 / -0) -> -Infinity and (Infinity !== -Infinity)
   return (1 / zeroA) === (1 / zeroB);
 }
 
-function objEquiv(a: Object, b: Object): Boolean {
+function objEquiv(a: object, b: object): boolean {
   if (isUndefinedOrNull(a) || isUndefinedOrNull(b))
     return false;
 
@@ -76,9 +76,9 @@ function objEquiv(a: Object, b: Object): Boolean {
     return deepEqual(a, b);
   }
   try {
-    var ka: Array = Object_keys(a),
-        kb: Array = Object_keys(b),
-        key: String, i: Number;
+    var ka: any[] = Object_keys(a),
+        kb: any[] = Object_keys(b),
+        key: string, i: number;
   } catch (e) {//happens when one is a string literal and the other isn't
     return false;
   }

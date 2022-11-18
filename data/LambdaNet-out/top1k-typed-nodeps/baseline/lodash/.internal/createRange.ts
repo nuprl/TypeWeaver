@@ -9,7 +9,7 @@ import toFinite from '../toFinite.js'
  * @returns {Function} Returns the new range function.
  */
 function createRange(fromRight: Hash): Function {
-  return (start: Number, end: Number, step: Number) => {
+  return (start: number, end: number, step: number) => {
     // Ensure the sign of `-0` is preserved.
     start = toFinite(start)
     if (end === undefined) {

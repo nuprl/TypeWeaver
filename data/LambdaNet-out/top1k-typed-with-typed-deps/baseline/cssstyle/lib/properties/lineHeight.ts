@@ -1,10 +1,10 @@
 'use strict';
 
-var TYPES: Object = require('../parsers').TYPES;
+var TYPES: object = require('../parsers').TYPES;
 var valueType: Function = require('../parsers').valueType;
 
-module.exports.isValid = function isValid(v: String): Boolean {
-  var type: Number = valueType(v);
+module.exports.isValid = function isValid(v: string): boolean {
+  var type: number = valueType(v);
   return (
     (type === TYPES.KEYWORD && v.toLowerCase() === 'normal') ||
     v.toLowerCase() === 'inherit' ||
@@ -15,7 +15,7 @@ module.exports.isValid = function isValid(v: String): Boolean {
 };
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('line-height', v);
   },
   get: function() {

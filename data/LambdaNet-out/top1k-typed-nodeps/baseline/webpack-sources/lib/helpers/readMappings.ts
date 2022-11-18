@@ -5,16 +5,16 @@
 
 "use strict";
 
-const ALPHABET: String =
+const ALPHABET: string =
 	"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-const CONTINUATION_BIT: Number = 0x20;
-const END_SEGMENT_BIT: Number = 0x40;
-const NEXT_LINE: Number = END_SEGMENT_BIT | 0x01;
-const INVALID: Number = END_SEGMENT_BIT | 0x02;
-const DATA_MASK: Number = 0x1f;
+const CONTINUATION_BIT: number = 0x20;
+const END_SEGMENT_BIT: number = 0x40;
+const NEXT_LINE: number = END_SEGMENT_BIT | 0x01;
+const INVALID: number = END_SEGMENT_BIT | 0x02;
+const DATA_MASK: number = 0x1f;
 
-const ccToValue: Array = new Uint8Array("z".charCodeAt(0) + 1);
+const ccToValue: any[] = new Uint8Array("z".charCodeAt(0) + 1);
 {
 	ccToValue.fill(INVALID);
 	for (let i = 0; i < ALPHABET.length; i++) {
@@ -23,26 +23,26 @@ const ccToValue: Array = new Uint8Array("z".charCodeAt(0) + 1);
 	ccToValue[",".charCodeAt(0)] = END_SEGMENT_BIT;
 	ccToValue[";".charCodeAt(0)] = NEXT_LINE;
 }
-const ccMax: Number = ccToValue.length - 1;
+const ccMax: number = ccToValue.length - 1;
 
 /**
  * @param {string} mappings the mappings string
  * @param {function(number, number, number, number, number, number): void} onMapping called for each mapping
  * @returns {void}
  */
-const readMappings: Function = (mappings: String, onMapping: Object) => {
+const readMappings: Function = (mappings: string, onMapping: object) => {
 	// generatedColumn, [sourceIndex, originalLine, orignalColumn, [nameIndex]]
-	const currentData: Object = new Uint32Array([0, 0, 1, 0, 0]);
-	let currentDataPos: Number = 0;
+	const currentData: object = new Uint32Array([0, 0, 1, 0, 0]);
+	let currentDataPos: number = 0;
 	// currentValue will include a sign bit at bit 0
-	let currentValue: Number = 0;
-	let currentValuePos: Number = 0;
-	let generatedLine: Number = 1;
-	let generatedColumn: Number = -1;
+	let currentValue: number = 0;
+	let currentValuePos: number = 0;
+	let generatedLine: number = 1;
+	let generatedColumn: number = -1;
 	for (let i = 0; i < mappings.length; i++) {
-		const cc: Number = mappings.charCodeAt(i);
+		const cc: number = mappings.charCodeAt(i);
 		if (cc > ccMax) continue;
-		const value: Number = ccToValue[cc];
+		const value: number = ccToValue[cc];
 		if ((value & END_SEGMENT_BIT) !== 0) {
 			// End current segment
 			if (currentData[0] > generatedColumn) {
@@ -79,7 +79,7 @@ const readMappings: Function = (mappings: String, onMapping: Object) => {
 		} else if ((value & CONTINUATION_BIT) === 0) {
 			// last sextet
 			currentValue |= value << currentValuePos;
-			const finalValue: Number =
+			const finalValue: number =
 				currentValue & 1 ? -(currentValue >> 1) : currentValue >> 1;
 			currentData[currentDataPos++] += finalValue;
 			currentValuePos = 0;

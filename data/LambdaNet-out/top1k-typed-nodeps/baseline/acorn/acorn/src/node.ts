@@ -29,7 +29,7 @@ pp.startNodeAt = function(pos: Position, loc: Position) {
 
 // Finish an AST node, adding `type` and `end` properties.
 
-function finishNodeAt(node: TokenType, type: String, pos: Number, loc: Number): RegExpValidationState {
+function finishNodeAt(node: TokenType, type: string, pos: number, loc: number): RegExpValidationState {
   node.type = type
   node.end = pos
   if (this.options.locations)

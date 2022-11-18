@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = (name: String, withCache: Boolean, callback: Function) => {
-  let s: Number;
+module.exports = (name: string, withCache: boolean, callback: Function) => {
+  let s: number;
 
-  const logs: Array = [];
+  const logs: any[] = [];
   logs.push(`node: ${parseInt(process.uptime() * 1000, 10)}ms`);
 
   // So each test gets its own cache

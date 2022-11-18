@@ -32,7 +32,7 @@
 import psl from 'psl';
 
 // RFC 6761
-const SPECIAL_USE_DOMAINS: Array = [
+const SPECIAL_USE_DOMAINS: any[] = [
   "local",
   "example",
   "invalid",
@@ -40,17 +40,17 @@ const SPECIAL_USE_DOMAINS: Array = [
   "test"
 ];
 
-const SPECIAL_TREATMENT_DOMAINS: Array = ["localhost", "invalid"];
+const SPECIAL_TREATMENT_DOMAINS: any[] = ["localhost", "invalid"];
 
-function getPublicSuffix(domain: String, options: Object = {}): String {
-  const domainParts: Array = domain.split(".");
-  const topLevelDomain: String = domainParts[domainParts.length - 1];
-  const allowSpecialUseDomain: Boolean = !!options.allowSpecialUseDomain;
-  const ignoreError: Boolean = !!options.ignoreError;
+function getPublicSuffix(domain: string, options: object = {}): string {
+  const domainParts: any[] = domain.split(".");
+  const topLevelDomain: string = domainParts[domainParts.length - 1];
+  const allowSpecialUseDomain: boolean = !!options.allowSpecialUseDomain;
+  const ignoreError: boolean = !!options.ignoreError;
 
   if (allowSpecialUseDomain && SPECIAL_USE_DOMAINS.includes(topLevelDomain)) {
     if (domainParts.length > 1) {
-      const secondLevelDomain: String = domainParts[domainParts.length - 2];
+      const secondLevelDomain: string = domainParts[domainParts.length - 2];
       // In aforementioned example, the eTLD/pubSuf will be apple.localhost
       return `${secondLevelDomain}.${topLevelDomain}`;
     } else if (SPECIAL_TREATMENT_DOMAINS.includes(topLevelDomain)) {

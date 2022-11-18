@@ -1,4 +1,4 @@
-export default function stripBom(string: String): Array {
+export default function stripBom(string: string): any[] {
 	if (typeof string !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof string}`);
 	}

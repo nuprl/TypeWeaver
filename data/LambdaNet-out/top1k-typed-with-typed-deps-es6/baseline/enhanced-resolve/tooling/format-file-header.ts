@@ -3,10 +3,10 @@ import fs from 'fs';
 
 // When --write is set, files will be written in place
 // Otherwise it only prints outdated files
-const doWrite: Boolean = process.argv.includes("--write");
+const doWrite: boolean = process.argv.includes("--write");
 
 const allFiles: Error = new Set();
-const findFiles: Function = (p: String) => {
+const findFiles: Function = (p: string) => {
 	const s: Resolver = fs.statSync(p);
 	if (s.isDirectory()) {
 		for (const name of fs.readdirSync(p)) {
@@ -19,9 +19,9 @@ const findFiles: Function = (p: String) => {
 };
 findFiles(path.resolve(__dirname, "../lib"));
 
-let canUpdateWithWrite: Boolean = false;
+let canUpdateWithWrite: boolean = false;
 
-const sortImport: Function = (a: Object, b: Object) => {
+const sortImport: Function = (a: object, b: object) => {
 	if (!a.key.startsWith(".") && b.key.startsWith(".")) return -1;
 	if (a.key.startsWith(".") && !b.key.startsWith(".")) return 1;
 	if (a.key < b.key) return -1;
@@ -29,9 +29,9 @@ const sortImport: Function = (a: Object, b: Object) => {
 	return 0;
 };
 
-const execToArray: Function = (content: String, regexp: HTMLElement) => {
-	const items: Array = [];
-	let match: Object = regexp.exec(content);
+const execToArray: Function = (content: string, regexp: HTMLElement) => {
+	const items: any[] = [];
+	let match: object = regexp.exec(content);
 	while (match) {
 		items.push({
 			content: match[0],
@@ -113,19 +113,19 @@ const schema: Promise = [
 ];
 
 for (const filePath of allFiles) {
-	let content: String = fs.readFileSync(filePath, "utf-8");
+	let content: string = fs.readFileSync(filePath, "utf-8");
 	const nl: Promise = /(\r?\n)/.exec(content);
 	content = content.replace(/\r?\n/g, "\n");
-	let newContent: String = content;
+	let newContent: string = content;
 
-	let state: Number = 0;
-	let pos: Number = 0;
+	let state: number = 0;
+	let pos: number = 0;
 	// eslint-disable-next-line no-constant-condition
 	while (true) {
-		const current: Object = schema[state];
+		const current: object = schema[state];
 		if (!current) break;
 		current.regexp.lastIndex = pos;
-		const match: Object = current.regexp.exec(newContent);
+		const match: object = current.regexp.exec(newContent);
 		if (!match) {
 			if (current.optional) {
 				state++;
@@ -146,7 +146,7 @@ for (const filePath of allFiles) {
 			state++;
 		}
 		if (current.update) {
-			const update: String = current.update(...match);
+			const update: string = current.update(...match);
 			if (update !== match[0]) {
 				newContent =
 					newContent.substr(0, pos) +
@@ -154,7 +154,7 @@ for (const filePath of allFiles) {
 					newContent.slice(pos + match[0].length);
 				pos += update.length;
 				if (!doWrite) {
-					const updateMessage: String =
+					const updateMessage: string =
 						current.updateMessage || `${current.title} need to be updated`;
 					console.log(`${filePath}: ${updateMessage}`);
 				}

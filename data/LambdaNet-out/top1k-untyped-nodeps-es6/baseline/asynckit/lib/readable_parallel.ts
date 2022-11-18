@@ -11,7 +11,7 @@ export default ReadableParallel;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableParallel(list: Object, iterator: Function, callback: Function): Object
+function ReadableParallel(list: object, iterator: Function, callback: Function): object
 {
   if (!(this instanceof ReadableParallel))
   {

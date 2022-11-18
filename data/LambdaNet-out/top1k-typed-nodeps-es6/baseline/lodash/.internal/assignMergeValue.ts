@@ -10,7 +10,7 @@ import eq from '../eq.js'
  * @param {string} key The key of the property to assign.
  * @param {*} value The value to assign.
  */
-function assignMergeValue(object: Object, key: String, value: String): Promise {
+function assignMergeValue(object: object, key: string, value: string): Promise {
   if ((value !== undefined && !eq(object[key], value)) ||
       (value === undefined && !(key in object))) {
     baseAssignValue(object, key, value)

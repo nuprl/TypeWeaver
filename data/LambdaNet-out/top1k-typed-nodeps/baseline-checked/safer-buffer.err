@@ -1,46 +1,32 @@
-dangerous.ts(6,31): error TS2339: Property 'Buffer' does not exist on type 'String'.
-dangerous.ts(8,27): error TS2339: Property 'Buffer' does not exist on type 'Object'.
-dangerous.ts(15,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-dangerous.ts(16,13): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(16,26): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(19,36): error TS2339: Property 'Buffer' does not exist on type 'Object'.
-dangerous.ts(23,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-dangerous.ts(24,14): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(24,27): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(29,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-dangerous.ts(30,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-dangerous.ts(31,14): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(31,28): error TS2538: Type 'String' cannot be used as an index type.
-dangerous.ts(34,17): error TS2339: Property 'allocUnsafe' does not exist on type 'Object'.
-dangerous.ts(35,14): error TS2339: Property 'allocUnsafe' does not exist on type 'Object'.
-dangerous.ts(46,17): error TS2339: Property 'allocUnsafeSlow' does not exist on type 'Object'.
-dangerous.ts(47,14): error TS2339: Property 'allocUnsafeSlow' does not exist on type 'Object'.
-dangerous.ts(54,19): error TS2339: Property 'SlowBuffer' does not exist on type 'String'.
-safer.ts(6,31): error TS2339: Property 'Buffer' does not exist on type 'String'.
-safer.ts(13,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-safer.ts(18,27): error TS2339: Property 'Buffer' does not exist on type 'Object'.
-safer.ts(20,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-safer.ts(22,9): error TS2538: Type 'String' cannot be used as an index type.
-safer.ts(22,23): error TS2538: Type 'String' cannot be used as an index type.
-safer.ts(25,7): error TS2339: Property 'Buffer' does not exist on type 'Object'.
-safer.ts(27,12): error TS2339: Property 'from' does not exist on type 'Object'.
-safer.ts(27,26): error TS2339: Property 'from' does not exist on type 'Object'.
-safer.ts(28,9): error TS2339: Property 'from' does not exist on type 'Object'.
-safer.ts(39,12): error TS2339: Property 'alloc' does not exist on type 'Object'.
-safer.ts(40,9): error TS2339: Property 'alloc' does not exist on type 'Object'.
-safer.ts(40,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+dangerous.ts(6,31): error TS2339: Property 'Buffer' does not exist on type 'string'.
+dangerous.ts(8,27): error TS2339: Property 'Buffer' does not exist on type 'object'.
+dangerous.ts(19,36): error TS2339: Property 'Buffer' does not exist on type 'object'.
+dangerous.ts(34,17): error TS2339: Property 'allocUnsafe' does not exist on type 'object'.
+dangerous.ts(35,14): error TS2339: Property 'allocUnsafe' does not exist on type 'object'.
+dangerous.ts(46,17): error TS2339: Property 'allocUnsafeSlow' does not exist on type 'object'.
+dangerous.ts(47,14): error TS2339: Property 'allocUnsafeSlow' does not exist on type 'object'.
+dangerous.ts(54,19): error TS2339: Property 'SlowBuffer' does not exist on type 'string'.
+safer.ts(6,31): error TS2339: Property 'Buffer' does not exist on type 'string'.
+safer.ts(12,13): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
+safer.ts(18,27): error TS2339: Property 'Buffer' does not exist on type 'object'.
+safer.ts(25,7): error TS2339: Property 'Buffer' does not exist on type 'object'.
+safer.ts(27,12): error TS2339: Property 'from' does not exist on type 'object'.
+safer.ts(27,26): error TS2339: Property 'from' does not exist on type 'object'.
+safer.ts(28,9): error TS2339: Property 'from' does not exist on type 'object'.
+safer.ts(39,12): error TS2339: Property 'alloc' does not exist on type 'object'.
+safer.ts(40,9): error TS2339: Property 'alloc' does not exist on type 'object'.
 safer.ts(49,11): error TS2339: Property 'fill' does not exist on type 'HTMLElement'.
 safer.ts(51,11): error TS2339: Property 'fill' does not exist on type 'HTMLElement'.
 safer.ts(53,11): error TS2339: Property 'fill' does not exist on type 'HTMLElement'.
-safer.ts(59,12): error TS2339: Property 'kStringMaxLength' does not exist on type 'Object'.
-safer.ts(61,11): error TS2339: Property 'kStringMaxLength' does not exist on type 'Object'.
+safer.ts(59,12): error TS2339: Property 'kStringMaxLength' does not exist on type 'object'.
+safer.ts(61,11): error TS2339: Property 'kStringMaxLength' does not exist on type 'object'.
 safer.ts(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
-safer.ts(68,12): error TS2339: Property 'constants' does not exist on type 'Object'.
-safer.ts(69,9): error TS2339: Property 'constants' does not exist on type 'Object'.
-safer.ts(70,23): error TS2339: Property 'kMaxLength' does not exist on type 'Object'.
-safer.ts(72,13): error TS2339: Property 'kStringMaxLength' does not exist on type 'Object'.
-safer.ts(73,11): error TS2339: Property 'constants' does not exist on type 'Object'.
-safer.ts(73,47): error TS2339: Property 'kStringMaxLength' does not exist on type 'Object'.
+safer.ts(68,12): error TS2339: Property 'constants' does not exist on type 'object'.
+safer.ts(69,9): error TS2339: Property 'constants' does not exist on type 'object'.
+safer.ts(70,23): error TS2339: Property 'kMaxLength' does not exist on type 'object'.
+safer.ts(72,13): error TS2339: Property 'kStringMaxLength' does not exist on type 'object'.
+safer.ts(73,11): error TS2339: Property 'constants' does not exist on type 'object'.
+safer.ts(73,47): error TS2339: Property 'kStringMaxLength' does not exist on type 'object'.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'Function', but here has type 'BufferConstructor'.
 

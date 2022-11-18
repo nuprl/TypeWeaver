@@ -7,14 +7,14 @@
  **/
  
 // Calculates (a/b)^(c/d) if result is rational
-function root(a: Number, b: Number, c: Number, d: Number): Array {
+function root(a: number, b: number, c: number, d: number): any[] {
 
   // Initial estimate
   var xn: HTMLElement = Fraction(Math.floor(Math.pow(a / b, c / d)));
-  var abc: String = Fraction(a, b).pow(c);
+  var abc: string = Fraction(a, b).pow(c);
 
   for (var i = 0; i < 30; i++) {
-    var xp: String = xn.sub(xn.pow(d).sub(abc).div(xn.pow(d - 1).mul(d)));
+    var xp: string = xn.sub(xn.pow(d).sub(abc).div(xn.pow(d - 1).mul(d)));
 
     if (xp.n === xn.n && xp.d === xn.d) {
       return xp;

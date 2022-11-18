@@ -68,59 +68,59 @@
  * still considered an implementation detail.)
  */
 
-const SUPPRESS: String = '==SUPPRESS=='
+const SUPPRESS: string = '==SUPPRESS=='
 
-const OPTIONAL: String = '?'
-const ZERO_OR_MORE: String = '*'
-const ONE_OR_MORE: String = '+'
-const PARSER: String = 'A...'
-const REMAINDER: String = '...'
-const _UNRECOGNIZED_ARGS_ATTR: String = '_unrecognized_args'
+const OPTIONAL: string = '?'
+const ZERO_OR_MORE: string = '*'
+const ONE_OR_MORE: string = '+'
+const PARSER: string = 'A...'
+const REMAINDER: string = '...'
+const _UNRECOGNIZED_ARGS_ATTR: string = '_unrecognized_args'
 
 
 // ==================================
 // Utility functions used for porting
 // ==================================
-const assert: String = require('assert')
-const util: String = require('util')
-const fs: String = require('fs')
-const sub: Object = require('./lib/sub')
-const path: String = require('path')
-const repr: Array = util.inspect
+const assert: string = require('assert')
+const util: string = require('util')
+const fs: string = require('fs')
+const sub: object = require('./lib/sub')
+const path: string = require('path')
+const repr: any[] = util.inspect
 
-function get_argv(): Array {
+function get_argv(): any[] {
     // omit first argument (which is assumed to be interpreter - `node`, `coffee`, `ts-node`, etc.)
     return process.argv.slice(1)
 }
 
-function get_terminal_size(): Object {
+function get_terminal_size(): object {
     return {
         columns: +process.env.COLUMNS || process.stdout.columns || 80
     }
 }
 
-function hasattr(object: Object, name: String): String {
+function hasattr(object: object, name: string): string {
     return Object.prototype.hasOwnProperty.call(object, name)
 }
 
-function getattr(object: Object, name: String, value: String): String {
+function getattr(object: object, name: string, value: string): string {
     return hasattr(object, name) ? object[name] : value
 }
 
-function setattr(object: Object, name: String, value: String): TextWrapper {
+function setattr(object: object, name: string, value: string): TextWrapper {
     object[name] = value
 }
 
-function setdefault(object: Object, name: String, value: String): TextWrapper {
+function setdefault(object: object, name: string, value: string): TextWrapper {
     if (!hasattr(object, name)) object[name] = value
     return object[name]
 }
 
-function delattr(object: Object, name: String): Void {
+function delattr(object: object, name: string): Void {
     delete object[name]
 }
 
-function range(from: String, to: Number, step: Number=1): Array {
+function range(from: string, to: number, step: number=1): any[] {
     // range(10) is equivalent to range(0, 10)
     if (arguments.length === 1) [ to, from ] = [ from, 0 ]
     if (typeof from !== 'number' || typeof to !== 'number' || typeof step !== 'number') {
@@ -128,7 +128,7 @@ function range(from: String, to: Number, step: Number=1): Array {
     }
     if (step === 0) throw new TypeError('range() arg 3 must not be zero')
 
-    let result: Array = []
+    let result: any[] = []
     if (step > 0) {
         for (let i = from; i < to; i += step) result.push(i)
     } else {
@@ -137,13 +137,13 @@ function range(from: String, to: Number, step: Number=1): Array {
     return result
 }
 
-function splitlines(str: String, keepends: Boolean = false): Array {
-    let result: Array
+function splitlines(str: string, keepends: boolean = false): any[] {
+    let result: any[]
     if (!keepends) {
         result = str.split(/\r\n|[\n\r\v\f\x1c\x1d\x1e\x85\u2028\u2029]/)
     } else {
         result = []
-        let parts: Array = str.split(/(\r\n|[\n\r\v\f\x1c\x1d\x1e\x85\u2028\u2029])/)
+        let parts: any[] = str.split(/(\r\n|[\n\r\v\f\x1c\x1d\x1e\x85\u2028\u2029])/)
         for (let i = 0; i < parts.length; i += 2) {
             result.push(parts[i] + (i + 1 < parts.length ? parts[i + 1] : ''))
         }
@@ -152,21 +152,21 @@ function splitlines(str: String, keepends: Boolean = false): Array {
     return result
 }
 
-function _string_lstrip(string: Array, prefix_chars: String): String {
-    let idx: Number = 0
+function _string_lstrip(string: any[], prefix_chars: string): string {
+    let idx: number = 0
     while (idx < string.length && prefix_chars.includes(string[idx])) idx++
     return idx ? string.slice(idx) : string
 }
 
-function _string_split(string: String, sep: String, maxsplit: Number): Array {
-    let result: Array = string.split(sep)
+function _string_split(string: string, sep: string, maxsplit: number): any[] {
+    let result: any[] = string.split(sep)
     if (result.length > maxsplit) {
         result = result.slice(0, maxsplit).concat([ result.slice(maxsplit).join(sep) ])
     }
     return result
 }
 
-function _array_equal(array1: Array, array2: Array): Boolean {
+function _array_equal(array1: any[], array2: any[]): boolean {
     if (array1.length !== array2.length) return false
     for (let i = 0; i < array1.length; i++) {
         if (array1[i] !== array2[i]) return false
@@ -174,8 +174,8 @@ function _array_equal(array1: Array, array2: Array): Boolean {
     return true
 }
 
-function _array_remove(array: Array, item: String): Void {
-    let idx: Number = array.indexOf(item)
+function _array_remove(array: any[], item: string): Void {
+    let idx: number = array.indexOf(item)
     if (idx === -1) throw new TypeError(sub('%r not in list', item))
     array.splice(idx, 1)
 }
@@ -183,7 +183,7 @@ function _array_remove(array: Array, item: String): Void {
 // normalize choices to array;
 // this isn't required in python because `in` and `map` operators work with anything,
 // but in js dealing with multiple types here is too clunky
-function _choices_to_array(choices: Object): Array {
+function _choices_to_array(choices: object): any[] {
     if (choices === undefined) {
         return []
     } else if (Array.isArray(choices)) {
@@ -198,10 +198,10 @@ function _choices_to_array(choices: Object): Array {
 }
 
 // decorator that allows a class to be called without new
-function _callable(cls: Object): String {
-    let result: Object = { // object is needed for inferred class name
+function _callable(cls: object): string {
+    let result: object = { // object is needed for inferred class name
         [cls.name]: function (...args) {
-            let this_class: Boolean = new.target === result || !new.target
+            let this_class: boolean = new.target === result || !new.target
             return Reflect.construct(cls, args, this_class ? cls : new.target)
         }
     }
@@ -211,9 +211,9 @@ function _callable(cls: Object): String {
     return result[cls.name]
 }
 
-function _alias(object: Object, from: String, to: String): Void {
+function _alias(object: object, from: string, to: string): Void {
     try {
-        let name: String = object.constructor.name
+        let name: string = object.constructor.name
         Object.defineProperty(object, from, {
             value: util.deprecate(object[to], sub('%s.%s() is renamed to %s.%s()',
                 name, from, name, to)),
@@ -223,37 +223,37 @@ function _alias(object: Object, from: String, to: String): Void {
 }
 
 // decorator that allows snake_case class methods to be called with camelCase and vice versa
-function _camelcase_alias(_class: Object): TextWrapper {
+function _camelcase_alias(_class: object): TextWrapper {
     for (let name of Object.getOwnPropertyNames(_class.prototype)) {
-        let camelcase: String = name.replace(/\w_[a-z]/g, (s: Promise) => s[0] + s[2].toUpperCase())
+        let camelcase: string = name.replace(/\w_[a-z]/g, (s: Promise) => s[0] + s[2].toUpperCase())
         if (camelcase !== name) _alias(_class.prototype, camelcase, name)
     }
     return _class
 }
 
-function _to_legacy_name(key: String): String {
+function _to_legacy_name(key: string): string {
     key = key.replace(/\w_[a-z]/g, (s: Promise) => s[0] + s[2].toUpperCase())
     if (key === 'default') key = 'defaultValue'
     if (key === 'const') key = 'constant'
     return key
 }
 
-function _to_new_name(key: String): String {
+function _to_new_name(key: string): string {
     if (key === 'defaultValue') key = 'default'
     if (key === 'constant') key = 'const'
-    key = key.replace(/[A-Z]/g, (c: String) => '_' + c.toLowerCase())
+    key = key.replace(/[A-Z]/g, (c: string) => '_' + c.toLowerCase())
     return key
 }
 
 // parse options
-let no_default: Number = Symbol('no_default_value')
-function _parse_opts(args: Array, descriptor: Object): Array {
-    function get_name(): String {
-        let stack: Array = new Error().stack.split('\n')
-            .map((x: String) => x.match(/^    at (.*) \(.*\)$/))
+let no_default: number = Symbol('no_default_value')
+function _parse_opts(args: any[], descriptor: object): any[] {
+    function get_name(): string {
+        let stack: any[] = new Error().stack.split('\n')
+            .map((x: string) => x.match(/^    at (.*) \(.*\)$/))
             .filter(Boolean)
             .map((m: Promise) => m[1])
-            .map((fn: String) => fn.match(/[^ .]*$/)[0])
+            .map((fn: string) => fn.match(/[^ .]*$/)[0])
 
         if (stack.length && stack[0] === get_name.name) stack.shift()
         if (stack.length && stack[0] === _parse_opts.name) stack.shift()
@@ -261,9 +261,9 @@ function _parse_opts(args: Array, descriptor: Object): Array {
     }
 
     args = Array.from(args)
-    let kwargs: Object = {}
-    let result: Array = []
-    let last_opt: Object = args.length && args[args.length - 1]
+    let kwargs: object = {}
+    let result: any[] = []
+    let last_opt: object = args.length && args[args.length - 1]
 
     if (typeof last_opt === 'object' && last_opt !== null && !Array.isArray(last_opt) &&
         (!last_opt.constructor || last_opt.constructor.name === 'Object')) {
@@ -271,9 +271,9 @@ function _parse_opts(args: Array, descriptor: Object): Array {
     }
 
     // LEGACY (v1 compatibility): camelcase
-    let renames: Array = []
+    let renames: any[] = []
     for (let key of Object.keys(descriptor)) {
-        let old_name: String = _to_legacy_name(key)
+        let old_name: string = _to_legacy_name(key)
         if (old_name !== key && (old_name in kwargs)) {
             if (key in kwargs) {
                 // default and defaultValue specified at the same time, happens often in old tests
@@ -286,22 +286,22 @@ function _parse_opts(args: Array, descriptor: Object): Array {
         }
     }
     if (renames.length) {
-        let name: String = get_name()
+        let name: string = get_name()
         deprecate('camelcase_' + name, sub('%s(): following options are renamed: %s',
             name, renames.map(([ a, b ]) => sub('%r -> %r', a, b))))
     }
     // end
 
-    let missing_positionals: Array = []
-    let positional_count: Number = args.length
+    let missing_positionals: any[] = []
+    let positional_count: number = args.length
 
     for (let [ key, def ] of Object.entries(descriptor)) {
         if (key[0] === '*') {
             if (key.length > 0 && key[1] === '*') {
                 // LEGACY (v1 compatibility): camelcase
-                let renames: Array = []
+                let renames: any[] = []
                 for (let key of Object.keys(kwargs)) {
-                    let new_name: String = _to_new_name(key)
+                    let new_name: string = _to_new_name(key)
                     if (new_name !== key && (key in kwargs)) {
                         if (new_name in kwargs) {
                             // default and defaultValue specified at the same time, happens often in old tests
@@ -314,7 +314,7 @@ function _parse_opts(args: Array, descriptor: Object): Array {
                     }
                 }
                 if (renames.length) {
-                    let name: String = get_name()
+                    let name: string = get_name()
                     deprecate('camelcase_' + name, sub('%s(): following options are renamed: %s',
                         name, renames.map(([ a, b ]) => sub('%r -> %r', a, b))))
                 }
@@ -345,8 +345,8 @@ function _parse_opts(args: Array, descriptor: Object): Array {
     }
 
     if (args.length) {
-        let from: Number = Object.entries(descriptor).filter(([ k, v ]) => k[0] !== '*' && v !== no_default).length
-        let to: Number = Object.entries(descriptor).filter(([ k ]) => k[0] !== '*').length
+        let from: number = Object.entries(descriptor).filter(([ k, v ]) => k[0] !== '*' && v !== no_default).length
+        let to: number = Object.entries(descriptor).filter(([ k ]) => k[0] !== '*').length
         throw new TypeError(sub('%s() takes %s positional argument%s but %s %s given',
             get_name(),
             from === to ? sub('from %s to %s', from, to) : to,
@@ -356,9 +356,9 @@ function _parse_opts(args: Array, descriptor: Object): Array {
     }
 
     if (missing_positionals.length) {
-        let strs: Array = missing_positionals.map(repr)
+        let strs: any[] = missing_positionals.map(repr)
         if (strs.length > 1) strs[strs.length - 1] = 'and ' + strs[strs.length - 1]
-        let str_joined: String = strs.join(strs.length === 2 ? '' : ', ')
+        let str_joined: string = strs.join(strs.length === 2 ? '' : ', ')
         throw new TypeError(sub('%s() missing %i required positional argument%s: %s',
             get_name(), strs.length, strs.length === 1 ? '' : 's', str_joined))
     }
@@ -366,8 +366,8 @@ function _parse_opts(args: Array, descriptor: Object): Array {
     return result
 }
 
-let _deprecations: Object = {}
-function deprecate(id: String, string: String): Void {
+let _deprecations: object = {}
+function deprecate(id: string, string: string): Void {
     _deprecations[id] = _deprecations[id] || util.deprecate(() => {}, string)
     _deprecations[id]()
 }
@@ -376,7 +376,7 @@ function deprecate(id: String, string: String): Void {
 // =============================
 // Utility functions and classes
 // =============================
-function _AttributeHolder(cls: String = Object): Object {
+function _AttributeHolder(cls: string = Object): object {
     /*
      *  Abstract base class that provides __repr__.
      *
@@ -422,7 +422,7 @@ function _AttributeHolder(cls: String = Object): Object {
 }
 
 
-function _copy_items(items: String): Array {
+function _copy_items(items: string): any[] {
     if (items === undefined) {
         return []
     }
@@ -433,7 +433,7 @@ function _copy_items(items: String): Array {
 // ===============
 // Formatting Help
 // ===============
-const HelpFormatter: Object = _camelcase_alias(_callable(class HelpFormatter {
+const HelpFormatter: object = _camelcase_alias(_callable(class HelpFormatter {
     /*
      *  Formatter for generating usage messages and argument help strings.
      *
@@ -1042,7 +1042,7 @@ HelpFormatter.prototype._Section = _callable(class _Section {
 })
 
 
-const RawDescriptionHelpFormatter: Boolean = _camelcase_alias(_callable(class RawDescriptionHelpFormatter extends HelpFormatter {
+const RawDescriptionHelpFormatter: boolean = _camelcase_alias(_callable(class RawDescriptionHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which retains any formatting in descriptions.
      *
@@ -1056,7 +1056,7 @@ const RawDescriptionHelpFormatter: Boolean = _camelcase_alias(_callable(class Ra
 }))
 
 
-const RawTextHelpFormatter: String = _camelcase_alias(_callable(class RawTextHelpFormatter extends RawDescriptionHelpFormatter {
+const RawTextHelpFormatter: string = _camelcase_alias(_callable(class RawTextHelpFormatter extends RawDescriptionHelpFormatter {
     /*
      *  Help message formatter which retains formatting of all help text.
      *
@@ -1070,7 +1070,7 @@ const RawTextHelpFormatter: String = _camelcase_alias(_callable(class RawTextHel
 }))
 
 
-const ArgumentDefaultsHelpFormatter: Number = _camelcase_alias(_callable(class ArgumentDefaultsHelpFormatter extends HelpFormatter {
+const ArgumentDefaultsHelpFormatter: number = _camelcase_alias(_callable(class ArgumentDefaultsHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which adds default values to argument help.
      *
@@ -1094,7 +1094,7 @@ const ArgumentDefaultsHelpFormatter: Number = _camelcase_alias(_callable(class A
 }))
 
 
-const MetavarTypeHelpFormatter: Boolean = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
+const MetavarTypeHelpFormatter: boolean = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which uses the argument 'type' as the default
      *  metavar value (instead of the argument 'dest')
@@ -1131,7 +1131,7 @@ function _get_action_name(argument: TextWrapper): Promise {
 }
 
 
-const ArgumentError: Number = _callable(class ArgumentError extends Error {
+const ArgumentError: number = _callable(class ArgumentError extends Error {
     /*
      *  An error from creating or using an argument (optional or positional).
      *
@@ -1160,7 +1160,7 @@ const ArgumentError: Number = _callable(class ArgumentError extends Error {
 })
 
 
-const ArgumentTypeError: String = _callable(class ArgumentTypeError extends Error {
+const ArgumentTypeError: string = _callable(class ArgumentTypeError extends Error {
     /*
      * An error from trying to convert a command line string to a type.
      */
@@ -1175,7 +1175,7 @@ const ArgumentTypeError: String = _callable(class ArgumentTypeError extends Erro
 // ==============
 // Action classes
 // ==============
-const Action: String = _camelcase_alias(_callable(class Action extends _AttributeHolder(Function) {
+const Action: string = _camelcase_alias(_callable(class Action extends _AttributeHolder(Function) {
     /*
      *  Information about how to convert command line strings to Python objects.
      *
@@ -1292,7 +1292,7 @@ const Action: String = _camelcase_alias(_callable(class Action extends _Attribut
 }))
 
 
-const BooleanOptionalAction: Number = _camelcase_alias(_callable(class BooleanOptionalAction extends Action {
+const BooleanOptionalAction: number = _camelcase_alias(_callable(class BooleanOptionalAction extends Action {
 
     constructor() {
         let [
@@ -1713,7 +1713,7 @@ const _VersionAction: Function = _callable(class _VersionAction extends Action {
 })
 
 
-const _SubParsersAction: Object = _camelcase_alias(_callable(class _SubParsersAction extends Action {
+const _SubParsersAction: object = _camelcase_alias(_callable(class _SubParsersAction extends Action {
 
     constructor() {
         let [
@@ -1857,7 +1857,7 @@ const _ExtendAction: Function = _callable(class _ExtendAction extends _AppendAct
 // ==============
 // Type classes
 // ==============
-const FileType: String = _callable(class FileType extends Function {
+const FileType: string = _callable(class FileType extends Function {
     /*
      *  Factory for creating file object types
      *
@@ -1974,7 +1974,7 @@ const FileType: String = _callable(class FileType extends Function {
 // ===========================
 // Optional and Positional Parsing
 // ===========================
-const Namespace: Object = _callable(class Namespace extends _AttributeHolder() {
+const Namespace: object = _callable(class Namespace extends _AttributeHolder() {
     /*
      *  Simple object for storing attributes.
      *
@@ -2498,7 +2498,7 @@ const _MutuallyExclusiveGroup: Function = _callable(class _MutuallyExclusiveGrou
 })
 
 
-const ArgumentParser: Number = _camelcase_alias(_callable(class ArgumentParser extends _AttributeHolder(_ActionsContainer) {
+const ArgumentParser: number = _camelcase_alias(_callable(class ArgumentParser extends _AttributeHolder(_ActionsContainer) {
     /*
      *  Object for parsing command line strings into Python objects.
      *

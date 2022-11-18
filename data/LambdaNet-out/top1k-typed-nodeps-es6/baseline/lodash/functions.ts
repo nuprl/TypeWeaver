@@ -19,11 +19,11 @@
  * functions(new Foo)
  * // => ['a', 'b']
  */
-function functions(object: Object): Array {
+function functions(object: object): any[] {
   if (object == null) {
     return []
   }
-  return Object.keys(object).filter((key: String) => typeof object[key] === 'function')
+  return Object.keys(object).filter((key: string) => typeof object[key] === 'function')
 }
 
 export default functions

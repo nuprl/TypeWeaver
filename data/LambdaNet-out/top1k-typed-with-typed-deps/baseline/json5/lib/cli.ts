@@ -1,53 +1,53 @@
 #!/usr/bin/env node
 
-const fs: String = require('fs')
-const path: String = require('path')
-const pkg: String = require('../package.json')
-const JSON5: Array = require('./')
+const fs: string = require('fs')
+const path: string = require('path')
+const pkg: string = require('../package.json')
+const JSON5: any[] = require('./')
 
-const argv: Object = parseArgs()
+const argv: object = parseArgs()
 
 if (argv.version) {
     version()
 } else if (argv.help) {
     usage()
 } else {
-    const inFilename: String = argv.defaults[0]
+    const inFilename: string = argv.defaults[0]
 
-    let readStream: Array
+    let readStream: any[]
     if (inFilename) {
         readStream = fs.createReadStream(inFilename)
     } else {
         readStream = process.stdin
     }
 
-    let json5: String = ''
-    readStream.on('data', (data: Number) => {
+    let json5: string = ''
+    readStream.on('data', (data: number) => {
         json5 += data
     })
 
     readStream.on('end', () => {
-        let space: Number
+        let space: number
         if (argv.space === 't' || argv.space === 'tab') {
             space = '\t'
         } else {
             space = Number(argv.space)
         }
 
-        let value: Number
+        let value: number
         try {
             value = JSON5.parse(json5)
             if (!argv.validate) {
-                const json: String = JSON.stringify(value, null, space)
+                const json: string = JSON.stringify(value, null, space)
 
-                let writeStream: Number
+                let writeStream: number
 
                 // --convert is for backward compatibility with v0.5.1. If
                 // specified with <file> and not --out-file, then a file with
                 // the same name but with a .json extension will be written.
                 if (argv.convert && inFilename && !argv.outFile) {
-                    const parsedFilename: Object = path.parse(inFilename)
-                    const outFilename: Number = path.format(
+                    const parsedFilename: object = path.parse(inFilename)
+                    const outFilename: number = path.format(
                         Object.assign(
                             parsedFilename,
                             {base: path.basename(parsedFilename.base, parsedFilename.ext) + '.json'}
@@ -70,18 +70,18 @@ if (argv.version) {
     })
 }
 
-function parseArgs (): Object {
-    let convert: Boolean
-    let space: String
-    let validate: Boolean
-    let outFile: String
-    let version: Number
-    let help: Boolean
-    const defaults: Array = []
+function parseArgs (): object {
+    let convert: boolean
+    let space: string
+    let validate: boolean
+    let outFile: string
+    let version: number
+    let help: boolean
+    const defaults: any[] = []
 
-    const args: Array = process.argv.slice(2)
+    const args: any[] = process.argv.slice(2)
     for (let i = 0; i < args.length; i++) {
-        const arg: String = args[i]
+        const arg: string = args[i]
         switch (arg) {
         case '--convert':
         case '-c':

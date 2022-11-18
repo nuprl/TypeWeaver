@@ -3,8 +3,8 @@
 var define: Function = require('define-properties');
 var getPolyfill: Function = require('./polyfill');
 
-module.exports = function shimTrimEnd(): Boolean {
-	var polyfill: Number = getPolyfill();
+module.exports = function shimTrimEnd(): boolean {
+	var polyfill: number = getPolyfill();
 	define(
 		String.prototype,
 		{ trimEnd: polyfill },

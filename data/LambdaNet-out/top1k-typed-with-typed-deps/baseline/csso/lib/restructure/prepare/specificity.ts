@@ -1,6 +1,6 @@
 import { parse } from 'css-tree';
 
-function ensureSelectorList(node: Object): Object {
+function ensureSelectorList(node: object): object {
     if (node.type === 'Raw') {
         return parse(node.value, { context: 'selectorList' });
     }
@@ -8,7 +8,7 @@ function ensureSelectorList(node: Object): Object {
     return node;
 }
 
-function maxSpecificity(a: Object, b: Object): Object {
+function maxSpecificity(a: object, b: object): object {
     for (let i = 0; i < 3; i++) {
         if (a[i] !== b[i]) {
             return a[i] > b[i] ? a : b;
@@ -18,22 +18,22 @@ function maxSpecificity(a: Object, b: Object): Object {
     return a;
 }
 
-function maxSelectorListSpecificity(selectorList: String): Array {
+function maxSelectorListSpecificity(selectorList: string): any[] {
     return ensureSelectorList(selectorList).children.reduce(
-        (result: String, node: Object) => maxSpecificity(specificity(node), result),
+        (result: string, node: object) => maxSpecificity(specificity(node), result),
         [0, 0, 0]
     );
 }
 
 // §16. Calculating a selector’s specificity
 // https://www.w3.org/TR/selectors-4/#specificity-rules
-function specificity(simpleSelector: Object): Array {
-    let A: Number = 0;
-    let B: Number = 0;
-    let C: Number = 0;
+function specificity(simpleSelector: object): any[] {
+    let A: number = 0;
+    let B: number = 0;
+    let C: number = 0;
 
     // A selector’s specificity is calculated for a given element as follows:
-    simpleSelector.children.forEach((node: Object) => {
+    simpleSelector.children.forEach((node: object) => {
         switch (node.type) {
             // count the number of ID selectors in the selector (= A)
             case 'IdSelector':

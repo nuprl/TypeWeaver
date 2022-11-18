@@ -22,9 +22,9 @@ import last from './last.js'
  * intersectionWith(objects, others, isEqual)
  * // => [{ 'x': 1, 'y': 2 }]
  */
-function intersectionWith(...arrays): Array {
-  let comparator: String = last(arrays)
-  const mapped: Array = map(arrays, castArrayLikeObject)
+function intersectionWith(...arrays): any[] {
+  let comparator: string = last(arrays)
+  const mapped: any[] = map(arrays, castArrayLikeObject)
 
   comparator = typeof comparator === 'function' ? comparator : undefined
   if (comparator) {

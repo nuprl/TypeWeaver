@@ -24,19 +24,19 @@
 
 'use strict';
 
-function assertPath(path: String): Void {
+function assertPath(path: string): Void {
   if (typeof path !== 'string') {
     throw new TypeError('Path must be a string. Received ' + JSON.stringify(path));
   }
 }
 
 // Resolves . and .. elements in a path with directory names
-function normalizeStringPosix(path: String, allowAboveRoot: Boolean): String {
-  var res: String = '';
-  var lastSegmentLength: Number = 0;
-  var lastSlash: Number = -1;
-  var dots: Number = 0;
-  var code: Number;
+function normalizeStringPosix(path: string, allowAboveRoot: boolean): string {
+  var res: string = '';
+  var lastSegmentLength: number = 0;
+  var lastSlash: number = -1;
+  var dots: number = 0;
+  var code: number;
   for (var i = 0; i <= path.length; ++i) {
     if (i < path.length)
       code = path.charCodeAt(i);
@@ -50,7 +50,7 @@ function normalizeStringPosix(path: String, allowAboveRoot: Boolean): String {
       } else if (lastSlash !== i - 1 && dots === 2) {
         if (res.length < 2 || lastSegmentLength !== 2 || res.charCodeAt(res.length - 1) !== 46 /*.*/ || res.charCodeAt(res.length - 2) !== 46 /*.*/) {
           if (res.length > 2) {
-            var lastSlashIndex: Number = res.lastIndexOf('/');
+            var lastSlashIndex: number = res.lastIndexOf('/');
             if (lastSlashIndex !== res.length - 1) {
               if (lastSlashIndex === -1) {
                 res = '';
@@ -96,9 +96,9 @@ function normalizeStringPosix(path: String, allowAboveRoot: Boolean): String {
   return res;
 }
 
-function _format(sep: String, pathObject: Function): String {
-  var dir: Number = pathObject.dir || pathObject.root;
-  var base: String = pathObject.base || (pathObject.name || '') + (pathObject.ext || '');
+function _format(sep: string, pathObject: Function): string {
+  var dir: number = pathObject.dir || pathObject.root;
+  var base: string = pathObject.base || (pathObject.name || '') + (pathObject.ext || '');
   if (!dir) {
     return base;
   }
@@ -108,15 +108,15 @@ function _format(sep: String, pathObject: Function): String {
   return dir + sep + base;
 }
 
-var posix: Object = {
+var posix: object = {
   // path.resolve([from ...], to)
-  resolve: function resolve(): String {
-    var resolvedPath: String = '';
-    var resolvedAbsolute: Boolean = false;
-    var cwd: String;
+  resolve: function resolve(): string {
+    var resolvedPath: string = '';
+    var resolvedAbsolute: boolean = false;
+    var cwd: string;
 
     for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-      var path: String;
+      var path: string;
       if (i >= 0)
         path = arguments[i];
       else {
@@ -154,13 +154,13 @@ var posix: Object = {
     }
   },
 
-  normalize: function normalize(path: String): String {
+  normalize: function normalize(path: string): string {
     assertPath(path);
 
     if (path.length === 0) return '.';
 
-    var isAbsolute: Boolean = path.charCodeAt(0) === 47 /*/*/;
-    var trailingSeparator: Boolean = path.charCodeAt(path.length - 1) === 47 /*/*/;
+    var isAbsolute: boolean = path.charCodeAt(0) === 47 /*/*/;
+    var trailingSeparator: boolean = path.charCodeAt(path.length - 1) === 47 /*/*/;
 
     // Normalize the path
     path = normalizeStringPosix(path, !isAbsolute);
@@ -172,17 +172,17 @@ var posix: Object = {
     return path;
   },
 
-  isAbsolute: function isAbsolute(path: String): Boolean {
+  isAbsolute: function isAbsolute(path: string): boolean {
     assertPath(path);
     return path.length > 0 && path.charCodeAt(0) === 47 /*/*/;
   },
 
-  join: function join(): String {
+  join: function join(): string {
     if (arguments.length === 0)
       return '.';
-    var joined: String;
+    var joined: string;
     for (var i = 0; i < arguments.length; ++i) {
-      var arg: String = arguments[i];
+      var arg: string = arguments[i];
       assertPath(arg);
       if (arg.length > 0) {
         if (joined === undefined)
@@ -196,7 +196,7 @@ var posix: Object = {
     return posix.normalize(joined);
   },
 
-  relative: function relative(from: String, to: String): String {
+  relative: function relative(from: string, to: string): string {
     assertPath(from);
     assertPath(to);
 
@@ -208,27 +208,27 @@ var posix: Object = {
     if (from === to) return '';
 
     // Trim any leading backslashes
-    var fromStart: Number = 1;
+    var fromStart: number = 1;
     for (; fromStart < from.length; ++fromStart) {
       if (from.charCodeAt(fromStart) !== 47 /*/*/)
         break;
     }
-    var fromEnd: Number = from.length;
-    var fromLen: Number = fromEnd - fromStart;
+    var fromEnd: number = from.length;
+    var fromLen: number = fromEnd - fromStart;
 
     // Trim any leading backslashes
-    var toStart: Number = 1;
+    var toStart: number = 1;
     for (; toStart < to.length; ++toStart) {
       if (to.charCodeAt(toStart) !== 47 /*/*/)
         break;
     }
-    var toEnd: Number = to.length;
-    var toLen: Number = toEnd - toStart;
+    var toEnd: number = to.length;
+    var toLen: number = toEnd - toStart;
 
     // Compare paths to find the longest common path from root
-    var length: Number = fromLen < toLen ? fromLen : toLen;
-    var lastCommonSep: Number = -1;
-    var i: Number = 0;
+    var length: number = fromLen < toLen ? fromLen : toLen;
+    var lastCommonSep: number = -1;
+    var i: number = 0;
     for (; i <= length; ++i) {
       if (i === length) {
         if (toLen > length) {
@@ -254,15 +254,15 @@ var posix: Object = {
         }
         break;
       }
-      var fromCode: Number = from.charCodeAt(fromStart + i);
-      var toCode: Number = to.charCodeAt(toStart + i);
+      var fromCode: number = from.charCodeAt(fromStart + i);
+      var toCode: number = to.charCodeAt(toStart + i);
       if (fromCode !== toCode)
         break;
       else if (fromCode === 47 /*/*/)
         lastCommonSep = i;
     }
 
-    var out: String = '';
+    var out: string = '';
     // Generate the relative path based on the path difference between `to`
     // and `from`
     for (i = fromStart + lastCommonSep + 1; i <= fromEnd; ++i) {
@@ -286,17 +286,17 @@ var posix: Object = {
     }
   },
 
-  _makeLong: function _makeLong(path: String): String {
+  _makeLong: function _makeLong(path: string): string {
     return path;
   },
 
-  dirname: function dirname(path: String): String {
+  dirname: function dirname(path: string): string {
     assertPath(path);
     if (path.length === 0) return '.';
-    var code: Number = path.charCodeAt(0);
-    var hasRoot: Number = code === 47 /*/*/;
-    var end: Number = -1;
-    var matchedSlash: Boolean = true;
+    var code: number = path.charCodeAt(0);
+    var hasRoot: number = code === 47 /*/*/;
+    var end: number = -1;
+    var matchedSlash: boolean = true;
     for (var i = path.length - 1; i >= 1; --i) {
       code = path.charCodeAt(i);
       if (code === 47 /*/*/) {
@@ -315,21 +315,21 @@ var posix: Object = {
     return path.slice(0, end);
   },
 
-  basename: function basename(path: String, ext: String): String {
+  basename: function basename(path: string, ext: string): string {
     if (ext !== undefined && typeof ext !== 'string') throw new TypeError('"ext" argument must be a string');
     assertPath(path);
 
-    var start: Number = 0;
-    var end: Number = -1;
-    var matchedSlash: Boolean = true;
-    var i: Number;
+    var start: number = 0;
+    var end: number = -1;
+    var matchedSlash: boolean = true;
+    var i: number;
 
     if (ext !== undefined && ext.length > 0 && ext.length <= path.length) {
       if (ext.length === path.length && ext === path) return '';
-      var extIdx: Number = ext.length - 1;
-      var firstNonSlashEnd: Number = -1;
+      var extIdx: number = ext.length - 1;
+      var firstNonSlashEnd: number = -1;
       for (i = path.length - 1; i >= 0; --i) {
-        var code: Number = path.charCodeAt(i);
+        var code: number = path.charCodeAt(i);
         if (code === 47 /*/*/) {
             // If we reached a path separator that was not part of a set of path
             // separators at the end of the string, stop now
@@ -386,17 +386,17 @@ var posix: Object = {
     }
   },
 
-  extname: function extname(path: String): String {
+  extname: function extname(path: string): string {
     assertPath(path);
-    var startDot: Number = -1;
-    var startPart: Number = 0;
-    var end: Number = -1;
-    var matchedSlash: Boolean = true;
+    var startDot: number = -1;
+    var startPart: number = 0;
+    var end: number = -1;
+    var matchedSlash: boolean = true;
     // Track the state of characters (if any) we see before our first dot and
     // after any path separator we find
-    var preDotState: Number = 0;
+    var preDotState: number = 0;
     for (var i = path.length - 1; i >= 0; --i) {
-      var code: Number = path.charCodeAt(i);
+      var code: number = path.charCodeAt(i);
       if (code === 47 /*/*/) {
           // If we reached a path separator that was not part of a set of path
           // separators at the end of the string, stop now
@@ -435,36 +435,36 @@ var posix: Object = {
     return path.slice(startDot, end);
   },
 
-  format: function format(pathObject: String): String {
+  format: function format(pathObject: string): string {
     if (pathObject === null || typeof pathObject !== 'object') {
       throw new TypeError('The "pathObject" argument must be of type Object. Received type ' + typeof pathObject);
     }
     return _format('/', pathObject);
   },
 
-  parse: function parse(path: String): Object {
+  parse: function parse(path: string): object {
     assertPath(path);
 
-    var ret: Object = { root: '', dir: '', base: '', ext: '', name: '' };
+    var ret: object = { root: '', dir: '', base: '', ext: '', name: '' };
     if (path.length === 0) return ret;
-    var code: Number = path.charCodeAt(0);
-    var isAbsolute: Boolean = code === 47 /*/*/;
-    var start: Number;
+    var code: number = path.charCodeAt(0);
+    var isAbsolute: boolean = code === 47 /*/*/;
+    var start: number;
     if (isAbsolute) {
       ret.root = '/';
       start = 1;
     } else {
       start = 0;
     }
-    var startDot: Number = -1;
-    var startPart: Number = 0;
-    var end: Number = -1;
-    var matchedSlash: Boolean = true;
-    var i: Number = path.length - 1;
+    var startDot: number = -1;
+    var startPart: number = 0;
+    var end: number = -1;
+    var matchedSlash: boolean = true;
+    var i: number = path.length - 1;
 
     // Track the state of characters (if any) we see before our first dot and
     // after any path separator we find
-    var preDotState: Number = 0;
+    var preDotState: number = 0;
 
     // Get non-dir info
     for (; i >= start; --i) {

@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const Hook: String = require("./Hook");
+const Hook: string = require("./Hook");
 
 class MultiHook {
 	constructor(hooks, name = undefined) {

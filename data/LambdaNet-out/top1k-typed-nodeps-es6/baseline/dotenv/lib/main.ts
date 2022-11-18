@@ -5,27 +5,27 @@ import os from 'os';
 const LINE: RegExp = /(?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)/mg
 
 // Parser src into an Object
-function parse (src: String): Object {
-  const obj: Object = {}
+function parse (src: string): object {
+  const obj: object = {}
 
   // Convert buffer to string
-  let lines: String = src.toString()
+  let lines: string = src.toString()
 
   // Convert line breaks to same format
   lines = lines.replace(/\r\n?/mg, '\n')
 
-  let match: Object
+  let match: object
   while ((match = LINE.exec(lines)) != null) {
-    const key: String = match[1]
+    const key: string = match[1]
 
     // Default undefined or null to empty string
-    let value: String = (match[2] || '')
+    let value: string = (match[2] || '')
 
     // Remove whitespace
     value = value.trim()
 
     // Check if double quoted
-    const maybeQuote: String = value[0]
+    const maybeQuote: string = value[0]
 
     // Remove surrounding quotes
     value = value.replace(/^(['"`])([\s\S]*)\1$/mg, '$2')
@@ -43,20 +43,20 @@ function parse (src: String): Object {
   return obj
 }
 
-function _log (message: String): Void {
+function _log (message: string): Void {
   console.log(`[dotenv][DEBUG] ${message}`)
 }
 
-function _resolveHome (envPath: Array): String {
+function _resolveHome (envPath: any[]): string {
   return envPath[0] === '~' ? path.join(os.homedir(), envPath.slice(1)) : envPath
 }
 
 // Populates process.env from .env file
-function config (options: Object): Object {
-  let dotenvPath: String = path.resolve(process.cwd(), '.env')
-  let encoding: String = 'utf8'
-  const debug: Boolean = Boolean(options && options.debug)
-  const override: Boolean = Boolean(options && options.override)
+function config (options: object): object {
+  let dotenvPath: string = path.resolve(process.cwd(), '.env')
+  let encoding: string = 'utf8'
+  const debug: boolean = Boolean(options && options.debug)
+  const override: boolean = Boolean(options && options.override)
 
   if (options) {
     if (options.path != null) {
@@ -69,9 +69,9 @@ function config (options: Object): Object {
 
   try {
     // Specifying an encoding returns a string instead of a buffer
-    const parsed: Object = DotenvModule.parse(fs.readFileSync(dotenvPath, { encoding }))
+    const parsed: object = DotenvModule.parse(fs.readFileSync(dotenvPath, { encoding }))
 
-    Object.keys(parsed).forEach(function (key: String) {
+    Object.keys(parsed).forEach(function (key: string) {
       if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
         process.env[key] = parsed[key]
       } else {
@@ -99,11 +99,11 @@ function config (options: Object): Object {
   }
 }
 
-const DotenvModule: Object = {
+const DotenvModule: object = {
   config,
   parse
 }
 
-export const config: Array = DotenvModule.config;
-export const parse: String = DotenvModule.parse;
+export const config: any[] = DotenvModule.config;
+export const parse: string = DotenvModule.parse;
 export default DotenvModule;

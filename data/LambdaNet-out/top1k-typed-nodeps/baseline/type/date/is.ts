@@ -4,7 +4,7 @@ var isPrototype: Function = require("../prototype/is");
 
 var dateValueOf: Function = Date.prototype.valueOf;
 
-module.exports = function (value: Object) {
+module.exports = function (value: object) {
 	if (!value) return false;
 
 	try {

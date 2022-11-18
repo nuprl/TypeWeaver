@@ -29,7 +29,7 @@ const typeConversionUnaryOps: Function = Object.freeze(new Set(["-", "+", "!", "
  * @param {any} x The value to check.
  * @returns {boolean} `true` if the value is an ASTNode.
  */
-function isNode(x: Function): Boolean {
+function isNode(x: Function): boolean {
     return x !== null && typeof x === "object" && typeof x.type === "string"
 }
 
@@ -178,8 +178,8 @@ const visitor: Function = Object.freeze(
  * @returns {boolean} `true` if the node has a certain side effect.
  */
 export function hasSideEffect(
-    node: Object,
-    sourceCode: String,
+    node: object,
+    sourceCode: string,
     { considerGetters = false, considerImplicitTypeConversion = false } = {},
 ): Void {
     return visitor.$visit(

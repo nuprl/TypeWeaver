@@ -1,17 +1,17 @@
-var ProgressBar: Array = require('../')
+var ProgressBar: any[] = require('../')
 
 // Demonstrates the use of custom tokens
 
-var list: Array = [
+var list: any[] = [
   'image01.jpg', 'image02.jpg', 'image03.jpg', 'image04.jpg', 'image05.jpg',
   'image06.jpg', 'image07.jpg', 'image08.jpg', 'image09.jpg', 'image10.jpg'
 ]
 
-var bar: Object = new ProgressBar(':percent eta: :eta downloading :current/:total :file', {
+var bar: object = new ProgressBar(':percent eta: :eta downloading :current/:total :file', {
   total: list.length
 })
 
-var id: Number = setInterval(function (){
+var id: number = setInterval(function (){
   bar.tick({
     'file': list[bar.curr]
   })

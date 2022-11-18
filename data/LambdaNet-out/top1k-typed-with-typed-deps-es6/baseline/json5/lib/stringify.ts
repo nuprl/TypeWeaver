@@ -1,12 +1,12 @@
 import util from './util';
 
-export default function stringify (value: String, replacer: Object, space: Number): String {
-    const stack: Array = []
-    let indent: String = ''
-    let propertyList: Array
+export default function stringify (value: string, replacer: object, space: number): string {
+    const stack: any[] = []
+    let indent: string = ''
+    let propertyList: any[]
     let replacerFunc: Function
-    let gap: String = ''
-    let quote: String
+    let gap: string = ''
+    let quote: string
 
     if (
         replacer != null &&
@@ -23,7 +23,7 @@ export default function stringify (value: String, replacer: Object, space: Numbe
     } else if (Array.isArray(replacer)) {
         propertyList = []
         for (const v of replacer) {
-            let item: String
+            let item: string
 
             if (typeof v === 'string') {
                 item = v
@@ -58,8 +58,8 @@ export default function stringify (value: String, replacer: Object, space: Numbe
 
     return serializeProperty('', {'': value})
 
-    function serializeProperty (key: String, holder: Object): String {
-        let value: String = holder[key]
+    function serializeProperty (key: string, holder: object): string {
+        let value: string = holder[key]
         if (value != null) {
             if (typeof value.toJSON5 === 'function') {
                 value = value.toJSON5(key)
@@ -101,13 +101,13 @@ export default function stringify (value: String, replacer: Object, space: Numbe
         return undefined
     }
 
-    function quoteString (value: Array): String {
-        const quotes: Object = {
+    function quoteString (value: any[]): string {
+        const quotes: object = {
             "'": 0.1,
             '"': 0.2,
         }
 
-        const replacements: Object = {
+        const replacements: object = {
             "'": "\\'",
             '"': '\\"',
             '\\': '\\\\',
@@ -122,10 +122,10 @@ export default function stringify (value: String, replacer: Object, space: Numbe
             '\u2029': '\\u2029',
         }
 
-        let product: String = ''
+        let product: string = ''
 
         for (let i = 0; i < value.length; i++) {
-            const c: String = value[i]
+            const c: string = value[i]
             switch (c) {
             case "'":
             case '"':
@@ -146,7 +146,7 @@ export default function stringify (value: String, replacer: Object, space: Numbe
             }
 
             if (c < ' ') {
-                let hexString: String = c.charCodeAt(0).toString(16)
+                let hexString: string = c.charCodeAt(0).toString(16)
                 product += '\\x' + ('00' + hexString).substring(hexString.length)
                 continue
             }
@@ -154,29 +154,29 @@ export default function stringify (value: String, replacer: Object, space: Numbe
             product += c
         }
 
-        const quoteChar: Number = quote || Object.keys(quotes).reduce((a: String, b: Number) => (quotes[a] < quotes[b]) ? a : b)
+        const quoteChar: number = quote || Object.keys(quotes).reduce((a: string, b: number) => (quotes[a] < quotes[b]) ? a : b)
 
         product = product.replace(new RegExp(quoteChar, 'g'), replacements[quoteChar])
 
         return quoteChar + product + quoteChar
     }
 
-    function serializeObject (value: String): String {
+    function serializeObject (value: string): string {
         if (stack.indexOf(value) >= 0) {
             throw TypeError('Converting circular structure to JSON5')
         }
 
         stack.push(value)
 
-        let stepback: Number = indent
+        let stepback: number = indent
         indent = indent + gap
 
-        let keys: Array = propertyList || Object.keys(value)
-        let partial: Array = []
+        let keys: any[] = propertyList || Object.keys(value)
+        let partial: any[] = []
         for (const key of keys) {
-            const propertyString: Number = serializeProperty(key, value)
+            const propertyString: number = serializeProperty(key, value)
             if (propertyString !== undefined) {
-                let member: String = serializeKey(key) + ':'
+                let member: string = serializeKey(key) + ':'
                 if (gap !== '') {
                     member += ' '
                 }
@@ -185,16 +185,16 @@ export default function stringify (value: String, replacer: Object, space: Numbe
             }
         }
 
-        let final: String
+        let final: string
         if (partial.length === 0) {
             final = '{}'
         } else {
-            let properties: String
+            let properties: string
             if (gap === '') {
                 properties = partial.join(',')
                 final = '{' + properties + '}'
             } else {
-                let separator: String = ',\n' + indent
+                let separator: string = ',\n' + indent
                 properties = partial.join(separator)
                 final = '{\n' + indent + properties + ',\n' + stepback + '}'
             }
@@ -205,12 +205,12 @@ export default function stringify (value: String, replacer: Object, space: Numbe
         return final
     }
 
-    function serializeKey (key: String): Array {
+    function serializeKey (key: string): any[] {
         if (key.length === 0) {
             return quoteString(key, true)
         }
 
-        const firstChar: Array = String.fromCodePoint(key.codePointAt(0))
+        const firstChar: any[] = String.fromCodePoint(key.codePointAt(0))
         if (!util.isIdStartChar(firstChar)) {
             return quoteString(key, true)
         }
@@ -224,32 +224,32 @@ export default function stringify (value: String, replacer: Object, space: Numbe
         return key
     }
 
-    function serializeArray (value: String): String {
+    function serializeArray (value: string): string {
         if (stack.indexOf(value) >= 0) {
             throw TypeError('Converting circular structure to JSON5')
         }
 
         stack.push(value)
 
-        let stepback: Number = indent
+        let stepback: number = indent
         indent = indent + gap
 
-        let partial: Array = []
+        let partial: any[] = []
         for (let i = 0; i < value.length; i++) {
-            const propertyString: String = serializeProperty(String(i), value)
+            const propertyString: string = serializeProperty(String(i), value)
             partial.push((propertyString !== undefined) ? propertyString : 'null')
         }
 
-        let final: String
+        let final: string
         if (partial.length === 0) {
             final = '[]'
         } else {
             if (gap === '') {
-                let properties: String = partial.join(',')
+                let properties: string = partial.join(',')
                 final = '[' + properties + ']'
             } else {
-                let separator: String = ',\n' + indent
-                let properties: String = partial.join(separator)
+                let separator: string = ',\n' + indent
+                let properties: string = partial.join(separator)
                 final = '[\n' + indent + properties + ',\n' + stepback + ']'
             }
         }

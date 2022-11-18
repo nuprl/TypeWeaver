@@ -3,7 +3,7 @@
 var shorthandSetter: Function = require('../parsers').shorthandSetter;
 var shorthandGetter: Function = require('../parsers').shorthandGetter;
 
-var shorthand_for: Object = {
+var shorthand_for: object = {
   'background-color': require('./backgroundColor'),
   'background-image': require('./backgroundImage'),
   'background-repeat': require('./backgroundRepeat'),

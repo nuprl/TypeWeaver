@@ -19,15 +19,15 @@ import toInteger from './toInteger.js'
  * chunk(['a', 'b', 'c', 'd'], 3)
  * // => [['a', 'b', 'c'], ['d']]
  */
-function chunk(array: String, size: Number = 1): Array {
+function chunk(array: string, size: number = 1): any[] {
   size = Math.max(toInteger(size), 0)
-  const length: Number = array == null ? 0 : array.length
+  const length: number = array == null ? 0 : array.length
   if (!length || size < 1) {
     return []
   }
-  let index: Number = 0
-  let resIndex: Number = 0
-  const result: Object = new Array(Math.ceil(length / size))
+  let index: number = 0
+  let resIndex: number = 0
+  const result: object = new Array(Math.ceil(length / size))
 
   while (index < length) {
     result[resIndex++] = slice(array, index, (index += size))

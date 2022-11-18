@@ -1,41 +1,24 @@
-index.ts(30,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(57,27): error TS2339: Property 'key' does not exist on type 'Object'.
-index.ts(72,44): error TS2339: Property 'secret' does not exist on type 'Object'.
-index.ts(72,67): error TS2339: Property 'message' does not exist on type 'Object'.
-index.ts(86,11): error TS2339: Property 'message' does not exist on type 'Object'.
-index.ts(86,34): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-index.ts(102,11): error TS2339: Property 'message' does not exist on type 'Object'.
+index.ts(57,27): error TS2339: Property 'key' does not exist on type 'object'.
+index.ts(72,44): error TS2339: Property 'secret' does not exist on type 'object'.
+index.ts(72,67): error TS2339: Property 'message' does not exist on type 'object'.
+index.ts(86,11): error TS2339: Property 'message' does not exist on type 'object'.
+index.ts(86,34): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+  Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(102,11): error TS2339: Property 'message' does not exist on type 'object'.
+index.ts(103,3): error TS2322: Type 'string' is not assignable to type 'object'.
 index.ts(125,33): error TS2339: Property 'amazonHeaders' does not exist on type 'HTMLElement'.
-index.ts(126,16): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(127,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(126,16): error TS2322: Type 'string' is not assignable to type 'number'.
 index.ts(128,15): error TS2339: Property 'verb' does not exist on type 'HTMLElement'.
 index.ts(129,15): error TS2339: Property 'md5' does not exist on type 'HTMLElement'.
 index.ts(130,15): error TS2339: Property 'contentType' does not exist on type 'HTMLElement'.
 index.ts(131,15): error TS2339: Property 'date' does not exist on type 'HTMLElement'.
 index.ts(131,30): error TS2339: Property 'date' does not exist on type 'HTMLElement'.
 index.ts(132,25): error TS2339: Property 'resource' does not exist on type 'HTMLElement'.
-index.ts(153,32): error TS2339: Property 'date' does not exist on type 'Object'.
-index.ts(153,54): error TS2339: Property 'resource' does not exist on type 'Object'.
-index.ts(172,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(173,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(177,31): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(199,7): error TS2740: Type 'UrlWithParsedQuery & UrlWithStringQuery & Url' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(199,27): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 4, '(urlString: string, parseQueryString: false, slashesDenoteHost?: boolean): UrlWithStringQuery', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean): Url', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string'.
-      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(200,26): error TS2339: Property 'pathname' does not exist on type 'String'.
-index.ts(201,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(204,19): error TS2339: Property 'query' does not exist on type 'String'.
-index.ts(206,33): error TS2339: Property 'query' does not exist on type 'String'.
-index.ts(206,80): error TS2339: Property 'query' does not exist on type 'String'.
-index.ts(207,14): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+index.ts(153,32): error TS2339: Property 'date' does not exist on type 'object'.
+index.ts(153,54): error TS2339: Property 'resource' does not exist on type 'object'.
+index.ts(199,7): error TS2322: Type 'UrlWithParsedQuery' is not assignable to type 'string'.
+index.ts(200,26): error TS2339: Property 'pathname' does not exist on type 'string'.
+index.ts(204,19): error TS2339: Property 'query' does not exist on type 'string'.
+index.ts(206,33): error TS2339: Property 'query' does not exist on type 'string'.
+index.ts(206,80): error TS2339: Property 'query' does not exist on type 'string'.
 

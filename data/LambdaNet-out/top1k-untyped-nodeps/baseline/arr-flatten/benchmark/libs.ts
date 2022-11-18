@@ -1,9 +1,9 @@
 'use strict';
 
-var fs: String = require('fs');
-var path: String = require('path');
-var write: Array = require('write');
-var cwd: Object = path.join.bind(path, __dirname, 'code');
+var fs: string = require('fs');
+var path: string = require('path');
+var write: any[] = require('write');
+var cwd: object = path.join.bind(path, __dirname, 'code');
 
 [
   'compute-flatten',
@@ -16,8 +16,8 @@ var cwd: Object = path.join.bind(path, __dirname, 'code');
   'm_flattened',
   'reduce-flatten',
   'utils-flatten'
-].forEach(function(name: String) {
-  var fp: String = cwd(name + '.js');
+].forEach(function(name: string) {
+  var fp: string = cwd(name + '.js');
   if (!fs.existsSync(fp)) {
     write.sync(fp, `module.exports = require('${name}');\n`);
   }

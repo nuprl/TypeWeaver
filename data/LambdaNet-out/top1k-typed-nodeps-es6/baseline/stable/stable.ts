@@ -10,12 +10,12 @@
   // A stable array sort, because `Array#sort()` is not guaranteed stable.
   // This is an implementation of merge sort, without recursion.
 
-  var stable: Function = function (arr: Array, comp: String) {
+  var stable: Function = function (arr: any[], comp: string) {
     return exec(arr.slice(), comp)
   };
 
-  stable.inplace = function (arr: Array, comp: String) {
-    var result: String = exec(arr, comp);
+  stable.inplace = function (arr: any[], comp: string) {
+    var result: string = exec(arr, comp);
 
     // This simply copies back if the result isn't in the original array,
     // which happens on an odd number of passes.
@@ -28,15 +28,15 @@
 
   // Execute the sort using the input array and a second buffer as work space.
   // Returns one of those two, containing the final result.
-  function exec(arr: String, comp: Function): String {
+  function exec(arr: string, comp: Function): string {
     if (typeof(comp) !== 'function') {
-      comp = function (a: Function, b: Array) {
+      comp = function (a: Function, b: any[]) {
         return String(a).localeCompare(b)
       };
     }
 
     // Short-circuit when there's nothing to sort.
-    var len: Number = arr.length;
+    var len: number = arr.length;
     if (len <= 1) {
       return arr
     }
@@ -44,11 +44,11 @@
     // Rather than dividing input, simply iterate chunks of 1, 2, 4, 8, etc.
     // Chunks are the size of the left or right hand in merge sort.
     // Stop when the left-hand covers all of the array.
-    var buffer: Array = new Array(len);
+    var buffer: any[] = new Array(len);
     for (var chk = 1; chk < len; chk *= 2) {
       pass(arr, comp, chk, buffer);
 
-      var tmp: String = arr;
+      var tmp: string = arr;
       arr = buffer;
       buffer = tmp;
     }
@@ -57,15 +57,15 @@
   }
 
   // Run a single pass with the given chunk size.
-  var pass: Function = function (arr: Object, comp: Function, chk: Number, result: Object) {
-    var len: Number = arr.length;
-    var i: Number = 0;
+  var pass: Function = function (arr: object, comp: Function, chk: number, result: object) {
+    var len: number = arr.length;
+    var i: number = 0;
     // Step size / double chunk size.
-    var dbl: Number = chk * 2;
+    var dbl: number = chk * 2;
     // Bounds of the left and right chunks.
-    var l: Number, r: Number, e: Number;
+    var l: number, r: number, e: number;
     // Iterators over the left and right chunk.
-    var li: Number, ri: Number;
+    var li: number, ri: number;
 
     // Iterate over pairs of chunks.
     for (l = 0; l < len; l += dbl) {

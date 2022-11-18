@@ -2,46 +2,46 @@
 
 // These tables borrowed from `ansi`
 
-var prefix: String = '\x1b['
+var prefix: string = '\x1b['
 
-exports.up = function up (num: Number): String {
+exports.up = function up (num: number): string {
   return prefix + (num || '') + 'A'
 }
 
-exports.down = function down (num: Number): String {
+exports.down = function down (num: number): string {
   return prefix + (num || '') + 'B'
 }
 
-exports.forward = function forward (num: Number): String {
+exports.forward = function forward (num: number): string {
   return prefix + (num || '') + 'C'
 }
 
-exports.back = function back (num: Number): String {
+exports.back = function back (num: number): string {
   return prefix + (num || '') + 'D'
 }
 
-exports.nextLine = function nextLine (num: Number): String {
+exports.nextLine = function nextLine (num: number): string {
   return prefix + (num || '') + 'E'
 }
 
-exports.previousLine = function previousLine (num: Number): String {
+exports.previousLine = function previousLine (num: number): string {
   return prefix + (num || '') + 'F'
 }
 
-exports.horizontalAbsolute = function horizontalAbsolute (num: Number): String {
+exports.horizontalAbsolute = function horizontalAbsolute (num: number): string {
   if (num == null) throw new Error('horizontalAboslute requires a column to position to')
   return prefix + num + 'G'
 }
 
-exports.eraseData = function eraseData (): String {
+exports.eraseData = function eraseData (): string {
   return prefix + 'J'
 }
 
-exports.eraseLine = function eraseLine (): String {
+exports.eraseLine = function eraseLine (): string {
   return prefix + 'K'
 }
 
-exports.goto = function (x: String, y: String) {
+exports.goto = function (x: string, y: string) {
   return prefix + y + ';' + x + 'H'
 }
 
@@ -53,15 +53,15 @@ exports.beep = function () {
   return '\x07'
 }
 
-exports.hideCursor = function hideCursor (): String {
+exports.hideCursor = function hideCursor (): string {
   return prefix + '?25l'
 }
 
-exports.showCursor = function showCursor (): String {
+exports.showCursor = function showCursor (): string {
   return prefix + '?25h'
 }
 
-var colors: Object = {
+var colors: object = {
   reset: 0,
 // styles
   bold: 1,
@@ -112,14 +112,14 @@ var colors: Object = {
   bgBrightWhite: 107
 }
 
-exports.color = function color (colorWith: Array): String {
+exports.color = function color (colorWith: any[]): string {
   if (arguments.length !== 1 || !Array.isArray(colorWith)) {
     colorWith = Array.prototype.slice.call(arguments)
   }
   return prefix + colorWith.map(colorNameToCode).join(';') + 'm'
 }
 
-function colorNameToCode (color: String): String {
+function colorNameToCode (color: string): string {
   if (colors[color] != null) return colors[color]
   throw new Error('Unknown color or style name: ' + color)
 }

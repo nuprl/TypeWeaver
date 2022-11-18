@@ -1,11 +1,11 @@
 
-var WeakMap: Array = require("./weak-map");
+var WeakMap: any[] = require("./weak-map");
 
-var keys: Array = [];
+var keys: any[] = [];
 for (var i = 0; i < 1000; i++) {
     keys.push({});
 }
-var maps: Array = [];
+var maps: any[] = [];
 
 suite("WeakMap", function () {
     bench("make", function () {

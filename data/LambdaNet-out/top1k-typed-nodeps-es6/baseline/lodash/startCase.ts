@@ -21,8 +21,8 @@ import words from './words.js'
  * startCase('__FOO_BAR__')
  * // => 'FOO BAR'
  */
-const startCase: Function = (string: String) => (
-  words(`${string}`.replace(/['\u2019]/g, '')).reduce((result: Number, word: Array, index: Boolean) => (
+const startCase: Function = (string: string) => (
+  words(`${string}`.replace(/['\u2019]/g, '')).reduce((result: number, word: any[], index: boolean) => (
     result + (index ? ' ' : '') + upperFirst(word)
   ), '')
 )

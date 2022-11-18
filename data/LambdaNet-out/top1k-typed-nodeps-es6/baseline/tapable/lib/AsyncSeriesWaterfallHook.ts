@@ -26,12 +26,12 @@ class AsyncSeriesWaterfallHookCodeFactory extends HookCodeFactory {
 
 const factory: Hook = new AsyncSeriesWaterfallHookCodeFactory();
 
-const COMPILE: Function = function(options: Object) {
+const COMPILE: Function = function(options: object) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function AsyncSeriesWaterfallHook(args: Array = [], name: String = undefined): Hook {
+function AsyncSeriesWaterfallHook(args: any[] = [], name: string = undefined): Hook {
 	if (args.length < 1)
 		throw new Error("Waterfall hooks must have at least one argument");
 	const hook: Hook = new Hook(args, name);

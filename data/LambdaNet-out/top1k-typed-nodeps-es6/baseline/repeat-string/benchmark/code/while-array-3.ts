@@ -1,10 +1,10 @@
 'use strict';
 
-export default function(val: String, num: String) {
+export default function(val: string, num: string) {
   return repeat(val, num, []).join('');
 };
 
-function repeat(val: String, num: Number, arr: Object): Object {
+function repeat(val: string, num: number, arr: object): object {
   while (num--) {
     arr[num] = val;
   }

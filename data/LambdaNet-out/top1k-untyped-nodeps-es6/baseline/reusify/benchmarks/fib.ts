@@ -1,6 +1,6 @@
 'use strict'
 
-function fib (num: Number): Void {
+function fib (num: number): Void {
   var fib: Promise = []
 
   fib[0] = 0

@@ -1,7 +1,7 @@
 "use strict";
 import urlencoded from './urlencoded';
 
-export const implementation: Array = class URLSearchParamsImpl {
+export const implementation: any[] = class URLSearchParamsImpl {
   constructor(globalObject, constructorArgs, { doNotStripQMark = false }) {
     let init = constructorArgs[0];
     this._list = [];

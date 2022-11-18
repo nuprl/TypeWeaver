@@ -8,19 +8,19 @@ import isSymbol from '../isSymbol.js'
  * @param {*} other The other value to compare.
  * @returns {number} Returns the sort order indicator for `value`.
  */
-function compareAscending(value: String, other: Number): Number {
+function compareAscending(value: string, other: number): number {
   if (value !== other) {
-    const valIsDefined: Boolean = value !== undefined
-    const valIsNull: Boolean = value === null
-    const valIsReflexive: Boolean = value === value
-    const valIsSymbol: Boolean = isSymbol(value)
+    const valIsDefined: boolean = value !== undefined
+    const valIsNull: boolean = value === null
+    const valIsReflexive: boolean = value === value
+    const valIsSymbol: boolean = isSymbol(value)
 
-    const othIsDefined: Boolean = other !== undefined
-    const othIsNull: Boolean = other === null
-    const othIsReflexive: Boolean = other === other
-    const othIsSymbol: Boolean = isSymbol(other)
+    const othIsDefined: boolean = other !== undefined
+    const othIsNull: boolean = other === null
+    const othIsReflexive: boolean = other === other
+    const othIsSymbol: boolean = isSymbol(other)
 
-    const val: Number = typeof value === 'string'
+    const val: number = typeof value === 'string'
       ? value.localeCompare(other)
       : -other
 

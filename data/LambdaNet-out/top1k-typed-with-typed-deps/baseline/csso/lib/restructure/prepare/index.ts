@@ -2,8 +2,8 @@ import { walk, generate, keyword as resolveKeyword } from 'css-tree';
 import createDeclarationIndexer from './createDeclarationIndexer.js';
 import processSelector from './processSelector.js';
 
-export default function prepare(ast: Function, options: Object): Object {
-    const markDeclaration: Array = createDeclarationIndexer();
+export default function prepare(ast: Function, options: object): object {
+    const markDeclaration: any[] = createDeclarationIndexer();
 
     walk(ast, {
         visit: 'Rule',

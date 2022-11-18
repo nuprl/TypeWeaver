@@ -11,14 +11,14 @@ import castPath from './castPath.js'
  * @param {Function} predicate The function invoked per property.
  * @returns {Object} Returns the new object.
  */
-function basePickBy(object: Object, paths: Array, predicate: Function): Object {
-  let index: Number = -1
-  const length: Number = paths.length
-  const result: Object = {}
+function basePickBy(object: object, paths: any[], predicate: Function): object {
+  let index: number = -1
+  const length: number = paths.length
+  const result: object = {}
 
   while (++index < length) {
-    const path: String = paths[index]
-    const value: String = baseGet(object, path)
+    const path: string = paths[index]
+    const value: string = baseGet(object, path)
     if (predicate(value, path)) {
       baseSet(result, castPath(path, object), value)
     }

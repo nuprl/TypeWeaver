@@ -2,7 +2,7 @@ var hasOwnProperty: Function = Object.prototype.hasOwnProperty
 
 export default PseudoMap;
 
-function PseudoMap (set: Array): Void {
+function PseudoMap (set: any[]): Void {
   if (!(this instanceof PseudoMap)) // whyyyyyyy
     throw new TypeError("Constructor PseudoMap requires 'new'")
 
@@ -11,7 +11,7 @@ function PseudoMap (set: Array): Void {
   if (set) {
     if ((set instanceof PseudoMap) ||
         (typeof Map === 'function' && set instanceof Map))
-      set.forEach(function (value: String, key: String) {
+      set.forEach(function (value: string, key: string) {
         this.set(key, value)
       }, this)
     else if (Array.isArray(set))
@@ -23,29 +23,29 @@ function PseudoMap (set: Array): Void {
   }
 }
 
-PseudoMap.prototype.forEach = function (fn: Function, thisp: Number) {
+PseudoMap.prototype.forEach = function (fn: Function, thisp: number) {
   thisp = thisp || this
-  Object.keys(this._data).forEach(function (k: Number) {
+  Object.keys(this._data).forEach(function (k: number) {
     if (k !== 'size')
       fn.call(thisp, this._data[k].value, this._data[k].key)
   }, this)
 }
 
-PseudoMap.prototype.has = function (k: Number) {
+PseudoMap.prototype.has = function (k: number) {
   return !!find(this._data, k)
 }
 
-PseudoMap.prototype.get = function (k: Number) {
-  var res: Object = find(this._data, k)
+PseudoMap.prototype.get = function (k: number) {
+  var res: object = find(this._data, k)
   return res && res.value
 }
 
-PseudoMap.prototype.set = function (k: Number, v: Array) {
+PseudoMap.prototype.set = function (k: number, v: any[]) {
   set(this._data, k, v)
 }
 
-PseudoMap.prototype.delete = function (k: Number) {
-  var res: Object = find(this._data, k)
+PseudoMap.prototype.delete = function (k: number) {
+  var res: object = find(this._data, k)
   if (res) {
     delete this._data[res._index]
     this._data.size--
@@ -53,7 +53,7 @@ PseudoMap.prototype.delete = function (k: Number) {
 }
 
 PseudoMap.prototype.clear = function () {
-  var data: Array = Object.create(null)
+  var data: any[] = Object.create(null)
   data.size = 0
 
   Object.defineProperty(this, '_data', {
@@ -68,7 +68,7 @@ Object.defineProperty(PseudoMap.prototype, 'size', {
   get: function () {
     return this._data.size
   },
-  set: function (n: Number) {},
+  set: function (n: number) {},
   enumerable: true,
   configurable: true
 })
@@ -80,17 +80,17 @@ PseudoMap.prototype.entries = function () {
 }
 
 // Either identical, or both NaN
-function same (a: String, b: Number): Boolean {
+function same (a: string, b: number): boolean {
   return a === b || a !== a && b !== b
 }
 
-function Entry (k: String, v: String, i: String): Void {
+function Entry (k: string, v: string, i: string): Void {
   this.key = k
   this.value = v
   this._index = i
 }
 
-function find (data: Object, k: Number): String {
+function find (data: object, k: number): string {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {
@@ -99,7 +99,7 @@ function find (data: Object, k: Number): String {
   }
 }
 
-function set (data: Object, k: Number, v: String): Void {
+function set (data: object, k: number, v: string): Void {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {

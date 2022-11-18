@@ -6,40 +6,40 @@ import { Buffer } from 'safer-buffer';
 
 export const _utf32: Function = Utf32Codec;
 
-function Utf32Codec(codecOptions: Object, iconv: Function): Void {
+function Utf32Codec(codecOptions: object, iconv: Function): Void {
     this.iconv = iconv;
     this.bomAware = true;
     this.isLE = codecOptions.isLE;
 }
 
-export const utf32le: Object = { type: '_utf32', isLE: true };
-export const utf32be: Object = { type: '_utf32', isLE: false };
+export const utf32le: object = { type: '_utf32', isLE: true };
+export const utf32be: object = { type: '_utf32', isLE: false };
 
 // Aliases
-export const ucs4le: String = 'utf32le';
+export const ucs4le: string = 'utf32le';
 
-export const ucs4be: String = 'utf32be';
+export const ucs4be: string = 'utf32be';
 
 Utf32Codec.prototype.encoder = Utf32Encoder;
 Utf32Codec.prototype.decoder = Utf32Decoder;
 
 // -- Encoding
 
-function Utf32Encoder(options: Object, codec: Object): Void {
+function Utf32Encoder(options: object, codec: object): Void {
     this.isLE = codec.isLE;
     this.highSurrogate = 0;
 }
 
-Utf32Encoder.prototype.write = function(str: String) {
-    var src: Array = Buffer.from(str, 'ucs2');
-    var dst: Array = Buffer.alloc(src.length * 2);
+Utf32Encoder.prototype.write = function(str: string) {
+    var src: any[] = Buffer.from(str, 'ucs2');
+    var dst: any[] = Buffer.alloc(src.length * 2);
     var write32: Function = this.isLE ? dst.writeUInt32LE : dst.writeUInt32BE;
-    var offset: Number = 0;
+    var offset: number = 0;
 
     for (var i = 0; i < src.length; i += 2) {
-        var code: Number = src.readUInt16LE(i);
-        var isHighSurrogate: Boolean = (0xD800 <= code && code < 0xDC00);
-        var isLowSurrogate: Boolean = (0xDC00 <= code && code < 0xE000);
+        var code: number = src.readUInt16LE(i);
+        var isHighSurrogate: boolean = (0xD800 <= code && code < 0xDC00);
+        var isLowSurrogate: boolean = (0xDC00 <= code && code < 0xE000);
 
         if (this.highSurrogate) {
             if (isHighSurrogate || !isLowSurrogate) {
@@ -51,7 +51,7 @@ Utf32Encoder.prototype.write = function(str: String) {
             }
             else {
                 // Create 32-bit value from high and low surrogates;
-                var codepoint: String = (((this.highSurrogate - 0xD800) << 10) | (code - 0xDC00)) + 0x10000;
+                var codepoint: string = (((this.highSurrogate - 0xD800) << 10) | (code - 0xDC00)) + 0x10000;
 
                 write32.call(dst, codepoint, offset);
                 offset += 4;
@@ -98,22 +98,22 @@ Utf32Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32Decoder(options: Object, codec: Object): Void {
+function Utf32Decoder(options: object, codec: object): Void {
     this.isLE = codec.isLE;
     this.badChar = codec.iconv.defaultCharUnicode.charCodeAt(0);
     this.overflow = [];
 }
 
-Utf32Decoder.prototype.write = function(src: Array) {
+Utf32Decoder.prototype.write = function(src: any[]) {
     if (src.length === 0)
         return '';
 
-    var i: Number = 0;
-    var codepoint: Number = 0;
-    var dst: Array = Buffer.alloc(src.length + 4);
-    var offset: Number = 0;
-    var isLE: Boolean = this.isLE;
-    var overflow: Array = this.overflow;
+    var i: number = 0;
+    var codepoint: number = 0;
+    var dst: any[] = Buffer.alloc(src.length + 4);
+    var offset: number = 0;
+    var isLE: boolean = this.isLE;
+    var overflow: any[] = this.overflow;
     var badChar: Function = this.badChar;
 
     if (overflow.length > 0) {
@@ -153,7 +153,7 @@ Utf32Decoder.prototype.write = function(src: Array) {
     return dst.slice(0, offset).toString('ucs2');
 };
 
-function _writeCodepoint(dst: Object, offset: Number, codepoint: Number, badChar: Number): Number {
+function _writeCodepoint(dst: object, offset: number, codepoint: number, badChar: number): number {
     // NOTE: codepoint is signed int32 and can be negative. We keep it that way to help V8 with optimizations.
     if (codepoint < 0 || codepoint > 0x10FFFF) {
         // Not a valid Unicode codepoint
@@ -164,12 +164,12 @@ function _writeCodepoint(dst: Object, offset: Number, codepoint: Number, badChar
     if (codepoint >= 0x10000) {
         codepoint -= 0x10000;
 
-        var high: Number = 0xD800 | (codepoint >> 10);
+        var high: number = 0xD800 | (codepoint >> 10);
         dst[offset++] = high & 0xff;
         dst[offset++] = high >> 8;
 
         // Low surrogate is written below.
-        var codepoint: Number = 0xDC00 | (codepoint & 0x3FF);
+        var codepoint: number = 0xDC00 | (codepoint & 0x3FF);
     }
 
     // Write BMP char or low surrogate.
@@ -192,9 +192,9 @@ Utf32Decoder.prototype.end = function() {
 
 export const utf32: Function = Utf32AutoCodec;
 
-export const ucs4: String = 'utf32';
+export const ucs4: string = 'utf32';
 
-function Utf32AutoCodec(options: Object, iconv: Function): Void {
+function Utf32AutoCodec(options: object, iconv: Function): Void {
     this.iconv = iconv;
 }
 
@@ -203,7 +203,7 @@ Utf32AutoCodec.prototype.decoder = Utf32AutoDecoder;
 
 // -- Encoding
 
-function Utf32AutoEncoder(options: Object, codec: Object): Void {
+function Utf32AutoEncoder(options: object, codec: object): Void {
     options = options || {};
 
     if (options.addBOM === undefined)
@@ -212,7 +212,7 @@ function Utf32AutoEncoder(options: Object, codec: Object): Void {
     this.encoder = codec.iconv.getEncoder(options.defaultEncoding || 'utf-32le', options);
 }
 
-Utf32AutoEncoder.prototype.write = function(str: String) {
+Utf32AutoEncoder.prototype.write = function(str: string) {
     return this.encoder.write(str);
 };
 
@@ -222,7 +222,7 @@ Utf32AutoEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32AutoDecoder(options: Object, codec: Object): Void {
+function Utf32AutoDecoder(options: object, codec: object): Void {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;
@@ -230,7 +230,7 @@ function Utf32AutoDecoder(options: Object, codec: Object): Void {
     this.iconv = codec.iconv;
 }
 
-Utf32AutoDecoder.prototype.write = function(buf: Array) {
+Utf32AutoDecoder.prototype.write = function(buf: any[]) {
     if (!this.decoder) { 
         // Codec is not chosen yet. Accumulate initial bytes.
         this.initialBufs.push(buf);
@@ -240,10 +240,10 @@ Utf32AutoDecoder.prototype.write = function(buf: Array) {
             return '';
 
         // We have enough bytes -> detect endianness.
-        var encoding: String = detectEncoding(this.initialBufs, this.options.defaultEncoding);
+        var encoding: string = detectEncoding(this.initialBufs, this.options.defaultEncoding);
         this.decoder = this.iconv.getDecoder(encoding, this.options);
 
-        var resStr: String = '';
+        var resStr: string = '';
         for (var i = 0; i < this.initialBufs.length; i++)
             resStr += this.decoder.write(this.initialBufs[i]);
 
@@ -256,14 +256,14 @@ Utf32AutoDecoder.prototype.write = function(buf: Array) {
 
 Utf32AutoDecoder.prototype.end = function() {
     if (!this.decoder) {
-        var encoding: String = detectEncoding(this.initialBufs, this.options.defaultEncoding);
+        var encoding: string = detectEncoding(this.initialBufs, this.options.defaultEncoding);
         this.decoder = this.iconv.getDecoder(encoding, this.options);
 
-        var resStr: String = '';
+        var resStr: string = '';
         for (var i = 0; i < this.initialBufs.length; i++)
             resStr += this.decoder.write(this.initialBufs[i]);
 
-        var trail: Number = this.decoder.end();
+        var trail: number = this.decoder.end();
         if (trail)
             resStr += trail;
 
@@ -274,15 +274,15 @@ Utf32AutoDecoder.prototype.end = function() {
     return this.decoder.end();
 };
 
-function detectEncoding(bufs: Array, defaultEncoding: Number): String {
-    var b: Array = [];
-    var charsProcessed: Number = 0;
-    var invalidLE: Number = 0, invalidBE: Number = 0;   // Number of invalid chars when decoded as LE or BE.
-    var bmpCharsLE: Number = 0, bmpCharsBE: Number = 0; // Number of BMP chars when decoded as LE or BE.
+function detectEncoding(bufs: any[], defaultEncoding: number): string {
+    var b: any[] = [];
+    var charsProcessed: number = 0;
+    var invalidLE: number = 0, invalidBE: number = 0;   // Number of invalid chars when decoded as LE or BE.
+    var bmpCharsLE: number = 0, bmpCharsBE: number = 0; // Number of BMP chars when decoded as LE or BE.
 
     outer_loop:
     for (var i = 0; i < bufs.length; i++) {
-        var buf: Array = bufs[i];
+        var buf: any[] = bufs[i];
         for (var j = 0; j < buf.length; j++) {
             b.push(buf[j]);
             if (b.length === 4) {

@@ -2,17 +2,17 @@
 
 // These use the global symbol registry so that multiple copies of this
 // library can work together in case they are not deduped.
-const GENSYNC_START: String = Symbol.for("gensync:v1:start");
-const GENSYNC_SUSPEND: String = Symbol.for("gensync:v1:suspend");
+const GENSYNC_START: string = Symbol.for("gensync:v1:start");
+const GENSYNC_SUSPEND: string = Symbol.for("gensync:v1:suspend");
 
-const GENSYNC_EXPECTED_START: String = "GENSYNC_EXPECTED_START";
-const GENSYNC_EXPECTED_SUSPEND: String = "GENSYNC_EXPECTED_SUSPEND";
-const GENSYNC_OPTIONS_ERROR: String = "GENSYNC_OPTIONS_ERROR";
-const GENSYNC_RACE_NONEMPTY: String = "GENSYNC_RACE_NONEMPTY";
-const GENSYNC_ERRBACK_NO_CALLBACK: String = "GENSYNC_ERRBACK_NO_CALLBACK";
+const GENSYNC_EXPECTED_START: string = "GENSYNC_EXPECTED_START";
+const GENSYNC_EXPECTED_SUSPEND: string = "GENSYNC_EXPECTED_SUSPEND";
+const GENSYNC_OPTIONS_ERROR: string = "GENSYNC_OPTIONS_ERROR";
+const GENSYNC_RACE_NONEMPTY: string = "GENSYNC_RACE_NONEMPTY";
+const GENSYNC_ERRBACK_NO_CALLBACK: string = "GENSYNC_ERRBACK_NO_CALLBACK";
 
 export default Object.assign(
-  function gensync(optsOrFn: String): Object {
+  function gensync(optsOrFn: string): object {
     let genFn: Function = optsOrFn;
     if (typeof optsOrFn !== "function") {
       genFn = newGenerator(optsOrFn);
@@ -27,23 +27,23 @@ export default Object.assign(
       name: "all",
       arity: 1,
       sync: function(args: Promise) {
-        const items: Array = Array.from(args[0]);
-        return items.map((item: String) => evaluateSync(item));
+        const items: any[] = Array.from(args[0]);
+        return items.map((item: string) => evaluateSync(item));
       },
-      async: function(args: Promise, resolve: Function, reject: String) {
-        const items: Array = Array.from(args[0]);
+      async: function(args: Promise, resolve: Function, reject: string) {
+        const items: any[] = Array.from(args[0]);
 
         if (items.length === 0) {
           Promise.resolve().then(() => resolve([]));
           return;
         }
 
-        let count: Number = 0;
-        const results: Array = items.map(() => undefined);
-        items.forEach((item: String, i: String) => {
+        let count: number = 0;
+        const results: any[] = items.map(() => undefined);
+        items.forEach((item: string, i: string) => {
           evaluateAsync(
             item,
-            (val: String) => {
+            (val: string) => {
               results[i] = val;
               count += 1;
 
@@ -58,15 +58,15 @@ export default Object.assign(
       name: "race",
       arity: 1,
       sync: function(args: Promise) {
-        const items: Array = Array.from(args[0]);
+        const items: any[] = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
         }
 
         return evaluateSync(items[0]);
       },
-      async: function(args: Promise, resolve: Function, reject: String) {
-        const items: Array = Array.from(args[0]);
+      async: function(args: Promise, resolve: Function, reject: string) {
+        const items: any[] = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
         }
@@ -83,13 +83,13 @@ export default Object.assign(
  * Given a generator function, return the standard API object that executes
  * the generator and calls the callbacks.
  */
-function makeFunctionAPI(genFn: Function): Object {
-  const fns: Object = {
+function makeFunctionAPI(genFn: Function): object {
+  const fns: object = {
     sync: function(...args) {
       return evaluateSync(genFn.apply(this, args));
     },
     async: function(...args) {
-      return new Promise((resolve: Array, reject: String) => {
+      return new Promise((resolve: any[], reject: string) => {
         evaluateAsync(genFn.apply(this, args), resolve, reject);
       });
     },
@@ -102,7 +102,7 @@ function makeFunctionAPI(genFn: Function): Object {
         );
       }
 
-      let gen: Array;
+      let gen: any[];
       try {
         gen = genFn.apply(this, args);
       } catch (err) {
@@ -110,13 +110,13 @@ function makeFunctionAPI(genFn: Function): Object {
         return;
       }
 
-      evaluateAsync(gen, (val: String) => cb(undefined, val), (err: Array) => cb(err));
+      evaluateAsync(gen, (val: string) => cb(undefined, val), (err: any[]) => cb(err));
     },
   };
   return fns;
 }
 
-function assertTypeof(type: String, name: String, value: String, allowUndefined: Boolean): Void {
+function assertTypeof(type: string, name: string, value: string, allowUndefined: boolean): Void {
   if (
     typeof value === type ||
     (allowUndefined && typeof value === "undefined")
@@ -124,7 +124,7 @@ function assertTypeof(type: String, name: String, value: String, allowUndefined:
     return;
   }
 
-  let msg: String;
+  let msg: string;
   if (allowUndefined) {
     msg = `Expected opts.${name} to be either a ${type}, or undefined.`;
   } else {
@@ -133,7 +133,7 @@ function assertTypeof(type: String, name: String, value: String, allowUndefined:
 
   throw makeError(msg, GENSYNC_OPTIONS_ERROR);
 }
-function makeError(msg: String, code: String): Object {
+function makeError(msg: string, code: string): object {
   return Object.assign(new Error(msg), { code });
 }
 
@@ -196,7 +196,7 @@ function newGenerator({ name, arity, sync, async, errback }): Void {
   });
 }
 
-function wrapGenerator(genFn: Array): String {
+function wrapGenerator(genFn: any[]): string {
   return setFunctionMetadata(genFn.name, genFn.length, function(...args) {
     return genFn.apply(this, args);
   });
@@ -246,27 +246,27 @@ function buildOperation({ name, arity, sync, async }): Void {
   });
 }
 
-function evaluateSync(gen: Object): Object {
-  let value: String;
+function evaluateSync(gen: object): object {
+  let value: string;
   while (!({ value } = gen.next()).done) {
     assertStart(value, gen);
   }
   return value;
 }
 
-function evaluateAsync(gen: Object, resolve: Function, reject: String): Void {
+function evaluateAsync(gen: object, resolve: Function, reject: string): Void {
   (function step(): Void {
     try {
-      let value: String;
+      let value: string;
       while (!({ value } = gen.next()).done) {
         assertStart(value, gen);
 
         // If this throws, it is considered to have broken the contract
         // established for async handlers. If these handlers are called
         // synchronously, it is also considered bad behavior.
-        let sync: Boolean = true;
-        let didSyncResume: Boolean = false;
-        const out: String = gen.next(() => {
+        let sync: boolean = true;
+        let didSyncResume: boolean = false;
+        const out: string = gen.next(() => {
           if (sync) {
             didSyncResume = true;
           } else {
@@ -291,7 +291,7 @@ function evaluateAsync(gen: Object, resolve: Function, reject: String): Void {
   })();
 }
 
-function assertStart(value: String, gen: String): Void {
+function assertStart(value: string, gen: string): Void {
   if (value === GENSYNC_START) return;
 
   throwError(
@@ -320,7 +320,7 @@ function assertSuspend({ value, done }, gen): Void {
   );
 }
 
-function throwError(gen: Array, err: Function): Void {
+function throwError(gen: any[], err: Function): Void {
   // Call `.throw` so that users can step in a debugger to easily see which
   // 'yield' passed an unexpected value. If the `.throw` call didn't throw
   // back to the generator, we explicitly do it to stop the error
@@ -329,7 +329,7 @@ function throwError(gen: Array, err: Function): Void {
   throw err;
 }
 
-function isIterable(value: Object): Boolean {
+function isIterable(value: object): boolean {
   return (
     !!value &&
     (typeof value === "object" || typeof value === "function") &&
@@ -337,12 +337,12 @@ function isIterable(value: Object): Boolean {
   );
 }
 
-function setFunctionMetadata(name: String, arity: String, fn: String): Array {
+function setFunctionMetadata(name: string, arity: string, fn: string): any[] {
   if (typeof name === "string") {
     // This should always work on the supported Node versions, but for the
     // sake of users that are compiling to older versions, we check for
     // configurability so we don't throw.
-    const nameDesc: String = Object.getOwnPropertyDescriptor(fn, "name");
+    const nameDesc: string = Object.getOwnPropertyDescriptor(fn, "name");
     if (!nameDesc || nameDesc.configurable) {
       Object.defineProperty(
         fn,
@@ -356,7 +356,7 @@ function setFunctionMetadata(name: String, arity: String, fn: String): Array {
   }
 
   if (typeof arity === "number") {
-    const lengthDesc: String = Object.getOwnPropertyDescriptor(fn, "length");
+    const lengthDesc: string = Object.getOwnPropertyDescriptor(fn, "length");
     if (!lengthDesc || lengthDesc.configurable) {
       Object.defineProperty(
         fn,

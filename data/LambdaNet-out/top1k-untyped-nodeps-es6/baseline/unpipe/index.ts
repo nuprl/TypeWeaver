@@ -18,8 +18,8 @@ export default unpipe;
  * @private
  */
 
-function hasPipeDataListeners (stream: Number): Boolean {
-  var listeners: Array = stream.listeners('data')
+function hasPipeDataListeners (stream: number): boolean {
+  var listeners: any[] = stream.listeners('data')
 
   for (var i = 0; i < listeners.length; i++) {
     if (listeners[i].name === 'ondata') {
@@ -37,7 +37,7 @@ function hasPipeDataListeners (stream: Number): Boolean {
  * @public
  */
 
-function unpipe (stream: Number): Void {
+function unpipe (stream: number): Void {
   if (!stream) {
     throw new TypeError('argument stream is required')
   }
@@ -53,8 +53,8 @@ function unpipe (stream: Number): Void {
     return
   }
 
-  var listener: Object
-  var listeners: Array = stream.listeners('close')
+  var listener: object
+  var listeners: any[] = stream.listeners('close')
 
   for (var i = 0; i < listeners.length; i++) {
     listener = listeners[i]

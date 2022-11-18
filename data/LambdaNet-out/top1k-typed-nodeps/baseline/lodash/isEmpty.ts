@@ -42,7 +42,7 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * isEmpty({ 'a': 1 })
  * // => false
  */
-function isEmpty(value: Array): Boolean {
+function isEmpty(value: any[]): boolean {
   if (value == null) {
     return true
   }
@@ -51,7 +51,7 @@ function isEmpty(value: Array): Boolean {
         isBuffer(value) || isTypedArray(value) || isArguments(value))) {
     return !value.length
   }
-  const tag: String = getTag(value)
+  const tag: string = getTag(value)
   if (tag == '[object Map]' || tag == '[object Set]') {
     return !value.size
   }

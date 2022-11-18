@@ -10,13 +10,13 @@ import isIndex from './isIndex.js'
  * @param {number[]} indexes The indexes of elements to remove.
  * @returns {Array} Returns `array`.
  */
-function basePullAt(array: Array, indexes: Array): Promise {
-  let length: Number = array ? indexes.length : 0
-  const lastIndex: Number = length - 1
+function basePullAt(array: any[], indexes: any[]): Promise {
+  let length: number = array ? indexes.length : 0
+  const lastIndex: number = length - 1
 
   while (length--) {
     let previous: Function
-    const index: String = indexes[length]
+    const index: string = indexes[length]
     if (length === lastIndex || index !== previous) {
       previous = index
       if (isIndex(index)) {

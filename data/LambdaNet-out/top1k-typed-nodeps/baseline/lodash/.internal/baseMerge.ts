@@ -16,17 +16,17 @@ import keysIn from '../keysIn.js'
  * @param {Object} [stack] Tracks traversed source values and their merged
  *  counterparts.
  */
-function baseMerge(object: Object, source: String, srcIndex: Number, customizer: Function, stack: Stack): Void {
+function baseMerge(object: object, source: string, srcIndex: number, customizer: Function, stack: Stack): Void {
   if (object === source) {
     return
   }
-  baseFor(source, (srcValue: String, key: String) => {
+  baseFor(source, (srcValue: string, key: string) => {
     if (isObject(srcValue)) {
       stack || (stack = new Stack)
       baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack)
     }
     else {
-      let newValue: String = customizer
+      let newValue: string = customizer
         ? customizer(object[key], srcValue, `${key}`, object, source, stack)
         : undefined
 

@@ -22,12 +22,12 @@ module.exports = onHeaders
  */
 
 function createWriteHead (prevWriteHead: Function, listener: Function): Function {
-  var fired: Boolean = false
+  var fired: boolean = false
 
   // return function with core name and argument list
-  return function writeHead (statusCode: String): Promise {
+  return function writeHead (statusCode: string): Promise {
     // set headers from arguments
-    var args: Array = setWriteHeadHeaders.apply(this, arguments)
+    var args: any[] = setWriteHeadHeaders.apply(this, arguments)
 
     // fire listener
     if (!fired) {
@@ -53,7 +53,7 @@ function createWriteHead (prevWriteHead: Function, listener: Function): Function
  * @public
  */
 
-function onHeaders (res: Map, listener: String): Void {
+function onHeaders (res: Map, listener: string): Void {
   if (!res) {
     throw new TypeError('argument res is required')
   }
@@ -73,7 +73,7 @@ function onHeaders (res: Map, listener: String): Void {
  * @private
  */
 
-function setHeadersFromArray (res: Object, headers: Array): Void {
+function setHeadersFromArray (res: object, headers: any[]): Void {
   for (var i = 0; i < headers.length; i++) {
     res.setHeader(headers[i][0], headers[i][1])
   }
@@ -87,10 +87,10 @@ function setHeadersFromArray (res: Object, headers: Array): Void {
  * @private
  */
 
-function setHeadersFromObject (res: Object, headers: Object): Void {
-  var keys: Array = Object.keys(headers)
+function setHeadersFromObject (res: object, headers: object): Void {
+  var keys: any[] = Object.keys(headers)
   for (var i = 0; i < keys.length; i++) {
-    var k: String = keys[i]
+    var k: string = keys[i]
     if (k) res.setHeader(k, headers[k])
   }
 }
@@ -102,13 +102,13 @@ function setHeadersFromObject (res: Object, headers: Object): Void {
  * @private
  */
 
-function setWriteHeadHeaders (statusCode: Number): Array {
-  var length: Number = arguments.length
-  var headerIndex: Number = length > 1 && typeof arguments[1] === 'string'
+function setWriteHeadHeaders (statusCode: number): any[] {
+  var length: number = arguments.length
+  var headerIndex: number = length > 1 && typeof arguments[1] === 'string'
     ? 2
     : 1
 
-  var headers: String = length >= headerIndex + 1
+  var headers: string = length >= headerIndex + 1
     ? arguments[headerIndex]
     : undefined
 
@@ -123,7 +123,7 @@ function setWriteHeadHeaders (statusCode: Number): Array {
   }
 
   // copy leading arguments
-  var args: Array = new Array(Math.min(length, headerIndex))
+  var args: any[] = new Array(Math.min(length, headerIndex))
   for (var i = 0; i < args.length; i++) {
     args[i] = arguments[i]
   }

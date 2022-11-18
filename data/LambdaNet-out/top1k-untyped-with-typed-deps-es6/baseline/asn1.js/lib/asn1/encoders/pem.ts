@@ -3,18 +3,18 @@
 import inherits from 'inherits';
 import DEREncoder from './der';
 
-function PEMEncoder(entity: String): Void {
+function PEMEncoder(entity: string): Void {
   DEREncoder.call(this, entity);
   this.enc = 'pem';
 }
 inherits(PEMEncoder, DEREncoder);
 export default PEMEncoder;
 
-PEMEncoder.prototype.encode = function encode(data: Object, options: Object): String {
-  const buf: Array = DEREncoder.prototype.encode.call(this, data);
+PEMEncoder.prototype.encode = function encode(data: object, options: object): string {
+  const buf: any[] = DEREncoder.prototype.encode.call(this, data);
 
-  const p: String = buf.toString('base64');
-  const out: Array = [ '-----BEGIN ' + options.label + '-----' ];
+  const p: string = buf.toString('base64');
+  const out: any[] = [ '-----BEGIN ' + options.label + '-----' ];
   for (let i = 0; i < p.length; i += 64)
     out.push(p.slice(i, i + 64));
   out.push('-----END ' + options.label + '-----');

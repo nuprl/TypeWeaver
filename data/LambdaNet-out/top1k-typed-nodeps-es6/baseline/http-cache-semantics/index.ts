@@ -40,7 +40,7 @@ const errorStatusCodes: Error = new Set([
     504,
 ]);
 
-const hopByHopHeaders: Object = {
+const hopByHopHeaders: object = {
     date: true, // included, because we add Age update Date
     connection: true,
     'keep-alive': true,
@@ -52,7 +52,7 @@ const hopByHopHeaders: Object = {
     upgrade: true,
 };
 
-const excludedFromRevalidationUpdate: Object = {
+const excludedFromRevalidationUpdate: object = {
     // Since the old body is reused, it doesn't make sense to change properties of the body
     'content-length': true,
     'content-encoding': true,
@@ -60,13 +60,13 @@ const excludedFromRevalidationUpdate: Object = {
     'content-range': true,
 };
 
-function toNumberOrZero(s: Number): Number {
-    const n: Number = parseInt(s, 10);
+function toNumberOrZero(s: number): number {
+    const n: number = parseInt(s, 10);
     return isFinite(n) ? n : 0;
 }
 
 // RFC 5861
-function isErrorResponse(response: Object): Boolean {
+function isErrorResponse(response: object): boolean {
     // consider undefined response as faulty
     if(!response) {
         return true
@@ -74,13 +74,13 @@ function isErrorResponse(response: Object): Boolean {
     return errorStatusCodes.has(response.status);
 }
 
-function parseCacheControl(header: String): Object {
-    const cc: Object = {};
+function parseCacheControl(header: string): object {
+    const cc: object = {};
     if (!header) return cc;
 
     // TODO: When there is more than one value present for a given directive (e.g., two Expires header fields, multiple Cache-Control: max-age directives),
     // the directive's value is considered invalid. Caches are encouraged to consider responses that have invalid freshness information to be stale
-    const parts: Array = header.trim().split(/\s*,\s*/); // TODO: lame parsing
+    const parts: any[] = header.trim().split(/\s*,\s*/); // TODO: lame parsing
     for (const part of parts) {
         const [k, v] = part.split(/\s*=\s*/, 2);
         cc[k] = v === undefined ? true : v.replace(/^"|"$/g, ''); // TODO: lame unquoting
@@ -89,10 +89,10 @@ function parseCacheControl(header: String): Object {
     return cc;
 }
 
-function formatCacheControl(cc: Object): Array {
-    let parts: Array = [];
+function formatCacheControl(cc: object): any[] {
+    let parts: any[] = [];
     for (const k in cc) {
-        const v: String = cc[k];
+        const v: string = cc[k];
         parts.push(v === true ? k : k + '=' + v);
     }
     if (!parts.length) {
@@ -229,7 +229,7 @@ export default class CachePolicy {
         // When presented with a request, a cache MUST NOT reuse a stored response, unless:
         // the presented request does not contain the no-cache pragma (Section 5.4), nor the no-cache cache directive,
         // unless the stored response is successfully validated (Section 4.3), and
-        const requestCC: Object = parseCacheControl(req.headers['cache-control']);
+        const requestCC: object = parseCacheControl(req.headers['cache-control']);
         if (requestCC['no-cache'] || /no-cache/.test(req.headers.pragma)) {
             return false;
         }
@@ -248,7 +248,7 @@ export default class CachePolicy {
         // the stored response is either:
         // fresh, or allowed to be served stale
         if (this.stale()) {
-            const allowsStale: Boolean =
+            const allowsStale: boolean =
                 requestCC['max-stale'] &&
                 !this._rescc['must-revalidate'] &&
                 (true === requestCC['max-stale'] ||
@@ -294,7 +294,7 @@ export default class CachePolicy {
             return false;
         }
 
-        const fields: Array = this._resHeaders.vary
+        const fields: any[] = this._resHeaders.vary
             .trim()
             .toLowerCase()
             .split(/\s*,\s*/);
@@ -305,20 +305,20 @@ export default class CachePolicy {
     }
 
     _copyWithoutHopByHopHeaders(inHeaders) {
-        const headers: Object = {};
+        const headers: object = {};
         for (const name in inHeaders) {
             if (hopByHopHeaders[name]) continue;
             headers[name] = inHeaders[name];
         }
         // 9.1.  Connection
         if (inHeaders.connection) {
-            const tokens: Array = inHeaders.connection.trim().split(/\s*,\s*/);
+            const tokens: any[] = inHeaders.connection.trim().split(/\s*,\s*/);
             for (const name of tokens) {
                 delete headers[name];
             }
         }
         if (headers.warning) {
-            const warnings: Array = headers.warning.split(/,/).filter((warning: String) => {
+            const warnings: any[] = headers.warning.split(/,/).filter((warning: string) => {
                 return !/^\s*1[0-9][0-9]/.test(warning);
             });
             if (!warnings.length) {
@@ -332,7 +332,7 @@ export default class CachePolicy {
 
     responseHeaders() {
         const headers: CachePolicy = this._copyWithoutHopByHopHeaders(this._resHeaders);
-        const age: Number = this.age();
+        const age: number = this.age();
 
         // A cache SHOULD generate 113 warning if it heuristically chose a freshness
         // lifetime greater than 24 hours and the response's age is greater than 24 hours.
@@ -355,7 +355,7 @@ export default class CachePolicy {
      * @return timestamp
      */
     date() {
-        const serverDate: Number = Date.parse(this._resHeaders.date);
+        const serverDate: number = Date.parse(this._resHeaders.date);
         if (isFinite(serverDate)) {
             return serverDate;
         }
@@ -369,9 +369,9 @@ export default class CachePolicy {
      * @return Number
      */
     age() {
-        let age: String = this._ageValue();
+        let age: string = this._ageValue();
 
-        const residentTime: Number = (this.now() - this._responseTime) / 1000;
+        const residentTime: number = (this.now() - this._responseTime) / 1000;
         return age + residentTime;
     }
 
@@ -421,11 +421,11 @@ export default class CachePolicy {
             return toNumberOrZero(this._rescc['max-age']);
         }
 
-        const defaultMinTtl: Number = this._rescc.immutable ? this._immutableMinTtl : 0;
+        const defaultMinTtl: number = this._rescc.immutable ? this._immutableMinTtl : 0;
 
-        const serverDate: Number = this.date();
+        const serverDate: number = this.date();
         if (this._resHeaders.expires) {
-            const expires: Number = Date.parse(this._resHeaders.expires);
+            const expires: number = Date.parse(this._resHeaders.expires);
             // A cache recipient MUST interpret invalid date formats, especially the value "0", as representing a time in the past (i.e., "already expired").
             if (Number.isNaN(expires) || expires < serverDate) {
                 return 0;
@@ -434,7 +434,7 @@ export default class CachePolicy {
         }
 
         if (this._resHeaders['last-modified']) {
-            const lastModified: Number = Date.parse(this._resHeaders['last-modified']);
+            const lastModified: number = Date.parse(this._resHeaders['last-modified']);
             if (isFinite(lastModified) && serverDate > lastModified) {
                 return Math.max(
                     defaultMinTtl,
@@ -447,9 +447,9 @@ export default class CachePolicy {
     }
 
     timeToLive() {
-        const age: Number = this.maxAge() - this.age();
-        const staleIfErrorAge: Number = age + toNumberOrZero(this._rescc['stale-if-error']);
-        const staleWhileRevalidateAge: Number = age + toNumberOrZero(this._rescc['stale-while-revalidate']);
+        const age: number = this.maxAge() - this.age();
+        const staleIfErrorAge: number = age + toNumberOrZero(this._rescc['stale-if-error']);
+        const staleWhileRevalidateAge: number = age + toNumberOrZero(this._rescc['stale-while-revalidate']);
         return Math.max(0, age, staleIfErrorAge, staleWhileRevalidateAge) * 1000;
     }
 
@@ -517,7 +517,7 @@ export default class CachePolicy {
      */
     revalidationHeaders(incomingReq) {
         this._assertRequestHasHeaders(incomingReq);
-        const headers: Object = this._copyWithoutHopByHopHeaders(incomingReq.headers);
+        const headers: object = this._copyWithoutHopByHopHeaders(incomingReq.headers);
 
         // This implementation does not understand range requests
         delete headers['if-range'];
@@ -538,7 +538,7 @@ export default class CachePolicy {
         }
 
         // Clients MAY issue simple (non-subrange) GET requests with either weak validators or strong validators. Clients MUST NOT use weak validators in other forms of request.
-        const forbidsWeakValidators: Boolean =
+        const forbidsWeakValidators: boolean =
             headers['accept-ranges'] ||
             headers['if-match'] ||
             headers['if-unmodified-since'] ||
@@ -550,9 +550,9 @@ export default class CachePolicy {
             delete headers['if-modified-since'];
 
             if (headers['if-none-match']) {
-                const etags: Array = headers['if-none-match']
+                const etags: any[] = headers['if-none-match']
                     .split(/,/)
-                    .filter((etag: String) => {
+                    .filter((etag: string) => {
                         return !/^\s*W\//.test(etag);
                     });
                 if (!etags.length) {
@@ -595,7 +595,7 @@ export default class CachePolicy {
 
         // These aren't going to be supported exactly, since one CachePolicy object
         // doesn't know about all the other cached objects.
-        let matches: Boolean = false;
+        let matches: boolean = false;
         if (response.status !== undefined && response.status != 304) {
             matches = false;
         } else if (
@@ -648,7 +648,7 @@ export default class CachePolicy {
 
         // use other header fields provided in the 304 (Not Modified) response to replace all instances
         // of the corresponding header fields in the stored response.
-        const headers: Object = {};
+        const headers: object = {};
         for (const k in this._resHeaders) {
             headers[k] =
                 k in response.headers && !excludedFromRevalidationUpdate[k]

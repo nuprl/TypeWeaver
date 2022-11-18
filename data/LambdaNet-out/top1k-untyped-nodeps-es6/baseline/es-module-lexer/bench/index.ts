@@ -5,13 +5,13 @@
 import fs from 'fs';
 import c from 'kleur';
 
-const n: Number = 25;
+const n: number = 25;
 
-const files: Array = fs.readdirSync('test/samples')
-	.map((f: String) => `test/samples/${f}`)
-	.filter((x: String) => x.endsWith('.js'))
-	.map((file: String) => {
-		const source: String = fs.readFileSync(file);
+const files: any[] = fs.readdirSync('test/samples')
+	.map((f: string) => `test/samples/${f}`)
+	.filter((x: string) => x.endsWith('.js'))
+	.map((file: string) => {
+		const source: string = fs.readFileSync(file);
 		return {
 			file,
 			code: source.toString(),
@@ -20,10 +20,10 @@ const files: Array = fs.readdirSync('test/samples')
 	});
 
 Promise.resolve().then(async () => {
-	function timeRun (code: String): Number {
-		const start: Number = process.hrtime.bigint();
-		const parsed: String = parse(code);
-		const end: Number = process.hrtime.bigint();
+	function timeRun (code: string): number {
+		const start: number = process.hrtime.bigint();
+		const parsed: string = parse(code);
+		const end: number = process.hrtime.bigint();
 		return Math.round(Number(end - start) / 1e6);
 	}
 
@@ -31,7 +31,7 @@ Promise.resolve().then(async () => {
 		console.log('--- JS Build ---');
 		console.log('Module load time');
 		{
-			const start: Number = process.hrtime.bigint();
+			const start: number = process.hrtime.bigint();
 			var { parse } = await import('../dist/lexer.asm.js');
 			console.log(`> ${c.bold.green(Math.round(Number(process.hrtime.bigint() - start) / 1e6) + 'ms')}`);
 		}
@@ -43,7 +43,7 @@ Promise.resolve().then(async () => {
 		console.log('--- Wasm Build ---');
 		console.log('Module load time');
 		{
-			const start: Number = process.hrtime.bigint();
+			const start: number = process.hrtime.bigint();
 			var { parse, init } = await import('../dist/lexer.js');
 			await init;
 			console.log(`> ${c.bold.green(Math.round(Number(process.hrtime.bigint() - start) / 1e6) + 'ms')}`);
@@ -54,9 +54,9 @@ Promise.resolve().then(async () => {
 
 	function doRun (): Void {
 		console.log('Cold Run, All Samples');
-		let totalSize: Number = 0;
+		let totalSize: number = 0;
 		{
-			let total: Number = 0;
+			let total: number = 0;
 			files.forEach(({ code, size }) => {
 				totalSize += size;
 				total += timeRun(code);
@@ -81,7 +81,7 @@ Promise.resolve().then(async () => {
 	
 		console.log(`\nWarm Runs, All Samples (average of ${n} runs)`);
 		{
-			let total: Number = 0;
+			let total: number = 0;
 			for (let i = 0; i < n; i++) {
 				files.forEach(({ code }) => {
 					total += timeRun(code);

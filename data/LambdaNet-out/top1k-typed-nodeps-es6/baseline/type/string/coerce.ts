@@ -3,13 +3,13 @@
 import isValue from '../value/is';
 import isObject from '../object/is';
 
-var objectToString: String = Object.prototype.toString;
+var objectToString: string = Object.prototype.toString;
 
-export default function (value: String) {
+export default function (value: string) {
 	if (!isValue(value)) return null;
 	if (isObject(value)) {
 		// Reject Object.prototype.toString coercion
-		var valueToString: String = value.toString;
+		var valueToString: string = value.toString;
 		if (typeof valueToString !== "function") return null;
 		if (valueToString === objectToString) return null;
 		// Note: It can be object coming from other realm, still as there's no ES3 and CSP compliant

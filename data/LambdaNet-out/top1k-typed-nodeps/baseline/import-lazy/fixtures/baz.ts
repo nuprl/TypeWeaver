@@ -1,2 +1,2 @@
 'use strict';
-module.exports = (ho: String, ge: String) => `baz${ho}${ge}`;
+module.exports = (ho: string, ge: string) => `baz${ho}${ge}`;

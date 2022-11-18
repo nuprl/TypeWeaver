@@ -7,22 +7,22 @@ import mimeScore from 'mime-score';
 import db from 'mime-db';
 import chalk from 'chalk';
 
-let STANDARD_FACET_SCORE: Number = 900;
+let STANDARD_FACET_SCORE: number = 900;
 
-let byExtension: Object = {};
+let byExtension: object = {};
 
 // Clear out any conflict extensions in mime-db
 for (let type in db) {
-  const entry: Object = db[type];
+  const entry: object = db[type];
   entry.type = type;
   if (!entry.extensions) continue;
 
-  entry.extensions.forEach(function(ext: Number) {
+  entry.extensions.forEach(function(ext: number) {
     let drop: HTMLElement;
-    let keep: Object = entry;
+    let keep: object = entry;
     if (ext in byExtension) {
-      let e0: Object = entry;
-      let e1: Object = byExtension[ext];
+      let e0: object = entry;
+      let e1: object = byExtension[ext];
 
       e0.pri = mimeScore(e0.type, e0.source);
       e1.pri = mimeScore(e1.type, e1.source);
@@ -31,7 +31,7 @@ for (let type in db) {
       keep = e0.pri >= e1.pri ? e0 : e1;
 
       // Prefix lower-priority extensions with '*'
-      drop.extensions = drop.extensions.map(function(e: Number) {
+      drop.extensions = drop.extensions.map(function(e: number) {
         return e === ext ? '*' + e : e;
       });
 
@@ -46,16 +46,16 @@ for (let type in db) {
   });
 }
 
-function writeTypesFile(types: Function, path: String): Void {
+function writeTypesFile(types: Function, path: string): Void {
   fs.writeFileSync(path, 'module.exports = ' + JSON.stringify(types) + ';');
 }
 
 // Segregate into standard and non-standard types based on facet per
 // https://tools.ietf.org/html/rfc6838#section-3.1
-let standard: Object = {};
-let other: Object = {};
+let standard: object = {};
+let other: object = {};
 
-Object.keys(db).sort().forEach(function(k: Number) {
+Object.keys(db).sort().forEach(function(k: number) {
   let entry: HTMLElement = db[k];
 
   if (entry.extensions) {

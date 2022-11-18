@@ -9,8 +9,8 @@ import baseIndexOf from './baseIndexOf.js'
  * @param {Array} chrSymbols The character symbols to find.
  * @returns {number} Returns the index of the last unmatched string symbol.
  */
-function charsEndIndex(strSymbols: Array, chrSymbols: Number): Number {
-  let index: Number = strSymbols.length
+function charsEndIndex(strSymbols: any[], chrSymbols: number): number {
+  let index: number = strSymbols.length
 
   while (index-- && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
   return index

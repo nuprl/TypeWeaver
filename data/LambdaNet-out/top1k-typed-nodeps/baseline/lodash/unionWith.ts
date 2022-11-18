@@ -23,8 +23,8 @@ import last from './last.js'
  * unionWith(objects, others, isEqual)
  * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
  */
-function unionWith(...arrays): Array {
-  let comparator: String = last(arrays)
+function unionWith(...arrays): any[] {
+  let comparator: string = last(arrays)
   comparator = typeof comparator === 'function' ? comparator : undefined
   return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), undefined, comparator)
 }

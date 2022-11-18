@@ -1,6 +1,6 @@
 'use strict';
 
-const pm: String = require('..');
+const pm: string = require('..');
 
 console.time('picomatch');
 console.log(pm.makeRe('**/*').test('foo/bar/baz/qux.js'));

@@ -3,7 +3,7 @@ import {parsePatch} from './parse';
 
 import {arrayEqual, arrayStartsWith} from '../util/array';
 
-export function calcLineCount(hunk: String): Void {
+export function calcLineCount(hunk: string): Void {
   const {oldLines, newLines} = calcOldNewLineCount(hunk.lines);
 
   if (oldLines !== undefined) {
@@ -19,11 +19,11 @@ export function calcLineCount(hunk: String): Void {
   }
 }
 
-export function merge(mine: Object, theirs: Object, base: String): String {
+export function merge(mine: object, theirs: object, base: string): string {
   mine = loadPatch(mine, base);
   theirs = loadPatch(theirs, base);
 
-  let ret: Object = {};
+  let ret: object = {};
 
   // For index we just let it pass through as it doesn't have any necessary meaning.
   // Leaving sanity checks on this to the API consumer that may know more about the
@@ -56,14 +56,14 @@ export function merge(mine: Object, theirs: Object, base: String): String {
 
   ret.hunks = [];
 
-  let mineIndex: Number = 0,
-      theirsIndex: Number = 0,
-      mineOffset: Number = 0,
-      theirsOffset: Number = 0;
+  let mineIndex: number = 0,
+      theirsIndex: number = 0,
+      mineOffset: number = 0,
+      theirsOffset: number = 0;
 
   while (mineIndex < mine.hunks.length || theirsIndex < theirs.hunks.length) {
-    let mineCurrent: Object = mine.hunks[mineIndex] || {oldStart: Infinity},
-        theirsCurrent: Object = theirs.hunks[theirsIndex] || {oldStart: Infinity};
+    let mineCurrent: object = mine.hunks[mineIndex] || {oldStart: Infinity},
+        theirsCurrent: object = theirs.hunks[theirsIndex] || {oldStart: Infinity};
 
     if (hunkBefore(mineCurrent, theirsCurrent)) {
       // This patch does not overlap with any of the others, yay.
@@ -77,7 +77,7 @@ export function merge(mine: Object, theirs: Object, base: String): String {
       mineOffset += theirsCurrent.newLines - theirsCurrent.oldLines;
     } else {
       // Overlap, merge as best we can
-      let mergedHunk: Object = {
+      let mergedHunk: object = {
         oldStart: Math.min(mineCurrent.oldStart, theirsCurrent.oldStart),
         oldLines: 0,
         newStart: Math.min(mineCurrent.newStart + mineOffset, theirsCurrent.oldStart + theirsOffset),
@@ -95,7 +95,7 @@ export function merge(mine: Object, theirs: Object, base: String): String {
   return ret;
 }
 
-function loadPatch(param: String, base: Number): String {
+function loadPatch(param: string, base: number): string {
   if (typeof param === 'string') {
     if ((/^@@/m).test(param) || ((/^Index:/m).test(param))) {
       return parsePatch(param)[0];
@@ -110,11 +110,11 @@ function loadPatch(param: String, base: Number): String {
   return param;
 }
 
-function fileNameChanged(patch: Object): Boolean {
+function fileNameChanged(patch: object): boolean {
   return patch.newFileName && patch.newFileName !== patch.oldFileName;
 }
 
-function selectField(index: Object, mine: String, theirs: String): Object {
+function selectField(index: object, mine: string, theirs: string): object {
   if (mine === theirs) {
     return mine;
   } else {
@@ -123,12 +123,12 @@ function selectField(index: Object, mine: String, theirs: String): Object {
   }
 }
 
-function hunkBefore(test: String, check: Object): Boolean {
+function hunkBefore(test: string, check: object): boolean {
   return test.oldStart < check.oldStart
     && (test.oldStart + test.oldLines) < check.oldStart;
 }
 
-function cloneHunk(hunk: Object, offset: String): Object {
+function cloneHunk(hunk: object, offset: string): object {
   return {
     oldStart: hunk.oldStart, oldLines: hunk.oldLines,
     newStart: hunk.newStart + offset, newLines: hunk.newLines,
@@ -136,11 +136,11 @@ function cloneHunk(hunk: Object, offset: String): Object {
   };
 }
 
-function mergeLines(hunk: Object, mineOffset: Number, mineLines: Array, theirOffset: Number, theirLines: Array): Void {
+function mergeLines(hunk: object, mineOffset: number, mineLines: any[], theirOffset: number, theirLines: any[]): Void {
   // This will generally result in a conflicted hunk, but there are cases where the context
   // is the only overlap where we can successfully merge the content here.
-  let mine: Object = {offset: mineOffset, lines: mineLines, index: 0},
-      their: Object = {offset: theirOffset, lines: theirLines, index: 0};
+  let mine: object = {offset: mineOffset, lines: mineLines, index: 0},
+      their: object = {offset: theirOffset, lines: theirLines, index: 0};
 
   // Handle any leading content
   insertLeading(hunk, mine, their);
@@ -148,8 +148,8 @@ function mergeLines(hunk: Object, mineOffset: Number, mineLines: Array, theirOff
 
   // Now in the overlap content. Scan through and select the best changes from each.
   while (mine.index < mine.lines.length && their.index < their.lines.length) {
-    let mineCurrent: Object = mine.lines[mine.index],
-        theirCurrent: Object = their.lines[their.index];
+    let mineCurrent: object = mine.lines[mine.index],
+        theirCurrent: object = their.lines[their.index];
 
     if ((mineCurrent[0] === '-' || mineCurrent[0] === '+')
         && (theirCurrent[0] === '-' || theirCurrent[0] === '+')) {
@@ -185,9 +185,9 @@ function mergeLines(hunk: Object, mineOffset: Number, mineLines: Array, theirOff
   calcLineCount(hunk);
 }
 
-function mutualChange(hunk: Object, mine: String, their: String): Void {
-  let myChanges: Array = collectChange(mine),
-      theirChanges: Array = collectChange(their);
+function mutualChange(hunk: object, mine: string, their: string): Void {
+  let myChanges: any[] = collectChange(mine),
+      theirChanges: any[] = collectChange(their);
 
   if (allRemoves(myChanges) && allRemoves(theirChanges)) {
     // Special case for remove changes that are supersets of one another
@@ -208,9 +208,9 @@ function mutualChange(hunk: Object, mine: String, their: String): Void {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: Object, mine: Function, their: String, swap: Boolean): Void {
+function removal(hunk: object, mine: Function, their: string, swap: boolean): Void {
   let myChanges: Function = collectChange(mine),
-      theirChanges: Object = collectContext(their, myChanges);
+      theirChanges: object = collectContext(their, myChanges);
   if (theirChanges.merged) {
     hunk.lines.push(... theirChanges.merged);
   } else {
@@ -218,7 +218,7 @@ function removal(hunk: Object, mine: Function, their: String, swap: Boolean): Vo
   }
 }
 
-function conflict(hunk: Object, mine: String, their: String): Void {
+function conflict(hunk: object, mine: string, their: string): Void {
   hunk.conflict = true;
   hunk.lines.push({
     conflict: true,
@@ -227,25 +227,25 @@ function conflict(hunk: Object, mine: String, their: String): Void {
   });
 }
 
-function insertLeading(hunk: Object, insert: Object, their: Object): Void {
+function insertLeading(hunk: object, insert: object, their: object): Void {
   while (insert.offset < their.offset && insert.index < insert.lines.length) {
-    let line: String = insert.lines[insert.index++];
+    let line: string = insert.lines[insert.index++];
     hunk.lines.push(line);
     insert.offset++;
   }
 }
-function insertTrailing(hunk: Object, insert: Object): Void {
+function insertTrailing(hunk: object, insert: object): Void {
   while (insert.index < insert.lines.length) {
-    let line: String = insert.lines[insert.index++];
+    let line: string = insert.lines[insert.index++];
     hunk.lines.push(line);
   }
 }
 
-function collectChange(state: Object): Array {
-  let ret: Array = [],
-      operation: String = state.lines[state.index][0];
+function collectChange(state: object): any[] {
+  let ret: any[] = [],
+      operation: string = state.lines[state.index][0];
   while (state.index < state.lines.length) {
-    let line: Object = state.lines[state.index];
+    let line: object = state.lines[state.index];
 
     // Group additions that are immediately after subtractions and treat them as one "atomic" modify change.
     if (operation === '-' && line[0] === '+') {
@@ -262,15 +262,15 @@ function collectChange(state: Object): Array {
 
   return ret;
 }
-function collectContext(state: Object, matchChanges: Array): Array {
-  let changes: Array = [],
-      merged: Array = [],
-      matchIndex: Number = 0,
-      contextChanges: Boolean = false,
-      conflicted: Boolean = false;
+function collectContext(state: object, matchChanges: any[]): any[] {
+  let changes: any[] = [],
+      merged: any[] = [],
+      matchIndex: number = 0,
+      contextChanges: boolean = false,
+      conflicted: boolean = false;
   while (matchIndex < matchChanges.length
         && state.index < state.lines.length) {
-    let change: Array = state.lines[state.index],
+    let change: any[] = state.lines[state.index],
         match: Function = matchChanges[matchIndex];
 
     // Once we've hit our add, then we are done
@@ -321,14 +321,14 @@ function collectContext(state: Object, matchChanges: Array): Array {
   };
 }
 
-function allRemoves(changes: Array): Array {
-  return changes.reduce(function(prev: Boolean, change: Object) {
+function allRemoves(changes: any[]): any[] {
+  return changes.reduce(function(prev: boolean, change: object) {
     return prev && change[0] === '-';
   }, true);
 }
-function skipRemoveSuperset(state: Object, removeChanges: Array, delta: Number): Boolean {
+function skipRemoveSuperset(state: object, removeChanges: any[], delta: number): boolean {
   for (let i = 0; i < delta; i++) {
-    let changeContent: String = removeChanges[removeChanges.length - delta + i].substr(1);
+    let changeContent: string = removeChanges[removeChanges.length - delta + i].substr(1);
     if (state.lines[state.index + i] !== ' ' + changeContent) {
       return false;
     }
@@ -338,14 +338,14 @@ function skipRemoveSuperset(state: Object, removeChanges: Array, delta: Number):
   return true;
 }
 
-function calcOldNewLineCount(lines: Array): Object {
-  let oldLines: Number = 0;
-  let newLines: Number = 0;
+function calcOldNewLineCount(lines: any[]): object {
+  let oldLines: number = 0;
+  let newLines: number = 0;
 
-  lines.forEach(function(line: Object) {
+  lines.forEach(function(line: object) {
     if (typeof line !== 'string') {
-      let myCount: String = calcOldNewLineCount(line.mine);
-      let theirCount: String = calcOldNewLineCount(line.theirs);
+      let myCount: string = calcOldNewLineCount(line.mine);
+      let theirCount: string = calcOldNewLineCount(line.theirs);
 
       if (oldLines !== undefined) {
         if (myCount.oldLines === theirCount.oldLines) {

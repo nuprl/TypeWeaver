@@ -1,11 +1,11 @@
 "use strict";
 
 export default function( grunt: HTMLElement ) {
-	grunt.registerTask( "testswarm", function( commit: String, configFile: String, projectName: String, browserSets: Object,
-			timeout: Number, testMode: Number ) {
-		var jobName: String, config: String, tests: Array,
-			testswarm: Array = require( "testswarm" ),
-			runs: Object = {},
+	grunt.registerTask( "testswarm", function( commit: string, configFile: string, projectName: string, browserSets: object,
+			timeout: number, testMode: number ) {
+		var jobName: string, config: string, tests: any[],
+			testswarm: any[] = require( "testswarm" ),
+			runs: object = {},
 			done: Function = this.async(),
 			pull: Promise = /PR-(\d+)/.exec( commit );
 
@@ -31,7 +31,7 @@ export default function( grunt: HTMLElement ) {
 		if ( testMode === "basic" ) {
 			runs.basic = config.testUrl + commit + "/test/index.html?module=basic";
 		} else {
-			tests.forEach( function( test: String ) {
+			tests.forEach( function( test: string ) {
 				runs[ test ] = config.testUrl + commit + "/test/index.html?module=" + test;
 			} );
 		}
@@ -51,7 +51,7 @@ export default function( grunt: HTMLElement ) {
 				runMax: config.runMax,
 				browserSets: browserSets,
 				timeout: timeout
-			}, function( err: Function, passed: Array ) {
+			}, function( err: Function, passed: any[] ) {
 				if ( err ) {
 					grunt.log.error( err );
 				}

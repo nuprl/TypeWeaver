@@ -1,24 +1,24 @@
 // pull out /GeneralSearchResponse/categories/category/items/product tags
 // the rest we don't care about.
 
-var sax: String = require('../lib/sax.js')
-var fs: String = require('fs')
-var path: String = require('path')
-var xmlFile: String = path.resolve(__dirname, 'shopping.xml')
-var util: String = require('util')
-var http: String = require('http')
+var sax: string = require('../lib/sax.js')
+var fs: string = require('fs')
+var path: string = require('path')
+var xmlFile: string = path.resolve(__dirname, 'shopping.xml')
+var util: string = require('util')
+var http: string = require('http')
 
-fs.readFile(xmlFile, function (er: Boolean, d: Number) {
-  http.createServer(function (req: Function, res: Array) {
+fs.readFile(xmlFile, function (er: boolean, d: number) {
+  http.createServer(function (req: Function, res: any[]) {
     if (er) throw er
-    var xmlstr: String = d.toString('utf8')
+    var xmlstr: string = d.toString('utf8')
 
     var parser: HTMLElement = sax.parser(true)
-    var products: Array = []
-    var product: String = null
-    var currentTag: Object = null
+    var products: any[] = []
+    var product: string = null
+    var currentTag: object = null
 
-    parser.onclosetag = function (tagName: String) {
+    parser.onclosetag = function (tagName: string) {
       if (tagName === 'product') {
         products.push(product)
         currentTag = product = null
@@ -31,7 +31,7 @@ fs.readFile(xmlFile, function (er: Boolean, d: Number) {
       }
     }
 
-    parser.onopentag = function (tag: Object) {
+    parser.onopentag = function (tag: object) {
       if (tag.name !== 'product' && !product) return
       if (tag.name === 'product') {
         product = tag
@@ -42,12 +42,12 @@ fs.readFile(xmlFile, function (er: Boolean, d: Number) {
       currentTag = tag
     }
 
-    parser.ontext = function (text: String) {
+    parser.ontext = function (text: string) {
       if (currentTag) currentTag.children.push(text)
     }
 
     parser.onend = function () {
-      var out: String = util.inspect(products, false, 3, true)
+      var out: string = util.inspect(products, false, 3, true)
       res.writeHead(200, {'content-type': 'application/json'})
       res.end('{"ok":true}')
     // res.end(JSON.stringify(products))

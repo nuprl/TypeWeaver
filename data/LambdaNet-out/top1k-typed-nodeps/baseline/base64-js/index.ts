@@ -4,11 +4,11 @@ exports.byteLength = byteLength
 exports.toByteArray = toByteArray
 exports.fromByteArray = fromByteArray
 
-var lookup: Object = []
-var revLookup: Object = []
-var Arr: String = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
+var lookup: object = []
+var revLookup: object = []
+var Arr: string = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
 
-var code: String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+var code: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 for (var i = 0, len = code.length; i < len; ++i) {
   lookup[i] = code[i]
   revLookup[code.charCodeAt(i)] = i
@@ -19,8 +19,8 @@ for (var i = 0, len = code.length; i < len; ++i) {
 revLookup['-'.charCodeAt(0)] = 62
 revLookup['_'.charCodeAt(0)] = 63
 
-function getLens (b64: String): Array {
-  var len: Number = b64.length
+function getLens (b64: string): any[] {
+  var len: number = b64.length
 
   if (len % 4 > 0) {
     throw new Error('Invalid string. Length must be a multiple of 4')
@@ -28,10 +28,10 @@ function getLens (b64: String): Array {
 
   // Trim off extra bytes after placeholder bytes are found
   // See: https://github.com/beatgammit/base64-js/issues/42
-  var validLen: Number = b64.indexOf('=')
+  var validLen: number = b64.indexOf('=')
   if (validLen === -1) validLen = len
 
-  var placeHoldersLen: Number = validLen === len
+  var placeHoldersLen: number = validLen === len
     ? 0
     : 4 - (validLen % 4)
 
@@ -39,33 +39,33 @@ function getLens (b64: String): Array {
 }
 
 // base64 is 4/3 + up to two characters of the original data
-function byteLength (b64: String): Number {
-  var lens: Object = getLens(b64)
-  var validLen: String = lens[0]
-  var placeHoldersLen: Number = lens[1]
+function byteLength (b64: string): number {
+  var lens: object = getLens(b64)
+  var validLen: string = lens[0]
+  var placeHoldersLen: number = lens[1]
   return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
 }
 
-function _byteLength (b64: String, validLen: Number, placeHoldersLen: Number): Number {
+function _byteLength (b64: string, validLen: number, placeHoldersLen: number): number {
   return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
 }
 
-function toByteArray (b64: HTMLElement): Object {
-  var tmp: Number
-  var lens: Object = getLens(b64)
-  var validLen: Number = lens[0]
-  var placeHoldersLen: Number = lens[1]
+function toByteArray (b64: HTMLElement): object {
+  var tmp: number
+  var lens: object = getLens(b64)
+  var validLen: number = lens[0]
+  var placeHoldersLen: number = lens[1]
 
-  var arr: Object = new Arr(_byteLength(b64, validLen, placeHoldersLen))
+  var arr: object = new Arr(_byteLength(b64, validLen, placeHoldersLen))
 
-  var curByte: Number = 0
+  var curByte: number = 0
 
   // if there are placeholders, only get up to the last complete 4 chars
-  var len: Number = placeHoldersLen > 0
+  var len: number = placeHoldersLen > 0
     ? validLen - 4
     : validLen
 
-  var i: Number
+  var i: number
   for (i = 0; i < len; i += 4) {
     tmp =
       (revLookup[b64.charCodeAt(i)] << 18) |
@@ -96,16 +96,16 @@ function toByteArray (b64: HTMLElement): Object {
   return arr
 }
 
-function tripletToBase64 (num: Number): String {
+function tripletToBase64 (num: number): string {
   return lookup[num >> 18 & 0x3F] +
     lookup[num >> 12 & 0x3F] +
     lookup[num >> 6 & 0x3F] +
     lookup[num & 0x3F]
 }
 
-function encodeChunk (uint8: Object, start: String, end: String): String {
-  var tmp: String
-  var output: Array = []
+function encodeChunk (uint8: object, start: string, end: string): string {
+  var tmp: string
+  var output: any[] = []
   for (var i = start; i < end; i += 3) {
     tmp =
       ((uint8[i] << 16) & 0xFF0000) +
@@ -116,12 +116,12 @@ function encodeChunk (uint8: Object, start: String, end: String): String {
   return output.join('')
 }
 
-function fromByteArray (uint8: Array): String {
-  var tmp: Number
-  var len: Number = uint8.length
-  var extraBytes: Number = len % 3 // if we have 1 byte left, pad 2 bytes
-  var parts: Array = []
-  var maxChunkLength: Number = 16383 // must be multiple of 3
+function fromByteArray (uint8: any[]): string {
+  var tmp: number
+  var len: number = uint8.length
+  var extraBytes: number = len % 3 // if we have 1 byte left, pad 2 bytes
+  var parts: any[] = []
+  var maxChunkLength: number = 16383 // must be multiple of 3
 
   // go through the array every three bytes, we'll deal with trailing stuff later
   for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {

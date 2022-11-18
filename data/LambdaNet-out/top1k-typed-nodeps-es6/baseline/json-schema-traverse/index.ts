@@ -1,6 +1,6 @@
 'use strict';
 
-var traverse: Function = function (schema: String, opts: Object, cb: Object) {
+var traverse: Function = function (schema: string, opts: object, cb: object) {
   // Legacy support for v0.3.1 and earlier.
   if (typeof opts == 'function') {
     cb = opts;
@@ -8,8 +8,8 @@ var traverse: Function = function (schema: String, opts: Object, cb: Object) {
   }
 
   cb = opts.cb || cb;
-  var pre: String = (typeof cb == 'function') ? cb : cb.pre || function() {};
-  var post: String = cb.post || function() {};
+  var pre: string = (typeof cb == 'function') ? cb : cb.pre || function() {};
+  var post: string = cb.post || function() {};
 
   _traverse(opts, pre, post, schema, '', schema);
 };
@@ -67,11 +67,11 @@ traverse.skipKeywords = {
 };
 
 
-function _traverse(opts: Object, pre: Function, post: Function, schema: Object, jsonPtr: String, rootSchema: String, parentJsonPtr: Boolean, parentKeyword: Boolean, parentSchema: Boolean, keyIndex: String): Void {
+function _traverse(opts: object, pre: Function, post: Function, schema: object, jsonPtr: string, rootSchema: string, parentJsonPtr: boolean, parentKeyword: boolean, parentSchema: boolean, keyIndex: string): Void {
   if (schema && typeof schema == 'object' && !Array.isArray(schema)) {
     pre(schema, jsonPtr, rootSchema, parentJsonPtr, parentKeyword, parentSchema, keyIndex);
     for (var key in schema) {
-      var sch: Array = schema[key];
+      var sch: any[] = schema[key];
       if (Array.isArray(sch)) {
         if (key in traverse.arrayKeywords) {
           for (var i=0; i<sch.length; i++)
@@ -91,6 +91,6 @@ function _traverse(opts: Object, pre: Function, post: Function, schema: Object, 
 }
 
 
-function escapeJsonPtr(str: String): String {
+function escapeJsonPtr(str: string): string {
   return str.replace(/~/g, '~0').replace(/\//g, '~1');
 }

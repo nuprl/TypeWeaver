@@ -1,7 +1,7 @@
 import baseSum from './.internal/baseSum.js'
 
 /** Used as references for various `Number` constants. */
-const NAN: Number = 0 / 0
+const NAN: number = 0 / 0
 
 /**
  * This method is like `mean` except that it accepts `iteratee` which is
@@ -20,8 +20,8 @@ const NAN: Number = 0 / 0
  * meanBy(objects, ({ n }) => n)
  * // => 5
  */
-function meanBy(array: Array, iteratee: Function): Number {
-  const length: Number = array == null ? 0 : array.length
+function meanBy(array: any[], iteratee: Function): number {
+  const length: number = array == null ? 0 : array.length
   return length ? (baseSum(array, iteratee) / length) : NAN
 }
 

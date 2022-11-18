@@ -1,8 +1,8 @@
 import baseClone from './.internal/baseClone.js'
 
 /** Used to compose bitmasks for cloning. */
-const CLONE_DEEP_FLAG: Number = 1
-const CLONE_SYMBOLS_FLAG: Number = 4
+const CLONE_DEEP_FLAG: number = 1
+const CLONE_SYMBOLS_FLAG: number = 4
 
 /**
  * This method is like `clone` except that it recursively clones `value`.
@@ -21,7 +21,7 @@ const CLONE_SYMBOLS_FLAG: Number = 4
  * console.log(deep[0] === objects[0])
  * // => false
  */
-function cloneDeep(value: String): String {
+function cloneDeep(value: string): string {
   return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG)
 }
 

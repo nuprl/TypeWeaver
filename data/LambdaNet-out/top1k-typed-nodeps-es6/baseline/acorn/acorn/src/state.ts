@@ -10,13 +10,13 @@ export class Parser {
     this.options = options = getOptions(options)
     this.sourceFile = options.sourceFile
     this.keywords = wordsRegexp(keywords[options.ecmaVersion >= 6 ? 6 : options.sourceType === "module" ? "5module" : 5])
-    let reserved: String = ""
+    let reserved: string = ""
     if (options.allowReserved !== true) {
       reserved = reservedWords[options.ecmaVersion >= 6 ? 6 : options.ecmaVersion === 5 ? 5 : 3]
       if (options.sourceType === "module") reserved += " await"
     }
     this.reservedWords = wordsRegexp(reserved)
-    let reservedStrict: String = (reserved ? reserved + " " : "") + reservedWords.strict
+    let reservedStrict: string = (reserved ? reserved + " " : "") + reservedWords.strict
     this.reservedWordsStrict = wordsRegexp(reservedStrict)
     this.reservedWordsStrictBind = wordsRegexp(reservedStrict + " " + reservedWords.strictBind)
     this.input = String(input)

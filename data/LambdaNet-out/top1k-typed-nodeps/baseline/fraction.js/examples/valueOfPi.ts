@@ -1,12 +1,12 @@
-var Fraction: Array = require("fraction.js")
+var Fraction: any[] = require("fraction.js")
 
-function valueOfPi(val: Number): String {
+function valueOfPi(val: number): string {
 
-  let minLen: Number = Infinity, minI: Number = 0, min: HTMLElement = null;
-  const choose: Array = [val, val * Math.PI, val / Math.PI];
+  let minLen: number = Infinity, minI: number = 0, min: HTMLElement = null;
+  const choose: any[] = [val, val * Math.PI, val / Math.PI];
   for (let i = 0; i < choose.length; i++) {
     let el: HTMLElement = new Fraction(choose[i]).simplify(1e-13);
-    let len: Number = Math.log(el.n + 1) + Math.log(el.d);
+    let len: number = Math.log(el.n + 1) + Math.log(el.d);
     if (len < minLen) {
       minLen = len;
       minI = i;
@@ -15,12 +15,12 @@ function valueOfPi(val: Number): String {
   }
 
   if (minI == 2) {
-    return min.toFraction().replace(/(\d+)(\/\d+)?/, (_: String, p: String, q: String) => 
+    return min.toFraction().replace(/(\d+)(\/\d+)?/, (_: string, p: string, q: string) => 
       (p == "1" ? "" : p) + "π" + (q || ""));
   }
 
   if (minI == 1) {
-    return min.toFraction().replace(/(\d+)(\/\d+)?/, (_: String, p: Number, q: String) => 
+    return min.toFraction().replace(/(\d+)(\/\d+)?/, (_: string, p: number, q: string) => 
       p + (!q ? "/π" : "/(" + q.slice(1) + "π)"));
   }
   return min.toFraction();

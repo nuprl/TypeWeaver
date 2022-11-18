@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: String = {
+var CSSOM: string = {
 	CSSStyleDeclaration: require("./CSSStyleDeclaration").CSSStyleDeclaration,
 	CSSRule: require("./CSSRule").CSSRule
 };
@@ -24,7 +24,7 @@ CSSOM.CSSStyleRule.prototype.type = 1;
 
 Object.defineProperty(CSSOM.CSSStyleRule.prototype, "cssText", {
 	get: function() {
-		var text: String;
+		var text: string;
 		if (this.selectorText) {
 			text = this.selectorText + " {" + this.style.cssText + "}";
 		} else {
@@ -32,7 +32,7 @@ Object.defineProperty(CSSOM.CSSStyleRule.prototype, "cssText", {
 		}
 		return text;
 	},
-	set: function(cssText: String) {
+	set: function(cssText: string) {
 		var rule: HTMLElement = CSSOM.CSSStyleRule.parse(cssText);
 		this.style = rule.style;
 		this.selectorText = rule.selectorText;
@@ -46,20 +46,20 @@ Object.defineProperty(CSSOM.CSSStyleRule.prototype, "cssText", {
  * @param {string} ruleText
  * @return CSSStyleRule
  */
-CSSOM.CSSStyleRule.parse = function(ruleText: String) {
-	var i: Number = 0;
-	var state: String = "selector";
-	var index: Number;
-	var j: Number = i;
-	var buffer: String = "";
+CSSOM.CSSStyleRule.parse = function(ruleText: string) {
+	var i: number = 0;
+	var state: string = "selector";
+	var index: number;
+	var j: number = i;
+	var buffer: string = "";
 
-	var SIGNIFICANT_WHITESPACE: Object = {
+	var SIGNIFICANT_WHITESPACE: object = {
 		"selector": true,
 		"value": true
 	};
 
 	var styleRule: HTMLElement = new CSSOM.CSSStyleRule();
-	var name: String, priority: String="";
+	var name: string, priority: string="";
 
 	for (var character; (character = ruleText.charAt(i)); i++) {
 

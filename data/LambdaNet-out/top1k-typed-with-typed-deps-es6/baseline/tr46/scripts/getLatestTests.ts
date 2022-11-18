@@ -20,12 +20,12 @@ const pipelinePromise: Function = promisify(pipeline);
 async function main(): Map {
   await Promise.all([
     (async () => {
-      const target: String = fs.createWriteStream(path.resolve(__dirname, "../test/fixtures/IdnaTestV2.txt"));
+      const target: string = fs.createWriteStream(path.resolve(__dirname, "../test/fixtures/IdnaTestV2.txt"));
       const response: Element = await fetch(`https://unicode.org/Public/idna/${unicodeVersion}/IdnaTestV2.txt`);
       await pipelinePromise(response.body, target);
     })(),
     (async () => {
-      const asciiTarget: String = fs.createWriteStream(path.resolve(__dirname, "../test/fixtures/toascii.json"));
+      const asciiTarget: string = fs.createWriteStream(path.resolve(__dirname, "../test/fixtures/toascii.json"));
       const response: Element = await fetch("https://github.com/web-platform-tests/wpt/raw/112ad5ca55d55f6da2ccc7468e6dcc91b4e5d223/url/resources/toascii.json");
       await pipelinePromise(response.body, asciiTarget);
     })()

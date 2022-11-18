@@ -13,5 +13,5 @@ CSSOM.StyleSheet = function StyleSheet(): Void {
 
 
 //.CommonJS
-export const StyleSheet: Array = CSSOM.StyleSheet;
+export const StyleSheet: any[] = CSSOM.StyleSheet;
 ///CommonJS

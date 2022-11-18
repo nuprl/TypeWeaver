@@ -6,11 +6,11 @@ var isArray: Function;
 if (typeof Array.isArray === "function") {
 	isArray = Array.isArray;
 } else {
-	var objectToString: Function = Object.prototype.toString, objectTaggedString: Number = objectToString.call([]);
-	isArray = function (value: String) { return objectToString.call(value) === objectTaggedString; };
+	var objectToString: Function = Object.prototype.toString, objectTaggedString: number = objectToString.call([]);
+	isArray = function (value: string) { return objectToString.call(value) === objectTaggedString; };
 }
 
-export default function (value: Array) {
+export default function (value: any[]) {
 	if (!isArray(value)) return false;
 
 	// Sanity check (reject objects which do not expose common Array interface)

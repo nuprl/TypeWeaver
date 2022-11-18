@@ -29,14 +29,14 @@ export default class AliasFieldPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("AliasFieldPlugin", (request: Object, resolveContext: Object, callback: Function) => {
+			.tapAsync("AliasFieldPlugin", (request: object, resolveContext: object, callback: Function) => {
 				if (!request.descriptionFileData) return callback();
-				const innerRequest: String = getInnerRequest(resolver, request);
+				const innerRequest: string = getInnerRequest(resolver, request);
 				if (!innerRequest) return callback();
-				const fieldData: Object = DescriptionFileUtils.getField(
+				const fieldData: object = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					this.field
 				);
@@ -49,7 +49,7 @@ export default class AliasFieldPlugin {
 						);
 					return callback();
 				}
-				const data: String = Object.prototype.hasOwnProperty.call(
+				const data: string = Object.prototype.hasOwnProperty.call(
 					fieldData,
 					innerRequest
 				)
@@ -61,7 +61,7 @@ export default class AliasFieldPlugin {
 				if (data === undefined) return callback();
 				if (data === false) {
 					/** @type {ResolveRequest} */
-					const ignoreObj: Object = {
+					const ignoreObj: object = {
 						...request,
 						path: false
 					};
@@ -71,7 +71,7 @@ export default class AliasFieldPlugin {
 					}
 					return callback(null, ignoreObj);
 				}
-				const obj: Object = {
+				const obj: object = {
 					...request,
 					path: request.descriptionFileRoot,
 					request: data,

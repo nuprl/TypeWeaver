@@ -1,31 +1,31 @@
-var url: String = require("url");
-var URL: String = url.URL;
-var http: String = require("http");
-var https: Number = require("https");
+var url: string = require("url");
+var URL: string = url.URL;
+var http: string = require("http");
+var https: number = require("https");
 var Writable: Function = require("stream").Writable;
 var assert: Function = require("assert");
 var debug: Function = require("./debug");
 
 // Create handlers that pass events from native requests
-var events: Array = ["abort", "aborted", "connect", "error", "socket", "timeout"];
-var eventHandlers: Object = Object.create(null);
-events.forEach(function (event: String) {
-  eventHandlers[event] = function (arg1: String, arg2: String, arg3: String) {
+var events: any[] = ["abort", "aborted", "connect", "error", "socket", "timeout"];
+var eventHandlers: object = Object.create(null);
+events.forEach(function (event: string) {
+  eventHandlers[event] = function (arg1: string, arg2: string, arg3: string) {
     this._redirectable.emit(event, arg1, arg2, arg3);
   };
 });
 
-var InvalidUrlError: String = createErrorType(
+var InvalidUrlError: string = createErrorType(
   "ERR_INVALID_URL",
   "Invalid URL",
   TypeError
 );
 // Error types with codes
-var RedirectionError: Object = createErrorType(
+var RedirectionError: object = createErrorType(
   "ERR_FR_REDIRECTION_FAILURE",
   "Redirected request failed"
 );
-var TooManyRedirectsError: Object = createErrorType(
+var TooManyRedirectsError: object = createErrorType(
   "ERR_FR_TOO_MANY_REDIRECTS",
   "Maximum number of redirects exceeded"
 );
@@ -33,13 +33,13 @@ var MaxBodyLengthExceededError: Function = createErrorType(
   "ERR_FR_MAX_BODY_LENGTH_EXCEEDED",
   "Request body larger than maxBodyLength limit"
 );
-var WriteAfterEndError: Object = createErrorType(
+var WriteAfterEndError: object = createErrorType(
   "ERR_STREAM_WRITE_AFTER_END",
   "write after end"
 );
 
 // An HTTP(S) request that can be redirected
-function RedirectableRequest(options: Array, responseCallback: Boolean): Void {
+function RedirectableRequest(options: any[], responseCallback: boolean): Void {
   // Initialize the request
   Writable.call(this);
   this._sanitizeOptions(options);
@@ -58,7 +58,7 @@ function RedirectableRequest(options: Array, responseCallback: Boolean): Void {
 
   // React to responses of native requests
   var self: HTMLElement = this;
-  this._onNativeResponse = function (response: Object) {
+  this._onNativeResponse = function (response: object) {
     self._processResponse(response);
   };
 
@@ -73,7 +73,7 @@ RedirectableRequest.prototype.abort = function () {
 };
 
 // Writes buffered data to the current native request
-RedirectableRequest.prototype.write = function (data: Array, encoding: String, callback: Function) {
+RedirectableRequest.prototype.write = function (data: any[], encoding: string, callback: Function) {
   // Writing is not allowed if end has been called
   if (this._ending) {
     throw new WriteAfterEndError();
@@ -110,7 +110,7 @@ RedirectableRequest.prototype.write = function (data: Array, encoding: String, c
 };
 
 // Ends the current native request
-RedirectableRequest.prototype.end = function (data: Array, encoding: String, callback: String) {
+RedirectableRequest.prototype.end = function (data: any[], encoding: string, callback: string) {
   // Shift parameters if necessary
   if (isFunction(data)) {
     callback = data;
@@ -128,7 +128,7 @@ RedirectableRequest.prototype.end = function (data: Array, encoding: String, cal
   }
   else {
     var self: HTMLElement = this;
-    var currentRequest: Object = this._currentRequest;
+    var currentRequest: object = this._currentRequest;
     this.write(data, encoding, function () {
       self._ended = true;
       currentRequest.end(null, null, callback);
@@ -138,30 +138,30 @@ RedirectableRequest.prototype.end = function (data: Array, encoding: String, cal
 };
 
 // Sets a header value on the current native request
-RedirectableRequest.prototype.setHeader = function (name: String, value: String) {
+RedirectableRequest.prototype.setHeader = function (name: string, value: string) {
   this._options.headers[name] = value;
   this._currentRequest.setHeader(name, value);
 };
 
 // Clears a header value on the current native request
-RedirectableRequest.prototype.removeHeader = function (name: String) {
+RedirectableRequest.prototype.removeHeader = function (name: string) {
   delete this._options.headers[name];
   this._currentRequest.removeHeader(name);
 };
 
 // Global timeout for all underlying requests
-RedirectableRequest.prototype.setTimeout = function (msecs: Number, callback: Function) {
-  var self: Object = this;
+RedirectableRequest.prototype.setTimeout = function (msecs: number, callback: Function) {
+  var self: object = this;
 
   // Destroys the socket on timeout
-  function destroyOnTimeout(socket: Object): Void {
+  function destroyOnTimeout(socket: object): Void {
     socket.setTimeout(msecs);
     socket.removeListener("timeout", socket.destroy);
     socket.addListener("timeout", socket.destroy);
   }
 
   // Sets up a timer to trigger a timeout event
-  function startTimer(socket: Object): Void {
+  function startTimer(socket: object): Void {
     if (self._timeout) {
       clearTimeout(self._timeout);
     }
@@ -218,20 +218,20 @@ RedirectableRequest.prototype.setTimeout = function (msecs: Number, callback: Fu
 [
   "flushHeaders", "getHeader",
   "setNoDelay", "setSocketKeepAlive",
-].forEach(function (method: String) {
-  RedirectableRequest.prototype[method] = function (a: Function, b: String) {
+].forEach(function (method: string) {
+  RedirectableRequest.prototype[method] = function (a: Function, b: string) {
     return this._currentRequest[method](a, b);
   };
 });
 
 // Proxy all public ClientRequest properties
-["aborted", "connection", "socket"].forEach(function (property: String) {
+["aborted", "connection", "socket"].forEach(function (property: string) {
   Object.defineProperty(RedirectableRequest.prototype, property, {
     get: function () { return this._currentRequest[property]; },
   });
 });
 
-RedirectableRequest.prototype._sanitizeOptions = function (options: Object) {
+RedirectableRequest.prototype._sanitizeOptions = function (options: object) {
   // Ensure headers are always present
   if (!options.headers) {
     options.headers = {};
@@ -250,7 +250,7 @@ RedirectableRequest.prototype._sanitizeOptions = function (options: Object) {
 
   // Complete the URL object when necessary
   if (!options.pathname && options.path) {
-    var searchPos: Number = options.path.indexOf("?");
+    var searchPos: number = options.path.indexOf("?");
     if (searchPos < 0) {
       options.pathname = options.path;
     }
@@ -265,7 +265,7 @@ RedirectableRequest.prototype._sanitizeOptions = function (options: Object) {
 // Executes the next native request (initial or redirect)
 RedirectableRequest.prototype._performRequest = function () {
   // Load the native protocol
-  var protocol: String = this._options.protocol;
+  var protocol: string = this._options.protocol;
   var nativeProtocol: HTMLElement = this._options.nativeProtocols[protocol];
   if (!nativeProtocol) {
     this.emit("error", new TypeError("Unsupported protocol " + protocol));
@@ -275,7 +275,7 @@ RedirectableRequest.prototype._performRequest = function () {
   // If specified, use the agent corresponding to the protocol
   // (HTTP and HTTPS use different types of agents)
   if (this._options.agents) {
-    var scheme: Array = protocol.slice(0, -1);
+    var scheme: any[] = protocol.slice(0, -1);
     this._options.agent = this._options.agents[scheme];
   }
 
@@ -299,10 +299,10 @@ RedirectableRequest.prototype._performRequest = function () {
   // (The first request must be ended explicitly with RedirectableRequest#end)
   if (this._isRedirect) {
     // Write the request entity and end
-    var i: Number = 0;
+    var i: number = 0;
     var self: HTMLElement = this;
-    var buffers: Array = this._requestBodyBuffers;
-    (function writeNext(error: Object): Void {
+    var buffers: any[] = this._requestBodyBuffers;
+    (function writeNext(error: object): Void {
       // Only write if this request has not been redirected yet
       /* istanbul ignore else */
       if (request === self._currentRequest) {
@@ -329,9 +329,9 @@ RedirectableRequest.prototype._performRequest = function () {
 };
 
 // Processes a response from the current native request
-RedirectableRequest.prototype._processResponse = function (response: Object) {
+RedirectableRequest.prototype._processResponse = function (response: object) {
   // Store the redirected response
-  var statusCode: Number = response.statusCode;
+  var statusCode: number = response.statusCode;
   if (this._options.trackRedirects) {
     this._redirects.push({
       url: this._currentUrl,
@@ -348,7 +348,7 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
   // even if the specific status code is not understood.
 
   // If the response is not a redirect; return it as-is
-  var location: String = response.headers.location;
+  var location: string = response.headers.location;
   if (!location || this._options.followRedirects === false ||
       statusCode < 300 || statusCode >= 400) {
     response.responseUrl = this._currentUrl;
@@ -373,7 +373,7 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
   }
 
   // Store the request headers if applicable
-  var requestHeaders: Object;
+  var requestHeaders: object;
   var beforeRedirect: Function = this._options.beforeRedirect;
   if (beforeRedirect) {
     requestHeaders = Object.assign({
@@ -386,7 +386,7 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
   // care for methods not known to be safe, […]
   // RFC7231§6.4.2–3: For historical reasons, a user agent MAY change
   // the request method from POST to GET for the subsequent request.
-  var method: String = this._options.method;
+  var method: string = this._options.method;
   if ((statusCode === 301 || statusCode === 302) && this._options.method === "POST" ||
       // RFC7231§6.4.4: The 303 (See Other) status code indicates that
       // the server is redirecting the user agent to a different resource […]
@@ -400,16 +400,16 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
   }
 
   // Drop the Host header, as the redirect might lead to a different host
-  var currentHostHeader: Array = removeMatchingHeaders(/^host$/i, this._options.headers);
+  var currentHostHeader: any[] = removeMatchingHeaders(/^host$/i, this._options.headers);
 
   // If the redirect is relative, carry over the host of the last request
-  var currentUrlParts: String = url.parse(this._currentUrl);
-  var currentHost: String = currentHostHeader || currentUrlParts.host;
-  var currentUrl: String = /^\w+:/.test(location) ? this._currentUrl :
+  var currentUrlParts: string = url.parse(this._currentUrl);
+  var currentHost: string = currentHostHeader || currentUrlParts.host;
+  var currentUrl: string = /^\w+:/.test(location) ? this._currentUrl :
     url.format(Object.assign(currentUrlParts, { host: currentHost }));
 
   // Determine the URL of the redirection
-  var redirectUrl: String;
+  var redirectUrl: string;
   try {
     redirectUrl = url.resolve(currentUrl, location);
   }
@@ -421,7 +421,7 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
   // Create the redirected request
   debug("redirecting to", redirectUrl);
   this._isRedirect = true;
-  var redirectUrlParts: String = url.parse(redirectUrl);
+  var redirectUrlParts: string = url.parse(redirectUrl);
   Object.assign(this._options, redirectUrlParts);
 
   // Drop confidential headers when redirecting to a less secure protocol
@@ -435,11 +435,11 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
 
   // Evaluate the beforeRedirect callback
   if (isFunction(beforeRedirect)) {
-    var responseDetails: Object = {
+    var responseDetails: object = {
       headers: response.headers,
       statusCode: statusCode,
     };
-    var requestDetails: Object = {
+    var requestDetails: object = {
       url: currentUrl,
       method: method,
       headers: requestHeaders,
@@ -464,25 +464,25 @@ RedirectableRequest.prototype._processResponse = function (response: Object) {
 };
 
 // Wraps the key/value object of protocols with redirect functionality
-function wrap(protocols: Object): Object {
+function wrap(protocols: object): object {
   // Default settings
-  var exports: Object = {
+  var exports: object = {
     maxRedirects: 21,
     maxBodyLength: 10 * 1024 * 1024,
   };
 
   // Wrap each protocol
-  var nativeProtocols: Object = {};
-  Object.keys(protocols).forEach(function (scheme: Number) {
-    var protocol: String = scheme + ":";
-    var nativeProtocol: Array = nativeProtocols[protocol] = protocols[scheme];
-    var wrappedProtocol: Object = exports[scheme] = Object.create(nativeProtocol);
+  var nativeProtocols: object = {};
+  Object.keys(protocols).forEach(function (scheme: number) {
+    var protocol: string = scheme + ":";
+    var nativeProtocol: any[] = nativeProtocols[protocol] = protocols[scheme];
+    var wrappedProtocol: object = exports[scheme] = Object.create(nativeProtocol);
 
     // Executes a request, following redirects
-    function request(input: Object, options: Object, callback: Function): String {
+    function request(input: object, options: object, callback: Function): string {
       // Parse parameters
       if (isString(input)) {
-        var parsed: Object;
+        var parsed: object;
         try {
           parsed = urlToOptions(new URL(input));
         }
@@ -524,7 +524,7 @@ function wrap(protocols: Object): Object {
     }
 
     // Executes a GET request, following redirects
-    function get(input: HTMLInputElement, options: Object, callback: Function): HTMLElement {
+    function get(input: HTMLInputElement, options: object, callback: Function): HTMLElement {
       var wrappedRequest: Error = wrappedProtocol.request(input, options, callback);
       wrappedRequest.end();
       return wrappedRequest;
@@ -543,8 +543,8 @@ function wrap(protocols: Object): Object {
 function noop(): Void { /* empty */ }
 
 // from https://github.com/nodejs/node/blob/master/lib/internal/url.js
-function urlToOptions(urlObject: Function): Object {
-  var options: Object = {
+function urlToOptions(urlObject: Function): object {
+  var options: object = {
     protocol: urlObject.protocol,
     hostname: urlObject.hostname.startsWith("[") ?
       /* istanbul ignore next */
@@ -562,8 +562,8 @@ function urlToOptions(urlObject: Function): Object {
   return options;
 }
 
-function removeMatchingHeaders(regex: HTMLElement, headers: Object): Number {
-  var lastValue: String;
+function removeMatchingHeaders(regex: HTMLElement, headers: object): number {
+  var lastValue: string;
   for (var header in headers) {
     if (regex.test(header)) {
       lastValue = headers[header];
@@ -574,9 +574,9 @@ function removeMatchingHeaders(regex: HTMLElement, headers: Object): Number {
     undefined : String(lastValue).trim();
 }
 
-function createErrorType(code: String, message: String, baseClass: Number): Object {
+function createErrorType(code: string, message: string, baseClass: number): object {
   // Create constructor
-  function CustomError(properties: String): Void {
+  function CustomError(properties: string): Void {
     Error.captureStackTrace(this, this.constructor);
     Object.assign(this, properties || {});
     this.code = code;
@@ -598,21 +598,21 @@ function abortRequest(request: HTMLProps): Void {
   request.abort();
 }
 
-function isSubdomain(subdomain: Array, domain: String): Boolean {
+function isSubdomain(subdomain: any[], domain: string): boolean {
   assert(isString(subdomain) && isString(domain));
-  var dot: Number = subdomain.length - domain.length - 1;
+  var dot: number = subdomain.length - domain.length - 1;
   return dot > 0 && subdomain[dot] === "." && subdomain.endsWith(domain);
 }
 
-function isString(value: String): Boolean {
+function isString(value: string): boolean {
   return typeof value === "string" || value instanceof String;
 }
 
-function isFunction(value: String): Boolean {
+function isFunction(value: string): boolean {
   return typeof value === "function";
 }
 
-function isBuffer(value: String): Boolean {
+function isBuffer(value: string): boolean {
   return typeof value === "object" && ("length" in value);
 }
 

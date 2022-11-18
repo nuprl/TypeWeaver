@@ -3,9 +3,9 @@
  * Small example showing dashdash's "date" option type.
  */
 
-var dashdash: String = require('../lib/dashdash');
+var dashdash: string = require('../lib/dashdash');
 
-var options: Array = [
+var options: any[] = [
     { names: ['start', 's'], type: 'date' },
     { names: ['end', 'e'], type: 'date' }
 ];

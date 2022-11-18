@@ -4,8 +4,8 @@
 
 process.title = 'mime';
 let mime: HTMLElement = require('.');
-let pkg: Object = require('./package.json');
-let args: String = process.argv.splice(2);
+let pkg: object = require('./package.json');
+let args: string = process.argv.splice(2);
 
 if (args.includes('--version') || args.includes('-v') || args.includes('--v')) {
   console.log(pkg.version);
@@ -40,14 +40,14 @@ if (args.includes('--version') || args.includes('-v') || args.includes('--v')) {
   `);
   process.exit(0);
 } else if (args.includes('--reverse') || args.includes('-r')) {
-  let mimeType: String = args[args.length-1];
-  let extension: String = mime.getExtension(mimeType);
+  let mimeType: string = args[args.length-1];
+  let extension: string = mime.getExtension(mimeType);
   process.stdout.write(extension + '\n');
   process.exit(0);
 }
 
-let file: String = args[0];
-let type: String = mime.getType(file);
+let file: string = args[0];
+let type: string = mime.getType(file);
 
 process.stdout.write(type + '\n');
 

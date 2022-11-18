@@ -3,7 +3,7 @@ import { URL } from '../';
 import Benchmark from 'benchmark';
 import testData from '../test/web-platform-tests/resources/urltestdata.json';
 
-const testInputs: Array = testData.filter((c: String) => typeof c === "object").map((c: Object) => c.input);
+const testInputs: any[] = testData.filter((c: string) => typeof c === "object").map((c: object) => c.input);
 
 const benchmark: HTMLElement = new Benchmark(() => {
   for (const input of testInputs) {

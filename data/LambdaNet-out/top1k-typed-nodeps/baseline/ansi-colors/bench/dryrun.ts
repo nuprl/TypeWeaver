@@ -1,5 +1,5 @@
-const lib: String = process.argv[2] || 'colors';
-const libs: Object = {
+const lib: string = process.argv[2] || 'colors';
+const libs: object = {
   chalk: require('chalk'),
   colors: require('..')
 };

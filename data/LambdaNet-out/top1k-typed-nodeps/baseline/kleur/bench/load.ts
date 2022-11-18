@@ -1,15 +1,15 @@
 console.time('chalk');
-const chalk: String = require('chalk');
+const chalk: string = require('chalk');
 console.timeEnd('chalk');
 
 console.time('kleur');
-const kleur: String = require('../index');
+const kleur: string = require('../index');
 console.timeEnd('kleur');
 
 console.time('kleur/colors');
-const colors: String = require('../colors');
+const colors: string = require('../colors');
 console.timeEnd('kleur/colors');
 
 console.time('ansi-colors');
-const color: String = require('ansi-colors');
+const color: string = require('ansi-colors');
 console.timeEnd('ansi-colors');

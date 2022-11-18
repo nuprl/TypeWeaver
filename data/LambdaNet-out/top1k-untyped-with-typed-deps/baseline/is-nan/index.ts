@@ -3,11 +3,11 @@
 var callBind: Function = require('call-bind');
 var define: Function = require('define-properties');
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 var getPolyfill: Function = require('./polyfill');
-var shim: String = require('./shim');
+var shim: string = require('./shim');
 
-var polyfill: Boolean = callBind(getPolyfill(), Number);
+var polyfill: boolean = callBind(getPolyfill(), Number);
 
 /* http://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan */
 

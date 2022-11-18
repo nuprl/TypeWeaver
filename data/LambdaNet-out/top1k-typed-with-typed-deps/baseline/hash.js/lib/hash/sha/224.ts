@@ -1,9 +1,9 @@
 'use strict';
 
-var utils: String = require('../utils');
+var utils: string = require('../utils');
 var SHA256: Function = require('./256');
 
-function SHA224(): String {
+function SHA224(): string {
   if (!(this instanceof SHA224))
     return new SHA224();
 
@@ -20,7 +20,7 @@ SHA224.outSize = 224;
 SHA224.hmacStrength = 192;
 SHA224.padLength = 64;
 
-SHA224.prototype._digest = function digest(enc: Number): String {
+SHA224.prototype._digest = function digest(enc: number): string {
   // Just truncate output
   if (enc === 'hex')
     return utils.toHex32(this.h.slice(0, 7), 'big');

@@ -36,7 +36,7 @@ import baseInRange from './.internal/baseInRange.js'
  * inRange(-3, -2, -6)
  * // => true
  */
-function inRange(number: Number, start: Number, end: Number): String {
+function inRange(number: number, start: number, end: number): string {
   if (end === undefined) {
     end = start
     start = 0

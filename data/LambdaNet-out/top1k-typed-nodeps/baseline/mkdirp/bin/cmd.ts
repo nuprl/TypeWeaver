@@ -22,11 +22,11 @@ OPTIONS are:
   --manual       Use manual implementation, even if native is available
 `
 
-const dirs: Array = []
-const opts: Object = {}
-let print: Boolean = false
-let dashdash: Boolean = false
-let manual: Boolean = false
+const dirs: any[] = []
+const opts: object = {}
+let print: boolean = false
+let dashdash: boolean = false
+let manual: boolean = false
 for (const arg of process.argv.slice(2)) {
   if (dashdash)
     dirs.push(arg)
@@ -43,7 +43,7 @@ for (const arg of process.argv.slice(2)) {
   } else if (arg === '-p' || arg === '--print') {
     print = true
   } else if (/^-m/.test(arg) || /^--mode=/.test(arg)) {
-    const mode: Number = parseInt(arg.replace(/^(-m|--mode=)/, ''), 8)
+    const mode: number = parseInt(arg.replace(/^(-m|--mode=)/, ''), 8)
     if (isNaN(mode)) {
       console.error(`invalid mode argument: ${arg}\nMust be an octal number.`)
       process.exit(1)
@@ -53,13 +53,13 @@ for (const arg of process.argv.slice(2)) {
     dirs.push(arg)
 }
 
-const mkdirp: String = require('../')
+const mkdirp: string = require('../')
 const impl: Function = manual ? mkdirp.manual : mkdirp
 if (dirs.length === 0)
   console.error(usage())
 
-Promise.all(dirs.map((dir: String) => impl(dir, opts)))
-  .then((made: Array) => print ? made.forEach((m: String) => m && console.log(m)) : null)
+Promise.all(dirs.map((dir: string) => impl(dir, opts)))
+  .then((made: any[]) => print ? made.forEach((m: string) => m && console.log(m)) : null)
   .catch((er: HTMLElement) => {
     console.error(er.message)
     if (er.code)

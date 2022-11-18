@@ -3,8 +3,8 @@
 const { PassThrough } = require('stream');
 
 module.exports = function (/*streams...*/) {
-  var sources: Array = []
-  var output: Array  = new PassThrough({objectMode: true})
+  var sources: any[] = []
+  var output: any[]  = new PassThrough({objectMode: true})
 
   output.setMaxListeners(0)
 
@@ -17,7 +17,7 @@ module.exports = function (/*streams...*/) {
 
   return output
 
-  function add (source: Array): Object {
+  function add (source: any[]): object {
     if (Array.isArray(source)) {
       source.forEach(add)
       return this
@@ -30,12 +30,12 @@ module.exports = function (/*streams...*/) {
     return this
   }
 
-  function isEmpty (): Boolean {
+  function isEmpty (): boolean {
     return sources.length == 0;
   }
 
-  function remove (source: String): Void {
-    sources = sources.filter(function (it: String) { return it !== source })
+  function remove (source: string): Void {
+    sources = sources.filter(function (it: string) { return it !== source })
     if (!sources.length && output.readable) { output.end() }
   }
 }

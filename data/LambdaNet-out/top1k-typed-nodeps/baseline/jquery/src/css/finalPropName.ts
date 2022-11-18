@@ -1,15 +1,15 @@
 import document from "../var/document.js";
 
-var cssPrefixes: Array = [ "Webkit", "Moz", "ms" ],
+var cssPrefixes: any[] = [ "Webkit", "Moz", "ms" ],
 	emptyStyle: Function = document.createElement( "div" ).style,
-	vendorProps: Object = {};
+	vendorProps: object = {};
 
 // Return a vendor-prefixed property or undefined
-function vendorPropName( name: String ): Object {
+function vendorPropName( name: string ): object {
 
 	// Check for vendor prefixed names
-	var capName: String = name[ 0 ].toUpperCase() + name.slice( 1 ),
-		i: Number = cssPrefixes.length;
+	var capName: string = name[ 0 ].toUpperCase() + name.slice( 1 ),
+		i: number = cssPrefixes.length;
 
 	while ( i-- ) {
 		name = cssPrefixes[ i ] + capName;
@@ -20,8 +20,8 @@ function vendorPropName( name: String ): Object {
 }
 
 // Return a potentially-mapped vendor prefixed property
-function finalPropName( name: String ): Array {
-	var final: String = vendorProps[ name ];
+function finalPropName( name: string ): any[] {
+	var final: string = vendorProps[ name ];
 
 	if ( final ) {
 		return final;

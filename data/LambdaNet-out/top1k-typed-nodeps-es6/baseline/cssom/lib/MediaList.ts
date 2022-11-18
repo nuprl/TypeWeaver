@@ -36,7 +36,7 @@ CSSOM.MediaList.prototype = {
 	/**
 	 * @param {string} medium
 	 */
-	appendMedium: function(medium: String) {
+	appendMedium: function(medium: string) {
 		if (Array.prototype.indexOf.call(this, medium) === -1) {
 			this[this.length] = medium;
 			this.length++;
@@ -46,8 +46,8 @@ CSSOM.MediaList.prototype = {
 	/**
 	 * @param {string} medium
 	 */
-	deleteMedium: function(medium: String) {
-		var index: String = Array.prototype.indexOf.call(this, medium);
+	deleteMedium: function(medium: string) {
+		var index: string = Array.prototype.indexOf.call(this, medium);
 		if (index !== -1) {
 			Array.prototype.splice.call(this, index, 1);
 		}
@@ -57,5 +57,5 @@ CSSOM.MediaList.prototype = {
 
 
 //.CommonJS
-export const MediaList: Object = CSSOM.MediaList;
+export const MediaList: object = CSSOM.MediaList;
 ///CommonJS

@@ -1,9 +1,9 @@
 'use strict';
 
-export default function diff(a: Array, b: Array, c: Boolean): Array {
-  var len: Number = a.length;
-  var rest: Array = [];
-  var arr: Array = [];
+export default function diff(a: any[], b: any[], c: boolean): any[] {
+  var len: number = a.length;
+  var rest: any[] = [];
+  var arr: any[] = [];
 
   if (!b) {
     return a;
@@ -16,7 +16,7 @@ export default function diff(a: Array, b: Array, c: Boolean): Array {
   }
 
   while (len--) {
-    var ele: String = a[len];
+    var ele: string = a[len];
     if (rest.indexOf(ele) === -1) {
       arr.push(ele);
     }

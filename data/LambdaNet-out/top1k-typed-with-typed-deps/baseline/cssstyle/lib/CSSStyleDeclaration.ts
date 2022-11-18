@@ -3,9 +3,9 @@
  * https://github.com/NV/CSSOM
  ********************************************************************/
 'use strict';
-var CSSOM: Array = require('cssom');
-var allProperties: Array = require('./allProperties');
-var allExtraProperties: Array = require('./allExtraProperties');
+var CSSOM: any[] = require('cssom');
+var allProperties: any[] = require('./allProperties');
+var allExtraProperties: any[] = require('./allExtraProperties');
 var implementedProperties: Map = require('./implementedProperties');
 var { dashedToCamelCase } = require('./parsers');
 var getBasicPropertyDescriptor: Function = require('./utils/getBasicPropertyDescriptor');
@@ -14,7 +14,7 @@ var getBasicPropertyDescriptor: Function = require('./utils/getBasicPropertyDesc
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
  */
-var CSSStyleDeclaration: Function = function CSSStyleDeclaration(onChangeCallback: Boolean): Void {
+var CSSStyleDeclaration: Function = function CSSStyleDeclaration(onChangeCallback: boolean): Void {
   this._values = {};
   this._importants = {};
   this._length = 0;
@@ -34,7 +34,7 @@ CSSStyleDeclaration.prototype = {
    * @return {string} the value of the property if it has been explicitly set for this declaration block.
    * Returns the empty string if the property has not been set.
    */
-  getPropertyValue: function(name: String) {
+  getPropertyValue: function(name: string) {
     if (!this._values.hasOwnProperty(name)) {
       return '';
     }
@@ -48,7 +48,7 @@ CSSStyleDeclaration.prototype = {
    * @param {string} [priority=null] "important" or null
    * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
    */
-  setProperty: function(name: String, value: Number, priority: String) {
+  setProperty: function(name: string, value: number, priority: string) {
     if (value === undefined) {
       return;
     }
@@ -56,12 +56,12 @@ CSSStyleDeclaration.prototype = {
       this.removeProperty(name);
       return;
     }
-    var isCustomProperty: Boolean = name.indexOf('--') === 0;
+    var isCustomProperty: boolean = name.indexOf('--') === 0;
     if (isCustomProperty) {
       this._setProperty(name, value, priority);
       return;
     }
-    var lowercaseName: String = name.toLowerCase();
+    var lowercaseName: string = name.toLowerCase();
     if (!allProperties.has(lowercaseName) && !allExtraProperties.has(lowercaseName)) {
       return;
     }
@@ -69,7 +69,7 @@ CSSStyleDeclaration.prototype = {
     this[lowercaseName] = value;
     this._importants[lowercaseName] = priority;
   },
-  _setProperty: function(name: String, value: Number, priority: String) {
+  _setProperty: function(name: string, value: number, priority: string) {
     if (value === undefined) {
       return;
     }
@@ -79,7 +79,7 @@ CSSStyleDeclaration.prototype = {
     }
     if (this._values[name]) {
       // Property already exist. Overwrite it.
-      var index: String = Array.prototype.indexOf.call(this, name);
+      var index: string = Array.prototype.indexOf.call(this, name);
       if (index < 0) {
         this[this._length] = name;
         this._length++;
@@ -101,16 +101,16 @@ CSSStyleDeclaration.prototype = {
    * @return {string} the value of the property if it has been explicitly set for this declaration block.
    * Returns the empty string if the property has not been set or the property name does not correspond to a known CSS property.
    */
-  removeProperty: function(name: String) {
+  removeProperty: function(name: string) {
     if (!this._values.hasOwnProperty(name)) {
       return '';
     }
 
-    var prevValue: String = this._values[name];
+    var prevValue: string = this._values[name];
     delete this._values[name];
     delete this._importants[name];
 
-    var index: String = Array.prototype.indexOf.call(this, name);
+    var index: string = Array.prototype.indexOf.call(this, name);
     if (index < 0) {
       return prevValue;
     }
@@ -129,7 +129,7 @@ CSSStyleDeclaration.prototype = {
    *
    * @param {String} name
    */
-  getPropertyPriority: function(name: String) {
+  getPropertyPriority: function(name: string) {
     return this._importants[name] || '';
   },
 
@@ -156,7 +156,7 @@ CSSStyleDeclaration.prototype = {
   /**
    *   http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-item
    */
-  item: function(index: Number) {
+  item: function(index: number) {
     index = parseInt(index, 10);
     if (index < 0 || index >= this._length) {
       return '';
@@ -168,11 +168,11 @@ CSSStyleDeclaration.prototype = {
 Object.defineProperties(CSSStyleDeclaration.prototype, {
   cssText: {
     get: function() {
-      var properties: Array = [];
-      var i: Number;
-      var name: String;
-      var value: String;
-      var priority: Number;
+      var properties: any[] = [];
+      var i: number;
+      var name: string;
+      var value: string;
+      var priority: number;
       for (i = 0; i < this._length; i++) {
         name = this[i];
         value = this.getPropertyValue(name);
@@ -184,20 +184,20 @@ Object.defineProperties(CSSStyleDeclaration.prototype, {
       }
       return properties.join(' ');
     },
-    set: function(value: String) {
-      var i: Number;
+    set: function(value: string) {
+      var i: number;
       this._values = {};
       Array.prototype.splice.call(this, 0, this._length);
       this._importants = {};
-      var dummyRule: Object;
+      var dummyRule: object;
       try {
         dummyRule = CSSOM.parse('#bogus{' + value + '}').cssRules[0].style;
       } catch (err) {
         // malformed css, just return
         return;
       }
-      var rule_length: Number = dummyRule.length;
-      var name: String;
+      var rule_length: number = dummyRule.length;
+      var name: string;
       for (i = 0; i < rule_length; ++i) {
         name = dummyRule[i];
         this.setProperty(
@@ -227,8 +227,8 @@ Object.defineProperties(CSSStyleDeclaration.prototype, {
      * length. If the new length is more, it does nothing, the new indices
      * will be undefined until set.
      **/
-    set: function(value: String) {
-      var i: Number;
+    set: function(value: string) {
+      var i: number;
       for (i = value; i < this._length; i++) {
         delete this[i];
       }
@@ -241,17 +241,17 @@ Object.defineProperties(CSSStyleDeclaration.prototype, {
 
 require('./properties')(CSSStyleDeclaration.prototype);
 
-allProperties.forEach(function(property: String) {
+allProperties.forEach(function(property: string) {
   if (!implementedProperties.has(property)) {
-    var declaration: String = getBasicPropertyDescriptor(property);
+    var declaration: string = getBasicPropertyDescriptor(property);
     Object.defineProperty(CSSStyleDeclaration.prototype, property, declaration);
     Object.defineProperty(CSSStyleDeclaration.prototype, dashedToCamelCase(property), declaration);
   }
 });
 
-allExtraProperties.forEach(function(property: String) {
+allExtraProperties.forEach(function(property: string) {
   if (!implementedProperties.has(property)) {
-    var declaration: String = getBasicPropertyDescriptor(property);
+    var declaration: string = getBasicPropertyDescriptor(property);
     Object.defineProperty(CSSStyleDeclaration.prototype, property, declaration);
     Object.defineProperty(CSSStyleDeclaration.prototype, dashedToCamelCase(property), declaration);
   }

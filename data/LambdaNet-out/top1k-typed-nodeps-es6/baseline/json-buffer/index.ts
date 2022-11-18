@@ -2,7 +2,7 @@
 //and handle indentation, like normal.
 //if anyone needs this... please send pull request.
 
-export const stringify: Function = function stringify (o: String): String {
+export const stringify: Function = function stringify (o: string): string {
   if('undefined' == typeof o) return o
 
   if(o && Buffer.isBuffer(o))
@@ -12,13 +12,13 @@ export const stringify: Function = function stringify (o: String): String {
     o =  o.toJSON()
 
   if(o && 'object' === typeof o) {
-    var s: String = ''
-    var array: Boolean = Array.isArray(o)
+    var s: string = ''
+    var array: boolean = Array.isArray(o)
     s = array ? '[' : '{'
-    var first: Boolean = true
+    var first: boolean = true
 
     for(var k in o) {
-      var ignore: Boolean = 'function' == typeof o[k] || (!array && 'undefined' === typeof o[k])
+      var ignore: boolean = 'function' == typeof o[k] || (!array && 'undefined' === typeof o[k])
       if(Object.hasOwnProperty.call(o, k) && !ignore) {
         if(!first)
           s += ','
@@ -45,8 +45,8 @@ export const stringify: Function = function stringify (o: String): String {
     return JSON.stringify(o)
 };
 
-export const parse: Function = function (s: String) {
-  return JSON.parse(s, function (key: String, value: String) {
+export const parse: Function = function (s: string) {
+  return JSON.parse(s, function (key: string, value: string) {
     if('string' === typeof value) {
       if(/^:base64:/.test(value))
         return Buffer.from(value.substring(8), 'base64')

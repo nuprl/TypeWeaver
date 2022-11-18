@@ -21,9 +21,9 @@ function noop(): Void {}
 
 // to avoid using try/catch inside critical functions, we
 // extract them to here.
-var LAST_ERROR: Array = null;
-var IS_ERROR: Number = {};
-function getThen(obj: Promise): Array {
+var LAST_ERROR: any[] = null;
+var IS_ERROR: number = {};
+function getThen(obj: Promise): any[] {
   try {
     return obj.then;
   } catch (ex) {
@@ -32,7 +32,7 @@ function getThen(obj: Promise): Array {
   }
 }
 
-function tryCallOne(fn: Function, a: String): Void {
+function tryCallOne(fn: Function, a: string): Void {
   try {
     return fn(a);
   } catch (ex) {
@@ -40,7 +40,7 @@ function tryCallOne(fn: Function, a: String): Void {
     return IS_ERROR;
   }
 }
-function tryCallTwo(fn: Function, a: String, b: Number): Void {
+function tryCallTwo(fn: Function, a: string, b: number): Void {
   try {
     fn(a, b);
   } catch (ex) {
@@ -51,7 +51,7 @@ function tryCallTwo(fn: Function, a: String, b: Number): Void {
 
 module.exports = Promise;
 
-function Promise(fn: String): Void {
+function Promise(fn: string): Void {
   if (typeof this !== 'object') {
     throw new TypeError('Promises must be constructed via new');
   }
@@ -69,23 +69,23 @@ Promise._onHandle = null;
 Promise._onReject = null;
 Promise._noop = noop;
 
-Promise.prototype.then = function(onFulfilled: Number, onRejected: Number) {
+Promise.prototype.then = function(onFulfilled: number, onRejected: number) {
   if (this.constructor !== Promise) {
     return safeThen(this, onFulfilled, onRejected);
   }
-  var res: String = new Promise(noop);
+  var res: string = new Promise(noop);
   handle(this, new Handler(onFulfilled, onRejected, res));
   return res;
 };
 
-function safeThen(self: Object, onFulfilled: Number, onRejected: Number): Promise {
-  return new self.constructor(function (resolve: Function, reject: String) {
+function safeThen(self: object, onFulfilled: number, onRejected: number): Promise {
+  return new self.constructor(function (resolve: Function, reject: string) {
     var res: Promise = new Promise(noop);
     res.then(resolve, reject);
     handle(self, new Handler(onFulfilled, onRejected, res));
   });
 }
-function handle(self: HTMLElement, deferred: Array): Void {
+function handle(self: HTMLElement, deferred: any[]): Void {
   while (self._state === 3) {
     self = self._value;
   }
@@ -111,7 +111,7 @@ function handle(self: HTMLElement, deferred: Array): Void {
 
 function handleResolved(self: HTMLElement, deferred: HTMLElement): Void {
   asap(function() {
-    var cb: String = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
+    var cb: string = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
     if (cb === null) {
       if (self._state === 1) {
         resolve(deferred.promise, self._value);
@@ -120,7 +120,7 @@ function handleResolved(self: HTMLElement, deferred: HTMLElement): Void {
       }
       return;
     }
-    var ret: Number = tryCallOne(cb, self._value);
+    var ret: number = tryCallOne(cb, self._value);
     if (ret === IS_ERROR) {
       reject(deferred.promise, LAST_ERROR);
     } else {
@@ -128,7 +128,7 @@ function handleResolved(self: HTMLElement, deferred: HTMLElement): Void {
     }
   });
 }
-function resolve(self: Object, newValue: String): String {
+function resolve(self: object, newValue: string): string {
   // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
   if (newValue === self) {
     return reject(
@@ -162,7 +162,7 @@ function resolve(self: Object, newValue: String): String {
   finale(self);
 }
 
-function reject(self: Object, newValue: Number): Void {
+function reject(self: object, newValue: number): Void {
   self._state = 2;
   self._value = newValue;
   if (Promise._onReject) {
@@ -183,7 +183,7 @@ function finale(self: HTMLElement): Void {
   }
 }
 
-function Handler(onFulfilled: String, onRejected: String, promise: Object): Void{
+function Handler(onFulfilled: string, onRejected: string, promise: object): Void{
   this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
   this.onRejected = typeof onRejected === 'function' ? onRejected : null;
   this.promise = promise;
@@ -195,13 +195,13 @@ function Handler(onFulfilled: String, onRejected: String, promise: Object): Void
  *
  * Makes no guarantees about asynchrony.
  */
-function doResolve(fn: String, promise: Object): Void {
-  var done: Boolean = false;
-  var res: Number = tryCallTwo(fn, function (value: String) {
+function doResolve(fn: string, promise: object): Void {
+  var done: boolean = false;
+  var res: number = tryCallTwo(fn, function (value: string) {
     if (done) return;
     done = true;
     resolve(promise, value);
-  }, function (reason: String) {
+  }, function (reason: string) {
     if (done) return;
     done = true;
     reject(promise, reason);

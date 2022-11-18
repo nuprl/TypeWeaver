@@ -1,11 +1,11 @@
 'use strict';
 
-export default function(arr: Array) {
-  var len: Number = arr.length;
-  var res: Array = [];
+export default function(arr: any[]) {
+  var len: number = arr.length;
+  var res: any[] = [];
 
   while (len--) {
-    var curr: String = arr[len];
+    var curr: string = arr[len];
     if (res.indexOf(curr) === -1) {
       res.push(curr);
     }

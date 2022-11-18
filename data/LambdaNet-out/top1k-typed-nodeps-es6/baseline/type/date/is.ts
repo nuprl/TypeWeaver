@@ -4,7 +4,7 @@ import isPrototype from '../prototype/is';
 
 var dateValueOf: Function = Date.prototype.valueOf;
 
-export default function (value: Object) {
+export default function (value: object) {
 	if (!value) return false;
 
 	try {

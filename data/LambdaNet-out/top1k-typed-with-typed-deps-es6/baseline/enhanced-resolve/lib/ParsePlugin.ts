@@ -26,12 +26,12 @@ export default class ParsePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("ParsePlugin", (request: Object, resolveContext: Object, callback: Function) => {
-				const parsed: Object = resolver.parse(/** @type {string} */ (request.request));
-				const obj: Object = { ...request, ...parsed, ...this.requestOptions };
+			.tapAsync("ParsePlugin", (request: object, resolveContext: object, callback: Function) => {
+				const parsed: object = resolver.parse(/** @type {string} */ (request.request));
+				const obj: object = { ...request, ...parsed, ...this.requestOptions };
 				if (request.query && !parsed.query) {
 					obj.query = request.query;
 				}
@@ -45,8 +45,8 @@ export default class ParsePlugin {
 				}
 				// There is an edge-case where a request with # can be a path or a fragment -> try both
 				if (obj.request && !obj.query && obj.fragment) {
-					const directory: Boolean = obj.fragment.endsWith("/");
-					const alternative: Object = {
+					const directory: boolean = obj.fragment.endsWith("/");
+					const alternative: object = {
 						...obj,
 						directory,
 						request:
@@ -60,7 +60,7 @@ export default class ParsePlugin {
 						alternative,
 						null,
 						resolveContext,
-						(err: String, result: ResultPlugin) => {
+						(err: string, result: ResultPlugin) => {
 							if (err) return callback(err);
 							if (result) return callback(null, result);
 							resolver.doResolve(target, obj, null, resolveContext, callback);

@@ -83,7 +83,7 @@ class DFA {
 
     // Calculate from NFA transition table.
     const nfaTable: Function = this._nfa.getTransitionTable();
-    const nfaStates: Array = Object.keys(nfaTable);
+    const nfaStates: any[] = Object.keys(nfaTable);
 
     this._acceptingStateNumbers = new Set();
 
@@ -91,15 +91,15 @@ class DFA {
     const startState: State = nfaTable[nfaStates[0]][EPSILON_CLOSURE];
 
     // Init the worklist (states which should be in the DFA).
-    const worklist: Array = [startState];
+    const worklist: any[] = [startState];
 
-    const alphabet: Array = this.getAlphabet();
-    const nfaAcceptingStates: Array = this._nfa.getAcceptingStateNumbers();
+    const alphabet: any[] = this.getAlphabet();
+    const nfaAcceptingStates: any[] = this._nfa.getAcceptingStateNumbers();
 
     const dfaTable: Function = {};
 
     // Determine whether the combined DFA state is accepting.
-    const updateAcceptingStates: Function = (states: Array) => {
+    const updateAcceptingStates: Function = (states: any[]) => {
       for (const nfaAcceptingState of nfaAcceptingStates) {
         // If any of the states from NFA is accepting, DFA's
         // state is accepting as well.
@@ -111,18 +111,18 @@ class DFA {
     };
 
     while (worklist.length > 0) {
-      const states: Array = worklist.shift();
-      const dfaStateLabel: String = states.join(',');
+      const states: any[] = worklist.shift();
+      const dfaStateLabel: string = states.join(',');
       dfaTable[dfaStateLabel] = {};
 
       for (const symbol of alphabet) {
-        let onSymbol: Array = [];
+        let onSymbol: any[] = [];
 
         // Determine whether the combined state is accepting.
         updateAcceptingStates(states);
 
         for (const state of states) {
-          const nfaStatesOnSymbol: String = nfaTable[state][symbol];
+          const nfaStatesOnSymbol: string = nfaTable[state][symbol];
           if (!nfaStatesOnSymbol) {
             continue;
           }
@@ -136,10 +136,10 @@ class DFA {
         }
 
         const dfaStatesOnSymbolSet: Map = new Set(onSymbol);
-        const dfaStatesOnSymbol: Array = [...dfaStatesOnSymbolSet];
+        const dfaStatesOnSymbol: any[] = [...dfaStatesOnSymbolSet];
 
         if (dfaStatesOnSymbol.length > 0) {
-          const dfaOnSymbolStr: String = dfaStatesOnSymbol.join(',');
+          const dfaOnSymbolStr: string = dfaStatesOnSymbol.join(',');
 
           dfaTable[dfaStateLabel][symbol] = dfaOnSymbolStr;
 
@@ -158,18 +158,18 @@ class DFA {
    * combined states '1,2,3' -> 1, '3,4' -> 2, etc.
    */
   _remapStateNumbers(calculatedDFATable) {
-    const newStatesMap: Object = {};
+    const newStatesMap: object = {};
 
     this._originalTransitionTable = calculatedDFATable;
-    const transitionTable: Object = {};
+    const transitionTable: object = {};
 
-    Object.keys(calculatedDFATable).forEach((originalNumber: Number, newNumber: Number) => {
+    Object.keys(calculatedDFATable).forEach((originalNumber: number, newNumber: number) => {
       newStatesMap[originalNumber] = newNumber + 1;
     });
 
     for (const originalNumber in calculatedDFATable) {
-      const originalRow: Object = calculatedDFATable[originalNumber];
-      const row: Object = {};
+      const originalRow: object = calculatedDFATable[originalNumber];
+      const row: object = {};
 
       for (const symbol in originalRow) {
         row[symbol] = newStatesMap[originalRow[symbol]];
@@ -205,9 +205,9 @@ class DFA {
    * Checks whether this DFA accepts a string.
    */
   matches(string) {
-    let state: Number = 1;
-    let i: Number = 0;
-    const table: Object = this.getTransitionTable();
+    let state: number = 1;
+    let i: number = 0;
+    const table: object = this.getTransitionTable();
 
     while (string[i]) {
       state = table[state][string[i++]];

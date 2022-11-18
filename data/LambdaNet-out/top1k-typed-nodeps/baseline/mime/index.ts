@@ -1,4 +1,4 @@
 'use strict';
 
-let Mime: Array = require('./Mime');
+let Mime: any[] = require('./Mime');
 module.exports = new Mime(require('./types/standard'), require('./types/other'));

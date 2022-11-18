@@ -2,7 +2,7 @@ import { lexer } from 'css-tree';
 import { packNumber } from './Number.js';
 
 // http://www.w3.org/TR/css3-color/#svg-color
-const NAME_TO_HEX: Object = {
+const NAME_TO_HEX: object = {
     'aliceblue': 'f0f8ff',
     'antiquewhite': 'faebd7',
     'aqua': '0ff',
@@ -153,7 +153,7 @@ const NAME_TO_HEX: Object = {
     'yellowgreen': '9acd32'
 };
 
-const HEX_TO_NAME: Object = {
+const HEX_TO_NAME: object = {
     '800000': 'maroon',
     '800080': 'purple',
     '808000': 'olive',
@@ -194,7 +194,7 @@ const HEX_TO_NAME: Object = {
     'ffff00': 'yellow'
 };
 
-function hueToRgb(p: Number, q: Number, t: Number): Number {
+function hueToRgb(p: number, q: number, t: number): number {
     if (t < 0) {
         t += 1;
     }
@@ -213,16 +213,16 @@ function hueToRgb(p: Number, q: Number, t: Number): Number {
     return p;
 }
 
-function hslToRgb(h: Number, s: Number, l: Number, a: Function): Array {
-    let r: Number;
-    let g: Number;
-    let b: Number;
+function hslToRgb(h: number, s: number, l: number, a: Function): any[] {
+    let r: number;
+    let g: number;
+    let b: number;
 
     if (s === 0) {
         r = g = b = l; // achromatic
     } else {
-        const q: Number = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        const p: Number = 2 * l - q;
+        const q: number = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        const p: number = 2 * l - q;
 
         r = hueToRgb(p, q, h + 1 / 3);
         g = hueToRgb(p, q, h);
@@ -237,16 +237,16 @@ function hslToRgb(h: Number, s: Number, l: Number, a: Function): Array {
     ];
 }
 
-function toHex(value: String): String {
+function toHex(value: string): string {
     value = value.toString(16);
 
     return value.length === 1 ? '0' + value : value;
 }
 
-function parseFunctionArgs(functionArgs: Object, count: Number, rgb: Boolean): Array {
-    let cursor: Object = functionArgs.head;
-    let args: Array = [];
-    let wasValue: Boolean = false;
+function parseFunctionArgs(functionArgs: object, count: number, rgb: boolean): any[] {
+    let cursor: object = functionArgs.head;
+    let args: any[] = [];
+    let wasValue: boolean = false;
 
     while (cursor !== null) {
         const { type, value } = cursor.data;
@@ -320,8 +320,8 @@ function parseFunctionArgs(functionArgs: Object, count: Number, rgb: Boolean): A
         args[0].type = 'Angle';
     }
 
-    return args.map(function(arg: Object) {
-        let value: Number = Math.max(0, arg.value);
+    return args.map(function(arg: object) {
+        let value: number = Math.max(0, arg.value);
 
         switch (arg.type) {
             case 'Number':
@@ -353,9 +353,9 @@ function parseFunctionArgs(functionArgs: Object, count: Number, rgb: Boolean): A
     });
 }
 
-export function compressFunction(node: Object, item: Array): Void {
-    let functionName: String = node.name;
-    let args: Object;
+export function compressFunction(node: object, item: any[]): Void {
+    let functionName: string = node.name;
+    let args: object;
 
     if (functionName === 'rgba' || functionName === 'hsla') {
         args = parseFunctionArgs(node.children, 4, functionName === 'rgba');
@@ -375,7 +375,7 @@ export function compressFunction(node: Object, item: Array): Void {
             // always replace `rgba(0, 0, 0, 0)` to `transparent`
             // otherwise avoid replacement in gradients since it may break color transition
             // http://stackoverflow.com/questions/11829410/css3-gradient-rendering-issues-from-transparent-to-white
-            const scopeFunctionName: String = this.function && this.function.name;
+            const scopeFunctionName: string = this.function && this.function.name;
 
             if ((args[0] === 0 && args[1] === 0 && args[2] === 0) ||
                 !/^(?:to|from|color-stop)$|gradient$/i.test(scopeFunctionName)) {
@@ -392,7 +392,7 @@ export function compressFunction(node: Object, item: Array): Void {
 
         if (args[3] !== 1) {
             // replace argument values for normalized/interpolated
-            node.children.forEach((node: Object, item: Array, list: Map) => {
+            node.children.forEach((node: object, item: any[], list: Map) => {
                 if (node.type === 'Operator') {
                     if (node.value !== ',') {
                         list.remove(item);
@@ -445,16 +445,16 @@ export function compressFunction(node: Object, item: Array): Void {
     }
 }
 
-export function compressIdent(node: Object, item: Array): Void {
+export function compressIdent(node: object, item: any[]): Void {
     if (this.declaration === null) {
         return;
     }
 
-    let color: String = node.name.toLowerCase();
+    let color: string = node.name.toLowerCase();
 
     if (NAME_TO_HEX.hasOwnProperty(color) &&
         lexer.matchDeclaration(this.declaration).isType(node, 'color')) {
-        const hex: String = NAME_TO_HEX[color];
+        const hex: string = NAME_TO_HEX[color];
 
         if (hex.length + 1 <= color.length) {
             // replace for shorter hex value
@@ -475,8 +475,8 @@ export function compressIdent(node: Object, item: Array): Void {
     }
 }
 
-export function compressHex(node: Object, item: Array): Void {
-    let color: String = node.value.toLowerCase();
+export function compressHex(node: object, item: any[]): Void {
+    let color: string = node.value.toLowerCase();
 
     // #112233 -> #123
     if (color.length === 6 &&

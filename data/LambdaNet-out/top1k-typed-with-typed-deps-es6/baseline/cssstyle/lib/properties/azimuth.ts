@@ -2,22 +2,22 @@
 
 import parsers from '../parsers';
 
-export const definition: Object = {
-  set: function(v: String) {
-    var valueType: String = parsers.valueType(v);
+export const definition: object = {
+  set: function(v: string) {
+    var valueType: string = parsers.valueType(v);
     if (valueType === parsers.TYPES.ANGLE) {
       return this._setProperty('azimuth', parsers.parseAngle(v));
     }
     if (valueType === parsers.TYPES.KEYWORD) {
-      var keywords: Array = v
+      var keywords: any[] = v
         .toLowerCase()
         .trim()
         .split(/\s+/);
-      var hasBehind: Boolean = false;
+      var hasBehind: boolean = false;
       if (keywords.length > 2) {
         return;
       }
-      var behindIndex: Number = keywords.indexOf('behind');
+      var behindIndex: number = keywords.indexOf('behind');
       hasBehind = behindIndex !== -1;
 
       if (keywords.length === 2) {

@@ -1,7 +1,7 @@
 const { hasOwnProperty } = Object.prototype;
 
-function buildMap(list: Array, caseInsensitive: Boolean): Object {
-    const map: Object = Object.create(null);
+function buildMap(list: any[], caseInsensitive: boolean): object {
+    const map: object = Object.create(null);
 
     if (!Array.isArray(list)) {
         return null;
@@ -18,14 +18,14 @@ function buildMap(list: Array, caseInsensitive: Boolean): Object {
     return map;
 }
 
-function buildList(data: Object): Object {
+function buildList(data: object): object {
     if (!data) {
         return null;
     }
 
-    const tags: Array = buildMap(data.tags, true);
-    const ids: String = buildMap(data.ids);
-    const classes: String = buildMap(data.classes);
+    const tags: any[] = buildMap(data.tags, true);
+    const ids: string = buildMap(data.ids);
+    const classes: string = buildMap(data.classes);
 
     if (tags === null &&
         ids === null &&
@@ -40,14 +40,14 @@ function buildList(data: Object): Object {
     };
 }
 
-export function buildIndex(data: Object): Object {
-    let scopes: Boolean = false;
+export function buildIndex(data: object): object {
+    let scopes: boolean = false;
 
     if (data.scopes && Array.isArray(data.scopes)) {
         scopes = Object.create(null);
 
         for (let i = 0; i < data.scopes.length; i++) {
-            const list: Array = data.scopes[i];
+            const list: any[] = data.scopes[i];
 
             if (!list || !Array.isArray(list)) {
                 throw new Error('Wrong usage format');

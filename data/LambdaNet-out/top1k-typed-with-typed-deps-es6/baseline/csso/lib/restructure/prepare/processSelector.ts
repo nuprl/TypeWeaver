@@ -18,18 +18,18 @@ const nonFreezePseudoClasses: Error = new Set([
     'before'
 ]);
 
-export default function processSelector(node: Object, usageData: Object): Void {
+export default function processSelector(node: object, usageData: object): Void {
     const pseudos: Error = new Set();
 
-    node.prelude.children.forEach(function(simpleSelector: Object) {
-        let tagName: String = '*';
-        let scope: Number = 0;
+    node.prelude.children.forEach(function(simpleSelector: object) {
+        let tagName: string = '*';
+        let scope: number = 0;
 
-        simpleSelector.children.forEach(function(node: Object) {
+        simpleSelector.children.forEach(function(node: object) {
             switch (node.type) {
                 case 'ClassSelector':
                     if (usageData && usageData.scopes) {
-                        const classScope: Number = usageData.scopes[node.name] || 0;
+                        const classScope: number = usageData.scopes[node.name] || 0;
 
                         if (scope !== 0 && classScope !== scope) {
                             throw new Error('Selector can\'t has classes from different scopes: ' + generate(simpleSelector));
@@ -41,7 +41,7 @@ export default function processSelector(node: Object, usageData: Object): Void {
                     break;
 
                 case 'PseudoClassSelector': {
-                    const name: String = node.name.toLowerCase();
+                    const name: string = node.name.toLowerCase();
 
                     if (!nonFreezePseudoClasses.has(name)) {
                         pseudos.add(`:${name}`);
@@ -51,7 +51,7 @@ export default function processSelector(node: Object, usageData: Object): Void {
                 }
 
                 case 'PseudoElementSelector': {
-                    const name: String = node.name.toLowerCase();
+                    const name: string = node.name.toLowerCase();
 
                     if (!nonFreezePseudoElements.has(name)) {
                         pseudos.add(`::${name}`);

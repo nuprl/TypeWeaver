@@ -21,7 +21,7 @@
   }
 })(function() {
   'use strict';
-  return function isWindows(): Boolean {
+  return function isWindows(): boolean {
     return process && (process.platform === 'win32' || /^(msys|cygwin)$/.test(process.env.OSTYPE));
   };
 });

@@ -2,21 +2,21 @@
 const { utf8Encode, utf8DecodeWithoutBOM } = require("./encoding");
 const { percentDecodeBytes, utf8PercentEncodeString, isURLEncodedPercentEncode } = require("./percent-encoding");
 
-function p(char: String): String {
+function p(char: string): string {
   return char.codePointAt(0);
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-parser
-function parseUrlencoded(input: Element): Array {
-  const sequences: Array = strictlySplitByteSequence(input, p("&"));
-  const output: Array = [];
+function parseUrlencoded(input: Element): any[] {
+  const sequences: any[] = strictlySplitByteSequence(input, p("&"));
+  const output: any[] = [];
   for (const bytes of sequences) {
     if (bytes.length === 0) {
       continue;
     }
 
-    let name: String, value: Array;
-    const indexOfEqual: Number = bytes.indexOf(p("="));
+    let name: string, value: any[];
+    const indexOfEqual: number = bytes.indexOf(p("="));
 
     if (indexOfEqual >= 0) {
       name = bytes.slice(0, indexOfEqual);
@@ -29,8 +29,8 @@ function parseUrlencoded(input: Element): Array {
     name = replaceByteInByteSequence(name, 0x2B, 0x20);
     value = replaceByteInByteSequence(value, 0x2B, 0x20);
 
-    const nameString: String = utf8DecodeWithoutBOM(percentDecodeBytes(name));
-    const valueString: String = utf8DecodeWithoutBOM(percentDecodeBytes(value));
+    const nameString: string = utf8DecodeWithoutBOM(percentDecodeBytes(name));
+    const valueString: string = utf8DecodeWithoutBOM(percentDecodeBytes(value));
 
     output.push([nameString, valueString]);
   }
@@ -38,25 +38,25 @@ function parseUrlencoded(input: Element): Array {
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-string-parser
-function parseUrlencodedString(input: Element): String {
+function parseUrlencodedString(input: Element): string {
   return parseUrlencoded(utf8Encode(input));
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-serializer
-function serializeUrlencoded(tuples: Map, encodingOverride: String = undefined): String {
-  let encoding: String = "utf-8";
+function serializeUrlencoded(tuples: Map, encodingOverride: string = undefined): string {
+  let encoding: string = "utf-8";
   if (encodingOverride !== undefined) {
     // TODO "get the output encoding", i.e. handle encoding labels vs. names.
     encoding = encodingOverride;
   }
 
-  let output: String = "";
+  let output: string = "";
   for (const [i, tuple] of tuples.entries()) {
     // TODO: handle encoding override
 
-    const name: String = utf8PercentEncodeString(tuple[0], isURLEncodedPercentEncode, true);
+    const name: string = utf8PercentEncodeString(tuple[0], isURLEncodedPercentEncode, true);
 
-    let value: String = tuple[1];
+    let value: string = tuple[1];
     if (tuple.length > 2 && tuple[2] !== undefined) {
       if (tuple[2] === "hidden" && name === "_charset_") {
         value = encoding;
@@ -76,10 +76,10 @@ function serializeUrlencoded(tuples: Map, encodingOverride: String = undefined):
   return output;
 }
 
-function strictlySplitByteSequence(buf: String, cp: String): Array {
-  const list: Array = [];
-  let last: Number = 0;
-  let i: Number = buf.indexOf(cp);
+function strictlySplitByteSequence(buf: string, cp: string): any[] {
+  const list: any[] = [];
+  let last: number = 0;
+  let i: number = buf.indexOf(cp);
   while (i >= 0) {
     list.push(buf.slice(last, i));
     last = i + 1;
@@ -91,8 +91,8 @@ function strictlySplitByteSequence(buf: String, cp: String): Array {
   return list;
 }
 
-function replaceByteInByteSequence(buf: Array, from: String, to: String): Array {
-  let i: Number = buf.indexOf(from);
+function replaceByteInByteSequence(buf: any[], from: string, to: string): any[] {
+  let i: number = buf.indexOf(from);
   while (i >= 0) {
     buf[i] = to;
     i = buf.indexOf(from, i + 1);

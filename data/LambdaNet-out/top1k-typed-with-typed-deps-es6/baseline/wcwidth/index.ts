@@ -3,18 +3,18 @@
 import defaults from 'defaults';
 import combining from './combining';
 
-var DEFAULTS: Object = {
+var DEFAULTS: object = {
   nul: 0,
   control: 0
 }
 
-export default function wcwidth(str: String): String {
+export default function wcwidth(str: string): string {
   return wcswidth(str, DEFAULTS)
 };
 
-export const config: Function = function(opts: String) {
+export const config: Function = function(opts: string) {
   opts = defaults(opts || {}, DEFAULTS)
-  return function wcwidth(str: String): String {
+  return function wcwidth(str: string): string {
     return wcswidth(str, opts)
   }
 };
@@ -43,12 +43,12 @@ export const config: Function = function(opts: String) {
  *  This implementation assumes that characters are encoded in ISO 10646.
 */
 
-function wcswidth(str: String, opts: String): Number {
+function wcswidth(str: string, opts: string): number {
   if (typeof str !== 'string') return wcwidth(str, opts)
 
-  var s: Number = 0
+  var s: number = 0
   for (var i = 0; i < str.length; i++) {
-    var n: String = wcwidth(str.charCodeAt(i), opts)
+    var n: string = wcwidth(str.charCodeAt(i), opts)
     if (n < 0) return -1
     s += n
   }
@@ -56,7 +56,7 @@ function wcswidth(str: String, opts: String): Number {
   return s
 }
 
-function wcwidth(ucs: Number, opts: Object): Number {
+function wcwidth(ucs: number, opts: object): number {
   // test for 8-bit control characters
   if (ucs === 0) return opts.nul
   if (ucs < 32 || (ucs >= 0x7f && ucs < 0xa0)) return opts.control
@@ -81,10 +81,10 @@ function wcwidth(ucs: Number, opts: Object): Number {
         (ucs >= 0x30000 && ucs <= 0x3fffd)));
 }
 
-function bisearch(ucs: Number): Boolean {
-  var min: Number = 0
-  var max: Number = combining.length - 1
-  var mid: Number
+function bisearch(ucs: number): boolean {
+  var min: number = 0
+  var max: number = combining.length - 1
+  var mid: number
 
   if (ucs < combining[0][0] || ucs > combining[max][1]) return false
 

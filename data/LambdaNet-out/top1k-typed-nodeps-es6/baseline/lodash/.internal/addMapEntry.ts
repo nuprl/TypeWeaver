@@ -6,7 +6,7 @@
  * @param {Array} pair The key-value pair to add.
  * @returns {Object} Returns `map`.
  */
-function addMapEntry(map: ListCache, pair: Promise): Object {
+function addMapEntry(map: ListCache, pair: Promise): object {
   // Don't return `map.set` because it's not chainable in IE 11.
   map.set(pair[0], pair[1])
   return map

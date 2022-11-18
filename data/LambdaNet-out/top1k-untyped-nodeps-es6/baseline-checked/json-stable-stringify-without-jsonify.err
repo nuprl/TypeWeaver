@@ -1,47 +1,26 @@
-example/key_cmp.ts(4,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-example/key_cmp.ts(5,14): error TS2339: Property 'key' does not exist on type 'Object'.
-example/key_cmp.ts(5,22): error TS2339: Property 'key' does not exist on type 'Object'.
+example/key_cmp.ts(4,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+example/key_cmp.ts(5,14): error TS2339: Property 'key' does not exist on type 'object'.
+example/key_cmp.ts(5,22): error TS2339: Property 'key' does not exist on type 'object'.
 example/nested.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
 example/str.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
-example/value_cmp.ts(4,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-example/value_cmp.ts(5,14): error TS2339: Property 'value' does not exist on type 'Object'.
-example/value_cmp.ts(5,24): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(4,30): error TS2339: Property 'space' does not exist on type 'Object'.
-index.ts(5,36): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(6,40): error TS2339: Property 'cycles' does not exist on type 'Object'.
-index.ts(6,69): error TS2339: Property 'cycles' does not exist on type 'Object'.
-index.ts(7,35): error TS2339: Property 'replacer' does not exist on type 'Object'.
-index.ts(9,30): error TS2339: Property 'cmp' does not exist on type 'Object'.
-index.ts(12,58): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(13,58): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(17,13): error TS2339: Property 'cmp' does not exist on type 'Object'.
-index.ts(19,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(21,56): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(21,72): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-index.ts(24,26): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(24,48): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(25,25): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(37,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(38,38): error TS2339: Property 'length' does not exist on type 'Object'.
-index.ts(39,21): error TS2322: Type 'string | String' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
-index.ts(39,46): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(39,64): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(40,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-index.ts(51,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(52,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(55,21): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(55,47): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(55,63): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(55,69): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(63,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-index.ts(68,10): error TS2345: Argument of type '{ '': String; }' is not assignable to parameter of type 'String'.
-  Object literal may only specify known properties, and '''' does not exist in type 'String'.
-index.ts(75,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(77,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example/value_cmp.ts(4,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+example/value_cmp.ts(5,14): error TS2339: Property 'value' does not exist on type 'object'.
+example/value_cmp.ts(5,24): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(4,30): error TS2339: Property 'space' does not exist on type 'object'.
+index.ts(5,36): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(6,40): error TS2339: Property 'cycles' does not exist on type 'object'.
+index.ts(6,69): error TS2339: Property 'cycles' does not exist on type 'object'.
+index.ts(7,35): error TS2339: Property 'replacer' does not exist on type 'object'.
+index.ts(9,30): error TS2339: Property 'cmp' does not exist on type 'object'.
+index.ts(17,13): error TS2339: Property 'cmp' does not exist on type 'object'.
+index.ts(21,72): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(24,26): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(24,48): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(25,25): error TS2339: Property 'toJSON' does not exist on type 'object'.
+index.ts(38,38): error TS2339: Property 'length' does not exist on type 'object'.
+index.ts(39,21): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(39,46): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+index.ts(55,21): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(55,47): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+index.ts(68,8): error TS2345: Argument of type '{ '': string; }' is not assignable to parameter of type 'string'.
 

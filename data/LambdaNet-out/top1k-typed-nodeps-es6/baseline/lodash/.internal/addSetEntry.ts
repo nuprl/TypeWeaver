@@ -6,7 +6,7 @@
  * @param {*} value The value to add.
  * @returns {Object} Returns `set`.
  */
-function addSetEntry(set: SetCache, value: String): ListCache {
+function addSetEntry(set: SetCache, value: string): ListCache {
   // Don't return `set.add` because it's not chainable in IE 11.
   set.add(value)
   return set

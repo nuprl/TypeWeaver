@@ -29,24 +29,24 @@ export default class PnpPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("PnpPlugin", (request: Object, resolveContext: Object, callback: Function) => {
-				const req: Array = request.request;
+			.tapAsync("PnpPlugin", (request: object, resolveContext: object, callback: Function) => {
+				const req: any[] = request.request;
 				if (!req) return callback();
 
 				// The trailing slash indicates to PnP that this value is a folder rather than a file
-				const issuer: String = `${request.path}/`;
+				const issuer: string = `${request.path}/`;
 
 				const packageMatch: Promise = /^(@[^/]+\/)?[^/]+/.exec(req);
 				if (!packageMatch) return callback();
 
-				const packageName: String = packageMatch[0];
-				const innerRequest: String = `.${req.slice(packageName.length)}`;
+				const packageName: string = packageMatch[0];
+				const innerRequest: string = `.${req.slice(packageName.length)}`;
 
-				let resolution: Number;
-				let apiResolution: Number;
+				let resolution: number;
+				let apiResolution: number;
 				try {
 					resolution = this.pnpApi.resolveToUnqualified(packageName, issuer, {
 						considerBuiltins: false
@@ -79,7 +79,7 @@ export default class PnpPlugin {
 					resolveContext.fileDependencies.add(apiResolution);
 				}
 
-				const obj: Object = {
+				const obj: object = {
 					...request,
 					path: resolution,
 					request: innerRequest,

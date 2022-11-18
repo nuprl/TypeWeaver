@@ -1,9 +1,5 @@
-index.ts(4,8): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(4,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(8,3): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-index.ts(9,13): error TS2339: Property 'startsWith' does not exist on type 'Number'.
-index.ts(10,3): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
-index.ts(10,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(4,8): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(8,3): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+index.ts(9,13): error TS2339: Property 'startsWith' does not exist on type 'number'.
+index.ts(10,3): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
 

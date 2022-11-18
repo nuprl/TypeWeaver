@@ -3,20 +3,20 @@
 import path from 'path';
 import { inspect } from 'util';
 
-function assertPath(path: String): Void {
+function assertPath(path: string): Void {
   if (typeof path !== 'string') {
     throw new TypeError('Path must be a string. Received ' + inspect(path));
   }
 }
 
-function posix(path: String): String {
+function posix(path: string): string {
   assertPath(path);
   if (path.length === 0)
     return '.';
-  var code: Number = path.charCodeAt(0);
-  var hasRoot: Number = (code === 47/*/*/);
-  var end: Number = -1;
-  var matchedSlash: Boolean = true;
+  var code: number = path.charCodeAt(0);
+  var hasRoot: number = (code === 47/*/*/);
+  var end: number = -1;
+  var matchedSlash: boolean = true;
   for (var i = path.length - 1; i >= 1; --i) {
     code = path.charCodeAt(i);
     if (code === 47/*/*/) {
@@ -37,16 +37,16 @@ function posix(path: String): String {
   return path.slice(0, end);
 }
 
-function win32(path: String): String {
+function win32(path: string): string {
   assertPath(path);
-  var len: Number = path.length;
+  var len: number = path.length;
   if (len === 0)
     return '.';
-  var rootEnd: Number = -1;
-  var end: Number = -1;
-  var matchedSlash: Boolean = true;
-  var offset: Number = 0;
-  var code: Number = path.charCodeAt(0);
+  var rootEnd: number = -1;
+  var end: number = -1;
+  var matchedSlash: boolean = true;
+  var offset: number = 0;
+  var code: number = path.charCodeAt(0);
 
   // Try to match a root
   if (len > 1) {
@@ -58,8 +58,8 @@ function win32(path: String): String {
       code = path.charCodeAt(1);
       if (code === 47/*/*/ || code === 92/*\*/) {
         // Matched double path separator at beginning
-        var j: Number = 2;
-        var last: Boolean = j;
+        var j: number = 2;
+        var last: boolean = j;
         // Match 1 or more non-path separators
         for (; j < len; ++j) {
           code = path.charCodeAt(j);

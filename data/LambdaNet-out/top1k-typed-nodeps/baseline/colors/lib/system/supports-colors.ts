@@ -25,12 +25,12 @@ THE SOFTWARE.
 
 'use strict';
 
-var os: String = require('os');
-var hasFlag: Object = require('./has-flag.js');
+var os: string = require('os');
+var hasFlag: object = require('./has-flag.js');
 
 var env: HTMLElement = process.env;
 
-var forceColor: Boolean = void 0;
+var forceColor: boolean = void 0;
 if (hasFlag('no-color') || hasFlag('no-colors') || hasFlag('color=false')) {
   forceColor = false;
 } else if (hasFlag('color') || hasFlag('colors') || hasFlag('color=true')
@@ -42,7 +42,7 @@ if ('FORCE_COLOR' in env) {
     || parseInt(env.FORCE_COLOR, 10) !== 0;
 }
 
-function translateLevel(level: Number): Void {
+function translateLevel(level: number): Void {
   if (level === 0) {
     return false;
   }
@@ -55,7 +55,7 @@ function translateLevel(level: Number): Void {
   };
 }
 
-function supportsColor(stream: Boolean): Number {
+function supportsColor(stream: boolean): number {
   if (forceColor === false) {
     return 0;
   }
@@ -73,7 +73,7 @@ function supportsColor(stream: Boolean): Number {
     return 0;
   }
 
-  var min: Number = forceColor ? 1 : 0;
+  var min: number = forceColor ? 1 : 0;
 
   if (process.platform === 'win32') {
     // Node.js 7.5.0 is the first version of Node.js to include a patch to
@@ -82,7 +82,7 @@ function supportsColor(stream: Boolean): Number {
     // release, and Node.js 7 is not. Windows 10 build 10586 is the first
     // Windows release that supports 256 colors. Windows 10 build 14931 is the
     // first release that supports 16m/TrueColor.
-    var osRelease: Object = os.release().split('.');
+    var osRelease: object = os.release().split('.');
     if (Number(process.versions.node.split('.')[0]) >= 8
         && Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) {
       return Number(osRelease[2]) >= 14931 ? 3 : 2;
@@ -92,7 +92,7 @@ function supportsColor(stream: Boolean): Number {
   }
 
   if ('CI' in env) {
-    if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(function(sign: String) {
+    if (['TRAVIS', 'CIRCLECI', 'APPVEYOR', 'GITLAB_CI'].some(function(sign: string) {
       return sign in env;
     }) || env.CI_NAME === 'codeship') {
       return 1;
@@ -107,7 +107,7 @@ function supportsColor(stream: Boolean): Number {
   }
 
   if ('TERM_PROGRAM' in env) {
-    var version: Number = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
+    var version: number = parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
 
     switch (env.TERM_PROGRAM) {
       case 'iTerm.app':
@@ -139,8 +139,8 @@ function supportsColor(stream: Boolean): Number {
   return min;
 }
 
-function getSupportLevel(stream: String): Boolean {
-  var level: String = supportsColor(stream);
+function getSupportLevel(stream: string): boolean {
+  var level: string = supportsColor(stream);
   return translateLevel(level);
 }
 

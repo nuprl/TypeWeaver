@@ -9,10 +9,10 @@ export { urlAlphabet }
 // pool. The pool is a Buffer that is larger than the initial random
 // request size by this multiplier. The pool is enlarged if subsequent
 // requests exceed the maximum buffer size.
-const POOL_SIZE_MULTIPLIER: Number = 128
-let pool: Array, poolOffset: Number
+const POOL_SIZE_MULTIPLIER: number = 128
+let pool: any[], poolOffset: number
 
-let fillPool: Function = (bytes: Number) => {
+let fillPool: Function = (bytes: number) => {
   if (!pool || pool.length < bytes) {
     pool = Buffer.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER)
     randomFillSync(pool)
@@ -24,18 +24,18 @@ let fillPool: Function = (bytes: Number) => {
   poolOffset += bytes
 }
 
-export let random: Function = (bytes: Number) => {
+export let random: Function = (bytes: number) => {
   // `-=` convert `bytes` to number to prevent `valueOf` abusing
   fillPool((bytes -= 0))
   return pool.subarray(poolOffset - bytes, poolOffset)
 }
 
-export let customRandom: Function = (alphabet: Array, defaultSize: Number, getRandom: Function) => {
+export let customRandom: Function = (alphabet: any[], defaultSize: number, getRandom: Function) => {
   // First, a bitmask is necessary to generate the ID. The bitmask makes bytes
   // values closer to the alphabet size. The bitmask calculates the closest
   // `2^31 - 1` number, which exceeds the alphabet size.
   // For example, the bitmask for the alphabet size 30 is 31 (00011111).
-  let mask: Number = (2 << (31 - Math.clz32((alphabet.length - 1) | 1))) - 1
+  let mask: number = (2 << (31 - Math.clz32((alphabet.length - 1) | 1))) - 1
   // Though, the bitmask solution is not perfect since the bytes exceeding
   // the alphabet size are refused. Therefore, to reliably generate the ID,
   // the random bytes redundancy has to be satisfied.
@@ -48,14 +48,14 @@ export let customRandom: Function = (alphabet: Array, defaultSize: Number, getRa
   // The number of random bytes gets decided upon the ID size, mask,
   // alphabet size, and magic number 1.6 (using 1.6 peaks at performance
   // according to benchmarks).
-  let step: Number = Math.ceil((1.6 * mask * defaultSize) / alphabet.length)
+  let step: number = Math.ceil((1.6 * mask * defaultSize) / alphabet.length)
 
-  return (size: Number = defaultSize) => {
-    let id: String = ''
+  return (size: number = defaultSize) => {
+    let id: string = ''
     while (true) {
       let bytes: Promise = getRandom(step)
       // A compact alternative for `for (let i = 0; i < step; i++)`.
-      let i: Number = step
+      let i: number = step
       while (i--) {
         // Adding `|| ''` refuses a random byte that exceeds the alphabet size.
         id += alphabet[bytes[i] & mask] || ''
@@ -65,13 +65,13 @@ export let customRandom: Function = (alphabet: Array, defaultSize: Number, getRa
   }
 }
 
-export let customAlphabet: Function = (alphabet: Array, size: String = 21) =>
+export let customAlphabet: Function = (alphabet: any[], size: string = 21) =>
   customRandom(alphabet, size, random)
 
-export let nanoid: Function = (size: Number = 21) => {
+export let nanoid: Function = (size: number = 21) => {
   // `-=` convert `size` to number to prevent `valueOf` abusing
   fillPool((size -= 0))
-  let id: String = ''
+  let id: string = ''
   // We are reading directly from the random pool to avoid creating new array
   for (let i = poolOffset - size; i < poolOffset; i++) {
     // It is incorrect to use bytes exceeding the alphabet size.

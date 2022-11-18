@@ -12,7 +12,7 @@ export class LooseParser {
     this.tok.validateRegExpFlags = noop
     this.tok.validateRegExpPattern = noop
     if (this.options.locations) {
-      let here: String = this.toks.curPosition()
+      let here: string = this.toks.curPosition()
       this.tok.loc = new SourceLocation(this.toks, here, here)
     }
     this.ahead = [] // Tokens ahead
@@ -126,7 +126,7 @@ export class LooseParser {
 
   indentationAfter(pos) {
     for (let count = 0;; ++pos) {
-      let ch: Number = this.input.charCodeAt(pos)
+      let ch: number = this.input.charCodeAt(pos)
       if (ch === 32) ++count
       else if (ch === 9) count += this.options.tabSize
       else return count
@@ -142,7 +142,7 @@ export class LooseParser {
 
   tokenStartsLine() {
     for (let p = this.tok.start - 1; p >= this.curLineStart; --p) {
-      let ch: Number = this.input.charCodeAt(p)
+      let ch: number = this.input.charCodeAt(p)
       if (ch !== 9 && ch !== 32) return false
     }
     return true

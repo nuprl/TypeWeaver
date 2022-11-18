@@ -13,16 +13,16 @@ var Cell: Function = function(tuple: Promise) {
   };
 };
 
-Cell.prototype.pending = function(direction: Array) {
-  var functor: Object = this._functors[direction];
+Cell.prototype.pending = function(direction: any[]) {
+  var functor: object = this._functors[direction];
   if (!functor._stopped) functor.pending += 1;
 };
 
-Cell.prototype.incoming = function(error: Object, message: String, callback: Function, context: String) {
+Cell.prototype.incoming = function(error: object, message: string, callback: Function, context: string) {
   this._exec('incoming', error, message, callback, context);
 };
 
-Cell.prototype.outgoing = function(error: Object, message: String, callback: Function, context: String) {
+Cell.prototype.outgoing = function(error: object, message: string, callback: Function, context: string) {
   this._exec('outgoing', error, message, callback, context);
 };
 
@@ -32,8 +32,8 @@ Cell.prototype.close = function() {
   return this._closed;
 };
 
-Cell.prototype._exec = function(direction: Array, error: Object, message: String, callback: Function, context: String) {
-  this._functors[direction].call(error, message, function(err: Record, msg: String) {
+Cell.prototype._exec = function(direction: any[], error: object, message: string, callback: Function, context: string) {
+  this._functors[direction].call(error, message, function(err: Record, msg: string) {
     if (err) err.message = this._ext.name + ': ' + err.message;
     callback.call(context, err, msg);
     this._doClose();
@@ -41,8 +41,8 @@ Cell.prototype._exec = function(direction: Array, error: Object, message: String
 };
 
 Cell.prototype._doClose = function() {
-  var fin: Array  = this._functors.incoming,
-      fout: Array = this._functors.outgoing;
+  var fin: any[]  = this._functors.incoming,
+      fout: any[] = this._functors.outgoing;
 
   if (!this._closed || fin.pending + fout.pending !== 0) return;
   if (this._session) this._session.close();

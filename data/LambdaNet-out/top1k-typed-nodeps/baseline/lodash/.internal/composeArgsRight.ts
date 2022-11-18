@@ -9,22 +9,22 @@
  * @params {boolean} [isCurried] Specify composing for a curried function.
  * @returns {Array} Returns the new array of composed arguments.
  */
-function composeArgsRight(args: Array, partials: Array, holders: Array, isCurried: Boolean): Object {
-  let argsIndex: Number = -1
-  let holdersIndex: Number = -1
-  let rightIndex: Number = -1
+function composeArgsRight(args: any[], partials: any[], holders: any[], isCurried: boolean): object {
+  let argsIndex: number = -1
+  let holdersIndex: number = -1
+  let rightIndex: number = -1
 
-  const argsLength: Number = args.length
-  const holdersLength: Number = holders.length
-  const rightLength: Number = partials.length
-  const rangeLength: Number = Math.max(argsLength - holdersLength, 0)
-  const result: Object = new Array(rangeLength + rightLength)
-  const isUncurried: Boolean = !isCurried
+  const argsLength: number = args.length
+  const holdersLength: number = holders.length
+  const rightLength: number = partials.length
+  const rangeLength: number = Math.max(argsLength - holdersLength, 0)
+  const result: object = new Array(rangeLength + rightLength)
+  const isUncurried: boolean = !isCurried
 
   while (++argsIndex < rangeLength) {
     result[argsIndex] = args[argsIndex]
   }
-  const offset: Number = argsIndex
+  const offset: number = argsIndex
   while (++rightIndex < rightLength) {
     result[offset + rightIndex] = partials[rightIndex]
   }

@@ -1,23 +1,16 @@
 setImmediate.ts(1,2): error TS2554: Expected 2 arguments, but got 1.
-setImmediate.ts(1,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 setImmediate.ts(4,16): error TS2339: Property 'setImmediate' does not exist on type 'HTMLElement'.
 setImmediate.ts(11,31): error TS2339: Property 'document' does not exist on type 'HTMLElement'.
-setImmediate.ts(21,32): error TS2339: Property 'length' does not exist on type 'Object'.
-setImmediate.ts(26,21): error TS2538: Type 'Number' cannot be used as an index type.
-setImmediate.ts(28,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+setImmediate.ts(21,32): error TS2339: Property 'length' does not exist on type 'object'.
 setImmediate.ts(31,46): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(32,30): error TS2538: Type 'String' cannot be used as an index type.
 setImmediate.ts(35,33): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(36,39): error TS2339: Property 'callback' does not exist on type 'Object'.
-setImmediate.ts(37,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-setImmediate.ts(37,32): error TS2339: Property 'args' does not exist on type 'Object'.
+setImmediate.ts(36,39): error TS2339: Property 'callback' does not exist on type 'object'.
+setImmediate.ts(37,32): error TS2339: Property 'args' does not exist on type 'object'.
 setImmediate.ts(57,44): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(65,46): error TS2538: Type 'Number' cannot be used as an index type.
-setImmediate.ts(71,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+setImmediate.ts(69,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+setImmediate.ts(71,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 setImmediate.ts(78,47): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(80,57): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+setImmediate.ts(80,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 setImmediate.ts(87,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
 setImmediate.ts(87,43): error TS2339: Property 'importScripts' does not exist on type 'HTMLElement'.
 setImmediate.ts(89,47): error TS2339: Property 'onmessage' does not exist on type 'HTMLElement'.
@@ -25,10 +18,10 @@ setImmediate.ts(90,20): error TS2339: Property 'onmessage' does not exist on typ
 setImmediate.ts(93,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
 setImmediate.ts(94,20): error TS2339: Property 'onmessage' does not exist on type 'HTMLElement'.
 setImmediate.ts(99,50): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(106,23): error TS2339: Property 'source' does not exist on type 'Object'.
-setImmediate.ts(107,30): error TS2339: Property 'data' does not exist on type 'Object'.
-setImmediate.ts(108,23): error TS2339: Property 'data' does not exist on type 'Object'.
-setImmediate.ts(109,37): error TS2339: Property 'data' does not exist on type 'Object'.
+setImmediate.ts(106,23): error TS2339: Property 'source' does not exist on type 'object'.
+setImmediate.ts(107,30): error TS2339: Property 'data' does not exist on type 'object'.
+setImmediate.ts(108,23): error TS2339: Property 'data' does not exist on type 'object'.
+setImmediate.ts(109,37): error TS2339: Property 'data' does not exist on type 'object'.
 setImmediate.ts(114,13): error TS2769: No overload matches this call.
   Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | AddEventListenerOptions): void', gave the following error.
     Argument of type '"message"' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
@@ -36,23 +29,22 @@ setImmediate.ts(114,13): error TS2769: No overload matches this call.
     Argument of type 'Function' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
 setImmediate.ts(116,20): error TS2339: Property 'attachEvent' does not exist on type 'HTMLElement'.
 setImmediate.ts(120,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
-setImmediate.ts(120,32): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 setImmediate.ts(124,53): error TS2304: Cannot find name 'Void'.
 setImmediate.ts(125,13): error TS2740: Type 'MessageChannel' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 setImmediate.ts(126,17): error TS2339: Property 'port1' does not exist on type 'HTMLElement'.
-setImmediate.ts(127,40): error TS2339: Property 'data' does not exist on type 'Object'.
+setImmediate.ts(127,40): error TS2339: Property 'data' does not exist on type 'object'.
 setImmediate.ts(132,21): error TS2339: Property 'port2' does not exist on type 'HTMLElement'.
 setImmediate.ts(136,55): error TS2304: Cannot find name 'Void'.
 setImmediate.ts(137,33): error TS2339: Property 'documentElement' does not exist on type 'Element'.
 setImmediate.ts(141,43): error TS2339: Property 'createElement' does not exist on type 'Element'.
 setImmediate.ts(142,20): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
-setImmediate.ts(143,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+setImmediate.ts(143,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 setImmediate.ts(144,24): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
 setImmediate.ts(152,49): error TS2304: Cannot find name 'Void'.
-setImmediate.ts(160,37): error TS2339: Property 'setTimeout' does not exist on type 'Object'.
+setImmediate.ts(160,37): error TS2339: Property 'setTimeout' does not exist on type 'object'.
 setImmediate.ts(163,33): error TS2339: Property 'process' does not exist on type 'HTMLElement'.
 setImmediate.ts(171,23): error TS2339: Property 'MessageChannel' does not exist on type 'HTMLElement'.
 setImmediate.ts(175,51): error TS2339: Property 'createElement' does not exist on type 'Element'.
-setImmediate.ts(184,14): error TS2339: Property 'setImmediate' does not exist on type 'Object'.
-setImmediate.ts(185,14): error TS2339: Property 'clearImmediate' does not exist on type 'Object'.
+setImmediate.ts(184,14): error TS2339: Property 'setImmediate' does not exist on type 'object'.
+setImmediate.ts(185,14): error TS2339: Property 'clearImmediate' does not exist on type 'object'.
 

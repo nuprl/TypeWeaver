@@ -1,7 +1,7 @@
 /* istanbul ignore else - coverage doesn't work without Object.create */
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor: Object, superCtor: Array): Void {
+  module.exports = function inherits(ctor: object, superCtor: any[]): Void {
     if (superCtor) {
       ctor.super_ = superCtor
       ctor.prototype = Object.create(superCtor.prototype, {
@@ -16,7 +16,7 @@ if (typeof Object.create === 'function') {
   };
 } else {
   // old school shim for old browsers
-  module.exports = function inherits(ctor: Object, superCtor: Array): Void {
+  module.exports = function inherits(ctor: object, superCtor: any[]): Void {
     if (superCtor) {
       ctor.super_ = superCtor
       var TempCtor: Function = function () {}

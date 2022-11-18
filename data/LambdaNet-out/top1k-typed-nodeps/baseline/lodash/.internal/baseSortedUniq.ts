@@ -8,16 +8,16 @@ import eq from '../eq.js'
  * @param {Function} [iteratee] The iteratee invoked per element.
  * @returns {Array} Returns the new duplicate free array.
  */
-function baseSortedUniq(array: Array, iteratee: Function): Object {
+function baseSortedUniq(array: any[], iteratee: Function): object {
   let seen: Function
-  let index: Number = -1
-  let resIndex: Number = 0
+  let index: number = -1
+  let resIndex: number = 0
 
   const { length } = array
-  const result: Array = []
+  const result: any[] = []
 
   while (++index < length) {
-    const value: Number = array[index], computed: String = iteratee ? iteratee(value) : value
+    const value: number = array[index], computed: string = iteratee ? iteratee(value) : value
     if (!index || !eq(computed, seen)) {
       seen = computed
       result[resIndex++] = value === 0 ? 0 : value

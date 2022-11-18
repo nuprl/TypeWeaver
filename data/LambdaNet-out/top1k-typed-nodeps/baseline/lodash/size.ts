@@ -4,8 +4,8 @@ import isString from './isString.js'
 import stringSize from './.internal/stringSize.js'
 
 /** `Object#toString` result references. */
-const mapTag: String = '[object Map]'
-const setTag: String = '[object Set]'
+const mapTag: string = '[object Map]'
+const setTag: string = '[object Set]'
 
 /**
  * Gets the size of `collection` by returning its length for array-like
@@ -26,14 +26,14 @@ const setTag: String = '[object Set]'
  * size('pebbles')
  * // => 7
  */
-function size(collection: Array): Number {
+function size(collection: any[]): number {
   if (collection == null) {
     return 0
   }
   if (isArrayLike(collection)) {
     return isString(collection) ? stringSize(collection) : collection.length
   }
-  const tag: String = getTag(collection)
+  const tag: string = getTag(collection)
   if (tag == mapTag || tag == setTag) {
     return collection.size
   }

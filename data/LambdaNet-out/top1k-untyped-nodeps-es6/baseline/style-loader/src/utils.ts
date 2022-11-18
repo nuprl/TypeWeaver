@@ -4,16 +4,16 @@ import isEqualLocals from "./runtime/isEqualLocals";
 
 const matchRelativePath: RegExp = /^\.\.?[/\\]/;
 
-function isAbsolutePath(str: String): Boolean {
+function isAbsolutePath(str: string): boolean {
   return path.posix.isAbsolute(str) || path.win32.isAbsolute(str);
 }
 
-function isRelativePath(str: String): Boolean {
+function isRelativePath(str: string): boolean {
   return matchRelativePath.test(str);
 }
 
 // TODO simplify for the next major release
-function stringifyRequest(loaderContext: HTMLElement, request: String): String {
+function stringifyRequest(loaderContext: HTMLElement, request: string): string {
   if (
     typeof loaderContext.utils !== "undefined" &&
     typeof loaderContext.utils.contextify === "function"
@@ -23,16 +23,16 @@ function stringifyRequest(loaderContext: HTMLElement, request: String): String {
     );
   }
 
-  const splitted: Array = request.split("!");
+  const splitted: any[] = request.split("!");
   const { context } = loaderContext;
 
   return JSON.stringify(
     splitted
-      .map((part: String) => {
+      .map((part: string) => {
         // First, separate singlePath from query, because the query might contain paths again
-        const splittedPart: Object = part.match(/^(.*?)(\?.*)/);
-        const query: String = splittedPart ? splittedPart[2] : "";
-        let singlePath: String = splittedPart ? splittedPart[1] : part;
+        const splittedPart: object = part.match(/^(.*?)(\?.*)/);
+        const query: string = splittedPart ? splittedPart[2] : "";
+        let singlePath: string = splittedPart ? splittedPart[1] : part;
 
         if (isAbsolutePath(singlePath) && context) {
           singlePath = path.relative(context, singlePath);
@@ -56,8 +56,8 @@ function stringifyRequest(loaderContext: HTMLElement, request: String): String {
   );
 }
 
-function getImportLinkAPICode(esModule: Boolean, loaderContext: Number): Array {
-  const modulePath: String = stringifyRequest(
+function getImportLinkAPICode(esModule: boolean, loaderContext: number): any[] {
+  const modulePath: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/injectStylesIntoLinkTag.js")}`
   );
@@ -67,16 +67,16 @@ function getImportLinkAPICode(esModule: Boolean, loaderContext: Number): Array {
     : `var API = require(${modulePath});`;
 }
 
-function getImportLinkContentCode(esModule: Boolean, loaderContext: Number, request: String): Array {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getImportLinkContentCode(esModule: boolean, loaderContext: number, request: string): any[] {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
     ? `import content from ${modulePath};`
     : `var content = require(${modulePath});`;
 }
 
-function getImportStyleAPICode(esModule: Boolean, loaderContext: Number): Array {
-  const modulePath: String = stringifyRequest(
+function getImportStyleAPICode(esModule: boolean, loaderContext: number): any[] {
+  const modulePath: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/injectStylesIntoStyleTag.js")}`
   );
@@ -87,16 +87,16 @@ function getImportStyleAPICode(esModule: Boolean, loaderContext: Number): Array 
 }
 
 function getImportStyleDomAPICode(
-  esModule: Boolean,
-  loaderContext: String,
-  isSingleton: Boolean,
-  isAuto: Boolean
-): Array {
-  const styleAPI: String = stringifyRequest(
+  esModule: boolean,
+  loaderContext: string,
+  isSingleton: boolean,
+  isAuto: boolean
+): any[] {
+  const styleAPI: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/styleDomAPI.js")}`
   );
-  const singletonAPI: String = stringifyRequest(
+  const singletonAPI: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/singletonStyleDomAPI.js")}`
   );
@@ -114,8 +114,8 @@ function getImportStyleDomAPICode(
     : `var domAPI = require(${isSingleton ? singletonAPI : styleAPI});`;
 }
 
-function getImportStyleContentCode(esModule: Boolean, loaderContext: Number, request: String): String {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getImportStyleContentCode(esModule: boolean, loaderContext: number, request: string): string {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
     ? `import content, * as namedExport from ${modulePath};`
@@ -123,13 +123,13 @@ function getImportStyleContentCode(esModule: Boolean, loaderContext: Number, req
 }
 
 function getImportInsertBySelectorCode(
-  esModule: Boolean,
-  loaderContext: Object,
-  insertType: String,
-  options: Object
-): String {
+  esModule: boolean,
+  loaderContext: object,
+  insertType: string,
+  options: object
+): string {
   if (insertType === "selector") {
-    const modulePath: String = stringifyRequest(
+    const modulePath: string = stringifyRequest(
       loaderContext,
       `!${path.join(__dirname, "runtime/insertBySelector.js")}`
     );
@@ -140,7 +140,7 @@ function getImportInsertBySelectorCode(
   }
 
   if (insertType === "module-path") {
-    const modulePath: String = stringifyRequest(loaderContext, `${options.insert}`);
+    const modulePath: string = stringifyRequest(loaderContext, `${options.insert}`);
 
     loaderContext.addBuildDependency(options.insert);
 
@@ -152,9 +152,9 @@ function getImportInsertBySelectorCode(
   return "";
 }
 
-function getInsertOptionCode(insertType: String, options: Object): String {
+function getInsertOptionCode(insertType: string, options: object): string {
   if (insertType === "selector") {
-    const insert: String = options.insert ? JSON.stringify(options.insert) : '"head"';
+    const insert: string = options.insert ? JSON.stringify(options.insert) : '"head"';
 
     return `
       options.insert = insertFn.bind(null, ${insert});
@@ -169,8 +169,8 @@ function getInsertOptionCode(insertType: String, options: Object): String {
   return `options.insert = ${options.insert.toString()};`;
 }
 
-function getImportInsertStyleElementCode(esModule: Boolean, loaderContext: Number): Array {
-  const modulePath: String = stringifyRequest(
+function getImportInsertStyleElementCode(esModule: boolean, loaderContext: number): any[] {
+  const modulePath: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/insertStyleElement.js")}`
   );
@@ -180,8 +180,8 @@ function getImportInsertStyleElementCode(esModule: Boolean, loaderContext: Numbe
     : `var insertStyleElement = require(${modulePath});`;
 }
 
-function getStyleHmrCode(esModule: Boolean, loaderContext: String, request: String, lazy: Boolean): String {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getStyleHmrCode(esModule: boolean, loaderContext: string, request: string, lazy: boolean): string {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
 if (module.hot) {
@@ -255,8 +255,8 @@ if (module.hot) {
 `;
 }
 
-function getLinkHmrCode(esModule: Boolean, loaderContext: Number, request: String): String {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getLinkHmrCode(esModule: boolean, loaderContext: number, request: string): string {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
 if (module.hot) {
@@ -281,12 +281,12 @@ if (module.hot) {
 }`;
 }
 
-function getdomAPI(isAuto: Boolean): String {
+function getdomAPI(isAuto: boolean): string {
   return isAuto ? "isOldIE() ? domAPISingleton : domAPI" : "domAPI";
 }
 
-function getImportIsOldIECode(esModule: Boolean, loaderContext: Number): Array {
-  const modulePath: String = stringifyRequest(
+function getImportIsOldIECode(esModule: boolean, loaderContext: number): any[] {
+  const modulePath: string = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/isOldIE.js")}`
   );
@@ -297,18 +297,18 @@ function getImportIsOldIECode(esModule: Boolean, loaderContext: Number): Array {
 }
 
 function getStyleTagTransformFnCode(
-  esModule: Boolean,
-  loaderContext: Object,
-  options: Object,
-  isSingleton: Boolean,
-  styleTagTransformType: Number
-): String {
+  esModule: boolean,
+  loaderContext: object,
+  options: object,
+  isSingleton: boolean,
+  styleTagTransformType: number
+): string {
   if (isSingleton) {
     return "";
   }
 
   if (styleTagTransformType === "default") {
-    const modulePath: String = stringifyRequest(
+    const modulePath: string = stringifyRequest(
       loaderContext,
       `!${path.join(__dirname, "runtime/styleTagTransform.js")}`
     );
@@ -319,7 +319,7 @@ function getStyleTagTransformFnCode(
   }
 
   if (styleTagTransformType === "module-path") {
-    const modulePath: String = stringifyRequest(
+    const modulePath: string = stringifyRequest(
       loaderContext,
       `${options.styleTagTransform}`
     );
@@ -334,7 +334,7 @@ function getStyleTagTransformFnCode(
   return "";
 }
 
-function getStyleTagTransformFn(options: Object, isSingleton: Boolean): Array {
+function getStyleTagTransformFn(options: object, isSingleton: boolean): any[] {
   // Todo remove "function" type for styleTagTransform option in next major release, because code duplication occurs. Leave require.resolve()
   return isSingleton
     ? ""
@@ -343,8 +343,8 @@ function getStyleTagTransformFn(options: Object, isSingleton: Boolean): Array {
     : `options.styleTagTransform = styleTagTransformFn`;
 }
 
-function getExportStyleCode(esModule: Boolean, loaderContext: Number, request: String): String {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getExportStyleCode(esModule: boolean, loaderContext: number, request: string): string {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
     ? `export * from ${modulePath};
@@ -352,8 +352,8 @@ function getExportStyleCode(esModule: Boolean, loaderContext: Number, request: S
     : "module.exports = content && content.locals || {};";
 }
 
-function getExportLazyStyleCode(esModule: Boolean, loaderContext: Number, request: String): String {
-  const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
+function getExportLazyStyleCode(esModule: boolean, loaderContext: number, request: string): string {
+  const modulePath: string = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
     ? `export * from ${modulePath};
@@ -361,8 +361,8 @@ function getExportLazyStyleCode(esModule: Boolean, loaderContext: Number, reques
     : "module.exports = exported;";
 }
 
-function getSetAttributesCode(esModule: Boolean, loaderContext: String, options: Object): String {
-  let modulePath: String;
+function getSetAttributesCode(esModule: boolean, loaderContext: string, options: object): string {
+  let modulePath: string;
 
   if (typeof options.attributes !== "undefined") {
     modulePath =

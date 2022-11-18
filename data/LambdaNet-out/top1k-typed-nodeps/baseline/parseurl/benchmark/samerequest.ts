@@ -14,10 +14,10 @@ global.url = '/foo/bar?user=tj&pet=fluffy'
  * Module dependencies.
  */
 
-var benchmark: Array = require('benchmark')
-var benchmarks: Array = require('beautify-benchmark')
+var benchmark: any[] = require('benchmark')
+var benchmarks: any[] = require('beautify-benchmark')
 
-var assertValues: String = 'assert.strictEqual(obj.pathname, "/foo/bar"); assert.strictEqual(obj.search, "?user=tj&pet=fluffy");'
+var assertValues: string = 'assert.strictEqual(obj.pathname, "/foo/bar"); assert.strictEqual(obj.search, "?user=tj&pet=fluffy");'
 var suite: HTMLElement = new benchmark.Suite()
 
 suite.add({
@@ -50,11 +50,11 @@ suite.add({
   setup: 'req = createReq(url)'
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  Parsing URL ' + JSON.stringify(global.url) + ' on same request object\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 
@@ -64,7 +64,7 @@ suite.on('complete', function onComplete (): Void {
 
 suite.run({ async: false })
 
-function createReq (url: String): Object {
+function createReq (url: string): object {
   return {
     url: url
   }

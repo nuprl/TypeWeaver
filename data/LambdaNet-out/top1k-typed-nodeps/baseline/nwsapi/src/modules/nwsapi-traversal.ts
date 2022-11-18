@@ -3,23 +3,23 @@
  * used to emulate Prototype up/down/previous/next methods
  */
 
-(function(D: Object){
+(function(D: object){
 
   // TODO: all of this needs tests
-  var match: Object = D.match, select: Function = D.select, root: Element = document.documentElement,
+  var match: object = D.match, select: Function = D.select, root: Element = document.documentElement,
 
   // Use the Element Traversal API if available.
-  nextElement: String = 'nextElementSibling',
-  previousElement: String = 'previousElementSibling',
-  parentElement: String = 'parentElement';
+  nextElement: string = 'nextElementSibling',
+  previousElement: string = 'previousElementSibling',
+  parentElement: string = 'parentElement';
 
   // Fall back to the DOM Level 1 API.
   if (!(nextElement in root)) nextElement = 'nextSibling';
   if (!(previousElement in root)) previousElement = 'previousSibling';
   if (!(parentElement in root)) parentElement = 'parentNode';
 
-  function walkElements(property: String, element: Object, expr: Number): Object {
-    var i: Number = 0, isIndex: Boolean = typeof expr == 'number';
+  function walkElements(property: string, element: object, expr: number): object {
+    var i: number = 0, isIndex: boolean = typeof expr == 'number';
     if (typeof expr == 'undefined') {
       isIndex = true;
       expr = 0;
@@ -42,7 +42,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function up(element: Element, expr: Function): String {
+  function up(element: Element, expr: Function): string {
     return walkElements(parentElement, element, expr);
   }
   /**
@@ -51,7 +51,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function next(element: Element, expr: Function): String {
+  function next(element: Element, expr: Function): string {
     return walkElements(nextElement, element, expr);
   }
   /**
@@ -60,7 +60,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function previous(element: Element, expr: Function): String {
+  function previous(element: Element, expr: Function): string {
     return walkElements(previousElement, element, expr);
   }
   /**
@@ -69,8 +69,8 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function down(element: Object, expr: String): Object {
-    var isIndex: Boolean = typeof expr == 'number', descendants: Object, index: Number, descendant: Function;
+  function down(element: object, expr: string): object {
+    var isIndex: boolean = typeof expr == 'number', descendants: object, index: number, descendant: Function;
     if (expr === null) {
       element = element.firstChild;
       while (element && element.nodeType != 1) element = element[nextElement];

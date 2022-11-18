@@ -1,5 +1,5 @@
-export default function defineLazyProperty(object: Object, propertyName: String, valueGetter: Number): Object {
-	const define: Function = (value: String) => Object.defineProperty(object, propertyName, {value, enumerable: true, writable: true});
+export default function defineLazyProperty(object: object, propertyName: string, valueGetter: number): object {
+	const define: Function = (value: string) => Object.defineProperty(object, propertyName, {value, enumerable: true, writable: true});
 
 	Object.defineProperty(object, propertyName, {
 		configurable: true,

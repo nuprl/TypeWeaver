@@ -1,28 +1,28 @@
-const handlePreserveConsecutiveUppercase: Function = (decamelized: String, separator: Number) => {
+const handlePreserveConsecutiveUppercase: Function = (decamelized: string, separator: number) => {
 	// Lowercase all single uppercase characters. As we
 	// want to preserve uppercase sequences, we cannot
 	// simply lowercase the separated string at the end.
 	// `data_For_USACounties` → `data_for_USACounties`
 	decamelized = decamelized.replace(
 		/((?<![\p{Uppercase_Letter}\d])[\p{Uppercase_Letter}\d](?![\p{Uppercase_Letter}\d]))/gu,
-		($0: String) => $0.toLowerCase(),
+		($0: string) => $0.toLowerCase(),
 	);
 
 	// Remaining uppercase sequences will be separated from lowercase sequences.
 	// `data_For_USACounties` → `data_for_USA_counties`
 	return decamelized.replace(
 		/(\p{Uppercase_Letter}+)(\p{Uppercase_Letter}\p{Lowercase_Letter}+)/gu,
-		(_: String, $1: Number, $2: String) => $1 + separator + $2.toLowerCase(),
+		(_: string, $1: number, $2: string) => $1 + separator + $2.toLowerCase(),
 	);
 };
 
 export default function decamelize(
-	text: String,
+	text: string,
 	{
 		separator = '_',
 		preserveConsecutiveUppercase = false,
 	} = {},
-): String {
+): string {
 	if (!(typeof text === 'string' && typeof separator === 'string')) {
 		throw new TypeError(
 			'The `text` and `separator` arguments should be of type `string`',

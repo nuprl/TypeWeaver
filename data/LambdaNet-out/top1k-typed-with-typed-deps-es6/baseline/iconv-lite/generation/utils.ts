@@ -6,14 +6,14 @@ import errTo from 'errto';
 
 // Common utilities used in scripts.
 
-export const getFile: Function = function(url: String, cb: Function) {
-    var sourceDataFolder: String = path.join(__dirname, "source-data");
-    var fullpath: String = path.join(sourceDataFolder, path.basename(url));
-    fs.readFile(fullpath, "utf8", function(err: Object, text: String) {
+export const getFile: Function = function(url: string, cb: Function) {
+    var sourceDataFolder: string = path.join(__dirname, "source-data");
+    var fullpath: string = path.join(sourceDataFolder, path.basename(url));
+    fs.readFile(fullpath, "utf8", function(err: object, text: string) {
         if (!err) return cb(null, text);
         if (err.code != "ENOENT") return cb(err);
-        request(url, errTo(cb, function(res: Function, buf: Number) {
-            fs.mkdir(sourceDataFolder, function(err: Object) {
+        request(url, errTo(cb, function(res: Function, buf: number) {
+            fs.mkdir(sourceDataFolder, function(err: object) {
                 if (err && err.code != "EEXIST") return cb(err);
                 fs.writeFile(fullpath, buf, errTo(cb, function() {
                     cb(null, buf.toString());
@@ -24,11 +24,11 @@ export const getFile: Function = function(url: String, cb: Function) {
 };
 
 // Returns array of arrays.
-export const parseText: Function = function(text: String, splitChar: Boolean) {
-    return text.split("\n").map(function(line: String) {
+export const parseText: Function = function(text: string, splitChar: boolean) {
+    return text.split("\n").map(function(line: string) {
         return line.split("#")[0].trim(); 
-    }).filter(Boolean).map(function(line: String) {
-        return line.split(splitChar || /\s+/).map(function(s: String) {return s.trim()}).filter(Boolean);
+    }).filter(Boolean).map(function(line: string) {
+        return line.split(splitChar || /\s+/).map(function(s: string) {return s.trim()}).filter(Boolean);
     });
 };
 
@@ -36,8 +36,8 @@ export const parseText: Function = function(text: String, splitChar: Boolean) {
 // so we emit surrogates when needed. Also, some character codes are actually
 // sequences (arrays) - we emit them prepended with U+0FFF-(length-2).
 // U+0FFF was chosen because it's small and unassigned, as well as 32 chars before it
-function arrToStr(arr: Object): String {
-    var s: String = '';
+function arrToStr(arr: object): string {
+    var s: string = '';
     for (var i = 0; i < arr.length; i++)
         if (Array.isArray(arr[i])) {
             if (arr[i].length == 1)
@@ -64,10 +64,10 @@ function arrToStr(arr: Object): String {
 // [0] = address of start of the chunk, hex string.
 // <str> - characters of the chunk.
 // <num> - increasing sequence of the length num, starting with prev character.
-export const generateTable: Function = function(dbcs: Object, maxBytes: Number) {
-    var minSeqLen: Number = 4;
-    var table: Array = [], range: Array, block: Array, seqLen: Number;
-    var max: Number = 1 << ((maxBytes || 2) * 8);
+export const generateTable: Function = function(dbcs: object, maxBytes: number) {
+    var minSeqLen: number = 4;
+    var table: any[] = [], range: any[], block: any[], seqLen: number;
+    var max: number = 1 << ((maxBytes || 2) * 8);
     for (var i = 0x0000; i < max; i++)
         if (dbcs[i] !== undefined) {
             if (dbcs[i-1] === undefined) { // Range started.
@@ -104,11 +104,11 @@ export const generateTable: Function = function(dbcs: Object, maxBytes: Number) 
     return table;
 };
 
-export const writeTable: Function = function(name: String, table: Array) {
-    this.writeFile(name, "[\n" + table.map(function(a: Array) {return JSON.stringify(a);}).join(",\n") + "\n]\n");
+export const writeTable: Function = function(name: string, table: any[]) {
+    this.writeFile(name, "[\n" + table.map(function(a: any[]) {return JSON.stringify(a);}).join(",\n") + "\n]\n");
 };
 
-export const writeFile: Function = function(name: String, body: String) {
+export const writeFile: Function = function(name: string, body: string) {
     fs.writeFileSync(path.join(__dirname, "../encodings/tables", name + ".json"), body);
 };
 

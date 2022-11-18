@@ -42,14 +42,14 @@ exports.test = test
  * @public
  */
 
-function format (obj: Object): String {
+function format (obj: object): string {
   if (!obj || typeof obj !== 'object') {
     throw new TypeError('argument obj is required')
   }
 
-  var subtype: Number = obj.subtype
-  var suffix: String = obj.suffix
-  var type: String = obj.type
+  var subtype: number = obj.subtype
+  var suffix: string = obj.suffix
+  var type: string = obj.type
 
   if (!type || !TYPE_NAME_REGEXP.test(type)) {
     throw new TypeError('invalid type')
@@ -60,7 +60,7 @@ function format (obj: Object): String {
   }
 
   // format as type/subtype
-  var string: String = type + '/' + subtype
+  var string: string = type + '/' + subtype
 
   // append +suffix
   if (suffix) {
@@ -82,7 +82,7 @@ function format (obj: Object): String {
  * @public
  */
 
-function test (string: String): Boolean {
+function test (string: string): boolean {
   if (!string) {
     throw new TypeError('argument string is required')
   }
@@ -102,7 +102,7 @@ function test (string: String): Boolean {
  * @public
  */
 
-function parse (string: String): String {
+function parse (string: string): string {
   if (!string) {
     throw new TypeError('argument string is required')
   }
@@ -111,18 +111,18 @@ function parse (string: String): String {
     throw new TypeError('argument string is required to be a string')
   }
 
-  var match: Object = TYPE_REGEXP.exec(string.toLowerCase())
+  var match: object = TYPE_REGEXP.exec(string.toLowerCase())
 
   if (!match) {
     throw new TypeError('invalid media type')
   }
 
-  var type: String = match[1]
-  var subtype: String = match[2]
-  var suffix: String
+  var type: string = match[1]
+  var subtype: string = match[2]
+  var suffix: string
 
   // suffix after last +
-  var index: Number = subtype.lastIndexOf('+')
+  var index: number = subtype.lastIndexOf('+')
   if (index !== -1) {
     suffix = subtype.substr(index + 1)
     subtype = subtype.substr(0, index)
@@ -136,7 +136,7 @@ function parse (string: String): String {
  * @public
  */
 
-function MediaType (type: String, subtype: String, suffix: String): Void {
+function MediaType (type: string, subtype: string, suffix: string): Void {
   this.type = type
   this.subtype = subtype
   this.suffix = suffix

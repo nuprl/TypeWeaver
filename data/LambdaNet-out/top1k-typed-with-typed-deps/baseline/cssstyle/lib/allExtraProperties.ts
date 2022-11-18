@@ -5,7 +5,7 @@
  * current specifications or drafts, but are handled by browsers nevertheless.
  */
 
-var allWebkitProperties: String = require('./allWebkitProperties');
+var allWebkitProperties: string = require('./allWebkitProperties');
 
 module.exports = new Set(
   [

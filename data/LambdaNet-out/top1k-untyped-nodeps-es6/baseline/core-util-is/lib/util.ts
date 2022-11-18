@@ -22,7 +22,7 @@
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
 
-function isArray(arg: String): Boolean {
+function isArray(arg: string): boolean {
   if (Array.isArray) {
     return Array.isArray(arg);
   }
@@ -30,67 +30,67 @@ function isArray(arg: String): Boolean {
 }
 exports.isArray = isArray;
 
-function isBoolean(arg: String): Boolean {
+function isBoolean(arg: string): boolean {
   return typeof arg === 'boolean';
 }
 exports.isBoolean = isBoolean;
 
-function isNull(arg: Number): Boolean {
+function isNull(arg: number): boolean {
   return arg === null;
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: Number): Boolean {
+function isNullOrUndefined(arg: number): boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: String): Boolean {
+function isNumber(arg: string): boolean {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: String): Boolean {
+function isString(arg: string): boolean {
   return typeof arg === 'string';
 }
 exports.isString = isString;
 
-function isSymbol(arg: String): Boolean {
+function isSymbol(arg: string): boolean {
   return typeof arg === 'symbol';
 }
 exports.isSymbol = isSymbol;
 
-function isUndefined(arg: Number): Boolean {
+function isUndefined(arg: number): boolean {
   return arg === void 0;
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: String): Boolean {
+function isRegExp(re: string): boolean {
   return objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;
 
-function isObject(arg: String): Boolean {
+function isObject(arg: string): boolean {
   return typeof arg === 'object' && arg !== null;
 }
 exports.isObject = isObject;
 
-function isDate(d: String): Boolean {
+function isDate(d: string): boolean {
   return objectToString(d) === '[object Date]';
 }
 exports.isDate = isDate;
 
-function isError(e: String): Boolean {
+function isError(e: string): boolean {
   return (objectToString(e) === '[object Error]' || e instanceof Error);
 }
 exports.isError = isError;
 
-function isFunction(arg: String): Boolean {
+function isFunction(arg: string): boolean {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
 
-function isPrimitive(arg: String): Boolean {
+function isPrimitive(arg: string): boolean {
   return arg === null ||
          typeof arg === 'boolean' ||
          typeof arg === 'number' ||
@@ -102,6 +102,6 @@ exports.isPrimitive = isPrimitive;
 
 exports.isBuffer = require('buffer').Buffer.isBuffer;
 
-function objectToString(o: String): Boolean {
+function objectToString(o: string): boolean {
   return Object.prototype.toString.call(o);
 }

@@ -8,16 +8,16 @@
 
 'use strict';
 
-module.exports = function exit(exitCode: String, streams: Array): Void {
+module.exports = function exit(exitCode: string, streams: any[]): Void {
   if (!streams) { streams = [process.stdout, process.stderr]; }
-  var drainCount: Number = 0;
+  var drainCount: number = 0;
   // Actually exit if all streams are drained.
   function tryToExit(): Void {
     if (drainCount === streams.length) {
       process.exit(exitCode);
     }
   }
-  streams.forEach(function(stream: Boolean) {
+  streams.forEach(function(stream: boolean) {
     // Count drained streams now, but monitor non-drained streams.
     if (stream.bufferSize === 0) {
       drainCount++;

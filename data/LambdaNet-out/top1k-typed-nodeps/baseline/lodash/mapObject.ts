@@ -16,11 +16,11 @@
  * map({ 'a': 4, 'b': 8 }, square)
  * // => [16, 64] (iteration order is not guaranteed)
  */
-function mapObject(object: Object, iteratee: Function): Object {
-  const props: Array = Object.keys(object)
-  const result: Object = new Array(props.length)
+function mapObject(object: object, iteratee: Function): object {
+  const props: any[] = Object.keys(object)
+  const result: object = new Array(props.length)
 
-  props.forEach((key: String, index: Number) => {
+  props.forEach((key: string, index: number) => {
     result[index] = iteratee(object[key], key, object)
   })
   return result

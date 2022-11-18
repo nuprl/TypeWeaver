@@ -3,14 +3,14 @@
 // This file contains then/promise specific extensions that are only useful
 // for node.js interop
 
-var Promise: Array = require('./core.js');
+var Promise: any[] = require('./core.js');
 var asap: Function = require('asap');
 
 module.exports = Promise;
 
 /* Static Functions */
 
-Promise.denodeify = function (fn: String, argumentCount: String) {
+Promise.denodeify = function (fn: string, argumentCount: string) {
   if (
     typeof argumentCount === 'number' && argumentCount !== Infinity
   ) {
@@ -20,17 +20,17 @@ Promise.denodeify = function (fn: String, argumentCount: String) {
   }
 };
 
-var callbackFn: String = (
+var callbackFn: string = (
   'function (err, res) {' +
   'if (err) { rj(err); } else { rs(res); }' +
   '}'
 );
-function denodeifyWithCount(fn: String, argumentCount: Number): Boolean {
-  var args: Array = [];
+function denodeifyWithCount(fn: string, argumentCount: number): boolean {
+  var args: any[] = [];
   for (var i = 0; i < argumentCount; i++) {
     args.push('a' + i);
   }
-  var body: String = [
+  var body: string = [
     'return function (' + args.join(',') + ') {',
     'var self = this;',
     'return new Promise(function (rs, rj) {',
@@ -46,13 +46,13 @@ function denodeifyWithCount(fn: String, argumentCount: Number): Boolean {
   ].join('');
   return Function(['Promise', 'fn'], body)(Promise, fn);
 }
-function denodeifyWithoutCount(fn: Array): Boolean {
-  var fnLength: Number = Math.max(fn.length - 1, 3);
-  var args: Array = [];
+function denodeifyWithoutCount(fn: any[]): boolean {
+  var fnLength: number = Math.max(fn.length - 1, 3);
+  var args: any[] = [];
   for (var i = 0; i < fnLength; i++) {
     args.push('a' + i);
   }
-  var body: String = [
+  var body: string = [
     'return function (' + args.join(',') + ') {',
     'var self = this;',
     'var args;',
@@ -67,7 +67,7 @@ function denodeifyWithoutCount(fn: Array): Boolean {
     'var cb = ' + callbackFn + ';',
     'var res;',
     'switch (argLength) {',
-    args.concat(['extra']).map(function (_: String, index: String) {
+    args.concat(['extra']).map(function (_: string, index: string) {
       return (
         'case ' + (index) + ':' +
         'res = fn.call(' + ['self'].concat(args.slice(0, index)).concat('cb').join(',') + ');' +
@@ -95,10 +95,10 @@ function denodeifyWithoutCount(fn: Array): Boolean {
 
 Promise.nodeify = function (fn: Function) {
   return function () {
-    var args: Array = Array.prototype.slice.call(arguments);
-    var callback: String =
+    var args: any[] = Array.prototype.slice.call(arguments);
+    var callback: string =
       typeof args[args.length - 1] === 'function' ? args.pop() : null;
-    var ctx: Array = this;
+    var ctx: any[] = this;
     try {
       return fn.apply(this, arguments).nodeify(callback, ctx);
     } catch (ex) {
@@ -115,14 +115,14 @@ Promise.nodeify = function (fn: Function) {
   }
 };
 
-Promise.prototype.nodeify = function (callback: Function, ctx: String) {
+Promise.prototype.nodeify = function (callback: Function, ctx: string) {
   if (typeof callback != 'function') return this;
 
-  this.then(function (value: String) {
+  this.then(function (value: string) {
     asap(function () {
       callback.call(ctx, null, value);
     });
-  }, function (err: String) {
+  }, function (err: string) {
     asap(function () {
       callback.call(ctx, err);
     });

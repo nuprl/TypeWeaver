@@ -1,5 +1,5 @@
 module.exports = function () {
-  var args: Array = [].slice.call(arguments);
+  var args: any[] = [].slice.call(arguments);
 
   do {
     args = [].concat.apply([], args);

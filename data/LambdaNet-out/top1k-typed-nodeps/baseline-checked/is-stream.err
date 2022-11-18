@@ -1,10 +1,12 @@
-index.ts(4,20): error TS2339: Property 'pipe' does not exist on type 'String'.
-index.ts(9,13): error TS2339: Property 'writable' does not exist on type 'String'.
-index.ts(10,20): error TS2339: Property '_write' does not exist on type 'String'.
-index.ts(11,20): error TS2339: Property '_writableState' does not exist on type 'String'.
-index.ts(16,13): error TS2339: Property 'readable' does not exist on type 'String'.
-index.ts(17,20): error TS2339: Property '_read' does not exist on type 'String'.
-index.ts(18,20): error TS2339: Property '_readableState' does not exist on type 'String'.
-index.ts(21,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(28,20): error TS2339: Property '_transform' does not exist on type 'String'.
+index.ts(4,20): error TS2339: Property 'pipe' does not exist on type 'never'.
+index.ts(9,13): error TS2339: Property 'writable' does not exist on type 'string'.
+index.ts(10,20): error TS2339: Property '_write' does not exist on type 'string'.
+index.ts(11,20): error TS2339: Property '_writableState' does not exist on type 'string'.
+index.ts(16,13): error TS2339: Property 'readable' does not exist on type 'string'.
+index.ts(17,20): error TS2339: Property '_read' does not exist on type 'string'.
+index.ts(18,20): error TS2339: Property '_readableState' does not exist on type 'string'.
+index.ts(22,26): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+index.ts(23,23): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+index.ts(27,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+index.ts(28,20): error TS2339: Property '_transform' does not exist on type 'string'.
 

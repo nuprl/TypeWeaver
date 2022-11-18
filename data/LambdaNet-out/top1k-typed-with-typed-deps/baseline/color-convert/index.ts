@@ -1,13 +1,13 @@
-const conversions: Object = require('./conversions');
+const conversions: object = require('./conversions');
 const route: Function = require('./route');
 
-const convert: Object = {};
+const convert: object = {};
 
-const models: Array = Object.keys(conversions);
+const models: any[] = Object.keys(conversions);
 
 function wrapRaw(fn: Function): Function {
 	const wrappedFn: Function = function (...args) {
-		const arg0: Array = args[0];
+		const arg0: any[] = args[0];
 		if (arg0 === undefined || arg0 === null) {
 			return arg0;
 		}
@@ -29,7 +29,7 @@ function wrapRaw(fn: Function): Function {
 
 function wrapRounded(fn: Function): Function {
 	const wrappedFn: Function = function (...args) {
-		const arg0: Array = args[0];
+		const arg0: any[] = args[0];
 
 		if (arg0 === undefined || arg0 === null) {
 			return arg0;
@@ -39,7 +39,7 @@ function wrapRounded(fn: Function): Function {
 			args = arg0;
 		}
 
-		const result: Array = fn(args);
+		const result: any[] = fn(args);
 
 		// We're assuming the result is an array here.
 		// see notice in conversions.js; don't use box types
@@ -61,17 +61,17 @@ function wrapRounded(fn: Function): Function {
 	return wrappedFn;
 }
 
-models.forEach((fromModel: String) => {
+models.forEach((fromModel: string) => {
 	convert[fromModel] = {};
 
 	Object.defineProperty(convert[fromModel], 'channels', {value: conversions[fromModel].channels});
 	Object.defineProperty(convert[fromModel], 'labels', {value: conversions[fromModel].labels});
 
-	const routes: Object = route(fromModel);
-	const routeModels: Array = Object.keys(routes);
+	const routes: object = route(fromModel);
+	const routeModels: any[] = Object.keys(routes);
 
-	routeModels.forEach((toModel: Array) => {
-		const fn: String = routes[toModel];
+	routeModels.forEach((toModel: any[]) => {
+		const fn: string = routes[toModel];
 
 		convert[fromModel][toModel] = wrapRounded(fn);
 		convert[fromModel][toModel].raw = wrapRaw(fn);

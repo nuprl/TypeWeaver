@@ -3,7 +3,7 @@
 var implicitSetter: Function = require('../parsers').implicitSetter;
 
 // the valid border-styles:
-var styles: Array = [
+var styles: any[] = [
   'none',
   'hidden',
   'dotted',
@@ -16,12 +16,12 @@ var styles: Array = [
   'outset',
 ];
 
-module.exports.isValid = function parse(v: String): Boolean {
+module.exports.isValid = function parse(v: string): boolean {
   return typeof v === 'string' && (v === '' || styles.indexOf(v) !== -1);
 };
 var isValid: Function = module.exports.isValid;
 
-var parser: Function = function(v: String) {
+var parser: Function = function(v: string) {
   if (isValid(v)) {
     return v.toLowerCase();
   }

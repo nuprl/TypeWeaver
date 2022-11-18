@@ -3,7 +3,7 @@
  * @param {Token} token The token to check.
  * @returns {boolean} `true` if the result of `this(token)` is `false`.
  */
-function negate0(token: String): Boolean {
+function negate0(token: string): boolean {
     return !this(token) //eslint-disable-line no-invalid-this
 }
 
@@ -12,7 +12,7 @@ function negate0(token: String): Boolean {
  * @param {function(Token):boolean} f - The function to negate.
  * @returns {function(Token):boolean} Negated function.
  */
-function negate(f: String): Promise {
+function negate(f: string): Promise {
     return negate0.bind(f)
 }
 
@@ -22,7 +22,7 @@ function negate(f: String): Promise {
  * @param {string} value - The value to check.
  * @returns {boolean} `true` if the token is a PunctuatorToken with the given value.
  */
-function isPunctuatorTokenWithValue(token: Object, value: Number): Boolean {
+function isPunctuatorTokenWithValue(token: object, value: number): boolean {
     return token.type === "Punctuator" && token.value === value
 }
 
@@ -31,7 +31,7 @@ function isPunctuatorTokenWithValue(token: Object, value: Number): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an arrow token.
  */
-export function isArrowToken(token: String): Boolean {
+export function isArrowToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "=>")
 }
 
@@ -40,7 +40,7 @@ export function isArrowToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comma token.
  */
-export function isCommaToken(token: String): Boolean {
+export function isCommaToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, ",")
 }
 
@@ -49,7 +49,7 @@ export function isCommaToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a semicolon token.
  */
-export function isSemicolonToken(token: String): Boolean {
+export function isSemicolonToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, ";")
 }
 
@@ -58,7 +58,7 @@ export function isSemicolonToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a colon token.
  */
-export function isColonToken(token: String): Boolean {
+export function isColonToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, ":")
 }
 
@@ -67,7 +67,7 @@ export function isColonToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening parenthesis token.
  */
-export function isOpeningParenToken(token: String): Boolean {
+export function isOpeningParenToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "(")
 }
 
@@ -76,7 +76,7 @@ export function isOpeningParenToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing parenthesis token.
  */
-export function isClosingParenToken(token: String): Boolean {
+export function isClosingParenToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, ")")
 }
 
@@ -85,7 +85,7 @@ export function isClosingParenToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening square bracket token.
  */
-export function isOpeningBracketToken(token: String): Boolean {
+export function isOpeningBracketToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "[")
 }
 
@@ -94,7 +94,7 @@ export function isOpeningBracketToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing square bracket token.
  */
-export function isClosingBracketToken(token: String): Boolean {
+export function isClosingBracketToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "]")
 }
 
@@ -103,7 +103,7 @@ export function isClosingBracketToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening brace token.
  */
-export function isOpeningBraceToken(token: String): Boolean {
+export function isOpeningBraceToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "{")
 }
 
@@ -112,7 +112,7 @@ export function isOpeningBraceToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing brace token.
  */
-export function isClosingBraceToken(token: String): Boolean {
+export function isClosingBraceToken(token: string): boolean {
     return isPunctuatorTokenWithValue(token, "}")
 }
 
@@ -121,7 +121,7 @@ export function isClosingBraceToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comment token.
  */
-export function isCommentToken(token: Object): Number {
+export function isCommentToken(token: object): number {
     return ["Block", "Line", "Shebang"].includes(token.type)
 }
 
@@ -135,4 +135,4 @@ export const isNotOpeningBracketToken: Function = negate(isOpeningBracketToken)
 export const isNotClosingBracketToken: Function = negate(isClosingBracketToken)
 export const isNotOpeningBraceToken: Function = negate(isOpeningBraceToken)
 export const isNotClosingBraceToken: Function = negate(isClosingBraceToken)
-export const isNotCommentToken: String = negate(isCommentToken)
+export const isNotCommentToken: string = negate(isCommentToken)

@@ -1,8 +1,8 @@
 'use strict';
 
 import defaultExtension from './default-extension.js';
-const testFileExtensions: String = defaultExtension
-	.map((extension: Array) => extension.slice(1))
+const testFileExtensions: string = defaultExtension
+	.map((extension: any[]) => extension.slice(1))
 	.join(',');
 
 export default [

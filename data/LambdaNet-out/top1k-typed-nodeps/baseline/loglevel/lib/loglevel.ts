@@ -4,7 +4,7 @@
 * Copyright (c) 2013 Tim Perry
 * Licensed under the MIT license.
 */
-(function (root: Object, definition: Function) {
+(function (root: object, definition: Function) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
         define(definition);
@@ -18,12 +18,12 @@
 
     // Slightly dubious tricks to cut down minimized file size
     var noop: Function = function() {};
-    var undefinedType: String = "undefined";
-    var isIE: Boolean = (typeof window !== undefinedType) && (typeof window.navigator !== undefinedType) && (
+    var undefinedType: string = "undefined";
+    var isIE: boolean = (typeof window !== undefinedType) && (typeof window.navigator !== undefinedType) && (
         /Trident\/|MSIE /.test(window.navigator.userAgent)
     );
 
-    var logMethods: Array = [
+    var logMethods: any[] = [
         "trace",
         "debug",
         "info",
@@ -32,7 +32,7 @@
     ];
 
     // Cross-browser bind equivalent that works at least back to IE6
-    function bindMethod(obj: Object, methodName: String): Array {
+    function bindMethod(obj: object, methodName: string): any[] {
         var method: Function = obj[methodName];
         if (typeof method.bind === 'function') {
             return method.bind(obj);
@@ -63,7 +63,7 @@
 
     // Build the best logging method possible for this env
     // Wherever possible we want to bind, not wrap, to preserve stack traces
-    function realMethod(methodName: String): Boolean {
+    function realMethod(methodName: string): boolean {
         if (methodName === 'debug') {
             methodName = 'log';
         }
@@ -83,10 +83,10 @@
 
     // These private functions always need `this` to be set properly
 
-    function replaceLoggingMethods(level: String, loggerName: String): Void {
+    function replaceLoggingMethods(level: string, loggerName: string): Void {
         /*jshint validthis:true */
         for (var i = 0; i < logMethods.length; i++) {
-            var methodName: String = logMethods[i];
+            var methodName: string = logMethods[i];
             this[methodName] = (i < level) ?
                 noop :
                 this.methodFactory(methodName, level, loggerName);
@@ -98,7 +98,7 @@
 
     // In old IE versions, the console isn't present until you first open it.
     // We build realMethod() replacements here that regenerate logging methods
-    function enableLoggingWhenConsoleArrives(methodName: String, level: String, loggerName: String): Function {
+    function enableLoggingWhenConsoleArrives(methodName: string, level: string, loggerName: string): Function {
         return function () {
             if (typeof console !== undefinedType) {
                 replaceLoggingMethods.call(this, level, loggerName);
@@ -109,26 +109,26 @@
 
     // By default, we use closely bound real methods wherever possible, and
     // otherwise we wait for a console to appear, and then try again.
-    function defaultMethodFactory(methodName: String, level: Function, loggerName: String): Boolean {
+    function defaultMethodFactory(methodName: string, level: Function, loggerName: string): boolean {
         /*jshint validthis:true */
         return realMethod(methodName) ||
                enableLoggingWhenConsoleArrives.apply(this, arguments);
     }
 
-    function Logger(name: String, defaultLevel: String, factory: String): Void {
+    function Logger(name: string, defaultLevel: string, factory: string): Void {
       var self: HTMLElement = this;
-      var currentLevel: Number;
+      var currentLevel: number;
       defaultLevel = defaultLevel == null ? "WARN" : defaultLevel;
 
-      var storageKey: String = "loglevel";
+      var storageKey: string = "loglevel";
       if (typeof name === "string") {
         storageKey += ":" + name;
       } else if (typeof name === "symbol") {
         storageKey = undefined;
       }
 
-      function persistLevelIfPossible(levelNum: Number): Void {
-          var levelName: String = (logMethods[levelNum] || 'silent').toUpperCase();
+      function persistLevelIfPossible(levelNum: number): Void {
+          var levelName: string = (logMethods[levelNum] || 'silent').toUpperCase();
 
           if (typeof window === undefinedType || !storageKey) return;
 
@@ -145,8 +145,8 @@
           } catch (ignore) {}
       }
 
-      function getPersistedLevel(): Array {
-          var storedLevel: String;
+      function getPersistedLevel(): any[] {
+          var storedLevel: string;
 
           if (typeof window === undefinedType || !storageKey) return;
 
@@ -157,8 +157,8 @@
           // Fallback to cookies if local storage gives us nothing
           if (typeof storedLevel === undefinedType) {
               try {
-                  var cookie: Array = window.document.cookie;
-                  var location: Number = cookie.indexOf(
+                  var cookie: any[] = window.document.cookie;
+                  var location: number = cookie.indexOf(
                       encodeURIComponent(storageKey) + "=");
                   if (location !== -1) {
                       storedLevel = /^([^;]+)/.exec(cookie.slice(location))[1];
@@ -207,7 +207,7 @@
           return currentLevel;
       };
 
-      self.setLevel = function (level: Number, persist: Number) {
+      self.setLevel = function (level: number, persist: number) {
           if (typeof level === "string" && self.levels[level.toUpperCase()] !== undefined) {
               level = self.levels[level.toUpperCase()];
           }
@@ -225,7 +225,7 @@
           }
       };
 
-      self.setDefaultLevel = function (level: Number) {
+      self.setDefaultLevel = function (level: number) {
           defaultLevel = level;
           if (!getPersistedLevel()) {
               self.setLevel(level, false);
@@ -237,16 +237,16 @@
           clearPersistedLevel();
       };
 
-      self.enableAll = function(persist: String) {
+      self.enableAll = function(persist: string) {
           self.setLevel(self.levels.TRACE, persist);
       };
 
-      self.disableAll = function(persist: String) {
+      self.disableAll = function(persist: string) {
           self.setLevel(self.levels.SILENT, persist);
       };
 
       // Initialize with the right level
-      var initialLevel: Number = getPersistedLevel();
+      var initialLevel: number = getPersistedLevel();
       if (initialLevel == null) {
           initialLevel = defaultLevel;
       }
@@ -259,15 +259,15 @@
      *
      */
 
-    var defaultLogger: Object = new Logger();
+    var defaultLogger: object = new Logger();
 
-    var _loggersByName: Object = {};
-    defaultLogger.getLogger = function getLogger(name: String): Promise {
+    var _loggersByName: object = {};
+    defaultLogger.getLogger = function getLogger(name: string): Promise {
         if ((typeof name !== "symbol" && typeof name !== "string") || name === "") {
           throw new TypeError("You must supply a name when creating a logger.");
         }
 
-        var logger: String = _loggersByName[name];
+        var logger: string = _loggersByName[name];
         if (!logger) {
           logger = _loggersByName[name] = new Logger(
             name, defaultLogger.getLevel(), defaultLogger.methodFactory);
@@ -276,7 +276,7 @@
     };
 
     // Grab the current global log variable in case of overwrite
-    var _log: String = (typeof window !== undefinedType) ? window.log : undefined;
+    var _log: string = (typeof window !== undefinedType) ? window.log : undefined;
     defaultLogger.noConflict = function() {
         if (typeof window !== undefinedType &&
                window.log === defaultLogger) {
@@ -286,7 +286,7 @@
         return defaultLogger;
     };
 
-    defaultLogger.getLoggers = function getLoggers(): Object {
+    defaultLogger.getLoggers = function getLoggers(): object {
         return _loggersByName;
     };
 

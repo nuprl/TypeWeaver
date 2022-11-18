@@ -1,7 +1,7 @@
 // We define these manually to ensure they're always copied
 // even if they would move up the prototype chain
 // https://nodejs.org/api/http.html#http_class_http_incomingmessage
-const knownProperties: Array = [
+const knownProperties: any[] = [
 	'aborted',
 	'complete',
 	'headers',
@@ -19,14 +19,14 @@ const knownProperties: Array = [
 	'url',
 ];
 
-export default function mimicResponse(fromStream: HTMLElement, toStream: Object): Object {
+export default function mimicResponse(fromStream: HTMLElement, toStream: object): object {
 	if (toStream._readableState.autoDestroy) {
 		throw new Error('The second stream must have the `autoDestroy` option set to `false`');
 	}
 
 	const fromProperties: Error = new Set([...Object.keys(fromStream), ...knownProperties]);
 
-	const properties: Object = {};
+	const properties: object = {};
 
 	for (const property of fromProperties) {
 		// Don't overwrite existing properties.

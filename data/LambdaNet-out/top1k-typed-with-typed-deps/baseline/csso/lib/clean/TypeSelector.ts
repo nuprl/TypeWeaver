@@ -1,6 +1,6 @@
 // remove useless universal selector
-export default function cleanTypeSelector(node: Object, item: Object, list: Map): Void {
-    const name: String = item.data.name;
+export default function cleanTypeSelector(node: object, item: object, list: Map): Void {
+    const name: string = item.data.name;
 
     // check it's a non-namespaced universal selector
     if (name !== '*') {
@@ -8,7 +8,7 @@ export default function cleanTypeSelector(node: Object, item: Object, list: Map)
     }
 
     // remove when universal selector before other selectors
-    const nextType: Number = item.next && item.next.data.type;
+    const nextType: number = item.next && item.next.data.type;
     if (nextType === 'IdSelector' ||
         nextType === 'ClassSelector' ||
         nextType === 'AttributeSelector' ||

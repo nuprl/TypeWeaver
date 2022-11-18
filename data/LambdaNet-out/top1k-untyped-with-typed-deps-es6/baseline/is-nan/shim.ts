@@ -6,9 +6,9 @@ import getPolyfill from './polyfill';
 /* http://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan */
 
 export default function shimNumberIsNaN(): Promise {
-	var polyfill: String = getPolyfill();
+	var polyfill: string = getPolyfill();
 	define(Number, { isNaN: polyfill }, {
-		isNaN: function testIsNaN(): Boolean {
+		isNaN: function testIsNaN(): boolean {
 			return Number.isNaN !== polyfill;
 		}
 	});

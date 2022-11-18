@@ -6,7 +6,7 @@ import { getSignals } from './signals.js'
 // Retrieve `signalsByName`, an object mapping signal name to signal properties.
 // We make sure the object is sorted by `number`.
 const getSignalsByName: Function = function () {
-  const signals: Array = getSignals()
+  const signals: any[] = getSignals()
   return Object.fromEntries(signals.map(getSignalByName))
 }
 
@@ -25,22 +25,22 @@ const getSignalByName: Function = function ({
   ]
 }
 
-export const signalsByName: String = getSignalsByName()
+export const signalsByName: string = getSignalsByName()
 
 // Retrieve `signalsByNumber`, an object mapping signal number to signal
 // properties.
 // We make sure the object is sorted by `number`.
 const getSignalsByNumber: Function = function () {
-  const signals: String = getSignals()
-  const length: String = SIGRTMAX + 1
-  const signalsA: Array = Array.from({ length }, (value: Number, number: Number) =>
+  const signals: string = getSignals()
+  const length: string = SIGRTMAX + 1
+  const signalsA: any[] = Array.from({ length }, (value: number, number: number) =>
     getSignalByNumber(number, signals),
   )
   return Object.assign({}, ...signalsA)
 }
 
-const getSignalByNumber: Function = function (number: String, signals: String) {
-  const signal: Object = findSignalByNumber(number, signals)
+const getSignalByNumber: Function = function (number: string, signals: string) {
+  const signal: object = findSignalByNumber(number, signals)
 
   if (signal === undefined) {
     return {}
@@ -62,14 +62,14 @@ const getSignalByNumber: Function = function (number: String, signals: String) {
 
 // Several signals might end up sharing the same number because of OS-specific
 // numbers, in which case those prevail.
-const findSignalByNumber: Function = function (number: Number, signals: Array) {
-  const signal: String = signals.find(({ name }) => constants.signals[name] === number)
+const findSignalByNumber: Function = function (number: number, signals: any[]) {
+  const signal: string = signals.find(({ name }) => constants.signals[name] === number)
 
   if (signal !== undefined) {
     return signal
   }
 
-  return signals.find((signalA: Object) => signalA.number === number)
+  return signals.find((signalA: object) => signalA.number === number)
 }
 
-export const signalsByNumber: Number = getSignalsByNumber()
+export const signalsByNumber: number = getSignalsByNumber()

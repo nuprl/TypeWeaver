@@ -56,7 +56,7 @@ const handlers: Function = {
   },
 };
 
-function shouldProcess(expression: Object, charset: Object): Boolean {
+function shouldProcess(expression: object, charset: object): boolean {
   if (!expression) {
     // Abort on empty disjunction part
     return false;
@@ -75,7 +75,7 @@ function shouldProcess(expression: Object, charset: Object): Boolean {
 
     return true;
   } else if (type === 'CharacterClass' && !expression.negative) {
-    return expression.expressions.every((expression: Array) =>
+    return expression.expressions.every((expression: any[]) =>
       shouldProcess(expression, charset)
     );
   }

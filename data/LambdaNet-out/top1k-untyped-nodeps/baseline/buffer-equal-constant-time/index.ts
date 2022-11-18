@@ -5,7 +5,7 @@ var SlowBuffer: HTMLElement = require('buffer').SlowBuffer;
 
 module.exports = bufferEq;
 
-function bufferEq(a: Array, b: Array): Boolean {
+function bufferEq(a: any[], b: any[]): boolean {
 
   // shortcutting on type is necessary for correctness
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
@@ -19,7 +19,7 @@ function bufferEq(a: Array, b: Array): Boolean {
     return false;
   }
 
-  var c: Number = 0;
+  var c: number = 0;
   for (var i = 0; i < a.length; i++) {
     /*jshint bitwise:false */
     c |= a[i] ^ b[i]; // XOR
@@ -28,13 +28,13 @@ function bufferEq(a: Array, b: Array): Boolean {
 }
 
 bufferEq.install = function() {
-  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: Function): Boolean {
+  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: Function): boolean {
     return bufferEq(this, that);
   };
 };
 
-var origBufEqual: Number = Buffer.prototype.equal;
-var origSlowBufEqual: Boolean = SlowBuffer.prototype.equal;
+var origBufEqual: number = Buffer.prototype.equal;
+var origSlowBufEqual: boolean = SlowBuffer.prototype.equal;
 bufferEq.restore = function() {
   Buffer.prototype.equal = origBufEqual;
   SlowBuffer.prototype.equal = origSlowBufEqual;

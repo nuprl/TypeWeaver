@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function styleTagTransform(css: String, styleElement: Element): Void {
+function styleTagTransform(css: string, styleElement: Element): Void {
   if (styleElement.styleSheet) {
     styleElement.styleSheet.cssText = css;
   } else {

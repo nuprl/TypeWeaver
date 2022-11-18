@@ -10,8 +10,8 @@ jQuery.each( [
 	"ajaxError",
 	"ajaxSuccess",
 	"ajaxSend"
-], function( _i: String, type: String ) {
-	jQuery.fn[ type ] = function( fn: String ) {
+], function( _i: string, type: string ) {
+	jQuery.fn[ type ] = function( fn: string ) {
 		return this.on( type, fn );
 	};
 } );

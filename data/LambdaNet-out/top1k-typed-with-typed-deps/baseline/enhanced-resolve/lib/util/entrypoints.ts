@@ -80,16 +80,16 @@ Conditional mapping nested in another conditional mapping is called nested mappi
 
 */
 
-const slashCode: Number = "/".charCodeAt(0);
-const dotCode: Number = ".".charCodeAt(0);
-const hashCode: Number = "#".charCodeAt(0);
+const slashCode: number = "/".charCodeAt(0);
+const dotCode: number = ".".charCodeAt(0);
+const hashCode: number = "#".charCodeAt(0);
 
 /**
  * @param {ExportsField} exportsField the exports field
  * @returns {FieldProcessor} process callback
  */
 module.exports.processExportsField = function processExportsField(
-	exportsField: String
+	exportsField: string
 ): Resolver {
 	return createFieldProcessor(
 		buildExportsFieldPathTree(exportsField),
@@ -103,7 +103,7 @@ module.exports.processExportsField = function processExportsField(
  * @returns {FieldProcessor} process callback
  */
 module.exports.processImportsField = function processImportsField(
-	importsField: String
+	importsField: string
 ): Resolver {
 	return createFieldProcessor(
 		buildImportsFieldPathTree(importsField),
@@ -118,18 +118,18 @@ module.exports.processImportsField = function processImportsField(
  * @param {(s: string, f: boolean) => void} assertTarget assertTarget
  * @returns {FieldProcessor} field processor
  */
-function createFieldProcessor(treeRoot: String, assertRequest: Function, assertTarget: Number): Function {
-	return function fieldProcessor(request: Array, conditionNames: Boolean): Array {
+function createFieldProcessor(treeRoot: string, assertRequest: Function, assertTarget: number): Function {
+	return function fieldProcessor(request: any[], conditionNames: boolean): any[] {
 		request = assertRequest(request);
 
-		const match: Array = findMatch(request, treeRoot);
+		const match: any[] = findMatch(request, treeRoot);
 
 		if (match === null) return [];
 
 		const [mapping, remainRequestIndex] = match;
 
 		/** @type {DirectMapping|null} */
-		let direct: String = null;
+		let direct: string = null;
 
 		if (isConditionalMapping(mapping)) {
 			direct = conditionalMapping(
@@ -164,7 +164,7 @@ function createFieldProcessor(treeRoot: String, assertRequest: Function, assertT
  * @param {string} request request
  * @returns {string} updated request
  */
-function assertExportsFieldRequest(request: String): Array {
+function assertExportsFieldRequest(request: string): any[] {
 	if (request.charCodeAt(0) !== dotCode) {
 		throw new Error('Request should be relative path and start with "."');
 	}
@@ -183,7 +183,7 @@ function assertExportsFieldRequest(request: String): Array {
  * @param {string} request request
  * @returns {string} updated request
  */
-function assertImportsFieldRequest(request: String): Array {
+function assertImportsFieldRequest(request: string): any[] {
 	if (request.charCodeAt(0) !== hashCode) {
 		throw new Error('Request should start with "#"');
 	}
@@ -204,7 +204,7 @@ function assertImportsFieldRequest(request: String): Array {
  * @param {string} exp export target
  * @param {boolean} expectFolder is folder expected
  */
-function assertExportTarget(exp: String, expectFolder: Boolean): Void {
+function assertExportTarget(exp: string, expectFolder: boolean): Void {
 	if (
 		exp.charCodeAt(0) === slashCode ||
 		(exp.charCodeAt(0) === dotCode && exp.charCodeAt(1) !== slashCode)
@@ -216,7 +216,7 @@ function assertExportTarget(exp: String, expectFolder: Boolean): Void {
 		);
 	}
 
-	const isFolder: Boolean = exp.charCodeAt(exp.length - 1) === slashCode;
+	const isFolder: boolean = exp.charCodeAt(exp.length - 1) === slashCode;
 
 	if (isFolder !== expectFolder) {
 		throw new Error(
@@ -235,8 +235,8 @@ function assertExportTarget(exp: String, expectFolder: Boolean): Void {
  * @param {string} imp import target
  * @param {boolean} expectFolder is folder expected
  */
-function assertImportTarget(imp: String, expectFolder: Boolean): Void {
-	const isFolder: Boolean = imp.charCodeAt(imp.length - 1) === slashCode;
+function assertImportTarget(imp: string, expectFolder: boolean): Void {
+	const isFolder: boolean = imp.charCodeAt(imp.length - 1) === slashCode;
 
 	if (isFolder !== expectFolder) {
 		throw new Error(
@@ -257,9 +257,9 @@ function assertImportTarget(imp: String, expectFolder: Boolean): Void {
  * @param {PathTreeNode} treeRoot path tree root
  * @returns {[MappingValue, number]|null} match or null, number is negative and one less when it's a folder mapping, number is request.length + 1 for direct mappings
  */
-function findMatch(request: String, treeRoot: Object): Array {
+function findMatch(request: string, treeRoot: object): any[] {
 	if (request.length === 0) {
-		const value: String = treeRoot.files.get("");
+		const value: string = treeRoot.files.get("");
 
 		return value ? [value, 1] : null;
 	}
@@ -269,20 +269,20 @@ function findMatch(request: String, treeRoot: Object): Array {
 		treeRoot.folder === null &&
 		treeRoot.wildcards === null
 	) {
-		const value: String = treeRoot.files.get(request);
+		const value: string = treeRoot.files.get(request);
 
 		return value ? [value, request.length + 1] : null;
 	}
 
-	let node: Object = treeRoot;
-	let lastNonSlashIndex: Number = 0;
-	let slashIndex: Number = request.indexOf("/", 0);
+	let node: object = treeRoot;
+	let lastNonSlashIndex: number = 0;
+	let slashIndex: number = request.indexOf("/", 0);
 
 	/** @type {[MappingValue, number]|null} */
-	let lastFolderMatch: Object = null;
+	let lastFolderMatch: object = null;
 
 	const applyFolderMapping: Function = () => {
-		const folderMapping: String = node.folder;
+		const folderMapping: string = node.folder;
 		if (folderMapping) {
 			if (lastFolderMatch) {
 				lastFolderMatch[0] = folderMapping;
@@ -293,7 +293,7 @@ function findMatch(request: String, treeRoot: Object): Array {
 		}
 	};
 
-	const applyWildcardMappings: Function = (wildcardMappings: Array, remainingRequest: Object) => {
+	const applyWildcardMappings: Function = (wildcardMappings: any[], remainingRequest: object) => {
 		if (wildcardMappings) {
 			for (const [key, target] of wildcardMappings) {
 				if (remainingRequest.startsWith(key)) {
@@ -311,11 +311,11 @@ function findMatch(request: String, treeRoot: Object): Array {
 	while (slashIndex !== -1) {
 		applyFolderMapping();
 
-		const wildcardMappings: Boolean = node.wildcards;
+		const wildcardMappings: boolean = node.wildcards;
 
 		if (!wildcardMappings && node.children === null) return lastFolderMatch;
 
-		const folder: String = request.slice(lastNonSlashIndex, slashIndex);
+		const folder: string = request.slice(lastNonSlashIndex, slashIndex);
 
 		applyWildcardMappings(wildcardMappings, folder);
 
@@ -332,10 +332,10 @@ function findMatch(request: String, treeRoot: Object): Array {
 		slashIndex = request.indexOf("/", lastNonSlashIndex);
 	}
 
-	const remainingRequest: String =
+	const remainingRequest: string =
 		lastNonSlashIndex > 0 ? request.slice(lastNonSlashIndex) : request;
 
-	const value: String = node.files.get(remainingRequest);
+	const value: string = node.files.get(remainingRequest);
 
 	if (value) {
 		return [value, request.length + 1];
@@ -352,7 +352,7 @@ function findMatch(request: String, treeRoot: Object): Array {
  * @param {ConditionalMapping|DirectMapping|null} mapping mapping
  * @returns {boolean} is conditional mapping
  */
-function isConditionalMapping(mapping: Number): Boolean {
+function isConditionalMapping(mapping: number): boolean {
 	return (
 		mapping !== null && typeof mapping === "object" && !Array.isArray(mapping)
 	);
@@ -367,12 +367,12 @@ function isConditionalMapping(mapping: Number): Boolean {
  * @returns {string[]} mapping result
  */
 function directMapping(
-	remainingRequest: String,
+	remainingRequest: string,
 	subpathMapping: Function,
-	mappingTarget: Array,
+	mappingTarget: any[],
 	conditionNames: Function,
-	assert: String
-): Array {
+	assert: string
+): any[] {
 	if (mappingTarget === null) return [];
 
 	if (typeof mappingTarget === "string") {
@@ -381,7 +381,7 @@ function directMapping(
 		];
 	}
 
-	const targets: Array = [];
+	const targets: any[] = [];
 
 	for (const exp of mappingTarget) {
 		if (typeof exp === "string") {
@@ -391,9 +391,9 @@ function directMapping(
 			continue;
 		}
 
-		const mapping: String = conditionalMapping(exp, conditionNames);
+		const mapping: string = conditionalMapping(exp, conditionNames);
 		if (!mapping) continue;
-		const innerExports: String = directMapping(
+		const innerExports: string = directMapping(
 			remainingRequest,
 			subpathMapping,
 			mapping,
@@ -416,11 +416,11 @@ function directMapping(
  * @returns {string} mapping result
  */
 function targetMapping(
-	remainingRequest: String,
-	subpathMapping: Boolean,
-	mappingTarget: String,
+	remainingRequest: string,
+	subpathMapping: boolean,
+	mappingTarget: string,
 	assert: Function
-): String {
+): string {
 	if (remainingRequest === undefined) {
 		assert(mappingTarget, false);
 		return mappingTarget;
@@ -440,14 +440,14 @@ function targetMapping(
  */
 function conditionalMapping(conditionalMapping_: Function, conditionNames: Map): Resolver {
 	/** @type {[ConditionalMapping, string[], number][]} */
-	let lookup: Array = [[conditionalMapping_, Object.keys(conditionalMapping_), 0]];
+	let lookup: any[] = [[conditionalMapping_, Object.keys(conditionalMapping_), 0]];
 
 	loop: while (lookup.length > 0) {
 		const [mapping, conditions, j] = lookup[lookup.length - 1];
-		const last: Number = conditions.length - 1;
+		const last: number = conditions.length - 1;
 
 		for (let i = j; i < conditions.length; i++) {
-			const condition: String = conditions[i];
+			const condition: string = conditions[i];
 
 			// assert default. Could be last only
 			if (i !== last) {
@@ -492,7 +492,7 @@ function conditionalMapping(conditionalMapping_: Function, conditionNames: Map):
  * to ensure that each node gets the same hidden class
  * @returns {PathTreeNode} node
  */
-function createNode(): Object {
+function createNode(): object {
 	return {
 		children: null,
 		folder: null,
@@ -507,7 +507,7 @@ function createNode(): Object {
  * @param {string} path path
  * @param {MappingValue} target target
  */
-function walkPath(root: Object, path: String, target: Array): Void {
+function walkPath(root: object, path: string, target: any[]): Void {
 	if (path.length === 0) {
 		root.folder = target;
 		return;
@@ -520,12 +520,12 @@ function walkPath(root: Object, path: String, target: Array): Void {
 	// - children:
 	//    node1:
 	//    - files: ["a.js", "b.js"]
-	let lastNonSlashIndex: Number = 0;
-	let slashIndex: Number = path.indexOf("/", 0);
+	let lastNonSlashIndex: number = 0;
+	let slashIndex: number = path.indexOf("/", 0);
 
 	while (slashIndex !== -1) {
-		const folder: String = path.slice(lastNonSlashIndex, slashIndex);
-		let newNode: Object;
+		const folder: string = path.slice(lastNonSlashIndex, slashIndex);
+		let newNode: object;
 
 		if (node.children === null) {
 			newNode = createNode();
@@ -548,7 +548,7 @@ function walkPath(root: Object, path: String, target: Array): Void {
 	if (lastNonSlashIndex >= path.length) {
 		node.folder = target;
 	} else {
-		const file: String = lastNonSlashIndex > 0 ? path.slice(lastNonSlashIndex) : path;
+		const file: string = lastNonSlashIndex > 0 ? path.slice(lastNonSlashIndex) : path;
 		if (file.endsWith("*")) {
 			if (node.wildcards === null) node.wildcards = new Map();
 			node.wildcards.set(file.slice(0, -1), target);
@@ -562,7 +562,7 @@ function walkPath(root: Object, path: String, target: Array): Void {
  * @param {ExportsField} field exports field
  * @returns {PathTreeNode} tree root
  */
-function buildExportsFieldPathTree(field: Array): Resolver {
+function buildExportsFieldPathTree(field: any[]): Resolver {
 	const root: Resolver = createNode();
 
 	// handle syntax sugar, if exports field is direct mapping for "."
@@ -576,16 +576,16 @@ function buildExportsFieldPathTree(field: Array): Resolver {
 		return root;
 	}
 
-	const keys: Array = Object.keys(field);
+	const keys: any[] = Object.keys(field);
 
 	for (let i = 0; i < keys.length; i++) {
-		const key: String = keys[i];
+		const key: string = keys[i];
 
 		if (key.charCodeAt(0) !== dotCode) {
 			// handle syntax sugar, if exports field is conditional mapping for "."
 			if (i === 0) {
 				while (i < keys.length) {
-					const charCode: Number = keys[i].charCodeAt(0);
+					const charCode: number = keys[i].charCodeAt(0);
 					if (charCode === dotCode || charCode === slashCode) {
 						throw new Error(
 							`Exports field key should be relative path and start with "." (key: ${JSON.stringify(
@@ -630,13 +630,13 @@ function buildExportsFieldPathTree(field: Array): Resolver {
  * @param {ImportsField} field imports field
  * @returns {PathTreeNode} root
  */
-function buildImportsFieldPathTree(field: Object): Resolver {
-	const root: String = createNode();
+function buildImportsFieldPathTree(field: object): Resolver {
+	const root: string = createNode();
 
-	const keys: Array = Object.keys(field);
+	const keys: any[] = Object.keys(field);
 
 	for (let i = 0; i < keys.length; i++) {
-		const key: String = keys[i];
+		const key: string = keys[i];
 
 		if (key.charCodeAt(0) !== hashCode) {
 			throw new Error(

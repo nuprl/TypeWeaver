@@ -1,10 +1,10 @@
-var require: Object = function (file: String, cwd: String) {
-    var resolved: String = require.resolve(file, cwd || '/');
+var require: object = function (file: string, cwd: string) {
+    var resolved: string = require.resolve(file, cwd || '/');
     var mod: Function = require.modules[resolved];
     if (!mod) throw new Error(
         'Failed to resolve module ' + file + ', tried ' + resolved
     );
-    var res: Array = mod._cached ? mod._cached : mod();
+    var res: any[] = mod._cached ? mod._cached : mod();
     return res;
 }
 
@@ -21,52 +21,52 @@ require._core = {
 };
 
 require.resolve = (function () {
-    return function (x: String, cwd: String) {
+    return function (x: string, cwd: string) {
         if (!cwd) cwd = '/';
         
         if (require._core[x]) return x;
-        var path: String = require.modules.path();
+        var path: string = require.modules.path();
         cwd = path.resolve('/', cwd);
-        var y: String = cwd || '/';
+        var y: string = cwd || '/';
         
         if (x.match(/^(?:\.\.?\/|\/)/)) {
-            var m: Boolean = loadAsFileSync(path.resolve(y, x))
+            var m: boolean = loadAsFileSync(path.resolve(y, x))
                 || loadAsDirectorySync(path.resolve(y, x));
             if (m) return m;
         }
         
-        var n: Boolean = loadNodeModulesSync(x, y);
+        var n: boolean = loadNodeModulesSync(x, y);
         if (n) return n;
         
         throw new Error("Cannot find module '" + x + "'");
         
-        function loadAsFileSync (x: String): String {
+        function loadAsFileSync (x: string): string {
             if (require.modules[x]) {
                 return x;
             }
             
             for (var i = 0; i < require.extensions.length; i++) {
-                var ext: String = require.extensions[i];
+                var ext: string = require.extensions[i];
                 if (require.modules[x + ext]) return x + ext;
             }
         }
         
-        function loadAsDirectorySync (x: String): Number {
+        function loadAsDirectorySync (x: string): number {
             x = x.replace(/\/+$/, '');
-            var pkgfile: String = x + '/package.json';
+            var pkgfile: string = x + '/package.json';
             if (require.modules[pkgfile]) {
                 var pkg: HTMLElement = require.modules[pkgfile]();
-                var b: Object = pkg.browserify;
+                var b: object = pkg.browserify;
                 if (typeof b === 'object' && b.main) {
-                    var m: Number = loadAsFileSync(path.resolve(x, b.main));
+                    var m: number = loadAsFileSync(path.resolve(x, b.main));
                     if (m) return m;
                 }
                 else if (typeof b === 'string') {
-                    var m: Number = loadAsFileSync(path.resolve(x, b));
+                    var m: number = loadAsFileSync(path.resolve(x, b));
                     if (m) return m;
                 }
                 else if (pkg.main) {
-                    var m: Number = loadAsFileSync(path.resolve(x, pkg.main));
+                    var m: number = loadAsFileSync(path.resolve(x, pkg.main));
                     if (m) return m;
                 }
             }
@@ -74,29 +74,29 @@ require.resolve = (function () {
             return loadAsFileSync(x + '/index');
         }
         
-        function loadNodeModulesSync (x: String, start: String): Boolean {
-            var dirs: Array = nodeModulesPathsSync(start);
+        function loadNodeModulesSync (x: string, start: string): boolean {
+            var dirs: any[] = nodeModulesPathsSync(start);
             for (var i = 0; i < dirs.length; i++) {
-                var dir: String = dirs[i];
-                var m: Boolean = loadAsFileSync(dir + '/' + x);
+                var dir: string = dirs[i];
+                var m: boolean = loadAsFileSync(dir + '/' + x);
                 if (m) return m;
-                var n: Boolean = loadAsDirectorySync(dir + '/' + x);
+                var n: boolean = loadAsDirectorySync(dir + '/' + x);
                 if (n) return n;
             }
             
-            var m: Boolean = loadAsFileSync(x);
+            var m: boolean = loadAsFileSync(x);
             if (m) return m;
         }
         
-        function nodeModulesPathsSync (start: String): Array {
-            var parts: Array;
+        function nodeModulesPathsSync (start: string): any[] {
+            var parts: any[];
             if (start === '/') parts = [ '' ];
             else parts = path.normalize(start).split('/');
             
-            var dirs: Array = [];
+            var dirs: any[] = [];
             for (var i = parts.length - 1; i >= 0; i--) {
                 if (parts[i] === 'node_modules') continue;
-                var dir: String = parts.slice(0, i + 1).join('/') + '/node_modules';
+                var dir: string = parts.slice(0, i + 1).join('/') + '/node_modules';
                 dirs.push(dir);
             }
             
@@ -105,27 +105,27 @@ require.resolve = (function () {
     };
 })();
 
-require.alias = function (from: Number, to: Number) {
-    var path: String = require.modules.path();
-    var res: String = null;
+require.alias = function (from: number, to: number) {
+    var path: string = require.modules.path();
+    var res: string = null;
     try {
         res = require.resolve(from + '/package.json', '/');
     }
     catch (err) {
         res = require.resolve(from, '/');
     }
-    var basedir: String = path.dirname(res);
+    var basedir: string = path.dirname(res);
     
-    var keys: Array = (Object.keys || function (obj: Array) {
-        var res: Array = [];
+    var keys: any[] = (Object.keys || function (obj: any[]) {
+        var res: any[] = [];
         for (var key in obj) res.push(key)
         return res;
     })(require.modules);
     
     for (var i = 0; i < keys.length; i++) {
-        var key: Array = keys[i];
+        var key: any[] = keys[i];
         if (key.slice(0, basedir.length + 1) === basedir + '/') {
-            var f: String = key.slice(basedir.length);
+            var f: string = key.slice(basedir.length);
             require.modules[to + f] = require.modules[basedir + f];
         }
         else if (key === basedir) {
@@ -134,21 +134,21 @@ require.alias = function (from: Number, to: Number) {
     }
 };
 
-require.define = function (filename: String, fn: Function) {
-    var dirname: String = require._core[filename]
+require.define = function (filename: string, fn: Function) {
+    var dirname: string = require._core[filename]
         ? ''
         : require.modules.path().dirname(filename)
     ;
     
-    var require_: Function = function (file: String) {
+    var require_: Function = function (file: string) {
         return require(file, dirname)
     };
-    require_.resolve = function (name: String) {
+    require_.resolve = function (name: string) {
         return require.resolve(name, dirname);
     };
     require_.modules = require.modules;
     require_.define = require.define;
-    var module_: Object = { exports : {} };
+    var module_: object = { exports : {} };
     
     require.modules[filename] = function () {
         require.modules[filename]._cached = module_.exports;
@@ -168,13 +168,13 @@ require.define = function (filename: String, fn: Function) {
 if (typeof process === 'undefined') process = {};
 
 if (!process.nextTick) process.nextTick = (function () {
-    var queue: Array = [];
-    var canPost: Boolean = typeof window !== 'undefined'
+    var queue: any[] = [];
+    var canPost: boolean = typeof window !== 'undefined'
         && window.postMessage && window.addEventListener
     ;
     
     if (canPost) {
-        window.addEventListener('message', function (ev: Object) {
+        window.addEventListener('message', function (ev: object) {
             if (ev.source === window && ev.data === 'browserify-tick') {
                 ev.stopPropagation();
                 if (queue.length > 0) {
@@ -185,7 +185,7 @@ if (!process.nextTick) process.nextTick = (function () {
         }, true);
     }
     
-    return function (fn: Number) {
+    return function (fn: number) {
         if (canPost) {
             queue.push(fn);
             window.postMessage('browserify-tick', '*');
@@ -196,7 +196,7 @@ if (!process.nextTick) process.nextTick = (function () {
 
 if (!process.title) process.title = 'browser';
 
-if (!process.binding) process.binding = function (name: String) {
+if (!process.binding) process.binding = function (name: string) {
     if (name === 'evals') return require('vm')
     else throw new Error('No such module')
 };

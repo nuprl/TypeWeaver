@@ -17,11 +17,11 @@ module.exports.descending = descending;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function serialOrdered(list: Object, iterator: Function, sortMethod: String, callback: Function): Promise
+function serialOrdered(list: object, iterator: Function, sortMethod: string, callback: Function): Promise
 {
-  var state: Object = initState(list, sortMethod);
+  var state: object = initState(list, sortMethod);
 
-  iterate(list, iterator, state, function iteratorHandler(error: Object, result: Function): Void
+  iterate(list, iterator, state, function iteratorHandler(error: object, result: Function): Void
   {
     if (error)
     {
@@ -56,7 +56,7 @@ function serialOrdered(list: Object, iterator: Function, sortMethod: String, cal
  * @param   {mixed} b - an item to compare
  * @returns {number} - comparison result
  */
-function ascending(a: Number, b: Number): Number
+function ascending(a: number, b: number): number
 {
   return a < b ? -1 : a > b ? 1 : 0;
 }
@@ -68,7 +68,7 @@ function ascending(a: Number, b: Number): Number
  * @param   {mixed} b - an item to compare
  * @returns {number} - comparison result
  */
-function descending(a: String, b: String): Number
+function descending(a: string, b: string): number
 {
   return -1 * ascending(a, b);
 }

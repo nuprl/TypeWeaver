@@ -10,13 +10,13 @@ import EE from 'event-emitter';
 import FE from 'fastemitter';
 import Master from '../../';
 
-function foo(): Number {
+function foo(): number {
   if (arguments.length > 100) console.log('damn');
 
   return 1;
 }
 
-var ee1: Object = new EventEmitter1()
+var ee1: object = new EventEmitter1()
   , ee2: HTMLElement = new EventEmitter2()
   , ee3: HTMLElement = new EventEmitter3()
   , master: HTMLElement = new Master()
@@ -24,7 +24,7 @@ var ee1: Object = new EventEmitter1()
   , fe: HTMLElement = new FE()
   , ce: HTMLElement = CE()
   , ee: HTMLElement = EE()
-  , j: Number, i: Number;
+  , j: number, i: number;
 
 for (i = 0; i < 10; i++) {
   for (j = 0; j < 10; j++) {

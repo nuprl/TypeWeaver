@@ -38,7 +38,7 @@ var MIME_SUBTYPE_LINE_REGEXP: RegExp = /^[^:\s-]*\s*(?:MIME )?(?:[Mm]edia )?(?:[
 var MIME_TYPE_HAS_CHARSET_PARAMETER_REGEXP: RegExp = /parameters\s*:[^.]*\bcharset\b/im
 
 co(function * () {
-  var gens: Array = yield [
+  var gens: any[] = yield [
     get('application', { extensions: /(?:\/(?:cwl|ecmascript|express|fdf|gzip|(?:ld|manifest)\+json|n-quads|n-triples|pgp-.+|trig|vnd\.(?:age|apple\..+|dbf|mapbox-vector-tile|rar))|xfdf|\+xml)$/ }),
     get('audio', { extensions: /\/(?:aac|mobile-xmf)$/ }),
     get('font', { extensions: true }),
@@ -54,7 +54,7 @@ co(function * () {
   gens = gens.reduce(concat, [])
 
   // get results in groups
-  var results: Array = []
+  var results: any[] = []
   while (gens.length !== 0) {
     results.push(yield gens.splice(0, 10))
   }
@@ -63,17 +63,17 @@ co(function * () {
   results = results.reduce(concat, [])
 
   // gather extension frequency
-  var exts: Object = Object.create(null)
-  results.forEach(function (result: Object) {
-    (result.extensions || []).forEach(function (ext: String) {
+  var exts: object = Object.create(null)
+  results.forEach(function (result: object) {
+    (result.extensions || []).forEach(function (ext: string) {
       exts[ext] = (exts[ext] || 0) + 1
     })
   })
 
   // construct json map
-  var json: Object = Object.create(null)
-  results.forEach(function (result: Object) {
-    var mime: String = result.mime
+  var json: object = Object.create(null)
+  results.forEach(function (result: object) {
+    var mime: string = result.mime
 
     if (mime in json) {
       throw new Error('duplicate entry for ' + mime)
@@ -91,7 +91,7 @@ co(function * () {
     }
 
     // keep unambigious extensions
-    var extensions: Array = (result.extensions || []).filter(function (ext: String) {
+    var extensions: any[] = (result.extensions || []).filter(function (ext: string) {
       return exts[ext] === 1 || typer.parse(mime).subtype === ext
     })
 
@@ -103,17 +103,17 @@ co(function * () {
   writedb('src/iana-types.json', json)
 }).then()
 
-function addTemplateData (data: HTMLElement, options: Object): Function {
-  var opts: Object = options || {}
+function addTemplateData (data: HTMLElement, options: object): Function {
+  var opts: object = options || {}
 
   if (!data.template) {
     return data
   }
 
-  return function * get (): String {
+  return function * get (): string {
     var res: HTMLElement = yield * cogent('https://www.iana.org/assignments/media-types/' + data.template, { retries: 3 })
-    var ref: Number = data.type + '/' + data.name
-    var rfc: String = getRfcReferences(data.reference)[0]
+    var ref: number = data.type + '/' + data.name
+    var rfc: string = getRfcReferences(data.reference)[0]
 
     if (res.statusCode === 404 && data.template !== ref) {
       console.log('template ' + data.template + ' not found, retry as ' + ref)
@@ -140,9 +140,9 @@ function addTemplateData (data: HTMLElement, options: Object): Function {
       throw new Error('got status code ' + res.statusCode + ' from template ' + data.template)
     }
 
-    var body: String = yield getTemplateBody(res)
-    var href: String = res.urls[0].href
-    var mime: String = extractTemplateMime(body)
+    var body: string = yield getTemplateBody(res)
+    var href: string = res.urls[0].href
+    var mime: string = extractTemplateMime(body)
 
     // add the template as a source
     addSource(data, href)
@@ -168,17 +168,17 @@ function addTemplateData (data: HTMLElement, options: Object): Function {
   }
 }
 
-function extractIntendedUsage (body: String): String {
-  var match: Object = INTENDED_USAGE_REGEXP.exec(body)
+function extractIntendedUsage (body: string): string {
+  var match: object = INTENDED_USAGE_REGEXP.exec(body)
 
   return match
     ? match[1].toLocaleLowerCase()
     : undefined
 }
 
-function extractTemplateMime (body: String): Number {
-  var type: String = mimeTypeLineRegExp.exec(body)
-  var subtype: Array = MIME_SUBTYPE_LINE_REGEXP.exec(body)
+function extractTemplateMime (body: string): number {
+  var type: string = mimeTypeLineRegExp.exec(body)
+  var subtype: any[] = MIME_SUBTYPE_LINE_REGEXP.exec(body)
 
   if (!subtype && (subtype = mimeSubtypesLineRegExp.exec(body)) && !/^[A-Za-z0-9.+-]+$/.test(subtype[1])) {
     return
@@ -203,49 +203,49 @@ function extractTemplateMime (body: String): Number {
   return (type + '/' + subtype).toLowerCase()
 }
 
-function extractTemplateCharset (body: String): String {
+function extractTemplateCharset (body: string): string {
   if (!MIME_TYPE_HAS_CHARSET_PARAMETER_REGEXP.test(body)) {
     return undefined
   }
 
-  var match: Object = CHARSET_DEFAULT_REGEXP.exec(body)
+  var match: object = CHARSET_DEFAULT_REGEXP.exec(body)
 
   return match
     ? match[1].toUpperCase()
     : undefined
 }
 
-function extractTemplateExtensions (body: String): String {
-  var match: Array = EXTENSIONS_REGEXP.exec(body) || extensionsQuotedRegExp.exec(body)
+function extractTemplateExtensions (body: string): string {
+  var match: any[] = EXTENSIONS_REGEXP.exec(body) || extensionsQuotedRegExp.exec(body)
 
   if (!match) {
     return
   }
 
-  var exts: Array = match
+  var exts: any[] = match
     .slice(1)
     .filter(Boolean)
-    .map(function (ext: String) { return ext.toLowerCase() })
-    .filter(function (ext: String) { return ext !== 'none' })
+    .map(function (ext: string) { return ext.toLowerCase() })
+    .filter(function (ext: string) { return ext !== 'none' })
 
   return exts.length === 0
     ? undefined
     : exts
 }
 
-function * get (type: String, options: Object): Array {
+function * get (type: string, options: object): any[] {
   var res: HTMLElement = yield * cogent('https://www.iana.org/assignments/media-types/' + encodeURIComponent(type) + '.csv', { retries: 3 })
 
   if (res.statusCode !== 200) {
     throw new Error('got status code ' + res.statusCode + ' from ' + type)
   }
 
-  var mimes: Array = yield toArray(res.pipe(parser()))
-  var headers: Array = mimes.shift().map(normalizeHeader)
-  var reduceRows: Array = generateRowMapper(headers)
-  var templates: Object = Object.create(null)
+  var mimes: any[] = yield toArray(res.pipe(parser()))
+  var headers: any[] = mimes.shift().map(normalizeHeader)
+  var reduceRows: any[] = generateRowMapper(headers)
+  var templates: object = Object.create(null)
 
-  return mimes.map(function (row: Array) {
+  return mimes.map(function (row: any[]) {
     var data: HTMLElement = row.reduce(reduceRows, { type: type })
 
     if (data.template) {
@@ -265,12 +265,12 @@ function * get (type: String, options: Object): Array {
     data.mime = (data.template || (type + '/' + data.name)).toLowerCase()
 
     // extract notes from name
-    var nameMatch: Object = nameWithNotesRegExp.exec(data.name)
+    var nameMatch: object = nameWithNotesRegExp.exec(data.name)
     data.name = nameMatch[1]
     data.notes = nameMatch[2] || nameMatch[3]
 
     // add reference sources
-    parseReferences(data.reference).forEach(function (url: String) {
+    parseReferences(data.reference).forEach(function (url: string) {
       addSource(data, url)
     })
 
@@ -278,16 +278,16 @@ function * get (type: String, options: Object): Array {
   })
 }
 
-function * getTemplateBody (res: Function): String {
-  var body: String = yield getRawBody(res, { encoding: 'ascii' })
-  var lines: Array = body.split(/\r?\n/)
-  var slurp: Boolean = false
+function * getTemplateBody (res: Function): string {
+  var body: string = yield getRawBody(res, { encoding: 'ascii' })
+  var lines: any[] = body.split(/\r?\n/)
+  var slurp: boolean = false
 
-  return lines.reduce(function (lines: Array, line: String) {
+  return lines.reduce(function (lines: any[], line: string) {
     line = line.replace(/=20$/, ' ')
 
-    var prev: String = (lines[lines.length - 1] || '')
-    var match: Object = leadingSpacesRegExp.exec(line)
+    var prev: string = (lines[lines.length - 1] || '')
+    var match: object = leadingSpacesRegExp.exec(line)
 
     if (slurp && line.trim().length === 0 && !/:\s*$/.test(prev)) {
       slurp = false
@@ -312,28 +312,28 @@ function * getTemplateBody (res: Function): String {
   }, []).join('\n')
 }
 
-function addSource (data: Object, url: String): Void {
-  var sources: Array = data.sources || (data.sources = [])
+function addSource (data: object, url: string): Void {
+  var sources: any[] = data.sources || (data.sources = [])
 
   if (sources.indexOf(url) === -1) {
     sources.push(url)
   }
 }
 
-function appendToLine (line: Object, str: Function): String {
-  var trimmed: String = line.trimRight()
-  var append: String = trimmed.slice(-1) === '-'
+function appendToLine (line: object, str: Function): string {
+  var trimmed: string = line.trimRight()
+  var append: string = trimmed.slice(-1) === '-'
     ? str.trimLeft()
     : ' ' + str.trimLeft()
   return trimmed + append
 }
 
-function concat (a: Array, b: Array): Array {
+function concat (a: any[], b: any[]): any[] {
   return a.concat(b.filter(Boolean))
 }
 
-function generateRowMapper (headers: Object): Function {
-  return function reduceRows (obj: Object, val: String, index: Number): Object {
+function generateRowMapper (headers: object): Function {
+  return function reduceRows (obj: object, val: string, index: number): object {
     if (val !== '') {
       obj[headers[index]] = val
     }
@@ -342,9 +342,9 @@ function generateRowMapper (headers: Object): Function {
   }
 }
 
-function getRfcReferences (reference: String): Array {
-  var match: Object = null
-  var rfcs: Array = []
+function getRfcReferences (reference: string): any[] {
+  var match: object = null
+  var rfcs: any[] = []
 
   rfcReferenceRegExp.index = 0
 
@@ -355,9 +355,9 @@ function getRfcReferences (reference: String): Array {
   return rfcs
 }
 
-function getUrlReferences (reference: String): Array {
-  var match: Object = null
-  var urls: Array = []
+function getUrlReferences (reference: string): any[] {
+  var match: object = null
+  var urls: any[] = []
 
   urlReferenceRegExp.index = 0
 
@@ -368,8 +368,8 @@ function getUrlReferences (reference: String): Array {
   return urls
 }
 
-function loadBluebird (): Array {
-  var Promise: String = require('bluebird')
+function loadBluebird (): any[] {
+  var Promise: string = require('bluebird')
 
   // Silence all warnings
   Promise.config({
@@ -379,19 +379,19 @@ function loadBluebird (): Array {
   return Promise
 }
 
-function mimeEql (mime1: String, mime2: String): Boolean {
+function mimeEql (mime1: string, mime2: string): boolean {
   return mime1 && mime2 &&
     mime1.replace(symbolRegExp, '-') === mime2.replace(symbolRegExp, '-')
 }
 
-function normalizeHeader (val: Array): String {
-  return val.slice(0, 1).toLowerCase() + val.slice(1).replace(/ (.)/, function (s: Function, c: String) {
+function normalizeHeader (val: any[]): string {
+  return val.slice(0, 1).toLowerCase() + val.slice(1).replace(/ (.)/, function (s: Function, c: string) {
     return c.toUpperCase()
   })
 }
 
-function parseReferences (reference: String): Array {
-  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: String) {
+function parseReferences (reference: string): any[] {
+  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: string) {
     return 'https://tools.ietf.org/rfc/' + rfc.toLowerCase() + '.txt'
   }))
 }

@@ -6,21 +6,19 @@ benchmark/index.ts(7,10): error TS2339: Property 'horizontalAbsolute' does not e
 benchmark/index.ts(8,10): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
 benchmark/index.ts(8,23): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 benchmark/index.ts(9,18): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
-benchmark/index.ts(13,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(22,16): error TS2339: Property 'run' does not exist on type 'any[]'.
+benchmark/index.ts(24,13): error TS2339: Property 'add' does not exist on type 'any[]'.
 benchmark/index.ts(35,51): error TS2304: Cannot find name 'Void'.
-benchmark/index.ts(36,22): error TS2538: Type 'String' cannot be used as an index type.
-benchmark/index.ts(40,4): error TS2339: Property 'add' does not exist on type 'Object'.
-benchmark/index.ts(46,4): error TS2339: Property 'add' does not exist on type 'Object'.
-benchmark/index.ts(52,4): error TS2339: Property 'add' does not exist on type 'Object'.
+benchmark/index.ts(40,4): error TS2339: Property 'add' does not exist on type 'object'.
+benchmark/index.ts(46,4): error TS2339: Property 'add' does not exist on type 'object'.
+benchmark/index.ts(52,4): error TS2339: Property 'add' does not exist on type 'object'.
 benchmark/index.ts(58,14): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(59,12): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(59,18): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(61,14): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(62,13): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(62,30): error TS2304: Cannot find name 'num'.
-benchmark/index.ts(70,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/index.ts(70,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/index.ts(71,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+benchmark/index.ts(71,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 benchmark/index.ts(84,14): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(85,12): error TS2304: Cannot find name 'num'.
 benchmark/index.ts(85,18): error TS2304: Cannot find name 'num'.

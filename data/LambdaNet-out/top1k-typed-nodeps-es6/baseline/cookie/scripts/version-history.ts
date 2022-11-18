@@ -3,12 +3,12 @@
 import fs from 'fs';
 import path from 'path';
 
-var HISTORY_FILE_PATH: String = path.join(__dirname, '..', 'HISTORY.md')
+var HISTORY_FILE_PATH: string = path.join(__dirname, '..', 'HISTORY.md')
 var MD_HEADER_REGEXP: RegExp = /^====*$/
-var VERSION: String = process.env.npm_package_version
+var VERSION: string = process.env.npm_package_version
 var VERSION_PLACEHOLDER_REGEXP: RegExp = /^(?:unreleased|(\d+\.)+x)$/
 
-var historyFileLines: Array = fs.readFileSync(HISTORY_FILE_PATH, 'utf-8').split('\n')
+var historyFileLines: any[] = fs.readFileSync(HISTORY_FILE_PATH, 'utf-8').split('\n')
 
 if (!MD_HEADER_REGEXP.test(historyFileLines[1])) {
   console.error('Missing header in HISTORY.md')
@@ -34,7 +34,7 @@ historyFileLines[1] = repeat('=', historyFileLines[0].length)
 
 fs.writeFileSync(HISTORY_FILE_PATH, historyFileLines.join('\n'))
 
-function getLocaleDate (): String {
+function getLocaleDate (): string {
   var now: HTMLInputElement = new Date()
 
   return zeroPad(now.getFullYear(), 4) + '-' +
@@ -42,8 +42,8 @@ function getLocaleDate (): String {
     zeroPad(now.getDate(), 2)
 }
 
-function repeat (str: String, length: String): String {
-  var out: String = ''
+function repeat (str: string, length: string): string {
+  var out: string = ''
 
   for (var i = 0; i < length; i++) {
     out += str
@@ -52,8 +52,8 @@ function repeat (str: String, length: String): String {
   return out
 }
 
-function zeroPad (number: Number, length: Number): String {
-  var num: String = number.toString()
+function zeroPad (number: number, length: number): string {
+  var num: string = number.toString()
 
   while (num.length < length) {
     num = '0' + num

@@ -2,7 +2,7 @@
 
 import parsers from '../parsers';
 
-var parse: Array = function parse(v) {
+var parse: any[] = function parse(v) {
   var parsed = parsers.parseUrl(v);
   if (parsed !== undefined) {
     return parsed;

@@ -14,8 +14,8 @@ var Extensions: Function = function() {
 
 Extensions.MESSAGE_OPCODES = [1, 2];
 
-var instance: Object = {
-  add: function(ext: Object) {
+var instance: object = {
+  add: function(ext: object) {
     if (typeof ext.name !== 'string') throw new TypeError('extension.name must be a string');
     if (ext.type !== 'permessage') throw new TypeError('extension.type must be "permessage"');
 
@@ -31,22 +31,22 @@ var instance: Object = {
   },
 
   generateOffer: function() {
-    var sessions: Array = [],
-        offer: Array    = [],
-        index: Object    = {};
+    var sessions: any[] = [],
+        offer: any[]    = [],
+        index: object    = {};
 
-    this._inOrder.forEach(function(ext: Object) {
-      var session: String = ext.createClientSession();
+    this._inOrder.forEach(function(ext: object) {
+      var session: string = ext.createClientSession();
       if (!session) return;
 
-      var record: Array = [ext, session];
+      var record: any[] = [ext, session];
       sessions.push(record);
       index[ext.name] = record;
 
-      var offers: Array = session.generateOffer();
+      var offers: any[] = session.generateOffer();
       offers = offers ? [].concat(offers) : [];
 
-      offers.forEach(function(off: Number) {
+      offers.forEach(function(off: number) {
         offer.push(Parser.serializeParams(ext.name, off));
       }, this);
     }, this);
@@ -57,19 +57,19 @@ var instance: Object = {
     return offer.length > 0 ? offer.join(', ') : null;
   },
 
-  activate: function(header: String) {
-    var responses: Array = Parser.parseHeader(header),
-        sessions: Array  = [];
+  activate: function(header: string) {
+    var responses: any[] = Parser.parseHeader(header),
+        sessions: any[]  = [];
 
-    responses.eachOffer(function(name: String, params: String) {
-      var record: Object = this._index[name];
+    responses.eachOffer(function(name: string, params: string) {
+      var record: object = this._index[name];
 
       if (!record)
         throw new Error('Server sent an extension response for unknown extension "' + name + '"');
 
       var ext: Function      = record[0],
-          session: String  = record[1],
-          reserved: Object = this._reserved(ext);
+          session: string  = record[1],
+          reserved: object = this._reserved(ext);
 
       if (reserved)
         throw new Error('Server sent two extension responses that use the RSV' +
@@ -88,16 +88,16 @@ var instance: Object = {
     this._pipeline = new Pipeline(sessions);
   },
 
-  generateResponse: function(header: String) {
-    var sessions: Array = [],
-        response: Array = [],
+  generateResponse: function(header: string) {
+    var sessions: any[] = [],
+        response: any[] = [],
         offers: HTMLElement   = Parser.parseHeader(header);
 
-    this._inOrder.forEach(function(ext: Object) {
-      var offer: Array = offers.byName(ext.name);
+    this._inOrder.forEach(function(ext: object) {
+      var offer: any[] = offers.byName(ext.name);
       if (offer.length === 0 || this._reserved(ext)) return;
 
-      var session: String = ext.createServerSession(offer);
+      var session: string = ext.createServerSession(offer);
       if (!session) return;
 
       this._reserve(ext);
@@ -112,7 +112,7 @@ var instance: Object = {
   },
 
   validFrameRsv: function(frame: HTMLElement) {
-    var allowed: Object = { rsv1: false, rsv2: false, rsv3: false },
+    var allowed: object = { rsv1: false, rsv2: false, rsv3: false },
         ext: HTMLElement;
 
     if (Extensions.MESSAGE_OPCODES.indexOf(frame.opcode) >= 0) {
@@ -129,20 +129,20 @@ var instance: Object = {
            (allowed.rsv3 || !frame.rsv3);
   },
 
-  processIncomingMessage: function(message: String, callback: Function, context: Function) {
+  processIncomingMessage: function(message: string, callback: Function, context: Function) {
     this._pipeline.processIncomingMessage(message, callback, context);
   },
 
-  processOutgoingMessage: function(message: String, callback: Function, context: Function) {
+  processOutgoingMessage: function(message: string, callback: Function, context: Function) {
     this._pipeline.processOutgoingMessage(message, callback, context);
   },
 
-  close: function(callback: Function, context: String) {
+  close: function(callback: Function, context: string) {
     if (!this._pipeline) return callback.call(context);
     this._pipeline.close(callback, context);
   },
 
-  _reserve: function(ext: Object) {
+  _reserve: function(ext: object) {
     this._rsv1 = this._rsv1 || (ext.rsv1 && ext.name);
     this._rsv2 = this._rsv2 || (ext.rsv2 && ext.name);
     this._rsv3 = this._rsv3 || (ext.rsv3 && ext.name);

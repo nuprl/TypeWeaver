@@ -1,6 +1,6 @@
 'use strict';
 
-export const isInteger: Function = (num: String) => {
+export const isInteger: Function = (num: string) => {
   if (typeof num === 'number') {
     return Number.isInteger(num);
   }
@@ -14,13 +14,13 @@ export const isInteger: Function = (num: String) => {
  * Find a node of the given type
  */
 
-export const find: Function = (node: Object, type: Number) => node.nodes.find((node: Object) => node.type === type);
+export const find: Function = (node: object, type: number) => node.nodes.find((node: object) => node.type === type);
 
 /**
  * Find a node of the given type
  */
 
-export const exceedsLimit: Function = (min: Number, max: Number, step: Number = 1, limit: Number) => {
+export const exceedsLimit: Function = (min: number, max: number, step: number = 1, limit: number) => {
   if (limit === false) return false;
   if (!isInteger(min) || !isInteger(max)) return false;
   return ((Number(max) - Number(min)) / Number(step)) >= limit;
@@ -30,8 +30,8 @@ export const exceedsLimit: Function = (min: Number, max: Number, step: Number = 
  * Escape the given node with '\\' before node.value
  */
 
-export const escapeNode: Function = (block: Object, n: Number = 0, type: Number) => {
-  let node: Object = block.nodes[n];
+export const escapeNode: Function = (block: object, n: number = 0, type: number) => {
+  let node: object = block.nodes[n];
   if (!node) return;
 
   if ((type && node.type === type) || node.type === 'open' || node.type === 'close') {
@@ -46,7 +46,7 @@ export const escapeNode: Function = (block: Object, n: Number = 0, type: Number)
  * Returns true if the given brace node should be enclosed in literal braces
  */
 
-export const encloseBrace: Function = (node: Object) => {
+export const encloseBrace: Function = (node: object) => {
   if (node.type !== 'brace') return false;
   if ((node.commas >> 0 + node.ranges >> 0) === 0) {
     node.invalid = true;
@@ -59,7 +59,7 @@ export const encloseBrace: Function = (node: Object) => {
  * Returns true if a brace node is invalid.
  */
 
-export const isInvalidBrace: Function = (block: Object) => {
+export const isInvalidBrace: Function = (block: object) => {
   if (block.type !== 'brace') return false;
   if (block.invalid === true || block.dollar) return true;
   if ((block.commas >> 0 + block.ranges >> 0) === 0) {
@@ -77,7 +77,7 @@ export const isInvalidBrace: Function = (block: Object) => {
  * Returns true if a node is an open or close node
  */
 
-export const isOpenOrClose: Function = (node: Object) => {
+export const isOpenOrClose: Function = (node: object) => {
   if (node.type === 'open' || node.type === 'close') {
     return true;
   }
@@ -88,7 +88,7 @@ export const isOpenOrClose: Function = (node: Object) => {
  * Reduce an array of text nodes.
  */
 
-export const reduce: Function = (nodes: Array) => nodes.reduce((acc: Array, node: Object) => {
+export const reduce: Function = (nodes: any[]) => nodes.reduce((acc: any[], node: object) => {
   if (node.type === 'text') acc.push(node.value);
   if (node.type === 'range') node.type = 'text';
   return acc;
@@ -99,10 +99,10 @@ export const reduce: Function = (nodes: Array) => nodes.reduce((acc: Array, node
  */
 
 export const flatten: Function = (...args) => {
-  const result: Array = [];
-  const flat: Function = (arr: Array) => {
+  const result: any[] = [];
+  const flat: Function = (arr: any[]) => {
     for (let i = 0; i < arr.length; i++) {
-      let ele: String = arr[i];
+      let ele: string = arr[i];
       Array.isArray(ele) ? flat(ele, result) : ele !== void 0 && result.push(ele);
     }
     return result;

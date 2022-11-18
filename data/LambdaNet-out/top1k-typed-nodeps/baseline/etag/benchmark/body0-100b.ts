@@ -3,8 +3,8 @@
  * Module dependencies.
  */
 
-var benchmark: Array = require('benchmark')
-var benchmarks: Array = require('beautify-benchmark')
+var benchmark: any[] = require('benchmark')
+var benchmarks: any[] = require('beautify-benchmark')
 var Buffer: HTMLElement = require('safe-buffer').Buffer
 var seedrandom: Function = require('seedrandom')
 
@@ -42,11 +42,11 @@ suite.add({
   fn: 'var val = etag(string, {weak: true})'
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  100B body\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 
@@ -56,9 +56,9 @@ suite.on('complete', function onComplete (): Void {
 
 suite.run({ async: false })
 
-function getbuffer (size: String): Array {
-  var buffer: Array = Buffer.alloc(size)
-  var rng: Object = seedrandom('body ' + size)
+function getbuffer (size: string): any[] {
+  var buffer: any[] = Buffer.alloc(size)
+  var rng: object = seedrandom('body ' + size)
 
   for (var i = 0; i < buffer.length; i++) {
     buffer[i] = (rng() * 94 + 32) | 0

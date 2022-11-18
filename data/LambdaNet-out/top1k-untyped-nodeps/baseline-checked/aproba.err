@@ -1,50 +1,23 @@
-index.ts(10,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(14,91): error TS2339: Property 'A' does not exist on type 'Object'.
-index.ts(14,112): error TS2339: Property 'E' does not exist on type 'Object'.
+index.ts(14,91): error TS2339: Property 'A' does not exist on type 'object'.
+index.ts(14,112): error TS2339: Property 'E' does not exist on type 'object'.
+index.ts(16,45): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 index.ts(20,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(20,54): error TS2304: Cannot find name 'Void'.
-index.ts(21,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(25,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(25,54): error TS2304: Cannot find name 'Void'.
 index.ts(27,48): error TS2554: Expected 1 arguments, but got 2.
 index.ts(28,42): error TS2554: Expected 1 arguments, but got 2.
-index.ts(29,14): error TS2339: Property 'S' does not exist on type 'Object'.
-index.ts(29,53): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(30,14): error TS2339: Property 'A' does not exist on type 'Object'.
-index.ts(30,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(31,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(37,18): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(37,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(39,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(41,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(47,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(52,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(54,41): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(58,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(29,14): error TS2339: Property 'S' does not exist on type 'object'.
+index.ts(29,53): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(30,14): error TS2339: Property 'A' does not exist on type 'object'.
+index.ts(30,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(37,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(58,46): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(59,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(66,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(66,71): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(70,3): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(70,84): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(76,15): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(76,57): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(78,3): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(78,55): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(82,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(86,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(88,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(91,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-index.ts(95,3): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(100,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(59,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(66,3): error TS2322: Type 'object' is not assignable to type 'string'.
+index.ts(70,3): error TS2322: Type 'object' is not assignable to type 'string'.
+index.ts(78,3): error TS2322: Type 'object' is not assignable to type 'string'.
+index.ts(79,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+index.ts(91,3): error TS2322: Type 'object' is not assignable to type 'boolean'.
+index.ts(95,3): error TS2322: Type 'object' is not assignable to type 'string'.
 index.ts(101,7): error TS2339: Property 'code' does not exist on type 'Error'.
 

@@ -12,17 +12,17 @@ import baseUniq from './baseUniq.js'
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns the new array of values.
  */
-function baseXor(arrays: Array, iteratee: String, comparator: String): Array {
-  const length: Number = arrays.length
+function baseXor(arrays: any[], iteratee: string, comparator: string): any[] {
+  const length: number = arrays.length
   if (length < 2) {
     return length ? baseUniq(arrays[0]) : []
   }
-  let index: Number = -1
-  const result: Object = new Array(length)
+  let index: number = -1
+  const result: object = new Array(length)
 
   while (++index < length) {
     const array: ListCache = arrays[index]
-    let othIndex: Number = -1
+    let othIndex: number = -1
 
     while (++othIndex < length) {
       if (othIndex != index) {

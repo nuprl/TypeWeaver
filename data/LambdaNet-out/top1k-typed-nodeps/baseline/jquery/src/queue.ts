@@ -5,8 +5,8 @@ import "./deferred.js";
 import "./callbacks.js";
 
 jQuery.extend( {
-	queue: function( elem: String, type: Number, data: Function ) {
-		var queue: Array;
+	queue: function( elem: string, type: number, data: Function ) {
+		var queue: any[];
 
 		if ( elem ) {
 			type = ( type || "fx" ) + "queue";
@@ -24,13 +24,13 @@ jQuery.extend( {
 		}
 	},
 
-	dequeue: function( elem: String, type: String ) {
+	dequeue: function( elem: string, type: string ) {
 		type = type || "fx";
 
-		var queue: Array = jQuery.queue( elem, type ),
-			startLength: Number = queue.length,
-			fn: String = queue.shift(),
-			hooks: Object = jQuery._queueHooks( elem, type ),
+		var queue: any[] = jQuery.queue( elem, type ),
+			startLength: number = queue.length,
+			fn: string = queue.shift(),
+			hooks: object = jQuery._queueHooks( elem, type ),
 			next: Function = function() {
 				jQuery.dequeue( elem, type );
 			};
@@ -60,8 +60,8 @@ jQuery.extend( {
 	},
 
 	// Not public - generate a queueHooks object, or return the current one
-	_queueHooks: function( elem: String, type: String ) {
-		var key: String = type + "queueHooks";
+	_queueHooks: function( elem: string, type: string ) {
+		var key: string = type + "queueHooks";
 		return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
 			empty: jQuery.Callbacks( "once memory" ).add( function() {
 				dataPriv.remove( elem, [ type + "queue", key ] );
@@ -71,8 +71,8 @@ jQuery.extend( {
 } );
 
 jQuery.fn.extend( {
-	queue: function( type: String, data: String ) {
-		var setter: Number = 2;
+	queue: function( type: string, data: string ) {
+		var setter: number = 2;
 
 		if ( typeof type !== "string" ) {
 			data = type;
@@ -87,7 +87,7 @@ jQuery.fn.extend( {
 		return data === undefined ?
 			this :
 			this.each( function() {
-				var queue: Object = jQuery.queue( this, type, data );
+				var queue: object = jQuery.queue( this, type, data );
 
 				// Ensure a hooks for this queue
 				jQuery._queueHooks( this, type );
@@ -97,23 +97,23 @@ jQuery.fn.extend( {
 				}
 			} );
 	},
-	dequeue: function( type: String ) {
+	dequeue: function( type: string ) {
 		return this.each( function() {
 			jQuery.dequeue( this, type );
 		} );
 	},
-	clearQueue: function( type: String ) {
+	clearQueue: function( type: string ) {
 		return this.queue( type || "fx", [] );
 	},
 
 	// Get a promise resolved when queues of a certain type
 	// are emptied (fx is the type by default)
-	promise: function( type: String, obj: String ) {
-		var tmp: Object,
-			count: Number = 1,
-			defer: Object = jQuery.Deferred(),
-			elements: Object = this,
-			i: Number = this.length,
+	promise: function( type: string, obj: string ) {
+		var tmp: object,
+			count: number = 1,
+			defer: object = jQuery.Deferred(),
+			elements: object = this,
+			i: number = this.length,
 			resolve: Function = function() {
 				if ( !( --count ) ) {
 					defer.resolveWith( elements, [ elements ] );

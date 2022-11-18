@@ -6,7 +6,7 @@ import { mkdirsSync } from '../mkdirs';
 import { utimesMillisSync } from '../util/utimes';
 import stat from '../util/stat';
 
-function copySync (src: String, dest: String, opts: Object): Promise {
+function copySync (src: string, dest: string, opts: object): Promise {
   if (typeof opts === 'function') {
     opts = { filter: opts }
   }
@@ -29,19 +29,19 @@ function copySync (src: String, dest: String, opts: Object): Promise {
   return handleFilterAndCopy(destStat, src, dest, opts)
 }
 
-function handleFilterAndCopy (destStat: Number, src: String, dest: String, opts: Object): String {
+function handleFilterAndCopy (destStat: number, src: string, dest: string, opts: object): string {
   if (opts.filter && !opts.filter(src, dest)) return
-  const destParent: String = path.dirname(dest)
+  const destParent: string = path.dirname(dest)
   if (!fs.existsSync(destParent)) mkdirsSync(destParent)
   return getStats(destStat, src, dest, opts)
 }
 
-function startCopy (destStat: String, src: String, dest: String, opts: Object): String {
+function startCopy (destStat: string, src: string, dest: string, opts: object): string {
   if (opts.filter && !opts.filter(src, dest)) return
   return getStats(destStat, src, dest, opts)
 }
 
-function getStats (destStat: String, src: String, dest: String, opts: Object): String {
+function getStats (destStat: string, src: string, dest: string, opts: object): string {
   const statSync: Function = opts.dereference ? fs.statSync : fs.lstatSync
   const srcStat: Function = statSync(src)
 
@@ -55,12 +55,12 @@ function getStats (destStat: String, src: String, dest: String, opts: Object): S
   throw new Error(`Unknown file: ${src}`)
 }
 
-function onFile (srcStat: String, destStat: Boolean, src: String, dest: String, opts: String): String {
+function onFile (srcStat: string, destStat: boolean, src: string, dest: string, opts: string): string {
   if (!destStat) return copyFile(srcStat, src, dest, opts)
   return mayCopyFile(srcStat, src, dest, opts)
 }
 
-function mayCopyFile (srcStat: String, src: String, dest: String, opts: Error): String {
+function mayCopyFile (srcStat: string, src: string, dest: string, opts: Error): string {
   if (opts.overwrite) {
     fs.unlinkSync(dest)
     return copyFile(srcStat, src, dest, opts)
@@ -69,13 +69,13 @@ function mayCopyFile (srcStat: String, src: String, dest: String, opts: Error): 
   }
 }
 
-function copyFile (srcStat: Object, src: String, dest: String, opts: Object): String {
+function copyFile (srcStat: object, src: string, dest: string, opts: object): string {
   fs.copyFileSync(src, dest)
   if (opts.preserveTimestamps) handleTimestamps(srcStat.mode, src, dest)
   return setDestMode(dest, srcStat.mode)
 }
 
-function handleTimestamps (srcMode: String, src: String, dest: String): String {
+function handleTimestamps (srcMode: string, src: string, dest: string): string {
   // Make sure the file is writable before setting the timestamp
   // otherwise open fails with EPERM when invoked with 'r+'
   // (through utimes call)
@@ -83,50 +83,50 @@ function handleTimestamps (srcMode: String, src: String, dest: String): String {
   return setDestTimestamps(src, dest)
 }
 
-function fileIsNotWritable (srcMode: Number): Boolean {
+function fileIsNotWritable (srcMode: number): boolean {
   return (srcMode & 0o200) === 0
 }
 
-function makeFileWritable (dest: String, srcMode: Number): String {
+function makeFileWritable (dest: string, srcMode: number): string {
   return setDestMode(dest, srcMode | 0o200)
 }
 
-function setDestMode (dest: String, srcMode: String): Number {
+function setDestMode (dest: string, srcMode: string): number {
   return fs.chmodSync(dest, srcMode)
 }
 
-function setDestTimestamps (src: String, dest: Number): String {
+function setDestTimestamps (src: string, dest: number): string {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
-  const updatedSrcStat: Array = fs.statSync(src)
+  const updatedSrcStat: any[] = fs.statSync(src)
   return utimesMillisSync(dest, updatedSrcStat.atime, updatedSrcStat.mtime)
 }
 
-function onDir (srcStat: Object, destStat: Boolean, src: String, dest: String, opts: String): String {
+function onDir (srcStat: object, destStat: boolean, src: string, dest: string, opts: string): string {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts)
   return copyDir(src, dest, opts)
 }
 
-function mkDirAndCopy (srcMode: String, src: String, dest: String, opts: String): Boolean {
+function mkDirAndCopy (srcMode: string, src: string, dest: string, opts: string): boolean {
   fs.mkdirSync(dest)
   copyDir(src, dest, opts)
   return setDestMode(dest, srcMode)
 }
 
-function copyDir (src: String, dest: String, opts: String): Void {
-  fs.readdirSync(src).forEach((item: String) => copyDirItem(item, src, dest, opts))
+function copyDir (src: string, dest: string, opts: string): Void {
+  fs.readdirSync(src).forEach((item: string) => copyDirItem(item, src, dest, opts))
 }
 
-function copyDirItem (item: String, src: String, dest: String, opts: String): String {
-  const srcItem: String = path.join(src, item)
-  const destItem: String = path.join(dest, item)
+function copyDirItem (item: string, src: string, dest: string, opts: string): string {
+  const srcItem: string = path.join(src, item)
+  const destItem: string = path.join(dest, item)
   const { destStat } = stat.checkPathsSync(srcItem, destItem, 'copy', opts)
   return startCopy(destStat, srcItem, destItem, opts)
 }
 
-function onLink (destStat: Boolean, src: String, dest: String, opts: HTMLElement): Boolean {
-  let resolvedSrc: String = fs.readlinkSync(src)
+function onLink (destStat: boolean, src: string, dest: string, opts: HTMLElement): boolean {
+  let resolvedSrc: string = fs.readlinkSync(src)
   if (opts.dereference) {
     resolvedSrc = path.resolve(process.cwd(), resolvedSrc)
   }
@@ -134,7 +134,7 @@ function onLink (destStat: Boolean, src: String, dest: String, opts: HTMLElement
   if (!destStat) {
     return fs.symlinkSync(resolvedSrc, dest)
   } else {
-    let resolvedDest: String
+    let resolvedDest: string
     try {
       resolvedDest = fs.readlinkSync(dest)
     } catch (err) {
@@ -161,7 +161,7 @@ function onLink (destStat: Boolean, src: String, dest: String, opts: HTMLElement
   }
 }
 
-function copyLink (resolvedSrc: String, dest: String): Number {
+function copyLink (resolvedSrc: string, dest: string): number {
   fs.unlinkSync(dest)
   return fs.symlinkSync(resolvedSrc, dest)
 }

@@ -14,8 +14,8 @@ const internal: ImageData = new WeakMap()
  * @param {number} index The location of the character to check.
  * @returns {boolean} `true` if the character is escaped.
  */
-function isEscaped(str: String, index: Number): Boolean {
-    let escaped: Boolean = false
+function isEscaped(str: string, index: number): boolean {
+    let escaped: boolean = false
     for (let i = index - 1; i >= 0 && str.charCodeAt(i) === 0x5c; --i) {
         escaped = !escaped
     }
@@ -29,18 +29,18 @@ function isEscaped(str: String, index: Number): Boolean {
  * @param {string} replacement The new substring to replace each matched part.
  * @returns {string} The replaced string.
  */
-function replaceS(matcher: PatternMatcher, str: Array, replacement: String): String {
-    const chunks: Array = []
-    let index: Number = 0
+function replaceS(matcher: PatternMatcher, str: any[], replacement: string): string {
+    const chunks: any[] = []
+    let index: number = 0
 
     /** @type {RegExpExecArray} */
-    let match: Object = null
+    let match: object = null
 
     /**
      * @param {string} key The placeholder.
      * @returns {string} The replaced string.
      */
-    function replacer(key: String): String {
+    function replacer(key: string): string {
         switch (key) {
             case "$$":
                 return "$"
@@ -51,7 +51,7 @@ function replaceS(matcher: PatternMatcher, str: Array, replacement: String): Str
             case "$'":
                 return str.slice(match.index + match[0].length)
             default: {
-                const i: String = key.slice(1)
+                const i: string = key.slice(1)
                 if (i in match) {
                     return match[i]
                 }
@@ -77,9 +77,9 @@ function replaceS(matcher: PatternMatcher, str: Array, replacement: String): Str
  * @param {(...strs[])=>string} replace The function to replace each matched part.
  * @returns {string} The replaced string.
  */
-function replaceF(matcher: PatternMatcher, str: Array, replace: Function): String {
-    const chunks: Array = []
-    let index: Number = 0
+function replaceF(matcher: PatternMatcher, str: any[], replace: Function): string {
+    const chunks: any[] = []
+    let index: number = 0
 
     for (const match of matcher.execAll(str)) {
         chunks.push(str.slice(index, match.index))
@@ -122,7 +122,7 @@ export class PatternMatcher {
     *execAll(str) {
         const { pattern, escaped } = internal.get(this)
         let match: PatternMatcher = null
-        let lastIndex: Number = 0
+        let lastIndex: number = 0
 
         pattern.lastIndex = 0
         while ((match = pattern.exec(str)) != null) {
@@ -140,8 +140,8 @@ export class PatternMatcher {
      * @returns {boolean} `true` if the pattern was found in the string.
      */
     test(str) {
-        const it: Object = this.execAll(str)
-        const ret: Object = it.next()
+        const it: object = this.execAll(str)
+        const ret: object = it.next()
         return !ret.done
     }
 

@@ -4,14 +4,14 @@
 // `'use`, `andom`, and `rict'`
 // References to the brotli default dictionary:
 // `-26T`, `1983`, `40px`, `75px`, `bush`, `jack`, `mind`, `very`, and `wolf`
-let urlAlphabet: String =
+let urlAlphabet: string =
   'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict'
 
-export let customAlphabet: Function = (alphabet: Array, defaultSize: Array = 21) => {
-  return (size: Number = defaultSize) => {
-    let id: String = ''
+export let customAlphabet: Function = (alphabet: any[], defaultSize: any[] = 21) => {
+  return (size: number = defaultSize) => {
+    let id: string = ''
     // A compact alternative for `for (var i = 0; i < step; i++)`.
-    let i: Number = size
+    let i: number = size
     while (i--) {
       // `| 0` is more compact and faster than `Math.floor()`.
       id += alphabet[(Math.random() * alphabet.length) | 0]
@@ -20,10 +20,10 @@ export let customAlphabet: Function = (alphabet: Array, defaultSize: Array = 21)
   }
 }
 
-export let nanoid: Function = (size: Number = 21) => {
-  let id: String = ''
+export let nanoid: Function = (size: number = 21) => {
+  let id: string = ''
   // A compact alternative for `for (var i = 0; i < step; i++)`.
-  let i: Number = size
+  let i: number = size
   while (i--) {
     // `| 0` is more compact and faster than `Math.floor()`.
     id += urlAlphabet[(Math.random() * 64) | 0]

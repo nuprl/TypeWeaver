@@ -37,7 +37,7 @@ CSSOM.MatcherList.prototype = {
     /**
      * @param {string} matcher
      */
-    appendMatcher: function(matcher: String) {
+    appendMatcher: function(matcher: string) {
         if (Array.prototype.indexOf.call(this, matcher) === -1) {
             this[this.length] = matcher;
             this.length++;
@@ -47,8 +47,8 @@ CSSOM.MatcherList.prototype = {
     /**
      * @param {string} matcher
      */
-    deleteMatcher: function(matcher: String) {
-        var index: String = Array.prototype.indexOf.call(this, matcher);
+    deleteMatcher: function(matcher: string) {
+        var index: string = Array.prototype.indexOf.call(this, matcher);
         if (index !== -1) {
             Array.prototype.splice.call(this, index, 1);
         }
@@ -58,5 +58,5 @@ CSSOM.MatcherList.prototype = {
 
 
 //.CommonJS
-export const MatcherList: Array = CSSOM.MatcherList;
+export const MatcherList: any[] = CSSOM.MatcherList;
 ///CommonJS

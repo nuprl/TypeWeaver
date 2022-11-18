@@ -1,7 +1,7 @@
-export default function(node: Object) {
-    node.block.children.forEach((rule: Object) => {
-        rule.prelude.children.forEach((simpleselector: Object) => {
-            simpleselector.children.forEach((data: Object, item: Array) => {
+export default function(node: object) {
+    node.block.children.forEach((rule: object) => {
+        rule.prelude.children.forEach((simpleselector: object) => {
+            simpleselector.children.forEach((data: object, item: any[]) => {
                 if (data.type === 'Percentage' && data.value === '100') {
                     item.data = {
                         type: 'TypeSelector',

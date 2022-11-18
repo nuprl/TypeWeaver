@@ -3,7 +3,7 @@ import path from 'path';
 import Module from 'module';
 import fs from 'fs';
 
-const resolveFrom: Function = (fromDirectory: Number, moduleId: String, silent: Boolean) => {
+const resolveFrom: Function = (fromDirectory: number, moduleId: string, silent: boolean) => {
 	if (typeof fromDirectory !== 'string') {
 		throw new TypeError(`Expected \`fromDir\` to be of type \`string\`, got \`${typeof fromDirectory}\``);
 	}
@@ -24,7 +24,7 @@ const resolveFrom: Function = (fromDirectory: Number, moduleId: String, silent: 
 		}
 	}
 
-	const fromFile: String = path.join(fromDirectory, 'noop.js');
+	const fromFile: string = path.join(fromDirectory, 'noop.js');
 
 	const resolveFileName: Function = () => Module._resolveFilename(moduleId, {
 		id: fromFile,
@@ -43,5 +43,5 @@ const resolveFrom: Function = (fromDirectory: Number, moduleId: String, silent: 
 	return resolveFileName();
 };
 
-export default (fromDirectory: Array, moduleId: String) => resolveFrom(fromDirectory, moduleId);
-export const silent: Function = (fromDirectory: Array, moduleId: Number) => resolveFrom(fromDirectory, moduleId, true);
+export default (fromDirectory: any[], moduleId: string) => resolveFrom(fromDirectory, moduleId);
+export const silent: Function = (fromDirectory: any[], moduleId: number) => resolveFrom(fromDirectory, moduleId, true);

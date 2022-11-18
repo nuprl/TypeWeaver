@@ -1,6 +1,6 @@
 var typeOf: Function = require('../..');
 
-module.exports = function(val: Number) {
+module.exports = function(val: number) {
   if (val === 'arguments') {
     return typeOf(arguments);
   }

@@ -7,13 +7,13 @@
 
 'use strict';
 
-export default function (arr: String) {
+export default function (arr: string) {
   return flat(arr, []);
 };
 
-function flat(arr: Array, res: Array): Array {
-  var i: Number = 0, cur: String;
-  var len: Number = arr.length;
+function flat(arr: any[], res: any[]): any[] {
+  var i: number = 0, cur: string;
+  var len: number = arr.length;
   for (; i < len; i++) {
     cur = arr[i];
     Array.isArray(cur) ? flat(cur, res) : res.push(cur);

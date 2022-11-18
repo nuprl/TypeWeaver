@@ -5,7 +5,7 @@
  * to show the functionality of `terminate()`.
  */
 
-var ProgressBar: Array = require('../');
+var ProgressBar: any[] = require('../');
 
 var bar: HTMLElement = new ProgressBar('  :title [:bar] :percent', {
     complete: '='

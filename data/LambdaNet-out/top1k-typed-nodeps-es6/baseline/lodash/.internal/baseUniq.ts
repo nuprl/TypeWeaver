@@ -6,7 +6,7 @@ import createSet from './createSet.js'
 import setToArray from './setToArray.js'
 
 /** Used as the size to enable large array optimizations. */
-const LARGE_ARRAY_SIZE: Number = 200
+const LARGE_ARRAY_SIZE: number = 200
 
 /**
  * The base implementation of `uniqBy`.
@@ -17,21 +17,21 @@ const LARGE_ARRAY_SIZE: Number = 200
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns the new duplicate free array.
  */
-function baseUniq(array: Array, iteratee: Function, comparator: Number): Array {
-  let index: Number = -1
+function baseUniq(array: any[], iteratee: Function, comparator: number): any[] {
+  let index: number = -1
   let includes: Function = arrayIncludes
-  let isCommon: Boolean = true
+  let isCommon: boolean = true
 
   const { length } = array
-  const result: Array = []
-  let seen: Array = result
+  const result: any[] = []
+  let seen: any[] = result
 
   if (comparator) {
     isCommon = false
     includes = arrayIncludesWith
   }
   else if (length >= LARGE_ARRAY_SIZE) {
-    const set: String = iteratee ? null : createSet(array)
+    const set: string = iteratee ? null : createSet(array)
     if (set) {
       return setToArray(set)
     }
@@ -44,12 +44,12 @@ function baseUniq(array: Array, iteratee: Function, comparator: Number): Array {
   }
   outer:
   while (++index < length) {
-    let value: Number = array[index]
-    const computed: Number = iteratee ? iteratee(value) : value
+    let value: number = array[index]
+    const computed: number = iteratee ? iteratee(value) : value
 
     value = (comparator || value !== 0) ? value : 0
     if (isCommon && computed === computed) {
-      let seenIndex: Number = seen.length
+      let seenIndex: number = seen.length
       while (seenIndex--) {
         if (seen[seenIndex] === computed) {
           continue outer

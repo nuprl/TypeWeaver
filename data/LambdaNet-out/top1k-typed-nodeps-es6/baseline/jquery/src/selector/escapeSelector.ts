@@ -4,7 +4,7 @@ import jQuery from "../core.js";
 // https://drafts.csswg.org/cssom/#common-serializing-idioms
 var rcssescape: RegExp = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g;
 
-function fcssescape( ch: String, asCodePoint: Boolean ): String {
+function fcssescape( ch: string, asCodePoint: boolean ): string {
 	if ( asCodePoint ) {
 
 		// U+0000 NULL becomes U+FFFD REPLACEMENT CHARACTER
@@ -20,6 +20,6 @@ function fcssescape( ch: String, asCodePoint: Boolean ): String {
 	return "\\" + ch;
 }
 
-jQuery.escapeSelector = function( sel: Number ) {
+jQuery.escapeSelector = function( sel: number ) {
 	return ( sel + "" ).replace( rcssescape, fcssescape );
 };

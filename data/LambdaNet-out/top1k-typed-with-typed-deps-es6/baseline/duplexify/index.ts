@@ -3,7 +3,7 @@ import eos from 'end-of-stream';
 import inherits from 'inherits';
 import shift from 'stream-shift';
 
-var SIGNAL_FLUSH: String = (Buffer.from && Buffer.from !== Uint8Array.from)
+var SIGNAL_FLUSH: string = (Buffer.from && Buffer.from !== Uint8Array.from)
   ? Buffer.from([0])
   : new Buffer([0])
 
@@ -12,11 +12,11 @@ var onuncork: Function = function(self: HTMLElement, fn: Function) {
   else fn()
 }
 
-var autoDestroy: Function = function (self: Object, err: Array) {
+var autoDestroy: Function = function (self: object, err: any[]) {
   if (self._autoDestroy) self.destroy(err)
 }
 
-var destroyer: Function = function(self: Object, end: Boolean) {
+var destroyer: Function = function(self: object, end: boolean) {
   return function(err: Promise) {
     if (err) autoDestroy(self, err.message === 'premature close' ? null : err)
     else if (end && !self._ended) self.end()
@@ -33,11 +33,11 @@ var end: Function = function(ws: HTMLElement, fn: Function) {
 
 var noop: Function = function() {}
 
-var toStreams2: Function = function(rs: String) {
+var toStreams2: Function = function(rs: string) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
-var Duplexify: Function = function(writable: String, readable: String, opts: Object) {
+var Duplexify: Function = function(writable: string, readable: string, opts: object) {
   if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
   stream.Duplex.call(this, opts)
 
@@ -64,7 +64,7 @@ var Duplexify: Function = function(writable: String, readable: String, opts: Obj
 
 inherits(Duplexify, stream.Duplex)
 
-Duplexify.obj = function(writable: Object, readable: String, opts: Object) {
+Duplexify.obj = function(writable: object, readable: string, opts: object) {
   if (!opts) opts = {}
   opts.objectMode = true
   opts.highWaterMark = 16
@@ -115,7 +115,7 @@ Duplexify.prototype.setWritable = function(writable: HTMLElement) {
   this.uncork() // always uncork setWritable
 }
 
-Duplexify.prototype.setReadable = function(readable: Object) {
+Duplexify.prototype.setReadable = function(readable: object) {
   if (this._unread) this._unread()
 
   if (this.destroyed) {
@@ -129,7 +129,7 @@ Duplexify.prototype.setReadable = function(readable: Object) {
     return
   }
 
-  var self: Array = this
+  var self: any[] = this
   var unend: Function = eos(readable, {writable:false, readable:true}, destroyer(this))
 
   var onreadable: Function = function() {
@@ -175,7 +175,7 @@ Duplexify.prototype._forward = function() {
   this._forwarding = false
 }
 
-Duplexify.prototype.destroy = function(err: String, cb: Function) {
+Duplexify.prototype.destroy = function(err: string, cb: Function) {
   if (!cb) cb = noop
   if (this.destroyed) return cb(null)
   this.destroyed = true
@@ -187,7 +187,7 @@ Duplexify.prototype.destroy = function(err: String, cb: Function) {
   })
 }
 
-Duplexify.prototype._destroy = function(err: String) {
+Duplexify.prototype._destroy = function(err: string) {
   if (err) {
     var ondrain: Function = this._ondrain
     this._ondrain = null
@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: String) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: Object, enc: String, cb: Function) {
+Duplexify.prototype._write = function(data: object, enc: string, cb: Function) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)
@@ -226,7 +226,7 @@ Duplexify.prototype._finish = function(cb: Function) {
   })
 }
 
-Duplexify.prototype.end = function(data: HTMLElement, enc: String, cb: String) {
+Duplexify.prototype.end = function(data: HTMLElement, enc: string, cb: string) {
   if (typeof data === 'function') return this.end(null, null, data)
   if (typeof enc === 'function') return this.end(data, null, enc)
   this._ended = true

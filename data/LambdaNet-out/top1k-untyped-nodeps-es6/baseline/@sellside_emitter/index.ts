@@ -179,8 +179,8 @@ class Emitter {
    */
 
   emit(event) {
-    const listeners: Array = this.listeners(event).slice();
-    const args: String = [].slice.call(arguments, 1);
+    const listeners: any[] = this.listeners(event).slice();
+    const args: string = [].slice.call(arguments, 1);
     for (const fn of listeners) {
       fn.apply(this, args);
     }
@@ -227,9 +227,9 @@ Emitter.prototype.off;
  * Remove all instances of the given `fn` from listeners.
  */
 
-function removeListeners(fn: String, listeners: Array): Emitter {
+function removeListeners(fn: string, listeners: any[]): Emitter {
   for (let i = 0; i < listeners.length; i++) {
-    const listener: String = listeners[i];
+    const listener: string = listeners[i];
     if (listener === fn || listener.fn === fn) {
       listeners.splice(i, 1);
       return removeListeners(fn, listeners);
@@ -241,7 +241,7 @@ function removeListeners(fn: String, listeners: Array): Emitter {
  * Mixin emitter properties.
  */
 
-function mixin(target: Object): Object {
+function mixin(target: object): object {
   if (!target) target = {};
   const emitter: Emitter = new Emitter();
   copy(target, emitter, Object.getOwnPropertyNames(Emitter.prototype));
@@ -249,7 +249,7 @@ function mixin(target: Object): Object {
   return target;
 }
 
-function copy(target: Object, provider: Object, keys: Array): Void {
+function copy(target: object, provider: object, keys: any[]): Void {
   for (const key of keys) {
     if (typeof provider[key] === 'function') {
       define(target, key, provider[key].bind(provider));
@@ -259,7 +259,7 @@ function copy(target: Object, provider: Object, keys: Array): Void {
   }
 }
 
-function define(obj: String, key: String, val: String): Void {
+function define(obj: string, key: string, val: string): Void {
   Reflect.defineProperty(obj, key, {
     configurable: true,
     writable: true,

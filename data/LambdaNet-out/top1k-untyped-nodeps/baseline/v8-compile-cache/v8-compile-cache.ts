@@ -1,11 +1,11 @@
 'use strict';
 
 const Module: Date = require('module');
-const crypto: Array = require('crypto');
-const fs: Array = require('fs');
-const path: String = require('path');
-const vm: Boolean = require('vm');
-const os: Array = require('os');
+const crypto: any[] = require('crypto');
+const fs: any[] = require('fs');
+const path: string = require('path');
+const vm: boolean = require('vm');
+const os: any[] = require('os');
 
 const hasOwnProperty: Function = Object.prototype.hasOwnProperty;
 
@@ -15,7 +15,7 @@ const hasOwnProperty: Function = Object.prototype.hasOwnProperty;
 
 class FileSystemBlobStore {
   constructor(directory, prefix) {
-    const name: String = prefix ? slashEscape(prefix + '.') : '';
+    const name: string = prefix ? slashEscape(prefix + '.') : '';
     this._blobFilename = path.join(directory, name + 'BLOB');
     this._mapFilename = path.join(directory, name + 'MAP');
     this._lockFilename = path.join(directory, name + 'LOCK');
@@ -38,7 +38,7 @@ class FileSystemBlobStore {
         return this._memoryBlobs[key];
       }
     } else if (hasOwnProperty.call(this._storedMap, key)) {
-      const mapping: Object = this._storedMap[key];
+      const mapping: object = this._storedMap[key];
       if (mapping[0] === invalidationKey) {
         return this._storedBlob.slice(mapping[1], mapping[2]);
       }
@@ -72,8 +72,8 @@ class FileSystemBlobStore {
 
   save() {
     const dump: Promise = this._getDump();
-    const blobToStore: Array = Buffer.concat(dump[0]);
-    const mapToStore: String = JSON.stringify(dump[1]);
+    const blobToStore: any[] = Buffer.concat(dump[0]);
+    const mapToStore: string = JSON.stringify(dump[1]);
 
     try {
       mkdirpSync(this._directory);
@@ -107,11 +107,11 @@ class FileSystemBlobStore {
   }
 
   _getDump() {
-    const buffers: Array = [];
-    const newMap: Object = {};
-    let offset: Number = 0;
+    const buffers: any[] = [];
+    const newMap: object = {};
+    let offset: number = 0;
 
-    function push(key: String, invalidationKey: String, buffer: Function): Void {
+    function push(key: string, invalidationKey: string, buffer: Function): Void {
       buffers.push(buffer);
       newMap[key] = [invalidationKey, offset, offset + buffer.length];
       offset += buffer.length;
@@ -119,14 +119,14 @@ class FileSystemBlobStore {
 
     for (const key of Object.keys(this._memoryBlobs)) {
       const buffer: Element = this._memoryBlobs[key];
-      const invalidationKey: String = this._invalidationKeys[key];
+      const invalidationKey: string = this._invalidationKeys[key];
       push(key, invalidationKey, buffer);
     }
 
     for (const key of Object.keys(this._storedMap)) {
       if (hasOwnProperty.call(newMap, key)) continue;
-      const mapping: Object = this._storedMap[key];
-      const buffer: Array = this._storedBlob.slice(mapping[1], mapping[2]);
+      const mapping: object = this._storedMap[key];
+      const buffer: any[] = this._storedBlob.slice(mapping[1], mapping[2]);
       push(key, mapping[0], buffer);
     }
 
@@ -150,17 +150,17 @@ class NativeCompileCache {
 
   install() {
     const self: NativeCompileCache = this;
-    const hasRequireResolvePaths: Boolean = typeof require.resolve.paths === 'function';
+    const hasRequireResolvePaths: boolean = typeof require.resolve.paths === 'function';
     this._previousModuleCompile = Module.prototype._compile;
-    Module.prototype._compile = function(content: String, filename: String) {
+    Module.prototype._compile = function(content: string, filename: string) {
       const mod: FileSystemBlobStore = this;
 
-      function require(id: String): Array {
+      function require(id: string): any[] {
         return mod.require(id);
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Object, options: Object): FileSystemBlobStore {
+      function resolve(request: object, options: object): FileSystemBlobStore {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: Object): Promise {
+        resolve.paths = function paths(request: object): Promise {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }
@@ -179,7 +179,7 @@ class NativeCompileCache {
       require.extensions = Module._extensions;
       require.cache = Module._cache;
 
-      const dirname: String = path.dirname(filename);
+      const dirname: string = path.dirname(filename);
 
       const compiledWrapper: Function = self._moduleCompile(filename, content);
 
@@ -188,7 +188,7 @@ class NativeCompileCache {
 
       // `Buffer` is included for Electron.
       // See https://github.com/zertosh/v8-compile-cache/pull/10#issuecomment-518042543
-      const args: Array = [mod.exports, require, mod, filename, dirname, process, global, Buffer];
+      const args: any[] = [mod.exports, require, mod, filename, dirname, process, global, Buffer];
       return compiledWrapper.apply(mod.exports, args);
     };
   }
@@ -201,7 +201,7 @@ class NativeCompileCache {
     // https://github.com/nodejs/node/blob/v7.5.0/lib/module.js#L511
 
     // Remove shebang
-    var contLen: Number = content.length;
+    var contLen: number = content.length;
     if (contLen >= 2) {
       if (content.charCodeAt(0) === 35/*#*/ &&
           content.charCodeAt(1) === 33/*!*/) {
@@ -210,9 +210,9 @@ class NativeCompileCache {
           content = '';
         } else {
           // Find end of shebang line and slice it off
-          var i: Number = 2;
+          var i: number = 2;
           for (; i < contLen; ++i) {
-            var code: Number = content.charCodeAt(i);
+            var code: number = content.charCodeAt(i);
             if (code === 10/*\n*/ || code === 13/*\r*/) break;
           }
           if (i === contLen) {
@@ -228,9 +228,9 @@ class NativeCompileCache {
     }
 
     // create wrapper function
-    var wrapper: String = Module.wrap(content);
+    var wrapper: string = Module.wrap(content);
 
-    var invalidationKey: String = crypto
+    var invalidationKey: string = crypto
       .createHash('sha1')
       .update(content, 'utf8')
       .digest('hex');
@@ -251,7 +251,7 @@ class NativeCompileCache {
       this._cacheStore.delete(filename);
     }
 
-    var compiledWrapper: Array = script.runInThisContext({
+    var compiledWrapper: any[] = script.runInThisContext({
       filename: filename,
       lineOffset: 0,
       columnOffset: 0,
@@ -269,11 +269,11 @@ class NativeCompileCache {
 // https://github.com/zertosh/slash-escape/blob/e7ebb99/slash-escape.js
 //------------------------------------------------------------------------------
 
-function mkdirpSync(p_: String): Void {
+function mkdirpSync(p_: string): Void {
   _mkdirpSync(path.resolve(p_), 0o777);
 }
 
-function _mkdirpSync(p: String, mode: String): Void {
+function _mkdirpSync(p: string, mode: string): Void {
   try {
     fs.mkdirSync(p, mode);
   } catch (err0) {
@@ -291,8 +291,8 @@ function _mkdirpSync(p: String, mode: String): Void {
   }
 }
 
-function slashEscape(str: String): String {
-  const ESCAPE_LOOKUP: Object = {
+function slashEscape(str: string): string {
+  const ESCAPE_LOOKUP: object = {
     '\\': 'zB',
     ':': 'zC',
     '/': 'zS',
@@ -300,40 +300,40 @@ function slashEscape(str: String): String {
     'z': 'zZ',
   };
   const ESCAPE_REGEX: RegExp = /[\\:/\x00z]/g; // eslint-disable-line no-control-regex
-  return str.replace(ESCAPE_REGEX, (match: String) => ESCAPE_LOOKUP[match]);
+  return str.replace(ESCAPE_REGEX, (match: string) => ESCAPE_LOOKUP[match]);
 }
 
-function supportsCachedData(): Boolean {
-  const script: Array = new vm.Script('""', {produceCachedData: true});
+function supportsCachedData(): boolean {
+  const script: any[] = new vm.Script('""', {produceCachedData: true});
   // chakracore, as of v1.7.1.0, returns `false`.
   return script.cachedDataProduced === true;
 }
 
-function getCacheDir(): String {
+function getCacheDir(): string {
   const v8_compile_cache_cache_dir: Function = process.env.V8_COMPILE_CACHE_CACHE_DIR;
   if (v8_compile_cache_cache_dir) {
     return v8_compile_cache_cache_dir;
   }
 
   // Avoid cache ownership issues on POSIX systems.
-  const dirname: String = typeof process.getuid === 'function'
+  const dirname: string = typeof process.getuid === 'function'
     ? 'v8-compile-cache-' + process.getuid()
     : 'v8-compile-cache';
-  const version: String = typeof process.versions.v8 === 'string'
+  const version: string = typeof process.versions.v8 === 'string'
     ? process.versions.v8
     : typeof process.versions.chakracore === 'string'
       ? 'chakracore-' + process.versions.chakracore
       : 'node-' + process.version;
-  const cacheDir: String = path.join(os.tmpdir(), dirname, version);
+  const cacheDir: string = path.join(os.tmpdir(), dirname, version);
   return cacheDir;
 }
 
-function getMainName(): String {
+function getMainName(): string {
   // `require.main.filename` is undefined or null when:
   //    * node -e 'require("v8-compile-cache")'
   //    * node -r 'v8-compile-cache'
   //    * Or, requiring from the REPL.
-  const mainName: String = require.main && typeof require.main.filename === 'string'
+  const mainName: string = require.main && typeof require.main.filename === 'string'
     ? require.main.filename
     : process.cwd();
   return mainName;
@@ -344,8 +344,8 @@ function getMainName(): String {
 //------------------------------------------------------------------------------
 
 if (!process.env.DISABLE_V8_COMPILE_CACHE && supportsCachedData()) {
-  const cacheDir: Array = getCacheDir();
-  const prefix: String = getMainName();
+  const cacheDir: any[] = getCacheDir();
+  const prefix: string = getMainName();
   const blobStore: FileSystemBlobStore = new FileSystemBlobStore(cacheDir, prefix);
 
   const nativeCompileCache: HTMLInputElement = new NativeCompileCache();

@@ -1,9 +1,9 @@
 'use strict';
 
-var parsers: Array = require('../parsers');
+var parsers: any[] = require('../parsers');
 
-var parse: Function = function parse(v: String): String {
-  var parsed: Number = parsers.parseUrl(v);
+var parse: Function = function parse(v: string): string {
+  var parsed: number = parsers.parseUrl(v);
   if (parsed !== undefined) {
     return parsed;
   }
@@ -16,12 +16,12 @@ var parse: Function = function parse(v: String): String {
   return undefined;
 };
 
-module.exports.isValid = function isValid(v: Array): Boolean {
+module.exports.isValid = function isValid(v: any[]): boolean {
   return parse(v) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     this._setProperty('background-image', parse(v));
   },
   get: function() {

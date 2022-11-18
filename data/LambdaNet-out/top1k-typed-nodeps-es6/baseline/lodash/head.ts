@@ -15,7 +15,7 @@
  * head([])
  * // => undefined
  */
-function head(array: Array): Stack {
+function head(array: any[]): Stack {
   return (array != null && array.length)
     ? array[0]
     : undefined

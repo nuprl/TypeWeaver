@@ -7,12 +7,12 @@
  **/
 
 // Based on http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fractions/egyptian.html
-function egyptian(a: Number, b: Number): Array {
+function egyptian(a: number, b: number): any[] {
 
-  var res: Array = [];
+  var res: any[] = [];
 
   do {
-    var t: Number = Math.ceil(b / a);
+    var t: number = Math.ceil(b / a);
     var x: HTMLElement = new Fraction(a, b).sub(1, t);
     res.push(t);
     a = x.n;

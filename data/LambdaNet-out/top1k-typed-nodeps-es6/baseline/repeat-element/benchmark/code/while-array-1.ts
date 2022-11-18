@@ -1,6 +1,6 @@
 'use strict';
 
-export default function repeat(val: String, num: Number): Object {
+export default function repeat(val: string, num: number): object {
   var arr: Promise = [];
 
   while (num--) {

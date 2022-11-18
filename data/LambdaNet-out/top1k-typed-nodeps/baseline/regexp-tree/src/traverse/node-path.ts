@@ -5,8 +5,8 @@
 
 'use strict';
 
-const DEFAULT_COLLECTION_PROP: String = 'expressions';
-const DEFAULT_SINGLE_PROP: String     = 'expression';
+const DEFAULT_COLLECTION_PROP: string = 'expressions';
+const DEFAULT_SINGLE_PROP: string     = 'expression';
 
 /**
  * NodePath class encapsulates a traversing node,
@@ -55,7 +55,7 @@ class NodePath {
    */
   setChild(node, index = null, property = null) {
 
-    let childPath: String;
+    let childPath: string;
     if (index != null) {
       if (!property) {
         property = DEFAULT_COLLECTION_PROP;
@@ -88,7 +88,7 @@ class NodePath {
       property = DEFAULT_COLLECTION_PROP;
     }
     this._enforceProp(property);
-    const end: Number = this.node[property].length;
+    const end: number = this.node[property].length;
     return this.setChild(node, end, property);
   }
 
@@ -159,10 +159,10 @@ class NodePath {
    * Rebuilds child nodes index (used on remove/insert).
    */
   _rebuildIndex(parent, property) {
-    const parentPath: String = NodePath.getForNode(parent);
+    const parentPath: string = NodePath.getForNode(parent);
 
     for (let i = 0; i < parent[property].length; i++) {
-      const path: String = NodePath.getForNode(
+      const path: string = NodePath.getForNode(
         parent[property][i],
         parentPath,
         property,
@@ -322,7 +322,7 @@ class NodePath {
       );
     }
 
-    let path: String = NodePath.registry.get(node);
+    let path: string = NodePath.registry.get(node);
 
     if (parentPath !== null) {
       path.parentPath = parentPath;
@@ -382,7 +382,7 @@ NodePath.initRegistry();
 NodePath.traversingIndexStack = [];
 
 // Helper function used to skip `loc` in JSON operations.
-function jsonSkipLoc(prop: Number, value: Array): Promise {
+function jsonSkipLoc(prop: number, value: any[]): Promise {
   if (prop === 'loc') {
     return undefined;
   }

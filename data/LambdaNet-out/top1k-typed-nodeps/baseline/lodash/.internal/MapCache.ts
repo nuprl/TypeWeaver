@@ -23,8 +23,8 @@ function getMapData({ __data__ }, key): Void {
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
  */
-function isKeyable(value: String): Boolean {
-  const type: String = typeof value
+function isKeyable(value: string): boolean {
+  const type: string = typeof value
   return (type === 'string' || type === 'number' || type === 'symbol' || type === 'boolean')
     ? (value !== '__proto__')
     : (value === null)
@@ -40,12 +40,12 @@ class MapCache {
    * @param {Array} [entries] The key-value pairs to cache.
    */
   constructor(entries) {
-    let index: Number = -1
-    const length: Number = entries == null ? 0 : entries.length
+    let index: number = -1
+    const length: number = entries == null ? 0 : entries.length
 
     this.clear()
     while (++index < length) {
-      const entry: Object = entries[index]
+      const entry: object = entries[index]
       this.set(entry[0], entry[1])
     }
   }
@@ -72,7 +72,7 @@ class MapCache {
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
   delete(key) {
-    const result: String = getMapData(this, key)['delete'](key)
+    const result: string = getMapData(this, key)['delete'](key)
     this.size -= result ? 1 : 0
     return result
   }
@@ -109,7 +109,7 @@ class MapCache {
    */
   set(key, value) {
     const data: HTMLElement = getMapData(this, key)
-    const size: Number = data.size
+    const size: number = data.size
 
     data.set(key, value)
     this.size += data.size == size ? 0 : 1

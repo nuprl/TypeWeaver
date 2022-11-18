@@ -1,7 +1,7 @@
-const lib: String = process.argv[2] || 'colors';
+const lib: string = process.argv[2] || 'colors';
 import chalk from 'chalk';
 import colors from '..';
-const libs: Object = {
+const libs: object = {
   chalk,
   colors
 };

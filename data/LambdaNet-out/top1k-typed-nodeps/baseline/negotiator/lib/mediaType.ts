@@ -28,11 +28,11 @@ var simpleMediaTypeRegExp: RegExp = /^\s*([^\s\/;]+)\/([^;\s]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAccept(accept: String): Array {
-  var accepts: Array = splitMediaTypes(accept);
+function parseAccept(accept: string): any[] {
+  var accepts: any[] = splitMediaTypes(accept);
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
-    var mediaType: String = parseMediaType(accepts[i].trim(), i);
+    var mediaType: string = parseMediaType(accepts[i].trim(), i);
 
     if (mediaType) {
       accepts[j++] = mediaType;
@@ -50,25 +50,25 @@ function parseAccept(accept: String): Array {
  * @private
  */
 
-function parseMediaType(str: String, i: Number): Object {
-  var match: Object = simpleMediaTypeRegExp.exec(str);
+function parseMediaType(str: string, i: number): object {
+  var match: object = simpleMediaTypeRegExp.exec(str);
   if (!match) return null;
 
-  var params: Object = Object.create(null);
-  var q: Number = 1;
-  var subtype: String = match[2];
-  var type: String = match[1];
+  var params: object = Object.create(null);
+  var q: number = 1;
+  var subtype: string = match[2];
+  var type: string = match[1];
 
   if (match[3]) {
-    var kvps: Array = splitParameters(match[3]).map(splitKeyValuePair);
+    var kvps: any[] = splitParameters(match[3]).map(splitKeyValuePair);
 
     for (var j = 0; j < kvps.length; j++) {
-      var pair: Object = kvps[j];
-      var key: String = pair[0].toLowerCase();
-      var val: String = pair[1];
+      var pair: object = kvps[j];
+      var key: string = pair[0].toLowerCase();
+      var val: string = pair[1];
 
       // get the value, unwrapping quotes
-      var value: String = val && val[0] === '"' && val[val.length - 1] === '"'
+      var value: string = val && val[0] === '"' && val[val.length - 1] === '"'
         ? val.substr(1, val.length - 2)
         : val;
 
@@ -96,11 +96,11 @@ function parseMediaType(str: String, i: Number): Object {
  * @private
  */
 
-function getMediaTypePriority(type: String, accepted: Array, index: Number): Object {
-  var priority: Object = {o: -1, q: 0, s: 0};
+function getMediaTypePriority(type: string, accepted: any[], index: number): object {
+  var priority: object = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
-    var spec: Object = specify(type, accepted[i], index);
+    var spec: object = specify(type, accepted[i], index);
 
     if (spec && (priority.s - spec.s || priority.q - spec.q || priority.o - spec.o) < 0) {
       priority = spec;
@@ -115,9 +115,9 @@ function getMediaTypePriority(type: String, accepted: Array, index: Number): Obj
  * @private
  */
 
-function specify(type: String, spec: Object, index: Number): Object {
-  var p: Object = parseMediaType(type);
-  var s: Number = 0;
+function specify(type: string, spec: object, index: number): object {
+  var p: object = parseMediaType(type);
+  var s: number = 0;
 
   if (!p) {
     return null;
@@ -135,9 +135,9 @@ function specify(type: String, spec: Object, index: Number): Object {
     return null;
   }
 
-  var keys: Array = Object.keys(spec.params);
+  var keys: any[] = Object.keys(spec.params);
   if (keys.length > 0) {
-    if (keys.every(function (k: String) {
+    if (keys.every(function (k: string) {
       return spec.params[k] == '*' || (spec.params[k] || '').toLowerCase() == (p.params[k] || '').toLowerCase();
     })) {
       s |= 1
@@ -159,9 +159,9 @@ function specify(type: String, spec: Object, index: Number): Object {
  * @public
  */
 
-function preferredMediaTypes(accept: Number, provided: Array): Array {
+function preferredMediaTypes(accept: number, provided: any[]): any[] {
   // RFC 2616 sec 14.2: no header = */*
-  var accepts: Array = parseAccept(accept === undefined ? '*/*' : accept || '');
+  var accepts: any[] = parseAccept(accept === undefined ? '*/*' : accept || '');
 
   if (!provided) {
     // sorted list of all types
@@ -171,12 +171,12 @@ function preferredMediaTypes(accept: Number, provided: Array): Array {
       .map(getFullType);
   }
 
-  var priorities: Array = provided.map(function getPriority(type: String, index: Number): String {
+  var priorities: any[] = provided.map(function getPriority(type: string, index: number): string {
     return getMediaTypePriority(type, accepts, index);
   });
 
   // sorted list of accepted types
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: String): Object {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: string): object {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -186,7 +186,7 @@ function preferredMediaTypes(accept: Number, provided: Array): Array {
  * @private
  */
 
-function compareSpecs(a: Object, b: Object): Boolean {
+function compareSpecs(a: object, b: object): boolean {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -195,7 +195,7 @@ function compareSpecs(a: Object, b: Object): Boolean {
  * @private
  */
 
-function getFullType(spec: Object): String {
+function getFullType(spec: object): string {
   return spec.type + '/' + spec.subtype;
 }
 
@@ -204,7 +204,7 @@ function getFullType(spec: Object): String {
  * @private
  */
 
-function isQuality(spec: Object): Boolean {
+function isQuality(spec: object): boolean {
   return spec.q > 0;
 }
 
@@ -213,9 +213,9 @@ function isQuality(spec: Object): Boolean {
  * @private
  */
 
-function quoteCount(string: String): Number {
-  var count: Number = 0;
-  var index: Number = 0;
+function quoteCount(string: string): number {
+  var count: number = 0;
+  var index: number = 0;
 
   while ((index = string.indexOf('"', index)) !== -1) {
     count++;
@@ -230,10 +230,10 @@ function quoteCount(string: String): Number {
  * @private
  */
 
-function splitKeyValuePair(str: String): Promise {
-  var index: Number = str.indexOf('=');
-  var key: String;
-  var val: String;
+function splitKeyValuePair(str: string): Promise {
+  var index: number = str.indexOf('=');
+  var key: string;
+  var val: string;
 
   if (index === -1) {
     key = str;
@@ -250,8 +250,8 @@ function splitKeyValuePair(str: String): Promise {
  * @private
  */
 
-function splitMediaTypes(accept: String): Object {
-  var accepts: Array = accept.split(',');
+function splitMediaTypes(accept: string): object {
+  var accepts: any[] = accept.split(',');
 
   for (var i = 1, j = 0; i < accepts.length; i++) {
     if (quoteCount(accepts[j]) % 2 == 0) {
@@ -272,8 +272,8 @@ function splitMediaTypes(accept: String): Object {
  * @private
  */
 
-function splitParameters(str: String): Object {
-  var parameters: Array = str.split(';');
+function splitParameters(str: string): object {
+  var parameters: any[] = str.split(';');
 
   for (var i = 1, j = 0; i < parameters.length; i++) {
     if (quoteCount(parameters[j]) % 2 == 0) {

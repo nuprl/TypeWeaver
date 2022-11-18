@@ -18,45 +18,45 @@
  * NOTE - Working Group Note
  */
 
-var fs: String = require('fs');
-var path: String = require('path');
+var fs: string = require('fs');
+var path: string = require('path');
 
 var request: Function = require('request');
 
 const { camelToDashed } = require('../lib/parsers');
 
-var url: String = 'https://www.w3.org/Style/CSS/all-properties.en.json';
+var url: string = 'https://www.w3.org/Style/CSS/all-properties.en.json';
 
 console.log('Downloading CSS properties...');
 
-function toCamelCase(propName: String): String {
+function toCamelCase(propName: string): string {
   return propName.replace(/-([a-z])/g, function(g: Promise) {
     return g[1].toUpperCase();
   });
 }
 
-request(url, function(error: Error, response: Element, body: String) {
+request(url, function(error: Error, response: Element, body: string) {
   if (!error && response.statusCode === 200) {
-    var allCSSProperties: Array = JSON.parse(body);
+    var allCSSProperties: any[] = JSON.parse(body);
 
     // Filter out all properties newer than Working Draft
-    var workingDraftAndOlderProperties: Array = allCSSProperties.filter(function(cssProp: Function) {
+    var workingDraftAndOlderProperties: any[] = allCSSProperties.filter(function(cssProp: Function) {
       // TODO: --* css Needs additional logic to this module, so filter it out for now
       return cssProp.status !== 'ED' && cssProp.status !== 'FPWD' && cssProp.property !== '--*';
     });
 
     // Remove duplicates, there can be many properties in different states of standard
     // and add only property names to the list
-    var CSSpropertyNames: Array = [];
+    var CSSpropertyNames: any[] = [];
     workingDraftAndOlderProperties.forEach(function(cssProp: Function) {
-      const camelCaseName: String = toCamelCase(cssProp.property);
+      const camelCaseName: string = toCamelCase(cssProp.property);
 
       if (CSSpropertyNames.indexOf(camelCaseName) === -1) {
         CSSpropertyNames.push(camelCaseName);
       }
     });
 
-    var out_file: String = fs.createWriteStream(path.resolve(__dirname, './../lib/allProperties.js'), {
+    var out_file: string = fs.createWriteStream(path.resolve(__dirname, './../lib/allProperties.js'), {
       encoding: 'utf-8',
     });
 
@@ -73,7 +73,7 @@ request(url, function(error: Error, response: Element, body: String) {
         ');\n'
     );
 
-    out_file.end(function(err: Boolean) {
+    out_file.end(function(err: boolean) {
       if (err) {
         throw err;
       }

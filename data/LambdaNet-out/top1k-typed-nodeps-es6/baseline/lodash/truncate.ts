@@ -8,8 +8,8 @@ import stringToArray from './.internal/stringToArray.js'
 import toString from './toString.js'
 
 /** Used as default options for `truncate`. */
-const DEFAULT_TRUNC_LENGTH: Number = 30
-const DEFAULT_TRUNC_OMISSION: String = '...'
+const DEFAULT_TRUNC_LENGTH: number = 30
+const DEFAULT_TRUNC_OMISSION: string = '...'
 
 /** Used to match `RegExp` flags from their coerced string values. */
 const reFlags: RegExp = /\w*$/
@@ -50,10 +50,10 @@ const reFlags: RegExp = /\w*$/
  * })
  * // => 'hi-diddly-ho there, neig [...]'
  */
-function truncate(string: String, options: Array): String {
+function truncate(string: string, options: any[]): string {
   let separator: Stack
-  let length: Number = DEFAULT_TRUNC_LENGTH
-  let omission: String = DEFAULT_TRUNC_OMISSION
+  let length: number = DEFAULT_TRUNC_LENGTH
+  let omission: string = DEFAULT_TRUNC_OMISSION
 
   if (isObject(options)) {
     separator = 'separator' in options ? options.separator : separator
@@ -63,8 +63,8 @@ function truncate(string: String, options: Array): String {
 
   string = toString(string)
 
-  let strSymbols: String
-  let strLength: Number = string.length
+  let strSymbols: string
+  let strLength: number = string.length
   if (hasUnicode(string)) {
     strSymbols = stringToArray(string)
     strLength = strSymbols.length
@@ -72,11 +72,11 @@ function truncate(string: String, options: Array): String {
   if (length >= strLength) {
     return string
   }
-  let end: Number = length - stringSize(omission)
+  let end: number = length - stringSize(omission)
   if (end < 1) {
     return omission
   }
-  let result: String = strSymbols
+  let result: string = strSymbols
     ? castSlice(strSymbols, 0, end).join('')
     : string.slice(0, end)
 
@@ -88,9 +88,9 @@ function truncate(string: String, options: Array): String {
   }
   if (isRegExp(separator)) {
     if (string.slice(end).search(separator)) {
-      let match: Object
-      let newEnd: Number
-      const substring: String = result
+      let match: object
+      let newEnd: number
+      const substring: string = result
 
       if (!separator.global) {
         separator = RegExp(separator.source, `${reFlags.exec(separator) || ''}g`)
@@ -102,7 +102,7 @@ function truncate(string: String, options: Array): String {
       result = result.slice(0, newEnd === undefined ? end : newEnd)
     }
   } else if (string.indexOf(baseToString(separator), end) != end) {
-    const index: Number = result.lastIndexOf(separator)
+    const index: number = result.lastIndexOf(separator)
     if (index > -1) {
       result = result.slice(0, index)
     }

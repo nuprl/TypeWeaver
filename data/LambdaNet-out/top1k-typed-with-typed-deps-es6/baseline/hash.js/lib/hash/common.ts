@@ -17,7 +17,7 @@ function BlockHash(): Void {
 }
 exports.BlockHash = BlockHash;
 
-BlockHash.prototype.update = function update(msg: Array, enc: String): Object {
+BlockHash.prototype.update = function update(msg: any[], enc: string): object {
   // Convert message to array, pad it, and join into 32bit blocks
   msg = utils.toArray(msg, enc);
   if (!this.pending)
@@ -31,7 +31,7 @@ BlockHash.prototype.update = function update(msg: Array, enc: String): Object {
     msg = this.pending;
 
     // Process pending data in blocks
-    var r: Number = msg.length % this._delta8;
+    var r: number = msg.length % this._delta8;
     this.pending = msg.slice(msg.length - r, msg.length);
     if (this.pending.length === 0)
       this.pending = null;
@@ -44,18 +44,18 @@ BlockHash.prototype.update = function update(msg: Array, enc: String): Object {
   return this;
 };
 
-BlockHash.prototype.digest = function digest(enc: String): String {
+BlockHash.prototype.digest = function digest(enc: string): string {
   this.update(this._pad());
   assert(this.pending === null);
 
   return this._digest(enc);
 };
 
-BlockHash.prototype._pad = function pad(): Object {
-  var len: Number = this.pendingTotal;
-  var bytes: Number = this._delta8;
-  var k: Number = bytes - ((len + this.padLength) % bytes);
-  var res: Object = new Array(k + this.padLength);
+BlockHash.prototype._pad = function pad(): object {
+  var len: number = this.pendingTotal;
+  var bytes: number = this._delta8;
+  var k: number = bytes - ((len + this.padLength) % bytes);
+  var res: object = new Array(k + this.padLength);
   res[0] = 0x80;
   for (var i = 1; i < k; i++)
     res[i] = 0;

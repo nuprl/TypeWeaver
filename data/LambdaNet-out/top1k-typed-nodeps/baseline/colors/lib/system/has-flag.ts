@@ -24,12 +24,12 @@ SOFTWARE.
 
 'use strict';
 
-module.exports = function(flag: String, argv: String) {
+module.exports = function(flag: string, argv: string) {
   argv = argv || process.argv;
 
-  var terminatorPos: Number = argv.indexOf('--');
-  var prefix: String = /^-{1,2}/.test(flag) ? '' : '--';
-  var pos: Number = argv.indexOf(prefix + flag);
+  var terminatorPos: number = argv.indexOf('--');
+  var prefix: string = /^-{1,2}/.test(flag) ? '' : '--';
+  var pos: number = argv.indexOf(prefix + flag);
 
   return pos !== -1 && (terminatorPos === -1 ? true : pos < terminatorPos);
 };

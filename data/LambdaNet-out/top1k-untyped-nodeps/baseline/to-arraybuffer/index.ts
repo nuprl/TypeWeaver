@@ -1,6 +1,6 @@
 var Buffer: Function = require('buffer').Buffer
 
-module.exports = function (buf: Object) {
+module.exports = function (buf: object) {
 	// If the buffer is backed by a Uint8Array, a faster version will work
 	if (buf instanceof Uint8Array) {
 		// If the buffer isn't a subarray, return the underlying ArrayBuffer
@@ -15,8 +15,8 @@ module.exports = function (buf: Object) {
 	if (Buffer.isBuffer(buf)) {
 		// This is the slow version that will work with any Buffer
 		// implementation (even in old browsers)
-		var arrayCopy: Object = new Uint8Array(buf.length)
-		var len: Number = buf.length
+		var arrayCopy: object = new Uint8Array(buf.length)
+		var len: number = buf.length
 		for (var i = 0; i < len; i++) {
 			arrayCopy[i] = buf[i]
 		}

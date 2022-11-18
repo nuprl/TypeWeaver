@@ -1,126 +1,116 @@
 index.ts(4,21): error TS2307: Cannot find module './lib/regexes.js' or its corresponding type declarations.
 index.ts(5,26): error TS2732: Cannot find module './lib/mappingTable.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-index.ts(9,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(12,60): error TS2304: Cannot find name 'Void'.
-index.ts(25,41): error TS2339: Property 'disallowed_STD3_valid' does not exist on type 'Object'.
-index.ts(25,95): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'Object'.
-index.ts(26,32): error TS2339: Property 'disallowed' does not exist on type 'Object'.
-index.ts(27,47): error TS2339: Property 'disallowed_STD3_valid' does not exist on type 'Object'.
-index.ts(28,32): error TS2339: Property 'valid' does not exist on type 'Object'.
-index.ts(29,47): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'Object'.
-index.ts(30,32): error TS2339: Property 'mapped' does not exist on type 'Object'.
+index.ts(25,41): error TS2339: Property 'disallowed_STD3_valid' does not exist on type 'object'.
+index.ts(25,95): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'object'.
+index.ts(26,32): error TS2339: Property 'disallowed' does not exist on type 'object'.
+index.ts(27,47): error TS2339: Property 'disallowed_STD3_valid' does not exist on type 'object'.
+index.ts(28,32): error TS2339: Property 'valid' does not exist on type 'object'.
+index.ts(29,47): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'object'.
+index.ts(30,32): error TS2339: Property 'mapped' does not exist on type 'object'.
 index.ts(44,81): error TS2304: Cannot find name 'Void'.
 index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(52,27): error TS2339: Property 'disallowed' does not exist on type 'Object'.
-index.ts(56,27): error TS2339: Property 'ignored' does not exist on type 'Object'.
-index.ts(58,27): error TS2339: Property 'mapped' does not exist on type 'Object'.
-index.ts(61,27): error TS2339: Property 'deviation' does not exist on type 'Object'.
-index.ts(68,27): error TS2339: Property 'valid' does not exist on type 'Object'.
+index.ts(52,27): error TS2339: Property 'disallowed' does not exist on type 'object'.
+index.ts(56,27): error TS2339: Property 'ignored' does not exist on type 'object'.
+index.ts(58,27): error TS2339: Property 'mapped' does not exist on type 'object'.
+index.ts(61,27): error TS2339: Property 'deviation' does not exist on type 'object'.
+index.ts(68,27): error TS2339: Property 'valid' does not exist on type 'object'.
 index.ts(80,120): error TS2304: Cannot find name 'Void'.
 index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(101,75): error TS2339: Property 'valid' does not exist on type 'Object'.
-index.ts(103,36): error TS2339: Property 'valid' does not exist on type 'Object'.
-index.ts(103,71): error TS2339: Property 'deviation' does not exist on type 'Object'.
-index.ts(161,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(176,11): error TS2339: Property 'processingOption' does not exist on type 'Object'.
-index.ts(179,48): error TS2345: Argument of type 'Object' is not assignable to parameter of type '{ useSTD3ASCIIRules: any; processingOption: any; }'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type '{ useSTD3ASCIIRules: any; processingOption: any; }': useSTD3ASCIIRules, processingOption
-index.ts(185,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(101,75): error TS2339: Property 'valid' does not exist on type 'object'.
+index.ts(103,36): error TS2339: Property 'valid' does not exist on type 'object'.
+index.ts(103,71): error TS2339: Property 'deviation' does not exist on type 'object'.
+index.ts(176,11): error TS2339: Property 'processingOption' does not exist on type '{}'.
+index.ts(179,48): error TS2345: Argument of type 'object' is not assignable to parameter of type '{ useSTD3ASCIIRules: any; processingOption: any; }'.
+  Type '{}' is missing the following properties from type '{ useSTD3ASCIIRules: any; processingOption: any; }': useSTD3ASCIIRules, processingOption
 index.ts(207,23): error TS2304: Cannot find name 'Void'.
-index.ts(207,51): error TS2345: Argument of type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
-  Type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
-index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'Object'.
+index.ts(207,51): error TS2345: Argument of type '{ processingOption: string; checkBidi: boolean; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
+  Type '{ processingOption: string; checkBidi: boolean; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
+index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'object'.
 index.ts(230,10): error TS2304: Cannot find name 'Void'.
-index.ts(242,23): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
-index.ts(248,16): error TS2339: Property 'error' does not exist on type 'Object'.
-index.ts(257,14): error TS2339: Property 'error' does not exist on type 'Object'.
-index.ts(262,16): error TS2339: Property 'error' does not exist on type 'Object'.
-index.ts(268,14): error TS2339: Property 'error' does not exist on type 'Object'.
+index.ts(242,23): error TS2339: Property 'string' does not exist on type 'object'.
+index.ts(248,16): error TS2339: Property 'error' does not exist on type 'object'.
+index.ts(257,14): error TS2339: Property 'error' does not exist on type 'object'.
+index.ts(262,16): error TS2339: Property 'error' does not exist on type 'object'.
+index.ts(268,14): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(280,10): error TS2304: Cannot find name 'Void'.
-index.ts(290,20): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
-index.ts(291,19): error TS2339: Property 'error' does not exist on type 'Object'.
+index.ts(290,20): error TS2339: Property 'string' does not exist on type 'object'.
+index.ts(291,19): error TS2339: Property 'error' does not exist on type 'object'.
 scripts/generateMappingTable.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/generateMappingTable.ts(6,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/generateMappingTable.ts(9,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 scripts/generateMappingTable.ts(11,39): error TS2339: Property 'text' does not exist on type 'Element'.
-scripts/generateMappingTable.ts(13,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateMappingTable.ts(17,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateMappingTable.ts(32,37): error TS2339: Property 'valid' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(39,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateMappingTable.ts(45,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-scripts/generateRegexes.ts(29,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateRegexes.ts(44,37): error TS2339: Property 'Mark' does not exist on type 'Object'.
-scripts/generateRegexes.ts(50,43): error TS2339: Property 'CombiningClassVirama' does not exist on type 'Object'.
-scripts/generateRegexes.ts(54,36): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(54,48): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(54,71): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(56,32): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(56,59): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(56,71): error TS2339: Property 'JT' does not exist on type 'Object'.
-scripts/generateRegexes.ts(61,37): error TS2339: Property 'R' does not exist on type 'Object'.
-scripts/generateRegexes.ts(61,46): error TS2339: Property 'AL' does not exist on type 'Object'.
-scripts/generateRegexes.ts(61,56): error TS2339: Property 'AN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(64,32): error TS2339: Property 'L' does not exist on type 'Object'.
-scripts/generateRegexes.ts(65,36): error TS2339: Property 'R' does not exist on type 'Object'.
-scripts/generateRegexes.ts(65,45): error TS2339: Property 'AL' does not exist on type 'Object'.
-scripts/generateRegexes.ts(70,13): error TS2339: Property 'R' does not exist on type 'Object'.
-scripts/generateRegexes.ts(71,13): error TS2339: Property 'AL' does not exist on type 'Object'.
-scripts/generateRegexes.ts(72,13): error TS2339: Property 'AN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(73,13): error TS2339: Property 'EN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(74,13): error TS2339: Property 'ES' does not exist on type 'Object'.
-scripts/generateRegexes.ts(75,13): error TS2339: Property 'CS' does not exist on type 'Object'.
-scripts/generateRegexes.ts(76,13): error TS2339: Property 'ET' does not exist on type 'Object'.
-scripts/generateRegexes.ts(77,13): error TS2339: Property 'ON' does not exist on type 'Object'.
-scripts/generateRegexes.ts(78,13): error TS2339: Property 'BN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(79,13): error TS2339: Property 'NSM' does not exist on type 'Object'.
-scripts/generateRegexes.ts(86,13): error TS2339: Property 'R' does not exist on type 'Object'.
-scripts/generateRegexes.ts(87,13): error TS2339: Property 'AL' does not exist on type 'Object'.
-scripts/generateRegexes.ts(88,13): error TS2339: Property 'EN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(89,13): error TS2339: Property 'AN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(91,20): error TS2339: Property 'NSM' does not exist on type 'Object'.
-scripts/generateRegexes.ts(94,31): error TS2339: Property 'EN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(95,31): error TS2339: Property 'AN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(100,13): error TS2339: Property 'L' does not exist on type 'Object'.
-scripts/generateRegexes.ts(101,13): error TS2339: Property 'EN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(102,13): error TS2339: Property 'ES' does not exist on type 'Object'.
-scripts/generateRegexes.ts(103,13): error TS2339: Property 'CS' does not exist on type 'Object'.
-scripts/generateRegexes.ts(104,13): error TS2339: Property 'ET' does not exist on type 'Object'.
-scripts/generateRegexes.ts(105,13): error TS2339: Property 'ON' does not exist on type 'Object'.
-scripts/generateRegexes.ts(106,13): error TS2339: Property 'BN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(107,13): error TS2339: Property 'NSM' does not exist on type 'Object'.
-scripts/generateRegexes.ts(112,33): error TS2339: Property 'L' does not exist on type 'Object'.
-scripts/generateRegexes.ts(112,42): error TS2339: Property 'EN' does not exist on type 'Object'.
-scripts/generateRegexes.ts(112,63): error TS2339: Property 'NSM' does not exist on type 'Object'.
-scripts/generateRegexes.ts(124,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-scripts/generateRegexes.ts(124,23): error TS2339: Property 'resolve' does not exist on type 'String'.
+scripts/generateMappingTable.ts(32,37): error TS2339: Property 'valid' does not exist on type 'object'.
+scripts/generateMappingTable.ts(45,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+  Type 'TemplateStringsArray' is missing the following properties from type 'any[]': pop, push, reverse, shift, and 7 more.
+scripts/generateRegexes.ts(44,37): error TS2339: Property 'Mark' does not exist on type 'object'.
+scripts/generateRegexes.ts(50,26): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(50,43): error TS2339: Property 'CombiningClassVirama' does not exist on type 'object'.
+scripts/generateRegexes.ts(54,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(54,36): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(54,48): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(54,71): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(56,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(56,32): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(56,59): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(56,71): error TS2339: Property 'JT' does not exist on type 'object'.
+scripts/generateRegexes.ts(61,16): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(61,37): error TS2339: Property 'R' does not exist on type 'object'.
+scripts/generateRegexes.ts(61,46): error TS2339: Property 'AL' does not exist on type 'object'.
+scripts/generateRegexes.ts(61,56): error TS2339: Property 'AN' does not exist on type 'object'.
+scripts/generateRegexes.ts(64,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(64,32): error TS2339: Property 'L' does not exist on type 'object'.
+scripts/generateRegexes.ts(65,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(65,36): error TS2339: Property 'R' does not exist on type 'object'.
+scripts/generateRegexes.ts(65,45): error TS2339: Property 'AL' does not exist on type 'object'.
+scripts/generateRegexes.ts(68,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(70,13): error TS2339: Property 'R' does not exist on type 'object'.
+scripts/generateRegexes.ts(71,13): error TS2339: Property 'AL' does not exist on type 'object'.
+scripts/generateRegexes.ts(72,13): error TS2339: Property 'AN' does not exist on type 'object'.
+scripts/generateRegexes.ts(73,13): error TS2339: Property 'EN' does not exist on type 'object'.
+scripts/generateRegexes.ts(74,13): error TS2339: Property 'ES' does not exist on type 'object'.
+scripts/generateRegexes.ts(75,13): error TS2339: Property 'CS' does not exist on type 'object'.
+scripts/generateRegexes.ts(76,13): error TS2339: Property 'ET' does not exist on type 'object'.
+scripts/generateRegexes.ts(77,13): error TS2339: Property 'ON' does not exist on type 'object'.
+scripts/generateRegexes.ts(78,13): error TS2339: Property 'BN' does not exist on type 'object'.
+scripts/generateRegexes.ts(79,13): error TS2339: Property 'NSM' does not exist on type 'object'.
+scripts/generateRegexes.ts(84,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(86,13): error TS2339: Property 'R' does not exist on type 'object'.
+scripts/generateRegexes.ts(87,13): error TS2339: Property 'AL' does not exist on type 'object'.
+scripts/generateRegexes.ts(88,13): error TS2339: Property 'EN' does not exist on type 'object'.
+scripts/generateRegexes.ts(89,13): error TS2339: Property 'AN' does not exist on type 'object'.
+scripts/generateRegexes.ts(91,20): error TS2339: Property 'NSM' does not exist on type 'object'.
+scripts/generateRegexes.ts(94,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(94,31): error TS2339: Property 'EN' does not exist on type 'object'.
+scripts/generateRegexes.ts(95,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(95,31): error TS2339: Property 'AN' does not exist on type 'object'.
+scripts/generateRegexes.ts(98,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(100,13): error TS2339: Property 'L' does not exist on type 'object'.
+scripts/generateRegexes.ts(101,13): error TS2339: Property 'EN' does not exist on type 'object'.
+scripts/generateRegexes.ts(102,13): error TS2339: Property 'ES' does not exist on type 'object'.
+scripts/generateRegexes.ts(103,13): error TS2339: Property 'CS' does not exist on type 'object'.
+scripts/generateRegexes.ts(104,13): error TS2339: Property 'ET' does not exist on type 'object'.
+scripts/generateRegexes.ts(105,13): error TS2339: Property 'ON' does not exist on type 'object'.
+scripts/generateRegexes.ts(106,13): error TS2339: Property 'BN' does not exist on type 'object'.
+scripts/generateRegexes.ts(107,13): error TS2339: Property 'NSM' does not exist on type 'object'.
+scripts/generateRegexes.ts(112,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'any[]'.
+scripts/generateRegexes.ts(112,33): error TS2339: Property 'L' does not exist on type 'object'.
+scripts/generateRegexes.ts(112,42): error TS2339: Property 'EN' does not exist on type 'object'.
+scripts/generateRegexes.ts(112,63): error TS2339: Property 'NSM' does not exist on type 'object'.
+scripts/generateRegexes.ts(124,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+scripts/generateRegexes.ts(124,23): error TS2339: Property 'resolve' does not exist on type 'string'.
 scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement can only be used within a function body.
 scripts/generateUnicodeCodePoints.ts(13,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
-scripts/generateUnicodeCodePoints.ts(15,40): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-scripts/generateUnicodeCodePoints.ts(16,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateUnicodeCodePoints.ts(26,89): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/generateUnicodeCodePoints.ts(29,14): error TS2538: Type 'String' cannot be used as an index type.
 scripts/generateUnicodeCodePoints.ts(30,28): error TS2339: Property 'size' does not exist on type 'Error'.
 scripts/generateUnicodeCodePoints.ts(30,59): error TS2339: Property 'has' does not exist on type 'Error'.
-scripts/generateUnicodeCodePoints.ts(31,13): error TS2538: Type 'String' cannot be used as an index type.
-scripts/generateUnicodeCodePoints.ts(36,9): error TS2538: Type 'String' cannot be used as an index type.
-scripts/generateUnicodeCodePoints.ts(43,46): error TS2740: Type 'Generator<string, any, undefined>' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-scripts/generateUnicodeCodePoints.ts(44,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/generateUnicodeCodePoints.ts(45,11): error TS2322: Type 'Number' is not assignable to type 'string'.
+scripts/generateUnicodeCodePoints.ts(43,46): error TS2322: Type 'Generator<string, any, undefined>' is not assignable to type 'string'.
+scripts/generateUnicodeCodePoints.ts(45,11): error TS2322: Type 'number' is not assignable to type 'string'.
 scripts/getLatestTests.ts(15,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/getLatestTests.ts(16,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/getLatestTests.ts(20,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-scripts/getLatestTests.ts(23,13): error TS2740: Type 'WriteStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+scripts/getLatestTests.ts(23,13): error TS2322: Type 'WriteStream' is not assignable to type 'string'.
 scripts/getLatestTests.ts(25,38): error TS2339: Property 'body' does not exist on type 'Element'.
-scripts/getLatestTests.ts(28,13): error TS2322: Type 'WriteStream' is not assignable to type 'String'.
+scripts/getLatestTests.ts(28,13): error TS2322: Type 'WriteStream' is not assignable to type 'string'.
 scripts/getLatestTests.ts(30,38): error TS2339: Property 'body' does not exist on type 'Element'.
 

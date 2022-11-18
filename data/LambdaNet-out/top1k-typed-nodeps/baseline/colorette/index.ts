@@ -6,40 +6,40 @@ const {
   platform = "",
 } = typeof process === "undefined" ? {} : process
 
-const isDisabled: Boolean = "NO_COLOR" in env || argv.includes("--no-color")
-const isForced: Boolean = "FORCE_COLOR" in env || argv.includes("--color")
-const isWindows: Boolean = platform === "win32"
-const isDumbTerminal: Boolean = env.TERM === "dumb"
+const isDisabled: boolean = "NO_COLOR" in env || argv.includes("--no-color")
+const isForced: boolean = "FORCE_COLOR" in env || argv.includes("--color")
+const isWindows: boolean = platform === "win32"
+const isDumbTerminal: boolean = env.TERM === "dumb"
 
-const isCompatibleTerminal: Boolean =
+const isCompatibleTerminal: boolean =
   tty && tty.isatty && tty.isatty(1) && env.TERM && !isDumbTerminal
 
-const isCI: Boolean =
+const isCI: boolean =
   "CI" in env &&
   ("GITHUB_ACTIONS" in env || "GITLAB_CI" in env || "CIRCLECI" in env)
 
-export const isColorSupported: Boolean =
+export const isColorSupported: boolean =
   !isDisabled &&
   (isForced || (isWindows && !isDumbTerminal) || isCompatibleTerminal || isCI)
 
 const replaceClose: Function = (
-  index: Number,
-  string: String,
-  close: String,
-  replace: String,
-  head: Number = string.substring(0, index) + replace,
-  tail: String = string.substring(index + close.length),
-  next: Object = tail.indexOf(close)
+  index: number,
+  string: string,
+  close: string,
+  replace: string,
+  head: number = string.substring(0, index) + replace,
+  tail: string = string.substring(index + close.length),
+  next: object = tail.indexOf(close)
 ) => head + (next < 0 ? tail : replaceClose(next, tail, close, replace))
 
-const clearBleed: Function = (index: String, string: String, open: Number, close: Number, replace: Array) =>
+const clearBleed: Function = (index: string, string: string, open: number, close: number, replace: any[]) =>
   index < 0
     ? open + string + close
     : open + replaceClose(index, string, close, replace) + close
 
 const filterEmpty: Function =
-  (open: String, close: String, replace: Array = open, at: String = open.length + 1) =>
-  (string: Number) =>
+  (open: string, close: string, replace: any[] = open, at: string = open.length + 1) =>
+  (string: number) =>
     string || !(string === "" || string === undefined)
       ? clearBleed(
           ("" + string).indexOf(close, at),
@@ -50,10 +50,10 @@ const filterEmpty: Function =
         )
       : ""
 
-const init: Function = (open: String, close: String, replace: Array) =>
+const init: Function = (open: string, close: string, replace: any[]) =>
   filterEmpty(`\x1b[${open}m`, `\x1b[${close}m`, replace)
 
-const colors: Object = {
+const colors: object = {
   reset: init(0, 0),
   bold: init(1, 22, "\x1b[22m\x1b[1m"),
   dim: init(2, 22, "\x1b[22m\x1b[2m"),

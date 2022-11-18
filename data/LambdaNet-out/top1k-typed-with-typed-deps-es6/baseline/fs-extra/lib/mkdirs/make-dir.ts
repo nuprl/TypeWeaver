@@ -2,13 +2,13 @@
 import fs from '../fs';
 import { checkPath } from './utils';
 
-const getMode: Function = (options: Object) => {
-  const defaults: Object = { mode: 0o777 }
+const getMode: Function = (options: object) => {
+  const defaults: object = { mode: 0o777 }
   if (typeof options === 'number') return options
   return ({ ...defaults, ...options }).mode
 }
 
-export const makeDir: Function = async (dir: Array, options: Object) => {
+export const makeDir: Function = async (dir: any[], options: object) => {
   checkPath(dir)
 
   return fs.mkdir(dir, {
@@ -17,7 +17,7 @@ export const makeDir: Function = async (dir: Array, options: Object) => {
   })
 };
 
-export const makeDirSync: Function = (dir: String, options: Object) => {
+export const makeDirSync: Function = (dir: string, options: object) => {
   checkPath(dir)
 
   return fs.mkdirSync(dir, {

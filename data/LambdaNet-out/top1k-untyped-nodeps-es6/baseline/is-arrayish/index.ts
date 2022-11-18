@@ -1,4 +1,4 @@
-export default function isArrayish(obj: Array): Boolean {
+export default function isArrayish(obj: any[]): boolean {
 	if (!obj || typeof obj === 'string') {
 		return false;
 	}

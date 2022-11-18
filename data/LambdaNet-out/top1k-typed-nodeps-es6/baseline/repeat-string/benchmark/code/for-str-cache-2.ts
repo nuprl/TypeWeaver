@@ -2,18 +2,18 @@
 
 export default repeat;
 
-var res: String = '';
-var cache: Number;
+var res: string = '';
+var cache: number;
 
-function repeat(str: String, num: Number): String {
+function repeat(str: string, num: number): string {
   cache = cache || str;
   if (cache !== str) {
     res = '';
     cache = str;
   }
 
-  var max: Number = (str.length * num);
-  var i: Number = 0;
+  var max: number = (str.length * num);
+  var i: number = 0;
 
   if (res.length >= max) {
     return res.slice(0, max);

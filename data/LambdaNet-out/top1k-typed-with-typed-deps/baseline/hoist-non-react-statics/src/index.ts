@@ -4,7 +4,7 @@
  */
 import { ForwardRef, Memo, isMemo } from 'react-is';
 
-const REACT_STATICS: Object = {
+const REACT_STATICS: object = {
     childContextTypes: true,
     contextType: true,
     contextTypes: true,
@@ -18,7 +18,7 @@ const REACT_STATICS: Object = {
     type: true
 };
 
-const KNOWN_STATICS: Object = {
+const KNOWN_STATICS: object = {
     name: true,
     length: true,
     prototype: true,
@@ -28,7 +28,7 @@ const KNOWN_STATICS: Object = {
     arity: true
 };
 
-const FORWARD_REF_STATICS: Object = {
+const FORWARD_REF_STATICS: object = {
     '$$typeof': true,
     render: true,
     defaultProps: true,
@@ -36,7 +36,7 @@ const FORWARD_REF_STATICS: Object = {
     propTypes: true
 };
 
-const MEMO_STATICS: Object = {
+const MEMO_STATICS: object = {
     '$$typeof': true,
     compare: true,
     defaultProps: true,
@@ -45,11 +45,11 @@ const MEMO_STATICS: Object = {
     type: true,
 }
 
-const TYPE_STATICS: Object = {};
+const TYPE_STATICS: object = {};
 TYPE_STATICS[ForwardRef] = FORWARD_REF_STATICS;
 TYPE_STATICS[Memo] = MEMO_STATICS;
 
-function getStatics(component: Object): Object {
+function getStatics(component: object): object {
     // React v16.11 and below
     if (isMemo(component)) {
         return MEMO_STATICS;
@@ -64,35 +64,35 @@ const getOwnPropertyNames: Function = Object.getOwnPropertyNames;
 const getOwnPropertySymbols: Function = Object.getOwnPropertySymbols;
 const getOwnPropertyDescriptor: Function = Object.getOwnPropertyDescriptor;
 const getPrototypeOf: Function = Object.getPrototypeOf;
-const objectPrototype: Object = Object.prototype;
+const objectPrototype: object = Object.prototype;
 
-export default function hoistNonReactStatics(targetComponent: Object, sourceComponent: Function, excludelist: Object): Array {
+export default function hoistNonReactStatics(targetComponent: object, sourceComponent: Function, excludelist: object): any[] {
     if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
 
         if (objectPrototype) {
-            const inheritedComponent: Boolean = getPrototypeOf(sourceComponent);
+            const inheritedComponent: boolean = getPrototypeOf(sourceComponent);
             if (inheritedComponent && inheritedComponent !== objectPrototype) {
                 hoistNonReactStatics(targetComponent, inheritedComponent, excludelist);
             }
         }
 
-        let keys: Array = getOwnPropertyNames(sourceComponent);
+        let keys: any[] = getOwnPropertyNames(sourceComponent);
 
         if (getOwnPropertySymbols) {
             keys = keys.concat(getOwnPropertySymbols(sourceComponent));
         }
 
-        const targetStatics: Object = getStatics(targetComponent);
-        const sourceStatics: Object = getStatics(sourceComponent);
+        const targetStatics: object = getStatics(targetComponent);
+        const sourceStatics: object = getStatics(sourceComponent);
 
         for (let i = 0; i < keys.length; ++i) {
-            const key: String = keys[i];
+            const key: string = keys[i];
             if (!KNOWN_STATICS[key] &&
                 !(excludelist && excludelist[key]) &&
                 !(sourceStatics && sourceStatics[key]) &&
                 !(targetStatics && targetStatics[key])
             ) {
-                const descriptor: Object = getOwnPropertyDescriptor(sourceComponent, key);
+                const descriptor: object = getOwnPropertyDescriptor(sourceComponent, key);
                 try { // Avoid failures from read-only properties
                     defineProperty(targetComponent, key, descriptor);
                 } catch (e) {}

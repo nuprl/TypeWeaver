@@ -13,7 +13,7 @@ class MaxBufferError extends Error {
 	}
 }
 
-async function getStream(inputStream: Boolean, options: Object): HTMLElement {
+async function getStream(inputStream: boolean, options: object): HTMLElement {
 	if (!inputStream) {
 		throw new Error('Expected a stream');
 	}
@@ -24,10 +24,10 @@ async function getStream(inputStream: Boolean, options: Object): HTMLElement {
 	};
 
 	const {maxBuffer} = options;
-	const stream: String = bufferStream(options);
+	const stream: string = bufferStream(options);
 
 	await new Promise((resolve: Function, reject: Function) => {
-		const rejectPromise: Function = (error: Object) => {
+		const rejectPromise: Function = (error: object) => {
 			// Don't retrieve an oversized buffer.
 			if (error && stream.getBufferedLength() <= BufferConstants.MAX_LENGTH) {
 				error.bufferedData = stream.getBufferedValue();
@@ -56,6 +56,6 @@ async function getStream(inputStream: Boolean, options: Object): HTMLElement {
 }
 
 module.exports = getStream;
-module.exports.buffer = (stream: Object, options: Object) => getStream(stream, {...options, encoding: 'buffer'});
-module.exports.array = (stream: Object, options: Object) => getStream(stream, {...options, array: true});
+module.exports.buffer = (stream: object, options: object) => getStream(stream, {...options, encoding: 'buffer'});
+module.exports.array = (stream: object, options: object) => getStream(stream, {...options, array: true});
 module.exports.MaxBufferError = MaxBufferError;

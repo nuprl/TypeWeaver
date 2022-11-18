@@ -3,10 +3,10 @@ import document from "../var/document.js";
 import sort from "../var/sort.js";
 import splice from "../var/splice.js";
 
-var hasDuplicate: Boolean;
+var hasDuplicate: boolean;
 
 // Document order sorting
-function sortOrder( a: HTMLElement, b: Object ): Number {
+function sortOrder( a: HTMLElement, b: object ): number {
 
 	// Flag for duplicate removal
 	if ( a === b ) {
@@ -15,7 +15,7 @@ function sortOrder( a: HTMLElement, b: Object ): Number {
 	}
 
 	// Sort on method existence if only one input has compareDocumentPosition
-	var compare: Number = !a.compareDocumentPosition - !b.compareDocumentPosition;
+	var compare: number = !a.compareDocumentPosition - !b.compareDocumentPosition;
 	if ( compare ) {
 		return compare;
 	}
@@ -64,11 +64,11 @@ function sortOrder( a: HTMLElement, b: Object ): Number {
  * Document sorting and removing duplicates
  * @param {ArrayLike} results
  */
-jQuery.uniqueSort = function( results: Object ) {
-	var elem: Number,
-		duplicates: Array = [],
-		j: Number = 0,
-		i: Number = 0;
+jQuery.uniqueSort = function( results: object ) {
+	var elem: number,
+		duplicates: any[] = [],
+		j: number = 0,
+		i: number = 0;
 
 	hasDuplicate = false;
 

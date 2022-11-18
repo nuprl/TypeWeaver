@@ -1,5 +1,5 @@
 (function() {
-  var Negotiator: Object, availableLanguages: Function, http: Number, key: String, messages: Object, server: Object, val: Function;
+  var Negotiator: object, availableLanguages: Function, http: number, key: string, messages: object, server: object, val: Function;
 
   Negotiator = require('../lib/negotiator').Negotiator;
 
@@ -11,7 +11,7 @@
   };
 
   availableLanguages = (function() {
-    var _results: Array;
+    var _results: any[];
     _results = [];
     for (key in messages) {
       val = messages[key];
@@ -20,8 +20,8 @@
     return _results;
   })();
 
-  server = http.createServer(function(req: Object, res: Array) {
-    var language: String, negotiator: HTMLElement;
+  server = http.createServer(function(req: object, res: any[]) {
+    var language: string, negotiator: HTMLElement;
     negotiator = new Negotiator(req);
     console.log("Accept-Language: " + req.headers['accept-language']);
     console.log("Preferred: " + (negotiator.languages()));

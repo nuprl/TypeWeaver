@@ -44,7 +44,7 @@ export default {
   },
 };
 
-function isAppropriateChar(node: NodePath): Boolean {
+function isAppropriateChar(node: NodePath): boolean {
   return (
     node.type === 'Char' &&
     // We don't extract [\b] (backspace) since \b has different
@@ -53,15 +53,15 @@ function isAppropriateChar(node: NodePath): Boolean {
   );
 }
 
-function isMeta(value: String): Boolean {
+function isMeta(value: string): boolean {
   return /^\\[dwsDWS]$/.test(value);
 }
 
-function getInverseMeta(value: String): String {
+function getInverseMeta(value: string): string {
   return /[dws]/.test(value) ? value.toUpperCase() : value.toLowerCase();
 }
 
-function hasAppropriateSiblings(path: String): Boolean {
+function hasAppropriateSiblings(path: string): boolean {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {
@@ -88,6 +88,6 @@ function hasAppropriateSiblings(path: String): Boolean {
 
 // Note: \{ and \} are always preserved to avoid `a[{]2[}]` turning
 // into `a{2}`.
-function shouldEscape(value: String): Boolean {
+function shouldEscape(value: string): boolean {
   return /[*[()+?$./{}|]/.test(value);
 }

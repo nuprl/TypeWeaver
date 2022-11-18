@@ -15,9 +15,9 @@ const slice: Function = Array.prototype.slice
 export default merge2;
 
 function merge2 (): Element {
-  const streamsQueue: Array = []
-  const args: Array = slice.call(arguments)
-  let merging: Boolean = false
+  const streamsQueue: any[] = []
+  const args: any[] = slice.call(arguments)
+  let merging: boolean = false
   let options: HTMLElement = args[args.length - 1]
 
   if (options && !Array.isArray(options) && options.pipe == null) {
@@ -26,8 +26,8 @@ function merge2 (): Element {
     options = {}
   }
 
-  const doEnd: Boolean = options.end !== false
-  const doPipeError: Boolean = options.pipeError === true
+  const doEnd: boolean = options.end !== false
+  const doPipeError: boolean = options.pipeError === true
   if (options.objectMode == null) {
     options.objectMode = true
   }
@@ -36,7 +36,7 @@ function merge2 (): Element {
   }
   const mergedStream: ChildProcess = PassThrough(options)
 
-  function addStream (): Object {
+  function addStream (): object {
     for (let i = 0, len = arguments.length; i < len; i++) {
       streamsQueue.push(pauseStreams(arguments[i], options))
     }
@@ -50,7 +50,7 @@ function merge2 (): Element {
     }
     merging = true
 
-    let streams: Array = streamsQueue.shift()
+    let streams: any[] = streamsQueue.shift()
     if (!streams) {
       process.nextTick(endStream)
       return
@@ -59,7 +59,7 @@ function merge2 (): Element {
       streams = [streams]
     }
 
-    let pipesCount: String = streams.length + 1
+    let pipesCount: string = streams.length + 1
 
     function next (): Void {
       if (--pipesCount > 0) {
@@ -69,7 +69,7 @@ function merge2 (): Element {
       mergeStream()
     }
 
-    function pipe (stream: Function): String {
+    function pipe (stream: Function): string {
       function onend (): Void {
         stream.removeListener('merge2UnpipeEnd', onend)
         stream.removeListener('end', onend)
@@ -116,7 +116,7 @@ function merge2 (): Element {
 
   mergedStream.setMaxListeners(0)
   mergedStream.add = addStream
-  mergedStream.on('unpipe', function (stream: Boolean) {
+  mergedStream.on('unpipe', function (stream: boolean) {
     stream.emit('merge2UnpipeEnd')
   })
 
@@ -127,7 +127,7 @@ function merge2 (): Element {
 }
 
 // check and pause streams for pipe.
-function pauseStreams (streams: Object, options: Object): Object {
+function pauseStreams (streams: object, options: object): object {
   if (!Array.isArray(streams)) {
     // Backwards-compat with old-style streams
     if (!streams._readableState && streams.pipe) {

@@ -5,23 +5,23 @@ import rneedsContext from "./var/rneedsContext.js";
 import "../selector.js";
 
 // Implement the identical functionality for filter and not
-function winnow( elements: Function, qualifier: Function, not: String ): Array {
+function winnow( elements: Function, qualifier: Function, not: string ): any[] {
 	if ( typeof qualifier === "function" ) {
-		return jQuery.grep( elements, function( elem: String, i: String ) {
+		return jQuery.grep( elements, function( elem: string, i: string ) {
 			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 	}
 
 	// Single element
 	if ( qualifier.nodeType ) {
-		return jQuery.grep( elements, function( elem: Number ) {
+		return jQuery.grep( elements, function( elem: number ) {
 			return ( elem === qualifier ) !== not;
 		} );
 	}
 
 	// Arraylike of elements (jQuery, arguments, Array)
 	if ( typeof qualifier !== "string" ) {
-		return jQuery.grep( elements, function( elem: String ) {
+		return jQuery.grep( elements, function( elem: string ) {
 			return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
 		} );
 	}
@@ -30,7 +30,7 @@ function winnow( elements: Function, qualifier: Function, not: String ): Array {
 	return jQuery.filter( qualifier, elements, not );
 }
 
-jQuery.filter = function( expr: Number, elems: Array, not: Boolean ) {
+jQuery.filter = function( expr: number, elems: any[], not: boolean ) {
 	var elem: HTMLElement = elems[ 0 ];
 
 	if ( not ) {
@@ -41,16 +41,16 @@ jQuery.filter = function( expr: Number, elems: Array, not: Boolean ) {
 		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem: Object ) {
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem: object ) {
 		return elem.nodeType === 1;
 	} ) );
 };
 
 jQuery.fn.extend( {
-	find: function( selector: String ) {
-		var i: Number, ret: String,
-			len: Number = this.length,
-			self: Object = this;
+	find: function( selector: string ) {
+		var i: number, ret: string,
+			len: number = this.length,
+			self: object = this;
 
 		if ( typeof selector !== "string" ) {
 			return this.pushStack( jQuery( selector ).filter( function() {
@@ -70,13 +70,13 @@ jQuery.fn.extend( {
 
 		return len > 1 ? jQuery.uniqueSort( ret ) : ret;
 	},
-	filter: function( selector: String ) {
+	filter: function( selector: string ) {
 		return this.pushStack( winnow( this, selector || [], false ) );
 	},
-	not: function( selector: String ) {
+	not: function( selector: string ) {
 		return this.pushStack( winnow( this, selector || [], true ) );
 	},
-	is: function( selector: String ) {
+	is: function( selector: string ) {
 		return !!winnow(
 			this,
 

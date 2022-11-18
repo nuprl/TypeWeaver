@@ -4,16 +4,16 @@
  */
 // vim: set ts=4 sts=4 sw=4 et:
 
-var assert: String = require('assert-plus');
+var assert: string = require('assert-plus');
 var format: Function = require('util').format;
-var fs: String = require('fs');
-var path: String = require('path');
+var fs: string = require('fs');
+var path: string = require('path');
 
 // ---- internal support stuff
 
 // Replace {{variable}} in `s` with the template data in `d`.
-function renderTemplate(s: String, d: Object): Array {
-    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: String, key: String): Array {
+function renderTemplate(s: string, d: object): any[] {
+    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: string, key: string): any[] {
         return Object.prototype.hasOwnProperty.call(d, key) ? d[key] : match;
     });
 }
@@ -21,26 +21,26 @@ function renderTemplate(s: String, d: Object): Array {
 /**
  * Return a shallow copy of the given object;
  */
-function shallowCopy(obj: Object): Object {
+function shallowCopy(obj: object): object {
     if (!obj) {
         return obj;
     }
-    var copy: Object = {};
-    Object.keys(obj).forEach(function onK(k: String): Void {
+    var copy: object = {};
+    Object.keys(obj).forEach(function onK(k: string): Void {
         copy[k] = obj[k];
     });
     return copy;
 }
 
-function space(n: Number): String {
-    var s: String = '';
+function space(n: number): string {
+    var s: string = '';
     for (var i = 0; i < n; i++) {
         s += ' ';
     }
     return s;
 }
 
-function makeIndent(arg: String, deflen: String, name: String): String {
+function makeIndent(arg: string, deflen: string, name: string): string {
     if (arg === null || arg === undefined) {
         return space(deflen);
     } else if (typeof arg === 'number') {
@@ -57,12 +57,12 @@ function makeIndent(arg: String, deflen: String, name: String): String {
  * This splits on whitespace. Single tokens longer than `width` are not
  * broken up.
  */
-function textwrap(s: String, width: Number): Array {
-    var words: Array = s.trim().split(/\s+/);
-    var lines: Array = [];
-    var line: String = '';
-    words.forEach(function onWord(w: String): Void {
-        var newLength: Number = line.length + w.length;
+function textwrap(s: string, width: number): any[] {
+    var words: any[] = s.trim().split(/\s+/);
+    var lines: any[] = [];
+    var line: string = '';
+    words.forEach(function onWord(w: string): Void {
+        var newLength: number = line.length + w.length;
         if (line.length > 0) {
             newLength += 1;
         }
@@ -88,24 +88,24 @@ function textwrap(s: String, width: Number): Array {
  *   but not have to do silly things like `opt["dry-run"]` to access the
  *   parsed results.
  */
-function optionKeyFromName(name: String): String {
+function optionKeyFromName(name: string): string {
     return name.replace(/-/g, '_');
 }
 
 // ---- Option types
 
-function parseBool(option: String, optstr: Array, arg: Boolean): Boolean {
+function parseBool(option: string, optstr: any[], arg: boolean): boolean {
     return Boolean(arg);
 }
 
-function parseString(option: String, optstr: Array, arg: Number): String {
+function parseString(option: string, optstr: any[], arg: number): string {
     assert.string(arg, 'arg');
     return arg;
 }
 
-function parseNumber(option: Number, optstr: String, arg: Number): Number {
+function parseNumber(option: number, optstr: string, arg: number): number {
     assert.string(arg, 'arg');
-    var num: Number = Number(arg);
+    var num: number = Number(arg);
     if (isNaN(num)) {
         throw new Error(
             format('arg for "%s" is not a number: "%s"', optstr, arg)
@@ -114,9 +114,9 @@ function parseNumber(option: Number, optstr: String, arg: Number): Number {
     return num;
 }
 
-function parseInteger(option: String, optstr: String, arg: Number): Number {
+function parseInteger(option: string, optstr: string, arg: number): number {
     assert.string(arg, 'arg');
-    var num: Number = Number(arg);
+    var num: number = Number(arg);
     if (!/^[0-9-]+$/.test(arg) || isNaN(num)) {
         throw new Error(
             format('arg for "%s" is not an integer: "%s"', optstr, arg)
@@ -125,9 +125,9 @@ function parseInteger(option: String, optstr: String, arg: Number): Number {
     return num;
 }
 
-function parsePositiveInteger(option: String, optstr: String, arg: Number): Number {
+function parsePositiveInteger(option: string, optstr: string, arg: number): number {
     assert.string(arg, 'arg');
-    var num: Number = Number(arg);
+    var num: number = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num) || num === 0) {
         throw new Error(
             format('arg for "%s" is not a positive integer: "%s"', optstr, arg)
@@ -146,7 +146,7 @@ function parsePositiveInteger(option: String, optstr: String, arg: Number): Numb
  *      2014-03-28T18:35:01
  *      2014-03-28
  */
-function parseDate(option: String, optstr: String, arg: Number): Object {
+function parseDate(option: string, optstr: string, arg: number): object {
     assert.string(arg, 'arg');
     var date: HTMLDivElement;
     if (/^\d+$/.test(arg)) {
@@ -170,7 +170,7 @@ function parseDate(option: String, optstr: String, arg: Number): Object {
     return date;
 }
 
-var optionTypes: Object = {
+var optionTypes: object = {
     bool: {
         takesArg: false,
         parseArg: parseBool
@@ -269,13 +269,13 @@ function Parser(config: HTMLElement): Void {
     this.allowUnknown =
         config.allowUnknown !== undefined ? config.allowUnknown : false;
 
-    this.options = config.options.map(function onOpt(o: String): Promise {
+    this.options = config.options.map(function onOpt(o: string): Promise {
         return shallowCopy(o);
     });
     this.optionFromName = {};
     this.optionFromEnv = {};
     for (var i = 0; i < this.options.length; i++) {
-        var o: Object = this.options[i];
+        var o: object = this.options[i];
         if (o.group !== undefined && o.group !== null) {
             assert.optionalString(
                 o.group,
@@ -297,7 +297,7 @@ function Parser(config: HTMLElement): Void {
             format('exactly one of "name" or "names" required: %j', o)
         );
         assert.optionalString(o.help, format('config.options.%d.help', i));
-        var env: Array = o.env || [];
+        var env: any[] = o.env || [];
         if (typeof env === 'string') {
             env = [env];
         }
@@ -321,7 +321,7 @@ function Parser(config: HTMLElement): Void {
             );
         }
         o.key = optionKeyFromName(o.names[0]);
-        o.names.forEach(function onName(n: String): Void {
+        o.names.forEach(function onName(n: string): Void {
             if (self.optionFromName[n]) {
                 throw new Error(
                     format(
@@ -334,7 +334,7 @@ function Parser(config: HTMLElement): Void {
             }
             self.optionFromName[n] = o;
         });
-        env.forEach(function onName(n: String): Void {
+        env.forEach(function onName(n: string): Void {
             if (self.optionFromEnv[n]) {
                 throw new Error(
                     format(
@@ -350,7 +350,7 @@ function Parser(config: HTMLElement): Void {
     }
 }
 
-Parser.prototype.optionTakesArg = function optionTakesArg(option: Object): Boolean {
+Parser.prototype.optionTakesArg = function optionTakesArg(option: object): boolean {
     return optionTypes[option.type].takesArg;
 };
 
@@ -368,7 +368,7 @@ Parser.prototype.optionTakesArg = function optionTakesArg(option: Object): Boole
  *      remaining args from `argv`) and `_order` (gives the order that
  *      options were specified).
  */
-Parser.prototype.parse = function parse(inputs: Object): Object {
+Parser.prototype.parse = function parse(inputs: object): object {
     var self: HTMLElement = this;
 
     // Old API was `parse([argv, [slice]])`
@@ -382,16 +382,16 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
     }
     assert.optionalArrayOfString(inputs.argv, 'inputs.argv');
     //assert.optionalNumber(slice, 'slice');
-    var argv: Array = inputs.argv || process.argv;
-    var slice: Number = inputs.slice !== undefined ? inputs.slice : 2;
-    var args: Array = argv.slice(slice);
-    var env: Object = inputs.env || process.env;
-    var opts: Object = {};
-    var _order: Array = [];
+    var argv: any[] = inputs.argv || process.argv;
+    var slice: number = inputs.slice !== undefined ? inputs.slice : 2;
+    var args: any[] = argv.slice(slice);
+    var env: object = inputs.env || process.env;
+    var opts: object = {};
+    var _order: any[] = [];
 
-    function addOpt(option: Object, optstr: Number, key: String, val: Number, from: String): Void {
-        var type: Object = optionTypes[option.type];
-        var parsedVal: Array = type.parseArg(option, optstr, val);
+    function addOpt(option: object, optstr: number, key: string, val: number, from: string): Void {
+        var type: object = optionTypes[option.type];
+        var parsedVal: any[] = type.parseArg(option, optstr, val);
         if (type.array) {
             if (!opts[key]) {
                 opts[key] = [];
@@ -406,19 +406,19 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
         } else {
             opts[key] = parsedVal;
         }
-        var item: Object = {key: key, value: parsedVal, from: from};
+        var item: object = {key: key, value: parsedVal, from: from};
         _order.push(item);
     }
 
     // Parse args.
-    var _args: Array = [];
-    var arg: Array;
-    var i: Number = 0;
-    var idx: Number;
-    var name: String;
-    var option: Object;
-    var takesArg: Number;
-    var val: String;
+    var _args: any[] = [];
+    var arg: any[];
+    var i: number = 0;
+    var idx: number;
+    var name: string;
+    var option: object;
+    var takesArg: number;
+    var val: string;
     outer: while (i < args.length) {
         arg = args[i];
 
@@ -482,8 +482,8 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
 
             // Short option
         } else if (arg[0] === '-' && arg.length > 1) {
-            var j: Number = 1;
-            var allFound: Boolean = true;
+            var j: number = 1;
+            var allFound: boolean = true;
             while (j < arg.length) {
                 name = arg[j];
                 option = this.optionFromName[name];
@@ -553,16 +553,16 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
     _args = _args.concat(args.slice(i));
 
     // Parse environment.
-    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: String): Void {
-        var val: String = env[envname];
+    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: string): Void {
+        var val: string = env[envname];
         if (val === undefined) {
             return;
         }
-        var option: Object = self.optionFromEnv[envname];
+        var option: object = self.optionFromEnv[envname];
         if (opts[option.key] !== undefined) {
             return;
         }
-        var takesArg: Boolean = self.optionTakesArg(option);
+        var takesArg: boolean = self.optionTakesArg(option);
         if (takesArg) {
             addOpt(option, envname, option.key, val, 'env');
         } else if (val !== '') {
@@ -575,7 +575,7 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
     });
 
     // Apply default values.
-    this.options.forEach(function onOpt(o: Object): Void {
+    this.options.forEach(function onOpt(o: object): Void {
         if (opts[o.key] === undefined) {
             if (o.default !== undefined) {
                 opts[o.key] = o.default;
@@ -621,19 +621,19 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
  *        bounds.
  * @returns {String}
  */
-Parser.prototype.help = function help(config: HTMLElement): String {
+Parser.prototype.help = function help(config: HTMLElement): string {
     config = config || {};
     assert.object(config, 'config');
 
-    var indent: String = makeIndent(config.indent, 4, 'config.indent');
-    var headingIndent: String = makeIndent(
+    var indent: string = makeIndent(config.indent, 4, 'config.indent');
+    var headingIndent: string = makeIndent(
         config.headingIndent,
         Math.round(indent.length / 2),
         'config.headingIndent'
     );
 
     assert.optionalString(config.nameSort, 'config.nameSort');
-    var nameSort: String = config.nameSort || 'length';
+    var nameSort: string = config.nameSort || 'length';
     assert.ok(
         ~['length', 'none'].indexOf(nameSort),
         'invalid "config.nameSort"'
@@ -645,13 +645,13 @@ Parser.prototype.help = function help(config: HTMLElement): String {
     assert.optionalBool(config.includeEnv, 'config.includeEnv');
     assert.optionalBool(config.includeDefault, 'config.includeDefault');
     assert.optionalBool(config.helpWrap, 'config.helpWrap');
-    var maxCol: Number = config.maxCol || 80;
-    var minHelpCol: Number = config.minHelpCol || 20;
-    var maxHelpCol: Number = config.maxHelpCol || 40;
+    var maxCol: number = config.maxCol || 80;
+    var minHelpCol: number = config.minHelpCol || 20;
+    var maxHelpCol: number = config.maxHelpCol || 40;
 
-    var lines: Array = [];
-    var maxWidth: Number = 0;
-    this.options.forEach(function onOpt(o: Object): Void {
+    var lines: any[] = [];
+    var maxWidth: number = 0;
+    this.options.forEach(function onOpt(o: object): Void {
         if (o.hidden) {
             return;
         }
@@ -660,12 +660,12 @@ Parser.prototype.help = function help(config: HTMLElement): String {
             lines.push(null);
             return;
         }
-        var type: Object = optionTypes[o.type];
-        var arg: Number = o.helpArg || type.helpArg || 'ARG';
-        var line: String = '';
-        var names: Array = o.names.slice();
+        var type: object = optionTypes[o.type];
+        var arg: number = o.helpArg || type.helpArg || 'ARG';
+        var line: string = '';
+        var names: any[] = o.names.slice();
         if (nameSort === 'length') {
-            names.sort(function onCmp(a: Array, b: Array): Number {
+            names.sort(function onCmp(a: any[], b: any[]): number {
                 if (a.length < b.length) {
                     return -1;
                 } else if (b.length < a.length) {
@@ -675,7 +675,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
                 }
             });
         }
-        names.forEach(function onName(name: String, i: Number): Void {
+        names.forEach(function onName(name: string, i: number): Void {
             if (i > 0) {
                 line += ', ';
             }
@@ -696,13 +696,13 @@ Parser.prototype.help = function help(config: HTMLElement): String {
     });
 
     // Add help strings.
-    var helpCol: Number = config.helpCol;
+    var helpCol: number = config.helpCol;
     if (!helpCol) {
         helpCol = maxWidth + indent.length + 2;
         helpCol = Math.min(Math.max(helpCol, minHelpCol), maxHelpCol);
     }
-    var i: Number = -1;
-    this.options.forEach(function onOpt(o: Object): Void {
+    var i: number = -1;
+    this.options.forEach(function onOpt(o: object): Void {
         if (o.hidden) {
             return;
         }
@@ -721,7 +721,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
             return;
         }
 
-        var helpDefault: Number;
+        var helpDefault: number;
         if (config.includeDefault) {
             if (o.default !== undefined) {
                 helpDefault = format('Default: %j', o.default);
@@ -733,24 +733,24 @@ Parser.prototype.help = function help(config: HTMLElement): String {
             }
         }
 
-        var line: String = (lines[i] = indent + lines[i]);
+        var line: string = (lines[i] = indent + lines[i]);
         if (!o.help && !(config.includeEnv && o.env) && !helpDefault) {
             return;
         }
-        var n: Number = helpCol - line.length;
+        var n: number = helpCol - line.length;
         if (n >= 0) {
             line += space(n);
         } else {
             line += '\n' + space(helpCol);
         }
 
-        var helpEnv: String = '';
+        var helpEnv: string = '';
         if (o.env && o.env.length && config.includeEnv) {
             helpEnv += 'Environment: ';
-            var type: Object = optionTypes[o.type];
-            var arg: Number = o.helpArg || type.helpArg || 'ARG';
-            var envs: Array = (Array.isArray(o.env) ? o.env : [o.env]).map(
-                function onE(e: String): String {
+            var type: object = optionTypes[o.type];
+            var arg: number = o.helpArg || type.helpArg || 'ARG';
+            var envs: any[] = (Array.isArray(o.env) ? o.env : [o.env]).map(
+                function onE(e: string): string {
                     if (type.takesArg) {
                         return e + '=' + arg;
                     } else {
@@ -760,7 +760,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
             );
             helpEnv += envs.join(', ');
         }
-        var help: String = (o.help || '').trim();
+        var help: string = (o.help || '').trim();
         if (o.helpWrap !== false && config.helpWrap !== false) {
             // Wrap help description normally.
             if (help.length && !~'.!?"\''.indexOf(help.slice(-1))) {
@@ -781,7 +781,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
             );
         } else {
             // Do not wrap help description, but indent newlines appropriately.
-            var helpLines: Array = help.split('\n').filter(function onLine(ln: Array): Number {
+            var helpLines: any[] = help.split('\n').filter(function onLine(ln: any[]): number {
                 return ln.length;
             });
             if (helpEnv !== '') {
@@ -796,7 +796,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
         lines[i] = line;
     });
 
-    var rv: String = '';
+    var rv: string = '';
     if (lines.length > 0) {
         rv = lines.join('\n') + '\n';
     }
@@ -820,7 +820,7 @@ Parser.prototype.help = function help(config: HTMLElement): String {
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-Parser.prototype.bashCompletion = function bashCompletion(args: Object): Promise {
+Parser.prototype.bashCompletion = function bashCompletion(args: object): Promise {
     assert.object(args, 'args');
     assert.string(args.name, 'args.name');
     assert.optionalString(args.specExtra, 'args.specExtra');
@@ -836,7 +836,7 @@ Parser.prototype.bashCompletion = function bashCompletion(args: Object): Promise
 
 // ---- Bash completion
 
-const BASH_COMPLETION_TEMPLATE_PATH: String = path.join(
+const BASH_COMPLETION_TEMPLATE_PATH: string = path.join(
     __dirname,
     '../etc/dashdash.bash_completion.in'
 );
@@ -872,33 +872,33 @@ const BASH_COMPLETION_TEMPLATE_PATH: String = path.join(
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionSpecFromOptions(args: Object): Array {
+function bashCompletionSpecFromOptions(args: object): any[] {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.optionalString(args.context, 'args.context');
     assert.optionalBool(args.includeHidden, 'args.includeHidden');
     assert.optionalArrayOfString(args.argtypes, 'args.argtypes');
 
-    var context: String = args.context || '';
-    var includeHidden: Boolean =
+    var context: string = args.context || '';
+    var includeHidden: boolean =
         args.includeHidden === undefined ? false : args.includeHidden;
 
-    var spec: Array = [];
-    var shortopts: Array = [];
-    var longopts: Array = [];
-    var optargs: Array = [];
-    (args.options || []).forEach(function onOpt(o: Object): Void {
+    var spec: any[] = [];
+    var shortopts: any[] = [];
+    var longopts: any[] = [];
+    var optargs: any[] = [];
+    (args.options || []).forEach(function onOpt(o: object): Void {
         if (o.group !== undefined && o.group !== null) {
             // Skip group headers.
             return;
         }
 
-        var optNames: Array = o.names || [o.name];
-        var optType: Object = getOptionType(o.type);
+        var optNames: any[] = o.names || [o.name];
+        var optType: object = getOptionType(o.type);
         if (optType.takesArg) {
-            var completionType: Number =
+            var completionType: number =
                 o.completionType || optType.completionType || o.type;
-            optNames.forEach(function onOptName(optName: String): Void {
+            optNames.forEach(function onOptName(optName: string): Void {
                 if (optName.length === 1) {
                     if (includeHidden || !o.hidden) {
                         shortopts.push('-' + optName);
@@ -914,7 +914,7 @@ function bashCompletionSpecFromOptions(args: Object): Array {
                 }
             });
         } else {
-            optNames.forEach(function onOptName(optName: String): Void {
+            optNames.forEach(function onOptName(optName: string): Void {
                 if (includeHidden || !o.hidden) {
                     if (optName.length === 1) {
                         shortopts.push('-' + optName);
@@ -969,7 +969,7 @@ function bashCompletionSpecFromOptions(args: Object): Array {
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionFromOptions(args: Object): Boolean {
+function bashCompletionFromOptions(args: object): boolean {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.string(args.name, 'args.name');
@@ -977,7 +977,7 @@ function bashCompletionFromOptions(args: Object): Boolean {
     assert.optionalArrayOfString(args.argtypes, 'args.argtypes');
 
     // Gather template data.
-    var data: Object = {
+    var data: object = {
         name: args.name,
         date: new Date(),
         spec: bashCompletionSpecFromOptions({
@@ -990,13 +990,13 @@ function bashCompletionFromOptions(args: Object): Boolean {
     }
 
     // Render template.
-    var template: String = fs.readFileSync(BASH_COMPLETION_TEMPLATE_PATH, 'utf8');
+    var template: string = fs.readFileSync(BASH_COMPLETION_TEMPLATE_PATH, 'utf8');
     return renderTemplate(template, data);
 }
 
 // ---- exports
 
-function createParser(config: String): String {
+function createParser(config: string): string {
     return new Parser(config);
 }
 
@@ -1007,18 +1007,18 @@ function createParser(config: String): String {
  *      `dashdash.Parser` and `dashdash.Parser.parse`: options, interspersed,
  *      argv, env, slice.
  */
-function parse(config_: Object): Void {
+function parse(config_: object): Void {
     assert.object(config_, 'config');
     assert.optionalArrayOfString(config_.argv, 'config.argv');
     assert.optionalObject(config_.env, 'config.env');
 
-    var config: Object = shallowCopy(config_);
-    var argv: Array = config.argv;
+    var config: object = shallowCopy(config_);
+    var argv: any[] = config.argv;
     delete config.argv;
-    var env: String = config.env;
+    var env: string = config.env;
     delete config.env;
 
-    var parser: Object = new Parser(config);
+    var parser: object = new Parser(config);
     return parser.parse({argv: argv, env: env});
 }
 
@@ -1042,7 +1042,7 @@ function parse(config_: Object): Void {
  *      - default Optional. Default value for options of this type, if no
  *        default is specified in the option type usage.
  */
-function addOptionType(optionType: Object): Void {
+function addOptionType(optionType: object): Void {
     assert.object(optionType, 'optionType');
     assert.string(optionType.name, 'optionType.name');
     assert.bool(optionType.takesArg, 'optionType.takesArg');
@@ -1063,7 +1063,7 @@ function addOptionType(optionType: Object): Void {
     };
 }
 
-function getOptionType(name: String): String {
+function getOptionType(name: string): string {
     assert.string(name, 'name');
     return optionTypes[name];
 }
@@ -1077,20 +1077,20 @@ function getOptionType(name: String): String {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: Object): Array {
+function synopsisFromOpt(o: object): any[] {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {
         return null;
     }
-    var names: Array = o.names || [o.name];
+    var names: any[] = o.names || [o.name];
     // `type` here could be undefined if, for example, the command has a
     // dashdash option spec with a bogus 'type'.
-    var type: Object = getOptionType(o.type);
-    var helpArg: Number = o.helpArg || (type && type.helpArg) || 'ARG';
-    var parts: Array = [];
-    names.forEach(function onName(name: String): Void {
-        var part: String = (name.length === 1 ? '-' : '--') + name;
+    var type: object = getOptionType(o.type);
+    var helpArg: number = o.helpArg || (type && type.helpArg) || 'ARG';
+    var parts: any[] = [];
+    names.forEach(function onName(name: string): Void {
+        var part: string = (name.length === 1 ? '-' : '--') + name;
         if (type && type.takesArg) {
             part += name.length === 1 ? ' ' + helpArg : '=' + helpArg;
         }

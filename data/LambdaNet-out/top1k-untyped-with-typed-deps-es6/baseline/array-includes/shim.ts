@@ -3,8 +3,8 @@
 import define from 'define-properties';
 import getPolyfill from './polyfill';
 
-export default function shimArrayPrototypeIncludes(): Boolean {
-	var polyfill: Boolean = getPolyfill();
+export default function shimArrayPrototypeIncludes(): boolean {
+	var polyfill: boolean = getPolyfill();
 	define(
 		Array.prototype,
 		{ includes: polyfill },

@@ -1,12 +1,12 @@
 'use strict';
 
-var TYPES: Object = require('../parsers').TYPES;
+var TYPES: object = require('../parsers').TYPES;
 var valueType: Function = require('../parsers').valueType;
 var shorthandParser: Function = require('../parsers').shorthandParser;
 var shorthandSetter: Function = require('../parsers').shorthandSetter;
 var shorthandGetter: Function = require('../parsers').shorthandGetter;
 
-var shorthand_for: Object = {
+var shorthand_for: object = {
   'font-family': require('./fontFamily'),
   'font-size': require('./fontSize'),
   'font-style': require('./fontStyle'),
@@ -15,7 +15,7 @@ var shorthand_for: Object = {
   'line-height': require('./lineHeight'),
 };
 
-var static_fonts: Array = [
+var static_fonts: any[] = [
   'caption',
   'icon',
   'menu',
@@ -28,8 +28,8 @@ var static_fonts: Array = [
 var setter: Function = shorthandSetter('font', shorthand_for);
 
 module.exports.definition = {
-  set: function(v: String) {
-    var short: String = shorthandParser(v, shorthand_for);
+  set: function(v: string) {
+    var short: string = shorthandParser(v, shorthand_for);
     if (short !== undefined) {
       return setter.call(this, v);
     }

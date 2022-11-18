@@ -8,13 +8,13 @@ import keys from '../keys.js'
  * @param {Object} object The object to query.
  * @returns {Array} Returns the match data of `object`.
  */
-function getMatchData(object: Object): Object {
-  const result: Array = keys(object)
-  let length: Number = result.length
+function getMatchData(object: object): object {
+  const result: any[] = keys(object)
+  let length: number = result.length
 
   while (length--) {
-    const key: String = result[length]
-    const value: String = object[key]
+    const key: string = result[length]
+    const value: string = object[key]
     result[length] = [key, value, isStrictComparable(value)]
   }
   return result

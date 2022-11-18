@@ -6,12 +6,12 @@ import t from 'babel-types';
 import generate from 'babel-generator';
 import { camelToDashed } from '../lib/parsers';
 
-const dashedProperties: Array = fs
+const dashedProperties: any[] = fs
   .readdirSync(path.resolve(__dirname, '../lib/properties'))
-  .filter((propertyFile: String) => propertyFile.substr(-3) === '.js')
-  .map((propertyFile: String) => camelToDashed(propertyFile.replace('.js', '')));
+  .filter((propertyFile: string) => propertyFile.substr(-3) === '.js')
+  .map((propertyFile: string) => camelToDashed(propertyFile.replace('.js', '')));
 
-const out_file: String = fs.createWriteStream(path.resolve(__dirname, '../lib/implementedProperties.js'), {
+const out_file: string = fs.createWriteStream(path.resolve(__dirname, '../lib/implementedProperties.js'), {
   encoding: 'utf-8',
 });
 var date_today: HTMLInputElement = new Date();
@@ -22,7 +22,7 @@ out_file.write(
 );
 out_file.write('/*\n *\n * https://www.w3.org/Style/CSS/all-properties.en.html\n */\n\n');
 
-const statements: Array = [];
+const statements: any[] = [];
 statements.push(
   t.variableDeclaration('var', [
     t.variableDeclarator(
@@ -32,7 +32,7 @@ statements.push(
   ])
 );
 
-dashedProperties.forEach((property: String) => {
+dashedProperties.forEach((property: string) => {
   statements.push(
     t.expressionStatement(
       t.callExpression(
@@ -54,7 +54,7 @@ statements.push(
 );
 
 out_file.write(generate(t.program(statements)).code + '\n');
-out_file.end(function(err: Boolean) {
+out_file.end(function(err: boolean) {
   if (err) {
     throw err;
   }

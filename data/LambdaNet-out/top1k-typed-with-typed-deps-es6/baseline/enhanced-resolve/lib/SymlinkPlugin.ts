@@ -27,30 +27,30 @@ export default class SymlinkPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		const fs: Function = resolver.fileSystem;
 		resolver
 			.getHook(this.source)
-			.tapAsync("SymlinkPlugin", (request: Object, resolveContext: Object, callback: Function) => {
+			.tapAsync("SymlinkPlugin", (request: object, resolveContext: object, callback: Function) => {
 				if (request.ignoreSymlinks) return callback();
-				const pathsResult: Object = getPaths(request.path);
-				const pathSegments: Array = pathsResult.segments;
+				const pathsResult: object = getPaths(request.path);
+				const pathSegments: any[] = pathsResult.segments;
 				const paths: Function = pathsResult.paths;
 
-				let containsSymlink: Boolean = false;
-				let idx: Number = -1;
+				let containsSymlink: boolean = false;
+				let idx: number = -1;
 				forEachBail(
 					paths,
-					(path: String, callback: Function) => {
+					(path: string, callback: Function) => {
 						idx++;
 						if (resolveContext.fileDependencies)
 							resolveContext.fileDependencies.add(path);
-						fs.readlink(path, (err: Boolean, result: String) => {
+						fs.readlink(path, (err: boolean, result: string) => {
 							if (!err && result) {
 								pathSegments[idx] = result;
 								containsSymlink = true;
 								// Shortcut when absolute symlink found
-								const resultType: Number = getType(result.toString());
+								const resultType: number = getType(result.toString());
 								if (
 									resultType === PathType.AbsoluteWin ||
 									resultType === PathType.AbsolutePosix
@@ -61,16 +61,16 @@ export default class SymlinkPlugin {
 							callback();
 						});
 					},
-					(err: Function, idx: String) => {
+					(err: Function, idx: string) => {
 						if (!containsSymlink) return callback();
-						const resultSegments: Array =
+						const resultSegments: any[] =
 							typeof idx === "number"
 								? pathSegments.slice(0, idx + 1)
 								: pathSegments.slice();
-						const result: Number = resultSegments.reduceRight((a: String, b: String) => {
+						const result: number = resultSegments.reduceRight((a: string, b: string) => {
 							return resolver.join(a, b);
 						});
-						const obj: Object = {
+						const obj: object = {
 							...request,
 							path: result
 						};

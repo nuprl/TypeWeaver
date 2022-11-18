@@ -27,11 +27,11 @@ import isIndex from './.internal/isIndex.js'
  * console.log(pulled)
  * // => ['b', 'd']
  */
-function pullAt(array: Array, ...indexes): Promise {
-  const length: Number = array == null ? 0 : array.length
-  const result: Array = baseAt(array, indexes)
+function pullAt(array: any[], ...indexes): Promise {
+  const length: number = array == null ? 0 : array.length
+  const result: any[] = baseAt(array, indexes)
 
-  basePullAt(array, map(indexes, (index: Number) => isIndex(index, length) ? +index : index).sort(compareAscending))
+  basePullAt(array, map(indexes, (index: number) => isIndex(index, length) ? +index : index).sort(compareAscending))
   return result
 }
 

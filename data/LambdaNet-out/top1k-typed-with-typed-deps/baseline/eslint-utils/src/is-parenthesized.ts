@@ -7,7 +7,7 @@ import { isClosingParenToken, isOpeningParenToken } from "./token-predicate"
  * @param {SourceCode} sourceCode The source code object to get tokens.
  * @returns {Token|null} The left parenthesis of the parent node syntax
  */
-function getParentSyntaxParen(node: Object, sourceCode: PatternMatcher): Array {
+function getParentSyntaxParen(node: object, sourceCode: PatternMatcher): any[] {
     const parent: HTMLElement = node.parent
 
     switch (parent.type) {
@@ -74,11 +74,11 @@ function getParentSyntaxParen(node: Object, sourceCode: PatternMatcher): Array {
  * @returns {boolean} `true` if the node is parenthesized.
  */
 export function isParenthesized(
-    timesOrNode: Number,
-    nodeOrSourceCode: String,
-    optionalSourceCode: String,
-): Boolean {
-    let times: Number, node: Object, sourceCode: PatternMatcher, maybeLeftParen: String, maybeRightParen: Number
+    timesOrNode: number,
+    nodeOrSourceCode: string,
+    optionalSourceCode: string,
+): boolean {
+    let times: number, node: object, sourceCode: PatternMatcher, maybeLeftParen: string, maybeRightParen: number
     if (typeof timesOrNode === "number") {
         times = timesOrNode | 0
         node = nodeOrSourceCode

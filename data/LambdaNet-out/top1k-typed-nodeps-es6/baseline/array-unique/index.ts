@@ -7,16 +7,16 @@
 
 'use strict';
 
-export default function unique(arr: Array): Array {
+export default function unique(arr: any[]): any[] {
   if (!Array.isArray(arr)) {
     throw new TypeError('array-unique expects an array.');
   }
 
-  var len: Number = arr.length;
-  var i: Number = -1;
+  var len: number = arr.length;
+  var i: number = -1;
 
   while (i++ < len) {
-    var j: Number = i + 1;
+    var j: number = i + 1;
 
     for (; j < arr.length; ++j) {
       if (arr[i] === arr[j]) {
@@ -27,13 +27,13 @@ export default function unique(arr: Array): Array {
   return arr;
 };
 
-export const immutable: Function = function uniqueImmutable(arr: Array): Number {
+export const immutable: Function = function uniqueImmutable(arr: any[]): number {
   if (!Array.isArray(arr)) {
     throw new TypeError('array-unique expects an array.');
   }
 
-  var arrLen: Number = arr.length;
-  var newArr: Object = new Array(arrLen);
+  var arrLen: number = arr.length;
+  var newArr: object = new Array(arrLen);
 
   for (var i = 0; i < arrLen; i++) {
     newArr[i] = arr[i];

@@ -2,7 +2,7 @@
 
 import RingBuffer from './ring_buffer';
 
-var Functor: Function = function(session: Object, method: Array) {
+var Functor: Function = function(session: object, method: any[]) {
   this._session = session;
   this._method  = method;
   this._queue   = new RingBuffer(Functor.QUEUE_SIZE);
@@ -12,11 +12,11 @@ var Functor: Function = function(session: Object, method: Array) {
 
 Functor.QUEUE_SIZE = 8;
 
-Functor.prototype.call = function(error: Element, message: String, callback: Object, context: String) {
+Functor.prototype.call = function(error: Element, message: string, callback: object, context: string) {
   if (this._stopped) return;
 
-  var record: Object = { error: error, message: message, callback: callback, context: context, done: false },
-      called: Boolean = false,
+  var record: object = { error: error, message: message, callback: callback, context: context, done: false },
+      called: boolean = false,
       self: HTMLElement   = this;
 
   this._queue.push(record);
@@ -27,7 +27,7 @@ Functor.prototype.call = function(error: Element, message: String, callback: Obj
     return this._flushQueue();
   }
 
-  var handler: Function = function(err: Function, msg: String) {
+  var handler: Function = function(err: Function, msg: string) {
     if (!(called ^ (called = true))) return;
 
     if (err) {
@@ -55,7 +55,7 @@ Functor.prototype._stop = function() {
 };
 
 Functor.prototype._flushQueue = function() {
-  var queue: Array = this._queue, record: Record;
+  var queue: any[] = this._queue, record: Record;
 
   while (queue.length > 0 && queue.peek().done) {
     record = queue.shift();

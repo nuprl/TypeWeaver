@@ -1,6 +1,6 @@
 'use strict';
 
-var isWindows: Boolean = process.platform === 'win32';
+var isWindows: boolean = process.platform === 'win32';
 
 // Regex to split a windows path into into [dir, root, basename, name, ext]
 var splitWindowsRe: RegExp =
@@ -8,17 +8,17 @@ var splitWindowsRe: RegExp =
 
 var win32: HTMLElement = {};
 
-function win32SplitPath(filename: String): Array {
+function win32SplitPath(filename: string): any[] {
   return splitWindowsRe.exec(filename).slice(1);
 }
 
-win32.parse = function(pathString: String) {
+win32.parse = function(pathString: string) {
   if (typeof pathString !== 'string') {
     throw new TypeError(
         "Parameter 'pathString' must be a string, not " + typeof pathString
     );
   }
-  var allParts: Object = win32SplitPath(pathString);
+  var allParts: object = win32SplitPath(pathString);
   if (!allParts || allParts.length !== 5) {
     throw new TypeError("Invalid path '" + pathString + "'");
   }
@@ -40,18 +40,18 @@ var splitPathRe: RegExp =
 var posix: HTMLElement = {};
 
 
-function posixSplitPath(filename: String): Array {
+function posixSplitPath(filename: string): any[] {
   return splitPathRe.exec(filename).slice(1);
 }
 
 
-posix.parse = function(pathString: String) {
+posix.parse = function(pathString: string) {
   if (typeof pathString !== 'string') {
     throw new TypeError(
         "Parameter 'pathString' must be a string, not " + typeof pathString
     );
   }
-  var allParts: Array = posixSplitPath(pathString);
+  var allParts: any[] = posixSplitPath(pathString);
   if (!allParts || allParts.length !== 5) {
     throw new TypeError("Invalid path '" + pathString + "'");
   }

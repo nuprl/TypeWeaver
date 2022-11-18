@@ -14,24 +14,24 @@ import toKey from './toKey.js'
  * @param {Function} [customizer] The function to customize path creation.
  * @returns {Object} Returns `object`.
  */
-function baseSet(object: Object, path: String, value: String, customizer: Function): Array {
+function baseSet(object: object, path: string, value: string, customizer: Function): any[] {
   if (!isObject(object)) {
     return object
   }
   path = castPath(path, object)
 
-  const length: Number = path.length
-  const lastIndex: Number = length - 1
+  const length: number = path.length
+  const lastIndex: number = length - 1
 
-  let index: Number = -1
-  let nested: Object = object
+  let index: number = -1
+  let nested: object = object
 
   while (nested != null && ++index < length) {
-    const key: String = toKey(path[index])
-    let newValue: String = value
+    const key: string = toKey(path[index])
+    let newValue: string = value
 
     if (index != lastIndex) {
-      const objValue: String = nested[key]
+      const objValue: string = nested[key]
       newValue = customizer ? customizer(objValue, key, nested) : undefined
       if (newValue === undefined) {
         newValue = isObject(objValue)

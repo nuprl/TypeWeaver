@@ -12,9 +12,9 @@ import baseSum from './.internal/baseSum.js'
  * sum([4, 2, 8, 6])
  * // => 20
  */
-function sum(array: Array): Number {
+function sum(array: any[]): number {
   return (array != null && array.length)
-    ? baseSum(array, (value: String) => value)
+    ? baseSum(array, (value: string) => value)
     : 0
 }
 

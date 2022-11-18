@@ -21,10 +21,10 @@ export default toIdentifier;
  * @public
  */
 
-function toIdentifier (str: String): String {
+function toIdentifier (str: string): string {
   return str
     .split(' ')
-    .map(function (token: Array) {
+    .map(function (token: any[]) {
       return token.slice(0, 1).toUpperCase() + token.slice(1)
     })
     .join('')

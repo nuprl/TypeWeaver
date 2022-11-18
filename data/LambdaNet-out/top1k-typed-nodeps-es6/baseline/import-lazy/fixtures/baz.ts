@@ -1,2 +1,2 @@
 'use strict';
-export default (ho: String, ge: String) => `baz${ho}${ge}`;
+export default (ho: string, ge: string) => `baz${ho}${ge}`;

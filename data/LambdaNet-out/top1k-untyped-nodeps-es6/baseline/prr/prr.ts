@@ -5,7 +5,7 @@
   * License: MIT
   */
 
-(function (name: String, context: Object, definition: Function) {
+(function (name: string, context: object, definition: Function) {
   if (typeof module != 'undefined' && module.exports)
     module.exports = definition()
   else
@@ -13,18 +13,18 @@
 })('prr', this, function() {
 
   var setProperty: Function = typeof Object.defineProperty == 'function'
-      ? function (obj: Array, key: String, options: Object) {
+      ? function (obj: any[], key: string, options: object) {
           Object.defineProperty(obj, key, options)
           return obj
         }
-      : function (obj: Object, key: String, options: Object) { // < es5
+      : function (obj: object, key: string, options: object) { // < es5
           obj[key] = options.value
           return obj
         }
 
-    , makeOptions: Function = function (value: String, options: Array) {
-        var oo: Boolean = typeof options == 'object'
-          , os: Boolean = !oo && typeof options == 'string'
+    , makeOptions: Function = function (value: string, options: any[]) {
+        var oo: boolean = typeof options == 'object'
+          , os: boolean = !oo && typeof options == 'string'
           , op: Function = function (p: Promise) {
               return oo
                 ? !!options[p]
@@ -41,7 +41,7 @@
         }
       }
 
-    , prr: Function = function (obj: Array, key: Function, value: String, options: Object) {
+    , prr: Function = function (obj: any[], key: Function, value: string, options: object) {
         var k: Function
 
         options = makeOptions(value, options)

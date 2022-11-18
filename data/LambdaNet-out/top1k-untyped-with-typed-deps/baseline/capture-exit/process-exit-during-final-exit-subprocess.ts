@@ -1,7 +1,7 @@
 'use strict';
 
 // capture-exit-onExit.js
-var captureExit: Array = require('.');
+var captureExit: any[] = require('.');
 captureExit.captureExit();
 
 process.on('exit', function() {

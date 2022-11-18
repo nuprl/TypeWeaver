@@ -9,20 +9,20 @@ See the accompanying LICENSE file for terms.
 import randomBytes from 'randombytes';
 
 // Generate an internal UID to make the regexp pattern harder to guess.
-var UID_LENGTH: Number          = 16;
-var UID: String                 = generateUID();
-var PLACE_HOLDER_REGEXP: Object = new RegExp('(\\\\)?"@__(F|R|D|M|S|A|U|I|B|L)-' + UID + '-(\\d+)__@"', 'g');
+var UID_LENGTH: number          = 16;
+var UID: string                 = generateUID();
+var PLACE_HOLDER_REGEXP: object = new RegExp('(\\\\)?"@__(F|R|D|M|S|A|U|I|B|L)-' + UID + '-(\\d+)__@"', 'g');
 
 var IS_NATIVE_CODE_REGEXP: RegExp = /\{\s*\[native code\]\s*\}/g;
 var IS_PURE_FUNCTION: RegExp = /function.*?\(/;
 var IS_ARROW_FUNCTION: RegExp = /.*?=>.*?/;
 var UNSAFE_CHARS_REGEXP: RegExp   = /[<>\/\u2028\u2029]/g;
 
-var RESERVED_SYMBOLS: Array = ['*', 'async'];
+var RESERVED_SYMBOLS: any[] = ['*', 'async'];
 
 // Mapping of unsafe HTML and invalid JavaScript line terminator chars to their
 // Unicode char counterparts which are safe to use in JavaScript strings.
-var ESCAPED_CHARS: Object = {
+var ESCAPED_CHARS: object = {
     '<'     : '\\u003C',
     '>'     : '\\u003E',
     '/'     : '\\u002F',
@@ -30,21 +30,21 @@ var ESCAPED_CHARS: Object = {
     '\u2029': '\\u2029'
 };
 
-function escapeUnsafeChars(unsafeChar: String): Object {
+function escapeUnsafeChars(unsafeChar: string): object {
     return ESCAPED_CHARS[unsafeChar];
 }
 
-function generateUID(): String {
-    var bytes: Object = randomBytes(UID_LENGTH);
-    var result: String = '';
+function generateUID(): string {
+    var bytes: object = randomBytes(UID_LENGTH);
+    var result: string = '';
     for(var i=0; i<UID_LENGTH; ++i) {
         result += bytes[i].toString(16);
     }
     return result;
 }
 
-function deleteFunctions(obj: Object): Void{
-    var functionKeys: Array = [];
+function deleteFunctions(obj: object): Void{
+    var functionKeys: any[] = [];
     for (var key in obj) {
         if (typeof obj[key] === "function") {
             functionKeys.push(key);
@@ -55,7 +55,7 @@ function deleteFunctions(obj: Object): Void{
     }
 }
 
-export default function serialize(obj: String, options: Object): String {
+export default function serialize(obj: string, options: object): string {
     options || (options = {});
 
     // Backwards-compatibility for `space` as the second argument.
@@ -63,20 +63,20 @@ export default function serialize(obj: String, options: Object): String {
         options = {space: options};
     }
 
-    var functions: Array = [];
-    var regexps: Array   = [];
-    var dates: Array     = [];
-    var maps: Array      = [];
-    var sets: Array      = [];
-    var arrays: Array    = [];
-    var undefs: Array    = [];
-    var infinities: Array= [];
-    var bigInts: Array = [];
-    var urls: Array = [];
+    var functions: any[] = [];
+    var regexps: any[]   = [];
+    var dates: any[]     = [];
+    var maps: any[]      = [];
+    var sets: any[]      = [];
+    var arrays: any[]    = [];
+    var undefs: any[]    = [];
+    var infinities: any[]= [];
+    var bigInts: any[] = [];
+    var urls: any[] = [];
 
     // Returns placeholders for functions and regexps (identified by index)
     // which are later replaced by their string representation.
-    function replacer(key: String, value: String): String {
+    function replacer(key: string, value: string): string {
 
         // For nested function
         if(options.ignoreFunction){
@@ -89,8 +89,8 @@ export default function serialize(obj: String, options: Object): String {
 
         // If the value is an object w/ a toJSON method, toJSON is called before
         // the replacer runs, so we use this[key] to get the non-toJSONed value.
-        var origValue: Array = this[key];
-        var type: Number = typeof origValue;
+        var origValue: any[] = this[key];
+        var type: number = typeof origValue;
 
         if (type === 'object') {
             if(origValue instanceof RegExp) {
@@ -110,7 +110,7 @@ export default function serialize(obj: String, options: Object): String {
             }
 
             if(origValue instanceof Array) {
-                var isSparse: Boolean = origValue.filter(function(){return true}).length !== origValue.length;
+                var isSparse: boolean = origValue.filter(function(){return true}).length !== origValue.length;
                 if (isSparse) {
                     return '@__A-' + UID + '-' + (arrays.push(origValue) - 1) + '__@';
                 }
@@ -140,8 +140,8 @@ export default function serialize(obj: String, options: Object): String {
         return value;
     }
 
-    function serializeFunc(fn: HTMLElement): String {
-      var serializedFn: String = fn.toString();
+    function serializeFunc(fn: HTMLElement): string {
+      var serializedFn: string = fn.toString();
       if (IS_NATIVE_CODE_REGEXP.test(serializedFn)) {
           throw new TypeError('Serializing native function: ' + fn.name);
       }
@@ -156,13 +156,13 @@ export default function serialize(obj: String, options: Object): String {
           return serializedFn;
       }
 
-      var argsStartsAt: Number = serializedFn.indexOf('(');
-      var def: Array = serializedFn.substr(0, argsStartsAt)
+      var argsStartsAt: number = serializedFn.indexOf('(');
+      var def: any[] = serializedFn.substr(0, argsStartsAt)
         .trim()
         .split(' ')
         .filter(function(val: Promise) { return val.length > 0 });
 
-      var nonReservedSymbols: Array = def.filter(function(val: String) {
+      var nonReservedSymbols: any[] = def.filter(function(val: string) {
         return RESERVED_SYMBOLS.indexOf(val) === -1
       });
 
@@ -187,7 +187,7 @@ export default function serialize(obj: String, options: Object): String {
         return String(obj);
     }
 
-    var str: String;
+    var str: string;
 
     // Creates a JSON string representation of the value.
     // NOTE: Node 0.12 goes into slow mode with extra JSON.stringify() args.
@@ -217,7 +217,7 @@ export default function serialize(obj: String, options: Object): String {
     // Replaces all occurrences of function, regexp, date, map and set placeholders in the
     // JSON string with their string representations. If the original value can
     // not be found, then `undefined` is used.
-    return str.replace(PLACE_HOLDER_REGEXP, function (match: String, backSlash: Boolean, type: Number, valueIndex: String) {
+    return str.replace(PLACE_HOLDER_REGEXP, function (match: string, backSlash: boolean, type: number, valueIndex: string) {
         // The placeholder may not be preceded by a backslash. This is to prevent
         // replacing things like `"a\"@__R-<UID>-0__@"` and thus outputting
         // invalid JS.
@@ -261,7 +261,7 @@ export default function serialize(obj: String, options: Object): String {
             return "new URL(\"" + urls[valueIndex].toString() + "\")"; 
         }
 
-        var fn: String = functions[valueIndex];
+        var fn: string = functions[valueIndex];
 
         return serializeFunc(fn);
     });

@@ -1,7 +1,7 @@
 // A method for quickly swapping in/out CSS properties to get correct calculations.
-export default function( elem: Object, options: Object, callback: Function ) {
-	var ret: Function, name: String,
-		old: Object = {};
+export default function( elem: object, options: object, callback: Function ) {
+	var ret: Function, name: string,
+		old: object = {};
 
 	// Remember the old values, and insert the new ones
 	for ( name in options ) {

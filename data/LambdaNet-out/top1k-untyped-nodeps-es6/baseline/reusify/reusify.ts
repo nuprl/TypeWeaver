@@ -1,11 +1,11 @@
 'use strict'
 
-function reusify (Constructor: Object): Object {
-  var head: Object = new Constructor()
-  var tail: Object = head
+function reusify (Constructor: object): object {
+  var head: object = new Constructor()
+  var tail: object = head
 
-  function get (): String {
-    var current: String = head
+  function get (): string {
+    var current: string = head
 
     if (current.next) {
       head = current.next
@@ -19,7 +19,7 @@ function reusify (Constructor: Object): Object {
     return current
   }
 
-  function release (obj: String): Void {
+  function release (obj: string): Void {
     tail.next = obj
     tail = obj
   }

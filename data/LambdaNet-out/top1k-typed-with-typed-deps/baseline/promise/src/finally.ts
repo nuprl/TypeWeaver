@@ -1,10 +1,10 @@
 'use strict';
 
-var Promise: Array = require('./core.js');
+var Promise: any[] = require('./core.js');
 
 module.exports = Promise;
 Promise.prototype.finally = function (f: Function) {
-  return this.then(function (value: String) {
+  return this.then(function (value: string) {
     return Promise.resolve(f()).then(function () {
       return value;
     });

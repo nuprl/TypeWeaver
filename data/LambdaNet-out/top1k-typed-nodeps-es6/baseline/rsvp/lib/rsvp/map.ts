@@ -12,7 +12,7 @@ export class MapEnumerator extends Enumerator {
   }
 
   _init(Constructor, input, bool, label, mapFn) {
-    let len: Number = input.length || 0;
+    let len: number = input.length || 0;
     this.length     = len;
     this._remaining = len;
     this._result = new Array(len);
@@ -117,13 +117,13 @@ export class MapEnumerator extends Enumerator {
   `mapFn` on each fulfilled promise or value when they become fulfilled.
    The promise will be rejected if any of the given `promises` become rejected.
 */
-export default function map(promises: String, mapFn: String, label: String): Array {
+export default function map(promises: string, mapFn: string, label: string): any[] {
   if (typeof mapFn !== 'function') {
     return Promise.reject(new TypeError("map expects a function as a second argument"), label);
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Array) {
+    .then(function(promises: any[]) {
       if (!Array.isArray(promises)) {
         throw new TypeError("map must be called with an array");
       }

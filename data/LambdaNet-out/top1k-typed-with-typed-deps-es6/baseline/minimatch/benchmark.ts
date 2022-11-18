@@ -1,8 +1,8 @@
 import m from './minimatch.js';
-var pattern: String = '**/*.js'
+var pattern: string = '**/*.js'
 import expand from 'brace-expansion';
-var files: Array = expand('x/y/z/{1..1000}.js')
-var start: Number = process.hrtime()
+var files: any[] = expand('x/y/z/{1..1000}.js')
+var start: number = process.hrtime()
 
 for (var i = 0; i < 1000; i++) {
   for (var f = 0; f < files.length; f++) {

@@ -6,9 +6,9 @@ import isFunction from 'lodash/isFunction';
 import isObjectLike from 'lodash/isObjectLike';
 
 
-export default function (options: Object) {
+export default function (options: object) {
 
-    var errorText: String = 'Please verify options'; // For better minification because this string is repeating
+    var errorText: string = 'Please verify options'; // For better minification because this string is repeating
 
     if (!isObjectLike(options)) {
         throw new TypeError(errorText);
@@ -22,7 +22,7 @@ export default function (options: Object) {
         throw new TypeError(errorText + '.expose');
     }
 
-    var thenExposed: Boolean = false;
+    var thenExposed: boolean = false;
     for ( var i = 0; i < options.expose.length; i+=1 ) {
         if (options.expose[i] === 'then') {
             thenExposed = true;
@@ -34,22 +34,22 @@ export default function (options: Object) {
     }
 
 
-    var plumbing: Object = core({
+    var plumbing: object = core({
         PromiseImpl: options.PromiseImpl,
         constructorMixin: options.constructorMixin
     });
 
-    return function (requestOptions: String) {
+    return function (requestOptions: string) {
 
         var self: Function = {};
 
         plumbing.init.call(self, requestOptions);
 
-        var request: Array = options.client(requestOptions);
+        var request: any[] = options.client(requestOptions);
 
         for ( var k = 0; k < options.expose.length; k+=1 ) {
 
-            var method: String = options.expose[k];
+            var method: string = options.expose[k];
 
             plumbing[ method === 'promise' ? 'exposePromise' : 'exposePromiseMethod' ](
                 request,

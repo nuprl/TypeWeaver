@@ -1,10 +1,10 @@
 import toType from "./toType.js";
 import isWindow from "../var/isWindow.js";
 
-function isArrayLike( obj: Array ): Boolean {
+function isArrayLike( obj: any[] ): boolean {
 
-	var length: Number = !!obj && obj.length,
-		type: String = toType( obj );
+	var length: number = !!obj && obj.length,
+		type: string = toType( obj );
 
 	if ( typeof obj === "function" || isWindow( obj ) ) {
 		return false;

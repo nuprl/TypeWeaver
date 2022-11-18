@@ -1,6 +1,6 @@
 'use strict';
 
-const isObject: Function = (val: Number) => val !== null && typeof val === 'object' && !Array.isArray(val);
+const isObject: Function = (val: number) => val !== null && typeof val === 'object' && !Array.isArray(val);
 
 /* eslint-disable no-control-regex */
 // this is a modified version of https://github.com/chalk/ansi-regex (MIT License)
@@ -21,13 +21,13 @@ const create: Function = () => {
     keys: {}
   };
 
-  const ansi: Function = (style: Object) => {
-    let open: Number = style.open = `\u001b[${style.codes[0]}m`;
-    let close: Number = style.close = `\u001b[${style.codes[1]}m`;
-    let regex: String = style.regex = new RegExp(`\\u001b\\[${style.codes[1]}m`, 'g');
-    style.wrap = (input: String, newline: Boolean) => {
+  const ansi: Function = (style: object) => {
+    let open: number = style.open = `\u001b[${style.codes[0]}m`;
+    let close: number = style.close = `\u001b[${style.codes[1]}m`;
+    let regex: string = style.regex = new RegExp(`\\u001b\\[${style.codes[1]}m`, 'g');
+    style.wrap = (input: string, newline: boolean) => {
       if (input.includes(close)) input = input.replace(regex, close + open);
-      let output: String = open + input + close;
+      let output: string = open + input + close;
       // see https://github.com/chalk/chalk/pull/92, thanks to the
       // chalk contributors for this fix. However, we've confirmed that
       // this issue is also present in Windows terminals
@@ -40,13 +40,13 @@ const create: Function = () => {
     return typeof style === 'function' ? style(input) : style.wrap(input, newline);
   };
 
-  const style: Function = (input: Number, stack: Array) => {
+  const style: Function = (input: number, stack: any[]) => {
     if (input === '' || input == null) return '';
     if (colors.enabled === false) return input;
     if (colors.visible === false) return '';
-    let str: String = '' + input;
-    let nl: Number = str.includes('\n');
-    let n: Number = stack.length;
+    let str: string = '' + input;
+    let nl: number = str.includes('\n');
+    let n: number = stack.length;
     if (n > 0 && stack.includes('unstyle')) {
       stack = [...new Set(['unstyle', ...stack])].reverse();
     }
@@ -54,9 +54,9 @@ const create: Function = () => {
     return str;
   };
 
-  const define: Function = (name: String, codes: Map, type: String) => {
+  const define: Function = (name: string, codes: Map, type: string) => {
     colors.styles[name] = ansi({ name, codes });
-    let keys: Array = colors.keys[type] || (colors.keys[type] = []);
+    let keys: any[] = colors.keys[type] || (colors.keys[type] = []);
     keys.push(name);
 
     Reflect.defineProperty(colors, name, {
@@ -122,12 +122,12 @@ const create: Function = () => {
   define('bgWhiteBright', [107, 49], 'bgBright');
 
   colors.ansiRegex = ANSI_REGEX;
-  colors.hasColor = colors.hasAnsi = (str: String) => {
+  colors.hasColor = colors.hasAnsi = (str: string) => {
     colors.ansiRegex.lastIndex = 0;
     return typeof str === 'string' && str !== '' && colors.ansiRegex.test(str);
   };
 
-  colors.alias = (name: String, color: String) => {
+  colors.alias = (name: string, color: string) => {
     let fn: Function = typeof color === 'string' ? colors[color] : color;
 
     if (typeof fn !== 'function') {
@@ -155,7 +155,7 @@ const create: Function = () => {
     });
   };
 
-  colors.theme = (custom: Object) => {
+  colors.theme = (custom: object) => {
     if (!isObject(custom)) throw new TypeError('Expected theme to be an object');
     for (let name of Object.keys(custom)) {
       colors.alias(name, custom[name]);
@@ -163,7 +163,7 @@ const create: Function = () => {
     return colors;
   };
 
-  colors.alias('unstyle', (str: String) => {
+  colors.alias('unstyle', (str: string) => {
     if (typeof str === 'string' && str !== '') {
       colors.ansiRegex.lastIndex = 0;
       return str.replace(colors.ansiRegex, '');
@@ -171,7 +171,7 @@ const create: Function = () => {
     return '';
   });
 
-  colors.alias('noop', (str: String) => str);
+  colors.alias('noop', (str: string) => str);
   colors.none = colors.clear = colors.noop;
 
   colors.stripColor = colors.unstyle;

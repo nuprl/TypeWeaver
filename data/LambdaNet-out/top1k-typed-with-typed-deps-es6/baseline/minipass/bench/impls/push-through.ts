@@ -27,7 +27,7 @@ class PushThrough {
   once (ev, fn) {
     const f: Function = () => {
       fn()
-      this[`on${ev}`] = this[`on${ev}`].filter((fn: Number) => fn !== f)
+      this[`on${ev}`] = this[`on${ev}`].filter((fn: number) => fn !== f)
     }
     this.on(ev, f)
   }
@@ -54,11 +54,11 @@ class PushThrough {
   resume () {
     this.paused = false
     if (this.buffer.length) {
-      const b: Array = this.buffer.slice(0)
+      const b: any[] = this.buffer.slice(0)
       this.buffer.length = 0
       for (const c of b) {
         for (const dest of this.dests) {
-          const ret: Number = dest.write(c)
+          const ret: number = dest.write(c)
           this.paused = this.paused || ret === false
         }
       }
@@ -85,7 +85,7 @@ class PushThrough {
       return false
     }
     for (const dest of this.dests) {
-      const ret: Number = dest.write(chunk)
+      const ret: number = dest.write(chunk)
       this.paused = this.paused || ret === false
     }
     return !this.paused

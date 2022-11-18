@@ -5,14 +5,14 @@
 
 "use strict";
 
-export default function getInnerRequest(resolver: Resolver, request: Error): Array {
+export default function getInnerRequest(resolver: Resolver, request: Error): any[] {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&
 		request.__innerRequest_relativePath === request.relativePath
 	)
 		return request.__innerRequest;
-	let innerRequest: String;
+	let innerRequest: string;
 	if (request.request) {
 		innerRequest = request.request;
 		if (/^\.\.?(?:\/|$)/.test(innerRequest) && request.relativePath) {

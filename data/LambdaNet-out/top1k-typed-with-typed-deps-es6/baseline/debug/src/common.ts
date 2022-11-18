@@ -4,7 +4,7 @@
  * implementations of `debug()`.
  */
 
-function setup(env: Object): Element {
+function setup(env: object): Element {
 	createDebug.debug = createDebug;
 	createDebug.default = createDebug;
 	createDebug.coerce = coerce;
@@ -14,7 +14,7 @@ function setup(env: Object): Element {
 	createDebug.humanize = require('ms');
 	createDebug.destroy = destroy;
 
-	Object.keys(env).forEach((key: String) => {
+	Object.keys(env).forEach((key: string) => {
 		createDebug[key] = env[key];
 	});
 
@@ -38,8 +38,8 @@ function setup(env: Object): Element {
 	* @return {Number|String} An ANSI color code for the given namespace
 	* @api private
 	*/
-	function selectColor(namespace: String): String {
-		let hash: Number = 0;
+	function selectColor(namespace: string): string {
+		let hash: number = 0;
 
 		for (let i = 0; i < namespace.length; i++) {
 			hash = ((hash << 5) - hash) + namespace.charCodeAt(i);
@@ -57,11 +57,11 @@ function setup(env: Object): Element {
 	* @return {Function}
 	* @api public
 	*/
-	function createDebug(namespace: String): String {
-		let prevTime: Number;
-		let enableOverride: String = null;
-		let namespacesCache: String;
-		let enabledCache: Number;
+	function createDebug(namespace: string): string {
+		let prevTime: number;
+		let enableOverride: string = null;
+		let namespacesCache: string;
+		let enabledCache: number;
 
 		function debug(...args): Void {
 			// Disabled?
@@ -72,8 +72,8 @@ function setup(env: Object): Element {
 			const self: HTMLElement = debug;
 
 			// Set `diff` timestamp
-			const curr: Number = Number(new Date());
-			const ms: Number = curr - (prevTime || curr);
+			const curr: number = Number(new Date());
+			const ms: number = curr - (prevTime || curr);
 			self.diff = ms;
 			self.prev = prevTime;
 			self.curr = curr;
@@ -87,8 +87,8 @@ function setup(env: Object): Element {
 			}
 
 			// Apply any `formatters` transformations
-			let index: Number = 0;
-			args[0] = args[0].replace(/%([a-zA-Z%])/g, (match: Number, format: String) => {
+			let index: number = 0;
+			args[0] = args[0].replace(/%([a-zA-Z%])/g, (match: number, format: string) => {
 				// If we encounter an escaped % then don't increase the array index
 				if (match === '%%') {
 					return '%';
@@ -96,7 +96,7 @@ function setup(env: Object): Element {
 				index++;
 				const formatter: Function = createDebug.formatters[format];
 				if (typeof formatter === 'function') {
-					const val: String = args[index];
+					const val: string = args[index];
 					match = formatter.call(self, val);
 
 					// Now we need to remove `args[index]` since it's inlined in the `format`
@@ -109,7 +109,7 @@ function setup(env: Object): Element {
 			// Apply env-specific formatting (colors, etc.)
 			createDebug.formatArgs.call(self, args);
 
-			const logFn: Object = self.log || createDebug.log;
+			const logFn: object = self.log || createDebug.log;
 			logFn.apply(self, args);
 		}
 
@@ -133,7 +133,7 @@ function setup(env: Object): Element {
 
 				return enabledCache;
 			},
-			set: (v: String) => {
+			set: (v: string) => {
 				enableOverride = v;
 			}
 		});
@@ -146,8 +146,8 @@ function setup(env: Object): Element {
 		return debug;
 	}
 
-	function extend(namespace: String, delimiter: String): HTMLElement {
-		const newDebug: Object = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
+	function extend(namespace: string, delimiter: string): HTMLElement {
+		const newDebug: object = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
 		newDebug.log = this.log;
 		return newDebug;
 	}
@@ -159,16 +159,16 @@ function setup(env: Object): Element {
 	* @param {String} namespaces
 	* @api public
 	*/
-	function enable(namespaces: String): Void {
+	function enable(namespaces: string): Void {
 		createDebug.save(namespaces);
 		createDebug.namespaces = namespaces;
 
 		createDebug.names = [];
 		createDebug.skips = [];
 
-		let i: Number;
-		const split: Array = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
-		const len: Number = split.length;
+		let i: number;
+		const split: any[] = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
+		const len: number = split.length;
 
 		for (i = 0; i < len; i++) {
 			if (!split[i]) {
@@ -192,10 +192,10 @@ function setup(env: Object): Element {
 	* @return {String} namespaces
 	* @api public
 	*/
-	function disable(): String {
-		const namespaces: String = [
+	function disable(): string {
+		const namespaces: string = [
 			...createDebug.names.map(toNamespace),
-			...createDebug.skips.map(toNamespace).map((namespace: String) => '-' + namespace)
+			...createDebug.skips.map(toNamespace).map((namespace: string) => '-' + namespace)
 		].join(',');
 		createDebug.enable('');
 		return namespaces;
@@ -208,13 +208,13 @@ function setup(env: Object): Element {
 	* @return {Boolean}
 	* @api public
 	*/
-	function enabled(name: String): Boolean {
+	function enabled(name: string): boolean {
 		if (name[name.length - 1] === '*') {
 			return true;
 		}
 
-		let i: Number;
-		let len: String;
+		let i: number;
+		let len: string;
 
 		for (i = 0, len = createDebug.skips.length; i < len; i++) {
 			if (createDebug.skips[i].test(name)) {
@@ -238,7 +238,7 @@ function setup(env: Object): Element {
 	* @return {String} namespace
 	* @api private
 	*/
-	function toNamespace(regexp: String): String {
+	function toNamespace(regexp: string): string {
 		return regexp.toString()
 			.substring(2, regexp.toString().length - 2)
 			.replace(/\.\*\?$/, '*');
@@ -251,7 +251,7 @@ function setup(env: Object): Element {
 	* @return {Mixed}
 	* @api private
 	*/
-	function coerce(val: Object): Array {
+	function coerce(val: object): any[] {
 		if (val instanceof Error) {
 			return val.stack || val.message;
 		}

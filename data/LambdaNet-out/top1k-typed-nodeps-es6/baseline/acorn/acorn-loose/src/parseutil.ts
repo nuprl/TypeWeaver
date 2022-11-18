@@ -1,3 +1,3 @@
-export const dummyValue: String = "✖"
+export const dummyValue: string = "✖"
 
-export function isDummy(node: Node): Boolean { return node.name === dummyValue }
+export function isDummy(node: Node): boolean { return node.name === dummyValue }

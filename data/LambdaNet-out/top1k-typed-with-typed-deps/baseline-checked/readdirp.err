@@ -1,85 +1,59 @@
 examples/bench.ts(7,29): error TS2304: Cannot find name 'Void'.
-examples/bench.ts(8,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/bench.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'read'.
-examples/bench.ts(15,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/bench.ts(21,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/bench.ts(23,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/bench.ts(23,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/bench.ts(25,16): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-examples/bench.ts(28,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-examples/bench.ts(30,10): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-examples/bench.ts(32,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/grep.ts(8,13): error TS2339: Property 'through' does not exist on type 'String'.
-examples/grep.ts(10,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/bench.ts(25,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+examples/bench.ts(30,10): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+examples/grep.ts(8,13): error TS2339: Property 'through' does not exist on type 'string'.
 examples/grep.ts(13,28): error TS2339: Property 'fullPath' does not exist on type 'Function'.
-examples/grep.ts(17,16): error TS2339: Property 'mapSync' does not exist on type 'String'.
-examples/grep.ts(18,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-examples/grep.ts(19,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-examples/grep.ts(22,16): error TS2339: Property 'through' does not exist on type 'String'.
-examples/grep.ts(28,24): error TS2339: Property 'emit' does not exist on type 'Object'.
-examples/grep.ts(40,12): error TS2339: Property 'mapSync' does not exist on type 'String'.
+examples/grep.ts(17,16): error TS2339: Property 'mapSync' does not exist on type 'string'.
+examples/grep.ts(22,16): error TS2339: Property 'through' does not exist on type 'string'.
+examples/grep.ts(28,24): error TS2339: Property 'emit' does not exist on type 'object'.
+examples/grep.ts(40,12): error TS2339: Property 'mapSync' does not exist on type 'string'.
 examples/grep.ts(42,23): error TS2339: Property 'file' does not exist on type 'HTMLElement'.
 examples/grep.ts(42,43): error TS2339: Property 'lines' does not exist on type 'HTMLElement'.
 examples/list.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'read'.
-examples/list.ts(8,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/list.ts(12,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-examples/list.ts(19,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(8,40): error TS2339: Property 'readdir' does not exist on type 'String'.
-index.ts(9,35): error TS2339: Property 'stat' does not exist on type 'String'.
-index.ts(10,38): error TS2339: Property 'lstat' does not exist on type 'String'.
-index.ts(11,41): error TS2339: Property 'realpath' does not exist on type 'String'.
-index.ts(23,7): error TS2739: Type 'Set<string | String>' is missing the following properties from type 'Error': name, message
-index.ts(28,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(8,40): error TS2339: Property 'readdir' does not exist on type 'string'.
+index.ts(9,35): error TS2339: Property 'stat' does not exist on type 'string'.
+index.ts(10,38): error TS2339: Property 'lstat' does not exist on type 'string'.
+index.ts(11,41): error TS2339: Property 'realpath' does not exist on type 'string'.
+index.ts(23,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 index.ts(30,74): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(30,84): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(31,69): error TS2345: Argument of type '(n: Number) => number' is not assignable to parameter of type '(value: string, index: number, array: string[]) => number'.
+index.ts(31,69): error TS2345: Argument of type '(n: number) => number' is not assignable to parameter of type '(value: string, index: number, array: string[]) => number'.
   Types of parameters 'n' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'Number'.
-index.ts(31,100): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-index.ts(34,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(40,38): error TS2339: Property 'basename' does not exist on type 'Object'.
-index.ts(44,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(49,67): error TS2339: Property 'basename' does not exist on type 'Object'.
+    Type 'string' is not assignable to type 'number'.
+index.ts(31,100): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(39,31): error TS2339: Property 'trim' does not exist on type 'never'.
+index.ts(40,38): error TS2339: Property 'basename' does not exist on type 'object'.
+index.ts(49,67): error TS2339: Property 'basename' does not exist on type 'object'.
 index.ts(72,30): error TS2339: Property 'highWaterMark' does not exist on type '{}'.
-index.ts(75,13): error TS2339: Property 'root' does not exist on type 'Object'.
-index.ts(75,19): error TS2339: Property 'type' does not exist on type 'Object'.
-index.ts(77,45): error TS2339: Property 'fileFilter' does not exist on type 'Object'.
-index.ts(78,50): error TS2339: Property 'directoryFilter' does not exist on type 'Object'.
-index.ts(80,11): error TS2322: Type 'Function | String' is not assignable to type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-index.ts(80,39): error TS2339: Property 'lstat' does not exist on type 'Object'.
-index.ts(88,27): error TS2339: Property 'depth' does not exist on type 'Object'.
-index.ts(92,26): error TS2339: Property 'resolve' does not exist on type 'String'.
-index.ts(93,48): error TS2339: Property 'alwaysStat' does not exist on type 'Object'.
-index.ts(112,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(112,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(116,19): error TS2322: Type 'void | "file" | "directory"' is not assignable to type 'String'.
-  Type 'void' is not assignable to type 'String'.
-index.ts(134,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(151,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(164,40): error TS2339: Property 'resolve' does not exist on type 'String'.
-index.ts(164,56): error TS2339: Property 'join' does not exist on type 'String'.
-index.ts(165,31): error TS2339: Property 'relative' does not exist on type 'String'.
-index.ts(188,15): error TS2339: Property 'isFile' does not exist on type 'String'.
-index.ts(191,15): error TS2339: Property 'isDirectory' does not exist on type 'String'.
-index.ts(194,24): error TS2339: Property 'isSymbolicLink' does not exist on type 'String'.
-index.ts(199,32): error TS2339: Property 'isFile' does not exist on type 'String'.
-index.ts(202,32): error TS2339: Property 'isDirectory' does not exist on type 'String'.
-index.ts(204,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(204,61): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(204,81): error TS2339: Property 'sep' does not exist on type 'String'.
+index.ts(75,13): error TS2339: Property 'root' does not exist on type '{}'.
+index.ts(75,19): error TS2339: Property 'type' does not exist on type '{}'.
+index.ts(77,45): error TS2339: Property 'fileFilter' does not exist on type 'object'.
+index.ts(78,50): error TS2339: Property 'directoryFilter' does not exist on type 'object'.
+index.ts(80,11): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+index.ts(80,39): error TS2339: Property 'lstat' does not exist on type 'object'.
+index.ts(88,27): error TS2339: Property 'depth' does not exist on type 'object'.
+index.ts(92,26): error TS2339: Property 'resolve' does not exist on type 'string'.
+index.ts(93,35): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+index.ts(93,48): error TS2339: Property 'alwaysStat' does not exist on type 'object'.
+index.ts(116,19): error TS2322: Type 'void | "file" | "directory"' is not assignable to type 'string'.
+  Type 'void' is not assignable to type 'string'.
+index.ts(164,40): error TS2339: Property 'resolve' does not exist on type 'string'.
+index.ts(164,56): error TS2339: Property 'join' does not exist on type 'string'.
+index.ts(165,31): error TS2339: Property 'relative' does not exist on type 'string'.
+index.ts(188,15): error TS2339: Property 'isFile' does not exist on type 'string'.
+index.ts(191,15): error TS2339: Property 'isDirectory' does not exist on type 'string'.
+index.ts(194,24): error TS2339: Property 'isSymbolicLink' does not exist on type 'string'.
+index.ts(199,32): error TS2339: Property 'isFile' does not exist on type 'string'.
+index.ts(202,32): error TS2339: Property 'isDirectory' does not exist on type 'string'.
+index.ts(204,81): error TS2339: Property 'sep' does not exist on type 'string'.
 index.ts(208,28): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(220,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(243,30): error TS2339: Property 'entryType' does not exist on type 'Object'.
-index.ts(243,51): error TS2339: Property 'type' does not exist on type 'Object'.
-index.ts(245,21): error TS2339: Property 'type' does not exist on type 'Object'.
-index.ts(254,11): error TS2339: Property 'root' does not exist on type 'Object'.
-index.ts(258,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(260,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(222,53): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.
+index.ts(243,30): error TS2339: Property 'entryType' does not exist on type 'object'.
+index.ts(243,51): error TS2339: Property 'type' does not exist on type 'object'.
+index.ts(245,21): error TS2339: Property 'type' does not exist on type 'object'.
+index.ts(254,11): error TS2339: Property 'root' does not exist on type 'object'.
 index.ts(268,10): error TS2339: Property 'promise' does not exist on type 'Function'.
 index.ts(269,10): error TS2339: Property 'ReaddirpStream' does not exist on type 'Function'.
 index.ts(270,10): error TS2339: Property 'default' does not exist on type 'Function'.

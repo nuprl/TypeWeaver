@@ -1,9 +1,5 @@
-implementation.ts(9,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(11,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfill.ts(6,2): error TS2322: Type 'String | { <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'String'.
-  Type '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'String'.
-shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'String' have no overlap.
-shim.ts(13,2): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
+polyfill.ts(6,2): error TS2322: Type 'string | { <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'string'.
+  Type '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'string'.
+shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'string' have no overlap.
+shim.ts(13,2): error TS2322: Type 'string' is not assignable to type 'boolean'.
 

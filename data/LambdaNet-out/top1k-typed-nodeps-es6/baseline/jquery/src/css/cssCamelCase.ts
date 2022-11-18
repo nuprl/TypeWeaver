@@ -7,7 +7,7 @@ var rmsPrefix: RegExp = /^-ms-/;
 // Used by the css & effects modules.
 // Support: IE <=9 - 11+
 // Microsoft forgot to hump their vendor prefix (trac-9572)
-function cssCamelCase( string: String ): Array {
+function cssCamelCase( string: string ): any[] {
 	return camelCase( string.replace( rmsPrefix, "ms-" ) );
 }
 

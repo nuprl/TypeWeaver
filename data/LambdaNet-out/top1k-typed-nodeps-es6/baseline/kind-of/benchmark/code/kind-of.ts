@@ -1,6 +1,6 @@
 import typeOf from '../..';
 
-export default function(val: String) {
+export default function(val: string) {
   if (val === 'arguments') {
     return typeOf(arguments);
   }

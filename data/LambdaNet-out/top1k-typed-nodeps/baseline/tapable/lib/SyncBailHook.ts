@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const Hook: Array = require("./Hook");
+const Hook: any[] = require("./Hook");
 const HookCodeFactory: HookCodeFactory = require("./HookCodeFactory");
 
 class SyncBailHookCodeFactory extends HookCodeFactory {
@@ -32,12 +32,12 @@ const TAP_PROMISE: Function = () => {
 	throw new Error("tapPromise is not supported on a SyncBailHook");
 };
 
-const COMPILE: Function = function(options: Object) {
+const COMPILE: Function = function(options: object) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function SyncBailHook(args: Array = [], name: String = undefined): Hook {
+function SyncBailHook(args: any[] = [], name: string = undefined): Hook {
 	const hook: Hook = new Hook(args, name);
 	hook.constructor = SyncBailHook;
 	hook.tapAsync = TAP_ASYNC;

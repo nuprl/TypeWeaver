@@ -31,7 +31,7 @@ import getMatchData from './.internal/getMatchData.js'
  * isMatchWith(object, source, customizer)
  * // => true
  */
-function isMatchWith(object: Object, source: String, customizer: String): Array {
+function isMatchWith(object: object, source: string, customizer: string): any[] {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseIsMatch(object, source, getMatchData(source), customizer)
 }

@@ -6,7 +6,7 @@ import sysPath from 'path';
 import { promisify } from 'util';
 
 const readdir: Function = promisify(fs.readdir);
-const stat: String = promisify(fs.stat);
+const stat: string = promisify(fs.stat);
 const lstat: Function = promisify(fs.lstat);
 const realpath: Function = promisify(fs.realpath);
 
@@ -19,34 +19,34 @@ const realpath: Function = promisify(fs.realpath);
  * @property {String} basename
  */
 
-const RECURSIVE_ERROR_CODE: String = 'READDIRP_RECURSIVE_ERROR';
+const RECURSIVE_ERROR_CODE: string = 'READDIRP_RECURSIVE_ERROR';
 const NORMAL_FLOW_ERRORS: Error = new Set(['ENOENT', 'EPERM', 'EACCES', 'ELOOP', RECURSIVE_ERROR_CODE]);
-const FILE_TYPE: String = 'files';
-const DIR_TYPE: String = 'directories';
-const FILE_DIR_TYPE: String = 'files_directories';
-const EVERYTHING_TYPE: String = 'all';
-const ALL_TYPES: Array = [FILE_TYPE, DIR_TYPE, FILE_DIR_TYPE, EVERYTHING_TYPE];
+const FILE_TYPE: string = 'files';
+const DIR_TYPE: string = 'directories';
+const FILE_DIR_TYPE: string = 'files_directories';
+const EVERYTHING_TYPE: string = 'all';
+const ALL_TYPES: any[] = [FILE_TYPE, DIR_TYPE, FILE_DIR_TYPE, EVERYTHING_TYPE];
 
 const isNormalFlowError: Function = (error: Error) => NORMAL_FLOW_ERRORS.has(error.code);
-const [maj, min] = process.versions.node.split('.').slice(0, 2).map((n: Number) => Number.parseInt(n, 10));
-const wantBigintFsStats: Boolean = process.platform === 'win32' && (maj > 10 || (maj === 10 && min >= 5));
+const [maj, min] = process.versions.node.split('.').slice(0, 2).map((n: number) => Number.parseInt(n, 10));
+const wantBigintFsStats: boolean = process.platform === 'win32' && (maj > 10 || (maj === 10 && min >= 5));
 
-const normalizeFilter: Function = (filter: Array) => {
+const normalizeFilter: Function = (filter: any[]) => {
   if (filter === undefined) return;
   if (typeof filter === 'function') return filter;
 
   if (typeof filter === 'string') {
-    const fl: String = filter.trim();
-    return (entry: Object) => (entry.basename) === fl;
+    const fl: string = filter.trim();
+    return (entry: object) => (entry.basename) === fl;
   }
 
   if (Array.isArray(filter)) {
-    const positive: Array = [];
+    const positive: any[] = [];
     for (const item of filter) {
-      const trimmed: String = item.trim();
+      const trimmed: string = item.trim();
       positive.push(trimmed);
     }
-    return (entry: Object) => positive.some((f: Boolean) => entry.basename === f);
+    return (entry: object) => positive.some((f: boolean) => entry.basename === f);
   }
 };
 
@@ -55,8 +55,8 @@ class ReaddirpStream extends Readable {
     return {
       root: '.',
       /* eslint-disable no-unused-vars */
-      fileFilter: (path: String) => true,
-      directoryFilter: (path: String) => true,
+      fileFilter: (path: string) => true,
+      directoryFilter: (path: string) => true,
       /* eslint-enable no-unused-vars */
       type: FILE_TYPE,
       lstat: false,
@@ -71,7 +71,7 @@ class ReaddirpStream extends Readable {
       autoDestroy: true,
       highWaterMark: options.highWaterMark || 4096
     });
-    const opts: Object = { ...ReaddirpStream.defaultOptions, ...options };
+    const opts: object = { ...ReaddirpStream.defaultOptions, ...options };
     const { root, type } = opts;
 
     this._fileFilter = normalizeFilter(opts.fileFilter);
@@ -80,7 +80,7 @@ class ReaddirpStream extends Readable {
     const statMethod: Function = opts.lstat ? lstat : stat;
     // Use bigint stats if it's windows and stat() supports options (node 10+).
     if (wantBigintFsStats) {
-      this._stat = (path: String) => statMethod(path, { bigint: true });
+      this._stat = (path: string) => statMethod(path, { bigint: true });
     } else {
       this._stat = statMethod;
     }
@@ -109,11 +109,11 @@ class ReaddirpStream extends Readable {
         const { path, depth, files = [] } = this.parent || {};
 
         if (files.length > 0) {
-          const slice: Array = files.splice(0, batch).map((dirent: Array) => this._formatEntry(dirent, path));
+          const slice: any[] = files.splice(0, batch).map((dirent: any[]) => this._formatEntry(dirent, path));
           for (const entry of await Promise.all(slice)) {
             if (this.destroyed) return;
 
-            const entryType: String = await this._getEntryType(entry);
+            const entryType: string = await this._getEntryType(entry);
             if (entryType === 'directory' && this._directoryFilter(entry)) {
               if (depth <= this._maxDepth) {
                 this.parents.push(this._exploreDir(entry.fullPath, depth + 1));
@@ -131,7 +131,7 @@ class ReaddirpStream extends Readable {
             }
           }
         } else {
-          const parent: Array = this.parents.pop();
+          const parent: any[] = this.parents.pop();
           if (!parent) {
             this.push(null);
             break;
@@ -148,7 +148,7 @@ class ReaddirpStream extends Readable {
   }
 
   async _exploreDir(path, depth) {
-    let files: Array;
+    let files: any[];
     try {
       files = await readdir(path, this._rdOptions);
     } catch (error) {
@@ -158,10 +158,10 @@ class ReaddirpStream extends Readable {
   }
 
   async _formatEntry(dirent, path) {
-    let entry: Object;
+    let entry: object;
     try {
-      const basename: String = this._isDirent ? dirent.name : dirent;
-      const fullPath: String = sysPath.resolve(sysPath.join(path, basename));
+      const basename: string = this._isDirent ? dirent.name : dirent;
+      const fullPath: string = sysPath.resolve(sysPath.join(path, basename));
       entry = { path: sysPath.relative(this._root, fullPath), fullPath, basename };
       entry[this._statsProp] = this._isDirent ? dirent : await this._stat(fullPath);
     } catch (err) {
@@ -192,15 +192,15 @@ class ReaddirpStream extends Readable {
       return 'directory';
     }
     if (stats && stats.isSymbolicLink()) {
-      const full: String = entry.fullPath;
+      const full: string = entry.fullPath;
       try {
-        const entryRealPath: String = await realpath(full);
-        const entryRealPathStats: String = await lstat(entryRealPath);
+        const entryRealPath: string = await realpath(full);
+        const entryRealPathStats: string = await lstat(entryRealPath);
         if (entryRealPathStats.isFile()) {
           return 'file';
         }
         if (entryRealPathStats.isDirectory()) {
-          const len: Number = entryRealPath.length;
+          const len: number = entryRealPath.length;
           if (full.startsWith(entryRealPath) && full.substr(len, 1) === sysPath.sep) {
             const recursiveError: Error = new Error(
               `Circular symlink detected: "${full}" points to "${entryRealPath}"`
@@ -217,7 +217,7 @@ class ReaddirpStream extends Readable {
   }
 
   _includeAsFile(entry) {
-    const stats: Array = entry && entry[this._statsProp];
+    const stats: any[] = entry && entry[this._statsProp];
 
     return stats && this._wantsEverything && !stats.isDirectory();
   }
@@ -239,8 +239,8 @@ class ReaddirpStream extends Readable {
  * @param {String} root Root directory
  * @param {ReaddirpArguments=} options Options to specify root (start directory), filters and recursion depth
  */
-const readdirp: Function = (root: String, options: Object = {}) => {
-  let type: String = options.entryType || options.type;
+const readdirp: Function = (root: string, options: object = {}) => {
+  let type: string = options.entryType || options.type;
   if (type === 'both') type = FILE_DIR_TYPE; // backwards-compatibility
   if (type) options.type = type;
   if (!root) {
@@ -255,13 +255,13 @@ const readdirp: Function = (root: String, options: Object = {}) => {
   return new ReaddirpStream(options);
 };
 
-const readdirpPromise: Function = (root: Array, options: Object = {}) => {
+const readdirpPromise: Function = (root: any[], options: object = {}) => {
   return new Promise((resolve: Function, reject: Function) => {
-    const files: Array = [];
+    const files: any[] = [];
     readdirp(root, options)
-      .on('data', (entry: String) => files.push(entry))
+      .on('data', (entry: string) => files.push(entry))
       .on('end', () => resolve(files))
-      .on('error', (error: Object) => reject(error));
+      .on('error', (error: object) => reject(error));
   });
 };
 

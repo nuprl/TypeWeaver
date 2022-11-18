@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp: String = require('gulp');
+var gulp: string = require('gulp');
 var mocha: Function = require('gulp-mocha');
 var istanbul: Function = require('gulp-istanbul');
 var eslint: Function = require('gulp-eslint');

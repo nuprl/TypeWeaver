@@ -1,29 +1,22 @@
 index.ts(17,44): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(36,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(36,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(37,7): error TS2740: Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
-index.ts(37,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
-  Type 'Number' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-index.ts(38,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(41,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(42,20): error TS2339: Property 'get' does not exist on type 'Object'.
+index.ts(37,7): error TS2322: Type 'string' is not assignable to type 'HTMLElement'.
+index.ts(37,49): error TS2345: Argument of type 'number' is not assignable to parameter of type 'HTMLElement'.
+index.ts(42,20): error TS2339: Property 'get' does not exist on type 'object'.
 index.ts(43,17): error TS2339: Property 'getter' does not exist on type 'HTMLElement'.
-index.ts(45,20): error TS2339: Property 'set' does not exist on type 'Object'.
+index.ts(45,20): error TS2339: Property 'set' does not exist on type 'object'.
 index.ts(46,17): error TS2339: Property 'setter' does not exist on type 'HTMLElement'.
-index.ts(49,38): error TS2339: Property 'value' does not exist on type 'Object'.
+index.ts(49,38): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(50,11): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 index.ts(51,19): error TS2339: Property 'method' does not exist on type 'HTMLElement'.
 index.ts(53,19): error TS2339: Property 'getter' does not exist on type 'HTMLElement'.
-index.ts(55,22): error TS2339: Property 'writable' does not exist on type 'Object'.
+index.ts(55,22): error TS2339: Property 'writable' does not exist on type 'object'.
 index.ts(56,19): error TS2339: Property 'setter' does not exist on type 'HTMLElement'.
-index.ts(75,9): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(76,17): error TS2538: Type 'HTMLElement' cannot be used as an index type.
 index.ts(76,42): error TS2538: Type 'HTMLElement' cannot be used as an index type.
 index.ts(107,9): error TS2339: Property '__defineGetter__' does not exist on type 'HTMLElement'.
 index.ts(108,17): error TS2538: Type 'HTMLElement' cannot be used as an index type.
 index.ts(127,9): error TS2339: Property '__defineSetter__' does not exist on type 'HTMLElement'.
 index.ts(128,17): error TS2538: Type 'HTMLElement' cannot be used as an index type.
-index.ts(147,9): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(147,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(149,12): error TS2538: Type 'HTMLElement' cannot be used as an index type.
 index.ts(152,19): error TS2538: Type 'HTMLElement' cannot be used as an index type.
 

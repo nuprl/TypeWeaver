@@ -1,21 +1,21 @@
 'use strict';
-const lazy: Function = (importedModule: Number, importFn: Function, moduleId: Number) =>
+const lazy: Function = (importedModule: number, importFn: Function, moduleId: number) =>
 	importedModule === undefined ? importFn(moduleId) : importedModule;
 
-module.exports = (importFn: String) => {
-	return (moduleId: String) => {
-		let importedModule: String;
+module.exports = (importFn: string) => {
+	return (moduleId: string) => {
+		let importedModule: string;
 
-		const handler: Object = {
-			get: (target: Object, property: String) => {
+		const handler: object = {
+			get: (target: object, property: string) => {
 				importedModule = lazy(importedModule, importFn, moduleId);
 				return Reflect.get(importedModule, property);
 			},
-			apply: (target: Object, thisArgument: String, argumentsList: String) => {
+			apply: (target: object, thisArgument: string, argumentsList: string) => {
 				importedModule = lazy(importedModule, importFn, moduleId);
 				return Reflect.apply(importedModule, thisArgument, argumentsList);
 			},
-			construct: (target: Object, argumentsList: String) => {
+			construct: (target: object, argumentsList: string) => {
 				importedModule = lazy(importedModule, importFn, moduleId);
 				return Reflect.construct(importedModule, argumentsList);
 			}

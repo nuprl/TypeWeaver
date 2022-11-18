@@ -1,11 +1,11 @@
 'use strict';
 
-var utils: Array = require('../utils');
-var common: String = require('../common');
-var shaCommon: Object = require('./common');
+var utils: any[] = require('../utils');
+var common: string = require('../common');
+var shaCommon: object = require('./common');
 var assert: Function = require('minimalistic-assert');
 
-var sum32: Object = utils.sum32;
+var sum32: object = utils.sum32;
 var sum32_4: Function = utils.sum32_4;
 var sum32_5: Function = utils.sum32_5;
 var ch32: Function = shaCommon.ch32;
@@ -17,7 +17,7 @@ var g1_256: Function = shaCommon.g1_256;
 
 var BlockHash: Function = common.BlockHash;
 
-var sha256_K: Array = [
+var sha256_K: any[] = [
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
   0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
   0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3,
@@ -36,7 +36,7 @@ var sha256_K: Array = [
   0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
 ];
 
-function SHA256(): String {
+function SHA256(): string {
   if (!(this instanceof SHA256))
     return new SHA256();
 
@@ -56,27 +56,27 @@ SHA256.outSize = 256;
 SHA256.hmacStrength = 192;
 SHA256.padLength = 64;
 
-SHA256.prototype._update = function _update(msg: Object, start: Number): Void {
-  var W: Array = this.W;
+SHA256.prototype._update = function _update(msg: object, start: number): Void {
+  var W: any[] = this.W;
 
   for (var i = 0; i < 16; i++)
     W[i] = msg[start + i];
   for (; i < W.length; i++)
     W[i] = sum32_4(g1_256(W[i - 2]), W[i - 7], g0_256(W[i - 15]), W[i - 16]);
 
-  var a: String = this.h[0];
-  var b: String = this.h[1];
-  var c: String = this.h[2];
-  var d: String = this.h[3];
-  var e: String = this.h[4];
-  var f: String = this.h[5];
-  var g: String = this.h[6];
-  var h: String = this.h[7];
+  var a: string = this.h[0];
+  var b: string = this.h[1];
+  var c: string = this.h[2];
+  var d: string = this.h[3];
+  var e: string = this.h[4];
+  var f: string = this.h[5];
+  var g: string = this.h[6];
+  var h: string = this.h[7];
 
   assert(this.k.length === W.length);
   for (i = 0; i < W.length; i++) {
-    var T1: String = sum32_5(h, s1_256(e), ch32(e, f, g), this.k[i], W[i]);
-    var T2: String = sum32(s0_256(a), maj32(a, b, c));
+    var T1: string = sum32_5(h, s1_256(e), ch32(e, f, g), this.k[i], W[i]);
+    var T2: string = sum32(s0_256(a), maj32(a, b, c));
     h = g;
     g = f;
     f = e;
@@ -97,7 +97,7 @@ SHA256.prototype._update = function _update(msg: Object, start: Number): Void {
   this.h[7] = sum32(this.h[7], h);
 };
 
-SHA256.prototype._digest = function digest(enc: Number): String {
+SHA256.prototype._digest = function digest(enc: number): string {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

@@ -26,18 +26,18 @@
 
     var estraverse: HTMLElement = require('estraverse');
 
-    function isNode(node: Object): Boolean {
+    function isNode(node: object): boolean {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: String, key: String): Boolean {
+    function isProperty(nodeType: string, key: string): boolean {
         return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
     }
 
-    function Visitor(visitor: String, options: Object): Void {
+    function Visitor(visitor: string, options: object): Void {
         options = options || {};
 
         this.__visitor = visitor ||  this;
@@ -55,8 +55,8 @@
      * When you need to call default visiting operation inside custom visiting
      * operation, you can use it with `this.visitChildren(node)`.
      */
-    Visitor.prototype.visitChildren = function (node: Object) {
-        var type: String, children: Array, i: Number, iz: Function, j: Number, jz: Function, child: Array;
+    Visitor.prototype.visitChildren = function (node: object) {
+        var type: string, children: any[], i: number, iz: Function, j: number, jz: Function, child: any[];
 
         if (node == null) {
             return;
@@ -92,8 +92,8 @@
     };
 
     /* Dispatching node. */
-    Visitor.prototype.visit = function (node: Object) {
-        var type: String;
+    Visitor.prototype.visit = function (node: object) {
+        var type: string;
 
         if (node == null) {
             return;
@@ -109,7 +109,7 @@
 
     exports.version = require('./package.json').version;
     exports.Visitor = Visitor;
-    exports.visit = function (node: Object, visitor: Number, options: Object) {
+    exports.visit = function (node: object, visitor: number, options: object) {
         var v: HTMLElement = new Visitor(visitor, options);
         v.visit(node);
     };

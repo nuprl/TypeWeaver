@@ -11,7 +11,7 @@ export default serial;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function serial(list: Object, iterator: Function, callback: Function): String
+function serial(list: object, iterator: Function, callback: Function): string
 {
   return serialOrdered(list, iterator, null, callback);
 }

@@ -9,17 +9,17 @@ import createMappingsSerializer from './createMappingsSerializer';
 import streamChunks from './streamChunks';
 
 const streamAndGetSourceAndMap: Function = (
-	inputSource: String,
-	options: Object,
+	inputSource: string,
+	options: object,
 	onChunk: Function,
 	onSource: Function,
 	onName: Function
 ) => {
-	let code: String = "";
-	let mappings: String = "";
-	let sources: Array = [];
-	let sourcesContent: Array = [];
-	let names: Array = [];
+	let code: string = "";
+	let mappings: string = "";
+	let sources: any[] = [];
+	let sourcesContent: any[] = [];
+	let names: any[] = [];
 	const addMapping: Function = createMappingsSerializer(
 		Object.assign({}, options, { columns: true })
 	);
@@ -28,13 +28,13 @@ const streamAndGetSourceAndMap: Function = (
 		inputSource,
 		options,
 		(
-			chunk: Number,
-			generatedLine: Number,
-			generatedColumn: String,
-			sourceIndex: String,
+			chunk: number,
+			generatedLine: number,
+			generatedColumn: string,
+			sourceIndex: string,
 			originalLine: OriginalSource,
-			originalColumn: String,
-			nameIndex: String
+			originalColumn: string,
+			nameIndex: string
 		) => {
 			if (chunk !== undefined) code += chunk;
 			mappings += addMapping(
@@ -55,7 +55,7 @@ const streamAndGetSourceAndMap: Function = (
 				nameIndex
 			);
 		},
-		(sourceIndex: String, source: String, sourceContent: String) => {
+		(sourceIndex: string, source: string, sourceContent: string) => {
 			while (sources.length < sourceIndex) {
 				sources.push(null);
 			}
@@ -68,7 +68,7 @@ const streamAndGetSourceAndMap: Function = (
 			}
 			return onSource(sourceIndex, source, sourceContent);
 		},
-		(nameIndex: String, name: String) => {
+		(nameIndex: string, name: string) => {
 			while (names.length < nameIndex) {
 				names.push(null);
 			}
@@ -76,7 +76,7 @@ const streamAndGetSourceAndMap: Function = (
 			return onName(nameIndex, name);
 		}
 	);
-	const resultSource: String = source !== undefined ? source : code;
+	const resultSource: string = source !== undefined ? source : code;
 	return {
 		result: {
 			generatedLine,

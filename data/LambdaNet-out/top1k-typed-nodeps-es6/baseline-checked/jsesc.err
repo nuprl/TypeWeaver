@@ -1,17 +1,13 @@
 Gruntfile.ts(3,8): error TS2339: Property 'initConfig' does not exist on type 'HTMLElement'.
 Gruntfile.ts(17,8): error TS2339: Property 'loadNpmTasks' does not exist on type 'HTMLElement'.
 Gruntfile.ts(19,8): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
-jsesc.ts(18,15): error TS2538: Type 'String' cannot be used as an index type.
-jsesc.ts(23,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-jsesc.ts(26,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 jsesc.ts(36,42): error TS2554: Expected 0 arguments, but got 1.
-jsesc.ts(89,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 jsesc.ts(92,13): error TS2339: Property 'indentLevel' does not exist on type 'HTMLElement'.
 jsesc.ts(93,20): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
 jsesc.ts(93,42): error TS2339: Property 'indentLevel' does not exist on type 'HTMLElement'.
 jsesc.ts(112,43): error TS2339: Property 'json' does not exist on type 'HTMLElement'.
-jsesc.ts(114,12): error TS2339: Property 'quotes' does not exist on type 'Object'.
-jsesc.ts(115,12): error TS2339: Property 'wrap' does not exist on type 'Object'.
+jsesc.ts(114,12): error TS2339: Property 'quotes' does not exist on type 'object'.
+jsesc.ts(115,12): error TS2339: Property 'wrap' does not exist on type 'object'.
 jsesc.ts(119,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
 jsesc.ts(120,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
 jsesc.ts(121,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
@@ -28,53 +24,49 @@ jsesc.ts(140,41): error TS2339: Property 'numbers' does not exist on type 'HTMLE
 jsesc.ts(141,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
 jsesc.ts(142,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
 jsesc.ts(143,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
+jsesc.ts(145,46): error TS2339: Property 'toJSON' does not exist on type 'any[]'.
+jsesc.ts(146,23): error TS2339: Property 'toJSON' does not exist on type 'any[]'.
+jsesc.ts(151,17): error TS2339: Property 'size' does not exist on type 'any[]'.
 jsesc.ts(155,13): error TS2339: Property '__inline1__' does not exist on type 'HTMLElement'.
 jsesc.ts(156,13): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
-jsesc.ts(173,4): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+jsesc.ts(161,17): error TS2339: Property 'size' does not exist on type 'any[]'.
+jsesc.ts(173,4): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 jsesc.ts(174,12): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
 jsesc.ts(176,13): error TS2339: Property '__inline1__' does not exist on type 'HTMLElement'.
 jsesc.ts(177,13): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
 jsesc.ts(185,14): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
-jsesc.ts(187,12): error TS2339: Property 'push' does not exist on type 'String'.
-jsesc.ts(196,25): error TS2339: Property 'join' does not exist on type 'String'.
-jsesc.ts(198,34): error TS2339: Property 'join' does not exist on type 'String'.
-jsesc.ts(230,4): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
+jsesc.ts(187,12): error TS2339: Property 'push' does not exist on type 'string'.
+jsesc.ts(196,25): error TS2339: Property 'join' does not exist on type 'string'.
+jsesc.ts(198,34): error TS2339: Property 'join' does not exist on type 'string'.
+jsesc.ts(209,49): error TS2554: Expected 0 arguments, but got 1.
+jsesc.ts(216,37): error TS2554: Expected 0 arguments, but got 1.
+jsesc.ts(219,37): error TS2554: Expected 0 arguments, but got 1.
+jsesc.ts(230,4): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 jsesc.ts(231,12): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
-jsesc.ts(235,12): error TS2339: Property 'push' does not exist on type 'String'.
-jsesc.ts(245,34): error TS2339: Property 'join' does not exist on type 'String'.
-jsesc.ts(250,8): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+jsesc.ts(235,12): error TS2339: Property 'push' does not exist on type 'string'.
+jsesc.ts(245,34): error TS2339: Property 'join' does not exist on type 'string'.
+jsesc.ts(250,8): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 jsesc.ts(250,32): error TS2339: Property 'escapeEverything' does not exist on type 'HTMLElement'.
+jsesc.ts(251,20): error TS2339: Property 'replace' does not exist on type 'any[]'.
 jsesc.ts(253,16): error TS2339: Property 'minimal' does not exist on type 'HTMLElement'.
 jsesc.ts(256,16): error TS2339: Property 'es6' does not exist on type 'HTMLElement'.
-jsesc.ts(258,11): error TS2322: Type 'number' is not assignable to type 'String'.
-jsesc.ts(258,31): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-jsesc.ts(258,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-jsesc.ts(272,35): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-jsesc.ts(278,8): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+jsesc.ts(258,11): error TS2322: Type 'number' is not assignable to type 'string'.
+jsesc.ts(272,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+jsesc.ts(278,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 jsesc.ts(278,38): error TS2339: Property 'escapeEverything' does not exist on type 'HTMLElement'.
-jsesc.ts(284,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-jsesc.ts(286,25): error TS2538: Type 'String' cannot be used as an index type.
 jsesc.ts(289,15): error TS2339: Property 'minimal' does not exist on type 'HTMLElement'.
-jsesc.ts(289,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 jsesc.ts(304,14): error TS2339: Property 'isScriptContext' does not exist on type 'HTMLElement'.
 jsesc.ts(310,14): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
-jsesc.ts(311,12): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 jsesc.ts(316,7): error TS2339: Property 'version' does not exist on type 'Function'.
-src/data.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/data.ts(12,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/jsesc.ts(18,15): error TS2538: Type 'String' cannot be used as an index type.
-src/jsesc.ts(23,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/jsesc.ts(26,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/data.ts(5,7): error TS2740: Type 'regenerate' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+src/data.ts(12,7): error TS2322: Type 'regenerate' is not assignable to type 'any[]'.
 src/jsesc.ts(36,42): error TS2554: Expected 0 arguments, but got 1.
-src/jsesc.ts(89,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/jsesc.ts(92,13): error TS2339: Property 'indentLevel' does not exist on type 'HTMLElement'.
 src/jsesc.ts(93,20): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
 src/jsesc.ts(93,42): error TS2339: Property 'indentLevel' does not exist on type 'HTMLElement'.
 src/jsesc.ts(112,43): error TS2339: Property 'json' does not exist on type 'HTMLElement'.
-src/jsesc.ts(114,12): error TS2339: Property 'quotes' does not exist on type 'Object'.
-src/jsesc.ts(115,12): error TS2339: Property 'wrap' does not exist on type 'Object'.
+src/jsesc.ts(114,12): error TS2339: Property 'quotes' does not exist on type 'object'.
+src/jsesc.ts(115,12): error TS2339: Property 'wrap' does not exist on type 'object'.
 src/jsesc.ts(119,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
 src/jsesc.ts(120,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
 src/jsesc.ts(121,11): error TS2339: Property 'quotes' does not exist on type 'HTMLElement'.
@@ -91,38 +83,38 @@ src/jsesc.ts(140,41): error TS2339: Property 'numbers' does not exist on type 'H
 src/jsesc.ts(141,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
 src/jsesc.ts(142,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
 src/jsesc.ts(143,41): error TS2339: Property 'numbers' does not exist on type 'HTMLElement'.
+src/jsesc.ts(145,46): error TS2339: Property 'toJSON' does not exist on type 'any[]'.
+src/jsesc.ts(146,23): error TS2339: Property 'toJSON' does not exist on type 'any[]'.
+src/jsesc.ts(151,17): error TS2339: Property 'size' does not exist on type 'any[]'.
 src/jsesc.ts(155,13): error TS2339: Property '__inline1__' does not exist on type 'HTMLElement'.
 src/jsesc.ts(156,13): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
-src/jsesc.ts(173,4): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
+src/jsesc.ts(161,17): error TS2339: Property 'size' does not exist on type 'any[]'.
+src/jsesc.ts(173,4): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 src/jsesc.ts(174,12): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
 src/jsesc.ts(176,13): error TS2339: Property '__inline1__' does not exist on type 'HTMLElement'.
 src/jsesc.ts(177,13): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
 src/jsesc.ts(185,14): error TS2339: Property '__inline2__' does not exist on type 'HTMLElement'.
-src/jsesc.ts(187,12): error TS2339: Property 'push' does not exist on type 'String'.
-src/jsesc.ts(196,25): error TS2339: Property 'join' does not exist on type 'String'.
-src/jsesc.ts(198,34): error TS2339: Property 'join' does not exist on type 'String'.
-src/jsesc.ts(230,4): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
+src/jsesc.ts(187,12): error TS2339: Property 'push' does not exist on type 'string'.
+src/jsesc.ts(196,25): error TS2339: Property 'join' does not exist on type 'string'.
+src/jsesc.ts(198,34): error TS2339: Property 'join' does not exist on type 'string'.
+src/jsesc.ts(209,49): error TS2554: Expected 0 arguments, but got 1.
+src/jsesc.ts(216,37): error TS2554: Expected 0 arguments, but got 1.
+src/jsesc.ts(219,37): error TS2554: Expected 0 arguments, but got 1.
+src/jsesc.ts(230,4): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 src/jsesc.ts(231,12): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
-src/jsesc.ts(235,12): error TS2339: Property 'push' does not exist on type 'String'.
-src/jsesc.ts(245,34): error TS2339: Property 'join' does not exist on type 'String'.
-src/jsesc.ts(250,8): error TS2322: Type 'RegExp' is not assignable to type 'String'.
+src/jsesc.ts(235,12): error TS2339: Property 'push' does not exist on type 'string'.
+src/jsesc.ts(245,34): error TS2339: Property 'join' does not exist on type 'string'.
+src/jsesc.ts(250,8): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 src/jsesc.ts(250,32): error TS2339: Property 'escapeEverything' does not exist on type 'HTMLElement'.
+src/jsesc.ts(251,20): error TS2339: Property 'replace' does not exist on type 'any[]'.
 src/jsesc.ts(253,16): error TS2339: Property 'minimal' does not exist on type 'HTMLElement'.
 src/jsesc.ts(256,16): error TS2339: Property 'es6' does not exist on type 'HTMLElement'.
-src/jsesc.ts(258,11): error TS2322: Type 'number' is not assignable to type 'String'.
-src/jsesc.ts(258,31): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-src/jsesc.ts(258,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/jsesc.ts(272,35): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-src/jsesc.ts(278,8): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+src/jsesc.ts(258,11): error TS2322: Type 'number' is not assignable to type 'string'.
+src/jsesc.ts(272,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+src/jsesc.ts(278,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 src/jsesc.ts(278,38): error TS2339: Property 'escapeEverything' does not exist on type 'HTMLElement'.
-src/jsesc.ts(284,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/jsesc.ts(286,25): error TS2538: Type 'String' cannot be used as an index type.
 src/jsesc.ts(289,15): error TS2339: Property 'minimal' does not exist on type 'HTMLElement'.
-src/jsesc.ts(289,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/jsesc.ts(304,14): error TS2339: Property 'isScriptContext' does not exist on type 'HTMLElement'.
 src/jsesc.ts(310,14): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
-src/jsesc.ts(311,12): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 src/jsesc.ts(316,7): error TS2339: Property 'version' does not exist on type 'Function'.
 

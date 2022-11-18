@@ -8,7 +8,7 @@ import shim from './shim';
 
 var polyfill: Function = callBind.apply(getPolyfill());
 // eslint-disable-next-line no-unused-vars
-var bound: Function = function assign(target: Object, source1: Function): String {
+var bound: Function = function assign(target: object, source1: Function): string {
 	return polyfill(Object, arguments);
 };
 

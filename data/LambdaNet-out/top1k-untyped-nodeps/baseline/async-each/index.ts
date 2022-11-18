@@ -1,19 +1,19 @@
 // async-each MIT license (by Paul Miller from https://paulmillr.com).
-(function(globals: Object) {
+(function(globals: object) {
   'use strict';
-  var each: Function = function(items: Array, next: Function, callback: Function) {
+  var each: Function = function(items: any[], next: Function, callback: Function) {
     if (!Array.isArray(items)) throw new TypeError('each() expects array as first argument');
     if (typeof next !== 'function') throw new TypeError('each() expects function as second argument');
     if (typeof callback !== 'function') callback = Function.prototype; // no-op
 
     if (items.length === 0) return callback(undefined, items);
 
-    var transformed: Object = new Array(items.length);
-    var count: Number = 0;
-    var returned: Boolean = false;
+    var transformed: object = new Array(items.length);
+    var count: number = 0;
+    var returned: boolean = false;
 
-    items.forEach(function(item: Number, index: Number) {
-      next(item, function(error: Object, transformedItem: String) {
+    items.forEach(function(item: number, index: number) {
+      next(item, function(error: object, transformedItem: string) {
         if (returned) return;
         if (error) {
           returned = true;

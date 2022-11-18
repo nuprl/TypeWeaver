@@ -3,7 +3,7 @@ isTypedArray.strict = isStrictTypedArray
 isTypedArray.loose  = isLooseTypedArray
 
 var toString: Function = Object.prototype.toString
-var names: Object = {
+var names: object = {
     '[object Int8Array]': true
   , '[object Int16Array]': true
   , '[object Int32Array]': true
@@ -15,14 +15,14 @@ var names: Object = {
   , '[object Float64Array]': true
 }
 
-function isTypedArray(arr: String): Boolean {
+function isTypedArray(arr: string): boolean {
   return (
        isStrictTypedArray(arr)
     || isLooseTypedArray(arr)
   )
 }
 
-function isStrictTypedArray(arr: String): Boolean {
+function isStrictTypedArray(arr: string): boolean {
   return (
        arr instanceof Int8Array
     || arr instanceof Int16Array
@@ -36,6 +36,6 @@ function isStrictTypedArray(arr: String): Boolean {
   )
 }
 
-function isLooseTypedArray(arr: String): String {
+function isLooseTypedArray(arr: string): string {
   return names[toString.call(arr)]
 }

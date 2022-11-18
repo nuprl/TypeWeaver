@@ -4,11 +4,11 @@
 */
 "use strict";
 
-const base64VLQ: Array = require("./base64-vlq");
+const base64VLQ: any[] = require("./base64-vlq");
 const getNumberOfLines: Function = require("./helpers").getNumberOfLines;
 const getUnfinishedLine: Function = require("./helpers").getUnfinishedLine;
 
-const LINE_MAPPING: String = ";AAAA";
+const LINE_MAPPING: string = ";AAAA";
 
 class SingleLineNode {
 
@@ -32,9 +32,9 @@ class SingleLineNode {
 	getMappings(mappingsContext) {
 		if(!this.generatedCode)
 			return "";
-		const lines: String = this._numberOfLines;
-		const sourceIdx: Number = mappingsContext.ensureSource(this.source, this.originalSource);
-		let mappings: String = "A"; // generated column 0
+		const lines: string = this._numberOfLines;
+		const sourceIdx: number = mappingsContext.ensureSource(this.source, this.originalSource);
+		let mappings: string = "A"; // generated column 0
 		if(mappingsContext.unfinishedGeneratedLine)
 			mappings = "," + base64VLQ.encode(mappingsContext.unfinishedGeneratedLine);
 		mappings += base64VLQ.encode(sourceIdx - mappingsContext.currentSource); // source index
@@ -42,7 +42,7 @@ class SingleLineNode {
 		mappings += "A"; // original column 0
 		mappingsContext.currentSource = sourceIdx;
 		mappingsContext.currentOriginalLine = this.line;
-		const unfinishedGeneratedLine: Number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
+		const unfinishedGeneratedLine: number = mappingsContext.unfinishedGeneratedLine = getUnfinishedLine(this.generatedCode)
 		mappings += Array(lines).join(LINE_MAPPING);
 		if(unfinishedGeneratedLine === 0) {
 			mappings += ";";
@@ -58,7 +58,7 @@ class SingleLineNode {
 	}
 
 	mapGeneratedCode(fn) {
-		const generatedCode: String = fn(this.generatedCode);
+		const generatedCode: string = fn(this.generatedCode);
 		return new SingleLineNode(generatedCode, this.source, this.originalSource, this.line);
 	}
 
@@ -90,4 +90,4 @@ class SingleLineNode {
 
 module.exports = SingleLineNode;
 
-const SourceNode: String = require("./SourceNode"); // circular dependency
+const SourceNode: string = require("./SourceNode"); // circular dependency

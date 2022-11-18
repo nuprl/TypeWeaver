@@ -10,8 +10,8 @@
  * tail([1, 2, 3])
  * // => [2, 3]
  */
-function tail(array: Array): Array {
-  const length: Boolean = array == null ? 0 : array.length
+function tail(array: any[]): any[] {
+  const length: boolean = array == null ? 0 : array.length
   if (!length) {
     return []
   }

@@ -1,13 +1,13 @@
-const cp: String = require('child_process')
+const cp: string = require('child_process')
 
-const defSpawnOptions: Object = { stdio: 'inherit' }
+const defSpawnOptions: object = { stdio: 'inherit' }
 
 /**
  * @summary Get shell program meta for current platform
  * @private
  * @returns {Object}
  */
-function getShell (): Object {
+function getShell (): object {
   if (process.platform === 'win32') {
     return { cmd: 'cmd', arg: '/C' }
   } else {
@@ -26,7 +26,7 @@ function getShell (): Object {
  * @param {Function} [callback]
  * @returns {ChildProcess}
  */
-function execSh (command: String, options: Function, callback: Function): String {
+function execSh (command: string, options: Function, callback: Function): string {
   if (Array.isArray(command)) {
     command = command.join(';')
   }
@@ -44,10 +44,10 @@ function execSh (command: String, options: Function, callback: Function): String
     callback = callback || function () {}
   }
 
-  let child: Object
-  let stdout: String = ''
-  let stderr: String = ''
-  const shell: Object = getShell()
+  let child: object
+  let stdout: string = ''
+  let stderr: string = ''
+  const shell: object = getShell()
 
   try {
     child = cp.spawn(shell.cmd, [shell.arg, command], options)
@@ -57,18 +57,18 @@ function execSh (command: String, options: Function, callback: Function): String
   }
 
   if (child.stdout) {
-    child.stdout.on('data', function (data: Number) {
+    child.stdout.on('data', function (data: number) {
       stdout += data
     })
   }
 
   if (child.stderr) {
-    child.stderr.on('data', function (data: Number) {
+    child.stderr.on('data', function (data: number) {
       stderr += data
     })
   }
 
-  child.on('close', function (code: String) {
+  child.on('close', function (code: string) {
     if (code) {
       const e: Error = new Error('Shell command exit with non zero code: ' + code)
       e.code = code
@@ -81,9 +81,9 @@ function execSh (command: String, options: Function, callback: Function): String
   return child
 }
 
-execSh.promise = function (command: String, options: Object) {
+execSh.promise = function (command: string, options: object) {
   return new Promise(function (resolve: Function, reject: Function) {
-    execSh(command, options, function (err: Object, stdout: Function, stderr: Function) {
+    execSh(command, options, function (err: object, stdout: Function, stderr: Function) {
       if (err) {
         err.stdout = stdout
         err.stderr = stderr

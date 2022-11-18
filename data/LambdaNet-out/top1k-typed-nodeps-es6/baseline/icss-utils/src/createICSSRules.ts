@@ -1,7 +1,7 @@
-const createImports: Function = (imports: Object, postcss: Object, mode: Number = "rule") => {
-  return Object.keys(imports).map((path: String) => {
-    const aliases: Object = imports[path];
-    const declarations: Array = Object.keys(aliases).map((key: String) =>
+const createImports: Function = (imports: object, postcss: object, mode: number = "rule") => {
+  return Object.keys(imports).map((path: string) => {
+    const aliases: object = imports[path];
+    const declarations: any[] = Object.keys(aliases).map((key: string) =>
       postcss.decl({
         prop: key,
         value: aliases[key],
@@ -9,9 +9,9 @@ const createImports: Function = (imports: Object, postcss: Object, mode: Number 
       })
     );
 
-    const hasDeclarations: Boolean = declarations.length > 0;
+    const hasDeclarations: boolean = declarations.length > 0;
 
-    const rule: Array =
+    const rule: any[] =
       mode === "rule"
         ? postcss.rule({
             selector: `:import('${path}')`,
@@ -31,8 +31,8 @@ const createImports: Function = (imports: Object, postcss: Object, mode: Number 
   });
 };
 
-const createExports: Function = (exports: Object, postcss: Object, mode: Number = "rule") => {
-  const declarations: Array = Object.keys(exports).map((key: String) =>
+const createExports: Function = (exports: object, postcss: object, mode: number = "rule") => {
+  const declarations: any[] = Object.keys(exports).map((key: string) =>
     postcss.decl({
       prop: key,
       value: exports[key],
@@ -43,7 +43,7 @@ const createExports: Function = (exports: Object, postcss: Object, mode: Number 
   if (declarations.length === 0) {
     return [];
   }
-  const rule: Array =
+  const rule: any[] =
     mode === "rule"
       ? postcss.rule({
           selector: `:export`,
@@ -59,7 +59,7 @@ const createExports: Function = (exports: Object, postcss: Object, mode: Number 
   return [rule];
 };
 
-const createICSSRules: Function = (imports: Array, exports: String, postcss: String, mode: String) => [
+const createICSSRules: Function = (imports: any[], exports: string, postcss: string, mode: string) => [
   ...createImports(imports, postcss, mode),
   ...createExports(exports, postcss, mode),
 ];

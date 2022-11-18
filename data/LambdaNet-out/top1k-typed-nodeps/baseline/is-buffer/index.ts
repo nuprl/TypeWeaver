@@ -5,7 +5,7 @@
  * @license  MIT
  */
 
-module.exports = function isBuffer (obj: Object): Boolean {
+module.exports = function isBuffer (obj: object): boolean {
   return obj != null && obj.constructor != null &&
     typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 }

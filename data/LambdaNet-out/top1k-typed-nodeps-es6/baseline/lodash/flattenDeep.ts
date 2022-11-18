@@ -1,7 +1,7 @@
 import baseFlatten from './.internal/baseFlatten.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
+const INFINITY: number = 1 / 0
 
 /**
  * Recursively flattens `array`.
@@ -16,8 +16,8 @@ const INFINITY: Number = 1 / 0
  * flattenDeep([1, [2, [3, [4]], 5]])
  * // => [1, 2, 3, 4, 5]
  */
-function flattenDeep(array: Array): Array {
-  const length: Number = array == null ? 0 : array.length
+function flattenDeep(array: any[]): any[] {
+  const length: number = array == null ? 0 : array.length
   return length ? baseFlatten(array, INFINITY) : []
 }
 

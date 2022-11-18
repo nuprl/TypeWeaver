@@ -63,9 +63,9 @@ const commentTypes: Error = new Set([
  * @param {Node} excludedItem Excluded node
  * @returns {string[]} The literal names
  */
-function findOmitTypes(excludedItem: HTMLElement): Array {
+function findOmitTypes(excludedItem: HTMLElement): any[] {
     if (excludedItem.type === "TSUnionType") {
-        return excludedItem.types.map((typeNode: String) => findOmitTypes(typeNode));
+        return excludedItem.types.map((typeNode: string) => findOmitTypes(typeNode));
     }
     return excludedItem.literal.value;
 }
@@ -76,7 +76,7 @@ function findOmitTypes(excludedItem: HTMLElement): Array {
  * @param {string[]} excludedProperties Properties not to allow
  * @returns {boolean} Whether or not to be excluded
  */
-function isPropertyExcluded(property: String, excludedProperties: String): Boolean {
+function isPropertyExcluded(property: string, excludedProperties: string): boolean {
     return excludedProperties && excludedProperties.includes(property);
 }
 
@@ -89,7 +89,7 @@ function isPropertyExcluded(property: String, excludedProperties: String): Boole
  * @param {KeysStrict} initialNodes Initial node list to sort
  * @returns {KeysStrict} The keys
  */
-function alphabetizeKeyInterfaces(initialNodes: Array): Object {
+function alphabetizeKeyInterfaces(initialNodes: any[]): object {
 
     /**
      * Alphabetize
@@ -100,15 +100,15 @@ function alphabetizeKeyInterfaces(initialNodes: Array): Object {
     function alphabetize([typeA], [typeB]): Void {
         return typeA < typeB ? -1 : 1;
     }
-    const sortedNodeEntries: Array = Object.entries(initialNodes).sort(alphabetize);
+    const sortedNodeEntries: any[] = Object.entries(initialNodes).sort(alphabetize);
 
     /**
      * Get the key sorter for a given type
      * @param {string} type The type
      * @returns {(string, string) => -1|1} The sorter
      */
-    function getKeySorter(type: String): Function {
-        const sequence: Array = KEYS[type];
+    function getKeySorter(type: string): Function {
+        const sequence: any[] = KEYS[type];
 
         /**
          * Alphabetize
@@ -116,13 +116,13 @@ function alphabetizeKeyInterfaces(initialNodes: Array): Object {
          * @param {string} typeB The second type to compare
          * @returns {1|-1} The sorting index
          */
-        return function sortKeys(typeA: String, typeB: String): Number {
+        return function sortKeys(typeA: string, typeB: string): number {
             if (!sequence) {
                 return typeA < typeB ? -1 : 1;
             }
 
-            const idxA: Number = sequence.indexOf(typeA);
-            const idxB: Number = sequence.indexOf(typeB);
+            const idxA: number = sequence.indexOf(typeA);
+            const idxB: number = sequence.indexOf(typeB);
 
             if (idxA === -1 && idxB === -1) {
                 return typeA < typeB ? -1 : 1;
@@ -151,14 +151,14 @@ function alphabetizeKeyInterfaces(initialNodes: Array): Object {
  * @param {Function} handler The callback
  * @returns {any[]} Return value of handler
  */
-function traverseExtends(declNode: Object, handler: Function): Array {
-    const ret: Array = [];
+function traverseExtends(declNode: object, handler: Function): any[] {
+    const ret: any[] = [];
 
     for (const extension of declNode.extends || []) {
         const { typeParameters, expression } = extension;
-        const innerInterfaceName: String = expression.name;
+        const innerInterfaceName: string = expression.name;
 
-        let res: String;
+        let res: string;
 
         if (typeParameters) {
             if (innerInterfaceName !== "Omit") {
@@ -166,8 +166,8 @@ function traverseExtends(declNode: Object, handler: Function): Array {
             }
 
             const [param, ...excludedAST] = typeParameters.params;
-            const paramInterfaceName: String = param.typeName.name;
-            const excluded: String = excludedAST.flatMap(findOmitTypes);
+            const paramInterfaceName: string = param.typeName.name;
+            const excluded: string = excludedAST.flatMap(findOmitTypes);
 
             res = handler({ iName: paramInterfaceName, excluded });
         } else {
@@ -186,17 +186,17 @@ function traverseExtends(declNode: Object, handler: Function): Array {
  * @param {(string) => void} handler Passed the property
  * @returns {any[]} The return values of the callback
  */
-function traverseProperties(tsDeclarationNode: Object, handler: Function): Array {
-    const tsPropertySignatures: Array = tsDeclarationNode.body.body;
+function traverseProperties(tsDeclarationNode: object, handler: Function): any[] {
+    const tsPropertySignatures: any[] = tsDeclarationNode.body.body;
 
-    const ret: Array = [];
+    const ret: any[] = [];
 
     for (const tsPropertySignature of tsPropertySignatures) {
-        const property: String = tsPropertySignature.key.name;
+        const property: string = tsPropertySignature.key.name;
 
-        const tsAnnotation: Number = tsPropertySignature.typeAnnotation.typeAnnotation;
+        const tsAnnotation: number = tsPropertySignature.typeAnnotation.typeAnnotation;
 
-        const res: String = handler({ property, tsAnnotation });
+        const res: string = handler({ property, tsAnnotation });
 
         ret.push(res);
     }
@@ -210,7 +210,7 @@ function traverseProperties(tsDeclarationNode: Object, handler: Function): Array
  * @param {{supplementaryDeclarations: Node[]}} [options] The options
  * @returns {VisitorKeysExport} The built visitor keys
  */
-function getKeysFromTs(code: String, {
+function getKeysFromTs(code: string, {
 
     // Todo: Ideally we'd just get these from the import
     supplementaryDeclarations = {
@@ -533,8 +533,8 @@ function getKeysFromTs(code: String, {
  * @param {{supplementaryDeclarations: Object<string, Node[]>}} options The options
  * @returns {Promise<VisitorKeysExport>} The built visitor keys
  */
-async function getKeysFromTsFile(file: HTMLElement, options: HTMLElement): Array {
-    const code: String = await readFile(file);
+async function getKeysFromTsFile(file: HTMLElement, options: HTMLElement): any[] {
+    const code: string = await readFile(file);
 
     return getKeysFromTs(code, options);
 }

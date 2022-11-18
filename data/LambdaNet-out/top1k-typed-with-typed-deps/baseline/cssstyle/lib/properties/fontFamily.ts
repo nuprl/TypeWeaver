@@ -1,17 +1,17 @@
 'use strict';
 
-var TYPES: Object = require('../parsers').TYPES;
+var TYPES: object = require('../parsers').TYPES;
 var valueType: Function = require('../parsers').valueType;
 
 var partsRegEx: RegExp = /\s*,\s*/;
-module.exports.isValid = function isValid(v: String): Boolean {
+module.exports.isValid = function isValid(v: string): boolean {
   if (v === '' || v === null) {
     return true;
   }
-  var parts: Array = v.split(partsRegEx);
-  var len: Number = parts.length;
-  var i: Number;
-  var type: Number;
+  var parts: any[] = v.split(partsRegEx);
+  var len: number = parts.length;
+  var i: number;
+  var type: number;
   for (i = 0; i < len; i++) {
     type = valueType(parts[i]);
     if (type === TYPES.STRING || type === TYPES.KEYWORD) {
@@ -22,7 +22,7 @@ module.exports.isValid = function isValid(v: String): Boolean {
 };
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('font-family', v);
   },
   get: function() {

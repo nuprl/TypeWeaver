@@ -1,18 +1,18 @@
 "use strict";
 
-export default function( Release: Object, files: Array, complete: Function ) {
+export default function( Release: object, files: any[], complete: Function ) {
 
 	const fs: Function = require( "fs" ).promises;
-	const shell: Array = require( "shelljs" );
-	const inquirer: String = require( "inquirer" );
-	const pkg: Object = require( `${ Release.dir.repo }/package.json` );
-	const distRemote: String = Release.remote
+	const shell: any[] = require( "shelljs" );
+	const inquirer: string = require( "inquirer" );
+	const pkg: object = require( `${ Release.dir.repo }/package.json` );
+	const distRemote: string = Release.remote
 
 		// For local and github dists
 		.replace( /jquery(\.git|$)/, "jquery-dist$1" );
 
 	// These files are included with the distribution
-	const extras: Array = [
+	const extras: any[] = [
 		"amd",
 		"src",
 		"LICENSE.txt",
@@ -40,7 +40,7 @@ export default function( Release: Object, files: Array, complete: Function ) {
 	/**
 	 * Generate bower file for jquery-dist
 	 */
-	function generateBower(): String {
+	function generateBower(): string {
 		return JSON.stringify( {
 			name: pkg.name,
 			main: pkg.main,
@@ -57,7 +57,7 @@ export default function( Release: Object, files: Array, complete: Function ) {
 	 * @param {string} readme
 	 * @param {string} blogPostLink
 	 */
-	function editReadme( readme: String, blogPostLink: String ): String {
+	function editReadme( readme: string, blogPostLink: string ): string {
 		return readme
 			.replace( /@VERSION/g, Release.newVersion )
 			.replace( /@BLOG_POST_LINK/g, blogPostLink );
@@ -69,11 +69,11 @@ export default function( Release: Object, files: Array, complete: Function ) {
 	async function copy(): Promise {
 
 		// Copy dist files
-		const distFolder: String = `${ Release.dir.dist }/dist`;
-		const readme: String = await fs.readFile(
+		const distFolder: string = `${ Release.dir.dist }/dist`;
+		const readme: string = await fs.readFile(
 			`${ Release.dir.repo }/build/fixtures/README.md`, "utf8" );
-		const rmIgnore: Array = [ ...files, "node_modules" ]
-			.map( (file: String) => `${ Release.dir.dist }/${ file }` );
+		const rmIgnore: any[] = [ ...files, "node_modules" ]
+			.map( (file: string) => `${ Release.dir.dist }/${ file }` );
 
 		shell.config.globOptions = {
 			ignore: rmIgnore
@@ -89,12 +89,12 @@ export default function( Release: Object, files: Array, complete: Function ) {
 		shell.rm( "-rf", `${ Release.dir.dist }/**/*` );
 
 		shell.mkdir( "-p", distFolder );
-		files.forEach( function( file: String ) {
+		files.forEach( function( file: string ) {
 			shell.cp( "-f", `${ Release.dir.repo }/${ file }`, distFolder );
 		} );
 
 		// Copy other files
-		extras.forEach( function( file: String ) {
+		extras.forEach( function( file: string ) {
 			shell.cp( "-rf", `${ Release.dir.repo }/${ file }`, Release.dir.dist );
 		} );
 

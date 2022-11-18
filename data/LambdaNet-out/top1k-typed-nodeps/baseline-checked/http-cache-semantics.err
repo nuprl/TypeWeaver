@@ -1,15 +1,11 @@
 index.ts(3,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(19,7): error TS2739: Type 'Set<number>' is missing the following properties from type 'Error': name, message
 index.ts(36,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
-index.ts(64,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-index.ts(65,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(64,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(74,29): error TS2339: Property 'has' does not exist on type 'Error'.
-index.ts(74,42): error TS2339: Property 'status' does not exist on type 'Object'.
-index.ts(83,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(92,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(93,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(96,20): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
+index.ts(74,42): error TS2339: Property 'status' does not exist on type 'object'.
+index.ts(96,20): error TS2367: This condition will always return 'false' since the types 'string' and 'boolean' have no overlap.
+index.ts(101,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 index.ts(109,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(110,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(111,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
@@ -87,7 +83,6 @@ index.ts(349,17): error TS2339: Property 'date' does not exist on type '{}'.
 index.ts(358,44): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(362,21): error TS2339: Property '_responseTime' does not exist on type 'CachePolicy'.
 index.ts(374,49): error TS2339: Property '_responseTime' does not exist on type 'CachePolicy'.
-index.ts(375,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(379,36): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(390,38): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(397,18): error TS2339: Property '_isShared' does not exist on type 'CachePolicy'.
@@ -108,9 +103,7 @@ index.ts(428,45): error TS2339: Property '_resHeaders' does not exist on type 'C
 index.ts(436,18): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(437,50): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(441,65): error TS2339: Property '_cacheHeuristic' does not exist on type 'CachePolicy'.
-index.ts(451,33): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(451,59): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
-index.ts(452,41): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(452,67): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(461,52): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(465,52): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.

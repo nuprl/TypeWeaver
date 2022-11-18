@@ -1,2 +1,2 @@
 'use strict';
-module.exports = (string: String) => encodeURIComponent(string).replace(/[!'()*]/g, (x: String) => `%${x.charCodeAt(0).toString(16).toUpperCase()}`);
+module.exports = (string: string) => encodeURIComponent(string).replace(/[!'()*]/g, (x: string) => `%${x.charCodeAt(0).toString(16).toUpperCase()}`);

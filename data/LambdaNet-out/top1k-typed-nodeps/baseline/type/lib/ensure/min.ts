@@ -2,9 +2,9 @@
 
 var resolveException: Function = require("../resolve-exception");
 
-module.exports = function (value: String, coerced: Number, options: Object) {
+module.exports = function (value: string, coerced: number, options: object) {
 	if (coerced >= options.min) return coerced;
-	var errorMessage: String =
+	var errorMessage: string =
 		options && options.name
 			? "Expected %n to be greater or equal " + options.min + ", received %v"
 			: "%v is not greater or equal " + options.min;

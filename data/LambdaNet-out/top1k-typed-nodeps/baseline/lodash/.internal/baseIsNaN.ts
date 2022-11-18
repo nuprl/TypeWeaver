@@ -5,7 +5,7 @@
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
  */
-function baseIsNaN(value: Number): Boolean {
+function baseIsNaN(value: number): boolean {
   return value !== value
 }
 

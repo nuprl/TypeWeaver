@@ -3,8 +3,8 @@
  * Module dependencies.
  */
 
-var benchmark: Array = require('benchmark')
-var benchmarks: Array = require('beautify-benchmark')
+var benchmark: any[] = require('benchmark')
+var benchmarks: any[] = require('beautify-benchmark')
 
 /**
  * Globals for benchmark.js
@@ -26,11 +26,11 @@ suite.add({
   fn: 'var val = fresh({ \'if-modified-since\': \'Mon, 01 Jan 1990 00:00:00 GMT\' }, { \'last-modified\': \'Sat, 01 Jan 2000 00:00:00 GMT\' })'
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  modified\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 

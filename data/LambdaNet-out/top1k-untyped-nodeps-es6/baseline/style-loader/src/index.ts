@@ -24,12 +24,12 @@ import schema from "./options.json";
 
 const loaderAPI: Function = () => {};
 
-loaderAPI.pitch = function loader(request: Object): String {
+loaderAPI.pitch = function loader(request: object): string {
   const options: HTMLElement = this.getOptions(schema);
-  const injectType: Number = options.injectType || "styleTag";
-  const esModule: Boolean =
+  const injectType: number = options.injectType || "styleTag";
+  const esModule: boolean =
     typeof options.esModule !== "undefined" ? options.esModule : true;
-  const runtimeOptions: Object = {};
+  const runtimeOptions: object = {};
 
   if (options.attributes) {
     runtimeOptions.attributes = options.attributes;
@@ -39,14 +39,14 @@ loaderAPI.pitch = function loader(request: Object): String {
     runtimeOptions.base = options.base;
   }
 
-  const insertType: String =
+  const insertType: string =
     typeof options.insert === "function"
       ? "function"
       : options.insert && path.isAbsolute(options.insert)
       ? "module-path"
       : "selector";
 
-  const styleTagTransformType: String =
+  const styleTagTransformType: string =
     typeof options.styleTagTransform === "function"
       ? "function"
       : options.styleTagTransform && path.isAbsolute(options.styleTagTransform)
@@ -55,7 +55,7 @@ loaderAPI.pitch = function loader(request: Object): String {
 
   switch (injectType) {
     case "linkTag": {
-      const hmrCode: String = this.hot ? getLinkHmrCode(esModule, this, request) : "";
+      const hmrCode: string = this.hot ? getLinkHmrCode(esModule, this, request) : "";
 
       return `
       ${getImportLinkAPICode(esModule, this)}
@@ -81,9 +81,9 @@ ${esModule ? "export default {}" : ""}`;
     case "lazyStyleTag":
     case "lazyAutoStyleTag":
     case "lazySingletonStyleTag": {
-      const isSingleton: Boolean = injectType === "lazySingletonStyleTag";
-      const isAuto: Boolean = injectType === "lazyAutoStyleTag";
-      const hmrCode: String = this.hot
+      const isSingleton: boolean = injectType === "lazySingletonStyleTag";
+      const isAuto: boolean = injectType === "lazyAutoStyleTag";
+      const hmrCode: string = this.hot
         ? getStyleHmrCode(esModule, this, request, true)
         : "";
 
@@ -151,9 +151,9 @@ ${getExportLazyStyleCode(esModule, this, request)}
     case "autoStyleTag":
     case "singletonStyleTag":
     default: {
-      const isSingleton: Boolean = injectType === "singletonStyleTag";
-      const isAuto: Boolean = injectType === "autoStyleTag";
-      const hmrCode: String = this.hot
+      const isSingleton: boolean = injectType === "singletonStyleTag";
+      const isAuto: boolean = injectType === "autoStyleTag";
+      const hmrCode: string = this.hot
         ? getStyleHmrCode(esModule, this, request, false)
         : "";
 

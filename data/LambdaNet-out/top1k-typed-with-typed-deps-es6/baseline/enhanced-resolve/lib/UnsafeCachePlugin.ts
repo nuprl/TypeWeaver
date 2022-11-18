@@ -10,7 +10,7 @@
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /** @typedef {{[k: string]: any}} Cache */
 
-function getCacheId(type: String, request: Object, withContext: Boolean): String {
+function getCacheId(type: string, request: object, withContext: boolean): string {
 	return JSON.stringify({
 		type,
 		context: withContext ? request.context : "",
@@ -42,18 +42,18 @@ export default class UnsafeCachePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("UnsafeCachePlugin", (request: Object, resolveContext: Object, callback: Function) => {
+			.tapAsync("UnsafeCachePlugin", (request: object, resolveContext: object, callback: Function) => {
 				if (!this.filterPredicate(request)) return callback();
-				const isYield: Boolean = typeof resolveContext.yield === "function";
-				const cacheId: String = getCacheId(
+				const isYield: boolean = typeof resolveContext.yield === "function";
+				const cacheId: string = getCacheId(
 					isYield ? "yield" : "default",
 					request,
 					this.withContext
 				);
-				const cacheEntry: Array = this.cache[cacheId];
+				const cacheEntry: any[] = this.cache[cacheId];
 				if (cacheEntry) {
 					if (isYield) {
 						const yield_: Function = /** @type {Function} */ (resolveContext.yield);
@@ -69,7 +69,7 @@ export default class UnsafeCachePlugin {
 
 				let yieldFn: Function;
 				let yield_: Function;
-				const yieldResult: Array = [];
+				const yieldResult: any[] = [];
 				if (isYield) {
 					yieldFn = resolveContext.yield;
 					yield_ = (result: ResultPlugin) => {

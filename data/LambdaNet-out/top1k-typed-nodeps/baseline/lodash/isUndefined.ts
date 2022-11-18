@@ -13,7 +13,7 @@
  * isUndefined(null)
  * // => false
  */
-function isUndefined(value: Number): Boolean {
+function isUndefined(value: number): boolean {
   return value === undefined
 }
 

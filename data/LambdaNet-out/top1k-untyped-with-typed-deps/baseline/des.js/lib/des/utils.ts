@@ -1,23 +1,23 @@
 'use strict';
 
-exports.readUInt32BE = function readUInt32BE(bytes: Object, off: Number): Boolean {
-  var res: Number =  (bytes[0 + off] << 24) |
+exports.readUInt32BE = function readUInt32BE(bytes: object, off: number): boolean {
+  var res: number =  (bytes[0 + off] << 24) |
              (bytes[1 + off] << 16) |
              (bytes[2 + off] << 8) |
              bytes[3 + off];
   return res >>> 0;
 };
 
-exports.writeUInt32BE = function writeUInt32BE(bytes: Object, value: Number, off: Number): Void {
+exports.writeUInt32BE = function writeUInt32BE(bytes: object, value: number, off: number): Void {
   bytes[0 + off] = value >>> 24;
   bytes[1 + off] = (value >>> 16) & 0xff;
   bytes[2 + off] = (value >>> 8) & 0xff;
   bytes[3 + off] = value & 0xff;
 };
 
-exports.ip = function ip(inL: String, inR: Number, out: Object, off: String): Void {
-  var outL: Number = 0;
-  var outR: Number = 0;
+exports.ip = function ip(inL: string, inR: number, out: object, off: string): Void {
+  var outL: number = 0;
+  var outR: number = 0;
 
   for (var i = 6; i >= 0; i -= 2) {
     for (var j = 0; j <= 24; j += 8) {
@@ -45,9 +45,9 @@ exports.ip = function ip(inL: String, inR: Number, out: Object, off: String): Vo
   out[off + 1] = outR >>> 0;
 };
 
-exports.rip = function rip(inL: String, inR: Number, out: Object, off: String): Void {
-  var outL: Number = 0;
-  var outR: Number = 0;
+exports.rip = function rip(inL: string, inR: number, out: object, off: string): Void {
+  var outL: number = 0;
+  var outR: number = 0;
 
   for (var i = 0; i < 4; i++) {
     for (var j = 24; j >= 0; j -= 8) {
@@ -70,9 +70,9 @@ exports.rip = function rip(inL: String, inR: Number, out: Object, off: String): 
   out[off + 1] = outR >>> 0;
 };
 
-exports.pc1 = function pc1(inL: Number, inR: Number, out: Object, off: String): Void {
-  var outL: Number = 0;
-  var outR: Number = 0;
+exports.pc1 = function pc1(inL: number, inR: number, out: object, off: string): Void {
+  var outL: number = 0;
+  var outR: number = 0;
 
   // 7, 15, 23, 31, 39, 47, 55, 63
   // 6, 14, 22, 30, 39, 47, 55, 63
@@ -116,11 +116,11 @@ exports.pc1 = function pc1(inL: Number, inR: Number, out: Object, off: String): 
   out[off + 1] = outR >>> 0;
 };
 
-exports.r28shl = function r28shl(num: Number, shift: Number): Number {
+exports.r28shl = function r28shl(num: number, shift: number): number {
   return ((num << shift) & 0xfffffff) | (num >>> (28 - shift));
 };
 
-var pc2table: Array = [
+var pc2table: any[] = [
   // inL => outL
   14, 11, 17, 4, 27, 23, 25, 0,
   13, 22, 7, 18, 5, 9, 16, 24,
@@ -132,11 +132,11 @@ var pc2table: Array = [
   22, 3, 10, 14, 6, 20, 27, 24
 ];
 
-exports.pc2 = function pc2(inL: String, inR: String, out: Object, off: String): Void {
-  var outL: Number = 0;
-  var outR: Number = 0;
+exports.pc2 = function pc2(inL: string, inR: string, out: object, off: string): Void {
+  var outL: number = 0;
+  var outR: number = 0;
 
-  var len: Number = pc2table.length >>> 1;
+  var len: number = pc2table.length >>> 1;
   for (var i = 0; i < len; i++) {
     outL <<= 1;
     outL |= (inL >>> pc2table[i]) & 0x1;
@@ -150,9 +150,9 @@ exports.pc2 = function pc2(inL: String, inR: String, out: Object, off: String): 
   out[off + 1] = outR >>> 0;
 };
 
-exports.expand = function expand(r: Number, out: Object, off: String): Void {
-  var outL: Number = 0;
-  var outR: Number = 0;
+exports.expand = function expand(r: number, out: object, off: string): Void {
+  var outL: number = 0;
+  var outR: number = 0;
 
   outL = ((r & 1) << 5) | (r >>> 27);
   for (var i = 23; i >= 15; i -= 4) {
@@ -169,7 +169,7 @@ exports.expand = function expand(r: Number, out: Object, off: String): Void {
   out[off + 1] = outR >>> 0;
 };
 
-var sTable: Object = [
+var sTable: object = [
   14, 0, 4, 15, 13, 7, 1, 4, 2, 14, 15, 2, 11, 13, 8, 1,
   3, 10, 10, 6, 6, 12, 12, 11, 5, 9, 9, 5, 0, 3, 7, 8,
   4, 15, 1, 12, 14, 8, 8, 2, 13, 4, 6, 9, 2, 1, 11, 7,
@@ -211,18 +211,18 @@ var sTable: Object = [
   0, 15, 6, 12, 10, 9, 13, 0, 15, 3, 3, 5, 5, 6, 8, 11
 ];
 
-exports.substitute = function substitute(inL: String, inR: Number): Number {
-  var out: Number = 0;
+exports.substitute = function substitute(inL: string, inR: number): number {
+  var out: number = 0;
   for (var i = 0; i < 4; i++) {
-    var b: Number = (inL >>> (18 - i * 6)) & 0x3f;
-    var sb: String = sTable[i * 0x40 + b];
+    var b: number = (inL >>> (18 - i * 6)) & 0x3f;
+    var sb: string = sTable[i * 0x40 + b];
 
     out <<= 4;
     out |= sb;
   }
   for (var i = 0; i < 4; i++) {
-    var b: Number = (inR >>> (18 - i * 6)) & 0x3f;
-    var sb: String = sTable[4 * 0x40 + i * 0x40 + b];
+    var b: number = (inR >>> (18 - i * 6)) & 0x3f;
+    var sb: string = sTable[4 * 0x40 + i * 0x40 + b];
 
     out <<= 4;
     out |= sb;
@@ -230,13 +230,13 @@ exports.substitute = function substitute(inL: String, inR: Number): Number {
   return out >>> 0;
 };
 
-var permuteTable: Array = [
+var permuteTable: any[] = [
   16, 25, 12, 11, 3, 20, 4, 15, 31, 17, 9, 6, 27, 14, 1, 22,
   30, 24, 8, 18, 0, 5, 29, 23, 13, 19, 2, 26, 10, 21, 28, 7
 ];
 
-exports.permute = function permute(num: String): Number {
-  var out: Number = 0;
+exports.permute = function permute(num: string): number {
+  var out: number = 0;
   for (var i = 0; i < permuteTable.length; i++) {
     out <<= 1;
     out |= (num >>> permuteTable[i]) & 0x1;
@@ -244,12 +244,12 @@ exports.permute = function permute(num: String): Number {
   return out >>> 0;
 };
 
-exports.padSplit = function padSplit(num: String, size: Number, group: Number): String {
-  var str: String = num.toString(2);
+exports.padSplit = function padSplit(num: string, size: number, group: number): string {
+  var str: string = num.toString(2);
   while (str.length < size)
     str = '0' + str;
 
-  var out: Array = [];
+  var out: any[] = [];
   for (var i = 0; i < size; i += group)
     out.push(str.slice(i, i + group));
   return out.join(' ');

@@ -23,16 +23,16 @@ export default class DirectoryExistsPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
 			.tapAsync(
 				"DirectoryExistsPlugin",
-				(request: Object, resolveContext: Object, callback: Function) => {
+				(request: object, resolveContext: object, callback: Function) => {
 					const fs: Function = resolver.fileSystem;
-					const directory: Number = request.path;
+					const directory: number = request.path;
 					if (!directory) return callback();
-					fs.stat(directory, (err: String, stat: Resolver) => {
+					fs.stat(directory, (err: string, stat: Resolver) => {
 						if (err || !stat) {
 							if (resolveContext.missingDependencies)
 								resolveContext.missingDependencies.add(directory);

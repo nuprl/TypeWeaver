@@ -11,12 +11,12 @@ import isArrayLike from "../core/isArrayLike.js";
 
 var rhtml: RegExp = /<|&#?\w+;/;
 
-function buildFragment( elems: Array, context: HTMLElement, scripts: Array, selection: Boolean, ignored: Array ): HTMLElement {
-	var elem: Object, tmp: Object, tag: Number, wrap: Array, attached: Function, j: Number,
+function buildFragment( elems: any[], context: HTMLElement, scripts: any[], selection: boolean, ignored: any[] ): HTMLElement {
+	var elem: object, tmp: object, tag: number, wrap: any[], attached: Function, j: number,
 		fragment: HTMLElement = context.createDocumentFragment(),
-		nodes: Array = [],
-		i: Number = 0,
-		l: Number = elems.length;
+		nodes: any[] = [],
+		i: number = 0,
+		l: number = elems.length;
 
 	for ( ; i < l; i++ ) {
 		elem = elems[ i ];

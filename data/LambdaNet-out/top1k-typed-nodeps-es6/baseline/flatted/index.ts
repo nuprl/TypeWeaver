@@ -1,48 +1,48 @@
-self.Flatted = (function (exports: Object) {
+self.Flatted = (function (exports: object) {
   'use strict';
 
-  function _typeof(obj: String): Boolean {
+  function _typeof(obj: string): boolean {
     "@babel/helpers - typeof";
 
-    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj: String) {
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj: string) {
       return typeof obj;
-    } : function (obj: Object) {
+    } : function (obj: object) {
       return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
     }, _typeof(obj);
   }
 
   /*! (c) 2020 Andrea Giammarchi */
   var $parse: Function = JSON.parse,
-      $stringify: Object = JSON.stringify;
+      $stringify: object = JSON.stringify;
   var keys: Function = Object.keys;
-  var Primitive: String = String; // it could be Number
+  var Primitive: string = String; // it could be Number
 
-  var primitive: String = 'string'; // it could be 'number'
+  var primitive: string = 'string'; // it could be 'number'
 
   var ignore: Function = {};
-  var object: String = 'object';
+  var object: string = 'object';
 
-  var noop: Number = function noop(_: String, value: String): String {
+  var noop: number = function noop(_: string, value: string): string {
     return value;
   };
 
-  var primitives: Function = function primitives(value: String): String {
+  var primitives: Function = function primitives(value: string): string {
     return value instanceof Primitive ? Primitive(value) : value;
   };
 
-  var Primitives: Function = function Primitives(_: String, value: String): String {
+  var Primitives: Function = function Primitives(_: string, value: string): string {
     return _typeof(value) === primitive ? new Primitive(value) : value;
   };
 
-  var revive: Function = function revive(input: Object, parsed: Object, output: Object, $: Function): Object {
-    var lazy: Array = [];
+  var revive: Function = function revive(input: object, parsed: object, output: object, $: Function): object {
+    var lazy: any[] = [];
 
     for (var ke = keys(output), length = ke.length, y = 0; y < length; y++) {
-      var k: String = ke[y];
-      var value: String = output[k];
+      var k: string = ke[y];
+      var value: string = output[k];
 
       if (value instanceof Primitive) {
-        var tmp: String = input[value];
+        var tmp: string = input[value];
 
         if (_typeof(tmp) === object && !parsed.has(tmp)) {
           parsed.add(tmp);
@@ -56,41 +56,41 @@ self.Flatted = (function (exports: Object) {
     }
 
     for (var _length = lazy.length, i = 0; i < _length; i++) {
-      var _lazy$i: Object = lazy[i],
-          _k: Array = _lazy$i.k,
-          a: Array = _lazy$i.a;
+      var _lazy$i: object = lazy[i],
+          _k: any[] = _lazy$i.k,
+          a: any[] = _lazy$i.a;
       output[_k] = $.call(output, _k, revive.apply(null, a));
     }
 
     return output;
   };
 
-  var set: Function = function set(known: Map, input: Array, value: String): String {
-    var index: String = Primitive(input.push(value) - 1);
+  var set: Function = function set(known: Map, input: any[], value: string): string {
+    var index: string = Primitive(input.push(value) - 1);
     known.set(value, index);
     return index;
   };
 
-  var parse: Function = function parse(text: String, reviver: String): String {
-    var input: Object = $parse(text, Primitives).map(primitives);
-    var value: String = input[0];
+  var parse: Function = function parse(text: string, reviver: string): string {
+    var input: object = $parse(text, Primitives).map(primitives);
+    var value: string = input[0];
     var $: Function = reviver || noop;
-    var tmp: String = _typeof(value) === object && value ? revive(input, new Set(), value, $) : value;
+    var tmp: string = _typeof(value) === object && value ? revive(input, new Set(), value, $) : value;
     return $.call({
       '': tmp
     }, '', tmp);
   };
-  var stringify: Function = function stringify(value: String, replacer: String, space: Function): String {
-    var $: Function = replacer && _typeof(replacer) === object ? function (k: String, v: Number) {
+  var stringify: Function = function stringify(value: string, replacer: string, space: Function): string {
+    var $: Function = replacer && _typeof(replacer) === object ? function (k: string, v: number) {
       return k === '' || -1 < replacer.indexOf(k) ? v : void 0;
     } : replacer || noop;
     var known: Map = new Map();
-    var input: Array = [];
-    var output: Array = [];
-    var i: Number = +set(known, input, $.call({
+    var input: any[] = [];
+    var output: any[] = [];
+    var i: number = +set(known, input, $.call({
       '': value
     }, '', value));
-    var firstRun: Boolean = !i;
+    var firstRun: boolean = !i;
 
     while (i < input.length) {
       firstRun = true;
@@ -99,13 +99,13 @@ self.Flatted = (function (exports: Object) {
 
     return '[' + output.join(',') + ']';
 
-    function replace(key: String, value: String): String {
+    function replace(key: string, value: string): string {
       if (firstRun) {
         firstRun = !firstRun;
         return value;
       }
 
-      var after: String = $.call(this, key, value);
+      var after: string = $.call(this, key, value);
 
       switch (_typeof(after)) {
         case object:
@@ -118,10 +118,10 @@ self.Flatted = (function (exports: Object) {
       return after;
     }
   };
-  var toJSON: Function = function toJSON(any: Array): Promise {
+  var toJSON: Function = function toJSON(any: any[]): Promise {
     return $parse(stringify(any));
   };
-  var fromJSON: Object = function fromJSON(any: Array): Promise {
+  var fromJSON: object = function fromJSON(any: any[]): Promise {
     return parse($stringify(any));
   };
 

@@ -24,7 +24,7 @@ import reduce from './reduce.js'
  * // => objects for [['fred'], ['barney', 'pebbles']]
  */
 function partition(collection: Function, predicate: Function): Stack {
-  return reduce(collection, (result: Object, value: String, key: String) => (
+  return reduce(collection, (result: object, value: string, key: string) => (
     result[predicate(value) ? 0 : 1].push(value), result
   ), [[], []])
 }

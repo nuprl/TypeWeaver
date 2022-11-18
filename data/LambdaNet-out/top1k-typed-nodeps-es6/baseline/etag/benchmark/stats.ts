@@ -42,11 +42,11 @@ suite.add({
   fn: 'var val = etag(fakestat, {weak: true})'
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  stat\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 
@@ -56,7 +56,7 @@ suite.on('complete', function onComplete (): Void {
 
 suite.run({ async: false })
 
-function getstat (real: Boolean): String {
+function getstat (real: boolean): string {
   if (real) {
     return fs.statSync(__filename)
   }

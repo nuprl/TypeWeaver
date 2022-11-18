@@ -5,14 +5,14 @@
  * that supports the old behaviour, if needed.
  */
 
-var path: String = require('path');
+var path: string = require('path');
 var format: Function = require('util').format;
 
-var dashdash: Object = require('../lib/dashdash');
+var dashdash: object = require('../lib/dashdash');
 
 
-function parseIntGteZero(option: Function, optstr: String, arg: Number): Number {
-    var num: Number = Number(arg);
+function parseIntGteZero(option: Function, optstr: string, arg: number): number {
+    var num: number = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num)) {
         throw new Error(format('arg for "%s" is not an integer >=0: "%s"',
             optstr, arg));
@@ -30,7 +30,7 @@ dashdash.addOptionType({
 
 // --- example parsing using intGteZero type
 
-var options: Array = [
+var options: any[] = [
     { names: ['num', 'n'], type: 'intGteZero' }
 ];
 

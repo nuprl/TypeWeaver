@@ -1,4 +1,4 @@
-export default function pathKey(options: Object = {}): String {
+export default function pathKey(options: object = {}): string {
 	const {
 		env = process.env,
 		platform = process.platform
@@ -8,5 +8,5 @@ export default function pathKey(options: Object = {}): String {
 		return 'PATH';
 	}
 
-	return Object.keys(env).reverse().find((key: String) => key.toUpperCase() === 'PATH') || 'Path';
+	return Object.keys(env).reverse().find((key: string) => key.toUpperCase() === 'PATH') || 'Path';
 }

@@ -4,27 +4,27 @@ import { createReadStream } from 'fs';
 import es from 'event-stream';
 import readdirp from '..';
 
-const findLinesMatching: Function = (searchTerm: String) => {
+const findLinesMatching: Function = (searchTerm: string) => {
   return es.through(function (entry: Function) {
-    let lineno: Number = 0;
-    const matchingLines: Array = [];
-    const fileStream: Object = this;
+    let lineno: number = 0;
+    const matchingLines: any[] = [];
+    const fileStream: object = this;
 
     createReadStream(entry.fullPath, {encoding: 'utf-8'})
       // handle file contents line by line
       .pipe(es.split('\n'))
       // filter, keep only the lines that matched the term
-      .pipe(es.mapSync((line: String) => {
+      .pipe(es.mapSync((line: string) => {
         lineno++;
         return ~line.indexOf(searchTerm) ? `${lineno}: ${line}` : undefined;
       }))
       // aggregate matching lines and delegate control back to the file stream
       .pipe(es.through(
-        (data: Object) => { matchingLines.push(data); },
+        (data: object) => { matchingLines.push(data); },
         () => {
           // drop files that had no matches
           if (matchingLines.length) {
-            const result: Object = { file: entry, lines: matchingLines };
+            const result: object = { file: entry, lines: matchingLines };
             fileStream.emit('data', result); // pass result on to file stream
           }
           this.emit('end');

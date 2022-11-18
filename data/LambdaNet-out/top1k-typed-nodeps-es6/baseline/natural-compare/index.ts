@@ -10,14 +10,14 @@
  */
 
 
-var naturalCompare: Function = function(a: Number, b: Number) {
-	var i: Number, codeA: Number
-	, codeB: Number = 1
-	, posA: Number = 0
-	, posB: Number = 0
-	, alphabet: Array = String.alphabet
+var naturalCompare: Function = function(a: number, b: number) {
+	var i: number, codeA: number
+	, codeB: number = 1
+	, posA: number = 0
+	, posB: number = 0
+	, alphabet: any[] = String.alphabet
 
-	function getCode(str: String, pos: Number, code: Number): String {
+	function getCode(str: string, pos: number, code: number): string {
 		if (code) {
 			for (i = pos; code = getCode(str, i), code < 76 && code > 65;) ++i;
 			return +str.slice(pos - 1, i)

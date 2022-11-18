@@ -1,14 +1,14 @@
 import tty from 'tty'
 
-let isDisabled: Boolean =
+let isDisabled: boolean =
   'NO_COLOR' in process.env || process.argv.includes('--no-color')
-let isForced: Boolean = 'FORCE_COLOR' in process.env || process.argv.includes('--color')
-let isWindows: Boolean = process.platform === 'win32'
+let isForced: boolean = 'FORCE_COLOR' in process.env || process.argv.includes('--color')
+let isWindows: boolean = process.platform === 'win32'
 
-let isCompatibleTerminal: Boolean =
+let isCompatibleTerminal: boolean =
   tty && tty.isatty(1) && process.env.TERM && process.env.TERM !== 'dumb'
 
-let isCI: Boolean =
+let isCI: boolean =
   'CI' in process.env &&
   ('GITHUB_ACTIONS' in process.env ||
     'GITLAB_CI' in process.env ||
@@ -17,10 +17,10 @@ let isCI: Boolean =
 export let isColorSupported: Function =
   !isDisabled && (isForced || isWindows || isCompatibleTerminal || isCI)
 
-let nope: Function = (s: String) => String(s)
+let nope: Function = (s: string) => String(s)
 
-function color(open: String, close: String, closeRegexp: String, restore: String = open): Function {
-  function func(s: String): String {
+function color(open: string, close: string, closeRegexp: string, restore: string = open): Function {
+  function func(s: string): string {
     if (!s || !s.length) {
       if (s === '') {
         return ''
@@ -38,18 +38,18 @@ function color(open: String, close: String, closeRegexp: String, restore: String
   return func
 }
 
-let close22: String = '\x1b[22m'
-let close39: String = '\x1b[39m'
-let close49: String = '\x1b[49m'
+let close22: string = '\x1b[22m'
+let close39: string = '\x1b[39m'
+let close49: string = '\x1b[49m'
 let regexp22: RegExp = /\x1b\[22m/g
 let regexp39: RegExp = /\x1b\[39m/g
 let regexp49: RegExp = /\x1b\[49m/g
 
-export function createColors(enabled: Boolean = isColorSupported): Object {
+export function createColors(enabled: boolean = isColorSupported): object {
   if (enabled) {
     return {
       isColorSupported: true,
-      reset: (s: String) => `\x1b[0m${s}\x1b[0m`,
+      reset: (s: string) => `\x1b[0m${s}\x1b[0m`,
       bold: color('\x1b[1m', close22, regexp22, '\x1b[22m\x1b[1m'),
       dim: color('\x1b[2m', close22, regexp22, '\x1b[22m\x1b[2m'),
       italic: color('\x1b[3m', '\x1b[23m', /\x1b\[23m/g),

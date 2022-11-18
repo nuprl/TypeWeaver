@@ -2,10 +2,10 @@
 
 module.exports = createRBTree
 
-var RED: Number   = 0
-var BLACK: Number = 1
+var RED: number   = 0
+var BLACK: number = 1
 
-function RBNode(color: String, key: String, value: String, left: Number, right: String, count: Function): Void {
+function RBNode(color: string, key: string, value: string, left: number, right: string, count: Function): Void {
   this._color = color
   this.key = key
   this.value = value
@@ -14,11 +14,11 @@ function RBNode(color: String, key: String, value: String, left: Number, right: 
   this._count = count
 }
 
-function cloneNode(node: HTMLElement): String {
+function cloneNode(node: HTMLElement): string {
   return new RBNode(node._color, node.key, node.value, node.left, node.right, node._count)
 }
 
-function repaint(color: String, node: Object): String {
+function repaint(color: string, node: object): string {
   return new RBNode(color, node.key, node.value, node.left, node.right, node._count)
 }
 
@@ -26,17 +26,17 @@ function recount(node: HTMLElement): Void {
   node._count = 1 + (node.left ? node.left._count : 0) + (node.right ? node.right._count : 0)
 }
 
-function RedBlackTree(compare: Function, root: String): Void {
+function RedBlackTree(compare: Function, root: string): Void {
   this._compare = compare
   this.root = root
 }
 
-var proto: Object = RedBlackTree.prototype
+var proto: object = RedBlackTree.prototype
 
 Object.defineProperty(proto, "keys", {
   get: function() {
-    var result: Array = []
-    this.forEach(function(k: String,v: Function) {
+    var result: any[] = []
+    this.forEach(function(k: string,v: Function) {
       result.push(k)
     })
     return result
@@ -45,8 +45,8 @@ Object.defineProperty(proto, "keys", {
 
 Object.defineProperty(proto, "values", {
   get: function() {
-    var result: Array = []
-    this.forEach(function(k: Number,v: String) {
+    var result: any[] = []
+    this.forEach(function(k: number,v: string) {
       result.push(v)
     })
     return result
@@ -64,14 +64,14 @@ Object.defineProperty(proto, "length", {
 })
 
 //Insert a new item into the tree
-proto.insert = function(key: String, value: Number) {
+proto.insert = function(key: string, value: number) {
   var cmp: Function = this._compare
   //Find point to insert new node at
-  var n: Array = this.root
-  var n_stack: Array = []
-  var d_stack: Array = []
+  var n: any[] = this.root
+  var n_stack: any[] = []
+  var d_stack: any[] = []
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     n_stack.push(n)
     d_stack.push(d)
     if(d <= 0) {
@@ -93,12 +93,12 @@ proto.insert = function(key: String, value: Number) {
   //Rebalance tree using rotations
   //console.log("start insert", key, d_stack)
   for(var s=n_stack.length-1; s>1; --s) {
-    var p: Array = n_stack[s-1]
-    var n: Array = n_stack[s]
+    var p: any[] = n_stack[s-1]
+    var n: any[] = n_stack[s]
     if(p._color === BLACK || n._color === BLACK) {
       break
     }
-    var pp: Object = n_stack[s-2]
+    var pp: object = n_stack[s-2]
     if(pp.left === p) {
       if(p.left === n) {
         var y: Function = pp.right
@@ -162,7 +162,7 @@ proto.insert = function(key: String, value: Number) {
       }
     } else {
       if(p.right === n) {
-        var y: String = pp.left
+        var y: string = pp.left
         if(y && y._color === RED) {
           //console.log("RRr", y.key)
           p._color = BLACK
@@ -190,7 +190,7 @@ proto.insert = function(key: String, value: Number) {
           break
         }
       } else {
-        var y: String = pp.left
+        var y: string = pp.left
         if(y && y._color === RED) {
           //console.log("RLr")
           p._color = BLACK
@@ -230,12 +230,12 @@ proto.insert = function(key: String, value: Number) {
 
 
 //Visit all nodes inorder
-function doVisitFull(visit: Function, node: HTMLElement): Boolean {
+function doVisitFull(visit: Function, node: HTMLElement): boolean {
   if(node.left) {
-    var v: Boolean = doVisitFull(visit, node.left)
+    var v: boolean = doVisitFull(visit, node.left)
     if(v) { return v }
   }
-  var v: Boolean = visit(node.key, node.value)
+  var v: boolean = visit(node.key, node.value)
   if(v) { return v }
   if(node.right) {
     return doVisitFull(visit, node.right)
@@ -243,14 +243,14 @@ function doVisitFull(visit: Function, node: HTMLElement): Boolean {
 }
 
 //Visit half nodes in order
-function doVisitHalf(lo: String, compare: Function, visit: Function, node: HTMLElement): String {
-  var l: Number = compare(lo, node.key)
+function doVisitHalf(lo: string, compare: Function, visit: Function, node: HTMLElement): string {
+  var l: number = compare(lo, node.key)
   if(l <= 0) {
     if(node.left) {
-      var v: String = doVisitHalf(lo, compare, visit, node.left)
+      var v: string = doVisitHalf(lo, compare, visit, node.left)
       if(v) { return v }
     }
-    var v: Boolean = visit(node.key, node.value)
+    var v: boolean = visit(node.key, node.value)
     if(v) { return v }
   }
   if(node.right) {
@@ -259,10 +259,10 @@ function doVisitHalf(lo: String, compare: Function, visit: Function, node: HTMLE
 }
 
 //Visit all nodes within a range
-function doVisit(lo: String, hi: String, compare: Function, visit: Function, node: HTMLElement): Object {
-  var l: Number = compare(lo, node.key)
-  var h: Number = compare(hi, node.key)
-  var v: Object
+function doVisit(lo: string, hi: string, compare: Function, visit: Function, node: HTMLElement): object {
+  var l: number = compare(lo, node.key)
+  var h: number = compare(hi, node.key)
+  var v: object
   if(l <= 0) {
     if(node.left) {
       v = doVisit(lo, hi, compare, visit, node.left)
@@ -279,7 +279,7 @@ function doVisit(lo: String, hi: String, compare: Function, visit: Function, nod
 }
 
 
-proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): Promise {
+proto.forEach = function rbTreeForEach(visit: string, lo: string, hi: string): Promise {
   if(!this.root) {
     return
   }
@@ -304,8 +304,8 @@ proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): P
 //First item in list
 Object.defineProperty(proto, "begin", {
   get: function() {
-    var stack: Array = []
-    var n: String = this.root
+    var stack: any[] = []
+    var n: string = this.root
     while(n) {
       stack.push(n)
       n = n.left
@@ -317,8 +317,8 @@ Object.defineProperty(proto, "begin", {
 //Last item in list
 Object.defineProperty(proto, "end", {
   get: function() {
-    var stack: Array = []
-    var n: String = this.root
+    var stack: any[] = []
+    var n: string = this.root
     while(n) {
       stack.push(n)
       n = n.right
@@ -328,12 +328,12 @@ Object.defineProperty(proto, "end", {
 })
 
 //Find the ith item in the tree
-proto.at = function(idx: Number) {
+proto.at = function(idx: number) {
   if(idx < 0) {
     return new RedBlackTreeIterator(this, [])
   }
-  var n: Array = this.root
-  var stack: Array = []
+  var n: any[] = this.root
+  var stack: any[] = []
   while(true) {
     stack.push(n)
     if(n.left) {
@@ -359,13 +359,13 @@ proto.at = function(idx: Number) {
   return new RedBlackTreeIterator(this, [])
 }
 
-proto.ge = function(key: String) {
+proto.ge = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
-  var stack: Array = []
-  var last_ptr: Number = 0
+  var n: any[] = this.root
+  var stack: any[] = []
+  var last_ptr: number = 0
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     stack.push(n)
     if(d <= 0) {
       last_ptr = stack.length
@@ -380,13 +380,13 @@ proto.ge = function(key: String) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.gt = function(key: String) {
+proto.gt = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
-  var stack: Array = []
-  var last_ptr: Number = 0
+  var n: any[] = this.root
+  var stack: any[] = []
+  var last_ptr: number = 0
   while(n) {
-    var d: String = cmp(key, n.key)
+    var d: string = cmp(key, n.key)
     stack.push(n)
     if(d < 0) {
       last_ptr = stack.length
@@ -401,13 +401,13 @@ proto.gt = function(key: String) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.lt = function(key: String) {
+proto.lt = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
-  var stack: Array = []
-  var last_ptr: Number = 0
+  var n: any[] = this.root
+  var stack: any[] = []
+  var last_ptr: number = 0
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     stack.push(n)
     if(d > 0) {
       last_ptr = stack.length
@@ -422,13 +422,13 @@ proto.lt = function(key: String) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.le = function(key: String) {
+proto.le = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
-  var stack: Array = []
-  var last_ptr: Number = 0
+  var n: any[] = this.root
+  var stack: any[] = []
+  var last_ptr: number = 0
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     stack.push(n)
     if(d >= 0) {
       last_ptr = stack.length
@@ -444,12 +444,12 @@ proto.le = function(key: String) {
 }
 
 //Finds the item with key if it exists
-proto.find = function(key: String) {
+proto.find = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
-  var stack: Array = []
+  var n: any[] = this.root
+  var stack: any[] = []
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     stack.push(n)
     if(d === 0) {
       return new RedBlackTreeIterator(this, stack)
@@ -464,8 +464,8 @@ proto.find = function(key: String) {
 }
 
 //Removes item with key from tree
-proto.remove = function(key: String) {
-  var iter: Object = this.find(key)
+proto.remove = function(key: string) {
+  var iter: object = this.find(key)
   if(iter) {
     return iter.remove()
   }
@@ -473,11 +473,11 @@ proto.remove = function(key: String) {
 }
 
 //Returns the item at `key`
-proto.get = function(key: String) {
+proto.get = function(key: string) {
   var cmp: Function = this._compare
-  var n: Array = this.root
+  var n: any[] = this.root
   while(n) {
-    var d: Number = cmp(key, n.key)
+    var d: number = cmp(key, n.key)
     if(d === 0) {
       return n.value
     }
@@ -491,12 +491,12 @@ proto.get = function(key: String) {
 }
 
 //Iterator for red black tree
-function RedBlackTreeIterator(tree: Function, stack: Array): Void {
+function RedBlackTreeIterator(tree: Function, stack: any[]): Void {
   this.tree = tree
   this._stack = stack
 }
 
-var iproto: Object = RedBlackTreeIterator.prototype
+var iproto: object = RedBlackTreeIterator.prototype
 
 //Test if iterator is valid
 Object.defineProperty(iproto, "valid", {
@@ -532,8 +532,8 @@ function swapNode(n: HTMLElement, v: HTMLElement): Void {
 }
 
 //Fix up a double black node in a tree
-function fixDoubleBlack(stack: Array): Void {
-  var n: String, p: Object, s: Array, z: Array
+function fixDoubleBlack(stack: any[]): Void {
+  var n: string, p: object, s: any[], z: any[]
   for(var i=stack.length-1; i>=0; --i) {
     n = stack[i]
     if(i === 0) {
@@ -726,12 +726,12 @@ function fixDoubleBlack(stack: Array): Void {
 
 //Removes item at iterator from tree
 iproto.remove = function() {
-  var stack: Array = this._stack
+  var stack: any[] = this._stack
   if(stack.length === 0) {
     return this.tree
   }
   //First copy path to node
-  var cstack: Array = new Array(stack.length)
+  var cstack: any[] = new Array(stack.length)
   var n: HTMLElement = stack[stack.length-1]
   cstack[cstack.length-1] = new RBNode(n._color, n.key, n.value, n.left, n.right, n._count)
   for(var i=stack.length-2; i>=0; --i) {
@@ -752,7 +752,7 @@ iproto.remove = function() {
     //console.log("moving to leaf")
 
     //First walk to previous leaf
-    var split: Number = cstack.length
+    var split: number = cstack.length
     n = n.left
     while(n.right) {
       cstack.push(n)
@@ -853,8 +853,8 @@ Object.defineProperty(iproto, "value", {
 //Returns the position of this iterator in the sorted list
 Object.defineProperty(iproto, "index", {
   get: function() {
-    var idx: Number = 0
-    var stack: Array = this._stack
+    var idx: number = 0
+    var stack: any[] = this._stack
     if(stack.length === 0) {
       var r: Function = this.tree.root
       if(r) {
@@ -879,11 +879,11 @@ Object.defineProperty(iproto, "index", {
 
 //Advances iterator to next element in list
 iproto.next = function() {
-  var stack: Array = this._stack
+  var stack: any[] = this._stack
   if(stack.length === 0) {
     return
   }
-  var n: Array = stack[stack.length-1]
+  var n: any[] = stack[stack.length-1]
   if(n.right) {
     n = n.right
     while(n) {
@@ -902,7 +902,7 @@ iproto.next = function() {
 //Checks if iterator is at end of tree
 Object.defineProperty(iproto, "hasNext", {
   get: function() {
-    var stack: Array = this._stack
+    var stack: any[] = this._stack
     if(stack.length === 0) {
       return false
     }
@@ -919,12 +919,12 @@ Object.defineProperty(iproto, "hasNext", {
 })
 
 //Update value
-iproto.update = function(value: Number) {
-  var stack: Array = this._stack
+iproto.update = function(value: number) {
+  var stack: any[] = this._stack
   if(stack.length === 0) {
     throw new Error("Can't update empty node!")
   }
-  var cstack: Array = new Array(stack.length)
+  var cstack: any[] = new Array(stack.length)
   var n: HTMLElement = stack[stack.length-1]
   cstack[cstack.length-1] = new RBNode(n._color, n.key, value, n.left, n.right, n._count)
   for(var i=stack.length-2; i>=0; --i) {
@@ -940,11 +940,11 @@ iproto.update = function(value: Number) {
 
 //Moves iterator backward one element
 iproto.prev = function() {
-  var stack: Array = this._stack
+  var stack: any[] = this._stack
   if(stack.length === 0) {
     return
   }
-  var n: Array = stack[stack.length-1]
+  var n: any[] = stack[stack.length-1]
   if(n.left) {
     n = n.left
     while(n) {
@@ -963,7 +963,7 @@ iproto.prev = function() {
 //Checks if iterator is at start of tree
 Object.defineProperty(iproto, "hasPrev", {
   get: function() {
-    var stack: Array = this._stack
+    var stack: any[] = this._stack
     if(stack.length === 0) {
       return false
     }
@@ -980,7 +980,7 @@ Object.defineProperty(iproto, "hasPrev", {
 })
 
 //Default comparison function
-function defaultCompare(a: Number, b: Number): Number {
+function defaultCompare(a: number, b: number): number {
   if(a < b) {
     return -1
   }
@@ -991,6 +991,6 @@ function defaultCompare(a: Number, b: Number): Number {
 }
 
 //Build a tree
-function createRBTree(compare: Number): Object {
+function createRBTree(compare: number): object {
   return new RedBlackTree(compare || defaultCompare, null)
 }

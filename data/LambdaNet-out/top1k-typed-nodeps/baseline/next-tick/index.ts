@@ -1,12 +1,12 @@
 'use strict';
 
-var ensureCallable: Function = function (fn: String) {
+var ensureCallable: Function = function (fn: string) {
 	if (typeof fn !== 'function') throw new TypeError(fn + " is not a function");
 	return fn;
 };
 
-var byObserver: Function = function (Observer: Object) {
-	var node: Error = document.createTextNode(''), queue: Array, currentQueue: Array, bit: Number = 0, i: Number = 0;
+var byObserver: Function = function (Observer: object) {
+	var node: Error = document.createTextNode(''), queue: any[], currentQueue: any[], bit: number = 0, i: number = 0;
 	new Observer(function () {
 		var callback: Function;
 		if (!queue) {
@@ -32,7 +32,7 @@ var byObserver: Function = function (Observer: Object) {
 			callback();
 		}
 	}).observe(node, { characterData: true });
-	return function (fn: Array) {
+	return function (fn: any[]) {
 		ensureCallable(fn);
 		if (queue) {
 			if (typeof queue === 'function') queue = [queue, fn];
@@ -52,7 +52,7 @@ module.exports = (function () {
 
 	// queueMicrotask
 	if (typeof queueMicrotask === "function") {
-		return function (cb: Array) { queueMicrotask(ensureCallable(cb)); };
+		return function (cb: any[]) { queueMicrotask(ensureCallable(cb)); };
 	}
 
 	// MutationObserver
@@ -64,12 +64,12 @@ module.exports = (function () {
 	// W3C Draft
 	// http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html
 	if (typeof setImmediate === 'function') {
-		return function (cb: Array) { setImmediate(ensureCallable(cb)); };
+		return function (cb: any[]) { setImmediate(ensureCallable(cb)); };
 	}
 
 	// Wide available standard
 	if ((typeof setTimeout === 'function') || (typeof setTimeout === 'object')) {
-		return function (cb: Array) { setTimeout(ensureCallable(cb), 0); };
+		return function (cb: any[]) { setTimeout(ensureCallable(cb), 0); };
 	}
 
 	return null;

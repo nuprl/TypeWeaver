@@ -2,6 +2,6 @@
 
 import hasSymbols from 'has-symbols/shams';
 
-export default function hasToStringTagShams(): Boolean {
+export default function hasToStringTagShams(): boolean {
 	return hasSymbols() && !!Symbol.toStringTag;
 };

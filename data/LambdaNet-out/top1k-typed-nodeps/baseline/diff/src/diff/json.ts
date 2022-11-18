@@ -10,20 +10,20 @@ export const jsonDiff: HTMLElement = new Diff();
 jsonDiff.useLongestToken = true;
 
 jsonDiff.tokenize = lineDiff.tokenize;
-jsonDiff.castInput = function(value: String) {
+jsonDiff.castInput = function(value: string) {
   const {undefinedReplacement, stringifyReplacer = (k, v) => typeof v === 'undefined' ? undefinedReplacement : v} = this.options;
 
   return typeof value === 'string' ? value : JSON.stringify(canonicalize(value, null, null, stringifyReplacer), stringifyReplacer, '  ');
 };
-jsonDiff.equals = function(left: String, right: String) {
+jsonDiff.equals = function(left: string, right: string) {
   return Diff.prototype.equals.call(jsonDiff, left.replace(/,([\r\n])/g, '$1'), right.replace(/,([\r\n])/g, '$1'));
 };
 
-export function diffJson(oldObj: Function, newObj: Function, options: Object): Boolean { return jsonDiff.diff(oldObj, newObj, options); }
+export function diffJson(oldObj: Function, newObj: Function, options: object): boolean { return jsonDiff.diff(oldObj, newObj, options); }
 
 // This function handles the presence of circular references by bailing out when encountering an
 // object that is already on the "stack" of items being processed. Accepts an optional replacer
-export function canonicalize(obj: Object, stack: Array, replacementStack: Array, replacer: Function, key: String): Object {
+export function canonicalize(obj: object, stack: any[], replacementStack: any[], replacer: Function, key: string): object {
   stack = stack || [];
   replacementStack = replacementStack || [];
 
@@ -31,7 +31,7 @@ export function canonicalize(obj: Object, stack: Array, replacementStack: Array,
     obj = replacer(key, obj);
   }
 
-  let i: Number;
+  let i: number;
 
   for (i = 0; i < stack.length; i += 1) {
     if (stack[i] === obj) {
@@ -39,7 +39,7 @@ export function canonicalize(obj: Object, stack: Array, replacementStack: Array,
     }
   }
 
-  let canonicalizedObj: Object;
+  let canonicalizedObj: object;
 
   if ('[object Array]' === objectPrototypeToString.call(obj)) {
     stack.push(obj);
@@ -61,8 +61,8 @@ export function canonicalize(obj: Object, stack: Array, replacementStack: Array,
     stack.push(obj);
     canonicalizedObj = {};
     replacementStack.push(canonicalizedObj);
-    let sortedKeys: Array = [],
-        key: String;
+    let sortedKeys: any[] = [],
+        key: string;
     for (key in obj) {
       /* istanbul ignore else */
       if (obj.hasOwnProperty(key)) {

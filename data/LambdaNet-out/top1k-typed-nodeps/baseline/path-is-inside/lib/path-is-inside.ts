@@ -1,8 +1,8 @@
 "use strict";
 
-var path: String = require("path");
+var path: string = require("path");
 
-module.exports = function (thePath: String, potentialParent: String) {
+module.exports = function (thePath: string, potentialParent: string) {
     // For inside-directory checking, we want to allow trailing slashes, so normalize.
     thePath = stripTrailingSep(thePath);
     potentialParent = stripTrailingSep(potentialParent);
@@ -20,7 +20,7 @@ module.exports = function (thePath: String, potentialParent: String) {
 		);
 };
 
-function stripTrailingSep(thePath: Array): Array {
+function stripTrailingSep(thePath: any[]): any[] {
     if (thePath[thePath.length - 1] === path.sep) {
         return thePath.slice(0, -1);
     }

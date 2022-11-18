@@ -49,10 +49,10 @@ exports.hrtimeMillisec = hrtimeMillisec;
  * scalars (strings, numbers, booleans) and arbitrarily deep arrays and objects
  * containing these.  This does *not* handle instances of other classes.
  */
-function deepCopy(obj: Object): Array
+function deepCopy(obj: object): any[]
 {
-	var ret: Array, key: Number;
-	var marker: String = '__deepCopy';
+	var ret: any[], key: number;
+	var marker: string = '__deepCopy';
 
 	if (obj && obj[marker])
 		throw (new Error('attempted deep copy of cyclic object'));
@@ -89,7 +89,7 @@ function deepCopy(obj: Object): Array
 	return (obj);
 }
 
-function deepEqual(obj1: Object, obj2: Object): Boolean
+function deepEqual(obj1: object, obj2: object): boolean
 {
 	if (typeof (obj1) != typeof (obj2))
 		return (false);
@@ -117,21 +117,21 @@ function deepEqual(obj1: Object, obj2: Object): Boolean
 	return (true);
 }
 
-function isEmpty(obj: String): Boolean
+function isEmpty(obj: string): boolean
 {
-	var key: String;
+	var key: string;
 	for (key in obj)
 		return (false);
 	return (true);
 }
 
-function hasKey(obj: String, key: String): Boolean
+function hasKey(obj: string, key: string): boolean
 {
 	mod_assert.equal(typeof (key), 'string');
 	return (Object.prototype.hasOwnProperty.call(obj, key));
 }
 
-function forEachKey(obj: Object, callback: Function): Void
+function forEachKey(obj: object, callback: Function): Void
 {
 	for (var key in obj) {
 		if (hasKey(obj, key)) {
@@ -140,13 +140,13 @@ function forEachKey(obj: Object, callback: Function): Void
 	}
 }
 
-function pluck(obj: String, key: String): String
+function pluck(obj: string, key: string): string
 {
 	mod_assert.equal(typeof (key), 'string');
 	return (pluckv(obj, key));
 }
 
-function pluckv(obj: Object, key: String): Array
+function pluckv(obj: object, key: string): any[]
 {
 	if (obj === null || typeof (obj) !== 'object')
 		return (undefined);
@@ -154,11 +154,11 @@ function pluckv(obj: Object, key: String): Array
 	if (obj.hasOwnProperty(key))
 		return (obj[key]);
 
-	var i: Number = key.indexOf('.');
+	var i: number = key.indexOf('.');
 	if (i == -1)
 		return (undefined);
 
-	var key1: String = key.substr(0, i);
+	var key1: string = key.substr(0, i);
 	if (!obj.hasOwnProperty(key1))
 		return (undefined);
 
@@ -171,15 +171,15 @@ function pluckv(obj: Object, key: String): Array
  * depth).forEach(callback), except that the intermediate array is never
  * created.
  */
-function flattenIter(data: Object, depth: String, callback: String): Void
+function flattenIter(data: object, depth: string, callback: string): Void
 {
 	doFlattenIter(data, depth, [], callback);
 }
 
-function doFlattenIter(data: Object, depth: Number, accum: Array, callback: Function): Void
+function doFlattenIter(data: object, depth: number, accum: any[], callback: Function): Void
 {
-	var each: Array;
-	var key: String;
+	var each: any[];
+	var key: string;
 
 	if (depth === 0) {
 		each = accum.slice(0);
@@ -200,7 +200,7 @@ function doFlattenIter(data: Object, depth: Number, accum: Array, callback: Func
 	}
 }
 
-function flattenObject(data: Object, depth: Number): Array
+function flattenObject(data: object, depth: number): any[]
 {
 	if (depth === 0)
 		return ([ data ]);
@@ -210,11 +210,11 @@ function flattenObject(data: Object, depth: Number): Array
 	mod_assert.equal(typeof (depth), 'number');
 	mod_assert.ok(depth >= 0);
 
-	var rv: Array = [];
-	var key: String;
+	var rv: any[] = [];
+	var key: string;
 
 	for (key in data) {
-		flattenObject(data[key], depth - 1).forEach(function (p: Array) {
+		flattenObject(data[key], depth - 1).forEach(function (p: any[]) {
 			rv.push([ key ].concat(p));
 		});
 	}
@@ -222,18 +222,18 @@ function flattenObject(data: Object, depth: Number): Array
 	return (rv);
 }
 
-function startsWith(str: String, prefix: Array): Boolean
+function startsWith(str: string, prefix: any[]): boolean
 {
 	return (str.substr(0, prefix.length) == prefix);
 }
 
-function endsWith(str: String, suffix: Array): Boolean
+function endsWith(str: string, suffix: any[]): boolean
 {
 	return (str.substr(
 	    str.length - suffix.length, suffix.length) == suffix);
 }
 
-function iso8601(d: HTMLDivElement): Object
+function iso8601(d: HTMLDivElement): object
 {
 	if (typeof (d) == 'number')
 		d = new Date(d);
@@ -244,13 +244,13 @@ function iso8601(d: HTMLDivElement): Object
 	    d.getUTCMilliseconds()));
 }
 
-var RFC1123_MONTHS: Array = [
+var RFC1123_MONTHS: any[] = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-var RFC1123_DAYS: Array = [
+var RFC1123_DAYS: any[] = [
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-function rfc1123(date: HTMLElement): String {
+function rfc1123(date: HTMLElement): string {
 	return (mod_extsprintf.sprintf('%s, %02d %s %04d %02d:%02d:%02d GMT',
 	    RFC1123_DAYS[date.getUTCDay()], date.getUTCDate(),
 	    RFC1123_MONTHS[date.getUTCMonth()], date.getUTCFullYear(),
@@ -263,7 +263,7 @@ function rfc1123(date: HTMLElement): String {
  * the epoch or any string format that Date accepts, giving preference to the
  * former where these two sets overlap (e.g., small numbers).
  */
-function parseDateTime(str: String): HTMLDivElement
+function parseDateTime(str: string): HTMLDivElement
 {
 	/*
 	 * This is irritatingly implicit, but significantly more concise than
@@ -273,7 +273,7 @@ function parseDateTime(str: String): HTMLDivElement
 	 * case).  Otherwise, we pass the string directly to the Date
 	 * constructor to parse.
 	 */
-	var numeric: String = +str;
+	var numeric: string = +str;
 	if (!isNaN(numeric)) {
 		return (new Date(numeric));
 	} else {
@@ -286,14 +286,14 @@ function parseDateTime(str: String): HTMLDivElement
  * Number.*_SAFE_INTEGER isn't present before node v0.12, so we hardcode
  * the ES6 definitions here, while allowing for them to someday be higher.
  */
-var MAX_SAFE_INTEGER: Number = Number.MAX_SAFE_INTEGER || 9007199254740991;
-var MIN_SAFE_INTEGER: Boolean = Number.MIN_SAFE_INTEGER || -9007199254740991;
+var MAX_SAFE_INTEGER: number = Number.MAX_SAFE_INTEGER || 9007199254740991;
+var MIN_SAFE_INTEGER: boolean = Number.MIN_SAFE_INTEGER || -9007199254740991;
 
 
 /*
  * Default options for parseInteger().
  */
-var PI_DEFAULTS: Object = {
+var PI_DEFAULTS: object = {
 	base: 10,
 	allowSign: true,
 	allowPrefix: false,
@@ -303,39 +303,39 @@ var PI_DEFAULTS: Object = {
 	leadingZeroIsOctal: false
 };
 
-var CP_0: Number = 0x30;
-var CP_9: Number = 0x39;
+var CP_0: number = 0x30;
+var CP_9: number = 0x39;
 
-var CP_A: Number = 0x41;
-var CP_B: Number = 0x42;
-var CP_O: Number = 0x4f;
-var CP_T: Number = 0x54;
-var CP_X: Number = 0x58;
-var CP_Z: Number = 0x5a;
+var CP_A: number = 0x41;
+var CP_B: number = 0x42;
+var CP_O: number = 0x4f;
+var CP_T: number = 0x54;
+var CP_X: number = 0x58;
+var CP_Z: number = 0x5a;
 
-var CP_a: Number = 0x61;
-var CP_b: Number = 0x62;
-var CP_o: Number = 0x6f;
-var CP_t: Number = 0x74;
-var CP_x: Number = 0x78;
-var CP_z: Number = 0x7a;
+var CP_a: number = 0x61;
+var CP_b: number = 0x62;
+var CP_o: number = 0x6f;
+var CP_t: number = 0x74;
+var CP_x: number = 0x78;
+var CP_z: number = 0x7a;
 
-var PI_CONV_DEC: Number = 0x30;
-var PI_CONV_UC: Number = 0x37;
-var PI_CONV_LC: Number = 0x57;
+var PI_CONV_DEC: number = 0x30;
+var PI_CONV_UC: number = 0x37;
+var PI_CONV_LC: number = 0x57;
 
 
 /*
  * A stricter version of parseInt() that provides options for changing what
  * is an acceptable string (for example, disallowing trailing characters).
  */
-function parseInteger(str: String, uopts: String): Number
+function parseInteger(str: string, uopts: string): number
 {
 	mod_assert.string(str, 'str');
 	mod_assert.optionalObject(uopts, 'options');
 
-	var baseOverride: Boolean = false;
-	var options: Object = PI_DEFAULTS;
+	var baseOverride: boolean = false;
+	var options: object = PI_DEFAULTS;
 
 	if (uopts) {
 		baseOverride = hasKey(uopts, 'base');
@@ -361,14 +361,14 @@ function parseInteger(str: String, uopts: String): Number
 		}
 	}
 
-	var c: Number;
-	var pbase: Number = -1;
-	var base: Number = options.base;
-	var start: String;
-	var mult: Number = 1;
-	var value: Number = 0;
-	var idx: Number = 0;
-	var len: Number = str.length;
+	var c: number;
+	var pbase: number = -1;
+	var base: number = options.base;
+	var start: string;
+	var mult: number = 1;
+	var value: number = 0;
+	var idx: number = 0;
+	var len: number = str.length;
 
 	/* Trim any whitespace on the left side. */
 	if (options.trimWhitespace) {
@@ -437,7 +437,7 @@ function parseInteger(str: String, uopts: String): Number
 	}
 
 	/* Calculate our final value. */
-	var result: Number = value * mult;
+	var result: number = value * mult;
 
 	/*
 	 * If the string represents a value that cannot be precisely represented
@@ -464,7 +464,7 @@ function parseInteger(str: String, uopts: String): Number
 /*
  * Interpret a character code as a base-36 digit.
  */
-function translateDigit(d: Number): Number
+function translateDigit(d: number): number
 {
 	if (d >= CP_0 && d <= CP_9) {
 		/* '0' to '9' -> 0 to 9 */
@@ -485,7 +485,7 @@ function translateDigit(d: Number): Number
 /*
  * Test if a value matches the ECMAScript definition of trimmable whitespace.
  */
-function isSpace(c: Number): Boolean
+function isSpace(c: number): boolean
 {
 	return (c === 0x20) ||
 	    (c >= 0x0009 && c <= 0x000d) ||
@@ -505,7 +505,7 @@ function isSpace(c: Number): Boolean
 /*
  * Determine which base a character indicates (e.g., 'x' indicates hex).
  */
-function prefixToBase(c: Number): Number
+function prefixToBase(c: number): number
 {
 	if (c === CP_b || c === CP_B) {
 		/* 0b/0B (binary) */
@@ -526,7 +526,7 @@ function prefixToBase(c: Number): Number
 }
 
 
-function validateJsonObjectJS(schema: String, input: Element): Object
+function validateJsonObjectJS(schema: string, input: Element): object
 {
 	var report: HTMLElement = mod_jsonschema.validate(input, schema);
 
@@ -534,12 +534,12 @@ function validateJsonObjectJS(schema: String, input: Element): Object
 		return (null);
 
 	/* Currently, we only do anything useful with the first error. */
-	var error: Object = report.errors[0];
+	var error: object = report.errors[0];
 
 	/* The failed property is given by a URI with an irrelevant prefix. */
-	var propname: Number = error['property'];
-	var reason: String = error['message'].toLowerCase();
-	var i: Number, j: Number;
+	var propname: number = error['property'];
+	var reason: string = error['message'].toLowerCase();
+	var i: number, j: number;
 
 	/*
 	 * There's at least one case where the property error message is
@@ -557,12 +557,12 @@ function validateJsonObjectJS(schema: String, input: Element): Object
 		reason = 'unsupported property';
 	}
 
-	var rv: Object = new mod_verror.VError('property "%s": %s', propname, reason);
+	var rv: object = new mod_verror.VError('property "%s": %s', propname, reason);
 	rv.jsv_details = error;
 	return (rv);
 }
 
-function randElt(arr: Array): String
+function randElt(arr: any[]): string
 {
 	mod_assert.ok(Array.isArray(arr) && arr.length > 0,
 	    'randElt argument must be a non-empty array');
@@ -585,7 +585,7 @@ function assertHrtime(a: Promise): Void
  * becomes valuable, we can define a representation and extend the
  * implementation to support it.
  */
-function hrtimeDiff(a: Object, b: Object): Object
+function hrtimeDiff(a: object, b: object): object
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -608,7 +608,7 @@ function hrtimeDiff(a: Object, b: Object): Object
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of nanoseconds.
  */
-function hrtimeNanosec(a: Object): Number
+function hrtimeNanosec(a: object): number
 {
 	assertHrtime(a);
 
@@ -619,7 +619,7 @@ function hrtimeNanosec(a: Object): Number
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of microseconds.
  */
-function hrtimeMicrosec(a: Object): Number
+function hrtimeMicrosec(a: object): number
 {
 	assertHrtime(a);
 
@@ -630,7 +630,7 @@ function hrtimeMicrosec(a: Object): Number
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of milliseconds.
  */
-function hrtimeMillisec(a: Object): Number
+function hrtimeMillisec(a: object): number
 {
 	assertHrtime(a);
 
@@ -642,7 +642,7 @@ function hrtimeMillisec(a: Object): Number
  * addition.  This function is useful for accumulating several hrtime intervals
  * into a counter.  Returns A.
  */
-function hrtimeAccum(a: Object, b: Object): Object
+function hrtimeAccum(a: object, b: object): object
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -672,11 +672,11 @@ function hrtimeAccum(a: Object, b: Object): Object
  * Add two hrtime readings A and B, returning the result as a new hrtime array.
  * Does not modify either input argument.
  */
-function hrtimeAdd(a: Object, b: String): Promise
+function hrtimeAdd(a: object, b: string): Promise
 {
 	assertHrtime(a);
 
-	var rv: Array = [ a[0], a[1] ];
+	var rv: any[] = [ a[0], a[1] ];
 
 	return (hrtimeAccum(rv, b));
 }
@@ -689,7 +689,7 @@ function hrtimeAdd(a: Object, b: String): Promise
  * properties.  If no properties were found, the returned array will be of
  * zero length.
  */
-function extraProperties(obj: String, allowed: String): Array
+function extraProperties(obj: string, allowed: string): any[]
 {
 	mod_assert.ok(typeof (obj) === 'object' && obj !== null,
 	    'obj argument must be a non-null object');
@@ -700,7 +700,7 @@ function extraProperties(obj: String, allowed: String): Array
 		    'allowed argument must be an array of strings');
 	}
 
-	return (Object.keys(obj).filter(function (key: String) {
+	return (Object.keys(obj).filter(function (key: string) {
 		return (allowed.indexOf(key) === -1);
 	}));
 }
@@ -711,9 +711,9 @@ function extraProperties(obj: String, allowed: String): Array
  * the union of these sets with "overrides" overriding "provided", and
  * "provided" overriding "defaults".  None of the input objects are modified.
  */
-function mergeObjects(provided: Object, overrides: Promise, defaults: Promise): Object
+function mergeObjects(provided: object, overrides: Promise, defaults: Promise): object
 {
-	var rv: Object, k: Function;
+	var rv: object, k: Function;
 
 	rv = {};
 	if (defaults) {

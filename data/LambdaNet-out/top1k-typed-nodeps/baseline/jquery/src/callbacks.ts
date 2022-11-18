@@ -3,9 +3,9 @@ import toType from "./core/toType.js";
 import rnothtmlwhite from "./var/rnothtmlwhite.js";
 
 // Convert String-formatted options into Object-formatted ones
-function createOptions( options: Array ): Object {
-	var object: Object = {};
-	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: String, flag: String ) {
+function createOptions( options: any[] ): object {
+	var object: object = {};
+	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: string, flag: string ) {
 		object[ flag ] = true;
 	} );
 	return object;
@@ -33,7 +33,7 @@ function createOptions( options: Array ): Object {
  *	stopOnFalse:	interrupt callings when a callback returns false
  *
  */
-jQuery.Callbacks = function( options: Object ) {
+jQuery.Callbacks = function( options: object ) {
 
 	// Convert options from String-formatted to Object-formatted if needed
 	// (we check in cache first)
@@ -42,25 +42,25 @@ jQuery.Callbacks = function( options: Object ) {
 		jQuery.extend( {}, options );
 
 	var // Flag to know if list is currently firing
-		firing: Boolean,
+		firing: boolean,
 
 		// Last fire value for non-forgettable lists
-		memory: Boolean,
+		memory: boolean,
 
 		// Flag to know if list was already fired
-		fired: Boolean,
+		fired: boolean,
 
 		// Flag to prevent firing
-		locked: Boolean,
+		locked: boolean,
 
 		// Actual callback list
-		list: Array = [],
+		list: any[] = [],
 
 		// Queue of execution data for repeatable lists
-		queue: Array = [],
+		queue: any[] = [],
 
 		// Index of currently firing callback (modified by add/remove as needed)
-		firingIndex: Number = -1,
+		firingIndex: number = -1,
 
 		// Fire callbacks
 		fire: Function = function() {
@@ -108,7 +108,7 @@ jQuery.Callbacks = function( options: Object ) {
 		},
 
 		// Actual Callbacks object
-		self: Object = {
+		self: object = {
 
 			// Add a callback or a collection of callbacks to the list
 			add: function() {
@@ -120,8 +120,8 @@ jQuery.Callbacks = function( options: Object ) {
 						queue.push( memory );
 					}
 
-					( function add( args: Array ): Void {
-						jQuery.each( args, function( _: String, arg: Array ) {
+					( function add( args: any[] ): Void {
+						jQuery.each( args, function( _: string, arg: any[] ) {
 							if ( typeof arg === "function" ) {
 								if ( !options.unique || !self.has( arg ) ) {
 									list.push( arg );
@@ -143,8 +143,8 @@ jQuery.Callbacks = function( options: Object ) {
 
 			// Remove a callback from the list
 			remove: function() {
-				jQuery.each( arguments, function( _: String, arg: String ) {
-					var index: Number;
+				jQuery.each( arguments, function( _: string, arg: string ) {
+					var index: number;
 					while ( ( index = jQuery.inArray( arg, list, index ) ) > -1 ) {
 						list.splice( index, 1 );
 
@@ -159,7 +159,7 @@ jQuery.Callbacks = function( options: Object ) {
 
 			// Check if a given callback is in the list.
 			// If no argument is given, return whether or not list has callbacks attached.
-			has: function( fn: Number ) {
+			has: function( fn: number ) {
 				return fn ?
 					jQuery.inArray( fn, list ) > -1 :
 					list.length > 0;
@@ -200,7 +200,7 @@ jQuery.Callbacks = function( options: Object ) {
 			},
 
 			// Call all callbacks with the given context and arguments
-			fireWith: function( context: Function, args: Array ) {
+			fireWith: function( context: Function, args: any[] ) {
 				if ( !locked ) {
 					args = args || [];
 					args = [ context, args.slice ? args.slice() : args ];

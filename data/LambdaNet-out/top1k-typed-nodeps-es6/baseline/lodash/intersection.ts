@@ -17,8 +17,8 @@ import castArrayLikeObject from './.internal/castArrayLikeObject.js'
  * intersection([2, 1], [2, 3])
  * // => [2]
  */
-function intersection(...arrays): Array {
-  const mapped: Array = map(arrays, castArrayLikeObject)
+function intersection(...arrays): any[] {
+  const mapped: any[] = map(arrays, castArrayLikeObject)
   return (mapped.length && mapped[0] === arrays[0])
     ? baseIntersection(mapped)
     : []

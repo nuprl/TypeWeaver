@@ -6,19 +6,19 @@ var resolveException: Function    = require("../lib/resolve-exception")
   , ensureArray: Function         = require("../array/ensure")
   , is: Function                  = require("./is");
 
-var objHasOwnProperty: Function = Object.prototype.hasOwnProperty, invalidItemsLimit: Number = 3;
+var objHasOwnProperty: Function = Object.prototype.hasOwnProperty, invalidItemsLimit: number = 3;
 
-module.exports = function (value: Object/*, options*/) {
-	var options: Object = arguments[1];
-	var mainErrorMessage: String =
+module.exports = function (value: object/*, options*/) {
+	var options: object = arguments[1];
+	var mainErrorMessage: string =
 		options && options.name
 			? "Expected a plain object for %n, received %v"
 			: "%v is not a plain object";
 	if (!is(value)) return resolveException(value, mainErrorMessage, options);
 	if (!options) return value;
 
-	var invalidKeys: Array, key: String, errorMessage: String;
-	var allowedKeys: String = ensureArray(options.allowedKeys, { isOptional: true });
+	var invalidKeys: any[], key: string, errorMessage: string;
+	var allowedKeys: string = ensureArray(options.allowedKeys, { isOptional: true });
 	if (allowedKeys) {
 		for (key in value) {
 			if (!objHasOwnProperty.call(value, key)) continue;
@@ -39,10 +39,10 @@ module.exports = function (value: Object/*, options*/) {
 		isOptional: true
 	});
 	if (ensurePropertyValue) {
-		var coercedValue: Object = {};
+		var coercedValue: object = {};
 		for (key in value) {
 			if (!objHasOwnProperty.call(value, key)) continue;
-			var coercedPropertyValue: String;
+			var coercedPropertyValue: string;
 			try {
 				coercedPropertyValue = ensurePropertyValue(value[key]);
 			} catch (error) {

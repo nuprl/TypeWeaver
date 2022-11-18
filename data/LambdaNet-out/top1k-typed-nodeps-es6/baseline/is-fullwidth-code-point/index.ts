@@ -1,6 +1,6 @@
 /* eslint-disable yoda */
 
-export default function isFullwidthCodePoint(codePoint: Number): Boolean {
+export default function isFullwidthCodePoint(codePoint: number): boolean {
 	if (!Number.isInteger(codePoint)) {
 		return false;
 	}

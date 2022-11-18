@@ -10,7 +10,7 @@ import DescriptionFileUtils from './DescriptionFileUtils';
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 
-const slashCode: Number = "/".charCodeAt(0);
+const slashCode: number = "/".charCodeAt(0);
 
 export default class SelfReferencePlugin {
 	/**
@@ -29,23 +29,23 @@ export default class SelfReferencePlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
-			.tapAsync("SelfReferencePlugin", (request: Object, resolveContext: Function, callback: Function) => {
+			.tapAsync("SelfReferencePlugin", (request: object, resolveContext: Function, callback: Function) => {
 				if (!request.descriptionFilePath) return callback();
 
-				const req: String = request.request;
+				const req: string = request.request;
 				if (!req) return callback();
 
 				// Feature is only enabled when an exports field is present
-				const exportsField: String = DescriptionFileUtils.getField(
+				const exportsField: string = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					this.fieldName
 				);
 				if (!exportsField) return callback();
 
-				const name: String = DescriptionFileUtils.getField(
+				const name: string = DescriptionFileUtils.getField(
 					request.descriptionFileData,
 					"name"
 				);
@@ -56,9 +56,9 @@ export default class SelfReferencePlugin {
 					(req.length === name.length ||
 						req.charCodeAt(name.length) === slashCode)
 				) {
-					const remainingRequest: String = `.${req.slice(name.length)}`;
+					const remainingRequest: string = `.${req.slice(name.length)}`;
 
-					const obj: Object = {
+					const obj: object = {
 						...request,
 						request: remainingRequest,
 						path: /** @type {string} */ (request.descriptionFileRoot),

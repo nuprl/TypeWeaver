@@ -1,7 +1,7 @@
 'use strict';
 
-var margin: String = require('./margin.js');
-var parsers: String = require('../parsers.js');
+var margin: string = require('./margin.js');
+var parsers: string = require('../parsers.js');
 
 module.exports.definition = {
   set: parsers.subImplicitSetter('margin', 'right', margin.isValid, margin.parser),

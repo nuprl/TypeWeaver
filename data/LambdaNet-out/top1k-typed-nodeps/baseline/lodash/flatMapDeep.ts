@@ -2,7 +2,7 @@ import baseFlatten from './.internal/baseFlatten.js'
 import map from './map.js'
 
 /** Used as references for various `Number` constants. */
-const INFINITY: Number = 1 / 0
+const INFINITY: number = 1 / 0
 
 /**
  * This method is like `flatMap` except that it recursively flattens the
@@ -23,7 +23,7 @@ const INFINITY: Number = 1 / 0
  * flatMapDeep([1, 2], duplicate)
  * // => [1, 1, 2, 2]
  */
-function flatMapDeep(collection: String, iteratee: Function): String {
+function flatMapDeep(collection: string, iteratee: Function): string {
   return baseFlatten(map(collection, iteratee), INFINITY)
 }
 

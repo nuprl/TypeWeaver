@@ -1,22 +1,12 @@
 implementation.ts(3,36): error TS2307: Cannot find module 'es-abstract/2021/RequireObjectCoercible' or its corresponding type declarations.
-implementation.ts(9,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(11,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(9,35): error TS2769: No overload matches this call.
   Overload 1 of 3, '(target: (this: ObjectConstructor, ...args: readonly unknown[]) => unknown, thisArg: ObjectConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type '(this: ObjectConstructor, ...args: readonly unknown[]) => unknown'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Type 'Object' provides no match for the signature '(this: ObjectConstructor, ...args: readonly unknown[]): unknown'.
+    Argument of type 'object' is not assignable to parameter of type '(this: ObjectConstructor, ...args: readonly unknown[]) => unknown'.
+      Type '{}' provides no match for the signature '(this: ObjectConstructor, ...args: readonly unknown[]): unknown'.
   Overload 2 of 3, '(originalFunction: (this: ObjectConstructor, ...args: readonly unknown[]) => unknown, thisArg: ObjectConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type '(this: ObjectConstructor, ...args: readonly unknown[]) => unknown'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Type 'Object' provides no match for the signature '(this: ObjectConstructor, ...args: readonly unknown[]): unknown'.
-shim.ts(7,6): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-shim.ts(9,3): error TS2322: Type '() => Boolean' is not assignable to type '() => boolean'.
-  Type 'Boolean' is not assignable to type 'boolean'.
-    'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
-shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'String' have no overlap.
-shim.ts(13,2): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
+    Argument of type 'object' is not assignable to parameter of type '(this: ObjectConstructor, ...args: readonly unknown[]) => unknown'.
+      Type '{}' provides no match for the signature '(this: ObjectConstructor, ...args: readonly unknown[]): unknown'.
+shim.ts(7,6): error TS2322: Type 'object' is not assignable to type 'string'.
+shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'string' have no overlap.
+shim.ts(13,2): error TS2322: Type 'string' is not assignable to type 'boolean'.
 

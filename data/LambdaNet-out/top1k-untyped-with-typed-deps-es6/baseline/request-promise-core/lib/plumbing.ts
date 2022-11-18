@@ -7,9 +7,9 @@ import isString from 'lodash/isString';
 import isUndefined from 'lodash/isUndefined';
 
 
-export default function (options: Object) {
+export default function (options: object) {
 
-    var errorText: String = 'Please verify options'; // For better minification because this string is repeating
+    var errorText: string = 'Please verify options'; // For better minification because this string is repeating
 
     if (!isObjectLike(options)) {
         throw new TypeError(errorText);
@@ -23,7 +23,7 @@ export default function (options: Object) {
         throw new TypeError(errorText + '.PromiseImpl');
     }
 
-    var PromiseImpl: Object = options.PromiseImpl;
+    var PromiseImpl: object = options.PromiseImpl;
     var constructorMixin: Function = options.constructorMixin;
 
 
@@ -33,7 +33,7 @@ export default function (options: Object) {
 
         var self: HTMLElement = this;
 
-        self._rp_promise = new PromiseImpl(function (resolve: String, reject: String) {
+        self._rp_promise = new PromiseImpl(function (resolve: string, reject: string) {
             self._rp_resolve = resolve;
             self._rp_reject = reject;
             if (constructorMixin) {
@@ -42,7 +42,7 @@ export default function (options: Object) {
         });
 
         self._rp_callbackOrig = requestOptions.callback;
-        requestOptions.callback = self.callback = function RP$callback(err: Function, response: Object, body: String): Void {
+        requestOptions.callback = self.callback = function RP$callback(err: Function, response: object, body: string): Void {
             plumbing.callback.call(self, err, response, body);
         };
 
@@ -60,16 +60,16 @@ export default function (options: Object) {
     };
 
     plumbing.defaultTransformations = {
-        HEAD: function (body: Function, response: ChildProcess, resolveWithFullResponse: Boolean) {
+        HEAD: function (body: Function, response: ChildProcess, resolveWithFullResponse: boolean) {
             return resolveWithFullResponse ? response : response.headers;
         }
     };
 
-    plumbing.callback = function (err: Boolean, response: HTMLElement, body: Function) {
+    plumbing.callback = function (err: boolean, response: HTMLElement, body: Function) {
 
         var self: HTMLElement = this;
 
-        var origCallbackThrewException: Boolean = false, thrownException: Array = null;
+        var origCallbackThrewException: boolean = false, thrownException: any[] = null;
 
         if (isFunction(self._rp_callbackOrig)) {
             try {
@@ -80,7 +80,7 @@ export default function (options: Object) {
             }
         }
 
-        var is2xx: Boolean = !err && /^2/.test('' + response.statusCode);
+        var is2xx: boolean = !err && /^2/.test('' + response.statusCode);
 
         if (err) {
 
@@ -93,10 +93,10 @@ export default function (options: Object) {
                 (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: Object) {
+                    .then(function (transformedResponse: object) {
                         self._rp_reject(new errors.StatusCodeError(response.statusCode, body, self._rp_options, transformedResponse));
                     })
-                    .catch(function (transformErr: Boolean) {
+                    .catch(function (transformErr: boolean) {
                         self._rp_reject(new errors.TransformError(transformErr, self._rp_options, response));
                     });
 
@@ -111,10 +111,10 @@ export default function (options: Object) {
                 (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: Object) {
+                    .then(function (transformedResponse: object) {
                         self._rp_resolve(transformedResponse);
                     })
-                    .catch(function (transformErr: Boolean) {
+                    .catch(function (transformErr: boolean) {
                         self._rp_reject(new errors.TransformError(transformErr, self._rp_options, response));
                     });
 
@@ -132,7 +132,7 @@ export default function (options: Object) {
 
     };
 
-    plumbing.exposePromiseMethod = function (exposeTo: Object, bindTo: Array, promisePropertyKey: String, methodToExpose: String, exposeAs: String) {
+    plumbing.exposePromiseMethod = function (exposeTo: object, bindTo: any[], promisePropertyKey: string, methodToExpose: string, exposeAs: string) {
 
         exposeAs = exposeAs || methodToExpose;
 
@@ -141,13 +141,13 @@ export default function (options: Object) {
         }
 
         exposeTo[exposeAs] = function RP$exposed(): Promise {
-            var self: Object = bindTo || this;
+            var self: object = bindTo || this;
             return self[promisePropertyKey][methodToExpose].apply(self[promisePropertyKey], arguments);
         };
 
     };
 
-    plumbing.exposePromise = function (exposeTo: Object, bindTo: Array, promisePropertyKey: String, exposeAs: String) {
+    plumbing.exposePromise = function (exposeTo: object, bindTo: any[], promisePropertyKey: string, exposeAs: string) {
 
         exposeAs = exposeAs || 'promise';
 
@@ -155,8 +155,8 @@ export default function (options: Object) {
             throw new Error('Unable to expose method "' + exposeAs + '"');
         }
 
-        exposeTo[exposeAs] = function RP$promise(): Object {
-            var self: Object = bindTo || this;
+        exposeTo[exposeAs] = function RP$promise(): object {
+            var self: object = bindTo || this;
             return self[promisePropertyKey];
         };
 

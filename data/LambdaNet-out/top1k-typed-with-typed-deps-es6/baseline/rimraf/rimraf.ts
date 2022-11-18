@@ -8,18 +8,18 @@ try {
   // treat glob as optional.
 }
 
-const defaultGlobOpts: Object = {
+const defaultGlobOpts: object = {
   nosort: true,
   silent: true
 }
 
 // for EMFILE handling
-let timeout: Number = 0
+let timeout: number = 0
 
-const isWindows: Boolean = (process.platform === "win32")
+const isWindows: boolean = (process.platform === "win32")
 
-const defaults: Function = (options: Object) => {
-  const methods: Array = [
+const defaults: Function = (options: object) => {
+  const methods: any[] = [
     'unlink',
     'chmod',
     'stat',
@@ -27,7 +27,7 @@ const defaults: Function = (options: Object) => {
     'rmdir',
     'readdir'
   ]
-  methods.forEach((m: Number) => {
+  methods.forEach((m: number) => {
     options[m] = options[m] || fs[m]
     m = m + 'Sync'
     options[m] = options[m] || fs[m]
@@ -45,7 +45,7 @@ const defaults: Function = (options: Object) => {
   options.glob = options.glob || defaultGlobOpts
 }
 
-const rimraf: Function = (p: String, options: Object, cb: Function) => {
+const rimraf: Function = (p: string, options: object, cb: Function) => {
   if (typeof options === 'function') {
     cb = options
     options = {}
@@ -59,17 +59,17 @@ const rimraf: Function = (p: String, options: Object, cb: Function) => {
 
   defaults(options)
 
-  let busyTries: Number = 0
-  let errState: String = null
-  let n: Number = 0
+  let busyTries: number = 0
+  let errState: string = null
+  let n: number = 0
 
-  const next: Function = (er: String) => {
+  const next: Function = (er: string) => {
     errState = errState || er
     if (--n === 0)
       cb(errState)
   }
 
-  const afterGlob: Function = (er: String, results: Array) => {
+  const afterGlob: Function = (er: string, results: any[]) => {
     if (er)
       return cb(er)
 
@@ -77,7 +77,7 @@ const rimraf: Function = (p: String, options: Object, cb: Function) => {
     if (n === 0)
       return cb()
 
-    results.forEach((p: String) => {
+    results.forEach((p: string) => {
       const CB: Function = (er: HTMLElement) => {
         if (er) {
           if ((er.code === "EBUSY" || er.code === "ENOTEMPTY" || er.code === "EPERM") &&
@@ -106,7 +106,7 @@ const rimraf: Function = (p: String, options: Object, cb: Function) => {
   if (options.disableGlob || !glob.hasMagic(p))
     return afterGlob(null, [p])
 
-  options.lstat(p, (er: Boolean, stat: Function) => {
+  options.lstat(p, (er: boolean, stat: Function) => {
     if (!er)
       return afterGlob(null, [p])
 
@@ -126,14 +126,14 @@ const rimraf: Function = (p: String, options: Object, cb: Function) => {
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-const rimraf_: Function = (p: String, options: Array, cb: Function) => {
+const rimraf_: Function = (p: string, options: any[], cb: Function) => {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
   // sunos lets the root user unlink directories, which is... weird.
   // so we have to lstat here and make sure it's not a dir.
-  options.lstat(p, (er: Object, st: Array) => {
+  options.lstat(p, (er: object, st: any[]) => {
     if (er && er.code === "ENOENT")
       return cb(null)
 
@@ -144,7 +144,7 @@ const rimraf_: Function = (p: String, options: Array, cb: Function) => {
     if (st && st.isDirectory())
       return rmdir(p, options, er, cb)
 
-    options.unlink(p, (er: Object) => {
+    options.unlink(p, (er: object) => {
       if (er) {
         if (er.code === "ENOENT")
           return cb(null)
@@ -160,16 +160,16 @@ const rimraf_: Function = (p: String, options: Array, cb: Function) => {
   })
 }
 
-const fixWinEPERM: Function = (p: String, options: Object, er: String, cb: Function) => {
+const fixWinEPERM: Function = (p: string, options: object, er: string, cb: Function) => {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
-  options.chmod(p, 0o666, (er2: Object) => {
+  options.chmod(p, 0o666, (er2: object) => {
     if (er2)
       cb(er2.code === "ENOENT" ? null : er)
     else
-      options.stat(p, (er3: Object, stats: Array) => {
+      options.stat(p, (er3: object, stats: any[]) => {
         if (er3)
           cb(er3.code === "ENOENT" ? null : er)
         else if (stats.isDirectory())
@@ -180,7 +180,7 @@ const fixWinEPERM: Function = (p: String, options: Object, er: String, cb: Funct
   })
 }
 
-const fixWinEPERMSync: Function = (p: String, options: Object, er: String) => {
+const fixWinEPERMSync: Function = (p: string, options: object, er: string) => {
   assert(p)
   assert(options)
 
@@ -193,7 +193,7 @@ const fixWinEPERMSync: Function = (p: String, options: Object, er: String) => {
       throw er
   }
 
-  let stats: Array
+  let stats: any[]
   try {
     stats = options.statSync(p)
   } catch (er3) {
@@ -209,7 +209,7 @@ const fixWinEPERMSync: Function = (p: String, options: Object, er: String) => {
     options.unlinkSync(p)
 }
 
-const rmdir: Function = (p: String, options: Array, originalEr: Number, cb: Function) => {
+const rmdir: Function = (p: string, options: any[], originalEr: number, cb: Function) => {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -217,7 +217,7 @@ const rmdir: Function = (p: String, options: Array, originalEr: Number, cb: Func
   // try to rmdir first, and only readdir on ENOTEMPTY or EEXIST (SunOS)
   // if we guessed wrong, and it's not a directory, then
   // raise the original error.
-  options.rmdir(p, (er: Object) => {
+  options.rmdir(p, (er: object) => {
     if (er && (er.code === "ENOTEMPTY" || er.code === "EEXIST" || er.code === "EPERM"))
       rmkids(p, options, cb)
     else if (er && er.code === "ENOTDIR")
@@ -227,20 +227,20 @@ const rmdir: Function = (p: String, options: Array, originalEr: Number, cb: Func
   })
 }
 
-const rmkids: Function = (p: String, options: Object, cb: Function) => {
+const rmkids: Function = (p: string, options: object, cb: Function) => {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
 
-  options.readdir(p, (er: Number, files: Array) => {
+  options.readdir(p, (er: number, files: any[]) => {
     if (er)
       return cb(er)
-    let n: Number = files.length
+    let n: number = files.length
     if (n === 0)
       return options.rmdir(p, cb)
-    let errState: Boolean
-    files.forEach((f: String) => {
-      rimraf(path.join(p, f), options, (er: Boolean) => {
+    let errState: boolean
+    files.forEach((f: string) => {
+      rimraf(path.join(p, f), options, (er: boolean) => {
         if (errState)
           return
         if (er)
@@ -255,7 +255,7 @@ const rmkids: Function = (p: String, options: Object, cb: Function) => {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-const rimrafSync: Function = (p: String, options: Object) => {
+const rimrafSync: Function = (p: string, options: object) => {
   options = options || {}
   defaults(options)
 
@@ -264,7 +264,7 @@ const rimrafSync: Function = (p: String, options: Object) => {
   assert(options, 'rimraf: missing options')
   assert.equal(typeof options, 'object', 'rimraf: options should be object')
 
-  let results: Array
+  let results: any[]
 
   if (options.disableGlob || !glob.hasMagic(p)) {
     results = [p]
@@ -281,9 +281,9 @@ const rimrafSync: Function = (p: String, options: Object) => {
     return
 
   for (let i = 0; i < results.length; i++) {
-    const p: String = results[i]
+    const p: string = results[i]
 
-    let st: Array
+    let st: any[]
     try {
       st = options.lstatSync(p)
     } catch (er) {
@@ -314,7 +314,7 @@ const rimrafSync: Function = (p: String, options: Object) => {
   }
 }
 
-const rmdirSync: Function = (p: Array, options: Object, originalEr: Number) => {
+const rmdirSync: Function = (p: any[], options: object, originalEr: number) => {
   assert(p)
   assert(options)
 
@@ -330,10 +330,10 @@ const rmdirSync: Function = (p: Array, options: Object, originalEr: Number) => {
   }
 }
 
-const rmkidsSync: Function = (p: String, options: Object) => {
+const rmkidsSync: Function = (p: string, options: object) => {
   assert(p)
   assert(options)
-  options.readdirSync(p).forEach((f: String) => rimrafSync(path.join(p, f), options))
+  options.readdirSync(p).forEach((f: string) => rimrafSync(path.join(p, f), options))
 
   // We only end up here once we got ENOTEMPTY at least once, and
   // at this point, we are guaranteed to have removed all the kids.
@@ -341,12 +341,12 @@ const rmkidsSync: Function = (p: String, options: Object) => {
   // try really hard to delete stuff on windows, because it has a
   // PROFOUNDLY annoying habit of not closing handles promptly when
   // files are deleted, resulting in spurious ENOTEMPTY errors.
-  const retries: Number = isWindows ? 100 : 1
-  let i: Number = 0
+  const retries: number = isWindows ? 100 : 1
+  let i: number = 0
   do {
-    let threw: Boolean = true
+    let threw: boolean = true
     try {
-      const ret: Array = options.rmdirSync(p, options)
+      const ret: any[] = options.rmdirSync(p, options)
       threw = false
       return ret
     } finally {

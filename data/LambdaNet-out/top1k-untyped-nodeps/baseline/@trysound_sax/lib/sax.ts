@@ -1,5 +1,5 @@
 ;(function (sax: HTMLElement) { // wrapper for non-node envs
-  sax.parser = function (strict: Array, opt: String) { return new SAXParser(strict, opt) }
+  sax.parser = function (strict: any[], opt: string) { return new SAXParser(strict, opt) }
   sax.SAXParser = SAXParser
 
   // When we pass the MAX_BUFFER_LENGTH position, start checking for buffer overruns.
@@ -13,7 +13,7 @@
   // Set to Infinity to have unlimited buffers.
   sax.MAX_BUFFER_LENGTH = 64 * 1024
 
-  var buffers: Array = [
+  var buffers: any[] = [
     'comment', 'sgmlDecl', 'textNode', 'tagName', 'doctype',
     'procInstName', 'procInstBody', 'entity', 'attribName',
     'attribValue', 'cdata', 'script'
@@ -40,7 +40,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: Number, opt: Number): String {
+  function SAXParser (strict: number, opt: number): string {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -78,27 +78,27 @@
   }
 
   if (!Object.create) {
-    Object.create = function (o: Array) {
+    Object.create = function (o: any[]) {
       function F (): Void {}
       F.prototype = o
-      var newf: String = new F()
+      var newf: string = new F()
       return newf
     }
   }
 
   if (!Object.keys) {
-    Object.keys = function (o: Array) {
-      var a: Array = []
+    Object.keys = function (o: any[]) {
+      var a: any[] = []
       for (var i in o) if (o.hasOwnProperty(i)) a.push(i)
       return a
     }
   }
 
-  function checkBufferLength (parser: Object): Void {
-    var maxAllowed: Number = Math.max(sax.MAX_BUFFER_LENGTH, 10)
-    var maxActual: Number = 0
+  function checkBufferLength (parser: object): Void {
+    var maxAllowed: number = Math.max(sax.MAX_BUFFER_LENGTH, 10)
+    var maxActual: number = 0
     for (var i = 0, l = buffers.length; i < l; i++) {
-      var len: Number = parser[buffers[i]].length
+      var len: number = parser[buffers[i]].length
       if (len > maxAllowed) {
         // Text/cdata nodes can get big, and since they're buffered,
         // we can get here under normal conditions.
@@ -126,11 +126,11 @@
       maxActual = Math.max(maxActual, len)
     }
     // schedule the next check for the earliest possible buffer overrun.
-    var m: Number = sax.MAX_BUFFER_LENGTH - maxActual
+    var m: number = sax.MAX_BUFFER_LENGTH - maxActual
     parser.bufferCheckPosition = m + parser.position
   }
 
-  function clearBuffers (parser: Object): Void {
+  function clearBuffers (parser: object): Void {
     for (var i = 0, l = buffers.length; i < l; i++) {
       parser[buffers[i]] = ''
     }
@@ -158,11 +158,11 @@
 
   // this really needs to be replaced with character classes.
   // XML allows all manner of ridiculous numbers and digits.
-  var CDATA: String = '[CDATA['
-  var DOCTYPE: String = 'DOCTYPE'
-  var XML_NAMESPACE: String = 'http://www.w3.org/XML/1998/namespace'
-  var XMLNS_NAMESPACE: String = 'http://www.w3.org/2000/xmlns/'
-  var rootNS: Object = { xml: XML_NAMESPACE, xmlns: XMLNS_NAMESPACE }
+  var CDATA: string = '[CDATA['
+  var DOCTYPE: string = 'DOCTYPE'
+  var XML_NAMESPACE: string = 'http://www.w3.org/XML/1998/namespace'
+  var XMLNS_NAMESPACE: string = 'http://www.w3.org/2000/xmlns/'
+  var rootNS: object = { xml: XML_NAMESPACE, xmlns: XMLNS_NAMESPACE }
 
   // http://www.w3.org/TR/REC-xml/#NT-NameStartChar
   // This implementation works on strings, a single character at a time
@@ -177,27 +177,27 @@
   var entityStart: RegExp = /[#:_A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD]/
   var entityBody: RegExp = /[#:_A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\u00B7\u0300-\u036F\u203F-\u2040.\d-]/
 
-  function isWhitespace (c: Number): Boolean {
+  function isWhitespace (c: number): boolean {
     return c === ' ' || c === '\n' || c === '\r' || c === '\t'
   }
 
-  function isQuote (c: Number): Boolean {
+  function isQuote (c: number): boolean {
     return c === '"' || c === '\''
   }
 
-  function isAttribEnd (c: String): Boolean {
+  function isAttribEnd (c: string): boolean {
     return c === '>' || isWhitespace(c)
   }
 
-  function isMatch (regex: HTMLElement, c: String): Boolean {
+  function isMatch (regex: HTMLElement, c: string): boolean {
     return regex.test(c)
   }
 
-  function notMatch (regex: Function, c: String): Boolean {
+  function notMatch (regex: Function, c: string): boolean {
     return !isMatch(regex, c)
   }
 
-  var S: String = 0
+  var S: string = 0
   sax.STATE = {
     BEGIN: S++, // leading byte order mark or whitespace
     BEGIN_WHITESPACE: S++, // leading whitespace
@@ -501,9 +501,9 @@
     'diams': 9830
   }
 
-  Object.keys(sax.ENTITIES).forEach(function (key: String) {
-    var e: String = sax.ENTITIES[key]
-    var s: String = typeof e === 'number' ? String.fromCharCode(e) : e
+  Object.keys(sax.ENTITIES).forEach(function (key: string) {
+    var e: string = sax.ENTITIES[key]
+    var s: string = typeof e === 'number' ? String.fromCharCode(e) : e
     sax.ENTITIES[key] = s
   })
 
@@ -514,11 +514,11 @@
   // shorthand
   S = sax.STATE
 
-  function emit (parser: Object, event: String, data: Object): Void {
+  function emit (parser: object, event: string, data: object): Void {
     parser[event] && parser[event](data)
   }
 
-  function emitNode (parser: Object, nodeType: String, data: Object): Void {
+  function emitNode (parser: object, nodeType: string, data: object): Void {
     if (parser.textNode) closeText(parser)
     emit(parser, nodeType, data)
   }
@@ -529,15 +529,15 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: Array, text: String): String {
+  function textopts (opt: any[], text: string): string {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
   }
 
-  function error (parser: Object, reason: Number): String {
+  function error (parser: object, reason: number): string {
     closeText(parser)
-    const message: String = reason +
+    const message: string = reason +
       '\nLine: ' + parser.line +
       '\nColumn: ' + parser.column +
       '\nChar: ' + parser.c
@@ -550,7 +550,7 @@
     return parser
   }
 
-  function end (parser: String): String {
+  function end (parser: string): string {
     if (parser.sawRoot && !parser.closedRoot) strictFail(parser, 'Unclosed root tag')
     if ((parser.state !== S.BEGIN) &&
       (parser.state !== S.BEGIN_WHITESPACE) &&
@@ -565,7 +565,7 @@
     return parser
   }
 
-  function strictFail (parser: Object, message: String): Void {
+  function strictFail (parser: object, message: string): Void {
     if (typeof parser !== 'object' || !(parser instanceof SAXParser)) {
       throw new Error('bad call to strictFail')
     }
@@ -577,7 +577,7 @@
   function newTag (parser: HTMLElement): Void {
     if (!parser.strict) parser.tagName = parser.tagName[parser.looseCase]()
     var parent: HTMLElement = parser.tags[parser.tags.length - 1] || parser
-    var tag: Object = parser.tag = { name: parser.tagName, attributes: {} }
+    var tag: object = parser.tag = { name: parser.tagName, attributes: {} }
 
     // will be overridden if tag contails an xmlns="foo" or xmlns:foo="bar"
     if (parser.opt.xmlns) {
@@ -587,11 +587,11 @@
     emitNode(parser, 'onopentagstart', tag)
   }
 
-  function qname (name: String, attribute: Number): Object {
-    var i: Number = name.indexOf(':')
-    var qualName: Object = i < 0 ? [ '', name ] : name.split(':')
-    var prefix: String = qualName[0]
-    var local: String = qualName[1]
+  function qname (name: string, attribute: number): object {
+    var i: number = name.indexOf(':')
+    var qualName: object = i < 0 ? [ '', name ] : name.split(':')
+    var prefix: string = qualName[0]
+    var local: string = qualName[1]
 
     // <x "xmlns"="http://foo">
     if (attribute && name === 'xmlns') {
@@ -614,9 +614,9 @@
     }
 
     if (parser.opt.xmlns) {
-      var qn: Object = qname(parser.attribName, true)
-      var prefix: String = qn.prefix
-      var local: String = qn.local
+      var qn: object = qname(parser.attribName, true)
+      var prefix: string = qn.prefix
+      var local: string = qn.local
 
       if (prefix === 'xmlns') {
         // namespace binding attribute. push the binding into scope
@@ -654,13 +654,13 @@
     parser.attribName = parser.attribValue = ''
   }
 
-  function openTag (parser: HTMLElement, selfClosing: Boolean): Void {
+  function openTag (parser: HTMLElement, selfClosing: boolean): Void {
     if (parser.opt.xmlns) {
       // emit namespace binding events
       var tag: HTMLElement = parser.tag
 
       // add namespace info to tag
-      var qn: Object = qname(parser.tagName)
+      var qn: object = qname(parser.tagName)
       tag.prefix = qn.prefix
       tag.local = qn.local
       tag.uri = tag.ns[qn.prefix] || ''
@@ -673,7 +673,7 @@
 
       var parent: HTMLElement = parser.tags[parser.tags.length - 1] || parser
       if (tag.ns && parent.ns !== tag.ns) {
-        Object.keys(tag.ns).forEach(function (p: String) {
+        Object.keys(tag.ns).forEach(function (p: string) {
           emitNode(parser, 'onopennamespace', {
             prefix: p,
             uri: tag.ns[p]
@@ -685,14 +685,14 @@
       // Note: do not apply default ns to attributes:
       //   http://www.w3.org/TR/REC-xml-names/#defaulting
       for (var i = 0, l = parser.attribList.length; i < l; i++) {
-        var nv: Object = parser.attribList[i]
-        var name: String = nv[0]
-        var value: String = nv[1]
+        var nv: object = parser.attribList[i]
+        var name: string = nv[0]
+        var value: string = nv[1]
         var qualName: Function = qname(name, true)
-        var prefix: String = qualName.prefix
-        var local: String = qualName.local
-        var uri: Number = prefix === '' ? '' : (tag.ns[prefix] || '')
-        var a: Object = {
+        var prefix: string = qualName.prefix
+        var local: string = qualName.local
+        var uri: number = prefix === '' ? '' : (tag.ns[prefix] || '')
+        var a: object = {
           name: name,
           value: value,
           prefix: prefix,
@@ -754,14 +754,14 @@
 
     // first make sure that the closing tag actually exists.
     // <a><b></c></b></a> will close everything, otherwise.
-    var t: Number = parser.tags.length
+    var t: number = parser.tags.length
     var tagName: Function = parser.tagName
     if (!parser.strict) {
       tagName = tagName[parser.looseCase]()
     }
-    var closeTo: Number = tagName
+    var closeTo: number = tagName
     while (t--) {
-      var close: Object = parser.tags[t]
+      var close: object = parser.tags[t]
       if (close.name !== closeTo) {
         // fail the first time in strict mode
         strictFail(parser, 'Unexpected close tag')
@@ -778,13 +778,13 @@
       return
     }
     parser.tagName = tagName
-    var s: Number = parser.tags.length
+    var s: number = parser.tags.length
     while (s-- > t) {
       var tag: HTMLElement = parser.tag = parser.tags.pop()
       parser.tagName = parser.tag.name
       emitNode(parser, 'onclosetag', parser.tagName)
 
-      var x: Object = {}
+      var x: object = {}
       for (var i in tag.ns) {
         x[i] = tag.ns[i]
       }
@@ -792,8 +792,8 @@
       var parent: HTMLElement = parser.tags[parser.tags.length - 1] || parser
       if (parser.opt.xmlns && tag.ns !== parent.ns) {
         // remove namespace bindings introduced by tag
-        Object.keys(tag.ns).forEach(function (p: String) {
-          var n: String = tag.ns[p]
+        Object.keys(tag.ns).forEach(function (p: string) {
+          var n: string = tag.ns[p]
           emitNode(parser, 'onclosenamespace', { prefix: p, uri: n })
         })
       }
@@ -804,11 +804,11 @@
     parser.state = S.TEXT
   }
 
-  function parseEntity (parser: HTMLElement): String {
-    var entity: String = parser.entity
-    var entityLC: String = entity.toLowerCase()
-    var num: Number
-    var numStr: String = ''
+  function parseEntity (parser: HTMLElement): string {
+    var entity: string = parser.entity
+    var entityLC: string = entity.toLowerCase()
+    var num: number
+    var numStr: string = ''
 
     if (parser.ENTITIES[entity]) {
       return parser.ENTITIES[entity]
@@ -837,7 +837,7 @@
     return String.fromCodePoint(num)
   }
 
-  function beginWhiteSpace (parser: HTMLElement, c: String): Void {
+  function beginWhiteSpace (parser: HTMLElement, c: string): Void {
     if (c === '<') {
       parser.state = S.OPEN_WAKA
       parser.startTagPosition = parser.position
@@ -850,15 +850,15 @@
     }
   }
 
-  function charAt (chunk: String, i: String): String {
-    var result: String = ''
+  function charAt (chunk: string, i: string): string {
+    var result: string = ''
     if (i < chunk.length) {
       result = chunk.charAt(i)
     }
     return result
   }
 
-  function write (chunk: String): String {
+  function write (chunk: string): string {
     var parser: HTMLElement = this
     if (this.error) {
       throw this.error
@@ -873,8 +873,8 @@
     if (typeof chunk === 'object') {
       chunk = chunk.toString()
     }
-    var i: Number = 0
-    var c: String = ''
+    var i: number = 0
+    var c: string = ''
     while (true) {
       c = charAt(chunk, i++)
       parser.c = c
@@ -908,7 +908,7 @@
 
         case S.TEXT:
           if (parser.sawRoot && !parser.closedRoot) {
-            var starti: Number = i - 1
+            var starti: number = i - 1
             while (c && c !== '<' && c !== '&') {
               c = charAt(chunk, i++)
               if (c && parser.trackPosition) {
@@ -976,7 +976,7 @@
             strictFail(parser, 'Unencoded <')
             // if there was some whitespace, then add that in.
             if (parser.startTagPosition + 1 < parser.position) {
-              var pad: Number = parser.position - parser.startTagPosition
+              var pad: number = parser.position - parser.startTagPosition
               c = new Array(pad).join(' ') + c
             }
             parser.textNode += '<' + c
@@ -1358,8 +1358,8 @@
         case S.TEXT_ENTITY:
         case S.ATTRIB_VALUE_ENTITY_Q:
         case S.ATTRIB_VALUE_ENTITY_U:
-          var returnState: Number
-          var buffer: Array
+          var returnState: number
+          var buffer: any[]
           switch (parser.state) {
             case S.TEXT_ENTITY:
               returnState = S.TEXT
@@ -1378,7 +1378,7 @@
           }
 
           if (c === ';') {
-            var parsedEntity: Number = parseEntity(parser)
+            var parsedEntity: number = parseEntity(parser)
 
             // Custom entities can contain tags, so we potentially need to parse the result
             if (parser.state === S.TEXT_ENTITY && !sax.ENTITIES[parser.entity] && parsedEntity !== '&' + parser.entity + ';') {

@@ -20,7 +20,7 @@
  * startsWith('abc', 'b', 1)
  * // => true
  */
-function startsWith(string: Array, target: String, position: Number): Boolean {
+function startsWith(string: any[], target: string, position: number): boolean {
   const { length } = string
   position = position == null ? 0 : position
   if (position < 0) {

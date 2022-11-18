@@ -19,7 +19,7 @@
  * lt(3, 1)
  * // => false
  */
-function lt(value: Number, other: Number): Boolean {
+function lt(value: number, other: number): boolean {
   if (!(typeof value === 'string' && typeof other === 'string')) {
     value = +value
     other = +other

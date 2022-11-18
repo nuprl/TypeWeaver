@@ -31,7 +31,7 @@ var hasOwnProperty: Function = Object.prototype.hasOwnProperty
  * @public
  */
 
-function merge (dest: String, src: String, redefine: Boolean): String {
+function merge (dest: string, src: string, redefine: boolean): string {
   if (!dest) {
     throw new TypeError('argument dest is required')
   }
@@ -45,7 +45,7 @@ function merge (dest: String, src: String, redefine: Boolean): String {
     redefine = true
   }
 
-  Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name: String): Void {
+  Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name: string): Void {
     if (!redefine && hasOwnProperty.call(dest, name)) {
       // Skip descriptor
       return

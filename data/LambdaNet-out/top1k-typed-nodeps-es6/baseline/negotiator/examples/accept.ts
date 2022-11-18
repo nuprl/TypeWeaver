@@ -1,5 +1,5 @@
 (function() {
-  var Negotiator: Object, availableMediaTypes: Function, http: Number, key: String, representations: Object, server: Object, val: Function;
+  var Negotiator: object, availableMediaTypes: Function, http: number, key: string, representations: object, server: object, val: Function;
 
   Negotiator = require('../lib/negotiator').Negotiator;
 
@@ -14,7 +14,7 @@
   };
 
   availableMediaTypes = (function() {
-    var _results: Array;
+    var _results: any[];
     _results = [];
     for (key in representations) {
       val = representations[key];
@@ -23,8 +23,8 @@
     return _results;
   })();
 
-  server = http.createServer(function(req: Object, res: Array) {
-    var mediaType: String, negotiator: HTMLElement;
+  server = http.createServer(function(req: object, res: any[]) {
+    var mediaType: string, negotiator: HTMLElement;
     negotiator = new Negotiator(req);
     console.log("Accept: " + req.headers['accept']);
     console.log("Preferred: " + (negotiator.mediaTypes()));

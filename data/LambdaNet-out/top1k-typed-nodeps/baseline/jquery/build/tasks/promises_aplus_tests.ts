@@ -1,7 +1,7 @@
 "use strict";
 
-module.exports = (grunt: Object) => {
-	const timeout: Number = 2000;
+module.exports = (grunt: object) => {
+	const timeout: number = 2000;
 	const spawnTest: Function = require( "./lib/spawn_test.js" );
 
 	grunt.registerTask( "promises_aplus_tests",

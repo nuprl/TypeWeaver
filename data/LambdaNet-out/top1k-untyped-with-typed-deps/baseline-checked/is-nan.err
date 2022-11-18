@@ -1,9 +1,5 @@
-polyfill.ts(7,10): error TS2322: Type '(number: unknown) => boolean' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-polyfill.ts(9,2): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
+polyfill.ts(7,10): error TS2322: Type '(number: unknown) => boolean' is not assignable to type 'boolean'.
+polyfill.ts(9,2): error TS2322: Type 'string' is not assignable to type 'boolean'.
 shim.ts(8,46): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-shim.ts(12,11): error TS2367: This condition will always return 'true' since the types '(number: unknown) => boolean' and 'String' have no overlap.
+shim.ts(12,11): error TS2367: This condition will always return 'true' since the types '(number: unknown) => boolean' and 'string' have no overlap.
 

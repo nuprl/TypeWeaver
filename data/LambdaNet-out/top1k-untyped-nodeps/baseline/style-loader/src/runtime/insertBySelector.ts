@@ -1,7 +1,7 @@
-const memo: Object = {};
+const memo: object = {};
 
 /* istanbul ignore next  */
-function getTarget(target: Object): String {
+function getTarget(target: object): string {
   if (typeof memo[target] === "undefined") {
     let styleTarget: EventTarget = document.querySelector(target);
 
@@ -27,8 +27,8 @@ function getTarget(target: Object): String {
 }
 
 /* istanbul ignore next  */
-function insertBySelector(insert: String, style: String): Void {
-  const target: Object = getTarget(insert);
+function insertBySelector(insert: string, style: string): Void {
+  const target: object = getTarget(insert);
 
   if (!target) {
     throw new Error(

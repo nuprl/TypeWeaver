@@ -10,11 +10,11 @@
   // appears to break Edge's DevTools.
   const browserIframeDocument: HTMLElement = document.querySelector("#browser-iframe").contentDocument;
   const browserAnchor: HTMLElement = browserIframeDocument.createElement("a");
-  const browserBase: Object = browserIframeDocument.createElement("base");
+  const browserBase: object = browserIframeDocument.createElement("base");
   browserIframeDocument.head.appendChild(browserBase);
   browserIframeDocument.body.appendChild(browserAnchor);
 
-  const components: Array = [
+  const components: any[] = [
     "href",
     "protocol",
     "username",
@@ -32,7 +32,7 @@
   setFromFragment();
 
   function update(): Void {
-    const browserResult: Array = getBrowserResult();
+    const browserResult: any[] = getBrowserResult();
     const jsdomResult: Function = getJsdomResult();
     const mismatchedComponents: Function = getMismatchedComponents(browserResult, jsdomResult);
 
@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: String, result: Array, mismatchedComponents: Map): Void {
+  function setResult(kind: string, result: any[], mismatchedComponents: Map): Void {
     const output: EventTarget = document.querySelector(`#${kind}-output`);
     const error: Error = document.querySelector(`#${kind}-error`);
 
@@ -53,29 +53,29 @@
       output.hidden = false;
       error.hidden = true;
       for (const component of components) {
-        const componentEl: String = output.querySelector(`#${component}`).querySelector("td");
+        const componentEl: string = output.querySelector(`#${component}`).querySelector("td");
         setComponentElValue(componentEl, result[component]);
         setComponentElMismatch(componentEl, mismatchedComponents.has(component));
       }
     }
   }
 
-  function setComponentElValue(componentEl: HTMLElement, value: String): Void {
+  function setComponentElValue(componentEl: HTMLElement, value: string): Void {
     // This shows up in Edge where username/password are undefined.
-    const isNonString: Boolean = typeof value !== "string";
-    const isEmptyString: Boolean = value === "";
+    const isNonString: boolean = typeof value !== "string";
+    const isEmptyString: boolean = value === "";
 
     componentEl.textContent = isEmptyString ? "(empty string)" : value;
     componentEl.classList.toggle("empty-string", isEmptyString);
     componentEl.classList.toggle("non-string", isNonString);
   }
 
-  function setComponentElMismatch(componentEl: HTMLElement, isMismatched: Boolean): Void {
+  function setComponentElMismatch(componentEl: HTMLElement, isMismatched: boolean): Void {
     componentEl.classList.toggle("pass", !isMismatched);
     componentEl.classList.toggle("fail", isMismatched);
   }
 
-  function getMismatchedComponents(result1: Object, result2: Object): Object {
+  function getMismatchedComponents(result1: object, result2: object): object {
     const mismatched: Error = new Set();
     for (const component of components) {
       if (result1[component] !== result2[component]) {
@@ -85,7 +85,7 @@
     return mismatched;
   }
 
-  function getBrowserResult(): Object {
+  function getBrowserResult(): object {
     // First make sure the base is not invalid by testing it against an about:blank base.
     browserBase.href = "about:blank";
     browserAnchor.href = baseInput.value;
@@ -116,7 +116,7 @@
   }
 
   function setFromFragment(): Void {
-    const pieces: Array = /#url=([^&]*)&base=(.*)/u.exec(location.hash);
+    const pieces: any[] = /#url=([^&]*)&base=(.*)/u.exec(location.hash);
     if (!pieces) {
       return;
     }
@@ -141,17 +141,17 @@
   // btoa / atob don't work on Unicode.
   // This version is a superset of btoa / atob, so it maintains compatibility with older versions of
   // the live viewer which used btoa / atob directly.
-  function encodeToBase64(originalString: String): Number {
-    const bytes: Array = te.encode(originalString);
-    const byteString: String = Array.from(bytes, (byte: String) => String.fromCharCode(byte)).join("");
-    const encoded: String = btoa(byteString);
+  function encodeToBase64(originalString: string): number {
+    const bytes: any[] = te.encode(originalString);
+    const byteString: string = Array.from(bytes, (byte: string) => String.fromCharCode(byte)).join("");
+    const encoded: string = btoa(byteString);
     return encoded;
   }
 
-  function decodeFromBase64(encoded: String): Array {
-    const byteString: String = atob(encoded);
-    const bytes: String = Uint8Array.from(byteString, (char: String) => char.charCodeAt(0));
-    const originalString: String = td.decode(bytes);
+  function decodeFromBase64(encoded: string): any[] {
+    const byteString: string = atob(encoded);
+    const bytes: string = Uint8Array.from(byteString, (char: string) => char.charCodeAt(0));
+    const originalString: string = td.decode(bytes);
     return originalString;
   }
 })();

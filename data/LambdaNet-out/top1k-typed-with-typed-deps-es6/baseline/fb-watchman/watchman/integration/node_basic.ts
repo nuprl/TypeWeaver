@@ -10,15 +10,15 @@ import assert from 'assert';
 import watchman from 'fb-watchman';
 var client: HTMLElement = new watchman.Client();
 
-var t: Number = setTimeout(function () {
+var t: number = setTimeout(function () {
   assert.fail('timeout', null, 'timed out running test');
 }, 10000);
 
-client.on('error', function(error: Object) {
+client.on('error', function(error: object) {
   assert.fail(error, null, 'unexpected error');
 });
 
-client.command(['version'], function(error: Object, resp: Object) {
+client.command(['version'], function(error: object, resp: object) {
   assert.equal(error, null, 'no errors');
   console.log('Talking to watchman version', resp.version);
   client.end();

@@ -3,7 +3,7 @@
 import { PassThrough } from 'stream';
 
 export default function (/*streams...*/) {
-  var sources: Array = []
+  var sources: any[] = []
   var output: Date  = new PassThrough({objectMode: true})
 
   output.setMaxListeners(0)
@@ -17,7 +17,7 @@ export default function (/*streams...*/) {
 
   return output
 
-  function add (source: Array): Object {
+  function add (source: any[]): object {
     if (Array.isArray(source)) {
       source.forEach(add)
       return this
@@ -30,12 +30,12 @@ export default function (/*streams...*/) {
     return this
   }
 
-  function isEmpty (): Boolean {
+  function isEmpty (): boolean {
     return sources.length == 0;
   }
 
-  function remove (source: String): Void {
-    sources = sources.filter(function (it: String) { return it !== source })
+  function remove (source: string): Void {
+    sources = sources.filter(function (it: string) { return it !== source })
     if (!sources.length && output.readable) { output.end() }
   }
 };

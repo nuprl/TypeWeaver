@@ -1,9 +1,9 @@
 'use strict';
 
-const TREE: Array = Symbol();
-const ROOT: String = Symbol();
-const NEXT: String = Symbol();
-const ITERATE_FUNC: Number = Symbol();
+const TREE: any[] = Symbol();
+const ROOT: string = Symbol();
+const NEXT: string = Symbol();
+const ITERATE_FUNC: number = Symbol();
 
 class TreeIterator {
         constructor(tree, root, firstResult, iterateFunction) {
@@ -15,8 +15,8 @@ class TreeIterator {
 
         next() {
                 const tree: SymbolTree = this[TREE];
-                const iterateFunc: String = this[ITERATE_FUNC];
-                const root: String = this[ROOT];
+                const iterateFunc: string = this[ITERATE_FUNC];
+                const root: string = this[ROOT];
 
                 if (!this[NEXT]) {
                         return {
@@ -25,7 +25,7 @@ class TreeIterator {
                         };
                 }
 
-                const value: String = this[NEXT];
+                const value: string = this[NEXT];
 
                 if (iterateFunc === 1) {
                         this[NEXT] = tree._node(value).previousSibling;

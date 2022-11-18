@@ -3,17 +3,17 @@
 var shorthandSetter: Function = require('../parsers').shorthandSetter;
 var shorthandGetter: Function = require('../parsers').shorthandGetter;
 
-var shorthand_for: Object = {
+var shorthand_for: object = {
   'border-width': require('./borderWidth'),
   'border-style': require('./borderStyle'),
   'border-color': require('./borderColor'),
 };
 
 var myShorthandSetter: Function = shorthandSetter('border', shorthand_for);
-var myShorthandGetter: String = shorthandGetter('border', shorthand_for);
+var myShorthandGetter: string = shorthandGetter('border', shorthand_for);
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     if (v.toString().toLowerCase() === 'none') {
       v = '';
     }

@@ -1,4 +1,4 @@
-var colors: Object = require('../safe');
+var colors: object = require('../safe');
 
 console.log(colors.yellow('First some yellow text'));
 

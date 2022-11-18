@@ -1,16 +1,16 @@
-/******/ (function(modules: Object) { // webpackBootstrap
+/******/ (function(modules: object) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules: Object = {};
+/******/ 	var installedModules: object = {};
 /******/
 /******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId: String): Array {
+/******/ 	function __webpack_require__(moduleId: string): any[] {
 /******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module: Number = installedModules[moduleId] = {
+/******/ 		var module: number = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports: String, name: String, getter: String) {
+/******/ 	__webpack_require__.d = function(exports: string, name: string, getter: string) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
 /******/ 			Object.defineProperty(exports, name, {
 /******/ 				configurable: false,
@@ -45,16 +45,16 @@
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module: String) {
+/******/ 	__webpack_require__.n = function(module: string) {
 /******/ 		var getter: Function = module && module.__esModule ?
-/******/ 			function getDefault(): Boolean { return module['default']; } :
+/******/ 			function getDefault(): boolean { return module['default']; } :
 /******/ 			function getModuleExports(): Promise { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
 /******/
 /******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object: Object, property: String) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/ 	__webpack_require__.o = function(object: object, property: string) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
@@ -65,9 +65,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
-var g: Boolean;
+var g: boolean;
 
 // This works in non-strict mode
 g = (function() {
@@ -92,10 +92,10 @@ module.exports = g;
 
 /***/ }),
 /* 1 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 // shim for using process in browser
-var process: Object = module.exports = {};
+var process: object = module.exports = {};
 
 // cached from whatever global is present so that test runners that stub it
 // don't break things.  But we need to wrap it in a try catch in case it is
@@ -131,7 +131,7 @@ function defaultClearTimeout (): Void {
         cachedClearTimeout = defaultClearTimeout;
     }
 } ())
-function runTimeout(fun: Number): Number {
+function runTimeout(fun: number): number {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
         return setTimeout(fun, 0);
@@ -156,7 +156,7 @@ function runTimeout(fun: Number): Number {
 
 
 }
-function runClearTimeout(marker: String): Boolean {
+function runClearTimeout(marker: string): boolean {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
         return clearTimeout(marker);
@@ -183,10 +183,10 @@ function runClearTimeout(marker: String): Boolean {
 
 
 }
-var queue: Array = [];
-var draining: Boolean = false;
-var currentQueue: Array;
-var queueIndex: Number = -1;
+var queue: any[] = [];
+var draining: boolean = false;
+var currentQueue: any[];
+var queueIndex: number = -1;
 
 function cleanUpNextTick(): Void {
     if (!draining || !currentQueue) {
@@ -207,10 +207,10 @@ function drainQueue(): Void {
     if (draining) {
         return;
     }
-    var timeout: String = runTimeout(cleanUpNextTick);
+    var timeout: string = runTimeout(cleanUpNextTick);
     draining = true;
 
-    var len: Boolean = queue.length;
+    var len: boolean = queue.length;
     while(len) {
         currentQueue = queue;
         queue = [];
@@ -227,8 +227,8 @@ function drainQueue(): Void {
     runClearTimeout(timeout);
 }
 
-process.nextTick = function (fun: Array) {
-    var args: Object = new Array(arguments.length - 1);
+process.nextTick = function (fun: any[]) {
+    var args: object = new Array(arguments.length - 1);
     if (arguments.length > 1) {
         for (var i = 1; i < arguments.length; i++) {
             args[i - 1] = arguments[i];
@@ -241,7 +241,7 @@ process.nextTick = function (fun: Array) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: Array): String {
+function Item(fun: Function, array: any[]): string {
     this.fun = fun;
     this.array = array;
 }
@@ -267,9 +267,9 @@ process.emit = noop;
 process.prependListener = noop;
 process.prependOnceListener = noop;
 
-process.listeners = function (name: String) { return [] }
+process.listeners = function (name: string) { return [] }
 
-process.binding = function (name: String) {
+process.binding = function (name: string) {
     throw new Error('process.binding is not supported');
 };
 
@@ -282,11 +282,11 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 2 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor: String, superCtor: Function): Void {
+  module.exports = function inherits(ctor: string, superCtor: Function): Void {
     ctor.super_ = superCtor
     ctor.prototype = Object.create(superCtor.prototype, {
       constructor: {
@@ -299,7 +299,7 @@ if (typeof Object.create === 'function') {
   };
 } else {
   // old school shim for old browsers
-  module.exports = function inherits(ctor: Object, superCtor: Function): Void {
+  module.exports = function inherits(ctor: object, superCtor: Function): Void {
     ctor.super_ = superCtor
     var TempCtor: Function = function () {}
     TempCtor.prototype = superCtor.prototype
@@ -324,8 +324,8 @@ if (typeof Object.create === 'function') {
 
 
 
-var base64: Array = __webpack_require__(23)
-var ieee754: Array = __webpack_require__(24)
+var base64: any[] = __webpack_require__(23)
+var ieee754: any[] = __webpack_require__(24)
 var isArray: Function = __webpack_require__(10)
 
 exports.Buffer = Buffer
@@ -365,9 +365,9 @@ Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
  */
 exports.kMaxLength = kMaxLength()
 
-function typedArraySupport (): Boolean {
+function typedArraySupport (): boolean {
   try {
-    var arr: Object = new Uint8Array(1)
+    var arr: object = new Uint8Array(1)
     arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
     return arr.foo() === 42 && // typed array instances can be augmented
         typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
@@ -377,13 +377,13 @@ function typedArraySupport (): Boolean {
   }
 }
 
-function kMaxLength (): Boolean {
+function kMaxLength (): boolean {
   return Buffer.TYPED_ARRAY_SUPPORT
     ? 0x7fffffff
     : 0x3fffffff
 }
 
-function createBuffer (that: Array, length: Number): Array {
+function createBuffer (that: any[], length: number): any[] {
   if (kMaxLength() < length) {
     throw new RangeError('Invalid typed array length')
   }
@@ -412,7 +412,7 @@ function createBuffer (that: Array, length: Number): Array {
  * The `Uint8Array` prototype remains unmodified.
  */
 
-function Buffer (arg: String, encodingOrOffset: String, length: String): String {
+function Buffer (arg: string, encodingOrOffset: string, length: string): string {
   if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
     return new Buffer(arg, encodingOrOffset, length)
   }
@@ -432,12 +432,12 @@ function Buffer (arg: String, encodingOrOffset: String, length: String): String 
 Buffer.poolSize = 8192 // not used by this implementation
 
 // TODO: Legacy, not needed anymore. Remove in next major version.
-Buffer._augment = function (arr: Object) {
+Buffer._augment = function (arr: object) {
   arr.__proto__ = Buffer.prototype
   return arr
 }
 
-function from (that: Function, value: String, encodingOrOffset: String, length: String): Array {
+function from (that: Function, value: string, encodingOrOffset: string, length: string): any[] {
   if (typeof value === 'number') {
     throw new TypeError('"value" argument must not be a number')
   }
@@ -461,7 +461,7 @@ function from (that: Function, value: String, encodingOrOffset: String, length: 
  * Buffer.from(buffer)
  * Buffer.from(arrayBuffer[, byteOffset[, length]])
  **/
-Buffer.from = function (value: String, encodingOrOffset: Number, length: String) {
+Buffer.from = function (value: string, encodingOrOffset: number, length: string) {
   return from(null, value, encodingOrOffset, length)
 }
 
@@ -478,7 +478,7 @@ if (Buffer.TYPED_ARRAY_SUPPORT) {
   }
 }
 
-function assertSize (size: String): Void {
+function assertSize (size: string): Void {
   if (typeof size !== 'number') {
     throw new TypeError('"size" argument must be a number')
   } else if (size < 0) {
@@ -486,7 +486,7 @@ function assertSize (size: String): Void {
   }
 }
 
-function alloc (that: Function, size: Number, fill: String, encoding: String): String {
+function alloc (that: Function, size: number, fill: string, encoding: string): string {
   assertSize(size)
   if (size <= 0) {
     return createBuffer(that, size)
@@ -506,11 +506,11 @@ function alloc (that: Function, size: Number, fill: String, encoding: String): S
  * Creates a new filled Buffer instance.
  * alloc(size[, fill[, encoding]])
  **/
-Buffer.alloc = function (size: String, fill: String, encoding: Number) {
+Buffer.alloc = function (size: string, fill: string, encoding: number) {
   return alloc(null, size, fill, encoding)
 }
 
-function allocUnsafe (that: Object, size: String): Object {
+function allocUnsafe (that: object, size: string): object {
   assertSize(size)
   that = createBuffer(that, size < 0 ? 0 : checked(size) | 0)
   if (!Buffer.TYPED_ARRAY_SUPPORT) {
@@ -524,17 +524,17 @@ function allocUnsafe (that: Object, size: String): Object {
 /**
  * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
  * */
-Buffer.allocUnsafe = function (size: Number) {
+Buffer.allocUnsafe = function (size: number) {
   return allocUnsafe(null, size)
 }
 /**
  * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
  */
-Buffer.allocUnsafeSlow = function (size: Number) {
+Buffer.allocUnsafeSlow = function (size: number) {
   return allocUnsafe(null, size)
 }
 
-function fromString (that: Array, string: String, encoding: String): Array {
+function fromString (that: any[], string: string, encoding: string): any[] {
   if (typeof encoding !== 'string' || encoding === '') {
     encoding = 'utf8'
   }
@@ -543,10 +543,10 @@ function fromString (that: Array, string: String, encoding: String): Array {
     throw new TypeError('"encoding" must be a valid string encoding')
   }
 
-  var length: Number = byteLength(string, encoding) | 0
+  var length: number = byteLength(string, encoding) | 0
   that = createBuffer(that, length)
 
-  var actual: Number = that.write(string, encoding)
+  var actual: number = that.write(string, encoding)
 
   if (actual !== length) {
     // Writing a hex string, for example, that contains invalid characters will
@@ -558,8 +558,8 @@ function fromString (that: Array, string: String, encoding: String): Array {
   return that
 }
 
-function fromArrayLike (that: Object, array: Array): Object {
-  var length: Number = array.length < 0 ? 0 : checked(array.length) | 0
+function fromArrayLike (that: object, array: any[]): object {
+  var length: number = array.length < 0 ? 0 : checked(array.length) | 0
   that = createBuffer(that, length)
   for (var i = 0; i < length; i += 1) {
     that[i] = array[i] & 255
@@ -567,7 +567,7 @@ function fromArrayLike (that: Object, array: Array): Object {
   return that
 }
 
-function fromArrayBuffer (that: Object, array: Object, byteOffset: Number, length: String): Object {
+function fromArrayBuffer (that: object, array: object, byteOffset: number, length: string): object {
   array.byteLength // this throws if `array` is not a valid ArrayBuffer
 
   if (byteOffset < 0 || array.byteLength < byteOffset) {
@@ -597,9 +597,9 @@ function fromArrayBuffer (that: Object, array: Object, byteOffset: Number, lengt
   return that
 }
 
-function fromObject (that: Array, obj: Array): Array {
+function fromObject (that: any[], obj: any[]): any[] {
   if (Buffer.isBuffer(obj)) {
-    var len: Number = checked(obj.length) | 0
+    var len: number = checked(obj.length) | 0
     that = createBuffer(that, len)
 
     if (that.length === 0) {
@@ -627,7 +627,7 @@ function fromObject (that: Array, obj: Array): Array {
   throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
 }
 
-function checked (length: Number): Number {
+function checked (length: number): number {
   // Note: cannot use `length < kMaxLength()` here because that fails when
   // length is NaN (which is otherwise coerced to zero.)
   if (length >= kMaxLength()) {
@@ -637,26 +637,26 @@ function checked (length: Number): Number {
   return length | 0
 }
 
-function SlowBuffer (length: Number): String {
+function SlowBuffer (length: number): string {
   if (+length != length) { // eslint-disable-line eqeqeq
     length = 0
   }
   return Buffer.alloc(+length)
 }
 
-Buffer.isBuffer = function isBuffer (b: Object): Boolean {
+Buffer.isBuffer = function isBuffer (b: object): boolean {
   return !!(b != null && b._isBuffer)
 }
 
-Buffer.compare = function compare (a: Array, b: Array): Number {
+Buffer.compare = function compare (a: any[], b: any[]): number {
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
     throw new TypeError('Arguments must be Buffers')
   }
 
   if (a === b) return 0
 
-  var x: Number = a.length
-  var y: Number = b.length
+  var x: number = a.length
+  var y: number = b.length
 
   for (var i = 0, len = Math.min(x, y); i < len; ++i) {
     if (a[i] !== b[i]) {
@@ -671,7 +671,7 @@ Buffer.compare = function compare (a: Array, b: Array): Number {
   return 0
 }
 
-Buffer.isEncoding = function isEncoding (encoding: String): Boolean {
+Buffer.isEncoding = function isEncoding (encoding: string): boolean {
   switch (String(encoding).toLowerCase()) {
     case 'hex':
     case 'utf8':
@@ -690,7 +690,7 @@ Buffer.isEncoding = function isEncoding (encoding: String): Boolean {
   }
 }
 
-Buffer.concat = function concat (list: Array, length: Number): String {
+Buffer.concat = function concat (list: any[], length: number): string {
   if (!isArray(list)) {
     throw new TypeError('"list" argument must be an Array of Buffers')
   }
@@ -699,7 +699,7 @@ Buffer.concat = function concat (list: Array, length: Number): String {
     return Buffer.alloc(0)
   }
 
-  var i: Number
+  var i: number
   if (length === undefined) {
     length = 0
     for (i = 0; i < list.length; ++i) {
@@ -707,10 +707,10 @@ Buffer.concat = function concat (list: Array, length: Number): String {
     }
   }
 
-  var buffer: Array = Buffer.allocUnsafe(length)
-  var pos: Number = 0
+  var buffer: any[] = Buffer.allocUnsafe(length)
+  var pos: number = 0
   for (i = 0; i < list.length; ++i) {
-    var buf: Array = list[i]
+    var buf: any[] = list[i]
     if (!Buffer.isBuffer(buf)) {
       throw new TypeError('"list" argument must be an Array of Buffers')
     }
@@ -720,7 +720,7 @@ Buffer.concat = function concat (list: Array, length: Number): String {
   return buffer
 }
 
-function byteLength (string: String, encoding: Number): Number {
+function byteLength (string: string, encoding: number): number {
   if (Buffer.isBuffer(string)) {
     return string.length
   }
@@ -732,11 +732,11 @@ function byteLength (string: String, encoding: Number): Number {
     string = '' + string
   }
 
-  var len: Number = string.length
+  var len: number = string.length
   if (len === 0) return 0
 
   // Use a for loop to avoid recursion
-  var loweredCase: Boolean = false
+  var loweredCase: boolean = false
   for (;;) {
     switch (encoding) {
       case 'ascii':
@@ -765,8 +765,8 @@ function byteLength (string: String, encoding: Number): Number {
 }
 Buffer.byteLength = byteLength
 
-function slowToString (encoding: String, start: Number, end: Number): String {
-  var loweredCase: Boolean = false
+function slowToString (encoding: string, start: number, end: number): string {
+  var loweredCase: boolean = false
 
   // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
   // property of a typed array.
@@ -839,14 +839,14 @@ function slowToString (encoding: String, start: Number, end: Number): String {
 // Buffer instances.
 Buffer.prototype._isBuffer = true
 
-function swap (b: Object, n: String, m: String): Void {
-  var i: Array = b[n]
+function swap (b: object, n: string, m: string): Void {
+  var i: any[] = b[n]
   b[n] = b[m]
   b[m] = i
 }
 
-Buffer.prototype.swap16 = function swap16 (): Object {
-  var len: Number = this.length
+Buffer.prototype.swap16 = function swap16 (): object {
+  var len: number = this.length
   if (len % 2 !== 0) {
     throw new RangeError('Buffer size must be a multiple of 16-bits')
   }
@@ -856,8 +856,8 @@ Buffer.prototype.swap16 = function swap16 (): Object {
   return this
 }
 
-Buffer.prototype.swap32 = function swap32 (): Object {
-  var len: Number = this.length
+Buffer.prototype.swap32 = function swap32 (): object {
+  var len: number = this.length
   if (len % 4 !== 0) {
     throw new RangeError('Buffer size must be a multiple of 32-bits')
   }
@@ -868,8 +868,8 @@ Buffer.prototype.swap32 = function swap32 (): Object {
   return this
 }
 
-Buffer.prototype.swap64 = function swap64 (): Object {
-  var len: Number = this.length
+Buffer.prototype.swap64 = function swap64 (): object {
+  var len: number = this.length
   if (len % 8 !== 0) {
     throw new RangeError('Buffer size must be a multiple of 64-bits')
   }
@@ -882,22 +882,22 @@ Buffer.prototype.swap64 = function swap64 (): Object {
   return this
 }
 
-Buffer.prototype.toString = function toString (): String {
-  var length: Number = this.length | 0
+Buffer.prototype.toString = function toString (): string {
+  var length: number = this.length | 0
   if (length === 0) return ''
   if (arguments.length === 0) return utf8Slice(this, 0, length)
   return slowToString.apply(this, arguments)
 }
 
-Buffer.prototype.equals = function equals (b: String): Boolean {
+Buffer.prototype.equals = function equals (b: string): boolean {
   if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
   if (this === b) return true
   return Buffer.compare(this, b) === 0
 }
 
-Buffer.prototype.inspect = function inspect (): String {
-  var str: String = ''
-  var max: Number = exports.INSPECT_MAX_BYTES
+Buffer.prototype.inspect = function inspect (): string {
+  var str: string = ''
+  var max: number = exports.INSPECT_MAX_BYTES
   if (this.length > 0) {
     str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
     if (this.length > max) str += ' ... '
@@ -905,7 +905,7 @@ Buffer.prototype.inspect = function inspect (): String {
   return '<Buffer ' + str + '>'
 }
 
-Buffer.prototype.compare = function compare (target: Array, start: Number, end: Number, thisStart: Number, thisEnd: Number): Number {
+Buffer.prototype.compare = function compare (target: any[], start: number, end: number, thisStart: number, thisEnd: number): number {
   if (!Buffer.isBuffer(target)) {
     throw new TypeError('Argument must be a Buffer')
   }
@@ -944,12 +944,12 @@ Buffer.prototype.compare = function compare (target: Array, start: Number, end: 
 
   if (this === target) return 0
 
-  var x: Number = thisEnd - thisStart
-  var y: Number = end - start
-  var len: Number = Math.min(x, y)
+  var x: number = thisEnd - thisStart
+  var y: number = end - start
+  var len: number = Math.min(x, y)
 
-  var thisCopy: Object = this.slice(thisStart, thisEnd)
-  var targetCopy: Object = target.slice(start, end)
+  var thisCopy: object = this.slice(thisStart, thisEnd)
+  var targetCopy: object = target.slice(start, end)
 
   for (var i = 0; i < len; ++i) {
     if (thisCopy[i] !== targetCopy[i]) {
@@ -973,7 +973,7 @@ Buffer.prototype.compare = function compare (target: Array, start: Number, end: 
 // - byteOffset - an index into `buffer`; will be clamped to an int32
 // - encoding - an optional encoding, relevant is val is a string
 // - dir - true for indexOf, false for lastIndexOf
-function bidirectionalIndexOf (buffer: Object, val: Number, byteOffset: Number, encoding: Number, dir: Number): Number {
+function bidirectionalIndexOf (buffer: object, val: number, byteOffset: number, encoding: number, dir: number): number {
   // Empty buffer means no match
   if (buffer.length === 0) return -1
 
@@ -1030,10 +1030,10 @@ function bidirectionalIndexOf (buffer: Object, val: Number, byteOffset: Number, 
   throw new TypeError('val must be string, number or Buffer')
 }
 
-function arrayIndexOf (arr: Array, val: Array, byteOffset: Number, encoding: Number, dir: Boolean): Number {
-  var indexSize: Number = 1
-  var arrLength: Number = arr.length
-  var valLength: Number = val.length
+function arrayIndexOf (arr: any[], val: any[], byteOffset: number, encoding: number, dir: boolean): number {
+  var indexSize: number = 1
+  var arrLength: number = arr.length
+  var valLength: number = val.length
 
   if (encoding !== undefined) {
     encoding = String(encoding).toLowerCase()
@@ -1049,7 +1049,7 @@ function arrayIndexOf (arr: Array, val: Array, byteOffset: Number, encoding: Num
     }
   }
 
-  function read (buf: Object, i: Number): String {
+  function read (buf: object, i: number): string {
     if (indexSize === 1) {
       return buf[i]
     } else {
@@ -1057,9 +1057,9 @@ function arrayIndexOf (arr: Array, val: Array, byteOffset: Number, encoding: Num
     }
   }
 
-  var i: Number
+  var i: number
   if (dir) {
-    var foundIndex: Number = -1
+    var foundIndex: number = -1
     for (i = byteOffset; i < arrLength; i++) {
       if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
         if (foundIndex === -1) foundIndex = i
@@ -1072,7 +1072,7 @@ function arrayIndexOf (arr: Array, val: Array, byteOffset: Number, encoding: Num
   } else {
     if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
     for (i = byteOffset; i >= 0; i--) {
-      var found: Boolean = true
+      var found: boolean = true
       for (var j = 0; j < valLength; j++) {
         if (read(arr, i + j) !== read(val, j)) {
           found = false
@@ -1086,21 +1086,21 @@ function arrayIndexOf (arr: Array, val: Array, byteOffset: Number, encoding: Num
   return -1
 }
 
-Buffer.prototype.includes = function includes (val: String, byteOffset: String, encoding: String): Boolean {
+Buffer.prototype.includes = function includes (val: string, byteOffset: string, encoding: string): boolean {
   return this.indexOf(val, byteOffset, encoding) !== -1
 }
 
-Buffer.prototype.indexOf = function indexOf (val: String, byteOffset: Number, encoding: Number): Boolean {
+Buffer.prototype.indexOf = function indexOf (val: string, byteOffset: number, encoding: number): boolean {
   return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
 }
 
-Buffer.prototype.lastIndexOf = function lastIndexOf (val: String, byteOffset: Number, encoding: Number): Boolean {
+Buffer.prototype.lastIndexOf = function lastIndexOf (val: string, byteOffset: number, encoding: number): boolean {
   return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
 }
 
-function hexWrite (buf: Array, string: String, offset: Number, length: Number): Number {
+function hexWrite (buf: any[], string: string, offset: number, length: number): number {
   offset = Number(offset) || 0
-  var remaining: Number = buf.length - offset
+  var remaining: number = buf.length - offset
   if (!length) {
     length = remaining
   } else {
@@ -1111,41 +1111,41 @@ function hexWrite (buf: Array, string: String, offset: Number, length: Number): 
   }
 
   // must be an even number of digits
-  var strLen: Number = string.length
+  var strLen: number = string.length
   if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
 
   if (length > strLen / 2) {
     length = strLen / 2
   }
   for (var i = 0; i < length; ++i) {
-    var parsed: Number = parseInt(string.substr(i * 2, 2), 16)
+    var parsed: number = parseInt(string.substr(i * 2, 2), 16)
     if (isNaN(parsed)) return i
     buf[offset + i] = parsed
   }
   return i
 }
 
-function utf8Write (buf: Array, string: String, offset: Number, length: String): String {
+function utf8Write (buf: any[], string: string, offset: number, length: string): string {
   return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
 }
 
-function asciiWrite (buf: String, string: String, offset: String, length: String): String {
+function asciiWrite (buf: string, string: string, offset: string, length: string): string {
   return blitBuffer(asciiToBytes(string), buf, offset, length)
 }
 
-function latin1Write (buf: String, string: String, offset: String, length: String): String {
+function latin1Write (buf: string, string: string, offset: string, length: string): string {
   return asciiWrite(buf, string, offset, length)
 }
 
-function base64Write (buf: String, string: String, offset: Number, length: String): String {
+function base64Write (buf: string, string: string, offset: number, length: string): string {
   return blitBuffer(base64ToBytes(string), buf, offset, length)
 }
 
-function ucs2Write (buf: Array, string: String, offset: Number, length: String): String {
+function ucs2Write (buf: any[], string: string, offset: number, length: string): string {
   return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
 }
 
-Buffer.prototype.write = function write (string: Array, offset: Number, length: Number, encoding: Number): String {
+Buffer.prototype.write = function write (string: any[], offset: number, length: number, encoding: number): string {
   // Buffer#write(string)
   if (offset === undefined) {
     encoding = 'utf8'
@@ -1173,7 +1173,7 @@ Buffer.prototype.write = function write (string: Array, offset: Number, length: 
     )
   }
 
-  var remaining: Number = this.length - offset
+  var remaining: number = this.length - offset
   if (length === undefined || length > remaining) length = remaining
 
   if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
@@ -1182,7 +1182,7 @@ Buffer.prototype.write = function write (string: Array, offset: Number, length: 
 
   if (!encoding) encoding = 'utf8'
 
-  var loweredCase: Boolean = false
+  var loweredCase: boolean = false
   for (;;) {
     switch (encoding) {
       case 'hex':
@@ -1217,14 +1217,14 @@ Buffer.prototype.write = function write (string: Array, offset: Number, length: 
   }
 }
 
-Buffer.prototype.toJSON = function toJSON (): Object {
+Buffer.prototype.toJSON = function toJSON (): object {
   return {
     type: 'Buffer',
     data: Array.prototype.slice.call(this._arr || this, 0)
   }
 }
 
-function base64Slice (buf: Array, start: Number, end: Number): Array {
+function base64Slice (buf: any[], start: number, end: number): any[] {
   if (start === 0 && end === buf.length) {
     return base64.fromByteArray(buf)
   } else {
@@ -1232,21 +1232,21 @@ function base64Slice (buf: Array, start: Number, end: Number): Array {
   }
 }
 
-function utf8Slice (buf: Array, start: String, end: Number): String {
+function utf8Slice (buf: any[], start: string, end: number): string {
   end = Math.min(buf.length, end)
-  var res: Array = []
+  var res: any[] = []
 
-  var i: Number = start
+  var i: number = start
   while (i < end) {
-    var firstByte: Number = buf[i]
-    var codePoint: Number = null
-    var bytesPerSequence: Number = (firstByte > 0xEF) ? 4
+    var firstByte: number = buf[i]
+    var codePoint: number = null
+    var bytesPerSequence: number = (firstByte > 0xEF) ? 4
       : (firstByte > 0xDF) ? 3
       : (firstByte > 0xBF) ? 2
       : 1
 
     if (i + bytesPerSequence <= end) {
-      var secondByte: Number, thirdByte: Number, fourthByte: Number, tempCodePoint: Number
+      var secondByte: number, thirdByte: number, fourthByte: number, tempCodePoint: number
 
       switch (bytesPerSequence) {
         case 1:
@@ -1308,17 +1308,17 @@ function utf8Slice (buf: Array, start: String, end: Number): String {
 // Based on http://stackoverflow.com/a/22747272/680742, the browser with
 // the lowest limit is Chrome, with 0x10000 args.
 // We go 1 magnitude less, for safety
-var MAX_ARGUMENTS_LENGTH: Number = 0x1000
+var MAX_ARGUMENTS_LENGTH: number = 0x1000
 
-function decodeCodePointsArray (codePoints: Array): String {
-  var len: Number = codePoints.length
+function decodeCodePointsArray (codePoints: any[]): string {
+  var len: number = codePoints.length
   if (len <= MAX_ARGUMENTS_LENGTH) {
     return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
   }
 
   // Decode in chunks to avoid "call stack size exceeded".
-  var res: String = ''
-  var i: Number = 0
+  var res: string = ''
+  var i: number = 0
   while (i < len) {
     res += String.fromCharCode.apply(
       String,
@@ -1328,8 +1328,8 @@ function decodeCodePointsArray (codePoints: Array): String {
   return res
 }
 
-function asciiSlice (buf: Array, start: Number, end: Number): String {
-  var ret: String = ''
+function asciiSlice (buf: any[], start: number, end: number): string {
+  var ret: string = ''
   end = Math.min(buf.length, end)
 
   for (var i = start; i < end; ++i) {
@@ -1338,8 +1338,8 @@ function asciiSlice (buf: Array, start: Number, end: Number): String {
   return ret
 }
 
-function latin1Slice (buf: Array, start: Number, end: Number): String {
-  var ret: String = ''
+function latin1Slice (buf: any[], start: number, end: number): string {
+  var ret: string = ''
   end = Math.min(buf.length, end)
 
   for (var i = start; i < end; ++i) {
@@ -1348,30 +1348,30 @@ function latin1Slice (buf: Array, start: Number, end: Number): String {
   return ret
 }
 
-function hexSlice (buf: Array, start: Number, end: Number): String {
-  var len: Number = buf.length
+function hexSlice (buf: any[], start: number, end: number): string {
+  var len: number = buf.length
 
   if (!start || start < 0) start = 0
   if (!end || end < 0 || end > len) end = len
 
-  var out: String = ''
+  var out: string = ''
   for (var i = start; i < end; ++i) {
     out += toHex(buf[i])
   }
   return out
 }
 
-function utf16leSlice (buf: Array, start: String, end: String): String {
-  var bytes: Array = buf.slice(start, end)
-  var res: String = ''
+function utf16leSlice (buf: any[], start: string, end: string): string {
+  var bytes: any[] = buf.slice(start, end)
+  var res: string = ''
   for (var i = 0; i < bytes.length; i += 2) {
     res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256)
   }
   return res
 }
 
-Buffer.prototype.slice = function slice (start: Number, end: Number): Object {
-  var len: Number = this.length
+Buffer.prototype.slice = function slice (start: number, end: number): object {
+  var len: number = this.length
   start = ~~start
   end = end === undefined ? len : ~~end
 
@@ -1391,12 +1391,12 @@ Buffer.prototype.slice = function slice (start: Number, end: Number): Object {
 
   if (end < start) end = start
 
-  var newBuf: Object
+  var newBuf: object
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     newBuf = this.subarray(start, end)
     newBuf.__proto__ = Buffer.prototype
   } else {
-    var sliceLen: Number = end - start
+    var sliceLen: number = end - start
     newBuf = new Buffer(sliceLen, undefined)
     for (var i = 0; i < sliceLen; ++i) {
       newBuf[i] = this[i + start]
@@ -1409,19 +1409,19 @@ Buffer.prototype.slice = function slice (start: Number, end: Number): Object {
 /*
  * Need to make sure that buffer isn't trying to write out of bounds.
  */
-function checkOffset (offset: Number, ext: String, length: Number): Void {
+function checkOffset (offset: number, ext: string, length: number): Void {
   if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
   if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
 }
 
-Buffer.prototype.readUIntLE = function readUIntLE (offset: Number, byteLength: Number, noAssert: Boolean): String {
+Buffer.prototype.readUIntLE = function readUIntLE (offset: number, byteLength: number, noAssert: boolean): string {
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
-  var val: String = this[offset]
-  var mul: Number = 1
-  var i: Number = 0
+  var val: string = this[offset]
+  var mul: number = 1
+  var i: number = 0
   while (++i < byteLength && (mul *= 0x100)) {
     val += this[offset + i] * mul
   }
@@ -1429,15 +1429,15 @@ Buffer.prototype.readUIntLE = function readUIntLE (offset: Number, byteLength: N
   return val
 }
 
-Buffer.prototype.readUIntBE = function readUIntBE (offset: Number, byteLength: Number, noAssert: Boolean): String {
+Buffer.prototype.readUIntBE = function readUIntBE (offset: number, byteLength: number, noAssert: boolean): string {
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) {
     checkOffset(offset, byteLength, this.length)
   }
 
-  var val: String = this[offset + --byteLength]
-  var mul: Number = 1
+  var val: string = this[offset + --byteLength]
+  var mul: number = 1
   while (byteLength > 0 && (mul *= 0x100)) {
     val += this[offset + --byteLength] * mul
   }
@@ -1445,22 +1445,22 @@ Buffer.prototype.readUIntBE = function readUIntBE (offset: Number, byteLength: N
   return val
 }
 
-Buffer.prototype.readUInt8 = function readUInt8 (offset: String, noAssert: Boolean): Object {
+Buffer.prototype.readUInt8 = function readUInt8 (offset: string, noAssert: boolean): object {
   if (!noAssert) checkOffset(offset, 1, this.length)
   return this[offset]
 }
 
-Buffer.prototype.readUInt16LE = function readUInt16LE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readUInt16LE = function readUInt16LE (offset: number, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 2, this.length)
   return this[offset] | (this[offset + 1] << 8)
 }
 
-Buffer.prototype.readUInt16BE = function readUInt16BE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readUInt16BE = function readUInt16BE (offset: number, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 2, this.length)
   return (this[offset] << 8) | this[offset + 1]
 }
 
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset: Number, noAssert: Boolean): String {
+Buffer.prototype.readUInt32LE = function readUInt32LE (offset: number, noAssert: boolean): string {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return ((this[offset]) |
@@ -1469,7 +1469,7 @@ Buffer.prototype.readUInt32LE = function readUInt32LE (offset: Number, noAssert:
       (this[offset + 3] * 0x1000000)
 }
 
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset: Number, noAssert: Boolean): String {
+Buffer.prototype.readUInt32BE = function readUInt32BE (offset: number, noAssert: boolean): string {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset] * 0x1000000) +
@@ -1478,14 +1478,14 @@ Buffer.prototype.readUInt32BE = function readUInt32BE (offset: Number, noAssert:
     this[offset + 3])
 }
 
-Buffer.prototype.readIntLE = function readIntLE (offset: Number, byteLength: Number, noAssert: Boolean): Number {
+Buffer.prototype.readIntLE = function readIntLE (offset: number, byteLength: number, noAssert: boolean): number {
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
-  var val: Number = this[offset]
-  var mul: Number = 1
-  var i: Number = 0
+  var val: number = this[offset]
+  var mul: number = 1
+  var i: number = 0
   while (++i < byteLength && (mul *= 0x100)) {
     val += this[offset + i] * mul
   }
@@ -1496,14 +1496,14 @@ Buffer.prototype.readIntLE = function readIntLE (offset: Number, byteLength: Num
   return val
 }
 
-Buffer.prototype.readIntBE = function readIntBE (offset: Number, byteLength: Number, noAssert: Boolean): Number {
+Buffer.prototype.readIntBE = function readIntBE (offset: number, byteLength: number, noAssert: boolean): number {
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
-  var i: Number = byteLength
-  var mul: Number = 1
-  var val: Number = this[offset + --i]
+  var i: number = byteLength
+  var mul: number = 1
+  var val: number = this[offset + --i]
   while (i > 0 && (mul *= 0x100)) {
     val += this[offset + --i] * mul
   }
@@ -1514,25 +1514,25 @@ Buffer.prototype.readIntBE = function readIntBE (offset: Number, byteLength: Num
   return val
 }
 
-Buffer.prototype.readInt8 = function readInt8 (offset: String, noAssert: Boolean): Number {
+Buffer.prototype.readInt8 = function readInt8 (offset: string, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 1, this.length)
   if (!(this[offset] & 0x80)) return (this[offset])
   return ((0xff - this[offset] + 1) * -1)
 }
 
-Buffer.prototype.readInt16LE = function readInt16LE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readInt16LE = function readInt16LE (offset: number, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 2, this.length)
-  var val: Number = this[offset] | (this[offset + 1] << 8)
+  var val: number = this[offset] | (this[offset + 1] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
-Buffer.prototype.readInt16BE = function readInt16BE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readInt16BE = function readInt16BE (offset: number, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 2, this.length)
-  var val: Number = this[offset + 1] | (this[offset] << 8)
+  var val: number = this[offset + 1] | (this[offset] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
-Buffer.prototype.readInt32LE = function readInt32LE (offset: String, noAssert: Boolean): Number {
+Buffer.prototype.readInt32LE = function readInt32LE (offset: string, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset]) |
@@ -1541,7 +1541,7 @@ Buffer.prototype.readInt32LE = function readInt32LE (offset: String, noAssert: B
     (this[offset + 3] << 24)
 }
 
-Buffer.prototype.readInt32BE = function readInt32BE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readInt32BE = function readInt32BE (offset: number, noAssert: boolean): number {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset] << 24) |
@@ -1550,43 +1550,43 @@ Buffer.prototype.readInt32BE = function readInt32BE (offset: Number, noAssert: B
     (this[offset + 3])
 }
 
-Buffer.prototype.readFloatLE = function readFloatLE (offset: String, noAssert: Boolean): Void {
+Buffer.prototype.readFloatLE = function readFloatLE (offset: string, noAssert: boolean): Void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
 
-Buffer.prototype.readFloatBE = function readFloatBE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readFloatBE = function readFloatBE (offset: string, noAssert: boolean): boolean {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, false, 23, 4)
 }
 
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readDoubleLE = function readDoubleLE (offset: string, noAssert: boolean): boolean {
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, true, 52, 8)
 }
 
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readDoubleBE = function readDoubleBE (offset: string, noAssert: boolean): boolean {
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, false, 52, 8)
 }
 
-function checkInt (buf: Array, value: Number, offset: Number, ext: String, max: Number, min: Number): Void {
+function checkInt (buf: any[], value: number, offset: number, ext: string, max: number, min: number): Void {
   if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
   if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
 }
 
-Buffer.prototype.writeUIntLE = function writeUIntLE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): String {
+Buffer.prototype.writeUIntLE = function writeUIntLE (value: number, offset: number, byteLength: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) {
-    var maxBytes: Number = Math.pow(2, 8 * byteLength) - 1
+    var maxBytes: number = Math.pow(2, 8 * byteLength) - 1
     checkInt(this, value, offset, byteLength, maxBytes, 0)
   }
 
-  var mul: Number = 1
-  var i: Number = 0
+  var mul: number = 1
+  var i: number = 0
   this[offset] = value & 0xFF
   while (++i < byteLength && (mul *= 0x100)) {
     this[offset + i] = (value / mul) & 0xFF
@@ -1595,17 +1595,17 @@ Buffer.prototype.writeUIntLE = function writeUIntLE (value: Number, offset: Numb
   return offset + byteLength
 }
 
-Buffer.prototype.writeUIntBE = function writeUIntBE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeUIntBE = function writeUIntBE (value: number, offset: number, byteLength: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   byteLength = byteLength | 0
   if (!noAssert) {
-    var maxBytes: Number = Math.pow(2, 8 * byteLength) - 1
+    var maxBytes: number = Math.pow(2, 8 * byteLength) - 1
     checkInt(this, value, offset, byteLength, maxBytes, 0)
   }
 
-  var i: Number = byteLength - 1
-  var mul: Number = 1
+  var i: number = byteLength - 1
+  var mul: number = 1
   this[offset + i] = value & 0xFF
   while (--i >= 0 && (mul *= 0x100)) {
     this[offset + i] = (value / mul) & 0xFF
@@ -1614,7 +1614,7 @@ Buffer.prototype.writeUIntBE = function writeUIntBE (value: Number, offset: Numb
   return offset + byteLength
 }
 
-Buffer.prototype.writeUInt8 = function writeUInt8 (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeUInt8 = function writeUInt8 (value: number, offset: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
@@ -1623,7 +1623,7 @@ Buffer.prototype.writeUInt8 = function writeUInt8 (value: Number, offset: Number
   return offset + 1
 }
 
-function objectWriteUInt16 (buf: Array, value: Number, offset: Number, littleEndian: Boolean): Void {
+function objectWriteUInt16 (buf: any[], value: number, offset: number, littleEndian: boolean): Void {
   if (value < 0) value = 0xffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
     buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
@@ -1631,7 +1631,7 @@ function objectWriteUInt16 (buf: Array, value: Number, offset: Number, littleEnd
   }
 }
 
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeUInt16LE = function writeUInt16LE (value: number, offset: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
@@ -1644,7 +1644,7 @@ Buffer.prototype.writeUInt16LE = function writeUInt16LE (value: Number, offset: 
   return offset + 2
 }
 
-Buffer.prototype.writeUInt16BE = function writeUInt16BE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeUInt16BE = function writeUInt16BE (value: number, offset: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
@@ -1657,14 +1657,14 @@ Buffer.prototype.writeUInt16BE = function writeUInt16BE (value: Number, offset: 
   return offset + 2
 }
 
-function objectWriteUInt32 (buf: Array, value: Number, offset: Number, littleEndian: Boolean): Void {
+function objectWriteUInt32 (buf: any[], value: number, offset: number, littleEndian: boolean): Void {
   if (value < 0) value = 0xffffffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
     buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
   }
 }
 
-Buffer.prototype.writeUInt32LE = function writeUInt32LE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeUInt32LE = function writeUInt32LE (value: number, offset: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
@@ -1679,7 +1679,7 @@ Buffer.prototype.writeUInt32LE = function writeUInt32LE (value: Number, offset: 
   return offset + 4
 }
 
-Buffer.prototype.writeUInt32BE = function writeUInt32BE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeUInt32BE = function writeUInt32BE (value: number, offset: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
@@ -1694,18 +1694,18 @@ Buffer.prototype.writeUInt32BE = function writeUInt32BE (value: Number, offset: 
   return offset + 4
 }
 
-Buffer.prototype.writeIntLE = function writeIntLE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): String {
+Buffer.prototype.writeIntLE = function writeIntLE (value: number, offset: number, byteLength: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) {
-    var limit: Number = Math.pow(2, 8 * byteLength - 1)
+    var limit: number = Math.pow(2, 8 * byteLength - 1)
 
     checkInt(this, value, offset, byteLength, limit - 1, -limit)
   }
 
-  var i: Number = 0
-  var mul: Number = 1
-  var sub: Number = 0
+  var i: number = 0
+  var mul: number = 1
+  var sub: number = 0
   this[offset] = value & 0xFF
   while (++i < byteLength && (mul *= 0x100)) {
     if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
@@ -1717,18 +1717,18 @@ Buffer.prototype.writeIntLE = function writeIntLE (value: Number, offset: Number
   return offset + byteLength
 }
 
-Buffer.prototype.writeIntBE = function writeIntBE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeIntBE = function writeIntBE (value: number, offset: number, byteLength: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) {
-    var limit: Number = Math.pow(2, 8 * byteLength - 1)
+    var limit: number = Math.pow(2, 8 * byteLength - 1)
 
     checkInt(this, value, offset, byteLength, limit - 1, -limit)
   }
 
-  var i: Number = byteLength - 1
-  var mul: Number = 1
-  var sub: Number = 0
+  var i: number = byteLength - 1
+  var mul: number = 1
+  var sub: number = 0
   this[offset + i] = value & 0xFF
   while (--i >= 0 && (mul *= 0x100)) {
     if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
@@ -1740,7 +1740,7 @@ Buffer.prototype.writeIntBE = function writeIntBE (value: Number, offset: Number
   return offset + byteLength
 }
 
-Buffer.prototype.writeInt8 = function writeInt8 (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeInt8 = function writeInt8 (value: number, offset: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
@@ -1750,7 +1750,7 @@ Buffer.prototype.writeInt8 = function writeInt8 (value: Number, offset: Number, 
   return offset + 1
 }
 
-Buffer.prototype.writeInt16LE = function writeInt16LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeInt16LE = function writeInt16LE (value: number, offset: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
@@ -1763,7 +1763,7 @@ Buffer.prototype.writeInt16LE = function writeInt16LE (value: Number, offset: Nu
   return offset + 2
 }
 
-Buffer.prototype.writeInt16BE = function writeInt16BE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeInt16BE = function writeInt16BE (value: number, offset: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
@@ -1776,7 +1776,7 @@ Buffer.prototype.writeInt16BE = function writeInt16BE (value: Number, offset: Nu
   return offset + 2
 }
 
-Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeInt32LE = function writeInt32LE (value: number, offset: number, noAssert: boolean): string {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
@@ -1791,7 +1791,7 @@ Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Nu
   return offset + 4
 }
 
-Buffer.prototype.writeInt32BE = function writeInt32BE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeInt32BE = function writeInt32BE (value: number, offset: number, noAssert: boolean): number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
@@ -1807,12 +1807,12 @@ Buffer.prototype.writeInt32BE = function writeInt32BE (value: Number, offset: Nu
   return offset + 4
 }
 
-function checkIEEE754 (buf: Array, value: String, offset: Number, ext: String, max: Number, min: Number): Void {
+function checkIEEE754 (buf: any[], value: string, offset: number, ext: string, max: number, min: number): Void {
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
   if (offset < 0) throw new RangeError('Index out of range')
 }
 
-function writeFloat (buf: String, value: String, offset: String, littleEndian: Function, noAssert: Boolean): String {
+function writeFloat (buf: string, value: string, offset: string, littleEndian: Function, noAssert: boolean): string {
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
   }
@@ -1820,15 +1820,15 @@ function writeFloat (buf: String, value: String, offset: String, littleEndian: F
   return offset + 4
 }
 
-Buffer.prototype.writeFloatLE = function writeFloatLE (value: String, offset: String, noAssert: Number): Promise {
+Buffer.prototype.writeFloatLE = function writeFloatLE (value: string, offset: string, noAssert: number): Promise {
   return writeFloat(this, value, offset, true, noAssert)
 }
 
-Buffer.prototype.writeFloatBE = function writeFloatBE (value: String, offset: String, noAssert: Number): Promise {
+Buffer.prototype.writeFloatBE = function writeFloatBE (value: string, offset: string, noAssert: number): Promise {
   return writeFloat(this, value, offset, false, noAssert)
 }
 
-function writeDouble (buf: String, value: String, offset: String, littleEndian: Function, noAssert: Boolean): String {
+function writeDouble (buf: string, value: string, offset: string, littleEndian: Function, noAssert: boolean): string {
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
   }
@@ -1836,16 +1836,16 @@ function writeDouble (buf: String, value: String, offset: String, littleEndian: 
   return offset + 8
 }
 
-Buffer.prototype.writeDoubleLE = function writeDoubleLE (value: String, offset: String, noAssert: Number): Promise {
+Buffer.prototype.writeDoubleLE = function writeDoubleLE (value: string, offset: string, noAssert: number): Promise {
   return writeDouble(this, value, offset, true, noAssert)
 }
 
-Buffer.prototype.writeDoubleBE = function writeDoubleBE (value: String, offset: String, noAssert: Number): Promise {
+Buffer.prototype.writeDoubleBE = function writeDoubleBE (value: string, offset: string, noAssert: number): Promise {
   return writeDouble(this, value, offset, false, noAssert)
 }
 
 // copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target: Array, targetStart: Number, start: Number, end: Number): Number {
+Buffer.prototype.copy = function copy (target: any[], targetStart: number, start: number, end: number): number {
   if (!start) start = 0
   if (!end && end !== 0) end = this.length
   if (targetStart >= target.length) targetStart = target.length
@@ -1869,8 +1869,8 @@ Buffer.prototype.copy = function copy (target: Array, targetStart: Number, start
     end = target.length - targetStart + start
   }
 
-  var len: Number = end - start
-  var i: Number
+  var len: number = end - start
+  var i: number
 
   if (this === target && start < targetStart && targetStart < end) {
     // descending copy from end
@@ -1897,7 +1897,7 @@ Buffer.prototype.copy = function copy (target: Array, targetStart: Number, start
 //    buffer.fill(number[, offset[, end]])
 //    buffer.fill(buffer[, offset[, end]])
 //    buffer.fill(string[, offset[, end]][, encoding])
-Buffer.prototype.fill = function fill (val: String, start: Number, end: Number, encoding: Number): String {
+Buffer.prototype.fill = function fill (val: string, start: number, end: number, encoding: number): string {
   // Handle string cases:
   if (typeof val === 'string') {
     if (typeof start === 'string') {
@@ -1909,7 +1909,7 @@ Buffer.prototype.fill = function fill (val: String, start: Number, end: Number, 
       end = this.length
     }
     if (val.length === 1) {
-      var code: Number = val.charCodeAt(0)
+      var code: number = val.charCodeAt(0)
       if (code < 256) {
         val = code
       }
@@ -1938,16 +1938,16 @@ Buffer.prototype.fill = function fill (val: String, start: Number, end: Number, 
 
   if (!val) val = 0
 
-  var i: Number
+  var i: number
   if (typeof val === 'number') {
     for (i = start; i < end; ++i) {
       this[i] = val
     }
   } else {
-    var bytes: Array = Buffer.isBuffer(val)
+    var bytes: any[] = Buffer.isBuffer(val)
       ? val
       : utf8ToBytes(new Buffer(val, encoding).toString())
-    var len: Number = bytes.length
+    var len: number = bytes.length
     for (i = 0; i < end - start; ++i) {
       this[i + start] = bytes[i % len]
     }
@@ -1961,7 +1961,7 @@ Buffer.prototype.fill = function fill (val: String, start: Number, end: Number, 
 
 var INVALID_BASE64_RE: RegExp = /[^+\/0-9A-Za-z-_]/g
 
-function base64clean (str: String): String {
+function base64clean (str: string): string {
   // Node strips out invalid characters like \n and \t from the string, base64-js does not
   str = stringtrim(str).replace(INVALID_BASE64_RE, '')
   // Node converts strings with length < 2 to ''
@@ -1973,22 +1973,22 @@ function base64clean (str: String): String {
   return str
 }
 
-function stringtrim (str: String): String {
+function stringtrim (str: string): string {
   if (str.trim) return str.trim()
   return str.replace(/^\s+|\s+$/g, '')
 }
 
-function toHex (n: String): String {
+function toHex (n: string): string {
   if (n < 16) return '0' + n.toString(16)
   return n.toString(16)
 }
 
-function utf8ToBytes (string: String, units: Number): Array {
+function utf8ToBytes (string: string, units: number): any[] {
   units = units || Infinity
-  var codePoint: Number
-  var length: Number = string.length
-  var leadSurrogate: Number = null
-  var bytes: Array = []
+  var codePoint: number
+  var length: number = string.length
+  var leadSurrogate: number = null
+  var bytes: any[] = []
 
   for (var i = 0; i < length; ++i) {
     codePoint = string.charCodeAt(i)
@@ -2063,8 +2063,8 @@ function utf8ToBytes (string: String, units: Number): Array {
   return bytes
 }
 
-function asciiToBytes (str: String): Array {
-  var byteArray: Array = []
+function asciiToBytes (str: string): any[] {
+  var byteArray: any[] = []
   for (var i = 0; i < str.length; ++i) {
     // Node's code seems to be doing this and not & 0x7F..
     byteArray.push(str.charCodeAt(i) & 0xFF)
@@ -2072,9 +2072,9 @@ function asciiToBytes (str: String): Array {
   return byteArray
 }
 
-function utf16leToBytes (str: String, units: Number): Array {
-  var c: Number, hi: Number, lo: Number
-  var byteArray: Array = []
+function utf16leToBytes (str: string, units: number): any[] {
+  var c: number, hi: number, lo: number
+  var byteArray: any[] = []
   for (var i = 0; i < str.length; ++i) {
     if ((units -= 2) < 0) break
 
@@ -2088,11 +2088,11 @@ function utf16leToBytes (str: String, units: Number): Array {
   return byteArray
 }
 
-function base64ToBytes (str: String): Boolean {
+function base64ToBytes (str: string): boolean {
   return base64.toByteArray(base64clean(str))
 }
 
-function blitBuffer (src: Promise, dst: Promise, offset: String, length: Number): Number {
+function blitBuffer (src: Promise, dst: Promise, offset: string, length: number): number {
   for (var i = 0; i < length; ++i) {
     if ((i + offset >= dst.length) || (i >= src.length)) break
     dst[i + offset] = src[i]
@@ -2100,7 +2100,7 @@ function blitBuffer (src: Promise, dst: Promise, offset: String, length: Number)
   return i
 }
 
-function isnan (val: Number): Boolean {
+function isnan (val: number): boolean {
   return val !== val // eslint-disable-line no-self-compare
 }
 
@@ -2108,7 +2108,7 @@ function isnan (val: Number): Boolean {
 
 /***/ }),
 /* 4 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2141,12 +2141,12 @@ function isnan (val: Number): Boolean {
 
 /*<replacement>*/
 
-var pna: Object = __webpack_require__(6);
+var pna: object = __webpack_require__(6);
 /*</replacement>*/
 
 /*<replacement>*/
-var objectKeys: Function = Object.keys || function (obj: Array) {
-  var keys: Array = [];
+var objectKeys: Function = Object.keys || function (obj: any[]) {
+  var keys: any[] = [];
   for (var key in obj) {
     keys.push(key);
   }return keys;
@@ -2161,20 +2161,20 @@ util.inherits = __webpack_require__(2);
 /*</replacement>*/
 
 var Readable: Function = __webpack_require__(15);
-var Writable: Object = __webpack_require__(18);
+var Writable: object = __webpack_require__(18);
 
 util.inherits(Duplex, Readable);
 
 {
   // avoid scope creep, the keys array can then be collected
-  var keys: Array = objectKeys(Writable.prototype);
+  var keys: any[] = objectKeys(Writable.prototype);
   for (var v = 0; v < keys.length; v++) {
-    var method: String = keys[v];
+    var method: string = keys[v];
     if (!Duplex.prototype[method]) Duplex.prototype[method] = Writable.prototype[method];
   }
 }
 
-function Duplex(options: Array): String {
+function Duplex(options: any[]): string {
   if (!(this instanceof Duplex)) return new Duplex(options);
 
   Readable.call(this, options);
@@ -2211,7 +2211,7 @@ function onend(): Void {
   pna.nextTick(onEndNT, this);
 }
 
-function onEndNT(self: Object): Void {
+function onEndNT(self: object): Void {
   self.end();
 }
 
@@ -2222,7 +2222,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
     }
     return this._readableState.destroyed && this._writableState.destroyed;
   },
-  set: function (value: Number) {
+  set: function (value: number) {
     // we ignore the value if the stream
     // has not been initialized yet
     if (this._readableState === undefined || this._writableState === undefined) {
@@ -2236,7 +2236,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
   }
 });
 
-Duplex.prototype._destroy = function (err: Function, cb: Array) {
+Duplex.prototype._destroy = function (err: Function, cb: any[]) {
   this.push(null);
   this.end();
 
@@ -2247,7 +2247,7 @@ Duplex.prototype._destroy = function (err: Function, cb: Array) {
 /* 5 */
 /***/ (function(module: Function, exports: HTMLElement, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer: Object) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(Buffer: object) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -2271,7 +2271,7 @@ Duplex.prototype._destroy = function (err: Function, cb: Array) {
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
 
-function isArray(arg: Array): Boolean {
+function isArray(arg: any[]): boolean {
   if (Array.isArray) {
     return Array.isArray(arg);
   }
@@ -2279,67 +2279,67 @@ function isArray(arg: Array): Boolean {
 }
 exports.isArray = isArray;
 
-function isBoolean(arg: String): Boolean {
+function isBoolean(arg: string): boolean {
   return typeof arg === 'boolean';
 }
 exports.isBoolean = isBoolean;
 
-function isNull(arg: Number): Boolean {
+function isNull(arg: number): boolean {
   return arg === null;
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: Number): Boolean {
+function isNullOrUndefined(arg: number): boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: String): Boolean {
+function isNumber(arg: string): boolean {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: String): Boolean {
+function isString(arg: string): boolean {
   return typeof arg === 'string';
 }
 exports.isString = isString;
 
-function isSymbol(arg: String): Boolean {
+function isSymbol(arg: string): boolean {
   return typeof arg === 'symbol';
 }
 exports.isSymbol = isSymbol;
 
-function isUndefined(arg: Number): Boolean {
+function isUndefined(arg: number): boolean {
   return arg === void 0;
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: String): Boolean {
+function isRegExp(re: string): boolean {
   return objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;
 
-function isObject(arg: String): Boolean {
+function isObject(arg: string): boolean {
   return typeof arg === 'object' && arg !== null;
 }
 exports.isObject = isObject;
 
-function isDate(d: String): Boolean {
+function isDate(d: string): boolean {
   return objectToString(d) === '[object Date]';
 }
 exports.isDate = isDate;
 
-function isError(e: String): Boolean {
+function isError(e: string): boolean {
   return (objectToString(e) === '[object Error]' || e instanceof Error);
 }
 exports.isError = isError;
 
-function isFunction(arg: String): Boolean {
+function isFunction(arg: string): boolean {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
 
-function isPrimitive(arg: String): Boolean {
+function isPrimitive(arg: string): boolean {
   return arg === null ||
          typeof arg === 'boolean' ||
          typeof arg === 'number' ||
@@ -2351,7 +2351,7 @@ exports.isPrimitive = isPrimitive;
 
 exports.isBuffer = Buffer.isBuffer;
 
-function objectToString(o: String): Boolean {
+function objectToString(o: string): boolean {
   return Object.prototype.toString.call(o);
 }
 
@@ -2359,10 +2359,10 @@ function objectToString(o: String): Boolean {
 
 /***/ }),
 /* 6 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process: Boolean) {
+/* WEBPACK VAR INJECTION */(function(process: boolean) {
 
 if (typeof process === 'undefined' ||
     !process.version ||
@@ -2373,12 +2373,12 @@ if (typeof process === 'undefined' ||
   module.exports = process
 }
 
-function nextTick(fn: Function, arg1: String, arg2: String, arg3: String): String {
+function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): string {
   if (typeof fn !== 'function') {
     throw new TypeError('"callback" argument must be a function');
   }
-  var len: Number = arguments.length;
-  var args: Array, i: Number;
+  var len: number = arguments.length;
+  var args: any[], i: number;
   switch (len) {
   case 0:
   case 1:
@@ -2412,14 +2412,14 @@ function nextTick(fn: Function, arg1: String, arg2: String, arg3: String): Strin
 
 /***/ }),
 /* 7 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer: Boolean = __webpack_require__(3)
+var buffer: boolean = __webpack_require__(3)
 var Buffer: Function = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: Object, dst: Object): Void {
+function copyProps (src: object, dst: object): Void {
   for (var key in src) {
     dst[key] = src[key]
   }
@@ -2432,21 +2432,21 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   exports.Buffer = SafeBuffer
 }
 
-function SafeBuffer (arg: String, encodingOrOffset: String, length: String): Object {
+function SafeBuffer (arg: string, encodingOrOffset: string, length: string): object {
   return Buffer(arg, encodingOrOffset, length)
 }
 
 // Copy static methods from Buffer
 copyProps(Buffer, SafeBuffer)
 
-SafeBuffer.from = function (arg: String, encodingOrOffset: Number, length: String) {
+SafeBuffer.from = function (arg: string, encodingOrOffset: number, length: string) {
   if (typeof arg === 'number') {
     throw new TypeError('Argument must not be a number')
   }
   return Buffer(arg, encodingOrOffset, length)
 }
 
-SafeBuffer.alloc = function (size: String, fill: String, encoding: String) {
+SafeBuffer.alloc = function (size: string, fill: string, encoding: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
@@ -2463,14 +2463,14 @@ SafeBuffer.alloc = function (size: String, fill: String, encoding: String) {
   return buf
 }
 
-SafeBuffer.allocUnsafe = function (size: String) {
+SafeBuffer.allocUnsafe = function (size: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
   return Buffer(size)
 }
 
-SafeBuffer.allocUnsafeSlow = function (size: String) {
+SafeBuffer.allocUnsafeSlow = function (size: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
@@ -2480,7 +2480,7 @@ SafeBuffer.allocUnsafeSlow = function (size: String) {
 
 /***/ }),
 /* 8 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2543,34 +2543,34 @@ var protocolPattern: RegExp = /^([a-z0-9.+-]+:)/i,
 
     // RFC 2396: characters reserved for delimiting URLs.
     // We actually just auto-escape these.
-    delims: Array = ['<', '>', '"', '`', ' ', '\r', '\n', '\t'],
+    delims: any[] = ['<', '>', '"', '`', ' ', '\r', '\n', '\t'],
 
     // RFC 2396: characters not allowed for various reasons.
-    unwise: Array = ['{', '}', '|', '\\', '^', '`'].concat(delims),
+    unwise: any[] = ['{', '}', '|', '\\', '^', '`'].concat(delims),
 
     // Allowed by RFCs, but cause of XSS attacks.  Always escape these.
-    autoEscape: Array = ['\''].concat(unwise),
+    autoEscape: any[] = ['\''].concat(unwise),
     // Characters that are never ever allowed in a hostname.
     // Note that any invalid chars are also handled, but these
     // are the ones that are *expected* to be seen, so we fast-path
     // them.
-    nonHostChars: Array = ['%', '/', '?', ';', '#'].concat(autoEscape),
-    hostEndingChars: Array = ['/', '?', '#'],
-    hostnameMaxLen: Number = 255,
+    nonHostChars: any[] = ['%', '/', '?', ';', '#'].concat(autoEscape),
+    hostEndingChars: any[] = ['/', '?', '#'],
+    hostnameMaxLen: number = 255,
     hostnamePartPattern: RegExp = /^[+a-z0-9A-Z_-]{0,63}$/,
     hostnamePartStart: RegExp = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
     // protocols that can allow "unsafe" and "unwise" chars.
-    unsafeProtocol: Object = {
+    unsafeProtocol: object = {
       'javascript': true,
       'javascript:': true
     },
     // protocols that never have a hostname.
-    hostlessProtocol: Object = {
+    hostlessProtocol: object = {
       'javascript': true,
       'javascript:': true
     },
     // protocols that always contain a // bit.
-    slashedProtocol: Object = {
+    slashedProtocol: object = {
       'http': true,
       'https': true,
       'ftp': true,
@@ -2584,15 +2584,15 @@ var protocolPattern: RegExp = /^([a-z0-9.+-]+:)/i,
     },
     querystring: Void = __webpack_require__(28);
 
-function urlParse(url: String, parseQueryString: String, slashesDenoteHost: Number): String {
+function urlParse(url: string, parseQueryString: string, slashesDenoteHost: number): string {
   if (url && util.isObject(url) && url instanceof Url) return url;
 
-  var u: String = new Url;
+  var u: string = new Url;
   u.parse(url, parseQueryString, slashesDenoteHost);
   return u;
 }
 
-Url.prototype.parse = function(url: String, parseQueryString: String, slashesDenoteHost: Boolean) {
+Url.prototype.parse = function(url: string, parseQueryString: string, slashesDenoteHost: boolean) {
   if (!util.isString(url)) {
     throw new TypeError("Parameter 'url' must be a string, not " + typeof url);
   }
@@ -2600,15 +2600,15 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
   // Copy chrome, IE, opera backslash-handling behavior.
   // Back slashes before the query string get converted to forward slashes
   // See: https://code.google.com/p/chromium/issues/detail?id=25916
-  var queryIndex: Number = url.indexOf('?'),
-      splitter: String =
+  var queryIndex: number = url.indexOf('?'),
+      splitter: string =
           (queryIndex !== -1 && queryIndex < url.indexOf('#')) ? '?' : '#',
-      uSplit: Array = url.split(splitter),
+      uSplit: any[] = url.split(splitter),
       slashRegex: RegExp = /\\/g;
   uSplit[0] = uSplit[0].replace(slashRegex, '/');
   url = uSplit.join(splitter);
 
-  var rest: String = url;
+  var rest: string = url;
 
   // trim before proceeding.
   // This is to support parse stuff like "  http://foo.com  \n"
@@ -2616,7 +2616,7 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
 
   if (!slashesDenoteHost && url.split('#').length === 1) {
     // Try fast path regexp
-    var simplePath: Object = simplePathPattern.exec(rest);
+    var simplePath: object = simplePathPattern.exec(rest);
     if (simplePath) {
       this.path = rest;
       this.href = rest;
@@ -2636,10 +2636,10 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
     }
   }
 
-  var proto: Array = protocolPattern.exec(rest);
+  var proto: any[] = protocolPattern.exec(rest);
   if (proto) {
     proto = proto[0];
-    var lowerProto: String = proto.toLowerCase();
+    var lowerProto: string = proto.toLowerCase();
     this.protocol = lowerProto;
     rest = rest.substr(proto.length);
   }
@@ -2649,7 +2649,7 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
   // resolution will treat //foo/bar as host=foo,path=bar because that's
   // how the browser resolves relative URLs.
   if (slashesDenoteHost || proto || rest.match(/^\/\/[^@\/]+@[^@\/]+/)) {
-    var slashes: Boolean = rest.substr(0, 2) === '//';
+    var slashes: boolean = rest.substr(0, 2) === '//';
     if (slashes && !(proto && hostlessProtocol[proto])) {
       rest = rest.substr(2);
       this.slashes = true;
@@ -2675,16 +2675,16 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
     // Review our test case against browsers more comprehensively.
 
     // find the first instance of any hostEndingChars
-    var hostEnd: Number = -1;
+    var hostEnd: number = -1;
     for (var i = 0; i < hostEndingChars.length; i++) {
-      var hec: Number = rest.indexOf(hostEndingChars[i]);
+      var hec: number = rest.indexOf(hostEndingChars[i]);
       if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
         hostEnd = hec;
     }
 
     // at this point, either we have an explicit point where the
     // auth portion cannot go past, or the last @ char is the decider.
-    var auth: String, atSign: Number;
+    var auth: string, atSign: number;
     if (hostEnd === -1) {
       // atSign can be anywhere.
       atSign = rest.lastIndexOf('@');
@@ -2705,7 +2705,7 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
     // the host is the remaining to the left of the first non-host char
     hostEnd = -1;
     for (var i = 0; i < nonHostChars.length; i++) {
-      var hec: Number = rest.indexOf(nonHostChars[i]);
+      var hec: number = rest.indexOf(nonHostChars[i]);
       if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
         hostEnd = hec;
     }
@@ -2725,17 +2725,17 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
 
     // if hostname begins with [ and ends with ]
     // assume that it's an IPv6 address.
-    var ipv6Hostname: Boolean = this.hostname[0] === '[' &&
+    var ipv6Hostname: boolean = this.hostname[0] === '[' &&
         this.hostname[this.hostname.length - 1] === ']';
 
     // validate a little.
     if (!ipv6Hostname) {
-      var hostparts: Array = this.hostname.split(/\./);
+      var hostparts: any[] = this.hostname.split(/\./);
       for (var i = 0, l = hostparts.length; i < l; i++) {
-        var part: String = hostparts[i];
+        var part: string = hostparts[i];
         if (!part) continue;
         if (!part.match(hostnamePartPattern)) {
-          var newpart: String = '';
+          var newpart: string = '';
           for (var j = 0, k = part.length; j < k; j++) {
             if (part.charCodeAt(j) > 127) {
               // we replace non-ASCII char with a temporary placeholder
@@ -2748,9 +2748,9 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
           }
           // we test again with ASCII char only
           if (!newpart.match(hostnamePartPattern)) {
-            var validParts: Array = hostparts.slice(0, i);
-            var notHost: Array = hostparts.slice(i + 1);
-            var bit: Object = part.match(hostnamePartStart);
+            var validParts: any[] = hostparts.slice(0, i);
+            var notHost: any[] = hostparts.slice(i + 1);
+            var bit: object = part.match(hostnamePartStart);
             if (bit) {
               validParts.push(bit[1]);
               notHost.unshift(bit[2]);
@@ -2780,8 +2780,8 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
       this.hostname = punycode.toASCII(this.hostname);
     }
 
-    var p: String = this.port ? ':' + this.port : '';
-    var h: Number = this.hostname || '';
+    var p: string = this.port ? ':' + this.port : '';
+    var h: number = this.hostname || '';
     this.host = h + p;
     this.href += this.host;
 
@@ -2803,10 +2803,10 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
     // escaped, even if encodeURIComponent doesn't think they
     // need to be.
     for (var i = 0, l = autoEscape.length; i < l; i++) {
-      var ae: String = autoEscape[i];
+      var ae: string = autoEscape[i];
       if (rest.indexOf(ae) === -1)
         continue;
-      var esc: String = encodeURIComponent(ae);
+      var esc: string = encodeURIComponent(ae);
       if (esc === ae) {
         esc = escape(ae);
       }
@@ -2816,13 +2816,13 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
 
 
   // chop off from the tail first.
-  var hash: Number = rest.indexOf('#');
+  var hash: number = rest.indexOf('#');
   if (hash !== -1) {
     // got a fragment string.
     this.hash = rest.substr(hash);
     rest = rest.slice(0, hash);
   }
-  var qm: Number = rest.indexOf('?');
+  var qm: number = rest.indexOf('?');
   if (qm !== -1) {
     this.search = rest.substr(qm);
     this.query = rest.substr(qm + 1);
@@ -2843,8 +2843,8 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
 
   //to support http.request
   if (this.pathname || this.search) {
-    var p: Number = this.pathname || '';
-    var s: Number = this.search || '';
+    var p: number = this.pathname || '';
+    var s: number = this.search || '';
     this.path = p + s;
   }
 
@@ -2854,7 +2854,7 @@ Url.prototype.parse = function(url: String, parseQueryString: String, slashesDen
 };
 
 // format a parsed object into a url string
-function urlFormat(obj: Array): String {
+function urlFormat(obj: any[]): string {
   // ensure it's an object, and not a string url.
   // If it's an obj, this is a no-op.
   // this way, you can call url_format() on strings
@@ -2865,18 +2865,18 @@ function urlFormat(obj: Array): String {
 }
 
 Url.prototype.format = function() {
-  var auth: String = this.auth || '';
+  var auth: string = this.auth || '';
   if (auth) {
     auth = encodeURIComponent(auth);
     auth = auth.replace(/%3A/i, ':');
     auth += '@';
   }
 
-  var protocol: String = this.protocol || '',
-      pathname: String = this.pathname || '',
-      hash: String = this.hash || '',
-      host: Boolean = false,
-      query: String = '';
+  var protocol: string = this.protocol || '',
+      pathname: string = this.pathname || '',
+      hash: string = this.hash || '',
+      host: boolean = false,
+      query: string = '';
 
   if (this.host) {
     host = auth + this.host;
@@ -2895,7 +2895,7 @@ Url.prototype.format = function() {
     query = querystring.stringify(this.query);
   }
 
-  var search: String = this.search || (query && ('?' + query)) || '';
+  var search: string = this.search || (query && ('?' + query)) || '';
 
   if (protocol && protocol.substr(-1) !== ':') protocol += ':';
 
@@ -2912,7 +2912,7 @@ Url.prototype.format = function() {
   if (hash && hash.charAt(0) !== '#') hash = '#' + hash;
   if (search && search.charAt(0) !== '?') search = '?' + search;
 
-  pathname = pathname.replace(/[?#]/g, function(match: String) {
+  pathname = pathname.replace(/[?#]/g, function(match: string) {
     return encodeURIComponent(match);
   });
   search = search.replace('#', '%23');
@@ -2920,30 +2920,30 @@ Url.prototype.format = function() {
   return protocol + host + pathname + search + hash;
 };
 
-function urlResolve(source: String, relative: String): Object {
+function urlResolve(source: string, relative: string): object {
   return urlParse(source, false, true).resolve(relative);
 }
 
-Url.prototype.resolve = function(relative: String) {
+Url.prototype.resolve = function(relative: string) {
   return this.resolveObject(urlParse(relative, false, true)).format();
 };
 
-function urlResolveObject(source: Number, relative: String): String {
+function urlResolveObject(source: number, relative: string): string {
   if (!source) return relative;
   return urlParse(source, false, true).resolveObject(relative);
 }
 
-Url.prototype.resolveObject = function(relative: String) {
+Url.prototype.resolveObject = function(relative: string) {
   if (util.isString(relative)) {
-    var rel: String = new Url();
+    var rel: string = new Url();
     rel.parse(relative, false, true);
     relative = rel;
   }
 
   var result: Element = new Url();
-  var tkeys: Array = Object.keys(this);
+  var tkeys: any[] = Object.keys(this);
   for (var tk = 0; tk < tkeys.length; tk++) {
-    var tkey: String = tkeys[tk];
+    var tkey: string = tkeys[tk];
     result[tkey] = this[tkey];
   }
 
@@ -2960,9 +2960,9 @@ Url.prototype.resolveObject = function(relative: String) {
   // hrefs like //foo/bar always cut to the protocol.
   if (relative.slashes && !relative.protocol) {
     // take everything except the protocol from relative
-    var rkeys: Array = Object.keys(relative);
+    var rkeys: any[] = Object.keys(relative);
     for (var rk = 0; rk < rkeys.length; rk++) {
-      var rkey: String = rkeys[rk];
+      var rkey: string = rkeys[rk];
       if (rkey !== 'protocol')
         result[rkey] = relative[rkey];
     }
@@ -2987,9 +2987,9 @@ Url.prototype.resolveObject = function(relative: String) {
     // because that's known to be hostless.
     // anything else is assumed to be absolute.
     if (!slashedProtocol[relative.protocol]) {
-      var keys: Array = Object.keys(relative);
+      var keys: any[] = Object.keys(relative);
       for (var v = 0; v < keys.length; v++) {
-        var k: String = keys[v];
+        var k: string = keys[v];
         result[k] = relative[k];
       }
       result.href = result.format();
@@ -2998,7 +2998,7 @@ Url.prototype.resolveObject = function(relative: String) {
 
     result.protocol = relative.protocol;
     if (!relative.host && !hostlessProtocol[relative.protocol]) {
-      var relPath: Array = (relative.pathname || '').split('/');
+      var relPath: any[] = (relative.pathname || '').split('/');
       while (relPath.length && !(relative.host = relPath.shift()));
       if (!relative.host) relative.host = '';
       if (!relative.hostname) relative.hostname = '';
@@ -3016,8 +3016,8 @@ Url.prototype.resolveObject = function(relative: String) {
     result.port = relative.port;
     // to support http.request
     if (result.pathname || result.search) {
-      var p: Number = result.pathname || '';
-      var s: Number = result.search || '';
+      var p: number = result.pathname || '';
+      var s: number = result.search || '';
       result.path = p + s;
     }
     result.slashes = result.slashes || relative.slashes;
@@ -3025,17 +3025,17 @@ Url.prototype.resolveObject = function(relative: String) {
     return result;
   }
 
-  var isSourceAbs: Boolean = (result.pathname && result.pathname.charAt(0) === '/'),
-      isRelAbs: Boolean = (
+  var isSourceAbs: boolean = (result.pathname && result.pathname.charAt(0) === '/'),
+      isRelAbs: boolean = (
           relative.host ||
           relative.pathname && relative.pathname.charAt(0) === '/'
       ),
-      mustEndAbs: Number = (isRelAbs || isSourceAbs ||
+      mustEndAbs: number = (isRelAbs || isSourceAbs ||
                     (result.host && relative.pathname)),
-      removeAllDots: Number = mustEndAbs,
-      srcPath: Array = result.pathname && result.pathname.split('/') || [],
-      relPath: Array = relative.pathname && relative.pathname.split('/') || [],
-      psychotic: Boolean = result.protocol && !slashedProtocol[result.protocol];
+      removeAllDots: number = mustEndAbs,
+      srcPath: any[] = result.pathname && result.pathname.split('/') || [],
+      relPath: any[] = relative.pathname && relative.pathname.split('/') || [],
+      psychotic: boolean = result.protocol && !slashedProtocol[result.protocol];
 
   // if the url is a non-slashed url, then relative
   // links like ../.. should be able
@@ -3089,7 +3089,7 @@ Url.prototype.resolveObject = function(relative: String) {
       //occationaly the auth can get stuck only in host
       //this especially happens in cases like
       //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-      var authInHost: String = result.host && result.host.indexOf('@') > 0 ?
+      var authInHost: string = result.host && result.host.indexOf('@') > 0 ?
                        result.host.split('@') : false;
       if (authInHost) {
         result.auth = authInHost.shift();
@@ -3124,14 +3124,14 @@ Url.prototype.resolveObject = function(relative: String) {
   // if a url ENDs in . or .., then it must get a trailing slash.
   // however, if it ends in anything else non-slashy,
   // then it must NOT get a trailing slash.
-  var last: String = srcPath.slice(-1)[0];
-  var hasTrailingSlash: Boolean = (
+  var last: string = srcPath.slice(-1)[0];
+  var hasTrailingSlash: boolean = (
       (result.host || relative.host || srcPath.length > 1) &&
       (last === '.' || last === '..') || last === '');
 
   // strip single dots, resolve double dots to parent dir
   // if the path tries to go above the root, `up` ends up > 0
-  var up: Number = 0;
+  var up: number = 0;
   for (var i = srcPath.length; i >= 0; i--) {
     last = srcPath[i];
     if (last === '.') {
@@ -3161,7 +3161,7 @@ Url.prototype.resolveObject = function(relative: String) {
     srcPath.push('');
   }
 
-  var isAbsolute: Boolean = srcPath[0] === '' ||
+  var isAbsolute: boolean = srcPath[0] === '' ||
       (srcPath[0] && srcPath[0].charAt(0) === '/');
 
   // put the host back
@@ -3171,7 +3171,7 @@ Url.prototype.resolveObject = function(relative: String) {
     //occationaly the auth can get stuck only in host
     //this especially happens in cases like
     //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-    var authInHost: String = result.host && result.host.indexOf('@') > 0 ?
+    var authInHost: string = result.host && result.host.indexOf('@') > 0 ?
                      result.host.split('@') : false;
     if (authInHost) {
       result.auth = authInHost.shift();
@@ -3204,8 +3204,8 @@ Url.prototype.resolveObject = function(relative: String) {
 };
 
 Url.prototype.parseHost = function() {
-  var host: String = this.host;
-  var port: Array = portPattern.exec(host);
+  var host: string = this.host;
+  var port: any[] = portPattern.exec(host);
   if (port) {
     port = port[0];
     if (port !== ':') {
@@ -3219,7 +3219,7 @@ Url.prototype.parseHost = function() {
 
 /***/ }),
 /* 9 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Number) {
+/***/ (function(module: Function, exports: string, __webpack_require__: number) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -3245,10 +3245,10 @@ Url.prototype.parseHost = function() {
 
 
 
-var R: Object = typeof Reflect === 'object' ? Reflect : null
+var R: object = typeof Reflect === 'object' ? Reflect : null
 var ReflectApply: Function = R && typeof R.apply === 'function'
   ? R.apply
-  : function ReflectApply(target: Object, receiver: String, args: String): Boolean {
+  : function ReflectApply(target: object, receiver: string, args: string): boolean {
     return Function.prototype.apply.call(target, receiver, args);
   }
 
@@ -3256,21 +3256,21 @@ var ReflectOwnKeys: Function
 if (R && typeof R.ownKeys === 'function') {
   ReflectOwnKeys = R.ownKeys
 } else if (Object.getOwnPropertySymbols) {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Array): Object {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any[]): object {
     return Object.getOwnPropertyNames(target)
       .concat(Object.getOwnPropertySymbols(target));
   };
 } else {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Array): Promise {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any[]): Promise {
     return Object.getOwnPropertyNames(target);
   };
 }
 
-function ProcessEmitWarning(warning: String): Void {
+function ProcessEmitWarning(warning: string): Void {
   if (console && console.warn) console.warn(warning);
 }
 
-var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: Number): Boolean {
+var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: number): boolean {
   return value !== value;
 }
 
@@ -3289,9 +3289,9 @@ EventEmitter.prototype._maxListeners = undefined;
 
 // By default EventEmitters will print a warning if more than 10 listeners are
 // added to it. This is a useful default which helps finding memory leaks.
-var defaultMaxListeners: Number = 10;
+var defaultMaxListeners: number = 10;
 
-function checkListener(listener: String): Void {
+function checkListener(listener: string): Void {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -3302,7 +3302,7 @@ Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
   get: function() {
     return defaultMaxListeners;
   },
-  set: function(arg: Number) {
+  set: function(arg: number) {
     if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
       throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
     }
@@ -3323,7 +3323,7 @@ EventEmitter.init = function() {
 
 // Obviously not all Emitters should be limited to 10. This function allows
 // that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: String): Object {
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: string): object {
   if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
     throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
   }
@@ -3331,7 +3331,7 @@ EventEmitter.prototype.setMaxListeners = function setMaxListeners(n: String): Ob
   return this;
 };
 
-function _getMaxListeners(that: HTMLElement): Object {
+function _getMaxListeners(that: HTMLElement): object {
   if (that._maxListeners === undefined)
     return EventEmitter.defaultMaxListeners;
   return that._maxListeners;
@@ -3341,12 +3341,12 @@ EventEmitter.prototype.getMaxListeners = function getMaxListeners(): Promise {
   return _getMaxListeners(this);
 };
 
-EventEmitter.prototype.emit = function emit(type: String): Boolean {
-  var args: Array = [];
+EventEmitter.prototype.emit = function emit(type: string): boolean {
+  var args: any[] = [];
   for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
-  var doError: Boolean = (type === 'error');
+  var doError: boolean = (type === 'error');
 
-  var events: Number = this._events;
+  var events: number = this._events;
   if (events !== undefined)
     doError = (doError && events.error === undefined);
   else if (!doError)
@@ -3354,7 +3354,7 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
 
   // If there is no 'error' event listener then throw.
   if (doError) {
-    var er: Object;
+    var er: object;
     if (args.length > 0)
       er = args[0];
     if (er instanceof Error) {
@@ -3368,7 +3368,7 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
     throw err; // Unhandled 'error' event
   }
 
-  var handler: Array = events[type];
+  var handler: any[] = events[type];
 
   if (handler === undefined)
     return false;
@@ -3376,8 +3376,8 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
   if (typeof handler === 'function') {
     ReflectApply(handler, this, args);
   } else {
-    var len: Number = handler.length;
-    var listeners: Object = arrayClone(handler, len);
+    var len: number = handler.length;
+    var listeners: object = arrayClone(handler, len);
     for (var i = 0; i < len; ++i)
       ReflectApply(listeners[i], this, args);
   }
@@ -3385,10 +3385,10 @@ EventEmitter.prototype.emit = function emit(type: String): Boolean {
   return true;
 };
 
-function _addListener(target: Element, type: String, listener: Object, prepend: Boolean): Object {
-  var m: Number;
-  var events: String;
-  var existing: Array;
+function _addListener(target: Element, type: string, listener: object, prepend: boolean): object {
+  var m: number;
+  var events: string;
+  var existing: any[];
 
   checkListener(listener);
 
@@ -3432,7 +3432,7 @@ function _addListener(target: Element, type: String, listener: Object, prepend: 
       existing.warned = true;
       // No error code for this since it is a Warning
       // eslint-disable-next-line no-restricted-syntax
-      var w: Object = new Error('Possible EventEmitter memory leak detected. ' +
+      var w: object = new Error('Possible EventEmitter memory leak detected. ' +
                           existing.length + ' ' + String(type) + ' listeners ' +
                           'added. Use emitter.setMaxListeners() to ' +
                           'increase limit');
@@ -3447,18 +3447,18 @@ function _addListener(target: Element, type: String, listener: Object, prepend: 
   return target;
 }
 
-EventEmitter.prototype.addListener = function addListener(type: String, listener: String): Promise {
+EventEmitter.prototype.addListener = function addListener(type: string, listener: string): Promise {
   return _addListener(this, type, listener, false);
 };
 
 EventEmitter.prototype.on = EventEmitter.prototype.addListener;
 
 EventEmitter.prototype.prependListener =
-    function prependListener(type: String, listener: String): Promise {
+    function prependListener(type: string, listener: string): Promise {
       return _addListener(this, type, listener, true);
     };
 
-function onceWrapper(): Array {
+function onceWrapper(): any[] {
   if (!this.fired) {
     this.target.removeListener(this.type, this.wrapFn);
     this.fired = true;
@@ -3468,22 +3468,22 @@ function onceWrapper(): Array {
   }
 }
 
-function _onceWrap(target: Object, type: String, listener: String): Object {
-  var state: Object = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
-  var wrapped: Object = onceWrapper.bind(state);
+function _onceWrap(target: object, type: string, listener: string): object {
+  var state: object = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped: object = onceWrapper.bind(state);
   wrapped.listener = listener;
   state.wrapFn = wrapped;
   return wrapped;
 }
 
-EventEmitter.prototype.once = function once(type: String, listener: String): String {
+EventEmitter.prototype.once = function once(type: string, listener: string): string {
   checkListener(listener);
   this.on(type, _onceWrap(this, type, listener));
   return this;
 };
 
 EventEmitter.prototype.prependOnceListener =
-    function prependOnceListener(type: String, listener: String): Object {
+    function prependOnceListener(type: string, listener: string): object {
       checkListener(listener);
       this.prependListener(type, _onceWrap(this, type, listener));
       return this;
@@ -3491,8 +3491,8 @@ EventEmitter.prototype.prependOnceListener =
 
 // Emits a 'removeListener' event if and only if the listener was removed.
 EventEmitter.prototype.removeListener =
-    function removeListener(type: String, listener: String): Object {
-      var list: Array, events: Number, position: Number, i: Number, originalListener: String;
+    function removeListener(type: string, listener: string): object {
+      var list: any[], events: number, position: number, i: number, originalListener: string;
 
       checkListener(listener);
 
@@ -3545,8 +3545,8 @@ EventEmitter.prototype.removeListener =
 EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
 
 EventEmitter.prototype.removeAllListeners =
-    function removeAllListeners(type: String): Object {
-      var listeners: Array, events: String, i: Number;
+    function removeAllListeners(type: string): object {
+      var listeners: any[], events: string, i: number;
 
       events = this._events;
       if (events === undefined)
@@ -3568,8 +3568,8 @@ EventEmitter.prototype.removeAllListeners =
 
       // emit removeListener for all listeners on all events
       if (arguments.length === 0) {
-        var keys: Array = Object.keys(events);
-        var key: String;
+        var keys: any[] = Object.keys(events);
+        var key: string;
         for (i = 0; i < keys.length; ++i) {
           key = keys[i];
           if (key === 'removeListener') continue;
@@ -3595,13 +3595,13 @@ EventEmitter.prototype.removeAllListeners =
       return this;
     };
 
-function _listeners(target: NextFunction, type: String, unwrap: Boolean): Array {
-  var events: Number = target._events;
+function _listeners(target: NextFunction, type: string, unwrap: boolean): any[] {
+  var events: number = target._events;
 
   if (events === undefined)
     return [];
 
-  var evlistener: Array = events[type];
+  var evlistener: any[] = events[type];
   if (evlistener === undefined)
     return [];
 
@@ -3612,15 +3612,15 @@ function _listeners(target: NextFunction, type: String, unwrap: Boolean): Array 
     unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
 }
 
-EventEmitter.prototype.listeners = function listeners(type: String): String {
+EventEmitter.prototype.listeners = function listeners(type: string): string {
   return _listeners(this, type, true);
 };
 
-EventEmitter.prototype.rawListeners = function rawListeners(type: String): Object {
+EventEmitter.prototype.rawListeners = function rawListeners(type: string): object {
   return _listeners(this, type, false);
 };
 
-EventEmitter.listenerCount = function(emitter: Element, type: String) {
+EventEmitter.listenerCount = function(emitter: Element, type: string) {
   if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
@@ -3629,11 +3629,11 @@ EventEmitter.listenerCount = function(emitter: Element, type: String) {
 };
 
 EventEmitter.prototype.listenerCount = listenerCount;
-function listenerCount(type: String): Number {
-  var events: Number = this._events;
+function listenerCount(type: string): number {
+  var events: number = this._events;
 
   if (events !== undefined) {
-    var evlistener: Array = events[type];
+    var evlistener: any[] = events[type];
 
     if (typeof evlistener === 'function') {
       return 1;
@@ -3645,34 +3645,34 @@ function listenerCount(type: String): Number {
   return 0;
 }
 
-EventEmitter.prototype.eventNames = function eventNames(): Array {
+EventEmitter.prototype.eventNames = function eventNames(): any[] {
   return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
 };
 
-function arrayClone(arr: Promise, n: String): Object {
-  var copy: Object = new Array(n);
+function arrayClone(arr: Promise, n: string): object {
+  var copy: object = new Array(n);
   for (var i = 0; i < n; ++i)
     copy[i] = arr[i];
   return copy;
 }
 
-function spliceOne(list: Array, index: Number): Void {
+function spliceOne(list: any[], index: number): Void {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
 }
 
-function unwrapListeners(arr: Array): Object {
-  var ret: Array = new Array(arr.length);
+function unwrapListeners(arr: any[]): object {
+  var ret: any[] = new Array(arr.length);
   for (var i = 0; i < ret.length; ++i) {
     ret[i] = arr[i].listener || arr[i];
   }
   return ret;
 }
 
-function once(emitter: Object, name: String): Object {
+function once(emitter: object, name: string): object {
   return new Promise(function (resolve: Function, reject: Function) {
-    function errorListener(err: String): Void {
+    function errorListener(err: string): Void {
       emitter.removeListener(name, resolver);
       reject(err);
     }
@@ -3691,13 +3691,13 @@ function once(emitter: Object, name: String): Object {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: Object, handler: Object, flags: Function): Void {
+function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): Void {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
 }
 
-function eventTargetAgnosticAddListener(emitter: HTMLElement, name: String, listener: Function, flags: Object): Void {
+function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): Void {
   if (typeof emitter.on === 'function') {
     if (flags.once) {
       emitter.once(name, listener);
@@ -3707,7 +3707,7 @@ function eventTargetAgnosticAddListener(emitter: HTMLElement, name: String, list
   } else if (typeof emitter.addEventListener === 'function') {
     // EventTarget does not have `error` event semantics like Node
     // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg: String): Void {
+    emitter.addEventListener(name, function wrapListener(arg: string): Void {
       // IE does not have builtin `{ once: true }` support so we
       // have to do it manually.
       if (flags.once) {
@@ -3723,28 +3723,28 @@ function eventTargetAgnosticAddListener(emitter: HTMLElement, name: String, list
 
 /***/ }),
 /* 10 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 var toString: Function = {}.toString;
 
-module.exports = Array.isArray || function (arr: String) {
+module.exports = Array.isArray || function (arr: string) {
   return toString.call(arr) == '[object Array]';
 };
 
 
 /***/ }),
 /* 11 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Object) {
+/***/ (function(module: Function, exports: string, __webpack_require__: object) {
 
-/* WEBPACK VAR INJECTION */(function(global: Object) {var ClientRequest: Object = __webpack_require__(32)
-var response: Object = __webpack_require__(13)
+/* WEBPACK VAR INJECTION */(function(global: object) {var ClientRequest: object = __webpack_require__(32)
+var response: object = __webpack_require__(13)
 var extend: Function = __webpack_require__(41)
-var statusCodes: Array = __webpack_require__(42)
-var url: String = __webpack_require__(8)
+var statusCodes: any[] = __webpack_require__(42)
+var url: string = __webpack_require__(8)
 
-var http: String = exports
+var http: string = exports
 
-http.request = function (opts: String, cb: Boolean) {
+http.request = function (opts: string, cb: boolean) {
 	if (typeof opts === 'string')
 		opts = url.parse(opts)
 	else
@@ -3753,12 +3753,12 @@ http.request = function (opts: String, cb: Boolean) {
 	// Normally, the page is loaded from http or https, so not specifying a protocol
 	// will result in a (valid) protocol-relative url. However, this won't work if
 	// the protocol is something else, like 'file:'
-	var defaultProtocol: String = global.location.protocol.search(/^https?:$/) === -1 ? 'http:' : ''
+	var defaultProtocol: string = global.location.protocol.search(/^https?:$/) === -1 ? 'http:' : ''
 
-	var protocol: Number = opts.protocol || defaultProtocol
-	var host: String = opts.hostname || opts.host
-	var port: String = opts.port
-	var path: String = opts.path || '/'
+	var protocol: number = opts.protocol || defaultProtocol
+	var host: string = opts.hostname || opts.host
+	var port: string = opts.port
+	var path: string = opts.path || '/'
 
 	// Necessary for IPv6 addresses
 	if (host && host.indexOf(':') !== -1)
@@ -3777,8 +3777,8 @@ http.request = function (opts: String, cb: Boolean) {
 	return req
 }
 
-http.get = function get (opts: String, cb: String): String {
-	var req: Array = http.request(opts, cb)
+http.get = function get (opts: string, cb: string): string {
+	var req: any[] = http.request(opts, cb)
 	req.end()
 	return req
 }
@@ -3842,8 +3842,8 @@ try {
 // The xhr request to example.com may violate some restrictive CSP configurations,
 // so if we're running in a browser that supports `fetch`, avoid calling getXHR()
 // and assume support for certain features below.
-var xhr: Object
-function getXHR (): Object {
+var xhr: object
+function getXHR (): object {
 	// Cache the xhr value
 	if (xhr !== undefined) return xhr
 
@@ -3864,7 +3864,7 @@ function getXHR (): Object {
 	return xhr
 }
 
-function checkTypeSupport (type: Number): Boolean {
+function checkTypeSupport (type: number): boolean {
 	var xhr: Element = getXHR()
 	if (!xhr) return false
 	try {
@@ -3877,7 +3877,7 @@ function checkTypeSupport (type: Number): Boolean {
 // For some strange reason, Safari 7.0 reports typeof global.ArrayBuffer === 'object'.
 // Safari 7.1 appears to have fixed this bug.
 var haveArrayBuffer: Element = typeof global.ArrayBuffer !== 'undefined'
-var haveSlice: Boolean = haveArrayBuffer && isFunction(global.ArrayBuffer.prototype.slice)
+var haveSlice: boolean = haveArrayBuffer && isFunction(global.ArrayBuffer.prototype.slice)
 
 // If fetch is supported, then arraybuffer will be supported too. Skip calling
 // checkTypeSupport(), since that calls getXHR().
@@ -3895,7 +3895,7 @@ exports.overrideMimeType = exports.fetch || (getXHR() ? isFunction(getXHR().over
 
 exports.vbArray = isFunction(global.VBArray)
 
-function isFunction (value: String): Boolean {
+function isFunction (value: string): boolean {
 	return typeof value === 'function'
 }
 
@@ -3905,13 +3905,13 @@ xhr = null // Help gc
 
 /***/ }),
 /* 13 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(process: Object, Buffer: Object, global: HTMLElement) {var capability: HTMLElement = __webpack_require__(12)
+/* WEBPACK VAR INJECTION */(function(process: object, Buffer: object, global: HTMLElement) {var capability: HTMLElement = __webpack_require__(12)
 var inherits: Function = __webpack_require__(2)
-var stream: Array = __webpack_require__(14)
+var stream: any[] = __webpack_require__(14)
 
-var rStates: Object = exports.readyStates = {
+var rStates: object = exports.readyStates = {
 	UNSENT: 0,
 	OPENED: 1,
 	HEADERS_RECEIVED: 2,
@@ -3919,8 +3919,8 @@ var rStates: Object = exports.readyStates = {
 	DONE: 4
 }
 
-var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, response: HTMLElement, mode: Number, fetchTimer: String) {
-	var self: Object = this
+var IncomingMessage: Element = exports.IncomingMessage = function (xhr: object, response: HTMLElement, mode: number, fetchTimer: string) {
+	var self: object = this
 	stream.Readable.call(self)
 
 	self._mode = mode
@@ -3944,14 +3944,14 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, 
 		self.statusCode = response.status
 		self.statusMessage = response.statusText
 		
-		response.headers.forEach(function (header: String, key: String){
+		response.headers.forEach(function (header: string, key: string){
 			self.headers[key.toLowerCase()] = header
 			self.rawHeaders.push(key, header)
 		})
 
 		if (capability.writableStream) {
-			var writable: Array = new WritableStream({
-				write: function (chunk: String) {
+			var writable: any[] = new WritableStream({
+				write: function (chunk: string) {
 					return new Promise(function (resolve: Function, reject: Function) {
 						if (self._destroyed) {
 							reject()
@@ -3967,7 +3967,7 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, 
 					if (!self._destroyed)
 						self.push(null)
 				},
-				abort: function (err: String) {
+				abort: function (err: string) {
 					if (!self._destroyed)
 						self.emit('error', err)
 				}
@@ -3985,7 +3985,7 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, 
 		// fallback for when writableStream or pipeTo aren't available
 		var reader: Map = response.body.getReader()
 		function read (): Void {
-			reader.read().then(function (result: Object) {
+			reader.read().then(function (result: object) {
 				if (self._destroyed)
 					return
 				if (result.done) {
@@ -4009,11 +4009,11 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, 
 		self.url = xhr.responseURL
 		self.statusCode = xhr.status
 		self.statusMessage = xhr.statusText
-		var headers: Array = xhr.getAllResponseHeaders().split(/\r?\n/)
-		headers.forEach(function (header: String) {
-			var matches: Object = header.match(/^([^:]+):\s*(.*)/)
+		var headers: any[] = xhr.getAllResponseHeaders().split(/\r?\n/)
+		headers.forEach(function (header: string) {
+			var matches: object = header.match(/^([^:]+):\s*(.*)/)
 			if (matches) {
-				var key: String = matches[1].toLowerCase()
+				var key: string = matches[1].toLowerCase()
 				if (key === 'set-cookie') {
 					if (self.headers[key] === undefined) {
 						self.headers[key] = []
@@ -4030,9 +4030,9 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, 
 
 		self._charset = 'x-user-defined'
 		if (!capability.overrideMimeType) {
-			var mimeType: String = self.rawHeaders['mime-type']
+			var mimeType: string = self.rawHeaders['mime-type']
 			if (mimeType) {
-				var charsetMatch: Object = mimeType.match(/;\s*charset=([^;])(;|$)/)
+				var charsetMatch: object = mimeType.match(/;\s*charset=([^;])(;|$)/)
 				if (charsetMatch) {
 					self._charset = charsetMatch[1].toLowerCase()
 				}
@@ -4056,11 +4056,11 @@ IncomingMessage.prototype._read = function () {
 }
 
 IncomingMessage.prototype._onXHRProgress = function () {
-	var self: Array = this
+	var self: any[] = this
 
 	var xhr: HTMLElement = self._xhr
 
-	var response: Array = null
+	var response: any[] = null
 	switch (self._mode) {
 		case 'text:vbarray': // For IE9
 			if (xhr.readyState !== rStates.DONE)
@@ -4082,7 +4082,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 				break
 			}
 			if (response.length > self._pos) {
-				var newData: String = response.substr(self._pos)
+				var newData: string = response.substr(self._pos)
 				if (self._charset === 'x-user-defined') {
 					var buffer: HTMLElement = new Buffer(newData.length)
 					for (var i = 0; i < newData.length; i++)
@@ -4136,7 +4136,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 
 /***/ }),
 /* 14 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
 exports = module.exports = __webpack_require__(15);
 exports.Stream = exports;
@@ -4149,10 +4149,10 @@ exports.PassThrough = __webpack_require__(39);
 
 /***/ }),
 /* 15 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Object) {
+/***/ (function(module: Function, exports: string, __webpack_require__: object) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global: Object, process: Object) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(global: object, process: object) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -4177,7 +4177,7 @@ exports.PassThrough = __webpack_require__(39);
 
 /*<replacement>*/
 
-var pna: Object = __webpack_require__(6);
+var pna: object = __webpack_require__(6);
 /*</replacement>*/
 
 module.exports = Readable;
@@ -4187,7 +4187,7 @@ var isArray: Function = __webpack_require__(10);
 /*</replacement>*/
 
 /*<replacement>*/
-var Duplex: String;
+var Duplex: string;
 /*</replacement>*/
 
 Readable.ReadableState = ReadableState;
@@ -4195,23 +4195,23 @@ Readable.ReadableState = ReadableState;
 /*<replacement>*/
 var EE: Function = __webpack_require__(9).EventEmitter;
 
-var EElistenerCount: Function = function (emitter: Object, type: String) {
+var EElistenerCount: Function = function (emitter: object, type: string) {
   return emitter.listeners(type).length;
 };
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream: Object = __webpack_require__(16);
+var Stream: object = __webpack_require__(16);
 /*</replacement>*/
 
 /*<replacement>*/
 
 var Buffer: HTMLElement = __webpack_require__(7).Buffer;
 var OurUint8Array: HTMLElement = global.Uint8Array || function () {};
-function _uint8ArrayToBuffer(chunk: String): Object {
+function _uint8ArrayToBuffer(chunk: string): object {
   return Buffer.from(chunk);
 }
-function _isUint8Array(obj: String): Boolean {
+function _isUint8Array(obj: string): boolean {
   return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
 
@@ -4223,8 +4223,8 @@ util.inherits = __webpack_require__(2);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil: Object = __webpack_require__(33);
-var debug: Object = void 0;
+var debugUtil: object = __webpack_require__(33);
+var debug: object = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
 } else {
@@ -4232,15 +4232,15 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList: Object = __webpack_require__(34);
-var destroyImpl: Object = __webpack_require__(17);
-var StringDecoder: Array;
+var BufferList: object = __webpack_require__(34);
+var destroyImpl: object = __webpack_require__(17);
+var StringDecoder: any[];
 
 util.inherits(Readable, Stream);
 
-var kProxyEvents: Array = ['error', 'close', 'destroy', 'pause', 'resume'];
+var kProxyEvents: any[] = ['error', 'close', 'destroy', 'pause', 'resume'];
 
-function prependListener(emitter: HTMLElement, event: String, fn: String): Promise {
+function prependListener(emitter: HTMLElement, event: string, fn: string): Promise {
   // Sadly this is not cacheable as some libraries bundle their own
   // event emitter implementation with them.
   if (typeof emitter.prependListener === 'function') return emitter.prependListener(event, fn);
@@ -4252,7 +4252,7 @@ function prependListener(emitter: HTMLElement, event: String, fn: String): Promi
   if (!emitter._events || !emitter._events[event]) emitter.on(event, fn);else if (isArray(emitter._events[event])) emitter._events[event].unshift(fn);else emitter._events[event] = [fn, emitter._events[event]];
 }
 
-function ReadableState(options: Object, stream: Number): Void {
+function ReadableState(options: object, stream: number): Void {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -4262,7 +4262,7 @@ function ReadableState(options: Object, stream: Number): Void {
   // However, some cases require setting options to different
   // values for the readable and the writable sides of the duplex stream.
   // These options can be provided separately as readableXXX and writableXXX.
-  var isDuplex: Boolean = stream instanceof Duplex;
+  var isDuplex: boolean = stream instanceof Duplex;
 
   // object stream flag. Used to make read(n) ignore n and to
   // make all the buffer merging and length checks go away
@@ -4272,9 +4272,9 @@ function ReadableState(options: Object, stream: Number): Void {
 
   // the point at which it stops calling _read() to fill the buffer
   // Note: 0 is a valid value, means "don't call _read preemptively ever"
-  var hwm: String = options.highWaterMark;
-  var readableHwm: Number = options.readableHighWaterMark;
-  var defaultHwm: Number = this.objectMode ? 16 : 16 * 1024;
+  var hwm: string = options.highWaterMark;
+  var readableHwm: number = options.readableHighWaterMark;
+  var defaultHwm: number = this.objectMode ? 16 : 16 * 1024;
 
   if (hwm || hwm === 0) this.highWaterMark = hwm;else if (isDuplex && (readableHwm || readableHwm === 0)) this.highWaterMark = readableHwm;else this.highWaterMark = defaultHwm;
 
@@ -4329,7 +4329,7 @@ function ReadableState(options: Object, stream: Number): Void {
   }
 }
 
-function Readable(options: Object): String {
+function Readable(options: object): string {
   Duplex = Duplex || __webpack_require__(4);
 
   if (!(this instanceof Readable)) return new Readable(options);
@@ -4355,7 +4355,7 @@ Object.defineProperty(Readable.prototype, 'destroyed', {
     }
     return this._readableState.destroyed;
   },
-  set: function (value: Number) {
+  set: function (value: number) {
     // we ignore the value if the stream
     // has not been initialized yet
     if (!this._readableState) {
@@ -4370,7 +4370,7 @@ Object.defineProperty(Readable.prototype, 'destroyed', {
 
 Readable.prototype.destroy = destroyImpl.destroy;
 Readable.prototype._undestroy = destroyImpl.undestroy;
-Readable.prototype._destroy = function (err: String, cb: Function) {
+Readable.prototype._destroy = function (err: string, cb: Function) {
   this.push(null);
   cb(err);
 };
@@ -4379,9 +4379,9 @@ Readable.prototype._destroy = function (err: String, cb: Function) {
 // This returns true if the highWaterMark has not been hit yet,
 // similar to how Writable.write() returns true if you should
 // write() some more.
-Readable.prototype.push = function (chunk: Array, encoding: String) {
+Readable.prototype.push = function (chunk: any[], encoding: string) {
   var state: HTMLElement = this._readableState;
-  var skipChunkCheck: Boolean;
+  var skipChunkCheck: boolean;
 
   if (!state.objectMode) {
     if (typeof chunk === 'string') {
@@ -4404,13 +4404,13 @@ Readable.prototype.unshift = function (chunk: Function) {
   return readableAddChunk(this, chunk, null, true, false);
 };
 
-function readableAddChunk(stream: String, chunk: Array, encoding: Boolean, addToFront: Boolean, skipChunkCheck: Boolean): String {
+function readableAddChunk(stream: string, chunk: any[], encoding: boolean, addToFront: boolean, skipChunkCheck: boolean): string {
   var state: HTMLElement = stream._readableState;
   if (chunk === null) {
     state.reading = false;
     onEofChunk(stream, state);
   } else {
-    var er: String;
+    var er: string;
     if (!skipChunkCheck) er = chunkInvalid(state, chunk);
     if (er) {
       stream.emit('error', er);
@@ -4440,7 +4440,7 @@ function readableAddChunk(stream: String, chunk: Array, encoding: Boolean, addTo
   return needMoreData(state);
 }
 
-function addChunk(stream: String, state: Object, chunk: String, addToFront: Boolean): Void {
+function addChunk(stream: string, state: object, chunk: string, addToFront: boolean): Void {
   if (state.flowing && state.length === 0 && !state.sync) {
     stream.emit('data', chunk);
     stream.read(0);
@@ -4454,8 +4454,8 @@ function addChunk(stream: String, state: Object, chunk: String, addToFront: Bool
   maybeReadMore(stream, state);
 }
 
-function chunkInvalid(state: HTMLElement, chunk: String): Object {
-  var er: Object;
+function chunkInvalid(state: HTMLElement, chunk: string): object {
+  var er: object;
   if (!_isUint8Array(chunk) && typeof chunk !== 'string' && chunk !== undefined && !state.objectMode) {
     er = new TypeError('Invalid non-string/buffer chunk');
   }
@@ -4469,7 +4469,7 @@ function chunkInvalid(state: HTMLElement, chunk: String): Object {
 // readable event, and the user called read(largeNumber) such that
 // needReadable was set, then we ought to push more, so that another
 // 'readable' event will be triggered.
-function needMoreData(state: Object): Boolean {
+function needMoreData(state: object): boolean {
   return !state.ended && (state.needReadable || state.length < state.highWaterMark || state.length === 0);
 }
 
@@ -4478,7 +4478,7 @@ Readable.prototype.isPaused = function () {
 };
 
 // backwards compatibility.
-Readable.prototype.setEncoding = function (enc: Number) {
+Readable.prototype.setEncoding = function (enc: number) {
   if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
@@ -4486,8 +4486,8 @@ Readable.prototype.setEncoding = function (enc: Number) {
 };
 
 // Don't raise the hwm > 8MB
-var MAX_HWM: Number = 0x800000;
-function computeNewHighWaterMark(n: Number): Number {
+var MAX_HWM: number = 0x800000;
+function computeNewHighWaterMark(n: number): number {
   if (n >= MAX_HWM) {
     n = MAX_HWM;
   } else {
@@ -4506,7 +4506,7 @@ function computeNewHighWaterMark(n: Number): Number {
 
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function howMuchToRead(n: Number, state: Object): Number {
+function howMuchToRead(n: number, state: object): number {
   if (n <= 0 || state.length === 0 && state.ended) return 0;
   if (state.objectMode) return 1;
   if (n !== n) {
@@ -4525,11 +4525,11 @@ function howMuchToRead(n: Number, state: Object): Number {
 }
 
 // you can override either this method, or the async _read(n) below.
-Readable.prototype.read = function (n: Number) {
+Readable.prototype.read = function (n: number) {
   debug('read', n);
   n = parseInt(n, 10);
-  var state: Object = this._readableState;
-  var nOrig: Number = n;
+  var state: object = this._readableState;
+  var nOrig: number = n;
 
   if (n !== 0) state.emittedReadable = false;
 
@@ -4573,7 +4573,7 @@ Readable.prototype.read = function (n: Number) {
   // 3. Actually pull the requested chunks out of the buffer and return.
 
   // if we need a readable event, then we need to do some reading.
-  var doRead: Boolean = state.needReadable;
+  var doRead: boolean = state.needReadable;
   debug('need readable', doRead);
 
   // if we currently have less than the highWaterMark, then also read some
@@ -4601,7 +4601,7 @@ Readable.prototype.read = function (n: Number) {
     if (!state.reading) n = howMuchToRead(nOrig, state);
   }
 
-  var ret: String;
+  var ret: string;
   if (n > 0) ret = fromList(n, state);else ret = null;
 
   if (ret === null) {
@@ -4625,10 +4625,10 @@ Readable.prototype.read = function (n: Number) {
   return ret;
 };
 
-function onEofChunk(stream: String, state: Object): Void {
+function onEofChunk(stream: string, state: object): Void {
   if (state.ended) return;
   if (state.decoder) {
-    var chunk: Array = state.decoder.end();
+    var chunk: any[] = state.decoder.end();
     if (chunk && chunk.length) {
       state.buffer.push(chunk);
       state.length += state.objectMode ? 1 : chunk.length;
@@ -4643,7 +4643,7 @@ function onEofChunk(stream: String, state: Object): Void {
 // Don't emit readable right away in sync mode, because this can trigger
 // another read() call => stack overflow.  This way, it might trigger
 // a nextTick recursion warning, but that's not so bad.
-function emitReadable(stream: String): Void {
+function emitReadable(stream: string): Void {
   var state: HTMLElement = stream._readableState;
   state.needReadable = false;
   if (!state.emittedReadable) {
@@ -4653,7 +4653,7 @@ function emitReadable(stream: String): Void {
   }
 }
 
-function emitReadable_(stream: String): Void {
+function emitReadable_(stream: string): Void {
   debug('emit readable');
   stream.emit('readable');
   flow(stream);
@@ -4665,15 +4665,15 @@ function emitReadable_(stream: String): Void {
 // it's in progress.
 // However, if we're not ended, or reading, and the length < hwm,
 // then go ahead and try to read some more preemptively.
-function maybeReadMore(stream: String, state: Object): Void {
+function maybeReadMore(stream: string, state: object): Void {
   if (!state.readingMore) {
     state.readingMore = true;
     pna.nextTick(maybeReadMore_, stream, state);
   }
 }
 
-function maybeReadMore_(stream: Number, state: Object): Void {
-  var len: Number = state.length;
+function maybeReadMore_(stream: number, state: object): Void {
+  var len: number = state.length;
   while (!state.reading && !state.flowing && !state.ended && state.length < state.highWaterMark) {
     debug('maybeReadMore read 0');
     stream.read(0);
@@ -4688,11 +4688,11 @@ function maybeReadMore_(stream: Number, state: Object): Void {
 // call cb(er, data) where data is <= n in length.
 // for virtual (non-string, non-buffer) streams, "length" is somewhat
 // arbitrary, and perhaps not very meaningful.
-Readable.prototype._read = function (n: Number) {
+Readable.prototype._read = function (n: number) {
   this.emit('error', new Error('_read() is not implemented'));
 };
 
-Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
+Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
   var src: HTMLElement = this;
   var state: HTMLElement = this._readableState;
 
@@ -4710,13 +4710,13 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
   state.pipesCount += 1;
   debug('pipe count=%d opts=%j', state.pipesCount, pipeOpts);
 
-  var doEnd: Boolean = (!pipeOpts || pipeOpts.end !== false) && dest !== process.stdout && dest !== process.stderr;
+  var doEnd: boolean = (!pipeOpts || pipeOpts.end !== false) && dest !== process.stdout && dest !== process.stderr;
 
   var endFn: Function = doEnd ? onend : unpipe;
   if (state.endEmitted) pna.nextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
-  function onunpipe(readable: String, unpipeInfo: Error): Void {
+  function onunpipe(readable: string, unpipeInfo: Error): Void {
     debug('onunpipe');
     if (readable === src) {
       if (unpipeInfo && unpipeInfo.hasUnpiped === false) {
@@ -4738,7 +4738,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
   var ondrain: Function = pipeOnDrain(src);
   dest.on('drain', ondrain);
 
-  var cleanedUp: Boolean = false;
+  var cleanedUp: boolean = false;
   function cleanup(): Void {
     debug('cleanup');
     // cleanup event handlers once the pipe is broken
@@ -4765,12 +4765,12 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
   // in ondata again. However, we only want to increase awaitDrain once because
   // dest will only emit one 'drain' event for the multiple writes.
   // => Introduce a guard on increasing awaitDrain.
-  var increasedAwaitDrain: Boolean = false;
+  var increasedAwaitDrain: boolean = false;
   src.on('data', ondata);
-  function ondata(chunk: String): Void {
+  function ondata(chunk: string): Void {
     debug('ondata');
     increasedAwaitDrain = false;
-    var ret: Number = dest.write(chunk);
+    var ret: number = dest.write(chunk);
     if (false === ret && !increasedAwaitDrain) {
       // If the user unpiped during `dest.write()`, it is possible
       // to get stuck in a permanently paused state if that write
@@ -4787,7 +4787,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
 
   // if the dest has an error, then stop piping into it.
   // however, don't suppress the throwing behavior for this.
-  function onerror(er: String): Void {
+  function onerror(er: string): Void {
     debug('onerror', er);
     unpipe();
     dest.removeListener('error', onerror);
@@ -4839,9 +4839,9 @@ function pipeOnDrain(src: Function): Function {
   };
 }
 
-Readable.prototype.unpipe = function (dest: Object) {
+Readable.prototype.unpipe = function (dest: object) {
   var state: HTMLElement = this._readableState;
-  var unpipeInfo: Object = { hasUnpiped: false };
+  var unpipeInfo: object = { hasUnpiped: false };
 
   // if we're not piping anywhere, then do nothing.
   if (state.pipesCount === 0) return this;
@@ -4865,8 +4865,8 @@ Readable.prototype.unpipe = function (dest: Object) {
 
   if (!dest) {
     // remove all.
-    var dests: Object = state.pipes;
-    var len: String = state.pipesCount;
+    var dests: object = state.pipes;
+    var len: string = state.pipesCount;
     state.pipes = null;
     state.pipesCount = 0;
     state.flowing = false;
@@ -4877,7 +4877,7 @@ Readable.prototype.unpipe = function (dest: Object) {
   }
 
   // try to find the right one.
-  var index: Number = indexOf(state.pipes, dest);
+  var index: number = indexOf(state.pipes, dest);
   if (index === -1) return this;
 
   state.pipes.splice(index, 1);
@@ -4891,14 +4891,14 @@ Readable.prototype.unpipe = function (dest: Object) {
 
 // set up data events if they are asked for
 // Ensure readable listeners eventually get something
-Readable.prototype.on = function (ev: String, fn: String) {
-  var res: Array = Stream.prototype.on.call(this, ev, fn);
+Readable.prototype.on = function (ev: string, fn: string) {
+  var res: any[] = Stream.prototype.on.call(this, ev, fn);
 
   if (ev === 'data') {
     // Start flowing on next tick if stream isn't explicitly paused
     if (this._readableState.flowing !== false) this.resume();
   } else if (ev === 'readable') {
-    var state: Object = this._readableState;
+    var state: object = this._readableState;
     if (!state.endEmitted && !state.readableListening) {
       state.readableListening = state.needReadable = true;
       state.emittedReadable = false;
@@ -4914,7 +4914,7 @@ Readable.prototype.on = function (ev: String, fn: String) {
 };
 Readable.prototype.addListener = Readable.prototype.on;
 
-function nReadingNextTick(self: Array): Void {
+function nReadingNextTick(self: any[]): Void {
   debug('readable nexttick read 0');
   self.read(0);
 }
@@ -4931,14 +4931,14 @@ Readable.prototype.resume = function () {
   return this;
 };
 
-function resume(stream: String, state: HTMLElement): Void {
+function resume(stream: string, state: HTMLElement): Void {
   if (!state.resumeScheduled) {
     state.resumeScheduled = true;
     pna.nextTick(resume_, stream, state);
   }
 }
 
-function resume_(stream: String, state: HTMLElement): Void {
+function resume_(stream: string, state: HTMLElement): Void {
   if (!state.reading) {
     debug('resume read 0');
     stream.read(0);
@@ -4961,7 +4961,7 @@ Readable.prototype.pause = function () {
   return this;
 };
 
-function flow(stream: String): Void {
+function flow(stream: string): Void {
   var state: HTMLElement = stream._readableState;
   debug('flow', state.flowing);
   while (state.flowing && stream.read() !== null) {}
@@ -4970,30 +4970,30 @@ function flow(stream: String): Void {
 // wrap an old-style stream as the async data source.
 // This is *not* part of the readable stream interface.
 // It is an ugly unfortunate mess of history.
-Readable.prototype.wrap = function (stream: Array) {
-  var _this: Array = this;
+Readable.prototype.wrap = function (stream: any[]) {
+  var _this: any[] = this;
 
   var state: HTMLElement = this._readableState;
-  var paused: Boolean = false;
+  var paused: boolean = false;
 
   stream.on('end', function () {
     debug('wrapped end');
     if (state.decoder && !state.ended) {
-      var chunk: Array = state.decoder.end();
+      var chunk: any[] = state.decoder.end();
       if (chunk && chunk.length) _this.push(chunk);
     }
 
     _this.push(null);
   });
 
-  stream.on('data', function (chunk: Number) {
+  stream.on('data', function (chunk: number) {
     debug('wrapped data');
     if (state.decoder) chunk = state.decoder.write(chunk);
 
     // don't skip over falsy values in objectMode
     if (state.objectMode && (chunk === null || chunk === undefined)) return;else if (!state.objectMode && (!chunk || !chunk.length)) return;
 
-    var ret: Number = _this.push(chunk);
+    var ret: number = _this.push(chunk);
     if (!ret) {
       paused = true;
       stream.pause();
@@ -5004,7 +5004,7 @@ Readable.prototype.wrap = function (stream: Array) {
   // important when wrapping filters and duplexes.
   for (var i in stream) {
     if (this[i] === undefined && typeof stream[i] === 'function') {
-      this[i] = function (method: Array) {
+      this[i] = function (method: any[]) {
         return function () {
           return stream[method].apply(stream, arguments);
         };
@@ -5019,7 +5019,7 @@ Readable.prototype.wrap = function (stream: Array) {
 
   // when we try to consume some more bytes, simply unpause the
   // underlying stream.
-  this._read = function (n: Number) {
+  this._read = function (n: number) {
     debug('wrapped _read', n);
     if (paused) {
       paused = false;
@@ -5047,7 +5047,7 @@ Readable._fromList = fromList;
 // Length is the combined lengths of all the buffers in the list.
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function fromList(n: Number, state: Object): Object {
+function fromList(n: number, state: object): object {
   // nothing buffered
   if (state.length === 0) return null;
 
@@ -5067,7 +5067,7 @@ function fromList(n: Number, state: Object): Object {
 // Extracts only enough buffered data to satisfy the amount requested.
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function fromListPartial(n: String, list: Object, hasStrings: Number): Object {
+function fromListPartial(n: string, list: object, hasStrings: number): object {
   var ret: Function;
   if (n < list.head.data.length) {
     // slice is the same for buffers and strings
@@ -5087,14 +5087,14 @@ function fromListPartial(n: String, list: Object, hasStrings: Number): Object {
 // chunks.
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function copyFromBufferString(n: Number, list: Object): String {
-  var p: Object = list.head;
-  var c: Number = 1;
-  var ret: String = p.data;
+function copyFromBufferString(n: number, list: object): string {
+  var p: object = list.head;
+  var c: number = 1;
+  var ret: string = p.data;
   n -= ret.length;
   while (p = p.next) {
-    var str: String = p.data;
-    var nb: Number = n > str.length ? str.length : n;
+    var str: string = p.data;
+    var nb: number = n > str.length ? str.length : n;
     if (nb === str.length) ret += str;else ret += str.slice(0, n);
     n -= nb;
     if (n === 0) {
@@ -5116,15 +5116,15 @@ function copyFromBufferString(n: Number, list: Object): String {
 // Copies a specified amount of bytes from the list of buffered data chunks.
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function copyFromBuffer(n: Number, list: Object): Array {
-  var ret: Array = Buffer.allocUnsafe(n);
-  var p: Object = list.head;
-  var c: Number = 1;
+function copyFromBuffer(n: number, list: object): any[] {
+  var ret: any[] = Buffer.allocUnsafe(n);
+  var p: object = list.head;
+  var c: number = 1;
   p.data.copy(ret);
   n -= p.data.length;
   while (p = p.next) {
-    var buf: Array = p.data;
-    var nb: Number = n > buf.length ? buf.length : n;
+    var buf: any[] = p.data;
+    var nb: number = n > buf.length ? buf.length : n;
     buf.copy(ret, ret.length - n, 0, nb);
     n -= nb;
     if (n === 0) {
@@ -5143,8 +5143,8 @@ function copyFromBuffer(n: Number, list: Object): Array {
   return ret;
 }
 
-function endReadable(stream: String): Void {
-  var state: Object = stream._readableState;
+function endReadable(stream: string): Void {
+  var state: object = stream._readableState;
 
   // If we get here before consuming all the bytes, then that is a
   // bug in node.  Should never happen.
@@ -5156,7 +5156,7 @@ function endReadable(stream: String): Void {
   }
 }
 
-function endReadableNT(state: Array, stream: Number): Void {
+function endReadableNT(state: any[], stream: number): Void {
   // Check that we didn't get one last unshift.
   if (!state.endEmitted && state.length === 0) {
     state.endEmitted = true;
@@ -5165,7 +5165,7 @@ function endReadableNT(state: Array, stream: Number): Void {
   }
 }
 
-function indexOf(xs: Array, x: String): Number {
+function indexOf(xs: any[], x: string): number {
   for (var i = 0, l = xs.length; i < l; i++) {
     if (xs[i] === x) return i;
   }
@@ -5175,29 +5175,29 @@ function indexOf(xs: Array, x: String): Number {
 
 /***/ }),
 /* 16 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
 module.exports = __webpack_require__(9).EventEmitter;
 
 
 /***/ }),
 /* 17 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
 "use strict";
 
 
 /*<replacement>*/
 
-var pna: Object = __webpack_require__(6);
+var pna: object = __webpack_require__(6);
 /*</replacement>*/
 
 // undocumented cb() API, needed for core, not for public API
-function destroy(err: String, cb: Function): String {
+function destroy(err: string, cb: Function): string {
   var _this: HTMLElement = this;
 
-  var readableDestroyed: Number = this._readableState && this._readableState.destroyed;
-  var writableDestroyed: Boolean = this._writableState && this._writableState.destroyed;
+  var readableDestroyed: number = this._readableState && this._readableState.destroyed;
+  var writableDestroyed: boolean = this._writableState && this._writableState.destroyed;
 
   if (readableDestroyed || writableDestroyed) {
     if (cb) {
@@ -5220,7 +5220,7 @@ function destroy(err: String, cb: Function): String {
     this._writableState.destroyed = true;
   }
 
-  this._destroy(err || null, function (err: String) {
+  this._destroy(err || null, function (err: string) {
     if (!cb && err) {
       pna.nextTick(emitErrorNT, _this, err);
       if (_this._writableState) {
@@ -5251,7 +5251,7 @@ function undestroy(): Void {
   }
 }
 
-function emitErrorNT(self: Object, err: Function): Void {
+function emitErrorNT(self: object, err: Function): Void {
   self.emit('error', err);
 }
 
@@ -5262,10 +5262,10 @@ module.exports = {
 
 /***/ }),
 /* 18 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Object) {
+/***/ (function(module: Function, exports: string, __webpack_require__: object) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process: Object, setImmediate: String, global: Object) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(process: object, setImmediate: string, global: object) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -5294,13 +5294,13 @@ module.exports = {
 
 /*<replacement>*/
 
-var pna: Object = __webpack_require__(6);
+var pna: object = __webpack_require__(6);
 /*</replacement>*/
 
 module.exports = Writable;
 
 /* <replacement> */
-function WriteReq(chunk: String, encoding: String, cb: String): Void {
+function WriteReq(chunk: string, encoding: string, cb: string): Void {
   this.chunk = chunk;
   this.encoding = encoding;
   this.callback = cb;
@@ -5309,8 +5309,8 @@ function WriteReq(chunk: String, encoding: String, cb: String): Void {
 
 // It seems a linked list but it is not
 // there will be only 2 of these for each stream
-function CorkedRequest(state: String): Void {
-  var _this: Array = this;
+function CorkedRequest(state: string): Void {
+  var _this: any[] = this;
 
   this.next = null;
   this.entry = null;
@@ -5325,7 +5325,7 @@ var asyncWrite: Function = !process.browser && ['v0.10', 'v0.9.'].indexOf(proces
 /*</replacement>*/
 
 /*<replacement>*/
-var Duplex: String;
+var Duplex: string;
 /*</replacement>*/
 
 Writable.WritableState = WritableState;
@@ -5336,7 +5336,7 @@ util.inherits = __webpack_require__(2);
 /*</replacement>*/
 
 /*<replacement>*/
-var internalUtil: Object = {
+var internalUtil: object = {
   deprecate: __webpack_require__(38)
 };
 /*</replacement>*/
@@ -5349,22 +5349,22 @@ var Stream: Function = __webpack_require__(16);
 
 var Buffer: HTMLElement = __webpack_require__(7).Buffer;
 var OurUint8Array: HTMLElement = global.Uint8Array || function () {};
-function _uint8ArrayToBuffer(chunk: String): Object {
+function _uint8ArrayToBuffer(chunk: string): object {
   return Buffer.from(chunk);
 }
-function _isUint8Array(obj: String): Boolean {
+function _isUint8Array(obj: string): boolean {
   return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
 
 /*</replacement>*/
 
-var destroyImpl: Object = __webpack_require__(17);
+var destroyImpl: object = __webpack_require__(17);
 
 util.inherits(Writable, Stream);
 
 function nop(): Void {}
 
-function WritableState(options: HTMLElement, stream: String): Void {
+function WritableState(options: HTMLElement, stream: string): Void {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -5374,7 +5374,7 @@ function WritableState(options: HTMLElement, stream: String): Void {
   // However, some cases require setting options to different
   // values for the readable and the writable sides of the duplex stream.
   // These options can be provided separately as readableXXX and writableXXX.
-  var isDuplex: Boolean = stream instanceof Duplex;
+  var isDuplex: boolean = stream instanceof Duplex;
 
   // object stream flag to indicate whether or not this stream
   // contains buffers or objects.
@@ -5385,9 +5385,9 @@ function WritableState(options: HTMLElement, stream: String): Void {
   // the point at which write() starts returning false
   // Note: 0 is a valid value, means that we always return false if
   // the entire buffer is not flushed immediately on write()
-  var hwm: String = options.highWaterMark;
-  var writableHwm: Number = options.writableHighWaterMark;
-  var defaultHwm: Number = this.objectMode ? 16 : 16 * 1024;
+  var hwm: string = options.highWaterMark;
+  var writableHwm: number = options.writableHighWaterMark;
+  var defaultHwm: number = this.objectMode ? 16 : 16 * 1024;
 
   if (hwm || hwm === 0) this.highWaterMark = hwm;else if (isDuplex && (writableHwm || writableHwm === 0)) this.highWaterMark = writableHwm;else this.highWaterMark = defaultHwm;
 
@@ -5412,7 +5412,7 @@ function WritableState(options: HTMLElement, stream: String): Void {
   // should we decode strings into buffers before passing to _write?
   // this is here so that some node-core streams can optimize string
   // handling at a lower level.
-  var noDecode: Boolean = options.decodeStrings === false;
+  var noDecode: boolean = options.decodeStrings === false;
   this.decodeStrings = !noDecode;
 
   // Crypto is kind of old and crusty.  Historically, its default string
@@ -5443,7 +5443,7 @@ function WritableState(options: HTMLElement, stream: String): Void {
   this.bufferProcessing = false;
 
   // the callback that's passed to _write(chunk,cb)
-  this.onwrite = function (er: String) {
+  this.onwrite = function (er: string) {
     onwrite(stream, er);
   };
 
@@ -5475,9 +5475,9 @@ function WritableState(options: HTMLElement, stream: String): Void {
   this.corkedRequestsFree = new CorkedRequest(this);
 }
 
-WritableState.prototype.getBuffer = function getBuffer(): Array {
+WritableState.prototype.getBuffer = function getBuffer(): any[] {
   var current: Function = this.bufferedRequest;
-  var out: Array = [];
+  var out: any[] = [];
   while (current) {
     out.push(current);
     current = current.next;
@@ -5501,7 +5501,7 @@ var realHasInstance: Function;
 if (typeof Symbol === 'function' && Symbol.hasInstance && typeof Function.prototype[Symbol.hasInstance] === 'function') {
   realHasInstance = Function.prototype[Symbol.hasInstance];
   Object.defineProperty(Writable, Symbol.hasInstance, {
-    value: function (object: Object) {
+    value: function (object: object) {
       if (realHasInstance.call(this, object)) return true;
       if (this !== Writable) return false;
 
@@ -5509,12 +5509,12 @@ if (typeof Symbol === 'function' && Symbol.hasInstance && typeof Function.protot
     }
   });
 } else {
-  realHasInstance = function (object: Object) {
+  realHasInstance = function (object: object) {
     return object instanceof this;
   };
 }
 
-function Writable(options: Object): String {
+function Writable(options: object): string {
   Duplex = Duplex || __webpack_require__(4);
 
   // Writable ctor is applied to Duplexes, too.
@@ -5551,7 +5551,7 @@ Writable.prototype.pipe = function () {
   this.emit('error', new Error('Cannot pipe, not readable'));
 };
 
-function writeAfterEnd(stream: Number, cb: String): Void {
+function writeAfterEnd(stream: number, cb: string): Void {
   var er: HTMLElement = new Error('write after end');
   // TODO: defer error events consistently everywhere, not just the cb
   stream.emit('error', er);
@@ -5561,9 +5561,9 @@ function writeAfterEnd(stream: Number, cb: String): Void {
 // Checks that a user-supplied chunk is valid, especially for the particular
 // mode the stream is in. Currently this means that `null` is never accepted
 // and undefined/non-string values are only allowed in object mode.
-function validChunk(stream: String, state: Object, chunk: String, cb: String): Boolean {
-  var valid: Boolean = true;
-  var er: Boolean = false;
+function validChunk(stream: string, state: object, chunk: string, cb: string): boolean {
+  var valid: boolean = true;
+  var er: boolean = false;
 
   if (chunk === null) {
     er = new TypeError('May not write null values to stream');
@@ -5578,10 +5578,10 @@ function validChunk(stream: String, state: Object, chunk: String, cb: String): B
   return valid;
 }
 
-Writable.prototype.write = function (chunk: Array, encoding: Array, cb: Function) {
+Writable.prototype.write = function (chunk: any[], encoding: any[], cb: Function) {
   var state: HTMLElement = this._writableState;
-  var ret: Boolean = false;
-  var isBuf: Boolean = !state.objectMode && _isUint8Array(chunk);
+  var ret: boolean = false;
+  var isBuf: boolean = !state.objectMode && _isUint8Array(chunk);
 
   if (isBuf && !Buffer.isBuffer(chunk)) {
     chunk = _uint8ArrayToBuffer(chunk);
@@ -5620,7 +5620,7 @@ Writable.prototype.uncork = function () {
   }
 };
 
-Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding: String): Object {
+Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding: string): object {
   // node::ParseEncoding() requires lower case.
   if (typeof encoding === 'string') encoding = encoding.toLowerCase();
   if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
@@ -5628,7 +5628,7 @@ Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding: St
   return this;
 };
 
-function decodeChunk(state: HTMLElement, chunk: String, encoding: String): String {
+function decodeChunk(state: HTMLElement, chunk: string, encoding: string): string {
   if (!state.objectMode && state.decodeStrings !== false && typeof chunk === 'string') {
     chunk = Buffer.from(chunk, encoding);
   }
@@ -5648,20 +5648,20 @@ Object.defineProperty(Writable.prototype, 'writableHighWaterMark', {
 // if we're already writing something, then just put this
 // in the queue, and wait our turn.  Otherwise, call _write
 // If we return false, then we need a drain event, so set that flag.
-function writeOrBuffer(stream: String, state: Object, isBuf: Boolean, chunk: Array, encoding: String, cb: Function): Boolean {
+function writeOrBuffer(stream: string, state: object, isBuf: boolean, chunk: any[], encoding: string, cb: Function): boolean {
   if (!isBuf) {
-    var newChunk: String = decodeChunk(state, chunk, encoding);
+    var newChunk: string = decodeChunk(state, chunk, encoding);
     if (chunk !== newChunk) {
       isBuf = true;
       encoding = 'buffer';
       chunk = newChunk;
     }
   }
-  var len: Number = state.objectMode ? 1 : chunk.length;
+  var len: number = state.objectMode ? 1 : chunk.length;
 
   state.length += len;
 
-  var ret: Boolean = state.length < state.highWaterMark;
+  var ret: boolean = state.length < state.highWaterMark;
   // we must ensure that previous needDrain will not be reset to false.
   if (!ret) state.needDrain = true;
 
@@ -5687,7 +5687,7 @@ function writeOrBuffer(stream: String, state: Object, isBuf: Boolean, chunk: Arr
   return ret;
 }
 
-function doWrite(stream: Number, state: HTMLElement, writev: Boolean, len: Function, chunk: String, encoding: String, cb: String): Void {
+function doWrite(stream: number, state: HTMLElement, writev: boolean, len: Function, chunk: string, encoding: string, cb: string): Void {
   state.writelen = len;
   state.writecb = cb;
   state.writing = true;
@@ -5696,7 +5696,7 @@ function doWrite(stream: Number, state: HTMLElement, writev: Boolean, len: Funct
   state.sync = false;
 }
 
-function onwriteError(stream: String, state: Object, sync: Boolean, er: String, cb: Function): Void {
+function onwriteError(stream: string, state: object, sync: boolean, er: string, cb: Function): Void {
   --state.pendingcb;
 
   if (sync) {
@@ -5720,23 +5720,23 @@ function onwriteError(stream: String, state: Object, sync: Boolean, er: String, 
   }
 }
 
-function onwriteStateUpdate(state: Object): Void {
+function onwriteStateUpdate(state: object): Void {
   state.writing = false;
   state.writecb = null;
   state.length -= state.writelen;
   state.writelen = 0;
 }
 
-function onwrite(stream: String, er: Number): Void {
+function onwrite(stream: string, er: number): Void {
   var state: HTMLElement = stream._writableState;
-  var sync: Number = state.sync;
-  var cb: String = state.writecb;
+  var sync: number = state.sync;
+  var cb: string = state.writecb;
 
   onwriteStateUpdate(state);
 
   if (er) onwriteError(stream, state, sync, er, cb);else {
     // Check if we're actually ready to finish, but don't emit yet
-    var finished: String = needFinish(state);
+    var finished: string = needFinish(state);
 
     if (!finished && !state.corked && !state.bufferProcessing && state.bufferedRequest) {
       clearBuffer(stream, state);
@@ -5752,7 +5752,7 @@ function onwrite(stream: String, er: Number): Void {
   }
 }
 
-function afterWrite(stream: String, state: Object, finished: Boolean, cb: Function): Void {
+function afterWrite(stream: string, state: object, finished: boolean, cb: Function): Void {
   if (!finished) onwriteDrain(stream, state);
   state.pendingcb--;
   cb();
@@ -5762,7 +5762,7 @@ function afterWrite(stream: String, state: Object, finished: Boolean, cb: Functi
 // Must force callback to be called on nextTick, so that we don't
 // emit 'drain' before the write() consumer gets the 'false' return
 // value, and has a chance to attach a 'drain' listener.
-function onwriteDrain(stream: String, state: Array): Void {
+function onwriteDrain(stream: string, state: any[]): Void {
   if (state.length === 0 && state.needDrain) {
     state.needDrain = false;
     stream.emit('drain');
@@ -5770,19 +5770,19 @@ function onwriteDrain(stream: String, state: Array): Void {
 }
 
 // if there's something in the buffer waiting, then process it
-function clearBuffer(stream: String, state: HTMLElement): Void {
+function clearBuffer(stream: string, state: HTMLElement): Void {
   state.bufferProcessing = true;
-  var entry: Object = state.bufferedRequest;
+  var entry: object = state.bufferedRequest;
 
   if (stream._writev && entry && entry.next) {
     // Fast case, write everything using _writev()
     var l: Function = state.bufferedRequestCount;
-    var buffer: Array = new Array(l);
+    var buffer: any[] = new Array(l);
     var holder: HTMLElement = state.corkedRequestsFree;
     holder.entry = entry;
 
-    var count: Number = 0;
-    var allBuffers: Boolean = true;
+    var count: number = 0;
+    var allBuffers: boolean = true;
     while (entry) {
       buffer[count] = entry;
       if (!entry.isBuf) allBuffers = false;
@@ -5807,10 +5807,10 @@ function clearBuffer(stream: String, state: HTMLElement): Void {
   } else {
     // Slow case, write chunks one-by-one
     while (entry) {
-      var chunk: Array = entry.chunk;
-      var encoding: Array = entry.encoding;
-      var cb: Array = entry.callback;
-      var len: Number = state.objectMode ? 1 : chunk.length;
+      var chunk: any[] = entry.chunk;
+      var encoding: any[] = entry.encoding;
+      var cb: any[] = entry.callback;
+      var len: number = state.objectMode ? 1 : chunk.length;
 
       doWrite(stream, state, false, len, chunk, encoding, cb);
       entry = entry.next;
@@ -5831,13 +5831,13 @@ function clearBuffer(stream: String, state: HTMLElement): Void {
   state.bufferProcessing = false;
 }
 
-Writable.prototype._write = function (chunk: Function, encoding: Number, cb: Function) {
+Writable.prototype._write = function (chunk: Function, encoding: number, cb: Function) {
   cb(new Error('_write() is not implemented'));
 };
 
 Writable.prototype._writev = null;
 
-Writable.prototype.end = function (chunk: String, encoding: String, cb: String) {
+Writable.prototype.end = function (chunk: string, encoding: string, cb: string) {
   var state: HTMLElement = this._writableState;
 
   if (typeof chunk === 'function') {
@@ -5861,11 +5861,11 @@ Writable.prototype.end = function (chunk: String, encoding: String, cb: String) 
   if (!state.ending && !state.finished) endWritable(this, state, cb);
 };
 
-function needFinish(state: Object): Boolean {
+function needFinish(state: object): boolean {
   return state.ending && state.length === 0 && state.bufferedRequest === null && !state.finished && !state.writing;
 }
-function callFinal(stream: String, state: Object): Void {
-  stream._final(function (err: Number) {
+function callFinal(stream: string, state: object): Void {
+  stream._final(function (err: number) {
     state.pendingcb--;
     if (err) {
       stream.emit('error', err);
@@ -5875,7 +5875,7 @@ function callFinal(stream: String, state: Object): Void {
     finishMaybe(stream, state);
   });
 }
-function prefinish(stream: String, state: HTMLElement): Void {
+function prefinish(stream: string, state: HTMLElement): Void {
   if (!state.prefinished && !state.finalCalled) {
     if (typeof stream._final === 'function') {
       state.pendingcb++;
@@ -5888,8 +5888,8 @@ function prefinish(stream: String, state: HTMLElement): Void {
   }
 }
 
-function finishMaybe(stream: String, state: HTMLElement): String {
-  var need: String = needFinish(state);
+function finishMaybe(stream: string, state: HTMLElement): string {
+  var need: string = needFinish(state);
   if (need) {
     prefinish(stream, state);
     if (state.pendingcb === 0) {
@@ -5900,7 +5900,7 @@ function finishMaybe(stream: String, state: HTMLElement): String {
   return need;
 }
 
-function endWritable(stream: String, state: Object, cb: String): Void {
+function endWritable(stream: string, state: object, cb: string): Void {
   state.ending = true;
   finishMaybe(stream, state);
   if (cb) {
@@ -5910,8 +5910,8 @@ function endWritable(stream: String, state: Object, cb: String): Void {
   stream.writable = false;
 }
 
-function onCorkedFinish(corkReq: Object, state: HTMLElement, err: Array): Void {
-  var entry: Object = corkReq.entry;
+function onCorkedFinish(corkReq: object, state: HTMLElement, err: any[]): Void {
+  var entry: object = corkReq.entry;
   corkReq.entry = null;
   while (entry) {
     var cb: Function = entry.callback;
@@ -5933,7 +5933,7 @@ Object.defineProperty(Writable.prototype, 'destroyed', {
     }
     return this._writableState.destroyed;
   },
-  set: function (value: Number) {
+  set: function (value: number) {
     // we ignore the value if the stream
     // has not been initialized yet
     if (!this._writableState) {
@@ -5948,7 +5948,7 @@ Object.defineProperty(Writable.prototype, 'destroyed', {
 
 Writable.prototype.destroy = destroyImpl.destroy;
 Writable.prototype._undestroy = destroyImpl.undestroy;
-Writable.prototype._destroy = function (err: String, cb: Function) {
+Writable.prototype._destroy = function (err: string, cb: Function) {
   this.end();
   cb(err);
 };
@@ -5956,7 +5956,7 @@ Writable.prototype._destroy = function (err: String, cb: Function) {
 
 /***/ }),
 /* 19 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -5987,7 +5987,7 @@ Writable.prototype._destroy = function (err: String, cb: Function) {
 var Buffer: HTMLElement = __webpack_require__(7).Buffer;
 /*</replacement>*/
 
-var isEncoding: Function = Buffer.isEncoding || function (encoding: Number) {
+var isEncoding: Function = Buffer.isEncoding || function (encoding: number) {
   encoding = '' + encoding;
   switch (encoding && encoding.toLowerCase()) {
     case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
@@ -5997,9 +5997,9 @@ var isEncoding: Function = Buffer.isEncoding || function (encoding: Number) {
   }
 };
 
-function _normalizeEncoding(enc: Number): String {
+function _normalizeEncoding(enc: number): string {
   if (!enc) return 'utf8';
-  var retried: Boolean;
+  var retried: boolean;
   while (true) {
     switch (enc) {
       case 'utf8':
@@ -6027,8 +6027,8 @@ function _normalizeEncoding(enc: Number): String {
 
 // Do not cache `Buffer.isEncoding` when checking encoding names as some
 // modules monkey-patch it to support additional encodings
-function normalizeEncoding(enc: String): Boolean {
-  var nenc: String = _normalizeEncoding(enc);
+function normalizeEncoding(enc: string): boolean {
+  var nenc: string = _normalizeEncoding(enc);
   if (typeof nenc !== 'string' && (Buffer.isEncoding === isEncoding || !isEncoding(enc))) throw new Error('Unknown encoding: ' + enc);
   return nenc || enc;
 }
@@ -6037,9 +6037,9 @@ function normalizeEncoding(enc: String): Boolean {
 // buffers into a series of JS strings without breaking apart multi-byte
 // characters.
 exports.StringDecoder = StringDecoder;
-function StringDecoder(encoding: String): Void {
+function StringDecoder(encoding: string): Void {
   this.encoding = normalizeEncoding(encoding);
-  var nb: Number;
+  var nb: number;
   switch (this.encoding) {
     case 'utf16le':
       this.text = utf16Text;
@@ -6065,10 +6065,10 @@ function StringDecoder(encoding: String): Void {
   this.lastChar = Buffer.allocUnsafe(nb);
 }
 
-StringDecoder.prototype.write = function (buf: Array) {
+StringDecoder.prototype.write = function (buf: any[]) {
   if (buf.length === 0) return '';
-  var r: Number;
-  var i: Number;
+  var r: number;
+  var i: number;
   if (this.lastNeed) {
     r = this.fillLast(buf);
     if (r === undefined) return '';
@@ -6087,7 +6087,7 @@ StringDecoder.prototype.end = utf8End;
 StringDecoder.prototype.text = utf8Text;
 
 // Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
-StringDecoder.prototype.fillLast = function (buf: Array) {
+StringDecoder.prototype.fillLast = function (buf: any[]) {
   if (this.lastNeed <= buf.length) {
     buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
     return this.lastChar.toString(this.encoding, 0, this.lastTotal);
@@ -6098,7 +6098,7 @@ StringDecoder.prototype.fillLast = function (buf: Array) {
 
 // Checks the type of a UTF-8 byte, whether it's ASCII, a leading byte, or a
 // continuation byte. If an invalid byte is detected, -2 is returned.
-function utf8CheckByte(byte: Number): Number {
+function utf8CheckByte(byte: number): number {
   if (byte <= 0x7F) return 0;else if (byte >> 5 === 0x06) return 2;else if (byte >> 4 === 0x0E) return 3;else if (byte >> 3 === 0x1E) return 4;
   return byte >> 6 === 0x02 ? -1 : -2;
 }
@@ -6106,10 +6106,10 @@ function utf8CheckByte(byte: Number): Number {
 // Checks at most 3 bytes at the end of a Buffer in order to detect an
 // incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
 // needed to complete the UTF-8 character (if applicable) are returned.
-function utf8CheckIncomplete(self: HTMLElement, buf: Array, i: String): Number {
-  var j: Number = buf.length - 1;
+function utf8CheckIncomplete(self: HTMLElement, buf: any[], i: string): number {
+  var j: number = buf.length - 1;
   if (j < i) return 0;
-  var nb: Number = utf8CheckByte(buf[j]);
+  var nb: number = utf8CheckByte(buf[j]);
   if (nb >= 0) {
     if (nb > 0) self.lastNeed = nb - 1;
     return nb;
@@ -6139,7 +6139,7 @@ function utf8CheckIncomplete(self: HTMLElement, buf: Array, i: String): Number {
 // where all of the continuation bytes for a character exist in the same buffer.
 // It is also done this way as a slight performance increase instead of using a
 // loop.
-function utf8CheckExtraBytes(self: HTMLElement, buf: Array, p: Function): String {
+function utf8CheckExtraBytes(self: HTMLElement, buf: any[], p: Function): string {
   if ((buf[0] & 0xC0) !== 0x80) {
     self.lastNeed = 0;
     return '\ufffd';
@@ -6159,9 +6159,9 @@ function utf8CheckExtraBytes(self: HTMLElement, buf: Array, p: Function): String
 }
 
 // Attempts to complete a multi-byte UTF-8 character using bytes from a Buffer.
-function utf8FillLast(buf: Array): String {
-  var p: Number = this.lastTotal - this.lastNeed;
-  var r: Number = utf8CheckExtraBytes(this, buf, p);
+function utf8FillLast(buf: any[]): string {
+  var p: number = this.lastTotal - this.lastNeed;
+  var r: number = utf8CheckExtraBytes(this, buf, p);
   if (r !== undefined) return r;
   if (this.lastNeed <= buf.length) {
     buf.copy(this.lastChar, p, 0, this.lastNeed);
@@ -6174,19 +6174,19 @@ function utf8FillLast(buf: Array): String {
 // Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
 // partial character, the character's bytes are buffered until the required
 // number of bytes are available.
-function utf8Text(buf: Array, i: String): String {
-  var total: Number = utf8CheckIncomplete(this, buf, i);
+function utf8Text(buf: any[], i: string): string {
+  var total: number = utf8CheckIncomplete(this, buf, i);
   if (!this.lastNeed) return buf.toString('utf8', i);
   this.lastTotal = total;
-  var end: Number = buf.length - (total - this.lastNeed);
+  var end: number = buf.length - (total - this.lastNeed);
   buf.copy(this.lastChar, 0, end);
   return buf.toString('utf8', i, end);
 }
 
 // For UTF-8, a replacement character is added when ending on a partial
 // character.
-function utf8End(buf: Array): String {
-  var r: String = buf && buf.length ? this.write(buf) : '';
+function utf8End(buf: any[]): string {
+  var r: string = buf && buf.length ? this.write(buf) : '';
   if (this.lastNeed) return r + '\ufffd';
   return r;
 }
@@ -6195,11 +6195,11 @@ function utf8End(buf: Array): String {
 // number of bytes available, we need to check if we end on a leading/high
 // surrogate. In that case, we need to wait for the next two bytes in order to
 // decode the last character properly.
-function utf16Text(buf: Array, i: Number): String {
+function utf16Text(buf: any[], i: number): string {
   if ((buf.length - i) % 2 === 0) {
-    var r: String = buf.toString('utf16le', i);
+    var r: string = buf.toString('utf16le', i);
     if (r) {
-      var c: Number = r.charCodeAt(r.length - 1);
+      var c: number = r.charCodeAt(r.length - 1);
       if (c >= 0xD800 && c <= 0xDBFF) {
         this.lastNeed = 2;
         this.lastTotal = 4;
@@ -6218,17 +6218,17 @@ function utf16Text(buf: Array, i: Number): String {
 
 // For UTF-16LE we do not explicitly append special replacement characters if we
 // end on a partial character, we simply let v8 handle that.
-function utf16End(buf: Array): String {
-  var r: String = buf && buf.length ? this.write(buf) : '';
+function utf16End(buf: any[]): string {
+  var r: string = buf && buf.length ? this.write(buf) : '';
   if (this.lastNeed) {
-    var end: Number = this.lastTotal - this.lastNeed;
+    var end: number = this.lastTotal - this.lastNeed;
     return r + this.lastChar.toString('utf16le', 0, end);
   }
   return r;
 }
 
-function base64Text(buf: Array, i: Number): String {
-  var n: Number = (buf.length - i) % 3;
+function base64Text(buf: any[], i: number): string {
+  var n: number = (buf.length - i) % 3;
   if (n === 0) return buf.toString('base64', i);
   this.lastNeed = 3 - n;
   this.lastTotal = 3;
@@ -6241,24 +6241,24 @@ function base64Text(buf: Array, i: Number): String {
   return buf.toString('base64', i, buf.length - n);
 }
 
-function base64End(buf: Array): String {
-  var r: String = buf && buf.length ? this.write(buf) : '';
+function base64End(buf: any[]): string {
+  var r: string = buf && buf.length ? this.write(buf) : '';
   if (this.lastNeed) return r + this.lastChar.toString('base64', 0, 3 - this.lastNeed);
   return r;
 }
 
 // Pass bytes on through for single-byte encodings (e.g. ascii, latin1, hex)
-function simpleWrite(buf: String): String {
+function simpleWrite(buf: string): string {
   return buf.toString(this.encoding);
 }
 
-function simpleEnd(buf: Array): String {
+function simpleEnd(buf: any[]): string {
   return buf && buf.length ? this.write(buf) : '';
 }
 
 /***/ }),
 /* 20 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -6328,7 +6328,7 @@ function simpleEnd(buf: Array): String {
 
 module.exports = Transform;
 
-var Duplex: Object = __webpack_require__(4);
+var Duplex: object = __webpack_require__(4);
 
 /*<replacement>*/
 var util: Function = Object.create(__webpack_require__(5));
@@ -6337,8 +6337,8 @@ util.inherits = __webpack_require__(2);
 
 util.inherits(Transform, Duplex);
 
-function afterTransform(er: String, data: Function): Number {
-  var ts: Object = this._transformState;
+function afterTransform(er: string, data: Function): number {
+  var ts: object = this._transformState;
   ts.transforming = false;
 
   var cb: Function = ts.writecb;
@@ -6355,14 +6355,14 @@ function afterTransform(er: String, data: Function): Number {
 
   cb(er);
 
-  var rs: Object = this._readableState;
+  var rs: object = this._readableState;
   rs.reading = false;
   if (rs.needReadable || rs.length < rs.highWaterMark) {
     this._read(rs.highWaterMark);
   }
 }
 
-function Transform(options: Object): String {
+function Transform(options: object): string {
   if (!(this instanceof Transform)) return new Transform(options);
 
   Duplex.call(this, options);
@@ -6395,10 +6395,10 @@ function Transform(options: Object): String {
 }
 
 function prefinish(): Void {
-  var _this: Array = this;
+  var _this: any[] = this;
 
   if (typeof this._flush === 'function') {
-    this._flush(function (er: String, data: Object) {
+    this._flush(function (er: string, data: object) {
       done(_this, er, data);
     });
   } else {
@@ -6406,7 +6406,7 @@ function prefinish(): Void {
   }
 }
 
-Transform.prototype.push = function (chunk: String, encoding: Number) {
+Transform.prototype.push = function (chunk: string, encoding: number) {
   this._transformState.needTransform = false;
   return Duplex.prototype.push.call(this, chunk, encoding);
 };
@@ -6421,17 +6421,17 @@ Transform.prototype.push = function (chunk: String, encoding: Number) {
 // Call `cb(err)` when you are done with this chunk.  If you pass
 // an error, then that'll put the hurt on the whole operation.  If you
 // never call cb(), then you'll never get another chunk.
-Transform.prototype._transform = function (chunk: Function, encoding: Number, cb: Function) {
+Transform.prototype._transform = function (chunk: Function, encoding: number, cb: Function) {
   throw new Error('_transform() is not implemented');
 };
 
-Transform.prototype._write = function (chunk: String, encoding: Array, cb: String) {
-  var ts: Object = this._transformState;
+Transform.prototype._write = function (chunk: string, encoding: any[], cb: string) {
+  var ts: object = this._transformState;
   ts.writecb = cb;
   ts.writechunk = chunk;
   ts.writeencoding = encoding;
   if (!ts.transforming) {
-    var rs: Object = this._readableState;
+    var rs: object = this._readableState;
     if (ts.needTransform || rs.needReadable || rs.length < rs.highWaterMark) this._read(rs.highWaterMark);
   }
 };
@@ -6439,8 +6439,8 @@ Transform.prototype._write = function (chunk: String, encoding: Array, cb: Strin
 // Doesn't matter what the args are here.
 // _transform does all the work.
 // That we got here means that the readable side wants more data.
-Transform.prototype._read = function (n: Number) {
-  var ts: Object = this._transformState;
+Transform.prototype._read = function (n: number) {
+  var ts: object = this._transformState;
 
   if (ts.writechunk !== null && ts.writecb && !ts.transforming) {
     ts.transforming = true;
@@ -6455,13 +6455,13 @@ Transform.prototype._read = function (n: Number) {
 Transform.prototype._destroy = function (err: Function, cb: Function) {
   var _this2: HTMLElement = this;
 
-  Duplex.prototype._destroy.call(this, err, function (err2: String) {
+  Duplex.prototype._destroy.call(this, err, function (err2: string) {
     cb(err2);
     _this2.emit('close');
   });
 };
 
-function done(stream: String, er: String, data: Number): String {
+function done(stream: string, er: string, data: number): string {
   if (er) return stream.emit('error', er);
 
   if (data != null) // single equals check for both `null` and `undefined`
@@ -6478,9 +6478,9 @@ function done(stream: String, er: String, data: Number): String {
 
 /***/ }),
 /* 21 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
-var EventSource: Array = __webpack_require__(22)
+var EventSource: any[] = __webpack_require__(22)
 
 if (typeof window === 'object') {
   window.EventSourcePolyfill = EventSource
@@ -6493,31 +6493,31 @@ if (typeof window === 'object') {
 
 /***/ }),
 /* 22 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Object) {
+/***/ (function(module: Function, exports: string, __webpack_require__: object) {
 
-/* WEBPACK VAR INJECTION */(function(process: Object, Buffer: Object) {var parse: Function = __webpack_require__(8).parse
-var events: Boolean = __webpack_require__(9)
+/* WEBPACK VAR INJECTION */(function(process: object, Buffer: object) {var parse: Function = __webpack_require__(8).parse
+var events: boolean = __webpack_require__(9)
 var https: Promise = __webpack_require__(31)
-var http: Object = __webpack_require__(11)
-var util: Boolean = __webpack_require__(43)
+var http: object = __webpack_require__(11)
+var util: boolean = __webpack_require__(43)
 
-var httpsOptions: Array = [
+var httpsOptions: any[] = [
   'pfx', 'key', 'passphrase', 'cert', 'ca', 'ciphers',
   'rejectUnauthorized', 'secureProtocol', 'servername', 'checkServerIdentity'
 ]
 
-var bom: Array = [239, 187, 191]
-var colon: Number = 58
-var space: Number = 32
-var lineFeed: Number = 10
-var carriageReturn: Number = 13
+var bom: any[] = [239, 187, 191]
+var colon: number = 58
+var space: number = 32
+var lineFeed: number = 10
+var carriageReturn: number = 13
 // Beyond 256KB we could not observe any gain in performance
-var maxBufferAheadAllocation: Number = 1024 * 256
+var maxBufferAheadAllocation: number = 1024 * 256
 // Headers matching the pattern should be removed when redirecting to different origin
 var reUnsafeHeader: RegExp = /^(cookie|authorization)$/i
 
-function hasBom (buf: Object): Boolean {
-  return bom.every(function (charCode: String, index: Number) {
+function hasBom (buf: object): boolean {
+  return bom.every(function (charCode: string, index: number) {
     return buf[index] === charCode
   })
 }
@@ -6529,10 +6529,10 @@ function hasBom (buf: Object): Boolean {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: String, eventSourceInitDict: Object): Void {
-  var readyState: Number = EventSource.CONNECTING
-  var headers: Object = eventSourceInitDict && eventSourceInitDict.headers
-  var hasNewOrigin: Boolean = false
+function EventSource (url: string, eventSourceInitDict: object): Void {
+  var readyState: number = EventSource.CONNECTING
+  var headers: object = eventSourceInitDict && eventSourceInitDict.headers
+  var hasNewOrigin: boolean = false
   Object.defineProperty(this, 'readyState', {
     get: function () {
       return readyState
@@ -6549,7 +6549,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: String): Void {
+  function onConnectionClosed (message: string): Void {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -6571,27 +6571,27 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
   }
 
   var req: HTMLElement
-  var lastEventId: String = ''
+  var lastEventId: string = ''
   if (headers && headers['Last-Event-ID']) {
     lastEventId = headers['Last-Event-ID']
     delete headers['Last-Event-ID']
   }
 
-  var discardTrailingNewline: Boolean = false
-  var data: String = ''
-  var eventName: String = ''
+  var discardTrailingNewline: boolean = false
+  var data: string = ''
+  var eventName: string = ''
 
-  var reconnectUrl: String = null
+  var reconnectUrl: string = null
 
   function connect (): Void {
-    var options: Object = parse(url)
-    var isSecure: Boolean = options.protocol === 'https:'
+    var options: object = parse(url)
+    var isSecure: boolean = options.protocol === 'https:'
     options.headers = { 'Cache-Control': 'no-cache', 'Accept': 'text/event-stream' }
     if (lastEventId) options.headers['Last-Event-ID'] = lastEventId
     if (headers) {
       var reqHeaders: Promise = hasNewOrigin ? removeUnsafeHeaders(headers) : headers
       for (var i in reqHeaders) {
-        var header: String = reqHeaders[i]
+        var header: string = reqHeaders[i]
         if (header) {
           options.headers[i] = header
         }
@@ -6608,7 +6608,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
     // If specify http proxy, make the request to sent to the proxy server,
     // and include the original url in path and Host headers
-    var useProxy: Boolean = eventSourceInitDict && eventSourceInitDict.proxy
+    var useProxy: boolean = eventSourceInitDict && eventSourceInitDict.proxy
     if (useProxy) {
       var proxy: HTMLElement = parse(eventSourceInitDict.proxy)
       isSecure = proxy.protocol === 'https:'
@@ -6628,7 +6628,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
           continue
         }
 
-        var option: String = eventSourceInitDict.https[optName]
+        var option: string = eventSourceInitDict.https[optName]
         if (option !== undefined) {
           options[optName] = option
         }
@@ -6651,14 +6651,14 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
       // Handle HTTP redirects
       if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 307) {
-        var location: String = res.headers.location
+        var location: string = res.headers.location
         if (!location) {
           // Server sent redirect response without Location header.
           _emit('error', new Event('error', {status: res.statusCode, message: res.statusMessage}))
           return
         }
-        var prevOrigin: String = new URL(url).origin
-        var nextOrigin: String = new URL(location).origin
+        var prevOrigin: string = new URL(url).origin
+        var nextOrigin: string = new URL(location).origin
         hasNewOrigin = prevOrigin !== nextOrigin
         if (res.statusCode === 307) reconnectUrl = url
         url = location
@@ -6687,14 +6687,14 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
 
       // text/event-stream parser adapted from webkit's
       // Source/WebCore/page/EventSource.cpp
-      var buf: Array
-      var newBuffer: Array
-      var startingPos: Number = 0
-      var startingFieldLength: Number = -1
-      var newBufferSize: Number = 0
-      var bytesUsed: Number = 0
+      var buf: any[]
+      var newBuffer: any[]
+      var startingPos: number = 0
+      var startingFieldLength: number = -1
+      var newBufferSize: number = 0
+      var bytesUsed: number = 0
 
-      res.on('data', function (chunk: Array) {
+      res.on('data', function (chunk: any[]) {
         if (!buf) {
           buf = chunk
           if (hasBom(buf)) {
@@ -6715,8 +6715,8 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
           bytesUsed += chunk.length
         }
 
-        var pos: Number = 0
-        var length: Number = bytesUsed
+        var pos: number = 0
+        var length: number = bytesUsed
 
         while (pos < length) {
           if (discardTrailingNewline) {
@@ -6726,9 +6726,9 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
             discardTrailingNewline = false
           }
 
-          var lineLength: Number = -1
-          var fieldLength: Number = startingFieldLength
-          var c: Number
+          var lineLength: number = -1
+          var fieldLength: number = startingFieldLength
+          var c: number
 
           for (var i = startingPos; lineLength < 0 && i < length; ++i) {
             c = buf[i]
@@ -6768,7 +6768,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       })
     })
 
-    req.on('error', function (err: Object) {
+    req.on('error', function (err: object) {
       self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
@@ -6792,10 +6792,10 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: Array, pos: String, fieldLength: Number, lineLength: Number): Void {
+  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): Void {
     if (lineLength === 0) {
       if (data.length > 0) {
-        var type: String = eventName || 'message'
+        var type: string = eventName || 'message'
         _emit(type, new MessageEvent(type, {
           data: data.slice(0, -1), // remove trailing newline
           lastEventId: lastEventId,
@@ -6805,9 +6805,9 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       }
       eventName = void 0
     } else if (fieldLength > 0) {
-      var noValue: Boolean = fieldLength < 0
-      var step: Number = 0
-      var field: String = buf.slice(pos, pos + (noValue ? lineLength : fieldLength)).toString()
+      var noValue: boolean = fieldLength < 0
+      var step: number = 0
+      var field: string = buf.slice(pos, pos + (noValue ? lineLength : fieldLength)).toString()
 
       if (noValue) {
         step = lineLength
@@ -6818,8 +6818,8 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       }
       pos += step
 
-      var valueLength: Number = lineLength - step
-      var value: String = buf.slice(pos, pos + valueLength).toString()
+      var valueLength: number = lineLength - step
+      var value: string = buf.slice(pos, pos + valueLength).toString()
 
       if (field === 'data') {
         data += value + '\n'
@@ -6828,7 +6828,7 @@ function EventSource (url: String, eventSourceInitDict: Object): Void {
       } else if (field === 'id') {
         lastEventId = value
       } else if (field === 'retry') {
-        var retry: Number = parseInt(value, 10)
+        var retry: number = parseInt(value, 10)
         if (!Number.isNaN(retry)) {
           self.reconnectInterval = retry
         }
@@ -6842,7 +6842,7 @@ module.exports = EventSource
 util.inherits(EventSource, events.EventEmitter)
 EventSource.prototype.constructor = EventSource; // make stacktraces readable
 
-['open', 'error', 'message'].forEach(function (method: String) {
+['open', 'error', 'message'].forEach(function (method: string) {
   Object.defineProperty(EventSource.prototype, 'on' + method, {
     /**
      * Returns the current listener
@@ -6850,8 +6850,8 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    get: function get (): String {
-      var listener: String = this.listeners(method)[0]
+    get: function get (): string {
+      var listener: string = this.listeners(method)[0]
       return listener ? (listener._listener ? listener._listener : listener) : undefined
     },
 
@@ -6862,7 +6862,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: String): Void {
+    set: function set (listener: string): Void {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -6899,7 +6899,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: String, listener: Function): Void {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): Void {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -6932,7 +6932,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: TypedProper
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: String, listener: String): Void {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): Void {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -6945,7 +6945,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: String, optionalProperties: Object): Void {
+function Event (type: string, optionalProperties: object): Void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {
@@ -6962,7 +6962,7 @@ function Event (type: String, optionalProperties: Object): Void {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: String, eventInitDict: Object): Void {
+function MessageEvent (type: string, eventInitDict: object): Void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -6978,8 +6978,8 @@ function MessageEvent (type: String, eventInitDict: Object): Void {
  * @return {Object} a new object of headers
  * @api private
  */
-function removeUnsafeHeaders (headers: Object): Object {
-  var safe: Object = {}
+function removeUnsafeHeaders (headers: object): object {
+  var safe: object = {}
   for (var key in headers) {
     if (reUnsafeHeader.test(key)) {
       continue
@@ -6995,7 +6995,7 @@ function removeUnsafeHeaders (headers: Object): Object {
 
 /***/ }),
 /* 23 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Number) {
+/***/ (function(module: Function, exports: object, __webpack_require__: number) {
 
 "use strict";
 
@@ -7004,11 +7004,11 @@ exports.byteLength = byteLength
 exports.toByteArray = toByteArray
 exports.fromByteArray = fromByteArray
 
-var lookup: Object = []
-var revLookup: Object = []
-var Arr: String = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
+var lookup: object = []
+var revLookup: object = []
+var Arr: string = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
 
-var code: String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+var code: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 for (var i = 0, len = code.length; i < len; ++i) {
   lookup[i] = code[i]
   revLookup[code.charCodeAt(i)] = i
@@ -7019,8 +7019,8 @@ for (var i = 0, len = code.length; i < len; ++i) {
 revLookup['-'.charCodeAt(0)] = 62
 revLookup['_'.charCodeAt(0)] = 63
 
-function getLens (b64: String): Array {
-  var len: Number = b64.length
+function getLens (b64: string): any[] {
+  var len: number = b64.length
 
   if (len % 4 > 0) {
     throw new Error('Invalid string. Length must be a multiple of 4')
@@ -7028,10 +7028,10 @@ function getLens (b64: String): Array {
 
   // Trim off extra bytes after placeholder bytes are found
   // See: https://github.com/beatgammit/base64-js/issues/42
-  var validLen: Number = b64.indexOf('=')
+  var validLen: number = b64.indexOf('=')
   if (validLen === -1) validLen = len
 
-  var placeHoldersLen: Number = validLen === len
+  var placeHoldersLen: number = validLen === len
     ? 0
     : 4 - (validLen % 4)
 
@@ -7039,33 +7039,33 @@ function getLens (b64: String): Array {
 }
 
 // base64 is 4/3 + up to two characters of the original data
-function byteLength (b64: String): Number {
-  var lens: Object = getLens(b64)
-  var validLen: String = lens[0]
-  var placeHoldersLen: Number = lens[1]
+function byteLength (b64: string): number {
+  var lens: object = getLens(b64)
+  var validLen: string = lens[0]
+  var placeHoldersLen: number = lens[1]
   return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
 }
 
-function _byteLength (b64: String, validLen: Number, placeHoldersLen: Number): Number {
+function _byteLength (b64: string, validLen: number, placeHoldersLen: number): number {
   return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
 }
 
-function toByteArray (b64: HTMLElement): Object {
-  var tmp: Number
-  var lens: Object = getLens(b64)
-  var validLen: Number = lens[0]
-  var placeHoldersLen: Number = lens[1]
+function toByteArray (b64: HTMLElement): object {
+  var tmp: number
+  var lens: object = getLens(b64)
+  var validLen: number = lens[0]
+  var placeHoldersLen: number = lens[1]
 
-  var arr: Object = new Arr(_byteLength(b64, validLen, placeHoldersLen))
+  var arr: object = new Arr(_byteLength(b64, validLen, placeHoldersLen))
 
-  var curByte: Number = 0
+  var curByte: number = 0
 
   // if there are placeholders, only get up to the last complete 4 chars
-  var len: Number = placeHoldersLen > 0
+  var len: number = placeHoldersLen > 0
     ? validLen - 4
     : validLen
 
-  var i: Number
+  var i: number
   for (i = 0; i < len; i += 4) {
     tmp =
       (revLookup[b64.charCodeAt(i)] << 18) |
@@ -7096,16 +7096,16 @@ function toByteArray (b64: HTMLElement): Object {
   return arr
 }
 
-function tripletToBase64 (num: Number): String {
+function tripletToBase64 (num: number): string {
   return lookup[num >> 18 & 0x3F] +
     lookup[num >> 12 & 0x3F] +
     lookup[num >> 6 & 0x3F] +
     lookup[num & 0x3F]
 }
 
-function encodeChunk (uint8: Object, start: String, end: Number): String {
-  var tmp: String
-  var output: Array = []
+function encodeChunk (uint8: object, start: string, end: number): string {
+  var tmp: string
+  var output: any[] = []
   for (var i = start; i < end; i += 3) {
     tmp =
       ((uint8[i] << 16) & 0xFF0000) +
@@ -7116,12 +7116,12 @@ function encodeChunk (uint8: Object, start: String, end: Number): String {
   return output.join('')
 }
 
-function fromByteArray (uint8: Array): String {
-  var tmp: Number
-  var len: Number = uint8.length
-  var extraBytes: Number = len % 3 // if we have 1 byte left, pad 2 bytes
-  var parts: Array = []
-  var maxChunkLength: Number = 16383 // must be multiple of 3
+function fromByteArray (uint8: any[]): string {
+  var tmp: number
+  var len: number = uint8.length
+  var extraBytes: number = len % 3 // if we have 1 byte left, pad 2 bytes
+  var parts: any[] = []
+  var maxChunkLength: number = 16383 // must be multiple of 3
 
   // go through the array every three bytes, we'll deal with trailing stuff later
   for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
@@ -7152,18 +7152,18 @@ function fromByteArray (uint8: Array): String {
 
 /***/ }),
 /* 24 */
-/***/ (function(module: Function, exports: Object) {
+/***/ (function(module: Function, exports: object) {
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
-exports.read = function (buffer: Object, offset: Number, isLE: Boolean, mLen: Number, nBytes: Number) {
-  var e: Number, m: Number
-  var eLen: Number = (nBytes * 8) - mLen - 1
-  var eMax: Number = (1 << eLen) - 1
-  var eBias: Number = eMax >> 1
-  var nBits: Number = -7
-  var i: Number = isLE ? (nBytes - 1) : 0
-  var d: Number = isLE ? -1 : 1
-  var s: Number = buffer[offset + i]
+exports.read = function (buffer: object, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+  var e: number, m: number
+  var eLen: number = (nBytes * 8) - mLen - 1
+  var eMax: number = (1 << eLen) - 1
+  var eBias: number = eMax >> 1
+  var nBits: number = -7
+  var i: number = isLE ? (nBytes - 1) : 0
+  var d: number = isLE ? -1 : 1
+  var s: number = buffer[offset + i]
 
   i += d
 
@@ -7188,15 +7188,15 @@ exports.read = function (buffer: Object, offset: Number, isLE: Boolean, mLen: Nu
   return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
 }
 
-exports.write = function (buffer: Object, value: Number, offset: Number, isLE: Boolean, mLen: Number, nBytes: Number) {
-  var e: Number, m: Number, c: Number
-  var eLen: Number = (nBytes * 8) - mLen - 1
-  var eMax: Number = (1 << eLen) - 1
-  var eBias: Number = eMax >> 1
-  var rt: Number = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
-  var i: Number = isLE ? 0 : (nBytes - 1)
-  var d: Number = isLE ? 1 : -1
-  var s: Number = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+exports.write = function (buffer: object, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+  var e: number, m: number, c: number
+  var eLen: number = (nBytes * 8) - mLen - 1
+  var eMax: number = (1 << eLen) - 1
+  var eBias: number = eMax >> 1
+  var rt: number = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i: number = isLE ? 0 : (nBytes - 1)
+  var d: number = isLE ? 1 : -1
+  var s: number = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
 
   value = Math.abs(value)
 
@@ -7243,17 +7243,17 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 
 /***/ }),
 /* 25 */
-/***/ (function(module: String, exports: String, __webpack_require__: Function) {
+/***/ (function(module: string, exports: string, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(module: String, global: String) {var __WEBPACK_AMD_DEFINE_RESULT__: Number;/*! https://mths.be/punycode v1.4.1 by @mathias */
-;(function(root: Object) {
+/* WEBPACK VAR INJECTION */(function(module: string, global: string) {var __WEBPACK_AMD_DEFINE_RESULT__: number;/*! https://mths.be/punycode v1.4.1 by @mathias */
+;(function(root: object) {
 
 	/** Detect free variables */
-	var freeExports: Object = typeof exports == 'object' && exports &&
+	var freeExports: object = typeof exports == 'object' && exports &&
 		!exports.nodeType && exports;
-	var freeModule: Object = typeof module == 'object' && module &&
+	var freeModule: object = typeof module == 'object' && module &&
 		!module.nodeType && module;
-	var freeGlobal: Object = typeof global == 'object' && global;
+	var freeGlobal: object = typeof global == 'object' && global;
 	if (
 		freeGlobal.global === freeGlobal ||
 		freeGlobal.window === freeGlobal ||
@@ -7267,20 +7267,20 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @name punycode
 	 * @type Object
 	 */
-	var punycode: Object,
+	var punycode: object,
 
 	/** Highest positive signed 32-bit float value */
 	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
 
 	/** Bootstring parameters */
 	base = 36,
-	tMin: Number = 1,
-	tMax: Number = 26,
-	skew: Number = 38,
-	damp: Number = 700,
-	initialBias: Number = 72,
-	initialN: Number = 128, // 0x80
-	delimiter: String = '-', // '\x2D'
+	tMin: number = 1,
+	tMax: number = 26,
+	skew: number = 38,
+	damp: number = 700,
+	initialBias: number = 72,
+	initialN: number = 128, // 0x80
+	delimiter: string = '-', // '\x2D'
 
 	/** Regular expressions */
 	regexPunycode = /^xn--/,
@@ -7310,7 +7310,7 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @param {String} type The error type.
 	 * @returns {Error} Throws a `RangeError` with the applicable error message.
 	 */
-	function error(type: String): Void {
+	function error(type: string): Void {
 		throw new RangeError(errors[type]);
 	}
 
@@ -7322,9 +7322,9 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * item.
 	 * @returns {Array} A new array of values returned by the callback function.
 	 */
-	function map(array: Array, fn: Function): Array {
-		var length: Number = array.length;
-		var result: Array = [];
+	function map(array: any[], fn: Function): any[] {
+		var length: number = array.length;
+		var result: any[] = [];
 		while (length--) {
 			result[length] = fn(array[length]);
 		}
@@ -7341,9 +7341,9 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @returns {Array} A new string of characters returned by the callback
 	 * function.
 	 */
-	function mapDomain(string: String, fn: Number): String {
-		var parts: Array = string.split('@');
-		var result: String = '';
+	function mapDomain(string: string, fn: number): string {
+		var parts: any[] = string.split('@');
+		var result: string = '';
 		if (parts.length > 1) {
 			// In email addresses, only the domain name should be punycoded. Leave
 			// the local part (i.e. everything up to `@`) intact.
@@ -7352,8 +7352,8 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 		}
 		// Avoid `split(regex)` for IE8 compatibility. See #17.
 		string = string.replace(regexSeparators, '\x2E');
-		var labels: Array = string.split('.');
-		var encoded: String = map(labels, fn).join('.');
+		var labels: any[] = string.split('.');
+		var encoded: string = map(labels, fn).join('.');
 		return result + encoded;
 	}
 
@@ -7370,12 +7370,12 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @param {String} string The Unicode input string (UCS-2).
 	 * @returns {Array} The new array of code points.
 	 */
-	function ucs2decode(string: String): Array {
-		var output: Array = [],
-		    counter: Number = 0,
-		    length: Number = string.length,
-		    value: Number,
-		    extra: Number;
+	function ucs2decode(string: string): any[] {
+		var output: any[] = [],
+		    counter: number = 0,
+		    length: number = string.length,
+		    value: number,
+		    extra: number;
 		while (counter < length) {
 			value = string.charCodeAt(counter++);
 			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
@@ -7404,9 +7404,9 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @param {Array} codePoints The array of numeric code points.
 	 * @returns {String} The new Unicode string (UCS-2).
 	 */
-	function ucs2encode(array: Array): String {
-		return map(array, function(value: Number) {
-			var output: String = '';
+	function ucs2encode(array: any[]): string {
+		return map(array, function(value: number) {
+			var output: string = '';
 			if (value > 0xFFFF) {
 				value -= 0x10000;
 				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
@@ -7426,7 +7426,7 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * representing integers) in the range `0` to `base - 1`, or `base` if
 	 * the code point does not represent a value.
 	 */
-	function basicToDigit(codePoint: Number): Number {
+	function basicToDigit(codePoint: number): number {
 		if (codePoint - 48 < 10) {
 			return codePoint - 22;
 		}
@@ -7450,7 +7450,7 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * used; else, the lowercase form is used. The behavior is undefined
 	 * if `flag` is non-zero and `digit` has no uppercase form.
 	 */
-	function digitToBasic(digit: Number, flag: Number): Number {
+	function digitToBasic(digit: number, flag: number): number {
 		//  0..25 map to ASCII a..z or A..Z
 		// 26..35 map to ASCII 0..9
 		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
@@ -7461,8 +7461,8 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * https://tools.ietf.org/html/rfc3492#section-3.4
 	 * @private
 	 */
-	function adapt(delta: Number, numPoints: Number, firstTime: Boolean): String {
-		var k: Number = 0;
+	function adapt(delta: number, numPoints: number, firstTime: boolean): string {
+		var k: number = 0;
 		delta = firstTime ? floor(delta / damp) : delta >> 1;
 		delta += floor(delta / numPoints);
 		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
@@ -7478,22 +7478,22 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @param {String} input The Punycode string of ASCII-only symbols.
 	 * @returns {String} The resulting string of Unicode symbols.
 	 */
-	function decode(input: String): String {
+	function decode(input: string): string {
 		// Don't use UCS-2
-		var output: Array = [],
-		    inputLength: Number = input.length,
-		    out: Number,
-		    i: Number = 0,
-		    n: Number = initialN,
-		    bias: Number = initialBias,
-		    basic: Number,
-		    j: Number,
-		    index: Number,
-		    oldi: Number,
-		    w: Number,
-		    k: Number,
-		    digit: Number,
-		    t: Number,
+		var output: any[] = [],
+		    inputLength: number = input.length,
+		    out: number,
+		    i: number = 0,
+		    n: number = initialN,
+		    bias: number = initialBias,
+		    basic: number,
+		    j: number,
+		    index: number,
+		    oldi: number,
+		    w: number,
+		    k: number,
+		    digit: number,
+		    t: number,
 		    /** Cached calculation results */
 		    baseMinusT;
 
@@ -7579,25 +7579,25 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @param {String} input The string of Unicode symbols.
 	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
 	 */
-	function encode(input: Array): String {
-		var n: Number,
-		    delta: Number,
-		    handledCPCount: Number,
-		    basicLength: Number,
-		    bias: Number,
-		    j: Number,
-		    m: Number,
-		    q: Number,
-		    k: Number,
-		    t: Number,
-		    currentValue: Number,
-		    output: Array = [],
+	function encode(input: any[]): string {
+		var n: number,
+		    delta: number,
+		    handledCPCount: number,
+		    basicLength: number,
+		    bias: number,
+		    j: number,
+		    m: number,
+		    q: number,
+		    k: number,
+		    t: number,
+		    currentValue: number,
+		    output: any[] = [],
 		    /** `inputLength` will hold the number of code points in `input`. */
 		    inputLength,
 		    /** Cached calculation results */
 		    handledCPCountPlusOne,
-		    baseMinusT: Number,
-		    qMinusT: Number;
+		    baseMinusT: number,
+		    qMinusT: number;
 
 		// Convert the input in UCS-2 to Unicode
 		input = ucs2decode(input);
@@ -7697,8 +7697,8 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @returns {String} The Unicode representation of the given Punycode
 	 * string.
 	 */
-	function toUnicode(input: Element): String {
-		return mapDomain(input, function(string: String) {
+	function toUnicode(input: Element): string {
+		return mapDomain(input, function(string: string) {
 			return regexPunycode.test(string)
 				? decode(string.slice(4).toLowerCase())
 				: string;
@@ -7716,8 +7716,8 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 * @returns {String} The Punycode representation of the given domain name or
 	 * email address.
 	 */
-	function toASCII(input: Element): String {
-		return mapDomain(input, function(string: String) {
+	function toASCII(input: Element): string {
+		return mapDomain(input, function(string: string) {
 			return regexNonASCII.test(string)
 				? 'xn--' + encode(string)
 				: string;
@@ -7782,9 +7782,9 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 
 /***/ }),
 /* 26 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
-module.exports = function(module: String) {
+module.exports = function(module: string) {
 	if(!module.webpackPolyfill) {
 		module.deprecate = function() {};
 		module.paths = [];
@@ -7810,22 +7810,22 @@ module.exports = function(module: String) {
 
 /***/ }),
 /* 27 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Number) {
+/***/ (function(module: Function, exports: string, __webpack_require__: number) {
 
 "use strict";
 
 
 module.exports = {
-  isString: function(arg: String) {
+  isString: function(arg: string) {
     return typeof(arg) === 'string';
   },
-  isObject: function(arg: String) {
+  isObject: function(arg: string) {
     return typeof(arg) === 'object' && arg !== null;
   },
-  isNull: function(arg: Number) {
+  isNull: function(arg: number) {
     return arg === null;
   },
-  isNullOrUndefined: function(arg: Number) {
+  isNullOrUndefined: function(arg: number) {
     return arg == null;
   }
 };
@@ -7833,7 +7833,7 @@ module.exports = {
 
 /***/ }),
 /* 28 */
-/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: object, __webpack_require__: Function) {
 
 "use strict";
 
@@ -7844,7 +7844,7 @@ exports.encode = exports.stringify = __webpack_require__(30);
 
 /***/ }),
 /* 29 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Number) {
+/***/ (function(module: Function, exports: string, __webpack_require__: number) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -7873,14 +7873,14 @@ exports.encode = exports.stringify = __webpack_require__(30);
 // If obj.hasOwnProperty has been overridden, then calling
 // obj.hasOwnProperty(prop) will break.
 // See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj: String, prop: String): Boolean {
+function hasOwnProperty(obj: string, prop: string): boolean {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-module.exports = function(qs: Array, sep: Number, eq: String, options: Object) {
+module.exports = function(qs: any[], sep: number, eq: string, options: object) {
   sep = sep || '&';
   eq = eq || '=';
-  var obj: Object = {};
+  var obj: object = {};
 
   if (typeof qs !== 'string' || qs.length === 0) {
     return obj;
@@ -7889,21 +7889,21 @@ module.exports = function(qs: Array, sep: Number, eq: String, options: Object) {
   var regexp: RegExp = /\+/g;
   qs = qs.split(sep);
 
-  var maxKeys: Number = 1000;
+  var maxKeys: number = 1000;
   if (options && typeof options.maxKeys === 'number') {
     maxKeys = options.maxKeys;
   }
 
-  var len: Number = qs.length;
+  var len: number = qs.length;
   // maxKeys <= 0 means that we should not limit keys count
   if (maxKeys > 0 && len > maxKeys) {
     len = maxKeys;
   }
 
   for (var i = 0; i < len; ++i) {
-    var x: String = qs[i].replace(regexp, '%20'),
-        idx: Number = x.indexOf(eq),
-        kstr: String, vstr: String, k: String, v: String;
+    var x: string = qs[i].replace(regexp, '%20'),
+        idx: number = x.indexOf(eq),
+        kstr: string, vstr: string, k: string, v: string;
 
     if (idx >= 0) {
       kstr = x.substr(0, idx);
@@ -7928,14 +7928,14 @@ module.exports = function(qs: Array, sep: Number, eq: String, options: Object) {
   return obj;
 };
 
-var isArray: Function = Array.isArray || function (xs: String) {
+var isArray: Function = Array.isArray || function (xs: string) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
 
 /***/ }),
 /* 30 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Number) {
+/***/ (function(module: Function, exports: string, __webpack_require__: number) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -7961,7 +7961,7 @@ var isArray: Function = Array.isArray || function (xs: String) {
 
 
 
-var stringifyPrimitive: Function = function(v: String) {
+var stringifyPrimitive: Function = function(v: string) {
   switch (typeof v) {
     case 'string':
       return v;
@@ -7977,7 +7977,7 @@ var stringifyPrimitive: Function = function(v: String) {
   }
 };
 
-module.exports = function(obj: Object, sep: String, eq: Number, name: String) {
+module.exports = function(obj: object, sep: string, eq: number, name: string) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -7985,10 +7985,10 @@ module.exports = function(obj: Object, sep: String, eq: Number, name: String) {
   }
 
   if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k: String) {
-      var ks: String = encodeURIComponent(stringifyPrimitive(k)) + eq;
+    return map(objectKeys(obj), function(k: string) {
+      var ks: string = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (isArray(obj[k])) {
-        return map(obj[k], function(v: Array) {
+        return map(obj[k], function(v: any[]) {
           return ks + encodeURIComponent(stringifyPrimitive(v));
         }).join(sep);
       } else {
@@ -8003,21 +8003,21 @@ module.exports = function(obj: Object, sep: String, eq: Number, name: String) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray: Function = Array.isArray || function (xs: String) {
+var isArray: Function = Array.isArray || function (xs: string) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: Array, f: Function): Array {
+function map (xs: any[], f: Function): any[] {
   if (xs.map) return xs.map(f);
-  var res: Array = [];
+  var res: any[] = [];
   for (var i = 0; i < xs.length; i++) {
     res.push(f(xs[i], i));
   }
   return res;
 }
 
-var objectKeys: Function = Object.keys || function (obj: Array) {
-  var res: Array = [];
+var objectKeys: Function = Object.keys || function (obj: any[]) {
+  var res: any[] = [];
   for (var key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
   }
@@ -8027,10 +8027,10 @@ var objectKeys: Function = Object.keys || function (obj: Array) {
 
 /***/ }),
 /* 31 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
-var http: Array = __webpack_require__(11)
-var url: String = __webpack_require__(8)
+var http: any[] = __webpack_require__(11)
+var url: string = __webpack_require__(8)
 
 var https: RegExp = module.exports
 
@@ -8038,17 +8038,17 @@ for (var key in http) {
   if (http.hasOwnProperty(key)) https[key] = http[key]
 }
 
-https.request = function (params: String, cb: Function) {
+https.request = function (params: string, cb: Function) {
   params = validateParams(params)
   return http.request.call(this, params, cb)
 }
 
-https.get = function (params: String, cb: String) {
+https.get = function (params: string, cb: string) {
   params = validateParams(params)
   return http.get.call(this, params, cb)
 }
 
-function validateParams (params: String): Object {
+function validateParams (params: string): object {
   if (typeof params === 'string') {
     params = url.parse(params)
   }
@@ -8064,18 +8064,18 @@ function validateParams (params: String): Object {
 
 /***/ }),
 /* 32 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Object) {
+/***/ (function(module: Function, exports: string, __webpack_require__: object) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer: Object, global: Object, process: Object) {var capability: HTMLElement = __webpack_require__(12)
+/* WEBPACK VAR INJECTION */(function(Buffer: object, global: object, process: object) {var capability: HTMLElement = __webpack_require__(12)
 var inherits: Function = __webpack_require__(2)
 var response: HTMLElement = __webpack_require__(13)
-var stream: Array = __webpack_require__(14)
+var stream: any[] = __webpack_require__(14)
 var toArrayBuffer: Function = __webpack_require__(40)
 
-var IncomingMessage: Object = response.IncomingMessage
-var rStates: Object = response.readyStates
+var IncomingMessage: object = response.IncomingMessage
+var rStates: object = response.readyStates
 
-function decideMode (preferBinary: Boolean, useFetch: Boolean): String {
+function decideMode (preferBinary: boolean, useFetch: boolean): string {
 	if (capability.fetch && useFetch) {
 		return 'fetch'
 	} else if (capability.mozchunkedarraybuffer) {
@@ -8091,7 +8091,7 @@ function decideMode (preferBinary: Boolean, useFetch: Boolean): String {
 	}
 }
 
-var ClientRequest: HTMLElement = module.exports = function (opts: Object) {
+var ClientRequest: HTMLElement = module.exports = function (opts: object) {
 	var self: HTMLElement = this
 	stream.Writable.call(self)
 
@@ -8100,12 +8100,12 @@ var ClientRequest: HTMLElement = module.exports = function (opts: Object) {
 	self._headers = {}
 	if (opts.auth)
 		self.setHeader('Authorization', 'Basic ' + new Buffer(opts.auth).toString('base64'))
-	Object.keys(opts.headers).forEach(function (name: String) {
+	Object.keys(opts.headers).forEach(function (name: string) {
 		self.setHeader(name, opts.headers[name])
 	})
 
-	var preferBinary: Boolean
-	var useFetch: Boolean = true
+	var preferBinary: boolean
+	var useFetch: boolean = true
 	if (opts.mode === 'disable-fetch' || ('requestTimeout' in opts && !capability.abortController)) {
 		// If the use of XHR should be preferred. Not typically needed.
 		useFetch = false
@@ -8133,9 +8133,9 @@ var ClientRequest: HTMLElement = module.exports = function (opts: Object) {
 
 inherits(ClientRequest, stream.Writable)
 
-ClientRequest.prototype.setHeader = function (name: String, value: Number) {
+ClientRequest.prototype.setHeader = function (name: string, value: number) {
 	var self: HTMLElement = this
-	var lowerName: String = name.toLowerCase()
+	var lowerName: string = name.toLowerCase()
 	// This check is not necessary, but it prevents warnings from browsers about setting unsafe
 	// headers. To be honest I'm not entirely sure hiding these warnings is a good thing, but
 	// http-browserify did it, so I will too.
@@ -8148,14 +8148,14 @@ ClientRequest.prototype.setHeader = function (name: String, value: Number) {
 	}
 }
 
-ClientRequest.prototype.getHeader = function (name: String) {
-	var header: Object = this._headers[name.toLowerCase()]
+ClientRequest.prototype.getHeader = function (name: string) {
+	var header: object = this._headers[name.toLowerCase()]
 	if (header)
 		return header.value
 	return null
 }
 
-ClientRequest.prototype.removeHeader = function (name: String) {
+ClientRequest.prototype.removeHeader = function (name: string) {
 	var self: HTMLElement = this
 	delete self._headers[name.toLowerCase()]
 }
@@ -8167,13 +8167,13 @@ ClientRequest.prototype._onFinish = function () {
 		return
 	var opts: HTMLElement = self._opts
 
-	var headersObj: Object = self._headers
-	var body: String = null
+	var headersObj: object = self._headers
+	var body: string = null
 	if (opts.method !== 'GET' && opts.method !== 'HEAD') {
 		if (capability.arraybuffer) {
 			body = toArrayBuffer(Buffer.concat(self._body))
 		} else if (capability.blobConstructor) {
-			body = new global.Blob(self._body.map(function (buffer: Object) {
+			body = new global.Blob(self._body.map(function (buffer: object) {
 				return toArrayBuffer(buffer)
 			}), {
 				type: (headersObj['content-type'] || {}).value || ''
@@ -8185,10 +8185,10 @@ ClientRequest.prototype._onFinish = function () {
 	}
 
 	// create flattened list of headers
-	var headersList: Array = []
-	Object.keys(headersObj).forEach(function (keyName: String) {
-		var name: String = headersObj[keyName].name
-		var value: Array = headersObj[keyName].value
+	var headersList: any[] = []
+	Object.keys(headersObj).forEach(function (keyName: string) {
+		var name: string = headersObj[keyName].name
+		var value: any[] = headersObj[keyName].value
 		if (Array.isArray(value)) {
 			value.forEach(function (v: Function) {
 				headersList.push([name, v])
@@ -8200,9 +8200,9 @@ ClientRequest.prototype._onFinish = function () {
 
 	if (self._mode === 'fetch') {
 		var signal: Function = null
-		var fetchTimer: Array = null
+		var fetchTimer: any[] = null
 		if (capability.abortController) {
-			var controller: Object = new AbortController()
+			var controller: object = new AbortController()
 			signal = controller.signal
 			self._fetchAbortController = controller
 
@@ -8225,7 +8225,7 @@ ClientRequest.prototype._onFinish = function () {
 		}).then(function (response: Function) {
 			self._fetchResponse = response
 			self._connect()
-		}, function (reason: String) {
+		}, function (reason: string) {
 			global.clearTimeout(self._fetchTimer)
 			if (!self._destroyed)
 				self.emit('error', reason)
@@ -8301,9 +8301,9 @@ ClientRequest.prototype._onFinish = function () {
  * Even though the spec says it should be available in readyState 3,
  * accessing it throws an exception in IE8
  */
-function statusValid (xhr: Object): Boolean {
+function statusValid (xhr: object): boolean {
 	try {
-		var status: String = xhr.status
+		var status: string = xhr.status
 		return (status !== null && status !== 0)
 	} catch (e) {
 		return false
@@ -8336,7 +8336,7 @@ ClientRequest.prototype._connect = function () {
 	self.emit('response', self._response)
 }
 
-ClientRequest.prototype._write = function (chunk: String, encoding: Number, cb: Function) {
+ClientRequest.prototype._write = function (chunk: string, encoding: number, cb: Function) {
 	var self: HTMLElement = this
 
 	self._body.push(chunk)
@@ -8355,8 +8355,8 @@ ClientRequest.prototype.abort = ClientRequest.prototype.destroy = function () {
 		self._fetchAbortController.abort()
 }
 
-ClientRequest.prototype.end = function (data: Array, encoding: String, cb: String) {
-	var self: Array = this
+ClientRequest.prototype.end = function (data: any[], encoding: string, cb: string) {
+	var self: any[] = this
 	if (typeof data === 'function') {
 		cb = data
 		data = undefined
@@ -8371,7 +8371,7 @@ ClientRequest.prototype.setNoDelay = function () {}
 ClientRequest.prototype.setSocketKeepAlive = function () {}
 
 // Taken from http://www.w3.org/TR/XMLHttpRequest/#the-setrequestheader%28%29-method
-var unsafeHeaders: Array = [
+var unsafeHeaders: any[] = [
 	'accept-charset',
 	'accept-encoding',
 	'access-control-request-headers',
@@ -8398,23 +8398,23 @@ var unsafeHeaders: Array = [
 
 /***/ }),
 /* 33 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 /* (ignored) */
 
 /***/ }),
 /* 34 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
 "use strict";
 
 
-function _classCallCheck(instance: String, Constructor: Number): Void { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance: string, Constructor: number): Void { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Buffer: Element = __webpack_require__(7).Buffer;
-var util: Boolean = __webpack_require__(35);
+var util: boolean = __webpack_require__(35);
 
-function copyBuffer(src: Array, target: Object, offset: String): Void {
+function copyBuffer(src: any[], target: object, offset: string): Void {
   src.copy(target, offset);
 }
 
@@ -8427,23 +8427,23 @@ module.exports = function () {
     this.length = 0;
   }
 
-  BufferList.prototype.push = function push(v: Array): Void {
-    var entry: Object = { data: v, next: null };
+  BufferList.prototype.push = function push(v: any[]): Void {
+    var entry: object = { data: v, next: null };
     if (this.length > 0) this.tail.next = entry;else this.head = entry;
     this.tail = entry;
     ++this.length;
   };
 
-  BufferList.prototype.unshift = function unshift(v: Array): Void {
-    var entry: Object = { data: v, next: this.head };
+  BufferList.prototype.unshift = function unshift(v: any[]): Void {
+    var entry: object = { data: v, next: this.head };
     if (this.length === 0) this.tail = entry;
     this.head = entry;
     ++this.length;
   };
 
-  BufferList.prototype.shift = function shift(): String {
+  BufferList.prototype.shift = function shift(): string {
     if (this.length === 0) return;
-    var ret: Array = this.head.data;
+    var ret: any[] = this.head.data;
     if (this.length === 1) this.head = this.tail = null;else this.head = this.head.next;
     --this.length;
     return ret;
@@ -8454,21 +8454,21 @@ module.exports = function () {
     this.length = 0;
   };
 
-  BufferList.prototype.join = function join(s: String): String {
+  BufferList.prototype.join = function join(s: string): string {
     if (this.length === 0) return '';
-    var p: Object = this.head;
-    var ret: String = '' + p.data;
+    var p: object = this.head;
+    var ret: string = '' + p.data;
     while (p = p.next) {
       ret += s + p.data;
     }return ret;
   };
 
-  BufferList.prototype.concat = function concat(n: String): String {
+  BufferList.prototype.concat = function concat(n: string): string {
     if (this.length === 0) return Buffer.alloc(0);
     if (this.length === 1) return this.head.data;
-    var ret: String = Buffer.allocUnsafe(n >>> 0);
-    var p: Object = this.head;
-    var i: Number = 0;
+    var ret: string = Buffer.allocUnsafe(n >>> 0);
+    var p: object = this.head;
+    var i: number = 0;
     while (p) {
       copyBuffer(p.data, ret, i);
       i += p.data.length;
@@ -8482,14 +8482,14 @@ module.exports = function () {
 
 if (util && util.inspect && util.inspect.custom) {
   module.exports.prototype[util.inspect.custom] = function () {
-    var obj: String = util.inspect({ length: this.length });
+    var obj: string = util.inspect({ length: this.length });
     return this.constructor.name + ' ' + obj;
   };
 }
 
 /***/ }),
 /* 35 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 /* (ignored) */
 
@@ -8497,7 +8497,7 @@ if (util && util.inspect && util.inspect.custom) {
 /* 36 */
 /***/ (function(module: Function, exports: HTMLElement, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(global: Object) {var scope: String = (typeof global !== "undefined" && global) ||
+/* WEBPACK VAR INJECTION */(function(global: object) {var scope: string = (typeof global !== "undefined" && global) ||
             (typeof self !== "undefined" && self) ||
             window;
 var apply: Function = Function.prototype.apply;
@@ -8511,13 +8511,13 @@ exports.setInterval = function() {
   return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
 };
 exports.clearTimeout =
-exports.clearInterval = function(timeout: Object) {
+exports.clearInterval = function(timeout: object) {
   if (timeout) {
     timeout.close();
   }
 };
 
-function Timeout(id: String, clearFn: String): Void {
+function Timeout(id: string, clearFn: string): Void {
   this._id = id;
   this._clearFn = clearFn;
 }
@@ -8527,12 +8527,12 @@ Timeout.prototype.close = function() {
 };
 
 // Does not start the time, just sets up the members needed.
-exports.enroll = function(item: Object, msecs: Boolean) {
+exports.enroll = function(item: object, msecs: boolean) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = msecs;
 };
 
-exports.unenroll = function(item: Object) {
+exports.unenroll = function(item: object) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };
@@ -8540,7 +8540,7 @@ exports.unenroll = function(item: Object) {
 exports._unrefActive = exports.active = function(item: HTMLElement) {
   clearTimeout(item._idleTimeoutId);
 
-  var msecs: Number = item._idleTimeout;
+  var msecs: number = item._idleTimeout;
   if (msecs >= 0) {
     item._idleTimeoutId = setTimeout(function onTimeout(): Void {
       if (item._onTimeout)
@@ -8565,45 +8565,45 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 /* 37 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(global: String, process: Object) {(function (global: HTMLElement, undefined: Array) {
+/* WEBPACK VAR INJECTION */(function(global: string, process: object) {(function (global: HTMLElement, undefined: any[]) {
     "use strict";
 
     if (global.setImmediate) {
         return;
     }
 
-    var nextHandle: Number = 1; // Spec says greater than zero
-    var tasksByHandle: Object = {};
-    var currentlyRunningATask: Boolean = false;
+    var nextHandle: number = 1; // Spec says greater than zero
+    var tasksByHandle: object = {};
+    var currentlyRunningATask: boolean = false;
     var doc: Element = global.document;
     var registerImmediate: Function;
 
-    function setImmediate(callback: Function): Number {
+    function setImmediate(callback: Function): number {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
       }
       // Copy function arguments
-      var args: Object = new Array(arguments.length - 1);
+      var args: object = new Array(arguments.length - 1);
       for (var i = 0; i < args.length; i++) {
           args[i] = arguments[i + 1];
       }
       // Store and register the task
-      var task: Object = { callback: callback, args: args };
+      var task: object = { callback: callback, args: args };
       tasksByHandle[nextHandle] = task;
       registerImmediate(nextHandle);
       return nextHandle++;
     }
 
-    function clearImmediate(handle: String): Void {
+    function clearImmediate(handle: string): Void {
         delete tasksByHandle[handle];
     }
 
-    function run(task: Object): Void {
+    function run(task: object): Void {
         var callback: Function = task.callback;
-        var args: Array = task.args;
+        var args: any[] = task.args;
         switch (args.length) {
         case 0:
             callback();
@@ -8623,7 +8623,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         }
     }
 
-    function runIfPresent(handle: Number): Void {
+    function runIfPresent(handle: number): Void {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -8631,7 +8631,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
             // "too much recursion" error.
             setTimeout(runIfPresent, 0, handle);
         } else {
-            var task: String = tasksByHandle[handle];
+            var task: string = tasksByHandle[handle];
             if (task) {
                 currentlyRunningATask = true;
                 try {
@@ -8645,17 +8645,17 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     }
 
     function installNextTickImplementation(): Void {
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             process.nextTick(function () { runIfPresent(handle); });
         };
     }
 
-    function canUsePostMessage(): Boolean {
+    function canUsePostMessage(): boolean {
         // The test against `importScripts` prevents this implementation from being installed inside a web worker,
         // where `global.postMessage` means something completely different and can't be used for this purpose.
         if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous: Boolean = true;
-            var oldOnMessage: String = global.onmessage;
+            var postMessageIsAsynchronous: boolean = true;
+            var oldOnMessage: string = global.onmessage;
             global.onmessage = function() {
                 postMessageIsAsynchronous = false;
             };
@@ -8670,8 +8670,8 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         // * https://developer.mozilla.org/en/DOM/window.postMessage
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
 
-        var messagePrefix: String = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage: Function = function(event: Object) {
+        var messagePrefix: string = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage: Function = function(event: object) {
             if (event.source === global &&
                 typeof event.data === "string" &&
                 event.data.indexOf(messagePrefix) === 0) {
@@ -8685,26 +8685,26 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
             global.attachEvent("onmessage", onGlobalMessage);
         }
 
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             global.postMessage(messagePrefix + handle, "*");
         };
     }
 
     function installMessageChannelImplementation(): Void {
         var channel: HTMLElement = new MessageChannel();
-        channel.port1.onmessage = function(event: Object) {
-            var handle: Array = event.data;
+        channel.port1.onmessage = function(event: object) {
+            var handle: any[] = event.data;
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             channel.port2.postMessage(handle);
         };
     }
 
     function installReadyStateChangeImplementation(): Void {
         var html: Element = doc.documentElement;
-        registerImmediate = function(handle: String) {
+        registerImmediate = function(handle: string) {
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
             // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
             var script: HTMLElement = doc.createElement("script");
@@ -8719,13 +8719,13 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     }
 
     function installSetTimeoutImplementation(): Void {
-        registerImmediate = function(handle: Number) {
+        registerImmediate = function(handle: number) {
             setTimeout(runIfPresent, 0, handle);
         };
     }
 
     // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo: Object = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    var attachTo: object = Object.getPrototypeOf && Object.getPrototypeOf(global);
     attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
 
     // Don't get fooled by e.g. browserify environments.
@@ -8758,7 +8758,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 /* 38 */
-/***/ (function(module: Function, exports: String, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: string, __webpack_require__: Function) {
 
 /* WEBPACK VAR INJECTION */(function(global: HTMLElement) {
 /**
@@ -8785,12 +8785,12 @@ module.exports = deprecate;
  * @api public
  */
 
-function deprecate (fn: Function, msg: Array): Function {
+function deprecate (fn: Function, msg: any[]): Function {
   if (config('noDeprecation')) {
     return fn;
   }
 
-  var warned: Boolean = false;
+  var warned: boolean = false;
   function deprecated(): Promise {
     if (!warned) {
       if (config('throwDeprecation')) {
@@ -8816,14 +8816,14 @@ function deprecate (fn: Function, msg: Array): Function {
  * @api private
  */
 
-function config (name: String): Boolean {
+function config (name: string): boolean {
   // accessing global.localStorage can trigger a DOMException in sandboxed iframes
   try {
     if (!global.localStorage) return false;
   } catch (_) {
     return false;
   }
-  var val: String = global.localStorage[name];
+  var val: string = global.localStorage[name];
   if (null == val) return false;
   return String(val).toLowerCase() === 'true';
 }
@@ -8832,7 +8832,7 @@ function config (name: String): Boolean {
 
 /***/ }),
 /* 39 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -8873,23 +8873,23 @@ util.inherits = __webpack_require__(2);
 
 util.inherits(PassThrough, Transform);
 
-function PassThrough(options: Function): String {
+function PassThrough(options: Function): string {
   if (!(this instanceof PassThrough)) return new PassThrough(options);
 
   Transform.call(this, options);
 }
 
-PassThrough.prototype._transform = function (chunk: String, encoding: Number, cb: Function) {
+PassThrough.prototype._transform = function (chunk: string, encoding: number, cb: Function) {
   cb(null, chunk);
 };
 
 /***/ }),
 /* 40 */
-/***/ (function(module: Function, exports: Number, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: number, __webpack_require__: Function) {
 
 var Buffer: HTMLElement = __webpack_require__(3).Buffer
 
-module.exports = function (buf: Object) {
+module.exports = function (buf: object) {
 	// If the buffer is backed by a Uint8Array, a faster version will work
 	if (buf instanceof Uint8Array) {
 		// If the buffer isn't a subarray, return the underlying ArrayBuffer
@@ -8904,8 +8904,8 @@ module.exports = function (buf: Object) {
 	if (Buffer.isBuffer(buf)) {
 		// This is the slow version that will work with any Buffer
 		// implementation (even in old browsers)
-		var arrayCopy: Object = new Uint8Array(buf.length)
-		var len: Number = buf.length
+		var arrayCopy: object = new Uint8Array(buf.length)
+		var len: number = buf.length
 		for (var i = 0; i < len; i++) {
 			arrayCopy[i] = buf[i]
 		}
@@ -8918,17 +8918,17 @@ module.exports = function (buf: Object) {
 
 /***/ }),
 /* 41 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 module.exports = extend
 
 var hasOwnProperty: Function = Object.prototype.hasOwnProperty;
 
-function extend(): Object {
-    var target: Object = {}
+function extend(): object {
+    var target: object = {}
 
     for (var i = 0; i < arguments.length; i++) {
-        var source: Object = arguments[i]
+        var source: object = arguments[i]
 
         for (var key in source) {
             if (hasOwnProperty.call(source, key)) {
@@ -8943,7 +8943,7 @@ function extend(): Object {
 
 /***/ }),
 /* 42 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
 module.exports = {
   "100": "Continue",
@@ -9015,7 +9015,7 @@ module.exports = {
 /* 43 */
 /***/ (function(module: Function, exports: HTMLElement, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(process: String) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(process: string) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -9037,9 +9037,9 @@ module.exports = {
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var getOwnPropertyDescriptors: Function = Object.getOwnPropertyDescriptors ||
-  function getOwnPropertyDescriptors(obj: Function): Object {
-    var keys: Array = Object.keys(obj);
-    var descriptors: Object = {};
+  function getOwnPropertyDescriptors(obj: Function): object {
+    var keys: any[] = Object.keys(obj);
+    var descriptors: object = {};
     for (var i = 0; i < keys.length; i++) {
       descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
     }
@@ -9047,19 +9047,19 @@ var getOwnPropertyDescriptors: Function = Object.getOwnPropertyDescriptors ||
   };
 
 var formatRegExp: RegExp = /%[sdj%]/g;
-exports.format = function(f: String) {
+exports.format = function(f: string) {
   if (!isString(f)) {
-    var objects: Array = [];
+    var objects: any[] = [];
     for (var i = 0; i < arguments.length; i++) {
       objects.push(inspect(arguments[i]));
     }
     return objects.join(' ');
   }
 
-  var i: Number = 1;
-  var args: Object = arguments;
-  var len: Number = args.length;
-  var str: String = String(f).replace(formatRegExp, function(x: Number) {
+  var i: number = 1;
+  var args: object = arguments;
+  var len: number = args.length;
+  var str: string = String(f).replace(formatRegExp, function(x: number) {
     if (x === '%%') return '%';
     if (i >= len) return x;
     switch (x) {
@@ -9089,7 +9089,7 @@ exports.format = function(f: String) {
 // Mark that a method should not be used.
 // Returns a modified function which warns once by default.
 // If --no-deprecation is set, then it is a no-op.
-exports.deprecate = function(fn: Function, msg: Array) {
+exports.deprecate = function(fn: Function, msg: any[]) {
   if (typeof process !== 'undefined' && process.noDeprecation === true) {
     return fn;
   }
@@ -9101,7 +9101,7 @@ exports.deprecate = function(fn: Function, msg: Array) {
     };
   }
 
-  var warned: Boolean = false;
+  var warned: boolean = false;
   function deprecated(): Promise {
     if (!warned) {
       if (process.throwDeprecation) {
@@ -9120,17 +9120,17 @@ exports.deprecate = function(fn: Function, msg: Array) {
 };
 
 
-var debugs: Object = {};
-var debugEnviron: Number;
-exports.debuglog = function(set: String) {
+var debugs: object = {};
+var debugEnviron: number;
+exports.debuglog = function(set: string) {
   if (isUndefined(debugEnviron))
     debugEnviron = process.env.NODE_DEBUG || '';
   set = set.toUpperCase();
   if (!debugs[set]) {
     if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
-      var pid: String = process.pid;
+      var pid: string = process.pid;
       debugs[set] = function() {
-        var msg: Array = exports.format.apply(exports, arguments);
+        var msg: any[] = exports.format.apply(exports, arguments);
         console.error('%s %d: %s', set, pid, msg);
       };
     } else {
@@ -9149,9 +9149,9 @@ exports.debuglog = function(set: String) {
  * @param {Object} opts Optional options object that alters the output.
  */
 /* legacy: obj, showHidden, depth, colors*/
-function inspect(obj: Function, opts: String): String {
+function inspect(obj: Function, opts: string): string {
   // default options
-  var ctx: String = {
+  var ctx: string = {
     seen: [],
     stylize: stylizeNoColor
   };
@@ -9207,8 +9207,8 @@ inspect.styles = {
 };
 
 
-function stylizeWithColor(str: String, styleType: String): String {
-  var style: String = inspect.styles[styleType];
+function stylizeWithColor(str: string, styleType: string): string {
+  var style: string = inspect.styles[styleType];
 
   if (style) {
     return '\u001b[' + inspect.colors[style][0] + 'm' + str +
@@ -9219,15 +9219,15 @@ function stylizeWithColor(str: String, styleType: String): String {
 }
 
 
-function stylizeNoColor(str: String, styleType: Number): String {
+function stylizeNoColor(str: string, styleType: number): string {
   return str;
 }
 
 
-function arrayToHash(array: Array): Object {
-  var hash: Object = {};
+function arrayToHash(array: any[]): object {
+  var hash: object = {};
 
-  array.forEach(function(val: Array, idx: Number) {
+  array.forEach(function(val: any[], idx: number) {
     hash[val] = true;
   });
 
@@ -9235,7 +9235,7 @@ function arrayToHash(array: Array): Object {
 }
 
 
-function formatValue(ctx: String, value: Object, recurseTimes: Function): String {
+function formatValue(ctx: string, value: object, recurseTimes: Function): string {
   // Provide a hook for user-specified inspect functions.
   // Check that value is an object with an inspect function on it
   if (ctx.customInspect &&
@@ -9245,7 +9245,7 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
       value.inspect !== exports.inspect &&
       // Also filter out any prototype objects using the circular check.
       !(value.constructor && value.constructor.prototype === value)) {
-    var ret: String = value.inspect(recurseTimes, ctx);
+    var ret: string = value.inspect(recurseTimes, ctx);
     if (!isString(ret)) {
       ret = formatValue(ctx, ret, recurseTimes);
     }
@@ -9253,14 +9253,14 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
   }
 
   // Primitive types cannot have properties
-  var primitive: String = formatPrimitive(ctx, value);
+  var primitive: string = formatPrimitive(ctx, value);
   if (primitive) {
     return primitive;
   }
 
   // Look up the keys of the object.
-  var keys: String = Object.keys(value);
-  var visibleKeys: Array = arrayToHash(keys);
+  var keys: string = Object.keys(value);
+  var visibleKeys: any[] = arrayToHash(keys);
 
   if (ctx.showHidden) {
     keys = Object.getOwnPropertyNames(value);
@@ -9276,7 +9276,7 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
   // Some type of object without properties can be shortcutted.
   if (keys.length === 0) {
     if (isFunction(value)) {
-      var name: String = value.name ? ': ' + value.name : '';
+      var name: string = value.name ? ': ' + value.name : '';
       return ctx.stylize('[Function' + name + ']', 'special');
     }
     if (isRegExp(value)) {
@@ -9290,7 +9290,7 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
     }
   }
 
-  var base: String = '', array: Boolean = false, braces: Array = ['{', '}'];
+  var base: string = '', array: boolean = false, braces: any[] = ['{', '}'];
 
   // Make Array say that they are Array
   if (isArray(value)) {
@@ -9300,7 +9300,7 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
 
   // Make functions say that they are functions
   if (isFunction(value)) {
-    var n: String = value.name ? ': ' + value.name : '';
+    var n: string = value.name ? ': ' + value.name : '';
     base = ' [Function' + n + ']';
   }
 
@@ -9333,11 +9333,11 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
 
   ctx.seen.push(value);
 
-  var output: Array;
+  var output: any[];
   if (array) {
     output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
   } else {
-    output = keys.map(function(key: String) {
+    output = keys.map(function(key: string) {
       return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
     });
   }
@@ -9348,11 +9348,11 @@ function formatValue(ctx: String, value: Object, recurseTimes: Function): String
 }
 
 
-function formatPrimitive(ctx: String, value: String): String {
+function formatPrimitive(ctx: string, value: string): string {
   if (isUndefined(value))
     return ctx.stylize('undefined', 'undefined');
   if (isString(value)) {
-    var simple: String = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+    var simple: string = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
                                              .replace(/'/g, "\\'")
                                              .replace(/\\"/g, '"') + '\'';
     return ctx.stylize(simple, 'string');
@@ -9367,13 +9367,13 @@ function formatPrimitive(ctx: String, value: String): String {
 }
 
 
-function formatError(value: String): String {
+function formatError(value: string): string {
   return '[' + Error.prototype.toString.call(value) + ']';
 }
 
 
-function formatArray(ctx: String, value: Array, recurseTimes: Function, visibleKeys: Number, keys: Array): Array {
-  var output: Array = [];
+function formatArray(ctx: string, value: any[], recurseTimes: Function, visibleKeys: number, keys: any[]): any[] {
+  var output: any[] = [];
   for (var i = 0, l = value.length; i < l; ++i) {
     if (hasOwnProperty(value, String(i))) {
       output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
@@ -9382,7 +9382,7 @@ function formatArray(ctx: String, value: Array, recurseTimes: Function, visibleK
       output.push('');
     }
   }
-  keys.forEach(function(key: String) {
+  keys.forEach(function(key: string) {
     if (!key.match(/^\d+$/)) {
       output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
           key, true));
@@ -9392,8 +9392,8 @@ function formatArray(ctx: String, value: Array, recurseTimes: Function, visibleK
 }
 
 
-function formatProperty(ctx: String, value: Object, recurseTimes: Number, visibleKeys: Number, key: String, array: String): String {
-  var name: String, str: String, desc: Object;
+function formatProperty(ctx: string, value: object, recurseTimes: number, visibleKeys: number, key: string, array: string): string {
+  var name: string, str: string, desc: object;
   desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
   if (desc.get) {
     if (desc.set) {
@@ -9418,11 +9418,11 @@ function formatProperty(ctx: String, value: Object, recurseTimes: Number, visibl
       }
       if (str.indexOf('\n') > -1) {
         if (array) {
-          str = str.split('\n').map(function(line: String) {
+          str = str.split('\n').map(function(line: string) {
             return '  ' + line;
           }).join('\n').substr(2);
         } else {
-          str = '\n' + str.split('\n').map(function(line: String) {
+          str = '\n' + str.split('\n').map(function(line: string) {
             return '   ' + line;
           }).join('\n');
         }
@@ -9451,9 +9451,9 @@ function formatProperty(ctx: String, value: Object, recurseTimes: Number, visibl
 }
 
 
-function reduceToSingleString(output: Array, base: String, braces: Promise): String {
-  var numLinesEst: Number = 0;
-  var length: Number = output.reduce(function(prev: Number, cur: String) {
+function reduceToSingleString(output: any[], base: string, braces: Promise): string {
+  var numLinesEst: number = 0;
+  var length: number = output.reduce(function(prev: number, cur: string) {
     numLinesEst++;
     if (cur.indexOf('\n') >= 0) numLinesEst++;
     return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
@@ -9474,73 +9474,73 @@ function reduceToSingleString(output: Array, base: String, braces: Promise): Str
 
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
-function isArray(ar: Array): Boolean {
+function isArray(ar: any[]): boolean {
   return Array.isArray(ar);
 }
 exports.isArray = isArray;
 
-function isBoolean(arg: String): Boolean {
+function isBoolean(arg: string): boolean {
   return typeof arg === 'boolean';
 }
 exports.isBoolean = isBoolean;
 
-function isNull(arg: Number): Boolean {
+function isNull(arg: number): boolean {
   return arg === null;
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: Number): Boolean {
+function isNullOrUndefined(arg: number): boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: String): Boolean {
+function isNumber(arg: string): boolean {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: String): Boolean {
+function isString(arg: string): boolean {
   return typeof arg === 'string';
 }
 exports.isString = isString;
 
-function isSymbol(arg: String): Boolean {
+function isSymbol(arg: string): boolean {
   return typeof arg === 'symbol';
 }
 exports.isSymbol = isSymbol;
 
-function isUndefined(arg: Number): Boolean {
+function isUndefined(arg: number): boolean {
   return arg === void 0;
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: String): Boolean {
+function isRegExp(re: string): boolean {
   return isObject(re) && objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;
 
-function isObject(arg: String): Boolean {
+function isObject(arg: string): boolean {
   return typeof arg === 'object' && arg !== null;
 }
 exports.isObject = isObject;
 
-function isDate(d: String): Boolean {
+function isDate(d: string): boolean {
   return isObject(d) && objectToString(d) === '[object Date]';
 }
 exports.isDate = isDate;
 
-function isError(e: String): Boolean {
+function isError(e: string): boolean {
   return isObject(e) &&
       (objectToString(e) === '[object Error]' || e instanceof Error);
 }
 exports.isError = isError;
 
-function isFunction(arg: String): Boolean {
+function isFunction(arg: string): boolean {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
 
-function isPrimitive(arg: String): Boolean {
+function isPrimitive(arg: string): boolean {
   return arg === null ||
          typeof arg === 'boolean' ||
          typeof arg === 'number' ||
@@ -9552,23 +9552,23 @@ exports.isPrimitive = isPrimitive;
 
 exports.isBuffer = __webpack_require__(44);
 
-function objectToString(o: String): Boolean {
+function objectToString(o: string): boolean {
   return Object.prototype.toString.call(o);
 }
 
 
-function pad(n: String): String {
+function pad(n: string): string {
   return n < 10 ? '0' + n.toString(10) : n.toString(10);
 }
 
 
-var months: Array = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+var months: any[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
               'Oct', 'Nov', 'Dec'];
 
 // 26 Feb 16:19:34
-function timestamp(): String {
+function timestamp(): string {
   var d: HTMLInputElement = new Date();
-  var time: String = [pad(d.getHours()),
+  var time: string = [pad(d.getHours()),
               pad(d.getMinutes()),
               pad(d.getSeconds())].join(':');
   return [d.getDate(), months[d.getMonth()], time].join(' ');
@@ -9596,30 +9596,30 @@ exports.log = function() {
  */
 exports.inherits = __webpack_require__(2);
 
-exports._extend = function(origin: Object, add: Object) {
+exports._extend = function(origin: object, add: object) {
   // Don't do anything if add isn't an object
   if (!add || !isObject(add)) return origin;
 
-  var keys: Array = Object.keys(add);
-  var i: Number = keys.length;
+  var keys: any[] = Object.keys(add);
+  var i: number = keys.length;
   while (i--) {
     origin[keys[i]] = add[keys[i]];
   }
   return origin;
 };
 
-function hasOwnProperty(obj: String, prop: String): Boolean {
+function hasOwnProperty(obj: string, prop: string): boolean {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-var kCustomPromisifiedSymbol: Boolean = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
+var kCustomPromisifiedSymbol: boolean = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
 
-exports.promisify = function promisify(original: Object): Array {
+exports.promisify = function promisify(original: object): any[] {
   if (typeof original !== 'function')
     throw new TypeError('The "original" argument must be of type Function');
 
   if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
-    var fn: String = original[kCustomPromisifiedSymbol];
+    var fn: string = original[kCustomPromisifiedSymbol];
     if (typeof fn !== 'function') {
       throw new TypeError('The "util.promisify.custom" argument must be of type Function');
     }
@@ -9636,11 +9636,11 @@ exports.promisify = function promisify(original: Object): Array {
       promiseReject = reject;
     });
 
-    var args: Array = [];
+    var args: any[] = [];
     for (var i = 0; i < arguments.length; i++) {
       args.push(arguments[i]);
     }
-    args.push(function (err: Array, value: Number) {
+    args.push(function (err: any[], value: number) {
       if (err) {
         promiseReject(err);
       } else {
@@ -9692,7 +9692,7 @@ function callbackify(original: Function): Function {
   // the promise is actually somehow related to the callback's execution
   // and that the callback throwing will reject the promise.
   function callbackified(): Void {
-    var args: Array = [];
+    var args: any[] = [];
     for (var i = 0; i < arguments.length; i++) {
       args.push(arguments[i]);
     }
@@ -9701,7 +9701,7 @@ function callbackify(original: Function): Function {
     if (typeof maybeCb !== 'function') {
       throw new TypeError('The last argument must be of type Function');
     }
-    var self: Object = this;
+    var self: object = this;
     var cb: Function = function() {
       return maybeCb.apply(self, arguments);
     };
@@ -9723,9 +9723,9 @@ exports.callbackify = callbackify;
 
 /***/ }),
 /* 44 */
-/***/ (function(module: Function, exports: Number) {
+/***/ (function(module: Function, exports: number) {
 
-module.exports = function isBuffer(arg: Object): Boolean {
+module.exports = function isBuffer(arg: object): boolean {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'

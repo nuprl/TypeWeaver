@@ -21,24 +21,24 @@ module.exports = first
  * @public
  */
 
-function first (stuff: Array, done: Function): Array {
+function first (stuff: any[], done: Function): any[] {
   if (!Array.isArray(stuff)) {
     throw new TypeError('arg must be an array of [ee, events...] arrays')
   }
 
-  var cleanups: Array = []
+  var cleanups: any[] = []
 
   for (var i = 0; i < stuff.length; i++) {
-    var arr: Array = stuff[i]
+    var arr: any[] = stuff[i]
 
     if (!Array.isArray(arr) || arr.length < 2) {
       throw new TypeError('each array member must be [ee, events...]')
     }
 
-    var ee: Object = arr[0]
+    var ee: object = arr[0]
 
     for (var j = 1; j < arr.length; j++) {
-      var event: String = arr[j]
+      var event: string = arr[j]
       var fn: Function = listener(event, callback)
 
       // listen to the event
@@ -58,14 +58,14 @@ function first (stuff: Array, done: Function): Array {
   }
 
   function cleanup (): Void {
-    var x: Object
+    var x: object
     for (var i = 0; i < cleanups.length; i++) {
       x = cleanups[i]
       x.ee.removeListener(x.event, x.fn)
     }
   }
 
-  function thunk (fn: Array): Void {
+  function thunk (fn: any[]): Void {
     done = fn
   }
 
@@ -79,11 +79,11 @@ function first (stuff: Array, done: Function): Array {
  * @private
  */
 
-function listener (event: String, done: Function): Function {
-  return function onevent (arg1: String): Void {
-    var args: Array = new Array(arguments.length)
-    var ee: Array = this
-    var err: String = event === 'error'
+function listener (event: string, done: Function): Function {
+  return function onevent (arg1: string): Void {
+    var args: any[] = new Array(arguments.length)
+    var ee: any[] = this
+    var err: string = event === 'error'
       ? arg1
       : null
 

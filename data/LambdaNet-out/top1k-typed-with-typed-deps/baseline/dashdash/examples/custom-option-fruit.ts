@@ -7,19 +7,19 @@
  * Here we'll add a 'fruit' option type, with 'apple' as the default.
  */
 
-var path: String = require('path');
+var path: string = require('path');
 var format: Function = require('util').format;
-var dashdash: Array = require('../lib/dashdash');
+var dashdash: any[] = require('../lib/dashdash');
 
 
-var fruits: Array = [
+var fruits: any[] = [
     'apple',
     'pear',
     'cherry',
     'strawberry',
     'banana'
 ];
-function parseFruit(option: Function, optstr: String, arg: String): String {
+function parseFruit(option: Function, optstr: string, arg: string): string {
     if (fruits.indexOf(arg) === -1) {
         throw new Error(format('arg for "%s" is not a known fruit: "%s"',
             optstr, arg));
@@ -37,7 +37,7 @@ dashdash.addOptionType({
 });
 
 
-var options: Array = [
+var options: any[] = [
     {
         names: ['help', 'h'],        // first name is opts key
         type: 'bool',
@@ -46,16 +46,16 @@ var options: Array = [
     { names: ['pie', 'p'], type: 'fruit', env: 'FRUIT' }
 ];
 
-var parser: Object = dashdash.createParser({options: options});
+var parser: object = dashdash.createParser({options: options});
 try {
-    var opts: Object = parser.parse(process.argv);
+    var opts: object = parser.parse(process.argv);
 } catch (e) {
     console.error('%s: error: %s', path.basename(process.argv[1]), e.message);
     process.exit(1);
 }
 
 if (opts.help) {
-    var help: String = parser.help({
+    var help: string = parser.help({
         includeEnv: true,
         includeDefault: true
     }).trimRight();

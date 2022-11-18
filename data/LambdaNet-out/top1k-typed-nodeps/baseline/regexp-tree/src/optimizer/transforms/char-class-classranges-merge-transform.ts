@@ -65,9 +65,9 @@ module.exports = {
  * @param {Object} b - Right Char or ClassRange node
  * @returns {number}
  */
-function sortCharClass(a: Object, b: Object): Number {
-  const aValue: Number = getSortValue(a);
-  const bValue: Number = getSortValue(b);
+function sortCharClass(a: object, b: object): number {
+  const aValue: number = getSortValue(a);
+  const bValue: number = getSortValue(b);
 
   if (aValue === bValue) {
     // We want ClassRange before Char
@@ -92,7 +92,7 @@ function sortCharClass(a: Object, b: Object): Number {
  * @param {Object} expression - Char or ClassRange node
  * @returns {number}
  */
-function getSortValue(expression: Object): Number {
+function getSortValue(expression: object): number {
   if (expression.type === 'Char') {
     if (expression.value === '-') {
       return Infinity;
@@ -115,7 +115,7 @@ function getSortValue(expression: Object): Number {
  * @param {?string} value
  * @returns {boolean}
  */
-function isMeta(expression: Object, value: Number = null): Boolean {
+function isMeta(expression: object, value: number = null): boolean {
   return (
     expression.type === 'Char' &&
     expression.kind === 'meta' &&
@@ -127,7 +127,7 @@ function isMeta(expression: Object, value: Number = null): Boolean {
  * @param {Object} expression - Char or ClassRange node
  * @returns {boolean}
  */
-function isControl(expression: Object): Boolean {
+function isControl(expression: object): boolean {
   return expression.type === 'Char' && expression.kind === 'control';
 }
 
@@ -137,7 +137,7 @@ function isControl(expression: Object): Boolean {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetas(expression: String, metas: Array, hasIUFlags: Number): Boolean {
+function fitsInMetas(expression: string, metas: any[], hasIUFlags: number): boolean {
   for (let i = 0; i < metas.length; i++) {
     if (fitsInMeta(expression, metas[i], hasIUFlags)) {
       return true;
@@ -152,7 +152,7 @@ function fitsInMetas(expression: String, metas: Array, hasIUFlags: Number): Bool
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMeta(expression: Object, meta: Number, hasIUFlags: String): Boolean {
+function fitsInMeta(expression: object, meta: number, hasIUFlags: string): boolean {
   if (expression.type === 'ClassRange') {
     return (
       fitsInMeta(expression.from, meta, hasIUFlags) &&
@@ -213,7 +213,7 @@ function fitsInMeta(expression: Object, meta: Number, hasIUFlags: String): Boole
  * @param {Object} expression - Char node with codePoint
  * @returns {boolean}
  */
-function fitsInMetaS(expression: Object): Boolean {
+function fitsInMetaS(expression: object): boolean {
   return (
     expression.codePoint === 0x0009 || // \t
     expression.codePoint === 0x000a || // \n
@@ -237,7 +237,7 @@ function fitsInMetaS(expression: Object): Boolean {
  * @param {Object} expression - Char node with codePoint
  * @returns {boolean}
  */
-function fitsInMetaD(expression: Object): Boolean {
+function fitsInMetaD(expression: object): boolean {
   return expression.codePoint >= 0x30 && expression.codePoint <= 0x39; // 0-9
 }
 
@@ -246,7 +246,7 @@ function fitsInMetaD(expression: Object): Boolean {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetaW(expression: Object, hasIUFlags: Boolean): Boolean {
+function fitsInMetaW(expression: object, hasIUFlags: boolean): boolean {
   return (
     fitsInMetaD(expression) ||
     (expression.codePoint >= 0x41 && expression.codePoint <= 0x5a) || // A-Z
@@ -262,7 +262,7 @@ function fitsInMetaW(expression: Object, hasIUFlags: Boolean): Boolean {
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithPrecedingClassRange(expression: Object, classRange: Object): Boolean {
+function combinesWithPrecedingClassRange(expression: object, classRange: object): boolean {
   if (classRange && classRange.type === 'ClassRange') {
     if (fitsInClassRange(expression, classRange)) {
       // [a-gc] -> [a-g]
@@ -301,7 +301,7 @@ function combinesWithPrecedingClassRange(expression: Object, classRange: Object)
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithFollowingClassRange(expression: Object, classRange: Object): Boolean {
+function combinesWithFollowingClassRange(expression: object, classRange: object): boolean {
   if (classRange && classRange.type === 'ClassRange') {
     // Considering the elements were ordered alphabetically,
     // there is only one case to handle
@@ -324,7 +324,7 @@ function combinesWithFollowingClassRange(expression: Object, classRange: Object)
  * @param {Object} classRange - ClassRange node
  * @returns {boolean}
  */
-function fitsInClassRange(expression: Object, classRange: Object): Boolean {
+function fitsInClassRange(expression: object, classRange: object): boolean {
   if (expression.type === 'Char' && isNaN(expression.codePoint)) {
     return false;
   }
@@ -346,15 +346,15 @@ function fitsInClassRange(expression: Object, classRange: Object): Boolean {
  * @param {Object[]} expressions - expressions in CharClass
  * @returns {number} - Number of characters combined with expression
  */
-function charCombinesWithPrecedingChars(expression: Number, index: Number, expressions: Object): Number {
+function charCombinesWithPrecedingChars(expression: number, index: number, expressions: object): number {
   // We only want \w chars or char codes to keep readability
   if (!isMetaWCharOrCode(expression)) {
     return 0;
   }
-  let nbMergedChars: Number = 0;
+  let nbMergedChars: number = 0;
   while (index > 0) {
-    let currentExpression: Object = expressions[index];
-    let precedingExpresion: Object = expressions[index - 1];
+    let currentExpression: object = expressions[index];
+    let precedingExpresion: object = expressions[index - 1];
     if (
       isMetaWCharOrCode(precedingExpresion) &&
       precedingExpresion.codePoint === currentExpression.codePoint - 1
@@ -377,7 +377,7 @@ function charCombinesWithPrecedingChars(expression: Number, index: Number, expre
   return 0;
 }
 
-function isMetaWCharOrCode(expression: Object): Boolean {
+function isMetaWCharOrCode(expression: object): boolean {
   return (
     expression &&
     expression.type === 'Char' &&

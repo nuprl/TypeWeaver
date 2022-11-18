@@ -2,9 +2,9 @@ import { fork, string, url, tokenTypes as TYPE } from 'css-tree';
 import compress from './compress.js';
 import specificity from './restructure/prepare/specificity.js';
 
-function encodeString(value: String): String {
-    const stringApostrophe: String = string.encode(value, true);
-    const stringQuote: String = string.encode(value);
+function encodeString(value: string): string {
+    const stringApostrophe: string = string.encode(value, true);
+    const stringQuote: string = string.encode(value);
 
     return stringApostrophe.length < stringQuote.length
         ? stringApostrophe

@@ -19,6 +19,6 @@ import createRound from './.internal/createRound.js'
  * round(4060, -2)
  * // => 4100
  */
-const round: Object = createRound('round')
+const round: object = createRound('round')
 
 export default round

@@ -1,4 +1,4 @@
-module.exports = function(grunt: Object) {
+module.exports = function(grunt: object) {
 
 	grunt.initConfig({
 		'template': {

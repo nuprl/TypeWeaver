@@ -19,7 +19,7 @@ import ResolverFactory from './ResolverFactory';
 
 const nodeFileSystem: Function = new CachedInputFileSystem(fs, 4000);
 
-const nodeContext: Object = {
+const nodeContext: object = {
 	environments: ["node+es3+es5+process+native"]
 };
 
@@ -28,7 +28,7 @@ const asyncResolver: Resolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	fileSystem: nodeFileSystem
 });
-function resolve(context: String, path: String, request: Function, resolveContext: String, callback: String): Void {
+function resolve(context: string, path: string, request: Function, resolveContext: string, callback: string): Void {
 	if (typeof context === "string") {
 		callback = resolveContext;
 		resolveContext = request;
@@ -48,7 +48,7 @@ const syncResolver: Resolver = ResolverFactory.createResolver({
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
 });
-function resolveSync(context: String, path: String, request: Object): Promise {
+function resolveSync(context: string, path: string, request: object): Promise {
 	if (typeof context === "string") {
 		request = path;
 		path = context;
@@ -57,13 +57,13 @@ function resolveSync(context: String, path: String, request: Object): Promise {
 	return syncResolver.resolveSync(context, path, request);
 }
 
-function create(options: Object): Function {
+function create(options: object): Function {
 	options = {
 		fileSystem: nodeFileSystem,
 		...options
 	};
 	const resolver: Resolver = ResolverFactory.createResolver(options);
-	return function (context: Number, path: String, request: Object, resolveContext: String, callback: Function) {
+	return function (context: number, path: string, request: object, resolveContext: string, callback: Function) {
 		if (typeof context === "string") {
 			callback = resolveContext;
 			resolveContext = request;
@@ -78,14 +78,14 @@ function create(options: Object): Function {
 	};
 }
 
-function createSync(options: Object): Function {
+function createSync(options: object): Function {
 	options = {
 		useSyncFileSystemCalls: true,
 		fileSystem: nodeFileSystem,
 		...options
 	};
 	const resolver: Resolver = ResolverFactory.createResolver(options);
-	return function (context: Number, path: String, request: CachedInputFileSystem) {
+	return function (context: number, path: string, request: CachedInputFileSystem) {
 		if (typeof context === "string") {
 			request = path;
 			path = context;
@@ -102,8 +102,8 @@ function createSync(options: Object): Function {
  * @param {B} exports input b
  * @returns {A & B} merged
  */
-const mergeExports: Function = (obj: Array, exports: String) => {
-	const descriptors: Array = Object.getOwnPropertyDescriptors(exports);
+const mergeExports: Function = (obj: any[], exports: string) => {
+	const descriptors: any[] = Object.getOwnPropertyDescriptors(exports);
 	Object.defineProperties(obj, descriptors);
 	return /** @type {A & B} */ (Object.freeze(obj));
 };

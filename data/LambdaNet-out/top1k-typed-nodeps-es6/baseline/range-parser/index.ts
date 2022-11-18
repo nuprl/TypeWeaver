@@ -24,29 +24,29 @@ export default rangeParser;
  * @public
  */
 
-function rangeParser (size: Number, str: String, options: Object): Number {
+function rangeParser (size: number, str: string, options: object): number {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string')
   }
 
-  var index: Number = str.indexOf('=')
+  var index: number = str.indexOf('=')
 
   if (index === -1) {
     return -2
   }
 
   // split the range string
-  var arr: Array = str.slice(index + 1).split(',')
-  var ranges: Array = []
+  var arr: any[] = str.slice(index + 1).split(',')
+  var ranges: any[] = []
 
   // add ranges type
   ranges.type = str.slice(0, index)
 
   // parse all ranges
   for (var i = 0; i < arr.length; i++) {
-    var range: Object = arr[i].split('-')
-    var start: Number = parseInt(range[0], 10)
-    var end: Number = parseInt(range[1], 10)
+    var range: object = arr[i].split('-')
+    var start: number = parseInt(range[0], 10)
+    var end: number = parseInt(range[1], 10)
 
     // -nnn
     if (isNaN(start)) {
@@ -89,12 +89,12 @@ function rangeParser (size: Number, str: String, options: Object): Number {
  * @private
  */
 
-function combineRanges (ranges: Array): Array {
-  var ordered: Array = ranges.map(mapWithIndex).sort(sortByRangeStart)
+function combineRanges (ranges: any[]): any[] {
+  var ordered: any[] = ranges.map(mapWithIndex).sort(sortByRangeStart)
 
   for (var j = 0, i = 1; i < ordered.length; i++) {
-    var range: Object = ordered[i]
-    var current: Object = ordered[j]
+    var range: object = ordered[i]
+    var current: object = ordered[j]
 
     if (range.start > current.end + 1) {
       // next range
@@ -110,7 +110,7 @@ function combineRanges (ranges: Array): Array {
   ordered.length = j + 1
 
   // generate combined range
-  var combined: Array = ordered.sort(sortByRangeIndex).map(mapWithoutIndex)
+  var combined: any[] = ordered.sort(sortByRangeIndex).map(mapWithoutIndex)
 
   // copy ranges type
   combined.type = ranges.type
@@ -123,7 +123,7 @@ function combineRanges (ranges: Array): Array {
  * @private
  */
 
-function mapWithIndex (range: Object, index: Number): Object {
+function mapWithIndex (range: object, index: number): object {
   return {
     start: range.start,
     end: range.end,
@@ -136,7 +136,7 @@ function mapWithIndex (range: Object, index: Number): Object {
  * @private
  */
 
-function mapWithoutIndex (range: Object): Object {
+function mapWithoutIndex (range: object): object {
   return {
     start: range.start,
     end: range.end
@@ -148,7 +148,7 @@ function mapWithoutIndex (range: Object): Object {
  * @private
  */
 
-function sortByRangeIndex (a: Object, b: Object): Number {
+function sortByRangeIndex (a: object, b: object): number {
   return a.index - b.index
 }
 
@@ -157,6 +157,6 @@ function sortByRangeIndex (a: Object, b: Object): Number {
  * @private
  */
 
-function sortByRangeStart (a: Object, b: Object): Number {
+function sortByRangeStart (a: object, b: object): number {
   return a.start - b.start
 }

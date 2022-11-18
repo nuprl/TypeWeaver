@@ -26,7 +26,7 @@ import baseIsEqual from './.internal/baseIsEqual.js'
  * object === other
  * // => false
  */
-function isEqual(value: String, other: Number): Array {
+function isEqual(value: string, other: number): any[] {
   return baseIsEqual(value, other)
 }
 

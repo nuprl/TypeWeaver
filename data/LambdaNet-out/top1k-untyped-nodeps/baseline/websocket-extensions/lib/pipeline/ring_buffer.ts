@@ -14,9 +14,9 @@ RingBuffer.prototype.clear = function() {
   this.length      = 0;
 };
 
-RingBuffer.prototype.push = function(value: String) {
-  var expandBuffer: Boolean = false,
-      expandRing: Boolean   = false;
+RingBuffer.prototype.push = function(value: string) {
+  var expandBuffer: boolean = false,
+      expandRing: boolean   = false;
 
   if (this._ringSize < this._bufferSize) {
     expandBuffer = (this._tail === 0);
@@ -48,7 +48,7 @@ RingBuffer.prototype.peek = function() {
 RingBuffer.prototype.shift = function() {
   if (this.length === 0) return void 0;
 
-  var value: String = this._buffer[this._head];
+  var value: string = this._buffer[this._head];
   this._buffer[this._head] = void 0;
   this.length -= 1;
   this._ringOffset -= 1;

@@ -5,8 +5,8 @@
  * @param {Function} func The function to inspect.
  * @returns {*} Returns the placeholder value.
  */
-function getHolder(func: Object): String {
-  const object: Object = func
+function getHolder(func: object): string {
+  const object: object = func
   return object.placeholder
 }
 

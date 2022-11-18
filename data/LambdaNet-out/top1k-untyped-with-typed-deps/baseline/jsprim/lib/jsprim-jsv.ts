@@ -2,14 +2,14 @@
  * lib/jsprim-jsv.js: extras for testing performance vs JSV
  */
 
-var mod_assert: String = require('assert');
-var mod_jsv: Number;		/* lazy-loaded because it may not be here */
+var mod_assert: string = require('assert');
+var mod_jsv: number;		/* lazy-loaded because it may not be here */
 
 module.exports = {
 	validateJsonObjectJSV: validateJsonObjectJSV
 };
 
-function validateJsonObjectJSV(schema: String, input: Element): HTMLElement
+function validateJsonObjectJSV(schema: string, input: Element): HTMLElement
 {
 	if (!mod_jsv)
 		mod_jsv = require('JSV');
@@ -22,11 +22,11 @@ function validateJsonObjectJSV(schema: String, input: Element): HTMLElement
 
 	/* Currently, we only do anything useful with the first error. */
 	mod_assert.ok(report.errors.length > 0);
-	var error: Object = report.errors[0];
+	var error: object = report.errors[0];
 
 	/* The failed property is given by a URI with an irrelevant prefix. */
-	var propname: String = error['uri'].substr(error['uri'].indexOf('#') + 2);
-	var reason: Number;
+	var propname: string = error['uri'].substr(error['uri'].indexOf('#') + 2);
+	var reason: number;
 
 	/*
 	 * Some of the default error messages are pretty arcane, so we define
@@ -41,7 +41,7 @@ function validateJsonObjectJSV(schema: String, input: Element): HTMLElement
 		break;
 	}
 
-	var message: String = reason + ': "' + propname + '"';
+	var message: string = reason + ': "' + propname + '"';
 	var rv: HTMLCanvasElement = new Error(message);
 	rv.jsv_details = error;
 	return (rv);

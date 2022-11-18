@@ -1,12 +1,12 @@
-var Stream: Array = require("stream")
-var writeMethods: Array = ["write", "end", "destroy"]
-var readMethods: Array = ["resume", "pause"]
-var readEvents: Array = ["data", "close"]
+var Stream: any[] = require("stream")
+var writeMethods: any[] = ["write", "end", "destroy"]
+var readMethods: any[] = ["resume", "pause"]
+var readEvents: any[] = ["data", "close"]
 var slice: Function = Array.prototype.slice
 
 module.exports = duplex
 
-function forEach (arr: Array, fn: Function): Void {
+function forEach (arr: any[], fn: Function): Void {
     if (arr.forEach) {
         return arr.forEach(fn)
     }
@@ -16,9 +16,9 @@ function forEach (arr: Array, fn: Function): Void {
     }
 }
 
-function duplex(writer: Object, reader: Array): Object {
+function duplex(writer: object, reader: any[]): object {
     var stream: HTMLElement = new Stream()
-    var ended: Boolean = false
+    var ended: boolean = false
 
     forEach(writeMethods, proxyWriter)
 
@@ -40,7 +40,7 @@ function duplex(writer: Object, reader: Array): Object {
 
     return stream
 
-    function proxyWriter(methodName: String): Void {
+    function proxyWriter(methodName: string): Void {
         stream[methodName] = method
 
         function method(): Promise {
@@ -48,12 +48,12 @@ function duplex(writer: Object, reader: Array): Object {
         }
     }
 
-    function proxyReader(methodName: String): Void {
+    function proxyReader(methodName: string): Void {
         stream[methodName] = method
 
         function method(): Promise {
             stream.emit(methodName)
-            var func: Array = reader[methodName]
+            var func: any[] = reader[methodName]
             if (func) {
                 return func.apply(reader, arguments)
             }
@@ -61,11 +61,11 @@ function duplex(writer: Object, reader: Array): Object {
         }
     }
 
-    function proxyStream(methodName: String): Void {
+    function proxyStream(methodName: string): Void {
         reader.on(methodName, reemit)
 
         function reemit(): Void {
-            var args: Array = slice.call(arguments)
+            var args: any[] = slice.call(arguments)
             args.unshift(methodName)
             stream.emit.apply(stream, args)
         }
@@ -76,12 +76,12 @@ function duplex(writer: Object, reader: Array): Object {
             return
         }
         ended = true
-        var args: Array = slice.call(arguments)
+        var args: any[] = slice.call(arguments)
         args.unshift("end")
         stream.emit.apply(stream, args)
     }
 
-    function reemit(err: String): Void {
+    function reemit(err: string): Void {
         stream.emit("error", err)
     }
 }

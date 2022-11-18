@@ -6,18 +6,18 @@ import path from 'path';
 import mkdir from '../mkdirs';
 import { pathExists } from '../path-exists';
 
-function outputFile (file: String, data: String, encoding: String, callback: Function): Void {
+function outputFile (file: string, data: string, encoding: string, callback: Function): Void {
   if (typeof encoding === 'function') {
     callback = encoding
     encoding = 'utf8'
   }
 
-  const dir: String = path.dirname(file)
-  pathExists(dir, (err: String, itDoes: Boolean) => {
+  const dir: string = path.dirname(file)
+  pathExists(dir, (err: string, itDoes: boolean) => {
     if (err) return callback(err)
     if (itDoes) return fs.writeFile(file, data, encoding, callback)
 
-    mkdir.mkdirs(dir, (err: String) => {
+    mkdir.mkdirs(dir, (err: string) => {
       if (err) return callback(err)
 
       fs.writeFile(file, data, encoding, callback)
@@ -25,8 +25,8 @@ function outputFile (file: String, data: String, encoding: String, callback: Fun
   })
 }
 
-function outputFileSync (file: String, ...args): Number {
-  const dir: String = path.dirname(file)
+function outputFileSync (file: string, ...args): number {
+  const dir: string = path.dirname(file)
   if (fs.existsSync(dir)) {
     return fs.writeFileSync(file, ...args)
   }

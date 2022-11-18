@@ -1,4 +1,4 @@
-let _fs: Number
+let _fs: number
 try {
   _fs = require('graceful-fs')
 } catch (_) {
@@ -7,20 +7,20 @@ try {
 import universalify from 'universalify';
 import { stringify, stripBom } from './utils';
 
-async function _readFile (file: Array, options: Object = {}): Map {
+async function _readFile (file: any[], options: object = {}): Map {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
 
-  const fs: Boolean = options.fs || _fs
+  const fs: boolean = options.fs || _fs
 
-  const shouldThrow: Boolean = 'throws' in options ? options.throws : true
+  const shouldThrow: boolean = 'throws' in options ? options.throws : true
 
-  let data: Object = await universalify.fromCallback(fs.readFile)(file, options)
+  let data: object = await universalify.fromCallback(fs.readFile)(file, options)
 
   data = stripBom(data)
 
-  let obj: Object
+  let obj: object
   try {
     obj = JSON.parse(data, options ? options.reviver : null)
   } catch (err) {
@@ -35,19 +35,19 @@ async function _readFile (file: Array, options: Object = {}): Map {
   return obj
 }
 
-const readFile: String = universalify.fromPromise(_readFile)
+const readFile: string = universalify.fromPromise(_readFile)
 
-function readFileSync (file: String, options: Object = {}): Array {
+function readFileSync (file: string, options: object = {}): any[] {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
 
-  const fs: Boolean = options.fs || _fs
+  const fs: boolean = options.fs || _fs
 
-  const shouldThrow: Boolean = 'throws' in options ? options.throws : true
+  const shouldThrow: boolean = 'throws' in options ? options.throws : true
 
   try {
-    let content: String = fs.readFileSync(file, options)
+    let content: string = fs.readFileSync(file, options)
     content = stripBom(content)
     return JSON.parse(content, options.reviver)
   } catch (err) {
@@ -60,25 +60,25 @@ function readFileSync (file: String, options: Object = {}): Array {
   }
 }
 
-async function _writeFile (file: Array, obj: Element, options: Map = {}): Map {
-  const fs: Boolean = options.fs || _fs
+async function _writeFile (file: any[], obj: Element, options: Map = {}): Map {
+  const fs: boolean = options.fs || _fs
 
-  const str: String = stringify(obj, options)
+  const str: string = stringify(obj, options)
 
   await universalify.fromCallback(fs.writeFile)(file, str, options)
 }
 
-const writeFile: String = universalify.fromPromise(_writeFile)
+const writeFile: string = universalify.fromPromise(_writeFile)
 
-function writeFileSync (file: String, obj: Array, options: Object = {}): Number {
-  const fs: Boolean = options.fs || _fs
+function writeFileSync (file: string, obj: any[], options: object = {}): number {
+  const fs: boolean = options.fs || _fs
 
-  const str: String = stringify(obj, options)
+  const str: string = stringify(obj, options)
   // not sure if fs.writeFileSync returns anything, but just in case
   return fs.writeFileSync(file, str, options)
 }
 
-const jsonfile: Object = {
+const jsonfile: object = {
   readFile,
   readFileSync,
   writeFile,

@@ -5,25 +5,25 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var assert: String = require('assert');
-var watchman: Array = require('fb-watchman');
+var assert: string = require('assert');
+var watchman: any[] = require('fb-watchman');
 var client: HTMLElement = new watchman.Client();
-const fs: String = require('fs');
-const os: String = require('os');
-const path: String = require('path');
+const fs: string = require('fs');
+const os: string = require('os');
+const path: string = require('path');
 
-var platform: Number = os.platform();
+var platform: number = os.platform();
 if (platform == 'darwin' || platform == 'win32') {
-  var tmp: String = fs.realpathSync(process.env.TMPDIR);
-  var foo: String = path.join(tmp, 'foo');
-  var FOO: String = path.join(tmp, 'FOO');
+  var tmp: string = fs.realpathSync(process.env.TMPDIR);
+  var foo: string = path.join(tmp, 'foo');
+  var FOO: string = path.join(tmp, 'FOO');
 
-  fs.mkdir(FOO, function(err_mk_dir_foo: String) {
+  fs.mkdir(FOO, function(err_mk_dir_foo: string) {
     assert.equal(err_mk_dir_foo, null, 'no errors');
-    var bar: String = path.join(foo, 'bar');
-    var BAR: String = path.join(FOO, 'bar');
+    var bar: string = path.join(foo, 'bar');
+    var BAR: string = path.join(FOO, 'bar');
 
-    fs.mkdir(BAR, function(err_mk_dir_bar: Boolean) {
+    fs.mkdir(BAR, function(err_mk_dir_bar: boolean) {
       assert.equal(err_mk_dir_bar, null, 'no errors');
 
       client.command(['watch', bar], function (error: Error, resp: Function) {

@@ -2,7 +2,7 @@ export default function americanFlag (): Void {
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);
   console.log('LIBERTY LIBERTY LIBERTY'.america);
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);
-  let flag: String = "\
+  let flag: string = "\
   \
                                  !\
              H|H|H|H|H           H__________________________________\

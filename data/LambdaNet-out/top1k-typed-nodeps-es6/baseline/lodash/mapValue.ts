@@ -20,11 +20,11 @@
  * mapValue(users, ({ age }) => age)
  * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
  */
-function mapValue(object: Object, iteratee: Function): Object {
+function mapValue(object: object, iteratee: Function): object {
   object = Object(object)
-  const result: Object = {}
+  const result: object = {}
 
-  Object.keys(object).forEach((key: String) => {
+  Object.keys(object).forEach((key: string) => {
     result[key] = iteratee(object[key], key, object)
   })
   return result

@@ -5,7 +5,7 @@ import background from './property/background.js';
 import border from './property/border.js';
 import outline from './property/border.js';
 
-const handlers: Object = {
+const handlers: object = {
     'font': font,
     'font-weight': fontWeight,
     'background': background,
@@ -13,12 +13,12 @@ const handlers: Object = {
     'outline': outline
 };
 
-export default function compressValue(node: Object): Void {
+export default function compressValue(node: object): Void {
     if (!this.declaration) {
         return;
     }
 
-    const property: Object = resolveName(this.declaration.property);
+    const property: object = resolveName(this.declaration.property);
 
     if (handlers.hasOwnProperty(property.basename)) {
         handlers[property.basename](node);

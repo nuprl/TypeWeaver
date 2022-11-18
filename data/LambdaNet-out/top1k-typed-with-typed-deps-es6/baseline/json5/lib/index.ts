@@ -1,7 +1,7 @@
 import parse from './parse';
 import stringify from './stringify';
 
-const JSON5: Object = {
+const JSON5: object = {
     parse,
     stringify,
 }

@@ -5,13 +5,13 @@
 
 "use strict";
 
-module.exports = function forEachBail(array: Array, iterator: Function, callback: Function): Void {
+module.exports = function forEachBail(array: any[], iterator: Function, callback: Function): Void {
 	if (array.length === 0) return callback();
 
-	let i: Number = 0;
+	let i: number = 0;
 	const next: Function = () => {
-		let loop: Boolean = undefined;
-		iterator(array[i++], (err: Resolver, result: Number) => {
+		let loop: boolean = undefined;
+		iterator(array[i++], (err: Resolver, result: number) => {
 			if (err || result !== undefined || i >= array.length) {
 				return callback(err, result);
 			}

@@ -34,8 +34,8 @@ pp.treatFunctionsAsVarInScope = function(scope: TokenType) {
   return (scope.flags & SCOPE_FUNCTION) || !this.inModule && (scope.flags & SCOPE_TOP)
 }
 
-pp.declareName = function(name: String, bindingType: Number, pos: Position) {
-  let redeclared: Boolean = false
+pp.declareName = function(name: string, bindingType: number, pos: Position) {
+  let redeclared: boolean = false
   if (bindingType === BIND_LEXICAL) {
     const scope: TokContext = this.currentScope()
     redeclared = scope.lexical.indexOf(name) > -1 || scope.functions.indexOf(name) > -1 || scope.var.indexOf(name) > -1
@@ -69,7 +69,7 @@ pp.declareName = function(name: String, bindingType: Number, pos: Position) {
   if (redeclared) this.raiseRecoverable(pos, `Identifier '${name}' has already been declared`)
 }
 
-pp.checkLocalExport = function(id: Object) {
+pp.checkLocalExport = function(id: object) {
   // scope.functions must be empty as Module code is always strict.
   if (this.scopeStack[0].lexical.indexOf(id.name) === -1 &&
       this.scopeStack[0].var.indexOf(id.name) === -1) {

@@ -20,7 +20,7 @@ const {EPSILON} = require('../special-symbols');
  *
  * [in] --c--> [out]
  */
-function char(c: String): NodePath {
+function char(c: string): NodePath {
   const inState: State = new NFAState();
   const outState: State = new NFAState({
     accepting: true,
@@ -39,7 +39,7 @@ function char(c: String): NodePath {
  *
  * [in] --ε--> [out]
  */
-function e(): String {
+function e(): string {
   return char(EPSILON);
 }
 
@@ -65,7 +65,7 @@ function altPair(first: Writer, second: Writer): DFA {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: DFA, ...fragments): String {
+function alt(first: DFA, ...fragments): string {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }

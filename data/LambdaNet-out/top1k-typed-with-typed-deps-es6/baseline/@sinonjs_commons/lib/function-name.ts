@@ -6,7 +6,7 @@
  * @param  {Function} func
  * @returns {string}
  */
-export default function functionName(func: Object): String {
+export default function functionName(func: object): string {
     if (!func) {
         return "";
     }

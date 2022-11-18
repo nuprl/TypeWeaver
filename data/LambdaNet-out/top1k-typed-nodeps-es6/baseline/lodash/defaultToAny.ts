@@ -25,7 +25,7 @@ import defaultTo from './defaultTo.js'
  * defaultToAny(undefined, null, NaN)
  * // => NaN
  */
-function defaultToAny(value: String, ...defaultValues): Promise {
+function defaultToAny(value: string, ...defaultValues): Promise {
   return arrayReduce(defaultValues, defaultTo, value)
 }
 

@@ -3,8 +3,8 @@
 var define: Function = require('define-properties');
 var getPolyfill: Function = require('./polyfill');
 
-module.exports = function shimAssign(): Boolean {
-	var polyfill: String = getPolyfill();
+module.exports = function shimAssign(): boolean {
+	var polyfill: string = getPolyfill();
 	define(
 		Object,
 		{ assign: polyfill },

@@ -1,9 +1,9 @@
-var inherits: Object              = require('util').inherits
-  , Readable: String              = require('stream').Readable
-  , ReadableAsyncKit: String      = require('./lib/readable_asynckit.js')
-  , ReadableParallel: Array      = require('./lib/readable_parallel.js')
-  , ReadableSerial: String        = require('./lib/readable_serial.js')
-  , ReadableSerialOrdered: String = require('./lib/readable_serial_ordered.js')
+var inherits: object              = require('util').inherits
+  , Readable: string              = require('stream').Readable
+  , ReadableAsyncKit: string      = require('./lib/readable_asynckit.js')
+  , ReadableParallel: any[]      = require('./lib/readable_parallel.js')
+  , ReadableSerial: string        = require('./lib/readable_serial.js')
+  , ReadableSerialOrdered: string = require('./lib/readable_serial_ordered.js')
   ;
 
 // API

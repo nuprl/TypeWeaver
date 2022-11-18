@@ -1,19 +1,19 @@
 import { dirname } from 'path';
 
-const findMade: Function = (opts: Object, parent: String, path: String = undefined) => {
+const findMade: Function = (opts: object, parent: string, path: string = undefined) => {
   // we never want the 'made' return value to be a root directory
   if (path === parent)
     return Promise.resolve()
 
   return opts.statAsync(parent).then(
-    (st: Array) => st.isDirectory() ? path : undefined, // will fail later
-    (er: Object) => er.code === 'ENOENT'
+    (st: any[]) => st.isDirectory() ? path : undefined, // will fail later
+    (er: object) => er.code === 'ENOENT'
       ? findMade(opts, dirname(parent), parent)
       : undefined
   )
 }
 
-const findMadeSync: Function = (opts: HTMLElement, parent: String, path: String = undefined) => {
+const findMadeSync: Function = (opts: HTMLElement, parent: string, path: string = undefined) => {
   if (path === parent)
     return undefined
 

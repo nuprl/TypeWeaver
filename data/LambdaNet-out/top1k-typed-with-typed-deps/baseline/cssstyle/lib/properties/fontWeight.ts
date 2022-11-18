@@ -1,6 +1,6 @@
 'use strict';
 
-var valid_weights: Array = [
+var valid_weights: any[] = [
   'normal',
   'bold',
   'bolder',
@@ -17,12 +17,12 @@ var valid_weights: Array = [
   'inherit',
 ];
 
-module.exports.isValid = function isValid(v: String): Boolean {
+module.exports.isValid = function isValid(v: string): boolean {
   return valid_weights.indexOf(v.toLowerCase()) !== -1;
 };
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     this._setProperty('font-weight', v);
   },
   get: function() {

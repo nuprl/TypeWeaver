@@ -1,6 +1,6 @@
 import { copyFileSync } from 'fs';
 import { join } from 'path';
 
-const src: String = join(__dirname, "src", "index.js");
-const target: String = join(__dirname, "lib", "index.mjs");
+const src: string = join(__dirname, "src", "index.js");
+const target: string = join(__dirname, "lib", "index.mjs");
 copyFileSync(src, target);

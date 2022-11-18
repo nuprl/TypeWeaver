@@ -1,63 +1,52 @@
-.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-      Type 'String' is not assignable to type 'string | number'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-examples/example.ts(4,20): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-examples/example.ts(4,38): error TS2339: Property 'join' does not exist on type 'String'.
-examples/example.ts(6,24): error TS2339: Property 'parser' does not exist on type 'String'.
-examples/example.ts(7,23): error TS2339: Property 'parser' does not exist on type 'String'.
-examples/example.ts(12,5): error TS2339: Property 'EVENTS' does not exist on type 'String'.
-examples/example.ts(15,7): error TS2339: Property 'onend' does not exist on type 'Object'.
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+examples/example.ts(4,20): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+examples/example.ts(4,38): error TS2339: Property 'join' does not exist on type 'string'.
+examples/example.ts(6,24): error TS2339: Property 'parser' does not exist on type 'string'.
+examples/example.ts(7,23): error TS2339: Property 'parser' does not exist on type 'string'.
+examples/example.ts(12,5): error TS2339: Property 'EVENTS' does not exist on type 'string'.
+examples/example.ts(15,7): error TS2339: Property 'onend' does not exist on type 'object'.
 examples/example.ts(15,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 examples/example.ts(21,2): error TS2554: Expected 0 arguments, but got 1.
-examples/example.ts(24,11): error TS2339: Property 'write' does not exist on type 'Object'.
-examples/example.ts(24,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-examples/example.ts(25,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-examples/example.ts(27,16): error TS2339: Property 'close' does not exist on type 'Object'.
-examples/get-products.ts(7,28): error TS2339: Property 'resolve' does not exist on type 'String'.
-examples/get-products.ts(11,4): error TS2339: Property 'readFile' does not exist on type 'String'.
-examples/get-products.ts(12,8): error TS2339: Property 'createServer' does not exist on type 'String'.
-examples/get-products.ts(12,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/example.ts(24,11): error TS2339: Property 'write' does not exist on type 'object'.
+examples/example.ts(27,16): error TS2339: Property 'close' does not exist on type 'object'.
+examples/get-products.ts(7,28): error TS2339: Property 'resolve' does not exist on type 'string'.
+examples/get-products.ts(11,4): error TS2339: Property 'readFile' does not exist on type 'string'.
+examples/get-products.ts(12,8): error TS2339: Property 'createServer' does not exist on type 'string'.
 examples/get-products.ts(14,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-examples/get-products.ts(16,35): error TS2339: Property 'parser' does not exist on type 'String'.
-examples/get-products.ts(17,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/get-products.ts(16,35): error TS2339: Property 'parser' does not exist on type 'string'.
 examples/get-products.ts(21,12): error TS2339: Property 'onclosetag' does not exist on type 'HTMLElement'.
-examples/get-products.ts(27,36): error TS2339: Property 'parent' does not exist on type 'Object'.
-examples/get-products.ts(28,41): error TS2339: Property 'parent' does not exist on type 'Object'.
-examples/get-products.ts(29,27): error TS2339: Property 'parent' does not exist on type 'Object'.
+examples/get-products.ts(27,36): error TS2339: Property 'parent' does not exist on type 'object'.
+examples/get-products.ts(28,41): error TS2339: Property 'parent' does not exist on type 'object'.
+examples/get-products.ts(29,27): error TS2339: Property 'parent' does not exist on type 'object'.
 examples/get-products.ts(34,12): error TS2339: Property 'onopentag' does not exist on type 'HTMLElement'.
-examples/get-products.ts(35,15): error TS2339: Property 'name' does not exist on type 'Object'.
-examples/get-products.ts(36,15): error TS2339: Property 'name' does not exist on type 'Object'.
-examples/get-products.ts(37,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-examples/get-products.ts(39,11): error TS2339: Property 'parent' does not exist on type 'Object'.
-examples/get-products.ts(40,11): error TS2339: Property 'children' does not exist on type 'Object'.
-examples/get-products.ts(41,11): error TS2339: Property 'parent' does not exist on type 'Object'.
-examples/get-products.ts(41,25): error TS2339: Property 'parent' does not exist on type 'Object'.
+examples/get-products.ts(35,15): error TS2339: Property 'name' does not exist on type 'object'.
+examples/get-products.ts(36,15): error TS2339: Property 'name' does not exist on type 'object'.
+examples/get-products.ts(37,9): error TS2322: Type 'object' is not assignable to type 'string'.
+examples/get-products.ts(39,11): error TS2339: Property 'parent' does not exist on type 'object'.
+examples/get-products.ts(40,11): error TS2339: Property 'children' does not exist on type 'object'.
+examples/get-products.ts(41,11): error TS2339: Property 'parent' does not exist on type 'object'.
+examples/get-products.ts(41,25): error TS2339: Property 'parent' does not exist on type 'object'.
 examples/get-products.ts(45,12): error TS2339: Property 'ontext' does not exist on type 'HTMLElement'.
-examples/get-products.ts(46,34): error TS2339: Property 'children' does not exist on type 'Object'.
+examples/get-products.ts(46,34): error TS2339: Property 'children' does not exist on type 'object'.
 examples/get-products.ts(49,12): error TS2339: Property 'onend' does not exist on type 'HTMLElement'.
-examples/get-products.ts(50,30): error TS2339: Property 'inspect' does not exist on type 'String'.
+examples/get-products.ts(50,30): error TS2339: Property 'inspect' does not exist on type 'string'.
+examples/get-products.ts(51,11): error TS2339: Property 'writeHead' does not exist on type 'any[]'.
+examples/get-products.ts(52,11): error TS2339: Property 'end' does not exist on type 'any[]'.
 examples/get-products.ts(56,12): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
-examples/hello-world.ts(1,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/pretty-print.ts(2,30): error TS2339: Property 'createStream' does not exist on type 'String'.
+examples/hello-world.ts(2,7): error TS2339: Property 'writeHead' does not exist on type 'any[]'.
+examples/hello-world.ts(3,7): error TS2339: Property 'end' does not exist on type 'any[]'.
+examples/pretty-print.ts(2,30): error TS2339: Property 'createStream' does not exist on type 'string'.
 examples/pretty-print.ts(9,9): error TS2339: Property 'tabstop' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(10,9): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(11,9): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(19,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(22,19): error TS2339: Property 'name' does not exist on type 'Object'.
-examples/pretty-print.ts(23,21): error TS2339: Property 'attributes' does not exist on type 'Object'.
-examples/pretty-print.ts(24,39): error TS2339: Property 'attributes' does not exist on type 'Object'.
+examples/pretty-print.ts(22,19): error TS2339: Property 'name' does not exist on type 'object'.
+examples/pretty-print.ts(23,21): error TS2339: Property 'attributes' does not exist on type 'object'.
+examples/pretty-print.ts(24,39): error TS2339: Property 'attributes' does not exist on type 'object'.
 examples/pretty-print.ts(29,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(30,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(31,33): error TS2304: Cannot find name 'Void'.
@@ -65,24 +54,19 @@ examples/pretty-print.ts(36,9): error TS2339: Property 'on' does not exist on ty
 examples/pretty-print.ts(42,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(47,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(52,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(62,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/pretty-print.ts(62,22): error TS2339: Property 'createReadStream' does not exist on type 'String'.
+examples/pretty-print.ts(62,22): error TS2339: Property 'createReadStream' does not exist on type 'string'.
 examples/pretty-print.ts(64,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 examples/pretty-print.ts(64,29): error TS2304: Cannot find name 'Void'.
-examples/pretty-print.ts(65,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(buffer: string | Uint8Array, cb?: (err?: Error) => void): boolean', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | Uint8Array'.
-      Type 'String' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
-  Overload 2 of 2, '(str: string | Uint8Array, encoding?: BufferEncoding, cb?: (err?: Error) => void): boolean', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | Uint8Array'.
+examples/pretty-print.ts(66,10): error TS2339: Property 'pause' does not exist on type 'any[]'.
+examples/pretty-print.ts(71,8): error TS2339: Property 'resume' does not exist on type 'any[]'.
+examples/pretty-print.ts(74,6): error TS2339: Property 'pipe' does not exist on type 'any[]'.
 lib/sax.ts(2,7): error TS2339: Property 'parser' does not exist on type 'HTMLElement'.
-lib/sax.ts(2,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(2,63): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/sax.ts(2,77): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 lib/sax.ts(3,7): error TS2339: Property 'SAXParser' does not exist on type 'HTMLElement'.
 lib/sax.ts(4,7): error TS2339: Property 'SAXStream' does not exist on type 'HTMLElement'.
 lib/sax.ts(5,7): error TS2339: Property 'createStream' does not exist on type 'HTMLElement'.
 lib/sax.ts(16,7): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
-lib/sax.ts(18,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(24,7): error TS2339: Property 'EVENTS' does not exist on type 'HTMLElement'.
 lib/sax.ts(47,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(52,12): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
@@ -105,7 +89,7 @@ lib/sax.ts(60,12): error TS2339: Property 'strict' does not exist on type 'HTMLE
 lib/sax.ts(61,12): error TS2339: Property 'noscript' does not exist on type 'HTMLElement'.
 lib/sax.ts(61,43): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(62,12): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(62,22): error TS2339: Property 'BEGIN' does not exist on type 'String'.
+lib/sax.ts(62,22): error TS2339: Property 'BEGIN' does not exist on type 'string'.
 lib/sax.ts(63,12): error TS2339: Property 'strictEntities' does not exist on type 'HTMLElement'.
 lib/sax.ts(63,36): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(64,12): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
@@ -122,26 +106,20 @@ lib/sax.ts(77,14): error TS2339: Property 'position' does not exist on type 'HTM
 lib/sax.ts(77,32): error TS2339: Property 'line' does not exist on type 'HTMLElement'.
 lib/sax.ts(77,46): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(79,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(83,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(84,22): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(86,26): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(92,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(93,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(99,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(100,43): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
-lib/sax.ts(111,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/sax.ts(115,48): error TS2339: Property 'cdata' does not exist on type 'Object'.
-lib/sax.ts(116,20): error TS2339: Property 'cdata' does not exist on type 'Object'.
-lib/sax.ts(120,49): error TS2339: Property 'script' does not exist on type 'Object'.
-lib/sax.ts(121,20): error TS2339: Property 'script' does not exist on type 'Object'.
-lib/sax.ts(128,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/sax.ts(111,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+  Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/sax.ts(115,48): error TS2339: Property 'cdata' does not exist on type 'object'.
+lib/sax.ts(116,20): error TS2339: Property 'cdata' does not exist on type 'object'.
+lib/sax.ts(120,49): error TS2339: Property 'script' does not exist on type 'object'.
+lib/sax.ts(121,20): error TS2339: Property 'script' does not exist on type 'object'.
+lib/sax.ts(125,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sax.ts(131,25): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
-lib/sax.ts(131,45): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(132,12): error TS2339: Property 'bufferCheckPosition' does not exist on type 'Object'.
-lib/sax.ts(132,45): error TS2339: Property 'position' does not exist on type 'Object'.
+lib/sax.ts(132,12): error TS2339: Property 'bufferCheckPosition' does not exist on type 'object'.
+lib/sax.ts(132,45): error TS2339: Property 'position' does not exist on type 'object'.
 lib/sax.ts(135,43): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(141,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(143,16): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
@@ -150,14 +128,12 @@ lib/sax.ts(145,14): error TS2339: Property 'cdata' does not exist on type 'HTMLE
 lib/sax.ts(147,16): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(148,43): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(149,14): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
-lib/sax.ts(168,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(168,32): error TS2339: Property 'EVENTS' does not exist on type 'HTMLElement'.
 lib/sax.ts(173,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(178,14): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(181,12): error TS2339: Property 'apply' does not exist on type 'Object'.
+lib/sax.ts(181,12): error TS2339: Property 'apply' does not exist on type 'object'.
 lib/sax.ts(183,20): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(183,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/sax.ts(183,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(190,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 lib/sax.ts(194,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 lib/sax.ts(198,10): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
@@ -165,26 +141,24 @@ lib/sax.ts(206,21): error TS2339: Property '_parser' does not exist on type 'HTM
 lib/sax.ts(210,16): error TS2339: Property 'removeAllListeners' does not exist on type 'HTMLElement'.
 lib/sax.ts(211,16): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(214,14): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-lib/sax.ts(222,46): error TS2339: Property 'prototype' does not exist on type 'Object'.
+lib/sax.ts(222,46): error TS2339: Property 'prototype' does not exist on type 'object'.
 lib/sax.ts(234,29): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-lib/sax.ts(244,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+  Type '{}' has no construct signatures.
 lib/sax.ts(254,13): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(255,10): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
-lib/sax.ts(256,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(258,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-lib/sax.ts(262,19): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/sax.ts(287,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(287,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(287,39): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(287,53): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(291,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(291,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(295,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(262,19): error TS2339: Property 'prototype' does not exist on type 'object'.
+lib/sax.ts(287,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,39): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,53): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(295,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(299,18): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lib/sax.ts(303,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'HTMLElement'.
   Type 'Function' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/sax.ts(306,7): error TS2322: Type 'number' is not assignable to type 'String'.
+lib/sax.ts(306,7): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/sax.ts(307,7): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
 lib/sax.ts(308,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(309,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -232,12 +206,9 @@ lib/sax.ts(617,9): error TS2339: Property 'STATE' does not exist on type 'HTMLEl
 lib/sax.ts(617,19): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
 lib/sax.ts(621,11): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
 lib/sax.ts(623,64): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(624,12): error TS2538: Type 'String' cannot be used as an index type.
-lib/sax.ts(624,29): error TS2538: Type 'String' cannot be used as an index type.
 lib/sax.ts(627,71): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(628,16): error TS2339: Property 'textNode' does not exist on type 'Object'.
-lib/sax.ts(628,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/sax.ts(628,16): error TS2339: Property 'textNode' does not exist on type 'object'.
+lib/sax.ts(628,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(632,45): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(633,12): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(633,39): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
@@ -245,33 +216,36 @@ lib/sax.ts(633,51): error TS2551: Property 'textNode' does not exist on type 'HT
 lib/sax.ts(634,16): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(634,56): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(635,12): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
-lib/sax.ts(638,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(644,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(645,15): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/sax.ts(646,16): error TS2339: Property 'trackPosition' does not exist on type 'Object'.
-lib/sax.ts(647,33): error TS2339: Property 'line' does not exist on type 'Object'.
-lib/sax.ts(648,31): error TS2339: Property 'column' does not exist on type 'Object'.
-lib/sax.ts(649,29): error TS2339: Property 'c' does not exist on type 'Object'.
-lib/sax.ts(651,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-lib/sax.ts(652,12): error TS2339: Property 'error' does not exist on type 'Object'.
-lib/sax.ts(658,16): error TS2339: Property 'sawRoot' does not exist on type 'String'.
-lib/sax.ts(658,35): error TS2339: Property 'closedRoot' does not exist on type 'String'.
-lib/sax.ts(659,17): error TS2339: Property 'state' does not exist on type 'String'.
-lib/sax.ts(659,29): error TS2339: Property 'BEGIN' does not exist on type 'String'.
-lib/sax.ts(660,15): error TS2339: Property 'state' does not exist on type 'String'.
-lib/sax.ts(660,27): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'String'.
-lib/sax.ts(661,15): error TS2339: Property 'state' does not exist on type 'String'.
-lib/sax.ts(661,27): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(664,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
-lib/sax.ts(665,12): error TS2339: Property 'c' does not exist on type 'String'.
-lib/sax.ts(666,12): error TS2339: Property 'closed' does not exist on type 'String'.
+lib/sax.ts(639,13): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/sax.ts(640,13): error TS2339: Property 'normalize' does not exist on type 'any[]'.
+lib/sax.ts(645,15): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+lib/sax.ts(646,16): error TS2339: Property 'trackPosition' does not exist on type 'object'.
+lib/sax.ts(647,7): error TS2322: Type 'string' is not assignable to type 'object'.
+lib/sax.ts(647,33): error TS2339: Property 'line' does not exist on type 'object'.
+lib/sax.ts(648,31): error TS2339: Property 'column' does not exist on type 'object'.
+lib/sax.ts(649,29): error TS2339: Property 'c' does not exist on type 'object'.
+lib/sax.ts(651,20): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+lib/sax.ts(652,12): error TS2339: Property 'error' does not exist on type 'object'.
+lib/sax.ts(654,5): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+lib/sax.ts(658,16): error TS2339: Property 'sawRoot' does not exist on type 'string'.
+lib/sax.ts(658,35): error TS2339: Property 'closedRoot' does not exist on type 'string'.
+lib/sax.ts(658,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/sax.ts(659,17): error TS2339: Property 'state' does not exist on type 'string'.
+lib/sax.ts(659,29): error TS2339: Property 'BEGIN' does not exist on type 'string'.
+lib/sax.ts(660,15): error TS2339: Property 'state' does not exist on type 'string'.
+lib/sax.ts(660,27): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'string'.
+lib/sax.ts(661,15): error TS2339: Property 'state' does not exist on type 'string'.
+lib/sax.ts(661,27): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(662,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/sax.ts(664,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+lib/sax.ts(665,12): error TS2339: Property 'c' does not exist on type 'string'.
+lib/sax.ts(666,12): error TS2339: Property 'closed' does not exist on type 'string'.
 lib/sax.ts(667,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(668,35): error TS2339: Property 'strict' does not exist on type 'String'.
-lib/sax.ts(668,50): error TS2339: Property 'opt' does not exist on type 'String'.
+lib/sax.ts(668,35): error TS2339: Property 'strict' does not exist on type 'string'.
+lib/sax.ts(668,50): error TS2339: Property 'opt' does not exist on type 'string'.
 lib/sax.ts(672,58): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(676,16): error TS2339: Property 'strict' does not exist on type '{}'.
+lib/sax.ts(677,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sax.ts(681,42): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(682,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(682,32): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
@@ -282,7 +256,7 @@ lib/sax.ts(683,38): error TS2339: Property 'tags' does not exist on type 'HTMLEl
 lib/sax.ts(683,50): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(684,30): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(687,16): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
-lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type 'Object'.
+lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type 'object'.
 lib/sax.ts(688,23): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(690,12): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
 lib/sax.ts(709,42): error TS2304: Cannot find name 'Void'.
@@ -298,9 +272,9 @@ lib/sax.ts(716,14): error TS2339: Property 'attribName' does not exist on type '
 lib/sax.ts(716,34): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(720,16): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(721,37): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
-lib/sax.ts(721,49): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-lib/sax.ts(722,31): error TS2339: Property 'prefix' does not exist on type 'Object'.
-lib/sax.ts(723,30): error TS2339: Property 'local' does not exist on type 'Object'.
+lib/sax.ts(721,49): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+lib/sax.ts(722,31): error TS2339: Property 'prefix' does not exist on type 'object'.
+lib/sax.ts(723,30): error TS2339: Property 'local' does not exist on type 'object'.
 lib/sax.ts(727,39): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(730,33): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(731,48): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
@@ -329,15 +303,15 @@ lib/sax.ts(762,16): error TS2339: Property 'opt' does not exist on type 'HTMLEle
 lib/sax.ts(764,37): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(767,24): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(768,11): error TS2540: Cannot assign to 'prefix' because it is a read-only property.
-lib/sax.ts(768,23): error TS2339: Property 'prefix' does not exist on type 'Object'.
+lib/sax.ts(768,23): error TS2339: Property 'prefix' does not exist on type 'object'.
 lib/sax.ts(769,11): error TS2339: Property 'local' does not exist on type 'HTMLElement'.
-lib/sax.ts(769,22): error TS2339: Property 'local' does not exist on type 'Object'.
+lib/sax.ts(769,22): error TS2339: Property 'local' does not exist on type 'object'.
 lib/sax.ts(770,11): error TS2339: Property 'uri' does not exist on type 'HTMLElement'.
 lib/sax.ts(770,21): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
-lib/sax.ts(770,27): error TS2339: Property 'prefix' does not exist on type 'Object'.
+lib/sax.ts(770,27): error TS2339: Property 'prefix' does not exist on type 'object'.
 lib/sax.ts(772,30): error TS2339: Property 'uri' does not exist on type 'HTMLElement'.
 lib/sax.ts(775,13): error TS2339: Property 'uri' does not exist on type 'HTMLElement'.
-lib/sax.ts(775,22): error TS2339: Property 'prefix' does not exist on type 'Object'.
+lib/sax.ts(775,22): error TS2339: Property 'prefix' does not exist on type 'object'.
 lib/sax.ts(778,40): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(778,52): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(779,15): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
@@ -347,13 +321,12 @@ lib/sax.ts(780,25): error TS2339: Property 'ns' does not exist on type 'HTMLElem
 lib/sax.ts(783,22): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(791,34): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
 lib/sax.ts(792,33): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
-lib/sax.ts(795,13): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/sax.ts(795,46): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+lib/sax.ts(795,13): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/sax.ts(795,46): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 lib/sax.ts(796,39): error TS2339: Property 'prefix' does not exist on type 'Function'.
 lib/sax.ts(797,38): error TS2339: Property 'local' does not exist on type 'Function'.
 lib/sax.ts(798,53): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
-lib/sax.ts(812,13): error TS2339: Property 'uri' does not exist on type 'Object'.
+lib/sax.ts(812,13): error TS2339: Property 'uri' does not exist on type 'object'.
 lib/sax.ts(814,16): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(817,14): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
 lib/sax.ts(820,12): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
@@ -363,9 +336,9 @@ lib/sax.ts(824,29): error TS2339: Property 'tag' does not exist on type 'HTMLEle
 lib/sax.ts(825,42): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(828,19): error TS2339: Property 'noscript' does not exist on type 'HTMLElement'.
 lib/sax.ts(829,16): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(829,26): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
+lib/sax.ts(829,26): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
 lib/sax.ts(831,16): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(831,26): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(831,26): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(833,14): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(834,14): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(836,12): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
@@ -374,32 +347,31 @@ lib/sax.ts(837,12): error TS2339: Property 'attribList' does not exist on type '
 lib/sax.ts(840,44): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(843,14): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(844,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(844,24): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(844,24): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(848,16): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(850,16): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(851,16): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(852,16): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(852,26): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
+lib/sax.ts(852,26): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
 lib/sax.ts(855,43): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(856,14): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(861,28): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(862,9): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/sax.ts(863,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(864,32): error TS2339: Property 'looseCase' does not exist on type 'HTMLElement'.
-lib/sax.ts(866,9): error TS2739: Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/sax.ts(867,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/sax.ts(866,9): error TS2322: Type 'Function' is not assignable to type 'number'.
 lib/sax.ts(868,34): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
-lib/sax.ts(869,17): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/sax.ts(869,17): error TS2339: Property 'name' does not exist on type 'object'.
 lib/sax.ts(880,14): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(881,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(881,24): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(881,24): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(884,12): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(885,28): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
-lib/sax.ts(886,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(887,37): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(887,50): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(888,14): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(888,31): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
+lib/sax.ts(889,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sax.ts(892,25): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(893,20): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(896,40): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
@@ -415,37 +387,30 @@ lib/sax.ts(906,29): error TS2339: Property 'attribValue' does not exist on type 
 lib/sax.ts(906,50): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(907,12): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
 lib/sax.ts(908,12): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(908,22): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(908,22): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(912,33): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(917,16): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
 lib/sax.ts(918,21): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
 lib/sax.ts(920,16): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
 lib/sax.ts(921,21): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
-lib/sax.ts(927,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/sax.ts(931,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/sax.ts(936,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/sax.ts(938,27): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
-lib/sax.ts(941,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/sax.ts(944,62): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(946,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'String'.
+lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'string'.
 lib/sax.ts(947,14): error TS2339: Property 'startTagPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(947,40): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
-lib/sax.ts(948,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(948,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(952,14): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(953,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(953,24): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(959,9): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
-lib/sax.ts(960,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/sax.ts(953,24): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(959,9): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+lib/sax.ts(960,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(970,16): error TS2339: Property 'closed' does not exist on type 'HTMLElement'.
-lib/sax.ts(975,18): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/sax.ts(983,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(983,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+lib/sax.ts(971,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/sax.ts(972,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/sax.ts(975,18): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'string'.
+lib/sax.ts(978,21): error TS2339: Property 'toString' does not exist on type 'never'.
+lib/sax.ts(983,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/sax.ts(984,14): error TS2339: Property 'c' does not exist on type 'HTMLElement'.
 lib/sax.ts(990,18): error TS2339: Property 'trackPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(991,16): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
@@ -453,63 +418,58 @@ lib/sax.ts(993,18): error TS2339: Property 'line' does not exist on type 'HTMLEl
 lib/sax.ts(994,18): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(996,18): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(1000,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1001,16): error TS2339: Property 'BEGIN' does not exist on type 'String'.
+lib/sax.ts(1001,16): error TS2339: Property 'BEGIN' does not exist on type 'string'.
 lib/sax.ts(1002,18): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1002,28): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'String'.
-lib/sax.ts(1009,16): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'String'.
-lib/sax.ts(1013,16): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(1002,28): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'string'.
+lib/sax.ts(1009,16): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'string'.
+lib/sax.ts(1013,16): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(1014,22): error TS2339: Property 'sawRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1014,41): error TS2339: Property 'closedRoot' does not exist on type 'HTMLElement'.
-lib/sax.ts(1015,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1017,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1017,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+lib/sax.ts(1017,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/sax.ts(1018,31): error TS2339: Property 'trackPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(1019,24): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
 lib/sax.ts(1021,26): error TS2339: Property 'line' does not exist on type 'HTMLElement'.
 lib/sax.ts(1022,26): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(1024,26): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(1028,20): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
-lib/sax.ts(1028,48): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/sax.ts(1028,56): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(1030,37): error TS2339: Property 'sawRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1030,55): error TS2339: Property 'closedRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1030,77): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(1031,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1031,30): error TS2339: Property 'OPEN_WAKA' does not exist on type 'String'.
+lib/sax.ts(1031,30): error TS2339: Property 'OPEN_WAKA' does not exist on type 'string'.
 lib/sax.ts(1032,20): error TS2339: Property 'startTagPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(1032,46): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
-lib/sax.ts(1034,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1034,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1034,46): error TS2339: Property 'sawRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1034,64): error TS2339: Property 'closedRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1038,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1038,32): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'String'.
+lib/sax.ts(1038,32): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'string'.
 lib/sax.ts(1040,22): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
-lib/sax.ts(1045,16): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
+lib/sax.ts(1045,16): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
 lib/sax.ts(1048,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1048,30): error TS2339: Property 'SCRIPT_ENDING' does not exist on type 'String'.
+lib/sax.ts(1048,30): error TS2339: Property 'SCRIPT_ENDING' does not exist on type 'string'.
 lib/sax.ts(1050,20): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
-lib/sax.ts(1054,16): error TS2339: Property 'SCRIPT_ENDING' does not exist on type 'String'.
+lib/sax.ts(1054,16): error TS2339: Property 'SCRIPT_ENDING' does not exist on type 'string'.
 lib/sax.ts(1056,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1056,30): error TS2339: Property 'CLOSE_TAG' does not exist on type 'String'.
+lib/sax.ts(1056,30): error TS2339: Property 'CLOSE_TAG' does not exist on type 'string'.
 lib/sax.ts(1058,20): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(1059,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1059,30): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
-lib/sax.ts(1063,16): error TS2339: Property 'OPEN_WAKA' does not exist on type 'String'.
+lib/sax.ts(1059,30): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
+lib/sax.ts(1063,16): error TS2339: Property 'OPEN_WAKA' does not exist on type 'string'.
 lib/sax.ts(1066,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1066,30): error TS2339: Property 'SGML_DECL' does not exist on type 'String'.
+lib/sax.ts(1066,30): error TS2339: Property 'SGML_DECL' does not exist on type 'string'.
 lib/sax.ts(1067,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
-lib/sax.ts(1068,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1068,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1070,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
   Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/sax.ts(1071,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1071,30): error TS2339: Property 'OPEN_TAG' does not exist on type 'String'.
+lib/sax.ts(1071,30): error TS2339: Property 'OPEN_TAG' does not exist on type 'string'.
 lib/sax.ts(1072,20): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(1074,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1074,30): error TS2339: Property 'CLOSE_TAG' does not exist on type 'String'.
+lib/sax.ts(1074,30): error TS2339: Property 'CLOSE_TAG' does not exist on type 'string'.
 lib/sax.ts(1075,20): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(1077,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1077,30): error TS2339: Property 'PROC_INST' does not exist on type 'String'.
+lib/sax.ts(1077,30): error TS2339: Property 'PROC_INST' does not exist on type 'string'.
 lib/sax.ts(1078,20): error TS2339: Property 'procInstName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1078,42): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
 lib/sax.ts(1082,24): error TS2339: Property 'startTagPosition' does not exist on type 'HTMLElement'.
@@ -518,22 +478,22 @@ lib/sax.ts(1083,40): error TS2339: Property 'position' does not exist on type 'H
 lib/sax.ts(1083,58): error TS2339: Property 'startTagPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(1086,20): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(1087,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1087,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(1091,16): error TS2339: Property 'SGML_DECL' does not exist on type 'String'.
+lib/sax.ts(1087,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(1091,16): error TS2339: Property 'SGML_DECL' does not exist on type 'string'.
 lib/sax.ts(1092,23): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1093,13): error TS2554: Expected 3 arguments, but got 2.
 lib/sax.ts(1094,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1094,30): error TS2339: Property 'CDATA' does not exist on type 'String'.
+lib/sax.ts(1094,30): error TS2339: Property 'CDATA' does not exist on type 'string'.
 lib/sax.ts(1095,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1096,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1097,29): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1098,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1098,30): error TS2339: Property 'COMMENT' does not exist on type 'String'.
+lib/sax.ts(1098,30): error TS2339: Property 'COMMENT' does not exist on type 'string'.
 lib/sax.ts(1099,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
 lib/sax.ts(1100,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1101,30): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1102,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1102,30): error TS2339: Property 'DOCTYPE' does not exist on type 'String'.
+lib/sax.ts(1102,30): error TS2339: Property 'DOCTYPE' does not exist on type 'string'.
 lib/sax.ts(1103,24): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1103,42): error TS2339: Property 'sawRoot' does not exist on type 'HTMLElement'.
 lib/sax.ts(1107,20): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
@@ -541,57 +501,57 @@ lib/sax.ts(1108,20): error TS2339: Property 'sgmlDecl' does not exist on type 'H
 lib/sax.ts(1110,58): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1111,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1112,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1112,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(1113,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1112,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(1113,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1114,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1114,30): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1114,30): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1115,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
 lib/sax.ts(1117,20): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
-lib/sax.ts(1121,16): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1121,16): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1122,28): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1123,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1123,30): error TS2339: Property 'SGML_DECL' does not exist on type 'String'.
+lib/sax.ts(1123,30): error TS2339: Property 'SGML_DECL' does not exist on type 'string'.
 lib/sax.ts(1124,20): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1126,18): error TS2339: Property 'sgmlDecl' does not exist on type 'HTMLElement'.
-lib/sax.ts(1129,16): error TS2339: Property 'DOCTYPE' does not exist on type 'String'.
+lib/sax.ts(1129,16): error TS2339: Property 'DOCTYPE' does not exist on type 'string'.
 lib/sax.ts(1131,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1131,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(1131,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(1132,50): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1133,20): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1135,20): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1137,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1137,32): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'String'.
-lib/sax.ts(1138,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1137,32): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'string'.
+lib/sax.ts(1138,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1139,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1139,32): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1139,32): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1140,22): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
-lib/sax.ts(1145,16): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1145,16): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1146,18): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1147,28): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1148,20): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1149,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1149,30): error TS2339: Property 'DOCTYPE' does not exist on type 'String'.
-lib/sax.ts(1153,16): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'String'.
+lib/sax.ts(1149,30): error TS2339: Property 'DOCTYPE' does not exist on type 'string'.
+lib/sax.ts(1153,16): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'string'.
 lib/sax.ts(1154,18): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1156,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1156,30): error TS2339: Property 'DOCTYPE' does not exist on type 'String'.
-lib/sax.ts(1157,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1156,30): error TS2339: Property 'DOCTYPE' does not exist on type 'string'.
+lib/sax.ts(1157,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1158,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1158,30): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1158,30): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1159,20): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
-lib/sax.ts(1163,16): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1163,16): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1164,18): error TS2339: Property 'doctype' does not exist on type 'HTMLElement'.
 lib/sax.ts(1165,28): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1166,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1166,30): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'String'.
+lib/sax.ts(1166,30): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'string'.
 lib/sax.ts(1167,20): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
-lib/sax.ts(1171,16): error TS2339: Property 'COMMENT' does not exist on type 'String'.
+lib/sax.ts(1171,16): error TS2339: Property 'COMMENT' does not exist on type 'string'.
 lib/sax.ts(1173,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1173,30): error TS2339: Property 'COMMENT_ENDING' does not exist on type 'String'.
+lib/sax.ts(1173,30): error TS2339: Property 'COMMENT_ENDING' does not exist on type 'string'.
 lib/sax.ts(1175,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
-lib/sax.ts(1179,16): error TS2339: Property 'COMMENT_ENDING' does not exist on type 'String'.
+lib/sax.ts(1179,16): error TS2339: Property 'COMMENT_ENDING' does not exist on type 'string'.
 lib/sax.ts(1181,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1181,30): error TS2339: Property 'COMMENT_ENDED' does not exist on type 'String'.
+lib/sax.ts(1181,30): error TS2339: Property 'COMMENT_ENDED' does not exist on type 'string'.
 lib/sax.ts(1182,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
 lib/sax.ts(1182,46): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(1182,58): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
@@ -600,94 +560,94 @@ lib/sax.ts(1184,52): error TS2339: Property 'comment' does not exist on type 'HT
 lib/sax.ts(1186,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
 lib/sax.ts(1188,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
 lib/sax.ts(1189,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1189,30): error TS2339: Property 'COMMENT' does not exist on type 'String'.
-lib/sax.ts(1193,16): error TS2339: Property 'COMMENT_ENDED' does not exist on type 'String'.
+lib/sax.ts(1189,30): error TS2339: Property 'COMMENT' does not exist on type 'string'.
+lib/sax.ts(1193,16): error TS2339: Property 'COMMENT_ENDED' does not exist on type 'string'.
 lib/sax.ts(1198,20): error TS2339: Property 'comment' does not exist on type 'HTMLElement'.
 lib/sax.ts(1199,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1199,30): error TS2339: Property 'COMMENT' does not exist on type 'String'.
+lib/sax.ts(1199,30): error TS2339: Property 'COMMENT' does not exist on type 'string'.
 lib/sax.ts(1201,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1201,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(1205,16): error TS2339: Property 'CDATA' does not exist on type 'String'.
+lib/sax.ts(1201,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(1205,16): error TS2339: Property 'CDATA' does not exist on type 'string'.
 lib/sax.ts(1207,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1207,30): error TS2339: Property 'CDATA_ENDING' does not exist on type 'String'.
+lib/sax.ts(1207,30): error TS2339: Property 'CDATA_ENDING' does not exist on type 'string'.
 lib/sax.ts(1209,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
-lib/sax.ts(1213,16): error TS2339: Property 'CDATA_ENDING' does not exist on type 'String'.
+lib/sax.ts(1213,16): error TS2339: Property 'CDATA_ENDING' does not exist on type 'string'.
 lib/sax.ts(1215,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1215,30): error TS2339: Property 'CDATA_ENDING_2' does not exist on type 'String'.
+lib/sax.ts(1215,30): error TS2339: Property 'CDATA_ENDING_2' does not exist on type 'string'.
 lib/sax.ts(1217,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1218,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1218,30): error TS2339: Property 'CDATA' does not exist on type 'String'.
-lib/sax.ts(1222,16): error TS2339: Property 'CDATA_ENDING_2' does not exist on type 'String'.
+lib/sax.ts(1218,30): error TS2339: Property 'CDATA' does not exist on type 'string'.
+lib/sax.ts(1222,16): error TS2339: Property 'CDATA_ENDING_2' does not exist on type 'string'.
 lib/sax.ts(1224,24): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1225,50): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1227,13): error TS2554: Expected 3 arguments, but got 2.
 lib/sax.ts(1228,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1229,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1229,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(1229,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(1231,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1233,20): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(1234,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1234,30): error TS2339: Property 'CDATA' does not exist on type 'String'.
-lib/sax.ts(1238,16): error TS2339: Property 'PROC_INST' does not exist on type 'String'.
+lib/sax.ts(1234,30): error TS2339: Property 'CDATA' does not exist on type 'string'.
+lib/sax.ts(1238,16): error TS2339: Property 'PROC_INST' does not exist on type 'string'.
 lib/sax.ts(1240,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1240,30): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'String'.
-lib/sax.ts(1241,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1240,30): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'string'.
+lib/sax.ts(1241,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1242,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1242,30): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'String'.
+lib/sax.ts(1242,30): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'string'.
 lib/sax.ts(1244,20): error TS2339: Property 'procInstName' does not exist on type 'HTMLElement'.
-lib/sax.ts(1248,16): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'String'.
+lib/sax.ts(1248,16): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'string'.
 lib/sax.ts(1249,23): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
-lib/sax.ts(1249,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1249,52): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1252,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1252,30): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'String'.
+lib/sax.ts(1252,30): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'string'.
 lib/sax.ts(1254,20): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
-lib/sax.ts(1258,16): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'String'.
+lib/sax.ts(1258,16): error TS2339: Property 'PROC_INST_ENDING' does not exist on type 'string'.
 lib/sax.ts(1261,28): error TS2339: Property 'procInstName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1262,28): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
 lib/sax.ts(1264,20): error TS2339: Property 'procInstName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1264,42): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
 lib/sax.ts(1265,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1265,30): error TS2339: Property 'TEXT' does not exist on type 'String'.
+lib/sax.ts(1265,30): error TS2339: Property 'TEXT' does not exist on type 'string'.
 lib/sax.ts(1267,20): error TS2339: Property 'procInstBody' does not exist on type 'HTMLElement'.
 lib/sax.ts(1268,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1268,30): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'String'.
-lib/sax.ts(1272,16): error TS2339: Property 'OPEN_TAG' does not exist on type 'String'.
+lib/sax.ts(1268,30): error TS2339: Property 'PROC_INST_BODY' does not exist on type 'string'.
+lib/sax.ts(1272,16): error TS2339: Property 'OPEN_TAG' does not exist on type 'string'.
 lib/sax.ts(1273,23): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1274,20): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(1278,15): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1280,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1280,32): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'String'.
-lib/sax.ts(1282,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1280,32): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'string'.
+lib/sax.ts(1282,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1285,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1285,32): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
-lib/sax.ts(1290,16): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'String'.
+lib/sax.ts(1285,32): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
+lib/sax.ts(1290,16): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'string'.
 lib/sax.ts(1296,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1296,30): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
-lib/sax.ts(1300,16): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
-lib/sax.ts(1302,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1296,30): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
+lib/sax.ts(1300,16): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
+lib/sax.ts(1302,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1305,13): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1307,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1307,30): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'String'.
+lib/sax.ts(1307,30): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'string'.
 lib/sax.ts(1308,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1309,20): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1310,20): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(1311,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1311,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
-lib/sax.ts(1317,16): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
+lib/sax.ts(1311,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'string'.
+lib/sax.ts(1317,16): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'string'.
 lib/sax.ts(1319,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1319,30): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'String'.
+lib/sax.ts(1319,30): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'string'.
 lib/sax.ts(1322,20): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(1322,41): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1324,13): error TS2554: Expected 2 arguments, but got 1.
-lib/sax.ts(1325,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1325,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1326,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1326,30): error TS2339: Property 'ATTRIB_NAME_SAW_WHITE' does not exist on type 'String'.
+lib/sax.ts(1326,30): error TS2339: Property 'ATTRIB_NAME_SAW_WHITE' does not exist on type 'string'.
 lib/sax.ts(1327,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1328,20): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
-lib/sax.ts(1334,16): error TS2339: Property 'ATTRIB_NAME_SAW_WHITE' does not exist on type 'String'.
+lib/sax.ts(1334,16): error TS2339: Property 'ATTRIB_NAME_SAW_WHITE' does not exist on type 'string'.
 lib/sax.ts(1336,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1336,30): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'String'.
-lib/sax.ts(1337,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1336,30): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'string'.
+lib/sax.ts(1337,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1341,20): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(1341,42): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1342,20): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
@@ -697,53 +657,53 @@ lib/sax.ts(1349,15): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1350,32): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1351,22): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1352,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1352,32): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
+lib/sax.ts(1352,32): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'string'.
 lib/sax.ts(1355,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1355,32): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
-lib/sax.ts(1360,16): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'String'.
-lib/sax.ts(1361,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lib/sax.ts(1363,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1355,32): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
+lib/sax.ts(1360,16): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'string'.
+lib/sax.ts(1361,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/sax.ts(1363,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1364,20): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1365,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1365,30): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1365,30): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1368,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1368,30): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
+lib/sax.ts(1368,30): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'string'.
 lib/sax.ts(1369,20): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
-lib/sax.ts(1373,16): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'String'.
+lib/sax.ts(1373,16): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'string'.
 lib/sax.ts(1374,28): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1376,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1376,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'String'.
+lib/sax.ts(1376,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'string'.
 lib/sax.ts(1378,22): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(1383,18): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(1384,18): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1384,28): error TS2339: Property 'ATTRIB_VALUE_CLOSED' does not exist on type 'String'.
-lib/sax.ts(1387,16): error TS2339: Property 'ATTRIB_VALUE_CLOSED' does not exist on type 'String'.
-lib/sax.ts(1388,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1384,28): error TS2339: Property 'ATTRIB_VALUE_CLOSED' does not exist on type 'string'.
+lib/sax.ts(1387,16): error TS2339: Property 'ATTRIB_VALUE_CLOSED' does not exist on type 'string'.
+lib/sax.ts(1388,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1389,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1389,30): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
+lib/sax.ts(1389,30): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
 lib/sax.ts(1391,13): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1393,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1393,30): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'String'.
+lib/sax.ts(1393,30): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'string'.
 lib/sax.ts(1394,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1396,20): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(1397,20): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(1398,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1398,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
-lib/sax.ts(1404,16): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
+lib/sax.ts(1398,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'string'.
+lib/sax.ts(1404,16): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'string'.
 lib/sax.ts(1407,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1407,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
+lib/sax.ts(1407,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'string'.
 lib/sax.ts(1409,22): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(1415,13): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1417,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1417,30): error TS2339: Property 'ATTRIB' does not exist on type 'String'.
-lib/sax.ts(1421,16): error TS2339: Property 'CLOSE_TAG' does not exist on type 'String'.
-lib/sax.ts(1423,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1417,30): error TS2339: Property 'ATTRIB' does not exist on type 'string'.
+lib/sax.ts(1421,16): error TS2339: Property 'CLOSE_TAG' does not exist on type 'string'.
+lib/sax.ts(1423,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1425,33): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'Function'.
   Type 'RegExp' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/sax.ts(1426,26): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(1427,24): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(1428,24): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1428,34): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
+lib/sax.ts(1428,34): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
 lib/sax.ts(1433,22): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(1437,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1438,20): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
@@ -751,28 +711,32 @@ lib/sax.ts(1439,29): error TS2339: Property 'script' does not exist on type 'HTM
 lib/sax.ts(1440,20): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(1441,20): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(1442,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1442,30): error TS2339: Property 'SCRIPT' does not exist on type 'String'.
-lib/sax.ts(1444,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/sax.ts(1442,30): error TS2339: Property 'SCRIPT' does not exist on type 'string'.
+lib/sax.ts(1444,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1447,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1447,30): error TS2339: Property 'CLOSE_TAG_SAW_WHITE' does not exist on type 'String'.
-lib/sax.ts(1451,16): error TS2339: Property 'CLOSE_TAG_SAW_WHITE' does not exist on type 'String'.
-lib/sax.ts(1452,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lib/sax.ts(1462,16): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'String'.
-lib/sax.ts(1463,16): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'String'.
-lib/sax.ts(1464,16): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
-lib/sax.ts(1466,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/sax.ts(1447,30): error TS2339: Property 'CLOSE_TAG_SAW_WHITE' does not exist on type 'string'.
+lib/sax.ts(1451,16): error TS2339: Property 'CLOSE_TAG_SAW_WHITE' does not exist on type 'string'.
+lib/sax.ts(1452,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/sax.ts(1462,16): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'string'.
+lib/sax.ts(1463,16): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'string'.
+lib/sax.ts(1464,16): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'string'.
 lib/sax.ts(1467,26): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1468,20): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'String'.
-lib/sax.ts(1469,31): error TS2339: Property 'TEXT' does not exist on type 'String'.
-lib/sax.ts(1473,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'String'.
-lib/sax.ts(1474,31): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'String'.
-lib/sax.ts(1478,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
-lib/sax.ts(1479,31): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
+lib/sax.ts(1468,20): error TS2339: Property 'TEXT_ENTITY' does not exist on type 'string'.
+lib/sax.ts(1469,31): error TS2339: Property 'TEXT' does not exist on type 'string'.
+lib/sax.ts(1470,15): error TS2322: Type 'string' is not assignable to type 'any[]'.
+lib/sax.ts(1473,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exist on type 'string'.
+lib/sax.ts(1474,31): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'string'.
+lib/sax.ts(1475,15): error TS2322: Type 'string' is not assignable to type 'any[]'.
+lib/sax.ts(1478,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'string'.
+lib/sax.ts(1479,31): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'string'.
+lib/sax.ts(1480,15): error TS2322: Type 'string' is not assignable to type 'any[]'.
+lib/sax.ts(1485,20): error TS2538: Type 'any[]' cannot be used as an index type.
 lib/sax.ts(1486,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1487,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1488,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1488,37): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1489,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
+lib/sax.ts(1492,20): error TS2538: Type 'any[]' cannot be used as an index type.
 lib/sax.ts(1492,44): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1493,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1494,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
@@ -780,20 +744,11 @@ lib/sax.ts(1500,35): error TS2554: Expected 0-1 arguments, but got 2.
 lib/sax.ts(1500,62): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1505,16): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
 lib/sax.ts(1505,35): error TS2339: Property 'bufferCheckPosition' does not exist on type 'HTMLElement'.
-lib/sax.ts(1508,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
-lib/sax.ts(1519,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(1528,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1529,52): error TS2538: Type 'Number' cannot be used as an index type.
-lib/sax.ts(1531,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/sax.ts(1542,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1543,13): error TS2322: Type 'number' is not assignable to type 'String'.
-lib/sax.ts(1543,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1544,13): error TS2322: Type 'number' is not assignable to type 'String'.
-lib/sax.ts(1544,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1547,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/sax.ts(1508,5): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
+lib/sax.ts(1543,13): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/sax.ts(1544,13): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/sax.ts(1562,9): error TS2322: Type 'Function' is not assignable to type '(...codePoints: number[]) => string'.
   Type 'Function' provides no match for the signature '(...codePoints: number[]): string'.
-lib/sax.ts(1566,37): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/sax.ts(1566,37): error TS2322: Type '{}' is not assignable to type 'string'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17768,18): error TS2394: This overload signature is not compatible with its implementation signature.
 

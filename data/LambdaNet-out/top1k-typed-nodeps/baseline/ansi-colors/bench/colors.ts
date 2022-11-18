@@ -1,9 +1,9 @@
 'use strict';
 
 const { Suite } = require('benchmark');
-const chalk: Object = require('chalk');
-const colors: Object = require('..');
-const names: Array = [
+const chalk: object = require('chalk');
+const colors: object = require('..');
+const names: any[] = [
   'reset',
   'bold',
   'dim',
@@ -30,20 +30,20 @@ const names: Array = [
   'bgCyan'
 ];
 
-const cycle: Function = (e: HTMLElement, newline: Boolean) => {
+const cycle: Function = (e: HTMLElement, newline: boolean) => {
   process.stdout.write('\u001b[G');
   process.stdout.write(`  ${e.target}` + (newline ? '\n' : ''));
 };
 
-function bench(name: String): Object {
+function bench(name: string): object {
   console.log(`\n# ${name}`);
-  const suite: Object = new Suite();
-  const res: Object = {
+  const suite: object = new Suite();
+  const res: object = {
     run: suite.run.bind(suite),
-    add: (key: String, fn: String) => {
+    add: (key: string, fn: string) => {
       suite.add(key, {
-        onCycle: (e: Array) => cycle(e),
-        onComplete: (e: String) => cycle(e, true),
+        onCycle: (e: any[]) => cycle(e),
+        onComplete: (e: string) => cycle(e, true),
         fn: fn
       });
       return res;
@@ -54,19 +54,19 @@ function bench(name: String): Object {
 
 bench('All Colors')
   .add('ansi-colors', () => {
-    names.forEach((name: String) => colors[name]('foo'));
+    names.forEach((name: string) => colors[name]('foo'));
   })
   .add('chalk', () => {
-    names.forEach((name: String) => chalk[name]('foo'));
+    names.forEach((name: string) => chalk[name]('foo'));
   })
   .run();
 
 bench('Chained colors')
   .add('ansi-colors', () => {
-    names.forEach((name: String) => colors[name].bold.underline.italic('foo'));
+    names.forEach((name: string) => colors[name].bold.underline.italic('foo'));
   })
   .add('chalk', () => {
-    names.forEach((name: String) => chalk[name].bold.underline.italic('foo'));
+    names.forEach((name: string) => chalk[name].bold.underline.italic('foo'));
   })
   .run();
 
@@ -75,6 +75,6 @@ bench('Nested colors')
   .add('chalk', () => fixture(chalk))
   .run();
 
-function fixture(lib: HTMLElement): String {
+function fixture(lib: HTMLElement): string {
   return lib.red(`a red ${lib.white('red')} red ${lib.red('red')} red ${lib.gray('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.blue('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')}red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')}red ${lib.green('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.magenta('red')} red ${lib.red('red')}red ${lib.red('red')} red ${lib.cyan('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.yellow('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} red ${lib.red('red')} message`);
 }

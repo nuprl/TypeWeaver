@@ -1,7 +1,7 @@
-var isWin: Boolean = process.platform === 'win32';
+var isWin: boolean = process.platform === 'win32';
 
-export default function (str: String) {
-	var i: Number = str.length - 1;
+export default function (str: string) {
+	var i: number = str.length - 1;
 	if (i < 2) {
 		return str;
 	}
@@ -11,7 +11,7 @@ export default function (str: String) {
 	return str.substr(0, i + 1);
 };
 
-function isSeparator(str: Object, i: Number): Boolean {
-	var char: String = str[i];
+function isSeparator(str: object, i: number): boolean {
+	var char: string = str[i];
 	return i > 0 && (char === '/' || (isWin && char === '\\'));
 }

@@ -1,30 +1,30 @@
 'use strict';
 
 import path from 'path';
-const WIN_SLASH: String = '\\\\/';
-const WIN_NO_SLASH: String = `[^${WIN_SLASH}]`;
+const WIN_SLASH: string = '\\\\/';
+const WIN_NO_SLASH: string = `[^${WIN_SLASH}]`;
 
 /**
  * Posix glob regex
  */
 
-const DOT_LITERAL: String = '\\.';
-const PLUS_LITERAL: String = '\\+';
-const QMARK_LITERAL: String = '\\?';
-const SLASH_LITERAL: String = '\\/';
-const ONE_CHAR: String = '(?=.)';
-const QMARK: String = '[^/]';
-const END_ANCHOR: String = `(?:${SLASH_LITERAL}|$)`;
-const START_ANCHOR: String = `(?:^|${SLASH_LITERAL})`;
-const DOTS_SLASH: String = `${DOT_LITERAL}{1,2}${END_ANCHOR}`;
-const NO_DOT: String = `(?!${DOT_LITERAL})`;
-const NO_DOTS: String = `(?!${START_ANCHOR}${DOTS_SLASH})`;
-const NO_DOT_SLASH: String = `(?!${DOT_LITERAL}{0,1}${END_ANCHOR})`;
-const NO_DOTS_SLASH: String = `(?!${DOTS_SLASH})`;
-const QMARK_NO_DOT: String = `[^.${SLASH_LITERAL}]`;
-const STAR: String = `${QMARK}*?`;
+const DOT_LITERAL: string = '\\.';
+const PLUS_LITERAL: string = '\\+';
+const QMARK_LITERAL: string = '\\?';
+const SLASH_LITERAL: string = '\\/';
+const ONE_CHAR: string = '(?=.)';
+const QMARK: string = '[^/]';
+const END_ANCHOR: string = `(?:${SLASH_LITERAL}|$)`;
+const START_ANCHOR: string = `(?:^|${SLASH_LITERAL})`;
+const DOTS_SLASH: string = `${DOT_LITERAL}{1,2}${END_ANCHOR}`;
+const NO_DOT: string = `(?!${DOT_LITERAL})`;
+const NO_DOTS: string = `(?!${START_ANCHOR}${DOTS_SLASH})`;
+const NO_DOT_SLASH: string = `(?!${DOT_LITERAL}{0,1}${END_ANCHOR})`;
+const NO_DOTS_SLASH: string = `(?!${DOTS_SLASH})`;
+const QMARK_NO_DOT: string = `[^.${SLASH_LITERAL}]`;
+const STAR: string = `${QMARK}*?`;
 
-const POSIX_CHARS: Object = {
+const POSIX_CHARS: object = {
   DOT_LITERAL,
   PLUS_LITERAL,
   QMARK_LITERAL,
@@ -46,7 +46,7 @@ const POSIX_CHARS: Object = {
  * Windows glob regex
  */
 
-const WINDOWS_CHARS: Object = {
+const WINDOWS_CHARS: object = {
   ...POSIX_CHARS,
 
   SLASH_LITERAL: `[${WIN_SLASH}]`,
@@ -66,7 +66,7 @@ const WINDOWS_CHARS: Object = {
  * POSIX Bracket Regex
  */
 
-const POSIX_REGEX_SOURCE: Object = {
+const POSIX_REGEX_SOURCE: object = {
   alnum: 'a-zA-Z0-9',
   alpha: 'a-zA-Z',
   ascii: '\\x00-\\x7F',

@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function (value: String) {
+module.exports = function (value: string) {
 	try {
 		return value.toString();
 	} catch (error) {

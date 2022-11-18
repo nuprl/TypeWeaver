@@ -1,12 +1,12 @@
 import process from 'node:process';
 import ansiStyles from './index.js';
 
-const width: Number = 55;
-let lineLength: Number = 0;
+const width: number = 55;
+let lineLength: number = 0;
 
 for (const [key, value] of Object.entries(ansiStyles)) {
-	let code: String = value.open;
-	let projectedLength: Number = lineLength + key.length + 1;
+	let code: string = value.open;
+	let projectedLength: number = lineLength + key.length + 1;
 
 	// We skip `overline` as almost no terminal supports it so we cannot show it off.
 	if (

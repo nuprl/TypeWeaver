@@ -14,7 +14,7 @@ function monkeyPatch (): Void {
   })
 }
 
-function abbrev (list: Array): Object {
+function abbrev (list: any[]): object {
   if (arguments.length !== 1 || !Array.isArray(list)) {
     list = Array.prototype.slice.call(arguments, 0)
   }
@@ -26,16 +26,16 @@ function abbrev (list: Array): Object {
   args = args.sort(lexSort)
 
   // walk through each, seeing how much it has in common with the next and previous
-  var abbrevs: Object = {}
-    , prev: String = ""
+  var abbrevs: object = {}
+    , prev: string = ""
   for (var i = 0, l = args.length ; i < l ; i ++) {
-    var current: String = args[i]
-      , next: String = args[i + 1] || ""
-      , nextMatches: Boolean = true
-      , prevMatches: Boolean = true
+    var current: string = args[i]
+      , next: string = args[i + 1] || ""
+      , nextMatches: boolean = true
+      , prevMatches: boolean = true
     if (current === next) continue
     for (var j = 0, cl = current.length ; j < cl ; j ++) {
-      var curChar: String = current.charAt(j)
+      var curChar: string = current.charAt(j)
       nextMatches = nextMatches && curChar === next.charAt(j)
       prevMatches = prevMatches && curChar === prev.charAt(j)
       if (!nextMatches && !prevMatches) {
@@ -56,6 +56,6 @@ function abbrev (list: Array): Object {
   return abbrevs
 }
 
-function lexSort (a: Number, b: Number): Number {
+function lexSort (a: number, b: number): number {
   return a === b ? 0 : a > b ? 1 : -1
 }

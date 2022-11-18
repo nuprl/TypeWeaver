@@ -34,6 +34,6 @@ import createRange from './.internal/createRange.js'
  * rangeRight(0)
  * // => []
  */
-const rangeRight: Object = createRange(true)
+const rangeRight: object = createRange(true)
 
 export default rangeRight

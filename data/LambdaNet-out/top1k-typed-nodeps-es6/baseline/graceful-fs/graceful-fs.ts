@@ -5,8 +5,8 @@ import clone from './clone.js';
 import util from 'util';
 
 /* istanbul ignore next - node 0.x polyfill */
-var gracefulQueue: String
-var previousSymbol: String
+var gracefulQueue: string
+var previousSymbol: string
 
 /* istanbul ignore else - node 0.x polyfill */
 if (typeof Symbol === 'function' && typeof Symbol.for === 'function') {
@@ -20,7 +20,7 @@ if (typeof Symbol === 'function' && typeof Symbol.for === 'function') {
 
 function noop (): Void {}
 
-function publishQueue(context: Function, queue: String): Void {
+function publishQueue(context: Function, queue: string): Void {
   Object.defineProperty(context, gracefulQueue, {
     get: function() {
       return queue
@@ -33,7 +33,7 @@ if (util.debuglog)
   debug = util.debuglog('gfs4')
 else if (/\bgfs4\b/i.test(process.env.NODE_DEBUG || ''))
   debug = function() {
-    var m: String = util.format.apply(util, arguments)
+    var m: string = util.format.apply(util, arguments)
     m = 'GFS4: ' + m.split(/\n/).join('\nGFS4: ')
     console.error(m)
   }
@@ -41,7 +41,7 @@ else if (/\bgfs4\b/i.test(process.env.NODE_DEBUG || ''))
 // Once time initialization
 if (!fs[gracefulQueue]) {
   // This queue can be shared by multiple loaded instances
-  var queue: Number = global[gracefulQueue] || []
+  var queue: number = global[gracefulQueue] || []
   publishQueue(fs, queue)
 
   // Patch fs.close/closeSync to shared queue version, because we need
@@ -49,8 +49,8 @@ if (!fs[gracefulQueue]) {
   // This is essential when multiple graceful-fs instances are
   // in play at the same time.
   fs.close = (function (fs$close: Function) {
-    function close (fd: String, cb: Function): String {
-      return fs$close.call(fs, fd, function (err: Boolean) {
+    function close (fd: string, cb: Function): string {
+      return fs$close.call(fs, fd, function (err: boolean) {
         // This function uses the graceful-fs shared queue
         if (!err) {
           resetQueue()
@@ -98,7 +98,7 @@ if (process.env.TEST_GRACEFUL_FS_GLOBAL_PATCH && !fs.__patched) {
   fs.__patched = true;
 }
 
-function patch (fs: Object): Array {
+function patch (fs: object): any[] {
   // Everything that references the open() function needs to be in here
   polyfills(fs)
   fs.gracefulify = patch
@@ -107,14 +107,14 @@ function patch (fs: Object): Array {
   fs.createWriteStream = createWriteStream
   var fs$readFile: Function = fs.readFile
   fs.readFile = readFile
-  function readFile (path: String, options: Function, cb: String): String {
+  function readFile (path: string, options: Function, cb: string): string {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$readFile(path, options, cb)
 
-    function go$readFile (path: String, options: Function, cb: Function, startTime: String): Boolean {
-      return fs$readFile(path, options, function (err: Object) {
+    function go$readFile (path: string, options: Function, cb: Function, startTime: string): boolean {
+      return fs$readFile(path, options, function (err: object) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$readFile, [path, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -125,16 +125,16 @@ function patch (fs: Object): Array {
     }
   }
 
-  var fs$writeFile: Array = fs.writeFile
+  var fs$writeFile: any[] = fs.writeFile
   fs.writeFile = writeFile
-  function writeFile (path: String, data: Object, options: Function, cb: String): String {
+  function writeFile (path: string, data: object, options: Function, cb: string): string {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$writeFile(path, data, options, cb)
 
-    function go$writeFile (path: String, data: Object, options: Function, cb: Function, startTime: String): Boolean {
-      return fs$writeFile(path, data, options, function (err: Object) {
+    function go$writeFile (path: string, data: object, options: Function, cb: Function, startTime: string): boolean {
+      return fs$writeFile(path, data, options, function (err: object) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$writeFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -145,17 +145,17 @@ function patch (fs: Object): Array {
     }
   }
 
-  var fs$appendFile: Array = fs.appendFile
+  var fs$appendFile: any[] = fs.appendFile
   if (fs$appendFile)
     fs.appendFile = appendFile
-  function appendFile (path: String, data: Object, options: Function, cb: String): String {
+  function appendFile (path: string, data: object, options: Function, cb: string): string {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$appendFile(path, data, options, cb)
 
-    function go$appendFile (path: String, data: Object, options: Function, cb: Function, startTime: String): Boolean {
-      return fs$appendFile(path, data, options, function (err: Object) {
+    function go$appendFile (path: string, data: object, options: Function, cb: Function, startTime: string): boolean {
+      return fs$appendFile(path, data, options, function (err: object) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$appendFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -166,18 +166,18 @@ function patch (fs: Object): Array {
     }
   }
 
-  var fs$copyFile: Array = fs.copyFile
+  var fs$copyFile: any[] = fs.copyFile
   if (fs$copyFile)
     fs.copyFile = copyFile
-  function copyFile (src: String, dest: Number, flags: Number, cb: Number): String {
+  function copyFile (src: string, dest: number, flags: number, cb: number): string {
     if (typeof flags === 'function') {
       cb = flags
       flags = 0
     }
     return go$copyFile(src, dest, flags, cb)
 
-    function go$copyFile (src: String, dest: String, flags: String, cb: Function, startTime: String): Boolean {
-      return fs$copyFile(src, dest, flags, function (err: Object) {
+    function go$copyFile (src: string, dest: string, flags: string, cb: Function, startTime: string): boolean {
+      return fs$copyFile(src, dest, flags, function (err: object) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$copyFile, [src, dest, flags, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -191,17 +191,17 @@ function patch (fs: Object): Array {
   var fs$readdir: Function = fs.readdir
   fs.readdir = readdir
   var noReaddirOptionVersions: RegExp = /^v[0-5]\./
-  function readdir (path: String, options: Function, cb: Function): Void {
+  function readdir (path: string, options: Function, cb: Function): Void {
     if (typeof options === 'function')
       cb = options, options = null
 
     var go$readdir: Function = noReaddirOptionVersions.test(process.version)
-      ? function go$readdir (path: String, options: Object, cb: String, startTime: String): Boolean {
+      ? function go$readdir (path: string, options: object, cb: string, startTime: string): boolean {
         return fs$readdir(path, fs$readdirCallback(
           path, options, cb, startTime
         ))
       }
-      : function go$readdir (path: String, options: Object, cb: String, startTime: String): Boolean {
+      : function go$readdir (path: string, options: object, cb: string, startTime: string): boolean {
         return fs$readdir(path, options, fs$readdirCallback(
           path, options, cb, startTime
         ))
@@ -209,8 +209,8 @@ function patch (fs: Object): Array {
 
     return go$readdir(path, options, cb)
 
-    function fs$readdirCallback (path: String, options: Function, cb: Function, startTime: String): Function {
-      return function (err: Object, files: Array) {
+    function fs$readdirCallback (path: string, options: Function, cb: Function, startTime: string): Function {
+      return function (err: object, files: any[]) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([
             go$readdir,
@@ -231,7 +231,7 @@ function patch (fs: Object): Array {
   }
 
   if (process.version.substr(0, 4) === 'v0.8') {
-    var legStreams: Object = legacy(fs)
+    var legStreams: object = legacy(fs)
     ReadStream = legStreams.ReadStream
     WriteStream = legStreams.WriteStream
   }
@@ -270,30 +270,30 @@ function patch (fs: Object): Array {
   })
 
   // legacy names
-  var FileReadStream: String = ReadStream
+  var FileReadStream: string = ReadStream
   Object.defineProperty(fs, 'FileReadStream', {
     get: function () {
       return FileReadStream
     },
-    set: function (val: String) {
+    set: function (val: string) {
       FileReadStream = val
     },
     enumerable: true,
     configurable: true
   })
-  var FileWriteStream: String = WriteStream
+  var FileWriteStream: string = WriteStream
   Object.defineProperty(fs, 'FileWriteStream', {
     get: function () {
       return FileWriteStream
     },
-    set: function (val: String) {
+    set: function (val: string) {
       FileWriteStream = val
     },
     enumerable: true,
     configurable: true
   })
 
-  function ReadStream (path: String, options: Object): Promise {
+  function ReadStream (path: string, options: object): Promise {
     if (this instanceof ReadStream)
       return fs$ReadStream.apply(this, arguments), this
     else
@@ -302,7 +302,7 @@ function patch (fs: Object): Array {
 
   function ReadStream$open (): Void {
     var that: HTMLElement = this
-    open(that.path, that.flags, that.mode, function (err: Function, fd: Array) {
+    open(that.path, that.flags, that.mode, function (err: Function, fd: any[]) {
       if (err) {
         if (that.autoClose)
           that.destroy()
@@ -316,7 +316,7 @@ function patch (fs: Object): Array {
     })
   }
 
-  function WriteStream (path: String, options: Object): Promise {
+  function WriteStream (path: string, options: object): Promise {
     if (this instanceof WriteStream)
       return fs$WriteStream.apply(this, arguments), this
     else
@@ -325,7 +325,7 @@ function patch (fs: Object): Array {
 
   function WriteStream$open (): Void {
     var that: HTMLElement = this
-    open(that.path, that.flags, that.mode, function (err: Function, fd: Array) {
+    open(that.path, that.flags, that.mode, function (err: Function, fd: any[]) {
       if (err) {
         that.destroy()
         that.emit('error', err)
@@ -336,24 +336,24 @@ function patch (fs: Object): Array {
     })
   }
 
-  function createReadStream (path: String, options: Function): Boolean {
+  function createReadStream (path: string, options: Function): boolean {
     return new fs.ReadStream(path, options)
   }
 
-  function createWriteStream (path: String, options: Function): Number {
+  function createWriteStream (path: string, options: Function): number {
     return new fs.WriteStream(path, options)
   }
 
   var fs$open: Function = fs.open
   fs.open = open
-  function open (path: String, flags: String, mode: String, cb: String): String {
+  function open (path: string, flags: string, mode: string, cb: string): string {
     if (typeof mode === 'function')
       cb = mode, mode = null
 
     return go$open(path, flags, mode, cb)
 
-    function go$open (path: String, flags: String, mode: String, cb: Function, startTime: String): Boolean {
-      return fs$open(path, flags, mode, function (err: Object, fd: Function) {
+    function go$open (path: string, flags: string, mode: string, cb: Function, startTime: string): boolean {
+      return fs$open(path, flags, mode, function (err: object, fd: Function) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$open, [path, flags, mode, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -367,20 +367,20 @@ function patch (fs: Object): Array {
   return fs
 }
 
-function enqueue (elem: Object): Void {
+function enqueue (elem: object): Void {
   debug('ENQUEUE', elem[0].name, elem[1])
   fs[gracefulQueue].push(elem)
   retry()
 }
 
 // keep track of the timeout between retry() calls
-var retryTimer: Number
+var retryTimer: number
 
 // reset the startTime and lastTime to now
 // this resets the start of the 60 second overall timeout as well as the
 // delay between attempts so that we'll retry these jobs sooner
 function resetQueue (): Void {
-  var now: Number = Date.now()
+  var now: number = Date.now()
   for (var i = 0; i < fs[gracefulQueue].length; ++i) {
     // entries that are only a length of 2 are from an older version, don't
     // bother modifying those since they'll be retried anyway.
@@ -401,13 +401,13 @@ function retry (): Void {
   if (fs[gracefulQueue].length === 0)
     return
 
-  var elem: Object = fs[gracefulQueue].shift()
-  var fn: Object = elem[0]
-  var args: Array = elem[1]
+  var elem: object = fs[gracefulQueue].shift()
+  var fn: object = elem[0]
+  var args: any[] = elem[1]
   // these items may be unset if they were added by an older graceful-fs
-  var err: String = elem[2]
-  var startTime: Number = elem[3]
-  var lastTime: Number = elem[4]
+  var err: string = elem[2]
+  var startTime: number = elem[3]
+  var lastTime: number = elem[4]
 
   // if we don't have a startTime we have no way of knowing if we've waited
   // long enough, so go ahead and retry this item now
@@ -422,13 +422,13 @@ function retry (): Void {
       cb.call(null, err)
   } else {
     // the amount of time between the last attempt and right now
-    var sinceAttempt: Number = Date.now() - lastTime
+    var sinceAttempt: number = Date.now() - lastTime
     // the amount of time between when we first tried, and when we last tried
     // rounded up to at least 1
-    var sinceStart: Number = Math.max(lastTime - startTime, 1)
+    var sinceStart: number = Math.max(lastTime - startTime, 1)
     // backoff. wait longer than the total time we've been retrying, but only
     // up to a maximum of 100ms
-    var desiredDelay: Number = Math.min(sinceStart * 1.2, 100)
+    var desiredDelay: number = Math.min(sinceStart * 1.2, 100)
     // it's been long enough since the last retry, do it again
     if (sinceAttempt >= desiredDelay) {
       debug('RETRY', fn.name, args)

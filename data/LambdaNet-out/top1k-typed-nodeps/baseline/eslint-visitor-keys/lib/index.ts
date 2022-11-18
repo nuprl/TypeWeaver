@@ -20,7 +20,7 @@ const KEY_BLACKLIST: Error = new Set([
  * @param {string} key The key to check.
  * @returns {boolean} `true` if the key should be used.
  */
-function filterKey(key: Array): Boolean {
+function filterKey(key: any[]): boolean {
     return !KEY_BLACKLIST.has(key) && key[0] !== "_";
 }
 
@@ -29,7 +29,7 @@ function filterKey(key: Array): Boolean {
  * @param {object} node The AST node to get keys.
  * @returns {readonly string[]} Visitor keys of the node.
  */
-export function getKeys(node: Object): Array {
+export function getKeys(node: object): any[] {
     return Object.keys(node).filter(filterKey);
 }
 
@@ -40,8 +40,8 @@ export function getKeys(node: Object): Array {
  * @param {VisitorKeys} additionalKeys The additional keys.
  * @returns {VisitorKeys} The union set.
  */
-export function unionWith(additionalKeys: Object): Object {
-    const retv: Object = /** @type {{
+export function unionWith(additionalKeys: object): object {
+    const retv: object = /** @type {{
         [type: string]: ReadonlyArray<string>
     }} */ (Object.assign({}, KEYS));
 

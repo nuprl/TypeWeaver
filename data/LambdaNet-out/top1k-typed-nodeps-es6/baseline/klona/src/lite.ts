@@ -1,7 +1,7 @@
 export function klona(x: Function): HTMLDivElement {
 	if (typeof x !== 'object') return x;
 
-	var k: Number, tmp: Object, str: Number=Object.prototype.toString.call(x);
+	var k: number, tmp: object, str: number=Object.prototype.toString.call(x);
 
 	if (str === '[object Object]') {
 		if (x.constructor !== Object && typeof x.constructor === 'function') {

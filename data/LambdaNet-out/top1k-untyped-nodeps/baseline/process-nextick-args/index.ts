@@ -9,12 +9,12 @@ if (typeof process === 'undefined' ||
   module.exports = process
 }
 
-function nextTick(fn: Function, arg1: String, arg2: String, arg3: String): Boolean {
+function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): boolean {
   if (typeof fn !== 'function') {
     throw new TypeError('"callback" argument must be a function');
   }
-  var len: Number = arguments.length;
-  var args: Array, i: Number;
+  var len: number = arguments.length;
+  var args: any[], i: number;
   switch (len) {
   case 0:
   case 1:

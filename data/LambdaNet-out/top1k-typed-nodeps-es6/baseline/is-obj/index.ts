@@ -1,4 +1,4 @@
-export default function isObject(value: String): Boolean {
-	const type: String = typeof value;
+export default function isObject(value: string): boolean {
+	const type: string = typeof value;
 	return value !== null && (type === 'object' || type === 'function');
 }

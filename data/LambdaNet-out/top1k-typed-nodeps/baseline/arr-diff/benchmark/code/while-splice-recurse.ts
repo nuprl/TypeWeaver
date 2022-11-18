@@ -1,20 +1,20 @@
 'use strict';
 
-module.exports = function diff(arr: String, arrays: Array): String {
+module.exports = function diff(arr: string, arrays: any[]): string {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
-  var len: Number = arrays.length;
+  var len: number = arrays.length;
   for (var i = 0; i < len; i++) {
     remove(arr, arrays[i]);
   }
   return arr;
 };
 
-function remove(arr: Array, ele: String): String {
-  var idx: Number = arr.indexOf(ele);
+function remove(arr: any[], ele: string): string {
+  var idx: number = arr.indexOf(ele);
   if (idx === -1) {
     return;
   }
-  var val: String = arr.pop();
+  var val: string = arr.pop();
   if (val === ele) {
     return;
   }

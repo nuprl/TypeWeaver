@@ -16,7 +16,7 @@ export class TokContext {
   }
 }
 
-export const types: Object = {
+export const types: object = {
   b_stat: new TokContext("{", false),
   b_expr: new TokContext("{", true),
   b_tmpl: new TokContext("${", false),
@@ -39,8 +39,8 @@ pp.curContext = function() {
   return this.context[this.context.length - 1]
 }
 
-pp.braceIsBlock = function(prevType: Number) {
-  let parent: String = this.curContext()
+pp.braceIsBlock = function(prevType: number) {
+  let parent: string = this.curContext()
   if (parent === types.f_expr || parent === types.f_stat)
     return true
   if (prevType === tt.colon && (parent === types.b_stat || parent === types.b_expr))
@@ -69,7 +69,7 @@ pp.inGeneratorContext = function() {
   return false
 }
 
-pp.updateContext = function(prevType: Number) {
+pp.updateContext = function(prevType: number) {
   let update: Function, type: RegExpValidationState = this.type
   if (type.keyword && prevType === tt.dot)
     this.exprAllowed = false
@@ -81,7 +81,7 @@ pp.updateContext = function(prevType: Number) {
 
 // Used to handle egde cases when token context could not be inferred correctly during tokenization phase
 
-pp.overrideContext = function(tokenCtx: String) {
+pp.overrideContext = function(tokenCtx: string) {
   if (this.curContext() !== tokenCtx) {
     this.context[this.context.length - 1] = tokenCtx
   }
@@ -94,14 +94,14 @@ tt.parenR.updateContext = tt.braceR.updateContext = function() {
     this.exprAllowed = true
     return
   }
-  let out: String = this.context.pop()
+  let out: string = this.context.pop()
   if (out === types.b_stat && this.curContext().token === "function") {
     out = this.context.pop()
   }
   this.exprAllowed = !out.isExpr
 }
 
-tt.braceL.updateContext = function(prevType: Number) {
+tt.braceL.updateContext = function(prevType: number) {
   this.context.push(this.braceIsBlock(prevType) ? types.b_stat : types.b_expr)
   this.exprAllowed = true
 }
@@ -111,8 +111,8 @@ tt.dollarBraceL.updateContext = function() {
   this.exprAllowed = true
 }
 
-tt.parenL.updateContext = function(prevType: Number) {
-  let statementParens: Boolean = prevType === tt._if || prevType === tt._for || prevType === tt._with || prevType === tt._while
+tt.parenL.updateContext = function(prevType: number) {
+  let statementParens: boolean = prevType === tt._if || prevType === tt._for || prevType === tt._with || prevType === tt._while
   this.context.push(statementParens ? types.p_stat : types.p_expr)
   this.exprAllowed = true
 }
@@ -121,7 +121,7 @@ tt.incDec.updateContext = function() {
   // tokExprAllowed stays unchanged
 }
 
-tt._function.updateContext = tt._class.updateContext = function(prevType: Number) {
+tt._function.updateContext = tt._class.updateContext = function(prevType: number) {
   if (prevType.beforeExpr && prevType !== tt._else &&
       !(prevType === tt.semi && this.curContext() !== types.p_stat) &&
       !(prevType === tt._return && lineBreak.test(this.input.slice(this.lastTokEnd, this.start))) &&
@@ -140,9 +140,9 @@ tt.backQuote.updateContext = function() {
   this.exprAllowed = false
 }
 
-tt.star.updateContext = function(prevType: Number) {
+tt.star.updateContext = function(prevType: number) {
   if (prevType === tt._function) {
-    let index: Number = this.context.length - 1
+    let index: number = this.context.length - 1
     if (this.context[index] === types.f_expr)
       this.context[index] = types.f_expr_gen
     else
@@ -151,8 +151,8 @@ tt.star.updateContext = function(prevType: Number) {
   this.exprAllowed = true
 }
 
-tt.name.updateContext = function(prevType: Number) {
-  let allowed: Boolean = false
+tt.name.updateContext = function(prevType: number) {
+  let allowed: boolean = false
   if (this.options.ecmaVersion >= 6 && prevType !== tt.dot) {
     if (this.value === "of" && !this.exprAllowed ||
         this.value === "yield" && this.inGeneratorContext())

@@ -1,26 +1,25 @@
 index.ts(5,9): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(7,12): error TS2339: Property 'generate' does not exist on type 'Object'.
+index.ts(7,12): error TS2339: Property 'generate' does not exist on type 'object'.
 index.ts(10,30): error TS2304: Cannot find name 'Void'.
-index.ts(20,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(24,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(24,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 index.ts(24,35): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'ArrayBufferLike'.
-      Type 'String' is missing the following properties from type 'SharedArrayBuffer': byteLength, [Symbol.species], [Symbol.toStringTag]
-index.ts(34,11): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
+    Argument of type 'string' is not assignable to parameter of type 'ArrayBufferLike'.
+index.ts(34,11): error TS2322: Type 'Uint8Array' is not assignable to type 'string'.
 index.ts(34,40): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'ArrayBufferLike'.
-index.ts(35,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ArrayBufferView'.
-  Type 'String' is missing the following properties from type 'ArrayBufferView': buffer, byteLength, byteOffset
+    Argument of type 'string' is not assignable to parameter of type 'ArrayBufferLike'.
+index.ts(35,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'ArrayBufferView'.
+index.ts(36,7): error TS2322: Type 'string' is not assignable to type 'object'.
 index.ts(38,19): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
 index.ts(38,36): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
-index.ts(41,11): error TS2322: Type 'Uint8Array' is not assignable to type 'String'.
+index.ts(41,11): error TS2322: Type 'Uint8Array' is not assignable to type 'string'.
 index.ts(41,40): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'ArrayBufferLike'.
+    Argument of type 'string' is not assignable to parameter of type 'ArrayBufferLike'.
 index.ts(42,12): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
-index.ts(56,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
+index.ts(43,7): error TS2322: Type 'string' is not assignable to type 'object'.
+index.ts(56,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'string'.
 index.ts(57,23): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 index.ts(61,21): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 

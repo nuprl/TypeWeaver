@@ -25,18 +25,18 @@
 /*jslint vars:false, bitwise:true*/
 /*jshint indent:4*/
 /*global exports:true*/
-(function clone(exports: String): String {
+(function clone(exports: string): string {
     'use strict';
 
-    var Syntax: Object,
-        VisitorOption: Object,
-        VisitorKeys: Object,
-        BREAK: Number,
+    var Syntax: object,
+        VisitorOption: object,
+        VisitorKeys: object,
+        BREAK: number,
         SKIP: Function,
-        REMOVE: String;
+        REMOVE: string;
 
-    function deepCopy(obj: Object): Object {
-        var ret: Object = {}, key: String, val: String;
+    function deepCopy(obj: object): object {
+        var ret: object = {}, key: string, val: string;
         for (key in obj) {
             if (obj.hasOwnProperty(key)) {
                 val = obj[key];
@@ -53,8 +53,8 @@
     // based on LLVM libc++ upper_bound / lower_bound
     // MIT License
 
-    function upperBound(array: Array, func: Function): Number {
-        var diff: Number, len: Number, i: Number, current: String;
+    function upperBound(array: any[], func: Function): number {
+        var diff: number, len: number, i: number, current: string;
 
         len = array.length;
         i = 0;
@@ -239,16 +239,16 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: String, key: String): Void {
+    function Reference(parent: string, key: string): Void {
         this.parent = parent;
         this.key = key;
     }
 
-    Reference.prototype.replace = function replace(node: Object): Void {
+    Reference.prototype.replace = function replace(node: object): Void {
         this.parent[this.key] = node;
     };
 
-    Reference.prototype.remove = function remove(): Boolean {
+    Reference.prototype.remove = function remove(): boolean {
         if (Array.isArray(this.parent)) {
             this.parent.splice(this.key, 1);
             return true;
@@ -258,7 +258,7 @@
         }
     };
 
-    function Element(node: Object, path: String, wrap: String, ref: Function): Void {
+    function Element(node: object, path: string, wrap: string, ref: Function): Void {
         this.node = node;
         this.path = path;
         this.wrap = wrap;
@@ -269,10 +269,10 @@
 
     // API:
     // return property path array from root to current node
-    Controller.prototype.path = function path(): Object {
-        var i: Number, iz: Function, j: Number, jz: Function, result: Array, element: Element;
+    Controller.prototype.path = function path(): object {
+        var i: number, iz: Function, j: number, jz: Function, result: any[], element: Element;
 
-        function addToPath(result: Array, path: String): Void {
+        function addToPath(result: any[], path: string): Void {
             if (Array.isArray(path)) {
                 for (j = 0, jz = path.length; j < jz; ++j) {
                     result.push(path[j]);
@@ -300,14 +300,14 @@
     // API:
     // return type of current node
     Controller.prototype.type = function () {
-        var node: Object = this.current();
+        var node: object = this.current();
         return node.type || this.__current.wrap;
     };
 
     // API:
     // return array of parent elements
-    Controller.prototype.parents = function parents(): Array {
-        var i: Number, iz: Function, result: Array;
+    Controller.prototype.parents = function parents(): any[] {
+        var i: number, iz: Function, result: any[];
 
         // first node is sentinel
         result = [];
@@ -320,12 +320,12 @@
 
     // API:
     // return current node
-    Controller.prototype.current = function current(): Object {
+    Controller.prototype.current = function current(): object {
         return this.__current.node;
     };
 
-    Controller.prototype.__execute = function __execute(callback: Function, element: Element): Object {
-        var previous: Function, result: Object;
+    Controller.prototype.__execute = function __execute(callback: Function, element: Element): object {
+        var previous: Function, result: object;
 
         result = undefined;
 
@@ -364,7 +364,7 @@
         this.notify(REMOVE);
     };
 
-    Controller.prototype.__initialize = function(root: String, visitor: Object) {
+    Controller.prototype.__initialize = function(root: string, visitor: object) {
         this.visitor = visitor;
         this.root = root;
         this.__worklist = [];
@@ -384,18 +384,18 @@
         }
     };
 
-    function isNode(node: Object): Boolean {
+    function isNode(node: object): boolean {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: String, key: String): Boolean {
+    function isProperty(nodeType: string, key: string): boolean {
         return (nodeType === Syntax.ObjectExpression || nodeType === Syntax.ObjectPattern) && 'properties' === key;
     }
   
-    function candidateExistsInLeaveList(leavelist: Array, candidate: Number): Boolean {
+    function candidateExistsInLeaveList(leavelist: any[], candidate: number): boolean {
         for (var i = leavelist.length - 1; i >= 0; --i) {
             if (leavelist[i].node === candidate) {
                 return true;
@@ -404,18 +404,18 @@
         return false;
     }
 
-    Controller.prototype.traverse = function traverse(root: String, visitor: Object): Void {
-        var worklist: Array,
-            leavelist: Array,
+    Controller.prototype.traverse = function traverse(root: string, visitor: object): Void {
+        var worklist: any[],
+            leavelist: any[],
             element: Map,
-            node: Object,
-            nodeType: String,
-            ret: String,
-            key: String,
-            current: Number,
-            current2: Number,
-            candidates: Array,
-            candidate: Array,
+            node: object,
+            nodeType: string,
+            ret: string,
+            key: string,
+            current: number,
+            current2: number,
+            candidates: any[],
+            candidate: any[],
             sentinel: Function;
 
         this.__initialize(root, visitor);
@@ -510,26 +510,26 @@
         }
     };
 
-    Controller.prototype.replace = function replace(root: String, visitor: Object): String {
-        var worklist: Array,
-            leavelist: Array,
-            node: Object,
-            nodeType: String,
-            target: Number,
+    Controller.prototype.replace = function replace(root: string, visitor: object): string {
+        var worklist: any[],
+            leavelist: any[],
+            node: object,
+            nodeType: string,
+            target: number,
             element: HTMLElement,
-            current: Number,
-            current2: Number,
-            candidates: Array,
-            candidate: Array,
+            current: number,
+            current2: number,
+            candidates: any[],
+            candidate: any[],
             sentinel: Function,
-            outer: Object,
-            key: String;
+            outer: object,
+            key: string;
 
         function removeElem(element: HTMLInputElement): Void {
-            var i: Number,
-                key: String,
+            var i: number,
+                key: string,
                 nextElem: Record,
-                parent: String;
+                parent: string;
 
             if (element.ref.remove()) {
                 // When the reference is an element of an array.
@@ -665,20 +665,20 @@
         return outer.root;
     };
 
-    function traverse(root: String, visitor: String): String {
+    function traverse(root: string, visitor: string): string {
         var controller: HTMLElement = new Controller();
         return controller.traverse(root, visitor);
     }
 
-    function replace(root: String, visitor: String): String {
-        var controller: String = new Controller();
+    function replace(root: string, visitor: string): string {
+        var controller: string = new Controller();
         return controller.replace(root, visitor);
     }
 
-    function extendCommentRange(comment: HTMLElement, tokens: Array): Object {
-        var target: Number;
+    function extendCommentRange(comment: HTMLElement, tokens: any[]): object {
+        var target: number;
 
-        target = upperBound(tokens, function search(token: Object): Boolean {
+        target = upperBound(tokens, function search(token: object): boolean {
             return token.range[0] > comment.range[0];
         });
 
@@ -696,9 +696,9 @@
         return comment;
     }
 
-    function attachComments(tree: Object, providedComments: Array, tokens: Array): Object {
+    function attachComments(tree: object, providedComments: any[], tokens: any[]): object {
         // At first, we should calculate extended comment ranges.
-        var comments: Array = [], comment: HTMLElement, len: String, i: Number, cursor: Number;
+        var comments: any[] = [], comment: HTMLElement, len: string, i: number, cursor: number;
 
         if (!tree.range) {
             throw new Error('attachComments needs range information');
@@ -724,7 +724,7 @@
         // This is based on John Freeman's implementation.
         cursor = 0;
         traverse(tree, {
-            enter: function (node: Object) {
+            enter: function (node: object) {
                 var comment: HTMLElement;
 
                 while (cursor < comments.length) {
@@ -757,7 +757,7 @@
 
         cursor = 0;
         traverse(tree, {
-            leave: function (node: Object) {
+            leave: function (node: object) {
                 var comment: HTMLElement;
 
                 while (cursor < comments.length) {

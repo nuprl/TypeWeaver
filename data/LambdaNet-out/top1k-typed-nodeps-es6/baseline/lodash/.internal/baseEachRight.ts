@@ -9,15 +9,15 @@ import isArrayLike from '../isArrayLike.js'
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array|Object} Returns `collection`.
  */
-function baseEachRight(collection: Array, iteratee: Function): Array {
+function baseEachRight(collection: any[], iteratee: Function): any[] {
   if (collection == null) {
     return collection
   }
   if (!isArrayLike(collection)) {
     return baseForOwnRight(collection, iteratee)
   }
-  const iterable: Object = Object(collection)
-  let length: Number = collection.length
+  const iterable: object = Object(collection)
+  let length: number = collection.length
 
   while (length--) {
     if (iteratee(iterable[length], length, iterable) === false) {

@@ -16,6 +16,6 @@ import baseFlatten from './.internal/baseFlatten.js'
  * at(object, ['a[0].b.c', 'a[1]'])
  * // => [3, 4]
  */
-const at: Function = (object: Object, ...paths) => baseAt(object, baseFlatten(paths, 1))
+const at: Function = (object: object, ...paths) => baseAt(object, baseFlatten(paths, 1))
 
 export default at

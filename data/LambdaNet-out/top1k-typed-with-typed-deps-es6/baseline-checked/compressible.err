@@ -1,23 +1,12 @@
-index.ts(49,26): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(49,7): error TS2740: Type 'MimeEntry' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 index.ts(52,20): error TS2339: Property 'compressible' does not exist on type 'Element'.
 index.ts(53,17): error TS2339: Property 'compressible' does not exist on type 'Element'.
-index.ts(57,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+index.ts(57,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
-scripts/version-history.ts(35,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/version-history.ts(38,7): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
 scripts/version-history.ts(40,22): error TS2339: Property 'getFullYear' does not exist on type 'HTMLInputElement'.
 scripts/version-history.ts(41,17): error TS2339: Property 'getMonth' does not exist on type 'HTMLInputElement'.
 scripts/version-history.ts(42,17): error TS2339: Property 'getDate' does not exist on type 'HTMLInputElement'.
-scripts/version-history.ts(48,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-scripts/version-history.ts(49,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+scripts/version-history.ts(48,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 

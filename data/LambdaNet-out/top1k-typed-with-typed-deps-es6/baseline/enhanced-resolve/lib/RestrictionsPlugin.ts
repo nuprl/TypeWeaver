@@ -8,13 +8,13 @@
 /** @typedef {import("./Resolver")} Resolver */
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 
-const slashCode: Number = "/".charCodeAt(0);
-const backslashCode: Number = "\\".charCodeAt(0);
+const slashCode: number = "/".charCodeAt(0);
+const backslashCode: number = "\\".charCodeAt(0);
 
-const isInside: Function = (path: String, parent: Array) => {
+const isInside: Function = (path: string, parent: any[]) => {
 	if (!path.startsWith(parent)) return false;
 	if (path.length === parent.length) return true;
-	const charCode: Number = path.charCodeAt(parent.length);
+	const charCode: number = path.charCodeAt(parent.length);
 	return charCode === slashCode || charCode === backslashCode;
 };
 
@@ -35,9 +35,9 @@ export default class RestrictionsPlugin {
 	apply(resolver) {
 		resolver
 			.getHook(this.source)
-			.tapAsync("RestrictionsPlugin", (request: Object, resolveContext: Object, callback: Function) => {
+			.tapAsync("RestrictionsPlugin", (request: object, resolveContext: object, callback: Function) => {
 				if (typeof request.path === "string") {
-					const path: Number = request.path;
+					const path: number = request.path;
 					for (const rule of this.restrictions) {
 						if (typeof rule === "string") {
 							if (!isInside(path, rule)) {

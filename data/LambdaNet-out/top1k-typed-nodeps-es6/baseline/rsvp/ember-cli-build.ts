@@ -12,11 +12,11 @@ import watchify from 'broccoli-watchify';
 import concat from 'broccoli-concat';
 import stew from 'broccoli-stew';
 
-const env: Object = stew.env;
+const env: object = stew.env;
 const map: Function = stew.map;
 
-export default function (app: String) {
-  const lib: String = funnel('lib', { destDir: 'lib' });
+export default function (app: string) {
+  const lib: string = funnel('lib', { destDir: 'lib' });
 
   const testDir: Function = funnel('test', { destDir: 'test' });
   const testFiles: Function = funnel('test', {
@@ -29,7 +29,7 @@ export default function (app: String) {
     destDir: 'test'
   });
 
-  const es5: String = new Babel(lib, {
+  const es5: string = new Babel(lib, {
     plugins: [
       'transform-es2015-arrow-functions',
       'transform-es2015-computed-properties',
@@ -46,7 +46,7 @@ export default function (app: String) {
   });
 
   // build RSVP itself
-  const rsvp: String = new Rollup(es5, {
+  const rsvp: string = new Rollup(es5, {
     rollup: {
       input: 'lib/rsvp.js',
       output: [
@@ -85,12 +85,12 @@ export default function (app: String) {
     browserify: { debug: true, entries: ['./test/index.js'] }
   });
 
-  const header: String = map(
+  const header: string = map(
     funnel('config', { files: ['versionTemplate.txt'], destDir: 'config' }),
-    (content: String) => content.replace(/VERSION_PLACEHOLDER_STRING/, version())
+    (content: string) => content.replace(/VERSION_PLACEHOLDER_STRING/, version())
   );
 
-  function concatAs(tree: String, outputFile: String): Array {
+  function concatAs(tree: string, outputFile: string): any[] {
     return concat(merge([tree, header]), {
       headerFiles: ['config/versionTemplate.txt'],
       inputFiles: ['rsvp.js'],
@@ -98,8 +98,8 @@ export default function (app: String) {
     });
   }
 
-  function production(dist: String, header: String): Object {
-    let result: Object;
+  function production(dist: string, header: string): object {
+    let result: object;
     env('production', () => {
       result = uglify(concatAs(dist, 'rsvp.min.js'), {
         compress: {
@@ -112,7 +112,7 @@ export default function (app: String) {
     return result;
   }
 
-  function development(dist: String, header: String): String {
+  function development(dist: string, header: string): string {
     return concatAs(dist, 'rsvp.js');
   }
 

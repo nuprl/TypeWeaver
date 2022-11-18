@@ -1,6 +1,6 @@
 import lenientFunction from './lenient.js';
 
-export default function yn(value: String, {
+export default function yn(value: string, {
 	lenient = false,
 	default: default_,
 } = {}): Void {

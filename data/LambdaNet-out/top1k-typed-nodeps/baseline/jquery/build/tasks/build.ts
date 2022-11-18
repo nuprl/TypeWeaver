@@ -7,15 +7,15 @@
 "use strict";
 
 module.exports = function( grunt: HTMLElement ) {
-	const fs: String = require( "fs" );
-	const path: String = require( "path" );
-	const rollup: String = require( "rollup" );
-	const slimBuildFlags: String = require( "./lib/slim-build-flags" );
+	const fs: string = require( "fs" );
+	const path: string = require( "path" );
+	const rollup: string = require( "rollup" );
+	const slimBuildFlags: string = require( "./lib/slim-build-flags" );
 	const rollupFileOverrides: Function = require( "./lib/rollup-plugin-file-overrides" );
-	const Insight: Array = require( "insight" );
-	const pkg: String = require( "../../package.json" );
-	const srcFolder: String = path.resolve( `${ __dirname }/../../src` );
-	const read: Function = function( fileName: String ) {
+	const Insight: any[] = require( "insight" );
+	const pkg: string = require( "../../package.json" );
+	const srcFolder: string = path.resolve( `${ __dirname }/../../src` );
+	const read: Function = function( fileName: string ) {
 		return grunt.file.read( `${ srcFolder }/${ fileName }` );
 	};
 
@@ -24,11 +24,11 @@ module.exports = function( grunt: HTMLElement ) {
 	const wrapper: Promise = read( "wrapper.js" )
 		.split( /[\x20\t]*\/\/ @CODE\n(?:[\x20\t]*\/\/[^\n]+\n)*/ );
 
-	const inputFileName: String = "jquery.js";
-	const inputRollupOptions: Object = {
+	const inputFileName: string = "jquery.js";
+	const inputRollupOptions: object = {
 		input: `${ srcFolder }/${ inputFileName }`
 	};
-	const outputRollupOptions: Object = {
+	const outputRollupOptions: object = {
 
 		// The ESM format is not actually used as we strip it during
 		// the build; it's just that it doesn't generate any extra
@@ -42,11 +42,11 @@ module.exports = function( grunt: HTMLElement ) {
 	};
 	const fileOverrides: Map = new Map();
 
-	function getOverride( filePath: String ): String {
+	function getOverride( filePath: string ): string {
 		return fileOverrides.get( path.resolve( filePath ) );
 	}
 
-	function setOverride( filePath: String, source: String ): Void {
+	function setOverride( filePath: string, source: string ): Void {
 
 		// We want normalized paths in overrides as they will be matched
 		// against normalized paths in the file overrides Rollup plugin.
@@ -61,18 +61,18 @@ module.exports = function( grunt: HTMLElement ) {
 		const done: Function = this.async();
 
 		try {
-			const flags: Object = this.flags;
-			const optIn: String = flags[ "*" ];
-			let name: String = grunt.option( "filename" );
-			const minimum: Array = this.data.minimum;
-			const removeWith: Object = this.data.removeWith;
-			const excluded: String = [];
-			const included: Array = [];
-			let version: String = grunt.config( "pkg.version" );
+			const flags: object = this.flags;
+			const optIn: string = flags[ "*" ];
+			let name: string = grunt.option( "filename" );
+			const minimum: any[] = this.data.minimum;
+			const removeWith: object = this.data.removeWith;
+			const excluded: string = [];
+			const included: any[] = [];
+			let version: string = grunt.config( "pkg.version" );
 
 			// We'll skip printing the whole big exclusions for a bare `build:*:*:slim` which
 			// usually comes from `custom:slim`.
-			const isPureSlim: Boolean = !!( flags.slim && flags[ "*" ] &&
+			const isPureSlim: boolean = !!( flags.slim && flags[ "*" ] &&
 				Object.keys( flags ).length === 2 );
 
 			delete flags[ "*" ];
@@ -91,10 +91,10 @@ module.exports = function( grunt: HTMLElement ) {
 			 * @param {String} [prepend] Prepend this to the module name.
 			 *  Indicates we're walking a directory
 			 */
-			const excludeList: Function = ( list: Array, prepend: String ) => {
+			const excludeList: Function = ( list: any[], prepend: string ) => {
 				if ( list ) {
 					prepend = prepend ? `${ prepend }/` : "";
-					list.forEach( function( module: Number ) {
+					list.forEach( function( module: number ) {
 
 						// Exclude var modules as well
 						if ( module === "var" ) {
@@ -130,11 +130,11 @@ module.exports = function( grunt: HTMLElement ) {
 			 *  the src directory starting with + or - to indicate
 			 *  whether it should included or excluded
 			 */
-			const excluder: Function = (flag: String) => {
-				let additional: Object;
+			const excluder: Function = (flag: string) => {
+				let additional: object;
 				const m: Promise = /^(\+|\-|)([\w\/-]+)$/.exec( flag );
-				const exclude: Boolean = m[ 1 ] === "-";
-				const module: String = m[ 2 ];
+				const exclude: boolean = m[ 1 ] === "-";
+				const module: string = m[ 2 ];
 
 				if ( exclude ) {
 
@@ -213,7 +213,7 @@ module.exports = function( grunt: HTMLElement ) {
 
 			// Replace exports/global with a noop noConflict
 			if ( excluded.includes( "exports/global" ) ) {
-				const index: Number = excluded.indexOf( "exports/global" );
+				const index: number = excluded.indexOf( "exports/global" );
 				setOverride( `${ srcFolder }/exports/global.js`,
 					"import jQuery from \"../core.js\";\n\n" +
 						"jQuery.noConflict = function() {};" );
@@ -221,7 +221,7 @@ module.exports = function( grunt: HTMLElement ) {
 			}
 
 			// Set a desired AMD name.
-			let amdName: String = grunt.option( "amd" );
+			let amdName: string = grunt.option( "amd" );
 			if ( amdName != null ) {
 				if ( amdName ) {
 					grunt.log.writeln( "Naming jQuery with AMD name: " + amdName );
@@ -254,7 +254,7 @@ module.exports = function( grunt: HTMLElement ) {
 				// Set pkg.version to version with excludes or with the "slim" marker,
 				// so minified file picks it up but skip the commit hash the same way
 				// it's done for the full build.
-				const commitlessVersion: String = version.replace( " " + process.env.COMMIT, "" );
+				const commitlessVersion: string = version.replace( " " + process.env.COMMIT, "" );
 				grunt.config.set( "pkg.version", commitlessVersion );
 				grunt.verbose.writeln( "Version changed to " + commitlessVersion );
 
@@ -277,7 +277,7 @@ module.exports = function( grunt: HTMLElement ) {
 			if ( included.length ) {
 				setOverride( inputRollupOptions.input,
 					getOverride( inputRollupOptions.input ) + included
-						.map( (module: String) => `import "./${module}.js";` )
+						.map( (module: string) => `import "./${module}.js";` )
 						.join( "\n" ) );
 			}
 
@@ -288,7 +288,7 @@ module.exports = function( grunt: HTMLElement ) {
 
 			const { output: [ { code } ] } = await bundle.generate( outputRollupOptions );
 
-			const compiledContents: String = code
+			const compiledContents: string = code
 
 				// Embed Version
 				.replace( /@VERSION/g, version )
@@ -323,8 +323,8 @@ module.exports = function( grunt: HTMLElement ) {
 	//
 	//   grunt custom:slim
 	grunt.registerTask( "custom", function() {
-		const args: Array = this.args;
-		const modules: String = args.length ?
+		const args: any[] = this.args;
+		const modules: string = args.length ?
 			args[ 0 ].split( "," ).join( ":" ) :
 			"";
 		const done: Function = this.async();
@@ -333,19 +333,19 @@ module.exports = function( grunt: HTMLElement ) {
 			pkg: pkg
 		} );
 
-		function exec( trackingAllowed: Boolean ): Void {
-			let tracks: Array = args.length ? args[ 0 ].split( "," ) : [];
-			const defaultPath: Array = [ "build", "custom" ];
+		function exec( trackingAllowed: boolean ): Void {
+			let tracks: any[] = args.length ? args[ 0 ].split( "," ) : [];
+			const defaultPath: any[] = [ "build", "custom" ];
 
-			tracks = tracks.map( function( track: String ) {
+			tracks = tracks.map( function( track: string ) {
 				return track.replace( /\//g, "+" );
 			} );
 
 			if ( trackingAllowed ) {
 
 				// Track individuals
-				tracks.forEach( function( module: Number ) {
-					const path: String = defaultPath.concat( [ "individual" ], module );
+				tracks.forEach( function( module: number ) {
+					const path: string = defaultPath.concat( [ "individual" ], module );
 
 					insight.track.apply( insight, path );
 				} );
@@ -362,7 +362,7 @@ module.exports = function( grunt: HTMLElement ) {
 
 		// Ask for permission the first time
 		if ( insight.optOut === undefined ) {
-			insight.askPermission( null, function( _error: Object, result: Array ) {
+			insight.askPermission( null, function( _error: object, result: any[] ) {
 				exec( result );
 			} );
 		} else {

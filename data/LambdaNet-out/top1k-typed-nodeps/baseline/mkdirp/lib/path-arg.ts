@@ -1,6 +1,6 @@
-const platform: Number = process.env.__TESTING_MKDIRP_PLATFORM__ || process.platform
+const platform: number = process.env.__TESTING_MKDIRP_PLATFORM__ || process.platform
 const { resolve, parse } = require('path')
-const pathArg: Function = (path: String) => {
+const pathArg: Function = (path: string) => {
   if (/\0/.test(path)) {
     // simulate same failure that node raises
     throw Object.assign(

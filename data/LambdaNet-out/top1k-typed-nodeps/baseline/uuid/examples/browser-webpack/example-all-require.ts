@@ -13,7 +13,7 @@ const {
 
 const { default: testpage } = require('../utils/testpage');
 
-testpage(function (addTest: Object, done: Function) {
+testpage(function (addTest: object, done: Function) {
   addTest('Named exports');
 
   addTest('uuidv1()', uuidv1());
@@ -30,7 +30,7 @@ testpage(function (addTest: Object, done: Function) {
   //
   // Note: Custom namespaces should be a UUID string specific to your application!
   // E.g. the one here was generated using this modules `uuid` CLI.
-  const MY_NAMESPACE: String = '55238d15-c926-4598-b49d-cf4e913ba13c';
+  const MY_NAMESPACE: string = '55238d15-c926-4598-b49d-cf4e913ba13c';
   addTest('uuidv3() MY_NAMESPACE', uuidv3('Hello, World!', MY_NAMESPACE));
 
   // ... using predefined DNS namespace (for domain names)

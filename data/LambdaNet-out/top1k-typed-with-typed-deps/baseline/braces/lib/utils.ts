@@ -1,6 +1,6 @@
 'use strict';
 
-exports.isInteger = (num: String) => {
+exports.isInteger = (num: string) => {
   if (typeof num === 'number') {
     return Number.isInteger(num);
   }
@@ -14,13 +14,13 @@ exports.isInteger = (num: String) => {
  * Find a node of the given type
  */
 
-exports.find = (node: Object, type: Number) => node.nodes.find((node: Object) => node.type === type);
+exports.find = (node: object, type: number) => node.nodes.find((node: object) => node.type === type);
 
 /**
  * Find a node of the given type
  */
 
-exports.exceedsLimit = (min: Number, max: Number, step: Number = 1, limit: Number) => {
+exports.exceedsLimit = (min: number, max: number, step: number = 1, limit: number) => {
   if (limit === false) return false;
   if (!exports.isInteger(min) || !exports.isInteger(max)) return false;
   return ((Number(max) - Number(min)) / Number(step)) >= limit;
@@ -30,8 +30,8 @@ exports.exceedsLimit = (min: Number, max: Number, step: Number = 1, limit: Numbe
  * Escape the given node with '\\' before node.value
  */
 
-exports.escapeNode = (block: Object, n: Number = 0, type: Number) => {
-  let node: Object = block.nodes[n];
+exports.escapeNode = (block: object, n: number = 0, type: number) => {
+  let node: object = block.nodes[n];
   if (!node) return;
 
   if ((type && node.type === type) || node.type === 'open' || node.type === 'close') {
@@ -46,7 +46,7 @@ exports.escapeNode = (block: Object, n: Number = 0, type: Number) => {
  * Returns true if the given brace node should be enclosed in literal braces
  */
 
-exports.encloseBrace = (node: Object) => {
+exports.encloseBrace = (node: object) => {
   if (node.type !== 'brace') return false;
   if ((node.commas >> 0 + node.ranges >> 0) === 0) {
     node.invalid = true;
@@ -59,7 +59,7 @@ exports.encloseBrace = (node: Object) => {
  * Returns true if a brace node is invalid.
  */
 
-exports.isInvalidBrace = (block: Object) => {
+exports.isInvalidBrace = (block: object) => {
   if (block.type !== 'brace') return false;
   if (block.invalid === true || block.dollar) return true;
   if ((block.commas >> 0 + block.ranges >> 0) === 0) {
@@ -77,7 +77,7 @@ exports.isInvalidBrace = (block: Object) => {
  * Returns true if a node is an open or close node
  */
 
-exports.isOpenOrClose = (node: Object) => {
+exports.isOpenOrClose = (node: object) => {
   if (node.type === 'open' || node.type === 'close') {
     return true;
   }
@@ -88,7 +88,7 @@ exports.isOpenOrClose = (node: Object) => {
  * Reduce an array of text nodes.
  */
 
-exports.reduce = (nodes: Array) => nodes.reduce((acc: Array, node: Object) => {
+exports.reduce = (nodes: any[]) => nodes.reduce((acc: any[], node: object) => {
   if (node.type === 'text') acc.push(node.value);
   if (node.type === 'range') node.type = 'text';
   return acc;
@@ -99,10 +99,10 @@ exports.reduce = (nodes: Array) => nodes.reduce((acc: Array, node: Object) => {
  */
 
 exports.flatten = (...args) => {
-  const result: Array = [];
-  const flat: Function = (arr: Array) => {
+  const result: any[] = [];
+  const flat: Function = (arr: any[]) => {
     for (let i = 0; i < arr.length; i++) {
-      let ele: String = arr[i];
+      let ele: string = arr[i];
       Array.isArray(ele) ? flat(ele, result) : ele !== void 0 && result.push(ele);
     }
     return result;

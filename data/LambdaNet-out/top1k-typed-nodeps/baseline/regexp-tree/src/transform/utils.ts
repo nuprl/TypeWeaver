@@ -12,12 +12,12 @@
  *
  * {{{a, b}, c}, d} -> [a, b, c, d]
  */
-function disjunctionToList(node: NodePath): Array {
+function disjunctionToList(node: NodePath): any[] {
   if (node.type !== 'Disjunction') {
     throw new TypeError(`Expected "Disjunction" node, got "${node.type}"`);
   }
 
-  const list: Array = [];
+  const list: any[] = [];
 
   if (node.left && node.left.type === 'Disjunction') {
     list.push(...disjunctionToList(node.left), node.right);
@@ -35,8 +35,8 @@ function disjunctionToList(node: NodePath): Array {
  *
  * [a, b, c, d] -> {{{a, b}, c}, d}
  */
-function listToDisjunction(list: Array): Array {
-  return list.reduce((left: String, right: String) => {
+function listToDisjunction(list: any[]): any[] {
+  return list.reduce((left: string, right: string) => {
     return {
       type: 'Disjunction',
       left,
@@ -55,7 +55,7 @@ function listToDisjunction(list: Array): Array {
  * {2,} -> {3,}
  * {2,3} -> {3,4}
  */
-function increaseQuantifierByOne(quantifier: Object): Void {
+function increaseQuantifierByOne(quantifier: object): Void {
   if (quantifier.kind === '*') {
 
     quantifier.kind = '+';

@@ -1,10 +1,10 @@
 if (!Array.isArray) {
-	Array.isArray = function(array: Array) {
+	Array.isArray = function(array: any[]) {
 		return {}.toString.call(array) === '[object Array]';
 	};
 }
 
-function byId(id: String): Map {
+function byId(id: string): Map {
 	return document.getElementById(id);
 }
 
@@ -12,8 +12,8 @@ function byId(id: String): Map {
  * @param {number} depth
  * @return {string}
  */
-function makeIndent(depth: String): String {
-	var INDENT: String = '    ';
+function makeIndent(depth: string): string {
+	var INDENT: string = '    ';
 	if (depth === 1) {
 		return INDENT;
 	} else if (depth < 1) {
@@ -23,7 +23,7 @@ function makeIndent(depth: String): String {
 	if (depth in makeIndent.cache) {
 		return makeIndent.cache[depth];
 	} else {
-		var result: String = INDENT;
+		var result: string = INDENT;
 		for (var i = depth; --i;) {
 			result += INDENT;
 		}
@@ -40,7 +40,7 @@ makeIndent.cache = {};
  * @param {string} key
  * @return {string}
  */
-function stringifyObjectKey(key: String): String {
+function stringifyObjectKey(key: string): string {
 	return /^[a-z0-9_$]+$/i.test(key) ?
 		key :
 		JSON.stringify(key);
@@ -51,7 +51,7 @@ function stringifyObjectKey(key: String): String {
  * @param {Object} object
  * @return {DocumentFragment}
  */
-function inspect(object: Object): Object {
+function inspect(object: object): object {
 
 	var root: Error = document.createDocumentFragment();
 	_inspect(root, object, 0);
@@ -62,7 +62,7 @@ function inspect(object: Object): Object {
 	 * @param {Object} object
 	 * @param {number} depth
 	 */
-	function _inspect(root: HTMLElement, object: Array, depth: Number): Void {
+	function _inspect(root: HTMLElement, object: any[], depth: number): Void {
 		switch (typeof object) {
 			case 'object':
 				if (!object) {
@@ -76,7 +76,7 @@ function inspect(object: Object): Object {
 				span.textContent = ',\n';
 				var comma: HTMLElement = span;
 				if (Array.isArray(object)) {
-					var length: Number = object.length;
+					var length: number = object.length;
 					if (length === 0) {
 						span = span.cloneNode(false);
 						span.textContent = '[]';
@@ -97,7 +97,7 @@ function inspect(object: Object): Object {
 						root.appendChild(span);
 					}
 				} else {
-					var keys: Array = Object.keys(object);
+					var keys: any[] = Object.keys(object);
 					length = keys.length;
 					if (length === 0) {
 						span = span.cloneNode(false);
@@ -110,7 +110,7 @@ function inspect(object: Object): Object {
 						var colon: HTMLElement = span.cloneNode(false);
 						colon.textContent = ': ';
 						for (i = 0; i < length; i++) {
-							var key: String = keys[i];
+							var key: string = keys[i];
 							root.appendChild(indent.cloneNode(true));
 							root.appendChild(document.createTextNode(stringifyObjectKey(key)));
 							root.appendChild(colon.cloneNode(true));
@@ -145,10 +145,10 @@ var output: HTMLElement = byId("output");
 var serialized: HTMLElement = byId("serialized");
 
 function outputUpdated(): Void {
-	var value: Number = style.value;
+	var value: number = style.value;
 	if (value !== style.prevValue) {
 		style.prevValue = value;
-		var css: String = CSSOM.parse(value);
+		var css: string = CSSOM.parse(value);
 		window._last_parsed = css;
 		uncircularOwnProperties(css);
 		output.innerHTML = '';
@@ -160,14 +160,14 @@ function outputUpdated(): Void {
 /**
  * @return {boolean} update happend or not
  */
-function hashChanged(): Boolean {
-	var hash: String = location.hash;
-	var splitted: Array = hash.split("=");
+function hashChanged(): boolean {
+	var hash: string = location.hash;
+	var splitted: any[] = hash.split("=");
 	if (splitted.length < 2) {
 		return false;
 	}
-	var name: String = splitted[0];
-	var value: String = splitted[1];
+	var name: string = splitted[0];
+	var value: string = splitted[1];
 	if (name === "#css") {
 		style.value = decodeURIComponent(value);
 		outputUpdated();

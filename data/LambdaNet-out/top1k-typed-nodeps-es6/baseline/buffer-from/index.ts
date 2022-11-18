@@ -2,21 +2,21 @@
 
 var toString: Function = Object.prototype.toString
 
-var isModern: Boolean = (
+var isModern: boolean = (
   typeof Buffer !== 'undefined' &&
   typeof Buffer.alloc === 'function' &&
   typeof Buffer.allocUnsafe === 'function' &&
   typeof Buffer.from === 'function'
 )
 
-function isArrayBuffer (input: HTMLInputElement): Boolean {
+function isArrayBuffer (input: HTMLInputElement): boolean {
   return toString.call(input).slice(8, -1) === 'ArrayBuffer'
 }
 
-function fromArrayBuffer (obj: Array, byteOffset: Number, length: Number): Object {
+function fromArrayBuffer (obj: any[], byteOffset: number, length: number): object {
   byteOffset >>>= 0
 
-  var maxLength: Number = obj.byteLength - byteOffset
+  var maxLength: number = obj.byteLength - byteOffset
 
   if (maxLength < 0) {
     throw new RangeError("'offset' is out of bounds")
@@ -37,7 +37,7 @@ function fromArrayBuffer (obj: Array, byteOffset: Number, length: Number): Objec
     : new Buffer(new Uint8Array(obj.slice(byteOffset, byteOffset + length)))
 }
 
-function fromString (string: String, encoding: String): Array {
+function fromString (string: string, encoding: string): any[] {
   if (typeof encoding !== 'string' || encoding === '') {
     encoding = 'utf8'
   }
@@ -51,7 +51,7 @@ function fromString (string: String, encoding: String): Array {
     : new Buffer(string, encoding)
 }
 
-function bufferFrom (value: String, encodingOrOffset: String, length: String): Object {
+function bufferFrom (value: string, encodingOrOffset: string, length: string): object {
   if (typeof value === 'number') {
     throw new TypeError('"value" argument must not be a number')
   }

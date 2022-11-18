@@ -5,10 +5,10 @@
 
 import ProgressBar from '../';
 
-var bar: Object = new ProgressBar('  :bar :title', { total: 10 });
+var bar: object = new ProgressBar('  :bar :title', { total: 10 });
 
-var id: Number = setInterval(function(){
-  var randomTitle: String = ['some', 'random', 'title'][Math.random() * 3 | 0];
+var id: number = setInterval(function(){
+  var randomTitle: string = ['some', 'random', 'title'][Math.random() * 3 | 0];
   bar.tick({ title: randomTitle });
   if (bar.complete) {
     clearInterval(id);
@@ -17,13 +17,13 @@ var id: Number = setInterval(function(){
 }, 100);
 
 function bar2(): Void {
-  var bar: Object = new ProgressBar('  processing: [:bar]', {
+  var bar: object = new ProgressBar('  processing: [:bar]', {
       total: 15
     , complete: '*'
     , incomplete: ' '
   });
 
-  var id: Number = setInterval(function(){
+  var id: number = setInterval(function(){
     bar.tick();
     if (bar.complete) {
       clearInterval(id);
@@ -33,14 +33,14 @@ function bar2(): Void {
 }
 
 function bar3(): Void {
-  var bar: Object = new ProgressBar('  download |:bar| :percent', {
+  var bar: object = new ProgressBar('  download |:bar| :percent', {
       complete: '='
     , incomplete: ' '
     , width: 40
     , total: 20
   });
 
-  var id: Number = setInterval(function(){
+  var id: number = setInterval(function(){
     bar.tick();
     if (bar.complete) {
       clearInterval(id);
@@ -50,11 +50,11 @@ function bar3(): Void {
 }
 
 function bar4(): Void {
-  var bar: Object = new ProgressBar('  :current of :total :percent', {
+  var bar: object = new ProgressBar('  :current of :total :percent', {
     total: 20
   });
 
-  var id: Number = setInterval(function(){
+  var id: number = setInterval(function(){
     bar.tick();
     if (bar.complete) {
       clearInterval(id);
@@ -64,12 +64,12 @@ function bar4(): Void {
 }
 
 function bar5(): Void {
-  var bar: Object = new ProgressBar('  [:bar] :elapseds elapsed, eta :etas', {
+  var bar: object = new ProgressBar('  [:bar] :elapseds elapsed, eta :etas', {
       width: 8
     , total: 50
   });
 
-  var id: Number = setInterval(function(){
+  var id: number = setInterval(function(){
     bar.tick();
     if (bar.complete) {
       clearInterval(id);

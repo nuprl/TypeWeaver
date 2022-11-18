@@ -1,7 +1,7 @@
 'use strict';
 
-const fill: String = require('fill-range');
-const pm: String = require('..');
+const fill: string = require('fill-range');
+const pm: string = require('..');
 const regex: HTMLElement = pm.makeRe('foo/{01..25}/bar', {
   expandRange(a, b) {
     return `(${fill(a, b, { toRegex: true })})`;

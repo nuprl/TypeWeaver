@@ -24,10 +24,10 @@ export default class ResultPlugin {
 		this.source.tapAsync(
 			"ResultPlugin",
 			(request: AliasPlugin, resolverContext: Resolver, callback: Function) => {
-				const obj: Object = { ...request };
+				const obj: object = { ...request };
 				if (resolverContext.log)
 					resolverContext.log("reporting result " + obj.path);
-				resolver.hooks.result.callAsync(obj, resolverContext, (err: String) => {
+				resolver.hooks.result.callAsync(obj, resolverContext, (err: string) => {
 					if (err) return callback(err);
 					if (typeof resolverContext.yield === "function") {
 						resolverContext.yield(obj);

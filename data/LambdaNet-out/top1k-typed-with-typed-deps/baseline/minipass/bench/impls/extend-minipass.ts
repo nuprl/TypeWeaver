@@ -1,4 +1,4 @@
-const Minipass: String = require('minipass')
+const Minipass: string = require('minipass')
 
 module.exports = class ExtendMinipass extends Minipass {
   constructor (opts) {

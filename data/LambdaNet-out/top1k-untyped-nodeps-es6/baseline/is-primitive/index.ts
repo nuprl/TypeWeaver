@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function isPrimitive(val: String): Boolean {
+export default function isPrimitive(val: string): boolean {
   if (typeof val === 'object') {
     return val === null;
   }

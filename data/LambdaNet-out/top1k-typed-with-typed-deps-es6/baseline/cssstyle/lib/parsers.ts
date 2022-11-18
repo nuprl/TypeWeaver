@@ -36,7 +36,7 @@ var colorRegEx4: RegExp = /^hsla?\(\s*(-?\d+|-?\d*.\d+)\s*,\s*(-?\d+|-?\d*.\d+)%
 var angleRegEx: RegExp = /^([-+]?[0-9]*\.?[0-9]+)(deg|grad|rad)$/;
 
 // This will return one of the above types based on the passed in string
-exports.valueType = function valueType(val: String): Boolean {
+exports.valueType = function valueType(val: string): boolean {
   if (val === '' || val === null) {
     return exports.TYPES.NULL_OR_EMPTY_STR;
   }
@@ -76,8 +76,8 @@ exports.valueType = function valueType(val: String): Boolean {
     return exports.TYPES.COLOR;
   }
 
-  var res: Object = colorRegEx2.exec(val);
-  var parts: Array;
+  var res: object = colorRegEx2.exec(val);
+  var parts: any[];
   if (res !== null) {
     parts = res[1].split(/\s*,\s*/);
     if (parts.length !== 3) {
@@ -155,8 +155,8 @@ exports.valueType = function valueType(val: String): Boolean {
   }
 };
 
-exports.parseInteger = function parseInteger(val: Number): String {
-  var type: Number = exports.valueType(val);
+exports.parseInteger = function parseInteger(val: number): string {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -166,8 +166,8 @@ exports.parseInteger = function parseInteger(val: Number): String {
   return String(parseInt(val, 10));
 };
 
-exports.parseNumber = function parseNumber(val: String): String {
-  var type: Number = exports.valueType(val);
+exports.parseNumber = function parseNumber(val: string): string {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -177,11 +177,11 @@ exports.parseNumber = function parseNumber(val: String): String {
   return String(parseFloat(val));
 };
 
-exports.parseLength = function parseLength(val: String): String {
+exports.parseLength = function parseLength(val: string): string {
   if (val === 0 || val === '0') {
     return '0px';
   }
-  var type: Number = exports.valueType(val);
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -191,11 +191,11 @@ exports.parseLength = function parseLength(val: String): String {
   return val;
 };
 
-exports.parsePercent = function parsePercent(val: String): String {
+exports.parsePercent = function parsePercent(val: string): string {
   if (val === 0 || val === '0') {
     return '0%';
   }
-  var type: Number = exports.valueType(val);
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -206,30 +206,30 @@ exports.parsePercent = function parsePercent(val: String): String {
 };
 
 // either a length or a percent
-exports.parseMeasurement = function parseMeasurement(val: String): Array {
-  var type: String = exports.valueType(val);
+exports.parseMeasurement = function parseMeasurement(val: string): any[] {
+  var type: string = exports.valueType(val);
   if (type === exports.TYPES.CALC) {
     return val;
   }
 
-  var length: String = exports.parseLength(val);
+  var length: string = exports.parseLength(val);
   if (length !== undefined) {
     return length;
   }
   return exports.parsePercent(val);
 };
 
-exports.parseUrl = function parseUrl(val: String): String {
-  var type: String = exports.valueType(val);
+exports.parseUrl = function parseUrl(val: string): string {
+  var type: string = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
-  var res: Object = urlRegEx.exec(val);
+  var res: object = urlRegEx.exec(val);
   // does it match the regex?
   if (!res) {
     return undefined;
   }
-  var str: Array = res[1];
+  var str: any[] = res[1];
   // if it starts with single or double quotes, does it end with the same?
   if ((str[0] === '"' || str[0] === "'") && str[0] !== str[str.length - 1]) {
     return undefined;
@@ -238,7 +238,7 @@ exports.parseUrl = function parseUrl(val: String): String {
     str = str.substr(1, str.length - 2);
   }
 
-  var i: Number;
+  var i: number;
   for (i = 0; i < str.length; i++) {
     switch (str[i]) {
       case '(':
@@ -258,15 +258,15 @@ exports.parseUrl = function parseUrl(val: String): String {
   return 'url(' + str + ')';
 };
 
-exports.parseString = function parseString(val: Array): Array {
-  var type: Number = exports.valueType(val);
+exports.parseString = function parseString(val: any[]): any[] {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
   if (type !== exports.TYPES.STRING) {
     return undefined;
   }
-  var i: Number;
+  var i: number;
   for (i = 1; i < val.length - 1; i++) {
     switch (val[i]) {
       case val[0]:
@@ -285,24 +285,24 @@ exports.parseString = function parseString(val: Array): Array {
   return val;
 };
 
-exports.parseColor = function parseColor(val: String): String {
-  var type: Number = exports.valueType(val);
+exports.parseColor = function parseColor(val: string): string {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
-  var red: Number,
-    green: Number,
-    blue: Number,
-    hue: Number,
-    saturation: Number,
-    lightness: Number,
-    alpha: Number = 1;
-  var parts: Array;
-  var res: Object = colorRegEx1.exec(val);
+  var red: number,
+    green: number,
+    blue: number,
+    hue: number,
+    saturation: number,
+    lightness: number,
+    alpha: number = 1;
+  var parts: any[];
+  var res: object = colorRegEx1.exec(val);
   // is it #aaa, #ababab, #aaaa, #abababaa
   if (res) {
-    var defaultHex: Array = val.substr(1);
-    var hex: String = val.substr(1);
+    var defaultHex: any[] = val.substr(1);
+    var hex: string = val.substr(1);
     if (hex.length === 3 || hex.length === 4) {
       hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
 
@@ -314,8 +314,8 @@ exports.parseColor = function parseColor(val: String): String {
     green = parseInt(hex.substr(2, 2), 16);
     blue = parseInt(hex.substr(4, 2), 16);
     if (hex.length === 8) {
-      var hexAlpha: String = hex.substr(6, 2);
-      var hexAlphaToRgbaAlpha: Number = Number((parseInt(hexAlpha, 16) / 255).toFixed(3));
+      var hexAlpha: string = hex.substr(6, 2);
+      var hexAlphaToRgbaAlpha: number = Number((parseInt(hexAlpha, 16) / 255).toFixed(3));
 
       return 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + hexAlphaToRgbaAlpha + ')';
     }
@@ -380,7 +380,7 @@ exports.parseColor = function parseColor(val: String): String {
   res = colorRegEx4.exec(val);
   if (res) {
     const [, _hue, _saturation, _lightness, _alphaString = ''] = res;
-    const _alpha: Number = parseFloat(_alphaString.replace(',', '').trim());
+    const _alpha: number = parseFloat(_alphaString.replace(',', '').trim());
     if (!_hue || !_saturation || !_lightness) {
       return undefined;
     }
@@ -404,8 +404,8 @@ exports.parseColor = function parseColor(val: String): String {
   return undefined;
 };
 
-exports.parseAngle = function parseAngle(val: String): String {
-  var type: Number = exports.valueType(val);
+exports.parseAngle = function parseAngle(val: string): string {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -413,7 +413,7 @@ exports.parseAngle = function parseAngle(val: String): String {
     return undefined;
   }
   var res: Promise = angleRegEx.exec(val);
-  var flt: Number = parseFloat(res[1]);
+  var flt: number = parseFloat(res[1]);
   if (res[2] === 'rad') {
     flt *= 180 / Math.PI;
   } else if (res[2] === 'grad') {
@@ -429,8 +429,8 @@ exports.parseAngle = function parseAngle(val: String): String {
   return flt + 'deg';
 };
 
-exports.parseKeyword = function parseKeyword(val: String, valid_keywords: Array): String {
-  var type: Number = exports.valueType(val);
+exports.parseKeyword = function parseKeyword(val: string, valid_keywords: any[]): string {
+  var type: number = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
   }
@@ -438,7 +438,7 @@ exports.parseKeyword = function parseKeyword(val: String, valid_keywords: Array)
     return undefined;
   }
   val = val.toString().toLowerCase();
-  var i: Number;
+  var i: number;
   for (i = 0; i < valid_keywords.length; i++) {
     if (valid_keywords[i].toLowerCase() === val) {
       return valid_keywords[i];
@@ -449,9 +449,9 @@ exports.parseKeyword = function parseKeyword(val: String, valid_keywords: Array)
 
 // utility to translate from border-width to borderWidth
 var dashedToCamelCase: Function = function(dashed: Promise) {
-  var i: Number;
-  var camel: String = '';
-  var nextCap: Boolean = false;
+  var i: number;
+  var camel: string = '';
+  var nextCap: boolean = false;
   for (i = 0; i < dashed.length; i++) {
     if (dashed[i] !== '-') {
       camel += nextCap ? dashed[i].toUpperCase() : dashed[i];
@@ -465,17 +465,17 @@ var dashedToCamelCase: Function = function(dashed: Promise) {
 exports.dashedToCamelCase = dashedToCamelCase;
 
 var is_space: RegExp = /\s/;
-var opening_deliminators: Array = ['"', "'", '('];
-var closing_deliminators: Array = ['"', "'", ')'];
+var opening_deliminators: any[] = ['"', "'", '('];
+var closing_deliminators: any[] = ['"', "'", ')'];
 // this splits on whitespace, but keeps quoted and parened parts together
 var getParts: Function = function(str: Promise) {
-  var deliminator_stack: Array = [];
-  var length: Number = str.length;
-  var i: Number;
-  var parts: Array = [];
-  var current_part: String = '';
-  var opening_index: Number;
-  var closing_index: Number;
+  var deliminator_stack: any[] = [];
+  var length: number = str.length;
+  var i: number;
+  var parts: any[] = [];
+  var current_part: string = '';
+  var opening_index: number;
+  var closing_index: number;
   for (i = 0; i < length; i++) {
     opening_index = opening_deliminators.indexOf(str[i]);
     closing_index = closing_deliminators.indexOf(str[i]);
@@ -517,11 +517,11 @@ var getParts: Function = function(str: Promise) {
  * hand properties and the values are the values to set
  * on them
  */
-exports.shorthandParser = function parse(v: String, shorthand_for: Object): Object {
-  var obj: Object = {};
-  var type: String = exports.valueType(v);
+exports.shorthandParser = function parse(v: string, shorthand_for: object): object {
+  var obj: object = {};
+  var type: string = exports.valueType(v);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
-    Object.keys(shorthand_for).forEach(function(property: String) {
+    Object.keys(shorthand_for).forEach(function(property: string) {
       obj[property] = '';
     });
     return obj;
@@ -538,11 +538,11 @@ exports.shorthandParser = function parse(v: String, shorthand_for: Object): Obje
   if (v.toLowerCase() === 'inherit') {
     return {};
   }
-  var parts: Array = getParts(v);
-  var valid: Boolean = true;
-  parts.forEach(function(part: Array, i: Number) {
-    var part_valid: Boolean = false;
-    Object.keys(shorthand_for).forEach(function(property: String) {
+  var parts: any[] = getParts(v);
+  var valid: boolean = true;
+  parts.forEach(function(part: any[], i: number) {
+    var part_valid: boolean = false;
+    Object.keys(shorthand_for).forEach(function(property: string) {
       if (shorthand_for[property].isValid(part, i)) {
         part_valid = true;
         obj[property] = part;
@@ -556,17 +556,17 @@ exports.shorthandParser = function parse(v: String, shorthand_for: Object): Obje
   return obj;
 };
 
-exports.shorthandSetter = function(property: String, shorthand_for: String) {
-  return function(v: Array) {
-    var obj: Object = exports.shorthandParser(v, shorthand_for);
+exports.shorthandSetter = function(property: string, shorthand_for: string) {
+  return function(v: any[]) {
+    var obj: object = exports.shorthandParser(v, shorthand_for);
     if (obj === undefined) {
       return;
     }
     //console.log('shorthandSetter for:', property, 'obj:', obj);
-    Object.keys(obj).forEach(function(subprop: String) {
+    Object.keys(obj).forEach(function(subprop: string) {
       // in case subprop is an implicit property, this will clear
       // *its* subpropertiesX
-      var camel: String = dashedToCamelCase(subprop);
+      var camel: string = dashedToCamelCase(subprop);
       this[camel] = obj[subprop];
       // in case it gets translated into something else (0 -> 0px)
       obj[subprop] = this[camel];
@@ -576,7 +576,7 @@ exports.shorthandSetter = function(property: String, shorthand_for: String) {
         this._values[subprop] = obj[subprop];
       }
     }, this);
-    Object.keys(shorthand_for).forEach(function(subprop: String) {
+    Object.keys(shorthand_for).forEach(function(subprop: string) {
       if (!obj.hasOwnProperty(subprop)) {
         this.removeProperty(subprop);
         delete this._values[subprop];
@@ -587,23 +587,23 @@ exports.shorthandSetter = function(property: String, shorthand_for: String) {
     // if it already exists, then call the shorthandGetter, if it's an empty
     // string, don't set the property
     this.removeProperty(property);
-    var calculated: String = exports.shorthandGetter(property, shorthand_for).call(this);
+    var calculated: string = exports.shorthandGetter(property, shorthand_for).call(this);
     if (calculated !== '') {
       this._setProperty(property, calculated);
     }
   };
 };
 
-exports.shorthandGetter = function(property: String, shorthand_for: String) {
+exports.shorthandGetter = function(property: string, shorthand_for: string) {
   return function() {
     if (this._values[property] !== undefined) {
       return this.getPropertyValue(property);
     }
     return Object.keys(shorthand_for)
-      .map(function(subprop: String) {
+      .map(function(subprop: string) {
         return this.getPropertyValue(subprop);
       }, this)
-      .filter(function(value: Number) {
+      .filter(function(value: number) {
         return value !== '';
       })
       .join(' ');
@@ -615,21 +615,21 @@ exports.shorthandGetter = function(property: String, shorthand_for: String) {
 // if two, the first applies to the top and bottom, and the second to left and right
 // if three, the first applies to the top, the second to left and right, the third bottom
 // if four, top, right, bottom, left
-exports.implicitSetter = function(property_before: String, property_after: Number, isValid: Boolean, parser: Function) {
+exports.implicitSetter = function(property_before: string, property_after: number, isValid: boolean, parser: Function) {
   property_after = property_after || '';
   if (property_after !== '') {
     property_after = '-' + property_after;
   }
   var part_names: Promise = ['top', 'right', 'bottom', 'left'];
 
-  return function(v: String) {
+  return function(v: string) {
     if (typeof v === 'number') {
       v = v.toString();
     }
     if (typeof v !== 'string') {
       return undefined;
     }
-    var parts: Array;
+    var parts: any[];
     if (v.toLowerCase() === 'inherit' || v === '') {
       parts = [v];
     } else {
@@ -643,7 +643,7 @@ exports.implicitSetter = function(property_before: String, property_after: Numbe
       return undefined;
     }
 
-    parts = parts.map(function(part: Number) {
+    parts = parts.map(function(part: number) {
       return parser(part);
     });
     this._setProperty(property_before + property_after, parts.join(' '));
@@ -658,7 +658,7 @@ exports.implicitSetter = function(property_before: String, property_after: Numbe
     }
 
     for (var i = 0; i < 4; i++) {
-      var property: String = property_before + '-' + part_names[i] + property_after;
+      var property: string = property_before + '-' + part_names[i] + property_after;
       this.removeProperty(property);
       if (parts[i] !== '') {
         this._values[property] = parts[i];
@@ -674,11 +674,11 @@ exports.implicitSetter = function(property_before: String, property_after: Numbe
 //  sub-parts are set.  If so, it sets the shorthand version and removes
 //  the individual parts from the cssText.
 //
-exports.subImplicitSetter = function(prefix: Number, part: Number, isValid: Function, parser: Function) {
-  var property: String = prefix + '-' + part;
-  var subparts: Object = [prefix + '-top', prefix + '-right', prefix + '-bottom', prefix + '-left'];
+exports.subImplicitSetter = function(prefix: number, part: number, isValid: Function, parser: Function) {
+  var property: string = prefix + '-' + part;
+  var subparts: object = [prefix + '-top', prefix + '-right', prefix + '-bottom', prefix + '-left'];
 
-  return function(v: String) {
+  return function(v: string) {
     if (typeof v === 'number') {
       v = v.toString();
     }
@@ -690,7 +690,7 @@ exports.subImplicitSetter = function(prefix: Number, part: Number, isValid: Func
     }
     v = parser(v);
     this._setProperty(property, v);
-    var parts: Array = [];
+    var parts: any[] = [];
     for (var i = 0; i < 4; i++) {
       if (this._values[subparts[i]] == null || this._values[subparts[i]] === '') {
         break;
@@ -710,10 +710,10 @@ exports.subImplicitSetter = function(prefix: Number, part: Number, isValid: Func
 
 var camel_to_dashed: RegExp = /[A-Z]/g;
 var first_segment: RegExp = /^\([^-]\)-/;
-var vendor_prefixes: Array = ['o', 'moz', 'ms', 'webkit'];
-exports.camelToDashed = function(camel_case: String) {
-  var match: Object;
-  var dashed: String = camel_case.replace(camel_to_dashed, '-$&').toLowerCase();
+var vendor_prefixes: any[] = ['o', 'moz', 'ms', 'webkit'];
+exports.camelToDashed = function(camel_case: string) {
+  var match: object;
+  var dashed: string = camel_case.replace(camel_to_dashed, '-$&').toLowerCase();
   match = dashed.match(first_segment);
   if (match && vendor_prefixes.indexOf(match[1]) !== -1) {
     dashed = '-' + dashed;

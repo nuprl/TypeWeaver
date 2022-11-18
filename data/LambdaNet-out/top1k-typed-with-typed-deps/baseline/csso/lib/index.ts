@@ -4,7 +4,7 @@ import * as utils from './utils.js';
 
 const { parse, generate, compress } = syntax;
 
-function debugOutput(name: String, options: Object, startTime: Number, data: Object): String {
+function debugOutput(name: string, options: object, startTime: number, data: object): string {
     if (options.debug) {
         console.error(`## ${name} done in %d ms\n`, Date.now() - startTime);
     }
@@ -12,18 +12,18 @@ function debugOutput(name: String, options: Object, startTime: Number, data: Obj
     return data;
 }
 
-function createDefaultLogger(level: Number): Function {
-    let lastDebug: Number;
+function createDefaultLogger(level: number): Function {
+    let lastDebug: number;
 
-    return function logger(title: String, ast: Boolean): Void {
-        let line: String = title;
+    return function logger(title: string, ast: boolean): Void {
+        let line: string = title;
 
         if (ast) {
             line = `[${((Date.now() - lastDebug) / 1000).toFixed(3)}s] ${line}`;
         }
 
         if (level > 1 && ast) {
-            let css: String = generate(ast);
+            let css: string = generate(ast);
 
             // when level 2, limit css to 256 symbols
             if (level === 2 && css.length > 256) {
@@ -38,7 +38,7 @@ function createDefaultLogger(level: Number): Function {
     };
 }
 
-function buildCompressOptions(options: Object): TRBL {
+function buildCompressOptions(options: object): TRBL {
     options = { ...options };
 
     if (typeof options.logger !== 'function' && options.debug) {
@@ -48,7 +48,7 @@ function buildCompressOptions(options: Object): TRBL {
     return options;
 }
 
-function runHandler(ast: String, options: Object, handlers: Array): Void {
+function runHandler(ast: string, options: object, handlers: any[]): Void {
     if (!Array.isArray(handlers)) {
         handlers = [handlers];
     }
@@ -56,14 +56,14 @@ function runHandler(ast: String, options: Object, handlers: Array): Void {
     handlers.forEach((fn: Function) => fn(ast, options));
 }
 
-function minify(context: Number, source: String, options: Object): Object {
+function minify(context: number, source: string, options: object): object {
     options = options || {};
 
-    const filename: String = options.filename || '<unknown>';
-    let result: Object;
+    const filename: string = options.filename || '<unknown>';
+    let result: object;
 
     // parse
-    const ast: Object = debugOutput('parsing', options, Date.now(),
+    const ast: object = debugOutput('parsing', options, Date.now(),
         parse(source, {
             context,
             filename,
@@ -79,7 +79,7 @@ function minify(context: Number, source: String, options: Object): Object {
     }
 
     // compress
-    const compressResult: Object = debugOutput('compress', options, Date.now(),
+    const compressResult: object = debugOutput('compress', options, Date.now(),
         compress(ast, buildCompressOptions(options))
     );
 
@@ -93,7 +93,7 @@ function minify(context: Number, source: String, options: Object): Object {
     // generate
     if (options.sourceMap) {
         result = debugOutput('generate(sourceMap: true)', options, Date.now(), (() => {
-            const tmp: Array = generate(compressResult.ast, { sourceMap: true });
+            const tmp: any[] = generate(compressResult.ast, { sourceMap: true });
 
             tmp.map._file = filename; // since other tools can relay on file in source map transform chain
             tmp.map.setSourceContent(filename, source);
@@ -110,11 +110,11 @@ function minify(context: Number, source: String, options: Object): Object {
     return result;
 }
 
-function minifyStylesheet(source: String, options: Object): String {
+function minifyStylesheet(source: string, options: object): string {
     return minify('stylesheet', source, options);
 }
 
-function minifyBlock(source: String, options: Object): String {
+function minifyBlock(source: string, options: object): string {
     return minify('declarationList', source, options);
 }
 

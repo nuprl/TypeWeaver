@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = parseJson
-function parseJson (txt: String, reviver: String, context: Number): Array {
+function parseJson (txt: string, reviver: string, context: number): any[] {
   context = context || 20
   try {
     return JSON.parse(txt, reviver)

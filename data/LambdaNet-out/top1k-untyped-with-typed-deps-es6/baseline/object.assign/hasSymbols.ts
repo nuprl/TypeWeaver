@@ -2,13 +2,13 @@
 
 import keys from 'object-keys';
 
-export default function hasSymbols(): Boolean {
+export default function hasSymbols(): boolean {
 	if (typeof Symbol !== 'function' || typeof Object.getOwnPropertySymbols !== 'function') { return false; }
 	if (typeof Symbol.iterator === 'symbol') { return true; }
 
-	var obj: Object = {};
-	var sym: String = Symbol('test');
-	var symObj: Number = Object(sym);
+	var obj: object = {};
+	var sym: string = Symbol('test');
+	var symObj: number = Object(sym);
 	if (typeof sym === 'string') { return false; }
 
 	if (Object.prototype.toString.call(sym) !== '[object Symbol]') { return false; }
@@ -21,7 +21,7 @@ export default function hasSymbols(): Boolean {
 	 * if (!(symObj instanceof Symbol)) { return false; }
 	 */
 
-	var symVal: Number = 42;
+	var symVal: number = 42;
 	obj[sym] = symVal;
 	for (sym in obj) { return false; } // eslint-disable-line no-unreachable-loop
 	if (keys(obj).length !== 0) { return false; }
@@ -29,7 +29,7 @@ export default function hasSymbols(): Boolean {
 
 	if (typeof Object.getOwnPropertyNames === 'function' && Object.getOwnPropertyNames(obj).length !== 0) { return false; }
 
-	var syms: Array = Object.getOwnPropertySymbols(obj);
+	var syms: any[] = Object.getOwnPropertySymbols(obj);
 	if (syms.length !== 1 || syms[0] !== sym) { return false; }
 
 	if (!Object.prototype.propertyIsEnumerable.call(obj, sym)) { return false; }

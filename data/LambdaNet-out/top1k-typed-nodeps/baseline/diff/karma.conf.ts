@@ -1,7 +1,7 @@
 /* eslint-env node */
 /* eslint-disable no-var, camelcase */
-module.exports = function(config: Object) {
-  var customLaunchers: Object = {
+module.exports = function(config: object) {
+  var customLaunchers: object = {
     sl_chrome: {
       base: 'SauceLabs',
       browserName: 'chrome'

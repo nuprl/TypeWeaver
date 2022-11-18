@@ -2,8 +2,8 @@ import baseSortedIndexBy from './baseSortedIndexBy.js'
 import isSymbol from '../isSymbol.js'
 
 /** Used as references for the maximum length and index of an array. */
-const MAX_ARRAY_LENGTH: Number = 4294967295
-const HALF_MAX_ARRAY_LENGTH: Number = MAX_ARRAY_LENGTH >>> 1
+const MAX_ARRAY_LENGTH: number = 4294967295
+const HALF_MAX_ARRAY_LENGTH: number = MAX_ARRAY_LENGTH >>> 1
 
 /**
  * The base implementation of `sortedIndex` and `sortedLastIndex` which
@@ -17,14 +17,14 @@ const HALF_MAX_ARRAY_LENGTH: Number = MAX_ARRAY_LENGTH >>> 1
  * @returns {number} Returns the index at which `value` should be inserted
  *  into `array`.
  */
-function baseSortedIndex(array: Array, value: Number, retHighest: Boolean): Number {
-  let low: Number = 0
-  let high: Number = array == null ? low : array.length
+function baseSortedIndex(array: any[], value: number, retHighest: boolean): number {
+  let low: number = 0
+  let high: number = array == null ? low : array.length
 
   if (typeof value === 'number' && value === value && high <= HALF_MAX_ARRAY_LENGTH) {
     while (low < high) {
-      const mid: Number = (low + high) >>> 1
-      const computed: Number = array[mid]
+      const mid: number = (low + high) >>> 1
+      const computed: number = array[mid]
       if (computed !== null && !isSymbol(computed) &&
           (retHighest ? (computed <= value) : (computed < value))) {
         low = mid + 1
@@ -34,7 +34,7 @@ function baseSortedIndex(array: Array, value: Number, retHighest: Boolean): Numb
     }
     return high
   }
-  return baseSortedIndexBy(array, value, (value: String) => value, retHighest)
+  return baseSortedIndexBy(array, value, (value: string) => value, retHighest)
 }
 
 export default baseSortedIndex

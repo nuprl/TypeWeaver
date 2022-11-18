@@ -1,10 +1,8 @@
-implementation.ts(8,5): error TS2739: Type 'RegExp' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+implementation.ts(8,5): error TS2322: Type 'RegExp' is not assignable to type 'number'.
 implementation.ts(13,40): error TS2304: Cannot find name 'Void'.
 implementation.ts(14,9): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-polyfill.ts(14,9): error TS2322: Type '() => string' is not assignable to type 'String'.
-shim.ts(11,37): error TS2367: This condition will always return 'true' since the types '() => string' and 'Number' have no overlap.
-shim.ts(13,2): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'number' is not assignable to type 'boolean'.
+  Type '{}' has no call signatures.
+polyfill.ts(14,9): error TS2322: Type '() => string' is not assignable to type 'string'.
+shim.ts(11,37): error TS2367: This condition will always return 'true' since the types '() => string' and 'number' have no overlap.
+shim.ts(13,2): error TS2322: Type 'number' is not assignable to type 'boolean'.
 

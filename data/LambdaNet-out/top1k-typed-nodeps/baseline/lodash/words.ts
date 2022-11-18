@@ -7,7 +7,7 @@ const hasUnicodeWord: Function = RegExp.prototype.test.bind(
 /** Used to match words composed of alphanumeric characters. */
 const reAsciiWord: RegExp = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g
 
-function asciiWords(string: String): Array {
+function asciiWords(string: string): any[] {
   return string.match(reAsciiWord)
 }
 
@@ -27,9 +27,9 @@ function asciiWords(string: String): Array {
  * words('fred, barney, & pebbles', /[^, ]+/g)
  * // => ['fred', 'barney', '&', 'pebbles']
  */
-function words(string: String, pattern: String): Boolean {
+function words(string: string, pattern: string): boolean {
   if (pattern === undefined) {
-    const result: String = hasUnicodeWord(string) ? unicodeWords(string) : asciiWords(string)
+    const result: string = hasUnicodeWord(string) ? unicodeWords(string) : asciiWords(string)
     return result || []
   }
   return string.match(pattern) || []

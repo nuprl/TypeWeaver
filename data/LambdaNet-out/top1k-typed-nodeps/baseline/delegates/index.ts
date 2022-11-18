@@ -13,7 +13,7 @@ module.exports = Delegator;
  * @api public
  */
 
-function Delegator(proto: Object, target: HTMLElement): String {
+function Delegator(proto: object, target: HTMLElement): string {
   if (!(this instanceof Delegator)) return new Delegator(proto, target);
   this.proto = proto;
   this.target = target;
@@ -33,12 +33,12 @@ function Delegator(proto: Object, target: HTMLElement): String {
  * @api public
  */
 
-Delegator.auto = function(proto: Array, targetProto: Array, targetProp: Number){
+Delegator.auto = function(proto: any[], targetProto: any[], targetProp: number){
   var delegator: HTMLElement = Delegator(proto, targetProp);
-  var properties: Array = Object.getOwnPropertyNames(targetProto);
+  var properties: any[] = Object.getOwnPropertyNames(targetProto);
   for (var i = 0; i < properties.length; i++) {
-    var property: String = properties[i];
-    var descriptor: Object = Object.getOwnPropertyDescriptor(targetProto, property);
+    var property: string = properties[i];
+    var descriptor: object = Object.getOwnPropertyDescriptor(targetProto, property);
     if (descriptor.get) {
       delegator.getter(property);
     }
@@ -46,7 +46,7 @@ Delegator.auto = function(proto: Array, targetProto: Array, targetProp: Number){
       delegator.setter(property);
     }
     if (descriptor.hasOwnProperty('value')) { // could be undefined but writable
-      var value: String = descriptor.value;
+      var value: string = descriptor.value;
       if (value instanceof Function) {
         delegator.method(property);
       } else {
@@ -67,8 +67,8 @@ Delegator.auto = function(proto: Array, targetProto: Array, targetProp: Number){
  * @api public
  */
 
-Delegator.prototype.method = function(name: String){
-  var proto: Object = this.proto;
+Delegator.prototype.method = function(name: string){
+  var proto: object = this.proto;
   var target: HTMLElement = this.target;
   this.methods.push(name);
 
@@ -87,7 +87,7 @@ Delegator.prototype.method = function(name: String){
  * @api public
  */
 
-Delegator.prototype.access = function(name: String){
+Delegator.prototype.access = function(name: string){
   return this.getter(name).setter(name);
 };
 
@@ -99,7 +99,7 @@ Delegator.prototype.access = function(name: String){
  * @api public
  */
 
-Delegator.prototype.getter = function(name: String){
+Delegator.prototype.getter = function(name: string){
   var proto: HTMLElement = this.proto;
   var target: HTMLElement = this.target;
   this.getters.push(name);
@@ -119,12 +119,12 @@ Delegator.prototype.getter = function(name: String){
  * @api public
  */
 
-Delegator.prototype.setter = function(name: String){
+Delegator.prototype.setter = function(name: string){
   var proto: HTMLElement = this.proto;
   var target: HTMLElement = this.target;
   this.setters.push(name);
 
-  proto.__defineSetter__(name, function(val: String){
+  proto.__defineSetter__(name, function(val: string){
     return this[target][name] = val;
   });
 
@@ -139,12 +139,12 @@ Delegator.prototype.setter = function(name: String){
  * @api public
  */
 
-Delegator.prototype.fluent = function (name: String) {
-  var proto: Object = this.proto;
+Delegator.prototype.fluent = function (name: string) {
+  var proto: object = this.proto;
   var target: HTMLElement = this.target;
   this.fluents.push(name);
 
-  proto[name] = function(val: Array){
+  proto[name] = function(val: any[]){
     if ('undefined' != typeof val) {
       this[target][name] = val;
       return this;

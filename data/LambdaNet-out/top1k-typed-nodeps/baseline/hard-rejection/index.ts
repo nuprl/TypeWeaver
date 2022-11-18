@@ -1,7 +1,7 @@
 'use strict';
-const util: String = require('util');
+const util: string = require('util');
 
-let installed: Boolean = false;
+let installed: boolean = false;
 
 const hardRejection: Function = (log: Function = console.error) => {
 	if (installed) {

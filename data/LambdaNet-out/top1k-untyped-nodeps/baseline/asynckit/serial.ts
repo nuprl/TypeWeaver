@@ -11,7 +11,7 @@ module.exports = serial;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function serial(list: Object, iterator: String, callback: Function): Void
+function serial(list: object, iterator: string, callback: Function): Void
 {
   return serialOrdered(list, iterator, null, callback);
 }

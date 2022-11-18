@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const path: String = require("path");
+const path: string = require("path");
 
 /**
  * @template T
@@ -23,7 +23,7 @@ const path: String = require("path");
  * @param {number} limit
  * @returns {Map<string, Map<T, string>>} the new plan
  */
-module.exports = (plan: Array, limit: Number) => {
+module.exports = (plan: any[], limit: number) => {
 	const treeMap: Map = new Map();
 	// Convert to tree
 	for (const [filePath, value] of plan) {
@@ -36,12 +36,12 @@ module.exports = (plan: Array, limit: Number) => {
 			value
 		});
 	}
-	let currentCount: Number = treeMap.size;
+	let currentCount: number = treeMap.size;
 	// Create parents and calculate sum of entries
 	for (const node of treeMap.values()) {
-		const parentPath: String = path.dirname(node.filePath);
+		const parentPath: string = path.dirname(node.filePath);
 		if (parentPath !== node.filePath) {
-			let parent: Object = treeMap.get(parentPath);
+			let parent: object = treeMap.get(parentPath);
 			if (parent === undefined) {
 				parent = {
 					filePath: parentPath,
@@ -70,9 +70,9 @@ module.exports = (plan: Array, limit: Number) => {
 	// Reduce until limit reached
 	while (currentCount > limit) {
 		// Select node that helps reaching the limit most effectively without overmerging
-		const overLimit: Number = currentCount - limit;
-		let bestNode: Object = undefined;
-		let bestCost: Number = Infinity;
+		const overLimit: number = currentCount - limit;
+		let bestNode: object = undefined;
+		let bestCost: number = Infinity;
 		for (const node of treeMap.values()) {
 			if (node.entries <= 1 || !node.children || !node.parent) continue;
 			if (node.children.length === 0) continue;
@@ -80,7 +80,7 @@ module.exports = (plan: Array, limit: Number) => {
 			// Try to select the node with has just a bit more entries than we need to reduce
 			// When just a bit more is over 30% over the limit,
 			// also consider just a bit less entries then we need to reduce
-			const cost: Number =
+			const cost: number =
 				node.entries - 1 >= overLimit
 					? node.entries - 1 - overLimit
 					: overLimit - node.entries + 1 + limit * 0.3;
@@ -91,11 +91,11 @@ module.exports = (plan: Array, limit: Number) => {
 		}
 		if (!bestNode) break;
 		// Merge all children
-		const reduction: Number = bestNode.entries - 1;
+		const reduction: number = bestNode.entries - 1;
 		bestNode.active = true;
 		bestNode.entries = 1;
 		currentCount -= reduction;
-		let parent: Object = bestNode.parent;
+		let parent: object = bestNode.parent;
 		while (parent) {
 			parent.entries -= reduction;
 			parent = parent.parent;

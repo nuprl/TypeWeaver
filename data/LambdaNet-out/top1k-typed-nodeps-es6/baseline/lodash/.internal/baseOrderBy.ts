@@ -4,7 +4,7 @@ import baseGet from './baseGet.js'
 import compareMultiple from './compareMultiple.js'
 import isArrayLike from '../isArrayLike.js'
 
-const identity: Function = (value: String) => value
+const identity: Function = (value: string) => value
 
 /**
  * The base implementation of `orderBy` without param guards.
@@ -15,11 +15,11 @@ const identity: Function = (value: String) => value
  * @param {string[]} orders The sort orders of `iteratees`.
  * @returns {Array} Returns the new sorted array.
  */
-function baseOrderBy(collection: Array, iteratees: Array, orders: Number): Promise {
+function baseOrderBy(collection: any[], iteratees: any[], orders: number): Promise {
   if (iteratees.length) {
-    iteratees = iteratees.map((iteratee: Array) => {
+    iteratees = iteratees.map((iteratee: any[]) => {
       if (Array.isArray(iteratee)) {
-        return (value: String) => baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee)
+        return (value: string) => baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee)
       }
 
       return iteratee
@@ -28,13 +28,13 @@ function baseOrderBy(collection: Array, iteratees: Array, orders: Number): Promi
     iteratees = [identity]
   }
 
-  let criteriaIndex: Number = -1
-  let eachIndex: Number = -1
+  let criteriaIndex: number = -1
+  let eachIndex: number = -1
 
-  const result: Array = isArrayLike(collection) ? new Array(collection.length) : []
+  const result: any[] = isArrayLike(collection) ? new Array(collection.length) : []
 
-  baseEach(collection, (value: String) => {
-    const criteria: Array = iteratees.map((iteratee: Function) => iteratee(value))
+  baseEach(collection, (value: string) => {
+    const criteria: any[] = iteratees.map((iteratee: Function) => iteratee(value))
 
     result[++eachIndex] = {
       criteria,
@@ -43,7 +43,7 @@ function baseOrderBy(collection: Array, iteratees: Array, orders: Number): Promi
     }
   })
 
-  return baseSortBy(result, (object: Object, other: Number) => compareMultiple(object, other, orders))
+  return baseSortBy(result, (object: object, other: number) => compareMultiple(object, other, orders))
 }
 
 export default baseOrderBy

@@ -15,7 +15,7 @@
  * forEach(saves, type => asyncSave({ 'type': type, 'complete': done }))
  * // => Logs 'done saving!' after the two async saves have completed.
  */
-function after(n: Number, func: Function): Function {
+function after(n: number, func: Function): Function {
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
   }

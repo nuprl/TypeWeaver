@@ -21,7 +21,7 @@ CSSOM.CSSSupportsRule.prototype.type = 12;
 
 Object.defineProperty(CSSOM.CSSSupportsRule.prototype, "cssText", {
   get: function() {
-    var cssTexts: Array = [];
+    var cssTexts: any[] = [];
 
     for (var i = 0, length = this.cssRules.length; i < length; i++) {
       cssTexts.push(this.cssRules[i].cssText);

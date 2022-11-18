@@ -14,18 +14,18 @@ iconv.defaultCharUnicode = '�';
 iconv.defaultCharSingleByte = '?';
 
 // Public API.
-iconv.encode = function encode(str: Number, encoding: String, options: Object): String {
+iconv.encode = function encode(str: number, encoding: string, options: object): string {
     str = "" + (str || ""); // Ensure string.
 
     var encoder: HTMLElement = iconv.getEncoder(encoding, options);
 
-    var res: Array = encoder.write(str);
-    var trail: Array = encoder.end();
+    var res: any[] = encoder.write(str);
+    var trail: any[] = encoder.end();
     
     return (trail && trail.length > 0) ? Buffer.concat([res, trail]) : res;
 }
 
-iconv.decode = function decode(buf: String, encoding: String, options: Object): Number {
+iconv.decode = function decode(buf: string, encoding: string, options: object): number {
     if (typeof buf === 'string') {
         if (!iconv.skipDecodeWarning) {
             console.error('Iconv-lite warning: decode()-ing strings is deprecated. Refer to https://github.com/ashtuchkin/iconv-lite/wiki/Use-Buffers-when-decoding');
@@ -37,13 +37,13 @@ iconv.decode = function decode(buf: String, encoding: String, options: Object): 
 
     var decoder: HTMLElement = iconv.getDecoder(encoding, options);
 
-    var res: Number = decoder.write(buf);
-    var trail: Number = decoder.end();
+    var res: number = decoder.write(buf);
+    var trail: number = decoder.end();
 
     return trail ? (res + trail) : res;
 }
 
-iconv.encodingExists = function encodingExists(enc: String): Boolean {
+iconv.encodingExists = function encodingExists(enc: string): boolean {
     try {
         iconv.getCodec(enc);
         return true;
@@ -58,21 +58,21 @@ iconv.fromEncoding = iconv.decode;
 
 // Search for a codec in iconv.encodings. Cache codec data in iconv._codecDataCache.
 iconv._codecDataCache = {};
-iconv.getCodec = function getCodec(encoding: String): Object {
+iconv.getCodec = function getCodec(encoding: string): object {
     if (!iconv.encodings)
         iconv.encodings = require("../encodings"); // Lazy load all encoding definitions.
     
     // Canonicalize encoding name: strip all non-alphanumeric chars and appended year.
-    var enc: String = iconv._canonicalizeEncoding(encoding);
+    var enc: string = iconv._canonicalizeEncoding(encoding);
 
     // Traverse iconv.encodings to find actual codec.
-    var codecOptions: Object = {};
+    var codecOptions: object = {};
     while (true) {
-        var codec: String = iconv._codecDataCache[enc];
+        var codec: string = iconv._codecDataCache[enc];
         if (codec)
             return codec;
 
-        var codecDef: Object = iconv.encodings[enc];
+        var codecDef: object = iconv.encodings[enc];
 
         switch (typeof codecDef) {
             case "string": // Direct alias to other encoding.
@@ -106,14 +106,14 @@ iconv.getCodec = function getCodec(encoding: String): Object {
     }
 }
 
-iconv._canonicalizeEncoding = function(encoding: String) {
+iconv._canonicalizeEncoding = function(encoding: string) {
     // Canonicalize encoding name: strip all non-alphanumeric chars and appended year.
     return (''+encoding).toLowerCase().replace(/:\d{4}$|[^0-9a-z]/g, "");
 }
 
-iconv.getEncoder = function getEncoder(encoding: String, options: Object): String {
-    var codec: Object = iconv.getCodec(encoding),
-        encoder: String = new codec.encoder(options, codec);
+iconv.getEncoder = function getEncoder(encoding: string, options: object): string {
+    var codec: object = iconv.getCodec(encoding),
+        encoder: string = new codec.encoder(options, codec);
 
     if (codec.bomAware && options && options.addBOM)
         encoder = new bomHandling.PrependBOM(encoder, options);
@@ -121,9 +121,9 @@ iconv.getEncoder = function getEncoder(encoding: String, options: Object): Strin
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: String, options: Object): String {
-    var codec: Object = iconv.getCodec(encoding),
-        decoder: String = new codec.decoder(options, codec);
+iconv.getDecoder = function getDecoder(encoding: string, options: object): string {
+    var codec: object = iconv.getCodec(encoding),
+        decoder: string = new codec.decoder(options, codec);
 
     if (codec.bomAware && !(options && options.stripBOM === false))
         decoder = new bomHandling.StripBOM(decoder, options);
@@ -136,23 +136,23 @@ iconv.getDecoder = function getDecoder(encoding: String, options: Object): Strin
 // up to 100Kb to the output bundle. To avoid unnecessary code bloat, we don't enable Streaming API in browser by default.
 // If you would like to enable it explicitly, please add the following code to your app:
 // > iconv.enableStreamingAPI(require('stream'));
-iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Number): Void {
+iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: number): Void {
     if (iconv.supportsStreams)
         return;
 
     // Dependency-inject stream module to create IconvLite stream classes.
-    var streams: Object = require("./streams")(stream_module);
+    var streams: object = require("./streams")(stream_module);
 
     // Not public API yet, but expose the stream classes.
     iconv.IconvLiteEncoderStream = streams.IconvLiteEncoderStream;
     iconv.IconvLiteDecoderStream = streams.IconvLiteDecoderStream;
 
     // Streaming API.
-    iconv.encodeStream = function encodeStream(encoding: String, options: Function): Object {
+    iconv.encodeStream = function encodeStream(encoding: string, options: Function): object {
         return new iconv.IconvLiteEncoderStream(iconv.getEncoder(encoding, options), options);
     }
 
-    iconv.decodeStream = function decodeStream(encoding: String, options: Function): Object {
+    iconv.decodeStream = function decodeStream(encoding: string, options: Function): object {
         return new iconv.IconvLiteDecoderStream(iconv.getDecoder(encoding, options), options);
     }
 
@@ -160,7 +160,7 @@ iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Number): V
 }
 
 // Enable Streaming API automatically if 'stream' module is available and non-empty (the majority of environments).
-var stream_module: String;
+var stream_module: string;
 try {
     stream_module = require("stream");
 } catch (e) {}

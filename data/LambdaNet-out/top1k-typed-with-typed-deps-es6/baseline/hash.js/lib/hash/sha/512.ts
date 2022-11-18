@@ -4,11 +4,11 @@ import utils from '../utils';
 import common from '../common';
 import assert from 'minimalistic-assert';
 
-var rotr64_hi: Object = utils.rotr64_hi;
-var rotr64_lo: Object = utils.rotr64_lo;
+var rotr64_hi: object = utils.rotr64_hi;
+var rotr64_lo: object = utils.rotr64_lo;
 var shr64_hi: Function = utils.shr64_hi;
 var shr64_lo: Function = utils.shr64_lo;
-var sum64: Object = utils.sum64;
+var sum64: object = utils.sum64;
 var sum64_hi: Function = utils.sum64_hi;
 var sum64_lo: Function = utils.sum64_lo;
 var sum64_4_hi: Function = utils.sum64_4_hi;
@@ -18,7 +18,7 @@ var sum64_5_lo: Function = utils.sum64_5_lo;
 
 var BlockHash: Function = common.BlockHash;
 
-var sha512_K: Array = [
+var sha512_K: any[] = [
   0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd,
   0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
   0x3956c25b, 0xf348b538, 0x59f111f1, 0xb605d019,
@@ -61,7 +61,7 @@ var sha512_K: Array = [
   0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817
 ];
 
-function SHA512(): String {
+function SHA512(): string {
   if (!(this instanceof SHA512))
     return new SHA512();
 
@@ -86,8 +86,8 @@ SHA512.outSize = 512;
 SHA512.hmacStrength = 192;
 SHA512.padLength = 128;
 
-SHA512.prototype._prepareBlock = function _prepareBlock(msg: Object, start: Number): Void {
-  var W: Object = this.W;
+SHA512.prototype._prepareBlock = function _prepareBlock(msg: object, start: number): Void {
+  var W: object = this.W;
 
   // 32 x 32bit words
   for (var i = 0; i < 32; i++)
@@ -95,12 +95,12 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: Object, start: Numb
   for (; i < W.length; i += 2) {
     var c0_hi: Function = g1_512_hi(W[i - 4], W[i - 3]);  // i - 2
     var c0_lo: Function = g1_512_lo(W[i - 4], W[i - 3]);
-    var c1_hi: String = W[i - 14];  // i - 7
-    var c1_lo: String = W[i - 13];
+    var c1_hi: string = W[i - 14];  // i - 7
+    var c1_lo: string = W[i - 13];
     var c2_hi: Function = g0_512_hi(W[i - 30], W[i - 29]);  // i - 15
     var c2_lo: Function = g0_512_lo(W[i - 30], W[i - 29]);
-    var c3_hi: String = W[i - 32];  // i - 16
-    var c3_lo: String = W[i - 31];
+    var c3_hi: string = W[i - 32];  // i - 16
+    var c3_lo: string = W[i - 31];
 
     W[i] = sum64_4_hi(
       c0_hi, c0_lo,
@@ -115,48 +115,48 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: Object, start: Numb
   }
 };
 
-SHA512.prototype._update = function _update(msg: String, start: String): Void {
+SHA512.prototype._update = function _update(msg: string, start: string): Void {
   this._prepareBlock(msg, start);
 
-  var W: Array = this.W;
+  var W: any[] = this.W;
 
-  var ah: String = this.h[0];
-  var al: String = this.h[1];
-  var bh: String = this.h[2];
-  var bl: String = this.h[3];
-  var ch: String = this.h[4];
-  var cl: String = this.h[5];
-  var dh: String = this.h[6];
-  var dl: String = this.h[7];
-  var eh: String = this.h[8];
-  var el: String = this.h[9];
-  var fh: String = this.h[10];
-  var fl: String = this.h[11];
-  var gh: String = this.h[12];
-  var gl: String = this.h[13];
+  var ah: string = this.h[0];
+  var al: string = this.h[1];
+  var bh: string = this.h[2];
+  var bl: string = this.h[3];
+  var ch: string = this.h[4];
+  var cl: string = this.h[5];
+  var dh: string = this.h[6];
+  var dl: string = this.h[7];
+  var eh: string = this.h[8];
+  var el: string = this.h[9];
+  var fh: string = this.h[10];
+  var fl: string = this.h[11];
+  var gh: string = this.h[12];
+  var gl: string = this.h[13];
   var hh: Function = this.h[14];
-  var hl: String = this.h[15];
+  var hl: string = this.h[15];
 
   assert(this.k.length === W.length);
   for (var i = 0; i < W.length; i += 2) {
-    var c0_hi: String = hh;
-    var c0_lo: String = hl;
+    var c0_hi: string = hh;
+    var c0_lo: string = hl;
     var c1_hi: Function = s1_512_hi(eh, el);
     var c1_lo: Function = s1_512_lo(eh, el);
     var c2_hi: Function = ch64_hi(eh, el, fh, fl, gh, gl);
     var c2_lo: Function = ch64_lo(eh, el, fh, fl, gh, gl);
-    var c3_hi: String = this.k[i];
-    var c3_lo: String = this.k[i + 1];
-    var c4_hi: String = W[i];
-    var c4_lo: String = W[i + 1];
+    var c3_hi: string = this.k[i];
+    var c3_lo: string = this.k[i + 1];
+    var c4_hi: string = W[i];
+    var c4_lo: string = W[i + 1];
 
-    var T1_hi: String = sum64_5_hi(
+    var T1_hi: string = sum64_5_hi(
       c0_hi, c0_lo,
       c1_hi, c1_lo,
       c2_hi, c2_lo,
       c3_hi, c3_lo,
       c4_hi, c4_lo);
-    var T1_lo: String = sum64_5_lo(
+    var T1_lo: string = sum64_5_lo(
       c0_hi, c0_lo,
       c1_hi, c1_lo,
       c2_hi, c2_lo,
@@ -168,7 +168,7 @@ SHA512.prototype._update = function _update(msg: String, start: String): Void {
     c1_hi = maj64_hi(ah, al, bh, bl, ch, cl);
     c1_lo = maj64_lo(ah, al, bh, bl, ch, cl);
 
-    var T2_hi: String = sum64_hi(c0_hi, c0_lo, c1_hi, c1_lo);
+    var T2_hi: string = sum64_hi(c0_hi, c0_lo, c1_hi, c1_lo);
     var T2_lo: Function = sum64_lo(c0_hi, c0_lo, c1_hi, c1_lo);
 
     hh = gh;
@@ -206,124 +206,124 @@ SHA512.prototype._update = function _update(msg: String, start: String): Void {
   sum64(this.h, 14, hh, hl);
 };
 
-SHA512.prototype._digest = function digest(enc: Number): String {
+SHA512.prototype._digest = function digest(enc: number): string {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else
     return utils.split32(this.h, 'big');
 };
 
-function ch64_hi(xh: Number, xl: Function, yh: Number, yl: Function, zh: Number): Number {
-  var r: Number = (xh & yh) ^ ((~xh) & zh);
+function ch64_hi(xh: number, xl: Function, yh: number, yl: Function, zh: number): number {
+  var r: number = (xh & yh) ^ ((~xh) & zh);
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function ch64_lo(xh: Function, xl: Number, yh: Function, yl: Number, zh: String, zl: Number): Number {
-  var r: Number = (xl & yl) ^ ((~xl) & zl);
+function ch64_lo(xh: Function, xl: number, yh: Function, yl: number, zh: string, zl: number): number {
+  var r: number = (xl & yl) ^ ((~xl) & zl);
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function maj64_hi(xh: Number, xl: Function, yh: Number, yl: Function, zh: Number): Number {
-  var r: Number = (xh & yh) ^ (xh & zh) ^ (yh & zh);
+function maj64_hi(xh: number, xl: Function, yh: number, yl: Function, zh: number): number {
+  var r: number = (xh & yh) ^ (xh & zh) ^ (yh & zh);
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function maj64_lo(xh: Function, xl: Number, yh: Function, yl: Number, zh: String, zl: Number): Number {
-  var r: Number = (xl & yl) ^ (xl & zl) ^ (yl & zl);
+function maj64_lo(xh: Function, xl: number, yh: Function, yl: number, zh: string, zl: number): number {
+  var r: number = (xl & yl) ^ (xl & zl) ^ (yl & zl);
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function s0_512_hi(xh: Function, xl: String): Number {
-  var c0_hi: String = rotr64_hi(xh, xl, 28);
-  var c1_hi: String = rotr64_hi(xl, xh, 2);  // 34
-  var c2_hi: String = rotr64_hi(xl, xh, 7);  // 39
+function s0_512_hi(xh: Function, xl: string): number {
+  var c0_hi: string = rotr64_hi(xh, xl, 28);
+  var c1_hi: string = rotr64_hi(xl, xh, 2);  // 34
+  var c2_hi: string = rotr64_hi(xl, xh, 7);  // 39
 
-  var r: Number = c0_hi ^ c1_hi ^ c2_hi;
+  var r: number = c0_hi ^ c1_hi ^ c2_hi;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function s0_512_lo(xh: Function, xl: String): Number {
-  var c0_lo: String = rotr64_lo(xh, xl, 28);
-  var c1_lo: String = rotr64_lo(xl, xh, 2);  // 34
-  var c2_lo: String = rotr64_lo(xl, xh, 7);  // 39
+function s0_512_lo(xh: Function, xl: string): number {
+  var c0_lo: string = rotr64_lo(xh, xl, 28);
+  var c1_lo: string = rotr64_lo(xl, xh, 2);  // 34
+  var c2_lo: string = rotr64_lo(xl, xh, 7);  // 39
 
-  var r: Number = c0_lo ^ c1_lo ^ c2_lo;
+  var r: number = c0_lo ^ c1_lo ^ c2_lo;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function s1_512_hi(xh: Function, xl: String): Number {
-  var c0_hi: String = rotr64_hi(xh, xl, 14);
-  var c1_hi: String = rotr64_hi(xh, xl, 18);
-  var c2_hi: String = rotr64_hi(xl, xh, 9);  // 41
+function s1_512_hi(xh: Function, xl: string): number {
+  var c0_hi: string = rotr64_hi(xh, xl, 14);
+  var c1_hi: string = rotr64_hi(xh, xl, 18);
+  var c2_hi: string = rotr64_hi(xl, xh, 9);  // 41
 
-  var r: Number = c0_hi ^ c1_hi ^ c2_hi;
+  var r: number = c0_hi ^ c1_hi ^ c2_hi;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function s1_512_lo(xh: Function, xl: String): Number {
-  var c0_lo: String = rotr64_lo(xh, xl, 14);
-  var c1_lo: String = rotr64_lo(xh, xl, 18);
-  var c2_lo: String = rotr64_lo(xl, xh, 9);  // 41
+function s1_512_lo(xh: Function, xl: string): number {
+  var c0_lo: string = rotr64_lo(xh, xl, 14);
+  var c1_lo: string = rotr64_lo(xh, xl, 18);
+  var c2_lo: string = rotr64_lo(xl, xh, 9);  // 41
 
-  var r: Number = c0_lo ^ c1_lo ^ c2_lo;
+  var r: number = c0_lo ^ c1_lo ^ c2_lo;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function g0_512_hi(xh: String, xl: String): Number {
-  var c0_hi: String = rotr64_hi(xh, xl, 1);
-  var c1_hi: String = rotr64_hi(xh, xl, 8);
-  var c2_hi: String = shr64_hi(xh, xl, 7);
+function g0_512_hi(xh: string, xl: string): number {
+  var c0_hi: string = rotr64_hi(xh, xl, 1);
+  var c1_hi: string = rotr64_hi(xh, xl, 8);
+  var c2_hi: string = shr64_hi(xh, xl, 7);
 
-  var r: Number = c0_hi ^ c1_hi ^ c2_hi;
+  var r: number = c0_hi ^ c1_hi ^ c2_hi;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function g0_512_lo(xh: String, xl: String): Number {
-  var c0_lo: String = rotr64_lo(xh, xl, 1);
-  var c1_lo: String = rotr64_lo(xh, xl, 8);
-  var c2_lo: String = shr64_lo(xh, xl, 7);
+function g0_512_lo(xh: string, xl: string): number {
+  var c0_lo: string = rotr64_lo(xh, xl, 1);
+  var c1_lo: string = rotr64_lo(xh, xl, 8);
+  var c2_lo: string = shr64_lo(xh, xl, 7);
 
-  var r: Number = c0_lo ^ c1_lo ^ c2_lo;
+  var r: number = c0_lo ^ c1_lo ^ c2_lo;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function g1_512_hi(xh: Function, xl: String): Number {
-  var c0_hi: String = rotr64_hi(xh, xl, 19);
-  var c1_hi: String = rotr64_hi(xl, xh, 29);  // 61
-  var c2_hi: String = shr64_hi(xh, xl, 6);
+function g1_512_hi(xh: Function, xl: string): number {
+  var c0_hi: string = rotr64_hi(xh, xl, 19);
+  var c1_hi: string = rotr64_hi(xl, xh, 29);  // 61
+  var c2_hi: string = shr64_hi(xh, xl, 6);
 
-  var r: Number = c0_hi ^ c1_hi ^ c2_hi;
+  var r: number = c0_hi ^ c1_hi ^ c2_hi;
   if (r < 0)
     r += 0x100000000;
   return r;
 }
 
-function g1_512_lo(xh: Function, xl: String): Number {
-  var c0_lo: String = rotr64_lo(xh, xl, 19);
-  var c1_lo: String = rotr64_lo(xl, xh, 29);  // 61
-  var c2_lo: String = shr64_lo(xh, xl, 6);
+function g1_512_lo(xh: Function, xl: string): number {
+  var c0_lo: string = rotr64_lo(xh, xl, 19);
+  var c1_lo: string = rotr64_lo(xl, xh, 29);  // 61
+  var c2_lo: string = shr64_lo(xh, xl, 6);
 
-  var r: Number = c0_lo ^ c1_lo ^ c2_lo;
+  var r: number = c0_lo ^ c1_lo ^ c2_lo;
   if (r < 0)
     r += 0x100000000;
   return r;

@@ -1,7 +1,7 @@
-const replaceValueSymbols: Number = require("./replaceValueSymbols.js");
-const replaceSymbols: Number = require("./replaceSymbols.js");
-const extractICSS: String = require("./extractICSS.js");
-const createICSSRules: Number = require("./createICSSRules.js");
+const replaceValueSymbols: number = require("./replaceValueSymbols.js");
+const replaceSymbols: number = require("./replaceSymbols.js");
+const extractICSS: string = require("./extractICSS.js");
+const createICSSRules: number = require("./createICSSRules.js");
 
 module.exports = {
   replaceValueSymbols,

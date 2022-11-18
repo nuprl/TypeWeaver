@@ -1,20 +1,11 @@
 index.ts(9,35): error TS2769: No overload matches this call.
   Overload 1 of 3, '(target: (this: NumberConstructor, ...args: readonly unknown[]) => unknown, thisArg: NumberConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'Boolean' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
-      Type 'Boolean' provides no match for the signature '(this: NumberConstructor, ...args: readonly unknown[]): unknown'.
+    Argument of type 'boolean' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
   Overload 2 of 3, '(originalFunction: (this: NumberConstructor, ...args: readonly unknown[]) => unknown, thisArg: NumberConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'Boolean' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
-      Type 'Boolean' provides no match for the signature '(this: NumberConstructor, ...args: readonly unknown[]): unknown'.
-polyfill.ts(7,10): error TS2322: Type '(number: unknown) => boolean' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-polyfill.ts(9,9): error TS2322: Type '(value: Number) => Boolean' is not assignable to type 'Boolean'.
-  Types of property 'valueOf' are incompatible.
-    Type '() => Object' is not assignable to type '() => boolean'.
+    Argument of type 'boolean' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
+polyfill.ts(7,10): error TS2322: Type '(number: unknown) => boolean' is not assignable to type 'boolean'.
+polyfill.ts(9,9): error TS2322: Type '(value: number) => boolean' is not assignable to type 'boolean'.
 shim.ts(8,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-shim.ts(9,6): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-shim.ts(11,3): error TS2322: Type '() => Boolean' is not assignable to type '() => boolean'.
-  Type 'Boolean' is not assignable to type 'boolean'.
-    'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
-shim.ts(12,11): error TS2367: This condition will always return 'true' since the types '(number: unknown) => boolean' and 'String' have no overlap.
+shim.ts(9,6): error TS2322: Type 'boolean' is not assignable to type 'string'.
+shim.ts(12,11): error TS2367: This condition will always return 'true' since the types '(number: unknown) => boolean' and 'string' have no overlap.
 

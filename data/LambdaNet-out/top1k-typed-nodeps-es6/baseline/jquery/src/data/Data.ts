@@ -11,10 +11,10 @@ Data.uid = 1;
 
 Data.prototype = {
 
-	cache: function( owner: Object ) {
+	cache: function( owner: object ) {
 
 		// Check if the owner object already has a cache
-		var value: String = owner[ this.expando ];
+		var value: string = owner[ this.expando ];
 
 		// If not, create one
 		if ( !value ) {
@@ -44,9 +44,9 @@ Data.prototype = {
 
 		return value;
 	},
-	set: function( owner: String, data: Object, value: String ) {
+	set: function( owner: string, data: object, value: string ) {
 		var prop: Function,
-			cache: Object = this.cache( owner );
+			cache: object = this.cache( owner );
 
 		// Handle: [ owner, key, value ] args
 		// Always use camelCase key (gh-2257)
@@ -63,14 +63,14 @@ Data.prototype = {
 		}
 		return cache;
 	},
-	get: function( owner: Object, key: String ) {
+	get: function( owner: object, key: string ) {
 		return key === undefined ?
 			this.cache( owner ) :
 
 			// Always use camelCase key (gh-2257)
 			owner[ this.expando ] && owner[ this.expando ][ camelCase( key ) ];
 	},
-	access: function( owner: String, key: String, value: Number ) {
+	access: function( owner: string, key: string, value: number ) {
 
 		// In cases where either:
 		//
@@ -101,9 +101,9 @@ Data.prototype = {
 		// return the expected data based on which path was taken[*]
 		return value !== undefined ? value : key;
 	},
-	remove: function( owner: Object, key: Array ) {
-		var i: Number,
-			cache: Object = owner[ this.expando ];
+	remove: function( owner: object, key: any[] ) {
+		var i: number,
+			cache: object = owner[ this.expando ];
 
 		if ( cache === undefined ) {
 			return;
@@ -149,7 +149,7 @@ Data.prototype = {
 		}
 	},
 	hasData: function( owner: Promise ) {
-		var cache: String = owner[ this.expando ];
+		var cache: string = owner[ this.expando ];
 		return cache !== undefined && !jQuery.isEmptyObject( cache );
 	}
 };

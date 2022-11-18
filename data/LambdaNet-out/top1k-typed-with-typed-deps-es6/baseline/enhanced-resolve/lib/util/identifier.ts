@@ -11,8 +11,8 @@ const PATH_QUERY_FRAGMENT_REGEXP: RegExp = /^(#?(?:\0.|[^?#\0])*)(\?(?:\0.|[^#\0
  * @param {string} identifier identifier
  * @returns {[string, string, string]|null} parsed identifier
  */
-function parseIdentifier(identifier: String): Array {
-	const match: Object = PATH_QUERY_FRAGMENT_REGEXP.exec(identifier);
+function parseIdentifier(identifier: string): any[] {
+	const match: object = PATH_QUERY_FRAGMENT_REGEXP.exec(identifier);
 
 	if (!match) return null;
 

@@ -30,9 +30,9 @@
  * circle instanceof Shape
  * // => true
  */
-function create(prototype: Number, properties: String): Hash {
+function create(prototype: number, properties: string): Hash {
   prototype = prototype === null ? null : Object(prototype)
-  const result: Object = Object.create(prototype)
+  const result: object = Object.create(prototype)
   return properties == null ? result : Object.assign(result, properties)
 }
 

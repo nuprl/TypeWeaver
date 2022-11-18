@@ -23,14 +23,14 @@ export default class FileExistsPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		const fs: Function = resolver.fileSystem;
 		resolver
 			.getHook(this.source)
-			.tapAsync("FileExistsPlugin", (request: Object, resolveContext: Object, callback: Function) => {
-				const file: Number = request.path;
+			.tapAsync("FileExistsPlugin", (request: object, resolveContext: object, callback: Function) => {
+				const file: number = request.path;
 				if (!file) return callback();
-				fs.stat(file, (err: String, stat: String) => {
+				fs.stat(file, (err: string, stat: string) => {
 					if (err || !stat) {
 						if (resolveContext.missingDependencies)
 							resolveContext.missingDependencies.add(file);

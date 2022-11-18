@@ -5,7 +5,7 @@ import regexes from './lib/regexes.js';
 import mappingTable from './lib/mappingTable.json';
 import { STATUS_MAPPING } from './lib/statusMapping.js';
 
-function containsNonASCII(str: String): Boolean {
+function containsNonASCII(str: string): boolean {
   return /[^\x00-\x7F]/u.test(str);
 }
 
@@ -41,7 +41,7 @@ function findStatus(val: Function, { useSTD3ASCIIRules }): Void {
   return null;
 }
 
-function mapChars(domainName: String, { useSTD3ASCIIRules, processingOption }): Void {
+function mapChars(domainName: string, { useSTD3ASCIIRules, processingOption }): Void {
   let hasError = false;
   let processed = "";
 
@@ -77,7 +77,7 @@ function mapChars(domainName: String, { useSTD3ASCIIRules, processingOption }): 
   };
 }
 
-function validateLabel(label: String, { checkHyphens, checkBidi, checkJoiners, processingOption, useSTD3ASCIIRules }): Void {
+function validateLabel(label: string, { checkHyphens, checkBidi, checkJoiners, processingOption, useSTD3ASCIIRules }): Void {
   if (label.normalize("NFC") !== label) {
     return false;
   }
@@ -158,8 +158,8 @@ function validateLabel(label: String, { checkHyphens, checkBidi, checkJoiners, p
   return true;
 }
 
-function isBidiDomain(labels: Array): Boolean {
-  const domain: String = labels.map((label: String) => {
+function isBidiDomain(labels: any[]): boolean {
+  const domain: string = labels.map((label: string) => {
     if (label.startsWith("xn--")) {
       try {
         return punycode.decode(label.substring(4));
@@ -172,7 +172,7 @@ function isBidiDomain(labels: Array): Boolean {
   return regexes.bidiDomain.test(domain);
 }
 
-function processing(domainName: String, options: Object): Object {
+function processing(domainName: string, options: object): object {
   const { processingOption } = options;
 
   // 1. Map.
@@ -182,13 +182,13 @@ function processing(domainName: String, options: Object): Object {
   string = string.normalize("NFC");
 
   // 3. Break.
-  const labels: Array = string.split(".");
-  const isBidi: Boolean = isBidiDomain(labels);
+  const labels: any[] = string.split(".");
+  const isBidi: boolean = isBidiDomain(labels);
 
   // 4. Convert/Validate.
   for (const [i, origLabel] of labels.entries()) {
-    let label: String = origLabel;
-    let curProcessing: String = processingOption;
+    let label: string = origLabel;
+    let curProcessing: string = processingOption;
     if (label.startsWith("xn--")) {
       try {
         label = punycode.decode(label.substring(4));
@@ -220,7 +220,7 @@ function processing(domainName: String, options: Object): Object {
   };
 }
 
-function toASCII(domainName: String, {
+function toASCII(domainName: string, {
   checkHyphens = false,
   checkBidi = false,
   checkJoiners = false,
@@ -271,7 +271,7 @@ function toASCII(domainName: String, {
   return labels.join(".");
 }
 
-function toUnicode(domainName: String, {
+function toUnicode(domainName: string, {
   checkHyphens = false,
   checkBidi = false,
   checkJoiners = false,

@@ -1,22 +1,16 @@
-index.ts(1,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(13,67): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(14,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(20,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(27,52): error TS2339: Property 'configurable' does not exist on type 'Object'.
-index.ts(28,16): error TS2339: Property 'writable' does not exist on type 'Object'.
-index.ts(28,44): error TS2339: Property 'writable' does not exist on type 'Object'.
-index.ts(29,16): error TS2339: Property 'enumerable' does not exist on type 'Object'.
-index.ts(29,46): error TS2339: Property 'enumerable' does not exist on type 'Object'.
-index.ts(30,16): error TS2339: Property 'configurable' does not exist on type 'Object'.
-index.ts(30,48): error TS2339: Property 'configurable' does not exist on type 'Object'.
-index.ts(31,17): error TS2339: Property 'writable' does not exist on type 'Object'.
-index.ts(31,42): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(31,67): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(35,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(35,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(46,7): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(47,7): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'String'.
-index.ts(52,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,52): error TS2339: Property 'configurable' does not exist on type 'object'.
+index.ts(28,16): error TS2339: Property 'writable' does not exist on type 'object'.
+index.ts(28,44): error TS2339: Property 'writable' does not exist on type 'object'.
+index.ts(29,16): error TS2339: Property 'enumerable' does not exist on type 'object'.
+index.ts(29,46): error TS2339: Property 'enumerable' does not exist on type 'object'.
+index.ts(30,16): error TS2339: Property 'configurable' does not exist on type 'object'.
+index.ts(30,48): error TS2339: Property 'configurable' does not exist on type 'object'.
+index.ts(31,17): error TS2339: Property 'writable' does not exist on type 'object'.
+index.ts(31,42): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(31,67): error TS2339: Property 'value' does not exist on type 'object'.
+index.ts(41,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(46,7): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
+index.ts(47,7): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
+index.ts(57,41): error TS2698: Spread types may only be created from object types.
 index.ts(60,108): error TS2304: Cannot find name 'Void'.
 

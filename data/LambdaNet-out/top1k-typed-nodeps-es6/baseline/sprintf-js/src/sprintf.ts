@@ -3,7 +3,7 @@
 !function() {
     'use strict'
 
-    var re: Object = {
+    var re: object = {
         not_string: /[^s]/,
         not_bool: /[^t]/,
         not_type: /[^T]/,
@@ -21,17 +21,17 @@
         sign: /^[+-]/
     }
 
-    function sprintf(key: String): String {
+    function sprintf(key: string): string {
         // `arguments` is not an array, but should be fine for this call
         return sprintf_format(sprintf_parse(key), arguments)
     }
 
-    function vsprintf(fmt: String, argv: String): Promise {
+    function vsprintf(fmt: string, argv: string): Promise {
         return sprintf.apply(null, [fmt].concat(argv || []))
     }
 
-    function sprintf_format(parse_tree: Array, argv: Object): String {
-        var cursor: Number = 1, tree_length: Number = parse_tree.length, arg: Function, output: String = '', i: Number, k: Number, ph: Object, pad: String, pad_character: String, pad_length: Number, is_positive: Boolean, sign: String
+    function sprintf_format(parse_tree: any[], argv: object): string {
+        var cursor: number = 1, tree_length: number = parse_tree.length, arg: Function, output: string = '', i: number, k: number, ph: object, pad: string, pad_character: string, pad_length: number, is_positive: boolean, sign: string
         for (i = 0; i < tree_length; i++) {
             if (typeof parse_tree[i] === 'string') {
                 output += parse_tree[i]
@@ -139,14 +139,14 @@
         return output
     }
 
-    var sprintf_cache: Object = Object.create(null)
+    var sprintf_cache: object = Object.create(null)
 
-    function sprintf_parse(fmt: String): String {
+    function sprintf_parse(fmt: string): string {
         if (sprintf_cache[fmt]) {
             return sprintf_cache[fmt]
         }
 
-        var _fmt: String = fmt, match: Object, parse_tree: Array = [], arg_names: Number = 0
+        var _fmt: string = fmt, match: object, parse_tree: any[] = [], arg_names: number = 0
         while (_fmt) {
             if ((match = re.text.exec(_fmt)) !== null) {
                 parse_tree.push(match[0])
@@ -157,7 +157,7 @@
             else if ((match = re.placeholder.exec(_fmt)) !== null) {
                 if (match[2]) {
                     arg_names |= 1
-                    var field_list: Array = [], replacement_field: String = match[2], field_match: Object = []
+                    var field_list: any[] = [], replacement_field: string = match[2], field_match: object = []
                     if ((field_match = re.key.exec(replacement_field)) !== null) {
                         field_list.push(field_match[1])
                         while ((replacement_field = replacement_field.substring(field_match[0].length)) !== '') {

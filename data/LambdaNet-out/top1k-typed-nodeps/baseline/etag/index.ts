@@ -18,7 +18,7 @@ module.exports = etag
  * @private
  */
 
-var crypto: String = require('crypto')
+var crypto: string = require('crypto')
 var Stats: Function = require('fs').Stats
 
 /**
@@ -36,21 +36,21 @@ var toString: Function = Object.prototype.toString
  * @private
  */
 
-function entitytag (entity: String): String {
+function entitytag (entity: string): string {
   if (entity.length === 0) {
     // fast-path empty
     return '"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk"'
   }
 
   // compute hash of entity
-  var hash: String = crypto
+  var hash: string = crypto
     .createHash('sha1')
     .update(entity, 'utf8')
     .digest('base64')
     .substring(0, 27)
 
   // compute length of entity
-  var len: Number = typeof entity === 'string'
+  var len: number = typeof entity === 'string'
     ? Buffer.byteLength(entity, 'utf8')
     : entity.length
 
@@ -67,14 +67,14 @@ function entitytag (entity: String): String {
  * @public
  */
 
-function etag (entity: String, options: Object): Number {
+function etag (entity: string, options: object): number {
   if (entity == null) {
     throw new TypeError('argument entity is required')
   }
 
   // support fs.Stats object
-  var isStats: Boolean = isstats(entity)
-  var weak: Number = options && typeof options.weak === 'boolean'
+  var isStats: boolean = isstats(entity)
+  var weak: number = options && typeof options.weak === 'boolean'
     ? options.weak
     : isStats
 
@@ -84,7 +84,7 @@ function etag (entity: String, options: Object): Number {
   }
 
   // generate entity tag
-  var tag: String = isStats
+  var tag: string = isStats
     ? stattag(entity)
     : entitytag(entity)
 
@@ -101,7 +101,7 @@ function etag (entity: String, options: Object): Number {
  * @api private
  */
 
-function isstats (obj: Object): Boolean {
+function isstats (obj: object): boolean {
   // genuine fs.Stats
   if (typeof Stats === 'function' && obj instanceof Stats) {
     return true
@@ -123,9 +123,9 @@ function isstats (obj: Object): Boolean {
  * @private
  */
 
-function stattag (stat: Object): String {
-  var mtime: String = stat.mtime.getTime().toString(16)
-  var size: String = stat.size.toString(16)
+function stattag (stat: object): string {
+  var mtime: string = stat.mtime.getTime().toString(16)
+  var size: string = stat.size.toString(16)
 
   return '"' + size + '-' + mtime + '"'
 }

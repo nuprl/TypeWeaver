@@ -4,17 +4,17 @@ const LEADING_CAPITAL: RegExp = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER: RegExp = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS: RegExp = /[_.\- ]+/;
 
-const LEADING_SEPARATORS: Array = new RegExp('^' + SEPARATORS.source);
-const SEPARATORS_AND_IDENTIFIER: Object = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
-const NUMBERS_AND_IDENTIFIER: Object = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
+const LEADING_SEPARATORS: any[] = new RegExp('^' + SEPARATORS.source);
+const SEPARATORS_AND_IDENTIFIER: object = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
+const NUMBERS_AND_IDENTIFIER: object = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
 
-const preserveCamelCase: Function = (string: String, toLowerCase: Function, toUpperCase: Function) => {
-	let isLastCharLower: Boolean = false;
-	let isLastCharUpper: Boolean = false;
-	let isLastLastCharUpper: Boolean = false;
+const preserveCamelCase: Function = (string: string, toLowerCase: Function, toUpperCase: Function) => {
+	let isLastCharLower: boolean = false;
+	let isLastCharUpper: boolean = false;
+	let isLastLastCharUpper: boolean = false;
 
 	for (let index = 0; index < string.length; index++) {
-		const character: String = string[index];
+		const character: string = string[index];
 
 		if (isLastCharLower && UPPERCASE.test(character)) {
 			string = string.slice(0, index) + '-' + string.slice(index);
@@ -37,21 +37,21 @@ const preserveCamelCase: Function = (string: String, toLowerCase: Function, toUp
 	return string;
 };
 
-const preserveConsecutiveUppercase: Function = (input: String, toLowerCase: Function) => {
+const preserveConsecutiveUppercase: Function = (input: string, toLowerCase: Function) => {
 	LEADING_CAPITAL.lastIndex = 0;
 
-	return input.replace(LEADING_CAPITAL, (m1: Array) => toLowerCase(m1));
+	return input.replace(LEADING_CAPITAL, (m1: any[]) => toLowerCase(m1));
 };
 
-const postProcess: Function = (input: String, toUpperCase: Function) => {
+const postProcess: Function = (input: string, toUpperCase: Function) => {
 	SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
 	NUMBERS_AND_IDENTIFIER.lastIndex = 0;
 
-	return input.replace(SEPARATORS_AND_IDENTIFIER, (_: Function, identifier: String) => toUpperCase(identifier))
-		.replace(NUMBERS_AND_IDENTIFIER, (m: Array) => toUpperCase(m));
+	return input.replace(SEPARATORS_AND_IDENTIFIER, (_: Function, identifier: string) => toUpperCase(identifier))
+		.replace(NUMBERS_AND_IDENTIFIER, (m: any[]) => toUpperCase(m));
 };
 
-export default function camelCase(input: String, options: Object): String {
+export default function camelCase(input: string, options: object): string {
 	if (!(typeof input === 'string' || Array.isArray(input))) {
 		throw new TypeError('Expected the input to be `string | string[]`');
 	}
@@ -63,8 +63,8 @@ export default function camelCase(input: String, options: Object): String {
 	};
 
 	if (Array.isArray(input)) {
-		input = input.map((x: String) => x.trim())
-			.filter((x: Array) => x.length)
+		input = input.map((x: string) => x.trim())
+			.filter((x: any[]) => x.length)
 			.join('-');
 	} else {
 		input = input.trim();
@@ -75,12 +75,12 @@ export default function camelCase(input: String, options: Object): String {
 	}
 
 	const toLowerCase: Function = options.locale === false
-		? (string: String) => string.toLowerCase()
-		: (string: String) => string.toLocaleLowerCase(options.locale);
+		? (string: string) => string.toLowerCase()
+		: (string: string) => string.toLocaleLowerCase(options.locale);
 
 	const toUpperCase: Function = options.locale === false
-		? (string: String) => string.toUpperCase()
-		: (string: String) => string.toLocaleUpperCase(options.locale);
+		? (string: string) => string.toUpperCase()
+		: (string: string) => string.toLocaleUpperCase(options.locale);
 
 	if (input.length === 1) {
 		if (SEPARATORS.test(input)) {
@@ -90,7 +90,7 @@ export default function camelCase(input: String, options: Object): String {
 		return options.pascalCase ? toUpperCase(input) : toLowerCase(input);
 	}
 
-	const hasUpperCase: Boolean = input !== toLowerCase(input);
+	const hasUpperCase: boolean = input !== toLowerCase(input);
 
 	if (hasUpperCase) {
 		input = preserveCamelCase(input, toLowerCase, toUpperCase);

@@ -4,12 +4,12 @@
  * btoa() as defined by the HTML and Infra specs, which mostly just references
  * RFC 4648.
  */
-function btoa(s: String): String {
+function btoa(s: string): string {
   if (arguments.length === 0) {
     throw new TypeError("1 argument required, but only 0 present.");
   }
 
-  let i: Number;
+  let i: number;
   // String conversion as required by Web IDL.
   s = `${s}`;
   // "The btoa() method must throw an "InvalidCharacterError" DOMException if
@@ -19,9 +19,9 @@ function btoa(s: String): String {
       return null;
     }
   }
-  let out: String = "";
+  let out: string = "";
   for (i = 0; i < s.length; i += 3) {
-    const groupsOfSix: Array = [undefined, undefined, undefined, undefined];
+    const groupsOfSix: any[] = [undefined, undefined, undefined, undefined];
     groupsOfSix[0] = s.charCodeAt(i) >> 2;
     groupsOfSix[1] = (s.charCodeAt(i) & 0x03) << 4;
     if (s.length > i + 1) {
@@ -47,10 +47,10 @@ function btoa(s: String): String {
  * Lookup table for btoa(), which converts a six-bit number into the
  * corresponding ASCII character.
  */
-const keystr: String =
+const keystr: string =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-function btoaLookup(index: Number): Array {
+function btoaLookup(index: number): any[] {
   if (index >= 0 && index < 64) {
     return keystr[index];
   }

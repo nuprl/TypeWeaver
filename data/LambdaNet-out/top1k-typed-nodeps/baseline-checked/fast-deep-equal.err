@@ -1,14 +1,14 @@
-benchmark/index.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(6,42): error TS2339: Property 'Suite' does not exist on type 'String'.
+benchmark/index.ts(6,42): error TS2339: Property 'Suite' does not exist on type 'string'.
 benchmark/index.ts(30,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
 benchmark/index.ts(43,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/index.ts(56,4): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/index.ts(56,60): error TS2339: Property 'target' does not exist on type 'Object'.
-build.ts(4,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(7,36): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-build.ts(8,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-build.ts(9,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-build.ts(10,10): error TS2339: Property 'mkdirSync' does not exist on type 'String'.
-build.ts(11,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-build.ts(12,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+benchmark/index.ts(56,60): error TS2339: Property 'target' does not exist on type 'object'.
+build.ts(5,5): error TS2339: Property 'templateSettings' does not exist on type 'any[]'.
+build.ts(7,25): error TS2339: Property 'compile' does not exist on type 'any[]'.
+build.ts(7,36): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+build.ts(8,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+build.ts(9,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+build.ts(10,10): error TS2339: Property 'mkdirSync' does not exist on type 'string'.
+build.ts(11,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+build.ts(12,4): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 

@@ -5,7 +5,7 @@
 
 'use strict';
 
-const NodePath: String = require('./node-path');
+const NodePath: string = require('./node-path');
 
 /**
  * Does an actual AST traversal, using visitor pattern,
@@ -24,17 +24,17 @@ const NodePath: String = require('./node-path');
  *   - `post`(node, parent, prop, index) - a hook called on node exit
  *   - `skipProperty(prop)` - a predicated whether a property should be skipped
  */
-function astTraverse(root: String, options: Object = {}): Void {
+function astTraverse(root: string, options: object = {}): Void {
   const pre: Function = options.pre;
   const post: Function = options.post;
   const skipProperty: Function = options.skipProperty;
 
-  function visit(node: Function, parent: Object, prop: String, idx: Number): Void {
+  function visit(node: Function, parent: object, prop: string, idx: number): Void {
     if (!node || typeof node.type !== 'string') {
       return;
     }
 
-    let res: String = undefined;
+    let res: string = undefined;
     if (pre) {
       res = pre(node, parent, prop, idx);
     }
@@ -56,7 +56,7 @@ function astTraverse(root: String, options: Object = {}): Void {
           continue;
         }
 
-        const child: Array = node[prop];
+        const child: any[] = node[prop];
 
         // Collection node.
         //
@@ -71,7 +71,7 @@ function astTraverse(root: String, options: Object = {}): Void {
         // updated in the NodePath remove/insert methods.
         //
         if (Array.isArray(child)) {
-          let index: Number = 0;
+          let index: number = 0;
           NodePath.traversingIndexStack.push(index);
           while (index < child.length) {
             visit(

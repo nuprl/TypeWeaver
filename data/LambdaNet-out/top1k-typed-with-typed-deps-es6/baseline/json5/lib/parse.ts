@@ -1,16 +1,16 @@
 import util from './util';
 
-let source: Array
-let parseState: String
-let stack: Array
-let pos: Number
-let line: Number
-let column: Number
-let token: Object
-let key: String
+let source: any[]
+let parseState: string
+let stack: any[]
+let pos: number
+let line: number
+let column: number
+let token: object
+let key: string
 let root: Function
 
-export default function parse (text: String, reviver: String): Object {
+export default function parse (text: string, reviver: string): object {
     source = String(text)
     parseState = 'start'
     stack = []
@@ -39,11 +39,11 @@ export default function parse (text: String, reviver: String): Object {
     return root
 };
 
-function internalize (holder: Object, name: String, reviver: Function): String {
-    const value: Object = holder[name]
+function internalize (holder: object, name: string, reviver: Function): string {
+    const value: object = holder[name]
     if (value != null && typeof value === 'object') {
         for (const key in value) {
-            const replacement: String = internalize(value, key, reviver)
+            const replacement: string = internalize(value, key, reviver)
             if (replacement === undefined) {
                 delete value[key]
             } else {
@@ -55,13 +55,13 @@ function internalize (holder: Object, name: String, reviver: Function): String {
     return reviver.call(holder, name, value)
 }
 
-let lexState: String
-let buffer: String
-let doubleQuote: Boolean
-let sign: Number
+let lexState: string
+let buffer: string
+let doubleQuote: boolean
+let sign: number
 let c: Function
 
-function lex (): String {
+function lex (): string {
     lexState = 'default'
     buffer = ''
     doubleQuote = false
@@ -75,21 +75,21 @@ function lex (): String {
         //     throw invalidLexState(lexState)
         // }
 
-        const token: Array = lexStates[lexState]()
+        const token: any[] = lexStates[lexState]()
         if (token) {
             return token
         }
     }
 }
 
-function peek (): Number {
+function peek (): number {
     if (source[pos]) {
         return String.fromCodePoint(source.codePointAt(pos))
     }
 }
 
-function read (): String {
-    const c: String = peek()
+function read (): string {
+    const c: string = peek()
 
     if (c === '\n') {
         line++
@@ -107,7 +107,7 @@ function read (): String {
     return c
 }
 
-const lexStates: Object = {
+const lexStates: object = {
     default () {
         switch (c) {
         case '\t':
@@ -683,7 +683,7 @@ const lexStates: Object = {
     },
 }
 
-function newToken (type: String, value: String): Object {
+function newToken (type: string, value: string): object {
     return {
         type,
         value,
@@ -692,9 +692,9 @@ function newToken (type: String, value: String): Object {
     }
 }
 
-function literal (s: Array): Void {
+function literal (s: any[]): Void {
     for (const c of s) {
-        const p: String = peek()
+        const p: string = peek()
 
         if (p !== c) {
             throw invalidChar(read())
@@ -704,8 +704,8 @@ function literal (s: Array): Void {
     }
 }
 
-function escape (): String {
-    const c: String = peek()
+function escape (): string {
+    const c: string = peek()
     switch (c) {
     case 'b':
         read()
@@ -779,9 +779,9 @@ function escape (): String {
     return read()
 }
 
-function hexEscape (): Number {
-    let buffer: String = ''
-    let c: String = peek()
+function hexEscape (): number {
+    let buffer: string = ''
+    let c: string = peek()
 
     if (!util.isHexDigit(c)) {
         throw invalidChar(read())
@@ -799,12 +799,12 @@ function hexEscape (): Number {
     return String.fromCodePoint(parseInt(buffer, 16))
 }
 
-function unicodeEscape (): Number {
-    let buffer: String = ''
-    let count: Number = 4
+function unicodeEscape (): number {
+    let buffer: string = ''
+    let count: number = 4
 
     while (count-- > 0) {
-        const c: String = peek()
+        const c: string = peek()
         if (!util.isHexDigit(c)) {
             throw invalidChar(read())
         }
@@ -815,7 +815,7 @@ function unicodeEscape (): Number {
     return String.fromCodePoint(parseInt(buffer, 16))
 }
 
-const parseStates: Object = {
+const parseStates: object = {
     start () {
         if (token.type === 'eof') {
             throw invalidEOF()
@@ -938,7 +938,7 @@ const parseStates: Object = {
 }
 
 function push (): Void {
-    let value: Array
+    let value: any[]
 
     switch (token.type) {
     case 'punctuator':
@@ -969,7 +969,7 @@ function push (): Void {
     if (root === undefined) {
         root = value
     } else {
-        const parent: Array = stack[stack.length - 1]
+        const parent: any[] = stack[stack.length - 1]
         if (Array.isArray(parent)) {
             parent.push(value)
         } else {
@@ -986,7 +986,7 @@ function push (): Void {
             parseState = 'beforePropertyName'
         }
     } else {
-        const current: String = stack[stack.length - 1]
+        const current: string = stack[stack.length - 1]
         if (current == null) {
             parseState = 'end'
         } else if (Array.isArray(current)) {
@@ -1000,7 +1000,7 @@ function push (): Void {
 function pop (): Void {
     stack.pop()
 
-    const current: String = stack[stack.length - 1]
+    const current: string = stack[stack.length - 1]
     if (current == null) {
         parseState = 'end'
     } else if (Array.isArray(current)) {
@@ -1020,7 +1020,7 @@ function pop (): Void {
 //     return new Error(`JSON5: invalid lex state '${state}'`)
 // }
 
-function invalidChar (c: Number): String {
+function invalidChar (c: number): string {
     if (c === undefined) {
         return syntaxError(`JSON5: invalid end of input at ${line}:${column}`)
     }
@@ -1042,17 +1042,17 @@ function invalidEOF (): Promise {
 //     return syntaxError(`JSON5: invalid character '${formatChar(c)}' at ${line}:${column}`)
 // }
 
-function invalidIdentifier (): String {
+function invalidIdentifier (): string {
     column -= 5
     return syntaxError(`JSON5: invalid identifier character at ${line}:${column}`)
 }
 
-function separatorChar (c: String): Promise {
+function separatorChar (c: string): Promise {
     console.warn(`JSON5: '${formatChar(c)}' in strings is not valid ECMAScript; consider escaping`)
 }
 
-function formatChar (c: String): String {
-    const replacements: Object = {
+function formatChar (c: string): string {
+    const replacements: object = {
         "'": "\\'",
         '"': '\\"',
         '\\': '\\\\',
@@ -1072,14 +1072,14 @@ function formatChar (c: String): String {
     }
 
     if (c < ' ') {
-        const hexString: String = c.charCodeAt(0).toString(16)
+        const hexString: string = c.charCodeAt(0).toString(16)
         return '\\x' + ('00' + hexString).substring(hexString.length)
     }
 
     return c
 }
 
-function syntaxError (message: String): HTMLElement {
+function syntaxError (message: string): HTMLElement {
     const err: HTMLElement = new SyntaxError(message)
     err.lineNumber = line
     err.columnNumber = column

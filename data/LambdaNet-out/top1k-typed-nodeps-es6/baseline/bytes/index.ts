@@ -25,7 +25,7 @@ var formatThousandsRegExp: RegExp = /\B(?=(\d{3})+(?!\d))/g;
 
 var formatDecimalsRegExp: RegExp = /(?:\.0*|(\.[^0]+)0+)$/;
 
-var map: Object = {
+var map: object = {
   b:  1,
   kb: 1 << 10,
   mb: 1 << 20,
@@ -51,7 +51,7 @@ var parseRegExp: RegExp = /^((-|\+)?(\d+(?:\.\d+)?)) *(kb|mb|gb|tb|pb)$/i;
  * @returns {string|number|null}
  */
 
-function bytes(value: String, options: Function): Array {
+function bytes(value: string, options: Function): any[] {
   if (typeof value === 'string') {
     return parse(value);
   }
@@ -81,17 +81,17 @@ function bytes(value: String, options: Function): Array {
  * @public
  */
 
-function format(value: Number, options: Object): String {
+function format(value: number, options: object): string {
   if (!Number.isFinite(value)) {
     return null;
   }
 
-  var mag: Number = Math.abs(value);
-  var thousandsSeparator: Boolean = (options && options.thousandsSeparator) || '';
-  var unitSeparator: Number = (options && options.unitSeparator) || '';
-  var decimalPlaces: Number = (options && options.decimalPlaces !== undefined) ? options.decimalPlaces : 2;
-  var fixedDecimals: Boolean = Boolean(options && options.fixedDecimals);
-  var unit: String = (options && options.unit) || '';
+  var mag: number = Math.abs(value);
+  var thousandsSeparator: boolean = (options && options.thousandsSeparator) || '';
+  var unitSeparator: number = (options && options.unitSeparator) || '';
+  var decimalPlaces: number = (options && options.decimalPlaces !== undefined) ? options.decimalPlaces : 2;
+  var fixedDecimals: boolean = Boolean(options && options.fixedDecimals);
+  var unit: string = (options && options.unit) || '';
 
   if (!unit || !map[unit.toLowerCase()]) {
     if (mag >= map.pb) {
@@ -109,15 +109,15 @@ function format(value: Number, options: Object): String {
     }
   }
 
-  var val: Number = value / map[unit.toLowerCase()];
-  var str: String = val.toFixed(decimalPlaces);
+  var val: number = value / map[unit.toLowerCase()];
+  var str: string = val.toFixed(decimalPlaces);
 
   if (!fixedDecimals) {
     str = str.replace(formatDecimalsRegExp, '$1');
   }
 
   if (thousandsSeparator) {
-    str = str.split('.').map(function (s: String, i: Number) {
+    str = str.split('.').map(function (s: string, i: number) {
       return i === 0
         ? s.replace(formatThousandsRegExp, thousandsSeparator)
         : s
@@ -138,7 +138,7 @@ function format(value: Number, options: Object): String {
  * @public
  */
 
-function parse(val: Number): Number {
+function parse(val: number): number {
   if (typeof val === 'number' && !isNaN(val)) {
     return val;
   }
@@ -148,9 +148,9 @@ function parse(val: Number): Number {
   }
 
   // Test if the string passed is valid
-  var results: Object = parseRegExp.exec(val);
-  var floatValue: Number;
-  var unit: String = 'b';
+  var results: object = parseRegExp.exec(val);
+  var floatValue: number;
+  var unit: string = 'b';
 
   if (!results) {
     // Nothing could be extracted from the given string

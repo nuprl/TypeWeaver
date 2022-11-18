@@ -28,7 +28,7 @@ import url from 'url';
 
 export default serveStatic;
 
-export const mime: String = send.mime;
+export const mime: string = send.mime;
 
 /**
  * @param {string} root
@@ -37,7 +37,7 @@ export const mime: String = send.mime;
  * @public
  */
 
-function serveStatic (root: String, options: Object): Function {
+function serveStatic (root: string, options: object): Function {
   if (!root) {
     throw new TypeError('root path required')
   }
@@ -50,13 +50,13 @@ function serveStatic (root: String, options: Object): Function {
   var opts: HTMLElement = Object.create(options || null)
 
   // fall-though
-  var fallthrough: Boolean = opts.fallthrough !== false
+  var fallthrough: boolean = opts.fallthrough !== false
 
   // default redirect
-  var redirect: Boolean = opts.redirect !== false
+  var redirect: boolean = opts.redirect !== false
 
   // headers listener
-  var setHeaders: String = opts.setHeaders
+  var setHeaders: string = opts.setHeaders
 
   if (setHeaders && typeof setHeaders !== 'function') {
     throw new TypeError('option setHeaders must be function')
@@ -67,11 +67,11 @@ function serveStatic (root: String, options: Object): Function {
   opts.root = resolve(root)
 
   // construct directory listener
-  var onDirectory: Array = redirect
+  var onDirectory: any[] = redirect
     ? createRedirectDirectoryListener()
     : createNotFoundDirectoryListener()
 
-  return function serveStatic (req: HTMLElement, res: Object, next: Function): Void {
+  return function serveStatic (req: HTMLElement, res: object, next: Function): Void {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
@@ -85,9 +85,9 @@ function serveStatic (root: String, options: Object): Function {
       return
     }
 
-    var forwardError: Boolean = !fallthrough
-    var originalUrl: String = parseUrl.original(req)
-    var path: String = parseUrl(req).pathname
+    var forwardError: boolean = !fallthrough
+    var originalUrl: string = parseUrl.original(req)
+    var path: string = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
     if (path === '/' && originalUrl.pathname.substr(-1) !== '/') {
@@ -95,7 +95,7 @@ function serveStatic (root: String, options: Object): Function {
     }
 
     // create send stream
-    var stream: Array = send(req, path, opts)
+    var stream: any[] = send(req, path, opts)
 
     // add directory handler
     stream.on('directory', onDirectory)
@@ -114,7 +114,7 @@ function serveStatic (root: String, options: Object): Function {
     }
 
     // forward errors
-    stream.on('error', function error (err: Array): Void {
+    stream.on('error', function error (err: any[]): Void {
       if (forwardError || !(err.statusCode < 500)) {
         next(err)
         return
@@ -132,7 +132,7 @@ function serveStatic (root: String, options: Object): Function {
  * Collapse all leading slashes into a single slash
  * @private
  */
-function collapseLeadingSlashes (str: String): String {
+function collapseLeadingSlashes (str: string): string {
   for (var i = 0; i < str.length; i++) {
     if (str.charCodeAt(i) !== 0x2f /* / */) {
       break
@@ -152,7 +152,7 @@ function collapseLeadingSlashes (str: String): String {
  * @private
  */
 
-function createHtmlDocument (title: String, body: Number): String {
+function createHtmlDocument (title: string, body: number): string {
   return '<!DOCTYPE html>\n' +
     '<html lang="en">\n' +
     '<head>\n' +
@@ -197,7 +197,7 @@ function createRedirectDirectoryListener (): Function {
 
     // reformat the URL
     var loc: Function = encodeUrl(url.format(originalUrl))
-    var doc: String = createHtmlDocument('Redirecting', 'Redirecting to <a href="' + escapeHtml(loc) + '">' +
+    var doc: string = createHtmlDocument('Redirecting', 'Redirecting to <a href="' + escapeHtml(loc) + '">' +
       escapeHtml(loc) + '</a>')
 
     // send redirect response

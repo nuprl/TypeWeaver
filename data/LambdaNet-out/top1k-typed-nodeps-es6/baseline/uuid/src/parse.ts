@@ -1,12 +1,12 @@
 import validate from './validate.js';
 
-function parse(uuid: Array): Object {
+function parse(uuid: any[]): object {
   if (!validate(uuid)) {
     throw TypeError('Invalid UUID');
   }
 
-  let v: Number;
-  const arr: Object = new Uint8Array(16);
+  let v: number;
+  const arr: object = new Uint8Array(16);
 
   // Parse ########-....-....-....-............
   arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;

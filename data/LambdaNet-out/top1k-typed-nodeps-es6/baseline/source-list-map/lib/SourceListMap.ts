@@ -33,7 +33,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.push(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.forEach(function(sln: String) {
+			generatedCode.children.forEach(function(sln: string) {
 				this.children.push(sln);
 			}, this);
 		} else {
@@ -53,7 +53,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.unshift(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.slice().reverse().forEach(function(sln: String) {
+			generatedCode.children.slice().reverse().forEach(function(sln: string) {
 				this.children.unshift(sln);
 			}, this);
 		} else {
@@ -62,20 +62,20 @@ class SourceListMap {
 	};
 
 	mapGeneratedCode(fn) {
-		const normalizedNodes: Array = [];
+		const normalizedNodes: any[] = [];
 		this.children.forEach(function(sln: SourceNode) {
 			sln.getNormalizedNodes().forEach(function(newNode: SourceNode) {
 				normalizedNodes.push(newNode);
 			});
 		});
-		const optimizedNodes: Array = [];
+		const optimizedNodes: any[] = [];
 		normalizedNodes.forEach(function(sln: SourceNode) {
 			sln = sln.mapGeneratedCode(fn);
 			if(optimizedNodes.length === 0) {
 				optimizedNodes.push(sln);
 			} else {
 				const last: SourceNode = optimizedNodes[optimizedNodes.length - 1];
-				const mergedNode: String = last.merge(sln);
+				const mergedNode: string = last.merge(sln);
 				if(mergedNode) {
 					optimizedNodes[optimizedNodes.length - 1] = mergedNode;
 				} else {
@@ -94,13 +94,13 @@ class SourceListMap {
 
 	toStringWithSourceMap(options) {
 		const mappingsContext: SingleLineNode = new MappingsContext();
-		const source: String = this.children.map(function(sln: SourceNode) {
+		const source: string = this.children.map(function(sln: SourceNode) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings: String = this.children.map(function(sln: SourceNode) {
+		const mappings: string = this.children.map(function(sln: SourceNode) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
-		const arrays: Object = mappingsContext.getArrays();
+		const arrays: object = mappingsContext.getArrays();
 		return {
 			source,
 			map: {

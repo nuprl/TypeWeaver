@@ -30,10 +30,10 @@ export default fresh;
  * @public
  */
 
-function fresh (reqHeaders: Object, resHeaders: Object): Boolean {
+function fresh (reqHeaders: object, resHeaders: object): boolean {
   // fields
-  var modifiedSince: String = reqHeaders['if-modified-since']
-  var noneMatch: String = reqHeaders['if-none-match']
+  var modifiedSince: string = reqHeaders['if-modified-since']
+  var noneMatch: string = reqHeaders['if-none-match']
 
   // unconditional request
   if (!modifiedSince && !noneMatch) {
@@ -43,23 +43,23 @@ function fresh (reqHeaders: Object, resHeaders: Object): Boolean {
   // Always return stale when Cache-Control: no-cache
   // to support end-to-end reload requests
   // https://tools.ietf.org/html/rfc2616#section-14.9.4
-  var cacheControl: String = reqHeaders['cache-control']
+  var cacheControl: string = reqHeaders['cache-control']
   if (cacheControl && CACHE_CONTROL_NO_CACHE_REGEXP.test(cacheControl)) {
     return false
   }
 
   // if-none-match
   if (noneMatch && noneMatch !== '*') {
-    var etag: String = resHeaders['etag']
+    var etag: string = resHeaders['etag']
 
     if (!etag) {
       return false
     }
 
-    var etagStale: Boolean = true
-    var matches: Array = parseTokenList(noneMatch)
+    var etagStale: boolean = true
+    var matches: any[] = parseTokenList(noneMatch)
     for (var i = 0; i < matches.length; i++) {
-      var match: String = matches[i]
+      var match: string = matches[i]
       if (match === etag || match === 'W/' + etag || 'W/' + match === etag) {
         etagStale = false
         break
@@ -73,8 +73,8 @@ function fresh (reqHeaders: Object, resHeaders: Object): Boolean {
 
   // if-modified-since
   if (modifiedSince) {
-    var lastModified: String = resHeaders['last-modified']
-    var modifiedStale: Boolean = !lastModified || !(parseHttpDate(lastModified) <= parseHttpDate(modifiedSince))
+    var lastModified: string = resHeaders['last-modified']
+    var modifiedStale: boolean = !lastModified || !(parseHttpDate(lastModified) <= parseHttpDate(modifiedSince))
 
     if (modifiedStale) {
       return false
@@ -91,8 +91,8 @@ function fresh (reqHeaders: Object, resHeaders: Object): Boolean {
  * @private
  */
 
-function parseHttpDate (date: Number): Number {
-  var timestamp: Number = date && Date.parse(date)
+function parseHttpDate (date: number): number {
+  var timestamp: number = date && Date.parse(date)
 
   // istanbul ignore next: guard against date.js Date.parse patching
   return typeof timestamp === 'number'
@@ -107,10 +107,10 @@ function parseHttpDate (date: Number): Number {
  * @private
  */
 
-function parseTokenList (str: String): Array {
-  var end: Number = 0
-  var list: Array = []
-  var start: Number = 0
+function parseTokenList (str: string): any[] {
+  var end: number = 0
+  var list: any[] = []
+  var start: number = 0
 
   // gather tokens
   for (var i = 0, len = str.length; i < len; i++) {

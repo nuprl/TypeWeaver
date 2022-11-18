@@ -35,9 +35,9 @@ import baseReduce from './.internal/baseReduce.js'
  * }, {})
  * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
  */
-function reduce(collection: Function, iteratee: Function, accumulator: String): Hash {
+function reduce(collection: Function, iteratee: Function, accumulator: string): Hash {
   const func: Function = Array.isArray(collection) ? arrayReduce : baseReduce
-  const initAccum: Boolean = arguments.length < 3
+  const initAccum: boolean = arguments.length < 3
   return func(collection, iteratee, accumulator, initAccum, baseEach)
 }
 

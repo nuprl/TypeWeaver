@@ -3,9 +3,9 @@
 import assert from 'minimalistic-assert';
 import inherits from 'inherits';
 
-var proto: Object = {};
+var proto: object = {};
 
-function CBCState(iv: Array): Void {
+function CBCState(iv: any[]): Void {
   assert.equal(iv.length, 8, 'Invalid IV length');
 
   this.iv = new Array(8);
@@ -13,20 +13,20 @@ function CBCState(iv: Array): Void {
     this.iv[i] = iv[i];
 }
 
-function instantiate(Base: Function): Object {
+function instantiate(Base: Function): object {
   function CBC(options: Function): Void {
     Base.call(this, options);
     this._cbcInit();
   }
   inherits(CBC, Base);
 
-  var keys: Array = Object.keys(proto);
+  var keys: any[] = Object.keys(proto);
   for (var i = 0; i < keys.length; i++) {
-    var key: String = keys[i];
+    var key: string = keys[i];
     CBC.prototype[key] = proto[key];
   }
 
-  CBC.create = function create(options: Object): String {
+  CBC.create = function create(options: object): string {
     return new CBC(options);
   };
 
@@ -36,15 +36,15 @@ function instantiate(Base: Function): Object {
 exports.instantiate = instantiate;
 
 proto._cbcInit = function _cbcInit(): Void {
-  var state: String = new CBCState(this.options.iv);
+  var state: string = new CBCState(this.options.iv);
   this._cbcState = state;
 };
 
-proto._update = function _update(inp: Object, inOff: String, out: Object, outOff: String): Void {
+proto._update = function _update(inp: object, inOff: string, out: object, outOff: string): Void {
   var state: HTMLElement = this._cbcState;
   var superProto: Element = this.constructor.super_.prototype;
 
-  var iv: Object = state.iv;
+  var iv: object = state.iv;
   if (this.type === 'encrypt') {
     for (var i = 0; i < this.blockSize; i++)
       iv[i] ^= inp[inOff + i];

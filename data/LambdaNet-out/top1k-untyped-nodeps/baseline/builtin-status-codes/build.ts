@@ -1,8 +1,8 @@
 'use strict'
 
-const fs: String = require('fs')
-const statusCodes: String = require('./')
+const fs: string = require('fs')
+const statusCodes: string = require('./')
 
-const code: String = 'module.exports = ' + JSON.stringify(statusCodes, null, 2) + '\n'
+const code: string = 'module.exports = ' + JSON.stringify(statusCodes, null, 2) + '\n'
 
 fs.writeFileSync('browser.js', code)

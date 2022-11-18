@@ -1,12 +1,12 @@
-const singleComment: Number = Symbol('singleComment');
-const multiComment: Number = Symbol('multiComment');
+const singleComment: number = Symbol('singleComment');
+const multiComment: number = Symbol('multiComment');
 
 const stripWithoutWhitespace: Function = () => '';
-const stripWithWhitespace: Function = (string: Array, start: String, end: String) => string.slice(start, end).replace(/\S/g, ' ');
+const stripWithWhitespace: Function = (string: any[], start: string, end: string) => string.slice(start, end).replace(/\S/g, ' ');
 
-const isEscaped: Function = (jsonString: Array, quotePosition: Number) => {
-	let index: Number = quotePosition - 1;
-	let backslashCount: Number = 0;
+const isEscaped: Function = (jsonString: any[], quotePosition: number) => {
+	let index: number = quotePosition - 1;
+	let backslashCount: number = 0;
 
 	while (jsonString[index] === '\\') {
 		index -= 1;
@@ -16,7 +16,7 @@ const isEscaped: Function = (jsonString: Array, quotePosition: Number) => {
 	return Boolean(backslashCount % 2);
 };
 
-export default function stripJsonComments(jsonString: Number, {whitespace = true, trailingCommas = false} = {}): Promise {
+export default function stripJsonComments(jsonString: number, {whitespace = true, trailingCommas = false} = {}): Promise {
 	if (typeof jsonString !== 'string') {
 		throw new TypeError(`Expected argument \`jsonString\` to be a \`string\`, got \`${typeof jsonString}\``);
 	}

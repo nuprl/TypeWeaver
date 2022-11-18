@@ -3,8 +3,8 @@
 import define from 'define-properties';
 import getPolyfill from './polyfill';
 
-export default function shimTrimEnd(): Boolean {
-	var polyfill: Number = getPolyfill();
+export default function shimTrimEnd(): boolean {
+	var polyfill: number = getPolyfill();
 	define(
 		String.prototype,
 		{ trimEnd: polyfill },

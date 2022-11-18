@@ -6,23 +6,23 @@
  */
 
 var EE: Function = require('events').EventEmitter;
-var util: String = require('util');
-var os: String = require('os');
-var assert: String = require('assert');
-var Int64: Object = require('node-int64');
+var util: string = require('util');
+var os: string = require('os');
+var assert: string = require('assert');
+var Int64: object = require('node-int64');
 
 // BSER uses the local endianness to reduce byte swapping overheads
 // (the protocol is expressly local IPC only).  We need to tell node
 // to use the native endianness when reading various native values.
-var isBigEndian: Boolean = os.endianness() == 'BE';
+var isBigEndian: boolean = os.endianness() == 'BE';
 
 // Find the next power-of-2 >= size
-function nextPow2(size: Number): Number {
+function nextPow2(size: number): number {
   return Math.pow(2, Math.ceil(Math.log(size) / Math.LN2));
 }
 
 // Expandable buffer that we can provide a size hint for
-function Accumulator(initsize: String): Void {
+function Accumulator(initsize: string): Void {
   this.buf = Buffer.alloc(nextPow2(initsize || 8192));
   this.readOffset = 0;
   this.writeOffset = 0;
@@ -41,7 +41,7 @@ Accumulator.prototype.readAvail = function() {
 }
 
 // Ensure that we have enough space for size bytes
-Accumulator.prototype.reserve = function(size: String) {
+Accumulator.prototype.reserve = function(size: string) {
   if (size < this.writeAvail()) {
     return;
   }
@@ -59,44 +59,44 @@ Accumulator.prototype.reserve = function(size: String) {
   }
 
   // Allocate a replacement and copy it in
-  var buf: String = Buffer.alloc(nextPow2(this.buf.length + size - this.writeAvail()));
+  var buf: string = Buffer.alloc(nextPow2(this.buf.length + size - this.writeAvail()));
   this.buf.copy(buf);
   this.buf = buf;
 }
 
 // Append buffer or string.  Will resize as needed
-Accumulator.prototype.append = function(buf: Array) {
+Accumulator.prototype.append = function(buf: any[]) {
   if (Buffer.isBuffer(buf)) {
     this.reserve(buf.length);
     buf.copy(this.buf, this.writeOffset, 0, buf.length);
     this.writeOffset += buf.length;
   } else {
-    var size: String = Buffer.byteLength(buf);
+    var size: string = Buffer.byteLength(buf);
     this.reserve(size);
     this.buf.write(buf, this.writeOffset);
     this.writeOffset += size;
   }
 }
 
-Accumulator.prototype.assertReadableSize = function(size: String) {
+Accumulator.prototype.assertReadableSize = function(size: string) {
   if (this.readAvail() < size) {
     throw new Error("wanted to read " + size +
         " bytes but only have " + this.readAvail());
   }
 }
 
-Accumulator.prototype.peekString = function(size: Number) {
+Accumulator.prototype.peekString = function(size: number) {
   this.assertReadableSize(size);
   return this.buf.toString('utf-8', this.readOffset, this.readOffset + size);
 }
 
-Accumulator.prototype.readString = function(size: Number) {
-  var str: String = this.peekString(size);
+Accumulator.prototype.readString = function(size: number) {
+  var str: string = this.peekString(size);
   this.readOffset += size;
   return str;
 }
 
-Accumulator.prototype.peekInt = function(size: Number) {
+Accumulator.prototype.peekInt = function(size: number) {
   this.assertReadableSize(size);
   switch (size) {
     case 1:
@@ -110,7 +110,7 @@ Accumulator.prototype.peekInt = function(size: Number) {
         this.buf.readInt32BE(this.readOffset, size) :
         this.buf.readInt32LE(this.readOffset, size);
     case 8:
-        var big: Array = this.buf.slice(this.readOffset, this.readOffset + 8);
+        var big: any[] = this.buf.slice(this.readOffset, this.readOffset + 8);
         if (isBigEndian) {
           // On a big endian system we can simply pass the buffer directly
           return new Int64(big);
@@ -122,7 +122,7 @@ Accumulator.prototype.peekInt = function(size: Number) {
   }
 }
 
-Accumulator.prototype.readInt = function(bytes: Number) {
+Accumulator.prototype.readInt = function(bytes: number) {
   var ival: HTMLElement = this.peekInt(bytes);
   if (ival instanceof Int64 && isFinite(ival.valueOf())) {
     ival = ival.valueOf();
@@ -139,12 +139,12 @@ Accumulator.prototype.peekDouble = function() {
 }
 
 Accumulator.prototype.readDouble = function() {
-  var dval: String = this.peekDouble();
+  var dval: string = this.peekDouble();
   this.readOffset += 8;
   return dval;
 }
 
-Accumulator.prototype.readAdvance = function(size: Number) {
+Accumulator.prototype.readAdvance = function(size: number) {
   if (size > 0) {
     this.assertReadableSize(size);
   } else if (size < 0 && this.readOffset + size < 0) {
@@ -154,13 +154,13 @@ Accumulator.prototype.readAdvance = function(size: Number) {
   this.readOffset += size;
 }
 
-Accumulator.prototype.writeByte = function(value: String) {
+Accumulator.prototype.writeByte = function(value: string) {
   this.reserve(1);
   this.buf.writeInt8(value, this.writeOffset);
   ++this.writeOffset;
 }
 
-Accumulator.prototype.writeInt = function(value: String, size: Number) {
+Accumulator.prototype.writeInt = function(value: string, size: number) {
   this.reserve(size);
   switch (size) {
     case 1:
@@ -186,7 +186,7 @@ Accumulator.prototype.writeInt = function(value: String, size: Number) {
   this.writeOffset += size;
 }
 
-Accumulator.prototype.writeDouble = function(value: String) {
+Accumulator.prototype.writeDouble = function(value: string) {
   this.reserve(8);
   if (isBigEndian) {
     this.buf.writeDoubleBE(value, this.writeOffset);
@@ -196,26 +196,26 @@ Accumulator.prototype.writeDouble = function(value: String) {
   this.writeOffset += 8;
 }
 
-var BSER_ARRAY: Number     = 0x00;
-var BSER_OBJECT: Number    = 0x01;
-var BSER_STRING: Number    = 0x02;
-var BSER_INT8: Number      = 0x03;
-var BSER_INT16: Number     = 0x04;
-var BSER_INT32: Number     = 0x05;
-var BSER_INT64: Number     = 0x06;
-var BSER_REAL: Number      = 0x07;
-var BSER_TRUE: Number      = 0x08;
-var BSER_FALSE: Number     = 0x09;
-var BSER_NULL: Number      = 0x0a;
-var BSER_TEMPLATE: Number  = 0x0b;
-var BSER_SKIP: Number      = 0x0c;
+var BSER_ARRAY: number     = 0x00;
+var BSER_OBJECT: number    = 0x01;
+var BSER_STRING: number    = 0x02;
+var BSER_INT8: number      = 0x03;
+var BSER_INT16: number     = 0x04;
+var BSER_INT32: number     = 0x05;
+var BSER_INT64: number     = 0x06;
+var BSER_REAL: number      = 0x07;
+var BSER_TRUE: number      = 0x08;
+var BSER_FALSE: number     = 0x09;
+var BSER_NULL: number      = 0x0a;
+var BSER_TEMPLATE: number  = 0x0b;
+var BSER_SKIP: number      = 0x0c;
 
-var ST_NEED_PDU: Number = 0; // Need to read and decode PDU length
-var ST_FILL_PDU: Number = 1; // Know the length, need to read whole content
+var ST_NEED_PDU: number = 0; // Need to read and decode PDU length
+var ST_FILL_PDU: number = 1; // Know the length, need to read whole content
 
-var MAX_INT8: Number = 127;
-var MAX_INT16: Number = 32767;
-var MAX_INT32: Number = 2147483647;
+var MAX_INT8: number = 127;
+var MAX_INT16: number = 32767;
+var MAX_INT32: number = 2147483647;
 
 function BunserBuf(): Void {
   EE.call(this);
@@ -225,7 +225,7 @@ function BunserBuf(): Void {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: String, synchronous: Number) {
+BunserBuf.prototype.append = function(buf: string, synchronous: number) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -245,7 +245,7 @@ BunserBuf.prototype.append = function(buf: String, synchronous: Number) {
 }
 
 BunserBuf.prototype.processLater = function() {
-  var self: Array = this;
+  var self: any[] = this;
   process.nextTick(function() {
     try {
       self.process(false);
@@ -263,7 +263,7 @@ BunserBuf.prototype.processLater = function() {
 // when it becomes ready and schedule another invocation
 // of process on the next tick if we still have data we
 // can process.
-BunserBuf.prototype.process = function(synchronous: Boolean) {
+BunserBuf.prototype.process = function(synchronous: boolean) {
   if (this.state == ST_NEED_PDU) {
     if (this.buf.readAvail() < 2) {
       return;
@@ -289,7 +289,7 @@ BunserBuf.prototype.process = function(synchronous: Boolean) {
     }
 
     // We have enough to decode it
-    var val: String = this.decodeAny();
+    var val: string = this.decodeAny();
     if (synchronous) {
       return val;
     }
@@ -302,7 +302,7 @@ BunserBuf.prototype.process = function(synchronous: Boolean) {
   }
 }
 
-BunserBuf.prototype.raise = function(reason: Number) {
+BunserBuf.prototype.raise = function(reason: number) {
   throw new Error(reason + ", in Buffer of length " +
       this.buf.buf.length + " (" + this.buf.readAvail() +
       " readable) at offset " + this.buf.readOffset + " buffer: " +
@@ -310,15 +310,15 @@ BunserBuf.prototype.raise = function(reason: Number) {
           this.buf.readOffset, this.buf.readOffset + 32).toJSON()));
 }
 
-BunserBuf.prototype.expectCode = function(expected: String) {
-  var code: String = this.buf.readInt(1);
+BunserBuf.prototype.expectCode = function(expected: string) {
+  var code: string = this.buf.readInt(1);
   if (code != expected) {
     this.raise("expected bser opcode " + expected + " but got " + code);
   }
 }
 
 BunserBuf.prototype.decodeAny = function() {
-  var code: String = this.buf.peekInt(1);
+  var code: string = this.buf.peekInt(1);
   switch (code) {
     case BSER_INT8:
     case BSER_INT16:
@@ -352,8 +352,8 @@ BunserBuf.prototype.decodeAny = function() {
 
 BunserBuf.prototype.decodeArray = function() {
   this.expectCode(BSER_ARRAY);
-  var nitems: String = this.decodeInt();
-  var arr: Array = [];
+  var nitems: string = this.decodeInt();
+  var arr: any[] = [];
   for (var i = 0; i < nitems; ++i) {
     arr.push(this.decodeAny());
   }
@@ -362,11 +362,11 @@ BunserBuf.prototype.decodeArray = function() {
 
 BunserBuf.prototype.decodeObject = function() {
   this.expectCode(BSER_OBJECT);
-  var nitems: String = this.decodeInt();
-  var res: Object = {};
+  var nitems: string = this.decodeInt();
+  var res: object = {};
   for (var i = 0; i < nitems; ++i) {
-    var key: String = this.decodeString();
-    var val: String = this.decodeAny();
+    var key: string = this.decodeString();
+    var val: string = this.decodeAny();
     res[key] = val;
   }
   return res;
@@ -374,17 +374,17 @@ BunserBuf.prototype.decodeObject = function() {
 
 BunserBuf.prototype.decodeTemplate = function() {
   this.expectCode(BSER_TEMPLATE);
-  var keys: Array = this.decodeArray();
-  var nitems: String = this.decodeInt();
-  var arr: Array = [];
+  var keys: any[] = this.decodeArray();
+  var nitems: string = this.decodeInt();
+  var arr: any[] = [];
   for (var i = 0; i < nitems; ++i) {
-    var obj: Object = {};
+    var obj: object = {};
     for (var keyidx = 0; keyidx < keys.length; ++keyidx) {
       if (this.buf.peekInt(1) == BSER_SKIP) {
         this.buf.readAdvance(1);
         continue;
       }
-      var val: String = this.decodeAny();
+      var val: string = this.decodeAny();
       obj[keys[keyidx]] = val;
     }
     arr.push(obj);
@@ -394,7 +394,7 @@ BunserBuf.prototype.decodeTemplate = function() {
 
 BunserBuf.prototype.decodeString = function() {
   this.expectCode(BSER_STRING);
-  var len: String = this.decodeInt();
+  var len: string = this.decodeInt();
   return this.buf.readString(len);
 }
 
@@ -403,14 +403,14 @@ BunserBuf.prototype.decodeString = function() {
 // we don't want to throw.  This is only true when we're reading
 // the PDU length from the PDU header; we'll set relaxSizeAsserts
 // in that case.
-BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: Boolean) {
+BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: boolean) {
   if (relaxSizeAsserts && (this.buf.readAvail() < 1)) {
     return false;
   } else {
     this.buf.assertReadableSize(1);
   }
-  var code: String = this.buf.peekInt(1);
-  var size: Number = 0;
+  var code: string = this.buf.peekInt(1);
+  var size: number = 0;
   switch (code) {
     case BSER_INT8:
       size = 1;
@@ -436,9 +436,9 @@ BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: Boolean) {
 }
 
 // synchronously BSER decode a string and return the value
-function loadFromBuffer(input: Element): Object {
+function loadFromBuffer(input: Element): object {
   var buf: HTMLElement = new BunserBuf();
-  var result: String = buf.append(input, true);
+  var result: string = buf.append(input, true);
   if (buf.buf.readAvail()) {
     throw Error(
         'excess data found after input buffer, use BunserBuf instead');
@@ -453,17 +453,17 @@ exports.loadFromBuffer = loadFromBuffer
 
 // Byteswap an arbitrary buffer, flipping from one endian
 // to the other, returning a new buffer with the resultant data
-function byteswap64(buf: Array): Object {
-  var swap: Object = Buffer.alloc(buf.length);
+function byteswap64(buf: any[]): object {
+  var swap: object = Buffer.alloc(buf.length);
   for (var i = 0; i < buf.length; i++) {
     swap[i] = buf[buf.length -1 - i];
   }
   return swap;
 }
 
-function dump_int64(buf: Array, val: Object): Void {
+function dump_int64(buf: any[], val: object): Void {
   // Get the raw bytes.  The Int64 buffer is big endian
-  var be: String = val.toBuffer();
+  var be: string = val.toBuffer();
 
   if (isBigEndian) {
     // We're a big endian system, so the buffer is exactly how we
@@ -473,13 +473,13 @@ function dump_int64(buf: Array, val: Object): Void {
     return;
   }
   // We need to byte swap to get the correct representation
-  var le: String = byteswap64(be);
+  var le: string = byteswap64(be);
   buf.writeByte(BSER_INT64);
   buf.append(le);
 }
 
-function dump_int(buf: HTMLElement, val: Number): Void {
-  var abs: Number = Math.abs(val);
+function dump_int(buf: HTMLElement, val: number): Void {
+  var abs: number = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
     buf.writeInt(val, 1);
@@ -494,7 +494,7 @@ function dump_int(buf: HTMLElement, val: Number): Void {
   }
 }
 
-function dump_any(buf: Object, val: Number): Void {
+function dump_any(buf: object, val: number): Void {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float
@@ -531,21 +531,21 @@ function dump_any(buf: Object, val: Number): Void {
         return;
       }
       buf.writeByte(BSER_OBJECT);
-      var keys: Array = Object.keys(val);
+      var keys: any[] = Object.keys(val);
 
       // First pass to compute number of defined keys
-      var num_keys: Number = keys.length;
+      var num_keys: number = keys.length;
       for (var i = 0; i < keys.length; ++i) {
-        var key: String = keys[i];
-        var v: String = val[key];
+        var key: string = keys[i];
+        var v: string = val[key];
         if (typeof(v) == 'undefined') {
           num_keys--;
         }
       }
       dump_int(buf, num_keys);
       for (var i = 0; i < keys.length; ++i) {
-        var key: String = keys[i];
-        var v: String = val[key];
+        var key: string = keys[i];
+        var v: string = val[key];
         if (typeof(v) == 'undefined') {
           // Don't include it
           continue;
@@ -567,7 +567,7 @@ function dump_any(buf: Object, val: Number): Void {
 }
 
 // BSER encode value and return a buffer of the contents
-function dumpToBuffer(val: String): Array {
+function dumpToBuffer(val: string): any[] {
   var buf: HTMLElement = new Accumulator();
   // Build out the header
   buf.writeByte(0);
@@ -579,8 +579,8 @@ function dumpToBuffer(val: String): Array {
   dump_any(buf, val);
 
   // Compute PDU length
-  var off: Number = buf.writeOffset;
-  var len: Number = off - 7 /* the header length */;
+  var off: number = buf.writeOffset;
+  var len: number = off - 7 /* the header length */;
   buf.writeOffset = 3; // The length value to fill in
   buf.writeInt(len, 4); // write the length in the space we reserved
   buf.writeOffset = off;

@@ -2,12 +2,12 @@
 
 var utils: HTMLElement = exports;
 
-function toArray(msg: String, enc: Number): Array {
+function toArray(msg: string, enc: number): any[] {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
     return [];
-  var res: Array = [];
+  var res: any[] = [];
   if (typeof msg !== 'string') {
     for (var i = 0; i < msg.length; i++)
       res[i] = msg[i] | 0;
@@ -21,9 +21,9 @@ function toArray(msg: String, enc: Number): Array {
       res.push(parseInt(msg[i] + msg[i + 1], 16));
   } else {
     for (var i = 0; i < msg.length; i++) {
-      var c: Number = msg.charCodeAt(i);
-      var hi: Number = c >> 8;
-      var lo: Number = c & 0xff;
+      var c: number = msg.charCodeAt(i);
+      var hi: number = c >> 8;
+      var lo: number = c & 0xff;
       if (hi)
         res.push(hi, lo);
       else
@@ -34,7 +34,7 @@ function toArray(msg: String, enc: Number): Array {
 }
 utils.toArray = toArray;
 
-function zero2(word: String): String {
+function zero2(word: string): string {
   if (word.length === 1)
     return '0' + word;
   else
@@ -42,15 +42,15 @@ function zero2(word: String): String {
 }
 utils.zero2 = zero2;
 
-function toHex(msg: Array): String {
-  var res: String = '';
+function toHex(msg: any[]): string {
+  var res: string = '';
   for (var i = 0; i < msg.length; i++)
     res += zero2(msg[i].toString(16));
   return res;
 }
 utils.toHex = toHex;
 
-utils.encode = function encode(arr: String, enc: Number): String {
+utils.encode = function encode(arr: string, enc: number): string {
   if (enc === 'hex')
     return toHex(arr);
   else

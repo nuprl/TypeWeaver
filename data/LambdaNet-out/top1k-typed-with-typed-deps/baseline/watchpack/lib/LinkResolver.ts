@@ -4,8 +4,8 @@
 */
 "use strict";
 
-const fs: String = require("fs");
-const path: String = require("path");
+const fs: string = require("fs");
+const path: string = require("path");
 
 // macOS, Linux, and Windows all rely on these errors
 const EXPECTED_ERRORS: Error = new Set(["EINVAL", "ENOENT"]);
@@ -23,11 +23,11 @@ class LinkResolver {
 	 * @returns {string[]} array of file and all symlinks contributed in the resolving process (first item is the resolved file)
 	 */
 	resolve(file) {
-		const cacheEntry: String = this.cache.get(file);
+		const cacheEntry: string = this.cache.get(file);
 		if (cacheEntry !== undefined) {
 			return cacheEntry;
 		}
-		const parent: Number = path.dirname(file);
+		const parent: number = path.dirname(file);
 		if (parent === file) {
 			// At root of filesystem there can't be a link
 			const result: Function = Object.freeze([file]);
@@ -35,27 +35,27 @@ class LinkResolver {
 			return result;
 		}
 		// resolve the parent directory to find links there and get the real path
-		const parentResolved: Array = this.resolve(parent);
-		let realFile: String = file;
+		const parentResolved: any[] = this.resolve(parent);
+		let realFile: string = file;
 
 		// is the parent directory really somewhere else?
 		if (parentResolved[0] !== parent) {
 			// get the real location of file
-			const basename: String = path.basename(file);
+			const basename: string = path.basename(file);
 			realFile = path.resolve(parentResolved[0], basename);
 		}
 		// try to read the link content
 		try {
-			const linkContent: String = fs.readlinkSync(realFile);
+			const linkContent: string = fs.readlinkSync(realFile);
 
 			// resolve the link content relative to the parent directory
-			const resolvedLink: String = path.resolve(parentResolved[0], linkContent);
+			const resolvedLink: string = path.resolve(parentResolved[0], linkContent);
 
 			// recursive resolve the link content for more links in the structure
-			const linkResolved: Array = this.resolve(resolvedLink);
+			const linkResolved: any[] = this.resolve(resolvedLink);
 
 			// merge parent and link resolve results
-			let result: Array;
+			let result: any[];
 			if (linkResolved.length > 1 && parentResolved.length > 1) {
 				// when both contain links we need to duplicate them with a Set
 				const resultSet: Error = new Set(linkResolved);

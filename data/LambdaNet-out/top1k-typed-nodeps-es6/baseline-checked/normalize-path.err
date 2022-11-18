@@ -1,40 +1,19 @@
-benchmark/code/no-regex.ts(22,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/code/no-regex.ts(23,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/code/no-regex.ts(24,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-benchmark/code/no-regex.ts(25,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-benchmark/code/no-regex.ts(27,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-benchmark/code/no-regex.ts(28,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 benchmark/code/node-path.ts(2,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
-benchmark/code/node-path.ts(5,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/code/node-path.ts(6,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-benchmark/code/regex.ts(4,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-benchmark/code/slice-trailing.ts(4,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-benchmark/code/split.ts(1,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/split.ts(1,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/node-path.ts(6,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/regex.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/slice-trailing.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/split.ts(2,13): error TS2339: Property 'split' does not exist on type 'any[]'.
 benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
-benchmark/code/v2.ts(10,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/v2.ts(15,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
-benchmark/code/while.ts(1,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while.ts(6,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while.ts(10,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-benchmark/code/while.ts(11,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while.ts(16,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-benchmark/code/while.ts(17,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while.ts(18,11): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
-benchmark/code/while.ts(28,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-benchmark/code/while.ts(31,5): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+benchmark/code/v2.ts(15,7): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/v2.ts(18,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
+benchmark/code/while.ts(16,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+benchmark/code/while.ts(18,11): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/while.ts(31,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
-index.ts(23,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-index.ts(24,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(24,24): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(30,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(31,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
+index.ts(23,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(24,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(24,24): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(31,7): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
 

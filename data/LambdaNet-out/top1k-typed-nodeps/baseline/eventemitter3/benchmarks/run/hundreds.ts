@@ -1,17 +1,17 @@
 'use strict';
 
-var benchmark: Array = require('benchmark');
+var benchmark: any[] = require('benchmark');
 
-var EventEmitter2: Object = require('eventemitter2').EventEmitter2
-  , EventEmitter1: Object = require('events').EventEmitter
-  , EventEmitter3: Array = require('eventemitter3')
-  , Drip: Object = require('drip').EventEmitter
+var EventEmitter2: object = require('eventemitter2').EventEmitter2
+  , EventEmitter1: object = require('events').EventEmitter
+  , EventEmitter3: any[] = require('eventemitter3')
+  , Drip: object = require('drip').EventEmitter
   , CE: Function = require('contra/emitter')
   , EE: Function = require('event-emitter')
-  , FE: Array = require('fastemitter')
-  , Master: Array = require('../../');
+  , FE: any[] = require('fastemitter')
+  , Master: any[] = require('../../');
 
-function foo(): Number {
+function foo(): number {
   if (arguments.length > 100) console.log('damn');
 
   return 1;
@@ -25,7 +25,7 @@ var ee1: HTMLElement = new EventEmitter1()
   , fe: HTMLElement = new FE()
   , ce: HTMLElement = CE()
   , ee: HTMLElement = EE()
-  , j: Number, i: Number;
+  , j: number, i: number;
 
 for (i = 0; i < 10; i++) {
   for (j = 0; j < 10; j++) {

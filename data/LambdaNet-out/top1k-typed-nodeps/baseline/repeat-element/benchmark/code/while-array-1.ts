@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function repeat(val: String, num: Number): Array {
+module.exports = function repeat(val: string, num: number): any[] {
   var arr: Promise = [];
 
   while (num--) {

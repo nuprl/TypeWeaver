@@ -1,17 +1,17 @@
 import document from "../var/document.js";
 
-var preservedScriptAttributes: Object = {
+var preservedScriptAttributes: object = {
 	type: true,
 	src: true,
 	nonce: true,
 	noModule: true
 };
 
-function DOMEval( code: String, node: Object, doc: String ): Void {
+function DOMEval( code: string, node: object, doc: string ): Void {
 	doc = doc || document;
 
-	var i: String,
-		script: Object = doc.createElement( "script" );
+	var i: string,
+		script: object = doc.createElement( "script" );
 
 	script.text = code;
 	if ( node ) {

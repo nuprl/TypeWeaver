@@ -1,4 +1,4 @@
-const stream: String = require('stream')
+const stream: string = require('stream')
 module.exports = class ExtendTransform extends stream.Transform {
   constructor (opts) {
     super(opts)

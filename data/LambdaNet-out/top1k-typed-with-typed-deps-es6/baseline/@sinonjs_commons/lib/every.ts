@@ -8,8 +8,8 @@
  * @param  {Function} fn
  * @returns {boolean}
  */
-export default function every(obj: Array, fn: Function): Boolean {
-    var pass: Boolean = true;
+export default function every(obj: any[], fn: Function): boolean {
+    var pass: boolean = true;
 
     try {
         // eslint-disable-next-line @sinonjs/no-prototype-methods/no-prototype-methods

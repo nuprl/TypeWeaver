@@ -1,4 +1,4 @@
-var scope: String = (typeof global !== "undefined" && global) ||
+var scope: string = (typeof global !== "undefined" && global) ||
             (typeof self !== "undefined" && self) ||
             window;
 var apply: Function = Function.prototype.apply;
@@ -19,7 +19,7 @@ export const clearTimeout: Function = exports.clearInterval = function(timeout: 
   }
 };
 
-function Timeout(id: String, clearFn: String): Void {
+function Timeout(id: string, clearFn: string): Void {
   this._id = id;
   this._clearFn = clearFn;
 }
@@ -29,20 +29,20 @@ Timeout.prototype.close = function() {
 };
 
 // Does not start the time, just sets up the members needed.
-export const enroll: Function = function(item: Object, msecs: Number) {
+export const enroll: Function = function(item: object, msecs: number) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = msecs;
 };
 
-export const unenroll: Function = function(item: Object) {
+export const unenroll: Function = function(item: object) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };
 
-export const _unrefActive: Boolean = exports.active = function(item: HTMLElement) {
+export const _unrefActive: boolean = exports.active = function(item: HTMLElement) {
   clearTimeout(item._idleTimeoutId);
 
-  var msecs: Number = item._idleTimeout;
+  var msecs: number = item._idleTimeout;
   if (msecs >= 0) {
     item._idleTimeoutId = setTimeout(function onTimeout(): Void {
       if (item._onTimeout)
@@ -57,10 +57,10 @@ import 'setimmediate';
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
-export const setImmediate: Number = (typeof self !== "undefined" && self.setImmediate) ||
+export const setImmediate: number = (typeof self !== "undefined" && self.setImmediate) ||
                        (typeof global !== "undefined" && global.setImmediate) ||
                        (this && this.setImmediate);
 
-export const clearImmediate: Number = (typeof self !== "undefined" && self.clearImmediate) ||
+export const clearImmediate: number = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);

@@ -1,14 +1,14 @@
 const random: Function = require('crypto').randomBytes
 
-const b64: String = require('../')
-let data: String = random(1e6).toString('base64')
-const start: Number = Date.now()
-const raw: String = b64.toByteArray(data)
-const middle1: Number = Date.now()
+const b64: string = require('../')
+let data: string = random(1e6).toString('base64')
+const start: number = Date.now()
+const raw: string = b64.toByteArray(data)
+const middle1: number = Date.now()
 data = b64.fromByteArray(raw)
-const middle2: Number = Date.now()
-const len: Number = b64.byteLength(data)
-const end: Number = Date.now()
+const middle2: number = Date.now()
+const len: number = b64.byteLength(data)
+const end: number = Date.now()
 
 console.log(
   'decode ms, decode ops/ms, encode ms, encode ops/ms, length ms, length ops/ms'

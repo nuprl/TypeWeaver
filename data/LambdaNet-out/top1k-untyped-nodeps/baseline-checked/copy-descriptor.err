@@ -1,8 +1,7 @@
 examples/proto.ts(5,17): error TS2304: Cannot find name 'Void'.
-examples/proto.ts(10,14): error TS2538: Type 'String' cannot be used as an index type.
 examples/proto.ts(22,10): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 examples/proto.ts(22,16): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(50,105): error TS2304: Cannot find name 'Void'.
-index.ts(74,7): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(75,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(70,17): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+index.ts(74,7): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
 

@@ -27,20 +27,20 @@ class RootsPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 
 		resolver
 			.getHook(this.source)
-			.tapAsync("RootsPlugin", (request: Object, resolveContext: Function, callback: Function) => {
-				const req: Array = request.request;
+			.tapAsync("RootsPlugin", (request: object, resolveContext: Function, callback: Function) => {
+				const req: any[] = request.request;
 				if (!req) return callback();
 				if (!req.startsWith("/")) return callback();
 
 				forEachBail(
 					this.roots,
-					(root: String, callback: Array) => {
-						const path: Number = resolver.join(root, req.slice(1));
-						const obj: Object = {
+					(root: string, callback: any[]) => {
+						const path: number = resolver.join(root, req.slice(1));
+						const obj: object = {
 							...request,
 							path,
 							relativePath: request.relativePath && path

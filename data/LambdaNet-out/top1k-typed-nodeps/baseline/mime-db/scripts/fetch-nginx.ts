@@ -12,7 +12,7 @@
  */
 
 var getBody: Function = require('raw-body')
-var https: String = require('https')
+var https: string = require('https')
 var writedb: Function = require('./lib/write-db')
 
 /**
@@ -28,24 +28,24 @@ var TYPE_LINE_REGEXP: RegExp = /^\s*([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*);\s*$/gm
  * This uses the Github.com mirror of the Mercurial repository
  * as the Mercurial web interface requires cookies.
  */
-var URL: String = 'https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types'
+var URL: string = 'https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types'
 
-get(URL, function onResponse (err: Boolean, body: String): Void {
+get(URL, function onResponse (err: boolean, body: string): Void {
   if (err) throw err
 
-  var json: Object = {}
-  var match: Object = null
+  var json: object = {}
+  var match: object = null
 
   TYPE_LINE_REGEXP.index = 0
 
   while ((match = TYPE_LINE_REGEXP.exec(body))) {
-    var mime: String = match[1]
+    var mime: string = match[1]
 
     // parse the extensions
-    var extensions: Array = (match[2] || '')
+    var extensions: any[] = (match[2] || '')
       .split(/\s+/)
       .filter(Boolean)
-    var data: Array = json[mime] || (json[mime] = {})
+    var data: any[] = json[mime] || (json[mime] = {})
 
     // append the extensions
     appendExtensions(data, extensions)
@@ -57,7 +57,7 @@ get(URL, function onResponse (err: Boolean, body: String): Void {
 /**
  * Append an extension to an object.
  */
-function appendExtension (obj: Object, extension: String): Void {
+function appendExtension (obj: object, extension: string): Void {
   if (!obj.extensions) {
     obj.extensions = []
   }
@@ -70,13 +70,13 @@ function appendExtension (obj: Object, extension: String): Void {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: String, extensions: Array): Void {
+function appendExtensions (obj: string, extensions: any[]): Void {
   if (extensions.length === 0) {
     return
   }
 
   for (var i = 0; i < extensions.length; i++) {
-    var extension: String = extensions[i]
+    var extension: string = extensions[i]
 
     // add extension to the type entry
     appendExtension(obj, extension)
@@ -86,7 +86,7 @@ function appendExtensions (obj: String, extensions: Array): Void {
 /**
  * Get HTTPS resource.
  */
-function get (url: String, callback: Function): Void {
+function get (url: string, callback: Function): Void {
   https.get(url, function onResponse (res: HTMLElement): Void {
     if (res.statusCode !== 200) {
       callback(new Error('got status code ' + res.statusCode + ' from ' + URL))

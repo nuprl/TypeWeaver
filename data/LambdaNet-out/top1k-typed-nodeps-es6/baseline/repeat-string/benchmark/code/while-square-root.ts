@@ -1,7 +1,7 @@
 'use strict';
 
-export default function repeat(str: String, num: Number): String {
-  var max: Number = str.length * num;
+export default function repeat(str: string, num: number): string {
+  var max: number = str.length * num;
   num = Math.ceil(Math.sqrt(num));
 
   while (num--) {

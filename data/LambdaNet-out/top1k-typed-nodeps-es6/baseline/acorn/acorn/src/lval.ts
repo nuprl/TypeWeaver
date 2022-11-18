@@ -8,7 +8,7 @@ const pp: Parser = Parser.prototype
 // Convert existing expression atom to assignable pattern
 // if possible.
 
-pp.toAssignable = function(node: Parser, isBinding: Boolean, refDestructuringErrors: String) {
+pp.toAssignable = function(node: Parser, isBinding: boolean, refDestructuringErrors: string) {
   if (this.options.ecmaVersion >= 6 && node) {
     switch (node.type) {
     case "Identifier":
@@ -87,10 +87,10 @@ pp.toAssignable = function(node: Parser, isBinding: Boolean, refDestructuringErr
 
 // Convert list of expression atoms to binding list.
 
-pp.toAssignableList = function(exprList: Array, isBinding: Boolean) {
-  let end: Number = exprList.length
+pp.toAssignableList = function(exprList: any[], isBinding: boolean) {
+  let end: number = exprList.length
   for (let i = 0; i < end; i++) {
-    let elt: String = exprList[i]
+    let elt: string = exprList[i]
     if (elt) this.toAssignable(elt, isBinding)
   }
   if (end) {
@@ -103,7 +103,7 @@ pp.toAssignableList = function(exprList: Array, isBinding: Boolean) {
 
 // Parses spread element.
 
-pp.parseSpread = function(refDestructuringErrors: String) {
+pp.parseSpread = function(refDestructuringErrors: string) {
   let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeAssign(false, refDestructuringErrors)
@@ -141,8 +141,8 @@ pp.parseBindingAtom = function() {
   return this.parseIdent()
 }
 
-pp.parseBindingList = function(close: String, allowEmpty: Boolean, allowTrailingComma: Boolean) {
-  let elts: Array = [], first: Boolean = true
+pp.parseBindingList = function(close: string, allowEmpty: boolean, allowTrailingComma: boolean) {
+  let elts: any[] = [], first: boolean = true
   while (!this.eat(close)) {
     if (first) first = false
     else this.expect(tt.comma)
@@ -172,10 +172,10 @@ pp.parseBindingListItem = function(param: Position) {
 
 // Parses assignment pattern around given atom if possible.
 
-pp.parseMaybeDefault = function(startPos: Number, startLoc: Number, left: Number) {
+pp.parseMaybeDefault = function(startPos: number, startLoc: number, left: number) {
   left = left || this.parseBindingAtom()
   if (this.options.ecmaVersion < 6 || !this.eat(tt.eq)) return left
-  let node: Array = this.startNodeAt(startPos, startLoc)
+  let node: any[] = this.startNodeAt(startPos, startLoc)
   node.left = left
   node.right = this.parseMaybeAssign()
   return this.finishNode(node, "AssignmentPattern")
@@ -245,8 +245,8 @@ pp.parseMaybeDefault = function(startPos: Number, startLoc: Number, left: Number
 // duplicate argument names. checkClashes is ignored if the provided construct
 // is an assignment (i.e., bindingType is BIND_NONE).
 
-pp.checkLValSimple = function(expr: Object, bindingType: Number = BIND_NONE, checkClashes: Object) {
-  const isBind: Boolean = bindingType !== BIND_NONE
+pp.checkLValSimple = function(expr: object, bindingType: number = BIND_NONE, checkClashes: object) {
+  const isBind: boolean = bindingType !== BIND_NONE
 
   switch (expr.type) {
   case "Identifier":
@@ -281,7 +281,7 @@ pp.checkLValSimple = function(expr: Object, bindingType: Number = BIND_NONE, che
   }
 }
 
-pp.checkLValPattern = function(expr: Parser, bindingType: String = BIND_NONE, checkClashes: Number) {
+pp.checkLValPattern = function(expr: Parser, bindingType: string = BIND_NONE, checkClashes: number) {
   switch (expr.type) {
   case "ObjectPattern":
     for (let prop of expr.properties) {
@@ -300,7 +300,7 @@ pp.checkLValPattern = function(expr: Parser, bindingType: String = BIND_NONE, ch
   }
 }
 
-pp.checkLValInnerPattern = function(expr: Parser, bindingType: String = BIND_NONE, checkClashes: Number) {
+pp.checkLValInnerPattern = function(expr: Parser, bindingType: string = BIND_NONE, checkClashes: number) {
   switch (expr.type) {
   case "Property":
     // AssignmentProperty has type === "Property"

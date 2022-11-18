@@ -33,11 +33,11 @@ suite.add({
   fn: 'var val = fresh({ \'if-none-match\': \'"foo", "bar", "fizz", "buzz"\' }, { etag: \'"buzz"\' })'
 })
 
-suite.on('start', function onCycle (event: String): Void {
+suite.on('start', function onCycle (event: string): Void {
   process.stdout.write('  etag\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Object): Void {
+suite.on('cycle', function onCycle (event: object): Void {
   benchmarks.add(event.target)
 })
 

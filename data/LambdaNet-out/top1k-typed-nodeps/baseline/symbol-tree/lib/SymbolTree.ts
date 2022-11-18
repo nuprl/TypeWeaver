@@ -5,15 +5,15 @@
  * @author Joris van der Wel <joris@jorisvanderwel.com>
  */
 
-const SymbolTreeNode: String = require('./SymbolTreeNode');
+const SymbolTreeNode: string = require('./SymbolTreeNode');
 const TreePosition: SymbolTree = require('./TreePosition');
 const TreeIterator: SymbolTree = require('./TreeIterator');
 
-function returnTrue(): Boolean {
+function returnTrue(): boolean {
         return true;
 }
 
-function reverseArrayIndex(array: Array, reverseIndex: Number): String {
+function reverseArrayIndex(array: any[], reverseIndex: number): string {
         return array[array.length - 1 - reverseIndex]; // no need to check `index >= 0`
 }
 
@@ -51,7 +51,7 @@ class SymbolTree {
                         return null;
                 }
 
-                const node: Object = object[this.symbol];
+                const node: object = object[this.symbol];
 
                 if (node) {
                         return node;
@@ -183,7 +183,7 @@ class SymbolTree {
          * @return {?Object}
          */
         preceding(object, options) {
-                const treeRoot: String = options && options.root;
+                const treeRoot: string = options && options.root;
 
                 if (object === treeRoot) {
                         return null;
@@ -218,16 +218,16 @@ class SymbolTree {
          * @return {?Object}
          */
         following(object, options) {
-                const treeRoot: String = options && options.root;
-                const skipChildren: Boolean = options && options.skipChildren;
+                const treeRoot: string = options && options.root;
+                const skipChildren: boolean = options && options.skipChildren;
 
-                const firstChild: Boolean = !skipChildren && this._node(object).firstChild;
+                const firstChild: boolean = !skipChildren && this._node(object).firstChild;
 
                 if (firstChild) {
                         return firstChild;
                 }
 
-                let current: String = object;
+                let current: string = object;
 
                 do {
                         if (current === treeRoot) {
@@ -263,13 +263,13 @@ class SymbolTree {
          * @return {Object[]}
          */
         childrenToArray(parent, options) {
-                const array: Array   = (options && options.array) || [];
+                const array: any[]   = (options && options.array) || [];
                 const filter: Function  = (options && options.filter) || returnTrue;
-                const thisArg: Number = (options && options.thisArg) || undefined;
+                const thisArg: number = (options && options.thisArg) || undefined;
 
                 const parentNode: SymbolTree = this._node(parent);
                 let object: Function = parentNode.firstChild;
-                let index: Number = 0;
+                let index: number = 0;
 
                 while (object) {
                         const node: SymbolTree = this._node(object);
@@ -303,11 +303,11 @@ class SymbolTree {
          * @return {Object[]}
          */
         ancestorsToArray(object, options) {
-                const array: Array   = (options && options.array) || [];
+                const array: any[]   = (options && options.array) || [];
                 const filter: Function  = (options && options.filter) || returnTrue;
-                const thisArg: Number = (options && options.thisArg) || undefined;
+                const thisArg: number = (options && options.thisArg) || undefined;
 
-                let ancestor: String = object;
+                let ancestor: string = object;
 
                 while (ancestor) {
                         if (filter.call(thisArg, ancestor)) {
@@ -336,11 +336,11 @@ class SymbolTree {
          * @return {Object[]}
          */
         treeToArray(root, options) {
-                const array: Array   = (options && options.array) || [];
+                const array: any[]   = (options && options.array) || [];
                 const filter: Function  = (options && options.filter) || returnTrue;
-                const thisArg: Number = (options && options.thisArg) || undefined;
+                const thisArg: number = (options && options.thisArg) || undefined;
 
-                let object: String = root;
+                let object: string = root;
 
                 while (object) {
                         if (filter.call(thisArg, object)) {
@@ -365,7 +365,7 @@ class SymbolTree {
          * @return {Object} An iterable iterator (ES6)
          */
         childrenIterator(parent, options) {
-                const reverse: Boolean = options && options.reverse;
+                const reverse: boolean = options && options.reverse;
                 const parentNode: SymbolTree = this._node(parent);
 
                 return new TreeIterator(
@@ -449,7 +449,7 @@ class SymbolTree {
          * @return {Object} An iterable iterator (ES6)
          */
         treeIterator(root, options) {
-                const reverse: Boolean = options && options.reverse;
+                const reverse: boolean = options && options.reverse;
 
                 return new TreeIterator(
                         this,
@@ -471,7 +471,7 @@ class SymbolTree {
          * @return {Number} The number of preceding siblings, or -1 if the object has no parent
          */
         index(child) {
-                const childNode: Object = this._node(child);
+                const childNode: object = this._node(child);
                 const parentNode: SymbolTree = this._node(childNode.parent);
 
                 if (!parentNode) {
@@ -481,7 +481,7 @@ class SymbolTree {
                         return -1;
                 }
 
-                let currentIndex: Number = childNode.getCachedIndex(parentNode);
+                let currentIndex: number = childNode.getCachedIndex(parentNode);
 
                 if (currentIndex >= 0) {
                         return currentIndex;
@@ -571,8 +571,8 @@ class SymbolTree {
 
                 /* jshint -W016 */
 
-                const leftAncestors: Array = []; { // inclusive
-                        let leftAncestor: String = left;
+                const leftAncestors: any[] = []; { // inclusive
+                        let leftAncestor: string = left;
 
                         while (leftAncestor) {
                                 if (leftAncestor === right) {
@@ -586,8 +586,8 @@ class SymbolTree {
                 }
 
 
-                const rightAncestors: Array = []; {
-                        let rightAncestor: String = right;
+                const rightAncestors: any[] = []; {
+                        let rightAncestor: string = right;
 
                         while (rightAncestor) {
                                 if (rightAncestor === left) {
@@ -600,7 +600,7 @@ class SymbolTree {
                 }
 
 
-                const root: Number = reverseArrayIndex(leftAncestors, 0);
+                const root: number = reverseArrayIndex(leftAncestors, 0);
 
                 if (!root || root !== reverseArrayIndex(rightAncestors, 0)) {
                         // note: unlike DOM, preceding / following is not set here
@@ -608,12 +608,12 @@ class SymbolTree {
                 }
 
                 // find the lowest common ancestor
-                let commonAncestorIndex: Number = 0;
-                const ancestorsMinLength: Number = Math.min(leftAncestors.length, rightAncestors.length);
+                let commonAncestorIndex: number = 0;
+                const ancestorsMinLength: number = Math.min(leftAncestors.length, rightAncestors.length);
 
                 for (let i = 0; i < ancestorsMinLength; ++i) {
-                        const leftAncestor: Number  = reverseArrayIndex(leftAncestors, i);
-                        const rightAncestor: Number = reverseArrayIndex(rightAncestors, i);
+                        const leftAncestor: number  = reverseArrayIndex(leftAncestors, i);
+                        const rightAncestor: number = reverseArrayIndex(rightAncestors, i);
 
                         if (leftAncestor !== rightAncestor) {
                                 break;
@@ -623,8 +623,8 @@ class SymbolTree {
                 }
 
                 // indexes within the common ancestor
-                const leftIndex: String  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
-                const rightIndex: Number = this.index(reverseArrayIndex(rightAncestors, commonAncestorIndex + 1));
+                const leftIndex: string  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
+                const rightIndex: number = this.index(reverseArrayIndex(rightAncestors, commonAncestorIndex + 1));
 
                 return rightIndex < leftIndex
                         ? TreePosition.PRECEDING
@@ -646,7 +646,7 @@ class SymbolTree {
                 const removeNode: SymbolTree = this._node(removeObject);
                 const parentNode: SymbolTree = this._node(removeNode.parent);
                 const prevNode: SymbolTree = this._node(removeNode.previousSibling);
-                const nextNode: Object = this._node(removeNode.nextSibling);
+                const nextNode: object = this._node(removeNode.nextSibling);
 
                 if (parentNode) {
                         if (parentNode.firstChild === removeObject) {
@@ -737,7 +737,7 @@ class SymbolTree {
          */
         insertAfter(referenceObject, newObject) {
                 const referenceNode: SymbolTree = this._node(referenceObject);
-                const nextNode: Object = this._node(referenceNode.nextSibling);
+                const nextNode: object = this._node(referenceNode.nextSibling);
                 const newNode: SymbolTree = this._node(newObject);
                 const parentNode: SymbolTree = this._node(referenceNode.parent);
 

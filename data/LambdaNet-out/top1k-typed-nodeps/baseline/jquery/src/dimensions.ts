@@ -5,20 +5,20 @@ import isWindow from "./var/isWindow.js";
 import "./css.js";
 
 // Create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
-jQuery.each( { Height: "height", Width: "width" }, function( name: String, type: String ) {
+jQuery.each( { Height: "height", Width: "width" }, function( name: string, type: string ) {
 	jQuery.each( {
 		padding: "inner" + name,
 		content: type,
 		"": "outer" + name
-	}, function( defaultExtra: Boolean, funcName: String ) {
+	}, function( defaultExtra: boolean, funcName: string ) {
 
 		// Margin is only for outerHeight, outerWidth
-		jQuery.fn[ funcName ] = function( margin: String, value: Number ) {
-			var chainable: Boolean = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
-				extra: String = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
+		jQuery.fn[ funcName ] = function( margin: string, value: number ) {
+			var chainable: boolean = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
+				extra: string = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
-			return access( this, function( elem: Object, type: String, value: Number ) {
-				var doc: Object;
+			return access( this, function( elem: object, type: string, value: number ) {
+				var doc: object;
 
 				if ( isWindow( elem ) ) {
 

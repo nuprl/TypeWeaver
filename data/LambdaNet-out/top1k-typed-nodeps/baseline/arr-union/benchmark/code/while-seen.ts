@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = function union(): Array {
-  var args: Array = [].concat.apply([], arguments);
-  var len: Number = args.length;
-  var seen: Object = {};
-  var res: Array = [];
+module.exports = function union(): any[] {
+  var args: any[] = [].concat.apply([], arguments);
+  var len: number = args.length;
+  var seen: object = {};
+  var res: any[] = [];
 
   while (len--) {
-    var ele: String = args[len];
+    var ele: string = args[len];
     if (!!seen[ele]) {
       continue;
     }

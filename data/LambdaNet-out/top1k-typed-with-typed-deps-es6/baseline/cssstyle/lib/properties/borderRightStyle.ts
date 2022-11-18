@@ -4,7 +4,7 @@ import { isValid } from './borderStyle';
 module.exports.isValid = isValid;
 
 module.exports.definition = {
-  set: function(v: String) {
+  set: function(v: string) {
     if (isValid(v)) {
       if (v.toLowerCase() === 'none') {
         v = '';

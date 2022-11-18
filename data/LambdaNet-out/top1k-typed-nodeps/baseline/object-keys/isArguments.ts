@@ -2,9 +2,9 @@
 
 var toStr: Function = Object.prototype.toString;
 
-module.exports = function isArguments(value: Array): Boolean {
-	var str: String = toStr.call(value);
-	var isArgs: Boolean = str === '[object Arguments]';
+module.exports = function isArguments(value: any[]): boolean {
+	var str: string = toStr.call(value);
+	var isArgs: boolean = str === '[object Arguments]';
 	if (!isArgs) {
 		isArgs = str !== '[object Array]'
 			&& value !== null

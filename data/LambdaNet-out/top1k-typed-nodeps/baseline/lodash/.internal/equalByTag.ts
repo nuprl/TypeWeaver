@@ -4,22 +4,22 @@ import mapToArray from './mapToArray.js'
 import setToArray from './setToArray.js'
 
 /** Used to compose bitmasks for value comparisons. */
-const COMPARE_PARTIAL_FLAG: Number = 1
-const COMPARE_UNORDERED_FLAG: Number = 2
+const COMPARE_PARTIAL_FLAG: number = 1
+const COMPARE_UNORDERED_FLAG: number = 2
 
 /** `Object#toString` result references. */
-const boolTag: String = '[object Boolean]'
-const dateTag: String = '[object Date]'
-const errorTag: String = '[object Error]'
-const mapTag: String = '[object Map]'
-const numberTag: String = '[object Number]'
-const regexpTag: String = '[object RegExp]'
-const setTag: String = '[object Set]'
-const stringTag: String = '[object String]'
-const symbolTag: String = '[object Symbol]'
+const boolTag: string = '[object Boolean]'
+const dateTag: string = '[object Date]'
+const errorTag: string = '[object Error]'
+const mapTag: string = '[object Map]'
+const numberTag: string = '[object Number]'
+const regexpTag: string = '[object RegExp]'
+const setTag: string = '[object Set]'
+const stringTag: string = '[object String]'
+const symbolTag: string = '[object Symbol]'
 
-const arrayBufferTag: String = '[object ArrayBuffer]'
-const dataViewTag: String = '[object DataView]'
+const arrayBufferTag: string = '[object ArrayBuffer]'
+const dataViewTag: string = '[object DataView]'
 
 /** Used to convert symbols to primitives and strings. */
 const symbolValueOf: Function = Symbol.prototype.valueOf
@@ -41,7 +41,7 @@ const symbolValueOf: Function = Symbol.prototype.valueOf
  * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalByTag(object: Object, other: Object, tag: String, bitmask: Number, customizer: Number, equalFunc: Function, stack: Object): Boolean {
+function equalByTag(object: object, other: object, tag: string, bitmask: number, customizer: number, equalFunc: Function, stack: object): boolean {
   switch (tag) {
     case dataViewTag:
       if ((object.byteLength != other.byteLength) ||
@@ -79,14 +79,14 @@ function equalByTag(object: Object, other: Object, tag: String, bitmask: Number,
       let convert: Function = mapToArray
 
     case setTag:
-      const isPartial: Boolean = bitmask & COMPARE_PARTIAL_FLAG
+      const isPartial: boolean = bitmask & COMPARE_PARTIAL_FLAG
       convert || (convert = setToArray)
 
       if (object.size != other.size && !isPartial) {
         return false
       }
       // Assume cyclic values are equal.
-      const stacked: String = stack.get(object)
+      const stacked: string = stack.get(object)
       if (stacked) {
         return stacked == other
       }
@@ -94,7 +94,7 @@ function equalByTag(object: Object, other: Object, tag: String, bitmask: Number,
 
       // Recursively compare objects (susceptible to call stack limits).
       stack.set(object, other)
-      const result: Boolean = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack)
+      const result: boolean = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack)
       stack['delete'](object)
       return result
 

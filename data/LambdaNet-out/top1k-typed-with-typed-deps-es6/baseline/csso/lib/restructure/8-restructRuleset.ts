@@ -6,12 +6,12 @@ import {
     addSelectors
 } from './utils.js';
 
-function calcSelectorLength(list: Array): Number {
-    return list.reduce((res: Number, data: Object) => res + data.id.length + 1, 0) - 1;
+function calcSelectorLength(list: any[]): number {
+    return list.reduce((res: number, data: object) => res + data.id.length + 1, 0) - 1;
 }
 
-function calcDeclarationsLength(tokens: Array): Number {
-    let length: Number = 0;
+function calcDeclarationsLength(tokens: any[]): number {
+    let length: number = 0;
 
     for (const token of tokens) {
         length += token.length;
@@ -23,20 +23,20 @@ function calcDeclarationsLength(tokens: Array): Number {
     );
 }
 
-function processRule(node: Object, item: Object, list: HTMLElement): Void {
-    const avoidRulesMerge: Boolean = this.block !== null ? this.block.avoidRulesMerge : false;
-    const selectors: Array = node.prelude.children;
-    const block: Object = node.block;
-    const disallowDownMarkers: Object = Object.create(null);
-    let allowMergeUp: Boolean = true;
-    let allowMergeDown: Boolean = true;
+function processRule(node: object, item: object, list: HTMLElement): Void {
+    const avoidRulesMerge: boolean = this.block !== null ? this.block.avoidRulesMerge : false;
+    const selectors: any[] = node.prelude.children;
+    const block: object = node.block;
+    const disallowDownMarkers: object = Object.create(null);
+    let allowMergeUp: boolean = true;
+    let allowMergeDown: boolean = true;
 
-    list.prevUntil(item.prev, function(prev: Object, prevItem: Number) {
-        const prevBlock: Object = prev.block;
-        const prevType: String = prev.type;
+    list.prevUntil(item.prev, function(prev: object, prevItem: number) {
+        const prevBlock: object = prev.block;
+        const prevType: string = prev.type;
 
         if (prevType !== 'Rule') {
-            const unsafe: Boolean = unsafeToSkipNode.call(selectors, prev);
+            const unsafe: boolean = unsafeToSkipNode.call(selectors, prev);
 
             if (!unsafe && prevType === 'Atrule' && prevBlock) {
                 walk(prevBlock, {
@@ -56,7 +56,7 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
             return true;
         }
 
-        const prevSelectors: Array = prev.prelude.children;
+        const prevSelectors: any[] = prev.prelude.children;
 
         allowMergeDown = !prevSelectors.some((selector: Function) =>
             selector.compareMarker in disallowDownMarkers
@@ -94,8 +94,8 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
 
                 if (diff.ne1.length && !diff.ne2.length) {
                     // prevBlock is subset block
-                    const selectorLength: String = calcSelectorLength(selectors);
-                    const blockLength: String = calcDeclarationsLength(diff.eq); // declarations length
+                    const selectorLength: string = calcSelectorLength(selectors);
+                    const blockLength: string = calcDeclarationsLength(diff.eq); // declarations length
 
                     if (allowMergeUp && selectorLength < blockLength) {
                         addSelectors(prevSelectors, selectors);
@@ -103,8 +103,8 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
                     }
                 } else if (!diff.ne1.length && diff.ne2.length) {
                     // node is subset of prevBlock
-                    const selectorLength: String = calcSelectorLength(prevSelectors);
-                    const blockLength: String = calcDeclarationsLength(diff.eq); // declarations length
+                    const selectorLength: string = calcSelectorLength(prevSelectors);
+                    const blockLength: string = calcDeclarationsLength(diff.eq); // declarations length
 
                     if (allowMergeDown && selectorLength < blockLength) {
                         addSelectors(selectors, prevSelectors);
@@ -113,18 +113,18 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
                 } else {
                     // diff.ne1.length && diff.ne2.length
                     // extract equal block
-                    const newSelector: Object = {
+                    const newSelector: object = {
                         type: 'SelectorList',
                         loc: null,
                         children: addSelectors(prevSelectors.copy(), selectors)
                     };
-                    const newBlockLength: Number = calcSelectorLength(newSelector.children) + 2; // selectors length + curly braces length
-                    const blockLength: Number = calcDeclarationsLength(diff.eq); // declarations length
+                    const newBlockLength: number = calcSelectorLength(newSelector.children) + 2; // selectors length + curly braces length
+                    const blockLength: number = calcDeclarationsLength(diff.eq); // declarations length
 
                     // create new ruleset if declarations length greater than
                     // ruleset description overhead
                     if (blockLength >= newBlockLength) {
-                        const newItem: String = list.createItem({
+                        const newItem: string = list.createItem({
                             type: 'Rule',
                             loc: null,
                             prelude: newSelector,
@@ -154,14 +154,14 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
         if (allowMergeUp) {
             // TODO: disallow up merge only if any property interception only (i.e. diff.ne2overrided.length > 0);
             // await property families to find property interception correctly
-            allowMergeUp = !prevSelectors.some((prevSelector: Object) =>
+            allowMergeUp = !prevSelectors.some((prevSelector: object) =>
                 selectors.some((selector: Function) =>
                     selector.compareMarker === prevSelector.compareMarker
                 )
             );
         }
 
-        prevSelectors.forEach((data: Object) => {
+        prevSelectors.forEach((data: object) => {
             disallowDownMarkers[data.compareMarker] = true;
         });
     });

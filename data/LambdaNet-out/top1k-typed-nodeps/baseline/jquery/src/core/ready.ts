@@ -5,9 +5,9 @@ import "../core/readyException.js";
 import "../deferred.js";
 
 // The deferred used on DOM ready
-var readyList: Object = jQuery.Deferred();
+var readyList: object = jQuery.Deferred();
 
-jQuery.fn.ready = function( fn: String ) {
+jQuery.fn.ready = function( fn: string ) {
 
 	readyList
 		.then( fn )
@@ -15,7 +15,7 @@ jQuery.fn.ready = function( fn: String ) {
 		// Wrap jQuery.readyException in a function so that the lookup
 		// happens at the time of error handling instead of callback
 		// registration.
-		.catch( function( error: Object ) {
+		.catch( function( error: object ) {
 			jQuery.readyException( error );
 		} );
 
@@ -32,7 +32,7 @@ jQuery.extend( {
 	readyWait: 1,
 
 	// Handle when the DOM is ready
-	ready: function( wait: Number ) {
+	ready: function( wait: number ) {
 
 		// Abort if there are pending holds or we're already ready
 		if ( wait === true ? --jQuery.readyWait : jQuery.isReady ) {

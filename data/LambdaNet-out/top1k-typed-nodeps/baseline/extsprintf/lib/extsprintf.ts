@@ -2,8 +2,8 @@
  * extsprintf.js: extended POSIX-style sprintf
  */
 
-var mod_assert: String = require('assert');
-var mod_util: Array = require('util');
+var mod_assert: string = require('assert');
+var mod_util: any[] = require('util');
 
 /*
  * Public interface
@@ -30,9 +30,9 @@ exports.fprintf = jsFprintf;
  * Everything else is currently unsupported, most notably precision, unsigned
  * numbers, non-decimal numbers, and characters.
  */
-function jsSprintf(ofmt: String): String
+function jsSprintf(ofmt: string): string
 {
-	var regex: String = [
+	var regex: string = [
 	    '([^%]*)',				/* normal text */
 	    '%',				/* start of format */
 	    '([\'\\-+ #0]*?)',			/* flags (optional) */
@@ -45,25 +45,25 @@ function jsSprintf(ofmt: String): String
 	var re: HTMLElement = new RegExp(regex);
 
 	/* variadic arguments used to fill in conversion specifiers */
-	var args: Array = Array.prototype.slice.call(arguments, 1);
+	var args: any[] = Array.prototype.slice.call(arguments, 1);
 	/* remaining format string */
-	var fmt: String = ofmt;
+	var fmt: string = ofmt;
 
 	/* components of the current conversion specifier */
-	var flags: Element, width: Number, precision: Array, conversion: String;
-	var left: Boolean, pad: String, sign: Boolean, arg: Number, match: Object;
+	var flags: Element, width: number, precision: any[], conversion: string;
+	var left: boolean, pad: string, sign: boolean, arg: number, match: object;
 
 	/* return value */
-	var ret: String = '';
+	var ret: string = '';
 
 	/* current variadic argument (1-based) */
-	var argn: Number = 1;
+	var argn: number = 1;
 	/* 0-based position in the format string that we've read */
-	var posn: Number = 0;
+	var posn: number = 0;
 	/* 1-based position in the format string of the current conversion */
-	var convposn: String;
+	var convposn: string;
 	/* current conversion specifier */
-	var curconv: String;
+	var curconv: string;
 
 	mod_assert.equal('string', typeof (fmt),
 	    'first argument must be a format string');
@@ -165,7 +165,7 @@ function jsSprintf(ofmt: String): String
 	return (ret);
 }
 
-function jsError(fmtstr: String, convposn: String, curconv: String, reason: String): Object {
+function jsError(fmtstr: string, convposn: string, curconv: string, reason: string): object {
 	mod_assert.equal(typeof (fmtstr), 'string');
 	mod_assert.equal(typeof (curconv), 'string');
 	mod_assert.equal(typeof (convposn), 'number');
@@ -176,19 +176,19 @@ function jsError(fmtstr: String, convposn: String, curconv: String, reason: Stri
 }
 
 function jsPrintf(): Void {
-	var args: Array = Array.prototype.slice.call(arguments);
+	var args: any[] = Array.prototype.slice.call(arguments);
 	args.unshift(process.stdout);
 	jsFprintf.apply(null, args);
 }
 
-function jsFprintf(stream: String): Number {
-	var args: String = Array.prototype.slice.call(arguments, 1);
+function jsFprintf(stream: string): number {
+	var args: string = Array.prototype.slice.call(arguments, 1);
 	return (stream.write(jsSprintf.apply(this, args)));
 }
 
-function doPad(chr: String, width: Number, left: Boolean, str: String): String
+function doPad(chr: string, width: number, left: boolean, str: string): string
 {
-	var ret: String = str;
+	var ret: string = str;
 
 	while (ret.length < width) {
 		if (left)
@@ -204,9 +204,9 @@ function doPad(chr: String, width: Number, left: Boolean, str: String): String
  * This function dumps long stack traces for exceptions having a cause() method.
  * See node-verror for an example.
  */
-function dumpException(ex: Object): String
+function dumpException(ex: object): string
 {
-	var ret: Number;
+	var ret: number;
 
 	if (!(ex instanceof Error))
 		throw (new Error(jsSprintf('invalid type for %%r: %j', ex)));
@@ -215,7 +215,7 @@ function dumpException(ex: Object): String
 	ret = 'EXCEPTION: ' + ex.constructor.name + ': ' + ex.stack;
 
 	if (ex.cause && typeof (ex.cause) === 'function') {
-		var cex: String = ex.cause();
+		var cex: string = ex.cause();
 		if (cex) {
 			ret += '\nCaused by: ' + dumpException(cex);
 		}

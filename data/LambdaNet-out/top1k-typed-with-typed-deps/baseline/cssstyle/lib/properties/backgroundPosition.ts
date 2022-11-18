@@ -2,18 +2,18 @@
 
 var parsers: HTMLElement = require('../parsers');
 
-var valid_keywords: Array = ['top', 'center', 'bottom', 'left', 'right'];
+var valid_keywords: any[] = ['top', 'center', 'bottom', 'left', 'right'];
 
-var parse: Function = function parse(v: String): String {
+var parse: Function = function parse(v: string): string {
   if (v === '' || v === null) {
     return undefined;
   }
-  var parts: Array = v.split(/\s+/);
+  var parts: any[] = v.split(/\s+/);
   if (parts.length > 2 || parts.length < 1) {
     return undefined;
   }
-  var types: Object = [];
-  parts.forEach(function(part: Number, index: Number) {
+  var types: object = [];
+  parts.forEach(function(part: number, index: number) {
     types[index] = parsers.valueType(part);
   });
   if (parts.length === 1) {
@@ -42,12 +42,12 @@ var parse: Function = function parse(v: String): String {
   return undefined;
 };
 
-module.exports.isValid = function isValid(v: Array): Boolean {
+module.exports.isValid = function isValid(v: any[]): boolean {
   return parse(v) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: Array) {
+  set: function(v: any[]) {
     this._setProperty('background-position', parse(v));
   },
   get: function() {

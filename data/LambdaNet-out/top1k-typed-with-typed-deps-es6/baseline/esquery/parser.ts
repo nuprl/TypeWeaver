@@ -12,13 +12,13 @@
 })(this, function() {
   "use strict";
 
-  function peg$subclass(child: Object, parent: Object): Void {
+  function peg$subclass(child: object, parent: object): Void {
     function ctor(): Void { this.constructor = child; }
     ctor.prototype = parent.prototype;
     child.prototype = new ctor();
   }
 
-  function peg$SyntaxError(message: String, expected: String, found: Array, location: Function): Void {
+  function peg$SyntaxError(message: string, expected: string, found: any[], location: Function): Void {
     this.message  = message;
     this.expected = expected;
     this.found    = found;
@@ -32,15 +32,15 @@
 
   peg$subclass(peg$SyntaxError, Error);
 
-  peg$SyntaxError.buildMessage = function(expected: String, found: Array) {
-    var DESCRIBE_EXPECTATION_FNS: Object = {
-          literal: function(expectation: Object) {
+  peg$SyntaxError.buildMessage = function(expected: string, found: any[]) {
+    var DESCRIBE_EXPECTATION_FNS: object = {
+          literal: function(expectation: object) {
             return "\"" + literalEscape(expectation.text) + "\"";
           },
 
-          "class": function(expectation: Object) {
-            var escapedParts: String = "",
-                i: Number;
+          "class": function(expectation: object) {
+            var escapedParts: string = "",
+                i: number;
 
             for (i = 0; i < expectation.parts.length; i++) {
               escapedParts += expectation.parts[i] instanceof Array
@@ -59,16 +59,16 @@
             return "end of input";
           },
 
-          other: function(expectation: Object) {
+          other: function(expectation: object) {
             return expectation.description;
           }
         };
 
-    function hex(ch: String): String {
+    function hex(ch: string): string {
       return ch.charCodeAt(0).toString(16).toUpperCase();
     }
 
-    function literalEscape(s: String): String {
+    function literalEscape(s: string): string {
       return s
         .replace(/\\/g, '\\\\')
         .replace(/"/g,  '\\"')
@@ -76,11 +76,11 @@
         .replace(/\t/g, '\\t')
         .replace(/\n/g, '\\n')
         .replace(/\r/g, '\\r')
-        .replace(/[\x00-\x0F]/g,          function(ch: String) { return '\\x0' + hex(ch); })
-        .replace(/[\x10-\x1F\x7F-\x9F]/g, function(ch: String) { return '\\x'  + hex(ch); });
+        .replace(/[\x00-\x0F]/g,          function(ch: string) { return '\\x0' + hex(ch); })
+        .replace(/[\x10-\x1F\x7F-\x9F]/g, function(ch: string) { return '\\x'  + hex(ch); });
     }
 
-    function classEscape(s: String): String {
+    function classEscape(s: string): string {
       return s
         .replace(/\\/g, '\\\\')
         .replace(/\]/g, '\\]')
@@ -90,17 +90,17 @@
         .replace(/\t/g, '\\t')
         .replace(/\n/g, '\\n')
         .replace(/\r/g, '\\r')
-        .replace(/[\x00-\x0F]/g,          function(ch: String) { return '\\x0' + hex(ch); })
-        .replace(/[\x10-\x1F\x7F-\x9F]/g, function(ch: String) { return '\\x'  + hex(ch); });
+        .replace(/[\x00-\x0F]/g,          function(ch: string) { return '\\x0' + hex(ch); })
+        .replace(/[\x10-\x1F\x7F-\x9F]/g, function(ch: string) { return '\\x'  + hex(ch); });
     }
 
-    function describeExpectation(expectation: Object): Promise {
+    function describeExpectation(expectation: object): Promise {
       return DESCRIBE_EXPECTATION_FNS[expectation.type](expectation);
     }
 
-    function describeExpected(expected: Array): String {
-      var descriptions: Array = new Array(expected.length),
-          i: Number, j: Number;
+    function describeExpected(expected: any[]): string {
+      var descriptions: any[] = new Array(expected.length),
+          i: number, j: number;
 
       for (i = 0; i < expected.length; i++) {
         descriptions[i] = describeExpectation(expected[i]);
@@ -132,173 +132,173 @@
       }
     }
 
-    function describeFound(found: String): String {
+    function describeFound(found: string): string {
       return found ? "\"" + literalEscape(found) + "\"" : "end of input";
     }
 
     return "Expected " + describeExpected(expected) + " but " + describeFound(found) + " found.";
   };
 
-  function peg$parse(input: String, options: Object): String {
+  function peg$parse(input: string, options: object): string {
     options = options !== void 0 ? options : {};
 
-    var peg$FAILED: Number = {},
+    var peg$FAILED: number = {},
 
-        peg$startRuleFunctions: Object = { start: peg$parsestart },
+        peg$startRuleFunctions: object = { start: peg$parsestart },
         peg$startRuleFunction: Function  = peg$parsestart,
 
-        peg$c0: Function = function(ss: Array) {
+        peg$c0: Function = function(ss: any[]) {
             return ss.length === 1 ? ss[0] : { type: 'matches', selectors: ss };
           },
         peg$c1: Function = function() { return void 0; },
-        peg$c2: String = " ",
-        peg$c3: Object = peg$literalExpectation(" ", false),
+        peg$c2: string = " ",
+        peg$c3: object = peg$literalExpectation(" ", false),
         peg$c4: RegExp = /^[^ [\],():#!=><~+.]/,
         peg$c5: Function = peg$classExpectation([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], true, false),
-        peg$c6: Function = function(i: Array) { return i.join(''); },
-        peg$c7: String = ">",
+        peg$c6: Function = function(i: any[]) { return i.join(''); },
+        peg$c7: string = ">",
         peg$c8: Function = peg$literalExpectation(">", false),
         peg$c9: Function = function() { return 'child'; },
-        peg$c10: String = "~",
+        peg$c10: string = "~",
         peg$c11: Function = peg$literalExpectation("~", false),
         peg$c12: Function = function() { return 'sibling'; },
-        peg$c13: String = "+",
+        peg$c13: string = "+",
         peg$c14: Function = peg$literalExpectation("+", false),
         peg$c15: Function = function() { return 'adjacent'; },
         peg$c16: Function = function() { return 'descendant'; },
-        peg$c17: String = ",",
+        peg$c17: string = ",",
         peg$c18: Function = peg$literalExpectation(",", false),
-        peg$c19: Function = function(s: String, ss: Array) {
+        peg$c19: Function = function(s: string, ss: any[]) {
           return [s].concat(ss.map(function (s: Promise) { return s[3]; }));
         },
-        peg$c20: Function = function(a: Function, ops: Array) {
-            return ops.reduce(function (memo: Number, rhs: Promise) {
+        peg$c20: Function = function(a: Function, ops: any[]) {
+            return ops.reduce(function (memo: number, rhs: Promise) {
               return { type: rhs[0], left: memo, right: rhs[1] };
             }, a);
           },
-        peg$c21: String = "!",
+        peg$c21: string = "!",
         peg$c22: Function = peg$literalExpectation("!", false),
-        peg$c23: Function = function(subject: Boolean, as: Array) {
-            const b: Object = as.length === 1 ? as[0] : { type: 'compound', selectors: as };
+        peg$c23: Function = function(subject: boolean, as: any[]) {
+            const b: object = as.length === 1 ? as[0] : { type: 'compound', selectors: as };
             if(subject) b.subject = true;
             return b;
           },
-        peg$c24: String = "*",
+        peg$c24: string = "*",
         peg$c25: Function = peg$literalExpectation("*", false),
-        peg$c26: Function = function(a: Array) { return { type: 'wildcard', value: a }; },
-        peg$c27: String = "#",
+        peg$c26: Function = function(a: any[]) { return { type: 'wildcard', value: a }; },
+        peg$c27: string = "#",
         peg$c28: Function = peg$literalExpectation("#", false),
-        peg$c29: Function = function(i: String) { return { type: 'identifier', value: i }; },
-        peg$c30: String = "[",
+        peg$c29: Function = function(i: string) { return { type: 'identifier', value: i }; },
+        peg$c30: string = "[",
         peg$c31: Function = peg$literalExpectation("[", false),
-        peg$c32: String = "]",
+        peg$c32: string = "]",
         peg$c33: Function = peg$literalExpectation("]", false),
-        peg$c34: Function = function(v: Array) { return v; },
+        peg$c34: Function = function(v: any[]) { return v; },
         peg$c35: RegExp = /^[><!]/,
         peg$c36: Function = peg$classExpectation([">", "<", "!"], false, false),
-        peg$c37: String = "=",
+        peg$c37: string = "=",
         peg$c38: Function = peg$literalExpectation("=", false),
-        peg$c39: Function = function(a: String) { return (a || '') + '='; },
+        peg$c39: Function = function(a: string) { return (a || '') + '='; },
         peg$c40: RegExp = /^[><]/,
         peg$c41: Function = peg$classExpectation([">", "<"], false, false),
-        peg$c42: String = ".",
+        peg$c42: string = ".",
         peg$c43: Function = peg$literalExpectation(".", false),
-        peg$c44: Function = function(a: Function, as: Number) {
+        peg$c44: Function = function(a: Function, as: number) {
             return [].concat.apply([a], as).join('');
           },
-        peg$c45: Function = function(name: String, op: String, value: Array) {
+        peg$c45: Function = function(name: string, op: string, value: any[]) {
               return { type: 'attribute', name: name, operator: op, value: value };
             },
-        peg$c46: Function = function(name: String) { return { type: 'attribute', name: name }; },
-        peg$c47: String = "\"",
+        peg$c46: Function = function(name: string) { return { type: 'attribute', name: name }; },
+        peg$c47: string = "\"",
         peg$c48: Function = peg$literalExpectation("\"", false),
         peg$c49: RegExp = /^[^\\"]/,
         peg$c50: Function = peg$classExpectation(["\\", "\""], true, false),
-        peg$c51: String = "\\",
+        peg$c51: string = "\\",
         peg$c52: Function = peg$literalExpectation("\\", false),
         peg$c53: Function = peg$anyExpectation(),
-        peg$c54: Function = function(a: Number, b: Number) { return a + b; },
-        peg$c55: Function = function(d: Array) {
+        peg$c54: Function = function(a: number, b: number) { return a + b; },
+        peg$c55: Function = function(d: any[]) {
                 return { type: 'literal', value: strUnescape(d.join('')) };
               },
-        peg$c56: String = "'",
+        peg$c56: string = "'",
         peg$c57: Function = peg$literalExpectation("'", false),
         peg$c58: RegExp = /^[^\\']/,
         peg$c59: Function = peg$classExpectation(["\\", "'"], true, false),
         peg$c60: RegExp = /^[0-9]/,
         peg$c61: Function = peg$classExpectation([["0", "9"]], false, false),
-        peg$c62: Function = function(a: Function, b: Array) {
+        peg$c62: Function = function(a: Function, b: any[]) {
                 // Can use `a.flat().join('')` once supported
-                const leadingDecimals: String = a ? [].concat.apply([], a).join('') : '';
+                const leadingDecimals: string = a ? [].concat.apply([], a).join('') : '';
                 return { type: 'literal', value: parseFloat(leadingDecimals + b.join('')) };
               },
-        peg$c63: Function = function(i: String) { return { type: 'literal', value: i }; },
-        peg$c64: String = "type(",
+        peg$c63: Function = function(i: string) { return { type: 'literal', value: i }; },
+        peg$c64: string = "type(",
         peg$c65: Function = peg$literalExpectation("type(", false),
         peg$c66: RegExp = /^[^ )]/,
         peg$c67: Function = peg$classExpectation([" ", ")"], true, false),
-        peg$c68: String = ")",
-        peg$c69: Object = peg$literalExpectation(")", false),
-        peg$c70: Function = function(t: Array) { return { type: 'type', value: t.join('') }; },
+        peg$c68: string = ")",
+        peg$c69: object = peg$literalExpectation(")", false),
+        peg$c70: Function = function(t: any[]) { return { type: 'type', value: t.join('') }; },
         peg$c71: RegExp = /^[imsu]/,
         peg$c72: Function = peg$classExpectation(["i", "m", "s", "u"], false, false),
-        peg$c73: String = "/",
+        peg$c73: string = "/",
         peg$c74: Function = peg$literalExpectation("/", false),
         peg$c75: RegExp = /^[^\/]/,
         peg$c76: Function = peg$classExpectation(["/"], true, false),
-        peg$c77: Function = function(d: Array, flgs: Array) { return {
+        peg$c77: Function = function(d: any[], flgs: any[]) { return {
               type: 'regexp', value: new RegExp(d.join(''), flgs ? flgs.join('') : '') };
             },
-        peg$c78: Function = function(i: String, is: Array) {
-          return { type: 'field', name: is.reduce(function(memo: Number, p: Promise){ return memo + p[0] + p[1]; }, i)};
+        peg$c78: Function = function(i: string, is: any[]) {
+          return { type: 'field', name: is.reduce(function(memo: number, p: Promise){ return memo + p[0] + p[1]; }, i)};
         },
-        peg$c79: String = ":not(",
+        peg$c79: string = ":not(",
         peg$c80: Function = peg$literalExpectation(":not(", false),
-        peg$c81: Function = function(ss: Array) { return { type: 'not', selectors: ss }; },
-        peg$c82: String = ":matches(",
+        peg$c81: Function = function(ss: any[]) { return { type: 'not', selectors: ss }; },
+        peg$c82: string = ":matches(",
         peg$c83: Function = peg$literalExpectation(":matches(", false),
-        peg$c84: Function = function(ss: Array) { return { type: 'matches', selectors: ss }; },
-        peg$c85: String = ":has(",
+        peg$c84: Function = function(ss: any[]) { return { type: 'matches', selectors: ss }; },
+        peg$c85: string = ":has(",
         peg$c86: Function = peg$literalExpectation(":has(", false),
-        peg$c87: Function = function(ss: Array) { return { type: 'has', selectors: ss }; },
-        peg$c88: String = ":first-child",
+        peg$c87: Function = function(ss: any[]) { return { type: 'has', selectors: ss }; },
+        peg$c88: string = ":first-child",
         peg$c89: Function = peg$literalExpectation(":first-child", false),
         peg$c90: Function = function() { return nth(1); },
-        peg$c91: String = ":last-child",
+        peg$c91: string = ":last-child",
         peg$c92: Function = peg$literalExpectation(":last-child", false),
         peg$c93: Function = function() { return nthLast(1); },
-        peg$c94: String = ":nth-child(",
+        peg$c94: string = ":nth-child(",
         peg$c95: Function = peg$literalExpectation(":nth-child(", false),
-        peg$c96: Function = function(n: Array) { return nth(parseInt(n.join(''), 10)); },
-        peg$c97: String = ":nth-last-child(",
+        peg$c96: Function = function(n: any[]) { return nth(parseInt(n.join(''), 10)); },
+        peg$c97: string = ":nth-last-child(",
         peg$c98: Function = peg$literalExpectation(":nth-last-child(", false),
-        peg$c99: Function = function(n: Array) { return nthLast(parseInt(n.join(''), 10)); },
-        peg$c100: String = ":",
-        peg$c101: Object = peg$literalExpectation(":", false),
-        peg$c102: String = "statement",
+        peg$c99: Function = function(n: any[]) { return nthLast(parseInt(n.join(''), 10)); },
+        peg$c100: string = ":",
+        peg$c101: object = peg$literalExpectation(":", false),
+        peg$c102: string = "statement",
         peg$c103: Function = peg$literalExpectation("statement", true),
-        peg$c104: String = "expression",
+        peg$c104: string = "expression",
         peg$c105: Function = peg$literalExpectation("expression", true),
-        peg$c106: String = "declaration",
+        peg$c106: string = "declaration",
         peg$c107: Function = peg$literalExpectation("declaration", true),
-        peg$c108: String = "function",
+        peg$c108: string = "function",
         peg$c109: Function = peg$literalExpectation("function", true),
-        peg$c110: String = "pattern",
+        peg$c110: string = "pattern",
         peg$c111: Function = peg$literalExpectation("pattern", true),
-        peg$c112: Function = function(c: String) {
+        peg$c112: Function = function(c: string) {
           return { type: 'class', name: c };
         },
 
-        peg$currPos: Number          = 0,
-        peg$savedPos: Number         = 0,
-        peg$posDetailsCache: Object  = [{ line: 1, column: 1 }],
-        peg$maxFailPos: Number       = 0,
-        peg$maxFailExpected: Array  = [],
-        peg$silentFails: Number      = 0,
+        peg$currPos: number          = 0,
+        peg$savedPos: number         = 0,
+        peg$posDetailsCache: object  = [{ line: 1, column: 1 }],
+        peg$maxFailPos: number       = 0,
+        peg$maxFailExpected: any[]  = [],
+        peg$silentFails: number      = 0,
 
-        peg$resultsCache: Object = {},
+        peg$resultsCache: object = {},
 
-        peg$result: Number;
+        peg$result: number;
 
     if ("startRule" in options) {
       if (!(options.startRule in peg$startRuleFunctions)) {
@@ -308,15 +308,15 @@
       peg$startRuleFunction = peg$startRuleFunctions[options.startRule];
     }
 
-    function text(): String {
+    function text(): string {
       return input.substring(peg$savedPos, peg$currPos);
     }
 
-    function location(): String {
+    function location(): string {
       return peg$computeLocation(peg$savedPos, peg$currPos);
     }
 
-    function expected(description: String, location: String): Void {
+    function expected(description: string, location: string): Void {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildStructuredError(
@@ -326,34 +326,34 @@
       );
     }
 
-    function error(message: String, location: String): Void {
+    function error(message: string, location: string): Void {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildSimpleError(message, location);
     }
 
-    function peg$literalExpectation(text: String, ignoreCase: String): Object {
+    function peg$literalExpectation(text: string, ignoreCase: string): object {
       return { type: "literal", text: text, ignoreCase: ignoreCase };
     }
 
-    function peg$classExpectation(parts: Array, inverted: Number, ignoreCase: String): Object {
+    function peg$classExpectation(parts: any[], inverted: number, ignoreCase: string): object {
       return { type: "class", parts: parts, inverted: inverted, ignoreCase: ignoreCase };
     }
 
-    function peg$anyExpectation(): Object {
+    function peg$anyExpectation(): object {
       return { type: "any" };
     }
 
-    function peg$endExpectation(): Object {
+    function peg$endExpectation(): object {
       return { type: "end" };
     }
 
-    function peg$otherExpectation(description: String): Object {
+    function peg$otherExpectation(description: string): object {
       return { type: "other", description: description };
     }
 
-    function peg$computePosDetails(pos: Number): Object {
-      var details: Object = peg$posDetailsCache[pos], p: Number;
+    function peg$computePosDetails(pos: number): object {
+      var details: object = peg$posDetailsCache[pos], p: number;
 
       if (details) {
         return details;
@@ -385,9 +385,9 @@
       }
     }
 
-    function peg$computeLocation(startPos: String, endPos: String): Object {
-      var startPosDetails: Object = peg$computePosDetails(startPos),
-          endPosDetails: Object   = peg$computePosDetails(endPos);
+    function peg$computeLocation(startPos: string, endPos: string): object {
+      var startPosDetails: object = peg$computePosDetails(startPos),
+          endPosDetails: object   = peg$computePosDetails(endPos);
 
       return {
         start: {
@@ -403,7 +403,7 @@
       };
     }
 
-    function peg$fail(expected: String): Void {
+    function peg$fail(expected: string): Void {
       if (peg$currPos < peg$maxFailPos) { return; }
 
       if (peg$currPos > peg$maxFailPos) {
@@ -414,11 +414,11 @@
       peg$maxFailExpected.push(expected);
     }
 
-    function peg$buildSimpleError(message: String, location: String): Object {
+    function peg$buildSimpleError(message: string, location: string): object {
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: String, found: Function, location: String): String {
+    function peg$buildStructuredError(expected: string, found: Function, location: string): string {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,
@@ -427,11 +427,11 @@
       );
     }
 
-    function peg$parsestart(): Number {
-      var s0: Number, s1: Boolean, s2: String, s3: String;
+    function peg$parsestart(): number {
+      var s0: number, s1: boolean, s2: string, s3: string;
 
-      var key: String    = peg$currPos * 30 + 0,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 0,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -476,11 +476,11 @@
       return s0;
     }
 
-    function peg$parse_(): Array {
-      var s0: Array, s1: String;
+    function peg$parse_(): any[] {
+      var s0: any[], s1: string;
 
-      var key: String    = peg$currPos * 30 + 1,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 1,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -512,11 +512,11 @@
       return s0;
     }
 
-    function peg$parseidentifierName(): Number {
-      var s0: Number, s1: Array, s2: String;
+    function peg$parseidentifierName(): number {
+      var s0: number, s1: any[], s2: string;
 
-      var key: String    = peg$currPos * 30 + 2,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 2,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -558,11 +558,11 @@
       return s0;
     }
 
-    function peg$parsebinaryOp(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: String;
+    function peg$parsebinaryOp(): boolean {
+      var s0: number, s1: string, s2: string, s3: string;
 
-      var key: String    = peg$currPos * 30 + 3,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 3,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -688,11 +688,11 @@
       return s0;
     }
 
-    function peg$parseselectors(): Boolean {
-      var s0: Number, s1: Boolean, s2: Array, s3: Number, s4: Array, s5: String, s6: String, s7: String;
+    function peg$parseselectors(): boolean {
+      var s0: number, s1: boolean, s2: any[], s3: number, s4: any[], s5: string, s6: string, s7: string;
 
-      var key: String    = peg$currPos * 30 + 4,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 4,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -791,11 +791,11 @@
       return s0;
     }
 
-    function peg$parseselector(): Boolean {
-      var s0: Number, s1: Boolean, s2: Array, s3: Number, s4: Array, s5: String;
+    function peg$parseselector(): boolean {
+      var s0: number, s1: boolean, s2: any[], s3: number, s4: any[], s5: string;
 
-      var key: String    = peg$currPos * 30 + 5,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 5,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -858,11 +858,11 @@
       return s0;
     }
 
-    function peg$parsesequence(): Boolean {
-      var s0: Number, s1: String, s2: Array, s3: String;
+    function peg$parsesequence(): boolean {
+      var s0: number, s1: string, s2: any[], s3: string;
 
-      var key: String    = peg$currPos * 30 + 6,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 6,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -910,11 +910,11 @@
       return s0;
     }
 
-    function peg$parseatom(): String {
-      var s0: String;
+    function peg$parseatom(): string {
+      var s0: string;
 
-      var key: String    = peg$currPos * 30 + 7,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 7,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -962,11 +962,11 @@
       return s0;
     }
 
-    function peg$parsewildcard(): Number {
-      var s0: Number, s1: String;
+    function peg$parsewildcard(): number {
+      var s0: number, s1: string;
 
-      var key: String    = peg$currPos * 30 + 8,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 8,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -993,11 +993,11 @@
       return s0;
     }
 
-    function peg$parseidentifier(): Boolean {
-      var s0: Number, s1: String, s2: String;
+    function peg$parseidentifier(): boolean {
+      var s0: number, s1: string, s2: string;
 
-      var key: String    = peg$currPos * 30 + 9,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 9,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1036,11 +1036,11 @@
       return s0;
     }
 
-    function peg$parseattr(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: String, s4: String, s5: String;
+    function peg$parseattr(): boolean {
+      var s0: number, s1: string, s2: string, s3: string, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 10,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 10,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1100,11 +1100,11 @@
       return s0;
     }
 
-    function peg$parseattrOps(): Boolean {
-      var s0: Number, s1: Boolean, s2: String;
+    function peg$parseattrOps(): boolean {
+      var s0: number, s1: boolean, s2: string;
 
-      var key: String    = peg$currPos * 30 + 11,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 11,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1158,11 +1158,11 @@
       return s0;
     }
 
-    function peg$parseattrEqOps(): Boolean {
-      var s0: Number, s1: String, s2: String;
+    function peg$parseattrEqOps(): boolean {
+      var s0: number, s1: string, s2: string;
 
-      var key: String    = peg$currPos * 30 + 12,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 12,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1207,11 +1207,11 @@
       return s0;
     }
 
-    function peg$parseattrName(): Boolean {
-      var s0: Number, s1: Boolean, s2: Array, s3: Number, s4: String, s5: String;
+    function peg$parseattrName(): boolean {
+      var s0: number, s1: boolean, s2: any[], s3: number, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 13,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 13,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1286,11 +1286,11 @@
       return s0;
     }
 
-    function peg$parseattrValue(): Boolean {
-      var s0: Number, s1: Boolean, s2: String, s3: String, s4: String, s5: String;
+    function peg$parseattrValue(): boolean {
+      var s0: number, s1: boolean, s2: string, s3: string, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 14,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 14,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1392,11 +1392,11 @@
       return s0;
     }
 
-    function peg$parsestring(): Boolean {
-      var s0: Number, s1: String, s2: Array, s3: Number, s4: String, s5: String;
+    function peg$parsestring(): boolean {
+      var s0: number, s1: string, s2: any[], s3: number, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 15,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 15,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1634,11 +1634,11 @@
       return s0;
     }
 
-    function peg$parsenumber(): Boolean {
-      var s0: Number, s1: Number, s2: Array, s3: String;
+    function peg$parsenumber(): boolean {
+      var s0: number, s1: number, s2: any[], s3: string;
 
-      var key: String    = peg$currPos * 30 + 16,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 16,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1729,11 +1729,11 @@
       return s0;
     }
 
-    function peg$parsepath(): Number {
-      var s0: Number, s1: Number;
+    function peg$parsepath(): number {
+      var s0: number, s1: number;
 
-      var key: String    = peg$currPos * 30 + 17,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 17,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1754,11 +1754,11 @@
       return s0;
     }
 
-    function peg$parsetype(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: Array, s4: String, s5: String;
+    function peg$parsetype(): boolean {
+      var s0: number, s1: string, s2: string, s3: any[], s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 18,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 18,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1839,11 +1839,11 @@
       return s0;
     }
 
-    function peg$parseflags(): Array {
-      var s0: Array, s1: String;
+    function peg$parseflags(): any[] {
+      var s0: any[], s1: string;
 
-      var key: String    = peg$currPos * 30 + 19,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 19,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1879,11 +1879,11 @@
       return s0;
     }
 
-    function peg$parseregex(): Boolean {
-      var s0: Number, s1: String, s2: Array, s3: String, s4: Function;
+    function peg$parseregex(): boolean {
+      var s0: number, s1: string, s2: any[], s3: string, s4: Function;
 
-      var key: String    = peg$currPos * 30 + 20,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 20,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -1961,11 +1961,11 @@
       return s0;
     }
 
-    function peg$parsefield(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: Array, s4: Number, s5: String, s6: String;
+    function peg$parsefield(): boolean {
+      var s0: number, s1: string, s2: string, s3: any[], s4: number, s5: string, s6: string;
 
-      var key: String    = peg$currPos * 30 + 21,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 21,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2052,11 +2052,11 @@
       return s0;
     }
 
-    function peg$parsenegation(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: String, s4: String, s5: String;
+    function peg$parsenegation(): boolean {
+      var s0: number, s1: string, s2: string, s3: string, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 22,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 22,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2116,11 +2116,11 @@
       return s0;
     }
 
-    function peg$parsematches(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: String, s4: String, s5: String;
+    function peg$parsematches(): boolean {
+      var s0: number, s1: string, s2: string, s3: string, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 23,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 23,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2180,11 +2180,11 @@
       return s0;
     }
 
-    function peg$parsehas(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: String, s4: String, s5: String;
+    function peg$parsehas(): boolean {
+      var s0: number, s1: string, s2: string, s3: string, s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 24,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 24,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2244,11 +2244,11 @@
       return s0;
     }
 
-    function peg$parsefirstChild(): Boolean {
-      var s0: Number, s1: String;
+    function peg$parsefirstChild(): boolean {
+      var s0: number, s1: string;
 
-      var key: String    = peg$currPos * 30 + 25,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 25,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2275,11 +2275,11 @@
       return s0;
     }
 
-    function peg$parselastChild(): Boolean {
-      var s0: Number, s1: String;
+    function peg$parselastChild(): boolean {
+      var s0: number, s1: string;
 
-      var key: String    = peg$currPos * 30 + 26,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 26,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2306,11 +2306,11 @@
       return s0;
     }
 
-    function peg$parsenthChild(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: Array, s4: String, s5: String;
+    function peg$parsenthChild(): boolean {
+      var s0: number, s1: string, s2: string, s3: any[], s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 27,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 27,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2391,11 +2391,11 @@
       return s0;
     }
 
-    function peg$parsenthLastChild(): Boolean {
-      var s0: Number, s1: String, s2: String, s3: Array, s4: String, s5: String;
+    function peg$parsenthLastChild(): boolean {
+      var s0: number, s1: string, s2: string, s3: any[], s4: string, s5: string;
 
-      var key: String    = peg$currPos * 30 + 28,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 28,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2476,11 +2476,11 @@
       return s0;
     }
 
-    function peg$parseclass(): Boolean {
-      var s0: Number, s1: String, s2: String;
+    function peg$parseclass(): boolean {
+      var s0: number, s1: string, s2: string;
 
-      var key: String    = peg$currPos * 30 + 29,
-          cached: Object = peg$resultsCache[key];
+      var key: string    = peg$currPos * 30 + 29,
+          cached: object = peg$resultsCache[key];
 
       if (cached) {
         peg$currPos = cached.nextPos;
@@ -2559,10 +2559,10 @@
     }
 
 
-      function nth(n: String): Object { return { type: 'nth-child', index: { type: 'literal', value: n } }; }
-      function nthLast(n: String): Object { return { type: 'nth-last-child', index: { type: 'literal', value: n } }; }
-      function strUnescape(s: String): String {
-        return s.replace(/\\(.)/g, function(match: Function, ch: Number) {
+      function nth(n: string): object { return { type: 'nth-child', index: { type: 'literal', value: n } }; }
+      function nthLast(n: string): object { return { type: 'nth-last-child', index: { type: 'literal', value: n } }; }
+      function strUnescape(s: string): string {
+        return s.replace(/\\(.)/g, function(match: Function, ch: number) {
           switch(ch) {
             case 'b': return '\b';
             case 'f': return '\f';

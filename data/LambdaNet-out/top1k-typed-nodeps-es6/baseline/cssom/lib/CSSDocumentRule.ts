@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: String = {
+var CSSOM: string = {
     CSSRule: require("./CSSRule").CSSRule,
     MatcherList: require("./MatcherList").MatcherList
 };
@@ -25,7 +25,7 @@ CSSOM.CSSDocumentRule.prototype.type = 10;
 
 Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
   get: function() {
-    var cssTexts: Array = [];
+    var cssTexts: any[] = [];
     for (var i=0, length=this.cssRules.length; i < length; i++) {
         cssTexts.push(this.cssRules[i].cssText);
     }

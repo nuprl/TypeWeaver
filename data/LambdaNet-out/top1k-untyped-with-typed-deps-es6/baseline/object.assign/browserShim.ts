@@ -1,6 +1,6 @@
 'use strict';
 
-var keys: Object = require('object-keys').shim();
+var keys: object = require('object-keys').shim();
 delete keys.shim;
 
 import assign from './';

@@ -8,7 +8,7 @@ var
 	// Map over the $ in case of overwrite
 	_$: HTMLElement = window.$;
 
-jQuery.noConflict = function( deep: Boolean ) {
+jQuery.noConflict = function( deep: boolean ) {
 	if ( window.$ === jQuery ) {
 		window.$ = _$;
 	}

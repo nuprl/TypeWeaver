@@ -1,8 +1,8 @@
 export default {
-	trueFunc: function trueFunc(): Boolean{
+	trueFunc: function trueFunc(): boolean{
 		return true;
 	},
-	falseFunc: function falseFunc(): Boolean{
+	falseFunc: function falseFunc(): boolean{
 		return false;
 	}
 };

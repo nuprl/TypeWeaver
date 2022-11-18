@@ -14,9 +14,9 @@
  * someValues({ 'a': 0, 'b': 'yes', 'c': false }, Boolean)
  * // => true
  */
-function someValues(object: Object, predicate: Function): Boolean {
+function someValues(object: object, predicate: Function): boolean {
   object = Object(object)
-  const props: Array = Object.keys(object)
+  const props: any[] = Object.keys(object)
 
   for (const key of props) {
     if (predicate(object[key], key, object)) {

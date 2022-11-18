@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import ansi from 'ansi-colors';
 import colors from '../colors';
 import kleur from '../index';
-const libs: Object = {
+const libs: object = {
 	chalk,
 	ansi,
 	colors,
@@ -14,7 +14,7 @@ const color: HTMLElement = libs[process.argv[2] || 'kleur'];
 	'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'white', 'yellow', 'dim', 'gray',
 	'bgBlack', 'bgBlue', 'bgCyan', 'bgGreen', 'bgMagenta', 'bgRed', 'bgWhite', 'bgYellow',
 	'hidden', 'inverse', 'bold', 'italic', 'reset', 'strikethrough', 'underline'
-].forEach((str: String) => {
+].forEach((str: string) => {
 	console.log(color[str]('~foobar~'));
 });
 

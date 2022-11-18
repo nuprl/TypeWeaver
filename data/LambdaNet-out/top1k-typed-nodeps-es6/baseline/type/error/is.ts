@@ -9,10 +9,10 @@ var objectToString: Function = Object.prototype.toString;
 var errorTaggedStringRe: RegExp = /^\[object .*(?:Error|Exception)\]$/
   , errorNameRe: RegExp = /^[^\s]*(?:Error|Exception)$/;
 
-export default function (value: Object) {
+export default function (value: object) {
 	if (!value) return false;
 
-	var name: String;
+	var name: string;
 	// Sanity check (reject objects which do not expose common Error interface)
 	try {
 		name = value.name;

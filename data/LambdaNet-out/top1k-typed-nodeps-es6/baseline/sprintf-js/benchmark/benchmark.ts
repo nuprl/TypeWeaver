@@ -1,6 +1,6 @@
 import Benchmark from 'benchmark';
 import sprintfjs from '../src/sprintf.js';
-var suite: HTMLElement       = new Benchmark.Suite, sprintf: Object     = sprintfjs.sprintf;
+var suite: HTMLElement       = new Benchmark.Suite, sprintf: object     = sprintfjs.sprintf;
 
 suite
     .add('%8d', function() {

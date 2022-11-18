@@ -28,33 +28,33 @@ export default class ModulesInHierarchicalDirectoriesPlugin {
 	 * @returns {void}
 	 */
 	apply(resolver) {
-		const target: Array = resolver.ensureHook(this.target);
+		const target: any[] = resolver.ensureHook(this.target);
 		resolver
 			.getHook(this.source)
 			.tapAsync(
 				"ModulesInHierarchicalDirectoriesPlugin",
-				(request: Object, resolveContext: Object, callback: Function) => {
+				(request: object, resolveContext: object, callback: Function) => {
 					const fs: Function = resolver.fileSystem;
-					const addrs: Array = getPaths(request.path)
-						.paths.map((p: String) => {
-							return this.directories.map((d: String) => resolver.join(p, d));
+					const addrs: any[] = getPaths(request.path)
+						.paths.map((p: string) => {
+							return this.directories.map((d: string) => resolver.join(p, d));
 						})
-						.reduce((array: Array, p: Function) => {
+						.reduce((array: any[], p: Function) => {
 							array.push.apply(array, p);
 							return array;
 						}, []);
 					forEachBail(
 						addrs,
-						(addr: Number, callback: Function) => {
-							fs.stat(addr, (err: Boolean, stat: Resolver) => {
+						(addr: number, callback: Function) => {
+							fs.stat(addr, (err: boolean, stat: Resolver) => {
 								if (!err && stat && stat.isDirectory()) {
-									const obj: Object = {
+									const obj: object = {
 										...request,
 										path: addr,
 										request: "./" + request.request,
 										module: false
 									};
-									const message: String = "looking for modules in " + addr;
+									const message: string = "looking for modules in " + addr;
 									return resolver.doResolve(
 										target,
 										obj,

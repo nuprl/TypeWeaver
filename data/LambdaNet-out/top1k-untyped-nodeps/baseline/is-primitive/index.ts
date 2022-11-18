@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function isPrimitive(val: String): Boolean {
+module.exports = function isPrimitive(val: string): boolean {
   if (typeof val === 'object') {
     return val === null;
   }

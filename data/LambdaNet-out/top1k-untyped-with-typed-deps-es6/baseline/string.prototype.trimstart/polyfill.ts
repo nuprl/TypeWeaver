@@ -2,12 +2,12 @@
 
 import implementation from './implementation';
 
-export default function getPolyfill(): Boolean {
+export default function getPolyfill(): boolean {
 	if (!String.prototype.trimStart && !String.prototype.trimLeft) {
 		return implementation;
 	}
-	var zeroWidthSpace: String = '\u200b';
-	var trimmed: String = zeroWidthSpace.trimStart ? zeroWidthSpace.trimStart() : zeroWidthSpace.trimLeft();
+	var zeroWidthSpace: string = '\u200b';
+	var trimmed: string = zeroWidthSpace.trimStart ? zeroWidthSpace.trimStart() : zeroWidthSpace.trimLeft();
 	if (trimmed !== zeroWidthSpace) {
 		return implementation;
 	}

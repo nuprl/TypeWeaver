@@ -9,10 +9,10 @@ var Pledge: Function = function() {
 
 Pledge.QUEUE_SIZE = 4;
 
-Pledge.all = function(list: Array) {
+Pledge.all = function(list: any[]) {
   var pledge: Element  = new Pledge(),
-      pending: Number = list.length,
-      n: Number       = pending;
+      pending: number = list.length,
+      n: number       = pending;
 
   if (pending === 0) pledge.done();
 
@@ -30,7 +30,7 @@ Pledge.prototype.then = function(callback: Function) {
 
 Pledge.prototype.done = function() {
   this._complete = true;
-  var callbacks: Array = this._callbacks, callback: Function;
+  var callbacks: any[] = this._callbacks, callback: Function;
   while (callback = callbacks.shift()) callback();
 };
 

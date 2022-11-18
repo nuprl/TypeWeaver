@@ -20,11 +20,11 @@ import {
   CHAR_RIGHT_SQUARE_BRACKET,
 } from './constants';
 
-const isPathSeparator: Function = (code: String) => {
+const isPathSeparator: Function = (code: string) => {
   return code === CHAR_FORWARD_SLASH || code === CHAR_BACKWARD_SLASH;
 };
 
-const depth: Function = (token: Object) => {
+const depth: Function = (token: object) => {
   if (token.isPrefix !== true) {
     token.depth = token.isGlobstar ? Infinity : 1;
   }
@@ -47,33 +47,33 @@ const depth: Function = (token: Object) => {
  * @api public
  */
 
-const scan: Function = (input: Array, options: Object) => {
-  const opts: Object = options || {};
+const scan: Function = (input: any[], options: object) => {
+  const opts: object = options || {};
 
-  const length: Number = input.length - 1;
-  const scanToEnd: Number = opts.parts === true || opts.scanToEnd === true;
-  const slashes: Array = [];
-  const tokens: Array = [];
-  const parts: Array = [];
+  const length: number = input.length - 1;
+  const scanToEnd: number = opts.parts === true || opts.scanToEnd === true;
+  const slashes: any[] = [];
+  const tokens: any[] = [];
+  const parts: any[] = [];
 
-  let str: String = input;
-  let index: Number = -1;
-  let start: Number = 0;
-  let lastIndex: Number = 0;
-  let isBrace: Boolean = false;
-  let isBracket: Boolean = false;
-  let isGlob: Boolean = false;
-  let isExtglob: Boolean = false;
-  let isGlobstar: Boolean = false;
-  let braceEscaped: Boolean = false;
-  let backslashes: Boolean = false;
-  let negated: Boolean = false;
-  let negatedExtglob: Boolean = false;
-  let finished: Boolean = false;
-  let braces: Number = 0;
-  let prev: Number;
-  let code: Number;
-  let token: Object = { value: '', depth: 0, isGlob: false };
+  let str: string = input;
+  let index: number = -1;
+  let start: number = 0;
+  let lastIndex: number = 0;
+  let isBrace: boolean = false;
+  let isBracket: boolean = false;
+  let isGlob: boolean = false;
+  let isExtglob: boolean = false;
+  let isGlobstar: boolean = false;
+  let braceEscaped: boolean = false;
+  let backslashes: boolean = false;
+  let negated: boolean = false;
+  let negatedExtglob: boolean = false;
+  let finished: boolean = false;
+  let braces: number = 0;
+  let prev: number;
+  let code: number;
+  let token: object = { value: '', depth: 0, isGlob: false };
 
   const eos: Function = () => index >= length;
   const peek: Function = () => str.charCodeAt(index + 1);
@@ -84,7 +84,7 @@ const scan: Function = (input: Array, options: Object) => {
 
   while (index < length) {
     code = advance();
-    let next: Number;
+    let next: number;
 
     if (code === CHAR_BACKWARD_SLASH) {
       backslashes = token.backslashes = true;
@@ -170,7 +170,7 @@ const scan: Function = (input: Array, options: Object) => {
     }
 
     if (opts.noext !== true) {
-      const isExtglobChar: Boolean = code === CHAR_PLUS
+      const isExtglobChar: boolean = code === CHAR_PLUS
         || code === CHAR_AT
         || code === CHAR_ASTERISK
         || code === CHAR_QUESTION_MARK
@@ -291,9 +291,9 @@ const scan: Function = (input: Array, options: Object) => {
     isGlob = false;
   }
 
-  let base: String = str;
-  let prefix: String = '';
-  let glob: String = '';
+  let base: string = str;
+  let prefix: string = '';
+  let glob: string = '';
 
   if (start > 0) {
     prefix = str.slice(0, start);
@@ -325,7 +325,7 @@ const scan: Function = (input: Array, options: Object) => {
     }
   }
 
-  const state: Object = {
+  const state: object = {
     prefix,
     input,
     start,
@@ -349,12 +349,12 @@ const scan: Function = (input: Array, options: Object) => {
   }
 
   if (opts.parts === true || opts.tokens === true) {
-    let prevIndex: Number;
+    let prevIndex: number;
 
     for (let idx = 0; idx < slashes.length; idx++) {
-      const n: Number = prevIndex ? prevIndex + 1 : start;
-      const i: String = slashes[idx];
-      const value: String = input.slice(n, i);
+      const n: number = prevIndex ? prevIndex + 1 : start;
+      const i: string = slashes[idx];
+      const value: string = input.slice(n, i);
       if (opts.tokens) {
         if (idx === 0 && start !== 0) {
           tokens[idx].isPrefix = true;
@@ -372,7 +372,7 @@ const scan: Function = (input: Array, options: Object) => {
     }
 
     if (prevIndex && prevIndex + 1 < input.length) {
-      const value: String = input.slice(prevIndex + 1);
+      const value: string = input.slice(prevIndex + 1);
       parts.push(value);
 
       if (opts.tokens) {

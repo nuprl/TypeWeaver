@@ -4,9 +4,9 @@
 
 let getRandomValues: Function;
 
-const rnds8: String = new Uint8Array(16);
+const rnds8: string = new Uint8Array(16);
 
-export default function rng(): String {
+export default function rng(): string {
   // lazy load so that environments that need to polyfill have a chance to do so
   if (!getRandomValues) {
     // getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.

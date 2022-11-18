@@ -87,7 +87,7 @@ class RegExpTree {
     result.groups = {};
 
     for (const group in this._groups) {
-      const groupNumber: String = this._groups[group];
+      const groupNumber: string = this._groups[group];
       result.groups[group] = result[groupNumber];
     }
 

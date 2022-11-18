@@ -4,11 +4,11 @@ import { hasNoChildren } from './utils.js';
 const { hasOwnProperty } = Object.prototype;
 const skipUsageFilteringAtrule: Error = new Set(['keyframes']);
 
-function cleanUnused(selectorList: Object, usageData: Object): Boolean {
-    selectorList.children.forEach((selector: String, item: String, list: Map) => {
-        let shouldRemove: Boolean = false;
+function cleanUnused(selectorList: object, usageData: object): boolean {
+    selectorList.children.forEach((selector: string, item: string, list: Map) => {
+        let shouldRemove: boolean = false;
 
-        walk(selector, function(node: Object) {
+        walk(selector, function(node: object) {
             // ignore nodes in nested selectors
             if (this.selector === null || this.selector === selectorList) {
                 switch (node.type) {
@@ -76,7 +76,7 @@ function cleanUnused(selectorList: Object, usageData: Object): Boolean {
     return selectorList.children.isEmpty;
 }
 
-export default function cleanRule(node: Object, item: String, list: Map, options: Object): Void {
+export default function cleanRule(node: object, item: string, list: Map, options: object): Void {
     if (hasNoChildren(node.prelude) || hasNoChildren(node.block)) {
         list.remove(item);
         return;

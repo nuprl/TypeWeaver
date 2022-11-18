@@ -1,13 +1,13 @@
 var toString: Function = Object.prototype.toString;
 
-export default function(val: String) {
+export default function(val: string) {
   if (val === 'arguments') {
     return kindOf(arguments);
   }
   return kindOf(val);
 };
 
-function kindOf(val: Number): String {
+function kindOf(val: number): string {
   if (val === void 0) {
     return 'undefined';
   }
@@ -18,7 +18,7 @@ function kindOf(val: Number): String {
     return 'boolean';
   }
 
-  var type: String = typeof val;
+  var type: string = typeof val;
   if (type === 'number') {
     return 'number';
   }
@@ -35,7 +35,7 @@ function kindOf(val: Number): String {
     return 'buffer';
   }
 
-  var name: String = ctorName(val);
+  var name: string = ctorName(val);
   if (name === 'Date') {
     return 'date';
   }
@@ -89,15 +89,15 @@ function kindOf(val: Number): String {
   }
 }
 
-function ctorName(val: Object): String {
+function ctorName(val: object): string {
   return val.constructor ? val.constructor.name : null;
 }
 
-function isGeneratorFn(val: String): Boolean {
+function isGeneratorFn(val: string): boolean {
   return ctorName(val) === 'GeneratorFunction';
 }
 
-function isGeneratorObj(val: Map): Boolean {
+function isGeneratorObj(val: Map): boolean {
   return typeof val.throw === 'function'
     && typeof val.return === 'function'
     && typeof val.next === 'function';
@@ -108,7 +108,7 @@ function isGeneratorObj(val: Map): Boolean {
  * take a look at https://github.com/feross/is-buffer
  */
 
-function isBuffer(val: Object): Boolean {
+function isBuffer(val: object): boolean {
   if (val.constructor && typeof val.constructor.isBuffer === 'function') {
     return val.constructor.isBuffer(val);
   }

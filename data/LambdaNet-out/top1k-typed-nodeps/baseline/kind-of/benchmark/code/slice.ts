@@ -1,3 +1,3 @@
-module.exports = function typeOf(val: String): String {
+module.exports = function typeOf(val: string): string {
   return {}.toString.call(val).slice(8, -1).toLowerCase();
 };

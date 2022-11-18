@@ -9,15 +9,15 @@ var defineProperty: Function = Object.defineProperty;
 
 // -------------------------------------------------------------------
 
-var captureStackTrace: Object = Error.captureStackTrace;
+var captureStackTrace: object = Error.captureStackTrace;
 if (captureStackTrace === undefined) {
-  captureStackTrace = function captureStackTrace(error: Object): Void {
+  captureStackTrace = function captureStackTrace(error: object): Void {
     var container: Error = new Error();
 
     defineProperty(error, "stack", {
       configurable: true,
-      get: function getStack(): String {
-        var stack: String = container.stack;
+      get: function getStack(): string {
+        var stack: string = container.stack;
 
         // Replace property with value for faster future accesses.
         defineProperty(this, "stack", {
@@ -28,7 +28,7 @@ if (captureStackTrace === undefined) {
 
         return stack;
       },
-      set: function setStack(stack: String): Void {
+      set: function setStack(stack: string): Void {
         defineProperty(error, "stack", {
           configurable: true,
           value: stack,
@@ -41,7 +41,7 @@ if (captureStackTrace === undefined) {
 
 // -------------------------------------------------------------------
 
-function BaseError(message: String): Void {
+function BaseError(message: string): Void {
   if (message !== undefined) {
     defineProperty(this, "message", {
       configurable: true,
@@ -50,7 +50,7 @@ function BaseError(message: String): Void {
     });
   }
 
-  var cname: String = this.constructor.name;
+  var cname: string = this.constructor.name;
   if (cname !== undefined && cname !== this.name) {
     defineProperty(this, "name", {
       configurable: true,
@@ -75,7 +75,7 @@ BaseError.prototype = Object.create(Error.prototype, {
 
 // Sets the name of a function if possible (depends of the JS engine).
 var setFunctionName: Function = (function () {
-  function setFunctionName(fn: String, name: String): Boolean {
+  function setFunctionName(fn: string, name: string): boolean {
     return defineProperty(fn, "name", {
       configurable: true,
       value: name,
@@ -92,14 +92,14 @@ var setFunctionName: Function = (function () {
 
 // -------------------------------------------------------------------
 
-function makeError(constructor: Object, super_: Function): Object {
+function makeError(constructor: object, super_: Function): object {
   if (super_ == null || super_ === Error) {
     super_ = BaseError;
   } else if (typeof super_ !== "function") {
     throw new TypeError("super_ should be a function");
   }
 
-  var name: String;
+  var name: string;
   if (typeof constructor === "string") {
     name = constructor;
     constructor =
@@ -126,7 +126,7 @@ function makeError(constructor: Object, super_: Function): Object {
   // eslint-disable-next-line dot-notation
   constructor.super_ = constructor["super"] = super_;
 
-  var properties: Object = {
+  var properties: object = {
     constructor: {
       configurable: true,
       value: constructor,

@@ -1,7 +1,7 @@
 /* global window */
 import ponyfill from './ponyfill.js';
 
-var root: Number;
+var root: number;
 
 if (typeof self !== 'undefined') {
   root = self;
@@ -15,5 +15,5 @@ if (typeof self !== 'undefined') {
   root = Function('return this')();
 }
 
-var result: Object = ponyfill(root);
+var result: object = ponyfill(root);
 export default result;

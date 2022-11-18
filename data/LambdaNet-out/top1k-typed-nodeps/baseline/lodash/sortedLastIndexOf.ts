@@ -15,10 +15,10 @@ import eq from './eq.js'
  * sortedLastIndexOf([4, 5, 5, 5, 6], 5)
  * // => 3
  */
-function sortedLastIndexOf(array: Array, value: String): Number {
-  const length: Number = array == null ? 0 : array.length
+function sortedLastIndexOf(array: any[], value: string): number {
+  const length: number = array == null ? 0 : array.length
   if (length) {
-    const index: Number = baseSortedIndex(array, value, true) - 1
+    const index: number = baseSortedIndex(array, value, true) - 1
     if (eq(array[index], value)) {
       return index
     }

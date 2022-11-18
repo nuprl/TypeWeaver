@@ -17,7 +17,7 @@
  * hasIn(object, 'b')
  * // => false
  */
-function hasIn(object: Function, key: String): Boolean {
+function hasIn(object: Function, key: string): boolean {
   return object != null && key in Object(object)
 }
 

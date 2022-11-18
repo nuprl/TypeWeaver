@@ -4,7 +4,7 @@
 */
 "use strict";
 
-const Source: String = require("./Source");
+const Source: string = require("./Source");
 
 class SizeOnlySource extends Source {
 	constructor(size) {

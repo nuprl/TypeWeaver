@@ -3,7 +3,7 @@ import usm from './url-state-machine';
 import urlencoded from './urlencoded';
 import URLSearchParams from './URLSearchParams';
 
-export const implementation: Array = class URLImpl {
+export const implementation: any[] = class URLImpl {
   constructor(globalObject, constructorArgs) {
     const url = constructorArgs[0];
     const base = constructorArgs[1];

@@ -1,13 +1,13 @@
 import { config } from './config';
 
-const queue: Array = [];
+const queue: any[] = [];
 
 function scheduleFlush(): Void {
   setTimeout(() => {
     for (let i = 0; i < queue.length; i++) {
-      let entry: Object = queue[i];
+      let entry: object = queue[i];
 
-      let payload: Object = entry.payload;
+      let payload: object = entry.payload;
 
       payload.guid = payload.key + payload.id;
       payload.childGuid = payload.key + payload.childId;
@@ -21,7 +21,7 @@ function scheduleFlush(): Void {
   }, 50);
 }
 
-export default function instrument(eventName: String, promise: String, child: Map): Void {
+export default function instrument(eventName: string, promise: string, child: Map): Void {
   if (1 === queue.push({
     name: eventName,
     payload: {

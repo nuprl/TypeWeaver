@@ -1,33 +1,33 @@
-let nope: Function = (s: String) => '' + s
+let nope: Function = (s: string) => '' + s
 
-export let isColorSupported: Boolean = false
+export let isColorSupported: boolean = false
 export let reset: Function = nope
-export let bold: String = nope
-export let dim: String = nope
-export let italic: String = nope
-export let underline: String = nope
-export let inverse: String = nope
-export let hidden: String = nope
-export let strikethrough: String = nope
-export let black: String = nope
-export let red: String = nope
-export let green: String = nope
-export let yellow: String = nope
-export let blue: String = nope
-export let magenta: String = nope
-export let cyan: String = nope
-export let white: String = nope
-export let gray: String = nope
-export let bgBlack: String = nope
-export let bgRed: String = nope
-export let bgGreen: String = nope
-export let bgYellow: String = nope
-export let bgBlue: String = nope
-export let bgMagenta: String = nope
-export let bgCyan: String = nope
-export let bgWhite: String = nope
+export let bold: string = nope
+export let dim: string = nope
+export let italic: string = nope
+export let underline: string = nope
+export let inverse: string = nope
+export let hidden: string = nope
+export let strikethrough: string = nope
+export let black: string = nope
+export let red: string = nope
+export let green: string = nope
+export let yellow: string = nope
+export let blue: string = nope
+export let magenta: string = nope
+export let cyan: string = nope
+export let white: string = nope
+export let gray: string = nope
+export let bgBlack: string = nope
+export let bgRed: string = nope
+export let bgGreen: string = nope
+export let bgYellow: string = nope
+export let bgBlue: string = nope
+export let bgMagenta: string = nope
+export let bgCyan: string = nope
+export let bgWhite: string = nope
 
-export function createColors(): Object {
+export function createColors(): object {
   return {
     isColorSupported,
     reset,

@@ -1,11 +1,11 @@
 import ansiCodes from './ansi-codes.js';
 import ansiRegex from '../index.js';
 
-const allCodes: Object = {};
-const supported: Array = [];
-const unsupported: Array = [];
+const allCodes: object = {};
+const supported: any[] = [];
+const unsupported: any[] = [];
 
-function addCodesToTest(codes: Array): Void {
+function addCodesToTest(codes: any[]): Void {
 	for (const [key, value] of Object.entries(codes)) {
 		allCodes[key] = value;
 	}

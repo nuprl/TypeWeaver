@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer';
 
-var CRC_TABLE: Object = [
+var CRC_TABLE: object = [
   0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419,
   0x706af48f, 0xe963a535, 0x9e6495a3, 0x0edb8832, 0x79dcb8a4,
   0xe0d5e91e, 0x97d2d988, 0x09b64c2b, 0x7eb17cbd, 0xe7b82d07,
@@ -59,18 +59,18 @@ if (typeof Int32Array !== 'undefined') {
   CRC_TABLE = new Int32Array(CRC_TABLE);
 }
 
-function newEmptyBuffer(length: String): Object {
+function newEmptyBuffer(length: string): object {
   var buffer: Element = new Buffer(length);
   buffer.fill(0x00);
   return buffer;
 }
 
-function ensureBuffer(input: Function): Array {
+function ensureBuffer(input: Function): any[] {
   if (Buffer.isBuffer(input)) {
     return input;
   }
 
-  var hasNewBufferAPI: Boolean =
+  var hasNewBufferAPI: boolean =
       typeof Buffer.alloc === "function" &&
       typeof Buffer.from === "function";
 
@@ -86,25 +86,25 @@ function ensureBuffer(input: Function): Array {
   }
 }
 
-function bufferizeInt(num: String): HTMLElement {
-  var tmp: String = ensureBuffer(4);
+function bufferizeInt(num: string): HTMLElement {
+  var tmp: string = ensureBuffer(4);
   tmp.writeInt32BE(num, 0);
   return tmp;
 }
 
-function _crc32(buf: Array, previous: String): Number {
+function _crc32(buf: any[], previous: string): number {
   buf = ensureBuffer(buf);
   if (Buffer.isBuffer(previous)) {
     previous = previous.readUInt32BE(0);
   }
-  var crc: Number = ~~previous ^ -1;
+  var crc: number = ~~previous ^ -1;
   for (var n = 0; n < buf.length; n++) {
     crc = CRC_TABLE[(crc ^ buf[n]) & 0xff] ^ (crc >>> 8);
   }
   return (crc ^ -1);
 }
 
-function crc32(): String {
+function crc32(): string {
   return bufferizeInt(_crc32.apply(null, arguments));
 }
 crc32.signed = function () {

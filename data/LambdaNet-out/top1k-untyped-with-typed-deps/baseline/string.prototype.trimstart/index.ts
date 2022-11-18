@@ -4,12 +4,12 @@ var callBind: Function = require('call-bind');
 var define: Function = require('define-properties');
 var RequireObjectCoercible: Function = require('es-abstract/2021/RequireObjectCoercible');
 
-var implementation: String = require('./implementation');
+var implementation: string = require('./implementation');
 var getPolyfill: Function = require('./polyfill');
-var shim: String = require('./shim');
+var shim: string = require('./shim');
 
 var bound: Function = callBind(getPolyfill());
-var boundMethod: Function = function trim(receiver: String): Boolean {
+var boundMethod: Function = function trim(receiver: string): boolean {
 	RequireObjectCoercible(receiver);
 	return bound(receiver);
 };

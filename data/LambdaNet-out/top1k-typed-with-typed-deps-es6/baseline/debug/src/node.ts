@@ -30,7 +30,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
 try {
 	// Optional dependency (as in, doesn't need to be installed, NOT like optionalDependencies in package.json)
 	// eslint-disable-next-line import/no-extraneous-dependencies
-	const supportsColor: String = require('supports-color');
+	const supportsColor: string = require('supports-color');
 
 	if (supportsColor && (supportsColor.stderr || supportsColor).level >= 2) {
 		exports.colors = [
@@ -122,19 +122,19 @@ try {
  *   $ DEBUG_COLORS=no DEBUG_DEPTH=10 DEBUG_SHOW_HIDDEN=enabled node script.js
  */
 
-exports.inspectOpts = Object.keys(process.env).filter((key: String) => {
+exports.inspectOpts = Object.keys(process.env).filter((key: string) => {
 	return /^debug_/i.test(key);
-}).reduce((obj: Object, key: String) => {
+}).reduce((obj: object, key: string) => {
 	// Camel-case
-	const prop: String = key
+	const prop: string = key
 		.substring(6)
 		.toLowerCase()
-		.replace(/_([a-z])/g, (_: String, k: String) => {
+		.replace(/_([a-z])/g, (_: string, k: string) => {
 			return k.toUpperCase();
 		});
 
 	// Coerce string value into JS value
-	let val: Boolean = process.env[key];
+	let val: boolean = process.env[key];
 	if (/^(yes|on|true|enabled)$/i.test(val)) {
 		val = true;
 	} else if (/^(no|off|false|disabled)$/i.test(val)) {
@@ -153,7 +153,7 @@ exports.inspectOpts = Object.keys(process.env).filter((key: String) => {
  * Is stdout a TTY? Colored output is enabled when `true`.
  */
 
-function useColors(): Boolean {
+function useColors(): boolean {
 	return 'colors' in exports.inspectOpts ?
 		Boolean(exports.inspectOpts.colors) :
 		tty.isatty(process.stderr.fd);
@@ -165,13 +165,13 @@ function useColors(): Boolean {
  * @api public
  */
 
-function formatArgs(args: Array): Void {
+function formatArgs(args: any[]): Void {
 	const {namespace: name, useColors} = this;
 
 	if (useColors) {
-		const c: String = this.color;
-		const colorCode: String = '\u001B[3' + (c < 8 ? c : '8;5;' + c);
-		const prefix: String = `  ${colorCode};1m${name} \u001B[0m`;
+		const c: string = this.color;
+		const colorCode: string = '\u001B[3' + (c < 8 ? c : '8;5;' + c);
+		const prefix: string = `  ${colorCode};1m${name} \u001B[0m`;
 
 		args[0] = prefix + args[0].split('\n').join('\n' + prefix);
 		args.push(colorCode + 'm+' + module.exports.humanize(this.diff) + '\u001B[0m');
@@ -180,7 +180,7 @@ function formatArgs(args: Array): Void {
 	}
 }
 
-function getDate(): String {
+function getDate(): string {
 	if (exports.inspectOpts.hideDate) {
 		return '';
 	}
@@ -191,7 +191,7 @@ function getDate(): String {
  * Invokes `util.format()` with the specified arguments and writes to stderr.
  */
 
-function log(...args): Number {
+function log(...args): number {
 	return process.stderr.write(util.format(...args) + '\n');
 }
 
@@ -218,7 +218,7 @@ function save(namespaces: Function): Void {
  * @api private
  */
 
-function load(): Object {
+function load(): object {
 	return process.env.DEBUG;
 }
 
@@ -229,10 +229,10 @@ function load(): Object {
  * differently for a particular `debug` instance.
  */
 
-function init(debug: Object): Void {
+function init(debug: object): Void {
 	debug.inspectOpts = {};
 
-	const keys: Array = Object.keys(exports.inspectOpts);
+	const keys: any[] = Object.keys(exports.inspectOpts);
 	for (let i = 0; i < keys.length; i++) {
 		debug.inspectOpts[keys[i]] = exports.inspectOpts[keys[i]];
 	}
@@ -250,7 +250,7 @@ formatters.o = function (v: Function) {
 	this.inspectOpts.colors = this.useColors;
 	return util.inspect(v, this.inspectOpts)
 		.split('\n')
-		.map((str: String) => str.trim())
+		.map((str: string) => str.trim())
 		.join(' ');
 };
 

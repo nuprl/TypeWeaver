@@ -4,8 +4,8 @@
 */
 "use strict";
 
-export const deprecate: Function = (fn: Function, msg: String) => {
-	let once: Boolean = true;
+export const deprecate: Function = (fn: Function, msg: string) => {
+	let once: boolean = true;
 	return function() {
 		if (once) {
 			console.warn("DeprecationWarning: " + msg);

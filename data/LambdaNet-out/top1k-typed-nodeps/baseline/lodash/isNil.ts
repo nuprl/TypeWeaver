@@ -16,7 +16,7 @@
  * isNil(NaN)
  * // => false
  */
-function isNil(value: String): Boolean {
+function isNil(value: string): boolean {
   return value == null
 }
 

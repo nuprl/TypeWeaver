@@ -8,8 +8,8 @@
  * @param {number} fromIndex The index to search from.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function strictLastIndexOf(array: Object, value: Number, fromIndex: Number): Number {
-  let index: Number = fromIndex + 1
+function strictLastIndexOf(array: object, value: number, fromIndex: number): number {
+  let index: number = fromIndex + 1
   while (index--) {
     if (array[index] === value) {
       return index

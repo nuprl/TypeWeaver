@@ -191,4 +191,4 @@ module.exports = [
   'wrap-through',
   'writing-mode',
   'zoom',
-].map((prop: String) => 'webkit-' + prop);
+].map((prop: string) => 'webkit-' + prop);

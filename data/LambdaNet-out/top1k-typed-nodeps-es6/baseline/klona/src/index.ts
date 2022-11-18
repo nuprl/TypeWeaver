@@ -1,7 +1,7 @@
-export function klona(x: Array): Map {
+export function klona(x: any[]): Map {
 	if (typeof x !== 'object') return x;
 
-	var k: Number, tmp: Object, str: String=Object.prototype.toString.call(x);
+	var k: number, tmp: object, str: string=Object.prototype.toString.call(x);
 
 	if (str === '[object Object]') {
 		if (x.constructor !== Object && typeof x.constructor === 'function') {
@@ -39,7 +39,7 @@ export function klona(x: Array): Map {
 
 	if (str === '[object Set]') {
 		tmp = new Set;
-		x.forEach(function (val: String) {
+		x.forEach(function (val: string) {
 			tmp.add(klona(val));
 		});
 		return tmp;
@@ -47,7 +47,7 @@ export function klona(x: Array): Map {
 
 	if (str === '[object Map]') {
 		tmp = new Map;
-		x.forEach(function (val: String, key: String) {
+		x.forEach(function (val: string, key: string) {
 			tmp.set(klona(key), klona(val));
 		});
 		return tmp;

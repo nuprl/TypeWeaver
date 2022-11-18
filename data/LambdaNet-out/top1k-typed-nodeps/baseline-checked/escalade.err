@@ -1,56 +1,28 @@
 bench/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'sync'.
 bench/index.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'escalade'.
 bench/index.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'findup'.
-bench/index.ts(11,93): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 bench/index.ts(16,40): error TS2339: Property 'sync' does not exist on type 'Function'.
-bench/index.ts(24,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bench/index.ts(24,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(24,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-bench/index.ts(30,24): error TS2339: Property 'equal' does not exist on type 'String'.
-bench/index.ts(31,11): error TS2339: Property 'equal' does not exist on type 'String'.
+bench/index.ts(30,24): error TS2339: Property 'equal' does not exist on type 'string'.
+bench/index.ts(31,11): error TS2339: Property 'equal' does not exist on type 'string'.
 bench/index.ts(40,24): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 bench/index.ts(45,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-bench/index.ts(46,16): error TS2538: Type 'String' cannot be used as an index type.
 bench/index.ts(49,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-bench/index.ts(50,22): error TS2538: Type 'String' cannot be used as an index type.
 bench/index.ts(56,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/index.ts(57,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/index.ts(58,9): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+bench/index.ts(63,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+bench/index.ts(64,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+bench/index.ts(65,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 bench/load.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'findup'.
 bench/load.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'escalade'.
 bench/load.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'sync'.
-src/async.ts(9,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/async.ts(10,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/async.ts(13,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/async.ts(12,13): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.
 src/async.ts(17,15): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
-src/async.ts(18,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/async.ts(19,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/sync.ts(5,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/sync.ts(6,19): error TS2740: Type 'Stats & BigIntStats' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/sync.ts(6,44): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-src/sync.ts(8,13): error TS2339: Property 'isDirectory' does not exist on type 'String'.
-src/sync.ts(9,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/sync.ts(13,35): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathLike, options?: { encoding: BufferEncoding; withFileTypes?: false; } | BufferEncoding): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Overload 2 of 4, '(path: PathLike, options?: BufferEncoding | (ObjectEncodingOptions & { withFileTypes?: false; })): string[] | Buffer[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-src/sync.ts(14,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/sync.ts(15,17): error TS2322: Type 'String' is not assignable to type 'Number'.
-src/sync.ts(15,17): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-src/sync.ts(15,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/sync.ts(16,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+  Type '{}' has no call signatures.
+src/sync.ts(6,19): error TS2322: Type 'Stats' is not assignable to type 'string'.
+src/sync.ts(8,13): error TS2339: Property 'isDirectory' does not exist on type 'string'.
+src/sync.ts(14,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/sync.ts(15,17): error TS2322: Type 'string' is not assignable to type 'number'.
+src/sync.ts(16,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 

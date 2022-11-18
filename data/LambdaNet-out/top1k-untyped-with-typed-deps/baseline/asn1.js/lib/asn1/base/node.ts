@@ -1,12 +1,12 @@
 'use strict';
 
-const Reporter: Object = require('../base/reporter').Reporter;
-const EncoderBuffer: Object = require('../base/buffer').EncoderBuffer;
-const DecoderBuffer: Object = require('../base/buffer').DecoderBuffer;
+const Reporter: object = require('../base/reporter').Reporter;
+const EncoderBuffer: object = require('../base/buffer').EncoderBuffer;
+const DecoderBuffer: object = require('../base/buffer').DecoderBuffer;
 const assert: Function = require('minimalistic-assert');
 
 // Supported tags
-const tags: Array = [
+const tags: any[] = [
   'seq', 'seqof', 'set', 'setof', 'objid', 'bool',
   'gentime', 'utctime', 'null_', 'enum', 'int', 'objDesc',
   'bitstr', 'bmpstr', 'charstr', 'genstr', 'graphstr', 'ia5str', 'iso646str',
@@ -14,13 +14,13 @@ const tags: Array = [
 ];
 
 // Public methods list
-const methods: Array = [
+const methods: any[] = [
   'key', 'obj', 'use', 'optional', 'explicit', 'implicit', 'def', 'choice',
   'any', 'contains'
 ].concat(tags);
 
 // Overrided methods list
-const overrided: Array = [
+const overrided: any[] = [
   '_peekTag', '_decodeTag', '_use',
   '_decodeStr', '_decodeObjid', '_decodeTime',
   '_decodeNull', '_decodeInt', '_decodeBool', '_decodeList',
@@ -29,8 +29,8 @@ const overrided: Array = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: Function, parent: String, name: String): Void {
-  const state: Object = {};
+function Node(enc: Function, parent: string, name: string): Void {
+  const state: object = {};
   this._baseState = state;
 
   state.name = name;
@@ -63,16 +63,16 @@ function Node(enc: Function, parent: String, name: String): Void {
 }
 module.exports = Node;
 
-const stateProps: Array = [
+const stateProps: any[] = [
   'enc', 'parent', 'children', 'tag', 'args', 'reverseArgs', 'choice',
   'optional', 'any', 'obj', 'use', 'alteredUse', 'key', 'default', 'explicit',
   'implicit', 'contains'
 ];
 
-Node.prototype.clone = function clone(): String {
-  const state: Object = this._baseState;
-  const cstate: Object = {};
-  stateProps.forEach(function(prop: String) {
+Node.prototype.clone = function clone(): string {
+  const state: object = this._baseState;
+  const cstate: object = {};
+  stateProps.forEach(function(prop: string) {
     cstate[prop] = state[prop];
   });
   const res: HTMLElement = new this.constructor(cstate.parent);
@@ -82,9 +82,9 @@ Node.prototype.clone = function clone(): String {
 
 Node.prototype._wrap = function wrap(): Void {
   const state: HTMLElement = this._baseState;
-  methods.forEach(function(method: String) {
+  methods.forEach(function(method: string) {
     this[method] = function _wrappedMethod(): Promise {
-      const clone: Object = new this.constructor(this);
+      const clone: object = new this.constructor(this);
       state.children.push(clone);
       return clone[method].apply(clone, arguments);
     };
@@ -98,20 +98,20 @@ Node.prototype._init = function init(body: Function): Void {
   body.call(this);
 
   // Filter children
-  state.children = state.children.filter(function(child: Object) {
+  state.children = state.children.filter(function(child: object) {
     return child._baseState.parent === this;
   }, this);
   assert.equal(state.children.length, 1, 'Root node can have only one child');
 };
 
-Node.prototype._useArgs = function useArgs(args: Array): Void {
+Node.prototype._useArgs = function useArgs(args: any[]): Void {
   const state: HTMLElement = this._baseState;
 
   // Filter children and args
-  const children: Array = args.filter(function(arg: String) {
+  const children: any[] = args.filter(function(arg: string) {
     return arg instanceof this.constructor;
   }, this);
-  args = args.filter(function(arg: String) {
+  args = args.filter(function(arg: string) {
     return !(arg instanceof this.constructor);
   }, this);
 
@@ -120,22 +120,22 @@ Node.prototype._useArgs = function useArgs(args: Array): Void {
     state.children = children;
 
     // Replace parent to maintain backward link
-    children.forEach(function(child: Object) {
+    children.forEach(function(child: object) {
       child._baseState.parent = this;
     }, this);
   }
   if (args.length !== 0) {
     assert(state.args === null);
     state.args = args;
-    state.reverseArgs = args.map(function(arg: Object) {
+    state.reverseArgs = args.map(function(arg: object) {
       if (typeof arg !== 'object' || arg.constructor !== Object)
         return arg;
 
-      const res: Object = {};
-      Object.keys(arg).forEach(function(key: String) {
+      const res: object = {};
+      Object.keys(arg).forEach(function(key: string) {
         if (key == (key | 0))
           key |= 0;
-        const value: String = arg[key];
+        const value: string = arg[key];
         res[value] = key;
       });
       return res;
@@ -147,7 +147,7 @@ Node.prototype._useArgs = function useArgs(args: Array): Void {
 // Overrided methods
 //
 
-overrided.forEach(function(method: String) {
+overrided.forEach(function(method: string) {
   Node.prototype[method] = function _overrided(): Void {
     const state: Function = this._baseState;
     throw new Error(method + ' not implemented for encoding: ' + state.enc);
@@ -158,10 +158,10 @@ overrided.forEach(function(method: String) {
 // Public methods
 //
 
-tags.forEach(function(tag: Number) {
-  Node.prototype[tag] = function _tagMethod(): Object {
-    const state: Object = this._baseState;
-    const args: Array = Array.prototype.slice.call(arguments);
+tags.forEach(function(tag: number) {
+  Node.prototype[tag] = function _tagMethod(): object {
+    const state: object = this._baseState;
+    const args: any[] = Array.prototype.slice.call(arguments);
 
     assert(state.tag === null);
     state.tag = tag;
@@ -172,7 +172,7 @@ tags.forEach(function(tag: Number) {
   };
 });
 
-Node.prototype.use = function use(item: Object): Object {
+Node.prototype.use = function use(item: object): object {
   assert(item);
   const state: HTMLElement = this._baseState;
 
@@ -182,7 +182,7 @@ Node.prototype.use = function use(item: Object): Object {
   return this;
 };
 
-Node.prototype.optional = function optional(): Object {
+Node.prototype.optional = function optional(): object {
   const state: Function = this._baseState;
 
   state.optional = true;
@@ -190,8 +190,8 @@ Node.prototype.optional = function optional(): Object {
   return this;
 };
 
-Node.prototype.def = function def(val: String): Object {
-  const state: Object = this._baseState;
+Node.prototype.def = function def(val: string): object {
+  const state: object = this._baseState;
 
   assert(state['default'] === null);
   state['default'] = val;
@@ -200,7 +200,7 @@ Node.prototype.def = function def(val: String): Object {
   return this;
 };
 
-Node.prototype.explicit = function explicit(num: Function): Object {
+Node.prototype.explicit = function explicit(num: Function): object {
   const state: HTMLElement = this._baseState;
 
   assert(state.explicit === null && state.implicit === null);
@@ -209,7 +209,7 @@ Node.prototype.explicit = function explicit(num: Function): Object {
   return this;
 };
 
-Node.prototype.implicit = function implicit(num: Function): Object {
+Node.prototype.implicit = function implicit(num: Function): object {
   const state: HTMLElement = this._baseState;
 
   assert(state.explicit === null && state.implicit === null);
@@ -218,9 +218,9 @@ Node.prototype.implicit = function implicit(num: Function): Object {
   return this;
 };
 
-Node.prototype.obj = function obj(): Object {
-  const state: Object = this._baseState;
-  const args: Array = Array.prototype.slice.call(arguments);
+Node.prototype.obj = function obj(): object {
+  const state: object = this._baseState;
+  const args: any[] = Array.prototype.slice.call(arguments);
 
   state.obj = true;
 
@@ -230,7 +230,7 @@ Node.prototype.obj = function obj(): Object {
   return this;
 };
 
-Node.prototype.key = function key(newKey: String): Object {
+Node.prototype.key = function key(newKey: string): object {
   const state: HTMLElement = this._baseState;
 
   assert(state.key === null);
@@ -239,27 +239,27 @@ Node.prototype.key = function key(newKey: String): Object {
   return this;
 };
 
-Node.prototype.any = function any(): Object {
-  const state: Array = this._baseState;
+Node.prototype.any = function any(): object {
+  const state: any[] = this._baseState;
 
   state.any = true;
 
   return this;
 };
 
-Node.prototype.choice = function choice(obj: Object): Object {
+Node.prototype.choice = function choice(obj: object): object {
   const state: HTMLElement = this._baseState;
 
   assert(state.choice === null);
   state.choice = obj;
-  this._useArgs(Object.keys(obj).map(function(key: String) {
+  this._useArgs(Object.keys(obj).map(function(key: string) {
     return obj[key];
   }));
 
   return this;
 };
 
-Node.prototype.contains = function contains(item: Number): Object {
+Node.prototype.contains = function contains(item: number): object {
   const state: HTMLElement = this._baseState;
 
   assert(state.use === null);
@@ -272,23 +272,23 @@ Node.prototype.contains = function contains(item: Number): Object {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Object, options: Object): Boolean {
-  const state: Object = this._baseState;
+Node.prototype._decode = function decode(input: object, options: object): boolean {
+  const state: object = this._baseState;
 
   // Decode root node
   if (state.parent === null)
     return input.wrapResult(state.children[0]._decode(input, options));
 
-  let result: String = state['default'];
-  let present: Boolean = true;
+  let result: string = state['default'];
+  let present: boolean = true;
 
-  let prevKey: String = null;
+  let prevKey: string = null;
   if (state.key !== null)
     prevKey = input.enterKey(state.key);
 
   // Check if tag is there
   if (state.optional) {
-    let tag: String = null;
+    let tag: string = null;
     if (state.explicit !== null)
       tag = state.explicit;
     else if (state.implicit !== null)
@@ -298,7 +298,7 @@ Node.prototype._decode = function decode(input: Object, options: Object): Boolea
 
     if (tag === null && !state.any) {
       // Trial and Error
-      const save: String = input.save();
+      const save: string = input.save();
       try {
         if (state.choice === null)
           this._decodeGeneric(state.tag, input, options);
@@ -318,27 +318,27 @@ Node.prototype._decode = function decode(input: Object, options: Object): Boolea
   }
 
   // Push object on stack
-  let prevObj: String;
+  let prevObj: string;
   if (state.obj && present)
     prevObj = input.enterObject();
 
   if (present) {
     // Unwrap explicit values
     if (state.explicit !== null) {
-      const explicit: String = this._decodeTag(input, state.explicit);
+      const explicit: string = this._decodeTag(input, state.explicit);
       if (input.isError(explicit))
         return explicit;
       input = explicit;
     }
 
-    const start: String = input.offset;
+    const start: string = input.offset;
 
     // Unwrap implicit and normal values
     if (state.use === null && state.choice === null) {
-      let save: Number;
+      let save: number;
       if (state.any)
         save = input.save();
-      const body: String = this._decodeTag(
+      const body: string = this._decodeTag(
         input,
         state.implicit !== null ? state.implicit : state.tag,
         state.any
@@ -372,7 +372,7 @@ Node.prototype._decode = function decode(input: Object, options: Object): Boolea
 
     // Decode children
     if (!state.any && state.choice === null && state.children !== null) {
-      state.children.forEach(function decodeChildren(child: Object): Void {
+      state.children.forEach(function decodeChildren(child: object): Void {
         // NOTE: We are ignoring errors here, to let parser continue with other
         // parts of encoded data
         child._decode(input, options);
@@ -381,7 +381,7 @@ Node.prototype._decode = function decode(input: Object, options: Object): Boolea
 
     // Decode contained/encoded by schema, only in bit or octet strings
     if (state.contains && (state.tag === 'octstr' || state.tag === 'bitstr')) {
-      const data: Object = new DecoderBuffer(result);
+      const data: object = new DecoderBuffer(result);
       result = this._getUse(state.contains, input._reporterState.obj)
         ._decode(data, options);
     }
@@ -400,7 +400,7 @@ Node.prototype._decode = function decode(input: Object, options: Object): Boolea
   return result;
 };
 
-Node.prototype._decodeGeneric = function decodeGeneric(tag: Number, input: Object, options: Object): Object {
+Node.prototype._decodeGeneric = function decodeGeneric(tag: number, input: object, options: object): object {
   const state: HTMLElement = this._baseState;
 
   if (tag === 'seq' || tag === 'set')
@@ -432,7 +432,7 @@ Node.prototype._decodeGeneric = function decodeGeneric(tag: Number, input: Objec
   }
 };
 
-Node.prototype._getUse = function _getUse(entity: String, obj: Function): Object {
+Node.prototype._getUse = function _getUse(entity: string, obj: Function): object {
 
   const state: HTMLElement = this._baseState;
   // Create altered use decoder if implicit is set
@@ -446,16 +446,16 @@ Node.prototype._getUse = function _getUse(entity: String, obj: Function): Object
   return state.useDecoder;
 };
 
-Node.prototype._decodeChoice = function decodeChoice(input: HTMLElement, options: Object): Object {
+Node.prototype._decodeChoice = function decodeChoice(input: HTMLElement, options: object): object {
   const state: HTMLElement = this._baseState;
-  let result: Object = null;
-  let match: Boolean = false;
+  let result: object = null;
+  let match: boolean = false;
 
-  Object.keys(state.choice).some(function(key: String) {
-    const save: Boolean = input.save();
+  Object.keys(state.choice).some(function(key: string) {
+    const save: boolean = input.save();
     const node: Element = state.choice[key];
     try {
-      const value: String = node._decode(input, options);
+      const value: string = node._decode(input, options);
       if (input.isError(value))
         return false;
 
@@ -478,16 +478,16 @@ Node.prototype._decodeChoice = function decodeChoice(input: HTMLElement, options
 // Encoding
 //
 
-Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: Object): Object {
+Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: object): object {
   return new EncoderBuffer(data, this.reporter);
 };
 
-Node.prototype._encode = function encode(data: Object, reporter: String, parent: Function): String {
-  const state: Object = this._baseState;
+Node.prototype._encode = function encode(data: object, reporter: string, parent: Function): string {
+  const state: object = this._baseState;
   if (state['default'] !== null && state['default'] === data)
     return;
 
-  const result: String = this._encodeValue(data, reporter, parent);
+  const result: string = this._encodeValue(data, reporter, parent);
   if (result === undefined)
     return;
 
@@ -497,14 +497,14 @@ Node.prototype._encode = function encode(data: Object, reporter: String, parent:
   return result;
 };
 
-Node.prototype._encodeValue = function encode(data: Array, reporter: Object, parent: Function): Object {
-  const state: Object = this._baseState;
+Node.prototype._encodeValue = function encode(data: any[], reporter: object, parent: Function): object {
+  const state: object = this._baseState;
 
   // Decode root node
   if (state.parent === null)
     return state.children[0]._encode(data, reporter || new Reporter());
 
-  let result: String = null;
+  let result: string = null;
 
   // Set reporter to share it with a child class
   this.reporter = reporter;
@@ -518,8 +518,8 @@ Node.prototype._encodeValue = function encode(data: Array, reporter: Object, par
   }
 
   // Encode children first
-  let content: String = null;
-  let primitive: Boolean = false;
+  let content: string = null;
+  let primitive: boolean = false;
   if (state.any) {
     // Anything that was given is translated to buffer
     result = this._createEncoderBuffer(data);
@@ -535,16 +535,16 @@ Node.prototype._encodeValue = function encode(data: Array, reporter: Object, par
 
       if (child._baseState.key === null)
         return reporter.error('Child should have a key');
-      const prevKey: String = reporter.enterKey(child._baseState.key);
+      const prevKey: string = reporter.enterKey(child._baseState.key);
 
       if (typeof data !== 'object')
         return reporter.error('Child expected, but input is not object');
 
-      const res: Array = child._encode(data[child._baseState.key], reporter, data);
+      const res: any[] = child._encode(data[child._baseState.key], reporter, data);
       reporter.leaveKey(prevKey);
 
       return res;
-    }, this).filter(function(child: Object) {
+    }, this).filter(function(child: object) {
       return child;
     });
     content = this._createEncoderBuffer(content);
@@ -559,7 +559,7 @@ Node.prototype._encodeValue = function encode(data: Array, reporter: Object, par
 
       const child: Error = this.clone();
       child._baseState.implicit = null;
-      content = this._createEncoderBuffer(data.map(function(item: String) {
+      content = this._createEncoderBuffer(data.map(function(item: string) {
         const state: Function = this._baseState;
 
         return this._getUse(state.args[0], data)._encode(item, reporter);
@@ -574,8 +574,8 @@ Node.prototype._encodeValue = function encode(data: Array, reporter: Object, par
 
   // Encode data itself
   if (!state.any && state.choice === null) {
-    const tag: String = state.implicit !== null ? state.implicit : state.tag;
-    const cls: String = state.implicit === null ? 'universal' : 'context';
+    const tag: string = state.implicit !== null ? state.implicit : state.tag;
+    const cls: string = state.implicit === null ? 'universal' : 'context';
 
     if (tag === null) {
       if (state.use === null)
@@ -593,7 +593,7 @@ Node.prototype._encodeValue = function encode(data: Array, reporter: Object, par
   return result;
 };
 
-Node.prototype._encodeChoice = function encodeChoice(data: Object, reporter: String): String {
+Node.prototype._encodeChoice = function encodeChoice(data: object, reporter: string): string {
   const state: HTMLElement = this._baseState;
 
   const node: HTMLElement = state.choice[data.type];
@@ -606,7 +606,7 @@ Node.prototype._encodeChoice = function encodeChoice(data: Object, reporter: Str
   return node._encode(data.value, reporter);
 };
 
-Node.prototype._encodePrimitive = function encodePrimitive(tag: Number, data: Object): Object {
+Node.prototype._encodePrimitive = function encodePrimitive(tag: number, data: object): object {
   const state: HTMLElement = this._baseState;
 
   if (/str$/.test(tag))
@@ -629,10 +629,10 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag: Number, data: Ob
     throw new Error('Unsupported tag: ' + tag);
 };
 
-Node.prototype._isNumstr = function isNumstr(str: String): Boolean {
+Node.prototype._isNumstr = function isNumstr(str: string): boolean {
   return /^[0-9 ]*$/.test(str);
 };
 
-Node.prototype._isPrintstr = function isPrintstr(str: String): Boolean {
+Node.prototype._isPrintstr = function isPrintstr(str: string): boolean {
   return /^[A-Za-z0-9 '()+,-./:=?]*$/.test(str);
 };

@@ -1,7 +1,7 @@
-var Benchmark: String   = require('benchmark'),
-    suite: Array       = new Benchmark.Suite,
-    sprintfjs: String   = require('../src/sprintf.js'),
-    sprintf: Object     = sprintfjs.sprintf
+var Benchmark: string   = require('benchmark'),
+    suite: any[]       = new Benchmark.Suite,
+    sprintfjs: string   = require('../src/sprintf.js'),
+    sprintf: object     = sprintfjs.sprintf
 
 suite
     .add('%8d', function() {
