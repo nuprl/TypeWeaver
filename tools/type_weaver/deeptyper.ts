@@ -39,6 +39,8 @@ class TypePredictions {
                 // Only take tokens that are names or keywords (since they might be identifiers).
                 // Also keep "=>" tokens, to use for searching arrow functions.
                 if (tokType.startsWith("Name") || tokType.startsWith("Keyword") || tokVal === "=>") {
+                    // DeepTyper seems to infer "complex" as a kind of unknown or complicated type,
+                    // it doesn't mean complex number. So we replace it with "any".
                     // TODO: maybe this should be configurable with a flag
                     const prediction = record[2] === "complex" ? "any" : record[2];
                     return {

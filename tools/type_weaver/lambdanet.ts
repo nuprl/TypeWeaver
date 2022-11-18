@@ -40,8 +40,25 @@ class TypePredictions {
         let lookupTable: Record<string,string> = {}
         for (const r of records) {
             const key: string = `${r.startLine}-${r.startCol}`;
-            const val: string = r.typePrediction;
-            lookupTable[key] = val;
+            // LambdaNet infers Number, String, Boolean, and Object, but these
+            // really should be number, string, boolean, and object.
+            // See: https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html#number-string-boolean-symbol-and-object
+            // Also, Array is a generic type and must be given a type argument,
+            // so we replace it with any[].
+            // TODO: maybe this should be configurable with a flag
+            switch (r.typePrediction) {
+                case "Number":
+                case "String":
+                case "Boolean":
+                case "Object":
+                    lookupTable[key] = r.typePrediction.toLowerCase();
+                    break;
+                case "Array":
+                    lookupTable[key] = "any[]";
+                    break;
+                default:
+                    lookupTable[key] = r.typePrediction;
+            }
         }
         this.lookupTable = lookupTable;
 
