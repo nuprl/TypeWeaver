@@ -15,7 +15,11 @@ import argparse
 
 import util
 
-SYSTEMS = ["DeepTyper", "LambdaNet", "InCoder"]
+SYSTEMS = {
+    "DeepTyper": "dt",
+    "LambdaNet": "ln",
+    "InCoder": "ic"
+}
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Summarizes results")
@@ -50,7 +54,7 @@ def typecheck_summary(data_dir, summary_csv):
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
     with open(summary_csv, "w") as file:
-        system_headers = [f'"{s} type checks"' for s in SYSTEMS]
+        system_headers = [f'"{s} type checks"' for s in SYSTEMS.keys()]
         header = '"Dataset","Package",' + ",".join(system_headers)
         file.write(header)
         file.write("\n")
@@ -58,7 +62,7 @@ def typecheck_summary(data_dir, summary_csv):
         for d in datasets:
             packages = sorted([p.parts[-1] for p in Path(data_dir, "original", d).iterdir()])
             for p in packages:
-                res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS]
+                res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS.keys()]
                 entry = ",".join([d, p, *res])
                 file.write(entry)
                 file.write("\n")
@@ -91,9 +95,9 @@ def errors_per_file_summary(data_dir):
     print("Counting errors per file, for each system and dataset...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
-    for s in SYSTEMS:
+    for s in SYSTEMS.keys():
         print(f"  {s} ...")
-        output_csv = Path(data_dir, "notes", s, "errors_per_file.csv")
+        output_csv = Path(data_dir, "notes", "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Number of errors"')
             file.write("\n")
@@ -114,7 +118,7 @@ def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
 
-    summary_csv = Path(data_dir, "notes", "typecheck_summary.csv")
+    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
     typecheck_summary(data_dir, summary_csv)
 
     errors_per_file_summary(data_dir)
