@@ -5,6 +5,8 @@ This directory is organized as follows:
   * `notes/`: notes, logs, and documentation about the dataset and results
 
   * `original/`: dataset downloaded from GitHub; used for experiments
+  * `groundtruth/`: handwritten `.d.ts` type definitions from DefinitelyTyped
+     and project repos
   * `node_modules/`: dependencies for the dataset
   * `from_tarballs/`: dataset extracted from tarballs; used to derive `original/`
 

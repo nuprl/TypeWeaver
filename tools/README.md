@@ -18,6 +18,10 @@ A collection of scripts and tools.
 * `run_migration_pipeline/main.py`: runs the evaluation pipeline (inference,
   type weaving, and type checking) on a dataset
 
+* `save_ground_truth_typings.py`: given a JavaScript dataset, copies the `.d.ts`
+  type definitions from the provided DefinitelyTyped directory; if no type
+  definitions exist, checks the package to see if type definitions were bundled
+
 * `summarize_results.py`: generates CSV files summarizing the results
 
 * `transform_require_to_import.py`: transforms a JavaScript dataset from
