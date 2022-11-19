@@ -31,6 +31,10 @@ def parse_args():
         type=int,
         default=cpu_count,
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
+    parser.add_argument(
+        "--emit-declaration",
+        help="only for type checking; emit .d.ts declaration files",
+        action="store_true")
 
     group = parser.add_argument_group(
         title="pipeline step",
