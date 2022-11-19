@@ -49,6 +49,7 @@ scripts/generate-unicode-id-parts.ts(121,31): error TS2339: Property 'surrogateR
 scripts/generate-unicode-id-parts.ts(137,5): error TS2740: Type 'Writer' is missing the following properties from type 'any[]': length, pop, concat, join, and 28 more.
 scripts/generate-unicode-id-parts.ts(138,5): error TS2322: Type 'Writer' is not assignable to type 'any[]'.
 src/bin/regexp-tree.ts(8,18): error TS2304: Cannot find name 'Void'.
+src/bin/regexp-tree.ts(8,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/compat-transpiler/runtime/index.ts(37,10): error TS2339: Property '_re' does not exist on type 'RegExpTree'.
 src/compat-transpiler/runtime/index.ts(38,10): error TS2339: Property '_groups' does not exist on type 'RegExpTree'.
 src/compat-transpiler/runtime/index.ts(41,10): error TS2339: Property 'flags' does not exist on type 'RegExpTree'.
@@ -72,8 +73,11 @@ src/compat-transpiler/runtime/index.ts(83,15): error TS2339: Property '_groups' 
 src/compat-transpiler/runtime/index.ts(89,30): error TS2339: Property '_groups' does not exist on type 'RegExpTree'.
 src/compat-transpiler/runtime/index.ts(90,40): error TS2339: Property '_groups' does not exist on type 'RegExpTree'.
 src/generator/index.ts(11,20): error TS2304: Cannot find name 'NodePath'.
+src/generator/index.ts(11,20): error TS4078: Parameter 'node' of exported function has or is using private name 'NodePath'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,24): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,24): error TS4078: Parameter 'dfa' of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,30): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,30): error TS4060: Return type of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(24,20): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(28,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(37,20): error TS2339: Property 'add' does not exist on type 'Error'.
@@ -128,9 +132,11 @@ src/interpreter/finite-automaton/dfa/dfa.ts(197,15): error TS2551: Property '_or
 src/interpreter/finite-automaton/dfa/dfa.ts(201,17): error TS2551: Property '_originalTransitionTable' does not exist on type 'DFA'. Did you mean 'getOriginalTransitionTable'?
 src/interpreter/finite-automaton/nfa/builders.ts(10,10): error TS2614: Module '"../special-symbols"' has no exported member 'EPSILON'. Did you mean to use 'import EPSILON from "../special-symbols"' instead?
 src/interpreter/finite-automaton/nfa/builders.ts(22,27): error TS2304: Cannot find name 'State'.
+src/interpreter/finite-automaton/nfa/builders.ts(22,27): error TS4060: Return type of exported function has or is using private name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(23,18): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(24,19): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(41,15): error TS2304: Cannot find name 'State'.
+src/interpreter/finite-automaton/nfa/builders.ts(41,15): error TS4060: Return type of exported function has or is using private name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(53,50): error TS2304: Cannot find name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(54,9): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(55,10): error TS2339: Property 'out' does not exist on type 'Writer'.
@@ -139,6 +145,7 @@ src/interpreter/finite-automaton/nfa/builders.ts(57,43): error TS2339: Property 
 src/interpreter/finite-automaton/nfa/builders.ts(59,24): error TS2339: Property 'in' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(59,35): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(67,21): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(67,21): error TS4078: Parameter 'first' of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(80,49): error TS2304: Cannot find name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(81,18): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(82,19): error TS2304: Cannot find name 'State'.
@@ -149,8 +156,11 @@ src/interpreter/finite-automaton/nfa/builders.ts(89,10): error TS2339: Property 
 src/interpreter/finite-automaton/nfa/builders.ts(91,9): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(92,10): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(102,20): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(102,20): error TS4078: Parameter 'first' of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(102,40): error TS2304: Cannot find name 'State'.
+src/interpreter/finite-automaton/nfa/builders.ts(102,40): error TS4060: Return type of exported function has or is using private name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(117,41): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(117,41): error TS4060: Return type of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(118,18): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(119,19): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(124,43): error TS2339: Property 'in' does not exist on type 'Writer'.
@@ -158,14 +168,19 @@ src/interpreter/finite-automaton/nfa/builders.ts(127,12): error TS2339: Property
 src/interpreter/finite-automaton/nfa/builders.ts(128,12): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(129,44): error TS2339: Property 'in' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(138,33): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(138,33): error TS4060: Return type of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(139,12): error TS2339: Property 'in' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(139,47): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(140,12): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(140,48): error TS2339: Property 'in' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(148,28): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,28): error TS4078: Parameter 'fragment' of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(148,34): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,34): error TS4060: Return type of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(157,32): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(157,38): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,38): error TS4060: Return type of exported function has or is using private name 'DFA'.
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,10): error TS2614: Module '"./builders"' has no exported member 'alt'. Did you mean to use 'import alt from "./builders"' instead?
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,15): error TS2614: Module '"./builders"' has no exported member 'char'. Did you mean to use 'import char from "./builders"' instead?
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,21): error TS2614: Module '"./builders"' has no exported member 'or'. Did you mean to use 'import or from "./builders"' instead?
@@ -226,6 +241,7 @@ src/interpreter/finite-automaton/state.ts(41,41): error TS2339: Property 'add' d
 src/interpreter/finite-automaton/state.ts(49,41): error TS2551: Property '_transitions' does not exist on type 'State'. Did you mean 'getTransitions'?
 src/interpreter/finite-automaton/state.ts(52,7): error TS2740: Type 'Set<unknown>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/interpreter/finite-automaton/state.ts(53,12): error TS2551: Property '_transitions' does not exist on type 'State'. Did you mean 'getTransitions'?
+src/optimizer/index.ts(13,1): error TS4082: Default export of the module has or is using private name 'TransformResult'.
 src/optimizer/index.ts(46,20): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(59,10): error TS2339: Property 'from' does not exist on type 'NonSurrogateRange'.
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(59,16): error TS2339: Property 'to' does not exist on type 'NonSurrogateRange'.
@@ -885,6 +901,7 @@ src/transform/index.ts(62,46): error TS2339: Property '_ast' does not exist on t
 src/transform/index.ts(64,17): error TS2339: Property '_string' does not exist on type 'TransformResult'.
 src/transform/index.ts(109,20): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 src/transform/utils.ts(15,34): error TS2304: Cannot find name 'NodePath'.
+src/transform/utils.ts(15,34): error TS4078: Parameter 'node' of exported function has or is using private name 'NodePath'.
 src/transform/utils.ts(58,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/transform/utils.ts(59,18): error TS2339: Property 'kind' does not exist on type 'object'.
 src/transform/utils.ts(61,16): error TS2339: Property 'kind' does not exist on type 'object'.

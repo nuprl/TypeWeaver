@@ -423,9 +423,13 @@ src/tokenize.ts(130,20): error TS2339: Property 'safe' does not exist on type 's
 src/tokenize.ts(134,25): error TS2339: Property 'error' does not exist on type 'string | string[]'.
   Property 'error' does not exist on type 'string'.
 src/util/ensureObject.ts(1,44): error TS2304: Cannot find name 'ny'.
+src/util/ensureObject.ts(1,44): error TS4078: Parameter 'obj' of exported function has or is using private name 'ny'.
 src/util/ensureObject.ts(1,59): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+src/util/ensureObject.ts(1,59): error TS4078: Parameter 'props' of exported function has or is using private name 'tring'.
 src/util/getProp.ts(1,39): error TS2304: Cannot find name 'ny'.
+src/util/getProp.ts(1,39): error TS4078: Parameter 'obj' of exported function has or is using private name 'ny'.
 src/util/getProp.ts(1,54): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+src/util/getProp.ts(1,54): error TS4078: Parameter 'props' of exported function has or is using private name 'tring'.
 src/util/unesc.ts(10,23): error TS2339: Property 'toLowerCase' does not exist on type 'string | number'.
   Property 'toLowerCase' does not exist on type 'number'.
 src/util/unesc.ts(58,17): error TS2365: Operator '+=' cannot be applied to types 'number' and 'string | number'.

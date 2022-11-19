@@ -1,4 +1,5 @@
 index.ts(6,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
+index.ts(12,32): error TS4033: Property 'co' of exported interface has or is using private name 'co'.
 index.ts(45,27): error TS2339: Property 'call' does not exist on type 'any[]'.
 index.ts(50,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'reject' and 'reject' are incompatible.

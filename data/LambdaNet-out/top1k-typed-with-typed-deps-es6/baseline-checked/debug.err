@@ -6,11 +6,13 @@ src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exis
 src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
 src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
 src/browser.ts(146,36): error TS2304: Cannot find name 'Void'.
+src/browser.ts(146,36): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/browser.ts(159,7): error TS2339: Property 'splice' does not exist on type 'object'.
 src/browser.ts(167,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 src/browser.ts(171,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 src/browser.ts(178,7): error TS2339: Property 'splice' does not exist on type 'object'.
 src/browser.ts(197,36): error TS2304: Cannot find name 'Void'.
+src/browser.ts(197,36): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/browser.ts(230,2): error TS2322: Type 'string' is not assignable to type 'object'.
 src/browser.ts(248,3): error TS2322: Type 'Storage' is not assignable to type 'string'.
 src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => Void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.

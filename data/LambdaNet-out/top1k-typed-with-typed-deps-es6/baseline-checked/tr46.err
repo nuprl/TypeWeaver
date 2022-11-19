@@ -28,12 +28,14 @@ index.ts(207,51): error TS2345: Argument of type '{ processingOption: string; ch
   Type '{ processingOption: string; checkBidi: boolean; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
 index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'object'.
 index.ts(230,10): error TS2304: Cannot find name 'Void'.
+index.ts(230,10): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(242,23): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(248,16): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(257,14): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(262,16): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(268,14): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(280,10): error TS2304: Cannot find name 'Void'.
+index.ts(280,10): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(290,20): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(291,19): error TS2339: Property 'error' does not exist on type 'object'.
 scripts/generateMappingTable.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.

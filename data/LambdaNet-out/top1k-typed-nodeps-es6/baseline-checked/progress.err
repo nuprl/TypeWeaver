@@ -52,6 +52,7 @@ examples/toolong.ts(17,19): error TS2304: Cannot find name 'Void'.
 examples/toolong.ts(18,7): error TS2339: Property 'tick' does not exist on type 'object'.
 examples/toolong.ts(20,12): error TS2339: Property 'complete' does not exist on type 'object'.
 lib/node-progress.ts(45,55): error TS2304: Cannot find name 'Void'.
+lib/node-progress.ts(45,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/node-progress.ts(46,25): error TS2339: Property 'stream' does not exist on type 'object'.
 lib/node-progress.ts(51,13): error TS2339: Property 'total' does not exist on type 'object'.
 lib/node-progress.ts(55,36): error TS2339: Property 'total' does not exist on type 'object'.

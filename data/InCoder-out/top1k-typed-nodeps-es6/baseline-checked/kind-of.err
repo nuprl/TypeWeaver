@@ -1,7 +1,10 @@
 benchmark/code/lib-typeof.ts(20,5): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/regex-exec.ts(3,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/regex-exec.ts(3,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
 benchmark/code/regex-replace.ts(3,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/regex-replace.ts(3,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
 benchmark/code/slice-switch.ts(1,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/slice-switch.ts(1,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
 benchmark/code/switch.ts(46,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/switch.ts(47,10): error TS2678: Type '"[object Arguments]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/switch.ts(49,10): error TS2678: Type '"[object RegExp]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.

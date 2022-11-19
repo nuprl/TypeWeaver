@@ -31,12 +31,14 @@ polyfill-done.ts(3,30): error TS2339: Property 'done' does not exist on type 'Pr
 polyfill-done.ts(4,21): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
 polyfill-done.ts(5,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/core.ts(5,18): error TS2304: Cannot find name 'Void'.
+src/core.ts(5,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/core.ts(25,5): error TS2322: Type '{}' is not assignable to type 'number'.
 src/core.ts(26,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/core.ts(31,5): error TS2322: Type 'number' is not assignable to type 'any[]'.
 src/core.ts(35,47): error TS2304: Cannot find name 'Void'.
 src/core.ts(43,58): error TS2304: Cannot find name 'Void'.
 src/core.ts(54,31): error TS2304: Cannot find name 'Void'.
+src/core.ts(54,31): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/core.ts(76,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/core.ts(76,33): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'string'.
 src/core.ts(77,16): error TS2350: Only a void function can be called with the 'new' keyword.

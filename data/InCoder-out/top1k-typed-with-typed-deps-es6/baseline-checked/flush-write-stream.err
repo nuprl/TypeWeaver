@@ -1,8 +1,11 @@
 example.ts(3,10): error TS2554: Expected 3 arguments, but got 2.
 example.ts(13,37): error TS2304: Cannot find name 'Encoding'.
 index.ts(10,29): error TS2304: Cannot find name 'WriteOpts'.
+index.ts(10,29): error TS4078: Parameter 'opts' of exported function has or is using private name 'WriteOpts'.
 index.ts(10,48): error TS2304: Cannot find name 'WriteFunction'.
+index.ts(10,48): error TS4078: Parameter 'write' of exported function has or is using private name 'WriteFunction'.
 index.ts(10,71): error TS2304: Cannot find name 'FlushFunction'.
+index.ts(10,71): error TS4078: Parameter 'flush' of exported function has or is using private name 'FlushFunction'.
 index.ts(11,46): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(29,70): error TS2345: Argument of type 'Worker' is not assignable to parameter of type 'Function'.
   Type 'Worker' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.

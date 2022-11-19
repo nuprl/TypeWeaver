@@ -47,8 +47,10 @@ build/release.ts(69,55): error TS2339: Property 'dir' does not exist on type 'ob
 build/release.ts(78,8): error TS2339: Property 'makeArchives' does not exist on type 'HTMLElement'.
 build/release/cdn.ts(4,19): error TS2307: Cannot find module 'shelljs' or its corresponding type declarations.
 build/release/cdn.ts(28,48): error TS2304: Cannot find name 'Void'.
+build/release/cdn.ts(28,48): error TS4060: Return type of exported function has or is using private name 'Void'.
 build/release/cdn.ts(34,56): error TS2339: Property 'newVersion' does not exist on type 'object'.
 build/release/cdn.ts(54,68): error TS2304: Cannot find name 'Void'.
+build/release/cdn.ts(54,68): error TS4060: Return type of exported function has or is using private name 'Void'.
 build/release/cdn.ts(56,10): error TS2339: Property 'chdir' does not exist on type 'HTMLElement'.
 build/release/cdn.ts(56,29): error TS2339: Property 'repo' does not exist on type 'string'.
 build/release/cdn.ts(58,73): error TS2304: Cannot find name 'Void'.
@@ -210,6 +212,7 @@ build/tasks/dist.ts(65,11): error TS2339: Property 'log' does not exist on type 
 build/tasks/lib/rollup-plugin-file-overrides.ts(14,23): error TS2339: Property 'has' does not exist on type 'string'.
 build/tasks/lib/rollup-plugin-file-overrides.ts(17,26): error TS2339: Property 'get' does not exist on type 'string'.
 build/tasks/lib/spawn_test.ts(6,71): error TS2304: Cannot find name 'Void'.
+build/tasks/lib/spawn_test.ts(6,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 build/tasks/lib/spawn_test.ts(14,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 build/tasks/node_smoke_tests.ts(15,5): error TS2339: Property 'readdirSync' does not exist on type 'string'.
 build/tasks/node_smoke_tests.ts(17,7): error TS2339: Property 'statSync' does not exist on type 'string'.
@@ -679,6 +682,7 @@ src/core.ts(369,10): error TS2405: The left-hand side of a 'for...in' statement 
 src/core.ts(391,9): error TS2339: Property 'fn' does not exist on type 'Function'.
 src/core.ts(395,8): error TS2339: Property 'each' does not exist on type 'Function'.
 src/core/DOMEval.ts(10,62): error TS2304: Cannot find name 'Void'.
+src/core/DOMEval.ts(10,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/core/DOMEval.ts(11,2): error TS2322: Type 'string | Document' is not assignable to type 'string'.
   Type 'Document' is not assignable to type 'string'.
 src/core/DOMEval.ts(14,24): error TS2339: Property 'createElement' does not exist on type 'string'.
@@ -895,6 +899,7 @@ src/css/support.ts(47,18): error TS2345: Argument of type 'object' is not assign
 src/css/support.ts(48,18): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Node'.
 src/css/support.ts(50,3): error TS2740: Type 'CSSStyleDeclaration' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
 src/css/support.ts(50,38): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Element'.
+  Type '{}' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 src/css/support.ts(51,49): error TS2339: Property 'height' does not exist on type 'HTMLElement'.
 src/css/support.ts(52,23): error TS2339: Property 'borderTopWidth' does not exist on type 'HTMLElement'.
 src/css/support.ts(53,23): error TS2339: Property 'borderBottomWidth' does not exist on type 'HTMLElement'.
@@ -928,8 +933,10 @@ src/data.ts(103,15): error TS2339: Property 'nodeType' does not exist on type 's
 src/data.ts(113,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 src/data.ts(150,12): error TS2554: Expected 3 arguments, but got 2.
 src/data/Data.ts(6,18): error TS2304: Cannot find name 'Void'.
+src/data/Data.ts(6,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/data/Data.ts(7,24): error TS2339: Property 'expando' does not exist on type 'Function'.
 src/data/Data.ts(26,21): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+  Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/data/Data.ts(30,16): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/data/Data.ts(60,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 src/data/Data.ts(61,23): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
@@ -1513,7 +1520,7 @@ src/event/trigger.ts(15,8): error TS2339: Property 'extend' does not exist on ty
 src/event/trigger.ts(15,23): error TS2339: Property 'event' does not exist on type 'Function'.
 src/event/trigger.ts(21,56): error TS2339: Property 'type' does not exist on type 'object'.
 src/event/trigger.ts(22,66): error TS2339: Property 'namespace' does not exist on type 'object'.
-src/event/trigger.ts(24,9): error TS2740: Type '{}' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+src/event/trigger.ts(24,9): error TS2322: Type 'object' is not assignable to type 'Element'.
 src/event/trigger.ts(27,13): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/event/trigger.ts(27,36): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/event/trigger.ts(32,40): error TS2339: Property 'event' does not exist on type 'Function'.
@@ -1756,6 +1763,7 @@ src/manipulation/getAll.ts(20,54): error TS2345: Argument of type 'number' is no
 src/manipulation/getAll.ts(21,17): error TS2339: Property 'merge' does not exist on type 'Function'.
 src/manipulation/setGlobalEval.ts(4,52): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/manipulation/setGlobalEval.ts(4,63): error TS2304: Cannot find name 'Void'.
+src/manipulation/setGlobalEval.ts(4,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/manipulation/wrapMap.ts(14,9): error TS2339: Property 'tbody' does not exist on type 'object'.
 src/manipulation/wrapMap.ts(14,25): error TS2339: Property 'tfoot' does not exist on type 'object'.
 src/manipulation/wrapMap.ts(14,41): error TS2339: Property 'colgroup' does not exist on type 'object'.
@@ -1873,7 +1881,7 @@ src/selector.ts(149,40): error TS2304: Cannot find name 'Void'.
 src/selector.ts(155,3): error TS2740: Type 'Document' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, draggable, and 121 more.
 src/selector.ts(160,2): error TS2322: Type 'string | undefined[]' is not assignable to type 'string'.
   Type 'undefined[]' is not assignable to type 'string'.
-src/selector.ts(172,3): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/selector.ts(172,3): error TS2322: Type 'object' is not assignable to type 'HTMLElement'.
 src/selector.ts(185,29): error TS2339: Property 'getElementById' does not exist on type 'HTMLElement'.
 src/selector.ts(192,46): error TS2339: Property 'getElementById' does not exist on type 'HTMLElement'.
 src/selector.ts(193,15): error TS2339: Property 'contains' does not exist on type 'Function'.

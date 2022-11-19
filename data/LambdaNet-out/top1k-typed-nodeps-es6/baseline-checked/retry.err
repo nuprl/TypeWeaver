@@ -1,4 +1,4 @@
-example/dns.ts(2,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
+example/dns.ts(2,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
 example/dns.ts(4,63): error TS2304: Cannot find name 'Void'.
 example/dns.ts(14,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/dns.ts(15,26): error TS2345: Argument of type '(err: any[], addresses: number) => void' is not assignable to parameter of type '(err: ErrnoException, addresses: string[]) => void'.
@@ -7,7 +7,7 @@ example/dns.ts(15,26): error TS2345: Argument of type '(err: any[], addresses: n
 example/dns.ts(16,21): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
 example/dns.ts(20,20): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 example/dns.ts(20,43): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
-example/stop.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
+example/stop.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
 example/stop.ts(3,67): error TS2304: Cannot find name 'Void'.
 example/stop.ts(13,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/stop.ts(14,27): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLInputElement'.
@@ -36,6 +36,7 @@ lib/retry.ts(85,16): error TS2339: Property 'retry' does not exist on type 'HTML
 lib/retry.ts(89,29): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 lib/retry.ts(94,10): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(1,61): error TS2304: Cannot find name 'Void'.
+lib/retry_operation.ts(1,61): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/retry_operation.ts(10,43): error TS2339: Property 'maxRetryTime' does not exist on type 'object'.
 lib/retry_operation.ts(73,10): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(75,14): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.

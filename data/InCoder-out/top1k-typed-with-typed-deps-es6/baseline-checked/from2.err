@@ -1,6 +1,8 @@
 index.ts(9,13): error TS2554: Expected 2 arguments, but got 0.
 index.ts(25,31): error TS2304: Cannot find name 'Options'.
+index.ts(25,31): error TS4078: Parameter 'opts' of exported function has or is using private name 'Options'.
 index.ts(25,57): error TS2304: Cannot find name 'Read'.
+index.ts(25,57): error TS4078: Parameter 'read' of exported function has or is using private name 'Read'.
 index.ts(31,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(45,28): error TS2304: Cannot find name 'ClassOverride'.
 index.ts(46,42): error TS2350: Only a void function can be called with the 'new' keyword.

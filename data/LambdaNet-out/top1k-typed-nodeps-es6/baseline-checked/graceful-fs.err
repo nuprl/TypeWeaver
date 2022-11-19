@@ -136,6 +136,7 @@ legacy-streams.ts(78,5): error TS2684: The 'this' context of type 'typeof Stream
 legacy-streams.ts(113,23): error TS2339: Property 'open' does not exist on type 'Function'.
 polyfills.ts(6,5): error TS2322: Type 'string' is not assignable to type 'number'.
 polyfills.ts(29,30): error TS2304: Cannot find name 'Void'.
+polyfills.ts(29,30): error TS4060: Return type of exported function has or is using private name 'Void'.
 polyfills.ts(40,11): error TS2339: Property 'lutimes' does not exist on type 'string'.
 polyfills.ts(49,6): error TS2339: Property 'chown' does not exist on type 'string'.
 polyfills.ts(49,26): error TS2339: Property 'chown' does not exist on type 'string'.

@@ -10,6 +10,7 @@ bench/impls/baseline.ts(12,10): error TS2339: Property 'pipeDests' does not exis
 bench/impls/extend-minipass-current.ts(8,18): error TS2554: Expected 3 arguments, but got 2.
 bench/impls/extend-minipass.ts(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
 bench/impls/extend-through2.ts(3,32): error TS2304: Cannot find name 'PushThrough'.
+bench/impls/extend-through2.ts(3,32): error TS4078: Parameter 'opts' of exported function has or is using private name 'PushThrough'.
 bench/impls/extend-through2.ts(6,3): error TS2304: Cannot find name 's'.
 bench/impls/extend-through2.ts(8,5): error TS2304: Cannot find name 's'.
 bench/impls/extend-through2.ts(10,10): error TS2304: Cannot find name 's'.
@@ -51,6 +52,7 @@ bench/impls/push-through.ts(89,36): error TS2367: This condition will always ret
 bench/impls/push-through.ts(91,18): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(95,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
 bench/impls/through2.ts(3,32): error TS2304: Cannot find name 'PushThrough'.
+bench/impls/through2.ts(3,32): error TS4078: Parameter 'opts' of exported function has or is using private name 'PushThrough'.
 bench/impls/through2.ts(6,3): error TS2304: Cannot find name 's'.
 bench/impls/through2.ts(8,5): error TS2304: Cannot find name 's'.
 bench/impls/through2.ts(10,10): error TS2304: Cannot find name 's'.

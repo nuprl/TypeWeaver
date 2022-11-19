@@ -1,8 +1,12 @@
 benchmark/code/add.ts(3,22): error TS2304: Cannot find name 'y'.
+benchmark/code/add.ts(3,22): error TS4078: Parameter 'str' of exported function has or is using private name 'y'.
 benchmark/code/add.ts(3,31): error TS2304: Cannot find name 'mber'.
+benchmark/code/add.ts(3,31): error TS4078: Parameter 'num' of exported function has or is using private name 'mber'.
 benchmark/code/new-array-for.ts(7,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 benchmark/code/repeat-string-1.5.4.ts(41,22): error TS2304: Cannot find name 'y'.
+benchmark/code/repeat-string-1.5.4.ts(41,22): error TS4078: Parameter 'str' of exported function has or is using private name 'y'.
 benchmark/code/repeat-string-1.5.4.ts(41,31): error TS2304: Cannot find name 'mber'.
+benchmark/code/repeat-string-1.5.4.ts(41,31): error TS4078: Parameter 'num' of exported function has or is using private name 'mber'.
 benchmark/code/repeating.ts(3,23): error TS2307: Cannot find module 'repeating' or its corresponding type declarations.
 benchmark/helper.ts(5,20): error TS2307: Cannot find module 'repeat-string' or its corresponding type declarations.
 benchmark/helper.ts(6,22): error TS2307: Cannot find module 'isobject' or its corresponding type declarations.
@@ -21,5 +25,7 @@ benchmark/index.ts(7,19): error TS2307: Cannot find module 'benchmarked' or its 
 benchmark/index.ts(18,39): error TS2339: Property 'key' does not exist on type 'number'.
 benchmark/index.ts(20,20): error TS2339: Property 'run' does not exist on type 'number'.
 index.ts(41,22): error TS2304: Cannot find name 'y'.
+index.ts(41,22): error TS4078: Parameter 'str' of exported function has or is using private name 'y'.
 index.ts(41,31): error TS2304: Cannot find name 'mber'.
+index.ts(41,31): error TS4078: Parameter 'num' of exported function has or is using private name 'mber'.
 

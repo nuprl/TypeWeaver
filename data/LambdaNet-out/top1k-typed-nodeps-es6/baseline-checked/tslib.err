@@ -1,6 +1,7 @@
 modules/index.ts(1,19): error TS2306: File 'tslib.ts' is not a module.
 tslib.es6.ts(19,83): error TS2339: Property '__proto__' does not exist on type 'object'.
 tslib.es6.ts(24,50): error TS2304: Cannot find name 'Void'.
+tslib.es6.ts(24,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 tslib.es6.ts(28,20): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(29,7): error TS2339: Property 'prototype' does not exist on type 'object'.
 tslib.es6.ts(29,69): error TS2339: Property 'prototype' does not exist on type 'object'.
@@ -64,6 +65,7 @@ tslib.es6.ts(111,56): error TS2339: Property 'writable' does not exist on type '
 tslib.es6.ts(111,73): error TS2339: Property 'configurable' does not exist on type 'object'.
 tslib.es6.ts(116,27): error TS2322: Type 'number' is not assignable to type 'string'.
 tslib.es6.ts(120,52): error TS2304: Cannot find name 'Void'.
+tslib.es6.ts(120,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 tslib.es6.ts(125,9): error TS2322: Type 'typeof Symbol.iterator' is not assignable to type 'boolean'.
 tslib.es6.ts(125,92): error TS2538: Type 'true' cannot be used as an index type.
 tslib.es6.ts(138,13): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.

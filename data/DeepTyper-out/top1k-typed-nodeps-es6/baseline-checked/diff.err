@@ -4,7 +4,9 @@ examples/node_example.ts(2,18): error TS2307: Cannot find module '../' or its co
 rollup.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup.config.ts(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/convert/dmp.ts(2,46): error TS2304: Cannot find name 'Change'.
+src/convert/dmp.ts(2,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
 src/convert/xml.ts(1,46): error TS2304: Cannot find name 'Change'.
+src/convert/xml.ts(1,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
 src/convert/xml.ts(19,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/diff/base.ts(5,33): error TS2339: Property 'callback' does not exist on type '{}'.
 src/diff/base.ts(12,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
@@ -21,7 +23,9 @@ src/diff/base.ts(230,3): error TS2322: Type 'any[]' is not assignable to type 'n
 src/diff/base.ts(234,25): error TS2339: Property 'newPos' does not exist on type 'string'.
 src/diff/base.ts(234,50): error TS2339: Property 'components' does not exist on type 'string'.
 src/diff/character.ts(3,29): error TS2304: Cannot find name 'Column'.
+src/diff/character.ts(3,29): error TS4025: Exported variable 'characterDiff' has or is using private name 'Column'.
 src/diff/character.ts(4,68): error TS2304: Cannot find name 'Options'.
+src/diff/character.ts(4,68): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 src/diff/character.ts(4,108): error TS2339: Property 'diff' does not exist on type 'Column[]'.
 src/diff/css.ts(4,9): error TS2339: Property 'tokenize' does not exist on type 'readonly string[]'.
 src/diff/css.ts(8,102): error TS2339: Property 'diff' does not exist on type 'readonly string[]'.
@@ -50,8 +54,10 @@ src/diff/sentence.ts(9,113): error TS2339: Property 'diff' does not exist on typ
 src/diff/word.ts(27,10): error TS2339: Property 'equals' does not exist on type 'RegExp'.
 src/diff/word.ts(34,10): error TS2339: Property 'tokenize' does not exist on type 'RegExp'.
 src/diff/word.ts(53,68): error TS2304: Cannot find name 'Options'.
+src/diff/word.ts(53,68): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 src/diff/word.ts(55,19): error TS2339: Property 'diff' does not exist on type 'RegExp'.
 src/diff/word.ts(58,77): error TS2304: Cannot find name 'Options'.
+src/diff/word.ts(58,77): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 src/diff/word.ts(59,19): error TS2339: Property 'diff' does not exist on type 'RegExp'.
 src/patch/apply.ts(22,29): error TS2339: Property 'compareLine' does not exist on type '{}'.
 src/patch/apply.ts(24,28): error TS2339: Property 'fuzzFactor' does not exist on type '{}'.
@@ -135,4 +141,5 @@ src/util/distance-iterator.ts(34,11): error TS2365: Operator '<=' cannot be appl
 src/util/distance-iterator.ts(34,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/distance-iterator.ts(35,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 tasks/version.ts(3,33): error TS2304: Cannot find name 'IGrunt'.
+tasks/version.ts(3,33): error TS4060: Return type of exported function has or is using private name 'IGrunt'.
 

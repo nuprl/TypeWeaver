@@ -1,4 +1,4 @@
-lib/AliasFieldPlugin.ts(8,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/AliasFieldPlugin.ts(8,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
 lib/AliasFieldPlugin.ts(22,8): error TS2339: Property 'source' does not exist on type 'AliasFieldPlugin'.
 lib/AliasFieldPlugin.ts(23,8): error TS2339: Property 'field' does not exist on type 'AliasFieldPlugin'.
 lib/AliasFieldPlugin.ts(24,8): error TS2339: Property 'target' does not exist on type 'AliasFieldPlugin'.
@@ -121,7 +121,7 @@ lib/CachedInputFileSystem.ts(266,33): error TS2339: Property '_data' does not ex
 lib/CachedInputFileSystem.ts(269,12): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(275,13): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(283,9): error TS2554: Expected 1 arguments, but got 0.
-lib/CachedInputFileSystem.ts(287,10): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
+lib/CachedInputFileSystem.ts(287,10): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/CachedInputFileSystem.ts(289,9): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/CachedInputFileSystem.ts(296,12): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(297,30): error TS2339: Property '_levels' does not exist on type 'CacheBackend'.
@@ -237,7 +237,7 @@ lib/ConditionalPlugin.ts(34,17): error TS2339: Property 'message' does not exist
 lib/ConditionalPlugin.ts(34,26): error TS2339: Property 'allowAlternatives' does not exist on type 'ConditionalPlugin'.
 lib/ConditionalPlugin.ts(37,18): error TS2339: Property 'source' does not exist on type 'ConditionalPlugin'.
 lib/ConditionalPlugin.ts(49,31): error TS2304: Cannot find name 'CachedInputFileSystem'.
-lib/DescriptionFilePlugin.ts(8,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/DescriptionFilePlugin.ts(8,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
 lib/DescriptionFilePlugin.ts(21,8): error TS2339: Property 'source' does not exist on type 'DescriptionFilePlugin'.
 lib/DescriptionFilePlugin.ts(22,8): error TS2339: Property 'filenames' does not exist on type 'DescriptionFilePlugin'.
 lib/DescriptionFilePlugin.ts(23,8): error TS2339: Property 'pathIsFile' does not exist on type 'DescriptionFilePlugin'.
@@ -301,8 +301,8 @@ lib/DirectoryExistsPlugin.ts(46,27): error TS2339: Property 'log' does not exist
 lib/DirectoryExistsPlugin.ts(47,24): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DirectoryExistsPlugin.ts(50,26): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/DirectoryExistsPlugin.ts(51,23): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
-lib/ExportsFieldPlugin.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
-lib/ExportsFieldPlugin.ts(12,33): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
+lib/ExportsFieldPlugin.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/ExportsFieldPlugin.ts(12,33): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
 lib/ExportsFieldPlugin.ts(13,10): error TS2459: Module '"./util/path"' declares 'checkImportsExportsFieldTarget' locally, but it is not exported.
 lib/ExportsFieldPlugin.ts(28,8): error TS2339: Property 'source' does not exist on type 'ExportsFieldPlugin'.
 lib/ExportsFieldPlugin.ts(29,8): error TS2339: Property 'target' does not exist on type 'ExportsFieldPlugin'.
@@ -363,8 +363,8 @@ lib/FileExistsPlugin.ts(43,26): error TS2339: Property 'log' does not exist on t
 lib/FileExistsPlugin.ts(43,46): error TS2339: Property 'log' does not exist on type 'object'.
 lib/FileExistsPlugin.ts(46,25): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/FileExistsPlugin.ts(47,22): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
-lib/ImportsFieldPlugin.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
-lib/ImportsFieldPlugin.ts(12,33): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
+lib/ImportsFieldPlugin.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/ImportsFieldPlugin.ts(12,33): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
 lib/ImportsFieldPlugin.ts(13,10): error TS2459: Module '"./util/path"' declares 'checkImportsExportsFieldTarget' locally, but it is not exported.
 lib/ImportsFieldPlugin.ts(20,7): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/ImportsFieldPlugin.ts(37,8): error TS2339: Property 'source' does not exist on type 'ImportsFieldPlugin'.
@@ -437,7 +437,7 @@ lib/LogInfoPlugin.ts(37,17): error TS2339: Property 'descriptionFilePath' does n
 lib/LogInfoPlugin.ts(39,55): error TS2339: Property 'descriptionFilePath' does not exist on type 'object'.
 lib/LogInfoPlugin.ts(41,17): error TS2339: Property 'relativePath' does not exist on type 'object'.
 lib/LogInfoPlugin.ts(45,16): error TS2339: Property 'relativePath' does not exist on type 'object'.
-lib/MainFieldPlugin.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/MainFieldPlugin.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
 lib/MainFieldPlugin.ts(15,7): error TS2322: Type 'typeof alreadyTriedMainField' is not assignable to type 'string'.
 lib/MainFieldPlugin.ts(24,8): error TS2339: Property 'source' does not exist on type 'MainFieldPlugin'.
 lib/MainFieldPlugin.ts(25,8): error TS2339: Property 'options' does not exist on type 'MainFieldPlugin'.
@@ -530,7 +530,7 @@ lib/PnpPlugin.ts(78,41): error TS2339: Property 'fileDependencies' does not exis
 lib/PnpPlugin.ts(79,21): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/PnpPlugin.ts(87,30): error TS2339: Property 'fullySpecified' does not exist on type 'object'.
 lib/PnpPlugin.ts(94,30): error TS2304: Cannot find name 'ResultPlugin'.
-lib/Resolver.ts(10,33): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
+lib/Resolver.ts(10,33): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/util/identifier.ts' is not a module.
 lib/Resolver.ts(11,10): error TS2459: Module '"./util/path"' declares 'normalize' locally, but it is not exported.
 lib/Resolver.ts(11,21): error TS2459: Module '"./util/path"' declares 'cachedJoin' locally, but it is not exported.
 lib/Resolver.ts(11,41): error TS2459: Module '"./util/path"' declares 'getType' locally, but it is not exported.
@@ -700,7 +700,7 @@ lib/RootsPlugin.ts(35,32): error TS2339: Property 'request' does not exist on ty
 lib/RootsPlugin.ts(37,14): error TS2339: Property 'startsWith' does not exist on type 'any[]'.
 lib/RootsPlugin.ts(40,11): error TS2339: Property 'roots' does not exist on type 'RootsPlugin'.
 lib/RootsPlugin.ts(46,30): error TS2339: Property 'relativePath' does not exist on type 'object'.
-lib/SelfReferencePlugin.ts(8,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
+lib/SelfReferencePlugin.ts(8,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
 lib/SelfReferencePlugin.ts(22,8): error TS2339: Property 'source' does not exist on type 'SelfReferencePlugin'.
 lib/SelfReferencePlugin.ts(23,8): error TS2339: Property 'target' does not exist on type 'SelfReferencePlugin'.
 lib/SelfReferencePlugin.ts(24,8): error TS2339: Property 'fieldName' does not exist on type 'SelfReferencePlugin'.
@@ -727,6 +727,7 @@ lib/SymlinkPlugin.ts(46,26): error TS2339: Property 'fileDependencies' does not 
 lib/SymlinkPlugin.ts(47,23): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/SymlinkPlugin.ts(48,10): error TS2339: Property 'readlink' does not exist on type 'Function'.
 lib/SyncAsyncFileSystemDecorator.ts(15,52): error TS2304: Cannot find name 'Void'.
+lib/SyncAsyncFileSystemDecorator.ts(15,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/SyncAsyncFileSystemDecorator.ts(20,33): error TS2339: Property 'lstatSync' does not exist on type 'string'.
 lib/SyncAsyncFileSystemDecorator.ts(23,16): error TS2304: Cannot find name 'ResultPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(27,12): error TS2349: This expression is not callable.
@@ -811,9 +812,11 @@ lib/createInnerContext.ts(32,32): error TS2339: Property 'contextDependencies' d
 lib/createInnerContext.ts(33,32): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(34,18): error TS2339: Property 'stack' does not exist on type 'object'.
 lib/forEachBail.ts(8,92): error TS2304: Cannot find name 'Void'.
+lib/forEachBail.ts(8,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/forEachBail.ts(14,30): error TS2304: Cannot find name 'Resolver'.
 lib/forEachBail.ts(14,48): error TS2304: Cannot find name 'CachedInputFileSystem'.
 lib/getInnerRequest.ts(8,51): error TS2304: Cannot find name 'Resolver'.
+lib/getInnerRequest.ts(8,51): error TS4078: Parameter 'resolver' of exported function has or is using private name 'Resolver'.
 lib/getInnerRequest.ts(10,18): error TS2339: Property '__innerRequest' does not exist on type 'Error'.
 lib/getInnerRequest.ts(11,11): error TS2339: Property '__innerRequest_request' does not exist on type 'Error'.
 lib/getInnerRequest.ts(11,46): error TS2339: Property 'request' does not exist on type 'Error'.
@@ -832,9 +835,10 @@ lib/getInnerRequest.ts(25,48): error TS2339: Property 'relativePath' does not ex
 lib/getInnerRequest.ts(26,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/getInnerRequest.ts(26,18): error TS2339: Property '__innerRequest' does not exist on type 'Error'.
 lib/getPaths.ts(30,24): error TS2304: Cannot find name 'AppendPlugin'.
+lib/getPaths.ts(30,24): error TS4025: Exported variable 'basename' has or is using private name 'AppendPlugin'.
 lib/getPaths.ts(30,72): error TS2304: Cannot find name 'Resolver'.
 lib/getPaths.ts(35,11): error TS2304: Cannot find name 'Resolver'.
-lib/index.ts(10,8): error TS1192: Module '"lib/ResolverFactory"' has no default export.
+lib/index.ts(10,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/ResolverFactory"' has no default export.
 lib/index.ts(20,7): error TS2740: Type 'CachedInputFileSystem' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/index.ts(26,22): error TS2304: Cannot find name 'Resolver'.
 lib/index.ts(31,111): error TS2304: Cannot find name 'Void'.
@@ -974,7 +978,7 @@ lib/util/path.ts(166,35): error TS2339: Property 'Relative' does not exist on ty
 lib/util/path.ts(173,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/util/path.ts(186,22): error TS2339: Property 'get' does not exist on type 'object'.
 lib/util/path.ts(190,8): error TS2339: Property 'set' does not exist on type 'object'.
-tooling/format-file-header.ts(8,7): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
+tooling/format-file-header.ts(8,7): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 tooling/format-file-header.ts(10,11): error TS2304: Cannot find name 'Resolver'.
 tooling/format-file-header.ts(17,12): error TS2339: Property 'add' does not exist on type 'Error'.
 tooling/format-file-header.ts(25,9): error TS2339: Property 'key' does not exist on type 'object'.

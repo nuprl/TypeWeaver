@@ -76,6 +76,7 @@ lib/dashdash.ts(155,9): error TS2740: Type 'Date' is missing the following prope
 lib/dashdash.ts(157,68): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(160,9): error TS2322: Type 'Date' is not assignable to type 'HTMLDivElement'.
 lib/dashdash.ts(259,39): error TS2304: Cannot find name 'Void'.
+lib/dashdash.ts(259,39): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/dashdash.ts(261,33): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(262,32): error TS2339: Property 'interspersed' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(267,16): error TS2339: Property 'interspersed' does not exist on type 'HTMLElement'.
@@ -279,6 +280,7 @@ lib/dashdash.ts(995,5): error TS2322: Type 'any[]' is not assignable to type 'bo
 lib/dashdash.ts(1001,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/dashdash.ts(1001,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 lib/dashdash.ts(1011,34): error TS2304: Cannot find name 'Void'.
+lib/dashdash.ts(1011,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/dashdash.ts(1013,42): error TS2339: Property 'argv' does not exist on type 'object'.
 lib/dashdash.ts(1014,35): error TS2339: Property 'env' does not exist on type 'object'.
 lib/dashdash.ts(1017,30): error TS2339: Property 'argv' does not exist on type 'object'.
@@ -290,6 +292,7 @@ lib/dashdash.ts(1022,42): error TS2345: Argument of type 'object' is not assigna
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/dashdash.ts(1023,19): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(1046,45): error TS2304: Cannot find name 'Void'.
+lib/dashdash.ts(1046,45): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/dashdash.ts(1048,30): error TS2339: Property 'name' does not exist on type 'object'.
 lib/dashdash.ts(1049,28): error TS2339: Property 'takesArg' does not exist on type 'object'.
 lib/dashdash.ts(1050,20): error TS2339: Property 'takesArg' does not exist on type 'object'.

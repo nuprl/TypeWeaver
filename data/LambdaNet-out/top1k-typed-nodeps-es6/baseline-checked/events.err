@@ -12,8 +12,11 @@ events.ts(37,15): error TS2769: No overload matches this call.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
 events.ts(45,47): error TS2304: Cannot find name 'Void'.
+events.ts(45,47): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(53,26): error TS2304: Cannot find name 'Void'.
+events.ts(53,26): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(70,43): error TS2304: Cannot find name 'Void'.
+events.ts(70,43): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(111,12): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
 events.ts(112,25): error TS2339: Property 'defaultMaxListeners' does not exist on type 'typeof EventEmitter'.
 events.ts(113,15): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
@@ -56,6 +59,7 @@ events.ts(289,52): error TS2339: Property 'listener' does not exist on type 'any
 events.ts(314,20): error TS2339: Property 'removeListener' does not exist on type 'number'.
 events.ts(332,18): error TS2339: Property 'removeListener' does not exist on type 'string'.
 events.ts(374,29): error TS2304: Cannot find name 'NextFunction'.
+events.ts(374,29): error TS4078: Parameter 'target' of exported function has or is using private name 'NextFunction'.
 events.ts(385,33): error TS2339: Property 'listener' does not exist on type 'never'.
 events.ts(387,3): error TS2322: Type 'object' is not assignable to type 'any[]'.
 events.ts(388,58): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -65,6 +69,7 @@ events.ts(401,20): error TS2339: Property 'listenerCount' does not exist on type
 events.ts(428,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 events.ts(430,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 events.ts(435,49): error TS2304: Cannot find name 'Void'.
+events.ts(435,49): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(451,42): error TS2304: Cannot find name 'Void'.
 events.ts(452,15): error TS2339: Property 'removeListener' does not exist on type 'object'.
 events.ts(456,26): error TS2304: Cannot find name 'Void'.
@@ -73,10 +78,12 @@ events.ts(458,17): error TS2339: Property 'removeListener' does not exist on typ
 events.ts(463,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 events.ts(465,63): error TS2322: Type 'boolean' is not assignable to type '() => Function & FnProps<any>'.
 events.ts(470,92): error TS2304: Cannot find name 'Void'.
+events.ts(470,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(471,22): error TS2339: Property 'on' does not exist on type 'object'.
 events.ts(472,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 events.ts(476,113): error TS2304: Cannot find name 'Void'.
+events.ts(476,113): error TS4060: Return type of exported function has or is using private name 'Void'.
 events.ts(477,22): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 events.ts(478,15): error TS2339: Property 'once' does not exist on type 'object'.
 events.ts(479,15): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?

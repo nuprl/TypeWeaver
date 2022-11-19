@@ -1,5 +1,7 @@
 index.ts(14,26): error TS2304: Cannot find name 'WriteFunction'.
+index.ts(14,26): error TS4078: Parameter 'write' of exported function has or is using private name 'WriteFunction'.
 index.ts(14,47): error TS2304: Cannot find name 'EndFunction'.
+index.ts(14,47): error TS4078: Parameter 'end' of exported function has or is using private name 'EndFunction'.
 index.ts(20,10): error TS2339: Property 'readable' does not exist on type 'internal'.
 index.ts(20,28): error TS2339: Property 'writable' does not exist on type 'internal'.
 index.ts(21,10): error TS2339: Property 'paused' does not exist on type 'internal'.

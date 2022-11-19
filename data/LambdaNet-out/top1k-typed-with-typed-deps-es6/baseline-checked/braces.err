@@ -22,7 +22,7 @@ bench/index.ts(80,34): error TS2339: Property 'compile' does not exist on type '
 bench/index.ts(85,34): error TS2339: Property 'expand' does not exist on type 'Function'.
 bench/index.ts(90,34): error TS2339: Property 'compile' does not exist on type 'Function'.
 examples/expand.ts(2,20): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
-examples/expand.ts(3,19): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/examples/parse.ts' is not a module.
+examples/expand.ts(3,19): error TS2306: File 'examples/parse.ts' is not a module.
 examples/expand.ts(22,32): error TS2304: Cannot find name 'expand'.
 examples/option-transform.ts(4,30): error TS2339: Property 'expand' does not exist on type 'Function'.
 examples/option-transform.ts(13,32): error TS2339: Property 'expand' does not exist on type 'Function'.
@@ -46,7 +46,7 @@ index.ts(157,7): error TS2367: This condition will always return 'false' since t
 index.ts(161,17): error TS2339: Property 'expand' does not exist on type 'object'.
 index.ts(162,14): error TS2339: Property 'compile' does not exist on type 'Function'.
 index.ts(163,14): error TS2339: Property 'expand' does not exist on type 'Function'.
-lib/compile.ts(4,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/compile.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
 lib/compile.ts(7,39): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/compile.ts(9,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
 lib/compile.ts(9,36): error TS2339: Property 'invalid' does not exist on type 'object'.
@@ -73,7 +73,7 @@ lib/compile.ts(39,11): error TS2322: Type 'any[]' is not assignable to type 'str
 lib/compile.ts(39,32): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/compile.ts(46,14): error TS2339: Property 'nodes' does not exist on type 'object'.
 lib/compile.ts(47,30): error TS2339: Property 'nodes' does not exist on type 'object'.
-lib/expand.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/expand.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
 lib/expand.ts(7,27): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/expand.ts(7,46): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/expand.ts(7,65): error TS2322: Type 'boolean' is not assignable to type 'number'.
@@ -199,7 +199,7 @@ lib/parse.ts(317,16): error TS2339: Property 'invalid' does not exist on type 'o
 lib/parse.ts(323,34): error TS2339: Property 'nodes' does not exist on type 'object'.
 lib/parse.ts(325,14): error TS2339: Property 'nodes' does not exist on type 'object'.
 lib/parse.ts(325,46): error TS2339: Property 'nodes' does not exist on type 'string'.
-lib/stringify.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/stringify.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
 lib/stringify.ts(6,44): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/stringify.ts(7,41): error TS2339: Property 'escapeInvalid' does not exist on type 'object'.
 lib/stringify.ts(8,37): error TS2339: Property 'invalid' does not exist on type 'object'.

@@ -1,0 +1,27 @@
+declare function isValidName(name: string): boolean;
+declare function isValidValue(name: string, value: string): boolean;
+declare function isAlias(name: string): boolean;
+declare function isGeneralCategoryValue(value: string): boolean;
+declare function isScriptCategoryValue(value: string): boolean;
+declare function isBinaryPropertyName(name: string): boolean;
+declare function getCanonicalName(name: string): any[];
+declare function getCanonicalValue(value: string): any[];
+declare const _default: {
+    isAlias: typeof isAlias;
+    isValidName: typeof isValidName;
+    isValidValue: typeof isValidValue;
+    isGeneralCategoryValue: typeof isGeneralCategoryValue;
+    isScriptCategoryValue: typeof isScriptCategoryValue;
+    isBinaryPropertyName: typeof isBinaryPropertyName;
+    getCanonicalName: typeof getCanonicalName;
+    getCanonicalValue: typeof getCanonicalValue;
+    NON_BINARY_PROP_NAMES_TO_ALIASES: object;
+    NON_BINARY_ALIASES_TO_PROP_NAMES: object;
+    BINARY_PROP_NAMES_TO_ALIASES: object;
+    BINARY_ALIASES_TO_PROP_NAMES: object;
+    GENERAL_CATEGORY_VALUE_TO_ALIASES: object;
+    GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES: object;
+    SCRIPT_VALUE_TO_ALIASES: object;
+    SCRIPT_VALUE_ALIASES_TO_VALUE: Function;
+};
+export default _default;

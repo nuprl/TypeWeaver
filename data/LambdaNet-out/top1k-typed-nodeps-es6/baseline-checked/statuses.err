@@ -39,6 +39,7 @@ scripts/fetch-node.ts(3,21): error TS2307: Cannot find module 'raw-body' or its 
 scripts/fetch-node.ts(11,18): error TS2322: Type 'object' is not assignable to type 'OutgoingHttpHeaders'.
 scripts/fetch-node.ts(11,75): error TS2304: Cannot find name 'Void'.
 scripts/lib/write.ts(5,60): error TS2304: Cannot find name 'Void'.
+scripts/lib/write.ts(5,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/lib/write.ts(11,16): error TS2345: Argument of type '(key: string, i: string, arr: Function) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
   Types of parameters 'i' and 'index' are incompatible.
     Type 'number' is not assignable to type 'string'.

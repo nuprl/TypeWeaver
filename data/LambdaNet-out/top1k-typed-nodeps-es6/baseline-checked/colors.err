@@ -1,4 +1,4 @@
-examples/normal-usage.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
+examples/normal-usage.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
 examples/normal-usage.ts(3,38): error TS2339: Property 'yellow' does not exist on type '"First some yellow text"'.
 examples/normal-usage.ts(5,35): error TS2339: Property 'yellow' does not exist on type '"Underline that text"'.
 examples/normal-usage.ts(7,36): error TS2339: Property 'red' does not exist on type '"Make it bold and red"'.
@@ -82,6 +82,7 @@ lib/colors.ts(205,12): error TS2538: Type 'object' cannot be used as an index ty
 lib/colors.ts(206,31): error TS2339: Property 'maps' does not exist on type 'Function'.
 lib/colors.ts(208,6): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/custom/american.ts(1,42): error TS2304: Cannot find name 'Void'.
+lib/custom/american.ts(1,42): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
@@ -105,12 +106,12 @@ lib/custom/zalgo.ts(86,18): error TS2339: Property 'down' does not exist on type
 lib/custom/zalgo.ts(89,18): error TS2339: Property 'up' does not exist on type 'object'.
 lib/custom/zalgo.ts(90,18): error TS2339: Property 'mid' does not exist on type 'object'.
 lib/custom/zalgo.ts(91,18): error TS2339: Property 'down' does not exist on type 'object'.
-lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
 lib/extendStringPrototype.ts(53,39): error TS2304: Cannot find name 'Void'.
 lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist on type '"warn: "'.
 lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
-lib/index.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/index.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/index.ts(23,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
 lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type 'object'.
 lib/maps/america.ts(6,29): error TS2339: Property 'white' does not exist on type 'object'.
@@ -149,5 +150,5 @@ lib/system/supports-colors.ts(143,37): error TS2345: Argument of type 'string' i
 lib/system/supports-colors.ts(144,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/system/supports-colors.ts(149,27): error TS2345: Argument of type 'WriteStream & { fd: 1; }' is not assignable to parameter of type 'string'.
 lib/system/supports-colors.ts(150,27): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'string'.
-safe.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+safe.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 

@@ -1,5 +1,5 @@
 benchmark/benchmark.ts(1,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
-benchmark/benchmark.ts(2,23): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/sprintf-js/src/sprintf.ts' is not a module.
+benchmark/benchmark.ts(2,23): error TS2306: File 'src/sprintf.ts' is not a module.
 benchmark/benchmark.ts(6,6): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/benchmark.ts(7,9): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
@@ -13,7 +13,7 @@ benchmark/benchmark.ts(19,9): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 dist/angular-sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 dist/angular-sprintf.min.ts(2,26): error TS2304: Cannot find name 'angular'.
-dist/angular-sprintf.min.ts(2,108): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
+dist/angular-sprintf.min.ts(2,108): error TS2304: Cannot find name 'sprintf'.
 dist/angular-sprintf.min.ts(2,283): error TS2304: Cannot find name 'vsprintf'.
 dist/sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 dist/sprintf.min.ts(2,746): error TS2339: Property 'keys' does not exist on type 'object'.
@@ -138,7 +138,7 @@ gulpfile.ts(10,19): error TS2307: Cannot find module 'gulp-mocha' or its corresp
 gulpfile.ts(11,23): error TS2307: Cannot find module 'gulp-benchmark' or its corresponding type declarations.
 src/angular-sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
-src/angular-sprintf.ts(10,24): error TS2304: Cannot find name 'sprintf'.
+src/angular-sprintf.ts(10,24): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
 src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
 src/sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 src/sprintf.ts(26,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.

@@ -606,6 +606,7 @@ lib/eventsource-polyfill.ts(6,3): error TS2528: A module cannot have multiple de
 lib/eventsource-polyfill.ts(8,3): error TS1258: A default export must be at the top level of a file or module declaration.
 lib/eventsource-polyfill.ts(8,18): error TS2528: A module cannot have multiple default exports.
 lib/eventsource.ts(35,58): error TS2304: Cannot find name 'EventSourceInitDict'.
+lib/eventsource.ts(35,58): error TS4078: Parameter 'eventSourceInitDict' of exported function has or is using private name 'EventSourceInitDict'.
 lib/eventsource.ts(36,32): error TS2339: Property 'CONNECTING' does not exist on type '(url: String, eventSourceInitDict: EventSourceInitDict) => void'.
 lib/eventsource.ts(56,36): error TS2339: Property 'CLOSED' does not exist on type '(url: String, eventSourceInitDict: EventSourceInitDict) => void'.
 lib/eventsource.ts(57,30): error TS2339: Property 'CONNECTING' does not exist on type '(url: String, eventSourceInitDict: EventSourceInitDict) => void'.

@@ -4,6 +4,7 @@ bench/impls/baseline.ts(12,10): error TS2339: Property 'pipeDests' does not exis
 bench/impls/extend-minipass-current.ts(8,18): error TS2554: Expected 3 arguments, but got 2.
 bench/impls/extend-minipass.ts(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
 bench/impls/extend-through2.ts(3,32): error TS2304: Cannot find name 'Options'.
+bench/impls/extend-through2.ts(3,32): error TS4078: Parameter 'opts' of exported function has or is using private name 'Options'.
 bench/impls/extend-through2.ts(5,25): error TS2345: Argument of type '(data: Buffer, enc: Buffer, done: Function) => void' is not assignable to parameter of type 'TransformFunction'.
   Types of parameters 'enc' and 'enc' are incompatible.
     Type 'string' is not assignable to type 'Buffer'.

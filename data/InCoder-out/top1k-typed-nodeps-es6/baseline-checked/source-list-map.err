@@ -20,7 +20,7 @@ lib/MappingsContext.ts(23,8): error TS2339: Property 'sourcesIndices' does not e
 lib/MappingsContext.ts(24,8): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(26,9): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(34,26): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
-lib/SingleLineNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SingleLineNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SingleLineNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
@@ -90,7 +90,7 @@ lib/SourceListMap.ts(97,50): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(100,25): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(110,37): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
-lib/SourceNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SourceNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SourceNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SourceNode'.
@@ -138,8 +138,9 @@ lib/base64-vlq.ts(54,8): error TS2339: Property 'encode' does not exist on type 
 lib/base64-vlq.ts(64,8): error TS2339: Property 'decode' does not exist on type '{}'.
 lib/base64-vlq.ts(139,23): error TS2339: Property 'encode' does not exist on type '{}'.
 lib/base64-vlq.ts(160,20): error TS2339: Property 'decode' does not exist on type '{}'.
-lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/fromStringWithSourceMap.ts(12,88): error TS2304: Cannot find name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(12,88): error TS4078: Parameter 'map' of exported function has or is using private name 'SourceMap'.
 lib/fromStringWithSourceMap.ts(22,34): error TS2304: Cannot find name 'GeneratedCode'.
 lib/fromStringWithSourceMap.ts(33,36): error TS2552: Cannot find name 'SourceCode'. Did you mean 'SourceNode'?
 lib/fromStringWithSourceMap.ts(33,57): error TS2304: Cannot find name 'SourceCode'.

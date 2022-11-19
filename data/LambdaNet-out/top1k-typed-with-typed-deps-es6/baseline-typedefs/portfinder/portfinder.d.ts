@@ -1,0 +1,12 @@
+export declare const basePort: number;
+export declare const setBasePort: Function;
+export declare const highestPort: number;
+export declare const setHighestPort: Function;
+export declare const basePath: string;
+export declare const getPort: Function;
+export declare const getPortPromise: Function;
+export declare const getPorts: Function;
+export declare const getSocket: Function;
+export declare const nextPort: Function;
+export declare const nextSocket: Function;
+export declare const _defaultHosts: object;

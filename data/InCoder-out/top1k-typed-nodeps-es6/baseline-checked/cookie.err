@@ -7,9 +7,11 @@ benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its co
 benchmark/parse.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/parse.ts(57,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 index.ts(47,21): error TS2304: Cannot find name 'ring'.
+index.ts(47,21): error TS4078: Parameter 'str' of exported function has or is using private name 'ring'.
 index.ts(119,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(227,23): error TS2304: Cannot find name 'ny'.
+index.ts(227,23): error TS4078: Parameter 'str' of exported function has or is using private name 'ny'.
 scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
 scripts/update-benchmark.ts(22,59): error TS2304: Cannot find name 'RequestCallback'.
 scripts/update-benchmark.ts(29,23): error TS2339: Property 'location' does not exist on type 'Headers'.

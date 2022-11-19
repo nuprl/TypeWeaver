@@ -9,6 +9,7 @@ index.ts(166,3): error TS2322: Type 'Location | {}' is not assignable to type 'L
 index.ts(222,28): error TS2304: Cannot find name 'URI'.
 index.ts(222,40): error TS2304: Cannot find name 'URI'.
 index.ts(264,61): error TS2304: Cannot find name 'UrlParser'.
+index.ts(264,61): error TS4078: Parameter 'parser' of exported function has or is using private name 'UrlParser'.
 index.ts(266,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(293,3): error TS2740: Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
 index.ts(300,59): error TS2339: Property 'slashes' does not exist on type 'Location'.

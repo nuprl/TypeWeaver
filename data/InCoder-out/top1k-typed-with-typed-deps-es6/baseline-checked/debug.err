@@ -4,8 +4,11 @@ src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exis
 src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
 src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
 src/browser.ts(146,27): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+src/browser.ts(146,27): error TS4078: Parameter 'args' of exported function has or is using private name 'tring'.
 src/browser.ts(197,27): error TS2304: Cannot find name 'URI'.
+src/browser.ts(197,27): error TS4078: Parameter 'namespaces' of exported function has or is using private name 'URI'.
 src/common.ts(7,21): error TS2304: Cannot find name 'Environment'.
+src/common.ts(7,21): error TS4078: Parameter 'env' of exported function has or is using private name 'Environment'.
 src/common.ts(41,34): error TS2304: Cannot find name 'ColorNamespace'.
 src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: any, delimiter: any) => ...; destroy: () => void; }; debug: ...; default: ...; coerce: (val: any) => any; ... 8 more ...; selectColor: (namespace: ColorNamespace) => any; }'.
 src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: any, delimiter: any) => ...; destroy: () => void; }; debug: ...; default: ...; coerce: (val: any) => any; ... 8 more ...; selectColor: (namespace: ColorNamespace) => any; }'.

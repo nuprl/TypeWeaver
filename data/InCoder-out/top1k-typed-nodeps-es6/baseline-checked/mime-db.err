@@ -74,5 +74,5 @@ scripts/fetch-nginx.ts(91,13): error TS2769: No overload matches this call.
     Argument of type 'string | Request' is not assignable to parameter of type 'string | URL | RequestOptions'.
   Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'string | Request' is not assignable to parameter of type 'string | URL'.
-scripts/fetch-nginx.ts(91,44): error TS2304: Cannot find name 'esponse'.
+scripts/fetch-nginx.ts(91,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
 

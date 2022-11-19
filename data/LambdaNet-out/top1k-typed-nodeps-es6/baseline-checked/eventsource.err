@@ -2392,6 +2392,7 @@ lib/eventsource-polyfill.ts(6,3): error TS2528: A module cannot have multiple de
 lib/eventsource-polyfill.ts(8,3): error TS1258: A default export must be at the top level of a file or module declaration.
 lib/eventsource-polyfill.ts(8,18): error TS2528: A module cannot have multiple default exports.
 lib/eventsource.ts(35,66): error TS2304: Cannot find name 'Void'.
+lib/eventsource.ts(35,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/eventsource.ts(36,40): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
 lib/eventsource.ts(37,68): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/eventsource.ts(52,8): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.

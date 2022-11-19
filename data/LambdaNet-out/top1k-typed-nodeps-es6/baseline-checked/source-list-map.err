@@ -26,7 +26,7 @@ lib/MappingsContext.ts(23,8): error TS2339: Property 'sourcesIndices' does not e
 lib/MappingsContext.ts(24,8): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(26,9): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(34,26): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
-lib/SingleLineNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SingleLineNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SingleLineNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
@@ -99,7 +99,7 @@ lib/SourceListMap.ts(97,31): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(100,33): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(109,21): error TS2339: Property 'sources' does not exist on type 'object'.
 lib/SourceListMap.ts(110,63): error TS2339: Property 'sourcesContent' does not exist on type 'object'.
-lib/SourceNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SourceNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SourceNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SourceNode'.
@@ -158,7 +158,7 @@ lib/base64-vlq.ts(149,93): error TS2304: Cannot find name 'Void'.
 lib/base64-vlq.ts(160,20): error TS2339: Property 'decode' does not exist on type 'object'.
 lib/base64-vlq.ts(167,13): error TS2339: Property 'value' does not exist on type 'object'.
 lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'object'.
-lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/fromStringWithSourceMap.ts(12,77): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/fromStringWithSourceMap.ts(13,30): error TS2339: Property 'sources' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(14,37): error TS2339: Property 'sourcesContent' does not exist on type 'object'.
@@ -190,5 +190,7 @@ lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not ex
 lib/helpers.ts(7,14): error TS2322: Type '(str: string) => number' is not assignable to type 'string'.
 lib/helpers.ts(17,14): error TS2322: Type '(str: string) => number' is not assignable to type 'string'.
 lib/index.ts(1,29): error TS2749: 'SourceListMap' refers to a value, but is being used as a type here. Did you mean 'typeof SourceListMap'?
+lib/index.ts(1,29): error TS4025: Exported variable 'SourceListMap' has or is using private name 'SourceListMap'.
 lib/index.ts(3,30): error TS2749: 'SingleLineNode' refers to a value, but is being used as a type here. Did you mean 'typeof SingleLineNode'?
+lib/index.ts(3,30): error TS4025: Exported variable 'SingleLineNode' has or is using private name 'SingleLineNode'.
 

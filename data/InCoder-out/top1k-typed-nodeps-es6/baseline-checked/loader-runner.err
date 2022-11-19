@@ -16,7 +16,9 @@ lib/LoaderRunner.ts(265,82): error TS2304: Cannot find name 'LoaderCallback'.
 lib/LoaderRunner.ts(307,78): error TS2304: Cannot find name 'ContextDependency'.
 lib/LoaderRunner.ts(310,78): error TS2304: Cannot find name 'Context'.
 lib/loadLoader.ts(4,44): error TS2304: Cannot find name 'Loader'.
+lib/loadLoader.ts(4,44): error TS4078: Parameter 'loader' of exported function has or is using private name 'Loader'.
 lib/loadLoader.ts(4,63): error TS2304: Cannot find name 'LoaderCallback'.
+lib/loadLoader.ts(4,63): error TS4078: Parameter 'callback' of exported function has or is using private name 'LoaderCallback'.
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/loadLoader.ts(39,31): error TS2304: Cannot find name 'Loader'.
 
