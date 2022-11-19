@@ -19,7 +19,7 @@ This directory is organized as follows:
 There are four datasets, extracted from the `top1k-plus` dataset:
 
   * `top1k-typed-nodeps`
-    * **287** packages that are typed and have no dependencies
+    * **286** packages that are typed and have no dependencies
   * `top1k-untyped-nodeps`
     * **102** packages that are untyped and have no dependencies
   * `top1k-typed-with-typed-deps`
@@ -27,7 +27,7 @@ There are four datasets, extracted from the `top1k-plus` dataset:
   * `top1k-untyped-with-typed-deps`
     * **40** packages that are untyped and all their dependencies are typed
 
-There are **514** packages in total.
+There are **513** packages in total.
 
 Additionally, each of the above datasets has a corresponding `-es6` dataset,
 where the packages have been migrated from CommonJS modules (which use
@@ -141,7 +141,7 @@ Some packages failed to download, for the following reasons:
 ## Data cleaning and manual reclassification
 
 This process was mostly done by hand, so some packages and files may have been
-missed. 106 packages were removed, leaving behind **520** packages.
+missed. 107 packages were removed, leaving behind **519** packages.
 
 Broken and recursive symlinks were deleted.
 
@@ -193,20 +193,10 @@ Initially, packages (and dependencies) were considered "typed" if they had
 type definitions in DefinitelyTyped. However, some packages ship with their own
 type definitions (`.d.ts` files), or generate type definitions from JSDoc.
 
-Packages that contained `.d.ts` files in their repository, or packages that
-generate `.d.ts` files were reclassified as "typed." However, package
-dependencies were not reclassified. As a result, some packages may have been
-incorrectly excluded from the dataset, because their dependencies were
-incorrectly classified as untyped.
-
-Packages that generate `.d.ts` files can be found by parsing the `tsconfig.json`
-files:
-
-    cd data
-    for i in `find . -type f -name "tsconfig.json"`; do \
-        jq -e '.compilerOptions.declaration' $i > /dev/null \
-            && echo $i | cut -d'/' -f2; \
-    done
+Packages that contained `.d.ts` files in their repository were reclassified as
+typed. However, package dependencies were not reclassified. As a result, some
+packages may have been incorrectly excluded from the dataset, because their
+dependencies were incorrectly classified as untyped.
 
 
 ## Installing type definitions of dependencies
@@ -244,7 +234,7 @@ failed dependencies are `dep1`, `dep2`, and `dep3`):
         done ; \
     done
 
-6 packages were removed, leaving a total of **514**.
+6 packages were removed, leaving a total of **513**.
 
 
 ## Migrating to ES6
