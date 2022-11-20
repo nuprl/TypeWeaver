@@ -13,9 +13,11 @@
 #       - system
 #       - dataset
 #       - package name
+#       - number of function signatures compared
 #       - number of correct annotations
+#       - number of inferred any annotations
 #       - number of non-any annotations checked
-#       - number of any annotations skipped
+#       - number of any ground truth annotations skipped
 
 from pathlib import Path
 import argparse, re
@@ -127,9 +129,7 @@ def errors_per_file_summary(data_dir):
 
 def clean_type(t):
     t = re.sub("typeof", "", t)
-    t = re.sub("asserts", "", t)
     t = re.sub("readonly", "", t)
-    t = re.sub("[a-zA-Z_$][\w_$]*\s+is", "", t)
     return t.strip()
 
 def get_param_type(string):
@@ -164,14 +164,16 @@ def read_function_signatures(package):
     return signatures
 
 def compare_annotations(inferred, truth):
-    correct, total, anys = [0, 0, 0]
+    correct, inferred_anys, total, truth_anys = [0, 0, 0, 0]
+    if inferred == "any":
+        inferred_anys += 1
     if truth == "any":
-        anys += 1
+        truth_anys += 1
     else:
         total += 1
         if truth == inferred:
             correct += 1
-    return [correct, total, anys]
+    return [correct, inferred_anys, total, truth_anys]
 
 def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
     groundtruth_dir = Path(data_dir, "groundtruth", package)
@@ -185,19 +187,23 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
     # Skip ground truth annotation if it is "any"
     # Skip cases where a signature is missing from the other set
     # (e.g. no ground truth exists, or no inferred signature exists)
+    num_signatures = 0
     correct = 0
+    inferred_anys = 0
     total = 0
-    anys = 0
+    truth_anys = 0
     for k, inferred in inferred_sigs.items():
         if k in ground_truth_sigs.keys():
+            num_signatures += 1
             truth = ground_truth_sigs[k]
             for i, t in zip(inferred, truth):
-                c, t, a = compare_annotations(i, t)
+                c, ia, n, ta = compare_annotations(i, t)
                 correct += c
-                total += t
-                anys += a
+                inferred_anys += ia
+                total += n
+                truth_anys += ta
 
-    return f"{correct},{total},{anys}"
+    return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
 def compute_accuracy(data_dir):
     accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
@@ -209,7 +215,7 @@ def compute_accuracy(data_dir):
     ground_truth = Path(data_dir, "groundtruth")
 
     with open(accuracy_csv, "w") as file:
-        file.write('"System","Dataset","Package","Number of correct annotations","Number of annotations checked","Number of anys skipped"\n')
+        file.write('"System","Dataset","Package","Number of function signatures compared","Number of correct annotations","Number of inferred anys","Number of annotations checked","Number of ground truth anys skipped"\n')
         for s in SYSTEMS.keys():
             print(f"  {s}...")
             for d in datasets:
