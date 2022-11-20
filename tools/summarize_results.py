@@ -1,7 +1,7 @@
 # This script parses the results and error output to produce summaries:
 #   - Overall summary: did a package type check?
-#       - package name
 #       - dataset
+#       - package name
 #       - DeepTyper type checks?
 #       - LambdaNet type checks?
 #       - InCoder type checks?
@@ -9,11 +9,22 @@
 #       - package
 #       - filename
 #       - number of errors in that file
+#   - Accuracy of type annotations, compared to ground truth type definitions
+#       - system
+#       - dataset
+#       - package name
+#       - number of correct annotations
+#       - number of non-any annotations checked
+#       - number of any annotations skipped
 
 from pathlib import Path
-import argparse
+import argparse, re
 
 import util
+
+# Regex for matching function declarations
+#   function <name>(<params>): <return type>
+FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
 
 SYSTEMS = {
     "DeepTyper": "dt",
@@ -49,7 +60,9 @@ def did_package_typecheck(data_dir, dataset, package, system):
     else:
         return "NA"
 
-def typecheck_summary(data_dir, summary_csv):
+def typecheck_summary(data_dir):
+    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
+
     print("Generating summary of packages that typecheck...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
@@ -96,15 +109,13 @@ def errors_per_file_summary(data_dir):
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
     for s in SYSTEMS.keys():
-        print(f"  {s} ...")
+        print(f"  {s}...")
         output_csv = Path(data_dir, "notes", "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
-            file.write('Dataset,Package,File,"Number of errors"')
-            file.write("\n")
+            file.write('Dataset,Package,File,"Number of errors"\n')
 
             for d in datasets:
-                print(f"    {d} ...")
-                original_dataset = Path(data_dir, "original", d)
+                print(f"    {d}...")
                 ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
@@ -114,14 +125,111 @@ def errors_per_file_summary(data_dir):
                         file.write(e)
                         file.write("\n")
 
+def clean_type(t):
+    t = re.sub("typeof", "", t)
+    t = re.sub("asserts", "", t)
+    t = re.sub("readonly", "", t)
+    t = re.sub("[a-zA-Z_$][\w_$]*\s+is", "", t)
+    return t.strip()
+
+def get_param_type(string):
+    def clean_param(p):
+        # Split on : and remove the first part
+        # Annotations may contain : if it's a function or struct type
+        t = ":".join(p.split(":")[1:])
+        return clean_type(t)
+
+    res = [clean_param(p) for p in string.split(",")]
+    if len(res) == 1 and not res[0]:
+        return []
+    else:
+        return res
+
+def read_function_signatures(package):
+    signatures = dict()
+    files = [f for f in package.rglob("*.d.ts")]
+    for f in files:
+        with open(f, encoding="utf-8") as f:
+            for line in f:
+                matches = FUNCTION_DECL_RE.match(line)
+                if matches:
+                    name = matches.group(1)
+                    params = get_param_type(matches.group(2))
+                    return_type = clean_type(matches.group(3))
+
+                    # Key encoding: <name>@<num params>
+                    # Value encoding: return type is last element of list
+                    key = f"{name}@{len(params)}"
+                    signatures[key] = [*params, return_type]
+    return signatures
+
+def compare_annotations(inferred, truth):
+    correct, total, anys = [0, 0, 0]
+    if truth == "any":
+        anys += 1
+    else:
+        total += 1
+        if truth == inferred:
+            correct += 1
+    return [correct, total, anys]
+
+def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
+    groundtruth_dir = Path(data_dir, "groundtruth", package)
+    package_dir = Path(ts_dataset, package)
+
+    ground_truth_sigs = read_function_signatures(groundtruth_dir)
+    inferred_sigs = read_function_signatures(package_dir)
+
+    # Loop over all inferred signatures and compare to ground truth signatures
+    # Inferred annotations must match ground truth annotations exactly
+    # Skip ground truth annotation if it is "any"
+    # Skip cases where a signature is missing from the other set
+    # (e.g. no ground truth exists, or no inferred signature exists)
+    correct = 0
+    total = 0
+    anys = 0
+    for k, inferred in inferred_sigs.items():
+        if k in ground_truth_sigs.keys():
+            truth = ground_truth_sigs[k]
+            for i, t in zip(inferred, truth):
+                c, t, a = compare_annotations(i, t)
+                correct += c
+                total += t
+                anys += a
+
+    return f"{correct},{total},{anys}"
+
+def compute_accuracy(data_dir):
+    accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
+
+    print("Computing accuracy per package, for each system and dataset...")
+    datasets = sorted([d.parts[-1]
+                       for d in Path(data_dir, "original").iterdir()
+                       if not "untyped" in str(d) and str(d).endswith("es6")])
+    ground_truth = Path(data_dir, "groundtruth")
+
+    with open(accuracy_csv, "w") as file:
+        file.write('"System","Dataset","Package","Number of correct annotations","Number of annotations checked","Number of anys skipped"\n')
+        for s in SYSTEMS.keys():
+            print(f"  {s}...")
+            for d in datasets:
+                print(f"    {d}...")
+                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline-typedefs")
+
+                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
+                for p in packages:
+                    res = compute_accuracy_for_package(data_dir, d, ts_dataset, p)
+                    file.write(f"{s.lower()},{d},{p},")
+                    file.write(res)
+                    file.write("\n")
+
 def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
 
-    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
-    typecheck_summary(data_dir, summary_csv)
-
+    typecheck_summary(data_dir)
     errors_per_file_summary(data_dir)
+    compute_accuracy(data_dir)
 
 if __name__ == "__main__":
     main()
