@@ -203,6 +203,23 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
                 total += n
                 truth_anys += ta
 
+    ### Code to print out signature comparisons
+    # if num_signatures > 0:
+    #     print("*" * 80)
+    #     print(package_dir)
+    #     for k, inferred in inferred_sigs.items():
+    #         if k in ground_truth_sigs.keys():
+    #             truth = ground_truth_sigs[k]
+    #             print(k)
+    #             print("\tInferred\tGround truth\t\tMatch?")
+    #             for i, t in zip(inferred, truth):
+    #                 if i == t:
+    #                     match = 1
+    #                 else:
+    #                     match = 0
+    #                 print(f"\t{i:16}{t:24}{match}")
+    #     print("Sigs:", num_signatures, "Correct types:", correct, "Total:", total, "Inferred anys:", inferred_anys, "Truth anys:", truth_anys)
+
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
 def compute_accuracy(data_dir):
