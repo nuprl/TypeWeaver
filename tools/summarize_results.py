@@ -18,9 +18,16 @@
 #       - number of inferred any annotations
 #       - number of non-any annotations checked
 #       - number of any ground truth annotations skipped
+#  - Lines of code, computed with cloc
+#       - dataset
+#       - package name
+#       - filename
+#       - lines of code
 
+from concurrent import futures
 from pathlib import Path
-import argparse, re
+from subprocess import PIPE
+import argparse, json, re, subprocess
 
 import util
 
@@ -246,6 +253,45 @@ def compute_accuracy(data_dir):
                     file.write(res)
                     file.write("\n")
 
+def get_loc_for_file(file):
+    args = ["cloc", "--include-lang=JavaScript", "--json", file]
+    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8")
+    if len(result.stdout) > 0:
+        data = json.loads(result.stdout)
+        if data:
+            return data["JavaScript"]["code"]
+    return 0
+
+def get_loc_for_package(dataset, package):
+    dataset_name = dataset.parts[-1]
+    package_name = package.parts[-1]
+    res = []
+
+    files = sorted([f for f in package.rglob("*.js")])
+    for f in files:
+        filename = f.relative_to(package)
+        loc = get_loc_for_file(f)
+        res.append(f"{dataset_name},{package_name},{filename},{loc}")
+    return res
+
+def get_loc(data_dir):
+    file_loc_csv = Path(data_dir, "notes", "csv", "file_loc.csv")
+
+    print("Calculating LOC for each file in each package...")
+    datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
+
+    with open(file_loc_csv, "w") as file:
+        file.write('Dataset,Package,File,"Lines of code"\n')
+        with futures.ProcessPoolExecutor() as executor:
+            fs = [executor.submit(get_loc_for_package, d, p)
+                  for d in sorted(datasets)
+                  for p in sorted(d.iterdir())]
+            for f in fs:
+                result = f.result()
+                for r in result:
+                    file.write(r)
+                    file.write("\n")
+
 def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
@@ -253,6 +299,10 @@ def main():
     typecheck_summary(data_dir)
     errors_per_file_summary(data_dir)
     compute_accuracy(data_dir)
+
+    # Don't need to run this every time, it computes on the original dataset, not results
+    # This is very slow!
+    # get_loc(data_dir)
 
 if __name__ == "__main__":
     main()
