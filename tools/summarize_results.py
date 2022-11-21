@@ -269,7 +269,7 @@ def get_loc_for_package(dataset, package):
 
     files = sorted([f for f in package.rglob("*.js")])
     for f in files:
-        filename = f.relative_to(package)
+        filename = f.relative_to(package).with_suffix(".ts")
         loc = get_loc_for_file(f)
         res.append(f"{dataset_name},{package_name},{filename},{loc}")
     return res
