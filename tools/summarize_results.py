@@ -24,6 +24,12 @@
 #       - package
 #       - filename
 #       - lines of code
+# - Error codes per file, for each system
+#       - dataset
+#       - package
+#       - filename
+#       - error code
+#       - count
 
 from concurrent import futures
 from pathlib import Path
@@ -35,6 +41,10 @@ import util
 # Regex for matching function declarations
 #   function <name>(<params>): <return type>
 FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
+
+# Regex for matching error messages
+#   <filename.ts>(row,col): error <TScode>
+ERROR_CODES_RE = re.compile("^([^\.].*\.ts)\(\d+,\d+\): error (TS\d+):")
 
 SYSTEMS = {
     "DeepTyper": "dt",
@@ -102,8 +112,8 @@ def errors_per_file_for_package(data_dir, dataset, ts_dataset, package):
     package_dir = Path(ts_dataset, package)
     out_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.out").resolve()
     err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
-
     entries = []
+
     files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
     for file in files:
         entry = f"{dataset},{package},{file},"
@@ -154,7 +164,7 @@ def get_param_type(string):
         return res
 
 def read_function_signatures(package):
-    signatures = dict()
+    signatures = {}
     files = [f for f in package.rglob("*.d.ts")]
     for f in files:
         with open(f, encoding="utf-8") as f:
@@ -292,6 +302,53 @@ def get_loc(data_dir):
                     file.write(r)
                     file.write("\n")
 
+def error_codes_for_package(data_dir, dataset, ts_dataset, package):
+    package_dir = Path(ts_dataset, package)
+    err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
+    entries = []
+    errors = {}
+
+    if err_file.exists():
+        with open(err_file, encoding="utf-8") as f:
+            for line in f:
+                matches = ERROR_CODES_RE.match(line)
+                if matches:
+                    filename = matches.group(1)
+                    code = matches.group(2)
+                    if filename in errors:
+                        file_map = errors[filename]
+                        file_map.setdefault(code, 0)
+                        file_map[code] += 1
+                    else:
+                        errors[filename] = {code: 1}
+
+    for filename, file_map in errors.items():
+        for code, count in file_map.items():
+            entries.append(f"{dataset},{package},{filename},{code},{count}")
+
+    return entries
+
+def count_error_codes(data_dir):
+    print("Counting error codes per file, for each system and dataset...")
+    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
+
+    for s in SYSTEMS.keys():
+        print(f"  {s}...")
+        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
+        with open(output_csv, "w") as file:
+            file.write('Dataset,Package,File,"Error code",Count\n')
+
+            for d in datasets:
+                print(f"    {d}...")
+                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
+
+                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
+                for p in packages:
+                    entries = error_codes_for_package(data_dir, d, ts_dataset, p)
+                    for e in entries:
+                        file.write(e)
+                        file.write("\n")
+
 def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
@@ -301,6 +358,7 @@ def main():
     compute_accuracy(data_dir)
     # Don't need to run this every time, it computes on the original dataset and is slow!
     # get_loc(data_dir)
+    count_error_codes(data_dir)
 
 if __name__ == "__main__":
     main()
