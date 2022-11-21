@@ -5,14 +5,15 @@
 #       - DeepTyper type checks?
 #       - LambdaNet type checks?
 #       - InCoder type checks?
-#   - A summary for each (system, dataset) pair:
+#   - A summary for each system
+#       - dataset
 #       - package
 #       - filename
 #       - number of errors in that file
 #   - Accuracy of type annotations, compared to ground truth type definitions
 #       - system
 #       - dataset
-#       - package name
+#       - package
 #       - number of function signatures compared
 #       - number of correct annotations
 #       - number of inferred any annotations
@@ -20,7 +21,7 @@
 #       - number of any ground truth annotations skipped
 #  - Lines of code, computed with cloc
 #       - dataset
-#       - package name
+#       - package
 #       - filename
 #       - lines of code
 
@@ -182,7 +183,7 @@ def compare_annotations(inferred, truth):
             correct += 1
     return [correct, inferred_anys, total, truth_anys]
 
-def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
+def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package, debug = False):
     groundtruth_dir = Path(data_dir, "groundtruth", package)
     package_dir = Path(ts_dataset, package)
 
@@ -211,25 +212,26 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package):
                 truth_anys += ta
 
     ### Code to print out signature comparisons
-    # if num_signatures > 0:
-    #     print("*" * 80)
-    #     print(package_dir)
-    #     for k, inferred in inferred_sigs.items():
-    #         if k in ground_truth_sigs.keys():
-    #             truth = ground_truth_sigs[k]
-    #             print(k)
-    #             print("\tInferred\tGround truth\t\tMatch?")
-    #             for i, t in zip(inferred, truth):
-    #                 if i == t:
-    #                     match = 1
-    #                 else:
-    #                     match = 0
-    #                 print(f"\t{i:16}{t:24}{match}")
-    #     print("Sigs:", num_signatures, "Correct types:", correct, "Total:", total, "Inferred anys:", inferred_anys, "Truth anys:", truth_anys)
+    if debug:
+        if num_signatures > 0:
+            print("*" * 80)
+            print(package_dir)
+            for k, inferred in inferred_sigs.items():
+                if k in ground_truth_sigs.keys():
+                    truth = ground_truth_sigs[k]
+                    print(k)
+                    print("\tInferred\tGround truth\t\tMatch?")
+                    for i, t in zip(inferred, truth):
+                        if i == t:
+                            match = 1
+                        else:
+                            match = 0
+                        print(f"\t{i:16}{t:24}{match}")
+            print("Sigs:", num_signatures, "Correct types:", correct, "Total:", total, "Inferred anys:", inferred_anys, "Truth anys:", truth_anys)
 
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
-def compute_accuracy(data_dir):
+def compute_accuracy(data_dir, debug = False):
     accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
 
     print("Computing accuracy per package, for each system and dataset...")
@@ -248,30 +250,28 @@ def compute_accuracy(data_dir):
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
                 for p in packages:
-                    res = compute_accuracy_for_package(data_dir, d, ts_dataset, p)
+                    res = compute_accuracy_for_package(data_dir, d, ts_dataset, p, debug)
                     file.write(f"{s.lower()},{d},{p},")
                     file.write(res)
                     file.write("\n")
-
-def get_loc_for_file(file):
-    args = ["cloc", "--include-lang=JavaScript", "--json", file]
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8")
-    if len(result.stdout) > 0:
-        data = json.loads(result.stdout)
-        if data:
-            return data["JavaScript"]["code"]
-    return 0
 
 def get_loc_for_package(dataset, package):
     dataset_name = dataset.parts[-1]
     package_name = package.parts[-1]
     res = []
 
-    files = sorted([f for f in package.rglob("*.js")])
-    for f in files:
-        filename = f.relative_to(package).with_suffix(".ts")
-        loc = get_loc_for_file(f)
-        res.append(f"{dataset_name},{package_name},{filename},{loc}")
+    args = ["cloc", "--include-ext=js", "--json", "--by-file", "--skip-uniqueness", "."]
+    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
+    if len(result.stdout) > 0:
+        data = json.loads(result.stdout)
+        if data:
+            for f in sorted(data.keys()):
+                if f == "header" or f == "SUM":
+                    continue
+                loc = data[f]["code"]
+                # change to ".ts" extension, remove "./" prefix
+                filename = str(Path(f).with_suffix(".ts"))
+                res.append(f"{dataset_name},{package_name},{filename},{loc}")
     return res
 
 def get_loc(data_dir):
@@ -299,9 +299,7 @@ def main():
     typecheck_summary(data_dir)
     errors_per_file_summary(data_dir)
     compute_accuracy(data_dir)
-
-    # Don't need to run this every time, it computes on the original dataset, not results
-    # This is very slow!
+    # Don't need to run this every time, it computes on the original dataset and is slow!
     # get_loc(data_dir)
 
 if __name__ == "__main__":
