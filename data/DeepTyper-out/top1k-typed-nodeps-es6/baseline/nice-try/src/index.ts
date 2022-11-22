@@ -5,7 +5,7 @@
  * @param {Function} fn - Function that might or might not throw an error.
  * @returns {?*} Return-value of the function when no error occurred.
  */
-export default function(fn): any {
+export default function(fn: any) {
 
 	try { return fn() } catch (e) {}
 

@@ -1,4 +1,4 @@
-export default function(size): number {
+export default function(size: number) {
   return new LruCache(size)
 };
 

@@ -12,7 +12,7 @@ var uUpper: number = "U".charCodeAt(0);
 var plus: number = "+".charCodeAt(0);
 var isUnicodeRange: string = /^[a-f0-9?-]+$/i;
 
-export default function(input): any {
+export default function(input: any) {
   var tokens: any[] = [];
   var value: any = input;
 

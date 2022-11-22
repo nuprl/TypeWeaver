@@ -5,7 +5,7 @@ import isObject from '../object/is';
 
 var objectToString: string = Object.prototype.toString;
 
-export default function (value): any {
+export default function (value: any) {
 	if (!isValue(value)) return null;
 	if (isObject(value)) {
 		// Reject Object.prototype.toString coercion

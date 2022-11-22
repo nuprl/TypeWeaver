@@ -1,1 +1,1 @@
-export default function (qs: any, sep: string, eq: any, options: any): any;
+export default function (qs: any, sep: any, eq: string, options: any): any;

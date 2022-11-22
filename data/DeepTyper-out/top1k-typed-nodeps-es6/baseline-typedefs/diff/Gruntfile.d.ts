@@ -1,1 +1,1 @@
-export default function (grunt: any): any;
+export default function (grunt: any): void;

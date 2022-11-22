@@ -1,1 +1,1 @@
-export default function (val: number, num: any): string;
+export default function (val: string, num: number): any;

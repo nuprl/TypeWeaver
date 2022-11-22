@@ -1,6 +1,6 @@
 'use strict';
 
-export default function (data: any, opts): any {
+export default function (data: any, opts: any) {
     if (!opts) opts = {};
     if (typeof opts === 'function') opts = { cmp: opts };
     var cycles: boolean = (typeof opts.cycles === 'boolean') ? opts.cycles : false;

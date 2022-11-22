@@ -15,7 +15,7 @@ import stew from 'broccoli-stew';
 const env: any = stew.env;
 const map: any = stew.map;
 
-export default function (app): any {
+export default function (app: any) {
   const lib: any = funnel('lib', { destDir: 'lib' });
 
   const testDir: string = funnel('test', { destDir: 'test' });

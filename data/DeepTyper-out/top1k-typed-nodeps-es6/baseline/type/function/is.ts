@@ -2,7 +2,7 @@
 
 import isPrototype from '../prototype/is';
 
-export default function (value): any {
+export default function (value: any) {
 	if (typeof value !== "function") return false;
 
 	if (!hasOwnProperty.call(value, "length")) return false;

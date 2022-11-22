@@ -1,4 +1,4 @@
-export default function (arr): any {
+export default function (arr: any) {
   return flatten(arr, []);
 };
 

@@ -14,7 +14,7 @@
  * @api public
  */
 
-export default function(options): any {
+export default function(options: any) {
   return function(snapdragon: any) {
     if (snapdragon.isSnapdragon) {
       snapdragon.parser.define('capture', capture);

@@ -1,1 +1,1 @@
-export default function (glob: any, opts: any): string;
+export default function (glob: string, opts: any): RegExp;

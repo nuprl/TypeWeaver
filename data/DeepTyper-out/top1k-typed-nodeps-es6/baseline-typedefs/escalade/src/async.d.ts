@@ -1,1 +1,1 @@
-export default function (start: any, callback: any): any;
+export default function (start: any, callback: any): Promise<string>;

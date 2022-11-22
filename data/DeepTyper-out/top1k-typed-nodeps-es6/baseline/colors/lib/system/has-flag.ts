@@ -24,7 +24,7 @@ SOFTWARE.
 
 'use strict';
 
-export default function(flag: any, argv): any {
+export default function(flag: any, argv: any) {
   argv = argv || process.argv;
 
   var terminatorPos: boolean = argv.indexOf('--');

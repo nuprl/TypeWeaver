@@ -77,7 +77,7 @@ function customDecodeURIComponent(input: string): any {
 	return input;
 }
 
-export default function (encodedURI): any {
+export default function (encodedURI: any) {
 	if (typeof encodedURI !== 'string') {
 		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
 	}

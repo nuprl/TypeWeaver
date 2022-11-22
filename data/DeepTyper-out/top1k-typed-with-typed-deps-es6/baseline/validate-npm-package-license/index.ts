@@ -29,7 +29,7 @@ function usesLicenseRef(ast: any): boolean {
   }
 }
 
-export default function(argument): any {
+export default function(argument: any) {
   var ast: any;
 
   try {

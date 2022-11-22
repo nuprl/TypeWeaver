@@ -1,6 +1,6 @@
 import semver from 'semver';
 
-export default function(grunt): IGrunt {
+export default function(grunt: IGrunt) {
   grunt.registerTask('version', 'Updates the current release version', function() {
     var done: any = this.async(),
         pkg = grunt.config('pkg'),

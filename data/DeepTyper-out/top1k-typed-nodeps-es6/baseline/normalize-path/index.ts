@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-export default function(path: boolean, stripTrailing): string {
+export default function(path: string, stripTrailing: boolean) {
   if (typeof path !== 'string') {
     throw new TypeError('expected path to be a string');
   }

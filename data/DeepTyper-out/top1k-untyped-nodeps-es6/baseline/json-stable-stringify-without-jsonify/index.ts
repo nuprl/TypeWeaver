@@ -1,4 +1,4 @@
-export default function (obj: any, opts): any {
+export default function (obj: any, opts: any) {
     if (!opts) opts = {};
     if (typeof opts === 'function') opts = { cmp: opts };
     var space: string = opts.space || '';

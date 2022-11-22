@@ -1,4 +1,4 @@
-export default function (glob: any, opts): string {
+export default function (glob: string, opts: any) {
   if (typeof glob !== 'string') {
     throw new TypeError('Expected a string');
   }

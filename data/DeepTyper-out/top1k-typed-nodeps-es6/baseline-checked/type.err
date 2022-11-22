@@ -1,4 +1,6 @@
+array-length/coerce.ts(8,6): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 array-like/ensure.ts(7,16): error TS2554: Expected 1 arguments, but got 2.
+array-like/is.ts(19,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 array/ensure.ts(9,34): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
 array/ensure.ts(18,64): error TS2554: Expected 1 arguments, but got 2.
 array/ensure.ts(22,27): error TS2339: Property 'call' does not exist on type 'boolean'.
@@ -21,19 +23,32 @@ ensure.ts(28,27): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 error/is.ts(6,30): error TS2322: Type '() => string' is not assignable to type 'string'.
 error/is.ts(32,47): error TS2339: Property 'call' does not exist on type 'string'.
+finite/coerce.ts(7,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 function/is.ts(8,7): error TS2304: Cannot find name 'hasOwnProperty'.
 integer/coerce.ts(5,19): error TS2322: Type '(x: number) => number' is not assignable to type 'number'.
+integer/coerce.ts(8,2): error TS2322: Type 'string' is not assignable to type 'number'.
+integer/coerce.ts(8,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 integer/coerce.ts(10,38): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 iterable/ensure.ts(17,17): error TS2554: Expected 1 arguments, but got 2.
 iterable/ensure.ts(20,64): error TS2554: Expected 1 arguments, but got 2.
 iterable/is.ts(7,5): error TS2322: Type 'typeof Symbol.iterator' is not assignable to type 'number'.
-lib/resolve-error-message.ts(12,6): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/resolve-error-message.ts(7,35): error TS2339: Property 'errorMessage' does not exist on type 'string'.
+lib/resolve-error-message.ts(8,44): error TS2339: Property 'errorMessage' does not exist on type 'string'.
+lib/resolve-error-message.ts(13,35): error TS2339: Property 'name' does not exist on type 'string'.
 lib/resolve-error-message.ts(19,6): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/resolve-error-message.ts(21,33): error TS2339: Property 'name' does not exist on type 'string'.
+lib/resolve-error-message.ts(24,32): error TS2339: Property 'name' does not exist on type 'string'.
+lib/resolve-error-message.ts(39,18): error TS2339: Property 'name' does not exist on type 'string'.
 lib/to-short-string.ts(5,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 map/is.ts(7,30): error TS2322: Type '() => string' is not assignable to type 'string'.
 map/is.ts(7,93): error TS2339: Property 'call' does not exist on type 'string'.
 map/is.ts(25,21): error TS2339: Property 'call' does not exist on type 'string'.
+natural-number/coerce.ts(6,2): error TS2322: Type 'number' is not assignable to type 'string'.
+natural-number/coerce.ts(6,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+natural-number/coerce.ts(8,6): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+number/coerce.ts(8,3): error TS2322: Type 'number' is not assignable to type 'string'.
+number/coerce.ts(12,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 object/is.ts(10,9): error TS2304: Cannot find name 'hasOwnProperty'.
 plain-object/ensure.ts(9,34): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
 plain-object/ensure.ts(21,58): error TS2554: Expected 1 arguments, but got 2.

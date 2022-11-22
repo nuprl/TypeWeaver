@@ -2,7 +2,7 @@
 
 import path from 'path';
 
-export default function (thePath: string, potentialParent): string {
+export default function (thePath: string, potentialParent: string) {
     // For inside-directory checking, we want to allow trailing slashes, so normalize.
     thePath = stripTrailingSep(thePath);
     potentialParent = stripTrailingSep(potentialParent);

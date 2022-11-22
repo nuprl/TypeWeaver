@@ -4,7 +4,7 @@ import safeToString from './safe-to-string';
 
 var reNewLine: string = /[\n\r\u2028\u2029]/g;
 
-export default function (value): string {
+export default function (value: string) {
 	var string = safeToString(value);
 	if (string === null) return "<Non-coercible to string value>";
 	// Trim if too long

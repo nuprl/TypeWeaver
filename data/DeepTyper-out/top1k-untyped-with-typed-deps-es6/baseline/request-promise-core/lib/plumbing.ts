@@ -7,7 +7,7 @@ import isString from 'lodash/isString';
 import isUndefined from 'lodash/isUndefined';
 
 
-export default function (options): any {
+export default function (options: any) {
 
     var errorText: string = 'Please verify options'; // For better minification because this string is repeating
 

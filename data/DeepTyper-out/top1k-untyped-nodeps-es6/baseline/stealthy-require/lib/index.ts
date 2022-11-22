@@ -26,7 +26,7 @@ function clearCache(requireCache: any): void {
     });
 }
 
-export default function (requireCache: any, callback: any, callbackForModulesToKeep, module): any {
+export default function (requireCache: any, callback: any, callbackForModulesToKeep: any, module) {
 
     var originalCache: any = assign({}, requireCache);
     clearCache(requireCache);

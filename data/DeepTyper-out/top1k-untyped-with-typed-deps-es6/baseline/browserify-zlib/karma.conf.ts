@@ -1,4 +1,4 @@
-export default function (karma): IKarma {
+export default function (karma: IKarma) {
   karma.set({
     frameworks: ['mocha'],
     files: ['test/tmp/browserified.js'],

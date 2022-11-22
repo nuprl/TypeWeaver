@@ -1,1 +1,1 @@
-export default function (config: any): any;
+export default function (config: any): void;

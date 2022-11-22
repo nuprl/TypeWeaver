@@ -1,6 +1,6 @@
 var isWin: boolean = process.platform === 'win32';
 
-export default function (str): string {
+export default function (str: string) {
 	var i: number = str.length - 1;
 	if (i < 2) {
 		return str;

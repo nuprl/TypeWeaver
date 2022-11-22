@@ -1,1 +1,1 @@
-export default function (value: string, defaultMessage: any, inputOptions: any): string;
+export default function (value: string, defaultMessage: string, inputOptions: any): any;

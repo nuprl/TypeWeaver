@@ -10,7 +10,7 @@ if (typeof Object.getPrototypeOf === "function") {
 	getPrototypeOf = function (object: any) { return object.__proto__; };
 }
 
-export default function (value): any {
+export default function (value: any) {
 	if (!isObject(value)) return false;
 	var prototype: any;
 	if (getPrototypeOf) {

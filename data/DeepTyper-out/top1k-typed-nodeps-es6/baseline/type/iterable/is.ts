@@ -10,7 +10,7 @@ if (!iteratorSymbol) {
 	throw new Error("Cannot initialize iterator/is due to Symbol.iterator not being implemented");
 }
 
-export default function (value/*, options*/): any {
+export default function (value: any/*, options*/) {
 	var options: any = arguments[1];
 	if (!isObject(value)) {
 		if (!isObject(options) || !options.allowString || typeof value !== "string") return false;

@@ -1,6 +1,6 @@
 /* eslint-env node */
 /* eslint-disable no-var, camelcase */
-export default function(config): any {
+export default function(config: any) {
   var customLaunchers: any = {
     sl_chrome: {
       base: 'SauceLabs',

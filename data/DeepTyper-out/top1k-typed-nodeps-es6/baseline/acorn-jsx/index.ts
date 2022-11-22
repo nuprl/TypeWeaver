@@ -70,7 +70,7 @@ function getQualifiedJSXName(object: any): string {
     getQualifiedJSXName(object.property);
 }
 
-export default function(options): any {
+export default function(options: any) {
   options = options || {};
   return function(Parser: any) {
     return plugin({

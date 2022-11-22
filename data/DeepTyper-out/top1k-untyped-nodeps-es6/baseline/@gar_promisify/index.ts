@@ -25,7 +25,7 @@ const handler: any = {
   }
 }
 
-export default function (thingToPromisify): any {
+export default function (thingToPromisify: any) {
   if (typeof thingToPromisify === 'function') {
     return promisify(thingToPromisify)
   }

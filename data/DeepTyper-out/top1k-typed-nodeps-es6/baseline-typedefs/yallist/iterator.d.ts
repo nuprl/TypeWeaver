@@ -1,1 +1,1 @@
-export default function (Yallist: any): any;
+export default function (Yallist: any): void;

@@ -1,7 +1,7 @@
 // Iterator that traverses in the range of [min, max], stepping
 // by distance from a given start position. I.e. for [0, 4], with
 // start of 2, this will iterate 2, 3, 1, 4, 0.
-export default function(start: boolean, minLine: boolean, maxLine): number {
+export default function(start: number, minLine: boolean, maxLine: boolean) {
   let wantForward: boolean = true,
       backwardExhausted = false,
       forwardExhausted = false,

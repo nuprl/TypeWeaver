@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(val: number, num): string {
+export default function(val: string, num: number) {
   return repeat(val, num, []).join('');
 };
 

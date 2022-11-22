@@ -4,4 +4,4 @@
  * Copyright (c) 2014-2018, Jon Schlinkert.
  * Released under the MIT License.
  */
-export default function (path: boolean, stripTrailing: any): string;
+export default function (path: string, stripTrailing: boolean): string;

@@ -1,6 +1,6 @@
 var INTERPOLATE: RegExp = /{([^{]+?)}/g
 
-export default function(str: string, data): string {
+export default function(str: string, data: string) {
   var tmpl: string = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
     'with(obj||{}){__p.push(\'' +
     str.replace(/\\/g, '\\\\')

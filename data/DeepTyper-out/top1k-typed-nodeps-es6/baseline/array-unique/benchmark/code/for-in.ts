@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(arr): any {
+export default function(arr: any) {
   var len: number = arr.length;
   var res: any[] = [];
   var o: {} = {};

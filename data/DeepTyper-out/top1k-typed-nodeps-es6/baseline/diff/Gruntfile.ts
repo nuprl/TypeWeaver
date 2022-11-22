@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 import babel from 'rollup-plugin-babel';
 
-export default function(grunt): any {
+export default function(grunt: any) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),

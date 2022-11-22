@@ -4,7 +4,7 @@ import { Buffer } from 'safer-buffer';
 
 // NOTE: Due to 'stream' module being pretty large (~100Kb, significant in browser environments), 
 // we opt to dependency-inject it instead of creating a hard dependency.
-export default function(stream_module): any {
+export default function(stream_module: any) {
     var Transform: any = stream_module.Transform;
 
     // == Encoder stream =======================================================

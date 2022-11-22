@@ -1,1 +1,1 @@
-export default function (app: any): any;
+export default function (app: any): void;

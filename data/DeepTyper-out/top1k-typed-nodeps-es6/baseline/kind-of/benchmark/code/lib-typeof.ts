@@ -4,7 +4,7 @@
 // var typeOf = require('typeof');
 var toString: string = Object.prototype.toString;
 
-export default function(val): string {
+export default function(val: string) {
   if (val === 'arguments') {
     return typeOf(arguments);
   }

@@ -3,7 +3,7 @@
 import coerceToArrayLength from '../array-length/coerce';
 import isObject from '../object/is';
 
-export default function (value/*, options*/): any {
+export default function (value: any/*, options*/) {
 	if (!isObject(value)) {
 		var options: any = arguments[1];
 		if (isObject(options) && options.allowString && typeof value === "string") return true;

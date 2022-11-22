@@ -8,7 +8,7 @@ import is from './is';
 
 var objHasOwnProperty: boolean = Object.prototype.hasOwnProperty, invalidItemsLimit = 3;
 
-export default function (value /*, options*/): any {
+export default function (value: any /*, options*/) {
 	var options: any = arguments[1];
 	var mainErrorMessage: any =
 		options && options.name ? "Expected an array for %n, received %v" : "%v is not an array";

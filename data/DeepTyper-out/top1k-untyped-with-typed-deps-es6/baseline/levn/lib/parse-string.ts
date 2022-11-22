@@ -97,7 +97,7 @@
   special = /\[\]\(\)}{:,/.source;
   tokenRegex = RegExp('("(?:\\\\"|[^"])*")|(\'(?:\\\\\'|[^\'])*\')|(/(?:\\\\/|[^/])*/[a-zA-Z]*)|(#.*#)|([' + special + '])|([^\\s' + special + '](?:\\s*[^\\s' + special + ']+)*)|\\s*');
 
-  export default function(types, string: any, options): any{
+  export default function(types: any, string, options: any){
     var tokens: any, node;
     options == null && (options = {});
     if (!options.explicit && types.length === 1 && types[0].type === 'String') {

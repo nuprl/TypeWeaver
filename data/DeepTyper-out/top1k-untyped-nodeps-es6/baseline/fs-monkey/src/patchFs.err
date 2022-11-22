@@ -39,11 +39,11 @@ Stack: Error: Error replacing tree: The children of the old and new trees were e
     at doManipulation (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2294:13)
     at insertIntoParentTextRange (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2319:5)
     at VariableDeclaration.setType (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:10002:13)
-    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:215:33)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:217:33)
     at VariableDeclarationList.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
-    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:299:18)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:305:18)
     at VariableStatement.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
-    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:299:18)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:305:18)
     at Block.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37) {
   filePath: '/mnt/data/mhyee/not-type-inference/data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts',
   oldText: "import {fsProps, fsAsyncMethods, fsSyncMethods} from './util/lists';\n" +

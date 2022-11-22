@@ -55,7 +55,7 @@ Caseless.prototype.del = function (name: string) {
   return changed === 0 ? true : deleted
 }
 
-export default function (dict): string[] {return new Caseless(dict)};
+export default function (dict: string[]) {return new Caseless(dict)};
 
 export const httpify: boolean = function (resp: any, headers: any) {
   var c: any = new Caseless(headers)

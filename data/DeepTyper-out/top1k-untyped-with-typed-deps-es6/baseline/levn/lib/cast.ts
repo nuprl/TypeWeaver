@@ -319,7 +319,7 @@
     throw new Error("Value " + JSON.stringify(node) + " does not type check against " + JSON.stringify(types) + ".");
   }
 
-  export default function(node: any, types: any, options): any{
+  export default function(node: any, types: any, options: any){
     if (!options.explicit && types.length === 1 && types[0].type === 'String') {
       return node;
     }

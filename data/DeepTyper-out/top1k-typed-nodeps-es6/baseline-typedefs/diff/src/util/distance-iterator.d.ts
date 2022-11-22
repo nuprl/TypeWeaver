@@ -1,1 +1,1 @@
-export default function (start: boolean, minLine: boolean, maxLine: any): number;
+export default function (start: number, minLine: boolean, maxLine: boolean): () => boolean;

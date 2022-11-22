@@ -1,1 +1,1 @@
-export default function (thePath: string, potentialParent: any): string;
+export default function (thePath: string, potentialParent: string): boolean;

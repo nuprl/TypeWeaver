@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-export default function(str: any, options): any {
+export default function(str: any, options: any) {
   options = options || {};
   if (str == null) {
     return str;

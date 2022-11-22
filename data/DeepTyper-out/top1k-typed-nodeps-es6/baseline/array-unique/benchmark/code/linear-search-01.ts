@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(arr): any[] {
+export default function(arr: any[]) {
   var set = [];
 
   for (var i = 0, len = arr.length; i < len; i++) {

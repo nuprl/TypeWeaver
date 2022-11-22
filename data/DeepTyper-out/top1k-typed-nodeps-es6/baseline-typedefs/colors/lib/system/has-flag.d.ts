@@ -1,1 +1,1 @@
-export default function (flag: any, argv: any): any;
+export default function (flag: any, argv: any): boolean;

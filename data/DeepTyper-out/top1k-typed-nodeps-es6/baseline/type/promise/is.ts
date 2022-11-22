@@ -7,7 +7,7 @@ import isPrototype from '../prototype/is';
 var objectToString: string = Object.prototype.toString
   , objectTaggedString = objectToString.call(Promise.resolve());
 
-export default function (value): any {
+export default function (value: any) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common Promise interface)

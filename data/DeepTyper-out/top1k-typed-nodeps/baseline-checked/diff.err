@@ -55,7 +55,8 @@ src/patch/apply.ts(24,28): error TS2339: Property 'fuzzFactor' does not exist on
 src/patch/apply.ts(37,29): error TS2339: Property 'length' does not exist on type 'number'.
 src/patch/apply.ts(38,27): error TS2339: Property 'length' does not exist on type 'number'.
 src/patch/apply.ts(38,45): error TS2339: Property 'substr' does not exist on type 'number'.
-src/patch/apply.ts(63,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+src/patch/apply.ts(63,9): error TS2322: Type '() => boolean' is not assignable to type 'number'.
+src/patch/apply.ts(63,52): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
 src/patch/apply.ts(65,53): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 src/patch/apply.ts(90,29): error TS2339: Property 'length' does not exist on type 'number'.
@@ -125,10 +126,8 @@ src/patch/parse.ts(35,11): error TS2339: Property 'hunks' does not exist on type
 src/patch/parse.ts(43,15): error TS2339: Property 'hunks' does not exist on type '{}'.
 src/patch/parse.ts(44,34): error TS2339: Property 'strict' does not exist on type '{}'.
 src/patch/parse.ts(136,17): error TS2339: Property 'strict' does not exist on type '{}'.
-src/util/distance-iterator.ts(10,3): error TS2322: Type '() => boolean' is not assignable to type 'number'.
-src/util/distance-iterator.ts(20,11): error TS2365: Operator '+' cannot be applied to types 'boolean' and 'number'.
+src/util/distance-iterator.ts(20,11): error TS2365: Operator '<=' cannot be applied to types 'number' and 'boolean'.
 src/util/distance-iterator.ts(21,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 src/util/distance-iterator.ts(34,11): error TS2365: Operator '<=' cannot be applied to types 'boolean' and 'number'.
-src/util/distance-iterator.ts(34,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/distance-iterator.ts(35,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 

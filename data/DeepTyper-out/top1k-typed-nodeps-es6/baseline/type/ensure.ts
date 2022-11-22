@@ -11,7 +11,7 @@ var assign: void = function (target: any, source: any) {
 	}
 };
 
-export default function (validationDatum1/*, ...validationDatumN, options */): any {
+export default function (validationDatum1: any/*, ...validationDatumN, options */) {
 	var validationData: any[] = [validationDatum1];
 	var globalOptions: any;
 	if (arguments.length > 1) {

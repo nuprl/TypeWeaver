@@ -1,4 +1,4 @@
-export default function (_require): any {
+export default function (_require: any) {
   _require = _require || require
   var main: any = _require.main
   if (main && isIISNode(main)) return handleIISNode(main)

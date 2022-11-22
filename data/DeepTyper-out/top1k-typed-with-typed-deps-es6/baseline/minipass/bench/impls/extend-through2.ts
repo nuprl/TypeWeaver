@@ -1,6 +1,6 @@
 import through2 from 'through2';
 
-export default function (opts): any {
+export default function (opts: any) {
   if (opts.objectMode)
     return through2.obj(func)
   s = through2(func)

@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function (arr): any {
+export default function (arr: any) {
   return flat(arr, []);
 };
 

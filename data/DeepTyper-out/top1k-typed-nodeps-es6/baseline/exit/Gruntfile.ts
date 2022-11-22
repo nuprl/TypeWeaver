@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(grunt): IGrunt {
+export default function(grunt: IGrunt) {
 
   // Project configuration.
   grunt.initConfig({

@@ -1,7 +1,7 @@
 /* eslint-disable babel/new-cap, xo/throw-new-error */
 'use strict';
 
-export default function (str: number, pos): string {
+export default function (str: string, pos: number) {
 	if (str === null || str === undefined) {
 		throw TypeError();
 	}
