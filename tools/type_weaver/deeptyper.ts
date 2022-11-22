@@ -252,13 +252,17 @@ export default class DeepTyper {
 
                 handleFunction(funDecl, tokens, (types: string[]) => {
                     // Discard the "undefined" prediction for the "function" token
-                    const [_, retType, ...paramTypes]: string[] = types;
-                    if (retType) {
-                        funDecl.setReturnType(retType);
+                    types.shift();
+                    if (funName) {
+                        const retType: string = types[0];
+                        types.shift();
+                        if (retType) {
+                            funDecl.setReturnType(retType);
+                        }
                     }
                     params.forEach((p, i) => {
-                        if (paramTypes[i]) {
-                            p.setType(paramTypes[i]);
+                        if (types[i]) {
+                            p.setType(types[i]);
                         }
                     });
                 });
