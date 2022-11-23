@@ -245,9 +245,7 @@ def compute_accuracy(data_dir, debug = False):
     accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
 
     print("Computing accuracy per package, for each system and dataset...")
-    datasets = sorted([d.parts[-1]
-                       for d in Path(data_dir, "original").iterdir()
-                       if not "untyped" in str(d) and str(d).endswith("es6")])
+    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
     ground_truth = Path(data_dir, "groundtruth")
 
     with open(accuracy_csv, "w") as file:
@@ -255,8 +253,10 @@ def compute_accuracy(data_dir, debug = False):
         for s in SYSTEMS.keys():
             print(f"  {s}...")
             for d in datasets:
-                print(f"    {d}...")
                 ts_dataset = Path(data_dir, f"{s}-out", d, "baseline-typedefs")
+                if not ts_dataset.exists():
+                    continue
+                print(f"    {d}...")
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
                 for p in packages:
