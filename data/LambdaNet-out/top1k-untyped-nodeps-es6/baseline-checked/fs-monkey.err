@@ -26,6 +26,7 @@ src/patchFs.ts(38,19): error TS2339: Property '_toUnixTimestamp' does not exist 
 src/patchFs.ts(52,33): error TS2304: Cannot find name 'Void'.
 src/patchRequire.ts(15,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/patchRequire.ts(37,124): error TS2304: Cannot find name 'Void'.
+src/patchRequire.ts(37,124): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/patchRequire.ts(44,33): error TS2339: Property 'readFileSync' does not exist on type 'object'.
 src/patchRequire.ts(48,33): error TS2339: Property 'realpathSync' does not exist on type 'object'.
 src/patchRequire.ts(52,33): error TS2339: Property 'statSync' does not exist on type 'object'.

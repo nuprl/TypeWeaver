@@ -1,21 +1,23 @@
+lib/parser.ts(13,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Parser' must be of type 'any', but here has type '{ parseHeader: (header: Header) => any; serializeParams: (name: String, params: Object) => string; }'.
 lib/parser.ts(14,33): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
 lib/parser.ts(29,26): error TS2339: Property 'match' does not exist on type 'number'.
 lib/parser.ts(83,18): error TS2538: Type 'String' cannot be used as an index type.
 lib/parser.ts(85,16): error TS2538: Type 'String' cannot be used as an index type.
 lib/parser.ts(96,23): error TS2538: Type 'String' cannot be used as an index type.
+lib/pipeline/cell.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Cell' must be of type 'any', but here has type '(tuple: Tuple) => void'.
 lib/pipeline/cell.ts(6,28): error TS2304: Cannot find name 'Tuple'.
 lib/pipeline/functor.ts(5,33): error TS2304: Cannot find name 'Session'.
 lib/pipeline/functor.ts(5,51): error TS2304: Cannot find name 'Method'.
+lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type '(session: Session, method: Method) => void'.
+lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type '(session: Session, method: Method) => void'.
 lib/pipeline/functor.ts(31,11): error TS2447: The '^' operator is not allowed for boolean types. Consider using '!==' instead.
 lib/pipeline/functor.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
-lib/pipeline/index.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Cell' must be of type '(tuple: Tuple) => void', but here has type 'any'.
 lib/pipeline/index.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Pipeline' must be of type 'any', but here has type '(sessions: Session[]) => void'.
 lib/pipeline/index.ts(6,35): error TS2304: Cannot find name 'Session'.
 lib/pipeline/index.ts(7,50): error TS2304: Cannot find name 'Session'.
 lib/pipeline/index.ts(39,66): error TS2304: Cannot find name 'Message'.
 lib/pipeline/pledge.ts(12,29): error TS2304: Cannot find name 'List'.
 lib/pipeline/ring_buffer.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'RingBuffer' must be of type 'any', but here has type '(bufferSize: number) => void'.
-lib/websocket_extensions.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Parser' must be of type '{ parseHeader: (header: Header) => any; serializeParams: (name: String, params: Object) => string; }', but here has type 'any'.
 lib/websocket_extensions.ts(15,12): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type '() => void'.
 lib/websocket_extensions.ts(18,22): error TS2304: Cannot find name 'Extension'.
 lib/websocket_extensions.ts(38,41): error TS2304: Cannot find name 'Extension'.

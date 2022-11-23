@@ -2,6 +2,8 @@ lib/CodeNode.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'getN
 lib/CodeNode.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getUnfinishedLine'.
 lib/CodeNode.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'CodeNode'.
 lib/CodeNode.ts(12,8): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
+lib/CodeNode.ts(16,14): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
 lib/CodeNode.ts(16,28): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
 lib/CodeNode.ts(20,15): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
 lib/CodeNode.ts(24,47): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
@@ -9,8 +11,10 @@ lib/CodeNode.ts(27,69): error TS2339: Property 'generatedCode' does not exist on
 lib/CodeNode.ts(35,70): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
 lib/CodeNode.ts(45,8): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
 lib/CodeNode.ts(49,41): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
+lib/CodeNode.ts(50,14): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+lib/CodeNode.ts(58,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/CodeNode.ts(59,9): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(59,36): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
 lib/MappingsContext.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'MappingsContext'.
 lib/MappingsContext.ts(9,8): error TS2339: Property 'sourcesIndices' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(10,8): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
@@ -45,9 +49,9 @@ lib/SingleLineNode.ts(33,12): error TS2339: Property 'generatedCode' does not ex
 lib/SingleLineNode.ts(35,30): error TS2339: Property '_numberOfLines' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(36,63): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(36,76): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(39,31): error TS2339: Property 'encode' does not exist on type 'any[]'.
-lib/SingleLineNode.ts(40,25): error TS2339: Property 'encode' does not exist on type 'any[]'.
-lib/SingleLineNode.ts(41,25): error TS2339: Property 'encode' does not exist on type 'any[]'.
+lib/SingleLineNode.ts(39,31): error TS2339: Property 'encode' does not exist on type 'string'.
+lib/SingleLineNode.ts(40,25): error TS2339: Property 'encode' does not exist on type 'string'.
+lib/SingleLineNode.ts(41,25): error TS2339: Property 'encode' does not exist on type 'string'.
 lib/SingleLineNode.ts(41,37): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(44,46): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(45,108): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
@@ -85,9 +89,12 @@ lib/SourceListMap.ts(27,28): error TS2351: This expression is not constructable.
 lib/SourceListMap.ts(28,19): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(28,47): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(28,61): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
+lib/SourceListMap.ts(28,93): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/SourceListMap.ts(29,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(29,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(31,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
+lib/SourceListMap.ts(31,28): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
 lib/SourceListMap.ts(34,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(47,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(47,31): error TS2351: This expression is not constructable.
@@ -98,10 +105,14 @@ lib/SourceListMap.ts(48,61): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(49,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(49,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(51,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
+lib/SourceListMap.ts(51,31): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
 lib/SourceListMap.ts(54,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
+lib/SourceListMap.ts(66,39): error TS2749: 'CodeNode' refers to a value, but is being used as a type here. Did you mean 'typeof CodeNode'?
+lib/SourceListMap.ts(67,55): error TS2749: 'CodeNode' refers to a value, but is being used as a type here. Did you mean 'typeof CodeNode'?
 lib/SourceListMap.ts(72,41): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
-lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
+lib/SourceListMap.ts(78,23): error TS2749: 'CodeNode' refers to a value, but is being used as a type here. Did you mean 'typeof CodeNode'?
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(97,31): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(100,33): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
@@ -134,9 +145,9 @@ lib/SourceNode.ts(39,12): error TS2339: Property 'generatedCode' does not exist 
 lib/SourceNode.ts(41,30): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(42,63): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(42,76): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(45,31): error TS2339: Property 'encode' does not exist on type 'any[]'.
-lib/SourceNode.ts(46,25): error TS2339: Property 'encode' does not exist on type 'any[]'.
-lib/SourceNode.ts(47,25): error TS2339: Property 'encode' does not exist on type 'any[]'.
+lib/SourceNode.ts(45,31): error TS2339: Property 'encode' does not exist on type 'string'.
+lib/SourceNode.ts(46,25): error TS2339: Property 'encode' does not exist on type 'string'.
+lib/SourceNode.ts(47,25): error TS2339: Property 'encode' does not exist on type 'string'.
 lib/SourceNode.ts(47,37): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(50,46): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(51,108): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
@@ -166,6 +177,7 @@ lib/base64-vlq.ts(45,12): error TS2345: Argument of type '(ch: any[], index: str
 lib/base64-vlq.ts(46,18): error TS2538: Type 'any[]' cannot be used as an index type.
 lib/base64-vlq.ts(54,8): error TS2339: Property 'encode' does not exist on type 'object'.
 lib/base64-vlq.ts(64,8): error TS2339: Property 'decode' does not exist on type 'object'.
+lib/base64-vlq.ts(64,56): error TS2749: 'CodeNode' refers to a value, but is being used as a type here. Did you mean 'typeof CodeNode'?
 lib/base64-vlq.ts(129,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/base64-vlq.ts(139,23): error TS2339: Property 'encode' does not exist on type 'object'.
 lib/base64-vlq.ts(149,78): error TS2304: Cannot find name 'Void'.
@@ -176,14 +188,19 @@ lib/fromStringWithSourceMap.ts(7,7): error TS2451: Cannot redeclare block-scoped
 lib/fromStringWithSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'SourceNode'.
 lib/fromStringWithSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'CodeNode'.
 lib/fromStringWithSourceMap.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'SourceListMap'.
+lib/fromStringWithSourceMap.ts(10,22): error TS2749: 'SourceListMap' refers to a value, but is being used as a type here. Did you mean 'typeof SourceListMap'?
+lib/fromStringWithSourceMap.ts(10,22): error TS4025: Exported variable 'SourceListMap' has or is using private name 'SourceListMap'.
 lib/fromStringWithSourceMap.ts(12,79): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(13,30): error TS2339: Property 'sources' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(14,37): error TS2339: Property 'sourcesContent' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(15,30): error TS2339: Property 'mappings' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(22,43): error TS2304: Cannot find name 'Void'.
+lib/fromStringWithSourceMap.ts(23,44): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+lib/fromStringWithSourceMap.ts(24,16): error TS2551: Property 'addGeneratedCode' does not exist on type 'SingleLineNode'. Did you mean 'mapGeneratedCode'?
 lib/fromStringWithSourceMap.ts(25,51): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/fromStringWithSourceMap.ts(26,16): error TS2551: Property 'addGeneratedCode' does not exist on type 'SingleLineNode'. Did you mean 'mapGeneratedCode'?
-lib/fromStringWithSourceMap.ts(29,4): error TS2741: Property 'mergeSingleLineNode' is missing in type 'CodeNode' but required in type 'SingleLineNode'.
+lib/fromStringWithSourceMap.ts(29,22): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
 lib/fromStringWithSourceMap.ts(33,52): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(33,80): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(33,115): error TS2304: Cannot find name 'Void'.
@@ -194,21 +211,20 @@ lib/fromStringWithSourceMap.ts(41,22): error TS2351: This expression is not cons
   Type 'String' has no construct signatures.
 lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'SingleLineNode'.
-lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
 lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'object'.
-lib/fromStringWithSourceMap.ts(70,14): error TS2339: Property 'decode' does not exist on type 'any[]'.
+lib/fromStringWithSourceMap.ts(70,14): error TS2339: Property 'decode' does not exist on type 'string'.
 lib/fromStringWithSourceMap.ts(70,29): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(72,15): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(74,14): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(75,12): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(75,27): error TS2339: Property 'rest' does not exist on type 'object'.
-lib/fromStringWithSourceMap.ts(79,13): error TS2339: Property 'decode' does not exist on type 'any[]'.
+lib/fromStringWithSourceMap.ts(79,13): error TS2339: Property 'decode' does not exist on type 'string'.
 lib/fromStringWithSourceMap.ts(79,28): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(80,37): error TS2339: Property 'value' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(84,14): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(84,30): error TS2339: Property 'rest' does not exist on type 'object'.
-lib/fromStringWithSourceMap.ts(85,14): error TS2339: Property 'decode' does not exist on type 'any[]'.
+lib/fromStringWithSourceMap.ts(85,14): error TS2339: Property 'decode' does not exist on type 'string'.
 lib/fromStringWithSourceMap.ts(85,29): error TS2339: Property 'rest' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(86,27): error TS2339: Property 'value' does not exist on type 'object'.
 lib/fromStringWithSourceMap.ts(92,14): error TS2339: Property 'rest' does not exist on type 'object'.

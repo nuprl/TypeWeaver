@@ -1,0 +1,12 @@
+declare const colorString: any;
+declare const convert: any;
+declare const skippedModels: string[];
+declare const hashedModelKeys: {};
+declare const limiters: {};
+declare function Color(object: any, model: any): any;
+declare function roundTo(number: any, places: number): number;
+declare function roundToPlace(places: any): number;
+declare function getset(model: any, channel: string, modifier: any): any;
+declare function maxfn(max: number): number;
+declare function assertArray(value: any): any;
+declare function zeroArray(array: any[], length: number): any;

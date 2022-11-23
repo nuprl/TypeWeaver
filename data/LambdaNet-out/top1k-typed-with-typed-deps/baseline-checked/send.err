@@ -4,6 +4,7 @@ index.ts(41,30): error TS2339: Property 'resolve' does not exist on type 'string
 index.ts(42,23): error TS2339: Property 'sep' does not exist on type 'string'.
 index.ts(84,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(96,67): error TS2304: Cannot find name 'Void'.
+index.ts(96,67): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(99,7): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(105,29): error TS2339: Property 'acceptRanges' does not exist on type 'HTMLElement'.
 index.ts(106,20): error TS2339: Property 'acceptRanges' does not exist on type 'HTMLElement'.
@@ -209,6 +210,7 @@ index.ts(881,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(882,9): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
 index.ts(893,38): error TS2304: Cannot find name 'Void'.
+index.ts(893,38): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(894,39): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 index.ts(897,9): error TS2339: Property 'removeHeader' does not exist on type 'object'.
 index.ts(945,38): error TS2339: Property 'start' does not exist on type 'object'.
@@ -227,5 +229,6 @@ index.ts(1049,19): error TS2339: Property '_header' does not exist on type 'obje
 index.ts(1050,11): error TS2339: Property 'headersSent' does not exist on type 'object'.
 index.ts(1081,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(1136,53): error TS2304: Cannot find name 'Void'.
+index.ts(1136,53): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(1141,9): error TS2339: Property 'setHeader' does not exist on type 'object'.
 

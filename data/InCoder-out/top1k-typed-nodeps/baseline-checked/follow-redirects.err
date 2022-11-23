@@ -9,7 +9,9 @@ index.ts(28,29): error TS2554: Expected 3 arguments, but got 2.
 index.ts(32,34): error TS2554: Expected 3 arguments, but got 2.
 index.ts(36,26): error TS2554: Expected 3 arguments, but got 2.
 index.ts(42,39): error TS2304: Cannot find name 'RequestOptions'.
+index.ts(42,39): error TS4078: Parameter 'options' of exported function has or is using private name 'RequestOptions'.
 index.ts(42,74): error TS2304: Cannot find name 'ResponseCallback'.
+index.ts(42,74): error TS4078: Parameter 'responseCallback' of exported function has or is using private name 'ResponseCallback'.
 index.ts(79,11): error TS2554: Expected 1 arguments, but got 0.
 index.ts(107,24): error TS2554: Expected 1 arguments, but got 0.
 index.ts(142,25): error TS2538: Type 'String' cannot be used as an index type.
@@ -32,6 +34,7 @@ index.ts(499,9): error TS2740: Type '{ protocol: any; hostname: any; hash: any; 
 index.ts(504,19): error TS2322: Type '{ protocol: string; }' is not assignable to type 'Request'.
   Object literal may only specify known properties, and 'protocol' does not exist in type 'Request'.
 index.ts(546,34): error TS2304: Cannot find name 'UrlObject'.
+index.ts(546,34): error TS4078: Parameter 'urlObject' of exported function has or is using private name 'UrlObject'.
 index.ts(560,13): error TS2339: Property 'port' does not exist on type '{ protocol: any; hostname: any; hash: any; search: any; pathname: any; path: any; href: any; }'.
 index.ts(587,31): error TS2351: This expression is not constructable.
   Not all constituents of type 'Error | ErrorConstructor' are constructable.

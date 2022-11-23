@@ -1,4 +1,5 @@
 example/index.ts(10,10): error TS2304: Cannot find name 'JestApi'.
+example/index.ts(10,10): error TS4025: Exported variable 't' has or is using private name 'JestApi'.
 example/index.ts(14,22): error TS2345: Argument of type '(resolve: void) => NodeJS.Timeout' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
@@ -11,6 +12,7 @@ example/index.ts(14,52): error TS2769: No overload matches this call.
     Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example/index.ts(21,10): error TS2393: Duplicate function implementation.
 index.ts(3,25): error TS2304: Cannot find name 'Options'.
+index.ts(3,25): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 index.ts(5,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(19,10): error TS2393: Duplicate function implementation.
 index.ts(29,14): error TS2304: Cannot find name 'Job'.

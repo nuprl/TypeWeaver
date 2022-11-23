@@ -3,6 +3,7 @@ examples.ts(11,3): error TS2322: Type '(string: any) => boolean' is not assignab
 examples.ts(17,24): error TS2322: Type '{ (...args: any[]): void; default: any; }' is not assignable to type 'void'.
 index.ts(13,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(14,24): error TS2304: Cannot find name 'IChunkifyOptions'.
+index.ts(14,24): error TS4025: Exported variable 'DEFAULT_OPTIONS' has or is using private name 'IChunkifyOptions'.
 index.ts(62,18): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 index.ts(62,40): error TS2349: This expression is not callable.

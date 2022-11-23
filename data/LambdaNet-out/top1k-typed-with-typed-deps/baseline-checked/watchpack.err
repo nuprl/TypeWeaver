@@ -274,12 +274,14 @@ lib/DirectoryWatcher.ts(763,9): error TS2339: Property 'parentWatcher' does not 
 lib/DirectoryWatcher.ts(764,9): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(766,8): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(773,45): error TS2304: Cannot find name 'Void'.
+lib/DirectoryWatcher.ts(773,45): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/DirectoryWatcher.ts(774,12): error TS2339: Property 'accuracy' does not exist on type 'object'.
 lib/DirectoryWatcher.ts(775,9): error TS2339: Property 'safeTime' does not exist on type 'object'.
 lib/DirectoryWatcher.ts(775,26): error TS2339: Property 'safeTime' does not exist on type 'object'.
 lib/DirectoryWatcher.ts(775,43): error TS2339: Property 'accuracy' does not exist on type 'object'.
 lib/DirectoryWatcher.ts(776,9): error TS2339: Property 'accuracy' does not exist on type 'object'.
 lib/DirectoryWatcher.ts(780,43): error TS2304: Cannot find name 'Void'.
+lib/DirectoryWatcher.ts(780,43): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/LinkResolver.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/LinkResolver.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/LinkResolver.ts(11,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
@@ -434,6 +436,7 @@ lib/watchpack.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Eve
 lib/watchpack.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'watchEventSource'.
 lib/watchpack.ts(14,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/watchpack.ts(16,68): error TS2304: Cannot find name 'Void'.
+lib/watchpack.ts(16,68): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/watchpack.ts(19,12): error TS2339: Property 'has' does not exist on type 'RecursiveWatcher'.
 lib/watchpack.ts(19,18): error TS2339: Property 'directoryWatcher' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(20,8): error TS2554: Expected 2 arguments, but got 1.
@@ -568,6 +571,7 @@ playground/watch-folder.ts(3,5): error TS2451: Cannot redeclare block-scoped var
 playground/watch-folder.ts(4,5): error TS2300: Duplicate identifier 'Watchpack'.
 playground/watch-folder.ts(6,27): error TS2339: Property 'join' does not exist on type 'string'.
 playground/watch-folder.ts(8,70): error TS2304: Cannot find name 'Void'.
+playground/watch-folder.ts(8,70): error TS4060: Return type of exported function has or is using private name 'Void'.
 playground/watch-folder.ts(9,6): error TS2740: Type 'Watchpack' is missing the following properties from type 'DirectoryWatcher': createWatcher, forEachWatcher, setMissing, setFileTime, and 11 more.
 playground/watch-folder.ts(13,4): error TS2339: Property 'on' does not exist on type 'DirectoryWatcher'.
 playground/watch-folder.ts(14,36): error TS2339: Property 'relative' does not exist on type 'string'.

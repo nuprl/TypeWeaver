@@ -21,6 +21,7 @@ lib/ec.ts(57,26): error TS2749: 'ECFieldElementFp' refers to a value, but is bei
 lib/ec.ts(71,23): error TS2339: Property 'toBigInteger' does not exist on type 'BigInteger'.
 lib/ec.ts(84,15): error TS2339: Property 'shiftLeft' does not exist on type 'number'.
 lib/ec.ts(95,27): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(95,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'CurveFp'.
 lib/ec.ts(128,31): error TS2304: Cannot find name 'PointFp'.
 lib/ec.ts(163,9): error TS2339: Property 'isInfinity' does not exist on type 'BigInteger'.
 lib/ec.ts(166,13): error TS2339: Property 'y' does not exist on type 'BigInteger'.

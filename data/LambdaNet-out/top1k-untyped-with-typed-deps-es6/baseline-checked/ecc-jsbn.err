@@ -40,6 +40,7 @@ index.ts(56,13): error TS2339: Property 'getX' does not exist on type 'HTMLEleme
 lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
 lib/ec.ts(16,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(27,50): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(27,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(35,30): error TS2339: Property 'q' does not exist on type 'string'.
 lib/ec.ts(35,56): error TS2339: Property 'x' does not exist on type 'string'.
 lib/ec.ts(43,10): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -57,6 +58,7 @@ lib/ec.ts(84,23): error TS2339: Property 'shiftLeft' does not exist on type 'str
 lib/ec.ts(85,11): error TS2339: Property 'compareTo' does not exist on type 'string'.
 lib/ec.ts(86,15): error TS2339: Property 'subtract' does not exist on type 'string'.
 lib/ec.ts(95,69): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(95,69): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(110,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(119,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(130,39): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
@@ -132,6 +134,7 @@ lib/ec.ts(318,15): error TS2339: Property 'add' does not exist on type 'HTMLElem
 lib/ec.ts(321,13): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
 lib/ec.ts(322,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/ec.ts(345,56): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(345,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(349,19): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(353,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).

@@ -1,7 +1,9 @@
 benchmark/etag.ts(39,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 benchmark/modified.ts(33,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 index.ts(33,29): error TS2503: Cannot find namespace 'http'.
+index.ts(33,29): error TS4078: Parameter 'reqHeaders' of exported function has or is using private name 'http'.
 index.ts(33,55): error TS2503: Cannot find namespace 'http'.
+index.ts(33,55): error TS4078: Parameter 'resHeaders' of exported function has or is using private name 'http'.
 index.ts(95,38): error TS2345: Argument of type 'string | Date' is not assignable to parameter of type 'string'.
   Type 'Date' is not assignable to type 'string'.
 

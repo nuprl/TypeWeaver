@@ -37,6 +37,7 @@ src/convert/xml.ts(29,3): error TS2322: Type 'string' is not assignable to type 
 src/diff/array.ts(3,25): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 src/diff/array.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/base.ts(1,33): error TS2304: Cannot find name 'Void'.
+src/diff/base.ts(1,33): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/diff/base.ts(5,28): error TS2339: Property 'callback' does not exist on type '{}'.
 src/diff/base.ts(33,16): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
 src/diff/base.ts(34,55): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
@@ -120,6 +121,7 @@ src/patch/apply.ts(105,46): error TS2339: Property 'lines' does not exist on typ
 src/patch/apply.ts(105,66): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/apply.ts(128,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 src/patch/apply.ts(132,64): error TS2304: Cannot find name 'Void'.
+src/patch/apply.ts(132,64): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/patch/apply.ts(141,22): error TS2339: Property 'complete' does not exist on type 'any[]'.
 src/patch/apply.ts(144,13): error TS2339: Property 'loadFile' does not exist on type 'any[]'.
 src/patch/apply.ts(146,24): error TS2339: Property 'complete' does not exist on type 'any[]'.
@@ -170,6 +172,7 @@ src/patch/create.ts(132,30): error TS2339: Property 'lines' does not exist on ty
 src/patch/create.ts(139,72): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/patch/create.ts(143,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/patch/merge.ts(6,46): error TS2304: Cannot find name 'Void'.
+src/patch/merge.ts(6,46): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/patch/merge.ts(7,10): error TS2339: Property 'oldLines' does not exist on type '{}'.
 src/patch/merge.ts(7,20): error TS2339: Property 'newLines' does not exist on type '{}'.
 src/patch/merge.ts(7,57): error TS2339: Property 'lines' does not exist on type 'string'.

@@ -8,23 +8,13 @@ lib/SymbolTree.ts(162,25): error TS2740: Type 'SymbolTree' is missing the follow
 lib/SymbolTree.ts(276,30): error TS2339: Property 'setCachedIndex' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(349,25): error TS2322: Type 'true | Function' is not assignable to type 'string'.
   Type 'boolean' is not assignable to type 'string'.
-lib/SymbolTree.ts(371,28): error TS2351: This expression is not constructable.
-  Type 'SymbolTree' has no construct signatures.
-lib/SymbolTree.ts(375,48): error TS2339: Property 'PREV' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(375,68): error TS2339: Property 'NEXT' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(390,28): error TS2351: This expression is not constructable.
-  Type 'SymbolTree' has no construct signatures.
-lib/SymbolTree.ts(394,38): error TS2339: Property 'PREV' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(409,28): error TS2351: This expression is not constructable.
-  Type 'SymbolTree' has no construct signatures.
-lib/SymbolTree.ts(413,38): error TS2339: Property 'NEXT' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(428,28): error TS2351: This expression is not constructable.
-  Type 'SymbolTree' has no construct signatures.
-lib/SymbolTree.ts(432,38): error TS2551: Property 'PARENT' does not exist on type 'SymbolTree'. Did you mean 'parent'?
-lib/SymbolTree.ts(454,28): error TS2351: This expression is not constructable.
-  Type 'SymbolTree' has no construct signatures.
-lib/SymbolTree.ts(458,48): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
-lib/SymbolTree.ts(458,73): error TS2551: Property 'FOLLOWING' does not exist on type 'SymbolTree'. Did you mean 'following'?
+lib/SymbolTree.ts(375,48): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(375,68): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(394,38): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(413,38): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(432,38): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(458,48): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(458,73): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(475,69): error TS2339: Property 'parent' does not exist on type 'object'.
 lib/SymbolTree.ts(484,54): error TS2339: Property 'getCachedIndex' does not exist on type 'object'.
 lib/SymbolTree.ts(493,32): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
@@ -91,11 +81,9 @@ lib/TreeIterator.ts(30,21): error TS2367: This condition will always return 'fal
 lib/TreeIterator.ts(33,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/TreeIterator.ts(36,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/TreeIterator.ts(39,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-lib/TreeIterator.ts(53,36): error TS2339: Property 'prototype' does not exist on type 'SymbolTree'.
-lib/TreeIterator.ts(60,14): error TS2339: Property 'PREV' does not exist on type 'SymbolTree'.
-lib/TreeIterator.ts(61,14): error TS2339: Property 'NEXT' does not exist on type 'SymbolTree'.
-lib/TreeIterator.ts(62,14): error TS2551: Property 'PARENT' does not exist on type 'SymbolTree'. Did you mean 'parent'?
-lib/TreeIterator.ts(63,14): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
-lib/TreeIterator.ts(64,14): error TS2551: Property 'FOLLOWING' does not exist on type 'SymbolTree'. Did you mean 'following'?
-lib/TreeIterator.ts(67,28): error TS2339: Property 'prototype' does not exist on type 'SymbolTree'.
+lib/TreeIterator.ts(60,14): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(61,14): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(62,14): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(63,14): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(64,14): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
 

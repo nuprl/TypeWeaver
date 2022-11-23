@@ -259,14 +259,17 @@ lib/tmp.ts(35,36): error TS2339: Property 'os' does not exist on type 'object'.
 lib/tmp.ts(46,29): error TS2339: Property 'rmdirSync' does not exist on type 'string'.
 lib/tmp.ts(47,35): error TS2339: Property 'sync' does not exist on type 'any[]'.
 lib/tmp.ts(58,56): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(58,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(70,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(71,31): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(76,10): error TS2339: Property 'stat' does not exist on type 'string'.
 lib/tmp.ts(100,40): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(100,40): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(102,20): error TS2554: Expected 2 arguments, but got 1.
 lib/tmp.ts(107,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(111,10): error TS2339: Property 'statSync' does not exist on type 'string'.
 lib/tmp.ts(126,53): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(126,53): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(133,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(138,8): error TS2339: Property 'open' does not exist on type 'string'.
 lib/tmp.ts(138,38): error TS2339: Property 'mode' does not exist on type 'object'.
@@ -286,6 +289,7 @@ lib/tmp.ts(173,12): error TS2339: Property 'discardDescriptor' does not exist on
 lib/tmp.ts(174,8): error TS2339: Property 'closeSync' does not exist on type 'string'.
 lib/tmp.ts(181,57): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/tmp.ts(191,52): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(191,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(194,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/tmp.ts(198,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(203,8): error TS2339: Property 'mkdir' does not exist on type 'string'.
@@ -296,11 +300,13 @@ lib/tmp.ts(222,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argum
 lib/tmp.ts(225,6): error TS2339: Property 'mkdirSync' does not exist on type 'string'.
 lib/tmp.ts(229,62): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 lib/tmp.ts(240,60): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(240,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(242,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/tmp.ts(250,8): error TS2339: Property 'close' does not exist on type 'string'.
 lib/tmp.ts(251,10): error TS2551: Property 'unlink' does not exist on type 'string'. Did you mean 'link'?
 lib/tmp.ts(253,11): error TS2551: Property 'unlink' does not exist on type 'string'. Did you mean 'link'?
 lib/tmp.ts(262,43): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(262,43): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(265,28): error TS2339: Property 'closeSync' does not exist on type 'string'.
 lib/tmp.ts(271,10): error TS2339: Property 'unlinkSync' does not exist on type 'string'.
 lib/tmp.ts(297,9): error TS2322: Type 'Function' is not assignable to type 'string'.
@@ -324,6 +330,7 @@ lib/tmp.ts(349,13): error TS2322: Type 'true | ((next: object) => boolean)' is n
 lib/tmp.ts(355,19): error TS2367: This condition will always return 'false' since the types 'Function' and 'any[]' have no overlap.
 lib/tmp.ts(355,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'number' have no overlap.
 lib/tmp.ts(369,31): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(369,31): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(399,18): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 lib/tmp.ts(401,18): error TS2339: Property 'pseudoRandomBytes' does not exist on type 'Crypto'.
 lib/tmp.ts(404,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
@@ -341,6 +348,7 @@ lib/tmp.ts(489,10): error TS2339: Property 'postfix' does not exist on type 'HTM
 lib/tmp.ts(489,31): error TS2339: Property 'postfix' does not exist on type 'HTMLElement'.
 lib/tmp.ts(492,15): error TS2339: Property 'join' does not exist on type 'string'.
 lib/tmp.ts(502,59): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(502,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(504,11): error TS2339: Property 'tmpdir' does not exist on type 'HTMLElement'.
 lib/tmp.ts(506,34): error TS2339: Property 'tmpdir' does not exist on type 'HTMLElement'.
 lib/tmp.ts(509,29): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
@@ -384,6 +392,7 @@ lib/tmp.ts(556,17): error TS2339: Property 'resolve' does not exist on type 'str
 lib/tmp.ts(558,17): error TS2339: Property 'resolve' does not exist on type 'string'.
 lib/tmp.ts(558,30): error TS2339: Property 'join' does not exist on type 'string'.
 lib/tmp.ts(571,75): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(571,75): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(574,14): error TS2339: Property 'isAbsolute' does not exist on type 'string'.
 lib/tmp.ts(577,33): error TS2339: Property 'basename' does not exist on type 'string'.
 lib/tmp.ts(578,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
@@ -394,6 +403,7 @@ lib/tmp.ts(629,27): error TS2339: Property 'code' does not exist on type 'object
 lib/tmp.ts(629,49): error TS2339: Property 'code' does not exist on type 'object'.
 lib/tmp.ts(629,72): error TS2339: Property 'errno' does not exist on type 'object'.
 lib/tmp.ts(639,32): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(639,32): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/tmp.ts(651,15): error TS2339: Property 'resolve' does not exist on type 'string'.
 lib/tmp.ts(651,42): error TS2339: Property 'tmpdir' does not exist on type 'object'.
 lib/tmp.ts(651,55): error TS2339: Property 'tmpdir' does not exist on type 'string'.

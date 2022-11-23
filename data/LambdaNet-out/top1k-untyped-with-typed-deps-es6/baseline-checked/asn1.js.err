@@ -4,8 +4,8 @@ lib/asn1.ts(8,6): error TS2339: Property 'base' does not exist on type 'HTMLElem
 lib/asn1.ts(9,6): error TS2551: Property 'constants' does not exist on type 'HTMLElement'. Did you mean 'contains'?
 lib/asn1.ts(10,6): error TS2339: Property 'decoders' does not exist on type 'HTMLElement'.
 lib/asn1.ts(11,6): error TS2339: Property 'encoders' does not exist on type 'HTMLElement'.
-lib/asn1/api.ts(3,22): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/encoders/index.ts' is not a module.
-lib/asn1/api.ts(4,22): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/decoders/index.ts' is not a module.
+lib/asn1/api.ts(3,22): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/encoders/index.ts' is not a module.
+lib/asn1/api.ts(4,22): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/decoders/index.ts' is not a module.
 lib/asn1/api.ts(9,5): error TS2339: Property 'define' does not exist on type 'RegExp'.
 lib/asn1/api.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(13,48): error TS2304: Cannot find name 'Void'.
@@ -335,8 +335,9 @@ lib/asn1/constants/index.ts(9,28): error TS2345: Argument of type '(key: number)
     Type 'string' is not assignable to type 'number'.
 lib/asn1/constants/index.ts(21,11): error TS2339: Property 'der' does not exist on type 'RegExp'.
 lib/asn1/decoders/der.ts(5,10): error TS2459: Module '"../base/buffer"' declares 'DecoderBuffer' locally, but it is not exported.
-lib/asn1/decoders/der.ts(9,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
+lib/asn1/decoders/der.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/constants/der"' has no default export.
 lib/asn1/decoders/der.ts(11,38): error TS2304: Cannot find name 'Void'.
+lib/asn1/decoders/der.ts(11,38): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/asn1/decoders/der.ts(13,22): error TS2339: Property 'name' does not exist on type 'object'.
 lib/asn1/decoders/der.ts(17,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/decoders/der.ts(17,15): error TS2554: Expected 1 arguments, but got 0.
@@ -455,10 +456,12 @@ lib/asn1/decoders/der.ts(328,13): error TS2339: Property 'isError' does not exis
 lib/asn1/decoders/index.ts(5,10): error TS2339: Property 'der' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/index.ts(6,10): error TS2339: Property 'pem' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/pem.ts(7,38): error TS2304: Cannot find name 'Void'.
+lib/asn1/decoders/pem.ts(7,38): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/asn1/decoders/pem.ts(17,33): error TS2339: Property 'label' does not exist on type 'object'.
 lib/asn1/decoders/pem.ts(48,9): error TS2740: Type 'Buffer' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/asn1/encoders/der.ts(8,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
+lib/asn1/encoders/der.ts(8,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/constants/der"' has no default export.
 lib/asn1/encoders/der.ts(10,38): error TS2304: Cannot find name 'Void'.
+lib/asn1/encoders/der.ts(10,38): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/asn1/encoders/der.ts(12,22): error TS2339: Property 'name' does not exist on type 'object'.
 lib/asn1/encoders/der.ts(16,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
@@ -522,6 +525,7 @@ lib/asn1/encoders/der.ts(287,21): error TS2339: Property 'error' does not exist 
 lib/asn1/encoders/index.ts(5,10): error TS2339: Property 'der' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/index.ts(6,10): error TS2339: Property 'pem' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/pem.ts(6,38): error TS2304: Cannot find name 'Void'.
+lib/asn1/encoders/pem.ts(6,38): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/asn1/encoders/pem.ts(16,34): error TS2554: Expected 0 arguments, but got 1.
 lib/asn1/encoders/pem.ts(17,48): error TS2339: Property 'label' does not exist on type 'object'.
 lib/asn1/encoders/pem.ts(20,34): error TS2339: Property 'label' does not exist on type 'object'.

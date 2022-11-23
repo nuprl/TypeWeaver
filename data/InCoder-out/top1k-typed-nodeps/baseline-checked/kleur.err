@@ -2,6 +2,7 @@ bench/colors.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'chal
 bench/colors.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 bench/colors.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'kleur'.
 bench/colors.ts(60,23): error TS2304: Cannot find name 'Library'.
+bench/colors.ts(60,23): error TS4078: Parameter 'lib' of exported function has or is using private name 'Library'.
 bench/dryrun.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'color'.
 bench/load.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
 bench/load.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'kleur'.

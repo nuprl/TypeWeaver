@@ -1,6 +1,9 @@
 index.ts(3,27): error TS2304: Cannot find name 'ny'.
+index.ts(3,27): error TS4078: Parameter 'val' of exported function has or is using private name 'ny'.
 index.ts(13,46): error TS2304: Cannot find name 'T'.
+index.ts(13,46): error TS4078: Parameter 'target' of exported function has or is using private name 'T'.
 index.ts(13,69): error TS2304: Cannot find name 'T'.
+index.ts(13,69): error TS4078: Parameter 'source' of exported function has or is using private name 'T'.
 index.ts(14,16): error TS2339: Property 'concat' does not exist on type 'ArrayLike<T>'.
 index.ts(36,36): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.

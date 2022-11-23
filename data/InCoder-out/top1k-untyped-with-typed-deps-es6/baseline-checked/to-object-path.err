@@ -3,6 +3,7 @@ example.ts(6,23): error TS2304: Cannot find name 'AppOptions'.
 example.ts(14,32): error TS2554: Expected 1 arguments, but got 2.
 example.ts(22,11): error TS2554: Expected 1 arguments, but got 0.
 index.ts(12,38): error TS2304: Cannot find name 'ny'.
+index.ts(12,38): error TS4078: Parameter 'args' of exported function has or is using private name 'ny'.
 index.ts(13,7): error TS2367: This condition will always return 'true' since the types '"array"' and '"arguments"' have no overlap.
 index.ts(14,5): error TS2740: Type 'IArguments' is missing the following properties from type 'ny[]': pop, push, concat, join, and 27 more.
 index.ts(26,9): error TS2367: This condition will always return 'false' since the types '"number"' and '"arguments"' have no overlap.

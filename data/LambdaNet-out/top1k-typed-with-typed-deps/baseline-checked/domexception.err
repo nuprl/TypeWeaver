@@ -25,6 +25,7 @@ scripts/get-latest-platform-tests.ts(35,45): error TS2339: Property 'resolve' do
 scripts/get-latest-platform-tests.ts(40,21): error TS2339: Property 'stack' does not exist on type 'object'.
 webidl2js-wrapper.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
 webidl2js-wrapper.ts(6,70): error TS2304: Cannot find name 'Void'.
+webidl2js-wrapper.ts(6,70): error TS4060: Return type of exported function has or is using private name 'Void'.
 webidl2js-wrapper.ts(7,27): error TS2339: Property 'Error' does not exist on type 'object'.
 webidl2js-wrapper.ts(11,16): error TS2339: Property 'install' does not exist on type '{ new (message?: string, name?: string): DOMException; prototype: DOMException; readonly ABORT_ERR: number; readonly DATA_CLONE_ERR: number; readonly DOMSTRING_SIZE_ERR: number; ... 21 more ...; readonly WRONG_DOCUMENT_ERR: number; }'.
 webidl2js-wrapper.ts(12,38): error TS2339: Property 'DOMException' does not exist on type 'object'.

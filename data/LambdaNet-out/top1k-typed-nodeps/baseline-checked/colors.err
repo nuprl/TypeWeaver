@@ -84,6 +84,7 @@ lib/colors.ts(86,50): error TS2314: Generic type 'Promise<T>' requires 1 type ar
 lib/colors.ts(89,11): error TS2551: Property '_styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type 'HTMLElement'.
 lib/colors.ts(93,3): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
+lib/colors.ts(96,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'styles' must be of type 'object', but here has type 'Function'.
 lib/colors.ts(96,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/colors.ts(98,14): error TS2339: Property 'grey' does not exist on type 'object'.
 lib/colors.ts(98,32): error TS2339: Property 'gray' does not exist on type 'object'.
@@ -166,7 +167,6 @@ lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type '
 lib/maps/america.ts(6,29): error TS2339: Property 'white' does not exist on type 'object'.
 lib/maps/america.ts(7,29): error TS2339: Property 'blue' does not exist on type 'object'.
 lib/maps/zebra.ts(3,42): error TS2339: Property 'inverse' does not exist on type 'object'.
-lib/styles.ts(26,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'styles' must be of type 'Function', but here has type 'object'.
 lib/styles.ts(92,7): error TS2740: Type 'undefined[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/styles.ts(93,9): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
 lib/styles.ts(94,9): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
@@ -190,6 +190,7 @@ lib/system/supports-colors.ts(37,15): error TS2349: This expression is not calla
 lib/system/supports-colors.ts(41,20): error TS2339: Property 'FORCE_COLOR' does not exist on type 'HTMLElement'.
 lib/system/supports-colors.ts(42,21): error TS2339: Property 'FORCE_COLOR' does not exist on type 'HTMLElement'.
 lib/system/supports-colors.ts(45,41): error TS2304: Cannot find name 'Void'.
+lib/system/supports-colors.ts(45,41): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/system/supports-colors.ts(63,7): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/system/supports-colors.ts(63,31): error TS2349: This expression is not callable.

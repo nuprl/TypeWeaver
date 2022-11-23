@@ -2,9 +2,11 @@ examples/backnforth.ts(8,5): error TS2300: Duplicate identifier 'ProgressBar'.
 examples/backnforth.ts(10,28): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 examples/backnforth.ts(17,21): error TS2304: Cannot find name 'Void'.
+examples/backnforth.ts(17,21): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/backnforth.ts(18,7): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(19,11): error TS2339: Property 'curr' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(26,22): error TS2304: Cannot find name 'Void'.
+examples/backnforth.ts(26,22): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/backnforth.ts(27,7): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(28,11): error TS2339: Property 'curr' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(29,9): error TS2339: Property 'terminate' does not exist on type 'HTMLElement'.
@@ -44,24 +46,28 @@ examples/formats.ts(10,5): error TS2322: Type 'Timer' is not assignable to type 
 examples/formats.ts(12,7): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/formats.ts(13,11): error TS2339: Property 'complete' does not exist on type 'HTMLElement'.
 examples/formats.ts(19,18): error TS2304: Cannot find name 'Void'.
+examples/formats.ts(19,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/formats.ts(20,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 examples/formats.ts(26,7): error TS2322: Type 'Timer' is not assignable to type 'number'.
 examples/formats.ts(27,9): error TS2339: Property 'tick' does not exist on type 'object'.
 examples/formats.ts(28,13): error TS2339: Property 'complete' does not exist on type 'object'.
 examples/formats.ts(35,18): error TS2304: Cannot find name 'Void'.
+examples/formats.ts(35,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/formats.ts(36,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 examples/formats.ts(43,7): error TS2322: Type 'Timer' is not assignable to type 'number'.
 examples/formats.ts(44,9): error TS2339: Property 'tick' does not exist on type 'object'.
 examples/formats.ts(45,13): error TS2339: Property 'complete' does not exist on type 'object'.
 examples/formats.ts(52,18): error TS2304: Cannot find name 'Void'.
+examples/formats.ts(52,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/formats.ts(53,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 examples/formats.ts(57,7): error TS2322: Type 'Timer' is not assignable to type 'number'.
 examples/formats.ts(58,9): error TS2339: Property 'tick' does not exist on type 'object'.
 examples/formats.ts(59,13): error TS2339: Property 'complete' does not exist on type 'object'.
 examples/formats.ts(66,18): error TS2304: Cannot find name 'Void'.
+examples/formats.ts(66,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/formats.ts(67,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 examples/formats.ts(72,7): error TS2322: Type 'Timer' is not assignable to type 'number'.
@@ -98,6 +104,7 @@ examples/toolong.ts(18,7): error TS2339: Property 'tick' does not exist on type 
 examples/toolong.ts(20,12): error TS2339: Property 'complete' does not exist on type 'HTMLElement'.
 lib/node-progress.ts(45,10): error TS2300: Duplicate identifier 'ProgressBar'.
 lib/node-progress.ts(45,55): error TS2304: Cannot find name 'Void'.
+lib/node-progress.ts(45,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/node-progress.ts(46,25): error TS2339: Property 'stream' does not exist on type 'object'.
 lib/node-progress.ts(51,13): error TS2339: Property 'total' does not exist on type 'object'.
 lib/node-progress.ts(55,36): error TS2339: Property 'total' does not exist on type 'object'.

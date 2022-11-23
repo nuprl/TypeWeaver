@@ -1,6 +1,7 @@
 index.ts(5,25): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(5,38): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(16,78): error TS2304: Cannot find name 'LoadJsonFileOptions'.
+index.ts(16,78): error TS4078: Parameter 'options' of exported function has or is using private name 'LoadJsonFileOptions'.
 index.ts(17,32): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathLike | FileHandle, options?: { encoding?: null; flag?: OpenMode; } & Abortable): Promise<Buffer>', gave the following error.
     Argument of type 'string | ArrayBuffer' is not assignable to parameter of type 'PathLike | FileHandle'.
@@ -9,4 +10,5 @@ index.ts(17,32): error TS2769: No overload matches this call.
   Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode; })): Promise<...>', gave the following error.
     Argument of type 'string | ArrayBuffer' is not assignable to parameter of type 'PathLike | FileHandle'.
 index.ts(21,71): error TS2304: Cannot find name 'JsonFileOptions'.
+index.ts(21,71): error TS4078: Parameter 'options' of exported function has or is using private name 'JsonFileOptions'.
 

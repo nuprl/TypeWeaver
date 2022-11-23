@@ -1,7 +1,6 @@
 lib/cookie.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'pubsuffix'.
 lib/cookie.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'Store'.
 lib/cookie.ts(36,7): error TS2451: Cannot redeclare block-scoped variable 'MemoryCookieStore'.
-lib/cookie.ts(36,26): error TS2749: 'MemoryCookieStore' refers to a value, but is being used as a type here. Did you mean 'typeof MemoryCookieStore'?
 lib/cookie.ts(37,7): error TS2451: Cannot redeclare block-scoped variable 'pathMatch'.
 lib/cookie.ts(40,9): error TS2451: Cannot redeclare block-scoped variable 'fromCallback'.
 lib/cookie.ts(41,9): error TS2451: Cannot redeclare block-scoped variable 'getCustomInspectSymbol'.
@@ -42,6 +41,7 @@ lib/cookie.ts(429,18): error TS2339: Property 'isEmptyString' does not exist on 
 lib/cookie.ts(429,38): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/cookie.ts(437,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/cookie.ts(440,67): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
+lib/cookie.ts(440,67): error TS4060: Return type of exported function has or is using private name 'Store'.
 lib/cookie.ts(441,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/cookie.ts(442,23): error TS2554: Expected 0 arguments, but got 2.
 lib/cookie.ts(442,34): error TS2339: Property 'isString' does not exist on type 'Cookie'.
@@ -50,6 +50,7 @@ lib/cookie.ts(465,5): error TS2322: Type 'string' is not assignable to type 'num
 lib/cookie.ts(468,60): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/cookie.ts(472,12): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
 lib/cookie.ts(478,47): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
+lib/cookie.ts(478,47): error TS4060: Return type of exported function has or is using private name 'Store'.
 lib/cookie.ts(483,18): error TS2339: Property 'isEmptyString' does not exist on type 'Cookie'.
 lib/cookie.ts(483,52): error TS2339: Property 'isString' does not exist on type 'Cookie'.
 lib/cookie.ts(492,59): error TS2339: Property 'loose' does not exist on type 'object'.
@@ -319,11 +320,11 @@ lib/cookie.ts(1756,37): error TS2339: Property 'ParameterError' does not exist o
 lib/memstore.ts(32,9): error TS2451: Cannot redeclare block-scoped variable 'fromCallback'.
 lib/memstore.ts(33,7): error TS2451: Cannot redeclare block-scoped variable 'Store'.
 lib/memstore.ts(33,14): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
+lib/memstore.ts(33,14): error TS4025: Exported variable 'Store' has or is using private name 'Store'.
 lib/memstore.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'permuteDomain'.
 lib/memstore.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'pathMatch'.
 lib/memstore.ts(36,9): error TS2451: Cannot redeclare block-scoped variable 'getCustomInspectSymbol'.
 lib/memstore.ts(38,7): error TS2451: Cannot redeclare block-scoped variable 'MemoryCookieStore'.
-lib/memstore.ts(38,33): error TS2507: Type 'Function' is not a constructor function type.
 lib/memstore.ts(41,10): error TS2339: Property 'synchronous' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(42,10): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(45,12): error TS2538: Type 'true' cannot be used as an index type.
@@ -384,4 +385,5 @@ lib/validators.ts(40,57): error TS2339: Property 'getTime' does not exist on typ
 lib/validators.ts(44,26): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/validators.ts(56,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/validators.ts(67,66): error TS2304: Cannot find name 'Void'.
+lib/validators.ts(67,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 

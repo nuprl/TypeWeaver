@@ -1,55 +1,93 @@
 examples/custom-option-arrayOfCommaSepString.ts(16,47): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-arrayOfCommaSepString.ts(16,47): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 examples/custom-option-arrayOfCommaSepString.ts(16,64): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-arrayOfCommaSepString.ts(16,64): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 examples/custom-option-arrayOfCommaSepString.ts(16,84): error TS2304: Cannot find name 'OptionValue'.
+examples/custom-option-arrayOfCommaSepString.ts(16,84): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 examples/custom-option-arrayOfCommaSepString.ts(18,33): error TS2304: Cannot find name 'Part'.
+examples/custom-option-arrayOfCommaSepString.ts(38,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
 examples/custom-option-duration.ts(25,32): error TS2304: Cannot find name 'DurationOption'.
+examples/custom-option-duration.ts(25,32): error TS4078: Parameter 'option' of exported function has or is using private name 'DurationOption'.
 examples/custom-option-duration.ts(25,57): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-duration.ts(25,57): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 examples/custom-option-duration.ts(25,77): error TS2304: Cannot find name 'OptionValue'.
+examples/custom-option-duration.ts(25,77): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 examples/custom-option-duration.ts(37,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(40,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(43,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(46,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-duration.ts(61,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
 examples/custom-option-fruit.ts(22,29): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-fruit.ts(22,29): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 examples/custom-option-fruit.ts(22,54): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-fruit.ts(22,54): error TS4078: Parameter 'optstr' of exported function has or is using private name 'Option'.
 examples/custom-option-fruit.ts(22,76): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-fruit.ts(40,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]'.
+examples/custom-option-fruit.ts(22,76): error TS4078: Parameter 'arg' of exported function has or is using private name 'Option'.
 examples/custom-option-intGteZero.ts(14,34): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-intGteZero.ts(14,34): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 examples/custom-option-intGteZero.ts(14,51): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-intGteZero.ts(14,51): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 examples/custom-option-intGteZero.ts(14,71): error TS2304: Cannot find name 'Arg'.
+examples/custom-option-intGteZero.ts(14,71): error TS4078: Parameter 'arg' of exported function has or is using private name 'Arg'.
+examples/custom-option-intGteZero.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
 examples/custom-option-time-ago.ts(20,31): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-time-ago.ts(20,31): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 examples/custom-option-time-ago.ts(20,48): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-time-ago.ts(20,48): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 examples/custom-option-time-ago.ts(20,68): error TS2304: Cannot find name 'OptionValue'.
+examples/custom-option-time-ago.ts(20,68): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 examples/custom-option-time-ago.ts(29,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(32,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(35,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(38,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/ddcompletion.ts(23,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { ...; } | { ...; } | { ...; })[]'.
-examples/foo.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; env?: undefined; helpArg?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; env?: undefined; helpArg?: undefined; } | { ...; } | { ...; })[]'.
-examples/hello.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
-examples/help.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
-examples/option-groups.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; group?: undefined; } | { group: string; names?: undefined; type?: undefined; })[]'.
+examples/custom-option-time-ago.ts(65,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
+examples/date.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
+examples/ddcompletion.ts(23,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ name: string; type: string; help: string; names?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { ...; } | { ...; } | { ...; })[]'.
+examples/foo.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ name: string; type: string; help: string; names?: undefined; env?: undefined; helpArg?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; env?: undefined; helpArg?: undefined; } | { ...; } | { ...; })[]'.
+examples/hello.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/help.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/option-groups.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ names: string[]; type: string; group?: undefined; } | { group: string; names?: undefined; type?: undefined; })[]'.
 lib/dashdash.ts(16,66): error TS2304: Cannot find name 'Match'.
 lib/dashdash.ts(16,79): error TS2304: Cannot find name 'Key'.
 lib/dashdash.ts(64,38): error TS2304: Cannot find name 'Word'.
 lib/dashdash.ts(97,28): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(97,28): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(97,45): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(97,45): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(97,65): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(97,65): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 lib/dashdash.ts(101,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(101,30): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(101,47): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(101,47): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(101,67): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(101,67): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 lib/dashdash.ts(106,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(106,30): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(106,47): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(106,47): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(106,67): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(106,67): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 lib/dashdash.ts(117,31): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(117,31): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(117,48): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(117,48): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(117,68): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(117,68): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 lib/dashdash.ts(128,39): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(128,39): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(128,56): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(128,56): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(128,76): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(128,76): error TS4078: Parameter 'arg' of exported function has or is using private name 'OptionValue'.
 lib/dashdash.ts(149,28): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(149,28): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/dashdash.ts(149,45): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(149,45): error TS4078: Parameter 'optstr' of exported function has or is using private name 'OptionString'.
 lib/dashdash.ts(149,65): error TS2304: Cannot find name 'Arg'.
+lib/dashdash.ts(149,65): error TS4078: Parameter 'arg' of exported function has or is using private name 'Arg'.
 lib/dashdash.ts(258,25): error TS2304: Cannot find name 'Config'.
+lib/dashdash.ts(258,25): error TS4078: Parameter 'config' of exported function has or is using private name 'Config'.
 lib/dashdash.ts(272,57): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(353,67): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(376,19): error TS2322: Type '{ argv: any[]; slice: any; }' is not assignable to type 'string[]'.
@@ -96,7 +134,11 @@ lib/dashdash.ts(985,28): error TS2339: Property 'argtypes' does not exist on typ
 lib/dashdash.ts(988,14): error TS2339: Property 'specExtra' does not exist on type 'string[]'.
 lib/dashdash.ts(989,36): error TS2339: Property 'specExtra' does not exist on type 'string[]'.
 lib/dashdash.ts(999,31): error TS2304: Cannot find name 'ParserConfig'.
+lib/dashdash.ts(999,31): error TS4078: Parameter 'config' of exported function has or is using private name 'ParserConfig'.
 lib/dashdash.ts(1010,25): error TS2304: Cannot find name 'Config'.
+lib/dashdash.ts(1010,25): error TS4078: Parameter 'config_' of exported function has or is using private name 'Config'.
 lib/dashdash.ts(1045,36): error TS2304: Cannot find name 'OptionType'.
+lib/dashdash.ts(1045,36): error TS4078: Parameter 'optionType' of exported function has or is using private name 'OptionType'.
 lib/dashdash.ts(1080,29): error TS2503: Cannot find namespace 'Opt'.
+lib/dashdash.ts(1080,29): error TS4078: Parameter 'o' of exported function has or is using private name 'Opt'.
 

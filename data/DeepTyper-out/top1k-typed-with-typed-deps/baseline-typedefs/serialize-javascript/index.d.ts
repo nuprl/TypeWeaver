@@ -1,0 +1,13 @@
+declare var randomBytes: any;
+declare var UID_LENGTH: number;
+declare var UID: string;
+declare var PLACE_HOLDER_REGEXP: RegExp;
+declare var IS_NATIVE_CODE_REGEXP: string;
+declare var IS_PURE_FUNCTION: string;
+declare var IS_ARROW_FUNCTION: string;
+declare var UNSAFE_CHARS_REGEXP: string;
+declare var RESERVED_SYMBOLS: string[];
+declare var ESCAPED_CHARS: any;
+declare function escapeUnsafeChars(unsafeChar: string): string;
+declare function generateUID(): string;
+declare function deleteFunctions(obj: any): any;

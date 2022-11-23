@@ -2,7 +2,7 @@ Binary_Property/ASCII.ts(3,5): error TS2339: Property 'addRange' does not exist 
 Binary_Property/ASCII.ts(4,14): error TS2322: Type 'object' is not assignable to type 'string'.
 Binary_Property/ASCII_Hex_Digit.ts(3,5): error TS2339: Property 'addRange' does not exist on type 'object'.
 Binary_Property/ASCII_Hex_Digit.ts(4,14): error TS2322: Type 'object' is not assignable to type 'string'.
-Binary_Property/Alphabetic.ts(3,7): error TS2740: Type 'regenerate' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 275 more.
+Binary_Property/Alphabetic.ts(3,7): error TS2322: Type 'regenerate' is not assignable to type 'HTMLElement'.
 Binary_Property/Alphabetic.ts(122,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Alphabetic.ts(123,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Alphabetic.ts(124,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
@@ -15,7 +15,7 @@ Binary_Property/Alphabetic.ts(130,5): error TS2339: Property 'addRange' does not
 Binary_Property/Alphabetic.ts(131,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Alphabetic.ts(132,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Alphabetic.ts(133,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
-Binary_Property/Alphabetic.ts(134,14): error TS2740: Type 'HTMLElement' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+Binary_Property/Alphabetic.ts(134,14): error TS2322: Type 'HTMLElement' is not assignable to type 'Function'.
 Binary_Property/Any.ts(3,5): error TS2339: Property 'addRange' does not exist on type 'object'.
 Binary_Property/Any.ts(4,14): error TS2322: Type 'object' is not assignable to type 'string'.
 Binary_Property/Assigned.ts(3,7): error TS2322: Type 'regenerate' is not assignable to type 'HTMLElement'.
@@ -32,7 +32,7 @@ Binary_Property/Assigned.ts(80,5): error TS2339: Property 'addRange' does not ex
 Binary_Property/Assigned.ts(81,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Assigned.ts(82,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 Binary_Property/Assigned.ts(83,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
-Binary_Property/Assigned.ts(84,14): error TS2322: Type 'HTMLElement' is not assignable to type 'Function'.
+Binary_Property/Assigned.ts(84,14): error TS2740: Type 'HTMLElement' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 Binary_Property/Bidi_Control.ts(3,5): error TS2339: Property 'addRange' does not exist on type 'object'.
 Binary_Property/Bidi_Control.ts(4,14): error TS2322: Type 'object' is not assignable to type 'string'.
 Binary_Property/Bidi_Mirrored.ts(44,5): error TS2339: Property 'addRange' does not exist on type 'object'.
@@ -245,7 +245,7 @@ General_Category/Format.ts(16,5): error TS2339: Property 'addRange' does not exi
 General_Category/Format.ts(17,14): error TS2322: Type 'object' is not assignable to type 'string'.
 General_Category/Initial_Punctuation.ts(16,5): error TS2339: Property 'addRange' does not exist on type 'object'.
 General_Category/Initial_Punctuation.ts(17,14): error TS2322: Type 'object' is not assignable to type 'string'.
-General_Category/Letter.ts(3,7): error TS2322: Type 'regenerate' is not assignable to type 'HTMLElement'.
+General_Category/Letter.ts(3,7): error TS2740: Type 'regenerate' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 275 more.
 General_Category/Letter.ts(140,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 General_Category/Letter.ts(141,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 General_Category/Letter.ts(142,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.

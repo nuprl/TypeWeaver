@@ -13,8 +13,11 @@ mode.ts(16,10): error TS2393: Duplicate function implementation.
 mode.ts(16,27): error TS2304: Cannot find name 'Stat'.
 mode.ts(16,43): error TS2304: Cannot find name 'Options'.
 mode.ts(20,27): error TS2503: Cannot find namespace 'fs'.
+mode.ts(20,27): error TS4078: Parameter 'stat' of exported function has or is using private name 'fs'.
 windows.ts(6,30): error TS2304: Cannot find name 'Path'.
+windows.ts(6,30): error TS4078: Parameter 'path' of exported function has or is using private name 'Path'.
 windows.ts(6,46): error TS2304: Cannot find name 'Options'.
+windows.ts(6,46): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 windows.ts(27,10): error TS2393: Duplicate function implementation.
 windows.ts(27,27): error TS2304: Cannot find name 'Stats'.
 windows.ts(27,41): error TS2304: Cannot find name 'Path'.

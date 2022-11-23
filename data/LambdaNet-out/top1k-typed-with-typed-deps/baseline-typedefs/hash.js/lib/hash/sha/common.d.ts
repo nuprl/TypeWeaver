@@ -1,0 +1,10 @@
+declare var utils: string;
+declare var rotr32: object;
+declare function ft_1(s: string, x: string, y: string, z: string): string;
+declare function ch32(x: number, y: number, z: number): number;
+declare function maj32(x: number, y: number, z: number): number;
+declare function p32(x: string, y: string, z: number): number;
+declare function s0_256(x: string): number;
+declare function s1_256(x: string): number;
+declare function g0_256(x: string): number;
+declare function g1_256(x: string): number;

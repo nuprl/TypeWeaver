@@ -1,0 +1,16 @@
+declare const xnv: any;
+declare const attributeUtils: any;
+declare const NAMESPACES: any, VOID_ELEMENTS: any, NODE_TYPES: any;
+declare const XML_CHAR: RegExp;
+declare const PUBID_CHAR: RegExp;
+declare function asciiCaseInsensitiveMatch(a: any, b: string): boolean;
+declare function recordNamespaceInformation(element: any, map: any, prefixMap: any): any;
+declare function serializeDocumentType(node: any, namespace: any, prefixMap: string, requireWellFormed: boolean): boolean;
+declare function serializeProcessingInstruction(node: any, namespace: any, prefixMap: string, requireWellFormed: boolean): string;
+declare function serializeDocument(node: any, namespace: any, prefixMap: string, requireWellFormed: string, refs: any): any;
+declare function serializeDocumentFragment(node: any, namespace: any, prefixMap: string, requireWellFormed: string, refs: any): any;
+declare function serializeText(node: any, namespace: any, prefixMap: string, requireWellFormed: boolean): any;
+declare function serializeComment(node: any, namespace: any, prefixMap: string, requireWellFormed: boolean): boolean;
+declare function serializeElement(node: any, namespace: any, prefixMap: string, requireWellFormed: any, refs: any): void;
+declare function serializeCDATASection(node: any): string;
+declare function xmlSerialization(node: any, namespace: any, prefixMap: string, requireWellFormed: any, refs: any): any;

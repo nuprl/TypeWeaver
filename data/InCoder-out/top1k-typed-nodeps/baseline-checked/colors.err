@@ -29,6 +29,7 @@ examples/normal-usage.ts(79,32): error TS2339: Property 'input' does not exist o
 lib/colors.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'colors' must be of type 'any', but here has type '{}'.
 lib/colors.ts(78,40): error TS2304: Cannot find name 'ring'.
 lib/colors.ts(85,25): error TS2304: Cannot find name 'Styles'.
+lib/colors.ts(85,25): error TS4078: Parameter '_styles' of exported function has or is using private name 'Styles'.
 lib/colors.ts(89,11): error TS2339: Property '_styles' does not exist on type '() => any'.
 lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type '() => any'.
 lib/colors.ts(147,35): error TS2304: Cannot find name 'heme'.
@@ -86,4 +87,5 @@ lib/system/supports-colors.ts(95,62): error TS2345: Argument of type '(sign: num
   Types of parameters 'sign' and 'value' are incompatible.
     Type 'string' is not assignable to type 'number'.
 lib/system/supports-colors.ts(142,34): error TS2304: Cannot find name 'Stream'.
+lib/system/supports-colors.ts(142,34): error TS4078: Parameter 'stream' of exported function has or is using private name 'Stream'.
 

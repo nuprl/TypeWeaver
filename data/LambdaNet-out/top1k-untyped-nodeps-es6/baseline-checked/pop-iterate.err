@@ -1,13 +1,16 @@
 array-iterator.ts(6,88): error TS2304: Cannot find name 'Void'.
+array-iterator.ts(6,88): error TS4060: Return type of exported function has or is using private name 'Void'.
 array-iterator.ts(16,21): error TS2350: Only a void function can be called with the 'new' keyword.
 array-iterator.ts(16,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 array-iterator.ts(19,22): error TS2350: Only a void function can be called with the 'new' keyword.
 array-iterator.ts(19,22): error TS2554: Expected 3 arguments, but got 2.
 iteration.ts(4,65): error TS2304: Cannot find name 'Void'.
+iteration.ts(4,65): error TS4060: Return type of exported function has or is using private name 'Void'.
 iteration.ts(13,15): error TS2339: Property 'value' does not exist on type 'object'.
 iteration.ts(14,15): error TS2339: Property 'done' does not exist on type 'object'.
 iteration.ts(15,15): error TS2339: Property 'index' does not exist on type 'object'.
 object-iterator.ts(7,91): error TS2304: Cannot find name 'Void'.
+object-iterator.ts(7,91): error TS4060: Return type of exported function has or is using private name 'Void'.
 object-iterator.ts(9,25): error TS2350: Only a void function can be called with the 'new' keyword.
 object-iterator.ts(9,43): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'Function'.
   Type 'string[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.

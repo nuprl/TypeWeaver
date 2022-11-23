@@ -7,16 +7,20 @@ index.ts(71,56): error TS2345: Argument of type 'string' is not assignable to pa
 index.ts(101,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(134,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(144,92): error TS2304: Cannot find name 'SyncCallback'.
+index.ts(144,92): error TS4078: Parameter '{ name: name,  arity: arity,  sync: sync,  async: async,  errback }' of exported function has or is using private name 'SyncCallback'.
 index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
 index.ts(153,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(205,77): error TS2304: Cannot find name 'SyncOrAsyncOptions'.
+index.ts(205,77): error TS4078: Parameter '{ name: name,  arity: arity,  sync: sync,  async }' of exported function has or is using private name 'SyncOrAsyncOptions'.
 index.ts(251,28): error TS2339: Property 'next' does not exist on type 'GeneratorFunction'.
 index.ts(252,24): error TS2345: Argument of type 'GeneratorFunction' is not assignable to parameter of type 'number'.
 index.ts(298,5): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
 index.ts(303,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(307,51): error TS2304: Cannot find name 'SuspendAssertion'.
+index.ts(307,51): error TS4078: Parameter '{ value: suspend,  done }' of exported function has or is using private name 'SuspendAssertion'.
 index.ts(308,16): error TS2304: Cannot find name 'value'.
 index.ts(316,13): error TS2304: Cannot find name 'value'.
 index.ts(318,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(332,28): error TS2304: Cannot find name 'nknown'.
+index.ts(332,28): error TS4078: Parameter 'value' of exported function has or is using private name 'nknown'.
 

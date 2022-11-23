@@ -2394,6 +2394,7 @@ lib/eventsource-polyfill.ts(1,5): error TS2403: Subsequent variable declarations
 lib/eventsource-polyfill.ts(4,10): error TS2339: Property 'EventSourcePolyfill' does not exist on type 'Window & typeof globalThis'.
 lib/eventsource.ts(35,10): error TS2300: Duplicate identifier 'EventSource'.
 lib/eventsource.ts(35,66): error TS2304: Cannot find name 'Void'.
+lib/eventsource.ts(35,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/eventsource.ts(37,68): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/eventsource.ts(52,8): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(53,8): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
@@ -2520,8 +2521,10 @@ lib/eventsource.ts(437,108): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on type 'never'.
 lib/eventsource.ts(450,10): error TS2300: Duplicate identifier 'Event'.
 lib/eventsource.ts(450,60): error TS2304: Cannot find name 'Void'.
+lib/eventsource.ts(450,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/eventsource.ts(467,10): error TS2300: Duplicate identifier 'MessageEvent'.
 lib/eventsource.ts(467,62): error TS2304: Cannot find name 'Void'.
+lib/eventsource.ts(467,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5014,11): error TS2300: Duplicate identifier 'Event'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5056,13): error TS2300: Duplicate identifier 'Event'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5088,11): error TS2300: Duplicate identifier 'EventSource'.

@@ -3,12 +3,20 @@ src/binding.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'asser
 src/binding.ts(11,17): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
 src/binding.ts(31,10): error TS2393: Duplicate function implementation.
 src/binding.ts(31,31): error TS2304: Cannot find name 'Void'.
+src/binding.ts(58,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(59,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/binding.ts(62,18): error TS2339: Property 'deflateEnd' does not exist on type 'any[]'.
 src/binding.ts(65,18): error TS2339: Property 'inflateEnd' does not exist on type 'HTMLElement'.
-src/binding.ts(82,10): error TS2339: Property 'equal' does not exist on type 'Function'.
-src/binding.ts(86,10): error TS2339: Property 'equal' does not exist on type 'Function'.
-src/binding.ts(87,10): error TS2339: Property 'equal' does not exist on type 'Function'.
-src/binding.ts(91,10): error TS2339: Property 'equal' does not exist on type 'Function'.
+src/binding.ts(82,10): error TS2339: Property 'equal' does not exist on type 'object'.
+src/binding.ts(84,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(85,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(86,10): error TS2339: Property 'equal' does not exist on type 'object'.
+src/binding.ts(87,10): error TS2339: Property 'equal' does not exist on type 'object'.
+src/binding.ts(91,10): error TS2339: Property 'equal' does not exist on type 'object'.
 src/binding.ts(105,20): error TS2339: Property 'alloc' does not exist on type 'Function'.
 src/binding.ts(131,10): error TS2339: Property '_process' does not exist on type 'HTMLElement'.
 src/binding.ts(132,10): error TS2551: Property '_after' does not exist on type 'HTMLElement'. Did you mean 'after'?
@@ -17,6 +25,16 @@ src/binding.ts(207,31): error TS2339: Property 'inflate' does not exist on type 
 src/binding.ts(212,33): error TS2339: Property 'inflateSetDictionary' does not exist on type 'HTMLElement'.
 src/binding.ts(215,35): error TS2339: Property 'inflate' does not exist on type 'HTMLElement'.
 src/binding.ts(233,33): error TS2339: Property 'inflate' does not exist on type 'HTMLElement'.
+src/binding.ts(302,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(304,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(305,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(307,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+src/binding.ts(309,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/binding.ts(350,19): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 src/binding.ts(356,31): error TS2339: Property 'deflateInit2' does not exist on type 'any[]'.
@@ -99,6 +117,7 @@ src/index.ts(187,25): error TS2350: Only a void function can be called with the 
 src/index.ts(187,40): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/index.ts(187,47): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 src/index.ts(190,79): error TS2304: Cannot find name 'Void'.
+src/index.ts(190,79): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/index.ts(194,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 src/index.ts(195,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 src/index.ts(197,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
@@ -194,11 +213,15 @@ src/index.ts(387,26): error TS2339: Property 'dictionary' does not exist on type
 src/index.ts(389,25): error TS2339: Property 'allocUnsafe' does not exist on type 'Function'.
 src/index.ts(403,6): error TS2339: Property 'inherits' does not exist on type 'string'.
 src/index.ts(420,24): error TS2339: Property 'Z_SYNC_FLUSH' does not exist on type 'HTMLInputElement'.
+src/index.ts(421,7): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/index.ts(421,19): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(422,12): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(423,17): error TS2339: Property '_hadError' does not exist on type 'HTMLElement'.
 src/index.ts(424,14): error TS2339: Property '_level' does not exist on type 'HTMLElement'.
 src/index.ts(425,14): error TS2339: Property '_strategy' does not exist on type 'HTMLElement'.
+src/index.ts(435,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/index.ts(442,26): error TS2339: Property 'alloc' does not exist on type 'Function'.
 src/index.ts(450,20): error TS2339: Property 'Z_FULL_FLUSH' does not exist on type 'HTMLInputElement'.
 src/index.ts(453,10): error TS2339: Property 'ended' does not exist on type 'HTMLElement'.
@@ -208,22 +231,30 @@ src/index.ts(459,17): error TS2339: Property 'needDrain' does not exist on type 
 src/index.ts(465,23): error TS2339: Property 'alloc' does not exist on type 'Function'.
 src/index.ts(470,16): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
 src/index.ts(474,58): error TS2304: Cannot find name 'Void'.
+src/index.ts(474,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/index.ts(476,22): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
 src/index.ts(479,15): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(482,10): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(483,10): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(486,37): error TS2304: Cannot find name 'Void'.
+src/index.ts(486,37): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/index.ts(487,8): error TS2339: Property 'emit' does not exist on type 'object'.
 src/index.ts(493,28): error TS2339: Property 'ending' does not exist on type 'any[]'.
 src/index.ts(493,41): error TS2339: Property 'ended' does not exist on type 'any[]'.
 src/index.ts(496,33): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 src/index.ts(514,53): error TS2339: Property 'Z_NO_FLUSH' does not exist on type 'HTMLInputElement'.
+src/index.ts(539,5): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/index.ts(555,7): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(559,29): error TS2339: Property 'concat' does not exist on type 'Function'.
 src/index.ts(560,5): error TS2554: Expected 2 arguments, but got 1.
+src/index.ts(565,3): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/index.ts(574,7): error TS2339: Property 'buffer' does not exist on type 'object'.
 src/index.ts(575,7): error TS2339: Property 'callback' does not exist on type 'object'.
 src/index.ts(588,14): error TS2339: Property '_hadError' does not exist on type 'HTMLElement'.
+src/index.ts(592,5): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
 src/index.ts(595,29): error TS2339: Property '_buffer' does not exist on type 'HTMLElement'.
 src/index.ts(595,48): error TS2339: Property '_offset' does not exist on type 'HTMLElement'.
 src/index.ts(595,62): error TS2339: Property '_offset' does not exist on type 'HTMLElement'.

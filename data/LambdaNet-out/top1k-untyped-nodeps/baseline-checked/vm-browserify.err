@@ -43,6 +43,7 @@ example/run/server.ts(3,6): error TS2339: Property 'createServer' does not exist
 index.ts(18,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
   Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): void'.
 index.ts(48,21): error TS2304: Cannot find name 'Void'.
+index.ts(48,21): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(52,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(52,47): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.

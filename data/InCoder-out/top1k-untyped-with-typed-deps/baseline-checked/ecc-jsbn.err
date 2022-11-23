@@ -9,13 +9,18 @@ index.ts(34,35): error TS2339: Property 'randomBytes' does not exist on type 'Cr
 index.ts(51,45): error TS2304: Cannot find name 'ny'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/ec.ts(32,28): error TS2304: Cannot find name 'feFp'.
+lib/ec.ts(32,28): error TS4078: Parameter 'other' of exported function has or is using private name 'feFp'.
 lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'Uint8Array'.
 lib/ec.ts(49,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(49,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(56,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(56,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(70,23): error TS2339: Property 'toBigInteger' does not exist on type 'Uint8Array'.
 lib/ec.ts(83,15): error TS2339: Property 'shiftLeft' does not exist on type 'number'.
 lib/ec.ts(94,27): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(94,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'CurveFp'.
 lib/ec.ts(127,31): error TS2304: Cannot find name 'PointFp'.
+lib/ec.ts(127,31): error TS4078: Parameter 'other' of exported function has or is using private name 'PointFp'.
 lib/ec.ts(162,9): error TS2339: Property 'isInfinity' does not exist on type 'Uint8Array'.
 lib/ec.ts(165,13): error TS2339: Property 'y' does not exist on type 'Uint8Array'.
 lib/ec.ts(168,48): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
@@ -27,6 +32,7 @@ lib/ec.ts(198,17): error TS2339: Property 'z' does not exist on type 'Uint8Array
 lib/ec.ts(208,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
 lib/ec.ts(214,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
 lib/ec.ts(278,29): error TS2304: Cannot find name 'BigNumber'.
+lib/ec.ts(278,29): error TS4078: Parameter 'k' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(306,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
@@ -37,8 +43,10 @@ lib/ec.ts(320,13): error TS2339: Property 'testBit' does not exist on type 'numb
 lib/ec.ts(344,10): error TS2300: Duplicate identifier 'ECCurveFp'.
 lib/ec.ts(348,19): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(364,31): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(364,31): error TS4078: Parameter 'other' of exported function has or is using private name 'CurveFp'.
 lib/ec.ts(376,39): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number'.
 lib/ec.ts(383,35): error TS2304: Cannot find name 'Point'.
+lib/ec.ts(383,35): error TS4078: Parameter 'p' of exported function has or is using private name 'Point'.
 lib/ec.ts(438,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(446,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(458,9): error TS2339: Property 'isInfinity' does not exist on type 'Uint8Array'.
@@ -59,9 +67,13 @@ lib/ec.ts(600,50): error TS2339: Property 'multiply' does not exist on type 'Uin
 lib/sec.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/sec.ts(6,7): error TS2300: Duplicate identifier 'ECCurveFp'.
 lib/sec.ts(12,32): error TS2304: Cannot find name 'Curve'.
+lib/sec.ts(12,32): error TS4078: Parameter 'curve' of exported function has or is using private name 'Curve'.
 lib/sec.ts(12,43): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(12,43): error TS4078: Parameter 'g' of exported function has or is using private name 'Point'.
 lib/sec.ts(12,54): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(12,54): error TS4078: Parameter 'n' of exported function has or is using private name 'Point'.
 lib/sec.ts(12,65): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(12,65): error TS4078: Parameter 'h' of exported function has or is using private name 'Point'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18107,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 

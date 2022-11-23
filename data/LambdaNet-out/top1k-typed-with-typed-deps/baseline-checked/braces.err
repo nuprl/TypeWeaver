@@ -127,7 +127,7 @@ lib/expand.ts(60,47): error TS2339: Property 'step' does not exist on type 'obje
 lib/expand.ts(70,12): error TS2339: Property 'nodes' does not exist on type 'object'.
 lib/expand.ts(74,33): error TS2339: Property 'encloseBrace' does not exist on type 'string'.
 lib/expand.ts(75,29): error TS2339: Property 'queue' does not exist on type 'object'.
-lib/expand.ts(76,9): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/expand.ts(76,9): error TS2322: Type 'object' is not assignable to type 'HTMLElement'.
 lib/expand.ts(78,18): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/expand.ts(78,44): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/expand.ts(78,69): error TS2551: Property 'parent' does not exist on type 'HTMLElement'. Did you mean 'part'?
@@ -145,7 +145,7 @@ lib/expand.ts(102,17): error TS2339: Property 'nodes' does not exist on type 'ob
 lib/expand.ts(110,16): error TS2339: Property 'flatten' does not exist on type 'string'.
 lib/parse.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
 lib/parse.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
-lib/parse.ts(36,7): error TS2322: Type 'object' is not assignable to type 'HTMLElement'.
+lib/parse.ts(36,7): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/parse.ts(37,33): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(37,84): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(38,13): error TS2339: Property 'length' does not exist on type 'never'.

@@ -8,6 +8,7 @@ bench/glob-parent.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 
 bench/glob-parent.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'cycle'.
 bench/glob-parent.ts(17,10): error TS2451: Cannot redeclare block-scoped variable 'bench'.
 bench/glob-parent.ts(17,40): error TS2304: Cannot find name 'BenchOptions'.
+bench/glob-parent.ts(17,40): error TS4078: Parameter 'options' of exported function has or is using private name 'BenchOptions'.
 bench/glob-parent.ts(34,21): error TS2554: Expected 2 arguments, but got 1.
 bench/glob-parent.ts(45,1): error TS2554: Expected 2 arguments, but got 1.
 bench/glob-parent.ts(47,32): error TS2349: This expression is not callable.
@@ -96,7 +97,6 @@ lib/picomatch.ts(117,50): error TS2525: Initializer provides no value for this b
 lib/picomatch.ts(293,15): error TS2339: Property 'fastpaths' does not exist on type '{}'.
 lib/picomatch.ts(294,12): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
 lib/picomatch.ts(297,15): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
-lib/picomatch.ts(298,5): error TS2741: Property 'fastpaths' is missing in type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }' but required in type '{ negated: boolean; fastpaths: boolean; }'.
 lib/scan.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
 lib/scan.ts(49,7): error TS2451: Cannot redeclare block-scoped variable 'scan'.
 lib/scan.ts(89,27): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.

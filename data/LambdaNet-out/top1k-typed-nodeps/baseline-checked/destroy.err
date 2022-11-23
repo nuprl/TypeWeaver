@@ -6,14 +6,17 @@ index.ts(41,12): error TS2339: Property 'destroy' does not exist on type 'string
 index.ts(45,12): error TS2339: Property 'removeAllListeners' does not exist on type 'string'.
 index.ts(46,12): error TS2339: Property 'addListener' does not exist on type 'string'.
 index.ts(59,46): error TS2304: Cannot find name 'Void'.
+index.ts(59,46): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(60,10): error TS2339: Property 'destroy' does not exist on type 'number'.
 index.ts(62,21): error TS2339: Property 'close' does not exist on type 'number'.
 index.ts(64,12): error TS2339: Property 'on' does not exist on type 'number'.
 index.ts(78,44): error TS2304: Cannot find name 'Void'.
+index.ts(78,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(79,14): error TS2339: Property '_hadError' does not exist on type 'number'.
 index.ts(80,31): error TS2339: Property '_binding' does not exist on type 'number'.
 index.ts(89,10): error TS2339: Property 'close' does not exist on type 'number'.
 index.ts(108,46): error TS2304: Cannot find name 'Void'.
+index.ts(108,46): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(109,21): error TS2339: Property 'destroy' does not exist on type 'string'.
 index.ts(112,16): error TS2339: Property '_binding' does not exist on type 'string'.
 index.ts(114,14): error TS2339: Property 'destroy' does not exist on type 'string'.
@@ -47,6 +50,8 @@ index.ts(177,28): error TS2339: Property 'Inflate' does not exist on type 'objec
 index.ts(178,28): error TS2339: Property 'InflateRaw' does not exist on type 'object'.
 index.ts(179,28): error TS2339: Property 'Unzip' does not exist on type 'object'.
 index.ts(187,19): error TS2304: Cannot find name 'Void'.
+index.ts(187,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(195,34): error TS2304: Cannot find name 'Void'.
+index.ts(195,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(204,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 

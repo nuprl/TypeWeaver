@@ -93,6 +93,7 @@ src/runtime/insertBySelector.ts(6,59): error TS2769: No overload matches this ca
 src/runtime/insertBySelector.ts(23,10): error TS2538: Type 'object' cannot be used as an index type.
 src/runtime/insertBySelector.ts(26,15): error TS2538: Type 'object' cannot be used as an index type.
 src/runtime/insertBySelector.ts(30,59): error TS2304: Cannot find name 'Void'.
+src/runtime/insertBySelector.ts(30,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/insertBySelector.ts(31,9): error TS2322: Type 'string' is not assignable to type 'object'.
 src/runtime/insertBySelector.ts(31,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/runtime/insertBySelector.ts(39,10): error TS2339: Property 'appendChild' does not exist on type 'object'.
@@ -161,9 +162,10 @@ src/runtime/styleDomAPI.ts(57,41): error TS2339: Property 'insertStyleElement' d
 src/runtime/styleDomAPI.ts(61,13): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLElement'.
   Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 113 more.
 src/runtime/styleTagTransform.ts(2,65): error TS2304: Cannot find name 'Void'.
+src/runtime/styleTagTransform.ts(2,65): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/styleTagTransform.ts(3,20): error TS2339: Property 'styleSheet' does not exist on type 'Element'.
 src/runtime/styleTagTransform.ts(4,18): error TS2339: Property 'styleSheet' does not exist on type 'Element'.
-src/utils.ts(3,27): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps/baseline/style-loader/src/runtime/isEqualLocals.ts' is not a module.
+src/utils.ts(3,27): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps/baseline/style-loader/src/runtime/isEqualLocals.ts' is not a module.
 src/utils.ts(18,26): error TS2339: Property 'utils' does not exist on type 'HTMLElement'.
 src/utils.ts(19,26): error TS2339: Property 'utils' does not exist on type 'HTMLElement'.
 src/utils.ts(22,21): error TS2339: Property 'utils' does not exist on type 'HTMLElement'.

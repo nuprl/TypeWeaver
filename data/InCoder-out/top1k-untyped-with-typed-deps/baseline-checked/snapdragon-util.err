@@ -82,8 +82,11 @@ index.ts(1009,54): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(1028,34): error TS2304: Cannot find name 'y'.
 index.ts(1060,28): error TS2304: Cannot find name 'y'.
 index.ts(1076,26): error TS2304: Cannot find name 'ny'.
+index.ts(1076,26): error TS4078: Parameter 'value' of exported function has or is using private name 'ny'.
 index.ts(1100,27): error TS2304: Cannot find name 'Compiler'.
+index.ts(1100,27): error TS4078: Parameter 'compiler' of exported function has or is using private name 'Compiler'.
 index.ts(1100,45): error TS2304: Cannot find name 'Expression'.
+index.ts(1100,45): error TS4078: Parameter 'value' of exported function has or is using private name 'Expression'.
 index.ts(1115,32): error TS2339: Property 'isNode' does not exist on type 'Node'.
 index.ts(1115,47): error TS2339: Property 'isNode' does not exist on type 'Node'.
 

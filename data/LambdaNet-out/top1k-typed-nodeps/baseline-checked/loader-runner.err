@@ -51,6 +51,7 @@ lib/LoaderRunner.ts(131,15): error TS2314: Generic type 'Promise<T>' requires 1 
 lib/LoaderRunner.ts(131,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(161,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(161,52): error TS2304: Cannot find name 'Void'.
+lib/LoaderRunner.ts(161,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/LoaderRunner.ts(170,19): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(170,48): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(173,55): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
@@ -67,6 +68,7 @@ lib/LoaderRunner.ts(193,103): error TS2339: Property 'data' does not exist on ty
 lib/LoaderRunner.ts(204,20): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(205,51): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 lib/LoaderRunner.ts(214,92): error TS2304: Cannot find name 'Void'.
+lib/LoaderRunner.ts(214,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/LoaderRunner.ts(216,16): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(216,44): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(218,43): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
@@ -170,6 +172,7 @@ lib/loadLoader.ts(30,6): error TS2322: Type 'void' is not assignable to type 'st
 lib/loadLoader.ts(35,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Element'.
   Type '{}' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 lib/loadLoader.ts(39,77): error TS2304: Cannot find name 'Void'.
+lib/loadLoader.ts(39,77): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/loadLoader.ts(41,23): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/loadLoader.ts(42,24): error TS2339: Property 'path' does not exist on type 'Element'.

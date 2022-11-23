@@ -30,6 +30,7 @@ index.ts(172,9): error TS2345: Argument of type 'string | any[]' is not assignab
 index.ts(182,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
 index.ts(182,35): error TS2554: Expected 0 arguments, but got 2.
 index.ts(193,113): error TS2304: Cannot find name 'Void'.
+index.ts(193,113): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(198,29): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(198,43): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(205,35): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
@@ -60,6 +61,7 @@ index.ts(283,28): error TS2554: Expected 0 arguments, but got 3.
 index.ts(283,78): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(285,26): error TS2339: Property 'sourcesContent' does not exist on type 'HTMLElement'.
 index.ts(292,105): error TS2304: Cannot find name 'Void'.
+index.ts(292,105): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(295,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(308,15): error TS2339: Property 'sourceMapData' does not exist on type 'object'.
 index.ts(311,12): error TS2339: Property 'map' does not exist on type 'object'.

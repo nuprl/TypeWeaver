@@ -55,6 +55,7 @@ src/get-function-name-with-kind.ts(82,16): error TS2339: Property 'left' does no
 src/get-function-name-with-kind.ts(83,16): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
 src/get-function-name-with-kind.ts(85,32): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
 src/get-innermost-scope.ts(7,72): error TS2304: Cannot find name 'PatternMatcher'.
+src/get-innermost-scope.ts(7,72): error TS4060: Return type of exported function has or is using private name 'PatternMatcher'.
 src/get-innermost-scope.ts(8,35): error TS2339: Property 'range' does not exist on type 'object'.
 src/get-innermost-scope.ts(10,9): error TS2322: Type 'string' is not assignable to type 'object'.
 src/get-innermost-scope.ts(14,40): error TS2339: Property 'childScopes' does not exist on type 'object'.
@@ -133,6 +134,7 @@ src/has-side-effect.ts(33,60): error TS2339: Property 'type' does not exist on t
 src/has-side-effect.ts(86,41): error TS2339: Property 'has' does not exist on type 'Function'.
 src/has-side-effect.ts(154,40): error TS2339: Property 'has' does not exist on type 'Function'.
 src/has-side-effect.ts(184,4): error TS2304: Cannot find name 'Void'.
+src/has-side-effect.ts(184,4): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/has-side-effect.ts(185,20): error TS2339: Property '$visit' does not exist on type 'Function'.
 src/has-side-effect.ts(188,20): error TS2339: Property 'visitorKeys' does not exist on type 'string'.
 src/is-parenthesized.ts(10,57): error TS2304: Cannot find name 'PatternMatcher'.
@@ -174,10 +176,10 @@ src/pattern-matcher.ts(144,32): error TS2339: Property 'next' does not exist on 
 src/pattern-matcher.ts(145,21): error TS2339: Property 'done' does not exist on type 'object'.
 src/pattern-matcher.ts(156,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 src/pattern-matcher.ts(157,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-src/reference-tracker.ts(8,14): error TS2322: Type 'typeof import("/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").READ' is not assignable to type 'string'.
-src/reference-tracker.ts(9,14): error TS2322: Type 'typeof import("/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").CALL' is not assignable to type 'string'.
-src/reference-tracker.ts(10,14): error TS2322: Type 'typeof import("/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").CONSTRUCT' is not assignable to type 'string'.
-src/reference-tracker.ts(11,14): error TS2322: Type 'typeof import("/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").ESM' is not assignable to type 'string'.
+src/reference-tracker.ts(8,14): error TS2322: Type 'typeof import("/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").READ' is not assignable to type 'string'.
+src/reference-tracker.ts(9,14): error TS2322: Type 'typeof import("/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").CALL' is not assignable to type 'string'.
+src/reference-tracker.ts(10,14): error TS2322: Type 'typeof import("/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").CONSTRUCT' is not assignable to type 'string'.
+src/reference-tracker.ts(11,14): error TS2322: Type 'typeof import("/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps/baseline/eslint-utils/src/reference-tracker").ESM' is not assignable to type 'string'.
 src/reference-tracker.ts(20,37): error TS2304: Cannot find name 'PatternMatcher'.
 src/reference-tracker.ts(24,38): error TS2304: Cannot find name 'PatternMatcher'.
 src/reference-tracker.ts(35,38): error TS2339: Property 'parent' does not exist on type 'object'.

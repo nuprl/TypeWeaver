@@ -14,9 +14,12 @@ lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/parse.ts(133,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(686,26): error TS2304: Cannot find name 'TokenType'.
+lib/parse.ts(686,26): error TS4078: Parameter 'type' of exported function has or is using private name 'TokenType'.
 lib/parse.ts(707,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 lib/parse.ts(1023,26): error TS2304: Cannot find name 'Char'.
+lib/parse.ts(1023,26): error TS4078: Parameter 'c' of exported function has or is using private name 'Char'.
 lib/parse.ts(1050,28): error TS2304: Cannot find name 'char'.
+lib/parse.ts(1050,28): error TS4078: Parameter 'c' of exported function has or is using private name 'char'.
 lib/parse.ts(1074,9): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 lib/parse.ts(1075,29): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
 lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type 'SyntaxError'.

@@ -92,6 +92,7 @@ src/runtime/insertBySelector.ts(6,59): error TS2769: No overload matches this ca
 src/runtime/insertBySelector.ts(23,10): error TS2538: Type 'object' cannot be used as an index type.
 src/runtime/insertBySelector.ts(26,15): error TS2538: Type 'object' cannot be used as an index type.
 src/runtime/insertBySelector.ts(30,59): error TS2304: Cannot find name 'Void'.
+src/runtime/insertBySelector.ts(30,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/insertBySelector.ts(31,9): error TS2322: Type 'string' is not assignable to type 'object'.
 src/runtime/insertBySelector.ts(31,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/runtime/insertBySelector.ts(39,10): error TS2339: Property 'appendChild' does not exist on type 'object'.
@@ -101,11 +102,14 @@ src/runtime/insertStyleElement.ts(5,42): error TS2339: Property 'attributes' doe
 src/runtime/insertStyleElement.ts(6,11): error TS2339: Property 'insert' does not exist on type 'object'.
 src/runtime/insertStyleElement.ts(6,35): error TS2339: Property 'options' does not exist on type 'object'.
 src/runtime/setAttributesWithAttributes.ts(2,85): error TS2304: Cannot find name 'Void'.
+src/runtime/setAttributesWithAttributes.ts(2,85): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/setAttributesWithAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithAttributes.ts(7,16): error TS2339: Property 'nonce' does not exist on type 'object'.
 src/runtime/setAttributesWithAttributesAndNonce.ts(2,85): error TS2304: Cannot find name 'Void'.
+src/runtime/setAttributesWithAttributesAndNonce.ts(2,85): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/setAttributesWithoutAttributes.ts(2,65): error TS2304: Cannot find name 'Void'.
+src/runtime/setAttributesWithoutAttributes.ts(2,65): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/runtime/setAttributesWithoutAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithoutAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/singletonStyleDomAPI.ts(13,85): error TS2304: Cannot find name 'Void'.

@@ -1,5 +1,6 @@
 benchmarks/createNoCodeFunction.ts(10,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmarks/fib.ts(3,29): error TS2304: Cannot find name 'Void'.
+benchmarks/fib.ts(3,29): error TS4060: Return type of exported function has or is using private name 'Void'.
 benchmarks/fib.ts(4,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmarks/reuseNoCodeFunction.ts(3,21): error TS2307: Cannot find module '../' or its corresponding type declarations.
 benchmarks/reuseNoCodeFunction.ts(9,34): error TS2304: Cannot find name 'Void'.

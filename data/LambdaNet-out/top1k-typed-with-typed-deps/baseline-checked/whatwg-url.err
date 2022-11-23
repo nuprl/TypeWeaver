@@ -129,31 +129,26 @@ lib/encoding.ts(10,22): error TS2339: Property 'decode' does not exist on type '
 lib/infra.ts(14,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/infra.ts(14,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/infra.ts(17,10): error TS2451: Cannot redeclare block-scoped variable 'isASCIIHex'.
-lib/percent-encoding.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, utf8PercentEncodeCodePoint, utf8PercentEncodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode
+lib/percent-encoding.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode, utf8PercentEncodeCodePoint
 lib/percent-encoding.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'isASCIIHex'.
 lib/percent-encoding.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
 lib/percent-encoding.ts(5,10): error TS2393: Duplicate function implementation.
 lib/percent-encoding.ts(11,32): error TS2554: Expected 0 arguments, but got 1.
 lib/percent-encoding.ts(20,10): error TS2451: Cannot redeclare block-scoped variable 'percentDecodeBytes'.
-lib/percent-encoding.ts(21,9): error TS2740: Type 'Uint8Array' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
+lib/percent-encoding.ts(21,9): error TS2322: Type 'Uint8Array' is not assignable to type 'any[]'.
 lib/percent-encoding.ts(21,46): error TS2339: Property 'byteLength' does not exist on type 'object'.
 lib/percent-encoding.ts(23,29): error TS2339: Property 'byteLength' does not exist on type 'object'.
 lib/percent-encoding.ts(25,9): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lib/percent-encoding.ts(36,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
-lib/percent-encoding.ts(41,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
-lib/percent-encoding.ts(41,36): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
-lib/percent-encoding.ts(42,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
-lib/percent-encoding.ts(42,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/percent-encoding.ts(51,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
-lib/percent-encoding.ts(53,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/percent-encoding.ts(51,7): error TS2739: Type 'Set<number>' is missing the following properties from type 'Error': name, message
 lib/percent-encoding.ts(53,71): error TS2339: Property 'has' does not exist on type 'Error'.
-lib/percent-encoding.ts(57,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
-lib/percent-encoding.ts(59,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/percent-encoding.ts(57,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
 lib/percent-encoding.ts(59,68): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/percent-encoding.ts(64,37): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/percent-encoding.ts(68,34): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/percent-encoding.ts(74,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+lib/percent-encoding.ts(74,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
 lib/percent-encoding.ts(77,66): error TS2339: Property 'has' does not exist on type 'Error'.
-lib/percent-encoding.ts(81,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+lib/percent-encoding.ts(81,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
 lib/percent-encoding.ts(83,71): error TS2339: Property 'has' does not exist on type 'Error'.
 lib/percent-encoding.ts(88,10): error TS2451: Cannot redeclare block-scoped variable 'isURLEncodedPercentEncode'.
 lib/percent-encoding.ts(89,73): error TS2339: Property 'has' does not exist on type 'object'.
@@ -162,8 +157,9 @@ lib/percent-encoding.ts(113,66): error TS2345: Argument of type 'string' is not 
 lib/percent-encoding.ts(113,78): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
 lib/percent-encoding.ts(118,10): error TS2451: Cannot redeclare block-scoped variable 'utf8PercentEncodeString'.
 lib/percent-encoding.ts(124,63): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
-lib/url-state-machine.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, utf8PercentEncodeCodePoint, utf8PercentEncodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode
+lib/url-state-machine.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode, utf8PercentEncodeCodePoint
 lib/url-state-machine.ts(5,9): error TS2451: Cannot redeclare block-scoped variable 'utf8DecodeWithoutBOM'.
+lib/url-state-machine.ts(6,58): error TS2451: Cannot redeclare block-scoped variable 'utf8PercentEncodeString'.
 lib/url-state-machine.ts(10,10): error TS2393: Duplicate function implementation.
 lib/url-state-machine.ts(23,7): error TS2322: Type 'typeof failure' is not assignable to type 'number'.
 lib/url-state-machine.ts(31,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -176,8 +172,6 @@ lib/url-state-machine.ts(40,29): error TS2367: This condition will always return
 lib/url-state-machine.ts(40,50): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(40,71): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(44,16): error TS2339: Property 'isASCIIAlpha' does not exist on type 'object'.
-lib/url-state-machine.ts(44,38): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(44,56): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(48,39): error TS2339: Property 'isASCIIAlpha' does not exist on type 'object'.
 lib/url-state-machine.ts(48,59): error TS2339: Property 'codePointAt' does not exist on type 'any[]'.
 lib/url-state-machine.ts(52,39): error TS2339: Property 'isASCIIAlpha' does not exist on type 'object'.
@@ -220,9 +214,6 @@ lib/url-state-machine.ts(334,28): error TS2339: Property 'substring' does not ex
 lib/url-state-machine.ts(338,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
 lib/url-state-machine.ts(338,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Element'.
   Type 'any[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
-lib/url-state-machine.ts(341,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
-lib/url-state-machine.ts(341,47): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/url-state-machine.ts(341,67): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Element'.
 lib/url-state-machine.ts(342,9): error TS2322: Type 'boolean' is not assignable to type 'string'.
 lib/url-state-machine.ts(343,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/url-state-machine.ts(351,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
@@ -231,9 +222,6 @@ lib/url-state-machine.ts(355,3): error TS2322: Type 'string' is not assignable t
 lib/url-state-machine.ts(359,30): error TS2339: Property 'split' does not exist on type 'any[]'.
 lib/url-state-machine.ts(380,38): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
 lib/url-state-machine.ts(381,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(384,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(384,34): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'any[]'.
-  Type 'Element' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/url-state-machine.ts(396,9): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/url-state-machine.ts(415,3): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/url-state-machine.ts(424,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
@@ -245,6 +233,7 @@ lib/url-state-machine.ts(442,3): error TS2322: Type 'number' is not assignable t
 lib/url-state-machine.ts(446,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(450,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(453,36): error TS2304: Cannot find name 'Void'.
+lib/url-state-machine.ts(453,36): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/url-state-machine.ts(454,11): error TS2339: Property 'path' does not exist on type 'String'.
 lib/url-state-machine.ts(458,11): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(466,14): error TS2339: Property 'username' does not exist on type 'string'.
@@ -254,6 +243,7 @@ lib/url-state-machine.ts(470,35): error TS2339: Property 'host' does not exist o
 lib/url-state-machine.ts(470,54): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(474,21): error TS2339: Property 'path' does not exist on type 'string'.
 lib/url-state-machine.ts(481,119): error TS2304: Cannot find name 'Void'.
+lib/url-state-machine.ts(481,119): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/url-state-machine.ts(503,11): error TS2322: Type 'boolean' is not assignable to type 'string'.
 lib/url-state-machine.ts(510,9): error TS2322: Type 'boolean' is not assignable to type 'string'.
 lib/url-state-machine.ts(523,55): error TS2339: Property 'codePointAt' does not exist on type 'any[]'.
@@ -263,108 +253,33 @@ lib/url-state-machine.ts(533,16): error TS2367: This condition will always retur
 lib/url-state-machine.ts(541,13): error TS2339: Property 'isASCIIAlpha' does not exist on type 'object'.
 lib/url-state-machine.ts(549,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(556,13): error TS2339: Property 'isASCIIAlphanumeric' does not exist on type 'object'.
-lib/url-state-machine.ts(556,39): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(556,55): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(556,71): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(558,14): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(606,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(613,60): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(614,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(615,44): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(633,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(646,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(658,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(660,37): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(670,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(673,16): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(688,31): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(688,47): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(693,14): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(708,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(721,7): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(721,23): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(732,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(740,11): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/url-state-machine.ts(741,27): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
-lib/url-state-machine.ts(748,13): error TS2322: Type 'boolean' is not assignable to type 'string'.
-lib/url-state-machine.ts(748,79): error TS2345: Argument of type '(c: string) => boolean' is not assignable to parameter of type 'boolean'.
-lib/url-state-machine.ts(756,26): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(756,42): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(756,58): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(757,38): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/url-state-machine.ts(744,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/url-state-machine.ts(760,7): error TS2322: Type 'number' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(777,14): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(780,7): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(787,11): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/url-state-machine.ts(788,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-lib/url-state-machine.ts(795,26): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(795,42): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(795,58): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(796,38): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(800,7): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(807,11): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/url-state-machine.ts(808,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-lib/url-state-machine.ts(819,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(821,16): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(831,13): error TS2339: Property 'isASCIIDigit' does not exist on type 'object'.
-lib/url-state-machine.ts(833,26): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(833,42): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(833,58): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(834,38): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(840,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(842,23): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(852,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(858,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/url-state-machine.ts(871,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(871,23): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(880,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(883,16): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(907,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(907,23): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(928,19): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(928,35): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(928,52): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(928,68): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(940,11): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/url-state-machine.ts(941,11): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-lib/url-state-machine.ts(965,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(970,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(970,25): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(973,37): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(976,37): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(981,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(992,19): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(992,59): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(993,32): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(993,48): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(994,32): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1000,11): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1000,52): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1003,44): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1004,41): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1013,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1017,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1024,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(1025,15): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
 lib/url-state-machine.ts(1026,16): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
-lib/url-state-machine.ts(1030,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/url-state-machine.ts(1037,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1040,14): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1045,22): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1049,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(1050,17): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
 lib/url-state-machine.ts(1051,17): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
-lib/url-state-machine.ts(1056,51): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/url-state-machine.ts(1068,31): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1070,60): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
-lib/url-state-machine.ts(1074,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/url-state-machine.ts(1081,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(1082,15): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
 lib/url-state-machine.ts(1083,16): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
-lib/url-state-machine.ts(1096,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/url-state-machine.ts(1097,15): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
 lib/url-state-machine.ts(1098,16): error TS2339: Property 'isASCIIHex' does not exist on type 'object'.
-lib/url-state-machine.ts(1102,53): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/url-state-machine.ts(1109,31): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(1110,11): error TS2339: Property 'host' does not exist on type 'string'.
 lib/url-state-machine.ts(1113,13): error TS2339: Property 'username' does not exist on type 'string'.
@@ -400,9 +315,7 @@ lib/url-state-machine.ts(1211,119): error TS2339: Property 'stateOverride' does 
 lib/url-state-machine.ts(1212,11): error TS2339: Property 'failure' does not exist on type 'HTMLElement'.
 lib/url-state-machine.ts(1216,14): error TS2339: Property 'url' does not exist on type 'HTMLElement'.
 lib/url-state-machine.ts(1220,7): error TS2339: Property 'username' does not exist on type 'string'.
-lib/url-state-machine.ts(1220,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 lib/url-state-machine.ts(1224,7): error TS2339: Property 'password' does not exist on type 'string'.
-lib/url-state-machine.ts(1224,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 lib/url-state-machine.ts(1243,65): error TS2339: Property 'baseURL' does not exist on type 'object'.
 lib/url-state-machine.ts(1243,100): error TS2339: Property 'encodingOverride' does not exist on type 'object'.
 lib/urlencoded.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
@@ -413,20 +326,13 @@ lib/urlencoded.ts(3,54): error TS2451: Cannot redeclare block-scoped variable 'i
 lib/urlencoded.ts(5,10): error TS2393: Duplicate function implementation.
 lib/urlencoded.ts(6,3): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/urlencoded.ts(11,54): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
-lib/urlencoded.ts(26,7): error TS2322: Type 'Uint8Array' is not assignable to type 'any[]'.
+lib/urlencoded.ts(26,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 lib/urlencoded.ts(29,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/urlencoded.ts(29,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 lib/urlencoded.ts(30,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/urlencoded.ts(32,11): error TS2322: Type 'any[]' is not assignable to type 'string'.
-lib/urlencoded.ts(32,72): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/urlencoded.ts(33,11): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/urlencoded.ts(42,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
-lib/urlencoded.ts(42,26): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Element'.
-lib/urlencoded.ts(42,37): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
 lib/urlencoded.ts(46,38): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/urlencoded.ts(57,60): error TS2345: Argument of type '(c: string) => boolean' is not assignable to parameter of type 'boolean'.
 lib/urlencoded.ts(65,23): error TS2339: Property 'name' does not exist on type 'string'.
-lib/urlencoded.ts(69,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 live-viewer/live-viewer.ts(3,9): error TS2739: Type 'Element' is missing the following properties from type 'Error': name, message
 live-viewer/live-viewer.ts(6,9): error TS2322: Type 'TextEncoder' is not assignable to type 'HTMLElement'.
 live-viewer/live-viewer.ts(7,9): error TS2322: Type 'TextDecoder' is not assignable to type 'HTMLElement'.

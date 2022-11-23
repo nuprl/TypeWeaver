@@ -7,7 +7,9 @@ gulpfile.ts(28,15): error TS2339: Property 'gulpfile' does not exist on type 'ob
 gulpfile.ts(31,22): error TS2339: Property 'format' does not exist on type 'Function'.
 gulpfile.ts(32,22): error TS2339: Property 'failAfterError' does not exist on type 'Function'.
 gulpfile.ts(36,39): error TS2304: Cannot find name 'Void'.
+gulpfile.ts(36,39): error TS4060: Return type of exported function has or is using private name 'Void'.
 gulpfile.ts(40,40): error TS2304: Cannot find name 'Void'.
+gulpfile.ts(40,40): error TS4060: Return type of exported function has or is using private name 'Void'.
 gulpfile.ts(50,17): error TS2339: Property 'src' does not exist on type 'HTMLElement'.
 gulpfile.ts(50,27): error TS2339: Property 'libJsFiles' does not exist on type 'object'.
 gulpfile.ts(52,24): error TS2339: Property 'hookRequire' does not exist on type 'Function'.
@@ -21,6 +23,7 @@ gulpfile.ts(71,17): error TS2339: Property 'src' does not exist on type 'HTMLEle
 gulpfile.ts(71,27): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(75,31): error TS2339: Property 'bold' does not exist on type 'any[]'.
 gulpfile.ts(80,19): error TS2304: Cannot find name 'Void'.
+gulpfile.ts(80,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 gulpfile.ts(82,10): error TS2339: Property 'watch' does not exist on type 'HTMLElement'.
 gulpfile.ts(83,15): error TS2339: Property 'libJsFiles' does not exist on type 'object'.
 gulpfile.ts(84,15): error TS2339: Property 'specFiles' does not exist on type 'object'.
@@ -32,9 +35,11 @@ gulpfile.ts(90,15): error TS2339: Property 'eslintrc' does not exist on type 'ob
 gulpfile.ts(96,15): error TS2339: Property 'series' does not exist on type 'HTMLElement'.
 gulpfile.ts(97,16): error TS2339: Property 'series' does not exist on type 'HTMLElement'.
 lib/index.ts(5,51): error TS2304: Cannot find name 'Void'.
+lib/index.ts(5,51): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(15,13): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/index.ts(21,44): error TS2304: Cannot find name 'Void'.
+lib/index.ts(21,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(22,13): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 lib/index.ts(36,53): error TS2339: Property 'children' does not exist on type 'Function'.
 lib/index.ts(36,71): error TS2339: Property 'children' does not exist on type 'Function'.

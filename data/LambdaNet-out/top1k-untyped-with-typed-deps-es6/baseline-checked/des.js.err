@@ -16,9 +16,10 @@ lib/des/cipher.ts(17,44): error TS2304: Cannot find name 'Void'.
 lib/des/cipher.ts(96,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/des/cipher.ts(109,5): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/des/cipher.ts(116,23): error TS2339: Property 'length' does not exist on type 'object'.
-lib/des/des.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/des.js/lib/des/utils"' has no default export.
+lib/des/des.ts(5,8): error TS1192: Module '"lib/des/utils"' has no default export.
 lib/des/des.ts(8,22): error TS2304: Cannot find name 'Void'.
 lib/des/des.ts(13,32): error TS2304: Cannot find name 'Void'.
+lib/des/des.ts(13,32): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/des/des.ts(16,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/des/des.ts(19,34): error TS2339: Property 'key' does not exist on type 'object'.
 lib/des/des.ts(25,10): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -65,6 +66,7 @@ lib/des/des.ts(135,10): error TS2362: The left-hand side of an arithmetic operat
 lib/des/des.ts(135,14): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/des/ede.ts(8,47): error TS2304: Cannot find name 'Void'.
 lib/des/ede.ts(30,32): error TS2304: Cannot find name 'Void'.
+lib/des/ede.ts(30,32): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/des/ede.ts(33,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/des/ede.ts(41,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/des/ede.ts(44,106): error TS2304: Cannot find name 'Void'.

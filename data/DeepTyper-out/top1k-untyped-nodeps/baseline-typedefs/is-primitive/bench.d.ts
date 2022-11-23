@@ -1,0 +1,15 @@
+declare const Benchmark: any;
+declare const suite: any;
+declare const array: any;
+declare const object: string[];
+declare const values: string[];
+declare function current(val: any): boolean;
+declare function negation(val: any): boolean;
+declare function isPrimitiveEquals(val: any): boolean;
+declare function isPrimitiveEqualsNot(val: any): boolean;
+declare function isPrimitiveIf(val: any): boolean;
+declare function isPrimitiveArray(val: any): boolean;
+declare function isPrimitiveObjectOwn(val: any): boolean;
+declare function isPrimitiveObjectLookup(val: any): boolean;
+declare function isPrimitiveObjectIn(val: any): boolean;
+declare function isPrimitiveSwitch(val: any): boolean;

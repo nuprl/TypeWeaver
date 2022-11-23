@@ -1,4 +1,5 @@
 default-exclude.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'defaultExtension'.
+default-exclude.ts(5,3): error TS2339: Property 'map' does not exist on type 'string'.
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'defaultExtension'.
 index.ts(7,2): error TS2322: Type '{ all: string[]; testExclude: string[]; instrument: string[]; checkCoverage: string[]; report: string[]; main: null[]; instrumentOnly: string[]; }' is not assignable to type 'HTMLInputElement'.
   Object literal may only specify known properties, and 'all' does not exist in type 'HTMLInputElement'.
@@ -49,6 +50,7 @@ index.ts(372,29): error TS2339: Property 'instrument' does not exist on type 'HT
 index.ts(381,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(388,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(439,71): error TS2304: Cannot find name 'Void'.
+index.ts(439,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(457,42): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
 index.ts(464,3): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.

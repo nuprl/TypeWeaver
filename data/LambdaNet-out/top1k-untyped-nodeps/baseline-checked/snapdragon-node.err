@@ -80,8 +80,10 @@ index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(554,50): error TS2304: Cannot find name 'Void'.
+index.ts(554,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(555,7): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
 index.ts(558,47): error TS2304: Cannot find name 'Void'.
+index.ts(558,47): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(559,10): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(567,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
 index.ts(569,27): error TS2339: Property 'nodes' does not exist on type 'any[]'.
@@ -97,16 +99,19 @@ index.ts(599,18): error TS2339: Property 'isType' does not exist on type 'Node'.
 index.ts(611,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(617,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 index.ts(629,58): error TS2304: Cannot find name 'Void'.
+index.ts(629,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(630,8): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'string'.
 index.ts(631,15): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'any[]'.
   Type 'Node' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 index.ts(634,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'string'.
 index.ts(638,67): error TS2304: Cannot find name 'Void'.
+index.ts(638,67): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(641,41): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
 index.ts(644,34): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 index.ts(645,12): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(645,35): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(651,51): error TS2304: Cannot find name 'Void'.
+index.ts(651,51): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(652,13): error TS2339: Property 'nodes' does not exist on type 'any[]'.
 index.ts(654,26): error TS2339: Property 'nodes' does not exist on type 'any[]'.
 index.ts(655,30): error TS2339: Property 'nodes' does not exist on type 'any[]'.
@@ -130,6 +135,7 @@ index.ts(695,8): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(695,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'any[]'.
 index.ts(696,3): error TS2322: Type 'Node' is not assignable to type 'any[]'.
 index.ts(699,57): error TS2304: Cannot find name 'Void'.
+index.ts(699,57): error TS4060: Return type of exported function has or is using private name 'Void'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2300: Duplicate identifier 'Node'.

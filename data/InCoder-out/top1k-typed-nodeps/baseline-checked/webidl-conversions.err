@@ -1,9 +1,12 @@
 lib/index.ts(44,18): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+lib/index.ts(44,18): error TS4078: Parameter 'x' of exported function has or is using private name 'umber'.
 lib/index.ts(58,32): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+lib/index.ts(58,32): error TS4078: Parameter 'x' of exported function has or is using private name 'umber'.
 lib/index.ts(62,56): error TS2339: Property 'unsigned' does not exist on type 'Boolean'.
 lib/index.ts(79,17): error TS2339: Property 'enforceRange' does not exist on type '{}'.
 lib/index.ts(97,37): error TS2339: Property 'clamp' does not exist on type '{}'.
 lib/index.ts(123,69): error TS2304: Cannot find name 'LongLongConversionOptions'.
+lib/index.ts(123,69): error TS4078: Parameter '{ unsigned }' of exported function has or is using private name 'LongLongConversionOptions'.
 lib/index.ts(132,17): error TS2339: Property 'enforceRange' does not exist on type '{}'.
 lib/index.ts(150,37): error TS2339: Property 'clamp' does not exist on type '{}'.
 lib/index.ts(178,45): error TS2345: Argument of type '{ unsigned: boolean; }' is not assignable to parameter of type 'Boolean'.

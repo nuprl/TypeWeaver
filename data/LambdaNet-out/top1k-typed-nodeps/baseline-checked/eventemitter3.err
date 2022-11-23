@@ -372,10 +372,12 @@ benchmarks/template.ts(19,17): error TS2339: Property 'target' does not exist on
 benchmarks/template.ts(20,41): error TS2304: Cannot find name 'Void'.
 index.ts(4,5): error TS2322: Type 'string' is not assignable to type 'number'.
 index.ts(13,20): error TS2304: Cannot find name 'Void'.
+index.ts(13,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(29,8): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(29,32): error TS2322: Type 'boolean' is not assignable to type 'number'.
 index.ts(41,10): error TS2300: Duplicate identifier 'EE'.
 index.ts(41,59): error TS2304: Cannot find name 'Void'.
+index.ts(41,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(63,26): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(63,37): error TS2345: Argument of type 'string | object' is not assignable to parameter of type 'Function'.
   Type 'string' is not assignable to type 'Function'.
@@ -389,11 +391,13 @@ index.ts(68,16): error TS2339: Property '_events' does not exist on type 'object
 index.ts(68,40): error TS2339: Property '_events' does not exist on type 'object'.
 index.ts(70,3): error TS2322: Type 'object' is not assignable to type 'string'.
 index.ts(80,52): error TS2304: Cannot find name 'Void'.
+index.ts(80,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(81,17): error TS2339: Property '_eventsCount' does not exist on type 'object'.
 index.ts(81,45): error TS2339: Property '_events' does not exist on type 'object'.
 index.ts(81,55): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(82,23): error TS2339: Property '_events' does not exist on type 'object'.
 index.ts(92,26): error TS2304: Cannot find name 'Void'.
+index.ts(92,26): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(93,18): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(134,16): error TS2339: Property 'fn' does not exist on type 'any[]'.
 index.ts(134,37): error TS2339: Property 'fn' does not exist on type 'any[]'.

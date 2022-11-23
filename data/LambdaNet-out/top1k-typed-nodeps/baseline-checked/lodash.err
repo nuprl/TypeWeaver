@@ -66,10 +66,14 @@
 .internal/Stack.ts(85,19): error TS2339: Property '__data__' does not exist on type 'Stack'.
 .internal/Stack.ts(88,10): error TS2339: Property 'size' does not exist on type 'Stack'.
 .internal/addMapEntry.ts(9,27): error TS2304: Cannot find name 'ListCache'.
+.internal/addMapEntry.ts(9,27): error TS4078: Parameter 'map' of exported function has or is using private name 'ListCache'.
 .internal/addMapEntry.ts(9,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 .internal/addMapEntry.ts(9,54): error TS2304: Cannot find name 'Hash'.
+.internal/addMapEntry.ts(9,54): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/addSetEntry.ts(9,27): error TS2304: Cannot find name 'SetCache'.
+.internal/addSetEntry.ts(9,27): error TS4078: Parameter 'set' of exported function has or is using private name 'SetCache'.
 .internal/addSetEntry.ts(9,53): error TS2304: Cannot find name 'ListCache'.
+.internal/addSetEntry.ts(9,53): error TS4060: Return type of exported function has or is using private name 'ListCache'.
 .internal/arrayIncludes.ts(13,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 .internal/arrayIncludes.ts(14,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
 .internal/arrayLikeKeys.ts(19,48): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
@@ -77,15 +81,19 @@
   Type 'Boolean' has no call signatures.
 .internal/arrayLikeKeys.ts(35,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 .internal/asciiSize.ts(8,33): error TS2304: Cannot find name 'Void'.
+.internal/asciiSize.ts(8,33): error TS4060: Return type of exported function has or is using private name 'Void'.
 .internal/asciiToArray.ts(8,40): error TS2304: Cannot find name 'Hash'.
+.internal/asciiToArray.ts(8,40): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/assignMergeValue.ts(13,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 .internal/assignMergeValue.ts(14,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 .internal/assignValue.ts(15,67): error TS2304: Cannot find name 'Void'.
+.internal/assignValue.ts(15,67): error TS4060: Return type of exported function has or is using private name 'Void'.
 .internal/assignValue.ts(18,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/assignValue.ts(20,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/assignValue.ts(23,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/assocIndexOf.ts(14,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 .internal/baseAssignValue.ts(10,71): error TS2304: Cannot find name 'Void'.
+.internal/baseAssignValue.ts(10,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 .internal/baseAt.ts(18,40): error TS2554: Expected 3 arguments, but got 2.
 .internal/baseClone.ts(90,31): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'HTMLInputElement'.
   Type 'Function' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 332 more.
@@ -119,7 +127,6 @@
 .internal/baseClone.ts(194,9): error TS2322: Type 'any[] | {}' is not assignable to type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 .internal/baseClone.ts(196,31): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
-  Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 .internal/baseClone.ts(200,21): error TS2554: Expected 1 arguments, but got 0.
 .internal/baseClone.ts(203,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 .internal/baseClone.ts(208,19): error TS2345: Argument of type '(subValue: number, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
@@ -134,7 +141,7 @@
 .internal/baseConforms.ts(12,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 .internal/baseConforms.ts(13,53): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 .internal/baseDifference.ts(31,5): error TS2322: Type 'object' is not assignable to type 'any[]'.
-.internal/baseDifference.ts(40,5): error TS2740: Type 'SetCache' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+.internal/baseDifference.ts(40,5): error TS2322: Type 'SetCache' is not assignable to type 'any[]'.
 .internal/baseEach.ts(16,20): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 .internal/baseEach.ts(17,5): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
 .internal/baseEach.ts(17,35): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
@@ -142,7 +149,7 @@
 .internal/baseEachRight.ts(17,5): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
 .internal/baseEachRight.ts(17,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 .internal/baseFindKey.ts(15,7): error TS2322: Type 'string' is not assignable to type 'Function'.
-.internal/baseFor.ts(24,3): error TS2322: Type 'object' is not assignable to type 'any[]'.
+.internal/baseFor.ts(24,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 .internal/baseForOwn.ts(13,3): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
 .internal/baseForOwn.ts(13,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 .internal/baseForOwnRight.ts(13,3): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
@@ -162,6 +169,7 @@
 .internal/baseIntersection.ts(55,22): error TS2304: Cannot find name 'ListCache'.
 .internal/baseIntersection.ts(57,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/baseIsEqual.ts(18,96): error TS2304: Cannot find name 'Stack'.
+.internal/baseIsEqual.ts(18,96): error TS4078: Parameter 'stack' of exported function has or is using private name 'Stack'.
 .internal/baseIsEqual.ts(19,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 .internal/baseIsEqual.ts(22,80): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/baseIsEqual.ts(25,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
@@ -199,11 +207,13 @@
   Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 .internal/baseMatchesProperty.ts(29,9): error TS2554: Expected 5 arguments, but got 3.
 .internal/baseMerge.ts(19,107): error TS2304: Cannot find name 'Void'.
+.internal/baseMerge.ts(19,107): error TS4060: Return type of exported function has or is using private name 'Void'.
 .internal/baseMerge.ts(20,7): error TS2367: This condition will always return 'false' since the types 'object' and 'string' have no overlap.
 .internal/baseMerge.ts(23,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 .internal/baseMerge.ts(25,25): error TS2554: Expected 1 arguments, but got 0.
 .internal/baseMerge.ts(26,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 .internal/baseMergeDeep.ts(29,146): error TS2304: Cannot find name 'Void'.
+.internal/baseMergeDeep.ts(29,146): error TS4060: Return type of exported function has or is using private name 'Void'.
 .internal/baseMergeDeep.ts(32,18): error TS2304: Cannot find name 'Stack'.
 .internal/baseMergeDeep.ts(32,32): error TS2339: Property 'get' does not exist on type 'object'.
 .internal/baseMergeDeep.ts(46,39): error TS2349: This expression is not callable.
@@ -262,7 +272,7 @@
 .internal/baseToString.ts(27,44): error TS2339: Property 'call' does not exist on type 'string'.
 .internal/baseUniq.ts(36,7): error TS2322: Type 'object' is not assignable to type 'any[]'.
 .internal/baseUniq.ts(36,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-.internal/baseUniq.ts(40,5): error TS2322: Type 'SetCache' is not assignable to type 'any[]'.
+.internal/baseUniq.ts(40,5): error TS2740: Type 'SetCache' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 .internal/baseUniq.ts(40,12): error TS2554: Expected 1 arguments, but got 0.
 .internal/baseUnset.ts(15,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 .internal/baseUnset.ts(17,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -277,10 +287,10 @@
 .internal/baseXor.ts(33,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 .internal/baseZipObject.ts(14,9): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 .internal/cacheHas.ts(9,26): error TS2304: Cannot find name 'ListCache'.
+.internal/cacheHas.ts(9,26): error TS4078: Parameter 'cache' of exported function has or is using private name 'ListCache'.
 .internal/castArrayLikeObject.ts(11,3): error TS2322: Type 'string | undefined[]' is not assignable to type 'any[]'.
   Type 'string' is not assignable to type 'any[]'.
 .internal/castPath.ts(16,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
-  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 .internal/castPath.ts(16,43): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 .internal/castSlice.ts(15,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
@@ -299,12 +309,14 @@
 .internal/cloneBuffer.ts(13,46): error TS2339: Property 'Buffer' does not exist on type 'boolean'.
 .internal/cloneBuffer.ts(13,106): error TS2339: Property 'allocUnsafe' does not exist on type 'Element'.
 .internal/cloneBuffer.ts(23,56): error TS2304: Cannot find name 'Stack'.
+.internal/cloneBuffer.ts(23,56): error TS4060: Return type of exported function has or is using private name 'Stack'.
 .internal/cloneBuffer.ts(25,19): error TS2339: Property 'slice' does not exist on type 'object'.
 .internal/cloneBuffer.ts(27,35): error TS2339: Property 'length' does not exist on type 'object'.
 .internal/cloneBuffer.ts(28,66): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 .internal/cloneBuffer.ts(30,10): error TS2339: Property 'copy' does not exist on type 'object'.
 .internal/cloneDataView.ts(11,60): error TS2304: Cannot find name 'Hash'.
+.internal/cloneDataView.ts(11,60): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/cloneDataView.ts(12,60): error TS2339: Property 'buffer' does not exist on type 'object'.
 .internal/cloneDataView.ts(12,79): error TS2339: Property 'buffer' does not exist on type 'object'.
 .internal/cloneDataView.ts(13,14): error TS2351: This expression is not constructable.
@@ -312,10 +324,13 @@
 .internal/cloneDataView.ts(13,52): error TS2339: Property 'byteOffset' does not exist on type 'object'.
 .internal/cloneDataView.ts(13,73): error TS2339: Property 'byteLength' does not exist on type 'object'.
 .internal/cloneRegExp.ts(11,30): error TS2304: Cannot find name 'Hash'.
+.internal/cloneRegExp.ts(11,30): error TS4078: Parameter 'regexp' of exported function has or is using private name 'Hash'.
 .internal/cloneRegExp.ts(11,37): error TS2304: Cannot find name 'Hash'.
+.internal/cloneRegExp.ts(11,37): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/cloneRegExp.ts(12,17): error TS2304: Cannot find name 'Hash'.
 .internal/cloneTypedArray.ts(11,38): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 .internal/cloneTypedArray.ts(11,61): error TS2304: Cannot find name 'Hash'.
+.internal/cloneTypedArray.ts(11,61): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/compareAscending.ts(12,7): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 .internal/compareAscending.ts(21,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .internal/compareAscending.ts(24,29): error TS2769: No overload matches this call.
@@ -349,6 +364,7 @@
 .internal/createPadding.ts(26,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
 .internal/createPadding.ts(26,51): error TS2339: Property 'join' does not exist on type 'string'.
 .internal/createRange.ts(11,33): error TS2304: Cannot find name 'Hash'.
+.internal/createRange.ts(11,33): error TS4078: Parameter 'fromRight' of exported function has or is using private name 'Hash'.
 .internal/createSet.ts(13,53): error TS2345: Argument of type 'Set<number>' is not assignable to parameter of type 'any[]'.
   Type 'Set<number>' is missing the following properties from type 'any[]': length, pop, push, concat, and 24 more.
 .internal/customDefaultsMerge.ts(19,16): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
@@ -356,7 +372,7 @@
 .internal/customDefaultsMerge.ts(22,67): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Stack'.
   Type '{}' is missing the following properties from type 'Stack': clear, delete, get, has, set
 .internal/customDefaultsMerge.ts(25,3): error TS2322: Type 'Function' is not assignable to type 'any[]'.
-.internal/deburrLetter.ts(69,7): error TS2740: Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+.internal/deburrLetter.ts(69,7): error TS2322: Type 'Function' is not assignable to type 'any[]'.
 .internal/equalArrays.ts(23,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 .internal/equalArrays.ts(31,18): error TS2304: Cannot find name 'Stack'.
 .internal/equalArrays.ts(31,32): error TS2339: Property 'get' does not exist on type 'object'.
@@ -428,6 +444,7 @@
   Types of parameters 'key' and 'index' are incompatible.
     Type 'number' is not assignable to type 'string'.
 .internal/memoizeCapped.ts(14,41): error TS2304: Cannot find name 'Hash'.
+.internal/memoizeCapped.ts(14,41): error TS4060: Return type of exported function has or is using private name 'Hash'.
 .internal/memoizeCapped.ts(15,17): error TS2304: Cannot find name 'Hash'.
 .internal/nodeTypes.ts(7,7): error TS2740: Type 'NodeModule' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 275 more.
 .internal/nodeTypes.ts(7,105): error TS2339: Property 'nodeType' does not exist on type 'NodeModule'.
@@ -437,6 +454,7 @@
 .internal/nodeTypes.ts(20,59): error TS2339: Property 'require' does not exist on type 'HTMLElement'.
 .internal/nodeTypes.ts(20,81): error TS2339: Property 'require' does not exist on type 'HTMLElement'.
 .internal/parent.ts(12,48): error TS2304: Cannot find name 'Stack'.
+.internal/parent.ts(12,48): error TS4060: Return type of exported function has or is using private name 'Stack'.
 .internal/parent.ts(13,53): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 .internal/parent.ts(13,59): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 .internal/root.ts(5,7): error TS2322: Type 'typeof globalThis' is not assignable to type 'boolean'.
@@ -475,6 +493,7 @@ add.ts(16,94): error TS2345: Argument of type 'number' is not assignable to para
 at.ts(19,59): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 at.ts(19,67): error TS2554: Expected 5 arguments, but got 2.
 attempt.ts(22,44): error TS2304: Cannot find name 'Void'.
+attempt.ts(22,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 camelCase.ts(25,3): error TS2554: Expected 2 arguments, but got 1.
 camelCase.ts(25,53): error TS2339: Property 'reduce' does not exist on type 'boolean'.
 chunk.ts(23,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -493,6 +512,7 @@ cond.ts(31,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 cond.ts(33,3): error TS2322: Type 'object' is not assignable to type 'any[]'.
 cond.ts(33,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 conforms.ts(29,36): error TS2304: Cannot find name 'Stack'.
+conforms.ts(29,36): error TS4060: Return type of exported function has or is using private name 'Stack'.
 conforms.ts(30,23): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 conforms.ts(30,23): error TS2554: Expected 6 arguments, but got 2.
 conformsTo.ts(27,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
@@ -500,8 +520,10 @@ conformsTo.ts(27,64): error TS2345: Argument of type 'string' is not assignable 
 countBy.ts(30,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 countBy.ts(35,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 create.ts(33,57): error TS2304: Cannot find name 'Hash'.
+create.ts(33,57): error TS4060: Return type of exported function has or is using private name 'Hash'.
 create.ts(35,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'object'.
 debounce.ts(65,67): error TS2304: Cannot find name 'Hash'.
+debounce.ts(65,67): error TS4060: Return type of exported function has or is using private name 'Hash'.
 debounce.ts(79,63): error TS2339: Property 'requestAnimationFrame' does not exist on type 'boolean'.
 debounce.ts(85,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 debounce.ts(86,25): error TS2339: Property 'leading' does not exist on type 'object'.
@@ -600,11 +622,14 @@ flattenDeep.ts(21,19): error TS2554: Expected 5 arguments, but got 2.
 flattenDepth.ts(23,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 flattenDepth.ts(28,10): error TS2554: Expected 5 arguments, but got 2.
 floor.ts(22,14): error TS2304: Cannot find name 'Hash'.
+floor.ts(22,14): error TS4025: Exported variable 'floor' has or is using private name 'Hash'.
 flowRight.ts(24,31): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 forEach.ts(28,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 forEachRight.ts(20,61): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 forOwn.ts(26,54): error TS2304: Cannot find name 'Void'.
+forOwn.ts(26,54): error TS4060: Return type of exported function has or is using private name 'Void'.
 forOwnRight.ts(25,59): error TS2304: Cannot find name 'Void'.
+forOwnRight.ts(25,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 get.ts(28,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 groupBy.ts(25,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 groupBy.ts(30,36): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
@@ -615,6 +640,7 @@ hasPathIn.ts(28,3): error TS2322: Type 'any[]' is not assignable to type 'string
 hasPathIn.ts(36,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 hasPathIn.ts(46,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 head.ts(18,30): error TS2304: Cannot find name 'Stack'.
+head.ts(18,30): error TS4060: Return type of exported function has or is using private name 'Stack'.
 inRange.ts(44,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
 indexOf.ts(30,57): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 indexOf.ts(34,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
@@ -625,6 +651,7 @@ intersectionBy.ts(33,7): error TS2554: Expected 3 arguments, but got 2.
 intersectionWith.ts(27,9): error TS2322: Type 'object' is not assignable to type 'any[]'.
 intersectionWith.ts(34,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 invoke.ts(22,64): error TS2304: Cannot find name 'Stack'.
+invoke.ts(22,64): error TS4060: Return type of exported function has or is using private name 'Stack'.
 invoke.ts(23,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 invoke.ts(25,65): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 invoke.ts(25,70): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
@@ -704,6 +731,7 @@ lowerCase.ts(26,3): error TS2554: Expected 2 arguments, but got 1.
 lowerCase.ts(26,49): error TS2339: Property 'reduce' does not exist on type 'boolean'.
 lowerFirst.ts(18,7): error TS2322: Type 'Function' is not assignable to type 'any[]'.
 matches.ts(33,35): error TS2304: Cannot find name 'Stack'.
+matches.ts(33,35): error TS4060: Return type of exported function has or is using private name 'Stack'.
 matches.ts(34,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 matches.ts(34,22): error TS2554: Expected 6 arguments, but got 2.
 matchesProperty.ts(32,3): error TS2322: Type 'Function' is not assignable to type 'string'.
@@ -711,7 +739,9 @@ matchesProperty.ts(32,36): error TS2345: Argument of type 'any[]' is not assigna
 matchesProperty.ts(32,36): error TS2554: Expected 6 arguments, but got 2.
 maxBy.ts(30,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 mean.ts(15,30): error TS2304: Cannot find name 'Stack'.
+mean.ts(15,30): error TS4060: Return type of exported function has or is using private name 'Stack'.
 memoize.ts(43,55): error TS2304: Cannot find name 'Hash'.
+memoize.ts(43,55): error TS4060: Return type of exported function has or is using private name 'Hash'.
 memoize.ts(49,18): error TS2304: Cannot find name 'ListCache'.
 memoize.ts(49,39): error TS2339: Property 'cache' does not exist on type 'Function'.
 memoize.ts(55,14): error TS2339: Property 'cache' does not exist on type 'Function'.
@@ -722,14 +752,17 @@ methodOf.ts(25,49): error TS2345: Argument of type 'any[]' is not assignable to 
 minBy.ts(30,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 multiply.ts(16,119): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 nth.ts(22,40): error TS2304: Cannot find name 'Stack'.
+nth.ts(22,40): error TS4060: Return type of exported function has or is using private name 'Stack'.
 nth.ts(23,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 nth.ts(27,3): error TS2365: Operator '+=' cannot be applied to types 'number' and 'number | boolean'.
 nth.ts(28,21): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 nthArg.ts(22,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 once.ts(19,30): error TS2304: Cannot find name 'Stack'.
+once.ts(19,30): error TS4060: Return type of exported function has or is using private name 'Stack'.
 once.ts(20,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 orderBy.ts(48,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 over.ts(21,16): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+  Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 overEvery.ts(27,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
 overSome.ts(27,17): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
 padEnd.ts(26,49): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -738,12 +771,15 @@ padEnd.ts(27,3): error TS2322: Type 'string | number' is not assignable to type 
 padStart.ts(27,3): error TS2322: Type 'string' is not assignable to type 'number'.
 parseInt.ts(7,39): error TS2339: Property 'parseInt' does not exist on type 'boolean'.
 partition.ts(26,64): error TS2304: Cannot find name 'Stack'.
+partition.ts(26,64): error TS4060: Return type of exported function has or is using private name 'Stack'.
 partition.ts(29,6): error TS2345: Argument of type 'undefined[][]' is not assignable to parameter of type 'string'.
 pick.ts(18,42): error TS2304: Cannot find name 'Hash'.
+pick.ts(18,42): error TS4060: Return type of exported function has or is using private name 'Hash'.
 pick.ts(19,49): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 pickBy.ts(25,42): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 pickBy.ts(26,29): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 property.ts(26,34): error TS2304: Cannot find name 'Hash'.
+property.ts(26,34): error TS4060: Return type of exported function has or is using private name 'Hash'.
 property.ts(27,10): error TS2554: Expected 2 arguments, but got 1.
 property.ts(27,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 pull.ts(25,41): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -755,13 +791,18 @@ pullAt.ts(32,9): error TS2322: Type 'object' is not assignable to type 'any[]'.
 pullAt.ts(34,94): error TS2339: Property 'sort' does not exist on type 'object'.
 random.ts(4,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 range.ts(42,14): error TS2304: Cannot find name 'Hash'.
+range.ts(42,14): error TS4025: Exported variable 'range' has or is using private name 'Hash'.
 range.ts(42,21): error TS2554: Expected 1 arguments, but got 0.
 reduce.ts(38,81): error TS2304: Cannot find name 'Hash'.
+reduce.ts(38,81): error TS4060: Return type of exported function has or is using private name 'Hash'.
 reduceRight.ts(23,81): error TS2304: Cannot find name 'Stack'.
+reduceRight.ts(23,81): error TS4060: Return type of exported function has or is using private name 'Stack'.
 reject.ts(25,59): error TS2304: Cannot find name 'Hash'.
+reject.ts(25,59): error TS4060: Return type of exported function has or is using private name 'Hash'.
 result.ts(32,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 result.ts(43,69): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 sample.ts(13,32): error TS2304: Cannot find name 'Stack'.
+sample.ts(13,32): error TS4060: Return type of exported function has or is using private name 'Stack'.
 sampleSize.ts(30,26): error TS2554: Expected 2 arguments, but got 1.
 sampleSize.ts(32,11): error TS2322: Type 'number' is not assignable to type 'string'.
 sampleSize.ts(37,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
@@ -806,6 +847,7 @@ subtract.ts(16,111): error TS2345: Argument of type 'number' is not assignable t
 tail.ts(14,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 takeWhile.ts(26,7): error TS2554: Expected 4 arguments, but got 2.
 throttle.ts(52,65): error TS2304: Cannot find name 'Stack'.
+throttle.ts(52,65): error TS4060: Return type of exported function has or is using private name 'Stack'.
 throttle.ts(59,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 throttle.ts(60,48): error TS2339: Property 'leading' does not exist on type 'object'.
 throttle.ts(61,50): error TS2339: Property 'trailing' does not exist on type 'object'.
@@ -849,7 +891,7 @@ transform.ts(43,33): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 transform.ts(45,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 transform.ts(51,7): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
-transform.ts(54,40): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[] & object'.
+transform.ts(54,40): error TS2345: Argument of type 'object' is not assignable to parameter of type 'object & any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 trim.ts(30,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 trim.ts(31,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -906,7 +948,7 @@ uniqWith.ts(25,34): error TS2345: Argument of type 'string' is not assignable to
 unzip.ts(30,27): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 unzip.ts(38,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 unzip.ts(40,3): error TS2322: Type 'object' is not assignable to type 'any[]'.
-unzipWith.ts(27,9): error TS2322: Type 'any[]' is not assignable to type 'Function'.
+unzipWith.ts(27,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 unzipWith.ts(28,3): error TS2322: Type 'object' is not assignable to type 'any[]'.
 unzipWith.ts(28,14): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
 update.ts(29,36): error TS2554: Expected 4 arguments, but got 3.
@@ -914,6 +956,7 @@ updateWith.ts(27,61): error TS2345: Argument of type 'string' is not assignable 
 upperCase.ts(24,3): error TS2554: Expected 2 arguments, but got 1.
 upperCase.ts(24,53): error TS2339: Property 'reduce' does not exist on type 'boolean'.
 upperFirst.ts(19,19): error TS2304: Cannot find name 'Hash'.
+upperFirst.ts(19,19): error TS4025: Exported variable 'upperFirst' has or is using private name 'Hash'.
 values.ts(30,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 without.ts(23,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 without.ts(23,37): error TS2554: Expected 4 arguments, but got 2.
@@ -927,6 +970,7 @@ xorBy.ts(28,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 xorBy.ts(28,10): error TS2554: Expected 3 arguments, but got 2.
 xorWith.ts(28,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 zip.ts(18,26): error TS2304: Cannot find name 'Stack'.
+zip.ts(18,26): error TS4060: Return type of exported function has or is using private name 'Stack'.
 zipObject.ts(20,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 zipObjectDeep.ts(19,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 zipWith.ts(24,3): error TS2322: Type 'any[]' is not assignable to type 'boolean'.

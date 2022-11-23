@@ -1,4 +1,5 @@
 example/dns.ts(4,63): error TS2304: Cannot find name 'Void'.
+example/dns.ts(4,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 example/dns.ts(12,38): error TS2339: Property 'operation' does not exist on type 'string'.
 example/dns.ts(14,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/dns.ts(15,9): error TS2339: Property 'resolve' does not exist on type 'string'.
@@ -6,6 +7,7 @@ example/dns.ts(16,21): error TS2339: Property 'retry' does not exist on type 'HT
 example/dns.ts(20,20): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 example/dns.ts(20,43): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 example/stop.ts(3,67): error TS2304: Cannot find name 'Void'.
+example/stop.ts(3,67): error TS4060: Return type of exported function has or is using private name 'Void'.
 example/stop.ts(11,38): error TS2339: Property 'operation' does not exist on type 'string'.
 example/stop.ts(13,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/stop.ts(14,27): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLInputElement'.
@@ -18,8 +20,7 @@ example/stop.ts(25,43): error TS2339: Property 'errors' does not exist on type '
 example/stop.ts(30,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
 example/stop.ts(39,3): error TS2322: Type 'Immediate' is not assignable to type 'number'.
 lib/retry.ts(1,5): error TS2300: Duplicate identifier 'RetryOperation'.
-lib/retry.ts(5,14): error TS2351: This expression is not constructable.
-  Type 'any[]' has no construct signatures.
+lib/retry.ts(5,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/retry.ts(6,36): error TS2339: Property 'forever' does not exist on type 'object'.
 lib/retry.ts(6,55): error TS2339: Property 'retries' does not exist on type 'object'.
 lib/retry.ts(7,33): error TS2339: Property 'unref' does not exist on type 'object'.
@@ -38,10 +39,8 @@ lib/retry.ts(89,29): error TS2339: Property 'mainError' does not exist on type '
 lib/retry.ts(94,10): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(1,10): error TS2300: Duplicate identifier 'RetryOperation'.
 lib/retry_operation.ts(1,61): error TS2304: Cannot find name 'Void'.
+lib/retry_operation.ts(1,61): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/retry_operation.ts(10,43): error TS2339: Property 'maxRetryTime' does not exist on type 'object'.
-lib/retry_operation.ts(26,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(31,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(43,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 lib/retry_operation.ts(73,10): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(75,14): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(76,12): error TS2339: Property '_timeout' does not exist on type 'HTMLElement'.
@@ -52,19 +51,11 @@ lib/retry_operation.ts(80,16): error TS2339: Property '_options' does not exist 
 lib/retry_operation.ts(81,16): error TS2339: Property '_timeout' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(85,10): error TS2339: Property '_fn' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(85,19): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
-lib/retry_operation.ts(95,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 lib/retry_operation.ts(99,20): error TS2339: Property 'timeout' does not exist on type 'any[]'.
 lib/retry_operation.ts(100,43): error TS2339: Property 'timeout' does not exist on type 'any[]'.
 lib/retry_operation.ts(102,20): error TS2339: Property 'cb' does not exist on type 'any[]'.
 lib/retry_operation.ts(103,45): error TS2339: Property 'cb' does not exist on type 'any[]'.
 lib/retry_operation.ts(110,12): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(111,13): error TS2339: Property '_operationTimeout' does not exist on type 'HTMLElement'.
-lib/retry_operation.ts(119,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(124,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(129,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(129,49): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(131,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(135,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-lib/retry_operation.ts(139,16): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 lib/retry_operation.ts(149,16): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 

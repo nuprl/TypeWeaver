@@ -5,14 +5,18 @@ benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
 benchmark/parse.ts(56,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 benchmark/parse.ts(66,10): error TS2393: Duplicate function implementation.
 index.ts(47,21): error TS2304: Cannot find name 'ring'.
+index.ts(47,21): error TS4078: Parameter 'str' of exported function has or is using private name 'ring'.
 index.ts(119,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(227,23): error TS2304: Cannot find name 'ny'.
+index.ts(227,23): error TS4078: Parameter 'str' of exported function has or is using private name 'ny'.
 scripts/update-benchmark.ts(22,59): error TS2304: Cannot find name 'RequestCallback'.
+scripts/update-benchmark.ts(22,59): error TS4078: Parameter 'callback' of exported function has or is using private name 'RequestCallback'.
 scripts/update-benchmark.ts(29,23): error TS2339: Property 'location' does not exist on type 'Headers'.
 scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 scripts/update-benchmark.ts(30,43): error TS2339: Property 'location' does not exist on type 'Headers'.
 scripts/update-benchmark.ts(41,33): error TS2304: Cannot find name 'Site'.
 scripts/update-benchmark.ts(53,28): error TS2304: Cannot find name 'Site'.
+scripts/update-benchmark.ts(53,28): error TS4078: Parameter 'site' of exported function has or is using private name 'Site'.
 

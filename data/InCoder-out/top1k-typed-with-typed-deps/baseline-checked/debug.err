@@ -11,6 +11,7 @@ src/browser.ts(197,27): error TS2304: Cannot find name 'URI'.
 src/browser.ts(216,10): error TS2393: Duplicate function implementation.
 src/browser.ts(257,8): error TS2451: Cannot redeclare block-scoped variable 'formatters'.
 src/common.ts(7,21): error TS2304: Cannot find name 'Environment'.
+src/common.ts(7,21): error TS4078: Parameter 'env' of exported function has or is using private name 'Environment'.
 src/common.ts(41,34): error TS2304: Cannot find name 'ColorNamespace'.
 src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: any, delimiter: any) => ...; destroy: () => void; }; debug: ...; default: ...; coerce: (val: any) => any; ... 8 more ...; selectColor: (namespace: ColorNamespace) => any; }'.
 src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: any, delimiter: any) => ...; destroy: () => void; }; debug: ...; default: ...; coerce: (val: any) => any; ... 8 more ...; selectColor: (namespace: ColorNamespace) => any; }'.
@@ -42,5 +43,6 @@ src/node.ts(203,10): error TS2393: Duplicate function implementation.
 src/node.ts(205,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
 src/node.ts(220,10): error TS2393: Duplicate function implementation.
 src/node.ts(231,22): error TS2304: Cannot find name 'Debug'.
+src/node.ts(231,22): error TS4078: Parameter 'debug' of exported function has or is using private name 'Debug'.
 src/node.ts(242,8): error TS2451: Cannot redeclare block-scoped variable 'formatters'.
 

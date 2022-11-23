@@ -1,0 +1,15 @@
+export declare const up: string;
+export declare const down: string;
+export declare const forward: string;
+export declare const back: string;
+export declare const nextLine: string;
+export declare const previousLine: string;
+export declare const horizontalAbsolute: string;
+export declare const eraseData: string;
+export declare const eraseLine: string;
+export declare const goto: string;
+export declare const gotoSOL: string;
+export declare const beep: string;
+export declare const hideCursor: string;
+export declare const showCursor: string;
+export declare const color: string;

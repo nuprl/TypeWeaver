@@ -3,6 +3,7 @@ lib/env-options.ts(9,11): error TS2339: Property 'path' does not exist on type '
 lib/env-options.ts(13,11): error TS2339: Property 'debug' does not exist on type 'object'.
 lib/env-options.ts(17,11): error TS2339: Property 'override' does not exist on type 'object'.
 lib/main.ts(46,34): error TS2304: Cannot find name 'Void'.
+lib/main.ts(46,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/main.ts(51,36): error TS2339: Property 'join' does not exist on type 'string'.
 lib/main.ts(51,44): error TS2339: Property 'homedir' does not exist on type 'string'.
 lib/main.ts(56,33): error TS2339: Property 'resolve' does not exist on type 'string'.

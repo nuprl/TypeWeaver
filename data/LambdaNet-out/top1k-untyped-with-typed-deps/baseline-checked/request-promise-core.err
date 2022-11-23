@@ -70,8 +70,11 @@ gulpfile.ts(115,5): error TS2349: This expression is not callable.
 gulpfile.ts(118,6): error TS2339: Property 'task' does not exist on type 'HTMLElement'.
 gulpfile.ts(119,17): error TS2339: Property 'src' does not exist on type 'HTMLElement'.
 lib/errors.ts(4,74): error TS2304: Cannot find name 'Void'.
+lib/errors.ts(4,74): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/errors.ts(22,96): error TS2304: Cannot find name 'Void'.
+lib/errors.ts(22,96): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/errors.ts(40,76): error TS2304: Cannot find name 'Void'.
+lib/errors.ts(40,76): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/plumbing.ts(18,29): error TS2339: Property 'PromiseImpl' does not exist on type 'object'.
 lib/plumbing.ts(22,30): error TS2339: Property 'constructorMixin' does not exist on type 'object'.
 lib/plumbing.ts(22,71): error TS2339: Property 'constructorMixin' does not exist on type 'object'.

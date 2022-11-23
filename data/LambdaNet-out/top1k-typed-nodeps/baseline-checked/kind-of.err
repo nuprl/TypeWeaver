@@ -1,13 +1,30 @@
 benchmark/code/kind-of.ts(1,5): error TS2300: Duplicate identifier 'typeOf'.
 benchmark/code/kind-of.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/kind-of.ts(7,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
 benchmark/code/lib-type-of.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-type-of.ts(8,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/lib-type-of.ts(11,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
 benchmark/code/lib-type-of.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/lib-type-of.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/lib-type-of.ts(32,22): error TS2339: Property 'callee' does not exist on type 'any[]'.
 benchmark/code/lib-type-of.ts(42,18): error TS2339: Property 'nodeType' does not exist on type 'any[]'.
 benchmark/code/lib-typeof.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-typeof.ts(8,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/lib-typeof.ts(11,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
 benchmark/code/lib-typeof.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/lib-typeof.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/regex-exec.ts(16,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmark/code/switch.ts(1,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/switch.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
@@ -39,6 +56,7 @@ benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exi
 benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 benchmark/fixtures/generator.ts(1,37): error TS2304: Cannot find name 'Void'.
 benchmark/fixtures/object-plain.ts(1,17): error TS2304: Cannot find name 'Void'.
+benchmark/fixtures/object-plain.ts(1,17): error TS4060: Return type of exported function has or is using private name 'Void'.
 benchmark/fixtures/object-plain.ts(2,19): error TS2350: Only a void function can be called with the 'new' keyword.
 benchmark/index.ts(7,7): error TS2339: Property 'run' does not exist on type 'any[]'.
 benchmark/index.ts(12,11): error TS2339: Property 'sync' does not exist on type 'any[]'.

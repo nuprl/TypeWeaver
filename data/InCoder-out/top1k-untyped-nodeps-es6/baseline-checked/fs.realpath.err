@@ -1,9 +1,10 @@
-index.ts(14,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps-es6/baseline/fs.realpath/old"' has no default export.
+index.ts(14,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps-es6/baseline/fs.realpath/old"' has no default export.
 index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'.
 index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(24,60): error TS2304: Cannot find name 'Callback'.
+index.ts(24,60): error TS4078: Parameter 'cb' of exported function has or is using private name 'Callback'.
 index.ts(26,28): error TS2769: No overload matches this call.
   Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
     Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.

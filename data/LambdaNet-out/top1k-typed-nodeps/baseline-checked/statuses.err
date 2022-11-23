@@ -22,6 +22,7 @@ scripts/build.ts(16,9): error TS2345: Argument of type 'string' is not assignabl
 scripts/build.ts(19,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/build.ts(22,12): error TS2339: Property 'join' does not exist on type 'string'.
 scripts/build.ts(24,45): error TS2304: Cannot find name 'Void'.
+scripts/build.ts(24,45): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(11,7): error TS2339: Property 'get' does not exist on type 'string'.
 scripts/fetch-apache.ts(11,73): error TS2304: Cannot find name 'Void'.

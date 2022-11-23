@@ -7,6 +7,7 @@ lib/DirectoryWatcher.ts(36,7): error TS2300: Duplicate identifier 'Watcher'.
 lib/DirectoryWatcher.ts(55,7): error TS2451: Cannot redeclare block-scoped variable 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(609,30): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/DirectoryWatcher.ts(773,36): error TS2304: Cannot find name 'Entry'.
+lib/DirectoryWatcher.ts(773,36): error TS4078: Parameter 'entry' of exported function has or is using private name 'Entry'.
 lib/LinkResolver.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/LinkResolver.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/LinkResolver.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'LinkResolver'.

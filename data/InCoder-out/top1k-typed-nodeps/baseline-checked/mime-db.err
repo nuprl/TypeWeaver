@@ -4,6 +4,7 @@ scripts/build.ts(61,10): error TS2393: Duplicate function implementation.
 scripts/build.ts(61,49): error TS2304: Cannot find name 'Extension'.
 scripts/build.ts(74,10): error TS2393: Duplicate function implementation.
 scripts/build.ts(90,35): error TS2304: Cannot find name 'Source'.
+scripts/build.ts(90,35): error TS4078: Parameter 'source' of exported function has or is using private name 'Source'.
 scripts/build.ts(94,9): error TS2339: Property 'source' does not exist on type '{}'.
 scripts/fetch-apache.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(41,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
@@ -17,7 +18,9 @@ scripts/fetch-apache.ts(96,44): error TS2552: Cannot find name 'esponse'. Did yo
 scripts/fetch-iana.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
 scripts/fetch-iana.ts(94,70): error TS2304: Cannot find name 'Extension'.
 scripts/fetch-iana.ts(106,33): error TS2304: Cannot find name 'TemplateData'.
+scripts/fetch-iana.ts(106,33): error TS4078: Parameter 'data' of exported function has or is using private name 'TemplateData'.
 scripts/fetch-iana.ts(106,57): error TS2304: Cannot find name 'TemplateOptions'.
+scripts/fetch-iana.ts(106,57): error TS4078: Parameter 'options' of exported function has or is using private name 'TemplateOptions'.
 scripts/fetch-iana.ts(172,42): error TS2345: Argument of type 'Body' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(180,38): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(181,47): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
@@ -42,8 +45,10 @@ scripts/fetch-iana.ts(331,32): error TS2314: Generic type 'Array<T>' requires 1 
 scripts/fetch-iana.ts(336,36): error TS2304: Cannot find name 'ny'.
 scripts/fetch-iana.ts(336,46): error TS2304: Cannot find name 'ny'.
 scripts/fetch-iana.ts(345,39): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(345,39): error TS4078: Parameter 'reference' of exported function has or is using private name 'Reference'.
 scripts/fetch-iana.ts(349,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-iana.ts(358,39): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(358,39): error TS4078: Parameter 'reference' of exported function has or is using private name 'Reference'.
 scripts/fetch-iana.ts(362,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-iana.ts(388,26): error TS2339: Property 'toLowerCase' does not exist on type 'string | string[]'.
   Property 'toLowerCase' does not exist on type 'string[]'.
@@ -51,6 +56,7 @@ scripts/fetch-iana.ts(388,55): error TS2339: Property 'replace' does not exist o
   Property 'replace' does not exist on type 'string[]'.
 scripts/fetch-iana.ts(389,14): error TS2339: Property 'toUpperCase' does not exist on type 'number'.
 scripts/fetch-iana.ts(393,38): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(393,38): error TS4078: Parameter 'reference' of exported function has or is using private name 'Reference'.
 scripts/fetch-iana.ts(395,48): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
 scripts/fetch-nginx.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-nginx.ts(39,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
@@ -60,5 +66,5 @@ scripts/fetch-nginx.ts(60,49): error TS2304: Cannot find name 'Extension'.
 scripts/fetch-nginx.ts(73,10): error TS2393: Duplicate function implementation.
 scripts/fetch-nginx.ts(89,10): error TS2393: Duplicate function implementation.
 scripts/fetch-nginx.ts(89,49): error TS2304: Cannot find name 'RequestCallback'.
-scripts/fetch-nginx.ts(90,44): error TS2304: Cannot find name 'esponse'.
+scripts/fetch-nginx.ts(90,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
 

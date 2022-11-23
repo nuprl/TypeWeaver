@@ -1,9 +1,12 @@
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 index.ts(12,60): error TS2304: Cannot find name 'Void'.
+index.ts(12,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(44,81): error TS2304: Cannot find name 'Void'.
+index.ts(44,81): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(80,120): error TS2304: Cannot find name 'Void'.
+index.ts(80,120): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(95,41): error TS2339: Property 'combiningMarks' does not exist on type 'any[]'.
 index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(114,23): error TS2339: Property 'combiningClassVirama' does not exist on type 'any[]'.
@@ -27,6 +30,7 @@ index.ts(207,51): error TS2345: Argument of type '{ processingOption: string; ch
   Type '{ processingOption: string; checkBidi: boolean; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
 index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'object'.
 index.ts(230,10): error TS2304: Cannot find name 'Void'.
+index.ts(230,10): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(242,23): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(246,32): error TS2339: Property 'encode' does not exist on type 'string'.
 index.ts(248,16): error TS2339: Property 'error' does not exist on type 'object'.
@@ -34,6 +38,7 @@ index.ts(257,14): error TS2339: Property 'error' does not exist on type 'object'
 index.ts(262,16): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(268,14): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(280,10): error TS2304: Cannot find name 'Void'.
+index.ts(280,10): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(290,20): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(291,19): error TS2339: Property 'error' does not exist on type 'object'.
 scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.

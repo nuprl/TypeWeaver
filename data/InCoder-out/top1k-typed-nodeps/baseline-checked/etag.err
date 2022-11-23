@@ -12,8 +12,10 @@ benchmark/stats.ts(48,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 index.ts(21,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 index.ts(29,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(39,29): error TS2304: Cannot find name 'Entity'.
+index.ts(39,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 index.ts(47,6): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 index.ts(126,25): error TS2304: Cannot find name 'Stat'.
+index.ts(126,25): error TS4078: Parameter 'stat' of exported function has or is using private name 'Stat'.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.

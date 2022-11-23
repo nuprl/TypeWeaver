@@ -1,7 +1,5 @@
 bin.ts(2,5): error TS2300: Duplicate identifier 'colorSupport'.
-browser.ts(1,18): error TS2349: This expression is not callable.
-  Type 'any[]' has no call signatures.
-browser.ts(3,10): error TS2300: Duplicate identifier 'colorSupport'.
+browser.ts(3,10): error TS2393: Duplicate function implementation.
 browser.ts(4,3): error TS2322: Type 'true | {}' is not assignable to type 'boolean'.
   Type '{}' is not assignable to type 'boolean'.
 browser.ts(6,7): error TS2339: Property 'level' does not exist on type 'boolean'.
@@ -9,8 +7,6 @@ browser.ts(7,7): error TS2339: Property 'hasBasic' does not exist on type 'boole
 browser.ts(8,7): error TS2339: Property 'has256' does not exist on type 'boolean'.
 browser.ts(9,7): error TS2339: Property 'has16m' does not exist on type 'boolean'.
 browser.ts(10,16): error TS2339: Property 'alwaysReturn' does not exist on type 'object'.
-index.ts(2,18): error TS2349: This expression is not callable.
-  Type 'any[]' has no call signatures.
 index.ts(5,7): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 index.ts(6,7): error TS2339: Property 'hasBasic' does not exist on type 'HTMLElement'.
 index.ts(7,7): error TS2339: Property 'has256' does not exist on type 'HTMLElement'.
@@ -30,6 +26,7 @@ index.ts(33,7): error TS2339: Property 'has256' does not exist on type 'HTMLElem
 index.ts(34,7): error TS2339: Property 'has16m' does not exist on type 'HTMLElement'.
 index.ts(35,7): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 index.ts(39,10): error TS2300: Duplicate identifier 'colorSupport'.
+index.ts(39,10): error TS2393: Duplicate function implementation.
 index.ts(45,22): error TS2339: Property 'level' does not exist on type 'object'.
 index.ts(46,21): error TS2339: Property 'level' does not exist on type 'object'.
 index.ts(48,9): error TS2322: Type 'boolean' is not assignable to type 'string'.

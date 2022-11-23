@@ -1,12 +1,12 @@
 Source directory: .
 Dataset: top1k-typed-with-typed-deps
-Type checking with: /work/arjunguha-research-group/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
-Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps/baseline
-Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps/baseline-checked
+Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
+Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps/baseline
+Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps/baseline-checked
 Found 77 packages
 [1/77] @sinonjs_commons ... [FAIL]
 [2/77] accepts ... [FAIL]
-[3/77] anymatch ... [ OK ]
+[3/77] anymatch ... [FAIL]
 [4/77] are-we-there-yet ... [FAIL]
 [5/77] asn1 ... [FAIL]
 [6/77] axios ... [FAIL]
@@ -81,7 +81,7 @@ Found 77 packages
 [75/77] whatwg-url ... [FAIL]
 [76/77] which ... [ OK ]
 [77/77] write-file-atomic ... [FAIL]
-Number of successes: 12
-Number of fails: 65
+Number of successes: 11
+Number of fails: 66
 Number of skips: 0
-Time for type checking: 0:00:26
+Time for type checking: 0:00:46

@@ -5,6 +5,7 @@ lib/parse.ts(253,31): error TS2339: Property 'sourceEndIndex' does not exist on 
 lib/parse.ts(316,16): error TS2339: Property 'unclosed' does not exist on type '{ nodes: any[]; }'.
 lib/parse.ts(317,16): error TS2339: Property 'sourceEndIndex' does not exist on type '{ nodes: any[]; }'.
 lib/stringify.ts(1,45): error TS2304: Cannot find name 'CustomNodeType'.
+lib/stringify.ts(1,45): error TS4078: Parameter 'custom' of exported function has or is using private name 'CustomNodeType'.
 lib/stringify.ts(2,19): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/stringify.ts(3,20): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/stringify.ts(12,16): error TS2339: Property 'quote' does not exist on type 'Node'.
@@ -19,5 +20,6 @@ lib/stringify.ts(28,13): error TS2339: Property 'after' does not exist on type '
 lib/stringify.ts(29,13): error TS2339: Property 'unclosed' does not exist on type 'Node'.
 lib/stringify.ts(35,10): error TS2300: Duplicate identifier 'stringify'.
 lib/stringify.ts(35,44): error TS2304: Cannot find name 'CustomNodeBuilder'.
+lib/stringify.ts(35,44): error TS4078: Parameter 'custom' of exported function has or is using private name 'CustomNodeBuilder'.
 lib/walk.ts(1,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

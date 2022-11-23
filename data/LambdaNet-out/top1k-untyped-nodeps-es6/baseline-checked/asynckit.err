@@ -6,6 +6,7 @@ bench.ts(55,7): error TS2322: Type 'string' is not assignable to type 'number'.
 bench.ts(63,14): error TS2339: Property 'resolve' does not exist on type 'any[]'.
 bench.ts(71,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 lib/abort.ts(9,31): error TS2304: Cannot find name 'Void'.
+lib/abort.ts(9,31): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/abort.ts(11,21): error TS2339: Property 'jobs' does not exist on type 'Error'.
 lib/abort.ts(14,9): error TS2339: Property 'jobs' does not exist on type 'Error'.
 lib/abort.ts(23,30): error TS2304: Cannot find name 'Void'.
@@ -14,6 +15,7 @@ lib/async.ts(20,64): error TS2304: Cannot find name 'Void'.
 lib/async.ts(28,22): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'number'.
 lib/async.ts(28,43): error TS2304: Cannot find name 'Void'.
 lib/defer.ts(8,29): error TS2304: Cannot find name 'Void'.
+lib/defer.ts(8,29): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/defer.ts(24,16): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '() => void'.
@@ -22,6 +24,7 @@ lib/defer.ts(24,16): error TS2769: No overload matches this call.
   Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'TimerHandler'.
 lib/iterate.ts(15,88): error TS2304: Cannot find name 'Void'.
+lib/iterate.ts(15,88): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/iterate.ts(18,67): error TS2339: Property 'index' does not exist on type 'object'.
 lib/iterate.ts(18,82): error TS2339: Property 'index' does not exist on type 'object'.
 lib/iterate.ts(20,9): error TS2339: Property 'jobs' does not exist on type 'object'.
@@ -32,6 +35,7 @@ lib/iterate.ts(37,13): error TS2345: Argument of type 'object' is not assignable
 lib/iterate.ts(41,13): error TS2339: Property 'results' does not exist on type 'object'.
 lib/iterate.ts(45,27): error TS2339: Property 'results' does not exist on type 'object'.
 lib/readable_asynckit.ts(11,30): error TS2304: Cannot find name 'Void'.
+lib/readable_asynckit.ts(11,30): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/readable_asynckit.ts(13,20): error TS2339: Property 'super_' does not exist on type '() => Void'.
 lib/readable_asynckit.ts(30,21): error TS2304: Cannot find name 'Void'.
 lib/readable_asynckit.ts(50,20): error TS2304: Cannot find name 'Void'.
@@ -41,7 +45,7 @@ lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be calle
 lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
 lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
-lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 lib/readable_serial_ordered.ts(24,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, sortMethod: string, callback: Function) => object'.
 lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'object'.
@@ -56,13 +60,14 @@ lib/streamify.ts(110,38): error TS2339: Property 'value' does not exist on type 
 lib/streamify.ts(119,36): error TS2339: Property 'value' does not exist on type 'object'.
 lib/streamify.ts(130,71): error TS2304: Cannot find name 'Void'.
 lib/terminator.ts(13,42): error TS2304: Cannot find name 'Void'.
+lib/terminator.ts(13,42): error TS4060: Return type of exported function has or is using private name 'Void'.
 parallel.ts(16,74): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 parallel.ts(18,23): error TS2554: Expected 2 arguments, but got 1.
 parallel.ts(20,16): error TS2339: Property 'index' does not exist on type 'object'.
 parallel.ts(31,29): error TS2339: Property 'jobs' does not exist on type 'object'.
 parallel.ts(33,30): error TS2339: Property 'results' does not exist on type 'object'.
 parallel.ts(38,11): error TS2339: Property 'index' does not exist on type 'object'.
-serial.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+serial.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 serialOrdered.ts(20,99): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 serialOrdered.ts(22,33): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.

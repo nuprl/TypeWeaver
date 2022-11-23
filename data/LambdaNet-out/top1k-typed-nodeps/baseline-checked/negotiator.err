@@ -79,7 +79,6 @@ lib/charset.ts(122,10): error TS2300: Duplicate identifier 'preferredCharsets'.
 lib/charset.ts(124,43): error TS2345: Argument of type 'number | "" | "*"' is not assignable to parameter of type 'string'.
   Type 'number' is not assignable to type 'string'.
 lib/charset.ts(130,13): error TS2345: Argument of type '{ (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; }' is not assignable to parameter of type '(a: any, b: any) => number'.
-  Type 'boolean' is not assignable to type 'number'.
 lib/charset.ts(134,91): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/charset.ts(139,44): error TS2345: Argument of type '{ (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; }' is not assignable to parameter of type '(a: any, b: any) => number'.
 lib/charset.ts(149,10): error TS2393: Duplicate function implementation.
@@ -193,6 +192,7 @@ lib/mediaType.ts(162,10): error TS2300: Duplicate identifier 'preferredMediaType
 lib/mediaType.ts(164,36): error TS2345: Argument of type 'number | "" | "*/*"' is not assignable to parameter of type 'string'.
   Type 'number' is not assignable to type 'string'.
 lib/mediaType.ts(170,13): error TS2345: Argument of type '{ (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; }' is not assignable to parameter of type '(a: any, b: any) => number'.
+  Type 'boolean' is not assignable to type 'number'.
 lib/mediaType.ts(175,5): error TS2322: Type 'object' is not assignable to type 'string'.
 lib/mediaType.ts(179,44): error TS2345: Argument of type '{ (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; (a: object, b: object): boolean; }' is not assignable to parameter of type '(a: any, b: any) => number'.
 lib/mediaType.ts(189,10): error TS2393: Duplicate function implementation.

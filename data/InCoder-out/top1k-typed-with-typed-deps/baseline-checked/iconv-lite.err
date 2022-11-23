@@ -1,3 +1,27 @@
+encodings/dbcs-codec.ts(22,34): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/dbcs-codec.ts(22,56): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/dbcs-codec.ts(302,31): error TS4078: Parameter 'options' of exported function has or is using private name 'DBCEncoderOptions'.
+encodings/dbcs-codec.ts(302,58): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/dbcs-codec.ts(476,31): error TS4078: Parameter 'options' of exported function has or is using private name 'DBCSOptions'.
+encodings/dbcs-codec.ts(476,52): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/internal.ts(25,38): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/internal.ts(25,60): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/internal.ts(57,35): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalDecoderOptions'.
+encodings/internal.ts(57,67): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/internal.ts(77,35): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalEncoderOptions'.
+encodings/internal.ts(77,67): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/internal.ts(92,41): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalEncoderOptions'.
+encodings/internal.ts(92,73): error TS4078: Parameter 'codec' of exported function has or is using private name 'InternalCodec'.
+encodings/internal.ts(113,40): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalEncoderOptions'.
+encodings/internal.ts(113,72): error TS4078: Parameter 'codec' of exported function has or is using private name 'InternalEncoderCesu'.
+encodings/internal.ts(143,40): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalDecoderOptions'.
+encodings/internal.ts(143,72): error TS4078: Parameter 'codec' of exported function has or is using private name 'InternalCodec'.
+encodings/internal.ts(205,39): error TS4078: Parameter 'options' of exported function has or is using private name 'InternalEncoderOptions'.
+encodings/internal.ts(205,71): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/sbcs-codec.ts(8,34): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/sbcs-codec.ts(8,56): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/sbcs-codec.ts(54,31): error TS4078: Parameter 'options' of exported function has or is using private name 'DecoderOptions'.
+encodings/sbcs-codec.ts(54,55): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
 encodings/sbcs-data-generated.ts(118,20): error TS1002: Unterminated string literal.
 encodings/sbcs-data-generated.ts(119,1): error TS1127: Invalid character.
 encodings/sbcs-data-generated.ts(119,2): error TS1127: Invalid character.
@@ -1210,4 +1234,34 @@ encodings/sbcs-data-generated.ts(469,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(470,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(471,12): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(473,1): error TS1128: Declaration or statement expected.
+encodings/utf16.ts(77,35): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/utf16.ts(77,57): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/utf16.ts(87,45): error TS4078: Parameter 'codec' of exported function has or is using private name 'Utf16Codec'.
+encodings/utf16.ts(105,57): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/utf32.ts(9,35): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/utf32.ts(9,57): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/utf32.ts(27,56): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/utf32.ts(100,56): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/utf32.ts(195,34): error TS4078: Parameter 'options' of exported function has or is using private name 'Utf32AutoCode'.
+encodings/utf32.ts(195,57): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/utf32.ts(204,36): error TS4078: Parameter 'options' of exported function has or is using private name 'Utf32AutoEncoder'.
+encodings/utf32.ts(204,62): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/utf32.ts(223,49): error TS4078: Parameter 'codec' of exported function has or is using private name 'Utf32Decoder'.
+encodings/utf7.ts(9,34): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'Codec'.
+encodings/utf7.ts(9,56): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/utf7.ts(22,31): error TS4078: Parameter 'options' of exported function has or is using private name 'Utf7EncoderOption'.
+encodings/utf7.ts(22,58): error TS4078: Parameter 'codec' of exported function has or is using private name 'Encoder'.
+encodings/utf7.ts(42,31): error TS4078: Parameter 'options' of exported function has or is using private name 'Utf7DecoderOption'.
+encodings/utf7.ts(42,58): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+encodings/utf7.ts(133,38): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/utf7.ts(133,60): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
+encodings/utf7.ts(144,48): error TS4078: Parameter 'codec' of exported function has or is using private name 'Utf7Codec'.
+encodings/utf7.ts(218,35): error TS4078: Parameter 'options' of exported function has or is using private name 'Utf7IMAP'.
+encodings/utf7.ts(218,53): error TS4078: Parameter 'codec' of exported function has or is using private name 'Codec'.
+generation/research/get-iconv-encodings.ts(94,33): error TS4078: Parameter 'converter' of exported function has or is using private name 'CharConverter'.
+generation/research/get-iconv-encodings.ts(94,53): error TS4078: Parameter 'fn' of exported function has or is using private name 'CharCallback'.
+lib/bom-handling.ts(6,37): error TS4078: Parameter 'encoder' of exported function has or is using private name 'Encoder'.
+lib/bom-handling.ts(6,56): error TS4078: Parameter 'options' of exported function has or is using private name 'PrependBOMOption'.
+lib/bom-handling.ts(28,35): error TS4078: Parameter 'decoder' of exported function has or is using private name 'Decoder'.
+lib/bom-handling.ts(28,54): error TS4078: Parameter 'options' of exported function has or is using private name 'DecoderOptions'.
 

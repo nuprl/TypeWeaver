@@ -23,13 +23,16 @@ lib/jsprim.ts(113,9): error TS2360: The left-hand side of an 'in' expression mus
 lib/jsprim.ts(123,14): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
 lib/jsprim.ts(130,13): error TS2339: Property 'equal' does not exist on type 'string'.
 lib/jsprim.ts(134,55): error TS2304: Cannot find name 'Void'.
+lib/jsprim.ts(134,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/jsprim.ts(137,14): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 lib/jsprim.ts(145,13): error TS2339: Property 'equal' does not exist on type 'string'.
 lib/jsprim.ts(146,2): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/jsprim.ts(146,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/jsprim.ts(174,72): error TS2304: Cannot find name 'Void'.
+lib/jsprim.ts(174,72): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/jsprim.ts(176,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/jsprim.ts(179,88): error TS2304: Cannot find name 'Void'.
+lib/jsprim.ts(179,88): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/jsprim.ts(191,13): error TS2339: Property 'ok' does not exist on type 'string'.
 lib/jsprim.ts(192,13): error TS2339: Property 'equal' does not exist on type 'string'.
 lib/jsprim.ts(193,13): error TS2339: Property 'equal' does not exist on type 'string'.
@@ -111,6 +114,7 @@ lib/jsprim.ts(561,5): error TS2339: Property 'jsv_details' does not exist on typ
 lib/jsprim.ts(567,13): error TS2339: Property 'ok' does not exist on type 'string'.
 lib/jsprim.ts(573,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/jsprim.ts(573,36): error TS2304: Cannot find name 'Void'.
+lib/jsprim.ts(573,36): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/jsprim.ts(575,13): error TS2339: Property 'ok' does not exist on type 'string'.
 lib/jsprim.ts(577,13): error TS2339: Property 'ok' does not exist on type 'string'.
 lib/jsprim.ts(592,13): error TS2339: Property 'ok' does not exist on type 'string'.

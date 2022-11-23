@@ -8,6 +8,7 @@ aws4.ts(20,47): error TS2769: No overload matches this call.
         Type 'string' is not assignable to type 'number'.
 aws4.ts(21,20): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
 aws4.ts(45,56): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
+aws4.ts(45,56): error TS4078: Parameter 'credentials' of exported function has or is using private name 'Credentials'.
 aws4.ts(49,25): error TS2540: Cannot assign to 'headers' because it is a read-only property.
 aws4.ts(50,77): error TS2339: Property 'hostname' does not exist on type 'Request'.
 aws4.ts(50,97): error TS2339: Property 'host' does not exist on type 'Request'.
@@ -42,6 +43,7 @@ aws4.ts(302,31): error TS2304: Cannot find name 'y'.
 aws4.ts(310,27): error TS2304: Cannot find name 'ny'.
 aws4.ts(371,54): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
 example.ts(5,24): error TS2503: Cannot find namespace 'http'.
+example.ts(5,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'http'.
 example.ts(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
 example.ts(20,77): error TS2322: Type '{ host: string; path: string; signQuery: boolean; }' is not assignable to type '{ host: string; path: string; service: string; region: string; }'.
   Object literal may only specify known properties, and 'signQuery' does not exist in type '{ host: string; path: string; service: string; region: string; }'.

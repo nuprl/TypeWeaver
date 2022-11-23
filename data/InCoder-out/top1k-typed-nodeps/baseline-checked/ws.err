@@ -55,7 +55,6 @@ examples/server-stats/index.ts(3,7): error TS2451: Cannot redeclare block-scoped
 examples/server-stats/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 examples/server-stats/index.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'WebSocketServer'.
 examples/server-stats/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'app'.
-examples/server-stats/index.ts(10,29): error TS2339: Property 'join' does not exist on type '""'.
 examples/server-stats/index.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'server'.
 examples/server-stats/index.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
 examples/ssl.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'https'.
@@ -109,7 +108,6 @@ lib/event-target.ts(157,63): error TS2339: Property 'data' does not exist on typ
 lib/event-target.ts(176,7): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
 lib/event-target.ts(236,17): error TS2339: Property 'once' does not exist on type '{}'.
 lib/extension.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
-lib/extension.ts(27,10): error TS2393: Duplicate function implementation.
 lib/extension.ts(27,10): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/extension.ts(41,19): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
 lib/extension.ts(118,42): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
@@ -252,7 +250,9 @@ lib/receiver.ts(555,11): error TS2345: Argument of type 'string' is not assignab
 lib/receiver.ts(566,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(578,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(609,64): error TS2304: Cannot find name 'ErrorObject'.
+lib/receiver.ts(609,64): error TS4078: Parameter 'message' of exported function has or is using private name 'ErrorObject'.
 lib/receiver.ts(609,95): error TS2304: Cannot find name 'ErrorObject'.
+lib/receiver.ts(609,95): error TS4078: Parameter 'prefix' of exported function has or is using private name 'ErrorObject'.
 lib/receiver.ts(615,7): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/sender.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'net'.
 lib/sender.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'tls'.
@@ -331,9 +331,9 @@ lib/stream.ts(140,25): error TS2339: Property 'resume' does not exist on type 'W
 lib/stream.ts(145,10): error TS2339: Property 'once' does not exist on type 'WebSocket'.
 lib/stream.ts(151,20): error TS2554: Expected 1 arguments, but got 2.
 lib/subprotocol.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
-lib/subprotocol.ts(12,10): error TS2393: Duplicate function implementation.
 lib/subprotocol.ts(12,10): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/subprotocol.ts(12,24): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
+lib/subprotocol.ts(12,24): error TS4078: Parameter 'header' of exported function has or is using private name 'Header'.
 lib/validation.ts(15,7): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
 lib/validation.ts(33,10): error TS2451: Cannot redeclare block-scoped variable 'isValidStatusCode'.
 lib/websocket-server.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
@@ -353,14 +353,18 @@ lib/websocket-server.ts(261,7): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(336,52): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(369,39): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(447,31): error TS2304: Cannot find name 'Server'.
+lib/websocket-server.ts(447,31): error TS4078: Parameter 'server' of exported function has or is using private name 'Server'.
 lib/websocket-server.ts(463,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(463,28): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(473,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(486,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(486,33): error TS2304: Cannot find name 'Socket'.
 lib/websocket-server.ts(526,52): error TS2304: Cannot find name 'Server'.
+lib/websocket-server.ts(526,52): error TS4078: Parameter 'server' of exported function has or is using private name 'Server'.
 lib/websocket-server.ts(526,66): error TS2503: Cannot find namespace 'http'.
+lib/websocket-server.ts(526,66): error TS4078: Parameter 'req' of exported function has or is using private name 'http'.
 lib/websocket-server.ts(526,97): error TS2503: Cannot find namespace 'net'.
+lib/websocket-server.ts(526,97): error TS4078: Parameter 'socket' of exported function has or is using private name 'net'.
 lib/websocket.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
 lib/websocket.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'https'.
 lib/websocket.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'http'.
@@ -421,6 +425,7 @@ lib/websocket.ts(1001,13): error TS2551: Property '_readyState' does not exist o
 lib/websocket.ts(1002,13): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(1003,13): error TS2339: Property 'emitClose' does not exist on type 'WebSocket'.
 lib/websocket.ts(1013,30): error TS2304: Cannot find name 'ConnectOptions'.
+lib/websocket.ts(1013,30): error TS4078: Parameter 'options' of exported function has or is using private name 'ConnectOptions'.
 lib/websocket.ts(1044,10): error TS2393: Duplicate function implementation.
 lib/websocket.ts(1044,56): error TS2304: Cannot find name 'Stream'.
 lib/websocket.ts(1044,74): error TS2304: Cannot find name 'Message'.
@@ -431,6 +436,7 @@ lib/websocket.ts(1090,19): error TS2339: Property '_socket' does not exist on ty
 lib/websocket.ts(1090,38): error TS2339: Property '_sender' does not exist on type 'WebSocket'.
 lib/websocket.ts(1091,20): error TS2551: Property '_bufferedAmount' does not exist on type 'WebSocket'. Did you mean 'bufferedAmount'?
 lib/websocket.ts(1210,25): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+lib/websocket.ts(1210,25): error TS4078: Parameter 'stream' of exported function has or is using private name 'Readable'.
 lib/websocket.ts(1295,10): error TS2393: Duplicate function implementation.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3630,11): error TS2300: Duplicate identifier 'CloseEvent'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3639,13): error TS2300: Duplicate identifier 'CloseEvent'.

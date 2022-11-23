@@ -1,4 +1,4 @@
-example.ts(4,8): error TS2613: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' has no default export. Did you mean to use 'import { exit } from "/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' instead?
+example.ts(4,8): error TS2613: Module '"index"' has no default export. Did you mean to use 'import { exit } from "index"' instead?
 index.ts(3,5): error TS2300: Duplicate identifier 'exit'.
 index.ts(22,11): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 index.ts(49,5): error TS2322: Type 'Function' is not assignable to type '(code?: number) => never'.
@@ -12,5 +12,5 @@ index.ts(119,16): error TS2345: Argument of type '(results: Function) => void' i
   Types of parameters 'results' and 'value' are incompatible.
     Type '[PromiseState<any>]' is not assignable to type 'Function'.
 index.ts(148,14): error TS2300: Duplicate identifier 'exit'.
-process-exit-during-final-exit-subprocess.ts(4,8): error TS2613: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' has no default export. Did you mean to use 'import { captureExit } from "/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' instead?
+process-exit-during-final-exit-subprocess.ts(4,8): error TS2613: Module '"index"' has no default export. Did you mean to use 'import { captureExit } from "index"' instead?
 

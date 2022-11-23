@@ -79,6 +79,7 @@ lib/CachedInputFileSystem.ts(218,39): error TS2339: Property '_data' does not ex
 lib/CachedInputFileSystem.ts(220,19): error TS2339: Property 'err' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(220,41): error TS2339: Property 'err' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(221,22): error TS2339: Property 'result' does not exist on type 'CacheBackend'.
+lib/CachedInputFileSystem.ts(226,20): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/CachedInputFileSystem.ts(226,36): error TS2339: Property '_activeAsyncOperations' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(227,8): error TS2339: Property '_activeAsyncOperations' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(233,18): error TS2339: Property '_syncProvider' does not exist on type 'CacheBackend'.
@@ -93,7 +94,7 @@ lib/CachedInputFileSystem.ts(266,33): error TS2339: Property '_data' does not ex
 lib/CachedInputFileSystem.ts(269,12): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(275,13): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(283,9): error TS2554: Expected 1 arguments, but got 0.
-lib/CachedInputFileSystem.ts(287,10): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
+lib/CachedInputFileSystem.ts(287,10): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/CachedInputFileSystem.ts(289,9): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/CachedInputFileSystem.ts(296,12): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(297,30): error TS2339: Property '_levels' does not exist on type 'CacheBackend'.
@@ -213,13 +214,14 @@ lib/DescriptionFilePlugin.ts(41,30): error TS2339: Property 'cdUp' does not exis
 lib/DescriptionFilePlugin.ts(44,27): error TS2339: Property 'loadDescriptionFile' does not exist on type 'string'.
 lib/DescriptionFilePlugin.ts(47,12): error TS2339: Property 'filenames' does not exist on type 'DescriptionFilePlugin'.
 lib/DescriptionFileUtils.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'forEachBail'.
+lib/DescriptionFileUtils.ts(35,12): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/DescriptionFileUtils.ts(35,12): error TS4078: Parameter 'resolver' of exported function has or is using private name 'Resolver'.
 lib/DescriptionFileUtils.ts(41,4): error TS2304: Cannot find name 'Void'.
+lib/DescriptionFileUtils.ts(41,4): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/DescriptionFileUtils.ts(42,35): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(43,26): error TS2339: Property 'directory' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(47,3): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-lib/DescriptionFileUtils.ts(51,18): error TS2339: Property 'fileSystem' does not exist on type 'Resolver'.
-lib/DescriptionFileUtils.ts(52,15): error TS2339: Property 'fileSystem' does not exist on type 'Resolver'.
 lib/DescriptionFileUtils.ts(54,23): error TS2339: Property 'code' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(55,28): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(56,25): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
@@ -228,7 +230,6 @@ lib/DescriptionFileUtils.ts(61,24): error TS2339: Property 'fileDependencies' do
 lib/DescriptionFileUtils.ts(63,15): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(65,26): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(66,23): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
-lib/DescriptionFileUtils.ts(71,15): error TS2339: Property 'fileSystem' does not exist on type 'Resolver'.
 lib/DescriptionFileUtils.ts(73,27): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(74,24): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(78,26): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
@@ -240,6 +241,7 @@ lib/DescriptionFileUtils.ts(97,51): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(99,26): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(100,23): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(104,12): error TS2339: Property 'message' does not exist on type 'any[]'.
+lib/DescriptionFileUtils.ts(115,10): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/DescriptionFileUtils.ts(120,12): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/DescriptionFileUtils.ts(120,32): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/DirectoryExistsPlugin.ts(17,8): error TS2339: Property 'source' does not exist on type 'DirectoryExistsPlugin'.
@@ -372,21 +374,27 @@ lib/Resolver.ts(120,7): error TS2451: Cannot redeclare block-scoped variable 'Re
 lib/Resolver.ts(145,8): error TS2339: Property 'fileSystem' does not exist on type 'Resolver'.
 lib/Resolver.ts(146,8): error TS2339: Property 'options' does not exist on type 'Resolver'.
 lib/Resolver.ts(147,8): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
+lib/Resolver.ts(185,15): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/Resolver.ts(185,31): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(187,17): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
+lib/Resolver.ts(218,15): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/Resolver.ts(218,31): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
-lib/Resolver.ts(239,4): error TS2322: Type 'string' is not assignable to type 'Resolver'.
+lib/Resolver.ts(233,12): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/Resolver.ts(235,15): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/Resolver.ts(237,48): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/Resolver.ts(281,19): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/Resolver.ts(296,12): error TS2339: Property 'path' does not exist on type 'object'.
 lib/Resolver.ts(298,18): error TS2339: Property 'path' does not exist on type 'object'.
 lib/Resolver.ts(299,15): error TS2339: Property 'query' does not exist on type 'object'.
 lib/Resolver.ts(299,30): error TS2339: Property 'query' does not exist on type 'object'.
 lib/Resolver.ts(300,18): error TS2339: Property 'fragment' does not exist on type 'object'.
+lib/Resolver.ts(305,48): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/Resolver.ts(310,10): error TS2339: Property 'details' does not exist on type 'Error'.
-lib/Resolver.ts(310,24): error TS2554: Expected 2 arguments, but got 1.
 lib/Resolver.ts(311,9): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(320,10): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(347,10): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(372,12): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
+lib/Resolver.ts(395,39): error TS2339: Property 'createStackEntry' does not exist on type 'any[]'.
 lib/Resolver.ts(407,18): error TS2769: No overload matches this call.
   Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>): unknown[]', gave the following error.
     Argument of type 'object' is not assignable to parameter of type 'Iterable<unknown> | ArrayLike<unknown>'.
@@ -396,6 +404,7 @@ lib/Resolver.ts(407,18): error TS2769: No overload matches this call.
 lib/Resolver.ts(409,20): error TS2339: Property 'recursion' does not exist on type 'Error'.
 lib/Resolver.ts(414,13): error TS2339: Property 'add' does not exist on type 'object'.
 lib/Resolver.ts(418,8): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
+lib/Resolver.ts(432,55): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/Resolver.ts(461,9): error TS2339: Property 'request' does not exist on type 'object'.
 lib/Resolver.ts(461,23): error TS2339: Property 'query' does not exist on type 'object'.
 lib/Resolver.ts(461,35): error TS2339: Property 'fragment' does not exist on type 'object'.
@@ -490,8 +499,9 @@ lib/ResolverFactory.ts(281,3): error TS2339: Property 'unsafeCache' does not exi
 lib/ResolverFactory.ts(282,3): error TS2339: Property 'resolver' does not exist on type '{}'.
 lib/ResolverFactory.ts(283,3): error TS2339: Property 'restrictions' does not exist on type '{}'.
 lib/ResolverFactory.ts(284,3): error TS2339: Property 'roots' does not exist on type '{}'.
-lib/ResolverFactory.ts(324,11): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
-lib/ResolverFactory.ts(324,46): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
+lib/ResolverFactory.ts(289,18): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/ResolverFactory.ts(291,9): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
 lib/ResolverFactory.ts(333,9): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/ResolverFactory.ts(342,9): error TS2351: This expression is not constructable.
@@ -601,10 +611,8 @@ lib/ResolverFactory.ts(636,20): error TS2351: This expression is not constructab
   Type '{}' has no construct signatures.
 lib/ResolverFactory.ts(641,20): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
-lib/ResolverFactory.ts(641,48): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/ResolverFactory.ts(643,19): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
-lib/ResolverFactory.ts(643,41): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/ResolverFactory.ts(667,8): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/ResolverFactory.ts(667,29): error TS2769: No overload matches this call.
   Overload 1 of 2, '(iterable?: Iterable<unknown>): Set<unknown>', gave the following error.
@@ -657,38 +665,30 @@ lib/SymlinkPlugin.ts(36,25): error TS2349: This expression is not callable.
 lib/SymlinkPlugin.ts(42,5): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 lib/SyncAsyncFileSystemDecorator.ts(15,10): error TS2451: Cannot redeclare block-scoped variable 'SyncAsyncFileSystemDecorator'.
+lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS4078: Parameter 'fs' of exported function has or is using private name 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(15,54): error TS2304: Cannot find name 'Void'.
-lib/SyncAsyncFileSystemDecorator.ts(20,33): error TS2339: Property 'lstatSync' does not exist on type 'Resolver'.
+lib/SyncAsyncFileSystemDecorator.ts(15,54): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/SyncAsyncFileSystemDecorator.ts(27,12): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(29,4): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
-lib/SyncAsyncFileSystemDecorator.ts(37,27): error TS2339: Property 'statSync' does not exist on type 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(37,55): error TS2339: Property 'statSync' does not exist on type 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(39,11): error TS2349: This expression is not callable.
   No constituent of type 'true | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(41,3): error TS2349: This expression is not callable.
   No constituent of type 'true | object' is callable.
-lib/SyncAsyncFileSystemDecorator.ts(43,55): error TS2339: Property 'statSync' does not exist on type 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(48,16): error TS2339: Property 'readdirSync' does not exist on type 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(50,11): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(52,3): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
-lib/SyncAsyncFileSystemDecorator.ts(54,58): error TS2339: Property 'readdirSync' does not exist on type 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(59,16): error TS2339: Property 'readFileSync' does not exist on type 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(61,11): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(63,3): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
-lib/SyncAsyncFileSystemDecorator.ts(65,59): error TS2339: Property 'readFileSync' does not exist on type 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(70,16): error TS2339: Property 'readlinkSync' does not exist on type 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(72,11): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(74,3): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
-lib/SyncAsyncFileSystemDecorator.ts(76,59): error TS2339: Property 'readlinkSync' does not exist on type 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(80,36): error TS2339: Property 'readJsonSync' does not exist on type 'Resolver'.
 lib/SyncAsyncFileSystemDecorator.ts(87,12): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(89,4): error TS2349: This expression is not callable.
@@ -733,6 +733,8 @@ lib/createInnerContext.ts(32,32): error TS2339: Property 'contextDependencies' d
 lib/createInnerContext.ts(33,32): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(34,18): error TS2339: Property 'stack' does not exist on type 'object'.
 lib/forEachBail.ts(8,94): error TS2304: Cannot find name 'Void'.
+lib/forEachBail.ts(14,30): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/getInnerRequest.ts(8,53): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/getInnerRequest.ts(10,18): error TS2339: Property '__innerRequest' does not exist on type 'HTMLElement'.
 lib/getInnerRequest.ts(11,11): error TS2339: Property '__innerRequest_request' does not exist on type 'HTMLElement'.
 lib/getInnerRequest.ts(11,46): error TS2339: Property 'request' does not exist on type 'HTMLElement'.
@@ -749,51 +751,54 @@ lib/getInnerRequest.ts(24,43): error TS2339: Property 'request' does not exist o
 lib/getInnerRequest.ts(25,10): error TS2339: Property '__innerRequest_relativePath' does not exist on type 'HTMLElement'.
 lib/getInnerRequest.ts(25,48): error TS2339: Property 'relativePath' does not exist on type 'HTMLElement'.
 lib/getInnerRequest.ts(26,18): error TS2339: Property '__innerRequest' does not exist on type 'HTMLElement'.
-lib/getPaths.ts(35,8): error TS2322: Type 'string' is not assignable to type 'Resolver'.
+lib/getPaths.ts(30,60): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/getPaths.ts(35,11): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+lib/index.ts(10,24): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/index.ts(10,24): error TS4025: Exported variable 'ResolverFactory' has or is using private name 'Resolver'.
 lib/index.ts(20,36): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
-lib/index.ts(26,49): error TS2339: Property 'createResolver' does not exist on type 'Resolver'.
+lib/index.ts(26,22): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/index.ts(26,22): error TS4025: Exported variable 'asyncResolver' has or is using private name 'Resolver'.
+lib/index.ts(31,84): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/index.ts(31,84): error TS4078: Parameter 'resolveContext' of exported function has or is using private name 'Resolver'.
 lib/index.ts(31,113): error TS2304: Cannot find name 'Void'.
-lib/index.ts(33,3): error TS2322: Type 'Resolver' is not assignable to type 'string'.
-lib/index.ts(34,3): error TS2740: Type 'Function' is missing the following properties from type 'Resolver': ensureHook, getHook, resolveSync, resolve, and 7 more.
+lib/index.ts(31,113): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(35,3): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/index.ts(37,3): error TS2322: Type 'object' is not assignable to type 'string'.
-lib/index.ts(40,3): error TS2322: Type 'Resolver' is not assignable to type 'string'.
-lib/index.ts(45,48): error TS2339: Property 'createResolver' does not exist on type 'Resolver'.
+lib/index.ts(45,21): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/index.ts(45,21): error TS4025: Exported variable 'syncResolver' has or is using private name 'Resolver'.
 lib/index.ts(51,71): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/index.ts(53,3): error TS2322: Type 'string' is not assignable to type 'object'.
 lib/index.ts(55,3): error TS2322: Type 'object' is not assignable to type 'string'.
-lib/index.ts(65,45): error TS2339: Property 'createResolver' does not exist on type 'Resolver'.
+lib/index.ts(65,18): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(68,4): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/index.ts(69,4): error TS2322: Type 'Function' is not assignable to type 'string'.
 lib/index.ts(70,4): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/index.ts(72,4): error TS2322: Type 'object' is not assignable to type 'number'.
 lib/index.ts(75,4): error TS2322: Type 'string' is not assignable to type 'Function'.
-lib/index.ts(87,45): error TS2339: Property 'createResolver' does not exist on type 'Resolver'.
+lib/index.ts(87,18): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(90,4): error TS2322: Type 'string' is not assignable to type 'object'.
 lib/index.ts(92,4): error TS2322: Type 'object' is not assignable to type 'number'.
-lib/index.ts(106,8): error TS2740: Type 'TypedPropertyDescriptor<any>[] & { [x: string]: PropertyDescriptor; }' is missing the following properties from type 'Resolver': ensureHook, getHook, resolveSync, resolve, and 6 more.
-lib/index.ts(107,31): error TS2345: Argument of type 'Resolver' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
-  Type 'Resolver' is not assignable to type 'PropertyDescriptorMap'.
-    Index signature for type 'string' is missing in type 'Resolver'.
+lib/index.ts(106,21): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(83,7): error TS2451: Cannot redeclare block-scoped variable 'slashCode'.
 lib/util/entrypoints.ts(84,7): error TS2451: Cannot redeclare block-scoped variable 'dotCode'.
-lib/util/entrypoints.ts(94,2): error TS2322: Type 'Function' is not assignable to type 'Resolver'.
-lib/util/entrypoints.ts(95,3): error TS2345: Argument of type 'Resolver' is not assignable to parameter of type 'string'.
+lib/util/entrypoints.ts(93,4): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(95,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/util/entrypoints.ts(108,2): error TS2322: Type 'Function' is not assignable to type 'Resolver'.
-lib/util/entrypoints.ts(109,3): error TS2345: Argument of type 'Resolver' is not assignable to parameter of type 'string'.
+lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
+lib/util/entrypoints.ts(107,4): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(109,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/util/entrypoints.ts(111,3): error TS2345: Argument of type '(imp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(125,34): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-lib/util/entrypoints.ts(135,4): error TS2322: Type 'Resolver' is not assignable to type 'string'.
 lib/util/entrypoints.ts(146,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/util/entrypoints.ts(154,4): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/util/entrypoints.ts(171,28): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(179,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(200,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(207,66): error TS2304: Cannot find name 'Void'.
+lib/util/entrypoints.ts(207,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/util/entrypoints.ts(238,66): error TS2304: Cannot find name 'Void'.
+lib/util/entrypoints.ts(238,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/util/entrypoints.ts(262,34): error TS2339: Property 'files' does not exist on type 'object'.
 lib/util/entrypoints.ts(268,12): error TS2339: Property 'children' does not exist on type 'object'.
 lib/util/entrypoints.ts(269,12): error TS2339: Property 'folder' does not exist on type 'object'.
@@ -806,6 +811,7 @@ lib/util/entrypoints.ts(316,33): error TS2339: Property 'children' does not exis
 lib/util/entrypoints.ts(316,52): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/util/entrypoints.ts(322,12): error TS2339: Property 'children' does not exist on type 'object'.
 lib/util/entrypoints.ts(322,31): error TS2322: Type 'object' is not assignable to type 'any[]'.
+lib/util/entrypoints.ts(324,18): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(324,34): error TS2339: Property 'children' does not exist on type 'object'.
 lib/util/entrypoints.ts(327,4): error TS2322: Type 'object' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(338,29): error TS2339: Property 'files' does not exist on type 'object'.
@@ -813,15 +819,15 @@ lib/util/entrypoints.ts(346,29): error TS2339: Property 'wildcards' does not exi
 lib/util/entrypoints.ts(348,2): error TS2322: Type 'object' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(380,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
 lib/util/entrypoints.ts(389,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
-lib/util/entrypoints.ts(394,9): error TS2322: Type 'Resolver' is not assignable to type 'string'.
 lib/util/entrypoints.ts(396,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/util/entrypoints.ts(399,4): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 lib/util/entrypoints.ts(441,76): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/util/entrypoints.ts(441,82): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/util/entrypoints.ts(441,82): error TS4060: Return type of exported function has or is using private name 'Resolver'.
 lib/util/entrypoints.ts(460,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-lib/util/entrypoints.ts(467,5): error TS2322: Type 'Function' is not assignable to type 'Resolver'.
 lib/util/entrypoints.ts(473,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-lib/util/entrypoints.ts(480,5): error TS2322: Type 'Function' is not assignable to type 'Resolver'.
 lib/util/entrypoints.ts(510,63): error TS2304: Cannot find name 'Void'.
+lib/util/entrypoints.ts(510,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/util/entrypoints.ts(512,8): error TS2339: Property 'folder' does not exist on type 'object'.
 lib/util/entrypoints.ts(516,6): error TS2739: Type '{}' is missing the following properties from type 'Error': name, message
 lib/util/entrypoints.ts(530,12): error TS2339: Property 'children' does not exist on type 'Error'.
@@ -835,14 +841,13 @@ lib/util/entrypoints.ts(553,13): error TS2339: Property 'wildcards' does not exi
 lib/util/entrypoints.ts(553,38): error TS2339: Property 'wildcards' does not exist on type 'Error'.
 lib/util/entrypoints.ts(554,9): error TS2339: Property 'wildcards' does not exist on type 'Error'.
 lib/util/entrypoints.ts(556,9): error TS2339: Property 'files' does not exist on type 'Error'.
-lib/util/entrypoints.ts(566,8): error TS2740: Type '{}' is missing the following properties from type 'Resolver': ensureHook, getHook, resolveSync, resolve, and 7 more.
-lib/util/entrypoints.ts(570,8): error TS2339: Property 'files' does not exist on type 'Resolver'.
-lib/util/entrypoints.ts(574,8): error TS2339: Property 'files' does not exist on type 'Resolver'.
-lib/util/entrypoints.ts(599,10): error TS2339: Property 'files' does not exist on type 'Resolver'.
-lib/util/entrypoints.ts(611,9): error TS2339: Property 'files' does not exist on type 'Resolver'.
+lib/util/entrypoints.ts(565,51): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/util/entrypoints.ts(565,51): error TS4060: Return type of exported function has or is using private name 'Resolver'.
+lib/util/entrypoints.ts(566,14): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/util/entrypoints.ts(633,52): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
+lib/util/entrypoints.ts(633,52): error TS4060: Return type of exported function has or is using private name 'Resolver'.
 lib/util/entrypoints.ts(634,8): error TS2322: Type 'object' is not assignable to type 'string'.
 lib/util/entrypoints.ts(663,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/util/entrypoints.ts(666,2): error TS2322: Type 'string' is not assignable to type 'Resolver'.
 lib/util/identifier.ts(14,10): error TS2451: Cannot redeclare block-scoped variable 'parseIdentifier'.
 lib/util/path.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/util/path.ts(10,7): error TS2322: Type 'number' is not assignable to type 'string'.
@@ -871,7 +876,7 @@ lib/util/path.ts(182,13): error TS2314: Generic type 'Map<K, V>' requires 2 type
 lib/util/path.ts(195,7): error TS2451: Cannot redeclare block-scoped variable 'checkImportsExportsFieldTarget'.
 tooling/format-file-header.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 tooling/format-file-header.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
-tooling/format-file-header.ts(8,7): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
+tooling/format-file-header.ts(8,7): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 tooling/format-file-header.ts(10,23): error TS2339: Property 'statSync' does not exist on type 'string'.
 tooling/format-file-header.ts(11,8): error TS2339: Property 'isDirectory' does not exist on type 'string'.
 tooling/format-file-header.ts(12,25): error TS2339: Property 'readdirSync' does not exist on type 'string'.
@@ -887,8 +892,7 @@ tooling/format-file-header.ts(27,8): error TS2339: Property 'key' does not exist
 tooling/format-file-header.ts(27,16): error TS2339: Property 'key' does not exist on type 'object'.
 tooling/format-file-header.ts(28,8): error TS2339: Property 'key' does not exist on type 'object'.
 tooling/format-file-header.ts(28,16): error TS2339: Property 'key' does not exist on type 'object'.
-tooling/format-file-header.ts(34,29): error TS2339: Property 'exec' does not exist on type 'Resolver'.
-tooling/format-file-header.ts(40,18): error TS2339: Property 'exec' does not exist on type 'Resolver'.
+tooling/format-file-header.ts(32,57): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 tooling/format-file-header.ts(45,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tooling/format-file-header.ts(115,24): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 tooling/format-file-header.ts(116,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.

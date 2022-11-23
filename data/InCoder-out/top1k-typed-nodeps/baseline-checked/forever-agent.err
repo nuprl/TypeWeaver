@@ -1,9 +1,11 @@
 index.ts(10,49): error TS2304: Cannot find name 'Int'.
+index.ts(10,49): error TS4078: Parameter 'port' of exported function has or is using private name 'Int'.
 index.ts(16,17): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(16,35): error TS2339: Property 'port' does not exist on type 'String'.
 index.ts(16,54): error TS2339: Property 'localAddress' does not exist on type 'String'.
 index.ts(16,75): error TS2339: Property 'localAddress' does not exist on type 'String'.
 index.ts(21,32): error TS2304: Cannot find name 'AgentOptions'.
+index.ts(21,32): error TS4078: Parameter 'options' of exported function has or is using private name 'AgentOptions'.
 index.ts(29,36): error TS2304: Cannot find name 'Socket'.
 index.ts(29,66): error TS2304: Cannot find name 'Int'.
 index.ts(61,51): error TS2503: Cannot find namespace 'http'.

@@ -61,22 +61,33 @@ src/index.ts(183,21): error TS2350: Only a void function can be called with the 
 src/index.ts(186,43): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(187,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(190,29): error TS2304: Cannot find name 'Engine'.
+src/index.ts(190,29): error TS4078: Parameter 'engine' of exported function has or is using private name 'Engine'.
 src/index.ts(190,46): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+src/index.ts(190,46): error TS4078: Parameter 'buffer' of exported function has or is using private name 'Buffer'.
 src/index.ts(231,33): error TS2304: Cannot find name 'Engine'.
+src/index.ts(231,33): error TS4078: Parameter 'engine' of exported function has or is using private name 'Engine'.
 src/index.ts(231,50): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+src/index.ts(231,50): error TS4078: Parameter 'buffer' of exported function has or is using private name 'Buffer'.
 src/index.ts(245,24): error TS2304: Cannot find name 'ZlibOptions'.
+src/index.ts(245,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'ZlibOptions'.
 src/index.ts(246,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(250,24): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(250,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'InflateOptions'.
 src/index.ts(251,42): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(257,21): error TS2304: Cannot find name 'GzipOptions'.
+src/index.ts(257,21): error TS2552: Cannot find name 'GzipOptions'. Did you mean 'GainOptions'?
+src/index.ts(257,21): error TS4078: Parameter 'opts' of exported function has or is using private name 'GzipOptions'.
 src/index.ts(258,39): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(262,23): error TS2304: Cannot find name 'GunzipOptions'.
+src/index.ts(262,23): error TS4078: Parameter 'opts' of exported function has or is using private name 'GunzipOptions'.
 src/index.ts(263,41): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(269,27): error TS2304: Cannot find name 'ZlibOptions'.
+src/index.ts(269,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'ZlibOptions'.
 src/index.ts(270,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(274,27): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(274,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'InflateOptions'.
 src/index.ts(275,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(281,22): error TS2304: Cannot find name 'UnzipOptions'.
+src/index.ts(281,22): error TS4078: Parameter 'opts' of exported function has or is using private name 'UnzipOptions'.
 src/index.ts(282,40): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(300,10): error TS2393: Duplicate function implementation.
 src/index.ts(300,21): error TS2304: Cannot find name 'ZlibOptions'.
@@ -84,7 +95,9 @@ src/index.ts(368,5): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(372,11): error TS2339: Property 'errno' does not exist on type 'Error'.
 src/index.ts(373,11): error TS2339: Property 'code' does not exist on type 'Error'.
 src/index.ts(474,25): error TS2304: Cannot find name 'Engine'.
+src/index.ts(474,25): error TS4078: Parameter 'engine' of exported function has or is using private name 'Engine'.
 src/index.ts(486,28): error TS2304: Cannot find name 'Duplex'.
+src/index.ts(486,28): error TS4078: Parameter 'self' of exported function has or is using private name 'Duplex'.
 src/index.ts(490,45): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(521,48): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(555,7): error TS2554: Expected 2 arguments, but got 1.

@@ -1,73 +1,91 @@
 lib/AsyncParallelBailHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncParallelBailHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncParallelBailHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncParallelBailHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncParallelBailHook.ts(13,44): error TS2339: Property 'options' does not exist on type 'AsyncParallelBailHookCodeFactory'.
 lib/AsyncParallelBailHook.ts(29,16): error TS2339: Property 'callTapsParallel' does not exist on type 'AsyncParallelBailHookCodeFactory'.
 lib/AsyncParallelBailHook.ts(67,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncParallelBailHook.ts(67,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncParallelBailHook.ts(67,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncParallelBailHook.ts(69,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncParallelBailHook.ts(74,77): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncParallelBailHook.ts(74,77): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncParallelBailHook.ts(75,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncParallelBailHook.ts(75,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/AsyncParallelHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncParallelHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncParallelHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncParallelHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncParallelHook.ts(12,15): error TS2339: Property 'callTapsParallel' does not exist on type 'AsyncParallelHookCodeFactory'.
 lib/AsyncParallelHook.ts(19,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncParallelHook.ts(19,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncParallelHook.ts(19,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncParallelHook.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncParallelHook.ts(26,28): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 lib/AsyncParallelHook.ts(26,74): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncParallelHook.ts(26,74): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncParallelHook.ts(27,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncParallelHook.ts(27,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/AsyncSeriesBailHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncSeriesBailHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncSeriesBailHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncSeriesBailHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncSeriesBailHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'AsyncSeriesBailHookCodeFactory'.
 lib/AsyncSeriesBailHook.ts(24,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncSeriesBailHook.ts(24,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesBailHook.ts(24,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncSeriesBailHook.ts(26,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncSeriesBailHook.ts(31,30): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 lib/AsyncSeriesBailHook.ts(31,76): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesBailHook.ts(31,76): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncSeriesBailHook.ts(32,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncSeriesBailHook.ts(32,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/AsyncSeriesHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncSeriesHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncSeriesHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncSeriesHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncSeriesHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'AsyncSeriesHookCodeFactory'.
 lib/AsyncSeriesHook.ts(19,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncSeriesHook.ts(19,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesHook.ts(19,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncSeriesHook.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncSeriesHook.ts(26,26): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 lib/AsyncSeriesHook.ts(26,72): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesHook.ts(26,72): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncSeriesHook.ts(27,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncSeriesHook.ts(27,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/AsyncSeriesLoopHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncSeriesLoopHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncSeriesLoopHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncSeriesLoopHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncSeriesLoopHook.ts(12,15): error TS2339: Property 'callTapsLooping' does not exist on type 'AsyncSeriesLoopHookCodeFactory'.
 lib/AsyncSeriesLoopHook.ts(19,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncSeriesLoopHook.ts(19,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesLoopHook.ts(19,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncSeriesLoopHook.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncSeriesLoopHook.ts(26,30): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 lib/AsyncSeriesLoopHook.ts(26,76): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesLoopHook.ts(26,76): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncSeriesLoopHook.ts(27,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncSeriesLoopHook.ts(27,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/AsyncSeriesWaterfallHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/AsyncSeriesWaterfallHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/AsyncSeriesWaterfallHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/AsyncSeriesWaterfallHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/AsyncSeriesWaterfallHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'.
 lib/AsyncSeriesWaterfallHook.ts(17,21): error TS2339: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'.
 lib/AsyncSeriesWaterfallHook.ts(22,32): error TS2339: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'.
 lib/AsyncSeriesWaterfallHook.ts(27,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/AsyncSeriesWaterfallHook.ts(27,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesWaterfallHook.ts(27,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/AsyncSeriesWaterfallHook.ts(29,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/AsyncSeriesWaterfallHook.ts(34,80): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/AsyncSeriesWaterfallHook.ts(34,80): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/AsyncSeriesWaterfallHook.ts(37,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/AsyncSeriesWaterfallHook.ts(37,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
@@ -206,54 +224,66 @@ lib/MultiHook.ts(49,9): error TS2339: Property 'name' does not exist on type 'Mu
 lib/SyncBailHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/SyncBailHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/SyncBailHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/SyncBailHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/SyncBailHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'SyncBailHookCodeFactory'.
 lib/SyncBailHook.ts(25,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/SyncBailHook.ts(25,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncBailHook.ts(25,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/SyncBailHook.ts(27,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_ASYNC'.
 lib/SyncBailHook.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_PROMISE'.
 lib/SyncBailHook.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/SyncBailHook.ts(40,68): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncBailHook.ts(40,68): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/SyncBailHook.ts(41,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncBailHook.ts(41,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/SyncHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/SyncHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/SyncHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/SyncHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/SyncHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'SyncHookCodeFactory'.
 lib/SyncHook.ts(20,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/SyncHook.ts(20,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncHook.ts(20,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/SyncHook.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_ASYNC'.
 lib/SyncHook.ts(26,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_PROMISE'.
 lib/SyncHook.ts(30,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/SyncHook.ts(35,64): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncHook.ts(35,64): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/SyncHook.ts(36,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncHook.ts(36,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/SyncLoopHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/SyncLoopHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/SyncLoopHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/SyncLoopHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/SyncLoopHook.ts(12,15): error TS2339: Property 'callTapsLooping' does not exist on type 'SyncLoopHookCodeFactory'.
 lib/SyncLoopHook.ts(20,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/SyncLoopHook.ts(20,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncLoopHook.ts(20,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/SyncLoopHook.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_ASYNC'.
 lib/SyncLoopHook.ts(26,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_PROMISE'.
 lib/SyncLoopHook.ts(30,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/SyncLoopHook.ts(35,68): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncLoopHook.ts(35,68): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/SyncLoopHook.ts(36,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncLoopHook.ts(36,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/SyncWaterfallHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/SyncWaterfallHook.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'HookCodeFactory'.
 lib/SyncWaterfallHook.ts(8,24): error TS2749: 'HookCodeFactory' refers to a value, but is being used as a type here. Did you mean 'typeof HookCodeFactory'?
+lib/SyncWaterfallHook.ts(8,24): error TS4025: Exported variable 'HookCodeFactory' has or is using private name 'HookCodeFactory'.
 lib/SyncWaterfallHook.ts(12,15): error TS2339: Property 'callTapsSeries' does not exist on type 'SyncWaterfallHookCodeFactory'.
 lib/SyncWaterfallHook.ts(17,21): error TS2339: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'.
 lib/SyncWaterfallHook.ts(22,32): error TS2339: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'.
 lib/SyncWaterfallHook.ts(29,7): error TS2451: Cannot redeclare block-scoped variable 'factory'.
 lib/SyncWaterfallHook.ts(29,16): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncWaterfallHook.ts(29,16): error TS4025: Exported variable 'factory' has or is using private name 'Hook'.
 lib/SyncWaterfallHook.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_ASYNC'.
 lib/SyncWaterfallHook.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_PROMISE'.
 lib/SyncWaterfallHook.ts(39,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
 lib/SyncWaterfallHook.ts(44,73): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncWaterfallHook.ts(44,73): error TS4060: Return type of exported function has or is using private name 'Hook'.
 lib/SyncWaterfallHook.ts(47,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncWaterfallHook.ts(47,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.

@@ -8,6 +8,7 @@ index.ts(32,5): error TS2740: Type '{}' is missing the following properties from
 index.ts(32,44): error TS2554: Expected 3 arguments, but got 2.
 index.ts(36,34): error TS2554: Expected 3 arguments, but got 2.
 index.ts(42,74): error TS2304: Cannot find name 'Void'.
+index.ts(42,74): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(62,10): error TS2339: Property '_processResponse' does not exist on type 'HTMLElement'.
 index.ts(79,15): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
@@ -129,6 +130,7 @@ index.ts(528,51): error TS2339: Property 'request' does not exist on type 'objec
 index.ts(529,22): error TS2339: Property 'end' does not exist on type 'Error'.
 index.ts(530,7): error TS2740: Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(543,18): error TS2304: Cannot find name 'Void'.
+index.ts(543,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(548,25): error TS2339: Property 'protocol' does not exist on type 'Function'.
 index.ts(549,25): error TS2339: Property 'hostname' does not exist on type 'Function'.
 index.ts(551,17): error TS2339: Property 'hostname' does not exist on type 'Function'.
@@ -149,7 +151,9 @@ index.ts(587,31): error TS2351: This expression is not constructable.
   Not all constituents of type 'number | ErrorConstructor' are constructable.
     Type 'number' has no construct signatures.
 index.ts(593,32): error TS2304: Cannot find name 'HTMLProps'.
+index.ts(593,32): error TS4078: Parameter 'request' of exported function has or is using private name 'HTMLProps'.
 index.ts(593,44): error TS2304: Cannot find name 'Void'.
+index.ts(593,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(602,19): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 index.ts(604,57): error TS2339: Property 'endsWith' does not exist on type 'any[]'.
 index.ts(608,39): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.

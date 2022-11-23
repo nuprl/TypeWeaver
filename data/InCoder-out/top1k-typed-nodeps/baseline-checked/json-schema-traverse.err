@@ -6,14 +6,23 @@ index.ts(30,10): error TS2339: Property 'arrayKeywords' does not exist on type '
 index.ts(37,10): error TS2339: Property 'propsKeywords' does not exist on type '(schema: any, opts: any, cb: Function) => void'.
 index.ts(45,10): error TS2339: Property 'skipKeywords' does not exist on type '(schema: any, opts: any, cb: Function) => void'.
 index.ts(67,26): error TS2304: Cannot find name 'SchemaOpts'.
+index.ts(67,26): error TS4078: Parameter 'opts' of exported function has or is using private name 'SchemaOpts'.
 index.ts(67,44): error TS2304: Cannot find name 'SchemaOpts'.
+index.ts(67,44): error TS4078: Parameter 'pre' of exported function has or is using private name 'SchemaOpts'.
 index.ts(67,63): error TS2304: Cannot find name 'SchemaOpts'.
+index.ts(67,63): error TS4078: Parameter 'post' of exported function has or is using private name 'SchemaOpts'.
 index.ts(67,84): error TS2304: Cannot find name 'SchemaOpts'.
+index.ts(67,84): error TS4078: Parameter 'schema' of exported function has or is using private name 'SchemaOpts'.
 index.ts(67,106): error TS2304: Cannot find name 'JsonPtr'.
+index.ts(67,106): error TS4078: Parameter 'jsonPtr' of exported function has or is using private name 'JsonPtr'.
 index.ts(67,128): error TS2304: Cannot find name 'JsonPtr'.
+index.ts(67,128): error TS4078: Parameter 'rootSchema' of exported function has or is using private name 'JsonPtr'.
 index.ts(67,153): error TS2304: Cannot find name 'JsonPtr'.
+index.ts(67,153): error TS4078: Parameter 'parentJsonPtr' of exported function has or is using private name 'JsonPtr'.
 index.ts(67,178): error TS2304: Cannot find name 'JsonPtr'.
+index.ts(67,178): error TS4078: Parameter 'parentKeyword' of exported function has or is using private name 'JsonPtr'.
 index.ts(67,202): error TS2304: Cannot find name 'JsonPtr'.
+index.ts(67,202): error TS4078: Parameter 'parentSchema' of exported function has or is using private name 'JsonPtr'.
 index.ts(73,29): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: any, opts: any, cb: Function) => void'.
 index.ts(77,34): error TS2339: Property 'propsKeywords' does not exist on type '(schema: any, opts: any, cb: Function) => void'.
 index.ts(80,134): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.

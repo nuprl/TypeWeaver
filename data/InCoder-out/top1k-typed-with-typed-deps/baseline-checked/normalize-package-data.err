@@ -8,7 +8,9 @@ lib/fixer.ts(62,52): error TS2304: Cannot find name 'y'.
 lib/fixer.ts(78,54): error TS2304: Cannot find name 'le'.
 lib/fixer.ts(177,37): error TS2304: Cannot find name 'ny'.
 lib/fixer.ts(344,42): error TS2304: Cannot find name 'PackageSpecifier'.
+lib/fixer.ts(344,42): error TS4078: Parameter 'spec' of exported function has or is using private name 'PackageSpecifier'.
 lib/fixer.ts(359,40): error TS2304: Cannot find name 'Spec'.
+lib/fixer.ts(359,40): error TS4078: Parameter 'spec' of exported function has or is using private name 'Spec'.
 lib/fixer.ts(377,44): error TS2345: Argument of type '(set: Set<string>) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'set' and 'value' are incompatible.
     Type 'string' is not assignable to type 'Set<string>'.
@@ -16,7 +18,9 @@ lib/fixer.ts(378,29): error TS2538: Type 'Set<string>' cannot be used as an inde
 lib/fixer.ts(381,10): error TS2538: Type 'Set<string>' cannot be used as an index type.
 lib/fixer.ts(381,22): error TS2538: Type 'Set<string>' cannot be used as an index type.
 lib/fixer.ts(386,33): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+lib/fixer.ts(386,33): error TS4078: Parameter 'person' of exported function has or is using private name 'tring'.
 lib/fixer.ts(398,31): error TS2304: Cannot find name 'ring'.
+lib/fixer.ts(398,31): error TS4078: Parameter 'person' of exported function has or is using private name 'ring'.
 lib/fixer.ts(407,9): error TS2339: Property 'name' does not exist on type '{}'.
 lib/fixer.ts(410,9): error TS2339: Property 'email' does not exist on type '{}'.
 lib/fixer.ts(413,9): error TS2339: Property 'url' does not exist on type '{}'.
@@ -29,4 +33,5 @@ lib/fixer.ts(468,29): error TS2345: Argument of type '(k: number) => void' is no
   Types of parameters 'k' and 'value' are incompatible.
     Type 'string' is not assignable to type 'number'.
 lib/make_warning.ts(16,104): error TS2304: Cannot find name 'Field'.
+lib/make_warning.ts(16,104): error TS4078: Parameter 'field' of exported function has or is using private name 'Field'.
 

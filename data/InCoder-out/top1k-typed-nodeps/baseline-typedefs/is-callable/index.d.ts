@@ -1,0 +1,15 @@
+declare var fnToStr: () => string;
+declare var reflectApply: typeof Reflect.apply;
+declare var badArrayLike: any;
+declare var isCallableMarker: any;
+declare var constructorRegex: RegExp;
+declare var isES6ClassFn: (value: unknown) => boolean;
+declare var tryFunctionObject: (value: any) => boolean;
+declare var toStr: () => string;
+declare var objectClass: string;
+declare var fnClass: string;
+declare var genClass: string;
+declare var ddaClass: string;
+declare var hasToStringTag: boolean;
+declare var isIE68: boolean;
+declare var isDDA: () => boolean;

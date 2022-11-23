@@ -1,0 +1,9 @@
+export declare const _reset: void;
+export declare const releaseExit: void;
+export declare const captureExit: void;
+export declare const _handlers: any[];
+export declare const _flush: boolean;
+export declare const onExit: void;
+export declare const offExit: void;
+export declare const exit: void;
+export declare const listenerCount: any;

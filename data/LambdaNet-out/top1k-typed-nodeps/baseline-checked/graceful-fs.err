@@ -6,13 +6,15 @@ clone.ts(6,14): error TS2339: Property '__proto__' does not exist on type 'objec
 clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
 clone.ts(11,5): error TS2322: Type 'string' is not assignable to type 'Function'.
 clone.ts(13,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-clone.ts(22,3): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+clone.ts(22,3): error TS2322: Type 'object' is not assignable to type 'Function'.
 graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
 graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
 graceful-fs.ts(14,3): error TS2322: Type 'symbol' is not assignable to type 'string'.
 graceful-fs.ts(16,3): error TS2322: Type 'symbol' is not assignable to type 'string'.
 graceful-fs.ts(22,19): error TS2304: Cannot find name 'Void'.
+graceful-fs.ts(22,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(24,58): error TS2304: Cannot find name 'Void'.
+graceful-fs.ts(24,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(33,10): error TS2339: Property 'debuglog' does not exist on type 'string'.
 graceful-fs.ts(34,16): error TS2339: Property 'debuglog' does not exist on type 'string'.
 graceful-fs.ts(37,26): error TS2339: Property 'format' does not exist on type 'string'.
@@ -25,11 +27,6 @@ graceful-fs.ts(74,20): error TS2339: Property 'apply' does not exist on type 'an
 graceful-fs.ts(82,9): error TS2339: Property 'closeSync' does not exist on type 'string'.
 graceful-fs.ts(93,16): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Function'.
   Type 'typeof globalThis' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-graceful-fs.ts(96,24): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fs: string): Void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string'.
-  Overload 2 of 2, '(fs: string): string', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string'.
 graceful-fs.ts(97,54): error TS2339: Property '__patched' does not exist on type 'string'.
 graceful-fs.ts(99,8): error TS2339: Property '__patched' does not exist on type 'string'.
 graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
@@ -75,6 +72,7 @@ graceful-fs.ts(192,33): error TS2339: Property 'readdir' does not exist on type 
 graceful-fs.ts(193,6): error TS2339: Property 'readdir' does not exist on type 'string'.
 graceful-fs.ts(195,69): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(202,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+  Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 graceful-fs.ts(207,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
 graceful-fs.ts(215,25): error TS2339: Property 'code' does not exist on type 'object'.
 graceful-fs.ts(215,50): error TS2339: Property 'code' does not exist on type 'object'.
@@ -119,8 +117,11 @@ graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(358,25): error TS2339: Property 'code' does not exist on type 'object'.
 graceful-fs.ts(358,50): error TS2339: Property 'code' does not exist on type 'object'.
 graceful-fs.ts(371,34): error TS2304: Cannot find name 'Void'.
+graceful-fs.ts(371,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(383,25): error TS2304: Cannot find name 'Void'.
+graceful-fs.ts(383,25): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(397,20): error TS2304: Cannot find name 'Void'.
+graceful-fs.ts(397,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(416,23): error TS2339: Property 'name' does not exist on type 'object'.
 graceful-fs.ts(417,8): error TS2339: Property 'apply' does not exist on type 'object'.
 graceful-fs.ts(420,25): error TS2339: Property 'name' does not exist on type 'object'.

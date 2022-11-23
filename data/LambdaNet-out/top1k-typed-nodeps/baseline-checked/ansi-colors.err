@@ -8,7 +8,8 @@ bench/colors.ts(65,4): error TS2339: Property 'add' does not exist on type 'obje
 bench/colors.ts(74,4): error TS2339: Property 'add' does not exist on type 'object'.
 bench/colors.ts(74,37): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-bench/colors.ts(75,31): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
+bench/colors.ts(75,31): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'HTMLElement'.
+  Type 'any[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 bench/colors.ts(79,14): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/colors.ts(79,31): error TS2339: Property 'white' does not exist on type 'HTMLElement'.
 bench/colors.ts(79,55): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
@@ -265,8 +266,8 @@ examples/nesting-bug.ts(10,60): error TS2339: Property 'dim' does not exist on t
 examples/nesting-bug.ts(13,19): error TS2339: Property 'bold' does not exist on type 'any[]'.
 examples/nesting-bug.ts(13,37): error TS2339: Property 'cyan' does not exist on type 'any[]'.
 examples/nesting-bug.ts(15,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
-examples/nesting-bug.ts(16,19): error TS2339: Property 'bold' does not exist on type 'object'.
-examples/nesting-bug.ts(16,37): error TS2339: Property 'cyan' does not exist on type 'object'.
+examples/nesting-bug.ts(16,19): error TS2339: Property 'bold' does not exist on type 'any[]'.
+examples/nesting-bug.ts(16,37): error TS2339: Property 'cyan' does not exist on type 'any[]'.
 examples/ok.ts(3,5): error TS2339: Property 'ok' does not exist on type 'any[]'.
 examples/ok.ts(3,34): error TS2339: Property 'green' does not exist on type 'any[]'.
 examples/ok.ts(3,44): error TS2339: Property 'symbols' does not exist on type 'any[]'.

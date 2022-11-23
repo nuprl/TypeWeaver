@@ -1,4 +1,5 @@
 karma.conf.ts(1,33): error TS2304: Cannot find name 'Karma'.
+karma.conf.ts(1,33): error TS4078: Parameter 'karma' of exported function has or is using private name 'Karma'.
 src/binding.ts(7,21): error TS2307: Cannot find module 'pako/lib/zlib/zstream' or its corresponding type declarations.
 src/binding.ts(8,26): error TS2307: Cannot find module 'pako/lib/zlib/deflate.js' or its corresponding type declarations.
 src/binding.ts(9,26): error TS2307: Cannot find module 'pako/lib/zlib/inflate.js' or its corresponding type declarations.
@@ -17,7 +18,7 @@ src/binding.ts(78,103): error TS2304: Cannot find name 'in_len_t'.
 src/binding.ts(78,119): error TS2304: Cannot find name 'out_t'.
 src/binding.ts(78,136): error TS2304: Cannot find name 'out_off_t'.
 src/binding.ts(78,157): error TS2304: Cannot find name 'out_len_t'.
-src/index.ts(5,8): error TS1192: Module '"src/binding"' has no default export.
+src/index.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline/browserify-zlib/src/binding"' has no default export.
 src/index.ts(75,37): error TS2749: 'Deflate' refers to a value, but is being used as a type here. Did you mean 'typeof Deflate'?
 src/index.ts(76,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(79,37): error TS2749: 'Inflate' refers to a value, but is being used as a type here. Did you mean 'typeof Inflate'?

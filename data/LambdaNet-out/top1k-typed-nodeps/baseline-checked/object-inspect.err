@@ -1,7 +1,8 @@
+example/all.ts(10,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type 'any[]', but here has type 'object'.
 example/all.ts(17,21): error TS2339: Property 'from' does not exist on type 'any[]'.
-example/all.ts(22,5): error TS2339: Property 'self' does not exist on type 'object'.
-example/circular.ts(5,5): error TS2339: Property 'c' does not exist on type 'object'.
-example/fn.ts(4,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type 'object', but here has type 'any[]'.
+example/all.ts(22,5): error TS2339: Property 'self' does not exist on type 'any[]'.
+example/circular.ts(4,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type 'any[]', but here has type 'object'.
+example/circular.ts(5,5): error TS2339: Property 'c' does not exist on type 'any[]'.
 example/fn.ts(4,57): error TS2322: Type 'number' is not assignable to type 'string'.
 example/inspect.ts(6,5): error TS2740: Type 'HTMLDivElement' is missing the following properties from type 'HTMLInputElement': accept, alt, autocomplete, capture, and 51 more.
 index.ts(1,5): error TS2322: Type 'Map<any, any>' is not assignable to type 'number'.

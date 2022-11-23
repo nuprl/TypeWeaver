@@ -7,6 +7,7 @@ browser.ts(41,24): error TS2339: Property 'secp192r1' does not exist on type '{ 
 browser.ts(42,9): error TS2339: Property 'p384' does not exist on type '{ secp256k1: { name: string; byteLength: number; }; secp224r1: { name: string; byteLength: number; }; prime256v1: { name: string; byteLength: number; }; prime192v1: { name: string; byteLength: number; }; ed25519: { ...; }; secp384r1: { ...; }; secp521r1: { ...; }; }'.
 browser.ts(43,9): error TS2339: Property 'p521' does not exist on type '{ secp256k1: { name: string; byteLength: number; }; secp224r1: { name: string; byteLength: number; }; prime256v1: { name: string; byteLength: number; }; prime192v1: { name: string; byteLength: number; }; ed25519: { ...; }; secp384r1: { ...; }; secp521r1: { ...; }; }'.
 browser.ts(45,23): error TS2304: Cannot find name 'Curve'.
+browser.ts(45,23): error TS4078: Parameter 'curve' of exported function has or is using private name 'Curve'.
 browser.ts(62,3): error TS2322: Type 'Buffer | "utf8"' is not assignable to type 'Buffer'.
   Type 'string' is not assignable to type 'Buffer'.
 browser.ts(64,31): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'BufferEncoding'.
@@ -19,6 +20,9 @@ browser.ts(97,3): error TS2322: Type 'Buffer | "utf8"' is not assignable to type
   Type 'string' is not assignable to type 'Buffer'.
 browser.ts(99,29): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'BufferEncoding'.
 browser.ts(109,33): error TS2304: Cannot find name 'BigNumber'.
+browser.ts(109,33): error TS4078: Parameter 'bn' of exported function has or is using private name 'BigNumber'.
 browser.ts(109,50): error TS2304: Cannot find name 'BigNumber'.
+browser.ts(109,50): error TS4078: Parameter 'enc' of exported function has or is using private name 'BigNumber'.
 browser.ts(109,67): error TS2304: Cannot find name 'BigNumber'.
+browser.ts(109,67): error TS4078: Parameter 'len' of exported function has or is using private name 'BigNumber'.
 

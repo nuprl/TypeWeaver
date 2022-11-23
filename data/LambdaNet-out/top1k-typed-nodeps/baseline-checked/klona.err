@@ -4,6 +4,7 @@ bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist o
 bench/fixtures/full.ts(1,7): error TS2322: Type 'typeof symbol1' is not assignable to type 'string'.
 bench/fixtures/full.ts(2,7): error TS2322: Type 'typeof symbol2' is not assignable to type 'string'.
 bench/index.ts(45,52): error TS2304: Cannot find name 'Void'.
+bench/index.ts(45,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 bench/index.ts(67,24): error TS2339: Property 'target' does not exist on type 'Test'.
 bench/index.ts(71,9): error TS2339: Property 'add' does not exist on type 'any[]'.
 bench/index.ts(74,8): error TS2339: Property 'run' does not exist on type 'any[]'.

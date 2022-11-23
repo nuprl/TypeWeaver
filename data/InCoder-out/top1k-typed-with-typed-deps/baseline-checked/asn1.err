@@ -1,19 +1,21 @@
 lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
-lib/ber/reader.ts(18,23): error TS2552: Cannot find name 'uffer'. Did you mean 'Buffer'?
+lib/ber/reader.ts(18,23): error TS2304: Cannot find name 'uffer'.
+lib/ber/reader.ts(18,23): error TS4078: Parameter 'data' of exported function has or is using private name 'uffer'.
 lib/ber/reader.ts(128,48): error TS2304: Cannot find name 'Tag'.
 lib/ber/reader.ts(160,46): error TS2503: Cannot find namespace 'ASN1'.
 lib/ber/reader.ts(191,43): error TS2503: Cannot find namespace 'ASN1'.
 lib/ber/reader.ts(221,44): error TS2304: Cannot find name 'ag'.
 lib/ber/writer.ts(43,10): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/writer.ts(43,26): error TS2552: Cannot find name 'WriterOptions'. Did you mean 'WorkerOptions'?
+lib/ber/writer.ts(43,26): error TS4078: Parameter 'options' of exported function has or is using private name 'WriterOptions'.
 lib/ber/writer.ts(65,43): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
 lib/ber/writer.ts(74,42): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
 lib/ber/writer.ts(74,55): error TS2304: Cannot find name 'ny'.
 lib/ber/writer.ts(109,50): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
 lib/ber/writer.ts(109,63): error TS2304: Cannot find name 'ny'.
-lib/ber/writer.ts(119,46): error TS2304: Cannot find name 'oolean'.
+lib/ber/writer.ts(119,46): error TS2552: Cannot find name 'oolean'. Did you mean 'boolean'?
 lib/ber/writer.ts(119,60): error TS2304: Cannot find name 'ny'.
 lib/ber/writer.ts(132,45): error TS2304: Cannot find name 'ring'.
 lib/ber/writer.ts(132,57): error TS2304: Cannot find name 'g'.

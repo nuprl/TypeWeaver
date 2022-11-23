@@ -1,19 +1,23 @@
 array-iterator.ts(3,5): error TS2300: Duplicate identifier 'Iteration'.
 array-iterator.ts(6,10): error TS2300: Duplicate identifier 'ArrayIterator'.
 array-iterator.ts(6,88): error TS2304: Cannot find name 'Void'.
+array-iterator.ts(6,88): error TS4060: Return type of exported function has or is using private name 'Void'.
 array-iterator.ts(16,25): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 array-iterator.ts(19,26): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 iteration.ts(4,10): error TS2300: Duplicate identifier 'Iteration'.
 iteration.ts(4,65): error TS2304: Cannot find name 'Void'.
+iteration.ts(4,65): error TS4060: Return type of exported function has or is using private name 'Void'.
 iteration.ts(10,11): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 iteration.ts(13,15): error TS2339: Property 'value' does not exist on type 'object'.
 iteration.ts(14,15): error TS2339: Property 'done' does not exist on type 'object'.
 iteration.ts(15,15): error TS2339: Property 'index' does not exist on type 'object'.
+object-iterator.ts(3,5): error TS2300: Duplicate identifier 'Iteration'.
 object-iterator.ts(4,5): error TS2300: Duplicate identifier 'ArrayIterator'.
 object-iterator.ts(7,10): error TS2300: Duplicate identifier 'ObjectIterator'.
 object-iterator.ts(7,91): error TS2304: Cannot find name 'Void'.
+object-iterator.ts(7,91): error TS4060: Return type of exported function has or is using private name 'Void'.
 object-iterator.ts(9,25): error TS2350: Only a void function can be called with the 'new' keyword.
 object-iterator.ts(9,43): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'Function'.
   Type 'string[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.

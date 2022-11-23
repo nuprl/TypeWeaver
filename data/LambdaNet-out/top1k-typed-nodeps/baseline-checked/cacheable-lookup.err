@@ -1,5 +1,6 @@
 benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'CacheableLookup'.
 benchmark.ts(6,18): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
+benchmark.ts(6,18): error TS4025: Exported variable 'cacheable' has or is using private name 'CacheableLookup'.
 benchmark.ts(6,40): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 benchmark.ts(7,42): error TS2339: Property 'Suite' does not exist on type 'any[]'.

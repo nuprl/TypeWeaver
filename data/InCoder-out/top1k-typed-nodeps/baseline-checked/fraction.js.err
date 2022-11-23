@@ -112,12 +112,19 @@ bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
 bigfraction.ts(899,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Node'.
   Type 'typeof globalThis' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 43 more.
 examples/hesse-convergence.ts(45,18): error TS2304: Cannot find name 'Tensor'.
+examples/hesse-convergence.ts(45,18): error TS4078: Parameter 'x' of exported function has or is using private name 'Tensor'.
 examples/hesse-convergence.ts(54,22): error TS2304: Cannot find name 'Matr'.
+examples/hesse-convergence.ts(54,22): error TS4078: Parameter 'm' of exported function has or is using private name 'Matr'.
 examples/hesse-convergence.ts(54,32): error TS2304: Cannot find name 'Vec'.
+examples/hesse-convergence.ts(54,32): error TS4078: Parameter 'v' of exported function has or is using private name 'Vec'.
 examples/hesse-convergence.ts(63,20): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+examples/hesse-convergence.ts(63,20): error TS4078: Parameter 'a' of exported function has or is using private name 'Fraction'.
 examples/hesse-convergence.ts(63,36): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+examples/hesse-convergence.ts(63,36): error TS4078: Parameter 'b' of exported function has or is using private name 'Fraction'.
 examples/hesse-convergence.ts(72,17): error TS2304: Cannot find name 'Vector'.
+examples/hesse-convergence.ts(72,17): error TS4078: Parameter 'V' of exported function has or is using private name 'Vector'.
 examples/hesse-convergence.ts(72,29): error TS2304: Cannot find name 'Int'.
+examples/hesse-convergence.ts(72,29): error TS4078: Parameter 'j' of exported function has or is using private name 'Int'.
 examples/tape-measure.ts(17,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 examples/toFraction.ts(31,19): error TS2339: Property 'n' does not exist on type 'number'.
 examples/toFraction.ts(31,34): error TS2339: Property 'd' does not exist on type 'number'.
