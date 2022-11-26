@@ -47,6 +47,7 @@ class TypePredictions {
             // so we replace it with any[].
             // TODO: maybe this should be configurable with a flag
             switch (r.typePrediction) {
+                case "Void":
                 case "Number":
                 case "String":
                 case "Boolean":
