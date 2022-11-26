@@ -31,7 +31,7 @@ export default {
 /**
  * Rewrites number ranges: [0-9] -> \d
  */
-function rewriteNumberRanges(path: string): Void {
+function rewriteNumberRanges(path: string): void {
   const {node} = path;
 
   node.expressions.forEach((expression: Function, i: string) => {
@@ -50,7 +50,7 @@ function rewriteNumberRanges(path: string): Void {
  * Thus, the ranges may go in any order, and other symbols/ranges
  * are kept untouched, e.g. [a-z_\dA-Z$] -> [\w$]
  */
-function rewriteWordRanges(path: string, hasIFlag: number, hasUFlag: number): Void {
+function rewriteWordRanges(path: string, hasIFlag: number, hasUFlag: number): void {
   const {node} = path;
 
   let numberPath: string = null;
@@ -142,7 +142,7 @@ const whitespaceRangeTests: any[] = [
     isCodePoint(node.to, 0x200a),
 ];
 
-function rewriteWhitespaceRanges(path: string): Void {
+function rewriteWhitespaceRanges(path: string): void {
   const {node} = path;
 
   if (

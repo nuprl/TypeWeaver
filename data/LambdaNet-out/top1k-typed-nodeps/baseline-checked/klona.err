@@ -3,8 +3,6 @@ bench/fixtures/default.ts(4,8): error TS2339: Property 'items' does not exist on
 bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist on type 'Test'.
 bench/fixtures/full.ts(1,7): error TS2322: Type 'typeof symbol1' is not assignable to type 'string'.
 bench/fixtures/full.ts(2,7): error TS2322: Type 'typeof symbol2' is not assignable to type 'string'.
-bench/index.ts(45,52): error TS2304: Cannot find name 'Void'.
-bench/index.ts(45,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 bench/index.ts(67,24): error TS2339: Property 'target' does not exist on type 'Test'.
 bench/index.ts(71,9): error TS2339: Property 'add' does not exist on type 'any[]'.
 bench/index.ts(74,8): error TS2339: Property 'run' does not exist on type 'any[]'.
@@ -167,7 +165,6 @@ bench/validate/lite.ts(13,9): error TS2339: Property 'is' does not exist on type
 bench/validate/lite.ts(16,9): error TS2339: Property 'not' does not exist on type 'string'.
 bench/validate/lite.ts(19,9): error TS2339: Property 'not' does not exist on type 'string'.
 bench/validate/lite.ts(22,9): error TS2339: Property 'is' does not exist on type 'string'.
-src/full.ts(1,54): error TS2304: Cannot find name 'Void'.
 src/full.ts(2,17): error TS2339: Property 'value' does not exist on type 'object'.
 src/full.ts(2,41): error TS2339: Property 'value' does not exist on type 'object'.
 src/full.ts(2,59): error TS2339: Property 'value' does not exist on type 'object'.

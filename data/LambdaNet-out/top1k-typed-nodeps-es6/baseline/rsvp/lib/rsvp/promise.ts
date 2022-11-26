@@ -15,11 +15,11 @@ import Reject from './promise/reject';
 const guidKey: string = 'rsvp_' + Date.now() + '-';
 let counter: number = 0;
 
-function needsResolver(): Void {
+function needsResolver(): void {
   throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
 }
 
-function needsNew(): Void {
+function needsNew(): void {
   throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");
 }
 

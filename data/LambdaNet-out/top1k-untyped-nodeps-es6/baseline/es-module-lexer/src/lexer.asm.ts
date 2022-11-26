@@ -208,7 +208,7 @@ function isBr (c: number): boolean {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 
-function syntaxError (): Void {
+function syntaxError (): void {
   throw Object.assign(new Error(`Parse error ${name}:${source.slice(0, acornPos).split('\n').length}:${acornPos - source.lastIndexOf('\n', acornPos - 1)}`), { idx: acornPos });
 }
 

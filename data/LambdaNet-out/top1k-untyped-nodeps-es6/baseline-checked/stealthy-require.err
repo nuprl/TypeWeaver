@@ -8,9 +8,7 @@ gulpfile.ts(25,15): error TS2339: Property 'gulpfile' does not exist on type 'ob
 gulpfile.ts(26,15): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(27,15): error TS2339: Property 'fixtureFiles' does not exist on type 'object'.
 gulpfile.ts(28,15): error TS2339: Property 'gulpfile' does not exist on type 'object'.
-gulpfile.ts(36,39): error TS2304: Cannot find name 'Void'.
 gulpfile.ts(37,26): error TS2345: Argument of type 'string' is not assignable to parameter of type '(error: Error) => void'.
-gulpfile.ts(40,40): error TS2304: Cannot find name 'Void'.
 gulpfile.ts(41,30): error TS2345: Argument of type '(err: string) => any' is not assignable to parameter of type '(error: Error) => void'.
   Types of parameters 'err' and 'error' are incompatible.
     Type 'Error' is not assignable to type 'string'.
@@ -19,16 +17,13 @@ gulpfile.ts(50,27): error TS2339: Property 'libJsFiles' does not exist on type '
 gulpfile.ts(55,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 gulpfile.ts(56,27): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(71,27): error TS2339: Property 'specFiles' does not exist on type 'object'.
-gulpfile.ts(80,19): error TS2304: Cannot find name 'Void'.
 gulpfile.ts(83,15): error TS2339: Property 'libJsFiles' does not exist on type 'object'.
 gulpfile.ts(84,15): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(85,15): error TS2339: Property 'fixtureFiles' does not exist on type 'object'.
 gulpfile.ts(86,15): error TS2339: Property 'gulpfile' does not exist on type 'object'.
 gulpfile.ts(90,15): error TS2339: Property 'eslintrc' does not exist on type 'object'.
-lib/index.ts(5,51): error TS2304: Cannot find name 'Void'.
 lib/index.ts(15,13): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
-lib/index.ts(21,44): error TS2304: Cannot find name 'Void'.
 lib/index.ts(22,13): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 lib/index.ts(36,53): error TS2339: Property 'children' does not exist on type 'string'.
 lib/index.ts(36,71): error TS2339: Property 'children' does not exist on type 'string'.

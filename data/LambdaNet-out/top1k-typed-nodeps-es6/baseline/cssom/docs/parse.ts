@@ -62,7 +62,7 @@ function inspect(object: object): object {
 	 * @param {Object} object
 	 * @param {number} depth
 	 */
-	function _inspect(root: HTMLElement, object: any[], depth: number): Void {
+	function _inspect(root: HTMLElement, object: any[], depth: number): void {
 		switch (typeof object) {
 			case 'object':
 				if (!object) {
@@ -144,7 +144,7 @@ var style: HTMLElement = byId("style");
 var output: HTMLElement = byId("output");
 var serialized: HTMLElement = byId("serialized");
 
-function outputUpdated(): Void {
+function outputUpdated(): void {
 	var value: number = style.value;
 	if (value !== style.prevValue) {
 		style.prevValue = value;
@@ -181,10 +181,10 @@ window.onload = function() {
 };
 
 window.onhashchange = hashChanged;
-style.onkeyup = style.onpaste = function changed(): Void{
+style.onkeyup = style.onpaste = function changed(): void{
 	outputUpdated();
 };
-style.onchange = function updateLocation(): Void {
+style.onchange = function updateLocation(): void {
 	if (style.value.length < 1024) {
 		location.hash = "css=" + encodeURIComponent(style.value);
 	} else {

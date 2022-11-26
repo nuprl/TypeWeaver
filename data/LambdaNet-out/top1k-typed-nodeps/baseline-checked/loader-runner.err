@@ -50,10 +50,9 @@ lib/LoaderRunner.ts(116,39): error TS2339: Property 'callback' does not exist on
 lib/LoaderRunner.ts(131,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(131,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(161,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/LoaderRunner.ts(161,52): error TS2304: Cannot find name 'Void'.
-lib/LoaderRunner.ts(161,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/LoaderRunner.ts(170,19): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(170,48): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
+lib/LoaderRunner.ts(171,3): error TS2322: Type 'void' is not assignable to type 'string'.
 lib/LoaderRunner.ts(173,55): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(173,77): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(176,25): error TS2339: Property 'pitchExecuted' does not exist on type 'HTMLElement'.
@@ -67,8 +66,6 @@ lib/LoaderRunner.ts(193,66): error TS2339: Property 'previousRequest' does not e
 lib/LoaderRunner.ts(193,103): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(204,20): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(205,51): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-lib/LoaderRunner.ts(214,92): error TS2304: Cannot find name 'Void'.
-lib/LoaderRunner.ts(214,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/LoaderRunner.ts(216,16): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(216,44): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(218,43): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
@@ -87,7 +84,6 @@ lib/LoaderRunner.ts(249,40): error TS2339: Property 'raw' does not exist on type
 lib/LoaderRunner.ts(251,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 lib/LoaderRunner.ts(260,54): error TS2339: Property 'path' does not exist on type 'object'.
 lib/LoaderRunner.ts(261,2): error TS2322: Type 'string' is not assignable to type 'object'.
-lib/LoaderRunner.ts(264,80): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(266,33): error TS2339: Property 'resource' does not exist on type 'object'.
 lib/LoaderRunner.ts(267,31): error TS2339: Property 'loaders' does not exist on type 'object'.
 lib/LoaderRunner.ts(268,43): error TS2339: Property 'context' does not exist on type 'object'.
@@ -108,21 +104,16 @@ lib/LoaderRunner.ts(295,16): error TS2339: Property 'resourceFragment' does not 
 lib/LoaderRunner.ts(296,16): error TS2339: Property 'async' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(297,16): error TS2339: Property 'callback' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(298,16): error TS2339: Property 'cacheable' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(298,62): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(299,6): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 lib/LoaderRunner.ts(303,16): error TS2339: Property 'dependency' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(303,43): error TS2339: Property 'addDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(303,97): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(306,16): error TS2339: Property 'addContextDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(306,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(309,16): error TS2339: Property 'addMissingDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(309,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(312,16): error TS2339: Property 'getDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(315,16): error TS2339: Property 'getContextDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(315,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(318,16): error TS2339: Property 'getMissingDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(321,16): error TS2339: Property 'clearDependencies' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(321,66): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(330,21): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(332,25): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(332,75): error TS2339: Property 'resourceQuery' does not exist on type 'HTMLElement'.
@@ -169,10 +160,9 @@ lib/loadLoader.ts(19,40): error TS2339: Property 'path' does not exist on type '
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/loadLoader.ts(27,6): error TS2322: Type 'Immediate' is not assignable to type 'string'.
 lib/loadLoader.ts(30,6): error TS2322: Type 'void' is not assignable to type 'string'.
+lib/loadLoader.ts(35,3): error TS2322: Type 'void' is not assignable to type 'string'.
 lib/loadLoader.ts(35,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Element'.
   Type '{}' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
-lib/loadLoader.ts(39,77): error TS2304: Cannot find name 'Void'.
-lib/loadLoader.ts(39,77): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/loadLoader.ts(41,23): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 lib/loadLoader.ts(42,24): error TS2339: Property 'path' does not exist on type 'Element'.

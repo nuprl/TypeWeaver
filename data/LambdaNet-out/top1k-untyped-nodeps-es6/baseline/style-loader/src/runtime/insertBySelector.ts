@@ -27,7 +27,7 @@ function getTarget(target: object): string {
 }
 
 /* istanbul ignore next  */
-function insertBySelector(insert: string, style: string): Void {
+function insertBySelector(insert: string, style: string): void {
   const target: object = getTarget(insert);
 
   if (!target) {

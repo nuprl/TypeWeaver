@@ -146,7 +146,7 @@ var i: string,
 		{ dir: "parentNode", next: "legend" }
 	);
 
-function selectorError( msg: string ): Void {
+function selectorError( msg: string ): void {
 	throw new Error( "Syntax error, unrecognized expression: " + msg );
 }
 
@@ -436,7 +436,7 @@ function testContext( context: object ): boolean {
  * Sets document-related variables once based on the current document
  * @param {Element|Object} [node] An element or document object to use to set the document
  */
-function setDocument( node: object ): Void {
+function setDocument( node: object ): void {
 	var subWindow: object,
 		doc: object = node ? node.ownerDocument || node : preferredDoc;
 
@@ -1061,7 +1061,7 @@ for ( i in { submit: true, reset: true } ) {
 }
 
 // Easy API for creating new setFilters
-function setFilters(): Void {}
+function setFilters(): void {}
 setFilters.prototype = Expr.filters = Expr.pseudos;
 Expr.setFilters = new setFilters();
 

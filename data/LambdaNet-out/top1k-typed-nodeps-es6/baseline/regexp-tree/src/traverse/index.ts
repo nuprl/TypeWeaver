@@ -24,12 +24,12 @@ import NodePath from './node-path';
  *   - `post`(node, parent, prop, index) - a hook called on node exit
  *   - `skipProperty(prop)` - a predicated whether a property should be skipped
  */
-function astTraverse(root: string, options: object = {}): Void {
+function astTraverse(root: string, options: object = {}): void {
   const pre: Function = options.pre;
   const post: Function = options.post;
   const skipProperty: Function = options.skipProperty;
 
-  function visit(node: object, parent: object, prop: string, idx: number): Void {
+  function visit(node: object, parent: object, prop: string, idx: number): void {
     if (!node || typeof node.type !== 'string') {
       return;
     }

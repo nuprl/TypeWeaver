@@ -9,7 +9,7 @@ module.exports = ReadableAsyncKit;
  * Base constructor for all streams
  * used to hold properties/methods
  */
-function ReadableAsyncKit(): Void
+function ReadableAsyncKit(): void
 {
   ReadableAsyncKit.super_.apply(this, arguments);
 
@@ -28,7 +28,7 @@ function ReadableAsyncKit(): Void
  *
  * @returns {void}
  */
-function destroy(): Void
+function destroy(): void
 {
   if (this.destroyed)
   {
@@ -48,7 +48,7 @@ function destroy(): Void
  *
  * @private
  */
-function _start(): Void
+function _start(): void
 {
   // first argument – runner function
   var runner: object = arguments[0]
@@ -85,7 +85,7 @@ function _start(): Void
  *
  * @private
  */
-function _read(): Void
+function _read(): void
 {
 
 }

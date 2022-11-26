@@ -18,7 +18,7 @@ exports.clearInterval = function(timeout: Function) {
   }
 };
 
-function Timeout(id: string, clearFn: string): Void {
+function Timeout(id: string, clearFn: string): void {
   this._id = id;
   this._clearFn = clearFn;
 }
@@ -43,7 +43,7 @@ exports._unrefActive = exports.active = function(item: HTMLElement) {
 
   var msecs: number = item._idleTimeout;
   if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout(): Void {
+    item._idleTimeoutId = setTimeout(function onTimeout(): void {
       if (item._onTimeout)
         item._onTimeout();
     }, msecs);

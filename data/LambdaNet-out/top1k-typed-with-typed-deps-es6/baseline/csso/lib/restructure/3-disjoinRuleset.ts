@@ -1,6 +1,6 @@
 import { List, walk } from 'css-tree';
 
-function processRule(node: object, item: string, list: object): Void {
+function processRule(node: object, item: string, list: object): void {
     const selectors: object = node.prelude.children;
 
     // generate new rule sets:
@@ -33,7 +33,7 @@ function processRule(node: object, item: string, list: object): Void {
     }
 }
 
-export default function disjoinRule(ast: Function): Void {
+export default function disjoinRule(ast: Function): void {
     walk(ast, {
         visit: 'Rule',
         reverse: true,

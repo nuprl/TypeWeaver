@@ -28,7 +28,7 @@ printer.on('opentag', function (tag: object) {
 
 printer.on('text', ontext)
 printer.on('doctype', ontext)
-function ontext (text: string): Void {
+function ontext (text: string): void {
   this.indent()
   print(text)
 }
@@ -61,7 +61,7 @@ if (!process.argv[2]) {
 var xmlfile: string = require('path').join(process.cwd(), process.argv[2])
 var fstr: any[] = fs.createReadStream(xmlfile, { encoding: 'utf8' })
 
-function print (c: string): Void {
+function print (c: string): void {
   if (!process.stdout.write(c)) {
     fstr.pause()
   }

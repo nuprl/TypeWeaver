@@ -8,7 +8,6 @@ lib/portfinder.ts(36,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/portfinder.ts(36,55): error TS2339: Property 'host' does not exist on type 'object'.
 lib/portfinder.ts(36,77): error TS2339: Property 'port' does not exist on type 'object'.
-lib/portfinder.ts(38,25): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(39,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/portfinder.ts(39,53): error TS2339: Property 'host' does not exist on type 'object'.
@@ -16,7 +15,6 @@ lib/portfinder.ts(39,75): error TS2339: Property 'port' does not exist on type '
 lib/portfinder.ts(41,13): error TS2339: Property 'server' does not exist on type 'object'.
 lib/portfinder.ts(42,13): error TS2339: Property 'server' does not exist on type 'object'.
 lib/portfinder.ts(43,28): error TS2339: Property 'port' does not exist on type 'object'.
-lib/portfinder.ts(46,40): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(47,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/portfinder.ts(47,57): error TS2339: Property 'host' does not exist on type 'object'.
@@ -96,18 +94,15 @@ lib/portfinder.ts(285,26): error TS2339: Property 'mod' does not exist on type '
 lib/portfinder.ts(285,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/portfinder.ts(286,11): error TS2339: Property 'path' does not exist on type 'object'.
 lib/portfinder.ts(286,26): error TS2339: Property 'path' does not exist on type 'object'.
-lib/portfinder.ts(291,27): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(292,21): error TS2339: Property 'path' does not exist on type 'object'.
 lib/portfinder.ts(298,17): error TS2339: Property 'code' does not exist on type 'object'.
 lib/portfinder.ts(299,34): error TS2339: Property 'path' does not exist on type 'object'.
 lib/portfinder.ts(310,17): error TS2339: Property 'path' does not exist on type 'object'.
 lib/portfinder.ts(310,43): error TS2339: Property 'path' does not exist on type 'object'.
-lib/portfinder.ts(320,47): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(321,25): error TS2339: Property 'mod' does not exist on type 'object'.
 lib/portfinder.ts(326,15): error TS2339: Property 'exists' does not exist on type 'object'.
-lib/portfinder.ts(337,35): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(338,44): error TS2339: Property 'path' does not exist on type 'object'.
-lib/portfinder.ts(340,18): error TS2345: Argument of type '(err: string, stats: any[]) => Void' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
+lib/portfinder.ts(340,18): error TS2345: Argument of type '(err: string, stats: any[]) => void' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
   Types of parameters 'err' and 'err' are incompatible.
     Type 'ErrnoException' is not assignable to type 'string'.
 lib/portfinder.ts(341,25): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.

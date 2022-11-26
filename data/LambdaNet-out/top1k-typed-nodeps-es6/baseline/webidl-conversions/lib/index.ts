@@ -59,7 +59,7 @@ function censorNegativeZero(x: number): number {
   return x === 0 ? 0 : x;
 }
 
-function createIntegerConversion(bitLength: number, { unsigned }): Void {
+function createIntegerConversion(bitLength: number, { unsigned }): void {
   let lowerBound, upperBound;
   if (unsigned) {
     lowerBound = 0;

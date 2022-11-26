@@ -249,7 +249,7 @@ function mixin(target: object): object {
   return target;
 }
 
-function copy(target: object, provider: object, keys: any[]): Void {
+function copy(target: object, provider: object, keys: any[]): void {
   for (const key of keys) {
     if (typeof provider[key] === 'function') {
       define(target, key, provider[key].bind(provider));
@@ -259,7 +259,7 @@ function copy(target: object, provider: object, keys: any[]): Void {
   }
 }
 
-function define(obj: string, key: string, val: string): Void {
+function define(obj: string, key: string, val: string): void {
   Reflect.defineProperty(obj, key, {
     configurable: true,
     writable: true,

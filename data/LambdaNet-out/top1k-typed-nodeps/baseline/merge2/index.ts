@@ -42,7 +42,7 @@ function merge2 (): Element {
     return this
   }
 
-  function mergeStream (): Void {
+  function mergeStream (): void {
     if (merging) {
       return
     }
@@ -59,7 +59,7 @@ function merge2 (): Element {
 
     let pipesCount: string = streams.length + 1
 
-    function next (): Void {
+    function next (): void {
       if (--pipesCount > 0) {
         return
       }
@@ -68,7 +68,7 @@ function merge2 (): Element {
     }
 
     function pipe (stream: Function): string {
-      function onend (): Void {
+      function onend (): void {
         stream.removeListener('merge2UnpipeEnd', onend)
         stream.removeListener('end', onend)
         if (doPipeError) {
@@ -76,7 +76,7 @@ function merge2 (): Element {
         }
         next()
       }
-      function onerror (err: Function): Void {
+      function onerror (err: Function): void {
         mergedStream.emit('error', err)
       }
       // skip ended stream
@@ -103,7 +103,7 @@ function merge2 (): Element {
     next()
   }
 
-  function endStream (): Void {
+  function endStream (): void {
     merging = false
     // emit 'queueDrain' when all streams merged.
     mergedStream.emit('queueDrain')

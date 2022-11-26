@@ -7,7 +7,7 @@ var CSSOM: HTMLInputElement = {};
  * @constructor
  * @see http://dev.w3.org/csswg/cssom/#the-medialist-interface
  */
-CSSOM.MediaList = function MediaList(): Void{
+CSSOM.MediaList = function MediaList(): void{
 	this.length = 0;
 };
 

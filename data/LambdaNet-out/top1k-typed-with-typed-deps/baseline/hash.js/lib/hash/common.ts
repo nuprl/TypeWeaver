@@ -3,7 +3,7 @@
 var utils: string = require('./utils');
 var assert: Function = require('minimalistic-assert');
 
-function BlockHash(): Void {
+function BlockHash(): void {
   this.pending = null;
   this.pendingTotal = 0;
   this.blockSize = this.constructor.blockSize;

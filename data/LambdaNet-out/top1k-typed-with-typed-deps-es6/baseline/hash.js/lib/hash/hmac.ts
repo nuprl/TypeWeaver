@@ -16,7 +16,7 @@ function Hmac(hash: object, key: string, enc: string): string {
 }
 export default Hmac;
 
-Hmac.prototype._init = function init(key: any[]): Void {
+Hmac.prototype._init = function init(key: any[]): void {
   // Shorten key, if needed
   if (key.length > this.blockSize)
     key = new this.Hash().update(key).digest();

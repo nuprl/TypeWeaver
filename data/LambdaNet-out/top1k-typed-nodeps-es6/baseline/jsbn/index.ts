@@ -13,7 +13,7 @@
   var j_lm: number = (canary & 0xffffff) == 0xefcafe;
 
   // (public) Constructor
-  function BigInteger(a: string, b: string, c: string): Void {
+  function BigInteger(a: string, b: string, c: string): void {
     if (a != null)
       if ('number' == typeof a) this.fromNumber(a, b, c);
       else if (b == null && 'string' != typeof a) this.fromString(a, 256);
@@ -114,14 +114,14 @@
   }
 
   // (protected) copy this to r
-  function bnpCopyTo(r: object): Void {
+  function bnpCopyTo(r: object): void {
     for (var i = this.t - 1; i >= 0; --i) r[i] = this[i];
     r.t = this.t;
     r.s = this.s;
   }
 
   // (protected) set from integer value x, -DV <= x < DV
-  function bnpFromInt(x: number): Void {
+  function bnpFromInt(x: number): void {
     this.t = 1;
     this.s = x < 0 ? -1 : 0;
     if (x > 0) this[0] = x;
@@ -137,7 +137,7 @@
   }
 
   // (protected) set from string and radix
-  function bnpFromString(s: any[], b: number): Void {
+  function bnpFromString(s: any[], b: number): void {
     // Auto-detect string notations
     if (!b && s.length >= 2 && s[0] === '0') {
       var isDetected: boolean = true;
@@ -202,7 +202,7 @@
   }
 
   // (protected) clamp off excess high words
-  function bnpClamp(): Void {
+  function bnpClamp(): void {
     var c: number = this.s & this.DM;
     while (this.t > 0 && this[this.t - 1] == c) --this.t;
   }
@@ -305,7 +305,7 @@
   }
 
   // (protected) r = this << n*DB
-  function bnpDLShiftTo(n: number, r: object): Void {
+  function bnpDLShiftTo(n: number, r: object): void {
     var i: number;
     for (i = this.t - 1; i >= 0; --i) r[i + n] = this[i];
     for (i = n - 1; i >= 0; --i) r[i] = 0;
@@ -314,14 +314,14 @@
   }
 
   // (protected) r = this >> n*DB
-  function bnpDRShiftTo(n: number, r: object): Void {
+  function bnpDRShiftTo(n: number, r: object): void {
     for (var i = n; i < this.t; ++i) r[i - n] = this[i];
     r.t = Math.max(this.t - n, 0);
     r.s = this.s;
   }
 
   // (protected) r = this << n
-  function bnpLShiftTo(n: number, r: object): Void {
+  function bnpLShiftTo(n: number, r: object): void {
     var bs: number = n % this.DB;
     var cbs: number = this.DB - bs;
     var bm: number = (1 << cbs) - 1;
@@ -340,7 +340,7 @@
   }
 
   // (protected) r = this >> n
-  function bnpRShiftTo(n: number, r: object): Void {
+  function bnpRShiftTo(n: number, r: object): void {
     r.s = this.s;
     var ds: number = Math.floor(n / this.DB);
     if (ds >= this.t) {
@@ -361,7 +361,7 @@
   }
 
   // (protected) r = this - a
-  function bnpSubTo(a: object, r: object): Void {
+  function bnpSubTo(a: object, r: object): void {
     var i: number = 0,
       c: number = 0,
       m: number = Math.min(a.t, this.t);
@@ -396,7 +396,7 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: HTMLElement, r: object): Void {
+  function bnpMultiplyTo(a: HTMLElement, r: object): void {
     var x: HTMLElement = this.abs(),
       y: object = a.abs();
     var i: number = x.t;
@@ -409,7 +409,7 @@
   }
 
   // (protected) r = this^2, r != this (HAC 14.16)
-  function bnpSquareTo(r: object): Void {
+  function bnpSquareTo(r: object): void {
     var x: object = this.abs();
     var i: number = (r.t = 2 * x.t);
     while (--i >= 0) r[i] = 0;
@@ -430,7 +430,7 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: HTMLElement, q: string, r: Function): Void {
+  function bnpDivRemTo(m: HTMLElement, q: string, r: Function): void {
     var pm: object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
@@ -509,14 +509,14 @@
   function cRevert(x: string): string {
     return x;
   }
-  function cReduce(x: string): Void {
+  function cReduce(x: string): void {
     x.divRemTo(this.m, null, x);
   }
-  function cMulTo(x: string, y: string, r: Function): Void {
+  function cMulTo(x: string, y: string, r: Function): void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
-  function cSqrTo(x: string, r: string): Void {
+  function cSqrTo(x: string, r: string): void {
     x.squareTo(r);
     this.reduce(r);
   }
@@ -553,7 +553,7 @@
   }
 
   // Montgomery reduction
-  function Montgomery(m: object): Void {
+  function Montgomery(m: object): void {
     this.m = m;
     this.mp = m.invDigit();
     this.mpl = this.mp & 0x7fff;
@@ -580,7 +580,7 @@
   }
 
   // x = x/R mod m (HAC 14.32)
-  function montReduce(x: object): Void {
+  function montReduce(x: object): void {
     while (
       x.t <= this.mt2 // pad x so am has enough room later
     )
@@ -607,13 +607,13 @@
   }
 
   // r = "x^2/R mod m"; x != r
-  function montSqrTo(x: string, r: string): Void {
+  function montSqrTo(x: string, r: string): void {
     x.squareTo(r);
     this.reduce(r);
   }
 
   // r = "xy/R mod m"; x,y != r
-  function montMulTo(x: string, y: string, r: Function): Void {
+  function montMulTo(x: string, y: string, r: Function): void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
@@ -755,7 +755,7 @@
   }
 
   // (protected) convert from radix string
-  function bnpFromRadix(s: string, b: number): Void {
+  function bnpFromRadix(s: string, b: number): void {
     this.fromInt(0);
     if (b == null) b = 10;
     var cs: number = this.chunkSize(b);
@@ -785,7 +785,7 @@
   }
 
   // (protected) alternate constructor
-  function bnpFromNumber(a: number, b: any[], c: number): Void {
+  function bnpFromNumber(a: number, b: any[], c: number): void {
     if ('number' == typeof b) {
       // new BigInteger(int,int,RNG)
       if (a < 2) this.fromInt(1);
@@ -854,7 +854,7 @@
   }
 
   // (protected) r = this op a (bitwise)
-  function bnpBitwiseTo(a: object, op: Function, r: object): Void {
+  function bnpBitwiseTo(a: object, op: Function, r: object): void {
     var i: number,
       f: number,
       m: number = Math.min(a.t, this.t);
@@ -1017,7 +1017,7 @@
   }
 
   // (protected) r = this + a
-  function bnpAddTo(a: object, r: object): Void {
+  function bnpAddTo(a: object, r: object): void {
     var i: number = 0,
       c: number = 0,
       m: number = Math.min(a.t, this.t);
@@ -1101,14 +1101,14 @@
   }
 
   // (protected) this *= n, this >= 0, 1 < n < DV
-  function bnpDMultiply(n: number): Void {
+  function bnpDMultiply(n: number): void {
     this[this.t] = this.am(0, n - 1, this, 0, 0, this.t);
     ++this.t;
     this.clamp();
   }
 
   // (protected) this += n << w words, this >= 0
-  function bnpDAddOffset(n: number, w: number): Void {
+  function bnpDAddOffset(n: number, w: number): void {
     if (n == 0) return;
     while (this.t <= w) this[this.t++] = 0;
     this[w] += n;
@@ -1120,14 +1120,14 @@
   }
 
   // A "null" reducer
-  function NullExp(): Void {}
+  function NullExp(): void {}
   function nNop(x: string): string {
     return x;
   }
-  function nMulTo(x: string, y: string, r: number): Void {
+  function nMulTo(x: string, y: string, r: number): void {
     x.multiplyTo(y, r);
   }
-  function nSqrTo(x: string, r: string): Void {
+  function nSqrTo(x: string, r: string): void {
     x.squareTo(r);
   }
 
@@ -1143,7 +1143,7 @@
 
   // (protected) r = lower n words of "this * a", a.t <= n
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyLowerTo(a: object, n: number, r: object): Void {
+  function bnpMultiplyLowerTo(a: object, n: number, r: object): void {
     var i: number = Math.min(this.t + a.t, n);
     r.s = 0; // assumes a,this >= 0
     r.t = i;
@@ -1157,7 +1157,7 @@
 
   // (protected) r = "this * a" without lower n words, n > 0
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyUpperTo(a: object, n: number, r: object): Void {
+  function bnpMultiplyUpperTo(a: object, n: number, r: object): void {
     --n;
     var i: number = (r.t = this.t + a.t - n);
     r.s = 0; // assumes a,this >= 0
@@ -1169,7 +1169,7 @@
   }
 
   // Barrett modular reduction
-  function Barrett(m: object): Void {
+  function Barrett(m: object): void {
     // setup Barrett
     this.r2 = nbi();
     this.q3 = nbi();
@@ -1194,7 +1194,7 @@
   }
 
   // x = x mod m (HAC 14.42)
-  function barrettReduce(x: HTMLElement): Void {
+  function barrettReduce(x: HTMLElement): void {
     x.drShiftTo(this.m.t - 1, this.r2);
     if (x.t > this.m.t + 1) {
       x.t = this.m.t + 1;
@@ -1208,13 +1208,13 @@
   }
 
   // r = x^2 mod m; x != r
-  function barrettSqrTo(x: string, r: string): Void {
+  function barrettSqrTo(x: string, r: string): void {
     x.squareTo(r);
     this.reduce(r);
   }
 
   // r = x*y mod m; x,y != r
-  function barrettMulTo(x: string, y: string, r: Function): Void {
+  function barrettMulTo(x: string, y: string, r: Function): void {
     x.multiplyTo(y, r);
     this.reduce(r);
   }
@@ -1700,7 +1700,7 @@
   var rng_pptr: number;
 
   // Mix in a 32-bit integer into the pool
-  function rng_seed_int(x: number): Void {
+  function rng_seed_int(x: number): void {
     rng_pool[rng_pptr++] ^= x & 255;
     rng_pool[rng_pptr++] ^= (x >> 8) & 255;
     rng_pool[rng_pptr++] ^= (x >> 16) & 255;
@@ -1709,7 +1709,7 @@
   }
 
   // Mix in the current time (w/milliseconds) into the pool
-  function rng_seed_time(): Void {
+  function rng_seed_time(): void {
     rng_seed_int(new Date().getTime());
   }
 
@@ -1760,25 +1760,25 @@
     return rng_state.next();
   }
 
-  function rng_get_bytes(ba: any[]): Void {
+  function rng_get_bytes(ba: any[]): void {
     var i: number;
     for (i = 0; i < ba.length; ++i) ba[i] = rng_get_byte();
   }
 
-  function SecureRandom(): Void {}
+  function SecureRandom(): void {}
 
   SecureRandom.prototype.nextBytes = rng_get_bytes;
 
   // prng4.js - uses Arcfour as a PRNG
 
-  function Arcfour(): Void {
+  function Arcfour(): void {
     this.i = 0;
     this.j = 0;
     this.S = new Array();
   }
 
   // Initialize arcfour context from key, an array of ints, each from [0..255]
-  function ARC4init(key: string): Void {
+  function ARC4init(key: string): void {
     var i: number, j: number, t: Function;
     for (i = 0; i < 256; ++i) this.S[i] = i;
     j = 0;

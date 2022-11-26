@@ -7,7 +7,7 @@ module.exports = function rand(len: string): boolean {
   return r.generate(len);
 };
 
-function Rand(rand: Function): Void {
+function Rand(rand: Function): void {
   this.rand = rand;
 }
 module.exports.Rand = Rand;

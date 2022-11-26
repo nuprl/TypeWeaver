@@ -399,7 +399,7 @@ function subjects(selector: Function, ancestor: string): any[] {
  * @param {ESQueryOptions} [options]
  * @returns {external:AST[]}
  */
-function traverse(ast: Function, selector: number, visitor: string, options: object): Void {
+function traverse(ast: Function, selector: number, visitor: string, options: object): void {
     if (!selector) { return; }
     const ancestry: any[] = [];
     const altSubjects: Function = subjects(selector);
@@ -452,7 +452,7 @@ function match(ast: string, selector: string, options: object): any[] {
  * @param {string} selector
  * @returns {SelectorAST}
  */
-function parse(selector: string): Void {
+function parse(selector: string): void {
     return parser.parse(selector);
 }
 

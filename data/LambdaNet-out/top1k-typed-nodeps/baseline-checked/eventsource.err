@@ -12,8 +12,6 @@ example/eventsource-polyfill.ts(63,38): error TS2345: Argument of type 'number' 
 example/eventsource-polyfill.ts(83,3): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(90,8): error TS2339: Property 'exports' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(98,30): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(108,30): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(111,34): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(137,9): error TS2322: Type 'Timeout' is not assignable to type 'number'.
 example/eventsource-polyfill.ts(137,27): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
@@ -32,10 +30,8 @@ example/eventsource-polyfill.ts(142,27): error TS2769: No overload matches this 
     Argument of type 'number' is not assignable to parameter of type 'TimerHandler'.
 example/eventsource-polyfill.ts(162,9): error TS2322: Type 'void' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(167,9): error TS2322: Type 'void' is not assignable to type 'boolean'.
-example/eventsource-polyfill.ts(191,29): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(206,24): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(210,9): error TS2322: Type 'number' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(210,38): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'number'.
+example/eventsource-polyfill.ts(210,38): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(213,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(217,16): error TS2365: Operator '<' cannot be applied to types 'number' and 'boolean'.
 example/eventsource-polyfill.ts(223,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
@@ -43,7 +39,7 @@ example/eventsource-polyfill.ts(230,9): error TS2339: Property 'nextTick' does n
 example/eventsource-polyfill.ts(237,16): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(237,25): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
   Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-example/eventsource-polyfill.ts(239,20): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'number'.
+example/eventsource-polyfill.ts(239,20): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(244,45): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
 example/eventsource-polyfill.ts(251,9): error TS2339: Property 'title' does not exist on type 'object'.
 example/eventsource-polyfill.ts(252,9): error TS2339: Property 'browser' does not exist on type 'object'.
@@ -51,7 +47,6 @@ example/eventsource-polyfill.ts(253,9): error TS2339: Property 'env' does not ex
 example/eventsource-polyfill.ts(254,9): error TS2339: Property 'argv' does not exist on type 'object'.
 example/eventsource-polyfill.ts(255,9): error TS2339: Property 'version' does not exist on type 'object'.
 example/eventsource-polyfill.ts(256,9): error TS2339: Property 'versions' does not exist on type 'object'.
-example/eventsource-polyfill.ts(258,18): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(260,9): error TS2339: Property 'on' does not exist on type 'object'.
 example/eventsource-polyfill.ts(261,9): error TS2339: Property 'addListener' does not exist on type 'object'.
 example/eventsource-polyfill.ts(262,9): error TS2339: Property 'once' does not exist on type 'object'.
@@ -67,11 +62,9 @@ example/eventsource-polyfill.ts(276,9): error TS2339: Property 'cwd' does not ex
 example/eventsource-polyfill.ts(277,9): error TS2339: Property 'chdir' does not exist on type 'object'.
 example/eventsource-polyfill.ts(280,9): error TS2339: Property 'umask' does not exist on type 'object'.
 example/eventsource-polyfill.ts(289,10): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(289,74): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(290,10): error TS2339: Property 'super_' does not exist on type 'string'.
 example/eventsource-polyfill.ts(291,10): error TS2339: Property 'prototype' does not exist on type 'string'.
 example/eventsource-polyfill.ts(302,10): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(302,74): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(303,10): error TS2339: Property 'super_' does not exist on type 'object'.
 example/eventsource-polyfill.ts(306,10): error TS2339: Property 'prototype' does not exist on type 'object'.
 example/eventsource-polyfill.ts(306,26): error TS2351: This expression is not constructable.
@@ -105,7 +98,6 @@ example/eventsource-polyfill.ts(450,23): error TS2345: Argument of type 'Functio
   Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 example/eventsource-polyfill.ts(453,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
 example/eventsource-polyfill.ts(465,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(481,37): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(490,14): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(492,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(492,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
@@ -171,7 +163,6 @@ example/eventsource-polyfill.ts(761,9): error TS2322: Type 'string' is not assig
 example/eventsource-polyfill.ts(812,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(822,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(828,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(842,50): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(854,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(865,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(866,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -241,7 +232,6 @@ example/eventsource-polyfill.ts(1365,32): error TS2345: Argument of type 'string
 example/eventsource-polyfill.ts(1397,12): error TS2339: Property '__proto__' does not exist on type 'object'.
 example/eventsource-polyfill.ts(1400,14): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(1400,14): error TS2554: Expected 3 arguments, but got 2.
-example/eventsource-polyfill.ts(1412,69): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1414,7): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 example/eventsource-polyfill.ts(1420,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1436,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -259,7 +249,6 @@ example/eventsource-polyfill.ts(1524,38): error TS2345: Argument of type 'number
 example/eventsource-polyfill.ts(1530,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1536,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(1545,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1553,90): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1554,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(1555,18): error TS2339: Property 'read' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(1559,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -268,18 +257,15 @@ example/eventsource-polyfill.ts(1564,30): error TS2345: Argument of type 'string
 example/eventsource-polyfill.ts(1565,18): error TS2339: Property 'read' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(1569,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(1570,18): error TS2339: Property 'read' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(1573,103): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1576,7): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 example/eventsource-polyfill.ts(1585,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1595,3): error TS2322: Type 'number' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(1604,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1620,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1623,3): error TS2322: Type 'number' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(1626,96): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1637,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1644,3): error TS2322: Type 'number' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(1650,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1660,96): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1670,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1685,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1703,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -293,7 +279,6 @@ example/eventsource-polyfill.ts(1769,48): error TS2345: Argument of type 'number
 example/eventsource-polyfill.ts(1782,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1791,3): error TS2322: Type 'number' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(1797,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1810,107): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(1811,7): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 example/eventsource-polyfill.ts(1817,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 example/eventsource-polyfill.ts(1819,11): error TS2339: Property 'write' does not exist on type 'any[]'.
@@ -332,9 +317,7 @@ example/eventsource-polyfill.ts(2181,12): error TS2339: Property 'call' does not
 example/eventsource-polyfill.ts(2183,26): error TS2339: Property 'readable' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(2185,26): error TS2339: Property 'writable' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(2188,26): error TS2339: Property 'allowHalfOpen' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(2204,19): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2211,7): error TS2339: Property 'nextTick' does not exist on type 'object'.
-example/eventsource-polyfill.ts(2214,33): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2215,8): error TS2339: Property 'end' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2243,7): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2278,10): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
@@ -367,15 +350,10 @@ example/eventsource-polyfill.ts(2371,10): error TS2339: Property 'exports' does 
 example/eventsource-polyfill.ts(2373,10): error TS2339: Property 'exports' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(2385,20): error TS2339: Property 'nextTick' does not exist on type 'boolean'.
 example/eventsource-polyfill.ts(2387,20): error TS2339: Property 'nextTick' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2387,54): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2391,20): error TS2339: Property 'nextTick' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2391,54): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2395,20): error TS2339: Property 'nextTick' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2395,56): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2404,20): error TS2339: Property 'nextTick' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2404,51): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2419,31): error TS2339: Property 'Buffer' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2422,48): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2427,12): error TS2339: Property 'from' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(2427,27): error TS2339: Property 'alloc' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(2427,43): error TS2339: Property 'allocUnsafe' does not exist on type 'Function'.
@@ -387,29 +365,32 @@ example/eventsource-polyfill.ts(2456,11): error TS2339: Property 'fill' does not
 example/eventsource-polyfill.ts(2458,11): error TS2339: Property 'fill' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(2461,9): error TS2339: Property 'fill' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(2477,17): error TS2339: Property 'SlowBuffer' does not exist on type 'boolean'.
-example/eventsource-polyfill.ts(2509,15): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(2510,11): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(2512,9): error TS2339: Property 'parse' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2513,9): error TS2339: Property 'resolve' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2514,9): error TS2339: Property 'resolveObject' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2515,9): error TS2339: Property 'format' does not exist on type 'object'.
 example/eventsource-polyfill.ts(2517,9): error TS2339: Property 'Url' does not exist on type 'object'.
-example/eventsource-polyfill.ts(2519,17): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(2585,18): error TS2304: Cannot find name 'Void'.
+example/eventsource-polyfill.ts(2588,19): error TS2339: Property 'isObject' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2588,36): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-example/eventsource-polyfill.ts(2590,19): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(2591,5): error TS2339: Property 'parse' does not exist on type 'string'.
+example/eventsource-polyfill.ts(2596,13): error TS2339: Property 'isString' does not exist on type 'void'.
+example/eventsource-polyfill.ts(2627,36): error TS2339: Property 'parse' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2642,36): error TS2339: Property 'toLowerCase' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(2653,48): error TS2538: Type 'any[]' cannot be used as an index type.
 example/eventsource-polyfill.ts(2659,25): error TS2538: Type 'any[]' cannot be used as an index type.
 example/eventsource-polyfill.ts(2660,46): error TS2538: Type 'any[]' cannot be used as an index type.
+example/eventsource-polyfill.ts(2780,32): error TS2339: Property 'toASCII' does not exist on type 'void'.
+example/eventsource-polyfill.ts(2830,32): error TS2339: Property 'parse' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2846,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'number'.
+example/eventsource-polyfill.ts(2862,12): error TS2339: Property 'isString' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2862,27): error TS2322: Type 'string' is not assignable to type 'any[]'.
 example/eventsource-polyfill.ts(2862,33): error TS2554: Expected 3 arguments, but got 1.
 example/eventsource-polyfill.ts(2864,14): error TS2339: Property 'format' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(2882,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2884,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2888,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+example/eventsource-polyfill.ts(2893,12): error TS2339: Property 'isObject' does not exist on type 'void'.
+example/eventsource-polyfill.ts(2895,25): error TS2339: Property 'stringify' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2906,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2909,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2924,27): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
@@ -417,9 +398,8 @@ example/eventsource-polyfill.ts(2924,40): error TS2339: Property 'resolve' does 
 example/eventsource-polyfill.ts(2928,48): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(2933,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(2933,40): error TS2339: Property 'resolveObject' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2938,23): error TS2350: Only a void function can be called with the 'new' keyword.
+example/eventsource-polyfill.ts(2937,12): error TS2339: Property 'isString' does not exist on type 'void'.
 example/eventsource-polyfill.ts(2939,9): error TS2339: Property 'parse' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2943,25): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(2952,10): error TS2339: Property 'hash' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(2952,26): error TS2339: Property 'hash' does not exist on type 'string'.
 example/eventsource-polyfill.ts(2955,16): error TS2339: Property 'href' does not exist on type 'string'.
@@ -518,6 +498,7 @@ example/eventsource-polyfill.ts(3072,29): error TS2339: Property 'query' does no
 example/eventsource-polyfill.ts(3081,12): error TS2339: Property 'search' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3082,12): error TS2339: Property 'query' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3082,29): error TS2339: Property 'query' does not exist on type 'string'.
+example/eventsource-polyfill.ts(3083,20): error TS2339: Property 'isNullOrUndefined' does not exist on type 'void'.
 example/eventsource-polyfill.ts(3088,14): error TS2339: Property 'hostname' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3088,32): error TS2339: Property 'host' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3092,39): error TS2339: Property 'host' does not exist on type 'Element'.
@@ -531,7 +512,9 @@ example/eventsource-polyfill.ts(3096,52): error TS2339: Property 'shift' does no
 example/eventsource-polyfill.ts(3099,12): error TS2339: Property 'search' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3100,12): error TS2339: Property 'query' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3100,29): error TS2339: Property 'query' does not exist on type 'string'.
+example/eventsource-polyfill.ts(3102,15): error TS2339: Property 'isNull' does not exist on type 'void'.
 example/eventsource-polyfill.ts(3102,29): error TS2339: Property 'pathname' does not exist on type 'Element'.
+example/eventsource-polyfill.ts(3102,48): error TS2339: Property 'isNull' does not exist on type 'void'.
 example/eventsource-polyfill.ts(3102,62): error TS2339: Property 'search' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3103,14): error TS2339: Property 'path' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3103,29): error TS2339: Property 'pathname' does not exist on type 'Element'.
@@ -563,7 +546,9 @@ example/eventsource-polyfill.ts(3182,38): error TS2339: Property 'host' does not
 example/eventsource-polyfill.ts(3189,12): error TS2339: Property 'pathname' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3190,12): error TS2339: Property 'path' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3192,12): error TS2339: Property 'pathname' does not exist on type 'Element'.
+example/eventsource-polyfill.ts(3196,13): error TS2339: Property 'isNull' does not exist on type 'void'.
 example/eventsource-polyfill.ts(3196,27): error TS2339: Property 'pathname' does not exist on type 'Element'.
+example/eventsource-polyfill.ts(3196,46): error TS2339: Property 'isNull' does not exist on type 'void'.
 example/eventsource-polyfill.ts(3196,60): error TS2339: Property 'search' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3197,12): error TS2339: Property 'path' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3197,27): error TS2339: Property 'pathname' does not exist on type 'Element'.
@@ -594,13 +579,10 @@ example/eventsource-polyfill.ts(3261,15): error TS2769: No overload matches this
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
 example/eventsource-polyfill.ts(3264,60): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-example/eventsource-polyfill.ts(3269,47): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(3277,26): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3280,8): error TS2339: Property 'exports' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(3281,8): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(3294,43): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3335,12): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3336,25): error TS2339: Property 'defaultMaxListeners' does not exist on type '{ (): Void; EventEmitter: ...; init(): void; listenerCount(emitter: Element, type: string): any; }'.
+example/eventsource-polyfill.ts(3336,25): error TS2339: Property 'defaultMaxListeners' does not exist on type '{ (): void; EventEmitter: ...; init(): void; listenerCount(emitter: Element, type: string): any; }'.
 example/eventsource-polyfill.ts(3337,15): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(3340,70): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(3351,34): error TS2339: Property 'error' does not exist on type 'number'.
@@ -649,19 +631,14 @@ example/eventsource-polyfill.ts(3624,22): error TS2339: Property 'listenerCount'
 example/eventsource-polyfill.ts(3625,20): error TS2339: Property 'listenerCount' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3652,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(3654,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
-example/eventsource-polyfill.ts(3659,49): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(3675,42): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3676,15): error TS2339: Property 'removeListener' does not exist on type 'object'.
-example/eventsource-polyfill.ts(3680,26): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3681,26): error TS2339: Property 'removeListener' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3682,17): error TS2339: Property 'removeListener' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3687,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 example/eventsource-polyfill.ts(3689,63): error TS2322: Type 'boolean' is not assignable to type '() => Function & FnProps<any>'.
-example/eventsource-polyfill.ts(3694,92): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3695,22): error TS2339: Property 'on' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3696,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-example/eventsource-polyfill.ts(3700,113): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3701,22): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(3702,15): error TS2339: Property 'once' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3703,15): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
@@ -670,17 +647,16 @@ example/eventsource-polyfill.ts(3710,5): error TS2769: No overload matches this 
   Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | AddEventListenerOptions): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
   Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void', gave the following error.
-    Argument of type '(arg: string) => Void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
-      Type '(arg: string) => Void' is not assignable to type 'EventListener'.
+    Argument of type '(arg: string) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(arg: string) => void' is not assignable to type 'EventListener'.
         Types of parameters 'arg' and 'evt' are incompatible.
           Type 'Event' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(3710,72): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3713,17): error TS2339: Property 'once' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3714,9): error TS2769: No overload matches this call.
   Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | EventListenerOptions): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
   Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void', gave the following error.
-    Argument of type '(arg: string) => Void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+    Argument of type '(arg: string) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
 example/eventsource-polyfill.ts(3730,8): error TS2339: Property 'exports' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(3739,83): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
@@ -797,7 +773,6 @@ example/eventsource-polyfill.ts(3979,16): error TS2339: Property '_destroyed' do
 example/eventsource-polyfill.ts(3980,12): error TS2339: Property 'emit' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3986,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 example/eventsource-polyfill.ts(3986,30): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3987,21): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3989,14): error TS2339: Property '_destroyed' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3991,16): error TS2339: Property 'done' does not exist on type 'object'.
 example/eventsource-polyfill.ts(3992,13): error TS2339: Property 'clearTimeout' does not exist on type 'HTMLElement'.
@@ -929,7 +904,6 @@ example/eventsource-polyfill.ts(4252,99): error TS2339: Property '_events' does 
 example/eventsource-polyfill.ts(4252,124): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4252,164): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4252,194): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(4255,58): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4256,22): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4265,27): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
@@ -952,7 +926,6 @@ example/eventsource-polyfill.ts(4328,29): error TS2339: Property 'encoding' does
 example/eventsource-polyfill.ts(4333,22): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4335,43): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(4337,25): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(4343,24): error TS2339: Property 'read' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4343,66): error TS2339: Property 'read' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4345,24): error TS2339: Property 'destroy' does not exist on type 'object'.
@@ -989,7 +962,6 @@ example/eventsource-polyfill.ts(4430,79): error TS2345: Argument of type 'any[]'
 example/eventsource-polyfill.ts(4432,35): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(4436,13): error TS2339: Property 'reading' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4440,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(4443,87): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4444,13): error TS2339: Property 'flowing' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4444,30): error TS2339: Property 'length' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4444,53): error TS2339: Property 'sync' does not exist on type 'object'.
@@ -1067,7 +1039,6 @@ example/eventsource-polyfill.ts(4614,13): error TS2339: Property 'length' does n
 example/eventsource-polyfill.ts(4617,16): error TS2339: Property 'ended' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4617,29): error TS2339: Property 'needReadable' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4620,30): error TS2339: Property 'ended' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4628,53): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4629,13): error TS2339: Property 'ended' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4630,13): error TS2339: Property 'decoder' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4631,30): error TS2339: Property 'decoder' does not exist on type 'object'.
@@ -1075,7 +1046,6 @@ example/eventsource-polyfill.ts(4633,13): error TS2339: Property 'buffer' does n
 example/eventsource-polyfill.ts(4634,13): error TS2339: Property 'length' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4634,29): error TS2339: Property 'objectMode' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4637,9): error TS2339: Property 'ended' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4646,40): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4647,35): error TS2339: Property '_readableState' does not exist on type 'string'.
 example/eventsource-polyfill.ts(4648,9): error TS2339: Property 'needReadable' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4649,14): error TS2339: Property 'emittedReadable' does not exist on type 'HTMLElement'.
@@ -1085,15 +1055,12 @@ example/eventsource-polyfill.ts(4650,33): error TS2339: Property 'flowing' does 
 example/eventsource-polyfill.ts(4651,11): error TS2339: Property 'emittedReadable' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4652,15): error TS2339: Property 'sync' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4652,25): error TS2339: Property 'nextTick' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4656,41): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4657,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4658,10): error TS2339: Property 'emit' does not exist on type 'string'.
-example/eventsource-polyfill.ts(4668,56): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4669,14): error TS2339: Property 'readingMore' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4670,11): error TS2339: Property 'readingMore' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4671,9): error TS2339: Property 'nextTick' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4675,57): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4676,27): error TS2339: Property 'length' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4677,17): error TS2339: Property 'reading' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4677,35): error TS2339: Property 'flowing' does not exist on type 'object'.
@@ -1122,20 +1089,17 @@ example/eventsource-polyfill.ts(4716,13): error TS2339: Property 'endEmitted' do
 example/eventsource-polyfill.ts(4716,29): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4716,54): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
 example/eventsource-polyfill.ts(4718,8): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
-example/eventsource-polyfill.ts(4719,59): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4720,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4721,9): error TS2367: This condition will always return 'false' since the types 'string' and 'HTMLElement' have no overlap.
 example/eventsource-polyfill.ts(4722,36): error TS2339: Property 'hasUnpiped' does not exist on type 'Error'.
 example/eventsource-polyfill.ts(4723,20): error TS2339: Property 'hasUnpiped' does not exist on type 'Error'.
-example/eventsource-polyfill.ts(4729,21): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4730,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4731,10): error TS2339: Property 'end' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4738,39): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Function'.
   Type 'HTMLElement' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 example/eventsource-polyfill.ts(4739,8): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
-example/eventsource-polyfill.ts(4742,23): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4743,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4745,10): error TS2339: Property 'removeListener' does not exist on type 'HTMLInputElement'.
@@ -1150,7 +1114,6 @@ example/eventsource-polyfill.ts(4761,15): error TS2339: Property 'awaitDrain' do
 example/eventsource-polyfill.ts(4761,36): error TS2339: Property '_writableState' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4761,59): error TS2339: Property '_writableState' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4769,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(4770,35): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4771,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4773,28): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
@@ -1165,21 +1128,17 @@ example/eventsource-polyfill.ts(4780,9): error TS2349: This expression is not ca
 example/eventsource-polyfill.ts(4780,50): error TS2339: Property '_readableState' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4781,13): error TS2339: Property '_readableState' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4784,11): error TS2339: Property 'pause' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(4790,33): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4791,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4793,10): error TS2339: Property 'removeListener' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4794,52): error TS2339: Property 'emit' does not exist on type 'HTMLInputElement'.
-example/eventsource-polyfill.ts(4798,34): error TS2345: Argument of type '(er: string) => Void' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(4801,23): error TS2304: Cannot find name 'Void'.
+example/eventsource-polyfill.ts(4798,34): error TS2345: Argument of type '(er: string) => void' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(4802,10): error TS2339: Property 'removeListener' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4805,8): error TS2551: Property 'once' does not exist on type 'HTMLInputElement'. Did you mean 'nonce'?
-example/eventsource-polyfill.ts(4806,24): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4807,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4808,10): error TS2339: Property 'removeListener' does not exist on type 'HTMLInputElement'.
 example/eventsource-polyfill.ts(4811,8): error TS2551: Property 'once' does not exist on type 'HTMLInputElement'. Did you mean 'nonce'?
-example/eventsource-polyfill.ts(4813,22): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4814,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4815,9): error TS2339: Property 'unpipe' does not exist on type 'HTMLElement'.
@@ -1228,7 +1187,6 @@ example/eventsource-polyfill.ts(4904,13): error TS2339: Property 'emittedReadabl
 example/eventsource-polyfill.ts(4905,18): error TS2339: Property 'reading' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4906,13): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(4907,24): error TS2339: Property 'length' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4917,41): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4918,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4919,8): error TS2339: Property 'read' does not exist on type 'any[]'.
@@ -1236,11 +1194,9 @@ example/eventsource-polyfill.ts(4926,14): error TS2339: Property 'flowing' does 
 example/eventsource-polyfill.ts(4927,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4928,11): error TS2339: Property 'flowing' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(4934,54): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4935,14): error TS2339: Property 'resumeScheduled' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4936,11): error TS2339: Property 'resumeScheduled' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4937,9): error TS2339: Property 'nextTick' does not exist on type 'object'.
-example/eventsource-polyfill.ts(4941,55): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4942,14): error TS2339: Property 'reading' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4943,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
@@ -1255,7 +1211,6 @@ example/eventsource-polyfill.ts(4955,3): error TS2349: This expression is not ca
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(4957,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-example/eventsource-polyfill.ts(4964,32): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4965,35): error TS2339: Property '_readableState' does not exist on type 'string'.
 example/eventsource-polyfill.ts(4966,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
@@ -1335,13 +1290,11 @@ example/eventsource-polyfill.ts(5133,62): error TS2339: Property 'tail' does not
 example/eventsource-polyfill.ts(5135,14): error TS2339: Property 'head' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5136,11): error TS2339: Property 'data' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5142,8): error TS2339: Property 'length' does not exist on type 'object'.
-example/eventsource-polyfill.ts(5146,39): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5147,30): error TS2339: Property '_readableState' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5151,13): error TS2339: Property 'length' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5153,14): error TS2339: Property 'endEmitted' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5154,11): error TS2339: Property 'ended' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5155,9): error TS2339: Property 'nextTick' does not exist on type 'object'.
-example/eventsource-polyfill.ts(5159,55): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5161,14): error TS2339: Property 'endEmitted' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(5162,11): error TS2339: Property 'endEmitted' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(5163,12): error TS2339: Property 'readable' does not exist on type 'number'.
@@ -1355,15 +1308,11 @@ example/eventsource-polyfill.ts(5206,11): error TS2339: Property 'nextTick' does
 example/eventsource-polyfill.ts(5225,11): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5226,17): error TS2339: Property '_writableState' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5227,15): error TS2339: Property '_writableState' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(5237,23): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(5254,52): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5255,8): error TS2339: Property 'emit' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5258,8): error TS2339: Property 'exports' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(5297,19): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(5300,8): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(5303,65): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(5312,40): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5318,5): error TS2554: Expected 3 arguments, but got 2.
 example/eventsource-polyfill.ts(5324,37): error TS2339: Property 'browser' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5324,83): error TS2339: Property 'version' does not exist on type 'object'.
@@ -1387,8 +1336,6 @@ example/eventsource-polyfill.ts(5356,49): error TS2359: The right-hand side of a
 example/eventsource-polyfill.ts(5361,27): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(5363,6): error TS2339: Property 'inherits' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(5365,17): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(5367,63): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5368,22): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(5370,3): error TS2322: Type 'HTMLElement | {}' is not assignable to type 'HTMLElement'.
@@ -1403,7 +1350,6 @@ example/eventsource-polyfill.ts(5392,14): error TS2367: This condition will alwa
 example/eventsource-polyfill.ts(5415,35): error TS2339: Property 'decodeStrings' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5421,34): error TS2339: Property 'defaultEncoding' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5447,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(5475,29): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(5483,23): error TS2339: Property 'next' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(5491,25): error TS2339: Property 'deprecate' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5508,31): error TS2339: Property '_writableState' does not exist on type 'object'.
@@ -1411,7 +1357,6 @@ example/eventsource-polyfill.ts(5518,22): error TS2349: This expression is not c
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(5527,66): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 example/eventsource-polyfill.ts(5528,12): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(5531,25): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(5531,43): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 example/eventsource-polyfill.ts(5537,24): error TS2339: Property 'write' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5537,68): error TS2339: Property 'write' does not exist on type 'object'.
@@ -1421,7 +1366,6 @@ example/eventsource-polyfill.ts(5541,24): error TS2339: Property 'destroy' does 
 example/eventsource-polyfill.ts(5541,72): error TS2339: Property 'destroy' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5543,24): error TS2339: Property 'final' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5543,68): error TS2339: Property 'final' does not exist on type 'object'.
-example/eventsource-polyfill.ts(5554,53): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5555,7): error TS2740: Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 example/eventsource-polyfill.ts(5557,10): error TS2339: Property 'emit' does not exist on type 'number'.
 example/eventsource-polyfill.ts(5558,7): error TS2339: Property 'nextTick' does not exist on type 'object'.
@@ -1471,7 +1415,6 @@ example/eventsource-polyfill.ts(5680,13): error TS2339: Property 'bufferedReques
 example/eventsource-polyfill.ts(5680,37): error TS2339: Property 'lastBufferedRequest' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5682,11): error TS2339: Property 'bufferedRequestCount' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5684,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(5690,132): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5691,9): error TS2339: Property 'writelen' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5692,9): error TS2339: Property 'writecb' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5693,9): error TS2339: Property 'writing' does not exist on type 'HTMLElement'.
@@ -1481,7 +1424,6 @@ example/eventsource-polyfill.ts(5695,43): error TS2339: Property 'onwrite' does 
 example/eventsource-polyfill.ts(5695,64): error TS2339: Property '_write' does not exist on type 'number'.
 example/eventsource-polyfill.ts(5695,94): error TS2339: Property 'onwrite' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5696,9): error TS2339: Property 'sync' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(5699,96): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5700,11): error TS2339: Property 'pendingcb' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5705,9): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5708,9): error TS2339: Property 'nextTick' does not exist on type 'object'.
@@ -1490,13 +1432,11 @@ example/eventsource-polyfill.ts(5710,12): error TS2339: Property 'emit' does not
 example/eventsource-polyfill.ts(5715,12): error TS2339: Property '_writableState' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5716,12): error TS2339: Property 'emit' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5719,25): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-example/eventsource-polyfill.ts(5723,45): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5724,9): error TS2339: Property 'writing' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5725,9): error TS2339: Property 'writecb' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5726,9): error TS2339: Property 'length' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5726,25): error TS2339: Property 'writelen' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5727,9): error TS2339: Property 'writelen' does not exist on type 'object'.
-example/eventsource-polyfill.ts(5730,47): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5731,35): error TS2339: Property '_writableState' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5732,28): error TS2339: Property 'sync' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5733,26): error TS2339: Property 'writecb' does not exist on type 'HTMLElement'.
@@ -1506,15 +1446,12 @@ example/eventsource-polyfill.ts(5741,29): error TS2339: Property 'corked' does n
 example/eventsource-polyfill.ts(5741,46): error TS2339: Property 'bufferProcessing' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5741,72): error TS2339: Property 'bufferedRequest' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5750,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
-example/eventsource-polyfill.ts(5755,86): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5756,39): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
 example/eventsource-polyfill.ts(5757,9): error TS2339: Property 'pendingcb' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5759,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-example/eventsource-polyfill.ts(5765,54): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5766,35): error TS2339: Property 'needDrain' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(5767,11): error TS2339: Property 'needDrain' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(5768,12): error TS2339: Property 'emit' does not exist on type 'string'.
-example/eventsource-polyfill.ts(5773,59): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5774,9): error TS2339: Property 'bufferProcessing' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5775,29): error TS2339: Property 'bufferedRequest' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5777,14): error TS2339: Property '_writev' does not exist on type 'string'.
@@ -1535,7 +1472,6 @@ example/eventsource-polyfill.ts(5801,13): error TS2339: Property 'corkedRequests
 example/eventsource-polyfill.ts(5801,41): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5802,14): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5804,13): error TS2339: Property 'corkedRequestsFree' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(5804,34): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(5804,52): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(5806,11): error TS2339: Property 'bufferedRequestCount' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5810,32): error TS2339: Property 'chunk' does not exist on type 'object'.
@@ -1558,14 +1494,12 @@ example/eventsource-polyfill.ts(5865,32): error TS2339: Property 'length' does n
 example/eventsource-polyfill.ts(5865,54): error TS2339: Property 'bufferedRequest' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5865,89): error TS2339: Property 'finished' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5865,108): error TS2339: Property 'writing' does not exist on type 'object'.
-example/eventsource-polyfill.ts(5867,52): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5868,10): error TS2339: Property '_final' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5869,11): error TS2339: Property 'pendingcb' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5871,14): error TS2339: Property 'emit' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5873,11): error TS2339: Property 'prefinished' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5874,12): error TS2339: Property 'emit' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5875,25): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-example/eventsource-polyfill.ts(5878,57): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5879,14): error TS2339: Property 'prefinished' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5879,36): error TS2339: Property 'finalCalled' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5880,23): error TS2339: Property '_final' does not exist on type 'string'.
@@ -1578,7 +1512,6 @@ example/eventsource-polyfill.ts(5892,7): error TS2322: Type 'boolean' is not ass
 example/eventsource-polyfill.ts(5895,15): error TS2339: Property 'pendingcb' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5896,13): error TS2339: Property 'finished' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(5897,14): error TS2339: Property 'emit' does not exist on type 'string'.
-example/eventsource-polyfill.ts(5903,66): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5904,9): error TS2339: Property 'ending' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5905,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 example/eventsource-polyfill.ts(5907,15): error TS2339: Property 'finished' does not exist on type 'object'.
@@ -1586,7 +1519,6 @@ example/eventsource-polyfill.ts(5907,29): error TS2339: Property 'nextTick' does
 example/eventsource-polyfill.ts(5907,54): error TS2339: Property 'once' does not exist on type 'string'.
 example/eventsource-polyfill.ts(5909,9): error TS2339: Property 'ended' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5910,10): error TS2339: Property 'writable' does not exist on type 'string'.
-example/eventsource-polyfill.ts(5913,75): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(5914,31): error TS2339: Property 'entry' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5915,11): error TS2339: Property 'entry' does not exist on type 'object'.
 example/eventsource-polyfill.ts(5917,30): error TS2339: Property 'callback' does not exist on type 'object'.
@@ -1622,7 +1554,6 @@ example/eventsource-polyfill.ts(6031,41): error TS2345: Argument of type 'string
 example/eventsource-polyfill.ts(6032,43): error TS2339: Property 'isEncoding' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6033,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(6039,9): error TS2339: Property 'StringDecoder' does not exist on type 'object'.
-example/eventsource-polyfill.ts(6040,43): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6065,26): error TS2339: Property 'allocUnsafe' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6092,9): error TS2339: Property 'copy' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(6095,7): error TS2339: Property 'copy' does not exist on type 'any[]'.
@@ -1668,7 +1599,6 @@ example/eventsource-polyfill.ts(6388,24): error TS2339: Property 'transform' doe
 example/eventsource-polyfill.ts(6388,76): error TS2339: Property 'transform' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6390,24): error TS2339: Property 'flush' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6390,68): error TS2339: Property 'flush' does not exist on type 'object'.
-example/eventsource-polyfill.ts(6397,23): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6402,12): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(6411,17): error TS2339: Property 'prototype' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6430,6): error TS2339: Property 'writecb' does not exist on type 'object'.
@@ -1710,21 +1640,17 @@ example/eventsource-polyfill.ts(6501,20): error TS2349: This expression is not c
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(6502,21): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-example/eventsource-polyfill.ts(6532,66): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(6533,40): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
+example/eventsource-polyfill.ts(6533,40): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
 example/eventsource-polyfill.ts(6534,68): error TS2339: Property 'headers' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6549,8): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6550,8): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6552,50): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(6553,36): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
-example/eventsource-polyfill.ts(6554,30): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
+example/eventsource-polyfill.ts(6553,36): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
+example/eventsource-polyfill.ts(6554,30): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
 example/eventsource-polyfill.ts(6555,11): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6555,20): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(6565,38): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
+example/eventsource-polyfill.ts(6565,38): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
 example/eventsource-polyfill.ts(6565,57): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6568,12): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6570,13): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6586,24): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6588,37): error TS2339: Property 'protocol' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6589,13): error TS2339: Property 'headers' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6590,30): error TS2339: Property 'headers' does not exist on type 'object'.
@@ -1760,7 +1686,6 @@ example/eventsource-polyfill.ts(6646,41): error TS2339: Property 'statusCode' do
 example/eventsource-polyfill.ts(6646,67): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6646,93): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6647,15): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6647,24): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(6647,56): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6647,81): error TS2339: Property 'statusMessage' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6648,9): error TS2554: Expected 1 arguments, but got 0.
@@ -1769,18 +1694,16 @@ example/eventsource-polyfill.ts(6653,41): error TS2339: Property 'statusCode' do
 example/eventsource-polyfill.ts(6653,67): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6654,36): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6657,17): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6657,26): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(6657,58): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6657,83): error TS2339: Property 'statusMessage' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6663,17): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6665,17): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(6669,15): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6670,15): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6670,24): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(6670,56): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6670,81): error TS2339: Property 'statusMessage' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6671,21): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6674,32): error TS2339: Property 'OPEN' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
+example/eventsource-polyfill.ts(6674,32): error TS2339: Property 'OPEN' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
 example/eventsource-polyfill.ts(6675,11): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6676,13): error TS2339: Property 'removeAllListeners' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6677,13): error TS2339: Property 'removeAllListeners' does not exist on type 'HTMLElement'.
@@ -1790,7 +1713,6 @@ example/eventsource-polyfill.ts(6682,13): error TS2339: Property 'removeAllListe
 example/eventsource-polyfill.ts(6683,13): error TS2339: Property 'removeAllListeners' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6684,9): error TS2554: Expected 1 arguments, but got 0.
 example/eventsource-polyfill.ts(6686,13): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6686,21): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(6686,21): error TS2554: Expected 2 arguments, but got 1.
 example/eventsource-polyfill.ts(6697,11): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6710,32): error TS2339: Property 'alloc' does not exist on type 'object'.
@@ -1803,19 +1725,16 @@ example/eventsource-polyfill.ts(6773,30): error TS2339: Property 'message' does 
 example/eventsource-polyfill.ts(6776,13): error TS2339: Property 'setNoDelay' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6776,29): error TS2339: Property 'setNoDelay' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6777,9): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6782,22): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6783,14): error TS2339: Property 'listeners' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6784,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6789,36): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
-example/eventsource-polyfill.ts(6790,30): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => Void'.
+example/eventsource-polyfill.ts(6789,36): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
+example/eventsource-polyfill.ts(6790,30): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: object) => void'.
 example/eventsource-polyfill.ts(6791,13): error TS2339: Property 'abort' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6791,24): error TS2339: Property 'abort' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6792,13): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6792,24): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(6792,39): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(6795,101): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6799,15): error TS2554: Expected 0 arguments, but got 2.
-example/eventsource-polyfill.ts(6799,21): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(6810,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(6822,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(6833,16): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
@@ -1824,15 +1743,9 @@ example/eventsource-polyfill.ts(6842,6): error TS2339: Property 'inherits' does 
 example/eventsource-polyfill.ts(6842,35): error TS2339: Property 'EventEmitter' does not exist on type 'boolean'.
 example/eventsource-polyfill.ts(6855,35): error TS2339: Property '_listener' does not exist on type 'string'.
 example/eventsource-polyfill.ts(6855,56): error TS2339: Property '_listener' does not exist on type 'string'.
-example/eventsource-polyfill.ts(6865,43): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(6902,104): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6905,14): error TS2339: Property '_listener' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(6917,70): error TS2314: Generic type 'TypedPropertyDescriptor<T>' requires 1 type argument(s).
-example/eventsource-polyfill.ts(6917,96): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(6935,108): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6937,14): error TS2339: Property '_listener' does not exist on type 'never'.
-example/eventsource-polyfill.ts(6948,60): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(6965,62): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(6994,44): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(6994,68): error TS2349: This expression is not callable.
@@ -1867,7 +1780,6 @@ example/eventsource-polyfill.ts(7255,11): error TS2339: Property 'nodeType' does
 example/eventsource-polyfill.ts(7258,14): error TS2339: Property 'global' does not exist on type 'object'.
 example/eventsource-polyfill.ts(7259,14): error TS2339: Property 'window' does not exist on type 'object'.
 example/eventsource-polyfill.ts(7260,14): error TS2339: Property 'self' does not exist on type 'object'.
-example/eventsource-polyfill.ts(7313,32): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(7356,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 example/eventsource-polyfill.ts(7456,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7456,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -2084,18 +1996,12 @@ example/eventsource-polyfill.ts(8397,75): error TS2349: This expression is not c
   Type '{}' has no call signatures.
 example/eventsource-polyfill.ts(8397,99): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-example/eventsource-polyfill.ts(8412,66): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8412,79): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 example/eventsource-polyfill.ts(8412,99): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
-example/eventsource-polyfill.ts(8417,66): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8418,7): error TS2339: Property 'copy' does not exist on type 'any[]'.
 example/eventsource-polyfill.ts(8421,8): error TS2339: Property 'exports' does not exist on type 'Function'.
-example/eventsource-polyfill.ts(8422,26): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(8423,27): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(8430,56): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(8437,62): error TS2304: Cannot find name 'Void'.
+example/eventsource-polyfill.ts(8423,27): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(8449,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(8452,50): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8460,30): error TS2339: Property 'data' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8461,18): error TS2339: Property 'next' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8462,20): error TS2339: Property 'data' does not exist on type 'object'.
@@ -2113,15 +2019,12 @@ example/eventsource-polyfill.ts(8484,33): error TS2339: Property 'inspect' does 
 example/eventsource-polyfill.ts(8485,28): error TS2339: Property 'inspect' does not exist on type 'boolean'.
 example/eventsource-polyfill.ts(8500,59): error TS2322: Type 'object' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(8507,9): error TS2339: Property 'setTimeout' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8508,10): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(8508,64): error TS2345: Argument of type '{ (id?: number): void; (timeoutId: string | number | Timeout): void; }' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(8510,9): error TS2339: Property 'setInterval' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8511,10): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(8511,65): error TS2345: Argument of type '{ (id?: number): void; (intervalId: string | number | Timeout): void; }' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(8513,9): error TS2339: Property 'clearTimeout' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8514,9): error TS2339: Property 'clearInterval' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8516,13): error TS2339: Property 'close' does not exist on type 'object'.
-example/eventsource-polyfill.ts(8520,48): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8530,9): error TS2339: Property 'enroll' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8531,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8532,8): error TS2339: Property '_idleTimeout' does not exist on type 'object'.
@@ -2133,7 +2036,6 @@ example/eventsource-polyfill.ts(8540,32): error TS2339: Property 'active' does n
 example/eventsource-polyfill.ts(8541,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8543,28): error TS2339: Property '_idleTimeout' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8545,10): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8545,60): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8546,16): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8547,14): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8557,9): error TS2339: Property 'setImmediate' does not exist on type 'HTMLElement'.
@@ -2144,14 +2046,10 @@ example/eventsource-polyfill.ts(8570,73): error TS2554: Expected 2 arguments, bu
 example/eventsource-polyfill.ts(8573,16): error TS2339: Property 'setImmediate' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8580,31): error TS2339: Property 'document' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8590,32): error TS2339: Property 'length' does not exist on type 'object'.
-example/eventsource-polyfill.ts(8600,46): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(8604,33): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8605,39): error TS2339: Property 'callback' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8606,32): error TS2339: Property 'args' does not exist on type 'object'.
-example/eventsource-polyfill.ts(8626,44): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8638,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 example/eventsource-polyfill.ts(8640,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(8647,47): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8649,21): error TS2339: Property 'nextTick' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8649,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(8656,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
@@ -2160,7 +2058,6 @@ example/eventsource-polyfill.ts(8658,47): error TS2339: Property 'onmessage' doe
 example/eventsource-polyfill.ts(8659,20): error TS2339: Property 'onmessage' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8662,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8663,20): error TS2339: Property 'onmessage' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8668,50): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8675,23): error TS2339: Property 'source' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8676,30): error TS2339: Property 'data' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8677,23): error TS2339: Property 'data' does not exist on type 'object'.
@@ -2172,19 +2069,16 @@ example/eventsource-polyfill.ts(8683,13): error TS2769: No overload matches this
     Argument of type 'Function' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
 example/eventsource-polyfill.ts(8685,20): error TS2339: Property 'attachEvent' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8689,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8693,53): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8694,13): error TS2740: Type 'MessageChannel' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 example/eventsource-polyfill.ts(8695,17): error TS2339: Property 'port1' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8696,39): error TS2339: Property 'data' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8697,26): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(8701,21): error TS2339: Property 'port2' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8705,55): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8706,33): error TS2339: Property 'documentElement' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(8710,43): error TS2339: Property 'createElement' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(8711,20): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8712,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(8713,24): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(8721,49): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(8729,37): error TS2339: Property 'setTimeout' does not exist on type 'object'.
 example/eventsource-polyfill.ts(8732,33): error TS2339: Property 'process' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(8740,23): error TS2339: Property 'MessageChannel' does not exist on type 'HTMLElement'.
@@ -2366,10 +2260,8 @@ example/eventsource-polyfill.ts(9652,16): error TS2339: Property 'apply' does no
 example/eventsource-polyfill.ts(9662,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'PropertyKey'.
 example/eventsource-polyfill.ts(9665,3): error TS2322: Type '() => any' is not assignable to type 'any[]'.
 example/eventsource-polyfill.ts(9671,9): error TS2339: Property 'promisify' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(9673,68): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(9680,15): error TS2339: Property 'reason' does not exist on type 'Error'.
 example/eventsource-polyfill.ts(9681,5): error TS2322: Type 'Error' is not assignable to type 'HTMLElement'.
-example/eventsource-polyfill.ts(9694,29): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(9711,47): error TS2339: Property 'nextTick' does not exist on type 'string'.
 example/eventsource-polyfill.ts(9712,47): error TS2339: Property 'nextTick' does not exist on type 'string'.
 example/eventsource-polyfill.ts(9720,9): error TS2339: Property 'callbackify' does not exist on type 'HTMLElement'.
@@ -2393,19 +2285,15 @@ lib/eventsource-polyfill.ts(1,5): error TS2300: Duplicate identifier 'EventSourc
 lib/eventsource-polyfill.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'EventSource' must be of type '{ new (url: string | URL, eventSourceInitDict?: EventSourceInit): EventSource; prototype: EventSource; readonly CLOSED: number; readonly CONNECTING: number; readonly OPEN: number; }', but here has type 'string'.
 lib/eventsource-polyfill.ts(4,10): error TS2339: Property 'EventSourcePolyfill' does not exist on type 'Window & typeof globalThis'.
 lib/eventsource.ts(35,10): error TS2300: Duplicate identifier 'EventSource'.
-lib/eventsource.ts(35,66): error TS2304: Cannot find name 'Void'.
-lib/eventsource.ts(35,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/eventsource.ts(37,68): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/eventsource.ts(52,8): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(53,8): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
-lib/eventsource.ts(55,50): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(58,11): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(58,40): error TS2345: Argument of type '{ message: string; }' is not assignable to parameter of type 'EventInit'.
   Object literal may only specify known properties, and 'message' does not exist in type 'EventInit'.
 lib/eventsource.ts(68,57): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(71,12): error TS2339: Property 'connectionInProgress' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(73,13): error TS2339: Property 'reconnectInterval' does not exist on type 'HTMLElement'.
-lib/eventsource.ts(89,24): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(91,37): error TS2339: Property 'protocol' does not exist on type 'object'.
 lib/eventsource.ts(92,13): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/eventsource.ts(93,30): error TS2339: Property 'headers' does not exist on type 'object'.
@@ -2484,7 +2372,6 @@ lib/eventsource.ts(276,30): error TS2339: Property 'message' does not exist on t
 lib/eventsource.ts(279,13): error TS2339: Property 'setNoDelay' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(279,29): error TS2339: Property 'setNoDelay' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(280,9): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-lib/eventsource.ts(285,22): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(286,14): error TS2339: Property 'listeners' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(287,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(294,13): error TS2339: Property 'abort' does not exist on type 'HTMLElement'.
@@ -2492,7 +2379,6 @@ lib/eventsource.ts(294,24): error TS2339: Property 'abort' does not exist on typ
 lib/eventsource.ts(295,13): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(295,24): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
 lib/eventsource.ts(295,39): error TS2339: Property 'xhr' does not exist on type 'HTMLElement'.
-lib/eventsource.ts(298,101): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(302,15): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(313,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/eventsource.ts(325,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -2501,30 +2387,24 @@ lib/eventsource.ts(345,6): error TS2339: Property 'inherits' does not exist on t
 lib/eventsource.ts(345,35): error TS2339: Property 'EventEmitter' does not exist on type 'string'.
 lib/eventsource.ts(358,35): error TS2339: Property '_listener' does not exist on type 'string'.
 lib/eventsource.ts(358,56): error TS2339: Property '_listener' does not exist on type 'string'.
-lib/eventsource.ts(368,43): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(382,23): error TS2540: Cannot assign to 'CONNECTING' because it is a read-only property.
 lib/eventsource.ts(383,23): error TS2540: Cannot assign to 'OPEN' because it is a read-only property.
 lib/eventsource.ts(384,23): error TS2540: Cannot assign to 'CLOSED' because it is a read-only property.
-lib/eventsource.ts(405,1): error TS2322: Type '(type: string, listener: Function) => Void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | AddEventListenerOptions): void; (type: string, list...'.
+lib/eventsource.ts(405,1): error TS2322: Type '(type: string, listener: Function) => void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | AddEventListenerOptions): void; (type: string, list...'.
   Types of parameters 'listener' and 'listener' are incompatible.
     Type 'EventListenerOrEventListenerObject' is not assignable to type 'Function'.
       Type 'EventListenerObject' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/eventsource.ts(405,104): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(408,14): error TS2339: Property '_listener' does not exist on type 'Function'.
-lib/eventsource.ts(420,79): error TS2304: Cannot find name 'Void'.
+lib/eventsource.ts(420,1): error TS2322: Type '(event: object) => void' is not assignable to type '(event: Event) => boolean'.
+  Type 'void' is not assignable to type 'boolean'.
 lib/eventsource.ts(421,14): error TS2339: Property 'type' does not exist on type 'object'.
 lib/eventsource.ts(425,19): error TS2339: Property 'type' does not exist on type 'object'.
-lib/eventsource.ts(437,1): error TS2322: Type '(type: string, listener: string) => Void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: ...'.
+lib/eventsource.ts(437,1): error TS2322: Type '(type: string, listener: string) => void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: ...'.
   Types of parameters 'listener' and 'listener' are incompatible.
     Type '(this: EventSource, ev: any) => any' is not assignable to type 'string'.
-lib/eventsource.ts(437,108): error TS2304: Cannot find name 'Void'.
 lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on type 'never'.
 lib/eventsource.ts(450,10): error TS2300: Duplicate identifier 'Event'.
-lib/eventsource.ts(450,60): error TS2304: Cannot find name 'Void'.
-lib/eventsource.ts(450,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/eventsource.ts(467,10): error TS2300: Duplicate identifier 'MessageEvent'.
-lib/eventsource.ts(467,62): error TS2304: Cannot find name 'Void'.
-lib/eventsource.ts(467,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5014,11): error TS2300: Duplicate identifier 'Event'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5056,13): error TS2300: Duplicate identifier 'Event'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5088,11): error TS2300: Duplicate identifier 'EventSource'.

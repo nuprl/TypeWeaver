@@ -11,7 +11,7 @@ var CONST: object = {
   MAIN_FILE: 'index.js'
 }
 
-function exitOnError (err: object): Void {
+function exitOnError (err: object): void {
   log.error(err)
   process.exit(err.code || 1)
 }

@@ -2,7 +2,7 @@
 
 var asap: Function = require('asap/raw');
 
-function noop(): Void {}
+function noop(): void {}
 
 // States:
 //
@@ -32,7 +32,7 @@ function getThen(obj: Promise): any[] {
   }
 }
 
-function tryCallOne(fn: Function, a: string): Void {
+function tryCallOne(fn: Function, a: string): void {
   try {
     return fn(a);
   } catch (ex) {
@@ -40,7 +40,7 @@ function tryCallOne(fn: Function, a: string): Void {
     return IS_ERROR;
   }
 }
-function tryCallTwo(fn: Function, a: string, b: number): Void {
+function tryCallTwo(fn: Function, a: string, b: number): void {
   try {
     fn(a, b);
   } catch (ex) {
@@ -51,7 +51,7 @@ function tryCallTwo(fn: Function, a: string, b: number): Void {
 
 module.exports = Promise;
 
-function Promise(fn: string): Void {
+function Promise(fn: string): void {
   if (typeof this !== 'object') {
     throw new TypeError('Promises must be constructed via new');
   }
@@ -85,7 +85,7 @@ function safeThen(self: object, onFulfilled: number, onRejected: number): Promis
     handle(self, new Handler(onFulfilled, onRejected, res));
   });
 }
-function handle(self: HTMLElement, deferred: any[]): Void {
+function handle(self: HTMLElement, deferred: any[]): void {
   while (self._state === 3) {
     self = self._value;
   }
@@ -109,7 +109,7 @@ function handle(self: HTMLElement, deferred: any[]): Void {
   handleResolved(self, deferred);
 }
 
-function handleResolved(self: HTMLElement, deferred: HTMLElement): Void {
+function handleResolved(self: HTMLElement, deferred: HTMLElement): void {
   asap(function() {
     var cb: string = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
     if (cb === null) {
@@ -162,7 +162,7 @@ function resolve(self: object, newValue: string): string {
   finale(self);
 }
 
-function reject(self: object, newValue: number): Void {
+function reject(self: object, newValue: number): void {
   self._state = 2;
   self._value = newValue;
   if (Promise._onReject) {
@@ -170,7 +170,7 @@ function reject(self: object, newValue: number): Void {
   }
   finale(self);
 }
-function finale(self: HTMLElement): Void {
+function finale(self: HTMLElement): void {
   if (self._deferredState === 1) {
     handle(self, self._deferreds);
     self._deferreds = null;
@@ -183,7 +183,7 @@ function finale(self: HTMLElement): Void {
   }
 }
 
-function Handler(onFulfilled: string, onRejected: string, promise: object): Void{
+function Handler(onFulfilled: string, onRejected: string, promise: object): void{
   this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
   this.onRejected = typeof onRejected === 'function' ? onRejected : null;
   this.promise = promise;
@@ -195,7 +195,7 @@ function Handler(onFulfilled: string, onRejected: string, promise: object): Void
  *
  * Makes no guarantees about asynchrony.
  */
-function doResolve(fn: string, promise: object): Void {
+function doResolve(fn: string, promise: object): void {
   var done: boolean = false;
   var res: number = tryCallTwo(fn, function (value: string) {
     if (done) return;

@@ -257,7 +257,6 @@ lib/DescriptionFilePlugin.ts(60,25): error TS2339: Property 'log' does not exist
 lib/DescriptionFilePlugin.ts(66,20): error TS2339: Property 'substr' does not exist on type 'number'.
 lib/DescriptionFilePlugin.ts(83,33): error TS2304: Cannot find name 'CachedInputFileSystem'.
 lib/DescriptionFileUtils.ts(35,12): error TS2304: Cannot find name 'Resolver'.
-lib/DescriptionFileUtils.ts(41,4): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(42,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/DescriptionFileUtils.ts(43,26): error TS2339: Property 'directory' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(48,4): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
@@ -277,7 +276,6 @@ lib/DescriptionFileUtils.ts(79,23): error TS2339: Property 'fileDependencies' do
 lib/DescriptionFileUtils.ts(87,16): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(90,15): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(93,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/DescriptionFileUtils.ts(97,51): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(99,26): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(100,23): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(104,12): error TS2339: Property 'message' does not exist on type 'any[]'.
@@ -612,7 +610,6 @@ lib/ResolverFactory.ts(203,27): error TS2339: Property 'extensionAlias' does not
 lib/ResolverFactory.ts(204,26): error TS2339: Property 'extensionAlias' does not exist on type 'object'.
 lib/ResolverFactory.ts(206,59): error TS2339: Property 'extensionAlias' does not exist on type 'object'.
 lib/ResolverFactory.ts(211,23): error TS2339: Property 'useSyncFileSystemCalls' does not exist on type 'object'.
-lib/ResolverFactory.ts(212,6): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ResolverFactory.ts(214,39): error TS2339: Property 'fileSystem' does not exist on type 'object'.
 lib/ResolverFactory.ts(217,14): error TS2339: Property 'fileSystem' does not exist on type 'object'.
 lib/ResolverFactory.ts(219,12): error TS2339: Property 'unsafeCache' does not exist on type 'object'.
@@ -726,8 +723,6 @@ lib/SymlinkPlugin.ts(43,6): error TS2345: Argument of type 'Function' is not ass
 lib/SymlinkPlugin.ts(46,26): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/SymlinkPlugin.ts(47,23): error TS2339: Property 'fileDependencies' does not exist on type 'object'.
 lib/SymlinkPlugin.ts(48,10): error TS2339: Property 'readlink' does not exist on type 'Function'.
-lib/SyncAsyncFileSystemDecorator.ts(15,52): error TS2304: Cannot find name 'Void'.
-lib/SyncAsyncFileSystemDecorator.ts(15,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/SyncAsyncFileSystemDecorator.ts(20,33): error TS2339: Property 'lstatSync' does not exist on type 'string'.
 lib/SyncAsyncFileSystemDecorator.ts(23,16): error TS2304: Cannot find name 'ResultPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(27,12): error TS2349: This expression is not callable.
@@ -811,8 +806,6 @@ lib/createInnerContext.ts(31,29): error TS2339: Property 'fileDependencies' does
 lib/createInnerContext.ts(32,32): error TS2339: Property 'contextDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(33,32): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(34,18): error TS2339: Property 'stack' does not exist on type 'object'.
-lib/forEachBail.ts(8,92): error TS2304: Cannot find name 'Void'.
-lib/forEachBail.ts(8,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/forEachBail.ts(14,30): error TS2304: Cannot find name 'Resolver'.
 lib/forEachBail.ts(14,48): error TS2304: Cannot find name 'CachedInputFileSystem'.
 lib/getInnerRequest.ts(8,51): error TS2304: Cannot find name 'Resolver'.
@@ -841,7 +834,6 @@ lib/getPaths.ts(35,11): error TS2304: Cannot find name 'Resolver'.
 lib/index.ts(10,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/ResolverFactory"' has no default export.
 lib/index.ts(20,7): error TS2740: Type 'CachedInputFileSystem' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/index.ts(26,22): error TS2304: Cannot find name 'Resolver'.
-lib/index.ts(31,111): error TS2304: Cannot find name 'Void'.
 lib/index.ts(34,3): error TS2322: Type 'Function' is not assignable to type 'string'.
 lib/index.ts(35,3): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/index.ts(37,3): error TS2322: Type 'object' is not assignable to type 'string'.
@@ -865,19 +857,17 @@ lib/index.ts(107,31): error TS2345: Argument of type 'any[]' is not assignable t
 lib/util/entrypoints.ts(91,14): error TS2322: Type '(exportsField: string) => Resolver' is not assignable to type 'string'.
 lib/util/entrypoints.ts(93,4): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(95,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
+lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: string, expectFolder: boolean) => void' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(105,14): error TS2322: Type '(importsField: string) => Resolver' is not assignable to type 'string'.
 lib/util/entrypoints.ts(107,4): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(109,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/util/entrypoints.ts(111,3): error TS2345: Argument of type '(imp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
+lib/util/entrypoints.ts(111,3): error TS2345: Argument of type '(imp: string, expectFolder: boolean) => void' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(125,34): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 lib/util/entrypoints.ts(146,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/util/entrypoints.ts(154,4): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/util/entrypoints.ts(171,28): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(179,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(200,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
-lib/util/entrypoints.ts(207,66): error TS2304: Cannot find name 'Void'.
-lib/util/entrypoints.ts(238,66): error TS2304: Cannot find name 'Void'.
 lib/util/entrypoints.ts(262,34): error TS2339: Property 'files' does not exist on type 'object'.
 lib/util/entrypoints.ts(268,12): error TS2339: Property 'children' does not exist on type 'object'.
 lib/util/entrypoints.ts(269,12): error TS2339: Property 'folder' does not exist on type 'object'.
@@ -905,7 +895,6 @@ lib/util/entrypoints.ts(460,30): error TS2345: Argument of type 'Function' is no
 lib/util/entrypoints.ts(467,5): error TS2322: Type 'Function' is not assignable to type 'string'.
 lib/util/entrypoints.ts(473,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(480,5): error TS2322: Type 'Function' is not assignable to type 'string'.
-lib/util/entrypoints.ts(510,63): error TS2304: Cannot find name 'Void'.
 lib/util/entrypoints.ts(512,8): error TS2339: Property 'folder' does not exist on type 'object'.
 lib/util/entrypoints.ts(516,6): error TS2322: Type 'object' is not assignable to type 'Error'.
 lib/util/entrypoints.ts(530,12): error TS2339: Property 'children' does not exist on type 'Error'.

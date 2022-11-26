@@ -304,7 +304,7 @@ var Module: object = Abstract.extend(null, {
   }
 });
 
-function _extendModule(module: string, _interface: object): Void {
+function _extendModule(module: string, _interface: object): void {
   var proto: object = module.prototype;
   var id: string = module.toString().slice(1, -1);
   for (var name in _interface) {
@@ -818,20 +818,20 @@ var lang: object = {
 // lang/assert.js
 // =========================================================================
 
-function assert(condition: boolean, message: string, ErrorClass: object): Void {
+function assert(condition: boolean, message: string, ErrorClass: object): void {
   if (!condition) {
     throw new (ErrorClass || Error)(message || "Assertion failed.");
   }
 };
 
-function assertArity(args: any[], arity: number, message: string): Void {
+function assertArity(args: any[], arity: number, message: string): void {
   if (arity == null) arity = args.callee.length;
   if (args.length < arity) {
     throw new SyntaxError(message || "Not enough arguments.");
   }
 };
 
-function assertType(object: object, type: string, message: string): Void {
+function assertType(object: object, type: string, message: string): void {
   if (type && (typeof type == "function" ? !instanceOf(object, type) : typeOf(object) != type)) {
     throw new TypeError(message || "Invalid type.");
   }
@@ -856,7 +856,7 @@ function pcopy(object: object): string {
   return new _dummy;
 };
 
-function _dummy(): Void{};
+function _dummy(): void{};
 
 // =========================================================================
 // lang/extend.js
@@ -927,7 +927,7 @@ function _ancestorOf(ancestor: string, fn: object): boolean {
   return false;
 };
 
-function _override(object: object, name: string, method: Function): Void {
+function _override(object: object, name: string, method: Function): void {
   // Override an existing method.
   var ancestor: any[] = object[name];
   var superObject: object = base2.__prototyping; // late binding for prototypes
@@ -956,7 +956,7 @@ if (typeof StopIteration == "undefined") {
   StopIteration = new Error("StopIteration");
 }
 
-function forEach(object: object, block: string, context: string, fn: number): Void {
+function forEach(object: object, block: string, context: string, fn: number): void {
   if (object == null) return;
   if (!fn) {
     if (typeof object == "function" && object.call) {
@@ -990,7 +990,7 @@ forEach.detect = function(object: object, block: Function, context: string) {
 // These are the two core enumeration methods. All other forEach methods
 //  eventually call one of these two.
 
-function _Array_forEach(array: any[], block: Function, context: string): Void {
+function _Array_forEach(array: any[], block: Function, context: string): void {
   if (array == null) array = global;
   var length: number = array.length || 0, i: number; // preserve length
   if (typeof array == "string") {
@@ -1010,7 +1010,7 @@ function _Array_forEach(array: any[], block: Function, context: string): Void {
   }
 };
 
-function _Function_forEach(fn: string, object: object, block: string, context: string): Void {
+function _Function_forEach(fn: string, object: object, block: string, context: string): void {
   // http://code.google.com/p/base2/issues/detail?id=10
   
   // Run the test for Safari's buggy enumeration.

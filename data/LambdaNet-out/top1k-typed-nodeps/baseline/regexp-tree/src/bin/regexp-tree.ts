@@ -5,7 +5,7 @@
 
 'use strict';
 
-function main(): Void {
+function main(): void {
   console.info(`
   =========================================================
   * CLI commands are moved to the \x1b[1mregexp-tree-cli\x1b[0m package *

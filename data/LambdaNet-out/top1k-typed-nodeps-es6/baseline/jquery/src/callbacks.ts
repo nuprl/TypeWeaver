@@ -120,7 +120,7 @@ jQuery.Callbacks = function( options: object ) {
 						queue.push( memory );
 					}
 
-					( function add( args: any[] ): Void {
+					( function add( args: any[] ): void {
 						jQuery.each( args, function( _: string, arg: any[] ) {
 							if ( typeof arg === "function" ) {
 								if ( !options.unique || !self.has( arg ) ) {

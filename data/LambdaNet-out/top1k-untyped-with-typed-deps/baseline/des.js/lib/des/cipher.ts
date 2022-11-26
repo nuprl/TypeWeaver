@@ -2,7 +2,7 @@
 
 var assert: string = require('minimalistic-assert');
 
-function Cipher(options: string): Void {
+function Cipher(options: string): void {
   this.options = options;
 
   this.type = this.options.type;
@@ -14,7 +14,7 @@ function Cipher(options: string): Void {
 }
 module.exports = Cipher;
 
-Cipher.prototype._init = function _init(): Void {
+Cipher.prototype._init = function _init(): void {
   // Might be overrided
 };
 

@@ -1,7 +1,7 @@
 import { keyword as resolveKeyword } from 'css-tree';
 import { hasNoChildren } from './utils.js';
 
-export default function cleanAtrule(node: object, item: TRBL, list: HTMLElement): Void {
+export default function cleanAtrule(node: object, item: TRBL, list: HTMLElement): void {
     if (node.block) {
         // otherwise removed at-rule don't prevent @import for removal
         if (this.stylesheet !== null) {

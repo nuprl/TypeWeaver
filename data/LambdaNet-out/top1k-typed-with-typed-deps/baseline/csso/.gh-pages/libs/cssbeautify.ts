@@ -67,14 +67,14 @@
                 '-_*.:#[]'.indexOf(c) >= 0;
         }
 
-        function appendIndent(): Void {
+        function appendIndent(): void {
             var i: number;
             for (i = depth; i > 0; i -= 1) {
                 formatted += options.indent;
             }
         }
 
-        function openBlock(): Void {
+        function openBlock(): void {
             formatted = trimRight(formatted);
             if (openbracesuffix) {
                 formatted += ' {';
@@ -89,7 +89,7 @@
             depth += 1;
         }
 
-        function closeBlock(): Void {
+        function closeBlock(): void {
             var last: number;
             depth -= 1;
             formatted = trimRight(formatted);

@@ -5,7 +5,7 @@
  * @param {string} string The string inspect.
  * @returns {number} Returns the string size.
  */
-function asciiSize({ length }): Void {
+function asciiSize({ length }): void {
   return length
 }
 

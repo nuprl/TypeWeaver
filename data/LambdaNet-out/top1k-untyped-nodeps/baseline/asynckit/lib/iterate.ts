@@ -13,7 +13,7 @@ module.exports = iterate;
  * @param {object} state - current job status
  * @param {function} callback - invoked when all elements processed
  */
-function iterate(list: object, iterator: string, state: object, callback: Function): Void
+function iterate(list: object, iterator: string, state: object, callback: Function): void
 {
   // store current index
   var key: string = state['keyedList'] ? state['keyedList'][state.index] : state.index;

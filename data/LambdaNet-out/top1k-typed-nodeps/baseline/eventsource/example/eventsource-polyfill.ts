@@ -105,10 +105,10 @@ var process: object = module.exports = {};
 var cachedSetTimeout: Function;
 var cachedClearTimeout: Function;
 
-function defaultSetTimout(): Void {
+function defaultSetTimout(): void {
     throw new Error('setTimeout has not been defined');
 }
-function defaultClearTimeout (): Void {
+function defaultClearTimeout (): void {
     throw new Error('clearTimeout has not been defined');
 }
 (function () {
@@ -188,7 +188,7 @@ var draining: boolean = false;
 var currentQueue: any[];
 var queueIndex: number = -1;
 
-function cleanUpNextTick(): Void {
+function cleanUpNextTick(): void {
     if (!draining || !currentQueue) {
         return;
     }
@@ -203,7 +203,7 @@ function cleanUpNextTick(): Void {
     }
 }
 
-function drainQueue(): Void {
+function drainQueue(): void {
     if (draining) {
         return;
     }
@@ -255,7 +255,7 @@ process.argv = [];
 process.version = ''; // empty string to avoid regexp issues
 process.versions = {};
 
-function noop(): Void {}
+function noop(): void {}
 
 process.on = noop;
 process.addListener = noop;
@@ -286,7 +286,7 @@ process.umask = function() { return 0; };
 
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor: string, superCtor: Function): Void {
+  module.exports = function inherits(ctor: string, superCtor: Function): void {
     ctor.super_ = superCtor
     ctor.prototype = Object.create(superCtor.prototype, {
       constructor: {
@@ -299,7 +299,7 @@ if (typeof Object.create === 'function') {
   };
 } else {
   // old school shim for old browsers
-  module.exports = function inherits(ctor: object, superCtor: Function): Void {
+  module.exports = function inherits(ctor: object, superCtor: Function): void {
     ctor.super_ = superCtor
     var TempCtor: Function = function () {}
     TempCtor.prototype = superCtor.prototype
@@ -478,7 +478,7 @@ if (Buffer.TYPED_ARRAY_SUPPORT) {
   }
 }
 
-function assertSize (size: string): Void {
+function assertSize (size: string): void {
   if (typeof size !== 'number') {
     throw new TypeError('"size" argument must be a number')
   } else if (size < 0) {
@@ -839,7 +839,7 @@ function slowToString (encoding: string, start: number, end: number): string {
 // Buffer instances.
 Buffer.prototype._isBuffer = true
 
-function swap (b: object, n: string, m: string): Void {
+function swap (b: object, n: string, m: string): void {
   var i: any[] = b[n]
   b[n] = b[m]
   b[m] = i
@@ -1409,7 +1409,7 @@ Buffer.prototype.slice = function slice (start: number, end: number): object {
 /*
  * Need to make sure that buffer isn't trying to write out of bounds.
  */
-function checkOffset (offset: number, ext: string, length: number): Void {
+function checkOffset (offset: number, ext: string, length: number): void {
   if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
   if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
 }
@@ -1550,7 +1550,7 @@ Buffer.prototype.readInt32BE = function readInt32BE (offset: number, noAssert: b
     (this[offset + 3])
 }
 
-Buffer.prototype.readFloatLE = function readFloatLE (offset: string, noAssert: boolean): Void {
+Buffer.prototype.readFloatLE = function readFloatLE (offset: string, noAssert: boolean): void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
@@ -1570,7 +1570,7 @@ Buffer.prototype.readDoubleBE = function readDoubleBE (offset: string, noAssert:
   return ieee754.read(this, offset, false, 52, 8)
 }
 
-function checkInt (buf: any[], value: number, offset: number, ext: string, max: number, min: number): Void {
+function checkInt (buf: any[], value: number, offset: number, ext: string, max: number, min: number): void {
   if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
   if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
@@ -1623,7 +1623,7 @@ Buffer.prototype.writeUInt8 = function writeUInt8 (value: number, offset: number
   return offset + 1
 }
 
-function objectWriteUInt16 (buf: any[], value: number, offset: number, littleEndian: boolean): Void {
+function objectWriteUInt16 (buf: any[], value: number, offset: number, littleEndian: boolean): void {
   if (value < 0) value = 0xffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
     buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
@@ -1657,7 +1657,7 @@ Buffer.prototype.writeUInt16BE = function writeUInt16BE (value: number, offset: 
   return offset + 2
 }
 
-function objectWriteUInt32 (buf: any[], value: number, offset: number, littleEndian: boolean): Void {
+function objectWriteUInt32 (buf: any[], value: number, offset: number, littleEndian: boolean): void {
   if (value < 0) value = 0xffffffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
     buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
@@ -1807,7 +1807,7 @@ Buffer.prototype.writeInt32BE = function writeInt32BE (value: number, offset: nu
   return offset + 4
 }
 
-function checkIEEE754 (buf: any[], value: string, offset: number, ext: string, max: number, min: number): Void {
+function checkIEEE754 (buf: any[], value: string, offset: number, ext: string, max: number, min: number): void {
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
   if (offset < 0) throw new RangeError('Index out of range')
 }
@@ -2201,7 +2201,7 @@ Object.defineProperty(Duplex.prototype, 'writableHighWaterMark', {
 });
 
 // the no-half-open enforcer
-function onend(): Void {
+function onend(): void {
   // if we allow half-open state, or if the writable side ended,
   // then we're ok.
   if (this.allowHalfOpen || this._writableState.ended) return;
@@ -2211,7 +2211,7 @@ function onend(): Void {
   pna.nextTick(onEndNT, this);
 }
 
-function onEndNT(self: object): Void {
+function onEndNT(self: object): void {
   self.end();
 }
 
@@ -2384,15 +2384,15 @@ function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): strin
   case 1:
     return process.nextTick(fn);
   case 2:
-    return process.nextTick(function afterTickOne(): Void {
+    return process.nextTick(function afterTickOne(): void {
       fn.call(null, arg1);
     });
   case 3:
-    return process.nextTick(function afterTickTwo(): Void {
+    return process.nextTick(function afterTickTwo(): void {
       fn.call(null, arg1, arg2);
     });
   case 4:
-    return process.nextTick(function afterTickThree(): Void {
+    return process.nextTick(function afterTickThree(): void {
       fn.call(null, arg1, arg2, arg3);
     });
   default:
@@ -2401,7 +2401,7 @@ function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): strin
     while (i < args.length) {
       args[i++] = arguments[i];
     }
-    return process.nextTick(function afterTick(): Void {
+    return process.nextTick(function afterTick(): void {
       fn.apply(null, args);
     });
   }
@@ -2419,7 +2419,7 @@ var buffer: boolean = __webpack_require__(3)
 var Buffer: Function = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: object, dst: object): Void {
+function copyProps (src: object, dst: object): void {
   for (var key in src) {
     dst[key] = src[key]
   }
@@ -2506,8 +2506,8 @@ SafeBuffer.allocUnsafeSlow = function (size: string) {
 
 
 
-var punycode: Void = __webpack_require__(25);
-var util: Void = __webpack_require__(27);
+var punycode: void = __webpack_require__(25);
+var util: void = __webpack_require__(27);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -2516,7 +2516,7 @@ exports.format = urlFormat;
 
 exports.Url = Url;
 
-function Url(): Void {
+function Url(): void {
   this.protocol = null;
   this.slashes = null;
   this.auth = null;
@@ -2582,7 +2582,7 @@ var protocolPattern: RegExp = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring: Void = __webpack_require__(28);
+    querystring: void = __webpack_require__(28);
 
 function urlParse(url: string, parseQueryString: string, slashesDenoteHost: number): string {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -3266,7 +3266,7 @@ if (R && typeof R.ownKeys === 'function') {
   };
 }
 
-function ProcessEmitWarning(warning: string): Void {
+function ProcessEmitWarning(warning: string): void {
   if (console && console.warn) console.warn(warning);
 }
 
@@ -3274,7 +3274,7 @@ var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: number):
   return value !== value;
 }
 
-function EventEmitter(): Void {
+function EventEmitter(): void {
   EventEmitter.init.call(this);
 }
 module.exports = EventEmitter;
@@ -3291,7 +3291,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners: number = 10;
 
-function checkListener(listener: string): Void {
+function checkListener(listener: string): void {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -3656,7 +3656,7 @@ function arrayClone(arr: Promise, n: string): object {
   return copy;
 }
 
-function spliceOne(list: any[], index: number): Void {
+function spliceOne(list: any[], index: number): void {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
@@ -3672,12 +3672,12 @@ function unwrapListeners(arr: any[]): object {
 
 function once(emitter: object, name: string): object {
   return new Promise(function (resolve: Function, reject: Function) {
-    function errorListener(err: string): Void {
+    function errorListener(err: string): void {
       emitter.removeListener(name, resolver);
       reject(err);
     }
 
-    function resolver(): Void {
+    function resolver(): void {
       if (typeof emitter.removeListener === 'function') {
         emitter.removeListener('error', errorListener);
       }
@@ -3691,13 +3691,13 @@ function once(emitter: object, name: string): object {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): Void {
+function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): void {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
 }
 
-function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): Void {
+function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): void {
   if (typeof emitter.on === 'function') {
     if (flags.once) {
       emitter.once(name, listener);
@@ -3707,7 +3707,7 @@ function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, list
   } else if (typeof emitter.addEventListener === 'function') {
     // EventTarget does not have `error` event semantics like Node
     // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg: string): Void {
+    emitter.addEventListener(name, function wrapListener(arg: string): void {
       // IE does not have builtin `{ once: true }` support so we
       // have to do it manually.
       if (flags.once) {
@@ -3984,7 +3984,7 @@ var IncomingMessage: Element = exports.IncomingMessage = function (xhr: object, 
 		}
 		// fallback for when writableStream or pipeTo aren't available
 		var reader: Map = response.body.getReader()
-		function read (): Void {
+		function read (): void {
 			reader.read().then(function (result: object) {
 				if (self._destroyed)
 					return
@@ -4252,7 +4252,7 @@ function prependListener(emitter: HTMLElement, event: string, fn: string): Promi
   if (!emitter._events || !emitter._events[event]) emitter.on(event, fn);else if (isArray(emitter._events[event])) emitter._events[event].unshift(fn);else emitter._events[event] = [fn, emitter._events[event]];
 }
 
-function ReadableState(options: object, stream: number): Void {
+function ReadableState(options: object, stream: number): void {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -4440,7 +4440,7 @@ function readableAddChunk(stream: string, chunk: any[], encoding: boolean, addTo
   return needMoreData(state);
 }
 
-function addChunk(stream: string, state: object, chunk: string, addToFront: boolean): Void {
+function addChunk(stream: string, state: object, chunk: string, addToFront: boolean): void {
   if (state.flowing && state.length === 0 && !state.sync) {
     stream.emit('data', chunk);
     stream.read(0);
@@ -4625,7 +4625,7 @@ Readable.prototype.read = function (n: number) {
   return ret;
 };
 
-function onEofChunk(stream: string, state: object): Void {
+function onEofChunk(stream: string, state: object): void {
   if (state.ended) return;
   if (state.decoder) {
     var chunk: any[] = state.decoder.end();
@@ -4643,7 +4643,7 @@ function onEofChunk(stream: string, state: object): Void {
 // Don't emit readable right away in sync mode, because this can trigger
 // another read() call => stack overflow.  This way, it might trigger
 // a nextTick recursion warning, but that's not so bad.
-function emitReadable(stream: string): Void {
+function emitReadable(stream: string): void {
   var state: HTMLElement = stream._readableState;
   state.needReadable = false;
   if (!state.emittedReadable) {
@@ -4653,7 +4653,7 @@ function emitReadable(stream: string): Void {
   }
 }
 
-function emitReadable_(stream: string): Void {
+function emitReadable_(stream: string): void {
   debug('emit readable');
   stream.emit('readable');
   flow(stream);
@@ -4665,14 +4665,14 @@ function emitReadable_(stream: string): Void {
 // it's in progress.
 // However, if we're not ended, or reading, and the length < hwm,
 // then go ahead and try to read some more preemptively.
-function maybeReadMore(stream: string, state: object): Void {
+function maybeReadMore(stream: string, state: object): void {
   if (!state.readingMore) {
     state.readingMore = true;
     pna.nextTick(maybeReadMore_, stream, state);
   }
 }
 
-function maybeReadMore_(stream: number, state: object): Void {
+function maybeReadMore_(stream: number, state: object): void {
   var len: number = state.length;
   while (!state.reading && !state.flowing && !state.ended && state.length < state.highWaterMark) {
     debug('maybeReadMore read 0');
@@ -4716,7 +4716,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
   if (state.endEmitted) pna.nextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
-  function onunpipe(readable: string, unpipeInfo: Error): Void {
+  function onunpipe(readable: string, unpipeInfo: Error): void {
     debug('onunpipe');
     if (readable === src) {
       if (unpipeInfo && unpipeInfo.hasUnpiped === false) {
@@ -4726,7 +4726,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
     }
   }
 
-  function onend(): Void {
+  function onend(): void {
     debug('onend');
     dest.end();
   }
@@ -4739,7 +4739,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
   dest.on('drain', ondrain);
 
   var cleanedUp: boolean = false;
-  function cleanup(): Void {
+  function cleanup(): void {
     debug('cleanup');
     // cleanup event handlers once the pipe is broken
     dest.removeListener('close', onclose);
@@ -4767,7 +4767,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
   // => Introduce a guard on increasing awaitDrain.
   var increasedAwaitDrain: boolean = false;
   src.on('data', ondata);
-  function ondata(chunk: string): Void {
+  function ondata(chunk: string): void {
     debug('ondata');
     increasedAwaitDrain = false;
     var ret: number = dest.write(chunk);
@@ -4787,7 +4787,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
 
   // if the dest has an error, then stop piping into it.
   // however, don't suppress the throwing behavior for this.
-  function onerror(er: string): Void {
+  function onerror(er: string): void {
     debug('onerror', er);
     unpipe();
     dest.removeListener('error', onerror);
@@ -4798,19 +4798,19 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: object) {
   prependListener(dest, 'error', onerror);
 
   // Both close and finish should trigger unpipe, but only once.
-  function onclose(): Void {
+  function onclose(): void {
     dest.removeListener('finish', onfinish);
     unpipe();
   }
   dest.once('close', onclose);
-  function onfinish(): Void {
+  function onfinish(): void {
     debug('onfinish');
     dest.removeListener('close', onclose);
     unpipe();
   }
   dest.once('finish', onfinish);
 
-  function unpipe(): Void {
+  function unpipe(): void {
     debug('unpipe');
     src.unpipe(dest);
   }
@@ -4914,7 +4914,7 @@ Readable.prototype.on = function (ev: string, fn: string) {
 };
 Readable.prototype.addListener = Readable.prototype.on;
 
-function nReadingNextTick(self: any[]): Void {
+function nReadingNextTick(self: any[]): void {
   debug('readable nexttick read 0');
   self.read(0);
 }
@@ -4931,14 +4931,14 @@ Readable.prototype.resume = function () {
   return this;
 };
 
-function resume(stream: string, state: HTMLElement): Void {
+function resume(stream: string, state: HTMLElement): void {
   if (!state.resumeScheduled) {
     state.resumeScheduled = true;
     pna.nextTick(resume_, stream, state);
   }
 }
 
-function resume_(stream: string, state: HTMLElement): Void {
+function resume_(stream: string, state: HTMLElement): void {
   if (!state.reading) {
     debug('resume read 0');
     stream.read(0);
@@ -4961,7 +4961,7 @@ Readable.prototype.pause = function () {
   return this;
 };
 
-function flow(stream: string): Void {
+function flow(stream: string): void {
   var state: HTMLElement = stream._readableState;
   debug('flow', state.flowing);
   while (state.flowing && stream.read() !== null) {}
@@ -5143,7 +5143,7 @@ function copyFromBuffer(n: number, list: object): any[] {
   return ret;
 }
 
-function endReadable(stream: string): Void {
+function endReadable(stream: string): void {
   var state: object = stream._readableState;
 
   // If we get here before consuming all the bytes, then that is a
@@ -5156,7 +5156,7 @@ function endReadable(stream: string): Void {
   }
 }
 
-function endReadableNT(state: any[], stream: number): Void {
+function endReadableNT(state: any[], stream: number): void {
   // Check that we didn't get one last unshift.
   if (!state.endEmitted && state.length === 0) {
     state.endEmitted = true;
@@ -5234,7 +5234,7 @@ function destroy(err: string, cb: Function): string {
   return this;
 }
 
-function undestroy(): Void {
+function undestroy(): void {
   if (this._readableState) {
     this._readableState.destroyed = false;
     this._readableState.reading = false;
@@ -5251,7 +5251,7 @@ function undestroy(): Void {
   }
 }
 
-function emitErrorNT(self: object, err: Function): Void {
+function emitErrorNT(self: object, err: Function): void {
   self.emit('error', err);
 }
 
@@ -5300,7 +5300,7 @@ var pna: object = __webpack_require__(6);
 module.exports = Writable;
 
 /* <replacement> */
-function WriteReq(chunk: string, encoding: string, cb: string): Void {
+function WriteReq(chunk: string, encoding: string, cb: string): void {
   this.chunk = chunk;
   this.encoding = encoding;
   this.callback = cb;
@@ -5309,7 +5309,7 @@ function WriteReq(chunk: string, encoding: string, cb: string): Void {
 
 // It seems a linked list but it is not
 // there will be only 2 of these for each stream
-function CorkedRequest(state: string): Void {
+function CorkedRequest(state: string): void {
   var _this: any[] = this;
 
   this.next = null;
@@ -5362,9 +5362,9 @@ var destroyImpl: object = __webpack_require__(17);
 
 util.inherits(Writable, Stream);
 
-function nop(): Void {}
+function nop(): void {}
 
-function WritableState(options: HTMLElement, stream: string): Void {
+function WritableState(options: HTMLElement, stream: string): void {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -5551,7 +5551,7 @@ Writable.prototype.pipe = function () {
   this.emit('error', new Error('Cannot pipe, not readable'));
 };
 
-function writeAfterEnd(stream: number, cb: string): Void {
+function writeAfterEnd(stream: number, cb: string): void {
   var er: HTMLElement = new Error('write after end');
   // TODO: defer error events consistently everywhere, not just the cb
   stream.emit('error', er);
@@ -5687,7 +5687,7 @@ function writeOrBuffer(stream: string, state: object, isBuf: boolean, chunk: any
   return ret;
 }
 
-function doWrite(stream: number, state: HTMLElement, writev: boolean, len: Function, chunk: string, encoding: string, cb: string): Void {
+function doWrite(stream: number, state: HTMLElement, writev: boolean, len: Function, chunk: string, encoding: string, cb: string): void {
   state.writelen = len;
   state.writecb = cb;
   state.writing = true;
@@ -5696,7 +5696,7 @@ function doWrite(stream: number, state: HTMLElement, writev: boolean, len: Funct
   state.sync = false;
 }
 
-function onwriteError(stream: string, state: object, sync: boolean, er: string, cb: Function): Void {
+function onwriteError(stream: string, state: object, sync: boolean, er: string, cb: Function): void {
   --state.pendingcb;
 
   if (sync) {
@@ -5720,14 +5720,14 @@ function onwriteError(stream: string, state: object, sync: boolean, er: string, 
   }
 }
 
-function onwriteStateUpdate(state: object): Void {
+function onwriteStateUpdate(state: object): void {
   state.writing = false;
   state.writecb = null;
   state.length -= state.writelen;
   state.writelen = 0;
 }
 
-function onwrite(stream: string, er: number): Void {
+function onwrite(stream: string, er: number): void {
   var state: HTMLElement = stream._writableState;
   var sync: number = state.sync;
   var cb: string = state.writecb;
@@ -5752,7 +5752,7 @@ function onwrite(stream: string, er: number): Void {
   }
 }
 
-function afterWrite(stream: string, state: object, finished: boolean, cb: Function): Void {
+function afterWrite(stream: string, state: object, finished: boolean, cb: Function): void {
   if (!finished) onwriteDrain(stream, state);
   state.pendingcb--;
   cb();
@@ -5762,7 +5762,7 @@ function afterWrite(stream: string, state: object, finished: boolean, cb: Functi
 // Must force callback to be called on nextTick, so that we don't
 // emit 'drain' before the write() consumer gets the 'false' return
 // value, and has a chance to attach a 'drain' listener.
-function onwriteDrain(stream: string, state: any[]): Void {
+function onwriteDrain(stream: string, state: any[]): void {
   if (state.length === 0 && state.needDrain) {
     state.needDrain = false;
     stream.emit('drain');
@@ -5770,7 +5770,7 @@ function onwriteDrain(stream: string, state: any[]): Void {
 }
 
 // if there's something in the buffer waiting, then process it
-function clearBuffer(stream: string, state: HTMLElement): Void {
+function clearBuffer(stream: string, state: HTMLElement): void {
   state.bufferProcessing = true;
   var entry: object = state.bufferedRequest;
 
@@ -5864,7 +5864,7 @@ Writable.prototype.end = function (chunk: string, encoding: string, cb: string) 
 function needFinish(state: object): boolean {
   return state.ending && state.length === 0 && state.bufferedRequest === null && !state.finished && !state.writing;
 }
-function callFinal(stream: string, state: object): Void {
+function callFinal(stream: string, state: object): void {
   stream._final(function (err: number) {
     state.pendingcb--;
     if (err) {
@@ -5875,7 +5875,7 @@ function callFinal(stream: string, state: object): Void {
     finishMaybe(stream, state);
   });
 }
-function prefinish(stream: string, state: HTMLElement): Void {
+function prefinish(stream: string, state: HTMLElement): void {
   if (!state.prefinished && !state.finalCalled) {
     if (typeof stream._final === 'function') {
       state.pendingcb++;
@@ -5900,7 +5900,7 @@ function finishMaybe(stream: string, state: HTMLElement): string {
   return need;
 }
 
-function endWritable(stream: string, state: object, cb: string): Void {
+function endWritable(stream: string, state: object, cb: string): void {
   state.ending = true;
   finishMaybe(stream, state);
   if (cb) {
@@ -5910,7 +5910,7 @@ function endWritable(stream: string, state: object, cb: string): Void {
   stream.writable = false;
 }
 
-function onCorkedFinish(corkReq: object, state: HTMLElement, err: any[]): Void {
+function onCorkedFinish(corkReq: object, state: HTMLElement, err: any[]): void {
   var entry: object = corkReq.entry;
   corkReq.entry = null;
   while (entry) {
@@ -6037,7 +6037,7 @@ function normalizeEncoding(enc: string): boolean {
 // buffers into a series of JS strings without breaking apart multi-byte
 // characters.
 exports.StringDecoder = StringDecoder;
-function StringDecoder(encoding: string): Void {
+function StringDecoder(encoding: string): void {
   this.encoding = normalizeEncoding(encoding);
   var nb: number;
   switch (this.encoding) {
@@ -6394,7 +6394,7 @@ function Transform(options: object): string {
   this.on('prefinish', prefinish);
 }
 
-function prefinish(): Void {
+function prefinish(): void {
   var _this: any[] = this;
 
   if (typeof this._flush === 'function') {
@@ -6529,7 +6529,7 @@ function hasBom (buf: object): boolean {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: string, eventSourceInitDict: object): Void {
+function EventSource (url: string, eventSourceInitDict: object): void {
   var readyState: number = EventSource.CONNECTING
   var headers: object = eventSourceInitDict && eventSourceInitDict.headers
   var hasNewOrigin: boolean = false
@@ -6549,7 +6549,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: string): Void {
+  function onConnectionClosed (message: string): void {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -6583,7 +6583,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
 
   var reconnectUrl: string = null
 
-  function connect (): Void {
+  function connect (): void {
     var options: object = parse(url)
     var isSecure: boolean = options.protocol === 'https:'
     options.headers = { 'Cache-Control': 'no-cache', 'Accept': 'text/event-stream' }
@@ -6779,7 +6779,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
 
   connect()
 
-  function _emit (): Void {
+  function _emit (): void {
     if (self.listeners(arguments[0]).length > 0) {
       self.emit.apply(self, arguments)
     }
@@ -6792,7 +6792,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): Void {
+  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): void {
     if (lineLength === 0) {
       if (data.length > 0) {
         var type: string = eventName || 'message'
@@ -6862,7 +6862,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: string): Void {
+    set: function set (listener: string): void {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -6899,7 +6899,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): Void {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): void {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -6914,7 +6914,7 @@ EventSource.prototype.addEventListener = function addEventListener (type: string
  * @see https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent
  * @api public
  */
-EventSource.prototype.dispatchEvent = function dispatchEvent (event: TypedPropertyDescriptor): Void {
+EventSource.prototype.dispatchEvent = function dispatchEvent (event: TypedPropertyDescriptor): void {
   if (!event.type) {
     throw new Error('UNSPECIFIED_EVENT_TYPE_ERR')
   }
@@ -6932,7 +6932,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: TypedProper
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): Void {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): void {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -6945,7 +6945,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: string, optionalProperties: object): Void {
+function Event (type: string, optionalProperties: object): void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {
@@ -6962,7 +6962,7 @@ function Event (type: string, optionalProperties: object): Void {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: string, eventInitDict: object): Void {
+function MessageEvent (type: string, eventInitDict: object): void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -7310,7 +7310,7 @@ exports.write = function (buffer: object, value: number, offset: number, isLE: b
 	 * @param {String} type The error type.
 	 * @returns {Error} Throws a `RangeError` with the applicable error message.
 	 */
-	function error(type: string): Void {
+	function error(type: string): void {
 		throw new RangeError(errors[type]);
 	}
 
@@ -8409,17 +8409,17 @@ var unsafeHeaders: any[] = [
 "use strict";
 
 
-function _classCallCheck(instance: string, Constructor: number): Void { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance: string, Constructor: number): void { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Buffer: Element = __webpack_require__(7).Buffer;
 var util: boolean = __webpack_require__(35);
 
-function copyBuffer(src: any[], target: object, offset: string): Void {
+function copyBuffer(src: any[], target: object, offset: string): void {
   src.copy(target, offset);
 }
 
 module.exports = function () {
-  function BufferList(): Void {
+  function BufferList(): void {
     _classCallCheck(this, BufferList);
 
     this.head = null;
@@ -8427,14 +8427,14 @@ module.exports = function () {
     this.length = 0;
   }
 
-  BufferList.prototype.push = function push(v: any[]): Void {
+  BufferList.prototype.push = function push(v: any[]): void {
     var entry: object = { data: v, next: null };
     if (this.length > 0) this.tail.next = entry;else this.head = entry;
     this.tail = entry;
     ++this.length;
   };
 
-  BufferList.prototype.unshift = function unshift(v: any[]): Void {
+  BufferList.prototype.unshift = function unshift(v: any[]): void {
     var entry: object = { data: v, next: this.head };
     if (this.length === 0) this.tail = entry;
     this.head = entry;
@@ -8449,7 +8449,7 @@ module.exports = function () {
     return ret;
   };
 
-  BufferList.prototype.clear = function clear(): Void {
+  BufferList.prototype.clear = function clear(): void {
     this.head = this.tail = null;
     this.length = 0;
   };
@@ -8517,7 +8517,7 @@ exports.clearInterval = function(timeout: object) {
   }
 };
 
-function Timeout(id: string, clearFn: string): Void {
+function Timeout(id: string, clearFn: string): void {
   this._id = id;
   this._clearFn = clearFn;
 }
@@ -8542,7 +8542,7 @@ exports._unrefActive = exports.active = function(item: HTMLElement) {
 
   var msecs: number = item._idleTimeout;
   if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout(): Void {
+    item._idleTimeoutId = setTimeout(function onTimeout(): void {
       if (item._onTimeout)
         item._onTimeout();
     }, msecs);
@@ -8597,11 +8597,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
       return nextHandle++;
     }
 
-    function clearImmediate(handle: string): Void {
+    function clearImmediate(handle: string): void {
         delete tasksByHandle[handle];
     }
 
-    function run(task: object): Void {
+    function run(task: object): void {
         var callback: Function = task.callback;
         var args: any[] = task.args;
         switch (args.length) {
@@ -8623,7 +8623,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         }
     }
 
-    function runIfPresent(handle: number): Void {
+    function runIfPresent(handle: number): void {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -8644,7 +8644,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         }
     }
 
-    function installNextTickImplementation(): Void {
+    function installNextTickImplementation(): void {
         registerImmediate = function(handle: string) {
             process.nextTick(function () { runIfPresent(handle); });
         };
@@ -8665,7 +8665,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         }
     }
 
-    function installPostMessageImplementation(): Void {
+    function installPostMessageImplementation(): void {
         // Installs an event handler on `global` for the `message` event: see
         // * https://developer.mozilla.org/en/DOM/window.postMessage
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
@@ -8690,7 +8690,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         };
     }
 
-    function installMessageChannelImplementation(): Void {
+    function installMessageChannelImplementation(): void {
         var channel: HTMLElement = new MessageChannel();
         channel.port1.onmessage = function(event: object) {
             var handle: any[] = event.data;
@@ -8702,7 +8702,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         };
     }
 
-    function installReadyStateChangeImplementation(): Void {
+    function installReadyStateChangeImplementation(): void {
         var html: Element = doc.documentElement;
         registerImmediate = function(handle: string) {
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
@@ -8718,7 +8718,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         };
     }
 
-    function installSetTimeoutImplementation(): Void {
+    function installSetTimeoutImplementation(): void {
         registerImmediate = function(handle: number) {
             setTimeout(runIfPresent, 0, handle);
         };
@@ -9670,7 +9670,7 @@ exports.promisify = function promisify(original: object): any[] {
 
 exports.promisify.custom = kCustomPromisifiedSymbol
 
-function callbackifyOnRejected(reason: HTMLElement, cb: Function): Void {
+function callbackifyOnRejected(reason: HTMLElement, cb: Function): void {
   // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
   // Because `null` is a special error value in callbacks which means "no error
   // occurred", we error-wrap so the callback consumer can distinguish between
@@ -9691,7 +9691,7 @@ function callbackify(original: Function): Function {
   // We DO NOT return the promise as it gives the user a false sense that
   // the promise is actually somehow related to the callback's execution
   // and that the callback throwing will reject the promise.
-  function callbackified(): Void {
+  function callbackified(): void {
     var args: any[] = [];
     for (var i = 0; i < arguments.length; i++) {
       args.push(arguments[i]);

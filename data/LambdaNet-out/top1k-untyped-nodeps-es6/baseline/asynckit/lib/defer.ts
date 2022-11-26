@@ -5,7 +5,7 @@ export default defer;
  *
  * @param {function} fn - function to run
  */
-function defer(fn: number): Void
+function defer(fn: number): void
 {
   var nextTick: Function = typeof setImmediate == 'function'
     ? setImmediate

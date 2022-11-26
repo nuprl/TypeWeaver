@@ -4,8 +4,6 @@
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 map.ts(6,3): error TS1258: A default export must be at the top level of a file or module declaration.
 map.ts(8,3): error TS1258: A default export must be at the top level of a file or module declaration.
-pseudomap.ts(5,34): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(5,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 pseudomap.ts(14,19): error TS2345: Argument of type '(value: string, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
   Types of parameters 'key' and 'index' are incompatible.
     Type 'number' is not assignable to type 'string'.
@@ -21,9 +19,6 @@ pseudomap.ts(48,7): error TS2322: Type 'string' is not assignable to type 'objec
 pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'object'.
 pseudomap.ts(57,8): error TS2339: Property 'size' does not exist on type 'any[]'.
 pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-pseudomap.ts(87,51): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(102,52): error TS2304: Cannot find name 'Void'.
 pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'object'.
-pseudomap.ts(112,15): error TS2350: Only a void function can be called with the 'new' keyword.
 pseudomap.ts(112,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 

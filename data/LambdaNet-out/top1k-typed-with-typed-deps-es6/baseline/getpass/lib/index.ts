@@ -33,7 +33,7 @@ var BACKSPACE: string = String.fromCharCode(127);
 var CTRLC: string = '\u0003';
 var CTRLD: string = '\u0004';
 
-function getPass(opts: Function, cb: Function): Void {
+function getPass(opts: Function, cb: Function): void {
 	if (typeof (opts) === 'function' && cb === undefined) {
 		cb = opts;
 		opts = {};
@@ -60,7 +60,7 @@ function getPass(opts: Function, cb: Function): Void {
 		var pw: string = '';
 		rtty.on('data', onData);
 
-		function onData(data: string): Void {
+		function onData(data: string): void {
 			var str: string = data.toString('utf8');
 			for (var i = 0; i < str.length; ++i) {
 				var ch: string = str[i];
@@ -85,7 +85,7 @@ function getPass(opts: Function, cb: Function): Void {
 			}
 		}
 
-		function cleanup(): Void {
+		function cleanup(): void {
 			wtty.write('\r\n');
 			rtty.setRawMode(false);
 			rtty.pause();
@@ -102,7 +102,7 @@ function getPass(opts: Function, cb: Function): Void {
 	});
 }
 
-function openTTY(cb: Function): Void {
+function openTTY(cb: Function): void {
 	mod_fs.open('/dev/tty', 'r+', function (err: object, rttyfd: string) {
 		if ((err && (err.code === 'ENOENT' || err.code === 'EACCES')) ||
 		    (process.version.match(/^v0[.][0-8][.]/))) {

@@ -67,7 +67,7 @@ function decode (str: object): object {
   }
 }
 
-function copyBE (src: string, outBuf16: object): Void {
+function copyBE (src: string, outBuf16: object): void {
   const len: number = src.length;
   let i: number = 0;
   while (i < len) {
@@ -76,7 +76,7 @@ function copyBE (src: string, outBuf16: object): Void {
   }
 }
 
-function copyLE (src: string, outBuf16: object): Void {
+function copyLE (src: string, outBuf16: object): void {
   const len: number = src.length;
   let i: number = 0;
   while (i < len)

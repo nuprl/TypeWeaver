@@ -23,7 +23,7 @@ function calcDeclarationsLength(tokens: any[]): number {
     );
 }
 
-function processRule(node: object, item: object, list: HTMLElement): Void {
+function processRule(node: object, item: object, list: HTMLElement): void {
     const avoidRulesMerge: boolean = this.block !== null ? this.block.avoidRulesMerge : false;
     const selectors: any[] = node.prelude.children;
     const block: object = node.block;
@@ -167,7 +167,7 @@ function processRule(node: object, item: object, list: HTMLElement): Void {
     });
 }
 
-export default function restructRule(ast: Function): Void {
+export default function restructRule(ast: Function): void {
     walk(ast, {
         visit: 'Rule',
         reverse: true,

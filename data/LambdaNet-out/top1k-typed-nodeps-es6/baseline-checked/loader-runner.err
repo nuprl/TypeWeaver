@@ -49,9 +49,9 @@ lib/LoaderRunner.ts(117,39): error TS2339: Property 'callback' does not exist on
 lib/LoaderRunner.ts(132,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(132,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(162,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/LoaderRunner.ts(162,52): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(171,19): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(171,48): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
+lib/LoaderRunner.ts(172,3): error TS2322: Type 'void' is not assignable to type 'string'.
 lib/LoaderRunner.ts(174,55): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(174,77): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(177,25): error TS2339: Property 'pitchExecuted' does not exist on type 'HTMLElement'.
@@ -65,7 +65,6 @@ lib/LoaderRunner.ts(194,66): error TS2339: Property 'previousRequest' does not e
 lib/LoaderRunner.ts(194,103): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(205,20): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(206,51): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-lib/LoaderRunner.ts(215,92): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(217,16): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(217,44): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(219,43): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
@@ -84,8 +83,7 @@ lib/LoaderRunner.ts(250,40): error TS2339: Property 'raw' does not exist on type
 lib/LoaderRunner.ts(252,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 lib/LoaderRunner.ts(260,44): error TS2322: Type '(resource: string) => string' is not assignable to type 'string'.
 lib/LoaderRunner.ts(261,54): error TS2339: Property 'path' does not exist on type 'object'.
-lib/LoaderRunner.ts(265,14): error TS2322: Type '(options: object, callback: Function) => Void' is not assignable to type 'string'.
-lib/LoaderRunner.ts(265,93): error TS2304: Cannot find name 'Void'.
+lib/LoaderRunner.ts(265,14): error TS2322: Type '(options: object, callback: Function) => void' is not assignable to type 'string'.
 lib/LoaderRunner.ts(267,33): error TS2339: Property 'resource' does not exist on type 'object'.
 lib/LoaderRunner.ts(268,31): error TS2339: Property 'loaders' does not exist on type 'object'.
 lib/LoaderRunner.ts(269,43): error TS2339: Property 'context' does not exist on type 'object'.
@@ -106,21 +104,16 @@ lib/LoaderRunner.ts(296,16): error TS2339: Property 'resourceFragment' does not 
 lib/LoaderRunner.ts(297,16): error TS2339: Property 'async' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(298,16): error TS2339: Property 'callback' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(299,16): error TS2339: Property 'cacheable' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(299,62): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(300,6): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 lib/LoaderRunner.ts(304,16): error TS2339: Property 'dependency' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(304,43): error TS2339: Property 'addDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(304,97): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(307,16): error TS2339: Property 'addContextDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(307,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(310,16): error TS2339: Property 'addMissingDependency' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(310,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(313,16): error TS2339: Property 'getDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(316,16): error TS2339: Property 'getContextDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(316,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(319,16): error TS2339: Property 'getMissingDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(322,16): error TS2339: Property 'clearDependencies' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(322,66): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(331,21): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(333,25): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(333,75): error TS2339: Property 'resourceQuery' does not exist on type 'HTMLElement'.
@@ -167,7 +160,7 @@ lib/loadLoader.ts(19,40): error TS2339: Property 'path' does not exist on type '
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/loadLoader.ts(27,6): error TS2322: Type 'Immediate' is not assignable to type 'string'.
 lib/loadLoader.ts(30,6): error TS2322: Type 'void' is not assignable to type 'string'.
-lib/loadLoader.ts(39,77): error TS2304: Cannot find name 'Void'.
+lib/loadLoader.ts(35,3): error TS2322: Type 'void' is not assignable to type 'string'.
 lib/loadLoader.ts(42,24): error TS2339: Property 'path' does not exist on type 'Element'.
 lib/loadLoader.ts(45,9): error TS2339: Property 'normal' does not exist on type 'Element'.
 lib/loadLoader.ts(45,65): error TS2339: Property 'default' does not exist on type 'never'.

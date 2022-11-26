@@ -204,7 +204,7 @@ function assertImportsFieldRequest(request: string): any[] {
  * @param {string} exp export target
  * @param {boolean} expectFolder is folder expected
  */
-function assertExportTarget(exp: string, expectFolder: boolean): Void {
+function assertExportTarget(exp: string, expectFolder: boolean): void {
 	if (
 		exp.charCodeAt(0) === slashCode ||
 		(exp.charCodeAt(0) === dotCode && exp.charCodeAt(1) !== slashCode)
@@ -235,7 +235,7 @@ function assertExportTarget(exp: string, expectFolder: boolean): Void {
  * @param {string} imp import target
  * @param {boolean} expectFolder is folder expected
  */
-function assertImportTarget(imp: string, expectFolder: boolean): Void {
+function assertImportTarget(imp: string, expectFolder: boolean): void {
 	const isFolder: boolean = imp.charCodeAt(imp.length - 1) === slashCode;
 
 	if (isFolder !== expectFolder) {
@@ -507,7 +507,7 @@ function createNode(): object {
  * @param {string} path path
  * @param {MappingValue} target target
  */
-function walkPath(root: object, path: string, target: any[]): Void {
+function walkPath(root: object, path: string, target: any[]): void {
 	if (path.length === 0) {
 		root.folder = target;
 		return;

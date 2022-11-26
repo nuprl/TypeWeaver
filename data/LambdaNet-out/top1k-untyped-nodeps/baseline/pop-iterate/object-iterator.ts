@@ -4,7 +4,7 @@ var Iteration: any[] = require("./iteration");
 var ArrayIterator: any[] = require("./array-iterator");
 
 module.exports = ObjectIterator;
-function ObjectIterator(iterable: Function, start: string, stop: Function, step: string): Void {
+function ObjectIterator(iterable: Function, start: string, stop: Function, step: string): void {
     this.object = iterable;
     this.keysIterator = new ArrayIterator(Object.keys(iterable), start, stop, step);
 }

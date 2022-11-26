@@ -11,7 +11,6 @@ build.ts(29,16): error TS2339: Property 'property' does not exist on type 'objec
 build.ts(30,20): error TS2339: Property 'property' does not exist on type 'object'.
 build.ts(30,30): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 build.ts(30,44): error TS2339: Property 'property' does not exist on type 'object'.
-build.ts(33,46): error TS2304: Cannot find name 'Void'.
 build.ts(34,23): error TS2339: Property 'start' does not exist on type 'Node'.
 build.ts(34,39): error TS2339: Property 'end' does not exist on type 'Node'.
 build.ts(37,14): error TS2339: Property 'start' does not exist on type 'Node'.
@@ -30,29 +29,20 @@ build.ts(62,27): error TS2345: Argument of type 'string' is not assignable to pa
 polyfill-done.ts(3,30): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
 polyfill-done.ts(4,21): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
 polyfill-done.ts(5,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/core.ts(5,18): error TS2304: Cannot find name 'Void'.
-src/core.ts(5,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/core.ts(25,5): error TS2322: Type '{}' is not assignable to type 'number'.
 src/core.ts(26,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/core.ts(31,5): error TS2322: Type 'number' is not assignable to type 'any[]'.
-src/core.ts(35,47): error TS2304: Cannot find name 'Void'.
-src/core.ts(43,58): error TS2304: Cannot find name 'Void'.
-src/core.ts(54,31): error TS2304: Cannot find name 'Void'.
-src/core.ts(54,31): error TS4060: Return type of exported function has or is using private name 'Void'.
-src/core.ts(76,21): error TS2350: Only a void function can be called with the 'new' keyword.
-src/core.ts(76,33): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'string'.
-src/core.ts(77,16): error TS2350: Only a void function can be called with the 'new' keyword.
+src/core.ts(40,5): error TS2322: Type 'number' is not assignable to type 'void'.
+src/core.ts(48,5): error TS2322: Type 'number' is not assignable to type 'void'.
+src/core.ts(76,33): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'string'.
 src/core.ts(77,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/core.ts(81,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/core.ts(82,14): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 src/core.ts(83,14): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/core.ts(83,24): error TS2350: Only a void function can be called with the 'new' keyword.
-src/core.ts(83,36): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'string'.
+src/core.ts(83,36): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'string'.
 src/core.ts(85,12): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-src/core.ts(85,18): error TS2350: Only a void function can be called with the 'new' keyword.
 src/core.ts(85,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-src/core.ts(88,54): error TS2304: Cannot find name 'Void'.
 src/core.ts(89,15): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
 src/core.ts(90,17): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
 src/core.ts(95,12): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
@@ -66,7 +56,6 @@ src/core.ts(103,31): error TS2339: Property '_deferreds' does not exist on type 
 src/core.ts(106,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
 src/core.ts(109,24): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'HTMLElement'.
   Type 'any[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-src/core.ts(112,68): error TS2304: Cannot find name 'Void'.
 src/core.ts(114,27): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
 src/core.ts(114,51): error TS2339: Property 'onFulfilled' does not exist on type 'HTMLElement'.
 src/core.ts(114,74): error TS2339: Property 'onRejected' does not exist on type 'HTMLElement'.
@@ -75,6 +64,7 @@ src/core.ts(117,26): error TS2339: Property 'promise' does not exist on type 'HT
 src/core.ts(117,40): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
 src/core.ts(119,25): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
 src/core.ts(119,39): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/core.ts(123,9): error TS2322: Type 'void' is not assignable to type 'number'.
 src/core.ts(123,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 src/core.ts(123,43): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
 src/core.ts(125,23): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
@@ -82,9 +72,11 @@ src/core.ts(125,32): error TS2345: Argument of type 'any[]' is not assignable to
 src/core.ts(127,24): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
 src/core.ts(127,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/core.ts(133,7): error TS2367: This condition will always return 'false' since the types 'string' and 'object' have no overlap.
+src/core.ts(134,5): error TS2322: Type 'void' is not assignable to type 'string'.
 src/core.ts(136,7): error TS2345: Argument of type 'TypeError' is not assignable to parameter of type 'number'.
 src/core.ts(143,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 src/core.ts(144,9): error TS2367: This condition will always return 'false' since the types 'Function' and 'number' have no overlap.
+src/core.ts(145,7): error TS2322: Type 'void' is not assignable to type 'string'.
 src/core.ts(145,27): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 src/core.ts(148,21): error TS2339: Property 'then' does not exist on type 'object'.
 src/core.ts(149,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
@@ -95,11 +87,9 @@ src/core.ts(153,14): error TS2345: Argument of type 'object' is not assignable t
 src/core.ts(160,8): error TS2339: Property '_state' does not exist on type 'object'.
 src/core.ts(161,8): error TS2339: Property '_value' does not exist on type 'object'.
 src/core.ts(162,10): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-src/core.ts(165,50): error TS2304: Cannot find name 'Void'.
 src/core.ts(166,8): error TS2339: Property '_state' does not exist on type 'object'.
 src/core.ts(167,8): error TS2339: Property '_value' does not exist on type 'object'.
 src/core.ts(171,10): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-src/core.ts(173,37): error TS2304: Cannot find name 'Void'.
 src/core.ts(174,12): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
 src/core.ts(175,23): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
 src/core.ts(176,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
@@ -107,8 +97,7 @@ src/core.ts(178,12): error TS2339: Property '_deferredState' does not exist on t
 src/core.ts(179,30): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
 src/core.ts(180,25): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
 src/core.ts(182,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
-src/core.ts(186,77): error TS2304: Cannot find name 'Void'.
-src/core.ts(198,50): error TS2304: Cannot find name 'Void'.
+src/core.ts(200,7): error TS2322: Type 'void' is not assignable to type 'number'.
 src/core.ts(200,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 src/core.ts(207,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/core.ts(211,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
@@ -122,8 +111,7 @@ src/es6-extensions.ts(14,5): error TS2322: Type 'string' is not assignable to ty
 src/es6-extensions.ts(15,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/es6-extensions.ts(15,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(16,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
-src/es6-extensions.ts(19,24): error TS2350: Only a void function can be called with the 'new' keyword.
-src/es6-extensions.ts(19,36): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'string'.
+src/es6-extensions.ts(19,36): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(20,5): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
 src/es6-extensions.ts(21,5): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
 src/es6-extensions.ts(22,3): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
@@ -133,12 +121,9 @@ src/es6-extensions.ts(30,7): error TS2367: This condition will always return 'fa
 src/es6-extensions.ts(31,7): error TS2367: This condition will always return 'false' since the types 'any[]' and 'number' have no overlap.
 src/es6-extensions.ts(32,7): error TS2367: This condition will always return 'false' since the types 'any[]' and 'string' have no overlap.
 src/es6-extensions.ts(36,34): error TS2339: Property 'then' does not exist on type 'any[]'.
-src/es6-extensions.ts(38,16): error TS2350: Only a void function can be called with the 'new' keyword.
-src/es6-extensions.ts(41,14): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(41,26): error TS2345: Argument of type '(resolve: any, reject: any) => void' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(46,23): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(61,9): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
-src/es6-extensions.ts(64,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(64,22): error TS2345: Argument of type '(resolve: Function, reject: Function) => any' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(69,43): error TS2339: Property 'then' does not exist on type '{}'.
 src/es6-extensions.ts(70,22): error TS2339: Property '_state' does not exist on type 'object'.
@@ -151,22 +136,18 @@ src/es6-extensions.ts(75,15): error TS2339: Property 'then' does not exist on ty
 src/es6-extensions.ts(76,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/es6-extensions.ts(80,36): error TS2339: Property 'then' does not exist on type 'object'.
 src/es6-extensions.ts(82,20): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/es6-extensions.ts(82,30): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(84,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/es6-extensions.ts(96,11): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(107,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/es6-extensions.ts(109,40): error TS2339: Property 'then' does not exist on type 'any[]'.
 src/es6-extensions.ts(110,19): error TS2339: Property 'then' does not exist on type 'any[]'.
 src/es6-extensions.ts(112,31): error TS2339: Property 'then' does not exist on type 'any[]'.
-src/es6-extensions.ts(114,14): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(118,27): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(120,9): error TS2339: Property 'allSettled' does not exist on type 'typeof Promise'.
 src/es6-extensions.ts(121,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
 src/es6-extensions.ts(124,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
-src/es6-extensions.ts(125,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(125,22): error TS2345: Argument of type '(resolve: Function, reject: Function) => void' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(130,9): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
-src/es6-extensions.ts(131,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/es6-extensions.ts(131,22): error TS2345: Argument of type '(resolve: Function, reject: string) => void' is not assignable to parameter of type 'string'.
 src/es6-extensions.ts(133,15): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
 src/finally.ts(8,20): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
@@ -180,11 +161,8 @@ src/node-extensions.ts(71,32): error TS2345: Argument of type '(_: string, index
 src/node-extensions.ts(74,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/node-extensions.ts(92,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
 src/node-extensions.ts(97,9): error TS2339: Property 'nodeify' does not exist on type 'typeof Promise'.
-src/node-extensions.ts(107,16): error TS2350: Only a void function can be called with the 'new' keyword.
 src/node-extensions.ts(107,28): error TS2345: Argument of type '(resolve: any, reject: any) => void' is not assignable to parameter of type 'string'.
 src/node-extensions.ts(112,20): error TS2339: Property 'call' does not exist on type 'string'.
-src/rejection-tracking.ts(13,21): error TS2304: Cannot find name 'Void'.
-src/rejection-tracking.ts(20,40): error TS2304: Cannot find name 'Void'.
 src/rejection-tracking.ts(21,3): error TS2322: Type 'HTMLElement | {}' is not assignable to type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/rejection-tracking.ts(29,15): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
@@ -197,15 +175,12 @@ src/rejection-tracking.ts(41,17): error TS2339: Property '_deferredState' does n
 src/rejection-tracking.ts(42,15): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(43,26): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(47,42): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
-src/rejection-tracking.ts(60,37): error TS2304: Cannot find name 'Void'.
 src/rejection-tracking.ts(62,15): error TS2339: Property 'allRejections' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(65,17): error TS2339: Property 'whitelist' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(69,19): error TS2339: Property 'onUnhandled' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(71,17): error TS2339: Property 'onUnhandled' does not exist on type 'HTMLElement'.
-src/rejection-tracking.ts(84,35): error TS2304: Cannot find name 'Void'.
 src/rejection-tracking.ts(86,19): error TS2339: Property 'onHandled' does not exist on type 'HTMLElement'.
 src/rejection-tracking.ts(87,17): error TS2339: Property 'onHandled' does not exist on type 'HTMLElement'.
-src/rejection-tracking.ts(101,46): error TS2304: Cannot find name 'Void'.
 src/rejection-tracking.ts(111,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 src/synchronous.ts(6,9): error TS2339: Property 'enableSynchronous' does not exist on type 'typeof Promise'.
 src/synchronous.ts(55,9): error TS2339: Property 'disableSynchronous' does not exist on type 'typeof Promise'.

@@ -1,5 +1,5 @@
 let len: number = 0;
-export default function asap(callback: string, arg: string): Void {
+export default function asap(callback: string, arg: string): void {
   queue[len] = callback;
   queue[len + 1] = arg;
   len += 2;
@@ -61,7 +61,7 @@ function useSetTimeout(): Function {
 
 const queue: object = new Array(1000);
 
-function flush(): Void {
+function flush(): void {
   for (let i = 0; i < len; i+=2) {
     let callback: Function = queue[i];
     let arg: string = queue[i+1];

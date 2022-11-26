@@ -5,7 +5,6 @@ example/run/bundle.ts(1,415): error TS2554: Expected 2 arguments, but got 1.
 example/run/bundle.ts(1,428): error TS2339: Property 'exports' does not exist on type 'object'.
 example/run/bundle.ts(1,530): error TS2554: Expected 2 arguments, but got 1.
 example/run/bundle.ts(19,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
-example/run/bundle.ts(49,21): error TS2304: Cannot find name 'Void'.
 example/run/bundle.ts(52,30): error TS2339: Property 'Script' does not exist on type 'object'.
 example/run/bundle.ts(53,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 example/run/bundle.ts(53,47): error TS2351: This expression is not constructable.
@@ -34,16 +33,13 @@ example/run/bundle.ts(138,9): error TS2339: Property 'createScript' does not exi
 example/run/bundle.ts(139,20): error TS2339: Property 'Script' does not exist on type 'object'.
 example/run/bundle.ts(142,9): error TS2339: Property 'createContext' does not exist on type 'object'.
 example/run/bundle.ts(142,32): error TS2339: Property 'createContext' does not exist on type 'object'.
-example/run/bundle.ts(143,24): error TS2350: Only a void function can be called with the 'new' keyword.
-example/run/bundle.ts(153,9): error TS2304: Cannot find name 'Void'.
+example/run/bundle.ts(156,26): error TS2339: Property 'runInNewContext' does not exist on type 'void'.
 example/run/bundle.ts(157,5): error TS2322: Type 'number' is not assignable to type 'string'.
 example/run/entry.ts(4,26): error TS2339: Property 'runInNewContext' does not exist on type 'string'.
 example/run/entry.ts(5,5): error TS2322: Type 'number' is not assignable to type 'string'.
 example/run/server.ts(3,6): error TS2339: Property 'createServer' does not exist on type 'string'.
 index.ts(18,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
   Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): void'.
-index.ts(48,21): error TS2304: Cannot find name 'Void'.
-index.ts(48,21): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(52,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(52,47): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
@@ -68,5 +64,4 @@ index.ts(128,25): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(134,12): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 index.ts(141,32): error TS2339: Property 'createContext' does not exist on type 'object'.
-index.ts(142,24): error TS2350: Only a void function can be called with the 'new' keyword.
 

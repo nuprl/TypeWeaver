@@ -5,12 +5,12 @@ import inherits from 'inherits';
 import utils from './utils';
 import Cipher from './cipher';
 
-function DESState(): Void {
+function DESState(): void {
   this.tmp = new Array(2);
   this.keys = null;
 }
 
-function DES(options: object): Void {
+function DES(options: object): void {
   Cipher.call(this, options);
 
   var state: string = new DESState();
@@ -30,7 +30,7 @@ var shiftTable: any[] = [
   1, 2, 2, 2, 2, 2, 2, 1
 ];
 
-DES.prototype.deriveKeys = function deriveKeys(state: Map, key: string): Void {
+DES.prototype.deriveKeys = function deriveKeys(state: Map, key: string): void {
   state.keys = new Array(16 * 2);
 
   assert.equal(key.length, this.blockSize, 'Invalid key length');
@@ -49,7 +49,7 @@ DES.prototype.deriveKeys = function deriveKeys(state: Map, key: string): Void {
   }
 };
 
-DES.prototype._update = function _update(inp: string, inOff: number, out: string, outOff: number): Void {
+DES.prototype._update = function _update(inp: string, inOff: number, out: string, outOff: number): void {
   var state: HTMLElement = this._desState;
 
   var l: string = utils.readUInt32BE(inp, inOff);
@@ -88,7 +88,7 @@ DES.prototype._unpad = function _unpad(buffer: object): boolean {
   return buffer.slice(0, buffer.length - pad);
 };
 
-DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): Void {
+DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): void {
   var l: string = lStart;
   var r: string = rStart;
 
@@ -114,7 +114,7 @@ DES.prototype._encrypt = function _encrypt(state: HTMLElement, lStart: string, r
   utils.rip(r, l, out, off);
 };
 
-DES.prototype._decrypt = function _decrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): Void {
+DES.prototype._decrypt = function _decrypt(state: HTMLElement, lStart: string, rStart: string, out: Function, off: string): void {
   var l: string = rStart;
   var r: string = lStart;
 

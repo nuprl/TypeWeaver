@@ -16,12 +16,12 @@ function Queue(options: object): string {
 
 // Called upon completion of a job. Calls run() again
 // to pluck the next job off the queue, if it exists.
-function done(): Void {
+function done(): void {
   this.pending--;
   this._run();
 }
 
-function run(): Void {
+function run(): void {
   // Do we have capacity for jobs?
   // If so, start them, uip to the concurrency limit
   while (this.pending < this.concurrency && this.jobs.length) {

@@ -8,7 +8,7 @@ import { mkdirp } from '../mkdirs';
 import { pathExists } from '../path-exists';
 import stat from '../util/stat';
 
-function move (src: string, dest: string, opts: object, cb: Function): Void {
+function move (src: string, dest: string, opts: object, cb: Function): void {
   if (typeof opts === 'function') {
     cb = opts
     opts = {}
@@ -53,7 +53,7 @@ function doRename (src: string, dest: string, overwrite: string, isChangingCase:
   })
 }
 
-function rename (src: string, dest: string, overwrite: string, cb: Function): Void {
+function rename (src: string, dest: string, overwrite: string, cb: Function): void {
   fs.rename(src, dest, (err: object) => {
     if (!err) return cb()
     if (err.code !== 'EXDEV') return cb(err)
@@ -61,7 +61,7 @@ function rename (src: string, dest: string, overwrite: string, cb: Function): Vo
   })
 }
 
-function moveAcrossDevice (src: string, dest: string, overwrite: number, cb: Function): Void {
+function moveAcrossDevice (src: string, dest: string, overwrite: number, cb: Function): void {
   const opts: object = {
     overwrite,
     errorOnExist: true

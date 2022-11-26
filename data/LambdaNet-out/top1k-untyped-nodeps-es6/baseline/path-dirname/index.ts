@@ -3,7 +3,7 @@
 import path from 'path';
 import { inspect } from 'util';
 
-function assertPath(path: string): Void {
+function assertPath(path: string): void {
   if (typeof path !== 'string') {
     throw new TypeError('Path must be a string. Received ' + inspect(path));
   }

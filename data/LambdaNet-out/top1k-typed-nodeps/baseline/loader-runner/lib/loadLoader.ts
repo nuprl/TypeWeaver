@@ -36,7 +36,7 @@ module.exports = function loadLoader(loader: object, callback: Function): string
 	}
 };
 
-function handleResult(loader: Element, module: string, callback: Function): Void {
+function handleResult(loader: Element, module: string, callback: Function): void {
 	if(typeof module !== "function" && typeof module !== "object") {
 		return callback(new LoaderLoadingError(
 			"Module '" + loader.path + "' is not a loader (export function or es6 module)"

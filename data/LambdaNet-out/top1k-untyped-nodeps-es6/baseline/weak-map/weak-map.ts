@@ -96,7 +96,7 @@
  * <p>See {@code WeakMap} for documentation of the garbage collection
  * properties of this WeakMap emulation.
  */
-(function WeakMapModule(): Void {
+(function WeakMapModule(): void {
   "use strict";
 
   if (typeof ses !== 'undefined' && ses.ok && !ses.ok()) {
@@ -117,7 +117,7 @@
    * Do not apply this function to anything which is not a genuine
    * fresh WeakMap.
    */
-  function weakMapPermitHostObjects(map: object): Void {
+  function weakMapPermitHostObjects(map: object): void {
     // identity of function used as a secret -- good enough and cheap
     if (map.permitHostObjects___) {
       map.permitHostObjects___(weakMapPermitHostObjects);
@@ -395,7 +395,7 @@
   }
 
   var calledAsFunctionWarningDone: boolean = false;
-  function calledAsFunctionWarning(): Void {
+  function calledAsFunctionWarning(): void {
     // Future ES6 WeakMap is currently (2013-09-10) expected to reject WeakMap()
     // but we used to permit it and do it ourselves, so warn only.
     if (!calledAsFunctionWarningDone && typeof console !== 'undefined') {

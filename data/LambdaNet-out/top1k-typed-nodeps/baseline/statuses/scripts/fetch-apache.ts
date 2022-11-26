@@ -8,7 +8,7 @@ var write: Function = require('./lib/write')
 var URL: string = 'https://svn.apache.org/repos/asf/httpd/httpd/trunk/modules/http/http_protocol.c'
 var HEADERS: object = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: string): Void {
+https.get(URL, { headers: HEADERS }, function onResponse (res: string): void {
   getBody(res, true, function (err: boolean, body: string) {
     if (err) throw err
 

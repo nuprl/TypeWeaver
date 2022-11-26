@@ -1623,7 +1623,7 @@ class CookieJar {
       let completedCount: number = 0;
       const removeErrors: any[] = [];
 
-      function removeCookieCb(removeErr: Cookie): Void {
+      function removeCookieCb(removeErr: Cookie): void {
         if (removeErr) {
           removeErrors.push(removeErr);
         }

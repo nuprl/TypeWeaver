@@ -164,7 +164,7 @@ function useColors(): boolean {
  * @api public
  */
 
-function formatArgs(args: any[]): Void {
+function formatArgs(args: any[]): void {
 	const {namespace: name, useColors} = this;
 
 	if (useColors) {
@@ -200,7 +200,7 @@ function log(...args): number {
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: string): Void {
+function save(namespaces: string): void {
 	if (namespaces) {
 		process.env.DEBUG = namespaces;
 	} else {
@@ -228,7 +228,7 @@ function load(): object {
  * differently for a particular `debug` instance.
  */
 
-function init(debug: object): Void {
+function init(debug: object): void {
 	debug.inspectOpts = {};
 
 	const keys: any[] = Object.keys(exports.inspectOpts);

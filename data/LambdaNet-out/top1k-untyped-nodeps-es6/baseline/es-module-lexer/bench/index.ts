@@ -52,7 +52,7 @@ Promise.resolve().then(async () => {
 		doRun();
 	}
 
-	function doRun (): Void {
+	function doRun (): void {
 		console.log('Cold Run, All Samples');
 		let totalSize: number = 0;
 		{

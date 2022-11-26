@@ -1,6 +1,6 @@
 const { Transform } = require('readable-stream')
 
-function inherits (fn: object, sup: object): Void {
+function inherits (fn: object, sup: object): void {
   fn.super_ = sup
   fn.prototype = Object.create(sup.prototype, {
     constructor: { value: fn, enumerable: false, writable: true, configurable: true }

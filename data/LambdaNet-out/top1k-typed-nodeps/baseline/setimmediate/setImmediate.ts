@@ -28,11 +28,11 @@
       return nextHandle++;
     }
 
-    function clearImmediate(handle: string): Void {
+    function clearImmediate(handle: string): void {
         delete tasksByHandle[handle];
     }
 
-    function run(task: object): Void {
+    function run(task: object): void {
         var callback: Function = task.callback;
         var args: any[] = task.args;
         switch (args.length) {
@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: number): Void {
+    function runIfPresent(handle: number): void {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -75,7 +75,7 @@
         }
     }
 
-    function installNextTickImplementation(): Void {
+    function installNextTickImplementation(): void {
         registerImmediate = function(handle: string) {
             process.nextTick(function () { runIfPresent(handle); });
         };
@@ -96,7 +96,7 @@
         }
     }
 
-    function installPostMessageImplementation(): Void {
+    function installPostMessageImplementation(): void {
         // Installs an event handler on `global` for the `message` event: see
         // * https://developer.mozilla.org/en/DOM/window.postMessage
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
@@ -121,7 +121,7 @@
         };
     }
 
-    function installMessageChannelImplementation(): Void {
+    function installMessageChannelImplementation(): void {
         var channel: HTMLElement = new MessageChannel();
         channel.port1.onmessage = function(event: object) {
             var handle: number = event.data;
@@ -133,7 +133,7 @@
         };
     }
 
-    function installReadyStateChangeImplementation(): Void {
+    function installReadyStateChangeImplementation(): void {
         var html: Element = doc.documentElement;
         registerImmediate = function(handle: string) {
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
@@ -149,7 +149,7 @@
         };
     }
 
-    function installSetTimeoutImplementation(): Void {
+    function installSetTimeoutImplementation(): void {
         registerImmediate = function(handle: number) {
             setTimeout(runIfPresent, 0, handle);
         };

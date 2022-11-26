@@ -196,7 +196,6 @@ lib/url-state-machine.ts(448,5): error TS2322: Type 'number' is not assignable t
 lib/url-state-machine.ts(450,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(454,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/url-state-machine.ts(458,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
-lib/url-state-machine.ts(461,36): error TS2304: Cannot find name 'Void'.
 lib/url-state-machine.ts(462,11): error TS2339: Property 'path' does not exist on type 'String'.
 lib/url-state-machine.ts(466,11): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(474,14): error TS2339: Property 'username' does not exist on type 'string'.
@@ -205,7 +204,6 @@ lib/url-state-machine.ts(478,14): error TS2339: Property 'host' does not exist o
 lib/url-state-machine.ts(478,35): error TS2339: Property 'host' does not exist on type 'string'.
 lib/url-state-machine.ts(478,54): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(482,21): error TS2339: Property 'path' does not exist on type 'string'.
-lib/url-state-machine.ts(489,119): error TS2304: Cannot find name 'Void'.
 lib/url-state-machine.ts(511,11): error TS2322: Type 'boolean' is not assignable to type 'string'.
 lib/url-state-machine.ts(518,9): error TS2322: Type 'boolean' is not assignable to type 'string'.
 lib/url-state-machine.ts(531,55): error TS2339: Property 'codePointAt' does not exist on type 'any[]'.
@@ -259,7 +257,6 @@ lib/url-state-machine.ts(1181,15): error TS2339: Property 'scheme' does not exis
 lib/url-state-machine.ts(1195,21): error TS2339: Property 'scheme' does not exist on type 'string'.
 lib/url-state-machine.ts(1196,19): error TS2339: Property 'host' does not exist on type 'string'.
 lib/url-state-machine.ts(1197,19): error TS2339: Property 'port' does not exist on type 'string'.
-lib/url-state-machine.ts(1219,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/url-state-machine.ts(1219,63): error TS2339: Property 'baseURL' does not exist on type 'object'.
 lib/url-state-machine.ts(1219,80): error TS2339: Property 'encodingOverride' does not exist on type 'object'.
 lib/url-state-machine.ts(1219,106): error TS2339: Property 'url' does not exist on type 'object'.
@@ -293,13 +290,11 @@ live-viewer/live-viewer.ts(13,53): error TS2339: Property 'createElement' does n
 live-viewer/live-viewer.ts(14,25): error TS2339: Property 'head' does not exist on type 'HTMLElement'.
 live-viewer/live-viewer.ts(15,25): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
 live-viewer/live-viewer.ts(29,12): error TS2339: Property 'addEventListener' does not exist on type 'Error'.
-live-viewer/live-viewer.ts(34,22): error TS2304: Cannot find name 'Void'.
 live-viewer/live-viewer.ts(35,11): error TS2322: Type 'object' is not assignable to type 'any[]'.
 live-viewer/live-viewer.ts(37,11): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 live-viewer/live-viewer.ts(40,24): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
   Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 live-viewer/live-viewer.ts(44,73): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-live-viewer/live-viewer.ts(44,79): error TS2304: Cannot find name 'Void'.
 live-viewer/live-viewer.ts(46,11): error TS2322: Type 'Element' is not assignable to type 'Error'.
 live-viewer/live-viewer.ts(49,14): error TS2339: Property 'hidden' does not exist on type 'EventTarget'.
 live-viewer/live-viewer.ts(50,13): error TS2339: Property 'hidden' does not exist on type 'Error'.
@@ -309,8 +304,6 @@ live-viewer/live-viewer.ts(54,13): error TS2339: Property 'hidden' does not exis
 live-viewer/live-viewer.ts(56,44): error TS2339: Property 'querySelector' does not exist on type 'EventTarget'.
 live-viewer/live-viewer.ts(57,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 live-viewer/live-viewer.ts(58,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
-live-viewer/live-viewer.ts(63,74): error TS2304: Cannot find name 'Void'.
-live-viewer/live-viewer.ts(73,85): error TS2304: Cannot find name 'Void'.
 live-viewer/live-viewer.ts(79,11): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 live-viewer/live-viewer.ts(82,20): error TS2339: Property 'add' does not exist on type 'Error'.
 live-viewer/live-viewer.ts(90,17): error TS2339: Property 'href' does not exist on type 'object'.
@@ -329,7 +322,6 @@ live-viewer/live-viewer.ts(108,58): error TS2339: Property 'value' does not exis
 live-viewer/live-viewer.ts(114,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 live-viewer/live-viewer.ts(115,52): error TS2339: Property 'value' does not exist on type 'Error'.
 live-viewer/live-viewer.ts(115,92): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-live-viewer/live-viewer.ts(118,31): error TS2304: Cannot find name 'Void'.
 live-viewer/live-viewer.ts(125,16): error TS2339: Property 'value' does not exist on type 'Error'.
 live-viewer/live-viewer.ts(132,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
 live-viewer/live-viewer.ts(145,29): error TS2339: Property 'encode' does not exist on type 'HTMLElement'.

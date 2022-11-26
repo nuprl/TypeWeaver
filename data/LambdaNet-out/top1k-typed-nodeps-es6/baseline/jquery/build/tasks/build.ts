@@ -46,7 +46,7 @@ export default function( grunt: HTMLElement ) {
 		return fileOverrides.get( path.resolve( filePath ) );
 	}
 
-	function setOverride( filePath: string, source: string ): Void {
+	function setOverride( filePath: string, source: string ): void {
 
 		// We want normalized paths in overrides as they will be matched
 		// against normalized paths in the file overrides Rollup plugin.
@@ -333,7 +333,7 @@ export default function( grunt: HTMLElement ) {
 			pkg: pkg
 		} );
 
-		function exec( trackingAllowed: boolean ): Void {
+		function exec( trackingAllowed: boolean ): void {
 			let tracks: any[] = args.length ? args[ 0 ].split( "," ) : [];
 			const defaultPath: any[] = [ "build", "custom" ];
 

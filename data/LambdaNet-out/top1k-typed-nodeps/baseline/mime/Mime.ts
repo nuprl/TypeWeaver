@@ -4,7 +4,7 @@
  * @param typeMap [Object] Map of MIME type -> Array[extensions]
  * @param ...
  */
-function Mime(): Void {
+function Mime(): void {
   this._types = Object.create(null);
   this._extensions = Object.create(null);
 

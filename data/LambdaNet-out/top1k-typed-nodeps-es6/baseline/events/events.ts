@@ -42,7 +42,7 @@ if (R && typeof R.ownKeys === 'function') {
   };
 }
 
-function ProcessEmitWarning(warning: string): Void {
+function ProcessEmitWarning(warning: string): void {
   if (console && console.warn) console.warn(warning);
 }
 
@@ -50,7 +50,7 @@ var NumberIsNaN: Function = Number.isNaN || function NumberIsNaN(value: number):
   return value !== value;
 }
 
-function EventEmitter(): Void {
+function EventEmitter(): void {
   EventEmitter.init.call(this);
 }
 module.exports = EventEmitter;
@@ -67,7 +67,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners: number = 10;
 
-function checkListener(listener: string): Void {
+function checkListener(listener: string): void {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -432,7 +432,7 @@ function arrayClone(arr: Promise, n: string): object {
   return copy;
 }
 
-function spliceOne(list: any[], index: number): Void {
+function spliceOne(list: any[], index: number): void {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
@@ -448,12 +448,12 @@ function unwrapListeners(arr: any[]): any[] {
 
 function once(emitter: object, name: string): object {
   return new Promise(function (resolve: Function, reject: Function) {
-    function errorListener(err: string): Void {
+    function errorListener(err: string): void {
       emitter.removeListener(name, resolver);
       reject(err);
     }
 
-    function resolver(): Void {
+    function resolver(): void {
       if (typeof emitter.removeListener === 'function') {
         emitter.removeListener('error', errorListener);
       }
@@ -467,13 +467,13 @@ function once(emitter: object, name: string): object {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): Void {
+function addErrorHandlerIfEventEmitter(emitter: object, handler: object, flags: Function): void {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
 }
 
-function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): Void {
+function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, listener: Function, flags: object): void {
   if (typeof emitter.on === 'function') {
     if (flags.once) {
       emitter.once(name, listener);
@@ -483,7 +483,7 @@ function eventTargetAgnosticAddListener(emitter: HTMLElement, name: string, list
   } else if (typeof emitter.addEventListener === 'function') {
     // EventTarget does not have `error` event semantics like Node
     // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg: string): Void {
+    emitter.addEventListener(name, function wrapListener(arg: string): void {
       // IE does not have builtin `{ once: true }` support so we
       // have to do it manually.
       if (flags.once) {

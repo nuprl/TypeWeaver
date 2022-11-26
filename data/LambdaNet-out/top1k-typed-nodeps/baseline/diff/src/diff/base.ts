@@ -1,4 +1,4 @@
-export default function Diff(): Void {}
+export default function Diff(): void {}
 
 Diff.prototype = {
   diff(oldString, newString, options = {}) {

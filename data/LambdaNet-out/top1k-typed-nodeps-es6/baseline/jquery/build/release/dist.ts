@@ -23,7 +23,7 @@ export default function( Release: object, files: any[], complete: Function ) {
 	/**
 	 * Clone the distribution repo
 	 */
-	function clone(): Void {
+	function clone(): void {
 		Release.chdir( Release.dir.base );
 		Release.dir.dist = `${ Release.dir.base }/dist`;
 
@@ -114,7 +114,7 @@ export default function( Release: object, files: any[], complete: Function ) {
 	/**
 	 * Add, commit, and tag the dist files
 	 */
-	function commit(): Void {
+	function commit(): void {
 		console.log( "Adding files to dist..." );
 		Release.exec( "git add -A", "Error adding files." );
 		Release.exec(
@@ -133,7 +133,7 @@ export default function( Release: object, files: any[], complete: Function ) {
 	/**
 	 * Push files to dist repo
 	 */
-	function push(): Void {
+	function push(): void {
 		Release.chdir( Release.dir.dist );
 
 		console.log( "Pushing release to dist repo..." );

@@ -8,7 +8,7 @@ var CSSOM: Element = {};
  * @see http://dev.w3.org/csswg/cssom/#the-cssrule-interface
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule
  */
-CSSOM.CSSRule = function CSSRule(): Void {
+CSSOM.CSSRule = function CSSRule(): void {
 	this.parentRule = null;
 	this.parentStyleSheet = null;
 };

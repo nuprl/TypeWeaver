@@ -28,7 +28,7 @@ var gf0: string = gf(),
     Y: string = gf([0x6658, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666, 0x6666]),
     I: string = gf([0xa0b0, 0x4a0e, 0x1b27, 0xc4ee, 0xe478, 0xad2f, 0x1806, 0x2f43, 0xd7a7, 0x3dfb, 0x0099, 0x2b4d, 0xdf0b, 0x4fc1, 0x2480, 0x2b83]);
 
-function ts64(x: object, i: string, h: number, l: number): Void {
+function ts64(x: object, i: string, h: number, l: number): void {
   x[i]   = (h >> 24) & 0xff;
   x[i+1] = (h >> 16) & 0xff;
   x[i+2] = (h >>  8) & 0xff;
@@ -53,7 +53,7 @@ function crypto_verify_32(x: string, xi: string, y: string, yi: string): string 
   return vn(x,xi,y,yi,32);
 }
 
-function core_salsa20(o: object, p: object, k: object, c: object): Void {
+function core_salsa20(o: object, p: object, k: object, c: object): void {
   var j0: number  = c[ 0] & 0xff | (c[ 1] & 0xff)<<8 | (c[ 2] & 0xff)<<16 | (c[ 3] & 0xff)<<24,
       j1: number  = k[ 0] & 0xff | (k[ 1] & 0xff)<<8 | (k[ 2] & 0xff)<<16 | (k[ 3] & 0xff)<<24,
       j2: number  = k[ 4] & 0xff | (k[ 5] & 0xff)<<8 | (k[ 6] & 0xff)<<16 | (k[ 7] & 0xff)<<24,
@@ -246,7 +246,7 @@ function core_salsa20(o: object, p: object, k: object, c: object): Void {
   o[63] = x15 >>> 24 & 0xff;
 }
 
-function core_hsalsa20(o: object,p: object,k: object,c: object): Void {
+function core_hsalsa20(o: object,p: object,k: object,c: object): void {
   var j0: number  = c[ 0] & 0xff | (c[ 1] & 0xff)<<8 | (c[ 2] & 0xff)<<16 | (c[ 3] & 0xff)<<24,
       j1: number  = k[ 0] & 0xff | (k[ 1] & 0xff)<<8 | (k[ 2] & 0xff)<<16 | (k[ 3] & 0xff)<<24,
       j2: number  = k[ 4] & 0xff | (k[ 5] & 0xff)<<8 | (k[ 6] & 0xff)<<16 | (k[ 7] & 0xff)<<24,
@@ -383,11 +383,11 @@ function core_hsalsa20(o: object,p: object,k: object,c: object): Void {
   o[31] = x9 >>> 24 & 0xff;
 }
 
-function crypto_core_salsa20(out: string,inp: string,k: number,c: string): Void {
+function crypto_core_salsa20(out: string,inp: string,k: number,c: string): void {
   core_salsa20(out,inp,k,c);
 }
 
-function crypto_core_hsalsa20(out: string,inp: string,k: number,c: string): Void {
+function crypto_core_hsalsa20(out: string,inp: string,k: number,c: string): void {
   core_hsalsa20(out,inp,k,c);
 }
 
@@ -849,12 +849,12 @@ function crypto_secretbox_open(m: object,c: string,d: number,n: string,k: string
   return 0;
 }
 
-function set25519(r: object, a: Promise): Void {
+function set25519(r: object, a: Promise): void {
   var i: number;
   for (i = 0; i < 16; i++) r[i] = a[i]|0;
 }
 
-function car25519(o: object): Void {
+function car25519(o: object): void {
   var i: number, v: number, c: number = 1;
   for (i = 0; i < 16; i++) {
     v = o[i] + c + 65535;
@@ -864,7 +864,7 @@ function car25519(o: object): Void {
   o[0] += c-1 + 37 * (c-1);
 }
 
-function sel25519(p: object, q: object, b: number): Void {
+function sel25519(p: object, q: object, b: number): void {
   var t: number, c: number = ~(b-1);
   for (var i = 0; i < 16; i++) {
     t = c & (p[i] ^ q[i]);
@@ -873,7 +873,7 @@ function sel25519(p: object, q: object, b: number): Void {
   }
 }
 
-function pack25519(o: object, n: object): Void {
+function pack25519(o: object, n: object): void {
   var i: number, j: number, b: number;
   var m: object = gf(), t: object = gf();
   for (i = 0; i < 16; i++) t[i] = n[i];
@@ -910,21 +910,21 @@ function par25519(a: string): number {
   return d[0] & 1;
 }
 
-function unpack25519(o: Promise, n: object): Void {
+function unpack25519(o: Promise, n: object): void {
   var i: number;
   for (i = 0; i < 16; i++) o[i] = n[2*i] + (n[2*i+1] << 8);
   o[15] &= 0x7fff;
 }
 
-function A(o: object, a: Promise, b: object): Void {
+function A(o: object, a: Promise, b: object): void {
   for (var i = 0; i < 16; i++) o[i] = a[i] + b[i];
 }
 
-function Z(o: object, a: Promise, b: object): Void {
+function Z(o: object, a: Promise, b: object): void {
   for (var i = 0; i < 16; i++) o[i] = a[i] - b[i];
 }
 
-function M(o: object, a: object, b: object): Void {
+function M(o: object, a: object, b: object): void {
   var v: number, c: number,
      t0: number = 0,  t1: number = 0,  t2: number = 0,  t3: number = 0,  t4: number = 0,  t5: number = 0,  t6: number = 0,  t7: number = 0,
      t8: number = 0,  t9: number = 0, t10: number = 0, t11: number = 0, t12: number = 0, t13: number = 0, t14: number = 0, t15: number = 0,
@@ -1295,11 +1295,11 @@ function M(o: object, a: object, b: object): Void {
   o[15] = t15;
 }
 
-function S(o: string, a: Function): Void {
+function S(o: string, a: Function): void {
   M(o, a, a);
 }
 
-function inv25519(o: object, i: object): Void {
+function inv25519(o: object, i: object): void {
   var c: object = gf();
   var a: number;
   for (a = 0; a < 16; a++) c[a] = i[a];
@@ -1310,7 +1310,7 @@ function inv25519(o: object, i: object): Void {
   for (a = 0; a < 16; a++) o[a] = c[a];
 }
 
-function pow2523(o: object, i: object): Void {
+function pow2523(o: object, i: object): void {
   var c: object = gf();
   var a: number;
   for (a = 0; a < 16; a++) c[a] = i[a];
@@ -1374,7 +1374,7 @@ function crypto_scalarmult(q: string, n: Promise, p: Function): number {
   return 0;
 }
 
-function crypto_scalarmult_base(q: string, n: number): Void {
+function crypto_scalarmult_base(q: string, n: number): void {
   return crypto_scalarmult(q, n, _9);
 }
 
@@ -1848,7 +1848,7 @@ function crypto_hash(out: string, m: object, n: number): number {
   return 0;
 }
 
-function add(p: object, q: Promise): Void {
+function add(p: object, q: Promise): void {
   var a: string = gf(), b: string = gf(), c: string = gf(),
       d: string = gf(), e: string = gf(), f: string = gf(),
       g: string = gf(), h: string = gf(), t: string = gf();
@@ -1874,14 +1874,14 @@ function add(p: object, q: Promise): Void {
   M(p[3], e, h);
 }
 
-function cswap(p: object, q: object, b: string): Void {
+function cswap(p: object, q: object, b: string): void {
   var i: number;
   for (i = 0; i < 4; i++) {
     sel25519(p[i], q[i], b);
   }
 }
 
-function pack(r: object, p: Promise): Void {
+function pack(r: object, p: Promise): void {
   var tx: string = gf(), ty: string = gf(), zi: string = gf();
   inv25519(zi, p[2]);
   M(tx, p[0], zi);
@@ -1890,7 +1890,7 @@ function pack(r: object, p: Promise): Void {
   r[31] ^= par25519(tx) << 7;
 }
 
-function scalarmult(p: object, q: string, s: object): Void {
+function scalarmult(p: object, q: string, s: object): void {
   var b: number, i: number;
   set25519(p[0], gf0);
   set25519(p[1], gf1);
@@ -1905,7 +1905,7 @@ function scalarmult(p: object, q: string, s: object): Void {
   }
 }
 
-function scalarbase(p: string, s: string): Void {
+function scalarbase(p: string, s: string): void {
   var q: object = [gf(), gf(), gf(), gf()];
   set25519(q[0], X);
   set25519(q[1], Y);
@@ -1934,7 +1934,7 @@ function crypto_sign_keypair(pk: object, sk: object, seeded: boolean): number {
 
 var L: object = new Float64Array([0xed, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x10]);
 
-function modL(r: Promise, x: object): Void {
+function modL(r: Promise, x: object): void {
   var carry: number, i: number, j: number, k: Function;
   for (i = 63; i >= 32; --i) {
     carry = 0;
@@ -1959,7 +1959,7 @@ function modL(r: Promise, x: object): Void {
   }
 }
 
-function reduce(r: object): Void {
+function reduce(r: object): void {
   var x: object = new Float64Array(64), i: number;
   for (i = 0; i < 64; i++) x[i] = r[i];
   for (i = 0; i < 64; i++) r[i] = 0;
@@ -2149,24 +2149,24 @@ nacl.lowlevel = {
 
 /* High-level API */
 
-function checkLengths(k: any[], n: any[]): Void {
+function checkLengths(k: any[], n: any[]): void {
   if (k.length !== crypto_secretbox_KEYBYTES) throw new Error('bad key size');
   if (n.length !== crypto_secretbox_NONCEBYTES) throw new Error('bad nonce size');
 }
 
-function checkBoxLengths(pk: any[], sk: any[]): Void {
+function checkBoxLengths(pk: any[], sk: any[]): void {
   if (pk.length !== crypto_box_PUBLICKEYBYTES) throw new Error('bad public key size');
   if (sk.length !== crypto_box_SECRETKEYBYTES) throw new Error('bad secret key size');
 }
 
-function checkArrayTypes(): Void {
+function checkArrayTypes(): void {
   for (var i = 0; i < arguments.length; i++) {
     if (!(arguments[i] instanceof Uint8Array))
       throw new TypeError('unexpected type, use Uint8Array');
   }
 }
 
-function cleanup(arr: any[]): Void {
+function cleanup(arr: any[]): void {
   for (var i = 0; i < arr.length; i++) arr[i] = 0;
 }
 

@@ -2,7 +2,7 @@
 
 import fs from 'graceful-fs';
 
-function utimesMillis (path: string, atime: string, mtime: string, callback: Function): Void {
+function utimesMillis (path: string, atime: string, mtime: string, callback: Function): void {
   // if (!HAS_MILLIS_RES) return fs.utimes(path, atime, mtime, callback)
   fs.open(path, 'r+', (err: string, fd: string) => {
     if (err) return callback(err)

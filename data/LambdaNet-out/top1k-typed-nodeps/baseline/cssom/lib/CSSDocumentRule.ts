@@ -10,7 +10,7 @@ var CSSOM: Element = {
  * @constructor
  * @see https://developer.mozilla.org/en/CSS/@-moz-document
  */
-CSSOM.CSSDocumentRule = function CSSDocumentRule(): Void {
+CSSOM.CSSDocumentRule = function CSSDocumentRule(): void {
     CSSOM.CSSRule.call(this);
     this.matcher = new CSSOM.MatcherList();
     this.cssRules = [];

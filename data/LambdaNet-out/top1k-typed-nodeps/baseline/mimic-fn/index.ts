@@ -57,7 +57,7 @@ const changeToString: Function = (to: any[], from: string, name: string) => {
 	Object.defineProperty(to, 'toString', {...toStringDescriptor, value: newToString});
 };
 
-export default function mimicFunction(to: Function, from: Function, {ignoreNonConfigurable = false} = {}): Void {
+export default function mimicFunction(to: Function, from: Function, {ignoreNonConfigurable = false} = {}): void {
 	const {name} = to;
 
 	for (const property of Reflect.ownKeys(from)) {

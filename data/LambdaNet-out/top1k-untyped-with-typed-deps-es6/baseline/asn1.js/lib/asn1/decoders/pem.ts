@@ -4,7 +4,7 @@ import inherits from 'inherits';
 import { Buffer } from 'safer-buffer';
 import DERDecoder from './der';
 
-function PEMDecoder(entity: string): Void {
+function PEMDecoder(entity: string): void {
   DERDecoder.call(this, entity);
   this.enc = 'pem';
 }

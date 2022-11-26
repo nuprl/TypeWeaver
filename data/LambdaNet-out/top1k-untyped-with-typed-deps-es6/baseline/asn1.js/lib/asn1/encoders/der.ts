@@ -7,7 +7,7 @@ import Node from '../base/node';
 // Import DER constants
 import der from '../constants/der';
 
-function DEREncoder(entity: object): Void {
+function DEREncoder(entity: object): void {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -24,7 +24,7 @@ DEREncoder.prototype.encode = function encode(data: object, reporter: string): s
 
 // Tree methods
 
-function DERNode(parent: string): Void {
+function DERNode(parent: string): void {
   Node.call(this, 'der', parent);
 }
 inherits(DERNode, Node);

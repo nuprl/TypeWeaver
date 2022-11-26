@@ -10,7 +10,7 @@ var EventEmitter2: object = require('eventemitter2').EventEmitter2
   , EE: Function = require('event-emitter')
   , Master: any[] = require('../../');
 
-function handle(): Void {
+function handle(): void {
   if (arguments.length > 100) console.log('damn');
 }
 
@@ -22,7 +22,7 @@ var ee1: HTMLElement = new EventEmitter1()
   , ce: HTMLElement = CE()
   , ee: HTMLElement = EE();
 
-[ee1, ee2, ee3, master, drip, ee, ce].forEach(function ohai(emitter: HTMLElement): Void {
+[ee1, ee2, ee3, master, drip, ee, ce].forEach(function ohai(emitter: HTMLElement): void {
   emitter.on('foo', handle);
 
   //
@@ -76,8 +76,8 @@ var ee1: HTMLElement = new EventEmitter1()
   ce.emit('foo', 'bar');
   ce.emit('foo', 'bar', 'baz');
   ce.emit('foo', 'bar', 'baz', 'boom');
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

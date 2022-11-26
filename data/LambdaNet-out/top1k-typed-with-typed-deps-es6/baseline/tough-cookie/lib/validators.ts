@@ -64,7 +64,7 @@ function isInteger(data: number): boolean {
 }
 /* End validation functions */
 
-function validate(bool: boolean, cb: Function, options: object): Void {
+function validate(bool: boolean, cb: Function, options: object): void {
   if (!isFunction(cb)) {
     options = cb;
     cb = null;

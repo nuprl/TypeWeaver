@@ -10,8 +10,6 @@ scripts/build.ts(32,29): error TS2538: Type 'any[]' cannot be used as an index t
 scripts/build.ts(33,11): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
 scripts/build.ts(33,41): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
 scripts/build.ts(33,58): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
-scripts/build.ts(43,62): error TS2304: Cannot find name 'Void'.
-scripts/build.ts(43,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/build.ts(47,62): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 scripts/build.ts(50,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/build.ts(50,35): error TS2339: Property 'charset' does not exist on type 'object'.
@@ -19,62 +17,53 @@ scripts/build.ts(51,14): error TS2345: Argument of type 'string' is not assignab
 scripts/build.ts(51,40): error TS2339: Property 'compressible' does not exist on type 'object'.
 scripts/build.ts(54,32): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/build.ts(61,10): error TS2393: Duplicate function implementation.
-scripts/build.ts(61,60): error TS2304: Cannot find name 'Void'.
 scripts/build.ts(62,12): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/build.ts(63,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/build.ts(66,11): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/build.ts(67,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/build.ts(74,10): error TS2393: Duplicate function implementation.
-scripts/build.ts(74,61): error TS2304: Cannot find name 'Void'.
 scripts/build.ts(83,21): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 1 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 2 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 2 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 3 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 3 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/build.ts(94,9): error TS2339: Property 'source' does not exist on type 'object'.
-scripts/build.ts(103,63): error TS2304: Cannot find name 'Void'.
-scripts/build.ts(103,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/fetch-apache.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(35,5): error TS2769: No overload matches this call.
   Overload 1 of 3, '(type: string, options: object): any[]', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-  Overload 2 of 3, '(url: string, callback: Function): Void', gave the following error.
+  Overload 2 of 3, '(url: string, callback: Function): void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-  Overload 3 of 3, '(url: string, callback: Function): Void', gave the following error.
+  Overload 3 of 3, '(url: string, callback: Function): void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-scripts/fetch-apache.ts(35,60): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(41,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-apache.ts(46,9): error TS2367: This condition will always return 'false' since the types 'any[]' and 'string' have no overlap.
 scripts/fetch-apache.ts(54,28): error TS2538: Type 'any[]' cannot be used as an index type.
 scripts/fetch-apache.ts(54,43): error TS2538: Type 'any[]' cannot be used as an index type.
 scripts/fetch-apache.ts(57,22): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 1 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
-  Overload 2 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 2 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
-  Overload 3 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 3 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
 scripts/fetch-apache.ts(66,10): error TS2393: Duplicate function implementation.
-scripts/fetch-apache.ts(66,60): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(67,12): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-apache.ts(68,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-apache.ts(71,11): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-apache.ts(72,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-apache.ts(79,10): error TS2393: Duplicate function implementation.
-scripts/fetch-apache.ts(79,61): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(88,21): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 1 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 2 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 2 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 3 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 3 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/fetch-apache.ts(95,10): error TS2393: Duplicate function implementation.
-scripts/fetch-apache.ts(95,49): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(96,9): error TS2339: Property 'get' does not exist on type 'string'.
-scripts/fetch-apache.ts(96,58): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(97,13): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/fetch-apache.ts(98,51): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(12,1): error TS2322: Type 'any[] | PromiseConstructor' is not assignable to type 'PromiseConstructor'.
@@ -154,8 +143,6 @@ scripts/fetch-iana.ts(273,26): error TS2339: Property 'reference' does not exist
 scripts/fetch-iana.ts(281,43): error TS2322: Type 'Generator<string, any, undefined>' is not assignable to type 'string'.
 scripts/fetch-iana.ts(301,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/fetch-iana.ts(303,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-scripts/fetch-iana.ts(315,49): error TS2304: Cannot find name 'Void'.
-scripts/fetch-iana.ts(315,49): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/fetch-iana.ts(316,29): error TS2339: Property 'sources' does not exist on type 'object'.
 scripts/fetch-iana.ts(316,46): error TS2339: Property 'sources' does not exist on type 'object'.
 scripts/fetch-iana.ts(324,30): error TS2339: Property 'trimRight' does not exist on type 'object'.
@@ -171,41 +158,35 @@ scripts/fetch-nginx.ts(31,5): error TS2403: Subsequent variable declarations mus
 scripts/fetch-nginx.ts(33,5): error TS2769: No overload matches this call.
   Overload 1 of 3, '(type: string, options: object): any[]', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-  Overload 2 of 3, '(url: string, callback: Function): Void', gave the following error.
+  Overload 2 of 3, '(url: string, callback: Function): void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-  Overload 3 of 3, '(url: string, callback: Function): Void', gave the following error.
+  Overload 3 of 3, '(url: string, callback: Function): void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'string'.
-scripts/fetch-nginx.ts(33,60): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(39,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-nginx.ts(51,22): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 1 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
-  Overload 2 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 2 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
-  Overload 3 of 3, '(obj: string, extensions: any[]): Void', gave the following error.
+  Overload 3 of 3, '(obj: string, extensions: any[]): void', gave the following error.
     Argument of type 'any[]' is not assignable to parameter of type 'string'.
 scripts/fetch-nginx.ts(60,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(60,60): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(61,12): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-nginx.ts(62,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-nginx.ts(65,11): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-nginx.ts(66,9): error TS2339: Property 'extensions' does not exist on type 'object'.
 scripts/fetch-nginx.ts(73,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(73,61): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(82,21): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 1 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 2 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 2 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
-  Overload 3 of 3, '(obj: object, extension: string): Void', gave the following error.
+  Overload 3 of 3, '(obj: object, extension: string): void', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'object'.
 scripts/fetch-nginx.ts(89,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(89,49): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(90,9): error TS2339: Property 'get' does not exist on type 'string'.
-scripts/fetch-nginx.ts(90,58): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(91,13): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/fetch-nginx.ts(92,51): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
-scripts/lib/write-db.ts(10,78): error TS2304: Cannot find name 'Void'.
 scripts/lib/write-db.ts(11,23): error TS2339: Property 'openSync' does not exist on type 'string'.
 scripts/lib/write-db.ts(14,6): error TS2339: Property 'writeSync' does not exist on type 'string'.
 scripts/lib/write-db.ts(16,16): error TS2345: Argument of type '(key: string, i: string, arr: Function) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.

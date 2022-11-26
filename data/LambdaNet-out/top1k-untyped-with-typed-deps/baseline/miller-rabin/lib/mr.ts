@@ -1,7 +1,7 @@
 var bn: any[] = require('bn.js');
 var brorand: string = require('brorand');
 
-function MillerRabin(rand: string): Void {
+function MillerRabin(rand: string): void {
   this.rand = rand || new brorand.Rand();
 }
 module.exports = MillerRabin;

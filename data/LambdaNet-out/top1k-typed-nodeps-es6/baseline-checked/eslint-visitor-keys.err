@@ -33,8 +33,9 @@ tools/get-keys-from-ts.ts(67,22): error TS2339: Property 'type' does not exist o
 tools/get-keys-from-ts.ts(68,29): error TS2339: Property 'types' does not exist on type 'HTMLElement'.
 tools/get-keys-from-ts.ts(68,75): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 tools/get-keys-from-ts.ts(70,25): error TS2339: Property 'literal' does not exist on type 'HTMLElement'.
-tools/get-keys-from-ts.ts(100,45): error TS2304: Cannot find name 'Void'.
-tools/get-keys-from-ts.ts(103,72): error TS2345: Argument of type '([typeA]: [any], [typeB]: [any]) => Void' is not assignable to parameter of type '(a: [string, any], b: [string, any]) => number'.
+tools/get-keys-from-ts.ts(101,9): error TS2322: Type 'number' is not assignable to type 'void'.
+  Type 'number' is not assignable to type 'void'.
+tools/get-keys-from-ts.ts(103,72): error TS2345: Argument of type '([typeA]: [any], [typeB]: [any]) => void' is not assignable to parameter of type '(a: [string, any], b: [string, any]) => number'.
   Types of parameters '__0' and 'a' are incompatible.
     Type '[string, any]' is not assignable to type '[any]'.
       Source has 2 element(s) but target allows only 1.

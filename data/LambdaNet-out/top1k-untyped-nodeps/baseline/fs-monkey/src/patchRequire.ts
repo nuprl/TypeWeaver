@@ -34,7 +34,7 @@ function stripBOM(content: string): any[] {
  * @param {boolean} [unixifyPaths=false]
  * @param {Object} Module Module loader to patch.
  */
-export default function patchRequire(vol: object, unixifyPaths: boolean = false, Module: HTMLElement = require('module')): Void {
+export default function patchRequire(vol: object, unixifyPaths: boolean = false, Module: HTMLElement = require('module')): void {
 
     // ensure all paths are corrected before use.
     if(isWin32 && unixifyPaths) {

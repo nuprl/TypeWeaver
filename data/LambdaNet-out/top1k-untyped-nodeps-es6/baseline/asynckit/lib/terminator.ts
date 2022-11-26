@@ -10,7 +10,7 @@ export default terminator;
  * @this  AsyncKitState#
  * @param {function} callback - final callback to invoke after termination
  */
-function terminator(callback: Function): Void
+function terminator(callback: Function): void
 {
   if (!Object.keys(this.jobs).length)
   {

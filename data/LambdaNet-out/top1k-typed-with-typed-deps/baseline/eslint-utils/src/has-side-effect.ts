@@ -181,7 +181,7 @@ export function hasSideEffect(
     node: object,
     sourceCode: string,
     { considerGetters = false, considerImplicitTypeConversion = false } = {},
-): Void {
+): void {
     return visitor.$visit(
         node,
         { considerGetters, considerImplicitTypeConversion },

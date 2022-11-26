@@ -216,9 +216,6 @@ lib/DescriptionFilePlugin.ts(47,12): error TS2339: Property 'filenames' does not
 lib/DescriptionFileUtils.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'forEachBail'.
 lib/DescriptionFileUtils.ts(35,12): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/DescriptionFileUtils.ts(35,12): error TS4078: Parameter 'resolver' of exported function has or is using private name 'Resolver'.
-lib/DescriptionFileUtils.ts(41,4): error TS2304: Cannot find name 'Void'.
-lib/DescriptionFileUtils.ts(41,4): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/DescriptionFileUtils.ts(42,35): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(43,26): error TS2339: Property 'directory' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(47,3): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
@@ -237,7 +234,6 @@ lib/DescriptionFileUtils.ts(79,23): error TS2339: Property 'fileDependencies' do
 lib/DescriptionFileUtils.ts(87,16): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(90,15): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(93,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/DescriptionFileUtils.ts(97,51): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(99,26): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(100,23): error TS2339: Property 'log' does not exist on type 'object'.
 lib/DescriptionFileUtils.ts(104,12): error TS2339: Property 'message' does not exist on type 'any[]'.
@@ -667,8 +663,6 @@ lib/SymlinkPlugin.ts(42,5): error TS2349: This expression is not callable.
 lib/SyncAsyncFileSystemDecorator.ts(15,10): error TS2451: Cannot redeclare block-scoped variable 'SyncAsyncFileSystemDecorator'.
 lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS4078: Parameter 'fs' of exported function has or is using private name 'Resolver'.
-lib/SyncAsyncFileSystemDecorator.ts(15,54): error TS2304: Cannot find name 'Void'.
-lib/SyncAsyncFileSystemDecorator.ts(15,54): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/SyncAsyncFileSystemDecorator.ts(27,12): error TS2349: This expression is not callable.
   No constituent of type 'number | object' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(29,4): error TS2349: This expression is not callable.
@@ -732,7 +726,6 @@ lib/createInnerContext.ts(31,29): error TS2339: Property 'fileDependencies' does
 lib/createInnerContext.ts(32,32): error TS2339: Property 'contextDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(33,32): error TS2339: Property 'missingDependencies' does not exist on type 'object'.
 lib/createInnerContext.ts(34,18): error TS2339: Property 'stack' does not exist on type 'object'.
-lib/forEachBail.ts(8,94): error TS2304: Cannot find name 'Void'.
 lib/forEachBail.ts(14,30): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/getInnerRequest.ts(8,53): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/getInnerRequest.ts(10,18): error TS2339: Property '__innerRequest' does not exist on type 'HTMLElement'.
@@ -762,8 +755,6 @@ lib/index.ts(26,22): error TS2749: 'Resolver' refers to a value, but is being us
 lib/index.ts(26,22): error TS4025: Exported variable 'asyncResolver' has or is using private name 'Resolver'.
 lib/index.ts(31,84): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(31,84): error TS4078: Parameter 'resolveContext' of exported function has or is using private name 'Resolver'.
-lib/index.ts(31,113): error TS2304: Cannot find name 'Void'.
-lib/index.ts(31,113): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(35,3): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/index.ts(37,3): error TS2322: Type 'object' is not assignable to type 'string'.
 lib/index.ts(45,21): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
@@ -785,20 +776,16 @@ lib/util/entrypoints.ts(83,7): error TS2451: Cannot redeclare block-scoped varia
 lib/util/entrypoints.ts(84,7): error TS2451: Cannot redeclare block-scoped variable 'dotCode'.
 lib/util/entrypoints.ts(93,4): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(95,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
+lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: string, expectFolder: boolean) => void' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(107,4): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/util/entrypoints.ts(109,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/util/entrypoints.ts(111,3): error TS2345: Argument of type '(imp: string, expectFolder: boolean) => Void' is not assignable to parameter of type 'number'.
+lib/util/entrypoints.ts(111,3): error TS2345: Argument of type '(imp: string, expectFolder: boolean) => void' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(125,34): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 lib/util/entrypoints.ts(146,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/util/entrypoints.ts(154,4): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/util/entrypoints.ts(171,28): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(179,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/util/entrypoints.ts(200,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
-lib/util/entrypoints.ts(207,66): error TS2304: Cannot find name 'Void'.
-lib/util/entrypoints.ts(207,66): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/util/entrypoints.ts(238,66): error TS2304: Cannot find name 'Void'.
-lib/util/entrypoints.ts(238,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/util/entrypoints.ts(262,34): error TS2339: Property 'files' does not exist on type 'object'.
 lib/util/entrypoints.ts(268,12): error TS2339: Property 'children' does not exist on type 'object'.
 lib/util/entrypoints.ts(269,12): error TS2339: Property 'folder' does not exist on type 'object'.
@@ -826,8 +813,6 @@ lib/util/entrypoints.ts(441,82): error TS2749: 'Resolver' refers to a value, but
 lib/util/entrypoints.ts(441,82): error TS4060: Return type of exported function has or is using private name 'Resolver'.
 lib/util/entrypoints.ts(460,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 lib/util/entrypoints.ts(473,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-lib/util/entrypoints.ts(510,63): error TS2304: Cannot find name 'Void'.
-lib/util/entrypoints.ts(510,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/util/entrypoints.ts(512,8): error TS2339: Property 'folder' does not exist on type 'object'.
 lib/util/entrypoints.ts(516,6): error TS2739: Type '{}' is missing the following properties from type 'Error': name, message
 lib/util/entrypoints.ts(530,12): error TS2339: Property 'children' does not exist on type 'Error'.

@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function apply(styleElement: HTMLElement, options: object, obj: object): Void {
+function apply(styleElement: HTMLElement, options: object, obj: object): void {
   let css: string = "";
 
   if (obj.supports) {

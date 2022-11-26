@@ -26,7 +26,7 @@ function _readFile(from: string): string {
 }
 
 // read from input pack and send to output
-(function minify(): Void {
+(function minify(): void {
   // create new packer instance
   var packer: HTMLElement = new Packer();
   // shrink!

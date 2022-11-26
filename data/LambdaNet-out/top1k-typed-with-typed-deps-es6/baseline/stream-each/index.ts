@@ -16,17 +16,17 @@ function each (stream: Function, fn: Function, cb: Function): any[] {
   if (cb) eos(stream, {readable: true, writable: false}, done)
   return stream
 
-  function done (err: string): Void {
+  function done (err: string): void {
     if (!error) error = err
     ended = true
     if (!running) cb(error)
   }
 
-  function onreadable (): Void {
+  function onreadable (): void {
     if (want) read()
   }
 
-  function afterRead (err: string): Void {
+  function afterRead (err: string): void {
     running = false
 
     if (err) {
@@ -39,7 +39,7 @@ function each (stream: Function, fn: Function, cb: Function): any[] {
     if (!calling) read()
   }
 
-  function read (): Void {
+  function read (): void {
     while (!running && !ended) {
       want = false
 

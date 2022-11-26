@@ -115,13 +115,9 @@ example/enroll/server.ts(9,29): error TS2345: Argument of type 'string | 8080' i
   Type 'number' is not assignable to type 'string'.
 example/enroll/server.ts(10,8): error TS2339: Property 'listen' does not exist on type 'any[]'.
 main.ts(1,5): error TS2322: Type 'typeof globalThis' is not assignable to type 'string'.
-main.ts(9,10): error TS2350: Only a void function can be called with the 'new' keyword.
 main.ts(9,64): error TS2345: Argument of type '{ (id?: number): void; (timeoutId: string | number | Timeout): void; }' is not assignable to parameter of type 'string'.
-main.ts(12,10): error TS2350: Only a void function can be called with the 'new' keyword.
 main.ts(12,65): error TS2345: Argument of type '{ (id?: number): void; (intervalId: string | number | Timeout): void; }' is not assignable to parameter of type 'string'.
 main.ts(17,13): error TS2339: Property 'close' does not exist on type 'Function'.
-main.ts(21,48): error TS2304: Cannot find name 'Void'.
-main.ts(21,48): error TS4060: Return type of exported function has or is using private name 'Void'.
 main.ts(32,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'object'.
 main.ts(33,8): error TS2339: Property '_idleTimeout' does not exist on type 'object'.
 main.ts(37,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'object'.
@@ -129,7 +125,6 @@ main.ts(38,8): error TS2339: Property '_idleTimeout' does not exist on type 'obj
 main.ts(42,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
 main.ts(44,28): error TS2339: Property '_idleTimeout' does not exist on type 'HTMLElement'.
 main.ts(46,10): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
-main.ts(46,60): error TS2304: Cannot find name 'Void'.
 main.ts(47,16): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 main.ts(48,14): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 main.ts(54,1): error TS2349: This expression is not callable.

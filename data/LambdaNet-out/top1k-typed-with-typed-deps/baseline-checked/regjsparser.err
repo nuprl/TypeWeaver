@@ -10,7 +10,6 @@ demo/main.ts(25,59): error TS2769: No overload matches this call.
       Types of parameters 'character' and 'substring' are incompatible.
         Type 'string' is not assignable to type 'object'.
 demo/main.ts(26,30): error TS2339: Property 'charCodeAt' does not exist on type 'object'.
-demo/main.ts(30,22): error TS2304: Cannot find name 'Void'.
 demo/main.ts(31,37): error TS2339: Property 'value' does not exist on type 'object'.
 demo/main.ts(32,36): error TS2339: Property 'value' does not exist on type 'object'.
 demo/main.ts(36,30): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
@@ -76,7 +75,6 @@ parser.ts(457,7): error TS2322: Type 'string' is not assignable to type 'any[]'.
 parser.ts(465,7): error TS2322: Type 'string' is not assignable to type 'any[]'.
 parser.ts(473,16): error TS2339: Property 'type' does not exist on type 'object'.
 parser.ts(474,21): error TS2339: Property 'body' does not exist on type 'object'.
-parser.ts(487,35): error TS2304: Cannot find name 'Void'.
 parser.ts(489,9): error TS2554: Expected 4 arguments, but got 2.
 parser.ts(513,38): error TS2769: No overload matches this call.
   Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
@@ -215,7 +213,6 @@ parser.ts(975,11): error TS2322: Type 'string' is not assignable to type 'boolea
 parser.ts(975,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 parser.ts(977,11): error TS2322: Type 'string' is not assignable to type 'boolean'.
 parser.ts(977,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(983,67): error TS2304: Cannot find name 'Void'.
 parser.ts(985,62): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(992,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(993,9): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
@@ -322,7 +319,6 @@ parser.ts(1537,7): error TS2322: Type 'any[]' is not assignable to type 'string'
 parser.ts(1537,33): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 parser.ts(1555,7): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
 parser.ts(1555,32): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-parser.ts(1558,80): error TS2304: Cannot find name 'Void'.
 parser.ts(1578,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
 parser.ts(1578,48): error TS2339: Property 'indexOf' does not exist on type 'number | ""'.
   Property 'indexOf' does not exist on type 'number'.

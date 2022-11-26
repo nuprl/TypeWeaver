@@ -4,7 +4,7 @@ import Iteration from './iteration';
 import ArrayIterator from './array-iterator';
 
 export default ObjectIterator;
-function ObjectIterator(iterable: Function, start: string, stop: Function, step: string): Void {
+function ObjectIterator(iterable: Function, start: string, stop: Function, step: string): void {
     this.object = iterable;
     this.keysIterator = new ArrayIterator(Object.keys(iterable), start, stop, step);
 }

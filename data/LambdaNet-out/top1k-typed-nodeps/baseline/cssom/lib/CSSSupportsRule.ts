@@ -11,7 +11,7 @@ var CSSOM: Element = {
  * @constructor
  * @see https://drafts.csswg.org/css-conditional-3/#the-csssupportsrule-interface
  */
-CSSOM.CSSSupportsRule = function CSSSupportsRule(): Void {
+CSSOM.CSSSupportsRule = function CSSSupportsRule(): void {
   CSSOM.CSSConditionRule.call(this);
 };
 

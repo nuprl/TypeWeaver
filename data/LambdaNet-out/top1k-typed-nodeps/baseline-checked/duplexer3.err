@@ -11,8 +11,6 @@ example.ts(33,8): error TS2339: Property 'on' does not exist on type 'HTMLElemen
 example.ts(37,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 example.ts(41,8): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
 example.ts(45,8): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-index.ts(3,86): error TS2304: Cannot find name 'Void'.
-index.ts(3,86): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(6,3): error TS2740: Type '{}' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
 index.ts(10,2): error TS2684: The 'this' context of type 'typeof Duplex' is not assignable to method's 'this' of type 'Function'.
   Types of property 'once' are incompatible.
@@ -28,6 +26,5 @@ index.ts(39,33): error TS2339: Property 'bubbleErrors' does not exist on type 'o
 index.ts(39,73): error TS2339: Property 'bubbleErrors' does not exist on type 'object'.
 index.ts(40,12): error TS2339: Property 'on' does not exist on type 'Request'.
 index.ts(44,12): error TS2339: Property 'on' does not exist on type 'object'.
-index.ts(70,9): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(70,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Request'.
 

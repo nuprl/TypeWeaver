@@ -265,7 +265,7 @@
             return identifier;
         }
 
-        function skipWhiteSpace(last: number): Void {
+        function skipWhiteSpace(last: number): void {
             while (index < last && (esutils.code.isWhiteSpace(source.charCodeAt(index)) || esutils.code.isLineTerminator(source.charCodeAt(index)))) {
                 advance();
             }
@@ -402,7 +402,7 @@
             return convertUnwrappedCommentIndex(originalSource, rangeIndex);
         }
 
-        function TagParser(options: Function, title: string): Void {
+        function TagParser(options: Function, title: string): void {
             this._options = options;
             this._title = title.toLowerCase();
             this._tag = {

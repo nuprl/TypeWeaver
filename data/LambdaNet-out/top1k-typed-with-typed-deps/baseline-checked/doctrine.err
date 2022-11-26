@@ -19,7 +19,6 @@ lib/doctrine.ts(253,68): error TS2345: Argument of type 'number' is not assignab
 lib/doctrine.ts(258,26): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(261,13): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/doctrine.ts(262,44): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/doctrine.ts(268,48): error TS2304: Cannot find name 'Void'.
 lib/doctrine.ts(269,45): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(269,100): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(289,21): error TS2322: Type 'number' is not assignable to type 'string'.
@@ -35,7 +34,6 @@ lib/doctrine.ts(399,17): error TS2367: This condition will always return 'false'
 lib/doctrine.ts(400,17): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/doctrine.ts(402,13): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/doctrine.ts(402,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-lib/doctrine.ts(405,63): error TS2304: Cannot find name 'Void'.
 lib/doctrine.ts(426,21): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(whole: Function, index: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
@@ -54,7 +52,6 @@ lib/doctrine.ts(638,53): error TS2345: Argument of type 'string' is not assignab
 lib/doctrine.ts(753,38): error TS2554: Expected 0 arguments, but got 1.
 lib/doctrine.ts(766,25): error TS2322: Type 'number' is not assignable to type 'Function'.
 lib/doctrine.ts(766,48): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
-lib/doctrine.ts(788,22): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/doctrine.ts(788,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
   Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/doctrine.ts(789,26): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
@@ -194,10 +191,8 @@ lib/typed.ts(483,17): error TS2322: Type 'string' is not assignable to type 'num
 lib/typed.ts(492,21): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
 lib/typed.ts(492,39): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/typed.ts(493,13): error TS2322: Type 'string' is not assignable to type 'number'.
-lib/typed.ts(498,53): error TS2304: Cannot find name 'Void'.
 lib/typed.ts(499,17): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
 lib/typed.ts(499,24): error TS2367: This condition will always return 'false' since the types 'number' and 'object' have no overlap.
-lib/typed.ts(503,55): error TS2304: Cannot find name 'Void'.
 lib/typed.ts(504,13): error TS2367: This condition will always return 'true' since the types 'number' and 'object' have no overlap.
 lib/typed.ts(505,21): error TS2339: Property 'throwError' does not exist on type 'HTMLElement'.
 lib/typed.ts(521,23): error TS2339: Property 'LPAREN' does not exist on type 'object'.
@@ -493,9 +488,6 @@ lib/typed.ts(1287,21): error TS2339: Property 'throwError' does not exist on typ
 lib/typed.ts(1287,55): error TS2339: Property 'type' does not exist on type 'object'.
 lib/typed.ts(1297,44): error TS2339: Property 'compact' does not exist on type 'object'.
 lib/typed.ts(1297,61): error TS2339: Property 'topLevel' does not exist on type 'object'.
-lib/utility.ts(15,46): error TS2304: Cannot find name 'Void'.
 lib/utility.ts(22,20): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-lib/utility.ts(27,43): error TS2304: Cannot find name 'Void'.
-lib/utility.ts(28,15): error TS2350: Only a void function can be called with the 'new' keyword.
 

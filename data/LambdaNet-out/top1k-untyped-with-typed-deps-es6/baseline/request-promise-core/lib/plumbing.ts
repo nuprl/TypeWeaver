@@ -42,7 +42,7 @@ export default function (options: object) {
         });
 
         self._rp_callbackOrig = requestOptions.callback;
-        requestOptions.callback = self.callback = function RP$callback(err: Function, response: object, body: string): Void {
+        requestOptions.callback = self.callback = function RP$callback(err: Function, response: object, body: string): void {
             plumbing.callback.call(self, err, response, body);
         };
 

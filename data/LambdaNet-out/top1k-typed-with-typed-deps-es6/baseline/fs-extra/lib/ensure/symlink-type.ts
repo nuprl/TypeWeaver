@@ -2,7 +2,7 @@
 
 import fs from 'graceful-fs';
 
-function symlinkType (srcpath: string, type: number, callback: Function): Void {
+function symlinkType (srcpath: string, type: number, callback: Function): void {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
   if (type) return callback(null, type)

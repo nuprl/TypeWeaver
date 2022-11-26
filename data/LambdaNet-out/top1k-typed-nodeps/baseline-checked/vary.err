@@ -6,13 +6,10 @@ benchmark/append.ts(35,7): error TS2339: Property 'add' does not exist on type '
 benchmark/append.ts(41,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/append.ts(47,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/append.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/append.ts(53,53): error TS2304: Cannot find name 'Void'.
 benchmark/append.ts(57,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/append.ts(57,53): error TS2304: Cannot find name 'Void'.
 benchmark/append.ts(58,14): error TS2339: Property 'add' does not exist on type 'any[]'.
 benchmark/append.ts(58,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/append.ts(61,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/append.ts(61,46): error TS2304: Cannot find name 'Void'.
 benchmark/append.ts(62,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/append.ts(65,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'string'.
@@ -25,8 +22,6 @@ index.ts(66,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
 index.ts(78,12): error TS2339: Property 'push' does not exist on type 'string'.
 index.ts(79,7): error TS2322: Type 'string' is not assignable to type 'number'.
 index.ts(85,3): error TS2322: Type 'number' is not assignable to type 'string'.
-index.ts(133,45): error TS2304: Cannot find name 'Void'.
-index.ts(133,45): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(134,20): error TS2339: Property 'getHeader' does not exist on type 'object'.
 index.ts(134,38): error TS2339: Property 'setHeader' does not exist on type 'object'.
 index.ts(140,24): error TS2339: Property 'getHeader' does not exist on type 'object'.

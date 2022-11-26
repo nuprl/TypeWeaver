@@ -2,7 +2,7 @@ var hasOwnProperty: Function = Object.prototype.hasOwnProperty
 
 export default PseudoMap;
 
-function PseudoMap (set: any[]): Void {
+function PseudoMap (set: any[]): void {
   if (!(this instanceof PseudoMap)) // whyyyyyyy
     throw new TypeError("Constructor PseudoMap requires 'new'")
 
@@ -84,7 +84,7 @@ function same (a: string, b: number): boolean {
   return a === b || a !== a && b !== b
 }
 
-function Entry (k: string, v: string, i: string): Void {
+function Entry (k: string, v: string, i: string): void {
   this.key = k
   this.value = v
   this._index = i
@@ -99,7 +99,7 @@ function find (data: object, k: string): string {
   }
 }
 
-function set (data: object, k: number, v: string): Void {
+function set (data: object, k: number, v: string): void {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {

@@ -3,11 +3,6 @@ estraverse.ts(68,17): error TS2322: Type 'string' is not assignable to type 'num
 estraverse.ts(232,5): error TS2322: Type '{}' is not assignable to type 'number'.
 estraverse.ts(233,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 estraverse.ts(234,5): error TS2322: Type '{}' is not assignable to type 'string'.
-estraverse.ts(242,54): error TS2304: Cannot find name 'Void'.
-estraverse.ts(247,67): error TS2304: Cannot find name 'Void'.
-estraverse.ts(261,80): error TS2304: Cannot find name 'Void'.
-estraverse.ts(268,28): error TS2304: Cannot find name 'Void'.
-estraverse.ts(275,58): error TS2304: Cannot find name 'Void'.
 estraverse.ts(277,29): error TS2322: Type 'number' is not assignable to type 'Function'.
 estraverse.ts(277,47): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
 estraverse.ts(292,51): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
@@ -15,7 +10,6 @@ estraverse.ts(294,39): error TS2339: Property 'path' does not exist on type 'Ele
 estraverse.ts(304,21): error TS2339: Property 'type' does not exist on type 'object'.
 estraverse.ts(314,51): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
 estraverse.ts(336,50): error TS2339: Property 'node' does not exist on type 'Element'.
-estraverse.ts(345,68): error TS2304: Cannot find name 'Void'.
 estraverse.ts(375,21): error TS2339: Property 'fallback' does not exist on type 'object'.
 estraverse.ts(377,35): error TS2339: Property 'fallback' does not exist on type 'object'.
 estraverse.ts(378,39): error TS2339: Property 'fallback' does not exist on type 'object'.
@@ -24,32 +18,23 @@ estraverse.ts(383,77): error TS2339: Property 'keys' does not exist on type 'obj
 estraverse.ts(391,56): error TS2339: Property 'type' does not exist on type 'object'.
 estraverse.ts(395,37): error TS2339: Property 'ObjectExpression' does not exist on type 'object'.
 estraverse.ts(395,77): error TS2339: Property 'ObjectPattern' does not exist on type 'object'.
-estraverse.ts(407,87): error TS2304: Cannot find name 'Void'.
 estraverse.ts(410,22): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 estraverse.ts(423,9): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-estraverse.ts(430,23): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(430,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-estraverse.ts(431,24): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(439,46): error TS2339: Property 'leave' does not exist on type 'object'.
 estraverse.ts(441,47): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 estraverse.ts(449,46): error TS2339: Property 'enter' does not exist on type 'object'.
 estraverse.ts(451,47): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 estraverse.ts(458,46): error TS2367: This condition will always return 'false' since the types 'string' and 'Function' have no overlap.
 estraverse.ts(463,33): error TS2339: Property 'type' does not exist on type 'object'.
-estraverse.ts(493,43): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(493,76): error TS2345: Argument of type '(string | number)[]' is not assignable to parameter of type 'string'.
-estraverse.ts(495,43): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(495,76): error TS2345: Argument of type '(string | number)[]' is not assignable to parameter of type 'string'.
-estraverse.ts(506,39): error TS2350: Only a void function can be called with the 'new' keyword.
-estraverse.ts(528,57): error TS2304: Cannot find name 'Void'.
 estraverse.ts(531,27): error TS2314: Generic type 'Record' requires 2 type argument(s).
 estraverse.ts(534,25): error TS2339: Property 'ref' does not exist on type 'HTMLInputElement'.
 estraverse.ts(536,31): error TS2339: Property 'ref' does not exist on type 'HTMLInputElement'.
 estraverse.ts(537,34): error TS2339: Property 'ref' does not exist on type 'HTMLInputElement'.
 estraverse.ts(555,9): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-estraverse.ts(565,19): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(565,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-estraverse.ts(565,49): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(565,63): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 estraverse.ts(572,17): error TS2367: This condition will always return 'false' since the types 'HTMLElement' and 'Function' have no overlap.
 estraverse.ts(575,49): error TS2339: Property 'leave' does not exist on type 'object'.
@@ -73,21 +58,13 @@ estraverse.ts(614,28): error TS2339: Property 'node' does not exist on type 'HTM
 estraverse.ts(622,42): error TS2367: This condition will always return 'false' since the types 'number' and 'Function' have no overlap.
 estraverse.ts(626,29): error TS2339: Property 'type' does not exist on type 'object'.
 estraverse.ts(626,45): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
-estraverse.ts(651,39): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(651,72): error TS2345: Argument of type '(string | number)[]' is not assignable to parameter of type 'string'.
-estraverse.ts(651,101): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(651,115): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-estraverse.ts(653,39): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(653,72): error TS2345: Argument of type '(string | number)[]' is not assignable to parameter of type 'string'.
-estraverse.ts(653,95): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(653,109): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-estraverse.ts(660,35): error TS2350: Only a void function can be called with the 'new' keyword.
-estraverse.ts(660,69): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(660,83): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 estraverse.ts(665,22): error TS2339: Property 'root' does not exist on type 'object'.
-estraverse.ts(669,39): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(670,27): error TS2339: Property 'traverse' does not exist on type 'HTMLElement'.
-estraverse.ts(674,34): error TS2350: Only a void function can be called with the 'new' keyword.
 estraverse.ts(682,26): error TS2339: Property 'range' does not exist on type 'object'.
 estraverse.ts(682,45): error TS2339: Property 'range' does not exist on type 'HTMLElement'.
 estraverse.ts(685,17): error TS2339: Property 'extendedRange' does not exist on type 'HTMLElement'.

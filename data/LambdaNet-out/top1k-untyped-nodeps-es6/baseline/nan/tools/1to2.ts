@@ -390,7 +390,7 @@ function replace(): string {
 }
 
 /* reads a file, runs replacement and writes it back */
-function processFile(file: string): Void {
+function processFile(file: string): void {
   fs.readFile(file, {encoding: 'utf8'}, function (err: boolean, data: string) {
     if (err) {
       throw err;

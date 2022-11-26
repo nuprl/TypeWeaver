@@ -50,7 +50,7 @@ module['exports'] = function() {
     });
   });
 
-  function applyTheme(theme: object): Void {
+  function applyTheme(theme: object): void {
     //
     // Remark: This is a list of methods that exist
     // on String that you should not overwrite.

@@ -34,8 +34,8 @@ var emitter: string;
   emitter = EE();
 }).add('contra/emitter', function() {
   emitter = CE();
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

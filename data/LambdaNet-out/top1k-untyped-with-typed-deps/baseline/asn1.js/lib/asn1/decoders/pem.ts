@@ -5,7 +5,7 @@ const Buffer: object = require('safer-buffer').Buffer;
 
 const DERDecoder: Function = require('./der');
 
-function PEMDecoder(entity: string): Void {
+function PEMDecoder(entity: string): void {
   DERDecoder.call(this, entity);
   this.enc = 'pem';
 }

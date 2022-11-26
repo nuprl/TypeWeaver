@@ -34,7 +34,6 @@ Gruntfile.ts(421,8): error TS2339: Property 'registerTask' does not exist on typ
 Gruntfile.ts(422,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 Gruntfile.ts(429,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/release.ts(22,36): error TS2339: Property 'npmTags' does not exist on type 'object'.
-build/release.ts(24,46): error TS2304: Cannot find name 'Void'.
 build/release.ts(25,29): error TS2339: Property 'readFileSync' does not exist on type 'string'.
 build/release.ts(26,53): error TS2339: Property 'newVersion' does not exist on type 'object'.
 build/release.ts(27,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
@@ -47,18 +46,13 @@ build/release.ts(69,12): error TS2339: Property 'dir' does not exist on type 'ob
 build/release.ts(69,31): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release.ts(69,55): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release.ts(78,8): error TS2339: Property 'makeArchives' does not exist on type 'string'.
-build/release/cdn.ts(32,48): error TS2304: Cannot find name 'Void'.
-build/release/cdn.ts(32,48): error TS4060: Return type of exported function has or is using private name 'Void'.
 build/release/cdn.ts(33,8): error TS2339: Property 'mkdir' does not exist on type 'string'.
 build/release/cdn.ts(38,56): error TS2339: Property 'newVersion' does not exist on type 'object'.
 build/release/cdn.ts(46,14): error TS2339: Property 'readFileSync' does not exist on type 'string'.
 build/release/cdn.ts(51,7): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 build/release/cdn.ts(53,10): error TS2339: Property 'cp' does not exist on type 'string'.
-build/release/cdn.ts(58,68): error TS2304: Cannot find name 'Void'.
-build/release/cdn.ts(58,68): error TS4060: Return type of exported function has or is using private name 'Void'.
 build/release/cdn.ts(60,10): error TS2339: Property 'chdir' does not exist on type 'HTMLElement'.
 build/release/cdn.ts(60,29): error TS2339: Property 'repo' does not exist on type 'string'.
-build/release/cdn.ts(62,73): error TS2304: Cannot find name 'Void'.
 build/release/cdn.ts(63,16): error TS2339: Property 'preRelease' does not exist on type 'HTMLElement'.
 build/release/cdn.ts(74,24): error TS2339: Property 'createWriteStream' does not exist on type 'string'.
 build/release/cdn.ts(75,50): error TS2339: Property 'newVersion' does not exist on type 'HTMLElement'.
@@ -72,15 +66,12 @@ build/release/cdn.ts(97,13): error TS2339: Property 'append' does not exist on t
 build/release/cdn.ts(97,24): error TS2339: Property 'createReadStream' does not exist on type 'string'.
 build/release/cdn.ts(98,18): error TS2339: Property 'basename' does not exist on type 'string'.
 build/release/cdn.ts(101,12): error TS2339: Property 'finalize' does not exist on type 'object'.
-build/release/cdn.ts(104,47): error TS2304: Cannot find name 'Void'.
 build/release/cdn.ts(105,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-build/release/cdn.ts(108,50): error TS2304: Cannot find name 'Void'.
 build/release/cdn.ts(109,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 build/release/cdn.ts(112,18): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'string'.
 build/release/cdn.ts(113,22): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 build/release/dist.ts(8,43): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release/dist.ts(9,37): error TS2339: Property 'remote' does not exist on type 'object'.
-build/release/dist.ts(26,20): error TS2304: Cannot find name 'Void'.
 build/release/dist.ts(27,11): error TS2339: Property 'chdir' does not exist on type 'object'.
 build/release/dist.ts(27,26): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release/dist.ts(28,11): error TS2339: Property 'dir' does not exist on type 'object'.
@@ -117,7 +108,6 @@ build/release/dist.ts(106,12): error TS2339: Property 'writeFile' does not exist
 build/release/dist.ts(106,35): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release/dist.ts(108,12): error TS2339: Property 'writeFile' does not exist on type 'Function'.
 build/release/dist.ts(108,35): error TS2339: Property 'dir' does not exist on type 'object'.
-build/release/dist.ts(117,21): error TS2304: Cannot find name 'Void'.
 build/release/dist.ts(119,11): error TS2339: Property 'exec' does not exist on type 'object'.
 build/release/dist.ts(120,11): error TS2339: Property 'exec' does not exist on type 'object'.
 build/release/dist.ts(121,39): error TS2339: Property 'newVersion' does not exist on type 'object'.
@@ -126,7 +116,6 @@ build/release/dist.ts(127,37): error TS2339: Property 'newVersion' does not exis
 build/release/dist.ts(128,30): error TS2339: Property 'newVersion' does not exist on type 'object'.
 build/release/dist.ts(129,11): error TS2339: Property 'tagTime' does not exist on type 'object'.
 build/release/dist.ts(129,29): error TS2339: Property 'exec' does not exist on type 'object'.
-build/release/dist.ts(136,19): error TS2304: Cannot find name 'Void'.
 build/release/dist.ts(137,11): error TS2339: Property 'chdir' does not exist on type 'object'.
 build/release/dist.ts(137,26): error TS2339: Property 'dir' does not exist on type 'object'.
 build/release/dist.ts(140,11): error TS2339: Property 'exec' does not exist on type 'object'.
@@ -154,7 +143,6 @@ build/tasks/build.ts(19,16): error TS2339: Property 'file' does not exist on typ
 build/tasks/build.ts(24,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 build/tasks/build.ts(43,23): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 build/tasks/build.ts(46,34): error TS2339: Property 'resolve' does not exist on type 'string'.
-build/tasks/build.ts(49,60): error TS2304: Cannot find name 'Void'.
 build/tasks/build.ts(53,27): error TS2339: Property 'resolve' does not exist on type 'string'.
 build/tasks/build.ts(56,8): error TS2339: Property 'registerMultiTask' does not exist on type 'HTMLElement'.
 build/tasks/build.ts(66,29): error TS2339: Property 'option' does not exist on type 'HTMLElement'.
@@ -201,7 +189,6 @@ build/tasks/build.ts(305,10): error TS2339: Property 'log' does not exist on typ
 build/tasks/build.ts(325,8): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 build/tasks/build.ts(331,36): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
-build/tasks/build.ts(336,46): error TS2304: Cannot find name 'Void'.
 build/tasks/build.ts(348,12): error TS2322: Type 'any[]' is not assignable to type 'string'.
 build/tasks/build.ts(350,14): error TS2339: Property 'track' does not exist on type 'HTMLElement'.
 build/tasks/build.ts(354,13): error TS2339: Property 'track' does not exist on type 'HTMLElement'.
@@ -223,7 +210,6 @@ build/tasks/dist.ts(64,11): error TS2339: Property 'file' does not exist on type
 build/tasks/dist.ts(65,11): error TS2339: Property 'log' does not exist on type 'HTMLElement'.
 build/tasks/lib/rollup-plugin-file-overrides.ts(14,23): error TS2339: Property 'has' does not exist on type 'string'.
 build/tasks/lib/rollup-plugin-file-overrides.ts(17,26): error TS2339: Property 'get' does not exist on type 'string'.
-build/tasks/lib/spawn_test.ts(6,73): error TS2304: Cannot find name 'Void'.
 build/tasks/lib/spawn_test.ts(14,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 build/tasks/node_smoke_tests.ts(15,5): error TS2339: Property 'readdirSync' does not exist on type 'string'.
 build/tasks/node_smoke_tests.ts(17,7): error TS2339: Property 'statSync' does not exist on type 'string'.
@@ -419,7 +405,6 @@ src/ajax.ts(695,12): error TS2339: Property 'abort' does not exist on type 'obje
 src/ajax.ts(696,10): error TS2339: Property 'timeout' does not exist on type 'object'.
 src/ajax.ts(701,15): error TS2339: Property 'send' does not exist on type 'object'.
 src/ajax.ts(710,5): error TS2554: Expected 4 arguments, but got 2.
-src/ajax.ts(715,98): error TS2304: Cannot find name 'Void'.
 src/ajax.ts(736,4): error TS2322: Type 'string' is not assignable to type 'number'.
 src/ajax.ts(739,10): error TS2339: Property 'readyState' does not exist on type 'object'.
 src/ajax.ts(746,5): error TS2322: Type 'string' is not assignable to type 'object'.
@@ -642,7 +627,6 @@ src/callbacks.ts(69,31): error TS2339: Property 'once' does not exist on type 'o
 src/callbacks.ts(80,15): error TS2339: Property 'stopOnFalse' does not exist on type 'object'.
 src/callbacks.ts(90,18): error TS2339: Property 'memory' does not exist on type 'object'.
 src/callbacks.ts(105,6): error TS2322: Type 'string' is not assignable to type 'any[]'.
-src/callbacks.ts(123,37): error TS2304: Cannot find name 'Void'.
 src/callbacks.ts(124,14): error TS2339: Property 'each' does not exist on type 'Function'.
 src/callbacks.ts(126,23): error TS2339: Property 'unique' does not exist on type 'object'.
 src/callbacks.ts(126,39): error TS2339: Property 'has' does not exist on type 'object'.
@@ -695,8 +679,6 @@ src/core.ts(322,11): error TS2365: Operator '<' cannot be applied to types 'numb
 src/core.ts(369,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 src/core.ts(391,9): error TS2339: Property 'fn' does not exist on type 'Function'.
 src/core.ts(395,8): error TS2339: Property 'each' does not exist on type 'Function'.
-src/core/DOMEval.ts(10,62): error TS2304: Cannot find name 'Void'.
-src/core/DOMEval.ts(10,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/core/DOMEval.ts(11,2): error TS2322: Type 'string | Document' is not assignable to type 'string'.
   Type 'Document' is not assignable to type 'string'.
 src/core/DOMEval.ts(14,24): error TS2339: Property 'createElement' does not exist on type 'string'.
@@ -763,7 +745,6 @@ src/core/ready-no-deferred.ts(42,8): error TS2367: This condition will always re
 src/core/ready-no-deferred.ts(42,34): error TS2339: Property 'readyWait' does not exist on type 'Function'.
 src/core/ready-no-deferred.ts(62,8): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/ready-no-deferred.ts(62,28): error TS2339: Property 'fn' does not exist on type 'Function'.
-src/core/ready-no-deferred.ts(67,23): error TS2304: Cannot find name 'Void'.
 src/core/ready-no-deferred.ts(70,9): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/ready-no-deferred.ts(78,28): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/ready.ts(8,32): error TS2339: Property 'Deferred' does not exist on type 'Function'.
@@ -780,7 +761,6 @@ src/core/ready.ts(46,34): error TS2339: Property 'readyWait' does not exist on t
 src/core/ready.ts(51,13): error TS2339: Property 'resolveWith' does not exist on type 'object'.
 src/core/ready.ts(55,8): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/ready.ts(55,31): error TS2339: Property 'then' does not exist on type 'object'.
-src/core/ready.ts(58,23): error TS2304: Cannot find name 'Void'.
 src/core/ready.ts(61,9): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/ready.ts(69,28): error TS2339: Property 'ready' does not exist on type 'Function'.
 src/core/readyException.ts(3,8): error TS2339: Property 'readyException' does not exist on type 'Function'.
@@ -946,8 +926,6 @@ src/data.ts(103,15): error TS2339: Property 'nodeType' does not exist on type 's
 src/data.ts(113,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
 src/data.ts(150,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/data.ts(150,12): error TS2554: Expected 3 arguments, but got 2.
-src/data/Data.ts(6,18): error TS2304: Cannot find name 'Void'.
-src/data/Data.ts(6,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/data/Data.ts(7,24): error TS2339: Property 'expando' does not exist on type 'Function'.
 src/data/Data.ts(26,21): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -962,10 +940,6 @@ src/data/Data.ts(138,36): error TS2339: Property 'isEmptyObject' does not exist 
 src/data/Data.ts(144,15): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/data/Data.ts(151,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/data/Data.ts(153,41): error TS2339: Property 'isEmptyObject' does not exist on type 'Function'.
-src/data/var/dataPriv.ts(3,16): error TS2350: Only a void function can be called with the 'new' keyword.
-src/data/var/dataUser.ts(3,16): error TS2350: Only a void function can be called with the 'new' keyword.
-src/deferred.ts(9,35): error TS2304: Cannot find name 'Void'.
-src/deferred.ts(13,91): error TS2304: Cannot find name 'Void'.
 src/deferred.ts(19,40): error TS2339: Property 'promise' does not exist on type 'object'.
 src/deferred.ts(23,47): error TS2339: Property 'then' does not exist on type 'object'.
 src/deferred.ts(32,47): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -1059,14 +1033,12 @@ src/dimensions.ts(38,12): error TS2339: Property 'body' does not exist on type '
 src/dimensions.ts(39,12): error TS2339: Property 'body' does not exist on type 'object'.
 src/dimensions.ts(47,13): error TS2339: Property 'css' does not exist on type 'Function'.
 src/dimensions.ts(50,13): error TS2339: Property 'style' does not exist on type 'Function'.
-src/effects.ts(25,22): error TS2304: Cannot find name 'Void'.
 src/effects.ts(33,10): error TS2339: Property 'fx' does not exist on type 'Function'.
 src/effects.ts(42,2): error TS2322: Type 'number' is not assignable to type 'boolean'.
 src/effects.ts(60,9): error TS2339: Property 'opacity' does not exist on type 'object'.
 src/effects.ts(60,25): error TS2339: Property 'width' does not exist on type 'object'.
 src/effects.ts(68,35): error TS2339: Property 'tweeners' does not exist on type '(elem: Function, properties: string, options: object) => string'.
 src/effects.ts(68,78): error TS2339: Property 'tweeners' does not exist on type '(elem: Function, properties: string, options: object) => string'.
-src/effects.ts(80,78): error TS2304: Cannot find name 'Void'.
 src/effects.ts(85,24): error TS2339: Property 'style' does not exist on type 'object'.
 src/effects.ts(86,26): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/effects.ts(86,38): error TS2554: Expected 2 arguments, but got 1.
@@ -1136,7 +1108,6 @@ src/effects.ts(239,33): error TS2339: Property 'start' does not exist on type 'b
 src/effects.ts(241,15): error TS2339: Property 'end' does not exist on type 'boolean'.
 src/effects.ts(241,31): error TS2339: Property 'start' does not exist on type 'boolean'.
 src/effects.ts(242,15): error TS2339: Property 'start' does not exist on type 'boolean'.
-src/effects.ts(248,62): error TS2304: Cannot find name 'Void'.
 src/effects.ts(253,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 src/effects.ts(266,18): error TS2339: Property 'cssHooks' does not exist on type 'Function'.
 src/effects.ts(268,18): error TS2339: Property 'expand' does not exist on type 'object'.
@@ -1460,7 +1431,6 @@ src/event.ts(502,16): error TS2339: Property 'result' does not exist on type 'Im
 src/event.ts(502,46): error TS2339: Property 'originalEvent' does not exist on type 'ImageData'.
 src/event.ts(503,12): error TS2339: Property 'originalEvent' does not exist on type 'ImageData'.
 src/event.ts(503,46): error TS2339: Property 'result' does not exist on type 'ImageData'.
-src/event.ts(514,76): error TS2304: Cannot find name 'Void'.
 src/event.ts(519,11): error TS2339: Property 'event' does not exist on type 'Function'.
 src/event.ts(526,9): error TS2339: Property 'event' does not exist on type 'Function'.
 src/event.ts(532,17): error TS2339: Property 'isTrigger' does not exist on type 'object'.
@@ -1606,7 +1576,7 @@ src/exports/global.ts(12,14): error TS2339: Property '$' does not exist on type 
 src/exports/global.ts(13,10): error TS2339: Property '$' does not exist on type 'Window & typeof globalThis'.
 src/exports/global.ts(16,22): error TS2339: Property 'jQuery' does not exist on type 'Window & typeof globalThis'.
 src/exports/global.ts(17,10): error TS2339: Property 'jQuery' does not exist on type 'Window & typeof globalThis'.
-src/exports/global.ts(26,13): error TS2304: Cannot find name 'noGlobal'.
+src/exports/global.ts(26,13): error TS2552: Cannot find name 'noGlobal'. Did you mean 'global'?
 src/exports/global.ts(27,9): error TS2339: Property 'jQuery' does not exist on type 'Window & typeof globalThis'.
 src/exports/global.ts(27,25): error TS2339: Property '$' does not exist on type 'Window & typeof globalThis'.
 src/manipulation.ts(32,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
@@ -1620,7 +1590,6 @@ src/manipulation.ts(48,8): error TS2339: Property 'type' does not exist on type 
 src/manipulation.ts(48,20): error TS2339: Property 'type' does not exist on type 'object'.
 src/manipulation.ts(50,8): error TS2339: Property 'removeAttribute' does not exist on type 'object'.
 src/manipulation.ts(53,2): error TS2322: Type 'object' is not assignable to type 'string'.
-src/manipulation.ts(56,55): error TS2304: Cannot find name 'Void'.
 src/manipulation.ts(59,12): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/manipulation.ts(66,21): error TS2339: Property 'events' does not exist on type 'object'.
 src/manipulation.ts(71,18): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'number'.
@@ -1776,8 +1745,6 @@ src/manipulation/getAll.ts(14,35): error TS2769: No overload matches this call.
 src/manipulation/getAll.ts(20,54): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/manipulation/getAll.ts(21,17): error TS2339: Property 'merge' does not exist on type 'Function'.
 src/manipulation/setGlobalEval.ts(4,52): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/manipulation/setGlobalEval.ts(4,63): error TS2304: Cannot find name 'Void'.
-src/manipulation/setGlobalEval.ts(4,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/manipulation/wrapMap.ts(14,9): error TS2339: Property 'tbody' does not exist on type 'object'.
 src/manipulation/wrapMap.ts(14,25): error TS2339: Property 'tfoot' does not exist on type 'object'.
 src/manipulation/wrapMap.ts(14,41): error TS2339: Property 'colgroup' does not exist on type 'object'.
@@ -1891,7 +1858,6 @@ src/selector.ts(139,3): error TS2554: Expected 1 arguments, but got 0.
 src/selector.ts(142,33): error TS2554: Expected 3 arguments, but got 2.
 src/selector.ts(144,16): error TS2339: Property 'disabled' does not exist on type 'object'.
 src/selector.ts(144,47): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-src/selector.ts(149,40): error TS2304: Cannot find name 'Void'.
 src/selector.ts(155,3): error TS2740: Type 'Document' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, draggable, and 121 more.
 src/selector.ts(160,2): error TS2322: Type 'string | undefined[]' is not assignable to type 'string'.
   Type 'undefined[]' is not assignable to type 'string'.
@@ -1934,7 +1900,6 @@ src/selector.ts(396,16): error TS2339: Property 'disabled' does not exist on typ
 src/selector.ts(409,2): error TS2322: Type 'object' is not assignable to type 'string'.
 src/selector.ts(432,2): error TS2322: Type 'object' is not assignable to type 'boolean'.
 src/selector.ts(432,35): error TS2339: Property 'getElementsByTagName' does not exist on type 'object'.
-src/selector.ts(439,39): error TS2304: Cannot find name 'Void'.
 src/selector.ts(441,29): error TS2339: Property 'ownerDocument' does not exist on type 'object'.
 src/selector.ts(448,30): error TS2339: Property 'nodeType' does not exist on type 'object'.
 src/selector.ts(454,29): error TS2339: Property 'documentElement' does not exist on type 'object'.
@@ -2056,11 +2021,9 @@ src/selector.ts(1057,7): error TS2339: Property 'pseudos' does not exist on type
 src/selector.ts(1057,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 src/selector.ts(1060,7): error TS2339: Property 'pseudos' does not exist on type 'object'.
 src/selector.ts(1060,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-src/selector.ts(1064,24): error TS2304: Cannot find name 'Void'.
 src/selector.ts(1065,29): error TS2339: Property 'filters' does not exist on type 'object'.
 src/selector.ts(1065,44): error TS2339: Property 'pseudos' does not exist on type 'object'.
 src/selector.ts(1066,6): error TS2339: Property 'setFilters' does not exist on type 'object'.
-src/selector.ts(1066,19): error TS2350: Only a void function can be called with the 'new' keyword.
 src/selector.ts(1074,3): error TS2322: Type 'any[] | 0' is not assignable to type 'number'.
   Type 'any[]' is not assignable to type 'number'.
 src/selector.ts(1077,2): error TS2322: Type 'string' is not assignable to type 'any[]'.
@@ -2174,7 +2137,6 @@ src/selector/uniqueSort.ts(43,11): error TS2339: Property 'contains' does not ex
 src/selector/uniqueSort.ts(51,27): error TS2339: Property 'ownerDocument' does not exist on type 'object'.
 src/selector/uniqueSort.ts(52,11): error TS2339: Property 'contains' does not exist on type 'Function'.
 src/selector/uniqueSort.ts(67,8): error TS2339: Property 'uniqueSort' does not exist on type 'Function'.
-src/serialize.ts(15,90): error TS2304: Cannot find name 'Void'.
 src/serialize.ts(21,10): error TS2339: Property 'each' does not exist on type 'Function'.
 src/serialize.ts(32,6): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/serialize.ts(39,38): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.

@@ -1,13 +1,13 @@
 index.ts(1,5): error TS2300: Duplicate identifier 'atob'.
 index.ts(10,19): error TS2339: Property 'resolve' does not exist on type 'string'.
 index.ts(15,18): error TS2339: Property 'sep' does not exist on type 'string'.
-index.ts(23,76): error TS2304: Cannot find name 'Void'.
-index.ts(23,76): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(37,7): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(39,5): error TS2322: Type 'string' is not assignable to type 'number'.
 index.ts(50,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+index.ts(75,5): error TS2322: Type 'void' is not assignable to type 'string'.
 index.ts(75,12): error TS2554: Expected 3 arguments, but got 2.
 index.ts(77,27): error TS2339: Property 'map' does not exist on type 'object'.
+index.ts(78,5): error TS2322: Type 'void' is not assignable to type 'string'.
 index.ts(78,42): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 index.ts(80,7): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(80,58): error TS2339: Property 'url' does not exist on type 'object'.
@@ -33,8 +33,6 @@ index.ts(172,9): error TS2345: Argument of type 'string | boolean' is not assign
   Type 'boolean' is not assignable to type 'string'.
 index.ts(182,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
 index.ts(182,35): error TS2554: Expected 0 arguments, but got 2.
-index.ts(193,113): error TS2304: Cannot find name 'Void'.
-index.ts(193,113): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(198,29): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(198,43): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(205,35): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
@@ -52,8 +50,6 @@ index.ts(247,13): error TS2322: Type 'boolean' is not assignable to type 'string
 index.ts(249,18): error TS2339: Property 'sourcesContent' does not exist on type 'object'.
 index.ts(251,18): error TS2339: Property 'sourcesContent' does not exist on type 'object'.
 index.ts(257,3): error TS2322: Type 'object' is not assignable to type 'HTMLElement'.
-index.ts(262,97): error TS2304: Cannot find name 'Void'.
-index.ts(262,97): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(268,33): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(270,24): error TS2339: Property 'sourceRoot' does not exist on type 'object'.
 index.ts(271,28): error TS2339: Property 'sourceRoot' does not exist on type 'object'.
@@ -67,15 +63,12 @@ index.ts(283,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
 index.ts(283,28): error TS2554: Expected 0 arguments, but got 3.
 index.ts(283,78): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
 index.ts(285,26): error TS2339: Property 'sourcesContent' does not exist on type 'HTMLElement'.
-index.ts(292,105): error TS2304: Cannot find name 'Void'.
-index.ts(292,105): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(295,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(305,9): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(308,15): error TS2339: Property 'sourceMapData' does not exist on type 'object'.
 index.ts(311,12): error TS2339: Property 'map' does not exist on type 'object'.
 index.ts(313,14): error TS2339: Property 'map' does not exist on type 'object'.
 index.ts(313,40): error TS2339: Property 'map' does not exist on type 'object'.
-index.ts(331,46): error TS2304: Cannot find name 'Void'.
 index.ts(332,28): error TS2339: Property 'map' does not exist on type 'object'.
 index.ts(332,41): error TS2339: Property 'sourcesRelativeTo' does not exist on type 'object'.
 index.ts(336,15): error TS2339: Property 'sourcesResolved' does not exist on type 'object'.

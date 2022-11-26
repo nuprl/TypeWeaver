@@ -35,6 +35,6 @@ export function packNumber(value: string, item: object): string {
     return value;
 }
 
-export function Number(node: object): Void {
+export function Number(node: object): void {
     node.value = packNumber(node.value);
 };

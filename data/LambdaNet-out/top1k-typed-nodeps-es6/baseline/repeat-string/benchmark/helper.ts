@@ -39,7 +39,7 @@ function parseSection(str: string): string {
   return createLines(tok, lines);
 }
 
-function createLines(tok: object, lines: any[]): Void {
+function createLines(tok: object, lines: any[]): void {
   var len: number = lines.length;
   var idx: number = -1;
   while (++idx < len) {

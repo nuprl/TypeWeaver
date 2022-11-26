@@ -19,7 +19,7 @@ getAllCookies(topSites.slice(0, 20), function (err: boolean, cookies: object) {
   fs.writeFileSync(BENCH_COOKIES_FILE, str)
 })
 
-function get (href: string, callback: Function): Void {
+function get (href: string, callback: Function): void {
   var protocol: string = url.parse(href, false, true).protocol
   var proto: any[] = protocol === 'https:' ? https : http
 
@@ -34,7 +34,7 @@ function get (href: string, callback: Function): Void {
     })
 }
 
-function getAllCookies (sites: any[], callback: Function): Void {
+function getAllCookies (sites: any[], callback: Function): void {
   var all: object = Object.create(null)
   var wait: number = sites.length
 
@@ -50,7 +50,7 @@ function getAllCookies (sites: any[], callback: Function): Void {
   })
 }
 
-function getCookies (site: HTMLElement, callback: Function): Void {
+function getCookies (site: HTMLElement, callback: Function): void {
   var href: string = url.format({ hostname: site.rootDomain, protocol: 'http' })
   get(href, function (err: string, res: object) {
     if (err) return callback(err)

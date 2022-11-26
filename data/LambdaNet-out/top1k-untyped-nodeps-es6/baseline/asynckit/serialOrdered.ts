@@ -21,7 +21,7 @@ function serialOrdered(list: object, iterator: Function, sortMethod: string, cal
 {
   var state: object = initState(list, sortMethod);
 
-  iterate(list, iterator, state, function iteratorHandler(error: object, result: Function): Void
+  iterate(list, iterator, state, function iteratorHandler(error: object, result: Function): void
   {
     if (error)
     {

@@ -19,7 +19,7 @@ function reusify (Constructor: object): object {
     return current
   }
 
-  function release (obj: string): Void {
+  function release (obj: string): void {
     tail.next = obj
     tail = obj
   }

@@ -88,11 +88,11 @@ function handleClose (writeStream: HTMLDivElement): Function {
     }
   }
 
-  function moveIntoPlace (): Void {
+  function moveIntoPlace (): void {
     fs.rename(writeStream.__atomicTmp, writeStream.__atomicTarget, iferr(trapWindowsEPERM, end))
   }
 
-  function trapWindowsEPERM (err: object): Void {
+  function trapWindowsEPERM (err: object): void {
     if (writeStream.__isWin &&
         err.syscall && err.syscall === 'rename' &&
         err.code && err.code === 'EPERM'
@@ -103,7 +103,7 @@ function handleClose (writeStream: HTMLDivElement): Function {
     }
   }
 
-  function checkFileHashes (eperm: string): Void {
+  function checkFileHashes (eperm: string): void {
     var inprocess: number = 2
     var tmpFileHash: any[] = crypto.createHash('sha512')
     var targetFileHash: any[] = crypto.createHash('sha512')
@@ -117,7 +117,7 @@ function handleClose (writeStream: HTMLDivElement): Function {
       .on('error', fileHashError)
       .on('end', fileHashComplete)
 
-    function fileHashError (): Void {
+    function fileHashError (): void {
       if (inprocess === 0) return
       inprocess = 0
       cleanup(eperm)
@@ -134,7 +134,7 @@ function handleClose (writeStream: HTMLDivElement): Function {
     }
   }
 
-  function cleanup (err: Function): Void {
+  function cleanup (err: Function): void {
     fs.unlink(writeStream.__atomicTmp, function () {
       if (err) {
         writeStream.emit('error', err)
@@ -145,7 +145,7 @@ function handleClose (writeStream: HTMLDivElement): Function {
     })
   }
 
-  function end (): Void {
+  function end (): void {
     // We have to use our parent class directly because we suppress `finish`
     // events fired via our own emit method.
     Writable.prototype.emit.call(writeStream, 'finish')
@@ -166,7 +166,7 @@ function handleError (writeStream: Request): Function {
     writeStream.__atomicClosed = true
     writeStream.emit('close')
   }
-  function cleanupSync (): Void {
+  function cleanupSync (): void {
     try {
       fs.unlinkSync(writeStream.__atomicTmp)
     } finally {

@@ -13,7 +13,7 @@ import { unsafeToSkipNode, isEqualDeclarations} from './utils.js';
     b { ... }
 */
 
-function processRule(node: object, item: object, list: Map): Void {
+function processRule(node: object, item: object, list: Map): void {
     const selectors: any[] = node.prelude.children;
     const declarations: object = node.block.children;
     const nodeCompareMarker: number = selectors.first.compareMarker;
@@ -78,7 +78,7 @@ function processRule(node: object, item: object, list: Map): Void {
     });
 }
 
-export default function mergeRule(ast: any[]): Void {
+export default function mergeRule(ast: any[]): void {
     walk(ast, {
         visit: 'Rule',
         enter: processRule

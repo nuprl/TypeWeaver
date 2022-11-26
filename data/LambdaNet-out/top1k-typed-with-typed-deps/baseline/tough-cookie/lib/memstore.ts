@@ -73,7 +73,7 @@ class MemoryCookieStore extends Store {
     let pathMatcher: Function;
     if (!path) {
       // null means "all paths"
-      pathMatcher = function matchAll(domainIndex: Function): Void {
+      pathMatcher = function matchAll(domainIndex: Function): void {
         for (const curPath in domainIndex) {
           const pathIndex: Function = domainIndex[curPath];
           for (const key in pathIndex) {
@@ -82,7 +82,7 @@ class MemoryCookieStore extends Store {
         }
       };
     } else {
-      pathMatcher = function matchRFC(domainIndex: Function): Void {
+      pathMatcher = function matchRFC(domainIndex: Function): void {
         //NOTE: we should use path-match algorithm from S5.1.4 here
         //(see : https://github.com/ChromiumWebApps/chromium/blob/b3d3b4da8bb94c1b2e061600df106d590fda3620/net/cookies/canonical_cookie.cc#L299)
         Object.keys(domainIndex).forEach((cookiePath: string) => {

@@ -187,7 +187,7 @@ exports.inflateRawSync = function(buffer: object, opts: any[]) {
   return zlibBufferSync(new InflateRaw(opts), buffer);
 };
 
-function zlibBuffer(engine: HTMLElement, buffer: object, callback: Function): Void {
+function zlibBuffer(engine: HTMLElement, buffer: object, callback: Function): void {
   var buffers: any[] = [];
   var nread: number = 0;
 
@@ -197,7 +197,7 @@ function zlibBuffer(engine: HTMLElement, buffer: object, callback: Function): Vo
   engine.end(buffer);
   flow();
 
-  function flow(): Void {
+  function flow(): void {
     var chunk: string;
     while (null !== (chunk = engine.read())) {
       buffers.push(chunk);
@@ -206,13 +206,13 @@ function zlibBuffer(engine: HTMLElement, buffer: object, callback: Function): Vo
     engine.once('readable', flow);
   }
 
-  function onError(err: string): Void {
+  function onError(err: string): void {
     engine.removeListener('end', onEnd);
     engine.removeListener('readable', flow);
     callback(err);
   }
 
-  function onEnd(): Void {
+  function onEnd(): void {
     var buf: any[];
     var err: object = null;
 
@@ -297,7 +297,7 @@ function isValidFlushFlag(flag: number): boolean {
 // true or false if there is anything in the queue when
 // you call the .write() method.
 
-function Zlib(opts: HTMLElement, mode: string): Void {
+function Zlib(opts: HTMLElement, mode: string): void {
   this._opts = opts = opts || {};
   this._chunkSize = opts.chunkSize || exports.Z_DEFAULT_CHUNK;
 
@@ -471,7 +471,7 @@ Zlib.prototype.close = function(callback: Function) {
   process.nextTick(emitCloseNT, this);
 };
 
-function _close(engine: HTMLElement, callback: boolean): Void {
+function _close(engine: HTMLElement, callback: boolean): void {
   if (callback)
     process.nextTick(callback);
 
@@ -483,7 +483,7 @@ function _close(engine: HTMLElement, callback: boolean): Void {
   engine._handle = null;
 }
 
-function emitCloseNT(self: object): Void {
+function emitCloseNT(self: object): void {
   self.emit('close');
 }
 

@@ -3,7 +3,7 @@
 import utils from './utils';
 import assert from 'minimalistic-assert';
 
-function BlockHash(): Void {
+function BlockHash(): void {
   this.pending = null;
   this.pendingTotal = 0;
   this.blockSize = this.constructor.blockSize;

@@ -43,7 +43,7 @@ function parse (src: string): object {
   return obj
 }
 
-function _log (message: string): Void {
+function _log (message: string): void {
   console.log(`[dotenv][DEBUG] ${message}`)
 }
 

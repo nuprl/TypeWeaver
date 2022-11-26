@@ -23,7 +23,7 @@
  * })
  * // => Logs 'a' then 'b' (iteration order is not guaranteed).
  */
-function forOwn(object: object, iteratee: Function): Void {
+function forOwn(object: object, iteratee: Function): void {
   object = Object(object)
   Object.keys(object).forEach((key: string) => iteratee(object[key], key, object))
 }

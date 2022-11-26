@@ -6,7 +6,7 @@ var start: number = process.hrtime()
 
 for (var i = 0; i < 1000; i++) {
   for (var f = 0; f < files.length; f++) {
-    var res: Void = m(pattern, files[f])
+    var res: void = m(pattern, files[f])
   }
   if (!(i % 10)) process.stdout.write('.')
 }

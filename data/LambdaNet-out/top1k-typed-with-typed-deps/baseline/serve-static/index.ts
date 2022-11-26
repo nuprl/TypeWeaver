@@ -69,7 +69,7 @@ function serveStatic (root: number, options: object): Function {
     ? createRedirectDirectoryListener()
     : createNotFoundDirectoryListener()
 
-  return function serveStatic (req: HTMLElement, res: object, next: Function): Void {
+  return function serveStatic (req: HTMLElement, res: object, next: Function): void {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
@@ -105,14 +105,14 @@ function serveStatic (root: number, options: object): Function {
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on('file', function onFile (): Void {
+      stream.on('file', function onFile (): void {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on('error', function error (err: any[]): Void {
+    stream.on('error', function error (err: any[]): void {
       if (forwardError || !(err.statusCode < 500)) {
         next(err)
         return
@@ -169,7 +169,7 @@ function createHtmlDocument (title: string, body: number): string {
  */
 
 function createNotFoundDirectoryListener (): Function {
-  return function notFound (): Void {
+  return function notFound (): void {
     this.error(404)
   }
 }
@@ -180,7 +180,7 @@ function createNotFoundDirectoryListener (): Function {
  */
 
 function createRedirectDirectoryListener (): Function {
-  return function redirect (res: HTMLElement): Void {
+  return function redirect (res: HTMLElement): void {
     if (this.hasTrailingSlash()) {
       this.error(404)
       return

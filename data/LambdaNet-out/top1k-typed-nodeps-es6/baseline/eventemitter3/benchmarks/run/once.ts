@@ -10,7 +10,7 @@ import EE from 'event-emitter';
 import FE from 'fastemitter';
 import Master from '../../';
 
-function handle(): Void {
+function handle(): void {
   if (arguments.length > 100) console.log('damn');
 }
 
@@ -41,8 +41,8 @@ var ee1: any[] = new EventEmitter1()
   ee.once('foo', handle).emit('foo');
 }).add('contra/emitter', function() {
   ce.once('foo', handle).emit('foo');
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

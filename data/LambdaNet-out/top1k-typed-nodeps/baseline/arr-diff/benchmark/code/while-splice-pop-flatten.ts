@@ -11,7 +11,7 @@ module.exports = function diff(arr: string, arrays: any[]): string {
   return arr;
 };
 
-function remove(arr: any[], ele: string): Void {
+function remove(arr: any[], ele: string): void {
   var idx: number = arr.indexOf(ele);
   while (idx !== -1) {
     var val: string = arr.pop();

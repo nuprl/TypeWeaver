@@ -29,11 +29,11 @@ function throatInternal(size: number): Function {
     release();
     return result;
   }
-  function onReject(error: object): Void {
+  function onReject(error: object): void {
     release();
     throw error;
   }
-  function release(): Void {
+  function release(): void {
     var next: string = queue.shift();
     if (next) {
       next.resolve(next);
@@ -95,7 +95,7 @@ module.exports = function throat(size: string, fn: string): string {
 
 module.exports.default = module.exports;
 
-function Delayed(resolve: object, fn: string, self: string, args: any[]): Void {
+function Delayed(resolve: object, fn: string, self: string, args: any[]): void {
   this.resolve = resolve;
   this.fn = fn;
   this.self = self || null;
@@ -103,7 +103,7 @@ function Delayed(resolve: object, fn: string, self: string, args: any[]): Void {
 }
 
 var blockSize: number = 64;
-function Queue(): Void {
+function Queue(): void {
   this._s1 = [];
   this._s2 = [];
   this._shiftBlock = this._pushBlock = new Array(blockSize);

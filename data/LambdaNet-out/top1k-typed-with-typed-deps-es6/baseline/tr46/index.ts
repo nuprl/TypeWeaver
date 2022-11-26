@@ -9,7 +9,7 @@ function containsNonASCII(str: string): boolean {
   return /[^\x00-\x7F]/u.test(str);
 }
 
-function findStatus(val: Function, { useSTD3ASCIIRules }): Void {
+function findStatus(val: Function, { useSTD3ASCIIRules }): void {
   let start = 0;
   let end = mappingTable.length - 1;
 
@@ -41,7 +41,7 @@ function findStatus(val: Function, { useSTD3ASCIIRules }): Void {
   return null;
 }
 
-function mapChars(domainName: string, { useSTD3ASCIIRules, processingOption }): Void {
+function mapChars(domainName: string, { useSTD3ASCIIRules, processingOption }): void {
   let hasError = false;
   let processed = "";
 
@@ -77,7 +77,7 @@ function mapChars(domainName: string, { useSTD3ASCIIRules, processingOption }): 
   };
 }
 
-function validateLabel(label: string, { checkHyphens, checkBidi, checkJoiners, processingOption, useSTD3ASCIIRules }): Void {
+function validateLabel(label: string, { checkHyphens, checkBidi, checkJoiners, processingOption, useSTD3ASCIIRules }): void {
   if (label.normalize("NFC") !== label) {
     return false;
   }
@@ -204,7 +204,7 @@ function processing(domainName: string, options: object): object {
     if (error) {
       continue;
     }
-    const validation: Void = validateLabel(label, {
+    const validation: void = validateLabel(label, {
       ...options,
       processingOption: curProcessing,
       checkBidi: options.checkBidi && isBidi
@@ -227,7 +227,7 @@ function toASCII(domainName: string, {
   useSTD3ASCIIRules = false,
   processingOption = "nontransitional",
   verifyDNSLength = false
-} = {}): Void {
+} = {}): void {
   if (processingOption !== "transitional" && processingOption !== "nontransitional") {
     throw new RangeError("processingOption must be either transitional or nontransitional");
   }
@@ -277,7 +277,7 @@ function toUnicode(domainName: string, {
   checkJoiners = false,
   useSTD3ASCIIRules = false,
   processingOption = "nontransitional"
-} = {}): Void {
+} = {}): void {
   const result = processing(domainName, {
     processingOption,
     checkHyphens,

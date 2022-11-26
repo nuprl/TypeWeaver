@@ -1108,10 +1108,10 @@ function append(compiler: object, value: string, node: object): string {
  * Simplified assertion. Throws an error is `value` is falsey.
  */
 
-function assert(value: number, message: string): Void {
+function assert(value: number, message: string): void {
   if (!value) throw new Error(message);
 }
-function expect(node: object, name: string, Node: object): Void {
+function expect(node: object, name: string, Node: object): void {
   const isNode: Function = (Node && Node.isNode) ? Node.isNode : utils.isNode;
   assert(isNode(node), `expected ${name} to be an instance of Node`);
 }

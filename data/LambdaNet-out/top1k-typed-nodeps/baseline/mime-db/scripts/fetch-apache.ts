@@ -32,7 +32,7 @@ var TYPE_LINE_REGEXP: RegExp = /^(?:# )?([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*)$/gm
  */
 var URL: string = 'https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types'
 
-get(URL, function onResponse (err: boolean, body: string): Void {
+get(URL, function onResponse (err: boolean, body: string): void {
   if (err) throw err
 
   var json: object = {}
@@ -63,7 +63,7 @@ get(URL, function onResponse (err: boolean, body: string): Void {
 /**
  * Append an extension to an object.
  */
-function appendExtension (obj: object, extension: string): Void {
+function appendExtension (obj: object, extension: string): void {
   if (!obj.extensions) {
     obj.extensions = []
   }
@@ -76,7 +76,7 @@ function appendExtension (obj: object, extension: string): Void {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: string, extensions: any[]): Void {
+function appendExtensions (obj: string, extensions: any[]): void {
   if (extensions.length === 0) {
     return
   }
@@ -92,8 +92,8 @@ function appendExtensions (obj: string, extensions: any[]): Void {
 /**
  * Get HTTPS resource.
  */
-function get (url: string, callback: Function): Void {
-  https.get(url, function onResponse (res: HTMLElement): Void {
+function get (url: string, callback: Function): void {
+  https.get(url, function onResponse (res: HTMLElement): void {
     if (res.statusCode !== 200) {
       callback(new Error('got status code ' + res.statusCode + ' from ' + URL))
     } else {

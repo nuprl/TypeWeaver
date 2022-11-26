@@ -3,7 +3,7 @@
 var Iteration: any[] = require("./iteration");
 
 module.exports = ArrayIterator;
-function ArrayIterator(iterable: Function, start: number, stop: string, step: number): Void {
+function ArrayIterator(iterable: Function, start: number, stop: string, step: number): void {
     this.array = iterable;
     this.start = start || 0;
     this.stop = stop || Infinity;

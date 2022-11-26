@@ -11,7 +11,7 @@ module.exports = terminator;
  * @this  AsyncKitState#
  * @param {function} callback - final callback to invoke after termination
  */
-function terminator(callback: string): Void
+function terminator(callback: string): void
 {
   if (!Object.keys(this.jobs).length)
   {

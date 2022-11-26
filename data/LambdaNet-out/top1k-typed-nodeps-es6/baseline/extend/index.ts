@@ -33,7 +33,7 @@ var isPlainObject: Function = function isPlainObject(obj: object): boolean {
 };
 
 // If name is '__proto__', and Object.defineProperty is available, define __proto__ as an own property on target
-var setProperty: Function = function setProperty(target: object, options: object): Void {
+var setProperty: Function = function setProperty(target: object, options: object): void {
 	if (defineProperty && options.name === '__proto__') {
 		defineProperty(target, options.name, {
 			enumerable: true,

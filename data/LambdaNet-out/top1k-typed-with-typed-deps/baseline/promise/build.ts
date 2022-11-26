@@ -30,7 +30,7 @@ function fixup(src: any[]): string {
       replace(node.property, getIdFor(node.property.name));
     }
   });
-  function replace(node: Node, str: string): Void {
+  function replace(node: Node, str: string): void {
     for (var i = node.start; i < node.end; i++) {
       src[i] = '';
     }

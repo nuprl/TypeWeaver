@@ -1,11 +1,7 @@
 modules/index.ts(1,19): error TS2306: File 'tslib.ts' is not a module.
 tslib.es6.ts(19,83): error TS2339: Property '__proto__' does not exist on type 'object'.
-tslib.es6.ts(24,50): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(24,50): error TS4060: Return type of exported function has or is using private name 'Void'.
-tslib.es6.ts(28,20): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(29,7): error TS2339: Property 'prototype' does not exist on type 'object'.
 tslib.es6.ts(29,69): error TS2339: Property 'prototype' does not exist on type 'object'.
-tslib.es6.ts(29,80): error TS2350: Only a void function can be called with the 'new' keyword.
 tslib.es6.ts(48,25): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
 tslib.es6.ts(56,39): error TS2322: Type 'string | object' is not assignable to type 'string'.
   Type 'object' is not assignable to type 'string'.
@@ -21,10 +17,7 @@ tslib.es6.ts(71,85): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
 tslib.es6.ts(72,16): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
-tslib.es6.ts(73,44): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(73,72): error TS2339: Property 'next' does not exist on type 'object'.
-tslib.es6.ts(74,43): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(75,40): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(75,54): error TS2339: Property 'done' does not exist on type 'object'.
 tslib.es6.ts(75,76): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.es6.ts(75,98): error TS2339: Property 'value' does not exist on type 'object'.
@@ -64,8 +57,6 @@ tslib.es6.ts(111,38): error TS2339: Property '__esModule' does not exist on type
 tslib.es6.ts(111,56): error TS2339: Property 'writable' does not exist on type 'object'.
 tslib.es6.ts(111,73): error TS2339: Property 'configurable' does not exist on type 'object'.
 tslib.es6.ts(116,27): error TS2322: Type 'number' is not assignable to type 'string'.
-tslib.es6.ts(120,52): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(120,52): error TS4060: Return type of exported function has or is using private name 'Void'.
 tslib.es6.ts(125,9): error TS2322: Type 'typeof Symbol.iterator' is not assignable to type 'boolean'.
 tslib.es6.ts(125,92): error TS2538: Type 'true' cannot be used as an index type.
 tslib.es6.ts(138,13): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
@@ -76,25 +67,17 @@ tslib.es6.ts(146,25): error TS2339: Property 'done' does not exist on type 'obje
 tslib.es6.ts(156,24): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(180,59): error TS2350: Only a void function can be called with the 'new' keyword.
 tslib.es6.ts(186,5): error TS2322: Type 'object' is not assignable to type 'boolean'.
-tslib.es6.ts(187,31): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(187,97): error TS2345: Argument of type '(a: Function, b: any[]) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'b' and 'reject' are incompatible.
     Type '(reason?: any) => void' is not assignable to type 'any[]'.
-tslib.es6.ts(188,44): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(189,31): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(189,40): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.es6.ts(189,85): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.es6.ts(189,134): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
-tslib.es6.ts(190,38): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(191,37): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(192,46): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(197,5): error TS2322: Type 'object' is not assignable to type 'boolean'.
 tslib.es6.ts(197,20): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(197,86): error TS2554: Expected 2 arguments, but got 1.
-tslib.es6.ts(198,44): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(201,43): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tslib.es6.ts(204,75): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
-tslib.es6.ts(205,31): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(205,95): error TS2345: Argument of type '(resolve: any[], reject: string) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'any[]'.
@@ -102,7 +85,6 @@ tslib.es6.ts(205,159): error TS2345: Argument of type 'any[]' is not assignable 
   Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 tslib.es6.ts(205,178): error TS2339: Property 'done' does not exist on type 'object'.
 tslib.es6.ts(205,186): error TS2339: Property 'value' does not exist on type 'object'.
-tslib.es6.ts(206,82): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(206,113): error TS2345: Argument of type '(v: string) => void' is not assignable to parameter of type '(value: Function) => Function | PromiseLike<Function>'.
   Types of parameters 'v' and 'value' are incompatible.
     Type 'Function' is not assignable to type 'string'.
@@ -138,10 +120,8 @@ tslib.ts(61,26): error TS2300: Duplicate identifier 'id'.
 tslib.ts(62,13): error TS1184: Modifiers cannot appear here.
 tslib.ts(62,26): error TS2300: Duplicate identifier 'id'.
 tslib.ts(68,83): error TS2339: Property '__proto__' does not exist on type 'object'.
-tslib.ts(75,24): error TS2304: Cannot find name 'Void'.
 tslib.ts(76,11): error TS2339: Property 'prototype' does not exist on type 'object'.
 tslib.ts(76,73): error TS2339: Property 'prototype' does not exist on type 'object'.
-tslib.ts(76,84): error TS2350: Only a void function can be called with the 'new' keyword.
 tslib.ts(79,5): error TS2322: Type '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' is not assignable to type 'string'.
 tslib.ts(92,29): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
 tslib.ts(100,43): error TS2322: Type 'number | any[] | PropertyDescriptor' is not assignable to type 'string'.
@@ -157,10 +137,7 @@ tslib.ts(115,89): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
 tslib.ts(116,20): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
-tslib.ts(117,48): error TS2304: Cannot find name 'Void'.
 tslib.ts(117,76): error TS2339: Property 'next' does not exist on type 'object'.
-tslib.ts(118,47): error TS2304: Cannot find name 'Void'.
-tslib.ts(119,44): error TS2304: Cannot find name 'Void'.
 tslib.ts(119,58): error TS2339: Property 'done' does not exist on type 'object'.
 tslib.ts(119,80): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.ts(119,102): error TS2339: Property 'value' does not exist on type 'object'.
@@ -207,29 +184,20 @@ tslib.ts(185,81): error TS2339: Property 'value' does not exist on type 'object'
 tslib.ts(190,29): error TS2339: Property 'done' does not exist on type 'object'.
 tslib.ts(224,67): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-tslib.ts(231,35): error TS2304: Cannot find name 'Void'.
 tslib.ts(231,101): error TS2345: Argument of type '(a: Function, b: any[]) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'b' and 'reject' are incompatible.
     Type '(reason?: any) => void' is not assignable to type 'any[]'.
-tslib.ts(232,48): error TS2304: Cannot find name 'Void'.
-tslib.ts(233,35): error TS2304: Cannot find name 'Void'.
 tslib.ts(233,44): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.ts(233,89): error TS2339: Property 'value' does not exist on type 'object'.
 tslib.ts(233,138): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
-tslib.ts(234,42): error TS2304: Cannot find name 'Void'.
-tslib.ts(235,41): error TS2304: Cannot find name 'Void'.
-tslib.ts(236,50): error TS2304: Cannot find name 'Void'.
 tslib.ts(241,24): error TS2554: Expected 2 arguments, but got 1.
 tslib.ts(241,90): error TS2554: Expected 2 arguments, but got 1.
-tslib.ts(242,48): error TS2304: Cannot find name 'Void'.
-tslib.ts(249,35): error TS2304: Cannot find name 'Void'.
 tslib.ts(249,99): error TS2345: Argument of type '(resolve: any[], reject: string) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'any[]'.
 tslib.ts(249,163): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
 tslib.ts(249,182): error TS2339: Property 'done' does not exist on type 'object'.
 tslib.ts(249,190): error TS2339: Property 'value' does not exist on type 'object'.
-tslib.ts(250,86): error TS2304: Cannot find name 'Void'.
 tslib.ts(250,117): error TS2345: Argument of type '(v: string) => void' is not assignable to parameter of type '(value: Function) => Function | PromiseLike<Function>'.
   Types of parameters 'v' and 'value' are incompatible.
     Type 'Function' is not assignable to type 'string'.

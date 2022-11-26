@@ -3,7 +3,6 @@ src/binding.ts(7,21): error TS2307: Cannot find module 'pako/lib/zlib/zstream' o
 src/binding.ts(8,26): error TS2307: Cannot find module 'pako/lib/zlib/deflate.js' or its corresponding type declarations.
 src/binding.ts(9,26): error TS2307: Cannot find module 'pako/lib/zlib/inflate.js' or its corresponding type declarations.
 src/binding.ts(10,23): error TS2307: Cannot find module 'pako/lib/zlib/constants' or its corresponding type declarations.
-src/binding.ts(32,31): error TS2304: Cannot find name 'Void'.
 src/binding.ts(106,5): error TS2740: Type 'Buffer' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 src/binding.ts(132,10): error TS2339: Property '_process' does not exist on type 'HTMLElement'.
 src/binding.ts(133,10): error TS2551: Property '_after' does not exist on type 'HTMLElement'. Did you mean 'after'?
@@ -58,17 +57,13 @@ src/index.ts(183,36): error TS2345: Argument of type 'Function' is not assignabl
 src/index.ts(187,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(187,40): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/index.ts(187,47): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
-src/index.ts(190,79): error TS2304: Cannot find name 'Void'.
 src/index.ts(194,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 src/index.ts(195,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 src/index.ts(197,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-src/index.ts(200,20): error TS2304: Cannot find name 'Void'.
 src/index.ts(202,37): error TS2339: Property 'read' does not exist on type 'HTMLElement'.
 src/index.ts(206,12): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
-src/index.ts(209,34): error TS2304: Cannot find name 'Void'.
 src/index.ts(210,12): error TS2339: Property 'removeListener' does not exist on type 'HTMLElement'.
 src/index.ts(211,12): error TS2339: Property 'removeListener' does not exist on type 'HTMLElement'.
-src/index.ts(215,21): error TS2304: Cannot find name 'Void'.
 src/index.ts(222,7): error TS2740: Type 'Buffer' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 src/index.ts(226,12): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
 src/index.ts(233,5): error TS2322: Type 'Buffer' is not assignable to type 'any[]'.
@@ -81,7 +76,6 @@ src/index.ts(263,41): error TS2350: Only a void function can be called with the 
 src/index.ts(270,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(275,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(282,40): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(300,49): error TS2304: Cannot find name 'Void'.
 src/index.ts(301,16): error TS2322: Type 'HTMLElement | {}' is not assignable to type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/index.ts(302,26): error TS2339: Property 'chunkSize' does not exist on type 'HTMLElement'.
@@ -145,12 +139,10 @@ src/index.ts(455,24): error TS2345: Argument of type 'string' is not assignable 
 src/index.ts(456,17): error TS2339: Property 'ending' does not exist on type 'HTMLElement'.
 src/index.ts(459,17): error TS2339: Property 'needDrain' does not exist on type 'HTMLElement'.
 src/index.ts(470,16): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
-src/index.ts(474,58): error TS2304: Cannot find name 'Void'.
 src/index.ts(476,22): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
 src/index.ts(479,15): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(482,10): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
 src/index.ts(483,10): error TS2339: Property '_handle' does not exist on type 'HTMLElement'.
-src/index.ts(486,37): error TS2304: Cannot find name 'Void'.
 src/index.ts(487,8): error TS2339: Property 'emit' does not exist on type 'object'.
 src/index.ts(493,28): error TS2339: Property 'ending' does not exist on type 'any[]'.
 src/index.ts(493,41): error TS2339: Property 'ended' does not exist on type 'any[]'.

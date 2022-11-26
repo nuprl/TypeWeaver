@@ -3,7 +3,7 @@
 import inherits from 'inherits';
 import DEREncoder from './der';
 
-function PEMEncoder(entity: string): Void {
+function PEMEncoder(entity: string): void {
   DEREncoder.call(this, entity);
   this.enc = 'pem';
 }

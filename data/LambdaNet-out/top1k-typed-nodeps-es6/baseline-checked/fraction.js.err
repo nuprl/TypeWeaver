@@ -99,7 +99,7 @@ examples/hesse-convergence.ts(81,23): error TS2345: Argument of type 'string' is
 examples/hesse-convergence.ts(111,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 examples/hesse-convergence.ts(111,11): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 examples/integrate.ts(12,22): error TS2306: File 'fraction.min.ts' is not a module.
-examples/rational-pow.ts(13,25): error TS2304: Cannot find name 'Fraction'.
+examples/rational-pow.ts(13,25): error TS2552: Cannot find name 'Fraction'. Did you mean 'toFraction'?
 examples/rational-pow.ts(14,21): error TS2304: Cannot find name 'Fraction'.
 examples/rational-pow.ts(17,25): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 examples/rational-pow.ts(17,32): error TS2339: Property 'pow' does not exist on type 'HTMLElement'.
@@ -122,7 +122,6 @@ examples/valueOfPi.ts(9,56): error TS2339: Property 'd' does not exist on type '
 examples/valueOfPi.ts(18,16): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 examples/valueOfPi.ts(23,16): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 examples/valueOfPi.ts(26,14): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
-fraction.min.ts(8,55): error TS2304: Cannot find name 'Void'.
 fraction.min.ts(8,250): error TS2322: Type 'string' is not assignable to type 'number'.
 fraction.min.ts(8,370): error TS2339: Property 'n' does not exist on type 'never'.
 fraction.min.ts(8,376): error TS2339: Property 'd' does not exist on type 'never'.

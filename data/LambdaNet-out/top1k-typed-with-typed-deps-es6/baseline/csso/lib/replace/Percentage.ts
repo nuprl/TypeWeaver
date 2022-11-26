@@ -17,7 +17,7 @@ const blacklist: Error = new Set([
     '-ms-flex'
 ]);
 
-export default function compressPercentage(node: object, item: object): Void {
+export default function compressPercentage(node: object, item: object): void {
     node.value = packNumber(node.value);
 
     if (node.value === '0' && this.declaration && !blacklist.has(this.declaration.property)) {

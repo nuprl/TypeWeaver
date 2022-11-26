@@ -2,7 +2,7 @@ import { config } from './config';
 
 const queue: any[] = [];
 
-function scheduleFlush(): Void {
+function scheduleFlush(): void {
   setTimeout(() => {
     for (let i = 0; i < queue.length; i++) {
       let entry: object = queue[i];
@@ -21,7 +21,7 @@ function scheduleFlush(): Void {
   }, 50);
 }
 
-export default function instrument(eventName: string, promise: string, child: Map): Void {
+export default function instrument(eventName: string, promise: string, child: Map): void {
   if (1 === queue.push({
     name: eventName,
     payload: {

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-export default function write (path: string, obj: object): Void {
+export default function write (path: string, obj: object): void {
   var fd: number = fs.openSync(path, 'w')
   var keys: any[] = Object.keys(obj).sort()
 

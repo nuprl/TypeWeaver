@@ -6,7 +6,7 @@ import assert from 'assert';
 
 const isWindows: boolean = (process.platform === 'win32')
 
-function defaults (options: object): Void {
+function defaults (options: object): void {
   const methods: any[] = [
     'unlink',
     'chmod',
@@ -24,7 +24,7 @@ function defaults (options: object): Void {
   options.maxBusyTries = options.maxBusyTries || 3
 }
 
-function rimraf (p: string, options: object, cb: Function): Void {
+function rimraf (p: string, options: object, cb: Function): void {
   let busyTries: number = 0
 
   if (typeof options === 'function') {
@@ -69,7 +69,7 @@ function rimraf (p: string, options: object, cb: Function): Void {
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-function rimraf_ (p: Function, options: object, cb: Function): Void {
+function rimraf_ (p: Function, options: object, cb: Function): void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -109,7 +109,7 @@ function rimraf_ (p: Function, options: object, cb: Function): Void {
   })
 }
 
-function fixWinEPERM (p: Function, options: object, er: string, cb: Function): Void {
+function fixWinEPERM (p: Function, options: object, er: string, cb: Function): void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -164,7 +164,7 @@ function fixWinEPERMSync (p: string, options: object, er: string): Promise {
   }
 }
 
-function rmdir (p: string, options: any[], originalEr: number, cb: Function): Void {
+function rmdir (p: string, options: any[], originalEr: number, cb: Function): void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -183,7 +183,7 @@ function rmdir (p: string, options: any[], originalEr: number, cb: Function): Vo
   })
 }
 
-function rmkids (p: string, options: object, cb: Function): Void {
+function rmkids (p: string, options: object, cb: Function): void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -213,7 +213,7 @@ function rmkids (p: string, options: object, cb: Function): Void {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-function rimrafSync (p: string, options: object): Void {
+function rimrafSync (p: string, options: object): void {
   let st: any[]
 
   options = options || {}
@@ -256,7 +256,7 @@ function rimrafSync (p: string, options: object): Void {
   }
 }
 
-function rmdirSync (p: Function, options: object, originalEr: number): Void {
+function rmdirSync (p: Function, options: object, originalEr: number): void {
   assert(p)
   assert(options)
 

@@ -21,11 +21,11 @@ var extendStatics: Function = function(d: string, b: string) {
     return extendStatics(d, b);
 };
 
-export function __extends(d: object, b: object): Void {
+export function __extends(d: object, b: object): void {
     if (typeof b !== "function" && b !== null)
         throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
-    function __(): Void { this.constructor = d; }
+    function __(): void { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
@@ -70,9 +70,9 @@ export function __metadata(metadataKey: string, metadataValue: string): boolean 
 export function __awaiter(thisArg: string, _arguments: object, P: object, generator: object): string {
     function adopt(value: string): string { return value instanceof P ? value : new P(function (resolve: Function) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve: Function, reject: Function) {
-        function fulfilled(value: string): Void { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value: string): Void { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result: object): Void { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function fulfilled(value: string): void { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value: string): void { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result: object): void { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
@@ -117,7 +117,7 @@ export var __createBinding: Function = Object.create ? (function(o: any[], m: ob
     o[k2] = m[k];
 });
 
-export function __exportStar(m: any[], o: string): Void {
+export function __exportStar(m: any[], o: string): void {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
 }
 
@@ -184,26 +184,26 @@ export function __asyncGenerator(thisArg: string, _arguments: object, generator:
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var g: object = generator.apply(thisArg, _arguments || []), i: object, q: any[] = [];
     return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n: string): Void { if (g[n]) i[n] = function (v: string) { return new Promise(function (a: Function, b: any[]) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n: string, v: string): Void { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r: object): Void { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value: string): Void { resume("next", value); }
-    function reject(value: string): Void { resume("throw", value); }
-    function settle(f: Function, v: string): Void { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+    function verb(n: string): void { if (g[n]) i[n] = function (v: string) { return new Promise(function (a: Function, b: any[]) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n: string, v: string): void { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r: object): void { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value: string): void { resume("next", value); }
+    function reject(value: string): void { resume("throw", value); }
+    function settle(f: Function, v: string): void { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 }
 
 export function __asyncDelegator(o: object): boolean {
     var i: object, p: boolean;
     return i = {}, verb("next"), verb("throw", function (e: Function) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n: string, f: Function): Void { i[n] = o[n] ? function (v: string) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    function verb(n: string, f: Function): void { i[n] = o[n] ? function (v: string) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
 }
 
 export function __asyncValues(o: object): Promise {
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var m: Function = o[Symbol.asyncIterator], i: object;
     return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n: string): Void { i[n] = o[n] && function (v: object) { return new Promise(function (resolve: any[], reject: string) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve: Function, reject: string, d: boolean, v: Function): Void { Promise.resolve(v).then(function(v: string) { resolve({ value: v, done: d }); }, reject); }
+    function verb(n: string): void { i[n] = o[n] && function (v: object) { return new Promise(function (resolve: any[], reject: string) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve: Function, reject: string, d: boolean, v: Function): void { Promise.resolve(v).then(function(v: string) { resolve({ value: v, done: d }); }, reject); }
 }
 
 export function __makeTemplateObject(cooked: object, raw: string): object {

@@ -129,11 +129,11 @@ function parseArgs (): object {
     }
 }
 
-function version (): Void {
+function version (): void {
     console.log(pkg.version)
 }
 
-function usage (): Void {
+function usage (): void {
     console.log(
         `
   Usage: json5 [options] <file>

@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function setAttributesWithoutAttributes(styleElement: Element, attributes: object): Void {
+function setAttributesWithoutAttributes(styleElement: Element, attributes: object): void {
   const nonce: Function =
     typeof __webpack_nonce__ !== "undefined" ? __webpack_nonce__ : null;
 

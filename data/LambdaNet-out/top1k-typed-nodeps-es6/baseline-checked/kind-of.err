@@ -17,9 +17,7 @@ benchmark/code/switch.ts(97,19): error TS2345: Argument of type 'string' is not 
 benchmark/code/switch.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
-benchmark/fixtures/generator.ts(1,35): error TS2304: Cannot find name 'Void'.
-benchmark/fixtures/object-plain.ts(1,17): error TS2304: Cannot find name 'Void'.
-benchmark/fixtures/object-plain.ts(2,17): error TS2350: Only a void function can be called with the 'new' keyword.
+benchmark/fixtures/generator.ts(1,35): error TS2505: A generator cannot have a 'void' type annotation.
 benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 benchmark/index.ts(5,19): error TS2307: Cannot find module 'write' or its corresponding type declarations.
 browser.ts(2,3): error TS1258: A default export must be at the top level of a file or module declaration.

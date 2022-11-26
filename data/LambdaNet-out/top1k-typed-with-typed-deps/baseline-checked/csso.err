@@ -68,12 +68,9 @@
 .gh-pages/libs/cssbeautify.ts(55,84): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 .gh-pages/libs/cssbeautify.ts(59,21): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 .gh-pages/libs/cssbeautify.ts(59,37): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(70,34): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/cssbeautify.ts(73,38): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
-.gh-pages/libs/cssbeautify.ts(77,31): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/cssbeautify.ts(78,25): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-.gh-pages/libs/cssbeautify.ts(92,32): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/cssbeautify.ts(95,25): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 .gh-pages/libs/cssbeautify.ts(98,17): error TS2322: Type 'string' is not assignable to type 'number'.
@@ -212,7 +209,6 @@
 .gh-pages/libs/diff.ts(38,1333): error TS2339: Property 'convertChangesToXML' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,1355): error TS2339: Property 'canonicalize' does not exist on type 'HTMLElement'.
 .gh-pages/libs/diff.ts(38,1370): error TS2339: Property 'canonicalize' does not exist on type 'object'.
-.gh-pages/libs/diff.ts(38,1441): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/diff.ts(38,1579): error TS2339: Property 'removed' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,1593): error TS2339: Property 'value' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,1613): error TS2339: Property 'count' does not exist on type 'object'.
@@ -253,7 +249,7 @@
 .gh-pages/libs/diff.ts(38,2850): error TS2339: Property 'callback' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,3213): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 .gh-pages/libs/diff.ts(38,3229): error TS2345: Argument of type '{ value: string; count: number; }[]' is not assignable to parameter of type 'string'.
-.gh-pages/libs/diff.ts(38,3286): error TS2304: Cannot find name 'Void'.
+.gh-pages/libs/diff.ts(38,3272): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 .gh-pages/libs/diff.ts(38,3487): error TS2339: Property 'added' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,3500): error TS2339: Property 'removed' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,3535): error TS2339: Property 'count' does not exist on type 'object'.
@@ -331,7 +327,6 @@
 .gh-pages/libs/diff.ts(38,9075): error TS2322: Type 'boolean' is not assignable to type 'number'.
 .gh-pages/libs/diff.ts(38,9260): error TS2339: Property 'substr' does not exist on type 'any[]'.
 .gh-pages/libs/diff.ts(38,9500): error TS2322: Type 'string' is not assignable to type 'number'.
-.gh-pages/libs/diff.ts(38,9552): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/diff.ts(38,9616): error TS2339: Property 'loadFile' does not exist on type 'any[]'.
 .gh-pages/libs/diff.ts(38,9655): error TS2339: Property 'complete' does not exist on type 'any[]'.
 .gh-pages/libs/diff.ts(38,9679): error TS2554: Expected 2 arguments, but got 3.
@@ -341,10 +336,8 @@
 .gh-pages/libs/diff.ts(38,9790): error TS2339: Property '__esModule' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,9806): error TS2339: Property 'applyPatch' does not exist on type 'object'.
 .gh-pages/libs/diff.ts(38,9821): error TS2339: Property 'applyPatches' does not exist on type 'object'.
-.gh-pages/libs/diff.ts(38,9984): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/diff.ts(38,9996): error TS2304: Cannot find name 'TRBL'.
 .gh-pages/libs/diff.ts(38,10098): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-.gh-pages/libs/diff.ts(38,10431): error TS2304: Cannot find name 'Void'.
 .gh-pages/libs/diff.ts(38,10443): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 .gh-pages/libs/diff.ts(38,10605): error TS2304: Cannot find name 'TRBL'.
 .gh-pages/libs/diff.ts(38,11305): error TS2322: Type 'any[]' is not assignable to type 'string'.
@@ -417,8 +410,6 @@
 .gh-pages/libs/diff.ts(38,14601): error TS2339: Property 'convertChangesToXML' does not exist on type 'object'.
 lib/clean/Atrule.ts(4,57): error TS2304: Cannot find name 'TRBL'.
 lib/clean/Atrule.ts(4,57): error TS4078: Parameter 'item' of exported function has or is using private name 'TRBL'.
-lib/clean/Atrule.ts(4,83): error TS2304: Cannot find name 'Void'.
-lib/clean/Atrule.ts(4,83): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/Atrule.ts(5,14): error TS2339: Property 'block' does not exist on type 'object'.
 lib/clean/Atrule.ts(11,32): error TS2339: Property 'block' does not exist on type 'object'.
 lib/clean/Atrule.ts(12,25): error TS2554: Expected 0 arguments, but got 1.
@@ -437,11 +428,7 @@ lib/clean/Atrule.ts(63,40): error TS2339: Property 'prelude' does not exist on t
 lib/clean/Atrule.ts(63,71): error TS2339: Property 'block' does not exist on type 'object'.
 lib/clean/Atrule.ts(64,33): error TS2554: Expected 0 arguments, but got 1.
 lib/clean/Comment.ts(1,72): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/Comment.ts(1,78): error TS2304: Cannot find name 'Void'.
-lib/clean/Comment.ts(1,78): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/Declaration.ts(3,75): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/Declaration.ts(3,81): error TS2304: Cannot find name 'Void'.
-lib/clean/Declaration.ts(3,81): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/Declaration.ts(4,14): error TS2339: Property 'value' does not exist on type 'object'.
 lib/clean/Declaration.ts(4,37): error TS2339: Property 'value' does not exist on type 'object'.
 lib/clean/Declaration.ts(9,23): error TS2339: Property 'property' does not exist on type 'object'.
@@ -449,8 +436,6 @@ lib/clean/Declaration.ts(10,28): error TS2339: Property 'value' does not exist o
 lib/clean/Declaration.ts(11,18): error TS2339: Property 'value' does not exist on type 'object'.
 lib/clean/Declaration.ts(11,37): error TS2339: Property 'value' does not exist on type 'object'.
 lib/clean/Raw.ts(3,68): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/Raw.ts(3,74): error TS2304: Cannot find name 'Void'.
-lib/clean/Raw.ts(3,74): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/Rule.ts(5,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
 lib/clean/Rule.ts(8,18): error TS2339: Property 'children' does not exist on type 'object'.
 lib/clean/Rule.ts(8,74): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -484,8 +469,6 @@ lib/clean/Rule.ts(62,63): error TS2339: Property 'blacklist' does not exist on t
 lib/clean/Rule.ts(62,84): error TS2339: Property 'name' does not exist on type 'object'.
 lib/clean/Rule.ts(76,25): error TS2339: Property 'children' does not exist on type 'object'.
 lib/clean/Rule.ts(79,69): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/Rule.ts(79,92): error TS2304: Cannot find name 'Void'.
-lib/clean/Rule.ts(79,92): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/Rule.ts(80,28): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/clean/Rule.ts(80,59): error TS2339: Property 'block' does not exist on type 'object'.
 lib/clean/Rule.ts(86,49): error TS2339: Property 'has' does not exist on type 'Error'.
@@ -493,8 +476,6 @@ lib/clean/Rule.ts(90,13): error TS2339: Property 'usage' does not exist on type 
 lib/clean/Rule.ts(93,26): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/clean/Rule.ts(95,32): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/clean/TypeSelector.ts(2,77): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/TypeSelector.ts(2,83): error TS2304: Cannot find name 'Void'.
-lib/clean/TypeSelector.ts(2,83): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/TypeSelector.ts(3,31): error TS2339: Property 'data' does not exist on type 'object'.
 lib/clean/TypeSelector.ts(11,35): error TS2339: Property 'next' does not exist on type 'object'.
 lib/clean/TypeSelector.ts(11,48): error TS2339: Property 'next' does not exist on type 'object'.
@@ -504,8 +485,6 @@ lib/clean/TypeSelector.ts(14,9): error TS2367: This condition will always return
 lib/clean/TypeSelector.ts(15,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/clean/TypeSelector.ts(16,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/clean/WhiteSpace.ts(1,75): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/clean/WhiteSpace.ts(1,81): error TS2304: Cannot find name 'Void'.
-lib/clean/WhiteSpace.ts(1,81): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/clean/index.ts(21,10): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'CssNode'.
 lib/clean/utils.ts(2,27): error TS2339: Property 'children' does not exist on type 'object'.
 lib/clean/utils.ts(2,44): error TS2339: Property 'children' does not exist on type 'object'.
@@ -572,21 +551,21 @@ lib/compress.ts(186,13): error TS2367: This condition will always return 'true' 
 lib/compress.ts(191,21): error TS2339: Property 'isEmpty' does not exist on type 'HTMLInputElement'.
 lib/index.ts(8,17): error TS2339: Property 'debug' does not exist on type 'object'.
 lib/index.ts(12,5): error TS2322: Type 'object' is not assignable to type 'string'.
-lib/index.ts(18,58): error TS2304: Cannot find name 'Void'.
 lib/index.ts(41,49): error TS2304: Cannot find name 'TRBL'.
 lib/index.ts(44,24): error TS2339: Property 'logger' does not exist on type 'object'.
 lib/index.ts(44,57): error TS2339: Property 'debug' does not exist on type 'object'.
 lib/index.ts(45,17): error TS2339: Property 'logger' does not exist on type 'object'.
 lib/index.ts(45,54): error TS2339: Property 'debug' does not exist on type 'object'.
-lib/index.ts(51,69): error TS2304: Cannot find name 'Void'.
 lib/index.ts(62,38): error TS2339: Property 'filename' does not exist on type 'object'.
 lib/index.ts(66,11): error TS2322: Type 'string' is not assignable to type 'object'.
 lib/index.ts(70,40): error TS2339: Property 'sourceMap' does not exist on type 'object'.
 lib/index.ts(75,17): error TS2339: Property 'beforeCompress' does not exist on type 'object'.
+lib/index.ts(77,13): error TS2345: Argument of type 'void' is not assignable to parameter of type 'object'.
 lib/index.ts(77,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 lib/index.ts(77,46): error TS2339: Property 'beforeCompress' does not exist on type 'object'.
 lib/index.ts(82,11): error TS2322: Type 'string' is not assignable to type 'object'.
 lib/index.ts(87,17): error TS2339: Property 'afterCompress' does not exist on type 'object'.
+lib/index.ts(89,13): error TS2345: Argument of type 'void' is not assignable to parameter of type 'object'.
 lib/index.ts(89,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
 lib/index.ts(89,57): error TS2339: Property 'afterCompress' does not exist on type 'object'.
 lib/index.ts(94,17): error TS2339: Property 'sourceMap' does not exist on type 'object'.
@@ -609,8 +588,6 @@ lib/replace/AttributeSelector.ts(24,28): error TS2339: Property 'loc' does not e
 lib/replace/AttributeSelector.ts(25,29): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Dimension.ts(3,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
 lib/replace/Dimension.ts(9,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
-lib/replace/Dimension.ts(32,71): error TS2304: Cannot find name 'Void'.
-lib/replace/Dimension.ts(32,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/Dimension.ts(33,27): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Dimension.ts(33,43): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Dimension.ts(35,10): error TS2339: Property 'value' does not exist on type 'object'.
@@ -624,15 +601,11 @@ lib/replace/Number.ts(14,11): error TS2322: Type 'RegExp' is not assignable to t
 lib/replace/Number.ts(14,41): error TS2339: Property 'prev' does not exist on type 'object'.
 lib/replace/Number.ts(14,86): error TS2339: Property 'has' does not exist on type 'Error'.
 lib/replace/Number.ts(14,95): error TS2339: Property 'prev' does not exist on type 'object'.
-lib/replace/Number.ts(38,39): error TS2304: Cannot find name 'Void'.
-lib/replace/Number.ts(38,39): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/Number.ts(39,10): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Number.ts(39,18): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Number.ts(39,34): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Percentage.ts(1,10): error TS2305: Module '"css-tree"' has no exported member 'lexer'.
 lib/replace/Percentage.ts(4,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
-lib/replace/Percentage.ts(20,73): error TS2304: Cannot find name 'Void'.
-lib/replace/Percentage.ts(20,73): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/Percentage.ts(21,10): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Percentage.ts(21,18): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Percentage.ts(21,34): error TS2339: Property 'value' does not exist on type 'object'.
@@ -645,8 +618,6 @@ lib/replace/Percentage.ts(32,67): error TS2339: Property 'data' does not exist o
 lib/replace/Percentage.ts(34,18): error TS2339: Property 'data' does not exist on type 'object'.
 lib/replace/Url.ts(3,10): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/Url.ts(3,23): error TS2339: Property 'value' does not exist on type 'object'.
-lib/replace/Value.ts(16,54): error TS2304: Cannot find name 'Void'.
-lib/replace/Value.ts(16,54): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/Value.ts(23,42): error TS2339: Property 'basename' does not exist on type 'object'.
 lib/replace/Value.ts(24,27): error TS2339: Property 'basename' does not exist on type 'object'.
 lib/replace/atrule/keyframes.ts(2,10): error TS2339: Property 'block' does not exist on type 'object'.
@@ -667,8 +638,6 @@ lib/replace/color.ts(252,40): error TS2339: Property 'data' does not exist on ty
 lib/replace/color.ts(286,25): error TS2339: Property 'next' does not exist on type 'object'.
 lib/replace/color.ts(324,45): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/color.ts(326,21): error TS2339: Property 'type' does not exist on type 'object'.
-lib/replace/color.ts(356,62): error TS2304: Cannot find name 'Void'.
-lib/replace/color.ts(356,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/color.ts(357,37): error TS2339: Property 'name' does not exist on type 'object'.
 lib/replace/color.ts(361,39): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/color.ts(369,29): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
@@ -691,22 +660,15 @@ lib/replace/color.ts(431,47): error TS2339: Property 'children' does not exist o
 lib/replace/color.ts(438,14): error TS2339: Property 'data' does not exist on type 'any[]'.
 lib/replace/color.ts(440,23): error TS2339: Property 'loc' does not exist on type 'object'.
 lib/replace/color.ts(444,26): error TS2339: Property 'data' does not exist on type 'any[]'.
-lib/replace/color.ts(448,59): error TS2304: Cannot find name 'Void'.
-lib/replace/color.ts(448,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/color.ts(453,30): error TS2339: Property 'name' does not exist on type 'object'.
 lib/replace/color.ts(461,18): error TS2339: Property 'data' does not exist on type 'any[]'.
 lib/replace/color.ts(463,27): error TS2339: Property 'loc' does not exist on type 'object'.
 lib/replace/color.ts(473,18): error TS2339: Property 'name' does not exist on type 'object'.
-lib/replace/color.ts(478,57): error TS2304: Cannot find name 'Void'.
-lib/replace/color.ts(478,57): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/color.ts(479,30): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/color.ts(490,14): error TS2339: Property 'data' does not exist on type 'any[]'.
 lib/replace/color.ts(492,23): error TS2339: Property 'loc' does not exist on type 'object'.
 lib/replace/color.ts(496,14): error TS2339: Property 'value' does not exist on type 'object'.
 lib/replace/index.ts(25,10): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'CssNode'.
-lib/replace/property/background.ts(3,59): error TS2304: Cannot find name 'Void'.
-lib/replace/property/background.ts(3,59): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/replace/property/background.ts(4,23): error TS2304: Cannot find name 'Void'.
 lib/replace/property/background.ts(28,10): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/property/background.ts(29,18): error TS2339: Property 'type' does not exist on type 'object'.
 lib/replace/property/background.ts(29,46): error TS2339: Property 'value' does not exist on type 'object'.
@@ -716,8 +678,6 @@ lib/replace/property/background.ts(38,22): error TS2339: Property 'name' does no
 lib/replace/property/background.ts(39,22): error TS2339: Property 'name' does not exist on type 'object'.
 lib/replace/property/background.ts(40,22): error TS2339: Property 'name' does not exist on type 'object'.
 lib/replace/property/background.ts(49,10): error TS2339: Property 'children' does not exist on type 'object'.
-lib/replace/property/border.ts(1,55): error TS2304: Cannot find name 'Void'.
-lib/replace/property/border.ts(1,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/property/border.ts(2,10): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/property/border.ts(3,18): error TS2339: Property 'type' does not exist on type 'object'.
 lib/replace/property/border.ts(3,48): error TS2339: Property 'name' does not exist on type 'object'.
@@ -726,8 +686,6 @@ lib/replace/property/border.ts(4,36): error TS2339: Property 'tail' does not exi
 lib/replace/property/border.ts(6,22): error TS2339: Property 'data' does not exist on type 'any[]'.
 lib/replace/property/border.ts(8,31): error TS2339: Property 'loc' does not exist on type 'object'.
 lib/replace/property/border.ts(12,22): error TS2339: Property 'remove' does not exist on type 'object'.
-lib/replace/property/font-weight.ts(1,59): error TS2304: Cannot find name 'Void'.
-lib/replace/property/font-weight.ts(1,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/property/font-weight.ts(2,32): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/property/font-weight.ts(4,15): error TS2339: Property 'type' does not exist on type 'object'.
 lib/replace/property/font-weight.ts(5,23): error TS2339: Property 'name' does not exist on type 'object'.
@@ -735,8 +693,6 @@ lib/replace/property/font-weight.ts(7,22): error TS2339: Property 'children' doe
 lib/replace/property/font-weight.ts(9,32): error TS2339: Property 'loc' does not exist on type 'object'.
 lib/replace/property/font-weight.ts(14,22): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/property/font-weight.ts(16,32): error TS2339: Property 'loc' does not exist on type 'object'.
-lib/replace/property/font.ts(1,53): error TS2304: Cannot find name 'Void'.
-lib/replace/property/font.ts(1,53): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/replace/property/font.ts(2,36): error TS2339: Property 'children' does not exist on type 'object'.
 lib/replace/property/font.ts(4,10): error TS2339: Property 'forEachRight' does not exist on type 'HTMLElement'.
 lib/replace/property/font.ts(5,18): error TS2339: Property 'type' does not exist on type 'object'.
@@ -751,13 +707,11 @@ lib/replace/property/font.ts(24,14): error TS2339: Property 'isEmpty' does not e
 lib/replace/property/font.ts(25,14): error TS2339: Property 'insert' does not exist on type 'HTMLElement'.
 lib/replace/property/font.ts(25,26): error TS2339: Property 'createItem' does not exist on type 'HTMLElement'.
 lib/restructure/1-mergeAtrule.ts(5,55): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/restructure/1-mergeAtrule.ts(5,78): error TS2304: Cannot find name 'Void'.
 lib/restructure/1-mergeAtrule.ts(6,31): error TS2339: Property 'data' does not exist on type 'any[]'.
 lib/restructure/1-mergeAtrule.ts(7,46): error TS2339: Property 'name' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(8,29): error TS2339: Property 'name' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(8,62): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(8,77): error TS2339: Property 'prelude' does not exist on type 'object'.
-lib/restructure/1-mergeAtrule.ts(25,57): error TS2304: Cannot find name 'Void'.
 lib/restructure/1-mergeAtrule.ts(29,9): error TS2339: Property 'children' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(30,18): error TS2339: Property 'type' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(31,54): error TS2339: Property 'name' does not exist on type 'object'.
@@ -770,7 +724,6 @@ lib/restructure/1-mergeAtrule.ts(60,17): error TS2339: Property 'children' does 
 lib/restructure/1-mergeAtrule.ts(69,17): error TS2339: Property 'type' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(69,43): error TS2339: Property 'name' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(72,58): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/restructure/1-mergeAtrule.ts(72,64): error TS2304: Cannot find name 'Void'.
 lib/restructure/1-mergeAtrule.ts(77,31): error TS2339: Property 'prev' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(77,44): error TS2339: Property 'prev' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(84,14): error TS2339: Property 'prelude' does not exist on type 'object'.
@@ -779,12 +732,9 @@ lib/restructure/1-mergeAtrule.ts(86,14): error TS2339: Property 'prelude' does n
 lib/restructure/1-mergeAtrule.ts(86,34): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(87,14): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/1-mergeAtrule.ts(87,45): error TS2339: Property 'block' does not exist on type 'object'.
-lib/restructure/1-mergeAtrule.ts(98,69): error TS2304: Cannot find name 'Void'.
-lib/restructure/1-mergeAtrule.ts(98,69): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/1-mergeAtrule.ts(99,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/restructure/1-mergeAtrule.ts(101,10): error TS2345: Argument of type 'string' is not assignable to parameter of type 'CssNode'.
 lib/restructure/2-initialMergeRuleset.ts(10,58): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/restructure/2-initialMergeRuleset.ts(10,64): error TS2304: Cannot find name 'Void'.
 lib/restructure/2-initialMergeRuleset.ts(11,35): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/2-initialMergeRuleset.ts(12,38): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/2-initialMergeRuleset.ts(14,25): error TS2339: Property 'prev' does not exist on type 'Function'.
@@ -796,7 +746,6 @@ lib/restructure/2-initialMergeRuleset.ts(24,43): error TS2339: Property 'pseudoS
 lib/restructure/2-initialMergeRuleset.ts(27,34): error TS2339: Property 'appendList' does not exist on type 'object'.
 lib/restructure/2-initialMergeRuleset.ts(48,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/restructure/2-initialMergeRuleset.ts(49,10): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'CssNode'.
-lib/restructure/3-disjoinRuleset.ts(3,65): error TS2304: Cannot find name 'Void'.
 lib/restructure/3-disjoinRuleset.ts(4,36): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/3-disjoinRuleset.ts(13,22): error TS2339: Property 'head' does not exist on type 'object'.
 lib/restructure/3-disjoinRuleset.ts(13,41): error TS2339: Property 'tail' does not exist on type 'object'.
@@ -811,8 +760,6 @@ lib/restructure/3-disjoinRuleset.ts(23,27): error TS2339: Property 'prelude' doe
 lib/restructure/3-disjoinRuleset.ts(28,27): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/3-disjoinRuleset.ts(29,32): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/3-disjoinRuleset.ts(31,35): error TS2339: Property 'pseudoSignature' does not exist on type 'object'.
-lib/restructure/3-disjoinRuleset.ts(36,50): error TS2304: Cannot find name 'Void'.
-lib/restructure/3-disjoinRuleset.ts(36,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/3-disjoinRuleset.ts(37,10): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'CssNode'.
 lib/restructure/4-restructShorthand.ts(9,14): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/restructure/4-restructShorthand.ts(66,14): error TS2339: Property 'name' does not exist on type 'TRBL'.
@@ -868,14 +815,11 @@ lib/restructure/4-restructShorthand.ts(333,46): error TS2339: Property 'property
 lib/restructure/4-restructShorthand.ts(343,35): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/restructure/4-restructShorthand.ts(369,9): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/restructure/4-restructShorthand.ts(372,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
-lib/restructure/4-restructShorthand.ts(375,82): error TS2304: Cannot find name 'Void'.
 lib/restructure/4-restructShorthand.ts(377,38): error TS2339: Property 'shorthand' does not exist on type 'object'.
 lib/restructure/4-restructShorthand.ts(383,18): error TS2339: Property 'operation' does not exist on type 'object'.
 lib/restructure/4-restructShorthand.ts(384,18): error TS2339: Property 'item' does not exist on type 'object'.
 lib/restructure/4-restructShorthand.ts(386,18): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/4-restructShorthand.ts(386,36): error TS2339: Property 'item' does not exist on type 'object'.
-lib/restructure/4-restructShorthand.ts(391,72): error TS2304: Cannot find name 'Void'.
-lib/restructure/4-restructShorthand.ts(391,72): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/4-restructShorthand.ts(392,11): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/restructure/4-restructShorthand.ts(395,10): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'CssNode'.
 lib/restructure/4-restructShorthand.ts(400,34): error TS2339: Property 'pseudoSignature' does not exist on type 'Rule'.
@@ -893,7 +837,6 @@ lib/restructure/6-restructBlock.ts(78,58): error TS2339: Property 'value' does n
 lib/restructure/6-restructBlock.ts(81,47): error TS2339: Property 'id' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(85,29): error TS2339: Property 'value' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(92,29): error TS2339: Property 'value' does not exist on type 'object'.
-lib/restructure/6-restructBlock.ts(92,81): error TS2304: Cannot find name 'Void'.
 lib/restructure/6-restructBlock.ts(93,34): error TS2339: Property 'type' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(97,34): error TS2339: Property 'children' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(105,37): error TS2339: Property 'name' does not exist on type '{}'.
@@ -917,7 +860,6 @@ lib/restructure/6-restructBlock.ts(210,95): error TS2345: Argument of type 'stri
 lib/restructure/6-restructBlock.ts(211,25): error TS2304: Cannot find name 'TRBL'.
 lib/restructure/6-restructBlock.ts(213,39): error TS2339: Property 'important' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(220,56): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/restructure/6-restructBlock.ts(220,99): error TS2304: Cannot find name 'Void'.
 lib/restructure/6-restructBlock.ts(221,38): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(223,18): error TS2339: Property 'forEachRight' does not exist on type 'any[]'.
 lib/restructure/6-restructBlock.ts(224,17): error TS2339: Property 'property' does not exist on type '{}'.
@@ -931,8 +873,6 @@ lib/restructure/6-restructBlock.ts(243,30): error TS2339: Property 'remove' does
 lib/restructure/6-restructBlock.ts(255,30): error TS2339: Property 'remove' does not exist on type 'any[]'.
 lib/restructure/6-restructBlock.ts(263,29): error TS2339: Property 'fingerprint' does not exist on type 'object'.
 lib/restructure/6-restructBlock.ts(273,22): error TS2339: Property 'isEmpty' does not exist on type 'any[]'.
-lib/restructure/6-restructBlock.ts(278,55): error TS2304: Cannot find name 'Void'.
-lib/restructure/6-restructBlock.ts(278,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/6-restructBlock.ts(279,11): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/restructure/6-restructBlock.ts(282,10): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'CssNode'.
 lib/restructure/6-restructBlock.ts(287,34): error TS2339: Property 'pseudoSignature' does not exist on type 'Rule'.
@@ -945,7 +885,6 @@ lib/restructure/6-restructBlock.ts(293,42): error TS2339: Property 'id' does not
 lib/restructure/6-restructBlock.ts(295,52): error TS2339: Property 'id' does not exist on type 'Block | StyleSheet'.
   Property 'id' does not exist on type 'Block'.
 lib/restructure/7-mergeRuleset.ts(16,56): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/restructure/7-mergeRuleset.ts(16,62): error TS2304: Cannot find name 'Void'.
 lib/restructure/7-mergeRuleset.ts(17,35): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/7-mergeRuleset.ts(18,39): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/7-mergeRuleset.ts(19,49): error TS2339: Property 'first' does not exist on type 'any[]'.
@@ -969,11 +908,8 @@ lib/restructure/7-mergeRuleset.ts(55,45): error TS2339: Property 'id' does not e
 lib/restructure/7-mergeRuleset.ts(58,31): error TS2339: Property 'insert' does not exist on type 'any[]'.
 lib/restructure/7-mergeRuleset.ts(62,27): error TS2339: Property 'next' does not exist on type 'object'.
 lib/restructure/7-mergeRuleset.ts(63,31): error TS2339: Property 'insert' does not exist on type 'any[]'.
-lib/restructure/7-mergeRuleset.ts(81,48): error TS2304: Cannot find name 'Void'.
-lib/restructure/7-mergeRuleset.ts(81,48): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/7-mergeRuleset.ts(82,10): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'CssNode'.
 lib/restructure/8-restructRuleset.ts(10,66): error TS2339: Property 'id' does not exist on type 'object'.
-lib/restructure/8-restructRuleset.ts(26,70): error TS2304: Cannot find name 'Void'.
 lib/restructure/8-restructRuleset.ts(28,35): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/8-restructRuleset.ts(29,32): error TS2339: Property 'block' does not exist on type 'object'.
 lib/restructure/8-restructRuleset.ts(34,10): error TS2339: Property 'prevUntil' does not exist on type 'HTMLElement'.
@@ -1011,8 +947,6 @@ lib/restructure/8-restructRuleset.ts(145,34): error TS2339: Property 'insert' do
 lib/restructure/8-restructRuleset.ts(159,30): error TS2339: Property 'compareMarker' does not exist on type 'Function'.
 lib/restructure/8-restructRuleset.ts(159,61): error TS2339: Property 'compareMarker' does not exist on type 'object'.
 lib/restructure/8-restructRuleset.ts(165,38): error TS2339: Property 'compareMarker' does not exist on type 'object'.
-lib/restructure/8-restructRuleset.ts(170,54): error TS2304: Cannot find name 'Void'.
-lib/restructure/8-restructRuleset.ts(170,54): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/8-restructRuleset.ts(171,10): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'CssNode'.
 lib/restructure/index.ts(12,11): error TS2322: Type 'object' is not assignable to type 'string'.
 lib/restructure/index.ts(12,37): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
@@ -1057,8 +991,6 @@ lib/restructure/prepare/index.ts(30,26): error TS2339: Property 'prelude' does n
   Property 'prelude' does not exist on type 'AnPlusB'.
 lib/restructure/prepare/processSelector.ts(4,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 lib/restructure/prepare/processSelector.ts(10,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
-lib/restructure/prepare/processSelector.ts(21,75): error TS2304: Cannot find name 'Void'.
-lib/restructure/prepare/processSelector.ts(21,75): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/restructure/prepare/processSelector.ts(22,11): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 lib/restructure/prepare/processSelector.ts(24,10): error TS2339: Property 'prelude' does not exist on type 'object'.
 lib/restructure/prepare/processSelector.ts(28,24): error TS2339: Property 'children' does not exist on type 'object'.

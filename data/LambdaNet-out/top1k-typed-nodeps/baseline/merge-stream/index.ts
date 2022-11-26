@@ -34,7 +34,7 @@ module.exports = function (/*streams...*/) {
     return sources.length == 0;
   }
 
-  function remove (source: string): Void {
+  function remove (source: string): void {
     sources = sources.filter(function (it: string) { return it !== source })
     if (!sources.length && output.readable) { output.end() }
   }

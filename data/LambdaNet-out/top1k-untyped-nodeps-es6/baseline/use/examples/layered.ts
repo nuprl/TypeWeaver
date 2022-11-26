@@ -2,7 +2,7 @@
 import define from 'define-property';
 import use from '..';
 
-function App(name: string): Void {
+function App(name: string): void {
   this.name = name;
   use(this);
 }

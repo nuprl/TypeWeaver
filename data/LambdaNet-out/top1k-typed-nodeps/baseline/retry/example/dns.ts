@@ -1,7 +1,7 @@
 var dns: string = require('dns');
 var retry: string = require('../lib/retry');
 
-function faultTolerantResolve(address: string, cb: Function): Void {
+function faultTolerantResolve(address: string, cb: Function): void {
   var opts: object = {
     retries: 2,
     factor: 2,

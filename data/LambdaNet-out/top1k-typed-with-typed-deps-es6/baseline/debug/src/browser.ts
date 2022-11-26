@@ -143,7 +143,7 @@ function useColors(): boolean {
  * @api public
  */
 
-function formatArgs(args: object): Void {
+function formatArgs(args: object): void {
 	args[0] = (this.useColors ? '%c' : '') +
 		this.namespace +
 		(this.useColors ? ' %c' : ' ') +
@@ -194,7 +194,7 @@ exports.log = console.debug || console.log || (() => {});
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: number): Void {
+function save(namespaces: number): void {
 	try {
 		if (namespaces) {
 			exports.storage.setItem('debug', namespaces);

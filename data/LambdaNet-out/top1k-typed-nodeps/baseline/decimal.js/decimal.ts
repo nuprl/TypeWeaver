@@ -2547,7 +2547,7 @@
   }
 
 
-  function checkInt32(i: number, min: number, max: number): Void {
+  function checkInt32(i: number, min: number, max: number): void {
     if (i !== ~~i || i < min || i > max) {
       throw Error(invalidArgument + i);
     }
@@ -2711,7 +2711,7 @@
       return r;
     }
 
-    function subtract(a: any[], b: object, aL: number, base: number): Void {
+    function subtract(a: any[], b: object, aL: number, base: number): void {
       var i: number = 0;
 
       // Subtract b from a.
@@ -4558,7 +4558,7 @@
    * y {number|string|Decimal} The base of the logarithm.
    *
    */
-  function log(x: string, y: string): Void {
+  function log(x: string, y: string): void {
     return new this(x).log(y);
   }
 
@@ -4570,7 +4570,7 @@
    * x {number|string|Decimal}
    *
    */
-  function log2(x: string): Void {
+  function log2(x: string): void {
     return new this(x).log(2);
   }
 
@@ -4582,7 +4582,7 @@
    * x {number|string|Decimal}
    *
    */
-  function log10(x: string): Void {
+  function log10(x: string): void {
     return new this(x).log(10);
   }
 

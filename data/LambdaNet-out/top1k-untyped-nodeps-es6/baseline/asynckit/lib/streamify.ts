@@ -99,7 +99,7 @@ function wrapIteratorCallback(callback: Function, key: string): Function
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects iterator results
  */
-function streamer(error: object, output: object, callback: Function): Void
+function streamer(error: object, output: object, callback: Function): void
 {
   if (error && !this.error)
   {
@@ -127,7 +127,7 @@ function streamer(error: object, output: object, callback: Function): Void
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects final results
  */
-function finisher(error: object, output: string, callback: Function): Void
+function finisher(error: object, output: string, callback: Function): void
 {
   // signal end of the stream
   // only for successfully finished streams

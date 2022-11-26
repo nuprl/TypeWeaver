@@ -5,20 +5,16 @@ benchmark/wrapfunction.ts(19,7): error TS2339: Property 'add' does not exist on 
 benchmark/wrapfunction.ts(25,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/wrapfunction.ts(31,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/wrapfunction.ts(37,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/wrapfunction.ts(37,53): error TS2304: Cannot find name 'Void'.
 benchmark/wrapfunction.ts(38,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/wrapfunction.ts(41,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/wrapfunction.ts(41,46): error TS2304: Cannot find name 'Void'.
 benchmark/wrapfunction.ts(45,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/wrapproperty.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/wrapproperty.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/wrapproperty.ts(19,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/wrapproperty.ts(25,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/wrapproperty.ts(31,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/wrapproperty.ts(31,53): error TS2304: Cannot find name 'Void'.
 benchmark/wrapproperty.ts(32,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/wrapproperty.ts(35,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/wrapproperty.ts(35,46): error TS2304: Cannot find name 'Void'.
 benchmark/wrapproperty.ts(39,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 index.ts(51,34): error TS2339: Property 'value' does not exist on type 'object'.
 index.ts(53,14): error TS2339: Property 'get' does not exist on type 'object'.
@@ -28,13 +24,11 @@ index.ts(56,63): error TS2322: Type 'string' is not assignable to type 'boolean'
 index.ts(59,21): error TS2339: Property 'value' does not exist on type 'object'.
 index.ts(60,21): error TS2339: Property 'writable' does not exist on type 'object'.
 index.ts(74,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
-index.ts(112,41): error TS2304: Cannot find name 'Void'.
-index.ts(126,3): error TS2322: Type '{ (message: string): Void; _file: string; _ignored: boolean; _namespace: string; _traced: boolean; _warned: any; function: (fn: any[], message: string) => object; property: (obj: string, prop: string, message: string) => Void; }' is not assignable to type 'string'.
+index.ts(126,3): error TS2322: Type '{ (message: string): void; _file: string; _ignored: boolean; _namespace: string; _traced: boolean; _warned: any; function: (fn: any[], message: string) => object; property: (obj: string, prop: string, message: string) => void; }' is not assignable to type 'string'.
 index.ts(142,38): error TS2339: Property 'listenerCount' does not exist on type 'HTMLElement'.
 index.ts(143,15): error TS2339: Property 'listeners' does not exist on type 'HTMLElement'.
 index.ts(144,15): error TS2339: Property 'listenerCount' does not exist on type 'HTMLElement'.
 index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
-index.ts(185,46): error TS2304: Cannot find name 'Void'.
 index.ts(186,46): error TS2345: Argument of type 'Process' is not assignable to parameter of type 'HTMLElement'.
   Type 'Process' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
 index.ts(206,14): error TS2339: Property 'name' does not exist on type 'object'.
@@ -79,7 +73,6 @@ index.ts(418,47): error TS2339: Property 'length' does not exist on type 'never'
 index.ts(422,8): error TS2339: Property 'name' does not exist on type 'object'.
 index.ts(422,18): error TS2339: Property 'name' does not exist on type 'never'.
 index.ts(432,3): error TS2322: Type 'string' is not assignable to type 'object'.
-index.ts(439,69): error TS2304: Cannot find name 'Void'.
 index.ts(450,19): error TS2339: Property 'configurable' does not exist on type 'object'.
 index.ts(459,8): error TS2339: Property 'name' does not exist on type 'object'.
 index.ts(466,34): error TS2339: Property 'get' does not exist on type 'object'.
@@ -88,11 +81,8 @@ index.ts(471,16): error TS2339: Property 'get' does not exist on type 'object'.
 index.ts(471,42): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(479,16): error TS2339: Property 'set' does not exist on type 'object'.
 index.ts(479,42): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(532,41): error TS2304: Cannot find name 'Void'.
 index.ts(533,7): error TS2322: Type 'number' is not assignable to type 'string'.
-lib/browser/index.ts(25,41): error TS2304: Cannot find name 'Void'.
-lib/browser/index.ts(38,3): error TS2740: Type '{ (message: string): Void; _file: any; _ignored: boolean; _namespace: string; _traced: boolean; _warned: any; function: (fn: string, message: string) => string; property: (obj: string, prop: string, message: string) => Void; }' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
-lib/browser/index.ts(63,69): error TS2304: Cannot find name 'Void'.
+lib/browser/index.ts(38,3): error TS2740: Type '{ (message: string): void; _file: any; _ignored: boolean; _namespace: string; _traced: boolean; _warned: any; function: (fn: string, message: string) => string; property: (obj: string, prop: string, message: string) => void; }' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 lib/browser/index.ts(68,7): error TS2739: Type 'PropertyDescriptor' is missing the following properties from type 'Error': name, message
 lib/browser/index.ts(74,19): error TS2339: Property 'configurable' does not exist on type 'Error'.
 

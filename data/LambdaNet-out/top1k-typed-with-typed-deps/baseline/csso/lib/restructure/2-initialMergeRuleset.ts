@@ -7,7 +7,7 @@ import {
     hasSimilarSelectors
 } from './utils.js';
 
-function processRule(node: object, item: Function, list: Map): Void {
+function processRule(node: object, item: Function, list: Map): void {
     const selectors: any[] = node.prelude.children;
     const declarations: any[] = node.block.children;
 

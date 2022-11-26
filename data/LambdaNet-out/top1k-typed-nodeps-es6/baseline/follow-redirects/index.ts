@@ -39,7 +39,7 @@ var WriteAfterEndError: object = createErrorType(
 );
 
 // An HTTP(S) request that can be redirected
-function RedirectableRequest(options: any[], responseCallback: boolean): Void {
+function RedirectableRequest(options: any[], responseCallback: boolean): void {
   // Initialize the request
   Writable.call(this);
   this._sanitizeOptions(options);
@@ -154,14 +154,14 @@ RedirectableRequest.prototype.setTimeout = function (msecs: number, callback: Fu
   var self: object = this;
 
   // Destroys the socket on timeout
-  function destroyOnTimeout(socket: object): Void {
+  function destroyOnTimeout(socket: object): void {
     socket.setTimeout(msecs);
     socket.removeListener("timeout", socket.destroy);
     socket.addListener("timeout", socket.destroy);
   }
 
   // Sets up a timer to trigger a timeout event
-  function startTimer(socket: object): Void {
+  function startTimer(socket: object): void {
     if (self._timeout) {
       clearTimeout(self._timeout);
     }
@@ -173,7 +173,7 @@ RedirectableRequest.prototype.setTimeout = function (msecs: number, callback: Fu
   }
 
   // Stops a timeout from triggering
-  function clearTimer(): Void {
+  function clearTimer(): void {
     // Clear the timeout
     if (self._timeout) {
       clearTimeout(self._timeout);
@@ -302,7 +302,7 @@ RedirectableRequest.prototype._performRequest = function () {
     var i: number = 0;
     var self: HTMLElement = this;
     var buffers: any[] = this._requestBodyBuffers;
-    (function writeNext(error: object): Void {
+    (function writeNext(error: object): void {
       // Only write if this request has not been redirected yet
       /* istanbul ignore else */
       if (request === self._currentRequest) {
@@ -540,7 +540,7 @@ function wrap(protocols: object): object {
 }
 
 /* istanbul ignore next */
-function noop(): Void { /* empty */ }
+function noop(): void { /* empty */ }
 
 // from https://github.com/nodejs/node/blob/master/lib/internal/url.js
 function urlToOptions(urlObject: Function): object {
@@ -576,7 +576,7 @@ function removeMatchingHeaders(regex: HTMLElement, headers: object): number {
 
 function createErrorType(code: string, message: string, baseClass: number): object {
   // Create constructor
-  function CustomError(properties: string): Void {
+  function CustomError(properties: string): void {
     Error.captureStackTrace(this, this.constructor);
     Object.assign(this, properties || {});
     this.code = code;
@@ -590,7 +590,7 @@ function createErrorType(code: string, message: string, baseClass: number): obje
   return CustomError;
 }
 
-function abortRequest(request: HTMLProps): Void {
+function abortRequest(request: HTMLProps): void {
   for (var event of events) {
     request.removeListener(event, eventHandlers[event]);
   }

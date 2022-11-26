@@ -97,7 +97,7 @@ function alphabetizeKeyInterfaces(initialNodes: any[]): object {
      * @param {string} typeB The second type to compare
      * @returns {1|-1} The sorting index
      */
-    function alphabetize([typeA], [typeB]): Void {
+    function alphabetize([typeA], [typeB]): void {
         return typeA < typeB ? -1 : 1;
     }
     const sortedNodeEntries: any[] = Object.entries(initialNodes).sort(alphabetize);

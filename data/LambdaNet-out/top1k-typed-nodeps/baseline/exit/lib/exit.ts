@@ -8,11 +8,11 @@
 
 'use strict';
 
-module.exports = function exit(exitCode: string, streams: any[]): Void {
+module.exports = function exit(exitCode: string, streams: any[]): void {
   if (!streams) { streams = [process.stdout, process.stderr]; }
   var drainCount: number = 0;
   // Actually exit if all streams are drained.
-  function tryToExit(): Void {
+  function tryToExit(): void {
     if (drainCount === streams.length) {
       process.exit(exitCode);
     }

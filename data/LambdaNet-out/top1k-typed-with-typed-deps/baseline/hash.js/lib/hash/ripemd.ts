@@ -26,7 +26,7 @@ RIPEMD160.outSize = 160;
 RIPEMD160.hmacStrength = 192;
 RIPEMD160.padLength = 64;
 
-RIPEMD160.prototype._update = function update(msg: object, start: number): Void {
+RIPEMD160.prototype._update = function update(msg: object, start: number): void {
   var A: string = this.h[0];
   var B: string = this.h[1];
   var C: string = this.h[2];

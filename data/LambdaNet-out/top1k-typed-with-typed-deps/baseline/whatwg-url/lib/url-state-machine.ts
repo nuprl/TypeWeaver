@@ -450,7 +450,7 @@ function trimTabAndNewline(url: string): boolean {
   return url.replace(/\u0009|\u000A|\u000D/ug, "");
 }
 
-function shortenPath(url: string): Void {
+function shortenPath(url: string): void {
   const { path } = url;
   if (path.length === 0) {
     return;
@@ -478,7 +478,7 @@ function isNormalizedWindowsDriveLetter(string: string): boolean {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: Element, base: string, encodingOverride: number, url: string, stateOverride: string): Void {
+function URLStateMachine(input: Element, base: string, encodingOverride: number, url: string, stateOverride: string): void {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;

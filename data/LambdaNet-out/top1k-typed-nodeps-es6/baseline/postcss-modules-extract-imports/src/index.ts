@@ -26,7 +26,7 @@ const VISITED_MARKER: number = 1;
  *   C: ['A'],
  * }
  */
-function addImportToGraph(importId: string, parentId: number, graph: object, visited: object): Void {
+function addImportToGraph(importId: string, parentId: number, graph: object, visited: object): void {
   const siblingsId: string = parentId + "_" + "siblings";
   const visitedId: string = parentId + "_" + importId;
 

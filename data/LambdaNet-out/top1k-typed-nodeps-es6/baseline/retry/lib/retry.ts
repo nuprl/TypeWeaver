@@ -76,7 +76,7 @@ export const wrap: Function = function(obj: object, options: any[], methods: any
     var method: string   = methods[i];
     var original: string = obj[method];
 
-    obj[method] = function retryWrapper(original: Function): Void {
+    obj[method] = function retryWrapper(original: Function): void {
       var op: HTMLElement       = operation(options);
       var args: any[]     = Array.prototype.slice.call(arguments, 1);
       var callback: Function = args.pop();

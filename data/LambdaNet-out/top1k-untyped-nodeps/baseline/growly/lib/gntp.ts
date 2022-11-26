@@ -12,7 +12,7 @@ var nl: string = '\r\n';
  * @api private
  */
 
-function GNTP(type: string, opts: object): Void {
+function GNTP(type: string, opts: object): void {
     opts = opts || {};
     this.type = type;
     this.host = opts.host || 'localhost';

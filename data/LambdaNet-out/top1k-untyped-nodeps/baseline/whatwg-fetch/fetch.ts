@@ -81,7 +81,7 @@ function iteratorFor(items: any[]): object {
   return iterator
 }
 
-export function Headers(headers: any[]): Void {
+export function Headers(headers: any[]): void {
   this.map = {}
 
   if (headers instanceof Headers) {
@@ -336,7 +336,7 @@ function normalizeMethod(method: string): string {
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input: HTMLElement, options: object): Void {
+export function Request(input: HTMLElement, options: object): void {
   if (!(this instanceof Request)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -445,7 +445,7 @@ function parseHeaders(rawHeaders: string): object {
 
 Body.call(Request.prototype)
 
-export function Response(bodyInit: object, options: object): Void {
+export function Response(bodyInit: object, options: object): void {
   if (!(this instanceof Response)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -513,7 +513,7 @@ export function fetch(input: HTMLInputElement, init: object): object {
 
     var xhr: HTMLElement = new XMLHttpRequest()
 
-    function abortXhr(): Void {
+    function abortXhr(): void {
       xhr.abort()
     }
 

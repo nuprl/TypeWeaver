@@ -4,12 +4,9 @@ benchmark/parse-top.ts(7,24): error TS2307: Cannot find module 'beautify-benchma
 benchmark/parse-top.ts(8,17): error TS2732: Cannot find module './parse-top.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 benchmark/parse-top.ts(19,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(26,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(26,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(30,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(30,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(31,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse-top.ts(34,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(34,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(38,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(43,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
@@ -21,12 +18,9 @@ benchmark/parse.ts(35,7): error TS2339: Property 'add' does not exist on type 'H
 benchmark/parse.ts(41,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(47,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(53,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(57,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(57,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(58,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse.ts(61,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(61,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(65,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 index.ts(54,25): error TS2339: Property 'decode' does not exist on type 'object'.
 index.ts(86,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
@@ -58,19 +52,15 @@ index.ts(197,13): error TS2339: Property 'sameSite' does not exist on type 'HTML
 index.ts(197,42): error TS2339: Property 'sameSite' does not exist on type 'HTMLElement'.
 index.ts(200,12): error TS2678: Type 'boolean' is not comparable to type 'string'.
 index.ts(253,5): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-index.ts(264,52): error TS2304: Cannot find name 'Void'.
-index.ts(264,52): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(268,5): error TS2322: Type 'string' is not assignable to type 'void'.
 scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
-scripts/update-benchmark.ts(22,50): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(26,9): error TS2339: Property 'get' does not exist on type 'object'.
 scripts/update-benchmark.ts(29,15): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(30,35): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
-scripts/update-benchmark.ts(37,60): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'object'.
-scripts/update-benchmark.ts(53,62): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'object'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.

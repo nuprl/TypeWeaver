@@ -10,7 +10,7 @@ var CSSOM: HTMLInputElement = {
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet
  */
-CSSOM.CSSStyleSheet = function CSSStyleSheet(): Void {
+CSSOM.CSSStyleSheet = function CSSStyleSheet(): void {
 	CSSOM.StyleSheet.call(this);
 	this.cssRules = [];
 };

@@ -7,8 +7,8 @@ import mkdir from '../mkdirs';
 import { pathExists } from '../path-exists';
 import { areIdentical } from '../util/stat';
 
-function createLink (srcpath: string, dstpath: string, callback: Function): Void {
-  function makeLink (srcpath: string, dstpath: string): Void {
+function createLink (srcpath: string, dstpath: string, callback: Function): void {
+  function makeLink (srcpath: string, dstpath: string): void {
     fs.link(srcpath, dstpath, (err: string) => {
       if (err) return callback(err)
       callback(null)

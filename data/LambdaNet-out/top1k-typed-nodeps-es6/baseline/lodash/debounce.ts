@@ -165,7 +165,7 @@ function debounce(func: Function, wait: number, options: object): Hash {
     return result
   }
 
-  function cancel(): Void {
+  function cancel(): void {
     if (timerId !== undefined) {
       cancelTimer(timerId)
     }

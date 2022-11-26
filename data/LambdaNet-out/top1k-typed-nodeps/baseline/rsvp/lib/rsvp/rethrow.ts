@@ -41,7 +41,7 @@
   @throws Error
   @static
 */
-export default function rethrow(reason: Function): Void {
+export default function rethrow(reason: Function): void {
   setTimeout(() => {
     throw reason;
   });

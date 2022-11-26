@@ -2,7 +2,7 @@ var Stream: object = require('stream').Stream;
 var util: string = require('util');
 
 module.exports = DelayedStream;
-function DelayedStream(): Void {
+function DelayedStream(): void {
   this.source = null;
   this.dataSize = 0;
   this.maxDataSize = 1024 * 1024;

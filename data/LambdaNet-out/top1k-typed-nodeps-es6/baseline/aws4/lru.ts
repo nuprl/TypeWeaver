@@ -2,7 +2,7 @@ export default function(size: string) {
   return new LruCache(size)
 };
 
-function LruCache(size: number): Void {
+function LruCache(size: number): void {
   this.capacity = size | 0
   this.map = Object.create(null)
   this.list = new DoublyLinkedList()
@@ -43,7 +43,7 @@ LruCache.prototype.prune = function() {
 }
 
 
-function DoublyLinkedList(): Void {
+function DoublyLinkedList(): void {
   this.firstNode = null
   this.lastNode = null
 }
@@ -88,7 +88,7 @@ DoublyLinkedList.prototype.remove = function(node: object) {
 }
 
 
-function DoublyLinkedNode(key: string, val: any[]): Void {
+function DoublyLinkedNode(key: string, val: any[]): void {
   this.key = key
   this.val = val
   this.prev = null

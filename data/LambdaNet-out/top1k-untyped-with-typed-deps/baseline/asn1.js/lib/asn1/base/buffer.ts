@@ -4,7 +4,7 @@ const inherits: Function = require('inherits');
 const Reporter: object = require('../base/reporter').Reporter;
 const Buffer: HTMLElement = require('safer-buffer').Buffer;
 
-function DecoderBuffer(base: string, options: Function): Void {
+function DecoderBuffer(base: string, options: Function): void {
   Reporter.call(this, options);
   if (!Buffer.isBuffer(base)) {
     this.error('Input not Buffer');
@@ -85,7 +85,7 @@ DecoderBuffer.prototype.raw = function raw(save: object): any[] {
   return this.base.slice(save ? save.offset : this.offset, this.length);
 };
 
-function EncoderBuffer(value: string, reporter: object): Void {
+function EncoderBuffer(value: string, reporter: object): void {
   if (Array.isArray(value)) {
     this.length = 0;
     this.value = value.map(function(item: any[]) {

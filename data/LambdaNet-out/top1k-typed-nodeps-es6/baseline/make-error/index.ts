@@ -11,7 +11,7 @@ var defineProperty: Function = Object.defineProperty;
 
 var captureStackTrace: object = Error.captureStackTrace;
 if (captureStackTrace === undefined) {
-  captureStackTrace = function captureStackTrace(error: object): Void {
+  captureStackTrace = function captureStackTrace(error: object): void {
     var container: Error = new Error();
 
     defineProperty(error, "stack", {
@@ -28,7 +28,7 @@ if (captureStackTrace === undefined) {
 
         return stack;
       },
-      set: function setStack(stack: string): Void {
+      set: function setStack(stack: string): void {
         defineProperty(error, "stack", {
           configurable: true,
           value: stack,
@@ -41,7 +41,7 @@ if (captureStackTrace === undefined) {
 
 // -------------------------------------------------------------------
 
-function BaseError(message: string): Void {
+function BaseError(message: string): void {
   if (message !== undefined) {
     defineProperty(this, "message", {
       configurable: true,

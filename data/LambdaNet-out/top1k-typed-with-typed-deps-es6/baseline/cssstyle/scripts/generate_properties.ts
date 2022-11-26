@@ -84,7 +84,7 @@ property_files.map(function(property: string) {
 var externalDependencies: any[] = [];
 var parsedFiles: any[] = [];
 var addedFiles: object = {};
-function addFile(filename: string, dependencyPath: string): Void {
+function addFile(filename: string, dependencyPath: string): void {
   if (dependencyPath.indexOf(filename) !== -1) {
     throw new Error(
       'Circular dependency: ' +

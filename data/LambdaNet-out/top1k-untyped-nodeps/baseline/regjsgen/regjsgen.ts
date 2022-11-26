@@ -63,7 +63,7 @@
 
   // Ensures that nodes have the correct types.
   var assertTypeRegexMap: object = {};
-  function assertType(type: string, expected: string): Void {
+  function assertType(type: string, expected: string): void {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;

@@ -5,13 +5,13 @@ const allCodes: object = {};
 const supported: any[] = [];
 const unsupported: any[] = [];
 
-function addCodesToTest(codes: any[]): Void {
+function addCodesToTest(codes: any[]): void {
 	for (const [key, value] of Object.entries(codes)) {
 		allCodes[key] = value;
 	}
 }
 
-function identifySupportedCodes(): Void {
+function identifySupportedCodes(): void {
 	let codeSupport: Function = {};
 
 	for (const [code, value] of Object.keys(allCodes)) {
@@ -29,7 +29,7 @@ function identifySupportedCodes(): Void {
 	}
 }
 
-function displaySupport(): Void {
+function displaySupport(): void {
 	process.stdout.write('\u001B[32m');
 
 	console.log('SUPPORTED');

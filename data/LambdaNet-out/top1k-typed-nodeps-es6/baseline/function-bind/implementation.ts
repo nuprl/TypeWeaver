@@ -42,7 +42,7 @@ export default function bind(that: string): object {
     bound = Function('binder', 'return function (' + boundArgs.join(',') + '){ return binder.apply(this,arguments); }')(binder);
 
     if (target.prototype) {
-        var Empty: object = function Empty(): Void {};
+        var Empty: object = function Empty(): void {};
         Empty.prototype = target.prototype;
         bound.prototype = new Empty();
         Empty.prototype = null;

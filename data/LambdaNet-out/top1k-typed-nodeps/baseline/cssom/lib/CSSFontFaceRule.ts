@@ -10,7 +10,7 @@ var CSSOM: string = {
  * @constructor
  * @see http://dev.w3.org/csswg/cssom/#css-font-face-rule
  */
-CSSOM.CSSFontFaceRule = function CSSFontFaceRule(): Void {
+CSSOM.CSSFontFaceRule = function CSSFontFaceRule(): void {
 	CSSOM.CSSRule.call(this);
 	this.style = new CSSOM.CSSStyleDeclaration();
 	this.style.parentRule = this;

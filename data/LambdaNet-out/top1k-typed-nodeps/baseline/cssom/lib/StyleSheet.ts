@@ -7,7 +7,7 @@ var CSSOM: HTMLInputElement = {};
  * @constructor
  * @see http://dev.w3.org/csswg/cssom/#the-stylesheet-interface
  */
-CSSOM.StyleSheet = function StyleSheet(): Void {
+CSSOM.StyleSheet = function StyleSheet(): void {
 	this.parentStyleSheet = null;
 };
 

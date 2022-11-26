@@ -9,7 +9,7 @@ var CSSOM: Element = {
  * @constructor
  * @see http://www.w3.org/TR/css3-animations/#DOM-CSSKeyframesRule
  */
-CSSOM.CSSKeyframesRule = function CSSKeyframesRule(): Void {
+CSSOM.CSSKeyframesRule = function CSSKeyframesRule(): void {
 	CSSOM.CSSRule.call(this);
 	this.name = '';
 	this.cssRules = [];

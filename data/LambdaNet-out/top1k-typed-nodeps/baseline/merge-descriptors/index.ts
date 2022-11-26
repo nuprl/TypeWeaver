@@ -45,7 +45,7 @@ function merge (dest: number, src: number, redefine: boolean): string {
     redefine = true
   }
 
-  Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name: string): Void {
+  Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name: string): void {
     if (!redefine && hasOwnProperty.call(dest, name)) {
       // Skip descriptor
       return

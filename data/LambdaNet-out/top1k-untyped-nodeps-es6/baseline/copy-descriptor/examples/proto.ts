@@ -2,7 +2,7 @@
 
 import copy from '..';
 
-function App(): Void {
+function App(): void {
   this.cache = {};
 }
 

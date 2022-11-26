@@ -18,9 +18,9 @@ if (typeof Symbol === 'function' && typeof Symbol.for === 'function') {
   previousSymbol = '___graceful-fs.previous'
 }
 
-function noop (): Void {}
+function noop (): void {}
 
-function publishQueue(context: Function, queue: string): Void {
+function publishQueue(context: Function, queue: string): void {
   Object.defineProperty(context, gracefulQueue, {
     get: function() {
       return queue
@@ -68,7 +68,7 @@ if (!fs[gracefulQueue]) {
   })(fs.close)
 
   fs.closeSync = (function (fs$closeSync: Function) {
-    function closeSync (fd: Function): Void {
+    function closeSync (fd: Function): void {
       // This function uses the graceful-fs shared queue
       fs$closeSync.apply(fs, arguments)
       resetQueue()
@@ -191,7 +191,7 @@ function patch (fs: object): any[] {
   var fs$readdir: Function = fs.readdir
   fs.readdir = readdir
   var noReaddirOptionVersions: RegExp = /^v[0-5]\./
-  function readdir (path: string, options: Function, cb: Function): Void {
+  function readdir (path: string, options: Function, cb: Function): void {
     if (typeof options === 'function')
       cb = options, options = null
 
@@ -300,7 +300,7 @@ function patch (fs: object): any[] {
       return ReadStream.apply(Object.create(ReadStream.prototype), arguments)
   }
 
-  function ReadStream$open (): Void {
+  function ReadStream$open (): void {
     var that: HTMLElement = this
     open(that.path, that.flags, that.mode, function (err: Function, fd: any[]) {
       if (err) {
@@ -323,7 +323,7 @@ function patch (fs: object): any[] {
       return WriteStream.apply(Object.create(WriteStream.prototype), arguments)
   }
 
-  function WriteStream$open (): Void {
+  function WriteStream$open (): void {
     var that: HTMLElement = this
     open(that.path, that.flags, that.mode, function (err: Function, fd: any[]) {
       if (err) {
@@ -367,7 +367,7 @@ function patch (fs: object): any[] {
   return fs
 }
 
-function enqueue (elem: object): Void {
+function enqueue (elem: object): void {
   debug('ENQUEUE', elem[0].name, elem[1])
   fs[gracefulQueue].push(elem)
   retry()
@@ -379,7 +379,7 @@ var retryTimer: number
 // reset the startTime and lastTime to now
 // this resets the start of the 60 second overall timeout as well as the
 // delay between attempts so that we'll retry these jobs sooner
-function resetQueue (): Void {
+function resetQueue (): void {
   var now: number = Date.now()
   for (var i = 0; i < fs[gracefulQueue].length; ++i) {
     // entries that are only a length of 2 are from an older version, don't
@@ -393,7 +393,7 @@ function resetQueue (): Void {
   retry()
 }
 
-function retry (): Void {
+function retry (): void {
   // clear the timer and remove it to help prevent unintended concurrency
   clearTimeout(retryTimer)
   retryTimer = undefined

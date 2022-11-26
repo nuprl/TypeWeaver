@@ -14,7 +14,7 @@ var bar: object = new ProgressBar('  downloading [:bar] :percent :etas', {
   , total: 100
 });
 
-(function next(): Void {
+(function next(): void {
   bar.tick(1);
 
   if (!bar.complete) {

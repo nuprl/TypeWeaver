@@ -1,4 +1,4 @@
-export default function compressFont(node: object): Void {
+export default function compressFont(node: object): void {
     const list: HTMLElement = node.children;
 
     list.forEachRight(function(node: object, item: object) {

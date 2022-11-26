@@ -7,8 +7,6 @@ index.ts(28,37): error TS2554: Expected 3 arguments, but got 2.
 index.ts(32,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(32,44): error TS2554: Expected 3 arguments, but got 2.
 index.ts(36,34): error TS2554: Expected 3 arguments, but got 2.
-index.ts(42,74): error TS2304: Cannot find name 'Void'.
-index.ts(42,74): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(62,10): error TS2339: Property '_processResponse' does not exist on type 'HTMLElement'.
 index.ts(79,15): error TS2351: This expression is not constructable.
   Type '{}' has no construct signatures.
@@ -21,18 +19,15 @@ index.ts(115,18): error TS2345: Argument of type 'any[]' is not assignable to pa
 index.ts(116,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
 index.ts(133,12): error TS2339: Property '_ended' does not exist on type 'HTMLElement'.
 index.ts(134,22): error TS2339: Property 'end' does not exist on type 'object'.
-index.ts(157,46): error TS2304: Cannot find name 'Void'.
 index.ts(158,12): error TS2339: Property 'setTimeout' does not exist on type 'object'.
 index.ts(159,12): error TS2339: Property 'removeListener' does not exist on type 'object'.
 index.ts(159,45): error TS2339: Property 'destroy' does not exist on type 'object'.
 index.ts(160,12): error TS2339: Property 'addListener' does not exist on type 'object'.
 index.ts(160,42): error TS2339: Property 'destroy' does not exist on type 'object'.
-index.ts(164,40): error TS2304: Cannot find name 'Void'.
 index.ts(165,14): error TS2339: Property '_timeout' does not exist on type 'object'.
 index.ts(166,25): error TS2339: Property '_timeout' does not exist on type 'object'.
 index.ts(168,10): error TS2339: Property '_timeout' does not exist on type 'object'.
 index.ts(169,12): error TS2339: Property 'emit' does not exist on type 'object'.
-index.ts(176,26): error TS2304: Cannot find name 'Void'.
 index.ts(178,14): error TS2339: Property '_timeout' does not exist on type 'object'.
 index.ts(179,25): error TS2339: Property '_timeout' does not exist on type 'object'.
 index.ts(180,12): error TS2339: Property '_timeout' does not exist on type 'object'.
@@ -64,7 +59,6 @@ index.ts(283,16): error TS2304: Cannot find name 'NextFunction'.
 index.ts(284,24): error TS2339: Property 'request' does not exist on type 'HTMLElement'.
 index.ts(293,9): error TS2339: Property 'format' does not exist on type 'string'.
 index.ts(305,15): error TS2554: Expected 1 arguments, but got 0.
-index.ts(305,41): error TS2304: Cannot find name 'Void'.
 index.ts(308,28): error TS2339: Property '_currentRequest' does not exist on type 'HTMLElement'.
 index.ts(312,16): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 index.ts(319,34): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
@@ -123,14 +117,11 @@ index.ts(517,56): error TS2339: Property 'hostname' does not exist on type 'obje
 index.ts(518,17): error TS2339: Property 'hostname' does not exist on type 'object'.
 index.ts(521,14): error TS2339: Property 'equal' does not exist on type 'Function'.
 index.ts(521,28): error TS2339: Property 'protocol' does not exist on type 'object'.
-index.ts(523,14): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(523,38): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 index.ts(528,51): error TS2339: Property 'request' does not exist on type 'object'.
 index.ts(529,22): error TS2339: Property 'end' does not exist on type 'Error'.
 index.ts(530,7): error TS2740: Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-index.ts(543,18): error TS2304: Cannot find name 'Void'.
-index.ts(543,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(548,25): error TS2339: Property 'protocol' does not exist on type 'Function'.
 index.ts(549,25): error TS2339: Property 'hostname' does not exist on type 'Function'.
 index.ts(551,17): error TS2339: Property 'hostname' does not exist on type 'Function'.
@@ -146,14 +137,11 @@ index.ts(560,13): error TS2339: Property 'port' does not exist on type 'object'.
 index.ts(560,37): error TS2339: Property 'port' does not exist on type 'Function'.
 index.ts(568,15): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 index.ts(573,3): error TS2322: Type 'string' is not assignable to type 'number'.
-index.ts(579,45): error TS2304: Cannot find name 'Void'.
 index.ts(587,31): error TS2351: This expression is not constructable.
   Not all constituents of type 'number | ErrorConstructor' are constructable.
     Type 'number' has no construct signatures.
 index.ts(593,32): error TS2304: Cannot find name 'HTMLProps'.
 index.ts(593,32): error TS4078: Parameter 'request' of exported function has or is using private name 'HTMLProps'.
-index.ts(593,44): error TS2304: Cannot find name 'Void'.
-index.ts(593,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 index.ts(602,19): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 index.ts(604,57): error TS2339: Property 'endsWith' does not exist on type 'any[]'.
 index.ts(608,39): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.

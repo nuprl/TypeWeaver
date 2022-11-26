@@ -14,10 +14,12 @@ browser/type-check.ts(48,28): error TS2345: Argument of type 'any[]' is not assi
 browser/type-check.ts(48,37): error TS2339: Property 'of' does not exist on type 'object'.
 browser/type-check.ts(54,38): error TS2339: Property 'of' does not exist on type 'object'.
 browser/type-check.ts(54,50): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(56,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 browser/type-check.ts(56,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 browser/type-check.ts(67,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 browser/type-check.ts(68,17): error TS2538: Type 'Function' cannot be used as an index type.
 browser/type-check.ts(72,29): error TS2339: Property 'of' does not exist on type 'object'.
+browser/type-check.ts(74,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 browser/type-check.ts(74,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 browser/type-check.ts(81,17): error TS2339: Property 'subset' does not exist on type 'object'.
 browser/type-check.ts(87,18): error TS2339: Property 'structure' does not exist on type 'Function'.
@@ -31,7 +33,6 @@ browser/type-check.ts(105,54): error TS2339: Property 'typeOf' does not exist on
 browser/type-check.ts(105,112): error TS2339: Property 'validate' does not exist on type 'HTMLElement'.
 browser/type-check.ts(107,93): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
 browser/type-check.ts(115,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
-browser/type-check.ts(120,74): error TS2304: Cannot find name 'Void'.
 browser/type-check.ts(125,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 browser/type-check.ts(128,10): error TS2339: Property 'exports' does not exist on type 'Function'.
 browser/type-check.ts(130,17): error TS2339: Property 'customTypes' does not exist on type 'object'.
@@ -692,10 +693,12 @@ lib/check.ts(41,28): error TS2345: Argument of type 'any[]' is not assignable to
 lib/check.ts(41,37): error TS2339: Property 'of' does not exist on type 'object'.
 lib/check.ts(47,38): error TS2339: Property 'of' does not exist on type 'object'.
 lib/check.ts(47,50): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+lib/check.ts(49,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 lib/check.ts(49,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/check.ts(60,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 lib/check.ts(61,17): error TS2538: Type 'Function' cannot be used as an index type.
 lib/check.ts(65,29): error TS2339: Property 'of' does not exist on type 'object'.
+lib/check.ts(67,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 lib/check.ts(67,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/check.ts(74,17): error TS2339: Property 'subset' does not exist on type 'object'.
 lib/check.ts(80,18): error TS2339: Property 'structure' does not exist on type 'Function'.
@@ -708,7 +711,6 @@ lib/check.ts(98,54): error TS2339: Property 'typeOf' does not exist on type 'HTM
 lib/check.ts(98,112): error TS2339: Property 'validate' does not exist on type 'HTMLElement'.
 lib/check.ts(100,93): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
 lib/check.ts(108,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
-lib/check.ts(113,74): error TS2304: Cannot find name 'Void'.
 lib/check.ts(118,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/check.ts(123,17): error TS2339: Property 'customTypes' does not exist on type 'object'.
 lib/check.ts(124,15): error TS2339: Property 'customTypes' does not exist on type 'object'.

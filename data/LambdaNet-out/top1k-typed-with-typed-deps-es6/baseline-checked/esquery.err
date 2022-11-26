@@ -82,7 +82,6 @@ esquery.ts(332,126): error TS2345: Argument of type 'string' is not assignable t
 esquery.ts(379,37): error TS2339: Property 'subject' does not exist on type 'never'.
 esquery.ts(381,34): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
   Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-esquery.ts(402,87): error TS2304: Cannot find name 'Void'.
 esquery.ts(405,11): error TS2322: Type 'any[]' is not assignable to type 'Function'.
 esquery.ts(405,35): error TS2554: Expected 2 arguments, but got 1.
 esquery.ts(406,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Node'.
@@ -97,20 +96,16 @@ esquery.ts(423,21): error TS2349: This expression is not callable.
 esquery.ts(428,34): error TS2339: Property 'visitorKeys' does not exist on type 'object'.
 esquery.ts(429,38): error TS2339: Property 'fallback' does not exist on type 'object'.
 esquery.ts(444,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-esquery.ts(455,35): error TS2304: Cannot find name 'Void'.
 esquery.ts(467,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+esquery.ts(467,23): error TS2345: Argument of type 'void' is not assignable to parameter of type 'string'.
 parser.ts(7,14): error TS2304: Cannot find name 'define'.
 parser.ts(7,39): error TS2304: Cannot find name 'define'.
 parser.ts(8,5): error TS2304: Cannot find name 'define'.
 parser.ts(10,5): error TS1258: A default export must be at the top level of a file or module declaration.
 parser.ts(12,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Function'.
   Type 'typeof globalThis' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-parser.ts(15,57): error TS2304: Cannot find name 'Void'.
-parser.ts(16,22): error TS2304: Cannot find name 'Void'.
 parser.ts(17,29): error TS2339: Property 'prototype' does not exist on type 'object'.
 parser.ts(18,11): error TS2339: Property 'prototype' does not exist on type 'object'.
-parser.ts(18,23): error TS2350: Only a void function can be called with the 'new' keyword.
-parser.ts(21,98): error TS2304: Cannot find name 'Void'.
 parser.ts(38,53): error TS2339: Property 'text' does not exist on type 'object'.
 parser.ts(45,41): error TS2339: Property 'parts' does not exist on type 'object'.
 parser.ts(46,43): error TS2339: Property 'parts' does not exist on type 'object'.
@@ -215,12 +210,10 @@ parser.ts(305,70): error TS2339: Property 'startRule' does not exist on type 'ob
 parser.ts(308,62): error TS2339: Property 'startRule' does not exist on type 'object'.
 parser.ts(316,7): error TS2322: Type 'object' is not assignable to type 'string'.
 parser.ts(316,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(319,63): error TS2304: Cannot find name 'Void'.
 parser.ts(320,7): error TS2322: Type 'string | object' is not assignable to type 'string'.
   Type 'object' is not assignable to type 'string'.
 parser.ts(320,71): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 parser.ts(323,9): error TS2345: Argument of type 'object[]' is not assignable to parameter of type 'string'.
-parser.ts(329,56): error TS2304: Cannot find name 'Void'.
 parser.ts(330,7): error TS2322: Type 'string | object' is not assignable to type 'string'.
   Type 'object' is not assignable to type 'string'.
 parser.ts(330,71): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -235,10 +228,7 @@ parser.ts(395,35): error TS2339: Property 'line' does not exist on type 'object'
 parser.ts(396,35): error TS2339: Property 'column' does not exist on type 'object'.
 parser.ts(400,33): error TS2339: Property 'line' does not exist on type 'object'.
 parser.ts(401,33): error TS2339: Property 'column' does not exist on type 'object'.
-parser.ts(406,42): error TS2304: Cannot find name 'Void'.
-parser.ts(418,14): error TS2350: Only a void function can be called with the 'new' keyword.
 parser.ts(418,55): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-parser.ts(422,14): error TS2350: Only a void function can be called with the 'new' keyword.
 parser.ts(423,48): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
   Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
 parser.ts(425,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
@@ -770,6 +760,6 @@ rollup.config.ts(4,22): error TS2307: Cannot find module '@rollup/plugin-commonj
 rollup.config.ts(5,18): error TS2307: Cannot find module '@rollup/plugin-json' or its corresponding type declarations.
 rollup.config.ts(7,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup.config.ts(8,25): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-rollup.config.ts(23,86): error TS2304: Cannot find name 'Void'.
 rollup.config.ts(49,21): error TS2339: Property 'external' does not exist on type '{ input: string; output: { format: string; sourcemap: boolean; file: string; name: string; globals: { estraverse: string; }; }; plugins: any[]; }'.
+rollup.config.ts(54,5): error TS2322: Type '{ input: string; output: { format: string; sourcemap: boolean; file: string; name: string; globals: { estraverse: string; }; }; plugins: any[]; }' is not assignable to type 'void'.
 

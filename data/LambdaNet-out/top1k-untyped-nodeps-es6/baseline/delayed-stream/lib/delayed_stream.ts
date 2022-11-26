@@ -2,7 +2,7 @@ import { Stream } from 'stream';
 import util from 'util';
 
 export default DelayedStream;
-function DelayedStream(): Void {
+function DelayedStream(): void {
   this.source = null;
   this.dataSize = 0;
   this.maxDataSize = 1024 * 1024;

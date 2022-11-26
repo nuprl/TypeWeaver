@@ -6,7 +6,7 @@ var Buffer: object = require("safer-buffer").Buffer;
 
 exports.utf7 = Utf7Codec;
 exports.unicode11utf7 = 'utf7'; // Alias UNICODE-1-1-UTF-7
-function Utf7Codec(codecOptions: Function, iconv: Function): Void {
+function Utf7Codec(codecOptions: Function, iconv: Function): void {
     this.iconv = iconv;
 };
 
@@ -19,7 +19,7 @@ Utf7Codec.prototype.bomAware = true;
 
 var nonDirectChars: RegExp = /[^A-Za-z0-9'\(\),-\.\/:\? \n\r\t]+/g;
 
-function Utf7Encoder(options: object, codec: object): Void {
+function Utf7Encoder(options: object, codec: object): void {
     this.iconv = codec.iconv;
 }
 
@@ -39,7 +39,7 @@ Utf7Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7Decoder(options: object, codec: object): Void {
+function Utf7Decoder(options: object, codec: object): void {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';
@@ -130,7 +130,7 @@ Utf7Decoder.prototype.end = function() {
 
 
 exports.utf7imap = Utf7IMAPCodec;
-function Utf7IMAPCodec(codecOptions: Function, iconv: Function): Void {
+function Utf7IMAPCodec(codecOptions: Function, iconv: Function): void {
     this.iconv = iconv;
 };
 
@@ -141,7 +141,7 @@ Utf7IMAPCodec.prototype.bomAware = true;
 
 // -- Encoding
 
-function Utf7IMAPEncoder(options: object, codec: object): Void {
+function Utf7IMAPEncoder(options: object, codec: object): void {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = Buffer.alloc(6);
@@ -215,7 +215,7 @@ Utf7IMAPEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7IMAPDecoder(options: object, codec: object): Void {
+function Utf7IMAPDecoder(options: object, codec: object): void {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';

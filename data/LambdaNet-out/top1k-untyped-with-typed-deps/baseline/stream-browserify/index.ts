@@ -41,14 +41,14 @@ Stream.Stream = Stream;
 // old-style streams.  Note that the pipe method (the only relevant
 // part of this class) is overridden in the Readable class.
 
-function Stream(): Void {
+function Stream(): void {
   EE.call(this);
 }
 
 Stream.prototype.pipe = function(dest: Element, options: object) {
   var source: any[] = this;
 
-  function ondata(chunk: string): Void {
+  function ondata(chunk: string): void {
     if (dest.writable) {
       if (false === dest.write(chunk) && source.pause) {
         source.pause();
@@ -58,7 +58,7 @@ Stream.prototype.pipe = function(dest: Element, options: object) {
 
   source.on('data', ondata);
 
-  function ondrain(): Void {
+  function ondrain(): void {
     if (source.readable && source.resume) {
       source.resume();
     }
@@ -74,7 +74,7 @@ Stream.prototype.pipe = function(dest: Element, options: object) {
   }
 
   var didOnEnd: boolean = false;
-  function onend(): Void {
+  function onend(): void {
     if (didOnEnd) return;
     didOnEnd = true;
 
@@ -82,7 +82,7 @@ Stream.prototype.pipe = function(dest: Element, options: object) {
   }
 
 
-  function onclose(): Void {
+  function onclose(): void {
     if (didOnEnd) return;
     didOnEnd = true;
 
@@ -90,7 +90,7 @@ Stream.prototype.pipe = function(dest: Element, options: object) {
   }
 
   // don't leave dangling pipes when there are errors.
-  function onerror(er: Function): Void {
+  function onerror(er: Function): void {
     cleanup();
     if (EE.listenerCount(this, 'error') === 0) {
       throw er; // Unhandled stream error in pipe.
@@ -101,7 +101,7 @@ Stream.prototype.pipe = function(dest: Element, options: object) {
   dest.on('error', onerror);
 
   // remove all the event listeners that were added.
-  function cleanup(): Void {
+  function cleanup(): void {
     source.removeListener('data', ondata);
     dest.removeListener('drain', ondrain);
 

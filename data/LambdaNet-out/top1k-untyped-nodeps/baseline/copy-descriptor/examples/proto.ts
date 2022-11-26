@@ -2,7 +2,7 @@
 
 var copy: Function = require('..');
 
-function App(): Void {
+function App(): void {
   this.cache = {};
 }
 

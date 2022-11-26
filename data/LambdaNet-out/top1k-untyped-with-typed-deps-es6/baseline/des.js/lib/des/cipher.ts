@@ -14,7 +14,7 @@ function Cipher(options: string): string {
 }
 export default Cipher;
 
-Cipher.prototype._init = function _init(): Void {
+Cipher.prototype._init = function _init(): void {
   // Might be overrided
 };
 

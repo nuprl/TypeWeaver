@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function forIn(obj: object, fn: Function, thisArg: string): Void {
+export default function forIn(obj: object, fn: Function, thisArg: string): void {
   for (var key in obj) {
     if (fn.call(thisArg, obj[key], key, obj) === false) {
       break;

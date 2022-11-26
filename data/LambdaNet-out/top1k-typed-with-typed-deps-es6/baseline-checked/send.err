@@ -1,8 +1,6 @@
 index.ts(41,5): error TS2322: Type '(path: string) => string' is not assignable to type 'any[]'.
 index.ts(45,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
   Type 'string' is not assignable to type 'any[]'.
-index.ts(87,10): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(99,67): error TS2304: Cannot find name 'Void'.
 index.ts(100,3): error TS2684: The 'this' context of type 'typeof internal' is not assignable to method's 'this' of type 'Function'.
   Types of property 'once' are incompatible.
     Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
@@ -62,26 +60,21 @@ index.ts(338,14): error TS2367: This condition will always return 'true' since t
 index.ts(338,32): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
 index.ts(343,51): error TS2339: Property 'headers' does not exist on type 'object'.
 index.ts(345,50): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
-index.ts(358,89): error TS2304: Cannot find name 'Void'.
 index.ts(361,7): error TS2339: Property 'removeHeader' does not exist on type 'HTMLElement'.
 index.ts(362,7): error TS2339: Property 'removeHeader' does not exist on type 'HTMLElement'.
 index.ts(363,7): error TS2339: Property 'removeHeader' does not exist on type 'HTMLElement'.
 index.ts(364,7): error TS2339: Property 'removeHeader' does not exist on type 'HTMLElement'.
 index.ts(365,7): error TS2339: Property 'removeHeader' does not exist on type 'HTMLElement'.
-index.ts(374,61): error TS2304: Cannot find name 'Void'.
 index.ts(376,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(378,7): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 index.ts(379,7): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-index.ts(388,75): error TS2304: Cannot find name 'Void'.
 index.ts(390,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-index.ts(415,74): error TS2304: Cannot find name 'Void'.
 index.ts(416,17): error TS2339: Property 'code' does not exist on type 'object'.
 index.ts(435,53): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(464,24): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 index.ts(464,55): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(474,67): error TS2304: Cannot find name 'Void'.
 index.ts(487,7): error TS2322: Type 'string' is not assignable to type 'Function'.
 index.ts(488,55): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(488,95): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
@@ -106,7 +99,6 @@ index.ts(551,7): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(574,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-index.ts(605,73): error TS2304: Cannot find name 'Void'.
 index.ts(606,26): error TS2339: Property 'size' does not exist on type 'object'.
 index.ts(611,28): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 index.ts(612,32): error TS2339: Property 'start' does not exist on type 'object'.
@@ -135,7 +127,6 @@ index.ts(695,8): error TS2339: Property 'end' does not exist on type 'object'.
 index.ts(698,7): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
 index.ts(701,11): error TS2339: Property 'method' does not exist on type 'HTMLElement'.
 index.ts(702,9): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-index.ts(715,67): error TS2304: Cannot find name 'Void'.
 index.ts(719,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(720,26): error TS2345: Argument of type '(err: object, stat: Function) => any[]' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
@@ -166,7 +157,6 @@ index.ts(743,16): error TS2339: Property 'isDirectory' does not exist on type 'F
 index.ts(743,38): error TS2554: Expected 1 arguments, but got 0.
 index.ts(744,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 index.ts(745,12): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
-index.ts(756,69): error TS2304: Cannot find name 'Void'.
 index.ts(760,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(761,21): error TS2339: Property '_index' does not exist on type 'HTMLElement'.
 index.ts(762,28): error TS2339: Property 'onStatError' does not exist on type 'HTMLElement'.
@@ -182,21 +172,16 @@ index.ts(771,38): error TS2554: Expected 1 arguments, but got 0.
 index.ts(772,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 index.ts(773,12): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 index.ts(777,3): error TS2554: Expected 1 arguments, but got 0.
-index.ts(788,82): error TS2304: Cannot find name 'Void'.
 index.ts(793,7): error TS2322: Type 'ReadStream' is not assignable to type 'number'.
 index.ts(793,50): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'BufferEncoding | ReadStreamOptions'.
 index.ts(795,10): error TS2339: Property 'pipe' does not exist on type 'number'.
-index.ts(798,24): error TS2304: Cannot find name 'Void'.
 index.ts(799,21): error TS2554: Expected 1 arguments, but got 2.
 index.ts(803,14): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'IncomingMessage | OutgoingMessage<IncomingMessage>'.
   Type 'Function' is missing the following properties from type 'OutgoingMessage<IncomingMessage>': req, chunkedEncoding, shouldKeepAlive, useChunkedEncodingByDefault, and 49 more.
 index.ts(806,10): error TS2339: Property 'on' does not exist on type 'number'.
-index.ts(806,56): error TS2304: Cannot find name 'Void'.
 index.ts(811,10): error TS2339: Property 'onStatError' does not exist on type 'HTMLElement'.
 index.ts(815,10): error TS2339: Property 'on' does not exist on type 'number'.
-index.ts(815,39): error TS2304: Cannot find name 'Void'.
 index.ts(816,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-index.ts(828,59): error TS2304: Cannot find name 'Void'.
 index.ts(831,11): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
 index.ts(833,27): error TS2339: Property 'lookup' does not exist on type 'Mime'.
 index.ts(836,5): error TS2349: This expression is not callable.
@@ -205,7 +190,6 @@ index.ts(840,30): error TS2339: Property 'charsets' does not exist on type 'Mime
 index.ts(842,3): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(843,7): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
-index.ts(855,83): error TS2304: Cannot find name 'Void'.
 index.ts(860,34): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
 index.ts(861,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
@@ -224,7 +208,6 @@ index.ts(883,28): error TS2345: Argument of type 'object' is not assignable to p
 index.ts(884,5): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 index.ts(885,9): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
-index.ts(896,38): error TS2304: Cannot find name 'Void'.
 index.ts(897,39): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 index.ts(900,9): error TS2339: Property 'removeHeader' does not exist on type 'object'.
 index.ts(948,38): error TS2339: Property 'start' does not exist on type 'object'.
@@ -244,6 +227,5 @@ index.ts(1051,21): error TS2339: Property 'headersSent' does not exist on type '
 index.ts(1052,19): error TS2339: Property '_header' does not exist on type 'object'.
 index.ts(1053,11): error TS2339: Property 'headersSent' does not exist on type 'object'.
 index.ts(1084,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-index.ts(1139,53): error TS2304: Cannot find name 'Void'.
 index.ts(1144,9): error TS2339: Property 'setHeader' does not exist on type 'object'.
 

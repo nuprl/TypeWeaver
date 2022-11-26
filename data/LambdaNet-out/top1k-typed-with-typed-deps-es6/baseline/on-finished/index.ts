@@ -88,12 +88,12 @@ function isFinished (msg: any[]): boolean {
  * @private
  */
 
-function attachFinishedListener (msg: object, callback: Function): Void {
+function attachFinishedListener (msg: object, callback: Function): void {
   var eeMsg: any[]
   var eeSocket: Map
   var finished: boolean = false
 
-  function onFinish (error: object): Void {
+  function onFinish (error: object): void {
     eeMsg.cancel()
     eeSocket.cancel()
 
@@ -104,7 +104,7 @@ function attachFinishedListener (msg: object, callback: Function): Void {
   // finished on first message event
   eeMsg = eeSocket = first([[msg, 'end', 'finish']], onFinish)
 
-  function onSocket (socket: object): Void {
+  function onSocket (socket: object): void {
     // remove listener
     msg.removeListener('socket', onSocket)
 
@@ -138,7 +138,7 @@ function attachFinishedListener (msg: object, callback: Function): Void {
  * @private
  */
 
-function attachListener (msg: object, listener: string): Void {
+function attachListener (msg: object, listener: string): void {
   var attached: HTMLElement = msg.__onFinished
 
   // create a private single listener with queue
@@ -159,7 +159,7 @@ function attachListener (msg: object, listener: string): Void {
  */
 
 function createListener (msg: object): object {
-  function listener (err: Function): Void {
+  function listener (err: Function): void {
     if (msg.__onFinished === listener) msg.__onFinished = null
     if (!listener.queue) return
 
@@ -185,13 +185,13 @@ function createListener (msg: object): object {
  */
 
 // istanbul ignore next: node.js 0.8 patch
-function patchAssignSocket (res: Map, callback: Function): Void {
+function patchAssignSocket (res: Map, callback: Function): void {
   var assignSocket: Function = res.assignSocket
 
   if (typeof assignSocket !== 'function') return
 
   // res.on('socket', callback) is broken in 0.8
-  res.assignSocket = function _assignSocket (socket: object): Void {
+  res.assignSocket = function _assignSocket (socket: object): void {
     assignSocket.call(this, socket)
     callback(socket)
   }

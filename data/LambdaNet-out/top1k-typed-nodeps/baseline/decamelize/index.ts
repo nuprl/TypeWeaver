@@ -22,7 +22,7 @@ export default function decamelize(
 		separator = '_',
 		preserveConsecutiveUppercase = false,
 	} = {},
-): Void {
+): void {
 	if (!(typeof text === 'string' && typeof separator === 'string')) {
 		throw new TypeError(
 			'The `text` and `separator` arguments should be of type `string`',

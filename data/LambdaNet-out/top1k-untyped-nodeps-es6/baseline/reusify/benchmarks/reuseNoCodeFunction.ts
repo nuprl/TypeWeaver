@@ -6,7 +6,7 @@ var instance: object = reusify(MyObject)
 var max: number = 100000000
 var start: number = Date.now()
 
-function reuseNoCodeFunction (): Void {
+function reuseNoCodeFunction (): void {
   var obj: HTMLElement = instance.get()
   obj.num = 100
   obj.func()
@@ -14,7 +14,7 @@ function reuseNoCodeFunction (): Void {
   instance.release(obj)
 }
 
-function MyObject (): Void {
+function MyObject (): void {
   this.next = null
   var that: any[] = this
   this.num = 0

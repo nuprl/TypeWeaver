@@ -239,12 +239,12 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: string, key: string): Void {
+    function Reference(parent: string, key: string): void {
         this.parent = parent;
         this.key = key;
     }
 
-    Reference.prototype.replace = function replace(node: object): Void {
+    Reference.prototype.replace = function replace(node: object): void {
         this.parent[this.key] = node;
     };
 
@@ -258,21 +258,21 @@
         }
     };
 
-    function Element(node: object, path: string, wrap: string, ref: Function): Void {
+    function Element(node: object, path: string, wrap: string, ref: Function): void {
         this.node = node;
         this.path = path;
         this.wrap = wrap;
         this.ref = ref;
     }
 
-    function Controller(): Void { }
+    function Controller(): void { }
 
     // API:
     // return property path array from root to current node
     Controller.prototype.path = function path(): object {
         var i: number, iz: Function, j: number, jz: Function, result: any[], element: Element;
 
-        function addToPath(result: any[], path: string): Void {
+        function addToPath(result: any[], path: string): void {
             if (Array.isArray(path)) {
                 for (j = 0, jz = path.length; j < jz; ++j) {
                     result.push(path[j]);
@@ -342,7 +342,7 @@
 
     // API:
     // notify control skip / break
-    Controller.prototype.notify = function notify(flag: Function): Void {
+    Controller.prototype.notify = function notify(flag: Function): void {
         this.__state = flag;
     };
 
@@ -404,7 +404,7 @@
         return false;
     }
 
-    Controller.prototype.traverse = function traverse(root: string, visitor: object): Void {
+    Controller.prototype.traverse = function traverse(root: string, visitor: object): void {
         var worklist: any[],
             leavelist: any[],
             element: Map,
@@ -525,7 +525,7 @@
             outer: object,
             key: string;
 
-        function removeElem(element: HTMLInputElement): Void {
+        function removeElem(element: HTMLInputElement): void {
             var i: number,
                 key: string,
                 nextElem: Record,

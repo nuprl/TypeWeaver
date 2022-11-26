@@ -16,7 +16,7 @@ var bar: object = new ProgressBar('  downloading [:bar] :percent :etas', {
   , total: contentLength
 });
 
-(function next(): Void {
+(function next(): void {
   if (contentLength) {
     var chunk: number = Math.random() * 10 * 1024;
     bar.tick(chunk);

@@ -1,1 +1,1 @@
-export default [function * gen(): Void {}];
+export default [function * gen(): void {}];

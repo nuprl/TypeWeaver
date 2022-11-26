@@ -2,7 +2,6 @@ aws4.ts(5,52): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s
 aws4.ts(5,62): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 aws4.ts(10,73): error TS2345: Argument of type 'number' is not assignable to parameter of type 'BinaryToTextEncoding'.
 aws4.ts(14,68): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BinaryToTextEncoding'.
-aws4.ts(44,63): error TS2304: Cannot find name 'Void'.
 aws4.ts(48,38): error TS2339: Property 'headers' does not exist on type 'object'.
 aws4.ts(48,57): error TS2339: Property 'headers' does not exist on type 'object'.
 aws4.ts(49,85): error TS2339: Property 'hostname' does not exist on type 'object'.
@@ -69,21 +68,14 @@ aws4.ts(365,59): error TS2345: Argument of type 'object' is not assignable to pa
   Index signature for type 'string' is missing in type '{}'.
 aws4.ts(368,6): error TS2339: Property 'RequestSigner' does not exist on type 'HTMLElement'.
 aws4.ts(370,6): error TS2339: Property 'sign' does not exist on type 'HTMLElement'.
-aws4.ts(371,10): error TS2350: Only a void function can be called with the 'new' keyword.
 browser/index.ts(1,18): error TS2307: Cannot find module 'aws4' or its corresponding type declarations.
 example.ts(2,18): error TS2307: Cannot find module '.' or its corresponding type declarations.
-example.ts(5,33): error TS2304: Cannot find name 'Void'.
 example.ts(5,87): error TS2339: Property 'pipe' does not exist on type 'object'.
 example.ts(5,120): error TS2339: Property 'body' does not exist on type 'object'.
-lru.ts(2,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lru.ts(2,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lru.ts(5,34): error TS2304: Cannot find name 'Void'.
-lru.ts(8,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lru.ts(15,15): error TS2339: Property 'val' does not exist on type 'object'.
 lru.ts(21,10): error TS2339: Property 'val' does not exist on type 'any[]'.
-lru.ts(25,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lru.ts(40,26): error TS2339: Property 'key' does not exist on type 'object'.
-lru.ts(46,30): error TS2304: Cannot find name 'Void'.
 lru.ts(59,10): error TS2339: Property 'prev' does not exist on type 'object'.
 lru.ts(60,10): error TS2339: Property 'next' does not exist on type 'object'.
 lru.ts(62,10): error TS2339: Property 'prev' does not exist on type 'object'.
@@ -97,5 +89,4 @@ lru.ts(84,26): error TS2339: Property 'prev' does not exist on type 'object'.
 lru.ts(85,19): error TS2339: Property 'next' does not exist on type 'object'.
 lru.ts(86,10): error TS2339: Property 'next' does not exist on type 'object'.
 lru.ts(86,27): error TS2339: Property 'prev' does not exist on type 'object'.
-lru.ts(91,53): error TS2304: Cannot find name 'Void'.
 

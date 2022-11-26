@@ -114,7 +114,7 @@ function mkDirAndCopy (srcMode: string, src: string, dest: string, opts: string)
   return setDestMode(dest, srcMode)
 }
 
-function copyDir (src: string, dest: string, opts: string): Void {
+function copyDir (src: string, dest: string, opts: string): void {
   fs.readdirSync(src).forEach((item: string) => copyDirItem(item, src, dest, opts))
 }
 

@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-function transform(file: string, next: string): Void {
+function transform(file: string, next: string): void {
 	console.log('convert "%s" ~> "%s"', file, next);
 
 	let code: string = fs.readFileSync(file, 'utf8');

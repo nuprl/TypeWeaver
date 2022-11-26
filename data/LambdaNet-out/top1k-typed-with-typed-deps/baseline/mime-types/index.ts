@@ -151,11 +151,11 @@ function lookup (path: string): boolean {
  * @private
  */
 
-function populateMaps (extensions: object, types: object): Void {
+function populateMaps (extensions: object, types: object): void {
   // source preference (least -> most)
   var preference: any[] = ['nginx', 'apache', undefined, 'iana']
 
-  Object.keys(db).forEach(function forEachMimeType (type: string): Void {
+  Object.keys(db).forEach(function forEachMimeType (type: string): void {
     var mime: HTMLElement = db[type]
     var exts: any[] = mime.extensions
 

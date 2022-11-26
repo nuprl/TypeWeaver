@@ -28,7 +28,7 @@ const asyncResolver: Resolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	fileSystem: nodeFileSystem
 });
-function resolve(context: string, path: string, request: Function, resolveContext: string, callback: string): Void {
+function resolve(context: string, path: string, request: Function, resolveContext: string, callback: string): void {
 	if (typeof context === "string") {
 		callback = resolveContext;
 		resolveContext = request;

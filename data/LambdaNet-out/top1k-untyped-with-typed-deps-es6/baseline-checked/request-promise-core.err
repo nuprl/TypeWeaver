@@ -46,12 +46,6 @@ gulpfile.ts(69,20): error TS2339: Property 'libJsFiles' does not exist on type '
 gulpfile.ts(76,28): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(95,27): error TS2339: Property 'specFiles' does not exist on type 'object'.
 gulpfile.ts(106,26): error TS2345: Argument of type 'number' is not assignable to parameter of type '(error: Error) => void'.
-lib/errors.ts(4,74): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(4,74): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/errors.ts(22,96): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(22,96): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/errors.ts(40,76): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(40,76): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/plumbing.ts(18,29): error TS2339: Property 'PromiseImpl' does not exist on type 'object'.
 lib/plumbing.ts(22,30): error TS2339: Property 'constructorMixin' does not exist on type 'object'.
 lib/plumbing.ts(22,71): error TS2339: Property 'constructorMixin' does not exist on type 'object'.
@@ -67,7 +61,6 @@ lib/plumbing.ts(37,18): error TS2339: Property '_rp_resolve' does not exist on t
 lib/plumbing.ts(38,18): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(44,14): error TS2339: Property '_rp_callbackOrig' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(45,40): error TS2339: Property 'callback' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(45,120): error TS2304: Cannot find name 'Void'.
 lib/plumbing.ts(46,22): error TS2339: Property 'callback' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(53,73): error TS2339: Property 'defaultTransformations' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(55,14): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
@@ -81,7 +74,6 @@ lib/plumbing.ts(74,29): error TS2339: Property '_rp_callbackOrig' does not exist
 lib/plumbing.ts(76,22): error TS2339: Property '_rp_callbackOrig' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(83,62): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(87,18): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(87,29): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(87,53): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'object'.
 lib/plumbing.ts(87,63): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(89,25): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
@@ -92,16 +84,13 @@ lib/plumbing.ts(93,22): error TS2351: This expression is not constructable.
 lib/plumbing.ts(94,34): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(94,77): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(97,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(97,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(97,77): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(97,89): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/plumbing.ts(97,100): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(100,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(100,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(100,67): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'object'.
 lib/plumbing.ts(100,86): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(104,22): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(104,33): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(104,69): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(104,81): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/plumbing.ts(104,92): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
@@ -113,7 +102,6 @@ lib/plumbing.ts(112,34): error TS2339: Property '_rp_options' does not exist on 
 lib/plumbing.ts(112,77): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(115,30): error TS2339: Property '_rp_resolve' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(118,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(118,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(118,67): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'object'.
 lib/plumbing.ts(118,86): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(121,29): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.

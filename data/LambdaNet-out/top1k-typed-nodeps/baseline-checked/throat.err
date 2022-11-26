@@ -1,22 +1,14 @@
-index.ts(4,22): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(7,59): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(14,24): error TS2345: Argument of type '(resolve: any[]) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'any[]'.
-index.ts(15,18): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(15,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 index.ts(18,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(20,32): error TS2339: Property 'fn' does not exist on type 'object'.
 index.ts(20,43): error TS2339: Property 'self' does not exist on type 'object'.
 index.ts(20,51): error TS2339: Property 'args' does not exist on type 'object'.
 index.ts(30,5): error TS2322: Type 'Function' is not assignable to type 'string'.
-index.ts(32,37): error TS2304: Cannot find name 'Void'.
-index.ts(36,23): error TS2304: Cannot find name 'Void'.
 index.ts(39,12): error TS2339: Property 'resolve' does not exist on type 'string'.
 index.ts(90,5): error TS2322: Type 'Function' is not assignable to type 'string'.
 index.ts(92,5): error TS2322: Type 'Function' is not assignable to type 'string'.
-index.ts(98,75): error TS2304: Cannot find name 'Void'.
-index.ts(98,75): error TS4060: Return type of exported function has or is using private name 'Void'.
-index.ts(106,19): error TS2304: Cannot find name 'Void'.
-index.ts(106,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 

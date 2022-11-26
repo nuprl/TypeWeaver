@@ -20,7 +20,7 @@ function customDecodeUriComponent(string: string): boolean {
   return decodeUriComponentLib(string.replace(/\+/g, "%2B"))
 }
 
-function callbackAsync(callback: Function, error: object, result: string): Void {
+function callbackAsync(callback: Function, error: object, result: string): void {
   setImmediate(function() { callback(error, result) })
 }
 
@@ -190,7 +190,7 @@ function resolveSourceMapHelper(code: string, codeUrl: string): object {
 
 
 
-function resolveSources(map: HTMLElement, mapUrl: string, read: Function, options: object, callback: Function): Void {
+function resolveSources(map: HTMLElement, mapUrl: string, read: Function, options: object, callback: Function): void {
   if (typeof options === "function") {
     callback = options
     options = {}
@@ -259,7 +259,7 @@ function resolveSourcesSync(map: HTMLElement, mapUrl: string, read: Function, op
 
 var endingSlash: RegExp = /\/?$/
 
-function resolveSourcesHelper(map: HTMLElement, mapUrl: string, options: object, fn: Function): Void {
+function resolveSourcesHelper(map: HTMLElement, mapUrl: string, options: object, fn: Function): void {
   options = options || {}
   mapUrl = convertWindowsPath(mapUrl)
   var fullUrl: string
@@ -289,7 +289,7 @@ function resolveSourcesHelper(map: HTMLElement, mapUrl: string, options: object,
 
 
 
-function resolve(code: string, codeUrl: string, read: Function, options: Function, callback: Function): Void {
+function resolve(code: string, codeUrl: string, read: Function, options: Function, callback: Function): void {
   if (typeof options === "function") {
     callback = options
     options = {}
@@ -328,7 +328,7 @@ function resolve(code: string, codeUrl: string, read: Function, options: Functio
     })
   }
 
-  function _resolveSources(mapData: object): Void {
+  function _resolveSources(mapData: object): void {
     resolveSources(mapData.map, mapData.sourcesRelativeTo, read, options, function(error: object, result: HTMLElement) {
       if (error) {
         return callback(error)

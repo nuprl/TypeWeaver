@@ -261,7 +261,7 @@ function isDate (val: string): boolean {
  * @private
  */
 
-function tryDecode(str: string, decode: Function): Void {
+function tryDecode(str: string, decode: Function): void {
   try {
     return decode(str);
   } catch (e) {

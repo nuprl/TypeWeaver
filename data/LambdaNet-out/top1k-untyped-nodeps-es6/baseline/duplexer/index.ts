@@ -6,7 +6,7 @@ var slice: Function = Array.prototype.slice
 
 export default duplex;
 
-function forEach (arr: any[], fn: Function): Void {
+function forEach (arr: any[], fn: Function): void {
     if (arr.forEach) {
         return arr.forEach(fn)
     }
@@ -40,7 +40,7 @@ function duplex(writer: object, reader: any[]): HTMLElement {
 
     return stream
 
-    function proxyWriter(methodName: string): Void {
+    function proxyWriter(methodName: string): void {
         stream[methodName] = method
 
         function method(): Promise {
@@ -48,7 +48,7 @@ function duplex(writer: object, reader: any[]): HTMLElement {
         }
     }
 
-    function proxyReader(methodName: string): Void {
+    function proxyReader(methodName: string): void {
         stream[methodName] = method
 
         function method(): Promise {
@@ -61,17 +61,17 @@ function duplex(writer: object, reader: any[]): HTMLElement {
         }
     }
 
-    function proxyStream(methodName: string): Void {
+    function proxyStream(methodName: string): void {
         reader.on(methodName, reemit)
 
-        function reemit(): Void {
+        function reemit(): void {
             var args: any[] = slice.call(arguments)
             args.unshift(methodName)
             stream.emit.apply(stream, args)
         }
     }
 
-    function handleEnd(): Void {
+    function handleEnd(): void {
         if (ended) {
             return
         }
@@ -81,7 +81,7 @@ function duplex(writer: object, reader: any[]): HTMLElement {
         stream.emit.apply(stream, args)
     }
 
-    function reemit(err: string): Void {
+    function reemit(err: string): void {
         stream.emit("error", err)
     }
 }

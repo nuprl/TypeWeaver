@@ -1,0 +1,18 @@
+declare var parse: Function;
+declare var events: string;
+declare var https: string;
+declare var http: string;
+declare var util: string;
+declare var httpsOptions: any[];
+declare var bom: any[];
+declare var colon: number;
+declare var space: number;
+declare var lineFeed: number;
+declare var carriageReturn: number;
+declare var maxBufferAheadAllocation: number;
+declare var reUnsafeHeader: RegExp;
+declare function hasBom(buf: object): boolean;
+declare function EventSource(url: string, eventSourceInitDict: object): void;
+declare function Event(type: string, optionalProperties: object): void;
+declare function MessageEvent(type: string, eventInitDict: object): void;
+declare function removeUnsafeHeaders(headers: object): object;

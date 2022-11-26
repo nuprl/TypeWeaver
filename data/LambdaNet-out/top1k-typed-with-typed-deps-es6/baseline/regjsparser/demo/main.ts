@@ -27,7 +27,7 @@
     });
   }
 
-  function update(): Void {
+  function update(): void {
     var regexSource: string = regex.value;
     var regexFlags: string = flags.value;
     var regexAst: string;

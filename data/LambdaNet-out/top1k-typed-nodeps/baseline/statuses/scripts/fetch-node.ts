@@ -8,7 +8,7 @@ var write: Function = require('./lib/write')
 var URL: string = 'https://raw.githubusercontent.com/nodejs/node/master/lib/_http_server.js'
 var HEADERS: object = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: string): Void {
+https.get(URL, { headers: HEADERS }, function onResponse (res: string): void {
   getBody(res, true, function (err: boolean, body: string) {
     if (err) throw err
 

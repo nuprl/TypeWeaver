@@ -4,7 +4,7 @@
 
 import readdirp from '..';
 
-function logMem(i: string): Void {
+function logMem(i: string): void {
   const vals: any[] = Object.entries(process.memoryUsage()).map(([k, v]) => {
     return `${k}=${(`${(v / 1e6).toFixed(1)}M`).padEnd(7)}`;
   });

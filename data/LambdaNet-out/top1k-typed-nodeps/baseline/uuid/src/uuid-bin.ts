@@ -5,7 +5,7 @@ import v3 from './v3.js';
 import v4 from './v4.js';
 import v5 from './v5.js';
 
-function usage(): Void {
+function usage(): void {
   console.log('Usage:');
   console.log('  uuid');
   console.log('  uuid v1');

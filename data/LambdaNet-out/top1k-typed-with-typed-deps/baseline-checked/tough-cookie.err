@@ -299,7 +299,6 @@ lib/cookie.ts(1601,25): error TS2554: Expected 0 arguments, but got 2.
 lib/cookie.ts(1601,36): error TS2339: Property 'isFunction' does not exist on type 'Cookie'.
 lib/cookie.ts(1602,18): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
 lib/cookie.ts(1602,31): error TS2339: Property 'store' does not exist on type 'CookieJar'.
-lib/cookie.ts(1626,51): error TS2304: Cannot find name 'Void'.
 lib/cookie.ts(1640,18): error TS2551: Property 'domain' does not exist on type 'Cookie'. Did you mean 'cdomain'?
 lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'Cookie'.
 lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'Cookie'.
@@ -333,8 +332,6 @@ lib/memstore.ts(51,40): error TS2339: Property 'idx' does not exist on type 'Mem
 lib/memstore.ts(55,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(58,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(61,26): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(76,63): error TS2304: Cannot find name 'Void'.
-lib/memstore.ts(85,63): error TS2304: Cannot find name 'Void'.
 lib/memstore.ts(100,30): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(113,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(114,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
@@ -384,6 +381,4 @@ lib/validators.ts(40,33): error TS2345: Argument of type 'DateConstructor' is no
 lib/validators.ts(40,57): error TS2339: Property 'getTime' does not exist on type 'object'.
 lib/validators.ts(44,26): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/validators.ts(56,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
-lib/validators.ts(67,66): error TS2304: Cannot find name 'Void'.
-lib/validators.ts(67,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 

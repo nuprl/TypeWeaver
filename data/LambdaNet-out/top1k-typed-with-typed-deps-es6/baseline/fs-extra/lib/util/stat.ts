@@ -32,7 +32,7 @@ function getStatsSync (src: string, dest: string, opts: object): object {
   return { srcStat, destStat }
 }
 
-function checkPaths (src: string, dest: string, funcName: string, opts: Function, cb: Function): Void {
+function checkPaths (src: string, dest: string, funcName: string, opts: Function, cb: Function): void {
   util.callbackify(getStats)(src, dest, opts, (err: Function, stats: object) => {
     if (err) return cb(err)
     const { srcStat, destStat } = stats
@@ -95,7 +95,7 @@ function checkPathsSync (src: string, dest: string, funcName: string, opts: stri
 // It works for all file types including symlinks since it
 // checks the src and dest inodes. It starts from the deepest
 // parent and stops once it reaches the src parent or the root path.
-function checkParentPaths (src: string, srcStat: string, dest: string, funcName: string, cb: Function): Void {
+function checkParentPaths (src: string, srcStat: string, dest: string, funcName: string, cb: Function): void {
   const srcParent: string = path.resolve(path.dirname(src))
   const destParent: string = path.resolve(path.dirname(dest))
   if (destParent === srcParent || destParent === path.parse(destParent).root) return cb()

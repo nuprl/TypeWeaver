@@ -5,7 +5,7 @@ var Watchpack: any[] = require("../");
 
 var folder: string = path.join(__dirname, "folder");
 
-function startWatcher(name: string, files: string, folders: string): Void {
+function startWatcher(name: string, files: string, folders: string): void {
 	var w: DirectoryWatcher = new Watchpack({
 		aggregateTimeout: 3000
 	});

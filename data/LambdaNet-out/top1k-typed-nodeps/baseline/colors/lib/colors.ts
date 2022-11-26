@@ -108,7 +108,7 @@ var styles: Function = (function() {
   return ret;
 })();
 
-var proto: object = defineProps(function colors(): Void {}, styles);
+var proto: object = defineProps(function colors(): void {}, styles);
 
 function applyStyle(): string {
   var args: any[] = Array.prototype.slice.call(arguments);

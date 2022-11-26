@@ -26,7 +26,7 @@ if (typeof process.chdir === 'function') {
 
 export default patch;
 
-function patch (fs: string): Void {
+function patch (fs: string): void {
   // (re-)implement some things that are known busted or missing.
 
   // lchmod, broken prior to 0.6.2
@@ -96,10 +96,10 @@ function patch (fs: string): Void {
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
     : (function (fs$rename: Function) {
-      function rename (from: string, to: string, cb: Function): Void {
+      function rename (from: string, to: string, cb: Function): void {
         var start: number = Date.now()
         var backoff: number = 0;
-        fs$rename(from, to, function CB (er: object): Void {
+        fs$rename(from, to, function CB (er: object): void {
           if (er
               && (er.code === "EACCES" || er.code === "EPERM")
               && Date.now() - start < 60000) {
@@ -162,7 +162,7 @@ function patch (fs: string): Void {
     }
   }})(fs.readSync)
 
-  function patchLchmod (fs: string): Void {
+  function patchLchmod (fs: string): void {
     fs.lchmod = function (path: string, mode: string, callback: Function) {
       fs.open( path
              , constants.O_WRONLY | constants.O_SYMLINK
@@ -205,7 +205,7 @@ function patch (fs: string): Void {
     }
   }
 
-  function patchLutimes (fs: string): Void {
+  function patchLutimes (fs: string): void {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
       fs.lutimes = function (path: string, at: string, mt: string, cb: Function) {
         fs.open(path, constants.O_SYMLINK, function (er: number, fd: string) {
@@ -298,7 +298,7 @@ function patch (fs: string): Void {
         cb = options
         options = null
       }
-      function callback (er: Function, stats: any[]): Void {
+      function callback (er: Function, stats: any[]): void {
         if (stats) {
           if (stats.uid < 0) stats.uid += 0x100000000
           if (stats.gid < 0) stats.gid += 0x100000000

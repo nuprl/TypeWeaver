@@ -551,11 +551,11 @@ class Node {
  * Simplified assertion. Throws an error is `value` is not true.
  */
 
-function assert(value: number, message: string): Void {
+function assert(value: number, message: string): void {
   if (value !== true) throw new Error(message);
 }
 
-function expect(value: string, name: string): Void {
+function expect(value: string, name: string): void {
   assert(value, 'expected ' + name + ' to be an instance of Node');
 }
 
@@ -626,7 +626,7 @@ function typeOf(val: number): string {
  * assign `token` properties to `node`
  */
 
-function assign(node: Node, token: Node, clone: string): Void {
+function assign(node: Node, token: Node, clone: string): void {
   copy(node, token, clone);
   ensureNodes(node, clone);
 
@@ -635,7 +635,7 @@ function assign(node: Node, token: Node, clone: string): Void {
   }
 }
 
-function copy(receiver: string, provider: string, clone: number): Void {
+function copy(receiver: string, provider: string, clone: number): void {
   const descriptors: object = Object.getOwnPropertyDescriptors(provider);
   for (const key in descriptors) {
     if (key === 'constructor' || key in receiver) continue;
@@ -648,7 +648,7 @@ function copy(receiver: string, provider: string, clone: number): Void {
   }
 }
 
-function ensureNodes(node: any[], clone: string): Void {
+function ensureNodes(node: any[], clone: string): void {
   if (!node.nodes) return;
 
   if (Array.isArray(node.nodes)) {
@@ -696,7 +696,7 @@ function mapVisit(node: Node, fn: number): any[] {
   return node;
 }
 
-function define(obj: Node, key: string, value: string): Void {
+function define(obj: Node, key: string, value: string): void {
   Object.defineProperty(obj, key, {
     configurable: true,
     enumerable: false,

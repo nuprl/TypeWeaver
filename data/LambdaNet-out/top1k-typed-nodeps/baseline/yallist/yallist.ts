@@ -381,7 +381,7 @@ function insert (self: any[], node: object, value: string): object {
   return inserted
 }
 
-function push (self: object, item: string): Void {
+function push (self: object, item: string): void {
   self.tail = new Node(item, self.tail, null, self)
   if (!self.head) {
     self.head = self.tail
@@ -389,7 +389,7 @@ function push (self: object, item: string): Void {
   self.length++
 }
 
-function unshift (self: any[], item: string): Void {
+function unshift (self: any[], item: string): void {
   self.head = new Node(item, null, self.head, self)
   if (!self.tail) {
     self.tail = self.head

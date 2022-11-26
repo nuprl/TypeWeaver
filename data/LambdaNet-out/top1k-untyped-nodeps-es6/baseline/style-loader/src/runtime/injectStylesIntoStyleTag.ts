@@ -88,7 +88,7 @@ export default (list: object, options: any[]) => {
 
   let lastIdentifiers: any[] = modulesToDom(list, options);
 
-  return function update(newList: any[]): Void {
+  return function update(newList: any[]): void {
     newList = newList || [];
 
     for (let i = 0; i < lastIdentifiers.length; i++) {

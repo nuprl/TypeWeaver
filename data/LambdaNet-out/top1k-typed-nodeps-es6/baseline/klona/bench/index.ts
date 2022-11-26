@@ -42,7 +42,7 @@ console.timeEnd('klona/json');
 const naiive: Function = (x: string) => JSON.parse(JSON.stringify(x));
 const clone_full: Function = (x: string) => clone(x, { includeNonEnumerable: true });
 
-function runner(name: string, contenders: object): Void {
+function runner(name: string, contenders: object): void {
 	const fixture: string = join(__dirname, 'fixtures', name + '.js');
 	const validator: string = join(__dirname, 'validate', name + '.js');
 

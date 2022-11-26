@@ -185,7 +185,7 @@ function sum32_5(a: string, b: string, c: string, d: string, e: string): number 
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: object, pos: number, ah: string, al: number): Void {
+function sum64(buf: object, pos: number, ah: string, al: number): void {
   var bh: string = buf[pos];
   var bl: string = buf[pos + 1];
 

@@ -14,7 +14,7 @@ var bar: HTMLElement = new ProgressBar('  :title [:bar] :percent', {
   , total: 100
 });
 
-function forward(): Void {
+function forward(): void {
   bar.tick(1, { title: 'forward ' });
   if (bar.curr > 60) {
     backward();
@@ -23,7 +23,7 @@ function forward(): Void {
   }
 }
 
-function backward(): Void {
+function backward(): void {
   bar.tick(-1, { title: 'backward' });
   if (bar.curr == 0) {
     bar.terminate();

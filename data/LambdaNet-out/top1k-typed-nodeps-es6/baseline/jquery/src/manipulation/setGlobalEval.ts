@@ -1,7 +1,7 @@
 import dataPriv from "../data/var/dataPriv.js";
 
 // Mark scripts as having already been evaluated
-function setGlobalEval( elems: any[], refElements: Promise ): Void {
+function setGlobalEval( elems: any[], refElements: Promise ): void {
 	var i: number = 0,
 		l: number = elems.length;
 

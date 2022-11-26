@@ -92,7 +92,7 @@ process.stdin.resume();
 
 // Make all valid input combinations for a given encoding and call fn with it.
 // fn(valid, input, output)
-function forAllChars(converter: object, fn: Function, origbuf: any[], len: number): Void {
+function forAllChars(converter: object, fn: Function, origbuf: any[], len: number): void {
     var buf: object = origbuf.slice(0, len);
     for (var i = 0; i < 0x100; i++) {
         buf[len-1] = i;

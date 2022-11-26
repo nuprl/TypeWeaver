@@ -32,7 +32,7 @@ function hasBom (buf: object): boolean {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: string, eventSourceInitDict: object): Void {
+function EventSource (url: string, eventSourceInitDict: object): void {
   var readyState: number = EventSource.CONNECTING
   var headers: object = eventSourceInitDict && eventSourceInitDict.headers
   var hasNewOrigin: boolean = false
@@ -52,7 +52,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: string): Void {
+  function onConnectionClosed (message: string): void {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -86,7 +86,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
 
   var reconnectUrl: string = null
 
-  function connect (): Void {
+  function connect (): void {
     var options: object = parse(url)
     var isSecure: boolean = options.protocol === 'https:'
     options.headers = { 'Cache-Control': 'no-cache', 'Accept': 'text/event-stream' }
@@ -282,7 +282,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
 
   connect()
 
-  function _emit (): Void {
+  function _emit (): void {
     if (self.listeners(arguments[0]).length > 0) {
       self.emit.apply(self, arguments)
     }
@@ -295,7 +295,7 @@ function EventSource (url: string, eventSourceInitDict: object): Void {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): Void {
+  function parseEventStreamLine (buf: any[], pos: string, fieldLength: number, lineLength: number): void {
     if (lineLength === 0) {
       if (data.length > 0) {
         var type: string = eventName || 'message'
@@ -365,7 +365,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: string): Void {
+    set: function set (listener: string): void {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -402,7 +402,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): Void {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function): void {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -417,7 +417,7 @@ EventSource.prototype.addEventListener = function addEventListener (type: string
  * @see https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent
  * @api public
  */
-EventSource.prototype.dispatchEvent = function dispatchEvent (event: object): Void {
+EventSource.prototype.dispatchEvent = function dispatchEvent (event: object): void {
   if (!event.type) {
     throw new Error('UNSPECIFIED_EVENT_TYPE_ERR')
   }
@@ -434,7 +434,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: object): Vo
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): Void {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: string): void {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -447,7 +447,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: string, optionalProperties: object): Void {
+function Event (type: string, optionalProperties: object): void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {
@@ -464,7 +464,7 @@ function Event (type: string, optionalProperties: object): Void {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: string, eventInitDict: object): Void {
+function MessageEvent (type: string, eventInitDict: object): void {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {

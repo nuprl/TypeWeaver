@@ -692,7 +692,7 @@ function newToken (type: string, value: string): object {
     }
 }
 
-function literal (s: any[]): Void {
+function literal (s: any[]): void {
     for (const c of s) {
         const p: string = peek()
 
@@ -937,7 +937,7 @@ const parseStates: object = {
     },
 }
 
-function push (): Void {
+function push (): void {
     let value: any[]
 
     switch (token.type) {
@@ -997,7 +997,7 @@ function push (): Void {
     }
 }
 
-function pop (): Void {
+function pop (): void {
     stack.pop()
 
     const current: string = stack[stack.length - 1]
@@ -1047,7 +1047,7 @@ function invalidIdentifier (): string {
     return syntaxError(`JSON5: invalid identifier character at ${line}:${column}`)
 }
 
-function separatorChar (c: string): Void {
+function separatorChar (c: string): void {
     console.warn(`JSON5: '${formatChar(c)}' in strings is not valid ECMAScript; consider escaping`)
 }
 

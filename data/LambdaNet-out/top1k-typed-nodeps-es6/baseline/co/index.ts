@@ -76,7 +76,7 @@ function co(gen: object): Promise {
      * @api private
      */
 
-    function onRejected(err: any[]): Void {
+    function onRejected(err: any[]): void {
       var ret: object;
       try {
         ret = gen.throw(err);
@@ -178,7 +178,7 @@ function objectToPromise(obj: object): Promise{
     return results;
   });
 
-  function defer(promise: Promise, key: string): Void {
+  function defer(promise: Promise, key: string): void {
     // predefine the key in the result
     results[key] = undefined;
     promises.push(promise.then(function (res: string) {

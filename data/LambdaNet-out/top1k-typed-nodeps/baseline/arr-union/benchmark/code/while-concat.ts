@@ -2,7 +2,7 @@
 
 var unique: Function = require('array-unique');
 
-module.exports = function union(): Void {
+module.exports = function union(): void {
   var len: number = arguments.length;
   var res: any[] = [];
 

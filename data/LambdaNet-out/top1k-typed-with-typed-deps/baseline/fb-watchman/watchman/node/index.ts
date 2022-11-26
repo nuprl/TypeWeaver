@@ -22,7 +22,7 @@ var unilateralTags: any[] = ['subscription', 'log'];
  *     If not provided, the Client locates the binary using the PATH specified
  *     by the node child_process's default env.
  */
-function Client(options: object): Void {
+function Client(options: object): void {
   var self: any[] = this;
   EE.call(this);
 
@@ -74,7 +74,7 @@ Client.prototype.cancelCommands = function(why: any[]) {
 Client.prototype.connect = function() {
   var self: HTMLElement = this;
 
-  function makeSock(sockname: string): Void {
+  function makeSock(sockname: string): void {
     // bunser will decode the watchman BSER protocol for us
     self.bunser = new bser.BunserBuf();
     // For each decoded line:
@@ -155,7 +155,7 @@ Client.prototype.connect = function() {
   var proc: HTMLElement = null;
   var spawnFailed: boolean = false;
 
-  function spawnError(error: HTMLElement): Void {
+  function spawnError(error: HTMLElement): void {
     if (spawnFailed) {
       // For ENOENT, proc 'close' will also trigger with a negative code,
       // let's suppress that second error.

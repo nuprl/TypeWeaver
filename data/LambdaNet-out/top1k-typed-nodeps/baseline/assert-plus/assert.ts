@@ -19,7 +19,7 @@ function _capitalize(str: string): string {
     return (str.charAt(0).toUpperCase() + str.slice(1));
 }
 
-function _toss(name: string, expected: string, oper: string, arg: string, actual: Function): Void {
+function _toss(name: string, expected: string, oper: string, arg: string, actual: Function): void {
     throw new assert.AssertionError({
         message: util.format('%s (%s) is required', name, expected),
         actual: (actual === undefined) ? typeof (arg) : actual(arg),
@@ -33,7 +33,7 @@ function _getClass(arg: string): string {
     return (Object.prototype.toString.call(arg).slice(8, -1));
 }
 
-function noop(): Void {
+function noop(): void {
     // Why even bother with asserts?
 }
 

@@ -177,7 +177,7 @@ function jsError(fmtstr: string, convposn: string, curconv: string, reason: stri
 	    convposn + ' ' + reason));
 }
 
-function jsPrintf(): Void {
+function jsPrintf(): void {
 	var args: any[] = Array.prototype.slice.call(arguments);
 	args.unshift(process.stdout);
 	jsFprintf.apply(null, args);

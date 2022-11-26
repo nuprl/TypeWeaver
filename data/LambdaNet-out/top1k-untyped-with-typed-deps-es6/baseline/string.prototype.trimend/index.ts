@@ -8,7 +8,7 @@ import getPolyfill from './polyfill';
 import shim from './shim';
 
 var bound: Function = callBind(getPolyfill());
-var boundMethod: Function = function trim(receiver: string): Void {
+var boundMethod: Function = function trim(receiver: string): void {
 	RequireObjectCoercible(receiver);
 	return bound(receiver);
 };

@@ -5,7 +5,7 @@
 
 "use strict";
 
-module.exports = function forEachBail(array: any[], iterator: Function, callback: Function): Void {
+module.exports = function forEachBail(array: any[], iterator: Function, callback: Function): void {
 	if (array.length === 0) return callback();
 
 	let i: number = 0;

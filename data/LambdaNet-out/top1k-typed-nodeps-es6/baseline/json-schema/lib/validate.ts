@@ -77,7 +77,7 @@ var validate: Function = exports._validate = function(/*Any*/instance: object,/*
 
 		var l: number;
 		path += path ? typeof i == 'number' ? '[' + i + ']' : typeof i == 'undefined' ? '' : '.' + i : i;
-		function addError(message: string): Void{
+		function addError(message: string): void{
 			errors.push({property:path,message:message});
 		}
 

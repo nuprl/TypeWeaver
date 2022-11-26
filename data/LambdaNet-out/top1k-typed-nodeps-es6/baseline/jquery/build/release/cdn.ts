@@ -25,7 +25,7 @@ var cdnFolder: string = "dist/cdn",
 /**
  * Generates copies for the CDNs
  */
-function makeReleaseCopies( Release: object ): Void {
+function makeReleaseCopies( Release: object ): void {
 	shell.mkdir( "-p", cdnFolder );
 
 	Object.keys( releaseFiles ).forEach( function( key: string ) {
@@ -51,11 +51,11 @@ function makeReleaseCopies( Release: object ): Void {
 	} );
 }
 
-function makeArchives( Release: HTMLElement, callback: Function ): Void {
+function makeArchives( Release: HTMLElement, callback: Function ): void {
 
 	Release.chdir( Release.dir.repo );
 
-	function makeArchive( cdn: string, files: any[], callback: Function ): Void {
+	function makeArchive( cdn: string, files: any[], callback: Function ): void {
 		if ( Release.preRelease ) {
 			console.log( "Skipping archive creation for " + cdn + "; this is a beta release." );
 			callback();
@@ -97,11 +97,11 @@ function makeArchives( Release: HTMLElement, callback: Function ): Void {
 		archiver.finalize();
 	}
 
-	function buildGoogleCDN( callback: string ): Void {
+	function buildGoogleCDN( callback: string ): void {
 		makeArchive( "googlecdn", googleFilesCDN, callback );
 	}
 
-	function buildMicrosoftCDN( callback: string ): Void {
+	function buildMicrosoftCDN( callback: string ): void {
 		makeArchive( "mscdn", msFilesCDN, callback );
 	}
 

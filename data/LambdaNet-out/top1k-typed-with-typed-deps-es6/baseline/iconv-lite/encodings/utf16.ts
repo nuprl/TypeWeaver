@@ -7,7 +7,7 @@ import { Buffer } from 'safer-buffer';
 
 export const utf16be: Function = Utf16BECodec;
 
-function Utf16BECodec(): Void {
+function Utf16BECodec(): void {
 }
 
 Utf16BECodec.prototype.encoder = Utf16BEEncoder;
@@ -17,7 +17,7 @@ Utf16BECodec.prototype.bomAware = true;
 
 // -- Encoding
 
-function Utf16BEEncoder(): Void {
+function Utf16BEEncoder(): void {
 }
 
 Utf16BEEncoder.prototype.write = function(str: string) {
@@ -34,7 +34,7 @@ Utf16BEEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf16BEDecoder(): Void {
+function Utf16BEDecoder(): void {
     this.overflowByte = -1;
 }
 
@@ -76,7 +76,7 @@ Utf16BEDecoder.prototype.end = function() {
 
 export const utf16: Function = Utf16Codec;
 
-function Utf16Codec(codecOptions: Function, iconv: Function): Void {
+function Utf16Codec(codecOptions: Function, iconv: Function): void {
     this.iconv = iconv;
 }
 
@@ -86,7 +86,7 @@ Utf16Codec.prototype.decoder = Utf16Decoder;
 
 // -- Encoding (pass-through)
 
-function Utf16Encoder(options: object, codec: object): Void {
+function Utf16Encoder(options: object, codec: object): void {
     options = options || {};
     if (options.addBOM === undefined)
         options.addBOM = true;
@@ -104,7 +104,7 @@ Utf16Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf16Decoder(options: object, codec: object): Void {
+function Utf16Decoder(options: object, codec: object): void {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;

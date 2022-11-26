@@ -29,7 +29,7 @@ var GZIP_HEADER_ID2: number = 0x8b
 /**
  * Emulate Node's zlib C++ layer for use by the JS layer in index.js
  */
-function Zlib (mode: number): Void {
+function Zlib (mode: number): void {
   if (typeof mode !== 'number' || mode < exports.DEFLATE || mode > exports.UNZIP) {
     throw new TypeError('Bad argument')
   }

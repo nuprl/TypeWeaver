@@ -9,7 +9,7 @@ import write from './lib/write';
 var URL: string = 'https://www.iana.org/assignments/http-status-codes/http-status-codes-1.csv'
 var HEADERS: object = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: object): Void {
+https.get(URL, { headers: HEADERS }, function onResponse (res: object): void {
   toArray(res.pipe(parser()), function (err: boolean, rows: any[]) {
     if (err) throw err
 

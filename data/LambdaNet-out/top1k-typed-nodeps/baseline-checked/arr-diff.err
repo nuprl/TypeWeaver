@@ -6,7 +6,6 @@ benchmark/check.ts(16,6): error TS2339: Property 'readdirSync' does not exist on
 benchmark/check.ts(17,20): error TS2339: Property 'resolve' does not exist on type 'string'.
 benchmark/check.ts(19,40): error TS2339: Property 'apply' does not exist on type 'string'.
 benchmark/code/arr-diff-3.0.0.ts(15,10): error TS2393: Duplicate function implementation.
-benchmark/code/arr-diff-3.0.0.ts(15,44): error TS2304: Cannot find name 'Void'.
 benchmark/code/arr-diff-3.0.0.ts(18,9): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
 benchmark/code/reduce-concat.ts(6,21): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callbackfn: (previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any, initialValue: any): any', gave the following error.
@@ -36,15 +35,11 @@ benchmark/code/while-arguments.ts(9,21): error TS2769: No overload matches this 
     Argument of type 'string' is not assignable to parameter of type 'any[]'.
 benchmark/code/while-arguments.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/while-splice-args.ts(10,10): error TS2393: Duplicate function implementation.
-benchmark/code/while-splice-args.ts(10,41): error TS2304: Cannot find name 'Void'.
 benchmark/code/while-splice-args.ts(19,10): error TS2393: Duplicate function implementation.
 benchmark/code/while-splice-for.ts(14,10): error TS2393: Duplicate function implementation.
-benchmark/code/while-splice-for.ts(14,44): error TS2304: Cannot find name 'Void'.
 benchmark/code/while-splice-for.ts(17,9): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
 benchmark/code/while-splice-pop-flatten.ts(14,10): error TS2393: Duplicate function implementation.
-benchmark/code/while-splice-pop-flatten.ts(14,43): error TS2304: Cannot find name 'Void'.
 benchmark/code/while-splice-pop.ts(12,10): error TS2393: Duplicate function implementation.
-benchmark/code/while-splice-pop.ts(12,43): error TS2304: Cannot find name 'Void'.
 benchmark/code/while-splice-recurse.ts(12,10): error TS2393: Duplicate function implementation.
 benchmark/index.ts(8,30): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.

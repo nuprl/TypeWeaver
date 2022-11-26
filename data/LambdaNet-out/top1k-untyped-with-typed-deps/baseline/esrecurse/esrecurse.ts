@@ -37,7 +37,7 @@
         return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
     }
 
-    function Visitor(visitor: string, options: object): Void {
+    function Visitor(visitor: string, options: object): void {
         options = options || {};
 
         this.__visitor = visitor ||  this;

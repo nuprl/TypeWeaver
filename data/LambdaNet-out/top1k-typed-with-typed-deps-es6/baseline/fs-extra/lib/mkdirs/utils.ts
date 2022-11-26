@@ -8,7 +8,7 @@ import path from 'path';
 
 // https://github.com/nodejs/node/issues/8987
 // https://github.com/libuv/libuv/pull/1088
-export const checkPath: string = function checkPath (pth: string): Void {
+export const checkPath: string = function checkPath (pth: string): void {
   if (process.platform === 'win32') {
     const pathHasInvalidWinCharacters: number = /[<>:"|?*]/.test(pth.replace(path.parse(pth).root, ''))
 

@@ -4,7 +4,7 @@ export function parsePatch(uniDiff: string, options: object = {}): any[] {
       list: any[] = [],
       i: number = 0;
 
-  function parseIndex(): Void {
+  function parseIndex(): void {
     let index: object = {};
     list.push(index);
 
@@ -52,7 +52,7 @@ export function parsePatch(uniDiff: string, options: object = {}): any[] {
 
   // Parses the --- and +++ headers, if none are found, no lines
   // are consumed.
-  function parseFileHeader(index: object): Void {
+  function parseFileHeader(index: object): void {
     const fileHeader: object = (/^(---|\+\+\+)\s+(.*)$/).exec(diffstr[i]);
     if (fileHeader) {
       let keyPrefix: string = fileHeader[1] === '---' ? 'old' : 'new';

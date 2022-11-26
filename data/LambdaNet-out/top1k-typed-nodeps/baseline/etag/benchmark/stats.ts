@@ -41,15 +41,15 @@ suite.add({
   fn: 'var val = etag(fakestat, {weak: true})'
 })
 
-suite.on('start', function onCycle (event: string): Void {
+suite.on('start', function onCycle (event: string): void {
   process.stdout.write('  stat\n\n')
 })
 
-suite.on('cycle', function onCycle (event: object): Void {
+suite.on('cycle', function onCycle (event: object): void {
   benchmarks.add(event.target)
 })
 
-suite.on('complete', function onComplete (): Void {
+suite.on('complete', function onComplete (): void {
   benchmarks.log()
 })
 

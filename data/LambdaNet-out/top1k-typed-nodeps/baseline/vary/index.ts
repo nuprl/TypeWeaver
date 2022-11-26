@@ -130,7 +130,7 @@ function parse (header: string): any[] {
  * @public
  */
 
-function vary (res: object, field: number): Void {
+function vary (res: object, field: number): void {
   if (!res || !res.getHeader || !res.setHeader) {
     // quack quack
     throw new TypeError('res argument is required')

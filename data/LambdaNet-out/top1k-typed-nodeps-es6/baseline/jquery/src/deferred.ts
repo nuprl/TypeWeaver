@@ -6,11 +6,11 @@ import "./callbacks.js";
 function Identity( v: string ): string {
 	return v;
 }
-function Thrower( ex: Function ): Void {
+function Thrower( ex: Function ): void {
 	throw ex;
 }
 
-function adoptValue( value: object, resolve: Function, reject: string, noValue: string ): Void {
+function adoptValue( value: object, resolve: Function, reject: string, noValue: string ): void {
 	var method: Function;
 
 	try {

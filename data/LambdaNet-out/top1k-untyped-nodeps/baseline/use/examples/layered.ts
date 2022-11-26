@@ -2,7 +2,7 @@
 var define: string = require('define-property');
 var use: Function = require('..');
 
-function App(name: string): Void {
+function App(name: string): void {
   this.name = name;
   use(this);
 }

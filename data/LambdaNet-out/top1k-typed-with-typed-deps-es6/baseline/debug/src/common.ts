@@ -63,7 +63,7 @@ function setup(env: object): Element {
 		let namespacesCache: string;
 		let enabledCache: number;
 
-		function debug(...args): Void {
+		function debug(...args): void {
 			// Disabled?
 			if (!debug.enabled) {
 				return;
@@ -159,7 +159,7 @@ function setup(env: object): Element {
 	* @param {String} namespaces
 	* @api public
 	*/
-	function enable(namespaces: string): Void {
+	function enable(namespaces: string): void {
 		createDebug.save(namespaces);
 		createDebug.namespaces = namespaces;
 
@@ -262,7 +262,7 @@ function setup(env: object): Element {
 	* XXX DO NOT USE. This is a temporary stub function.
 	* XXX It WILL be removed in the next major release.
 	*/
-	function destroy(): Void {
+	function destroy(): void {
 		console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
 	}
 

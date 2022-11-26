@@ -216,7 +216,7 @@ function qstring (val: string): string {
  * Class to represent a content type.
  * @private
  */
-function ContentType (type: string): Void {
+function ContentType (type: string): void {
   this.parameters = Object.create(null)
   this.type = type
 }

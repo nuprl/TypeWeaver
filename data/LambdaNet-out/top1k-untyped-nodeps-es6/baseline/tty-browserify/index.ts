@@ -1,11 +1,11 @@
 exports.isatty = function () { return false; };
 
-function ReadStream(): Void {
+function ReadStream(): void {
   throw new Error('tty.ReadStream is not implemented');
 }
 exports.ReadStream = ReadStream;
 
-function WriteStream(): Void {
+function WriteStream(): void {
   throw new Error('tty.WriteStream is not implemented');
 }
 exports.WriteStream = WriteStream;

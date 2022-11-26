@@ -10,7 +10,7 @@ var has: Function = Object.prototype.hasOwnProperty
  * @constructor
  * @private
  */
-function Events(): Void {}
+function Events(): void {}
 
 //
 // We try to not inherit from `Object.prototype`. In some engines creating an
@@ -38,7 +38,7 @@ if (Object.create) {
  * @constructor
  * @private
  */
-function EE(fn: string, context: Function, once: string): Void {
+function EE(fn: string, context: Function, once: string): void {
   this.fn = fn;
   this.context = context;
   this.once = once || false;
@@ -77,7 +77,7 @@ function addListener(emitter: object, event: number, fn: string, context: string
  * @param {(String|Symbol)} evt The Event name.
  * @private
  */
-function clearEvent(emitter: object, evt: string): Void {
+function clearEvent(emitter: object, evt: string): void {
   if (--emitter._eventsCount === 0) emitter._events = new Events();
   else delete emitter._events[evt];
 }
@@ -89,7 +89,7 @@ function clearEvent(emitter: object, evt: string): Void {
  * @constructor
  * @public
  */
-function EventEmitter(): Void {
+function EventEmitter(): void {
   this._events = new Events();
   this._eventsCount = 0;
 }

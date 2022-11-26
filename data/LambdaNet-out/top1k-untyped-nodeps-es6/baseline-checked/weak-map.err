@@ -7,11 +7,9 @@ bench.ts(22,5): error TS2304: Cannot find name 'bench'.
 bench.ts(25,17): error TS2339: Property 'get' does not exist on type 'HTMLElement'.
 bench.ts(28,5): error TS2304: Cannot find name 'bench'.
 bench.ts(35,5): error TS2304: Cannot find name 'bench'.
-weak-map.ts(99,28): error TS2304: Cannot find name 'Void'.
 weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
-weak-map.ts(120,51): error TS2304: Cannot find name 'Void'.
 weak-map.ts(122,13): error TS2339: Property 'permitHostObjects___' does not exist on type 'object'.
 weak-map.ts(123,11): error TS2339: Property 'permitHostObjects___' does not exist on type 'object'.
 weak-map.ts(126,14): error TS2304: Cannot find name 'ses'.
@@ -46,7 +44,6 @@ weak-map.ts(384,5): error TS2349: This expression is not callable.
 weak-map.ts(385,68): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 weak-map.ts(386,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 weak-map.ts(393,10): error TS2339: Property 'prototype' does not exist on type 'object'.
-weak-map.ts(398,39): error TS2304: Cannot find name 'Void'.
 weak-map.ts(417,9): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
 weak-map.ts(433,11): error TS2322: Type 'any[]' is not assignable to type 'number'.
 weak-map.ts(435,22): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
@@ -73,7 +70,7 @@ weak-map.ts(632,41): error TS2351: This expression is not constructable.
 weak-map.ts(633,22): error TS2339: Property 'set___' does not exist on type 'object'.
 weak-map.ts(636,20): error TS2339: Property 'set' does not exist on type 'object'.
 weak-map.ts(644,35): error TS2339: Property 'delete___' does not exist on type 'object'.
-weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'number' and '(map: object) => Void' have no overlap.
+weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'number' and '(map: object) => void' have no overlap.
 weak-map.ts(663,7): error TS1258: A default export must be at the top level of a file or module declaration.
 weak-map.ts(683,5): error TS1258: A default export must be at the top level of a file or module declaration.
 

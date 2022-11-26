@@ -14,10 +14,10 @@ module.exports = {
     var cache: HTMLElement = flatCache.load(cacheId, _path);
     var normalizedEntries: object = {};
 
-    var removeNotFoundFiles: Function = function removeNotFoundFiles(): Void {
+    var removeNotFoundFiles: Function = function removeNotFoundFiles(): void {
       const cachedEntries: any[] = cache.keys();
       // remove not found entries
-      cachedEntries.forEach(function remover(fPath: string): Void {
+      cachedEntries.forEach(function remover(fPath: string): void {
         try {
           fs.statSync(fPath);
         } catch (err) {

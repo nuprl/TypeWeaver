@@ -1,6 +1,4 @@
 encodings/dbcs-codec.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'object', but here has type 'Element'.
-encodings/dbcs-codec.ts(22,58): error TS2304: Cannot find name 'Void'.
-encodings/dbcs-codec.ts(22,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/dbcs-codec.ts(23,38): error TS2339: Property 'encodingName' does not exist on type 'object'.
 encodings/dbcs-codec.ts(26,23): error TS2339: Property 'table' does not exist on type 'object'.
 encodings/dbcs-codec.ts(30,44): error TS2339: Property 'table' does not exist on type 'object'.
@@ -23,8 +21,6 @@ encodings/dbcs-codec.ts(192,37): error TS2365: Operator '<' cannot be applied to
 encodings/dbcs-codec.ts(236,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/dbcs-codec.ts(269,42): error TS2538: Type 'any[]' cannot be used as an index type.
 encodings/dbcs-codec.ts(284,42): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-encodings/dbcs-codec.ts(302,55): error TS2304: Cannot find name 'Void'.
-encodings/dbcs-codec.ts(302,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/dbcs-codec.ts(308,30): error TS2339: Property 'encodeTable' does not exist on type 'object'.
 encodings/dbcs-codec.ts(309,33): error TS2339: Property 'encodeTableSeq' does not exist on type 'object'.
 encodings/dbcs-codec.ts(310,40): error TS2339: Property 'defCharSB' does not exist on type 'object'.
@@ -36,8 +32,6 @@ encodings/dbcs-codec.ts(443,32): error TS2339: Property 'alloc' does not exist o
 encodings/dbcs-codec.ts(448,17): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 encodings/dbcs-codec.ts(452,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/dbcs-codec.ts(453,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-encodings/dbcs-codec.ts(476,55): error TS2304: Cannot find name 'Void'.
-encodings/dbcs-codec.ts(476,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/dbcs-codec.ts(482,31): error TS2339: Property 'decodeTables' does not exist on type 'object'.
 encodings/dbcs-codec.ts(483,33): error TS2339: Property 'decodeTableSeq' does not exist on type 'object'.
 encodings/dbcs-codec.ts(484,37): error TS2339: Property 'defaultCharUnicode' does not exist on type 'object'.
@@ -69,31 +63,21 @@ encodings/dbcs-codec.ts(547,23): error TS2362: The left-hand side of an arithmet
 encodings/dbcs-codec.ts(558,40): error TS2554: Expected 0 arguments, but got 1.
 encodings/dbcs-data.ts(7,8): error TS2339: Property 'exports' does not exist on type 'any[]'.
 encodings/internal.ts(6,8): error TS2339: Property 'exports' does not exist on type 'any[]'.
-encodings/internal.ts(25,62): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(25,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(26,29): error TS2339: Property 'encodingName' does not exist on type 'object'.
 encodings/internal.ts(27,34): error TS2339: Property 'bomAware' does not exist on type 'object'.
 encodings/internal.ts(38,20): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/internal.ts(40,45): error TS2339: Property 'defaultCharUnicode' does not exist on type 'object'.
 encodings/internal.ts(53,20): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 encodings/internal.ts(54,19): error TS2339: Property 'prototype' does not exist on type 'any[]'.
-encodings/internal.ts(57,59): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(57,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(58,24): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
 encodings/internal.ts(58,44): error TS2339: Property 'enc' does not exist on type 'object'.
 encodings/internal.ts(62,17): error TS2339: Property 'isBuffer' does not exist on type 'object'.
 encodings/internal.ts(63,22): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/internal.ts(77,59): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(77,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(78,22): error TS2339: Property 'enc' does not exist on type 'object'.
 encodings/internal.ts(82,19): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/internal.ts(92,67): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(92,67): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(102,19): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/internal.ts(106,19): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/internal.ts(113,66): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(113,66): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(117,29): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/internal.ts(119,13): error TS2322: Type 'number' is not assignable to type 'string'.
 encodings/internal.ts(122,13): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
@@ -103,15 +87,9 @@ encodings/internal.ts(126,37): error TS2362: The left-hand side of an arithmetic
 encodings/internal.ts(129,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/internal.ts(130,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/internal.ts(131,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-encodings/internal.ts(143,64): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(143,64): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(147,37): error TS2339: Property 'defaultCharUnicode' does not exist on type 'object'.
-encodings/internal.ts(205,65): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(205,65): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/internal.ts(223,19): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/internal.ts(230,23): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/sbcs-codec.ts(8,58): error TS2304: Cannot find name 'Void'.
-encodings/sbcs-codec.ts(8,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/sbcs-codec.ts(13,23): error TS2339: Property 'chars' does not exist on type 'object'.
 encodings/sbcs-codec.ts(13,46): error TS2339: Property 'chars' does not exist on type 'object'.
 encodings/sbcs-codec.ts(13,83): error TS2339: Property 'chars' does not exist on type 'object'.
@@ -125,44 +103,24 @@ encodings/sbcs-codec.ts(26,36): error TS2339: Property 'alloc' does not exist on
 encodings/sbcs-codec.ts(26,55): error TS2339: Property 'defaultCharSingleByte' does not exist on type 'object'.
 encodings/sbcs-codec.ts(28,38): error TS2339: Property 'chars' does not exist on type 'object'.
 encodings/sbcs-codec.ts(29,32): error TS2339: Property 'chars' does not exist on type 'object'.
-encodings/sbcs-codec.ts(38,55): error TS2304: Cannot find name 'Void'.
-encodings/sbcs-codec.ts(38,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/sbcs-codec.ts(39,28): error TS2339: Property 'encodeBuf' does not exist on type 'object'.
 encodings/sbcs-codec.ts(43,30): error TS2339: Property 'alloc' does not exist on type 'object'.
-encodings/sbcs-codec.ts(54,55): error TS2304: Cannot find name 'Void'.
-encodings/sbcs-codec.ts(54,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/sbcs-codec.ts(55,28): error TS2339: Property 'decodeBuf' does not exist on type 'object'.
 encodings/sbcs-codec.ts(61,32): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/sbcs-codec.ts(68,28): error TS2554: Expected 0 arguments, but got 1.
 encodings/sbcs-data-generated.ts(4,8): error TS2339: Property 'exports' does not exist on type 'any[]'.
 encodings/sbcs-data.ts(5,8): error TS2339: Property 'exports' does not exist on type 'any[]'.
-encodings/utf16.ts(9,26): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(9,26): error TS4060: Return type of exported function has or is using private name 'Void'.
-encodings/utf16.ts(19,28): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(19,28): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf16.ts(23,29): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/utf16.ts(36,28): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(36,28): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf16.ts(44,30): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/utf16.ts(60,38): error TS2554: Expected 0 arguments, but got 1.
-encodings/utf16.ts(77,63): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(77,63): error TS4060: Return type of exported function has or is using private name 'Void'.
-encodings/utf16.ts(87,56): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(87,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf16.ts(89,17): error TS2339: Property 'addBOM' does not exist on type 'object'.
 encodings/utf16.ts(90,17): error TS2339: Property 'addBOM' does not exist on type 'object'.
 encodings/utf16.ts(91,26): error TS2339: Property 'iconv' does not exist on type 'object'.
-encodings/utf16.ts(105,56): error TS2304: Cannot find name 'Void'.
-encodings/utf16.ts(105,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf16.ts(111,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf16.ts(157,10): error TS2393: Duplicate function implementation.
 encodings/utf16.ts(194,5): error TS2322: Type 'number | "utf-16le"' is not assignable to type 'string'.
   Type 'number' is not assignable to type 'string'.
-encodings/utf32.ts(9,61): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(9,61): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf32.ts(12,30): error TS2339: Property 'isLE' does not exist on type 'object'.
-encodings/utf32.ts(27,56): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(27,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf32.ts(28,23): error TS2339: Property 'isLE' does not exist on type 'object'.
 encodings/utf32.ts(33,29): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/utf32.ts(34,29): error TS2339: Property 'alloc' does not exist on type 'object'.
@@ -173,44 +131,26 @@ encodings/utf32.ts(53,21): error TS2322: Type 'number' is not assignable to type
 encodings/utf32.ts(86,35): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/utf32.ts(89,13): error TS2339: Property 'writeUInt32LE' does not exist on type 'HTMLElement'.
 encodings/utf32.ts(91,13): error TS2339: Property 'writeUInt32BE' does not exist on type 'HTMLElement'.
-encodings/utf32.ts(100,56): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(100,56): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf32.ts(101,23): error TS2339: Property 'isLE' does not exist on type 'object'.
 encodings/utf32.ts(102,26): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf32.ts(112,29): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/utf32.ts(132,62): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 encodings/utf32.ts(144,58): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 encodings/utf32.ts(152,42): error TS2554: Expected 0 arguments, but got 1.
-encodings/utf32.ts(195,60): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(195,60): error TS4060: Return type of exported function has or is using private name 'Void'.
-encodings/utf32.ts(204,60): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(204,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf32.ts(207,17): error TS2339: Property 'addBOM' does not exist on type 'object'.
 encodings/utf32.ts(208,17): error TS2339: Property 'addBOM' does not exist on type 'object'.
 encodings/utf32.ts(210,26): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf32.ts(210,51): error TS2339: Property 'defaultEncoding' does not exist on type 'object'.
-encodings/utf32.ts(223,60): error TS2304: Cannot find name 'Void'.
-encodings/utf32.ts(223,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf32.ts(228,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf32.ts(275,10): error TS2393: Duplicate function implementation.
 encodings/utf32.ts(318,5): error TS2322: Type 'number | "utf-32le"' is not assignable to type 'string'.
   Type 'number' is not assignable to type 'string'.
-encodings/utf7.ts(9,62): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(9,62): error TS4060: Return type of exported function has or is using private name 'Void'.
-encodings/utf7.ts(22,55): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(22,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf7.ts(23,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf7.ts(29,19): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/utf7.ts(42,55): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(42,55): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf7.ts(43,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf7.ts(78,53): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/utf7.ts(100,41): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/utf7.ts(112,40): error TS2339: Property 'from' does not exist on type 'object'.
-encodings/utf7.ts(133,66): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(133,66): error TS4060: Return type of exported function has or is using private name 'Void'.
-encodings/utf7.ts(144,59): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(144,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf7.ts(145,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf7.ts(147,31): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/utf7.ts(155,29): error TS2339: Property 'alloc' does not exist on type 'object'.
@@ -220,8 +160,6 @@ encodings/utf7.ts(187,35): error TS2339: Property 'write' does not exist on type
 encodings/utf7.ts(187,62): error TS2554: Expected 0 arguments, but got 1.
 encodings/utf7.ts(201,29): error TS2339: Property 'alloc' does not exist on type 'object'.
 encodings/utf7.ts(204,27): error TS2339: Property 'write' does not exist on type 'any[]'.
-encodings/utf7.ts(218,59): error TS2304: Cannot find name 'Void'.
-encodings/utf7.ts(218,59): error TS4060: Return type of exported function has or is using private name 'Void'.
 encodings/utf7.ts(219,24): error TS2339: Property 'iconv' does not exist on type 'object'.
 encodings/utf7.ts(249,53): error TS2339: Property 'from' does not exist on type 'object'.
 encodings/utf7.ts(271,41): error TS2339: Property 'from' does not exist on type 'object'.
@@ -372,8 +310,6 @@ generation/research/get-iconv-encodings.ts(75,25): error TS2339: Property 'diges
 generation/research/get-iconv-encodings.ts(76,24): error TS2339: Property 'hash' does not exist on type 'object'.
 generation/research/get-iconv-encodings.ts(77,24): error TS2339: Property 'hash' does not exist on type 'object'.
 generation/research/get-iconv-encodings.ts(79,24): error TS2339: Property 'hash' does not exist on type 'object'.
-generation/research/get-iconv-encodings.ts(94,85): error TS2304: Cannot find name 'Void'.
-generation/research/get-iconv-encodings.ts(94,85): error TS4060: Return type of exported function has or is using private name 'Void'.
 generation/research/get-iconv-encodings.ts(100,29): error TS2339: Property 'convert' does not exist on type 'object'.
 generation/utils.ts(10,41): error TS2339: Property 'join' does not exist on type 'string'.
 generation/utils.ts(11,33): error TS2339: Property 'join' does not exist on type 'string'.
@@ -393,11 +329,7 @@ generation/utils.ts(31,27): error TS2769: No overload matches this call.
 generation/utils.ts(41,29): error TS2339: Property 'length' does not exist on type 'object'.
 generation/utils.ts(113,8): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 generation/utils.ts(113,27): error TS2339: Property 'join' does not exist on type 'string'.
-lib/bom-handling.ts(6,63): error TS2304: Cannot find name 'Void'.
-lib/bom-handling.ts(6,63): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/bom-handling.ts(13,9): error TS2322: Type 'string' is not assignable to type 'number'.
-lib/bom-handling.ts(28,61): error TS2304: Cannot find name 'Void'.
-lib/bom-handling.ts(28,61): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(6,33): error TS2339: Property 'exports' does not exist on type 'any[]'.
 lib/index.ts(10,7): error TS2339: Property 'encodings' does not exist on type 'HTMLElement'.
 lib/index.ts(13,7): error TS2339: Property 'defaultCharUnicode' does not exist on type 'HTMLElement'.
@@ -455,7 +387,6 @@ lib/index.ts(128,48): error TS2339: Property 'stripBOM' does not exist on type '
 lib/index.ts(129,35): error TS2339: Property 'StripBOM' does not exist on type 'any[]'.
 lib/index.ts(131,5): error TS2322: Type 'string' is not assignable to type 'object'.
 lib/index.ts(139,7): error TS2339: Property 'enableStreamingAPI' does not exist on type 'HTMLElement'.
-lib/index.ts(139,81): error TS2304: Cannot find name 'Void'.
 lib/index.ts(140,15): error TS2339: Property 'supportsStreams' does not exist on type 'HTMLElement'.
 lib/index.ts(147,11): error TS2339: Property 'IconvLiteEncoderStream' does not exist on type 'HTMLElement'.
 lib/index.ts(147,44): error TS2339: Property 'IconvLiteEncoderStream' does not exist on type 'object'.
@@ -475,10 +406,8 @@ lib/index.ts(173,32): error TS2339: Property 'decodeStream' does not exist on ty
 lib/streams.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'object', but here has type 'any[]'.
 lib/streams.ts(7,8): error TS2339: Property 'exports' does not exist on type 'any[]'.
 lib/streams.ts(8,45): error TS2339: Property 'Transform' does not exist on type 'object'.
-lib/streams.ts(12,69): error TS2304: Cannot find name 'Void'.
 lib/streams.ts(15,17): error TS2339: Property 'decodeStrings' does not exist on type 'object'.
 lib/streams.ts(52,29): error TS2339: Property 'concat' does not exist on type 'object'.
-lib/streams.ts(60,71): error TS2304: Cannot find name 'Void'.
 lib/streams.ts(63,17): error TS2339: Property 'encoding' does not exist on type 'object'.
 lib/streams.ts(72,21): error TS2339: Property 'isBuffer' does not exist on type 'object'.
 lib/streams.ts(72,42): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.

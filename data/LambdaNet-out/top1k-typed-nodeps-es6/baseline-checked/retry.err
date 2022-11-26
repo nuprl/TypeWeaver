@@ -1,5 +1,4 @@
 example/dns.ts(2,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
-example/dns.ts(4,63): error TS2304: Cannot find name 'Void'.
 example/dns.ts(14,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/dns.ts(15,26): error TS2345: Argument of type '(err: any[], addresses: number) => void' is not assignable to parameter of type '(err: ErrnoException, addresses: string[]) => void'.
   Types of parameters 'err' and 'err' are incompatible.
@@ -8,7 +7,6 @@ example/dns.ts(16,21): error TS2339: Property 'retry' does not exist on type 'HT
 example/dns.ts(20,20): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 example/dns.ts(20,43): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 example/stop.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
-example/stop.ts(3,67): error TS2304: Cannot find name 'Void'.
 example/stop.ts(13,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/stop.ts(14,27): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLInputElement'.
   Type 'Element' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 169 more.
@@ -18,7 +16,6 @@ example/stop.ts(25,20): error TS2339: Property 'mainError' does not exist on typ
 example/stop.ts(25,43): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 example/stop.ts(30,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
 example/stop.ts(39,3): error TS2322: Type 'Immediate' is not assignable to type 'number'.
-lib/retry.ts(5,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/retry.ts(6,36): error TS2339: Property 'forever' does not exist on type 'object'.
 lib/retry.ts(6,55): error TS2339: Property 'retries' does not exist on type 'object'.
 lib/retry.ts(7,33): error TS2339: Property 'unref' does not exist on type 'object'.
@@ -31,12 +28,9 @@ lib/retry.ts(50,30): error TS2339: Property 'randomize' does not exist on type '
 lib/retry.ts(54,59): error TS2339: Property 'minTimeout' does not exist on type 'object'.
 lib/retry.ts(54,90): error TS2339: Property 'factor' does not exist on type 'object'.
 lib/retry.ts(55,36): error TS2339: Property 'maxTimeout' does not exist on type 'object'.
-lib/retry.ts(79,62): error TS2304: Cannot find name 'Void'.
 lib/retry.ts(85,16): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
 lib/retry.ts(89,29): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 lib/retry.ts(94,10): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
-lib/retry_operation.ts(1,61): error TS2304: Cannot find name 'Void'.
-lib/retry_operation.ts(1,61): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/retry_operation.ts(10,43): error TS2339: Property 'maxRetryTime' does not exist on type 'object'.
 lib/retry_operation.ts(73,10): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(75,14): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.

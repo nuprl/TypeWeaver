@@ -18,7 +18,7 @@ function random(upperBound: Function, lowerBound: number = 0): string {
   return Math.floor(Math.random() * 200) + lowerBound;
 }
 
-function done(result: string): Void {
+function done(result: string): void {
   results.push(result);
   console.log(new Date().toISOString() + ' ' + result);
 }

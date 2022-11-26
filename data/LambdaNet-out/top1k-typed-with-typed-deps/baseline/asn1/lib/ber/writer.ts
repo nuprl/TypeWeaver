@@ -40,7 +40,7 @@ function merge(from: Function, to: object): object {
 
 // --- API
 
-function Writer(options: object): Void {
+function Writer(options: object): void {
   options = merge(DEFAULT_OPTS, options || {});
 
   this._buf = Buffer.alloc(options.size || 1024);
@@ -180,7 +180,7 @@ Writer.prototype.writeOID = function (s: string, tag: number) {
   if (!/^([0-9]+\.){3,}[0-9]+$/.test(s))
     throw new Error('argument is not a valid OID string');
 
-  function encodeOctet(bytes: any[], octet: number): Void {
+  function encodeOctet(bytes: any[], octet: number): void {
     if (octet < 128) {
         bytes.push(octet);
     } else if (octet < 16384) {

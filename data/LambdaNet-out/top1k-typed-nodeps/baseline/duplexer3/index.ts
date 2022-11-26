@@ -1,6 +1,6 @@
 import stream from 'node:stream';
 
-export function DuplexWrapper(options: object, writable: Request, readable: object): Void {
+export function DuplexWrapper(options: object, writable: Request, readable: object): void {
 	if (typeof readable === 'undefined') {
 		readable = writable;
 		writable = options;

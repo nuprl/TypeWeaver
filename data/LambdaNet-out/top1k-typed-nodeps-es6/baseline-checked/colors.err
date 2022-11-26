@@ -54,7 +54,6 @@ lib/colors.ts(93,3): error TS2322: Type 'HTMLElement' is not assignable to type 
 lib/colors.ts(96,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/colors.ts(98,14): error TS2339: Property 'grey' does not exist on type 'object'.
 lib/colors.ts(98,32): error TS2339: Property 'gray' does not exist on type 'object'.
-lib/colors.ts(111,52): error TS2304: Cannot find name 'Void'.
 lib/colors.ts(125,15): error TS2339: Property 'enabled' does not exist on type 'Function'.
 lib/colors.ts(136,16): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
 lib/colors.ts(136,40): error TS2339: Property 'closeRe' does not exist on type 'HTMLElement'.
@@ -81,8 +80,6 @@ lib/colors.ts(203,24): error TS2339: Property 'maps' does not exist on type 'Fun
 lib/colors.ts(205,12): error TS2538: Type 'object' cannot be used as an index type.
 lib/colors.ts(206,31): error TS2339: Property 'maps' does not exist on type 'Function'.
 lib/colors.ts(208,6): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/custom/american.ts(1,42): error TS2304: Cannot find name 'Void'.
-lib/custom/american.ts(1,42): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
@@ -108,7 +105,6 @@ lib/custom/zalgo.ts(90,18): error TS2339: Property 'mid' does not exist on type 
 lib/custom/zalgo.ts(91,18): error TS2339: Property 'down' does not exist on type 'object'.
 lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
-lib/extendStringPrototype.ts(53,39): error TS2304: Cannot find name 'Void'.
 lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist on type '"warn: "'.
 lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
 lib/index.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.

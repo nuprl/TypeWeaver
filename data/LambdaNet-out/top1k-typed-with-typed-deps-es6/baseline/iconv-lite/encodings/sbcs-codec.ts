@@ -6,7 +6,7 @@ import { Buffer } from 'safer-buffer';
 
 export const _sbcs: Function = SBCSCodec;
 
-function SBCSCodec(codecOptions: object, iconv: object): Void {
+function SBCSCodec(codecOptions: object, iconv: object): void {
     if (!codecOptions)
         throw new Error("SBCS codec is called without the data.")
     
@@ -36,7 +36,7 @@ SBCSCodec.prototype.encoder = SBCSEncoder;
 SBCSCodec.prototype.decoder = SBCSDecoder;
 
 
-function SBCSEncoder(options: object, codec: object): Void {
+function SBCSEncoder(options: object, codec: object): void {
     this.encodeBuf = codec.encodeBuf;
 }
 
@@ -52,7 +52,7 @@ SBCSEncoder.prototype.end = function() {
 }
 
 
-function SBCSDecoder(options: object, codec: object): Void {
+function SBCSDecoder(options: object, codec: object): void {
     this.decodeBuf = codec.decodeBuf;
 }
 

@@ -14,20 +14,20 @@ function objectOrFunction(x: string): boolean {
   return x !== null && (type === 'object' || type === 'function');
 }
 
-export function noop(): Void {}
+export function noop(): void {}
 
 export const PENDING: boolean   = void 0;
 export const FULFILLED: number = 1;
 export const REJECTED: number  = 2;
 
-function tryThen(then: Function, value: string, fulfillmentHandler: object, rejectionHandler: object): Void {
+function tryThen(then: Function, value: string, fulfillmentHandler: object, rejectionHandler: object): void {
   try {
     then.call(value, fulfillmentHandler, rejectionHandler);
   } catch(e) {
     return e;
   }
 }
-function handleForeignThenable(promise: Promise, thenable: number, then: string): Void {
+function handleForeignThenable(promise: Promise, thenable: number, then: string): void {
   config.async((promise: Promise) => {
     let sealed: boolean = false;
     let error: object = tryThen(then,
@@ -56,7 +56,7 @@ function handleForeignThenable(promise: Promise, thenable: number, then: string)
   }, promise);
 }
 
-function handleOwnThenable(promise: Promise, thenable: Promise): Void {
+function handleOwnThenable(promise: Promise, thenable: Promise): void {
   if (thenable._state === FULFILLED) {
     fulfill(promise, thenable._result);
   } else if (thenable._state === REJECTED) {
@@ -73,7 +73,7 @@ function handleOwnThenable(promise: Promise, thenable: Promise): Void {
   }
 }
 
-export function handleMaybeThenable(promise: Promise, maybeThenable: object, then: string): Void {
+export function handleMaybeThenable(promise: Promise, maybeThenable: object, then: string): void {
   let isOwnThenable: boolean =
     maybeThenable.constructor === promise.constructor &&
     then === originalThen &&
@@ -88,7 +88,7 @@ export function handleMaybeThenable(promise: Promise, maybeThenable: object, the
   }
 }
 
-export function resolve(promise: Promise, value: any[]): Void {
+export function resolve(promise: Promise, value: any[]): void {
   if (promise === value) {
     fulfill(promise, value);
   } else if (objectOrFunction(value)) {
@@ -105,7 +105,7 @@ export function resolve(promise: Promise, value: any[]): Void {
   }
 }
 
-export function publishRejection(promise: Promise): Void {
+export function publishRejection(promise: Promise): void {
   if (promise._onError) {
     promise._onError(promise._result);
   }
@@ -113,7 +113,7 @@ export function publishRejection(promise: Promise): Void {
   publish(promise);
 }
 
-export function fulfill(promise: Promise, value: string): Void {
+export function fulfill(promise: Promise, value: string): void {
   if (promise._state !== PENDING) { return; }
 
   promise._result = value;
@@ -128,14 +128,14 @@ export function fulfill(promise: Promise, value: string): Void {
   }
 }
 
-export function reject(promise: Promise, reason: Function): Void {
+export function reject(promise: Promise, reason: Function): void {
   if (promise._state !== PENDING) { return; }
   promise._state = REJECTED;
   promise._result = reason;
   config.async(publishRejection, promise);
 }
 
-export function subscribe(parent: Promise, child: object, onFulfillment: string, onRejection: string): Void {
+export function subscribe(parent: Promise, child: object, onFulfillment: string, onRejection: string): void {
   let subscribers: any[] = parent._subscribers;
   let length: number = subscribers.length;
 
@@ -150,7 +150,7 @@ export function subscribe(parent: Promise, child: object, onFulfillment: string,
   }
 }
 
-export function publish(promise: Promise): Void {
+export function publish(promise: Promise): void {
   let subscribers: any[] = promise._subscribers;
   let settled: string = promise._state;
 
@@ -176,7 +176,7 @@ export function publish(promise: Promise): Void {
   promise._subscribers.length = 0;
 }
 
-export function invokeCallback(state: string, promise: Promise, callback: Function, result: number): Void {
+export function invokeCallback(state: string, promise: Promise, callback: Function, result: number): void {
   let hasCallback: boolean = typeof callback === 'function';
   let value: string, succeeded: boolean = true, error: object;
 
@@ -206,7 +206,7 @@ export function invokeCallback(state: string, promise: Promise, callback: Functi
   }
 }
 
-export function initializePromise(promise: Promise, resolver: Function): Void {
+export function initializePromise(promise: Promise, resolver: Function): void {
   let resolved: boolean = false;
   try {
     resolver((value: string) => {

@@ -22,7 +22,7 @@ module.exports = {
 
 //------------------------------------------------------------------------------
 
-function InternalCodec(codecOptions: object, iconv: object): Void {
+function InternalCodec(codecOptions: object, iconv: object): void {
     this.enc = codecOptions.encodingName;
     this.bomAware = codecOptions.bomAware;
 
@@ -54,7 +54,7 @@ if (!StringDecoder.prototype.end) // Node v0.8 doesn't have this method.
     StringDecoder.prototype.end = function() {};
 
 
-function InternalDecoder(options: object, codec: object): Void {
+function InternalDecoder(options: object, codec: object): void {
     this.decoder = new StringDecoder(codec.enc);
 }
 
@@ -74,7 +74,7 @@ InternalDecoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Encoder is mostly trivial
 
-function InternalEncoder(options: object, codec: object): Void {
+function InternalEncoder(options: object, codec: object): void {
     this.enc = codec.enc;
 }
 
@@ -89,7 +89,7 @@ InternalEncoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Except base64 encoder, which must keep its state.
 
-function InternalEncoderBase64(options: object, codec: Function): Void {
+function InternalEncoderBase64(options: object, codec: Function): void {
     this.prevStr = '';
 }
 
@@ -110,7 +110,7 @@ InternalEncoderBase64.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 encoder is also special.
 
-function InternalEncoderCesu8(options: object, codec: Function): Void {
+function InternalEncoderCesu8(options: object, codec: Function): void {
 }
 
 InternalEncoderCesu8.prototype.write = function(str: string) {
@@ -140,7 +140,7 @@ InternalEncoderCesu8.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 decoder is not implemented in Node v4.0+
 
-function InternalDecoderCesu8(options: object, codec: object): Void {
+function InternalDecoderCesu8(options: object, codec: object): void {
     this.acc = 0;
     this.contBytes = 0;
     this.accBytes = 0;
@@ -202,7 +202,7 @@ InternalDecoderCesu8.prototype.end = function() {
 //------------------------------------------------------------------------------
 // check the chunk boundaries for surrogate pair
 
-function InternalEncoderUtf8(options: object, codec: Function): Void {
+function InternalEncoderUtf8(options: object, codec: Function): void {
     this.highSurrogate = '';
 }
 

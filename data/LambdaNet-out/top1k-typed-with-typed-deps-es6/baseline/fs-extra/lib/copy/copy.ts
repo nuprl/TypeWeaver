@@ -7,7 +7,7 @@ import { pathExists } from '../path-exists';
 import { utimesMillis } from '../util/utimes';
 import stat from '../util/stat';
 
-function copy (src: string, dest: string, opts: object, cb: Function): Void {
+function copy (src: string, dest: string, opts: object, cb: Function): void {
   if (typeof opts === 'function' && !cb) {
     cb = opts
     opts = {}
@@ -41,7 +41,7 @@ function copy (src: string, dest: string, opts: object, cb: Function): Void {
   })
 }
 
-function checkParentDir (destStat: string, src: string, dest: string, opts: string, cb: Function): Void {
+function checkParentDir (destStat: string, src: string, dest: string, opts: string, cb: Function): void {
   const destParent: string = path.dirname(dest)
   pathExists(destParent, (err: string, dirExists: boolean) => {
     if (err) return cb(err)
@@ -53,7 +53,7 @@ function checkParentDir (destStat: string, src: string, dest: string, opts: stri
   })
 }
 
-function handleFilter (onInclude: Function, destStat: number, src: string, dest: string, opts: any[], cb: Function): Void {
+function handleFilter (onInclude: Function, destStat: number, src: string, dest: string, opts: any[], cb: Function): void {
   Promise.resolve(opts.filter(src, dest)).then((include: boolean) => {
     if (include) return onInclude(destStat, src, dest, opts, cb)
     return cb()
@@ -65,7 +65,7 @@ function startCopy (destStat: string, src: string, dest: string, opts: object, c
   return getStats(destStat, src, dest, opts, cb)
 }
 
-function getStats (destStat: string, src: string, dest: string, opts: object, cb: Function): Void {
+function getStats (destStat: string, src: string, dest: string, opts: object, cb: Function): void {
   const stat: Function = opts.dereference ? fs.stat : fs.lstat
   stat(src, (err: string, srcStat: Function) => {
     if (err) return cb(err)
@@ -86,7 +86,7 @@ function onFile (srcStat: string, destStat: boolean, src: string, dest: string, 
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
 
-function mayCopyFile (srcStat: string, src: string, dest: string, opts: Error, cb: Function): Void {
+function mayCopyFile (srcStat: string, src: string, dest: string, opts: Error, cb: Function): void {
   if (opts.overwrite) {
     fs.unlink(dest, (err: string) => {
       if (err) return cb(err)
@@ -97,7 +97,7 @@ function mayCopyFile (srcStat: string, src: string, dest: string, opts: Error, c
   } else return cb()
 }
 
-function copyFile (srcStat: object, src: string, dest: string, opts: object, cb: Function): Void {
+function copyFile (srcStat: object, src: string, dest: string, opts: object, cb: Function): void {
   fs.copyFile(src, dest, (err: string) => {
     if (err) return cb(err)
     if (opts.preserveTimestamps) return handleTimestampsAndMode(srcStat.mode, src, dest, cb)
@@ -126,7 +126,7 @@ function makeFileWritable (dest: string, srcMode: number, cb: Function): string 
   return setDestMode(dest, srcMode | 0o200, cb)
 }
 
-function setDestTimestampsAndMode (srcMode: string, src: string, dest: string, cb: Function): Void {
+function setDestTimestampsAndMode (srcMode: string, src: string, dest: string, cb: Function): void {
   setDestTimestamps(src, dest, (err: string) => {
     if (err) return cb(err)
     return setDestMode(dest, srcMode, cb)
@@ -137,7 +137,7 @@ function setDestMode (dest: string, srcMode: string, cb: string): number {
   return fs.chmod(dest, srcMode, cb)
 }
 
-function setDestTimestamps (src: string, dest: number, cb: Function): Void {
+function setDestTimestamps (src: string, dest: number, cb: Function): void {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
@@ -152,7 +152,7 @@ function onDir (srcStat: object, destStat: boolean, src: string, dest: string, o
   return copyDir(src, dest, opts, cb)
 }
 
-function mkDirAndCopy (srcMode: string, src: string, dest: string, opts: string, cb: Function): Void {
+function mkDirAndCopy (srcMode: string, src: string, dest: string, opts: string, cb: Function): void {
   fs.mkdir(dest, (err: string) => {
     if (err) return cb(err)
     copyDir(src, dest, opts, (err: string) => {
@@ -162,20 +162,20 @@ function mkDirAndCopy (srcMode: string, src: string, dest: string, opts: string,
   })
 }
 
-function copyDir (src: string, dest: string, opts: string, cb: Function): Void {
+function copyDir (src: string, dest: string, opts: string, cb: Function): void {
   fs.readdir(src, (err: string, items: any[]) => {
     if (err) return cb(err)
     return copyDirItems(items, src, dest, opts, cb)
   })
 }
 
-function copyDirItems (items: any[], src: string, dest: number, opts: string, cb: Function): Void {
+function copyDirItems (items: any[], src: string, dest: number, opts: string, cb: Function): void {
   const item: string = items.pop()
   if (!item) return cb()
   return copyDirItem(items, item, src, dest, opts, cb)
 }
 
-function copyDirItem (items: string, item: string, src: string, dest: string, opts: string, cb: Function): Void {
+function copyDirItem (items: string, item: string, src: string, dest: string, opts: string, cb: Function): void {
   const srcItem: string = path.join(src, item)
   const destItem: string = path.join(dest, item)
   stat.checkPaths(srcItem, destItem, 'copy', opts, (err: string, stats: object) => {
@@ -188,7 +188,7 @@ function copyDirItem (items: string, item: string, src: string, dest: string, op
   })
 }
 
-function onLink (destStat: any[], src: string, dest: string, opts: HTMLElement, cb: Function): Void {
+function onLink (destStat: any[], src: string, dest: string, opts: HTMLElement, cb: Function): void {
   fs.readlink(src, (err: string, resolvedSrc: string) => {
     if (err) return cb(err)
     if (opts.dereference) {
@@ -225,7 +225,7 @@ function onLink (destStat: any[], src: string, dest: string, opts: HTMLElement, 
   })
 }
 
-function copyLink (resolvedSrc: string, dest: string, cb: Function): Void {
+function copyLink (resolvedSrc: string, dest: string, cb: Function): void {
   fs.unlink(dest, (err: boolean) => {
     if (err) return cb(err)
     return fs.symlink(resolvedSrc, dest, cb)

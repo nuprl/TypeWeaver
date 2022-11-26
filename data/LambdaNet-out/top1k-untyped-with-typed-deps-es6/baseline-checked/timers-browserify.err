@@ -107,12 +107,9 @@ example/enroll/server.ts(9,29): error TS2345: Argument of type 'string | 8080' i
   Type 'number' is not assignable to type 'string'.
 example/enroll/server.ts(10,8): error TS2339: Property 'listen' does not exist on type 'HTMLElement'.
 main.ts(1,5): error TS2322: Type 'typeof globalThis' is not assignable to type 'string'.
-main.ts(9,10): error TS2350: Only a void function can be called with the 'new' keyword.
 main.ts(9,64): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-main.ts(13,10): error TS2350: Only a void function can be called with the 'new' keyword.
 main.ts(13,65): error TS2345: Argument of type '{ (id?: number): void; (intervalId: string | number | Timeout): void; }' is not assignable to parameter of type 'string'.
 main.ts(18,13): error TS2339: Property 'close' does not exist on type 'Function'.
-main.ts(22,48): error TS2304: Cannot find name 'Void'.
 main.ts(33,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'object'.
 main.ts(34,8): error TS2339: Property '_idleTimeout' does not exist on type 'object'.
 main.ts(38,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'object'.
@@ -121,7 +118,6 @@ main.ts(42,14): error TS2322: Type '(item: HTMLElement) => void' is not assignab
 main.ts(43,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
 main.ts(45,28): error TS2339: Property '_idleTimeout' does not exist on type 'HTMLElement'.
 main.ts(47,10): error TS2339: Property '_idleTimeoutId' does not exist on type 'HTMLElement'.
-main.ts(47,60): error TS2304: Cannot find name 'Void'.
 main.ts(48,16): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 main.ts(49,14): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 main.ts(60,37): error TS2322: Type 'typeof setImmediate' is not assignable to type 'number'.

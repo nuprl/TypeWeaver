@@ -49,7 +49,7 @@ export default function patchFs(vol: object, fs: string = require('fs')): Functi
             patchMethod(method);
 
     // Give user back a method to revert the changes.
-    return function unpatch (): Void {
+    return function unpatch (): void {
         for (const key in bkp) fs[key] = bkp[key];
     };
 };

@@ -29,7 +29,7 @@ const overrided: any[] = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: Function, parent: string, name: string): Void {
+function Node(enc: Function, parent: string, name: string): void {
   const state: object = {};
   this._baseState = state;
 
@@ -80,7 +80,7 @@ Node.prototype.clone = function clone(): string {
   return res;
 };
 
-Node.prototype._wrap = function wrap(): Void {
+Node.prototype._wrap = function wrap(): void {
   const state: HTMLElement = this._baseState;
   methods.forEach(function(method: string) {
     this[method] = function _wrappedMethod(): Promise {
@@ -91,7 +91,7 @@ Node.prototype._wrap = function wrap(): Void {
   }, this);
 };
 
-Node.prototype._init = function init(body: Function): Void {
+Node.prototype._init = function init(body: Function): void {
   const state: HTMLElement = this._baseState;
 
   assert(state.parent === null);
@@ -104,7 +104,7 @@ Node.prototype._init = function init(body: Function): Void {
   assert.equal(state.children.length, 1, 'Root node can have only one child');
 };
 
-Node.prototype._useArgs = function useArgs(args: any[]): Void {
+Node.prototype._useArgs = function useArgs(args: any[]): void {
   const state: HTMLElement = this._baseState;
 
   // Filter children and args
@@ -148,7 +148,7 @@ Node.prototype._useArgs = function useArgs(args: any[]): Void {
 //
 
 overrided.forEach(function(method: string) {
-  Node.prototype[method] = function _overrided(): Void {
+  Node.prototype[method] = function _overrided(): void {
     const state: Function = this._baseState;
     throw new Error(method + ' not implemented for encoding: ' + state.enc);
   };
@@ -372,7 +372,7 @@ Node.prototype._decode = function decode(input: object, options: object): boolea
 
     // Decode children
     if (!state.any && state.choice === null && state.children !== null) {
-      state.children.forEach(function decodeChildren(child: object): Void {
+      state.children.forEach(function decodeChildren(child: object): void {
         // NOTE: We are ignoring errors here, to let parser continue with other
         // parts of encoded data
         child._decode(input, options);

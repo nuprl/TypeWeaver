@@ -21,7 +21,7 @@ export default function( Release: object ) {
 
 	const npmTags: Function = Release.npmTags;
 
-	function setSrcVersion( filepath: string ): Void {
+	function setSrcVersion( filepath: string ): void {
 		var contents: string = fs.readFileSync( filepath, "utf8" );
 		contents = contents.replace( /@VERSION/g, Release.newVersion );
 		fs.writeFileSync( filepath, contents, "utf8" );

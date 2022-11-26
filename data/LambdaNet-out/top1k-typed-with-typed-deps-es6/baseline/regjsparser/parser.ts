@@ -484,7 +484,7 @@
       return res;
     }
 
-    function skip(value: string): Void {
+    function skip(value: string): void {
       if (!match(value)) {
         bail('character', value);
       }
@@ -980,7 +980,7 @@
       return false;
     }
 
-    function bailOctalEscapeIfUnicode(from: string, pos: string): Void {
+    function bailOctalEscapeIfUnicode(from: string, pos: string): void {
       if (isUnicodeMode) {
         bail("Invalid decimal escape in unicode mode", null, from, pos);
       }
@@ -1555,7 +1555,7 @@
       return createClassString(res, from, pos);
     }
 
-    function bail(message: string, details: number, from: number, to: number): Void {
+    function bail(message: string, details: number, from: number, to: number): void {
       from = from == null ? pos : from;
       to = to == null ? from : to;
 

@@ -54,10 +54,7 @@ benchmark/code/switch.ts(100,30): error TS2314: Generic type 'Map<K, V>' require
 benchmark/code/switch.ts(111,10): error TS2393: Duplicate function implementation.
 benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
-benchmark/fixtures/generator.ts(1,37): error TS2304: Cannot find name 'Void'.
-benchmark/fixtures/object-plain.ts(1,17): error TS2304: Cannot find name 'Void'.
-benchmark/fixtures/object-plain.ts(1,17): error TS4060: Return type of exported function has or is using private name 'Void'.
-benchmark/fixtures/object-plain.ts(2,19): error TS2350: Only a void function can be called with the 'new' keyword.
+benchmark/fixtures/generator.ts(1,37): error TS2505: A generator cannot have a 'void' type annotation.
 benchmark/index.ts(7,7): error TS2339: Property 'run' does not exist on type 'any[]'.
 benchmark/index.ts(12,11): error TS2339: Property 'sync' does not exist on type 'any[]'.
 benchmark/index.ts(12,21): error TS2339: Property 'join' does not exist on type 'string'.

@@ -110,7 +110,7 @@
       throw new Error("No type defined. Input: " + input + ".");
     }
   }
-  function checkMultiple(input: string, types: string, options: object): Void{
+  function checkMultiple(input: string, types: string, options: object): void{
     if (toString$.call(types).slice(8, -1) !== 'Array') {
       throw new Error("Types must be in an array. Input: " + input + ".");
     }

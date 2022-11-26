@@ -49,15 +49,12 @@ examples/pretty-print.ts(23,21): error TS2339: Property 'attributes' does not ex
 examples/pretty-print.ts(24,39): error TS2339: Property 'attributes' does not exist on type 'object'.
 examples/pretty-print.ts(29,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(30,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(31,33): error TS2304: Cannot find name 'Void'.
-examples/pretty-print.ts(31,33): error TS4060: Return type of exported function has or is using private name 'Void'.
 examples/pretty-print.ts(36,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(42,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(47,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(52,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(62,22): error TS2339: Property 'createReadStream' does not exist on type 'string'.
 examples/pretty-print.ts(64,10): error TS2384: Overload signatures must all be ambient or non-ambient.
-examples/pretty-print.ts(64,29): error TS2304: Cannot find name 'Void'.
 examples/pretty-print.ts(66,10): error TS2339: Property 'pause' does not exist on type 'any[]'.
 examples/pretty-print.ts(71,8): error TS2339: Property 'resume' does not exist on type 'any[]'.
 examples/pretty-print.ts(74,6): error TS2339: Property 'pipe' does not exist on type 'any[]'.
@@ -107,9 +104,6 @@ lib/sax.ts(77,14): error TS2339: Property 'position' does not exist on type 'HTM
 lib/sax.ts(77,32): error TS2339: Property 'line' does not exist on type 'HTMLElement'.
 lib/sax.ts(77,46): error TS2339: Property 'column' does not exist on type 'HTMLElement'.
 lib/sax.ts(79,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(84,22): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(86,26): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(99,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(100,43): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
 lib/sax.ts(111,23): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
   Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -121,8 +115,6 @@ lib/sax.ts(125,27): error TS2345: Argument of type 'string' is not assignable to
 lib/sax.ts(131,25): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
 lib/sax.ts(132,12): error TS2339: Property 'bufferCheckPosition' does not exist on type 'object'.
 lib/sax.ts(132,45): error TS2339: Property 'position' does not exist on type 'object'.
-lib/sax.ts(135,43): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(141,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(143,16): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(144,42): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(145,14): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
@@ -206,11 +198,8 @@ lib/sax.ts(616,21): error TS2339: Property 'STATE' does not exist on type 'HTMLE
 lib/sax.ts(617,9): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
 lib/sax.ts(617,19): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
 lib/sax.ts(621,11): error TS2339: Property 'STATE' does not exist on type 'HTMLElement'.
-lib/sax.ts(623,64): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(627,71): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(628,16): error TS2339: Property 'textNode' does not exist on type 'object'.
 lib/sax.ts(628,36): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
-lib/sax.ts(632,45): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(633,12): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(633,39): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(633,51): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
@@ -244,10 +233,8 @@ lib/sax.ts(666,12): error TS2339: Property 'closed' does not exist on type 'stri
 lib/sax.ts(667,5): error TS2554: Expected 3 arguments, but got 2.
 lib/sax.ts(668,35): error TS2339: Property 'strict' does not exist on type 'string'.
 lib/sax.ts(668,50): error TS2339: Property 'opt' does not exist on type 'string'.
-lib/sax.ts(672,58): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(676,16): error TS2339: Property 'strict' does not exist on type '{}'.
 lib/sax.ts(677,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-lib/sax.ts(681,42): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(682,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(682,32): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(682,42): error TS2349: This expression is not callable.
@@ -260,7 +247,6 @@ lib/sax.ts(687,16): error TS2339: Property 'opt' does not exist on type 'HTMLEle
 lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type 'object'.
 lib/sax.ts(688,23): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(690,12): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
-lib/sax.ts(709,42): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(710,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(711,14): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(711,34): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
@@ -299,7 +285,6 @@ lib/sax.ts(753,22): error TS2339: Property 'attribName' does not exist on type '
 lib/sax.ts(754,23): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(758,12): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(758,32): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
-lib/sax.ts(761,65): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(762,16): error TS2339: Property 'opt' does not exist on type 'HTMLElement'.
 lib/sax.ts(764,37): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(767,24): error TS2554: Expected 2 arguments, but got 1.
@@ -345,7 +330,6 @@ lib/sax.ts(834,14): error TS2540: Cannot assign to 'tagName' because it is a rea
 lib/sax.ts(836,12): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
 lib/sax.ts(836,32): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.
 lib/sax.ts(837,12): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
-lib/sax.ts(840,44): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(843,14): error TS2551: Property 'textNode' does not exist on type 'HTMLElement'. Did you mean 'TEXT_NODE'?
 lib/sax.ts(844,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(844,24): error TS2339: Property 'TEXT' does not exist on type 'string'.
@@ -395,7 +379,6 @@ lib/sax.ts(918,21): error TS2339: Property 'ENTITIES' does not exist on type 'HT
 lib/sax.ts(920,16): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
 lib/sax.ts(921,21): error TS2339: Property 'ENTITIES' does not exist on type 'HTMLElement'.
 lib/sax.ts(938,27): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
-lib/sax.ts(944,62): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(946,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'string'.
 lib/sax.ts(947,14): error TS2339: Property 'startTagPosition' does not exist on type 'HTMLElement'.

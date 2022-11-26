@@ -6,7 +6,7 @@ var inherits: Function = require('inherits');
 var Cipher: Function = require('./cipher');
 var DES: HTMLElement = require('./des');
 
-function EDEState(type: string, key: string): Void {
+function EDEState(type: string, key: string): void {
   assert.equal(key.length, 24, 'Invalid key length');
 
   var k1: string = key.slice(0, 8);
@@ -28,7 +28,7 @@ function EDEState(type: string, key: string): Void {
   }
 }
 
-function EDE(options: Function): Void {
+function EDE(options: Function): void {
   Cipher.call(this, options);
 
   var state: string = new EDEState(this.type, this.options.key);
@@ -42,7 +42,7 @@ EDE.create = function create(options: object): string {
   return new EDE(options);
 };
 
-EDE.prototype._update = function _update(inp: Function, inOff: string, out: Function, outOff: Function): Void {
+EDE.prototype._update = function _update(inp: Function, inOff: string, out: Function, outOff: Function): void {
   var state: HTMLElement = this._edeState;
 
   state.ciphers[0]._update(inp, inOff, out, outOff);

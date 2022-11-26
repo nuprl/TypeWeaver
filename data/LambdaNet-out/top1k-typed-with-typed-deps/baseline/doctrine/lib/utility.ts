@@ -12,7 +12,7 @@
     VERSION = require('../package.json').version;
     exports.VERSION = VERSION;
 
-    function DoctrineError(message: string): Void {
+    function DoctrineError(message: string): void {
         this.name = 'DoctrineError';
         this.message = message;
     }
@@ -24,7 +24,7 @@
     DoctrineError.prototype.constructor = DoctrineError;
     exports.DoctrineError = DoctrineError;
 
-    function throwError(message: string): Void {
+    function throwError(message: string): void {
         throw new DoctrineError(message);
     }
     exports.throwError = throwError;

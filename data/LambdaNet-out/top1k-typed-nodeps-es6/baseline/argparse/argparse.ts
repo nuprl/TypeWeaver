@@ -108,7 +108,7 @@ function getattr(object: object, name: string, value: string): string {
     return hasattr(object, name) ? object[name] : value
 }
 
-function setattr(object: object, name: string, value: string): Void {
+function setattr(object: object, name: string, value: string): void {
     object[name] = value
 }
 
@@ -117,7 +117,7 @@ function setdefault(object: object, name: string, value: string): string {
     return object[name]
 }
 
-function delattr(object: object, name: string): Void {
+function delattr(object: object, name: string): void {
     delete object[name]
 }
 
@@ -175,7 +175,7 @@ function _array_equal(array1: any[], array2: any[]): boolean {
     return true
 }
 
-function _array_remove(array: any[], item: string): Void {
+function _array_remove(array: any[], item: string): void {
     let idx: number = array.indexOf(item)
     if (idx === -1) throw new TypeError(sub('%r not in list', item))
     array.splice(idx, 1)
@@ -212,7 +212,7 @@ function _callable(cls: object): string {
     return result[cls.name]
 }
 
-function _alias(object: object, from: string, to: string): Void {
+function _alias(object: object, from: string, to: string): void {
     try {
         let name: string = object.constructor.name
         Object.defineProperty(object, from, {
@@ -368,7 +368,7 @@ function _parse_opts(args: any[], descriptor: object): any[] {
 }
 
 let _deprecations: object = {}
-function deprecate(id: string, string: string): Void {
+function deprecate(id: string, string: string): void {
     _deprecations[id] = _deprecations[id] || util.deprecate(() => {}, string)
     _deprecations[id]()
 }

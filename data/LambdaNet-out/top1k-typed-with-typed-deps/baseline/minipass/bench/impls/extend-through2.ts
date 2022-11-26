@@ -8,7 +8,7 @@ module.exports = function (opts: object) {
   }
   return s
 
-  function func (data: object, enc: string, done: Function): Void {
+  function func (data: object, enc: string, done: Function): void {
     this.push(data, enc)
     done()
   }

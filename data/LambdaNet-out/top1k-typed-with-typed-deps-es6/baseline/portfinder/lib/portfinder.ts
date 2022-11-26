@@ -35,7 +35,7 @@ internals.testPort = function(options: object, callback: Function) {
 
   debugTestPort("entered testPort(): trying", options.host, "port", options.port);
 
-  function onListen (): Void {
+  function onListen (): void {
     debugTestPort("done w/ testPort(): OK", options.host, "port", options.port);
 
     options.server.removeListener('error', onError);
@@ -43,7 +43,7 @@ internals.testPort = function(options: object, callback: Function) {
     callback(null, options.port);
   }
 
-  function onError (err: HTMLElement): Void {
+  function onError (err: HTMLElement): void {
     debugTestPort("done w/ testPort(): failed", options.host, "w/ port", options.port, "with error", err.code);
 
     options.server.removeListener('listening', onListen);
@@ -288,7 +288,7 @@ export const getSocket: Function = function (options: object, callback: Function
   //
   // Tests the specified socket
   //
-  function testSocket (): Void {
+  function testSocket (): void {
     fs.stat(options.path, function (err: object) {
       //
       // If file we're checking doesn't exist (thus, stating it emits ENOENT),
@@ -317,7 +317,7 @@ export const getSocket: Function = function (options: object, callback: Function
   // Create the target `dir` then test connection
   // against the socket.
   //
-  function createAndTestSocket (dir: string): Void {
+  function createAndTestSocket (dir: string): void {
     mkdirp(dir, options.mod, function (err: string) {
       if (err) {
         return callback(err);
@@ -334,7 +334,7 @@ export const getSocket: Function = function (options: object, callback: Function
   // against the socket. Otherwise, create the directory
   // then test connection.
   //
-  function checkAndTestSocket (): Void {
+  function checkAndTestSocket (): void {
     var dir: string = path.dirname(options.path);
 
     fs.stat(dir, function (err: string, stats: any[]) {

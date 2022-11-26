@@ -770,14 +770,14 @@ class DirectoryWatcher extends EventEmitter {
 module.exports = DirectoryWatcher;
 module.exports.EXISTANCE_ONLY_TIME_ENTRY = EXISTANCE_ONLY_TIME_ENTRY;
 
-function fixupEntryAccuracy(entry: object): Void {
+function fixupEntryAccuracy(entry: object): void {
 	if (entry.accuracy > FS_ACCURACY) {
 		entry.safeTime = entry.safeTime - entry.accuracy + FS_ACCURACY;
 		entry.accuracy = FS_ACCURACY;
 	}
 }
 
-function ensureFsAccuracy(mtime: number): Void {
+function ensureFsAccuracy(mtime: number): void {
 	if (!mtime) return;
 	if (FS_ACCURACY > 1 && mtime % 1 !== 0) FS_ACCURACY = 1;
 	else if (FS_ACCURACY > 10 && mtime % 10 !== 0) FS_ACCURACY = 10;

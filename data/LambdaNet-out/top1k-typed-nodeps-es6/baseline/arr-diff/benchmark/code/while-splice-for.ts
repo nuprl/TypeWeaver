@@ -11,7 +11,7 @@ export default function diff(arr: string, arrays: any[]): string {
   return arr;
 };
 
-function remove(arr: string, ele: string): Void {
+function remove(arr: string, ele: string): void {
   var idx: number = arr.indexOf(ele);
   while (idx !== -1) {
     arr.splice(idx, 1);

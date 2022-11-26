@@ -116,7 +116,7 @@ function makeFunctionAPI(genFn: Function): object {
   return fns;
 }
 
-function assertTypeof(type: string, name: string, value: string, allowUndefined: boolean): Void {
+function assertTypeof(type: string, name: string, value: string, allowUndefined: boolean): void {
   if (
     typeof value === type ||
     (allowUndefined && typeof value === "undefined")
@@ -141,7 +141,7 @@ function makeError(msg: string, code: string): object {
  * Given an options object, return a new generator that dispatches the
  * correct handler based on sync or async execution.
  */
-function newGenerator({ name, arity, sync, async, errback }): Void {
+function newGenerator({ name, arity, sync, async, errback }): void {
   assertTypeof("string", "name", name, true /* allowUndefined */);
   assertTypeof("number", "arity", arity, true /* allowUndefined */);
   assertTypeof("function", "sync", sync);
@@ -202,7 +202,7 @@ function wrapGenerator(genFn: any[]): string {
   });
 }
 
-function buildOperation({ name, arity, sync, async }): Void {
+function buildOperation({ name, arity, sync, async }): void {
   return setFunctionMetadata(name, arity, function*(...args) {
     const resume = yield GENSYNC_START;
     if (!resume) {
@@ -254,8 +254,8 @@ function evaluateSync(gen: object): object {
   return value;
 }
 
-function evaluateAsync(gen: object, resolve: Function, reject: string): Void {
-  (function step(): Void {
+function evaluateAsync(gen: object, resolve: Function, reject: string): void {
+  (function step(): void {
     try {
       let value: string;
       while (!({ value } = gen.next()).done) {
@@ -291,7 +291,7 @@ function evaluateAsync(gen: object, resolve: Function, reject: string): Void {
   })();
 }
 
-function assertStart(value: string, gen: string): Void {
+function assertStart(value: string, gen: string): void {
   if (value === GENSYNC_START) return;
 
   throwError(
@@ -304,7 +304,7 @@ function assertStart(value: string, gen: string): Void {
     )
   );
 }
-function assertSuspend({ value, done }, gen): Void {
+function assertSuspend({ value, done }, gen): void {
   if (!done && value === GENSYNC_SUSPEND) return;
 
   throwError(
@@ -320,7 +320,7 @@ function assertSuspend({ value, done }, gen): Void {
   );
 }
 
-function throwError(gen: any[], err: Function): Void {
+function throwError(gen: any[], err: Function): void {
   // Call `.throw` so that users can step in a debugger to easily see which
   // 'yield' passed an unexpected value. If the `.throw` call didn't throw
   // back to the generator, we explicitly do it to stop the error

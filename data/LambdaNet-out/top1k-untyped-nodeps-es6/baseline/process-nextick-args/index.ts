@@ -20,15 +20,15 @@ function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): boole
   case 1:
     return process.nextTick(fn);
   case 2:
-    return process.nextTick(function afterTickOne(): Void {
+    return process.nextTick(function afterTickOne(): void {
       fn.call(null, arg1);
     });
   case 3:
-    return process.nextTick(function afterTickTwo(): Void {
+    return process.nextTick(function afterTickTwo(): void {
       fn.call(null, arg1, arg2);
     });
   case 4:
-    return process.nextTick(function afterTickThree(): Void {
+    return process.nextTick(function afterTickThree(): void {
       fn.call(null, arg1, arg2, arg3);
     });
   default:
@@ -37,7 +37,7 @@ function nextTick(fn: Function, arg1: string, arg2: string, arg3: string): boole
     while (i < args.length) {
       args[i++] = arguments[i];
     }
-    return process.nextTick(function afterTick(): Void {
+    return process.nextTick(function afterTick(): void {
       fn.apply(null, args);
     });
   }

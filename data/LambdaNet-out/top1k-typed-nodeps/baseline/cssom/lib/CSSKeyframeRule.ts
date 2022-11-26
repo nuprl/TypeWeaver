@@ -10,7 +10,7 @@ var CSSOM: Element = {
  * @constructor
  * @see http://www.w3.org/TR/css3-animations/#DOM-CSSKeyframeRule
  */
-CSSOM.CSSKeyframeRule = function CSSKeyframeRule(): Void {
+CSSOM.CSSKeyframeRule = function CSSKeyframeRule(): void {
 	CSSOM.CSSRule.call(this);
 	this.keyText = '';
 	this.style = new CSSOM.CSSStyleDeclaration();

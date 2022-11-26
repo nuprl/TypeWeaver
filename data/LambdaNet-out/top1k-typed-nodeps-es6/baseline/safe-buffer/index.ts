@@ -5,7 +5,7 @@ import buffer from 'buffer';
 var Buffer: Function = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: object, dst: object): Void {
+function copyProps (src: object, dst: object): void {
   for (var key in src) {
     dst[key] = src[key]
   }

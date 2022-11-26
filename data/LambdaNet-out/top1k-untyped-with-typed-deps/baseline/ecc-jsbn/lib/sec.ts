@@ -9,7 +9,7 @@ var { ECCurveFp } = require("./ec.js");
 // X9ECParameters
 
 // constructor
-function X9ECParameters(curve: object, g: any[], n: Function, h: string): Void {
+function X9ECParameters(curve: object, g: any[], n: Function, h: string): void {
   this.curve = curve;
   this.g = g;
   this.n = n;

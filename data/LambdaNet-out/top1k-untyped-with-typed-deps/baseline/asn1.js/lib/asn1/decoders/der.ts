@@ -9,7 +9,7 @@ const Node: Function = require('../base/node');
 // Import DER constants
 const der: any[] = require('../constants/der');
 
-function DERDecoder(entity: object): Void {
+function DERDecoder(entity: object): void {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -30,7 +30,7 @@ DERDecoder.prototype.decode = function decode(data: any[], options: Function): s
 
 // Tree methods
 
-function DERNode(parent: string): Void {
+function DERNode(parent: string): void {
   Node.call(this, 'der', parent);
 }
 inherits(DERNode, Node);

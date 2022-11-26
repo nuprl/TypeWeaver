@@ -15,7 +15,7 @@
  *  http://javascript.nwbox.com/nwsapi/nwsapi.js
  */
 
-(function Export(global: object, factory: Function): Void {
+(function Export(global: object, factory: Function): void {
 
   'use strict';
 

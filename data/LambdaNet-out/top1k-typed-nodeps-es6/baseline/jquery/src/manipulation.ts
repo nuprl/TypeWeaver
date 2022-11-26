@@ -53,7 +53,7 @@ function restoreScript( elem: object ): string {
 	return elem;
 }
 
-function cloneCopyEvent( src: string, dest: object ): Void {
+function cloneCopyEvent( src: string, dest: object ): void {
 	var i: number, l: Function, type: string, pdataOld: object, udataOld: Function, udataCur: string, events: number;
 
 	if ( dest.nodeType !== 1 ) {

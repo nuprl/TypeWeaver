@@ -1,44 +1,53 @@
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
-index.ts(12,60): error TS2304: Cannot find name 'Void'.
-index.ts(12,60): error TS4060: Return type of exported function has or is using private name 'Void'.
-index.ts(44,81): error TS2304: Cannot find name 'Void'.
-index.ts(44,81): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(26,9): error TS2322: Type 'any[]' is not assignable to type 'void'.
+index.ts(28,9): error TS2322: Type 'any[]' is not assignable to type 'void'.
+index.ts(30,9): error TS2322: Type 'any[]' is not assignable to type 'void'.
+index.ts(33,7): error TS2322: Type 'string' is not assignable to type 'void'.
+index.ts(49,11): error TS2488: Type 'void' must have a '[Symbol.iterator]()' method that returns an iterator.
 index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(80,120): error TS2304: Cannot find name 'Void'.
-index.ts(80,120): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(74,3): error TS2322: Type '{ string: string; error: boolean; }' is not assignable to type 'void'.
+index.ts(82,5): error TS2322: Type 'boolean' is not assignable to type 'void'.
+index.ts(90,7): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(95,41): error TS2339: Property 'combiningMarks' does not exist on type 'any[]'.
+index.ts(96,5): error TS2322: Type 'boolean' is not assignable to type 'void'.
+index.ts(100,11): error TS2488: Type 'void' must have a '[Symbol.iterator]()' method that returns an iterator.
 index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+index.ts(104,7): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(114,23): error TS2339: Property 'combiningClassVirama' does not exist on type 'any[]'.
 index.ts(121,25): error TS2339: Property 'validZWNJ' does not exist on type 'any[]'.
+index.ts(127,9): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(137,17): error TS2339: Property 'bidiS1LTR' does not exist on type 'any[]'.
 index.ts(139,24): error TS2339: Property 'bidiS1RTL' does not exist on type 'any[]'.
+index.ts(142,7): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(147,20): error TS2339: Property 'bidiS2' does not exist on type 'any[]'.
 index.ts(148,20): error TS2339: Property 'bidiS3' does not exist on type 'any[]'.
 index.ts(149,20): error TS2339: Property 'bidiS4EN' does not exist on type 'any[]'.
 index.ts(149,52): error TS2339: Property 'bidiS4AN' does not exist on type 'any[]'.
+index.ts(150,9): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(152,25): error TS2339: Property 'bidiS5' does not exist on type 'any[]'.
 index.ts(153,25): error TS2339: Property 'bidiS6' does not exist on type 'any[]'.
+index.ts(154,7): error TS2322: Type 'boolean' is not assignable to type 'void'.
+index.ts(158,3): error TS2322: Type 'boolean' is not assignable to type 'void'.
 index.ts(165,25): error TS2339: Property 'decode' does not exist on type 'string'.
 index.ts(172,18): error TS2339: Property 'bidiDomain' does not exist on type 'any[]'.
 index.ts(176,11): error TS2339: Property 'processingOption' does not exist on type '{}'.
+index.ts(179,9): error TS2339: Property 'string' does not exist on type 'void'.
+index.ts(179,17): error TS2339: Property 'error' does not exist on type 'void'.
 index.ts(179,48): error TS2345: Argument of type 'object' is not assignable to parameter of type '{ useSTD3ASCIIRules: any; processingOption: any; }'.
   Type '{}' is missing the following properties from type '{ useSTD3ASCIIRules: any; processingOption: any; }': useSTD3ASCIIRules, processingOption
 index.ts(194,26): error TS2339: Property 'decode' does not exist on type 'string'.
-index.ts(207,23): error TS2304: Cannot find name 'Void'.
 index.ts(207,51): error TS2345: Argument of type '{ processingOption: string; checkBidi: boolean; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
   Type '{ processingOption: string; checkBidi: boolean; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
 index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'object'.
-index.ts(230,10): error TS2304: Cannot find name 'Void'.
-index.ts(230,10): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(212,10): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 index.ts(242,23): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(246,32): error TS2339: Property 'encode' does not exist on type 'string'.
 index.ts(248,16): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(257,14): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(262,16): error TS2339: Property 'error' does not exist on type 'object'.
 index.ts(268,14): error TS2339: Property 'error' does not exist on type 'object'.
-index.ts(280,10): error TS2304: Cannot find name 'Void'.
-index.ts(280,10): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(289,3): error TS2322: Type '{ domain: any; error: any; }' is not assignable to type 'void'.
 index.ts(290,20): error TS2339: Property 'string' does not exist on type 'object'.
 index.ts(291,19): error TS2339: Property 'error' does not exist on type 'object'.
 scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.

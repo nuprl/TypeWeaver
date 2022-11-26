@@ -96,7 +96,7 @@ function send (req: Function, path: string, options: object): string {
  * @private
  */
 
-function SendStream (req: object, path: string, options: object): Void {
+function SendStream (req: object, path: string, options: object): void {
   Stream.call(this)
 
   var opts: HTMLElement = options || {}
@@ -355,7 +355,7 @@ SendStream.prototype.isPreconditionFailure = function isPreconditionFailure (): 
  * @private
  */
 
-SendStream.prototype.removeContentHeaderFields = function removeContentHeaderFields (): Void {
+SendStream.prototype.removeContentHeaderFields = function removeContentHeaderFields (): void {
   var res: HTMLElement = this.res
 
   res.removeHeader('Content-Encoding')
@@ -371,7 +371,7 @@ SendStream.prototype.removeContentHeaderFields = function removeContentHeaderFie
  * @api private
  */
 
-SendStream.prototype.notModified = function notModified (): Void {
+SendStream.prototype.notModified = function notModified (): void {
   var res: HTMLElement = this.res
   debug('not modified')
   this.removeContentHeaderFields()
@@ -385,7 +385,7 @@ SendStream.prototype.notModified = function notModified (): Void {
  * @api private
  */
 
-SendStream.prototype.headersAlreadySent = function headersAlreadySent (): Void {
+SendStream.prototype.headersAlreadySent = function headersAlreadySent (): void {
   var err: Error = new Error('Can\'t set headers after they are sent.')
   debug('headers already sent')
   this.error(500, err)
@@ -412,7 +412,7 @@ SendStream.prototype.isCachable = function isCachable (): boolean {
  * @private
  */
 
-SendStream.prototype.onStatError = function onStatError (error: object): Void {
+SendStream.prototype.onStatError = function onStatError (error: object): void {
   switch (error.code) {
     case 'ENAMETOOLONG':
     case 'ENOENT':
@@ -471,7 +471,7 @@ SendStream.prototype.isRangeFresh = function isRangeFresh (): boolean {
  * @private
  */
 
-SendStream.prototype.redirect = function redirect (path: string): Void {
+SendStream.prototype.redirect = function redirect (path: string): void {
   var res: HTMLElement = this.res
 
   if (hasListeners(this, 'directory')) {
@@ -602,7 +602,7 @@ SendStream.prototype.pipe = function pipe (res: Element): object {
  * @api public
  */
 
-SendStream.prototype.send = function send (path: string, stat: object): Void {
+SendStream.prototype.send = function send (path: string, stat: object): void {
   var len: number = stat.size
   var options: object = this.options
   var opts: object = {}
@@ -712,7 +712,7 @@ SendStream.prototype.send = function send (path: string, stat: object): Void {
  * @param {String} path
  * @api private
  */
-SendStream.prototype.sendFile = function sendFile (path: string): Void {
+SendStream.prototype.sendFile = function sendFile (path: string): void {
   var i: number = 0
   var self: HTMLElement = this
 
@@ -753,7 +753,7 @@ SendStream.prototype.sendFile = function sendFile (path: string): Void {
  * @param {String} path
  * @api private
  */
-SendStream.prototype.sendIndex = function sendIndex (path: string): Void {
+SendStream.prototype.sendIndex = function sendIndex (path: string): void {
   var i: number = -1
   var self: HTMLElement = this
 
@@ -785,7 +785,7 @@ SendStream.prototype.sendIndex = function sendIndex (path: string): Void {
  * @api private
  */
 
-SendStream.prototype.stream = function stream (path: string, options: Function): Void {
+SendStream.prototype.stream = function stream (path: string, options: Function): void {
   var self: HTMLElement = this
   var res: Function = this.res
 
@@ -795,7 +795,7 @@ SendStream.prototype.stream = function stream (path: string, options: Function):
   stream.pipe(res)
 
   // cleanup
-  function cleanup (): Void {
+  function cleanup (): void {
     destroy(stream, true)
   }
 
@@ -803,7 +803,7 @@ SendStream.prototype.stream = function stream (path: string, options: Function):
   onFinished(res, cleanup)
 
   // error handling
-  stream.on('error', function onerror (err: Function): Void {
+  stream.on('error', function onerror (err: Function): void {
     // clean up stream early
     cleanup()
 
@@ -812,7 +812,7 @@ SendStream.prototype.stream = function stream (path: string, options: Function):
   })
 
   // end
-  stream.on('end', function onend (): Void {
+  stream.on('end', function onend (): void {
     self.emit('end')
   })
 }
@@ -825,7 +825,7 @@ SendStream.prototype.stream = function stream (path: string, options: Function):
  * @api private
  */
 
-SendStream.prototype.type = function type (path: string): Void {
+SendStream.prototype.type = function type (path: string): void {
   var res: HTMLElement = this.res
 
   if (res.getHeader('Content-Type')) return
@@ -852,7 +852,7 @@ SendStream.prototype.type = function type (path: string): Void {
  * @api private
  */
 
-SendStream.prototype.setHeader = function setHeader (path: string, stat: object): Void {
+SendStream.prototype.setHeader = function setHeader (path: string, stat: object): void {
   var res: HTMLElement = this.res
 
   this.emit('headers', res, path, stat)
@@ -893,7 +893,7 @@ SendStream.prototype.setHeader = function setHeader (path: string, stat: object)
  * @private
  */
 
-function clearHeaders (res: object): Void {
+function clearHeaders (res: object): void {
   var headers: any[] = getHeaderNames(res)
 
   for (var i = 0; i < headers.length; i++) {
@@ -1136,7 +1136,7 @@ function parseTokenList (str: string): any[] {
  * @private
  */
 
-function setHeaders (res: object, headers: object): Void {
+function setHeaders (res: object, headers: object): void {
   var keys: any[] = Object.keys(headers)
 
   for (var i = 0; i < keys.length; i++) {

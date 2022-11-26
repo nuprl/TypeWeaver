@@ -3,7 +3,7 @@ import camelCase from "../core/camelCase.js";
 import rnothtmlwhite from "../var/rnothtmlwhite.js";
 import acceptData from "./var/acceptData.js";
 
-function Data(): Void {
+function Data(): void {
 	this.expando = jQuery.expando + Data.uid++;
 }
 

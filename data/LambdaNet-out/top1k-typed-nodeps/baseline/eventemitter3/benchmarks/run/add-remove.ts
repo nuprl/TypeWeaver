@@ -11,7 +11,7 @@ var EventEmitter2: object = require('eventemitter2').EventEmitter2
   , FE: any[] = require('fastemitter')
   , Master: any[] = require('../../');
 
-function handle(): Void {
+function handle(): void {
   if (arguments.length > 100) console.log('damn');
 }
 
@@ -50,8 +50,8 @@ var ee1: HTMLElement = new EventEmitter1()
 }).add('contra/emitter', function() {
   ce.on('foo', handle);
   ce.off('foo', handle);
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

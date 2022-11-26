@@ -1,5 +1,5 @@
 declare const _default: ((optsOrFn: string) => object) & {
-    all: Void;
-    race: Void;
+    all: void;
+    race: void;
 };
 export default _default;

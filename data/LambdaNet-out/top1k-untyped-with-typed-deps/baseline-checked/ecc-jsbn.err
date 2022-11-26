@@ -30,27 +30,17 @@ index.ts(55,9): error TS2769: No overload matches this call.
     Argument of type 'number' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
 index.ts(56,13): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
-lib/ec.ts(26,50): error TS2304: Cannot find name 'Void'.
-lib/ec.ts(26,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(34,30): error TS2339: Property 'q' does not exist on type 'string'.
 lib/ec.ts(34,56): error TS2339: Property 'x' does not exist on type 'string'.
-lib/ec.ts(42,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(45,30): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/ec.ts(46,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'object'.
-lib/ec.ts(50,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(52,23): error TS2339: Property 'toBigInteger' does not exist on type 'object'.
 lib/ec.ts(56,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/ec.ts(57,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(59,23): error TS2339: Property 'toBigInteger' does not exist on type 'object'.
-lib/ec.ts(64,10): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/ec.ts(68,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(70,23): error TS2339: Property 'toBigInteger' does not exist on type 'object'.
 lib/ec.ts(83,23): error TS2339: Property 'shiftLeft' does not exist on type 'string'.
 lib/ec.ts(84,11): error TS2339: Property 'compareTo' does not exist on type 'string'.
 lib/ec.ts(85,15): error TS2339: Property 'subtract' does not exist on type 'string'.
-lib/ec.ts(94,69): error TS2304: Cannot find name 'Void'.
-lib/ec.ts(94,69): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(109,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(118,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(129,39): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
@@ -61,7 +51,6 @@ lib/ec.ts(138,10): error TS2339: Property 'equals' does not exist on type 'objec
 lib/ec.ts(140,13): error TS2339: Property 'x' does not exist on type 'HTMLElement'.
 lib/ec.ts(143,52): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
 lib/ec.ts(145,12): error TS2339: Property 'equals' does not exist on type 'object'.
-lib/ec.ts(157,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(160,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(162,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
 lib/ec.ts(165,21): error TS2339: Property 'y' does not exist on type 'HTMLElement'.
@@ -84,7 +73,6 @@ lib/ec.ts(208,17): error TS2339: Property 'z' does not exist on type 'HTMLElemen
 lib/ec.ts(209,12): error TS2339: Property 'multiply' does not exist on type 'object'.
 lib/ec.ts(213,6): error TS2339: Property 'multiply' does not exist on type 'object'.
 lib/ec.ts(214,17): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
-lib/ec.ts(217,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(225,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(234,27): error TS2339: Property 'multiply' does not exist on type 'any[]'.
 lib/ec.ts(235,28): error TS2339: Property 'multiply' does not exist on type 'Function'.
@@ -97,7 +85,6 @@ lib/ec.ts(254,6): error TS2339: Property 'multiply' does not exist on type 'HTML
 lib/ec.ts(256,22): error TS2339: Property 'shiftLeft' does not exist on type 'any[]'.
 lib/ec.ts(259,17): error TS2339: Property 'square' does not exist on type 'HTMLElement'.
 lib/ec.ts(263,6): error TS2339: Property 'square' does not exist on type 'Function'.
-lib/ec.ts(268,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(278,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(280,9): error TS2339: Property 'signum' does not exist on type 'object'.
 lib/ec.ts(282,7): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -120,19 +107,13 @@ lib/ec.ts(317,15): error TS2339: Property 'add' does not exist on type 'HTMLElem
 lib/ec.ts(320,13): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
 lib/ec.ts(321,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/ec.ts(344,10): error TS2300: Duplicate identifier 'ECCurveFp'.
-lib/ec.ts(344,56): error TS2304: Cannot find name 'Void'.
-lib/ec.ts(344,56): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/ec.ts(348,19): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(348,19): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(352,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/ec.ts(367,25): error TS2339: Property 'q' does not exist on type 'object'.
 lib/ec.ts(367,51): error TS2339: Property 'a' does not exist on type 'object'.
 lib/ec.ts(367,77): error TS2339: Property 'b' does not exist on type 'object'.
 lib/ec.ts(375,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/ec.ts(376,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(376,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/ec.ts(379,34): error TS2304: Cannot find name 'Void'.
-lib/ec.ts(379,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/ec.ts(384,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
 lib/ec.ts(386,6): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
 lib/ec.ts(390,6): error TS2339: Property 'getY' does not exist on type 'HTMLElement'.
@@ -141,9 +122,7 @@ lib/ec.ts(428,45): error TS2339: Property 'square' does not exist on type 'strin
 lib/ec.ts(429,31): error TS2339: Property 'sqrt' does not exist on type 'HTMLElement'.
 lib/ec.ts(433,35): error TS2339: Property 'toBigInteger' does not exist on type 'any[]'.
 lib/ec.ts(434,21): error TS2339: Property 'testBit' does not exist on type 'any[]'.
-lib/ec.ts(438,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(438,14): error TS2554: Expected 4 arguments, but got 3.
-lib/ec.ts(446,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(446,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(458,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
 lib/ec.ts(460,6): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
@@ -159,7 +138,6 @@ lib/ec.ts(504,13): error TS2339: Property 'add' does not exist on type 'HTMLElem
 lib/ec.ts(506,14): error TS2339: Property 'compareTo' does not exist on type 'string'.
 lib/ec.ts(507,13): error TS2339: Property 'subtract' does not exist on type 'string'.
 lib/ec.ts(510,11): error TS2339: Property 'mod' does not exist on type 'string'.
-lib/ec.ts(519,21): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(523,14): error TS2339: Property 'square' does not exist on type 'string'.
 lib/ec.ts(529,44): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
 lib/ec.ts(534,28): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
@@ -170,7 +148,6 @@ lib/ec.ts(553,17): error TS2314: Generic type 'Promise<T>' requires 1 type argum
 lib/ec.ts(559,13): error TS2339: Property 'testBit' does not exist on type 'string'.
 lib/ec.ts(560,15): error TS2339: Property 'add' does not exist on type 'string'.
 lib/ec.ts(563,13): error TS2339: Property 'shiftRight' does not exist on type 'string'.
-lib/ec.ts(565,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ec.ts(565,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ec.ts(567,14): error TS2339: Property 'equals' does not exist on type 'string'.
 lib/ec.ts(567,42): error TS2339: Property 'equals' does not exist on type 'string'.
@@ -193,43 +170,27 @@ lib/ec.ts(605,28): error TS2339: Property 'multiply' does not exist on type 'obj
 lib/ec.ts(605,53): error TS2339: Property 'shiftLeft' does not exist on type 'any[]'.
 lib/sec.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/sec.ts(6,7): error TS2300: Duplicate identifier 'ECCurveFp'.
-lib/sec.ts(12,75): error TS2304: Cannot find name 'Void'.
-lib/sec.ts(12,75): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/sec.ts(23,20): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/sec.ts(53,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(53,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(54,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(59,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(59,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(70,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(70,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(71,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(76,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(76,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(87,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(87,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(88,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(93,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(93,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(104,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(104,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(105,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(110,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(110,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(121,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(121,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(122,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(127,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(127,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(138,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(138,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(139,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(144,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(144,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-lib/sec.ts(163,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(163,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 lib/sec.ts(164,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
-lib/sec.ts(169,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sec.ts(169,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18107,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.

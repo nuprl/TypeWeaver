@@ -1,6 +1,6 @@
 import retry from '../lib/retry';
 
-function attemptAsyncOperation(someInput: Element, cb: Function): Void {
+function attemptAsyncOperation(someInput: Element, cb: Function): void {
   var opts: object = {
     retries: 2,
     factor: 2,

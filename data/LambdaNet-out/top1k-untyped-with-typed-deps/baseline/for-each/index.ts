@@ -5,7 +5,7 @@ var isCallable: Function = require('is-callable');
 var toStr: Function = Object.prototype.toString;
 var hasOwnProperty: Function = Object.prototype.hasOwnProperty;
 
-var forEachArray: Function = function forEachArray(array: any[], iterator: Function, receiver: string): Void {
+var forEachArray: Function = function forEachArray(array: any[], iterator: Function, receiver: string): void {
     for (var i = 0, len = array.length; i < len; i++) {
         if (hasOwnProperty.call(array, i)) {
             if (receiver == null) {
@@ -17,7 +17,7 @@ var forEachArray: Function = function forEachArray(array: any[], iterator: Funct
     }
 };
 
-var forEachString: Function = function forEachString(string: string, iterator: Function, receiver: string): Void {
+var forEachString: Function = function forEachString(string: string, iterator: Function, receiver: string): void {
     for (var i = 0, len = string.length; i < len; i++) {
         // no such thing as a sparse string.
         if (receiver == null) {
@@ -28,7 +28,7 @@ var forEachString: Function = function forEachString(string: string, iterator: F
     }
 };
 
-var forEachObject: Function = function forEachObject(object: object, iterator: Function, receiver: string): Void {
+var forEachObject: Function = function forEachObject(object: object, iterator: Function, receiver: string): void {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
             if (receiver == null) {
@@ -40,7 +40,7 @@ var forEachObject: Function = function forEachObject(object: object, iterator: F
     }
 };
 
-var forEach: boolean = function forEach(list: object, iterator: Function, thisArg: Function): Void {
+var forEach: boolean = function forEach(list: object, iterator: Function, thisArg: Function): void {
     if (!isCallable(iterator)) {
         throw new TypeError('iterator must be a function');
     }

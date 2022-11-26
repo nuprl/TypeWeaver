@@ -312,7 +312,7 @@ function * getTemplateBody (res: string): string {
   }, []).join('\n')
 }
 
-function addSource (data: object, url: string): Void {
+function addSource (data: object, url: string): void {
   var sources: any[] = data.sources || (data.sources = [])
 
   if (sources.indexOf(url) === -1) {

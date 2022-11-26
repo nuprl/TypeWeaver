@@ -146,7 +146,7 @@ function isObject(val: number): boolean {
   return val && typeof val === 'object' && !Array.isArray(val);
 }
 
-function define(obj: string, key: string, val: string): Void {
+function define(obj: string, key: string, val: string): void {
   Object.defineProperty(obj, key, {
     configurable: true,
     writable: true,

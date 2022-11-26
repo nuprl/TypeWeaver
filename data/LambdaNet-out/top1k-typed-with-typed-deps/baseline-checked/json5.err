@@ -43,11 +43,7 @@ lib/cli.ts(59,61): error TS2339: Property 'outFile' does not exist on type 'obje
 lib/cli.ts(61,21): error TS2322: Type 'WriteStream & { fd: 1; }' is not assignable to type 'number'.
 lib/cli.ts(64,29): error TS2339: Property 'write' does not exist on type 'number'.
 lib/cli.ts(108,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
-lib/cli.ts(133,22): error TS2304: Cannot find name 'Void'.
-lib/cli.ts(133,22): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/cli.ts(134,21): error TS2339: Property 'version' does not exist on type 'string'.
-lib/cli.ts(137,20): error TS2304: Cannot find name 'Void'.
-lib/cli.ts(137,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
 lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/parse.ts(14,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
@@ -215,8 +211,6 @@ lib/parse.ts(667,14): error TS2678: Type 'string' is not comparable to type 'Fun
 lib/parse.ts(668,14): error TS2678: Type 'string' is not comparable to type 'Function'.
 lib/parse.ts(672,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/parse.ts(682,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/parse.ts(695,30): error TS2304: Cannot find name 'Void'.
-lib/parse.ts(695,30): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/parse.ts(697,15): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/parse.ts(700,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/parse.ts(707,10): error TS2384: Overload signatures must all be ambient or non-ambient.
@@ -251,23 +245,17 @@ lib/parse.ts(892,19): error TS2339: Property 'type' does not exist on type 'obje
 lib/parse.ts(896,23): error TS2339: Property 'value' does not exist on type 'object'.
 lib/parse.ts(915,19): error TS2339: Property 'type' does not exist on type 'object'.
 lib/parse.ts(919,23): error TS2339: Property 'value' does not exist on type 'object'.
-lib/parse.ts(940,19): error TS2304: Cannot find name 'Void'.
-lib/parse.ts(940,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/parse.ts(943,19): error TS2339: Property 'type' does not exist on type 'object'.
 lib/parse.ts(945,23): error TS2339: Property 'value' does not exist on type 'object'.
 lib/parse.ts(947,13): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/parse.ts(961,23): error TS2339: Property 'value' does not exist on type 'object'.
 lib/parse.ts(970,9): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/parse.ts(976,13): error TS2322: Type 'any[]' is not assignable to type 'never'.
-lib/parse.ts(1000,18): error TS2304: Cannot find name 'Void'.
-lib/parse.ts(1000,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/parse.ts(1025,9): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
 lib/parse.ts(1028,5): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
 lib/parse.ts(1028,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/parse.ts(1031,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/parse.ts(1047,5): error TS2322: Type 'HTMLElement' is not assignable to type 'string'.
-lib/parse.ts(1050,37): error TS2304: Cannot find name 'Void'.
-lib/parse.ts(1050,37): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/parse.ts(1083,11): error TS2740: Type 'SyntaxError' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type 'HTMLElement'.
 lib/parse.ts(1085,9): error TS2339: Property 'columnNumber' does not exist on type 'HTMLElement'.

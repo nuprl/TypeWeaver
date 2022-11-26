@@ -372,7 +372,7 @@ function processRule(rule: object, shorts: object, shortDeclarations: any[], las
     return lastShortSelector;
 }
 
-function processShorthands(shortDeclarations: any[], markDeclaration: Function): Void {
+function processShorthands(shortDeclarations: any[], markDeclaration: Function): void {
     shortDeclarations.forEach(function(item: object) {
         const shorthand: TRBL = item.shorthand;
 
@@ -388,7 +388,7 @@ function processShorthands(shortDeclarations: any[], markDeclaration: Function):
     });
 }
 
-export default function restructBlock(ast: Function, indexer: object): Void {
+export default function restructBlock(ast: Function, indexer: object): void {
     const stylesheetMap: Function = {};
     const shortDeclarations: any[] = [];
 

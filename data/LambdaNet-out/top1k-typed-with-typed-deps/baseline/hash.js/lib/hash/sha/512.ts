@@ -86,7 +86,7 @@ SHA512.outSize = 512;
 SHA512.hmacStrength = 192;
 SHA512.padLength = 128;
 
-SHA512.prototype._prepareBlock = function _prepareBlock(msg: object, start: number): Void {
+SHA512.prototype._prepareBlock = function _prepareBlock(msg: object, start: number): void {
   var W: object = this.W;
 
   // 32 x 32bit words
@@ -115,7 +115,7 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: object, start: numb
   }
 };
 
-SHA512.prototype._update = function _update(msg: string, start: string): Void {
+SHA512.prototype._update = function _update(msg: string, start: string): void {
   this._prepareBlock(msg, start);
 
   var W: any[] = this.W;

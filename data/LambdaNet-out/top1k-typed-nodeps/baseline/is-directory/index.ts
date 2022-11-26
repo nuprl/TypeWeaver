@@ -13,7 +13,7 @@ var fs: string = require('fs');
  * async
  */
 
-function isDirectory(filepath: string, cb: Function): Void {
+function isDirectory(filepath: string, cb: Function): void {
   if (typeof cb !== 'function') {
     throw new Error('expected a callback function');
   }

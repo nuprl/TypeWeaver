@@ -24,7 +24,7 @@ class SecureRandom {
 // ECFieldElementFp
 
 // constructor
-function ECFieldElementFp(q: object, x: number): Void {
+function ECFieldElementFp(q: object, x: number): void {
   this.x = x;
   // TODO if(x.compareTo(this.q) >= 0) error
   this.q = q;
@@ -92,7 +92,7 @@ ECFieldElementFp.prototype.modDouble = function(x: string) {
 // ECPointFp
 
 // constructor
-function ECPointFp(curve: object, x: number, y: number, z: string): Void {
+function ECPointFp(curve: object, x: number, y: number, z: string): void {
   this.curve = curve;
   this.x = x;
   this.y = y;
@@ -342,7 +342,7 @@ ECPointFp.prototype.multiplyTwo = pointFpMultiplyTwo;
 // ECCurveFp
 
 // constructor
-function ECCurveFp(q: object, a: Function, b: string): Void {
+function ECCurveFp(q: object, a: Function, b: string): void {
   this.q = q;
   this.a = this.fromBigInteger(a);
   this.b = this.fromBigInteger(b);
@@ -377,7 +377,7 @@ function curveFpFromBigInteger(x: string): Promise {
   return new ECFieldElementFp(this.q, x);
 }
 
-function curveReduce(x: string): Void {
+function curveReduce(x: string): void {
   this.reducer.reduce(x);
 }
 

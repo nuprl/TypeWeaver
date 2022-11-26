@@ -1,7 +1,7 @@
 import dns from 'dns';
 import retry from '../lib/retry';
 
-function faultTolerantResolve(address: string, cb: Function): Void {
+function faultTolerantResolve(address: string, cb: Function): void {
   var opts: object = {
     retries: 2,
     factor: 2,

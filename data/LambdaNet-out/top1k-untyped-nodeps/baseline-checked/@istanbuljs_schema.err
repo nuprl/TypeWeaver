@@ -49,9 +49,16 @@ index.ts(348,28): error TS2339: Property 'instrumentOnly' does not exist on type
 index.ts(372,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(381,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(388,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
-index.ts(439,71): error TS2304: Cannot find name 'Void'.
-index.ts(439,71): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(445,2): error TS2322: Type 'string & { [x: number]: any; }' is not assignable to type 'void'.
 index.ts(457,42): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+index.ts(458,15): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown], initialValue: [string, unknown]): [string, unknown]', gave the following error.
+    Argument of type '(defaults: string, [name, { default: value }]: [any, { default: any; }]) => void' is not assignable to parameter of type '(previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown]'.
+      Types of parameters 'defaults' and 'previousValue' are incompatible.
+        Type '[string, unknown]' is not assignable to type 'string'.
+  Overload 2 of 3, '(callbackfn: (previousValue: string, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => string, initialValue: string): string', gave the following error.
+    Argument of type '(defaults: string, [name, { default: value }]: [any, { default: any; }]) => void' is not assignable to parameter of type '(previousValue: string, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => string'.
+      Type 'void' is not assignable to type 'string'.
 index.ts(464,3): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
     Argument of type '{}' is not assignable to parameter of type 'string'.

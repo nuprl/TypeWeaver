@@ -61,7 +61,7 @@ function through (write: Function, end: Function, opts: object): string {
       })
   })
 
-  function _end (): Void {
+  function _end (): void {
     stream.writable = false
     end.call(stream)
     if(!stream.readable && stream.autoDestroy)

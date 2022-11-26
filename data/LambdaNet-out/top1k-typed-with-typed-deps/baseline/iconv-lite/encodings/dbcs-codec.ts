@@ -19,7 +19,7 @@ for (var i = 0; i < 0x100; i++)
 
 
 // Class DBCSCodec reads and initializes mapping tables.
-function DBCSCodec(codecOptions: object, iconv: object): Void {
+function DBCSCodec(codecOptions: object, iconv: object): void {
     this.encodingName = codecOptions.encodingName;
     if (!codecOptions)
         throw new Error("DBCS codec is called without the data.")
@@ -299,7 +299,7 @@ DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: any[], prefix: string, 
 
 // == Encoder ==================================================================
 
-function DBCSEncoder(options: object, codec: object): Void {
+function DBCSEncoder(options: object, codec: object): void {
     // Encoder state
     this.leadSurrogate = -1;
     this.seqObj = undefined;
@@ -473,7 +473,7 @@ DBCSEncoder.prototype.findIdx = findIdx;
 
 // == Decoder ==================================================================
 
-function DBCSDecoder(options: object, codec: object): Void {
+function DBCSDecoder(options: object, codec: object): void {
     // Decoder state
     this.nodeIdx = 0;
     this.prevBytes = [];

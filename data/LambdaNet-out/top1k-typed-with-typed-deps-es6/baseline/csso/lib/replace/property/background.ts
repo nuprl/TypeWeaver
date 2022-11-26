@@ -1,7 +1,7 @@
 import { List } from 'css-tree';
 
-export default function compressBackground(node: object): Void {
-    function flush(): Void {
+export default function compressBackground(node: object): void {
+    function flush(): void {
         if (!buffer.length) {
             buffer.unshift(
                 {

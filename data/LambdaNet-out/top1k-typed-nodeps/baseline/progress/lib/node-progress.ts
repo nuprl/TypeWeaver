@@ -42,7 +42,7 @@ exports = module.exports = ProgressBar;
  * @api public
  */
 
-function ProgressBar(fmt: Function, options: object): Void {
+function ProgressBar(fmt: Function, options: object): void {
   this.stream = options.stream || process.stderr;
 
   if (typeof(options) == 'number') {

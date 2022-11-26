@@ -37,7 +37,7 @@ function hasPipeDataListeners (stream: number): boolean {
  * @public
  */
 
-function unpipe (stream: number): Void {
+function unpipe (stream: number): void {
   if (!stream) {
     throw new TypeError('argument stream is required')
   }

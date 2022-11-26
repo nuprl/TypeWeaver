@@ -495,12 +495,12 @@
         }
     }
 
-    function consume(target: object, text: string): Void {
+    function consume(target: object, text: string): void {
         utility.assert(token === target, text || 'consumed token not matched');
         next();
     }
 
-    function expect(target: object, message: string): Void {
+    function expect(target: object, message: string): void {
         if (token !== target) {
             utility.throwError(message || 'unexpected token');
         }

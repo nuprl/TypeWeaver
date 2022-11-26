@@ -12,7 +12,7 @@
  * @param {SyncFileSystem} fs file system implementation
  * @constructor
  */
-function SyncAsyncFileSystemDecorator(fs: string): Void {
+function SyncAsyncFileSystemDecorator(fs: string): void {
 	this.fs = fs;
 
 	this.lstat = undefined;

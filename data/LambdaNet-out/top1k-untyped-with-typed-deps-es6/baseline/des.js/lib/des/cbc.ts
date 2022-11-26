@@ -5,7 +5,7 @@ import inherits from 'inherits';
 
 var proto: object = {};
 
-function CBCState(iv: any[]): Void {
+function CBCState(iv: any[]): void {
   assert.equal(iv.length, 8, 'Invalid IV length');
 
   this.iv = new Array(8);
@@ -14,7 +14,7 @@ function CBCState(iv: any[]): Void {
 }
 
 function instantiate(Base: Function): object {
-  function CBC(options: Function): Void {
+  function CBC(options: Function): void {
     Base.call(this, options);
     this._cbcInit();
   }
@@ -35,12 +35,12 @@ function instantiate(Base: Function): object {
 
 exports.instantiate = instantiate;
 
-proto._cbcInit = function _cbcInit(): Void {
+proto._cbcInit = function _cbcInit(): void {
   var state: string = new CBCState(this.options.iv);
   this._cbcState = state;
 };
 
-proto._update = function _update(inp: object, inOff: string, out: object, outOff: string): Void {
+proto._update = function _update(inp: object, inOff: string, out: object, outOff: string): void {
   var state: HTMLElement = this._cbcState;
   var superProto: Element = this.constructor.super_.prototype;
 

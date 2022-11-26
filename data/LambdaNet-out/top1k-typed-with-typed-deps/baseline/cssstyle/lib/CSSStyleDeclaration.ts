@@ -14,7 +14,7 @@ var getBasicPropertyDescriptor: Function = require('./utils/getBasicPropertyDesc
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
  */
-var CSSStyleDeclaration: Function = function CSSStyleDeclaration(onChangeCallback: boolean): Void {
+var CSSStyleDeclaration: Function = function CSSStyleDeclaration(onChangeCallback: boolean): void {
   this._values = {};
   this._importants = {};
   this._length = 0;

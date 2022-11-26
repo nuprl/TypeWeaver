@@ -22,7 +22,7 @@ var
 	rfxtypes: RegExp = /^(?:toggle|show|hide)$/,
 	rrun: RegExp = /queueHooks$/;
 
-function schedule(): Void {
+function schedule(): void {
 	if ( inProgress ) {
 		if ( document.hidden === false && window.requestAnimationFrame ) {
 			window.requestAnimationFrame( schedule );
@@ -77,7 +77,7 @@ function createTween( value: string, prop: string, animation: string ): object {
 	}
 }
 
-function defaultPrefilter( elem: object, props: object, opts: HTMLElement ): Void {
+function defaultPrefilter( elem: object, props: object, opts: HTMLElement ): void {
 	var prop: Function, value: number, toggle: boolean, hooks: HTMLElement, oldfire: Function, propTween: boolean, restoreDisplay: string, display: string,
 		isBox: boolean = "width" in props || "height" in props,
 		anim: any[] = this,
@@ -245,7 +245,7 @@ function defaultPrefilter( elem: object, props: object, opts: HTMLElement ): Voi
 	}
 }
 
-function propFilter( props: object, specialEasing: object ): Void {
+function propFilter( props: object, specialEasing: object ): void {
 	var index: string, name: string, easing: Function, value: object, hooks: object;
 
 	// camelCase, specialEasing and expand cssHook pass

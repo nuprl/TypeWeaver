@@ -49,7 +49,7 @@
     }
 
     // Trace() doesn't print the message in IE, so for that case we need to wrap it
-    function traceForIE(): Void {
+    function traceForIE(): void {
         if (console.log) {
             if (console.log.apply) {
                 console.log.apply(console, arguments);
@@ -83,7 +83,7 @@
 
     // These private functions always need `this` to be set properly
 
-    function replaceLoggingMethods(level: string, loggerName: string): Void {
+    function replaceLoggingMethods(level: string, loggerName: string): void {
         /*jshint validthis:true */
         for (var i = 0; i < logMethods.length; i++) {
             var methodName: string = logMethods[i];
@@ -115,7 +115,7 @@
                enableLoggingWhenConsoleArrives.apply(this, arguments);
     }
 
-    function Logger(name: string, defaultLevel: string, factory: string): Void {
+    function Logger(name: string, defaultLevel: string, factory: string): void {
       var self: HTMLElement = this;
       var currentLevel: number;
       defaultLevel = defaultLevel == null ? "WARN" : defaultLevel;
@@ -127,7 +127,7 @@
         storageKey = undefined;
       }
 
-      function persistLevelIfPossible(levelNum: number): Void {
+      function persistLevelIfPossible(levelNum: number): void {
           var levelName: string = (logMethods[levelNum] || 'silent').toUpperCase();
 
           if (typeof window === undefinedType || !storageKey) return;
@@ -174,7 +174,7 @@
           return storedLevel;
       }
 
-      function clearPersistedLevel(): Void {
+      function clearPersistedLevel(): void {
           if (typeof window === undefinedType || !storageKey) return;
 
           // Use localStorage if available

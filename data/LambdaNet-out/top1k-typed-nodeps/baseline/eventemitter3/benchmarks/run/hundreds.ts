@@ -74,8 +74,8 @@ for (i = 0; i < 10; i++) {
   for (i = 0; i < 10; i++) {
     ce.emit('event:' + i);
   }
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

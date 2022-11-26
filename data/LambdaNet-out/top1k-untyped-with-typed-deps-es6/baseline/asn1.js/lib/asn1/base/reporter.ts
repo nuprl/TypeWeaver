@@ -2,7 +2,7 @@
 
 import inherits from 'inherits';
 
-function Reporter(options: object): Void {
+function Reporter(options: object): void {
   this._reporterState = {
     obj: null,
     path: [],
@@ -22,7 +22,7 @@ Reporter.prototype.save = function save(): object {
   return { obj: state.obj, pathLen: state.path.length };
 };
 
-Reporter.prototype.restore = function restore(data: object): Void {
+Reporter.prototype.restore = function restore(data: object): void {
   const state: object = this._reporterState;
 
   state.obj = data.obj;
@@ -33,13 +33,13 @@ Reporter.prototype.enterKey = function enterKey(key: string): number {
   return this._reporterState.path.push(key);
 };
 
-Reporter.prototype.exitKey = function exitKey(index: number): Void {
+Reporter.prototype.exitKey = function exitKey(index: number): void {
   const state: Function = this._reporterState;
 
   state.path = state.path.slice(0, index - 1);
 };
 
-Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: string): Void {
+Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: string): void {
   const state: object = this._reporterState;
 
   this.exitKey(index);
@@ -100,7 +100,7 @@ Reporter.prototype.wrapResult = function wrapResult(result: any[]): object {
   };
 };
 
-function ReporterError(path: string, msg: string): Void {
+function ReporterError(path: string, msg: string): void {
   this.path = path;
   this.rethrow(msg);
 }

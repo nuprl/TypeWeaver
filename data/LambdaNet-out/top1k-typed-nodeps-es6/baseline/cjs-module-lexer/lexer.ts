@@ -14,7 +14,7 @@ let openTokenDepth: number,
   unsafeGetters: Set,
   reexports: Error;
 
-function resetState (): Void {
+function resetState (): void {
   openTokenDepth = 0;
   templateDepth = -1;
   lastTokenPos = -1;
@@ -248,7 +248,7 @@ function parseSource (cjsSource: Function): boolean {
     throw new Error('Unterminated braces.');
 }
 
-function tryBacktrackAddStarExportBinding (bPos: number): Void {
+function tryBacktrackAddStarExportBinding (bPos: number): void {
   while (source.charCodeAt(bPos) === 32/* */ && bPos >= 0)
     bPos--;
   if (source.charCodeAt(bPos) === 61/*=*/) {
@@ -328,7 +328,7 @@ function tryParseObjectHasOwnProperty (it_id: string): boolean {
   return true;
 }
 
-function tryParseObjectDefineOrKeys (keys: boolean): Void {
+function tryParseObjectDefineOrKeys (keys: boolean): void {
   pos += 6;
   let revertPos: number = pos - 1;
   let ch: string = commentWhitespace();
@@ -854,7 +854,7 @@ function readExportsOrModuleDotExports (ch: string): boolean {
   }
 }
 
-function tryParseModuleExportsDotAssign (): Void {
+function tryParseModuleExportsDotAssign (): void {
   pos += 6;
   const revertPos: number = pos - 1;
   let ch: string = commentWhitespace();
@@ -869,7 +869,7 @@ function tryParseModuleExportsDotAssign (): Void {
   pos = revertPos;
 }
 
-function tryParseExportsDotAssign (assign: boolean): Void {
+function tryParseExportsDotAssign (assign: boolean): void {
   pos += 7;
   const revertPos: number = pos - 1;
   let ch: string = commentWhitespace();
@@ -962,7 +962,7 @@ function tryParseRequire (requireType: string): boolean {
   return false;
 }
 
-function tryParseLiteralExports (): Void {
+function tryParseLiteralExports (): void {
   const revertPos: number = pos - 1;
   while (pos++ < end) {
     let ch: string = commentWhitespace();
@@ -1149,7 +1149,7 @@ function codePointAtLast (bPos: number): number {
   return ch;
 }
 
-function throwIfImportStatement (): Void {
+function throwIfImportStatement (): void {
   const startPos: number = pos;
   pos += 6;
   const ch: string = commentWhitespace();
@@ -1209,7 +1209,7 @@ function commentWhitespace (): string {
   return ch;
 }
 
-function templateString (): Void {
+function templateString (): void {
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
     if (ch === 36/*$*/ && source.charCodeAt(pos + 1) === 123/*{*/) {
@@ -1226,7 +1226,7 @@ function templateString (): Void {
   syntaxError();
 }
 
-function blockComment (): Void {
+function blockComment (): void {
   pos++;
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
@@ -1237,7 +1237,7 @@ function blockComment (): Void {
   }
 }
 
-function lineComment (): Void {
+function lineComment (): void {
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
     if (ch === 10/*\n*/ || ch === 13/*\r*/)
@@ -1245,7 +1245,7 @@ function lineComment (): Void {
   }
 }
 
-function stringLiteral (quote: number): Void {
+function stringLiteral (quote: number): void {
   while (pos++ < end) {
     let ch: number = source.charCodeAt(pos);
     if (ch === quote)
@@ -1274,7 +1274,7 @@ function regexCharacterClass (): number {
   throw new Error('Syntax error reading regular expression class.');
 }
 
-function regularExpression (): Void {
+function regularExpression (): void {
   while (pos++ < end) {
     let ch: number = source.charCodeAt(pos);
     if (ch === 47/*/*/)

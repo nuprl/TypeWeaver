@@ -2,7 +2,7 @@
 
 var isNative: RegExp = /\.node$/;
 
-function forEach(obj: any[], callback: Function): Void {
+function forEach(obj: any[], callback: Function): void {
     for ( var key in obj ) {
         if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             continue;
@@ -18,7 +18,7 @@ function assign(target: object, source: object): object {
     return target;
 }
 
-function clearCache(requireCache: object): Void {
+function clearCache(requireCache: object): void {
     forEach(requireCache, function (resolvedPath: string) {
         if (!isNative.test(resolvedPath)) {
             delete requireCache[resolvedPath];

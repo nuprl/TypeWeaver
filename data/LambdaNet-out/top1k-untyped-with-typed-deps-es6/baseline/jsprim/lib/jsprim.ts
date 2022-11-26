@@ -131,7 +131,7 @@ function hasKey(obj: string, key: string): boolean
 	return (Object.prototype.hasOwnProperty.call(obj, key));
 }
 
-function forEachKey(obj: object, callback: Function): Void
+function forEachKey(obj: object, callback: Function): void
 {
 	for (var key in obj) {
 		if (hasKey(obj, key)) {
@@ -171,12 +171,12 @@ function pluckv(obj: object, key: string): any[]
  * depth).forEach(callback), except that the intermediate array is never
  * created.
  */
-function flattenIter(data: object, depth: string, callback: string): Void
+function flattenIter(data: object, depth: string, callback: string): void
 {
 	doFlattenIter(data, depth, [], callback);
 }
 
-function doFlattenIter(data: object, depth: number, accum: any[], callback: Function): Void
+function doFlattenIter(data: object, depth: number, accum: any[], callback: Function): void
 {
 	var each: any[];
 	var key: string;
@@ -570,7 +570,7 @@ function randElt(arr: any[]): string
 	return (arr[Math.floor(Math.random() * arr.length)]);
 }
 
-function assertHrtime(a: Promise): Void
+function assertHrtime(a: Promise): void
 {
 	mod_assert.ok(a[0] >= 0 && a[1] >= 0,
 	    'negative numbers not allowed in hrtimes');

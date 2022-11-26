@@ -18,7 +18,7 @@ const nonFreezePseudoClasses: Error = new Set([
     'before'
 ]);
 
-export default function processSelector(node: object, usageData: object): Void {
+export default function processSelector(node: object, usageData: object): void {
     const pseudos: Error = new Set();
 
     node.prelude.children.forEach(function(simpleSelector: object) {

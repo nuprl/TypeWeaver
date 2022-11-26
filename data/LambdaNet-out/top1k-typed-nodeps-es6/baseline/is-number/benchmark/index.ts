@@ -33,7 +33,7 @@ function bench(name: string): object {
   return res;
 }
 
-function run(fn: Function, prop: string = 'all'): Void {
+function run(fn: Function, prop: string = 'all'): void {
   [].concat(fixtures[prop]).forEach((val: number) => fn(val));
 }
 

@@ -5,8 +5,6 @@ example/bakery.ts(18,12): error TS2339: Property 'notify' does not exist on type
 example/simple.ts(3,8): error TS2339: Property 'notify' does not exist on type 'string'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'string'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
-lib/gntp.ts(15,44): error TS2304: Cannot find name 'Void'.
-lib/gntp.ts(15,44): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/gntp.ts(18,22): error TS2339: Property 'host' does not exist on type 'object'.
 lib/gntp.ts(19,22): error TS2339: Property 'port' does not exist on type 'object'.
 lib/gntp.ts(47,6): error TS2339: Property 'prototype' does not exist on type 'any[]'.
@@ -49,8 +47,6 @@ lib/gntp.ts(195,87): error TS2339: Property 'host' does not exist on type 'HTMLE
 lib/gntp.ts(195,98): error TS2339: Property 'port' does not exist on type 'HTMLElement'.
 lib/gntp.ts(196,16): error TS2339: Property 'destroy' does not exist on type 'HTMLInputElement'.
 lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
-lib/growly.ts(9,20): error TS2304: Cannot find name 'Void'.
-lib/growly.ts(9,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'object'.
 lib/growly.ts(98,16): error TS2351: This expression is not constructable.
   Type 'any[]' has no construct signatures.
@@ -94,5 +90,4 @@ lib/growly.ts(177,10): error TS2339: Property 'add' does not exist on type 'HTML
 lib/growly.ts(178,10): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
 lib/growly.ts(180,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 lib/growly.ts(183,37): error TS2339: Property 'state' does not exist on type 'object'.
-lib/growly.ts(193,18): error TS2350: Only a void function can be called with the 'new' keyword.
 

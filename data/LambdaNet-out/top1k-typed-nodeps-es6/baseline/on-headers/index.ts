@@ -53,7 +53,7 @@ function createWriteHead (prevWriteHead: Function, listener: Function): Function
  * @public
  */
 
-function onHeaders (res: Map, listener: string): Void {
+function onHeaders (res: Map, listener: string): void {
   if (!res) {
     throw new TypeError('argument res is required')
   }
@@ -73,7 +73,7 @@ function onHeaders (res: Map, listener: string): Void {
  * @private
  */
 
-function setHeadersFromArray (res: object, headers: any[]): Void {
+function setHeadersFromArray (res: object, headers: any[]): void {
   for (var i = 0; i < headers.length; i++) {
     res.setHeader(headers[i][0], headers[i][1])
   }
@@ -87,7 +87,7 @@ function setHeadersFromArray (res: object, headers: any[]): Void {
  * @private
  */
 
-function setHeadersFromObject (res: object, headers: object): Void {
+function setHeadersFromObject (res: object, headers: object): void {
   var keys: any[] = Object.keys(headers)
   for (var i = 0; i < keys.length; i++) {
     var k: string = keys[i]

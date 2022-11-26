@@ -2,7 +2,7 @@
 var util: string = require('util');
 var plugins: Function = require('base-plugins');
 
-function Factory(config: Function): Void {
+function Factory(config: Function): void {
   this.use = function(fn: Function) {
     fn.call(this, this);
     return this;
@@ -11,7 +11,7 @@ function Factory(config: Function): Void {
 }
 
 
-function Multi(): Void {
+function Multi(): void {
   Factory.call(this);
   this.isMulti = true;
   this.apps = {};
@@ -25,7 +25,7 @@ Multi.prototype.app = function(name: string) {
 };
 
 
-function App(): Void {
+function App(): void {
   Factory.call(this);
   this.isApp = true;
   this.collections = {};
@@ -39,7 +39,7 @@ App.prototype.collection = function(name: string) {
 };
 
 
-function Collection(): Void {
+function Collection(): void {
   Factory.call(this);
   this.isCollection = true;
   this.items = {};
@@ -53,7 +53,7 @@ Collection.prototype.item = function(name: string) {
 };
 
 
-function Item(): Void {
+function Item(): void {
   Factory.call(this);
   this.isItem = true;
   this.fields = {};
@@ -67,7 +67,7 @@ Item.prototype.field = function(name: string) {
 };
 
 
-function Field(): Void {
+function Field(): void {
   Factory.call(this);
   this.isField = true;
 }

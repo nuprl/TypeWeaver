@@ -2,8 +2,6 @@
 .github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
-pseudomap.ts(5,34): error TS2304: Cannot find name 'Void'.
-pseudomap.ts(5,34): error TS4060: Return type of exported function has or is using private name 'Void'.
 pseudomap.ts(14,19): error TS2345: Argument of type '(value: string, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
   Types of parameters 'key' and 'index' are incompatible.
     Type 'number' is not assignable to type 'string'.
@@ -22,10 +20,7 @@ pseudomap.ts(48,38): error TS2345: Argument of type 'number' is not assignable t
 pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'object'.
 pseudomap.ts(57,8): error TS2339: Property 'size' does not exist on type 'any[]'.
 pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-pseudomap.ts(87,51): error TS2304: Cannot find name 'Void'.
 pseudomap.ts(97,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-pseudomap.ts(102,52): error TS2304: Cannot find name 'Void'.
 pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'object'.
-pseudomap.ts(112,15): error TS2350: Only a void function can be called with the 'new' keyword.
 pseudomap.ts(112,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 

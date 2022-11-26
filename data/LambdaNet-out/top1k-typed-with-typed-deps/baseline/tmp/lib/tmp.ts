@@ -55,7 +55,7 @@ let
  * @param {(Options|tmpNameCallback)} options options or callback
  * @param {?tmpNameCallback} callback the callback function
  */
-function tmpName(options: object, callback: Function): Void {
+function tmpName(options: object, callback: Function): void {
   const
     args: object = _parseArguments(options, callback),
     opts: HTMLElement = args[0],
@@ -68,7 +68,7 @@ function tmpName(options: object, callback: Function): Void {
   }
 
   let tries: number = opts.tries;
-  (function _getUniqueName(): Void {
+  (function _getUniqueName(): void {
     try {
       const name: string = _generateTmpName(opts);
 
@@ -97,7 +97,7 @@ function tmpName(options: object, callback: Function): Void {
  * @returns {string} the generated random name
  * @throws {Error} if the options are invalid or could not generate a filename
  */
-function tmpNameSync(options: object): Void {
+function tmpNameSync(options: object): void {
   const
     args: object = _parseArguments(options),
     opts: HTMLElement = args[0];
@@ -123,7 +123,7 @@ function tmpNameSync(options: object): Void {
  * @param {(Options|null|undefined|fileCallback)} options the config options or the callback function or null or undefined
  * @param {?fileCallback} callback
  */
-function file(options: object, callback: Function): Void {
+function file(options: object, callback: Function): void {
   const
     args: object = _parseArguments(options, callback),
     opts: object = args[0],
@@ -188,7 +188,7 @@ function fileSync(options: object): object {
  * @param {(Options|dirCallback)} options the options or the callback function
  * @param {?dirCallback} callback
  */
-function dir(options: object, callback: Function): Void {
+function dir(options: object, callback: Function): void {
   const
     args: object = _parseArguments(options, callback),
     opts: Map = args[0],
@@ -237,7 +237,7 @@ function dirSync(options: object): object {
  * @param {Function} next
  * @private
  */
-function _removeFileAsync(fdPath: object, next: Function): Void {
+function _removeFileAsync(fdPath: object, next: Function): void {
   const _handler: Function = function (err: string) {
     if (err && !_isENOENT(err)) {
       // reraise any unanticipated error
@@ -259,7 +259,7 @@ function _removeFileAsync(fdPath: object, next: Function): Void {
  * @param {Object} fdPath
  * @private
  */
-function _removeFileSync(fdPath: object): Void {
+function _removeFileSync(fdPath: object): void {
   let rethrownException: any[] = null;
   try {
     if (0 <= fdPath[0]) fs.closeSync(fdPath[0]);
@@ -366,7 +366,7 @@ function _prepareRemoveCallback(removeFunction: Function, fileOrDirName: string,
  *
  * @private
  */
-function _garbageCollector(): Void {
+function _garbageCollector(): void {
   /* istanbul ignore else */
   if (!_gracefulCleanup) return;
 
@@ -499,7 +499,7 @@ function _generateTmpName(opts: HTMLElement): string {
  * @param {Options} options
  * @private
  */
-function _assertAndSanitizeOptions(options: HTMLElement): Void {
+function _assertAndSanitizeOptions(options: HTMLElement): void {
 
   options.tmpdir = _getTmpDir(options);
 
@@ -568,7 +568,7 @@ function _resolvePath(name: string, tmpDir: string): string {
  * @throws {Error}
  * @private
  */
-function _assertIsRelative(name: string, option: string, tmpDir: string): Void {
+function _assertIsRelative(name: string, option: string, tmpDir: string): void {
   if (option === 'name') {
     // assert that name is not absolute and does not contain a path
     if (path.isAbsolute(name))
@@ -636,7 +636,7 @@ function _isExpectedError(error: object, errno: number, code: string): boolean {
  * temporary objects will remain in place, waiting to be cleaned up on system restart or otherwise scheduled temporary
  * object removals.
  */
-function setGracefulCleanup(): Void {
+function setGracefulCleanup(): void {
   _gracefulCleanup = true;
 }
 

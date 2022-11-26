@@ -1,1 +1,1 @@
-module.exports = [function * gen(): Void {}]
+module.exports = [function * gen(): void {}]

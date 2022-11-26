@@ -22,7 +22,7 @@ function depd (namespace: number): Element {
     throw new TypeError('argument namespace is required')
   }
 
-  function deprecate (message: string): Void {
+  function deprecate (message: string): void {
     // no-op in browser
   }
 
@@ -60,7 +60,7 @@ function wrapfunction (fn: string, message: string): string {
  * validation.
  */
 
-function wrapproperty (obj: string, prop: string, message: string): Void {
+function wrapproperty (obj: string, prop: string, message: string): void {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw new TypeError('argument obj must be object')
   }

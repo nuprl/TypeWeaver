@@ -17,7 +17,7 @@ const emptyDir: string = u(async function emptyDir (dir: any[]): Map {
   return Promise.all(items.map((item: string) => remove.remove(path.join(dir, item))))
 })
 
-function emptyDirSync (dir: string): Void {
+function emptyDirSync (dir: string): void {
   let items: any[]
   try {
     items = fs.readdirSync(dir)

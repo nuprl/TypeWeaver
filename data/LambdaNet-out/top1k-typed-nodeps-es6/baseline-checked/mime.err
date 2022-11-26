@@ -1,5 +1,3 @@
-Mime.ts(7,18): error TS2304: Cannot find name 'Void'.
-Mime.ts(7,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 Mime.ts(55,22): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 Mime.ts(58,46): error TS2538: Type 'object' cannot be used as an index type.
 Mime.ts(64,19): error TS2538: Type 'object' cannot be used as an index type.
@@ -7,9 +5,7 @@ Mime.ts(83,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
 Mime.ts(84,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
 cli.ts(6,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 cli.ts(7,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
-index.ts(4,16): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(4,25): error TS2554: Expected 0 arguments, but got 2.
-lite.ts(4,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lite.ts(4,25): error TS2554: Expected 0 arguments, but got 1.
 src/benchmark.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 src/benchmark.ts(13,4): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -36,7 +32,6 @@ src/build.ts(39,50): error TS2339: Property 'type' does not exist on type 'objec
 src/build.ts(39,70): error TS2339: Property 'pri' does not exist on type 'object'.
 src/build.ts(40,36): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 src/build.ts(40,56): error TS2339: Property 'pri' does not exist on type 'HTMLElement'.
-src/build.ts(49,57): error TS2304: Cannot find name 'Void'.
 src/build.ts(58,32): error TS2345: Argument of type '(k: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'k' and 'value' are incompatible.
     Type 'string' is not assignable to type 'number'.

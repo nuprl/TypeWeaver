@@ -13,19 +13,11 @@ bench.ts(60,12): error TS2339: Property 'equal' does not exist on type 'string'.
 bench.ts(61,14): error TS2339: Property 'resolve' does not exist on type 'any[]'.
 bench.ts(69,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
-lib/abort.ts(9,32): error TS2304: Cannot find name 'Void'.
-lib/abort.ts(9,32): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/abort.ts(11,21): error TS2339: Property 'jobs' does not exist on type 'object'.
 lib/abort.ts(14,9): error TS2339: Property 'jobs' does not exist on type 'object'.
-lib/abort.ts(23,30): error TS2304: Cannot find name 'Void'.
-lib/abort.ts(23,30): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
 lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
-lib/async.ts(20,64): error TS2304: Cannot find name 'Void'.
-lib/async.ts(28,43): error TS2304: Cannot find name 'Void'.
 lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
-lib/defer.ts(8,29): error TS2304: Cannot find name 'Void'.
-lib/defer.ts(8,29): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/defer.ts(24,16): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '() => void'.
@@ -36,8 +28,6 @@ lib/defer.ts(24,16): error TS2769: No overload matches this call.
 lib/iterate.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'async' must be of type 'any[]', but here has type 'Function'.
 lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
 lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
-lib/iterate.ts(16,86): error TS2304: Cannot find name 'Void'.
-lib/iterate.ts(16,86): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/iterate.ts(19,67): error TS2339: Property 'index' does not exist on type 'object'.
 lib/iterate.ts(19,82): error TS2339: Property 'index' does not exist on type 'object'.
 lib/iterate.ts(21,9): error TS2339: Property 'jobs' does not exist on type 'object'.
@@ -51,18 +41,10 @@ lib/iterate.ts(66,30): error TS2349: This expression is not callable.
 lib/iterate.ts(71,35): error TS2349: This expression is not callable.
   Type 'any[]' has no call signatures.
 lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
-lib/readable_asynckit.ts(12,30): error TS2304: Cannot find name 'Void'.
-lib/readable_asynckit.ts(12,30): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/readable_asynckit.ts(14,20): error TS2339: Property 'super_' does not exist on type 'string'.
-lib/readable_asynckit.ts(31,21): error TS2304: Cannot find name 'Void'.
-lib/readable_asynckit.ts(31,21): error TS4060: Return type of exported function has or is using private name 'Void'.
-lib/readable_asynckit.ts(51,20): error TS2304: Cannot find name 'Void'.
-lib/readable_asynckit.ts(51,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/readable_asynckit.ts(60,36): error TS2339: Property 'callback' does not exist on type 'string'.
 lib/readable_asynckit.ts(65,23): error TS2339: Property 'iterator' does not exist on type 'string'.
 lib/readable_asynckit.ts(72,32): error TS2339: Property 'apply' does not exist on type 'object'.
-lib/readable_asynckit.ts(88,19): error TS2304: Cannot find name 'Void'.
-lib/readable_asynckit.ts(88,19): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
 lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
 lib/readable_parallel.ts(16,25): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
@@ -92,17 +74,11 @@ lib/streamify.ts(23,28): error TS2349: This expression is not callable.
 lib/streamify.ts(26,12): error TS2339: Property 'jobs' does not exist on type 'any[]'.
 lib/streamify.ts(81,25): error TS2339: Property 'jobs' does not exist on type 'any[]'.
 lib/streamify.ts(88,19): error TS2339: Property 'jobs' does not exist on type 'any[]'.
-lib/streamify.ts(102,71): error TS2304: Cannot find name 'Void'.
-lib/streamify.ts(102,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/streamify.ts(110,38): error TS2339: Property 'value' does not exist on type 'object'.
 lib/streamify.ts(119,36): error TS2339: Property 'value' does not exist on type 'object'.
-lib/streamify.ts(130,71): error TS2304: Cannot find name 'Void'.
-lib/streamify.ts(130,71): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
 lib/terminator.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'async' must be of type 'any[]', but here has type 'Function'.
 lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
-lib/terminator.ts(14,40): error TS2304: Cannot find name 'Void'.
-lib/terminator.ts(14,40): error TS4060: Return type of exported function has or is using private name 'Void'.
 lib/terminator.ts(28,3): error TS2349: This expression is not callable.
   Type 'any[]' has no call signatures.
 parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
@@ -115,13 +91,10 @@ parallel.ts(34,30): error TS2339: Property 'results' does not exist on type 'obj
 parallel.ts(39,11): error TS2339: Property 'index' does not exist on type 'object'.
 serial.ts(1,5): error TS2300: Duplicate identifier 'serialOrdered'.
 serial.ts(14,10): error TS2300: Duplicate identifier 'serial'.
-serial.ts(14,70): error TS2304: Cannot find name 'Void'.
-serial.ts(14,70): error TS4060: Return type of exported function has or is using private name 'Void'.
 serialOrdered.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
 serialOrdered.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
 serialOrdered.ts(21,10): error TS2300: Duplicate identifier 'serialOrdered'.
 serialOrdered.ts(21,97): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-serialOrdered.ts(25,93): error TS2304: Cannot find name 'Void'.
 serialOrdered.ts(33,11): error TS2339: Property 'index' does not exist on type 'object'.
 serialOrdered.ts(36,15): error TS2339: Property 'index' does not exist on type 'object'.
 serialOrdered.ts(43,26): error TS2339: Property 'results' does not exist on type 'object'.

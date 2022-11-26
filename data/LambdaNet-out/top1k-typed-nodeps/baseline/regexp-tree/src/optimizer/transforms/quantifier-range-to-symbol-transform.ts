@@ -36,7 +36,7 @@ module.exports = {
   }
 };
 
-function rewriteOpenZero(path: string): Void {
+function rewriteOpenZero(path: string): void {
   const {node} = path;
 
   if (node.from !== 0 || node.to) {
@@ -58,7 +58,7 @@ function rewriteOpenOne(path: string): Promise {
   delete node.from;
 }
 
-function rewriteExactOne(path: string): Void {
+function rewriteExactOne(path: string): void {
   const {node} = path;
 
   if (node.from !== 1 || node.to !== 1) {

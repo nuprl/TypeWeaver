@@ -89,7 +89,7 @@ try {
   }
 } catch (e) {}
 
-function BadKeyError (key: string): Void {
+function BadKeyError (key: string): void {
   throw Object.assign(new Error(
     `invalid config key requested: ${key}`
   ), {code: 'EBADKEY'})

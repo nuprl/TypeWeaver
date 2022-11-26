@@ -35,9 +35,6 @@ src/convert/xml.ts(15,23): error TS2551: Property 'removed' does not exist on ty
 src/convert/xml.ts(23,7): error TS2322: Type 'object' is not assignable to type 'string'.
 src/convert/xml.ts(29,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
 src/diff/array.ts(3,25): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-src/diff/array.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/base.ts(1,33): error TS2304: Cannot find name 'Void'.
-src/diff/base.ts(1,33): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/diff/base.ts(5,28): error TS2339: Property 'callback' does not exist on type '{}'.
 src/diff/base.ts(33,16): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
 src/diff/base.ts(34,55): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
@@ -68,12 +65,9 @@ src/diff/base.ts(225,40): error TS2339: Property 'value' does not exist on type 
 src/diff/base.ts(226,57): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
 src/diff/base.ts(234,25): error TS2339: Property 'newPos' does not exist on type 'string'.
 src/diff/base.ts(234,50): error TS2339: Property 'components' does not exist on type 'string'.
-src/diff/character.ts(3,37): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/character.ts(4,107): error TS2339: Property 'diff' does not exist on type 'any[]'.
-src/diff/css.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/css.ts(4,9): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
 src/diff/css.ts(8,101): error TS2339: Property 'diff' does not exist on type 'any[]'.
-src/diff/json.ts(7,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/json.ts(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,30): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
@@ -85,14 +79,11 @@ src/diff/json.ts(46,38): error TS2339: Property 'length' does not exist on type 
 src/diff/json.ts(48,25): error TS2339: Property 'length' does not exist on type 'object'.
 src/diff/json.ts(56,18): error TS2339: Property 'toJSON' does not exist on type 'object'.
 src/diff/json.ts(57,15): error TS2339: Property 'toJSON' does not exist on type 'object'.
-src/diff/line.ts(4,32): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/line.ts(5,10): error TS2339: Property 'tokenize' does not exist on type 'any[]'.
 src/diff/line.ts(31,106): error TS2339: Property 'diff' does not exist on type 'any[]'.
 src/diff/line.ts(34,19): error TS2339: Property 'diff' does not exist on type 'any[]'.
-src/diff/sentence.ts(4,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/sentence.ts(5,14): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/sentence.ts(9,114): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
-src/diff/word.ts(26,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/word.ts(27,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
 src/diff/word.ts(34,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/word.ts(54,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
@@ -120,8 +111,6 @@ src/patch/apply.ts(92,36): error TS2339: Property 'linedelimiters' does not exis
 src/patch/apply.ts(105,46): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/apply.ts(105,66): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/apply.ts(128,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
-src/patch/apply.ts(132,64): error TS2304: Cannot find name 'Void'.
-src/patch/apply.ts(132,64): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/patch/apply.ts(141,22): error TS2339: Property 'complete' does not exist on type 'any[]'.
 src/patch/apply.ts(144,13): error TS2339: Property 'loadFile' does not exist on type 'any[]'.
 src/patch/apply.ts(146,24): error TS2339: Property 'complete' does not exist on type 'any[]'.
@@ -171,8 +160,6 @@ src/patch/create.ts(129,43): error TS2339: Property 'newLines' does not exist on
 src/patch/create.ts(132,30): error TS2339: Property 'lines' does not exist on type 'string'.
 src/patch/create.ts(139,72): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/patch/create.ts(143,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-src/patch/merge.ts(6,46): error TS2304: Cannot find name 'Void'.
-src/patch/merge.ts(6,46): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/patch/merge.ts(7,10): error TS2339: Property 'oldLines' does not exist on type '{}'.
 src/patch/merge.ts(7,20): error TS2339: Property 'newLines' does not exist on type '{}'.
 src/patch/merge.ts(7,57): error TS2339: Property 'lines' does not exist on type 'string'.
@@ -265,7 +252,6 @@ src/patch/merge.ts(133,45): error TS2339: Property 'oldLines' does not exist on 
 src/patch/merge.ts(134,20): error TS2339: Property 'newStart' does not exist on type 'object'.
 src/patch/merge.ts(134,54): error TS2339: Property 'newLines' does not exist on type 'object'.
 src/patch/merge.ts(135,17): error TS2339: Property 'lines' does not exist on type 'object'.
-src/patch/merge.ts(139,114): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(150,15): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/merge.ts(150,28): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(150,50): error TS2339: Property 'index' does not exist on type 'object'.
@@ -284,7 +270,6 @@ src/patch/merge.ts(173,12): error TS2339: Property 'index' does not exist on typ
 src/patch/merge.ts(174,13): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/merge.ts(177,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
 src/patch/merge.ts(185,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
-src/patch/merge.ts(188,67): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(189,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/patch/merge.ts(190,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/patch/merge.ts(195,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
@@ -293,17 +278,14 @@ src/patch/merge.ts(199,31): error TS2345: Argument of type 'string' is not assig
 src/patch/merge.ts(200,12): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(204,10): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(208,18): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-src/patch/merge.ts(211,79): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(212,7): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 src/patch/merge.ts(213,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 src/patch/merge.ts(214,20): error TS2339: Property 'merged' does not exist on type 'object'.
 src/patch/merge.ts(215,10): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(215,38): error TS2339: Property 'merged' does not exist on type 'object'.
 src/patch/merge.ts(217,20): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
-src/patch/merge.ts(221,63): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(222,8): error TS2339: Property 'conflict' does not exist on type 'object'.
 src/patch/merge.ts(223,8): error TS2339: Property 'lines' does not exist on type 'object'.
-src/patch/merge.ts(230,70): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(231,17): error TS2339: Property 'offset' does not exist on type 'object'.
 src/patch/merge.ts(231,32): error TS2339: Property 'offset' does not exist on type 'object'.
 src/patch/merge.ts(231,49): error TS2339: Property 'index' does not exist on type 'object'.
@@ -312,7 +294,6 @@ src/patch/merge.ts(232,31): error TS2339: Property 'lines' does not exist on typ
 src/patch/merge.ts(232,44): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/merge.ts(233,10): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(234,12): error TS2339: Property 'offset' does not exist on type 'object'.
-src/patch/merge.ts(237,56): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(238,17): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/merge.ts(238,32): error TS2339: Property 'lines' does not exist on type 'object'.
 src/patch/merge.ts(239,31): error TS2339: Property 'lines' does not exist on type 'object'.
@@ -349,13 +330,11 @@ src/patch/merge.ts(352,31): error TS2339: Property 'oldLines' does not exist on 
 src/patch/merge.ts(359,21): error TS2339: Property 'newLines' does not exist on type 'string'.
 src/patch/merge.ts(359,45): error TS2339: Property 'newLines' does not exist on type 'string'.
 src/patch/merge.ts(360,31): error TS2339: Property 'newLines' does not exist on type 'string'.
-src/patch/parse.ts(7,26): error TS2304: Cannot find name 'Void'.
 src/patch/parse.ts(21,19): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/patch/parse.ts(23,15): error TS2339: Property 'index' does not exist on type 'object'.
 src/patch/parse.ts(35,11): error TS2339: Property 'hunks' does not exist on type 'object'.
 src/patch/parse.ts(43,15): error TS2339: Property 'hunks' does not exist on type 'object'.
 src/patch/parse.ts(44,34): error TS2339: Property 'strict' does not exist on type 'object'.
-src/patch/parse.ts(55,44): error TS2304: Cannot find name 'Void'.
 src/patch/parse.ts(90,14): error TS2339: Property 'oldLines' does not exist on type 'object'.
 src/patch/parse.ts(91,12): error TS2339: Property 'oldStart' does not exist on type 'object'.
 src/patch/parse.ts(93,14): error TS2339: Property 'newLines' does not exist on type 'object'.

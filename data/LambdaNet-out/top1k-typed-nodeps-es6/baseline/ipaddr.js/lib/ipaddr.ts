@@ -162,7 +162,7 @@
         // Constructs a new IPv4 address from an array of four octets
         // in network order (MSB first)
         // Verifies the input.
-        function IPv4 (octets: any[]): Void {
+        function IPv4 (octets: any[]): void {
             if (octets.length !== 4) {
                 throw new Error('ipaddr: ipv4 octet count should be 4');
             }
@@ -502,7 +502,7 @@
         // Constructs an IPv6 address from an array of eight 16 - bit parts
         // or sixteen 8 - bit parts in network order(MSB first).
         // Throws an error if the input is invalid.
-        function IPv6 (parts: any[], zoneId: number): Void {
+        function IPv6 (parts: any[], zoneId: number): void {
             let i: number, part: number;
 
             if (parts.length === 16) {

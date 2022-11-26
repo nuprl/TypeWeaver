@@ -35,7 +35,7 @@ require('./index').polyfill();
     return to;
   }
 
-  function polyfill(): Void {
+  function polyfill(): void {
     if (!Object.assign) {
       Object.defineProperty(Object, 'assign', {
         enumerable: false,

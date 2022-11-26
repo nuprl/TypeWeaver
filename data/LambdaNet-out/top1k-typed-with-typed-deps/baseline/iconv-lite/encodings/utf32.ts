@@ -6,7 +6,7 @@ var Buffer: object = require('safer-buffer').Buffer;
 
 exports._utf32 = Utf32Codec;
 
-function Utf32Codec(codecOptions: object, iconv: Function): Void {
+function Utf32Codec(codecOptions: object, iconv: Function): void {
     this.iconv = iconv;
     this.bomAware = true;
     this.isLE = codecOptions.isLE;
@@ -24,7 +24,7 @@ Utf32Codec.prototype.decoder = Utf32Decoder;
 
 // -- Encoding
 
-function Utf32Encoder(options: object, codec: object): Void {
+function Utf32Encoder(options: object, codec: object): void {
     this.isLE = codec.isLE;
     this.highSurrogate = 0;
 }
@@ -97,7 +97,7 @@ Utf32Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32Decoder(options: object, codec: object): Void {
+function Utf32Decoder(options: object, codec: object): void {
     this.isLE = codec.isLE;
     this.badChar = codec.iconv.defaultCharUnicode.charCodeAt(0);
     this.overflow = [];
@@ -192,7 +192,7 @@ Utf32Decoder.prototype.end = function() {
 exports.utf32 = Utf32AutoCodec;
 exports.ucs4 = 'utf32';
 
-function Utf32AutoCodec(options: object, iconv: Function): Void {
+function Utf32AutoCodec(options: object, iconv: Function): void {
     this.iconv = iconv;
 }
 
@@ -201,7 +201,7 @@ Utf32AutoCodec.prototype.decoder = Utf32AutoDecoder;
 
 // -- Encoding
 
-function Utf32AutoEncoder(options: object, codec: object): Void {
+function Utf32AutoEncoder(options: object, codec: object): void {
     options = options || {};
 
     if (options.addBOM === undefined)
@@ -220,7 +220,7 @@ Utf32AutoEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32AutoDecoder(options: object, codec: object): Void {
+function Utf32AutoDecoder(options: object, codec: object): void {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;

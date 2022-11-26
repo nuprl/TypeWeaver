@@ -17,7 +17,7 @@ function async(callback: Function): Function
   // check if async happened
   defer(function() { isAsync = true; });
 
-  return function async_callback(err: string, result: string): Void
+  return function async_callback(err: string, result: string): void
   {
     if (isAsync)
     {
@@ -25,7 +25,7 @@ function async(callback: Function): Function
     }
     else
     {
-      defer(function nextTick_callback(): Void
+      defer(function nextTick_callback(): void
       {
         callback(err, result);
       });

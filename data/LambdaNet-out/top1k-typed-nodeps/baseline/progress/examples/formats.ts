@@ -16,7 +16,7 @@ var id: number = setInterval(function(){
   }
 }, 100);
 
-function bar2(): Void {
+function bar2(): void {
   var bar: object = new ProgressBar('  processing: [:bar]', {
       total: 15
     , complete: '*'
@@ -32,7 +32,7 @@ function bar2(): Void {
   }, 100);
 }
 
-function bar3(): Void {
+function bar3(): void {
   var bar: object = new ProgressBar('  download |:bar| :percent', {
       complete: '='
     , incomplete: ' '
@@ -49,7 +49,7 @@ function bar3(): Void {
   }, 100);
 }
 
-function bar4(): Void {
+function bar4(): void {
   var bar: object = new ProgressBar('  :current of :total :percent', {
     total: 20
   });
@@ -63,7 +63,7 @@ function bar4(): Void {
   }, 100);
 }
 
-function bar5(): Void {
+function bar5(): void {
   var bar: object = new ProgressBar('  [:bar] :elapseds elapsed, eta :etas', {
       width: 8
     , total: 50

@@ -7,7 +7,7 @@ var CSSOM: HTMLElement = {};
  * @constructor
  * @see https://developer.mozilla.org/en/CSS/@-moz-document
  */
-CSSOM.MatcherList = function MatcherList(): Void{
+CSSOM.MatcherList = function MatcherList(): void{
     this.length = 0;
 };
 

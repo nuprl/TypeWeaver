@@ -5,7 +5,7 @@ module.exports = createRBTree
 var RED: number   = 0
 var BLACK: number = 1
 
-function RBNode(color: string, key: string, value: string, left: number, right: string, count: Function): Void {
+function RBNode(color: string, key: string, value: string, left: number, right: string, count: Function): void {
   this._color = color
   this.key = key
   this.value = value
@@ -22,11 +22,11 @@ function repaint(color: string, node: object): string {
   return new RBNode(color, node.key, node.value, node.left, node.right, node._count)
 }
 
-function recount(node: HTMLElement): Void {
+function recount(node: HTMLElement): void {
   node._count = 1 + (node.left ? node.left._count : 0) + (node.right ? node.right._count : 0)
 }
 
-function RedBlackTree(compare: Function, root: string): Void {
+function RedBlackTree(compare: Function, root: string): void {
   this._compare = compare
   this.root = root
 }
@@ -491,7 +491,7 @@ proto.get = function(key: string) {
 }
 
 //Iterator for red black tree
-function RedBlackTreeIterator(tree: Function, stack: any[]): Void {
+function RedBlackTreeIterator(tree: Function, stack: any[]): void {
   this.tree = tree
   this._stack = stack
 }
@@ -522,7 +522,7 @@ iproto.clone = function() {
 }
 
 //Swaps two nodes
-function swapNode(n: HTMLElement, v: HTMLElement): Void {
+function swapNode(n: HTMLElement, v: HTMLElement): void {
   n.key = v.key
   n.value = v.value
   n.left = v.left
@@ -532,7 +532,7 @@ function swapNode(n: HTMLElement, v: HTMLElement): Void {
 }
 
 //Fix up a double black node in a tree
-function fixDoubleBlack(stack: any[]): Void {
+function fixDoubleBlack(stack: any[]): void {
   var n: string, p: object, s: any[], z: any[]
   for(var i=stack.length-1; i>=0; --i) {
     n = stack[i]

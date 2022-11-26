@@ -12,13 +12,13 @@
 })(this, function() {
   "use strict";
 
-  function peg$subclass(child: object, parent: object): Void {
-    function ctor(): Void { this.constructor = child; }
+  function peg$subclass(child: object, parent: object): void {
+    function ctor(): void { this.constructor = child; }
     ctor.prototype = parent.prototype;
     child.prototype = new ctor();
   }
 
-  function peg$SyntaxError(message: string, expected: string, found: any[], location: Function): Void {
+  function peg$SyntaxError(message: string, expected: string, found: any[], location: Function): void {
     this.message  = message;
     this.expected = expected;
     this.found    = found;
@@ -316,7 +316,7 @@
       return peg$computeLocation(peg$savedPos, peg$currPos);
     }
 
-    function expected(description: string, location: string): Void {
+    function expected(description: string, location: string): void {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildStructuredError(
@@ -326,7 +326,7 @@
       );
     }
 
-    function error(message: string, location: string): Void {
+    function error(message: string, location: string): void {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildSimpleError(message, location);
@@ -403,7 +403,7 @@
       };
     }
 
-    function peg$fail(expected: string): Void {
+    function peg$fail(expected: string): void {
       if (peg$currPos < peg$maxFailPos) { return; }
 
       if (peg$currPos > peg$maxFailPos) {

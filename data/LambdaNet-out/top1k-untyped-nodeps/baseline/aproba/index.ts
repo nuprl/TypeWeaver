@@ -17,12 +17,12 @@ const types: object = {
   Z: {label: 'null', check: (_: string) => _ == null}
 }
 
-function addSchema (schema: string, arity: Promise): Void {
+function addSchema (schema: string, arity: Promise): void {
   const group: any[] = arity[schema.length] = arity[schema.length] || []
   if (group.indexOf(schema) === -1) group.push(schema)
 }
 
-function validate (rawSchemas: string, args: any[]): Void {
+function validate (rawSchemas: string, args: any[]): void {
   if (arguments.length !== 2) throw wrongNumberOfArgs(['SA'], arguments.length)
   if (!rawSchemas) throw missingRequiredArg(0, 'rawSchemas')
   if (!args) throw missingRequiredArg(1, 'args')

@@ -15,7 +15,7 @@ function debugOutput(name: string, options: object, startTime: number, data: obj
 function createDefaultLogger(level: number): Function {
     let lastDebug: number;
 
-    return function logger(title: string, ast: boolean): Void {
+    return function logger(title: string, ast: boolean): void {
         let line: string = title;
 
         if (ast) {
@@ -48,7 +48,7 @@ function buildCompressOptions(options: object): TRBL {
     return options;
 }
 
-function runHandler(ast: string, options: object, handlers: any[]): Void {
+function runHandler(ast: string, options: object, handlers: any[]): void {
     if (!Array.isArray(handlers)) {
         handlers = [handlers];
     }

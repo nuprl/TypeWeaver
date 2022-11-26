@@ -43,7 +43,7 @@ function generateUID(): string {
     return result;
 }
 
-function deleteFunctions(obj: object): Void{
+function deleteFunctions(obj: object): void{
     var functionKeys: any[] = [];
     for (var key in obj) {
         if (typeof obj[key] === "function") {

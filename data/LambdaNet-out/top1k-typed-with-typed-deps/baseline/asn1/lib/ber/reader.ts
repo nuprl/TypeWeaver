@@ -15,7 +15,7 @@ var newInvalidAsn1Error: object = errors.newInvalidAsn1Error;
 
 // --- API
 
-function Reader(data: any[]): Void {
+function Reader(data: any[]): void {
   if (!data || !Buffer.isBuffer(data))
     throw new TypeError('data must be a node Buffer');
 

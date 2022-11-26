@@ -6,7 +6,7 @@ import GNTP from './gntp.js';
  * @api private
  */
 
-function Growly(): Void {
+function Growly(): void {
     this.appname = 'Growly';
     this.notifications = undefined;
     this.labels = undefined;

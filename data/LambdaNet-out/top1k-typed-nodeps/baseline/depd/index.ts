@@ -109,7 +109,7 @@ function depd (namespace: number): string {
   var site: object = callSiteLocation(stack[1])
   var file: string = site[0]
 
-  function deprecate (message: string): Void {
+  function deprecate (message: string): void {
     // call to self as log
     log.call(deprecate, message)
   }
@@ -182,7 +182,7 @@ function istraced (namespace: string): boolean {
  * Display deprecation message.
  */
 
-function log (message: string, site: any[]): Void {
+function log (message: string, site: any[]): void {
   var haslisteners: boolean = eehaslisteners(process, 'deprecation')
 
   // abort early if no destination
@@ -436,7 +436,7 @@ function wrapfunction (fn: any[], message: string): object {
  * Wrap property in a deprecation message.
  */
 
-function wrapproperty (obj: string, prop: string, message: string): Void {
+function wrapproperty (obj: string, prop: string, message: string): void {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw new TypeError('argument obj must be object')
   }
@@ -529,7 +529,7 @@ function DeprecationError (namespace: string, message: string, stack: string): o
       // prepare stack trace
       return (stackString = createStackString.call(this, stack))
     },
-    set: function setter (val: number): Void {
+    set: function setter (val: number): void {
       stackString = val
     }
   })

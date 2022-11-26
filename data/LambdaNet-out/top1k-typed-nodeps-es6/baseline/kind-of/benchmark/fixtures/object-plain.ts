@@ -1,2 +1,2 @@
-function Foo(): Void {}
+function Foo(): void {}
 export default [new Foo()];

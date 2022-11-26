@@ -25,11 +25,11 @@ const cast: any[] = resolve;
 
 const async: Function = (callback: string, arg: string) => config.async(callback, arg);
 
-function on(): Void {
+function on(): void {
   config.on(...arguments);
 }
 
-function off(): Void {
+function off(): void {
   config.off(...arguments);
 }
 

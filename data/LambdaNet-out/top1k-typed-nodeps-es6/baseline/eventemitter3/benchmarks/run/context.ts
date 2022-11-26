@@ -12,7 +12,7 @@ import Master from '../../';
 
 var ctx: object = { foo: 'bar' };
 
-function handle(): Void {
+function handle(): void {
   if (arguments.length > 100) console.log('damn');
 }
 
@@ -76,8 +76,8 @@ ce.on('foo', handle.bind(ctx));
   ce.emit('foo', 'bar');
   ce.emit('foo', 'bar', 'baz');
   ce.emit('foo', 'bar', 'baz', 'boom');
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

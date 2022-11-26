@@ -1,4 +1,4 @@
-function set(obj: object, key: string, val: object): Void {
+function set(obj: object, key: string, val: object): void {
 	if (typeof val.value === 'object') val.value = klona(val.value);
 	if (!val.enumerable || val.get || val.set || !val.configurable || !val.writable || key === '__proto__') {
 		Object.defineProperty(obj, key, val);

@@ -4,7 +4,7 @@ module.exports = MuteStream
 
 // var out = new MuteStream(process.stdout)
 // argument auto-pipes
-function MuteStream (opts: string): Void {
+function MuteStream (opts: string): void {
   Stream.apply(this)
   opts = opts || {}
   this.writable = this.readable = true
@@ -41,7 +41,7 @@ Object.defineProperty(MuteStream.prototype, '_onpipe', {
   configurable: true
 })
 
-function onPipe (src: Function): Void {
+function onPipe (src: Function): void {
   this._src = src
 }
 
@@ -60,7 +60,7 @@ function getIsTTY (): boolean {
 }
 
 // basically just get replace the getter/setter with a regular value
-function setIsTTY (isTTY: number): Void {
+function setIsTTY (isTTY: number): void {
   Object.defineProperty(this, 'isTTY', {
     value: isTTY,
     enumerable: true,

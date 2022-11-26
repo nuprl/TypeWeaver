@@ -5,7 +5,7 @@ import Watchpack from '../';
 
 var folder: string = path.join(__dirname, "folder");
 
-function startWatcher(name: string, files: string, folders: string): Void {
+function startWatcher(name: string, files: string, folders: string): void {
 	var w: Watchpack = new Watchpack({
 		aggregateTimeout: 3000
 	});

@@ -16,16 +16,13 @@ lib/hash.ts(14,20): error TS2339: Property 'sha' does not exist on type 'HTMLEle
 lib/hash.ts(15,6): error TS2339: Property 'ripemd160' does not exist on type 'HTMLElement'.
 lib/hash.ts(15,23): error TS2339: Property 'ripemd' does not exist on type 'HTMLElement'.
 lib/hash/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/common.ts(6,23): error TS2304: Cannot find name 'Void'.
 lib/hash/hmac.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
 lib/hash/hmac.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/hmac.ts(10,25): error TS2339: Property 'blockSize' does not exist on type 'object'.
 lib/hash/hmac.ts(11,23): error TS2339: Property 'outSize' does not exist on type 'object'.
-lib/hash/hmac.ts(19,51): error TS2304: Cannot find name 'Void'.
 lib/hash/ripemd.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
 lib/hash/ripemd.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/ripemd.ts(14,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/ripemd.ts(29,76): error TS2304: Cannot find name 'Void'.
 lib/hash/ripemd.ts(42,7): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/hash/ripemd.ts(43,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -55,7 +52,6 @@ lib/hash/sha/1.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default e
 lib/hash/sha/1.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/1.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
 lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/1.ts(37,72): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/1.ts(44,12): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/hash/sha/1.ts(54,29): error TS2349: This expression is not callable.
@@ -80,7 +76,6 @@ lib/hash/sha/256.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default
 lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/256.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
 lib/hash/sha/256.ts(41,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/256.ts(59,74): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/256.ts(79,22): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
 lib/hash/sha/256.ts(83,9): error TS2349: This expression is not callable.
@@ -110,13 +105,11 @@ lib/hash/sha/384.ts(30,7): error TS2367: This condition will always return 'fals
 lib/hash/sha/512.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
 lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/512.ts(66,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/512.ts(89,86): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/512.ts(95,16): error TS2339: Property 'length' does not exist on type 'object'.
 lib/hash/sha/512.ts(96,9): error TS2322: Type 'number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(97,9): error TS2322: Type 'number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(100,9): error TS2322: Type 'number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(101,9): error TS2322: Type 'number' is not assignable to type 'Function'.
-lib/hash/sha/512.ts(118,74): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/512.ts(142,9): error TS2322: Type 'Function' is not assignable to type 'string'.
 lib/hash/sha/512.ts(144,9): error TS2322: Type 'number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(144,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
@@ -272,7 +265,6 @@ lib/hash/utils.ts(169,10): error TS2362: The left-hand side of an arithmetic ope
 lib/hash/utils.ts(174,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(179,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(184,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(188,67): error TS2304: Cannot find name 'Void'.
 lib/hash/utils.ts(192,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(194,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(202,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

@@ -3,7 +3,7 @@ import {parsePatch} from './parse';
 
 import {arrayEqual, arrayStartsWith} from '../util/array';
 
-export function calcLineCount(hunk: string): Void {
+export function calcLineCount(hunk: string): void {
   const {oldLines, newLines} = calcOldNewLineCount(hunk.lines);
 
   if (oldLines !== undefined) {
@@ -136,7 +136,7 @@ function cloneHunk(hunk: object, offset: string): object {
   };
 }
 
-function mergeLines(hunk: object, mineOffset: number, mineLines: any[], theirOffset: number, theirLines: any[]): Void {
+function mergeLines(hunk: object, mineOffset: number, mineLines: any[], theirOffset: number, theirLines: any[]): void {
   // This will generally result in a conflicted hunk, but there are cases where the context
   // is the only overlap where we can successfully merge the content here.
   let mine: object = {offset: mineOffset, lines: mineLines, index: 0},
@@ -185,7 +185,7 @@ function mergeLines(hunk: object, mineOffset: number, mineLines: any[], theirOff
   calcLineCount(hunk);
 }
 
-function mutualChange(hunk: object, mine: string, their: string): Void {
+function mutualChange(hunk: object, mine: string, their: string): void {
   let myChanges: any[] = collectChange(mine),
       theirChanges: any[] = collectChange(their);
 
@@ -208,7 +208,7 @@ function mutualChange(hunk: object, mine: string, their: string): Void {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: object, mine: Function, their: string, swap: boolean): Void {
+function removal(hunk: object, mine: Function, their: string, swap: boolean): void {
   let myChanges: Function = collectChange(mine),
       theirChanges: object = collectContext(their, myChanges);
   if (theirChanges.merged) {
@@ -218,7 +218,7 @@ function removal(hunk: object, mine: Function, their: string, swap: boolean): Vo
   }
 }
 
-function conflict(hunk: object, mine: string, their: string): Void {
+function conflict(hunk: object, mine: string, their: string): void {
   hunk.conflict = true;
   hunk.lines.push({
     conflict: true,
@@ -227,14 +227,14 @@ function conflict(hunk: object, mine: string, their: string): Void {
   });
 }
 
-function insertLeading(hunk: object, insert: object, their: object): Void {
+function insertLeading(hunk: object, insert: object, their: object): void {
   while (insert.offset < their.offset && insert.index < insert.lines.length) {
     let line: string = insert.lines[insert.index++];
     hunk.lines.push(line);
     insert.offset++;
   }
 }
-function insertTrailing(hunk: object, insert: object): Void {
+function insertTrailing(hunk: object, insert: object): void {
   while (insert.index < insert.lines.length) {
     let line: string = insert.lines[insert.index++];
     hunk.lines.push(line);

@@ -11,7 +11,7 @@ var CSSOM: HTMLInputElement = {
  * @see http://dev.w3.org/csswg/cssom/#cssstylerule
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleRule
  */
-CSSOM.CSSStyleRule = function CSSStyleRule(): Void {
+CSSOM.CSSStyleRule = function CSSStyleRule(): void {
 	CSSOM.CSSRule.call(this);
 	this.selectorText = "";
 	this.style = new CSSOM.CSSStyleDeclaration();

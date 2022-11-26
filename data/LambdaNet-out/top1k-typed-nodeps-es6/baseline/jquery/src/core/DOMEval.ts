@@ -7,7 +7,7 @@ var preservedScriptAttributes: object = {
 	noModule: true
 };
 
-function DOMEval( code: string, node: object, doc: string ): Void {
+function DOMEval( code: string, node: object, doc: string ): void {
 	doc = doc || document;
 
 	var i: string,

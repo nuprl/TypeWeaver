@@ -38,7 +38,7 @@ try {
  * @param {boolean=} unsigned Whether unsigned or not, defaults to signed
  * @constructor
  */
-function Long(low: number, high: number, unsigned: boolean): Void {
+function Long(low: number, high: number, unsigned: boolean): void {
 
   /**
    * The low 32 bits as a signed value.

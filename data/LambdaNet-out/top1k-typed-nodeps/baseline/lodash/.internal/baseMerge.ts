@@ -16,7 +16,7 @@ import keysIn from '../keysIn.js'
  * @param {Object} [stack] Tracks traversed source values and their merged
  *  counterparts.
  */
-function baseMerge(object: object, source: string, srcIndex: number, customizer: Function, stack: Stack): Void {
+function baseMerge(object: object, source: string, srcIndex: number, customizer: Function, stack: Stack): void {
   if (object === source) {
     return
   }

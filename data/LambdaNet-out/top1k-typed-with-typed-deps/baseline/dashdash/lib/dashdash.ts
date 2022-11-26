@@ -26,7 +26,7 @@ function shallowCopy(obj: object): object {
         return obj;
     }
     var copy: object = {};
-    Object.keys(obj).forEach(function onK(k: string): Void {
+    Object.keys(obj).forEach(function onK(k: string): void {
         copy[k] = obj[k];
     });
     return copy;
@@ -61,7 +61,7 @@ function textwrap(s: string, width: number): any[] {
     var words: any[] = s.trim().split(/\s+/);
     var lines: any[] = [];
     var line: string = '';
-    words.forEach(function onWord(w: string): Void {
+    words.forEach(function onWord(w: string): void {
         var newLength: number = line.length + w.length;
         if (line.length > 0) {
             newLength += 1;
@@ -255,7 +255,7 @@ var optionTypes: object = {
  *        the presence of '--' will stop option parsing, as all good
  *        option parsers should.
  */
-function Parser(config: HTMLElement): Void {
+function Parser(config: HTMLElement): void {
     assert.object(config, 'config');
     assert.arrayOfObject(config.options, 'config.options');
     assert.optionalBool(config.interspersed, 'config.interspersed');
@@ -321,7 +321,7 @@ function Parser(config: HTMLElement): Void {
             );
         }
         o.key = optionKeyFromName(o.names[0]);
-        o.names.forEach(function onName(n: string): Void {
+        o.names.forEach(function onName(n: string): void {
             if (self.optionFromName[n]) {
                 throw new Error(
                     format(
@@ -334,7 +334,7 @@ function Parser(config: HTMLElement): Void {
             }
             self.optionFromName[n] = o;
         });
-        env.forEach(function onName(n: string): Void {
+        env.forEach(function onName(n: string): void {
             if (self.optionFromEnv[n]) {
                 throw new Error(
                     format(
@@ -389,7 +389,7 @@ Parser.prototype.parse = function parse(inputs: object): object {
     var opts: object = {};
     var _order: any[] = [];
 
-    function addOpt(option: object, optstr: number, key: string, val: number, from: string): Void {
+    function addOpt(option: object, optstr: number, key: string, val: number, from: string): void {
         var type: object = optionTypes[option.type];
         var parsedVal: any[] = type.parseArg(option, optstr, val);
         if (type.array) {
@@ -553,7 +553,7 @@ Parser.prototype.parse = function parse(inputs: object): object {
     _args = _args.concat(args.slice(i));
 
     // Parse environment.
-    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: string): Void {
+    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: string): void {
         var val: string = env[envname];
         if (val === undefined) {
             return;
@@ -575,7 +575,7 @@ Parser.prototype.parse = function parse(inputs: object): object {
     });
 
     // Apply default values.
-    this.options.forEach(function onOpt(o: object): Void {
+    this.options.forEach(function onOpt(o: object): void {
         if (opts[o.key] === undefined) {
             if (o.default !== undefined) {
                 opts[o.key] = o.default;
@@ -651,7 +651,7 @@ Parser.prototype.help = function help(config: HTMLElement): string {
 
     var lines: any[] = [];
     var maxWidth: number = 0;
-    this.options.forEach(function onOpt(o: object): Void {
+    this.options.forEach(function onOpt(o: object): void {
         if (o.hidden) {
             return;
         }
@@ -675,7 +675,7 @@ Parser.prototype.help = function help(config: HTMLElement): string {
                 }
             });
         }
-        names.forEach(function onName(name: string, i: number): Void {
+        names.forEach(function onName(name: string, i: number): void {
             if (i > 0) {
                 line += ', ';
             }
@@ -702,7 +702,7 @@ Parser.prototype.help = function help(config: HTMLElement): string {
         helpCol = Math.min(Math.max(helpCol, minHelpCol), maxHelpCol);
     }
     var i: number = -1;
-    this.options.forEach(function onOpt(o: object): Void {
+    this.options.forEach(function onOpt(o: object): void {
         if (o.hidden) {
             return;
         }
@@ -887,7 +887,7 @@ function bashCompletionSpecFromOptions(args: object): any[] {
     var shortopts: any[] = [];
     var longopts: any[] = [];
     var optargs: any[] = [];
-    (args.options || []).forEach(function onOpt(o: object): Void {
+    (args.options || []).forEach(function onOpt(o: object): void {
         if (o.group !== undefined && o.group !== null) {
             // Skip group headers.
             return;
@@ -898,7 +898,7 @@ function bashCompletionSpecFromOptions(args: object): any[] {
         if (optType.takesArg) {
             var completionType: number =
                 o.completionType || optType.completionType || o.type;
-            optNames.forEach(function onOptName(optName: string): Void {
+            optNames.forEach(function onOptName(optName: string): void {
                 if (optName.length === 1) {
                     if (includeHidden || !o.hidden) {
                         shortopts.push('-' + optName);
@@ -914,7 +914,7 @@ function bashCompletionSpecFromOptions(args: object): any[] {
                 }
             });
         } else {
-            optNames.forEach(function onOptName(optName: string): Void {
+            optNames.forEach(function onOptName(optName: string): void {
                 if (includeHidden || !o.hidden) {
                     if (optName.length === 1) {
                         shortopts.push('-' + optName);
@@ -1007,7 +1007,7 @@ function createParser(config: string): string {
  *      `dashdash.Parser` and `dashdash.Parser.parse`: options, interspersed,
  *      argv, env, slice.
  */
-function parse(config_: object): Void {
+function parse(config_: object): void {
     assert.object(config_, 'config');
     assert.optionalArrayOfString(config_.argv, 'config.argv');
     assert.optionalObject(config_.env, 'config.env');
@@ -1042,7 +1042,7 @@ function parse(config_: object): Void {
  *      - default Optional. Default value for options of this type, if no
  *        default is specified in the option type usage.
  */
-function addOptionType(optionType: object): Void {
+function addOptionType(optionType: object): void {
     assert.object(optionType, 'optionType');
     assert.string(optionType.name, 'optionType.name');
     assert.bool(optionType.takesArg, 'optionType.takesArg');
@@ -1089,7 +1089,7 @@ function synopsisFromOpt(o: object): any[] {
     var type: object = getOptionType(o.type);
     var helpArg: number = o.helpArg || (type && type.helpArg) || 'ARG';
     var parts: any[] = [];
-    names.forEach(function onName(name: string): Void {
+    names.forEach(function onName(name: string): void {
         var part: string = (name.length === 1 ? '-' : '--') + name;
         if (type && type.takesArg) {
             part += name.length === 1 ? ' ' + helpArg : '=' + helpArg;

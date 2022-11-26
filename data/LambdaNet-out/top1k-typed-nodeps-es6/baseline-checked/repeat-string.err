@@ -20,7 +20,7 @@ benchmark/helper.ts(6,22): error TS2307: Cannot find module 'isobject' or its co
 benchmark/helper.ts(7,18): error TS2307: Cannot find module 'text-table' or its corresponding type declarations.
 benchmark/helper.ts(33,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmark/helper.ts(37,7): error TS2339: Property 'title' does not exist on type 'object'.
-benchmark/helper.ts(42,50): error TS2304: Cannot find name 'Void'.
+benchmark/helper.ts(39,3): error TS2322: Type 'void' is not assignable to type 'string'.
 benchmark/helper.ts(48,9): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 benchmark/helper.ts(49,13): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 benchmark/helper.ts(52,7): error TS2322: Type 'any[]' is not assignable to type 'string'.

@@ -6,13 +6,10 @@ benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must
 benchmark/parse-top.ts(15,40): error TS2339: Property 'Suite' does not exist on type 'any[]'.
 benchmark/parse-top.ts(18,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(25,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(25,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(29,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(29,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(30,14): error TS2339: Property 'add' does not exist on type 'any[]'.
 benchmark/parse-top.ts(30,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse-top.ts(33,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(33,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse-top.ts(34,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/parse-top.ts(37,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
@@ -25,13 +22,10 @@ benchmark/parse.ts(34,7): error TS2339: Property 'add' does not exist on type 'H
 benchmark/parse.ts(40,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(46,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(52,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(52,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(56,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(56,53): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(57,14): error TS2339: Property 'add' does not exist on type 'any[]'.
 benchmark/parse.ts(57,24): error TS2339: Property 'target' does not exist on type 'object'.
 benchmark/parse.ts(60,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-benchmark/parse.ts(60,46): error TS2304: Cannot find name 'Void'.
 benchmark/parse.ts(61,14): error TS2339: Property 'log' does not exist on type 'any[]'.
 benchmark/parse.ts(64,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(66,10): error TS2393: Duplicate function implementation.
@@ -65,13 +59,10 @@ index.ts(197,13): error TS2339: Property 'sameSite' does not exist on type 'HTML
 index.ts(197,42): error TS2339: Property 'sameSite' does not exist on type 'HTMLElement'.
 index.ts(200,12): error TS2678: Type 'boolean' is not comparable to type 'string'.
 index.ts(253,5): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-index.ts(264,52): error TS2304: Cannot find name 'Void'.
-index.ts(264,52): error TS4060: Return type of exported function has or is using private name 'Void'.
+index.ts(268,5): error TS2322: Type 'string' is not assignable to type 'void'.
 scripts/update-benchmark.ts(10,39): error TS2339: Property 'join' does not exist on type 'string'.
 scripts/update-benchmark.ts(12,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 scripts/update-benchmark.ts(19,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
-scripts/update-benchmark.ts(22,50): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(22,50): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/update-benchmark.ts(23,30): error TS2339: Property 'parse' does not exist on type 'string'.
 scripts/update-benchmark.ts(24,7): error TS2322: Type 'string' is not assignable to type 'any[]'.
 scripts/update-benchmark.ts(26,9): error TS2339: Property 'get' does not exist on type 'any[]'.
@@ -80,12 +71,8 @@ scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not
 scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(30,17): error TS2339: Property 'resolve' does not exist on type 'string'.
 scripts/update-benchmark.ts(30,35): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
-scripts/update-benchmark.ts(37,60): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(37,60): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'object' is not assignable to parameter of type 'HTMLElement'.
 scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'object'.
-scripts/update-benchmark.ts(53,62): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(53,62): error TS4060: Return type of exported function has or is using private name 'Void'.
 scripts/update-benchmark.ts(54,26): error TS2339: Property 'format' does not exist on type 'string'.
 scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'object'.

@@ -22,7 +22,7 @@ function nextPow2(size: number): number {
 }
 
 // Expandable buffer that we can provide a size hint for
-function Accumulator(initsize: string): Void {
+function Accumulator(initsize: string): void {
   this.buf = Buffer.alloc(nextPow2(initsize || 8192));
   this.readOffset = 0;
   this.writeOffset = 0;
@@ -217,7 +217,7 @@ var MAX_INT8: number = 127;
 var MAX_INT16: number = 32767;
 var MAX_INT32: number = 2147483647;
 
-function BunserBuf(): Void {
+function BunserBuf(): void {
   EE.call(this);
   this.buf = new Accumulator();
   this.state = ST_NEED_PDU;
@@ -461,7 +461,7 @@ function byteswap64(buf: any[]): object {
   return swap;
 }
 
-function dump_int64(buf: any[], val: object): Void {
+function dump_int64(buf: any[], val: object): void {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be: string = val.toBuffer();
 
@@ -478,7 +478,7 @@ function dump_int64(buf: any[], val: object): Void {
   buf.append(le);
 }
 
-function dump_int(buf: HTMLElement, val: number): Void {
+function dump_int(buf: HTMLElement, val: number): void {
   var abs: number = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
@@ -494,7 +494,7 @@ function dump_int(buf: HTMLElement, val: number): Void {
   }
 }
 
-function dump_any(buf: object, val: number): Void {
+function dump_any(buf: object, val: number): void {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

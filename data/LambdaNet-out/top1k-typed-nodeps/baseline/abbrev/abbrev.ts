@@ -2,7 +2,7 @@ module.exports = exports = abbrev.abbrev = abbrev
 
 abbrev.monkeyPatch = monkeyPatch
 
-function monkeyPatch (): Void {
+function monkeyPatch (): void {
   Object.defineProperty(Array.prototype, 'abbrev', {
     value: function () { return abbrev(this) },
     enumerable: false, configurable: true, writable: true

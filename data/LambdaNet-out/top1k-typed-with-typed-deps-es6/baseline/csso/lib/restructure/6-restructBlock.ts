@@ -89,7 +89,7 @@ function getPropertyFingerprint(propertyName: string, declaration: object, finge
                 let iehack: string = '';
                 let raw: boolean = false;
 
-                declaration.value.children.forEach(function walk(node: object): Void {
+                declaration.value.children.forEach(function walk(node: object): void {
                     switch (node.type) {
                         case 'Value':
                         case 'Brackets':
@@ -217,7 +217,7 @@ function needless(props: object, declaration: object, fingerprints: string): TRB
     }
 }
 
-function processRule(rule: object, item: string, list: Map, props: object, fingerprints: string): Void {
+function processRule(rule: object, item: string, list: Map, props: object, fingerprints: string): void {
     const declarations: any[] = rule.block.children;
 
     declarations.forEachRight(function(declaration: object, declarationItem: string) {
@@ -275,7 +275,7 @@ function processRule(rule: object, item: string, list: Map, props: object, finge
     }
 }
 
-export default function restructBlock(ast: Function): Void {
+export default function restructBlock(ast: Function): void {
     const stylesheetMap: Function = {};
     const fingerprints: object = Object.create(null);
 

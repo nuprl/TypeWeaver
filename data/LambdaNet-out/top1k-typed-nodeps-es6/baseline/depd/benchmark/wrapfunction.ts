@@ -34,11 +34,11 @@ suite.add({
   fn: 'mylib.old()'
 })
 
-suite.on('cycle', function onCycle (event: object): Void {
+suite.on('cycle', function onCycle (event: object): void {
   benchmarks.add(event.target)
 })
 
-suite.on('complete', function onComplete (): Void {
+suite.on('complete', function onComplete (): void {
   benchmarks.log()
 })
 

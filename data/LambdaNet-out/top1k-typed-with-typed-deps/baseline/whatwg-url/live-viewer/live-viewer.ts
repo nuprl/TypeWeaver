@@ -31,7 +31,7 @@
   window.addEventListener("hashchange", setFromFragment);
   setFromFragment();
 
-  function update(): Void {
+  function update(): void {
     const browserResult: any[] = getBrowserResult();
     const jsdomResult: Function = getJsdomResult();
     const mismatchedComponents: Function = getMismatchedComponents(browserResult, jsdomResult);
@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: string, result: any[], mismatchedComponents: Map): Void {
+  function setResult(kind: string, result: any[], mismatchedComponents: Map): void {
     const output: EventTarget = document.querySelector(`#${kind}-output`);
     const error: Error = document.querySelector(`#${kind}-error`);
 
@@ -60,7 +60,7 @@
     }
   }
 
-  function setComponentElValue(componentEl: HTMLElement, value: string): Void {
+  function setComponentElValue(componentEl: HTMLElement, value: string): void {
     // This shows up in Edge where username/password are undefined.
     const isNonString: boolean = typeof value !== "string";
     const isEmptyString: boolean = value === "";
@@ -70,7 +70,7 @@
     componentEl.classList.toggle("non-string", isNonString);
   }
 
-  function setComponentElMismatch(componentEl: HTMLElement, isMismatched: boolean): Void {
+  function setComponentElMismatch(componentEl: HTMLElement, isMismatched: boolean): void {
     componentEl.classList.toggle("pass", !isMismatched);
     componentEl.classList.toggle("fail", isMismatched);
   }
@@ -115,7 +115,7 @@
     location.hash = `url=${encodeToBase64(urlInput.value)}&base=${encodeToBase64(baseInput.value)}`;
   }
 
-  function setFromFragment(): Void {
+  function setFromFragment(): void {
     const pieces: any[] = /#url=([^&]*)&base=(.*)/u.exec(location.hash);
     if (!pieces) {
       return;

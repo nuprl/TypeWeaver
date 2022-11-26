@@ -10,7 +10,7 @@ api.define = function define(name: string, body: Function): string {
   return new Entity(name, body);
 };
 
-function Entity(name: string, body: Function): Void {
+function Entity(name: string, body: Function): void {
   this.name = name;
   this.body = body;
 
@@ -21,11 +21,11 @@ function Entity(name: string, body: Function): Void {
 Entity.prototype._createNamed = function createNamed(Base: Function): object {
   const name: string = this.name;
 
-  function Generated(entity: string): Void {
+  function Generated(entity: string): void {
     this._initNamed(entity, name);
   }
   inherits(Generated, Base);
-  Generated.prototype._initNamed = function _initNamed(entity: string, name: string): Void {
+  Generated.prototype._initNamed = function _initNamed(entity: string, name: string): void {
     Base.call(this, entity, name);
   };
 

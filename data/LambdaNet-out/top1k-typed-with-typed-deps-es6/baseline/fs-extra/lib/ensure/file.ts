@@ -5,8 +5,8 @@ import path from 'path';
 import fs from 'graceful-fs';
 import mkdir from '../mkdirs';
 
-function createFile (file: string, callback: Function): Void {
-  function makeFile (): Void {
+function createFile (file: string, callback: Function): void {
+  function makeFile (): void {
     fs.writeFile(file, '', (err: boolean) => {
       if (err) return callback(err)
       callback()
@@ -40,7 +40,7 @@ function createFile (file: string, callback: Function): Void {
   })
 }
 
-function createFileSync (file: string): Void {
+function createFileSync (file: string): void {
   let stats: any[]
   try {
     stats = fs.statSync(file)

@@ -353,7 +353,7 @@ function parseFunctionArgs(functionArgs: object, count: number, rgb: boolean): a
     });
 }
 
-export function compressFunction(node: object, item: any[]): Void {
+export function compressFunction(node: object, item: any[]): void {
     let functionName: string = node.name;
     let args: object;
 
@@ -445,7 +445,7 @@ export function compressFunction(node: object, item: any[]): Void {
     }
 }
 
-export function compressIdent(node: object, item: any[]): Void {
+export function compressIdent(node: object, item: any[]): void {
     if (this.declaration === null) {
         return;
     }
@@ -475,7 +475,7 @@ export function compressIdent(node: object, item: any[]): Void {
     }
 }
 
-export function compressHex(node: object, item: any[]): Void {
+export function compressHex(node: object, item: any[]): void {
     let color: string = node.value.toLowerCase();
 
     // #112233 -> #123

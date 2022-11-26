@@ -1,7 +1,7 @@
 import bn from 'bn.js';
 import brorand from 'brorand';
 
-function MillerRabin(rand: string): Void {
+function MillerRabin(rand: string): void {
   this.rand = rand || new brorand.Rand();
 }
 export default MillerRabin;

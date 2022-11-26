@@ -7,7 +7,7 @@ var CSSOM: HTMLInputElement = {};
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
  */
-CSSOM.CSSStyleDeclaration = function CSSStyleDeclaration(): Void{
+CSSOM.CSSStyleDeclaration = function CSSStyleDeclaration(): void{
 	this.length = 0;
 	this.parentRule = null;
 

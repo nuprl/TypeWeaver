@@ -911,7 +911,7 @@ function getRange(text: string): object {
 /**
  * Checks class range
  */
-function checkClassRange(from: object, to: object): Void {
+function checkClassRange(from: object, to: object): void {
   if (from.kind === 'control' || to.kind === 'control' || (!isNaN(from.codePoint) && !isNaN(to.codePoint) && from.codePoint > to.codePoint)) {
     throw new SyntaxError(`Range ${from.value}-${to.value} out of order in character class`);
   }
@@ -1311,7 +1311,7 @@ function loc(start: object, end: object): object {
   };
 }
 
-function unexpectedToken(token: object): Void {
+function unexpectedToken(token: object): void {
   if (token.type === EOF) {
     unexpectedEndOfInput();
   }
@@ -1327,7 +1327,7 @@ function unexpectedEndOfInput(): Promise {
   parseError(`Unexpected end of input.`);
 }
 
-function parseError(message: string): Void {
+function parseError(message: string): void {
   throw new SyntaxError(message);
 }
 

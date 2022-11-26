@@ -20,7 +20,7 @@ function addImport (ss: Function, s: number, e: string, d: number): object {
   return impt;
 }
 
-function addExport (s: number, e: Function, ls: object, le: string): Void {
+function addExport (s: number, e: Function, ls: object, le: string): void {
   push({
     s,
     e,
@@ -31,7 +31,7 @@ function addExport (s: number, e: Function, ls: object, le: string): Void {
   });
 }
 
-function readName (impt: object): Void {
+function readName (impt: object): void {
   let { d, s } = impt;
   if (d !== -1)
     s++;
@@ -216,7 +216,7 @@ export function parse (_source: Function, _name: string): any[] {
   return [imports, exports, facade];
 }
 
-function tryParseImportStatement (): Void {
+function tryParseImportStatement (): void {
   const startPos: number = pos;
 
   pos += 6;
@@ -589,7 +589,7 @@ function readExportAs (startPos: number, endPos: number): number {
   return ch;
 }
 
-function readImportString (ss: string, ch: string): Void {
+function readImportString (ss: string, ch: string): void {
   const startPos: string = pos + 1;
   if (ch === 39/*'*/ || ch === 34/*"*/) {
     stringLiteral(ch);
@@ -677,7 +677,7 @@ function commentWhitespace (br: string): string {
   return ch;
 }
 
-function templateString (): Void {
+function templateString (): void {
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
     if (ch === 36/*$*/ && source.charCodeAt(pos + 1) === 123/*{*/) {
@@ -694,7 +694,7 @@ function templateString (): Void {
   syntaxError();
 }
 
-function blockComment (br: boolean): Void {
+function blockComment (br: boolean): void {
   pos++;
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
@@ -707,7 +707,7 @@ function blockComment (br: boolean): Void {
   }
 }
 
-function lineComment (): Void {
+function lineComment (): void {
   while (pos++ < end) {
     const ch: number = source.charCodeAt(pos);
     if (ch === 10/*\n*/ || ch === 13/*\r*/)
@@ -715,7 +715,7 @@ function lineComment (): Void {
   }
 }
 
-function stringLiteral (quote: number): Void {
+function stringLiteral (quote: number): void {
   while (pos++ < end) {
     let ch: number = source.charCodeAt(pos);
     if (ch === quote)
@@ -744,7 +744,7 @@ function regexCharacterClass (): number {
   syntaxError();
 }
 
-function regularExpression (): Void {
+function regularExpression (): void {
   while (pos++ < end) {
     let ch: number = source.charCodeAt(pos);
     if (ch === 47/*/*/)
@@ -914,6 +914,6 @@ function isExpressionTerminator (curPos: number): boolean {
   return false;
 }
 
-function syntaxError (): Void {
+function syntaxError (): void {
   throw Object.assign(new Error(`Parse error ${name}:${source.slice(0, pos).split('\n').length}:${pos - source.lastIndexOf('\n', pos - 1)}`), { idx: pos });
 }

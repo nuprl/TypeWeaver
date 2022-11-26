@@ -1,4 +1,4 @@
-export default function americanFlag (): Void {
+export default function americanFlag (): void {
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);
   console.log('LIBERTY LIBERTY LIBERTY'.america);
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);

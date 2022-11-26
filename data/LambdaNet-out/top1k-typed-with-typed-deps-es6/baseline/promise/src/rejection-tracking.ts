@@ -10,14 +10,14 @@ var DEFAULT_WHITELIST: any[] = [
 
 var enabled: boolean = false;
 exports.disable = disable;
-function disable(): Void {
+function disable(): void {
   enabled = false;
   Promise._onHandle = null;
   Promise._onReject = null;
 }
 
 exports.enable = enable;
-function enable(options: HTMLElement): Void {
+function enable(options: HTMLElement): void {
   options = options || {};
   if (enabled) disable();
   enabled = true;
@@ -57,7 +57,7 @@ function enable(options: HTMLElement): Void {
       };
     }
   };
-  function onUnhandled(id: string): Void {
+  function onUnhandled(id: string): void {
     if (
       options.allRejections ||
       matchWhitelist(
@@ -81,7 +81,7 @@ function enable(options: HTMLElement): Void {
       }
     }
   }
-  function onHandled(id: string): Void {
+  function onHandled(id: string): void {
     if (rejections[id].logged) {
       if (options.onHandled) {
         options.onHandled(rejections[id].displayId, rejections[id].error);
@@ -98,7 +98,7 @@ function enable(options: HTMLElement): Void {
   }
 }
 
-function logError(id: string, error: Error): Void {
+function logError(id: string, error: Error): void {
   console.warn('Possible Unhandled Promise Rejection (id: ' + id + '):');
   var errStr: string = (error && (error.stack || error)) + '';
   errStr.split('\n').forEach(function (line: string) {

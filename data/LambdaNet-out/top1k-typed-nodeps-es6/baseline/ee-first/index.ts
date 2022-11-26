@@ -52,12 +52,12 @@ function first (stuff: any[], done: Function): Function {
     }
   }
 
-  function callback (): Void {
+  function callback (): void {
     cleanup()
     done.apply(null, arguments)
   }
 
-  function cleanup (): Void {
+  function cleanup (): void {
     var x: object
     for (var i = 0; i < cleanups.length; i++) {
       x = cleanups[i]
@@ -65,7 +65,7 @@ function first (stuff: any[], done: Function): Function {
     }
   }
 
-  function thunk (fn: Function): Void {
+  function thunk (fn: Function): void {
     done = fn
   }
 
@@ -80,7 +80,7 @@ function first (stuff: any[], done: Function): Function {
  */
 
 function listener (event: string, done: Function): Function {
-  return function onevent (arg1: string): Void {
+  return function onevent (arg1: string): void {
     var args: any[] = new Array(arguments.length)
     var ee: any[] = this
     var err: string = event === 'error'

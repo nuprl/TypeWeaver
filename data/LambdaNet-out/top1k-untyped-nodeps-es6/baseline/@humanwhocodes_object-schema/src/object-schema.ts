@@ -35,7 +35,7 @@ const requiredKeys: string = Symbol("requiredKeys");
  * @throws {Error} When the strategy is missing a merge() method.
  * @throws {Error} When the strategy is missing a validate() method.
  */
-function validateDefinition(name: string, strategy: ObjectSchema): Void {
+function validateDefinition(name: string, strategy: ObjectSchema): void {
 
     let hasSchema: boolean = false;
     if (strategy.schema) {

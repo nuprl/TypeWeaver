@@ -11,10 +11,6 @@ graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
 graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
 graceful-fs.ts(14,3): error TS2322: Type 'symbol' is not assignable to type 'string'.
 graceful-fs.ts(16,3): error TS2322: Type 'symbol' is not assignable to type 'string'.
-graceful-fs.ts(22,19): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(22,19): error TS4060: Return type of exported function has or is using private name 'Void'.
-graceful-fs.ts(24,58): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(24,58): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(33,10): error TS2339: Property 'debuglog' does not exist on type 'string'.
 graceful-fs.ts(34,16): error TS2339: Property 'debuglog' does not exist on type 'string'.
 graceful-fs.ts(37,26): error TS2339: Property 'format' does not exist on type 'string'.
@@ -22,7 +18,6 @@ graceful-fs.ts(46,16): error TS2345: Argument of type 'string' is not assignable
 graceful-fs.ts(52,6): error TS2339: Property 'close' does not exist on type 'string'.
 graceful-fs.ts(69,9): error TS2339: Property 'close' does not exist on type 'string'.
 graceful-fs.ts(71,6): error TS2339: Property 'closeSync' does not exist on type 'string'.
-graceful-fs.ts(72,40): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(74,20): error TS2339: Property 'apply' does not exist on type 'any[]'.
 graceful-fs.ts(82,9): error TS2339: Property 'closeSync' does not exist on type 'string'.
 graceful-fs.ts(93,16): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Function'.
@@ -70,7 +65,6 @@ graceful-fs.ts(182,25): error TS2339: Property 'code' does not exist on type 'ob
 graceful-fs.ts(182,50): error TS2339: Property 'code' does not exist on type 'object'.
 graceful-fs.ts(192,33): error TS2339: Property 'readdir' does not exist on type 'string'.
 graceful-fs.ts(193,6): error TS2339: Property 'readdir' does not exist on type 'string'.
-graceful-fs.ts(195,69): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(202,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
   Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 graceful-fs.ts(207,17): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
@@ -87,7 +81,6 @@ graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it i
 graceful-fs.ts(274,7): error TS2322: Type '{ (path: string, options: object): any; prototype: any; }' is not assignable to type 'string'.
 graceful-fs.ts(285,7): error TS2322: Type '{ (path: string, options: object): any; prototype: any; }' is not assignable to type 'string'.
 graceful-fs.ts(297,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-graceful-fs.ts(304,32): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(306,15): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
 graceful-fs.ts(306,26): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
 graceful-fs.ts(306,38): error TS2339: Property 'mode' does not exist on type 'HTMLElement'.
@@ -99,7 +92,6 @@ graceful-fs.ts(313,14): error TS2339: Property 'fd' does not exist on type 'HTML
 graceful-fs.ts(314,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 graceful-fs.ts(315,14): error TS2339: Property 'read' does not exist on type 'HTMLElement'.
 graceful-fs.ts(320,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-graceful-fs.ts(327,33): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(329,15): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
 graceful-fs.ts(329,26): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
 graceful-fs.ts(329,38): error TS2339: Property 'mode' does not exist on type 'HTMLElement'.
@@ -116,12 +108,6 @@ graceful-fs.ts(354,5): error TS2322: Type 'boolean' is not assignable to type 's
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(358,25): error TS2339: Property 'code' does not exist on type 'object'.
 graceful-fs.ts(358,50): error TS2339: Property 'code' does not exist on type 'object'.
-graceful-fs.ts(371,34): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(371,34): error TS4060: Return type of exported function has or is using private name 'Void'.
-graceful-fs.ts(383,25): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(383,25): error TS4060: Return type of exported function has or is using private name 'Void'.
-graceful-fs.ts(397,20): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(397,20): error TS4060: Return type of exported function has or is using private name 'Void'.
 graceful-fs.ts(416,23): error TS2339: Property 'name' does not exist on type 'object'.
 graceful-fs.ts(417,8): error TS2339: Property 'apply' does not exist on type 'object'.
 graceful-fs.ts(420,25): error TS2339: Property 'name' does not exist on type 'object'.
@@ -141,7 +127,6 @@ legacy-streams.ts(76,48): error TS2350: Only a void function can be called with 
 legacy-streams.ts(113,23): error TS2339: Property 'open' does not exist on type 'number'.
 polyfills.ts(6,5): error TS2322: Type 'string' is not assignable to type 'number'.
 polyfills.ts(29,10): error TS2393: Duplicate function implementation.
-polyfills.ts(29,30): error TS2304: Cannot find name 'Void'.
 polyfills.ts(40,11): error TS2339: Property 'lutimes' does not exist on type 'string'.
 polyfills.ts(49,6): error TS2339: Property 'chown' does not exist on type 'string'.
 polyfills.ts(49,26): error TS2339: Property 'chown' does not exist on type 'string'.
@@ -193,8 +178,6 @@ polyfills.ts(96,7): error TS2367: This condition will always return 'false' sinc
 polyfills.ts(97,8): error TS2339: Property 'rename' does not exist on type 'string'.
 polyfills.ts(97,27): error TS2339: Property 'rename' does not exist on type 'string'.
 polyfills.ts(97,54): error TS2339: Property 'rename' does not exist on type 'string'.
-polyfills.ts(99,65): error TS2304: Cannot find name 'Void'.
-polyfills.ts(102,55): error TS2304: Cannot find name 'Void'.
 polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'object'.
 polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'object'.
 polyfills.ts(107,18): error TS2339: Property 'stat' does not exist on type 'string'.
@@ -209,7 +192,6 @@ polyfills.ts(149,6): error TS2339: Property 'readSync' does not exist on type 's
 polyfills.ts(149,27): error TS2339: Property 'readSync' does not exist on type 'string'.
 polyfills.ts(149,56): error TS2339: Property 'readSync' does not exist on type 'string'.
 polyfills.ts(163,10): error TS2339: Property 'readSync' does not exist on type 'string'.
-polyfills.ts(165,38): error TS2304: Cannot find name 'Void'.
 polyfills.ts(166,8): error TS2339: Property 'lchmod' does not exist on type 'string'.
 polyfills.ts(167,10): error TS2339: Property 'open' does not exist on type 'string'.
 polyfills.ts(168,26): error TS2339: Property 'O_WRONLY' does not exist on type 'string'.
@@ -223,7 +205,6 @@ polyfills.ts(186,73): error TS2339: Property 'O_SYMLINK' does not exist on type 
 polyfills.ts(193,18): error TS2339: Property 'fchmodSync' does not exist on type 'string'.
 polyfills.ts(198,16): error TS2339: Property 'closeSync' does not exist on type 'string'.
 polyfills.ts(201,14): error TS2339: Property 'closeSync' does not exist on type 'string'.
-polyfills.ts(208,39): error TS2304: Cannot find name 'Void'.
 polyfills.ts(209,53): error TS2339: Property 'futimes' does not exist on type 'string'.
 polyfills.ts(210,10): error TS2339: Property 'lutimes' does not exist on type 'string'.
 polyfills.ts(211,12): error TS2339: Property 'open' does not exist on type 'string'.
@@ -242,7 +223,6 @@ polyfills.ts(244,110): error TS2345: Argument of type 'boolean' is not assignabl
 polyfills.ts(245,10): error TS2339: Property 'lutimesSync' does not exist on type 'string'.
 polyfills.ts(254,20): error TS2339: Property 'apply' does not exist on type 'any[]'.
 polyfills.ts(276,20): error TS2339: Property 'apply' does not exist on type 'any[]'.
-polyfills.ts(301,55): error TS2304: Cannot find name 'Void'.
 polyfills.ts(303,21): error TS2339: Property 'uid' does not exist on type 'any[]'.
 polyfills.ts(303,36): error TS2339: Property 'uid' does not exist on type 'any[]'.
 polyfills.ts(304,21): error TS2339: Property 'gid' does not exist on type 'any[]'.

@@ -38,7 +38,7 @@ const stringFromCharCode: Function = String.fromCharCode;
  * @param {String} type The error type.
  * @returns {Error} Throws a `RangeError` with the applicable error message.
  */
-function error(type: string): Void {
+function error(type: string): void {
 	throw new RangeError(errors[type]);
 }
 

@@ -8,14 +8,14 @@ exports.readUInt32BE = function readUInt32BE(bytes: object, off: number): boolea
   return res >>> 0;
 };
 
-exports.writeUInt32BE = function writeUInt32BE(bytes: object, value: number, off: number): Void {
+exports.writeUInt32BE = function writeUInt32BE(bytes: object, value: number, off: number): void {
   bytes[0 + off] = value >>> 24;
   bytes[1 + off] = (value >>> 16) & 0xff;
   bytes[2 + off] = (value >>> 8) & 0xff;
   bytes[3 + off] = value & 0xff;
 };
 
-exports.ip = function ip(inL: string, inR: number, out: object, off: string): Void {
+exports.ip = function ip(inL: string, inR: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -45,7 +45,7 @@ exports.ip = function ip(inL: string, inR: number, out: object, off: string): Vo
   out[off + 1] = outR >>> 0;
 };
 
-exports.rip = function rip(inL: string, inR: number, out: object, off: string): Void {
+exports.rip = function rip(inL: string, inR: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -70,7 +70,7 @@ exports.rip = function rip(inL: string, inR: number, out: object, off: string): 
   out[off + 1] = outR >>> 0;
 };
 
-exports.pc1 = function pc1(inL: number, inR: number, out: object, off: string): Void {
+exports.pc1 = function pc1(inL: number, inR: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -132,7 +132,7 @@ var pc2table: any[] = [
   22, 3, 10, 14, 6, 20, 27, 24
 ];
 
-exports.pc2 = function pc2(inL: string, inR: string, out: object, off: string): Void {
+exports.pc2 = function pc2(inL: string, inR: string, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -150,7 +150,7 @@ exports.pc2 = function pc2(inL: string, inR: string, out: object, off: string): 
   out[off + 1] = outR >>> 0;
 };
 
-exports.expand = function expand(r: number, out: object, off: string): Void {
+exports.expand = function expand(r: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 

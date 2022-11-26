@@ -41,7 +41,7 @@ var HEADERS_TO_IGNORE: object = {
 
 // request: { path | body, [host], [method], [headers], [service], [region] }
 // credentials: { accessKeyId, secretAccessKey, [sessionToken] }
-function RequestSigner(request: object, credentials: string): Void {
+function RequestSigner(request: object, credentials: string): void {
 
   if (typeof request === 'string') request = url.parse(request)
 

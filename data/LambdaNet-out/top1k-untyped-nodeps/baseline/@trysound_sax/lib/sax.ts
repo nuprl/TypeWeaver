@@ -79,7 +79,7 @@
 
   if (!Object.create) {
     Object.create = function (o: any[]) {
-      function F (): Void {}
+      function F (): void {}
       F.prototype = o
       var newf: string = new F()
       return newf
@@ -94,7 +94,7 @@
     }
   }
 
-  function checkBufferLength (parser: object): Void {
+  function checkBufferLength (parser: object): void {
     var maxAllowed: number = Math.max(sax.MAX_BUFFER_LENGTH, 10)
     var maxActual: number = 0
     for (var i = 0, l = buffers.length; i < l; i++) {
@@ -130,13 +130,13 @@
     parser.bufferCheckPosition = m + parser.position
   }
 
-  function clearBuffers (parser: object): Void {
+  function clearBuffers (parser: object): void {
     for (var i = 0, l = buffers.length; i < l; i++) {
       parser[buffers[i]] = ''
     }
   }
 
-  function flushBuffers (parser: HTMLElement): Void {
+  function flushBuffers (parser: HTMLElement): void {
     closeText(parser)
     if (parser.cdata !== '') {
       emitNode(parser, 'oncdata', parser.cdata)
@@ -514,16 +514,16 @@
   // shorthand
   S = sax.STATE
 
-  function emit (parser: object, event: string, data: object): Void {
+  function emit (parser: object, event: string, data: object): void {
     parser[event] && parser[event](data)
   }
 
-  function emitNode (parser: object, nodeType: string, data: object): Void {
+  function emitNode (parser: object, nodeType: string, data: object): void {
     if (parser.textNode) closeText(parser)
     emit(parser, nodeType, data)
   }
 
-  function closeText (parser: HTMLElement): Void {
+  function closeText (parser: HTMLElement): void {
     parser.textNode = textopts(parser.opt, parser.textNode)
     if (parser.textNode) emit(parser, 'ontext', parser.textNode)
     parser.textNode = ''
@@ -565,7 +565,7 @@
     return parser
   }
 
-  function strictFail (parser: object, message: string): Void {
+  function strictFail (parser: object, message: string): void {
     if (typeof parser !== 'object' || !(parser instanceof SAXParser)) {
       throw new Error('bad call to strictFail')
     }
@@ -574,7 +574,7 @@
     }
   }
 
-  function newTag (parser: HTMLElement): Void {
+  function newTag (parser: HTMLElement): void {
     if (!parser.strict) parser.tagName = parser.tagName[parser.looseCase]()
     var parent: HTMLElement = parser.tags[parser.tags.length - 1] || parser
     var tag: object = parser.tag = { name: parser.tagName, attributes: {} }
@@ -602,7 +602,7 @@
     return { prefix: prefix, local: local }
   }
 
-  function attrib (parser: HTMLElement): Void {
+  function attrib (parser: HTMLElement): void {
     if (!parser.strict) {
       parser.attribName = parser.attribName[parser.looseCase]()
     }
@@ -654,7 +654,7 @@
     parser.attribName = parser.attribValue = ''
   }
 
-  function openTag (parser: HTMLElement, selfClosing: boolean): Void {
+  function openTag (parser: HTMLElement, selfClosing: boolean): void {
     if (parser.opt.xmlns) {
       // emit namespace binding events
       var tag: HTMLElement = parser.tag
@@ -733,7 +733,7 @@
     parser.attribList.length = 0
   }
 
-  function closeTag (parser: HTMLElement): Void {
+  function closeTag (parser: HTMLElement): void {
     if (!parser.tagName) {
       strictFail(parser, 'Weird empty close tag.')
       parser.textNode += '</>'
@@ -837,7 +837,7 @@
     return String.fromCodePoint(num)
   }
 
-  function beginWhiteSpace (parser: HTMLElement, c: string): Void {
+  function beginWhiteSpace (parser: HTMLElement, c: string): void {
     if (c === '<') {
       parser.state = S.OPEN_WAKA
       parser.startTagPosition = parser.position

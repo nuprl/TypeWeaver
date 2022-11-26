@@ -9,7 +9,7 @@
 var addon: string = require('./build/Release/addon');
 var calculations: number = process.argv[2] || 100000000;
 
-function printResult(type: string, pi: number, ms: number): Void {
+function printResult(type: string, pi: number, ms: number): void {
   console.log(type, 'method:');
   console.log('\tπ ≈ ' + pi +
               ' (' + Math.abs(pi - Math.PI) + ' away from actual)');
@@ -25,14 +25,14 @@ function runSync(): Promise {
   printResult('Sync', result, Date.now() - start);
 }
 
-function runAsync(): Void {
+function runAsync(): void {
   // how many batches should we split the work in to?
   var batches: number = process.argv[3] || 16;
   var ended: number = 0;
   var total: number = 0;
   var start: number = Date.now();
 
-  function done (err: Function, result: number): Void {
+  function done (err: Function, result: number): void {
     total += result;
     
     // have all the batches finished executing?

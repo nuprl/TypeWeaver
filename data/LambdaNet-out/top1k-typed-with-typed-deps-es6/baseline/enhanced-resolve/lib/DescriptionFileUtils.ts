@@ -38,7 +38,7 @@ function loadDescriptionFile(
 	oldInfo: object,
 	resolveContext: object,
 	callback: Function
-): Void {
+): void {
 	(function findDescriptionFile(): Promise {
 		if (oldInfo && oldInfo.directory === directory) {
 			// We already have info for this directory and can reuse it
@@ -94,7 +94,7 @@ function loadDescriptionFile(
 					});
 				}
 
-				function onJson(err: any[], content: string): Void {
+				function onJson(err: any[], content: string): void {
 					if (err) {
 						if (resolveContext.log)
 							resolveContext.log(

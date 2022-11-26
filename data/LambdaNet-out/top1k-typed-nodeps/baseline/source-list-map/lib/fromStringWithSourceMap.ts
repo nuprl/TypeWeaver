@@ -19,7 +19,7 @@ module.exports = function fromStringWithSourceMap(code: string, map: object): So
 	let currentLine: number = 1;
 	let currentSourceIdx: number = 0;
 	let currentSourceNodeLine: number;
-	function addCode(generatedCode: string): Void {
+	function addCode(generatedCode: string): void {
 		if(currentNode && currentNode instanceof CodeNode) {
 			currentNode.addGeneratedCode(generatedCode);
 		} else if(currentNode && currentNode instanceof SourceNode && !generatedCode.trim()) {
@@ -30,7 +30,7 @@ module.exports = function fromStringWithSourceMap(code: string, map: object): So
 			nodes.push(currentNode);
 		}
 	}
-	function addSource(generatedCode: string, source: SourceNode, originalSource: SourceNode, linePosition: number): Void {
+	function addSource(generatedCode: string, source: SourceNode, originalSource: SourceNode, linePosition: number): void {
 		if(currentNode && currentNode instanceof SourceNode &&
 			currentNode.source === source &&
 			currentSourceNodeLine === linePosition

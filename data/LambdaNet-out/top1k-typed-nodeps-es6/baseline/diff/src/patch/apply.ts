@@ -129,7 +129,7 @@ export function applyPatch(source: string, uniDiff: any[], options: object = {})
 }
 
 // Wrapper that supports multiple file patches via callbacks.
-export function applyPatches(uniDiff: object, options: any[]): Void {
+export function applyPatches(uniDiff: object, options: any[]): void {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }

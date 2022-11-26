@@ -33,11 +33,11 @@ function lint(): any[] {
 
 }
 
-function cleanCoverage(done: string): Void {
+function cleanCoverage(done: string): void {
     rimraf('./coverage', done);
 }
 
-function cleanResults(done: Function): Void {
+function cleanResults(done: Function): void {
     rimraf('./test/results', function (err: string) {
         if (err) {
             return done(err);
@@ -77,7 +77,7 @@ function testNoCov(): any[] {
 
 }
 
-function watch(): Void {
+function watch(): void {
 
     gulp.watch([
         paths.libJsFiles,

@@ -46,7 +46,7 @@
     'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape',
     'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'undefined', 'unescape'];
 
-    function Context(): Void {}
+    function Context(): void {}
     Context.prototype = {};
 
     var Script: object = exports.Script = function NodeScript (code: string): string {
@@ -149,7 +149,7 @@
         return copy;
     };
 },{}],2:[function(require: Function,module: Function,exports: number){
-var vm: Void = require('vm');
+var vm: void = require('vm');
 
 window.addEventListener('load', function () {
     var res: number = vm.runInNewContext('a + 5', { a : 100 });

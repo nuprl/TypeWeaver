@@ -712,7 +712,7 @@ jQuery.extend( {
 		}
 
 		// Callback for when everything is done
-		function done( status: number, nativeStatusText: string, responses: number, headers: string ): Void {
+		function done( status: number, nativeStatusText: string, responses: number, headers: string ): void {
 			var isSuccess: boolean, success: Function, error: string, response: object, modified: Function,
 				statusText: string = nativeStatusText;
 

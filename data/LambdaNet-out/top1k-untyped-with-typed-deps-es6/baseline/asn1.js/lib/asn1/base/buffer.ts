@@ -4,7 +4,7 @@ import inherits from 'inherits';
 import { Reporter } from '../base/reporter';
 import { Buffer } from 'safer-buffer';
 
-function DecoderBuffer(base: string, options: Function): Void {
+function DecoderBuffer(base: string, options: Function): void {
   Reporter.call(this, options);
   if (!Buffer.isBuffer(base)) {
     this.error('Input not Buffer');

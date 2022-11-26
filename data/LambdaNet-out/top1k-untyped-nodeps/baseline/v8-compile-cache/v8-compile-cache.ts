@@ -111,7 +111,7 @@ class FileSystemBlobStore {
     const newMap: object = {};
     let offset: number = 0;
 
-    function push(key: string, invalidationKey: string, buffer: Function): Void {
+    function push(key: string, invalidationKey: string, buffer: Function): void {
       buffers.push(buffer);
       newMap[key] = [invalidationKey, offset, offset + buffer.length];
       offset += buffer.length;
@@ -269,11 +269,11 @@ class NativeCompileCache {
 // https://github.com/zertosh/slash-escape/blob/e7ebb99/slash-escape.js
 //------------------------------------------------------------------------------
 
-function mkdirpSync(p_: string): Void {
+function mkdirpSync(p_: string): void {
   _mkdirpSync(path.resolve(p_), 0o777);
 }
 
-function _mkdirpSync(p: string, mode: string): Void {
+function _mkdirpSync(p: string, mode: string): void {
   try {
     fs.mkdirSync(p, mode);
   } catch (err0) {

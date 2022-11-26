@@ -42,7 +42,7 @@ aliases.p192 = aliases.secp192r1 = aliases.prime192v1
 aliases.p384 = aliases.secp384r1
 aliases.p521 = aliases.secp521r1
 
-function ECDH (curve: string): Void {
+function ECDH (curve: string): void {
   this.curveType = aliases[curve]
   if (!this.curveType) {
     this.curveType = {

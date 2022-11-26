@@ -9,7 +9,7 @@ import assert from 'assert';
 
 import watchman from 'fb-watchman';
 
-function optional(): Void {
+function optional(): void {
   var client: HTMLElement = new watchman.Client();
   client.capabilityCheck({optional: ['will-never-exist']},
       function (error: object, resp: object) {
@@ -20,7 +20,7 @@ function optional(): Void {
 }
 optional();
 
-function required(): Void {
+function required(): void {
   var client: HTMLElement = new watchman.Client();
   client.capabilityCheck({required: ['will-never-exist']},
       function (error: Error, resp: Function) {
@@ -31,7 +31,7 @@ function required(): Void {
 }
 required();
 
-function synth(): Void {
+function synth(): void {
   var client: Element = new watchman.Client();
 
   resp = client._synthesizeCapabilityCheck({version: '1.0'},

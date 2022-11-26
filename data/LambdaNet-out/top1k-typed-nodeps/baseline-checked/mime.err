@@ -1,6 +1,4 @@
 Mime.ts(7,10): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
-Mime.ts(7,18): error TS2304: Cannot find name 'Void'.
-Mime.ts(7,18): error TS4060: Return type of exported function has or is using private name 'Void'.
 Mime.ts(39,6): error TS2339: Property 'prototype' does not exist on type 'any[]'.
 Mime.ts(55,22): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 Mime.ts(58,46): error TS2538: Type 'object' cannot be used as an index type.
@@ -52,8 +50,6 @@ src/build.ts(41,70): error TS2339: Property 'pri' does not exist on type 'object
 src/build.ts(42,27): error TS2339: Property 'red' does not exist on type 'any[]'.
 src/build.ts(42,36): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 src/build.ts(42,56): error TS2339: Property 'pri' does not exist on type 'HTMLElement'.
-src/build.ts(51,57): error TS2304: Cannot find name 'Void'.
-src/build.ts(51,57): error TS4060: Return type of exported function has or is using private name 'Void'.
 src/build.ts(52,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
 src/build.ts(60,32): error TS2345: Argument of type '(k: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'k' and 'value' are incompatible.

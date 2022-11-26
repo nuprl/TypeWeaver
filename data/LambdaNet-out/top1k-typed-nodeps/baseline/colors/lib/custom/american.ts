@@ -1,4 +1,4 @@
-module.exports = function americanFlag (): Void {
+module.exports = function americanFlag (): void {
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);
   console.log('LIBERTY LIBERTY LIBERTY'.america);
   console.log('LIBERTY LIBERTY LIBERTY'.yellow);

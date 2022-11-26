@@ -136,7 +136,7 @@ function parse (string: string): string {
  * @public
  */
 
-function MediaType (type: string, subtype: string, suffix: string): Void {
+function MediaType (type: string, subtype: string, suffix: string): void {
   this.type = type
   this.subtype = subtype
   this.suffix = suffix

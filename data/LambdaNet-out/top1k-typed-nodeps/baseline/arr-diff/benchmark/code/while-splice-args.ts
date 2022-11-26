@@ -7,7 +7,7 @@ module.exports = function(arr: string, arrays: Function) {
   return arr;
 };
 
-function diff(one: string, two: any[]): Void {
+function diff(one: string, two: any[]): void {
   if (!Array.isArray(two)) return;
   var len: number = two.length;
   var idx: number = -1;

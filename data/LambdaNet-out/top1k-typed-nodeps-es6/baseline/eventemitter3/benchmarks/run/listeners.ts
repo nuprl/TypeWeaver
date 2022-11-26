@@ -8,7 +8,7 @@ import Master from '../../';
 
 var MAX_LISTENERS: number = Math.pow(2, 32) - 1;
 
-function handle(): Void {
+function handle(): void {
   if (arguments.length > 100) console.log('damn');
 }
 
@@ -44,8 +44,8 @@ for (var i = 0; i < 25; i++) {
   master.listeners('event');
 }).add('fastemitter', function() {
   fe.listeners('event');
-}).on('cycle', function cycle(e: HTMLElement): Void {
+}).on('cycle', function cycle(e: HTMLElement): void {
   console.log(e.target.toString());
-}).on('complete', function completed(): Void {
+}).on('complete', function completed(): void {
   console.log('Fastest is %s', this.filter('fastest').map('name'));
 }).run({ async: true });

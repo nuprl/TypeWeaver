@@ -158,7 +158,7 @@ function runSyncOrAsync(fn: Function, context: object, args: string, callback: F
 
 }
 
-function convertArgs(args: Promise, raw: boolean): Void {
+function convertArgs(args: Promise, raw: boolean): void {
 	if(!raw && Buffer.isBuffer(args[0]))
 		args[0] = utf8BufferToString(args[0]);
 	else if(raw && typeof args[0] === "string")
@@ -211,7 +211,7 @@ function iteratePitchingLoaders(options: object, loaderContext: HTMLElement, cal
 	});
 }
 
-function processResource(options: object, loaderContext: HTMLElement, callback: Function): Void {
+function processResource(options: object, loaderContext: HTMLElement, callback: Function): void {
 	// set loader index to last loader
 	loaderContext.loaderIndex = loaderContext.loaders.length - 1;
 
@@ -261,7 +261,7 @@ exports.getContext = function getContext(resource: string): object {
 	return dirname(path);
 };
 
-exports.runLoaders = function runLoaders(options: object, callback: Function): Void {
+exports.runLoaders = function runLoaders(options: object, callback: Function): void {
 	// read options
 	var resource: number = options.resource || "";
 	var loaders: any[] = options.loaders || [];
@@ -295,18 +295,18 @@ exports.runLoaders = function runLoaders(options: object, callback: Function): V
 	loaderContext.resourceFragment = resourceFragment;
 	loaderContext.async = null;
 	loaderContext.callback = null;
-	loaderContext.cacheable = function cacheable(flag: number): Void {
+	loaderContext.cacheable = function cacheable(flag: number): void {
 		if(flag === false) {
 			requestCacheable = false;
 		}
 	};
-	loaderContext.dependency = loaderContext.addDependency = function addDependency(file: string): Void {
+	loaderContext.dependency = loaderContext.addDependency = function addDependency(file: string): void {
 		fileDependencies.push(file);
 	};
-	loaderContext.addContextDependency = function addContextDependency(context: string): Void {
+	loaderContext.addContextDependency = function addContextDependency(context: string): void {
 		contextDependencies.push(context);
 	};
-	loaderContext.addMissingDependency = function addMissingDependency(context: string): Void {
+	loaderContext.addMissingDependency = function addMissingDependency(context: string): void {
 		missingDependencies.push(context);
 	};
 	loaderContext.getDependencies = function getDependencies(): any[] {
@@ -318,7 +318,7 @@ exports.runLoaders = function runLoaders(options: object, callback: Function): V
 	loaderContext.getMissingDependencies = function getMissingDependencies(): any[] {
 		return missingDependencies.slice();
 	};
-	loaderContext.clearDependencies = function clearDependencies(): Void {
+	loaderContext.clearDependencies = function clearDependencies(): void {
 		fileDependencies.length = 0;
 		contextDependencies.length = 0;
 		missingDependencies.length = 0;

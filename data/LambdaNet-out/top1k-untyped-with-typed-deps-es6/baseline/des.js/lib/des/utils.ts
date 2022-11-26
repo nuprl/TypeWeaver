@@ -15,7 +15,7 @@ export const writeUInt32BE: string = function writeUInt32BE(bytes: object, value
   bytes[3 + off] = value & 0xff;
 };
 
-export const ip: Function = function ip(inL: string, inR: string, out: object, off: string): Void {
+export const ip: Function = function ip(inL: string, inR: string, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -45,7 +45,7 @@ export const ip: Function = function ip(inL: string, inR: string, out: object, o
   out[off + 1] = outR >>> 0;
 };
 
-export const rip: Function = function rip(inL: string, inR: string, out: object, off: string): Void {
+export const rip: Function = function rip(inL: string, inR: string, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -70,7 +70,7 @@ export const rip: Function = function rip(inL: string, inR: string, out: object,
   out[off + 1] = outR >>> 0;
 };
 
-export const pc1: Function = function pc1(inL: number, inR: number, out: object, off: string): Void {
+export const pc1: Function = function pc1(inL: number, inR: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -132,7 +132,7 @@ var pc2table: any[] = [
   22, 3, 10, 14, 6, 20, 27, 24
 ];
 
-export const pc2: Function = function pc2(inL: string, inR: string, out: object, off: string): Void {
+export const pc2: Function = function pc2(inL: string, inR: string, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 
@@ -150,7 +150,7 @@ export const pc2: Function = function pc2(inL: string, inR: string, out: object,
   out[off + 1] = outR >>> 0;
 };
 
-export const expand: Function = function expand(r: number, out: object, off: string): Void {
+export const expand: Function = function expand(r: number, out: object, off: string): void {
   var outL: number = 0;
   var outR: number = 0;
 

@@ -1,4 +1,4 @@
-export default function compressFontWeight(node: object): Void {
+export default function compressFontWeight(node: object): void {
     const value: object = node.children.head.data;
 
     if (value.type === 'Identifier') {

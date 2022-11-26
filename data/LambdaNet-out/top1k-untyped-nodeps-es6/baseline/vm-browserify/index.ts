@@ -45,7 +45,7 @@ var globals: any[] = ['Array', 'Boolean', 'Date', 'Error', 'EvalError', 'Functio
 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape',
 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'undefined', 'unescape'];
 
-function Context(): Void {}
+function Context(): void {}
 Context.prototype = {};
 
 var Script: object = exports.Script = function NodeScript (code: string): string {

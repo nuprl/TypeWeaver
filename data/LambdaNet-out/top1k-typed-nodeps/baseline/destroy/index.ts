@@ -56,7 +56,7 @@ function destroy (stream: string, suppress: boolean): string {
  * @private
  */
 
-function destroyReadStream (stream: number): Void {
+function destroyReadStream (stream: number): void {
   stream.destroy()
 
   if (typeof stream.close === 'function') {
@@ -75,7 +75,7 @@ function destroyReadStream (stream: number): Void {
  * @private
  */
 
-function closeZlibStream (stream: number): Void {
+function closeZlibStream (stream: number): void {
   if (stream._hadError === true) {
     var prop: string = stream._binding === null
       ? '_binding'
@@ -105,7 +105,7 @@ function closeZlibStream (stream: number): Void {
  * @private
  */
 
-function destroyZlibStream (stream: string): Void {
+function destroyZlibStream (stream: string): void {
   if (typeof stream.destroy === 'function') {
     // node.js core bug work-around
     // istanbul ignore if: node.js 0.8
@@ -184,7 +184,7 @@ function isZlibStream (stream: Function): boolean {
  * @private
  */
 
-function noop (): Void {}
+function noop (): void {}
 
 /**
  * On drain handler to clear binding.
@@ -192,7 +192,7 @@ function noop (): Void {}
  */
 
 // istanbul ignore next: node.js 0.8
-function onDrainClearBinding (): Void {
+function onDrainClearBinding (): void {
   this._binding.clear()
 }
 
