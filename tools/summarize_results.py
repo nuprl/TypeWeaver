@@ -44,7 +44,8 @@ FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;
 
 # Regex for matching error messages
 #   <filename.ts>(row,col): error <TScode>
-ERROR_CODES_RE = re.compile("^([^\.].*\.ts)\(\d+,\d+\): error (TS\d+):")
+# negative lookahead so we don't match if file starts with .., but we want to match .
+ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
 
 SYSTEMS = {
     "DeepTyper": "dt",
