@@ -41,6 +41,7 @@ class TypePredictions {
                 if (tokType.startsWith("Name") || tokType.startsWith("Keyword") || tokVal === "=>") {
                     // DeepTyper seems to infer "complex" as a kind of unknown or complicated type,
                     // it doesn't mean complex number. So we replace it with "any".
+                    // TODO: There is one case where DeepTyper infers "..." which is not a valid type
                     // TODO: maybe this should be configurable with a flag
                     const prediction = record[2] === "complex" ? "any" : record[2];
                     return {
