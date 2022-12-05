@@ -31,7 +31,7 @@ DeepTyper relies on older versions of software. I use [asdf](https://github.com/
     * Python 2.7 and 3.5 should also work.
 * Open MPI 1.10.3, [installed from source](https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-linux#open-mpi), locally.
     * If libcudart is too new (version 10 or above), then Open MPI needs to be patched by editing `ompi/contrib/vt/vt/vtlib/vt_cudart.c` and changing the struct member `memoryType` to `type` on lines 1878, 1879, 1885.
-* The following Python packages: `numpy`, `pygments`, `scipy`, `requests`, `cntk-gpu` (or `cntk` for the CPU-only version).
+* The following Python packages: `numpy`, `pygments`, `scipy`, `cntk-gpu` (or `cntk` for the CPU-only version).
 
 
 # Original README

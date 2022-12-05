@@ -1,5 +1,4 @@
 from __future__ import print_function # Use a function definition from future version (say 3.x from 2.7 interpreter)
-import requests
 import os
 import sys
 
