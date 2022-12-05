@@ -3,6 +3,7 @@
 Please answer the following questions concisely, either with bullet lists or short paragraphs.
 
 Title of the submitted paper: _Do Machine Learning Models Produce TypeScript Types that Type Check?_
+
 ECOOP submission number for the paper: 71
 
 ## Overview: What does the artifact comprise?
