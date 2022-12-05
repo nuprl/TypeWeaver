@@ -1,4 +1,9 @@
 FROM nvidia/cuda:11.0.3-base-ubuntu16.04
+
+# set utf-8 encoding
+ENV LANG C.UTF-8
+
+# set up dependencies
 RUN apt-get update -yq && apt-get install -yq \
     build-essential \
     openmpi-bin \
@@ -7,5 +12,9 @@ RUN apt-get update -yq && apt-get install -yq \
     python3-pip \
     python3-pygments \
     python3-scipy \
+ && pip3 install cntk-gpu \
  && rm -rf /var/lib/apt/lists/*
-RUN pip3 install cntk-gpu
+
+COPY src /code
+WORKDIR /code/pretrained
+ENTRYPOINT ["python3", "readout.py"]
