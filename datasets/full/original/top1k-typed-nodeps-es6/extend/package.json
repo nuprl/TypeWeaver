@@ -1,0 +1,40 @@
+{
+	"name": "extend",
+	"author": "Stefan Thomas <justmoon@members.fsf.org> (http://www.justmoon.net)",
+	"version": "3.0.2",
+	"description": "Port of jQuery.extend for node.js and the browser",
+	"main": "index",
+	"scripts": {
+		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
+		"pretest": "npm run lint",
+		"test": "npm run tests-only",
+		"posttest": "aud --production",
+		"tests-only": "nyc tape 'test/**/*.js'",
+		"lint": "eslint --ext=js,mjs ."
+	},
+	"contributors": [
+		{
+			"name": "Jordan Harband",
+			"url": "https://github.com/ljharb"
+		}
+	],
+	"keywords": [
+		"extend",
+		"clone",
+		"merge"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/justmoon/node-extend.git"
+	},
+	"devDependencies": {
+		"@ljharb/eslint-config": "^20.1.0",
+		"aud": "^1.1.5",
+		"eslint": "^8.6.0",
+		"nyc": "^10.3.2",
+		"safe-publish-latest": "^2.0.0",
+		"tape": "^4.14.0"
+	},
+	"license": "MIT"
+}

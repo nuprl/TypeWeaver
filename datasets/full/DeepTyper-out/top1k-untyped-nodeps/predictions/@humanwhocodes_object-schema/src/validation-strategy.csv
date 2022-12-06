@@ -1,0 +1,319 @@
+Text
+/**\n * @filedescription Validation Strategy\n */Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+//-----------------------------------------------------------------------------Comment.Single
+\nText.Whitespace
+// ClassComment.Single
+\nText.Whitespace
+//-----------------------------------------------------------------------------Comment.Single
+\n\nText.Whitespace
+/**\n * Container class for several different validation strategies.\n */Comment.Multiline
+\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+ValidationStrategyName.Otherany0.9994complex0.0002string0.0002number0.0001void0.0000
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is an array.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+arrayName.Othervoid0.7482any0.0649complex0.0525any[]0.0173string[]0.0116
+(Punctuation
+valueName.Otherany0.8897string0.0564number0.0243boolean0.0076complex0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9995Math0.0000complex0.0000any0.0000ObjectConstructor0.0000
+.Punctuation
+isArrayName.Othercomplex0.9972boolean0.0007any0.0005any[]0.0004void0.0002
+(Punctuation
+valueName.Otherany0.8541complex0.0858string0.0201any[]0.0139number0.0078
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.5216any0.1979boolean0.0511Error0.0358{}0.0352
+ Text.Whitespace
+newOperator.Wordcomplex0.1361boolean0.1320any0.1181string[]0.0692ErrorConstructor0.0482
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9922ErrorConstructor0.0018BooleanConstructor0.0002MapConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Expected an array."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a boolean.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+booleanKeyword.Type
+(Punctuation
+valueName.Otherany0.8802string0.0884boolean0.0131number0.0068complex0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8116string0.0890complex0.0575number0.0100boolean0.0081
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"boolean"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.4762any0.3284boolean0.0645Error0.0279{}0.0211
+ Text.Whitespace
+newOperator.Wordany0.2259boolean0.2245complex0.1538string0.0711string[]0.0383
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9937ErrorConstructor0.0014BooleanConstructor0.0001MapConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Expected a Boolean."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a number.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+numberKeyword.Type
+(Punctuation
+valueName.Otherany0.8189string0.1001number0.0474boolean0.0155complex0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.7360string0.1507complex0.0465number0.0323boolean0.0078
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"number"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.5159any0.2532boolean0.0796Error0.0248{}0.0184
+ Text.Whitespace
+newOperator.Wordboolean0.2655any0.1804complex0.1184string0.0839string[]0.0323
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9938ErrorConstructor0.0012BooleanConstructor0.0001MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+"Expected a number."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a object.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+objectName.Othervoid0.7380any0.1333complex0.0298Object0.0148boolean0.0036
+(Punctuation
+valueName.Otherany0.7772string0.1556number0.0189boolean0.0118Object0.0078
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.9069string0.0441boolean0.0174complex0.0098number0.0050
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8492string0.0879complex0.0303number0.0085boolean0.0045
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"object"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordany0.4083complex0.3642boolean0.0610Error0.0437string0.0210
+ Text.Whitespace
+newOperator.Wordany0.2838boolean0.1906complex0.1178string0.0912string[]0.0325
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9923ErrorConstructor0.0016BooleanConstructor0.0002MapConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Expected an object."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a object or null.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+"object?"Literal.String.Double
+(Punctuation
+valueName.Otherany0.8512string0.1175number0.0102boolean0.0040Object0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.7888string0.1273complex0.0370number0.0128never0.0078
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"object"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.4106any0.3509boolean0.0595Error0.0453string0.0222
+ Text.Whitespace
+newOperator.Wordany0.2651boolean0.1792complex0.1217string0.1053string[]0.0413
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9922ErrorConstructor0.0017BooleanConstructor0.0001MapConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Expected an object or null."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a string.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+stringKeyword.Type
+(Punctuation
+valueName.Otherany0.7981string0.1749number0.0098boolean0.0050Object0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.6932string0.2065complex0.0504number0.0132never0.0082
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"string"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.5001any0.2795boolean0.0637Error0.0306string0.0286
+ Text.Whitespace
+newOperator.Wordany0.2496boolean0.1758complex0.1319string0.1309string[]0.0407
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9918ErrorConstructor0.0015BooleanConstructor0.0002MapConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Expected a string."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Validates that a value is a non-empty string.\n     * @param {*} value The value to validate.\n     * @returns {void}\n     * @throws {TypeError} If the value is invalid. \n     */Comment.Multiline
+\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+"string!"Literal.String.Double
+(Punctuation
+valueName.Otherany0.8414string0.1307number0.0093boolean0.0036Object0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8196string0.1064number0.0221complex0.0214boolean0.0051
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"string"Literal.String.Double
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valueName.Otherstring0.4834any0.4473string[]0.0337any[]0.0075number0.0051
+.Punctuation
+lengthName.Othernumber0.8485any0.1468string0.0026boolean0.0006complex0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordcomplex0.4224any0.3636boolean0.0486Error0.0388string0.0247
+ Text.Whitespace
+newOperator.Wordany0.2969boolean0.1535complex0.1376string0.1036ErrorConstructor0.0346
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9925ErrorConstructor0.0018SymbolConstructor0.0001BooleanConstructor0.0001MapConstructor0.0001
+(Punctuation
+"Expected a non-empty string."Literal.String.Double
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportsName.Otherany0.7560complex0.1446Object0.0071any[]0.0015{}0.0012
+.Punctuation
+ValidationStrategyName.Otherany0.9868complex0.0073string0.0025number0.0012void0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ValidationStrategyName.Otherany0.8056complex0.0694number0.0421void0.0261string0.0217
+;Punctuation
+\nText.Whitespace

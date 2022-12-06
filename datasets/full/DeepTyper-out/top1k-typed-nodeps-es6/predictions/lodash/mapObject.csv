@@ -1,0 +1,94 @@
+Text
+/**\n * Creates an array of values by running each property of `object` thru\n * `iteratee`. The iteratee is invoked with three arguments: (value, key, object).\n *\n * @since 5.0.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns the new mapped array.\n * @example\n *\n * function square(n) {\n *   return n * n\n * }\n *\n * map({ 'a': 4, 'b': 8 }, square)\n * // => [16, 64] (iteration order is not guaranteed)\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapObjectName.Otherany0.1628void0.0308complex0.0299any[]0.0265string0.0139
+(Punctuation
+objectName.Otherany0.5890Object0.2769object0.0726string0.0046{}0.0044
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6323object0.0552Object0.0427string0.0198boolean0.0080
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+propsName.Otherstring[]0.6575any[]0.2208any0.0367complex0.0342Object0.0096
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000complex0.0000Object[]0.0000any0.0000
+.Punctuation
+keysName.Otherstring[]0.9891complex0.0048any[]0.0022string0.0008number[]0.0006
+(Punctuation
+objectName.OtherObject0.4607any0.3460object0.0892complex0.0271{}0.0170
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherstring[]0.3474any[]0.2994any0.0397Object[]0.0292Object0.0193
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordstring[]0.2387any0.1084any[]0.0495string0.0430complex0.0251
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9990ObjectConstructor0.0000Array0.0000FunctionConstructor0.0000Math0.0000
+(Punctuation
+propsName.Otherany[]0.6146any0.1322string[]0.1082complex0.0170number[]0.0081
+.Punctuation
+lengthName.Othernumber0.9566any0.0381string0.0019complex0.0009void0.0006
+)Punctuation
+\n\n  Text.Whitespace
+propsName.Otherany[]0.6555string[]0.1349any0.1234complex0.0236number[]0.0084
+.Punctuation
+forEachName.Othervoid0.7383complex0.1261any0.0760v...0.0366any[]0.0032
+(Punctuation
+(Punctuation
+keyName.Otherstring0.6553any0.2853number0.0372complex0.0092any[]0.0026
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9552any0.0372string0.0045complex0.0007boolean0.0005
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany[]0.5575string[]0.2021any0.0823number[]0.0168T[]0.0147
+[Punctuation
+indexName.Othernumber0.8838any0.0637string0.0471boolean0.0014complex0.0011
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iterateeName.Otherany0.7372Object0.0242{}0.0159boolean0.0158complex0.0116
+(Punctuation
+objectName.Otherany0.6560Object0.2185object0.0514{}0.0246complex0.0100
+[Punctuation
+keyName.Otherstring0.7539any0.2057number0.0129complex0.0098void0.0031
+]Punctuation
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.4867any0.4703number0.0097complex0.0061{}0.0027
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.4119Object0.4063object0.1054{}0.0143complex0.0065
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany[]0.2298any0.1664string[]0.0370{}0.0273T[]0.0197
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+mapObjectName.Otherany0.0389any[]0.0303void0.0214number0.0049never0.0044
+\nText.Whitespace

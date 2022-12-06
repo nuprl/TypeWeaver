@@ -1,0 +1,59 @@
+index.ts(11,5): error TS2300: Duplicate identifier 'preferredCharsets'.
+index.ts(12,5): error TS2300: Duplicate identifier 'preferredEncodings'.
+index.ts(13,5): error TS2300: Duplicate identifier 'preferredLanguages'.
+index.ts(14,5): error TS2300: Duplicate identifier 'preferredMediaTypes'.
+index.ts(32,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/charset.ts(70,3): error TS2322: Type '{ charset: string; q: number; i: number; }' is not assignable to type 'string'.
+lib/charset.ts(101,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(109,3): error TS2322: Type '{ i: number; o: any; q: any; s: number; }' is not assignable to type 'string'.
+lib/charset.ts(122,10): error TS2300: Duplicate identifier 'preferredCharsets'.
+lib/charset.ts(134,34): error TS2339: Property 'map' does not exist on type 'string'.
+lib/charset.ts(140,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+lib/charset.ts(149,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(150,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+lib/charset.ts(167,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(168,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+lib/encoding.ts(41,7): error TS2322: Type 'string | true' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+lib/encoding.ts(41,36): error TS2554: Expected 3 arguments, but got 2.
+lib/encoding.ts(42,50): error TS2339: Property 'q' does not exist on type 'string'.
+lib/encoding.ts(86,3): error TS2322: Type '{ encoding: string; q: number; i: number; }' is not assignable to type 'string'.
+lib/encoding.ts(117,10): error TS2393: Duplicate function implementation.
+lib/encoding.ts(125,3): error TS2322: Type '{ i: number; o: any; q: any; s: number; }' is not assignable to type 'string'.
+lib/encoding.ts(138,10): error TS2300: Duplicate identifier 'preferredEncodings'.
+lib/encoding.ts(149,34): error TS2339: Property 'map' does not exist on type 'true'.
+lib/encoding.ts(164,10): error TS2393: Duplicate function implementation.
+lib/encoding.ts(165,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+lib/encoding.ts(182,10): error TS2393: Duplicate function implementation.
+lib/language.ts(72,3): error TS2322: Type '{ prefix: string; suffix: string; q: number; i: number; full: string; }' is not assignable to type 'string'.
+lib/language.ts(105,10): error TS2393: Duplicate function implementation.
+lib/language.ts(106,19): error TS2554: Expected 2 arguments, but got 1.
+lib/language.ts(109,36): error TS2339: Property 'full' does not exist on type 'string'.
+lib/language.ts(111,46): error TS2339: Property 'full' does not exist on type 'string'.
+lib/language.ts(113,44): error TS2339: Property 'prefix' does not exist on type 'string'.
+lib/language.ts(119,3): error TS2322: Type '{ i: number; o: any; q: any; s: number; }' is not assignable to type 'string'.
+lib/language.ts(132,10): error TS2300: Duplicate identifier 'preferredLanguages'.
+lib/language.ts(144,34): error TS2339: Property 'map' does not exist on type 'string'.
+lib/language.ts(159,10): error TS2393: Duplicate function implementation.
+lib/language.ts(160,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+lib/language.ts(177,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(32,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+lib/mediaType.ts(34,38): error TS2339: Property 'length' does not exist on type 'boolean'.
+lib/mediaType.ts(43,11): error TS2339: Property 'length' does not exist on type 'boolean'.
+lib/mediaType.ts(45,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+lib/mediaType.ts(63,47): error TS2339: Property 'map' does not exist on type 'string'.
+lib/mediaType.ts(85,3): error TS2322: Type '{ type: string; subtype: any; params: any; q: number; i: number; }' is not assignable to type 'string'.
+lib/mediaType.ts(118,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(119,16): error TS2554: Expected 2 arguments, but got 1.
+lib/mediaType.ts(149,3): error TS2322: Type '{ i: number; o: any; q: any; s: number; }' is not assignable to type 'string'.
+lib/mediaType.ts(162,10): error TS2300: Duplicate identifier 'preferredMediaTypes'.
+lib/mediaType.ts(174,34): error TS2339: Property 'map' does not exist on type 'string'.
+lib/mediaType.ts(189,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(190,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+lib/mediaType.ts(207,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(225,3): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/mediaType.ts(245,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/mediaType.ts(257,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mediaType.ts(279,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mediaType.ts(293,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
+

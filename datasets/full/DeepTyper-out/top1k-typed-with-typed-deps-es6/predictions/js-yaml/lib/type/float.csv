@@ -1,0 +1,662 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+commonName.Otherany0.9729boolean0.0058string0.0049complex0.0048void0.0042
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../common'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+TypeName.Otherany0.5085void0.2899FunctionConstructor0.0603complex0.0285Function0.0244
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../type'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+YAML_FLOAT_PATTERNName.OtherRegExp0.9205string0.0497string[]0.0050boolean0.0050any0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordRegExp0.2836string0.1727any0.0762Date0.0297RegExpConstructor0.0203
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9996RegExp0.0001ErrorConstructor0.0000BooleanConstructor0.0000MapConstructor0.0000
+(Punctuation
+\n  Text.Whitespace
+// 2.5e4, 2.5 and integersComment.Single
+\n  Text.Whitespace
+'^(?:[-+]?(?:[0-9][0-9_]*)(?:\\.[0-9_]*)?(?:[eE][-+]?[0-9]+)?'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+// .2e4, .2Comment.Single
+\n  Text.Whitespace
+// special case, seems not from specComment.Single
+\n  Text.Whitespace
+'|\\.[0-9_]+(?:[eE][-+]?[0-9]+)?'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+// .infComment.Single
+\n  Text.Whitespace
+'|[-+]?\\.(?:inf|Inf|INF)'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+// .nanComment.Single
+\n  Text.Whitespace
+'|\\.(?:nan|NaN|NAN))$'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+resolveYamlFloatName.Otherboolean0.5728string0.3515any0.0415number0.0118complex0.0063
+(Punctuation
+dataName.Otherstring0.8496any0.1112number0.0089boolean0.0044Date0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dataName.Otherstring0.6156any0.3130boolean0.0185number0.0101Date0.0062
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+YAML_FLOAT_PATTERNName.OtherRegExp0.9808string0.0052boolean0.0038any0.0035string[]0.0020
+.Punctuation
+testName.Otherboolean0.9926any0.0022string0.0020complex0.0010number0.0005
+(Punctuation
+dataName.Otherstring0.8653any0.1087number0.0093boolean0.0050string[]0.0011
+)Punctuation
+ Text.Whitespace
+||Operator
+\n      Text.Whitespace
+// Quick hack to not allow integers end with `_`Comment.Single
+\n      Text.Whitespace
+// Probably should update regexp & check speedComment.Single
+\n      Text.Whitespace
+dataName.Otherstring0.6069any0.2826boolean0.0226number0.0107string[]0.0103
+[Punctuation
+dataName.Otherstring0.8250any0.1013string[]0.0165boolean0.0057number0.0046
+.Punctuation
+lengthName.Othernumber0.8442any0.1502string0.0035boolean0.0008complex0.0007
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'_'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+constructYamlFloatName.Otherstring0.9146any0.0357boolean0.0219number0.0105complex0.0031
+(Punctuation
+dataName.Otherstring0.9183any0.0527number0.0067boolean0.0046Buffer0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valueName.Otherstring0.6974any0.2773number0.0141boolean0.0026Date0.0022
+,Punctuation
+ Text.Whitespace
+signName.Otherany0.7281string0.1456number0.1145boolean0.0048complex0.0029
+;Punctuation
+\n\n  Text.Whitespace
+valueName.Otherstring0.7296any0.2604number0.0046boolean0.0017string[]0.0009
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherstring0.8697any0.1212number0.0028boolean0.0014String0.0007
+.Punctuation
+replaceName.Othercomplex0.7916any0.2010string0.0019boolean0.0012number0.0011
+(Punctuation
+/_/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.9507any0.0429number0.0044complex0.0007boolean0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+signName.Otherany0.3916string0.3220number0.2760complex0.0044boolean0.0037
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherstring0.6863any0.2813string[]0.0104number0.0087complex0.0030
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'-'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+1Keyword.Type
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'+-'Literal.String.Single
+.Punctuation
+indexOfName.Othernumber0.9875any0.0083string0.0024boolean0.0010complex0.0004
+(Punctuation
+valueName.Otherstring0.5438any0.4312string[]0.0096number0.0053complex0.0022
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+valueName.Otherstring0.6344any0.3380number0.0074complex0.0074string[]0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherstring0.8117any0.1646string[]0.0084number0.0048complex0.0040
+.Punctuation
+sliceName.Otherstring0.7674any0.1503complex0.0354string[]0.0139number0.0083
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherstring0.6765any0.2993number0.0121complex0.0057boolean0.0026
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'.inf'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+signName.Othernumber0.7632any0.1506string0.0813boolean0.0020complex0.0015
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+Number.POSITIVE_INFINITYName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+Number.NEGATIVE_INFINITYKeyword.Type
+;Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherstring0.6772any0.3037number0.0095complex0.0046boolean0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'.nan'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+NaNKeyword.Constantnumber0.9949any0.0031string0.0012boolean0.0003complex0.0001
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+signName.Othernumber0.8324any0.1280string0.0366complex0.0014boolean0.0003
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+parseFloatName.Builtinnumber0.9955any0.0018string0.0011boolean0.0008void0.0002
+(Punctuation
+valueName.Otherstring0.8773any0.1079number0.0116complex0.0007boolean0.0004
+,Punctuation
+ Text.Whitespace
+10Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+SCIENTIFIC_WITHOUT_DOTName.Otherstring0.6604RegExp0.3226any0.0108string[]0.0020boolean0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^[-+]?[0-9]+e/Literal.String.Regex
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+representYamlFloatName.Otherstring0.9001boolean0.0329any0.0297number0.0221void0.0051
+(Punctuation
+objectName.Otherany0.7403Object0.1192string0.0749number0.0434object0.0100
+,Punctuation
+ Text.Whitespace
+styleName.Otherstring0.6534any0.2002boolean0.0157CSSStyleDeclaration0.0122Object0.0091
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resName.Otherany0.5210string0.4174number0.0228boolean0.0160void0.0124
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isNaNName.Builtinboolean0.9935complex0.0023string0.0017any0.0011number0.0008
+(Punctuation
+objectName.Otherany0.7829number0.1405string0.0439Object0.0202complex0.0052
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+styleName.Otherstring0.6213any0.2309CSSStyleDeclaration0.0191boolean0.0138number0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'lowercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.nan'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'uppercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.NAN'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'camelcase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.NaN'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+NumberName.BuiltinNumberConstructor0.9923Number0.0004Console0.0003Math0.0002StringConstructor0.0002
+.Punctuation
+POSITIVE_INFINITYName.Othernumber0.9210any0.0500complex0.0092string0.0085boolean0.0059
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+objectName.Otherany0.5914number0.1986string0.1055Object0.0696object0.0096
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+styleName.Otherstring0.6284any0.2236CSSStyleDeclaration0.0196boolean0.0162number0.0071
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'lowercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.inf'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'uppercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.INF'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'camelcase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'.Inf'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+NumberName.BuiltinNumberConstructor0.9828Number0.0007Console0.0004StringConstructor0.0003Math0.0002
+.Punctuation
+NEGATIVE_INFINITYName.Otherstring0.9397any0.0206boolean0.0157number0.0140complex0.0032
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+objectName.Otherany0.6105string0.2206number0.0923Object0.0529complex0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+styleName.Otherstring0.6795any0.1901boolean0.0153CSSStyleDeclaration0.0137Object0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'lowercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'-.inf'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'uppercase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'-.INF'Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'camelcase'Literal.String.Single
+:Operator
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'-.Inf'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+commonName.Otherany0.9770boolean0.0063string0.0057complex0.0047RegExp0.0005
+.Punctuation
+isNegativeZeroName.Otherboolean0.5774string0.3433any0.0558complex0.0101number0.0074
+(Punctuation
+objectName.Otherany0.7992string0.0958number0.0494Object0.0377complex0.0064
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'-0.0'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+resName.Otherstring0.7118any0.2496number0.0156boolean0.0148Object0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.6780Object0.1991number0.0415complex0.0345string0.0223
+.Punctuation
+toStringName.Otherstring0.7317any0.2513complex0.0089number0.0020boolean0.0013
+(Punctuation
+10Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// JS stringifier can build scientific format without dots: 5e-100,Comment.Single
+\n  Text.Whitespace
+// while YAML requres dot: 5.e-100. Fix it with simple hackComment.Single
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+SCIENTIFIC_WITHOUT_DOTName.OtherRegExp0.9292string0.0401any0.0223boolean0.0016Date0.0009
+.Punctuation
+testName.Otherboolean0.9796any0.0092string0.0052complex0.0019void0.0007
+(Punctuation
+resName.Otherstring0.7973any0.1546boolean0.0309number0.0082void0.0017
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resName.Otherstring0.7310any0.2587number0.0023boolean0.0023void0.0015
+.Punctuation
+replaceName.Othercomplex0.6340any0.3525string0.0030boolean0.0024void0.0017
+(Punctuation
+'e'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'.e'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+resName.Otherstring0.8135any0.1121boolean0.0413void0.0112number0.0049
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isFloatName.Otherboolean0.9668any0.0205string0.0063number0.0020complex0.0012
+(Punctuation
+objectName.Otherany0.7174string0.1297Object0.1011number0.0310object0.0072
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9992Object0.0005any0.0000complex0.0000FunctionConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.9426Function0.0054any0.0053Date0.0050boolean0.0049
+.Punctuation
+toStringName.Otherstring0.9405any0.0415complex0.0099number0.0020void0.0011
+.Punctuation
+callName.Otherany0.9573string0.0158number0.0101complex0.0070boolean0.0059
+(Punctuation
+objectName.Otherany0.8530Object0.0517string0.0470number0.0307object0.0041
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'[object Number]'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n         Text.Whitespace
+(Punctuation
+objectName.Otherany0.8374number0.1354string0.0133Object0.0044boolean0.0039
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+commonName.Otherany0.9922string0.0039boolean0.0014number0.0013complex0.0005
+.Punctuation
+isNegativeZeroName.Otherstring0.4606any0.2894boolean0.1590number0.0421complex0.0152
+(Punctuation
+objectName.Otherany0.8787Object0.0433string0.0308number0.0299object0.0047
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+newOperator.Wordany0.1439Type0.0555string0.0269Error0.0198EventTarget0.0164
+ Text.Whitespace
+TypeName.Otherany0.7854void0.1111complex0.0402FunctionConstructor0.0172Function0.0082
+(Punctuation
+'tag:yaml.org,2002:float'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+kindName.Otherstring0.9963any0.0008RegExp0.0007number0.0004string[]0.0004
+:Operator
+ Text.Whitespace
+'scalar'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+resolveName.Otherstring0.7505any0.1555number0.0675boolean0.0092void0.0072
+:Operator
+ Text.Whitespace
+resolveYamlFloatKeyword.Typestring0.7407any0.1408number0.0625boolean0.0266string[]0.0095
+,Punctuation
+\n  Text.Whitespace
+constructName.Otherstring0.4403number0.1911any0.1757boolean0.1489void0.0117
+:Operator
+ Text.Whitespace
+constructYamlFloatKeyword.Typestring0.4951boolean0.1967number0.1505any0.1275string[]0.0053
+,Punctuation
+\n  Text.Whitespace
+predicateName.Otherboolean0.9192number0.0365any0.0331string0.0044Function0.0004
+:Operator
+ Text.Whitespace
+isFloatKeyword.Typeboolean0.9561any0.0251number0.0082string0.0024void0.0013
+,Punctuation
+\n  Text.Whitespace
+representName.Otherstring0.3888boolean0.3585any0.1495number0.0837RegExp0.0038
+:Operator
+ Text.Whitespace
+representYamlFloatKeyword.Typeboolean0.4420string0.2926any0.1568number0.0846void0.0032
+,Punctuation
+\n  Text.Whitespace
+defaultStyleName.Otherstring0.9815RegExp0.0090any0.0039boolean0.0026number0.0012
+:Operator
+ Text.Whitespace
+'lowercase'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

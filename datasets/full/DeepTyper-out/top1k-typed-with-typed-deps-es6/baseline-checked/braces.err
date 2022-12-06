@@ -1,0 +1,175 @@
+bench/index.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(4,20): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/index.ts(5,25): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+bench/index.ts(14,21): error TS2322: Type '(e: any, newline: string) => void' is not assignable to type 'void'.
+bench/index.ts(18,7): error TS2322: Type '{ (name: string, options: any): Suite; skip(name: any): void; }' is not assignable to type 'void'.
+bench/index.ts(35,28): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(36,31): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(46,20): error TS2322: Type '{ (): void; add(): void; run(): void; }' is not assignable to type 'void'.
+bench/index.ts(47,6): error TS2339: Property 'add' does not exist on type 'void'.
+bench/index.ts(48,6): error TS2339: Property 'run' does not exist on type 'void'.
+bench/index.ts(49,7): error TS2339: Property 'skip' does not exist on type 'void'.
+bench/index.ts(54,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(59,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(64,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(69,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(74,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(79,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(84,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(89,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples/compile.ts(5,13): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+examples/compile.ts(6,13): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+examples/expand.ts(2,20): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+examples/expand.ts(3,19): error TS2306: File 'examples/parse.ts' is not a module.
+examples/expand.ts(4,68): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+examples/expand.ts(22,32): error TS2304: Cannot find name 'expand'.
+index.ts(38,26): error TS2339: Property 'expand' does not exist on type '{}'.
+index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type '{}'.
+index.ts(100,10): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(125,21): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(128,15): error TS2339: Property 'noempty' does not exist on type '{}'.
+index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type '{}'.
+index.ts(161,17): error TS2339: Property 'expand' does not exist on type '{}'.
+lib/compile.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/compile.ts(6,7): error TS2322: Type '(ast: any, options?: {}) => any' is not assignable to type 'boolean'.
+lib/compile.ts(9,65): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/compile.ts(11,34): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/compile.ts(39,29): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+lib/expand.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/expand.ts(7,7): error TS2322: Type '(queue?: string, stash?: string, enclose?: boolean) => any' is not assignable to type 'void'.
+lib/expand.ts(10,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/expand.ts(11,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/expand.ts(21,21): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(26,42): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(33,7): error TS2322: Type '(ast: any, options?: {}) => any' is not assignable to type 'void'.
+lib/expand.ts(34,37): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
+lib/expand.ts(34,76): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
+lib/expand.ts(36,7): error TS2322: Type '(node: any, parent?: {}) => any' is not assignable to type 'void'.
+lib/expand.ts(40,25): error TS2339: Property 'queue' does not exist on type '{}'.
+lib/expand.ts(48,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(53,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(60,47): error TS2339: Property 'step' does not exist on type '{}'.
+lib/expand.ts(64,29): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+lib/expand.ts(69,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(93,16): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(98,20): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(103,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/expand.ts(110,24): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(10,3): error TS2614: Module '"./constants"' has no exported member 'MAX_LENGTH'. Did you mean to use 'import MAX_LENGTH from "./constants"' instead?
+lib/parse.ts(11,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_BACKSLASH'. Did you mean to use 'import CHAR_BACKSLASH from "./constants"' instead?
+lib/parse.ts(12,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_BACKTICK'. Did you mean to use 'import CHAR_BACKTICK from "./constants"' instead?
+lib/parse.ts(13,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_COMMA'. Did you mean to use 'import CHAR_COMMA from "./constants"' instead?
+lib/parse.ts(14,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_DOT'. Did you mean to use 'import CHAR_DOT from "./constants"' instead?
+lib/parse.ts(15,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_PARENTHESES'. Did you mean to use 'import CHAR_LEFT_PARENTHESES from "./constants"' instead?
+lib/parse.ts(16,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_PARENTHESES'. Did you mean to use 'import CHAR_RIGHT_PARENTHESES from "./constants"' instead?
+lib/parse.ts(17,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_CURLY_BRACE'. Did you mean to use 'import CHAR_LEFT_CURLY_BRACE from "./constants"' instead?
+lib/parse.ts(18,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_CURLY_BRACE'. Did you mean to use 'import CHAR_RIGHT_CURLY_BRACE from "./constants"' instead?
+lib/parse.ts(19,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_SQUARE_BRACKET'. Did you mean to use 'import CHAR_LEFT_SQUARE_BRACKET from "./constants"' instead?
+lib/parse.ts(20,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_SQUARE_BRACKET'. Did you mean to use 'import CHAR_RIGHT_SQUARE_BRACKET from "./constants"' instead?
+lib/parse.ts(21,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_DOUBLE_QUOTE'. Did you mean to use 'import CHAR_DOUBLE_QUOTE from "./constants"' instead?
+lib/parse.ts(22,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_SINGLE_QUOTE'. Did you mean to use 'import CHAR_SINGLE_QUOTE from "./constants"' instead?
+lib/parse.ts(23,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_NO_BREAK_SPACE'. Did you mean to use 'import CHAR_NO_BREAK_SPACE from "./constants"' instead?
+lib/parse.ts(24,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_ZERO_WIDTH_NOBREAK_SPACE'. Did you mean to use 'import CHAR_ZERO_WIDTH_NOBREAK_SPACE from "./constants"' instead?
+lib/parse.ts(57,9): error TS2322: Type '() => string' is not assignable to type 'void'.
+lib/parse.ts(58,9): error TS2322: Type '(node: any) => any' is not assignable to type 'number'.
+lib/parse.ts(75,3): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(79,13): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(94,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(94,44): error TS2339: Property 'keepEscaping' does not exist on type '{}'.
+lib/parse.ts(94,73): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(103,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(117,40): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(126,20): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(139,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(148,15): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(150,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(156,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(160,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(173,19): error TS2339: Property 'keepQuotes' does not exist on type '{}'.
+lib/parse.ts(177,40): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(179,27): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/parse.ts(184,23): error TS2339: Property 'keepQuotes' does not exist on type '{}'.
+lib/parse.ts(191,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(214,15): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(216,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(226,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(234,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(252,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(265,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(296,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(304,5): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/parse.ts(329,3): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/stringify.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
+lib/stringify.ts(6,7): error TS2322: Type '(node: any, parent?: {}) => any' is not assignable to type 'string'.
+lib/stringify.ts(7,41): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/stringify.ts(8,65): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/stringify.ts(24,19): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/stringify.ts(30,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/utils.ts(3,35): error TS2322: Type '(num: number) => boolean' is not assignable to type 'boolean'.
+lib/utils.ts(7,38): error TS2339: Property 'trim' does not exist on type 'never'.
+lib/utils.ts(17,14): error TS2322: Type '(node: any, type: any) => any' is not assignable to type 'boolean'.
+lib/utils.ts(23,38): error TS2322: Type '(min: any, max: any, step: number, limit: any) => boolean' is not assignable to type 'boolean'.
+lib/utils.ts(25,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/utils.ts(25,27): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/utils.ts(33,14): error TS2322: Type '(block: any, n: number, type: any) => void' is not assignable to type 'boolean'.
+lib/utils.ts(49,38): error TS2322: Type '(node: any) => boolean' is not assignable to type 'boolean'.
+lib/utils.ts(62,40): error TS2322: Type '(block: any) => boolean' is not assignable to type 'boolean'.
+lib/utils.ts(80,39): error TS2322: Type '(node: any) => boolean' is not assignable to type 'boolean'.
+lib/utils.ts(103,9): error TS2322: Type '(arr: any) => any[]' is not assignable to type 'void'.
+lib/utils.ts(106,28): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/utils.ts(110,3): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+

@@ -1,0 +1,61 @@
+importKeyword
+ Text.Whitespace
+baseMergeName.Otherany0.1358complex0.0597void0.0277string0.0272boolean0.0172
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseMerge.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+createAssignerName.Otherany0.2349complex0.0498string0.0476void0.0332boolean0.0190
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/createAssigner.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `assign` except that it recursively merges own and\n * inherited enumerable string keyed properties of source objects into the\n * destination object. Source properties that resolve to `undefined` are\n * skipped if a destination value exists. Array and plain object properties\n * are merged recursively. Other objects and value types are overridden by\n * assignment. Source objects are applied from left to right. Subsequent\n * sources overwrite property assignments of previous sources.\n *\n * **Note:** This method mutates `object`.\n *\n * @since 0.5.0\n * @category Object\n * @param {Object} object The destination object.\n * @param {...Object} [sources] The source objects.\n * @returns {Object} Returns `object`.\n * @example\n *\n * const object = {\n *   'a': [{ 'b': 2 }, { 'd': 4 }]\n * }\n *\n * const other = {\n *   'a': [{ 'c': 3 }, { 'e': 5 }]\n * }\n *\n * merge(object, other)\n * // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+mergeName.Otherany0.2795string0.0229void0.0211complex0.0182Date0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+createAssignerName.Otherany0.5142complex0.1242void0.0418string0.0215number0.0121
+(Punctuation
+(Punctuation
+objectName.Otherany0.6120Object0.1136object0.0729{}0.0272complex0.0229
+,Punctuation
+ Text.Whitespace
+sourceName.Otherany0.6408string0.0989number0.0174Object0.0139complex0.0088
+,Punctuation
+ Text.Whitespace
+srcIndexName.Otherany0.5771string0.0857number0.0762void0.0419boolean0.0218
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+baseMergeName.Othervoid0.6449any0.1725complex0.0546string0.0238{}0.0137
+(Punctuation
+objectName.Otherany0.7056Object0.1025object0.0506{}0.0294string0.0230
+,Punctuation
+ Text.Whitespace
+sourceName.Otherany0.5724string0.1213number0.0341Object0.0168complex0.0152
+,Punctuation
+ Text.Whitespace
+srcIndexName.Otherany0.4872string0.0875number0.0796void0.0761complex0.0586
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+mergeName.Otherany0.1297void0.0090number0.0071MergeStream0.0063Promise<{}>0.0061
+\nText.Whitespace

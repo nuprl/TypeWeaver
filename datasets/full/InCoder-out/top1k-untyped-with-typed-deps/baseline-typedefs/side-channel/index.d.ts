@@ -1,0 +1,16 @@
+declare var GetIntrinsic: any;
+declare var callBound: any;
+declare var inspect: any;
+declare var $TypeError: any;
+declare var $WeakMap: any;
+declare var $Map: any;
+declare var $weakMapGet: any;
+declare var $weakMapSet: any;
+declare var $weakMapHas: any;
+declare var $mapGet: any;
+declare var $mapSet: any;
+declare var $mapHas: any;
+declare var listGetNode: (list: any, key: any) => any;
+declare var listGet: (objects: any[], key: any) => any;
+declare var listSet: (objects: any[], key: any, value: any) => void;
+declare var listHas: (objects: ny[], key: tring | number) => boolean;

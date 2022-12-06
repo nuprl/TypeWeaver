@@ -1,0 +1,49 @@
+index.ts(12,16): error TS2345: Argument of type '(event: Event) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'event' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Event'.
+index.ts(13,17): error TS2538: Type 'Event' cannot be used as an index type.
+index.ts(19,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(24,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(28,29): error TS2554: Expected 3 arguments, but got 2.
+index.ts(32,34): error TS2554: Expected 3 arguments, but got 2.
+index.ts(36,26): error TS2554: Expected 3 arguments, but got 2.
+index.ts(42,39): error TS2304: Cannot find name 'RequestOptions'.
+index.ts(42,74): error TS2304: Cannot find name 'ResponseCallback'.
+index.ts(44,3): error TS2684: The 'this' context of type 'typeof Writable' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+index.ts(79,11): error TS2554: Expected 1 arguments, but got 0.
+index.ts(107,24): error TS2554: Expected 1 arguments, but got 0.
+index.ts(142,25): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(157,37): error TS2304: Cannot find name 'Socket'.
+index.ts(164,31): error TS2304: Cannot find name 'Socket'.
+index.ts(228,65): error TS2304: Cannot find name 'Property'.
+index.ts(305,15): error TS2554: Expected 1 arguments, but got 0.
+index.ts(334,29): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+index.ts(351,35): error TS2339: Property 'location' does not exist on type 'Headers'.
+index.ts(354,14): error TS2339: Property 'responseUrl' does not exist on type 'Response'.
+index.ts(355,14): error TS2551: Property 'redirects' does not exist on type 'Response'. Did you mean 'redirected'?
+index.ts(366,12): error TS2339: Property 'destroy' does not exist on type 'Response'.
+index.ts(371,24): error TS2554: Expected 1 arguments, but got 0.
+index.ts(381,22): error TS2339: Property 'req' does not exist on type 'Response'.
+index.ts(422,9): error TS2554: Expected 0 arguments, but got 2.
+index.ts(479,59): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(482,48): error TS2304: Cannot find name 'RequestOptionsArgs'.
+index.ts(482,79): error TS2304: Cannot find name 'RequestCallback'.
+index.ts(487,41): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'string'.
+index.ts(491,30): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'string'.
+index.ts(499,9): error TS2740: Type '{ protocol: any; hostname: any; hash: any; search: any; pathname: any; path: any; href: any; }' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
+index.ts(504,19): error TS2322: Type '{ protocol: string; }' is not assignable to type 'Request'.
+  Object literal may only specify known properties, and 'protocol' does not exist in type 'Request'.
+index.ts(522,13): error TS2554: Expected 0 arguments, but got 2.
+index.ts(546,34): error TS2304: Cannot find name 'UrlObject'.
+index.ts(560,13): error TS2339: Property 'port' does not exist on type '{ protocol: any; hostname: any; hash: any; search: any; pathname: any; path: any; href: any; }'.
+index.ts(587,31): error TS2351: This expression is not constructable.
+  Not all constituents of type 'Error | ErrorConstructor' are constructable.
+    Type 'Error' has no construct signatures.
+index.ts(595,13): error TS2339: Property 'removeListener' does not exist on type 'Request'.
+index.ts(597,11): error TS2339: Property 'on' does not exist on type 'Request'.
+index.ts(598,11): error TS2339: Property 'abort' does not exist on type 'Request'.
+index.ts(620,25): error TS2345: Argument of type '{ http: typeof http; https: typeof https; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and 'http' does not exist in type 'string[]'.
+

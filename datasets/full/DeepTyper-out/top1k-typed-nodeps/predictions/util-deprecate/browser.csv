@@ -1,0 +1,258 @@
+Text
+/**\n * Module exports.\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+deprecateName.Otherany0.9628string0.0139number0.0044symbol0.0022complex0.0020
+;Punctuation
+\n\nText.Whitespace
+/**\n * Mark that a method should not be used.\n * Returns a modified function which warns once by default.\n *\n * If `localStorage.noDeprecation = true` is set, then it is a no-op.\n *\n * If `localStorage.throwDeprecation = true` is set, then deprecated functions\n * will throw an Error when invoked.\n *\n * If `localStorage.traceDeprecation = true` is set, then deprecated functions\n * will invoke `console.trace()` instead of `console.error()`.\n *\n * @param {Function} fn - the function to deprecate\n * @param {String} msg - the string to print to the console when `fn` is invoked\n * @returns {Function} a new "deprecated" version of `fn`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+deprecateName.Otherany0.9244void0.0142string0.0113boolean0.0053complex0.0038
+ Text.Whitespace
+(Punctuation
+fnName.Otherany0.7461Function0.1119string0.0508boolean0.0172number0.0034
+,Punctuation
+ Text.Whitespace
+msgName.Otherstring0.7462any0.2290boolean0.0027Error0.0017any[]0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+configName.Otherany0.5587boolean0.2651complex0.0128string0.0122Config0.0100
+(Punctuation
+'noDeprecation'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.Otherany0.7450Function0.1132boolean0.0289string0.0201void0.0142
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+warnedName.Otherboolean0.9916false0.0045any0.0016true0.0011void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+deprecatedName.Otherboolean0.7811void0.1187any0.0355string0.0294complex0.0046
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+warnedName.Otherboolean0.9194any0.0542string0.0092false0.0064true0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+configName.Otherany0.3992boolean0.3877complex0.0113string0.0089Config0.0082
+(Punctuation
+'throwDeprecation'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordany0.4694Error0.4370string0.0173complex0.0151{}0.0093
+ Text.Whitespace
+newOperator.WordError0.4835ErrorConstructor0.2797any0.1327string0.0230complex0.0047
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+msgName.Otherstring0.7585any0.1775Error0.0089never0.0041any[]0.0033
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+configName.Otherany0.4196boolean0.2506Config0.0193complex0.0125void0.0096
+(Punctuation
+'traceDeprecation'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+consoleName.OtherConsole0.9996any0.0001void0.0000Function0.0000string0.0000
+.Punctuation
+traceName.Othervoid0.9927complex0.0023any0.0021Promise<void>0.0007boolean0.0003
+(Punctuation
+msgName.Otherstring0.7198any0.2401void0.0051any[]0.0042complex0.0028
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+consoleName.OtherConsole0.9993void0.0002any0.0002Function0.0000string0.0000
+.Punctuation
+warnName.Othervoid0.9976any0.0010complex0.0003boolean0.0002Promise<void>0.0001
+(Punctuation
+msgName.Otherstring0.6303any0.3263void0.0069any[]0.0060Error0.0036
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+warnedName.Otherboolean0.9853any0.0052true0.0036false0.0035void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.OtherFunction0.4015any0.3548void0.0446boolean0.0301{}0.0203
+.Punctuation
+applyName.Otherany0.9855void0.0030Function0.0022complex0.0014boolean0.0009
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9970any[]0.0007any0.0001string[]0.0001{}0.0000
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+deprecatedName.Otherboolean0.8756true0.0338false0.0207any0.0192any[]0.0054
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks `localStorage` for boolean values for the given `name`.\n *\n * @param {String} name\n * @returns {Boolean}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+configName.Otherboolean0.5743any0.2521Config0.0132void0.0107string0.0069
+ Text.Whitespace
+(Punctuation
+nameName.Otherstring0.8923any0.1006boolean0.0019number0.0006String0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// accessing global.localStorage can trigger a DOMException in sandboxed iframesComment.Single
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+globalName.Builtinany0.7412Global0.0553BrowserNodeGlobal0.0506GlobalContainer0.0255boolean0.0104
+.Punctuation
+localStorageName.Otherany0.7586Storage0.1801boolean0.0314complex0.0067number0.0032
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+_Name.Otherany0.9905string0.0040number0.0009boolean0.0007complex0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valName.Otherany0.7576boolean0.1699string0.0521complex0.0044number0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+globalName.Builtinany0.4966BrowserNodeGlobal0.1089Global0.1020GlobalContainer0.0623Config0.0123
+.Punctuation
+localStorageName.Otherany0.4872Storage0.3560complex0.0359boolean0.0345{}0.0066
+[Punctuation
+nameName.Otherstring0.9638any0.0312number0.0012boolean0.0011complex0.0004
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nullKeyword.Constant
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+valName.Otherany0.7085string0.1851boolean0.0648number0.0174complex0.0115
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9891String0.0040string0.0007complex0.0001RegExp0.0001
+(Punctuation
+valName.Otherany0.6177string0.2408boolean0.0618number0.0252complex0.0059
+)Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.8969any0.0913boolean0.0030complex0.0023void0.0015
+(Punctuation
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'true'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

@@ -1,0 +1,60 @@
+bench.ts(11,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench.ts(24,2): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+bench.ts(33,7): error TS2322: Type 'string' is not assignable to type 'number'.
+bench.ts(41,14): error TS2339: Property 'resolve' does not exist on type 'any[]'.
+bench.ts(55,7): error TS2322: Type 'string' is not assignable to type 'number'.
+bench.ts(63,14): error TS2339: Property 'resolve' does not exist on type 'any[]'.
+bench.ts(71,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+lib/abort.ts(11,21): error TS2339: Property 'jobs' does not exist on type 'Error'.
+lib/abort.ts(14,9): error TS2339: Property 'jobs' does not exist on type 'Error'.
+lib/async.ts(18,9): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'number'.
+lib/async.ts(28,22): error TS2345: Argument of type '() => void' is not assignable to parameter of type 'number'.
+lib/defer.ts(24,16): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '() => void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'TimerHandler'.
+lib/iterate.ts(18,67): error TS2339: Property 'index' does not exist on type 'object'.
+lib/iterate.ts(18,82): error TS2339: Property 'index' does not exist on type 'object'.
+lib/iterate.ts(20,9): error TS2339: Property 'jobs' does not exist on type 'object'.
+lib/iterate.ts(24,24): error TS2339: Property 'jobs' does not exist on type 'object'.
+lib/iterate.ts(30,18): error TS2339: Property 'jobs' does not exist on type 'object'.
+lib/iterate.ts(37,13): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Error'.
+  Type '{}' is missing the following properties from type 'Error': name, message
+lib/iterate.ts(41,13): error TS2339: Property 'results' does not exist on type 'object'.
+lib/iterate.ts(45,27): error TS2339: Property 'results' does not exist on type 'object'.
+lib/readable_asynckit.ts(13,20): error TS2339: Property 'super_' does not exist on type '() => void'.
+lib/readable_asynckit.ts(71,32): error TS2339: Property 'apply' does not exist on type 'object'.
+lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
+lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
+lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+lib/readable_serial_ordered.ts(24,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, sortMethod: string, callback: Function) => object'.
+lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'object'.
+lib/state.ts(32,30): error TS2538: Type 'any[]' cannot be used as an index type.
+lib/state.ts(32,39): error TS2538: Type 'any[]' cannot be used as an index type.
+lib/streamify.ts(23,9): error TS2740: Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+lib/streamify.ts(26,12): error TS2339: Property 'jobs' does not exist on type 'any[]'.
+lib/streamify.ts(81,25): error TS2339: Property 'jobs' does not exist on type 'any[]'.
+lib/streamify.ts(88,19): error TS2339: Property 'jobs' does not exist on type 'any[]'.
+lib/streamify.ts(110,38): error TS2339: Property 'value' does not exist on type 'object'.
+lib/streamify.ts(119,36): error TS2339: Property 'value' does not exist on type 'object'.
+parallel.ts(16,74): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+parallel.ts(18,23): error TS2554: Expected 2 arguments, but got 1.
+parallel.ts(20,16): error TS2339: Property 'index' does not exist on type 'object'.
+parallel.ts(31,29): error TS2339: Property 'jobs' does not exist on type 'object'.
+parallel.ts(33,30): error TS2339: Property 'results' does not exist on type 'object'.
+parallel.ts(38,11): error TS2339: Property 'index' does not exist on type 'object'.
+serial.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+serialOrdered.ts(20,99): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+serialOrdered.ts(22,33): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
+  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+serialOrdered.ts(32,11): error TS2339: Property 'index' does not exist on type 'object'.
+serialOrdered.ts(35,15): error TS2339: Property 'index' does not exist on type 'object'.
+serialOrdered.ts(42,26): error TS2339: Property 'results' does not exist on type 'object'.
+serialOrdered.ts(73,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+

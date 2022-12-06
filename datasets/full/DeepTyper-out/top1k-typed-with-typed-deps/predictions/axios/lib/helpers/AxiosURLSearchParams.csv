@@ -1,0 +1,319 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+toFormDataName.Otherany0.3100void0.2979string0.0627boolean0.0602complex0.0499
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toFormData.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * It encodes a string by replacing all characters that are not in the unreserved set with\n * their percent-encoded equivalents\n *\n * @param {string} str - The string to encode.\n *\n * @returns {string} The encoded string.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+encodeName.Otherstring0.5885complex0.1457any0.0946string[]0.0170void0.0119
+(Punctuation
+strName.Otherstring0.8675any0.1274number0.0010complex0.0009boolean0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+charMapName.Othercomplex0.6447any0.2498string0.0083{}0.0031boolean0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'!'Literal.String.Single
+:Operator
+ Text.Whitespace
+'%21'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+"'"Literal.String.Double
+:Operator
+ Text.Whitespace
+'%27'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'('Literal.String.Single
+:Operator
+ Text.Whitespace
+'%28'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+')'Literal.String.Single
+:Operator
+ Text.Whitespace
+'%29'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'~'Literal.String.Single
+:Operator
+ Text.Whitespace
+'%7E'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'%20'Literal.String.Single
+:Operator
+ Text.Whitespace
+'+'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'%00'Literal.String.Single
+:Operator
+ Text.Whitespace
+'\x00'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+encodeURIComponentName.Builtinstring0.9950complex0.0022any0.0012string[]0.0008boolean0.0001
+(Punctuation
+strName.Otherstring0.9097any0.0832complex0.0050number0.0006string[]0.0004
+)Punctuation
+.Punctuation
+replaceName.Othercomplex0.9919any0.0067string0.0005void0.0002string[]0.0001
+(Punctuation
+/[!'()~]|%20|%00/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+replacerName.Otherstring0.6189any0.3448complex0.0118string[]0.0080boolean0.0059
+(Punctuation
+matchName.Otherstring0.9078any0.0776number0.0047boolean0.0030RegExp0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+charMapName.Otherany0.6516complex0.2470string0.0356{}0.0299string[]0.0062
+[Punctuation
+matchName.Otherstring0.9219any0.0687number0.0037boolean0.0014complex0.0011
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * It takes a params object and converts it to a FormData object\n *\n * @param {Object<string, any>} params - The parameters to be converted to a FormData object.\n * @param {Object<string, any>} options - The options object passed to the Axios constructor.\n *\n * @returns {void}\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+AxiosURLSearchParamsName.Othervoid0.8334any0.0971string0.0174complex0.0164boolean0.0100
+(Punctuation
+paramsName.Otherany0.6764string0.0615Object0.0089Buffer0.0084string[]0.0083
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5488Options0.0573string0.0071IOptions0.0060ConnectionOptions0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_pairsName.Otherany[]0.3653any0.2871string[]0.0496complex0.0465Function[]0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+paramsName.Otherany0.8545string0.0298any[]0.0185boolean0.0140string[]0.0072
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+toFormDataName.Otherany0.7012boolean0.0797complex0.0664void0.0380any[]0.0309
+(Punctuation
+paramsName.Otherany0.8827any[]0.0286string0.0246string[]0.0098complex0.0076
+,Punctuation
+ Text.Whitespace
+thisKeyword
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8515Options0.0138string0.0078{}0.0070any[]0.0063
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+prototypeName.Otherany0.5288void0.0775Function0.0398{}0.0262Object0.0204
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+AxiosURLSearchParamsName.Otherany0.8454complex0.0462void0.0387Function0.0079{}0.0075
+.Punctuation
+prototypeName.Otherany0.5604void0.0634{}0.0361Object0.0226Function0.0203
+;Punctuation
+\n\nText.Whitespace
+prototypeName.Otherany0.6454any[]0.0326void0.0311{}0.0211Object0.0203
+.Punctuation
+appendName.Otherany0.6919void0.2267complex0.0153{}0.0097any[]0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+appendName.Othervoid0.8713any0.0846complex0.0137string0.0054{}0.0050
+(Punctuation
+nameName.Otherstring0.5208any0.4749number0.0006void0.0004complex0.0004
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5787string0.4091number0.0037boolean0.0017{}0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_pairsName.Otherany0.3993any[]0.3434string[]0.1187complex0.0312void)[]0.0122
+.Punctuation
+pushName.Othernumber0.9602any0.0327string0.0029void0.0016boolean0.0008
+(Punctuation
+[Punctuation
+nameName.Otherstring0.7335any0.2630number0.0009complex0.0004never0.0003
+,Punctuation
+ Text.Whitespace
+valueName.Otherstring0.5752any0.4047number0.0088{}0.0014Error0.0013
+]Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+prototypeName.Otherany0.6962void0.0449Object0.0232Function0.0172any[]0.0095
+.Punctuation
+toStringName.Otherany0.5176string0.4634complex0.0113number0.0010boolean0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toStringName.Otherstring0.7607any0.2206complex0.0116boolean0.0021void0.0018
+(Punctuation
+encoderName.Otherstring0.7963any0.1883complex0.0107string[]0.0012boolean0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+_encodeName.Otherany0.6677string0.2882boolean0.0125string[]0.0099complex0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+encoderName.Otherstring0.6607any0.2765complex0.0464boolean0.0050string[]0.0040
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valueName.Otherstring0.6987any0.2913number0.0050boolean0.0012any[]0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+encoderName.Otherany0.5388string0.4019complex0.0492any[]0.0024string[]0.0019
+.Punctuation
+callName.Otherany0.9724string0.0174complex0.0031number0.0020T0.0008
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+valueName.Otherstring0.5054any0.4804number0.0050boolean0.0013{}0.0011
+,Punctuation
+ Text.Whitespace
+encodeName.Otherstring0.4778any0.3655complex0.0771string[]0.0313any[]0.0127
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+encodeName.Otherany0.6016complex0.1420string0.1363string[]0.0685any[]0.0175
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_pairsName.Otherany0.4343string[]0.3062any[]0.1497complex0.0222string0.0081
+.Punctuation
+mapName.OtherU[]0.8494complex0.0807any0.0580boolean0.0011any[]0.0007
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+eachName.Other
+(Punctuation
+pairName.Otherany0.5308string0.1439string[]0.1193complex0.0612any[]0.0298
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+_encodeName.Otherstring0.6375any0.2288string[]0.0335complex0.0317boolean0.0209
+(Punctuation
+pairName.Otherstring[]0.4700any0.3181any[]0.0788string0.0328complex0.0291
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'='Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+_encodeName.Otherstring0.8458any0.1111string[]0.0136boolean0.0095number0.0076
+(Punctuation
+pairName.Otherstring[]0.4370any0.4113string0.0392any[]0.0389complex0.0269
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+joinName.Otherstring0.8510any0.1445number0.0010complex0.0010boolean0.0009
+(Punctuation
+'&'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+AxiosURLSearchParamsName.Otherany0.7210void0.0914string0.0379complex0.0345boolean0.0205
+;Punctuation
+\nText.Whitespace

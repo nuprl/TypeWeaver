@@ -1,0 +1,34 @@
+graceful-fs.ts(51,3): error TS2741: Property '__promisify__' is missing in type '(fd: any, cb: any) => void' but required in type 'typeof close'.
+graceful-fs.ts(95,1): error TS2528: A module cannot have multiple default exports.
+graceful-fs.ts(96,54): error TS2339: Property '__patched' does not exist on type 'typeof import("fs")'.
+graceful-fs.ts(97,3): error TS1258: A default export must be at the top level of a file or module declaration.
+graceful-fs.ts(97,3): error TS2528: A module cannot have multiple default exports.
+graceful-fs.ts(98,6): error TS2339: Property '__patched' does not exist on type 'typeof import("fs")'.
+graceful-fs.ts(114,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(134,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(155,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(177,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(210,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(235,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(236,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(256,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(266,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(304,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+graceful-fs.ts(327,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+graceful-fs.ts(353,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(398,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'number'.
+graceful-fs.ts(445,5): error TS2322: Type 'Timeout' is not assignable to type 'void'.
+legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
+legacy-streams.ts(14,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+legacy-streams.ts(16,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
+legacy-streams.ts(78,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
+polyfills.ts(138,21): error TS2339: Property 'apply' does not exist on type 'never'.
+polyfills.ts(283,5): error TS2322: Type '(target: any, uid: any, gid: number) => any' is not assignable to type 'string'.
+

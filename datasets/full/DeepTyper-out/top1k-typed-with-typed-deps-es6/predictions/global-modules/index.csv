@@ -1,0 +1,149 @@
+Text
+/*!\n * global-modules <https://github.com/jonschlinkert/global-modules>\n *\n * Copyright (c) 2015-2017 Jon Schlinkert.\n * Licensed under the MIT license.\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.9009string0.0713complex0.0166void0.0018Path0.0011
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+prefixName.Otherstring0.6918any0.2563complex0.0163void0.0087boolean0.0049
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'global-prefix'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+gmName.Otherany0.5212string0.3348boolean0.0908number0.0120void0.0061
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getPathName.Otherstring0.7034any0.2789boolean0.0075number0.0033void0.0013
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9967complex0.0016string0.0003Process0.0002void0.0001
+.Punctuation
+platformName.Otherany0.9891string0.0098boolean0.0003complex0.0003number0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'win32'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+processName.Otherany0.9949complex0.0018string0.0010Process0.0004boolean0.0003
+.Punctuation
+envName.Otherany0.9986complex0.0007string0.0003boolean0.0001void0.0001
+.Punctuation
+OSTYPEName.Otherany0.9949string0.0042boolean0.0004complex0.0003void0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'msys'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+processName.Otherany0.9927complex0.0029string0.0011Process0.0007boolean0.0003
+.Punctuation
+envName.Otherany0.9986complex0.0008string0.0004boolean0.0001void0.0001
+.Punctuation
+OSTYPEName.Otherany0.9925string0.0066boolean0.0003complex0.0003number0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'cygwin'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pathName.Otherany0.9984string0.0010complex0.0004Path0.0001number0.0000
+.Punctuation
+resolveName.Otherany0.9882complex0.0077string0.0032void0.0003T0.0001
+(Punctuation
+prefixName.Otherstring0.7898any0.2017complex0.0032number0.0016boolean0.0006
+,Punctuation
+ Text.Whitespace
+'node_modules'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pathName.Otherany0.9983string0.0007complex0.0006Path0.0001any[]0.0000
+.Punctuation
+resolveName.Otherany0.9902complex0.0058string0.0028void0.0004T0.0001
+(Punctuation
+prefixName.Otherstring0.6810any0.3058complex0.0053number0.0020boolean0.0010
+,Punctuation
+ Text.Whitespace
+'lib/node_modules'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Expose `global-modules` path\n */Comment.Multiline
+\n\nText.Whitespace
+ReflectName.Builtinany0.9903complex0.0050string0.0004T0.0002void0.0001
+.Punctuation
+definePropertyName.Othercomplex0.7877any0.2043string0.0010boolean0.0006void0.0006
+(Punctuation
+moduleName.Other
+,Punctuation
+ Text.Whitespace
+'exports'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+getName.Other
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gmName.Otherstring0.6025any0.2992boolean0.0701number0.0171void0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+gmName.Otherstring0.7309any0.2575boolean0.0055number0.0022RegExp0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getPathName.Otherstring0.8715any0.1187boolean0.0037number0.0031complex0.0004
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

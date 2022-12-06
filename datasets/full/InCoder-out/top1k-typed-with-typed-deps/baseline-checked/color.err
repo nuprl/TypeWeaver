@@ -1,0 +1,31 @@
+index.ts(22,24): error TS2749: 'Color' refers to a value, but is being used as a type here. Did you mean 'typeof Color'?
+index.ts(22,24): error TS4078: Parameter 'object' of exported function has or is using private name 'Color'.
+index.ts(22,39): error TS2304: Cannot find name 'ColorModel'.
+index.ts(22,39): error TS4078: Parameter 'model' of exported function has or is using private name 'ColorModel'.
+index.ts(24,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(43,23): error TS2339: Property 'model' does not exist on type '{}'.
+index.ts(44,27): error TS2339: Property 'color' does not exist on type '{}'.
+index.ts(45,24): error TS2339: Property 'valpha' does not exist on type '{}'.
+index.ts(93,16): error TS2554: Expected 2 arguments, but got 1.
+index.ts(150,11): error TS2339: Property 'alpha' does not exist on type '{}'.
+index.ts(184,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(189,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(224,5): error TS2554: Expected 3 arguments, but got 2.
+index.ts(225,5): error TS2554: Expected 3 arguments, but got 2.
+index.ts(229,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(229,11): error TS2554: Expected 2 arguments, but got 1.
+index.ts(237,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(237,11): error TS2554: Expected 2 arguments, but got 1.
+index.ts(245,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(245,11): error TS2554: Expected 2 arguments, but got 1.
+index.ts(358,16): error TS2339: Property 'rgb' does not exist on type '(object: Color, model: ColorModel) => any'.
+index.ts(395,16): error TS2339: Property 'rgb' does not exist on type '(object: Color, model: ColorModel) => any'.
+index.ts(414,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(414,11): error TS2554: Expected 2 arguments, but got 1.
+index.ts(418,11): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(421,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(428,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Uint8Array'.
+  Type 'any[]' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
+index.ts(431,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(454,26): error TS2304: Cannot find name 'ny'.
+

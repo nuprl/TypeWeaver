@@ -1,0 +1,630 @@
+Text
+/*\n * Element Traversal methods from Juriy Zaytsev (kangax)\n * used to emulate Prototype up/down/previous/next methods\n */Comment.Multiline
+\n\nText.Whitespace
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+DName.Otherany0.3289D0.0327string0.0109boolean0.0098void0.0069
+)Punctuation
+{Punctuation
+\n\n  Text.Whitespace
+// TODO: all of this needs testsComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+matchName.Otherany0.8605boolean0.0777string0.0155complex0.0040void0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DName.Otherany0.7384boolean0.0099HTMLElement0.0078void0.0068D0.0066
+.Punctuation
+matchName.Otherany0.8866string0.0659boolean0.0270complex0.0071number0.0028
+,Punctuation
+ Text.Whitespace
+selectName.Otherany0.7923boolean0.1584string0.0155number0.0028void0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DName.Otherany0.8073boolean0.0046D0.0044Context0.0030void0.0026
+.Punctuation
+selectName.Otherany0.9377string0.0288boolean0.0046HTMLElement0.0017number0.0009
+,Punctuation
+ Text.Whitespace
+rootName.Otherany0.6333string0.1147HTMLElement0.1138Element0.0131Node0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+documentName.BuiltinDocument0.9261any0.0084HTMLDocument0.0026ParsedHtmlDocument0.0024HTMLElement0.0021
+.Punctuation
+documentElementName.OtherHTMLElement0.8906string0.0646any0.0303Element0.0020HTMLDivElement0.0010
+,Punctuation
+\n\n  Text.Whitespace
+// Use the Element Traversal API if available.Comment.Single
+\n  Text.Whitespace
+nextElementName.Otherstring0.4124RegExp0.2838any0.2296HTMLElement0.0381boolean0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'nextElementSibling'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+previousElementName.Otherstring0.5712RegExp0.2402any0.1402HTMLElement0.0179boolean0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'previousElementSibling'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+parentElementName.Otherany0.4404string0.2684HTMLElement0.2135RegExp0.0416string[]0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'parentElement'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+// Fall back to the DOM Level 1 API.Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+nextElementName.Otherstring0.7128any0.2304boolean0.0369HTMLElement0.0061number0.0029
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+rootName.Otherany0.1643HTMLElement0.1449string0.0851HTMLDivElement0.0349CSSStyleDeclaration0.0228
+)Punctuation
+)Punctuation
+ Text.Whitespace
+nextElementName.Otherstring0.5317RegExp0.2568any0.1635HTMLElement0.0115boolean0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'nextSibling'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+previousElementName.Otherstring0.7462any0.2056boolean0.0354number0.0026HTMLElement0.0024
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+rootName.Otherany0.1928HTMLElement0.1237string0.0964HTMLDivElement0.0271complex0.0183
+)Punctuation
+)Punctuation
+ Text.Whitespace
+previousElementName.Otherstring0.5399RegExp0.2299any0.1779HTMLElement0.0145boolean0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'previousSibling'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+parentElementName.Otherstring0.6665any0.2774HTMLElement0.0378boolean0.0051complex0.0025
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+rootName.Otherany0.3619HTMLElement0.1557string0.1000complex0.0319Node0.0176
+)Punctuation
+)Punctuation
+ Text.Whitespace
+parentElementName.Otherany0.4983string0.2417HTMLElement0.1946RegExp0.0231string[]0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'parentNode'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+walkElementsName.Otherboolean0.3641any0.3587string0.2020void0.0239complex0.0106
+(Punctuation
+propertyName.Otherstring0.9318any0.0536HTMLElement0.0012boolean0.0011number0.0009
+,Punctuation
+ Text.Whitespace
+elementName.Otherany0.7965HTMLElement0.0700string0.0453Element0.0205number0.0041
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.6444string0.2483boolean0.0460number0.0124Expression0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.8883any0.1032boolean0.0038string0.0026complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+isIndexName.Otherboolean0.5296any0.3106string0.1361number0.0099complex0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+exprName.Otherany0.8559string0.0852boolean0.0138RegExp0.0058number0.0053
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'number'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+exprName.Otherany0.8005string0.1463boolean0.0161number0.0058complex0.0034
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+isIndexName.Otherboolean0.9767any0.0157string0.0028true0.0013false0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+exprName.Otherany0.7624number0.0906string0.0794boolean0.0430Date0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+elementName.Otherany0.9127string0.0179HTMLElement0.0126Element0.0064boolean0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+elementName.Otherany0.8425HTMLElement0.0211Element0.0107string0.0060complex0.0055
+[Punctuation
+propertyName.Otherstring0.9082any0.0756number0.0023complex0.0017HTMLElement0.0006
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+elementName.Otherany0.8486HTMLElement0.0309Element0.0081complex0.0042string0.0041
+.Punctuation
+nodeTypeName.Otherany0.6478number0.3416string0.0053boolean0.0024complex0.0009
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+continueKeyword
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isIndexName.Otherany0.4989boolean0.2514string0.1803number0.0276RegExpMatchArray0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+++Operator
+iName.Othernumber0.7123any0.2740string0.0048boolean0.0024void0.0023
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+iName.Othernumber0.5570any0.3954string0.0315boolean0.0059complex0.0031
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+exprName.Otherany0.7827string0.1237number0.0449boolean0.0179void0.0033
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+elementName.Otherany0.7694HTMLElement0.0909string0.0292Element0.0196Date0.0041
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+matchName.Otherany0.8240boolean0.0863complex0.0386string0.0191void0.0033
+(Punctuation
+elementName.Otherany0.7376HTMLElement0.1203Element0.0339string0.0172Node0.0050
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.7415string0.1684boolean0.0253number0.0097HTMLElement0.0063
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+elementName.Otherany0.7560HTMLElement0.1071Element0.0190string0.0113HTMLDivElement0.0067
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * @method up\n   * @param {HTMLElement} element element to walk from\n   * @param {String | Number} expr CSS expression or an index\n   * @return {HTMLElement | null}\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+upName.Otherany0.7060string0.0416boolean0.0413number0.0169void0.0121
+(Punctuation
+elementName.Otherany0.5357HTMLElement0.1762Element0.0789string0.0567Node0.0058
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.5716string0.2601boolean0.0249HTMLElement0.0184Element0.0158
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+walkElementsName.Otherany0.8105string0.0480HTMLElement0.0164void0.0154boolean0.0121
+(Punctuation
+parentElementName.Otherany0.5608HTMLElement0.3223string0.0757Element0.0080Date0.0054
+,Punctuation
+ Text.Whitespace
+elementName.Otherany0.8741HTMLElement0.0567Element0.0182string0.0103HTMLDivElement0.0017
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.7981string0.1247boolean0.0163number0.0085Expression0.0061
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+/**\n   * @method next\n   * @param {HTMLElement} element element to walk from\n   * @param {String | Number} expr CSS expression or an index\n   * @return {HTMLElement | null}\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+nextName.Otherany0.5215string0.0975void0.0601boolean0.0371HTMLElement0.0178
+(Punctuation
+elementName.Otherany0.6080HTMLElement0.1311Element0.0570string0.0277Node0.0048
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.6142string0.2286boolean0.0295number0.0138HTMLElement0.0095
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+walkElementsName.Otherany0.7609string0.0674boolean0.0250void0.0146complex0.0084
+(Punctuation
+nextElementName.Otherany0.6368string0.2517boolean0.0158Element0.0087HTMLElement0.0053
+,Punctuation
+ Text.Whitespace
+elementName.Otherany0.8760HTMLElement0.0369Element0.0226string0.0164Date0.0017
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.7385string0.1752boolean0.0249number0.0095Expression0.0061
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+/**\n   * @method previous\n   * @param {HTMLElement} element element to walk from\n   * @param {String | Number} expr CSS expression or an index\n   * @return {HTMLElement | null}\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+previousName.Otherany0.6982string0.1304boolean0.0621void0.0168number0.0113
+(Punctuation
+elementName.Otherany0.6565HTMLElement0.0898Element0.0606string0.0409Node0.0049
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.5797string0.2737boolean0.0319number0.0143Element0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+walkElementsName.Otherany0.7699string0.0676boolean0.0290void0.0204complex0.0101
+(Punctuation
+previousElementName.Otherany0.6869string0.2162boolean0.0185Element0.0067HTMLElement0.0038
+,Punctuation
+ Text.Whitespace
+elementName.Otherany0.8775HTMLElement0.0282Element0.0226string0.0141Date0.0020
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.7572string0.1515boolean0.0305number0.0085Expression0.0052
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+/**\n   * @method down\n   * @param {HTMLElement} element element to walk from\n   * @param {String | Number} expr CSS expression or an index\n   * @return {HTMLElement | null}\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+downName.Othervoid0.3181boolean0.2897any0.2439number0.0257string0.0230
+(Punctuation
+elementName.Otherany0.8615HTMLElement0.0266string0.0247Element0.0148number0.0023
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.7092string0.1503boolean0.0370number0.0131Expression0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isIndexName.Otherboolean0.4104any0.3876string0.1601number0.0031complex0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+exprName.Otherany0.8620string0.0784boolean0.0081complex0.0060Expression0.0042
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'number'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+descendantsName.Otherany0.8580any[]0.0281complex0.0091string0.0086string[]0.0065
+,Punctuation
+ Text.Whitespace
+indexName.Otherany0.5687number0.4171string0.0067complex0.0020boolean0.0011
+,Punctuation
+ Text.Whitespace
+descendantName.Otherany0.9306string0.0120number0.0076boolean0.0066complex0.0021
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+exprName.Otherany0.9165boolean0.0267string0.0255number0.0088complex0.0023
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+elementName.Otherany0.9567HTMLElement0.0057Element0.0029string0.0024boolean0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+elementName.Otherany0.9626HTMLElement0.0057Element0.0024complex0.0023string0.0022
+.Punctuation
+firstChildName.Otherany0.9702number0.0080boolean0.0047string0.0046Node0.0025
+;Punctuation
+\n      Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+elementName.Otherany0.8205HTMLElement0.0594Element0.0134string0.0082boolean0.0028
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+elementName.Otherany0.9181HTMLElement0.0202string0.0043Element0.0038boolean0.0018
+.Punctuation
+nodeTypeName.Otherany0.7795number0.2086string0.0067boolean0.0023complex0.0006
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+elementName.Otherany0.9394HTMLElement0.0115string0.0079Element0.0052T0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+elementName.Otherany0.9026HTMLElement0.0124string0.0065complex0.0062Element0.0053
+[Punctuation
+nextElementName.Otherstring0.8079any0.1308number0.0418boolean0.0040complex0.0014
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+elementName.Otherany0.9249string0.0151HTMLElement0.0135Element0.0043complex0.0029
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isIndexName.Otherany0.5174boolean0.2620string0.1863number0.0055RegExpMatchArray0.0041
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+matchName.Otherany0.8481boolean0.0887complex0.0378string0.0079void0.0025
+(Punctuation
+elementName.Otherany0.9177HTMLElement0.0197string0.0143Element0.0067boolean0.0033
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.8349string0.0980boolean0.0274number0.0066RegExp0.0047
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isIndexName.Otherany0.5099boolean0.3603string0.0856number0.0131RegExpMatchArray0.0052
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+exprName.Otherany0.9054string0.0343number0.0295boolean0.0145Date0.0020
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+elementName.Otherany0.9030HTMLElement0.0188string0.0107Element0.0042complex0.0029
+;Punctuation
+\n    Text.Whitespace
+descendantsName.Otherany0.9558string0.0046any[]0.0027boolean0.0021complex0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+selectName.Otherany0.8537complex0.0076string0.0061boolean0.0041T0.0026
+(Punctuation
+'*'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+elementName.Otherany0.9296HTMLElement0.0178string0.0135Element0.0040complex0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isIndexName.Otherany0.5566boolean0.2424string0.1247complex0.0130number0.0065
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+descendantsName.Otherany0.9054complex0.0128any[]0.0061{}0.0046RegExpMatchArray0.0020
+[Punctuation
+exprName.Otherany0.4920string0.4363number0.0214boolean0.0192Date0.0021
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+indexName.Othernumber0.8057any0.1878string0.0025boolean0.0017complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+descendantName.Otherany0.9662boolean0.0091string0.0089number0.0041complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+descendantsName.Otherany0.8144any[]0.0138RegExpMatchArray0.0080string[]0.0048complex0.0026
+[Punctuation
+indexName.Othernumber0.7284any0.2553string0.0120boolean0.0009complex0.0008
+]Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+matchName.Otherany0.7474boolean0.1816complex0.0372string0.0135void0.0044
+(Punctuation
+descendantName.Otherany0.9441string0.0047boolean0.0041number0.0037Node0.0020
+,Punctuation
+ Text.Whitespace
+exprName.Otherany0.8812string0.0562boolean0.0240number0.0098RegExp0.0028
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+++Operator
+indexName.Othernumber0.6528any0.3352string0.0055boolean0.0008complex0.0007
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+descendantName.Otherany0.7531Node0.0069never0.0051boolean0.0044string0.0038
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+DName.Otherany0.2530void0.0213D0.0209boolean0.0090Assert0.0044
+.Punctuation
+upName.Otherany0.7194boolean0.1013string0.0501number0.0398void0.0150
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+upName.Otherany0.4501number0.1743boolean0.1430string0.1021void0.0280
+;Punctuation
+\n  Text.Whitespace
+DName.Otherany0.5397void0.0345D0.0138boolean0.0095complex0.0046
+.Punctuation
+downName.Othervoid0.4170any0.4099boolean0.0926string0.0307number0.0240
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+downName.Othervoid0.6493any0.1412number0.0624boolean0.0571string0.0248
+;Punctuation
+\n  Text.Whitespace
+DName.Otherany0.7406void0.0219boolean0.0042D0.0037string0.0035
+.Punctuation
+nextName.Otherany0.7323void0.0806string0.0355boolean0.0165Function0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextName.Otherany0.1887string0.0518void0.0399boolean0.0158Function0.0155
+;Punctuation
+\n  Text.Whitespace
+DName.Otherany0.4990void0.0163D0.0156boolean0.0085Node0.0054
+.Punctuation
+previousName.Otherany0.6987string0.1629boolean0.0183number0.0178void0.0101
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+previousName.Otherany0.5979string0.1794boolean0.0235number0.0232void0.0084
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+NWName.Otherany0.8632complex0.0058HTMLElement0.0036Node0.0031Element0.0022
+.Punctuation
+DomName.Otherany0.9454number0.0171string0.0120boolean0.0069complex0.0047
+)Punctuation
+;Punctuation
+\nText.Whitespace

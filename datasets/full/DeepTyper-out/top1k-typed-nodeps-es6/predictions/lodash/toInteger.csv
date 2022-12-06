@@ -1,0 +1,67 @@
+importKeyword
+ Text.Whitespace
+toFiniteName.Otherany0.1066string0.0592complex0.0570boolean0.0304number0.0224
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toFinite.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Converts `value` to an integer.\n *\n * **Note:** This method is loosely based on\n * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {number} Returns the converted integer.\n * @see isInteger, isNumber, toNumber\n * @example\n *\n * toInteger(3.2)\n * // => 3\n *\n * toInteger(Number.MIN_VALUE)\n * // => 0\n *\n * toInteger(Infinity)\n * // => 1.7976931348623157e+308\n *\n * toInteger('3.2')\n * // => 3\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toIntegerName.Othernumber0.3191string0.2468any0.0843complex0.0561boolean0.0200
+(Punctuation
+valueName.Otherstring0.6106any0.1682number0.1317boolean0.0093Date0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Othernumber0.7860string0.0987any0.0837complex0.0051boolean0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toFiniteName.Othernumber0.5605string0.2457any0.1205complex0.0245boolean0.0058
+(Punctuation
+valueName.Otherany0.3416string0.3156number0.2714Date0.0073complex0.0069
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+remainderName.Othernumber0.9722any0.0160string0.0061boolean0.0025complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resultName.Othernumber0.9709any0.0207string0.0057boolean0.0009complex0.0002
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+remainderName.Othernumber0.9351any0.0273string0.0161boolean0.0126complex0.0009
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resultName.Othernumber0.9383any0.0461string0.0087boolean0.0013Date0.0007
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+remainderName.Othernumber0.9228any0.0425string0.0184boolean0.0030complex0.0010
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+resultKeyword.Typenumber0.8339any0.0951string0.0224boolean0.0065Date0.0021
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+toIntegerName.Otherany0.2119number0.0938string0.0285void0.0142complex0.0121
+\nText.Whitespace

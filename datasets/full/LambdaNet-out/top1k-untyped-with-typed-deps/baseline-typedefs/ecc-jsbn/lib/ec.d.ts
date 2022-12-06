@@ -1,0 +1,34 @@
+declare const randomBytes: any;
+declare const BigInteger: any;
+declare const Barrett: any;
+declare class SecureRandom {
+    nextBytes(bytes: any): void;
+}
+declare function ECFieldElementFp(q: object, x: number): void;
+declare function feFpEquals(other: string): boolean;
+declare function feFpToBigInteger(): number;
+declare function feFpNegate(): object;
+declare function feFpAdd(b: object): Promise;
+declare function feFpSubtract(b: object): object;
+declare function feFpMultiply(b: object): Promise;
+declare function feFpSquare(): object;
+declare function feFpDivide(b: object): object;
+declare function ECPointFp(curve: object, x: number, y: number, z: string): void;
+declare function pointFpGetX(): Promise;
+declare function pointFpGetY(): Promise;
+declare function pointFpEquals(other: HTMLElement): boolean;
+declare function pointFpIsInfinity(): boolean;
+declare function pointFpNegate(): object;
+declare function pointFpAdd(b: HTMLElement): Promise;
+declare function pointFpTwice(): Promise;
+declare function pointFpMultiply(k: object): Promise;
+declare function pointFpMultiplyTwo(j: HTMLElement, x: string, k: HTMLElement): Promise;
+declare function ECCurveFp(q: object, a: Function, b: string): void;
+declare function curveFpGetQ(): Promise;
+declare function curveFpGetA(): object;
+declare function curveFpGetB(): object;
+declare function curveFpEquals(other: object): boolean;
+declare function curveFpGetInfinity(): object;
+declare function curveFpFromBigInteger(x: string): Promise;
+declare function curveReduce(x: string): void;
+declare function curveFpEncodePointHex(p: HTMLElement): string;

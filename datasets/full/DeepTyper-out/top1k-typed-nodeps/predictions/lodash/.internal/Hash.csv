@@ -1,0 +1,349 @@
+Text
+/** Used to stand-in for `undefined` hash values. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+HASH_UNDEFINEDName.Otherstring0.7106any0.0806RegExp0.0692string[]0.0184complex0.0075
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'__lodash_hash_undefined__'Literal.String.Single
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+HashName.Otherany0.9893complex0.0080string0.0024any[]0.0000number0.0000
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+/**\n   * Creates a hash object.\n   *\n   * @private\n   * @constructor\n   * @param {Array} [entries] The key-value pairs to cache.\n   */Comment.Multiline
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+entriesName.Otherany0.5184string0.1260string[]0.1003number0.0504complex0.0216
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9955any0.0037string0.0005boolean0.0001complex0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.9519any0.0416string0.0043complex0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entriesName.Othernumber0.3746any0.2688complex0.0990string[]0.0732number[]0.0315
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+entries.lengthKeyword.Type
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+clearName.Othernumber0.4816void0.3347boolean0.0906any0.0423complex0.0152
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9956any0.0033string0.0005number[]0.0001boolean0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9819any0.0161string0.0013boolean0.0001complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+entryName.Othernumber[]0.3332string[]0.0943complex0.0591any0.0301any[]0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entriesName.Otherstring[]0.5515number[]0.0950any0.0394any[]0.0348complex0.0193
+[Punctuation
+indexName.Othernumber0.9860any0.0086string0.0035number[]0.0005complex0.0003
+]Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+setName.Other
+(Punctuation
+entryName.Othernumber[]0.3995string[]0.2157complex0.0642any[]0.0155any0.0151
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+entryName.Othernumber[]0.5561string[]0.1626complex0.0722any[]0.0115any0.0103
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Removes all key-value entries from the hash.\n   *\n   * @memberOf Hash\n   */Comment.Multiline
+\n  Text.Whitespace
+clearName.Othervoid0.9777any0.0049number0.0031Promise<void>0.0023boolean0.0017
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherany0.5300number0.0915complex0.0428Object0.0320object0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9995any0.0003Object0.0001complex0.0000number0.0000
+.Punctuation
+createName.Othercomplex0.9867any0.0041{}0.0008number0.0007void0.0006
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.9911any0.0054string0.0021boolean0.0003complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Removes `key` and its value from the hash.\n   *\n   * @memberOf Hash\n   * @param {string} key The key of the value to remove.\n   * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n   */Comment.Multiline
+\n  Text.Whitespace
+deleteOperator.Word
+(Punctuation
+keyName.Otherstring0.8973any0.0751number0.0180complex0.0050boolean0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherboolean0.4224any0.2496complex0.1029number0.0706string0.0324
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+hasName.Otherboolean0.9622any0.0083string0.0056complex0.0042number0.0036
+(Punctuation
+keyName.Otherstring0.9524any0.0336number0.0077complex0.0035string[]0.0006
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othercomplex0.6351any0.2254{}0.0355Object0.0121string0.0083
+[Punctuation
+keyName.Otherstring0.9273any0.0361number0.0209complex0.0117boolean0.0006
+]Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.9698any0.0179string0.0082complex0.0010boolean0.0007
+ Text.Whitespace
+-=Operator
+ Text.Whitespace
+resultName.Othernumber0.5542boolean0.2206any0.1386string0.0270complex0.0091
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.2994number0.2886boolean0.1962string0.0690complex0.0385
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Gets the hash value for `key`.\n   *\n   * @memberOf Hash\n   * @param {string} key The key of the value to get.\n   * @returns {*} Returns the entry value.\n   */Comment.Multiline
+\n  Text.Whitespace
+getName.Other
+(Punctuation
+keyName.Otherstring0.8899any0.0775number0.0217complex0.0041boolean0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Otherany0.3945complex0.3210object0.0153Object0.0150boolean0.0138
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherany0.2523string0.1969boolean0.1889number0.1360complex0.0321
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.8516string0.0398boolean0.0380complex0.0241number0.0085
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherany0.5952complex0.1674Object0.0560object0.0330{}0.0207
+[Punctuation
+keyName.Otherstring0.9350any0.0345number0.0208complex0.0067boolean0.0005
+]Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.6513number0.1423string0.1245boolean0.0467complex0.0095
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+HASH_UNDEFINEDName.Otherstring0.3333number0.2095any0.2088boolean0.2013complex0.0062
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+undefinedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+resultKeyword.Typeany0.3602boolean0.2633number0.1182string0.0461complex0.0406
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Checks if a hash value for `key` exists.\n   *\n   * @memberOf Hash\n   * @param {string} key The key of the entry to check.\n   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n   */Comment.Multiline
+\n  Text.Whitespace
+hasName.Otherboolean0.9034any0.0322string0.0248number0.0074{}0.0046
+(Punctuation
+keyName.Otherstring0.9476any0.0382number0.0082complex0.0028boolean0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Otherany0.5335complex0.3004boolean0.0205string0.0146Object0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherstring0.3087boolean0.2769any0.2122number0.0949complex0.0193
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+dataName.Otherany0.6977complex0.1136Object0.0422{}0.0297object0.0174
+[Punctuation
+keyName.Otherstring0.9246any0.0428number0.0181complex0.0096boolean0.0006
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Sets the hash `key` to `value`.\n   *\n   * @memberOf Hash\n   * @param {string} key The key of the value to set.\n   * @param {*} value The value to set.\n   * @returns {Object} Returns the hash instance.\n   */Comment.Multiline
+\n  Text.Whitespace
+setName.Other
+(Punctuation
+keyName.Otherstring0.8663any0.0952number0.0285complex0.0029boolean0.0008
+,Punctuation
+ Text.Whitespace
+valueName.Otherstring0.3910any0.3749number0.1961boolean0.0157complex0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Othercomplex0.3823any0.3169number0.0452string0.0268number[]0.0117
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othernumber0.5334any0.1582string0.1219complex0.0550boolean0.0407
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.9433string0.0384any0.0150complex0.0009boolean0.0008
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+hasName.Otherboolean0.9080any0.0282string0.0186number0.0150complex0.0054
+(Punctuation
+keyName.Otherstring0.8919any0.0828number0.0175complex0.0032boolean0.0009
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+1Keyword.Type
+\n    Text.Whitespace
+dataName.Otherany0.6510complex0.1093Object0.0434{}0.0303object0.0146
+[Punctuation
+keyName.Otherstring0.9353any0.0334number0.0226complex0.0053string[]0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.5898string0.2187number0.1384complex0.0101boolean0.0078
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+HASH_UNDEFINEDName.Otherstring0.2785any0.2528number0.1989boolean0.0837undefined0.0330
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+valueKeyword.Typestring0.3655any0.2825number0.0539boolean0.0511undefined0.0363
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+HashName.Otherany0.7903string0.0593complex0.0245string[]0.0028HTMLElement0.0021
+\nText.Whitespace

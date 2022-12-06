@@ -1,0 +1,11 @@
+index.ts(9,10): error TS2339: Property 'shim' does not exist on type 'string'.
+index.ts(15,5): error TS2554: Expected 0 arguments, but got 2.
+index.ts(17,4): error TS2322: Type '(object: Function) => string' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+  Type 'string' is not assignable to type 'string[]'.
+index.ts(18,16): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+  Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+index.ts(25,3): error TS2322: Type 'string' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+index.ts(27,2): error TS2322: Type 'string | { (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+isArguments.ts(14,24): error TS2339: Property 'callee' does not exist on type 'any[]'.
+

@@ -1,0 +1,426 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+terserName.Otherany0.4962boolean0.2871string0.0612complex0.0443void0.0407
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'rollup-plugin-terser'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+nodeResolveName.Otherany0.9940complex0.0017void0.0013string0.0007any[]0.0003
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'@rollup/plugin-node-resolve'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+commonjsName.Otherany0.9782complex0.0050string0.0044boolean0.0028void0.0024
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'@rollup/plugin-commonjs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+jsonName.Othercomplex0.2899any0.2369Promise<any>0.0839void0.0339string0.0335
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'@rollup/plugin-json'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+babelName.Otherany0.9789string0.0076void0.0032complex0.0030number0.0021
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'rollup-plugin-babel'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+packageJsonName.Otherany0.9803complex0.0088string0.0028{}0.0024void0.0010
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./package.json'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * @external RollupConfig\n * @type {PlainObject}\n * @see {@link https://rollupjs.org/guide/en#big-list-of-options}\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * @param {PlainObject} [config= {}]\n * @param {boolean} [config.minifying=false]\n * @param {string} [config.format='umd']\n * @param {boolean} [config.lite=false]\n * @returns {external:RollupConfig}\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getRollupObjectName.Othervoid0.5053any0.2917string0.0530boolean0.0398complex0.0340
+ Text.Whitespace
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9877any0.0062string0.0035false0.0009number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9908any0.0078RegExp0.0005boolean0.0002number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+liteName.Otherboolean0.9860any0.0061string0.0034false0.0015true0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nonMinifiedName.Othercomplex0.6669any0.2815string0.0122boolean0.0075{}0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+inputName.Otherstring0.9976any0.0009RegExp0.0008boolean0.0002number0.0001
+:Operator
+ Text.Whitespace
+'esquery.js'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+outputName.Othercomplex0.9957any0.0027string0.0010{}0.0002number0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+formatName.Otherstring0.9837any0.0140number0.0010complex0.0007string[]0.0002
+,Punctuation
+\n            Text.Whitespace
+sourcemapName.Otherstring0.6651any0.2705boolean0.0261number0.0178complex0.0091
+:Operator
+ Text.Whitespace
+minifyingKeyword.Typestring0.5814boolean0.2697any0.0884number0.0375string[]0.0052
+,Punctuation
+\n            Text.Whitespace
+fileName.Otherstring[]0.9819complex0.0067any[]0.0043string0.0020string[][]0.0014
+:Operator
+ Text.Whitespace
+[Punctuation
+\n                Text.Whitespace
+'dist/esquery'Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+liteName.Otherboolean0.9869string0.0093any0.0015number0.0007string[]0.0003
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'.lite'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+formatName.Otherstring0.9953any0.0038number0.0002complex0.0002string[]0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+`Literal.String.Backtick
+.Literal.String.Backtick
+${Literal.String.Interpol
+formatName.Otherstring0.9889any0.0090number0.0008string[]0.0004complex0.0003
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+\n                Text.Whitespace
+minifyingName.Otherboolean0.9732string0.0192any0.0038number0.0011string[]0.0003
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'.min'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+'.js'Literal.String.Single
+\n            Text.Whitespace
+]Punctuation
+.Punctuation
+joinName.Otherstring0.8959any0.0923complex0.0079boolean0.0013number0.0011
+(Punctuation
+''Literal.String.Single
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+nameName.Otherstring0.9991any0.0005RegExp0.0001boolean0.0001number0.0001
+:Operator
+ Text.Whitespace
+'esquery'Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+globalsName.Othercomplex0.9950any0.0042string0.0004number0.0001void0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+estraverseName.Otherstring0.9974any0.0016number0.0003boolean0.0002RegExp0.0001
+:Operator
+ Text.Whitespace
+'estraverse'Literal.String.Single
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+pluginsName.Otherany[]0.8900complex0.0280string[]0.0234any0.0104any[][]0.0056
+:Operator
+ Text.Whitespace
+[Punctuation
+\n            Text.Whitespace
+jsonName.Otherany0.6307complex0.2942string0.0340Promise<any>0.0038any[]0.0030
+(Punctuation
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+nodeResolveName.Otherany0.9966complex0.0013string0.0005void0.0004any[]0.0003
+(Punctuation
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+commonjsName.Otherany0.9733string0.0124complex0.0045number0.0034boolean0.0023
+(Punctuation
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+babelName.Otherany0.9421string0.0181number0.0162complex0.0052void0.0039
+(Punctuation
+)Punctuation
+\n        Text.Whitespace
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+liteName.Otherboolean0.5937any0.2901complex0.0440string0.0304false0.0117
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+nonMinifiedName.Otherany0.7432complex0.1861{}0.0107boolean0.0089string0.0026
+.Punctuation
+externalName.Otherany0.9221string[]0.0388string0.0167complex0.0088boolean0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9993complex0.0003any0.0002Object0.0001{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9844complex0.0080any[]0.0028string0.0016any0.0007
+(Punctuation
+packageJsonName.Otherany0.9599complex0.0342{}0.0015string0.0006Object0.0006
+.Punctuation
+dependenciesName.Otherany0.9520complex0.0241string0.0106{}0.0027string[]0.0023
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+minifyingName.Otherboolean0.6937any0.2093complex0.0386string0.0245false0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+nonMinifiedName.Otherany0.8405complex0.0690{}0.0033any[]0.0031boolean0.0022
+.Punctuation
+pluginsName.Otherany[]0.6867any0.1979string[]0.0602complex0.0147number[]0.0030
+.Punctuation
+pushName.Otherany0.5641number0.4148void0.0080string0.0026complex0.0024
+(Punctuation
+terserName.Otherany0.5020string0.1820complex0.1064void0.0691boolean0.0474
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nonMinifiedName.Otherboolean0.3874any0.2406complex0.1099string0.0426void0.0422
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.3863any0.1868string0.1466complex0.1053boolean0.0672
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9970string0.0010any0.0006true0.0003false0.0003
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9974any0.0011RegExp0.0005string[]0.0003number0.0002
+:Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.6649any0.1367boolean0.0591complex0.0497string0.0397
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9979string0.0005any0.0005false0.0004true0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9974any0.0013RegExp0.0004number0.0002string[]0.0002
+:Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.6597any0.1260boolean0.0783complex0.0543string0.0372
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9983string0.0005any0.0003false0.0002true0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9974any0.0012RegExp0.0005string[]0.0003number0.0002
+:Operator
+ Text.Whitespace
+'esm'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.5850any0.1665boolean0.0856complex0.0700string0.0410
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9979string0.0005any0.0005false0.0004true0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9974any0.0013RegExp0.0004number0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+'esm'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.5694any0.1575boolean0.1164complex0.0694string0.0384
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9984string0.0004any0.0003false0.0002true0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9965any0.0014RegExp0.0010string[]0.0003boolean0.0003
+:Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+liteName.Otherboolean0.9984string0.0004any0.0003true0.0002number0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+getRollupObjectName.Othervoid0.4981any0.2092boolean0.1148complex0.0957string0.0322
+(Punctuation
+{Punctuation
+ Text.Whitespace
+minifyingName.Otherboolean0.9978any0.0005string0.0005false0.0004true0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+ Text.Whitespace
+formatName.Otherstring0.9969any0.0012RegExp0.0008boolean0.0003string[]0.0003
+:Operator
+ Text.Whitespace
+'umd'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+liteName.Otherboolean0.9986string0.0003true0.0003any0.0002false0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\nText.Whitespace

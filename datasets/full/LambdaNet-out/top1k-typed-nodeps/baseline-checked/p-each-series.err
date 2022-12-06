@@ -1,0 +1,7 @@
+index.ts(1,7): error TS2740: Type '{ (iterable: object, iterator: object): Promise<object>; stop: symbol; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(4,22): error TS2488: Type 'object' must have a '[Symbol.iterator]()' method that returns an iterator.
+index.ts(6,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+index.ts(8,35): error TS2339: Property 'stop' does not exist on type 'HTMLElement'.
+index.ts(16,13): error TS2339: Property 'stop' does not exist on type 'HTMLElement'.
+

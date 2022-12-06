@@ -1,0 +1,117 @@
+ember-cli-build.ts(20,20): error TS2304: Cannot find name 'TestFile'.
+lib/rsvp.ts(23,41): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type '() => void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
+lib/rsvp.ts(42,10): error TS2554: Expected 0 arguments, but got 2.
+lib/rsvp/-internal.ts(9,3): error TS2322: Type 'TypeError' is not assignable to type 'boolean'.
+lib/rsvp/-internal.ts(21,14): error TS2322: Type '2' is not assignable to type 'false'.
+lib/rsvp/-internal.ts(50,7): error TS2554: Expected 4 arguments, but got 5.
+lib/rsvp/-internal.ts(72,8): error TS2345: Argument of type '(reason: any) => void' is not assignable to parameter of type 'boolean'.
+lib/rsvp/-internal.ts(97,20): error TS2339: Property 'then' does not exist on type 'string'.
+lib/rsvp/-internal.ts(102,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
+lib/rsvp/-internal.ts(124,7): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/-internal.ts(146,15): error TS2365: Operator '+' cannot be applied to types 'number' and 'boolean'.
+lib/rsvp/-internal.ts(158,5): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/-internal.ts(158,16): error TS2367: This condition will always return 'false' since the types 'boolean' and 'number' have no overlap.
+lib/rsvp/-internal.ts(167,28): error TS2365: Operator '+' cannot be applied to types 'number' and 'boolean'.
+lib/rsvp/-internal.ts(212,5): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/rsvp/all-settled.ts(75,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/all-settled.ts(78,50): error TS2339: Property 'promise' does not exist on type 'AllSettled'.
+lib/rsvp/all.ts(14,54): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/all.ts(15,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/asap.ts(22,10): error TS2304: Cannot find name 'importScripts'.
+lib/rsvp/asap.ts(35,12): error TS2322: Type '() => void' is not assignable to type 'void'.
+lib/rsvp/asap.ts(45,13): error TS2304: Cannot find name 'FileNode'.
+lib/rsvp/asap.ts(55,3): error TS2322: Type '() => any' is not assignable to type 'void'.
+lib/rsvp/asap.ts(81,23): error TS2339: Property 'runOnLoop' does not exist on type 'Function'.
+lib/rsvp/asap.ts(81,42): error TS2339: Property 'runOnContext' does not exist on type 'Function'.
+lib/rsvp/enumerator.ts(19,10): error TS2339: Property '_instanceConstructor' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(20,10): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(21,10): error TS2339: Property '_abortOnReject' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(22,10): error TS2339: Property '_isUsingOwnPromise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(23,10): error TS2339: Property '_isUsingOwnResolve' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(25,16): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+lib/rsvp/enumerator.ts(30,10): error TS2339: Property 'length' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(31,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(32,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(38,32): error TS2339: Property 'length' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(39,29): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(48,14): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(49,30): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(50,20): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(51,12): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(56,23): error TS2339: Property '_instanceConstructor' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(58,14): error TS2339: Property '_isUsingOwnResolve' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(72,23): error TS2339: Property '_isUsingOwnPromise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(97,29): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(100,16): error TS2339: Property '_abortOnReject' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(110,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(111,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(118,7): error TS2345: Argument of type '(reason: any) => void' is not assignable to parameter of type 'boolean'.
+lib/rsvp/filter.ts(13,14): error TS2339: Property '_remaining' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(13,39): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(14,30): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(15,20): error TS2339: Property 'promise' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(16,12): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(22,12): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(25,20): error TS2339: Property '_mapFn' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(34,12): error TS2339: Property '_remaining' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(36,14): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(135,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/filter.ts(138,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/filter.ts(143,71): error TS2339: Property 'promise' does not exist on type 'FilterEnumerator'.
+lib/rsvp/hash-settled.ts(126,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/hash-settled.ts(132,54): error TS2554: Expected 3 arguments, but got 4.
+lib/rsvp/hash-settled.ts(132,61): error TS2339: Property 'promise' does not exist on type 'HashSettled'.
+lib/rsvp/hash.ts(95,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/hash.ts(100,14): error TS2554: Expected 4 arguments, but got 3.
+lib/rsvp/hash.ts(100,54): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
+lib/rsvp/map.ts(11,46): error TS2554: Expected 4 arguments, but got 5.
+lib/rsvp/map.ts(14,3): error TS2416: Property '_init' in type 'MapEnumerator' is not assignable to the same property in base type 'Enumerator'.
+  Type '(Constructor: any, input: any, bool: any, label: any, mapFn: any) => void' is not assignable to type '(Constructor: any, input: any) => void'.
+lib/rsvp/map.ts(16,10): error TS2339: Property 'length' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(17,10): error TS2339: Property '_remaining' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(18,10): error TS2339: Property '_result' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(19,10): error TS2339: Property '_mapFn' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(27,30): error TS2339: Property '_mapFn' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(32,12): error TS2339: Property '_remaining' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(33,12): error TS2339: Property '_result' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(122,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/map.ts(125,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/map.ts(130,65): error TS2339: Property 'promise' does not exist on type 'MapEnumerator'.
+lib/rsvp/node.ts(184,22): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/node.ts(184,36): error TS2554: Expected 2 arguments, but got 1.
+lib/rsvp/node.ts(199,18): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/node.ts(199,32): error TS2554: Expected 2 arguments, but got 1.
+lib/rsvp/node.ts(236,81): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/node.ts(237,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/promise-hash.ts(14,10): error TS2339: Property '_result' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(22,29): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(23,10): error TS2339: Property '_remaining' does not exist on type 'PromiseHash'.
+lib/rsvp/promise.ts(133,10): error TS2339: Property '_id' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(134,10): error TS2339: Property '_label' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(135,10): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(136,10): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(137,10): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(139,26): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/promise.ts(150,46): error TS2339: Property '_label' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(184,17): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(240,9): error TS2339: Property 'cast' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(241,9): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(242,9): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(243,9): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(244,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(246,19): error TS2339: Property '_guidKey' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(442,19): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise/all.ts(58,75): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/promise/race.ts(97,7): error TS2345: Argument of type '(reason: any) => void' is not assignable to parameter of type 'boolean'.
+lib/rsvp/race.ts(15,18): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+lib/rsvp/reject.ts(16,18): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/resolve.ts(17,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/then.ts(32,53): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
+

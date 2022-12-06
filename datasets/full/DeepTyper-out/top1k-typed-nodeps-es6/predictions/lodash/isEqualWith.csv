@@ -1,0 +1,106 @@
+importKeyword
+ Text.Whitespace
+baseIsEqualName.Otherboolean0.3082any0.1740complex0.0919string0.0455void0.0150
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseIsEqual.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `isEqual` except that it accepts `customizer` which\n * is invoked to compare values. If `customizer` returns `undefined`, comparisons\n * are handled by the method instead. The `customizer` is invoked with up to\n * six arguments: (objValue, othValue [, index|key, object, other, stack]).\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @param {Function} [customizer] The function to customize comparisons.\n * @returns {boolean} Returns `true` if the values are equivalent, else `false`.\n * @example\n *\n * function isGreeting(value) {\n *   return /^h(?:i|ello)$/.test(value)\n * }\n *\n * function customizer(objValue, othValue) {\n *   if (isGreeting(objValue) && isGreeting(othValue)) {\n *     return true\n *   }\n * }\n *\n * const array = ['hello', 'goodbye']\n * const other = ['hi', 'goodbye']\n *\n * isEqualWith(array, other, customizer)\n * // => true\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isEqualWithName.Otherboolean0.7472string0.0757any0.0599complex0.0211number0.0108
+(Punctuation
+valueName.Otherstring0.5000any0.3274boolean0.0922number0.0245Date0.0048
+,Punctuation
+ Text.Whitespace
+otherName.Otherany0.1345number0.1124boolean0.0406string0.0389Date0.0318
+,Punctuation
+ Text.Whitespace
+customizerName.Otherboolean0.7853any0.0918string0.0522number0.0374complex0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+customizerName.Otherboolean0.8752any0.0887string0.0200number0.0079complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+customizerName.Otherany0.6678boolean0.1785string0.0720complex0.0301number0.0153
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+customizerName.Otherstring0.4488any0.2814boolean0.1635number0.0448undefined0.0246
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Type
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherboolean0.6614any0.1813string0.0795number0.0344complex0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+customizerName.Otherboolean0.8961any0.0384string0.0304number0.0107complex0.0079
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+customizerName.Otherboolean0.7847any0.0962string0.0554number0.0204complex0.0164
+(Punctuation
+valueName.Otherstring0.5418any0.2947number0.0735boolean0.0606complex0.0039
+,Punctuation
+ Text.Whitespace
+otherName.Othernumber0.2521any0.2178undefined0.1059string0.0796boolean0.0547
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.6230boolean0.1412string0.0947number0.0843complex0.0194
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+baseIsEqualName.Otherboolean0.3705any0.2299string0.1556complex0.0878number0.0552
+(Punctuation
+valueName.Otherstring0.4998any0.3536number0.0785boolean0.0356complex0.0061
+,Punctuation
+ Text.Whitespace
+otherName.Othernumber0.3311any0.2269undefined0.0711string0.0430boolean0.0340
+,Punctuation
+ Text.Whitespace
+undefinedKeyword.Constant
+,Punctuation
+ Text.Whitespace
+customizerName.Otherboolean0.8565number0.0580any0.0462string0.0255complex0.0025
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+!Operator
+!Operator
+resultName.Otherany0.5951boolean0.2551string0.0508number0.0258complex0.0090
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isEqualWithName.Otherany0.4112boolean0.0735string0.0494complex0.0277number0.0253
+\nText.Whitespace

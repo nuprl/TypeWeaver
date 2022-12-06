@@ -1,0 +1,674 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+EPSILONName.Othercomplex0.3510any0.2375Promise<void>0.0843void0.0427number0.0278
+,Punctuation
+ Text.Whitespace
+EPSILON_CLOSUREName.Otherany0.5979complex0.0511boolean0.0252void0.0231Promise<void>0.0216
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../special-symbols'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * NFA fragment.\n *\n * NFA sub-fragments can be combined to a larger NFAs building\n * the resulting machine. Combining the fragments is done by patching\n * edges of the in- and out-states.\n *\n * 2-states implementation, `in`, and `out`. Eventually all transitions\n * go to the same `out`, which can further be connected via ε-transition\n * with other fragment.\n */Comment.Multiline
+\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+NFAName.Otherany0.9989complex0.0003string0.0002symbol0.0002number0.0001
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+inStateName.Otherany0.0259string0.0108boolean0.0097RegExp0.0085HTMLElement0.0084
+,Punctuation
+ Text.Whitespace
+outStateName.OtherBundle0.3925Set<any>0.0041Watcher0.0025Handle0.0021Post0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+inOperator.Word
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+inStateName.Othercomplex0.1228any0.0979{}0.0182boolean0.0148Set<any>0.0106
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+outName.OtherBundle0.0087Post0.0076Set<any>0.0070Set<string>0.0058ITest0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+outStateName.OtherBundle0.3171Set<any>0.0097Watcher0.0032BooleanConstructor0.0029ValidationError[]0.0028
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Tries to recognize a string based on this NFA fragment.\n   */Comment.Multiline
+\n  Text.Whitespace
+matchesName.Otherboolean0.6063complex0.1023any0.0716string0.0110string[]0.0069
+(Punctuation
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+inOperator.Word
+.Punctuation
+matchesName.Othercomplex0.8462boolean0.0841any0.0262string[]0.0078void0.0021
+(Punctuation
+stringKeyword.Type
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns an alphabet for this NFA.\n   */Comment.Multiline
+\n  Text.Whitespace
+getAlphabetName.Othervoid0.3691boolean0.3240any0.0367string0.0225Function0.0124
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_alphabetName.Otherboolean0.5867any0.1291Set<string>0.0244Set<any>0.0160string0.0157
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_alphabetName.OtherSet<string>0.4561Set<any>0.3712Set<number>0.0240SetConstructor0.0028complex0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2027Set<any>0.1592SetConstructor0.1557Set<string>0.0767Set<number>0.0318
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9854Set<any>0.0047any0.0026Set<string>0.0005Set<number>0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tableName.Otherany0.4913string0.1515complex0.0854Table0.0386string[]0.0210
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Otherboolean0.3436any0.1212string[]0.0458string0.0436complex0.0326
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+stateName.Otherstring0.4833any0.1825boolean0.0218number0.0204complex0.0165
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+tableName.Otherany0.4655complex0.0593string0.0508Table0.0322Object0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+transitionsName.Otherany0.1675void0.0093Function0.0080complex0.0074Set<any>0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tableName.Otherany0.2213Table0.0579complex0.0326string0.0155State0.0092
+[Punctuation
+stateName.Otherstring0.3259any0.1084complex0.0225number0.0219State0.0185
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+symbolName.Other
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+transitionsName.Othercomplex0.1979any0.0816string[]0.0276void0.0241{}0.0150
+)Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+symbolName.Other
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+EPSILON_CLOSUREName.Otherstring0.4272any0.2057boolean0.0653number0.0195complex0.0164
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_alphabetName.OtherSet<any>0.4240Set<string>0.3427any0.0093complex0.0072Set<number>0.0051
+.Punctuation
+addName.OtherSet<string>0.3357Set<any>0.3113void0.1254any0.0571complex0.0157
+(Punctuation
+symbolName.Other
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_alphabetName.Otherany0.0548boolean0.0402Set<any>0.0369Set<string>0.0254complex0.0173
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns set of accepting states.\n   */Comment.Multiline
+\n  Text.Whitespace
+getAcceptingStatesName.Othervoid0.1314boolean0.1230any0.0919string0.0273this0.0209
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_acceptingStatesName.Otherboolean0.2870any0.1532Set<any>0.0291Function0.0143Set<string>0.0121
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// States are determined during table construction.Comment.Single
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Othervoid0.8936any0.0176Function0.0122Promise<void>0.0092boolean0.0082
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStatesName.Otherany0.0456Set<string>0.0387Set<any>0.0356boolean0.0355complex0.0169
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns accepting state numbers.\n   */Comment.Multiline
+\n  Text.Whitespace
+getAcceptingStateNumbersName.Othervoid0.5087boolean0.0961any0.0463Set<any>0.0101Promise<void>0.0076
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherboolean0.4531any0.1289Set<any>0.0396Set<string>0.0327complex0.0080
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<any>0.5284Set<string>0.2799Set<number>0.0271Function[]0.0068SetConstructor0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2200SetConstructor0.1686Set<any>0.1642Set<string>0.0646Set<number>0.0288
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9807any0.0056Set<any>0.0052Set<string>0.0005Set<number>0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+acceptingStateName.Otherany0.1698complex0.0955Set<any>0.0489string0.0357Set<string>0.0191
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getAcceptingStatesName.Othercomplex0.1262Set<any>0.0892any0.0797boolean0.0585void0.0328
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<any>0.4115Set<string>0.2264any0.0868Element0.0061complex0.0054
+.Punctuation
+addName.OtherSet<any>0.2684any0.2467Set<string>0.2299void0.0762complex0.0180
+(Punctuation
+acceptingStateName.Otherany0.6532complex0.0267Set<string>0.0123Set<any>0.0119Element0.0059
+.Punctuation
+numberKeyword.Type
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<any>0.0559any0.0471Set<string>0.0386boolean0.0287number0.0266
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Builds and returns transition table.\n   */Comment.Multiline
+\n  Text.Whitespace
+getTransitionTableName.Othervoid0.9563boolean0.0083any0.0059Promise<void>0.0022complex0.0011
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_transitionTableName.Otherboolean0.5807any0.0875Set<any>0.0398Set<string>0.0265void0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Other{}0.3386Set<any>0.1074any0.0831Set<string>0.0636complex0.0622
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStatesName.OtherSet<any>0.5640Set<string>0.2996Set<number>0.0229Function[]0.0044SetConstructor0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.2300any0.2287SetConstructor0.1631Set<string>0.0921Set<number>0.0288
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9868Set<any>0.0048any0.0031Set<string>0.0005Set<number>0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+visitedName.OtherSet<any>0.8547Set<string>0.0934any0.0071Set<number>0.0047SetConstructor0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.3590any0.2011SetConstructor0.1614Set<string>0.0637Set<number>0.0237
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9768Set<any>0.0093any0.0056Set<number>0.0008Set<string>0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+symbolsName.OtherSet<any>0.7759Set<string>0.1491any0.0066any[]0.0059Set<number>0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.3185SetConstructor0.1639any0.1474Set<string>0.1153Set<number>0.0264
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9827Set<any>0.0075any0.0024Set<string>0.0007Set<number>0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+visitStateName.Otherany0.2670Set<any>0.0584Set<string>0.0261SetConstructor0.0132boolean0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.2925State0.0555IState0.0137complex0.0105string0.0097
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+visitedName.OtherSet<any>0.5896Set<string>0.1641complex0.0834any0.0152Set<number>0.0049
+.Punctuation
+hasName.Otherboolean0.9238any0.0509complex0.0035Set<any>0.0032string0.0016
+(Punctuation
+stateName.Otherany0.1906State0.0942string0.0507number0.0295complex0.0283
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+returnKeyword
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+visitedName.OtherSet<any>0.7557Set<string>0.0778any0.0212PropertyDescriptor0.0042complex0.0039
+.Punctuation
+addName.OtherSet<any>0.4669any0.2527Set<string>0.1249complex0.0217void0.0147
+(Punctuation
+stateName.Otherany0.2004complex0.0725State0.0536number0.0496IState0.0215
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+stateName.Otherany0.1660complex0.1158State0.0858IState0.0216Set<any>0.0167
+.Punctuation
+numberKeyword.Type
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+visitedName.Otherany0.2107complex0.1754Set<any>0.1560Set<string>0.0259{}0.0058
+.Punctuation
+sizeName.Otherany0.8201number0.1511string0.0051complex0.0021any[]0.0018
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Othercomplex0.6248{}0.1235any0.0635number[]0.0245Set<any>0.0083
+[Punctuation
+stateName.Otherany0.1812number0.0797complex0.0743State0.0337IState0.0114
+.Punctuation
+numberKeyword.Type
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stateName.OtherState0.0521any0.0440complex0.0375IState0.0230Set<any>0.0117
+.Punctuation
+acceptingName.Otherboolean0.6895any0.0620number0.0225void0.0189complex0.0149
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStatesName.OtherSet<any>0.4028Set<string>0.2040any0.0217Set<number>0.0059MutationObserver0.0051
+.Punctuation
+addName.OtherSet<any>0.3215Set<string>0.2715any0.1463void0.0686complex0.0149
+(Punctuation
+stateName.Otherany0.3220number0.0894complex0.0372State0.0320boolean0.0281
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+transitionsName.Otherany0.0738complex0.0679number[]0.0282string[]0.0271string0.0232
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.0548State0.0406complex0.0397IState0.0309number0.0066
+.Punctuation
+getTransitionsName.Otherany0.1007complex0.0673boolean0.0356number0.0320number[]0.0196
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+symbolName.Other
+,Punctuation
+ Text.Whitespace
+symbolTransitionsName.Otherany0.3778symbol0.0806number0.0755string0.0545boolean0.0163
+]Punctuation
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+transitionsName.Otherany[]0.0806any0.0625complex0.0391number[]0.0206string[]0.0195
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+combinedStateName.Otherany[]0.7476number[]0.0280any[][]0.0209any0.0178Function[]0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n          Text.Whitespace
+symbolsName.OtherSet<any>0.3150any0.1299any[]0.1241complex0.0605Set<string>0.0404
+.Punctuation
+addName.OtherSet<any>0.3222void0.2408any0.0938Set<string>0.0934complex0.0222
+(Punctuation
+symbolName.Other
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nextStateName.Otherany0.1826State0.0914complex0.0329number0.0164Set<any>0.0151
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+symbolTransitionsName.Otherany[]0.1034any0.0772complex0.0235number[]0.0181Set<any>0.0161
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+visitStateName.Othervoid0.7699any0.0464complex0.0175Promise<void>0.0152{}0.0061
+(Punctuation
+nextStateName.Otherany0.2627State0.1023number0.0233complex0.0132Element0.0087
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+combinedStateName.Otherany[]0.4782number[]0.0863Function[]0.0579any0.0408string[]0.0188
+.Punctuation
+pushName.Othernumber0.9895any0.0074void0.0012boolean0.0004string0.0003
+(Punctuation
+nextStateName.Otherany0.8080complex0.0230number0.0169State0.0158void0.0050
+.Punctuation
+numberKeyword.Type
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Othercomplex0.7357{}0.1055any0.0848any[]0.0061void0.0059
+[Punctuation
+stateName.Otherany0.4304complex0.2163number0.0363State0.0158IState0.0049
+.Punctuation
+numberKeyword.Type
+]Punctuation
+[Punctuation
+symbolName.Other
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+combinedStateName.Otherany0.3602{}0.0673any[]0.0334number0.0180complex0.0155
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// Traverse the graph starting from the `in`.Comment.Single
+\n      Text.Whitespace
+visitStateName.Othervoid0.8826any0.0443boolean0.0194complex0.0123Promise<void>0.0041
+(Punctuation
+thisKeyword
+.Punctuation
+inOperator.Word
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// Append epsilon-closure column.Comment.Single
+\n      Text.Whitespace
+visitedName.Otherany0.2136complex0.2034any[]0.1065Set<any>0.0853{}0.0261
+.Punctuation
+forEachName.Othervoid0.3749complex0.3427any0.2129v...0.0325boolean0.0038
+(Punctuation
+stateName.Otherany0.4623string0.0652number0.0488{}0.0337complex0.0278
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Othercomplex0.7159any0.1350{}0.0870any[]0.0054Object0.0030
+[Punctuation
+stateName.Otherany0.3195complex0.1493number0.0471State0.0279string0.0093
+.Punctuation
+numberKeyword.Type
+]Punctuation
+[Punctuation
+EPSILONName.Otherany0.2708number0.2381complex0.1565string0.1229void0.0158
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Othercomplex0.7983any0.0937{}0.0652any[]0.0071number[]0.0029
+[Punctuation
+stateName.Otherany0.3345complex0.2506number0.0270State0.0187IState0.0053
+.Punctuation
+numberKeyword.Type
+]Punctuation
+[Punctuation
+EPSILON_CLOSUREName.Otherstring0.4421number0.2652any0.1818symbol0.0138boolean0.0136
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n          Text.Whitespace
+...Punctuation
+stateName.Otherany0.0962complex0.0373State0.0293IState0.0135number0.0078
+.Punctuation
+getEpsilonClosureName.Othercomplex0.1566any0.0972number0.0725any[]0.0397number[]0.0353
+(Punctuation
+)Punctuation
+,Punctuation
+\n        Text.Whitespace
+]Punctuation
+.Punctuation
+mapName.OtherU[]0.6407complex0.2257any0.0741Observable...0.0054void0.0040
+(Punctuation
+sName.Otherany0.2148complex0.0259number0.0206string0.0127{}0.0099
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+sName.Otherany0.3029complex0.0358Observable<number>0.0066Range0.0063{}0.0059
+.Punctuation
+numberKeyword.Type
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Otherany0.0514boolean0.0428{}0.0273number0.0246any[]0.0246
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+NFAName.Otherany0.5513number0.0546boolean0.0281void0.0256complex0.0214
+;Punctuation
+\nText.Whitespace

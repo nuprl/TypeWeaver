@@ -1,0 +1,865 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+DuplexName.Otherany0.9188string0.0345void0.0078boolean0.0075Promise<any>0.0041
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'stream'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Emits the `'close'` event on a stream.\n *\n * @param {Duplex} stream The stream.\n * @private\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+emitCloseName.Othervoid0.9911any0.0039Promise<void>0.0013Function0.0006boolean0.0006
+(Punctuation
+streamName.Otherany0.6687string0.0206void0.0096boolean0.0049HTMLElement0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+streamName.Otherany0.9411void0.0012string0.0006HotObservable<string>0.0006Function0.0006
+.Punctuation
+emitName.Otherany0.9465void0.0473complex0.0046Promise<void>0.0002boolean0.0002
+(Punctuation
+'close'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * The listener of the `'end'` event.\n *\n * @private\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+duplexOnEndName.Othervoid0.9973any0.0014boolean0.0005complex0.0002Promise<void>0.0001
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+destroyedName.Otherboolean0.6578any0.3169string0.0056void0.0049Function0.0037
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_writableStateName.Otherany0.6450boolean0.0140complex0.0116Function0.0100void0.0091
+.Punctuation
+finishedName.Otherboolean0.8576any0.1320number0.0033void0.0020string0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+destroyName.Othervoid0.9618any0.0292Function0.0033Promise<void>0.0022boolean0.0009
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * The listener of the `'error'` event.\n *\n * @param {Error} err The error\n * @private\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+duplexOnErrorName.Othervoid0.9952any0.0025complex0.0006boolean0.0004Promise<void>0.0002
+(Punctuation
+errName.Otherany0.5496Error0.4039string0.0149Event0.0022void0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+removeListenerName.Othervoid0.8777any0.1005complex0.0101Function0.0032Promise<void>0.0008
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+duplexOnErrorName.Othervoid0.6848any0.1628boolean0.0731number0.0101string0.0062
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+destroyName.Othervoid0.9724any0.0212Promise<void>0.0018Function0.0017boolean0.0007
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+listenerCountName.Othercomplex0.6514any0.2930void0.0207boolean0.0094number0.0063
+(Punctuation
+'error'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Do not suppress the throwing behavior.Comment.Single
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+emitName.Otherany0.7981void0.1747complex0.0224boolean0.0016Promise<void>0.0008
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errName.Otherany0.7181Error0.2527string0.0181void0.0013complex0.0013
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Wraps a `WebSocket` in a duplex stream.\n *\n * @param {WebSocket} ws The `WebSocket` to wrap\n * @param {Object} [options] The options for the `Duplex` constructor\n * @return {Duplex} The duplex stream\n * @public\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+createWebSocketStreamName.Othervoid0.9294any0.0370boolean0.0218complex0.0022string0.0018
+(Punctuation
+wsName.Otherany0.8151WebSocket0.0234Buffer0.0139string0.0049Tree0.0031
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6567Options0.0460string0.0070number0.0053{}0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+terminateOnDestroyName.Otherboolean0.9840any0.0070true0.0032false0.0030void0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+duplexName.Otherany0.3943void0.0070boolean0.0060Error0.0054Subscription0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.5792Error0.0150Logger0.0103string0.0077number0.0067
+ Text.Whitespace
+DuplexName.Otherany0.9896string0.0022void0.0013complex0.0013boolean0.0005
+(Punctuation
+{Punctuation
+\n    Text.Whitespace
+...Punctuation
+optionsName.Otherany0.2642Options0.0494{}0.0103any[]0.0048IOptions0.0048
+,Punctuation
+\n    Text.Whitespace
+autoDestroyName.Otherboolean0.9893any0.0033false0.0021true0.0018void0.0008
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+emitCloseName.Otherboolean0.9951false0.0016any0.0011true0.0008void0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+objectModeName.Otherboolean0.9964any0.0009false0.0008true0.0006void0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+writableObjectModeName.Otherboolean0.9962false0.0012any0.0008true0.0006void0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+wsName.Otherany0.9698WebSocket0.0028number0.0009Buffer0.0007string0.0006
+.Punctuation
+onName.Otherany0.8943complex0.0592void0.0220EventEmitter0.0017Promise<void>0.0009
+(Punctuation
+'message'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+messageName.Othervoid0.8367any0.0975complex0.0243string0.0173boolean0.0120
+(Punctuation
+msgName.Otherany0.8558string0.1149complex0.0043void0.0040boolean0.0026
+,Punctuation
+ Text.Whitespace
+isBinaryName.Otherboolean0.9756any0.0175string0.0023false0.0016number0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Otherany0.7572boolean0.1778string0.0284complex0.0188any[]0.0029
+ Text.Whitespace
+=Operator
+\n      Text.Whitespace
+!Operator
+isBinaryName.Otherboolean0.7434any0.2279complex0.0085false0.0083string0.0033
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+duplexName.Otherany0.8112boolean0.0559complex0.0107false0.0090true0.0030
+.Punctuation
+_readableStateName.Otherany0.8544complex0.0254boolean0.0242Function0.0022void0.0021
+.Punctuation
+objectModeName.Otherboolean0.7606any0.2216string0.0068void0.0036complex0.0029
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+msgName.Otherany0.9155string0.0528complex0.0059void0.0021boolean0.0018
+.Punctuation
+toStringName.Otherany0.8954string0.0987complex0.0028string)0.0003number0.0003
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+msgName.Otherany0.8424string0.1430complex0.0031number0.0010any[]0.0010
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+duplexName.Otherany0.4296any[]0.1678string[]0.0148void)[]0.0131Function[]0.0110
+.Punctuation
+pushName.Othernumber0.7906any0.1959boolean0.0046void0.0021string0.0018
+(Punctuation
+dataName.Otherany0.8128string0.0938boolean0.0093complex0.0088any[]0.0051
+)Punctuation
+)Punctuation
+ Text.Whitespace
+wsName.Otherany0.9653WebSocket0.0022Buffer0.0016Error0.0006string0.0004
+.Punctuation
+pauseName.Otherany0.9677void0.0243complex0.0010Promise<{}>0.0008Promise<void>0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+wsName.Otherany0.9795WebSocket0.0015Buffer0.0014number0.0007void0.0006
+.Punctuation
+onceName.Otherany0.9921void0.0045complex0.0017number0.0003Function0.0001
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+errorName.Othervoid0.9976any0.0010complex0.0002boolean0.0002Promise<void>0.0002
+(Punctuation
+errName.Otherany0.6792Error0.2943string0.0070Buffer0.0014Event0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+duplexName.Otherany0.6596Error0.0153void0.0104boolean0.0066complex0.0057
+.Punctuation
+destroyedName.Otherany0.5895boolean0.3651void0.0183string0.0081number0.0080
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n    Text.Whitespace
+// Prevent `ws.terminate()` from being called by `duplex._destroy()`.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// - If the `'error'` event is emitted before the `'open'` event, thenComment.Single
+\n    Text.Whitespace
+//   `ws.terminate()` is a noop as no socket is assigned.Comment.Single
+\n    Text.Whitespace
+// - Otherwise, the error is re-emitted by the listener of the `'error'`Comment.Single
+\n    Text.Whitespace
+//   event of the `Receiver` object. The listener already closes theComment.Single
+\n    Text.Whitespace
+//   connection by calling `ws.close()`. This allows a close frame to beComment.Single
+\n    Text.Whitespace
+//   sent to the other peer. If `ws.terminate()` is called right after this,Comment.Single
+\n    Text.Whitespace
+//   then the close frame might not be sent.Comment.Single
+\n    Text.Whitespace
+terminateOnDestroyName.Otherboolean0.9346any0.0266false0.0245void0.0043true0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+duplexName.Otherany0.9168complex0.0052void0.0041Function0.0009Assert0.0008
+.Punctuation
+destroyName.Otherany0.6238void0.3606complex0.0050Function0.0028boolean0.0017
+(Punctuation
+errName.Otherany0.7454Error0.2297string0.0105complex0.0023Event0.0010
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+wsName.Otherany0.9668WebSocket0.0029Buffer0.0015void0.0011number0.0010
+.Punctuation
+onceName.Otherany0.9894void0.0065complex0.0019number0.0004Function0.0001
+(Punctuation
+'close'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+closeName.Othervoid0.9954any0.0018Promise<void>0.0010complex0.0003Function0.0003
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+duplexName.Otherany0.8438void0.0199boolean0.0091Function0.0049complex0.0043
+.Punctuation
+destroyedName.Otherany0.7467boolean0.2048void0.0158number0.0122string0.0114
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n    Text.Whitespace
+duplexName.Otherany0.3665void)[]0.1286any[]0.1125Function[]0.0238void0.0080
+.Punctuation
+pushName.Othernumber0.9399any0.0540void0.0030string0.0007boolean0.0006
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+duplexName.Otherany0.8914complex0.0105void0.0042Subscription0.0018any[]0.0007
+.Punctuation
+_destroyName.Othervoid0.9771any0.0166Promise<void>0.0016boolean0.0014Function0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7169Error0.2504string0.0118void0.0016number0.0009
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8596Function0.0546void0.0417Error0.0045number0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.8186WebSocket0.0263Error0.0045Document0.0030Buffer0.0026
+.Punctuation
+readyStateName.Otherany0.9255number0.0458complex0.0142string0.0056T0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+wsName.Otherany0.9308WebSocket0.0051Error0.0020Buffer0.0016Document0.0015
+.Punctuation
+CLOSEDName.Otherany0.8186number0.0135boolean0.0095void0.0068string0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbackName.Othervoid0.5320any0.3009Function0.0997Callback0.0046boolean0.0043
+(Punctuation
+errName.Otherany0.6428Error0.3370string0.0058never0.0010complex0.0009
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+processName.Otherany0.9629Process0.0044complex0.0018void0.0014Error0.0008
+.Punctuation
+nextTickName.Otherany0.9398void0.0527complex0.0015Function0.0009Promise<void>0.0008
+(Punctuation
+emitCloseName.Otherany0.5297void0.2950boolean0.0218number0.0142Error0.0135
+,Punctuation
+ Text.Whitespace
+duplexName.Otherany0.6446void0.1537boolean0.0328complex0.0278number0.0149
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+calledName.Otherboolean0.9508any0.0232false0.0195number0.0014true0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n    Text.Whitespace
+wsName.Otherany0.9724WebSocket0.0021void0.0012number0.0008Buffer0.0008
+.Punctuation
+onceName.Otherany0.9922void0.0047complex0.0017number0.0003Function0.0001
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+errorName.Othervoid0.9984any0.0005boolean0.0002complex0.0002Promise<void>0.0001
+(Punctuation
+errName.Otherany0.6571Error0.3252string0.0066never0.0006boolean0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+calledName.Otherboolean0.8708any0.1051void0.0068false0.0054number0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+callbackName.Othervoid0.5451any0.2321Function0.1667boolean0.0083never0.0040
+(Punctuation
+errName.Otherany0.6810Error0.3031string0.0051never0.0010{}0.0007
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+wsName.Otherany0.9830WebSocket0.0012void0.0010number0.0008Buffer0.0006
+.Punctuation
+onceName.Otherany0.9889void0.0078complex0.0016number0.0004Function0.0001
+(Punctuation
+'close'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+closeName.Othervoid0.9977Promise<void>0.0008any0.0006boolean0.0002Function0.0001
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+calledName.Otherany0.7209boolean0.1885number0.0419void0.0140string0.0133
+)Punctuation
+ Text.Whitespace
+callbackName.Othervoid0.6304any0.2755Function0.0441boolean0.0071Promise<void>0.0040
+(Punctuation
+errName.Otherany0.7598Error0.2252string0.0067number0.0011never0.0007
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+processName.Otherany0.9641Process0.0030complex0.0014void0.0011Error0.0009
+.Punctuation
+nextTickName.Otherany0.9564void0.0388Function0.0008complex0.0008Promise<void>0.0007
+(Punctuation
+emitCloseName.Otherany0.7871void0.1024number0.0193boolean0.0161false0.0138
+,Punctuation
+ Text.Whitespace
+duplexName.Otherany0.7772void0.0768boolean0.0436number0.0304false0.0119
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+terminateOnDestroyName.Otherboolean0.3484any0.3426false0.1933void0.0369number0.0155
+)Punctuation
+ Text.Whitespace
+wsName.Otherany0.9093WebSocket0.0104Document0.0036Buffer0.0019complex0.0015
+.Punctuation
+terminateName.Otherany0.6553void0.3326complex0.0063Promise<void>0.0028number0.0010
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+duplexName.Otherany0.6304void0.0081Subscription0.0061complex0.0023void)[]0.0020
+.Punctuation
+_finalName.Othervoid0.7839any0.2019Promise<void>0.0035boolean0.0025Function0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+callbackName.Otherany0.5787void0.1685Function0.1681number0.0069boolean0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.8566WebSocket0.0305Document0.0036Error0.0030Buffer0.0019
+.Punctuation
+readyStateName.Otherany0.9272number0.0565complex0.0067string0.0061void0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+wsName.Otherany0.9784WebSocket0.0022Document0.0010number0.0008void0.0008
+.Punctuation
+CONNECTINGName.Otherany0.8727number0.0509string0.0264boolean0.0128void0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+wsName.Otherany0.9818WebSocket0.0020Buffer0.0007number0.0007void0.0006
+.Punctuation
+onceName.Otherany0.9876void0.0088complex0.0021number0.0004T0.0001
+(Punctuation
+'open'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+openName.Othervoid0.9967any0.0012Promise<void>0.0006boolean0.0003Function0.0002
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+duplexName.Otherany0.8485void0.0080complex0.0022number0.0020Function0.0018
+.Punctuation
+_finalName.Othervoid0.9375any0.0509boolean0.0027Function0.0022number0.0016
+(Punctuation
+callbackName.Otherany0.5646void0.3343Function0.0509number0.0089boolean0.0070
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// If the value of the `_socket` property is `null` it means that `ws` is aComment.Single
+\n    Text.Whitespace
+// client websocket and the handshake failed. In fact, when this happens, aComment.Single
+\n    Text.Whitespace
+// socket is never assigned to the websocket. Wait for the `'error'` eventComment.Single
+\n    Text.Whitespace
+// that will be emitted by the websocket.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.9224WebSocket0.0074Error0.0029complex0.0021void0.0017
+.Punctuation
+_socketName.Otherany0.9716void0.0086boolean0.0073string0.0043number0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.9494WebSocket0.0034Error0.0018number0.0011complex0.0010
+.Punctuation
+_socketName.Otherany0.9747boolean0.0059void0.0036complex0.0020Error0.0010
+.Punctuation
+_writableStateName.Otherany0.9879boolean0.0021void0.0020complex0.0016number0.0003
+.Punctuation
+finishedName.Otherany0.7174boolean0.2711number0.0037void0.0035string0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbackName.Otherany0.4239void0.3860Function0.0773T0.0075Promise<void>0.0070
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+duplexName.Otherany0.8676complex0.0077boolean0.0047false0.0034void0.0022
+.Punctuation
+_readableStateName.Otherany0.9192complex0.0146boolean0.0089void0.0045T0.0014
+.Punctuation
+endEmittedName.Otherany0.6004boolean0.3141void0.0455string0.0078number0.0071
+)Punctuation
+ Text.Whitespace
+duplexName.Otherany0.9210void0.0018Subscription0.0017complex0.0011boolean0.0011
+.Punctuation
+destroyName.Otherany0.6217void0.3614boolean0.0038Function0.0035complex0.0023
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+wsName.Otherany0.9846WebSocket0.0013number0.0005void0.0005Document0.0003
+.Punctuation
+_socketName.Otherany0.9951void0.0006string0.0005number0.0003boolean0.0003
+.Punctuation
+onceName.Otherany0.9949void0.0035complex0.0007number0.0003Function0.0001
+(Punctuation
+'finish'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+finishName.Othervoid0.9987any0.0005Promise<void>0.0002number0.0001boolean0.0001
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// `duplex` is not destroyed here because the `'end'` event will beComment.Single
+\n        Text.Whitespace
+// emitted on `duplex` after this `'finish'` event. The EOF signalingComment.Single
+\n        Text.Whitespace
+// `null` chunk is, in fact, pushed when the websocket emits `'close'`.Comment.Single
+\n        Text.Whitespace
+callbackName.Othervoid0.5560any0.3141Function0.0833number0.0055boolean0.0033
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+wsName.Otherany0.9002WebSocket0.0213Buffer0.0041void0.0022number0.0015
+.Punctuation
+closeName.Othervoid0.6758any0.3093Promise<void>0.0089complex0.0017Function0.0010
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+duplexName.Otherany0.6093void0.0118Subscription0.0095complex0.0061Promise<void>0.0049
+.Punctuation
+_readName.Othervoid0.9014any0.0854Promise<void>0.0052complex0.0052Promise<any>0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.9514WebSocket0.0038complex0.0010void0.0009Error0.0009
+.Punctuation
+isPausedName.Otherany0.9003void0.0545boolean0.0242number0.0083string0.0036
+)Punctuation
+ Text.Whitespace
+wsName.Otherany0.9061WebSocket0.0123Buffer0.0022void0.0016Error0.0010
+.Punctuation
+resumeName.Otherany0.9472void0.0483complex0.0014Promise<void>0.0008number0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+duplexName.Otherany0.4527Subscription0.0352void0.0332Promise<void>0.0043Assert0.0041
+.Punctuation
+_writeName.Othervoid0.8328any0.1555Promise<void>0.0041boolean0.0021Function0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+chunkName.Otherany0.9730string0.0136void0.0049Error0.0019Buffer0.0018
+,Punctuation
+ Text.Whitespace
+encodingName.Otherstring0.6639any0.3211void0.0067number0.0014Function0.0013
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6172Function0.1950void0.1411number0.0056boolean0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wsName.Otherany0.9305WebSocket0.0118Error0.0018Buffer0.0016Document0.0015
+.Punctuation
+readyStateName.Otherany0.9452number0.0406complex0.0068string0.0046void0.0008
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+wsName.Otherany0.9810WebSocket0.0017void0.0008Document0.0007number0.0007
+.Punctuation
+CONNECTINGName.Otherany0.9020number0.0311string0.0224boolean0.0100void0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+wsName.Otherany0.9889WebSocket0.0011Buffer0.0005void0.0005number0.0004
+.Punctuation
+onceName.Otherany0.9894void0.0076complex0.0017number0.0004T0.0001
+(Punctuation
+'open'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+openName.Othervoid0.9904any0.0034Promise<void>0.0020boolean0.0008Function0.0005
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+duplexName.Otherany0.8721void0.0230any[]0.0036Function0.0020Subscription0.0020
+.Punctuation
+_writeName.Othervoid0.7558any0.2288Promise<void>0.0046Function0.0023boolean0.0013
+(Punctuation
+chunkName.Otherany0.9686string0.0243void0.0020Error0.0011number0.0010
+,Punctuation
+ Text.Whitespace
+encodingName.Otherstring0.8572any0.1342void0.0025number0.0011Function0.0009
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5080void0.3081Function0.1434boolean0.0065string0.0053
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+wsName.Otherany0.9016WebSocket0.0233Buffer0.0064Document0.0017void0.0013
+.Punctuation
+sendName.Otherany0.8262complex0.0952void0.0580Promise<void>0.0089Promise<any>0.0038
+(Punctuation
+chunkName.Otherany0.8409string0.1353Buffer0.0054void0.0045number0.0039
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5759void0.2533Function0.1183string0.0122boolean0.0093
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+duplexName.Otherany0.8790void0.0017Observable0.0016complex0.0012Response0.0012
+.Punctuation
+onName.Otherany0.7665complex0.1465void0.0240EventEmitter0.0052Promise<void>0.0014
+(Punctuation
+'end'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+duplexOnEndName.Othervoid0.8493any0.1049boolean0.0133number0.0053complex0.0049
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+duplexName.Otherany0.8888void0.0028complex0.0015Function0.0009Response0.0007
+.Punctuation
+onName.Otherany0.7594complex0.1318void0.0304EventEmitter0.0056Promise<void>0.0022
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+duplexOnErrorName.Othervoid0.8445any0.0997number0.0125boolean0.0083complex0.0048
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+duplexName.Otherany0.5773void0.1059boolean0.0456Promise<void>0.0425Promise<any>0.0157
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+createWebSocketStreamName.Otherany0.5320void0.1738number0.0416boolean0.0306complex0.0170
+;Punctuation
+\nText.Whitespace

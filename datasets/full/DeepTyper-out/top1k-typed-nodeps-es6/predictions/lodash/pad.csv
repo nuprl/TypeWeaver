@@ -1,0 +1,146 @@
+importKeyword
+ Text.Whitespace
+createPaddingName.Otherany0.1365string0.0693boolean0.0503complex0.0493string[]0.0262
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/createPadding.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+stringSizeName.Otherany0.2439string0.1744boolean0.0651complex0.0590number0.0480
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/stringSize.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Pads `string` on the left and right sides if it's shorter than `length`.\n * Padding characters are truncated if they can't be evenly divided by `length`.\n *\n * @since 3.0.0\n * @category String\n * @param {string} [string=''] The string to pad.\n * @param {number} [length=0] The padding length.\n * @param {string} [chars=' '] The string used as padding.\n * @returns {string} Returns the padded string.\n * @example\n *\n * pad('abc', 8)\n * // => '  abc   '\n *\n * pad('abc', 8, '_-')\n * // => '_-abc_-_'\n *\n * pad('abc', 2)\n * // => 'abc'\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+padName.Otherstring0.4184any0.2766complex0.0967number0.0349Promise<any>0.0203
+(Punctuation
+stringKeyword.Type
+,Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.9518any0.0402string0.0066complex0.0002boolean0.0002
+,Punctuation
+ Text.Whitespace
+charsName.Othernumber0.5021string0.3747any0.0948boolean0.0083complex0.0083
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+strLengthName.Otherstring0.6571number0.2034any0.1156string[]0.0092boolean0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lengthName.Othernumber0.9470any0.0391string0.0112complex0.0008boolean0.0007
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+stringSizeName.Othernumber0.6109string0.2635any0.0941boolean0.0051complex0.0049
+(Punctuation
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+lengthName.Othernumber0.8476any0.1362string0.0133boolean0.0010complex0.0009
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+strLengthName.Othernumber0.7343string0.1426any0.1182boolean0.0023complex0.0009
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+lengthName.Othernumber0.9283any0.0657string0.0051complex0.0004boolean0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+midName.Otherstring0.6728number0.2507any0.0641boolean0.0030complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+lengthName.Othernumber0.8342any0.1552string0.0082complex0.0009boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+strLengthName.Othernumber0.9325any0.0332string0.0321boolean0.0008complex0.0005
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+2Literal.Number.Float
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n    Text.Whitespace
+createPaddingName.Otherstring0.5214number0.3332any0.1151boolean0.0105complex0.0072
+(Punctuation
+MathName.BuiltinMath0.9999number0.0000complex0.0000string[]0.0000any0.0000
+.Punctuation
+floorName.Othernumber0.9978string0.0012any0.0005boolean0.0002complex0.0001
+(Punctuation
+midName.Otherstring0.5559number0.3929any0.0419complex0.0033boolean0.0015
+)Punctuation
+,Punctuation
+ Text.Whitespace
+charsName.Othernumber0.6630string0.1625any0.1253complex0.0235Date0.0027
+)Punctuation
+ Text.Whitespace
++Operator
+\n    Text.Whitespace
+stringKeyword.Type
+ Text.Whitespace
++Operator
+\n    Text.Whitespace
+createPaddingName.Otherstring0.5682number0.3281any0.0799boolean0.0059complex0.0052
+(Punctuation
+MathName.BuiltinMath0.9999Console0.0000ClientRect0.0000DateConstructor0.0000string[]0.0000
+.Punctuation
+ceilName.Othernumber0.9960string0.0008any0.0006boolean0.0005void0.0003
+(Punctuation
+midName.Othernumber0.5147string0.4544any0.0219string[]0.0025complex0.0019
+)Punctuation
+,Punctuation
+ Text.Whitespace
+charsName.Othernumber0.7684string0.1391any0.0408complex0.0176void0.0168
+)Punctuation
+\n  Text.Whitespace
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+padName.Otherany0.4412string0.1884complex0.0528number0.0521void0.0141
+\nText.Whitespace

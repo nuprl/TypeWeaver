@@ -1,0 +1,9 @@
+index.ts(35,12): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(39,36): error TS2345: Argument of type 'Request' is not assignable to parameter of type '{ headers: Headers; }'.
+  Types of property 'headers' are incompatible.
+    Type 'Headers' is not assignable to type 'import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/negotiator/index").Headers'.
+      Index signature for type 'string' is missing in type 'Headers'.
+index.ts(84,45): error TS2304: Cannot find name 'Type'.
+index.ts(128,59): error TS2304: Cannot find name 'Encoding'.
+index.ts(237,27): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+

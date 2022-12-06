@@ -1,0 +1,231 @@
+importKeyword
+ Text.Whitespace
+onceName.Otherany0.5454void0.0465complex0.0320T[]0.0300T0.0236
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/once.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+onlyOnceName.Othervoid0.2911any0.2005boolean0.0827complex0.0459Promise<void>0.0269
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/onlyOnce.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Othervoid0.2610any0.2138boolean0.0938complex0.0519string0.0357
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.2469void0.2380boolean0.0642complex0.0533string0.0316
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Runs the `tasks` array of functions in series, each passing their results to\n * the next in the array. However, if any of the `tasks` pass an error to their\n * own callback, the next function is not executed, and the main `callback` is\n * immediately called with the error.\n *\n * @name waterfall\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @category Control Flow\n * @param {Array} tasks - An array of [async functions]{@link AsyncFunction}\n * to run.\n * Each function should complete with any number of `result` values.\n * The `result` values will be passed as arguments, in order, to the next task.\n * @param {Function} [callback] - An optional callback to run once all the\n * functions have completed. This will be passed the results of the last task's\n * callback. Invoked with (err, [results]).\n * @returns {Promise} a promise, if a callback is omitted\n * @example\n *\n * async.waterfall([\n *     function(callback) {\n *         callback(null, 'one', 'two');\n *     },\n *     function(arg1, arg2, callback) {\n *         // arg1 now equals 'one' and arg2 now equals 'two'\n *         callback(null, 'three');\n *     },\n *     function(arg1, callback) {\n *         // arg1 now equals 'three'\n *         callback(null, 'done');\n *     }\n * ], function (err, result) {\n *     // result now equals 'done'\n * });\n *\n * // Or, with named functions:\n * async.waterfall([\n *     myFirstFunction,\n *     mySecondFunction,\n *     myLastFunction,\n * ], function (err, result) {\n *     // result now equals 'done'\n * });\n * function myFirstFunction(callback) {\n *     callback(null, 'one', 'two');\n * }\n * function mySecondFunction(arg1, arg2, callback) {\n *     // arg1 now equals 'one' and arg2 now equals 'two'\n *     callback(null, 'three');\n * }\n * function myLastFunction(arg1, callback) {\n *     // arg1 now equals 'three'\n *     callback(null, 'done');\n * }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+waterfallName.Otherany0.3705void0.1585boolean0.1286complex0.0189T0.0146
+ Text.Whitespace
+(Punctuation
+tasksName.Otherany0.8114any[]0.0308string0.0077void0.0075number[]0.0072
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7648Function0.1230void0.0305number0.0210boolean0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.8524Function0.0820void0.0196number0.0122boolean0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+onceName.Otherany0.8878Function0.0136T0.0062number0.0062boolean0.0049
+(Punctuation
+callbackName.Otherany0.8345void0.0602Function0.0591number0.0118T0.0047
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9987any0.0004ObjectConstructor0.0000Math0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9928any0.0032boolean0.0010any[]0.0008void0.0003
+(Punctuation
+tasksName.Otherany0.7516any[]0.1609complex0.0126T0.0053number[]0.0038
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.8081void0.0541Function0.0371number0.0146boolean0.0123
+(Punctuation
+newOperator.Wordany0.6088Error0.2144ErrorConstructor0.1152string0.0172complex0.0154
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999any0.0001Error0.0000complex0.0000any[]0.0000
+(Punctuation
+'First argument to waterfall must be an array of functions'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+tasksName.Otherany0.5193any[]0.2016T[]0.0224number[]0.0124T0.0094
+.Punctuation
+lengthName.Othernumber0.8511any0.1449void0.0012string0.0012boolean0.0006
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.7421void0.1167Function0.0652number0.0422boolean0.0065
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+taskIndexName.Othernumber0.9856any0.0110void0.0012boolean0.0009string0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+nextTaskName.Othervoid0.9367any0.0279number0.0165string0.0044boolean0.0034
+(Punctuation
+argsName.Otherany0.6667any[]0.2669string[]0.0165string0.0156IArguments0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+taskName.Otherany0.9085number0.0309string0.0116void0.0059boolean0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.6971number0.0694complex0.0461void0.0411string0.0210
+(Punctuation
+tasksName.Otherany0.5236any[]0.1731number[]0.0270string[]0.0139number[][]0.0115
+[Punctuation
+taskIndexName.Othernumber0.9084any0.0825string0.0042void0.0013any[]0.0008
+++Operator
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+taskName.Otherany0.9484void0.0260string0.0043number0.0043complex0.0040
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9351any0.0347string[]0.0147number[]0.0042T[]0.0021
+,Punctuation
+ Text.Whitespace
+onlyOnceName.Otherany0.3624void0.2149any[]0.1945boolean0.0407number0.0382
+(Punctuation
+nextName.Otherany0.8201void0.0635number0.0231any[]0.0166complex0.0130
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+nextName.Othervoid0.4499any0.4306complex0.0301boolean0.0138Function0.0112
+(Punctuation
+errName.Otherany0.9345Error0.0518string0.0030number0.0016boolean0.0010
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.8714any0.1045string[]0.0092number[]0.0016complex0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7397Error0.1760boolean0.0565complex0.0052number0.0033
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8338Error0.1440string0.0061boolean0.0059number0.0020
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+taskIndexName.Otherany0.7955number0.0978string0.0530boolean0.0379any[]0.0031
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+tasksName.Otherany0.8758any[]0.0534number[]0.0049string0.0035string[]0.0029
+.Punctuation
+lengthName.Otherany0.5609number0.4351string0.0017void0.0010complex0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.7935void0.0941Function0.0463number0.0202boolean0.0072
+(Punctuation
+errName.Otherany0.9063Error0.0790string0.0060number0.0016complex0.0009
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.9184any0.0634string[]0.0091number[]0.0013T[]0.0008
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+nextTaskName.Othervoid0.9618any0.0259any[]0.0021number0.0019complex0.0016
+(Punctuation
+argsName.Otherany[]0.7611any0.2055string[]0.0164string0.0034IArguments0.0023
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+nextTaskName.Othervoid0.8998any0.0808any[]0.0031Promise<void>0.0027complex0.0026
+(Punctuation
+[Punctuation
+]Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Othervoid0.3636any0.3602boolean0.0690any[]0.0314complex0.0303
+(Punctuation
+waterfallName.Otherboolean0.3958any0.2516void0.0591complex0.0111any[]0.0107
+)Punctuation
+\nText.Whitespace

@@ -1,0 +1,122 @@
+lib/CSSStyleDeclaration.ts(10,7): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashedToCamelCase' must be of type '(dashed: boolean) => string', but here has type 'any'.
+lib/CSSStyleDeclaration.ts(17,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'CSSStyleDeclaration' must be of type '{ new (): CSSStyleDeclaration; prototype: CSSStyleDeclaration; }', but here has type '(onChangeCallback: any) => void'.
+lib/CSSStyleDeclaration.ts(51,3): error TS2322: Type '(name: String, value: String, priority: Number) => void' is not assignable to type '(property: string, value: string, priority?: string) => void'.
+  Types of parameters 'priority' and 'priority' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+lib/CSSStyleDeclaration.ts(80,22): error TS2538: Type 'String' cannot be used as an index type.
+lib/CSSStyleDeclaration.ts(92,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/CSSStyleDeclaration.ts(93,22): error TS2538: Type 'String' cannot be used as an index type.
+lib/CSSStyleDeclaration.ts(133,29): error TS2538: Type 'String' cannot be used as an index type.
+lib/CSSStyleDeclaration.ts(160,22): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/CSSStyleDeclaration.ts(244,42): error TS2304: Cannot find name 'Property'.
+lib/CSSStyleDeclaration.ts(252,47): error TS2304: Cannot find name 'Property'.
+lib/parsers.ts(390,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/parsers.ts(391,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/parsers.ts(455,26): error TS2339: Property 'length' does not exist on type 'boolean'.
+lib/parsers.ts(543,32): error TS2304: Cannot find name 'Part'.
+lib/parsers.ts(545,59): error TS2304: Cannot find name 'Property'.
+lib/parsers.ts(559,46): error TS2749: 'property' refers to a value, but is being used as a type here. Did you mean 'typeof property'?
+lib/parsers.ts(559,72): error TS2304: Cannot find name 'shorthand'.
+lib/parsers.ts(566,48): error TS2304: Cannot find name 'SubProp'.
+lib/parsers.ts(597,46): error TS2749: 'property' refers to a value, but is being used as a type here. Did you mean 'typeof property'?
+lib/parsers.ts(597,72): error TS2304: Cannot find name 'shorthand'.
+lib/parsers.ts(603,30): error TS2304: Cannot find name 'Property'.
+lib/parsers.ts(606,31): error TS2304: Cannot find name 'ny'.
+lib/parsers.ts(627,7): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/parsers.ts(633,11): error TS2339: Property 'toLowerCase' does not exist on type 'never'.
+lib/parsers.ts(646,38): error TS2304: Cannot find name 'Part'.
+lib/parsers.ts(677,46): error TS2749: 'prefix' refers to a value, but is being used as a type here. Did you mean 'typeof prefix'?
+lib/parsers.ts(677,61): error TS2749: 'part' refers to a value, but is being used as a type here. Did you mean 'typeof part'?
+lib/parsers.ts(677,77): error TS2749: 'isValid' refers to a value, but is being used as a type here. Did you mean 'typeof isValid'?
+lib/parsers.ts(677,95): error TS2749: 'parser' refers to a value, but is being used as a type here. Did you mean 'typeof parser'?
+lib/parsers.ts(683,7): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/parsers.ts(714,46): error TS2749: 'camel_case' refers to a value, but is being used as a type here. Did you mean 'typeof camel_case'?
+lib/properties/background.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }'.
+lib/properties/backgroundAttachment.ts(5,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
+lib/properties/backgroundColor.ts(19,46): error TS2304: Cannot find name 'ny'.
+lib/properties/backgroundImage.ts(19,46): error TS2304: Cannot find name 'ny'.
+lib/properties/backgroundPosition.ts(7,5): error TS2300: Duplicate identifier 'parse'.
+lib/properties/backgroundPosition.ts(45,46): error TS2304: Cannot find name 'ny'.
+lib/properties/backgroundRepeat.ts(5,5): error TS2300: Duplicate identifier 'parse'.
+lib/properties/backgroundRepeat.ts(19,46): error TS2304: Cannot find name 'ny'.
+lib/properties/border.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-width': any; 'border-style': any; 'border-color': any; }'.
+lib/properties/borderBottom.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-bottom-width': any; 'border-bottom-style': any; 'border-bottom-color': any; }'.
+lib/properties/borderCollapse.ts(5,5): error TS2300: Duplicate identifier 'parse'.
+lib/properties/borderColor.ts(6,44): error TS2304: Cannot find name 'y'.
+lib/properties/borderRight.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-right-width': any; 'border-right-style': any; 'border-right-color': any; }'.
+lib/properties/borderSpacing.ts(9,5): error TS2300: Duplicate identifier 'parse'.
+lib/properties/borderSpacing.ts(23,32): error TS2304: Cannot find name 'Part'.
+lib/properties/borderTop.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-top-width': any; 'border-top-style': any; 'border-top-color': any; }'.
+lib/properties/clip.ts(7,5): error TS2300: Duplicate identifier 'parse'.
+lib/properties/clip.ts(26,42): error TS2304: Cannot find name 'Part'.
+lib/properties/flex.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'flex-grow': any; 'flex-shrink': any; 'flex-basis': any; }'.
+lib/properties/flex.ts(20,20): error TS2304: Cannot find name 'ny'.
+lib/properties/flexBasis.ts(5,10): error TS2300: Duplicate identifier 'parse'.
+lib/properties/flexBasis.ts(15,46): error TS2304: Cannot find name 'ny'.
+lib/properties/font.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'font-family': any; 'font-size': any; 'font-style': any; 'font-variant': any; 'font-weight': any; 'line-height': any; }'.
+lib/properties/fontSize.ts(20,10): error TS2300: Duplicate identifier 'parse'.
+lib/properties/fontStyle.ts(5,38): error TS2304: Cannot find name 'ny'.
+lib/properties/height.ts(5,10): error TS2300: Duplicate identifier 'parse'.
+lib/properties/margin.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
+lib/properties/padding.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
+lib/properties/width.ts(5,10): error TS2300: Duplicate identifier 'parse'.
+scripts/download_latest_properties.ts(26,9): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
+scripts/download_latest_properties.ts(39,26): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+scripts/download_latest_properties.ts(40,39): error TS2345: Argument of type 'Body' is not assignable to parameter of type 'string'.
+scripts/download_latest_properties.ts(43,84): error TS2304: Cannot find name 'CssProp'.
+scripts/download_latest_properties.ts(51,62): error TS2304: Cannot find name 'CssProp'.
+scripts/generate_implemented_properties.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/generate_implemented_properties.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/generate_implemented_properties.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 't'.
+scripts/generate_implemented_properties.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'generate'.
+scripts/generate_implemented_properties.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
+scripts/generate_implemented_properties.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'out_file'.
+scripts/generate_implemented_properties.ts(25,7): error TS2451: Cannot redeclare block-scoped variable 'statements'.
+scripts/generate_properties.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/generate_properties.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/generate_properties.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 't'.
+scripts/generate_properties.ts(7,5): error TS2451: Cannot redeclare block-scoped variable 'generate'.
+scripts/generate_properties.ts(11,5): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
+scripts/generate_properties.ts(26,5): error TS2451: Cannot redeclare block-scoped variable 'out_file'.
+scripts/generate_properties.ts(37,35): error TS2503: Cannot find namespace 'ts'.
+scripts/generate_properties.ts(37,35): error TS4078: Parameter 'node' of exported function has or is using private name 'ts'.
+scripts/generate_properties.ts(47,25): error TS2339: Property 'callee' does not exist on type 'Node'.
+scripts/generate_properties.ts(48,10): error TS2339: Property 'arguments' does not exist on type 'Node'.
+scripts/generate_properties.ts(49,28): error TS2339: Property 'arguments' does not exist on type 'Node'.
+scripts/generate_properties.ts(51,25): error TS2339: Property 'arguments' does not exist on type 'Node'.
+scripts/generate_properties.ts(61,39): error TS2304: Cannot find name 'Property'.
+scripts/generate_properties.ts(94,19): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+scripts/generate_properties.ts(95,12): error TS2339: Property 'join' does not exist on type 'string | string[]'.
+  Property 'join' does not exist on type 'string'.
+scripts/generate_properties.ts(105,52): error TS2304: Cannot find name 'Dependency'.
+scripts/generate_properties.ts(106,49): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+scripts/generate_properties.ts(113,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/generate_properties.ts(119,5): error TS2451: Cannot redeclare block-scoped variable 'statements'.
+scripts/generate_properties.ts(143,25): error TS2339: Property 'object' does not exist on type 'Node'.
+scripts/generate_properties.ts(143,38): error TS2339: Property 'filename' does not exist on type 'Node'.
+scripts/generate_properties.ts(150,56): error TS2339: Property 'property' does not exist on type 'Node'.
+scripts/generate_properties.ts(152,30): error TS2339: Property 'property' does not exist on type 'Node'.
+scripts/generate_properties.ts(153,63): error TS2339: Property 'property' does not exist on type 'Node'.
+scripts/generate_properties.ts(155,32): error TS2339: Property 'property' does not exist on type 'Node'.
+scripts/generate_properties.ts(158,40): error TS2339: Property 'filename' does not exist on type 'Node'.
+scripts/generate_properties.ts(162,14): error TS2339: Property 'arguments' does not exist on type 'Node'.
+scripts/generate_properties.ts(173,17): error TS2339: Property 'ast' does not exist on type 'File'.
+scripts/generate_properties.ts(177,43): error TS2345: Argument of type 'File' is not assignable to parameter of type 'Node'.
+  Type 'File' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
+scripts/generate_properties.ts(188,62): error TS2345: Argument of type 'File' is not assignable to parameter of type 'Node'.
+scripts/generate_properties.ts(199,51): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(205,62): error TS2503: Cannot find namespace 'ts'.
+scripts/generate_properties.ts(208,18): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(220,44): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(226,17): error TS2339: Property 'ast' does not exist on type 'File'.
+scripts/generate_properties.ts(238,64): error TS2538: Type 'String' cannot be used as an index type.
+scripts/generate_properties.ts(241,28): error TS2339: Property 'filename' does not exist on type 'File'.
+scripts/generate_properties.ts(249,50): error TS2538: Type 'String' cannot be used as an index type.
+scripts/generate_properties.ts(253,42): error TS2339: Property 'ast' does not exist on type 'File'.
+scripts/generate_properties.ts(257,35): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(260,25): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(261,25): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(264,12): error TS2339: Property 'property' does not exist on type 'File'.
+scripts/generate_properties.ts(266,67): error TS2339: Property 'property' does not exist on type 'File'.
+

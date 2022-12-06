@@ -1,0 +1,11 @@
+export declare const readUInt32BE: string;
+export declare const writeUInt32BE: string;
+export declare const ip: Function;
+export declare const rip: Function;
+export declare const pc1: Function;
+export declare const r28shl: Function;
+export declare const pc2: Function;
+export declare const expand: Function;
+export declare const substitute: Function;
+export declare const permute: Function;
+export declare const padSplit: string;

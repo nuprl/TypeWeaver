@@ -1,0 +1,73 @@
+bench/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+bench/index.ts(34,21): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(53,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(58,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(63,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(68,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(73,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(78,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(83,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(88,1): error TS2554: Expected 2 arguments, but got 1.
+examples/compile.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+examples/compile.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+examples/expand.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/expand.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+index.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'expand'.
+index.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+index.ts(38,26): error TS2339: Property 'expand' does not exist on type '{}'.
+index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type '{}'.
+index.ts(128,15): error TS2339: Property 'noempty' does not exist on type '{}'.
+index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type '{}'.
+index.ts(161,17): error TS2339: Property 'expand' does not exist on type '{}'.
+lib/compile.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fill'.
+lib/compile.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/compile.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+lib/compile.ts(9,56): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/compile.ts(11,26): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/expand.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fill'.
+lib/expand.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+lib/expand.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/expand.ts(10,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/expand.ts(11,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/expand.ts(33,7): error TS2451: Cannot redeclare block-scoped variable 'expand'.
+lib/expand.ts(34,28): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
+lib/expand.ts(34,67): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
+lib/expand.ts(40,20): error TS2339: Property 'queue' does not exist on type '{}'.
+lib/expand.ts(42,14): error TS2339: Property 'type' does not exist on type '{}'.
+lib/expand.ts(42,36): error TS2339: Property 'type' does not exist on type '{}'.
+lib/expand.ts(42,57): error TS2339: Property 'parent' does not exist on type '{}'.
+lib/expand.ts(43,13): error TS2339: Property 'parent' does not exist on type '{}'.
+lib/expand.ts(44,13): error TS2339: Property 'queue' does not exist on type '{}'.
+lib/expand.ts(53,30): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+lib/expand.ts(60,47): error TS2339: Property 'step' does not exist on type '{}'.
+lib/parse.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+lib/parse.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+lib/parse.ts(37,25): error TS2339: Property 'maxLength' does not exist on type '{}'.
+lib/parse.ts(37,76): error TS2339: Property 'maxLength' does not exist on type '{}'.
+lib/parse.ts(64,12): error TS2339: Property 'value' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(94,44): error TS2339: Property 'keepEscaping' does not exist on type '{}'.
+lib/parse.ts(173,19): error TS2339: Property 'keepQuotes' does not exist on type '{}'.
+lib/parse.ts(184,23): error TS2339: Property 'keepQuotes' does not exist on type '{}'.
+lib/parse.ts(202,25): error TS2339: Property 'value' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(202,39): error TS2339: Property 'value' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(202,72): error TS2339: Property 'dollar' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(232,13): error TS2339: Property 'close' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(246,17): error TS2339: Property 'ranges' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(247,15): error TS2339: Property 'ranges' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(253,13): error TS2339: Property 'commas' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(261,50): error TS2339: Property 'commas' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(270,15): error TS2339: Property 'range' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(271,14): error TS2339: Property 'value' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(275,17): error TS2339: Property 'invalid' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(276,17): error TS2339: Property 'ranges' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(281,15): error TS2339: Property 'ranges' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(282,15): error TS2339: Property 'args' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(290,30): error TS2339: Property 'value' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/parse.ts(292,15): error TS2339: Property 'ranges' does not exist on type '{ type: string; input: string; nodes: any[]; }'.
+lib/stringify.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/stringify.ts(7,32): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/stringify.ts(8,56): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
+lib/utils.ts(106,38): error TS2554: Expected 1 arguments, but got 2.
+

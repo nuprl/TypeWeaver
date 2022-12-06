@@ -1,0 +1,81 @@
+clone.ts(9,22): error TS2304: Cannot find name 'bject'.
+clone.ts(9,22): error TS4078: Parameter 'obj' of exported function has or is using private name 'bject'.
+clone.ts(16,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'copy' must be of type '{ __proto__: any; }', but here has type 'any'.
+graceful-fs.ts(33,3): error TS2322: Type 'DebugLogger' is not assignable to type '() => void'.
+graceful-fs.ts(51,3): error TS2741: Property '__promisify__' is missing in type '(fd: number, cb: Function) => any' but required in type 'typeof close'.
+graceful-fs.ts(85,13): error TS2554: Expected 0 arguments, but got 1.
+graceful-fs.ts(95,1): error TS2528: A module cannot have multiple default exports.
+graceful-fs.ts(96,54): error TS2339: Property '__patched' does not exist on type 'typeof import("fs")'.
+graceful-fs.ts(97,3): error TS1258: A default export must be at the top level of a file or module declaration.
+graceful-fs.ts(97,3): error TS2528: A module cannot have multiple default exports.
+graceful-fs.ts(98,6): error TS2339: Property '__patched' does not exist on type 'typeof import("fs")'.
+graceful-fs.ts(114,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(116,33): error TS2304: Cannot find name 'path$Path'.
+graceful-fs.ts(116,64): error TS2749: 'cb' refers to a value, but is being used as a type here. Did you mean 'typeof cb'?
+graceful-fs.ts(116,80): error TS2749: 'startTime' refers to a value, but is being used as a type here. Did you mean 'typeof startTime'?
+graceful-fs.ts(118,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(118,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(134,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(138,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(138,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(155,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(159,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(159,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(177,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(181,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(181,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(194,54): error TS2304: Cannot find name 'ReaddirOptions'.
+graceful-fs.ts(194,75): error TS2304: Cannot find name 'Callback'.
+graceful-fs.ts(194,84): error TS2304: Cannot find name 'Stats'.
+graceful-fs.ts(199,63): error TS2304: Cannot find name 'ReaddirOptions'.
+graceful-fs.ts(199,84): error TS2304: Cannot find name 'ReaddirCallback'.
+graceful-fs.ts(201,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Date'.
+graceful-fs.ts(204,63): error TS2304: Cannot find name 'ReaddirOptions'.
+graceful-fs.ts(204,84): error TS2304: Cannot find name 'ReaddirCallback'.
+graceful-fs.ts(206,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Date'.
+graceful-fs.ts(210,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(214,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(214,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(235,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(236,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(255,25): error TS2749: 'ReadStream' refers to a value, but is being used as a type here. Did you mean 'typeof ReadStream'?
+graceful-fs.ts(256,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(265,25): error TS2749: 'WriteStream' refers to a value, but is being used as a type here. Did you mean 'typeof WriteStream'?
+graceful-fs.ts(266,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(278,25): error TS2749: 'FileReadStream' refers to a value, but is being used as a type here. Did you mean 'typeof FileReadStream'?
+graceful-fs.ts(289,25): error TS2749: 'FileWriteStream' refers to a value, but is being used as a type here. Did you mean 'typeof FileWriteStream'?
+graceful-fs.ts(319,58): error TS2304: Cannot find name 'WriteStreamOptions'.
+graceful-fs.ts(339,63): error TS2304: Cannot find name 'ReadStreamOptions'.
+graceful-fs.ts(343,64): error TS2304: Cannot find name 'WriteStreamOptions'.
+graceful-fs.ts(353,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(357,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(357,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(371,9): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(415,11): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(419,11): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(434,13): error TS2554: Expected 0 arguments, but got 3.
+legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
+legacy-streams.ts(14,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+legacy-streams.ts(75,58): error TS2304: Cannot find name 'WriteStreamOptions'.
+legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
+legacy-streams.ts(78,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
+polyfills.ts(98,29): error TS2749: 'rename' refers to a value, but is being used as a type here. Did you mean 'typeof rename'?
+polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(107,45): error TS2304: Cannot find name 'Stater'.
+polyfills.ts(107,58): error TS2304: Cannot find name 'Stats'.
+polyfills.ts(134,24): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(185,37): error TS2304: Cannot find name 'Path'.
+polyfills.ts(224,40): error TS2304: Cannot find name 'Path'.
+polyfills.ts(224,51): error TS2304: Cannot find name 'Position'.
+polyfills.ts(224,66): error TS2304: Cannot find name 'Modifiers'.
+polyfills.ts(259,32): error TS2503: Cannot find namespace 'fs'.
+polyfills.ts(273,30): error TS2503: Cannot find namespace 'fs'.
+polyfills.ts(301,45): error TS2503: Cannot find namespace 'fs'.
+polyfills.ts(313,31): error TS2304: Cannot find name 'Stats'.
+polyfills.ts(344,12): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(349,14): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(349,38): error TS2339: Property 'code' does not exist on type 'Error'.
+

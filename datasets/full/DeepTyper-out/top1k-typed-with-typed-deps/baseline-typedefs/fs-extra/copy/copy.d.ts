@@ -1,0 +1,12 @@
+declare const fs: any;
+declare const path: any;
+declare const mkdirs: any;
+declare const pathExists: any;
+declare const utimesMillis: any;
+declare const stat: any;
+declare function copy(src: any, dest: any, opts: any, cb: any): void;
+declare function checkParentDir(destStat: any, src: any, dest: string, opts: any, cb: any): any;
+declare function handleFilter(onInclude: any, destStat: any, src: any, dest: any, opts: any, cb: any): any;
+declare function handleTimestampsAndMode(srcMode: any, src: any, dest: any, cb: any): void;
+declare function setDestTimestampsAndMode(srcMode: any, src: any, dest: any, cb: any): void;
+declare function copyDirItems(items: any, src: any, dest: any, opts: any, cb: any): any;

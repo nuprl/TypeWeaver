@@ -1,0 +1,25 @@
+index.ts(3,27): error TS2304: Cannot find name 'ny'.
+index.ts(3,27): error TS4078: Parameter 'val' of exported function has or is using private name 'ny'.
+index.ts(13,46): error TS2304: Cannot find name 'T'.
+index.ts(13,46): error TS4078: Parameter 'target' of exported function has or is using private name 'T'.
+index.ts(13,69): error TS2304: Cannot find name 'T'.
+index.ts(13,69): error TS4078: Parameter 'source' of exported function has or is using private name 'T'.
+index.ts(14,16): error TS2339: Property 'concat' does not exist on type 'ArrayLike<T>'.
+index.ts(36,36): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'symbol[]' is not assignable to type 'string[]'.
+          Type 'symbol' is not assignable to type 'string'.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
+      Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
+index.ts(49,36): error TS2345: Argument of type 'PropertyKey' is not assignable to parameter of type 'string | symbol'.
+  Type 'number' is not assignable to type 'string | symbol'.
+index.ts(56,14): error TS2339: Property 'isMergeableObject' does not exist on type 'Object'.
+index.ts(66,50): error TS2339: Property 'isMergeableObject' does not exist on type 'Object'.
+index.ts(96,68): error TS2304: Cannot find name 'DeepMergeOptions'.
+rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
+rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
+rollup.config.ts(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+

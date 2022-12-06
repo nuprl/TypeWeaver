@@ -1,0 +1,28 @@
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+chownr.ts(27,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+chownr.ts(40,19): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(43,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+chownr.ts(61,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+chownr.ts(62,89): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'object' is not assignable to parameter of type 'ObjectEncodingOptions & { withFileTypes: true; }'.
+      Property 'withFileTypes' is missing in type '{}' but required in type '{ withFileTypes: true; }'.
+chownr.ts(65,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+chownr.ts(66,77): error TS2345: Argument of type 'string' is not assignable to parameter of type '(err: ErrnoException, files: string[]) => void'.
+chownr.ts(71,17): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(80,22): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(81,13): error TS2339: Property 'name' does not exist on type 'object'.
+chownr.ts(85,13): error TS2339: Property 'isDirectory' does not exist on type 'Function'.
+chownr.ts(104,14): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(106,19): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(106,44): error TS2339: Property 'code' does not exist on type 'object'.
+chownr.ts(118,19): error TS2322: Type 'boolean' is not assignable to type 'string'.
+chownr.ts(130,13): error TS2740: Type 'StatsBase<number>' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+chownr.ts(131,13): error TS2339: Property 'name' does not exist on type 'any[]'.
+chownr.ts(132,7): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+chownr.ts(141,13): error TS2339: Property 'isDirectory' does not exist on type 'Function'.
+chownr.ts(167,8): error TS2339: Property 'sync' does not exist on type 'Function'.
+

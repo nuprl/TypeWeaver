@@ -1,0 +1,723 @@
+"use strict"Literal.String.Double
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+defaultsName.Otherany0.9597string0.0119number0.0056complex0.0033T0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'defaults'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+combiningName.Otherany0.7881number0.1733string0.0174boolean0.0097void0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./combining'Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+DEFAULTSName.Othercomplex0.7149any0.2251number0.0107boolean0.0079{}0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+nulName.Othernumber0.9895any0.0067string0.0019boolean0.0009complex0.0002
+:Operator
+ Text.Whitespace
+0Keyword.Type
+,Punctuation
+\n  Text.Whitespace
+controlName.Othernumber0.9756any0.0185string0.0033number[]0.0005boolean0.0004
+:Operator
+ Text.Whitespace
+0Keyword.Type
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wcwidthName.Otherany0.4301boolean0.2290string0.1827number0.1232complex0.0074
+(Punctuation
+strName.Otherany0.6019string0.3876number0.0044complex0.0016boolean0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wcswidthName.Otherany0.5202boolean0.1530string0.1485number0.1240complex0.0221
+(Punctuation
+strName.Otherstring0.5543any0.4364number0.0037complex0.0036boolean0.0003
+,Punctuation
+ Text.Whitespace
+DEFAULTSName.Otherany0.5101complex0.3967boolean0.0196{}0.0136string0.0061
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exports.configName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+optsName.Otherany0.8878Options0.0056complex0.0042string0.0036Buffer0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+optsName.Otherany0.8913complex0.0147{}0.0120Options0.0074number0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+defaultsName.Otherany0.8413complex0.0297{}0.0203T0.0109number0.0104
+(Punctuation
+optsName.Otherany0.9204{}0.0116complex0.0092number0.0045Options0.0042
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+DEFAULTSName.Otherany0.7591complex0.1637boolean0.0188{}0.0053string0.0039
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wcwidthName.Otherany0.5439boolean0.2672string0.0893number0.0738complex0.0085
+(Punctuation
+strName.Otherany0.6844string0.3074number0.0034complex0.0022boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wcswidthName.Otherany0.6902number0.0899boolean0.0842string0.0806complex0.0304
+(Punctuation
+strName.Otherany0.6017string0.3885complex0.0057number0.0026{}0.0002
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8326complex0.0546{}0.0134Options0.0116number0.0080
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/*\n *  The following functions define the column width of an ISO 10646\n *  character as follows:\n *  - The null character (U+0000) has a column width of 0.\n *  - Other C0/C1 control characters and DEL will lead to a return value\n *    of -1.\n *  - Non-spacing and enclosing combining characters (general category\n *    code Mn or Me in the\n *    Unicode database) have a column width of 0.\n *  - SOFT HYPHEN (U+00AD) has a column width of 1.\n *  - Other format characters (general category code Cf in the Unicode\n *    database) and ZERO WIDTH\n *    SPACE (U+200B) have a column width of 0.\n *  - Hangul Jamo medial vowels and final consonants (U+1160-U+11FF)\n *    have a column width of 0.\n *  - Spacing characters in the East Asian Wide (W) or East Asian\n *    Full-width (F) category as\n *    defined in Unicode Technical Report #11 have a column width of 2.\n *  - All remaining characters (including all printable ISO 8859-1 and\n *    WGL4 characters, Unicode control characters, etc.) have a column\n *    width of 1.\n *  This implementation assumes that characters are encoded in ISO 10646.\n*/Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wcswidthName.Otherany0.4192number0.2765string0.1845boolean0.0977complex0.0081
+(Punctuation
+strName.Otherany0.6255string0.3661number0.0035complex0.0026boolean0.0002
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8123Options0.0166complex0.0149number0.0087string0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+strName.Otherany0.8148string0.1582complex0.0185number0.0058boolean0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wcwidthName.Otherany0.4742number0.2984string0.1508boolean0.0430complex0.0220
+(Punctuation
+strName.Otherany0.5983string0.3838number0.0084complex0.0081boolean0.0003
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8536complex0.0483number0.0181{}0.0079string0.0057
+)Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+sName.Othernumber0.8489any0.1286string0.0164complex0.0022number[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9878any0.0110string0.0005complex0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9787any0.0198string0.0006complex0.0002boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+strName.Otherany0.6288string0.3462number0.0142complex0.0051string[]0.0019
+.Punctuation
+lengthName.Othernumber0.5364any0.4591string0.0018complex0.0016boolean0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9638any0.0348string0.0007boolean0.0003complex0.0002
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+nName.Othernumber0.8236any0.1574string0.0087boolean0.0051complex0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wcwidthName.Othernumber0.6796any0.2595string0.0274boolean0.0180complex0.0120
+(Punctuation
+strName.Otherstring0.5449any0.4453number0.0071complex0.0014string[]0.0003
+.Punctuation
+charCodeAtName.Othernumber0.7391any0.2521complex0.0038string0.0032boolean0.0007
+(Punctuation
+iName.Othernumber0.9321any0.0652string0.0014complex0.0005boolean0.0002
+)Punctuation
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8809complex0.0475number0.0311{}0.0030string0.0024
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nName.Othernumber0.8795any0.1152string0.0017complex0.0016boolean0.0011
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+sName.Othernumber0.7473any0.1836string0.0645complex0.0018boolean0.0011
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+nName.Othernumber0.9215any0.0698string0.0046boolean0.0014complex0.0013
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+sName.Othernumber0.4225any0.3059string0.2388boolean0.0134complex0.0058
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wcwidthName.Othernumber0.4409boolean0.3144any0.1606string0.0692complex0.0054
+(Punctuation
+ucsName.Othernumber0.6112any0.3164string0.0511boolean0.0132Date0.0015
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8577number0.0156complex0.0090Options0.0088string0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// test for 8-bit control charactersComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.7910any0.1841boolean0.0161string0.0053complex0.0021
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optsName.Otherany0.8292complex0.0309number0.0167Options0.0098{}0.0048
+.Punctuation
+nulName.Otherany0.6611number0.2688boolean0.0417string0.0144complex0.0074
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8258any0.1597boolean0.0085string0.0042complex0.0007
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+32Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8573any0.1368string0.0031boolean0.0020complex0.0003
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0x7fLiteral.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9257any0.0677boolean0.0034string0.0017complex0.0005
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0xa0Literal.Number.Hex
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optsName.Otherany0.5306complex0.0681Options0.0155number0.0111{}0.0050
+.Punctuation
+controlName.Otherany0.7219number0.1993string0.0287complex0.0210boolean0.0045
+\n\n  Text.Whitespace
+// binary search in table of non-spacing charactersComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+bisearchName.Otherboolean0.6096number0.2504any0.1092complex0.0145string0.0117
+(Punctuation
+ucsName.Othernumber0.5876any0.3521boolean0.0374string0.0150complex0.0038
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+\n\n  Text.Whitespace
+// if we arrive here, ucs is not a combining or C0/C1 control characterComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
++Operator
+\n      Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8715any0.1201string0.0051boolean0.0025complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0x1100Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+\n       Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8172any0.1694boolean0.0091string0.0028complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0x115fLiteral.Number.Hex
+ Text.Whitespace
+||Operator
+                       Text.Whitespace
+// Hangul Jamo init. consonantsComment.Single
+\n        Text.Whitespace
+ucsName.Othernumber0.8467any0.1390boolean0.0097string0.0032complex0.0005
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+0x2329Literal.Number.Hex
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+ucsName.Othernumber0.8235any0.1546boolean0.0161string0.0041complex0.0006
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+0x232aLiteral.Number.Hex
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8107any0.1810string0.0039boolean0.0035complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0x2e80Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.8782any0.1081boolean0.0096string0.0029complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xa4cfLiteral.Number.Hex
+ Text.Whitespace
+&&Operator
+\n         Text.Whitespace
+ucsName.Othernumber0.8594any0.1245boolean0.0113string0.0034complex0.0004
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+0x303fLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+                     Text.Whitespace
+// CJK ... YiComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8313any0.1603boolean0.0044string0.0031complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xac00Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.8921any0.0945boolean0.0097string0.0025complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xd7a3Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+    Text.Whitespace
+// Hangul SyllablesComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8356any0.1570boolean0.0038string0.0027complex0.0003
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xf900Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.8981any0.0887boolean0.0096string0.0024complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xfaffLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+    Text.Whitespace
+// CJK Compatibility IdeographsComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8451any0.1476boolean0.0038string0.0026complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xfe10Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9024any0.0845boolean0.0095string0.0024complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xfe19Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+    Text.Whitespace
+// Vertical formsComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8520any0.1408boolean0.0039string0.0025complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xfe30Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9056any0.0814boolean0.0095string0.0023complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xfe6fLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+    Text.Whitespace
+// CJK Compatibility FormsComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8580any0.1347boolean0.0040string0.0024complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xff00Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9084any0.0787boolean0.0094string0.0023complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xff60Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+    Text.Whitespace
+// Fullwidth FormsComment.Single
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8642any0.1286boolean0.0040string0.0024complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0xffe0Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9112any0.0763boolean0.0091string0.0023complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0xffe6Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8721any0.1205boolean0.0041string0.0024complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0x20000Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9141any0.0743boolean0.0083string0.0022complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0x2fffdLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8870any0.1049boolean0.0049string0.0024complex0.0002
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0x30000Literal.Number.Hex
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ucsName.Othernumber0.9244any0.0679boolean0.0045string0.0023complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0x3fffdLiteral.Number.Hex
+)Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+bisearchName.Otherboolean0.4241number0.3940any0.1341string0.0258complex0.0062
+(Punctuation
+ucsName.Othernumber0.5800any0.2699boolean0.0779string0.0564Date0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+minName.Othernumber0.8922any0.1020boolean0.0025string0.0011complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+maxName.Othernumber0.8408any0.1465string0.0055boolean0.0036complex0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+combiningName.Otherany0.7700number0.1673string0.0217number[]0.0086string[]0.0049
+.Punctuation
+lengthName.Othernumber0.5897any0.4063complex0.0016string0.0011boolean0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+midName.Othernumber0.8398any0.1226string0.0296boolean0.0032complex0.0028
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.8531any0.1302boolean0.0074string0.0047complex0.0019
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+combiningName.Otherany0.6972number0.2037complex0.0342number[]0.0155boolean0.0044
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+ucsName.Othernumber0.7014any0.2849boolean0.0068string0.0038complex0.0016
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+combiningName.Otherany0.6505number0.1958complex0.0785number[]0.0175boolean0.0097
+[Punctuation
+maxName.Othernumber0.8666any0.1223string0.0076complex0.0012boolean0.0009
+]Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+maxName.Othernumber0.7784any0.2131string0.0031boolean0.0017complex0.0013
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+minName.Othernumber0.8118any0.1781string0.0025boolean0.0022complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+midName.Othernumber0.8979any0.0853string0.0099boolean0.0043complex0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9994any0.0000complex0.0000number0.0000NumberConstructor0.0000
+.Punctuation
+floorName.Othernumber0.9843any0.0131boolean0.0007string0.0007complex0.0006
+(Punctuation
+(Punctuation
+minName.Othernumber0.5711any0.4217string0.0034complex0.0013boolean0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+maxName.Othernumber0.7431any0.2491string0.0044complex0.0009boolean0.0008
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.5762any0.3984boolean0.0149string0.0045complex0.0039
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+combiningName.Otherany0.4838complex0.2569number0.1749{}0.0206boolean0.0118
+[Punctuation
+midName.Othernumber0.7483any0.1336string0.1069complex0.0058boolean0.0027
+]Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+minName.Othernumber0.7221any0.2576string0.0112boolean0.0037complex0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+midName.Othernumber0.7424any0.2194string0.0314boolean0.0025complex0.0024
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ucsName.Othernumber0.7578any0.2198boolean0.0115string0.0055complex0.0028
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+combiningName.Otherany0.6369complex0.1731number0.1256{}0.0151boolean0.0070
+[Punctuation
+midName.Othernumber0.7387any0.1385string0.1091complex0.0066boolean0.0031
+]Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+maxName.Othernumber0.8904any0.1001string0.0035boolean0.0032complex0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+midName.Othernumber0.8111any0.1656string0.0165boolean0.0038complex0.0013
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

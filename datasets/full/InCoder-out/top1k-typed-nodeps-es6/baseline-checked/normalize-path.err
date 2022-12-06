@@ -1,0 +1,17 @@
+benchmark/code/no-regex.ts(2,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
+benchmark/code/no-regex.ts(3,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
+benchmark/code/no-regex.ts(22,22): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+benchmark/code/no-regex.ts(23,21): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+benchmark/code/no-regex.ts(24,24): error TS2339: Property 'length' does not exist on type 'RegExp'.
+benchmark/code/node-path.ts(2,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+benchmark/code/node-path.ts(5,3): error TS2322: Type 'string' is not assignable to type 'File'.
+benchmark/code/node-path.ts(5,23): error TS2345: Argument of type 'File' is not assignable to parameter of type 'string'.
+benchmark/code/node-path.ts(9,13): error TS2339: Property 'replace' does not exist on type 'File'.
+benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
+benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(9,25): error TS2304: Cannot find name 'Stats'.
+index.ts(8,31): error TS2304: Cannot find name 'ring'.
+index.ts(8,31): error TS4078: Parameter 'path' of exported function has or is using private name 'ring'.
+

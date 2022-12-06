@@ -1,0 +1,86 @@
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Tries to execute a function and discards any error that occurs.\n * @param {Function} fn - Function that might or might not throw an error.\n * @returns {?*} Return-value of the function when no error occurred.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+fnName.Otherany0.4819Function0.3568string0.0686boolean0.0101number0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.OtherFunction0.4473any0.4451void0.0234string0.0141Promise<any>0.0092
+(Punctuation
+)Punctuation
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9981string0.0007Error0.0004number0.0002{}0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Tries to execute an asynchronous function and discards any error that occurs.\n * @param {Function} fn - Asynchronous function that might or might not throw an error.\n * @returns {?*} Promise which resolves with the return-value of the asynchronous function when no error occurred.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+promiseName.OtherPromise<void>0.5095Promise<any>0.1663any0.0739Promise<{}>0.0590Promise<number>0.0410
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+fnName.OtherFunction0.4815any0.3081string0.0536boolean0.0194number0.0102
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+fnName.Otherany0.4630Function0.2717Promise<void>0.0599Promise<any>0.0479Promise<{}>0.0349
+(Punctuation
+)Punctuation
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9973string0.0010Error0.0006number0.0004{}0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

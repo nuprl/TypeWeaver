@@ -1,0 +1,117 @@
+importKeyword
+ Text.Whitespace
+toIntegerName.Otherany0.1986boolean0.1100string0.0842complex0.0400number0.0364
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toInteger.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used as references for various `Number` constants. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+MAX_SAFE_INTEGERName.Othernumber0.9956any0.0031string0.0005boolean0.0003number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+9007199254740991Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * Converts `value` to a safe integer. A safe integer can be compared and\n * represented correctly.\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {number} Returns the converted integer.\n * @example\n *\n * toSafeInteger(3.2)\n * // => 3\n *\n * toSafeInteger(Number.MIN_VALUE)\n * // => 0\n *\n * toSafeInteger(Infinity)\n * // => 9007199254740991\n *\n * toSafeInteger('3.2')\n * // => 3\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toSafeIntegerName.Othernumber0.8498string0.0703any0.0363boolean0.0279complex0.0019
+(Punctuation
+valueName.Othernumber0.7157any0.1498string0.1108Date0.0046boolean0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Othernumber0.6018any0.2865string0.0835boolean0.0123Date0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Othernumber0.8441any0.1153string0.0319boolean0.0026Date0.0022
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+valueName.Othernumber0.9537any0.0343string0.0102boolean0.0008Date0.0002
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+valueName.Othernumber0.7643string0.1469any0.0753boolean0.0049Date0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toIntegerName.Othernumber0.8203string0.1001any0.0562boolean0.0103complex0.0040
+(Punctuation
+valueName.Othernumber0.6501string0.1646any0.1643Date0.0043complex0.0032
+)Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Othernumber0.8255any0.1598string0.0094boolean0.0017complex0.0011
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+-Operator
+MAX_SAFE_INTEGERName.Othernumber0.9832any0.0146string0.0005boolean0.0005complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+-Operator
+MAX_SAFE_INTEGERName.Othernumber0.9794any0.0187string0.0006boolean0.0004complex0.0002
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Othernumber0.8736any0.1199string0.0031boolean0.0019complex0.0003
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+MAX_SAFE_INTEGERName.Othernumber0.9843any0.0130boolean0.0008string0.0005complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+MAX_SAFE_INTEGERName.Othernumber0.9762any0.0207boolean0.0008string0.0007void0.0002
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Othernumber0.5873any0.2995string0.0632boolean0.0155Date0.0049
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+toSafeIntegerName.Otherany0.5070number0.0839string0.0572boolean0.0228complex0.0122
+\nText.Whitespace

@@ -1,0 +1,302 @@
+importKeyword
+ Text.Whitespace
+iterateName.Otherany0.7603any[]0.0562void0.0198string[]0.0139complex0.0100
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./lib/iterate.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+initStateName.Otherany0.2241void0.0481number0.0424boolean0.0240Promise<void>0.0235
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./lib/state.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+terminatorName.Otherany0.3266void0.0924Promise<void>0.0714boolean0.0648complex0.0596
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./lib/terminator.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// Public APIComment.Single
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+serialOrderedName.Otherany0.9008string0.0484number0.0101complex0.0055boolean0.0046
+;Punctuation
+\nText.Whitespace
+// sorting helpersComment.Single
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.ascendingName.Other
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+ascendingName.Otherany0.7572boolean0.1746string0.0228number0.0086complex0.0049
+;Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.descendingName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+descendingName.Otherany0.4936boolean0.4851string0.0064number0.0021complex0.0018
+;Punctuation
+\n\nText.Whitespace
+/**\n * Runs iterator over provided sorted array elements in series\n *\n * @param   {array|object} list - array or object (named list) to iterate over\n * @param   {function} iterator - iterator to run\n * @param   {function} sortMethod - custom sort function\n * @param   {function} callback - invoked when all elements processed\n * @returns {function} - jobs terminator\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+serialOrderedName.Othervoid0.5393any0.3199boolean0.0703string0.0159complex0.0112
+(Punctuation
+listName.Otherany0.8591string0.0064List0.0056number0.0035any[]0.0029
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.8568string0.0121boolean0.0092symbol0.0091RegExp0.0069
+,Punctuation
+ Text.Whitespace
+sortMethodName.Otherany0.7731boolean0.1149string0.0401number0.0243void0.0116
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7899Function0.1156boolean0.0221void0.0177number0.0039
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+stateName.Otherany0.6909boolean0.0834number0.0642void0.0355{}0.0222
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+initStateName.Otherany0.6301number0.1383boolean0.0429{}0.0181void0.0165
+(Punctuation
+listName.Otherany0.8485number0.0114any[]0.0078List0.0052string0.0039
+,Punctuation
+ Text.Whitespace
+sortMethodName.Otherany0.6483number0.1715boolean0.0539string0.0354void0.0337
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+iterateName.Otherany0.8691void0.0500number0.0150any[]0.0124complex0.0049
+(Punctuation
+listName.Otherany0.7132any[]0.0269number0.0235List0.0125string0.0072
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.8087number0.0302boolean0.0182string0.0168symbol0.0073
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.7902number0.0551boolean0.0141string0.0065{}0.0062
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+iteratorHandlerName.Otherany0.4264void0.3024boolean0.0543number0.0532string0.0312
+(Punctuation
+errorName.Otherany0.7982Error0.1329string0.0328number0.0077boolean0.0030
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.9439string0.0163number0.0093boolean0.0085Error0.0019
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8516Error0.0996string0.0159boolean0.0105number0.0055
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbackName.Otherany0.7054void0.0929Function0.0910boolean0.0063Error0.0057
+(Punctuation
+errorName.Otherany0.8020Error0.1454string0.0216number0.0044{}0.0035
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.9270string0.0185number0.0165boolean0.0065{}0.0054
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+stateName.Otherany0.7312number0.0215complex0.0184any[]0.0074string0.0057
+.Punctuation
+indexName.Otherany0.5000number0.4951string0.0021complex0.0010boolean0.0008
+++Operator
+;Punctuation
+\n\n    Text.Whitespace
+// are we there yet?Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.7808complex0.0196number0.0172boolean0.0060{}0.0044
+.Punctuation
+indexName.Otherany0.6175number0.3693complex0.0040boolean0.0025string0.0018
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.8770number0.0181{}0.0128boolean0.0051any[]0.0034
+[Punctuation
+'keyedList'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+listName.Otherany0.8791any[]0.0180complex0.0059string0.0053string[]0.0043
+)Punctuation
+.Punctuation
+lengthName.Otherany0.8885number0.1093string0.0009void0.0004complex0.0003
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+iterateName.Otherany0.9020void0.0403any[]0.0096number0.0093complex0.0055
+(Punctuation
+listName.Otherany0.7009any[]0.0447List0.0161number0.0155complex0.0136
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.7893number0.0322string0.0135boolean0.0123void0.0067
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.7163number0.0671{}0.0142string0.0112any[]0.0097
+,Punctuation
+ Text.Whitespace
+iteratorHandlerName.Otherany0.7058number0.1981void0.0308boolean0.0182string0.0166
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// done hereComment.Single
+\n    Text.Whitespace
+callbackName.Otherany0.7844Function0.0477void0.0467number0.0122boolean0.0060
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.7724number0.0175complex0.0100IState0.0065void0.0056
+.Punctuation
+resultsName.Otherany0.8649any[]0.0208complex0.0177string0.0163number0.0118
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+terminatorName.Otherany0.7207boolean0.0995void0.0461Promise<void>0.0310complex0.0240
+.Punctuation
+bindName.Otherany0.9796T0.0024void0.0016complex0.0016Promise<any>0.0015
+(Punctuation
+stateName.Otherany0.7668number0.0666string0.0446complex0.0153boolean0.0133
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8076Function0.0458void0.0346boolean0.0280number0.0196
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/*\n * -- Sort methods\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * sort helper to sort array elements in ascending order\n *\n * @param   {mixed} a - an item to compare\n * @param   {mixed} b - an item to compare\n * @returns {number} - comparison result\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+ascendingName.Otherboolean0.8312any0.0675number0.0302string0.0262complex0.0028
+(Punctuation
+aName.Otherany0.5746number0.2737string0.0760boolean0.0141Date0.0049
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.6859number0.1508string0.0768boolean0.0319Date0.0023
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aName.Otherany0.5381number0.4165string0.0268boolean0.0055{}0.0011
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+bName.Otherany0.8021number0.1602boolean0.0146string0.0112{}0.0012
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+aKeyword.Typeany0.5669number0.4179string0.0103boolean0.0012{}0.0006
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+bName.Otherany0.5136number0.4605string0.0116boolean0.0070Date0.0010
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * sort helper to sort array elements in descending order\n *\n * @param   {mixed} a - an item to compare\n * @param   {mixed} b - an item to compare\n * @returns {number} - comparison result\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+descendingName.Otherboolean0.8587any0.0736number0.0442string0.0136Promise<boolean>0.0008
+(Punctuation
+aName.Othernumber0.4887any0.4123string0.0544boolean0.0123Date0.0045
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.5735number0.2665string0.0809boolean0.0387Date0.0039
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+ascendingName.Otherany0.5700number0.1900boolean0.1523string0.0170Promise<any>0.0083
+(Punctuation
+aName.Othernumber0.4626any0.4607string0.0502boolean0.0081Date0.0020
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.4929number0.3370string0.0872boolean0.0398Date0.0027
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

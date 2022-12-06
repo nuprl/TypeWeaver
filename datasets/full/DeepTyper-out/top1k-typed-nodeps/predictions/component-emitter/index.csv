@@ -1,0 +1,846 @@
+Text
+/**\n * Expose `Emitter`.\n */Comment.Multiline
+\n\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+moduleName.Other
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+EmitterName.Otherany0.7622void0.0184Function0.0111string0.0110complex0.0105
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Initialize a new `Emitter`.\n *\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+EmitterName.Otherany0.6482void0.0617string0.0273complex0.0188Function0.0149
+(Punctuation
+objName.Otherany0.8587string0.0329object0.0191Object0.0140{}0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objName.Otherany0.8517string0.0436object0.0178Object0.0176{}0.0132
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+mixinName.Otherany0.9679string0.0068complex0.0045Function0.0043boolean0.0030
+(Punctuation
+objName.Otherany0.6594{}0.1320Object0.0493object0.0411string0.0377
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Mixin the emitter properties.\n *\n * @param {Object} obj\n * @return {Object}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mixinName.Otherany0.9197complex0.0234void0.0107boolean0.0088Function0.0061
+(Punctuation
+objName.Otherany0.7693Object0.0455object0.0390string0.0209{}0.0175
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.9697any0.0246complex0.0033number0.0010string[]0.0003
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+EmitterName.Otherany0.8006complex0.0493Function0.0173{}0.0127void0.0125
+.Punctuation
+prototypeName.Otherany0.5256Object0.0768Function0.0344{}0.0244object0.0165
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+objName.Otherany0.6037{}0.2053Object0.0726object0.0303complex0.0198
+[Punctuation
+keyName.Otherstring0.9706any0.0252complex0.0014number0.0011void0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+EmitterName.Otherany0.9515complex0.0078Function0.0043void0.0038Object0.0036
+.Punctuation
+prototypeName.Otherany0.7769Object0.0678{}0.0205object0.0089Function0.0082
+[Punctuation
+keyName.Otherstring0.9793any0.0180number0.0012complex0.0006void0.0001
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objName.Otherany0.7037{}0.1566object0.0443Object0.0353string0.0135
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Listen on the given `event` with `fn`.\n *\n * @param {String} event\n * @param {Function} fn\n * @return {Emitter}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.7889void0.0952complex0.0109Function0.0096Promise<void>0.0074
+.Punctuation
+prototypeName.Otherany0.7596Object0.0304Function0.0136void0.0087{}0.0054
+.Punctuation
+onName.Otherany0.8436void0.0717complex0.0108Function0.0070Object0.0044
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+EmitterName.Otherany0.7521void0.0778complex0.0173Function0.0138T0.0096
+.Punctuation
+prototypeName.Otherany0.6221Object0.0675Function0.0100void0.0072{}0.0068
+.Punctuation
+addEventListenerName.Otherany0.8353void0.1182complex0.0333string0.0027number0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherstring0.6944any0.2810Event0.0047number0.0038Function0.0015
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.6800Function0.2430void0.0359string0.0176boolean0.0061
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8623string0.0223{}0.0100complex0.0083boolean0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.7492{}0.0390string0.0278complex0.0164Object0.0080
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.7815string[]0.0440complex0.0144Object0.0091{}0.0079
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.8379any0.1458number0.0077string[]0.0014Event0.0007
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8371string[]0.0298complex0.0117Object0.0077{}0.0074
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.7299any0.2365number0.0146Event0.0020{}0.0013
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+pushName.Otherany0.7508number0.2378void0.0042string0.0023boolean0.0010
+(Punctuation
+fnName.Otherany0.6898Function0.1532void0.1229string0.0121number0.0047
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Adds an `event` listener that will be invoked a single\n * time then automatically removed.\n *\n * @param {String} event\n * @param {Function} fn\n * @return {Emitter}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.8044void0.0605Function0.0202Promise<void>0.0089this0.0049
+.Punctuation
+prototypeName.Otherany0.7557Function0.0151void0.0067Object0.0067Context0.0045
+.Punctuation
+onceName.Otherany0.9001void0.0640complex0.0042Function0.0039number0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherstring0.5387any0.4162number0.0065Event0.0064Function0.0042
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.5769Function0.3659void0.0292boolean0.0063string0.0050
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onName.Othervoid0.8591any0.0426complex0.0249Function0.0180boolean0.0107
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+offName.Otherany0.5440void0.3849complex0.0330boolean0.0104Function0.0085
+(Punctuation
+eventName.Otherstring0.7830any0.1533Event0.0089number0.0069Function0.0046
+,Punctuation
+ Text.Whitespace
+onName.Othervoid0.4728any0.1488Function0.0650boolean0.0352complex0.0322
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+fnName.OtherFunction0.4305any0.3017void0.2382boolean0.0040complex0.0035
+.Punctuation
+applyName.Otherany0.9371void0.0431Function0.0125complex0.0015number0.0012
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9935any[]0.0023any0.0007string[]0.0004any[][]0.0001
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+onName.Otherany0.4036void0.0511complex0.0440Function0.0271this0.0229
+.Punctuation
+fnName.Otherany0.5865Function0.2108void0.1639string0.0073boolean0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fnName.OtherFunction0.3886any0.3614void0.1959number0.0080complex0.0073
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+onName.Othervoid0.4136any0.1300complex0.0693Function0.0296EventEmitter0.0202
+(Punctuation
+eventName.Otherstring0.6190any0.3061number0.0142Event0.0073void0.0027
+,Punctuation
+ Text.Whitespace
+onName.Otherany0.2951void0.2498Function0.0640complex0.0543boolean0.0344
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Remove the given callback for `event` or all\n * registered callbacks.\n *\n * @param {String} event\n * @param {Function} fn\n * @return {Emitter}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.8506void0.0375Function0.0143complex0.0129Promise<void>0.0068
+.Punctuation
+prototypeName.Otherany0.7407Function0.0264Object0.0165void0.0141any[]0.0088
+.Punctuation
+offName.Otherany0.9785void0.0112complex0.0033Function0.0025boolean0.0009
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+EmitterName.Otherany0.7039void0.1906Function0.0213complex0.0127Promise<void>0.0040
+.Punctuation
+prototypeName.Otherany0.5919Function0.0225void0.0203Object0.0177{}0.0110
+.Punctuation
+removeListenerName.Otherany0.9377void0.0463complex0.0038number0.0026string0.0019
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+EmitterName.Otherany0.6115void0.2041Function0.0258complex0.0160Promise<void>0.0046
+.Punctuation
+prototypeName.Otherany0.5637Object0.0258Function0.0136void0.0086Observable<any>0.0080
+.Punctuation
+removeAllListenersName.Otherany0.9546number0.0275void0.0042string0.0018complex0.0009
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+EmitterName.Otherany0.8424void0.0511Function0.0092complex0.0059number0.0035
+.Punctuation
+prototypeName.Otherany0.5569Object0.0635any[]0.0139Function0.0137void0.0099
+.Punctuation
+removeEventListenerName.Otherany0.9145complex0.0470void0.0304number0.0020string0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherstring0.5519any0.4283Event0.0038number0.0035Function0.0012
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.7263Function0.1935void0.0419string0.0149number0.0065
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8466string0.0292{}0.0095complex0.0081void0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.7367{}0.0323string0.0308complex0.0133Object0.0067
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// allComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+0Literal.Number.Float
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9206any[]0.0307any0.0170string[]0.0158string0.0007
+.Punctuation
+lengthName.Othernumber0.8771any0.1197string0.0018void0.0005boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.5483{}0.3271complex0.0133boolean0.0057string0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// specific eventComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callbacksName.Otherany0.9493any[]0.0119string[]0.0033string0.0021complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8603string[]0.0276complex0.0115{}0.0071Object0.0063
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.7233any0.2421number0.0201complex0.0019string[]0.0013
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbacksName.Otherany0.8882any[]0.0236complex0.0059string0.0045{}0.0035
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n  Text.Whitespace
+// remove all handlersComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+1Literal.Number.Float
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9183any[]0.0328string[]0.0218any0.0070string0.0006
+.Punctuation
+lengthName.Othernumber0.9383any0.0589string0.0016void0.0003boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8668string[]0.0135complex0.0082Object0.0077{}0.0073
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.7474any0.2207number0.0195complex0.0015{}0.0014
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// remove specific handlerComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cbName.Otherany0.8498void0.0638Function0.0596number0.0034boolean0.0026
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9811any0.0178string0.0004void0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9590any0.0390string0.0008void0.0003boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+callbacksName.Otherany0.9016any[]0.0268complex0.0150string[]0.0068string0.0032
+.Punctuation
+lengthName.Othernumber0.5782any0.4190string0.0012void0.0005complex0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.8744any0.1235string0.0009void0.0005boolean0.0003
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+cbName.Otherany0.9043Function0.0445void0.0263number0.0090string0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksName.Otherany0.8602any[]0.0462complex0.0094string[]0.0065Function0.0029
+[Punctuation
+iName.Othernumber0.9480any0.0485string0.0024void0.0003complex0.0002
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cbName.Otherany0.8714void0.0542Function0.0368boolean0.0084complex0.0074
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fnName.Otherany0.7531Function0.1528void0.0515number0.0107boolean0.0081
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+cbName.Otherany0.8675Function0.0576void0.0399complex0.0086boolean0.0080
+.Punctuation
+fnName.Otherany0.8483void0.0638Function0.0434number0.0170boolean0.0114
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fnName.Otherany0.7398Function0.1664void0.0372number0.0223string0.0158
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbacksName.Otherany0.8126any[]0.1036complex0.0210string[]0.0123Function[]0.0023
+.Punctuation
+spliceName.Otherany0.5709complex0.4191void0.0036any[]0.0018number0.0010
+(Punctuation
+iName.Othernumber0.9318any0.0646string0.0024void0.0004boolean0.0002
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+breakKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Remove event specific arrays for event types that noComment.Single
+\n  Text.Whitespace
+// one is subscribed for to avoid memory leak.Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbacksName.Otherany0.9475any[]0.0183string[]0.0068complex0.0066string0.0021
+.Punctuation
+lengthName.Otherany0.6153number0.3820string0.0011complex0.0006void0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.8134string[]0.0303{}0.0168complex0.0141Object0.0116
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.7275any0.2275number0.0289{}0.0022complex0.0022
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Emit `event` with the given args.\n *\n * @param {String} event\n * @param {Mixed} ...\n * @return {Emitter}\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.8532void0.0482Promise<void>0.0079Function0.0077complex0.0049
+.Punctuation
+prototypeName.Otherany0.7108Object0.0120void0.0117Function0.0090Context0.0057
+.Punctuation
+emitName.Otherany0.8617void0.1095complex0.0127Promise<void>0.0029Promise<any>0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherany0.6666string0.2605Event0.0193number0.0060{}0.0045
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.7661{}0.0336string0.0287complex0.0117Object0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.5703{}0.1126string0.0320complex0.0187Object0.0101
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+argsName.Otherany[]0.4441any0.3018string[]0.2016complex0.0049string0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7214string0.0989string[]0.0669complex0.0230any[]0.0223
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9982any0.0001any[]0.0001T[]0.0000FunctionConstructor0.0000
+(Punctuation
+argumentsName.OtherIArguments0.9624any[]0.0199string[]0.0056any0.0009any[][]0.0004
+.Punctuation
+lengthName.Othernumber0.9679any0.0304string0.0007void0.0002complex0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+callbacksName.Otherany0.7354any[]0.1681string[]0.0228T[]0.0050complex0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.6961string[]0.0423complex0.0318Object0.0248any[]0.0197
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.6626any0.2612number0.0437Event0.0028complex0.0026
+]Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9894any0.0097string0.0003boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9642any0.0341string0.0006void0.0003boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9250any[]0.0456string[]0.0097any0.0046any[][]0.0008
+.Punctuation
+lengthName.Othernumber0.9474any0.0505string0.0009void0.0005complex0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9372any0.0612string0.0008void0.0003boolean0.0002
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+argsName.Otherany[]0.6940any0.2328string[]0.0341IArguments0.0128complex0.0021
+[Punctuation
+iName.Othernumber0.8429any0.1538string0.0023complex0.0002void0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9825any[]0.0098any0.0017string[]0.0011any[][]0.0002
+[Punctuation
+iName.Othernumber0.9686any0.0263string0.0041void0.0002complex0.0002
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbacksName.Otherany0.7375any[]0.1282complex0.0198string[]0.0124number[]0.0104
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbacksName.Otherany0.6497any[]0.2221string[]0.0207complex0.0104number[]0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksName.Otherany0.7120any[]0.1905complex0.0154string[]0.0140number[]0.0062
+.Punctuation
+sliceName.Otherany0.5520any[]0.1972string[]0.0621number[]0.0325complex0.0306
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9900any0.0092string0.0003complex0.0001void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+lenName.Othernumber0.8430any0.1526string0.0026boolean0.0004void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksName.Otherany0.7699any[]0.1622string[]0.0095complex0.0095string0.0059
+.Punctuation
+lengthName.Othernumber0.7987any0.1987string0.0012complex0.0004void0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.8504any0.1476string0.0008void0.0005complex0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lenName.Othernumber0.6827any0.3143string0.0012complex0.0004void0.0003
+;Punctuation
+ Text.Whitespace
+++Operator
+iName.Othernumber0.9726any0.0260string0.0007void0.0002boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbacksName.Otherany0.6043any[]0.1279T[]0.0138Function[]0.0127{}0.0081
+[Punctuation
+iName.Othernumber0.9526any0.0435string0.0027void0.0004boolean0.0002
+]Punctuation
+.Punctuation
+applyName.Otherany0.9903void0.0050number0.0017Function0.0008complex0.0005
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.7870any0.1141IArguments0.0488string[]0.0253{}0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Return array of callbacks for `event`.\n *\n * @param {String} event\n * @return {Array}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.7769void0.0314Function0.0082Promise<void>0.0061this0.0055
+.Punctuation
+prototypeName.Otherany0.4434Object0.0232any[]0.0123Function0.0093Observable<any>0.0067
+.Punctuation
+listenersName.Otherany0.8189void0.1209complex0.0133boolean0.0092string0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherany0.5247string0.4012Event0.0229number0.0046{}0.0046
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.6929string0.0544{}0.0207complex0.0123Object0.0113
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.4940{}0.0720string0.0399complex0.0184Object0.0132
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_callbacksName.Otherany0.6530string[]0.0383{}0.0148complex0.0135Object0.0110
+[Punctuation
+'$'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+eventName.Otherstring0.8103any0.1587number0.0121Event0.0016string[]0.0016
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Check if this emitter has `event` handlers.\n *\n * @param {String} event\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+EmitterName.Otherany0.8315void0.0550complex0.0083Function0.0078Promise<void>0.0047
+.Punctuation
+prototypeName.Otherany0.4649Object0.0162Function0.0129void0.0103Observable<any>0.0100
+.Punctuation
+hasListenersName.Otherboolean0.5467any0.4227void0.0101string0.0042complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+eventName.Otherany0.5164string0.4005number0.0220Event0.0154Error0.0030
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+listenersName.Otherany0.5672complex0.1358void0.1337boolean0.0738number0.0074
+(Punctuation
+eventName.Otherany0.5917string0.2958Event0.0250number0.0051DragEvent0.0047
+)Punctuation
+.Punctuation
+lengthName.Otherany0.5363number0.4593string0.0018void0.0007complex0.0004
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

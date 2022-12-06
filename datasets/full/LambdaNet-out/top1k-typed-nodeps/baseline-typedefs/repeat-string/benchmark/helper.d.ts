@@ -1,0 +1,13 @@
+declare var fs: string;
+declare var path: string;
+declare var repeat: Function;
+declare var isObject: Function;
+declare var text: Function;
+declare var table: any[];
+declare function bench(): boolean;
+declare function parseSection(str: string): string;
+declare function createLines(tok: object, lines: any[]): void;
+declare function format(tok: HTMLElement, max: string, diff: string): any[];
+declare function parseStats(line: string): object;
+declare function values(obj: object): any[];
+declare function bar(tok: Promise, longest: number): boolean;

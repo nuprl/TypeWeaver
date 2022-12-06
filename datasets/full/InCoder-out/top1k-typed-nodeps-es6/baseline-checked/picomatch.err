@@ -1,0 +1,101 @@
+bench/first-match-minimatch.ts(6,31): error TS2339: Property 'test' does not exist on type 'false | RegExp'.
+  Property 'test' does not exist on type 'false'.
+bench/glob-parent.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/glob-parent.ts(4,21): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/glob-parent.ts(5,25): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+bench/glob-parent.ts(7,20): error TS2307: Cannot find module 'glob-parent' or its corresponding type declarations.
+bench/glob-parent.ts(18,40): error TS2304: Cannot find name 'BenchOptions'.
+bench/glob-parent.ts(35,21): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(46,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(47,32): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(51,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(52,32): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(56,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(57,32): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(61,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(62,32): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(66,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(71,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(76,1): error TS2554: Expected 2 arguments, but got 1.
+bench/glob-parent.ts(81,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(4,21): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/index.ts(5,22): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+bench/index.ts(35,21): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(46,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(51,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(56,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(61,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(66,1): error TS2554: Expected 2 arguments, but got 1.
+bench/index.ts(71,1): error TS2554: Expected 2 arguments, but got 1.
+examples/match.ts(22,39): error TS2339: Property 'normalize' does not exist on type '{}'.
+examples/match.ts(26,27): error TS2339: Property 'onMatch' does not exist on type '{}'.
+examples/match.ts(26,45): error TS2339: Property 'onMatch' does not exist on type '{}'.
+examples/windows.ts(25,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+examples/windows.ts(35,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+lib/parse.ts(4,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/parse.ts(144,22): error TS2339: Property 'peek' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
+lib/parse.ts(145,25): error TS2339: Property 'advance' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
+lib/parse.ts(264,15): error TS2339: Property 'negatedExtglob' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
+lib/parse.ts(308,9): error TS2367: This condition will always return 'false' since the types 'false' and 'true' have no overlap.
+lib/parse.ts(392,16): error TS2339: Property 'posix' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(517,16): error TS2339: Property 'posix' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(802,51): error TS2339: Property 'star' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(804,12): error TS2339: Property 'star' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(825,26): error TS2339: Property 'prev' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(989,17): error TS2339: Property 'suffix' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/parse.ts(990,31): error TS2339: Property 'suffix' does not exist on type '{ type: string; value: string; output: any; }'.
+lib/picomatch.ts(6,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/picomatch.ts(63,5): error TS2322: Type '((str: any) => any) | { (input: any, returnObject?: boolean): boolean | { glob: any; state: any; regex: any; posix: any; input: any; output: any; match: boolean; isMatch: boolean; }; state: any; }' is not assignable to type '() => boolean'.
+  Type '(str: any) => any' is not assignable to type '() => boolean'.
+lib/picomatch.ts(79,19): error TS2554: Expected 0 arguments, but got 1.
+lib/picomatch.ts(117,44): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/picomatch.ts(117,50): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/picomatch.ts(261,11): error TS2339: Property 'state' does not exist on type 'RegExp'.
+lib/picomatch.ts(293,15): error TS2339: Property 'fastpaths' does not exist on type '{}'.
+lib/picomatch.ts(294,12): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
+lib/picomatch.ts(297,15): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
+lib/picomatch.ts(298,5): error TS2741: Property 'fastpaths' is missing in type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }' but required in type '{ negated: boolean; fastpaths: boolean; }'.
+lib/scan.ts(3,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/scan.ts(6,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_ASTERISK'. Did you mean to use 'import CHAR_ASTERISK from "./constants"' instead?
+lib/scan.ts(7,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_AT'. Did you mean to use 'import CHAR_AT from "./constants"' instead?
+lib/scan.ts(8,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_BACKWARD_SLASH'. Did you mean to use 'import CHAR_BACKWARD_SLASH from "./constants"' instead?
+lib/scan.ts(9,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_COMMA'. Did you mean to use 'import CHAR_COMMA from "./constants"' instead?
+lib/scan.ts(10,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_DOT'. Did you mean to use 'import CHAR_DOT from "./constants"' instead?
+lib/scan.ts(11,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_EXCLAMATION_MARK'. Did you mean to use 'import CHAR_EXCLAMATION_MARK from "./constants"' instead?
+lib/scan.ts(12,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_FORWARD_SLASH'. Did you mean to use 'import CHAR_FORWARD_SLASH from "./constants"' instead?
+lib/scan.ts(13,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_CURLY_BRACE'. Did you mean to use 'import CHAR_LEFT_CURLY_BRACE from "./constants"' instead?
+lib/scan.ts(14,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_PARENTHESES'. Did you mean to use 'import CHAR_LEFT_PARENTHESES from "./constants"' instead?
+lib/scan.ts(15,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_LEFT_SQUARE_BRACKET'. Did you mean to use 'import CHAR_LEFT_SQUARE_BRACKET from "./constants"' instead?
+lib/scan.ts(16,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_PLUS'. Did you mean to use 'import CHAR_PLUS from "./constants"' instead?
+lib/scan.ts(17,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_QUESTION_MARK'. Did you mean to use 'import CHAR_QUESTION_MARK from "./constants"' instead?
+lib/scan.ts(18,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_CURLY_BRACE'. Did you mean to use 'import CHAR_RIGHT_CURLY_BRACE from "./constants"' instead?
+lib/scan.ts(19,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_PARENTHESES'. Did you mean to use 'import CHAR_RIGHT_PARENTHESES from "./constants"' instead?
+lib/scan.ts(20,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_RIGHT_SQUARE_BRACKET'. Did you mean to use 'import CHAR_RIGHT_SQUARE_BRACKET from "./constants"' instead?
+lib/scan.ts(90,27): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(104,31): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(115,27): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(127,27): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(143,29): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(181,27): error TS2339: Property 'isExtglob' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(190,35): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(208,54): error TS2339: Property 'isGlobstar' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(231,31): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(237,29): error TS2339: Property 'isBracket' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(252,23): error TS2339: Property 'negated' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(263,33): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(344,11): error TS2339: Property 'maxDepth' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/scan.ts(348,11): error TS2339: Property 'tokens' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/scan.ts(366,15): error TS2339: Property 'maxDepth' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/scan.ts(381,15): error TS2339: Property 'maxDepth' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/scan.ts(385,11): error TS2339: Property 'slashes' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/scan.ts(386,11): error TS2339: Property 'parts' does not exist on type '{ prefix: string; input: any; start: number; base: any; glob: string; isBrace: boolean; isBracket: boolean; isGlob: boolean; isExtglob: boolean; isGlobstar: boolean; negated: boolean; negatedExtglob: boolean; }'.
+lib/utils.ts(7,3): error TS2614: Module '"./constants"' has no exported member 'REGEX_BACKSLASH'. Did you mean to use 'import REGEX_BACKSLASH from "./constants"' instead?
+lib/utils.ts(8,3): error TS2614: Module '"./constants"' has no exported member 'REGEX_REMOVE_BACKSLASH'. Did you mean to use 'import REGEX_REMOVE_BACKSLASH from "./constants"' instead?
+lib/utils.ts(9,3): error TS2614: Module '"./constants"' has no exported member 'REGEX_SPECIAL_CHARS'. Did you mean to use 'import REGEX_SPECIAL_CHARS from "./constants"' instead?
+lib/utils.ts(10,3): error TS2614: Module '"./constants"' has no exported member 'REGEX_SPECIAL_CHARS_GLOBAL'. Did you mean to use 'import REGEX_SPECIAL_CHARS_GLOBAL from "./constants"' instead?
+lib/utils.ts(51,11): error TS2339: Property 'prefix' does not exist on type '{}'.
+lib/utils.ts(57,27): error TS2339: Property 'contains' does not exist on type '{}'.
+lib/utils.ts(58,26): error TS2339: Property 'contains' does not exist on type '{}'.
+lib/utils.ts(61,13): error TS2339: Property 'negated' does not exist on type '{}'.
+

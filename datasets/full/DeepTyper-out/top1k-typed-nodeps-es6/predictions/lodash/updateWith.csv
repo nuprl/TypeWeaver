@@ -1,0 +1,85 @@
+importKeyword
+ Text.Whitespace
+baseUpdateName.Otherany0.4412complex0.1133string0.0613boolean0.0535void0.0303
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseUpdate.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `update` except that it accepts `customizer` which is\n * invoked to produce the objects of `path`. If `customizer` returns `undefined`\n * path creation is handled by the method instead. The `customizer` is invoked\n * with three arguments: (nsValue, key, nsObject).\n *\n * **Note:** This method mutates `object`.\n *\n * @since 4.6.0\n * @category Object\n * @param {Object} object The object to modify.\n * @param {Array|string} path The path of the property to set.\n * @param {Function} updater The function to produce the updated value.\n * @param {Function} [customizer] The function to customize assigned values.\n * @returns {Object} Returns `object`.\n * @example\n *\n * const object = {}\n *\n * updateWith(object, '[0][1]', () => 'a', Object)\n * // => { '0': { '1': 'a' } }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+updateWithName.Otherany0.3770string0.2311boolean0.1039complex0.0908void0.0171
+(Punctuation
+objectName.Otherany0.7387Object0.0808string0.0522object0.0493complex0.0111
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.8642any0.1115Path0.0068string[]0.0015number0.0011
+,Punctuation
+ Text.Whitespace
+updaterName.Otherany0.9009string0.0135boolean0.0122number0.0105object0.0076
+,Punctuation
+ Text.Whitespace
+customizerName.Otherany0.7933boolean0.1159string0.0546number0.0091void0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+customizerName.Otherany0.7610string0.1333boolean0.0685number0.0091complex0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+customizerName.Otherany0.8756string0.0714complex0.0198boolean0.0101number0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+customizerName.Otherstring0.6727any0.2715boolean0.0168number0.0141complex0.0047
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Type
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.6469Object0.1375complex0.0593object0.0532string0.0353
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+objectName.Otherany0.4279complex0.2074Object0.1061object0.0676string0.0465
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseUpdateKeyword.Typeany0.7441complex0.1241void0.0475string0.0347boolean0.0065
+(Punctuation
+objectName.Otherany0.8076Object0.0583object0.0499complex0.0242string0.0187
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.8533any0.1223Path0.0045complex0.0033string[]0.0026
+,Punctuation
+ Text.Whitespace
+updaterName.Otherany0.6924void0.0637number0.0417boolean0.0121Object0.0117
+,Punctuation
+ Text.Whitespace
+customizerName.Otherany0.6346void0.1359boolean0.0438number0.0282string0.0267
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+updateWithName.Otherany0.4260void0.0434string0.0260complex0.0245boolean0.0169
+\nText.Whitespace

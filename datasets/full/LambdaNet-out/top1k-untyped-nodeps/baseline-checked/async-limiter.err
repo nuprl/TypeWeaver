@@ -1,0 +1,40 @@
+example/index.ts(10,22): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+example/index.ts(13,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+example/index.ts(14,22): error TS2345: Argument of type '(resolve: number) => NodeJS.Timeout' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'number'.
+example/index.ts(14,54): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '() => void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'TimerHandler'.
+example/index.ts(18,3): error TS2322: Type 'number' is not assignable to type 'string'.
+example/index.ts(21,10): error TS2393: Duplicate function implementation.
+example/index.ts(28,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+example/index.ts(28,22): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+example/index.ts(30,3): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+example/index.ts(35,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+example/index.ts(35,24): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+example/index.ts(37,5): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+example/index.ts(40,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+example/index.ts(40,24): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+example/index.ts(42,5): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+example/index.ts(47,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+example/index.ts(47,22): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+example/index.ts(49,3): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+example/index.ts(53,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+example/index.ts(53,22): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+example/index.ts(55,3): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+example/index.ts(58,3): error TS2339: Property 'onDone' does not exist on type 'any[]'.
+index.ts(5,12): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(9,30): error TS2339: Property 'concurrency' does not exist on type 'object'.
+index.ts(19,10): error TS2393: Duplicate function implementation.
+

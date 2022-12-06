@@ -1,0 +1,63 @@
+karma.conf.ts(2,9): error TS2339: Property 'set' does not exist on type 'object'.
+karma.conf.ts(27,20): error TS2339: Property 'LOG_DEBUG' does not exist on type 'object'.
+src/browser.ts(119,73): error TS2339: Property 'type' does not exist on type 'Process'.
+src/browser.ts(119,111): error TS2339: Property '__nwjs' does not exist on type 'Process'.
+src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exist on type 'CSSStyleDeclaration'. Did you mean 'webkitAppearance'?
+src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
+src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
+src/browser.ts(159,7): error TS2339: Property 'splice' does not exist on type 'object'.
+src/browser.ts(167,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+src/browser.ts(171,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+src/browser.ts(178,7): error TS2339: Property 'splice' does not exist on type 'object'.
+src/browser.ts(230,2): error TS2322: Type 'string' is not assignable to type 'object'.
+src/browser.ts(248,3): error TS2322: Type 'Storage' is not assignable to type 'string'.
+src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(68,15): error TS2339: Property 'enabled' does not exist on type '{ (...args: any[]): void; namespace: string; useColors: any; color: string; extend: (namespace: string, delimiter: string) => HTMLElement; destroy: () => void; }'.
+src/common.ts(72,10): error TS2740: Type '{ (...args: any[]): void; namespace: string; useColors: any; color: string; extend: (namespace: string, delimiter: string) => HTMLElement; destroy: () => void; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/common.ts(77,9): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
+src/common.ts(78,9): error TS2339: Property 'prev' does not exist on type 'HTMLElement'.
+src/common.ts(79,9): error TS2339: Property 'curr' does not exist on type 'HTMLElement'.
+src/common.ts(93,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+src/common.ts(110,16): error TS2551: Property 'formatArgs' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'. Did you mean 'formatters'?
+src/common.ts(112,31): error TS2339: Property 'log' does not exist on type 'HTMLElement'.
+src/common.ts(112,50): error TS2339: Property 'log' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(113,10): error TS2339: Property 'apply' does not exist on type 'object'.
+src/common.ts(117,33): error TS2339: Property 'useColors' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(129,41): error TS2339: Property 'namespaces' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(130,36): error TS2339: Property 'namespaces' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(131,6): error TS2322: Type 'boolean' is not assignable to type 'number'.
+src/common.ts(142,26): error TS2339: Property 'init' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(143,16): error TS2339: Property 'init' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(146,3): error TS2322: Type '{ (...args: any[]): void; namespace: string; useColors: any; color: string; extend: (namespace: string, delimiter: string) => HTMLElement; destroy: () => void; }' is not assignable to type 'string'.
+src/common.ts(150,9): error TS2322: Type 'string' is not assignable to type 'object'.
+src/common.ts(151,12): error TS2339: Property 'log' does not exist on type 'object'.
+src/common.ts(152,3): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/common.ts(163,15): error TS2339: Property 'save' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(164,15): error TS2339: Property 'namespaces' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(219,15): error TS2322: Type 'number' is not assignable to type 'string'.
+src/common.ts(219,47): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+src/common.ts(225,15): error TS2322: Type 'number' is not assignable to type 'string'.
+src/common.ts(225,47): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+src/common.ts(256,4): error TS2322: Type 'string' is not assignable to type 'any[]'.
+src/common.ts(258,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+src/common.ts(269,33): error TS2339: Property 'load' does not exist on type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }'.
+src/common.ts(271,2): error TS2740: Type '{ (namespace: string): string; debug: ...; default: ...; coerce: (val: object) => any[]; disable: () => string; enable: (namespaces: string) => void; enabled: (name: string) => boolean; humanize: any; ... 4 more ...; selectColor: (namespace: string) => string; }' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+src/index.ts(6,47): error TS2339: Property 'type' does not exist on type 'Process'.
+src/index.ts(6,78): error TS2339: Property 'browser' does not exist on type 'Process'.
+src/index.ts(6,106): error TS2339: Property '__nwjs' does not exist on type 'Process'.
+src/index.ts(7,5): error TS1258: A default export must be at the top level of a file or module declaration.
+src/index.ts(9,5): error TS1258: A default export must be at the top level of a file or module declaration.
+src/node.ts(35,38): error TS2339: Property 'stderr' does not exist on type 'string'.
+src/node.ts(137,6): error TS2322: Type 'string' is not assignable to type 'boolean'.
+src/node.ts(138,38): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+src/node.ts(140,47): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+src/node.ts(142,13): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+src/node.ts(145,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+src/node.ts(173,43): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+src/node.ts(195,2): error TS2322: Type 'boolean' is not assignable to type 'number'.
+src/node.ts(206,3): error TS2322: Type 'Function' is not assignable to type 'string'.
+src/node.ts(222,2): error TS2322: Type 'string' is not assignable to type 'object'.
+src/node.ts(233,8): error TS2339: Property 'inspectOpts' does not exist on type 'object'.
+src/node.ts(237,9): error TS2339: Property 'inspectOpts' does not exist on type 'object'.
+

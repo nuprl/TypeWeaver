@@ -1,0 +1,20 @@
+declare const assert: any;
+declare const path: any;
+declare const fs: any;
+declare let glob: any;
+declare const defaultGlobOpts: {
+    nosort: boolean;
+    silent: boolean;
+};
+declare let timeout: number;
+declare const isWindows: boolean;
+declare const defaults: (options: any) => void;
+declare const rimraf: any;
+declare const rimraf_: (p: any, options: any, cb: any) => void;
+declare const fixWinEPERM: (p: any, options: any, er: any, cb: any) => void;
+declare const fixWinEPERMSync: (p: any, options: any, er: any) => void;
+declare const rmdir: (p: any, options: any, originalEr: any, cb: any) => void;
+declare const rmkids: (p: any, options: any, cb: any) => void;
+declare const rimrafSync: (p: any, options: any) => void;
+declare const rmdirSync: (p: any, options: any, originalEr: any) => void;
+declare const rmkidsSync: (p: any, options: any) => any;

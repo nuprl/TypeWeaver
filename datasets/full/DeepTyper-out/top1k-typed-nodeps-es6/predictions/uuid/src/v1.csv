@@ -1,0 +1,903 @@
+importKeyword
+ Text.Whitespace
+rngName.Otherany0.0884T[]0.0461complex0.0145void0.0105IterableX<number>0.0087
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./rng.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+unsafeStringifyName.Otherany0.5246number0.2675complex0.0432boolean0.0396string0.0235
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./stringify.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// **`v1()` - Generate time-based UUID**Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Inspired by https://github.com/LiosK/UUID.jsComment.Single
+\nText.Whitespace
+// and http://docs.python.org/library/uuid.htmlComment.Single
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_nodeIdName.Othernumber0.9125any0.0351string0.0108boolean0.0093void0.0014
+;Punctuation
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_clockseqName.Othernumber0.9197any0.0368string0.0073boolean0.0068void0.0011
+;Punctuation
+\n\nText.Whitespace
+// Previous uuid creation timeComment.Single
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_lastMSecsName.Othernumber0.9964any0.0015boolean0.0005string0.0004number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_lastNSecsName.Othernumber0.9955any0.0021boolean0.0007string0.0005number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+// See https://github.com/uuidjs/uuid for API detailsComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+v1Name.Othernumber0.5721any0.1201boolean0.0753string0.0332void0.0229
+(Punctuation
+optionsName.Otherany0.0818Options0.0501RequestOptions0.0087number0.0054ConnectionOptions0.0046
+,Punctuation
+ Text.Whitespace
+bufName.Otherany0.1964number0.1312Buffer0.1075Uint8Array0.0348ArrayBuffer0.0295
+,Punctuation
+ Text.Whitespace
+offsetName.Othernumber0.9428any0.0459string0.0021complex0.0009Buffer0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9916any0.0074boolean0.0004string0.0003void0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+bufName.Otherany0.4227number0.1435Buffer0.0791ArrayBuffer0.0272string0.0162
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+offsetName.Othernumber0.9093any0.0774string0.0035complex0.0015Buffer0.0009
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bName.Otherany0.6126number[]0.0852number0.0700complex0.0281string0.0248
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bufName.Otherany0.3687number0.1043complex0.0477Buffer0.0447ArrayBuffer0.0270
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+newOperator.Wordany0.6913number[]0.0330complex0.0211string0.0131any[]0.0093
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9971any0.0001number[]0.0001ObjectConstructor0.0001T[]0.0001
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+optionsName.Otherany0.1971Options0.0283{}0.0206number0.0090T0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3051Options0.0307{}0.0233number0.0143complex0.0104
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+nodeName.Otherany0.6010number0.0433complex0.0273Node0.0258boolean0.0209
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4536complex0.0423Options0.0256number0.0119Config0.0065
+.Punctuation
+nodeName.Otherany0.6632Node0.0345number0.0314complex0.0277boolean0.0190
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+_nodeIdName.Othernumber0.5394any0.2209boolean0.1998string0.0113complex0.0045
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+clockseqName.Othernumber0.4755boolean0.2905any0.2073string0.0140void0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.5614Options0.0356complex0.0251number0.0127T0.0050
+.Punctuation
+clockseqName.Othernumber0.5354any0.3993string0.0207boolean0.0178complex0.0066
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+options.clockseqName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+_clockseqKeyword.Typenumber0.6155any0.2821boolean0.0387string0.0297void0.0045
+;Punctuation
+\n\n  Text.Whitespace
+// node and clockseq need to be initialized to random values if they're notComment.Single
+\n  Text.Whitespace
+// specified.  We do this lazily to minimize issues related to insufficientComment.Single
+\n  Text.Whitespace
+// system entropy.  See #189Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.7915complex0.0333Node0.0216number0.0173Element0.0075
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+clockseqName.Othernumber0.5241any0.4304boolean0.0195string0.0110complex0.0025
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+seedBytesName.Othernumber0.7535any0.1958boolean0.0350string0.0036complex0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4275Options0.0399complex0.0261number0.0187Config0.0099
+.Punctuation
+randomName.Othernumber0.6286any0.1514boolean0.0784void0.0105string0.0097
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.3195Options0.0249number0.0087complex0.0062ConnectionOptions0.0059
+.Punctuation
+rngName.Otherany0.2504number0.0406IterableX<number>0.0345Range0.0335boolean0.0253
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+rngName.Otherany0.2720number0.0668boolean0.0430IterableX<number>0.0367Range0.0356
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.5832complex0.0466Node0.0260number0.0154Element0.0104
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)Comment.Single
+\n      Text.Whitespace
+nodeName.Otherany0.7711complex0.0740Node0.0122number0.0101Element0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+_nodeIdName.Otherany0.3742complex0.3573number0.1215any[]0.0216number[][]0.0113
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n        Text.Whitespace
+seedBytesName.Otherany0.6649number0.1563complex0.0887number[]0.0113number[][]0.0090
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+0x01Literal.Number.Hex
+,Punctuation
+\n        Text.Whitespace
+seedBytesName.Otherany0.4220number[]0.1828complex0.0505number0.0504number[][]0.0419
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+seedBytesName.Otherany0.3192number[]0.2444complex0.0596number0.0573number[][]0.0489
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+seedBytesName.Otherany0.2991number[]0.2602complex0.0631number0.0513number[][]0.0476
+[Punctuation
+3Literal.Number.Float
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+seedBytesName.Othernumber[]0.2884any0.2874complex0.0581number0.0500number[][]0.0407
+[Punctuation
+4Literal.Number.Float
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+seedBytesName.Othernumber[]0.3072any0.2746number0.0644complex0.0611number[][]0.0268
+[Punctuation
+5Literal.Number.Float
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+clockseqName.Othernumber0.8240any0.1374boolean0.0168string0.0073complex0.0037
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Per 4.2.2, randomize (14 bit) clockseqComment.Single
+\n      Text.Whitespace
+clockseqName.Othernumber0.8947any0.0883boolean0.0091string0.0033complex0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+_clockseqName.Othernumber0.9294any0.0470boolean0.0136string0.0049complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+seedBytesName.Otherany0.3164number[]0.2192number0.1537complex0.0445any[]0.0250
+[Punctuation
+6Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+seedBytesName.Otherany0.8230number0.1124number[]0.0209complex0.0076string0.0034
+[Punctuation
+7Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0x3fffLiteral.Number.Hex
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// UUID timestamps are 100 nano-second units since the Gregorian epoch,Comment.Single
+\n  Text.Whitespace
+// (1582-10-15 00:00).  JSNumbers aren't precise enough for this, soComment.Single
+\n  Text.Whitespace
+// time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'Comment.Single
+\n  Text.Whitespace
+// (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.Comment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+msecsName.Othernumber0.8031any0.0943boolean0.0695string0.0223complex0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3867complex0.0553Options0.0324number0.0186T0.0076
+.Punctuation
+msecsName.Othernumber0.8350any0.1222string0.0170boolean0.0094complex0.0065
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+options.msecsName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+Date.nowKeyword.Type
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// Per 4.2.1.2, use count of uuid's generated during the current clockComment.Single
+\n  Text.Whitespace
+// cycle to simulate higher resolution clockComment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+nsecsName.Othernumber0.8817boolean0.0562any0.0499string0.0075complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4231complex0.0731Options0.0388number0.0209T0.0105
+.Punctuation
+nsecsName.Othernumber0.8585any0.1132boolean0.0085string0.0079complex0.0054
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+options.nsecsName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+_lastNSecsKeyword.Typenumber0.9693any0.0235string0.0038boolean0.0021complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+// Time since last uuid creation (in msecs)Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dtName.Othernumber0.9777any0.0140boolean0.0065string0.0006complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+msecsName.Othernumber0.9672any0.0284string0.0028boolean0.0008complex0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+_lastMSecsName.Othernumber0.9847any0.0129string0.0015boolean0.0005complex0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+(Punctuation
+nsecsName.Othernumber0.9756any0.0215string0.0021boolean0.0004complex0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+_lastNSecsName.Othernumber0.9778any0.0175string0.0027boolean0.0011complex0.0002
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+10000Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+// Per 4.2.1.2, Bump clockseq on clock regressionComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dtName.Othernumber0.9693any0.0231boolean0.0056complex0.0004string0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1227Options0.0278complex0.0135T0.0108number0.0074
+.Punctuation
+clockseqName.Othernumber0.8400any0.1323boolean0.0117string0.0091void0.0024
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+clockseqName.Othernumber0.9767any0.0139boolean0.0063string0.0020void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+clockseqName.Othernumber0.9827any0.0149string0.0018boolean0.0003complex0.0000
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0x3fffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Reset nsecs if clock regresses (new clockseq) or we've moved onto a newComment.Single
+\n  Text.Whitespace
+// time intervalComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+dtName.Othernumber0.9643any0.0254boolean0.0076complex0.0006string0.0004
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+msecsName.Othernumber0.9756any0.0194boolean0.0028string0.0017complex0.0001
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+_lastMSecsName.Othernumber0.9799any0.0094boolean0.0055string0.0033complex0.0005
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1817Options0.0359complex0.0165T0.0092number0.0051
+.Punctuation
+nsecsName.Othernumber0.7215any0.2347string0.0158boolean0.0158void0.0047
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+nsecsName.Othernumber0.9914any0.0065string0.0009boolean0.0007void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Per 4.2.1.2 Throw error if too many uuids are requestedComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nsecsName.Othernumber0.9872any0.0106boolean0.0011string0.0008complex0.0001
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+10000Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4978Error0.3963complex0.0193number0.0174string0.0097
+ Text.Whitespace
+newOperator.Wordany0.6594Error0.1371ErrorConstructor0.1011string0.0402complex0.0167
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000any0.0000Error0.0000complex0.0000LogLevel.Error0.0000
+(Punctuation
+"uuid.v1(): Can't create more than 10M uuids/sec"Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+_lastMSecsName.Othernumber0.9095any0.0611string0.0171boolean0.0068complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+msecsName.Othernumber0.8732any0.1027string0.0137boolean0.0025complex0.0018
+;Punctuation
+\n  Text.Whitespace
+_lastNSecsName.Othernumber0.9071any0.0625string0.0160boolean0.0089complex0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nsecsName.Othernumber0.8966any0.0825string0.0108boolean0.0032complex0.0017
+;Punctuation
+\n  Text.Whitespace
+_clockseqName.Othernumber0.9094any0.0579string0.0157boolean0.0119complex0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+clockseqName.Othernumber0.9087any0.0740string0.0078boolean0.0032complex0.0014
+;Punctuation
+\n\n  Text.Whitespace
+// Per 4.1.4 - Convert from unix epoch to Gregorian epochComment.Single
+\n  Text.Whitespace
+msecsName.Othernumber0.9917any0.0057string0.0017boolean0.0004complex0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+12219292800000Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+// `time_low`Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tlName.Othernumber0.8436any0.1431boolean0.0062string0.0034complex0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+msecsName.Othernumber0.9630any0.0332string0.0013complex0.0007boolean0.0005
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xfffffffLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+10000Literal.Number.Float
+ Text.Whitespace
++Operator
+ Text.Whitespace
+nsecsName.Othernumber0.9797any0.0160string0.0029boolean0.0006complex0.0003
+)Punctuation
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+0x100000000Literal.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.2933string[]0.1855any[]0.1641complex0.0990any0.0680
+[Punctuation
+iName.Othernumber0.9959any0.0035string0.0004boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tlName.Othernumber0.6749any0.3195string0.0017complex0.0013boolean0.0013
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+24Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.2562string[]0.2201any[]0.1749complex0.0753any0.0363
+[Punctuation
+iName.Othernumber0.9973any0.0021string0.0003boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tlName.Othernumber0.6653any0.3296string0.0015complex0.0012boolean0.0012
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+16Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.2507string[]0.2088any[]0.1799complex0.0704any0.0332
+[Punctuation
+iName.Othernumber0.9975any0.0019string0.0003boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tlName.Othernumber0.6918any0.3032string0.0014complex0.0012boolean0.0012
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.2542string[]0.1918any[]0.1621complex0.0924any0.0292
+[Punctuation
+iName.Othernumber0.9964any0.0029string0.0004boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tlName.Otherany0.7078number0.2876string0.0017complex0.0011boolean0.0007
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n\n  Text.Whitespace
+// `time_mid`Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tmhName.Othernumber0.9885any0.0057boolean0.0036string0.0013void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+msecsName.Othernumber0.9781any0.0196string0.0014boolean0.0003complex0.0001
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+0x100000000Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+10000Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xfffffffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.3003any[]0.1701string[]0.1363complex0.0992any0.0421
+[Punctuation
+iName.Othernumber0.9962any0.0031string0.0004boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tmhName.Othernumber0.9929any0.0058string0.0006boolean0.0003complex0.0001
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n  Text.Whitespace
+bName.Othernumber[]0.2972complex0.1292any[]0.1246string[]0.1026any0.0377
+[Punctuation
+iName.Othernumber0.9957any0.0035string0.0005boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tmhName.Othernumber0.9827any0.0139string0.0011boolean0.0007number[]0.0003
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n\n  Text.Whitespace
+// `time_high_and_version`Comment.Single
+\n  Text.Whitespace
+bName.Othernumber[]0.3057any[]0.1223string[]0.1055complex0.0899any0.0371
+[Punctuation
+iName.Othernumber0.9959any0.0032string0.0005boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+tmhName.Othernumber0.9934any0.0053string0.0006boolean0.0003complex0.0002
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+24Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xfLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+0x10Literal.Number.Hex
+;Punctuation
+ Text.Whitespace
+// include versionComment.Single
+\n  Text.Whitespace
+bName.Othernumber[]0.2208any[]0.1844string[]0.1229complex0.0834any0.0529
+[Punctuation
+iName.Othernumber0.9964any0.0028string0.0004boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tmhName.Othernumber0.9932any0.0054string0.0006boolean0.0003complex0.0001
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+16Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n\n  Text.Whitespace
+// `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)Comment.Single
+\n  Text.Whitespace
+bName.Othernumber[]0.2496any[]0.1419string[]0.0939complex0.0891any0.0383
+[Punctuation
+iName.Othernumber0.9966any0.0026string0.0004boolean0.0001void0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+clockseqName.Othernumber0.9935any0.0051string0.0006boolean0.0002complex0.0001
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+0x80Literal.Number.Hex
+;Punctuation
+\n\n  Text.Whitespace
+// `clock_seq_low`Comment.Single
+\n  Text.Whitespace
+bName.Othernumber[]0.2347any[]0.1309complex0.0838string[]0.0757any0.0520
+[Punctuation
+iName.Othernumber0.9962any0.0030string0.0004boolean0.0001number[]0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+clockseqName.Othernumber0.9853any0.0117string0.0009boolean0.0006complex0.0003
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n\n  Text.Whitespace
+// `node`Comment.Single
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+nName.Othernumber0.9981any0.0012string0.0004boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+nName.Othernumber0.9963any0.0028string0.0005boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+6Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+++Operator
+nName.Othernumber0.9951any0.0033string0.0008boolean0.0002complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+bName.Otherstring[]0.1871number[]0.1363any[]0.1204any0.1039complex0.0389
+[Punctuation
+iName.Othernumber0.9920any0.0061string0.0011boolean0.0002complex0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+nName.Othernumber0.9843any0.0074string0.0069number[]0.0002complex0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.6654complex0.1139number0.0113T0.0069Node0.0064
+[Punctuation
+nName.Othernumber0.9886any0.0054string0.0040complex0.0005boolean0.0002
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+bufName.Otherany0.4391number0.0811ArrayBuffer0.0325Buffer0.0213string0.0212
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+unsafeStringifyName.Othernumber0.6426any0.1618boolean0.0971string0.0235complex0.0125
+(Punctuation
+bName.Otherany0.2923number0.1429complex0.0940string0.0736number[]0.0729
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+v1Name.Othernumber0.8082any0.1262void0.0132boolean0.0123string0.0103
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,14 @@
+index.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+index.ts(18,37): error TS2554: Expected 0 arguments, but got 3.
+index.ts(21,5): error TS2300: Duplicate identifier 'setImmediate'.
+index.ts(36,12): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(73,10): error TS2322: Type '(fd: any) => void' is not assignable to type 'void'.
+index.ts(108,35): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+index.ts(109,38): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+index.ts(130,16): error TS2554: Expected 1 arguments, but got 0.
+index.ts(163,10): error TS2322: Type '(er: any) => void' is not assignable to type 'void'.
+../../../../node_modules/@types/node/ts4.8/timers.d.ts(81,18): error TS2300: Duplicate identifier 'setImmediate'.
+../../../../node_modules/@types/node/ts4.8/timers.d.ts(84,18): error TS2300: Duplicate identifier 'setImmediate'.
+../../../../node_modules/@types/node/ts4.8/timers.d.ts(85,19): error TS2300: Duplicate identifier 'setImmediate'.
+../../../../node_modules/@types/setimmediate/index.d.ts(21,18): error TS2300: Duplicate identifier 'setImmediate'.
+

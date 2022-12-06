@@ -1,0 +1,12 @@
+declare var crypto: any;
+declare function sha(key: string, body: any, algorithm: string): string;
+declare function rsa(key: string, body: any): string;
+declare function rfc3986(str: string): string;
+declare function map(obj: any): any;
+declare function compare(a: any, b: any): number;
+declare function generateBase(httpMethod: string, base_uri: any, params: any): any;
+declare function hmacsign(httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: string): string;
+declare function hmacsign256(httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: string): any;
+declare function rsasign(httpMethod: string, base_uri: string, params: any, private_key: string, token_secret: string): any;
+declare function plaintext(consumer_secret: string, token_secret: string): string;
+declare function sign(signMethod: string, httpMethod: string, base_uri: any, params: any, consumer_secret: any, token_secret: any): any;

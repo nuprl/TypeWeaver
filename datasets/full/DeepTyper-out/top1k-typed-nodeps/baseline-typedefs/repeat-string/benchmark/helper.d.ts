@@ -1,0 +1,13 @@
+declare var fs: any;
+declare var path: any;
+declare var repeat: any;
+declare var isObject: any;
+declare var text: any;
+declare var table: any[];
+declare function bench(): any;
+declare function parseSection(str: any): string;
+declare function createLines(tok: string, lines: string[]): void;
+declare function format(tok: string, max: number, diff: string): string;
+declare function parseStats(line: string): string;
+declare function values(obj: any): any[];
+declare function bar(tok: string, longest: string): string;

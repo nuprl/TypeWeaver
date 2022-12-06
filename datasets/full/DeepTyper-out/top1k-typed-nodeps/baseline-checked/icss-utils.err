@@ -1,0 +1,20 @@
+src/createICSSRules.ts(62,7): error TS2322: Type '(imports: any, exports: any, postcss: any, mode: any) => any[]' is not assignable to type 'void'.
+src/createICSSRules.ts(62,7): error TS2451: Cannot redeclare block-scoped variable 'createICSSRules'.
+src/extractICSS.ts(4,7): error TS2322: Type '(rule: Rule) => {}' is not assignable to type 'void'.
+src/extractICSS.ts(4,37): error TS2304: Cannot find name 'Rule'.
+src/extractICSS.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
+src/extractICSS.ts(29,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/extractICSS.ts(38,32): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
+src/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
+src/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'createICSSRules'.
+src/replaceSymbols.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/replaceSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
+src/replaceSymbols.ts(3,30): error TS2322: Type '(css: string, replacements: any) => void' is not assignable to type 'void'.
+src/replaceSymbols.ts(4,7): error TS2339: Property 'walk' does not exist on type 'string'.
+src/replaceValueSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/replaceValueSymbols.ts(3,37): error TS2322: Type '(value: string, replacements: RegExp) => string' is not assignable to type 'string'.
+

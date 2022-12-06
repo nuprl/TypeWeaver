@@ -1,0 +1,275 @@
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(13,17): error TS2304: Cannot find name 'Minipass'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+bench/impls/baseline.ts(4,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
+bench/impls/baseline.ts(8,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
+bench/impls/baseline.ts(8,32): error TS2304: Cannot find name 'Pipe'.
+bench/impls/baseline.ts(12,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
+bench/impls/extend-minipass-current.ts(8,18): error TS2554: Expected 3 arguments, but got 2.
+bench/impls/extend-minipass.ts(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
+bench/impls/extend-through2.ts(3,32): error TS2304: Cannot find name 'PushThrough'.
+bench/impls/extend-through2.ts(3,32): error TS4078: Parameter 'opts' of exported function has or is using private name 'PushThrough'.
+bench/impls/extend-through2.ts(6,3): error TS2304: Cannot find name 's'.
+bench/impls/extend-through2.ts(8,5): error TS2304: Cannot find name 's'.
+bench/impls/extend-through2.ts(10,10): error TS2304: Cannot find name 's'.
+bench/impls/minipass-current-async.ts(5,13): error TS2339: Property 'async' does not exist on type '{}'.
+bench/impls/push-through.ts(5,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(6,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(7,10): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(8,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(9,10): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(10,10): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(17,14): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(20,14): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(30,64): error TS2367: This condition will always return 'true' since the types 'number' and 'Function' have no overlap.
+bench/impls/push-through.ts(38,14): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(41,14): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(49,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(55,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(56,14): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(57,29): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(58,12): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(60,33): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(62,16): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(62,30): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(62,40): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+bench/impls/push-through.ts(66,14): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(67,14): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(67,28): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(68,28): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(76,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(80,14): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(83,15): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(83,36): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(84,12): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(87,29): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(89,12): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(89,26): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(89,36): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+bench/impls/push-through.ts(91,18): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
+bench/impls/push-through.ts(95,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/through2.ts(3,32): error TS2304: Cannot find name 'PushThrough'.
+bench/impls/through2.ts(3,32): error TS4078: Parameter 'opts' of exported function has or is using private name 'PushThrough'.
+bench/impls/through2.ts(6,3): error TS2304: Cannot find name 's'.
+bench/impls/through2.ts(8,5): error TS2304: Cannot find name 's'.
+bench/impls/through2.ts(10,10): error TS2304: Cannot find name 's'.
+bench/index.ts(17,26): error TS2307: Cannot find module '@npmcli/promise-spawn' or its corresponding type declarations.
+bench/index.ts(27,18): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(28,20): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(38,18): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(39,20): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(49,18): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(50,20): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(60,8): error TS2339: Property 'mkdirSync' does not exist on type 'string'.
+bench/index.ts(70,25): error TS2345: Argument of type '(res: Function, rej: string) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'rej' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'string'.
+bench/index.ts(102,8): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+bench/index.ts(103,31): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.ts(106,39): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.ts(107,60): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.ts(118,33): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'number'.
+bench/index.ts(150,10): error TS2304: Cannot find name 'Minipass'.
+bench/index.ts(150,25): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+bench/index.ts(153,20): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+bench/index.ts(157,12): error TS2304: Cannot find name 'PushThrough'.
+bench/index.ts(158,13): error TS2304: Cannot find name 'PushThrough'.
+bench/index.ts(159,14): error TS2304: Cannot find name 'PushThrough'.
+bench/index.ts(163,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(167,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(171,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(175,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(179,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(180,28): error TS2554: Expected 0 arguments, but got 1.
+bench/index.ts(195,10): error TS2339: Property 'chunk' does not exist on type 'Src'.
+bench/index.ts(198,10): error TS2339: Property 'n' does not exist on type 'Src'.
+bench/index.ts(199,10): error TS2339: Property 'flowing' does not exist on type 'Src'.
+bench/index.ts(200,10): error TS2339: Property 'readable' does not exist on type 'Src'.
+bench/index.ts(201,10): error TS2339: Property 'writable' does not exist on type 'Src'.
+bench/index.ts(204,33): error TS2339: Property 'resume' does not exist on type 'Src'.
+bench/index.ts(207,10): error TS2339: Property 'resume' does not exist on type 'Src'.
+bench/index.ts(211,10): error TS2339: Property 'flowing' does not exist on type 'Src'.
+bench/index.ts(216,14): error TS2339: Property 'flowing' does not exist on type 'FastSrc'.
+bench/index.ts(219,10): error TS2339: Property 'flowing' does not exist on type 'FastSrc'.
+bench/index.ts(220,17): error TS2339: Property 'n' does not exist on type 'FastSrc'.
+bench/index.ts(220,31): error TS2339: Property 'flowing' does not exist on type 'FastSrc'.
+bench/index.ts(221,30): error TS2339: Property 'chunk' does not exist on type 'FastSrc'.
+bench/index.ts(222,12): error TS2339: Property 'n' does not exist on type 'FastSrc'.
+bench/index.ts(224,14): error TS2339: Property 'flowing' does not exist on type 'FastSrc'.
+bench/index.ts(224,30): error TS2339: Property 'n' does not exist on type 'FastSrc'.
+bench/index.ts(231,14): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
+bench/index.ts(234,10): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
+bench/index.ts(236,17): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
+bench/index.ts(239,16): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
+bench/index.ts(239,32): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
+bench/index.ts(240,32): error TS2339: Property 'chunk' does not exist on type 'SlowSrc'.
+bench/index.ts(241,14): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
+bench/index.ts(242,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: void) => void | PromiseLike<void>'.
+bench/index.ts(244,16): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
+bench/index.ts(244,32): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
+bench/index.ts(249,28): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: void) => void | PromiseLike<void>'.
+  Type 'Function' provides no match for the signature '(value: void): void | PromiseLike<void>'.
+bench/index.ts(256,10): error TS2339: Property 'writable' does not exist on type 'Dest'.
+bench/index.ts(257,10): error TS2339: Property 'readable' does not exist on type 'Dest'.
+bench/index.ts(258,10): error TS2339: Property 'ended' does not exist on type 'Dest'.
+bench/index.ts(259,10): error TS2339: Property 'buffering' does not exist on type 'Dest'.
+bench/index.ts(264,14): error TS2339: Property 'ended' does not exist on type 'FastDest'.
+bench/index.ts(270,10): error TS2339: Property 'ended' does not exist on type 'FastDest'.
+bench/index.ts(276,14): error TS2339: Property 'ended' does not exist on type 'SlowDest'.
+bench/index.ts(279,10): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
+bench/index.ts(281,12): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
+bench/index.ts(287,10): error TS2339: Property 'ended' does not exist on type 'SlowDest'.
+bench/index.ts(288,14): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
+index.ts(10,7): error TS2322: Type 'typeof EOF' is not assignable to type 'string'.
+index.ts(11,7): error TS2322: Type 'typeof MAYBE_EMIT_END' is not assignable to type 'string'.
+index.ts(12,7): error TS2322: Type 'typeof EMITTED_END' is not assignable to type 'string'.
+index.ts(13,7): error TS2322: Type 'typeof EMITTING_END' is not assignable to type 'number'.
+index.ts(14,7): error TS2322: Type 'typeof EMITTED_ERROR' is not assignable to type 'string'.
+index.ts(15,7): error TS2322: Type 'typeof CLOSED' is not assignable to type 'string'.
+index.ts(16,7): error TS2322: Type 'typeof READ' is not assignable to type 'string'.
+index.ts(17,7): error TS2322: Type 'typeof FLUSH' is not assignable to type 'string'.
+index.ts(18,7): error TS2322: Type 'typeof FLUSHCHUNK' is not assignable to type 'number'.
+index.ts(19,7): error TS2322: Type 'typeof ENCODING' is not assignable to type 'string'.
+index.ts(20,7): error TS2322: Type 'typeof DECODER' is not assignable to type 'string'.
+index.ts(21,7): error TS2322: Type 'typeof FLOWING' is not assignable to type 'string'.
+index.ts(22,7): error TS2322: Type 'typeof PAUSED' is not assignable to type 'string'.
+index.ts(23,7): error TS2322: Type 'typeof RESUME' is not assignable to type 'string'.
+index.ts(24,7): error TS2322: Type 'typeof BUFFERLENGTH' is not assignable to type 'string'.
+index.ts(25,7): error TS2322: Type 'typeof BUFFERPUSH' is not assignable to type 'string'.
+index.ts(26,7): error TS2322: Type 'typeof BUFFERSHIFT' is not assignable to type 'number'.
+index.ts(27,7): error TS2322: Type 'typeof OBJECTMODE' is not assignable to type 'string'.
+index.ts(28,7): error TS2322: Type 'typeof DESTROYED' is not assignable to type 'string'.
+index.ts(29,7): error TS2322: Type 'typeof EMITDATA' is not assignable to type 'string'.
+index.ts(30,7): error TS2322: Type 'typeof EMITEND' is not assignable to type 'number'.
+index.ts(31,7): error TS2322: Type 'typeof EMITEND2' is not assignable to type 'number'.
+index.ts(32,7): error TS2322: Type 'typeof ASYNC' is not assignable to type 'string'.
+index.ts(34,64): error TS2345: Argument of type 'string' is not assignable to parameter of type '(value: void) => void | PromiseLike<void>'.
+index.ts(38,7): error TS2322: Type 'symbol' is not assignable to type 'boolean'.
+index.ts(40,7): error TS2322: Type 'symbol' is not assignable to type 'boolean'.
+index.ts(47,3): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(48,3): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(49,3): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(55,5): error TS2339: Property 'byteLength' does not exist on type 'object'.
+index.ts(61,10): error TS2339: Property 'src' does not exist on type 'Pipe'.
+index.ts(62,10): error TS2339: Property 'dest' does not exist on type 'Pipe'.
+index.ts(63,10): error TS2339: Property 'opts' does not exist on type 'Pipe'.
+index.ts(64,10): error TS2339: Property 'ondrain' does not exist on type 'Pipe'.
+index.ts(65,27): error TS2339: Property 'ondrain' does not exist on type 'Pipe'.
+index.ts(68,10): error TS2339: Property 'dest' does not exist on type 'Pipe'.
+index.ts(68,44): error TS2339: Property 'ondrain' does not exist on type 'Pipe'.
+index.ts(74,14): error TS2339: Property 'opts' does not exist on type 'Pipe'.
+index.ts(75,12): error TS2339: Property 'dest' does not exist on type 'Pipe'.
+index.ts(81,10): error TS2339: Property 'src' does not exist on type 'PipeProxyErrors'.
+index.ts(86,5): error TS2322: Type '(er: string) => any' is not assignable to type '() => void'.
+index.ts(97,10): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(98,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(113,10): error TS2339: Property 'writable' does not exist on type 'Minipass'.
+index.ts(114,10): error TS2339: Property 'readable' does not exist on type 'Minipass'.
+index.ts(132,16): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(133,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(133,28): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(196,14): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(208,14): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(235,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(255,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(257,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(257,29): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(259,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(259,43): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(262,54): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(271,12): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(278,15): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(279,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(290,12): error TS2554: Expected 3 arguments, but got 2.
+index.ts(294,10): error TS2339: Property 'writable' does not exist on type 'Minipass'.
+index.ts(312,10): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(313,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(318,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(347,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(351,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(355,36): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(357,17): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(363,27): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(364,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(377,23): error TS2339: Property 'stdout' does not exist on type 'object'.
+index.ts(377,47): error TS2339: Property 'stderr' does not exist on type 'object'.
+index.ts(388,12): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(400,30): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(400,58): error TS2339: Property 'dest' does not exist on type 'object'.
+index.ts(402,12): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(402,30): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(403,9): error TS2554: Expected 1 arguments, but got 0.
+index.ts(407,3): error TS2416: Property 'addListener' in type 'Minipass' is not assignable to the same property in base type 'internal'.
+  Type '(ev: any, fn: any) => any[]' is not assignable to type '(eventName: string | symbol, listener: (...args: any[]) => void) => this'.
+    Type 'any[]' is not assignable to type 'this'.
+      'this' could be instantiated with an arbitrary type which could be unrelated to 'any[]'.
+index.ts(411,3): error TS2416: Property 'on' in type 'Minipass' is not assignable to the same property in base type 'internal'.
+  Type '(ev: any, fn: any) => any[]' is not assignable to type '(eventName: string | symbol, listener: (...args: any[]) => void) => this'.
+    Type 'any[]' is not assignable to type 'this'.
+      'this' could be instantiated with an arbitrary type which could be unrelated to 'any[]'.
+index.ts(412,11): error TS2322: Type 'this' is not assignable to type 'any[]'.
+  Type 'Minipass' is missing the following properties from type 'any[]': length, pop, push, join, and 28 more.
+index.ts(413,32): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(437,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(440,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(441,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(442,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(444,14): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(464,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(469,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(473,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(477,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(483,11): error TS2322: Type 'boolean' is not assignable to type 'string'.
+index.ts(489,26): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(493,11): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+index.ts(503,10): error TS2339: Property 'readable' does not exist on type 'Minipass'.
+index.ts(514,30): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(521,26): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
+index.ts(524,11): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+index.ts(533,11): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.ts(536,14): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(540,13): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.ts(552,70): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.ts(565,3): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
+index.ts(567,13): error TS2740: Type 'Minipass' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+index.ts(567,34): error TS2554: Expected 1 arguments, but got 0.
+index.ts(577,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+  Type 'Function' provides no match for the signature '(...args: any[]): void'.
+index.ts(578,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(582,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(583,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(588,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(589,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(596,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+  Type 'Function' provides no match for the signature '(...args: any[]): void'.
+index.ts(597,28): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(598,26): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(599,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+index.ts(607,3): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
+index.ts(609,13): error TS2322: Type 'Minipass' is not assignable to type 'number'.
+index.ts(609,34): error TS2554: Expected 1 arguments, but got 0.
+index.ts(621,14): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(628,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
+index.ts(631,21): error TS2339: Property 'close' does not exist on type 'Minipass'.
+index.ts(632,12): error TS2339: Property 'close' does not exist on type 'Minipass'.
+index.ts(637,12): error TS2555: Expected at least 2 arguments, but got 1.
+index.ts(645,18): error TS2339: Property 'pipe' does not exist on type 'EventEmitter'.
+index.ts(646,19): error TS2339: Property 'write' does not exist on type 'EventEmitter'.
+index.ts(646,52): error TS2339: Property 'end' does not exist on type 'EventEmitter'.
+

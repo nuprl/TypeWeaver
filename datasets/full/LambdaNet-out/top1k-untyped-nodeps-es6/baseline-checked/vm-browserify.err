@@ -1,0 +1,84 @@
+example/run/bundle.ts(1,217): error TS2554: Expected 1 arguments, but got 2.
+example/run/bundle.ts(1,283): error TS2339: Property 'code' does not exist on type 'Error'.
+example/run/bundle.ts(1,358): error TS2339: Property 'exports' does not exist on type 'object'.
+example/run/bundle.ts(1,418): error TS2554: Expected 2 arguments, but got 1.
+example/run/bundle.ts(1,431): error TS2339: Property 'exports' does not exist on type 'object'.
+example/run/bundle.ts(1,533): error TS2554: Expected 2 arguments, but got 1.
+example/run/bundle.ts(19,43): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+example/run/bundle.ts(52,34): error TS2339: Property 'Script' does not exist on type 'object'.
+example/run/bundle.ts(53,31): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+example/run/bundle.ts(53,51): error TS2351: This expression is not constructable.
+  Type '{}' has no construct signatures.
+example/run/bundle.ts(57,12): error TS2339: Property 'prototype' does not exist on type 'object'.
+example/run/bundle.ts(62,13): error TS2322: Type 'HTMLIFrameElement' is not assignable to type 'Error'.
+example/run/bundle.ts(63,21): error TS2339: Property 'style' does not exist on type 'Error'.
+example/run/bundle.ts(63,35): error TS2339: Property 'style' does not exist on type 'Error'.
+example/run/bundle.ts(64,16): error TS2339: Property 'style' does not exist on type 'Error'.
+example/run/bundle.ts(66,35): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'Node'.
+example/run/bundle.ts(68,34): error TS2339: Property 'contentWindow' does not exist on type 'Error'.
+example/run/bundle.ts(69,35): error TS2339: Property 'eval' does not exist on type 'object'.
+example/run/bundle.ts(69,69): error TS2339: Property 'execScript' does not exist on type 'object'.
+example/run/bundle.ts(74,25): error TS2339: Property 'eval' does not exist on type 'object'.
+example/run/bundle.ts(105,35): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'Node'.
+example/run/bundle.ts(110,12): error TS2339: Property 'prototype' does not exist on type 'object'.
+example/run/bundle.ts(114,12): error TS2339: Property 'prototype' does not exist on type 'object'.
+example/run/bundle.ts(115,34): error TS2339: Property 'createContext' does not exist on type 'object'.
+example/run/bundle.ts(116,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+example/run/bundle.ts(127,32): error TS2339: Property 'prototype' does not exist on type 'object'.
+example/run/bundle.ts(127,54): error TS2300: Duplicate identifier 'name'.
+example/run/bundle.ts(128,9): error TS1184: Modifiers cannot appear here.
+example/run/bundle.ts(128,22): error TS2300: Duplicate identifier 'name'.
+example/run/bundle.ts(128,22): error TS2322: Type '(code: string) => any' is not assignable to type 'string'.
+example/run/bundle.ts(129,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+example/run/bundle.ts(134,5): error TS1184: Modifiers cannot appear here.
+example/run/bundle.ts(135,16): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+example/run/bundle.ts(138,5): error TS1184: Modifiers cannot appear here.
+example/run/bundle.ts(139,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+example/run/bundle.ts(142,5): error TS1184: Modifiers cannot appear here.
+example/run/bundle.ts(142,18): error TS2322: Type '(context: object) => object' is not assignable to type 'boolean'.
+example/run/bundle.ts(142,50): error TS2339: Property 'createContext' does not exist on type 'object'.
+example/run/bundle.ts(155,26): error TS2339: Property 'runInNewContext' does not exist on type 'void'.
+example/run/bundle.ts(156,5): error TS2322: Type 'number' is not assignable to type 'string'.
+example/run/entry.ts(5,5): error TS2322: Type 'number' is not assignable to type 'string'.
+example/run/server.ts(1,29): error TS2307: Cannot find module 'ecstatic' or its corresponding type declarations.
+example/run/server.ts(4,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<typeof IncomingMessage, typeof ServerResponse>', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'RequestListener<typeof IncomingMessage, typeof ServerResponse>'.
+  Overload 2 of 2, '(options: ServerOptions<typeof IncomingMessage, typeof ServerResponse>, requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<...>', gave the following error.
+    Type 'string' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'.
+index.ts(18,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): void'.
+index.ts(52,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(52,47): error TS2351: This expression is not constructable.
+  Type '{}' has no construct signatures.
+index.ts(56,8): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(61,9): error TS2741: Property 'message' is missing in type 'HTMLIFrameElement' but required in type 'Error'.
+index.ts(62,17): error TS2339: Property 'style' does not exist on type 'Error'.
+index.ts(62,31): error TS2339: Property 'style' does not exist on type 'Error'.
+index.ts(63,12): error TS2339: Property 'style' does not exist on type 'Error'.
+index.ts(65,31): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'Node'.
+  Type 'Error' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
+index.ts(67,30): error TS2339: Property 'contentWindow' does not exist on type 'Error'.
+index.ts(68,31): error TS2339: Property 'eval' does not exist on type 'object'.
+index.ts(68,65): error TS2339: Property 'execScript' does not exist on type 'object'.
+index.ts(73,21): error TS2339: Property 'eval' does not exist on type 'object'.
+index.ts(104,31): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'Node'.
+index.ts(109,8): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(113,8): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(114,30): error TS2339: Property 'createContext' does not exist on type 'object'.
+index.ts(115,14): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(126,28): error TS2339: Property 'prototype' does not exist on type 'object'.
+index.ts(126,50): error TS2300: Duplicate identifier 'name'.
+index.ts(127,5): error TS1184: Modifiers cannot appear here.
+index.ts(127,18): error TS2300: Duplicate identifier 'name'.
+index.ts(127,18): error TS2322: Type '(code: string) => any' is not assignable to type 'string'.
+index.ts(128,25): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+index.ts(134,12): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+index.ts(138,12): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+index.ts(141,14): error TS2322: Type '(context: object) => object' is not assignable to type 'boolean'.
+index.ts(141,46): error TS2339: Property 'createContext' does not exist on type 'object'.
+

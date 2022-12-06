@@ -1,0 +1,46 @@
+importKeyword
+ Text.Whitespace
+queueName.Otherany0.5346complex0.0582T[]0.0166Promise<void>0.0102void0.0102
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/queue.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a `cargoQueue` object with the specified payload. Tasks added to the\n * cargoQueue will be processed together (up to the `payload` limit) in `concurrency` parallel workers.\n * If the all `workers` are in progress, the task is queued until one becomes available. Once\n * a `worker` has completed some tasks, each callback of those tasks is\n * called. Check out [these](https://camo.githubusercontent.com/6bbd36f4cf5b35a0f11a96dcd2e97711ffc2fb37/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130382f62626330636662302d356632392d313165322d393734662d3333393763363464633835382e676966) [animations](https://camo.githubusercontent.com/f4810e00e1c5f5f8addbe3e9f49064fd5d102699/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130312f38346339323036362d356632392d313165322d383134662d3964336430323431336266642e676966)\n * for how `cargo` and `queue` work.\n *\n * While [`queue`]{@link module:ControlFlow.queue} passes only one task to one of a group of workers\n * at a time, and [`cargo`]{@link module:ControlFlow.cargo} passes an array of tasks to a single worker,\n * the cargoQueue passes an array of tasks to multiple parallel workers.\n *\n * @name cargoQueue\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @see [async.queue]{@link module:ControlFlow.queue}\n * @see [async.cargo]{@link module:ControlFLow.cargo}\n * @category Control Flow\n * @param {AsyncFunction} worker - An asynchronous function for processing an array\n * of queued tasks. Invoked with `(tasks, callback)`.\n * @param {number} [concurrency=1] - An `integer` for determining how many\n * `worker` functions should be run in parallel.  If omitted, the concurrency\n * defaults to `1`.  If the concurrency is `0`, an error is thrown.\n * @param {number} [payload=Infinity] - An optional `integer` for determining\n * how many tasks should be processed per round; if omitted, the default is\n * unlimited.\n * @returns {module:ControlFlow.QueueObject} A cargoQueue object to manage the tasks. Callbacks can\n * attached as certain properties to listen for specific events during the\n * lifecycle of the cargoQueue and inner queue.\n * @example\n *\n * // create a cargoQueue object with payload 2 and concurrency 2\n * var cargoQueue = async.cargoQueue(function(tasks, callback) {\n *     for (var i=0; i<tasks.length; i++) {\n *         console.log('hello ' + tasks[i].name);\n *     }\n *     callback();\n * }, 2, 2);\n *\n * // add some items\n * cargoQueue.push({name: 'foo'}, function(err) {\n *     console.log('finished processing foo');\n * });\n * cargoQueue.push({name: 'bar'}, function(err) {\n *     console.log('finished processing bar');\n * });\n * cargoQueue.push({name: 'baz'}, function(err) {\n *     console.log('finished processing baz');\n * });\n * cargoQueue.push({name: 'boo'}, function(err) {\n *     console.log('finished processing boo');\n * });\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+cargoName.Othernumber0.1021any0.0802complex0.0626string0.0443void0.0382
+(Punctuation
+workerName.Othernumber0.2523any0.2207Worker0.0435string0.0246symbol0.0069
+,Punctuation
+ Text.Whitespace
+concurrencyName.Othernumber0.9875any0.0078string0.0029complex0.0002boolean0.0001
+,Punctuation
+ Text.Whitespace
+payloadName.Othernumber0.4691any0.3582string0.0606complex0.0181number[]0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+queueName.Otherany0.5768number0.0344complex0.0314Promise<void>0.0194void0.0167
+(Punctuation
+workerName.Othernumber0.3562any0.2725Worker0.0340string0.0130symbol0.0053
+,Punctuation
+ Text.Whitespace
+concurrencyName.Othernumber0.9888any0.0047string0.0027void0.0005number[]0.0002
+,Punctuation
+ Text.Whitespace
+payloadName.Otherany0.3260number0.3173string0.0944complex0.0333Object0.0089
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

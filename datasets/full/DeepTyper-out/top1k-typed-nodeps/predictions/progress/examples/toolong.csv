@@ -1,0 +1,109 @@
+Text
+/**\n * An example to show how node-progress handles user-specified widths\n * which exceed the number of columns in the terminal\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ProgressBarName.Otherany0.9892string0.0065number0.0015void0.0009complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// simulated download, passing the chunk lengths to tick()Comment.Single
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+barName.Otherany0.0832HTMLDivElement0.0148HTMLInputElement0.0042XMLHttpRequest0.0042MemorylessMotionSubject<{}>0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9387string0.0081number0.0067complex0.0030Logger0.0010
+ Text.Whitespace
+ProgressBarName.Otherany0.9979complex0.0015number0.0003void0.0001string0.0001
+(Punctuation
+'  downloading [:bar] :percent :etas'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+completeName.Otherstring0.9881boolean0.0052any0.0019RegExp0.0019number0.0016
+:Operator
+ Text.Whitespace
+'='Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+incompleteName.Otherstring0.9898RegExp0.0052any0.0018boolean0.0011number0.0010
+:Operator
+ Text.Whitespace
+' 'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+widthName.Otherstring0.7083number0.2438any0.0339boolean0.0055void0.0025
+:Operator
+ Text.Whitespace
+1024Keyword.Type
+     Text.Whitespace
+/* something longer than the terminal width */Comment.Multiline
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+totalName.Othernumber0.5967any0.1828string0.1703boolean0.0389void0.0018
+:Operator
+ Text.Whitespace
+100Keyword.Type
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+nextName.Othervoid0.9885any0.0030Function0.0023Promise<void>0.0016complex0.0008
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+barName.Otherany0.4090Assert0.0052XMLHttpRequest0.0042HTMLInputElement0.0031MemorylessMotionSubject<{}>0.0030
+.Punctuation
+tickName.Otherany0.7771void0.1592number0.0436Promise<number>0.0023boolean0.0022
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+barName.Otherany0.1697HTMLInputElement0.0106Assert0.0066XMLHttpRequest0.0045util0.0032
+.Punctuation
+completeName.Otherboolean0.6987any0.2247string0.0406void0.0246number0.0060
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+setTimeoutName.Othercomplex0.9979any0.0015number0.0001string0.0001void0.0001
+(Punctuation
+nextName.Othervoid0.8573any0.0643Function0.0276number0.0120complex0.0099
+,Punctuation
+ Text.Whitespace
+10Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

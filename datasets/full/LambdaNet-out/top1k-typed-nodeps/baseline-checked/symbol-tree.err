@@ -1,0 +1,89 @@
+lib/SymbolTree.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'TreeIterator'.
+lib/SymbolTree.ts(28,22): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(54,50): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(60,37): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(60,51): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+lib/SymbolTree.ts(162,25): error TS2740: Type 'SymbolTree' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/SymbolTree.ts(276,30): error TS2339: Property 'setCachedIndex' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(349,25): error TS2322: Type 'true | Function' is not assignable to type 'string'.
+  Type 'boolean' is not assignable to type 'string'.
+lib/SymbolTree.ts(375,48): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(375,68): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(394,38): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(413,38): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(432,38): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(458,48): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(458,73): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
+lib/SymbolTree.ts(475,69): error TS2339: Property 'parent' does not exist on type 'object'.
+lib/SymbolTree.ts(484,54): error TS2339: Property 'getCachedIndex' does not exist on type 'object'.
+lib/SymbolTree.ts(493,32): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(494,82): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(496,55): error TS2339: Property 'getCachedIndex' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(501,30): error TS2339: Property 'setCachedIndex' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(511,28): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(579,61): error TS2339: Property 'CONTAINS' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(579,85): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
+lib/SymbolTree.ts(594,61): error TS2339: Property 'CONTAINED_BY' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(594,89): error TS2551: Property 'FOLLOWING' does not exist on type 'SymbolTree'. Did you mean 'following'?
+lib/SymbolTree.ts(603,23): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/SymbolTree.ts(605,30): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+lib/SymbolTree.ts(607,45): error TS2339: Property 'DISCONNECTED' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(615,31): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/SymbolTree.ts(616,31): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/SymbolTree.ts(626,23): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/SymbolTree.ts(629,24): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+lib/SymbolTree.ts(630,40): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
+lib/SymbolTree.ts(631,40): error TS2551: Property 'FOLLOWING' does not exist on type 'SymbolTree'. Did you mean 'following'?
+lib/SymbolTree.ts(666,34): error TS2339: Property 'previousSibling' does not exist on type 'object'.
+lib/SymbolTree.ts(672,28): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(673,28): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(676,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(701,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(719,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(744,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(754,34): error TS2339: Property 'previousSibling' does not exist on type 'object'.
+lib/SymbolTree.ts(762,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(785,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(796,39): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(819,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(830,39): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
+lib/SymbolTree.ts(838,12): error TS2339: Property 'TreePosition' does not exist on type 'typeof SymbolTree'.
+lib/SymbolTreeNode.ts(5,22): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(6,22): error TS2339: Property 'previousSibling' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(7,22): error TS2339: Property 'nextSibling' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(9,22): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(10,22): error TS2339: Property 'lastChild' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(13,22): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(15,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(19,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(20,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(24,37): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(24,52): error TS2339: Property 'previousSibling' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(24,76): error TS2339: Property 'nextSibling' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(28,37): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(34,22): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(34,46): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(35,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(40,26): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(41,30): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(46,29): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(51,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(52,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/TreeIterator.ts(3,7): error TS2322: Type 'typeof TREE' is not assignable to type 'any[]'.
+lib/TreeIterator.ts(4,7): error TS2322: Type 'typeof ROOT' is not assignable to type 'string'.
+lib/TreeIterator.ts(5,7): error TS2322: Type 'typeof NEXT' is not assignable to type 'string'.
+lib/TreeIterator.ts(6,7): error TS2322: Type 'typeof ITERATE_FUNC' is not assignable to type 'number'.
+lib/TreeIterator.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'TreeIterator'.
+lib/TreeIterator.ts(10,22): error TS2538: Type 'any[]' cannot be used as an index type.
+lib/TreeIterator.ts(17,47): error TS2538: Type 'any[]' cannot be used as an index type.
+lib/TreeIterator.ts(30,21): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/TreeIterator.ts(33,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/TreeIterator.ts(36,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/TreeIterator.ts(39,26): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/TreeIterator.ts(60,14): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(61,14): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(62,14): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(63,14): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
+lib/TreeIterator.ts(64,14): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
+

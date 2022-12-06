@@ -1,0 +1,28 @@
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+"*.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+[Punctuation
+"eslint --fix"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"prettier --write"Literal.String.Double
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+"*.{json,md,yml,css,ts}"Literal.String.Double
+:Operator
+ Text.Whitespace
+[Punctuation
+"prettier --write"Literal.String.Double
+]Punctuation
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

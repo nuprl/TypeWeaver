@@ -1,0 +1,721 @@
+argparse.ts(89,26): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(110,64): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+argparse.ts(125,35): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(125,39): error TS2322: Type 'number' is not assignable to type 'string'.
+argparse.ts(133,36): error TS2322: Type 'number' is not assignable to type 'never'.
+argparse.ts(135,36): error TS2322: Type 'number' is not assignable to type 'never'.
+argparse.ts(158,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(179,41): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(192,27): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable: ArrayLike<any> | Iterable<any>): any[]', gave the following error.
+    Argument of type 'object' is not assignable to parameter of type 'ArrayLike<any> | Iterable<any>'.
+  Overload 2 of 4, '(arrayLike: ArrayLike<any>): any[]', gave the following error.
+    Argument of type 'object' is not assignable to parameter of type 'ArrayLike<any>'.
+      Property 'length' is missing in type '{}' but required in type 'ArrayLike<any>'.
+argparse.ts(196,25): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(203,14): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(205,38): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+  Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+argparse.ts(208,16): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(208,38): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(210,9): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(210,45): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(211,23): error TS2339: Property 'name' does not exist on type 'object'.
+argparse.ts(218,25): error TS2339: Property 'deprecate' does not exist on type 'string'.
+argparse.ts(218,47): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(227,56): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(228,63): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(229,47): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(231,5): error TS2740: Type '{}' is missing the following properties from type 'TextWrapper': _munge_whitespace, _split, _handle_long_word, _wrap_chunks, and 3 more.
+argparse.ts(235,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(249,5): error TS2322: Type 'symbol' is not assignable to type 'number'.
+argparse.ts(255,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(290,40): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(291,45): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(318,52): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(319,57): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(329,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(343,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(350,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(352,27): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(359,51): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): any'.
+argparse.ts(362,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(371,51): error TS2339: Property 'deprecate' does not exist on type 'string'.
+argparse.ts(379,27): error TS2322: Type 'ObjectConstructor' is not assignable to type 'string'.
+argparse.ts(389,43): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(390,15): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(395,34): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+argparse.ts(399,38): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(405,34): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(405,46): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+argparse.ts(407,20): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(411,30): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(429,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
+argparse.ts(436,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(450,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+  Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
+argparse.ts(459,41): error TS2339: Property 'columns' does not exist on type 'object'.
+argparse.ts(463,14): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(464,14): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(465,14): error TS2339: Property '_max_help_position' does not exist on type 'HelpFormatter'.
+argparse.ts(467,14): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(469,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(470,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(471,14): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(473,14): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(473,35): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.ts(474,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(474,38): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(476,14): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(477,14): error TS2339: Property '_long_break_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(484,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(484,38): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(485,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(489,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(489,38): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(490,9): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+argparse.ts(490,21): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(491,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(495,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(503,28): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.ts(503,48): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(505,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(509,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(509,38): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(537,58): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(538,18): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(538,53): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(556,25): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(558,38): error TS2339: Property '_long_break_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(575,21): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(575,45): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(579,21): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(579,50): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(583,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(583,53): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(601,35): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(601,49): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(610,17): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+argparse.ts(611,17): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+argparse.ts(674,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(727,24): error TS2339: Property 'help' does not exist on type 'unknown'.
+argparse.ts(736,32): error TS2339: Property 'option_strings' does not exist on type 'unknown'.
+argparse.ts(752,44): error TS2339: Property 'option_strings' does not exist on type 'unknown'.
+argparse.ts(757,28): error TS2339: Property 'nargs' does not exist on type 'unknown'.
+argparse.ts(758,35): error TS2339: Property 'format_usage' does not exist on type 'unknown'.
+argparse.ts(765,28): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(769,29): error TS2339: Property 'required' does not exist on type 'unknown'.
+argparse.ts(770,28): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(790,51): error TS2554: Expected 2 arguments, but got 3.
+argparse.ts(799,20): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(799,43): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(801,40): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(801,54): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(802,38): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(808,43): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(809,43): error TS2339: Property '_max_help_position' does not exist on type 'HelpFormatter'.
+argparse.ts(810,40): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(811,49): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(817,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(818,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(822,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(823,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(828,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(829,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(840,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(842,28): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(879,32): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(893,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(912,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(914,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(918,26): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(920,26): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(923,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(927,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(933,27): error TS2554: Expected 2-3 arguments, but got 1.
+argparse.ts(937,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(943,49): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(966,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(978,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(986,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(1006,15): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(1009,14): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1010,14): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1011,14): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1012,14): error TS2339: Property 'items' does not exist on type '_Section'.
+argparse.ts(1017,18): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1018,18): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1020,30): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1020,57): error TS2339: Property 'items' does not exist on type '_Section'.
+argparse.ts(1021,18): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1022,18): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1032,18): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1032,47): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1033,39): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1034,23): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1034,64): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1040,21): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1045,7): error TS2322: Type 'TextWrapper' is not assignable to type 'boolean'.
+argparse.ts(1045,63): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1045,115): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1059,7): error TS2322: Type 'TextWrapper' is not assignable to type 'string'.
+argparse.ts(1059,55): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1059,100): error TS2507: Type 'boolean' is not a constructor function type.
+argparse.ts(1073,7): error TS2322: Type 'TextWrapper' is not assignable to type 'number'.
+argparse.ts(1073,64): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1073,118): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1097,7): error TS2322: Type 'TextWrapper' is not assignable to type 'boolean'.
+argparse.ts(1097,60): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1097,109): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1119,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(1122,25): error TS2339: Property 'option_strings' does not exist on type 'TextWrapper'.
+argparse.ts(1123,25): error TS2339: Property 'option_strings' does not exist on type 'TextWrapper'.
+argparse.ts(1124,59): error TS2339: Property 'metavar' does not exist on type 'TextWrapper'.
+argparse.ts(1125,25): error TS2339: Property 'metavar' does not exist on type 'TextWrapper'.
+argparse.ts(1126,59): error TS2339: Property 'dest' does not exist on type 'TextWrapper'.
+argparse.ts(1127,25): error TS2339: Property 'dest' does not exist on type 'TextWrapper'.
+argparse.ts(1134,7): error TS2322: Type 'string' is not assignable to type 'number'.
+argparse.ts(1145,14): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1146,14): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
+argparse.ts(1152,18): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1157,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1157,44): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
+argparse.ts(1158,50): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1178,7): error TS2322: Type 'TextWrapper' is not assignable to type 'string'.
+argparse.ts(1178,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1178,72): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1178,89): error TS2345: Argument of type 'FunctionConstructor' is not assignable to parameter of type 'string'.
+argparse.ts(1242,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1258,14): error TS2339: Property 'option_strings' does not exist on type 'Action'.
+argparse.ts(1259,14): error TS2339: Property 'dest' does not exist on type 'Action'.
+argparse.ts(1260,14): error TS2339: Property 'nargs' does not exist on type 'Action'.
+argparse.ts(1261,14): error TS2339: Property 'const' does not exist on type 'Action'.
+argparse.ts(1262,14): error TS2339: Property 'default' does not exist on type 'Action'.
+argparse.ts(1263,14): error TS2339: Property 'type' does not exist on type 'Action'.
+argparse.ts(1264,14): error TS2339: Property 'choices' does not exist on type 'Action'.
+argparse.ts(1265,14): error TS2339: Property 'required' does not exist on type 'Action'.
+argparse.ts(1266,14): error TS2339: Property 'help' does not exist on type 'Action'.
+argparse.ts(1267,14): error TS2339: Property 'metavar' does not exist on type 'Action'.
+argparse.ts(1282,42): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(1286,21): error TS2339: Property 'option_strings' does not exist on type 'Action'.
+argparse.ts(1295,7): error TS2322: Type 'TextWrapper' is not assignable to type 'number'.
+argparse.ts(1295,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1295,102): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1307,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1346,18): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1347,37): error TS2339: Property 'dest' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1347,43): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+argparse.ts(1352,21): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1357,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1357,69): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1371,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1390,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1407,33): error TS2339: Property 'dest' does not exist on type '_StoreAction'.
+argparse.ts(1412,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1412,79): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1423,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1445,33): error TS2339: Property 'dest' does not exist on type '_StoreConstAction'.
+argparse.ts(1445,44): error TS2339: Property 'const' does not exist on type '_StoreConstAction'.
+argparse.ts(1450,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1450,77): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1459,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1479,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1479,79): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1488,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1508,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1508,71): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1522,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1541,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1558,45): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
+argparse.ts(1559,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(1560,15): error TS2339: Property 'push' does not exist on type 'string'.
+argparse.ts(1561,33): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
+argparse.ts(1566,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1566,81): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1577,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1600,45): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
+argparse.ts(1601,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(1602,15): error TS2339: Property 'push' does not exist on type 'string'.
+argparse.ts(1602,25): error TS2339: Property 'const' does not exist on type '_AppendConstAction'.
+argparse.ts(1603,33): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
+argparse.ts(1608,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1608,69): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1617,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1636,45): error TS2339: Property 'dest' does not exist on type '_CountAction'.
+argparse.ts(1638,13): error TS2322: Type 'number' is not assignable to type 'string'.
+argparse.ts(1640,33): error TS2339: Property 'dest' does not exist on type '_CountAction'.
+argparse.ts(1645,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1645,67): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1653,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1676,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1676,73): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1685,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1700,14): error TS2339: Property 'version' does not exist on type '_VersionAction'.
+argparse.ts(1704,28): error TS2339: Property 'version' does not exist on type '_VersionAction'.
+argparse.ts(1716,52): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(1716,94): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1727,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1749,14): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
+argparse.ts(1750,14): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
+argparse.ts(1751,14): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1752,14): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1759,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1766,27): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1766,45): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
+argparse.ts(1769,50): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'string'.
+argparse.ts(1776,38): error TS2339: Property '_ChoicesPseudoAction' does not exist on type '_SubParsersAction'.
+argparse.ts(1777,18): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1781,31): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
+argparse.ts(1782,14): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1786,18): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1793,21): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1801,18): error TS2339: Property 'dest' does not exist on type '_SubParsersAction'.
+argparse.ts(1802,37): error TS2339: Property 'dest' does not exist on type '_SubParsersAction'.
+argparse.ts(1806,26): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1807,27): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1810,39): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1811,23): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1812,23): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(1825,37): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
+argparse.ts(1829,60): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'string'.
+argparse.ts(1830,13): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(1830,57): error TS2339: Property 'push' does not exist on type 'string'.
+argparse.ts(1836,19): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(1836,97): error TS2507: Type 'string' is not a constructor function type.
+argparse.ts(1840,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1847,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(1847,71): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1849,45): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1850,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+argparse.ts(1852,33): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1889,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(1906,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1909,14): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1910,14): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1911,42): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1912,38): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1913,43): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1914,43): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1915,39): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1916,37): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1917,47): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1918,36): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1924,22): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1926,29): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1929,27): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1929,65): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1937,21): error TS2339: Property 'openSync' does not exist on type 'string'.
+argparse.ts(1937,43): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1937,56): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1941,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(1941,41): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1944,55): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1944,70): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1945,18): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1946,23): error TS2339: Property 'createReadStream' does not exist on type 'string'.
+argparse.ts(1947,25): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1948,23): error TS2339: Property 'createWriteStream' does not exist on type 'string'.
+argparse.ts(1950,23): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1950,70): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1955,11): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(1956,27): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1957,42): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1958,53): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(1962,60): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => any'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): any'.
+argparse.ts(1964,41): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1966,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(1970,26): error TS2339: Property 'inspect' does not exist on type 'string'.
+argparse.ts(1977,7): error TS2322: Type 'string' is not assignable to type 'object'.
+argparse.ts(1977,61): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(1992,11): error TS2339: Property 'prototype' does not exist on type 'object'.
+argparse.ts(1995,7): error TS2740: Type 'TextWrapper' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+argparse.ts(1995,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(2003,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2010,14): error TS2339: Property 'description' does not exist on type '_ActionsContainer'.
+argparse.ts(2011,14): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2012,14): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2013,14): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2016,14): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2034,52): error TS2339: Property 'deprecate' does not exist on type 'string'.
+argparse.ts(2035,17): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2043,14): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2044,14): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2047,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2048,14): error TS2551: Property '_mutually_exclusive_groups' does not exist on type '_ActionsContainer'. Did you mean 'add_mutually_exclusive_group'?
+argparse.ts(2051,14): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2054,14): error TS2339: Property '_negative_number_matcher' does not exist on type '_ActionsContainer'.
+argparse.ts(2058,14): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2065,40): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2065,68): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
+argparse.ts(2070,29): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2077,28): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2081,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2089,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2094,21): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2109,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2117,17): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2126,26): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2131,50): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+argparse.ts(2135,48): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+argparse.ts(2141,30): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2142,39): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2143,29): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2144,39): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2151,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2154,26): error TS2351: This expression is not constructable.
+  Type 'never' has no construct signatures.
+argparse.ts(2159,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2163,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2170,22): error TS2339: Property '_get_formatter' does not exist on type 'never'.
+argparse.ts(2186,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2193,14): error TS2551: Property '_mutually_exclusive_groups' does not exist on type '_ActionsContainer'. Did you mean 'add_mutually_exclusive_group'?
+argparse.ts(2202,14): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2207,18): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2212,22): error TS2339: Property '_negative_number_matcher' does not exist on type '_ActionsContainer'.
+argparse.ts(2213,27): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2214,26): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2224,28): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2230,32): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2233,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2245,72): error TS2554: Expected 0 arguments, but got 1.
+argparse.ts(2262,65): error TS2554: Expected 0 arguments, but got 1.
+argparse.ts(2282,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2310,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2321,23): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2323,48): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2326,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2331,50): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2346,60): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2349,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2366,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2366,65): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2371,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2371,47): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2380,30): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2381,43): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2398,19): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(2398,41): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2408,25): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2420,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(2420,73): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2428,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2442,14): error TS2339: Property 'title' does not exist on type '_ArgumentGroup'.
+argparse.ts(2443,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2446,14): error TS2339: Property '_registries' does not exist on type '_ArgumentGroup'.
+argparse.ts(2447,14): error TS2339: Property '_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2448,14): error TS2339: Property '_option_string_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2449,14): error TS2339: Property '_defaults' does not exist on type '_ArgumentGroup'.
+argparse.ts(2450,14): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ArgumentGroup'.
+argparse.ts(2452,14): error TS2339: Property '_mutually_exclusive_groups' does not exist on type '_ArgumentGroup'.
+argparse.ts(2457,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2463,28): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2468,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+argparse.ts(2468,91): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2474,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2480,14): error TS2339: Property 'required' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2481,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2489,23): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2490,14): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2495,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2496,28): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2501,7): error TS2322: Type 'TextWrapper' is not assignable to type 'number'.
+argparse.ts(2501,49): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+argparse.ts(2501,88): error TS2507: Type 'object' is not a constructor function type.
+argparse.ts(2501,105): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+argparse.ts(2540,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2583,25): error TS2339: Property 'basename' does not exist on type 'string'.
+argparse.ts(2586,14): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(2587,14): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(2588,14): error TS2339: Property 'epilog' does not exist on type 'ArgumentParser'.
+argparse.ts(2589,14): error TS2339: Property 'formatter_class' does not exist on type 'ArgumentParser'.
+argparse.ts(2590,14): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2591,14): error TS2339: Property 'add_help' does not exist on type 'ArgumentParser'.
+argparse.ts(2592,14): error TS2339: Property 'allow_abbrev' does not exist on type 'ArgumentParser'.
+argparse.ts(2593,14): error TS2339: Property 'exit_on_error' does not exist on type 'ArgumentParser'.
+argparse.ts(2595,14): error TS2339: Property 'debug' does not exist on type 'ArgumentParser'.
+argparse.ts(2598,14): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2598,34): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2599,14): error TS2339: Property '_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2599,32): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2600,14): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2606,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2607,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2608,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2609,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2612,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2616,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2619,37): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2623,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2625,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2626,18): error TS2339: Property 'deprecate' does not exist on type 'string'.
+argparse.ts(2632,18): error TS2339: Property 'add_help' does not exist on type 'ArgumentParser'.
+argparse.ts(2633,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.ts(2645,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.ts(2651,35): error TS2339: Property 'version' does not exist on type 'ArgumentParser'.
+argparse.ts(2660,18): error TS2339: Property '_add_container_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2661,32): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2677,42): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(2686,25): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+argparse.ts(2690,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2695,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+argparse.ts(2702,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2702,37): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2704,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2704,37): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2712,31): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(2713,38): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(2718,34): error TS2339: Property '_pop_action_class' does not exist on type 'ArgumentParser'.
+argparse.ts(2721,14): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2729,18): error TS2339: Property '_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2731,18): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2737,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2741,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2752,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2764,29): error TS2351: This expression is not constructable.
+  Type '{}' has no construct signatures.
+argparse.ts(2768,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2779,43): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2781,47): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2786,18): error TS2339: Property 'exit_on_error' does not exist on type 'ArgumentParser'.
+argparse.ts(2790,36): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+argparse.ts(2801,32): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(2810,18): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2817,38): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(2878,35): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(2878,57): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2917,38): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2923,50): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2929,39): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(2929,61): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2944,35): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(2944,57): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(2963,13): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+argparse.ts(3042,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3054,44): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(3063,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3068,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3084,32): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3099,38): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3105,40): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+argparse.ts(3142,23): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3144,23): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(3176,19): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3181,32): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3182,31): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3194,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3195,35): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3209,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3221,18): error TS2339: Property '_negative_number_matcher' does not exist on type 'ArgumentParser'.
+argparse.ts(3222,23): error TS2339: Property '_has_negative_number_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(3242,26): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3244,22): error TS2339: Property 'allow_abbrev' does not exist on type 'ArgumentParser'.
+argparse.ts(3252,60): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3254,43): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3270,56): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3272,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3276,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3284,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3327,29): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3349,24): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3371,33): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3375,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3386,31): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3389,26): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3391,26): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3405,32): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(3408,38): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3427,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3438,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3443,18): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3515,30): error TS2339: Property '_registry_get' does not exist on type 'ArgumentParser'.
+argparse.ts(3518,23): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(3518,45): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3541,32): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+argparse.ts(3544,27): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(3548,57): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+argparse.ts(3551,27): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(3551,49): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3565,72): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
+  Type 'any[]' provides no match for the signature '(value: any, index: number, array: any[]): unknown'.
+argparse.ts(3567,23): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+argparse.ts(3567,45): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3576,34): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3576,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3577,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3585,34): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3585,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3586,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3589,33): error TS2339: Property 'description' does not exist on type 'ArgumentParser'.
+argparse.ts(3592,39): error TS2339: Property '_action_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3600,33): error TS2339: Property 'epilog' does not exist on type 'ArgumentParser'.
+argparse.ts(3608,25): error TS2339: Property 'formatter_class' does not exist on type 'ArgumentParser'.
+argparse.ts(3608,54): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(3653,18): error TS2339: Property 'debug' does not exist on type 'ArgumentParser'.
+argparse.ts(3656,32): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(3657,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3690,34): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.ts(3698,34): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+lib/sub.ts(12,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(_: TextWrapper, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters '_' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'TextWrapper'.
+lib/sub.ts(45,34): error TS2339: Property 'toFixed' does not exist on type 'never'.
+lib/textwrap.ts(76,13): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(77,13): error TS2339: Property 'initial_indent' does not exist on type '{}'.
+lib/textwrap.ts(78,13): error TS2339: Property 'subsequent_indent' does not exist on type '{}'.
+lib/textwrap.ts(79,13): error TS2339: Property 'expand_tabs' does not exist on type '{}'.
+lib/textwrap.ts(80,13): error TS2339: Property 'replace_whitespace' does not exist on type '{}'.
+lib/textwrap.ts(81,13): error TS2339: Property 'fix_sentence_endings' does not exist on type '{}'.
+lib/textwrap.ts(82,13): error TS2339: Property 'break_long_words' does not exist on type '{}'.
+lib/textwrap.ts(83,13): error TS2339: Property 'drop_whitespace' does not exist on type '{}'.
+lib/textwrap.ts(84,13): error TS2339: Property 'break_on_hyphens' does not exist on type '{}'.
+lib/textwrap.ts(85,13): error TS2339: Property 'tabsize' does not exist on type '{}'.
+lib/textwrap.ts(86,13): error TS2339: Property 'max_lines' does not exist on type '{}'.
+lib/textwrap.ts(87,13): error TS2339: Property 'placeholder' does not exist on type '{}'.
+lib/textwrap.ts(90,14): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(91,14): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(92,14): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(93,14): error TS2339: Property 'expand_tabs' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(94,14): error TS2339: Property 'replace_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(95,14): error TS2339: Property 'fix_sentence_endings' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(96,14): error TS2339: Property 'break_long_words' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(97,14): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(98,14): error TS2339: Property 'break_on_hyphens' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(99,14): error TS2339: Property 'tabsize' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(100,14): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(101,14): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(116,18): error TS2339: Property 'expand_tabs' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(117,56): error TS2339: Property 'tabsize' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(119,18): error TS2339: Property 'replace_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(166,18): error TS2339: Property 'break_long_words' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(200,18): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(201,47): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(203,18): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(204,22): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(205,31): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(207,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(209,38): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(209,76): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(228,31): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(230,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(234,38): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(238,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(264,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(270,26): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(271,45): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(273,27): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(283,44): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(284,48): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(295,57): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(296,42): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(297,76): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(301,50): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(328,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/textwrap.ts(362,11): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(364,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/textwrap.ts(377,11): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(419,27): error TS2339: Property 'startsWith' does not exist on type 'any[]'.
+

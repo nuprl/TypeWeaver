@@ -1,0 +1,19 @@
+index.ts(12,30): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(15,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(15,74): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(15,115): error TS2339: Property 'close' does not exist on type '{}'.
+index.ts(18,35): error TS2304: Cannot find name 'Stream'.
+index.ts(23,19): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => unknown'.
+      Type 'Function' provides no match for the signature '(...args: any[]): unknown'.
+index.ts(26,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(30,7): error TS2345: Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'Stream'.
+index.ts(42,37): error TS2339: Property 'close' does not exist on type 'ReadableStream<any>'.
+index.ts(43,42): error TS2339: Property 'abort' does not exist on type 'ReadableStream<any>'.
+index.ts(45,21): error TS2339: Property 'destroy' does not exist on type 'ReadableStream<any>'.
+index.ts(45,45): error TS2339: Property 'destroy' does not exist on type 'ReadableStream<any>'.
+index.ts(55,28): error TS2304: Cannot find name 'Observable'.
+index.ts(55,45): error TS2304: Cannot find name 'Observable'.
+index.ts(67,48): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+

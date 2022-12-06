@@ -1,0 +1,14 @@
+benchmark/check.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'undefined[]' and 'any[]'.
+benchmark/code/for-length.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/for-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/for-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/new-array-map-2.ts(4,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/code/new-array-map-2.ts(4,47): error TS2345: Argument of type '(nil: Element) => any' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any'.
+  Types of parameters 'nil' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Element'.
+benchmark/code/while-array-3.ts(7,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-bitwise.ts(4,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+

@@ -1,0 +1,1964 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+utilName.Otherany0.9848void0.0061complex0.0053string0.0011number0.0004
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'util'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+bracesName.Otherany0.3307void0.2066boolean0.1770string0.0873complex0.0580
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'braces'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+picomatchName.Otherany0.2555boolean0.2436void0.2285string0.0996complex0.0499
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'picomatch'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+utilsName.Otherany0.5964complex0.3432string[]0.0133string0.0100void0.0078
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'picomatch/lib/utils'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isEmptyStringName.Otherboolean0.8385string0.0729any0.0724number0.0038void0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valName.Otherstring0.5476any0.3506boolean0.0752number0.0101complex0.0024
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+valName.Otherstring0.5790any0.3594boolean0.0404number0.0108complex0.0024
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valName.Otherstring0.5700any0.3263boolean0.0795number0.0160complex0.0033
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'./'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns an array of strings that match one or more glob patterns.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm(list, patterns[, options]);\n *\n * console.log(mm(['a.js', 'a.txt'], ['*.js']));\n * //=> [ 'a.js' ]\n * ```\n * @param {String|Array<string>} `list` List of strings to match.\n * @param {String|Array<string>} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `options` See available [options](#options)\n * @return {Array} Returns an array of matches\n * @summary false\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+micromatchName.Otherany0.8067complex0.0259void0.0254string0.0096any[]0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+listName.Otherany0.6740string[]0.1566any[]0.0370string0.0240number[]0.0076
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.6046string[]0.3341string0.0204any[]0.0187complex0.0096
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6153Options0.0180complex0.0157any[]0.0123number0.0106
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+patternsName.Otherstring[]0.4226any[]0.3404any0.1912complex0.0109number[]0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9263any0.0651any[]0.0029void0.0011string0.0010
+(Punctuation
+patternsName.Otherstring[]0.5436any[]0.2498any0.1697complex0.0185string0.0047
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+listName.Otherany[]0.6520any0.1190string[]0.0743T[]0.0134number[]0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9538any0.0405any[]0.0025void0.0007string0.0005
+(Punctuation
+listName.Otherany0.3151string[]0.2963any[]0.2055complex0.0389string0.0074
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+omitName.OtherSet<any>0.7311Set<string>0.0743Set<number>0.0225any0.0041Document0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3584Set<any>0.1699boolean0.0382SetConstructor0.0318Set<string>0.0261
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9742Set<any>0.0123any0.0063Set<number>0.0005Set<string>0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+keepName.OtherSet<any>0.7709Set<string>0.0321any[]0.0281Set<number>0.0167boolean0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2881Set<any>0.2085SetConstructor0.0553boolean0.0512Set<string>0.0337
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9830Set<any>0.0080any0.0030Set<number>0.0005Set<string>0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+itemsName.OtherSet<any>0.7974any[]0.0363Set<string>0.0334Set<number>0.0107SetConstructor0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.2104any0.1671SetConstructor0.1327Set<string>0.0447boolean0.0225
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9790Set<any>0.0066any0.0056Set<number>0.0005number0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+negativesName.Othernumber0.9838any0.0104boolean0.0023string0.0016void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+onResultName.Otherany0.4011void0.2275boolean0.1091Function0.0584string0.0443
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.6773boolean0.0216State0.0179string0.0128void0.0072
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+itemsName.OtherSet<any>0.2165any[]0.1301any0.1117Set<string>0.0341string[]0.0112
+.Punctuation
+addName.Otherany0.3275Set<any>0.1595Set<string>0.1387void0.1040complex0.0442
+(Punctuation
+stateName.Otherany0.2902complex0.0298State0.0214IState0.0187boolean0.0070
+.Punctuation
+outputName.Otherstring0.7138any0.1826number0.0116any[]0.0095void0.0073
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.1668Options0.0349ConnectionOptions0.0257Config0.0187complex0.0169
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.0448Options0.0393ConnectionOptions0.0250Config0.0158IOptions0.0108
+.Punctuation
+onResultName.Otherany0.5495void0.1671boolean0.1547string0.0786Function0.0314
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+optionsName.Otherany0.2179Options0.0281T0.0156ConnectionOptions0.0153Logger0.0152
+.Punctuation
+onResultName.Othervoid0.5078any0.4426Function0.0204boolean0.0111string0.0080
+(Punctuation
+stateName.Otherany0.6796string0.1023boolean0.0612number0.0207void0.0094
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9884any0.0095string0.0010boolean0.0003number[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9759any0.0211string0.0018boolean0.0003number[]0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+patternsName.Otherstring[]0.7198any[]0.1109any0.0998number[]0.0445complex0.0090
+.Punctuation
+lengthName.Othernumber0.9504any0.0479string0.0008void0.0003complex0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9639any0.0348string0.0008boolean0.0003number[]0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+isMatchName.Otherboolean0.9737any0.0160number0.0049string0.0031false0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherboolean0.5690string0.2046any0.1679number0.0156complex0.0150
+(Punctuation
+StringName.BuiltinStringConstructor0.9994String0.0003NumberConstructor0.0000string0.0000complex0.0000
+(Punctuation
+patternsName.Otherany0.5152string[]0.2835any[]0.0847complex0.0748number[]0.0128
+[Punctuation
+iName.Othernumber0.9748any0.0191string0.0049boolean0.0003complex0.0002
+]Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.2898complex0.0566any[]0.0437{}0.0424number[]0.0213
+,Punctuation
+ Text.Whitespace
+onResultName.Othervoid0.3491any0.3490string0.1169boolean0.0704Function0.0542
+ Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+negatedName.Otherboolean0.9926any0.0035number0.0015string0.0014true0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isMatchName.Otherboolean0.9185any0.0676number0.0018complex0.0016false0.0014
+.Punctuation
+stateName.Otherany0.8176boolean0.0687complex0.0284Object0.0068string0.0033
+.Punctuation
+negatedName.Otherboolean0.9854any0.0113string0.0015number0.0007complex0.0002
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isMatchName.Otherboolean0.8564any0.1212false0.0040number0.0030complex0.0025
+.Punctuation
+stateName.Otherany0.7944boolean0.0637complex0.0163string0.0068RegExp0.0053
+.Punctuation
+negatedExtglobName.Otherany0.4923boolean0.3554string0.1164number0.0247void0.0024
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+negatedName.Otherboolean0.9918any0.0031string0.0022number0.0012false0.0002
+)Punctuation
+ Text.Whitespace
+negativesName.Othernumber0.9455any0.0368boolean0.0104string0.0052void0.0006
+++Operator
+;Punctuation
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+itemName.Otherany0.5233string0.4379boolean0.0111number0.0075T0.0041
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+listName.Otherany[]0.2775any0.2476string[]0.1122number[]0.0419List0.0119
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchedName.Otherboolean0.6805any0.0991any[]0.0239number0.0222complex0.0203
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isMatchName.Otherboolean0.9921any0.0042number0.0011complex0.0006void0.0005
+(Punctuation
+itemName.Otherstring0.5087any0.3722number0.0341boolean0.0150T0.0137
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchName.Otherboolean0.5746any0.3410string0.0607number0.0135complex0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negatedName.Otherboolean0.9943any0.0019string0.0009true0.0005false0.0004
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+!Operator
+matched.isMatchName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+matched.isMatchKeyword.Type
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+matchName.Otherany0.8430string0.1086boolean0.0282number0.0039complex0.0024
+)Punctuation
+ Text.Whitespace
+continueKeyword
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+negatedName.Otherboolean0.9928any0.0031string0.0014number0.0006any[]0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+omitName.OtherSet<string>0.1291Set<any>0.0689Date0.0076number[]0.0075Document0.0062
+.Punctuation
+addName.Othervoid0.2017complex0.1555Set<string>0.1477any0.1252boolean0.0756
+(Punctuation
+matchedName.Othercomplex0.1621any0.0200any[]0.0166number[]0.0111Tensor<Rank>0.0109
+.Punctuation
+outputName.Otherstring0.9218any0.0440boolean0.0065number0.0056string[]0.0028
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+omitName.OtherSet<string>0.1027Set<any>0.0718complex0.0417number[]0.0113Tensor<Rank>0.0086
+.Punctuation
+deleteOperator.Word
+(Punctuation
+matchedName.Othercomplex0.3064any0.0299any[]0.0184Tensor<Rank>0.0102Object0.0075
+.Punctuation
+outputName.Otherstring0.9301any0.0356boolean0.0043string[]0.0042number0.0039
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+keepName.OtherT0.2408Set<any>0.1321any0.1261Set<string>0.0695any[]0.0530
+.Punctuation
+addName.Othervoid0.2532Set<any>0.1774Set<string>0.1627any0.1002complex0.0427
+(Punctuation
+matchedName.Othercomplex0.1137any0.0247any[]0.0139Tensor<Rank>0.0132RegExpMatchArray0.0113
+.Punctuation
+outputName.Otherstring0.8963any0.0402number0.0105boolean0.0054string[]0.0038
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.5250boolean0.1503any[]0.0838string0.0452number0.0435
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negativesName.Otherany0.3984string0.3678boolean0.0727number0.0618complex0.0233
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+patternsName.Otherstring[]0.7772any[]0.1186any0.0416number[]0.0245string0.0056
+.Punctuation
+lengthName.Othernumber0.9627any0.0331string0.0017boolean0.0010complex0.0004
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+[Punctuation
+...Punctuation
+itemsName.Otherany[]0.6991number[]0.1180string[]0.0550any0.0429number0.0098
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+...Punctuation
+keepName.Otherany[]0.3526T0.1551any0.0722number[]0.0347{}0.0243
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchesName.Otherany[]0.6596any0.0562string[]0.0412number[]0.0318complex0.0191
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resultName.Otherany[]0.4897any0.2135string[]0.0911number[]0.0421complex0.0278
+.Punctuation
+filterName.Othercomplex0.9481any0.0425v...0.0017boolean0.0007any[]0.0006
+(Punctuation
+itemName.Otherstring0.4655any0.4125complex0.0361boolean0.0270number0.0074
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+omitName.Othercomplex0.1462Set<string>0.1104Set<any>0.1045any0.0438boolean0.0352
+.Punctuation
+hasName.Otherboolean0.9682any0.0233complex0.0023string0.0014{}0.0010
+(Punctuation
+itemName.Otherstring0.5645any0.3966number0.0086T0.0071boolean0.0062
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.2472any[]0.0658complex0.0634number[]0.0253Options0.0225
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+matchesName.Otherany[]0.5270any0.2436string[]0.0680number[]0.0241complex0.0139
+.Punctuation
+lengthName.Othernumber0.7513any0.2440string0.0015boolean0.0012complex0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.1821Options0.0934complex0.0619{}0.0155ConnectionOptions0.0132
+.Punctuation
+failglobName.Otherboolean0.9463any0.0442string0.0031number0.0023complex0.0021
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.5183Error0.3012complex0.0695string0.0428boolean0.0216
+ Text.Whitespace
+newOperator.Wordany0.4396Error0.2497ErrorConstructor0.1195string0.1012boolean0.0203
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999any0.0000Error0.0000complex0.0000any[]0.0000
+(Punctuation
+`Literal.String.Backtick
+No matches found for "Literal.String.Backtick
+${Literal.String.Interpol
+patternsName.Otherstring[]0.7248any[]0.1287any0.0862complex0.0351number[]0.0064
+.Punctuation
+joinName.Otherstring0.9636any0.0305complex0.0018string[]0.0011boolean0.0009
+(Punctuation
+', 'Literal.String.Single
+)Punctuation
+}Literal.String.Interpol
+"Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.OtherOptions0.0681complex0.0426ConnectionOptions0.0386any0.0336any[]0.0091
+.Punctuation
+nonullName.Otherboolean0.9281any0.0494string0.0092complex0.0075number0.0023
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+optionsName.Otherany0.1253Options0.0756complex0.0674ConnectionOptions0.0192any[]0.0171
+.Punctuation
+nullglobName.Otherboolean0.7917any0.1646string0.0206complex0.0126number0.0044
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optionsName.Otherany0.2978Options0.0953complex0.0402any[]0.0163T0.0145
+.Punctuation
+unescapeName.Otherany0.7240string0.1741boolean0.0700number0.0137complex0.0063
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+patternsName.Otherany0.4481string[]0.3385any[]0.1653number[]0.0151complex0.0131
+.Punctuation
+mapName.OtherU[]0.8918any0.0732complex0.0300any[]0.0008boolean0.0004
+(Punctuation
+pName.Otherany0.6873string0.2935boolean0.0030number0.0021any[]0.0019
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+pName.Otherany0.6101string0.3801complex0.0014boolean0.0013number0.0009
+.Punctuation
+replaceName.Othercomplex0.6550any0.3385boolean0.0017string0.0016void0.0007
+(Punctuation
+/\\/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+patternsName.Otherany0.5992string[]0.1991any[]0.0764string0.0677complex0.0270
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+matchesName.Otherany[]0.5321any0.1755complex0.0308number[]0.0291RegExpMatchArray0.0239
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Backwards compatibility\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.8194complex0.0058Path0.0023string0.0019any[]0.0016
+.Punctuation
+matchName.Otherany0.9611string0.0319complex0.0021number0.0011boolean0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+micromatchName.Otherany0.8960string0.0374complex0.0089any[]0.0062void0.0018
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns a matcher function from the given glob `pattern` and `options`.\n * The returned function takes a string to match as its only argument and returns\n * true if the string is a match.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.matcher(pattern[, options]);\n *\n * const isMatch = mm.matcher('*.!(*a)');\n * console.log(isMatch('a.a')); //=> false\n * console.log(isMatch('a.b')); //=> true\n * ```\n * @param {String} `pattern` Glob pattern\n * @param {Object} `options`\n * @return {Function} Returns a matcher function.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.8306complex0.0084Path0.0022any[]0.0018string0.0015
+.Punctuation
+matcherName.Otherany0.8552string0.0807complex0.0094RegExp0.0068boolean0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+patternName.Otherstring0.5761any0.3889RegExp0.0120complex0.0090{}0.0030
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7174complex0.0228Options0.0167any[]0.0089{}0.0088
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.6117void0.0971boolean0.0947complex0.0498string0.0458
+(Punctuation
+patternName.Otherstring0.6328any0.3124RegExp0.0199complex0.0150{}0.0040
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5876complex0.0402Options0.0336any[]0.0155{}0.0120
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if **any** of the given glob `patterns` match the specified `string`.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.isMatch(string, patterns[, options]);\n *\n * console.log(mm.isMatch('a.a', ['b.*', '*.a'])); //=> true\n * console.log(mm.isMatch('a.a', 'b.*')); //=> false\n * ```\n * @param {String} `str` The string to test.\n * @param {String|Array} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `[options]` See available [options](#options).\n * @return {Boolean} Returns true if any patterns match `str`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6052Path0.0036void0.0034complex0.0024Folder0.0020
+.Punctuation
+isMatchName.Otherany0.5931boolean0.3775void0.0167string0.0035complex0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+strName.Otherstring0.6013any0.3943complex0.0020number0.0007boolean0.0005
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.6007string[]0.2461any[]0.0879complex0.0282string0.0197
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7502Options0.0232complex0.0228{}0.0129any[]0.0120
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.5593void0.1884boolean0.1481complex0.0420string0.0126
+(Punctuation
+patternsName.Otherany0.4338string[]0.4036any[]0.0793string0.0476complex0.0207
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4830Options0.0490complex0.0487any[]0.0348number[]0.0144
+)Punctuation
+(Punctuation
+strName.Otherany0.5535string0.4350complex0.0057any[]0.0012number0.0011
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Backwards compatibility\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6579complex0.0130any[]0.0052void0.0040this0.0031
+.Punctuation
+anyName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+micromatchName.Otherany0.8897complex0.0072string0.0017void0.0017any[]0.0015
+.Punctuation
+isMatchName.Otherany0.7183boolean0.2626void0.0101string0.0028complex0.0021
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns a list of strings that _**do not match any**_ of the given `patterns`.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.not(list, patterns[, options]);\n *\n * console.log(mm.not(['a.a', 'b.b', 'c.c'], '*.a'));\n * //=> ['b.b', 'c.c']\n * ```\n * @param {Array} `list` Array of strings to match.\n * @param {String|Array} `patterns` One or more glob pattern to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Array} Returns an array of strings that **do not match** the given patterns.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6812complex0.0072any[]0.0029void0.0028this0.0020
+.Punctuation
+notName.Otherany0.9116void0.0529boolean0.0069string0.0053complex0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+listName.Otherany0.7749any[]0.0753string[]0.0440number[]0.0128string0.0103
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.5822string[]0.2237any[]0.1391string0.0175complex0.0105
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6215{}0.1166any[]0.0213complex0.0178Options0.0093
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+patternsName.Otherany[]0.5176string[]0.2393any0.2017complex0.0095number[]0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9500any0.0452any[]0.0017string0.0006string[]0.0004
+(Punctuation
+patternsName.Otherstring[]0.3413any0.3141any[]0.2695complex0.0440number[]0.0097
+)Punctuation
+.Punctuation
+mapName.OtherU[]0.8452any0.1304complex0.0173any[]0.0007void0.0005
+(Punctuation
+StringName.BuiltinStringConstructor0.9978String0.0011string0.0001any0.0000NumberConstructor0.0000
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.OtherSet<any>0.7025Set<string>0.0421any0.0263any[]0.0140Set<number>0.0123
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2576Set<any>0.1714SetConstructor0.0735boolean0.0436Set<string>0.0391
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9710Set<any>0.0107any0.0094Set<number>0.0004Set<string>0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+itemsName.Otherany[]0.9581any0.0086number[]0.0054any[][]0.0052string[]0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+onResultName.Otherany0.3955void0.2236boolean0.0797Function0.0716string0.0612
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.7662string0.0114boolean0.0102any[]0.0056number0.0047
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.0669Options0.0261ConnectionOptions0.0225T0.0137number[]0.0113
+.Punctuation
+onResultName.Otherany0.5865boolean0.1173void0.1117string0.1049Function0.0472
+)Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2790ConnectionOptions0.0167number[]0.0142T0.0136Logger0.0120
+.Punctuation
+onResultName.Otherany0.5910void0.3383boolean0.0247Function0.0209string0.0117
+(Punctuation
+stateName.Otherany0.6998boolean0.0642string0.0590number0.0318any[]0.0146
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+itemsName.Otherany[]0.8957number[]0.0305any0.0219string[]0.0129T[]0.0040
+.Punctuation
+pushName.Othernumber0.9799any0.0178void0.0005boolean0.0005string0.0004
+(Punctuation
+stateName.Otherany0.6747complex0.0224IState0.0145any[]0.0104void0.0076
+.Punctuation
+outputName.Otherstring0.7336any0.1947number0.0133any[]0.0120boolean0.0061
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchesName.OtherSet<any>0.4720Set<string>0.1328any[]0.1084any0.0620string[]0.0095
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.5059Set<any>0.0886Set<string>0.0442any[]0.0359boolean0.0350
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9697any0.0117Set<any>0.0094Set<string>0.0005Set<number>0.0004
+(Punctuation
+micromatchName.Otherany0.9136complex0.0219any[]0.0114void0.0043string0.0038
+(Punctuation
+listName.Otherany0.6704any[]0.1955string[]0.0391string0.0071number[]0.0066
+,Punctuation
+ Text.Whitespace
+patternsName.Otherstring[]0.4065any[]0.3046any0.1878complex0.0620number[]0.0121
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.2090any[]0.1483{}0.0294complex0.0227Options0.0154
+,Punctuation
+ Text.Whitespace
+onResultName.Otherany0.4993void0.2198string0.1046Function0.0680boolean0.0475
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+itemName.Otherstring0.4931any0.4800complex0.0048number0.0039T0.0035
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+itemsName.Otherany[]0.7069any0.1394number[]0.0224string[]0.0170T[]0.0112
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+matchesName.Othercomplex0.2814any[]0.1731Set<any>0.1346any0.1018Set<string>0.0592
+.Punctuation
+hasName.Otherboolean0.9599any0.0268complex0.0034{}0.0016string0.0015
+(Punctuation
+itemName.Otherstring0.5360any0.4221number0.0052T0.0047complex0.0034
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.OtherSet<any>0.2747any0.2151Set<string>0.0631any[]0.0374{}0.0187
+.Punctuation
+addName.OtherSet<any>0.2320any0.2226Set<string>0.2084void0.1008boolean0.0215
+(Punctuation
+itemName.Otherstring0.5575any0.4150number0.0066T0.0045boolean0.0034
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+...Punctuation
+resultName.Otherany[]0.4546any0.3104string[]0.0339complex0.0250number[]0.0190
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given `string` contains the given pattern. Similar\n * to [.isMatch](#isMatch) but the pattern can match any part of the string.\n *\n * ```js\n * var mm = require('micromatch');\n * // mm.contains(string, pattern[, options]);\n *\n * console.log(mm.contains('aa/bb/cc', '*b'));\n * //=> true\n * console.log(mm.contains('aa/bb/cc', '*d'));\n * //=> false\n * ```\n * @param {String} `str` The string to match.\n * @param {String|Array} `patterns` Glob pattern to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Boolean} Returns true if any of the patterns matches any part of `str`.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6195Path0.0066any[]0.0058complex0.0057Operation0.0054
+.Punctuation
+containsName.Otherany0.8029boolean0.1734string0.0060void0.0059complex0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+strName.Otherstring0.6462any0.3483complex0.0024number0.0007any[]0.0004
+,Punctuation
+ Text.Whitespace
+patternName.Otherstring0.5638any0.3749complex0.0261{}0.0102any[]0.0050
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4322complex0.0410{}0.0217any[]0.0210number0.0201
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+strName.Otherany0.6323string0.3394complex0.0195boolean0.0041number0.0020
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4165complex0.4149boolean0.0438Error0.0332string0.0295
+ Text.Whitespace
+newOperator.Wordany0.4353boolean0.1306complex0.0784Error0.0457string0.0387
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9928ErrorConstructor0.0022complex0.0002BooleanConstructor0.0001NumberConstructor0.0001
+(Punctuation
+`Literal.String.Backtick
+Expected a string: "Literal.String.Backtick
+${Literal.String.Interpol
+utilName.Otherany0.9981complex0.0012string0.0003void0.0002any[]0.0000
+.Punctuation
+inspectName.Otherany0.6635string0.1769complex0.1505void0.0020Promise<string>0.0013
+(Punctuation
+strName.Otherstring0.6577any0.3340complex0.0037any[]0.0007number0.0006
+)Punctuation
+}Literal.String.Interpol
+"Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9997Math0.0000any0.0000ObjectConstructor0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9733boolean0.0125any[]0.0059any0.0043string[]0.0007
+(Punctuation
+patternName.Otherany0.4957string0.2011complex0.1841any[]0.0551{}0.0205
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+patternName.Otherany[]0.5926any0.1105string[]0.0668complex0.0372string0.0277
+.Punctuation
+someName.Otherboolean0.6276complex0.2575any0.0872any[]0.0027number0.0026
+(Punctuation
+pName.Otherany0.8784string0.0571any[]0.0139complex0.0101RegExp0.0058
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+micromatchName.Otherany0.8304complex0.0141any[]0.0102string0.0053RegExp0.0027
+.Punctuation
+containsName.Otherany0.5618boolean0.4125complex0.0128string0.0043void0.0017
+(Punctuation
+strName.Otherstring0.5628any0.4240complex0.0065any[]0.0017number0.0009
+,Punctuation
+ Text.Whitespace
+pName.Otherany0.6807string0.2342any[]0.0326complex0.0237string[]0.0071
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5308any[]0.0841complex0.0568{}0.0409number[]0.0149
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+patternName.Otherany0.5686string0.1724complex0.1665RegExp0.0246{}0.0241
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isEmptyStringName.Otherboolean0.9109any0.0643string0.0111complex0.0080any[]0.0013
+(Punctuation
+strName.Otherstring0.5358any0.4467complex0.0088boolean0.0025number0.0020
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isEmptyStringName.Otherboolean0.9704any0.0136complex0.0072string0.0051number0.0008
+(Punctuation
+patternName.Otherany0.4637string0.4426complex0.0483RegExp0.0091any[]0.0086
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+strName.Otherstring0.5630any0.4176any[]0.0054string[]0.0049complex0.0028
+.Punctuation
+includesName.Otherboolean0.8710any0.0905complex0.0213string0.0098string[]0.0027
+(Punctuation
+patternName.Otherstring0.7397any0.2291complex0.0158RegExp0.0041any[]0.0024
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+strName.Otherstring0.5677any0.4264complex0.0023boolean0.0012number0.0008
+.Punctuation
+startsWithName.Otherboolean0.8146any0.1597complex0.0203string0.0016number0.0011
+(Punctuation
+'./'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+strName.Otherstring0.5304any0.4589complex0.0031boolean0.0022any[]0.0015
+.Punctuation
+sliceName.Otherany0.3255string[]0.2112any[]0.1967string0.1064complex0.0432
+(Punctuation
+2Literal.Number.Float
+)Punctuation
+.Punctuation
+includesName.Otherboolean0.9158any0.0707complex0.0058string0.0035string[]0.0008
+(Punctuation
+patternName.Otherstring0.6214any0.3246complex0.0270RegExp0.0054boolean0.0049
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+micromatchName.Otherany0.7975complex0.0070any[]0.0040Path0.0030T0.0027
+.Punctuation
+isMatchName.Otherany0.5119boolean0.4653complex0.0070void0.0061string0.0033
+(Punctuation
+strName.Otherstring0.6950any0.2981complex0.0029number0.0012boolean0.0006
+,Punctuation
+ Text.Whitespace
+patternName.Otherstring0.5519any0.4001complex0.0203{}0.0075any[]0.0049
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.4040any[]0.1075{}0.0385complex0.0279number[]0.0173
+,Punctuation
+ Text.Whitespace
+containsName.Otherboolean0.9906any0.0050true0.0016number0.0004false0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Filter the keys of the given object with the given `glob` pattern\n * and `options`. Does not attempt to match nested keys. If you need this feature,\n * use [glob-object][] instead.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.matchKeys(object, patterns[, options]);\n *\n * const obj = { aa: 'a', ab: 'b', ac: 'c' };\n * console.log(mm.matchKeys(obj, '*b'));\n * //=> { ab: 'b' }\n * ```\n * @param {Object} `object` The object with keys to filter.\n * @param {String|Array} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Object} Returns an object with only keys that match the given patterns.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.7988any[]0.0045complex0.0037void0.0024this0.0018
+.Punctuation
+matchKeysName.Otherany0.8392void0.0974boolean0.0252complex0.0123string0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+objName.Otherany0.8750Object0.0326{}0.0283object0.0107string0.0103
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.6698any[]0.1641string[]0.1107complex0.0236string0.0139
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7472any[]0.0302{}0.0248complex0.0164number0.0125
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.7768complex0.2100any[]0.0052boolean0.0023{}0.0008
+.Punctuation
+isObjectName.Otherboolean0.9025any0.0541complex0.0336any[]0.0026string0.0011
+(Punctuation
+objName.Otherany0.9628{}0.0109complex0.0064any[]0.0045Object0.0039
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4615complex0.3010Error0.0544{}0.0520boolean0.0333
+ Text.Whitespace
+newOperator.Wordany0.4161{}0.0834boolean0.0828complex0.0786Error0.0417
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9931ErrorConstructor0.0019BooleanConstructor0.0001complex0.0001NumberConstructor0.0001
+(Punctuation
+'Expected the first argument to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+keysName.Otherany0.9261any[]0.0420string[]0.0145string0.0057complex0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+micromatchName.Otherany0.9240complex0.0120any[]0.0083string0.0058void0.0016
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9998any0.0001complex0.0001Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9760any[]0.0112complex0.0042string0.0025any0.0017
+(Punctuation
+objName.Otherany0.6938{}0.1709Object0.0492complex0.0194object0.0190
+)Punctuation
+,Punctuation
+ Text.Whitespace
+patternsName.Otherstring[]0.6998any0.1340any[]0.0968complex0.0302{}0.0197
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5564{}0.1266complex0.0240any[]0.0150Object0.0133
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resName.Other{}0.9000any0.0572any[]0.0121complex0.0052Object0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.6520any0.3332complex0.0090number0.0017{}0.0013
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+keysName.Otherstring[]0.4478any[]0.2725any0.1195complex0.0871{}0.0315
+)Punctuation
+ Text.Whitespace
+resName.Other{}0.7159any0.0855any[]0.0853complex0.0692T0.0060
+[Punctuation
+keyName.Otherstring0.8251any0.1610complex0.0067number0.0030{}0.0010
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.7439{}0.1284Object0.0347T0.0264complex0.0196
+[Punctuation
+keyName.Otherstring0.9188any0.0710complex0.0047number0.0023{}0.0006
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resName.Otherany[]0.4130any0.3591{}0.1279string[]0.0230complex0.0192
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if some of the strings in the given `list` match any of the given glob `patterns`.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.some(list, patterns[, options]);\n *\n * console.log(mm.some(['foo.js', 'bar.js'], ['*.js', '!foo.js']));\n * // true\n * console.log(mm.some(['foo.js'], ['*.js', '!foo.js']));\n * // false\n * ```\n * @param {String|Array} `list` The string or array of strings to test. Returns as soon as the first match is found.\n * @param {String|Array} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Boolean} Returns true if any `patterns` matches any of the strings in `list`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6016any[]0.0165complex0.0095this0.0058string[]0.0030
+.Punctuation
+someName.Otherany0.6295boolean0.2753complex0.0470void0.0127any[]0.0069
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+listName.Otherany0.7318string[]0.0967any[]0.0838string0.0212number[]0.0050
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.5383string[]0.3296any[]0.0947string0.0203complex0.0073
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7895any[]0.0274{}0.0174string0.0105number0.0089
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+itemsName.Otherany[]0.9528any0.0152string[]0.0138number[]0.0045T[]0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.8892any0.1030any[]0.0041string0.0011string[]0.0005
+(Punctuation
+listName.Otherany[]0.3815any0.3184string[]0.1798complex0.0137number[]0.0077
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+patternName.Otherany0.5079string0.4402any[]0.0104complex0.0092{}0.0078
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9650any0.0301any[]0.0021string0.0009string[]0.0003
+(Punctuation
+patternsName.Otherany[]0.3680any0.3601string[]0.1487complex0.0938number[]0.0107
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+isMatchName.Otherboolean0.9778any0.0137number0.0027string0.0022complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherboolean0.8596any0.0598string0.0495complex0.0097number0.0044
+(Punctuation
+StringName.BuiltinStringConstructor0.9990String0.0006string0.0001NumberConstructor0.0000complex0.0000
+(Punctuation
+patternName.Otherstring0.5543any0.3212complex0.0711RegExp0.0122{}0.0110
+)Punctuation
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3640complex0.1393any[]0.0867{}0.0473number[]0.0197
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+itemsName.Otherany[]0.8172string[]0.0460any0.0342number[]0.0236Set<any>0.0058
+.Punctuation
+someName.Otherboolean0.9161complex0.0383any0.0292number0.0035any[]0.0018
+(Punctuation
+itemName.Otherany0.5863string0.2865boolean0.0801number0.0173complex0.0134
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9890any0.0082string0.0009number0.0008complex0.0004
+(Punctuation
+itemName.Otherany0.5366string0.4204number0.0104complex0.0064boolean0.0062
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if every string in the given `list` matches\n * any of the given glob `patterns`.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.every(list, patterns[, options]);\n *\n * console.log(mm.every('foo.js', ['foo.js']));\n * // true\n * console.log(mm.every(['foo.js', 'bar.js'], ['*.js']));\n * // true\n * console.log(mm.every(['foo.js', 'bar.js'], ['*.js', '!foo.js']));\n * // false\n * console.log(mm.every(['foo.js'], ['*.js', '!foo.js']));\n * // false\n * ```\n * @param {String|Array} `list` The string or array of strings to test.\n * @param {String|Array} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Boolean} Returns true if all `patterns` matches all of the strings in `list`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.3357any[]0.0817string[]0.0168complex0.0137number[]0.0064
+.Punctuation
+everyName.Otherboolean0.5185any0.4166complex0.0338void0.0091any[]0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+listName.Otherany0.6222any[]0.2050string[]0.0777string0.0160number[]0.0108
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.4143string[]0.3200any[]0.2038string0.0298complex0.0127
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6063any[]0.0571number0.0182{}0.0154string0.0139
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+itemsName.Otherany[]0.9616any0.0113string[]0.0087number[]0.0050T[]0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.8971any0.0953any[]0.0040string0.0010void0.0005
+(Punctuation
+listName.Otherany[]0.4318any0.2824string[]0.1478complex0.0153number[]0.0090
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+patternName.Otherany0.4830string0.4586any[]0.0127complex0.0109{}0.0069
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9609any0.0346any[]0.0019string0.0009number0.0003
+(Punctuation
+patternsName.Otherany[]0.3897any0.3717complex0.1093string[]0.1009number[]0.0109
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+isMatchName.Otherboolean0.9805any0.0118number0.0028string0.0018complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherboolean0.8704any0.0569string0.0406complex0.0114number0.0042
+(Punctuation
+StringName.BuiltinStringConstructor0.9990String0.0005string0.0000NumberConstructor0.0000complex0.0000
+(Punctuation
+patternName.Otherstring0.5179any0.3497complex0.0821{}0.0112any[]0.0092
+)Punctuation
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4582complex0.1339any[]0.0655{}0.0344number0.0180
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+itemsName.Otherany[]0.7826any0.0915string[]0.0326number[]0.0233complex0.0120
+.Punctuation
+everyName.Otherboolean0.8053any0.0979complex0.0814number0.0038void0.0030
+(Punctuation
+itemName.Otherany0.6362string0.2441boolean0.0746number0.0223complex0.0116
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9873any0.0097number0.0009string0.0008complex0.0004
+(Punctuation
+itemName.Otherany0.6123string0.3471number0.0151boolean0.0070complex0.0056
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if **all** of the given `patterns` match\n * the specified string.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.all(string, patterns[, options]);\n *\n * console.log(mm.all('foo.js', ['foo.js']));\n * // true\n *\n * console.log(mm.all('foo.js', ['*.js', '!foo.js']));\n * // false\n *\n * console.log(mm.all('foo.js', ['*.js', 'foo.js']));\n * // true\n *\n * console.log(mm.all('foo.js', ['*.js', 'f*', '*o*', '*o.js']));\n * // true\n * ```\n * @param {String|Array} `str` The string to test.\n * @param {String|Array} `patterns` One or more glob patterns to use for matching.\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Boolean} Returns true if any patterns match `str`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.7388any[]0.0097complex0.0072Path0.0032void0.0026
+.Punctuation
+allName.Otherany0.8651complex0.0478boolean0.0211void0.0115string0.0105
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+strName.Otherany0.5137string0.4801complex0.0022any[]0.0011number0.0010
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.4591any[]0.3237string[]0.1618complex0.0290string0.0090
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7215any[]0.0477number0.0288complex0.0199{}0.0161
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+strName.Otherany0.7086string0.2587complex0.0244boolean0.0031number0.0019
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.5109complex0.3462boolean0.0315Error0.0246{}0.0230
+ Text.Whitespace
+newOperator.Wordany0.4445boolean0.1074complex0.0613{}0.0523Error0.0442
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9932ErrorConstructor0.0016BooleanConstructor0.0001complex0.0001NumberConstructor0.0001
+(Punctuation
+`Literal.String.Backtick
+Expected a string: "Literal.String.Backtick
+${Literal.String.Interpol
+utilName.Otherany0.9980complex0.0011void0.0004string0.0003any[]0.0001
+.Punctuation
+inspectName.Otherany0.7180complex0.1473string0.1248void0.0032Promise<string>0.0009
+(Punctuation
+strName.Otherstring0.6288any0.3661complex0.0016any[]0.0006number0.0005
+)Punctuation
+}Literal.String.Interpol
+"Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9651any0.0295any[]0.0017string0.0005Promise<any>0.0003
+(Punctuation
+patternsName.Otherany0.4752any[]0.3144complex0.1361string[]0.0459{}0.0055
+)Punctuation
+.Punctuation
+everyName.Otherany0.5227boolean0.2328complex0.2094any[]0.0048void0.0046
+(Punctuation
+pName.Otherany0.8319string0.1177any[]0.0150complex0.0072boolean0.0038
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.5575boolean0.1647string0.0935void0.0748complex0.0380
+(Punctuation
+pName.Otherany0.5403string0.3917complex0.0159any[]0.0150number0.0057
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5124complex0.0533any[]0.0515{}0.0203number0.0199
+)Punctuation
+(Punctuation
+strName.Otherstring0.5241any0.4604complex0.0065number0.0021any[]0.0019
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns an array of matches captured by `pattern` in `string, or `null` if the pattern did not match.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.capture(pattern, string[, options]);\n *\n * console.log(mm.capture('test/*.js', 'test/foo.js'));\n * //=> ['foo']\n * console.log(mm.capture('test/*.js', 'foo/bar.css'));\n * //=> null\n * ```\n * @param {String} `glob` Glob pattern to use for matching.\n * @param {String} `input` String to match\n * @param {Object} `options` See available [options](#options) for changing how matches are performed\n * @return {Array|null} Returns an array of captures if the input matches the glob pattern, otherwise `null`.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.5318any[]0.0064complex0.0060ToolRunner0.0039Path0.0035
+.Punctuation
+captureName.Otherany0.7421boolean0.1611void0.0612string0.0133complex0.0103
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+globName.Otherany0.5719string0.3295any[]0.0362string[]0.0152number0.0142
+,Punctuation
+ Text.Whitespace
+inputName.Otherany0.6825string0.2976number0.0072any[]0.0058complex0.0026
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8334any[]0.0149number0.0128boolean0.0089string0.0075
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+posixName.Otherboolean0.4424any0.3447any[]0.0462number0.0426string0.0405
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+utilsName.Otherany0.8350complex0.1402any[]0.0103string[]0.0030RegExp0.0020
+.Punctuation
+isWindowsName.Otherboolean0.9193any0.0649string0.0037complex0.0035number0.0023
+(Punctuation
+optionsName.Otherany0.4876complex0.1103any[]0.0551{}0.0173number0.0153
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+regexName.Otherany0.5191RegExp0.2930string0.0276boolean0.0160complex0.0158
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherany0.9474complex0.0172string0.0081RegExp0.0076boolean0.0031
+.Punctuation
+makeReName.Otherany0.5085boolean0.2556string0.1303complex0.0563string[]0.0068
+(Punctuation
+StringName.BuiltinStringConstructor0.9984String0.0009string0.0001any0.0000complex0.0000
+(Punctuation
+globName.Otherstring0.5936any0.2089any[]0.0741string[]0.0505complex0.0251
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.3729any[]0.1519{}0.0536complex0.0388number0.0129
+,Punctuation
+ Text.Whitespace
+captureName.Otherboolean0.9961any0.0016true0.0007string0.0005number0.0003
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchName.Otherany0.9597string0.0124RegExpExecArray0.0095number0.0061boolean0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regexName.Otherany0.6371RegExp0.3339string0.0073complex0.0033RegExpExecArray0.0031
+.Punctuation
+execName.Otherany0.6520RegExpExecArray0.2755complex0.0280RegExp0.0042any[]0.0028
+(Punctuation
+posixName.Otherany0.7160boolean0.1334string0.0836number0.0163string[]0.0139
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+utilsName.Otherany0.8675complex0.1259any[]0.0029string0.0009string[]0.0004
+.Punctuation
+toPosixSlashesName.Otherany0.5071string0.2669complex0.0902string[]0.0326boolean0.0304
+(Punctuation
+inputName.Otherstring0.5080any0.4784number0.0055complex0.0037any[]0.0018
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+inputName.Otherany0.5280string0.4492complex0.0064any[]0.0063number0.0055
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+matchName.Otherany0.9163string0.0406RegExpExecArray0.0189boolean0.0077complex0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+matchName.Otherany0.8527string0.0657RegExpExecArray0.0415any[]0.0126string[]0.0052
+.Punctuation
+sliceName.Otherany[]0.3381any0.3315string[]0.2294string0.0241complex0.0237
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+.Punctuation
+mapName.OtherU[]0.8292any0.1413complex0.0190void0.0021any[]0.0014
+(Punctuation
+vName.Otherany0.7831string0.1287boolean0.0523number0.0251complex0.0017
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+vName.Otherany0.8573string0.0754number0.0426boolean0.0193void0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+voidOperator.Word
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+vName.Otherany0.7428string0.2167number0.0188boolean0.0064void0.0041
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Create a regular expression from the given glob `pattern`.\n *\n * ```js\n * const mm = require('micromatch');\n * // mm.makeRe(pattern[, options]);\n *\n * console.log(mm.makeRe('*.js'));\n * //=> /^(?:(\.[\\\/])?(?!\.)(?=.)[^\/]*?\.js)$/\n * ```\n * @param {String} `pattern` A glob pattern to convert to regex.\n * @param {Object} `options`\n * @return {RegExp} Returns a regex created from the given pattern.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.4977complex0.0072void0.0071any[]0.0058this0.0050
+.Punctuation
+makeReName.Otherany0.8818string0.0486void0.0307boolean0.0195complex0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9520any0.0345string[]0.0054complex0.0015number[]0.0008
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.8576any[]0.0208complex0.0105{}0.0036void0.0025
+.Punctuation
+makeReName.Otherany0.6705boolean0.0840string0.0796void0.0729complex0.0249
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9743any0.0125string[]0.0093complex0.0006number[]0.0005
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Scan a glob pattern to separate the pattern into segments. Used\n * by the [split](#split) method.\n *\n * ```js\n * const mm = require('micromatch');\n * const state = mm.scan(pattern[, options]);\n * ```\n * @param {String} `pattern`\n * @param {Object} `options`\n * @return {Object} Returns an object with\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6335any[]0.0137complex0.0045this0.0038void0.0038
+.Punctuation
+scanName.Otherany0.8459complex0.0556any[]0.0284void0.0159string0.0075
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9221any0.0606string[]0.0084complex0.0013number[]0.0008
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.9248any[]0.0167void0.0040complex0.0024string[]0.0018
+.Punctuation
+scanName.Otherany0.7184complex0.1052void0.0676any[]0.0368string0.0039
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9784any0.0094string[]0.0089complex0.0007number[]0.0006
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Parse a glob pattern to create the source string for a regular\n * expression.\n *\n * ```js\n * const mm = require('micromatch');\n * const state = mm.parse(pattern[, options]);\n * ```\n * @param {String} `glob`\n * @param {Object} `options`\n * @return {Object} Returns an object with useful properties and output to be used as regex source string.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.6165any[]0.0117this0.0036void0.0031complex0.0021
+.Punctuation
+parseName.Otherany0.8982string0.0104void0.0090boolean0.0076any[]0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+patternsName.Otherany0.7472string[]0.1035any[]0.0971string0.0389complex0.0075
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6083any[]0.0642{}0.0200string0.0110complex0.0104
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resName.Otherany[]0.9845any0.0073string[]0.0020complex0.0011number[]0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+patternName.Otherstring0.5413any0.4280any[]0.0108complex0.0057string[]0.0041
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.9501any0.0428any[]0.0046string0.0005void0.0004
+(Punctuation
+patternsName.Otherany[]0.4694any0.3247string[]0.1735complex0.0207number[]0.0020
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+strName.Otherstring0.5421any0.4481complex0.0041any[]0.0016number0.0013
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+bracesName.Otherany0.3231string0.2200any[]0.1888complex0.1129string[]0.0654
+(Punctuation
+StringName.BuiltinStringConstructor0.9979String0.0008string0.0001any[]0.0001complex0.0000
+(Punctuation
+patternName.Otherstring0.5845any0.3431complex0.0415any[]0.0096{}0.0074
+)Punctuation
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5742any[]0.1087complex0.0554{}0.0241number0.0168
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resName.Otherany[]0.9501any0.0115string[]0.0111number[]0.0036{}0.0033
+.Punctuation
+pushName.Othernumber0.9725any0.0236void0.0009boolean0.0007string0.0007
+(Punctuation
+picomatchName.Otherany0.9726string0.0054complex0.0023any[]0.0014{}0.0006
+.Punctuation
+parseName.Otherany0.8703string0.0302any[]0.0094number0.0093boolean0.0086
+(Punctuation
+strName.Otherstring0.8016any0.1922complex0.0017number0.0016any[]0.0009
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6255any[]0.0488{}0.0305number0.0178complex0.0169
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resName.Otherany[]0.6684any0.2088{}0.0598complex0.0165string[]0.0063
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Process the given brace `pattern`.\n *\n * ```js\n * const { braces } = require('micromatch');\n * console.log(braces('foo/{a,b,c}/bar'));\n * //=> [ 'foo/(a|b|c)/bar' ]\n *\n * console.log(braces('foo/{a,b,c}/bar', { expand: true }));\n * //=> [ 'foo/a/bar', 'foo/b/bar', 'foo/c/bar' ]\n * ```\n * @param {String} `pattern` String with brace pattern to process.\n * @param {Object} `options` Any [options](#options) to change how expansion is performed. See the [braces][] library for all available options.\n * @return {Array}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.7394any[]0.0042this0.0035complex0.0032Path0.0019
+.Punctuation
+bracesName.Otherany0.9094void0.0215boolean0.0205string0.0153complex0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+patternName.Otherstring0.6241any0.3321complex0.0169{}0.0061any[]0.0039
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5634any[]0.0457complex0.0342{}0.0261number0.0206
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+patternName.Otherstring0.4406any0.3708complex0.0828RegExp0.0386{}0.0309
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4321complex0.3770{}0.0485boolean0.0388string0.0369
+ Text.Whitespace
+newOperator.Wordany0.4588boolean0.1691complex0.0939{}0.0564string0.0367
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9905ErrorConstructor0.0021complex0.0002BooleanConstructor0.0001NumberConstructor0.0001
+(Punctuation
+'Expected a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+optionsName.Otherany0.3324complex0.1571any[]0.0575{}0.0208Options0.0170
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.2711complex0.2547any[]0.0339Options0.0203{}0.0132
+.Punctuation
+nobraceName.Otherboolean0.4507any0.3707complex0.1392string0.0245any[]0.0033
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+/\{.*\}/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9836complex0.0090any0.0023string0.0011true0.0005
+(Punctuation
+patternName.Otherstring0.6603any0.3043complex0.0161any[]0.0044{}0.0033
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+patternName.Otherstring0.9009any0.0849complex0.0068number0.0018{}0.0015
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+bracesName.Otherany0.5046complex0.1327string0.1224any[]0.0645boolean0.0387
+(Punctuation
+patternName.Otherstring0.6788any0.2082complex0.0389RegExp0.0282{}0.0107
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5574complex0.0531any[]0.0315{}0.0224Options0.0107
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expand braces\n */Comment.Multiline
+\n\nText.Whitespace
+micromatchName.Otherany0.7016complex0.0060any[]0.0046Path0.0024this0.0020
+.Punctuation
+braceExpandName.Otherany0.9049boolean0.0293void0.0198string0.0170complex0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+patternName.Otherstring0.7014any0.2618complex0.0131{}0.0056RegExp0.0043
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5780complex0.0327{}0.0318any[]0.0307string0.0130
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+patternName.Otherstring0.5184any0.3150complex0.0782{}0.0291RegExp0.0258
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4086complex0.3543{}0.0564string0.0450boolean0.0437
+ Text.Whitespace
+newOperator.Wordany0.4626boolean0.1500complex0.0817{}0.0509string0.0426
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9915ErrorConstructor0.0016BooleanConstructor0.0001NumberConstructor0.0001undefined0.0001
+(Punctuation
+'Expected a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+micromatchName.Otherany0.7457complex0.0092any[]0.0058string0.0040T0.0036
+.Punctuation
+bracesName.Otherany0.7561string0.0935complex0.0795boolean0.0200any[]0.0094
+(Punctuation
+patternName.Otherstring0.6618any0.2789complex0.0205{}0.0118any[]0.0063
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.3377any[]0.1108{}0.0575complex0.0281Options0.0101
+,Punctuation
+ Text.Whitespace
+expandName.Otherboolean0.9933true0.0030false0.0012any0.0009any[]0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expose micromatch\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+micromatchName.Otherany0.9406complex0.0185string0.0107any[]0.0063void0.0043
+;Punctuation
+\nText.Whitespace

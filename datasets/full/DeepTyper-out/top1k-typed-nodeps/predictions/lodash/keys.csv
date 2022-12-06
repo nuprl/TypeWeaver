@@ -1,0 +1,62 @@
+importKeyword
+ Text.Whitespace
+arrayLikeKeysName.Otherany0.7454complex0.0854string0.0325string[]0.0113boolean0.0102
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/arrayLikeKeys.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeName.Otherany0.5823complex0.3859any[]0.0042string0.0033void0.0028
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLike.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an array of the own enumerable property names of `object`.\n *\n * **Note:** Non-object values are coerced to objects. See the\n * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)\n * for more details.\n *\n * @since 0.1.0\n * @category Object\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n * @see values, valuesIn\n * @example\n *\n * function Foo() {\n *   this.a = 1\n *   this.b = 2\n * }\n *\n * Foo.prototype.c = 3\n *\n * keys(new Foo)\n * // => ['a', 'b'] (iteration order is not guaranteed)\n *\n * keys('hi')\n * // => ['0', '1']\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+keysName.Otherstring[]0.6150any0.2423any[]0.0612string0.0388complex0.0049
+(Punctuation
+objectName.Otherany0.9228string0.0379object0.0148Object0.0104number0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isArrayLikeName.Otherany0.8733complex0.0925string0.0068boolean0.0059object0.0049
+(Punctuation
+objectName.Otherany0.7429Object0.1416object0.0606string0.0218complex0.0080
+)Punctuation
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+arrayLikeKeysName.Otherany0.7201string0.0676complex0.0440boolean0.0423object0.0331
+(Punctuation
+objectName.Otherany0.5760Object0.2650object0.0792string0.0415complex0.0076
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor1.0000Object0.0000any0.0000complex0.0000ArrayConstructor0.0000
+.Punctuation
+keysName.Otherstring[]0.9463any[]0.0115any0.0099complex0.0095string0.0062
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997Object0.0002any0.0000complex0.0000void0.0000
+(Punctuation
+objectName.Otherany0.4957Object0.3108object0.1328complex0.0121string0.0119
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+keysName.Otherstring[]0.7946any0.0566any[]0.0314complex0.0203string0.0094
+\nText.Whitespace

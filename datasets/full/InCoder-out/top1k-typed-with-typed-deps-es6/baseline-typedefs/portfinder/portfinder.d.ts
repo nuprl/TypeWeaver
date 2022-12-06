@@ -1,0 +1,12 @@
+export declare const basePort = 8000;
+export declare const setBasePort: (port: number) => void;
+export declare const highestPort = 65535;
+export declare const setHighestPort: (port: number) => void;
+export declare const basePath = "/tmp/portfinder";
+export declare const getPort: (options: any, callback: any) => any;
+export declare const getPortPromise: (options: ny) => Promise<unknown>;
+export declare const getPorts: (count: number, options: any, callback: Function) => void;
+export declare const getSocket: (options: any, callback: any) => void;
+export declare const nextPort: (port: number) => number;
+export declare const nextSocket: (socketPath: any) => string;
+export declare const _defaultHosts: string[];

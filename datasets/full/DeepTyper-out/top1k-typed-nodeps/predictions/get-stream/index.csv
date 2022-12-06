@@ -1,0 +1,455 @@
+'use strict'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+constantsName.Otherany0.8988string0.0548complex0.0206number0.0050Promise<any>0.0022
+:Operator
+ Text.Whitespace
+BufferConstantsKeyword.Typeany0.8468string0.0799complex0.0162number0.0122void0.0089
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'buffer'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+streamName.Otherany0.9860string0.0013complex0.0006number0.0005Promise<void>0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'stream'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+promisifyName.Otherany0.9546string0.0184Promise<any>0.0039T0.0038void0.0038
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'util'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bufferStreamName.Otherany0.9856void0.0021string0.0016Promise<any>0.0014Function0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./buffer-stream'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+streamPipelinePromisifiedName.Otherany0.9507Promise<any>0.0166Promise<void>0.0073string0.0065void0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+promisifyName.Otherany0.9679T0.0085Promise<any>0.0063string0.0033{}0.0026
+(Punctuation
+streamName.Otherany0.9935complex0.0021string0.0003any[]0.0002Promise<void>0.0001
+.Punctuation
+pipelineName.Otherany0.9873complex0.0042string0.0038void0.0013{}0.0005
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+MaxBufferErrorName.Otherany0.9966string0.0008void0.0005complex0.0005number0.0003
+ Text.Whitespace
+extendsKeyword
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9998Error0.0001any0.0000LogLevel.Error0.0000complex0.0000
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+superKeyword
+(Punctuation
+'maxBuffer exceeded'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+nameName.Otherstring0.9824any0.0149number0.0004RegExp0.0002string[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'MaxBufferError'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+asyncKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getStreamName.OtherPromise0.1094Promise<void>0.0462Promise<{}>0.0214Promise<any>0.0082Promise<string>0.0072
+(Punctuation
+inputStreamName.Otherany0.1126string0.0268number0.0227Buffer0.0130object0.0087
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2289Options0.0938number0.0110object0.0090ConnectionOptions0.0085
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+inputStreamName.Otherany0.6326string0.1224number0.0589boolean0.0153object0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+throwKeywordError0.7787any0.1649ErrorConstructor0.0080complex0.0053string0.0053
+ Text.Whitespace
+newOperator.WordErrorConstructor0.4291Error0.3453any0.1671string0.0139complex0.0029
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+'Expected a stream'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+optionsName.Otherany0.4193complex0.3225Options0.0242Promise<any>0.0090ConnectionOptions0.0078
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+maxBufferName.Othernumber0.9620any0.0248string0.0034boolean0.0026Object0.0005
+:Operator
+ Text.Whitespace
+InfinityKeyword.Typenumber0.9845any0.0079string0.0042boolean0.0009complex0.0007
+,Punctuation
+\n\t\tText.Whitespace
+...Punctuation
+optionsName.Otherany0.2752Options0.0513complex0.0485any[]0.0172{}0.0137
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+maxBufferName.Otherany0.5554number0.2526string0.0550complex0.0350string[]0.0186
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4986complex0.0992Options0.0326number0.0181Config0.0112
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+streamName.Otherany0.7600complex0.0164Promise<any>0.0128Promise<void>0.0105number0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bufferStreamName.Otherany0.6501Promise<any>0.1046Promise<void>0.0408string0.0236number0.0214
+(Punctuation
+optionsName.Otherany0.2127Options0.1037complex0.0319{}0.0208Config0.0191
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+awaitKeyword
+ Text.Whitespace
+newOperator.Wordany0.2538Promise<{}>0.2519PromiseConstructor0.0661Promise<any>0.0540Promise<void>0.0462
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9980any0.0013Promise<any>0.0002Promise<{}>0.0001complex0.0001
+(Punctuation
+(Punctuation
+resolveName.Othervoid0.9572any0.0271complex0.0047Promise<void>0.0020Function0.0020
+,Punctuation
+ Text.Whitespace
+rejectName.Othervoid0.9659any0.0242complex0.0021Function0.0018Promise<void>0.0011
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rejectPromiseName.Otherany0.8401void0.0839string0.0159Promise<void>0.0072complex0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errorName.Otherany0.9101Error0.0550string0.0132complex0.0039{}0.0011
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+// Don't retrieve an oversized buffer.Comment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9052Error0.0458string0.0136boolean0.0111complex0.0107
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+streamName.Otherany0.9566number0.0036string0.0031complex0.0026boolean0.0016
+.Punctuation
+getBufferedLengthName.Otherany0.8006number0.0654boolean0.0549string0.0242complex0.0110
+(Punctuation
+)Punctuation
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+BufferConstantsName.Otherany0.9546complex0.0191number0.0043string0.0020Error0.0014
+.Punctuation
+MAX_LENGTHName.Otherany0.5244number0.3194string0.0992boolean0.0234void0.0151
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+errorName.Otherany0.9065Error0.0344complex0.0085string0.0020Logger0.0010
+.Punctuation
+bufferedDataName.Otherany0.9619string0.0183number0.0049boolean0.0026complex0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+streamName.Otherany0.9751complex0.0032string0.0019number0.0010Promise<void>0.0005
+.Punctuation
+getBufferedValueName.Otherany0.8691string0.0399number0.0248Promise<void>0.0144void0.0063
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+rejectName.Othervoid0.9617any0.0232Promise<void>0.0074complex0.0014Function0.0009
+(Punctuation
+errorName.Otherany0.6546Error0.2979string0.0240{}0.0016complex0.0015
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+(Punctuation
+asyncKeyword
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+awaitKeyword
+ Text.Whitespace
+streamPipelinePromisifiedName.Otherany0.3546Promise<void>0.3428Promise<any>0.1293complex0.0536void0.0218
+(Punctuation
+inputStreamName.Otherany0.4501string0.0575number0.0410string[]0.0182any[]0.0146
+,Punctuation
+ Text.Whitespace
+streamName.Otherany0.8402string0.0095complex0.0068number0.0039ViewBase0.0021
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+resolveName.Othervoid0.8806any0.0990Function0.0060complex0.0056Promise<void>0.0030
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9966string0.0014Error0.0012number0.0003complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+rejectPromiseName.Otherany0.4701void0.4695Promise<void>0.0188Function0.0075complex0.0051
+(Punctuation
+errorName.Otherany0.9412Error0.0404string0.0127number0.0010complex0.0008
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+streamName.Otherany0.9894string0.0009number0.0006complex0.0005Function0.0002
+.Punctuation
+onName.Otherany0.9386complex0.0294EventEmitter0.0037void0.0036Promise<any>0.0008
+(Punctuation
+'data'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+streamName.Otherany0.8565string0.0034complex0.0028number0.0025Logger0.0013
+.Punctuation
+getBufferedLengthName.Otherany0.7827number0.0489boolean0.0439string0.0320void0.0113
+(Punctuation
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+maxBufferName.Othernumber0.4574any0.4470void0.0257string0.0192boolean0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+rejectPromiseName.Otherany0.5534void0.3639complex0.0181Promise<void>0.0131string0.0104
+(Punctuation
+newOperator.Wordany0.6843string0.1047Error0.0336complex0.0201{}0.0183
+ Text.Whitespace
+MaxBufferErrorName.Otherany0.9837string0.0055void0.0023complex0.0021Error0.0009
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+streamName.Otherany0.8105complex0.0076Promise<void>0.0047number0.0028string0.0024
+.Punctuation
+getBufferedValueName.Otherany0.6118Promise<void>0.1976Promise<any>0.0335void0.0240number0.0186
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getStreamName.Otherany0.1386string0.0172SinonSpy0.0075symbol0.0060complex0.0054
+;Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.bufferName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+streamName.Otherany0.5994string0.0120SocketStream0.0030number0.0028List0.0024
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5719Options0.0235complex0.0067ConnectionOptions0.0059number0.0044
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+getStreamName.Otherany0.2577string0.0082complex0.0065Buffer0.0055URI0.0042
+(Punctuation
+streamName.Otherany0.6744string0.0123complex0.0083SocketStream0.0028number0.0026
+,Punctuation
+ Text.Whitespace
+{Punctuation
+...Punctuation
+optionsName.Otherany0.2582ConnectionOptions0.0260Options0.0236complex0.0225{}0.0084
+,Punctuation
+ Text.Whitespace
+encodingName.Otherstring0.9870any0.0052RegExp0.0037number0.0004string[]0.0003
+:Operator
+ Text.Whitespace
+'buffer'Literal.String.Single
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.arrayName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+streamName.Otherany0.7080string0.0065number0.0021Stream<number>0.0019Stream<string>0.0017
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5772Options0.0256complex0.0069ConnectionOptions0.0059symbol0.0053
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+getStreamName.Otherany0.1373ViewBase0.0057complex0.0054Buffer0.0053URI0.0044
+(Punctuation
+streamName.Otherany0.5219string0.0099complex0.0098number0.0040SocketStream0.0033
+,Punctuation
+ Text.Whitespace
+{Punctuation
+...Punctuation
+optionsName.Otherany0.1730Options0.0240complex0.0165{}0.0129ConnectionOptions0.0090
+,Punctuation
+ Text.Whitespace
+arrayName.Otherboolean0.9830true0.0088false0.0021any0.0014Boolean0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.MaxBufferErrorName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MaxBufferErrorName.Otherany0.6953string0.0424number0.0183complex0.0136void0.0093
+;Punctuation
+\nText.Whitespace

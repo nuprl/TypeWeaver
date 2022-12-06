@@ -1,0 +1,10 @@
+declare var assert: any;
+declare var Stream: any;
+declare var util: any;
+declare var UUID_REGEXP: string;
+declare function _capitalize(str: string): string;
+declare function _toss(name: string, expected: string, oper: string, arg: any, actual: string): void;
+declare function _getClass(arg: any): any;
+declare function noop(): void;
+declare var types: any;
+declare function _setExports(ndebug: string): void;

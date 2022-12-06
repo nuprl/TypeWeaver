@@ -1,0 +1,69 @@
+benchmark/code/lib-typeof.ts(20,5): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/regex-exec.ts(3,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/regex-exec.ts(3,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
+benchmark/code/regex-replace.ts(3,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/regex-replace.ts(3,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
+benchmark/code/slice-switch.ts(1,37): error TS2304: Cannot find name 'mixed'.
+benchmark/code/slice-switch.ts(1,37): error TS4078: Parameter 'val' of exported function has or is using private name 'mixed'.
+benchmark/code/switch.ts(46,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(47,10): error TS2678: Type '"[object Arguments]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(49,10): error TS2678: Type '"[object RegExp]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(50,10): error TS2678: Type '"[object Date]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(51,10): error TS2678: Type '"[object Error]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(52,10): error TS2678: Type '"[object Promise]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(56,10): error TS2678: Type '"[object Set]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(57,10): error TS2678: Type '"[object Map]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(58,10): error TS2678: Type '"[object WeakSet]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(59,10): error TS2678: Type '"[object WeakMap]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(60,10): error TS2678: Type '"[object Symbol]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(63,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(64,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(65,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(66,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(69,10): error TS2678: Type '"[object Int16Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(70,10): error TS2678: Type '"[object Uint16Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(73,10): error TS2678: Type '"[object Int32Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(74,10): error TS2678: Type '"[object Uint32Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(75,10): error TS2678: Type '"[object Float32Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(76,10): error TS2678: Type '"[object Float64Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(79,10): error TS2678: Type '"[object Int8Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(80,10): error TS2678: Type '"[object Uint8Array]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(81,10): error TS2678: Type '"[object Uint8ClampedArray]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(101,21): error TS2339: Property 'throw' does not exist on type 'unknown'.
+benchmark/code/switch.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
+benchmark/code/switch.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
+benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(5,19): error TS2307: Cannot find module 'write' or its corresponding type declarations.
+benchmark/index.ts(11,25): error TS2304: Cannot find name 'Stats'.
+browser.ts(2,3): error TS1258: A default export must be at the top level of a file or module declaration.
+browser.ts(3,17): error TS2304: Cannot find name 'define'.
+browser.ts(3,38): error TS2304: Cannot find name 'define'.
+browser.ts(3,50): error TS2304: Cannot find name 'define'.
+browser.ts(3,276): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(3,404): error TS2554: Expected 1 arguments, but got 2.
+browser.ts(3,424): error TS2554: Expected 1 arguments, but got 2.
+browser.ts(3,483): error TS2339: Property 'code' does not exist on type 'Error'.
+browser.ts(3,594): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(3,709): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(6,3): error TS1184: Modifiers cannot appear here.
+browser.ts(16,14): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(59,12): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(61,12): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(62,12): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(63,12): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(64,12): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(104,23): error TS2339: Property 'throw' does not exist on type 'unknown'.
+browser.ts(105,21): error TS2339: Property 'return' does not exist on type 'unknown'.
+browser.ts(106,21): error TS2339: Property 'next' does not exist on type 'unknown'.
+browser.ts(111,22): error TS2339: Property 'length' does not exist on type 'unknown'.
+browser.ts(111,56): error TS2339: Property 'callee' does not exist on type 'unknown'.
+index.ts(13,12): error TS2554: Expected 2 arguments, but got 1.
+index.ts(56,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+index.ts(58,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+index.ts(59,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+index.ts(60,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+index.ts(61,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+index.ts(101,21): error TS2339: Property 'throw' does not exist on type 'unknown'.
+index.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
+index.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
+

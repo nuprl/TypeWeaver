@@ -1,0 +1,243 @@
+lib/AsyncParallelBailHook.ts(13,44): error TS2339: Property 'options' does not exist on type 'AsyncParallelBailHookCodeFactory'.
+lib/AsyncParallelBailHook.ts(50,4): error TS2322: Type '(i: any, run: any, done: any, doneBreak: any) => string' is not assignable to type '(i: any, run: any) => any'.
+lib/AsyncParallelBailHook.ts(67,7): error TS2740: Type 'AsyncParallelBailHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncParallelBailHook.ts(67,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncParallelBailHook.ts(70,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncParallelBailHook.ts(71,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncParallelBailHook.ts(74,32): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/AsyncParallelBailHook.ts(75,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/AsyncParallelBailHook.ts(77,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncParallelBailHook.ts(78,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncParallelBailHook.ts(79,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/AsyncParallelHook.ts(12,32): error TS2345: Argument of type '{ onError: (i: any, err: any, done: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; onTap?: (i: any, run: any) => any; }'.
+  Type '{ onError: (i: any, err: any, done: any, doneBreak: any) => any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; onTap?: (i: any, run: any) => any; }': onResult, rethrowIfPossible
+lib/AsyncParallelHook.ts(19,7): error TS2740: Type 'AsyncParallelHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncParallelHook.ts(19,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncParallelHook.ts(22,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncParallelHook.ts(23,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncParallelHook.ts(26,28): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/AsyncParallelHook.ts(27,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/AsyncParallelHook.ts(29,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncParallelHook.ts(30,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncParallelHook.ts(31,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/AsyncSeriesBailHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onResult: (i: any, result: any, next: any) => string; resultReturns: any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onResult: (i: any, result: any, next: any) => string; resultReturns: any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': doneReturns, rethrowIfPossible
+lib/AsyncSeriesBailHook.ts(24,7): error TS2740: Type 'AsyncSeriesBailHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncSeriesBailHook.ts(24,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesBailHook.ts(27,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncSeriesBailHook.ts(28,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncSeriesBailHook.ts(31,30): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/AsyncSeriesBailHook.ts(32,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/AsyncSeriesBailHook.ts(34,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncSeriesBailHook.ts(35,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncSeriesBailHook.ts(36,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/AsyncSeriesHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': onResult, resultReturns, doneReturns, rethrowIfPossible
+lib/AsyncSeriesHook.ts(19,7): error TS2740: Type 'AsyncSeriesHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncSeriesHook.ts(19,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesHook.ts(22,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncSeriesHook.ts(23,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncSeriesHook.ts(26,26): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/AsyncSeriesHook.ts(27,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/AsyncSeriesHook.ts(29,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncSeriesHook.ts(30,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncSeriesHook.ts(31,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/AsyncSeriesLoopHook.ts(12,31): error TS2345: Argument of type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onDone: any; rethrowIfPossible: any; }'.
+  Property 'rethrowIfPossible' is missing in type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onDone: any; }' but required in type '{ onError: any; onDone: any; rethrowIfPossible: any; }'.
+lib/AsyncSeriesLoopHook.ts(19,7): error TS2740: Type 'AsyncSeriesLoopHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncSeriesLoopHook.ts(19,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesLoopHook.ts(22,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncSeriesLoopHook.ts(23,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncSeriesLoopHook.ts(26,30): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/AsyncSeriesLoopHook.ts(27,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/AsyncSeriesLoopHook.ts(29,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncSeriesLoopHook.ts(30,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncSeriesLoopHook.ts(31,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/AsyncSeriesWaterfallHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: any, err: any, next: any, doneBreak: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns, rethrowIfPossible
+lib/AsyncSeriesWaterfallHook.ts(17,21): error TS2551: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/AsyncSeriesWaterfallHook.ts(22,32): error TS2551: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/AsyncSeriesWaterfallHook.ts(27,7): error TS2740: Type 'AsyncSeriesWaterfallHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/AsyncSeriesWaterfallHook.ts(27,23): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesWaterfallHook.ts(30,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/AsyncSeriesWaterfallHook.ts(31,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/AsyncSeriesWaterfallHook.ts(39,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/AsyncSeriesWaterfallHook.ts(40,7): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/AsyncSeriesWaterfallHook.ts(41,7): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/Hook.ts(27,8): error TS2339: Property '_args' does not exist on type 'Hook'.
+lib/Hook.ts(28,8): error TS2339: Property 'name' does not exist on type 'Hook'.
+lib/Hook.ts(29,8): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(30,8): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(31,8): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/Hook.ts(32,8): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/Hook.ts(33,8): error TS2339: Property '_callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(34,8): error TS2339: Property 'callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(35,8): error TS2339: Property '_promise' does not exist on type 'Hook'.
+lib/Hook.ts(36,8): error TS2339: Property 'promise' does not exist on type 'Hook'.
+lib/Hook.ts(37,8): error TS2339: Property '_x' does not exist on type 'Hook'.
+lib/Hook.ts(51,15): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(52,23): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(53,15): error TS2339: Property '_args' does not exist on type 'Hook'.
+lib/Hook.ts(90,34): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(106,15): error TS2339: Property 'name' does not exist on type 'Hook'.
+lib/Hook.ts(117,15): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(117,39): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(122,8): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(124,29): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(125,10): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(125,46): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(131,8): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/Hook.ts(131,20): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/Hook.ts(132,8): error TS2339: Property 'callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(132,25): error TS2339: Property '_callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(133,8): error TS2339: Property 'promise' does not exist on type 'Hook'.
+lib/Hook.ts(133,23): error TS2339: Property '_promise' does not exist on type 'Hook'.
+lib/Hook.ts(138,15): error TS2314: Generic type 'Set<T>' requires 1 type argument(s).
+lib/Hook.ts(148,24): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(151,27): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(152,9): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(153,29): error TS2339: Property 'stage' does not exist on type 'object'.
+lib/Hook.ts(155,22): error TS2339: Property 'name' does not exist on type 'object'.
+lib/Hook.ts(156,22): error TS2339: Property 'name' does not exist on type 'object'.
+lib/Hook.ts(169,8): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/HookCodeFactory.ts(9,8): error TS2339: Property 'config' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(10,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(11,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(17,16): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(34,16): error TS2345: Argument of type '{ after: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'before' is missing in type '{ after: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(83,51): error TS2339: Property 'fn' does not exist on type 'object'.
+lib/HookCodeFactory.ts(90,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(91,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(95,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(96,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(100,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(105,29): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(106,38): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(107,21): error TS2339: Property 'call' does not exist on type 'object'.
+lib/HookCodeFactory.ts(108,58): error TS2345: Argument of type '{ before: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(109,27): error TS2339: Property 'context' does not exist on type 'object'.
+lib/HookCodeFactory.ts(113,17): error TS2339: Property 'content' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(119,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(120,42): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(121,25): error TS2339: Property 'error' does not exist on type 'object'.
+lib/HookCodeFactory.ts(132,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(133,28): error TS2304: Cannot find name 'Hook'.
+lib/HookCodeFactory.ts(133,40): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(145,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(146,42): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(147,25): error TS2339: Property 'done' does not exist on type 'object'.
+lib/HookCodeFactory.ts(158,16): error TS2339: Property 'content' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(170,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(178,26): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(185,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(186,29): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(198,20): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(206,67): error TS2345: Argument of type '{ before: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(210,42): error TS2345: Argument of type '{ before: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(254,67): error TS2345: Argument of type '{ before: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(284,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(285,27): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(290,21): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(294,11): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(325,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(326,25): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(335,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(336,29): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(338,57): error TS2345: Argument of type '{ before: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(343,31): error TS2345: Argument of type '{ onError: any; onResult: (i: any, result: any, next: any, doneBreak: any) => string; onDone: () => string; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: any; onResult: (i: any, result: any, next: any, doneBreak: any) => string; onDone: () => string; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns
+lib/HookCodeFactory.ts(383,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(384,31): error TS2345: Argument of type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns
+lib/HookCodeFactory.ts(393,34): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(399,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(436,5): error TS2554: Expected 2 arguments, but got 4.
+lib/HookCodeFactory.ts(444,9): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/HookCodeFactory.ts(444,17): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/HookCodeFactory.ts(445,22): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookMap.ts(9,54): error TS2304: Cannot find name 'Hook'.
+lib/HookMap.ts(13,8): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(14,8): error TS2339: Property 'name' does not exist on type 'HookMap'.
+lib/HookMap.ts(15,8): error TS2339: Property '_factory' does not exist on type 'HookMap'.
+lib/HookMap.ts(16,8): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(20,15): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(24,15): error TS2304: Cannot find name 'Hook'.
+lib/HookMap.ts(28,16): error TS2304: Cannot find name 'Hook'.
+lib/HookMap.ts(28,28): error TS2339: Property '_factory' does not exist on type 'HookMap'.
+lib/HookMap.ts(29,36): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(33,8): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(38,8): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(49,19): error TS2339: Property 'tap' does not exist on type 'HookMap'.
+lib/HookMap.ts(53,19): error TS2339: Property 'tapAsync' does not exist on type 'HookMap'.
+lib/HookMap.ts(57,19): error TS2339: Property 'tapPromise' does not exist on type 'HookMap'.
+lib/MultiHook.ts(11,8): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(12,8): error TS2339: Property 'name' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(16,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(22,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(28,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(34,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(41,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(48,9): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(49,9): error TS2339: Property 'name' does not exist on type 'MultiHook'.
+lib/SyncBailHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; resultReturns: any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Property 'doneReturns' is missing in type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; resultReturns: any; onDone: any; rethrowIfPossible: any; }' but required in type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+lib/SyncBailHook.ts(25,7): error TS2740: Type 'SyncBailHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/SyncBailHook.ts(25,23): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncBailHook.ts(36,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/SyncBailHook.ts(37,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/SyncBailHook.ts(40,23): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/SyncBailHook.ts(41,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/SyncBailHook.ts(43,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncBailHook.ts(44,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncBailHook.ts(45,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/SyncHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any) => any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: any, err: any) => any; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': onResult, resultReturns, doneReturns
+lib/SyncHook.ts(20,7): error TS2740: Type 'SyncHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/SyncHook.ts(20,23): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncHook.ts(31,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/SyncHook.ts(32,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/SyncHook.ts(35,19): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/SyncHook.ts(36,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/SyncHook.ts(38,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
+lib/SyncHook.ts(39,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
+lib/SyncHook.ts(40,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any): void'.
+lib/SyncLoopHook.ts(20,7): error TS2740: Type 'SyncLoopHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/SyncLoopHook.ts(20,23): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncLoopHook.ts(31,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/SyncLoopHook.ts(32,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/SyncLoopHook.ts(35,23): error TS2322: Type 'undefined[]' is not assignable to type 'string'.
+lib/SyncLoopHook.ts(36,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/SyncLoopHook.ts(38,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncLoopHook.ts(39,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncLoopHook.ts(40,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/SyncWaterfallHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; doneReturns: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Property 'resultReturns' is missing in type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; doneReturns: any; rethrowIfPossible: any; }' but required in type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+lib/SyncWaterfallHook.ts(17,21): error TS2551: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/SyncWaterfallHook.ts(22,32): error TS2551: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/SyncWaterfallHook.ts(29,7): error TS2740: Type 'SyncWaterfallHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
+lib/SyncWaterfallHook.ts(29,23): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncWaterfallHook.ts(40,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
+lib/SyncWaterfallHook.ts(41,17): error TS2339: Property 'create' does not exist on type 'Hook'.
+lib/SyncWaterfallHook.ts(49,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncWaterfallHook.ts(50,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+lib/SyncWaterfallHook.ts(51,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+lib/index.ts(9,28): error TS2304: Cannot find name 'SyncLoopHookCodeFactory'.
+lib/index.ts(9,28): error TS4025: Exported variable 'SyncBailHook' has or is using private name 'SyncLoopHookCodeFactory'.
+lib/index.ts(10,33): error TS2304: Cannot find name 'SyncLoopHookCodeFactory'.
+lib/index.ts(10,33): error TS4025: Exported variable 'SyncWaterfallHook' has or is using private name 'SyncLoopHookCodeFactory'.
+lib/index.ts(11,28): error TS2304: Cannot find name 'SyncLoopHookCodeFactory'.
+lib/index.ts(11,28): error TS4025: Exported variable 'SyncLoopHook' has or is using private name 'SyncLoopHookCodeFactory'.
+lib/index.ts(12,33): error TS2304: Cannot find name 'SyncLoopHookCodeFactory'.
+lib/index.ts(12,33): error TS4025: Exported variable 'AsyncParallelHook' has or is using private name 'SyncLoopHookCodeFactory'.
+lib/index.ts(14,31): error TS2304: Cannot find name 'SyncLoopHookCodeFactory'.
+lib/index.ts(14,31): error TS4025: Exported variable 'AsyncSeriesHook' has or is using private name 'SyncLoopHookCodeFactory'.
+

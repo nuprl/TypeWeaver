@@ -1,0 +1,164 @@
+Text
+/**\n * Composes a function that returns the result of invoking the given functions\n * with the `this` binding of the created function, where each successive\n * invocation is supplied the return value of the previous.\n *\n * @since 3.0.0\n * @category Util\n * @param {Function[]} [funcs] The functions to invoke.\n * @returns {Function} Returns the new composite function.\n * @see flowRight\n * @example\n *\n * import add from 'lodash/add'\n *\n * function square(n) {\n *   return n * n\n * }\n *\n * const addSquare = flow(add, square)\n * addSquare(1, 2)\n * // => 9\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flowName.Otherany0.3726void0.0520complex0.0350Promise<any>0.0163any[]0.0132
+(Punctuation
+...Punctuation
+funcsName.Otherany[]0.5890any0.1024string[]0.0175Function[]0.0081Array0.0076
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.7793any0.2028void0.0058string0.0029complex0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+funcsName.Otherany[]0.6198any0.2366string[]0.0187complex0.0045number[]0.0043
+.Punctuation
+lengthName.Othernumber0.5274any0.4638complex0.0017void0.0016string0.0015
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9338any0.0609string0.0034boolean0.0009any[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lengthName.Othernumber0.7621any0.2322string0.0020void0.0013boolean0.0008
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9406any0.0576string0.0010boolean0.0003void0.0001
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+funcsName.Otherany[]0.6830any0.1863string[]0.0115number[]0.0086complex0.0045
+[Punctuation
+indexName.Othernumber0.9423any0.0520string0.0049boolean0.0002complex0.0001
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.7560complex0.0898{}0.0484boolean0.0258Error0.0219
+ Text.Whitespace
+newOperator.Wordany0.6628boolean0.1156complex0.0573string0.0433{}0.0412
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9920ErrorConstructor0.0013undefined0.0002complex0.0002any0.0001
+(Punctuation
+'Expected a function'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9306any0.0240string[]0.0038IArguments0.0018Array0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9636any0.0347string0.0008boolean0.0004any[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.7891number0.1236string0.0584any[]0.0103boolean0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lengthName.Othernumber0.7981any0.1931string0.0020void0.0017any[]0.0011
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+funcsName.Otherany[]0.7327any0.1149string[]0.0075number[]0.0061IArguments0.0049
+[Punctuation
+indexName.Othernumber0.9535any0.0428string0.0028any[]0.0001boolean0.0001
+]Punctuation
+.Punctuation
+applyName.Otherany0.9806number0.0077void0.0061any[]0.0015Function0.0013
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.8515any0.1015IArguments0.0199string[]0.0047string0.0017
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+argsName.Otherany[]0.8993any0.0769string[]0.0057IArguments0.0048any[][]0.0014
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9608any0.0372string0.0009void0.0002boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.8700any0.1272string0.0016void0.0002boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.Otherany0.9198number0.0392string0.0116void0.0029any[]0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+funcsName.Otherany[]0.5231any0.3089string[]0.0041number[]0.0038IArguments0.0037
+[Punctuation
+indexName.Othernumber0.9097any0.0850string0.0038any[]0.0003void0.0002
+]Punctuation
+.Punctuation
+callName.Otherany0.9888number0.0051void0.0022complex0.0006string0.0005
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8517number0.0260string0.0179void0.0099any[]0.0055
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.7568string0.0325any[]0.0235void0.0132number0.0107
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flowName.Otherany0.4884any[]0.0141number0.0084Promise<any>0.0068complex0.0040
+\nText.Whitespace

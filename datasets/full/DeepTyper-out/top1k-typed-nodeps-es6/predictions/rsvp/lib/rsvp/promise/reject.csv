@@ -1,0 +1,82 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+noopName.Othervoid0.9201any0.0762Function0.0006complex0.0006boolean0.0005
+,Punctuation
+\n  Text.Whitespace
+rejectName.Othervoid0.8236any0.1638complex0.0051Function0.0018boolean0.0013
+ Text.Whitespace
+asKeyword.Reserved
+ Text.Whitespace
+_rejectName.Othervoid0.7508any0.2379complex0.0061Function0.0013boolean0.0008
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../-internal'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n  `Promise.reject` returns a promise rejected with the passed `reason`.\n  It is shorthand for the following:\n\n  ```javascript\n  import Promise from 'rsvp';\n\n  let promise = new Promise(function(resolve, reject){\n    reject(new Error('WHOOPS'));\n  });\n\n  promise.then(function(value){\n    // Code here doesn't run because the promise is rejected!\n  }, function(reason){\n    // reason.message === 'WHOOPS'\n  });\n  ```\n\n  Instead of writing the above, your code now simply becomes the following:\n\n  ```javascript\n  import Promise from 'rsvp';\n\n  let promise = Promise.reject(new Error('WHOOPS'));\n\n  promise.then(function(value){\n    // Code here doesn't run because the promise is rejected!\n  }, function(reason){\n    // reason.message === 'WHOOPS'\n  });\n  ```\n\n  @method reject\n  @for Promise\n  @static\n  @param {*} reason value that the returned promise will be rejected with.\n  @param {String} [label] optional string for identifying the returned promise.\n  Useful for tooling.\n  @return {Promise} a promise rejected with the given `reason`.\n*/Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rejectName.Othervoid0.9230any0.0543Function0.0064complex0.0034boolean0.0008
+(Punctuation
+reasonName.Otherany0.5506string0.1894Error0.1062number0.0123object0.0042
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.7979any0.1386number0.0048Buffer0.0016boolean0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+/*jshint validthis:true */Comment.Multiline
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+ConstructorName.Otherany0.9297this0.0035void0.0021string0.0016number0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+promiseName.Otherany0.8595Promise0.0061Promise<any>0.0042Promise<void>0.0035void0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.5843string0.0283Error0.0116number0.0078Node0.0050
+ Text.Whitespace
+ConstructorName.Otherany0.9984void0.0008complex0.0002string0.0002number0.0001
+(Punctuation
+noopName.Othervoid0.9663any0.0292boolean0.0011number0.0009string0.0004
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.4725any0.3994void0.0500complex0.0142number0.0056
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+_rejectName.Othervoid0.7888any0.1731complex0.0272number0.0020boolean0.0013
+(Punctuation
+promiseName.Otherany0.8332void0.0168Promise<any>0.0145Promise<number>0.0066Promise<void>0.0051
+,Punctuation
+ Text.Whitespace
+reasonName.Otherany0.4967Error0.1429string0.1002number0.0237object0.0056
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+promiseName.Otherany0.6678Promise<any>0.0467Promise<void>0.0190Promise<T>0.0173Promise<number>0.0112
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

@@ -1,0 +1,104 @@
+importKeyword
+ Text.Whitespace
+sliceName.Otherstring[]0.2885T[]0.0460any[]0.0359any0.0250string0.0232
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./slice.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a slice of `array` with `n` elements taken from the end.\n *\n * @since 3.0.0\n * @category Array\n * @param {Array} array The array to query.\n * @param {number} [n=1] The number of elements to take.\n * @returns {Array} Returns the slice of `array`.\n * @example\n *\n * takeRight([1, 2, 3])\n * // => [3]\n *\n * takeRight([1, 2, 3], 2)\n * // => [2, 3]\n *\n * takeRight([1, 2, 3], 5)\n * // => [1, 2, 3]\n *\n * takeRight([1, 2, 3], 0)\n * // => []\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+takeRightName.Otherany0.1728complex0.1176string[]0.0842string0.0830number0.0714
+(Punctuation
+arrayName.Otherany0.2706any[]0.1075number[]0.1067number0.0505string[]0.0481
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9581any0.0341string0.0043boolean0.0006complex0.0004
+=Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.7599any0.2301string0.0058complex0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.6025number0.1071number[]0.0969any[]0.0707complex0.0206
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+lengthName.Othernumber0.8288any0.1655string0.0036boolean0.0003complex0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+nName.Othernumber0.6466any0.2536string0.0793complex0.0054number[]0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lengthName.Othernumber0.8334any0.1622string0.0018complex0.0005void0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+nName.Othernumber0.8120any0.1317string0.0473complex0.0020number[]0.0019
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+sliceName.Otherany0.4792string0.1490number0.0974complex0.0588any[]0.0366
+(Punctuation
+arrayName.Otherany0.3197number0.2273number[]0.1566any[]0.1009string[]0.0168
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9703any0.0276string0.0007boolean0.0003void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nKeyword.Typenumber0.9306any0.0593string0.0067boolean0.0004complex0.0004
+,Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.9361any0.0599string0.0020void0.0004boolean0.0002
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+takeRightName.Otherany0.3275number0.0462complex0.0172string0.0168void0.0096
+\nText.Whitespace

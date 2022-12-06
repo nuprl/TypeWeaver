@@ -1,0 +1,112 @@
+"use strict"Literal.String.Double
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+osName.Otherany0.9459string0.0381complex0.0088boolean0.0011number0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"os"Literal.String.Double
+)Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hasUnicodeName.Otherany0.4650string0.3265boolean0.1745number0.0075complex0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// Recent Win32 platforms (>XP) CAN support unicode in the console butComment.Single
+\n  Text.Whitespace
+// don't have to, and in non-english locales often use traditional localComment.Single
+\n  Text.Whitespace
+// code pages. There's no way, short of windows system calls or execingComment.Single
+\n  Text.Whitespace
+// the chcp command line program to figure this out. As such, we defaultComment.Single
+\n  Text.Whitespace
+// this to false and encourage your users to override it via config ifComment.Single
+\n  Text.Whitespace
+// appropriate.Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+osName.Otherany0.9824complex0.0062string0.0028{}0.0004boolean0.0002
+.Punctuation
+typeKeyword.Reserved
+(Punctuation
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+"Windows_NT"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isUTF8Name.Otherstring0.6559any0.1906RegExp0.0954boolean0.0424string[]0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/UTF-?8$/iLiteral.String.Regex
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ctypeName.Otherany0.6073string0.2081boolean0.1697complex0.0047number0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processName.Otherany0.9871complex0.0070string0.0012Process0.0008boolean0.0005
+.Punctuation
+envName.Otherany0.9942complex0.0045string0.0005boolean0.0003number0.0001
+.Punctuation
+LC_ALLName.Otherany0.9700string0.0195boolean0.0078complex0.0010number0.0005
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+processName.Otherany0.9796complex0.0071Process0.0031string0.0017boolean0.0007
+.Punctuation
+envName.Otherany0.9939complex0.0046string0.0006boolean0.0004void0.0001
+.Punctuation
+LC_CTYPEName.Otherany0.9428string0.0285boolean0.0249number0.0010complex0.0009
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+processName.Otherany0.9821complex0.0073Process0.0026string0.0013boolean0.0006
+.Punctuation
+envName.Otherany0.9926complex0.0054boolean0.0006string0.0006void0.0001
+.Punctuation
+LANGName.Otherany0.9560string0.0205boolean0.0196complex0.0010RegExp0.0007
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isUTF8Name.OtherRegExp0.7912any0.1492string0.0315boolean0.0068complex0.0038
+.Punctuation
+testName.Otherboolean0.9295any0.0437complex0.0133string0.0057void0.0030
+(Punctuation
+ctypeName.Otherany0.6287string0.3478boolean0.0101number0.0038complex0.0016
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

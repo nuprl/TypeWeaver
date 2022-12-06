@@ -1,0 +1,16 @@
+declare const balanced: any;
+declare const escSlash: string;
+declare const escOpen: string;
+declare const escClose: string;
+declare const escComma: string;
+declare const escPeriod: string;
+declare function numeric(str: string | number): any;
+declare function escapeBraces(str: any): any;
+declare function unescapeBraces(str: any): any;
+declare function parseCommaParts(str: string | null): any[];
+declare function expandTop(str: string | string[]): any;
+declare function embrace(str: any): string;
+declare function isPadded(el: HTMLElement): boolean;
+declare function lte(i: number, y: number): boolean;
+declare function gte(i: number, y: number): boolean;
+declare function expand(str: string | RegExp, isTop: boolean): any;

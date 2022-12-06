@@ -1,0 +1,20 @@
+src/generator/index.ts(11,20): error TS4078: Parameter 'node' of exported function has or is using private name 'ode'.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,24): error TS4078: Parameter 'dfa' of exported function has or is using private name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(67,21): error TS4078: Parameter 'first' of exported function has or is using private name 'ST'.
+src/interpreter/finite-automaton/nfa/builders.ts(67,40): error TS4078: Parameter 'fragments' of exported function has or is using private name 'T'.
+src/interpreter/finite-automaton/nfa/builders.ts(102,20): error TS4078: Parameter 'first' of exported function has or is using private name 'xpression'.
+src/interpreter/finite-automaton/nfa/builders.ts(102,46): error TS4078: Parameter 'fragments' of exported function has or is using private name 'pression'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,28): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/optimizer/index.ts(13,1): error TS4082: Default export of the module has or is using private name 'TransformResult'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,58): error TS1005: ',' expected.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,63): error TS1005: ',' expected.
+src/optimizer/transforms/char-class-to-meta-transform.ts(186,56): error TS1005: ',' expected.
+src/parser/unicode/parser-unicode-properties.ts(340,39): error TS4078: Parameter 'value' of exported function has or is using private name 'ScriptCategory'.
+src/parser/unicode/parser-unicode-properties.ts(354,33): error TS4078: Parameter 'name' of exported function has or is using private name 'ts'.
+src/regexp-tree.ts(20,7): error TS4023: Exported variable 'regexpTree' has or is using name 'TransformResult' from external module "/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/regexp-tree/src/transform/index" but cannot be named.
+src/transform/utils.ts(15,34): error TS4078: Parameter 'node' of exported function has or is using private name 'AST'.
+src/transform/utils.ts(38,34): error TS4078: Parameter 'list' of exported function has or is using private name 'List'.
+src/transform/utils.ts(58,46): error TS4078: Parameter 'quantifier' of exported function has or is using private name 'Quantifier'.
+src/traverse/index.ts(27,50): error TS1005: ',' expected.
+

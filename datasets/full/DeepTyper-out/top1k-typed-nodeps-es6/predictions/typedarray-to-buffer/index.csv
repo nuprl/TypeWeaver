@@ -1,0 +1,67 @@
+Text
+/*! typedarray-to-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */Comment.Multiline
+\nText.Whitespace
+/**\n * Convert a typed array to a Buffer without a copy\n *\n * Author:   Feross Aboukhadijeh <https://feross.org>\n * License:  MIT\n *\n * `npm install typedarray-to-buffer`\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+typedarrayToBufferName.Otherany0.2836Buffer0.0355ArrayBuffer0.0248string0.0209number0.0173
+ Text.Whitespace
+(Punctuation
+arrName.Otherany0.2101Buffer0.1537ArrayBuffer0.0576any[]0.0214Response0.0173
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ArrayBufferName.BuiltinArrayBufferConstructor0.9745ArrayBuffer0.0005ArrayBuffer[]0.0002DateConstructor0.0002ArrayBufferWalker0.0002
+.Punctuation
+isViewName.Otherany0.5988number0.2375string0.0368complex0.0261any[]0.0132
+(Punctuation
+arrName.Otherany0.5014ArrayBuffer0.1031Response0.0460any[]0.0365Buffer0.0280
+)Punctuation
+\n    Text.Whitespace
+// To avoid a copy, use the typed array's underlying ArrayBuffer to backComment.Single
+\n    Text.Whitespace
+// new Buffer, respecting the "view", i.e. byteOffset and byteLengthComment.Single
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+BufferName.Otherany0.9867Buffer0.0035ArrayBuffer0.0007string0.0005number0.0005
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+arrName.OtherArrayBuffer0.1697Response0.0948any0.0502Buffer0.0430Error0.0067
+.Punctuation
+bufferName.Otherany0.4221Buffer0.2510ArrayBuffer0.1949string0.0502number0.0139
+,Punctuation
+ Text.Whitespace
+arrName.Otherany0.1824ArrayBuffer0.1062Response0.0461Buffer0.0355complex0.0285
+.Punctuation
+byteOffsetName.Otherany0.5458number0.2035string0.1862ArrayBuffer0.0129complex0.0067
+,Punctuation
+ Text.Whitespace
+arrName.OtherArrayBuffer0.2309any0.1030Buffer0.0453Response0.0350any[]0.0337
+.Punctuation
+byteLengthName.Othernumber0.9049any0.0792string0.0049void0.0028ArrayBuffer0.0026
+)Punctuation
+\n    Text.Whitespace
+// Pass through all other types to `Buffer.from`Comment.Single
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+BufferName.Otherany0.9849Buffer0.0044void0.0009string0.0007number0.0006
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+arrName.Otherany0.2004number[]0.1548any[]0.0902ArrayBuffer0.0845string[]0.0457
+)Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

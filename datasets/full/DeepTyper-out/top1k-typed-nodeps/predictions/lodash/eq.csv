@@ -1,0 +1,49 @@
+Text
+/**\n * Performs a\n * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * comparison between two values to determine if they are equivalent.\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @returns {boolean} Returns `true` if the values are equivalent, else `false`.\n * @example\n *\n * const object = { 'a': 1 }\n * const other = { 'a': 1 }\n *\n * eq(object, object)\n * // => true\n *\n * eq(object, other)\n * // => false\n *\n * eq('a', 'a')\n * // => true\n *\n * eq('a', Object('a'))\n * // => false\n *\n * eq(NaN, NaN)\n * // => true\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+eqName.Otherboolean0.6403number0.0356any0.0268false0.0073string0.0070
+(Punctuation
+valueName.Otherany0.6127string0.1519number0.1022boolean0.0869Date0.0052
+,Punctuation
+ Text.Whitespace
+otherName.Othernumber0.6021any0.1751string0.0392boolean0.0336Date0.0114
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.6315number0.1607boolean0.0890string0.0836Date0.0054
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+otherName.Othernumber0.4830any0.3009boolean0.0666string0.0580Date0.0094
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.5994number0.2044string0.1154boolean0.0540Date0.0037
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+valueName.Otherany0.6103number0.1802string0.1175boolean0.0698Date0.0025
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+otherName.Othernumber0.5236any0.3050string0.1215boolean0.0187Date0.0022
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+otherName.Othernumber0.6474any0.2006string0.0503boolean0.0081Date0.0052
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+eqName.Otherany0.0633boolean0.0348number0.0195void0.0065false0.0061
+\nText.Whitespace

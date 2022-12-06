@@ -1,0 +1,9 @@
+index.ts(10,21): error TS2749: 'Rand' refers to a value, but is being used as a type here. Did you mean 'typeof Rand'?
+index.ts(10,21): error TS4078: Parameter 'rand' of exported function has or is using private name 'Rand'.
+index.ts(38,19): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(38,36): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(42,12): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(56,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+index.ts(57,23): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+index.ts(61,21): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+

@@ -1,0 +1,7 @@
+index.ts(1,36): error TS2739: Type '{ (iterable: any, iterator: Iterator<T, any, undefined>): Promise<any>; stop: symbol; }' is missing the following properties from type 'Promise<void>': then, catch, finally, [Symbol.toStringTag]
+index.ts(1,77): error TS2304: Cannot find name 'T'.
+index.ts(6,34): error TS2349: This expression is not callable.
+  Type 'Iterator<T, any, undefined>' has no call signatures.
+index.ts(8,35): error TS2339: Property 'stop' does not exist on type 'Promise<void>'.
+index.ts(16,13): error TS2339: Property 'stop' does not exist on type 'Promise<void>'.
+

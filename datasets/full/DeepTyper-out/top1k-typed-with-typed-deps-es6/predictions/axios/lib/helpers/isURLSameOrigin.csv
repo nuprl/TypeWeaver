@@ -1,0 +1,409 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+utilsName.Otherany0.7328complex0.1706string[]0.0127void0.0119string0.0108
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./../utils.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+platformName.Otherany0.5595string0.2123complex0.0259string[]0.0252void0.0158
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../platform/index.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+platformName.Otherany0.9121string0.0166complex0.0083Platform0.0061string[]0.0042
+.Punctuation
+isStandardBrowserEnvName.Otherany0.5055boolean0.3812string0.0804complex0.0073string[]0.0052
+ Text.Whitespace
+?Operator
+\n\nText.Whitespace
+// Standard browser envs have full support of the APIs needed to testComment.Single
+\nText.Whitespace
+// whether the request URL is of the same origin as current location.Comment.Single
+\n  Text.Whitespace
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+standardBrowserEnvName.Otherstring0.7729boolean0.1255any0.0567string[]0.0102number0.0074
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+msieName.Otherboolean0.9145any0.0322string0.0252number0.0164string[]0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/(msie|trident)/iLiteral.String.Regex
+.Punctuation
+testName.Otherboolean0.9707complex0.0089string0.0083any0.0055number0.0034
+(Punctuation
+navigatorName.OtherNavigator0.9457any0.0056complex0.0053string0.0050string[]0.0005
+.Punctuation
+userAgentName.Otherstring0.9938any0.0035complex0.0015boolean0.0005number0.0005
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+urlParsingNodeName.OtherHTMLDivElement0.1886HTMLElement0.0497HTMLAnchorElement0.0456HTMLSpanElement0.0275Element0.0235
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+documentName.BuiltinDocument0.9938any0.0016complex0.0005HTMLDocument0.0005HTMLElement0.0003
+.Punctuation
+createElementName.Othercomplex0.9938any0.0037string0.0009string[]0.0003void0.0001
+(Punctuation
+'a'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+originURLName.Otherany0.2594string0.1289HTMLDivElement0.0541Element0.0242HTMLAnchorElement0.0170
+;Punctuation
+\n\n    Text.Whitespace
+/**\n    * Parse a URL to discover it's components\n    *\n    * @param {String} url The URL to be parsed\n    * @returns {Object}\n    */Comment.Multiline
+\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+resolveURLName.Otherstring0.9905any0.0070complex0.0006boolean0.0006void0.0003
+(Punctuation
+urlName.Otherstring0.9744any0.0212boolean0.0008complex0.0003Uri0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+hrefName.Otherstring0.9658any0.0323complex0.0011number0.0002boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+urlName.Otherstring0.9362any0.0611complex0.0006boolean0.0003number0.0001
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+msieName.Otherboolean0.8911string0.0491any0.0317number0.0151complex0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// IE needs attribute set twice to normalize propertiesComment.Single
+\n        Text.Whitespace
+urlParsingNodeName.OtherHTMLDivElement0.2065HTMLElement0.1499any0.1282HTMLAnchorElement0.0370Element0.0340
+.Punctuation
+setAttributeName.Othervoid0.9431any0.0472complex0.0038boolean0.0015string0.0010
+(Punctuation
+'href'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+hrefName.Otherstring0.9709any0.0211complex0.0054number0.0009string[]0.0005
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+hrefName.Otherstring0.9521any0.0419complex0.0045number0.0007boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+urlParsingNodeName.Otherany0.5353HTMLAnchorElement0.0951HTMLDivElement0.0351complex0.0154HTMLSpanElement0.0149
+.Punctuation
+hrefName.Otherstring0.8548any0.1337complex0.0090number0.0013boolean0.0002
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+urlParsingNodeName.Otherany0.3329HTMLDivElement0.1155HTMLElement0.0858HTMLAnchorElement0.0595RegExp0.0312
+.Punctuation
+setAttributeName.Othervoid0.7817any0.2010complex0.0080string0.0026boolean0.0019
+(Punctuation
+'href'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+hrefName.Otherstring0.9739any0.0180complex0.0059number0.0009string[]0.0003
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutilsComment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+hrefName.Otherstring0.9625any0.0308complex0.0039number0.0011boolean0.0007
+:Operator
+ Text.Whitespace
+urlParsingNode.hrefKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+protocolName.Otherstring0.7625any0.2336complex0.0013boolean0.0011number0.0008
+:Operator
+ Text.Whitespace
+urlParsingNode.protocolKeyword.Type
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+urlParsingNodeName.Otherany0.5381HTMLDivElement0.0370HTMLAnchorElement0.0180complex0.0111string0.0102
+.Punctuation
+protocolName.Otherstring0.5475any0.4487complex0.0022number0.0008boolean0.0002
+.Punctuation
+replaceName.Othercomplex0.8505any0.1450string0.0018boolean0.0007void0.0004
+(Punctuation
+/:$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+hostName.Otherstring0.9132any0.0786number0.0032complex0.0024boolean0.0007
+:Operator
+ Text.Whitespace
+urlParsingNode.hostKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+searchName.Otherstring0.8675any0.1177boolean0.0066number0.0040RegExp0.0009
+:Operator
+ Text.Whitespace
+urlParsingNode.searchKeyword.Type
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+urlParsingNodeName.Otherany0.4447HTMLDivElement0.0444string0.0264RegExp0.0210HTMLAnchorElement0.0150
+.Punctuation
+searchName.Otherstring0.5285any0.4670complex0.0011number0.0011boolean0.0007
+.Punctuation
+replaceName.Othercomplex0.8895any0.1048string0.0022boolean0.0008void0.0007
+(Punctuation
+/^\?/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+hashName.Otherstring0.8887any0.1066number0.0020boolean0.0011complex0.0007
+:Operator
+ Text.Whitespace
+urlParsingNode.hashKeyword.Type
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+urlParsingNodeName.Otherany0.4316HTMLDivElement0.0312complex0.0256RegExp0.0101Date0.0098
+.Punctuation
+hashName.Otherany0.5197string0.4754complex0.0018number0.0017boolean0.0003
+.Punctuation
+replaceName.Othercomplex0.8899any0.1033string0.0031boolean0.0010void0.0005
+(Punctuation
+/^#/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+hostnameName.Otherstring0.9511any0.0366number0.0081boolean0.0015complex0.0013
+:Operator
+ Text.Whitespace
+urlParsingNode.hostnameKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+portName.Otherstring0.6252number0.1900any0.1425complex0.0285boolean0.0034
+:Operator
+ Text.Whitespace
+urlParsingNode.portKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+pathnameName.Otherstring0.9496any0.0464complex0.0015number0.0012boolean0.0007
+:Operator
+ Text.Whitespace
+(Punctuation
+urlParsingNodeName.Otherany0.3220complex0.0318Error0.0144Element0.0121HTMLDivElement0.0080
+.Punctuation
+pathnameName.Otherstring0.7346any0.2583complex0.0025number0.0006boolean0.0005
+.Punctuation
+charAtName.Otherstring0.8499any0.1442boolean0.0021complex0.0015number0.0006
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'/'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+?Operator
+\n          Text.Whitespace
+urlParsingNodeName.Otherany0.5673complex0.0339Element0.0104ClientRect0.0096HTMLDivElement0.0079
+.Punctuation
+pathnameName.Otherstring0.8194any0.1760number0.0010complex0.0006string[]0.0003
+ Text.Whitespace
+:Operator
+\n          Text.Whitespace
+'/'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+urlParsingNodeName.Otherany0.4049complex0.0597string0.0198Element0.0122HTMLAnchorElement0.0086
+.Punctuation
+pathnameName.Otherstring0.7698any0.2241complex0.0023number0.0008string[]0.0006
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+originURLName.Otherstring0.9871any0.0109boolean0.0007complex0.0003number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resolveURLName.Otherstring0.9785any0.0193complex0.0008boolean0.0004number0.0002
+(Punctuation
+windowName.BuiltinWindow0.9966any0.0001complex0.0001Location0.0001HTMLAnchorElement0.0001
+.Punctuation
+locationName.OtherLocation0.8639complex0.0093string0.0047any0.0042Window0.0036
+.Punctuation
+hrefName.Otherstring0.9764any0.0126complex0.0084number0.0015string[]0.0004
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+/**\n    * Determine if a URL shares the same origin as the current location\n    *\n    * @param {String} requestURL The URL to test\n    * @returns {boolean} True if URL shares the same origin, otherwise false\n    */Comment.Multiline
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isURLSameOriginName.Otherboolean0.5319string0.3823any0.0535complex0.0161number0.0042
+(Punctuation
+requestURLName.Otherstring0.8854any0.0784number0.0048complex0.0022boolean0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parsedName.Otherany0.3398complex0.1547string0.1033T0.0342boolean0.0180
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+utilsName.Otherany0.8008complex0.1935string0.0026any[]0.0003void0.0002
+.Punctuation
+isStringName.Othercomplex0.9256any0.0377boolean0.0281string0.0067number0.0004
+(Punctuation
+requestURLName.Otherstring0.8416any0.1326number0.0049complex0.0046boolean0.0021
+)Punctuation
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resolveURLName.Otherstring0.9759any0.0206complex0.0015boolean0.0007number0.0004
+(Punctuation
+requestURLName.Otherstring0.9499any0.0428number0.0024complex0.0010boolean0.0005
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+requestURLName.Otherstring0.9403any0.0482complex0.0034number0.0027boolean0.0010
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+parsedName.Otherany0.3454complex0.0246T0.0203Url0.0140User0.0090
+.Punctuation
+protocolName.Otherstring0.5889any0.4051complex0.0038number0.0007boolean0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+originURLName.Otherany0.3249string0.0318complex0.0228HTMLAnchorElement0.0119Element0.0104
+.Punctuation
+protocolName.Otherstring0.8093any0.1835complex0.0030number0.0014boolean0.0011
+ Text.Whitespace
+&&Operator
+\n          Text.Whitespace
+parsedName.Otherany0.3261complex0.0513T0.0372Url0.0120HTMLInputElement0.0098
+.Punctuation
+hostName.Otherstring0.8413any0.1420complex0.0073number0.0055boolean0.0014
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+originURLName.Otherany0.1515complex0.0145HTMLInputElement0.0141string0.0105RegExp0.0091
+.Punctuation
+hostName.Otherstring0.8840any0.1031number0.0060complex0.0030boolean0.0018
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+\n\n  Text.Whitespace
+// Non standard browser envs (web workers, react-native) lack needed support.Comment.Single
+\n  Text.Whitespace
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+nonStandardBrowserEnvName.Otherboolean0.8498string0.0776any0.0256number0.0075false0.0055
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isURLSameOriginName.Otherboolean0.8380string0.1063any0.0293number0.0115false0.0020
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

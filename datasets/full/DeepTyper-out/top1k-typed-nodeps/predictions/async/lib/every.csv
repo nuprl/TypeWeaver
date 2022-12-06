@@ -1,0 +1,89 @@
+importKeyword
+ Text.Whitespace
+createTesterName.Otherboolean0.1792any0.1327complex0.0536string0.0356void0.0206
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/createTester.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+eachOfName.Otherboolean0.4526any0.1245string0.0666complex0.0332string[]0.0278
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./eachOf.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherboolean0.6845any0.0911string0.0471string[]0.0193complex0.0192
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Returns `true` if every element in `coll` satisfies an async test. If any\n * iteratee call returns `false`, the main `callback` is immediately called.\n *\n * @name every\n * @static\n * @memberOf module:Collections\n * @method\n * @alias all\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {AsyncFunction} iteratee - An async truth test to apply to each item\n * in the collection in parallel.\n * The iteratee must complete with a boolean result value.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called after all the\n * `iteratee` functions have finished. Result will be either `true` or `false`\n * depending on the values of the async tests. Invoked with (err, result).\n * @returns {Promise} a promise, if no callback provided\n * @example\n *\n * // dir1 is a directory that contains file1.txt, file2.txt\n * // dir2 is a directory that contains file3.txt, file4.txt\n * // dir3 is a directory that contains file5.txt\n * // dir4 does not exist\n *\n * const fileList = ['dir1/file1.txt','dir2/file3.txt','dir3/file5.txt'];\n * const withMissingFileList = ['file1.txt','file2.txt','file4.txt'];\n *\n * // asynchronous function that checks if a file exists\n * function fileExists(file, callback) {\n *    fs.access(file, fs.constants.F_OK, (err) => {\n *        callback(null, !err);\n *    });\n * }\n *\n * // Using callbacks\n * async.every(fileList, fileExists, function(err, result) {\n *     console.log(result);\n *     // true\n *     // result is true since every file exists\n * });\n *\n * async.every(withMissingFileList, fileExists, function(err, result) {\n *     console.log(result);\n *     // false\n *     // result is false since NOT every file exists\n * });\n *\n * // Using Promises\n * async.every(fileList, fileExists)\n * .then( result => {\n *     console.log(result);\n *     // true\n *     // result is true since every file exists\n * }).catch( err => {\n *     console.log(err);\n * });\n *\n * async.every(withMissingFileList, fileExists)\n * .then( result => {\n *     console.log(result);\n *     // false\n *     // result is false since NOT every file exists\n * }).catch( err => {\n *     console.log(err);\n * });\n *\n * // Using async/await\n * async () => {\n *     try {\n *         let result = await async.every(fileList, fileExists);\n *         console.log(result);\n *         // true\n *         // result is true since every file exists\n *     }\n *     catch (err) {\n *         console.log(err);\n *     }\n * }\n *\n * async () => {\n *     try {\n *         let result = await async.every(withMissingFileList, fileExists);\n *         console.log(result);\n *         // false\n *         // result is false since NOT every file exists\n *     }\n *     catch (err) {\n *         console.log(err);\n *     }\n * }\n *\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+everyName.Otherboolean0.8994any0.0663complex0.0111number0.0050string0.0049
+(Punctuation
+collName.Otherany0.6236boolean0.0695string0.0241any[]0.0157number0.0053
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7441string0.0598number0.0472boolean0.0217any[]0.0028
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5491Function0.0893number0.0604boolean0.0426string0.0184
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+createTesterName.Otherany0.4114boolean0.2086complex0.0811string0.0497void0.0458
+(Punctuation
+boolName.Otherany0.9581boolean0.0125string0.0050number0.0020complex0.0014
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+boolName.Otherany0.8437boolean0.1018string0.0090number0.0035complex0.0032
+,Punctuation
+ Text.Whitespace
+resName.Otherany0.7376boolean0.2126number0.0082void0.0077string0.0076
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+resName.Otherboolean0.4924any0.4048void0.0381number0.0118string0.0087
+)Punctuation
+(Punctuation
+eachOfName.Otherany0.5069boolean0.2177string0.1262number0.0255any[]0.0165
+,Punctuation
+ Text.Whitespace
+collName.Otherany0.7089any[]0.0519boolean0.0253{}0.0207string0.0099
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7825number0.0364string0.0330boolean0.0092any[]0.0087
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6932Function0.0677number0.0439boolean0.0291void0.0269
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.5278void0.1298complex0.0641boolean0.0600number0.0436
+(Punctuation
+everyName.Otherany0.6527boolean0.2791number0.0221complex0.0176string0.0112
+,Punctuation
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

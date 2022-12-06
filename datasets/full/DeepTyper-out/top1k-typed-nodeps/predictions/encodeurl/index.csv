@@ -1,0 +1,88 @@
+Text
+/*!\n * encodeurl\n * Copyright(c) 2016 Douglas Christopher Wilson\n * MIT Licensed\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Module exports.\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+encodeUrlName.Otherstring0.7557any0.1186RegExp0.0836boolean0.0165number0.0044
+\n\nText.Whitespace
+Text
+/**\n * RegExp to match non-URL code points, *after* encoding (i.e. not including "%")\n * and including invalid escape sequences.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ENCODE_CHARS_REGEXPName.OtherRegExp0.5883string0.3946any0.0083string[]0.0019boolean0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/(?:[^\x21\x25\x26-\x3B\x3D\x3F-\x5B\x5D\x5F\x61-\x7A\x7E]|%(?:[^0-9A-Fa-f]|[0-9A-Fa-f][^0-9A-Fa-f]|$))+/gLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/**\n * RegExp to match unmatched surrogate pair.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+UNMATCHED_SURROGATE_PAIR_REGEXPName.Otherstring0.6006RegExp0.3802any0.0091string[]0.0027boolean0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/(^|[^\uD800-\uDBFF])[\uDC00-\uDFFF]|[\uD800-\uDBFF]([^\uDC00-\uDFFF]|$)/gLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/**\n * String to replace unmatched surrogate pair with.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+UNMATCHED_SURROGATE_PAIR_REPLACEName.Otherstring0.6703RegExp0.3011any0.0102string[]0.0064boolean0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'$1\uFFFD$2'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Encode a URL to a percent-encoded form, excluding already-encoded sequences.\n *\n * This function will take an already-encoded URL and encode all the non-URL\n * code points. This function will not encode the "%" character unless it is\n * not part of a valid sequence (`%20` will be left as-is, but `%foo` will\n * be encoded as `%25foo`).\n *\n * This encode is meant to be "safe" and does not throw errors. It will try as\n * hard as it can to properly encode the given URL, including replacing any raw,\n * unpaired surrogate pairs with the Unicode replacement character prior to\n * encoding.\n *\n * @param {string} url\n * @return {string}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+encodeUrlName.Otherstring0.9206boolean0.0463any0.0119RegExp0.0063string[]0.0058
+ Text.Whitespace
+(Punctuation
+urlName.Otherstring0.9112any0.0772complex0.0022number0.0018Object0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9979String0.0012string0.0000NumberConstructor0.0000RegExp0.0000
+(Punctuation
+urlName.Otherstring0.9312any0.0507complex0.0048number0.0021String0.0011
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+replaceName.Othercomplex0.9430any0.0408string0.0061void0.0020RegExp0.0009
+(Punctuation
+UNMATCHED_SURROGATE_PAIR_REGEXPName.OtherRegExp0.8835string0.1051any0.0033string[]0.0015boolean0.0011
+,Punctuation
+ Text.Whitespace
+UNMATCHED_SURROGATE_PAIR_REPLACEName.OtherRegExp0.5670string0.4084any0.0103number0.0032boolean0.0029
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+replaceName.Othercomplex0.9130any0.0567string0.0107void0.0042RegExp0.0031
+(Punctuation
+ENCODE_CHARS_REGEXPName.OtherRegExp0.8973string0.0869any0.0033boolean0.0022string[]0.0021
+,Punctuation
+ Text.Whitespace
+encodeURIName.Builtinstring0.9776any0.0121RegExp0.0020String0.0011string[]0.0011
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

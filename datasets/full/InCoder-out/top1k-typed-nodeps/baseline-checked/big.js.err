@@ -1,0 +1,1219 @@
+big.ts(7,13): error TS2502: 'GLOBAL' is referenced directly or indirectly in its own type annotation.
+big.ts(88,21): error TS2749: 'Big' refers to a value, but is being used as a type here. Did you mean 'typeof Big'?
+big.ts(92,67): error TS2350: Only a void function can be called with the 'new' keyword.
+big.ts(96,11): error TS2339: Property 's' does not exist on type '{}'.
+big.ts(96,17): error TS2339: Property 's' does not exist on type '{}'.
+big.ts(97,11): error TS2339: Property 'e' does not exist on type '{}'.
+big.ts(97,17): error TS2339: Property 'e' does not exist on type '{}'.
+big.ts(98,11): error TS2339: Property 'c' does not exist on type '{}'.
+big.ts(98,17): error TS2339: Property 'c' does not exist on type '{}'.
+big.ts(109,15): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
+big.ts(141,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+big.ts(146,7): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(146,13): error TS2339: Property 'charAt' does not exist on type 'number'.
+big.ts(146,39): error TS2339: Property 'slice' does not exist on type 'number'.
+big.ts(149,16): error TS2339: Property 'indexOf' does not exist on type 'number'.
+big.ts(149,42): error TS2339: Property 'replace' does not exist on type 'number'.
+big.ts(152,16): error TS2339: Property 'search' does not exist on type 'number'.
+big.ts(156,15): error TS2339: Property 'slice' does not exist on type 'number'.
+big.ts(157,13): error TS2339: Property 'substring' does not exist on type 'number'.
+big.ts(161,13): error TS2339: Property 'length' does not exist on type 'number'.
+big.ts(164,12): error TS2339: Property 'length' does not exist on type 'number'.
+big.ts(167,29): error TS2339: Property 'charAt' does not exist on type 'number'.
+big.ts(172,9): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(172,16): error TS2339: Property 'e' does not exist on type 'number'.
+big.ts(176,26): error TS2339: Property 'charAt' does not exist on type 'number'.
+big.ts(177,9): error TS2339: Property 'e' does not exist on type 'number'.
+big.ts(178,9): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(181,31): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(181,43): error TS2339: Property 'charAt' does not exist on type 'number'.
+big.ts(197,16): error TS2339: Property 'c' does not exist on type 'BigInt'.
+big.ts(199,46): error TS2339: Property 'RM' does not exist on type 'Function'.
+big.ts(200,9): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
+big.ts(200,21): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
+big.ts(200,33): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
+big.ts(200,45): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
+big.ts(204,9): error TS2365: Operator '<' cannot be applied to types 'BigInt' and 'number'.
+big.ts(205,7): error TS2322: Type 'boolean | BigInt' is not assignable to type 'BigInt'.
+  Type 'boolean' is not assignable to type 'BigInt'.
+big.ts(206,42): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'number' have no overlap.
+big.ts(216,11): error TS2339: Property 'e' does not exist on type 'BigInt'.
+big.ts(216,17): error TS2339: Property 'e' does not exist on type 'BigInt'.
+big.ts(216,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(221,19): error TS2339: Property 'e' does not exist on type 'BigInt'.
+big.ts(226,7): error TS2322: Type 'number | boolean | BigInt' is not assignable to type 'BigInt'.
+  Type 'number' is not assignable to type 'BigInt'.
+big.ts(229,23): error TS2365: Operator '+' cannot be applied to types 'BigInt' and 'number'.
+big.ts(229,51): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(239,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(241,15): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'number' have no overlap.
+big.ts(242,17): error TS2339: Property 'e' does not exist on type 'BigInt'.
+big.ts(250,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(262,15): error TS2339: Property 'e' does not exist on type 'BigInt'.
+big.ts(263,13): error TS2339: Property 'c' does not exist on type 'BigInt'.
+big.ts(284,14): error TS2339: Property 's' does not exist on type 'BigInt'.
+big.ts(294,5): error TS2339: Property 'abs' does not exist on type '{}'.
+big.ts(306,5): error TS2339: Property 'cmp' does not exist on type '{}'.
+big.ts(306,24): error TS2304: Cannot find name 'BigNumber'.
+big.ts(325,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(331,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(335,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(343,5): error TS2339: Property 'div' does not exist on type '{}'.
+big.ts(343,24): error TS2749: 'Big' refers to a value, but is being used as a type here. Did you mean 'typeof Big'?
+big.ts(444,37): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'BigInt'.
+big.ts(453,5): error TS2339: Property 'eq' does not exist on type '{}'.
+big.ts(462,5): error TS2339: Property 'gt' does not exist on type '{}'.
+big.ts(471,5): error TS2339: Property 'gte' does not exist on type '{}'.
+big.ts(479,5): error TS2339: Property 'lt' does not exist on type '{}'.
+big.ts(488,5): error TS2339: Property 'lte' does not exist on type '{}'.
+big.ts(496,5): error TS2339: Property 'minus' does not exist on type '{}'.
+big.ts(496,15): error TS2339: Property 'sub' does not exist on type '{}'.
+big.ts(505,9): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(511,14): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(512,14): error TS2339: Property 'e' does not exist on type 'number'.
+big.ts(517,11): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(521,11): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(558,9): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(558,16): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(590,9): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(596,7): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(597,7): error TS2339: Property 'e' does not exist on type 'number'.
+big.ts(606,5): error TS2339: Property 'mod' does not exist on type '{}'.
+big.ts(613,12): error TS2339: Property 'c' does not exist on type 'number'.
+big.ts(617,13): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(618,14): error TS2339: Property 'cmp' does not exist on type 'number'.
+big.ts(620,7): error TS2339: Property 's' does not exist on type 'number'.
+big.ts(638,5): error TS2339: Property 'neg' does not exist on type '{}'.
+big.ts(648,5): error TS2339: Property 'plus' does not exist on type '{}'.
+big.ts(648,14): error TS2339: Property 'add' does not exist on type '{}'.
+big.ts(648,33): error TS2304: Cannot find name 'T'.
+big.ts(732,5): error TS2339: Property 'pow' does not exist on type '{}'.
+big.ts(762,5): error TS2339: Property 'prec' does not exist on type '{}'.
+big.ts(762,26): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+big.ts(762,38): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+big.ts(766,12): error TS2554: Expected 4 arguments, but got 3.
+big.ts(779,5): error TS2339: Property 'round' does not exist on type '{}'.
+big.ts(784,12): error TS2554: Expected 4 arguments, but got 3.
+big.ts(792,5): error TS2339: Property 'sqrt' does not exist on type '{}'.
+big.ts(809,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+big.ts(817,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+big.ts(831,12): error TS2554: Expected 4 arguments, but got 3.
+big.ts(838,5): error TS2339: Property 'times' does not exist on type '{}'.
+big.ts(838,15): error TS2339: Property 'mul' does not exist on type '{}'.
+big.ts(838,34): error TS2749: 'Big' refers to a value, but is being used as a type here. Did you mean 'typeof Big'?
+big.ts(913,5): error TS2339: Property 'toExponential' does not exist on type '{}'.
+big.ts(918,11): error TS2367: This condition will always return 'true' since the types 'Date' and 'number' have no overlap.
+big.ts(921,11): error TS2554: Expected 4 arguments, but got 3.
+big.ts(939,5): error TS2339: Property 'toFixed' does not exist on type '{}'.
+big.ts(944,11): error TS2367: This condition will always return 'true' since the types 'Date' and 'number' have no overlap.
+big.ts(947,11): error TS2554: Expected 4 arguments, but got 3.
+big.ts(950,12): error TS2322: Type 'string' is not assignable to type 'Date'.
+big.ts(963,5): error TS2339: Property 'toJSON' does not exist on type '{}'.
+big.ts(973,5): error TS2339: Property 'toNumber' does not exist on type '{}'.
+big.ts(991,5): error TS2339: Property 'toPrecision' does not exist on type '{}'.
+big.ts(1000,11): error TS2554: Expected 4 arguments, but got 3.
+big.ts(1032,14): error TS2304: Cannot find name 'define'.
+big.ts(1032,39): error TS2304: Cannot find name 'define'.
+big.ts(1033,5): error TS2304: Cannot find name 'define'.
+perf/bigtime.ts(75,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(75,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(77,47): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(77,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(78,54): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(78,59): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/bigtime.ts(136,22): error TS2339: Property 'toPlainString' does not exist on type 'Number'.
+perf/bigtime.ts(165,8): error TS2339: Property 'rss' does not exist on type '{}'.
+perf/bigtime.ts(165,17): error TS2339: Property 'hU' does not exist on type '{}'.
+perf/bigtime.ts(165,25): error TS2339: Property 'hT' does not exist on type '{}'.
+perf/bigtime.ts(165,33): error TS2339: Property 'rss' does not exist on type '{}'.
+perf/bigtime.ts(165,42): error TS2339: Property 'hU' does not exist on type '{}'.
+perf/bigtime.ts(165,50): error TS2339: Property 'hT' does not exist on type '{}'.
+perf/bigtime.ts(214,9): error TS2554: Expected 1 arguments, but got 0.
+perf/bigtime.ts(322,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Uint8Array'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(9,12): error TS2339: Property 'document' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(10,10): error TS2339: Property 'document' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(14,15): error TS2339: Property 'userAgent' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(15,13): error TS2339: Property 'userAgent' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(19,74): error TS2339: Property 'document' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(19,183): error TS2339: Property '__gwtStatsEvent' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(19,226): error TS2339: Property '__gwtStatsEvent' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(19,276): error TS2339: Property '__gwtStatsSessionId' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(19,303): error TS2339: Property '__gwtStatsSessionId' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(98,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(100,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(101,16): error TS2304: Cannot find name 'Bp'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(102,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(103,15): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(106,16): error TS2749: 'Sk' refers to a value, but is being used as a type here. Did you mean 'typeof Sk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(109,16): error TS2749: 'Yl' refers to a value, but is being used as a type here. Did you mean 'typeof Yl'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(111,15): error TS2630: Cannot assign to 'rb' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(112,15): error TS2630: Cannot assign to 'lr' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(114,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(114,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(115,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(115,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(116,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(116,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(117,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(117,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(118,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(118,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(124,16): error TS2304: Cannot find name 'Aj'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(128,16): error TS2304: Cannot find name 'umber'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(128,26): error TS2304: Cannot find name 'umber'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(129,16): error TS2749: 'y' refers to a value, but is being used as a type here. Did you mean 'typeof y'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(130,16): error TS2304: Cannot find name 'ny'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(130,23): error TS2749: 'y' refers to a value, but is being used as a type here. Did you mean 'typeof y'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(131,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(131,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(132,16): error TS2749: 'Yn' refers to a value, but is being used as a type here. Did you mean 'typeof Yn'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(138,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(139,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(140,16): error TS2304: Cannot find name 'Jb'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(141,16): error TS2304: Cannot find name 'Jb'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(145,16): error TS2749: 'Iq' refers to a value, but is being used as a type here. Did you mean 'typeof Iq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(145,23): error TS2749: 'Iq' refers to a value, but is being used as a type here. Did you mean 'typeof Iq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(146,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(146,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(147,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(147,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(148,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(148,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(157,16): error TS2749: 'Br' refers to a value, but is being used as a type here. Did you mean 'typeof Br'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(157,23): error TS2304: Cannot find name 'Aa'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(160,47): error TS2339: Property 'b' does not exist on type 'BigInt'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(160,51): error TS2339: Property 'e' does not exist on type 'BigInt'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(160,53): error TS2345: Argument of type 'BigInt' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(161,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(163,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(173,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(174,15): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(177,15): error TS2630: Cannot assign to 'Pl' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(178,15): error TS2630: Cannot assign to 'Yo' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(183,15): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(190,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(190,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(190,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(192,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(192,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(192,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(193,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(193,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(193,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(194,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(194,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(194,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(195,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(195,64): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(195,66): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(196,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(196,62): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(201,56): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(204,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(204,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(204,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(208,16): error TS2749: 'fb' refers to a value, but is being used as a type here. Did you mean 'typeof fb'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(209,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(210,16): error TS2749: 'Qe' refers to a value, but is being used as a type here. Did you mean 'typeof Qe'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(210,23): error TS2749: 'Qe' refers to a value, but is being used as a type here. Did you mean 'typeof Qe'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(211,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(211,22): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(212,16): error TS2304: Cannot find name 'I'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(212,22): error TS2304: Cannot find name 'I'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(213,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(213,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(221,19): error TS2531: Object is possibly 'null'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(222,16): error TS2749: 'wk' refers to a value, but is being used as a type here. Did you mean 'typeof wk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(226,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(226,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(226,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(227,16): error TS2304: Cannot find name 'ny'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(227,23): error TS2749: 'y' refers to a value, but is being used as a type here. Did you mean 'typeof y'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(227,29): error TS2749: 'y' refers to a value, but is being used as a type here. Did you mean 'typeof y'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(232,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(232,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(235,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+perf/lib/bigdecimal_GWT/bigdecimal.ts(240,16): error TS2749: 'Ae' refers to a value, but is being used as a type here. Did you mean 'typeof Ae'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(240,23): error TS2749: 'Be' refers to a value, but is being used as a type here. Did you mean 'typeof Be'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(241,15): error TS2630: Cannot assign to 'qc' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(250,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(252,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(255,16): error TS2749: 'nk' refers to a value, but is being used as a type here. Did you mean 'typeof nk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(261,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(261,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(262,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(262,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(267,16): error TS2749: 'Aq' refers to a value, but is being used as a type here. Did you mean 'typeof Aq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(267,23): error TS2749: 'Aq' refers to a value, but is being used as a type here. Did you mean 'typeof Aq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(267,30): error TS2749: 'Aq' refers to a value, but is being used as a type here. Did you mean 'typeof Aq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(268,16): error TS2749: 'Aq' refers to a value, but is being used as a type here. Did you mean 'typeof Aq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(268,23): error TS2749: 'Bq' refers to a value, but is being used as a type here. Did you mean 'typeof Bq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(268,30): error TS2749: 'Cq' refers to a value, but is being used as a type here. Did you mean 'typeof Cq'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(270,16): error TS2304: Cannot find name 'J'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(271,29): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(272,46): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(273,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(273,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(274,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(276,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(276,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(285,16): error TS2749: 'Qf' refers to a value, but is being used as a type here. Did you mean 'typeof Qf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(285,23): error TS2749: 'Qf' refers to a value, but is being used as a type here. Did you mean 'typeof Qf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(286,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(286,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(287,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(287,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(288,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(288,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(289,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(291,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(291,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(298,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(299,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(303,16): error TS2749: 'gm' refers to a value, but is being used as a type here. Did you mean 'typeof gm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(304,16): error TS2749: 'Rh' refers to a value, but is being used as a type here. Did you mean 'typeof Rh'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(308,16): error TS2304: Cannot find name 'J'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(310,16): error TS2749: 'Uf' refers to a value, but is being used as a type here. Did you mean 'typeof Uf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(311,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(316,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(316,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(317,16): error TS2304: Cannot find name 'Ia'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(319,15): error TS2630: Cannot assign to 'Qe' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(320,16): error TS2749: 'M' refers to a value, but is being used as a type here. Did you mean 'typeof M'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(320,22): error TS2749: 'M' refers to a value, but is being used as a type here. Did you mean 'typeof M'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(321,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(321,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(322,57): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(322,64): error TS2339: Property 'ab' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(322,94): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(322,102): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(323,16): error TS2749: 'Ai' refers to a value, but is being used as a type here. Did you mean 'typeof Ai'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(330,55): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(330,62): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(330,66): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(330,103): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(330,116): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(333,80): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(333,109): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(335,88): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(336,94): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(338,16): error TS2304: Cannot find name 'Int64'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(339,16): error TS2304: Cannot find name 'J'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(343,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(347,16): error TS2749: 'sm' refers to a value, but is being used as a type here. Did you mean 'typeof sm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(354,16): error TS2749: 'ti' refers to a value, but is being used as a type here. Did you mean 'typeof ti'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,49): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,53): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,59): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,63): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,79): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(356,83): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,49): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,53): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,59): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,63): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,79): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(357,83): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(358,52): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(358,66): error TS2339: Property 'gb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(358,103): error TS2339: Property 'gb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(358,132): error TS2339: Property 'bb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(360,101): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(360,107): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(360,119): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(360,123): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(362,66): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(362,110): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(362,128): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(366,42): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(366,51): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(366,86): error TS2339: Property 'replace' does not exist on type 'number[]'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(368,16): error TS2749: 'qk' refers to a value, but is being used as a type here. Did you mean 'typeof qk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(368,23): error TS2749: 'qk' refers to a value, but is being used as a type here. Did you mean 'typeof qk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(368,30): error TS2749: 'qk' refers to a value, but is being used as a type here. Did you mean 'typeof qk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(369,16): error TS2749: 'Qh' refers to a value, but is being used as a type here. Did you mean 'typeof Qh'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(369,23): error TS2749: 'Qh' refers to a value, but is being used as a type here. Did you mean 'typeof Qh'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,45): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,54): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,65): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,100): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,127): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,133): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,140): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,146): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(371,79): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(377,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(377,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,59): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,95): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,101): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,128): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,134): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(379,140): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(384,16): error TS2749: 'Jm' refers to a value, but is being used as a type here. Did you mean 'typeof Jm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(385,39): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(387,16): error TS2749: 'Ai' refers to a value, but is being used as a type here. Did you mean 'typeof Ai'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(387,23): error TS2304: Cannot find name 'Bi'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(387,30): error TS2304: Cannot find name 'Ci'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(396,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(396,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(397,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(397,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,102): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,115): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,123): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,146): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,152): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,159): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(398,165): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(400,15): error TS2630: Cannot assign to 'Uq' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(402,15): error TS2630: Cannot assign to 'nl' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(403,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,49): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,53): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,80): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,84): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,90): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,94): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,140): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,154): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(404,168): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(406,16): error TS2749: 'Ah' refers to a value, but is being used as a type here. Did you mean 'typeof Ah'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(406,23): error TS2749: 'Ah' refers to a value, but is being used as a type here. Did you mean 'typeof Ah'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(407,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(407,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(408,16): error TS2749: 'Gf' refers to a value, but is being used as a type here. Did you mean 'typeof Gf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(410,103): error TS2339: Property 'l' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(410,107): error TS2339: Property 'm' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(410,111): error TS2339: Property 'h' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(410,140): error TS2403: Subsequent variable declarations must have the same type.  Variable 'e' must be of type 'Object', but here has type 'number | boolean'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(411,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(411,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(411,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(411,34): error TS2304: Cannot find name 'D'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(411,40): error TS2304: Cannot find name 'E'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(412,87): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(412,113): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(412,133): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(413,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(413,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(413,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,49): error TS2339: Property 'r' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,64): error TS2339: Property 'r' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,90): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,104): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,108): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,112): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,140): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,145): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,161): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,173): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,180): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,186): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(415,199): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,49): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,61): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,87): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,91): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,96): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,101): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,106): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,110): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,115): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,120): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,125): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,130): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,135): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,139): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,151): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,155): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,160): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,165): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,170): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,174): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,179): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,184): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,189): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,194): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,199): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(416,204): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,49): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,61): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,87): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,91): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,96): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,101): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,106): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,110): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,115): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,120): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,125): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,130): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,135): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,140): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,152): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,156): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,161): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,166): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,171): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,175): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,180): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,185): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,190): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,195): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,200): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(417,204): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(419,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(419,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(421,16): error TS2304: Cannot find name 'J'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(421,22): error TS2304: Cannot find name 'J'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(422,16): error TS2749: 'nk' refers to a value, but is being used as a type here. Did you mean 'typeof nk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(422,23): error TS2749: 'nk' refers to a value, but is being used as a type here. Did you mean 'typeof nk'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(423,91): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(423,138): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(426,16): error TS2749: 'Kf' refers to a value, but is being used as a type here. Did you mean 'typeof Kf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(426,23): error TS2749: 'Kf' refers to a value, but is being used as a type here. Did you mean 'typeof Kf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(430,118): error TS2339: Property 'eQ' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(430,128): error TS2339: Property 'eQ' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(430,151): error TS2339: Property 'gb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(430,171): error TS2339: Property 'gb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(430,202): error TS2339: Property 'fb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,64): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,73): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,82): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,94): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,103): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,133): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,145): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,157): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(431,182): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,57): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,92): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,111): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,118): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,163): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(432,173): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(434,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(434,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(435,16): error TS2749: 'Pf' refers to a value, but is being used as a type here. Did you mean 'typeof Pf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(438,15): error TS2630: Cannot assign to 'Un' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(439,16): error TS2749: 'Jn' refers to a value, but is being used as a type here. Did you mean 'typeof Jn'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(439,23): error TS2749: 'Jn' refers to a value, but is being used as a type here. Did you mean 'typeof Jn'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(441,16): error TS2749: 'Wf' refers to a value, but is being used as a type here. Did you mean 'typeof Wf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,46): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,57): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,63): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,69): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,82): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,105): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,110): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,118): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,122): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,126): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,130): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,134): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,149): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,153): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,157): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,161): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,177): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,181): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,185): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,189): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,193): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,206): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,210): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,214): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,218): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,222): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,227): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,232): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,237): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,244): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,248): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(445,261): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(446,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(446,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(447,80): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(447,100): error TS2447: The '&' operator is not allowed for boolean types. Consider using '&&' instead.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,67): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,71): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,91): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,117): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,130): error TS2339: Property 'fb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(449,140): error TS2339: Property 'fb' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(450,38): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(450,69): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(450,100): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,77): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,99): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,150): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,157): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,173): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,177): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,202): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,209): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,222): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,234): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(451,248): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(452,16): error TS2749: 'Jf' refers to a value, but is being used as a type here. Did you mean 'typeof Jf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(452,23): error TS2749: 'Jf' refers to a value, but is being used as a type here. Did you mean 'typeof Jf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(453,59): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(453,118): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(453,137): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(453,144): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(453,198): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(454,15): error TS2630: Cannot assign to 'Oh' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(454,278): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,65): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,71): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,83): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,88): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,117): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,135): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,231): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(456,237): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,75): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,100): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,119): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,123): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,167): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,175): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,214): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,226): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,233): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,264): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(457,271): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,72): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,84): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,112): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,149): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,161): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,181): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,210): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(458,288): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(459,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(459,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(460,16): error TS2749: 'Qm' refers to a value, but is being used as a type here. Did you mean 'typeof Qm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(460,23): error TS2749: 'Qm' refers to a value, but is being used as a type here. Did you mean 'typeof Qm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,78): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,124): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,156): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,192): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,198): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,205): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,211): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,229): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,261): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,293): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,299): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,306): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(461,312): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(462,140): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(463,77): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(463,108): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(463,116): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(463,220): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,45): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,49): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,56): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,64): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,94): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,102): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,129): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,137): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,180): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,184): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,209): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,213): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,217): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,241): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,247): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,254): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,260): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,267): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,273): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,280): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,286): error TS2339: Property 'd' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(464,292): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(465,66): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(465,257): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(465,295): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,82): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,98): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,265): error TS2339: Property 'substr' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,327): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,333): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(466,339): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(468,16): error TS2749: 'Ke' refers to a value, but is being used as a type here. Did you mean 'typeof Ke'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(470,16): error TS2304: Cannot find name 'f'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(472,16): error TS2749: 'Lm' refers to a value, but is being used as a type here. Did you mean 'typeof Lm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(472,23): error TS2749: 'Lm' refers to a value, but is being used as a type here. Did you mean 'typeof Lm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(472,30): error TS2749: 'Lm' refers to a value, but is being used as a type here. Did you mean 'typeof Lm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(475,16): error TS2749: 'Ah' refers to a value, but is being used as a type here. Did you mean 'typeof Ah'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(477,328): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,61): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,70): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,99): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,138): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,148): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,156): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(478,169): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(480,142): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(480,333): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(480,371): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,248): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,256): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,264): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,423): error TS2339: Property 'l' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,427): error TS2339: Property 'm' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(481,431): error TS2339: Property 'h' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(485,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(485,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(486,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(486,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(487,16): error TS2749: 'Yf' refers to a value, but is being used as a type here. Did you mean 'typeof Yf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(487,23): error TS2749: 'Yf' refers to a value, but is being used as a type here. Did you mean 'typeof Yf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(487,30): error TS2749: 'Yf' refers to a value, but is being used as a type here. Did you mean 'typeof Yf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,77): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,99): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,143): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,155): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,185): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,198): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,230): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,250): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,257): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,283): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,290): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,305): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,312): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,327): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,331): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,359): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,366): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,380): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(489,394): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(492,15): error TS2630: Cannot assign to 'go' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,77): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,93): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,149): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,180): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,192): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,222): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,235): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,248): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,255): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,295): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,325): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,332): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,349): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,353): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,377): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,385): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,399): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(494,413): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(495,140): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(495,319): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(495,347): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(497,16): error TS2304: Cannot find name 'I'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,77): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,109): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,117): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,133): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,141): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,153): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,161): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,188): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,198): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,205): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,239): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,248): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,276): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,343): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,387): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,401): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,408): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,422): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(498,436): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(500,328): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(500,350): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(500,423): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(500,454): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(501,82): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(501,93): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(501,104): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(501,115): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(501,207): error TS2339: Property 'alert' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,274): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,287): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,298): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,383): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,389): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,397): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(503,410): error TS2339: Property 'c' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(504,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(504,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(506,15): error TS2630: Cannot assign to 'Em' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,64): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,68): error TS2339: Property 'f' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,75): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,83): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,92): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,100): error TS2339: Property 'g' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,109): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,142): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,148): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,156): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,208): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,214): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,222): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(507,295): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(508,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,15): error TS2630: Cannot assign to 'Qo' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,49): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,69): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,92): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,113): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,136): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,161): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(511,186): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,79): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,98): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,102): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,146): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,172): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,185): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,200): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,214): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,231): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,239): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,260): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,264): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,287): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,294): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,328): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,337): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,361): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,370): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,498): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,502): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,526): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,533): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,547): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,561): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,575): error TS2339: Property 'e' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(514,589): error TS2339: Property 'b' does not exist on type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,139): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,156): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,200): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,250): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,267): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,311): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,361): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,378): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,424): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,476): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,493): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(515,538): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(517,73): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(518,16): error TS2749: 'Jm' refers to a value, but is being used as a type here. Did you mean 'typeof Jm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(518,23): error TS2749: 'Jm' refers to a value, but is being used as a type here. Did you mean 'typeof Jm'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(519,16): error TS2749: 'Xf' refers to a value, but is being used as a type here. Did you mean 'typeof Xf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(519,23): error TS2749: 'Xf' refers to a value, but is being used as a type here. Did you mean 'typeof Xf'?
+perf/lib/bigdecimal_GWT/bigdecimal.ts(523,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(523,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(524,31): error TS2339: Property 'userAgent' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(524,323): error TS2304: Cannot find name 'ActiveXObject'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(526,15): error TS2630: Cannot assign to 'rf' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(526,39): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(526,55): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(526,71): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(526,701): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(527,81): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,393): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,446): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,463): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,524): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,537): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,656): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(528,862): error TS2345: Argument of type '{ l: number; m: number; h: number; }' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(529,16): error TS2304: Cannot find name 'A'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(529,22): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(529,28): error TS2304: Cannot find name 'C'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(532,15): error TS2630: Cannot assign to 'uo' because it is a function.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,33): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,68): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,96): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,427): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,481): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,494): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,517): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,522): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,528): error TS2339: Property 'getPrecision' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,610): error TS2339: Property 'getRoundingMode' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,688): error TS2339: Property 'hashCode' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,836): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,932): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,1027): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,1122): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(533,1223): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,33): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,69): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,98): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,335): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,390): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,403): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,427): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,432): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,441): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,545): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,618): error TS2339: Property 'name' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,751): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,841): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,928): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1016): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1108): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1200): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1290): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1384): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,1475): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,33): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,67): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,94): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,424): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,477): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,490): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,512): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,517): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,526): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,601): error TS2339: Property 'abs' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,666): error TS2339: Property 'add' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,749): error TS2339: Property 'and' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,832): error TS2339: Property 'andNot' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,918): error TS2339: Property 'bitCount' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,996): error TS2339: Property 'bitLength' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1075): error TS2339: Property 'clearBit' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1148): error TS2339: Property 'compareTo' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1244): error TS2339: Property 'divide' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1330): error TS2339: Property 'doubleValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1410): error TS2339: Property 'equals' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1488): error TS2339: Property 'flipBit' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1560): error TS2339: Property 'floatValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1639): error TS2339: Property 'gcd' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1722): error TS2339: Property 'getLowestSetBit' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1807): error TS2339: Property 'hashCode' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1885): error TS2339: Property 'intValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,1962): error TS2339: Property 'isProbablePrime' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2049): error TS2339: Property 'max' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2132): error TS2339: Property 'min' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2215): error TS2339: Property 'mod' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2298): error TS2339: Property 'modInverse' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2388): error TS2339: Property 'modPow' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2493): error TS2339: Property 'multiply' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2581): error TS2339: Property 'negate' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2650): error TS2339: Property 'nextProbablePrime' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2730): error TS2339: Property 'not' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2796): error TS2339: Property 'or' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2878): error TS2339: Property 'pow' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,2946): error TS2339: Property 'remainder' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3035): error TS2339: Property 'setBit' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3106): error TS2339: Property 'shiftLeft' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3180): error TS2339: Property 'shiftRight' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3255): error TS2339: Property 'signum' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3330): error TS2339: Property 'subtract' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3418): error TS2339: Property 'testBit' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3497): error TS2339: Property 'toString_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3569): error TS2339: Property 'xor' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3652): error TS2339: Property 'divideAndRemainder' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3750): error TS2339: Property 'longValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3832): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,3928): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,4012): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,4096): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(536,4187): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,33): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,67): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,94): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,329): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,382): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,395): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,417): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,422): error TS2304: Cannot find name 'p'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,431): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,474): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,514): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,555): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,600): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,645): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,688): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,735): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,773): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,848): error TS2339: Property 'abs_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,918): error TS2339: Property 'add_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,988): error TS2339: Property 'byteValueExact' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1071): error TS2339: Property 'compareTo' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1166): error TS2339: Property 'divide_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1239): error TS2339: Property 'divideToIntegralValue_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1327): error TS2339: Property 'doubleValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1407): error TS2339: Property 'equals' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1485): error TS2339: Property 'floatValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1564): error TS2339: Property 'hashCode' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1642): error TS2339: Property 'intValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1719): error TS2339: Property 'intValueExact' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1801): error TS2339: Property 'max' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1883): error TS2339: Property 'min' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,1965): error TS2339: Property 'movePointLeft' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2042): error TS2339: Property 'movePointRight' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2120): error TS2339: Property 'multiply_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2195): error TS2339: Property 'negate_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2268): error TS2339: Property 'plus_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2339): error TS2339: Property 'pow_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2409): error TS2339: Property 'precision' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2487): error TS2339: Property 'remainder_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2563): error TS2339: Property 'round' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2647): error TS2339: Property 'scale' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2721): error TS2339: Property 'scaleByPowerOfTen' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2802): error TS2339: Property 'setScale_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2877): error TS2339: Property 'shortValueExact' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,2961): error TS2339: Property 'signum' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3036): error TS2339: Property 'stripTrailingZeros' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3116): error TS2339: Property 'subtract_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3191): error TS2339: Property 'toBigInteger' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3265): error TS2339: Property 'toBigIntegerExact' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3344): error TS2339: Property 'toEngineeringString' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3421): error TS2339: Property 'toPlainString' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3559): error TS2339: Property 'ulp' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3624): error TS2339: Property 'unscaledValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3699): error TS2339: Property 'divideAndRemainder_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3784): error TS2339: Property 'longValue' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3862): error TS2339: Property 'longValueExact' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,3948): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4028): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4141): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4318): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4402): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4486): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(537,4577): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,1554): error TS2304: Cannot find name 'B'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,3195): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,19962): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,19981): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,19998): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20020): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20042): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20071): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20103): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20133): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20168): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20186): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20226): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20244): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20270): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20310): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20340): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20374): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20417): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20463): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20492): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20527): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20540): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20563): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20616): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20675): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20694): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20707): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20720): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20736): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20771): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20784): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20797): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20813): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20848): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20861): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20897): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20910): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20926): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20963): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,20995): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21033): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21079): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21097): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21115): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21146): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21183): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21216): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21250): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21275): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21301): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21345): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21387): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21419): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21437): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21453): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21466): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21482): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21498): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21529): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21553): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21581): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21605): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21642): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21687): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21716): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21757): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21800): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21825): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21863): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21885): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21905): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21930): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21965): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,21984): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,22013): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,22216): error TS2339: Property 'onScriptLoad' does not exist on type '() => void'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(538,22236): error TS2339: Property 'onScriptLoad' does not exist on type '() => void'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(539,1): error TS2554: Expected 4 arguments, but got 3.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(542,31): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(543,30): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(549,37): error TS2304: Cannot find name 'ClassName'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(550,20): error TS2339: Property 'bigdecimal' does not exist on type '{}'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(568,35): error TS2339: Property 'inner_method' does not exist on type '() => any'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(582,26): error TS2339: Property 'inner_method' does not exist on type '() => any'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(16,120): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'any', but here has type 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,47): error TS2339: Property 'PLAIN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,75): error TS2339: Property 'SCIENTIFIC' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,113): error TS2339: Property 'ENGINEERING' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,153): error TS2339: Property 'ROUND_CEILING' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,197): error TS2339: Property 'ROUND_DOWN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,235): error TS2339: Property 'ROUND_FLOOR' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,275): error TS2339: Property 'ROUND_HALF_DOWN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,323): error TS2339: Property 'ROUND_HALF_EVEN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,371): error TS2339: Property 'ROUND_HALF_UP' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,415): error TS2339: Property 'ROUND_UNNECESSARY' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,467): error TS2339: Property 'ROUND_UP' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(19,27): error TS2554: Expected 0 arguments, but got 4.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,292): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,300): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,330): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,393): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,401): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,410): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,417): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,139): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,175): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,377): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,404): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(22,1): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(23,324): error TS2403: Subsequent variable declarations must have the same type.  Variable 'l' must be of type 'number', but here has type 'any'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(30,501): error TS2403: Subsequent variable declarations must have the same type.  Variable 'g' must be of type 'number', but here has type 'any'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(31,98): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(31,188): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(34,39): error TS2339: Property 'multiply' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(34,92): error TS2339: Property 'multiply' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(34,149): error TS2339: Property 'finish' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(38,197): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(38,375): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(39,32): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,317): error TS2339: Property 'ind' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,353): error TS2339: Property 'mant' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,378): error TS2339: Property 'exp' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,396): error TS2339: Property 'form' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,461): error TS2339: Property 'mant' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(44,503): error TS2339: Property 'layout' does not exist on type '{}'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(47,174): error TS2403: Subsequent variable declarations must have the same type.  Variable 'b' must be of type 'number', but here has type 'any'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(47,197): error TS2403: Subsequent variable declarations must have the same type.  Variable 'd' must be of type 'number', but here has type 'any'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(47,330): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(47,358): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(47,446): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,62): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,99): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,157): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,184): error TS2339: Property 'split' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,234): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(48,375): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(49,11): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(49,149): error TS2322: Type 'any[]' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(58,304): error TS2304: Cannot find name 'IComparable'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(59,13): error TS2749: 'I' refers to a value, but is being used as a type here. Did you mean 'typeof I'?
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(59,269): error TS2339: Property 'ROUND_CEILING' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(59,337): error TS2339: Property 'ROUND_DOWN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(59,396): error TS2339: Property 'ROUND_FLOOR' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(59,458): error TS2339: Property 'ROUND_HALF_DOWN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(60,3): error TS2339: Property 'ROUND_HALF_EVEN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(60,77): error TS2339: Property 'ROUND_HALF_UP' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(60,145): error TS2339: Property 'ROUND_UNNECESSARY' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(60,225): error TS2339: Property 'ROUND_UP' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,58): error TS2339: Property 'ZERO' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,86): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,93): error TS2339: Property 'ONE' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,119): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,126): error TS2339: Property 'TEN' does not exist on type '() => void'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,152): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,182): error TS2304: Cannot find name 'define'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,196): error TS2304: Cannot find name 'define'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(61,207): error TS2304: Cannot find name 'define'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(381,48): error TS2554: Expected 0 arguments, but got 4.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(693,42): error TS2749: 'MathContext' refers to a value, but is being used as a type here. Did you mean 'typeof MathContext'?
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1153,62): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1164,60): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1174,61): error TS2554: Expected 0 arguments, but got 1.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1470,8): error TS2365: Operator '>=' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1471,9): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1477,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1484,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1485,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1487,11): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1487,21): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1516,9): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1518,9): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1528,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1548,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1555,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1561,10): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1584,10): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1585,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1602,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4649,9): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4653,8): error TS2322: Type 'string' is not assignable to type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4843,11): error TS2339: Property 'lostDigits' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4844,29): error TS2339: Property 'digits' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4848,11): error TS2339: Property 'ind' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4852,13): error TS2339: Property 'form' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4860,14): error TS2339: Property 'digits' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4865,13): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4877,26): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4877,47): error TS2339: Property 'exp' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4880,20): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4881,17): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4885,24): error TS2339: Property 'exp' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4885,50): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4888,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4890,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4898,24): error TS2339: Property 'ind' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4908,12): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5001,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,21): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5037,68): error TS2339: Property 'exp' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5080,26): error TS2339: Property 'roundingMode' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5215,13): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5216,13): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5283,22): error TS2339: Property 'length' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5335,22): error TS2749: 'BigDecimal' refers to a value, but is being used as a type here. Did you mean 'typeof BigDecimal'?
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5361,11): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5362,28): error TS2339: Property 'mant' does not exist on type 'number'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5594,11): error TS2339: Property 'digits' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5595,29): error TS2339: Property 'digits' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5601,12): error TS2339: Property 'form' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5640,20): error TS2339: Property 'digits' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5641,17): error TS2339: Property 'digits' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5642,24): error TS2339: Property 'form' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5648,22): error TS2339: Property 'form' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5675,11): error TS2339: Property 'form' does not exist on type 'Set<any>'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5689,32): error TS2304: Cannot find name 'BigNumber'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5713,12): error TS2304: Cannot find name 'define'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5713,37): error TS2304: Cannot find name 'define'.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5717,2): error TS2304: Cannot find name 'define'.
+

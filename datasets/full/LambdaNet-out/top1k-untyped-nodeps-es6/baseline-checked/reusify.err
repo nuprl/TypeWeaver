@@ -1,0 +1,20 @@
+benchmarks/createNoCodeFunction.ts(10,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmarks/fib.ts(4,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmarks/reuseNoCodeFunction.ts(3,21): error TS2307: Cannot find module '../' or its corresponding type declarations.
+benchmarks/reuseNoCodeFunction.ts(10,35): error TS2339: Property 'get' does not exist on type 'object'.
+benchmarks/reuseNoCodeFunction.ts(11,7): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(12,7): error TS2339: Property 'func' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(13,7): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(14,12): error TS2339: Property 'release' does not exist on type 'object'.
+benchmarks/reuseNoCodeFunction.ts(26,16): error TS2339: Property 'num' does not exist on type 'any[]'.
+reusify.ts(4,26): error TS2351: This expression is not constructable.
+  Type '{}' has no construct signatures.
+reusify.ts(8,9): error TS2322: Type 'object' is not assignable to type 'string'.
+reusify.ts(10,17): error TS2339: Property 'next' does not exist on type 'string'.
+reusify.ts(11,22): error TS2339: Property 'next' does not exist on type 'string'.
+reusify.ts(13,18): error TS2351: This expression is not constructable.
+  Type '{}' has no construct signatures.
+reusify.ts(17,13): error TS2339: Property 'next' does not exist on type 'string'.
+reusify.ts(23,10): error TS2339: Property 'next' does not exist on type 'object'.
+reusify.ts(24,5): error TS2322: Type 'string' is not assignable to type 'object'.
+

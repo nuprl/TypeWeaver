@@ -1,0 +1,91 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+regexpTreeParserName.Otherany0.5504void0.0508complex0.0397string0.0332boolean0.0304
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./generated/regexp-tree'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Original parse function.\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+generatedParseFnName.Otherany0.9372complex0.0065string0.0046void0.0045Promise<any>0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regexpTreeParserName.Otherany0.8665complex0.0155T0.0023void0.0014string0.0013
+.Punctuation
+parseName.Otherany0.6111void0.0299T0.0284complex0.0255Promise<any>0.0108
+.Punctuation
+bindName.Otherany0.9761string0.0067T0.0022void0.0011complex0.0008
+(Punctuation
+regexpTreeParserName.Otherany0.8165string0.0549void0.0085Error0.0065complex0.0064
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Parses a regular expression.\n *\n * Override original `regexpTreeParser.parse` to convert a value to a string,\n * since in regexp-tree we may pass strings, and RegExp instance.\n */Comment.Multiline
+\nText.Whitespace
+regexpTreeParserName.Otherany0.8642complex0.0044string0.0018HTMLDivElement0.0014T0.0011
+.Punctuation
+parseName.Otherany0.7726void0.0526boolean0.0188T0.0163complex0.0141
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+regexpName.Otherstring0.3307RegExp0.2989any0.2864number0.0083symbol0.0066
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6874string0.0350number0.0132Options0.0065RegExp0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+generatedParseFnName.Otherany0.7333string0.0952complex0.0366boolean0.0161void0.0148
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+regexpName.Otherany0.5508RegExp0.2154string0.1768boolean0.0098number0.0037
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7789string0.0124{}0.0066number0.0055RegExp0.0041
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+// By default do not capture locations; callers may override.Comment.Single
+\nText.Whitespace
+regexpTreeParserName.Otherany0.8977complex0.0214symbol0.0006{}0.0006void0.0006
+.Punctuation
+setOptionsName.Otherany0.6909void0.1252complex0.0417Promise<void>0.0200Promise<number>0.0062
+(Punctuation
+{Punctuation
+captureLocationsName.Otherboolean0.9873false0.0041any0.0025string0.0018true0.0011
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+regexpTreeParserName.Otherany0.7555void0.0405boolean0.0167complex0.0167number0.0152
+;Punctuation
+\nText.Whitespace

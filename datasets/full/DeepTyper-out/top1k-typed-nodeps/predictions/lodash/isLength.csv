@@ -1,0 +1,70 @@
+Text
+/** Used as references for various `Number` constants. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+MAX_SAFE_INTEGERName.Othernumber0.9763any0.0121boolean0.0059string0.0015number[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+9007199254740991Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * Checks if `value` is a valid array-like length.\n *\n * **Note:** This method is loosely based on\n * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.\n * @example\n *\n * isLength(3)\n * // => true\n *\n * isLength(Number.MIN_VALUE)\n * // => false\n *\n * isLength(Infinity)\n * // => false\n *\n * isLength('3')\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isLengthName.Otherany0.6212string0.2108complex0.0637boolean0.0528number0.0093
+(Punctuation
+valueName.Othernumber0.6557any0.2004string0.1206boolean0.0094complex0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Othernumber0.6059any0.3243string0.0393boolean0.0127complex0.0090
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+valueName.Othernumber0.9198any0.0654string0.0087boolean0.0047complex0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Othernumber0.9170any0.0674boolean0.0086string0.0056complex0.0003
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Othernumber0.9276any0.0643string0.0051boolean0.0020complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+MAX_SAFE_INTEGERName.Othernumber0.9827any0.0139string0.0016boolean0.0008void0.0003
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isLengthName.Otherany0.9205complex0.0351string0.0250boolean0.0025number0.0017
+\nText.Whitespace

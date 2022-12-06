@@ -1,0 +1,19 @@
+index.ts(3,24): error TS2322: Type '(char: string) => string' is not assignable to type 'string'.
+index.ts(16,9): error TS2322: Type 'number' is not assignable to type 'string'.
+index.ts(22,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(27,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(29,11): error TS2322: Type 'string | number' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+index.ts(29,25): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+index.ts(56,10): error TS2339: Property 'code' does not exist on type 'JSONParseError'.
+index.ts(57,10): error TS2339: Property 'systemError' does not exist on type 'JSONParseError'.
+index.ts(72,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+index.ts(75,26): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(96,63): error TS2339: Property 'length' does not exist on type 'never'.
+index.ts(112,26): error TS2322: Type '(txt: string) => string' is not assignable to type 'string'.
+index.ts(119,23): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(119,38): error TS2345: Argument of type 'string' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+

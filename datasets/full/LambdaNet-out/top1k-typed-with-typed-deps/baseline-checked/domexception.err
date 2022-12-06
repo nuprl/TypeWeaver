@@ -1,0 +1,34 @@
+index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+index.ts(5,14): error TS2339: Property 'install' does not exist on type '{ new (message?: string, name?: string): DOMException; prototype: DOMException; readonly ABORT_ERR: number; readonly DATA_CLONE_ERR: number; readonly DOMSTRING_SIZE_ERR: number; ... 21 more ...; readonly WRONG_DOCUMENT_ERR: number; }'.
+index.ts(7,37): error TS2339: Property 'DOMException' does not exist on type 'object'.
+lib/DOMException-impl.ts(7,10): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(8,10): error TS2339: Property 'message' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(12,34): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(19,38): error TS2339: Property 'wrapperForImpl' does not exist on type 'string'.
+scripts/generate.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/generate.ts(5,29): error TS2339: Property 'resolve' does not exist on type 'string'.
+scripts/generate.ts(6,29): error TS2339: Property 'resolve' does not exist on type 'string'.
+scripts/generate.ts(8,38): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+scripts/generate.ts(10,13): error TS2339: Property 'addSource' does not exist on type 'HTMLElement'.
+scripts/generate.ts(11,13): error TS2339: Property 'generate' does not exist on type 'HTMLElement'.
+scripts/generate.ts(13,23): error TS2339: Property 'stack' does not exist on type 'object'.
+scripts/get-latest-platform-tests.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/get-latest-platform-tests.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+scripts/get-latest-platform-tests.ts(21,32): error TS2339: Property 'resolve' does not exist on type 'string'.
+scripts/get-latest-platform-tests.ts(23,4): error TS2339: Property 'mkdirSync' does not exist on type 'string'.
+scripts/get-latest-platform-tests.ts(32,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+scripts/get-latest-platform-tests.ts(34,11): error TS2740: Type 'Response' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+scripts/get-latest-platform-tests.ts(35,9): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
+scripts/get-latest-platform-tests.ts(35,22): error TS2339: Property 'createWriteStream' does not exist on type 'string'.
+scripts/get-latest-platform-tests.ts(35,45): error TS2339: Property 'resolve' does not exist on type 'string'.
+scripts/get-latest-platform-tests.ts(40,21): error TS2339: Property 'stack' does not exist on type 'object'.
+webidl2js-wrapper.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+webidl2js-wrapper.ts(7,27): error TS2339: Property 'Error' does not exist on type 'object'.
+webidl2js-wrapper.ts(11,16): error TS2339: Property 'install' does not exist on type '{ new (message?: string, name?: string): DOMException; prototype: DOMException; readonly ABORT_ERR: number; readonly DATA_CLONE_ERR: number; readonly DOMSTRING_SIZE_ERR: number; ... 21 more ...; readonly WRONG_DOCUMENT_ERR: number; }'.
+webidl2js-wrapper.ts(12,38): error TS2339: Property 'DOMException' does not exist on type 'object'.
+webidl2js-wrapper.ts(12,75): error TS2339: Property 'Error' does not exist on type 'object'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3779,11): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3810,13): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18095,18): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+

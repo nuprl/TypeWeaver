@@ -1,0 +1,14 @@
+index.ts(1,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(7,18): error TS2345: Argument of type '(er: number, st: number) => any' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
+  Types of parameters 'er' and 'err' are incompatible.
+    Type 'ErrnoException' is not assignable to type 'number'.
+index.ts(15,13): error TS2339: Property 'uid' does not exist on type '{}'.
+index.ts(15,18): error TS2339: Property 'gid' does not exist on type '{}'.
+index.ts(19,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(20,32): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(34,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(43,13): error TS2339: Property 'uid' does not exist on type '{}'.
+index.ts(43,18): error TS2339: Property 'gid' does not exist on type '{}'.
+index.ts(47,18): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+index.ts(55,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+

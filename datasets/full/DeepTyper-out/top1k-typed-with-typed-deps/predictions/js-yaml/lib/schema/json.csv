@@ -1,0 +1,64 @@
+Text
+// Standard YAML's JSON schema.Comment.Single
+\nText.Whitespace
+// http://www.yaml.org/spec/1.2/spec.html#id2803231Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// NOTE: JS-YAML does not support schema-specific tag resolution restrictions.Comment.Single
+\nText.Whitespace
+// So, this schema is not such strict as defined in the YAML specification.Comment.Single
+\nText.Whitespace
+// It allows numbers in binary notaion, use `Null` and `NULL` as `null`, etc.Comment.Single
+\n\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./failsafe'Literal.String.Single
+)Punctuation
+.Punctuation
+extendName.Otherany0.9976complex0.0006number0.0003void0.0002T0.0001
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+implicitName.Otherany[]0.9321any0.0330string[]0.0176complex0.0040number[]0.0016
+:Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+requireName.Other
+(Punctuation
+'../type/null'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+requireName.Other
+(Punctuation
+'../type/bool'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+requireName.Other
+(Punctuation
+'../type/int'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+requireName.Other
+(Punctuation
+'../type/float'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+]Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

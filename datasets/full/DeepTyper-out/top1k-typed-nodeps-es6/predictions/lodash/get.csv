@@ -1,0 +1,76 @@
+importKeyword
+ Text.Whitespace
+baseGetName.Otherany0.2318complex0.1767boolean0.0891string0.0568string[]0.0400
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseGet.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Gets the value at `path` of `object`. If the resolved value is\n * `undefined`, the `defaultValue` is returned in its place.\n *\n * @since 3.7.0\n * @category Object\n * @param {Object} object The object to query.\n * @param {Array|string} path The path of the property to get.\n * @param {*} [defaultValue] The value returned for `undefined` resolved values.\n * @returns {*} Returns the resolved value.\n * @see has, hasIn, set, unset\n * @example\n *\n * const object = { 'a': [{ 'b': { 'c': 3 } }] }\n *\n * get(object, 'a[0].b.c')\n * // => 3\n *\n * get(object, ['a', '0', 'b', 'c'])\n * // => 3\n *\n * get(object, 'a.b.c', 'default')\n * // => 'default'\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getName.Other
+(Punctuation
+objectName.Otherany0.7396object0.0786Object0.0624string0.0548number0.0170
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.7995any0.1678object0.0063Path0.0060number0.0028
+,Punctuation
+ Text.Whitespace
+defaultValueName.Otherany0.7832string0.1386number0.0413boolean0.0175object0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.8085number0.0521boolean0.0336object0.0318string0.0291
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.6338Object0.1300object0.1095number0.0464string0.0283
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+undefinedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseGetKeyword.Typeboolean0.4131any0.2712complex0.0997number0.0539string0.0400
+(Punctuation
+objectName.Otherany0.8228Object0.0705object0.0341number0.0217string0.0159
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.7025any0.1849complex0.0189Path0.0188object0.0112
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.8517string0.0530number0.0510complex0.0070boolean0.0062
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+defaultValueName.Otherany0.7144number0.1051string0.0811boolean0.0186object0.0124
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+resultKeyword.Typeany0.6163string0.0779number0.0579boolean0.0262{}0.0143
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+getName.Other
+\nText.Whitespace

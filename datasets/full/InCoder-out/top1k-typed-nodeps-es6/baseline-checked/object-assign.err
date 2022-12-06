@@ -1,0 +1,20 @@
+bench.ts(32,2): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(33,3): error TS2304: Cannot find name 'bench'.
+bench.ts(37,3): error TS2304: Cannot find name 'bench'.
+bench.ts(41,3): error TS2304: Cannot find name 'bench'.
+bench.ts(47,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(48,2): error TS2304: Cannot find name 'bench'.
+bench.ts(52,2): error TS2304: Cannot find name 'bench'.
+bench.ts(56,2): error TS2304: Cannot find name 'bench'.
+bench.ts(61,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(62,2): error TS2304: Cannot find name 'bench'.
+bench.ts(66,2): error TS2304: Cannot find name 'bench'.
+bench.ts(70,2): error TS2304: Cannot find name 'bench'.
+index.ts(31,3): error TS2542: Index signature in type 'String' only permits reading.
+index.ts(41,54): error TS2345: Argument of type '(n: number) => any' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any'.
+  Types of parameters 'n' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+index.ts(50,44): error TS2345: Argument of type '(letter: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'letter' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+

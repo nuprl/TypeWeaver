@@ -1,0 +1,60 @@
+importKeyword
+ Text.Whitespace
+baseCloneName.Otherany0.0869complex0.0345string0.0344boolean0.0253RegExp0.0153
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseClone.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseConformsName.Otherany0.1554string0.0948boolean0.0449RegExp0.0338complex0.0327
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseConforms.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to compose bitmasks for cloning. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Othernumber0.2273any0.2031string0.1283boolean0.0417complex0.0156
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * Creates a function that invokes the predicate properties of `source` with\n * the corresponding property values of a given object, returning `true` if\n * all predicates return truthy, else `false`.\n *\n * **Note:** The created function is equivalent to `conformsTo` with\n * `source` partially applied.\n *\n * @since 4.0.0\n * @category Util\n * @param {Object} source The object of property predicates to conform to.\n * @returns {Function} Returns the new spec function.\n * @example\n *\n * const objects = [\n *   { 'a': 2, 'b': 1 },\n *   { 'a': 1, 'b': 2 }\n * ]\n *\n * filter(objects, conforms({ 'b': function(n) { return n > 1 } }))\n * // => [{ 'a': 1, 'b': 2 }]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+conformsName.Otherstring0.2287any0.1815number0.0560boolean0.0240complex0.0169
+(Punctuation
+sourceName.Otherstring0.4931any0.2673number0.0196Error0.0057complex0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseConformsName.Otherany0.4082string0.2479void0.0644complex0.0382number0.0335
+(Punctuation
+baseCloneName.Otherstring0.4696any0.3428number0.0326boolean0.0183void0.0137
+(Punctuation
+sourceName.Otherstring0.4597any0.3499number0.0397Error0.0081complex0.0059
+,Punctuation
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Otherany0.4954string0.2215number0.1358void0.0179boolean0.0165
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+conformsName.Otherany0.3704string0.0316void0.0171number0.0124complex0.0107
+\nText.Whitespace

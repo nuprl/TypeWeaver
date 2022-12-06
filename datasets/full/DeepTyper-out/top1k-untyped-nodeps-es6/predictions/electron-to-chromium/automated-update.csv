@@ -1,0 +1,333 @@
+importKeyword
+ Text.Whitespace
+'shelljs/global'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+whichName.Othercomplex0.6142any0.3191void0.0385number0.0087string0.0066
+(Punctuation
+'git'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+echoName.Othervoid0.3876any0.1124complex0.0151T0.0097Promise<T>0.0045
+(Punctuation
+'Sorry, this script requires git'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+exitName.Othervoid0.9856any0.0056Promise<void>0.0025number0.0011complex0.0010
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+whichName.Othercomplex0.7224any0.2061void0.0456number0.0093string0.0062
+(Punctuation
+'npm'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+echoName.Othervoid0.3590any0.1887complex0.0254T0.0107Promise<T>0.0041
+(Punctuation
+'Sorry, this script requires npm'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+exitName.Othervoid0.9816any0.0074Promise<void>0.0028complex0.0028number0.0013
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+execName.Otherany0.4321void0.3680complex0.1269Promise<number>0.0151Promise<void>0.0113
+(Punctuation
+'npm update electron-releases && npm run build && npm test'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9983any0.0003number0.0003true0.0002false0.0002
+:Operator
+trueKeyword.Type
+}Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+codeName.Othernumber0.7942string0.1467any0.0447void0.0063boolean0.0044
+,Punctuation
+ Text.Whitespace
+stdoutName.Otherany0.4685string0.4003number0.0514boolean0.0374Date0.0127
+,Punctuation
+ Text.Whitespace
+stderrName.Otherany0.5787string0.3532number0.0219Buffer0.0082Error0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+(Punctuation
+codeName.Othernumber0.9447any0.0473string0.0058boolean0.0010complex0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+execName.Otherany0.7130void0.1611complex0.0971Promise<void>0.0056Promise<number>0.0041
+(Punctuation
+'echo "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+stdoutName.Otherany0.6269string0.3427number0.0260boolean0.0006void0.0006
+ Text.Whitespace
++Operator
+ Text.Whitespace
+stderrName.Otherany0.7077string0.2826number0.0071complex0.0007void0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'"| aha | mail -a "Content-type: text/html" -s "[e2c] Automated update failed" root'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+echoName.Othervoid0.4939any0.1438complex0.0348T0.0094never0.0055
+(Punctuation
+'test failed, exit.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+exitName.Othervoid0.9804any0.0083Promise<void>0.0033complex0.0029number0.0013
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+execName.Otherany0.7428complex0.1064void0.1044Promise<number>0.0100Promise<void>0.0044
+(Punctuation
+'git add package.json package-lock.json'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9978any0.0005number0.0004true0.0003string0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+execName.Otherany0.6674complex0.1582void0.1360Promise<number>0.0062Promise<void>0.0051
+(Punctuation
+'git commit -m "bump electron-releases"'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9974any0.0005true0.0005number0.0005string0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+execName.Otherany0.6306complex0.1731void0.1527Promise<number>0.0070Promise<void>0.0054
+(Punctuation
+'git push origin master'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9974any0.0005true0.0005number0.0005false0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+execName.Otherany0.6267complex0.1758void0.1531Promise<number>0.0070Promise<void>0.0052
+(Punctuation
+'git status --porcelain'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9979any0.0004number0.0004true0.0003false0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+codeName.Othernumber0.7609string0.1686any0.0503boolean0.0093void0.0063
+,Punctuation
+ Text.Whitespace
+stdoutName.Otherstring0.4654any0.3750boolean0.0608number0.0358Date0.0217
+,Punctuation
+ Text.Whitespace
+stderrName.Otherany0.4939string0.4633Buffer0.0113number0.0103complex0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+indexHasUpdatedName.Otherboolean0.9503number0.0298any0.0069string0.0069true0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+!Operator
+stdoutName.Otherstring0.5017any0.4703boolean0.0072number0.0067string[]0.0039
+.Punctuation
+lengthName.Otherany0.8231number0.1713string0.0027complex0.0013void0.0004
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+(Punctuation
+indexHasUpdatedName.Otherboolean0.7880number0.0885any0.0555string0.0466true0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+execName.Otherany0.7789complex0.1359void0.0594Promise<number>0.0032Promise<void>0.0021
+(Punctuation
+'git add versions.js full-versions.js chromium-versions.js full-chromium-versions.js versions.json full-versions.json chromium-versions.json full-chromium-versions.json'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9971any0.0008true0.0006number0.0004string0.0002
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+execName.Otherany0.7005complex0.1430void0.1178Promise<number>0.0061Promise<void>0.0050
+(Punctuation
+'git commit -m "generate new version"'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9966true0.0008any0.0008number0.0005string0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+execName.Otherany0.6843complex0.1410void0.1314Promise<number>0.0072Promise<void>0.0056
+(Punctuation
+'npm version patch'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9966true0.0008any0.0008number0.0005false0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+execName.Otherany0.6744complex0.1414void0.1400Promise<number>0.0072Promise<void>0.0057
+(Punctuation
+'git push origin master'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9966true0.0008any0.0007number0.0005false0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+execName.Otherany0.6569void0.1520complex0.1459Promise<number>0.0072Promise<void>0.0058
+(Punctuation
+'git push --tags'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9967true0.0008any0.0007number0.0006false0.0003
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+execName.Otherany0.6604void0.1540complex0.1423Promise<number>0.0068Promise<void>0.0055
+(Punctuation
+'npm publish'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+silentName.Otherboolean0.9973any0.0008number0.0005true0.0005string0.0002
+:Operator
+trueKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+echoName.Othervoid0.3887any0.0955complex0.0143T0.0122never0.0063
+(Punctuation
+'new version released.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+exitName.Othervoid0.9795any0.0096Promise<void>0.0024complex0.0019number0.0018
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+echoName.Othervoid0.2507any0.0903complex0.0160T0.0093T[]0.0053
+(Punctuation
+'nothing to do.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+exitName.Othervoid0.9766any0.0118Promise<void>0.0031complex0.0024number0.0016
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

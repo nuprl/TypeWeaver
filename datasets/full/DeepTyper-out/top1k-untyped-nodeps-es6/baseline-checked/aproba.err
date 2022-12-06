@@ -1,0 +1,14 @@
+index.ts(26,63): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(27,48): error TS2554: Expected 1 arguments, but got 2.
+index.ts(28,42): error TS2554: Expected 1 arguments, but got 2.
+index.ts(29,56): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+index.ts(30,50): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+index.ts(75,30): error TS2345: Argument of type '(typeCode: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'typeCode' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+index.ts(79,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+index.ts(88,9): error TS2322: Type 'string' is not assignable to type 'any[]'.
+  Type 'string' is not assignable to type 'any[]'.
+index.ts(101,7): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(104,3): error TS2322: Type 'Error' is not assignable to type 'string'.
+

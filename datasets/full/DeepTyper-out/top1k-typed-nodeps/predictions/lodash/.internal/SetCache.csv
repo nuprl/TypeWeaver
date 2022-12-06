@@ -1,0 +1,171 @@
+importKeyword
+ Text.Whitespace
+MapCacheName.Otherany0.4328complex0.0386string0.0143boolean0.0085RegExp0.0081
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./MapCache.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to stand-in for `undefined` hash values. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+HASH_UNDEFINEDName.OtherRegExp0.2479string0.2311any0.1916complex0.0083Date0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'__lodash_hash_undefined__'Literal.String.Single
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+SetCacheName.Otherany0.9964string0.0017complex0.0010number0.0003symbol0.0001
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+/**\n   * Creates an array cache object to store unique values.\n   *\n   * @private\n   * @constructor\n   * @param {Array} [values] The values to cache.\n   */Comment.Multiline
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+valuesName.Otherany0.5866string0.0606number0.0506number[]0.0351string[]0.0123
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9870any0.0118string0.0007boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.7184any0.2711string0.0023boolean0.0012complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valuesName.Otherany0.6270number0.1474number[]0.0571string0.0125string[]0.0117
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+values.lengthKeyword.Type
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherany0.5901number0.3283string0.0118boolean0.0074complex0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7408number0.1729string0.0391boolean0.0038complex0.0021
+ Text.Whitespace
+MapCacheName.Otherany0.9790number0.0175string0.0021boolean0.0004complex0.0003
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9816any0.0169string0.0006boolean0.0002void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9502any0.0474string0.0009boolean0.0002void0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+addName.Othervoid0.7847any0.1053boolean0.0116Promise<void>0.0100complex0.0078
+(Punctuation
+valuesName.Otherany0.5130string[]0.1546number[]0.0812any[]0.0522number0.0441
+[Punctuation
+indexName.Othernumber0.9817any0.0160string0.0012void0.0002boolean0.0002
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Adds `value` to the array cache.\n   *\n   * @memberOf SetCache\n   * @alias push\n   * @param {*} value The value to cache.\n   * @returns {Object} Returns the cache instance.\n   */Comment.Multiline
+\n  Text.Whitespace
+addName.Othervoid0.7164any0.0556boolean0.0213number0.0133this0.0095
+(Punctuation
+valueName.Otherany0.3329string0.2346number0.2159boolean0.1321{}0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othercomplex0.5676any0.2335Set<any>0.0069void0.0051Set<string>0.0032
+.Punctuation
+setName.Other
+(Punctuation
+valueName.Otherany0.2992number0.2510boolean0.2212string0.1186complex0.0172
+,Punctuation
+ Text.Whitespace
+HASH_UNDEFINEDName.Otherany0.3825number0.1785boolean0.1325complex0.0339string0.0262
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Checks if `value` is in the array cache.\n   *\n   * @memberOf SetCache\n   * @param {*} value The value to search for.\n   * @returns {boolean} Returns `true` if `value` is found, else `false`.\n   */Comment.Multiline
+\n  Text.Whitespace
+hasName.Otherboolean0.8190any0.0811number0.0076string0.0046{}0.0030
+(Punctuation
+valueName.Otherany0.3860string0.2052boolean0.1735number0.1130complex0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othercomplex0.3144any0.2599Set<string>0.0598Set<any>0.0518{}0.0211
+.Punctuation
+hasName.Otherboolean0.9219any0.0369number0.0078string0.0044complex0.0040
+(Punctuation
+valueName.Otherstring0.3875any0.2822number0.1395boolean0.0923{}0.0132
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+SetCacheName.Otherany0.6934complex0.1095void0.0436Promise<void>0.0069boolean0.0036
+.Punctuation
+prototypeName.Otherany0.5861any[]0.0095void0.0074string[]0.0071complex0.0049
+.Punctuation
+pushName.Otherany0.6143number0.3195void0.0109complex0.0063string0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SetCacheName.Otherany0.8743complex0.0340void0.0055number0.0026string0.0017
+.Punctuation
+prototypeName.Otherany0.4678void0.0055complex0.0055any[]0.0054string[]0.0047
+.Punctuation
+addName.Otherany0.5022complex0.0478Set<any>0.0112void0.0097boolean0.0069
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+SetCacheName.Otherany0.3441complex0.0242number0.0146string0.0121boolean0.0055
+\nText.Whitespace

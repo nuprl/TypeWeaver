@@ -1,0 +1,249 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+toStrName.Otherstring0.9130any0.0561number0.0102boolean0.0068complex0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9994Object0.0002complex0.0001any0.0000ArrayConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.7467{}0.0108Date0.0075any0.0069complex0.0065
+.Punctuation
+toStringName.Otherstring0.8903complex0.0392any0.0340string)0.0060number0.0041
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+hasSymbolsFactoryName.Otherstring0.3419any0.2572boolean0.1739void0.0594RegExp0.0349
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'has-symbols'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hasSymbolsName.Otherstring0.7178any0.1836boolean0.0481number0.0136complex0.0110
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hasSymbolsFactoryName.Otherstring0.7554any0.1720boolean0.0204complex0.0129string[]0.0103
+(Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hasSymbolsName.Otherany0.4462boolean0.3163string0.1901number0.0132complex0.0091
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+symToStrName.Otherany0.6015string0.2991number0.0542boolean0.0131void0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SymbolName.BuiltinSymbolConstructor0.9445any0.0243symbol0.0025complex0.0018Function0.0007
+.Punctuation
+prototypeName.OtherObject0.1602any0.1457Function0.0293symbol0.0277{}0.0235
+.Punctuation
+toStringName.Otherstring0.7953any0.1581complex0.0157number0.0036string)0.0031
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+symStringRegexName.Otherstring0.7956RegExp0.1595any0.0273boolean0.0064string[]0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^Symbol\(.*\)$/Literal.String.Regex
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isSymbolObjectName.Otherboolean0.6813string0.1816any0.0870number0.0321void0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isRealSymbolObjectName.Otherboolean0.6352string0.2098any0.1049number0.0236complex0.0060
+(Punctuation
+valueName.Otherany0.6150string0.3344number0.0182boolean0.0076complex0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8531string0.0969Date0.0219boolean0.0061complex0.0048
+.Punctuation
+valueOfName.Otherany0.5474boolean0.1782string0.1216number0.1105complex0.0160
+(Punctuation
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'symbol'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+symStringRegexName.OtherRegExp0.7901any0.1161string0.0449boolean0.0215string[]0.0059
+.Punctuation
+testName.Otherboolean0.9804any0.0115complex0.0023void0.0020string0.0016
+(Punctuation
+symToStrName.Otherany0.5778string0.3073boolean0.0739void0.0117complex0.0053
+.Punctuation
+callName.Otherany0.9848string0.0088number0.0021T0.0007void0.0007
+(Punctuation
+valueName.Otherany0.7732string0.1951boolean0.0085number0.0060complex0.0018
+)Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isSymbolName.Otherboolean0.8768any0.0679complex0.0167number0.0129string0.0090
+(Punctuation
+valueName.Otherany0.9303string0.0485number0.0088complex0.0032boolean0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9745string0.0140complex0.0044number0.0028boolean0.0016
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'symbol'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+toStrName.Otherany0.4875boolean0.4684string0.0288complex0.0058number0.0016
+.Punctuation
+callName.Otherany0.9651string0.0230boolean0.0045number0.0029complex0.0017
+(Punctuation
+valueName.Otherany0.9050string0.0793number0.0046boolean0.0031complex0.0017
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'[object Symbol]'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+isSymbolObjectName.Otherboolean0.4101string0.2903any0.2530number0.0202complex0.0086
+(Punctuation
+valueName.Otherany0.6636string0.2935boolean0.0236number0.0089complex0.0029
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9991string0.0003number0.0003complex0.0001boolean0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isSymbolName.Otherboolean0.9701any0.0125number0.0055complex0.0050string0.0022
+(Punctuation
+valueName.Otherany0.8811string0.0668number0.0313boolean0.0085complex0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+// this environment does not support Symbols.Comment.Single
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Otherany0.7473string0.1139boolean0.0907number0.0329complex0.0021
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

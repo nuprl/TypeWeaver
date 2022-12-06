@@ -1,0 +1,382 @@
+#!/usr/bin/env nodeComment.Hashbang
+\nText.Whitespace
+Text
+/*\n * An example using a sampling of dashdash's features. See "hello.js" and\n * "help.js" for smaller examples.\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+dashdashName.Otherany0.3812string0.0791complex0.0547boolean0.0466string[]0.0268
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../lib/dashdash'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// Specify the options. Minimally `name` (or `names`) and `type`Comment.Single
+\nText.Whitespace
+// must be given for each.Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optionsName.Othercomplex0.9082any0.0212any[]0.0190{}0.0069Object0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+nameName.Otherstring0.9985any0.0006RegExp0.0002number0.0002string[]0.0002
+:Operator
+ Text.Whitespace
+'version'Literal.String.Single
+,Punctuation
+              Text.Whitespace
+// `name` or `names`Comment.Single
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'bool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9982any0.0006string[]0.0003number0.0003RegExp0.0002
+:Operator
+ Text.Whitespace
+'Print tool version and exit.'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9964any[]0.0007string[][]0.0006number[]0.0006RegExp[]0.0005
+:Operator
+ Text.Whitespace
+[Punctuation
+'help'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'h'Literal.String.Single
+]Punctuation
+,Punctuation
+        Text.Whitespace
+// first name is opts keyComment.Single
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'bool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9976string[]0.0007any0.0005number0.0003RegExp0.0003
+:Operator
+ Text.Whitespace
+'Print this help and exit.'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9969any[]0.0006string[][]0.0006number[]0.0005RegExp[]0.0004
+:Operator
+ Text.Whitespace
+[Punctuation
+'verbose'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'v'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'arrayOfBool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+envName.Otherstring0.9935RegExp0.0030string[]0.0013any0.0007complex0.0003
+:Operator
+ Text.Whitespace
+'FOO_VERBOSE'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9972string[]0.0010any0.0006RegExp0.0004number0.0003
+:Operator
+ Text.Whitespace
+'Verbose output. Use multiple times for more verbose.'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9975string[][]0.0005any[]0.0005RegExp[]0.0004number[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'b'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'bool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9974string[]0.0008any0.0006RegExp0.0004number0.0003
+:Operator
+ Text.Whitespace
+'A boolean arg'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9971any[]0.0006string[][]0.0006number[]0.0005RegExp[]0.0004
+:Operator
+ Text.Whitespace
+[Punctuation
+'file'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'f'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'string'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+envName.Otherstring0.9940RegExp0.0027string[]0.0012any0.0007complex0.0003
+:Operator
+ Text.Whitespace
+'FOO_FILE'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9969string[]0.0010RegExp0.0006any0.0006number0.0003
+:Operator
+ Text.Whitespace
+'File to process'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpArgName.Otherstring0.9928RegExp0.0036string[]0.0014any0.0010number0.0003
+:Operator
+ Text.Whitespace
+'FILE'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9973string[][]0.0006any[]0.0006RegExp[]0.0004number[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'timeout'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'t'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'positiveInteger'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+envName.Otherstring0.9949RegExp0.0024string[]0.0008any0.0006complex0.0002
+:Operator
+ Text.Whitespace
+'FOO_TIMEOUT'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9974string[]0.0007RegExp0.0005any0.0005number0.0003
+:Operator
+ Text.Whitespace
+'Processing timeout in milliseconds'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpArgName.Otherstring0.9926RegExp0.0043any0.0010string[]0.0009number0.0004
+:Operator
+ Text.Whitespace
+'MS'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+parserName.Otherany0.9015complex0.0234any[]0.0054number0.0028string[]0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dashdashName.Otherany0.9455complex0.0465string0.0016any[]0.0006string[]0.0005
+.Punctuation
+createParserName.Otherany0.7844complex0.1322string0.0295string[]0.0106any[]0.0047
+(Punctuation
+{Punctuation
+optionsName.Othercomplex0.3532any0.3185{}0.0374any[]0.0273Options0.0153
+:Operator
+ Text.Whitespace
+optionsKeyword.Typeany0.4310complex0.2773{}0.0323any[]0.0250number0.0145
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.7797complex0.0996{}0.0062Options0.0047number0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parserName.Otherany0.9416complex0.0258any[]0.0013number0.0011{}0.0005
+.Punctuation
+parseName.Otherany0.7802complex0.0694number0.0264boolean0.0133void0.0048
+(Punctuation
+processName.Otherany0.9921complex0.0065void0.0002string0.0002Process0.0001
+.Punctuation
+argvName.Otherany0.9910complex0.0028number0.0019string0.0011string[]0.0010
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9955Error0.0023string0.0008complex0.0006number0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000DOMTokenList0.0000Assert0.0000
+.Punctuation
+errorName.Othervoid0.9982complex0.0007any0.0006Promise<void>0.0001boolean0.0001
+(Punctuation
+'foo: error: %s'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+eName.Otherany0.9852Error0.0087complex0.0025string0.0007void0.0005
+.Punctuation
+messageName.Otherany0.9147string0.0817complex0.0016string[]0.0005number0.0005
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9955complex0.0034Process0.0002void0.0002string0.0001
+.Punctuation
+exitName.Otherany0.9732void0.0228number0.0012complex0.0010boolean0.0005
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+Text
+// Or a shortcut:Comment.Single
+\nText.Whitespace
+//      var opts = dashdash.parse({options: options});Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000Assert0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9985any0.0006complex0.0005Promise<void>0.0001number0.0000
+(Punctuation
+"# opts:"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.5968complex0.1610{}0.0606Options0.0212number0.0098
+)Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9999any0.0001void0.0000Assert0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9984complex0.0007any0.0005Promise<void>0.0001number0.0000
+(Punctuation
+"# args:"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.6900complex0.1937{}0.0183Options0.0173number0.0079
+.Punctuation
+_argsName.Otherstring0.5010any0.2192string[]0.0757number0.0552complex0.0289
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Use `parser.help()` for formatted options help.Comment.Single
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optsName.Othercomplex0.5165any0.4504{}0.0052Options0.0028number0.0027
+.Punctuation
+helpName.Otherstring0.8415any0.1218boolean0.0147string[]0.0064number0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+helpName.Otherstring0.9026any0.0410void0.0126complex0.0124string[]0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parserName.Otherany0.9497complex0.0298string0.0036number0.0017void0.0011
+.Punctuation
+helpName.Otherstring0.6331any0.3015void0.0236number0.0096complex0.0095
+(Punctuation
+{Punctuation
+includeEnvName.Otherboolean0.9928string0.0035any0.0011number0.0006void0.0005
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+}Punctuation
+)Punctuation
+.Punctuation
+trimRightName.Otherany0.6580void0.2472string0.0354boolean0.0132complex0.0108
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000complex0.0000Assert0.0000
+.Punctuation
+logName.Othervoid0.9991any0.0003complex0.0003Promise<void>0.0001number0.0000
+(Punctuation
+'usage: node foo.js [OPTIONS]\n'Literal.String.Single
+\n                Text.Whitespace
++Operator
+ Text.Whitespace
+'options:\n'Literal.String.Single
+\n                Text.Whitespace
++Operator
+ Text.Whitespace
+helpName.Otherstring0.9540any0.0169void0.0089string[]0.0062number0.0054
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9890complex0.0087void0.0004Process0.0002T0.0002
+.Punctuation
+exitName.Otherany0.9720void0.0225complex0.0014number0.0012Promise<any>0.0007
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// ...Comment.Single
+\nText.Whitespace

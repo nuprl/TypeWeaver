@@ -1,0 +1,139 @@
+importKeyword
+ Text.Whitespace
+onlyOnceName.Otherany0.1477complex0.0688void0.0521boolean0.0263string0.0260
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/onlyOnce.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+ensureAsyncName.Otherany0.1752void0.0715string0.0623complex0.0558boolean0.0497
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./ensureAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.1990void0.0963string0.0748complex0.0677boolean0.0562
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.2632void0.0988complex0.0879string0.0702boolean0.0444
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Calls the asynchronous function `fn` with a callback parameter that allows it\n * to call itself again, in series, indefinitely.\n\n * If an error is passed to the callback then `errback` is called with the\n * error, and execution stops, otherwise it will never be called.\n *\n * @name forever\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @category Control Flow\n * @param {AsyncFunction} fn - an async function to call repeatedly.\n * Invoked with (next).\n * @param {Function} [errback] - when `fn` passes an error to it's callback,\n * this function will be called, and execution stops. Invoked with (err).\n * @returns {Promise} a promise that rejects if an error occurs and an errback\n * is not passed\n * @example\n *\n * async.forever(\n *     function(next) {\n *         // next is suitable for passing to things that need a callback(err [, whatever]);\n *         // it will result in this function being called again.\n *     },\n *     function(err) {\n *         // if next is called with a value in its first parameter, it will appear\n *         // in here as 'err', and execution will stop.\n *     }\n * );\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+foreverName.Otherany0.2650string0.1738complex0.1231void0.0499Function0.0488
+(Punctuation
+fnName.OtherFunction0.4430any0.3795string0.0410number0.0160complex0.0114
+,Punctuation
+ Text.Whitespace
+errbackName.Otherany0.4559Function0.2593complex0.1029{}0.0246string0.0101
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+doneName.Otherany0.8007Function0.1415number0.0063complex0.0057boolean0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+onlyOnceName.Otherany0.7635Function0.1066complex0.0315boolean0.0101number0.0089
+(Punctuation
+errbackName.Otherany0.4523Function0.2603complex0.1307{}0.0312void0.0145
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+taskName.Otherany0.6392Function0.0718void0.0316boolean0.0260complex0.0211
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.5484Function0.0825complex0.0485string0.0401boolean0.0335
+(Punctuation
+ensureAsyncName.Otherany0.5044string0.1271Function0.0931complex0.0470number0.0342
+(Punctuation
+fnName.Otherany0.4771Function0.3739string0.0595number0.0195void0.0094
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+nextName.Otherany0.5830void0.1918Function0.0967string0.0500boolean0.0149
+(Punctuation
+errName.Otherany0.4967Error0.4614string0.0133complex0.0020number0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.4912Error0.4774string0.0101boolean0.0052complex0.0030
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+doneName.Otherany0.8549Function0.0815void0.0383boolean0.0083Error0.0021
+(Punctuation
+errName.OtherError0.5515any0.4214string0.0065complex0.0040boolean0.0014
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6440Error0.2534boolean0.0635string0.0064complex0.0043
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n        Text.Whitespace
+taskName.Otherany0.8551void0.0508Function0.0249complex0.0125boolean0.0075
+(Punctuation
+nextName.Otherany0.4249void0.1521Function0.1461string0.0803boolean0.0434
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nextName.Otherany0.3779Function0.1636void0.0701string0.0343Promise<{}>0.0175
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.4790complex0.0670void0.0436string0.0380number0.0284
+(Punctuation
+foreverName.Otherany0.2870string0.2382number0.2339boolean0.0309complex0.0102
+,Punctuation
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+\nText.Whitespace

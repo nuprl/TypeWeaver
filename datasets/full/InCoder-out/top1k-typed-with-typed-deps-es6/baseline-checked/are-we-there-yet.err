@@ -1,0 +1,17 @@
+lib/tracker-base.ts(7,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+lib/tracker-group.ts(21,65): error TS2749: 'Tracker' refers to a value, but is being used as a type here. Did you mean 'typeof Tracker'?
+lib/tracker-group.ts(40,50): error TS2304: Cannot find name 'Unit'.
+lib/tracker-group.ts(83,65): error TS2304: Cannot find name 'Todo'.
+lib/tracker-group.ts(87,67): error TS2304: Cannot find name 'Todo'.
+lib/tracker-group.ts(88,23): error TS2554: Expected 3 arguments, but got 2.
+lib/tracker-group.ts(94,18): error TS2554: Expected 2 arguments, but got 0.
+lib/tracker-group.ts(109,44): error TS2749: 'TrackerGroup' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerGroup'?
+lib/tracker-group.ts(111,25): error TS2339: Property 'debug' does not exist on type '{}'.
+lib/tracker-stream.ts(17,41): error TS2552: Cannot find name 'Stream'. Did you mean 'stream'?
+lib/tracker-stream.ts(18,67): error TS2749: 'Tracker' refers to a value, but is being used as a type here. Did you mean 'typeof Tracker'?
+lib/tracker.ts(5,46): error TS2304: Cannot find name 'Todo'.
+lib/tracker.ts(17,45): error TS2304: Cannot find name 'Work'.
+lib/tracker.ts(22,50): error TS2304: Cannot find name 'Work'.
+

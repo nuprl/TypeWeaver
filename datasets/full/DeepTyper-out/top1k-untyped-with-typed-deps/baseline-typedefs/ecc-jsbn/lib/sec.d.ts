@@ -1,0 +1,15 @@
+declare var BigInteger: any;
+declare var ECCurveFp: any;
+declare function X9ECParameters(curve: any, g: any, n: number, h: any): void;
+declare function x9getCurve(): any;
+declare function x9getG(): any;
+declare function x9getN(): any;
+declare function x9getH(): any;
+declare const fromHex: any;
+declare function secp128r1(): any;
+declare function secp160k1(): any;
+declare function secp160r1(): any;
+declare function secp192k1(): any;
+declare function secp192r1(): any;
+declare function secp224r1(): any;
+declare function secp256r1(): any;

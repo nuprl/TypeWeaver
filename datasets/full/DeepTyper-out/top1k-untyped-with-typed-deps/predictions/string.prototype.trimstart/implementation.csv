@@ -1,0 +1,94 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callBoundName.Otherany0.6436string0.2533boolean0.0342number0.0150void0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'call-bind/callBound'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+$replaceName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callBoundName.Otherstring0.5055any0.2678boolean0.0510RegExp0.0260number0.0236
+(Punctuation
+'String.prototype.replace'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mvsIsWSName.Otherboolean0.4415string0.3182any0.1840void0.0140number0.0138
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+/^\s$/Literal.String.Regex
+)Punctuation
+.Punctuation
+testName.Otherboolean0.5810any0.3228complex0.0349string0.0240void0.0153
+(Punctuation
+'\u180E'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+/* eslint-disable no-control-regex */Comment.Multiline
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+startWhitespaceName.Otherstring0.4752any0.2355boolean0.2278number0.0218RegExp0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mvsIsWSName.Otherboolean0.7530string0.1459any0.0620number0.0157RegExp0.0021
+\n\tText.Whitespace
+?Operator
+ Text.Whitespace
+/^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/Literal.String.Regex
+\n\tText.Whitespace
+:Operator
+ Text.Whitespace
+/^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/Literal.String.Regex
+;Punctuation
+\nText.Whitespace
+/* eslint-enable no-control-regex */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+trimStartName.Otherany0.4437string0.3757void0.0156complex0.0095number0.0069
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+$replaceName.Other
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+startWhitespaceName.Otherstring0.5412any0.3481number0.0293RegExp0.0109boolean0.0083
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

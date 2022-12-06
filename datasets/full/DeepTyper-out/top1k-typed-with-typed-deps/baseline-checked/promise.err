@@ -1,0 +1,100 @@
+build.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+build.ts(9,26): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+build.ts(24,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
+build.ts(35,7): error TS2542: Index signature in type 'String' only permits reading.
+build.ts(37,5): error TS2542: Index signature in type 'String' only permits reading.
+build.ts(39,14): error TS2339: Property 'join' does not exist on type 'string'.
+polyfill-done.ts(3,30): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+polyfill-done.ts(4,21): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+src/core.ts(68,9): error TS2339: Property '_onHandle' does not exist on type 'PromiseConstructor'.
+src/core.ts(69,9): error TS2339: Property '_onReject' does not exist on type 'PromiseConstructor'.
+src/core.ts(70,9): error TS2339: Property '_noop' does not exist on type 'PromiseConstructor'.
+src/core.ts(77,16): error TS2350: Only a void function can be called with the 'new' keyword.
+src/core.ts(85,18): error TS2350: Only a void function can be called with the 'new' keyword.
+src/core.ts(92,15): error TS2339: Property '_onHandle' does not exist on type 'PromiseConstructor'.
+src/core.ts(93,13): error TS2339: Property '_onHandle' does not exist on type 'PromiseConstructor'.
+src/core.ts(168,15): error TS2339: Property '_onReject' does not exist on type 'PromiseConstructor'.
+src/core.ts(169,13): error TS2339: Property '_onReject' does not exist on type 'PromiseConstructor'.
+src/done.ts(6,19): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+src/es6-extensions.ts(11,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+src/es6-extensions.ts(12,5): error TS2322: Type 'Promise<{}>' is not assignable to type 'string'.
+src/es6-extensions.ts(12,34): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+src/es6-extensions.ts(15,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/es6-extensions.ts(19,44): error TS2339: Property '_noop' does not exist on type 'PromiseConstructor'.
+src/es6-extensions.ts(20,5): error TS2339: Property '_state' does not exist on type 'Promise<{}>'.
+src/es6-extensions.ts(21,5): error TS2339: Property '_value' does not exist on type 'Promise<{}>'.
+src/es6-extensions.ts(24,1): error TS2322: Type '<T>(value: any) => any' is not assignable to type '{ (): Promise<void>; <T>(value: T | PromiseLike<T>): Promise<T>; }'.
+src/es6-extensions.ts(41,26): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: T | PromiseLike<T>) => void' is not assignable to type 'void'.
+src/es6-extensions.ts(42,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/es6-extensions.ts(61,1): error TS2322: Type '(arr: any) => Promise<unknown>' is not assignable to type '{ <T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>; <T extends [] | readonly unknown[]>(values: T): Promise<{ -readonly [P in keyof T]: Awaited<T[P]>; }>; }'.
+  Type 'Promise<unknown>' is not assignable to type 'Promise<any[]>'.
+    Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+src/es6-extensions.ts(64,22): error TS2345: Argument of type '(resolve: void, reject: void) => any' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+src/es6-extensions.ts(65,35): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/es6-extensions.ts(74,33): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/es6-extensions.ts(83,20): error TS2345: Argument of type '(val: any) => void' is not assignable to parameter of type '(value: {}) => {} | PromiseLike<{}>'.
+  Type 'void' is not assignable to type '{} | PromiseLike<{}>'.
+src/es6-extensions.ts(92,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/es6-extensions.ts(125,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: T | PromiseLike<T>) => void' is not assignable to type 'void'.
+src/es6-extensions.ts(126,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/es6-extensions.ts(131,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+src/es6-extensions.ts(133,35): error TS2345: Argument of type 'void' is not assignable to parameter of type '(value: any) => any'.
+src/finally.ts(6,1): error TS2322: Type '(f: string) => any' is not assignable to type '(onfinally?: () => void) => Promise<any>'.
+  Types of parameters 'f' and 'onfinally' are incompatible.
+    Type '() => void' is not assignable to type 'string'.
+src/finally.ts(8,28): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/finally.ts(12,28): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/node-extensions.ts(13,9): error TS2339: Property 'denodeify' does not exist on type 'PromiseConstructor'.
+src/node-extensions.ts(23,5): error TS2322: Type 'string' is not assignable to type 'void'.
+src/node-extensions.ts(33,7): error TS2322: Type 'string' is not assignable to type 'string[]'.
+src/node-extensions.ts(38,35): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Type 'void' is not assignable to type 'string'.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Type 'void' is not assignable to type 'string'.
+src/node-extensions.ts(47,19): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.ts(55,7): error TS2322: Type 'string' is not assignable to type 'string[]'.
+src/node-extensions.ts(91,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.ts(96,9): error TS2339: Property 'nodeify' does not exist on type 'PromiseConstructor'.
+src/node-extensions.ts(106,28): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+src/node-extensions.ts(107,11): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/node-extensions.ts(118,19): error TS2339: Property 'nodeify' does not exist on type 'Promise<any>'.
+src/rejection-tracking.ts(15,11): error TS2339: Property '_onHandle' does not exist on type 'PromiseConstructor'.
+src/rejection-tracking.ts(16,11): error TS2339: Property '_onReject' does not exist on type 'PromiseConstructor'.
+src/rejection-tracking.ts(27,11): error TS2339: Property '_onHandle' does not exist on type 'PromiseConstructor'.
+src/rejection-tracking.ts(40,11): error TS2339: Property '_onReject' does not exist on type 'PromiseConstructor'.
+src/rejection-tracking.ts(103,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+src/rejection-tracking.ts(104,10): error TS2339: Property 'split' does not exist on type 'boolean'.
+src/synchronous.ts(6,9): error TS2339: Property 'enableSynchronous' does not exist on type 'PromiseConstructor'.
+src/synchronous.ts(7,21): error TS2339: Property 'isPending' does not exist on type 'Promise<any>'.
+src/synchronous.ts(11,21): error TS2339: Property 'isFulfilled' does not exist on type 'Promise<any>'.
+src/synchronous.ts(15,21): error TS2339: Property 'isRejected' does not exist on type 'Promise<any>'.
+src/synchronous.ts(19,21): error TS2339: Property 'getValue' does not exist on type 'Promise<any>'.
+src/synchronous.ts(31,21): error TS2339: Property 'getReason' does not exist on type 'Promise<any>'.
+src/synchronous.ts(43,21): error TS2339: Property 'getState' does not exist on type 'Promise<any>'.
+src/synchronous.ts(55,9): error TS2339: Property 'disableSynchronous' does not exist on type 'PromiseConstructor'.
+src/synchronous.ts(56,21): error TS2339: Property 'isPending' does not exist on type 'Promise<any>'.
+src/synchronous.ts(57,21): error TS2339: Property 'isFulfilled' does not exist on type 'Promise<any>'.
+src/synchronous.ts(58,21): error TS2339: Property 'isRejected' does not exist on type 'Promise<any>'.
+src/synchronous.ts(59,21): error TS2339: Property 'getValue' does not exist on type 'Promise<any>'.
+src/synchronous.ts(60,21): error TS2339: Property 'getReason' does not exist on type 'Promise<any>'.
+src/synchronous.ts(61,21): error TS2339: Property 'getState' does not exist on type 'Promise<any>'.
+

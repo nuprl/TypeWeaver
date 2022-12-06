@@ -1,0 +1,800 @@
+Text
+/**\n * Copyright (c) Meta Platforms, Inc. and affiliates.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE file in the root directory of this source tree.\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+watchmanName.Otherany0.7238complex0.0320string0.0243void0.0198boolean0.0134
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fb-watchman'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+clientName.Otherany0.9742Client0.0019complex0.0013string0.0007number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9856string0.0039complex0.0010number0.0005Error0.0004
+ Text.Whitespace
+watchmanName.Otherany0.9997string0.0001complex0.0001number0.0000void0.0000
+.Punctuation
+ClientName.Otherany0.9986string0.0005void0.0004number0.0001complex0.0001
+(Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+clientName.Otherany0.9707complex0.0023Client0.0022string0.0008HTMLDivElement0.0005
+.Punctuation
+onName.Otherany0.8589complex0.0871void0.0272EventEmitter0.0031Promise<void>0.0010
+(Punctuation
+'end'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// Called when the connection to watchman is terminatedComment.Single
+\n  Text.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000Assert0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9992any0.0003complex0.0002Promise<void>0.0001number0.0000
+(Punctuation
+'client ended'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+clientName.Otherany0.9792complex0.0024Client0.0011string0.0006HTMLDivElement0.0004
+.Punctuation
+onName.Otherany0.8301complex0.0865void0.0222EventEmitter0.0101Function0.0013
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.7004Error0.2062string0.0390void0.0224boolean0.0056
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000DOMTokenList0.0000Function0.0000
+.Punctuation
+errorName.Othervoid0.9972any0.0013complex0.0003Promise<void>0.0002string0.0001
+(Punctuation
+'Error while talking to watchman: 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.8831Error0.0542string0.0346void0.0147number0.0034
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+clientName.Otherany0.9267Client0.0057complex0.0042HTMLDivElement0.0009string0.0008
+.Punctuation
+capabilityCheckName.Otherany0.5874void0.3544Promise<void>0.0128complex0.0089string0.0073
+(Punctuation
+{Punctuation
+requiredName.Otherstring[]0.9965RegExp[]0.0009string[][]0.0006any[]0.0004number[]0.0004
+:Operator
+[Punctuation
+'relative_root'Literal.String.Single
+]Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.7762Error0.1239string0.0557void0.0222number0.0042
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9799string0.0036Response0.0024number0.0017Buffer0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8275Error0.0958string0.0478boolean0.0099void0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000DOMTokenList0.0000
+.Punctuation
+errorName.Othervoid0.9960any0.0021complex0.0006Promise<void>0.0002string0.0002
+(Punctuation
+'Error checking capabilities:'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.9367string0.0245Error0.0213void0.0106number0.0019
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000Observable0.0000string[][]0.0000
+.Punctuation
+logName.Othervoid0.9983any0.0006complex0.0006Promise<void>0.0001number0.0000
+(Punctuation
+'Talking to watchman version'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9925string0.0008Response0.0008complex0.0006number0.0005
+.Punctuation
+versionName.Otherany0.9648string0.0322number0.0021complex0.0003void0.0001
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Example of the error caseComment.Single
+\nText.Whitespace
+clientName.Otherany0.9672complex0.0026Client0.0013string0.0010HTMLDivElement0.0005
+.Punctuation
+commandName.Otherany0.9001complex0.0741void0.0123string0.0035Command0.0004
+(Punctuation
+[Punctuation
+'invalid-command-never-will-work'Literal.String.Single
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.8197Error0.1014string0.0523void0.0101number0.0034
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9818string0.0038Response0.0022number0.0015complex0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8432Error0.0791string0.0544boolean0.0074void0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000complex0.0000
+.Punctuation
+errorName.Othervoid0.9965any0.0020complex0.0004string0.0002Promise<void>0.0002
+(Punctuation
+'failed to subscribe: 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.9418string0.0228Error0.0203void0.0094number0.0020
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Initiate a watch.  You can repeatedly ask to watch the same dir withoutComment.Single
+\nText.Whitespace
+// error; Watchman will re-use an existing watch.Comment.Single
+\nText.Whitespace
+clientName.Otherany0.9790complex0.0024Client0.0012string0.0008HTMLDivElement0.0005
+.Punctuation
+commandName.Otherany0.9063complex0.0806void0.0067string0.0019Promise<void>0.0003
+(Punctuation
+[Punctuation
+'watch-project'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+processName.Otherany0.9984complex0.0007string0.0003Process0.0001void0.0001
+.Punctuation
+cwdName.Otherany0.9975string0.0011complex0.0010void0.0002number0.0000
+(Punctuation
+)Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.8104Error0.1240string0.0395void0.0123number0.0020
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9823string0.0033Response0.0021number0.0012Error0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8474Error0.0885string0.0443boolean0.0058void0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000Function0.0000
+.Punctuation
+errorName.Othervoid0.9966any0.0018complex0.0004Promise<void>0.0002string0.0002
+(Punctuation
+'Error initiating watch:'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.9106string0.0373Error0.0284void0.0159number0.0018
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// It is considered to be best practice to show any 'warning' or 'error'Comment.Single
+\n  Text.Whitespace
+// information to the user, as it may suggest steps for remediationComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'warning'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+respName.Otherany0.9865complex0.0034string0.0022Response0.0014{}0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000DOMTokenList0.0000string[][]0.0000
+.Punctuation
+logName.Othervoid0.9980complex0.0009any0.0006Promise<void>0.0001number0.0000
+(Punctuation
+'warning: 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9940complex0.0010string0.0009Response0.0007number0.0003
+.Punctuation
+warningName.Otherany0.9411string0.0557complex0.0007number0.0005string[]0.0003
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// The default subscribe behavior is to deliver a list of all current filesComment.Single
+\n  Text.Whitespace
+// when you first subscribe, so you don't need to walk the tree for yourselfComment.Single
+\n  Text.Whitespace
+// on startup.  If you don't want this behavior, you should issue a `clock`Comment.Single
+\n  Text.Whitespace
+// command and use it to give a logical time constraint on the subscription.Comment.Single
+\n  Text.Whitespace
+// See further below for an example of this.Comment.Single
+\n\n  Text.Whitespace
+// watch-project may re-use an existing watch at a higher level in theComment.Single
+\n  Text.Whitespace
+// filesystem.  It will tell us the relative path to the directory thatComment.Single
+\n  Text.Whitespace
+// we expressed interest in, so we need to adjust for it in our resultsComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+path_prefixName.Otherstring0.8553any0.0794RegExp0.0497string[]0.0057boolean0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+rootName.Otherany0.8175string0.1474complex0.0069boolean0.0043string[]0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+respName.Otherany0.9855Response0.0034complex0.0014string0.0008IResponse0.0005
+.Punctuation
+watchName.Otherany0.9934complex0.0020void0.0005string0.0004boolean0.0003
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'relative_path'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+respName.Otherany0.9787complex0.0061Response0.0024string0.0019{}0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+path_prefixName.Otherany0.8606string0.1059number0.0127boolean0.0051void0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+respName.Otherany0.9911complex0.0017Response0.0015string0.0010number0.0004
+.Punctuation
+relative_pathName.Otherany0.9915string0.0031complex0.0023number0.0008boolean0.0005
+;Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0000string[][]0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9972complex0.0012any0.0009Promise<void>0.0001string0.0001
+(Punctuation
+'(re)using project watch at 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+rootName.Otherany0.5099string0.4386string[]0.0166number0.0041complex0.0034
+,Punctuation
+ Text.Whitespace
+', our dir is relative: 'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+path_prefixName.Otherany0.7060string0.1949number0.0329void0.0323boolean0.0089
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Subscribe to notifications about .js filesComment.Single
+\n  Text.Whitespace
+// https://facebook.github.io/watchman/docs/cmd/subscribe.htmlComment.Single
+\n  Text.Whitespace
+clientName.Otherany0.9782complex0.0041Client0.0013string0.0008Window0.0004
+.Punctuation
+commandName.Otherany0.8367complex0.1441string0.0058void0.0056Command0.0003
+(Punctuation
+[Punctuation
+'subscribe'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+rootName.Otherany0.6717string0.2685string[]0.0130complex0.0058number0.0041
+,Punctuation
+ Text.Whitespace
+'mysubscription'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Match any .js file under process.cwd()Comment.Single
+\n      Text.Whitespace
+// https://facebook.github.io/watchman/docs/file-query.html#expressionsComment.Single
+\n      Text.Whitespace
+// Has more on the supported expression syntaxComment.Single
+\n      Text.Whitespace
+expressionName.Otherstring[]0.9699complex0.0121string[][]0.0049any[]0.0028RegExp[]0.0018
+:Operator
+ Text.Whitespace
+[Punctuation
+"allof"Literal.String.Double
+,Punctuation
+\n          Text.Whitespace
+[Punctuation
+"match"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"*.js"Literal.String.Double
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+// focus on the relative path from the project to the pathComment.Single
+\n      Text.Whitespace
+// of interestComment.Single
+\n      Text.Whitespace
+relative_rootName.Otherany0.5683string0.2090boolean0.0511string[]0.0441number0.0334
+:Operator
+ Text.Whitespace
+path_prefixKeyword.Typeany0.5618string0.2199boolean0.0575number0.0392string[]0.0358
+,Punctuation
+\n      Text.Whitespace
+// Which fields we're interested inComment.Single
+\n      Text.Whitespace
+fieldsName.Otherstring[]0.9986number[]0.0003any[]0.0003string[][]0.0002RegExp[]0.0002
+:Operator
+ Text.Whitespace
+[Punctuation
+"name"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"size"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"exists"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"type"Literal.String.Double
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+]Punctuation
+,Punctuation
+\n    Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.7733Error0.1265string0.0579void0.0178number0.0046
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9673Response0.0050string0.0045number0.0027Buffer0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8232Error0.0946string0.0523boolean0.0083void0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// Probably an error in the subscription criteriaComment.Single
+\n        Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000complex0.0000
+.Punctuation
+errorName.Othervoid0.9955any0.0020complex0.0008Promise<void>0.0002string0.0002
+(Punctuation
+'failed to subscribe: 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.9061string0.0374Error0.0283void0.0160number0.0030
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9976any0.0009complex0.0008Promise<void>0.0002number0.0001
+(Punctuation
+'subscription 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+respName.Otherany0.9944string0.0019complex0.0007number0.0005Response0.0005
+.Punctuation
+subscribeName.Otherany0.9899string0.0064complex0.0017number0.0016void0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' established'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// Subscription results are emitted via the subscription event.Comment.Single
+\n  Text.Whitespace
+// Note that this emits for all subscriptions.  If you haveComment.Single
+\n  Text.Whitespace
+// subscriptions with different `fields` you will need to checkComment.Single
+\n  Text.Whitespace
+// the subscription name and handle the differing data accordinglyComment.Single
+\n  Text.Whitespace
+clientName.Otherany0.9730complex0.0036Client0.0013string0.0009HTMLDivElement0.0004
+.Punctuation
+onName.Otherany0.8350complex0.1070void0.0187EventEmitter0.0043Promise<void>0.0009
+(Punctuation
+'subscription'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+respName.Otherany0.9676string0.0054Response0.0040Buffer0.0037number0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Each entry in `resp.files` will have the fields you requestedComment.Single
+\n    Text.Whitespace
+// in your subscription.  The default is:Comment.Single
+\n    Text.Whitespace
+//  { name: 'example.js',Comment.Single
+\n    Text.Whitespace
+//    size: 1680,Comment.Single
+\n    Text.Whitespace
+//    new: true,Comment.Single
+\n    Text.Whitespace
+//    exists: true,Comment.Single
+\n    Text.Whitespace
+//    mode: 33188 }Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// Names are relative to resp.root; join them together toComment.Single
+\n    Text.Whitespace
+// obtain a fully qualified path.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// `resp`  looks like this in practice:Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// { root: '/private/tmp/foo',Comment.Single
+\n    Text.Whitespace
+//   subscription: 'mysubscription',Comment.Single
+\n    Text.Whitespace
+//   files: [ { name: 'node_modules/fb-watchman/index.js',Comment.Single
+\n    Text.Whitespace
+//       size: 4768,Comment.Single
+\n    Text.Whitespace
+//       exists: true,Comment.Single
+\n    Text.Whitespace
+//       mode: 33188 } ] }Comment.Single
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000complex0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9991complex0.0003any0.0002Promise<void>0.0002boolean0.0000
+(Punctuation
+respName.Otherany0.9842complex0.0027Response0.0017string0.0006IResponse0.0006
+.Punctuation
+rootName.Otherany0.9391string0.0487number0.0028complex0.0012void0.0010
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9834Response0.0027complex0.0017IResponse0.0008string0.0008
+.Punctuation
+subscriptionName.Otherany0.9975string0.0013complex0.0005number0.0003any[]0.0001
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Otherstring0.9547any0.0369number0.0057complex0.0011void0.0005
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+respName.Otherany0.9750complex0.0079Response0.0017IResponse0.0010{}0.0008
+.Punctuation
+filesName.Otherany0.9445complex0.0272any[]0.0068string[]0.0056{}0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+fName.Otherany0.9255string0.0434complex0.0060void0.0033{}0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+respName.Otherany0.9649complex0.0051Response0.0040string0.0019IResponse0.0014
+.Punctuation
+filesName.Otherany0.9073complex0.0349string[]0.0159any[]0.0119{}0.0036
+[Punctuation
+iName.Otherstring0.7711number0.1778any0.0442void0.0023complex0.0021
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001complex0.0000NumberConstructor0.0000
+.Punctuation
+logName.Othervoid0.9989any0.0004complex0.0003number0.0001Promise<void>0.0001
+(Punctuation
+fName.Otherstring0.5812any0.3983number0.0066void0.0044complex0.0027
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// Here's an example of just subscribing for notifications after theComment.Single
+\n  Text.Whitespace
+// current point in timeComment.Single
+\n  Text.Whitespace
+clientName.Otherany0.9680complex0.0060Client0.0013string0.0009HTMLDivElement0.0005
+.Punctuation
+commandName.Otherany0.8456complex0.1365void0.0089string0.0025Promise<any>0.0003
+(Punctuation
+[Punctuation
+'clock'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+rootName.Otherany0.5016string0.4462string[]0.0120number0.0055complex0.0051
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.8361Error0.0939string0.0482void0.0081number0.0030
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9832string0.0033Response0.0014number0.0013complex0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8153Error0.1001string0.0586boolean0.0090void0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000complex0.0000string[][]0.0000
+.Punctuation
+errorName.Othervoid0.9966any0.0016complex0.0008Promise<void>0.0002string0.0001
+(Punctuation
+'Failed to query clock:'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.9085Error0.0319string0.0311void0.0194number0.0022
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+clientName.Otherany0.9746complex0.0048Client0.0022string0.0014HTMLDivElement0.0005
+.Punctuation
+commandName.Otherany0.8453complex0.1408string0.0051void0.0045Promise<void>0.0002
+(Punctuation
+[Punctuation
+'subscribe'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+rootName.Otherany0.5807string0.3709string[]0.0121complex0.0046number0.0028
+,Punctuation
+ Text.Whitespace
+'sincesub'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+expressionName.Otherstring[]0.9621complex0.0146string[][]0.0077any[]0.0037RegExp[]0.0018
+:Operator
+ Text.Whitespace
+[Punctuation
+'allof'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+"match"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"*.js"Literal.String.Double
+]Punctuation
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+// focus on the relative path from the project to the pathComment.Single
+\n        Text.Whitespace
+// of interestComment.Single
+\n        Text.Whitespace
+relative_rootName.Otherany0.4806string0.2997boolean0.0588string[]0.0554number0.0291
+:Operator
+ Text.Whitespace
+path_prefixKeyword.Typeany0.5665string0.2410string[]0.0555boolean0.0541number0.0269
+,Punctuation
+\n        Text.Whitespace
+// Note: since we only request a single field, the `sincesub` subscriptionComment.Single
+\n        Text.Whitespace
+// response will just set files to an array of filenames, not an array ofComment.Single
+\n        Text.Whitespace
+// objects with name propertiesComment.Single
+\n        Text.Whitespace
+// { root: '/private/tmp/foo',Comment.Single
+\n        Text.Whitespace
+//   subscription: 'sincesub',Comment.Single
+\n        Text.Whitespace
+//   files: [ 'node_modules/fb-watchman/index.js' ] }Comment.Single
+\n        Text.Whitespace
+fieldsName.Otherstring[]0.9983number[]0.0004any[]0.0003string[][]0.0002RegExp[]0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+"name"Literal.String.Double
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+sinceName.Otherstring0.8036any0.0948string[]0.0330number0.0165{}0.0151
+:Operator
+ Text.Whitespace
+resp.clockKeyword.Type
+ Text.Whitespace
+// time constraintComment.Single
+\n      Text.Whitespace
+}Punctuation
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.7233Error0.1904string0.0486void0.0111number0.0035
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9586Response0.0058string0.0054number0.0027Buffer0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.7572Error0.1419string0.0615boolean0.0114void0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000string[][]0.0000DOMTokenList0.0000
+.Punctuation
+errorName.Othervoid0.9955any0.0016complex0.0008Promise<void>0.0003Console0.0002
+(Punctuation
+'failed to subscribe: 'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.8895string0.0438Error0.0361void0.0169number0.0029
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+returnKeyword
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+consoleName.OtherConsole0.9999any0.0000void0.0000string[][]0.0000Assert0.0000
+.Punctuation
+logName.Othervoid0.9980any0.0006complex0.0006Promise<void>0.0002number0.0001
+(Punctuation
+'subscription 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+respName.Otherany0.9894string0.0024Response0.0010complex0.0009number0.0005
+.Punctuation
+subscribeName.Otherany0.9866string0.0093complex0.0019number0.0018void0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' established'Literal.String.Single
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

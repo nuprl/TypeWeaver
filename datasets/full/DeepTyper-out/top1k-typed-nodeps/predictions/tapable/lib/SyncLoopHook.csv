@@ -1,0 +1,296 @@
+Text
+/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+HookName.Otherany0.9773string0.0094number0.0051void0.0013complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./Hook"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+HookCodeFactoryName.Otherany0.9804string0.0082number0.0019void0.0009boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./HookCodeFactory"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+SyncLoopHookCodeFactoryName.Otherany0.9968string0.0018complex0.0003number0.0002{}0.0002
+ Text.Whitespace
+extendsKeyword
+ Text.Whitespace
+HookCodeFactoryName.Otherany0.9577string0.0103complex0.0073T0.0020void0.0011
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+contentName.Otherany0.7978complex0.0587string0.0306T0.0051void0.0023
+(Punctuation
+{Punctuation
+ Text.Whitespace
+onErrorName.Otherany0.8853string0.0398void0.0187Function0.0126boolean0.0063
+,Punctuation
+ Text.Whitespace
+onDoneName.Othervoid0.4526any0.2754string0.1653boolean0.0445number0.0188
+,Punctuation
+ Text.Whitespace
+rethrowIfPossibleName.Otherstring0.4528any0.3942number0.0512boolean0.0478void0.0123
+ Text.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+callTapsLoopingName.Otherany0.6200complex0.1094string0.0516void0.0132Promise<void>0.0124
+(Punctuation
+{Punctuation
+\n\t\t\tText.Whitespace
+onErrorName.Otherany0.8761string0.0583void0.0123Function0.0069number0.0042
+:Operator
+ Text.Whitespace
+(Punctuation
+iName.Otherstring0.3821any0.3417number0.2368Error0.0064boolean0.0043
+,Punctuation
+ Text.Whitespace
+errName.OtherError0.5672any0.3452string0.0581complex0.0029number0.0016
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+onErrorName.Otherany0.9567void0.0099string0.0061Function0.0033complex0.0026
+(Punctuation
+errName.OtherError0.5396any0.4022string0.0310complex0.0087never0.0012
+)Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+onDoneName.Othervoid0.8602any0.0914string0.0173boolean0.0082Promise<void>0.0069
+,Punctuation
+\n\t\t\tText.Whitespace
+rethrowIfPossibleName.Otherany0.4829void0.2411string0.1825number0.0219boolean0.0213
+\n\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+factoryName.Otherany0.9766Error0.0035string0.0022complex0.0009void0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9600Error0.0108string0.0095complex0.0021symbol0.0008
+ Text.Whitespace
+SyncLoopHookCodeFactoryName.Otherany0.9974complex0.0007string0.0005void0.0003Error0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+TAP_ASYNCName.Otherany0.7882void0.0339Error0.0274number0.0153string0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+throwKeywordError0.6474any0.3384complex0.0034string0.0028{}0.0012
+ Text.Whitespace
+newOperator.WordError0.4122any0.3471ErrorConstructor0.2073string0.0130complex0.0024
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+"tapAsync is not supported on a SyncLoopHook"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+TAP_PROMISEName.Otherany0.6312Error0.0761void0.0232number0.0185never0.0142
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+throwKeywordError0.7127any0.2720complex0.0038string0.0023{}0.0016
+ Text.Whitespace
+newOperator.WordError0.5059ErrorConstructor0.2328any0.2278string0.0112complex0.0021
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+"tapPromise is not supported on a SyncLoopHook"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+COMPILEName.Otherany0.7851void0.0484complex0.0125string0.0064Promise<void>0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+optionsName.Otherany0.5204Options0.0458Function0.0074symbol0.0074string0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+factoryName.Otherany0.9701Function0.0029void0.0024Error0.0020string0.0012
+.Punctuation
+setupName.Otherany0.8643void0.0569Promise<void>0.0160complex0.0104Function0.0049
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6321Options0.0330complex0.0082Function0.0065string0.0064
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+factoryName.Otherany0.9700Function0.0024string0.0019Error0.0012void0.0010
+.Punctuation
+createName.Otherany0.9655complex0.0082void0.0041T0.0025Function0.0024
+(Punctuation
+optionsName.Otherany0.6814Options0.0320string0.0079{}0.0069complex0.0069
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+SyncLoopHookName.Otherany0.7127any[]0.0279complex0.0220void0.0177string0.0172
+(Punctuation
+argsName.Otherany[]0.8084any0.0324string[]0.0177any[][]0.0116string0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+nameName.Otherstring0.6263any0.3557number0.0027undefined0.0012Error0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hookName.Otherany0.6875Error0.0043void0.0029number0.0024T0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9809string0.0040Error0.0030number0.0011{}0.0011
+ Text.Whitespace
+HookName.Otherany0.9980number0.0006string0.0004complex0.0002void0.0002
+(Punctuation
+argsName.Otherany[]0.5066any0.1942string[]0.0165IArguments0.0159string0.0143
+,Punctuation
+ Text.Whitespace
+nameName.Otherany0.5283string0.4625number0.0015Error0.0011any[]0.0006
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+hookName.Otherany0.5825void0.0034Node0.0026Url0.0024string0.0024
+.Punctuation
+constructorKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SyncLoopHookName.Otherany0.9205string0.0362number0.0060complex0.0043void0.0033
+;Punctuation
+\n\tText.Whitespace
+hookName.Otherany0.5722void0.0070string0.0040Node0.0032Promise<void>0.0027
+.Punctuation
+tapAsyncName.Otherany0.7570string0.1653number0.0200void0.0187boolean0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+TAP_ASYNCName.Otherany0.5969string0.2848number0.0360void0.0162boolean0.0089
+;Punctuation
+\n\tText.Whitespace
+hookName.Otherany0.5863void0.0081string0.0048Node0.0034Promise<void>0.0032
+.Punctuation
+tapPromiseName.Otherany0.7218string0.1913number0.0268void0.0194boolean0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+TAP_PROMISEName.Otherany0.6295string0.2670number0.0364void0.0136boolean0.0093
+;Punctuation
+\n\tText.Whitespace
+hookName.Otherany0.6747void0.0092string0.0058Error0.0041Promise<void>0.0031
+.Punctuation
+compileName.Otherany0.7989string0.1632void0.0163number0.0081boolean0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+COMPILEName.Otherany0.5871string0.3239void0.0241number0.0216boolean0.0113
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+hookName.Otherany0.7319string0.0096void0.0061Promise<void>0.0041Promise<any>0.0034
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+SyncLoopHookName.Otherany0.9585complex0.0094void0.0061string0.0022Error0.0011
+.Punctuation
+prototypeName.Otherany0.9164void0.0106string0.0097number0.0090Object0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SyncLoopHookName.Otherany0.7893string0.0695number0.0123any[]0.0054complex0.0052
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,1249 @@
+importKeyword
+ Text.Whitespace
+jQueryName.Otherany0.9970string0.0010complex0.0007void0.0003any[]0.0002
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./core.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+toTypeName.Otherany0.5286void0.2354boolean0.1407string0.0316complex0.0156
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./core/toType.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+rnothtmlwhiteName.Otherany0.6359void0.1859boolean0.0966string0.0277number0.0104
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./var/rnothtmlwhite.js"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+// Convert String-formatted options into Object-formatted onesComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+createOptionsName.Otherboolean0.6088any0.1793void0.0738number0.0432string0.0196
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9665Function0.0040{}0.0032number0.0024string0.0023
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+objectName.Otherany0.5731{}0.3840Object0.0144any[]0.0066object0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\tText.Whitespace
+jQueryName.Otherany0.9918complex0.0021any[]0.0011void0.0006boolean0.0004
+.Punctuation
+eachName.Other
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9867any[]0.0036complex0.0031string0.0012{}0.0005
+.Punctuation
+matchName.Otherany0.9321complex0.0607any[]0.0036boolean0.0010string0.0004
+(Punctuation
+ Text.Whitespace
+rnothtmlwhiteName.Otherany0.6843boolean0.1742any[]0.0501string0.0194number0.0182
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+_Name.Otherany0.9420string0.0318boolean0.0122{}0.0031any[]0.0023
+,Punctuation
+ Text.Whitespace
+flagName.Otherboolean0.6084any0.2704string0.0826number0.0104any[]0.0029
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+objectName.Otherany0.9165{}0.0514Object0.0126any[]0.0047complex0.0029
+[Punctuation
+ Text.Whitespace
+flagName.Otherany0.5121string0.2591boolean0.1769number0.0412Function0.0017
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.8523{}0.0910any[]0.0188Object0.0155object0.0074
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/*\n * Create a callback list using the following parameters:\n *\n *\toptions: an optional list of space-separated options that will change how\n *\t\t\tthe callback list behaves or a more traditional option object\n *\n * By default a callback list will act like an event callback list and can be\n * "fired" multiple times.\n *\n * Possible options:\n *\n *\tonce:\t\t\twill ensure the callback list can only be fired once (like a Deferred)\n *\n *\tmemory:\t\t\twill keep track of previous values and will call any callback added\n *\t\t\t\t\tafter the list has been fired right away with the latest "memorized"\n *\t\t\t\t\tvalues (like a Deferred)\n *\n *\tunique:\t\t\twill ensure a callback can only be added once (no duplicate in the list)\n *\n *\tstopOnFalse:\tinterrupt callings when a callback returns false\n *\n */Comment.Multiline
+\nText.Whitespace
+jQueryName.Otherany0.9822any[]0.0017string0.0013JQuery0.0012HTMLElement0.0012
+.Punctuation
+CallbacksName.Otherany0.9665void0.0227boolean0.0058complex0.0012number0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9722any[]0.0034{}0.0029complex0.0025Options0.0019
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// Convert options from String-formatted to Object-formatted if neededComment.Single
+\n\tText.Whitespace
+// (we check in cache first)Comment.Single
+\n\tText.Whitespace
+optionsName.Otherany0.9806complex0.0045any[]0.0043{}0.0026string0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+optionsName.Otherany0.9880complex0.0032any[]0.0015{}0.0011string0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"string"Literal.String.Double
+ Text.Whitespace
+?Operator
+\n\t\tText.Whitespace
+createOptionsName.Otherany0.9815any[]0.0058string0.0022boolean0.0017number0.0016
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9651any[]0.0056{}0.0048number0.0026Options0.0025
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+:Operator
+\n\t\tText.Whitespace
+jQueryName.Otherany0.9988complex0.0004string0.0002any[]0.0001void0.0001
+.Punctuation
+extendName.Otherany0.9994number0.0001void0.0001complex0.0001any[]0.0001
+(Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9226any[]0.0118{}0.0102complex0.0079number0.0038
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+// Flag to know if list is currently firingComment.Single
+\n\t\tText.Whitespace
+firingName.Otherany0.4084boolean0.2232number0.1351void0.1116any[]0.0266
+,Punctuation
+\n\n\t\tText.Whitespace
+// Last fire value for non-forgettable listsComment.Single
+\n\t\tText.Whitespace
+memoryName.Otherboolean0.4299any0.2792any[]0.1117number0.1021string0.0092
+,Punctuation
+\n\n\t\tText.Whitespace
+// Flag to know if list was already firedComment.Single
+\n\t\tText.Whitespace
+firedName.Othernumber0.3605boolean0.2986any0.2711string0.0236any[]0.0190
+,Punctuation
+\n\n\t\tText.Whitespace
+// Flag to prevent firingComment.Single
+\n\t\tText.Whitespace
+lockedName.Otherboolean0.5200any0.4224number0.0211any[]0.0128true0.0046
+,Punctuation
+\n\n\t\tText.Whitespace
+// Actual callback listComment.Single
+\n\t\tText.Whitespace
+listName.Otherany[]0.6942any0.2383number[]0.0232string[]0.0058any[][]0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Queue of execution data for repeatable listsComment.Single
+\n\t\tText.Whitespace
+queueName.Otherany[]0.7601any0.2030number[]0.0183complex0.0024number0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Index of currently firing callback (modified by add/remove as needed)Comment.Single
+\n\t\tText.Whitespace
+firingIndexName.Othernumber0.9129any0.0839boolean0.0015string0.0005void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+,Punctuation
+\n\n\t\tText.Whitespace
+// Fire callbacksComment.Single
+\n\t\tText.Whitespace
+fireName.Otherany0.5739void0.2498boolean0.0684number0.0254any[]0.0155
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\tText.Whitespace
+// Enforce single-firingComment.Single
+\n\t\t\tText.Whitespace
+lockedName.Otherany0.5692boolean0.3723number0.0406void0.0055any[]0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lockedName.Otherany0.8386boolean0.1270number0.0231any[]0.0023string0.0017
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+optionsName.Otherany0.9927complex0.0014number0.0012any[]0.0005boolean0.0005
+.Punctuation
+onceName.Otherany0.9865number0.0067boolean0.0047string0.0007number[]0.0003
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// Execute callbacks for all pending executions,Comment.Single
+\n\t\t\tText.Whitespace
+// respecting firingIndex overrides and runtime changesComment.Single
+\n\t\t\tText.Whitespace
+firedName.Otherboolean0.8214any0.1557number0.0158void0.0025true0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+firingName.Otherboolean0.9081any0.0824number0.0053false0.0012true0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\t\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+;Punctuation
+ Text.Whitespace
+queueName.Otherany0.8794any[]0.1039number[]0.0050string[]0.0025complex0.0013
+.Punctuation
+lengthName.Otherany0.8008number0.1973void0.0006string0.0005complex0.0002
+;Punctuation
+ Text.Whitespace
+firingIndexName.Othernumber0.8772any0.1198boolean0.0015string0.0006void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+memoryName.Otherany0.5886any[]0.1628number0.1342boolean0.0849complex0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+queueName.Otherany0.8456any[]0.1406number0.0033number[]0.0026complex0.0025
+.Punctuation
+shiftName.Otherany0.8973number0.0839string0.0083any[]0.0046complex0.0018
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+++Operator
+firingIndexName.Othernumber0.6758any0.3161boolean0.0042void0.0018string0.0009
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+listName.Otherany0.8631any[]0.1020number[]0.0096string[]0.0029number0.0022
+.Punctuation
+lengthName.Otherany0.8331number0.1656void0.0003string0.0003boolean0.0002
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\t\tText.Whitespace
+// Run callback and check for early terminationComment.Single
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+listName.Otherany0.8824any[]0.0936number[]0.0030{}0.0016complex0.0015
+[Punctuation
+ Text.Whitespace
+firingIndexName.Otherany0.5690number0.3827boolean0.0211string0.0155void0.0081
+ Text.Whitespace
+]Punctuation
+.Punctuation
+applyName.Otherany0.9971number0.0015void0.0006boolean0.0003string0.0001
+(Punctuation
+ Text.Whitespace
+memoryName.Otherany[]0.5066any0.4139boolean0.0220number[]0.0175complex0.0073
+[Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+]Punctuation
+,Punctuation
+ Text.Whitespace
+memoryName.Otherany0.6056any[]0.2685boolean0.0765number0.0186number[]0.0082
+[Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+&&Operator
+\n\t\t\t\t\t\tText.Whitespace
+optionsName.Otherany0.9731complex0.0035boolean0.0033number0.0027any[]0.0025
+.Punctuation
+stopOnFalseName.Otherany0.5292boolean0.4045number0.0527string0.0051void0.0051
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\t\t\tText.Whitespace
+// Jump to end and forget the data so .add doesn't re-fireComment.Single
+\n\t\t\t\t\t\tText.Whitespace
+firingIndexName.Otherany0.7165number0.2529boolean0.0252string0.0021void0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+listName.Otherany0.8002any[]0.1766number[]0.0069string[]0.0028number0.0009
+.Punctuation
+lengthName.Otherany0.8752number0.1235void0.0003string0.0003boolean0.0003
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+memoryName.Otherboolean0.8954any0.0828number0.0131any[]0.0040false0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// Forget the data if we're done with itComment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+optionsName.Otherany0.9511any[]0.0056complex0.0053boolean0.0030Options0.0027
+.Punctuation
+memoryName.Otherboolean0.5448any0.4126number0.0279any[]0.0049string0.0036
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+memoryName.Otherboolean0.8746any0.1017number0.0103any[]0.0075false0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+firingName.Otherboolean0.9849any0.0121number0.0013void0.0005false0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// Clean up if we're done firing for goodComment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+lockedName.Otherboolean0.6407any0.3337number0.0092any[]0.0067void0.0024
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\tText.Whitespace
+// Keep an empty list if we have data for future add callsComment.Single
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+memoryName.Otherboolean0.5693any0.3556number0.0378any[]0.0240string0.0050
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+listName.Otherany[]0.7454any0.2372number[]0.0057string[]0.0022{}0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+// Otherwise, this object is spentComment.Single
+\n\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+listName.Otherany0.8719any[]0.0907string0.0163string[]0.0070number[]0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Actual Callbacks objectComment.Single
+\n\t\tText.Whitespace
+selfName.Otherany0.3915complex0.1798void0.1426this0.1284any[]0.0468
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\tText.Whitespace
+// Add a callback or a collection of callbacks to the listComment.Single
+\n\t\t\tText.Whitespace
+addName.Othervoid0.9164any0.0583boolean0.0121any[]0.0040number0.0028
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+listName.Otherany0.9201any[]0.0562number[]0.0043boolean0.0022string0.0018
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\t\tText.Whitespace
+// If we have memory from a past run, we should fire after addingComment.Single
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+memoryName.Otherany0.6521boolean0.2934number0.0183any[]0.0166string0.0096
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+firingName.Otherany0.5925boolean0.3649number0.0329string0.0046any[]0.0018
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+firingIndexName.Otherany0.6962number0.2913boolean0.0071string0.0022void0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+listName.Otherany0.8496any[]0.1317number[]0.0072string[]0.0022complex0.0010
+.Punctuation
+lengthName.Otherany0.9102number0.0889complex0.0002string0.0002any[]0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+queueName.Otherany[]0.5262any0.4464number[]0.0120string[]0.0027number0.0025
+.Punctuation
+pushName.Othernumber0.8542any0.1422void0.0013boolean0.0012string0.0006
+(Punctuation
+ Text.Whitespace
+memoryName.Otherany0.7269boolean0.1311number0.0640any[]0.0351string0.0325
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\t\t\tText.Whitespace
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+addName.Otherany0.6133void0.1594boolean0.1494any[]0.0207number0.0114
+(Punctuation
+ Text.Whitespace
+argsName.Otherany0.9037any[]0.0817string0.0043string[]0.0018IArguments0.0010
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+jQueryName.Otherany0.9984complex0.0006any[]0.0002string0.0002void0.0001
+.Punctuation
+eachName.Other
+(Punctuation
+ Text.Whitespace
+argsName.Otherany0.6951any[]0.2922string[]0.0039number[]0.0015complex0.0010
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+_Name.Otherany0.9894string0.0053boolean0.0012any[]0.0011{}0.0007
+,Punctuation
+ Text.Whitespace
+argName.Otherany0.9922string0.0028any[]0.0020complex0.0006{}0.0003
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+argName.Otherany0.9942complex0.0018any[]0.0015string0.0011number0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"function"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+optionsName.Otherany0.9695complex0.0078any[]0.0038boolean0.0023number0.0014
+.Punctuation
+uniqueName.Otherboolean0.5370any0.4503number0.0064complex0.0020any[]0.0014
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+selfName.Otherany0.8224this0.0446complex0.0396boolean0.0270any[]0.0190
+.Punctuation
+hasName.Otherboolean0.7344any0.2534string0.0051number0.0016void0.0015
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9805string0.0164any[]0.0012number0.0004boolean0.0003
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+listName.Otherany[]0.6363any0.3171string[]0.0204number[]0.0147complex0.0007
+.Punctuation
+pushName.Otherany0.5173number0.4776void0.0017string0.0012boolean0.0010
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9775string0.0199any[]0.0010number0.0005{}0.0002
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9867string0.0076any[]0.0029boolean0.0009complex0.0004
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+argName.Otherany0.9517any[]0.0304string0.0130string[]0.0020number[]0.0009
+.Punctuation
+lengthName.Otherany0.9607number0.0381string0.0006complex0.0002boolean0.0002
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+toTypeName.Otherany0.6866boolean0.2772string0.0104number0.0076void0.0071
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9902string0.0075any[]0.0005number0.0003boolean0.0003
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"string"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\t\t\t\t\tText.Whitespace
+// Inspect recursivelyComment.Single
+\n\t\t\t\t\t\t\t\tText.Whitespace
+addName.Otherany0.4969void0.4259boolean0.0259any[]0.0120Set<any>0.0064
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9868string0.0086any[]0.0024number0.0005{}0.0002
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+(Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9627any[]0.0212any0.0094{}0.0006string[]0.0005
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+memoryName.Otherany0.6006boolean0.3548any[]0.0156number0.0098string0.0080
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+firingName.Otherany0.6351boolean0.3314number0.0180string0.0083any[]0.0022
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+fireName.Otherany0.6684void0.2791boolean0.0133Function0.0118any[]0.0084
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Remove a callback from the listComment.Single
+\n\t\t\tText.Whitespace
+removeName.Othervoid0.8262any0.0899any[]0.0393boolean0.0136complex0.0064
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+jQueryName.Otherany0.9962complex0.0016any[]0.0010string0.0003void0.0001
+.Punctuation
+eachName.Other
+(Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9256any[]0.0494any0.0166string[]0.0008{}0.0008
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+_Name.Otherany0.9827string0.0090any[]0.0017boolean0.0011{}0.0011
+,Punctuation
+ Text.Whitespace
+argName.Otherany0.9870string0.0046any[]0.0035Function0.0007Object0.0004
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+indexName.Otherany0.7693number0.2286string0.0006any[]0.0005void0.0003
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+indexName.Otherany0.9421number0.0558any[]0.0008string0.0007boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+jQueryName.Otherany0.9958any[]0.0014complex0.0007number0.0004string0.0003
+.Punctuation
+inArrayName.Otherany0.9980number0.0005complex0.0004any[]0.0003string0.0002
+(Punctuation
+ Text.Whitespace
+argName.Otherany0.9763string0.0150any[]0.0046number0.0011{}0.0004
+,Punctuation
+ Text.Whitespace
+listName.Otherany0.8961any[]0.0839number[]0.0028number0.0012string0.0010
+,Punctuation
+ Text.Whitespace
+indexName.Otherany0.5264number0.4701string0.0016any[]0.0004boolean0.0003
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+listName.Otherany[]0.5968any0.3652string[]0.0098number[]0.0084complex0.0020
+.Punctuation
+spliceName.Otherany0.8198complex0.1378any[]0.0216void0.0086number0.0067
+(Punctuation
+ Text.Whitespace
+indexName.Othernumber0.6266any0.3700string0.0021boolean0.0005complex0.0002
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\t\t\t\tText.Whitespace
+// Handle firing indexesComment.Single
+\n\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+indexName.Othernumber0.5584any0.4390string0.0012boolean0.0008void0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+firingIndexName.Othernumber0.7404any0.2448boolean0.0100string0.0024void0.0011
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+firingIndexName.Othernumber0.8447any0.1526boolean0.0008string0.0007void0.0006
+--Operator
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Check if a given callback is in the list.Comment.Single
+\n\t\t\tText.Whitespace
+// If no argument is given, return whether or not list has callbacks attached.Comment.Single
+\n\t\t\tText.Whitespace
+hasName.Otherany0.7896boolean0.1763string0.0160number0.0060any[]0.0032
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.8813Function0.0707string0.0171number0.0082boolean0.0055
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.Otherany0.8993Function0.0576boolean0.0232any[]0.0052string0.0045
+ Text.Whitespace
+?Operator
+\n\t\t\t\t\tText.Whitespace
+jQueryName.Otherany0.9984string0.0004any[]0.0003complex0.0002number0.0002
+.Punctuation
+inArrayName.Otherany0.9987number0.0003void0.0003string0.0002complex0.0002
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.9288string0.0377number0.0175Function0.0087any[]0.0018
+,Punctuation
+ Text.Whitespace
+listName.Otherany0.8094any[]0.1415number[]0.0038complex0.0032string[]0.0030
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+-Operator
+1Name.Other
+ Text.Whitespace
+:Operator
+\n\t\t\t\t\tText.Whitespace
+list.lengthKeyword.Type
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Remove all callbacks from the listComment.Single
+\n\t\t\tText.Whitespace
+emptyName.Otherany[]0.5272boolean0.0892void0.0827any0.0810string[]0.0257
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+listName.Otherany0.8551any[]0.1144string0.0031number[]0.0031string[]0.0021
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+listName.Otherany[]0.8299any0.1447number[]0.0046string[]0.0027any[][]0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Disable .fire and .addComment.Single
+\n\t\t\tText.Whitespace
+// Abort any current/pending executionsComment.Single
+\n\t\t\tText.Whitespace
+// Clear all callbacks and valuesComment.Single
+\n\t\t\tText.Whitespace
+disableName.Otherany[]0.4452any0.2128void0.0934complex0.0635this0.0258
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+lockedName.Otherany0.6691any[]0.2350boolean0.0567number[]0.0145number0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+queueName.Otherany[]0.6917any0.2884number[]0.0075number0.0022complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+listName.Otherany0.8081any[]0.1334number[]0.0091number0.0045string[]0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+memoryName.Otherany0.6812boolean0.1264any[]0.1135string0.0309number0.0187
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+disabledName.Otherboolean0.9077any0.0840string0.0016complex0.0015number0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+listName.Otherany0.6286any[]0.3221string[]0.0089number[]0.0060boolean0.0044
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Disable .fireComment.Single
+\n\t\t\tText.Whitespace
+// Also disable .add unless we have memory (since it would have no effect)Comment.Single
+\n\t\t\tText.Whitespace
+// Abort any pending executionsComment.Single
+\n\t\t\tText.Whitespace
+lockName.Othercomplex0.2541void0.2038boolean0.1968any[]0.1425any0.1174
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+lockedName.Otherany0.6342any[]0.2578boolean0.0634number[]0.0183number0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+queueName.Otherany[]0.6176any0.3552number[]0.0118number0.0027string[]0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+memoryName.Otherany0.8115boolean0.1510number0.0144string0.0085any[]0.0084
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+firingName.Otherany0.6538boolean0.2943number0.0382string0.0073any[]0.0024
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+listName.Otherany0.9109any[]0.0684number[]0.0039number0.0034boolean0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+memoryName.Otherany0.7741boolean0.0990any[]0.0651number0.0204string0.0202
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+lockedName.Otherboolean0.9669any0.0188any[]0.0034true0.0032number0.0028
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+lockedName.Otherany0.7331boolean0.2316any[]0.0106number0.0080true0.0035
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Call all callbacks with the given context and argumentsComment.Single
+\n\t\t\tText.Whitespace
+fireWithName.Otherboolean0.3858void0.3373any0.1585number0.0626any[]0.0253
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+ Text.Whitespace
+contextName.Otherany0.9739number0.0053string0.0027any[]0.0015Function0.0011
+,Punctuation
+ Text.Whitespace
+argsName.Otherany0.7782any[]0.2015IArguments0.0035string0.0019number[]0.0015
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+lockedName.Otherany0.6711boolean0.2982any[]0.0116number0.0072false0.0019
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+argsName.Otherany0.7031any[]0.2813string[]0.0026{}0.0018boolean0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany0.6463any[]0.3406string[]0.0025number[]0.0017{}0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+argsName.Otherany0.6386any[]0.3427string[]0.0034number[]0.0032number0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+contextName.Otherany0.9768string0.0084number0.0055any[]0.0020Function0.0007
+,Punctuation
+ Text.Whitespace
+argsName.Otherany0.8012any[]0.1784IArguments0.0035string[]0.0024string0.0017
+.Punctuation
+sliceName.Otherany0.8834any[]0.0977string0.0048string[]0.0025number[]0.0017
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+argsName.Otherany0.7902any[]0.1921string[]0.0027IArguments0.0020number[]0.0015
+.Punctuation
+sliceName.Otherany0.7216any[]0.2555string[]0.0049string0.0032number[]0.0024
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+argsName.Otherany0.9064any[]0.0654string0.0124number0.0082string[]0.0011
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+queueName.Otherany[]0.6637any0.3189number[]0.0043complex0.0015string[]0.0011
+.Punctuation
+pushName.Othernumber0.7757any0.2184void0.0019boolean0.0013string0.0009
+(Punctuation
+ Text.Whitespace
+argsName.Otherany0.7476any[]0.2359string0.0060string[]0.0023number0.0014
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+firingName.Otherany0.5722boolean0.3582number0.0390string0.0104any[]0.0069
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+fireName.Otherany0.6029void0.3233any[]0.0202boolean0.0168Function0.0070
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// Call all the callbacks with the given argumentsComment.Single
+\n\t\t\tText.Whitespace
+fireName.Othervoid0.7735any0.0962any[]0.0423boolean0.0211this0.0177
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+selfName.Otherthis0.9422any0.0365void0.0040Window0.0036any[]0.0018
+.Punctuation
+fireWithName.Othervoid0.6442any0.2453boolean0.0529any[]0.0112complex0.0106
+(Punctuation
+ Text.Whitespace
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9744any[]0.0146any0.0068{}0.0004string[]0.0003
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\t\tText.Whitespace
+// To know if the callbacks have already been called at least onceComment.Single
+\n\t\t\tText.Whitespace
+firedName.Otherboolean0.9431any0.0334number0.0109any[]0.0023true0.0022
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+firedName.Otherany0.7069boolean0.2368number0.0259string0.0089any[]0.0066
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+selfName.Otherany0.5850this0.2229any[]0.0302void0.0279{}0.0144
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+jQueryName.Otherany0.9944string0.0021any[]0.0007complex0.0004boolean0.0003
+;Punctuation
+\nText.Whitespace

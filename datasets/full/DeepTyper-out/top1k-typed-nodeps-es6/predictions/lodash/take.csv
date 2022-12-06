@@ -1,0 +1,86 @@
+importKeyword
+ Text.Whitespace
+sliceName.Otherstring[]0.1269T[]0.0679any0.0268any[]0.0251string0.0199
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./slice.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a slice of `array` with `n` elements taken from the beginning.\n *\n * @since 0.1.0\n * @category Array\n * @param {Array} array The array to query.\n * @param {number} [n=1] The number of elements to take.\n * @returns {Array} Returns the slice of `array`.\n * @example\n *\n * take([1, 2, 3])\n * // => [1]\n *\n * take([1, 2, 3], 2)\n * // => [1, 2]\n *\n * take([1, 2, 3], 5)\n * // => [1, 2, 3]\n *\n * take([1, 2, 3], 0)\n * // => []\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+takeName.OtherIterableX<TSource>0.0256any0.0244T[]0.0236Observable<T>0.0098number0.0091
+(Punctuation
+arrayName.Otherany0.2075number[]0.1990any[]0.1284string[]0.0408number0.0394
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9406any0.0503string0.0022boolean0.0009number[]0.0006
+=Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+arrayName.Otherany0.3322any[]0.2529number[]0.1639string[]0.0651complex0.0309
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+arrayName.Otherany[]0.3762any0.2332number[]0.1538string[]0.0578T[]0.0177
+.Punctuation
+lengthName.Othernumber0.9057any0.0904string0.0025complex0.0004number[]0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+sliceName.Otherany0.3062any[]0.1690string0.1119complex0.0791number[]0.0444
+(Punctuation
+arrayName.Othernumber[]0.3039any0.2695any[]0.1291number0.1248complex0.0138
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9712any0.0264string0.0008boolean0.0002number[]0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nKeyword.Typenumber0.9562any0.0365string0.0035complex0.0003boolean0.0002
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+takeName.Otherany0.2420number0.0228IterableX<TSource>0.0080Observable<T>0.0071AsyncIterableX<TSource>0.0051
+\nText.Whitespace

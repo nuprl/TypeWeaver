@@ -1,0 +1,759 @@
+browser/type-check.ts(7,1): error TS2739: Type 'Function' is missing the following properties from type 'NodeRequire': resolve, cache, extensions, main
+browser/type-check.ts(7,225): error TS2554: Expected 1 arguments, but got 2.
+browser/type-check.ts(7,290): error TS2339: Property 'code' does not exist on type 'Error'.
+browser/type-check.ts(7,363): error TS2339: Property 'exports' does not exist on type 'object'.
+browser/type-check.ts(7,423): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(7,436): error TS2339: Property 'exports' does not exist on type 'object'.
+browser/type-check.ts(7,538): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(11,44): error TS2339: Property 'any' does not exist on type 'object'.
+browser/type-check.ts(11,60): error TS2339: Property 'all' does not exist on type 'object'.
+browser/type-check.ts(11,80): error TS2339: Property 'isItNaN' does not exist on type 'object'.
+browser/type-check.ts(38,28): error TS2339: Property 'getTime' does not exist on type 'object'.
+browser/type-check.ts(46,71): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(48,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+browser/type-check.ts(48,37): error TS2339: Property 'of' does not exist on type 'object'.
+browser/type-check.ts(54,38): error TS2339: Property 'of' does not exist on type 'object'.
+browser/type-check.ts(54,50): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(56,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+browser/type-check.ts(56,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+browser/type-check.ts(67,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(68,17): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(72,29): error TS2339: Property 'of' does not exist on type 'object'.
+browser/type-check.ts(74,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+browser/type-check.ts(74,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+browser/type-check.ts(81,17): error TS2339: Property 'subset' does not exist on type 'object'.
+browser/type-check.ts(87,18): error TS2339: Property 'structure' does not exist on type 'Function'.
+browser/type-check.ts(93,25): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'any[]'.
+  Type 'Element' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+browser/type-check.ts(98,20): error TS2339: Property 'type' does not exist on type 'object'.
+browser/type-check.ts(98,46): error TS2339: Property 'structure' does not exist on type 'object'.
+browser/type-check.ts(103,25): error TS2339: Property 'customTypes' does not exist on type 'object'.
+browser/type-check.ts(105,25): error TS2339: Property 'typeOf' does not exist on type 'HTMLElement'.
+browser/type-check.ts(105,54): error TS2339: Property 'typeOf' does not exist on type 'HTMLElement'.
+browser/type-check.ts(105,112): error TS2339: Property 'validate' does not exist on type 'HTMLElement'.
+browser/type-check.ts(107,93): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
+browser/type-check.ts(115,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
+browser/type-check.ts(125,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser/type-check.ts(128,10): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(130,17): error TS2339: Property 'customTypes' does not exist on type 'object'.
+browser/type-check.ts(131,15): error TS2339: Property 'customTypes' does not exist on type 'object'.
+browser/type-check.ts(133,26): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
+browser/type-check.ts(141,3): error TS2740: Type 'RegExp' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+browser/type-check.ts(142,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(153,26): error TS2339: Property 'test' does not exist on type 'any[]'.
+browser/type-check.ts(161,9): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+browser/type-check.ts(169,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+browser/type-check.ts(177,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(181,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+browser/type-check.ts(181,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(182,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(191,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(196,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(197,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(202,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(211,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(214,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(220,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(225,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(234,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(235,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(236,5): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+browser/type-check.ts(236,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(239,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(242,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+browser/type-check.ts(244,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+browser/type-check.ts(246,28): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+browser/type-check.ts(253,37): error TS2339: Property 'test' does not exist on type 'any[]'.
+browser/type-check.ts(255,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(256,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(257,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser/type-check.ts(259,26): error TS2339: Property 'type' does not exist on type 'object'.
+browser/type-check.ts(266,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser/type-check.ts(300,29): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+browser/type-check.ts(300,53): error TS2339: Property 'type' does not exist on type 'object'.
+browser/type-check.ts(300,79): error TS2339: Property 'structure' does not exist on type 'object'.
+browser/type-check.ts(307,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+browser/type-check.ts(313,3): error TS2322: Type 'RegExp' is not assignable to type 'number'.
+browser/type-check.ts(313,60): error TS2339: Property 'source' does not exist on type 'any[]'.
+browser/type-check.ts(314,10): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(319,20): error TS2339: Property 'match' does not exist on type 'any[]'.
+browser/type-check.ts(320,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(324,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(327,25): error TS2339: Property 'message' does not exist on type 'Function'.
+browser/type-check.ts(340,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(340,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(341,12): error TS2339: Property 'apply' does not exist on type 'object'.
+browser/type-check.ts(344,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(346,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(346,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(360,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(360,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(369,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(369,42): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(375,20): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(375,49): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(383,11): error TS2339: Property 'apply' does not exist on type 'object'.
+browser/type-check.ts(386,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(396,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(402,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(410,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(410,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(412,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(412,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(418,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(418,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(420,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(420,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(428,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(428,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(436,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(436,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(438,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(438,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(446,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(446,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(448,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(448,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(456,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(456,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(461,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(start: number, deleteCount?: number): any[]', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'number'.
+  Overload 2 of 2, '(start: number, deleteCount: number, ...items: any[]): any[]', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'number'.
+browser/type-check.ts(465,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(465,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(469,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(469,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(475,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(475,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(477,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(477,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(484,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(505,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(511,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(511,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(519,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(519,12): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(522,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(522,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(533,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(533,8): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(533,16): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(535,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(535,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(541,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(541,9): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(541,18): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(544,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(544,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(552,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(552,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(555,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(555,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(568,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(568,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(572,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(572,45): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(583,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(583,45): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(597,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(597,40): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(602,23): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(602,41): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(604,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(604,38): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(606,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+  Type 'Function' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+browser/type-check.ts(617,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(617,40): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(622,23): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(622,41): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(624,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(624,38): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(626,19): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'any[]'.
+browser/type-check.ts(637,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(637,40): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(642,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(642,35): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(644,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(644,37): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(653,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(653,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(656,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(656,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(667,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(667,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(670,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(670,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(683,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(683,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(693,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(693,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(701,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(701,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(703,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(703,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(711,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(711,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(713,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(713,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(721,21): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(732,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(732,12): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(732,43): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(735,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(735,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(735,43): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+browser/type-check.ts(749,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(749,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(751,5): error TS2322: Type 'string' is not assignable to type 'number'.
+browser/type-check.ts(758,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(758,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(760,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/type-check.ts(764,1): error TS2322: Type '(xs: any[]) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(767,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(767,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(769,5): error TS2322: Type 'string' is not assignable to type 'number'.
+browser/type-check.ts(776,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(776,52): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(787,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(787,52): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(795,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(795,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(798,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(798,52): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(806,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(806,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(809,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(809,52): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(817,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(817,8): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(817,16): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(822,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(822,45): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(829,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(829,9): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(829,18): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(835,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(835,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(839,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(839,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(846,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(846,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(847,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+browser/type-check.ts(849,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(849,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(856,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(856,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(863,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(863,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(866,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(866,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(878,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(878,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(890,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(890,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(893,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(893,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(894,24): error TS2554: Expected 0 arguments, but got 2.
+browser/type-check.ts(896,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(896,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(900,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(900,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(910,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(910,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(914,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(914,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(927,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(927,40): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(932,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(932,35): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(934,19): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(934,41): error TS2322: Type 'Function' is not assignable to type 'number'.
+browser/type-check.ts(939,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(939,37): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(950,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(950,40): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(955,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(955,35): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(957,19): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(957,41): error TS2322: Type 'Function' is not assignable to type 'number'.
+browser/type-check.ts(961,21): error TS2339: Property 'apply' does not exist on type 'object'.
+browser/type-check.ts(966,18): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(966,46): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(973,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(973,6): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(974,7): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+browser/type-check.ts(980,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(980,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(982,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(982,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(990,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(990,15): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(992,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(992,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(1001,1): error TS2322: Type 'boolean' is not assignable to type 'number'.
+browser/type-check.ts(1001,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1003,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(1003,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(1011,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1011,15): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1013,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(1013,34): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(1022,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(1096,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1102,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(1113,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1127,1): error TS2322: Type 'boolean' is not assignable to type 'number'.
+browser/type-check.ts(1127,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1130,1): error TS2322: Type 'boolean' is not assignable to type 'number'.
+browser/type-check.ts(1130,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1131,10): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+browser/type-check.ts(1136,7): error TS2322: Type '(x: number) => number' is not assignable to type 'number'.
+browser/type-check.ts(1146,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1146,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1149,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1149,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1152,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1152,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1155,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1155,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1164,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1165,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1166,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1167,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(1167,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1170,1): error TS2322: Type '(x: number) => number' is not assignable to type 'string'.
+browser/type-check.ts(1171,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1172,1): error TS2322: Type '(x: number) => number' is not assignable to type 'string'.
+browser/type-check.ts(1173,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1174,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1175,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1176,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1176,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1182,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1183,1): error TS2322: Type '(x: number) => number' is not assignable to type 'any[]'.
+browser/type-check.ts(1184,9): error TS2322: Type '(x: number) => number' is not assignable to type 'number'.
+browser/type-check.ts(1185,11): error TS2322: Type '(x: number) => boolean' is not assignable to type 'boolean'.
+browser/type-check.ts(1194,1): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+browser/type-check.ts(1194,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1205,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1205,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1208,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(1244,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1250,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(1275,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(1275,38): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(1289,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1289,14): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1291,16): error TS2322: Type 'number' is not assignable to type 'Function'.
+browser/type-check.ts(1291,36): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+browser/type-check.ts(1316,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(1316,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1324,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1324,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1326,8): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(1327,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1328,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1334,8): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(1335,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1337,18): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1342,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(1342,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1344,8): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(1345,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1347,18): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1352,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(1352,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1354,8): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(1355,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1357,18): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1362,1): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
+browser/type-check.ts(1362,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1366,8): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+browser/type-check.ts(1367,16): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1368,30): error TS2538: Type 'Function' cannot be used as an index type.
+browser/type-check.ts(1372,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(1372,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1381,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(1399,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1405,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(1413,1): error TS2322: Type 'boolean' is not assignable to type 'object'.
+browser/type-check.ts(1413,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1414,20): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'any[]' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'string | RegExp'.
+browser/type-check.ts(1416,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(1416,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1446,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(1446,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1458,35): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(arg$: Function, c: string) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'arg$' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Function'.
+browser/type-check.ts(1463,44): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(arg$: Function, lower: number, upper: string) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'arg$' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Function'.
+browser/type-check.ts(1467,27): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(arg$: number, upper: string) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'arg$' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+browser/type-check.ts(1475,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(1492,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1498,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(1514,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(1514,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1517,1): error TS2322: Type 'boolean' is not assignable to type 'string'.
+browser/type-check.ts(1517,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1524,5): error TS2339: Property 'empty' does not exist on type 'object'.
+browser/type-check.ts(1524,18): error TS2339: Property 'empty' does not exist on type 'object'.
+browser/type-check.ts(1525,5): error TS2339: Property 'slice' does not exist on type 'object'.
+browser/type-check.ts(1525,18): error TS2339: Property 'slice' does not exist on type 'object'.
+browser/type-check.ts(1526,5): error TS2339: Property 'take' does not exist on type 'object'.
+browser/type-check.ts(1526,17): error TS2339: Property 'take' does not exist on type 'object'.
+browser/type-check.ts(1527,5): error TS2339: Property 'drop' does not exist on type 'object'.
+browser/type-check.ts(1527,17): error TS2339: Property 'drop' does not exist on type 'object'.
+browser/type-check.ts(1528,5): error TS2339: Property 'splitAt' does not exist on type 'object'.
+browser/type-check.ts(1528,20): error TS2339: Property 'splitAt' does not exist on type 'object'.
+browser/type-check.ts(1529,5): error TS2339: Property 'takeWhile' does not exist on type 'object'.
+browser/type-check.ts(1529,22): error TS2339: Property 'takeWhile' does not exist on type 'object'.
+browser/type-check.ts(1530,5): error TS2339: Property 'dropWhile' does not exist on type 'object'.
+browser/type-check.ts(1530,22): error TS2339: Property 'dropWhile' does not exist on type 'object'.
+browser/type-check.ts(1531,5): error TS2339: Property 'span' does not exist on type 'object'.
+browser/type-check.ts(1531,17): error TS2339: Property 'span' does not exist on type 'object'.
+browser/type-check.ts(1532,5): error TS2339: Property 'breakStr' does not exist on type 'object'.
+browser/type-check.ts(1532,21): error TS2339: Property 'breakList' does not exist on type 'object'.
+browser/type-check.ts(1543,9): error TS2339: Property 'each' does not exist on type 'object'.
+browser/type-check.ts(1543,21): error TS2339: Property 'each' does not exist on type 'object'.
+browser/type-check.ts(1544,9): error TS2339: Property 'map' does not exist on type 'object'.
+browser/type-check.ts(1544,20): error TS2339: Property 'map' does not exist on type 'object'.
+browser/type-check.ts(1545,9): error TS2339: Property 'filter' does not exist on type 'object'.
+browser/type-check.ts(1545,23): error TS2339: Property 'filter' does not exist on type 'object'.
+browser/type-check.ts(1546,9): error TS2339: Property 'compact' does not exist on type 'object'.
+browser/type-check.ts(1546,24): error TS2339: Property 'compact' does not exist on type 'object'.
+browser/type-check.ts(1547,9): error TS2339: Property 'reject' does not exist on type 'object'.
+browser/type-check.ts(1547,23): error TS2339: Property 'reject' does not exist on type 'object'.
+browser/type-check.ts(1548,9): error TS2339: Property 'partition' does not exist on type 'object'.
+browser/type-check.ts(1548,26): error TS2339: Property 'partition' does not exist on type 'object'.
+browser/type-check.ts(1549,9): error TS2339: Property 'find' does not exist on type 'object'.
+browser/type-check.ts(1549,21): error TS2339: Property 'find' does not exist on type 'object'.
+browser/type-check.ts(1550,9): error TS2339: Property 'head' does not exist on type 'object'.
+browser/type-check.ts(1550,21): error TS2339: Property 'head' does not exist on type 'object'.
+browser/type-check.ts(1551,9): error TS2339: Property 'first' does not exist on type 'object'.
+browser/type-check.ts(1551,22): error TS2339: Property 'first' does not exist on type 'object'.
+browser/type-check.ts(1552,9): error TS2339: Property 'tail' does not exist on type 'object'.
+browser/type-check.ts(1552,21): error TS2339: Property 'tail' does not exist on type 'object'.
+browser/type-check.ts(1553,9): error TS2339: Property 'last' does not exist on type 'object'.
+browser/type-check.ts(1553,21): error TS2339: Property 'last' does not exist on type 'object'.
+browser/type-check.ts(1554,9): error TS2339: Property 'initial' does not exist on type 'object'.
+browser/type-check.ts(1554,24): error TS2339: Property 'initial' does not exist on type 'object'.
+browser/type-check.ts(1555,9): error TS2339: Property 'empty' does not exist on type 'object'.
+browser/type-check.ts(1555,22): error TS2339: Property 'empty' does not exist on type 'object'.
+browser/type-check.ts(1556,9): error TS2339: Property 'reverse' does not exist on type 'object'.
+browser/type-check.ts(1556,24): error TS2339: Property 'reverse' does not exist on type 'object'.
+browser/type-check.ts(1557,9): error TS2339: Property 'difference' does not exist on type 'object'.
+browser/type-check.ts(1557,27): error TS2339: Property 'difference' does not exist on type 'object'.
+browser/type-check.ts(1558,9): error TS2339: Property 'intersection' does not exist on type 'object'.
+browser/type-check.ts(1558,29): error TS2339: Property 'intersection' does not exist on type 'object'.
+browser/type-check.ts(1559,9): error TS2339: Property 'union' does not exist on type 'object'.
+browser/type-check.ts(1559,22): error TS2339: Property 'union' does not exist on type 'object'.
+browser/type-check.ts(1560,9): error TS2339: Property 'countBy' does not exist on type 'object'.
+browser/type-check.ts(1560,24): error TS2339: Property 'countBy' does not exist on type 'object'.
+browser/type-check.ts(1561,9): error TS2339: Property 'groupBy' does not exist on type 'object'.
+browser/type-check.ts(1561,24): error TS2339: Property 'groupBy' does not exist on type 'object'.
+browser/type-check.ts(1562,9): error TS2339: Property 'fold' does not exist on type 'object'.
+browser/type-check.ts(1562,21): error TS2339: Property 'fold' does not exist on type 'object'.
+browser/type-check.ts(1563,9): error TS2339: Property 'foldl' does not exist on type 'object'.
+browser/type-check.ts(1563,22): error TS2339: Property 'foldl' does not exist on type 'object'.
+browser/type-check.ts(1564,9): error TS2339: Property 'fold1' does not exist on type 'object'.
+browser/type-check.ts(1564,22): error TS2339: Property 'fold1' does not exist on type 'object'.
+browser/type-check.ts(1565,9): error TS2339: Property 'foldl1' does not exist on type 'object'.
+browser/type-check.ts(1565,23): error TS2339: Property 'foldl1' does not exist on type 'object'.
+browser/type-check.ts(1566,9): error TS2339: Property 'foldr' does not exist on type 'object'.
+browser/type-check.ts(1566,22): error TS2339: Property 'foldr' does not exist on type 'object'.
+browser/type-check.ts(1567,9): error TS2339: Property 'foldr1' does not exist on type 'object'.
+browser/type-check.ts(1567,23): error TS2339: Property 'foldr1' does not exist on type 'object'.
+browser/type-check.ts(1568,9): error TS2339: Property 'unfoldr' does not exist on type 'object'.
+browser/type-check.ts(1568,24): error TS2339: Property 'unfoldr' does not exist on type 'object'.
+browser/type-check.ts(1569,9): error TS2339: Property 'andList' does not exist on type 'object'.
+browser/type-check.ts(1569,24): error TS2339: Property 'andList' does not exist on type 'object'.
+browser/type-check.ts(1570,9): error TS2339: Property 'orList' does not exist on type 'object'.
+browser/type-check.ts(1570,23): error TS2339: Property 'orList' does not exist on type 'object'.
+browser/type-check.ts(1571,9): error TS2339: Property 'any' does not exist on type 'object'.
+browser/type-check.ts(1571,20): error TS2339: Property 'any' does not exist on type 'object'.
+browser/type-check.ts(1572,9): error TS2339: Property 'all' does not exist on type 'object'.
+browser/type-check.ts(1572,20): error TS2339: Property 'all' does not exist on type 'object'.
+browser/type-check.ts(1573,9): error TS2339: Property 'unique' does not exist on type 'object'.
+browser/type-check.ts(1573,23): error TS2339: Property 'unique' does not exist on type 'object'.
+browser/type-check.ts(1574,9): error TS2339: Property 'uniqueBy' does not exist on type 'object'.
+browser/type-check.ts(1574,25): error TS2339: Property 'uniqueBy' does not exist on type 'object'.
+browser/type-check.ts(1575,9): error TS2339: Property 'sort' does not exist on type 'object'.
+browser/type-check.ts(1575,21): error TS2339: Property 'sort' does not exist on type 'object'.
+browser/type-check.ts(1576,9): error TS2339: Property 'sortWith' does not exist on type 'object'.
+browser/type-check.ts(1576,25): error TS2339: Property 'sortWith' does not exist on type 'object'.
+browser/type-check.ts(1577,9): error TS2339: Property 'sortBy' does not exist on type 'object'.
+browser/type-check.ts(1577,23): error TS2339: Property 'sortBy' does not exist on type 'object'.
+browser/type-check.ts(1578,9): error TS2339: Property 'sum' does not exist on type 'object'.
+browser/type-check.ts(1578,20): error TS2339: Property 'sum' does not exist on type 'object'.
+browser/type-check.ts(1579,9): error TS2339: Property 'product' does not exist on type 'object'.
+browser/type-check.ts(1579,24): error TS2339: Property 'product' does not exist on type 'object'.
+browser/type-check.ts(1580,9): error TS2339: Property 'mean' does not exist on type 'object'.
+browser/type-check.ts(1580,21): error TS2339: Property 'mean' does not exist on type 'object'.
+browser/type-check.ts(1581,9): error TS2339: Property 'average' does not exist on type 'object'.
+browser/type-check.ts(1581,24): error TS2339: Property 'average' does not exist on type 'object'.
+browser/type-check.ts(1582,9): error TS2339: Property 'concat' does not exist on type 'object'.
+browser/type-check.ts(1582,23): error TS2339: Property 'concat' does not exist on type 'object'.
+browser/type-check.ts(1583,9): error TS2339: Property 'concatMap' does not exist on type 'object'.
+browser/type-check.ts(1583,26): error TS2339: Property 'concatMap' does not exist on type 'object'.
+browser/type-check.ts(1584,9): error TS2339: Property 'flatten' does not exist on type 'object'.
+browser/type-check.ts(1584,24): error TS2339: Property 'flatten' does not exist on type 'object'.
+browser/type-check.ts(1585,9): error TS2339: Property 'maximum' does not exist on type 'object'.
+browser/type-check.ts(1585,24): error TS2339: Property 'maximum' does not exist on type 'object'.
+browser/type-check.ts(1586,9): error TS2339: Property 'minimum' does not exist on type 'object'.
+browser/type-check.ts(1586,24): error TS2339: Property 'minimum' does not exist on type 'object'.
+browser/type-check.ts(1587,9): error TS2339: Property 'maximumBy' does not exist on type 'object'.
+browser/type-check.ts(1587,26): error TS2339: Property 'maximumBy' does not exist on type 'object'.
+browser/type-check.ts(1588,9): error TS2339: Property 'minimumBy' does not exist on type 'object'.
+browser/type-check.ts(1588,26): error TS2339: Property 'minimumBy' does not exist on type 'object'.
+browser/type-check.ts(1589,9): error TS2339: Property 'scan' does not exist on type 'object'.
+browser/type-check.ts(1589,21): error TS2339: Property 'scan' does not exist on type 'object'.
+browser/type-check.ts(1590,9): error TS2339: Property 'scanl' does not exist on type 'object'.
+browser/type-check.ts(1590,22): error TS2339: Property 'scanl' does not exist on type 'object'.
+browser/type-check.ts(1591,9): error TS2339: Property 'scan1' does not exist on type 'object'.
+browser/type-check.ts(1591,22): error TS2339: Property 'scan1' does not exist on type 'object'.
+browser/type-check.ts(1592,9): error TS2339: Property 'scanl1' does not exist on type 'object'.
+browser/type-check.ts(1592,23): error TS2339: Property 'scanl1' does not exist on type 'object'.
+browser/type-check.ts(1593,9): error TS2339: Property 'scanr' does not exist on type 'object'.
+browser/type-check.ts(1593,22): error TS2339: Property 'scanr' does not exist on type 'object'.
+browser/type-check.ts(1594,9): error TS2339: Property 'scanr1' does not exist on type 'object'.
+browser/type-check.ts(1594,23): error TS2339: Property 'scanr1' does not exist on type 'object'.
+browser/type-check.ts(1595,9): error TS2339: Property 'slice' does not exist on type 'object'.
+browser/type-check.ts(1595,22): error TS2339: Property 'slice' does not exist on type 'object'.
+browser/type-check.ts(1596,9): error TS2339: Property 'take' does not exist on type 'object'.
+browser/type-check.ts(1596,21): error TS2339: Property 'take' does not exist on type 'object'.
+browser/type-check.ts(1597,9): error TS2339: Property 'drop' does not exist on type 'object'.
+browser/type-check.ts(1597,21): error TS2339: Property 'drop' does not exist on type 'object'.
+browser/type-check.ts(1598,9): error TS2339: Property 'splitAt' does not exist on type 'object'.
+browser/type-check.ts(1598,24): error TS2339: Property 'splitAt' does not exist on type 'object'.
+browser/type-check.ts(1599,9): error TS2339: Property 'takeWhile' does not exist on type 'object'.
+browser/type-check.ts(1599,26): error TS2339: Property 'takeWhile' does not exist on type 'object'.
+browser/type-check.ts(1600,9): error TS2339: Property 'dropWhile' does not exist on type 'object'.
+browser/type-check.ts(1600,26): error TS2339: Property 'dropWhile' does not exist on type 'object'.
+browser/type-check.ts(1601,9): error TS2339: Property 'span' does not exist on type 'object'.
+browser/type-check.ts(1601,21): error TS2339: Property 'span' does not exist on type 'object'.
+browser/type-check.ts(1602,9): error TS2339: Property 'breakList' does not exist on type 'object'.
+browser/type-check.ts(1602,26): error TS2339: Property 'breakList' does not exist on type 'object'.
+browser/type-check.ts(1603,9): error TS2339: Property 'zip' does not exist on type 'object'.
+browser/type-check.ts(1603,20): error TS2339: Property 'zip' does not exist on type 'object'.
+browser/type-check.ts(1604,9): error TS2339: Property 'zipWith' does not exist on type 'object'.
+browser/type-check.ts(1604,24): error TS2339: Property 'zipWith' does not exist on type 'object'.
+browser/type-check.ts(1605,9): error TS2339: Property 'zipAll' does not exist on type 'object'.
+browser/type-check.ts(1605,23): error TS2339: Property 'zipAll' does not exist on type 'object'.
+browser/type-check.ts(1606,9): error TS2339: Property 'zipAllWith' does not exist on type 'object'.
+browser/type-check.ts(1606,27): error TS2339: Property 'zipAllWith' does not exist on type 'object'.
+browser/type-check.ts(1607,9): error TS2339: Property 'at' does not exist on type 'object'.
+browser/type-check.ts(1607,19): error TS2339: Property 'at' does not exist on type 'object'.
+browser/type-check.ts(1608,9): error TS2339: Property 'elemIndex' does not exist on type 'object'.
+browser/type-check.ts(1608,26): error TS2339: Property 'elemIndex' does not exist on type 'object'.
+browser/type-check.ts(1609,9): error TS2339: Property 'elemIndices' does not exist on type 'object'.
+browser/type-check.ts(1609,28): error TS2339: Property 'elemIndices' does not exist on type 'object'.
+browser/type-check.ts(1610,9): error TS2339: Property 'findIndex' does not exist on type 'object'.
+browser/type-check.ts(1610,26): error TS2339: Property 'findIndex' does not exist on type 'object'.
+browser/type-check.ts(1611,9): error TS2339: Property 'findIndices' does not exist on type 'object'.
+browser/type-check.ts(1611,28): error TS2339: Property 'findIndices' does not exist on type 'object'.
+browser/type-check.ts(1612,9): error TS2339: Property 'apply' does not exist on type 'object'.
+browser/type-check.ts(1612,22): error TS2339: Property 'apply' does not exist on type 'object'.
+browser/type-check.ts(1613,9): error TS2339: Property 'curry' does not exist on type 'object'.
+browser/type-check.ts(1613,22): error TS2339: Property 'curry' does not exist on type 'object'.
+browser/type-check.ts(1614,9): error TS2339: Property 'flip' does not exist on type 'object'.
+browser/type-check.ts(1614,21): error TS2339: Property 'flip' does not exist on type 'object'.
+browser/type-check.ts(1615,9): error TS2339: Property 'fix' does not exist on type 'object'.
+browser/type-check.ts(1615,20): error TS2339: Property 'fix' does not exist on type 'object'.
+browser/type-check.ts(1616,9): error TS2339: Property 'over' does not exist on type 'object'.
+browser/type-check.ts(1616,21): error TS2339: Property 'over' does not exist on type 'object'.
+browser/type-check.ts(1617,9): error TS2339: Property 'split' does not exist on type 'object'.
+browser/type-check.ts(1617,21): error TS2339: Property 'split' does not exist on type 'object'.
+browser/type-check.ts(1618,9): error TS2339: Property 'join' does not exist on type 'object'.
+browser/type-check.ts(1618,20): error TS2339: Property 'join' does not exist on type 'object'.
+browser/type-check.ts(1619,9): error TS2339: Property 'lines' does not exist on type 'object'.
+browser/type-check.ts(1619,21): error TS2339: Property 'lines' does not exist on type 'object'.
+browser/type-check.ts(1620,9): error TS2339: Property 'unlines' does not exist on type 'object'.
+browser/type-check.ts(1620,23): error TS2339: Property 'unlines' does not exist on type 'object'.
+browser/type-check.ts(1621,9): error TS2339: Property 'words' does not exist on type 'object'.
+browser/type-check.ts(1621,21): error TS2339: Property 'words' does not exist on type 'object'.
+browser/type-check.ts(1622,9): error TS2339: Property 'unwords' does not exist on type 'object'.
+browser/type-check.ts(1622,23): error TS2339: Property 'unwords' does not exist on type 'object'.
+browser/type-check.ts(1623,9): error TS2339: Property 'chars' does not exist on type 'object'.
+browser/type-check.ts(1623,21): error TS2339: Property 'chars' does not exist on type 'object'.
+browser/type-check.ts(1624,9): error TS2339: Property 'unchars' does not exist on type 'object'.
+browser/type-check.ts(1624,23): error TS2339: Property 'unchars' does not exist on type 'object'.
+browser/type-check.ts(1625,9): error TS2339: Property 'repeat' does not exist on type 'object'.
+browser/type-check.ts(1625,22): error TS2339: Property 'repeat' does not exist on type 'object'.
+browser/type-check.ts(1626,9): error TS2339: Property 'capitalize' does not exist on type 'object'.
+browser/type-check.ts(1626,26): error TS2339: Property 'capitalize' does not exist on type 'object'.
+browser/type-check.ts(1627,9): error TS2339: Property 'camelize' does not exist on type 'object'.
+browser/type-check.ts(1627,24): error TS2339: Property 'camelize' does not exist on type 'object'.
+browser/type-check.ts(1628,9): error TS2339: Property 'dasherize' does not exist on type 'object'.
+browser/type-check.ts(1628,25): error TS2339: Property 'dasherize' does not exist on type 'object'.
+browser/type-check.ts(1629,9): error TS2339: Property 'values' does not exist on type 'object'.
+browser/type-check.ts(1629,22): error TS2339: Property 'values' does not exist on type 'object'.
+browser/type-check.ts(1630,9): error TS2339: Property 'keys' does not exist on type 'object'.
+browser/type-check.ts(1630,20): error TS2339: Property 'keys' does not exist on type 'object'.
+browser/type-check.ts(1631,9): error TS2339: Property 'pairsToObj' does not exist on type 'object'.
+browser/type-check.ts(1631,26): error TS2339: Property 'pairsToObj' does not exist on type 'object'.
+browser/type-check.ts(1632,9): error TS2339: Property 'objToPairs' does not exist on type 'object'.
+browser/type-check.ts(1632,26): error TS2339: Property 'objToPairs' does not exist on type 'object'.
+browser/type-check.ts(1633,9): error TS2339: Property 'listsToObj' does not exist on type 'object'.
+browser/type-check.ts(1633,26): error TS2339: Property 'listsToObj' does not exist on type 'object'.
+browser/type-check.ts(1634,9): error TS2339: Property 'objToLists' does not exist on type 'object'.
+browser/type-check.ts(1634,26): error TS2339: Property 'objToLists' does not exist on type 'object'.
+browser/type-check.ts(1635,9): error TS2339: Property 'max' does not exist on type 'object'.
+browser/type-check.ts(1635,19): error TS2339: Property 'max' does not exist on type 'object'.
+browser/type-check.ts(1636,9): error TS2339: Property 'min' does not exist on type 'object'.
+browser/type-check.ts(1636,19): error TS2339: Property 'min' does not exist on type 'object'.
+browser/type-check.ts(1637,9): error TS2339: Property 'negate' does not exist on type 'object'.
+browser/type-check.ts(1637,22): error TS2339: Property 'negate' does not exist on type 'object'.
+browser/type-check.ts(1638,9): error TS2339: Property 'abs' does not exist on type 'object'.
+browser/type-check.ts(1638,19): error TS2339: Property 'abs' does not exist on type 'object'.
+browser/type-check.ts(1639,9): error TS2339: Property 'signum' does not exist on type 'object'.
+browser/type-check.ts(1639,22): error TS2339: Property 'signum' does not exist on type 'object'.
+browser/type-check.ts(1640,9): error TS2339: Property 'quot' does not exist on type 'object'.
+browser/type-check.ts(1640,20): error TS2339: Property 'quot' does not exist on type 'object'.
+browser/type-check.ts(1641,9): error TS2339: Property 'rem' does not exist on type 'object'.
+browser/type-check.ts(1641,19): error TS2339: Property 'rem' does not exist on type 'object'.
+browser/type-check.ts(1642,9): error TS2339: Property 'div' does not exist on type 'object'.
+browser/type-check.ts(1642,19): error TS2339: Property 'div' does not exist on type 'object'.
+browser/type-check.ts(1643,9): error TS2339: Property 'mod' does not exist on type 'object'.
+browser/type-check.ts(1643,19): error TS2339: Property 'mod' does not exist on type 'object'.
+browser/type-check.ts(1644,9): error TS2339: Property 'recip' does not exist on type 'object'.
+browser/type-check.ts(1644,21): error TS2339: Property 'recip' does not exist on type 'object'.
+browser/type-check.ts(1645,9): error TS2339: Property 'pi' does not exist on type 'object'.
+browser/type-check.ts(1645,18): error TS2339: Property 'pi' does not exist on type 'object'.
+browser/type-check.ts(1646,9): error TS2339: Property 'tau' does not exist on type 'object'.
+browser/type-check.ts(1646,19): error TS2339: Property 'tau' does not exist on type 'object'.
+browser/type-check.ts(1647,9): error TS2339: Property 'exp' does not exist on type 'object'.
+browser/type-check.ts(1647,19): error TS2339: Property 'exp' does not exist on type 'object'.
+browser/type-check.ts(1648,9): error TS2339: Property 'sqrt' does not exist on type 'object'.
+browser/type-check.ts(1648,20): error TS2339: Property 'sqrt' does not exist on type 'object'.
+browser/type-check.ts(1649,9): error TS2339: Property 'ln' does not exist on type 'object'.
+browser/type-check.ts(1649,18): error TS2339: Property 'ln' does not exist on type 'object'.
+browser/type-check.ts(1650,9): error TS2339: Property 'pow' does not exist on type 'object'.
+browser/type-check.ts(1650,19): error TS2339: Property 'pow' does not exist on type 'object'.
+browser/type-check.ts(1651,9): error TS2339: Property 'sin' does not exist on type 'object'.
+browser/type-check.ts(1651,19): error TS2339: Property 'sin' does not exist on type 'object'.
+browser/type-check.ts(1652,9): error TS2339: Property 'tan' does not exist on type 'object'.
+browser/type-check.ts(1652,19): error TS2339: Property 'tan' does not exist on type 'object'.
+browser/type-check.ts(1653,9): error TS2339: Property 'cos' does not exist on type 'object'.
+browser/type-check.ts(1653,19): error TS2339: Property 'cos' does not exist on type 'object'.
+browser/type-check.ts(1654,9): error TS2339: Property 'acos' does not exist on type 'object'.
+browser/type-check.ts(1654,20): error TS2339: Property 'acos' does not exist on type 'object'.
+browser/type-check.ts(1655,9): error TS2339: Property 'asin' does not exist on type 'object'.
+browser/type-check.ts(1655,20): error TS2339: Property 'asin' does not exist on type 'object'.
+browser/type-check.ts(1656,9): error TS2339: Property 'atan' does not exist on type 'object'.
+browser/type-check.ts(1656,20): error TS2339: Property 'atan' does not exist on type 'object'.
+browser/type-check.ts(1657,9): error TS2339: Property 'atan2' does not exist on type 'object'.
+browser/type-check.ts(1657,21): error TS2339: Property 'atan2' does not exist on type 'object'.
+browser/type-check.ts(1658,9): error TS2339: Property 'truncate' does not exist on type 'object'.
+browser/type-check.ts(1658,24): error TS2339: Property 'truncate' does not exist on type 'object'.
+browser/type-check.ts(1659,9): error TS2339: Property 'round' does not exist on type 'object'.
+browser/type-check.ts(1659,21): error TS2339: Property 'round' does not exist on type 'object'.
+browser/type-check.ts(1660,9): error TS2339: Property 'ceiling' does not exist on type 'object'.
+browser/type-check.ts(1660,23): error TS2339: Property 'ceiling' does not exist on type 'object'.
+browser/type-check.ts(1661,9): error TS2339: Property 'floor' does not exist on type 'object'.
+browser/type-check.ts(1661,21): error TS2339: Property 'floor' does not exist on type 'object'.
+browser/type-check.ts(1662,9): error TS2339: Property 'isItNaN' does not exist on type 'object'.
+browser/type-check.ts(1662,23): error TS2339: Property 'isItNaN' does not exist on type 'object'.
+browser/type-check.ts(1663,9): error TS2339: Property 'even' does not exist on type 'object'.
+browser/type-check.ts(1663,20): error TS2339: Property 'even' does not exist on type 'object'.
+browser/type-check.ts(1664,9): error TS2339: Property 'odd' does not exist on type 'object'.
+browser/type-check.ts(1664,19): error TS2339: Property 'odd' does not exist on type 'object'.
+browser/type-check.ts(1665,9): error TS2339: Property 'gcd' does not exist on type 'object'.
+browser/type-check.ts(1665,19): error TS2339: Property 'gcd' does not exist on type 'object'.
+browser/type-check.ts(1666,9): error TS2339: Property 'lcm' does not exist on type 'object'.
+browser/type-check.ts(1666,19): error TS2339: Property 'lcm' does not exist on type 'object'.
+browser/type-check.ts(1667,9): error TS2339: Property 'VERSION' does not exist on type 'object'.
+browser/type-check.ts(1668,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser/type-check.ts(1671,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/type-check.ts(1677,42): error TS2339: Property 'apply' does not exist on type 'any[]'.
+browser/type-check.ts(1692,10): error TS2339: Property 'exports' does not exist on type 'Function'.
+lib/check.ts(4,44): error TS2339: Property 'any' does not exist on type 'object'.
+lib/check.ts(4,60): error TS2339: Property 'all' does not exist on type 'object'.
+lib/check.ts(4,80): error TS2339: Property 'isItNaN' does not exist on type 'object'.
+lib/check.ts(31,28): error TS2339: Property 'getTime' does not exist on type 'object'.
+lib/check.ts(39,71): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/check.ts(41,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+lib/check.ts(41,37): error TS2339: Property 'of' does not exist on type 'object'.
+lib/check.ts(47,38): error TS2339: Property 'of' does not exist on type 'object'.
+lib/check.ts(47,50): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
+lib/check.ts(49,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+lib/check.ts(49,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+lib/check.ts(60,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+lib/check.ts(61,17): error TS2538: Type 'Function' cannot be used as an index type.
+lib/check.ts(65,29): error TS2339: Property 'of' does not exist on type 'object'.
+lib/check.ts(67,12): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+lib/check.ts(67,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+lib/check.ts(74,17): error TS2339: Property 'subset' does not exist on type 'object'.
+lib/check.ts(80,18): error TS2339: Property 'structure' does not exist on type 'Function'.
+lib/check.ts(86,25): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'any[]'.
+lib/check.ts(91,20): error TS2339: Property 'type' does not exist on type 'object'.
+lib/check.ts(91,46): error TS2339: Property 'structure' does not exist on type 'object'.
+lib/check.ts(96,25): error TS2339: Property 'customTypes' does not exist on type 'object'.
+lib/check.ts(98,25): error TS2339: Property 'typeOf' does not exist on type 'HTMLElement'.
+lib/check.ts(98,54): error TS2339: Property 'typeOf' does not exist on type 'HTMLElement'.
+lib/check.ts(98,112): error TS2339: Property 'validate' does not exist on type 'HTMLElement'.
+lib/check.ts(100,93): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
+lib/check.ts(108,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
+lib/check.ts(118,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/check.ts(123,17): error TS2339: Property 'customTypes' does not exist on type 'object'.
+lib/check.ts(124,15): error TS2339: Property 'customTypes' does not exist on type 'object'.
+lib/check.ts(126,26): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'string'.
+lib/parse-type.ts(4,3): error TS2322: Type 'RegExp' is not assignable to type 'any[]'.
+lib/parse-type.ts(5,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/parse-type.ts(16,26): error TS2339: Property 'test' does not exist on type 'any[]'.
+lib/parse-type.ts(24,9): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+lib/parse-type.ts(32,9): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+lib/parse-type.ts(40,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(44,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/parse-type.ts(44,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(45,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(54,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(59,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(60,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(65,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(74,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(77,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(83,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(88,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(97,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(98,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(99,5): error TS2322: Type 'any[]' is not assignable to type 'Function'.
+lib/parse-type.ts(99,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(102,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/parse-type.ts(105,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+lib/parse-type.ts(107,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+lib/parse-type.ts(109,28): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+lib/parse-type.ts(116,37): error TS2339: Property 'test' does not exist on type 'any[]'.
+lib/parse-type.ts(118,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(119,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(120,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/parse-type.ts(122,26): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse-type.ts(129,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+lib/parse-type.ts(163,29): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+lib/parse-type.ts(163,53): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse-type.ts(163,79): error TS2339: Property 'structure' does not exist on type 'object'.
+lib/parse-type.ts(170,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/parse-type.ts(176,3): error TS2322: Type 'RegExp' is not assignable to type 'number'.
+lib/parse-type.ts(176,60): error TS2339: Property 'source' does not exist on type 'any[]'.
+lib/parse-type.ts(182,20): error TS2339: Property 'match' does not exist on type 'any[]'.
+lib/parse-type.ts(183,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(187,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/parse-type.ts(190,25): error TS2339: Property 'message' does not exist on type 'Function'.
+

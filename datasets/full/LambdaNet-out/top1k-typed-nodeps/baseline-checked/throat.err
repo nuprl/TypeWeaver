@@ -1,0 +1,14 @@
+index.ts(7,59): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(14,24): error TS2345: Argument of type '(resolve: any[]) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'any[]'.
+index.ts(15,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+index.ts(18,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(20,32): error TS2339: Property 'fn' does not exist on type 'object'.
+index.ts(20,43): error TS2339: Property 'self' does not exist on type 'object'.
+index.ts(20,51): error TS2339: Property 'args' does not exist on type 'object'.
+index.ts(30,5): error TS2322: Type 'Function' is not assignable to type 'string'.
+index.ts(39,12): error TS2339: Property 'resolve' does not exist on type 'string'.
+index.ts(90,5): error TS2322: Type 'Function' is not assignable to type 'string'.
+index.ts(92,5): error TS2322: Type 'Function' is not assignable to type 'string'.
+

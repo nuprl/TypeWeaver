@@ -1,0 +1,22 @@
+index.ts(48,53): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+index.ts(54,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(61,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(65,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(72,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(74,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(87,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(92,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(94,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(101,20): error TS2339: Property 'clear' does not exist on type 'Promise<{}>'.
+index.ts(106,2): error TS2322: Type 'Promise<{}>' is not assignable to type 'void'.
+

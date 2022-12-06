@@ -1,0 +1,57 @@
+Text
+/**\n * Returns a function that when called, calls-back with the values provided.\n * Useful as the first function in a [`waterfall`]{@link module:ControlFlow.waterfall}, or for plugging values in to\n * [`auto`]{@link module:ControlFlow.auto}.\n *\n * @name constant\n * @static\n * @memberOf module:Utils\n * @method\n * @category Util\n * @param {...*} arguments... - Any number of arguments to automatically invoke\n * callback with.\n * @returns {AsyncFunction} Returns a function that when invoked, automatically\n * invokes the callback with the previous given arguments.\n * @example\n *\n * async.waterfall([\n *     async.constant(42),\n *     function (value, next) {\n *         // value === 42\n *     },\n *     //...\n * ], callback);\n *\n * async.waterfall([\n *     async.constant(filename, "utf8"),\n *     fs.readFile,\n *     function (fileData, next) {\n *         //...\n *     }\n *     //...\n * ], callback);\n *\n * async.auto({\n *     hostname: async.constant("https://server.net/"),\n *     port: findFreePort,\n *     launchServer: ["hostname", "port", function (options, cb) {\n *         startServer(options, cb);\n *     }],\n *     //...\n * }, callback);\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8813any0.0410string[]0.0172IArguments0.0021{}0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+...Punctuation
+ignoredArgsName.Otherany[]0.5290any0.2840string[]0.0304string0.0050Function[]0.0045
+/*, callback*/Comment.Multiline
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callbackName.Otherany0.7347Function0.0363number0.0334any[]0.0247void0.0212
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ignoredArgsName.Otherany0.5184any[]0.3309string[]0.0475string0.0063complex0.0048
+.Punctuation
+popName.Otherany0.7732string0.1168Function0.0105any[]0.0088number0.0072
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.5710Function0.0926void0.0246number0.0174string0.0165
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.9566any0.0237string[]0.0060IArguments0.0011{}0.0007
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

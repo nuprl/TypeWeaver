@@ -1,0 +1,14 @@
+index.ts(1,26): error TS2304: Cannot find name 'Dict'.
+index.ts(4,42): error TS2749: 'name' refers to a value, but is being used as a type here. Did you mean 'typeof name'?
+index.ts(4,56): error TS2749: 'value' refers to a value, but is being used as a type here. Did you mean 'typeof value'?
+index.ts(4,73): error TS2749: 'clobber' refers to a value, but is being used as a type here. Did you mean 'typeof clobber'?
+index.ts(20,7): error TS2403: Subsequent variable declarations must have the same type.  Variable 'name' must be of type 'String', but here has type 'string'.
+index.ts(41,13): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(58,32): error TS2304: Cannot find name 'Dict'.
+index.ts(58,32): error TS4078: Parameter 'dict' of exported function has or is using private name 'Dict'.
+index.ts(62,8): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(66,8): error TS2339: Property 'hasHeader' does not exist on type 'Response'.
+index.ts(69,8): error TS2339: Property 'getHeader' does not exist on type 'Response'.
+index.ts(72,8): error TS2339: Property 'removeHeader' does not exist on type 'Response'.
+index.ts(75,8): error TS2540: Cannot assign to 'headers' because it is a read-only property.
+

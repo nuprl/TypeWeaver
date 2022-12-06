@@ -1,0 +1,297 @@
+Text
+/*\n * lib/jsprim-jsv.js: extras for testing performance vs JSV\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mod_assertName.Otherany0.8525string0.0412number0.0070Function0.0069boolean0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'assert'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mod_jsvName.Otherany0.8535string0.0820number0.0285void0.0145boolean0.0039
+;Punctuation
+\t\tText.Whitespace
+/* lazy-loaded because it may not be here */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+validateJsonObjectJSVName.Otherany0.4604string0.4477number0.0179boolean0.0146string[]0.0071
+:Operator
+ Text.Whitespace
+validateJsonObjectJSVKeyword.Typeany0.7418string0.2146number0.0129boolean0.0090void0.0044
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+validateJsonObjectJSVName.Otherany0.6544void0.1376string0.1331boolean0.0166complex0.0145
+(Punctuation
+schemaName.Otherany0.7177string0.2097GraphQLSchema0.0121complex0.0026RegExp0.0021
+,Punctuation
+ Text.Whitespace
+inputName.Otherany0.8807string0.0944any[]0.0014Buffer0.0014Object0.0011
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+mod_jsvName.Otherany0.8406string0.1192boolean0.0168complex0.0036number0.0029
+)Punctuation
+\n\t\tText.Whitespace
+mod_jsvName.Otherany0.9640string0.0262Function0.0012number0.0011boolean0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'JSV'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+envName.Otherany0.8576complex0.0441string0.0119Object0.0049EnvironmentVariables0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mod_jsvName.Otherany0.9679complex0.0095string0.0009void0.0005{}0.0004
+.Punctuation
+JSVName.Otherany0.9786complex0.0051string0.0011any[]0.0004void0.0004
+.Punctuation
+createEnvironmentName.Otherany0.9426complex0.0115string0.0103void0.0031any[]0.0020
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+reportName.Otherany0.8420string0.0639string[]0.0046void0.0042number0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+envName.Otherany0.7406complex0.1586string0.0071Environment0.0048Error0.0023
+.Punctuation
+validateName.Otherany0.6977complex0.2682string0.0093any[]0.0035string[]0.0029
+(Punctuation
+inputName.Otherany0.9404string0.0422any[]0.0041complex0.0039string[]0.0006
+,Punctuation
+ Text.Whitespace
+schemaName.Otherany0.9322string0.0459complex0.0046Error0.0009GraphQLSchema0.0009
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+reportName.Otherany0.9263string0.0042complex0.0024boolean0.0021void0.0012
+.Punctuation
+errorsName.Otherany0.8782string0.0116any[]0.0078string[]0.0075boolean0.0030
+.Punctuation
+lengthName.Otherany0.8766number0.1192string0.0024void0.0005complex0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+/* Currently, we only do anything useful with the first error. */Comment.Multiline
+\n\tText.Whitespace
+mod_assertName.Otherany0.9864string0.0009void0.0008complex0.0005number0.0003
+.Punctuation
+okName.Otherany0.9436void0.0442boolean0.0030string0.0018complex0.0008
+(Punctuation
+reportName.Otherany0.8214string0.0062void0.0033boolean0.0027Function0.0020
+.Punctuation
+errorsName.Otherany0.7590string0.0213string[]0.0153any[]0.0119void0.0040
+.Punctuation
+lengthName.Otherany0.6809number0.3139string0.0034complex0.0005void0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+errorName.Otherany0.6400Error0.1488string0.0091{}0.0053void0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reportName.Otherany0.9676complex0.0042string0.0027void0.0018Error0.0008
+.Punctuation
+errorsName.Otherany0.8683string0.0115string[]0.0084complex0.0064any[]0.0049
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+/* The failed property is given by a URI with an irrelevant prefix. */Comment.Multiline
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+propnameName.Otherany0.7175string0.2645string[]0.0040number0.0033boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errorName.Otherany0.8271Error0.0370{}0.0302string0.0175complex0.0170
+[Punctuation
+'uri'Literal.String.Single
+]Punctuation
+.Punctuation
+substrName.Otherany0.6309string0.3653void0.0012number0.0008complex0.0007
+(Punctuation
+errorName.Otherany0.9135{}0.0215Error0.0136complex0.0090string[]0.0066
+[Punctuation
+'uri'Literal.String.Single
+]Punctuation
+.Punctuation
+indexOfName.Othernumber0.5168any0.4741string0.0064complex0.0007boolean0.0006
+(Punctuation
+'#'Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+reasonName.Otherany0.6847string0.2952Error0.0074number0.0037void0.0023
+;Punctuation
+\n\n\tText.Whitespace
+/*\n\t * Some of the default error messages are pretty arcane, so we define\n\t * new ones here.\n\t */Comment.Multiline
+\n\tText.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.5839Error0.1835{}0.0366complex0.0328string0.0153
+[Punctuation
+'attribute'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+caseKeyword
+ Text.Whitespace
+'type'Literal.String.Single
+:Operator
+\n\t\tText.Whitespace
+reasonName.Otherstring0.8470any0.1462number0.0031Error0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'expected 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+errorName.Otherany0.8292{}0.0384Error0.0377complex0.0147string[]0.0143
+[Punctuation
+'details'Literal.String.Single
+]Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+breakKeyword
+;Punctuation
+\n\tText.Whitespace
+defaultName.Other
+:Operator
+\n\t\tText.Whitespace
+reasonKeyword.Typestring0.5584any0.4256Error0.0037string[]0.0022number0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errorName.Otherany0.8761Error0.0269{}0.0196string0.0187complex0.0121
+[Punctuation
+'message'Literal.String.Single
+]Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.5834any0.4132number0.0008void0.0008boolean0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+breakKeyword
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+messageName.Otherstring0.9542any0.0443number0.0007complex0.0003boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reasonName.Otherstring0.6256any0.3621number0.0053Error0.0022complex0.0009
+ Text.Whitespace
++Operator
+ Text.Whitespace
+': "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+propnameName.Otherstring0.5917any0.3332number0.0718boolean0.0011complex0.0004
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'"'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+rvName.OtherError0.4841any0.2414ErrorConstructor0.0832never0.0067{}0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordErrorConstructor0.3995Error0.3616any0.1675string0.0252complex0.0025
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000never0.0000complex0.0000
+(Punctuation
+messageName.Otherstring0.9725any0.0241Error0.0011number0.0006complex0.0005
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+rvName.Otherany0.1802Error0.0753ErrorConstructor0.0119Logger0.0061complex0.0051
+.Punctuation
+jsv_detailsName.Otherany0.7647string0.0833void0.0377number0.0283boolean0.0230
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errorName.OtherError0.6197any0.2548string0.0322void0.0050boolean0.0041
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+rvName.Otherany0.5979Error0.0787number0.0694never0.0225string0.0209
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

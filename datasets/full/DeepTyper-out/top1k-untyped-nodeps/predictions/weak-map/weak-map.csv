@@ -1,0 +1,2908 @@
+Text
+// Copyright (C) 2011 Google Inc.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Licensed under the Apache License, Version 2.0 (the "License");Comment.Single
+\nText.Whitespace
+// you may not use this file except in compliance with the License.Comment.Single
+\nText.Whitespace
+// You may obtain a copy of the License atComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// http://www.apache.org/licenses/LICENSE-2.0Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Unless required by applicable law or agreed to in writing, softwareComment.Single
+\nText.Whitespace
+// distributed under the License is distributed on an "AS IS" BASIS,Comment.Single
+\nText.Whitespace
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.Comment.Single
+\nText.Whitespace
+// See the License for the specific language governing permissions andComment.Single
+\nText.Whitespace
+// limitations under the License.Comment.Single
+\n\nText.Whitespace
+/**\n * @fileoverview Install a leaky WeakMap emulation on platforms that\n * don't provide a built-in one.\n *\n * <p>Assumes that an ES5 platform where, if {@code WeakMap} is\n * already present, then it conforms to the anticipated ES6\n * specification. To run this file on an ES5 or almost ES5\n * implementation where the {@code WeakMap} specification does not\n * quite conform, run <code>repairES5.js</code> first.\n *\n * <p>Even though WeakMapModule is not global, the linter thinks it\n * is, which is why it is in the overrides list below.\n *\n * <p>NOTE: Before using this WeakMap emulation in a non-SES\n * environment, see the note below about hiddenRecord.\n *\n * @author Mark S. Miller\n * @requires crypto, ArrayBuffer, Uint8Array, navigator, console\n * @overrides WeakMap, ses, Proxy\n * @overrides WeakMapModule\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * This {@code WeakMap} emulation is observably equivalent to the\n * ES-Harmony WeakMap, but with leakier garbage collection properties.\n *\n * <p>As with true WeakMaps, in this emulation, a key does not\n * retain maps indexed by that key and (crucially) a map does not\n * retain the keys it indexes. A map by itself also does not retain\n * the values associated with that map.\n *\n * <p>However, the values associated with a key in some map are\n * retained so long as that key is retained and those associations are\n * not overridden. For example, when used to support membranes, all\n * values exported from a given membrane will live for the lifetime\n * they would have had in the absence of an interposed membrane. Even\n * when the membrane is revoked, all objects that would have been\n * reachable in the absence of revocation will still be reachable, as\n * far as the GC can tell, even though they will no longer be relevant\n * to ongoing computation.\n *\n * <p>The API implemented here is approximately the API as implemented\n * in FF6.0a1 and agreed to by MarkM, Andreas Gal, and Dave Herman,\n * rather than the offially approved proposal page. TODO(erights):\n * upgrade the ecmascript WeakMap proposal page to explain this API\n * change and present to EcmaScript committee for their approval.\n *\n * <p>The first difference between the emulation here and that in\n * FF6.0a1 is the presence of non enumerable {@code get___, has___,\n * set___, and delete___} methods on WeakMap instances to represent\n * what would be the hidden internal properties of a primitive\n * implementation. Whereas the FF6.0a1 WeakMap.prototype methods\n * require their {@code this} to be a genuine WeakMap instance (i.e.,\n * an object of {@code [[Class]]} "WeakMap}), since there is nothing\n * unforgeable about the pseudo-internal method names used here,\n * nothing prevents these emulated prototype methods from being\n * applied to non-WeakMaps with pseudo-internal methods of the same\n * names.\n *\n * <p>Another difference is that our emulated {@code\n * WeakMap.prototype} is not itself a WeakMap. A problem with the\n * current FF6.0a1 API is that WeakMap.prototype is itself a WeakMap\n * providing ambient mutability and an ambient communications\n * channel. Thus, if a WeakMap is already present and has this\n * problem, repairES5.js wraps it in a safe wrappper in order to\n * prevent access to this channel. (See\n * PATCH_MUTABLE_FROZEN_WEAKMAP_PROTO in repairES5.js).\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * If this is a full <a href=\n * "http://code.google.com/p/es-lab/wiki/SecureableES5"\n * >secureable ES5</a> platform and the ES-Harmony {@code WeakMap} is\n * absent, install an approximate emulation.\n *\n * <p>If WeakMap is present but cannot store some objects, use our approximate\n * emulation as a wrapper.\n *\n * <p>If this is almost a secureable ES5 platform, then WeakMap.js\n * should be run after repairES5.js.\n *\n * <p>See {@code WeakMap} for documentation of the garbage collection\n * properties of this WeakMap emulation.\n */Comment.Multiline
+\nText.Whitespace
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+WeakMapModuleName.Othervoid0.6715string0.1016any0.0892boolean0.0355Function0.0151
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+sesName.Otherany0.6400complex0.0832boolean0.0750string0.0512number0.0105
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+sesName.Otherany0.7484complex0.0404boolean0.0029Position0.0023PropertyDescriptor0.0021
+.Punctuation
+okName.Otherany0.5013boolean0.4451string0.0226complex0.0142void0.0074
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+sesName.Otherany0.6973boolean0.0202complex0.0196RegExp0.0055PropertyDescriptor0.0047
+.Punctuation
+okName.Otherboolean0.5517any0.3930complex0.0223string0.0125void0.0117
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// already too broken, so give upComment.Single
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * In some cases (current Firefox), we must make a choice betweeen a\n   * WeakMap which is capable of using all varieties of host objects as\n   * keys and one which is capable of safely using proxies as keys. See\n   * comments below about HostWeakMap and DoubleWeakMap for details.\n   *\n   * This function (which is a global, not exposed to guests) marks a\n   * WeakMap as permitted to do what is necessary to index all host\n   * objects, at the cost of making it unsafe for proxies.\n   *\n   * Do not apply this function to anything which is not a genuine\n   * fresh WeakMap.\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+weakMapPermitHostObjectsName.Othervoid0.7208any0.1287complex0.0333boolean0.0287string0.0136
+(Punctuation
+mapName.Otherany0.4290U[]0.0180string0.0117complex0.0085Error0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// identity of function used as a secret -- good enough and cheapComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+mapName.Otherany0.3350complex0.0346U[]0.0140CommandMap0.0078Object0.0063
+.Punctuation
+permitHostObjects___Name.Otherboolean0.4353any0.3416string0.1454void0.0204number0.0146
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+mapName.Otherany0.5350complex0.0451Object0.0082U[]0.0080CommandMap0.0043
+.Punctuation
+permitHostObjects___Name.Othervoid0.4547any0.4286string0.0246boolean0.0226complex0.0194
+(Punctuation
+weakMapPermitHostObjectsName.Otherany0.4828string0.3539boolean0.0390number0.0122void0.0111
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+sesName.Otherany0.6418complex0.0986string0.0663boolean0.0497void0.0168
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+sesName.Otherany0.6884complex0.0491Object0.0063{}0.0035Error0.0018
+.Punctuation
+weakMapPermitHostObjectsName.Otherany0.6755string0.0989boolean0.0793complex0.0346void0.0310
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+weakMapPermitHostObjectsName.Otherany0.4006string0.2761boolean0.1587complex0.0335number0.0329
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// IE 11 has no Proxy but has a broken WeakMap such that we need to patchComment.Single
+\n  Text.Whitespace
+// it using DoubleWeakMap; this flag tells DoubleWeakMap so.Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+doubleWeakMapCheckSilentFailureName.Otherboolean0.9886any0.0038false0.0028true0.0014void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n  Text.Whitespace
+// Check if there is already a good-enough WeakMap implementation, and if soComment.Single
+\n  Text.Whitespace
+// exit without replacing it.Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+WeakMapName.Builtinany0.1500WeakMapConstructor0.1084complex0.0920boolean0.0700string0.0454
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+HostWeakMapName.Othercomplex0.6318any0.1754boolean0.0261Object0.0183{}0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+WeakMapName.BuiltinWeakMapConstructor0.3875any0.0866number0.0345string0.0269boolean0.0260
+;Punctuation
+\n    Text.Whitespace
+// There is a WeakMap -- is it good enough?Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+navigatorName.OtherNavigator0.9105any0.0295complex0.0135boolean0.0044string0.0039
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n        Text.Whitespace
+/Firefox/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9907void0.0023any0.0016complex0.0013number0.0013
+(Punctuation
+navigatorName.OtherNavigator0.9692any0.0031complex0.0026string0.0009Request0.0002
+.Punctuation
+userAgentName.Otherstring0.9693any0.0244complex0.0018boolean0.0014number0.0013
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// We're now *assuming not*, because as of this writing (2013-05-06)Comment.Single
+\n      Text.Whitespace
+// Firefox's WeakMaps have a miscellany of objects they won't accept, andComment.Single
+\n      Text.Whitespace
+// we don't want to make an exhaustive list, and testing for just oneComment.Single
+\n      Text.Whitespace
+// will be a problem if that one is fixed alone (as they did for Event).Comment.Single
+\n\n      Text.Whitespace
+// If there is a platform that we *can* reliably test on, here's how toComment.Single
+\n      Text.Whitespace
+// do it:Comment.Single
+\n      Text.Whitespace
+//  var problematic = ... ;Comment.Single
+\n      Text.Whitespace
+//  var testHostMap = new HostWeakMap();Comment.Single
+\n      Text.Whitespace
+//  try {Comment.Single
+\n      Text.Whitespace
+//    testHostMap.set(problematic, 1);  // Firefox 20 will throw hereComment.Single
+\n      Text.Whitespace
+//    if (testHostMap.get(problematic) === 1) {Comment.Single
+\n      Text.Whitespace
+//      return;Comment.Single
+\n      Text.Whitespace
+//    }Comment.Single
+\n      Text.Whitespace
+//  } catch (e) {}Comment.Single
+\n\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// IE 11 bug: WeakMaps silently fail to store frozen objects.Comment.Single
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+testMapName.Otherany0.8555complex0.0074Function0.0044void0.0043string0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6605string0.0389Error0.0353void0.0219complex0.0159
+ Text.Whitespace
+HostWeakMapName.Otherany0.9617void0.0109complex0.0108string0.0025Error0.0012
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+testObjectName.Othercomplex0.5353any0.1568Object0.1402boolean0.0110string0.0108
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000any0.0000Object[]0.0000complex0.0000
+.Punctuation
+freezeName.Othercomplex0.9885any0.0028Object0.0021string0.0013void0.0012
+(Punctuation
+{Punctuation
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+testMapName.Othercomplex0.9280any0.0278void0.0026Object0.0025{}0.0014
+.Punctuation
+setName.Other
+(Punctuation
+testObjectName.Otherstring0.4496any0.3029complex0.0496number0.0206Object0.0201
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+testMapName.Othercomplex0.9036any0.0533Object0.0037boolean0.0024PropertyDescriptor0.0017
+.Punctuation
+getName.Other
+(Punctuation
+testObjectName.Otherany0.4130string0.4083boolean0.0393number0.0226complex0.0150
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+doubleWeakMapCheckSilentFailureName.Otherboolean0.9853any0.0057false0.0015true0.0015complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+// Fall through to installing our WeakMap.Comment.Single
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+WeakMapName.BuiltinWeakMapConstructor0.3513any0.0926string0.0352ObjectConstructor0.0306number0.0250
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hopName.OtherObject0.4861any0.1586complex0.0828boolean0.0663string0.0587
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001Object[]0.0000any0.0000PropertyDescriptor0.0000
+.Punctuation
+prototypeName.OtherObject0.9121any0.0087{}0.0051Function0.0043object0.0038
+.Punctuation
+hasOwnPropertyName.Othercomplex0.8629Object0.0827any0.0279string0.0065boolean0.0043
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+gopnName.Otherstring[]0.5322string0.2016Object0.1348any0.0365complex0.0301
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000Object[]0.0000ArrayConstructor0.0000FunctionConstructor0.0000
+.Punctuation
+getOwnPropertyNamesName.Otherstring[]0.9548string0.0205Object0.0086complex0.0023any[]0.0009
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+defPropName.OtherObject0.3520boolean0.2088any0.1153complex0.1023string[]0.0549
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001Object[]0.0000PropertyDescriptor0.0000FunctionConstructor0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9895any0.0026string0.0017Object0.0011void0.0011
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isExtensibleName.Otherstring0.2862any0.2369boolean0.1997Object0.1059string[]0.0429
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000any0.0000Object[]0.0000ArrayConstructor0.0000
+.Punctuation
+isExtensibleName.Otherstring0.4410complex0.1717boolean0.1231any0.0935number0.0591
+;Punctuation
+\n\n  Text.Whitespace
+/**\n   * Security depends on HIDDEN_NAME being both <i>unguessable</i> and\n   * <i>undiscoverable</i> by untrusted code.\n   *\n   * <p>Given the known weaknesses of Math.random() on existing\n   * browsers, it does not generate unguessability we can be confident\n   * of.\n   *\n   * <p>It is the monkey patching logic in this file that is intended\n   * to ensure undiscoverability. The basic idea is that there are\n   * three fundamental means of discovering properties of an object:\n   * The for/in loop, Object.keys(), and Object.getOwnPropertyNames(),\n   * as well as some proposed ES6 extensions that appear on our\n   * whitelist. The first two only discover enumerable properties, and\n   * we only use HIDDEN_NAME to name a non-enumerable property, so the\n   * only remaining threat should be getOwnPropertyNames and some\n   * proposed ES6 extensions that appear on our whitelist. We monkey\n   * patch them to remove HIDDEN_NAME from the list of properties they\n   * returns.\n   *\n   * <p>TODO(erights): On a platform with built-in Proxies, proxies\n   * could be used to trap and thereby discover the HIDDEN_NAME, so we\n   * need to monkey patch Proxy.create, Proxy.createFunction, etc, in\n   * order to wrap the provided handler with the real handler which\n   * filters out all traps using HIDDEN_NAME.\n   *\n   * <p>TODO(erights): Revisit Mike Stay's suggestion that we use an\n   * encapsulated function at a not-necessarily-secret name, which\n   * uses the Stiegler shared-state rights amplification pattern to\n   * reveal the associated value only to the WeakMap in which this key\n   * is associated with that value. Since only the key retains the\n   * function, the function can also remember the key without causing\n   * leakage of the key, so this doesn't violate our general gc\n   * goals. In addition, because the name need not be a guarded\n   * secret, we could efficiently handle cross-frame frozen keys.\n   */Comment.Multiline
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+HIDDEN_NAME_PREFIXName.Otherstring0.8010RegExp0.1615any0.0196string[]0.0047boolean0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'weakmap:'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+HIDDEN_NAMEName.Otherstring0.8419any0.0596boolean0.0555number0.0216complex0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+HIDDEN_NAME_PREFIXName.Otherstring0.7836any0.0909number0.0843boolean0.0190complex0.0108
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'ident:'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9988string[]0.0002any0.0000Object0.0000number0.0000
+.Punctuation
+randomName.Othernumber0.9643string0.0241boolean0.0052any0.0023complex0.0015
+(Punctuation
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'___'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+cryptoName.Otherany0.9186complex0.0104number0.0046boolean0.0040string0.0038
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+cryptoName.Otherany0.9184complex0.0096Window0.0024this0.0017Object0.0016
+.Punctuation
+getRandomValuesName.Otherany0.8951boolean0.0346complex0.0259string0.0179number0.0101
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+ArrayBufferName.BuiltinArrayBufferConstructor0.8328number0.0379ArrayBuffer0.0279any0.0031Buffer0.0030
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+Uint8ArrayName.Builtincomplex0.4259any0.3952string0.0676boolean0.0232number0.0228
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+abName.OtherArrayBuffer0.8851number0.0239Buffer0.0148any0.0056never0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordArrayBuffer0.7269Error0.0151ArrayBufferConstructor0.0092any0.0090number0.0082
+ Text.Whitespace
+ArrayBufferName.BuiltinArrayBufferConstructor0.9915ArrayBuffer0.0042MapConstructor0.0001ArrayBuffer[]0.0001DateConstructor0.0001
+(Punctuation
+25Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+u8sName.Otherany0.5727ArrayBuffer0.0469number0.0047string0.0046File0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.4517ArrayBuffer0.1449string0.0407Error0.0368number0.0173
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.9740complex0.0069string0.0050number0.0047ArrayBuffer0.0020
+(Punctuation
+abName.OtherArrayBuffer0.9091Buffer0.0060any0.0038XMLHttpRequest0.0013number0.0010
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+cryptoName.Otherany0.9650complex0.0023XMLHttpRequest0.0009this0.0007number0.0007
+.Punctuation
+getRandomValuesName.Othervoid0.5346any0.4215complex0.0130boolean0.0118number0.0042
+(Punctuation
+u8sName.Otherany0.5389number0.1629string0.1385boolean0.0335complex0.0247
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+HIDDEN_NAMEName.Otherstring0.5676any0.2825boolean0.0776number0.0358void0.0165
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+HIDDEN_NAME_PREFIXName.Otherstring0.3610any0.3295number0.2554boolean0.0318complex0.0088
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'rand:'Literal.String.Single
+ Text.Whitespace
++Operator
+\n      Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9981complex0.0001Array0.0001ObjectConstructor0.0001ArrayBuffer0.0000
+.Punctuation
+prototypeName.OtherObject0.3171any[]0.2166any0.1107number0.0167Function0.0167
+.Punctuation
+mapName.OtherU[]0.5733any0.2064complex0.1324number0.0097void0.0093
+.Punctuation
+callName.Otherany0.9594number0.0160string0.0103complex0.0079void0.0008
+(Punctuation
+u8sName.Otherany0.5985string0.1553number0.1157complex0.0321boolean0.0196
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+u8Name.Otherany0.6056number0.1347string0.0815boolean0.0219Date0.0137
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+u8Name.Othernumber0.6142any0.3627string0.0124boolean0.0034Date0.0013
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+36Literal.Number.Float
+)Punctuation
+.Punctuation
+toStringName.Otherany0.6782string0.3064complex0.0052number0.0033void0.0017
+(Punctuation
+36Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+.Punctuation
+joinName.Otherstring0.8675any0.1257number0.0029complex0.0011boolean0.0009
+(Punctuation
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'___'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isNotHiddenNameName.Otherboolean0.9626string0.0168any0.0118number0.0016complex0.0015
+(Punctuation
+nameName.Otherstring0.7751any0.2183boolean0.0013number0.0011String0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+(Punctuation
+\n        Text.Whitespace
+nameName.Otherstring0.4999any0.4937number0.0007String0.0006boolean0.0006
+.Punctuation
+substrName.Otherstring0.7620any0.2329number0.0017boolean0.0010void0.0008
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+HIDDEN_NAME_PREFIXName.Otherstring0.4806any0.4450string[]0.0344boolean0.0061number0.0055
+.Punctuation
+lengthName.Othernumber0.8489any0.1454string0.0040boolean0.0005complex0.0004
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+HIDDEN_NAME_PREFIXName.Otherany0.4741string0.3405boolean0.0948number0.0681void0.0073
+ Text.Whitespace
+&&Operator
+\n        Text.Whitespace
+nameName.Otherstring0.5980any0.3962number0.0010boolean0.0007string[]0.0004
+.Punctuation
+substrName.Otherstring0.8189any0.1770number0.0017boolean0.0007complex0.0006
+(Punctuation
+nameName.Otherstring0.4940any0.4936string[]0.0058number0.0012boolean0.0008
+.Punctuation
+lengthName.Othernumber0.7590any0.2367string0.0026complex0.0005boolean0.0005
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'___'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Monkey patch getOwnPropertyNames to avoid revealing the\n   * HIDDEN_NAME.\n   *\n   * <p>The ES5.1 spec requires each name to appear only once, but as\n   * of this writing, this requirement is controversial for ES6, so we\n   * made this code robust against this case. If the resulting extra\n   * search turns out to be expensive, we can probably relax this once\n   * ES6 is adequately supported on all major browsers, iff no browser\n   * versions we support at that time have relaxed this constraint\n   * without providing built-in ES6 WeakMaps.\n   */Comment.Multiline
+\n  Text.Whitespace
+defPropName.Othervoid0.8665any0.0539complex0.0205Object0.0138boolean0.0076
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996Object0.0003any0.0000FunctionConstructor0.0000Object[]0.0000
+,Punctuation
+ Text.Whitespace
+'getOwnPropertyNames'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+valueName.Otherany0.7410string0.1713boolean0.0239complex0.0175Object0.0131
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+fakeGetOwnPropertyNamesName.Otherany0.6037string0.1212boolean0.0951complex0.0697Object0.0194
+(Punctuation
+objName.Otherany0.7633Object0.1124string0.0388object0.0139{}0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gopnName.Otherany0.6841string0.0794complex0.0678Object0.0465boolean0.0302
+(Punctuation
+objName.Otherany0.6844Object0.1671string0.0570object0.0137{}0.0133
+)Punctuation
+.Punctuation
+filterName.Otherany0.8218complex0.1256string0.0106void0.0101Object0.0053
+(Punctuation
+isNotHiddenNameName.Otherany0.4197string0.3834boolean0.0993complex0.0169Object0.0126
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+/**\n   * getPropertyNames is not in ES5 but it is proposed for ES6 and\n   * does appear in our whitelist, so we need to clean it too.\n   */Comment.Multiline
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'getPropertyNames'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997Object0.0002any0.0000Object[]0.0000FunctionConstructor0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+originalGetPropertyNamesName.OtherObject0.4558any0.1925boolean0.1102complex0.0579{}0.0368
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001any0.0000Object[]0.0000FunctionConstructor0.0000
+.Punctuation
+getPropertyNamesName.Othercomplex0.4200Object0.1631boolean0.1091string0.0881any0.0733
+;Punctuation
+\n    Text.Whitespace
+defPropName.Othervoid0.4306Object0.1810any0.1472complex0.1143boolean0.0311
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996Object0.0003any0.0000FunctionConstructor0.0000Object[]0.0000
+,Punctuation
+ Text.Whitespace
+'getPropertyNames'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.6870string0.1852boolean0.0319Object0.0290complex0.0282
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+fakeGetPropertyNamesName.Otherany0.5773string0.1419boolean0.0950complex0.0721Object0.0338
+(Punctuation
+objName.Otherany0.7105Object0.1667string0.0390object0.0153{}0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+originalGetPropertyNamesName.Otherany0.6816string0.0740complex0.0709Object0.0685boolean0.0246
+(Punctuation
+objName.Otherany0.5796Object0.2767string0.0583object0.0169{}0.0103
+)Punctuation
+.Punctuation
+filterName.Otherany0.7018complex0.2457void0.0110string0.0087Object0.0074
+(Punctuation
+isNotHiddenNameName.Otherstring0.4490any0.2560boolean0.2014complex0.0187Object0.0160
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * <p>To treat objects as identity-keys with reasonable efficiency\n   * on ES5 by itself (i.e., without any object-keyed collections), we\n   * need to add a hidden property to such key objects when we\n   * can. This raises several issues:\n   * <ul>\n   * <li>Arranging to add this property to objects before we lose the\n   *     chance, and\n   * <li>Hiding the existence of this new property from most\n   *     JavaScript code.\n   * <li>Preventing <i>certification theft</i>, where one object is\n   *     created falsely claiming to be the key of an association\n   *     actually keyed by another object.\n   * <li>Preventing <i>value theft</i>, where untrusted code with\n   *     access to a key object but not a weak map nevertheless\n   *     obtains access to the value associated with that key in that\n   *     weak map.\n   * </ul>\n   * We do so by\n   * <ul>\n   * <li>Making the name of the hidden property unguessable, so "[]"\n   *     indexing, which we cannot intercept, cannot be used to access\n   *     a property without knowing the name.\n   * <li>Making the hidden property non-enumerable, so we need not\n   *     worry about for-in loops or {@code Object.keys},\n   * <li>monkey patching those reflective methods that would\n   *     prevent extensions, to add this hidden property first,\n   * <li>monkey patching those methods that would reveal this\n   *     hidden property.\n   * </ul>\n   * Unfortunately, because of same-origin iframes, we cannot reliably\n   * add this hidden property before an object becomes\n   * non-extensible. Instead, if we encounter a non-extensible object\n   * without a hidden record that we can detect (whether or not it has\n   * a hidden record stored under a name secret to us), then we just\n   * use the key object itself to represent its identity in a brute\n   * force leaky map stored in the weak map, losing all the advantages\n   * of weakness for these.\n   */Comment.Multiline
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getHiddenRecordName.Otherboolean0.5383any0.1971void0.0947string0.0898Object0.0207
+(Punctuation
+keyName.Otherstring0.7380any0.2452Object0.0038number0.0035complex0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.7102any0.2620complex0.0090Object0.0057number0.0053
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9994Object0.0004any0.0000complex0.0000{}0.0000
+(Punctuation
+keyName.Otherstring0.5081any0.4601complex0.0176number0.0038Object0.0034
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.6350Error0.1778complex0.1001string0.0248{}0.0203
+ Text.Whitespace
+newOperator.Wordany0.3109Error0.1361string0.0716Object0.0474ErrorConstructor0.0402
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9863ErrorConstructor0.0030MapConstructor0.0002undefined0.0001FunctionConstructor0.0001
+(Punctuation
+'Not an object: 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+keyName.Otherstring0.7943any0.1771number0.0078complex0.0068Object0.0016
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hiddenRecordName.Otherany0.7516string0.1552boolean0.0219Object0.0146complex0.0124
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keyName.Otherany0.4641string0.4196complex0.0205any[]0.0158string[]0.0083
+[Punctuation
+HIDDEN_NAMEName.Otherstring0.8429any0.0752number0.0524boolean0.0056complex0.0048
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiddenRecordName.Otherany0.6087boolean0.2313complex0.0464string0.0221Object0.0084
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+hiddenRecordName.Otherany0.6576complex0.0779Object0.0155boolean0.0101string0.0049
+.Punctuation
+keyName.Otherstring0.5181any0.4477complex0.0176number0.0061boolean0.0016
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+keyName.Otherstring0.7194any0.2452complex0.0113number0.0102Object0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hiddenRecordName.Otherany0.6065string0.1890boolean0.0886number0.0247complex0.0170
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isExtensibleName.Otherboolean0.9789any0.0095complex0.0042string0.0033false0.0008
+(Punctuation
+keyName.Otherstring0.5828any0.3752number0.0121complex0.0117boolean0.0021
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Weak map must brute force, as explained in doc-comment above.Comment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+voidOperator.Word
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// The hiddenRecord and the key point directly at each other, viaComment.Single
+\n    Text.Whitespace
+// the "key" and HIDDEN_NAME properties respectively. The keyComment.Single
+\n    Text.Whitespace
+// field is for quickly verifying that this hidden record is anComment.Single
+\n    Text.Whitespace
+// own property, not a hidden record from up the prototype chain.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// NOTE: Because this WeakMap emulation is meant only for systems likeComment.Single
+\n    Text.Whitespace
+// SES where Object.prototype is frozen without any numericComment.Single
+\n    Text.Whitespace
+// properties, it is ok to use an object literal for the hiddenRecord.Comment.Single
+\n    Text.Whitespace
+// This has two advantages:Comment.Single
+\n    Text.Whitespace
+// * It is much faster in a performance critical placeComment.Single
+\n    Text.Whitespace
+// * It avoids relying on Object.create(null), which had beenComment.Single
+\n    Text.Whitespace
+//   problematic on Chrome 28.0.1480.0. SeeComment.Single
+\n    Text.Whitespace
+//   https://code.google.com/p/google-caja/issues/detail?id=1687Comment.Single
+\n    Text.Whitespace
+hiddenRecordName.Othercomplex0.6781any0.2326{}0.0116Object0.0090string0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+keyName.Otherstring0.8327any0.1560complex0.0034number0.0032void0.0007
+:Operator
+ Text.Whitespace
+keyKeyword.Typestring0.7826any0.2064number0.0038complex0.0037void0.0004
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// When using this WeakMap emulation on platforms whereComment.Single
+\n    Text.Whitespace
+// Object.prototype might not be frozen and Object.create(null) isComment.Single
+\n    Text.Whitespace
+// reliable, use the following two commented out lines instead.Comment.Single
+\n    Text.Whitespace
+// hiddenRecord = Object.create(null);Comment.Single
+\n    Text.Whitespace
+// hiddenRecord.key = key;Comment.Single
+\n\n    Text.Whitespace
+// Please contact us if you need this to work on platforms whereComment.Single
+\n    Text.Whitespace
+// Object.prototype might not be frozen andComment.Single
+\n    Text.Whitespace
+// Object.create(null) might not be reliable.Comment.Single
+\n\n    Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+defPropName.Othervoid0.5255any0.2736complex0.1282string0.0163Function0.0088
+(Punctuation
+keyName.Otherstring0.6839any0.2911complex0.0078number0.0061void0.0011
+,Punctuation
+ Text.Whitespace
+HIDDEN_NAMEName.Otherany0.6379string0.1824boolean0.0385complex0.0331number0.0170
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherany0.6609string0.2018boolean0.0328number0.0244complex0.0240
+:Operator
+ Text.Whitespace
+hiddenRecordKeyword.Typeany0.5669boolean0.1753string0.1223number0.0363complex0.0215
+,Punctuation
+\n        Text.Whitespace
+writableName.Otherboolean0.9984any0.0004false0.0004true0.0002number0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+enumerableName.Otherboolean0.9985false0.0005true0.0003any0.0001string0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+configurableName.Otherboolean0.9980true0.0007false0.0004any0.0003number0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hiddenRecordName.Otherany0.5654boolean0.2079complex0.0458void0.0340number0.0144
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9984number0.0004Error0.0004boolean0.0003string0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Under some circumstances, isExtensible seems to misreport whetherComment.Single
+\n      Text.Whitespace
+// the HIDDEN_NAME can be defined.Comment.Single
+\n      Text.Whitespace
+// The circumstances have not been isolated, but at least affectComment.Single
+\n      Text.Whitespace
+// Node.js v0.10.26 on TravisCI / Linux, but not the same version ofComment.Single
+\n      Text.Whitespace
+// Node.js on OS X.Comment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+voidOperator.Word
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Monkey patch operations that would make their argument\n   * non-extensible.\n   *\n   * <p>The monkey patched versions throw a TypeError if their\n   * argument is not an object, so it should only be done to functions\n   * that should throw a TypeError anyway if their argument is not an\n   * object.\n   */Comment.Multiline
+\n  Text.Whitespace
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+oldFreezeName.OtherObject0.4007complex0.2139any0.1198{}0.0264string[]0.0188
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000Object[]0.0000any0.0000FunctionConstructor0.0000
+.Punctuation
+freezeName.Othercomplex0.9826Object0.0050any0.0037string0.0018{}0.0017
+;Punctuation
+\n    Text.Whitespace
+defPropName.Othervoid0.5030complex0.1770any0.1542Object0.0961{}0.0119
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9998Object0.0002Object[]0.0000any0.0000FunctionConstructor0.0000
+,Punctuation
+ Text.Whitespace
+'freeze'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.6174string0.1249complex0.0813void0.0665Object0.0496
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+identifyingFreezeName.Othervoid0.4151any0.2080string0.0986complex0.0699Object0.0570
+(Punctuation
+objName.Otherany0.4722Object0.4032object0.0308string0.0189{}0.0088
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+getHiddenRecordName.Othervoid0.6320any0.2211complex0.0423string0.0287Object0.0265
+(Punctuation
+objName.Otherany0.4768Object0.3656object0.0347string0.0320{}0.0131
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+oldFreezeName.Otherany0.5300Object0.1154string0.1064complex0.0827void0.0443
+(Punctuation
+objName.OtherObject0.4140any0.4001object0.0410{}0.0368string0.0345
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+oldSealName.OtherObject0.5929any0.1662boolean0.0559complex0.0299{}0.0229
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001any0.0000Object[]0.0000PropertyDescriptor0.0000
+.Punctuation
+sealName.Othercomplex0.4999Object0.2046boolean0.0660any0.0485string0.0461
+;Punctuation
+\n    Text.Whitespace
+defPropName.Othervoid0.5051Object0.1744complex0.1207any0.1122{}0.0116
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996Object0.0003any0.0000Object[]0.0000FunctionConstructor0.0000
+,Punctuation
+ Text.Whitespace
+'seal'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.6418string0.0991complex0.0773void0.0625Object0.0562
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+identifyingSealName.Othervoid0.3900any0.2351string0.0882Object0.0683complex0.0629
+(Punctuation
+objName.Otherany0.4441Object0.4317object0.0334string0.0166{}0.0094
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+getHiddenRecordName.Othervoid0.5912any0.2500complex0.0436Object0.0321string0.0283
+(Punctuation
+objName.Otherany0.4701Object0.3753object0.0362string0.0299{}0.0136
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+oldSealName.Otherany0.5358Object0.1253string0.0960complex0.0739{}0.0423
+(Punctuation
+objName.OtherObject0.4214any0.3913object0.0449{}0.0392string0.0306
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+oldPreventExtensionsName.OtherObject0.5759any0.1742boolean0.0658complex0.0281{}0.0240
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001any0.0000Object[]0.0000PropertyDescriptor0.0000
+.Punctuation
+preventExtensionsName.Othercomplex0.4816Object0.1951boolean0.0812any0.0589string0.0488
+;Punctuation
+\n    Text.Whitespace
+defPropName.Othervoid0.5004Object0.1603complex0.1276any0.1174boolean0.0171
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996Object0.0003any0.0000Object[]0.0000FunctionConstructor0.0000
+,Punctuation
+ Text.Whitespace
+'preventExtensions'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.6571complex0.0906string0.0801void0.0529Object0.0474
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+identifyingPreventExtensionsName.Othervoid0.3543any0.2688string0.0732boolean0.0695complex0.0663
+(Punctuation
+objName.Otherany0.5756Object0.3212object0.0213string0.0174{}0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+getHiddenRecordName.Othervoid0.6164any0.2349complex0.0440string0.0227Object0.0224
+(Punctuation
+objName.Otherany0.6041Object0.2742string0.0323object0.0166{}0.0119
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+oldPreventExtensionsName.Otherany0.6137Object0.0807string0.0765complex0.0686boolean0.0353
+(Punctuation
+objName.Otherany0.6015Object0.2644string0.0327{}0.0230object0.0198
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+constFuncName.Otherany0.4083boolean0.2673void0.0936Function0.0680complex0.0603
+(Punctuation
+funcName.OtherFunction0.6357any0.2316boolean0.0290string0.0119Object0.0110
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+funcName.Otherany0.5098Function0.3972boolean0.0111void0.0090Object0.0074
+.Punctuation
+prototypeName.Otherany0.7956Object0.0683Function0.0555Date0.0068void0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000complex0.0000FunctionConstructor0.0000
+.Punctuation
+freezeName.Othercomplex0.9867any0.0066void0.0017boolean0.0010Object0.0010
+(Punctuation
+funcName.Otherany0.6342Function0.2209void0.0344boolean0.0173Object0.0127
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+calledAsFunctionWarningDoneName.Otherboolean0.9818any0.0071false0.0049void0.0019complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+calledAsFunctionWarningName.Othervoid0.8991any0.0403boolean0.0361complex0.0085string0.0065
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Future ES6 WeakMap is currently (2013-09-10) expected to reject WeakMap()Comment.Single
+\n    Text.Whitespace
+// but we used to permit it and do it ourselves, so warn only.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+calledAsFunctionWarningDoneName.Otherboolean0.9084any0.0719string0.0049complex0.0049void0.0020
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+consoleName.OtherConsole0.9096any0.0554void0.0135Function0.0028number0.0022
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+calledAsFunctionWarningDoneName.Otherboolean0.9901any0.0055false0.0013void0.0007true0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+consoleName.OtherConsole0.9960any0.0020void0.0010Function0.0001number0.0001
+.Punctuation
+warnName.Othervoid0.9944any0.0030complex0.0014Function0.0002boolean0.0001
+(Punctuation
+'WeakMap should be invoked as new WeakMap(), not 'Literal.String.Single
+ Text.Whitespace
++Operator
+\n          Text.Whitespace
+'WeakMap(). This will be an error in the future.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+nextIdName.Othernumber0.9943any0.0045string0.0004void0.0003boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+OurWeakMapName.Othervoid0.9244any0.0396boolean0.0111complex0.0071Function0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+thisKeyword
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+OurWeakMapName.Otherany0.9846string0.0034complex0.0025number0.0023void0.0011
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+  Text.Whitespace
+// approximate test for new ...()Comment.Single
+\n      Text.Whitespace
+calledAsFunctionWarningName.Othervoid0.7905any0.1564Function0.0178complex0.0065{}0.0046
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// We are currently (12/25/2012) never encountering any prematurelyComment.Single
+\n    Text.Whitespace
+// non-extensible keys.Comment.Single
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keysName.Otherany[]0.8924any0.0607string[]0.0177number[]0.0057complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+ Text.Whitespace
+// brute force for prematurely non-extensible keys.Comment.Single
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valuesName.Otherany[]0.7928any0.1083number[]0.0365T[]0.0135{}0.0077
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+ Text.Whitespace
+// brute force for corresponding values.Comment.Single
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+idName.Othernumber0.9670any0.0247string0.0062boolean0.0006complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextIdName.Othernumber0.9941any0.0048string0.0006boolean0.0002void0.0001
+++Operator
+;Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+get___Name.Otherany0.6761boolean0.1087void0.0840string0.0553number0.0326
+(Punctuation
+keyName.Otherany0.5153string0.4607number0.0124complex0.0030Object0.0022
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.8466number0.0544string0.0430boolean0.0232Object0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+indexName.Otherany0.5882number0.4040string0.0039boolean0.0009complex0.0009
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hiddenRecordName.Otherany0.4544boolean0.3204string0.0792number0.0354complex0.0215
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getHiddenRecordName.Otherany0.4956boolean0.1758string0.1362complex0.0650number0.0337
+(Punctuation
+keyName.Otherany0.5578string0.4183number0.0076complex0.0065Object0.0023
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiddenRecordName.Otherany0.4733boolean0.4308string0.0192complex0.0183number0.0166
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+idName.Otherstring0.5322any0.4458number0.0153boolean0.0021complex0.0017
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+hiddenRecordName.Otherany0.6648complex0.0961boolean0.0819{}0.0652Object0.0391
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+hiddenRecordName.Otherany0.4113complex0.3804{}0.1569Object0.0265any[]0.0089
+[Punctuation
+idName.Otherstring0.6000any0.2784number0.1020complex0.0155{}0.0007
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+opt_defaultName.Otherany0.8167string0.0692number0.0488complex0.0180{}0.0156
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+indexName.Othernumber0.6082any0.3767string0.0107boolean0.0014complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.3808string[]0.3625any[]0.2209string0.0140number[]0.0065
+.Punctuation
+indexOfName.Othernumber0.9162any0.0796string0.0019boolean0.0006complex0.0005
+(Punctuation
+keyName.Otherany0.4962string0.4887number0.0062complex0.0046Object0.0009
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+indexName.Otherany0.5009number0.4914string0.0047boolean0.0009{}0.0004
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+valuesName.Otherany0.7571any[]0.1113number[]0.0439number0.0197{}0.0171
+[Punctuation
+indexName.Othernumber0.8351any0.1479string0.0138boolean0.0006complex0.0006
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+opt_defaultName.Otherany0.8617number0.0582string0.0218boolean0.0150{}0.0115
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+has___Name.Otherboolean0.5909any0.3060string0.0555complex0.0104void0.0097
+(Punctuation
+keyName.Otherany0.4991string0.4837number0.0050complex0.0030Object0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hiddenRecordName.Otherany0.4329boolean0.3713string0.0831complex0.0302number0.0148
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getHiddenRecordName.Otherany0.4507boolean0.2320string0.1291complex0.1018Object0.0174
+(Punctuation
+keyName.Otherany0.5002string0.4788complex0.0074number0.0049Object0.0021
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiddenRecordName.Otherboolean0.4813any0.4413complex0.0200string0.0154number0.0082
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+idName.Otherstring0.5624any0.4188number0.0115boolean0.0026complex0.0024
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+hiddenRecordName.Otherany0.7211complex0.1007{}0.0583any[]0.0212number0.0188
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+keysName.Otherstring[]0.5085any0.3194any[]0.1385string0.0129number[]0.0056
+.Punctuation
+indexOfName.Othernumber0.9095any0.0861string0.0016boolean0.0008void0.0007
+(Punctuation
+keyName.Otherstring0.5062any0.4786number0.0058complex0.0042Object0.0011
+)Punctuation
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+set___Name.Otherany0.5954void0.2019string0.0762boolean0.0417complex0.0191
+(Punctuation
+keyName.Otherany0.6281string0.3552number0.0039Object0.0030complex0.0026
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8965string0.0769number0.0078boolean0.0042Object0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+indexName.Otherany0.7283number0.2640string0.0032complex0.0009boolean0.0008
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hiddenRecordName.Otherany0.6169boolean0.1593string0.0429number0.0253any[]0.0239
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getHiddenRecordName.Otherany0.6122string0.0911boolean0.0868complex0.0577number0.0278
+(Punctuation
+keyName.Otherany0.6073string0.3712complex0.0053number0.0043Object0.0026
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiddenRecordName.Otherany0.7131boolean0.1969string0.0213complex0.0203{}0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+hiddenRecordName.Otherany0.4280{}0.2926complex0.2085Object0.0270any[]0.0094
+[Punctuation
+idName.Otherany0.4553string0.4421number0.0840complex0.0136boolean0.0009
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.8422string0.1036number0.0256complex0.0056{}0.0056
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+indexName.Othernumber0.5599any0.4275string0.0087boolean0.0013complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.5028string[]0.2945any[]0.1679string0.0145number[]0.0052
+.Punctuation
+indexOfName.Othernumber0.8555any0.1397string0.0023boolean0.0006void0.0005
+(Punctuation
+keyName.Otherstring0.5098any0.4746number0.0070complex0.0032Object0.0010
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.5946any0.3999string0.0033boolean0.0008complex0.0003
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+valuesName.Otherany0.8017any[]0.0759number[]0.0318{}0.0211string[]0.0156
+[Punctuation
+indexName.Othernumber0.6518any0.3322string0.0121complex0.0015void0.0005
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.8830string0.0578number0.0373any[]0.0047{}0.0038
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+// Since some browsers preemptively terminate slow turns butComment.Single
+\n          Text.Whitespace
+// then continue computing with presumably corrupted heapComment.Single
+\n          Text.Whitespace
+// state, we here defensively get keys.length first and thenComment.Single
+\n          Text.Whitespace
+// use it to update both the values and keys arrays, keepingComment.Single
+\n          Text.Whitespace
+// them in sync.Comment.Single
+\n          Text.Whitespace
+indexName.Othernumber0.5493any0.4395string0.0082boolean0.0008complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.7202any[]0.1273string[]0.1206string0.0102number[]0.0049
+.Punctuation
+lengthName.Otherany0.6787number0.3158string0.0023complex0.0012void0.0004
+;Punctuation
+\n          Text.Whitespace
+valuesName.Otherany0.8129any[]0.0699number[]0.0347{}0.0186number0.0131
+[Punctuation
+indexName.Othernumber0.6498any0.3333string0.0131complex0.0015void0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.9344string0.0315number0.0150any[]0.0045{}0.0032
+;Punctuation
+\n          Text.Whitespace
+// If we crash here, values will be one longer than keys.Comment.Single
+\n          Text.Whitespace
+keysName.Otherany0.4340any[]0.3151string[]0.2041number[]0.0079complex0.0068
+[Punctuation
+indexName.Othernumber0.7668any0.2156string0.0139complex0.0012boolean0.0005
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keyName.Otherany0.6152string0.3520number0.0186complex0.0041Object0.0024
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+delete___Name.Otherboolean0.5381any0.3555string0.0575number0.0155complex0.0073
+(Punctuation
+keyName.Otherany0.5857string0.3945number0.0056complex0.0030Object0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hiddenRecordName.Otherboolean0.4310any0.3749number0.0557string0.0554complex0.0170
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getHiddenRecordName.Otherany0.4021boolean0.2811string0.1097complex0.0807number0.0470
+(Punctuation
+keyName.Otherany0.5999string0.3731complex0.0084number0.0067Object0.0023
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.6334any0.3568string0.0055boolean0.0015complex0.0007
+,Punctuation
+ Text.Whitespace
+lastIndexName.Othernumber0.7663any0.1909boolean0.0242string0.0072void0.0032
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiddenRecordName.Otherboolean0.6990any0.2565string0.0098complex0.0084number0.0071
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+idName.Otherstring0.4933any0.4818number0.0150boolean0.0054complex0.0016
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+hiddenRecordName.Otherany0.6335boolean0.1060{}0.1022complex0.0853Object0.0172
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+hiddenRecordName.Otherany0.5973complex0.2090{}0.1527Object0.0131any[]0.0077
+[Punctuation
+idName.Otherstring0.5035any0.3850number0.0883complex0.0197{}0.0007
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+indexName.Othernumber0.5552any0.4276string0.0108boolean0.0031complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.4471string[]0.3426any[]0.1676string0.0198number[]0.0055
+.Punctuation
+indexOfName.Othernumber0.8891any0.1059string0.0021boolean0.0009complex0.0005
+(Punctuation
+keyName.Otherstring0.5193any0.4626number0.0067complex0.0050Object0.0009
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.7385any0.2536string0.0037boolean0.0026complex0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+// Since some browsers preemptively terminate slow turns butComment.Single
+\n        Text.Whitespace
+// then continue computing with potentially corrupted heapComment.Single
+\n        Text.Whitespace
+// state, we here defensively get keys.length first and then useComment.Single
+\n        Text.Whitespace
+// it to update both the keys and the values array, keepingComment.Single
+\n        Text.Whitespace
+// them in sync. We update the two with an order of assignments,Comment.Single
+\n        Text.Whitespace
+// such that any prefix of these assignments will preserve theComment.Single
+\n        Text.Whitespace
+// key/value correspondence, either before or after the delete.Comment.Single
+\n        Text.Whitespace
+// Note that this needs to work correctly when index === lastIndex.Comment.Single
+\n        Text.Whitespace
+lastIndexName.Othernumber0.8194any0.1639boolean0.0059string0.0047void0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.5504string[]0.2216any[]0.1870string0.0100number[]0.0065
+.Punctuation
+lengthName.Othernumber0.4999any0.4960complex0.0013string0.0012boolean0.0005
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+keysName.Otherstring[]0.3906any0.3326any[]0.2312number[]0.0082complex0.0042
+[Punctuation
+indexName.Othernumber0.7766any0.2099string0.0103complex0.0007boolean0.0006
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+voidOperator.Word
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+// If we crash here, there's a void 0 in the keys array, butComment.Single
+\n        Text.Whitespace
+// no operation will cause a "keys.indexOf(void 0)", sinceComment.Single
+\n        Text.Whitespace
+// getHiddenRecord(void 0) will always throw an error first.Comment.Single
+\n        Text.Whitespace
+valuesName.Otherany0.7764any[]0.0987number[]0.0372number0.0139string[]0.0130
+[Punctuation
+indexName.Othernumber0.7313any0.2553string0.0100complex0.0008boolean0.0005
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valuesName.Otherany0.7578any[]0.1392number[]0.0238string[]0.0124T[]0.0109
+[Punctuation
+lastIndexName.Othernumber0.8548any0.1233string0.0062boolean0.0037void0.0032
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+// If we crash here, values[index] cannot be found here,Comment.Single
+\n        Text.Whitespace
+// because keys[index] is void 0.Comment.Single
+\n        Text.Whitespace
+keysName.Otherany0.3416any[]0.3270string[]0.2699number[]0.0082complex0.0061
+[Punctuation
+indexName.Othernumber0.7281any0.2554string0.0130complex0.0009void0.0006
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherany0.5868any[]0.2283string[]0.1553number[]0.0047string0.0031
+[Punctuation
+lastIndexName.Othernumber0.8938any0.0870string0.0059boolean0.0035void0.0026
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+// If index === lastIndex and we crash here, then keys[index]Comment.Single
+\n        Text.Whitespace
+// is still void 0, since the aliasing killed the previous key.Comment.Single
+\n        Text.Whitespace
+keysName.Otherany0.3751string[]0.2894any[]0.2816complex0.0081string0.0053
+.Punctuation
+lengthName.Othernumber0.7741any0.2213string0.0016boolean0.0008complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastIndexName.Othernumber0.8382any0.1430boolean0.0059string0.0049void0.0019
+;Punctuation
+\n        Text.Whitespace
+// If we crash here, keys will be one shorter than values.Comment.Single
+\n        Text.Whitespace
+valuesName.Otherany0.4345any[]0.4122number[]0.0310string[]0.0283T[]0.0130
+.Punctuation
+lengthName.Othernumber0.6785any0.3165string0.0015boolean0.0010complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastIndexName.Othernumber0.8085any0.1701boolean0.0072string0.0059void0.0018
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000complex0.0000Object[]0.0000
+.Punctuation
+createName.Othercomplex0.9354any0.0230void0.0110{}0.0096Object0.0057
+(Punctuation
+OurWeakMapName.Otherany0.7385complex0.1604{}0.0238Object0.0223void0.0079
+.Punctuation
+prototypeName.OtherObject0.3898any0.0958{}0.0721Date0.0197Function0.0187
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+get___Name.Othercomplex0.9772{}0.0067any0.0061Object0.0037void0.0016
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.5613string0.2601complex0.0287Object0.0276boolean0.0228
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.5283string0.1155complex0.0911void0.0657Object0.0398
+(Punctuation
+get___Name.Otherany0.6302{}0.0668string0.0646complex0.0478Object0.0356
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+has___Name.Othercomplex0.9807any0.0079{}0.0040Object0.0021void0.0014
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.6350string0.1791boolean0.0307complex0.0235void0.0215
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.6235string0.0910complex0.0706void0.0567boolean0.0244
+(Punctuation
+has___Name.Otherany0.6220string0.0625{}0.0588complex0.0508Object0.0331
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+set___Name.Othercomplex0.9814any0.0078{}0.0035Object0.0019void0.0015
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.6448string0.1613boolean0.0293complex0.0218number0.0214
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.6453string0.0805complex0.0610void0.0530boolean0.0248
+(Punctuation
+set___Name.Otherany0.5906string0.0679{}0.0570complex0.0518Object0.0383
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+delete___Name.Othercomplex0.9798any0.0070{}0.0041Object0.0025void0.0020
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.5489string0.1980void0.0475complex0.0411boolean0.0317
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.4684void0.1534string0.0901boolean0.0705complex0.0553
+(Punctuation
+delete___Name.Otherany0.5840Object0.0794string0.0654{}0.0607complex0.0381
+)Punctuation
+ Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+OurWeakMapName.Otherany0.7612complex0.0941Object0.0480{}0.0143void0.0116
+.Punctuation
+prototypeName.Otherany0.5904Object0.2886Function0.0121any[]0.0097void0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0002any0.0000complex0.0000Object[]0.0000
+.Punctuation
+createName.Othercomplex0.9523any0.0153Object0.0114{}0.0065void0.0027
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997Object0.0002any0.0000complex0.0000Object[]0.0000
+.Punctuation
+prototypeName.OtherObject0.7509{}0.0515any[]0.0203any0.0158complex0.0113
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+getName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+/**\n       * Return the value most recently associated with key, or\n       * opt_default if none.\n       */Comment.Multiline
+\n      Text.Whitespace
+valueName.Otherany0.6559string0.1356complex0.0717boolean0.0567any[]0.0221
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+getName.Other
+(Punctuation
+keyName.Otherstring0.6695any0.3174complex0.0038number0.0024Object0.0014
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.7471string0.1004boolean0.0655number0.0197Object0.0194
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+get___Name.Otherany0.5794boolean0.1280string0.1041void0.0701complex0.0335
+(Punctuation
+keyName.Otherstring0.6437any0.3393complex0.0059number0.0022Object0.0021
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.8074string0.0745boolean0.0289complex0.0199Object0.0160
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+writableName.Otherboolean0.9982any0.0008false0.0003true0.0002void0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+configurableName.Otherboolean0.9973any0.0007true0.0005false0.0004void0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n    Text.Whitespace
+hasName.Othercomplex0.7952boolean0.0851{}0.0447any0.0398void0.0102
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+/**\n       * Is there a value associated with key in this WeakMap?\n       */Comment.Multiline
+\n      Text.Whitespace
+valueName.Otherany0.5774boolean0.2723complex0.0356string0.0329{}0.0254
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+hasName.Otherboolean0.9041any0.0652{}0.0069string0.0054complex0.0045
+(Punctuation
+keyName.Otherstring0.5525any0.4297number0.0057complex0.0038Object0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+has___Name.Otherany0.7034boolean0.0919string0.0869void0.0529complex0.0137
+(Punctuation
+keyName.Otherany0.5272string0.4492complex0.0067number0.0046Object0.0021
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+writableName.Otherboolean0.9980any0.0008false0.0003true0.0003void0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+configurableName.Otherboolean0.9971true0.0008any0.0007false0.0006void0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n    Text.Whitespace
+setName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+/**\n       * Associate value with key in this WeakMap, overwriting any\n       * previous association if present.\n       */Comment.Multiline
+\n      Text.Whitespace
+valueName.Otherany0.8261string0.0832boolean0.0389complex0.0183void0.0081
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+setName.Other
+(Punctuation
+keyName.Otherany0.5430string0.4384number0.0048complex0.0036Object0.0014
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8618string0.0877boolean0.0193number0.0161Object0.0021
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+set___Name.Otherany0.6454boolean0.1037void0.0884string0.0809complex0.0245
+(Punctuation
+keyName.Otherstring0.4979any0.4811number0.0059complex0.0051Object0.0015
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8911string0.0631boolean0.0108number0.0102complex0.0058
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+writableName.Otherboolean0.9980any0.0009false0.0003true0.0003void0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+configurableName.Otherboolean0.9971true0.0007any0.0007false0.0006number0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n    Text.Whitespace
+'delete'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+/**\n       * Remove any association for key in this WeakMap, returning\n       * whether there was one.\n       *\n       * <p>Note that the boolean return here does not work like the\n       * {@code delete} operator. The {@code delete} operator returns\n       * whether the deletion succeeds at bringing about a state in\n       * which the deleted property is absent. The {@code delete}\n       * operator therefore returns true if the property was already\n       * absent, whereas this {@code delete} method returns false if\n       * the association was already absent.\n       */Comment.Multiline
+\n      Text.Whitespace
+valueName.Otherany0.7704string0.1187boolean0.0639complex0.0110void0.0082
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+removeName.Otherany0.5217boolean0.2276string0.1647number0.0292void0.0216
+(Punctuation
+keyName.Otherany0.5620string0.4128number0.0097complex0.0047Object0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+delete___Name.Otherany0.6967boolean0.1042string0.0833void0.0544number0.0115
+(Punctuation
+keyName.Otherany0.5184string0.4582number0.0061complex0.0056Object0.0018
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+writableName.Otherboolean0.9980any0.0007false0.0004true0.0003void0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+configurableName.Otherboolean0.9967false0.0008true0.0008any0.0007void0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+HostWeakMapName.Otherany0.7118complex0.1886boolean0.0278void0.0170string0.0123
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// If we got here, then the platform has a WeakMap but we are concernedComment.Single
+\n      Text.Whitespace
+// that it may refuse to store some key types. Therefore, make a mapComment.Single
+\n      Text.Whitespace
+// implementation which makes use of both as possible.Comment.Single
+\n\n      Text.Whitespace
+// In this mode we are always using double maps, so we are not proxy-safe.Comment.Single
+\n      Text.Whitespace
+// This combination does not occur in any known browser, but we had bestComment.Single
+\n      Text.Whitespace
+// be safe.Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+doubleWeakMapCheckSilentFailureName.Otherboolean0.4823any0.4803string0.0109complex0.0059void0.0045
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+ProxyName.Builtinany0.3643string0.0406void0.0348any[]0.0275complex0.0222
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ProxyName.Builtinany0.4621Function0.0534void0.0532any[]0.0174string0.0143
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+DoubleWeakMapName.Othervoid0.9207any0.0444boolean0.0106string0.0049Function0.0030
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+thisKeyword
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+OurWeakMapName.Otherany0.9807string0.0038complex0.0024Object0.0019number0.0016
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+  Text.Whitespace
+// approximate test for new ...()Comment.Single
+\n          Text.Whitespace
+calledAsFunctionWarningName.Othervoid0.8138any0.1334Function0.0159complex0.0066boolean0.0036
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// Preferable, truly weak map.Comment.Single
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hmapName.Otherany0.8612Object0.0095complex0.0043string0.0033{}0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8314string0.0209Error0.0122Object0.0110complex0.0100
+ Text.Whitespace
+HostWeakMapName.Otherany0.9808complex0.0052void0.0019Object0.0015string0.0013
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// Our hidden-property-based pseudo-weak-map. Lazily initialized in theComment.Single
+\n        Text.Whitespace
+// 'set' implementation; thus we can avoid performing extra lookups ifComment.Single
+\n        Text.Whitespace
+// we know all entries actually stored are entered in 'hmap'.Comment.Single
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+omapName.Otherany0.6591boolean0.0231Object0.0214Function0.0132{}0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\n        Text.Whitespace
+// Hidden-property maps are not compatible with proxies because proxiesComment.Single
+\n        Text.Whitespace
+// can observe the hidden name and either accidentally expose it or failComment.Single
+\n        Text.Whitespace
+// to allow the hidden property to be set. Therefore, we do not allowComment.Single
+\n        Text.Whitespace
+// arbitrary WeakMaps to switch to using hidden properties, but onlyComment.Single
+\n        Text.Whitespace
+// those which need the ability, and unprivileged code is not allowedComment.Single
+\n        Text.Whitespace
+// to set the flag.Comment.Single
+\n        Text.Whitespace
+//Comment.Single
+\n        Text.Whitespace
+// (Except in doubleWeakMapCheckSilentFailure mode in which case weComment.Single
+\n        Text.Whitespace
+// disable proxies.)Comment.Single
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+enableSwitchingName.Otherboolean0.9912false0.0032any0.0024true0.0006void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n        Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+dgetName.Otherboolean0.5252any0.3343string0.0519void0.0163complex0.0132
+(Punctuation
+keyName.Otherstring0.5790any0.3916number0.0031Object0.0030complex0.0024
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.7309boolean0.0820string0.0628Object0.0167number0.0134
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+omapName.Otherboolean0.4451any0.4194string0.0170complex0.0111Object0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hmapName.Otherany0.5503complex0.1797{}0.0304Set<string>0.0145Object0.0123
+.Punctuation
+hasName.Otherboolean0.9295any0.0514complex0.0051string0.0034{}0.0009
+(Punctuation
+keyName.Otherstring0.8263any0.1487complex0.0090number0.0031Object0.0028
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+hmapName.Otherany0.5402complex0.3786Object0.0110string0.0103{}0.0035
+.Punctuation
+getName.Other
+(Punctuation
+keyName.Otherstring0.7658any0.2127complex0.0041number0.0034Object0.0020
+)Punctuation
+\n                Text.Whitespace
+:Operator
+ Text.Whitespace
+omapName.Otherany0.9411complex0.0134string0.0052Object0.0040{}0.0014
+.Punctuation
+get___Name.Otherany0.7275string0.0753boolean0.0690void0.0495complex0.0208
+(Punctuation
+keyName.Otherstring0.7092any0.2655complex0.0068number0.0028Object0.0021
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.7390string0.1454complex0.0172number0.0171boolean0.0147
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hmapName.Otherany0.5875complex0.3525Object0.0106string0.0064{}0.0055
+.Punctuation
+getName.Other
+(Punctuation
+keyName.Otherstring0.6972any0.2869complex0.0036number0.0023Object0.0015
+,Punctuation
+ Text.Whitespace
+opt_defaultName.Otherany0.7661string0.1182boolean0.0427number0.0117complex0.0107
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+dhasName.Otherboolean0.7202any0.1944string0.0404complex0.0090number0.0049
+(Punctuation
+keyName.Otherany0.5014string0.4678number0.0047complex0.0036Object0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hmapName.Otherany0.5858complex0.1340{}0.0468Object0.0189Set<string>0.0166
+.Punctuation
+hasName.Otherboolean0.9050any0.0740string0.0048complex0.0037{}0.0015
+(Punctuation
+keyName.Otherstring0.7313any0.2459complex0.0046number0.0028Object0.0027
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+omapName.Otherboolean0.6417any0.2967string0.0164complex0.0108Object0.0074
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+omapName.Otherany0.8343Object0.0199complex0.0143boolean0.0058string0.0034
+.Punctuation
+has___Name.Otherboolean0.6520any0.2864string0.0162complex0.0113Object0.0059
+(Punctuation
+keyName.Otherstring0.5751any0.3783complex0.0092number0.0055boolean0.0052
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+dsetName.Otherany0.8440boolean0.0312void0.0300string0.0155complex0.0089
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+doubleWeakMapCheckSilentFailureName.Otherboolean0.6935any0.2248string0.0174void0.0145complex0.0091
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+dsetName.Othervoid0.6640any0.1936boolean0.0535complex0.0368Function0.0138
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+keyName.Otherany0.6134string0.3601complex0.0051Object0.0021number0.0014
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8660string0.0927boolean0.0096number0.0052Object0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+hmapName.Othercomplex0.6346any0.2908{}0.0040void0.0040Object0.0038
+.Punctuation
+setName.Other
+(Punctuation
+keyName.Otherstring0.5727any0.3977complex0.0086Object0.0032number0.0022
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7965string0.1478complex0.0083Object0.0069number0.0044
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+hmapName.Otherany0.3897complex0.3550{}0.0337Set<any>0.0188Set<string>0.0155
+.Punctuation
+hasName.Otherboolean0.9148any0.0658string0.0043complex0.0043{}0.0014
+(Punctuation
+keyName.Otherany0.5009string0.4726complex0.0056Object0.0022number0.0021
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+omapName.Otherany0.6646boolean0.2222string0.0281Function0.0140complex0.0119
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+omapName.Otherany0.9098complex0.0144string0.0054Object0.0046Function0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8736string0.0291complex0.0152Error0.0082Object0.0075
+ Text.Whitespace
+OurWeakMapName.Otherany0.9553complex0.0105void0.0091string0.0053boolean0.0045
+(Punctuation
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n              Text.Whitespace
+omapName.Othercomplex0.7416any0.1663void0.0082{}0.0064any[]0.0030
+.Punctuation
+setName.Other
+(Punctuation
+keyName.Otherstring0.6894any0.2886complex0.0065number0.0020Object0.0017
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7597string0.1763Object0.0115complex0.0075any[]0.0064
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+dsetName.Othervoid0.7348any0.1712boolean0.0302complex0.0179Function0.0089
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+keyName.Otherany0.5574string0.4207complex0.0023Object0.0015number0.0014
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8209string0.1360boolean0.0122number0.0047Object0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+enableSwitchingName.Otherany0.5501boolean0.3463string0.0286Function0.0078complex0.0074
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+hmapName.Othercomplex0.5395any0.3533{}0.0051any[]0.0040Object0.0035
+.Punctuation
+setName.Other
+(Punctuation
+keyName.Otherstring0.5921any0.3844complex0.0071number0.0028void0.0013
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7659string0.1685complex0.0069boolean0.0067number0.0061
+)Punctuation
+;Punctuation
+\n              Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9980string0.0007Error0.0003complex0.0001number0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+omapName.Otherany0.5731boolean0.3177string0.0217complex0.0139void0.0127
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+omapName.Otherany0.9120complex0.0121Function0.0063string0.0042Object0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8815string0.0256complex0.0155Error0.0072boolean0.0064
+ Text.Whitespace
+OurWeakMapName.Otherany0.9713complex0.0097void0.0043boolean0.0025string0.0025
+(Punctuation
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+omapName.Otherany0.9218complex0.0243void0.0030string0.0019Object0.0014
+.Punctuation
+set___Name.Othervoid0.7012any0.2434boolean0.0147complex0.0130string0.0095
+(Punctuation
+keyName.Otherstring0.5938any0.3859complex0.0070number0.0035Object0.0014
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8276string0.1292complex0.0071number0.0071any[]0.0062
+)Punctuation
+;Punctuation
+\n              Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+hmapName.Othercomplex0.8571any0.0924void0.0050{}0.0042any[]0.0027
+.Punctuation
+setName.Other
+(Punctuation
+keyName.Otherstring0.6509any0.3260complex0.0086number0.0033Object0.0016
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7785string0.1438Object0.0124complex0.0120number0.0089
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+ddeleteName.Otherboolean0.5697any0.2701string0.0952void0.0116complex0.0084
+(Punctuation
+keyName.Otherstring0.5578any0.4155Object0.0039number0.0032complex0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resultName.Otherboolean0.8983any0.0785string0.0095complex0.0026false0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+!Operator
+hmapName.Otherany0.6436complex0.0838{}0.0685Object0.0167boolean0.0064
+[Punctuation
+'delete'Literal.String.Single
+]Punctuation
+(Punctuation
+keyName.Otherstring0.6732any0.3031complex0.0058number0.0055Object0.0019
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+omapName.Otherany0.4421boolean0.3994complex0.0418string0.0169number0.0097
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+omapName.Otherany0.8526complex0.0409Object0.0139boolean0.0034{}0.0033
+.Punctuation
+delete___Name.Otherany0.4632boolean0.4160complex0.0408string0.0268Object0.0076
+(Punctuation
+keyName.Otherstring0.7268any0.2408complex0.0108number0.0055Object0.0031
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+resultName.Otherany0.7327boolean0.1814string0.0273complex0.0114Object0.0100
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.8039boolean0.0800string0.0257complex0.0243Object0.0131
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000complex0.0000Object[]0.0000
+.Punctuation
+createName.Othercomplex0.9580any0.0142void0.0088{}0.0039Object0.0033
+(Punctuation
+OurWeakMapName.Otherany0.6264complex0.2596Object0.0215{}0.0181void0.0120
+.Punctuation
+prototypeName.OtherObject0.3413any0.0701{}0.0469Function0.0165any[]0.0138
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+get___Name.Othercomplex0.9816any0.0047{}0.0043Object0.0025void0.0016
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.5066string0.3034complex0.0327boolean0.0261Object0.0221
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.4625string0.1336complex0.1079void0.0829Object0.0298
+(Punctuation
+dgetName.Otherany0.5699string0.0684complex0.0586{}0.0542Object0.0309
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+has___Name.Othercomplex0.9849any0.0060{}0.0022void0.0014Object0.0012
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.6070string0.1994boolean0.0288complex0.0272void0.0265
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.5677string0.0954complex0.0855void0.0760boolean0.0288
+(Punctuation
+dhasName.Otherany0.5615string0.0662complex0.0623{}0.0479any[]0.0290
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+set___Name.Othercomplex0.9862any0.0057{}0.0018void0.0016Object0.0009
+:Operator
+    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.5950string0.1804void0.0332boolean0.0308complex0.0292
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.5676void0.0876complex0.0821string0.0768boolean0.0315
+(Punctuation
+dsetName.Otherany0.5565string0.0655complex0.0599{}0.0433any[]0.0297
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+delete___Name.Othercomplex0.9856any0.0055void0.0020{}0.0018Object0.0009
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.5766string0.1672void0.0417boolean0.0341complex0.0328
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.5483void0.1194complex0.0762string0.0655boolean0.0375
+(Punctuation
+ddeleteName.Otherany0.5213string0.0711complex0.0600{}0.0440any[]0.0319
+)Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+permitHostObjects___Name.Othercomplex0.9698void0.0088any0.0069{}0.0031Object0.0015
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+valueName.Otherany0.7112string0.0781void0.0748boolean0.0253complex0.0144
+:Operator
+ Text.Whitespace
+constFuncKeyword.Typeany0.6408void0.1697boolean0.0536complex0.0337string0.0286
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+tokenName.Otherstring0.5223any0.4252complex0.0107number0.0048Object0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+tokenName.Otherstring0.4843any0.4566complex0.0181number0.0096boolean0.0052
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+weakMapPermitHostObjectsName.Otherany0.4708string0.3440boolean0.0661number0.0237complex0.0160
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+enableSwitchingName.Otherboolean0.9706any0.0157false0.0029void0.0019true0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+throwKeywordany0.6735Error0.2796complex0.0160{}0.0070string0.0062
+ Text.Whitespace
+newOperator.Wordany0.6535Error0.1928ErrorConstructor0.0695string0.0282complex0.0088
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000never0.0000complex0.0000
+(Punctuation
+'bogus call to permitHostObjects___'Literal.String.Single
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+DoubleWeakMapName.Otherany0.7497void0.0893complex0.0793Object0.0070{}0.0056
+.Punctuation
+prototypeName.Otherany0.6056Object0.1064void0.0288Function0.0284Error0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+OurWeakMapName.Otherany0.5630complex0.1818void0.0435Object0.0424Function0.0145
+.Punctuation
+prototypeName.Otherany0.5668Object0.1217Function0.0204void0.0186{}0.0132
+;Punctuation
+\n      Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DoubleWeakMapName.Otherany0.5878Object0.0648complex0.0638string0.0634boolean0.0246
+;Punctuation
+\n\n      Text.Whitespace
+// define .constructor to hide OurWeakMap ctorComment.Single
+\n      Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001any0.0000Object[]0.0000FunctionConstructor0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9944void0.0019any0.0018Object0.0003Function0.0002
+(Punctuation
+WeakMapName.BuiltinWeakMapConstructor0.4386any0.0316complex0.0199ObjectConstructor0.0194void0.0127
+.Punctuation
+prototypeName.OtherObject0.2319any0.2062Function0.0271{}0.0251Error0.0236
+,Punctuation
+ Text.Whitespace
+'constructor'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Othercomplex0.5814any0.2210Object0.0518boolean0.0274any[]0.0192
+:Operator
+ Text.Whitespace
+WeakMapKeyword.TypeWeakMapConstructor0.3490any0.0385number0.0312boolean0.0304TableColumn0.0276
+,Punctuation
+\n        Text.Whitespace
+enumerableName.Otherboolean0.9960false0.0018true0.0010any0.0002string0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+  Text.Whitespace
+// as default .constructor isComment.Single
+\n        Text.Whitespace
+configurableName.Otherboolean0.9968true0.0012false0.0007any0.0004string0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+writableName.Otherboolean0.9982any0.0004true0.0004false0.0003number0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// There is no host WeakMap, so we must use the emulation.Comment.Single
+\n\n    Text.Whitespace
+// Emulated WeakMaps are incompatible with native proxies (because proxiesComment.Single
+\n    Text.Whitespace
+// can observe the hidden name), so we must disable Proxy usage (inComment.Single
+\n    Text.Whitespace
+// ArrayLike and Domado, currently).Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+ProxyName.Builtinany0.1442void0.0325any[]0.0275complex0.0224string0.0162
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ProxyName.Builtinany0.3998undefined0.0376Function0.0296void0.0279any[]0.0191
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+OurWeakMapName.Otherany0.7851string0.0978number0.0340boolean0.0168void0.0116
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

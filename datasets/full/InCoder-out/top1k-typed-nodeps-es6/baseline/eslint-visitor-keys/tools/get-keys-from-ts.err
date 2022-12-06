@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/InCoder/py/main.py", line 242, in _infer_on_file
+    result = typeinf.infer(input_file)
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/InCoder/py/main.py", line 188, in infer
+    lines = [_templatize_function(line) for line in lines]
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/InCoder/py/main.py", line 188, in <listcomp>
+    lines = [_templatize_function(line) for line in lines]
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/InCoder/py/main.py", line 44, in _templatize_function
+    function_end = line.index(")", function_start)
+ValueError: substring not found

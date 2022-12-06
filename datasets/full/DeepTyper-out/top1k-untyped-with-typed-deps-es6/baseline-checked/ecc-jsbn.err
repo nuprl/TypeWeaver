@@ -1,0 +1,19 @@
+index.ts(34,33): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: string, b?: number): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+  Overload 2 of 5, '(a: number[], b?: number): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'number[]'.
+      Type 'Buffer' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+  Overload 3 of 5, '(a: BigInteger): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'BigInteger'.
+      Type 'Buffer' is missing the following properties from type 'BigInteger': s, t, data, DB, and 73 more.
+lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
+lib/ec.ts(287,10): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+lib/ec.ts(307,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(307,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(314,11): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(439,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(447,14): error TS2554: Expected 4 arguments, but got 3.
+lib/sec.ts(7,10): error TS2614: Module '"./ec.js"' has no exported member 'ECCurveFp'. Did you mean to use 'import ECCurveFp from "./ec.js"' instead?
+

@@ -1,0 +1,141 @@
+benchmark/code/kind-of.ts(1,5): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/kind-of.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/kind-of.ts(7,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
+benchmark/code/lib-type-of.ts(5,5): error TS2300: Duplicate identifier 'toString'.
+benchmark/code/lib-type-of.ts(8,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/lib-type-of.ts(11,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
+benchmark/code/lib-type-of.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/lib-type-of.ts(14,10): error TS2393: Duplicate function implementation.
+benchmark/code/lib-type-of.ts(32,22): error TS2339: Property 'callee' does not exist on type 'any[]'.
+benchmark/code/lib-type-of.ts(42,18): error TS2339: Property 'nodeType' does not exist on type 'any[]'.
+benchmark/code/lib-typeof.ts(5,5): error TS2300: Duplicate identifier 'toString'.
+benchmark/code/lib-typeof.ts(8,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/lib-typeof.ts(11,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(object: object): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: any[]): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'any[]'.
+benchmark/code/lib-typeof.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/lib-typeof.ts(14,10): error TS2393: Duplicate function implementation.
+benchmark/code/regex-exec.ts(16,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmark/code/switch.ts(1,5): error TS2300: Duplicate identifier 'toString'.
+benchmark/code/switch.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/switch.ts(5,19): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'string'.
+benchmark/code/switch.ts(7,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/code/switch.ts(17,7): error TS2367: This condition will always return 'false' since the types 'string' and 'boolean' have no overlap.
+benchmark/code/switch.ts(17,23): error TS2367: This condition will always return 'false' since the types 'string' and 'boolean' have no overlap.
+benchmark/code/switch.ts(34,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): boolean', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): boolean', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+benchmark/code/switch.ts(38,31): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+benchmark/code/switch.ts(92,10): error TS2393: Duplicate function implementation.
+benchmark/code/switch.ts(96,10): error TS2393: Duplicate function implementation.
+benchmark/code/switch.ts(97,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+benchmark/code/switch.ts(100,10): error TS2393: Duplicate function implementation.
+benchmark/code/switch.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+benchmark/code/switch.ts(111,10): error TS2393: Duplicate function implementation.
+benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+benchmark/fixtures/generator.ts(1,37): error TS2505: A generator cannot have a 'void' type annotation.
+benchmark/index.ts(7,7): error TS2339: Property 'run' does not exist on type 'any[]'.
+benchmark/index.ts(12,11): error TS2339: Property 'sync' does not exist on type 'any[]'.
+benchmark/index.ts(12,21): error TS2339: Property 'join' does not exist on type 'string'.
+benchmark/index.ts(13,11): error TS2339: Property 'sync' does not exist on type 'any[]'.
+benchmark/index.ts(13,21): error TS2339: Property 'join' does not exist on type 'string'.
+benchmark/index.ts(13,56): error TS2339: Property 'render' does not exist on type 'any[]'.
+browser.ts(1,117): error TS2304: Cannot find name 'define'.
+browser.ts(1,138): error TS2304: Cannot find name 'define'.
+browser.ts(1,150): error TS2304: Cannot find name 'define'.
+browser.ts(1,213): error TS2740: Type 'Window & typeof globalThis' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+browser.ts(1,259): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+browser.ts(1,303): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'any[]'.
+browser.ts(1,324): error TS2339: Property 'index' does not exist on type 'any[]'.
+browser.ts(1,625): error TS2554: Expected 1 arguments, but got 2.
+browser.ts(1,690): error TS2339: Property 'code' does not exist on type 'Error'.
+browser.ts(1,763): error TS2339: Property 'exports' does not exist on type 'object'.
+browser.ts(1,823): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(1,836): error TS2339: Property 'exports' does not exist on type 'object'.
+browser.ts(1,938): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(4,8): error TS2339: Property 'exports' does not exist on type 'Function'.
+browser.ts(14,12): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(17,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+browser.ts(18,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser.ts(19,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+browser.ts(20,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+browser.ts(21,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser.ts(22,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+browser.ts(24,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser.ts(75,10): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+browser.ts(79,46): error TS2339: Property 'message' does not exist on type 'object'.
+browser.ts(79,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
+browser.ts(84,21): error TS2339: Property 'toDateString' does not exist on type 'HTMLElement'.
+browser.ts(85,19): error TS2339: Property 'getDate' does not exist on type 'HTMLElement'.
+browser.ts(86,19): error TS2339: Property 'setDate' does not exist on type 'HTMLElement'.
+browser.ts(91,21): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
+browser.ts(92,19): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
+browser.ts(93,19): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
+browser.ts(94,19): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
+browser.ts(98,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+browser.ts(101,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser.ts(109,54): error TS2339: Property 'callee' does not exist on type 'any[]'.
+browser.ts(126,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+browser.ts(127,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+index.ts(1,5): error TS2300: Duplicate identifier 'toString'.
+index.ts(16,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(17,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): boolean', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): boolean', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(18,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+index.ts(19,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+index.ts(20,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(21,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+index.ts(23,20): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(68,10): error TS2393: Duplicate function implementation.
+index.ts(74,10): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+index.ts(78,46): error TS2339: Property 'message' does not exist on type 'object'.
+index.ts(78,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
+index.ts(83,21): error TS2339: Property 'toDateString' does not exist on type 'HTMLElement'.
+index.ts(84,19): error TS2339: Property 'getDate' does not exist on type 'HTMLElement'.
+index.ts(85,19): error TS2339: Property 'setDate' does not exist on type 'HTMLElement'.
+index.ts(90,21): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
+index.ts(91,19): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
+index.ts(92,19): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
+index.ts(93,19): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
+index.ts(96,10): error TS2393: Duplicate function implementation.
+index.ts(97,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+  Overload 2 of 2, '(val: object): string', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(100,10): error TS2393: Duplicate function implementation.
+index.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(108,54): error TS2339: Property 'callee' does not exist on type 'any[]'.
+index.ts(124,10): error TS2393: Duplicate function implementation.
+index.ts(125,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+index.ts(126,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.
+

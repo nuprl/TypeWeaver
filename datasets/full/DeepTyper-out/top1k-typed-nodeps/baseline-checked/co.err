@@ -1,0 +1,19 @@
+index.ts(6,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
+index.ts(45,27): error TS2339: Property 'call' does not exist on type 'any[]'.
+index.ts(50,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'void'.
+index.ts(54,5): error TS2554: Expected 1 arguments, but got 0.
+index.ts(67,16): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(84,16): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(136,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(138,23): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(139,45): error TS2339: Property 'call' does not exist on type 'any[]'.
+index.ts(140,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+

@@ -1,0 +1,241 @@
+importKeyword
+ Text.Whitespace
+memoizeCappedName.Otherany0.3044string0.2181RegExp0.1012boolean0.0834complex0.0579
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./memoizeCapped.js'Literal.String.Single
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+charCodeOfDotName.Othernumber0.4474string0.3772any0.0904boolean0.0571RegExp0.0130
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'.'Literal.String.Single
+.Punctuation
+charCodeAtName.Othernumber0.9734any0.0212string0.0023boolean0.0014complex0.0007
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reEscapeCharName.OtherRegExp0.8700string0.1004any0.0155string[]0.0027boolean0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/\\(\\)?/gLiteral.String.Regex
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rePropNameName.OtherRegExp0.9549string0.0238boolean0.0042string[]0.0037any0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9947RegExp0.0014any0.0001RegExp[]0.0001BooleanConstructor0.0000
+(Punctuation
+\n  Text.Whitespace
+// Match anything that isn't a dot or bracket.Comment.Single
+\n  Text.Whitespace
+'[^.[\\]]+'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'|'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+// Or match property names within brackets.Comment.Single
+\n  Text.Whitespace
+'\\[(?:'Literal.String.Single
+ Text.Whitespace
++Operator
+\n    Text.Whitespace
+// Match a non-string expression.Comment.Single
+\n    Text.Whitespace
+'([^"\'][^[]*)'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'|'Literal.String.Single
+ Text.Whitespace
++Operator
+\n    Text.Whitespace
+// Or match strings (supports escaping characters).Comment.Single
+\n    Text.Whitespace
+'(["\'])((?:(?!\\2)[^\\\\]|\\\\.)*?)\\2'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+')\\]'Literal.String.Single
++Operator
+ Text.Whitespace
+'|'Literal.String.Single
+ Text.Whitespace
++Operator
+\n  Text.Whitespace
+// Or match "" as the space between consecutive dots or empty brackets.Comment.Single
+\n  Text.Whitespace
+'(?=(?:\\.|\\[\\])(?:\\.|\\[\\]|$))'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'g'Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Converts `string` to a property path array.\n *\n * @private\n * @param {string} string The string to convert.\n * @returns {Array} Returns the property path array.\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stringToPathName.Otherstring0.5992any0.2137RegExp0.0524number0.0459string[]0.0269
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+memoizeCappedName.Otherstring0.5113any0.3479number0.0239string[]0.0194boolean0.0183
+(Punctuation
+(Punctuation
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany[]0.9347string[]0.0282number[]0.0139any0.0035T[]0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+.Punctuation
+charCodeAtName.Othernumber0.9401any0.0487string0.0049boolean0.0029complex0.0017
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+charCodeOfDotName.Otherstring0.6611any0.1466number0.1463boolean0.0232any[]0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany[]0.7646string[]0.2084number[]0.0070any0.0039T[]0.0022
+.Punctuation
+pushName.Othernumber0.9919any0.0044string0.0016boolean0.0011void0.0004
+(Punctuation
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+stringKeyword.Type
+.Punctuation
+replaceName.Othercomplex0.7550any0.2288string0.0076void0.0017boolean0.0016
+(Punctuation
+rePropNameName.OtherRegExp0.8060string0.1420any0.0241string[]0.0103boolean0.0052
+,Punctuation
+ Text.Whitespace
+(Punctuation
+matchName.Otherstring0.6789any0.2995boolean0.0050number0.0039RegExp0.0034
+,Punctuation
+ Text.Whitespace
+expressionName.Otherstring0.8253any0.1659boolean0.0023number0.0020RegExp0.0007
+,Punctuation
+ Text.Whitespace
+quoteName.Otherstring0.8286any0.0951number0.0329boolean0.0063any[]0.0029
+,Punctuation
+ Text.Whitespace
+subStringName.Otherstring0.7421any0.1734number0.0380boolean0.0301RegExp0.0051
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.9030any0.0942number0.0010boolean0.0005any[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.Otherstring0.5057any0.4629boolean0.0134number0.0040complex0.0017
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+quoteName.Otherstring0.8551any0.0966number0.0145boolean0.0095string[]0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+keyName.Otherstring0.7607any0.2335number0.0031boolean0.0007complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+subStringName.Otherstring0.7010any0.2909number0.0035boolean0.0014RegExp0.0008
+.Punctuation
+replaceName.Othercomplex0.7881any0.1970string0.0069boolean0.0020number0.0008
+(Punctuation
+reEscapeCharName.OtherRegExp0.8967string0.0573any0.0278string[]0.0035RegExpMatchArray0.0031
+,Punctuation
+ Text.Whitespace
+'$1'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+expressionName.Otherstring0.6927any0.2989boolean0.0029number0.0014any[]0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+keyName.Otherstring0.7757any0.2204number0.0010complex0.0006any[]0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+expressionName.Otherstring0.7976any0.1987number0.0008string[]0.0005any[]0.0005
+.Punctuation
+trimName.Otherstring0.7969any0.1964complex0.0020number0.0019void0.0008
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+resultName.Otherany[]0.8175string[]0.1397any0.0103number[]0.0081T[]0.0015
+.Punctuation
+pushName.Othernumber0.9780any0.0143string0.0034boolean0.0025void0.0007
+(Punctuation
+keyName.Otherstring0.7566any0.2339number0.0036complex0.0011any[]0.0008
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany[]0.6150any0.1514string[]0.0529{}0.0438string0.0255
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+stringToPathName.Otherany0.4408string0.0871number0.0199any[]0.0149complex0.0138
+\nText.Whitespace

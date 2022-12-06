@@ -1,0 +1,21 @@
+importKeyword
+ Text.Whitespace
+consoleFuncName.Otherany0.2487complex0.0612boolean0.0323string0.0291RegExp0.0196
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/consoleFunc.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Logs the result of an `async` function to the `console`. Only works in\n * Node.js or in browsers that support `console.log` and `console.error` (such\n * as FF and Chrome). If multiple arguments are returned from the async\n * function, `console.log` is called on each argument in order.\n *\n * @name log\n * @static\n * @memberOf module:Utils\n * @method\n * @category Util\n * @param {AsyncFunction} function - The function you want to eventually apply\n * all arguments to.\n * @param {...*} arguments... - Any number of arguments to apply to the function.\n * @example\n *\n * // in a module\n * var hello = function(name, callback) {\n *     setTimeout(function() {\n *         callback(null, 'hello ' + name);\n *     }, 1000);\n * };\n *\n * // in the node repl\n * node> async.log(hello, 'world');\n * 'hello world'\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+consoleFuncName.Otherany0.2855string0.0642void0.0411complex0.0340boolean0.0290
+(Punctuation
+'log'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace

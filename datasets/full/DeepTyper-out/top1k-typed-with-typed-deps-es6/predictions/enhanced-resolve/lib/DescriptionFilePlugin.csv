@@ -1,0 +1,508 @@
+Text
+/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+DescriptionFileUtilsName.Otherany0.3647void0.1174string0.1021complex0.0589boolean0.0432
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./DescriptionFileUtils'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/** @typedef {import("./Resolver")} Resolver */Comment.Multiline
+\nText.Whitespace
+/** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+DescriptionFilePluginName.Otherany0.9977string0.0011complex0.0006number0.0003void0.0001
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+/**\n\t * @param {string | ResolveStepHook} source source\n\t * @param {string[]} filenames filenames\n\t * @param {boolean} pathIsFile pathIsFile\n\t * @param {string | ResolveStepHook} target target\n\t */Comment.Multiline
+\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+sourceName.Otherstring0.2532any0.1102number0.0322HTMLElement0.0078Node0.0069
+,Punctuation
+ Text.Whitespace
+filenamesName.Otherstring[]0.4806string0.2616any0.1025number0.0612number[]0.0070
+,Punctuation
+ Text.Whitespace
+pathIsFileName.Otherstring0.4728any0.2067number0.1081boolean0.0361string[]0.0165
+,Punctuation
+ Text.Whitespace
+targetName.OtherObject0.4595string0.0805number0.0592any0.0539Function0.0499
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+sourceName.Otherstring0.1380any0.0460number0.0068AsyncIterable<TSource>0.0066Node0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sourceName.Otherstring0.4626any0.0947number0.0122HTMLElement0.0054Node0.0053
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+filenamesName.Otherstring[]0.4479string0.1580any0.1335number0.0618number[]0.0125
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+filenamesName.Otherstring[]0.3391string0.2116any0.1364number0.0723number[]0.0121
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+pathIsFileName.Otherstring0.3307any0.2580number0.1199boolean0.0667complex0.0208
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathIsFileName.Otherany0.3494string0.3251number0.0915boolean0.0354complex0.0140
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.2992Object0.1548string0.1111Function0.1082number0.0282
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+targetName.OtherObject0.3183any0.1689Function0.0859string0.0825number0.0378
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+/**\n\t * @param {Resolver} resolver the resolver\n\t * @returns {void}\n\t */Comment.Multiline
+\n\tText.Whitespace
+applyName.Otherany0.5507void0.1193complex0.0591boolean0.0349Function0.0307
+(Punctuation
+resolverName.OtherComponentFactoryResolver0.0523Resolver0.0521any0.0186Range0.0149Type0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+targetName.OtherObject0.2180any0.1987string0.0714Date0.0319Function0.0306
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resolverName.Otherany0.0981ComponentFactoryResolver0.0317Resolver0.0267object0.0068Range0.0061
+.Punctuation
+ensureHookName.Otherany0.3281string0.1381complex0.0939boolean0.0551number0.0437
+(Punctuation
+thisKeyword
+.Punctuation
+targetName.OtherObject0.2625any0.1462object0.0979string0.0740Function0.0409
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+resolverName.Otherany0.0794Resolver0.0403ComponentFactoryResolver0.0244Range0.0057Component0.0040
+\n\t\t\tText.Whitespace
+.Punctuation
+getHookName.Otherany0.5844complex0.1087void0.0476string0.0294boolean0.0228
+(Punctuation
+thisKeyword
+.Punctuation
+sourceName.Otherany0.3110string0.2652number0.0109complex0.0076HTMLDivElement0.0058
+)Punctuation
+\n\t\t\tText.Whitespace
+.Punctuation
+tapAsyncName.Otherany0.7343complex0.0430string0.0279void0.0216boolean0.0048
+(Punctuation
+\n\t\t\t\tText.Whitespace
+"DescriptionFilePlugin"Literal.String.Double
+,Punctuation
+\n\t\t\t\tText.Whitespace
+(Punctuation
+requestName.Otherany0.5655Request0.0827complex0.0135FinalizedRequest0.0076Object0.0052
+,Punctuation
+ Text.Whitespace
+resolveContextName.Otherany0.6826string0.0927number0.0368boolean0.0190Function0.0118
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.3339any0.2133Callback0.0146void0.0091number0.0062
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.5945string0.3998complex0.0021Path0.0008number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requestName.Otherany0.7886complex0.0350Request0.0159string0.0079FinalizedRequest0.0040
+.Punctuation
+pathName.Otherany0.7296string0.2603complex0.0052Path0.0009number0.0004
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+pathName.Otherstring0.5642any0.4145complex0.0095Path0.0042boolean0.0012
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.2142Function0.1176void0.0232Callback0.0226this0.0075
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+directoryName.Otherstring0.6805any0.3009number0.0023complex0.0021boolean0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+pathIsFileName.Otherstring0.4431any0.3956boolean0.0454complex0.0269number0.0066
+\n\t\t\t\t\t\tText.Whitespace
+?Operator
+ Text.Whitespace
+DescriptionFileUtilsName.Otherany0.8502string0.0231complex0.0174RegExp0.0016Object0.0014
+.Punctuation
+cdUpName.Otherany0.6033string0.3152complex0.0150boolean0.0092string[]0.0041
+(Punctuation
+pathName.Otherstring0.8255any0.1593complex0.0057Path0.0021number0.0010
+)Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+:Operator
+ Text.Whitespace
+pathName.Otherany0.5623string0.4215Path0.0041complex0.0036number0.0008
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+directoryName.Otherstring0.6896any0.2788boolean0.0049complex0.0024number0.0023
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.1382Function0.1259void0.0284Callback0.0207this0.0067
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+DescriptionFileUtilsName.Otherany0.8582complex0.0088string0.0058Function0.0013void0.0011
+.Punctuation
+loadDescriptionFileName.Otherany0.6049void0.1568complex0.0825string0.0568boolean0.0070
+(Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+resolverName.Otherany0.1010Resolver0.0335string0.0190ComponentFactoryResolver0.0118complex0.0076
+,Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+directoryName.Otherstring0.6829any0.2698number0.0087complex0.0034string[]0.0028
+,Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+filenamesName.Otherstring[]0.3805string0.3155any0.1534number0.0373number[]0.0074
+,Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+requestName.Otherany0.3698Request0.0451complex0.0422FinalizedRequest0.0071object0.0054
+.Punctuation
+descriptionFilePathName.Otherany0.6394complex0.1232boolean0.0483string0.0289number0.0065
+\n\t\t\t\t\t\t\tText.Whitespace
+?Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+pathName.Otherstring0.7753any0.2132complex0.0034number0.0027boolean0.0005
+:Operator
+ Text.Whitespace
+request.descriptionFilePathKeyword.Type
+,Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+contentName.Otherstring0.6890any0.2492complex0.0210number0.0074string[]0.0034
+:Operator
+ Text.Whitespace
+request.descriptionFileDataKeyword.Type
+,Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+directoryName.Otherstring0.6821any0.3052number0.0054boolean0.0009void0.0009
+:Operator
+ Text.Whitespace
+/** @type {string} */Comment.Multiline
+ Text.Whitespace
+(Punctuation
+requestName.Otherany0.7176Request0.0342complex0.0239FinalizedRequest0.0045Object0.0032
+.Punctuation
+descriptionFileRootName.Otherany0.7820string0.1441number0.0274complex0.0123boolean0.0064
+)Punctuation
+\n\t\t\t\t\t\t\t  Text.Whitespace
+}Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+,Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.5747string0.1401complex0.0763number0.0359boolean0.0154
+,Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+(Punctuation
+errName.Otherany0.6307Error0.3160string0.0132complex0.0025Object0.0009
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8786string0.0384number0.0104Buffer0.0089Error0.0050
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5901Error0.3668string0.0179complex0.0035number0.0018
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3299Function0.1477void0.0468Callback0.0313Error0.0071
+(Punctuation
+errName.Otherany0.5978Error0.3599string0.0148complex0.0045object0.0011
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+resultName.Otherany0.8203string0.0359complex0.0235boolean0.0063object0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolveContextName.Otherany0.7420complex0.0411string0.0038Error0.0022Context0.0020
+.Punctuation
+logName.Otherany0.6235string0.1979complex0.0404void0.0404boolean0.0275
+)Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.9371string0.0072complex0.0045number0.0019ILogger0.0018
+.Punctuation
+logName.Otherany0.9199void0.0209complex0.0168string0.0159number0.0058
+(Punctuation
+\n\t\t\t\t\t\t\t\t\t\tText.Whitespace
+`Literal.String.Backtick
+No description file found in Literal.String.Backtick
+${Literal.String.Interpol
+directoryName.Otherstring0.9256any0.0679number0.0023boolean0.0011complex0.0006
+}Literal.String.Interpol
+ or aboveLiteral.String.Backtick
+`Literal.String.Backtick
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3024Function0.2033void0.0676Callback0.0175Promise<{}>0.0077
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+relativePathName.Otherstring0.9592any0.0395number0.0005complex0.0002boolean0.0001
+ Text.Whitespace
+=Operator
+\n\t\t\t\t\t\t\t\tText.Whitespace
+"."Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+pathName.Otherstring0.6314any0.3655complex0.0014string[]0.0004Path0.0002
+.Punctuation
+substrName.Otherstring0.7794any0.2170complex0.0019number0.0006string[]0.0004
+(Punctuation
+resultName.Otherany0.6372complex0.0603string0.0311Object0.0035number0.0026
+.Punctuation
+directoryName.Otherstring0.7762any0.2192string[]0.0013complex0.0010number0.0010
+.Punctuation
+lengthName.Otherany0.8089number0.1696string0.0180complex0.0029boolean0.0002
+)Punctuation
+.Punctuation
+replaceName.Othercomplex0.5557any0.4364string0.0024void0.0017boolean0.0005
+(Punctuation
+/\\/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+"/"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+objName.Othercomplex0.6864any0.1846{}0.0353object0.0177Object0.0152
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+...Punctuation
+requestName.Otherany0.5336complex0.1330Request0.0273string0.0150any[]0.0115
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+descriptionFilePathName.Otherany0.4557string0.2724complex0.1025boolean0.0280number0.0276
+:Operator
+ Text.Whitespace
+result.pathKeyword.Type
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+descriptionFileDataName.Otherstring0.4866any0.3421complex0.0401boolean0.0353number0.0323
+:Operator
+ Text.Whitespace
+result.contentKeyword.Type
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+descriptionFileRootName.Otherstring0.5475any0.3238number0.0313boolean0.0236complex0.0226
+:Operator
+ Text.Whitespace
+result.directoryKeyword.Type
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+relativePathName.Otherstring0.8508any0.1446number0.0018complex0.0007boolean0.0003
+:Operator
+ Text.Whitespace
+relativePathKeyword.Typestring0.8281any0.1683number0.0017complex0.0005boolean0.0003
+\n\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+resolverName.Otherany0.0383Resolver0.0257ComponentFactoryResolver0.0106complex0.0067AutocompletionProvider0.0065
+.Punctuation
+doResolveName.Othercomplex0.6143any0.3121void0.0419string0.0110number0.0040
+(Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+targetName.OtherObject0.4971any0.1467string0.0609number0.0515Date0.0431
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+objName.Othercomplex0.4298any0.1818object0.0844{}0.0794Object0.0778
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+"using description file: "Literal.String.Double
+ Text.Whitespace
++Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+resultName.Otherany0.6834complex0.0441string0.0228Object0.0033Error0.0030
+.Punctuation
+pathName.Otherstring0.5485any0.4409complex0.0060number0.0021boolean0.0003
+ Text.Whitespace
++Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+" (relative path: "Literal.String.Double
+ Text.Whitespace
++Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+relativePathName.Otherstring0.7288any0.2664number0.0024complex0.0013boolean0.0003
+ Text.Whitespace
++Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+")"Literal.String.Double
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+resolveContextName.Otherstring0.6269any0.3038number0.0278complex0.0130boolean0.0077
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+(Punctuation
+errName.Otherany0.7862Error0.1581string0.0323number0.0028complex0.0021
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8071string0.1111number0.0346Buffer0.0054complex0.0047
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6251Error0.3199string0.0266complex0.0047number0.0031
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.2706Function0.1487void0.1168Callback0.0227Promise<void>0.0066
+(Punctuation
+errName.Otherany0.5854Error0.3624string0.0166complex0.0054number0.0016
+)Punctuation
+;Punctuation
+\n\n\t\t\t\t\t\t\t\t\tText.Whitespace
+// Don't allow other processingComment.Single
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.8471string0.0690complex0.0462number0.0068boolean0.0048
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.OtherFunction0.3129any0.2091void0.1213Callback0.0243Promise<void>0.0110
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+callbackName.OtherFunction0.4576any0.2443void0.0804Callback0.0170Promise<void>0.0044
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.7071string0.1894number0.0295boolean0.0144{}0.0080
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

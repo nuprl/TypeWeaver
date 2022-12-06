@@ -1,0 +1,259 @@
+importKeyword
+ Text.Whitespace
+mapName.Otherany0.2199complex0.1756U[]0.0927void0.0179{}0.0085
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./map.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.2144complex0.1196string0.0465boolean0.0296void0.0211
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.1918complex0.0968string0.0361boolean0.0236void0.0229
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Sorts a list by the results of running each `coll` value through an async\n * `iteratee`.\n *\n * @name sortBy\n * @static\n * @memberOf module:Collections\n * @method\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {AsyncFunction} iteratee - An async function to apply to each item in\n * `coll`.\n * The iteratee should complete with a value to use as the sort criteria as\n * its `result`.\n * Invoked with (item, callback).\n * @param {Function} callback - A callback which is called after all the\n * `iteratee` functions have finished, or an error occurs. Results is the items\n * from the original `coll` sorted by the values returned by the `iteratee`\n * calls. Invoked with (err, results).\n * @returns {Promise} a promise, if no callback passed\n * @example\n *\n * // bigfile.txt is a file that is 251100 bytes in size\n * // mediumfile.txt is a file that is 11000 bytes in size\n * // smallfile.txt is a file that is 121 bytes in size\n *\n * // asynchronous function that returns the file size in bytes\n * function getFileSizeInBytes(file, callback) {\n *     fs.stat(file, function(err, stat) {\n *         if (err) {\n *             return callback(err);\n *         }\n *         callback(null, stat.size);\n *     });\n * }\n *\n * // Using callbacks\n * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], getFileSizeInBytes,\n *     function(err, results) {\n *         if (err) {\n *             console.log(err);\n *         } else {\n *             console.log(results);\n *             // results is now the original array of files sorted by\n *             // file size (ascending by default), e.g.\n *             // [ 'smallfile.txt', 'mediumfile.txt', 'bigfile.txt']\n *         }\n *     }\n * );\n *\n * // By modifying the callback parameter the\n * // sorting order can be influenced:\n *\n * // ascending order\n * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], function(file, callback) {\n *     getFileSizeInBytes(file, function(getFileSizeErr, fileSize) {\n *         if (getFileSizeErr) return callback(getFileSizeErr);\n *         callback(null, fileSize);\n *     });\n * }, function(err, results) {\n *         if (err) {\n *             console.log(err);\n *         } else {\n *             console.log(results);\n *             // results is now the original array of files sorted by\n *             // file size (ascending by default), e.g.\n *             // [ 'smallfile.txt', 'mediumfile.txt', 'bigfile.txt']\n *         }\n *     }\n * );\n *\n * // descending order\n * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file, callback) {\n *     getFileSizeInBytes(file, function(getFileSizeErr, fileSize) {\n *         if (getFileSizeErr) {\n *             return callback(getFileSizeErr);\n *         }\n *         callback(null, fileSize * -1);\n *     });\n * }, function(err, results) {\n *         if (err) {\n *             console.log(err);\n *         } else {\n *             console.log(results);\n *             // results is now the original array of files sorted by\n *             // file size (ascending by default), e.g.\n *             // [ 'bigfile.txt', 'mediumfile.txt', 'smallfile.txt']\n *         }\n *     }\n * );\n *\n * // Error handling\n * async.sortBy(['mediumfile.txt','smallfile.txt','missingfile.txt'], getFileSizeInBytes,\n *     function(err, results) {\n *         if (err) {\n *             console.log(err);\n *             // [ Error: ENOENT: no such file or directory ]\n *         } else {\n *             console.log(results);\n *         }\n *     }\n * );\n *\n * // Using Promises\n * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], getFileSizeInBytes)\n * .then( results => {\n *     console.log(results);\n *     // results is now the original array of files sorted by\n *     // file size (ascending by default), e.g.\n *     // [ 'smallfile.txt', 'mediumfile.txt', 'bigfile.txt']\n * }).catch( err => {\n *     console.log(err);\n * });\n *\n * // Error handling\n * async.sortBy(['mediumfile.txt','smallfile.txt','missingfile.txt'], getFileSizeInBytes)\n * .then( results => {\n *     console.log(results);\n * }).catch( err => {\n *     console.log(err);\n *     // [ Error: ENOENT: no such file or directory ]\n * });\n *\n * // Using async/await\n * (async () => {\n *     try {\n *         let results = await async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], getFileSizeInBytes);\n *         console.log(results);\n *         // results is now the original array of files sorted by\n *         // file size (ascending by default), e.g.\n *         // [ 'smallfile.txt', 'mediumfile.txt', 'bigfile.txt']\n *     }\n *     catch (err) {\n *         console.log(err);\n *     }\n * })();\n *\n * // Error handling\n * async () => {\n *     try {\n *         let results = await async.sortBy(['missingfile.txt','mediumfile.txt','smallfile.txt'], getFileSizeInBytes);\n *         console.log(results);\n *     }\n *     catch (err) {\n *         console.log(err);\n *         // [ Error: ENOENT: no such file or directory ]\n *     }\n * }\n *\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+sortByName.Otherany0.4120complex0.1881string0.0737{}0.0215Object0.0173
+ Text.Whitespace
+(Punctuation
+collName.Otherany0.7624any[]0.0240string0.0107complex0.0077{}0.0059
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.8453string0.0405number0.0067any[]0.0043Buffer0.0042
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7085Function0.0642number0.0074Callback0.0058void0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_iterateeName.Otherany0.5562complex0.1006any[]0.0663number0.0288string0.0268
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.4603complex0.1870any[]0.0684string0.0213{}0.0208
+(Punctuation
+iterateeName.Otherany0.8740string0.0217complex0.0148any[]0.0103Object0.0097
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+mapName.Otherany0.6839complex0.1395U[]0.0519void0.0122{}0.0089
+(Punctuation
+collName.Otherany0.8761any[]0.0250{}0.0097complex0.0075string0.0066
+,Punctuation
+ Text.Whitespace
+(Punctuation
+xName.Otherany0.8461string0.0611number0.0514{}0.0083Error0.0047
+,Punctuation
+ Text.Whitespace
+iterCbName.Otherany0.8553string0.0414number0.0290boolean0.0088complex0.0069
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+_iterateeName.Otherany0.5990complex0.1188void0.0773{}0.0281string0.0267
+(Punctuation
+xName.Otherany0.8653string0.0620number0.0279{}0.0147Error0.0053
+,Punctuation
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6344Error0.3325string0.0119{}0.0020complex0.0013
+,Punctuation
+ Text.Whitespace
+criteriaName.Otherany0.8178string0.1099number0.0151complex0.0120{}0.0099
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.4823Error0.4718string0.0164{}0.0046complex0.0035
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+iterCbName.Otherany0.6655complex0.0668string0.0488Error0.0365void0.0261
+(Punctuation
+errName.Otherany0.6230Error0.3449string0.0132complex0.0030{}0.0023
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+iterCbName.Otherany0.5791void0.2236complex0.0683string0.0242boolean0.0138
+(Punctuation
+errName.Otherany0.5061Error0.4600string0.0086{}0.0026complex0.0020
+,Punctuation
+ Text.Whitespace
+{Punctuation
+valueName.Otherany0.8523string0.0852{}0.0173number0.0161boolean0.0071
+:Operator
+ Text.Whitespace
+xKeyword.Typeany0.8212string0.1053number0.0343{}0.0169Error0.0048
+,Punctuation
+ Text.Whitespace
+criteriaName.Otherany0.7406string0.0987complex0.0514{}0.0360number0.0224
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7047Error0.2588string0.0044{}0.0016complex0.0013
+,Punctuation
+ Text.Whitespace
+resultsName.Otherany0.8557any[]0.0197Buffer0.0145Error0.0097complex0.0052
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5338Error0.4403string0.0061{}0.0021complex0.0018
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.7903Function0.0563void0.0338Error0.0096Callback0.0041
+(Punctuation
+errName.Otherany0.6951Error0.2835string0.0041complex0.0018{}0.0015
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.8811Function0.0549void0.0122Error0.0027boolean0.0022
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+resultsName.Otherany0.8978any[]0.0302complex0.0165Error0.0029{}0.0017
+.Punctuation
+sortName.Otherany0.6392any[]0.1531complex0.0708T[]0.0085number[]0.0067
+(Punctuation
+comparatorName.Otherany0.8189number0.0723string0.0424boolean0.0273complex0.0129
+)Punctuation
+.Punctuation
+mapName.Otherany0.8611U[]0.0858complex0.0368void0.0010number0.0010
+(Punctuation
+vName.Otherany0.9695complex0.0078string0.0050{}0.0039number0.0020
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+vName.Otherany0.9674complex0.0089{}0.0060string0.0013Error0.0010
+.Punctuation
+valueName.Otherany0.9332string0.0513number0.0050{}0.0021boolean0.0018
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+comparatorName.Otherboolean0.4581any0.4067number0.0380string0.0184complex0.0180
+(Punctuation
+leftName.Otherany0.7319number0.0679string0.0307complex0.0179boolean0.0140
+,Punctuation
+ Text.Whitespace
+rightName.Otherany0.7080string0.0501number0.0306Object0.0122object0.0092
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+aName.Otherany0.8168number0.1133string0.0263boolean0.0155complex0.0090
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+leftName.Otherany0.6651complex0.0898Object0.0112number0.0080Error0.0078
+.Punctuation
+criteriaName.Otherany0.7787complex0.0870string0.0336number0.0273Object0.0199
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.8334number0.0734string0.0417boolean0.0212complex0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rightName.Otherany0.7334complex0.0778Object0.0151string0.0142Error0.0122
+.Punctuation
+criteriaName.Otherany0.7233complex0.1197string0.0705number0.0337boolean0.0115
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aName.Othernumber0.6557any0.2844string0.0335boolean0.0065complex0.0049
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+bName.Otherany0.7345number0.1826boolean0.0285string0.0235complex0.0093
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+aKeyword.Typeany0.4942number0.4685string0.0261complex0.0025{}0.0021
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+bName.Otherany0.6228number0.3098string0.0234boolean0.0173complex0.0064
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+1Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.5388complex0.0872void0.0775number0.0257any[]0.0129
+(Punctuation
+sortByName.Otherany0.3799number0.2006string0.1616complex0.1040any[]0.0324
+,Punctuation
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+\nText.Whitespace

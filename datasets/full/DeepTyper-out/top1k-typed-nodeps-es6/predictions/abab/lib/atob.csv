@@ -1,0 +1,553 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/**\n * Implementation of atob() according to the HTML and Infra specs, except that\n * instead of throwing INVALID_CHARACTER_ERR we return null.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+atobName.Otherstring0.9943any0.0025number0.0013void0.0008boolean0.0002
+(Punctuation
+dataName.Otherstring0.9454any0.0440number0.0028Buffer0.0011string[]0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+argumentsName.OtherIArguments0.9578string[]0.0102any[]0.0046string0.0021any0.0017
+.Punctuation
+lengthName.Othernumber0.9895any0.0087string0.0013boolean0.0002void0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4416complex0.3011string0.0790Error0.0515{}0.0299
+ Text.Whitespace
+newOperator.Wordany0.3857string0.2111boolean0.1452complex0.0856string[]0.0354
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9907ErrorConstructor0.0020BooleanConstructor0.0001MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+"1 argument required, but only 0 present."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Web IDL requires DOMStrings to just be converted using ECMAScriptComment.Single
+\n  Text.Whitespace
+// ToString, which in our case amounts to using a template literal.Comment.Single
+\n  Text.Whitespace
+dataName.Otherstring0.9142any0.0722string[]0.0040number0.0019complex0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+dataName.Otherstring0.7991any0.0605string[]0.0260any[]0.0112complex0.0102
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n  Text.Whitespace
+// "Remove all ASCII whitespace from data."Comment.Single
+\n  Text.Whitespace
+dataName.Otherstring0.8287any0.1512string[]0.0037number0.0034complex0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherstring0.9145any0.0668number0.0019string[]0.0017complex0.0014
+.Punctuation
+replaceName.Othercomplex0.9360any0.0556void0.0016string0.0015number0.0003
+(Punctuation
+/[ \t\n\f\r]/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+""Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+// "If data's code point length divides by 4 leaving no remainder, then: if data endsComment.Single
+\n  Text.Whitespace
+// with one or two U+003D (=) code points, then remove them from data."Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dataName.Otherstring0.7620any0.0917string[]0.0844any[]0.0198complex0.0047
+.Punctuation
+lengthName.Othernumber0.9360any0.0607string0.0021complex0.0004boolean0.0003
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+4Literal.Number.Float
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+dataName.Otherstring0.8975any0.0913number0.0043string[]0.0018complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherstring0.9266any0.0636number0.0023string[]0.0010String0.0010
+.Punctuation
+replaceName.Othercomplex0.9151any0.0772string0.0021void0.0014number0.0006
+(Punctuation
+/==?$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+""Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// "If data's code point length divides by 4 leaving a remainder of 1, then returnComment.Single
+\n  Text.Whitespace
+// failure."Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// "If data contains a code point that is not one ofComment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// U+002B (+)Comment.Single
+\n  Text.Whitespace
+// U+002F (/)Comment.Single
+\n  Text.Whitespace
+// ASCII alphanumericComment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// then return failure."Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dataName.Otherstring0.7380any0.0976string[]0.0924any[]0.0261complex0.0055
+.Punctuation
+lengthName.Othernumber0.9399any0.0573string0.0015boolean0.0005complex0.0004
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+4Literal.Number.Float
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+/[^+/0-9A-Za-z]/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9090string0.0597any0.0090number0.0083complex0.0076
+(Punctuation
+dataName.Otherstring0.9297any0.0601number0.0052boolean0.0007string[]0.0006
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// "Let output be an empty byte sequence."Comment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+outputName.Otherstring0.9886any0.0069RegExp0.0023number0.0010string[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n  Text.Whitespace
+// "Let buffer be an empty buffer that can have bits appended to it."Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// We append bits via left-shift and or.  accumulatedBits is used to trackComment.Single
+\n  Text.Whitespace
+// when we've gotten to 24 bits.Comment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+bufferName.Othernumber0.8583any0.1103complex0.0069string0.0065Buffer0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+accumulatedBitsName.Othernumber0.9982any0.0010string0.0003boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+// "Let position be a position variable for data, initially pointing at theComment.Single
+\n  Text.Whitespace
+// start of data."Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// "While position does not point past the end of data:"Comment.Single
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9987any0.0009string0.0002boolean0.0001number[]0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9969any0.0023string0.0004boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+dataName.Otherstring0.5790any0.1683string[]0.0574any[]0.0318number[]0.0174
+.Punctuation
+lengthName.Othernumber0.9704any0.0279string0.0009boolean0.0002void0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9967any0.0027string0.0003boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// "Find the code point pointed to by position in the second column ofComment.Single
+\n    Text.Whitespace
+// Table 1: The Base 64 Alphabet of RFC 4648. Let n be the number given inComment.Single
+\n    Text.Whitespace
+// the first cell of the same row.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// "Append to buffer the six bits corresponding to n, most significant bitComment.Single
+\n    Text.Whitespace
+// first."Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// atobLookup() implements the table from RFC 4648.Comment.Single
+\n    Text.Whitespace
+bufferName.Otherany0.7734number0.1328Buffer0.0356complex0.0268string0.0049
+ Text.Whitespace
+<<=Operator
+ Text.Whitespace
+6Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+bufferName.Othernumber0.7506any0.1776string0.0235complex0.0140Buffer0.0117
+ Text.Whitespace
+|=Operator
+ Text.Whitespace
+atobLookupName.Othernumber0.7622void0.0931any0.0733complex0.0216number[]0.0111
+(Punctuation
+dataName.Otherstring0.2549any0.2520string[]0.1714number[]0.0974any[]0.0648
+[Punctuation
+iName.Othernumber0.9901any0.0077string0.0019boolean0.0001void0.0001
+]Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+accumulatedBitsName.Othernumber0.9946any0.0036string0.0012boolean0.0003void0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+6Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+// "If buffer has accumulated 24 bits, interpret them as three 8-bitComment.Single
+\n    Text.Whitespace
+// big-endian numbers. Append three bytes with values equal to thoseComment.Single
+\n    Text.Whitespace
+// numbers to output, in the same order, and then empty buffer."Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+accumulatedBitsName.Othernumber0.9802any0.0167string0.0019boolean0.0006complex0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+24Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+outputName.Otherstring0.9857any0.0077number0.0048complex0.0005boolean0.0004
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9980String0.0007NumberConstructor0.0000Window0.0000string0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9915any0.0038number0.0034complex0.0007boolean0.0002
+(Punctuation
+(Punctuation
+bufferName.Othernumber0.5637any0.3888complex0.0076string0.0076Buffer0.0053
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xff0000Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+outputName.Otherstring0.9839any0.0079number0.0062boolean0.0005complex0.0004
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9979String0.0009NumberConstructor0.0000Window0.0000string0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9905any0.0042number0.0036complex0.0010boolean0.0001
+(Punctuation
+(Punctuation
+bufferName.Othernumber0.6037any0.3465complex0.0086string0.0061Buffer0.0051
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xff00Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+outputName.Otherstring0.9831any0.0081number0.0067boolean0.0005complex0.0005
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9981String0.0009NumberConstructor0.0000Window0.0000string0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9918any0.0037number0.0031complex0.0007boolean0.0002
+(Punctuation
+bufferName.Othernumber0.7151any0.2459string0.0069complex0.0066Buffer0.0066
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+bufferName.Othernumber0.6051any0.2966string0.0344Buffer0.0184complex0.0174
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+accumulatedBitsName.Othernumber0.9798any0.0130string0.0045boolean0.0006number[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+// "Advance position by 1."Comment.Single
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// "If buffer is not empty, it contains either 12 or 18 bits. If it containsComment.Single
+\n  Text.Whitespace
+// 12 bits, then discard the last four and interpret the remaining eight asComment.Single
+\n  Text.Whitespace
+// an 8-bit big-endian number. If it contains 18 bits, then discard the lastComment.Single
+\n  Text.Whitespace
+// two and interpret the remaining 16 as two 8-bit big-endian numbers. AppendComment.Single
+\n  Text.Whitespace
+// the one or two bytes with values equal to those one or two numbers toComment.Single
+\n  Text.Whitespace
+// output, in the same order."Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+accumulatedBitsName.Othernumber0.9802any0.0167string0.0014boolean0.0009complex0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+12Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+bufferName.Otherany0.7725number0.0687complex0.0608Buffer0.0509string0.0071
+ Text.Whitespace
+>>=Operator
+ Text.Whitespace
+4Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+outputName.Otherstring0.9868any0.0080number0.0032complex0.0007void0.0003
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9981String0.0008NumberConstructor0.0000RegExp0.0000String[]0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9923any0.0036number0.0023complex0.0010void0.0002
+(Punctuation
+bufferName.Otherany0.4189number0.2951Buffer0.1165complex0.0554string0.0350
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+accumulatedBitsName.Othernumber0.9744any0.0225string0.0017boolean0.0004complex0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+18Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+bufferName.Otherany0.7870complex0.0618Buffer0.0534number0.0466string0.0060
+ Text.Whitespace
+>>=Operator
+ Text.Whitespace
+2Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+outputName.Otherstring0.9860any0.0087number0.0033complex0.0008void0.0003
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9975String0.0010NumberConstructor0.0000RegExp0.0000string0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9915any0.0037number0.0030complex0.0011string[]0.0001
+(Punctuation
+(Punctuation
+bufferName.Othernumber0.5142any0.4153complex0.0108Buffer0.0084string0.0084
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xff00Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+outputName.Otherstring0.9847any0.0077number0.0057complex0.0004boolean0.0004
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9975String0.0011NumberConstructor0.0000string0.0000Window0.0000
+.Punctuation
+fromCharCodeName.Otherstring0.9905any0.0039number0.0039complex0.0008boolean0.0002
+(Punctuation
+bufferName.Othernumber0.8232any0.1437string0.0067complex0.0045Buffer0.0039
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// "Return output."Comment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+outputName.Otherstring0.9309any0.0485number0.0084void0.0032RegExp0.0010
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+Text
+/**\n * A lookup table for atob(), which converts an ASCII character to the\n * corresponding six-bit number.\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+keystrName.Otherstring0.5431RegExp0.4204any0.0170string[]0.0037boolean0.0028
+ Text.Whitespace
+=Operator
+\n  Text.Whitespace
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+atobLookupName.Otherstring0.2991number0.2935boolean0.2787any0.0543void0.0539
+(Punctuation
+chrName.Otherstring0.8869any0.0855number0.0078boolean0.0049Function0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9734any0.0219string0.0028boolean0.0009Date0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keystrName.Otherstring0.7763string[]0.0659RegExp0.0612any0.0468any[]0.0098
+.Punctuation
+indexOfName.Othernumber0.9633any0.0294string0.0029void0.0024boolean0.0005
+(Punctuation
+chrName.Otherstring0.7204any0.2425number0.0162boolean0.0047void0.0022
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+// Throw exception if character is not in the lookup string; should not be hit in testsComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+indexName.Othernumber0.9829any0.0143string0.0012boolean0.0007void0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+undefinedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+indexKeyword.Typenumber0.9496any0.0436string0.0038boolean0.0006Date0.0002
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+atobName.Otherstring0.9838any0.0083number0.0055void0.0003String0.0001
+;Punctuation
+\nText.Whitespace

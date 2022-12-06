@@ -1,0 +1,285 @@
+importKeyword
+ Text.Whitespace
+nativeModuleName.Otherany0.3058complex0.0367string0.0291boolean0.0277void0.0190
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'module'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.5677string0.3813complex0.0217Path0.0082string[]0.0036
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+fsName.Otherany0.9703complex0.0081string0.0076void0.0017number0.0005
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+createRequireName.Otherany0.5698string0.3372boolean0.0678void0.0034complex0.0029
+ Text.Whitespace
+(Punctuation
+filenameName.Otherstring0.9292any0.0690boolean0.0006number0.0003complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// Fallback to process.cwd() if no filename passedComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+filenameName.Otherstring0.7666any0.2307boolean0.0014complex0.0003number0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+filenameName.Otherany0.6683string0.3299boolean0.0003complex0.0003number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processName.Otherany0.9938complex0.0010Process0.0009string0.0009Path0.0002
+.Punctuation
+cwdName.Otherany0.9933string0.0034complex0.0029void0.0001Promise<string>0.0000
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// If filename is dir, createRequire goes with parent directory, so we need fakepathComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isDirName.Otherany0.7955boolean0.1336string0.0637complex0.0034number0.0004
+(Punctuation
+filenameName.Otherstring0.5106any0.4867boolean0.0010complex0.0005number0.0002
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+filenameName.Otherany0.5302string0.4684boolean0.0004complex0.0003number0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9903string0.0067complex0.0012Path0.0009string[]0.0002
+.Punctuation
+joinName.Otherany0.9916string0.0049complex0.0033number0.0001boolean0.0001
+(Punctuation
+filenameName.Otherstring0.5719any0.4267complex0.0004number0.0003boolean0.0003
+,Punctuation
+ Text.Whitespace
+'index.js'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Added in Node v12.2.0Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nativeModuleName.Otherany0.9170complex0.0104string0.0032boolean0.0015Folder0.0010
+.Punctuation
+createRequireName.Otherany0.6851boolean0.1752string0.1254complex0.0046number0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nativeModuleName.Otherany0.9351string0.0039complex0.0026boolean0.0009Promise<boolean>0.0008
+.Punctuation
+createRequireName.Otherany0.9193string0.0386boolean0.0238complex0.0043Promise<string>0.0015
+(Punctuation
+filenameName.Otherstring0.5448any0.4519complex0.0012boolean0.0005number0.0003
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Added in Node v10.12.0 and deprecated since Node v12.2.0Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nativeModuleName.Otherany0.8967complex0.0121string0.0032boolean0.0020Folder0.0009
+.Punctuation
+createRequireFromPathName.Otherany0.6516boolean0.2119string0.1189complex0.0062number0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nativeModuleName.Otherany0.9397complex0.0050string0.0033boolean0.0010Promise<{}>0.0008
+.Punctuation
+createRequireFromPathName.Otherany0.8735boolean0.0563string0.0478complex0.0080Promise<any>0.0018
+(Punctuation
+filenameName.Otherstring0.6177any0.3782complex0.0014boolean0.0006number0.0005
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// PolyfillComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+_createRequireName.Otherany0.8195string0.0765boolean0.0206complex0.0160Promise<{}>0.0088
+(Punctuation
+filenameName.Otherstring0.5756any0.4195complex0.0016boolean0.0008number0.0003
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// PolyfillComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+_createRequireName.Otherany0.6369string0.1631boolean0.1294complex0.0073number0.0020
+ Text.Whitespace
+(Punctuation
+filenameName.Otherstring0.8876any0.1081boolean0.0012number0.0006complex0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+modName.Otherany0.9823complex0.0037string0.0020Path0.0004Error0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9500complex0.0068string0.0064URI0.0010Error0.0007
+ Text.Whitespace
+nativeModuleName.Otherany0.9989complex0.0006string0.0002void0.0000Error0.0000
+.Punctuation
+ModuleName.Otherany0.9959complex0.0019string0.0009boolean0.0002void0.0001
+(Punctuation
+filenameName.Otherstring0.6912any0.3055complex0.0010boolean0.0006number0.0003
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+\n  Text.Whitespace
+modName.Otherany0.9719complex0.0067string0.0021Observable0.0003Url0.0003
+.Punctuation
+filenameName.Otherany0.8554string0.1419complex0.0011boolean0.0008number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+filenameName.Otherany0.5231string0.4720complex0.0015boolean0.0013number0.0004
+\n  Text.Whitespace
+modName.Otherany0.9869complex0.0056string0.0017T0.0001Observable0.0001
+.Punctuation
+pathsName.Otherany0.9757string0.0151complex0.0060boolean0.0009number0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nativeModuleName.Otherany0.9744complex0.0071string0.0037boolean0.0002{}0.0002
+.Punctuation
+ModuleName.Otherany0.9889string0.0054complex0.0019boolean0.0007number0.0002
+.Punctuation
+_nodeModulePathsName.Otherany0.9829string0.0106boolean0.0029complex0.0020number0.0002
+(Punctuation
+pathName.Otherany0.9891string0.0069Path0.0018complex0.0010{}0.0001
+.Punctuation
+dirnameName.Otherany0.9916string0.0042complex0.0025Path0.0003boolean0.0001
+(Punctuation
+filenameName.Otherstring0.5649any0.4311boolean0.0010complex0.0006number0.0005
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+modName.Otherany0.9914complex0.0010string0.0007Path0.0002Observable0.0001
+.Punctuation
+_compileName.Otherany0.9960complex0.0007string0.0006boolean0.0003void0.0002
+(Punctuation
+'module.exports = require;'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+filenameName.Otherstring0.6262any0.3689boolean0.0021complex0.0007number0.0005
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+modName.Otherany0.9713complex0.0039T0.0011string0.0008{}0.0006
+.Punctuation
+exportsName.Otherany0.9931string0.0039complex0.0009{}0.0007boolean0.0003
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isDirName.Otherany0.4937boolean0.3505string0.1156complex0.0087void0.0041
+ Text.Whitespace
+(Punctuation
+pathName.Otherstring0.6719any0.1598Path0.1174string[]0.0072complex0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+statName.Otherany0.9942string0.0009complex0.0004number0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9980complex0.0006string0.0004Buffer0.0001void0.0001
+.Punctuation
+lstatSyncName.Otherany0.9649complex0.0285string0.0046boolean0.0004{}0.0002
+(Punctuation
+pathName.Otherstring0.5666any0.3815Path0.0275complex0.0077string[]0.0041
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+statName.Otherany0.9977complex0.0003string0.0002number0.0001boolean0.0001
+.Punctuation
+isDirectoryName.Otherany0.9925boolean0.0038complex0.0024string0.0003Promise<any>0.0002
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9991string0.0003number0.0001complex0.0001Error0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// lstatSync throws an error if path doesn't existComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+createRequireName.Otherany0.8919string0.0422boolean0.0155complex0.0128void0.0079
+;Punctuation
+\nText.Whitespace

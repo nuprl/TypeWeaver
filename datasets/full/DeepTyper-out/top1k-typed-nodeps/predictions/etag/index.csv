@@ -1,0 +1,573 @@
+Text
+/*!\n * etag\n * Copyright(c) 2014-2016 Douglas Christopher Wilson\n * MIT Licensed\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Module exports.\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+etagName.Otherany0.8083string0.1843complex0.0039number0.0009boolean0.0006
+\n\nText.Whitespace
+Text
+/**\n * Module dependencies.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cryptoName.Otherany0.9934string0.0039complex0.0005NodeRequire0.0002number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'crypto'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+StatsName.Otherany0.9797string0.0127NodeRequire0.0014number0.0013complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'fs'Literal.String.Single
+)Punctuation
+.Punctuation
+StatsName.Otherany0.9944string0.0031number0.0007boolean0.0007complex0.0005
+\n\nText.Whitespace
+Text
+/**\n * Module variables.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+toStringName.Otherstring0.8163any0.1644complex0.0091number0.0045boolean0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9980Object0.0009complex0.0004any0.0004string0.0000
+.Punctuation
+prototypeName.OtherObject0.9118complex0.0134{}0.0097any0.0065Date0.0032
+.Punctuation
+toStringName.Otherstring0.8009any0.1692complex0.0198number0.0033boolean0.0008
+\n\nText.Whitespace
+Text
+/**\n * Generate an entity tag.\n *\n * @param {Buffer|string} entity\n * @return {string}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+entitytagName.Otherstring0.8070any0.1459boolean0.0169complex0.0102number0.0062
+ Text.Whitespace
+(Punctuation
+entityName.Otherany0.7746string0.1323T0.0086complex0.0054Object0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+entityName.Otherany0.6793string0.1977complex0.0115number0.0085any[]0.0081
+.Punctuation
+lengthName.Otherany0.7549number0.2324string0.0102complex0.0015boolean0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// fast-path emptyComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk"'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// compute hash of entityComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hashName.Otherany0.9885string0.0099number0.0008complex0.0002Error0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cryptoName.Otherany0.9991complex0.0002string0.0002number0.0001NodeRequire0.0000
+\n    Text.Whitespace
+.Punctuation
+createHashName.Otherany0.9940string0.0008complex0.0006T0.0002NodeRequire0.0002
+(Punctuation
+'sha1'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+updateName.Otherany0.9932string0.0016complex0.0015number0.0004boolean0.0003
+(Punctuation
+entityName.Otherany0.7728string0.1605T0.0072number0.0067{}0.0042
+,Punctuation
+ Text.Whitespace
+'utf8'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+digestName.Otherany0.9961complex0.0026boolean0.0003string0.0003number0.0001
+(Punctuation
+'base64'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+substringName.Otherany0.9593string0.0389complex0.0008number0.0002boolean0.0002
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+27Literal.Number.Float
+)Punctuation
+\n\n  Text.Whitespace
+// compute length of entityComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+lenName.Otherany0.8791number0.0964string0.0154boolean0.0058complex0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+entityName.Otherany0.9085string0.0515complex0.0101T0.0067number0.0039
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+BufferName.Otherany0.9919string0.0026Buffer0.0019complex0.0002any[]0.0001
+.Punctuation
+byteLengthName.Otherany0.9933number0.0035string0.0024void0.0002complex0.0002
+(Punctuation
+entityName.Otherany0.6393string0.2704number0.0387T0.0076{}0.0038
+,Punctuation
+ Text.Whitespace
+'utf8'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+entityName.Otherany0.6444string0.1232T0.0150number0.0138complex0.0102
+.Punctuation
+lengthName.Otherany0.9382number0.0445string0.0147complex0.0016boolean0.0004
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'"'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+lenName.Otherany0.8273number0.1629string0.0065void0.0009complex0.0007
+.Punctuation
+toStringName.Otherany0.7711string0.2174complex0.0085number0.0011boolean0.0004
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'-'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+hashName.Otherany0.7926string0.1992number0.0059complex0.0011boolean0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Create a simple ETag.\n *\n * @param {string|Buffer|Stats} entity\n * @param {object} [options]\n * @param {boolean} [options.weak]\n * @return {String}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+etagName.Otherany0.5442string0.3337void0.0710complex0.0209boolean0.0053
+ Text.Whitespace
+(Punctuation
+entityName.Otherany0.8038string0.0989T0.0074{}0.0062number0.0045
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7990Options0.0189string0.0108number0.0070{}0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+entityName.Otherany0.8950string0.0581complex0.0066T0.0056number0.0036
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.7863complex0.1073Error0.0263string0.0217boolean0.0197
+ Text.Whitespace
+newOperator.Wordany0.6394boolean0.0889complex0.0649string0.0635{}0.0293
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9864ErrorConstructor0.0007complex0.0004any0.0003BooleanConstructor0.0003
+(Punctuation
+'argument entity is required'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// support fs.Stats objectComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isStatsName.Otherany0.5045string0.2098boolean0.1745complex0.0229any[]0.0221
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isstatsName.Otherany0.4521string0.2570boolean0.1019complex0.0805any[]0.0201
+(Punctuation
+entityName.Otherany0.7239string0.0670T0.0394complex0.0154Entity0.0075
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+weakName.Otherboolean0.8308any0.1256string0.0207complex0.0062number0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.6991complex0.0332Options0.0167boolean0.0135number0.0127
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+optionsName.Otherany0.7842complex0.0446Options0.0093T0.0048Object0.0038
+.Punctuation
+weakName.Otherany0.8639string0.0577boolean0.0392complex0.0246number0.0032
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'boolean'Literal.String.Single
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+options.weakName.Other
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+isStatsKeyword.Typeany0.5042string0.3971boolean0.0481complex0.0197number0.0092
+\n\n  Text.Whitespace
+// validate argumentComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isStatsName.Otherboolean0.6753any0.2526string0.0534number0.0066complex0.0055
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+entityName.Otherany0.8767string0.0632complex0.0119T0.0086number0.0052
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+BufferName.Otherany0.9979complex0.0008string0.0003Buffer0.0001number0.0001
+.Punctuation
+isBufferName.Otherany0.9953complex0.0029string0.0011boolean0.0003number0.0001
+(Punctuation
+entityName.Otherany0.8148string0.1382complex0.0146never0.0039T0.0031
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.7489complex0.1429string0.0252boolean0.0203Error0.0174
+ Text.Whitespace
+newOperator.Wordany0.5704complex0.0728string0.0669boolean0.0666{}0.0234
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9842ErrorConstructor0.0014complex0.0003BooleanConstructor0.0003any0.0002
+(Punctuation
+'argument entity must be string, Buffer, or fs.Stats'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// generate entity tagComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+tagName.Otherstring0.6181any0.3595number0.0055boolean0.0034complex0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isStatsName.Otherstring0.4438boolean0.2456any0.2403complex0.0155number0.0117
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+stattagName.Otherstring0.6199any0.2296boolean0.0742complex0.0166number0.0149
+(Punctuation
+entityName.Otherany0.5512string0.2354T0.0428number0.0111complex0.0086
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+entitytagName.Otherany0.5496string0.2778boolean0.0889complex0.0273number0.0116
+(Punctuation
+entityName.Otherany0.6183T0.0903string0.0837complex0.0078Entity0.0063
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+weakName.Otherstring0.4455boolean0.2688any0.2249number0.0079complex0.0050
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+'W/'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+tagName.Otherstring0.8430any0.1400number0.0037complex0.0037boolean0.0012
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+tagKeyword.Typestring0.7074any0.2504complex0.0117number0.0034string[]0.0032
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Determine if object is a Stats object.\n *\n * @param {object} obj\n * @return {boolean}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isstatsName.Otherboolean0.5101any0.3235string0.1038complex0.0317number0.0073
+ Text.Whitespace
+(Punctuation
+objName.Otherany0.9529object0.0043Object0.0041complex0.0038string0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// genuine fs.StatsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+StatsName.Otherany0.9774complex0.0078string0.0055boolean0.0024number0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+objName.Otherany0.9746complex0.0061string0.0030Object0.0023boolean0.0014
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+StatsName.Otherany0.9938string0.0019complex0.0013number0.0008boolean0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// quack quackComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objName.Otherany0.9760complex0.0063boolean0.0043Object0.0020string0.0015
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9823complex0.0061Object0.0022string0.0018boolean0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+'ctime'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+objName.Otherany0.9627complex0.0185Object0.0065{}0.0024object0.0024
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+toStringName.Otherany0.6264string0.3537complex0.0126boolean0.0015void0.0009
+.Punctuation
+callName.Otherany0.9929string0.0028complex0.0010void0.0007number0.0006
+(Punctuation
+objName.Otherany0.9834complex0.0043Object0.0010string0.0005T0.0005
+.Punctuation
+ctimeName.Otherany0.9379string0.0422boolean0.0118complex0.0026number0.0015
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'[object Date]'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+'mtime'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+objName.Otherany0.9723complex0.0145Object0.0038object0.0017{}0.0016
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+toStringName.Otherany0.7682string0.2180complex0.0082boolean0.0010void0.0008
+.Punctuation
+callName.Otherany0.9931string0.0027complex0.0011number0.0008void0.0006
+(Punctuation
+objName.Otherany0.9840complex0.0078Object0.0008T0.0006string0.0005
+.Punctuation
+mtimeName.Otherany0.9892string0.0063number0.0019complex0.0019boolean0.0001
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'[object Date]'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+'ino'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+objName.Otherany0.9796complex0.0130Object0.0017object0.0009boolean0.0008
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9895complex0.0057Object0.0007T0.0003boolean0.0002
+.Punctuation
+inoName.Otherany0.9938string0.0026complex0.0023number0.0007boolean0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+'size'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+objName.Otherany0.9642complex0.0218Object0.0026T0.0026{}0.0018
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9545complex0.0320Object0.0016T0.0014{}0.0005
+.Punctuation
+sizeName.Otherany0.9767string0.0181complex0.0033number0.0013{}0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Generate a tag for a stat.\n *\n * @param {object} stat\n * @return {string}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+stattagName.Otherany0.4673string0.3788boolean0.0642complex0.0371void0.0121
+ Text.Whitespace
+(Punctuation
+statName.Otherany0.8540string0.0204Buffer0.0086Date0.0023number0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mtimeName.Otherany0.9641number0.0190string0.0118Date0.0011complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+statName.Otherany0.9796complex0.0026number0.0014string0.0011Date0.0008
+.Punctuation
+mtimeName.Otherany0.9936string0.0032complex0.0010number0.0005Date0.0004
+.Punctuation
+getTimeName.Otherany0.9679number0.0298string0.0010complex0.0006Date0.0002
+(Punctuation
+)Punctuation
+.Punctuation
+toStringName.Otherany0.9406string0.0530complex0.0049number0.0005void0.0001
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+sizeName.Otherany0.8484string0.1350number0.0141complex0.0012boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+statName.Otherany0.9765complex0.0053string0.0012number0.0006Error0.0004
+.Punctuation
+sizeName.Otherany0.9915number0.0042string0.0032complex0.0009{}0.0000
+.Punctuation
+toStringName.Otherany0.9550string0.0417complex0.0023number0.0005boolean0.0001
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'"'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+sizeName.Otherany0.8437string0.1269number0.0266complex0.0016void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'-'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+mtimeName.Otherany0.8547string0.0873number0.0543complex0.0019Date0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

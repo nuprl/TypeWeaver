@@ -1,0 +1,41 @@
+{
+  "name": "content-type",
+  "description": "Create and parse HTTP Content-Type header",
+  "version": "1.0.4",
+  "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+  "license": "MIT",
+  "keywords": [
+    "content-type",
+    "http",
+    "req",
+    "res",
+    "rfc7231"
+  ],
+  "repository": "jshttp/content-type",
+  "devDependencies": {
+    "deep-equal": "1.0.1",
+    "eslint": "5.12.1",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "mocha": "5.2.0",
+    "nyc": "13.2.0"
+  },
+  "files": [
+    "LICENSE",
+    "HISTORY.md",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --check-leaks --bail test/",
+    "test-ci": "nyc --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+  }
+}

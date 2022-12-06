@@ -1,0 +1,85 @@
+importKeyword
+ Text.Whitespace
+isSymbolName.Otherany0.3924number0.2311complex0.1237string0.0629boolean0.0543
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../isSymbol.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used as references for various `Number` constants. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+NANName.Othernumber0.9552any0.0361string0.0042boolean0.0022complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * The base implementation of `toNumber` which doesn't ensure correct\n * conversions of binary, hexadecimal, or octal string values.\n *\n * @private\n * @param {*} value The value to process.\n * @returns {number} Returns the number.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+baseToNumberName.Othernumber0.7015any0.1716string0.0921boolean0.0203complex0.0045
+(Punctuation
+valueName.Otherany0.6435number0.2450string0.0970boolean0.0048complex0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9264number0.0378string0.0232complex0.0052boolean0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.4558number0.2656string0.2282boolean0.0366complex0.0021
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isSymbolName.Otherboolean0.3347any0.2945number0.2616complex0.0537string0.0381
+(Punctuation
+valueName.Otherany0.6128number0.3184string0.0441complex0.0072boolean0.0064
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+NANName.Othernumber0.7363any0.1807string0.0483boolean0.0180complex0.0041
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
++Operator
+valueName.Otherany0.6158number0.2461string0.1042boolean0.0080complex0.0032
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+baseToNumberName.Otherany0.5455number0.1478string0.0531boolean0.0174complex0.0169
+\nText.Whitespace

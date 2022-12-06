@@ -1,0 +1,27 @@
+which.ts(13,28): error TS2339: Property 'colon' does not exist on type 'object'.
+which.ts(22,17): error TS2339: Property 'path' does not exist on type 'object'.
+which.ts(27,11): error TS2339: Property 'pathExt' does not exist on type 'object'.
+which.ts(29,55): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'any[]' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'string | RegExp'.
+which.ts(46,5): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+which.ts(49,5): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+which.ts(56,18): error TS2339: Property 'all' does not exist on type 'any[]'.
+which.ts(60,11): error TS2322: Type 'any[]' is not assignable to type 'string'.
+which.ts(60,44): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+which.ts(73,45): error TS2345: Argument of type '(er: boolean, is: boolean) => any' is not assignable to parameter of type '(error: ErrnoException, isExe: boolean) => void'.
+  Types of parameters 'er' and 'error' are incompatible.
+    Type 'ErrnoException' is not assignable to type 'boolean'.
+which.ts(75,17): error TS2339: Property 'all' does not exist on type 'any[]'.
+which.ts(88,3): error TS2322: Type 'any[] | {}' is not assignable to type 'any[]'.
+  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+which.ts(95,11): error TS2322: Type 'any[]' is not assignable to type 'string'.
+which.ts(95,44): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+which.ts(106,19): error TS2339: Property 'all' does not exist on type 'any[]'.
+which.ts(115,11): error TS2339: Property 'all' does not exist on type 'any[]'.
+which.ts(118,11): error TS2339: Property 'nothrow' does not exist on type 'any[]'.
+which.ts(125,7): error TS2339: Property 'sync' does not exist on type 'Function'.
+

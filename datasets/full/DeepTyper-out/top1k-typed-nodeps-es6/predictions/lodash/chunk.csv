@@ -1,0 +1,185 @@
+importKeyword
+ Text.Whitespace
+sliceName.Otherstring[]0.2048T[]0.0418any[]0.0273string0.0216any0.0135
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./slice.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+toIntegerName.Othernumber0.1388string0.1244boolean0.0950any0.0899void0.0596
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toInteger.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an array of elements split into groups the length of `size`.\n * If `array` can't be split evenly, the final chunk will be the remaining\n * elements.\n *\n * @since 3.0.0\n * @category Array\n * @param {Array} array The array to process.\n * @param {number} [size=1] The length of each chunk\n * @returns {Array} Returns the new array of chunks.\n * @example\n *\n * chunk(['a', 'b', 'c', 'd'], 2)\n * // => [['a', 'b'], ['c', 'd']]\n *\n * chunk(['a', 'b', 'c', 'd'], 3)\n * // => [['a', 'b', 'c'], ['d']]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+chunkName.Othervoid0.0594number0.0438T[]0.0333any0.0314complex0.0206
+(Punctuation
+arrayName.Otherany0.2162number[]0.0787any[]0.0563number0.0381string[]0.0270
+,Punctuation
+ Text.Whitespace
+sizeName.Othernumber0.9774any0.0192string0.0018complex0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+sizeName.Othernumber0.9873any0.0103string0.0013complex0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9998ArrayConstructor0.0000number0.0000NumberConstructor0.0000ClientRect0.0000
+.Punctuation
+maxName.Othernumber0.9902any0.0039complex0.0026number[]0.0004string0.0003
+(Punctuation
+toIntegerName.Othernumber0.9292any0.0463string0.0080number[]0.0045complex0.0021
+(Punctuation
+sizeName.Othernumber0.9636any0.0298string0.0038number[]0.0011complex0.0004
+)Punctuation
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.8995any0.0964string0.0020boolean0.0004complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.4561number[]0.1900number0.1764any[]0.0490string[]0.0174
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+lengthName.Othernumber0.8916any0.1050string0.0016boolean0.0004void0.0002
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+sizeName.Othernumber0.9280any0.0697string0.0011boolean0.0003number[]0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9917any0.0071string0.0005number[]0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resIndexName.Othernumber0.9832any0.0121string0.0020number[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany[]0.2410string[]0.2091any0.1695number[]0.1644complex0.0333
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2882string0.1729number[]0.0858number0.0851string[]0.0353
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9965number[]0.0001Math0.0001number0.0001T[]0.0001
+(Punctuation
+MathName.BuiltinMath0.9994ArrayConstructor0.0001number[]0.0000PointerCoordinates0.0000number0.0000
+.Punctuation
+ceilName.Othernumber0.9958any0.0007boolean0.0004string0.0004number[]0.0003
+(Punctuation
+lengthName.Othernumber0.9863any0.0124string0.0006void0.0002complex0.0001
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+sizeName.Othernumber0.9815any0.0142string0.0026number[]0.0004complex0.0004
+)Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9938any0.0054string0.0002boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9873any0.0114string0.0005boolean0.0001void0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Othernumber[]0.3823any[]0.2609string[]0.1055any0.0529complex0.0207
+[Punctuation
+resIndexName.Othernumber0.9950any0.0034string0.0008number[]0.0002boolean0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sliceName.Otherany[]0.2301any0.2162string0.1261string[]0.0873complex0.0645
+(Punctuation
+arrayName.Othernumber[]0.3381any[]0.2254any0.1255number0.1131string[]0.0420
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9944any0.0048string0.0002complex0.0001boolean0.0001
+,Punctuation
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9942any0.0046string0.0007boolean0.0001complex0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+sizeName.Othernumber0.9743any0.0200string0.0033number[]0.0005complex0.0004
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.3424any[]0.2118number0.0755number[]0.0342string[]0.0261
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+chunkName.Otherany0.0904number0.0287void0.0200string0.0066Promise<any>0.0060
+\nText.Whitespace

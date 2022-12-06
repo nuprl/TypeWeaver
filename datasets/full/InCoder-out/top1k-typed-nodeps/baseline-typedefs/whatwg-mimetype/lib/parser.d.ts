@@ -1,0 +1,1 @@
+declare const removeLeadingAndTrailingHTTPWhitespace: any, removeTrailingHTTPWhitespace: any, isHTTPWhitespaceChar: any, solelyContainsHTTPTokenCodePoints: any, soleyContainsHTTPQuotedStringTokenCodePoints: any, asciiLowercase: any, collectAnHTTPQuotedString: any;

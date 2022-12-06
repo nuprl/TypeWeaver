@@ -1,0 +1,1805 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.8509string0.0965complex0.0440void0.0011Path0.0007
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+scanName.Othercomplex0.2779any0.1289void0.0104Token[]0.0087Expression0.0080
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./scan'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+parseName.Otherany0.1830complex0.0469T0.0420void0.0238Parser0.0210
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./parse'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+utilsName.Otherany0.4693complex0.4310string0.0196string[]0.0134void0.0082
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./utils'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+constantsName.Othercomplex0.7854any0.1930string0.0068void0.0029number0.0014
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./constants'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isObjectName.Otherboolean0.8683any0.1008complex0.0206string0.0024number0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valName.Otherany0.8425boolean0.1143string0.0147complex0.0111number0.0079
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+valName.Otherany0.7793boolean0.1777string0.0195number0.0102complex0.0059
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valName.Otherany0.8781boolean0.0552string0.0361complex0.0157number0.0091
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+ArrayName.BuiltinArrayConstructor0.9996any0.0001complex0.0000any[]0.0000ObjectConstructor0.0000
+.Punctuation
+isArrayName.Othercomplex0.9963any0.0015boolean0.0007any[]0.0004void0.0002
+(Punctuation
+valName.Otherany0.9358complex0.0237number0.0100boolean0.0097any[]0.0078
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Creates a matcher function from one or more glob patterns. The\n * returned function takes a string to match as its first argument,\n * and returns true if the string is a match. The returned matcher\n * function also takes a boolean as the second argument that, when true,\n * returns an object with additional information.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch(glob[, options]);\n *\n * const isMatch = picomatch('*.!(*a)');\n * console.log(isMatch('a.a')); //=> false\n * console.log(isMatch('a.b')); //=> true\n * ```\n * @name picomatch\n * @param {String|Array} `globs` One or more glob patterns.\n * @param {Object=} `options`\n * @return {Function=} Returns a matcher function.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+picomatchName.Otherany0.8285boolean0.1182string0.0121complex0.0090void0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+globName.Otherany0.6767string0.1628string[]0.0947any[]0.0320complex0.0113
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7203any[]0.0152number0.0150complex0.0074{}0.0059
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherboolean0.9414any0.0421complex0.0027true0.0024number0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9996any0.0001complex0.0000any[]0.0000ObjectConstructor0.0000
+.Punctuation
+isArrayName.Othercomplex0.9937boolean0.0021any0.0021any[]0.0007void0.0003
+(Punctuation
+globName.Otherany0.5205any[]0.2044string[]0.1649complex0.0672string0.0168
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fnsName.Otherany[]0.6234any0.2977string[]0.0356complex0.0174number[]0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+globName.Otherany0.3648string[]0.3390any[]0.2119complex0.0440number[]0.0110
+.Punctuation
+mapName.OtherU[]0.8518complex0.0969any0.0398any[]0.0016U,...0.0010
+(Punctuation
+inputName.Otherany0.8080string0.1502complex0.0181any[]0.0076number0.0044
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.6782string0.0920complex0.0868boolean0.0847number0.0127
+(Punctuation
+inputName.Otherany0.6537string0.2876complex0.0273number0.0097any[]0.0089
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7782number0.0309complex0.0298any[]0.0177{}0.0064
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherany0.7062boolean0.0719complex0.0609string0.0481number0.0360
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+arrayMatcherName.Otherany0.9236boolean0.0364string0.0160complex0.0065number0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+strName.Otherany0.8284string0.1612complex0.0045number0.0014boolean0.0007
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+isMatchName.Otherboolean0.8167any0.1626string0.0093number0.0038complex0.0028
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+fnsName.Otherany0.6894any[]0.1900string[]0.0379complex0.0264number[]0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stateName.Otherany0.4871boolean0.4068number0.0310string0.0220complex0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isMatchName.Otherboolean0.9491any0.0434string0.0012complex0.0012void0.0011
+(Punctuation
+strName.Otherany0.5937string0.3959complex0.0052number0.0013boolean0.0010
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.7405boolean0.1261string0.0616complex0.0279number0.0137
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stateName.Otherany0.5251boolean0.2990string0.0656number0.0280complex0.0180
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayMatcherName.Otherboolean0.4687any0.3919complex0.0254string0.0224any[]0.0177
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isStateName.Otherboolean0.9144any0.0525complex0.0094false0.0052string0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isObjectName.Otherboolean0.8211any0.0871complex0.0710any[]0.0036false0.0031
+(Punctuation
+globName.Otherany0.7329string0.1032string[]0.0745any[]0.0296complex0.0272
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+globName.Otherany0.7983string[]0.0561complex0.0365any[]0.0327string0.0137
+.Punctuation
+tokensName.Otherany0.8711complex0.0196boolean0.0167any[]0.0165string0.0145
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+globName.Otherany0.8534complex0.0535string[]0.0220any[]0.0133string0.0052
+.Punctuation
+inputName.Otherany0.6841string0.2746complex0.0245number0.0061boolean0.0044
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+globName.Otherany0.8571string0.1019complex0.0201string[]0.0080boolean0.0057
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+globName.Otherany0.7998string0.0917complex0.0424string[]0.0329any[]0.0082
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+isStateName.Otherboolean0.7037any0.2321string0.0336complex0.0082number0.0072
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.6274complex0.1897boolean0.0523Error0.0437string0.0229
+ Text.Whitespace
+newOperator.Wordany0.4515boolean0.1530complex0.1333{}0.0275string0.0266
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9867ErrorConstructor0.0033BooleanConstructor0.0002undefined0.0001SymbolConstructor0.0001
+(Punctuation
+'Expected pattern to be a non-empty string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.6055complex0.0245Options0.0222{}0.0215number0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.5436{}0.0374complex0.0192Options0.0161number0.0150
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+posixName.Otherboolean0.3935any0.3320complex0.0295any[]0.0221number0.0196
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+utilsName.Otherany0.7590complex0.1982boolean0.0078RegExp0.0071any[]0.0038
+.Punctuation
+isWindowsName.Otherboolean0.9516any0.0314complex0.0051number0.0021string0.0015
+(Punctuation
+optionsName.Otherany0.2825complex0.0825ConnectionOptions0.0173number0.0163any[]0.0135
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexName.OtherRegExp0.6351any0.2315string0.0196boolean0.0193complex0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isStateName.Otherboolean0.7279any0.1676complex0.0208string0.0194RegExp0.0140
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+picomatchName.Otherany0.8644RegExp0.0276complex0.0146boolean0.0087string0.0056
+.Punctuation
+compileReName.Otherany0.6209boolean0.2371complex0.0364string0.0355number0.0087
+(Punctuation
+globName.Otherany0.4491string0.4095string[]0.0423complex0.0291number0.0188
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3552complex0.0781number0.0198ConnectionOptions0.0131Options0.0115
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+picomatchName.Otherany0.9254complex0.0274boolean0.0044RegExp0.0034string0.0016
+.Punctuation
+makeReName.Otherany0.5484boolean0.2935complex0.0833string0.0104void0.0103
+(Punctuation
+globName.Otherstring0.4875any0.3634string[]0.0671number0.0206complex0.0148
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5179number0.0314complex0.0296ConnectionOptions0.0106boolean0.0105
+,Punctuation
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stateName.Otherany0.6204boolean0.2224string0.0362number0.0297complex0.0273
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regexName.Otherany0.7081RegExp0.1924complex0.0316string0.0026boolean0.0012
+.Punctuation
+stateName.Otherany0.8914boolean0.0503string0.0226complex0.0108number0.0105
+;Punctuation
+\n  Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+regexName.Otherany0.8224RegExp0.0864complex0.0165Set<any>0.0026string0.0018
+.Punctuation
+stateName.Otherany0.9421boolean0.0314string0.0101number0.0082complex0.0029
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+isIgnoredName.Otherboolean0.9953any0.0021number0.0008false0.0006string0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optsName.Otherany0.2975Options0.0702complex0.0650boolean0.0181Config0.0095
+.Punctuation
+ignoreName.Otherboolean0.6329any0.2345string0.0364complex0.0302number0.0204
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ignoreOptsName.Otherany0.2879complex0.1723{}0.0125Color0.0022Tensor<Rank>0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.3411complex0.0474{}0.0282any[]0.0271Options0.0117
+,Punctuation
+ Text.Whitespace
+ignoreName.Othernull0.9615complex0.0063any0.0045void0.0039string[]0.0030
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+ Text.Whitespace
+onMatchName.Othernull0.9958undefined0.0003boolean0.0002Error0.0002RegExp0.0002
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+ Text.Whitespace
+onResultName.Othernull0.4746any0.1050void0.1008Function0.0567string0.0328
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+isIgnoredName.Otherboolean0.9848any0.0087number0.0015string0.0011false0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherboolean0.6889any0.1414complex0.0479string0.0424void0.0157
+(Punctuation
+optsName.Otherany0.3172Options0.1006complex0.0715{}0.0077boolean0.0057
+.Punctuation
+ignoreName.Otherany0.4017boolean0.2240string0.1137complex0.0690string[]0.0620
+,Punctuation
+ Text.Whitespace
+ignoreOptsName.Otherany0.3407string0.2251boolean0.1287number0.1123complex0.0317
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherany0.3346string0.2528boolean0.1811number0.1161complex0.0254
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+matcherName.Otherany0.3374boolean0.1940string0.1122complex0.0295void0.0282
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherstring0.6083any0.3533complex0.0059number0.0046boolean0.0041
+,Punctuation
+ Text.Whitespace
+returnObjectName.Otherboolean0.9835any0.0070false0.0030true0.0025string0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9850any0.0098number0.0017string0.0015false0.0009
+,Punctuation
+ Text.Whitespace
+matchName.Otherany0.8228string0.0924boolean0.0618number0.0073complex0.0045
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.6454string0.2869boolean0.0255RegExp0.0152number0.0102
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.OtherRegExp0.9046any0.0617complex0.0075string0.0055boolean0.0046
+.Punctuation
+testName.Othercomplex0.5302boolean0.3068any0.1387RegExp0.0041string0.0034
+(Punctuation
+inputName.Otherstring0.5732any0.3885complex0.0138number0.0079RegExp0.0045
+,Punctuation
+ Text.Whitespace
+regexName.OtherRegExp0.8707any0.0985string0.0078complex0.0061boolean0.0011
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5662complex0.0371number0.0199ConnectionOptions0.0120RegExp0.0083
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+globName.Otherany0.5759string0.2652string[]0.0738complex0.0191any[]0.0164
+,Punctuation
+ Text.Whitespace
+posixName.Otherany0.8885boolean0.0231any[]0.0128complex0.0096string0.0089
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.4581complex0.4215boolean0.0287string0.0071number0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+globName.Otherany0.4888string0.3838string[]0.0521complex0.0322any[]0.0076
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.6013boolean0.0707string0.0568number0.0384complex0.0371
+,Punctuation
+ Text.Whitespace
+regexName.OtherRegExp0.7742any0.1442complex0.0088string0.0064RegExp[]0.0031
+,Punctuation
+ Text.Whitespace
+posixName.Otherany0.8690boolean0.0350string0.0290number0.0066string[]0.0051
+,Punctuation
+ Text.Whitespace
+inputName.Otherany0.7070string0.2771complex0.0048number0.0042boolean0.0013
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.8549string0.1298number0.0031boolean0.0024complex0.0008
+,Punctuation
+ Text.Whitespace
+matchName.Otherany0.9615string0.0266boolean0.0047complex0.0016number0.0011
+,Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9652any0.0277false0.0022string0.0015number0.0010
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+optsName.Otherany0.4157complex0.0290Options0.0145Config0.0057{}0.0056
+.Punctuation
+onResultName.Otherany0.7540string0.1147void0.0820boolean0.0198Function0.0076
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+optsName.Otherany0.3097complex0.0577Options0.0314Date0.0138{}0.0088
+.Punctuation
+onResultName.Otherany0.5925void0.3492string0.0309Function0.0086boolean0.0071
+(Punctuation
+resultName.Otherany0.5518boolean0.2476string0.1468complex0.0159void0.0077
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isMatchName.Otherboolean0.9456any0.0497false0.0014complex0.0009string0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.Otherboolean0.4154any0.3821false0.0427complex0.0346true0.0084
+.Punctuation
+isMatchName.Otherboolean0.9811any0.0176string0.0004number0.0003true0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+returnObjectName.Otherboolean0.9813any0.0143false0.0013string0.0011true0.0005
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resultName.Otherboolean0.9654any0.0305string0.0016true0.0006false0.0005
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isIgnoredName.Otherboolean0.9804any0.0120false0.0018complex0.0017string0.0013
+(Punctuation
+inputName.Otherany0.7461string0.2134complex0.0174any[]0.0025number0.0018
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+optsName.Otherany0.5514complex0.0669Options0.0165boolean0.0048{}0.0038
+.Punctuation
+onIgnoreName.Otherany0.6802boolean0.1810complex0.0671string0.0473void0.0051
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+optsName.Otherany0.4866complex0.1386Options0.0284{}0.0114Date0.0072
+.Punctuation
+onIgnoreName.Otherany0.4910boolean0.3399complex0.0465string0.0389void0.0345
+(Punctuation
+resultName.Otherany0.4144boolean0.4024string0.1109complex0.0209number0.0090
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+resultName.Otherboolean0.4767any0.3373complex0.0574false0.0147void0.0095
+.Punctuation
+isMatchName.Otherboolean0.9690any0.0287string0.0007number0.0005void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+returnObjectName.Otherboolean0.9809any0.0144string0.0013false0.0013complex0.0005
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resultName.Otherboolean0.9666any0.0288string0.0016true0.0006false0.0006
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+optsName.Otherany0.5416complex0.1006Options0.0134Config0.0049boolean0.0046
+.Punctuation
+onMatchName.Otherany0.6993boolean0.1172complex0.1038string0.0522void0.0059
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+optsName.Otherany0.4222complex0.1577Options0.0305{}0.0112boolean0.0069
+.Punctuation
+onMatchName.Otherany0.5432boolean0.2889complex0.0458string0.0356void0.0302
+(Punctuation
+resultName.Otherany0.3879boolean0.3829string0.1737complex0.0136number0.0131
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+returnObjectName.Otherboolean0.9752any0.0172string0.0021false0.0015true0.0008
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+resultName.Otherboolean0.9531any0.0398string0.0027true0.0011number0.0008
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+returnStateName.Otherboolean0.8427any0.1037string0.0217complex0.0096number0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+matcherName.Otherany0.3772RegExp0.0681string0.0572complex0.0372boolean0.0299
+.Punctuation
+stateName.Otherany0.7534string0.1033boolean0.0733complex0.0163number0.0107
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.4063string0.2463boolean0.1555number0.0342complex0.0270
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+matcherName.Otherany0.3632string0.2113boolean0.1045RegExp0.0862true0.0157
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Test `input` with the given `regex`. This is used by the main\n * `picomatch()` function to test the input string.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch.test(input, regex[, options]);\n *\n * console.log(picomatch.test('foo/bar', /^(?:([^/]*?)\/([^/]*?))$/));\n * // { isMatch: true, match: [ 'foo/', 'foo', 'bar' ], output: 'foo/bar' }\n * ```\n * @param {String} `input` String to test.\n * @param {RegExp} `regex`\n * @return {Object} Returns an object with matching info.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.OtherRegExp0.5030any0.1950complex0.0495string0.0066RegExp[]0.0047
+.Punctuation
+testName.Otherany0.4787complex0.3145boolean0.1606void0.0116string0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.6044string0.3467complex0.0276number0.0049any[]0.0038
+,Punctuation
+ Text.Whitespace
+regexName.OtherRegExp0.7109any0.2260complex0.0228string0.0158{}0.0013
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5530complex0.0717number0.0162any[]0.0095{}0.0094
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+globName.Otherany0.6697string0.2225string[]0.0435any[]0.0267complex0.0139
+,Punctuation
+ Text.Whitespace
+posixName.Otherany0.9388any[]0.0090boolean0.0047complex0.0042string0.0037
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.6784string0.1651complex0.1345number0.0045any[]0.0030
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.5446complex0.3246Error0.0407boolean0.0239{}0.0185
+ Text.Whitespace
+newOperator.Wordany0.4485complex0.2150boolean0.1021string0.0433{}0.0409
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9878ErrorConstructor0.0016complex0.0003BooleanConstructor0.0003undefined0.0002
+(Punctuation
+'Expected input to be a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.4940string0.3660complex0.1291any[]0.0014number0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9991any0.0002false0.0002number0.0001string0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+ Text.Whitespace
+outputName.Otherstring0.9803any0.0157number0.0012boolean0.0010RegExp0.0010
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.5646complex0.0427{}0.0272Options0.0255any[]0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4735{}0.0453complex0.0342Options0.0160number0.0117
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+formatName.Otherstring0.4821any0.4103complex0.0832number0.0083void0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.5529complex0.1352Options0.0293{}0.0048Object0.0035
+.Punctuation
+formatName.Otherstring0.4698any0.4373complex0.0668RegExp0.0060number0.0033
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+posixName.Otherany0.7175boolean0.0916string0.0457any[]0.0197complex0.0164
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+utils.toPosixSlashesName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchName.Otherany0.8663boolean0.0727string0.0415complex0.0060RegExpExecArray0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+inputName.Otherany0.6721string0.3134complex0.0039number0.0025RegExp0.0017
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+globName.Otherany0.7164string0.1863string[]0.0243any[]0.0241RegExp0.0105
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+outputName.Otherany0.4981string0.4725boolean0.0212number0.0022complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+matchName.Otherany0.9345string0.0258boolean0.0130RegExpExecArray0.0113complex0.0045
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+formatName.Otherstring0.6319any0.2890complex0.0390RegExp0.0135number0.0048
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+formatName.Otherany0.6407string0.2586complex0.0726any[]0.0041number0.0027
+(Punctuation
+inputName.Otherany0.5418string0.4367complex0.0056number0.0041any[]0.0020
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+inputName.Otherany0.8622string0.1119complex0.0108any[]0.0036number0.0025
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+matchName.Otherany0.8989boolean0.0529string0.0164RegExpExecArray0.0116complex0.0094
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+outputName.Otherany0.7175string0.2658boolean0.0076number0.0026complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+formatName.Otherstring0.6078any0.3454complex0.0213boolean0.0090number0.0026
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+formatName.Otherany0.6193string0.3144complex0.0483any[]0.0026number0.0021
+(Punctuation
+inputName.Otherstring0.4979any0.4764complex0.0068number0.0048any[]0.0018
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+inputName.Otherany0.8197string0.1628complex0.0040number0.0035any[]0.0027
+;Punctuation
+\n    Text.Whitespace
+matchName.Otherany0.8905string0.0609boolean0.0305complex0.0066number0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+outputName.Otherany0.7054string0.2803number0.0028boolean0.0023complex0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+globName.Otherany0.5801string0.3302string[]0.0212any[]0.0181complex0.0161
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+matchName.Otherany0.9187boolean0.0425string0.0169complex0.0068RegExpExecArray0.0050
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+optsName.Otherany0.3965complex0.1734Options0.0283RegExpExecArray0.0113{}0.0107
+.Punctuation
+captureName.Otherany0.7093boolean0.2543string0.0223complex0.0084number0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optsName.Otherany0.3872complex0.3135Options0.0165boolean0.0095any[]0.0059
+.Punctuation
+matchBaseName.Otherboolean0.6581any0.2263complex0.0831number0.0038Promise<boolean>0.0030
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+optsName.Otherany0.7456complex0.0982Options0.0104boolean0.0069any[]0.0027
+.Punctuation
+basenameName.Otherany0.9303string0.0265complex0.0223boolean0.0171number0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+matchName.Otherany0.9680string0.0093boolean0.0046complex0.0045RegExpExecArray0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherany0.5824complex0.2383RegExp0.0937boolean0.0062any[]0.0061
+.Punctuation
+matchBaseName.Otherany0.4920complex0.3464boolean0.1042Promise<boolean>0.0058Promise<any>0.0052
+(Punctuation
+inputName.Otherany0.7053string0.2487complex0.0250number0.0050any[]0.0035
+,Punctuation
+ Text.Whitespace
+regexName.OtherRegExp0.4656any0.4429complex0.0337string0.0243any[]0.0024
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7270complex0.0346number0.0133any[]0.0098{}0.0097
+,Punctuation
+ Text.Whitespace
+posixName.Otherany0.7850boolean0.0473string0.0282number0.0215any[]0.0152
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+matchName.Otherany0.9798RegExpExecArray0.0094string0.0019complex0.0010any[]0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regexName.OtherRegExp0.5209any0.4617complex0.0020string0.0019RegExpExecArray0.0018
+.Punctuation
+execName.Otherany0.9552RegExpExecArray0.0244complex0.0038RegExp0.0030string0.0013
+(Punctuation
+outputName.Otherany0.9141string0.0806number0.0017{}0.0003complex0.0003
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9866any0.0046false0.0026Boolean0.0017true0.0006
+:Operator
+ Text.Whitespace
+BooleanKeyword.TypeBooleanConstructor0.9873any0.0009Boolean0.0007RegExpConstructor0.0003RegExpExecArray0.0003
+(Punctuation
+matchName.Otherany0.8889string0.0556RegExpExecArray0.0175boolean0.0125complex0.0060
+)Punctuation
+,Punctuation
+ Text.Whitespace
+matchName.Otherany0.9368string0.0297RegExpExecArray0.0118boolean0.0076complex0.0041
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.8484string0.1127RegExp0.0134boolean0.0033number0.0025
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Match the basename of a filepath.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch.matchBase(input, glob[, options]);\n * console.log(picomatch.matchBase('foo/bar.js', '*.js'); // true\n * ```\n * @param {String} `input` String to test.\n * @param {RegExp|String} `glob` Glob pattern or regex created by [.makeRe](#makeRe).\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.2768complex0.1078RegExp0.0777RegExpExecArray0.0097Set<any>0.0082
+.Punctuation
+matchBaseName.Otherany0.6960boolean0.1759complex0.0441Promise<any>0.0123Promise<boolean>0.0085
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.8063string0.1589number0.0097complex0.0069any[]0.0040
+,Punctuation
+ Text.Whitespace
+globName.Otherany0.7317string0.1405string[]0.0398any[]0.0308number0.0167
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6461number0.0277any[]0.0226complex0.0182{}0.0056
+,Punctuation
+ Text.Whitespace
+posixName.Otherany0.4819boolean0.2186any[]0.0367number0.0351string0.0346
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+utilsName.Otherany0.9230complex0.0664boolean0.0022string0.0016any[]0.0016
+.Punctuation
+isWindowsName.Otherboolean0.8675any0.1118complex0.0079number0.0032string0.0025
+(Punctuation
+optionsName.Otherany0.5288complex0.1013number0.0211any[]0.0093T0.0088
+)Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexName.Otherany0.4499RegExp0.4465complex0.0227string0.0210boolean0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+globName.Otherany0.6473complex0.2108string[]0.0633string0.0208any[]0.0111
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9975RegExp0.0003RegExpExecArray0.0001RegExp[]0.0001BooleanConstructor0.0000
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+globName.Otherany0.4224string0.1514string[]0.1348complex0.0701RegExp0.0462
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+picomatch.makeReKeyword.Type
+(Punctuation
+globName.Otherstring0.4873any0.3639string[]0.0772complex0.0181any[]0.0134
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5792complex0.0592number0.0160{}0.0147RegExp0.0137
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+regexName.OtherRegExp0.9783any0.0153RegExp[]0.0006string0.0006complex0.0004
+.Punctuation
+testName.Otherboolean0.5246any0.2948complex0.1566string0.0061number0.0029
+(Punctuation
+pathName.Otherany0.9961complex0.0029string0.0008Path0.0000any[]0.0000
+.Punctuation
+basenameName.Otherany0.9726complex0.0234string0.0029boolean0.0001{}0.0001
+(Punctuation
+inputName.Otherany0.6483string0.3340complex0.0050number0.0034any[]0.0012
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if **any** of the given glob `patterns` match the specified `string`.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch.isMatch(string, patterns[, options]);\n *\n * console.log(picomatch.isMatch('a.a', ['b.*', '*.a'])); //=> true\n * console.log(picomatch.isMatch('a.a', 'b.*')); //=> false\n * ```\n * @param {String|Array} str The string to test.\n * @param {String|Array} patterns One or more glob patterns to use for matching.\n * @param {Object} [options] See available [options](#options).\n * @return {Boolean} Returns true if any patterns match `str`\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.7897complex0.0058RegExp0.0055boolean0.0029void0.0021
+.Punctuation
+isMatchName.Otherany0.5424boolean0.4400void0.0049string0.0032complex0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+strName.Otherany0.6064string0.3843complex0.0057number0.0009boolean0.0003
+,Punctuation
+ Text.Whitespace
+patternsName.Otherany0.7371complex0.0911string[]0.0759string0.0599any[]0.0135
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6459complex0.0428Options0.0112{}0.0107number0.0102
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.6741void0.1143complex0.0643boolean0.0627string0.0080
+(Punctuation
+patternsName.Otherany0.6419complex0.1038string[]0.1033string0.0953any[]0.0222
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4397complex0.0767Options0.0188{}0.0153any[]0.0122
+)Punctuation
+(Punctuation
+strName.Otherany0.6842string0.2963complex0.0132number0.0014any[]0.0009
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Parse a glob pattern to create the source string for a regular\n * expression.\n *\n * ```js\n * const picomatch = require('picomatch');\n * const result = picomatch.parse(pattern[, options]);\n * ```\n * @param {String} `pattern`\n * @param {Object} `options`\n * @return {Object} Returns an object with useful properties and output to be used as a regex source string.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.7989complex0.0252RegExp0.0024Set<any>0.0021{}0.0020
+.Punctuation
+parseName.Otherany0.8681complex0.0269void0.0226boolean0.0077T0.0072
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+patternName.Otherany0.5298string0.4222complex0.0259RegExp0.0082{}0.0022
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7076complex0.0288string0.0149number0.0113{}0.0105
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9996any0.0000ObjectConstructor0.0000complex0.0000Math0.0000
+.Punctuation
+isArrayName.Othercomplex0.9961any0.0014any[]0.0011boolean0.0004{}0.0001
+(Punctuation
+patternName.Otherany0.4407complex0.4146any[]0.0685string0.0236{}0.0180
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+patternName.Otherany[]0.4472any0.2496complex0.1173string[]0.0304{}0.0133
+.Punctuation
+mapName.OtherU[]0.5350complex0.3509any0.0995any[]0.0012U,...0.0011
+(Punctuation
+pName.Otherany0.8129complex0.0300string0.0158any[]0.0041Promise<any>0.0029
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+picomatchName.Otherany0.8891complex0.0166string0.0028boolean0.0015{}0.0013
+.Punctuation
+parseName.Otherany0.6114complex0.0732boolean0.0234T0.0098Promise<any>0.0098
+(Punctuation
+pName.Otherany0.6253string0.3359complex0.0194number0.0048any[]0.0030
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5880complex0.0534any[]0.0348{}0.0189number0.0125
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parseName.Otherany0.6615complex0.1026T0.0279any[]0.0158{}0.0082
+(Punctuation
+patternName.Otherany0.6381string0.2359complex0.0718{}0.0117any[]0.0112
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+...Punctuation
+optionsName.Otherany0.5287any[]0.0475complex0.0334{}0.0223Options0.0089
+,Punctuation
+ Text.Whitespace
+fastpathsName.Otherboolean0.9836any0.0079true0.0016number0.0011false0.0010
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Scan a glob pattern to separate the pattern into segments.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch.scan(input[, options]);\n *\n * const result = picomatch.scan('!./foo/*.js');\n * console.log(result);\n * { prefix: '!./',\n *   input: '!./foo/*.js',\n *   start: 3,\n *   base: 'foo',\n *   glob: '*.js',\n *   isBrace: false,\n *   isBracket: false,\n *   isGlob: true,\n *   isExtglob: false,\n *   isGlobstar: false,\n *   negated: true }\n * ```\n * @param {String} `input` Glob pattern to scan.\n * @param {Object} `options`\n * @return {Object} Returns an object with\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.5646complex0.0611any[]0.0093Promise<any>0.0032never0.0028
+.Punctuation
+scanName.Otherany0.7487complex0.1683void0.0176any[]0.0070boolean0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.9096string0.0530complex0.0165any[]0.0100number0.0026
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8309complex0.0202any[]0.0145number0.0093Options0.0051
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+scanName.Othercomplex0.4611any0.3884void0.0166any[]0.0128boolean0.0040
+(Punctuation
+inputName.Otherany0.8654string0.0770complex0.0271any[]0.0130number0.0036
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5750complex0.0410any[]0.0263number0.0127Options0.0126
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Compile a regular expression from the `state` object returned by the\n * [parse()](#parse) method.\n *\n * @param {Object} `state`\n * @param {Object} `options`\n * @param {Boolean} `returnOutput` Intended for implementors, this argument allows you to return the raw output from the parser.\n * @param {Boolean} `returnState` Adds the state to a `state` property on the returned regex. Useful for implementors and debugging.\n * @return {RegExp}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.8193complex0.0097void0.0026Promise<any>0.0026boolean0.0019
+.Punctuation
+compileReName.Otherany0.7623boolean0.1787void0.0209complex0.0093number0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.6217boolean0.0709number0.0621complex0.0490string0.0361
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6530Options0.0155complex0.0154number0.0112any[]0.0111
+,Punctuation
+ Text.Whitespace
+returnOutputName.Otherboolean0.8737any0.1120number0.0034complex0.0019true0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherboolean0.9165any0.0726complex0.0025number0.0016string0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+returnOutputName.Otherboolean0.7809any0.1929complex0.0115string0.0046false0.0022
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stateName.Otherany0.6037complex0.0849boolean0.0412number0.0163{}0.0161
+.Punctuation
+outputName.Otherstring0.4979any0.4523boolean0.0132number0.0077complex0.0028
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.5716Options0.0368{}0.0343complex0.0234never0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.6413{}0.0522complex0.0219Options0.0157number0.0139
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+prependName.Otherany0.4492string0.3736boolean0.1141void0.0286number0.0194
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.6145complex0.1080Options0.0342Object0.0077Date0.0058
+.Punctuation
+containsName.Otherboolean0.5350any0.4297complex0.0179string0.0079number0.0018
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'^'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+appendName.Otherstring0.3485boolean0.3021any0.2541void0.0316number0.0285
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.5129complex0.1052Options0.0417{}0.0090RegExpExecArray0.0086
+.Punctuation
+containsName.Otherboolean0.5660any0.3998complex0.0168string0.0069false0.0016
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'$'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+sourceName.Otherstring0.7620any0.1962RegExp0.0168complex0.0042Date0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+prependName.Otherany0.3447string0.2446void0.1221boolean0.0559complex0.0142
+}Literal.String.Interpol
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+stateName.Otherany0.5708complex0.0843string0.0231{}0.0173any[]0.0108
+.Punctuation
+outputName.Otherstring0.7096any0.2722number0.0085complex0.0026boolean0.0016
+}Literal.String.Interpol
+)Literal.String.Backtick
+${Literal.String.Interpol
+appendName.Otherany0.3416string0.3134boolean0.1159void0.0713{}0.0528
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.5302boolean0.2858complex0.0592string0.0416false0.0163
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+stateName.Otherany0.4018complex0.2342boolean0.1004RegExp0.0253false0.0210
+.Punctuation
+negatedName.Otherboolean0.9949any0.0038string0.0005number0.0002complex0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+sourceName.Otherstring0.8971any0.0941RegExp0.0018complex0.0013number0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+^(?!Literal.String.Backtick
+${Literal.String.Interpol
+sourceName.Otherstring0.8429any0.1427complex0.0064number0.0018any[]0.0009
+}Literal.String.Interpol
+).*Literal.String.Backtick
+$Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexName.OtherRegExp0.8591any0.0587string0.0105complex0.0064RegExpExecArray0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picomatchName.Otherany0.8859complex0.0314RegExp0.0286string0.0106{}0.0020
+.Punctuation
+toRegexName.Otherany0.7306string0.1431complex0.0480boolean0.0165RegExp0.0072
+(Punctuation
+sourceName.Otherstring0.6979any0.2772complex0.0109number0.0032RegExp0.0020
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5712complex0.0797{}0.0166string0.0152number0.0147
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+returnStateName.Otherboolean0.7988any0.1400complex0.0263string0.0096false0.0093
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+regexName.Otherany0.5819RegExp0.2816complex0.0222string0.0058RegExpExecArray0.0030
+.Punctuation
+stateName.Otherany0.8769string0.0561boolean0.0227number0.0104complex0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.5802string0.1870boolean0.0674number0.0264complex0.0209
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+regexName.OtherRegExp0.6562any0.2174complex0.0222string0.0119RegExpExecArray0.0053
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Create a regular expression from a parsed glob pattern.\n *\n * ```js\n * const picomatch = require('picomatch');\n * const state = picomatch.parse('*.js');\n * // picomatch.compileRe(state[, options]);\n *\n * console.log(picomatch.compileRe(state));\n * //=> /^(?:(?!\.)(?=.)[^/]*?\.js)$/\n * ```\n * @param {String} `state` The object returned from the `.parse` method.\n * @param {Object} `options`\n * @param {Boolean} `returnOutput` Implementors may use this argument to return the compiled output, instead of a regular expression. This is not exposed on the options to prevent end-users from mutating the result.\n * @param {Boolean} `returnState` Implementors may use this argument to return the state from the parsed glob with the returned regular expression.\n * @return {RegExp} Returns a regex created from the given pattern.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.7215complex0.0419{}0.0092RegExp0.0066string0.0038
+.Punctuation
+makeReName.Otherany0.9051boolean0.0208string0.0190complex0.0149void0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.6791string0.2813complex0.0106any[]0.0054number0.0047
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3983{}0.3128complex0.0229T0.0093any[]0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+returnOutputName.Otherboolean0.9592any0.0222false0.0056complex0.0033true0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherboolean0.9496any0.0344complex0.0054false0.0033true0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+inputName.Otherany0.8404string0.0993complex0.0323boolean0.0054any[]0.0038
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.6867string0.2311complex0.0656number0.0025any[]0.0022
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.5416complex0.3042Error0.0384{}0.0319boolean0.0242
+ Text.Whitespace
+newOperator.Wordany0.3770complex0.2121boolean0.1142{}0.0695string0.0407
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9903ErrorConstructor0.0024BooleanConstructor0.0003complex0.0002undefined0.0001
+(Punctuation
+'Expected a non-empty string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+parsedName.Othercomplex0.8869any0.0391any[]0.0011T0.0010Object0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+negatedName.Otherboolean0.9985true0.0004string0.0003false0.0002any0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+ Text.Whitespace
+fastpathsName.Otherboolean0.9981true0.0007any0.0003false0.0002string0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Othercomplex0.1748any0.1362Options0.0515ConnectionOptions0.0153any[]0.0108
+.Punctuation
+fastpathsName.Otherboolean0.9071any0.0739complex0.0073string0.0044number0.0034
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.6271string0.2594any[]0.0382complex0.0348string[]0.0102
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'.'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+inputName.Otherany0.6410string0.2830any[]0.0287complex0.0183string[]0.0053
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'*'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+parsedName.Otherany0.4426complex0.3268never0.0072T0.0062any[]0.0030
+.Punctuation
+outputName.Otherany0.5187string0.4304number0.0168complex0.0116any[]0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseName.Otherany0.2407complex0.1137T0.0110Parser0.0106{}0.0101
+.Punctuation
+fastpathsName.Otherany0.5996string0.1863complex0.0875number0.0203any[]0.0145
+(Punctuation
+inputName.Otherstring0.5033any0.4026complex0.0662any[]0.0078number0.0066
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5755complex0.0823any[]0.0272string0.0245{}0.0191
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+parsedName.Othercomplex0.4538any0.2982never0.0070T0.0053any[]0.0036
+.Punctuation
+outputName.Otherstring0.6316any0.3364complex0.0123number0.0048boolean0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+parsedName.Otherany0.5744complex0.2637T0.0204any[]0.0101never0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseName.Otherany0.3664complex0.2090T0.0388{}0.0131any[]0.0115
+(Punctuation
+inputName.Otherstring0.4495any0.3861complex0.1333any[]0.0068number0.0042
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5100complex0.1134{}0.0309number0.0172string0.0165
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+picomatchName.Otherany0.7879complex0.0513{}0.0036never0.0022string0.0021
+.Punctuation
+compileReName.Otherany0.6717complex0.1694boolean0.0262string0.0240Promise<any>0.0135
+(Punctuation
+parsedName.Othercomplex0.5474any0.1792T0.0198string0.0119any[]0.0095
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3705complex0.1176{}0.0287Options0.0193ConnectionOptions0.0175
+,Punctuation
+ Text.Whitespace
+returnOutputName.Otherany0.3921complex0.2370string0.0956boolean0.0373any[]0.0194
+,Punctuation
+ Text.Whitespace
+returnStateName.Otherany0.4205complex0.2661string0.1254boolean0.0479any[]0.0175
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Create a regular expression from the given regex source string.\n *\n * ```js\n * const picomatch = require('picomatch');\n * // picomatch.toRegex(source[, options]);\n *\n * const { output } = picomatch.parse('*.js');\n * console.log(picomatch.toRegex(output));\n * //=> /^(?:(?!\.)(?=.)[^/]*?\.js)$/\n * ```\n * @param {String} `source` Regular expression source string.\n * @param {Object} `options`\n * @return {RegExp}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.6839complex0.0695{}0.0038never0.0036Error0.0029
+.Punctuation
+toRegexName.Otherany0.8469void0.0468boolean0.0416complex0.0223string0.0099
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+sourceName.Otherstring0.6564any0.3045complex0.0143number0.0042{}0.0020
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5118complex0.0455{}0.0375number0.0297Options0.0201
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.4187{}0.1325complex0.0764Options0.0319Object0.0108
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3968{}0.2293complex0.0611Options0.0161Object0.0129
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.1742string0.1128complex0.0865RegExp0.0623{}0.0524
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9994RegExp0.0001RegExpExecArray0.0000ErrorConstructor0.0000BooleanConstructor0.0000
+(Punctuation
+sourceName.Otherstring0.9091any0.0587complex0.0101Date0.0035number0.0034
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.2663complex0.1793Options0.0163RegExpExecArray0.0115{}0.0082
+.Punctuation
+flagsName.Otherstring0.6062any0.1502complex0.1240number0.0398string[]0.0261
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+optsName.Othercomplex0.5830any0.1569Options0.0114{}0.0109RegExpExecArray0.0103
+.Punctuation
+nocaseName.Otherboolean0.8307any0.1193complex0.0173number0.0142string0.0124
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'i'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9955string0.0011complex0.0011Error0.0010number0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Othercomplex0.2706any0.2308any[]0.0182{}0.0177ConnectionOptions0.0114
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Othercomplex0.2606any0.1555{}0.0233T0.0178ConnectionOptions0.0147
+.Punctuation
+debugName.Otherboolean0.9616any0.0214complex0.0103number0.0021true0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.5824Error0.2282complex0.0753string0.0655{}0.0095
+ Text.Whitespace
+errName.Otherany0.9213Error0.0610string0.0083complex0.0044number0.0007
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+/$^/Literal.String.Regex
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Picomatch constants.\n * @return {Object}\n */Comment.Multiline
+\n\nText.Whitespace
+picomatchName.Otherany0.5080complex0.0467RegExp0.0223HTMLElement0.0097RegExpExecArray0.0034
+.Punctuation
+constantsName.Otherany0.7675complex0.1045string0.0557number0.0301Date0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+constantsName.Othercomplex0.5342any0.4301string0.0213number0.0052Object0.0015
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expose "picomatch"\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+picomatchName.Otherany0.6094boolean0.1448complex0.0564number0.0377string0.0312
+;Punctuation
+\nText.Whitespace

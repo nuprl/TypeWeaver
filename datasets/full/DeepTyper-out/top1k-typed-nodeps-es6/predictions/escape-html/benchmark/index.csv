@@ -1,0 +1,256 @@
+Text
+/**\n * Globals for benchmark.js\n */Comment.Multiline
+\nText.Whitespace
+globalName.Builtinany0.5108Global0.1698BrowserNodeGlobal0.1246GlobalContainer0.0437complex0.0047
+.Punctuation
+escapeHtmlName.Otherany0.9265string0.0689complex0.0015number0.0012Function0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'..'Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Module dependencies.\n */Comment.Multiline
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+benchmarkName.Otherany0.6903void0.1523Promise<void>0.0129complex0.0080T0.0036
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'benchmark'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+benchmarksName.Otherany0.3636void0.2021T[]0.0309Promise<void>0.0281T0.0222
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'beautify-benchmark'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+depName.Otherstring0.9706any0.0273complex0.0005number0.0005string[]0.0004
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+processName.Otherany0.9796complex0.0088Process0.0015{}0.0005T0.0003
+.Punctuation
+versionsName.Otherany0.9592complex0.0248string[]0.0049{}0.0031string0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000DOMTokenList0.0000string[][]0.0000
+.Punctuation
+logName.Othervoid0.9973any0.0013complex0.0009Promise<void>0.0001Function0.0001
+(Punctuation
+'  %s@%s'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+depName.Otherstring0.5402any0.4477complex0.0044number0.0017string[]0.0013
+,Punctuation
+ Text.Whitespace
+processName.Otherany0.9933complex0.0034Process0.0005{}0.0002void0.0002
+.Punctuation
+versionsName.Otherany0.9854complex0.0066{}0.0022string[]0.0019string0.0016
+[Punctuation
+depName.Otherstring0.8099any0.1799complex0.0053number0.0027{}0.0005
+]Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9980any0.0013complex0.0003Promise<void>0.0001string0.0000
+(Punctuation
+''Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+suiteName.Otherany0.9896void0.0038Suite0.0022string0.0005complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9912complex0.0013void0.0012string0.0002HTMLDivElement0.0001
+ Text.Whitespace
+benchmarkName.Otherany0.9976void0.0005complex0.0005any[]0.0001number0.0000
+.Punctuation
+SuiteName.Otherany0.9992complex0.0002void0.0001string0.0001number0.0001
+(Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9807Suite0.0079void0.0017complex0.0008string0.0005
+.Punctuation
+addName.Otherany0.9673void0.0232complex0.0053number0.0008string0.0004
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+'name'Literal.String.Single
+:Operator
+ Text.Whitespace
+'no special characters'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'minSamples'Literal.String.Single
+:Operator
+ Text.Whitespace
+100Literal.Number.Float
+,Punctuation
+\n  Text.Whitespace
+'fn'Literal.String.Single
+:Operator
+ Text.Whitespace
+'escapeHtml(str)'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'setup'Literal.String.Single
+:Operator
+ Text.Whitespace
+'str = "Hello, World!"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9711Suite0.0135void0.0020number0.0008complex0.0007
+.Punctuation
+addName.Otherany0.9468void0.0406complex0.0057number0.0014boolean0.0004
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+'name'Literal.String.Single
+:Operator
+ Text.Whitespace
+'single special character'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'minSamples'Literal.String.Single
+:Operator
+ Text.Whitespace
+100Literal.Number.Float
+,Punctuation
+\n  Text.Whitespace
+'fn'Literal.String.Single
+:Operator
+ Text.Whitespace
+'escapeHtml(str)'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'setup'Literal.String.Single
+:Operator
+ Text.Whitespace
+'str = "Hello, World&!"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9624Suite0.0185void0.0026complex0.0009number0.0008
+.Punctuation
+addName.Otherany0.9223void0.0633complex0.0069number0.0015Promise<void>0.0005
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+'name'Literal.String.Single
+:Operator
+ Text.Whitespace
+'many special characters'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'minSamples'Literal.String.Single
+:Operator
+ Text.Whitespace
+100Literal.Number.Float
+,Punctuation
+\n  Text.Whitespace
+'fn'Literal.String.Single
+:Operator
+ Text.Whitespace
+'escapeHtml(str)'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'setup'Literal.String.Single
+:Operator
+ Text.Whitespace
+'str = "\'>\'\\"\\"&>h<e>&<y>"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9774Suite0.0074void0.0047string0.0009complex0.0007
+.Punctuation
+onName.Otherany0.8783complex0.0554void0.0495EventEmitter0.0010Promise<void>0.0010
+(Punctuation
+'cycle'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onCycleName.Othervoid0.9955any0.0013Promise<void>0.0008complex0.0007boolean0.0006
+ Text.Whitespace
+(Punctuation
+eventName.Otherany0.8460Event0.0239string0.0186MessageEvent0.0107number0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+benchmarksName.Otherany0.8857void0.0104T0.0052number0.0039Promise<any>0.0036
+.Punctuation
+addName.Othervoid0.5066any0.4147complex0.0316number0.0064Promise<void>0.0051
+(Punctuation
+eventName.Otherany0.8948Event0.0137MessageEvent0.0130complex0.0128string0.0079
+.Punctuation
+targetName.Otherany0.9043string0.0538EventTarget0.0124Object0.0046number0.0035
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9876void0.0035Suite0.0028string0.0007complex0.0005
+.Punctuation
+onName.Otherany0.8932complex0.0505void0.0396Promise<void>0.0012Function0.0008
+(Punctuation
+'complete'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onCompleteName.Othervoid0.9964complex0.0012any0.0008Promise<void>0.0006boolean0.0002
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+benchmarksName.Otherany0.9396void0.0044T0.0038complex0.0038Promise<any>0.0015
+.Punctuation
+logName.Othervoid0.9648any0.0272complex0.0021Promise<void>0.0011number0.0007
+(Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+suiteName.Otherany0.9534Suite0.0243void0.0018string0.0012complex0.0009
+.Punctuation
+runName.Otherany0.7750void0.1325Promise<void>0.0249T0.0239complex0.0074
+(Punctuation
+{Punctuation
+ Text.Whitespace
+'async'Literal.String.Single
+:Operator
+ Text.Whitespace
+falseKeyword.Constant
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace

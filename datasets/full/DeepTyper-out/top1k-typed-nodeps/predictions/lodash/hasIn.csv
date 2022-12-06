@@ -1,0 +1,42 @@
+Text
+/**\n * Checks if `path` is a direct or inherited property of `object`.\n *\n * @since 4.0.0\n * @category Object\n * @param {Object} object The object to query.\n * @param {string} key The key to check.\n * @returns {boolean} Returns `true` if `key` exists, else `false`.\n * @see has, hasPath, hasPathIn\n * @example\n *\n * const object = create({ 'a': create({ 'b': 2 }) })\n *\n * hasIn(object, 'a')\n * // => true\n *\n * hasIn(object, 'b')\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hasInName.Otherboolean0.6971any0.0379string0.0366Object0.0364object0.0151
+(Punctuation
+objectName.OtherObject0.5488any0.3137object0.0702string0.0162number0.0028
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.8466any0.1078number0.0146boolean0.0116Object0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.OtherObject0.4678any0.3948object0.0846string0.0121number0.0065
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+keyName.Otherstring0.6016any0.3334boolean0.0376number0.0162Object0.0034
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9966Object0.0022any0.0003object0.0001complex0.0001
+(Punctuation
+objectName.OtherObject0.5681any0.2110object0.1726{}0.0086string0.0044
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+hasInName.Otherany0.1431void0.0341Object0.0324boolean0.0254string0.0194
+\nText.Whitespace
