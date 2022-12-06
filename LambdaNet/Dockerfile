@@ -8,18 +8,18 @@ RUN apt-get update -yq && apt-get install -yq \
 
 WORKDIR /code
 
-# set up nodejs and node modules
+# set up nodejs and typescript
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
  && apt-get install -yq nodejs \
  && npm install -g \
-    typescript@"^3.4.1" \
- && npm install \
-    fs@latest \
-    source-map-support@"^0.5.11" \
-    yargs@"^13.2.2" \
-    @types/node@"^11.10.5" \
-    @types/source-map-support@"^0.5.0" \
-    @types/yargs@"^12.0.10"
+    typescript@"^4.7.3"
+
+# copy package.json and install node modules
+WORKDIR /code/scripts/ts
+COPY src/scripts/ts/package.json src/scripts/ts/package-lock.json .
+RUN npm install
+
+WORKDIR /code
 
 # set up scala and sbt
 RUN curl -sLO "https://downloads.lightbend.com/scala/2.12.10/scala-2.12.10.deb" \
@@ -27,5 +27,16 @@ RUN curl -sLO "https://downloads.lightbend.com/scala/2.12.10/scala-2.12.10.deb" 
  && rm -rf scala-2.12.10.deb \
  && curl -sLO "https://github.com/sbt/sbt/releases/download/v1.3.13/sbt-1.3.13.tgz" \
  && mkdir -p /opt \
- && tar xzf sbt-1.3.13.tgz -C /opt
+ && tar xzf sbt-1.3.13.tgz -C /opt \
+ && rm -rf sbt-1.3.13.tgz
 ENV PATH="${PATH}:/opt/sbt/bin"
+
+COPY src /code
+
+# compile typescript
+RUN (cd scripts/ts && tsc)
+
+# compile scala
+RUN sbt "runMain lambdanet.JavaAPI"
+
+ENTRYPOINT ["sbt", "runMain lambdanet.TypeInferenceService"]
