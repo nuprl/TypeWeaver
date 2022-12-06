@@ -1,4 +1,4 @@
-examples/normal-usage.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
+examples/normal-usage.ts(1,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
 examples/normal-usage.ts(3,38): error TS2339: Property 'yellow' does not exist on type '"First some yellow text"'.
 examples/normal-usage.ts(5,35): error TS2339: Property 'yellow' does not exist on type '"Underline that text"'.
 examples/normal-usage.ts(7,36): error TS2339: Property 'red' does not exist on type '"Make it bold and red"'.
@@ -36,7 +36,7 @@ lib/custom/trap.ts(35,8): error TS2339: Property 'forEach' does not exist on typ
 lib/custom/zalgo.ts(51,15): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/custom/zalgo.ts(70,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/custom/zalgo.ts(71,15): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
-lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/extendStringPrototype.ts(7,27): error TS2322: Type '(color: any, func: any) => void' is not assignable to type 'void'.
 lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
 lib/extendStringPrototype.ts(11,3): error TS2349: This expression is not callable.
@@ -63,7 +63,7 @@ lib/extendStringPrototype.ts(76,11): error TS2349: This expression is not callab
   Type 'void' has no call signatures.
 lib/extendStringPrototype.ts(87,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/index.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/index.ts(1,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/index.ts(23,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
 lib/system/has-flag.ts(34,25): error TS2367: This condition will always return 'false' since the types 'boolean' and 'number' have no overlap.
 lib/system/has-flag.ts(34,55): error TS2365: Operator '<' cannot be applied to types 'number' and 'boolean'.
@@ -96,5 +96,5 @@ lib/system/supports-colors.ts(124,5): error TS2322: Type 'number' is not assigna
 lib/system/supports-colors.ts(128,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/system/supports-colors.ts(132,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/system/supports-colors.ts(143,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
-safe.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+safe.ts(9,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 

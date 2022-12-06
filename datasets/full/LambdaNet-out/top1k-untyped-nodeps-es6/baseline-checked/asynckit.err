@@ -31,7 +31,7 @@ lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be calle
 lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
 lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, callback: Function) => object'.
-lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/typeweaver/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 lib/readable_serial_ordered.ts(24,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: object, iterator: Function, sortMethod: string, callback: Function) => object'.
 lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'object'.
@@ -49,7 +49,7 @@ parallel.ts(20,16): error TS2339: Property 'index' does not exist on type 'objec
 parallel.ts(31,29): error TS2339: Property 'jobs' does not exist on type 'object'.
 parallel.ts(33,30): error TS2339: Property 'results' does not exist on type 'object'.
 parallel.ts(38,11): error TS2339: Property 'index' does not exist on type 'object'.
-serial.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+serial.ts(1,8): error TS1192: Module '"/mnt/typeweaver/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 serialOrdered.ts(20,99): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 serialOrdered.ts(22,33): error TS2345: Argument of type 'object' is not assignable to parameter of type 'any[]'.
   Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.

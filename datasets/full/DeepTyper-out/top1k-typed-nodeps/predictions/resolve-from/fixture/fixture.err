@@ -17,30 +17,30 @@ Build info:
 -------------------------------------------------------------------
 
 About to throw exception 'Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.'
-/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
+/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
   warnings.warn('Unsupported Linux distribution (%s-%s). CNTK supports Ubuntu 16.04 and above, only.' % (__my_distro__, __my_distro_ver__))
 Traceback (most recent call last):
   File "readout.py", line 227, in <module>
     run_seq(content)
   File "readout.py", line 187, in run_seq
     mb = sIn.next_minibatch(N)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
     value = Value.create(self._vars[si.name], mb_data)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
     result = f(*args, **kwds)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in create
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in create
     for sample in data]
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in <listcomp>
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in <listcomp>
     for sample in data]
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
     result = f(*args, **kwds)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 171, in from_data
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 171, in from_data
     ndav = NDArrayView.from_csr(data, device, borrow=borrow)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
     result = f(*args, **kwds)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 141, in from_csr
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 141, in from_csr
     read_only, borrow)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py.py", line 1140, in __init__
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py.py", line 1140, in __init__
     this = _cntk_py.new_NDArrayView(*args)
 ValueError: Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.
 

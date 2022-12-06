@@ -10,7 +10,7 @@ lib/copy/copy.ts(6,10): error TS2614: Module '"../path-exists"' has no exported 
 lib/copy/copy.ts(7,10): error TS2614: Module '"../util/utimes"' has no exported member 'utimesMillis'. Did you mean to use 'import utimesMillis from "../util/utimes"' instead?
 lib/copy/copy.ts(103,73): error TS2339: Property 'mode' does not exist on type 'string'.
 lib/copy/copy.ts(104,38): error TS2339: Property 'mode' does not exist on type 'string'.
-lib/empty/index.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
+lib/empty/index.ts(4,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/empty/index.ts(17,3): error TS2322: Type 'any[]' is not assignable to type 'void'.
 lib/empty/index.ts(25,18): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -34,7 +34,7 @@ lib/ensure/link.ts(56,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/ensure/symlink-paths.ts(5,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/symlink-paths.ts(31,5): error TS2322: Type 'void' is not assignable to type 'string'.
-lib/ensure/symlink.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
+lib/ensure/symlink.ts(5,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/ensure/symlink.ts(18,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/symlink.ts(19,10): error TS2614: Module '"../util/stat"' has no exported member 'areIdentical'. Did you mean to use 'import areIdentical from "../util/stat"' instead?
 lib/fs/index.ts(56,14): error TS2300: Duplicate identifier 'method'.
@@ -86,7 +86,7 @@ lib/json/output-json-sync.ts(4,10): error TS2614: Module '"../output-file"' has 
 lib/json/output-json.ts(4,10): error TS2614: Module '"../output-file"' has no exported member 'outputFile'. Did you mean to use 'import outputFile from "../output-file"' instead?
 lib/mkdirs/index.ts(4,24): error TS2345: Argument of type 'Promise<void>' is not assignable to parameter of type '(...args: any[]) => any'.
   Type 'Promise<void>' provides no match for the signature '(...args: any[]): any'.
-lib/mkdirs/make-dir.ts(2,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
+lib/mkdirs/make-dir.ts(2,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/mkdirs/make-dir.ts(5,7): error TS2322: Type '(options: any) => any' is not assignable to type 'Promise<{}>'.
 lib/mkdirs/make-dir.ts(11,39): error TS2322: Type '(dir: string, options: any) => Promise<any>' is not assignable to type 'Promise<void>'.
 lib/mkdirs/make-dir.ts(12,3): error TS2349: This expression is not callable.
@@ -115,9 +115,9 @@ lib/output-file/index.ts(31,35): error TS2556: A spread argument must either hav
 lib/output-file/index.ts(33,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/output-file/index.ts(34,26): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
-lib/path-exists/index.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
+lib/path-exists/index.ts(3,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/remove/index.ts(10,3): error TS2554: Expected 3 arguments, but got 2.
 lib/remove/index.ts(16,10): error TS2554: Expected 2 arguments, but got 1.
-lib/util/stat.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
+lib/util/stat.ts(3,8): error TS1192: Module '"/mnt/typeweaver/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/util/stat.ts(36,47): error TS2345: Argument of type '(err: any, stats: any) => any' is not assignable to parameter of type '(err: ErrnoException) => void'.
 

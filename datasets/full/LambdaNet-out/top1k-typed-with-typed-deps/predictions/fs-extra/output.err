@@ -16,20 +16,20 @@ Failure occurred at line 3: module.exports = {
 Error message: Debug Failure. False expression.
 Parsing failed for file: lib/index.js
 
-/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087
+/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087
         Debug.assert(array.length !== 0);
               ^
 Error: Debug Failure. False expression.
-    at Object.first (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087:15)
-    at getArgumentArityError (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50157:32)
-    at resolveCall (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50297:41)
-    at resolveCallExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50583:20)
-    at resolveSignature (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50874:28)
-    at getResolvedSignature (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50905:26)
-    at checkCallExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50992:29)
-    at checkExpressionWorker (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:53047:28)
-    at checkExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52969:38)
-    at checkExpressionCached (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52711:38)
+    at Object.first (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087:15)
+    at getArgumentArityError (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50157:32)
+    at resolveCall (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50297:41)
+    at resolveCallExpression (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50583:20)
+    at resolveSignature (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50874:28)
+    at getResolvedSignature (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50905:26)
+    at checkCallExpression (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50992:29)
+    at checkExpressionWorker (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:53047:28)
+    at checkExpression (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52969:38)
+    at checkExpressionCached (/work/typeweaver/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52711:38)
 
 	at ammonite.ops.Shellout$.executeStream(Shellout.scala:101)
 	at ammonite.ops.Shellout$.$anonfun$$percent$percent$1(Shellout.scala:15)

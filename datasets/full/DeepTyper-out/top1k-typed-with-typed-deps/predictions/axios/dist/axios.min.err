@@ -17,7 +17,7 @@ Build info:
 -------------------------------------------------------------------
 
 About to throw exception 'Value::Create:: The number of sequences must be > 0'
-/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
+/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
   warnings.warn('Unsupported Linux distribution (%s-%s). CNTK supports Ubuntu 16.04 and above, only.' % (__my_distro__, __my_distro_ver__))
 Traceback (most recent call last):
   File "readout.py", line 227, in <module>
@@ -26,11 +26,11 @@ Traceback (most recent call last):
     enhance_data(data, enc)
   File "readout.py", line 103, in enhance_data
     mems = s.next_minibatch(minibatch_size)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
     value = Value.create(self._vars[si.name], mb_data)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
     result = f(*args, **kwds)
-  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
     True)  # always create a copy in Value
 ValueError: Value::Create:: The number of sequences must be > 0
 
