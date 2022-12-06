@@ -24,7 +24,7 @@ In each case, the model will be loaded only once per invocation.
 
 * Rust 1.64.0
 * Python
-* The following Python packages: `torch`, `tqdm`, `transformers`
+* The following Python packages: `torch`, `transformers`
 
 ## Setup
 
