@@ -9,7 +9,7 @@ import traceback
 BOS = "<|endoftext|>"
 EOM = "<|endofmask|>"
 
-# NOTE(arjun): Does this have to be hard-coded?
+# NOTE: Does this have to be hard-coded?
 MODEL_MAX_OUTPUT_LENGTH = 2048
 
 VALIDATE_TYPE_EXEC = "../rs/target/debug/ts_infer_incoder"
@@ -33,7 +33,7 @@ def _templatize_function(line: str):
     """
     If the line contains function(x, y, z) then turn it into function(x ??, y ??, z ??)
 
-    TODO(arjun): Support return type annotation
+    TODO: Support return type annotation
     """
     # Find the first occurrence of "function("
     function_start = _FUNC_START_REGEX.search(line)
@@ -117,7 +117,7 @@ class TypeInference:
         output = self.model.generate(
             input_ids=input_ids,
             do_sample=self.do_sample,
-            top_p=0.95, # NOTE(arjun): Any point in this?
+            top_p=0.95, # NOTE: Any point in this?
             temperature=self.temperature,
             max_length=max_length,
         )
