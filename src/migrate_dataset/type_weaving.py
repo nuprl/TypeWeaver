@@ -94,7 +94,7 @@ class TypeWeaver:
             c_js_file = util.containerized_path(js_file, self.directory)
 
             # Run type_weaver on the file
-            args = ["bash", self.path.name, "--format", self.engine, "--types", c_csv_file, c_js_file]
+            args = [self.path, "--format", self.engine, "--types", c_csv_file, c_js_file]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output

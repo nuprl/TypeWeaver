@@ -117,7 +117,7 @@ class InCoder:
         # Only start InCoder if there are packages to run
         p = None
         if packages_list:
-            args = ["bash", self.path.name, "--write-done-file", "--directories", *packages_list]
+            args = [self.path, "--write-done-file", "--directories", *packages_list]
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
         for i, package in enumerate(packages):

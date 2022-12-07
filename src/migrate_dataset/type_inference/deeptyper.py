@@ -77,7 +77,7 @@ class DeepTyper:
 
             # Running DeepTyper in a container means adjusting the path in the subprocess
             cfile = util.containerized_path(file, self.directory)
-            args = ["bash", self.path.name, cfile]
+            args = [self.path, cfile]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output

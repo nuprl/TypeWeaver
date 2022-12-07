@@ -131,7 +131,7 @@ class LambdaNet:
         # Only start LambdaNet if there are packages to run
         p = None
         if packages_list:
-            args = ["bash", self.path.name, "--writeDoneFile"]
+            args = [self.path, "--writeDoneFile"]
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
             threading.Thread(target=util.send_data_to, args=[p, packages_string]).start()
 
