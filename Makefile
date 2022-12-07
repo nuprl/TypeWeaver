@@ -38,6 +38,7 @@ micro:
 				--directory datasets/micro \
 				--dataset $$d \
 				--engine $$s \
+				--emit-declaration \
 				--typecheck baseline ; \
 		done ; \
 	done

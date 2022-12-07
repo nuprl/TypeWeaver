@@ -88,7 +88,9 @@ class TypeChecker:
             warn_file.unlink()
 
         if self.emit_declaration:
-            emit_opts = ["--removeComments", "--declaration", "--emitDeclarationOnly", "--declarationDir", Path(self.dts_directory, self.short_name(package))]
+            # Running tsc in a container means adjusting the path
+            decl_dir = util.containerized_path(Path(self.dts_directory, self.short_name(package)), self.directory)
+            emit_opts = ["--removeComments", "--declaration", "--emitDeclarationOnly", "--declarationDir", decl_dir]
         else:
             emit_opts = ["--noEmit"]
 
