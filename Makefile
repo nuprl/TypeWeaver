@@ -31,6 +31,15 @@ micro:
 				--weave baseline ; \
 		done ; \
 	done
-	# TODO: type check
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		for d in $$(ls datasets/micro/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers 1 \
+				--directory datasets/micro \
+				--dataset $$d \
+				--engine $$s \
+				--typecheck baseline ; \
+		done ; \
+	done
 
 .PHONY: build micro
