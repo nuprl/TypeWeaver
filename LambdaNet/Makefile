@@ -1,3 +1,5 @@
+SHELL     := /bin/bash
+
 DOCKER    := podman
 
 build: Dockerfile
