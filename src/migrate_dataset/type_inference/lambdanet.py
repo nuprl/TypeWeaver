@@ -6,7 +6,7 @@ import util
 from util import Result, ResultStatus
 
 class LambdaNet:
-    path = Path(util.tools_root, "..", "LambdaNet").resolve()
+    path = Path(util.tools_root, "..", "LambdaNet", "run.sh").resolve()
 
     SLEEP_TIME = 5
 
@@ -123,15 +123,16 @@ class LambdaNet:
         to_skip = self.get_skip_set(packages)
 
         # Create a string with the packages to run, one per line
+        # Running LambdaNet in a container means adjusting the path
         packages_to_run = set(packages).difference(to_skip)
-        packages_list = sorted([str(p) for p in packages_to_run])
+        packages_list = sorted([str(util.containerized_path(p, self.directory)) for p in packages_to_run])
         packages_string = "\n".join(packages_list)
 
         # Only start LambdaNet if there are packages to run
         p = None
         if packages_list:
-            args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
-            p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path)
+            args = ["bash", self.path.name, "--writeDoneFile"]
+            p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
             threading.Thread(target=util.send_data_to, args=[p, packages_string]).start()
 
         for i, package in enumerate(packages):

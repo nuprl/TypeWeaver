@@ -7,6 +7,7 @@ build: Dockerfile
 
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
+		--volume $(PWD)/../datasets:/data:rw \
 		--entrypoint /bin/bash \
 		typeweaver-lambdanet
 

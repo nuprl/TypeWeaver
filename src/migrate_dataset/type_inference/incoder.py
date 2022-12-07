@@ -6,7 +6,7 @@ import util
 from util import Result, ResultStatus
 
 class InCoder:
-    path = Path(util.tools_root, "..", "InCoder", "py", "main.py").resolve()
+    path = Path(util.tools_root, "..", "InCoder", "run.sh").resolve()
 
     SLEEP_TIME = 5
 
@@ -110,13 +110,14 @@ class InCoder:
         to_skip = self.get_skip_set(packages)
 
         # Create a list of the packages to run
+        # Running InCoder in a container means adjusting the path
         packages_to_run = set(packages).difference(to_skip)
-        packages_list = sorted([str(p) for p in packages_to_run])
+        packages_list = sorted([str(util.containerized_path(p, self.directory)) for p in packages_to_run])
 
         # Only start InCoder if there are packages to run
         p = None
         if packages_list:
-            args = ["python", self.path.name, "--write-done-file", "--directories", *packages_list]
+            args = ["bash", self.path.name, "--write-done-file", "--directories", *packages_list]
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
         for i, package in enumerate(packages):

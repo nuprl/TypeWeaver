@@ -6,7 +6,7 @@ import util
 from util import Result, ResultStatus
 
 class DeepTyper:
-    path = Path(util.tools_root, "..", "DeepTyper", "pretrained", "readout.py").resolve()
+    path = Path(util.tools_root, "..", "DeepTyper", "run.sh").resolve()
 
     def __init__(self, args):
         if not self.path.exists():
@@ -75,8 +75,9 @@ class DeepTyper:
             if err_file.exists():
                 err_file.unlink()
 
-            # Run DeepTyper on the file
-            args = ["python", self.path.name, file]
+            # Running DeepTyper in a container means adjusting the path in the subprocess
+            cfile = util.containerized_path(file, self.directory)
+            args = ["bash", self.path.name, cfile]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output
