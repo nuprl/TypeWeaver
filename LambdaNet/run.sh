@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DOCKER=podman
+# use podman by default
+# override by calling script with `DOCKER=docker ./run.sh`
+: ${DOCKER:=podman}
 
 # need --interactive because LambdaNet reads from stdin
 $DOCKER run --interactive --rm \
