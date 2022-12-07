@@ -42,5 +42,8 @@ micro:
 				--typecheck baseline ; \
 		done ; \
 	done
+	@python3 src/summarize_results.py \
+		--data datasets/micro \
+		--workers 1
 
 .PHONY: build micro
