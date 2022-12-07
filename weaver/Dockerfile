@@ -8,10 +8,13 @@ RUN apt-get update -yq && apt-get install -yq \
 
 ENV PATH="${PATH}:/code/node_modules/.bin"
 
-# install modules and compile typescript
-COPY src /code
+# copy package.json and install node modules
 WORKDIR /code
-RUN npm install \
- && tsc
+COPY src/*.json .
+RUN npm install
+
+# compile typescript
+COPY src .
+RUN tsc
 
 ENTRYPOINT ["node", "index.js"]

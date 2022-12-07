@@ -7,7 +7,7 @@ import util
 from util import Result, ResultStatus
 
 class TypeWeaver:
-    path = Path(util.tools_root, "type_weaver", "index.js").resolve()
+    path = Path(util.tools_root, "..", "weaver", "run.sh").resolve()
 
     def __init__(self, args):
         if not self.path.exists():
@@ -89,8 +89,12 @@ class TypeWeaver:
             if warn_file.exists():
                 warn_file.unlink()
 
+            # Running type_weaver in a container means adjusting the paths in the subprocess
+            c_csv_file = util.containerized_path(csv_file, self.directory)
+            c_js_file = util.containerized_path(js_file, self.directory)
+
             # Run type_weaver on the file
-            args = ["node", self.path.name, "--format", self.engine, "--types", csv_file, js_file]
+            args = ["bash", self.path.name, "--format", self.engine, "--types", c_csv_file, c_js_file]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output

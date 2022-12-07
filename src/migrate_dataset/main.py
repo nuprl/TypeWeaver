@@ -8,7 +8,7 @@ import util
 def parse_args():
     cpu_count = os.cpu_count();
 
-    parser = argparse.ArgumentParser(description="JavaScript type inference runner script.")
+    parser = argparse.ArgumentParser(description="JavaScript to TypeScript migration script.")
     parser.add_argument(
         "--engine",
         required=True,

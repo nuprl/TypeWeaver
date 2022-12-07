@@ -10,7 +10,7 @@ build:
 	$(MAKE) build -C InCoder
 	$(MAKE) build -C weaver
 
-# Test the evaluation on the micro datasets
+# Test the evaluation on the micro dataset
 micro:
 	@for s in DeepTyper LambdaNet InCoder ; do \
 		for d in $$(ls datasets/micro/original); do \
@@ -21,5 +21,16 @@ micro:
 				--infer ; \
 		done ; \
 	done
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls datasets/micro/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers 1 \
+				--directory datasets/micro \
+				--dataset $$d \
+				--engine $$s \
+				--weave baseline ; \
+		done ; \
+	done
+	# TODO: type check
 
 .PHONY: build micro
