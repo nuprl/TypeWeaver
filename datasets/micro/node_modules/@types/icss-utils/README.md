@@ -1,0 +1,52 @@
+# Installation
+> `npm install --save @types/icss-utils`
+
+# Summary
+This package contains type definitions for icss-utils (https://github.com/css-modules/icss-utils#readme).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/icss-utils.
+## [index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/icss-utils/index.d.ts)
+````ts
+// Type definitions for icss-utils 5.1
+// Project: https://github.com/css-modules/icss-utils#readme
+// Definitions by: Bob Matcuk <https://github.com/bmatcuk>
+// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// TypeScript Version: 2.2
+
+import { Container, Rule } from "postcss";
+
+export interface Replacements {
+    [key: string]: string;
+}
+
+export interface CSSImports {
+    [key: string]: { [key: string]: string };
+}
+
+export interface CSSExports {
+    [key: string]: string;
+}
+
+export interface ExtractedICSS {
+    icssImports: CSSImports;
+    icssExports: CSSExports;
+}
+
+export function replaceValueSymbols(value: string, replacements: Replacements): string;
+
+export function replaceSymbols(css: Container, replacements: Replacements): void;
+
+export function extractICSS(css: Container, removeRules?: boolean): ExtractedICSS;
+
+export function createICSSRules(imports: CSSImports, exports: CSSExports): Rule[];
+
+````
+
+### Additional Details
+ * Last updated: Thu, 18 Nov 2021 19:01:38 GMT
+ * Dependencies: [@types/postcss](https://npmjs.com/package/@types/postcss)
+ * Global values: none
+
+# Credits
+These definitions were written by [Bob Matcuk](https://github.com/bmatcuk).
