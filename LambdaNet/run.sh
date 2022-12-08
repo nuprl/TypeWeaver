@@ -6,7 +6,7 @@
 
 # need --interactive because LambdaNet reads from stdin
 $DOCKER run --interactive --rm \
-    --volume $(pwd)/../datasets:/data:rw \
+    --volume $(pwd)/../data:/data:rw \
     --entrypoint sbt \
     typeweaver-lambdanet \
     "runMain lambdanet.TypeInferenceService $@"

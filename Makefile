@@ -13,29 +13,29 @@ build:
 # Test the evaluation on the micro dataset
 micro:
 	@for s in DeepTyper LambdaNet InCoder ; do \
-		for d in $$(ls datasets/micro/original); do \
+		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
-				--directory datasets/micro \
+				--directory data/micro \
 				--dataset $$d \
 				--engine $$s \
 				--infer ; \
 		done ; \
 	done
 	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls datasets/micro/original); do \
+		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
 				--workers 1 \
-				--directory datasets/micro \
+				--directory data/micro \
 				--dataset $$d \
 				--engine $$s \
 				--weave baseline ; \
 		done ; \
 	done
 	@for s in DeepTyper LambdaNet InCoder ; do \
-		for d in $$(ls datasets/micro/original); do \
+		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
 				--workers 1 \
-				--directory datasets/micro \
+				--directory data/micro \
 				--dataset $$d \
 				--engine $$s \
 				--emit-declaration \
@@ -43,7 +43,7 @@ micro:
 		done ; \
 	done
 	@python3 src/summarize_results.py \
-		--data datasets/micro \
+		--data data/micro \
 		--workers 1
 
 .PHONY: build micro

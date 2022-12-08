@@ -5,5 +5,5 @@
 : ${DOCKER:=podman}
 
 $DOCKER run --rm \
-    --volume $(pwd)/../datasets:/data:rw \
+    --volume $(pwd)/../data:/data:rw \
     typeweaver-weaver "$@"

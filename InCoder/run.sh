@@ -8,5 +8,5 @@
 $DOCKER run --rm \
     --security-opt=label=disable \
     --hooks-dir=/usr/share/containers/oci/hooks.d/ \
-    --volume $(pwd)/../datasets:/data:rw \
+    --volume $(pwd)/../data:/data:rw \
     typeweaver-incoder "$@"

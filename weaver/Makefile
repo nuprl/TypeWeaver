@@ -8,7 +8,7 @@ build: Dockerfile
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
 		--entrypoint /bin/bash \
-		--volume $(PWD)/../datasets:/data:rw \
+		--volume $(PWD)/../data:/data:rw \
 		typeweaver-weaver
 
 .PHONY: build shell
