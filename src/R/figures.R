@@ -86,12 +86,6 @@ save.table(dataset_summary.tex)
 # Graph: distribution of package lines of code
 ################################################################################
 
-# package_loc_hist.pdf <-
-#   ggplot(loc_per_package, aes(x=loc)) +
-#   geom_histogram(binwidth=100)
-#
-# save.graph(package_loc_hist.pdf)
-
 package_loc_cdf.pdf <-
   ggplot(loc_per_package, aes(x=loc)) +
   scale_x_continuous(name="Lines of code", breaks=seq(0, 10000, by=2000)) +
@@ -304,12 +298,6 @@ errorfree_per_package.pdf <-
 
 save.graph(errorfree_per_package.pdf)
 
-# errorfree_per_package_cdf.pdf <-
-#   ggplot(errorfree_per_package, aes(x=pct, color=system)) +
-#   stat_ecdf()
-#
-# save.graph(errorfree_per_package_cdf.pdf)
-
 ################################################################################
 # Table: number/percent of correct type annotations, wrt to ground truth
 ################################################################################
@@ -394,23 +382,6 @@ accuracy.pdf <-
 save.graph(accuracy.pdf)
 
 ################################################################################
-# Graph: accuracy vs percent of errorfree files
-################################################################################
-
-accuracy_per_package <- accuracy_data.es6 %>%
-  filter(sigs > 0) %>%
-  group_by(dataset, package, system) %>%
-  summarize(.groups="drop", accuracy = correct / n * 100)
-
-accuracy_vs_errorfree <- errorfree_per_package %>%
-  inner_join(accuracy_per_package, by=c("dataset", "package", "system"))
-
-# accuracy_vs_errorfree.pdf <- ggplot(accuracy_vs_errorfree, aes(x=pct, y=accuracy)) +
-#   geom_point()
-#
-# save.graph(accuracy_vs_errorfree.pdf)
-
-################################################################################
 # Graph: error distribution, per package
 ################################################################################
 
@@ -441,23 +412,6 @@ error_cdf.pdf <-
   facet_wrap(vars(dataset), ncol=2)
 
 save.graph(error_cdf.pdf)
-
-
-################################################################################
-# Graph: number of errors vs lines of code
-################################################################################
-
-errors_vs_loc <- errors_per_package %>%
-  left_join(loc_per_package, by=c("dataset", "package"))
-
-# errors_vs_loc.pdf <-
-#   ggplot(errors_vs_loc, aes(x=loc, y=errors)) +
-#   geom_point() +
-#   scale_y_log10() +
-#   scale_x_log10() +
-#   facet_grid(rows=vars(system), cols=vars(dataset))
-#
-# save.graph(errors_vs_loc.pdf)
 
 ################################################################################
 # Table: top 10 error codes
@@ -561,41 +515,6 @@ error_codes.pdf <-
   scale_y_continuous(name="Count", labels=scales::label_comma())
 
 save.graph(error_codes.pdf)
-
-################################################################################
-# Graph: error codes as percent of total occurrences
-################################################################################
-
-# error_codes.total <- tibble(error = "Total",
-#                             dt = sum(error_codes_summary$dt),
-#                             ln = sum(error_codes_summary$ln),
-#                             ic = sum(error_codes_summary$ic),
-#                             total = sum(error_codes_summary$total))
-#
-# error_codes.pct <- error_codes_summary %>%
-#   mutate(error,
-#          dt = dt / error_codes.total$dt,
-#          ln = ln / error_codes.total$ln,
-#          ic = ic / error_codes.total$ic)
-#
-# error_codes.pct.10.rest <- error_codes.pct %>%
-#   arrange(desc(total)) %>%
-#   tail(nrow(.)-10)
-# error_codes.pct.10 <- error_codes.pct %>%
-#   arrange(desc(total)) %>%
-#   head(10) %>%
-#   add_row(error = "Other",
-#           dt = sum(error_codes.pct.10.rest$dt),
-#           ln = sum(error_codes.pct.10.rest$ln),
-#           ic = sum(error_codes.pct.10.rest$ic),
-#           total = sum(error_codes.pct.10.rest$total))
-#
-# error_codes.pct.long <- error_codes.pct %>%
-#   transmute(error, deeptyper=dt, lambdanet=ln, incoder=ic) %>%
-#   pivot_longer(cols=2:4, names_to="system", values_to="pct")
-#
-# ggplot(error_codes.pct.long, aes(x=pct, color=system)) +
-#   stat_ecdf()
 
 ################################################################################
 # Table: percent of packages that type check, pre-es6 vs es6
@@ -803,84 +722,3 @@ typechecks_es6.pdf <-
   scale_y_continuous(name="Packages")
 
 save.graph(typechecks_es6.pdf)
-
-# typecheck_per_package.total <- typecheck_per_package.comparison %>%
-#   group_by(dataset, system) %>%
-#   summarize(.groups="drop", total = sum(n))
-#
-# typecheck_per_package.pct <-
-#   inner_join(
-#     typecheck_per_package.comparison,
-#     typecheck_per_package.total,
-#     by=c("dataset", "system")) %>%
-#   mutate(pct = n / total * 100)
-#
-# ggplot(typecheck_per_package.pct, aes(x=system, y=pct, fill=typechecks)) +
-#   geom_bar(stat="identity", position=position_dodge()) +
-#   facet_wrap(vars(dataset), ncol=2)
-
-################################################################################
-# Graph: plotting the diff in files with no errors, before/after es6 transform
-################################################################################
-
-# pct_errorfree_per_package.pre.dt <- errors_per_file.dt %>%
-#   filter(!str_ends(dataset, "es6")) %>%
-#   group_by(dataset, package) %>%
-#   summarize(.groups="drop", dt.no_errors = sum(dt == 0), dt.nfiles = n(), dt.pct = dt.no_errors / dt.nfiles * 100)
-#
-# pct_errorfree_per_package.pre.ln <- errors_per_file.ln %>%
-#   filter(!str_ends(dataset, "es6")) %>%
-#   group_by(dataset, package) %>%
-#   summarize(.groups="drop", ln.no_errors = sum(ln == 0), ln.nfiles = n(), ln.pct = ln.no_errors / ln.nfiles * 100)
-#
-# pct_errorfree_per_package.pre.ic <- errors_per_file.ic %>%
-#   filter(!str_ends(dataset, "es6")) %>%
-#   group_by(dataset, package) %>%
-#   summarize(.groups="drop", ic.no_errors = sum(ic == 0), ic.nfiles = n(), ic.pct = ic.no_errors / ic.nfiles * 100)
-#
-# errorfree_per_package.pre <- pct_errorfree_per_package.pre.dt %>%
-#   inner_join(pct_errorfree_per_package.pre.ln, by="package") %>%
-#   inner_join(pct_errorfree_per_package.pre.ic, by="package") %>%
-#   select(dataset, package, deeptyper=dt.pct, lambdanet=ln.pct, incoder=ic.pct) %>%
-#   pivot_longer(cols=3:5, names_to="system", values_to="pct")
-#
-# errorfree_per_package.comparison <-
-#   inner_join(
-#     errorfree_per_package.pre %>% rename_datasets(),
-#     errorfree_per_package %>% rename_datasets(),
-#     by=c("dataset", "package", "system"),
-#     suffix=c(".pre", ".es6")) %>%
-#   mutate(diff = pct.es6 - pct.pre)
-#
-# ggplot(errorfree_per_package.comparison, aes(x=reorder(package, -diff, sum), y=diff)) +
-#   geom_bar(stat="identity", position="dodge") +
-#   facet_wrap(vars(system), ncol=1)
-#
-# ggplot(errorfree_per_package.comparison, aes(x=diff)) +
-#   geom_histogram(binwidth=25, position="dodge") +
-#   facet_wrap(vars(system), nrow=1)
-
-################################################################################
-# Graph: plotting the diff in accuracy, before/after es6 transform
-################################################################################
-
-# accuracy_per_package.pre <- accuracy_data.pre %>%
-#   filter(sigs > 0) %>%
-#   group_by(dataset, package, system) %>%
-#   summarize(.groups="drop", accuracy = correct / n * 100)
-#
-# accuracy_per_package.comparison <-
-#   inner_join(
-#     accuracy_per_package.pre %>% rename_datasets(),
-#     accuracy_per_package %>% rename_datasets(),
-#     by=c("dataset", "package", "system"),
-#     suffix=c(".pre", ".es6")) %>%
-#   mutate(diff = accuracy.es6 - accuracy.pre)
-#
-# ggplot(accuracy_per_package.comparison, aes(x=reorder(package, -diff, sum), y=diff)) +
-#   geom_bar(stat="identity", position="dodge") +
-#   facet_wrap(vars(system), ncol=1)
-#
-# ggplot(accuracy_per_package.comparison, aes(x=diff)) +
-#   geom_histogram(binwidth=10, position="dodge") +
-#   facet_wrap(vars(system), nrow=1)
