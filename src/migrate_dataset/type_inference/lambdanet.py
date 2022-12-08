@@ -136,6 +136,11 @@ class LambdaNet:
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
             threading.Thread(target=util.send_data_to, args=[p, packages_string]).start()
 
+        time.sleep(self.SLEEP_TIME)
+        if p and p.poll():
+            print("Error! LambdaNet process failed!")
+            exit(2)
+
         with tqdm(total=len(packages), desc=f"LambdaNet {self.dataset}", unit="package") as t:
             for package in packages:
                 t.set_postfix_str(self.short_name(package))

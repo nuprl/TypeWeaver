@@ -121,6 +121,11 @@ class InCoder:
             args = [self.path, "--write-done-file", "--directories", *packages_list]
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
+        time.sleep(self.SLEEP_TIME)
+        if p and p.poll():
+            print("Error! InCoder process failed!")
+            exit(2)
+
         with tqdm(total=len(packages), desc=f"InCoder {self.dataset}", unit="package") as t:
             for package in packages:
                 t.set_postfix_str(self.short_name(package))
