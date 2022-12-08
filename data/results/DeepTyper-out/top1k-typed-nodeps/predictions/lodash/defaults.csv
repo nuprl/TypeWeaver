@@ -1,0 +1,190 @@
+importKeyword
+ Text.Whitespace
+eqName.Otherany0.6407boolean0.1227number0.0336complex0.0164string0.0110
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./eq.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used for built-in method references. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+objectProtoName.Othercomplex0.7320any0.1244Object0.0391{}0.0159boolean0.0155
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0001complex0.0000any0.0000FunctionConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.7361complex0.0767object0.0224{}0.0184any0.0104
+\n\nText.Whitespace
+Text
+/** Used to check objects for own properties. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hasOwnPropertyName.Othercomplex0.8251any0.1185Object0.0196{}0.0116string0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectProtoName.Othercomplex0.6419any0.2815Object0.0289{}0.0103object0.0025
+.Punctuation
+hasOwnPropertyName.Othercomplex0.8168any0.1343Object0.0143string0.0118boolean0.0090
+\n\nText.Whitespace
+Text
+/**\n * Assigns own and inherited enumerable string keyed properties of source\n * objects to the destination object for all destination properties that\n * resolve to `undefined`. Source objects are applied from left to right.\n * Once a property is set, additional values of the same property are ignored.\n *\n * **Note:** This method mutates `object`.\n *\n * @since 0.1.0\n * @category Object\n * @param {Object} object The destination object.\n * @param {...Object} [sources] The source objects.\n * @returns {Object} Returns `object`.\n * @see defaultsDeep\n * @example\n *\n * defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 })\n * // => { 'a': 1, 'b': 2 }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+defaultsName.Otherany0.4584string0.1672complex0.1000boolean0.0743Object0.0527
+(Punctuation
+objectName.Otherany0.5441Object0.3527object0.0377string0.0247{}0.0122
+,Punctuation
+ Text.Whitespace
+...Punctuation
+sourcesName.Otherany[]0.7626any0.1139string[]0.0410complex0.0252Object0.0119
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+objectName.OtherObject0.6548any0.2081object0.0751{}0.0224any[]0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9994Object0.0004any0.0001complex0.0000{}0.0000
+(Punctuation
+objectName.OtherObject0.4259any0.4092object0.1023{}0.0180complex0.0116
+)Punctuation
+\n  Text.Whitespace
+sourcesName.Otherany[]0.4407complex0.2344any0.2165string[]0.0235Object0.0101
+.Punctuation
+forEachName.Othervoid0.8849complex0.0644v...0.0201any0.0172{}0.0010
+(Punctuation
+(Punctuation
+sourceName.Otherany0.5750string0.3841complex0.0135Object0.0062number0.0035
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+sourceName.Otherany0.8151string0.0881complex0.0246Object0.0237{}0.0151
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+sourceName.Otherany0.7628Object0.0974string0.0614complex0.0125{}0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997Object0.0001any0.0001complex0.0000{}0.0000
+(Punctuation
+sourceName.Otherany0.8311string0.0598complex0.0545Object0.0177{}0.0117
+)Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.9403any0.0533complex0.0034number0.0007string[]0.0006
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+sourceName.Otherany0.8294complex0.0709Object0.0291string0.0175{}0.0171
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.9210Object0.0189{}0.0169complex0.0114object0.0103
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.6127Object0.2430object0.0580{}0.0396complex0.0120
+[Punctuation
+keyName.Otherstring0.9510any0.0402complex0.0050number0.0014{}0.0003
+]Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.9259string0.0397complex0.0133{}0.0037Object0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+(Punctuation
+eqName.Otherany0.9003boolean0.0560string0.0078complex0.0078number0.0064
+(Punctuation
+valueName.Otherany0.9393string0.0303complex0.0077Object0.0073{}0.0032
+,Punctuation
+ Text.Whitespace
+objectProtoName.Otherany0.6510complex0.3108{}0.0119Object0.0089any[]0.0026
+[Punctuation
+keyName.Otherstring0.9173any0.0712complex0.0060number0.0031boolean0.0003
+]Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+hasOwnPropertyName.Othercomplex0.7556any0.2043Object0.0126boolean0.0067{}0.0051
+.Punctuation
+callName.Otherany0.9898string0.0055number0.0011boolean0.0008void0.0006
+(Punctuation
+objectName.Otherany0.7895Object0.1465object0.0281{}0.0084string0.0068
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.7967any0.1871complex0.0055number0.0026Object0.0014
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+objectName.Otherany0.6199Object0.2305object0.0542{}0.0387complex0.0173
+[Punctuation
+keyName.Otherstring0.9016any0.0871number0.0048complex0.0031{}0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sourceName.Otherany0.9321{}0.0111Object0.0107complex0.0092string0.0075
+[Punctuation
+keyName.Otherstring0.8931any0.0947number0.0036complex0.0032void0.0005
+]Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.4243Object0.2688object0.1719{}0.0511complex0.0069
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+defaultsName.Otherany0.1183complex0.0533Object0.0199object0.0197string0.0188
+\nText.Whitespace

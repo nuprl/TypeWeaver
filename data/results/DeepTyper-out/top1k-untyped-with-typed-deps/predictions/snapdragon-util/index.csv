@@ -1,0 +1,4017 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+typeOfName.Otherany0.8845string0.0483boolean0.0162number0.0148void0.0118
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'kind-of'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+utilsName.Otherany0.9128complex0.0688string0.0072void0.0037number0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given value is a node.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var node = new Node({type: 'foo'});\n * console.log(utils.isNode(node)); //=> true\n * console.log(utils.isNode({})); //=> false\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @returns {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9048complex0.0881void0.0010string0.0004any[]0.0003
+.Punctuation
+isNodeName.Otherboolean0.8913any0.0970string0.0038complex0.0036void0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9110Node0.0170string0.0109complex0.0042boolean0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeOfName.Otherboolean0.5946any0.3051string0.0533complex0.0183number0.0073
+(Punctuation
+nodeName.Otherany0.9317Node0.0107string0.0079never0.0042complex0.0020
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+nodeName.Otherany0.9645complex0.0121Node0.0033boolean0.0019Error0.0009
+.Punctuation
+isNodeName.Otherany0.5855boolean0.4064complex0.0033string0.0018void0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Emit an empty string for the given `node`.\n *\n * ```js\n * // do nothing for beginning-of-string\n * snapdragon.compiler.set('bos', utils.noop);\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @returns {undefined}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9371complex0.0589void0.0012string0.0003any[]0.0002
+.Punctuation
+noopName.Othervoid0.7934any0.1906complex0.0054boolean0.0047Function0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8716Node0.0122never0.0068complex0.0062string0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+appendName.Othervoid0.7986any0.1340complex0.0510boolean0.0030this0.0025
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.9454string0.0055never0.0055complex0.0044Node0.0036
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns `node.value` or `node.val`.\n *\n * ```js\n * const star = new Node({type: 'star', value: '*'});\n * const slash = new Node({type: 'slash', val: '/'});\n * console.log(utils.value(star)) //=> '*'\n * console.log(utils.value(slash)) //=> '/'\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @returns {String} returns\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9324complex0.0613void0.0019string0.0002number0.0002
+.Punctuation
+valueName.Otherany0.9477string0.0323number0.0059boolean0.0058complex0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9389Node0.0078never0.0047complex0.0039string0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9710complex0.0118Node0.0015never0.0012string0.0006
+.Punctuation
+valueName.Otherany0.9755string0.0166complex0.0031number0.0013boolean0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9850complex0.0049string0.0007Node0.0006Error0.0004
+.Punctuation
+valueName.Otherany0.9545string0.0316number0.0053boolean0.0026complex0.0026
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9821complex0.0048string0.0009never0.0009Node0.0007
+.Punctuation
+valName.Otherany0.9690string0.0102boolean0.0055complex0.0046number0.0033
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Append `node.value` to `compiler.output`.\n *\n * ```js\n * snapdragon.compiler.set('text', utils.identity);\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @returns {undefined}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8406complex0.1513void0.0022any[]0.0004{}0.0003
+.Punctuation
+identityName.Otherany0.4825void0.3921T0.0339complex0.0174number0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8430never0.0144Node0.0138string0.0091complex0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+appendName.Othervoid0.8021any0.1466complex0.0354boolean0.0021this0.0017
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+utilsName.Otherany0.9607complex0.0371string0.0003void0.0003number0.0001
+.Punctuation
+valueName.Otherany0.8823string0.0889complex0.0099number0.0047boolean0.0024
+(Punctuation
+nodeName.Otherany0.9610string0.0045never0.0045Node0.0032complex0.0023
+)Punctuation
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.9284never0.0083complex0.0066Node0.0047string0.0046
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Previously named `.emit`, this method appends the given `value`\n * to `compiler.output` for the given node. Useful when you know\n * what value should be appended advance, regardless of the actual\n * value of `node.value`.\n *\n * ```js\n * snapdragon.compiler\n *   .set('i', function(node) {\n *     this.mapVisit(node);\n *   })\n *   .set('i.open', utils.append('<i>'))\n *   .set('i.close', utils.append('</i>'))\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @returns {Function} Returns a compiler middleware function.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9673complex0.0275void0.0024string0.0002any[]0.0001
+.Punctuation
+appendName.Otherany0.8253void0.1496complex0.0110boolean0.0020number0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valueName.Otherany0.8438string0.1434number0.0047boolean0.0021complex0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8799Node0.0122string0.0072never0.0050complex0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+appendName.Othervoid0.7161any0.1952complex0.0655this0.0038boolean0.0029
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8895string0.0944number0.0052complex0.0027boolean0.0012
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.9560string0.0060complex0.0056never0.0042Node0.0029
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Used in compiler middleware, this onverts an AST node into\n * an empty `text` node and deletes `node.nodes` if it exists.\n * The advantage of this method is that, as opposed to completely\n * removing the node, indices will not need to be re-calculated\n * in sibling nodes, and nothing is appended to the output.\n *\n * ```js\n * utils.toNoop(node);\n * // convert `node.nodes` to the given value instead of deleting it\n * utils.toNoop(node, []);\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Array} `nodes` Optionally pass a new `nodes` value, to replace the existing `node.nodes` array.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9498complex0.0446void0.0014string0.0003any[]0.0002
+.Punctuation
+toNoopName.Otherany0.6884void0.2797complex0.0092boolean0.0061Function0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9218string0.0061Node0.0052complex0.0027Element0.0023
+,Punctuation
+ Text.Whitespace
+nodesName.Otherany0.9500string0.0068any[]0.0057complex0.0027number0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodesName.Otherany0.9596string0.0053any[]0.0030boolean0.0029complex0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+nodeName.Otherany0.9784complex0.0040Node0.0008never0.0006string0.0005
+.Punctuation
+nodesName.Otherany0.9691any[]0.0038string0.0038complex0.0025RegExp0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodesName.Otherany0.9496string0.0093any[]0.0090complex0.0043RegExp0.0023
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9796complex0.0059Node0.0005string0.0004Error0.0004
+.Punctuation
+nodesName.Otherany0.9756complex0.0041string0.0036any[]0.0031RegExp0.0007
+;Punctuation
+\n    Text.Whitespace
+nodeName.Otherany0.9503complex0.0111string0.0014Node0.0013never0.0013
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'text'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+nodeName.Otherany0.9626complex0.0140never0.0015string0.0012Node0.0010
+.Punctuation
+valueName.Otherany0.9503string0.0460complex0.0013boolean0.0004number0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Visit `node` with the given `fn`. The built-in `.visit` method in snapdragon\n * automatically calls registered compilers, this allows you to pass a visitor\n * function.\n *\n * ```js\n * snapdragon.compiler.set('i', function(node) {\n *   utils.visit(node, function(childNode) {\n *     // do stuff with "childNode"\n *     return childNode;\n *   });\n * });\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Function} `fn`\n * @return {Object} returns the node after recursively visiting all child nodes.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8607complex0.1301void0.0044any[]0.0005string0.0002
+.Punctuation
+visitName.Othervoid0.6295any0.3488Promise<void>0.0041complex0.0039boolean0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9461Node0.0045complex0.0032never0.0028Function0.0027
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.9174Function0.0423boolean0.0111string0.0071complex0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9420void0.0284complex0.0113Assert0.0029Function0.0028
+(Punctuation
+isFunctionName.Othercomplex0.4025boolean0.2994any0.2785void0.0051string0.0043
+(Punctuation
+fnName.Otherany0.7756Function0.1154void0.0469complex0.0338boolean0.0048
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected a visitor function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+expectName.Otherany0.9709complex0.0249void0.0015Function0.0002ExpectStatic0.0002
+(Punctuation
+nodeName.Otherany0.9117complex0.0207Node0.0061never0.0026Element0.0024
+,Punctuation
+ Text.Whitespace
+'node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+fnName.Otherany0.8342Function0.0602void0.0512complex0.0355boolean0.0042
+(Punctuation
+nodeName.Otherany0.9208complex0.0065Node0.0065never0.0041string0.0028
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9584complex0.0151Node0.0016any[]0.0006boolean0.0005
+.Punctuation
+nodesName.Otherany0.9518complex0.0071boolean0.0037any[]0.0033string0.0015
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+utilsName.Otherany0.8589complex0.1301any[]0.0012string0.0007number0.0007
+.Punctuation
+mapVisitName.Otherany0.9282complex0.0168boolean0.0097any[]0.0086string0.0078
+(Punctuation
+nodeName.Otherany0.9565complex0.0072string0.0067Node0.0047number0.0022
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.8152Function0.0479string0.0438number0.0365complex0.0110
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nodeName.Otherany0.9717complex0.0086string0.0025Node0.0017never0.0011
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Map [visit](#visit) the given `fn` over `node.nodes`. This is called by\n * [visit](#visit), use this method if you do not want `fn` to be called on\n * the first node.\n *\n * ```js\n * snapdragon.compiler.set('i', function(node) {\n *   utils.mapVisit(node, function(childNode) {\n *     // do stuff with "childNode"\n *     return childNode;\n *   });\n * });\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Object} `options`\n * @param {Function} `fn`\n * @return {Object} returns the node\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9191complex0.0756void0.0018any[]0.0004string0.0003
+.Punctuation
+mapVisitName.Otherany0.5848void0.3315boolean0.0415complex0.0253Function0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9378Node0.0050Function0.0040complex0.0037string0.0030
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.8853Function0.0664boolean0.0140string0.0118void0.0073
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9340void0.0292complex0.0140Assert0.0038Function0.0033
+(Punctuation
+isFunctionName.Othercomplex0.3858boolean0.3107any0.2846void0.0053string0.0044
+(Punctuation
+fnName.Otherany0.8066Function0.1114void0.0323complex0.0289boolean0.0034
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected a visitor function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+expectName.Otherany0.9611complex0.0335void0.0021NgMatchers0.0003ExpectStatic0.0002
+(Punctuation
+nodeName.Otherany0.9232complex0.0178Node0.0063Element0.0020boolean0.0018
+,Punctuation
+ Text.Whitespace
+'node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9164void0.0309Assert0.0167complex0.0084Function0.0029
+(Punctuation
+isArrayName.Othercomplex0.8876boolean0.0573any0.0416void0.0052any[]0.0017
+(Punctuation
+nodeName.Otherany0.9784complex0.0068Node0.0006any[]0.0005Function0.0003
+.Punctuation
+nodesName.Otherany0.9643any[]0.0070complex0.0054string0.0016string[]0.0011
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node.nodes to be an array'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9848any0.0144string0.0003boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9322any0.0660string0.0007boolean0.0003void0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+nodeName.Otherany0.9394complex0.0165Node0.0031number0.0013Function0.0010
+.Punctuation
+nodesName.Otherany0.9436any[]0.0111complex0.0078string[]0.0025string0.0017
+.Punctuation
+lengthName.Otherany0.8338number0.1643complex0.0007string0.0004void0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.8851any0.1133string0.0006boolean0.0003void0.0002
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+utilsName.Otherany0.8847complex0.1095void0.0020any[]0.0005number0.0002
+.Punctuation
+visitName.Othervoid0.9106any0.0796Promise<void>0.0028complex0.0020boolean0.0015
+(Punctuation
+nodeName.Otherany0.9905complex0.0028Node0.0007Function0.0004any[]0.0003
+.Punctuation
+nodesName.Otherany0.9710any[]0.0052complex0.0051string[]0.0021string0.0014
+[Punctuation
+iName.Othernumber0.9433any0.0531string0.0022void0.0005boolean0.0003
+]Punctuation
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.7818void0.0855Function0.0793number0.0120string0.0116
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9276complex0.0200any[]0.0055Node0.0048never0.0042
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Unshift an `*.open` node onto `node.nodes`.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * snapdragon.parser.set('brace', function(node) {\n *   var match = this.match(/^{/);\n *   if (match) {\n *     var parent = new Node({type: 'brace'});\n *     utils.addOpen(parent, Node);\n *     console.log(parent.nodes[0]):\n *     // { type: 'brace.open', value: '' };\n *\n *     // push the parent "brace" node onto the stack\n *     this.push(parent);\n *\n *     // return the parent node, so it's also added to the AST\n *     return brace;\n *   }\n * });\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Function} `Node` (required) Node constructor function from [snapdragon-node][].\n * @param {Function} `filter` Optionaly specify a filter function to exclude the node.\n * @return {Object} Returns the created opening node.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9001complex0.0947void0.0021string0.0003number0.0002
+.Punctuation
+addOpenName.Otherany0.7133void0.2374complex0.0206boolean0.0143Function0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9092complex0.0116Node0.0115never0.0051Element0.0035
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.9060complex0.0496string0.0072Object0.0056Node0.0032
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.9626string0.0311number0.0024boolean0.0007Object0.0007
+,Punctuation
+ Text.Whitespace
+filterName.Otherany0.8624string0.0705boolean0.0250Filter0.0086complex0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+expectName.Otherany0.9818complex0.0150void0.0012string0.0003ExpectStatic0.0002
+(Punctuation
+nodeName.Otherany0.9579Node0.0074Element0.0047complex0.0041string0.0028
+,Punctuation
+ Text.Whitespace
+'node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9579void0.0122complex0.0091Assert0.0074Function0.0018
+(Punctuation
+isFunctionName.Otherany0.3705boolean0.3505complex0.2571string0.0090void0.0030
+(Punctuation
+NodeName.Otherany0.7939complex0.1618string0.0037Object0.0030Node0.0021
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected Node to be a constructor function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9613string0.0216complex0.0124boolean0.0017number0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+filterName.Otherany0.8086string0.0945boolean0.0695complex0.0042Filter0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.7724string0.2031boolean0.0135number0.0027complex0.0025
+;Punctuation
+\n    Text.Whitespace
+valueName.Otherany0.4950string0.4933boolean0.0045complex0.0017RegExp0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+filterName.Otherany0.7564complex0.0713string0.0686boolean0.0616Filter0.0057
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+filterName.Otherany0.7815complex0.1064boolean0.0603string0.0170void0.0043
+(Punctuation
+nodeName.Otherany0.8932Node0.0350complex0.0101string0.0092never0.0081
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+openName.Otherany0.6965string0.0673number0.0341Node0.0229Object0.0130
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.4908Node0.0548string0.0365Error0.0311complex0.0206
+ Text.Whitespace
+NodeName.Otherany0.7758complex0.2085Node0.0033string0.0017U[]0.0011
+(Punctuation
+{Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+nodeName.Otherany0.8363Node0.0482complex0.0244string0.0089never0.0037
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.open'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5805string0.3798number0.0151boolean0.0085complex0.0019
+:Operator
+ Text.Whitespace
+valueKeyword.Typeany0.6043string0.3573number0.0175boolean0.0074complex0.0028
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+unshiftName.Othernumber0.6186any0.3722string0.0019complex0.0016void0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.7921complex0.0506Node0.0303any[]0.0070number0.0026
+.Punctuation
+unshiftName.Othernumber0.5650any0.4229complex0.0026string0.0025void0.0010
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.8889complex0.0327Node0.0127number0.0022boolean0.0015
+.Punctuation
+unshiftNodeName.Otherany0.8690boolean0.0418complex0.0296number0.0124void0.0120
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+unshiftName.Othernumber0.5215any0.4428complex0.0178string0.0079void0.0015
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+unshiftName.Othernumber0.6402any0.3451complex0.0044void0.0037string0.0021
+.Punctuation
+callName.Otherany0.9674void0.0160complex0.0052number0.0041string0.0012
+(Punctuation
+nodeName.Otherany0.6026Node0.1775Node<Node>0.0157never0.0137Element0.0109
+,Punctuation
+ Text.Whitespace
+openName.Otherany0.4436string0.2669number0.0975void0.0523boolean0.0496
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+utilsName.Otherany0.7794complex0.2088void0.0053string0.0008any[]0.0006
+.Punctuation
+unshiftNodeName.Othervoid0.8930any0.0753boolean0.0107complex0.0074string0.0044
+(Punctuation
+nodeName.Otherany0.6866Node0.1616never0.0135Element0.0105string0.0084
+,Punctuation
+ Text.Whitespace
+openName.Otherany0.5712string0.1972number0.0771boolean0.0488void0.0417
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+openName.Otherany0.6713boolean0.0821number0.0705string0.0580void0.0270
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Push a `*.close` node onto `node.nodes`.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * snapdragon.parser.set('brace', function(node) {\n *   var match = this.match(/^}/);\n *   if (match) {\n *     var parent = this.parent();\n *     if (parent.type !== 'brace') {\n *       throw new Error('missing opening: ' + '}');\n *     }\n *\n *     utils.addClose(parent, Node);\n *     console.log(parent.nodes[parent.nodes.length - 1]):\n *     // { type: 'brace.close', value: '' };\n *\n *     // no need to return a node, since the parent\n *     // was already added to the AST\n *     return;\n *   }\n * });\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Function} `Node` (required) Node constructor function from [snapdragon-node][].\n * @param {Function} `filter` Optionaly specify a filter function to exclude the node.\n * @return {Object} Returns the created closing node.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8619complex0.1307void0.0038string0.0004any[]0.0003
+.Punctuation
+addCloseName.Otherany0.5461void0.3787boolean0.0287complex0.0273Function0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7806Node0.0732complex0.0106Element0.0092string0.0076
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.8535complex0.0511Node0.0145string0.0143Object0.0100
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8873string0.0947number0.0073boolean0.0031Object0.0021
+,Punctuation
+ Text.Whitespace
+filterName.Otherany0.6603string0.1508boolean0.1000Filter0.0129Function0.0127
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9250void0.0271complex0.0170Assert0.0065boolean0.0038
+(Punctuation
+isFunctionName.Otherboolean0.4811complex0.2808any0.2147string0.0105void0.0029
+(Punctuation
+NodeName.Otherany0.7093complex0.2238Node0.0072string0.0061Object0.0030
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected Node to be a constructor function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+expectName.Otherany0.9666complex0.0289void0.0024string0.0003boolean0.0002
+(Punctuation
+nodeName.Otherany0.6976Node0.1251Element0.0258complex0.0138Node<Node>0.0134
+,Punctuation
+ Text.Whitespace
+'node'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.7223complex0.1637Node0.0124string0.0085Object0.0078
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9457string0.0318complex0.0156boolean0.0021number0.0014
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+filterName.Otherany0.6926string0.1336boolean0.1307complex0.0061Filter0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.6687string0.2883boolean0.0277number0.0047complex0.0024
+;Punctuation
+\n    Text.Whitespace
+valueName.Otherstring0.5735any0.4131boolean0.0055complex0.0016RegExp0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+filterName.Otherany0.6673boolean0.0965string0.0899complex0.0869Filter0.0060
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+filterName.Otherany0.6377complex0.1639boolean0.1146string0.0242void0.0066
+(Punctuation
+nodeName.Otherany0.7917Node0.1118never0.0139string0.0112complex0.0077
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+closeName.Otherany0.0916Node0.0589Element0.0267Node<Node>0.0206string0.0170
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2520Node0.0988string0.0441Error0.0355complex0.0159
+ Text.Whitespace
+NodeName.Otherany0.7697complex0.2129Node0.0047string0.0014U[]0.0012
+(Punctuation
+{Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+nodeName.Otherany0.7921Node0.0750complex0.0226string0.0080never0.0062
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.close'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5614string0.3843number0.0177boolean0.0130string[]0.0022
+:Operator
+ Text.Whitespace
+valueKeyword.Typeany0.6025string0.3466number0.0248boolean0.0109complex0.0019
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+pushName.Othernumber0.7973any0.1845string0.0024boolean0.0017void0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.7579Node0.0667complex0.0208any[]0.0101number0.0057
+.Punctuation
+pushName.Othernumber0.8579any0.1318string0.0019complex0.0013boolean0.0009
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.8585complex0.0294Node0.0292number0.0027Node<Node>0.0026
+.Punctuation
+pushNodeName.Otherany0.8367boolean0.0640complex0.0335number0.0145void0.0117
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+pushName.Othernumber0.6677any0.2794complex0.0125string0.0054boolean0.0051
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+pushName.Othernumber0.9021any0.0857void0.0024string0.0017complex0.0008
+.Punctuation
+callName.Otherany0.9713complex0.0089void0.0055number0.0050T0.0013
+(Punctuation
+nodeName.Otherany0.5487Node0.2071Node<Node>0.0174never0.0157Element0.0106
+,Punctuation
+ Text.Whitespace
+closeName.Otherany0.2107void0.1859string0.1840number0.0700complex0.0536
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+utilsName.Otherany0.7342complex0.2569void0.0042string0.0007number0.0005
+.Punctuation
+pushNodeName.Othervoid0.8548any0.1081complex0.0121string0.0062boolean0.0053
+(Punctuation
+nodeName.Otherany0.6221Node0.2090never0.0141Element0.0119string0.0106
+,Punctuation
+ Text.Whitespace
+closeName.Otherstring0.2749void0.2273any0.1726number0.1033complex0.0278
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+closeName.Otherany0.1039Promise<void>0.0727void0.0723string0.0305complex0.0296
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Wraps the given `node` with `*.open` and `*.close` nodes.\n *\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Function} `Node` (required) Node constructor function from [snapdragon-node][].\n * @param {Function} `filter` Optionaly specify a filter function to exclude the node.\n * @return {Object} Returns the node\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8896complex0.1043void0.0026string0.0004number0.0003
+.Punctuation
+wrapNodesName.Otherany0.5595void0.3818complex0.0327boolean0.0092number0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7574Node0.0885never0.0099complex0.0092string0.0074
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.8539complex0.0464Node0.0191string0.0099Object0.0071
+,Punctuation
+ Text.Whitespace
+filterName.Otherany0.6321string0.1219boolean0.0561Filter0.0366complex0.0105
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8728void0.0555complex0.0259Assert0.0126IAssertFunctions0.0056
+(Punctuation
+utilsName.Otherany0.9608complex0.0367void0.0004string0.0003any[]0.0002
+.Punctuation
+isNodeName.Otherany0.5145boolean0.3145complex0.1292string0.0183void0.0107
+(Punctuation
+nodeName.Otherany0.9049Node0.0456complex0.0063string0.0061Element0.0038
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.9376void0.0226complex0.0146Assert0.0077Function0.0020
+(Punctuation
+isFunctionName.Otherboolean0.4863complex0.2824any0.2060string0.0104void0.0038
+(Punctuation
+NodeName.Otherany0.7252complex0.1968Node0.0135string0.0062void0.0026
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected Node to be a constructor function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+utilsName.Otherany0.8048complex0.1902void0.0028string0.0005number0.0002
+.Punctuation
+addOpenName.Othervoid0.8192any0.1298complex0.0238boolean0.0141string0.0038
+(Punctuation
+nodeName.Otherany0.6381Node0.2286Node<Node>0.0149never0.0091Element0.0077
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.7564complex0.0694Node0.0454string0.0106Object0.0074
+,Punctuation
+ Text.Whitespace
+filterName.Otherany0.4755string0.1731boolean0.0829complex0.0488Filter0.0468
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+utilsName.Otherany0.7981complex0.1967void0.0021string0.0009number0.0002
+.Punctuation
+addCloseName.Othervoid0.6299any0.2816boolean0.0297complex0.0274string0.0161
+(Punctuation
+nodeName.Otherany0.6601Node0.2202never0.0095Element0.0090Node<Node>0.0074
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.7949complex0.0691Node0.0327string0.0119Object0.0087
+,Punctuation
+ Text.Whitespace
+filterName.Otherany0.5468string0.1234boolean0.0568Filter0.0470complex0.0360
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8216Node0.0504complex0.0136string0.0067never0.0063
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Push the given `node` onto `parent.nodes`, and set `parent` as `node.parent.\n *\n * ```js\n * var parent = new Node({type: 'foo'});\n * var node = new Node({type: 'bar'});\n * utils.pushNode(parent, node);\n * console.log(parent.nodes[0].type) // 'bar'\n * console.log(node.parent.type) // 'foo'\n * ```\n * @param {Object} `parent`\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Object} Returns the child node\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8939complex0.0990void0.0016string0.0005number0.0003
+.Punctuation
+pushNodeName.Otherany0.7543void0.1151boolean0.0789complex0.0213string0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+parentName.Otherany0.5343Node0.1298string0.0209never0.0115Element0.0102
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.7545Node0.1168string0.0074Element0.0052never0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8446void0.0534complex0.0203Assert0.0188IAssertFunctions0.0094
+(Punctuation
+utilsName.Otherany0.9772complex0.0207string0.0002any[]0.0002void0.0002
+.Punctuation
+isNodeName.Otherany0.6424boolean0.2337complex0.0850string0.0219void0.0041
+(Punctuation
+parentName.Otherany0.7171Node0.0625string0.0259complex0.0125never0.0102
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected parent node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.8334Node0.0744complex0.0152never0.0058boolean0.0049
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+parentName.Otherany0.6945Node0.0517complex0.0184Node<Node>0.0123never0.0065
+.Punctuation
+pushName.Othernumber0.5796any0.4021string0.0049complex0.0028boolean0.0025
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parentName.Otherany0.7903Node0.0356any[]0.0107string0.0058Node<Node>0.0046
+.Punctuation
+pushName.Othernumber0.8938any0.1014string0.0016boolean0.0008void0.0006
+(Punctuation
+nodeName.Otherany0.6132Node0.1672string0.0161never0.0142Element0.0085
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+nodeName.Otherany0.6061Node0.0339complex0.0117TreeModel0.0105any[]0.0048
+.Punctuation
+defineName.Otherany0.5255void0.2952complex0.0099Function0.0037U[]0.0034
+(Punctuation
+'parent'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+parentName.Otherany0.7164string0.0362Node0.0250never0.0104complex0.0090
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+parentName.Otherany0.6651Node0.0222Node<Node>0.0121never0.0083ViewBase0.0082
+.Punctuation
+nodesName.Otherany0.7878any[]0.0523complex0.0133Node[]0.0121string[]0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentName.Otherany0.8445complex0.0114Node0.0083any[]0.0061string0.0058
+.Punctuation
+nodesName.Otherany0.8539any[]0.0362complex0.0116Node[]0.0078string0.0059
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+parentName.Otherany0.8227Node0.0316complex0.0060Node<Node>0.0060never0.0052
+.Punctuation
+nodesName.Otherany0.7689any[]0.0510Node[]0.0156complex0.0049string0.0037
+.Punctuation
+pushName.Othernumber0.7443any0.2474void0.0029string0.0016complex0.0009
+(Punctuation
+nodeName.Otherany0.7341Node0.1076never0.0083Element0.0065string0.0060
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8957Node0.0270complex0.0116never0.0056any[]0.0043
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Unshift `node` onto `parent.nodes`, and set `parent` as `node.parent.\n *\n * ```js\n * var parent = new Node({type: 'foo'});\n * var node = new Node({type: 'bar'});\n * utils.unshiftNode(parent, node);\n * console.log(parent.nodes[0].type) // 'bar'\n * console.log(node.parent.type) // 'foo'\n * ```\n * @param {Object} `parent`\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {undefined}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8772complex0.1154void0.0017number0.0005string0.0004
+.Punctuation
+unshiftNodeName.Otherany0.6952void0.1905boolean0.0598complex0.0255number0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+parentName.Otherany0.6226Node0.0902string0.0167never0.0098Element0.0087
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.7852Node0.1002Element0.0051string0.0046complex0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8714void0.0458complex0.0191Assert0.0131IAssertFunctions0.0060
+(Punctuation
+utilsName.Otherany0.9781complex0.0199any[]0.0003void0.0002string0.0002
+.Punctuation
+isNodeName.Otherany0.6512boolean0.2334complex0.0808string0.0176void0.0049
+(Punctuation
+parentName.Otherany0.7165Node0.0586string0.0185complex0.0140never0.0097
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected parent node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.8272Node0.0796complex0.0130boolean0.0055never0.0053
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+parentName.Otherany0.7022complex0.0466Node0.0358Node<Node>0.0082never0.0073
+.Punctuation
+unshiftName.Othernumber0.5321any0.4533complex0.0055string0.0046boolean0.0008
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parentName.Otherany0.7215Node0.0352any[]0.0215string0.0066Node<Node>0.0065
+.Punctuation
+unshiftName.Othernumber0.8173any0.1771void0.0014string0.0014complex0.0010
+(Punctuation
+nodeName.Otherany0.6990Node0.1015never0.0182string0.0113Element0.0068
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+nodeName.Otherany0.6216Node0.0219complex0.0164any[]0.0063TreeModel0.0062
+.Punctuation
+defineName.Otherany0.5137void0.3434complex0.0080Function0.0031U[]0.0027
+(Punctuation
+'parent'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+parentName.Otherany0.7619string0.0280Node0.0192complex0.0089never0.0086
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+parentName.Otherany0.7193Node0.0161Node<Node>0.0102never0.0072complex0.0069
+.Punctuation
+nodesName.Otherany0.8047any[]0.0611complex0.0112Node[]0.0105string[]0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentName.Otherany0.8668complex0.0121Node0.0070any[]0.0067string0.0042
+.Punctuation
+nodesName.Otherany0.8640any[]0.0415complex0.0104Node[]0.0069string0.0049
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+parentName.Otherany0.7216Node0.0421complex0.0112Node<Node>0.0087void0.0066
+.Punctuation
+nodesName.Otherany0.6746any[]0.1104Node[]0.0216string[]0.0072complex0.0061
+.Punctuation
+unshiftName.Othernumber0.6925any0.3003void0.0025string0.0017complex0.0010
+(Punctuation
+nodeName.Otherany0.7543Node0.0689never0.0122complex0.0087string0.0074
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Pop the last `node` off of `parent.nodes`. The advantage of\n * using this method is that it checks for `node.nodes` and works\n * with any version of `snapdragon-node`.\n *\n * ```js\n * var parent = new Node({type: 'foo'});\n * utils.pushNode(parent, new Node({type: 'foo'}));\n * utils.pushNode(parent, new Node({type: 'bar'}));\n * utils.pushNode(parent, new Node({type: 'baz'}));\n * console.log(parent.nodes.length); //=> 3\n * utils.popNode(parent);\n * console.log(parent.nodes.length); //=> 2\n * ```\n * @param {Object} `parent`\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Number|Undefined} Returns the length of `node.nodes` or undefined.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8909complex0.1004void0.0024any[]0.0004string0.0003
+.Punctuation
+popNodeName.Otherany0.5791void0.2804boolean0.0889complex0.0221string0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7829Node0.0806Element0.0067never0.0053complex0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8491void0.0582complex0.0211Assert0.0179IAssertFunctions0.0080
+(Punctuation
+utilsName.Otherany0.9697complex0.0264void0.0006any[]0.0004string0.0003
+.Punctuation
+isNodeName.Otherany0.4953boolean0.3855complex0.0765string0.0200void0.0093
+(Punctuation
+nodeName.Otherany0.8566Node0.0596complex0.0059string0.0053never0.0047
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.7791Node0.0540complex0.0218never0.0070any[]0.0043
+.Punctuation
+popName.Otherany0.9203string0.0513complex0.0085boolean0.0034number0.0030
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8848Node0.0202any[]0.0196complex0.0152string0.0028
+.Punctuation
+popName.Otherany0.8866string0.0647complex0.0089boolean0.0085number0.0066
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8307Node0.0488complex0.0251Node<Node>0.0034never0.0031
+.Punctuation
+nodesName.Otherany0.8673any[]0.0218complex0.0135Node[]0.0096string0.0050
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+nodeName.Otherany0.9099Node0.0164complex0.0153any[]0.0035never0.0019
+.Punctuation
+nodesName.Otherany0.8713any[]0.0541complex0.0103string[]0.0074Node[]0.0063
+.Punctuation
+popName.Otherany0.9726string0.0105complex0.0036number0.0020boolean0.0016
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Shift the first `node` off of `parent.nodes`. The advantage of\n * using this method is that it checks for `node.nodes` and works\n * with any version of `snapdragon-node`.\n *\n * ```js\n * var parent = new Node({type: 'foo'});\n * utils.pushNode(parent, new Node({type: 'foo'}));\n * utils.pushNode(parent, new Node({type: 'bar'}));\n * utils.pushNode(parent, new Node({type: 'baz'}));\n * console.log(parent.nodes.length); //=> 3\n * utils.shiftNode(parent);\n * console.log(parent.nodes.length); //=> 2\n * ```\n * @param {Object} `parent`\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Number|Undefined} Returns the length of `node.nodes` or undefined.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9159complex0.0752void0.0022any[]0.0005string0.0004
+.Punctuation
+shiftNodeName.Otherany0.6527void0.1633boolean0.1328complex0.0191string0.0069
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7072Node0.1141Element0.0091Tree0.0058never0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8653void0.0437complex0.0205Assert0.0171IAssertFunctions0.0073
+(Punctuation
+utilsName.Otherany0.9670complex0.0286void0.0004any[]0.0004string0.0003
+.Punctuation
+isNodeName.Otherboolean0.4593any0.4205complex0.0769string0.0211void0.0077
+(Punctuation
+nodeName.Otherany0.8404Node0.0696complex0.0052Element0.0049string0.0048
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.7400Node0.0708complex0.0248Node<Node>0.0062never0.0060
+.Punctuation
+shiftName.Otherany0.9544string0.0144number0.0088complex0.0066Node0.0025
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8677Node0.0412complex0.0102any[]0.0084never0.0029
+.Punctuation
+shiftName.Otherany0.9298string0.0270number0.0212complex0.0037Node0.0035
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8594Node0.0430complex0.0214Node<Node>0.0034never0.0021
+.Punctuation
+nodesName.Otherany0.8836any[]0.0178complex0.0145Node[]0.0058string0.0033
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+nodeName.Otherany0.8943complex0.0206Node0.0176any[]0.0022never0.0016
+.Punctuation
+nodesName.Otherany0.8578any[]0.0367complex0.0086string[]0.0064Node[]0.0051
+.Punctuation
+shiftName.Otherany0.9580string0.0165number0.0106complex0.0029T0.0013
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Remove the specified `node` from `parent.nodes`.\n *\n * ```js\n * var parent = new Node({type: 'abc'});\n * var foo = new Node({type: 'foo'});\n * utils.pushNode(parent, foo);\n * utils.pushNode(parent, new Node({type: 'bar'}));\n * utils.pushNode(parent, new Node({type: 'baz'}));\n * console.log(parent.nodes.length); //=> 3\n * utils.removeNode(parent, foo);\n * console.log(parent.nodes.length); //=> 2\n * ```\n * @param {Object} `parent`\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Object|undefined} Returns the removed node, if successful, or undefined if it does not exist on `parent.nodes`.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9056complex0.0834void0.0016any[]0.0007number0.0003
+.Punctuation
+removeNodeName.Otherany0.5826boolean0.2851void0.1123number0.0066complex0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+parentName.Otherany0.4914Node0.1179string0.0154Element0.0109Tree0.0096
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.6802Node0.1261Element0.0067Tree0.0053never0.0050
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8736void0.0414Assert0.0196complex0.0148IAssertFunctions0.0068
+(Punctuation
+utilsName.Otherany0.9703complex0.0260any[]0.0004void0.0003string0.0002
+.Punctuation
+isNodeName.Otherany0.4937boolean0.4229complex0.0521string0.0174void0.0046
+(Punctuation
+parentName.Otherany0.6715Node0.0715string0.0154complex0.0121never0.0096
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected parent to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+parentName.Otherany0.4040Node0.1112Node<Node>0.0293complex0.0280never0.0106
+.Punctuation
+nodesName.Otherany0.7751boolean0.0271any[]0.0196string0.0196Node[]0.0184
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.8488Node0.0663complex0.0088boolean0.0060never0.0046
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+parentName.Otherany0.7773Node0.0401complex0.0311Node<Node>0.0095never0.0063
+.Punctuation
+removeName.Otherany0.9375complex0.0223boolean0.0199void0.0068string0.0040
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parentName.Otherany0.8399Node0.0456complex0.0082Node<Node>0.0069string0.0039
+.Punctuation
+removeName.Otherany0.9446complex0.0183void0.0121boolean0.0079number0.0066
+(Punctuation
+nodeName.Otherany0.8540Node0.0608never0.0078string0.0069complex0.0036
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+idxName.Othernumber0.8783any0.1185string0.0013boolean0.0008complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentName.Otherany0.6083Node0.1019Node<Node>0.0090complex0.0084never0.0071
+.Punctuation
+nodesName.Otherany0.7685any[]0.0423Node[]0.0176string[]0.0087complex0.0079
+.Punctuation
+indexOfName.Otherany0.5185number0.4753complex0.0016string0.0013boolean0.0007
+(Punctuation
+nodeName.Otherany0.8336Node0.0502never0.0089string0.0087complex0.0035
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+idxName.Othernumber0.7814any0.2149string0.0020boolean0.0005complex0.0003
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parentName.Otherany0.7619Node0.0425complex0.0109Node<Node>0.0106never0.0042
+.Punctuation
+nodesName.Otherany0.8428any[]0.0375complex0.0208Node[]0.0081string0.0081
+.Punctuation
+spliceName.Othercomplex0.4955any0.4937any[]0.0027number0.0018boolean0.0009
+(Punctuation
+idxName.Othernumber0.9462any0.0515string0.0013boolean0.0004void0.0001
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node.type` matches the given `type`. Throws a\n * `TypeError` if `node` is not an instance of `Node`.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var node = new Node({type: 'foo'});\n * console.log(utils.isType(node, 'foo')); // false\n * console.log(utils.isType(node, 'bar')); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {String} `type`\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Othercomplex0.5631any0.4127void0.0034any[]0.0017Set<any>0.0006
+.Punctuation
+isTypeName.Otherboolean0.7830any0.1716complex0.0237void0.0089number0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.6190Node0.1181never0.0126Element0.0089Tree0.0071
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.6539complex0.3346boolean0.0023any[]0.0010void0.0008
+.Punctuation
+isNodeName.Otherboolean0.9455any0.0292complex0.0214string0.0012void0.0007
+(Punctuation
+nodeName.Otherany0.8058Node0.0860complex0.0071never0.0069string0.0044
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+typeOfName.Otherboolean0.6957any0.1361string0.1266complex0.0214number0.0041
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'string'Literal.String.Single
+:Operator
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8059Node0.0577complex0.0278never0.0108Error0.0025
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+typeKeyword.Reserved
+;Punctuation
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'regexp'Literal.String.Single
+:Operator
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+testName.Otherboolean0.9728any0.0166complex0.0025void0.0020string0.0019
+(Punctuation
+nodeName.Otherany0.8996Node0.0218complex0.0187never0.0054string0.0028
+.Punctuation
+typeKeyword.Reserved
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+'array'Literal.String.Single
+:Operator
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+keyName.Otherany0.5689string0.4116complex0.0119number0.0027any[]0.0006
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+sliceName.Otherany0.7744string0.1051string[]0.0631complex0.0212any[]0.0173
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+utilsName.Othercomplex0.7602any0.2292any[]0.0020boolean0.0005void0.0004
+.Punctuation
+isTypeName.Otherboolean0.8974complex0.0584any0.0370void0.0018number0.0016
+(Punctuation
+nodeName.Otherany0.8382Node0.0651complex0.0133never0.0126string0.0060
+,Punctuation
+ Text.Whitespace
+keyName.Otherany0.6152string0.3273complex0.0300number0.0132boolean0.0020
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+defaultKeyword
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.6165complex0.1361Error0.0795boolean0.0417string0.0227
+ Text.Whitespace
+newOperator.Wordany0.3271complex0.0772Error0.0493boolean0.0469string0.0309
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9913ErrorConstructor0.0015BooleanConstructor0.0002MapConstructor0.0001undefined0.0001
+(Punctuation
+'expected "type" to be an array, string or regexp'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given `node` has the given `type` in `node.nodes`.\n * Throws a `TypeError` if `node` is not an instance of `Node`.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var node = new Node({\n *   type: 'foo',\n *   nodes: [\n *     new Node({type: 'bar'}),\n *     new Node({type: 'baz'})\n *   ]\n * });\n * console.log(utils.hasType(node, 'xyz')); // false\n * console.log(utils.hasType(node, 'baz')); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {String} `type`\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.7205complex0.2634any[]0.0015void0.0013Set<any>0.0009
+.Punctuation
+hasTypeName.Otherboolean0.9854any0.0108void0.0008string0.0008complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7171Node0.0661never0.0230Element0.0098string0.0088
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.6535complex0.3388boolean0.0013any[]0.0008void0.0004
+.Punctuation
+isNodeName.Otherboolean0.8625complex0.0748any0.0563string0.0017void0.0011
+(Punctuation
+nodeName.Otherany0.8491Node0.0582never0.0109complex0.0086Element0.0061
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9991any0.0001ObjectConstructor0.0001Math0.0001complex0.0001
+.Punctuation
+isArrayName.Othercomplex0.9971any0.0012boolean0.0007any[]0.0003void0.0001
+(Punctuation
+nodeName.Otherany0.8473complex0.0745Node0.0090never0.0083any[]0.0031
+.Punctuation
+nodesName.Otherany0.8840any[]0.0308complex0.0287boolean0.0029string0.0025
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+childName.Otherany0.9013Node0.0261complex0.0107string0.0066never0.0047
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+nodeName.Otherany0.9244complex0.0116Node0.0082never0.0041any[]0.0015
+.Punctuation
+nodesName.Otherany0.9262any[]0.0148complex0.0102string0.0044boolean0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+utilsName.Otherany0.6651complex0.3229any[]0.0030Set<any>0.0007boolean0.0004
+.Punctuation
+isTypeName.Otherboolean0.6975any0.2419complex0.0499number0.0028string0.0026
+(Punctuation
+childName.Otherany0.9390Node0.0158string0.0081never0.0081complex0.0048
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns the first node from `node.nodes` of the given `type`\n *\n * ```js\n * var node = new Node({\n *   type: 'foo',\n *   nodes: [\n *     new Node({type: 'text', value: 'abc'}),\n *     new Node({type: 'text', value: 'xyz'})\n *   ]\n * });\n *\n * var textNode = utils.firstOfType(node.nodes, 'text');\n * console.log(textNode.value);\n * //=> 'abc'\n * ```\n * @param {Array} `nodes`\n * @param {String} `type`\n * @return {Object|undefined} Returns the first matching node or undefined.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9161complex0.0767void0.0023any[]0.0006string0.0003
+.Punctuation
+firstOfTypeName.Otherany0.7406void0.1279boolean0.0918complex0.0117string0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodesName.Otherany0.9171any[]0.0155string0.0048complex0.0024Node[]0.0019
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nodeName.Otherany0.9399Node0.0160string0.0092complex0.0036never0.0034
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+nodesName.Otherany0.8225any[]0.0560complex0.0224string0.0091string[]0.0070
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+utilsName.Othercomplex0.6051any0.3865any[]0.0018void0.0004{}0.0004
+.Punctuation
+isTypeName.Otherboolean0.5250any0.2928complex0.1600number0.0075void0.0046
+(Punctuation
+nodeName.Otherany0.9331Node0.0152never0.0130string0.0046complex0.0043
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9543never0.0086Node0.0042any[]0.0038string0.0033
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns the node at the specified index, or the first node of the\n * given `type` from `node.nodes`.\n *\n * ```js\n * var node = new Node({\n *   type: 'foo',\n *   nodes: [\n *     new Node({type: 'text', value: 'abc'}),\n *     new Node({type: 'text', value: 'xyz'})\n *   ]\n * });\n *\n * var nodeOne = utils.findNode(node.nodes, 'text');\n * console.log(nodeOne.value);\n * //=> 'abc'\n *\n * var nodeTwo = utils.findNode(node.nodes, 1);\n * console.log(nodeTwo.value);\n * //=> 'xyz'\n * ```\n *\n * @param {Array} `nodes`\n * @param {String|Number} `type` Node type or index.\n * @return {Object} Returns a node or undefined.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8410complex0.1479void0.0029any[]0.0007string0.0004
+.Punctuation
+findNodeName.Otherany0.9020void0.0322boolean0.0180string0.0180Function0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodesName.Otherany0.8295any[]0.0161string0.0111Node[]0.0049complex0.0028
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9994any0.0001Math0.0000ObjectConstructor0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9960any0.0019any[]0.0009boolean0.0004void0.0001
+(Punctuation
+nodesName.Otherany0.8082any[]0.0921complex0.0559string[]0.0020string0.0018
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodesName.Otherany0.8730complex0.0631any[]0.0243{}0.0027Object0.0010
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+utilsName.Otherany0.7691complex0.2226any[]0.0029void0.0011string0.0004
+.Punctuation
+firstOfTypeName.Otherany0.6183complex0.1575boolean0.0795void0.0469string0.0451
+(Punctuation
+nodesName.Otherany0.7986any[]0.0855complex0.0131string0.0103string[]0.0063
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given node is an "*.open" node.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({type: 'brace'});\n * var open = new Node({type: 'brace.open'});\n * var close = new Node({type: 'brace.close'});\n *\n * console.log(utils.isOpen(brace)); // false\n * console.log(utils.isOpen(open)); // true\n * console.log(utils.isOpen(close)); // false\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8784complex0.1135any[]0.0009void0.0006never0.0002
+.Punctuation
+isOpenName.Otherany0.8398boolean0.1459void0.0048complex0.0039string0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8019Node0.0495never0.0099Element0.0055complex0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.8965Node0.0322complex0.0081never0.0069Element0.0040
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9199complex0.0230Node0.0140never0.0036boolean0.0018
+.Punctuation
+parentName.Otherany0.8540Node0.0350never0.0142complex0.0097string0.0058
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9173complex0.0219Node0.0133never0.0054boolean0.0011
+.Punctuation
+parentName.Otherany0.9024complex0.0170Node0.0137never0.0091any[]0.0014
+.Punctuation
+isOpenName.Otherany0.9841boolean0.0083complex0.0036string0.0028void0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9645complex0.0108Node0.0041never0.0012boolean0.0006
+.Punctuation
+parentName.Otherany0.9469complex0.0080Node0.0066never0.0048string0.0023
+.Punctuation
+isOpenName.Otherany0.9789boolean0.0143void0.0033complex0.0015string0.0010
+(Punctuation
+nodeName.Otherany0.9356never0.0122Node0.0083string0.0049complex0.0045
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9451complex0.0102Node0.0087never0.0070boolean0.0031
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9236complex0.0220never0.0074Node0.0065any[]0.0014
+.Punctuation
+isOpenName.Otherany0.9840boolean0.0089complex0.0043string0.0019void0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9598complex0.0085Node0.0042never0.0020boolean0.0009
+.Punctuation
+isOpenName.Otherany0.9650boolean0.0270void0.0038complex0.0022string0.0008
+(Punctuation
+nodeName.Otherany0.9264never0.0135Node0.0110complex0.0057string0.0048
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8380complex0.0325Node0.0227never0.0081TreeModel0.0034
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nodeName.Otherany0.9473complex0.0258Node0.0033string0.0029never0.0021
+.Punctuation
+typeKeyword.Reserved
+.Punctuation
+sliceName.Otherany0.9478string0.0426complex0.0026string[]0.0024any[]0.0015
+(Punctuation
+-Operator
+5Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'.open'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given node is a "*.close" node.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({type: 'brace'});\n * var open = new Node({type: 'brace.open'});\n * var close = new Node({type: 'brace.close'});\n *\n * console.log(utils.isClose(brace)); // false\n * console.log(utils.isClose(open)); // false\n * console.log(utils.isClose(close)); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8073complex0.1821void0.0013any[]0.0009never0.0003
+.Punctuation
+isCloseName.Otherboolean0.5564any0.4057void0.0116complex0.0078number0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7589Node0.0798never0.0135Element0.0072complex0.0050
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.8539Node0.0512complex0.0109never0.0096boolean0.0055
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9032complex0.0272Node0.0189never0.0054boolean0.0018
+.Punctuation
+parentName.Otherany0.8204Node0.0441never0.0219complex0.0140string0.0070
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9065Node0.0190complex0.0185never0.0076boolean0.0012
+.Punctuation
+parentName.Otherany0.8792Node0.0226never0.0151complex0.0141Element0.0019
+.Punctuation
+isCloseName.Otherany0.9652string0.0107boolean0.0094complex0.0073number0.0019
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9548complex0.0121Node0.0057never0.0021number0.0011
+.Punctuation
+parentName.Otherany0.8489Node0.0264never0.0123complex0.0102string0.0061
+.Punctuation
+isCloseName.Otherany0.9435complex0.0138boolean0.0108void0.0089string0.0062
+(Punctuation
+nodeName.Otherany0.8950Node0.0186never0.0181string0.0068complex0.0057
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9244Node0.0156complex0.0131never0.0095boolean0.0034
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9266complex0.0173Node0.0110never0.0072boolean0.0013
+.Punctuation
+isCloseName.Otherany0.9554string0.0140boolean0.0119complex0.0106number0.0025
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9438complex0.0100Node0.0062never0.0031number0.0017
+.Punctuation
+isCloseName.Otherany0.8750boolean0.0551complex0.0258void0.0092string0.0088
+(Punctuation
+nodeName.Otherany0.8844Node0.0230never0.0220string0.0082complex0.0075
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8354complex0.0297Node0.0278never0.0078TreeModel0.0033
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nodeName.Otherany0.9311complex0.0309Node0.0055string0.0040never0.0029
+.Punctuation
+typeKeyword.Reserved
+.Punctuation
+sliceName.Otherany0.9301string0.0572string[]0.0033complex0.0031any[]0.0019
+(Punctuation
+-Operator
+6Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'.close'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the given node is an "*.open" node.\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({type: 'brace'});\n * var open = new Node({type: 'brace.open', value: '{'});\n * var inner = new Node({type: 'text', value: 'a,b,c'});\n * var close = new Node({type: 'brace.close', value: '}'});\n * brace.push(open);\n * brace.push(inner);\n * brace.push(close);\n *\n * console.log(utils.isBlock(brace)); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.6249complex0.3599void0.0033any[]0.0022boolean0.0005
+.Punctuation
+isBlockName.Otherboolean0.7591any0.1551void0.0423complex0.0267number0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8460Node0.0259never0.0126complex0.0082Element0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nodeName.Otherany0.9314Node0.0111complex0.0088never0.0043boolean0.0039
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+utilsName.Otherany0.6953complex0.2955any[]0.0018boolean0.0010void0.0006
+.Punctuation
+isNodeName.Otherboolean0.8154any0.0980complex0.0788void0.0019string0.0016
+(Punctuation
+nodeName.Otherany0.9009Node0.0308never0.0070complex0.0066Element0.0050
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9992any0.0002complex0.0001ObjectConstructor0.0001Math0.0000
+.Punctuation
+isArrayName.Othercomplex0.9958any0.0017boolean0.0013any[]0.0005number0.0002
+(Punctuation
+nodeName.Otherany0.8962complex0.0306Node0.0137never0.0058any[]0.0027
+.Punctuation
+nodesName.Otherany0.9109any[]0.0307complex0.0169number0.0035boolean0.0021
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9142complex0.0291Node0.0136never0.0031boolean0.0026
+.Punctuation
+parentName.Otherany0.8306Node0.0484complex0.0137never0.0128Node<Node>0.0045
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.8786complex0.0232Node0.0200never0.0075any[]0.0025
+.Punctuation
+parentName.Otherany0.9055Node0.0145never0.0107complex0.0104Node<Node>0.0019
+.Punctuation
+isBlockName.Otherany0.9541boolean0.0259complex0.0089number0.0026void0.0026
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9632complex0.0098Node0.0040any[]0.0014never0.0014
+.Punctuation
+parentName.Otherany0.9600complex0.0051Node0.0051never0.0033void0.0021
+.Punctuation
+isBlockName.Otherany0.9484boolean0.0227complex0.0130void0.0113number0.0006
+(Punctuation
+nodeName.Otherany0.9595never0.0075complex0.0040string0.0039Node0.0035
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9058complex0.0179never0.0084Node0.0070any[]0.0037
+.Punctuation
+isBlockName.Otherany0.9388boolean0.0352complex0.0135void0.0028number0.0024
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9632complex0.0073Node0.0028any[]0.0023never0.0010
+.Punctuation
+isBlockName.Otherany0.8964boolean0.0597void0.0196complex0.0182number0.0011
+(Punctuation
+nodeName.Otherany0.9699complex0.0048never0.0042string0.0039Node0.0029
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+utilsName.Otherany0.7079complex0.2844any[]0.0018void0.0014string0.0004
+.Punctuation
+hasOpenAndCloseName.Otherany0.7499complex0.0823void0.0547boolean0.0403string0.0311
+(Punctuation
+nodeName.Otherany0.9489never0.0071Node0.0064complex0.0057string0.0040
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `parent.nodes` has the given `node`.\n *\n * ```js\n * const foo = new Node({type: 'foo'});\n * const bar = new Node({type: 'bar'});\n * cosole.log(util.hasNode(foo, bar)); // false\n * foo.push(bar);\n * cosole.log(util.hasNode(foo, bar)); // true\n * ```\n * @param {String} `type`\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.6959complex0.2702void0.0043any[]0.0019never0.0006
+.Punctuation
+hasNodeName.Otherany0.9535string0.0172boolean0.0064complex0.0061number0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8700Node0.0339never0.0080Element0.0047complex0.0033
+,Punctuation
+ Text.Whitespace
+childName.Otherany0.9424Node0.0151string0.0076complex0.0036never0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.6307complex0.3633boolean0.0009any[]0.0009void0.0007
+.Punctuation
+isNodeName.Otherboolean0.8896any0.0612complex0.0436void0.0018string0.0013
+(Punctuation
+nodeName.Otherany0.8861Node0.0389never0.0079complex0.0064Element0.0035
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.8487complex0.0706Node0.0093never0.0055boolean0.0032
+.Punctuation
+hasName.Otherany0.5497boolean0.4294complex0.0090string0.0044number0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.8366complex0.1018Node0.0070boolean0.0045never0.0030
+.Punctuation
+hasName.Otherboolean0.6752any0.3037complex0.0080string0.0029number0.0026
+(Punctuation
+childName.Otherany0.9146string0.0445Node0.0119complex0.0050never0.0045
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9191Node0.0157complex0.0092never0.0054boolean0.0027
+.Punctuation
+nodesName.Otherany0.9470boolean0.0075complex0.0062any[]0.0061string0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9532complex0.0090Node0.0080any[]0.0016never0.0014
+.Punctuation
+nodesName.Otherany0.9070any[]0.0362string[]0.0119string0.0080complex0.0056
+.Punctuation
+indexOfName.Otherany0.7467number0.2483complex0.0013string0.0011boolean0.0011
+(Punctuation
+childName.Otherany0.9222string0.0313Node0.0130number0.0060never0.0048
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node.nodes` **has** an `.open` node\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({\n *   type: 'brace',\n *   nodes: []\n * });\n *\n * var open = new Node({type: 'brace.open'});\n * console.log(utils.hasOpen(brace)); // false\n *\n * brace.pushNode(open);\n * console.log(utils.hasOpen(brace)); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9316complex0.0639void0.0012any[]0.0003number0.0002
+.Punctuation
+hasOpenName.Otherany0.7992void0.1408boolean0.0307complex0.0137number0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.8520Node0.0378Element0.0065never0.0051complex0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8792void0.0493complex0.0187Assert0.0140IAssertFunctions0.0033
+(Punctuation
+utilsName.Otherany0.9757complex0.0217any[]0.0005void0.0003string0.0002
+.Punctuation
+isNodeName.Otherany0.5526boolean0.3491complex0.0660string0.0151void0.0072
+(Punctuation
+nodeName.Otherany0.9189Node0.0218never0.0046complex0.0043string0.0040
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+firstName.Otherany0.9261Node0.0169complex0.0078boolean0.0042number0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.9113Node0.0216complex0.0150never0.0018Node<Node>0.0017
+.Punctuation
+firstName.Otherany0.9620complex0.0098Node0.0064boolean0.0019number0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.9409complex0.0101Node0.0096boolean0.0013never0.0011
+.Punctuation
+nodesName.Otherany0.9624complex0.0059boolean0.0057any[]0.0029string0.0015
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nodeName.Otherany0.9738complex0.0087Node0.0020any[]0.0013string0.0008
+.Punctuation
+nodesName.Otherany0.9471any[]0.0160complex0.0097string0.0032string[]0.0019
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.6706complex0.3201any[]0.0022boolean0.0010void0.0005
+.Punctuation
+isNodeName.Otherboolean0.8515any0.1000complex0.0417string0.0024void0.0012
+(Punctuation
+firstName.Otherany0.9478complex0.0120Node0.0069string0.0040boolean0.0032
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.9626complex0.0103Node0.0062never0.0015Error0.0008
+.Punctuation
+isOpenName.Otherany0.9835boolean0.0105string0.0026complex0.0026void0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9613Node0.0067complex0.0056never0.0011boolean0.0008
+.Punctuation
+isOpenName.Otherany0.9424boolean0.0482void0.0053complex0.0016string0.0010
+(Punctuation
+firstName.Otherany0.9311Node0.0113string0.0092T0.0075complex0.0066
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+firstName.Otherany0.9234complex0.0250Node0.0096T0.0031boolean0.0018
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nodeName.Otherany0.9680complex0.0116Node0.0041never0.0016string0.0013
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.open'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node.nodes` **has** a `.close` node\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({\n *   type: 'brace',\n *   nodes: []\n * });\n *\n * var close = new Node({type: 'brace.close'});\n * console.log(utils.hasClose(brace)); // false\n *\n * brace.pushNode(close);\n * console.log(utils.hasClose(brace)); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9219complex0.0723void0.0020any[]0.0004string0.0002
+.Punctuation
+hasCloseName.Otherany0.6732void0.2521boolean0.0334complex0.0181string0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9000Node0.0224never0.0051complex0.0042string0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8930void0.0382complex0.0181Assert0.0132IAssertFunctions0.0030
+(Punctuation
+utilsName.Otherany0.9553complex0.0406any[]0.0006void0.0005string0.0002
+.Punctuation
+isNodeName.Otherany0.5603boolean0.2837complex0.1172string0.0155void0.0100
+(Punctuation
+nodeName.Otherany0.9305Node0.0172complex0.0050never0.0045string0.0041
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+lastName.Otherany0.9861number0.0037string0.0023Node0.0014complex0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.9257Node0.0173complex0.0093never0.0018Element0.0012
+.Punctuation
+lastName.Otherany0.9804number0.0040string0.0025boolean0.0025Node0.0019
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.9366complex0.0137Node0.0090boolean0.0011any[]0.0011
+.Punctuation
+nodesName.Otherany0.9567complex0.0095boolean0.0040any[]0.0036string0.0017
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nodeName.Otherany0.9630complex0.0119Node0.0032any[]0.0015string0.0009
+.Punctuation
+nodesName.Otherany0.9271complex0.0206any[]0.0168string0.0021string[]0.0012
+[Punctuation
+nodeName.Otherany0.9415complex0.0133Node0.0097string0.0016any[]0.0015
+.Punctuation
+nodesName.Otherany0.9276any[]0.0169complex0.0054string0.0031string[]0.0025
+.Punctuation
+lengthName.Otherany0.8572number0.1402string0.0010complex0.0007boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.6989complex0.2932any[]0.0011boolean0.0008void0.0005
+.Punctuation
+isNodeName.Otherboolean0.8583any0.1003complex0.0349string0.0017void0.0012
+(Punctuation
+lastName.Otherany0.9777string0.0054complex0.0049number0.0034boolean0.0029
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.9487complex0.0139Node0.0097never0.0022boolean0.0013
+.Punctuation
+isCloseName.Otherany0.9465boolean0.0265string0.0113complex0.0088number0.0023
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.9571complex0.0088Node0.0060string0.0014never0.0011
+.Punctuation
+isCloseName.Otherany0.9147boolean0.0284complex0.0203void0.0106string0.0070
+(Punctuation
+lastName.Otherany0.9455string0.0226number0.0084T0.0054boolean0.0053
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+lastName.Otherany0.9636complex0.0083Node0.0052T0.0039string0.0014
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nodeName.Otherany0.9596complex0.0117Node0.0057never0.0024string0.0020
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.close'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node.nodes` has both `.open` and `.close` nodes\n *\n * ```js\n * var Node = require('snapdragon-node');\n * var brace = new Node({\n *   type: 'brace',\n *   nodes: []\n * });\n *\n * var open = new Node({type: 'brace.open'});\n * var close = new Node({type: 'brace.close'});\n * console.log(utils.hasOpen(brace)); // false\n * console.log(utils.hasClose(brace)); // false\n *\n * brace.pushNode(open);\n * brace.pushNode(close);\n * console.log(utils.hasOpen(brace)); // true\n * console.log(utils.hasClose(brace)); // true\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8096complex0.1846void0.0012any[]0.0006number0.0003
+.Punctuation
+hasOpenAndCloseName.Otherany0.6839boolean0.2318void0.0304string0.0141number0.0136
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7935Node0.0618never0.0100complex0.0070Element0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+utilsName.Otherany0.7937complex0.2002any[]0.0011void0.0009string0.0008
+.Punctuation
+hasOpenName.Otherany0.7077boolean0.1074complex0.0990string0.0368void0.0167
+(Punctuation
+nodeName.Otherany0.9201Node0.0202complex0.0069never0.0059string0.0044
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+utilsName.Otherany0.8323complex0.1591void0.0011any[]0.0011string0.0009
+.Punctuation
+hasCloseName.Otherany0.7120boolean0.1387void0.0433complex0.0404string0.0328
+(Punctuation
+nodeName.Otherany0.9181Node0.0148complex0.0094never0.0070string0.0066
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Push the given `node` onto the `state.inside` array for the\n * given type. This array is used as a specialized "stack" for\n * only the given `node.type`.\n *\n * ```js\n * var state = { inside: {}};\n * var node = new Node({type: 'brace'});\n * utils.addType(state, node);\n * console.log(state.inside);\n * //=> { brace: [{type: 'brace'}] }\n * ```\n * @param {Object} `state` The `compiler.state` object or custom state object.\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Array} Returns the `state.inside` stack for the given type.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9122complex0.0812void0.0023string0.0005any[]0.0004
+.Punctuation
+addTypeName.Otherany0.7917void0.1467complex0.0213boolean0.0195string0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+stateName.Otherany0.9018number0.0102string0.0075boolean0.0038AppState0.0036
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.9028Node0.0201string0.0049complex0.0043never0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8926void0.0420complex0.0150Assert0.0109IAssertFunctions0.0040
+(Punctuation
+utilsName.Otherany0.9716complex0.0255any[]0.0004void0.0004string0.0003
+.Punctuation
+isNodeName.Otherany0.6188boolean0.2550complex0.0856string0.0160void0.0097
+(Punctuation
+nodeName.Otherany0.9326Node0.0175complex0.0045string0.0044never0.0039
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8868void0.0244Assert0.0216complex0.0112IAssertFunctions0.0063
+(Punctuation
+isObjectName.Otherboolean0.8393any0.0716complex0.0526string0.0052number0.0045
+(Punctuation
+stateName.Otherany0.8760number0.0156string0.0111complex0.0106boolean0.0103
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected state to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.9210Node0.0154complex0.0095string0.0054number0.0021
+.Punctuation
+parentName.Otherany0.9138string0.0122Node0.0065complex0.0059boolean0.0031
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+node.parent.typeName.Other
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+node.type.replaceKeyword.Type
+(Punctuation
+/\.open$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stateName.Otherany0.6579complex0.0228State0.0146Node0.0105boolean0.0097
+.Punctuation
+hasOwnPropertyName.Otherany0.7090complex0.2641boolean0.0115string0.0058number0.0017
+(Punctuation
+'inside'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+stateName.Otherany0.4919{}0.0275State0.0132complex0.0110Error0.0097
+.Punctuation
+insideName.Otherany0.6972Function0.0483complex0.0389{}0.0338Error0.0210
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stateName.Otherany0.4469complex0.0624Error0.0239State0.0130Node0.0103
+.Punctuation
+insideName.Otherany0.4334complex0.1202Function0.1053Error0.0783boolean0.0346
+.Punctuation
+hasOwnPropertyName.Otherany0.5475complex0.3953boolean0.0315string0.0104number0.0033
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+stateName.Otherany0.5836Error0.0134complex0.0114State0.0084IState0.0065
+.Punctuation
+insideName.Otherany0.4680Function0.1184Error0.0664complex0.0461void0.0243
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+arrName.Otherany0.6583any[]0.1695complex0.0590number[]0.0163string[]0.0157
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.3348Error0.0277complex0.0188State0.0154Node0.0103
+.Punctuation
+insideName.Otherany0.3209Error0.1265Function0.0637complex0.0495{}0.0159
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+arrName.Otherany[]0.6202any0.2032string[]0.0458number[]0.0269complex0.0140
+.Punctuation
+pushName.Othernumber0.9297any0.0652void0.0017string0.0011complex0.0006
+(Punctuation
+nodeName.Otherany0.8646Node0.0315never0.0102string0.0059complex0.0059
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrName.Otherany[]0.5979any0.2354complex0.0584string[]0.0415number[]0.0171
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Remove the given `node` from the `state.inside` array for the\n * given type. This array is used as a specialized "stack" for\n * only the given `node.type`.\n *\n * ```js\n * var state = { inside: {}};\n * var node = new Node({type: 'brace'});\n * utils.addType(state, node);\n * console.log(state.inside);\n * //=> { brace: [{type: 'brace'}] }\n * utils.removeType(state, node);\n * //=> { brace: [] }\n * ```\n * @param {Object} `state` The `compiler.state` object or custom state object.\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @return {Array} Returns the `state.inside` stack for the given type.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9121complex0.0819void0.0017string0.0005any[]0.0004
+.Punctuation
+removeTypeName.Otherany0.8276void0.1111complex0.0218boolean0.0157string0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+stateName.Otherany0.8337number0.0135string0.0103AppState0.0068State0.0058
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.8526Node0.0338string0.0065Element0.0048never0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8736void0.0482complex0.0145Assert0.0141IAssertFunctions0.0068
+(Punctuation
+utilsName.Otherany0.9675complex0.0288void0.0005any[]0.0004string0.0004
+.Punctuation
+isNodeName.Otherany0.5097boolean0.3644complex0.0746string0.0225void0.0109
+(Punctuation
+nodeName.Otherany0.9110Node0.0241string0.0058never0.0045complex0.0045
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8776Assert0.0323void0.0181complex0.0101IAssertFunctions0.0084
+(Punctuation
+isObjectName.Otherboolean0.8374any0.0654complex0.0545string0.0064false0.0051
+(Punctuation
+stateName.Otherany0.8046number0.0192string0.0149boolean0.0120complex0.0111
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected state to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.8976Node0.0210complex0.0122string0.0069never0.0026
+.Punctuation
+parentName.Otherany0.8627string0.0184Node0.0137complex0.0067T0.0045
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+node.parent.typeName.Other
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+node.type.replaceKeyword.Type
+(Punctuation
+/\.close$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.2523complex0.0503State0.0256Node0.0240Error0.0109
+.Punctuation
+insideName.Otherany0.3226complex0.1445Function0.0885Error0.0655boolean0.0374
+.Punctuation
+hasOwnPropertyName.Othercomplex0.4911any0.4361boolean0.0403string0.0167number0.0046
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stateName.Otherany0.4791Error0.0168complex0.0132IState0.0091State0.0082
+.Punctuation
+insideName.Otherany0.3591Function0.1069Error0.0905complex0.0719void0.0155
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+.Punctuation
+popName.Otherany0.9543string0.0256complex0.0047T0.0012number0.0011
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node.value` is an empty string, or `node.nodes` does\n * not contain any non-empty text nodes.\n *\n * ```js\n * var node = new Node({type: 'text'});\n * utils.isEmpty(node); //=> true\n * node.value = 'foo';\n * utils.isEmpty(node); //=> false\n * ```\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {Function} `fn`\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8871complex0.1034void0.0026any[]0.0003string0.0003
+.Punctuation
+isEmptyName.Otherboolean0.5705any0.3821void0.0282complex0.0075string0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.9041Node0.0260never0.0047Element0.0036complex0.0033
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.8589Function0.0784string0.0150boolean0.0126complex0.0076
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8916void0.0361complex0.0182Assert0.0098IAssertFunctions0.0062
+(Punctuation
+utilsName.Otherany0.9621complex0.0333any[]0.0005void0.0003string0.0002
+.Punctuation
+isNodeName.Otherany0.4755boolean0.3992complex0.0902string0.0138void0.0047
+(Punctuation
+nodeName.Otherany0.8496Node0.0499never0.0097complex0.0068Element0.0063
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9992Math0.0001any0.0001ObjectConstructor0.0001complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9955any0.0017boolean0.0012any[]0.0005number0.0002
+(Punctuation
+nodeName.Otherany0.8617complex0.0303never0.0111Node0.0105any[]0.0021
+.Punctuation
+nodesName.Otherany0.8530any[]0.0299complex0.0256string0.0056number0.0038
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+fnName.Otherany0.8016complex0.0932Function0.0235boolean0.0171never0.0114
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.Otherany0.7936Function0.0670void0.0302complex0.0288boolean0.0279
+(Punctuation
+nodeName.Otherany0.8916Node0.0245never0.0140string0.0057complex0.0034
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+utilsName.Otherany0.8065complex0.1862any[]0.0012string0.0004void0.0003
+.Punctuation
+valueName.Otherany0.8203string0.0862boolean0.0586complex0.0214number0.0039
+(Punctuation
+nodeName.Otherany0.9478never0.0093Node0.0071string0.0068complex0.0030
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.8842Node0.0241complex0.0120never0.0090Node<Node>0.0020
+.Punctuation
+nodesName.Otherany0.8658any[]0.0380complex0.0097string[]0.0041string0.0037
+.Punctuation
+lengthName.Otherany0.8066number0.1903complex0.0010string0.0009boolean0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+childName.Otherany0.8140Node0.0725complex0.0103string0.0080T0.0049
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+nodeName.Otherany0.9041Node0.0164complex0.0102Node<Node>0.0027never0.0024
+.Punctuation
+nodesName.Otherany0.9360any[]0.0087complex0.0082string0.0040boolean0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+utilsName.Otherany0.8966complex0.0967any[]0.0010{}0.0004boolean0.0003
+.Punctuation
+isEmptyName.Otherboolean0.8951any0.0982complex0.0028string0.0008number0.0006
+(Punctuation
+childName.Otherany0.9492Node0.0139string0.0104complex0.0044T0.0032
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.9142boolean0.0155string0.0134complex0.0126Function0.0089
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if the `state.inside` stack for the given type exists\n * and has one or more nodes on it.\n *\n * ```js\n * var state = { inside: {}};\n * var node = new Node({type: 'brace'});\n * console.log(utils.isInsideType(state, 'brace')); //=> false\n * utils.addType(state, node);\n * console.log(utils.isInsideType(state, 'brace')); //=> true\n * utils.removeType(state, node);\n * console.log(utils.isInsideType(state, 'brace')); //=> false\n * ```\n * @param {Object} `state`\n * @param {String} `type`\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8757complex0.1164void0.0021any[]0.0007string0.0004
+.Punctuation
+isInsideTypeName.Otherany0.7034boolean0.1663void0.0852complex0.0213string0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+stateName.Otherany0.7261string0.0176number0.0143boolean0.0111AppState0.0108
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8646void0.0420Assert0.0239complex0.0145IAssertFunctions0.0049
+(Punctuation
+isObjectName.Otherboolean0.8323complex0.0631any0.0578string0.0075false0.0070
+(Punctuation
+stateName.Otherany0.8305complex0.0145boolean0.0104string0.0099number0.0068
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected state to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8727Assert0.0310void0.0254complex0.0129IAssertFunctions0.0069
+(Punctuation
+isStringName.Othercomplex0.6596any0.2152boolean0.1106string0.0052number0.0018
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected type to be a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stateName.Otherany0.7328complex0.0274boolean0.0216State0.0094Node0.0078
+.Punctuation
+hasOwnPropertyName.Otherany0.7870complex0.1652boolean0.0304string0.0084number0.0024
+(Punctuation
+'inside'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stateName.Otherany0.5399complex0.0733boolean0.0187Node0.0128State0.0119
+.Punctuation
+insideName.Otherany0.5036complex0.1350Function0.0676boolean0.0606Error0.0548
+.Punctuation
+hasOwnPropertyName.Otherany0.6063complex0.2937boolean0.0748string0.0129number0.0051
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stateName.Otherany0.4586complex0.0201Error0.0123State0.0117Node0.0106
+.Punctuation
+insideName.Otherany0.4136Function0.1002Error0.0641complex0.0614{}0.0170
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+.Punctuation
+lengthName.Otherany0.8698number0.1278string0.0009complex0.0006boolean0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns true if `node` is either a child or grand-child of the given `type`,\n * or `state.inside[type]` is a non-empty array.\n *\n * ```js\n * var state = { inside: {}};\n * var node = new Node({type: 'brace'});\n * var open = new Node({type: 'brace.open'});\n * console.log(utils.isInside(state, open, 'brace')); //=> false\n * utils.pushNode(node, open);\n * console.log(utils.isInside(state, open, 'brace')); //=> true\n * ```\n * @param {Object} `state` Either the `compiler.state` object, if it exists, or a user-supplied state object.\n * @param {Object} `node` Instance of [snapdragon-node][]\n * @param {String} `type` The `node.type` to check for.\n * @return {Boolean}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.9060complex0.0835void0.0028any[]0.0004string0.0004
+.Punctuation
+isInsideName.Otherany0.6797void0.2243boolean0.0500complex0.0196number0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+stateName.Otherany0.8553number0.0165string0.0108boolean0.0062AppState0.0054
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.8623Node0.0390Element0.0041string0.0038never0.0034
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8673void0.0482Assert0.0193complex0.0120IAssertFunctions0.0074
+(Punctuation
+utilsName.Otherany0.9710complex0.0251any[]0.0005string0.0003void0.0003
+.Punctuation
+isNodeName.Otherany0.5272boolean0.3621complex0.0627string0.0169void0.0065
+(Punctuation
+nodeName.Otherany0.8946Node0.0357complex0.0044string0.0041Element0.0039
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected node to be an instance of Node'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8648Assert0.0407void0.0206complex0.0075IAssertFunctions0.0073
+(Punctuation
+isObjectName.Otherboolean0.8565any0.0532complex0.0396false0.0081string[]0.0056
+(Punctuation
+stateName.Otherany0.8326number0.0156boolean0.0155complex0.0093string0.0093
+)Punctuation
+,Punctuation
+ Text.Whitespace
+'expected state to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9993Math0.0001ObjectConstructor0.0001any0.0001complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9892boolean0.0038any0.0037any[]0.0011number0.0005
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9916any0.0076string0.0002boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9795any0.0192string0.0004boolean0.0003void0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+lengthName.Otherany0.5387number0.4571complex0.0013string0.0013boolean0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9207any0.0778string0.0006boolean0.0004complex0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+utilsName.Otherany0.7172complex0.2718any[]0.0022boolean0.0010void0.0007
+.Punctuation
+isInsideName.Otherboolean0.9141any0.0535complex0.0131string0.0056number0.0048
+(Punctuation
+stateName.Otherany0.7535number0.0475boolean0.0346string0.0196Node0.0114
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.9242Node0.0263complex0.0057string0.0049never0.0043
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+[Punctuation
+iName.Othernumber0.9591any0.0369string0.0029boolean0.0005complex0.0001
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+parentName.Otherany0.6372Node0.0902never0.0131string0.0073complex0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.8402Node0.0384complex0.0217never0.0073any[]0.0036
+.Punctuation
+parentName.Otherany0.6563Node0.0841string0.0134never0.0133complex0.0113
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+parentName.Otherany0.7477Node0.0405never0.0209string0.0199T0.0065
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+parentName.Otherany0.6636Node0.0523never0.0332complex0.0231T0.0152
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+utilsName.Otherany0.6071complex0.3765void0.0019any[]0.0017string0.0013
+.Punctuation
+isInsideTypeName.Otherboolean0.4325any0.3332complex0.0856string0.0682void0.0281
+(Punctuation
+stateName.Otherany0.6330string0.0737number0.0417complex0.0329boolean0.0298
+,Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeOfName.Otherboolean0.8955any0.0634complex0.0218string0.0101number0.0016
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'regexp'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentName.Otherany0.7418Node0.0383complex0.0235string0.0183never0.0180
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+parentName.Otherany0.6962complex0.0501Node0.0384never0.0209T0.0106
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+testName.Otherboolean0.9311any0.0571complex0.0036string0.0025number0.0022
+(Punctuation
+parentName.Otherany0.8377Node0.0264never0.0104complex0.0100T0.0073
+.Punctuation
+typeKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keysName.Otherstring[]0.9627any[]0.0165any0.0073string0.0066number[]0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999any0.0000complex0.0000Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9917any[]0.0022complex0.0017string0.0014any0.0009
+(Punctuation
+stateName.Otherany0.3407complex0.0822{}0.0212Object0.0188IState0.0099
+.Punctuation
+insideName.OtherFunction0.1762Error0.1263complex0.1143any0.0963void0.0692
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+lenName.Othernumber0.9009any0.0950string0.0020boolean0.0005complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherstring[]0.8673any0.0669any[]0.0330string0.0066number[]0.0049
+.Punctuation
+lengthName.Othernumber0.7246any0.2710string0.0016complex0.0012void0.0004
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+idxName.Othernumber0.9674any0.0316string0.0003boolean0.0003complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+idxName.Othernumber0.9687any0.0300string0.0003void0.0002complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lenName.Othernumber0.9188any0.0783string0.0012complex0.0004boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keyName.Otherany0.8421string0.1435complex0.0074number0.0037any[]0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keysName.Otherstring[]0.7652any0.1251any[]0.0774complex0.0067string0.0054
+[Punctuation
+idxName.Othernumber0.9811any0.0167string0.0015complex0.0001boolean0.0001
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.9267string0.0309boolean0.0094complex0.0074number0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.5000complex0.0296Node0.0161State0.0099Object0.0080
+.Punctuation
+insideName.Otherany0.5687complex0.0782Function0.0456Error0.0301Node0.0123
+[Punctuation
+keyName.Otherstring0.6818any0.3050number0.0073complex0.0038boolean0.0003
+]Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9994ObjectConstructor0.0001any0.0000Math0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9925boolean0.0028any0.0019any[]0.0009number0.0004
+(Punctuation
+valueName.Otherany0.9494complex0.0217string0.0121any[]0.0081number0.0042
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Otherany0.8171string0.1033any[]0.0484string[]0.0145complex0.0058
+.Punctuation
+lengthName.Othernumber0.6112any0.3851string0.0013complex0.0011boolean0.0003
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+testName.Otherboolean0.9517any0.0369number0.0030string0.0028complex0.0027
+(Punctuation
+keyName.Otherany0.7847string0.1839complex0.0133number0.0132never0.0009
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Get the last `n` element from the given `array`. Used for getting\n * a node from `node.nodes.`\n *\n * @param {Array} `array`\n * @param {Number} `n`\n * @return {undefined}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8677complex0.1255any[]0.0005void0.0004number0.0003
+.Punctuation
+lastName.Otherany0.9429number0.0244string0.0173boolean0.0045complex0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+arrName.Otherany0.6125any[]0.1632complex0.0502string[]0.0322number[]0.0189
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.5438any0.4123string0.0217complex0.0060never0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9995ObjectConstructor0.0000Math0.0000any0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9965any0.0012any[]0.0009boolean0.0002number0.0002
+(Punctuation
+arrName.Otherany0.5487any[]0.2783complex0.1096string[]0.0139number[]0.0058
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+arrName.Otherany[]0.7441any0.0804complex0.0693string[]0.0301number[]0.0230
+[Punctuation
+arrName.Otherany[]0.7477any0.0972string[]0.0936complex0.0180number[]0.0078
+.Punctuation
+lengthName.Othernumber0.8940any0.1034string0.0009complex0.0007void0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+(Punctuation
+nName.Othernumber0.8478any0.1344string0.0134complex0.0011never0.0006
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+utilsName.Otherany0.9366complex0.0561any[]0.0015void0.0003string0.0002
+.Punctuation
+lastNodeName.Otherany0.9546boolean0.0150string0.0123number0.0058complex0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nodeName.Otherany0.7362Node0.1078never0.0150Element0.0127string0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9996ObjectConstructor0.0000Math0.0000any0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9965any0.0016any[]0.0008boolean0.0003number0.0001
+(Punctuation
+nodeName.Otherany0.8743complex0.0228Node0.0156never0.0074any[]0.0038
+.Punctuation
+nodesName.Otherany0.8904any[]0.0393complex0.0210string0.0039Node[]0.0032
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+utilsName.Otherany0.7142complex0.2750any[]0.0031{}0.0003string0.0003
+.Punctuation
+lastName.Otherany0.8742string0.0478complex0.0247number0.0145boolean0.0082
+(Punctuation
+nodeName.Otherany0.9026Node0.0218complex0.0059never0.0053Error0.0022
+.Punctuation
+nodesName.Otherany0.9198any[]0.0220string0.0131complex0.0047number0.0021
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Cast the given `value` to an array.\n *\n * ```js\n * console.log(utils.arrayify(''));\n * //=> []\n * console.log(utils.arrayify('foo'));\n * //=> ['foo']\n * console.log(utils.arrayify(['foo']));\n * //=> ['foo']\n * ```\n * @param {any} `value`\n * @return {Array}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8623complex0.1262any[]0.0026void0.0014string0.0003
+.Punctuation
+arrayifyName.Otherany0.8402boolean0.0633void0.0406string0.0264complex0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valueName.Otherany0.9173string0.0697number0.0038complex0.0023any[]0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9684string0.0206number0.0034complex0.0033boolean0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Otherany0.8669string0.1276number0.0020complex0.0009boolean0.0007
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+valueName.Otherstring0.5692any0.4045number0.0177never0.0025boolean0.0014
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9997any0.0000ObjectConstructor0.0000Math0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9944any0.0021any[]0.0018boolean0.0006number0.0002
+(Punctuation
+valueName.Otherany0.9417any[]0.0253string0.0129complex0.0093number0.0056
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.8652string0.1143boolean0.0050any[]0.0049number0.0040
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Convert the given `value` to a string by joining with `,`. Useful\n * for creating a cheerio/CSS/DOM-style selector from a list of strings.\n *\n * @param {any} `value`\n * @return {Array}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.7144complex0.2799any[]0.0020void0.0006string0.0003
+.Punctuation
+stringifyName.Otherstring0.4997any0.4822complex0.0108boolean0.0024number0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valueName.Otherany0.8138string0.1736number0.0040complex0.0021any[]0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+utilsName.Otherany0.8585complex0.1318any[]0.0050string0.0006string[]0.0004
+.Punctuation
+arrayifyName.Otherany0.7799string0.1028string[]0.0289complex0.0258boolean0.0252
+(Punctuation
+valueName.Otherany0.6231string0.3650number0.0041boolean0.0023any[]0.0013
+)Punctuation
+.Punctuation
+joinName.Otherstring0.6919any0.3004complex0.0022number0.0017boolean0.0011
+(Punctuation
+','Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Ensure that the given value is a string and call `.trim()` on it,\n * or return an empty string.\n *\n * @param {String} `str`\n * @return {String}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+utilsName.Otherany0.8322complex0.1521string0.0016any[]0.0015void0.0010
+.Punctuation
+trimName.Otherstring0.8664any0.1275number0.0027boolean0.0013complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+strName.Otherany0.5279string0.4659complex0.0020number0.0017boolean0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+strName.Otherany0.8135string0.1642complex0.0161boolean0.0023number0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+strName.Otherstring0.6128any0.3845complex0.0008number0.0006boolean0.0004
+.Punctuation
+trimName.Otherstring0.8693any0.1272complex0.0015number0.0010boolean0.0003
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Return true if value is an object\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isObjectName.Otherboolean0.9806any0.0108string0.0022complex0.0022number0.0011
+(Punctuation
+valueName.Otherany0.8392string0.1344boolean0.0110number0.0099complex0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeOfName.Otherboolean0.7036any0.1918string0.0774complex0.0079number0.0065
+(Punctuation
+valueName.Otherany0.8451string0.1395boolean0.0049number0.0043complex0.0014
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return true if value is a string\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isStringName.Otherboolean0.5995any0.2030complex0.1810string0.0053number0.0037
+(Punctuation
+valueName.Otherany0.9295string0.0568number0.0067boolean0.0033complex0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9472string0.0268complex0.0074boolean0.0073number0.0042
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return true if value is a function\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isFunctionName.Otherboolean0.8923any0.0497complex0.0470string0.0026number0.0010
+(Punctuation
+valueName.Otherany0.9570string0.0245boolean0.0083number0.0038complex0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9425string0.0287complex0.0094boolean0.0057number0.0043
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return true if value is an array\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isArrayName.Otherboolean0.4923complex0.3901any0.0595any[]0.0175void0.0041
+(Punctuation
+valueName.Otherany0.9174string0.0592number0.0095boolean0.0044complex0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9997Math0.0000any0.0000ObjectConstructor0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9934any0.0031boolean0.0010any[]0.0006void0.0005
+(Punctuation
+valueName.Otherany0.9226any[]0.0220string0.0196complex0.0150number0.0075
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Shim to ensure the `.append` methods work with any version of snapdragon\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+appendName.Othervoid0.4569any0.3459boolean0.0747complex0.0348this0.0071
+(Punctuation
+compilerName.Otherany0.9606string0.0022boolean0.0015number0.0012Compiler0.0009
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.9348string0.0514number0.0050boolean0.0025never0.0009
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.8103Node0.0630never0.0114string0.0041Element0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+compilerName.Otherany0.9614complex0.0013number0.0012boolean0.0010Compiler0.0009
+.Punctuation
+appendName.Otherany0.8833complex0.0483boolean0.0219void0.0172string0.0025
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+compilerName.Otherany0.9871number0.0009void0.0005string0.0003complex0.0003
+.Punctuation
+emitName.Otherany0.9615complex0.0210void0.0067boolean0.0032number0.0017
+(Punctuation
+valueName.Otherany0.8155string0.1549number0.0108complex0.0040boolean0.0038
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.8262Node0.0444never0.0354string0.0052Error0.0050
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+compilerName.Otherany0.9815number0.0008void0.0006string0.0004Node0.0004
+.Punctuation
+appendName.Otherany0.7495void0.1629complex0.0500boolean0.0034Promise<any>0.0019
+(Punctuation
+valueName.Otherany0.8442string0.1302complex0.0046never0.0038number0.0034
+,Punctuation
+ Text.Whitespace
+nodeName.Otherany0.8953never0.0232Node0.0202string0.0114complex0.0039
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Simplified assertion. Throws an error is `value` is falsey.\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+assertName.Othervoid0.4370any0.4220complex0.0114Assert0.0063IAssertFunctions0.0048
+(Punctuation
+valueName.Otherany0.9037string0.0830number0.0035boolean0.0020Error0.0014
+,Punctuation
+ Text.Whitespace
+messageName.Otherstring0.9136any0.0768Error0.0017number0.0010string[]0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.8352string0.1355boolean0.0091complex0.0041never0.0035
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.6354Error0.2962complex0.0128string0.0127{}0.0092
+ Text.Whitespace
+newOperator.WordError0.4421any0.2661ErrorConstructor0.1943string0.0262never0.0059
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000never0.0000complex0.0000
+(Punctuation
+messageName.Otherstring0.8763any0.1085Error0.0055complex0.0015string[]0.0014
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+expectName.Otherany0.9317complex0.0515void0.0059boolean0.0008ExpectStatic0.0008
+(Punctuation
+nodeName.Otherany0.6924Node0.1255never0.0293Element0.0137Error0.0078
+,Punctuation
+ Text.Whitespace
+nameName.Otherstring0.8071any0.1858never0.0016complex0.0008number0.0005
+,Punctuation
+ Text.Whitespace
+NodeName.Otherany0.7600complex0.1080Node0.0279string0.0160Object0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNodeName.Otherboolean0.8248any0.1469complex0.0098string0.0048void0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+NodeName.Otherany0.5428complex0.3206Node0.0247string0.0127boolean0.0058
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+NodeName.Othercomplex0.5214any0.3579Node0.0245void0.0033any[]0.0033
+.Punctuation
+isNodeName.Otherboolean0.9198any0.0465complex0.0158string0.0119void0.0017
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+Node.isNodeName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+utils.isNodeKeyword.Type
+;Punctuation
+\n  Text.Whitespace
+assertName.Otherany0.8269void0.0928Assert0.0175complex0.0076IAssertFunctions0.0075
+(Punctuation
+isNodeName.Otherany0.7848boolean0.1472complex0.0288string0.0097void0.0080
+(Punctuation
+nodeName.Otherany0.7577Node0.1120never0.0141Element0.0117string0.0092
+)Punctuation
+,Punctuation
+ Text.Whitespace
+`Literal.String.Backtick
+expected Literal.String.Backtickstring0.8966any0.0719RegExp0.0100number0.0083boolean0.0031
+${Literal.String.Interpol
+nameName.Otherstring0.6442any0.3436complex0.0041number0.0017never0.0013
+}Literal.String.Interpol
+ to be an instance of NodeLiteral.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

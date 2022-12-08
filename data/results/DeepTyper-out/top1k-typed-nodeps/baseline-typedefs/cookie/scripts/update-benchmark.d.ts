@@ -1,0 +1,11 @@
+declare var fs: any;
+declare var http: any;
+declare var https: any;
+declare var path: any;
+declare var topSites: any;
+declare var url: any;
+declare var BENCH_COOKIES_FILE: string;
+declare function get(href: string, callback: any): void;
+declare function getAllCookies(sites: string, callback: Function): void;
+declare function getCookies(site: string, callback: Function): void;
+declare function obfuscate(str: string): string;

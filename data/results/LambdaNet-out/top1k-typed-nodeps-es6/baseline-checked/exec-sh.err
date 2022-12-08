@@ -1,0 +1,22 @@
+example/example.ts(1,20): error TS2307: Cannot find module '../' or its corresponding type declarations.
+example/example.ts(6,36): error TS2339: Property 'code' does not exist on type 'object'.
+lib/exec-sh.ts(34,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
+lib/exec-sh.ts(35,17): error TS2322: Type '{ stdio: null; }' is not assignable to type 'Function'.
+  Object literal may only specify known properties, and 'stdio' does not exist in type 'Function'.
+lib/exec-sh.ts(40,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/exec-sh.ts(53,28): error TS2339: Property 'cmd' does not exist on type 'object'.
+lib/exec-sh.ts(53,40): error TS2339: Property 'arg' does not exist on type 'object'.
+lib/exec-sh.ts(53,55): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'Function' has no properties in common with type 'SpawnOptions'.
+lib/exec-sh.ts(59,13): error TS2339: Property 'stdout' does not exist on type 'object'.
+lib/exec-sh.ts(60,11): error TS2339: Property 'stdout' does not exist on type 'object'.
+lib/exec-sh.ts(65,13): error TS2339: Property 'stderr' does not exist on type 'object'.
+lib/exec-sh.ts(66,11): error TS2339: Property 'stderr' does not exist on type 'object'.
+lib/exec-sh.ts(71,9): error TS2339: Property 'on' does not exist on type 'object'.
+lib/exec-sh.ts(74,9): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/exec-sh.ts(81,3): error TS2322: Type 'object' is not assignable to type 'string'.
+lib/exec-sh.ts(86,21): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+lib/exec-sh.ts(88,13): error TS2339: Property 'stdout' does not exist on type 'object'.
+lib/exec-sh.ts(89,13): error TS2339: Property 'stderr' does not exist on type 'object'.
+

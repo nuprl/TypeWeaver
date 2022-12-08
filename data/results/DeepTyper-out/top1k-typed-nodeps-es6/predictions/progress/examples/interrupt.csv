@@ -1,0 +1,135 @@
+Text
+/**\n * An example to show a progress bar being interrupted,\n * displaying messages above the bar while keeping the\n * progress intact\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+ProgressBarName.Otherany0.9801complex0.0086number0.0039void0.0019string0.0015
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+barName.Otherany0.1120HTMLDivElement0.0251XMLHttpRequest0.0096HTMLInputElement0.0076Url0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6914string0.0305number0.0112symbol0.0043HTMLDivElement0.0036
+ Text.Whitespace
+ProgressBarName.Otherany0.9966complex0.0027number0.0003void0.0001string0.0001
+(Punctuation
+':bar :current/:total'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+totalName.Othernumber0.5780any0.2645string0.1322void0.0045boolean0.0041
+:Operator
+ Text.Whitespace
+10Keyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+timerName.Otherany0.8531number0.1355complex0.0043string0.0027void0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+setIntervalName.Othercomplex0.9574any0.0346number0.0047string0.0006void0.0004
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+barName.Otherany0.4587Assert0.0064ILogger0.0043HTMLInputElement0.0038number0.0028
+.Punctuation
+tickName.Othervoid0.4999any0.4590number0.0277Promise<void>0.0035Promise<number>0.0015
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+barName.Otherany0.2886Assert0.0075HTMLInputElement0.0067XMLHttpRequest0.0047ILogger0.0039
+.Punctuation
+completeName.Otherany0.4817boolean0.4691number0.0216void0.0143string0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+clearIntervalName.Othervoid0.9638complex0.0164any0.0140number0.0029Function0.0005
+(Punctuation
+timerName.Otherany0.8192number0.1679string0.0060void0.0011complex0.0010
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+barName.Otherany0.3909complex0.0105number[]0.0062HTMLInputElement0.0044number0.0042
+.Punctuation
+currName.Othernumber0.6673any0.3160string0.0080complex0.0035boolean0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+5Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+barName.Otherany0.4084complex0.0190number[]0.0057number0.0055XMLHttpRequest0.0035
+.Punctuation
+currName.Othernumber0.7993any0.1856string0.0082complex0.0031void0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+barName.Otherany0.5960ILogger0.0050HTMLInputElement0.0042HTMLDivElement0.0030number[]0.0027
+.Punctuation
+interruptName.Othervoid0.7378any0.2354number0.0055string0.0054complex0.0052
+(Punctuation
+'interrupt: current progress is 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+barName.Otherany0.9102complex0.0040string0.0025number0.0016HTMLElement0.0015
+.Punctuation
+currName.Otherany0.6904number0.2577string0.0484complex0.0009void0.0006
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'/'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+barName.Otherany0.5737number[]0.0072complex0.0047HTMLInputElement0.0045IResponse0.0030
+.Punctuation
+totalName.Othernumber0.4820any0.4744string0.0324void0.0030boolean0.0021
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+1000Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

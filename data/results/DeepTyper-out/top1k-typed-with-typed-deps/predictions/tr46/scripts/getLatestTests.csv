@@ -1,0 +1,289 @@
+"use strict"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+/* eslint-disable no-process-env, no-process-exit */Comment.Multiline
+\n\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9849Process0.0033complex0.0027void0.0009number0.0006
+.Punctuation
+envName.Otherany0.9935complex0.0045void0.0008boolean0.0004string0.0003
+.Punctuation
+NO_UPDATEName.Otherany0.9864boolean0.0053string0.0025number0.0023void0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+processName.Otherany0.9923complex0.0031Process0.0005void0.0004string0.0004
+.Punctuation
+exitName.Otherany0.9839void0.0095Promise<any>0.0016Promise<void>0.0013complex0.0013
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fsName.Otherany0.9977string0.0010complex0.0005number0.0001any[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"fs"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9976string0.0019complex0.0002number0.0000Promise<any>0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"path"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+promisifyName.Otherany0.9589string0.0174Promise<any>0.0060void0.0037T0.0026
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"util"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+// Replace this with stream/promises.pipeline when we require Node.js 15.x.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+pipelineName.Otherany0.8981complex0.0791string0.0088{}0.0041any[]0.0026
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"stream"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fetchName.Otherany0.9286Promise<any>0.0209complex0.0119Promise<void>0.0066Promise<{}>0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"minipass-fetch"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+unicodeVersionName.Otherany0.9053string0.0489Promise<any>0.0087void0.0084complex0.0073
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"../package.json"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pipelinePromiseName.Otherany0.8031Promise<any>0.0913Promise<void>0.0639Promise<{}>0.0091void0.0085
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+promisifyName.Otherany0.9585Promise<any>0.0164Promise<void>0.0056void0.0049T0.0026
+(Punctuation
+pipelineName.Otherany0.9310complex0.0467{}0.0071string0.0041void0.0028
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+asyncKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mainName.OtherPromise<void>0.9527Promise<any>0.0226Promise<{}>0.0075void0.0067Promise<number>0.0028
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9991any0.0005Promise<any>0.0001complex0.0000Promise<any>[]0.0000
+.Punctuation
+allName.OtherPromiseConstructor0.3067any0.2437complex0.1939Promise<any>0.0464Promise<any[]>0.0185
+(Punctuation
+[Punctuation
+\n    Text.Whitespace
+(Punctuation
+asyncKeyword
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.8364any[]0.0088Target0.0064string[]0.0060string0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9992complex0.0003string0.0001any[]0.0001number0.0000
+.Punctuation
+createWriteStreamName.Otherany0.9960complex0.0034string0.0002number0.0001any[]0.0000
+(Punctuation
+pathName.Otherany0.9982string0.0011complex0.0005any[]0.0000number0.0000
+.Punctuation
+resolveName.Otherany0.9675complex0.0277string0.0038void0.0002number0.0001
+(Punctuation
+__dirnameName.Otherany0.6884string0.3036number0.0046boolean0.0005string[]0.0004
+,Punctuation
+ Text.Whitespace
+"../test/fixtures/IdnaTestV2.txt"Literal.String.Double
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+responseName.Otherany0.5944Response0.2349Promise<void>0.0153Promise<any>0.0090IResponse0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+fetchName.Otherany0.3923Promise<any>0.1192Promise<Response>0.0970Promise<T>0.0951complex0.0617
+(Punctuation
+`Literal.String.Backtick
+https://unicode.org/Public/idna/Literal.String.Backtick
+${Literal.String.Interpol
+unicodeVersionName.Otherstring0.7122any0.1283string[]0.0233number0.0232Promise<string>0.0117
+}Literal.String.Interpol
+/IdnaTestV2.txtLiteral.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+pipelinePromiseName.OtherPromise<void>0.6909Promise<any>0.1517Promise<{}>0.1151Promise<string>0.0098any0.0084
+(Punctuation
+responseName.Otherany0.4649Response0.2587IResponse0.0298WebResponse0.0144complex0.0090
+.Punctuation
+bodyName.Otherany0.9539string0.0227complex0.0060HTMLElement0.0030Promise<void>0.0021
+,Punctuation
+ Text.Whitespace
+targetName.Otherany0.4538Object0.1030string0.0905object0.0331number0.0282
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+(Punctuation
+asyncKeyword
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+asciiTargetName.Otherany0.9775string0.0054any[]0.0025Buffer0.0013number0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9994complex0.0002string0.0002number0.0000any[]0.0000
+.Punctuation
+createWriteStreamName.Otherany0.9973complex0.0023string0.0002number0.0001any[]0.0000
+(Punctuation
+pathName.Otherany0.9980string0.0014complex0.0003Path0.0000number0.0000
+.Punctuation
+resolveName.Otherany0.9736complex0.0214string0.0042void0.0002number0.0001
+(Punctuation
+__dirnameName.Otherany0.7601string0.2338number0.0039boolean0.0003string[]0.0003
+,Punctuation
+ Text.Whitespace
+"../test/fixtures/toascii.json"Literal.String.Double
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+responseName.OtherResponse0.5154any0.2838IResponse0.0142WebResponse0.0055Promise<void>0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+fetchName.OtherPromise<Response>0.2403any0.2311Promise<any>0.1018Promise<T>0.0922Promise<string>0.0455
+(Punctuation
+"https://github.com/web-platform-tests/wpt/raw/112ad5ca55d55f6da2ccc7468e6dcc91b4e5d223/url/resources/toascii.json"Literal.String.Double
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+pipelinePromiseName.OtherPromise<void>0.7683Promise<any>0.0958Promise<{}>0.0478any0.0241Promise<string>0.0138
+(Punctuation
+responseName.OtherResponse0.3819any0.3589WebResponse0.0251IResponse0.0236complex0.0084
+.Punctuation
+bodyName.Otherany0.9404string0.0264complex0.0059HTMLElement0.0052number0.0018
+,Punctuation
+ Text.Whitespace
+asciiTargetName.Otherstring0.4159any0.3660number0.0706boolean0.0295Promise<void>0.0108
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+mainName.OtherPromise<void>0.6745void0.1991Promise<{}>0.0334Promise<any>0.0211any0.0079
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,232 @@
+importKeyword
+ Text.Whitespace
+reduceName.Othercomplex0.7168any0.0995void0.0163number0.0086T0.0062
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./reduce.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.1699void0.1228complex0.1208Promise<void>0.0391boolean0.0188
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+promiseCallbackName.Otherany0.2887void0.1299complex0.1140any[]0.0293number0.0230
+,Punctuation
+ Text.Whitespace
+PROMISE_SYMBOLName.Otherany0.2984complex0.1615void0.1383boolean0.0314string0.0293
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/promiseCallback.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Version of the compose function that is more natural to read. Each function\n * consumes the return value of the previous function. It is the equivalent of\n * [compose]{@link module:ControlFlow.compose} with the arguments reversed.\n *\n * Each function is executed with the `this` binding of the composed function.\n *\n * @name seq\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @see [async.compose]{@link module:ControlFlow.compose}\n * @category Control Flow\n * @param {...AsyncFunction} functions - the asynchronous functions to compose\n * @returns {Function} a function that composes the `functions` in order\n * @example\n *\n * // Requires lodash (or underscore), express3 and dresende's orm2.\n * // Part of an app, that fetches cats of the logged user.\n * // This example uses `seq` function to avoid overnesting and error\n * // handling clutter.\n * app.get('/cats', function(request, response) {\n *     var User = request.models.User;\n *     async.seq(\n *         User.get.bind(User),  // 'User.get' has signature (id, callback(err, data))\n *         function(user, fn) {\n *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))\n *         }\n *     )(req.session.user_id, function (err, cats) {\n *         if (err) {\n *             console.error(err);\n *             response.json({ status: 'error', message: err.message });\n *         } else {\n *             response.json({ status: 'ok', message: 'Cats found', data: cats });\n *         }\n *     });\n * });\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+seqName.Othervoid0.3783any0.2860number0.1073string0.0924complex0.0178
+(Punctuation
+...Punctuation
+functionsName.Otherany[]0.8880any0.0585complex0.0068string[]0.0045number[]0.0021
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_functionsName.Otherany0.9245any[]0.0486void0.0069string0.0062number0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionsName.Otherany[]0.8490any0.1118complex0.0064string[]0.0027number[]0.0021
+.Punctuation
+mapName.Otherany0.4340U[]0.4299complex0.0951any[]0.0092void0.0090
+(Punctuation
+wrapAsyncName.Otherany0.6633any[]0.0976number0.0491string0.0395complex0.0369
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8149any0.1542string[]0.0094IArguments0.0018complex0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+thatName.Otherthis0.5593any0.2752void0.0325any[]0.0264complex0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cbName.Otherany0.9342any[]0.0176void0.0158Function0.0053boolean0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany[]0.4783any0.4546string[]0.0122IArguments0.0061any[][]0.0043
+[Punctuation
+argsName.Otherany[]0.6789any0.1801string[]0.0450IArguments0.0243any[][]0.0075
+.Punctuation
+lengthName.Otherany0.6219number0.3732string0.0015complex0.0008void0.0008
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+cbName.Otherany0.8947void0.0355Function0.0229complex0.0118string0.0086
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+argsName.Otherany[]0.5260any0.4187string[]0.0186complex0.0042IArguments0.0040
+.Punctuation
+popName.Otherany0.8821string0.0533number0.0131any[]0.0113complex0.0082
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+cbName.Otherany0.8611void0.0424Function0.0335any[]0.0116number0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+promiseCallbackName.Otherany0.8101void0.0397any[]0.0327complex0.0256Function0.0174
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+reduceName.Othercomplex0.3383any0.3254void0.2170number0.0314any...0.0155
+(Punctuation
+_functionsName.Otherany0.9339any[]0.0266string0.0101number0.0077void0.0051
+,Punctuation
+ Text.Whitespace
+argsName.Otherany0.5035any[]0.4537complex0.0080string[]0.0066void0.0036
+,Punctuation
+ Text.Whitespace
+(Punctuation
+newargsName.Otherany0.9129any[]0.0204void0.0110string0.0106complex0.0084
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.7672Function0.1693void0.0197complex0.0080boolean0.0070
+,Punctuation
+ Text.Whitespace
+iterCbName.Otherany0.8563void0.0311boolean0.0236Function0.0223any[]0.0155
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+fnName.Otherany0.6197Function0.2401void0.0793complex0.0276boolean0.0055
+.Punctuation
+applyName.Otherany0.9764void0.0139complex0.0027Function0.0021any[]0.0017
+(Punctuation
+thatName.Otherany0.4744this0.1202void0.1017any[]0.0995complex0.0607
+,Punctuation
+ Text.Whitespace
+newargsName.Otherany[]0.5450any0.2645complex0.0771string[]0.0183void0.0057
+.Punctuation
+concatName.Othercomplex0.9154any0.0547any[]0.0153void0.0020number0.0015
+(Punctuation
+(Punctuation
+errName.Otherany0.7184Error0.2330string0.0076complex0.0050void0.0046
+,Punctuation
+ Text.Whitespace
+...Punctuation
+nextargsName.Otherany[]0.4614any0.4482complex0.0130void0.0124number0.0042
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+iterCbName.Othervoid0.5282any0.3146any[]0.0585complex0.0295string0.0068
+(Punctuation
+errName.Otherany0.6685Error0.2660string0.0191any[]0.0061void0.0044
+,Punctuation
+ Text.Whitespace
+nextargsName.Otherany0.8004any[]0.0795string0.0279number0.0257void0.0111
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+(Punctuation
+errName.Otherany0.7868Error0.1708string0.0080void0.0043complex0.0033
+,Punctuation
+ Text.Whitespace
+resultsName.Otherany0.5530any[]0.3536Error0.0077string0.0056complex0.0050
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+cbName.Otherany0.7529void0.1355Function0.0409any[]0.0046complex0.0037
+(Punctuation
+errName.Otherany0.7476Error0.2112string0.0110void0.0040any[]0.0034
+,Punctuation
+ Text.Whitespace
+...Punctuation
+resultsName.Otherany[]0.7466any0.1905complex0.0088string[]0.0073string0.0020
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+cbName.Otherany0.9033any[]0.0337Function0.0079complex0.0071void0.0059
+[Punctuation
+PROMISE_SYMBOLName.Otherany0.4403string0.1769number0.1118any[]0.0988complex0.0191
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

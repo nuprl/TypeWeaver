@@ -1,0 +1,14 @@
+index.ts(9,9): error TS2322: Type '(node: any) => (a: any, b: any) => any' is not assignable to type 'boolean'.
+index.ts(22,13): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+index.ts(36,13): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(51,31): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+index.ts(51,60): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(71,5): error TS2322: Type '(x: any) => boolean' is not assignable to type 'any[]'.
+index.ts(75,28): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'string[]'.
+index.ts(76,24): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
+index.ts(79,17): error TS2339: Property 'call' does not exist on type 'boolean'.
+

@@ -1,0 +1,41 @@
+Text
+/**\n  `rethrow` will rethrow an error on the next turn of the JavaScript event\n  loop in order to aid debugging.\n\n  Promises A+ specifies that any exceptions that occur with a promise must be\n  caught by the promises implementation and bubbled to the last handler. For\n  this reason, it is recommended that you always specify a second rejection\n  handler function to `then`. However, `rethrow` will throw the exception\n  outside of the promise, so it bubbles up to your console if in the browser,\n  or domain/cause uncaught exception in Node. `rethrow` will also throw the\n  error again so the error can be handled by the promise per the spec.\n\n  ```javascript\n  import { rethrow } from 'rsvp';\n\n  function throws(){\n    throw new Error('Whoops!');\n  }\n\n  let promise = new Promise(function(resolve, reject){\n    throws();\n  });\n\n  promise.catch(rethrow).then(function(){\n    // Code here doesn't run because the promise became rejected due to an\n    // error!\n  }, function (err){\n    // handle the error here\n  });\n  ```\n\n  The 'Whoops' error will be thrown on the next turn of the event loop\n  and you can watch for it in your console. You can also handle it using a\n  rejection handler given to `.then` or `.catch` on the returned promise.\n\n  @method rethrow\n  @public\n  @static\n  @for rsvp\n  @param {Error} reason reason the promise became rejected.\n  @throws Error\n  @static\n*/Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rethrowName.Othervoid0.6614string0.0784any0.0490Promise<void>0.0190complex0.0171
+(Punctuation
+reasonName.Otherany0.3652string0.3241Error0.1872number0.0167complex0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+setTimeoutName.Othercomplex0.9687any0.0270string0.0018number0.0012void0.0004
+(Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.7025Error0.2313string0.0382number0.0072never0.0059
+ Text.Whitespace
+reasonName.Otherany0.4937Error0.3408string0.1178number0.0133never0.0073
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+throwKeywordany0.5587Error0.3497string0.0434never0.0101number0.0075
+ Text.Whitespace
+reasonName.Otherany0.4990Error0.3661string0.0853number0.0106complex0.0051
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

@@ -1,0 +1,65 @@
+lib/index.ts(3,5): error TS2300: Duplicate identifier 'stringify'.
+lib/index.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/parse.ts(17,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/parse.ts(51,31): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse.ts(52,14): error TS2339: Property 'after' does not exist on type 'object'.
+lib/parse.ts(53,14): error TS2339: Property 'sourceEndIndex' does not exist on type 'object'.
+lib/parse.ts(60,31): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse.ts(60,61): error TS2339: Property 'value' does not exist on type 'object'.
+lib/parse.ts(78,7): error TS2322: Type '{ type: string; sourceIndex: number; quote: string; }' is not assignable to type 'string'.
+lib/parse.ts(95,17): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(98,13): error TS2339: Property 'value' does not exist on type 'string'.
+lib/parse.ts(99,13): error TS2339: Property 'sourceEndIndex' does not exist on type 'string'.
+lib/parse.ts(99,36): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(108,7): error TS2322: Type '{ type: string; sourceIndex: number; sourceEndIndex: number; }' is not assignable to type 'string'.
+lib/parse.ts(115,15): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(117,15): error TS2339: Property 'sourceEndIndex' does not exist on type 'string'.
+lib/parse.ts(120,13): error TS2339: Property 'value' does not exist on type 'string'.
+lib/parse.ts(130,14): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse.ts(131,14): error TS2339: Property 'value' does not exist on type 'object'.
+lib/parse.ts(169,7): error TS2322: Type '{ type: string; sourceIndex: number; value: string; before: string; }' is not assignable to type 'string'.
+lib/parse.ts(191,19): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(202,19): error TS2339: Property 'nodes' does not exist on type 'string'.
+lib/parse.ts(211,19): error TS2339: Property 'nodes' does not exist on type 'string'.
+lib/parse.ts(213,21): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(214,19): error TS2339: Property 'after' does not exist on type 'string'.
+lib/parse.ts(215,19): error TS2339: Property 'nodes' does not exist on type 'string'.
+lib/parse.ts(222,19): error TS2339: Property 'after' does not exist on type 'string'.
+lib/parse.ts(223,19): error TS2339: Property 'sourceEndIndex' does not exist on type 'string'.
+lib/parse.ts(226,17): error TS2339: Property 'after' does not exist on type 'string'.
+lib/parse.ts(227,17): error TS2339: Property 'nodes' does not exist on type 'string'.
+lib/parse.ts(230,15): error TS2339: Property 'sourceEndIndex' does not exist on type 'string'.
+lib/parse.ts(230,38): error TS2339: Property 'unclosed' does not exist on type 'string'.
+lib/parse.ts(235,15): error TS2339: Property 'after' does not exist on type 'string'.
+lib/parse.ts(236,15): error TS2339: Property 'sourceEndIndex' does not exist on type 'string'.
+lib/parse.ts(239,24): error TS2339: Property 'nodes' does not exist on type 'string'.
+lib/parse.ts(240,9): error TS2322: Type 'string' is not assignable to type 'object'.
+lib/parse.ts(249,14): error TS2339: Property 'after' does not exist on type 'object'.
+lib/parse.ts(250,14): error TS2339: Property 'sourceEndIndex' does not exist on type 'object'.
+lib/parse.ts(256,23): error TS2339: Property 'nodes' does not exist on type 'object'.
+lib/parse.ts(279,20): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse.ts(280,20): error TS2339: Property 'value' does not exist on type 'object'.
+lib/parse.ts(282,20): error TS2339: Property 'type' does not exist on type 'object'.
+lib/parse.ts(283,20): error TS2339: Property 'value' does not exist on type 'object'.
+lib/stringify.ts(2,27): error TS2339: Property 'type' does not exist on type 'object'.
+lib/stringify.ts(3,28): error TS2339: Property 'value' does not exist on type 'object'.
+lib/stringify.ts(12,16): error TS2339: Property 'quote' does not exist on type 'object'.
+lib/stringify.ts(13,32): error TS2339: Property 'unclosed' does not exist on type 'object'.
+lib/stringify.ts(15,33): error TS2339: Property 'unclosed' does not exist on type 'object'.
+lib/stringify.ts(17,18): error TS2339: Property 'before' does not exist on type 'object'.
+lib/stringify.ts(17,48): error TS2339: Property 'after' does not exist on type 'object'.
+lib/stringify.ts(18,33): error TS2339: Property 'nodes' does not exist on type 'object'.
+lib/stringify.ts(19,26): error TS2339: Property 'nodes' does not exist on type 'object'.
+lib/stringify.ts(26,13): error TS2339: Property 'before' does not exist on type 'object'.
+lib/stringify.ts(28,13): error TS2339: Property 'after' does not exist on type 'object'.
+lib/stringify.ts(29,13): error TS2339: Property 'unclosed' does not exist on type 'object'.
+lib/stringify.ts(35,10): error TS2300: Duplicate identifier 'stringify'.
+lib/stringify.ts(41,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+lib/stringify.ts(45,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+lib/walk.ts(4,15): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/walk.ts(4,35): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+lib/walk.ts(11,7): error TS2367: This condition will always return 'true' since the types 'string' and 'boolean' have no overlap.
+lib/walk.ts(12,12): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+lib/walk.ts(13,26): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
+lib/walk.ts(15,17): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
+

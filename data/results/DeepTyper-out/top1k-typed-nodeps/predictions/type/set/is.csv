@@ -1,0 +1,191 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isPrototypeName.Otherany0.7852boolean0.0995string0.0680number0.0138void0.0081
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"../prototype/is"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// In theory we could rely on Symbol.toStringTag directly,Comment.Single
+\nText.Whitespace
+// still early native implementation (e.g. in FF) predated symbolsComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+objectToStringName.Otherstring0.3570boolean0.2711any0.2596number0.0521Object0.0240
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9986Object0.0008any0.0001complex0.0001FunctionConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.9392complex0.0089{}0.0044any0.0035object0.0029
+.Punctuation
+toStringName.Otherstring0.9376any0.0468complex0.0051number0.0024Object0.0023
+,Punctuation
+ Text.Whitespace
+objectTaggedStringName.Otherboolean0.6632any0.2751string0.0335number0.0088complex0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectToStringName.Otherany0.5060boolean0.1873any[]0.0935complex0.0730string0.0354
+.Punctuation
+callName.Otherany0.9715string0.0063complex0.0042boolean0.0041number0.0021
+(Punctuation
+newOperator.Wordany0.4519Set<string>0.0721Set<any>0.0480SetConstructor0.0274object0.0158
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9185any0.0252Set<any>0.0192Set<string>0.0042boolean0.0022
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.9573string0.0124boolean0.0039complex0.0023Date0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.9665string0.0084boolean0.0069complex0.0065Date0.0014
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n\tText.Whitespace
+// Sanity check (reject objects which do not expose common Set interface)Comment.Single
+\n\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9651complex0.0077Date0.0027boolean0.0015Object0.0014
+.Punctuation
+addName.Otherany0.9785boolean0.0089string0.0058complex0.0034number0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"function"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9308complex0.0230boolean0.0022Set<any>0.0021any[]0.0017
+.Punctuation
+hasName.Otherany0.6384boolean0.3444string0.0084complex0.0017number0.0017
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"function"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9718complex0.0073boolean0.0026T0.0011Date0.0006
+.Punctuation
+clearName.Otherany0.9573boolean0.0327string0.0031number0.0021complex0.0018
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"function"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9971boolean0.0008number0.0005Error0.0004string0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+// Ensure its native Set object (has [[SetData]] slot)Comment.Single
+\n\tText.Whitespace
+// Note: it's not 100% precise as string tag may be overridenComment.Single
+\n\tText.Whitespace
+// and other objects could be hacked to expose itComment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectToStringName.Otherboolean0.5638any0.3819complex0.0163any[]0.0095string0.0052
+.Punctuation
+callName.Otherany0.9677boolean0.0131complex0.0052number0.0045string0.0028
+(Punctuation
+valueName.Otherany0.9714string0.0051boolean0.0040complex0.0027number0.0017
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+objectTaggedStringName.Otherboolean0.5660any0.2935number0.0676string0.0462void0.0051
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+isPrototypeName.Otherboolean0.9110any0.0696string0.0049complex0.0026false0.0012
+(Punctuation
+valueName.Otherany0.9443boolean0.0275string0.0095complex0.0025number0.0016
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

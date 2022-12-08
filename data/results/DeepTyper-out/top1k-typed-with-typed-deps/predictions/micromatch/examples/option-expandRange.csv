@@ -1,0 +1,177 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fillName.Otherany0.9807string0.0117void0.0018number0.0008any[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'fill-range'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+micromatchName.Otherany0.9924string0.0025complex0.0006NodeRequire0.0005number0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'..'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexName.Otherany0.5521RegExp0.3994string0.0186boolean0.0023number0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+micromatchName.Otherany0.9949string0.0017complex0.0005RegExp0.0003number0.0002
+.Punctuation
+makeReName.Otherany0.9742string0.0091boolean0.0065complex0.0041number0.0018
+(Punctuation
+'foo/{01..25}/bar'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+expandRangeName.Otherboolean0.4892any0.2870string0.1777number0.0265complex0.0065
+(Punctuation
+aName.Otherany0.8116string0.1546number0.0274boolean0.0032complex0.0005
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.7414string0.2159number0.0283boolean0.0085Buffer0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+(Literal.String.Backtick
+${Literal.String.Interpol
+fillName.Otherany0.7784string0.0896any[]0.0155complex0.0148void0.0116
+(Punctuation
+aName.Otherany0.6775string0.2670number0.0413complex0.0024boolean0.0017
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.6795string0.2755number0.0197boolean0.0057complex0.0010
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+toRegexName.Otherboolean0.9885any0.0069string0.0024number0.0009true0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Literal.String.Interpol
+)})Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+consoleName.OtherConsole0.9996any0.0003void0.0000number0.0000string0.0000
+.Punctuation
+logName.Othervoid0.9970any0.0015complex0.0009Promise<void>0.0001boolean0.0001
+(Punctuation
+regexName.Otherany0.5309RegExp0.4042string0.0406number0.0047boolean0.0020
+)Punctuation
+;Punctuation
+\nText.Whitespace
+//=> /^(?:foo\/((?:0[1-9]|1[0-9]|2[0-5]))\/bar)$/Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9994any0.0004void0.0000number0.0000RegExp0.0000
+.Punctuation
+logName.Othervoid0.9959any0.0024complex0.0011boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.4968any0.4798string0.0144number0.0009boolean0.0008
+.Punctuation
+testName.Otherany0.8379boolean0.0831complex0.0536string0.0147RegExp0.0028
+(Punctuation
+'foo/00/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// falseComment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9996any0.0002void0.0000number0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9960any0.0023complex0.0010boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.5696any0.4062string0.0151number0.0011boolean0.0010
+.Punctuation
+testName.Otherany0.8066boolean0.1002complex0.0606string0.0196RegExp0.0035
+(Punctuation
+'foo/01/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// trueComment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9996any0.0002void0.0001number0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9962any0.0021complex0.0010boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.5839any0.3919string0.0152number0.0012boolean0.0010
+.Punctuation
+testName.Otherany0.7952boolean0.1065complex0.0626string0.0219number0.0039
+(Punctuation
+'foo/10/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// trueComment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0002void0.0001number0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9963any0.0020complex0.0010boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.6108any0.3651string0.0151number0.0013boolean0.0010
+.Punctuation
+testName.Otherany0.7811boolean0.1157complex0.0638string0.0247number0.0045
+(Punctuation
+'foo/22/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// trueComment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001number0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9965any0.0019complex0.0010boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.6566any0.3198string0.0149number0.0013boolean0.0010
+.Punctuation
+testName.Otherany0.7675boolean0.1253complex0.0628string0.0287number0.0053
+(Punctuation
+'foo/25/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// trueComment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0000number0.0000string0.0000
+.Punctuation
+logName.Othervoid0.9966any0.0017complex0.0010boolean0.0002number0.0001
+(Punctuation
+regexName.OtherRegExp0.7221any0.2516string0.0168boolean0.0011number0.0010
+.Punctuation
+testName.Otherany0.6300boolean0.2571complex0.0556string0.0412number0.0056
+(Punctuation
+'foo/26/bar'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// falseComment.Single
+\nText.Whitespace

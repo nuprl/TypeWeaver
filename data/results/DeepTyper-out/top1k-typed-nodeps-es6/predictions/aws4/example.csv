@@ -1,0 +1,1731 @@
+importKeyword
+ Text.Whitespace
+httpName.Otherany0.9576complex0.0289void0.0043string0.0016Function0.0008
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'https'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+aws4Name.Otherany0.9560string0.0178complex0.0054RegExp0.0032void0.0025
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'.'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// to illustrate usage, we'll create a utility function to request and pipe to stdoutComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+requestName.Otherany0.5288void0.3187complex0.0913Promise<any>0.0087Function0.0063
+(Punctuation
+optsName.Otherany0.8939Options0.0101complex0.0095string0.0077{}0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+httpName.Otherany0.9950complex0.0023void0.0002string0.0002Http0.0001
+.Punctuation
+requestName.Otherany0.8988complex0.0917void0.0054Promise<any>0.0006Function0.0005
+(Punctuation
+optsName.Otherany0.6862complex0.0837{}0.0318Options0.0204Object0.0081
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+resName.Otherany0.5735Response0.1936string0.0496Buffer0.0349boolean0.0104
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+resName.Otherany0.9844Response0.0046string0.0022void0.0006Buffer0.0004
+.Punctuation
+pipeName.Otherany0.9906string0.0037void0.0029complex0.0008number0.0007
+(Punctuation
+processName.Otherany0.9953complex0.0008Process0.0004string0.0002number0.0001
+.Punctuation
+stdoutName.Otherany0.9937string0.0055complex0.0002number0.0002{}0.0001
+)Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+.Punctuation
+endName.Otherany0.9903complex0.0031void0.0026string0.0017number0.0005
+(Punctuation
+optsName.Otherany0.7972complex0.0879Options0.0163{}0.0082string0.0055
+.Punctuation
+bodyName.Otherany0.6532string0.3416complex0.0028boolean0.0007number0.0006
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// aws4 will sign an options object as you'd pass to http.request, with an AWS service and regionComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.5760complex0.3761{}0.0053string0.0037number0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+hostName.Otherstring0.9955any0.0027RegExp0.0009number0.0003complex0.0002
+:Operator
+ Text.Whitespace
+'my-bucket.s3.us-west-1.amazonaws.com'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9985any0.0007RegExp0.0003number0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/my-object'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9979RegExp0.0006any0.0006number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'s3'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+regionName.Otherstring0.9975any0.0010RegExp0.0007number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'us-west-1'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// aws4.sign() will sign and modify these options, ready to pass to http.requestComment.Single
+\nText.Whitespace
+aws4Name.Otherany0.9514complex0.0147string0.0142number0.0013Date0.0009
+.Punctuation
+signName.Otherany0.8500complex0.0970string0.0346number0.0052T0.0015
+(Punctuation
+optsName.Otherany0.4993complex0.3622{}0.0400string0.0187Options0.0060
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+accessKeyIdName.Otherstring0.9821any0.0085RegExp0.0075number0.0010boolean0.0003
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+ Text.Whitespace
+secretAccessKeyName.Otherstring0.9803any0.0117RegExp0.0062number0.0009string[]0.0002
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// or it can get credentials from process.env.AWS_ACCESS_KEY_ID, etcComment.Single
+\nText.Whitespace
+aws4Name.Otherany0.9695complex0.0046string0.0046number0.0009RegExp0.0008
+.Punctuation
+signName.Otherany0.9399complex0.0362string0.0115number0.0031T0.0007
+(Punctuation
+optsName.Otherany0.6170complex0.2577{}0.0256string0.0126Options0.0088
+)Punctuation
+\n\nText.Whitespace
+Text
+// for most AWS services, aws4 can figure out the service and region if you pass a hostComment.Single
+\nText.Whitespace
+optsName.Otherany0.6201complex0.3277{}0.0057string0.0051number0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+hostName.Otherstring0.9940any0.0029RegExp0.0019number0.0004complex0.0003
+:Operator
+ Text.Whitespace
+'my-bucket.s3.us-west-1.amazonaws.com'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9981any0.0009RegExp0.0004number0.0002string[]0.0001
+:Operator
+ Text.Whitespace
+'/my-object'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// usually it will add/modify request headers, but you can also sign the query:Comment.Single
+\nText.Whitespace
+optsName.Othercomplex0.5145any0.4493string0.0063{}0.0062Object0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+hostName.Otherstring0.9963any0.0016RegExp0.0013number0.0002complex0.0002
+:Operator
+ Text.Whitespace
+'my-bucket.s3.amazonaws.com'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9980any0.0008RegExp0.0004number0.0002boolean0.0002
+:Operator
+ Text.Whitespace
+'/?X-Amz-Expires=12345'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+signQueryName.Otherboolean0.9671string0.0143any0.0131number0.0027false0.0005
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// and for services with simple hosts, aws4 can infer the host from service and region:Comment.Single
+\nText.Whitespace
+optsName.Othercomplex0.6219any0.3485{}0.0049string0.0027Object0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9975any0.0008RegExp0.0006number0.0003boolean0.0003
+:Operator
+ Text.Whitespace
+'sqs'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+regionName.Otherstring0.9958RegExp0.0023any0.0010boolean0.0003number0.0003
+:Operator
+ Text.Whitespace
+'us-east-1'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9985any0.0006RegExp0.0003number0.0002string[]0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListQueues'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// and if you're using us-east-1, it's the default:Comment.Single
+\nText.Whitespace
+optsName.Othercomplex0.5555any0.4169{}0.0052string0.0048number0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9980any0.0007RegExp0.0004number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'sqs'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9985any0.0007RegExp0.0002number0.0002string[]0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListQueues'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+aws4Name.Otherany0.9490complex0.0095string0.0060number0.0011RegExp0.0011
+.Punctuation
+signName.Otherany0.8653complex0.0824string0.0303number0.0058void0.0024
+(Punctuation
+optsName.Otherany0.5115complex0.3771{}0.0190Options0.0095string0.0078
+)Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9996any0.0001void0.0000complex0.0000Promise<{}>0.0000
+.Punctuation
+logName.Othervoid0.9923complex0.0040any0.0024Promise<void>0.0002string0.0002
+(Punctuation
+optsName.Otherany0.5973complex0.3135{}0.0197string0.0144Options0.0078
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{\n  host: 'sqs.us-east-1.amazonaws.com',\n  path: '/?Action=ListQueues',\n  headers: {\n    Host: 'sqs.us-east-1.amazonaws.com',\n    'X-Amz-Date': '20121226T061030Z',\n    Authorization: 'AWS4-HMAC-SHA256 Credential=ABCDEF/20121226/us-east-1/sqs/aws4_request, ...'\n  }\n}\n*/Comment.Multiline
+\n\nText.Whitespace
+// we can now use this to query AWSComment.Single
+\nText.Whitespace
+requestName.Otherany0.6898complex0.2543Request0.0094void0.0085Promise<any>0.0068
+(Punctuation
+optsName.Otherany0.4954complex0.3771{}0.0248string0.0138Options0.0137
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<?xml version="1.0"?>\n<ListQueuesResponse xmlns="https://queue.amazonaws.com/doc/2012-11-05/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+// aws4 can infer the HTTP method if a body is passed inComment.Single
+\nText.Whitespace
+// method will be POST and Content-Type: 'application/x-www-form-urlencoded; charset=utf-8'Comment.Single
+\nText.Whitespace
+requestName.Otherany0.8184complex0.1588Promise<any>0.0036Request0.0034string0.0024
+(Punctuation
+aws4Name.Otherany0.9784string0.0067complex0.0035number0.0010Request0.0006
+.Punctuation
+signName.Otherany0.9205complex0.0579string0.0134number0.0014any[]0.0004
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9983any0.0008number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'iam'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9973any0.0016RegExp0.0005number0.0002boolean0.0002
+:Operator
+ Text.Whitespace
+'Action=ListGroups&Version=2010-05-08'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListGroupsResponse xmlns="https://iam.amazonaws.com/doc/2010-05-08/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+// you can specify any custom option or header as per usualComment.Single
+\nText.Whitespace
+requestName.Otherany0.7390complex0.2149Request0.0112Promise<any>0.0089void0.0082
+(Punctuation
+aws4Name.Otherany0.9661string0.0060complex0.0037Request0.0019Response0.0012
+.Punctuation
+signName.Otherany0.9268complex0.0512string0.0124number0.0011Promise<any>0.0006
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+serviceName.Otherstring0.9980any0.0009number0.0003RegExp0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'dynamodb'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+regionName.Otherstring0.9975RegExp0.0009any0.0008number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'ap-southeast-2'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+methodName.Otherstring0.9978any0.0012number0.0004boolean0.0003RegExp0.0001
+:Operator
+ Text.Whitespace
+'POST'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+pathName.Otherstring0.9988any0.0005RegExp0.0002number0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+headersName.Othercomplex0.9989any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.0'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'DynamoDB_20120810.ListTables'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+bodyName.Otherstring0.9968any0.0015RegExp0.0009number0.0002boolean0.0002
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"TableNames":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+// works with all other services that support Signature Version 4Comment.Single
+\n\nText.Whitespace
+requestName.Otherany0.6294complex0.3236Request0.0125Promise<any>0.0093void0.0069
+(Punctuation
+aws4Name.Otherany0.9606string0.0049complex0.0046Request0.0027Response0.0014
+.Punctuation
+signName.Otherany0.9083complex0.0671string0.0122number0.0017Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9978any0.0010number0.0004RegExp0.0003boolean0.0003
+:Operator
+ Text.Whitespace
+'s3'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9988any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+signQueryName.Otherboolean0.9681string0.0162any0.0109number0.0037false0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListAllMyBucketsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7686complex0.1956void0.0084Request0.0082Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9579string0.0062complex0.0047Request0.0028Response0.0010
+.Punctuation
+signName.Otherany0.9166complex0.0605string0.0131number0.0013Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9981any0.0009number0.0003RegExp0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'ec2'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9989any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeRegions&Version=2014-06-15'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeRegionsResponse xmlns="http://ec2.amazonaws.com/doc/2014-06-15/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7520complex0.2078void0.0091Request0.0085Promise<any>0.0073
+(Punctuation
+aws4Name.Otherany0.9690string0.0068complex0.0036Request0.0016Response0.0010
+.Punctuation
+signName.Otherany0.9146complex0.0583string0.0161number0.0014Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0008number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'sns'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListTopics&Version=2010-03-31'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListTopicsResponse xmlns="http://sns.amazonaws.com/doc/2010-03-31/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7584complex0.2014void0.0094Request0.0082Promise<any>0.0072
+(Punctuation
+aws4Name.Otherany0.9681string0.0071complex0.0035Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9118complex0.0599string0.0171number0.0014Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0008number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'sts'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=GetSessionToken&Version=2011-06-15'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<GetSessionTokenResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7624complex0.1974void0.0094Request0.0082Promise<any>0.0073
+(Punctuation
+aws4Name.Otherany0.9677string0.0072complex0.0035Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9107complex0.0603string0.0177number0.0014Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0008number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'cloudsearch'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListDomainNames&Version=2013-01-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListDomainNamesResponse xmlns="http://cloudsearch.amazonaws.com/doc/2013-01-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7652complex0.1945void0.0094Request0.0082Promise<any>0.0073
+(Punctuation
+aws4Name.Otherany0.9675string0.0073complex0.0035Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9100complex0.0606string0.0181number0.0014Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'ses'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListIdentities&Version=2010-12-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListIdentitiesResponse xmlns="http://ses.amazonaws.com/doc/2010-12-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7674complex0.1923void0.0094Request0.0082Promise<any>0.0073
+(Punctuation
+aws4Name.Otherany0.9673string0.0074complex0.0034Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9095complex0.0608string0.0184number0.0014Promise<any>0.0008
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'autoscaling'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeAutoScalingInstances&Version=2011-01-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeAutoScalingInstancesResponse xmlns="http://autoscaling.amazonaws.com/doc/2011-01-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7691complex0.1906void0.0094Request0.0083Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9671string0.0074complex0.0034Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9091complex0.0609string0.0186number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'elasticloadbalancing'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeLoadBalancers&Version=2012-06-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeLoadBalancersResponse xmlns="http://elasticloadbalancing.amazonaws.com/doc/2012-06-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7704complex0.1892void0.0094Request0.0083Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9669string0.0075complex0.0034Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9086complex0.0611string0.0188number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'cloudformation'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListStacks&Version=2010-05-15'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListStacksResponse xmlns="http://cloudformation.amazonaws.com/doc/2010-05-15/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7715complex0.1880void0.0093Request0.0083Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9667string0.0075complex0.0034Request0.0017Response0.0010
+.Punctuation
+signName.Otherany0.9082complex0.0612string0.0190number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'elasticbeanstalk'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListAvailableSolutionStacks&Version=2010-12-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListAvailableSolutionStacksResponse xmlns="http://elasticbeanstalk.amazonaws.com/docs/2010-12-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7724complex0.1871void0.0093Request0.0083Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9665string0.0076complex0.0034Request0.0018Response0.0010
+.Punctuation
+signName.Otherany0.9078complex0.0614string0.0192number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'rds'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeDBInstances&Version=2012-09-17'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeDBInstancesResponse xmlns="http://rds.amazonaws.com/doc/2012-09-17/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7731complex0.1864void0.0093Request0.0083Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9662string0.0076complex0.0034Request0.0018Response0.0010
+.Punctuation
+signName.Otherany0.9075complex0.0615string0.0194number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'monitoring'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListMetrics&Version=2010-08-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListMetricsResponse xmlns="http://monitoring.amazonaws.com/doc/2010-08-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7737complex0.1859void0.0094Request0.0082Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9660string0.0076complex0.0034Request0.0018Response0.0010
+.Punctuation
+signName.Otherany0.9071complex0.0617string0.0195number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'redshift'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeClusters&Version=2012-12-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeClustersResponse xmlns="http://redshift.amazonaws.com/doc/2012-12-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7741complex0.1854void0.0094Request0.0082Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9658string0.0077complex0.0034Request0.0018Response0.0011
+.Punctuation
+signName.Otherany0.9067complex0.0619string0.0197number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'cloudfront'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/2014-05-31/distribution'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DistributionList xmlns="http://cloudfront.amazonaws.com/doc/2014-05-31/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7745complex0.1852void0.0094Request0.0082Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9656string0.0077complex0.0034Request0.0018Response0.0011
+.Punctuation
+signName.Otherany0.9063complex0.0621string0.0198number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'elasticache'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeCacheClusters&Version=2014-07-15'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeCacheClustersResponse xmlns="http://elasticache.amazonaws.com/doc/2014-07-15/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7747complex0.1850void0.0094Request0.0082Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9654string0.0077complex0.0034Request0.0018Response0.0011
+.Punctuation
+signName.Otherany0.9060complex0.0624string0.0199number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'elasticmapreduce'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=DescribeJobFlows&Version=2009-03-31'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<DescribeJobFlowsResponse xmlns="http://elasticmapreduce.amazonaws.com/doc/2009-03-31">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7747complex0.1851void0.0094Request0.0081Promise<any>0.0074
+(Punctuation
+aws4Name.Otherany0.9652string0.0077complex0.0034Request0.0018Response0.0011
+.Punctuation
+signName.Otherany0.9056complex0.0626string0.0200number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'route53'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/2013-04-01/hostedzone'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListHostedZonesResponse xmlns="https://route53.amazonaws.com/doc/2013-04-01/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7746complex0.1854void0.0094Request0.0080Promise<any>0.0073
+(Punctuation
+aws4Name.Otherany0.9650string0.0077complex0.0034Request0.0018Response0.0010
+.Punctuation
+signName.Otherany0.9051complex0.0630string0.0201number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'cognito-sync'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/identitypools'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Count":0,"IdentityPoolUsages":[],"MaxResults":16,"NextToken":null}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7744complex0.1858void0.0094Request0.0079Promise<any>0.0072
+(Punctuation
+aws4Name.Otherany0.9648string0.0077complex0.0034Request0.0018Response0.0010
+.Punctuation
+signName.Otherany0.9046complex0.0633string0.0201number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'elastictranscoder'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/2012-09-25/pipelines'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"NextPageToken":null,"Pipelines":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7744complex0.1862void0.0094Request0.0078Promise<any>0.0071
+(Punctuation
+aws4Name.Otherany0.9644string0.0077complex0.0034Request0.0019Response0.0010
+.Punctuation
+signName.Otherany0.9040complex0.0638string0.0202number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'lambda'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/2014-11-13/functions/'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Functions":[],"NextMarker":null}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7756complex0.1853void0.0092Request0.0078Promise<any>0.0070
+(Punctuation
+aws4Name.Otherany0.9632string0.0077complex0.0034Request0.0020Response0.0011
+.Punctuation
+signName.Otherany0.9033complex0.0644string0.0201number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9984any0.0007number0.0003RegExp0.0003boolean0.0001
+:Operator
+ Text.Whitespace
+'ecs'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9990any0.0006number0.0002RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'/?Action=ListClusters&Version=2014-11-13'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n<ListClustersResponse xmlns="http://ecs.amazonaws.com/doc/2014-11-13/">\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7608complex0.2026void0.0079Request0.0075Promise<any>0.0068
+(Punctuation
+aws4Name.Otherany0.9565string0.0069complex0.0039Request0.0024Response0.0013
+.Punctuation
+signName.Otherany0.9109complex0.0586string0.0179number0.0012Promise<any>0.0010
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9983any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'glacier'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9989any0.0005RegExp0.0002number0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'/-/vaults'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9987any0.0008string0.0003{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+'X-Amz-Glacier-Version'Literal.String.Single
+:Operator
+ Text.Whitespace
+'2012-06-01'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Marker":null,"VaultList":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7494complex0.2201void0.0064Request0.0057Promise<any>0.0052
+(Punctuation
+aws4Name.Otherany0.9584string0.0060complex0.0051Request0.0021Response0.0011
+.Punctuation
+signName.Otherany0.8878complex0.0819string0.0174number0.0012Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9983any0.0008RegExp0.0003number0.0003boolean0.0001
+:Operator
+ Text.Whitespace
+'storagegateway'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9989any0.0007string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'StorageGateway_20120630.ListGateways'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Gateways":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7216complex0.2459void0.0071Request0.0063Promise<any>0.0054
+(Punctuation
+aws4Name.Otherany0.9595string0.0059complex0.0052Request0.0020Response0.0011
+.Punctuation
+signName.Otherany0.8855complex0.0852string0.0165number0.0013Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'datapipeline'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9960any0.0016RegExp0.0015boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9989any0.0007string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'DataPipeline.ListPipelines'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"hasMoreResults":false,"pipelineIdList":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7136complex0.2536void0.0074Request0.0063Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9594string0.0059complex0.0053Request0.0019Response0.0011
+.Punctuation
+signName.Otherany0.8841complex0.0867string0.0163number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'opsworks'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9960any0.0015RegExp0.0015boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9989any0.0007string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'OpsWorks_20130218.DescribeStacks'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Stacks":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.7057complex0.2613void0.0077Request0.0063Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9590string0.0059complex0.0053Request0.0019Response0.0011
+.Punctuation
+signName.Otherany0.8829complex0.0879string0.0162number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'route53domains'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9960any0.0015RegExp0.0015boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9989any0.0007string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'Route53Domains_v20140515.ListDomains'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Domains":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6992complex0.2676void0.0078Request0.0063Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9585string0.0059complex0.0054Request0.0020Response0.0011
+.Punctuation
+signName.Otherany0.8819complex0.0888string0.0161number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'kinesis'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9989any0.0007string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'Kinesis_20131202.ListStreams'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"HasMoreStreams":false,"StreamNames":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6939complex0.2727void0.0079Request0.0063Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9580string0.0059complex0.0054Request0.0020Response0.0012
+.Punctuation
+signName.Otherany0.8808complex0.0897string0.0160number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'cloudtrail'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'CloudTrail_20131101.DescribeTrails'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"trailList":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6894complex0.2771void0.0080Request0.0062Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9574string0.0059complex0.0054Request0.0020Response0.0012
+.Punctuation
+signName.Otherany0.8797complex0.0906string0.0160number0.0014Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'logs'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'Logs_20140328.DescribeLogGroups'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"logGroups":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6854complex0.2810void0.0081Request0.0062Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9568string0.0059complex0.0054Request0.0020Response0.0012
+.Punctuation
+signName.Otherany0.8786complex0.0914string0.0161number0.0015Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'codedeploy'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'CodeDeploy_20141006.ListApplications'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"applications":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6817complex0.2845void0.0081Request0.0062Promise<any>0.0053
+(Punctuation
+aws4Name.Otherany0.9561string0.0059complex0.0055Request0.0020Response0.0012
+.Punctuation
+signName.Otherany0.8774complex0.0922string0.0161number0.0015Promise<any>0.0009
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'directconnect'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0003number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'OvertureService.DescribeConnections'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"connections":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6782complex0.2878void0.0082Request0.0062Promise<any>0.0054
+(Punctuation
+aws4Name.Otherany0.9552string0.0059complex0.0055Request0.0020Response0.0012
+.Punctuation
+signName.Otherany0.8761complex0.0931string0.0162number0.0015Promise<any>0.0010
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'kms'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0003number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'TrentService.ListKeys'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"Keys":[],"Truncated":false}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6748complex0.2910void0.0082Request0.0062Promise<any>0.0054
+(Punctuation
+aws4Name.Otherany0.9543string0.0059complex0.0055Request0.0021Response0.0013
+.Punctuation
+signName.Otherany0.8746complex0.0940string0.0163number0.0015Promise<any>0.0010
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'config'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9961any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'StarlingDoveService.DescribeDeliveryChannels'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"DeliveryChannels":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6712complex0.2943void0.0083Request0.0063Promise<any>0.0055
+(Punctuation
+aws4Name.Otherany0.9531string0.0059complex0.0055Request0.0021Response0.0013
+.Punctuation
+signName.Otherany0.8728complex0.0951string0.0164number0.0016Promise<any>0.0010
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serviceName.Otherstring0.9982any0.0008RegExp0.0003number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'cloudhsm'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+bodyName.Otherstring0.9962any0.0015RegExp0.0014boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{}'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'CloudHsmFrontendService.ListAvailableZones'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"AZList":["us-east-1a","us-east-1b","us-east-1c"]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6675complex0.2976void0.0083Request0.0063Promise<any>0.0055
+(Punctuation
+aws4Name.Otherany0.9515string0.0059complex0.0056Request0.0021Response0.0013
+.Punctuation
+signName.Otherany0.8702complex0.0967string0.0166number0.0016Promise<any>0.0010
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+serviceName.Otherstring0.9982any0.0007number0.0003RegExp0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'swf'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+bodyName.Otherstring0.9962any0.0015RegExp0.0013boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{"registrationStatus":"REGISTERED"}'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.0'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'SimpleWorkflowService.ListDomains'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"domainInfos":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6645complex0.3000void0.0085Request0.0063Promise<any>0.0055
+(Punctuation
+aws4Name.Otherany0.9480string0.0059complex0.0057Request0.0022Response0.0014
+.Punctuation
+signName.Otherany0.8652complex0.0993string0.0171number0.0017Promise<any>0.0011
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+serviceName.Otherstring0.9982any0.0007number0.0003RegExp0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'cognito-identity'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+bodyName.Otherstring0.9962any0.0014RegExp0.0013boolean0.0004number0.0003
+:Operator
+ Text.Whitespace
+'{"MaxResults": 1}'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+headersName.Othercomplex0.9990any0.0006string0.0002{}0.0001number0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/x-amz-json-1.1'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'X-Amz-Target'Literal.String.Single
+:Operator
+ Text.Whitespace
+'AWSCognitoIdentityService.ListIdentityPools'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n{"IdentityPools":[]}\n...\n*/Comment.Multiline
+\n\nText.Whitespace
+requestName.Otherany0.6854complex0.2783void0.0093Request0.0063Promise<any>0.0048
+(Punctuation
+aws4Name.Otherany0.9245string0.0063complex0.0057Request0.0027Error0.0018
+.Punctuation
+signName.Otherany0.8420complex0.1120string0.0185number0.0018Promise<any>0.0013
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+serviceName.Otherstring0.9980any0.0007RegExp0.0004number0.0003boolean0.0002
+:Operator
+ Text.Whitespace
+'mobileanalytics'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+pathName.Otherstring0.9988any0.0005RegExp0.0002number0.0002boolean0.0001
+:Operator
+ Text.Whitespace
+'/2014-06-05/events'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+bodyName.Otherstring0.9137any0.0741complex0.0081number0.0010boolean0.0009
+:Operator
+ Text.Whitespace
+JSON.stringifyKeyword.Type
+(Punctuation
+{Punctuation
+ Text.Whitespace
+eventsName.Othercomplex0.9994any0.0003any[]0.0001{}0.0001string0.0000
+:Operator
+ Text.Whitespace
+[Punctuation
+{Punctuation
+\n    Text.Whitespace
+eventTypeName.Otherstring0.9989any0.0005number0.0002complex0.0001RegExp0.0001
+:Operator
+ Text.Whitespace
+'a'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+timestampName.Otherstring0.9167number0.0661Date0.0076any0.0064boolean0.0007
+:Operator
+ Text.Whitespace
+newKeyword.Typestring0.9427number0.0226any0.0169Date0.0097complex0.0018
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9996Date0.0001FunctionConstructor0.0000number0.0000ErrorConstructor0.0000
+(Punctuation
+)Punctuation
+.Punctuation
+toISOStringName.Otherstring0.9709any0.0172complex0.0054number0.0046void0.0003
+(Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+sessionName.Other{}0.9870boolean0.0025complex0.0023void0.0007{}[]0.0006
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n  Text.Whitespace
+headersName.Othercomplex0.9989any0.0006{}0.0003string0.0001any[]0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'Content-Type'Literal.String.Single
+:Operator
+ Text.Whitespace
+'application/json'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'X-Amz-Client-Context'Literal.String.Single
+:Operator
+ Text.Whitespace
+JSONName.BuiltinJSON0.9936complex0.0045any0.0001{}0.0001Storage0.0000
+.Punctuation
+stringifyName.Othercomplex0.9985any0.0005string0.0003void0.0002{}0.0001
+(Punctuation
+{Punctuation
+\n      Text.Whitespace
+clientName.Othercomplex0.9998any0.0001{}0.0000string0.0000void0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+client_idName.Otherstring0.9974any0.0014number0.0005RegExp0.0002complex0.0002
+:Operator
+ Text.Whitespace
+'a'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+app_titleName.Otherstring0.9934any0.0036RegExp0.0013number0.0011boolean0.0001
+:Operator
+ Text.Whitespace
+'a'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+customName.Other{}0.9966complex0.0008{}[]0.0006any0.0002T0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+envName.Othercomplex0.9990{}0.0005any0.0002string0.0001void0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+platformName.Otherstring0.9980RegExp0.0006any0.0005number0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+'a'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+servicesName.Other{}0.9887complex0.0073{}[]0.0007T0.0006any0.0004
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+Text
+/*\n(HTTP 202, empty response)\n*/Comment.Multiline
+\nText.Whitespace

@@ -1,0 +1,33 @@
+lib/portfinder.ts(16,10): error TS2595: 'mkdirp' can only be imported by using a default import.
+lib/portfinder.ts(93,34): error TS2322: Type '(port: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(94,3): error TS1184: Modifiers cannot appear here.
+lib/portfinder.ts(107,37): error TS2322: Type '(port: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(108,3): error TS1184: Modifiers cannot appear here.
+lib/portfinder.ts(123,30): error TS2322: Type '(options: any, callback: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(184,18): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(210,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(224,14): error TS2322: Type '(options: any) => Promise<unknown>' is not assignable to type 'void'.
+lib/portfinder.ts(232,22): error TS2345: Argument of type '(resolve: any, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(233,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(235,16): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(249,31): error TS2322: Type '(count: any, options: any, callback: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(258,22): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/portfinder.ts(261,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(279,32): error TS2322: Type '(options: any, callback: any) => void' is not assignable to type 'void'.
+lib/portfinder.ts(285,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/portfinder.ts(310,24): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(311,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/portfinder.ts(366,14): error TS2322: Type '(port: any) => any' is not assignable to type 'string'.
+lib/portfinder.ts(376,14): error TS2322: Type '(socketPath: any) => string' is not assignable to type 'void'.
+lib/portfinder.ts(466,14): error TS2322: Type 'string[]' is not assignable to type 'void'.
+

@@ -1,0 +1,221 @@
+Text
+// Iterator that traverses in the range of [min, max], steppingComment.Single
+\nText.Whitespace
+// by distance from a given start position. I.e. for [0, 4], withComment.Single
+\nText.Whitespace
+// start of 2, this will iterate 2, 3, 1, 4, 0.Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+startName.Othernumber0.9315any0.0375boolean0.0079string0.0059Date0.0025
+,Punctuation
+ Text.Whitespace
+minLineName.Otherboolean0.5372number0.3396any0.0720string0.0266Date0.0021
+,Punctuation
+ Text.Whitespace
+maxLineName.Otherboolean0.8687number0.0762any0.0328string0.0126true0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+wantForwardName.Otherboolean0.9961false0.0011number0.0009any0.0008true0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n      Text.Whitespace
+backwardExhaustedName.Otherboolean0.9937any0.0025number0.0020false0.0006string0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n      Text.Whitespace
+forwardExhaustedName.Otherboolean0.9927number0.0027any0.0027false0.0006true0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n      Text.Whitespace
+localOffsetName.Othernumber0.8291boolean0.1259any0.0373string0.0046void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+iteratorName.Otherboolean0.7597any0.1062number0.0232complex0.0138string0.0106
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+wantForwardName.Otherboolean0.9424any0.0297number0.0147string0.0050false0.0020
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+forwardExhaustedName.Otherboolean0.9530any0.0268number0.0098string0.0037false0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+backwardExhaustedName.Otherboolean0.9371any0.0373number0.0142string0.0035false0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+localOffsetName.Othernumber0.9052any0.0683boolean0.0217string0.0026void0.0004
+++Operator
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+wantForwardName.Otherboolean0.9882any0.0072number0.0023true0.0006false0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+// Check if trying to fit beyond text length, and if not, check it fitsComment.Single
+\n      Text.Whitespace
+// after offset location (or desired location on first iteration)Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+startName.Othernumber0.9198any0.0725boolean0.0040string0.0027complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+localOffsetName.Othernumber0.9174any0.0659boolean0.0083string0.0071void0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+maxLineName.Othernumber0.8628boolean0.0671any0.0552string0.0106void0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+localOffsetName.Otherboolean0.6494number0.2101any0.1033string0.0233void0.0030
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+forwardExhaustedName.Otherboolean0.9887any0.0050number0.0022true0.0014false0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+backwardExhaustedName.Otherboolean0.9715any0.0140number0.0047string0.0035false0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+forwardExhaustedName.Otherboolean0.9689any0.0160number0.0055false0.0028string0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+wantForwardName.Otherboolean0.9882any0.0055number0.0030true0.0013false0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+// Check if trying to fit before text beginning, and if not, check it fitsComment.Single
+\n      Text.Whitespace
+// before offset locationComment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+minLineName.Othernumber0.8907any0.0639boolean0.0405string0.0030complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+startName.Othernumber0.9774any0.0195string0.0018boolean0.0007complex0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+localOffsetName.Othernumber0.9423boolean0.0318any0.0196string0.0035Date0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+-Operator
+localOffsetName.Othernumber0.9764any0.0200boolean0.0024string0.0008complex0.0001
+++Operator
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+backwardExhaustedName.Otherboolean0.9874any0.0053number0.0030true0.0013false0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+iteratorName.Otherany0.4146boolean0.0984complex0.0403Promise<any>0.0270Promise<{}>0.0204
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// We tried to fit hunk before text beginning and beyond text length, thenComment.Single
+\n    Text.Whitespace
+// hunk can't fit on the text. Return undefinedComment.Single
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

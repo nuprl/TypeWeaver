@@ -1,0 +1,14 @@
+declare const path: any;
+declare const os: any;
+declare const fs: any;
+declare const ini: any;
+declare const isWindows: boolean;
+declare const readRc: (filePath: any) => any;
+declare const getEnvNpmPrefix: () => string;
+declare const getGlobalNpmrc: () => any;
+declare const getDefaultNpmPrefix: () => any;
+declare const getNpmPrefix: () => any;
+declare const npmPrefix: any;
+declare const getYarnWindowsDirectory: () => any;
+declare const getYarnPrefix: () => any;
+declare const yarnPrefix: any;

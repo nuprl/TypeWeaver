@@ -1,0 +1,97 @@
+Text
+/**\n * Checks if `predicate` returns truthy for **any** element of `array`.\n * Iteration is stopped once `predicate` returns truthy. The predicate is\n * invoked with three arguments: (value, index, array).\n *\n * @since 5.0.0\n * @category Array\n * @param {Array} array The array to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {boolean} Returns `true` if any element passes the predicate check,\n *  else `false`.\n * @example\n *\n * some([null, 0, 'yes', false], Boolean)\n * // => true\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+someName.Otherboolean0.6925any0.1465complex0.0223number0.0114string0.0044
+(Punctuation
+arrayName.Otherany0.5329string0.0595number0.0480any[]0.0281boolean0.0149
+,Punctuation
+ Text.Whitespace
+predicateName.Otherboolean0.8329any0.1287string0.0111number0.0095complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9594any0.0359boolean0.0032string0.0009complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.8890any0.1009boolean0.0062string0.0024complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.5731number0.1999any[]0.0697complex0.0448number[]0.0232
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9829any0.0154string0.0006boolean0.0005number[]0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9365any0.0603string0.0014boolean0.0007complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+predicateName.Otherboolean0.9714any0.0199number0.0015string0.0013complex0.0013
+(Punctuation
+arrayName.Otherany0.4410any[]0.3181number[]0.0480string[]0.0454complex0.0162
+[Punctuation
+indexName.Othernumber0.9391any0.0544string0.0029boolean0.0023complex0.0003
+]Punctuation
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9172any0.0739boolean0.0051string0.0020complex0.0003
+,Punctuation
+ Text.Whitespace
+arrayName.Otherany0.5467any[]0.1174number0.0749boolean0.0364string0.0325
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+someName.Otherany0.2747boolean0.1862complex0.0322number0.0170Option<A>0.0142
+\nText.Whitespace

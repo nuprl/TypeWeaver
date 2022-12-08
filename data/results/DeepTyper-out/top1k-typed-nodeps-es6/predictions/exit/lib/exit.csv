@@ -1,0 +1,223 @@
+Text
+/*\n * exit\n * https://github.com/cowboy/node-exit\n *\n * Copyright (c) 2013 "Cowboy" Ben Alman\n * Licensed under the MIT license.\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+exitName.Othervoid0.9405any0.0422Promise<void>0.0046number0.0033complex0.0031
+(Punctuation
+exitCodeName.Othernumber0.4961any0.4750boolean0.0081void0.0056string0.0016
+,Punctuation
+ Text.Whitespace
+streamsName.Otherany0.6397any[]0.0529boolean0.0483number0.0429complex0.0362
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+streamsName.Otherany0.7422any[]0.0544boolean0.0506complex0.0212string[]0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+streamsName.Otherany[]0.4251any0.3468complex0.0757string[]0.0129number[]0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+processName.Otherany0.9950complex0.0021Process0.0003void0.0002T0.0002
+.Punctuation
+stdoutName.Otherany0.9944string0.0016number0.0009void0.0008{}0.0004
+,Punctuation
+ Text.Whitespace
+processName.Otherany0.9970complex0.0009Process0.0004void0.0001T0.0001
+.Punctuation
+stderrName.Otherany0.9966string0.0016number0.0013void0.0003complex0.0001
+]Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+drainCountName.Othernumber0.9857void0.0090any0.0031boolean0.0008string0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+// Actually exit if all streams are drained.Comment.Single
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tryToExitName.Othervoid0.9965number0.0012any0.0007boolean0.0005Promise<void>0.0003
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+drainCountName.Othernumber0.9116any0.0532void0.0172string0.0072boolean0.0066
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+streamsName.Otherany0.5177any[]0.1926string[]0.0554number[]0.0151string0.0119
+.Punctuation
+lengthName.Othernumber0.6047any0.3913string0.0014void0.0010complex0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+processName.Otherany0.9974complex0.0009number0.0003void0.0002Process0.0001
+.Punctuation
+exitName.Otherany0.9675void0.0285complex0.0012number0.0009Promise<void>0.0006
+(Punctuation
+exitCodeName.Othernumber0.6470any0.3419boolean0.0043string0.0020void0.0013
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+streamsName.Otherany0.5454any[]0.3109complex0.0351string[]0.0174number[]0.0092
+.Punctuation
+forEachName.Othervoid0.4432any0.3843complex0.1483v...0.0143number0.0011
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+streamName.Otherany0.6978number0.0130string0.0104Buffer0.0099void0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Count drained streams now, but monitor non-drained streams.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+streamName.Otherany0.5265Buffer0.0116number0.0075SocketStream0.0044WebSocket0.0033
+.Punctuation
+bufferSizeName.Othernumber0.6200any0.3744string0.0025boolean0.0010complex0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+drainCountName.Othernumber0.9939any0.0044void0.0006string0.0004boolean0.0004
+++Operator
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+streamName.Otherany0.9109number0.0029Buffer0.0010void0.0006Stream<number>0.0006
+.Punctuation
+writeName.Otherany0.8405void0.1491complex0.0038Promise<void>0.0020number0.0010
+(Punctuation
+''Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'utf-8'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+drainCountName.Othernumber0.9941any0.0041void0.0010string0.0003boolean0.0002
+++Operator
+;Punctuation
+\n        Text.Whitespace
+tryToExitName.Othervoid0.9712number0.0192any0.0057Promise<void>0.0010boolean0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+// Prevent further writing.Comment.Single
+\n    Text.Whitespace
+streamName.Otherany0.5430void0.0047SocketStream0.0042Stream<number>0.0041Promise<void>0.0037
+.Punctuation
+writeName.Othervoid0.7469any0.2455Promise<void>0.0024complex0.0023number0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+// If all streams were already drained, exit now.Comment.Single
+\n  Text.Whitespace
+tryToExitName.Othervoid0.9834any0.0105number0.0020Promise<void>0.0011Function0.0010
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+// In Windows, when run as a Node.js child process, a script utilizingComment.Single
+\n  Text.Whitespace
+// this library might just exit with a 0 exit code, regardless. This code,Comment.Single
+\n  Text.Whitespace
+// despite the fact that it looks a bit crazy, appears to fix that.Comment.Single
+\n  Text.Whitespace
+processName.Otherany0.9975complex0.0005Process0.0002number0.0001void0.0001
+.Punctuation
+onName.Otherany0.9687complex0.0184void0.0081Promise<void>0.0003boolean0.0003
+(Punctuation
+'exit'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9972complex0.0012number0.0001void0.0001Process0.0001
+.Punctuation
+exitName.Otherany0.9828void0.0137complex0.0009number0.0006Promise<any>0.0005
+(Punctuation
+exitCodeName.Othernumber0.7933any0.1895boolean0.0067string0.0033void0.0018
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

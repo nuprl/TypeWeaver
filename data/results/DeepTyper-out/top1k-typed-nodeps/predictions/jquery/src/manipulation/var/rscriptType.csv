@@ -1,0 +1,11 @@
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+/^$|^module$|\/(?:java|ecma)script/iLiteral.String.Regex
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

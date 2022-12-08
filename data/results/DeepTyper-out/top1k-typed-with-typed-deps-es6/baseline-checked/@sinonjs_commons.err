@@ -1,0 +1,18 @@
+lib/called-in-order.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'every'. Did you mean to use 'import every from "./prototypes/array"' instead?
+lib/called-in-order.ts(8,42): error TS2304: Cannot find name 'Spy'.
+lib/deprecated.ts(12,27): error TS2322: Type '(func: any, msg: any) => void' is not assignable to type 'void'.
+lib/deprecated.ts(13,9): error TS2322: Type '() => any' is not assignable to type 'void'.
+lib/deprecated.ts(14,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+lib/deprecated.ts(18,17): error TS2339: Property 'prototype' does not exist on type 'void'.
+lib/deprecated.ts(48,35): error TS2322: Type '(msg: any) => void' is not assignable to type 'void'.
+lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'string'.
+lib/function-name.ts(17,18): error TS2339: Property 'name' does not exist on type 'string'.
+lib/order-by-first-call.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'sort'. Did you mean to use 'import sort from "./prototypes/array"' instead?
+lib/order-by-first-call.ts(4,10): error TS2614: Module '"./prototypes/array"' has no exported member 'slice'. Did you mean to use 'import slice from "./prototypes/array"' instead?
+lib/order-by-first-call.ts(12,27): error TS2339: Property 'getCall' does not exist on type 'string'.
+lib/order-by-first-call.ts(13,39): error TS2339: Property 'callId' does not exist on type 'number'.
+lib/order-by-first-call.ts(14,39): error TS2339: Property 'callId' does not exist on type 'number'.
+lib/order-by-first-call.ts(16,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
+  Type 'number' is not assignable to type 'boolean'.
+

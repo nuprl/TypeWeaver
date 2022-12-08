@@ -1,0 +1,99 @@
+importKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9423any0.0427complex0.0043Promise<any>0.0021void0.0014
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./promise"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/**\n  `defer` returns an object similar to jQuery's `$.Deferred`.\n  `defer` should be used when porting over code reliant on `$.Deferred`'s\n  interface. New code should use the `Promise` constructor instead.\n\n  The object returned from `defer` is a plain object with three properties:\n\n  * promise - an `Promise`.\n  * reject - a function that causes the `promise` property on this object to\n    become rejected\n  * resolve - a function that causes the `promise` property on this object to\n    become fulfilled.\n\n  Example:\n\n   ```javascript\n   let deferred = defer();\n\n   deferred.resolve("Success!");\n\n   deferred.promise.then(function(value){\n     // value here is "Success!"\n   });\n   ```\n\n  @method defer\n  @public\n  @static\n  @for rsvp\n  @param {String} [label] optional string for labeling the promise.\n  Useful for tooling.\n  @return {Object}\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+deferName.Otherany0.0430Promise<{}>0.0209AsyncIterab...0.0130Deferred<string>0.0129boolean0.0128
+(Punctuation
+labelName.Otherstring0.9095any0.0601number0.0033Buffer0.0025Object0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+deferredName.Otherany0.3457Function0.0376complex0.0229number0.0158Object0.0157
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+resolveName.Otherany0.4915undefined0.1357void0.1022string0.0724number0.0539
+:Operator
+ Text.Whitespace
+undefinedKeyword.Type
+,Punctuation
+ Text.Whitespace
+rejectName.Otherundefined0.5625any0.1878void0.1058Function0.0466boolean0.0123
+:Operator
+ Text.Whitespace
+undefinedKeyword.Type
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+deferredName.Otherany0.3355Promise<{}>0.0239Deferred<any>0.0221Function0.0195Deferred<string>0.0190
+.Punctuation
+promiseName.Otherany0.4333Promise<{}>0.2822Promise<any>0.1379Promise<number>0.0386Promise<void>0.0181
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7652Promise<{}>0.0953Promise<any>0.0217PromiseConstructor0.0205complex0.0143
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9573any0.0346complex0.0035Promise<{}>0.0010Promise<any>0.0009
+(Punctuation
+(Punctuation
+resolveName.Othervoid0.9010any0.0665Function0.0151complex0.0056number0.0021
+,Punctuation
+ Text.Whitespace
+rejectName.Othervoid0.8518any0.0959Function0.0387complex0.0023boolean0.0021
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+deferredName.Otherany0.6285Function0.0630Deferred<any>0.0148Error0.0107Deferred<string>0.0098
+.Punctuation
+resolveName.Otherany0.7383void0.1101Function0.0556complex0.0398number0.0212
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resolveName.Othervoid0.5164any0.3450Function0.0678complex0.0158number0.0157
+;Punctuation
+\n    Text.Whitespace
+deferredName.Otherany0.4522Function0.0874Deferred<any>0.0164void0.0132Error0.0100
+.Punctuation
+rejectName.Otherany0.5721void0.2369Function0.1194complex0.0288boolean0.0122
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rejectName.Othervoid0.4586any0.4001Function0.0856complex0.0108boolean0.0076
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.7665any0.1889number0.0061void0.0060complex0.0058
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+deferredName.Otherany0.5804Function0.0331number0.0113boolean0.0105Object0.0087
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

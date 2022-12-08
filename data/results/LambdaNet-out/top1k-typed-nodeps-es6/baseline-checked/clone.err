@@ -1,0 +1,76 @@
+clone.ts(5,41): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+clone.ts(10,3): error TS2740: Type 'MapConstructor' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+clone.ts(14,3): error TS2322: Type '() => void' is not assignable to type 'any[]'.
+clone.ts(19,3): error TS2322: Type 'SetConstructor' is not assignable to type 'number'.
+clone.ts(21,3): error TS2322: Type '() => void' is not assignable to type 'number'.
+clone.ts(26,3): error TS2740: Type 'PromiseConstructor' is missing the following properties from type 'any[]': pop, push, concat, join, and 28 more.
+clone.ts(28,3): error TS2322: Type '() => void' is not assignable to type 'any[]'.
+clone.ts(54,22): error TS2339: Property 'depth' does not exist on type 'never'.
+clone.ts(55,26): error TS2339: Property 'prototype' does not exist on type 'never'.
+clone.ts(56,37): error TS2339: Property 'includeNonEnumerable' does not exist on type 'never'.
+clone.ts(57,25): error TS2339: Property 'circular' does not exist on type 'never'.
+clone.ts(87,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+  Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+clone.ts(88,19): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+clone.ts(89,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+clone.ts(90,19): error TS2351: This expression is not constructable.
+  Type 'Number' has no construct signatures.
+clone.ts(91,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+clone.ts(92,19): error TS2351: This expression is not constructable.
+  Type 'any[]' has no construct signatures.
+clone.ts(93,16): error TS2339: Property 'then' does not exist on type 'any[]'.
+clone.ts(94,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+clone.ts(99,32): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+clone.ts(101,33): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+clone.ts(102,33): error TS2339: Property 'source' does not exist on type 'any[]'.
+clone.ts(102,58): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'HTMLElement'.
+  Type 'any[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+clone.ts(103,18): error TS2551: Property 'lastIndex' does not exist on type 'any[]'. Did you mean 'lastIndexOf'?
+clone.ts(103,35): error TS2339: Property 'lastIndex' does not exist on type 'object'.
+clone.ts(103,54): error TS2551: Property 'lastIndex' does not exist on type 'any[]'. Did you mean 'lastIndexOf'?
+clone.ts(104,31): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+clone.ts(105,31): error TS2339: Property 'getTime' does not exist on type 'any[]'.
+clone.ts(113,21): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Uint8Array'.
+  Type '{}' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 27 more.
+clone.ts(115,7): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+clone.ts(116,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+clone.ts(139,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+clone.ts(140,22): error TS2345: Argument of type '(value: string, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Types of parameters 'key' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
+clone.ts(141,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+clone.ts(141,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+clone.ts(142,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+clone.ts(142,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+clone.ts(143,15): error TS2339: Property 'set' does not exist on type 'object'.
+clone.ts(146,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+clone.ts(148,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+clone.ts(148,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+clone.ts(149,15): error TS2339: Property 'add' does not exist on type 'object'.
+clone.ts(154,11): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
+clone.ts(161,25): error TS2339: Property 'set' does not exist on type 'object'.
+clone.ts(181,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(181,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(181,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(185,13): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+clone.ts(186,39): error TS2339: Property 'enumerable' does not exist on type 'Element'.
+clone.ts(196,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(196,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(196,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(198,13): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'Element'.
+clone.ts(199,38): error TS2339: Property 'enumerable' does not exist on type 'Element'.
+clone.ts(207,5): error TS2322: Type 'object' is not assignable to type 'any[]'.
+clone.ts(210,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+clone.ts(210,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+clone.ts(220,65): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+clone.ts(226,14): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+clone.ts(237,35): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+clone.ts(242,35): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+clone.ts(247,35): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+clone.ts(253,10): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
+clone.ts(254,10): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
+clone.ts(255,10): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
+clone.ts(264,3): error TS1258: A default export must be at the top level of a file or module declaration.
+

@@ -1,0 +1,149 @@
+Text
+/*!\n * Copyright (c) 2015, Salesforce.com, Inc.\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of Salesforce.com nor the names of its contributors may\n * be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n */Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+/*\n * "A request-path path-matches a given cookie-path if at least one of the\n * following conditions holds:"\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+pathMatchName.Otherboolean0.9739number0.0073any0.0040string0.0038true0.0009
+(Punctuation
+reqPathName.Otherstring0.9667any0.0221number0.0038boolean0.0037string[]0.0017
+,Punctuation
+ Text.Whitespace
+cookiePathName.Otherstring0.4075boolean0.3978number0.1208any0.0627string[]0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// "o  The cookie-path and the request-path are identical."Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cookiePathName.Otherstring0.6003any0.1639number0.1131boolean0.1125string[]0.0019
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+reqPathName.Otherstring0.9737any0.0174number0.0049boolean0.0018string[]0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+idxName.Othernumber0.9621any0.0309string0.0035boolean0.0023complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reqPathName.Otherstring0.9190string[]0.0468any0.0242number0.0026boolean0.0023
+.Punctuation
+indexOfName.Othernumber0.9849any0.0108string0.0027boolean0.0008complex0.0003
+(Punctuation
+cookiePathName.Otherstring0.8976any0.0475number0.0253boolean0.0202string[]0.0031
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+idxName.Othernumber0.9259any0.0649boolean0.0042string0.0035complex0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// "o  The cookie-path is a prefix of the request-path, and the lastComment.Single
+\n    Text.Whitespace
+// character of the cookie-path is %x2F ("/")."Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cookiePathName.Otherstring0.8719any0.0977boolean0.0173number0.0042string[]0.0021
+.Punctuation
+substrName.Otherstring0.9483any0.0427boolean0.0039number0.0033complex0.0009
+(Punctuation
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"/"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// " o  The cookie-path is a prefix of the request-path, and the firstComment.Single
+\n    Text.Whitespace
+// character of the request-path that is not included in the cookie- pathComment.Single
+\n    Text.Whitespace
+// is a %x2F ("/") character."Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+reqPathName.Otherstring0.9453any0.0438boolean0.0039string[]0.0034number0.0011
+.Punctuation
+substrName.Otherstring0.9742any0.0209boolean0.0023number0.0015complex0.0005
+(Punctuation
+cookiePathName.Otherstring0.7269any0.1608number0.0311boolean0.0245string[]0.0242
+.Punctuation
+lengthName.Othernumber0.9747any0.0223string0.0022boolean0.0003complex0.0002
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"/"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportsName.Otherany0.5048complex0.0353Object0.0067List0.0043any[]0.0039
+.Punctuation
+pathMatchName.Otherboolean0.6245any0.2950number0.0423string0.0101void0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathMatchName.Otherboolean0.8010number0.0924string0.0246any0.0243void0.0172
+;Punctuation
+\nText.Whitespace
