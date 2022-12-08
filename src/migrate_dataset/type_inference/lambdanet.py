@@ -1,5 +1,6 @@
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import subprocess, threading, time
 
 import util
@@ -135,17 +136,18 @@ class LambdaNet:
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
             threading.Thread(target=util.send_data_to, args=[p, packages_string]).start()
 
-        for i, package in enumerate(packages):
-            print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
-            result = self.infer_on_package(package, to_skip)
-            print(result.message(), flush=True)
+        with tqdm(total=len(packages), desc=f"LambdaNet {self.dataset}", unit="package") as t:
+            for package in packages:
+                t.set_postfix_str(self.short_name(package))
+                t.update()
+                result = self.infer_on_package(package, to_skip)
 
-            if result.is_ok():
-                num_ok += 1
-            elif result.is_skip():
-                num_skip += 1
-            elif result.is_fail():
-                num_fail += 1
+                if result.is_ok():
+                    num_ok += 1
+                elif result.is_skip():
+                    num_skip += 1
+                elif result.is_fail():
+                    num_fail += 1
 
         if p:
             # If we reach this point, either LambdaNet has finished processing everything,
@@ -167,13 +169,13 @@ class LambdaNet:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        print(f"Inferring types with LambdaNet: {self.path}")
-        print(f"Input directory: {self.in_directory}")
-        print(f"Output directory: {self.out_directory}")
-        print(f"Found {len(packages)} packages")
+        # print(f"Inferring types with LambdaNet: {self.path}")
+        # print(f"Input directory: {self.in_directory}")
+        # print(f"Output directory: {self.out_directory}")
+        # print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
 
-        print(f"Number of successes: {num_ok}")
-        print(f"Number of fails: {num_fail}")
-        print(f"Number of skips: {num_skip}")
+        # print(f"Number of successes: {num_ok}")
+        # print(f"Number of fails: {num_fail}")
+        # print(f"Number of skips: {num_skip}")

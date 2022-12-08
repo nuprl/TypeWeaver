@@ -80,12 +80,12 @@ def run_pipeline_step(pipeline_step, description, *args):
     total_seconds = round(duration.total_seconds())
     hours, remainder = divmod(total_seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
-    print(f"Time for {description}: {hours}:{minutes:02}:{seconds:02}")
+    # print(f"Time for {description}: {hours}:{minutes:02}:{seconds:02}")
 
 def main():
     args = parse_args()
-    print("Source directory: {}".format(args.directory))
-    print("Dataset: {}".format(args.dataset))
+    # print("Source directory: {}".format(args.directory))
+    # print("Dataset: {}".format(args.dataset))
 
     if args.infer and args.engine == "DeepTyper":
         deeptyper = type_inference.DeepTyper(args)

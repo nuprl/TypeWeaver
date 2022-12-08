@@ -1,6 +1,7 @@
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import subprocess
 
 import util
@@ -137,17 +138,18 @@ class TypeWeaver:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            for i, f in enumerate(fs):
-                print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(packages[i])), end="", flush=True)
-                result = f.result()
-                print(result.message(), flush=True)
+            with tqdm(total=len(fs), desc=f"Weaving {self.engine} {self.dataset}", unit="package") as t:
+                for i, f in enumerate(fs):
+                    t.set_postfix_str(self.short_name(packages[i]))
+                    t.update()
+                    result = f.result()
 
-                if result.is_ok():
-                    num_ok += 1
-                elif result.is_skip():
-                    num_skip += 1
-                elif result.is_fail():
-                    num_fail += 1
+                    if result.is_ok():
+                        num_ok += 1
+                    elif result.is_skip():
+                        num_skip += 1
+                    elif result.is_fail():
+                        num_fail += 1
 
         return num_ok, num_fail, num_skip
 
@@ -177,14 +179,14 @@ class TypeWeaver:
                     for package, prediction in zip(packages, predictions)
                     if files_with_ext(package, "js") == files_with_ext(prediction, "csv")]
 
-        print(f"Type weaving with: {self.path}")
-        print(f"Input directory (JS): {self.js_directory}")
-        print(f"Input directory (CSV): {self.csv_directory}")
-        print(f"Output directory: {self.out_directory}")
-        print(f"Found {len(packages)} packages")
+        # print(f"Type weaving with: {self.path}")
+        # print(f"Input directory (JS): {self.js_directory}")
+        # print(f"Input directory (CSV): {self.csv_directory}")
+        # print(f"Output directory: {self.out_directory}")
+        # print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.weave_dataset(packages)
 
-        print(f"Number of successes: {num_ok}")
-        print(f"Number of fails: {num_fail}")
-        print(f"Number of skips: {num_skip}")
+        # print(f"Number of successes: {num_ok}")
+        # print(f"Number of fails: {num_fail}")
+        # print(f"Number of skips: {num_skip}")

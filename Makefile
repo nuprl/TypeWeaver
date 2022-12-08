@@ -13,6 +13,7 @@ build:
 
 # Test the evaluation on the micro dataset
 micro:
+	@echo "### Type annotation prediction"
 	@for s in DeepTyper LambdaNet InCoder ; do \
 		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
@@ -22,6 +23,8 @@ micro:
 				--infer ; \
 		done ; \
 	done
+	@echo
+	@echo "### Type weaving"
 	@for s in DeepTyper LambdaNet ; do \
 		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
@@ -32,6 +35,8 @@ micro:
 				--weave baseline ; \
 		done ; \
 	done
+	@echo
+	@echo "### Type checking"
 	@for s in DeepTyper LambdaNet InCoder ; do \
 		for d in $$(ls data/micro/original); do \
 			python3 src/migrate_dataset/main.py \
@@ -43,9 +48,59 @@ micro:
 				--typecheck baseline ; \
 		done ; \
 	done
+	@echo
+	@echo "### Generating CSVs"
 	@python3 src/summarize_results.py \
 		--data data/micro \
 		--workers 1
+	@echo
+	@echo "### Checking if R is set up"
 	$(MAKE) test-r -C src/R > /dev/null
 
-.PHONY: build micro
+# Run the full evaluation
+full:
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		for d in $$(ls data/full/original); do \
+			python3 src/migrate_dataset/main.py \
+				--directory data/full \
+				--dataset $$d \
+				--engine $$s \
+				--infer ; \
+		done ; \
+	done
+	@echo
+	@echo "### Type weaving"
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/full/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers $(NPROC) \
+				--directory data/full \
+				--dataset $$d \
+				--engine $$s \
+				--weave baseline ; \
+		done ; \
+	done
+	@echo
+	@echo "### Type checking"
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		for d in $$(ls data/full/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers $(NPROC) \
+				--directory data/full \
+				--dataset $$d \
+				--engine $$s \
+				--emit-declaration \
+				--typecheck baseline ; \
+		done ; \
+	done
+	@echo
+	@echo "### Generating CSVs"
+	@python3 src/summarize_results.py \
+		--data data/full \
+		--workers $(NPROC)
+	@echo
+	@echo "### Generating figures"
+	@(cd src/R && ./run.sh /data/full)
+
+.PHONY: build micro full
