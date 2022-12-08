@@ -57,6 +57,13 @@ micro:
 	@echo "### Checking if R is set up"
 	$(MAKE) test-r -C src/R > /dev/null
 
+# Clean the micro output
+clean-micro:
+	rm -rf data/micro/DeepTyper-out
+	rm -rf data/micro/LambdaNet-out
+	rm -rf data/micro/InCoder-out
+	rm -rf data/micro/csv
+
 # Run the full evaluation
 full:
 	@echo "### Type annotation prediction"
@@ -103,4 +110,7 @@ full:
 	@echo "### Generating figures"
 	@(cd src/R && ./run.sh /data/full)
 
-.PHONY: build micro full
+archive:
+	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
+
+.PHONY: build micro clean-micro full archive
