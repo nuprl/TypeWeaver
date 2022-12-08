@@ -11,4 +11,10 @@ shell: build
 		--volume $(PWD)/../../data:/data:rw \
 		typeweaver-r-script
 
-.PHONY: build shell
+test-r:
+	$(DOCKER) run --rm \
+		--entrypoint R \
+		typeweaver-r-script \
+		-s -e "suppressMessages(library(tidyverse))"
+
+.PHONY: build shell test-r

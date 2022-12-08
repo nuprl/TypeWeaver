@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-library(tidyverse)
+suppressMessages(library(tidyverse))
 
 data_dir <- commandArgs(trailingOnly=TRUE)
 figures_dir <- paste0(data_dir, "/figures")

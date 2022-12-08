@@ -46,5 +46,6 @@ micro:
 	@python3 src/summarize_results.py \
 		--data data/micro \
 		--workers 1
+	$(MAKE) test-r -C src/R > /dev/null
 
 .PHONY: build micro
