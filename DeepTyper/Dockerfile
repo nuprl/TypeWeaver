@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0.3-base-ubuntu16.04
+FROM ubuntu:16.04
 
 # set utf-8 encoding
 ENV LANG C.UTF-8
@@ -12,7 +12,7 @@ RUN apt-get update -yq && apt-get install -yq \
         python3-pip \
         python3-pygments \
         python3-scipy \
- && pip3 install cntk-gpu \
+ && pip3 install cntk \
  && rm -rf /var/lib/apt/lists/*
 
 COPY src/pretrained /code
