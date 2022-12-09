@@ -110,7 +110,56 @@ full:
 	@echo "### Generating figures"
 	@(cd src/R && ./run.sh /data/full)
 
+# Clean the full output
+clean-full:
+	rm -rf data/full/DeepTyper-out
+	rm -rf data/full/LambdaNet-out
+	rm -rf data/full/InCoder-out
+	rm -rf data/full/csv
+	rm -rf data/full/figures
+
+# Copy partial results over: results after predicting type annotations
+# This will delete all existing results!
+partial-predictions: clean-full
+	for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/full/original); do \
+			mkdir -p data/full/$$s-out/$$d/predictions ; \
+			cp -R data/results/$$s-out/$$d/predictions/* data/full/$$s-out/$$d/predictions ; \
+		done ; \
+	done
+	for d in $$(ls data/full/original); do \
+		mkdir -p data/full/InCoder-out/$$d/baseline ; \
+		cp -R data/results/InCoder-out/$$d/baseline/* data/full/InCoder-out/$$d/baseline ; \
+	done
+
+# Copy partial results over: results after type weaving
+# This will delete all existing results!
+partial-weaving: partial-predictions
+	for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/full/original); do \
+			mkdir -p data/full/$$s-out/$$d/baseline ; \
+			cp -R data/results/$$s-out/$$d/baseline/* data/full/$$s-out/$$d/baseline ; \
+		done ; \
+	done
+
+# Copy partial results over: results after type checking
+# This will delete all existing results!
+partial-checking: partial-weaving
+	for s in DeepTyper LambdaNet InCoder ; do \
+		for d in $$(ls data/full/original); do \
+			mkdir -p data/full/$$s-out/$$d/baseline-checked ; \
+			cp -R data/results/$$s-out/$$d/baseline-checked/* data/full/$$s-out/$$d/baseline-checked ; \
+			mkdir -p data/full/$$s-out/$$d/baseline-typedefs ; \
+			cp -R data/results/$$s-out/$$d/baseline-typedefs/* data/full/$$s-out/$$d/baseline-typedefs ; \
+		done ; \
+	done
+
+# Make only the figures, copy only the summary CSVs
+figures:
+	cp -R data/results/csv data/full
+	(cd src/R && ./run.sh /data/full)
+
 archive:
 	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
 
-.PHONY: build micro clean-micro full archive
+.PHONY: build micro clean-micro full archive partial-predictions partial-weaving partial-checking
