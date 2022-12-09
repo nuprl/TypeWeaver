@@ -57,6 +57,56 @@ micro:
 	@echo "### Checking if R is set up"
 	$(MAKE) test-r -C src/R > /dev/null
 
+# Test the evaluation without a GPU
+micro-cpu:
+	@echo "### Copying the micro GPU results over"
+	mkdir -p data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline
+	cp -R data/results/InCoder-out/top1k-typed-nodeps-es6/baseline/decamelize \
+		  data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/micro/original); do \
+			python3 src/migrate_dataset/main.py \
+				--directory data/micro \
+				--dataset $$d \
+				--engine $$s \
+				--infer ; \
+		done ; \
+	done
+	@echo
+	@echo "### Type weaving"
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/micro/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers 1 \
+				--directory data/micro \
+				--dataset $$d \
+				--engine $$s \
+				--weave baseline ; \
+		done ; \
+	done
+	@echo
+	@echo "### Type checking"
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/micro/original); do \
+			python3 src/migrate_dataset/main.py \
+				--workers 1 \
+				--directory data/micro \
+				--dataset $$d \
+				--engine $$s \
+				--emit-declaration \
+				--typecheck baseline ; \
+		done ; \
+	done
+	@echo
+	@echo "### Generating CSVs"
+	@python3 src/summarize_results.py \
+		--data data/micro \
+		--workers 1
+	@echo
+	@echo "### Checking if R is set up"
+	$(MAKE) test-r -C src/R > /dev/null
+
 # Clean the micro output
 clean-micro:
 	rm -rf data/micro/DeepTyper-out
