@@ -27,8 +27,7 @@ Please list for each distinct component of your artifact:
         - CSV files summarizing the raw results: `data/results/csv/`
         - Figures and tables produced from the CSVs: `data/results/figures/`
     - Source code:
-        - `src`
-        - `weaver`
+        - `src/`
 
 * Which badges do you claim for your artifact?
     - Functional + reusable

@@ -8,7 +8,7 @@ build:
 	$(MAKE) build -C DeepTyper
 	$(MAKE) build -C LambdaNet
 	$(MAKE) build -C InCoder
-	$(MAKE) build -C weaver
+	$(MAKE) build -C src/weaver
 	$(MAKE) build -C src/R
 
 # Test the evaluation on the micro dataset

@@ -8,7 +8,7 @@ import util
 from util import Result, ResultStatus
 
 class TypeChecker:
-    path = Path(util.tools_root, "..", "weaver", "tsc").resolve()
+    path = Path(util.tools_root, "weaver", "tsc").resolve()
 
     def __init__(self, args):
         if not self.path.exists():

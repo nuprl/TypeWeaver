@@ -32,7 +32,7 @@ SYSTEMS = {
     "InCoder": "ic"
 }
 
-CLOC = Path(Path(__file__).parent, "..", "weaver", "cloc").resolve()
+CLOC = Path(Path(__file__).parent, "weaver", "cloc").resolve()
 
 def check_exists(path):
     if not Path(path).exists():
