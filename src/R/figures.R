@@ -482,13 +482,12 @@ error_codes.tex <- error_codes_summary.10 %>%
           dt = sum(.$dt),
           ln = sum(.$ln),
           ic = sum(.$ic)) %>%
-  inner_join(error_codes_desc, by="error") %>%
+  left_join(error_codes_desc, by="error") %>%
   select(error, desc, dt, ln, ic) %>%
   mutate(desc = str_replace_all(desc, r"(\{)", r"(\\{)")) %>%
   mutate(desc = str_replace_all(desc, r"(\})", r"(\\})")) %>%
   mutate(error = ifelse(str_detect(error, "Total"), "\\textbf{Total}", error)) %>%
   mutate(across(where(is.integer), scales::label_comma()))
-stopifnot(nrow(error_codes.tex) == 12)
 
 save.table(error_codes.tex)
 
