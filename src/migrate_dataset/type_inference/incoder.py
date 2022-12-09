@@ -126,9 +126,8 @@ class InCoder:
             print("Error! InCoder process failed!")
             exit(2)
 
-        with tqdm(total=len(packages), desc=f"InCoder {self.dataset}", unit="package") as t:
+        with tqdm(total=len(packages), desc=f"InCoder {self.dataset}", unit="package", miniters=1) as t:
             for package in packages:
-                t.set_postfix_str(self.short_name(package))
                 t.update()
                 result = self.infer_on_package(package, to_skip)
 

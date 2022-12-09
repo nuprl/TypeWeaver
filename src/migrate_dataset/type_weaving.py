@@ -138,9 +138,8 @@ class TypeWeaver:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            with tqdm(total=len(fs), desc=f"Weaving {self.engine} {self.dataset}", unit="package") as t:
-                for i, f in enumerate(fs):
-                    t.set_postfix_str(self.short_name(packages[i]))
+            with tqdm(total=len(fs), desc=f"Weaving {self.engine} {self.dataset}", unit="package", miniters=1) as t:
+                for f in fs:
                     t.update()
                     result = f.result()
 

@@ -112,9 +112,8 @@ class DeepTyper:
         # Compute the packages to skip
         to_skip = self.get_skip_set(packages)
 
-        with tqdm(total=len(packages), desc=f"DeepTyper {self.dataset}", unit="package") as t:
+        with tqdm(total=len(packages), desc=f"DeepTyper {self.dataset}", unit="package", miniters=1) as t:
             for package in packages:
-                t.set_postfix_str(self.short_name(package))
                 t.update()
                 result = self.infer_on_package(package, to_skip)
 
