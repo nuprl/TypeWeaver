@@ -44,7 +44,7 @@ the paper with the location of the supporting component in the artifact.
     - If the dataset has the `-es6` suffix, it was the result of applying the
       step in §3.1.
 
-- Note: Figures 1-3 and 12-15 are examples and not generated
+- Note: Figures 1-3 and 12-15 are examples and not generated from the data
 
 - All other figures and tables can be generated from the CSVs
     - Running `make figures` will:
@@ -131,17 +131,17 @@ artifact.
             - All other dependencies are managed with OCI images
             - Docker may be used instead of Podman, but has not been tested
 
-- We are providing the reviewers with SSH access to a server with the hardware
-  and software set up
+- We are providing the reviewers with SSH access to a VM with the hardware and
+  software set up
     - `ssh reviewer@[REDACTED]`
     - Password: `[REDACTED]`
-    - The home directory is `/reviewerhome` and it contains a copy of the
-      artifact tarball
+    - The home directory is `/reviewerhome` and contains a copy of the artifact
+      tarball
     - **Important**: Reviewers, please coordinate with each other to share
-      access to the server, to avoid clobbering files or consuming all
-      resources
-    - Nobody else will be using the server
-    - The server has a 12-core Intel Xeon processor @ 2.9 GHz, 94 GB of RAM,
+      access to the VM, to avoid clobbering files or consuming all resources
+    - You can use the `reviewer1`, `reviewer2`, and `reviewer2` subdirectories
+    - Nobody else will be using the VM
+    - The VM has a 12-core Intel Xeon processor @ 2.9 GHz, 94 GB of RAM,
       and an NVIDIA A100 with 40 GB of VRAM
 
 - It is possible to run a portion of the experiments without a GPU, and to
@@ -151,9 +151,9 @@ artifact.
 
 Please briefly describe how to get started with your artifact.
 
-1. Download the tarball and extract, or SSH into the server and extract the
+1. Download the tarball and extract, or SSH into the VM and extract the
    tarball in the home directory.
-2. Run `make build` to build the containers. The containers on the server are
+2. Run `make build` to build the containers. The containers on the VM are
    pre-built, so it will take a few minutes. Building from scratch may take up
    to an hour, and use up to 30 GB of space.
 3. Run `make micro` (or `make micro-cpu` if you do not have a GPU) to run the
@@ -169,6 +169,6 @@ Please briefly describe how to get started with your artifact.
       `diff data/full/figures/ data/results/figures/`. The tables should match
       exactly. The PDFs should match visually, but are not binary matches.
 
-- We estimate that running the full experiments on the provided server will
+- We estimate that running the full experiments on the provided VM will
   take over 30 hours. Please see the README for instructions on running the
   experiments, as well as how to skip stages of the experiment.

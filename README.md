@@ -14,7 +14,8 @@ The Makefile has rules for running the experiment.
 - `make clean-full` will reset the experiment state
 
 - `make full` will run the entire experiment, and may take over 30 hours.
-  DeepTyper is significantly slower than LambdaNet and InCoder.
+  Type annotation prediction for DeepTyper is significantly slower than for
+  LambdaNet or InCoder.
 
 - `make partial-predictions` will copy the results of Step 1. Afterwards,
   `make full` will run the experiment from Step 2. This may take over 15 hours.
@@ -24,8 +25,7 @@ The Makefile has rules for running the experiment.
   `make full` will run the experiment from Step 3. This may take over 3 hours.
 
 - `make partial-checking` will copy the results of Setp 3. Afterwards,
-  `make full` will run the experiments from Step 4. This will take a few
-  minutes.
+  `make full` will run the experiments from Step 4. This will take TODO minutes.
 
 Note that in the above steps, the final tables and figures may not match the
 paper. This is due to variance during the type annotation prediction stage, as
