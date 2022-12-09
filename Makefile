@@ -13,90 +13,50 @@ build:
 
 # Test the evaluation on the micro dataset
 micro:
-	@echo "### Type annotation prediction"
-	@for s in DeepTyper LambdaNet InCoder ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--infer ; \
-		done ; \
-	done
-	@echo
-	@echo "### Type weaving"
-	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers 1 \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--weave baseline ; \
-		done ; \
-	done
-	@echo
-	@echo "### Type checking"
-	@for s in DeepTyper LambdaNet InCoder ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers 1 \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--emit-declaration \
-				--typecheck baseline ; \
-		done ; \
-	done
-	@echo
-	@echo "### Generating CSVs"
-	@python3 src/summarize_results.py \
-		--data data/micro \
-		--workers 1
-	@echo
-	@echo "### Checking if R is set up"
-	$(MAKE) test-r -C src/R > /dev/null
-
-# Test the evaluation without a GPU
-micro-cpu:
-	@echo "### Copying the micro GPU results over"
+ifdef NOGPU
+	@echo "### Copy the micro GPU results"
 	mkdir -p data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline
 	cp -R data/results/InCoder-out/top1k-typed-nodeps-es6/baseline/decamelize \
-		  data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline
+		data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline
+	@echo
 	@echo "### Type annotation prediction"
 	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--infer ; \
-		done ; \
+		python3 src/migrate_dataset/main.py \
+			--directory data/micro \
+			--dataset top1k-typed-nodeps-es6 \
+			--engine $$s \
+			--infer ; \
 	done
+else
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		python3 src/migrate_dataset/main.py \
+			--directory data/micro \
+			--dataset top1k-typed-nodeps-es6 \
+			--engine $$s \
+			--infer ; \
+	done
+endif
 	@echo
 	@echo "### Type weaving"
 	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers 1 \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--weave baseline ; \
-		done ; \
+		python3 src/migrate_dataset/main.py \
+			--workers 1 \
+			--directory data/micro \
+			--dataset top1k-typed-nodeps-es6 \
+			--engine $$s \
+			--weave baseline ; \
 	done
 	@echo
 	@echo "### Type checking"
-	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/micro/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers 1 \
-				--directory data/micro \
-				--dataset $$d \
-				--engine $$s \
-				--emit-declaration \
-				--typecheck baseline ; \
-		done ; \
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		python3 src/migrate_dataset/main.py \
+			--workers 1 \
+			--directory data/micro \
+			--dataset top1k-typed-nodeps-es6 \
+			--engine $$s \
+			--emit-declaration \
+			--typecheck baseline ; \
 	done
 	@echo
 	@echo "### Generating CSVs"
@@ -116,6 +76,24 @@ clean-micro:
 
 # Run the full evaluation
 full:
+ifdef NOGPU
+	@echo "### Copy the GPU results"
+	for d in $$(ls data/full/original); do \
+		mkdir -p data/full/InCoder-out/$$d/baseline ; \
+		cp -R data/results/InCoder-out/$$d/baseline/* data/full/InCoder-out/$$d/baseline ; \
+	done
+	@echo
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet ; do \
+		for d in $$(ls data/full/original); do \
+			python3 src/migrate_dataset/main.py \
+				--directory data/full \
+				--dataset $$d \
+				--engine $$s \
+				--infer ; \
+		done ; \
+	done
+else
 	@echo "### Type annotation prediction"
 	@for s in DeepTyper LambdaNet InCoder ; do \
 		for d in $$(ls data/full/original); do \
@@ -126,6 +104,7 @@ full:
 				--infer ; \
 		done ; \
 	done
+endif
 	@echo
 	@echo "### Type weaving"
 	@for s in DeepTyper LambdaNet ; do \
