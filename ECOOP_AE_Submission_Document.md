@@ -26,6 +26,9 @@ Please list for each distinct component of your artifact:
         - Raw results: `data/results/*-out/`
         - CSV files summarizing the raw results: `data/results/csv/`
         - Figures and tables produced from the CSVs: `data/results/figures/`
+    - Source code:
+        - `src`
+        - `weaver`
 
 * Which badges do you claim for your artifact?
     - Functional + reusable
@@ -122,17 +125,8 @@ artifact under a Creative Commons license, please indicate this here.
 Please list any specific hardware or software requirements for accessing your
 artifact.
 
-- Requirements:
-    - Hardware: a GPU with at least 14 GB of VRAM
-    - Software:
-        - Linux
-        - Python +3.6 and the `tqdm` package (`pip install tqdm`)
-        - [Podman](https://podman.io/) with the [NVIDIA container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#podman)
-            - All other dependencies are managed with OCI images
-            - Docker may be used instead of Podman, but has not been tested
-
 - We are providing the reviewers with SSH access to a VM with the hardware and
-  software set up
+  software already set up:
     - `ssh reviewer@[REDACTED]`
     - Password: `[REDACTED]`
     - The home directory is `/reviewerhome` and contains a copy of the artifact
@@ -144,31 +138,60 @@ artifact.
     - The VM has a 12-core Intel Xeon processor @ 2.9 GHz, 94 GB of RAM,
       and an NVIDIA A100 with 40 GB of VRAM
 
-- It is possible to run a portion of the experiments without a GPU, and to
-  skip stages of the experiment. Please see the README for details.
+- To run on your own machine, you will need:
+    - Hardware: a GPU with at least 14 GB of VRAM
+        - It is possible to skip the experiments that require a GPU; see the
+          README for details.
+    - Software:
+        - Linux
+        - Python +3.6 and the `tqdm` package (`pip install tqdm`)
+        - [Podman](https://podman.io/) with the [NVIDIA container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#podman)
+            - All other dependencies are managed with OCI images
+            - Docker may be used instead of Podman, but has not been tested
 
 ## Getting Started
 
 Please briefly describe how to get started with your artifact.
 
-1. Download the tarball and extract, or SSH into the VM and extract the
-   tarball in the home directory.
-2. Run `make build` to build the containers. The containers on the VM are
-   pre-built, so it will take a few minutes. Building from scratch may take up
-   to an hour, and use up to 30 GB of space.
-3. Run `make micro` (or `make micro-cpu` if you do not have a GPU) to run the
-   evaluation pipeline on a single project. This should take 5 minutes.
-    - Inspect the DeepTyper and LambdaNet results by running
-      `less data/micro/*-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
-      InCoder is not expected to produce a result. Compare to the original
-      JavaScript source by running `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
-5. Recreate the tables and figures by running `make figures`. This will create
-   `data/full/figures/` and take a few seconds.
-    - Compare the generated figures (`data/full/figures/`) with the figures
-      used in the paper (`results/figures/`), by running
-      `diff data/full/figures/ data/results/figures/`. The tables should match
-      exactly. The PDFs should match visually, but are not binary matches.
+- If you are using the VM:
+    1. `ssh reviewer@[REDACTED]` with password `[REDACTED]`, and extract
+       `~/TypeWeaver-artifact.tar.gz`
+    2. Run `make build` to build the containers. The containers on the VM are
+       pre-built, so it should take a few minutes.
+    3. Run `make micro` to run the evaluation pipeline on a single project.
+       This should take 5 minutes, and checks that all the containers are
+       working.
+        - Inspect the DeepTyper and LambdaNet results by running
+        `less data/micro/*-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
+        InCoder is not expected to produce a result. Compare to the original
+        JavaScript source by running
+        `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
+    4. Recreate the tables and figures by running `make figures`. This will create
+       `data/full/figures/` and take a few seconds.
+        - Compare the generated figures (`data/full/figures/`) with the figures
+        used in the paper (`results/figures/`), by running
+        `diff data/full/figures/ data/results/figures/`. The tables should match
+        exactly. The PDFs should match visually, but are not binary matches.
 
-- We estimate that running the full experiments on the provided VM will
-  take over 30 hours. Please see the README for instructions on running the
-  experiments, as well as how to skip stages of the experiment.
+- If you are using your own machine:
+    1. Download and extract the tarball.
+    2. Run `make build` to build the containers. This may take up to an hour and
+       use up to 30 GB of space.
+    3. Run `make micro` (or `make NOGPU=true micro` if you do not have a GPU).
+       This should take 5 minutes, and checks that all the containers are
+       working.
+        - Inspect the DeepTyper and LambdaNet results by running
+        `less data/micro/*-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
+        InCoder is not expected to produce a result. Compare to the original
+        JavaScript source by running
+        `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
+    4. Recreate the tables and figures by running `make figures`. This will create
+       `data/full/figures/` and take a few seconds.
+        - Compare the generated figures (`data/full/figures/`) with the figures
+        used in the paper (`results/figures/`), by running
+        `diff data/full/figures/ data/results/figures/`. The tables should match
+        exactly. The PDFs should match visually, but are not binary matches.
+
+We estimate that running the full experiments on the provided VM will take over
+30 hours. Please see the README for instructions on running the experiments, as
+well as how to skip stages of the experiment.

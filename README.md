@@ -2,12 +2,18 @@
 
 TODO, rough instructions, will be cleaned up
 
+## Evaluation stages
+
 The experiment has a number of stages:
 1. Type annotation prediction
-2. Type weaving (only for DeepTyper and LambdaNet)
+    - This step requires a GPU for the InCoder model
+2. Type weaving
+    - Only for DeepTyper and LambdaNet
 3. Type checking
 4. Summarizing the results
 5. Generating the figures
+
+## Makefile targets
 
 The Makefile has rules for running the experiment.
 
@@ -34,8 +40,12 @@ well as different compiler versions producing different compilation errors.
 - `make figures` will recreate the figures from the results used for the paper.
   The tables and figures should match the paper.
 
+## Makefile variables
+
 If you are using Docker instead of podman, you can run `make DOCKER=docker full`
 and the makefiles and scripts should use Docker instead.
 
 By default, the scripts will use all 12 CPUs on the server. To adjust this, run
-`make NPROC=8 fufll` and the makefiles and scripts will use 8 processors.
+`make NPROC=8 full` and the makefiles and scripts will use 8 processors.
+
+If you do not have a GPU, run `make NOGPU=true full`.
