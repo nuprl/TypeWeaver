@@ -33,7 +33,11 @@ The Makefile has rules for running the experiment.
   `make full` will run the experiment from Step 3. This may take over 3 hours.
 
 - `make partial-checking` will copy the results of Setp 3. Afterwards,
-  `make full` will run the experiments from Step 4. This will take TODO minutes.
+  `make full` will run the experiments from Step 4. This may take up to 80
+  minutes. In particular, the "Calculating LOC for each file in each package"
+  step is very slow, but it only needs to run once for the entire dataset, and
+  is not affected by the experiments. `src/summarize_results.py:358` can be
+  commented out.
 
 Note that in the above steps, the final tables and figures may not match the
 paper. This is due to variance during the type annotation prediction stage, as
@@ -51,3 +55,5 @@ By default, the scripts will use all 12 CPUs on the server. To adjust this, run
 `make NPROC=8 full` and the makefiles and scripts will use 8 processors.
 
 If you do not have a GPU, run `make NOGPU=true full`.
+
+# Explaining the directory structure

@@ -26,11 +26,10 @@ Please list for each distinct component of your artifact:
         - Raw results: `data/results/*-out/`
         - CSV files summarizing the raw results: `data/results/csv/`
         - Figures and tables produced from the CSVs: `data/results/figures/`
-    - Source code:
-        - `src/`
+    - Source code: `src/`
 
 * Which badges do you claim for your artifact?
-    - Functional + reusable
+    - Functional + Reusable
     - Available
 
 ## For authors claiming a functional or reusable badge: What are claims about the artifact’s functionality to be evaluated by the committee?
@@ -102,13 +101,67 @@ Please list any reuse scenarios that you envision for your artifact, i.e.,
 state how the artifact can be reused or repurposed beyond its role in the
 submitted paper.
 
-TODO
-- new dataset
-- new model
-- playground
+- Migrating your own project
+    1. Look at the example in `data/playground/original/demo/example-program/`.
+       You can edit the file, add your own files to the `example-program/`
+       directory, or add packages to the `demo` directory.
+    2. Add dependencies to `data/playground/node_modules/`.
+    TODO: es6 conversion
+    3. Run `make playground` to run type annotation prediction and type weaving,
+       using DeepTyper, LambdaNet, and InCoder. This step will not run type
+       checking.
+    4. View the resulting TypeScript in
+       `DeepTyper-out/demo/baseline/example-program/`,
+       `LambdaNet-out/demo/baseline/example-program/`, and
+       `InCoder-out/demo/baseline/example-program/`.
 
+- Adding a new model
+    1. Create a new directory for the type prediction model, e.g. `NewModel/`.
+       Ensure that it runs, ideally within a container.
+    2. If the model outputs TypeScript, continue to step 3. Otherwise, you will
+       need to update `src/weaver/`:
+       - Update `src/weaver/src/index.ts`; see lines 6-7, 10, 15, and 57-62 for
+         how DeepTyper and LambdaNet are handled.
+       - Create `src/weaver/src/newmodel.ts` to implement the logic for weaving
+         type annotations into a JavaScript file. Refer to
+         `src/weaver/src/deeptyper.ts` and `src/weaver/src/lambdanet.ts` as
+         examples.
+       - When you are finished, `cd src/weaver && make build` to rebuild the
+         container.
+    3. Update `src/migrate_dataset`:
+       - Add the new model to `src/migrate_dataset/main.py`; see lines 15 and
+         90-98. You will also need to update
+         `src/migrate_dataset/type_inference/__init__.py`.
+       - Add a new file for running the model, e.g.
+         `src/migrate_dataset/type_inference/newmodel.py`. For examples, refer
+         to the files in `src/migrate_dataset/type_inference/`. There is no
+         standard interface: DeepTyper takes a single file as a command-line
+         argument, LambdaNet reads a list of directories from standard input,
+         and InCoder takes a list of directories as command-line inputs. Also,
+         LambdaNet and InCoder have significant startup costs, so they are
+         started once and polled for results.
+    4. Update `Makefile`. See the target `full` for how the new model can be
+       added to the loops.
+    5. Update `src/summarize_results.py`; see lines 29-33.
+    6. `src/R/figures.R` will need to be updated. The container can be rebuilt
+       with `cd src/R && make build`.
+    7. Adding a new model is a labor-intensive, manual task. Each implementation
+       has its own interface and format, so each one needs a custom adapter.
 
-* “The implementation can easily be modified to use a different algorithm than the one described in section 4.1 of our paper by implementing a corresponding module. We provide an interface specification in ...”
+- Adding a new dataset
+    1. Create a new directory in `data/full/original/`, e.g.
+       `data/full/original/new-dataset`.
+    2. Add package directories to `data/full/original/new-dataset/`.
+    3. If a package has `.d.ts` type declarations, add them to
+       `data/full/groundtruth/`.
+    4. Install the package dependencies' type declarations to
+       `data/full/node_modules/`.
+    5. `make full` does not need to be updated to handle the new dataset.
+    6. `src/R/figures.R` will need to be updated. The container can be rebuilt
+       with `cd src/R && make build`.
+    7. Adding a new dataset is a labor-intensive, manual task. See §4.1 in the
+       paper for how we did this. The scripts in `src/dataset_tools/` may be
+       helpful and are lightly documented. TODO
 
 ## For authors claiming an available badge
 
