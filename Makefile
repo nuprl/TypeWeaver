@@ -76,9 +76,14 @@ clean-micro:
 	rm -rf data/micro/InCoder-out
 	rm -rf data/micro/csv
 
-# TODO: playground, clean-playground, es6 migration
 # Playground for trying your own JavaScript projects
 # Does not do type checking, CSV summarization, or figures
+playground-es6:
+	@echo "### CommonJS to ECMAScript 6 module conversion"
+	@python3 src/convert_dataset_to_esm.py \
+		--directory data/playground \
+		--dataset demo
+
 playground:
 ifdef NOGPU
 	@echo "### Type annotation prediction"
@@ -114,6 +119,7 @@ endif
 # Clean the playground
 clean-playground:
 	rm -rf data/playground/original/demo/example-program/*.{csv,ts,warn,err,out}
+	rm -rf data/playground/original/demo/example-program-es6
 	rm -rf data/playground/DeepTyper-out
 	rm -rf data/playground/LambdaNet-out
 	rm -rf data/playground/InCoder-out

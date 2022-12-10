@@ -107,24 +107,32 @@ submitted paper.
        directory.
     2. If you are using any dependencies, make sure you add the dependency type
        definitions to `data/playground/node_modules/`.
-    TODO: es6 conversion
-    3. Run `make playground` to run type annotation prediction and type weaving,
+    3. Optional: run `make playground-es6` to convert the example program to use
+       ES6 modules. This will create the directory
+       `data/playground/original/demo/example-program-es6` with the converted
+       program.
+    4. Run `make playground` to run type annotation prediction and type weaving,
        using DeepTyper, LambdaNet, and InCoder. This step will not run type
        checking.
-    4. View the resulting TypeScript in
+    5. View the resulting TypeScript in
        `DeepTyper-out/demo/baseline/example-program/`,
        `LambdaNet-out/demo/baseline/example-program/`, and
-       `InCoder-out/demo/baseline/example-program/`.
-    5. To compile the TypeScript:
-        - `cd src/weaver; make shell` will drop you into a container with `tsc`,
+       `InCoder-out/demo/baseline/example-program/`. If you ran the ES6
+       conversion, you should also view
+       `DeepTyper-out/demo/baseline/example-program-es6/`,
+       `LambdaNet-out/demo/baseline/example-program-es6/`, and
+       `InCoder-out/demo/baseline/example-program-es6/`.
+    6. To compile the TypeScript:
+        - `cd src/weaver && make shell` will drop you into a container with `tsc`,
           the TypeScript compiler, in your environment.
         - `cd /data/playground/DeepTyper-out/demo/baseline/example-program` will
           take you to where the directory is mounted.
-        - `tsc *` will compile the files. You can also directly edit the files,
-          and changes will persist when you exit the container.
+        - `tsc *.ts` will compile the files. If it compiles, you can run
+          `node main.js`. If you want to edit the files, you will have to
+          exit the container.
         - Repeat for LambdaNet and InCoder.
         - `exit` to exit the container.
-    5. Run `make clean-playground` to remove the generated files. This will also
+    7. Run `make clean-playground` to remove the generated files. This will also
        remove `*.csv`, `*.ts`, `*.warn`, `*.err`, and `*.out` files in
        `data/playground/original/demo/example-program/`.
 
@@ -201,7 +209,7 @@ artifact.
     - You can use the `reviewer1`, `reviewer2`, and `reviewer2` subdirectories
     - Nobody else will be using the VM
     - The VM has a 12-core Intel Xeon processor @ 2.9 GHz, 94 GB of RAM,
-      and an NVIDIA A100 with 40 GB of VRAM
+      and an NVIDIA A100 with 40 GB of VRAM; its disk performance is not great.
 
 - To run on your own machine, you will need:
     - Hardware: a GPU with at least 14 GB of VRAM

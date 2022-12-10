@@ -14,7 +14,7 @@ a reference for how the Makefile is set up and how the artifact is organized.
 
 The experiment has multiple stages and produces intermediate results. Running
 the full experiment on the provided VM may take over 30 hours (estimate), but
-can be faster with more CPU cores and a faster filesystem.
+can be faster with more CPU cores and better disk performance.
 
 
 TODO, rough instructions, will be cleaned up
