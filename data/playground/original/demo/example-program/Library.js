@@ -1,4 +1,13 @@
-var Book = require('./Book');
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+
+  this.toggleRead = function() {
+    this.read = !this.read;
+  };
+}
 
 function Library() {
   this.books = [];
@@ -18,4 +27,5 @@ function Library() {
   };
 }
 
-module.exports = Library;
+module.exports.Book = Book;
+module.exports.Library = Library;

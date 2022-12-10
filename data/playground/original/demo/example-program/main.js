@@ -1,5 +1,5 @@
-var Book = require('./Book');
-var Library = require('./Library');
+var Book = require('./Library').Book;
+var Library = require('./Library').Library;
 
 var myLibrary = new Library();
 
