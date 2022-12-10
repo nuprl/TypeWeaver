@@ -17,6 +17,8 @@ The experiment has a number of stages:
 
 The Makefile has rules for running the experiment.
 
+- `make clean-micro`
+
 - `make clean-full` will reset the experiment state
 
 - `make full` will run the entire experiment, and may take over 30 hours.

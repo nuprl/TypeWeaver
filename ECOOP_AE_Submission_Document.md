@@ -1,4 +1,4 @@
-# Artifact Submission Template
+/ Artifact Submission Template
 
 Please answer the following questions concisely, either with bullet lists or
 short paragraphs.
@@ -153,43 +153,50 @@ artifact.
 Please briefly describe how to get started with your artifact.
 
 - If you are using the VM:
-    1. `ssh reviewer@[REDACTED]` with password `[REDACTED]`, and extract
-       `~/TypeWeaver-artifact.tar.gz`
+    1. `ssh reviewer@[REDACTED]` with password `[REDACTED]`. `cd` into one of
+       the reviewer subdirectories, and extract the tarball with
+       `tar xf ../TypeWeaver-artifact.tar.gz`.
     2. Run `make build` to build the containers. The containers on the VM are
-       pre-built, so it should take a few minutes.
+       pre-built, so it should only take a few minutes.
     3. Run `make micro` to run the evaluation pipeline on a single project.
        This should take 5 minutes, and checks that all the containers are
        working.
         - Inspect the DeepTyper and LambdaNet results by running
-        `less data/micro/*-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
-        InCoder is not expected to produce a result. Compare to the original
-        JavaScript source by running
-        `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
-    4. Recreate the tables and figures by running `make figures`. This will create
-       `data/full/figures/` and take a few seconds.
+          `less data/micro/DeepTyper-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`
+          and
+          `less data/micro/LambdaNet-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
+          InCoder is not expected to produce a result. Compare to the original
+          JavaScript source by running
+          `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
+    4. Recreate the tables and figures by running `make figures`. This will
+       create `data/full/figures/` and take a few seconds.
         - Compare the generated figures (`data/full/figures/`) with the figures
-        used in the paper (`results/figures/`), by running
-        `diff data/full/figures/ data/results/figures/`. The tables should match
-        exactly. The PDFs should match visually, but are not binary matches.
+          used in the paper (`results/figures/`), by running
+          `diff data/full/figures/ data/results/figures/`. The tables should
+          match exactly. The PDFs should match visually, but are not binary
+          matches.
 
 - If you are using your own machine:
-    1. Download and extract the tarball.
+    1. Download and extract the tarball with `tar xf TypeWeaver-artifact.tar.gz`.
     2. Run `make build` to build the containers. This may take up to an hour and
        use up to 30 GB of space.
     3. Run `make micro` (or `make NOGPU=true micro` if you do not have a GPU).
        This should take 5 minutes, and checks that all the containers are
        working.
         - Inspect the DeepTyper and LambdaNet results by running
-        `less data/micro/*-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
-        InCoder is not expected to produce a result. Compare to the original
-        JavaScript source by running
-        `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
-    4. Recreate the tables and figures by running `make figures`. This will create
-       `data/full/figures/` and take a few seconds.
+          `less data/micro/DeepTyper-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`
+          and
+          `less data/micro/LambdaNet-out/top1k-typed-nodeps-es6/baseline/decamelize/index.ts`.
+          InCoder is not expected to produce a result. Compare to the original
+          JavaScript source by running
+          `less data/micro/original/top1k-typed-nodeps-es6/decamelize/index.js`
+    4. Recreate the tables and figures by running `make figures`. This will
+       create `data/full/figures/` and take a few seconds.
         - Compare the generated figures (`data/full/figures/`) with the figures
-        used in the paper (`results/figures/`), by running
-        `diff data/full/figures/ data/results/figures/`. The tables should match
-        exactly. The PDFs should match visually, but are not binary matches.
+          used in the paper (`results/figures/`), by running
+          `diff data/full/figures/ data/results/figures/`. The tables should
+          match exactly. The PDFs should match visually, but are not binary
+          matches.
 
 We estimate that running the full experiments on the provided VM will take over
 30 hours. Please see the README for instructions on running the experiments, as
