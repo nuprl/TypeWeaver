@@ -67,79 +67,126 @@ a reference for how the Makefile is set up and how the artifact is organized.
     - `summarize_results.py`: parses all the raw results to generate summary
       CSVs
 
-
-
-## Containers implementation
-
-By default, we use Podman. To use Docker, set the `DOCKER` variable:
-
-    make DOCKER=docker build
-    make DOCKER=docker shell
-    DOCKER=docker ./run.sh
-
-
-
-
-## Experiment stages
+## Experiment stages (and how to skip)
 
 The experiment has multiple stages and produces intermediate results. Running
 the full experiment on the provided VM may take over 30 hours (estimate), but
 can be faster with more CPU cores and better disk performance.
 
+The stages are the following:
 
-TODO, rough instructions, will be cleaned up
-
-## Evaluation stages
-
-The experiment has a number of stages:
 1. Type annotation prediction
-    - This step requires a GPU for the InCoder model
+    - This step requires a GPU for the InCoder model, but InCoder can be
+      skipped; see below for details
+    - Reads JavaScript projects from `data/full/original/`
+    - DeepTyper outputs CSV files to
+      `data/full/DeepTyper-out/[dataset]/predictions/`
+    - LambdaNet outputs CSV files to
+      `data/full/LambdaNet-out/[dataset]/predictions/`
+    - InCoder outputs TypeScript to
+      `data/full/InCoder-out/[dataset]/baseline/`
+    - This step may take over 15 hours on the provided VM; DeepTyper is the
+      slowest step
+    - **To skip this step:** `make partial-predictions` will copy results from
+      `data/results/`, then you can run `make full`
+
 2. Type weaving
     - Only for DeepTyper and LambdaNet
+    - Reads JavaScript projects from `data/full/original/` and CSV files from
+      `data/full/[system]-out/[dataset]/predictions/`
+    - Outputs TypeScript to `data/full/[system]-out/[dataset]/baseline/`
+    - This step may take over 12 hours on the provided VM; LambdaNet is
+      significantly slower
+    - **To skip this step:** `make partial-weaving` will copy results from
+      `data/results/`, then you can run `make full`
+
 3. Type checking
+    - Reads TypeScript projects from
+      `data/full/[system]-out/[dataset]/baseline/`
+    - Outputs status and error logs to
+      `data/full/[system]-out/[dataset]/baseline-checked/`
+      as well as type declaration files to
+      `data/full/[system]-out/[dataset]/baseline-typedefs/`
+    - This step may take over 3 hours on the provided VM
+    - **To skip this step:** `make partial-checking` will copy results from
+      `data/results/`, then you can run `make full`
+
 4. Summarizing the results
+    - Reads error logs and type declaration files from
+      `data/full/[system]-out/[dataset]/baseline-checked/` and
+      `data/full/[system]-out/[dataset]/baseline-typedefs/`
+    - Writes CSV files to `data/full/csv/`
+    - This step may take up to 80 minutes. In particular, the
+      "Calculating LOC for each file in each package" step is very slow,
+      but it only needs to run once for the entire dataset, and is not affected
+      by the experiments. `src/summarize_results.py:358` can be commented out.
+
 5. Generating the figures
+    - Reads the CSV files from `data/full/csv/` and writes figures and tables to
+      `data/full/figures/`
+    - This step can be run directly with `make figures`
+        - In this case, the tables and figures should match the paper
+    - If `make full` is used, the final tables and figures may not match the
+      paper. This is due to variance during the type annotation prediction
+      stage, as well as different compiler versions producing different
+      compilation errors.
 
 ## Makefile targets
 
 The Makefile has rules for running the experiment.
 
-- `make clean-micro`
+- `build`: build the containers
 
-- `make clean-full` will reset the experiment state
+- `micro`: run the micro dataset to test that the containers work
 
-- `make full` will run the entire experiment, and may take over 30 hours.
-  Type annotation prediction for DeepTyper is significantly slower than for
-  LambdaNet or InCoder.
+- `clean-micro`: reset the micro dataset state
 
-- `make partial-predictions` will copy the results of Step 1. Afterwards,
-  `make full` will run the experiment from Step 2. This may take over 15 hours.
-  Type weaving for LambdaNet is significantly slower than for DeepTyper.
+- `playground-es6`: convert the playground examples to use ECMAScript 6 modules
 
-- `make partial-weaving` will copy the results of Step 2. Afterwards,
-  `make full` will run the experiment from Step 3. This may take over 3 hours.
+- `playground`: predict type annotations and perform type weaving for the
+  playground examples; does not do type checking
 
-- `make partial-checking` will copy the results of Step 3. Afterwards,
-  `make full` will run the experiments from Step 4. This may take up to 80
-  minutes. In particular, the "Calculating LOC for each file in each package"
-  step is very slow, but it only needs to run once for the entire dataset, and
-  is not affected by the experiments. `src/summarize_results.py:358` can be
-  commented out.
+- `clean playground`: reset the playground state
 
-Note that in the above steps, the final tables and figures may not match the
-paper. This is due to variance during the type annotation prediction stage, as
-well as different compiler versions producing different compilation errors.
+- `full`: run the full experiments
 
-- `make figures` will recreate the figures from the results used for the paper.
-  The tables and figures should match the paper.
+- `clean-full`: reset the experiment state
+
+- `partial-predictions`: copy the type annotation prediction results from the
+  paper, allows skipping Step 1 when running `make full`
+
+- `partial-weaving`: copy the type weaving results from the paper, allows
+  skipping Step 2 when running `make full`
+
+- `partial-checking`: copy the type checking results from the paper, allows
+  skipping Step 3 when running `make full`
+
+- `figures`: copy the CSV results from the paper and generates the figures;
+  the tables and figures should match the paper
 
 ## Makefile variables
 
-If you are using Docker instead of podman, you can run `make DOCKER=docker full`
-and the makefiles and scripts should use Docker instead.
+### No GPU
 
-By default, the scripts will use all 12 CPUs on the server. To adjust this, run
-`make NPROC=8 full` and the makefiles and scripts will use 8 processors.
+Setting this variable will skip the InCoder experiments, which require a GPU.
+Instead, the InCoder results from the paper will be copied over.
 
-If you do not have a GPU, run `make NOGPU=true full`.
+    make NOGPU=true micro
 
+### Number of processors
+
+By default, `make full` will use all available processors on the machine.
+This can be configured:
+
+    make NPROC=8 full
+
+The other targets only use a single processor.
+
+### Docker
+
+By default, we use Podman. To use Docker (or another container implementation),
+set the `DOCKER` variable:
+
+    make DOCKER=docker build
+    make DOCKER=docker shell
+    DOCKER=docker ./run.sh
