@@ -14,7 +14,6 @@ a reference for how the Makefile is set up and how the artifact is organized.
 - Type prediction models: `DeepTyper/`, `LambdaNet/`, and `InCoder/`
     - Each model is containerized
     - Each directory has a Makefile and a `run.sh` script
-    - Refer to the README for how to run the models
 
 - Experiment data: `data/`
     - Input data: `full/`, `micro/`, `playground/`
