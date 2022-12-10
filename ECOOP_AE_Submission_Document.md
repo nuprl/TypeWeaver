@@ -181,8 +181,10 @@ submitted paper.
     6. `src/R/figures.R` will need to be updated. The container can be rebuilt
        with `cd src/R && make build`.
     7. Adding a new dataset is a labor-intensive, manual task. See §4.1 in the
-       paper for how we did this. The scripts in `src/dataset_tools/` may be
-       helpful and are lightly documented. TODO
+       paper for how we did this. As part of that task, we wrote some scripts
+       that were meant to be throwaway, but we include them in
+       `src/dataset_tools/` for completeness. They are lightly documented, but
+       have not been tested within this artifact.
 
 ## For authors claiming an available badge
 

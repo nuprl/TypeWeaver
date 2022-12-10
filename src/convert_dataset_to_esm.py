@@ -6,6 +6,11 @@
 #   2. Run cjs-to-es6, which modifies in place
 #   3. Record successes/failures
 #   4. Delete failed migration attempts
+#
+# NOTE: This file is based on dataset_tools/transform_require_to_import.py
+# The script in dataset_tools does not use containers, and creates an es6
+# version of a dataset. This script creates an es6 version of the package in the
+# same dataset, and uses a containerized version of cjs-to-es6.
 
 from enum import Enum
 from pathlib import Path
