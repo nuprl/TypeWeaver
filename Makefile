@@ -241,6 +241,6 @@ figures:
 archive:
 	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
 
-.PHONY: build micro clean-micro full clean-full playground clean-playground
+.PHONY: build micro clean-micro full clean-full playground playground-es6 clean-playground
 .PHONY: partial-predictions partial-weaving partial-checking
 .PHONY: figures archive
