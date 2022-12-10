@@ -27,5 +27,7 @@ function Library() {
   };
 }
 
-module.exports.Book = Book;
-module.exports.Library = Library;
+module.exports = {
+    Book: Book,
+    Library: Library,
+}
