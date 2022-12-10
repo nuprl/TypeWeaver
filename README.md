@@ -11,10 +11,46 @@ a reference for how the Makefile is set up and how the artifact is organized.
 
 ## Directory structure
 
-- Type prediction models: `DeepTyper/`, `LambdaNet/`, and `InCoder`
+- Type prediction models: `DeepTyper/`, `LambdaNet/`, and `InCoder/`
     - Each model is containerized
     - Each directory has a Makefile and a `run.sh` script
     - Refer to the README for how to run the models
+
+- Experiment data: `data/`
+    - Input data: `data/full/`, `data/micro/`, `data/playground/`
+        - These directories are structured similarly:
+            - `original/` contains the input datasets; each dataset is a
+              directory of JavaScript packages
+            - `groundtruth/` contains TypeScript type declarations
+              (`.d.ts` files) for the packages in `original/`, and are used in
+              the evaluation as the ground truth of handwritten type annotations
+            - `node_modules/` contains the type definitions of the package
+              dependencies
+            - Running the experiments will create directories for the output:
+              `DeepTyper-out/`, `LambdaNet-out/`, and `InCoder-out/`
+        - `data/full` is for the full experiments
+        - `data/micro` contains only one package, and is used for
+          "Getting Started" to test that everything is working
+        - `data/playground` is a directory for adding your own examples
+    - Output data: `data/results/`
+        - These are the results used in the paper
+        - The raw outputs are `DeepTyper-out/`, `LambdaNet-out`, and
+          `InCoder-out`
+            - These directories are structured similarly, with one subdirectory
+              per dataset; within each dataset:
+                - `predictions` (only for DeepTyper and LambdaNet): the
+                  predicted type annotations in CSV format
+                - `baseline`: TypeScript code, the result of type weaving (for
+                  DeepTyper and LambdaNet) or directly from predictions (for
+                  InCoder)
+                - `baseline-checked`: the result of type checking the TypeScript
+                  code; `.out` files means the package type checked
+                  successfully
+                - `baseline-typedefs`: the `.d.ts` type declaration files,
+                  extracted from the TypeScript code
+        - `csv/`: CSV files with the raw outputs summarized and collected
+        - `figures/`: tables (LaTeX) and graphs (PDFs) generated from the CSV
+          files
 
 
 
