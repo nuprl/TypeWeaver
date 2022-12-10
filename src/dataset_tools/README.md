@@ -1,6 +1,9 @@
-# tools
+# dataset_tools
 
-A collection of scripts and tools.
+A collection of scripts and tools for building datasets.
+
+These are ad-hoc scripts written to automate tasks, and have not been tested for
+reusability. Nevertheless, they may still be helpful.
 
 * `check_dataset_in_definitely_typed.py`: checks a JavaScript dataset against
   the DefinitelyTyped repository, to determine if the package and its

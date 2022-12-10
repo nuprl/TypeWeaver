@@ -17,7 +17,7 @@ a reference for how the Makefile is set up and how the artifact is organized.
     - Refer to the README for how to run the models
 
 - Experiment data: `data/`
-    - Input data: `data/full/`, `data/micro/`, `data/playground/`
+    - Input data: `full/`, `micro/`, `playground/`
         - These directories are structured similarly:
             - `original/` contains the input datasets; each dataset is a
               directory of JavaScript packages
@@ -28,11 +28,11 @@ a reference for how the Makefile is set up and how the artifact is organized.
               dependencies
             - Running the experiments will create directories for the output:
               `DeepTyper-out/`, `LambdaNet-out/`, and `InCoder-out/`
-        - `data/full` is for the full experiments
-        - `data/micro` contains only one package, and is used for
+        - `full` is for the full experiments
+        - `micro` contains only one package, and is used for
           "Getting Started" to test that everything is working
-        - `data/playground` is a directory for adding your own examples
-    - Output data: `data/results/`
+        - `playground` is a directory for adding your own examples
+    - Output data: `results/`
         - These are the results used in the paper
         - The raw outputs are `DeepTyper-out/`, `LambdaNet-out`, and
           `InCoder-out`
@@ -51,6 +51,21 @@ a reference for how the Makefile is set up and how the artifact is organized.
         - `csv/`: CSV files with the raw outputs summarized and collected
         - `figures/`: tables (LaTeX) and graphs (PDFs) generated from the CSV
           files
+
+- Tools and scripts: `src/`
+    - `R/`: the (containerized) R script for generating tables and figures
+      for the paper; requires CSV files in `data/full/csv`
+    - `dataset_tools/`: a collection of scripts used to construct the
+      datasets; the scripts are not containerized and have not been tested with
+      this artifact
+    - `migrate_dataset/`: this script is used to invoke the various tools
+      for predicting type annotations, type weaving, and type checking
+    - `weaver/`: the (containerized) tool for type weaving; also includes other
+      tools installed in the container environment
+    - `convert_dataset_to_esm.py`: used by `make playground-es6` to convert the
+      playground example to ECMAScript 6 modules
+    - `summarize_results.py`: parses all the raw results to generate summary
+      CSVs
 
 
 

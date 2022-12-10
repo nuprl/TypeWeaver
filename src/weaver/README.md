@@ -3,23 +3,29 @@
 This tool parses an unannotated JavaScript file and associated CSV file
 containing type predictions, and outputs a valid TypeScript file.
 
-Currently, DeepTyper and LambdaNet are supported. Note that by default,
-LambdaNet outputs in a non-CSV format; we use a modified version of LambdaNet.
+Currently, DeepTyper and LambdaNet are supported.
 
 ## Setup and build
 
-    cd src
-    npm i && node_modules/.bin/tsc
+    make build
 
 ## Running
 
-    node index.js examples/factors-dt.js --format DeepTyper
+    ./run.sh --format DeepTyper \
+        /data/playground/original/demo/example-program/main.js
 
-By default, `type_weaver` assumes that for an input file `file.js`, a
-corresponding CSV file `file.csv` exists in the same directory, containing type
-predictions in the specified format.
+Alternatively:
+
+    make shell      # attach a shell to the container
+    node index.js --format DeepTyper \
+        /data/playground/original/demo/example-program/main.js
+    exit            # exit the container
+
+By default, the CSV file is expected to be in the same directory as the
+JavaScript file.
 
 The CSV file can be provided explicitly:
 
-    node index.js examples/factors-dt.js --format DeepTyper \
-        --types examples/factors-dt.csv
+    ./run.sh --format DeepTyper \
+        /data/playground/original/demo/example-program/main.js \
+        --types /data/playground/original/demo/example-program/main.csv
