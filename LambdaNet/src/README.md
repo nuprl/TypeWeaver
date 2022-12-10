@@ -1,38 +1,3 @@
-# Modified README
-
-## Instructions
-
-1. Install dependencies (see below).
-2. `cd scripts/ts && npm i && node_modules/.bin/tsc`
-    - This installs the NPM dependencies and compiles the TypeScript files.
-3. Optional: run `sbt "runMain lambdanet.JavaAPI"`
-    - sbt needs to fetch and build itself for the first time, and the LambdaNet Scala files need to be compiled.
-      This will happen automatically, but the first execution will be very slow.
-4. Run `sbt "runMain lambdanet.TypeInferenceService"`
-
-This will load the model (which takes about 40 seconds) and then prompt for a directory to a project.
-LambdaNet will read all the .ts files from that directory and perform type inference (which takes about 2 seconds with a GPU).
-The output is in the format:
-
-    start_line,start_col,end_line,end_col,type1,prob1,type2,prob2,type3,prob3,type4,prob4,type5,prob5
-
-There are 5 predictions in total, separated by commas. For multiple files, LambdaNet will print a header, e.g. `=== File: file.ts ===`.
-
-LambdaNet is aware of which identifiers are declarations, and does not produce predictions for variable uses.
-
-"Batch mode" and the Docker file do not seem useful for running with our own dataset.
-
-## Dependencies
-
-I use [asdf](https://github.com/asdf-vm/asdf) and [direnv](https://github.com/asdf-community/asdf-direnv) to manage language versions and environment variables.
-
-* NodeJS 16.15.0, installed with the [asdf plugin](https://github.com/asdf-vm/asdf-nodejs)
-* Java 11 (openjdk-11.0.2), installed with the [asdf plugin](https://github.com/halcyon/asdf-java)
-* Scala 2.12.10, installed with the [asdf plugin](https://github.com/asdf-community/asdf-scala)
-* sbt 1.3.13, installed with the [asdf plugin](https://github.com/bram2000/asdf-sbt)
-
-# Original README
-
 <img src="images/Header.png" width="800" alt="LambdaNet Header"/>
 
 This is the source code repo for the ICLR paper [*LambdaNet: Probabilistic Type Inference using Graph Neural Networks*](https://openreview.net/forum?id=Hkx6hANtwH). For an overview of how LambdaNet works, see [our video from ICLR 2020](https://iclr.cc/virtual_2020/poster_Hkx6hANtwH.html).

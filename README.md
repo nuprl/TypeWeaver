@@ -9,6 +9,25 @@ for what this artifact comprises and how to get started.
 This README contains information for running the full experiments, as well as
 a reference for how the Makefile is set up and how the artifact is organized.
 
+## Directory structure
+
+- Type prediction models: `DeepTyper/`, `LambdaNet/`, and `InCoder`
+    - Each model is containerized
+    - Each directory has a Makefile and a `run.sh` script
+    - Refer to the README for how to run the models
+
+
+
+## Containers implementation
+
+By default, we use Podman. To use Docker, set the `DOCKER` variable:
+
+    make DOCKER=docker build
+    make DOCKER=docker shell
+    DOCKER=docker ./run.sh
+
+
+
 
 ## Experiment stages
 
@@ -73,4 +92,3 @@ By default, the scripts will use all 12 CPUs on the server. To adjust this, run
 
 If you do not have a GPU, run `make NOGPU=true full`.
 
-# Explaining the directory structure
