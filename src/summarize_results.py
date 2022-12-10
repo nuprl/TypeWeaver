@@ -46,7 +46,7 @@ def parse_args():
     parser.add_argument(
         "--data",
         required=True,
-        help="data directory that contains dataset output and otes")
+        help="data directory that contains dataset output and notes")
     parser.add_argument(
         "--workers",
         type=int,
