@@ -13,6 +13,8 @@ build:
 
 # Test the evaluation on the micro dataset
 micro:
+	@echo "Checking scripts and containers work"
+	(cd src/weaver && ./cloc --version && ./tsc --version && ./run.sh --version) > /dev/null
 ifdef NOGPU
 	@echo "### Copy the micro GPU results"
 	mkdir -p data/micro/InCoder-out/top1k-typed-nodeps-es6/baseline

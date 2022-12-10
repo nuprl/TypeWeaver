@@ -10,7 +10,7 @@
 : ${DOCKER:=podman}
 
 $DOCKER run --rm \
-    --volume $(pwd)/../data:/data:rw \
+    --volume $(pwd)/../../data:/data:rw \
     --entrypoint tsc \
     --workdir $TYPEWEAVER_TSC_WORKDIR \
     typeweaver-weaver "$@"
