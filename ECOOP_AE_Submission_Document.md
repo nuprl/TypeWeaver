@@ -103,9 +103,10 @@ submitted paper.
 
 - Migrating your own project
     1. Look at the example in `data/playground/original/demo/example-program/`.
-       You can edit the file, add your own files to the `example-program/`
-       directory, or add packages to the `demo` directory.
-    2. Add dependencies to `data/playground/node_modules/`.
+       You can edit the files or add your own files to the `example-program/`
+       directory.
+    2. If you are using any dependencies, make sure you add the dependency type
+       definitions to `data/playground/node_modules/`.
     TODO: es6 conversion
     3. Run `make playground` to run type annotation prediction and type weaving,
        using DeepTyper, LambdaNet, and InCoder. This step will not run type
@@ -114,6 +115,18 @@ submitted paper.
        `DeepTyper-out/demo/baseline/example-program/`,
        `LambdaNet-out/demo/baseline/example-program/`, and
        `InCoder-out/demo/baseline/example-program/`.
+    5. To compile the TypeScript:
+        - `cd src/weaver; make shell` will drop you into a container with `tsc`,
+          the TypeScript compiler, in your environment.
+        - `cd /data/playground/DeepTyper-out/demo/baseline/example-program` will
+          take you to where the directory is mounted.
+        - `tsc *` will compile the files. You can also directly edit the files,
+          and changes will persist when you exit the container.
+        - Repeat for LambdaNet and InCoder.
+        - `exit` to exit the container.
+    5. Run `make clean-playground` to remove the generated files. This will also
+       remove `*.csv`, `*.ts`, `*.warn`, `*.err`, and `*.out` files in
+       `data/playground/original/demo/example-program/`.
 
 - Adding a new model
     1. Create a new directory for the type prediction model, e.g. `NewModel/`.

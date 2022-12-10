@@ -1,5 +1,22 @@
 # TypeWeaver-artifact
 
+This is the artifact for the submitted paper:
+_Do Machine Learning Models Produce TypeScript Types that Type Check?_
+
+Please read the [ECOOP AE Submission Document](ECOOP_AE_Submission_Document.md)
+for what this artifact comprises and how to get started.
+
+This README contains information for running the full experiments, as well as
+a reference for how the Makefile is set up and how the artifact is organized.
+
+
+## Experiment stages
+
+The experiment has multiple stages and produces intermediate results. Running
+the full experiment on the provided VM may take over 30 hours (estimate), but
+can be faster with more CPU cores and a faster filesystem.
+
+
 TODO, rough instructions, will be cleaned up
 
 ## Evaluation stages
@@ -32,7 +49,7 @@ The Makefile has rules for running the experiment.
 - `make partial-weaving` will copy the results of Step 2. Afterwards,
   `make full` will run the experiment from Step 3. This may take over 3 hours.
 
-- `make partial-checking` will copy the results of Setp 3. Afterwards,
+- `make partial-checking` will copy the results of Step 3. Afterwards,
   `make full` will run the experiments from Step 4. This may take up to 80
   minutes. In particular, the "Calculating LOC for each file in each package"
   step is very slow, but it only needs to run once for the entire dataset, and

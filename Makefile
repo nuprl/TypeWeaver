@@ -76,6 +76,48 @@ clean-micro:
 	rm -rf data/micro/InCoder-out
 	rm -rf data/micro/csv
 
+# TODO: playground, clean-playground, es6 migration
+# Playground for trying your own JavaScript projects
+# Does not do type checking, CSV summarization, or figures
+playground:
+ifdef NOGPU
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet ; do \
+		python3 src/migrate_dataset/main.py \
+			--directory data/playground \
+			--dataset demo \
+			--engine $$s \
+			--infer ; \
+	done
+else
+	@echo "### Type annotation prediction"
+	@for s in DeepTyper LambdaNet InCoder ; do \
+		python3 src/migrate_dataset/main.py \
+			--directory data/playground \
+			--dataset demo \
+			--engine $$s \
+			--infer ; \
+	done
+endif
+	@echo
+	@echo "### Type weaving"
+	@for s in DeepTyper LambdaNet ; do \
+		python3 src/migrate_dataset/main.py \
+			--workers 1 \
+			--directory data/playground \
+			--dataset demo \
+			--engine $$s \
+			--weave baseline ; \
+	done
+	@echo "InCoder does not need type weaving"
+
+# Clean the playground
+clean-playground:
+	rm -rf data/playground/original/demo/example-program/*.{csv,ts,warn,err,out}
+	rm -rf data/playground/DeepTyper-out
+	rm -rf data/playground/LambdaNet-out
+	rm -rf data/playground/InCoder-out
+
 # Run the full evaluation
 full:
 ifdef NOGPU
@@ -193,4 +235,6 @@ figures:
 archive:
 	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
 
-.PHONY: build micro clean-micro full archive partial-predictions partial-weaving partial-checking
+.PHONY: build micro clean-micro full clean-full playground clean-playground
+.PHONY: partial-predictions partial-weaving partial-checking
+.PHONY: figures archive
