@@ -86,8 +86,8 @@ The stages are the following:
       `data/full/InCoder-out/[dataset]/baseline/`
     - This step may take over 15 hours on the provided VM; DeepTyper is the
       slowest step
-    - **To skip this step:** `make partial-predictions` will copy results from
-      `data/results/`, then you can run `make full`
+    - **To skip this step:** `make partial-predictions` will copy precomputed
+      results from `data/results/`, then you can run `make full`
 
 2. Type weaving
     - Only for DeepTyper and LambdaNet
@@ -96,8 +96,8 @@ The stages are the following:
     - Outputs TypeScript to `data/full/[system]-out/[dataset]/baseline/`
     - This step may take over 12 hours on the provided VM; LambdaNet is
       significantly slower
-    - **To skip this step:** `make partial-weaving` will copy results from
-      `data/results/`, then you can run `make full`
+    - **To skip this step:** `make partial-weaving` will copy precomputed
+      results from `data/results/`, then you can run `make full`
 
 3. Type checking
     - Reads TypeScript projects from
@@ -107,8 +107,8 @@ The stages are the following:
       as well as type declaration files to
       `data/full/[system]-out/[dataset]/baseline-typedefs/`
     - This step may take over 3 hours on the provided VM
-    - **To skip this step:** `make partial-checking` will copy results from
-      `data/results/`, then you can run `make full`
+    - **To skip this step:** `make partial-checking` will copy precomputed
+      results from `data/results/`, then you can run `make full`
 
 4. Summarizing the results
     - Reads error logs and type declaration files from

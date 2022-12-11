@@ -115,22 +115,28 @@ submitted paper.
        using DeepTyper, LambdaNet, and InCoder. This step will not run type
        checking.
     5. View the resulting TypeScript in
-       `DeepTyper-out/demo/baseline/example-program/`,
-       `LambdaNet-out/demo/baseline/example-program/`, and
-       `InCoder-out/demo/baseline/example-program/`. If you ran the ES6
-       conversion, you should also view
-       `DeepTyper-out/demo/baseline/example-program-es6/`,
-       `LambdaNet-out/demo/baseline/example-program-es6/`, and
-       `InCoder-out/demo/baseline/example-program-es6/`.
+       `data/playground/DeepTyper-out/demo/baseline/example-program/`,
+       `data/playground/LambdaNet-out/demo/baseline/example-program/`, and
+       `data/playground/InCoder-out/demo/baseline/example-program/`. If you ran
+       the ES6 conversion, you should also view
+       `data/playground/DeepTyper-out/demo/baseline/example-program-es6/`,
+       `data/playground/LambdaNet-out/demo/baseline/example-program-es6/`, and
+       `data/playground/InCoder-out/demo/baseline/example-program-es6/`.
+        - For DeepTyper, you may see a `Library.warn` file that says
+          `Searching for types failed on tokens: function Library`. This is
+          acceptable: it means not all type annotations got woven in, but the
+          rest succeeded.
     6. To compile the TypeScript:
-        - `cd src/weaver && make shell` will drop you into a container with `tsc`,
-          the TypeScript compiler, in your environment.
+        - `cd src/weaver && make shell` will drop you into a container with
+          `tsc`, the TypeScript compiler, in your environment.
         - `cd /data/playground/DeepTyper-out/demo/baseline/example-program` will
           take you to where the directory is mounted.
         - `tsc *.ts` will compile the files. If it compiles, you can run
           `node main.js`. If you want to edit the files, you will have to
           exit the container.
         - Repeat for LambdaNet and InCoder.
+        - The type prediction is not deterministic, and all results may fail to
+          type check.
         - `exit` to exit the container.
     7. Run `make clean-playground` to remove the generated files. This will also
        remove `*.csv`, `*.ts`, `*.warn`, `*.err`, and `*.out` files in
@@ -172,10 +178,11 @@ submitted paper.
 - Adding a new dataset
     1. Create a new directory in `data/full/original/`, e.g.
        `data/full/original/new-dataset`.
-    2. Add package directories to `data/full/original/new-dataset/`.
-    3. If a package has `.d.ts` type declarations, add them to
+    2. For each JavaScript project you want to add to the dataset, add it to
+       `data/full/original/new-dataset`.
+    3. If a project has `.d.ts` type declarations, add them to
        `data/full/groundtruth/`.
-    4. Install the package dependencies' type declarations to
+    4. Install the project dependencies' type declarations to
        `data/full/node_modules/`.
     5. `make full` does not need to be updated to handle the new dataset.
     6. `src/R/figures.R` will need to be updated. The container can be rebuilt
@@ -216,7 +223,7 @@ artifact.
 - To run on your own machine, you will need:
     - Hardware: a GPU with at least 14 GB of VRAM
         - It is possible to skip the experiments that require a GPU; see the
-          README for details.
+          README at the root of the repo.
     - Software:
         - Linux
         - Python +3.6 and the `tqdm` package (`pip install tqdm`)
@@ -275,5 +282,5 @@ Please briefly describe how to get started with your artifact.
           matches.
 
 We estimate that running the full experiments on the provided VM will take over
-30 hours. Please see the README for instructions on running the experiments, as
-well as how to skip stages of the experiment.
+30 hours. Please see the README at the repository root for instructions on
+running the experiments, as well as how to skip stages of the experiment.
