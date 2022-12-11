@@ -240,6 +240,7 @@ figures:
 
 archive:
 	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
+	sha1sum $(shell basename $$PWD).tar.gz
 
 .PHONY: build micro clean-micro full clean-full playground playground-es6 clean-playground
 .PHONY: partial-predictions partial-weaving partial-checking
