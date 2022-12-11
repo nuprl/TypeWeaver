@@ -76,7 +76,7 @@ The stages are the following:
 
 1. Type annotation prediction
     - This step requires a GPU for the InCoder model, but InCoder can be
-      skipped; see below for details
+      skipped; see the "No GPU" section below for details
     - Reads JavaScript projects from `data/full/original/`
     - DeepTyper outputs CSV files to
       `data/full/DeepTyper-out/[dataset]/predictions/`
@@ -95,7 +95,7 @@ The stages are the following:
       `data/full/[system]-out/[dataset]/predictions/`
     - Outputs TypeScript to `data/full/[system]-out/[dataset]/baseline/`
     - This step may take over 12 hours on the provided VM; LambdaNet is
-      significantly slower
+      significantly slower than DeepTyper
     - **To skip this step:** `make partial-weaving` will copy precomputed
       results from `data/results/`, then you can run `make full`
 
@@ -118,7 +118,9 @@ The stages are the following:
     - This step may take up to 80 minutes. In particular, the
       "Calculating LOC for each file in each package" step is very slow,
       but it only needs to run once for the entire dataset, and is not affected
-      by the experiments. `src/summarize_results.py:358` can be commented out.
+      by the experiments. `src/summarize_results.py:358` can be commented out
+      and `data/results/csv/file_loc.csv` can be copied over to
+      `data/full/csv/`.
 
 5. Generating the figures
     - Reads the CSV files from `data/full/csv/` and writes figures and tables to
@@ -132,7 +134,7 @@ The stages are the following:
 
 ## Makefile targets
 
-The Makefile has rules for running the experiment.
+The Makefile has the following targets:
 
 - `build`: build the containers
 

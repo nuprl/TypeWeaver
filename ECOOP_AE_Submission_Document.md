@@ -66,8 +66,8 @@ the paper with the location of the supporting component in the artifact.
     - Performing the dataset construction described in §4.1 results in:
         - datasets saved in `data/full/original/`
         - dependency type declarations listed in `data/full/package.json`
-        - dependency type declarations saved in `data/full/node_modules`
-        - ground truth type declarations saved in `data/full/groundtruth`
+        - dependency type declarations saved in `data/full/node_modules/`
+        - ground truth type declarations saved in `data/full/groundtruth/`
     - Table 1: `dataset_summary.tex`, `figures.R:82`
     - Figure 4: `package_loc_cdf.pdf`, `figure.R:94`
 
