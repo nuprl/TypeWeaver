@@ -1,8 +1,33 @@
-# run_migration_pipeline
+# migrate_dataset
 
-To install dependencies, run:
+This is the script that invokes (containerized) tools (e.g. type annotation
+prediction, type weaving, type checking).
 
-    npm install
+## Dependencies
+
+* Python +3.6 with tqdm
+
+## Example
+
+    # From the artifact root
+    python3 src/migrate_dataset/main.py \
+        --directory data/micro \
+        --dataset top1k-typed-nodeps-es6 \
+        --engine DeepTyper \
+        --infer
+    python3 src/migrate_dataset/main.py \
+        --workers 1 \
+        --directory data/micro \
+        --dataset top1k-typed-nodeps-es6 \
+        --engine DeepTyper \
+        --weave baseline
+    python3 src/migrate_dataset/main.py \
+        --workers 1 \
+        --directory data/micro \
+        --dataset top1k-typed-nodeps-es6 \
+        --engine DeepTyper \
+        --emit-declaration \
+        --typecheck baseline
 
 ## main.py
 
@@ -10,13 +35,11 @@ The main script is `main.py`, which runs the evaluation pipeline. The script
 assumes a specific directory structure for the dataset and outputs. The script
 runs incrementally, by checking the timestamps of inputs and outputs.
 
-The top directory, `data` in this example, should be passed to `main.py`
+The top directory, `data/full` in this example, should be passed to `main.py`
 with the `--directory data` option.
 
-    data/
+    data/full/
       |-- original/
-      |-- notes/
-      |-- DeepTyper-out/
 
 `original` stores the input datasets. Each dataset is a collection of NPM
 packages. This structure allows multiple datasets (including small test
@@ -28,10 +51,10 @@ option.
             |-- corpus/
             |-- test_dataset/
 
-## infer
+## Type Annotation Prediction
 
-Running `main.py` with the `--infer` flag runs the type inference step of the
-pipeline. Currently, it uses DeepTyper as its inference engine.
+Running `main.py` with the `--infer` flag runs the type annotation prediction
+step of the pipeline. Specify the prediction model with `--engine DeepTyper`.
 
 As input, the script takes every `.js` file in `data/original/corpus` and
 outputs a `.csv` file, containing type predictions, in
@@ -63,12 +86,13 @@ In this example, type inference on `pkgA/index.js`, `pkgA/lib.js`, and
 `pkgB/a.js` succeeded, inference on `pkgB/b.js` failed, and `pkgB/c.md` was
 ignored.
 
-## weave
+## Type Weaving
 
-Type weaving, specified with the `--weave` flag, takes an original `.js` file
-and the predictions `.csv` file, generating a `.ts` file with type annotations.
-If type weaving fails, a `.err` file is generated. If type weaving results in
-warnings, the warnings are captured in a `.warn` file.
+Type weaving, specified with the `--weave baseline` flag (with `baseline` as
+its argument), takes an original `.js` file and the predictions `.csv` file,
+generating a `.ts` file with type annotations. If type weaving fails, a `.err`
+file is generated. If type weaving results in warnings, the warnings are
+captured in a `.warn` file.
 
 The script reads its inputs from the `original/corpus` directory, as
 well as `DeepTyper-out/corpus/predictions/`. Outputs are written to
@@ -104,7 +128,7 @@ well as `DeepTyper-out/corpus/predictions/`. Outputs are written to
 In this example, type weaving succeeded on `pkgA/index.js` but generated a
 warning. Weaving also succeeded on `pkgA/lib.js` and `pkgB/a.js`.
 
-## typecheck
+## Type Checking
 
 Type checking runs on each package, rather than each file. All the `.ts` files 
 for a package are passed to `tsc` on the command line. If type checking
@@ -112,7 +136,7 @@ succeeds, an empty `pkg.out` file is generated. Otherwise, `pkg.err` contains
 the compilation errors.
 
 Type checking is specified with the flag `--typecheck baseline`, where
-`baseline` is the name of the directory to typecheck. This argument is
+`baseline` is the name of the directory to type check. This argument is
 necessary, to allow different directories to be type checked.
 
     data/

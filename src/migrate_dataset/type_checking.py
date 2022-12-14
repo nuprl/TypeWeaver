@@ -1,13 +1,14 @@
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
-import subprocess
+from tqdm import tqdm
+import os, subprocess
 
 import util
 from util import Result, ResultStatus
 
 class TypeChecker:
-    path = Path(util.tools_root, "node_modules", ".bin", "tsc").resolve()
+    path = Path(util.tools_root, "weaver", "tsc").resolve()
 
     def __init__(self, args):
         if not self.path.exists():
@@ -88,12 +89,19 @@ class TypeChecker:
             warn_file.unlink()
 
         if self.emit_declaration:
-            emit_opts = ["--removeComments", "--declaration", "--emitDeclarationOnly", "--declarationDir", Path(self.dts_directory, self.short_name(package))]
+            # Running tsc in a container means adjusting the path
+            decl_dir = util.containerized_path(Path(self.dts_directory, self.short_name(package)), self.directory)
+            emit_opts = ["--removeComments", "--declaration", "--emitDeclarationOnly", "--declarationDir", decl_dir]
         else:
             emit_opts = ["--noEmit"]
 
+        # Running tsc in a container means adjusting the path
         # TODO: pass all files or specify a tsconfig.json?
-        ts_files = [f.relative_to(package) for f in package.rglob("*.ts") if f.is_file()]
+        ts_files = [util.containerized_path(f, self.directory) for f in package.rglob("*.ts") if f.is_file()]
+
+        # Set the container's working directory by setting an environment variable
+        my_env = os.environ.copy()
+        my_env["TYPEWEAVER_TSC_WORKDIR"] = str(util.containerized_path(package, self.directory))
 
         # Set some compiler flags; these appear to be reasonable defaults for the entire dataset
         # But individual projects may need different flags
@@ -102,7 +110,7 @@ class TypeChecker:
         #   --target es6              // enable es6 features; some libraries use features not supported in the default es3 target
         #   --lib es2021,dom          // include default es2021 library definitions and browser DOM definitions
         args = [self.path, "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *emit_opts, *ts_files]
-        result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
+        result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
         if result.returncode == 0:
             # tsc prints errors and warnings to stdout
@@ -135,17 +143,17 @@ class TypeChecker:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            for i, f in enumerate(fs):
-                print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(packages[i])), end="", flush=True)
-                result = f.result()
-                print(result.message(), flush=True)
+            with tqdm(total=len(fs), desc=f"tsc {self.engine} {self.dataset}", unit="package", miniters=1) as t:
+                for f in fs:
+                    t.update()
+                    result = f.result()
 
-                if result.is_ok():
-                    num_ok += 1
-                elif result.is_skip():
-                    num_skip += 1
-                elif result.is_fail():
-                    num_fail += 1
+                    if result.is_ok():
+                        num_ok += 1
+                    elif result.is_skip():
+                        num_skip += 1
+                    elif result.is_fail():
+                        num_fail += 1
 
         return num_ok, num_fail, num_skip
 
@@ -162,13 +170,13 @@ class TypeChecker:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.err"))) == 0])
 
-        print(f"Type checking with: {self.path}")
-        print(f"Input directory: {self.in_directory}")
-        print(f"Output directory: {self.out_directory}")
-        print(f"Found {len(packages)} packages")
+        # print(f"Type checking with: {self.path}")
+        # print(f"Input directory: {self.in_directory}")
+        # print(f"Output directory: {self.out_directory}")
+        # print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.typecheck_dataset(packages)
 
-        print(f"Number of successes: {num_ok}")
-        print(f"Number of fails: {num_fail}")
-        print(f"Number of skips: {num_skip}")
+        # print(f"Number of successes: {num_ok}")
+        # print(f"Number of fails: {num_fail}")
+        # print(f"Number of skips: {num_skip}")

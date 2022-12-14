@@ -1,12 +1,13 @@
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import subprocess, time
 
 import util
 from util import Result, ResultStatus
 
 class InCoder:
-    path = Path(util.tools_root, "..", "InCoder", "py", "main.py").resolve()
+    path = Path(util.tools_root, "..", "InCoder", "run.sh").resolve()
 
     SLEEP_TIME = 5
 
@@ -110,26 +111,32 @@ class InCoder:
         to_skip = self.get_skip_set(packages)
 
         # Create a list of the packages to run
+        # Running InCoder in a container means adjusting the path
         packages_to_run = set(packages).difference(to_skip)
-        packages_list = sorted([str(p) for p in packages_to_run])
+        packages_list = sorted([str(util.containerized_path(p, self.directory)) for p in packages_to_run])
 
         # Only start InCoder if there are packages to run
         p = None
         if packages_list:
-            args = ["python", self.path.name, "--write-done-file", "--directories", *packages_list]
+            args = [self.path, "--write-done-file", "--directories", *packages_list]
             p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
-        for i, package in enumerate(packages):
-            print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
-            result = self.infer_on_package(package, to_skip)
-            print(result.message(), flush=True)
+        time.sleep(self.SLEEP_TIME)
+        if p and p.poll():
+            print("Error! InCoder process failed!")
+            exit(2)
 
-            if result.is_ok():
-                num_ok += 1
-            elif result.is_skip():
-                num_skip += 1
-            elif result.is_fail():
-                num_fail += 1
+        with tqdm(total=len(packages), desc=f"InCoder {self.dataset}", unit="package", miniters=1) as t:
+            for package in packages:
+                t.update()
+                result = self.infer_on_package(package, to_skip)
+
+                if result.is_ok():
+                    num_ok += 1
+                elif result.is_skip():
+                    num_skip += 1
+                elif result.is_fail():
+                    num_fail += 1
 
         if p:
             # If we reach this point, either InCoder has finished processing everything,
@@ -151,13 +158,13 @@ class InCoder:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        print(f"Inferring types with InCoder: {self.path}")
-        print(f"Input directory: {self.in_directory}")
-        print(f"Output directory: {self.out_directory}")
-        print(f"Found {len(packages)} packages")
+        # print(f"Inferring types with InCoder: {self.path}")
+        # print(f"Input directory: {self.in_directory}")
+        # print(f"Output directory: {self.out_directory}")
+        # print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
 
-        print(f"Number of successes: {num_ok}")
-        print(f"Number of fails: {num_fail}")
-        print(f"Number of skips: {num_skip}")
+        # print(f"Number of successes: {num_ok}")
+        # print(f"Number of fails: {num_fail}")
+        # print(f"Number of skips: {num_skip}")

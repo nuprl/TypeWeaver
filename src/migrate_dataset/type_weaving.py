@@ -1,13 +1,14 @@
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import subprocess
 
 import util
 from util import Result, ResultStatus
 
 class TypeWeaver:
-    path = Path(util.tools_root, "type_weaver", "index.js").resolve()
+    path = Path(util.tools_root, "weaver", "run.sh").resolve()
 
     def __init__(self, args):
         if not self.path.exists():
@@ -89,8 +90,12 @@ class TypeWeaver:
             if warn_file.exists():
                 warn_file.unlink()
 
+            # Running type_weaver in a container means adjusting the paths in the subprocess
+            c_csv_file = util.containerized_path(csv_file, self.directory)
+            c_js_file = util.containerized_path(js_file, self.directory)
+
             # Run type_weaver on the file
-            args = ["node", self.path.name, "--format", self.engine, "--types", csv_file, js_file]
+            args = [self.path, "--format", self.engine, "--types", c_csv_file, c_js_file]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output
@@ -133,17 +138,17 @@ class TypeWeaver:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            for i, f in enumerate(fs):
-                print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(packages[i])), end="", flush=True)
-                result = f.result()
-                print(result.message(), flush=True)
+            with tqdm(total=len(fs), desc=f"Weaving {self.engine} {self.dataset}", unit="package", miniters=1) as t:
+                for f in fs:
+                    t.update()
+                    result = f.result()
 
-                if result.is_ok():
-                    num_ok += 1
-                elif result.is_skip():
-                    num_skip += 1
-                elif result.is_fail():
-                    num_fail += 1
+                    if result.is_ok():
+                        num_ok += 1
+                    elif result.is_skip():
+                        num_skip += 1
+                    elif result.is_fail():
+                        num_fail += 1
 
         return num_ok, num_fail, num_skip
 
@@ -173,14 +178,14 @@ class TypeWeaver:
                     for package, prediction in zip(packages, predictions)
                     if files_with_ext(package, "js") == files_with_ext(prediction, "csv")]
 
-        print(f"Type weaving with: {self.path}")
-        print(f"Input directory (JS): {self.js_directory}")
-        print(f"Input directory (CSV): {self.csv_directory}")
-        print(f"Output directory: {self.out_directory}")
-        print(f"Found {len(packages)} packages")
+        # print(f"Type weaving with: {self.path}")
+        # print(f"Input directory (JS): {self.js_directory}")
+        # print(f"Input directory (CSV): {self.csv_directory}")
+        # print(f"Output directory: {self.out_directory}")
+        # print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.weave_dataset(packages)
 
-        print(f"Number of successes: {num_ok}")
-        print(f"Number of fails: {num_fail}")
-        print(f"Number of skips: {num_skip}")
+        # print(f"Number of successes: {num_ok}")
+        # print(f"Number of fails: {num_fail}")
+        # print(f"Number of skips: {num_skip}")

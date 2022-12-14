@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# wrapper that uses the typeweaver-weaver container to execute tsc
+
+# override the working directory with an environment variable
+: ${TYPEWEAVER_TSC_WORKDIR:=/code}
+
+# use podman by default
+# override by calling script with `DOCKER=docker ./run.sh`
+: ${DOCKER:=podman}
+
+$DOCKER run --rm \
+    --volume $(pwd)/../../data:/data:rw \
+    --entrypoint tsc \
+    --workdir $TYPEWEAVER_TSC_WORKDIR \
+    typeweaver-weaver "$@"

@@ -7,6 +7,7 @@ import DeepTyper from "./deeptyper";
 import LambdaNet from "./lambdanet";
 
 const yargsBuilder = yargs(hideBin(process.argv))
+    .usage("Usage: $0 /path/to/file.js --format {DeepTyper,LambdaNet}")
     .option("format", {
         alias: "f",
         demandOption: true,

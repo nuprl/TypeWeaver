@@ -1,42 +1,21 @@
 # This script parses the results and error output to produce summaries:
 #   - Overall summary: did a package type check?
-#       - dataset
-#       - package name
-#       - DeepTyper type checks?
-#       - LambdaNet type checks?
-#       - InCoder type checks?
+#       dataset, package, DeepTyper type checks, LambdaNet type checks, InCoder type checks
 #   - A summary for each system
-#       - dataset
-#       - package
-#       - filename
-#       - number of errors in that file
+#       dataset, package, filename, num errors in that file
 #   - Accuracy of type annotations, compared to ground truth type definitions
-#       - system
-#       - dataset
-#       - package
-#       - number of function signatures compared
-#       - number of correct annotations
-#       - number of inferred any annotations
-#       - number of non-any annotations checked
-#       - number of any ground truth annotations skipped
-#  - Lines of code, computed with cloc
-#       - dataset
-#       - package
-#       - filename
-#       - lines of code
-# - Error codes per file, for each system
-#       - dataset
-#       - package
-#       - filename
-#       - error code
-#       - count
+#       system, dataset, package, num sigs compared,
+#       num correct annotations, num inferred any annotations,
+#       num of non-any annotations checked, num of any ground truth annotations skipped
+#   - Lines of code, computed with cloc
+#       dataset, package, filename, lines of code
+#   - Error codes per file, for each system
+#       dataset, package, filename, error code, count
 
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
-import argparse, json, re, subprocess
-
-import util
+import argparse, json, os, re, subprocess
 
 # Regex for matching function declarations
 #   function <name>(<params>): <return type>
@@ -53,20 +32,34 @@ SYSTEMS = {
     "InCoder": "ic"
 }
 
+CLOC = Path(Path(__file__).parent, "weaver", "cloc").resolve()
+
+def check_exists(path):
+    if not Path(path).exists():
+        print(f"error: directory does not exist: {path}")
+        exit(2)
+
 def parse_args():
+    cpu_count = os.cpu_count();
+
     parser = argparse.ArgumentParser(description="Summarizes results")
     parser.add_argument(
         "--data",
         required=True,
         help="data directory that contains dataset output and notes")
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=cpu_count,
+        help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
     args = parser.parse_args()
-    util.check_exists(args.data)
+    check_exists(args.data)
 
     original = Path(args.data, "original")
-    util.check_exists(original)
-    notes = Path(args.data, "notes")
-    util.check_exists(notes)
+    check_exists(original)
+    csv = Path(args.data, "csv")
+    csv.mkdir(parents=True, exist_ok=True)
 
     return args
 
@@ -82,7 +75,7 @@ def did_package_typecheck(data_dir, dataset, package, system):
         return "NA"
 
 def typecheck_summary(data_dir):
-    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
+    summary_csv = Path(data_dir, "csv", "typecheck_summary.csv")
 
     print("Generating summary of packages that typecheck...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
@@ -131,7 +124,7 @@ def errors_per_file_summary(data_dir):
 
     for s in SYSTEMS.keys():
         print(f"  {s}...")
-        output_csv = Path(data_dir, "notes", "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
+        output_csv = Path(data_dir, "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Number of errors"\n')
 
@@ -243,7 +236,7 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package, debug =
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
 def compute_accuracy(data_dir, debug = False):
-    accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
+    accuracy_csv = Path(data_dir, "csv", "accuracy_summary.csv")
 
     print("Computing accuracy per package, for each system and dataset...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
@@ -266,13 +259,17 @@ def compute_accuracy(data_dir, debug = False):
                     file.write(res)
                     file.write("\n")
 
-def get_loc_for_package(dataset, package):
+def get_loc_for_package(data_dir, dataset, package):
     dataset_name = dataset.parts[-1]
     package_name = package.parts[-1]
     res = []
 
-    args = ["cloc", "--include-ext=js", "--json", "--by-file", "--skip-uniqueness", "."]
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
+    # Set the container's working directory by setting an environment variable
+    my_env = os.environ.copy()
+    my_env["TYPEWEAVER_CLOC_WORKDIR"] = Path("/data", package.relative_to(data_dir.parent))
+
+    args = [CLOC, "--include-ext=js", "--json", "--by-file", "--skip-uniqueness", "."]
+    result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=CLOC.parent)
     if len(result.stdout) > 0:
         data = json.loads(result.stdout)
         if data:
@@ -285,16 +282,16 @@ def get_loc_for_package(dataset, package):
                 res.append(f"{dataset_name},{package_name},{filename},{loc}")
     return res
 
-def get_loc(data_dir):
-    file_loc_csv = Path(data_dir, "notes", "csv", "file_loc.csv")
+def get_loc(data_dir, workers):
+    file_loc_csv = Path(data_dir, "csv", "file_loc.csv")
 
     print("Calculating LOC for each file in each package...")
     datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
 
     with open(file_loc_csv, "w") as file:
         file.write('Dataset,Package,File,"Lines of code"\n')
-        with futures.ProcessPoolExecutor() as executor:
-            fs = [executor.submit(get_loc_for_package, d, p)
+        with futures.ProcessPoolExecutor(max_workers=workers) as executor:
+            fs = [executor.submit(get_loc_for_package, data_dir, d, p)
                   for d in sorted(datasets)
                   for p in sorted(d.iterdir())]
             for f in fs:
@@ -335,7 +332,7 @@ def count_error_codes(data_dir):
 
     for s in SYSTEMS.keys():
         print(f"  {s}...")
-        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
+        output_csv = Path(data_dir, "csv", f"error_codes.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Error code",Count\n')
 
@@ -358,7 +355,7 @@ def main():
     errors_per_file_summary(data_dir)
     compute_accuracy(data_dir)
     # Don't need to run this every time, it computes on the original dataset and is slow!
-    # get_loc(data_dir)
+    get_loc(data_dir, args.workers)
     count_error_codes(data_dir)
 
 if __name__ == "__main__":

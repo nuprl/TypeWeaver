@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# wrapper that uses the typeweaver-weaver container to execute cloc
+
+# override the working directory with an environment variable
+: ${TYPEWEAVER_CLOC_WORKDIR:=/code}
+
+# use podman by default
+# override by calling script with `DOCKER=docker ./run.sh`
+: ${DOCKER:=podman}
+
+$DOCKER run --rm \
+    --volume $(pwd)/../../data:/data:rw \
+    --entrypoint cloc \
+    --workdir $TYPEWEAVER_CLOC_WORKDIR \
+    typeweaver-weaver "$@"

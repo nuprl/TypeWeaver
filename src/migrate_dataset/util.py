@@ -3,6 +3,9 @@ from pathlib import Path
 
 tools_root = Path(Path(__file__).parent, "..").resolve()
 
+def containerized_path(path, directory):
+    return Path("/data", path.relative_to(directory.parent))
+
 class ResultStatus(Enum):
     OK = 0
     FAIL = 1

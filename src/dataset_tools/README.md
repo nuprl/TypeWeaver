@@ -1,6 +1,9 @@
-# tools
+# dataset_tools
 
-A collection of scripts and tools.
+A collection of scripts and tools for building datasets.
+
+These are ad-hoc scripts written to automate tasks, and have not been tested for
+reusability. Nevertheless, they may still be helpful.
 
 * `check_dataset_in_definitely_typed.py`: checks a JavaScript dataset against
   the DefinitelyTyped repository, to determine if the package and its
@@ -15,20 +18,12 @@ A collection of scripts and tools.
 * `install_dependency_type_defs.py`: takes a JavaScript dataset and installs
   type definitions for each package's dependencies
 
-* `run_migration_pipeline/main.py`: runs the evaluation pipeline (inference,
-  type weaving, and type checking) on a dataset
-
 * `save_ground_truth_typings.py`: given a JavaScript dataset, copies the `.d.ts`
   type definitions from the provided DefinitelyTyped directory; if no type
   definitions exist, checks the package to see if type definitions were bundled
 
-* `summarize_results.py`: generates CSV files summarizing the results
-
 * `transform_require_to_import.py`: transforms a JavaScript dataset from
   CommonJS modules to ECMAScript 6 modules
-
-* `type_weaver/index.ts`: weaves an unannotated JavaScript file with a CSV file
-  of type predictions, to produce a type annotated TypeScript file
 
 `util.py` contains some common utility functions.
 
@@ -36,6 +31,8 @@ A collection of scripts and tools.
 
 * Python 3.6.15
 * Node 16.15.0
+* cloc
+* git
 
 Install NPM dependencies:
 
