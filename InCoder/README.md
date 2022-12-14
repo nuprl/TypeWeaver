@@ -1,42 +1,27 @@
-# InCoder
+# Containerized InCoder
 
-The notebook `py/playground.ipynb` shows an example of loading the model and
-running inference. Note that `importlib` is used to reload the `TypeInference`
-class, and is not needed when running type inference from a script.
+To build:
 
-The script `py/main.py` can also be run as a standalone script:
+    make build
 
-    cd py
-    python main.py --files example.js
+To run InCoder:
 
-This will run inference on `example.js`, and write the result to `example.ts`.
+    ./run.sh --directories /data/playground/original/demo/example-program/
 
-To minimize the startup overhead, multiple files or directories can be passed:
+Alternatively:
 
-    cd py
-    python main.py --files a.js b.js
-    python main.py --directories dir1
-    python main.py --directories dir1 dir2
+    make shell      # attach a shell to the container
+    python3 main.py --directories /data/playground/original/demo/example-program/
+    exit            # exit the container
 
-In each case, the model will be loaded only once per invocation.
+The container mounts the artifact directory `../data` to `/data` within the
+container filesystem.
 
-## Dependencies
+`run.sh` _must_ be executed from within this directory.
 
-* Rust 1.64.0
-* Python
-* The following Python packages: `torch`, `transformers`
+## InCoder interface
 
-## Setup
+InCoder takes a _path to a JavaScript project_ as a _command-line argument_,
+and outputs TypeScript in the same directory.
 
-After installing dependencies, compile the Rust code:
-
-    cd rs
-    cargo build
-
-## Downloading the model
-
-The 6B model is 12.4 GB and needs to be downloaded for the first time. To warm
-the cache, you can run:
-
-    cd py
-    python -c "import model; m = model.init_model('facebook/incoder-6B')"
+InCoder only predicts type annotations for function parameters.

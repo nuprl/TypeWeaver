@@ -22,19 +22,15 @@ out
 
 *.class
 *.log
-configs/*
 running-result/
 *.tgz
 /src/main/scala/learn_cats/
 
-test-trained/
+# unused scripts
+scripts/data_clean
+scripts/*.nb
+scripts/ts/*.js
 
-node_modules/
-package.json
-package-lock.json
-
-.vscode
-.metals
-.bloop
-project/metals.sbt
-project/project
+results
+images
+node_modules

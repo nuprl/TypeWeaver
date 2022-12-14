@@ -1,55 +1,40 @@
 FROM openjdk:11
-#FROM ubuntu:latest
 
-WORKDIR /usr/src/lambdanet
+# set up dependencies
+RUN apt-get update -yq && apt-get install -yq \
+        build-essential \
+        openjdk-11-jre-headless \
+ && rm -rf /var/lib/apt/lists/*
 
-# instsll typescript dependencies
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
-RUN npm install -g typescript@3.8.2 cloc
-RUN npm i fs source-map-support yargs@13.3.2 typescript@3.8.2
-RUN npm i @types/node @types/source-map-support @types/yargs
+# set up nodejs and typescript
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+ && apt-get install -yq nodejs \
+ && npm install -g \
+        typescript@"^4.7.3"
 
+# copy package.json and install node modules
+WORKDIR /code/scripts/ts
+COPY src/scripts/ts/*.json .
+RUN npm install
 
-# install scala dependencies
-RUN apt-get install -y zip unzip
+WORKDIR /code
 
-RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
-RUN curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add
-RUN apt-get update
-RUN apt-get install sbt
+# set up scala and sbt
+RUN curl -sLO "https://downloads.lightbend.com/scala/2.12.10/scala-2.12.10.deb" \
+ && dpkg -i scala-2.12.10.deb \
+ && rm -rf scala-2.12.10.deb \
+ && curl -sLO "https://github.com/sbt/sbt/releases/download/v1.3.13/sbt-1.3.13.tgz" \
+ && mkdir -p /opt \
+ && tar xzf sbt-1.3.13.tgz -C /opt \
+ && rm -rf sbt-1.3.13.tgz
+ENV PATH="${PATH}:/opt/sbt/bin"
 
+COPY src /code
 
-# Prepare sbt (warm cache)
-WORKDIR /usr/src/sbt-temp
+# compile typescript
+RUN (cd scripts/ts && tsc)
 
-# Env variables
-ARG SCALA_VERSION
-ENV SCALA_VERSION ${SCALA_VERSION:-2.12.10}
-ARG SBT_VERSION
-ENV SBT_VERSION ${SBT_VERSION:-1.3.13}
-
-RUN \
-  sbt sbtVersion && \
-  mkdir -p project && \
-  echo "scalaVersion := \"${SCALA_VERSION}\"" > build.sbt && \
-  echo "sbt.version=${SBT_VERSION}" > project/build.properties && \
-  echo "case object Temp" > Temp.scala && \
-  sbt compile && \
-  rm -r project && rm build.sbt && rm Temp.scala && rm -r target
-
-
-WORKDIR /usr/src/lambdanet
-
-# Copy all files
-COPY . .
-
-# Compile TS scripts
-WORKDIR scripts/ts
-RUN tsc || echo "tsc errors encountered."
-WORKDIR /usr/src/lambdanet
-
-# Compile Scala files
+# compile lambdanet
 RUN sbt "runMain lambdanet.JavaAPI"
 
-CMD ["/bin/sh"]
+ENTRYPOINT ["sbt", "runMain lambdanet.TypeInferenceService"]
