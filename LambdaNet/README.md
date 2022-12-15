@@ -6,12 +6,12 @@ To build:
 
 To run LambdaNet:
 
-    echo "/data/playground/original/demo/example-program/" | ./run.sh
+    echo "/data/path/to/project" | ./run.sh
 
 Alternatively:
 
     make shell      # attach a shell to the container
-    echo "/data/playground/original/demo/example-program/main.js" \
+    echo "/data/path/to/project" \
         | sbt "runMain lambdanet.TypeInferenceService"
     exit            # exit the container
 
@@ -33,3 +33,24 @@ There are 5 predictions in total, separated by commas.
 
 LambdaNet is aware of which identifiers are declarations, and does not produce
 predictions for variable uses.
+
+## Dependencies
+
+We recommend using the provided Dockerfile. If this is not an option, you can
+manually set up the dependencies:
+
+* Node.js 18
+* TypeScript 4.9.4
+* OpenJDK 11
+* Scala 2.12.10
+* sbt 1.3.13
+
+To install the Node packages and compile the TypeScript source:
+
+    cd src/scripts/ts
+    npm install
+    tsc
+
+To cache sbt and compile the Scala source:
+
+    sbt "runMain lambdanet.JavaAPI"

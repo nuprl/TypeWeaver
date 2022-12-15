@@ -29,7 +29,6 @@ The Makefile has the following targets:
 ### No GPU
 
 Setting this variable will skip the InCoder experiments, which require a GPU.
-Instead, the InCoder results from the paper will be copied over.
 
     make NOGPU=true full
 

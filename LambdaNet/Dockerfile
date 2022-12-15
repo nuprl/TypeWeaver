@@ -10,7 +10,7 @@ RUN apt-get update -yq && apt-get install -yq \
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
  && apt-get install -yq nodejs \
  && npm install -g \
-        typescript@"^4.7.3"
+        typescript@"4.9.4"
 
 # copy package.json and install node modules
 WORKDIR /code/scripts/ts
