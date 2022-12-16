@@ -7,15 +7,15 @@
 #       system, dataset, package, num sigs compared,
 #       num correct annotations, num inferred any annotations,
 #       num of non-any annotations checked, num of any ground truth annotations skipped
-#   - Lines of code, computed with cloc
-#       dataset, package, filename, lines of code
 #   - Error codes per file, for each system
 #       dataset, package, filename, error code, count
 
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
-import argparse, json, os, re, subprocess
+import argparse, json, os, re, shutil, subprocess
+
+from dataset_tools import util
 
 # Regex for matching function declarations
 #   function <name>(<params>): <return type>
@@ -32,13 +32,6 @@ SYSTEMS = {
     "InCoder": "ic"
 }
 
-CLOC = Path(Path(__file__).parent, "weaver", "cloc").resolve()
-
-def check_exists(path):
-    if not Path(path).exists():
-        print(f"error: directory does not exist: {path}")
-        exit(2)
-
 def parse_args():
     cpu_count = os.cpu_count();
 
@@ -54,14 +47,21 @@ def parse_args():
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
     args = parser.parse_args()
-    check_exists(args.data)
+    util.check_exists(args.data)
 
     original = Path(args.data, "original")
-    check_exists(original)
+    util.check_exists(original)
     csv = Path(args.data, "notes", "csv")
     csv.mkdir(parents=True, exist_ok=True)
 
     return args
+
+def copy_loc(data_dir):
+    # Copy dataset loc from notes
+    original_loc = Path(data_dir, "notes", "original", "file_loc.csv")
+    target_loc = Path(data_dir, "notes", "csv", "file_loc.csv")
+
+    shutil.copyfile(original_loc, target_loc)
 
 def did_package_typecheck(data_dir, dataset, package, system):
     out_file = Path(data_dir, f"{system}-out", dataset, "baseline-checked", f"{package}.out")
@@ -259,47 +259,6 @@ def compute_accuracy(data_dir, debug = False):
                     file.write(res)
                     file.write("\n")
 
-def get_loc_for_package(data_dir, dataset, package):
-    dataset_name = dataset.parts[-1]
-    package_name = package.parts[-1]
-    res = []
-
-    # Set the container's working directory by setting an environment variable
-    my_env = os.environ.copy()
-    my_env["TYPEWEAVER_CLOC_WORKDIR"] = Path("/data", package.relative_to(data_dir))
-
-    args = [CLOC, "--include-ext=js", "--json", "--by-file", "--skip-uniqueness", "."]
-    result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=CLOC.parent)
-    if len(result.stdout) > 0:
-        data = json.loads(result.stdout)
-        if data:
-            for f in sorted(data.keys()):
-                if f == "header" or f == "SUM":
-                    continue
-                loc = data[f]["code"]
-                # change to ".ts" extension, remove "./" prefix
-                filename = str(Path(f).with_suffix(".ts"))
-                res.append(f"{dataset_name},{package_name},{filename},{loc}")
-    return res
-
-def get_loc(data_dir, workers):
-    file_loc_csv = Path(data_dir, "notes", "csv", "file_loc.csv")
-
-    print("Calculating LOC for each file in each package...")
-    datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
-
-    with open(file_loc_csv, "w") as file:
-        file.write('Dataset,Package,File,"Lines of code"\n')
-        with futures.ProcessPoolExecutor(max_workers=workers) as executor:
-            fs = [executor.submit(get_loc_for_package, data_dir, d, p)
-                  for d in sorted(datasets)
-                  for p in sorted(d.iterdir())]
-            for f in fs:
-                result = f.result()
-                for r in result:
-                    file.write(r)
-                    file.write("\n")
-
 def error_codes_for_package(data_dir, dataset, ts_dataset, package):
     package_dir = Path(ts_dataset, package)
     err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
@@ -351,11 +310,11 @@ def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
 
+    copy_loc(data_dir)
+
     typecheck_summary(data_dir)
     errors_per_file_summary(data_dir)
     compute_accuracy(data_dir)
-    # Don't need to run this every time, it computes on the original dataset and is slow!
-    get_loc(data_dir, args.workers)
     count_error_codes(data_dir)
 
 if __name__ == "__main__":
