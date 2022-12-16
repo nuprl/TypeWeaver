@@ -58,7 +58,7 @@ def parse_args():
 
     original = Path(args.data, "original")
     check_exists(original)
-    csv = Path(args.data, "csv")
+    csv = Path(args.data, "notes", "csv")
     csv.mkdir(parents=True, exist_ok=True)
 
     return args
@@ -75,7 +75,7 @@ def did_package_typecheck(data_dir, dataset, package, system):
         return "NA"
 
 def typecheck_summary(data_dir):
-    summary_csv = Path(data_dir, "csv", "typecheck_summary.csv")
+    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
 
     print("Generating summary of packages that typecheck...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
@@ -124,7 +124,7 @@ def errors_per_file_summary(data_dir):
 
     for s in SYSTEMS.keys():
         print(f"  {s}...")
-        output_csv = Path(data_dir, "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
+        output_csv = Path(data_dir, "notes", "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Number of errors"\n')
 
@@ -236,7 +236,7 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package, debug =
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
 def compute_accuracy(data_dir, debug = False):
-    accuracy_csv = Path(data_dir, "csv", "accuracy_summary.csv")
+    accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
 
     print("Computing accuracy per package, for each system and dataset...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
@@ -266,7 +266,7 @@ def get_loc_for_package(data_dir, dataset, package):
 
     # Set the container's working directory by setting an environment variable
     my_env = os.environ.copy()
-    my_env["TYPEWEAVER_CLOC_WORKDIR"] = Path("/data", package.relative_to(data_dir.parent))
+    my_env["TYPEWEAVER_CLOC_WORKDIR"] = Path("/data", package.relative_to(data_dir))
 
     args = [CLOC, "--include-ext=js", "--json", "--by-file", "--skip-uniqueness", "."]
     result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=CLOC.parent)
@@ -283,7 +283,7 @@ def get_loc_for_package(data_dir, dataset, package):
     return res
 
 def get_loc(data_dir, workers):
-    file_loc_csv = Path(data_dir, "csv", "file_loc.csv")
+    file_loc_csv = Path(data_dir, "notes", "csv", "file_loc.csv")
 
     print("Calculating LOC for each file in each package...")
     datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
@@ -332,7 +332,7 @@ def count_error_codes(data_dir):
 
     for s in SYSTEMS.keys():
         print(f"  {s}...")
-        output_csv = Path(data_dir, "csv", f"error_codes.{SYSTEMS[s]}.csv")
+        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Error code",Count\n')
 

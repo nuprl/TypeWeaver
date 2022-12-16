@@ -29,8 +29,8 @@ reusability. Nevertheless, they may still be helpful.
 
 ## Dependencies
 
-* Python 3.6.15
-* Node 16.15.0
+* Python +3.6
+* Node +16
 * cloc
 * git
 
