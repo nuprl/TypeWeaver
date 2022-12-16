@@ -9,14 +9,12 @@ containing type predictions, and outputs a valid TypeScript file.
 
 ## Running
 
-    ./run.sh --format DeepTyper \
-        /data/playground/original/demo/example-program/main.js
+    ./run.sh /data/path/to/file.js --format DeepTyper
 
 Alternatively:
 
     make shell      # attach a shell to the container
-    node index.js --format DeepTyper \
-        /data/playground/original/demo/example-program/main.js
+    node index.js /data/path/to/file.js --format DeepTyper
     exit            # exit the container
 
 The container mounts the artifact directory `../data` to `/data` within the
@@ -29,14 +27,25 @@ container filesystem.
 By default, the CSV file is expected to be in the same directory as the
 JavaScript file.
 
-The CSV file can be provided explicitly:
+The CSV file path can be provided explicitly:
 
-    ./run.sh --format DeepTyper \
-        /data/playground/original/demo/example-program/main.js \
-        --types /data/playground/original/demo/example-program/main.csv
+    ./run.sh /data/path/to/file.js --format DeepTyper --types /data/path/to/file.csv
 
 ## Extra tools
 
 The `cjs-to-es6`, `cloc`, and `tsc` scripts expose the tools that were
 installed in the container. Similar to `run.sh`, they _must_ be executed from
 within this directory, and mount `../data` to `/data`.
+
+## Dependencies
+
+We recommend using the provided Dockerfile. If this is not an option, you can
+manually set up the dependencies:
+
+* Node.js 18.12.1
+
+To install the Node packages and compile the TypeScript source:
+
+    cd src
+    npm install
+    tsc

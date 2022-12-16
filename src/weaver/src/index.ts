@@ -46,11 +46,13 @@ const csvFilename: string = argv.types
     : path.join(jsPath.dir, jsPath.name + ".csv");
 
 if (!existsSync(jsFilename)) {
-    console.log("File does not exist: " + jsFilename);
     yargsBuilder.showHelp();
+    console.log("\nFile does not exist: " + jsFilename);
+    process.exit(2);
 } else if (!existsSync(csvFilename)) {
-    console.log("File does not exist: " + csvFilename);
     yargsBuilder.showHelp();
+    console.log("\nFile does not exist: " + csvFilename);
+    process.exit(2);
 }
 
 switch (argv.format) {
