@@ -13,24 +13,19 @@
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import argparse, json, os, re, shutil, subprocess
-
-from dataset_tools import util
-
-# Regex for matching function declarations
-#   function <name>(<params>): <return type>
-FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
-
-# Regex for matching error messages
-#   <filename.ts>(row,col): error <TScode>
-# negative lookahead so we don't match if file starts with .., but we want to match .
-ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
 
 SYSTEMS = {
     "DeepTyper": "dt",
     "LambdaNet": "ln",
     "InCoder": "ic"
 }
+
+def check_exists(path):
+    if not Path(path).exists():
+        print(f"error: directory does not exist: {path}")
+        exit(2)
 
 def parse_args():
     cpu_count = os.cpu_count();
@@ -41,25 +36,28 @@ def parse_args():
         required=True,
         help="data directory that contains dataset output and notes")
     parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="print extra output for debugging")
+    parser.add_argument(
         "--workers",
         type=int,
         default=cpu_count,
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
     args = parser.parse_args()
-    util.check_exists(args.data)
+    check_exists(args.data)
 
     original = Path(args.data, "original")
-    util.check_exists(original)
+    check_exists(original)
     csv = Path(args.data, "notes", "csv")
     csv.mkdir(parents=True, exist_ok=True)
 
     return args
 
-def copy_loc(data_dir):
-    # Copy dataset loc from notes
+def copy_loc(data_dir, csv_dir):
     original_loc = Path(data_dir, "notes", "original", "file_loc.csv")
-    target_loc = Path(data_dir, "notes", "csv", "file_loc.csv")
+    target_loc = Path(csv_dir, "file_loc.csv")
 
     shutil.copyfile(original_loc, target_loc)
 
@@ -74,25 +72,21 @@ def did_package_typecheck(data_dir, dataset, package, system):
     else:
         return "NA"
 
-def typecheck_summary(data_dir):
-    summary_csv = Path(data_dir, "notes", "csv", "typecheck_summary.csv")
-
-    print("Generating summary of packages that typecheck...")
-    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
-
+def typecheck_summary(data_dir, csv_dir):
+    summary_csv = Path(csv_dir, "typecheck_summary.csv")
     with open(summary_csv, "w") as file:
         system_headers = [f'"{s} type checks"' for s in SYSTEMS.keys()]
-        header = '"Dataset","Package",' + ",".join(system_headers)
+        header = '"Dataset","Package",' + ",".join(system_headers) + "\n"
         file.write(header)
-        file.write("\n")
 
-        for d in datasets:
-            packages = sorted([p.parts[-1] for p in Path(data_dir, "original", d).iterdir()])
-            for p in packages:
-                res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS.keys()]
-                entry = ",".join([d, p, *res])
-                file.write(entry)
-                file.write("\n")
+        datasets = [d for d in Path(data_dir, "original").iterdir()]
+        pairs = [(d.parts[-1], p.parts[-1])
+                 for d in sorted(datasets)
+                 for p in sorted(d.iterdir())]
+        for d, p in tqdm(pairs, desc="Type check summary", unit="package"):
+            res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS.keys()]
+            entry = ",".join([d, p, *res]) + "\n"
+            file.write(entry)
 
 def count_errors_in_file(err_file, src_file):
     count = 0
@@ -102,8 +96,9 @@ def count_errors_in_file(err_file, src_file):
                 count += 1
     return str(count)
 
-def errors_per_file_for_package(data_dir, dataset, ts_dataset, package):
+def errors_per_file_for_package(ts_dataset, package):
     package_dir = Path(ts_dataset, package)
+    dataset = ts_dataset.parts[-2]
     out_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.out").resolve()
     err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
     entries = []
@@ -118,26 +113,29 @@ def errors_per_file_for_package(data_dir, dataset, ts_dataset, package):
             entries.append(entry + count_errors_in_file(err_file, file))
     return entries
 
-def errors_per_file_summary(data_dir):
-    print("Counting errors per file, for each system and dataset...")
-    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
+def errors_per_file_summary(data_dir, csv_dir):
+    triples = []
+    for s in SYSTEMS.keys():
+        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
+        for d in datasets:
+            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline")
+            if not ts_dataset.exists():
+                continue
+            packages = sorted([p for p in ts_dataset.iterdir()])
+            for p in packages:
+                triples.append((s, ts_dataset, p.parts[-1]))
 
     for s in SYSTEMS.keys():
-        print(f"  {s}...")
-        output_csv = Path(data_dir, "notes", "csv", f"errors_per_file.{SYSTEMS[s]}.csv")
+        output_csv = Path(csv_dir, f"errors_per_file.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Number of errors"\n')
 
-            for d in datasets:
-                print(f"    {d}...")
-                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
-
-                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
-                for p in packages:
-                    entries = errors_per_file_for_package(data_dir, d, ts_dataset, p)
-                    for e in entries:
-                        file.write(e)
-                        file.write("\n")
+    for s, ts_dataset, p in tqdm(triples, desc="Error counts"):
+        output_csv = Path(csv_dir, f"errors_per_file.{SYSTEMS[s]}.csv")
+        with open(output_csv, "a") as file:
+            entries = errors_per_file_for_package(ts_dataset, p)
+            for e in entries:
+                file.write(e + "\n")
 
 def clean_type(t):
     t = re.sub("typeof", "", t)
@@ -158,6 +156,10 @@ def get_param_type(string):
         return res
 
 def read_function_signatures(package):
+    # Regex for matching function declarations
+    #   function <name>(<params>): <return type>
+    FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
+
     signatures = {}
     files = [f for f in package.rglob("*.d.ts")]
     for f in files:
@@ -187,7 +189,7 @@ def compare_annotations(inferred, truth):
             correct += 1
     return [correct, inferred_anys, total, truth_anys]
 
-def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package, debug = False):
+def compute_accuracy_for_package(data_dir, ts_dataset, package, debug = False):
     groundtruth_dir = Path(data_dir, "groundtruth", package)
     package_dir = Path(ts_dataset, package)
 
@@ -235,31 +237,31 @@ def compute_accuracy_for_package(data_dir, dataset, ts_dataset, package, debug =
 
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
-def compute_accuracy(data_dir, debug = False):
-    accuracy_csv = Path(data_dir, "notes", "csv", "accuracy_summary.csv")
+def compute_accuracy(data_dir, csv_dir, debug = False):
+    triples = []
+    for s in SYSTEMS.keys():
+        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
+        for d in datasets:
+            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline-typedefs")
+            if not ts_dataset.exists():
+                continue
+            packages = sorted([p for p in ts_dataset.iterdir()])
+            for p in packages:
+                triples.append((s, ts_dataset, p.parts[-1]))
 
-    print("Computing accuracy per package, for each system and dataset...")
-    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
-    ground_truth = Path(data_dir, "groundtruth")
-
+    accuracy_csv = Path(csv_dir, "accuracy_summary.csv")
     with open(accuracy_csv, "w") as file:
         file.write('"System","Dataset","Package","Number of function signatures compared","Number of correct annotations","Number of inferred anys","Number of annotations checked","Number of ground truth anys skipped"\n')
-        for s in SYSTEMS.keys():
-            print(f"  {s}...")
-            for d in datasets:
-                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline-typedefs")
-                if not ts_dataset.exists():
-                    continue
-                print(f"    {d}...")
+        for s, ts_dataset, p in tqdm(triples, desc="Accuracy"):
+            res = compute_accuracy_for_package(data_dir, ts_dataset, p, debug)
+            file.write(f"{s.lower()},{ts_dataset.parts[-2]},{p},{res}\n")
 
-                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
-                for p in packages:
-                    res = compute_accuracy_for_package(data_dir, d, ts_dataset, p, debug)
-                    file.write(f"{s.lower()},{d},{p},")
-                    file.write(res)
-                    file.write("\n")
+def error_codes_for_package(ts_dataset, package):
+    # Regex for matching error messages
+    #   <filename.ts>(row,col): error <TScode>
+    # negative lookahead so we don't match if file starts with .., but we want to match .
+    ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
 
-def error_codes_for_package(data_dir, dataset, ts_dataset, package):
     package_dir = Path(ts_dataset, package)
     err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
     entries = []
@@ -281,40 +283,45 @@ def error_codes_for_package(data_dir, dataset, ts_dataset, package):
 
     for filename, file_map in errors.items():
         for code, count in file_map.items():
-            entries.append(f"{dataset},{package},{filename},{code},{count}")
+            entries.append(f"{ts_dataset.parts[-2]},{package},{filename},{code},{count}")
 
     return entries
 
 def count_error_codes(data_dir):
-    print("Counting error codes per file, for each system and dataset...")
-    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
+    triples = []
+    for s in SYSTEMS.keys():
+        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
+        for d in datasets:
+            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline")
+            if not ts_dataset.exists():
+                continue
+            packages = sorted([p for p in ts_dataset.iterdir()])
+            for p in packages:
+                triples.append((s, ts_dataset, p.parts[-1]))
 
     for s in SYSTEMS.keys():
-        print(f"  {s}...")
         output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
         with open(output_csv, "w") as file:
             file.write('Dataset,Package,File,"Error code",Count\n')
 
-            for d in datasets:
-                print(f"    {d}...")
-                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
-
-                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
-                for p in packages:
-                    entries = error_codes_for_package(data_dir, d, ts_dataset, p)
-                    for e in entries:
-                        file.write(e)
-                        file.write("\n")
+    for s, ts_dataset, p in tqdm(triples, desc="Error codes"):
+        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
+        with open(output_csv, "a") as file:
+            entries = error_codes_for_package(ts_dataset, p)
+            for e in entries:
+                file.write(e + "\n")
 
 def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
+    csv_dir = Path(data_dir, "notes", "csv")
 
-    copy_loc(data_dir)
+    # Copy dataset loc from notes
+    copy_loc(data_dir, csv_dir)
 
-    typecheck_summary(data_dir)
-    errors_per_file_summary(data_dir)
-    compute_accuracy(data_dir)
+    typecheck_summary(data_dir, csv_dir)
+    errors_per_file_summary(data_dir, csv_dir)
+    compute_accuracy(data_dir, csv_dir, args.debug)
     count_error_codes(data_dir)
 
 if __name__ == "__main__":

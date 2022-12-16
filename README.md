@@ -10,6 +10,11 @@ _Do Machine Learning Models Produce TypeScript Types that Type Check?_
 - Software:
     - Linux
     - Python +3.6 and the `tqdm` package (`pip install tqdm`)
+    - Optional, for dataset construction:
+        - Node +16
+        - git
+        - cloc
+        - cjs-to-es6 (`npm install cjs-to-es6`)
     - [Podman](https://podman.io/) with the [NVIDIA container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#podman)
         - All other dependencies are managed with OCI images
         - Docker may be used instead of Podman, but has not been tested
