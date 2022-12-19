@@ -27,22 +27,46 @@ The Makefile has the following targets:
 
 - `build`: build the containers
 
-- `full`: run the full experiments
+- `build-nocontainers`: build the project, without containers
+
+- `all`: run everything
+
+- `predict-all`: run type prediction for all systems
+
+- `weave-all`: run type weaving for all systems
+
+- `typecheck-all`: run type checking for all systems
+
+- `predict`, `weave`, `typecheck`: run type prediction, type weaving, or type
+  checking, for the system specified by the `ENGINE` variable
+
+- `csv`: generate summary CSVs
 
 ## Makefile Variables
 
+### Engine
+
+When running `make predict`, `make weave`, or `make typecheck`, the `ENGINE`
+variable must be provided, e.g.:
+
+    make predict ENGINE=DeepTyper
+
+This will run type prediction for DeepTyper and no other system.
+
+`ENGINE` must be one of: `DeepTyper`, `LambdaNet`, or `InCoder`.
+
 ### No GPU
 
-Setting this variable will skip the InCoder experiments, which require a GPU.
+Setting this variable will skip the InCoder experiments, which require a GPU:
 
-    make NOGPU=true full
+    make NOGPU=true all
 
 ### Number of processors
 
-By default, `make full` will use all available processors on the machine.
+By default, `make all` will use all available processors on the machine.
 This can be configured:
 
-    make NPROC=8 full
+    make NPROC=8 all
 
 The other targets only use a single processor.
 

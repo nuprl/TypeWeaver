@@ -21,56 +21,77 @@ ifndef NOGPU
 endif
 	$(MAKE) build-nocontainers -C src/weaver
 
-# Run the full evaluation
-full:
-	@echo "### Type annotation prediction"
+all: predict-all weave-all typecheck-all csv
+
+predict-all:
+	@echo "### Type prediction"
 	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/original); do \
-			python3 src/migrate_dataset/main.py \
-				--directory data \
-				--dataset $$d \
-				--engine $$s \
-				--infer ; \
-		done ; \
+		$(MAKE) predict ENGINE=$$s ; \
 	done
 ifndef NOGPU
-	for d in $$(ls data/original); do \
+	@$(MAKE) predict ENGINE=InCoder
+endif
+
+predict:
+ifndef ENGINE
+	@echo "Undefined variable: ENGINE"
+	@exit 1
+else
+	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
 			--directory data \
 			--dataset $$d \
-			--engine InCoder \
+			--engine $(ENGINE) \
 			--infer ; \
 	done
 endif
-	@echo
+
+weave-all:
 	@echo "### Type weaving"
 	@for s in DeepTyper LambdaNet ; do \
-		for d in $$(ls data/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers $(NPROC) \
-				--directory data \
-				--dataset $$d \
-				--engine $$s \
-				--weave baseline ; \
-		done ; \
+		$(MAKE) weave ENGINE=$$s ; \
 	done
-	@echo
+
+weave:
+ifndef ENGINE
+	@echo "Undefined variable: ENGINE"
+	@exit 1
+else
+	@for d in $$(ls data/original); do \
+		python3 src/migrate_dataset/main.py \
+			--workers $(NPROC) \
+			--directory data \
+			--dataset $$d \
+			--engine $(ENGINE) \
+			--weave baseline ; \
+	done
+endif
+
+typecheck-all:
 	@echo "### Type checking"
 	@for s in DeepTyper LambdaNet InCoder ; do \
-		for d in $$(ls data/original); do \
-			python3 src/migrate_dataset/main.py \
-				--workers $(NPROC) \
-				--directory data \
-				--dataset $$d \
-				--engine $$s \
-				--emit-declaration \
-				--typecheck baseline ; \
-		done ; \
+		$(MAKE) typecheck ENGINE=$$s ; \
 	done
-	@echo
-	@echo "### Generating CSVs"
-	@python3 src/summarize_results.py \
-		--data data \
-		--workers $(NPROC)
 
-.PHONY: build build-nocontainers full
+typecheck:
+ifndef ENGINE
+	@echo "Undefined variable: ENGINE"
+	@exit 1
+else
+	@for d in $$(ls data/original); do \
+		python3 src/migrate_dataset/main.py \
+			--workers $(NPROC) \
+			--directory data \
+			--dataset $$d \
+			--engine $(ENGINE) \
+			--emit-declaration \
+			--typecheck baseline ; \
+	done
+endif
+
+csv:
+	@echo "### Generating CSVs"
+	@python3 src/summarize_results.py --data data
+
+.PHONY: build build-nocontainers
+.PHONY: all predict-all predict weave-all weave typecheck-all typecheck csv
