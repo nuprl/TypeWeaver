@@ -39,11 +39,6 @@ def parse_args():
         "--debug",
         action="store_true",
         help="print extra output for debugging")
-    parser.add_argument(
-        "--workers",
-        type=int,
-        default=cpu_count,
-        help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
     args = parser.parse_args()
     check_exists(args.data)
