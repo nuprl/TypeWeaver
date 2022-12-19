@@ -7,7 +7,7 @@ import util
 from util import Result, ResultStatus
 
 class InCoder:
-    path = Path(util.tools_root, "..", "InCoder", "run.sh").resolve()
+    path = Path(util.src_root, "..", "InCoder", "run.sh").resolve()
 
     SLEEP_TIME = 5
 

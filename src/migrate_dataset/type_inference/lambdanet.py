@@ -7,7 +7,7 @@ import util
 from util import Result, ResultStatus
 
 class LambdaNet:
-    path = Path(util.tools_root, "..", "LambdaNet", "run.sh").resolve()
+    path = Path(util.src_root, "..", "LambdaNet", "run.sh").resolve()
 
     SLEEP_TIME = 5
 

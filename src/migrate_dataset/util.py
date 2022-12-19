@@ -1,10 +1,10 @@
 from enum import Enum
 from pathlib import Path
 
-tools_root = Path(Path(__file__).parent, "..").resolve()
+src_root = Path(Path(__file__).parent, "..").resolve()
 
 def containerized_path(path, directory):
-    return Path("/data", path.relative_to(directory.parent))
+    return Path("/data", path.relative_to(directory))
 
 class ResultStatus(Enum):
     OK = 0

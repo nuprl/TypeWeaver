@@ -8,7 +8,7 @@ import util
 from util import Result, ResultStatus
 
 class TypeWeaver:
-    path = Path(util.tools_root, "weaver", "run.sh").resolve()
+    path = Path(util.src_root, "weaver", "run.sh").resolve()
 
     def __init__(self, args):
         if not self.path.exists():
