@@ -8,9 +8,13 @@ import util
 from util import Result, ResultStatus
 
 class TypeChecker:
-    path = Path(util.src_root, "weaver", "tsc").resolve()
-
     def __init__(self, args):
+        self.containers = not args.no_containers
+        if self.containers:
+            self.path = Path(util.src_root, "weaver", "tsc").resolve()
+        else:
+            self.path = Path(util.src_root, "weaver", "src", "node_modules", ".bin", "tsc").resolve()
+
         if not self.path.exists():
             print(f"error: could not find tsc: {self.path}")
             exit(1)
@@ -90,18 +94,18 @@ class TypeChecker:
 
         if self.emit_declaration:
             # Running tsc in a container means adjusting the path
-            decl_dir = util.containerized_path(Path(self.dts_directory, self.short_name(package)), self.directory)
+            if self.containers:
+                decl_dir = util.containerized_path(Path(self.dts_directory, self.short_name(package)), self.directory)
+            else:
+                decl_dir = Path(self.dts_directory, self.short_name(package))
             emit_opts = ["--removeComments", "--declaration", "--emitDeclarationOnly", "--declarationDir", decl_dir]
         else:
             emit_opts = ["--noEmit"]
 
-        # Running tsc in a container means adjusting the path
-        # TODO: pass all files or specify a tsconfig.json?
-        ts_files = [util.containerized_path(f, self.directory) for f in package.rglob("*.ts") if f.is_file()]
-
-        # Set the container's working directory by setting an environment variable
-        my_env = os.environ.copy()
-        my_env["TYPEWEAVER_TSC_WORKDIR"] = str(util.containerized_path(package, self.directory))
+        if self.containers:
+            ts_files = [util.containerized_path(f, self.directory) for f in package.rglob("*.ts") if f.is_file()]
+        else:
+            ts_files = [f.relative_to(package) for f in package.rglob("*.ts") if f.is_file()]
 
         # Set some compiler flags; these appear to be reasonable defaults for the entire dataset
         # But individual projects may need different flags
@@ -110,7 +114,13 @@ class TypeChecker:
         #   --target es6              // enable es6 features; some libraries use features not supported in the default es3 target
         #   --lib es2021,dom          // include default es2021 library definitions and browser DOM definitions
         args = [self.path, "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *emit_opts, *ts_files]
-        result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
+
+        if self.containers:
+            my_env = os.environ.copy()
+            my_env["TYPEWEAVER_TSC_WORKDIR"] = str(util.containerized_path(package, self.directory))
+            result = subprocess.run(args, env=my_env, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
+        else:
+            result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
 
         if result.returncode == 0:
             # tsc prints errors and warnings to stdout

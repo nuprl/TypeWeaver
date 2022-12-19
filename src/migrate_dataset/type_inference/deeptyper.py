@@ -7,9 +7,14 @@ import util
 from util import Result, ResultStatus
 
 class DeepTyper:
-    path = Path(util.src_root, "..", "DeepTyper", "run.sh").resolve()
 
     def __init__(self, args):
+        self.containers = not args.no_containers
+        if self.containers:
+            self.path = Path(util.src_root, "..", "DeepTyper", "run.sh").resolve()
+        else:
+            self.path = Path(util.src_root, "..", "DeepTyper", "src", "pretrained", "readout.py").resolve()
+
         if not self.path.exists():
             print(f"error: could not find DeepTyper: {self.path}")
             exit(1)
@@ -76,9 +81,11 @@ class DeepTyper:
             if err_file.exists():
                 err_file.unlink()
 
-            # Running DeepTyper in a container means adjusting the path in the subprocess
-            cfile = util.containerized_path(file, self.directory)
-            args = [self.path, cfile]
+            if self.containers:
+                args = [self.path, util.containerized_path(file, self.directory)]
+            else:
+                args = ["python3", self.path, file]
+
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output

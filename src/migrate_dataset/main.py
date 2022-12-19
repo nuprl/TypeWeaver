@@ -35,6 +35,11 @@ def parse_args():
         "--emit-declaration",
         help="only for type checking; emit .d.ts declaration files",
         action="store_true")
+    parser.add_argument(
+        "--no-containers",
+        default=False,
+        action="store_true",
+        help="run tools without using containers")
 
     group = parser.add_argument_group(
         title="pipeline step",
