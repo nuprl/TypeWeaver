@@ -29,7 +29,7 @@ reusability. Nevertheless, they may still be helpful.
 
 ## Dependencies
 
-* Python +3.6
+* Python +3.6 with tqdm
 * Node +16
 * cloc
 * git

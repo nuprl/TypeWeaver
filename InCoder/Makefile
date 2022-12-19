@@ -5,6 +5,10 @@ DOCKER    := podman
 build: Dockerfile
 	$(DOCKER) build -t typeweaver-incoder .
 
+build-nocontainers:
+	cd src/rs && cargo build
+	cd src/py && python3 cache_model.py
+
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
 		--security-opt=label=disable \
@@ -13,4 +17,4 @@ shell: build
 		--entrypoint /bin/bash \
 		typeweaver-incoder
 
-.PHONY: build shell
+.PHONY: build build-nocontainers shell

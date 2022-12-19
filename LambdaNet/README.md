@@ -45,12 +45,9 @@ manually set up the dependencies:
 * Scala 2.12.10
 * sbt 1.3.13
 
-To install the Node packages and compile the TypeScript source:
+Then run:
 
-    cd src/scripts/ts
-    npm install
-    tsc
+    make build-nocontainers
 
-To cache sbt and compile the Scala source:
-
-    sbt "runMain lambdanet.JavaAPI"
+This will install Node packages, compile the TypeScript source, download sbt,
+and compile the Scala source.

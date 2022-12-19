@@ -44,8 +44,8 @@ manually set up the dependencies:
 
 * Node.js 18.12.1
 
-To install the Node packages and compile the TypeScript source:
+Then run:
 
-    cd src
-    npm install
-    tsc
+    make build-nocontainers
+
+This will install Node packages and compile the TypeScript source.

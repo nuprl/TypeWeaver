@@ -5,10 +5,12 @@ DOCKER    := podman
 build: Dockerfile
 	$(DOCKER) build -t typeweaver-deeptyper .
 
+build-nocontainers:
+
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
 		--volume $(PWD)/../data:/data:rw \
 		--entrypoint /bin/bash \
 		typeweaver-deeptyper
 
-.PHONY: build shell
+.PHONY: build build-nocontainers shell

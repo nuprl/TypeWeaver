@@ -16,8 +16,6 @@ fn main() {
 
     let cm: Lrc<SourceMap> = Default::default();
 
-    let input_len = input.len();
-
     let fm = cm.new_source_file(FileName::Anon, input);
 
     let string_input = StringInput::from(&*fm);

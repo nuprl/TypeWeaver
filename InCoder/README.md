@@ -36,12 +36,9 @@ manually set up the dependencies:
     * The following Python packages:
       `accelerate`, `huggingface_hub`, `torch`, `transformers`
 
-To install the Rust crates and compile the Rust source:
+Then run:
 
-    cd src/rs
-    cargo build
+    make build-nocontainers
 
-The model is 14 GB and is downloaded on the first run. To download and cache:
-
-    cd src/py
-    python3 cache_model.py
+This will install Rust crates, compile the Rust source, and download and cache
+the InCoder model (about 14 GB).

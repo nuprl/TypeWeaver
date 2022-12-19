@@ -3,7 +3,7 @@ SHELL     := /bin/bash
 DOCKER    := podman
 NPROC     := $(shell nproc)
 
-# Build the docker images
+# Build the containers
 build:
 	$(MAKE) build -C DeepTyper
 	$(MAKE) build -C LambdaNet
@@ -11,6 +11,15 @@ ifndef NOGPU
 	$(MAKE) build -C InCoder
 endif
 	$(MAKE) build -C src/weaver
+
+# Build without containers
+build-nocontainers:
+	$(MAKE) build-nocontainers -C DeepTyper
+	$(MAKE) build-nocontainers -C LambdaNet
+ifndef NOGPU
+	$(MAKE) build-nocontainers -C InCoder
+endif
+	$(MAKE) build-nocontainers -C src/weaver
 
 # Run the full evaluation
 full:
@@ -64,4 +73,4 @@ endif
 		--data data \
 		--workers $(NPROC)
 
-.PHONY: build full
+.PHONY: build build-nocontainers full
