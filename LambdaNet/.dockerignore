@@ -3,6 +3,10 @@
 
 !src/models
 !src/project
+
+# Don't include target
+src/project/**/target
+
 !src/scripts/ts/*.ts
 !src/scripts/ts/package*.json
 !src/scripts/ts/tsconfig.json

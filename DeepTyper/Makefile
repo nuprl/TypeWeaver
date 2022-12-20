@@ -3,9 +3,9 @@ SHELL     := /bin/bash
 DOCKER    := podman
 
 build: Dockerfile
+ifndef NOCONTAINERS
 	$(DOCKER) build -t typeweaver-deeptyper .
-
-build-nocontainers:
+endif
 
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
@@ -13,4 +13,4 @@ shell: build
 		--entrypoint /bin/bash \
 		typeweaver-deeptyper
 
-.PHONY: build build-nocontainers shell
+.PHONY: build shell

@@ -78,7 +78,7 @@ def typecheck_summary(data_dir, csv_dir):
         pairs = [(d.parts[-1], p.parts[-1])
                  for d in sorted(datasets)
                  for p in sorted(d.iterdir())]
-        for d, p in tqdm(pairs, desc="Type check summary", unit="package"):
+        for d, p in tqdm(pairs, desc="Type check summary"):
             res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS.keys()]
             entry = ",".join([d, p, *res]) + "\n"
             file.write(entry)

@@ -3,11 +3,12 @@ SHELL     := /bin/bash
 DOCKER    := podman
 
 build: Dockerfile
-	$(DOCKER) build -t typeweaver-weaver .
-
-build-nocontainers:
+ifdef NOCONTAINERS
 	cd src && npm install
 	cd src && tsc
+else
+	$(DOCKER) build -t typeweaver-weaver .
+endif
 
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
@@ -15,4 +16,4 @@ shell: build
 		--volume $(PWD)/../../data:/data:rw \
 		typeweaver-weaver
 
-.PHONY: build build-nocontainers shell
+.PHONY: build shell

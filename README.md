@@ -25,9 +25,7 @@ _Do Machine Learning Models Produce TypeScript Types that Type Check?_
 
 The Makefile has the following targets:
 
-- `build`: build the containers
-
-- `build-nocontainers`: build the project, without containers
+- `build`: build the project
 
 - `all`: run everything
 
@@ -44,22 +42,30 @@ The Makefile has the following targets:
 
 ## Makefile Variables
 
-### Engine
+### No containers
 
-When running `make predict`, `make weave`, or `make typecheck`, the `ENGINE`
-variable must be provided, e.g.:
+By default, containers are built and used to invoke the models. If dependencies
+are satisfied, it is possible to run without containers:
 
-    make predict ENGINE=DeepTyper
-
-This will run type prediction for DeepTyper and no other system.
-
-`ENGINE` must be one of: `DeepTyper`, `LambdaNet`, or `InCoder`.
+    make NOCONTAINERS=true build
+    make NOCONTAINERS=true all
 
 ### No GPU
 
 Setting this variable will skip the InCoder experiments, which require a GPU:
 
     make NOGPU=true all
+
+### Engine
+
+When running `make predict`, `make weave`, or `make typecheck`, the `ENGINE`
+variable must be provided, e.g.:
+
+    make ENGINE=DeepTyper predict
+
+This will run type prediction for DeepTyper and no other system.
+
+`ENGINE` must be one of: `DeepTyper`, `LambdaNet`, or `InCoder`.
 
 ### Number of processors
 

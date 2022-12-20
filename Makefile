@@ -3,7 +3,10 @@ SHELL     := /bin/bash
 DOCKER    := podman
 NPROC     := $(shell nproc)
 
-# Build the containers
+ifdef NOCONTAINERS
+CONTAINERS_ARG := --no-containers
+endif
+
 build:
 	$(MAKE) build -C DeepTyper
 	$(MAKE) build -C LambdaNet
@@ -11,15 +14,6 @@ ifndef NOGPU
 	$(MAKE) build -C InCoder
 endif
 	$(MAKE) build -C src/weaver
-
-# Build without containers
-build-nocontainers:
-	$(MAKE) build-nocontainers -C DeepTyper
-	$(MAKE) build-nocontainers -C LambdaNet
-ifndef NOGPU
-	$(MAKE) build-nocontainers -C InCoder
-endif
-	$(MAKE) build-nocontainers -C src/weaver
 
 all: predict-all weave-all typecheck-all csv
 
@@ -39,6 +33,7 @@ ifndef ENGINE
 else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
+			$(CONTAINERS_ARG) \
 			--directory data \
 			--dataset $$d \
 			--engine $(ENGINE) \
@@ -59,6 +54,7 @@ ifndef ENGINE
 else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
+			$(CONTAINERS_ARG) \
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
@@ -80,6 +76,7 @@ ifndef ENGINE
 else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
+			$(CONTAINERS_ARG) \
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
@@ -93,5 +90,4 @@ csv:
 	@echo "### Generating CSVs"
 	@python3 src/summarize_results.py --data data
 
-.PHONY: build build-nocontainers
-.PHONY: all predict-all predict weave-all weave typecheck-all typecheck csv
+.PHONY: build all predict-all predict weave-all weave typecheck-all typecheck csv
