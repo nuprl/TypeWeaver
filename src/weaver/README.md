@@ -46,6 +46,6 @@ manually set up the dependencies:
 
 Then run:
 
-    make build-nocontainers
+    make NOCONTAINERS=true build
 
 This will install Node packages and compile the TypeScript source.

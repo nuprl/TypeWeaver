@@ -47,7 +47,7 @@ manually set up the dependencies:
 
 Then run:
 
-    make build-nocontainers
+    make NOCONTAINERS=true build
 
 This will install Node packages, compile the TypeScript source, download sbt,
 and compile the Scala source.

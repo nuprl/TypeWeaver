@@ -38,7 +38,7 @@ manually set up the dependencies:
 
 Then run:
 
-    make build-nocontainers
+    make NOCONTAINERS=true build
 
 This will install Rust crates, compile the Rust source, and download and cache
 the InCoder model (about 14 GB).
