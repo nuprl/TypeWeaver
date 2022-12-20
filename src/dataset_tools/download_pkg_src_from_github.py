@@ -58,6 +58,7 @@ def download_package(pkg, cwd):
     # Delete the git directory, to save space
     git_dir = Path(cwd, pkg, ".git")
     shutil.rmtree(git_dir, ignore_errors=True)
+    # TODO: Also want to delete .gitignore ands ymlinks
 
     return pkg, repo
 
