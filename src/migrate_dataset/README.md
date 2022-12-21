@@ -13,19 +13,19 @@ type weaving, type checking).
     python3 src/migrate_dataset/main.py \
         --directory data/micro \
         --dataset top1k-typed-nodeps-es6 \
-        --engine DeepTyper \
+        --model DeepTyper \
         --predict
     python3 src/migrate_dataset/main.py \
         --workers 1 \
         --directory data/micro \
         --dataset top1k-typed-nodeps-es6 \
-        --engine DeepTyper \
+        --model DeepTyper \
         --weave baseline
     python3 src/migrate_dataset/main.py \
         --workers 1 \
         --directory data/micro \
         --dataset top1k-typed-nodeps-es6 \
-        --engine DeepTyper \
+        --model DeepTyper \
         --emit-declaration \
         --typecheck baseline
 
@@ -54,7 +54,7 @@ option.
 ## Type Prediction
 
 Running `main.py` with the `--predict` flag runs the type prediction step of the
-pipeline. Specify the prediction model with `--engine DeepTyper`.
+pipeline. Specify the prediction model with `--model DeepTyper`.
 
 As input, the script takes every `.js` file in `data/original/corpus` and
 outputs a `.csv` file, containing type predictions, in

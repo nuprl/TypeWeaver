@@ -19,16 +19,16 @@ all: predict-all weave-all typecheck-all csv
 
 predict-all:
 	@echo "### Type prediction"
-	@for s in DeepTyper LambdaNet ; do \
-		$(MAKE) predict ENGINE=$$s ; \
+	@for m in DeepTyper LambdaNet ; do \
+		$(MAKE) predict MODEL=$$m ; \
 	done
 ifndef NOGPU
-	@$(MAKE) predict ENGINE=InCoder
+	@$(MAKE) predict MODEL=InCoder
 endif
 
 predict:
-ifndef ENGINE
-	@echo "Undefined variable: ENGINE"
+ifndef MODEL
+	@echo "Undefined variable: MODEL"
 	@exit 1
 else
 	@for d in $$(ls data/original); do \
@@ -36,20 +36,20 @@ else
 			$(CONTAINERS_ARG) \
 			--directory data \
 			--dataset $$d \
-			--engine $(ENGINE) \
+			--model $(MODEL) \
 			--predict ; \
 	done
 endif
 
 weave-all:
 	@echo "### Type weaving"
-	@for s in DeepTyper LambdaNet ; do \
-		$(MAKE) weave ENGINE=$$s ; \
+	@for m in DeepTyper LambdaNet ; do \
+		$(MAKE) weave MODEL=$$m ; \
 	done
 
 weave:
-ifndef ENGINE
-	@echo "Undefined variable: ENGINE"
+ifndef MODEL
+	@echo "Undefined variable: MODEL"
 	@exit 1
 else
 	@for d in $$(ls data/original); do \
@@ -58,20 +58,20 @@ else
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
-			--engine $(ENGINE) \
+			--model $(MODEL) \
 			--weave baseline ; \
 	done
 endif
 
 typecheck-all:
 	@echo "### Type checking"
-	@for s in DeepTyper LambdaNet InCoder ; do \
-		$(MAKE) typecheck ENGINE=$$s ; \
+	@for m in DeepTyper LambdaNet InCoder ; do \
+		$(MAKE) typecheck MODEL=$$m ; \
 	done
 
 typecheck:
-ifndef ENGINE
-	@echo "Undefined variable: ENGINE"
+ifndef MODEL
+	@echo "Undefined variable: MODEL"
 	@exit 1
 else
 	@for d in $$(ls data/original); do \
@@ -80,7 +80,7 @@ else
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
-			--engine $(ENGINE) \
+			--model $(MODEL) \
 			--emit-declaration \
 			--typecheck baseline ; \
 	done

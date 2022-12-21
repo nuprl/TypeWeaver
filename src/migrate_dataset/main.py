@@ -10,10 +10,10 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description="JavaScript to TypeScript migration script.")
     parser.add_argument(
-        "--engine",
+        "--model",
         required=True,
         choices=["DeepTyper", "LambdaNet", "InCoder"],
-        help="engine to use for type prediction, also determines the CSV format for type weaving and directory for type checking")
+        help="model to use for type prediction, also determines the CSV format for type weaving and directory for type checking")
     parser.add_argument(
         "--directory",
         required=True,
@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument(
         "--predict-out",
         default="baseline",
-        help="name of directory (within DIRECTORY) to write TypeScript, when the engine is InCoder; defaults to baseline")
+        help="name of directory (within DIRECTORY) to write TypeScript, when the model is InCoder; defaults to baseline")
     parser.add_argument(
         "--workers",
         type=int,
@@ -92,13 +92,13 @@ def main():
     # print("Source directory: {}".format(args.directory))
     # print("Dataset: {}".format(args.dataset))
 
-    if args.predict and args.engine == "DeepTyper":
+    if args.predict and args.model == "DeepTyper":
         deeptyper = type_prediction.DeepTyper(args)
         run_pipeline_step(deeptyper.run, "type prediction")
-    elif args.predict and args.engine == "LambdaNet":
+    elif args.predict and args.model == "LambdaNet":
         lambdanet = type_prediction.LambdaNet(args)
         run_pipeline_step(lambdanet.run, "type prediction")
-    elif args.predict and args.engine == "InCoder":
+    elif args.predict and args.model == "InCoder":
         incoder = type_prediction.InCoder(args)
         run_pipeline_step(incoder.run, "type prediction")
 

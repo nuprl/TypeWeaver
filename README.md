@@ -29,14 +29,14 @@ The Makefile has the following targets:
 
 - `all`: run everything
 
-- `predict-all`: run type prediction for all systems
+- `predict-all`: run type prediction for all models
 
-- `weave-all`: run type weaving for all systems
+- `weave-all`: run type weaving for all models
 
-- `typecheck-all`: run type checking for all systems
+- `typecheck-all`: run type checking for all models
 
 - `predict`, `weave`, `typecheck`: run type prediction, type weaving, or type
-  checking, for the system specified by the `ENGINE` variable
+  checking, for the model specified by the `MODEL` variable
 
 - `csv`: generate summary CSVs
 
@@ -56,16 +56,16 @@ Setting this variable will skip the InCoder experiments, which require a GPU:
 
     make NOGPU=true all
 
-### Engine
+### Model
 
-When running `make predict`, `make weave`, or `make typecheck`, the `ENGINE`
+When running `make predict`, `make weave`, or `make typecheck`, the `MODEL`
 variable must be provided, e.g.:
 
-    make ENGINE=DeepTyper predict
+    make MODEL=DeepTyper predict
 
-This will run type prediction for DeepTyper and no other system.
+This will run type prediction for DeepTyper and no other model.
 
-`ENGINE` must be one of: `DeepTyper`, `LambdaNet`, or `InCoder`.
+`MODEL` must be one of: `DeepTyper`, `LambdaNet`, or `InCoder`.
 
 ### Number of processors
 

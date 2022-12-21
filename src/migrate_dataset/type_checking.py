@@ -21,11 +21,11 @@ class TypeChecker:
 
         self.directory = Path(args.directory).resolve()
         self.dataset = Path(args.dataset)
-        self.engine = args.engine
+        self.model = args.model
         self.workers = args.workers
         self.typecheck_dir = Path(args.typecheck)
         self.emit_declaration = args.emit_declaration
-        self.in_directory = Path(self.directory, f"{self.engine}-out", self.dataset, self.typecheck_dir).resolve()
+        self.in_directory = Path(self.directory, f"{self.model}-out", self.dataset, self.typecheck_dir).resolve()
         self.out_directory = self.in_directory.with_name(f"{self.typecheck_dir}-checked")
         self.dts_directory = self.in_directory.with_name(f"{self.typecheck_dir}-typedefs")
 
@@ -153,7 +153,7 @@ class TypeChecker:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            with tqdm(total=len(fs), desc=f"tsc {self.engine} {self.dataset}", unit="package", miniters=1) as t:
+            with tqdm(total=len(fs), desc=f"tsc {self.model} {self.dataset}", unit="package", miniters=1) as t:
                 for f in fs:
                     t.update()
                     result = f.result()

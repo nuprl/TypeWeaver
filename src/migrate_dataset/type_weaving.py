@@ -21,11 +21,11 @@ class TypeWeaver:
 
         self.directory = Path(args.directory).resolve()
         self.dataset = Path(args.dataset)
-        self.engine = args.engine
+        self.model = args.model
         self.workers = args.workers
         self.js_directory = Path(self.directory, "original", self.dataset).resolve()
-        self.csv_directory = Path(self.directory, f"{self.engine}-out", self.dataset, "predictions").resolve()
-        self.out_directory = Path(self.directory, f"{self.engine}-out", self.dataset, args.weave).resolve()
+        self.csv_directory = Path(self.directory, f"{self.model}-out", self.dataset, "predictions").resolve()
+        self.out_directory = Path(self.directory, f"{self.model}-out", self.dataset, args.weave).resolve()
 
         if not self.csv_directory.exists():
             print(f"error: type predictions directory does not exist: {self.csv_directory}")
@@ -96,11 +96,11 @@ class TypeWeaver:
 
             # Run type_weaver on the file
             if self.containers:
-                args = [self.path, "--format", self.engine, "--types",
+                args = [self.path, "--format", self.model, "--types",
                         util.containerized_path(csv_file, self.directory),
                         util.containerized_path(js_file, self.directory)]
             else:
-                args = ["node", self.path.name, "--format", self.engine, "--types", csv_file, js_file]
+                args = ["node", self.path.name, "--format", self.model, "--types", csv_file, js_file]
 
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
@@ -144,7 +144,7 @@ class TypeWeaver:
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
             # But we still get the speedup from using multiple workers.
-            with tqdm(total=len(fs), desc=f"Weaving {self.engine} {self.dataset}", unit="package", miniters=1) as t:
+            with tqdm(total=len(fs), desc=f"Weaving {self.model} {self.dataset}", unit="package", miniters=1) as t:
                 for f in fs:
                     t.update()
                     result = f.result()
