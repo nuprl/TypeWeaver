@@ -28,6 +28,7 @@ class TypeChecker:
         self.in_directory = Path(self.directory, f"{self.model}-out", self.dataset, self.typecheck_dir).resolve()
         self.out_directory = self.in_directory.with_name(f"{self.typecheck_dir}-checked")
         self.dts_directory = self.in_directory.with_name(f"{self.typecheck_dir}-typedefs")
+        self.dry_run = args.dry_run
 
         if not self.in_directory.exists():
             print(f"error: directory does not exist: {self.in_directory}")
@@ -137,12 +138,10 @@ class TypeChecker:
 
     def typecheck_dataset(self, packages):
         """
-        Run type checking on a dataset. Print a running log, and track how many
-        packages succeeded, failed, or were skipped.
+        Run type checking on a dataset. Track how many packages succeeded,
+        failed, or were skipped.
         """
-        num_ok = 0
-        num_fail = 0
-        num_skip = 0
+        num_ok, num_fail, num_skip = 0, 0, 0
 
         # Compute the packages to skip
         to_skip = self.get_skip_set(packages)
@@ -180,13 +179,11 @@ class TypeChecker:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.err"))) == 0])
 
-        # print(f"Type checking with: {self.path}")
-        # print(f"Input directory: {self.in_directory}")
-        # print(f"Output directory: {self.out_directory}")
-        # print(f"Found {len(packages)} packages")
-
-        num_ok, num_fail, num_skip = self.typecheck_dataset(packages)
-
-        # print(f"Number of successes: {num_ok}")
-        # print(f"Number of fails: {num_fail}")
-        # print(f"Number of skips: {num_skip}")
+        if self.dry_run:
+            print(f"Type checking with: {self.path}")
+            print(f"Input directory: {self.in_directory}")
+            print(f"Output directory: {self.out_directory}")
+            print(f"Found {len(packages)} packages")
+        else:
+            num_ok, num_fail, num_skip = self.typecheck_dataset(packages)
+            print(f"    Out of {len(packages)} packages: {num_ok} succeeded, {num_fail} failed, {num_skip} skipped")

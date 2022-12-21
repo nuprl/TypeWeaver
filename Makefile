@@ -6,6 +6,11 @@ NPROC     := $(shell nproc)
 ifdef NOCONTAINERS
 CONTAINERS_ARG := --no-containers
 endif
+ifdef DRYRUN
+DRYRUN_ARG     := --dry-run
+endif
+
+all: predict-all weave-all typecheck-all csv
 
 build:
 	$(MAKE) build -C DeepTyper
@@ -14,8 +19,6 @@ ifndef NOGPU
 	$(MAKE) build -C InCoder
 endif
 	$(MAKE) build -C src/weaver
-
-all: predict-all weave-all typecheck-all csv
 
 predict-all:
 	@echo "### Type prediction"
@@ -34,6 +37,7 @@ else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
 			$(CONTAINERS_ARG) \
+			$(DRYRUN_ARG) \
 			--directory data \
 			--dataset $$d \
 			--model $(MODEL) \
@@ -55,6 +59,7 @@ else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
 			$(CONTAINERS_ARG) \
+			$(DRYRUN_ARG) \
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
@@ -77,6 +82,7 @@ else
 	@for d in $$(ls data/original); do \
 		python3 src/migrate_dataset/main.py \
 			$(CONTAINERS_ARG) \
+			$(DRYRUN_ARG) \
 			--workers $(NPROC) \
 			--directory data \
 			--dataset $$d \
@@ -87,7 +93,9 @@ else
 endif
 
 csv:
+ifndef DRYRUN
 	@echo "### Generating CSVs"
 	@python3 src/summarize_results.py --data data
+endif
 
 .PHONY: build all predict-all predict weave-all weave typecheck-all typecheck csv

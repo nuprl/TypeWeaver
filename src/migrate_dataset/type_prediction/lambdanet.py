@@ -24,6 +24,7 @@ class LambdaNet:
         self.dataset = Path(args.dataset)
         self.in_directory = Path(self.directory, "original", self.dataset).resolve()
         self.out_directory = Path(self.directory, "LambdaNet-out", self.dataset, "predictions").resolve()
+        self.dry_run = args.dry_run
 
     def short_name(self, name):
         """
@@ -117,12 +118,10 @@ class LambdaNet:
 
     def predict_on_dataset(self, packages):
         """
-        Run type prediction on a dataset. Print a running log, and track how
-        many packages succeeded, failed, or were skipped.
+        Run type prediction on a dataset. Track how many packages succeeded,
+        failed, or were skipped.
         """
-        num_ok = 0
-        num_fail = 0
-        num_skip = 0
+        num_ok, num_fail, num_skip = 0, 0, 0
 
         # Compute the packages to skip
         to_skip = self.get_skip_set(packages)
@@ -137,6 +136,7 @@ class LambdaNet:
         packages_string = "\n".join(packages_list)
 
         # Only start LambdaNet if there are packages to run
+        # TODO: is threading required or can we just set stdin to packages_string?
         p = None
         if packages_list:
             if self.containers:
@@ -184,13 +184,11 @@ class LambdaNet:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        # print(f"Predicting types with LambdaNet: {self.path}")
-        # print(f"Input directory: {self.in_directory}")
-        # print(f"Output directory: {self.out_directory}")
-        # print(f"Found {len(packages)} packages")
-
-        num_ok, num_fail, num_skip = self.predict_on_dataset(packages)
-
-        # print(f"Number of successes: {num_ok}")
-        # print(f"Number of fails: {num_fail}")
-        # print(f"Number of skips: {num_skip}")
+        if self.dry_run:
+            print(f"Predicting types with LambdaNet: {self.path}")
+            print(f"Input directory: {self.in_directory}")
+            print(f"Output directory: {self.out_directory}")
+            print(f"Found {len(packages)} packages")
+        else:
+            num_ok, num_fail, num_skip = self.predict_on_dataset(packages)
+            print(f"    Out of {len(packages)} packages: {num_ok} succeeded, {num_fail} failed, {num_skip} skipped")

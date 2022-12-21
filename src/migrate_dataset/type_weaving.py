@@ -26,6 +26,7 @@ class TypeWeaver:
         self.js_directory = Path(self.directory, "original", self.dataset).resolve()
         self.csv_directory = Path(self.directory, f"{self.model}-out", self.dataset, "predictions").resolve()
         self.out_directory = Path(self.directory, f"{self.model}-out", self.dataset, args.weave).resolve()
+        self.dry_run = args.dry_run
 
         if not self.csv_directory.exists():
             print(f"error: type predictions directory does not exist: {self.csv_directory}")
@@ -128,12 +129,10 @@ class TypeWeaver:
 
     def weave_dataset(self, packages):
         """
-        Run type weaving on a dataset. Print a running log, and track how many
-        packages succeeded, failed, or were skipped.
+        Run type weaving on a dataset. Track how many packages succeeded,
+        failed, or were skipped.
         """
-        num_ok = 0
-        num_fail = 0
-        num_skip = 0
+        num_ok, num_fail, num_skip = 0, 0, 0
 
         # Compute the packages to skip
         to_skip = self.get_skip_set(packages)
@@ -184,14 +183,12 @@ class TypeWeaver:
                     for package, prediction in zip(packages, predictions)
                     if files_with_ext(package, "js") == files_with_ext(prediction, "csv")]
 
-        # print(f"Type weaving with: {self.path}")
-        # print(f"Input directory (JS): {self.js_directory}")
-        # print(f"Input directory (CSV): {self.csv_directory}")
-        # print(f"Output directory: {self.out_directory}")
-        # print(f"Found {len(packages)} packages")
-
-        num_ok, num_fail, num_skip = self.weave_dataset(packages)
-
-        # print(f"Number of successes: {num_ok}")
-        # print(f"Number of fails: {num_fail}")
-        # print(f"Number of skips: {num_skip}")
+        if self.dry_run:
+            print(f"Type weaving with: {self.path}")
+            print(f"Input directory (JS): {self.js_directory}")
+            print(f"Input directory (CSV): {self.csv_directory}")
+            print(f"Output directory: {self.out_directory}")
+            print(f"Found {len(packages)} packages")
+        else:
+            num_ok, num_fail, num_skip = self.weave_dataset(packages)
+            print(f"    Out of {len(packages)} packages: {num_ok} succeeded, {num_fail} failed, {num_skip} skipped")

@@ -33,17 +33,21 @@ def parse_args():
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
     parser.add_argument(
         "--emit-declaration",
-        help="only for type checking; emit .d.ts declaration files",
-        action="store_true")
+        action="store_true",
+        help="only for type checking; emit .d.ts declaration files")
     parser.add_argument(
         "--no-containers",
         default=False,
         action="store_true",
         help="run tools without using containers")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="don't run anything, but print what would have been executed")
 
     group = parser.add_argument_group(
-        title="pipeline step",
-        description="One of the pipeline steps to run. At least one step is required.")
+        title="migration step",
+        description="One of the steps to run. At least one step is required.")
     group.add_argument(
         "--predict",
         help="run type prediction",
@@ -60,7 +64,7 @@ def parse_args():
     args = parser.parse_args()
     if not (args.predict or args.weave or args.typecheck):
         parser.print_usage()
-        print("error: at least one pipeline step argument is required")
+        print("error: at least one step argument is required")
         exit(2)
 
     if not Path(args.directory).exists():
@@ -76,39 +80,31 @@ def parse_args():
 
     return args
 
-def run_pipeline_step(pipeline_step, description, *args):
-    start_time = datetime.now()
-    pipeline_step(*args)
-    end_time = datetime.now()
-
-    duration = end_time - start_time
-    total_seconds = round(duration.total_seconds())
-    hours, remainder = divmod(total_seconds, 3600)
-    minutes, seconds = divmod(remainder, 60)
-    # print(f"Time for {description}: {hours}:{minutes:02}:{seconds:02}")
-
 def main():
     args = parse_args()
-    # print("Source directory: {}".format(args.directory))
-    # print("Dataset: {}".format(args.dataset))
+    if args.dry_run:
+        print("########## DRY RUN: nothing being run ##########")
+        print("Source directory: {}".format(args.directory))
+        print("Dataset: {}".format(args.dataset))
 
-    if args.predict and args.model == "DeepTyper":
-        deeptyper = type_prediction.DeepTyper(args)
-        run_pipeline_step(deeptyper.run, "type prediction")
-    elif args.predict and args.model == "LambdaNet":
-        lambdanet = type_prediction.LambdaNet(args)
-        run_pipeline_step(lambdanet.run, "type prediction")
-    elif args.predict and args.model == "InCoder":
-        incoder = type_prediction.InCoder(args)
-        run_pipeline_step(incoder.run, "type prediction")
+    if args.predict:
+        if args.model == "DeepTyper":
+            deeptyper = type_prediction.DeepTyper(args)
+            deeptyper.run()
+        elif args.model == "LambdaNet":
+            lambdanet = type_prediction.LambdaNet(args)
+            lambdanet.run()
+        elif args.model == "InCoder":
+            incoder = type_prediction.InCoder(args)
+            incoder.run()
 
     if args.weave:
         type_weaver = type_weaving.TypeWeaver(args)
-        run_pipeline_step(type_weaver.run, "type weaving")
+        type_weaver.run()
 
     if args.typecheck:
         type_checker = type_checking.TypeChecker(args)
-        run_pipeline_step(type_checker.run, "type checking")
+        type_checker.run()
 
 if __name__ == "__main__":
     main()
