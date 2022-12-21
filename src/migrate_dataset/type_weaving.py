@@ -167,8 +167,8 @@ class TypeWeaver:
 
         # Get the packages we want as inputs, but look at the directories with
         # CSV files, and skip directories that contain .err files, since those
-        # had errors during inference. We only want to do type weaving for
-        # packages if inference succeeded on all the JavaScript files.
+        # had errors during prediction. We only want to do type weaving for
+        # packages if prediction succeeded on all the JavaScript files.
         predictions = sorted([p.resolve()
                               for p in self.csv_directory.iterdir()
                               if len(list(p.rglob("*.err"))) == 0])

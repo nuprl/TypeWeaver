@@ -2,7 +2,7 @@
 
 * `dataset_tools/`: A collection of scripts and tools for building datasets
 
-* `migrate_dataset/main.py`: The script that invokes tools (e.g. type annotation
+* `migrate_dataset/main.py`: The script that invokes tools (e.g. type
   prediction, type weaving, type checking) for migrating a dataset from
   JavaScript to TypeScript and type checking the result
 

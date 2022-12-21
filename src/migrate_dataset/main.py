@@ -2,7 +2,7 @@ from datetime import datetime
 from pathlib import Path
 import argparse, os
 
-import type_inference, type_weaving, type_checking
+import type_prediction, type_weaving, type_checking
 import util
 
 def parse_args():
@@ -13,7 +13,7 @@ def parse_args():
         "--engine",
         required=True,
         choices=["DeepTyper", "LambdaNet", "InCoder"],
-        help="engine to use for type inference, also determines the CSV format for type weaving and directory for type checking")
+        help="engine to use for type prediction, also determines the CSV format for type weaving and directory for type checking")
     parser.add_argument(
         "--directory",
         required=True,
@@ -23,7 +23,7 @@ def parse_args():
         required=True,
         help="name of directory (within DIRECTORY) that contains JavaScript packages")
     parser.add_argument(
-        "--infer-out",
+        "--predict-out",
         default="baseline",
         help="name of directory (within DIRECTORY) to write TypeScript, when the engine is InCoder; defaults to baseline")
     parser.add_argument(
@@ -45,8 +45,8 @@ def parse_args():
         title="pipeline step",
         description="One of the pipeline steps to run. At least one step is required.")
     group.add_argument(
-        "--infer",
-        help="run type inference",
+        "--predict",
+        help="run type prediction",
         action="store_true")
     group.add_argument(
         "--weave",
@@ -58,7 +58,7 @@ def parse_args():
         help="run type checking on directory TYPECHECK (within DIRECTORY)")
 
     args = parser.parse_args()
-    if not (args.infer or args.weave or args.typecheck):
+    if not (args.predict or args.weave or args.typecheck):
         parser.print_usage()
         print("error: at least one pipeline step argument is required")
         exit(2)
@@ -92,15 +92,15 @@ def main():
     # print("Source directory: {}".format(args.directory))
     # print("Dataset: {}".format(args.dataset))
 
-    if args.infer and args.engine == "DeepTyper":
-        deeptyper = type_inference.DeepTyper(args)
-        run_pipeline_step(deeptyper.run, "type inference")
-    elif args.infer and args.engine == "LambdaNet":
-        lambdanet = type_inference.LambdaNet(args)
-        run_pipeline_step(lambdanet.run, "type inference")
-    elif args.infer and args.engine == "InCoder":
-        incoder = type_inference.InCoder(args)
-        run_pipeline_step(incoder.run, "type inference")
+    if args.predict and args.engine == "DeepTyper":
+        deeptyper = type_prediction.DeepTyper(args)
+        run_pipeline_step(deeptyper.run, "type prediction")
+    elif args.predict and args.engine == "LambdaNet":
+        lambdanet = type_prediction.LambdaNet(args)
+        run_pipeline_step(lambdanet.run, "type prediction")
+    elif args.predict and args.engine == "InCoder":
+        incoder = type_prediction.InCoder(args)
+        run_pipeline_step(incoder.run, "type prediction")
 
     if args.weave:
         type_weaver = type_weaving.TypeWeaver(args)

@@ -1,7 +1,7 @@
 # migrate_dataset
 
-This is the script that invokes (containerized) tools (e.g. type annotation
-prediction, type weaving, type checking).
+This is the script that invokes (containerized) tools (e.g. type prediction,
+type weaving, type checking).
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ prediction, type weaving, type checking).
         --directory data/micro \
         --dataset top1k-typed-nodeps-es6 \
         --engine DeepTyper \
-        --infer
+        --predict
     python3 src/migrate_dataset/main.py \
         --workers 1 \
         --directory data/micro \
@@ -51,15 +51,15 @@ option.
             |-- corpus/
             |-- test_dataset/
 
-## Type Annotation Prediction
+## Type Prediction
 
-Running `main.py` with the `--infer` flag runs the type annotation prediction
-step of the pipeline. Specify the prediction model with `--engine DeepTyper`.
+Running `main.py` with the `--predict` flag runs the type prediction step of the
+pipeline. Specify the prediction model with `--engine DeepTyper`.
 
 As input, the script takes every `.js` file in `data/original/corpus` and
 outputs a `.csv` file, containing type predictions, in
 `DeepTyper-out/corpus/predictions`, mirroring the directory structure of
-`data/original/corpus`. If type inference fails, then a `.err` file is written
+`data/original/corpus`. If type prediction fails, then a `.err` file is written
 instead.
 
     data/
@@ -82,8 +82,8 @@ instead.
                               |-- a.csv
                               |-- b.err
 
-In this example, type inference on `pkgA/index.js`, `pkgA/lib.js`, and
-`pkgB/a.js` succeeded, inference on `pkgB/b.js` failed, and `pkgB/c.md` was
+In this example, type prediction on `pkgA/index.js`, `pkgA/lib.js`, and
+`pkgB/a.js` succeeded, prediction on `pkgB/b.js` failed, and `pkgB/c.md` was
 ignored.
 
 ## Type Weaving

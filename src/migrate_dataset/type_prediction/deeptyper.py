@@ -59,12 +59,12 @@ class DeepTyper:
 
         return { p for p in packages if should_skip(p) }
 
-    def infer_on_package(self, package, to_skip):
+    def predict_on_package(self, package, to_skip):
         """
-        Run inference on a single package, skipping packages that have already
-        been processed. For DeepTyper, this means running inference on each file
-        in the package. Also record the result, writing the type predictions or
-        errors to the filesystem.
+        Run prediction on a single package, skipping packages that have already
+        been processed. For DeepTyper, this means running prediction on each
+        file in the package. Also record the result, writing the type
+        predictions or errors to the filesystem.
         """
         if package in to_skip:
             return Result(package, ResultStatus.SKIP)
@@ -107,10 +107,10 @@ class DeepTyper:
         else:
             return Result(package, ResultStatus.FAIL)
 
-    def infer_on_dataset(self, packages):
+    def predict_on_dataset(self, packages):
         """
-        Run type inference on a dataset. Print a running log, and track how many
-        packages succeeded, failed, or were skipped.
+        Run type prediction on a dataset. Print a running log, and track how
+        many packages succeeded, failed, or were skipped.
         """
         num_ok = 0
         num_fail = 0
@@ -122,7 +122,7 @@ class DeepTyper:
         with tqdm(total=len(packages), desc=f"DeepTyper {self.dataset}", unit="package", miniters=1) as t:
             for package in packages:
                 t.update()
-                result = self.infer_on_package(package, to_skip)
+                result = self.predict_on_package(package, to_skip)
 
                 if result.is_ok():
                     num_ok += 1
@@ -135,7 +135,7 @@ class DeepTyper:
 
     def run(self):
         """
-        Run type inference.
+        Run type prediction.
         """
         # Create the out directory, if it doesn't already exist
         self.out_directory.mkdir(parents=True, exist_ok=True)
@@ -146,12 +146,12 @@ class DeepTyper:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        # print(f"Inferring types with DeepTyper: {self.path}")
+        # print(f"Predicting types with DeepTyper: {self.path}")
         # print(f"Input directory: {self.in_directory}")
         # print(f"Output directory: {self.out_directory}")
         # print(f"Found {len(packages)} packages")
 
-        num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
+        num_ok, num_fail, num_skip = self.predict_on_dataset(packages)
 
         # print(f"Number of successes: {num_ok}")
         # print(f"Number of fails: {num_fail}")

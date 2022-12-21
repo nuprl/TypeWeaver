@@ -37,7 +37,7 @@ else
 			--directory data \
 			--dataset $$d \
 			--engine $(ENGINE) \
-			--infer ; \
+			--predict ; \
 	done
 endif
 
