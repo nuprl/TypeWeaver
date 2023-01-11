@@ -1,7 +1,7 @@
 from pathlib import Path
 from subprocess import PIPE
 from tqdm import tqdm
-import subprocess
+import shutil, subprocess
 
 import util
 from util import Result, ResultStatus
@@ -72,8 +72,18 @@ class DeepTyper:
 
         all_ok = True
         files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+
+        # Copy all source files to output directory
+        for src in files:
+            dst = Path(self.out_directory, self.short_name(src)).resolve()
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy(src, dst)
+
+        # Iterate over the JS files in the output directory
+        package_out = Path(self.out_directory, self.short_name(package))
+        files = sorted([f.resolve() for f in package_out.rglob("*.js") if f.is_file()])
         for file in files:
-            csv_file = Path(self.out_directory, self.short_name(file)).resolve().with_suffix(".csv")
+            csv_file = file.with_suffix(".csv")
             err_file = csv_file.with_suffix(".err")
 
             # Delete csv/err output if they exist
@@ -87,21 +97,19 @@ class DeepTyper:
             else:
                 args = ["python3", self.path, file]
 
+            # Result CSVs are written in the same directory as the source
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
-            # Create target directories for output
-            csv_file.parent.mkdir(parents=True, exist_ok=True)
-
-            csv_output = file.with_suffix(".csv")
-            if result.returncode == 0 and csv_output.exists():
-                csv_output.rename(csv_file)
-            else:
+            if result.returncode != 0 or not csv_file.exists():
                 all_ok = False
                 with open(err_file, mode="w", encoding="utf-8") as f:
                     if result.returncode != 0:
                         print(result.stderr, file=f)
                     else:
                         print(f"error: expected {csv_output} to be created on successful run", file=f)
+
+            # Delete the JavaScript file from the output directory
+            file.unlink()
 
         if all_ok:
             return Result(package, ResultStatus.OK)

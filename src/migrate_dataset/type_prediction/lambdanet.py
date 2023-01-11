@@ -1,7 +1,7 @@
 from pathlib import Path
 from subprocess import PIPE
 from tqdm import tqdm
-import subprocess, threading, time
+import shutil, subprocess, threading, time
 
 import util
 from util import Result, ResultStatus
@@ -75,45 +75,31 @@ class LambdaNet:
         if package in to_skip:
             return Result(package, ResultStatus.SKIP)
 
-        input_files = [f.resolve() for f in package.rglob("*.js") if f.is_file()]
-        output_dir = Path(self.out_directory, self.short_name(package)).resolve()
-
-        # Delete the old output files
-        # Note: there is no race condition where we finish prediction before reaching this point,
-        # because we're deleting files from the output directory, not the input directory
-        output_files = [f.resolve()
-                        for f in output_dir.rglob("*")
-                        if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
-        for f in output_files:
-            f.unlink()
+        package_out = Path(self.out_directory, self.short_name(package))
+        input_files = [f.resolve() for f in package_out.rglob("*.js") if f.is_file()]
 
         # Poll until either the done or error files are created
-        done_file = Path(package, "done.ok")
-        err_file = Path(package, "output.err")
+        done_file = Path(package_out, "done.ok")
+        err_file = Path(package_out, "output.err")
         while True:
             if done_file.exists() or err_file.exists():
                 break
             time.sleep(self.SLEEP_TIME)
 
+        # Delete the JavaScript files from the output directory
+        for f in input_files:
+            f.unlink()
+
         if done_file.exists():
             # Success, so (some) CSV files were written
             csv_files = [f.with_suffix(".csv") for f in input_files]
             for file in csv_files:
-                output_file = Path(self.out_directory, self.short_name(file))
-                output_file.parent.mkdir(parents=True, exist_ok=True)
-                if file.exists():
-                    # Move CSV files to output directory, creating target directories if necessary
-                    file.rename(output_file)
-                else:
+                if not file.exists():
                     # No CSV file created, because the JS file had no types, so create a placeholder
-                    output_file.touch(exist_ok=True)
+                    file.touch(exist_ok=True)
             done_file.unlink()
             return Result(package, ResultStatus.OK)
         else:
-            # Move the error file to the output directory
-            output_file = Path(output_dir, "output.err")
-            output_file.parent.mkdir(parents=True, exist_ok=True)
-            err_file.rename(output_file)
             return Result(package, ResultStatus.FAIL)
 
     def predict_on_dataset(self, packages):
@@ -129,6 +115,28 @@ class LambdaNet:
         # Create a string with the packages to run, one per line
         # Running LambdaNet in a container means adjusting the path
         packages_to_run = set(packages).difference(to_skip)
+
+        for package in packages_to_run:
+            package_out = Path(self.out_directory, self.short_name(package))
+
+            # Delete old output files
+            output_files = [f.resolve()
+                            for f in package_out.rglob("*")
+                            if f.is_file()]
+            for f in output_files:
+                f.unlink()
+
+            # Copy source files to output directory
+            files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+            for src in files:
+                dst = Path(self.out_directory, self.short_name(src)).resolve()
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(src, dst)
+
+        # Update input paths to use output directory
+        packages_to_run = [Path(self.out_directory, self.short_name(p)).resolve()
+                           for p in packages_to_run]
+
         if self.containers:
             packages_list = sorted([str(util.containerized_path(p, self.directory)) for p in packages_to_run])
         else:
@@ -136,7 +144,6 @@ class LambdaNet:
         packages_string = "\n".join(packages_list)
 
         # Only start LambdaNet if there are packages to run
-        # TODO: is threading required or can we just set stdin to packages_string?
         p = None
         if packages_list:
             if self.containers:

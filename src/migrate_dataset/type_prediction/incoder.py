@@ -1,7 +1,7 @@
 from pathlib import Path
 from subprocess import PIPE
 from tqdm import tqdm
-import subprocess, time
+import shutil, subprocess, time
 
 import util
 from util import Result, ResultStatus
@@ -70,34 +70,24 @@ class InCoder:
         if package in to_skip:
             return Result(package, ResultStatus.SKIP)
 
-        input_files = [f.resolve() for f in package.rglob("*.js") if f.is_file()]
-        output_dir = Path(self.out_directory, self.short_name(package)).resolve()
-
-        # Don't delete the old output files. Otherwise there may be a race condition:
-        # we finish prediction and then delete the files we just produced!
-        # Unfortunately, this means interrupting the script may leave junk files in the
-        # input directory, that have to be cleaned up manually.
+        package_out = Path(self.out_directory, self.short_name(package))
+        input_files = [f.resolve() for f in package_out.rglob("*.js") if f.is_file()]
 
         # Poll until the done file is created
-        done_file = Path(package, "incoder.done")
+        done_file = Path(package_out, "incoder.done")
         while True:
             if done_file.exists():
                 break
             time.sleep(self.SLEEP_TIME)
 
-        # Get the output files, .ts and .err (but they are in the input directory)
-        # Don't glob all *.ts, might get *.d.ts by accident
-        ts_files = [f.with_suffix(".ts") for f in input_files if f.with_suffix(".ts").exists()]
-        err_files = [f.with_suffix(".err") for f in input_files if f.with_suffix(".err").exists()]
+        # Delete the JavaScript files from the output directory
+        for f in input_files:
+            f.unlink()
 
-        # Move files to their output directory
-        for file in (ts_files + err_files):
-            output_file = Path(self.out_directory, self.short_name(file))
-            output_file.parent.mkdir(parents=True, exist_ok=True)
-            file.rename(output_file)
-
+        # Delete the done file
         done_file.unlink()
 
+        err_files = [f.resolve() for f in package_out.rglob("*.err") if f.is_file()]
         if not err_files:
             return Result(package, ResultStatus.OK)
         else:
@@ -116,6 +106,28 @@ class InCoder:
         # Create a list of the packages to run
         # Running InCoder in a container means adjusting the path
         packages_to_run = set(packages).difference(to_skip)
+
+        for package in packages_to_run:
+            package_out = Path(self.out_directory, self.short_name(package))
+
+            # Delete old output files
+            output_files = [f.resolve()
+                            for f in package_out.rglob("*")
+                            if f.is_file()]
+            for f in output_files:
+                f.unlink()
+
+            # Copy source files to output directory
+            files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+            for src in files:
+                dst = Path(self.out_directory, self.short_name(src)).resolve()
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(src, dst)
+
+        # Update input paths to use output directory
+        packages_to_run = [Path(self.out_directory, self.short_name(p)).resolve()
+                           for p in packages_to_run]
+
         if self.containers:
             packages_list = sorted([str(util.containerized_path(p, self.directory)) for p in packages_to_run])
         else:
