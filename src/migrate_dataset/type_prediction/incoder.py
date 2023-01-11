@@ -111,10 +111,8 @@ class InCoder:
             package_out = Path(self.out_directory, self.short_name(package))
 
             # Delete old output files
-            output_files = [f.resolve()
-                            for f in package_out.rglob("*")
-                            if f.is_file()]
-            for f in output_files:
+            files = [f.resolve() for f in package_out.rglob("*") if f.is_file()]
+            for f in files:
                 f.unlink()
 
             # Copy source files to output directory

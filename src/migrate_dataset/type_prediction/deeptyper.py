@@ -71,26 +71,25 @@ class DeepTyper:
             return Result(package, ResultStatus.SKIP)
 
         all_ok = True
-        files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+
+        # Delete all files from output directory
+        package_out = Path(self.out_directory, self.short_name(package))
+        files = [f.resolve() for f in package_out.rglob("*") if f.is_file()]
+        for f in files:
+            f.unlink()
 
         # Copy all source files to output directory
+        files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
         for src in files:
             dst = Path(self.out_directory, self.short_name(src)).resolve()
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy(src, dst)
 
         # Iterate over the JS files in the output directory
-        package_out = Path(self.out_directory, self.short_name(package))
         files = sorted([f.resolve() for f in package_out.rglob("*.js") if f.is_file()])
         for file in files:
             csv_file = file.with_suffix(".csv")
             err_file = csv_file.with_suffix(".err")
-
-            # Delete csv/err output if they exist
-            if csv_file.exists():
-                csv_file.unlink()
-            if err_file.exists():
-                err_file.unlink()
 
             if self.containers:
                 args = [self.path, util.containerized_path(file, self.directory)]

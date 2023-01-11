@@ -79,9 +79,15 @@ class TypeWeaver:
             return Result(package, ResultStatus.SKIP)
 
         all_ok = True
-        js_files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+
+        # Delete all files from output directory
+        package_out = Path(self.out_directory, self.short_name(package))
+        files = [f.resolve() for f in package_out.rglob("*") if f.is_file()]
+        for f in files:
+            f.unlink()
 
         # Copy all source JS/CSV files to output directory
+        js_files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
         for js in js_files:
             dst = Path(self.out_directory, self.short_name(js)).resolve()
             dst.parent.mkdir(parents=True, exist_ok=True)
@@ -92,21 +98,12 @@ class TypeWeaver:
             shutil.copy(csv, dst)
 
         # Iterate over the JS/CSV files in the output directory
-        package_out = Path(self.out_directory, self.short_name(package))
         js_files = sorted([f.resolve() for f in package_out.rglob("*.js") if f.is_file()])
         for js_file in js_files:
             csv_file = js_file.with_suffix(".csv")
             ts_file = js_file.with_suffix(".ts")
             err_file = js_file.with_suffix(".err")
             warn_file = js_file.with_suffix(".warn")
-
-            # Delete old outputs if they exist
-            if ts_file.exists():
-                ts_file.unlink()
-            if err_file.exists():
-                err_file.unlink()
-            if warn_file.exists():
-                warn_file.unlink()
 
             # Run type_weaver on the file
             if self.containers:
