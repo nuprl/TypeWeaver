@@ -2,7 +2,7 @@ from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
 from tqdm import tqdm
-import subprocess
+import shutil, subprocess
 
 import util
 from util import Result, ResultStatus
@@ -80,12 +80,25 @@ class TypeWeaver:
 
         all_ok = True
         js_files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
-        csv_files = [Path(self.csv_directory, self.short_name(f)).with_suffix(".csv") for f in js_files]
 
-        for js_file, csv_file in zip(js_files, csv_files):
-            ts_file = Path(self.out_directory, self.short_name(js_file)).resolve().with_suffix(".ts")
-            err_file = ts_file.with_suffix(".err")
-            warn_file = ts_file.with_suffix(".warn")
+        # Copy all source JS/CSV files to output directory
+        for js in js_files:
+            dst = Path(self.out_directory, self.short_name(js)).resolve()
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy(js, dst)
+
+            csv = Path(self.csv_directory, self.short_name(js)).with_suffix(".csv")
+            dst = dst.with_suffix(".csv")
+            shutil.copy(csv, dst)
+
+        # Iterate over the JS/CSV files in the output directory
+        package_out = Path(self.out_directory, self.short_name(package))
+        js_files = sorted([f.resolve() for f in package_out.rglob("*.js") if f.is_file()])
+        for js_file in js_files:
+            csv_file = js_file.with_suffix(".csv")
+            ts_file = js_file.with_suffix(".ts")
+            err_file = js_file.with_suffix(".err")
+            warn_file = js_file.with_suffix(".warn")
 
             # Delete old outputs if they exist
             if ts_file.exists():
@@ -105,12 +118,7 @@ class TypeWeaver:
 
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
-            # Create target directories for output
-            ts_file.parent.mkdir(parents=True, exist_ok=True)
-
-            ts_output = js_file.with_suffix(".ts")
-            if result.returncode == 0 and ts_output.exists():
-                ts_output.rename(ts_file)
+            if result.returncode == 0 and ts_file.exists():
                 if result.stderr:
                     with open(warn_file, mode="w", encoding="utf-8") as f:
                         print(result.stderr, file=f)
@@ -120,7 +128,11 @@ class TypeWeaver:
                     if result.returncode != 0:
                         print(result.stderr, file=f)
                     else:
-                        print(f"error: expected {ts_output} to be created on successful run", file=f)
+                        print(f"error: expected {ts_file} to be created on successful run", file=f)
+
+            # Delete the JS/CSV input files
+            js_file.unlink()
+            csv_file.unlink()
 
         if all_ok:
             return Result(package, ResultStatus.OK)
