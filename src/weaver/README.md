@@ -35,7 +35,12 @@ The CSV file path can be provided explicitly:
 
 The `tsc` script exposes the TypeScript compiler that was installed in the
 container. Similar to `run.sh`, it _must_ be executed from within this
-directory, and mount `../data` to `/data`.
+directory, and it mounts `../data` to `/data`.
+
+The `count_annotations` script exposes `src/count_annotations.js`, which counts
+the number of type annotations and the number of `any` annotations in a
+TypeScript file. It _must_ be executed from within this directory, and it
+mounts `../data` to `/data`.
 
 ## Dependencies
 
