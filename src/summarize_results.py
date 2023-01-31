@@ -9,6 +9,8 @@
 #       num of non-any annotations checked, num of any ground truth annotations skipped
 #   - Error codes per file, for each system
 #       dataset, package, filename, error code, count
+#   - Annotations per file, for each system
+#       dataset, package, filename, number of anys, number of annotations
 
 from concurrent import futures
 from pathlib import Path
@@ -39,6 +41,16 @@ def parse_args():
         "--debug",
         action="store_true",
         help="print extra output for debugging")
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=cpu_count,
+        help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
+    parser.add_argument(
+        "--no-containers",
+        default=False,
+        action="store_true",
+        help="run tools without using containers")
 
     args = parser.parse_args()
     check_exists(args.data)
@@ -49,6 +61,33 @@ def parse_args():
     csv.mkdir(parents=True, exist_ok=True)
 
     return args
+
+def system_dataset_package_triples(data_dir, subdir):
+    triples = []
+    for s in SYSTEMS.keys():
+        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
+        for d in datasets:
+            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], subdir)
+            if not ts_dataset.exists():
+                continue
+            packages = sorted([p for p in ts_dataset.iterdir()])
+            for p in packages:
+                triples.append((s, ts_dataset, p.parts[-1]))
+    return triples
+
+def prepare_headers(data_dir, csv_dir, filename, header):
+    for s in SYSTEMS.keys():
+        output_csv = Path(csv_dir, f"{filename}.{SYSTEMS[s]}.csv")
+        with open(output_csv, "w") as file:
+            file.write(header)
+
+def iterate_triples(triples, csv_dir, desc, filename, iterate_package):
+    for s, ts_dataset, p in tqdm(triples, desc):
+        output_csv = Path(csv_dir, f"{filename}.{SYSTEMS[s]}.csv")
+        with open(output_csv, "a") as file:
+            entries = iterate_package(ts_dataset, p)
+            for e in entries:
+                file.write(e + "\n")
 
 def copy_loc(data_dir, csv_dir):
     original_loc = Path(data_dir, "notes", "original", "file_loc.csv")
@@ -109,28 +148,11 @@ def errors_per_file_for_package(ts_dataset, package):
     return entries
 
 def errors_per_file_summary(data_dir, csv_dir):
-    triples = []
-    for s in SYSTEMS.keys():
-        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
-        for d in datasets:
-            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline")
-            if not ts_dataset.exists():
-                continue
-            packages = sorted([p for p in ts_dataset.iterdir()])
-            for p in packages:
-                triples.append((s, ts_dataset, p.parts[-1]))
-
-    for s in SYSTEMS.keys():
-        output_csv = Path(csv_dir, f"errors_per_file.{SYSTEMS[s]}.csv")
-        with open(output_csv, "w") as file:
-            file.write('Dataset,Package,File,"Number of errors"\n')
-
-    for s, ts_dataset, p in tqdm(triples, desc="Error counts"):
-        output_csv = Path(csv_dir, f"errors_per_file.{SYSTEMS[s]}.csv")
-        with open(output_csv, "a") as file:
-            entries = errors_per_file_for_package(ts_dataset, p)
-            for e in entries:
-                file.write(e + "\n")
+    triples = system_dataset_package_triples(data_dir, "baseline")
+    prepare_headers(data_dir, csv_dir, "errors_per_file",
+                    'Dataset,Package,File,"Number of errors"\n')
+    iterate_triples(triples, csv_dir, "Error counts", "errors_per_file",
+                    errors_per_file_for_package)
 
 def clean_type(t):
     t = re.sub("typeof", "", t)
@@ -233,16 +255,7 @@ def compute_accuracy_for_package(data_dir, ts_dataset, package, debug = False):
     return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
 
 def compute_accuracy(data_dir, csv_dir, debug = False):
-    triples = []
-    for s in SYSTEMS.keys():
-        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
-        for d in datasets:
-            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline-typedefs")
-            if not ts_dataset.exists():
-                continue
-            packages = sorted([p for p in ts_dataset.iterdir()])
-            for p in packages:
-                triples.append((s, ts_dataset, p.parts[-1]))
+    triples = system_dataset_package_triples(data_dir, "baseline-typedefs")
 
     accuracy_csv = Path(csv_dir, "accuracy_summary.csv")
     with open(accuracy_csv, "w") as file:
@@ -282,29 +295,50 @@ def error_codes_for_package(ts_dataset, package):
 
     return entries
 
-def count_error_codes(data_dir):
-    triples = []
-    for s in SYSTEMS.keys():
-        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
-        for d in datasets:
-            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], "baseline")
-            if not ts_dataset.exists():
-                continue
-            packages = sorted([p for p in ts_dataset.iterdir()])
-            for p in packages:
-                triples.append((s, ts_dataset, p.parts[-1]))
+def count_error_codes(data_dir, csv_dir):
+    triples = system_dataset_package_triples(data_dir, "baseline")
+    prepare_headers(data_dir, csv_dir, "error_codes",
+                    'Dataset,Package,File,"Error code",Count\n')
+    iterate_triples(triples, csv_dir, "Error codes", "error_codes",
+                    error_codes_for_package)
 
-    for s in SYSTEMS.keys():
-        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
-        with open(output_csv, "w") as file:
-            file.write('Dataset,Package,File,"Error code",Count\n')
+def annotations_for_file(data_dir, package_dir, file, containers):
+    if containers:
+        path = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
+        containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
+        args = [path, containerized_file]
+    else:
+        path = Path(Path(__file__).parent, "weaver", "src", "count_annotations.js").resolve()
+        args = ["node", path, Path(package_dir, file)]
 
-    for s, ts_dataset, p in tqdm(triples, desc="Error codes"):
-        output_csv = Path(data_dir, "notes", "csv", f"error_codes.{SYSTEMS[s]}.csv")
-        with open(output_csv, "a") as file:
-            entries = error_codes_for_package(ts_dataset, p)
-            for e in entries:
-                file.write(e + "\n")
+    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=path.parent)
+    if len(result.stdout) > 0:
+        data = json.loads(result.stdout)
+        if data:
+            return file, data["anys"], data["total"]
+    return file, 0, 0
+
+def annotations_for_package(data_dir, ts_dataset, package, containers, workers):
+    package_dir = Path(ts_dataset, package)
+    dataset = ts_dataset.parts[-2]
+    entries = []
+
+    files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
+    with futures.ProcessPoolExecutor(max_workers=workers) as executor:
+        fs = [executor.submit(annotations_for_file, data_dir, package_dir, f, containers)
+              for f in files]
+        for f in fs:
+            file, anys, total = f.result()
+            entries.append(f"{dataset},{package},{file},{anys},{total}")
+
+    return entries
+
+def count_annotations(data_dir, csv_dir, workers, containers):
+    triples = system_dataset_package_triples(data_dir, "baseline")
+    prepare_headers(data_dir, csv_dir, "annotations_per_file",
+                    'Dataset,Package,File,"Number of anys","Total annotations"\n')
+    iterate_triples(triples, csv_dir, "Annotation counts", "annotations_per_file",
+                    lambda d, p: annotations_for_package(data_dir, d, p, containers, workers))
 
 def main():
     args = parse_args()
@@ -317,7 +351,8 @@ def main():
     typecheck_summary(data_dir, csv_dir)
     errors_per_file_summary(data_dir, csv_dir)
     compute_accuracy(data_dir, csv_dir, args.debug)
-    count_error_codes(data_dir)
+    count_error_codes(data_dir, csv_dir)
+    count_annotations(data_dir, csv_dir, args.workers, not args.no_containers)
 
 if __name__ == "__main__":
     main()

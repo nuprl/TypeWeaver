@@ -95,7 +95,10 @@ endif
 csv:
 ifndef DRYRUN
 	@echo "### Generating CSVs"
-	@python3 src/summarize_results.py --data data
+	@python3 src/summarize_results.py \
+		$(CONTAINERS_ARG) \
+		--workers $(NPROC) \
+		--data data
 endif
 
 .PHONY: build all predict-all predict weave-all weave typecheck-all typecheck csv
