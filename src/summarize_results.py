@@ -302,7 +302,10 @@ def count_error_codes(data_dir, csv_dir):
     iterate_triples(triples, csv_dir, "Error codes", "error_codes",
                     error_codes_for_package)
 
-def annotations_for_file(data_dir, package_dir, file, containers):
+def annotations_for_file(data_dir, system, ts_dataset, package, file, containers):
+    package_dir = Path(ts_dataset, package)
+    dataset = ts_dataset.parts[-2]
+
     if containers:
         path = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
         containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
@@ -315,30 +318,26 @@ def annotations_for_file(data_dir, package_dir, file, containers):
     if len(result.stdout) > 0:
         data = json.loads(result.stdout)
         if data:
-            return file, data["anys"], data["total"]
-    return file, 0, 0
-
-def annotations_for_package(data_dir, ts_dataset, package, containers, workers):
-    package_dir = Path(ts_dataset, package)
-    dataset = ts_dataset.parts[-2]
-    entries = []
-
-    files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
-    with futures.ProcessPoolExecutor(max_workers=workers) as executor:
-        fs = [executor.submit(annotations_for_file, data_dir, package_dir, f, containers)
-              for f in files]
-        for f in fs:
-            file, anys, total = f.result()
-            entries.append(f"{dataset},{package},{file},{anys},{total}")
-
-    return entries
+            return system, dataset, package, file, data["anys"], data["total"]
+    return system, dataset, package, file, 0, 0
 
 def count_annotations(data_dir, csv_dir, workers, containers):
     triples = system_dataset_package_triples(data_dir, "baseline")
+    inputs = [(s, td, p, str(f))
+              for s, td, p in triples
+              for pd in [Path(td, p)]
+              for f in sorted([f.relative_to(pd) for f in pd.rglob("*.ts")])]
     prepare_headers(data_dir, csv_dir, "annotations_per_file",
                     'Dataset,Package,File,"Number of anys","Total annotations"\n')
-    iterate_triples(triples, csv_dir, "Annotation counts", "annotations_per_file",
-                    lambda d, p: annotations_for_package(data_dir, d, p, containers, workers))
+
+    with futures.ProcessPoolExecutor(max_workers=workers) as executor:
+        fs = [executor.submit(annotations_for_file, data_dir, s, td, p, f, containers)
+              for s, td, p, f in inputs]
+        for future in tqdm(fs, "Annotations per file"):
+            s, d, p, f, anys, total = future.result()
+            output_csv = Path(csv_dir, f"annotations_per_file.{SYSTEMS[s]}.csv")
+            with open(output_csv, "a") as file:
+                file.write(f"{d},{p},{f},{anys},{total}\n")
 
 def main():
     args = parse_args()
