@@ -6,6 +6,8 @@ import { ArrowFunction, FunctionDeclaration, FunctionExpression, Identifier,
 
 interface AnnotationCount {
     anys: number;
+    anyArrays: number;
+    functionTypes: number;
     total: number;
 }
 
@@ -26,11 +28,23 @@ function parseArgs(): string {
 }
 
 function traverse(node: Node): AnnotationCount {
-    let runningCount: AnnotationCount = { anys: 0, total: 0 };
+    let runningCount: AnnotationCount = { anys: 0, anyArrays: 0, functionTypes: 0, total: 0 };
 
-    function updateCounts(count: AnnotationCount) {
+    function updateCounts(count: AnnotationCount): void {
         runningCount.anys += count.anys;
+        runningCount.anyArrays += count.anyArrays;
+        runningCount.functionTypes += count.functionTypes;
         runningCount.total += count.total;
+    }
+
+    function countTypeNode(t: TypeNode | undefined): AnnotationCount {
+        const text: string | undefined = t?.getText();
+        return {
+            anys: text === "any" ? 1 : 0,
+            anyArrays: text === "any[]" || text === "Array<any>" ? 1 : 0,
+            functionTypes: text === "Function" ? 1 : 0,
+            total: text ? 1 : 0,
+        };
     }
 
     /**
@@ -38,10 +52,7 @@ function traverse(node: Node): AnnotationCount {
      */
     function handleVarLike(node: VariableDeclaration | ParameterDeclaration): AnnotationCount {
         const typeNode: TypeNode | undefined = node.getTypeNode();
-        return {
-            anys: typeNode?.getText() === "any" ? 1 : 0,
-            total: typeNode ? 1 : 0,
-        };
+        return countTypeNode(typeNode);
     }
 
     /*
@@ -50,14 +61,11 @@ function traverse(node: Node): AnnotationCount {
      */
     function handleFunctionLike(node: FunctionDeclaration | FunctionExpression | ArrowFunction): AnnotationCount {
         const typeNode: TypeNode | undefined = node.getReturnTypeNode();
-        return {
-            anys: typeNode?.getText() === "any" ? 1 : 0,
-            total: typeNode ? 1 : 0,
-        }
+        return countTypeNode(typeNode);
     }
 
     // Count the annotations for the current node, and update the running count
-    let res: AnnotationCount = { anys: 0, total: 0 };
+    let res: AnnotationCount = { anys: 0, anyArrays: 0, functionTypes: 0, total: 0 };
     switch (node.getKind()) {
         case SyntaxKind.VariableDeclaration: {
             const varDecl: VariableDeclaration = node.asKindOrThrow(SyntaxKind.VariableDeclaration);

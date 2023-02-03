@@ -10,7 +10,7 @@
 #   - Error codes per file, for each system
 #       dataset, package, filename, error code, count
 #   - Annotations per file, for each system
-#       dataset, package, filename, number of anys, number of annotations
+#       dataset, package, filename, number of anys, number of any[], number of Function, number of annotations
 
 from concurrent import futures
 from pathlib import Path
@@ -318,8 +318,8 @@ def annotations_for_file(data_dir, system, ts_dataset, package, file, containers
     if len(result.stdout) > 0:
         data = json.loads(result.stdout)
         if data:
-            return system, dataset, package, file, data["anys"], data["total"]
-    return system, dataset, package, file, 0, 0
+            return system, dataset, package, file, data["anys"], data["anyArrays"], data["functionTypes"], data["total"]
+    return system, dataset, package, file, 0, 0, 0, 0
 
 def count_annotations(data_dir, csv_dir, workers, containers):
     triples = system_dataset_package_triples(data_dir, "baseline")
@@ -328,16 +328,16 @@ def count_annotations(data_dir, csv_dir, workers, containers):
               for pd in [Path(td, p)]
               for f in sorted([f.relative_to(pd) for f in pd.rglob("*.ts")])]
     prepare_headers(data_dir, csv_dir, "annotations_per_file",
-                    'Dataset,Package,File,"Number of anys","Total annotations"\n')
+                    'Dataset,Package,File,"Number of anys","Number of any[]","Number of Function","Total annotations"\n')
 
     with futures.ProcessPoolExecutor(max_workers=workers) as executor:
         fs = [executor.submit(annotations_for_file, data_dir, s, td, p, f, containers)
               for s, td, p, f in inputs]
         for future in tqdm(fs, "Annotations per file"):
-            s, d, p, f, anys, total = future.result()
+            s, d, p, f, anys, anyArrays, functionTypes, total = future.result()
             output_csv = Path(csv_dir, f"annotations_per_file.{SYSTEMS[s]}.csv")
             with open(output_csv, "a") as file:
-                file.write(f"{d},{p},{f},{anys},{total}\n")
+                file.write(f"{d},{p},{f},{anys},{anyArrays},{functionTypes},{total}\n")
 
 def main():
     args = parse_args()
