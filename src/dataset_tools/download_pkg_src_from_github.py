@@ -11,16 +11,29 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Downloads NPM package source code from GitHub")
     parser.add_argument(
         "--dataset",
-        required=True,
         help="name of directory that contains JavaScript packages")
+    parser.add_argument(
+        "--input",
+        help="file containing names of packages to download")
     parser.add_argument(
         "--output",
         required=True,
         help="name of directory to save source code")
 
     args = parser.parse_args()
-    util.check_exists(args.dataset)
+    if args.dataset:
+        util.check_exists(args.dataset)
+    if args.input and not Path(args.input).exists():
+        print(f"error: file does not exist: {args.input}")
+        exit(2)
     util.check_exists(args.output)
+
+    if args.dataset and args.input:
+        print("error: only one of --dataset or --input can be selected")
+        exit(2)
+    if not args.dataset and not args.input:
+        print("error: at least one of --dataset or --input can be selected")
+        exit(2)
 
     return args
 
@@ -58,17 +71,27 @@ def download_package(pkg, cwd):
     # Delete the git directory, to save space
     git_dir = Path(cwd, pkg, ".git")
     shutil.rmtree(git_dir, ignore_errors=True)
-    # TODO: Also want to delete .gitignore ands ymlinks
+
+    # Delete .gitignore files and symlinks
+    for f in Path(cwd, pkg).rglob("*"):
+        if f.name == ".gitignore" or f.is_symlink():
+            f.unlink()
 
     return pkg, repo
 
 def main():
     args = parse_args()
 
-    dataset_dir = Path(args.dataset).resolve()
-    packages = sorted([p.resolve().relative_to(dataset_dir)
-                       for p in dataset_dir.iterdir()])
-    num_pkgs = len(packages)
+    if args.dataset:
+        dataset_dir = Path(args.dataset).resolve()
+        packages = sorted([p.resolve().relative_to(dataset_dir)
+                        for p in dataset_dir.iterdir()])
+        num_pkgs = len(packages)
+    elif args.input:
+        with open(args.input, "r") as file:
+            packages = file.readlines()
+        packages = [p.strip() for p in packages]
+        num_pkgs = len(packages)
 
     output_dir = Path(args.output).resolve()
 
