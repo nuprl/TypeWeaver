@@ -3,6 +3,7 @@
 
 from pathlib import Path
 from subprocess import PIPE
+from tqdm import tqdm
 import argparse, re, shutil, subprocess
 
 import util
@@ -66,7 +67,7 @@ def download_package(pkg, cwd):
 
     # Clone the repo
     args = ["git", "clone", "--depth", "1", url, pkg]
-    subprocess.run(args, encoding="utf-8", cwd=cwd)
+    subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=cwd)
 
     # Delete the git directory, to save space
     git_dir = Path(cwd, pkg, ".git")
@@ -86,27 +87,23 @@ def main():
         dataset_dir = Path(args.dataset).resolve()
         packages = sorted([p.resolve().relative_to(dataset_dir)
                         for p in dataset_dir.iterdir()])
-        num_pkgs = len(packages)
     elif args.input:
         with open(args.input, "r") as file:
             packages = file.readlines()
         packages = [p.strip() for p in packages]
-        num_pkgs = len(packages)
 
     output_dir = Path(args.output).resolve()
 
-    counter = 0
     repos = {}
-    for package in packages:
-        counter += 1
-        print("[{}/{}] {} ... ".format(counter, num_pkgs, package), flush=True)
-        _, repo = download_package(package, output_dir)
-        print("Cloned repo: " + repo)
-        if repo in repos.keys():
-            print("Duplicate: " + repo)
-            repos[repo] += 1
-        else:
-            repos[repo] = 1
+    with tqdm(total=len(packages), unit="pkg", desc="Packages") as t:
+        for package in packages:
+            _, repo = download_package(package, output_dir)
+            t.set_postfix_str(package)
+            t.update()
+            if repo in repos.keys():
+                repos[repo] += 1
+            else:
+                repos[repo] = 1
 
     duplicates = [k for k, v in repos.items() if v > 1]
     if duplicates:
