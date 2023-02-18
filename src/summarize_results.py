@@ -381,11 +381,14 @@ def count_annotations(data_dir, workers):
                 ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
-                for p in packages:
-                    entries = annotations_for_package(data_dir, d, ts_dataset, p)
-                    for e in entries:
-                        file.write(e)
-                        file.write("\n")
+                with futures.ProcessPoolExecutor(max_workers=workers) as executor:
+                    fs = [executor.submit(annotations_for_package, data_dir, d, ts_dataset, p)
+                          for p in packages]
+                    for f in fs:
+                        result = f.result()
+                        for r in result:
+                            file.write(r)
+                            file.write("\n")
 
 def main():
     args = parse_args()
