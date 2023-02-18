@@ -356,13 +356,13 @@ def annotations_for_package(data_dir, dataset, ts_dataset, package):
 
     files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
     for file in files:
-        containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
+        containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir.parent))
         args = [COUNT_ANNS, containerized_file]
         result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=COUNT_ANNS.parent)
         if len(result.stdout) > 0:
             data = json.loads(result.stdout)
             if data:
-                entries.append(f"{dataset}{package},{file},{data["anys"]},{data["anyArrays"]},{data["functionTypes"]},{data["total"]}")
+                entries.append(f'{dataset},{package},{file},{data["anys"]},{data["anyArrays"]},{data["functionTypes"]},{data["total"]}')
 
     return entries
 

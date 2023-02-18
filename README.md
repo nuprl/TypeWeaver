@@ -115,12 +115,9 @@ The stages are the following:
       `data/full/[system]-out/[dataset]/baseline-checked/` and
       `data/full/[system]-out/[dataset]/baseline-typedefs/`
     - Writes CSV files to `data/full/csv/`
-    - This step may take up to 80 minutes. In particular, the
-      "Calculating LOC for each file in each package" step is very slow,
-      but it only needs to run once for the entire dataset, and is not affected
-      by the experiments. `src/summarize_results.py:358` can be commented out
-      and `data/results/csv/file_loc.csv` can be copied over to
-      `data/full/csv/`.
+    - This step may take over an hour. In particular, the
+      "Calculating LOC for each file in each package" and
+      "Counting annotations per file" steps are very slow.
 
 5. Generating the figures
     - Reads the CSV files from `data/full/csv/` and writes figures and tables to
