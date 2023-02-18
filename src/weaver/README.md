@@ -37,6 +37,6 @@ The CSV file can be provided explicitly:
 
 ## Extra tools
 
-The `cjs-to-es6`, `cloc`, and `tsc` scripts expose the tools that were
-installed in the container. Similar to `run.sh`, they _must_ be executed from
-within this directory, and mount `../data` to `/data`.
+The `cjs-to-es6`, `cloc`, `count_annotations`, and `tsc` scripts expose the
+tools that were installed in the container. Similar to `run.sh`, they _must_ be
+executed from within this directory, and mount `../data` to `/data`.

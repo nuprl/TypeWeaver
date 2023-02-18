@@ -11,6 +11,8 @@
 #       dataset, package, filename, lines of code
 #   - Error codes per file, for each system
 #       dataset, package, filename, error code, count
+#   - Annotations per file, for each system
+#       dataset, package, filename, number of anys, number of any[], number of Function, number of annotations
 
 from concurrent import futures
 from pathlib import Path
@@ -33,6 +35,7 @@ SYSTEMS = {
 }
 
 CLOC = Path(Path(__file__).parent, "weaver", "cloc").resolve()
+COUNT_ANNS = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
 
 def check_exists(path):
     if not Path(path).exists():
@@ -347,6 +350,43 @@ def count_error_codes(data_dir):
                         file.write(e)
                         file.write("\n")
 
+def annotations_for_package(data_dir, dataset, ts_dataset, package):
+    package_dir = Path(ts_dataset, package)
+    entries = []
+
+    files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
+    for file in files:
+        containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
+        args = [COUNT_ANNS, containerized_file]
+        result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=COUNT_ANNS.parent)
+        if len(result.stdout) > 0:
+            data = json.loads(result.stdout)
+            if data:
+                entries.append(f"{dataset}{package},{file},{data["anys"]},{data["anyArrays"]},{data["functionTypes"]},{data["total"]}")
+
+    return entries
+
+def count_annotations(data_dir, workers):
+    print("Counting annotations per file, for each system and dataset...")
+    datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
+
+    for s in SYSTEMS.keys():
+        print(f"  {s}...")
+        output_csv = Path(data_dir, "csv", f"annotations_per_file.{SYSTEMS[s]}.csv")
+        with open(output_csv, "w") as file:
+            file.write('Dataset,Package,File,"Number of anys","Number of any[]","Number of Function","Total annotations"\n')
+
+            for d in datasets:
+                print(f"    {d}...")
+                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
+
+                packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
+                for p in packages:
+                    entries = annotations_for_package(data_dir, d, ts_dataset, p)
+                    for e in entries:
+                        file.write(e)
+                        file.write("\n")
+
 def main():
     args = parse_args()
     data_dir = Path(args.data).resolve()
@@ -357,6 +397,7 @@ def main():
     # Don't need to run this every time, it computes on the original dataset and is slow!
     get_loc(data_dir, args.workers)
     count_error_codes(data_dir)
+    count_annotations(data_dir, args.workers)
 
 if __name__ == "__main__":
     main()
