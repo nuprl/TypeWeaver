@@ -15,6 +15,6 @@ test-r:
 	$(DOCKER) run --rm \
 		--entrypoint R \
 		typeweaver-r-script \
-		-s -e "suppressMessages(library(tidyverse))"
+		-s -e "suppressMessages(library(tidyverse)); suppressMessages(library(extrafont))"
 
 .PHONY: build shell test-r
