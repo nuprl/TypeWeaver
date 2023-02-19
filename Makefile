@@ -239,7 +239,7 @@ figures:
 	(cd src/R && ./run.sh /data/full)
 
 archive:
-	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ main
+	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ ecoop2023-artifact
 	sha1sum $(shell basename $$PWD).tar.gz
 	md5sum $(shell basename $$PWD).tar.gz
 
