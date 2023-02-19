@@ -9,4 +9,4 @@ $DOCKER run --rm \
     --security-opt=label=disable \
     --hooks-dir=/usr/share/containers/oci/hooks.d/ \
     --volume $(pwd)/../data:/data:rw \
-    typeweaver-incoder "$@"
+    typeweaver-incoder:ecoop2023-artifact "$@"

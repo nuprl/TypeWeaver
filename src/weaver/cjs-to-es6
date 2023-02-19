@@ -9,4 +9,4 @@
 $DOCKER run --rm \
     --volume $(pwd)/../../data:/data:rw \
     --entrypoint cjs-to-es6 \
-    typeweaver-weaver "$@"
+    typeweaver-weaver:ecoop2023-artifact "$@"

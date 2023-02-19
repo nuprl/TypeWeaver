@@ -13,4 +13,4 @@ $DOCKER run --rm \
     --volume $(pwd)/../../data:/data:rw \
     --entrypoint cloc \
     --workdir $TYPEWEAVER_CLOC_WORKDIR \
-    typeweaver-weaver "$@"
+    typeweaver-weaver:ecoop2023-artifact "$@"

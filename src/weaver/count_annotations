@@ -13,5 +13,4 @@ $DOCKER run --rm \
     --volume $(pwd)/../../data:/data:rw \
     --entrypoint node  \
     --workdir $TYPEWEAVER_CA_WORKDIR \
-    typeweaver-weaver count_annotations.js "$@"
-
+    typeweaver-weaver:ecoop2023-artifact count_annotations.js "$@"

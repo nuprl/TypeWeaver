@@ -3,7 +3,7 @@ SHELL     := /bin/bash
 DOCKER    := podman
 
 build: Dockerfile
-	$(DOCKER) build -t typeweaver-incoder .
+	$(DOCKER) build -t typeweaver-incoder:ecoop2023-artifact .
 
 shell: build
 	$(DOCKER) run --interactive --tty --rm \
@@ -11,6 +11,6 @@ shell: build
 		--hooks-dir=/usr/share/containers/oci/hooks.d/ \
 		--volume $(PWD)/../data:/data:rw \
 		--entrypoint /bin/bash \
-		typeweaver-incoder
+		typeweaver-incoder:ecoop2023-artifact
 
 .PHONY: build shell

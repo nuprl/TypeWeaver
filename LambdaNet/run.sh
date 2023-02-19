@@ -8,5 +8,5 @@
 $DOCKER run --interactive --rm \
     --volume $(pwd)/../data:/data:rw \
     --entrypoint sbt \
-    typeweaver-lambdanet \
+    typeweaver-lambdanet:ecoop2023-artifact \
     "runMain lambdanet.TypeInferenceService $@"

@@ -6,4 +6,4 @@
 
 $DOCKER run --rm \
     --volume $(pwd)/../../data:/data:rw \
-    typeweaver-r-script "$@"
+    typeweaver-r-script:ecoop2023-artifact "$@"
