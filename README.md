@@ -1,6 +1,6 @@
 # TypeWeaver-artifact
 
-This is the artifact for the submitted paper:
+This is the artifact for the ECOOP 2023 paper:
 _Do Machine Learning Models Produce TypeScript Types that Type Check?_
 
 Please read the [ECOOP AE Submission Document](ECOOP_AE_Submission_Document.md)
@@ -8,6 +8,9 @@ for what this artifact comprises and how to get started.
 
 This README contains information for running the full experiments, as well as
 a reference for how the Makefile is set up and how the artifact is organized.
+
+The latest version of TypeWeaver can be found on
+[GitHub](https://github.com/nuprl/TypeWeaver), in the `main` branch.
 
 ## Directory structure
 
@@ -115,7 +118,7 @@ The stages are the following:
       `data/full/[system]-out/[dataset]/baseline-checked/` and
       `data/full/[system]-out/[dataset]/baseline-typedefs/`
     - Writes CSV files to `data/full/csv/`
-    - This step may take over an hour. In particular, the
+    - This step may take several hours. In particular, the
       "Calculating LOC for each file in each package" and
       "Counting annotations per file" steps are very slow.
 
@@ -124,9 +127,9 @@ The stages are the following:
       `data/full/figures/`
     - This step can be run directly with `make figures`
         - In this case, the tables and figures should match the paper
-    - If `make full` is used, the final tables and figures may not match the
-      paper. This is due to variance during the type annotation prediction
-      stage, as well as different compiler versions producing different
+    - If `make full` is used, **the final tables and figures may not match the
+      paper**. This is due to randomness in the machine learning models,
+      as well as different compiler versions producing different
       compilation errors.
 
 ## Makefile targets
