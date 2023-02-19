@@ -1,0 +1,42 @@
+importKeyword
+ Text.Whitespace
+pullAllName.Otherany0.1436complex0.1045void0.0218Promise<void>0.0119Promise<any>0.0100
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./pullAll.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Removes all given values from `array` using\n * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * for equality comparisons.\n *\n * **Note:** Unlike `without`, this method mutates `array`. Use `remove`\n * to remove elements from an array by predicate.\n *\n * @since 2.0.0\n * @category Array\n * @param {Array} array The array to modify.\n * @param {...*} [values] The values to remove.\n * @returns {Array} Returns `array`.\n * @see pullAll, pullAllBy, pullAllWith, pullAt, remove, reject\n * @example\n *\n * const array = ['a', 'b', 'c', 'a', 'b', 'c']\n *\n * pull(array, 'a', 'c')\n * console.log(array)\n * // => ['b', 'b']\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+pullName.Otherany0.2015complex0.0202string0.0189void0.0105Promise<any>0.0068
+(Punctuation
+arrayName.Otherany0.1730any[]0.1689string0.0431string[]0.0313number[]0.0235
+,Punctuation
+ Text.Whitespace
+...Punctuation
+valuesName.Otherany[]0.3727any0.2096number[]0.0237string[]0.0117complex0.0113
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pullAllName.Otherany0.2313complex0.1414any[]0.1185{}0.0203string0.0084
+(Punctuation
+arrayName.Otherany[]0.5234any0.2231number[]0.0341string[]0.0181complex0.0156
+,Punctuation
+ Text.Whitespace
+valuesName.Otherany[]0.3553any0.3156number[]0.0197{}0.0135symbol0.0093
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+pullName.Otherany0.3389Promise<any>0.0072{}0.0064any[]0.0063complex0.0063
+\nText.Whitespace

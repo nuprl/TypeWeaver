@@ -1,0 +1,3104 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * @module symbol-tree\n * @author Joris van der Wel <joris@jorisvanderwel.com>\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+SymbolTreeNodeName.Otherany0.3426void0.1983boolean0.0690complex0.0631string0.0363
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./SymbolTreeNode'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+TreePositionName.Otherany0.3263void0.1940boolean0.0993complex0.0606string0.0448
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./TreePosition'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+TreeIteratorName.Otherany0.3637boolean0.1739void0.1013string0.0423complex0.0383
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./TreeIterator'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+returnTrueName.Otherboolean0.8883number0.0434string0.0249any0.0242complex0.0026
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+reverseArrayIndexName.Otherany0.4054number0.3007string0.1082boolean0.0731complex0.0169
+(Punctuation
+arrayName.Otherany0.5250number[]0.0538any[]0.0489number0.0468string0.0185
+,Punctuation
+ Text.Whitespace
+reverseIndexName.Otherany0.6605number0.1878string0.0382boolean0.0175Function0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayName.Otherany0.4906any[]0.2480string[]0.0469number[]0.0440T[]0.0202
+[Punctuation
+arrayName.Otherany0.4636any[]0.2069string[]0.0954number[]0.0284T[]0.0266
+.Punctuation
+lengthName.Othernumber0.8900any0.1076string0.0012complex0.0003boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+reverseIndexName.Othernumber0.9154any0.0656string0.0147boolean0.0007complex0.0003
+]Punctuation
+;Punctuation
+ Text.Whitespace
+// no need to check `index >= 0`Comment.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+SymbolTreeName.Otherany0.9982number0.0006string0.0005complex0.0003symbol0.0001
+ Text.Whitespace
+{Punctuation
+\n\n        Text.Whitespace
+/**\n         * @constructor\n         * @alias module:symbol-tree\n         * @param {string} [description='SymbolTree data'] Description used for the Symbol\n         */Comment.Multiline
+\n        Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+descriptionName.Otherstring0.8350any0.1300number0.0072boolean0.0017string[]0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+symbolName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SymbolName.BuiltinSymbolConstructor0.9794symbol0.0065any0.0057void0.0004T0.0002
+(Punctuation
+descriptionName.Otherstring0.7448any0.2004symbol0.0042complex0.0042{}0.0032
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+'SymbolTree data'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * You can use this function to (optionally) initialize an object right after its creation,\n         * to take advantage of V8's fast properties. Also useful if you would like to\n         * freeze your object.\n         *\n         * * `O(1)`\n         *\n         * @method\n         * @alias module:symbol-tree#initialize\n         * @param {Object} object\n         * @return {Object} object\n         */Comment.Multiline
+\n        Text.Whitespace
+initializeName.Othervoid0.6104any0.1349number0.0132boolean0.0086Promise<any>0.0064
+(Punctuation
+objectName.Otherany0.6688object0.1394Object0.0491number0.0072complex0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3576Function0.0784Node0.0502void0.0347object0.0178
+(Punctuation
+objectName.Otherany0.6863object0.1625Object0.0526number0.0082complex0.0079
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.5482object0.2521Object0.0828complex0.0155number0.0122
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+_nodeName.Otherany0.1489Node0.0889object0.0392number0.0193Function0.0161
+(Punctuation
+objectName.Otherany0.6072object0.1787Object0.0645string0.0088number0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+objectName.Otherany0.7543object0.0776Object0.0773number0.0141string0.0138
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeName.Otherany0.3026Node0.1140RowNode0.0254object0.0208complex0.0160
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.5211Object0.1973object0.0703complex0.0430number0.0127
+[Punctuation
+thisKeyword
+.Punctuation
+symbolName.Other
+]Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.OtherNode0.2415any0.1867Node<Node>0.0273RowNode0.0248Element0.0199
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nodeName.Otherany0.4349Node0.1111Node<Node>0.0181RowNode0.0155Element0.0135
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.7227Object0.1097object0.0496complex0.0301{}0.0058
+[Punctuation
+thisKeyword
+.Punctuation
+symbolName.Other
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6833string0.0495number0.0115object0.0089SymbolicTensor0.0072
+ Text.Whitespace
+SymbolTreeNodeName.Otherany0.9566string0.0051number0.0040complex0.0022symbol0.0019
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Returns `true` if the object has any children. Otherwise it returns `false`.\n         *\n         * * `O(1)`\n         *\n         * @method hasChildren\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Boolean}\n         */Comment.Multiline
+\n        Text.Whitespace
+hasChildrenName.Otherboolean0.9723any0.0108complex0.0025number0.0007string0.0006
+(Punctuation
+objectName.Otherany0.7552object0.0727Object0.0333Node0.0078string0.0073
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.2763Node0.1648Function0.0302Element0.0232object0.0134
+(Punctuation
+objectName.Otherany0.7648object0.0816Object0.0563complex0.0127number0.0072
+)Punctuation
+.Punctuation
+hasChildrenName.Otherboolean0.9519any0.0389number0.0014void0.0013complex0.0009
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Returns the first child of the given object.\n         *\n         * * `O(1)`\n         *\n         * @method firstChild\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+firstChildName.Otherany0.3257Node0.1747boolean0.0743object0.0137RowNode0.0115
+(Punctuation
+objectName.Otherany0.6686object0.0783Object0.0504Node0.0254number0.0064
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2918any0.1530Element0.0334Function0.0251Context0.0097
+(Punctuation
+objectName.Otherany0.7187Object0.0744object0.0685Node0.0184complex0.0127
+)Punctuation
+.Punctuation
+firstChildName.Otherany0.5659Node0.1487boolean0.0438number0.0372complex0.0149
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Returns the last child of the given object.\n         *\n         * * `O(1)`\n         *\n         * @method lastChild\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+lastChildName.OtherNode0.5126any0.1371boolean0.0206Node<Node>0.0197Function0.0114
+(Punctuation
+objectName.Otherany0.7565Node0.0535object0.0234Object0.0223number0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3346any0.1373Element0.0323Function0.0262Node<Node>0.0114
+(Punctuation
+objectName.Otherany0.7366Object0.0772object0.0509Node0.0312complex0.0118
+)Punctuation
+.Punctuation
+lastChildName.OtherNode0.4110any0.4025boolean0.0226number0.0159Function0.0141
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Returns the previous sibling of the given object.\n         *\n         * * `O(1)`\n         *\n         * @method previousSibling\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+previousSiblingName.OtherNode0.3264any0.1729Node<Node>0.0667Function0.0266Element0.0152
+(Punctuation
+objectName.Otherany0.6474Node0.0684Object0.0483object0.0466number0.0100
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3230any0.1362Function0.0364Element0.0291View0.0131
+(Punctuation
+objectName.Otherany0.7323Object0.0782object0.0509Node0.0364number0.0079
+)Punctuation
+.Punctuation
+previousSiblingName.OtherNode0.3982any0.2287Node<Node>0.0491Function0.0253number0.0197
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Returns the next sibling of the given object.\n         *\n         * * `O(1)`\n         *\n         * @method nextSibling\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+nextSiblingName.OtherNode0.6421any0.0915Node<Node>0.0236Function0.0081Element0.0057
+(Punctuation
+objectName.Otherany0.6897Node0.0676Object0.0547object0.0404number0.0076
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3992any0.1417Function0.0319Element0.0263View0.0127
+(Punctuation
+objectName.Otherany0.7109Object0.0910object0.0593Node0.0321complex0.0107
+)Punctuation
+.Punctuation
+nextSiblingName.OtherNode0.7545any0.0938Node<Node>0.0114T0.0068Function0.0053
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Return the parent of the given object.\n         *\n         * * `O(1)`\n         *\n         * @method parent\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+parentName.OtherNode0.2308any0.0762Node<Node>0.0455RowNode0.0176ViewBase0.0114
+(Punctuation
+objectName.Otherany0.7005Object0.0705object0.0356Node0.0351Event0.0076
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2859any0.1731Function0.0363Element0.0228Node<Node>0.0112
+(Punctuation
+objectName.Otherany0.6926Object0.1000object0.0552Node0.0210number0.0147
+)Punctuation
+.Punctuation
+parentName.Otherany0.2644Node0.1601Node<Node>0.0322ViewBase0.0139string0.0107
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Find the inclusive descendant that is last in tree order of the given object.\n         *\n         * * `O(n)` (worst case) where `n` is the depth of the subtree of `object`\n         *\n         * @method lastInclusiveDescendant\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+lastInclusiveDescendantName.Otherany0.2903boolean0.1326string0.0573number0.0371object0.0265
+(Punctuation
+objectName.Otherany0.6033Object0.1211object0.0972Node0.0169number0.0109
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+lastChildName.OtherNode0.4994any0.2296boolean0.0364T0.0236Function0.0177
+;Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+currentName.Otherany0.7152Node0.0803boolean0.0190complex0.0143Object0.0142
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.7050Object0.0860object0.0486number0.0311complex0.0219
+;Punctuation
+\n\n                Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+lastChildName.OtherNode0.6249any0.2030T0.0156Node<Node>0.0087Function0.0076
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.4097any0.1555Element0.0321number0.0201Function0.0120
+(Punctuation
+currentName.Otherany0.6607Node0.1673Function0.0135string0.0130number0.0108
+)Punctuation
+.Punctuation
+lastChildName.OtherNode0.5695any0.2331Element0.0160number0.0117boolean0.0108
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+currentName.Otherany0.6440Node0.1834Function0.0222T0.0201boolean0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastChildName.OtherNode0.4268any0.3142T0.0224Function0.0129boolean0.0120
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+currentName.Otherany0.6196Node0.0628T0.0459boolean0.0254complex0.0190
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Find the preceding object (A) of the given object (B).\n         * An object A is preceding an object B if A and B are in the same tree\n         * and A comes before B in tree order.\n         *\n         * * `O(n)` (worst case)\n         * * `O(1)` (amortized when walking the entire tree)\n         *\n         * @method preceding\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @param {Object} [options]\n         * @param {Object} [options.root] If set, `root` must be an inclusive ancestor\n         *        of the return value (or else null is returned). This check _assumes_\n         *        that `root` is also an inclusive ancestor of the given `object`\n         * @return {?Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+precedingName.Otherany0.3637boolean0.1782number0.0389string0.0342object0.0271
+(Punctuation
+objectName.Otherany0.6499object0.0980Object0.0564Node0.0188complex0.0078
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1662Options0.0495Config0.0106Node0.0090FormlyFormOptions0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+treeRootName.Otherany0.4959boolean0.1493number0.0233Node0.0207Function0.0172
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.2204Options0.0340complex0.0236Config0.0142Node0.0101
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1566Options0.0374complex0.0150Config0.0129Node0.0129
+.Punctuation
+rootName.Otherany0.2188string0.1837boolean0.0970Node0.0755number0.0432
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.6858Object0.0739object0.0732number0.0354complex0.0192
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+treeRootName.Otherany0.5128number0.2497string0.1175boolean0.0110Node0.0103
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+previousSiblingName.OtherNode0.3248Node<Node>0.1195any0.1168Function0.0230T0.0173
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3133any0.1010Function0.0420Element0.0249object0.0145
+(Punctuation
+objectName.Otherany0.8171Object0.0509object0.0357Node0.0160complex0.0080
+)Punctuation
+.Punctuation
+previousSiblingName.Otherany0.3206Node0.2788Node<Node>0.0590Function0.0243string0.0170
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+previousSiblingName.Otherany0.3270Node0.3017Node<Node>0.0544Function0.0210T0.0119
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+lastInclusiveDescendantName.Otherany0.2400void0.0905Function0.0805boolean0.0785Node0.0523
+(Punctuation
+previousSiblingName.Otherany0.3597Node0.2098Node<Node>0.0572Function0.0214Element0.0119
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+// if there is no previous sibling return the parent (might be null)Comment.Single
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2388any0.2384Function0.0533View0.0170Element0.0164
+(Punctuation
+objectName.Otherany0.6469object0.1017Object0.0747Node0.0188complex0.0171
+)Punctuation
+.Punctuation
+parentName.Otherany0.2239Node0.0806Node<Node>0.0332ViewBase0.0191View0.0115
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Find the following object (A) of the given object (B).\n         * An object A is following an object B if A and B are in the same tree\n         * and A comes after B in tree order.\n         *\n         * * `O(n)` (worst case) where `n` is the amount of objects in the entire tree\n         * * `O(1)` (amortized when walking the entire tree)\n         *\n         * @method following\n         * @memberOf module:symbol-tree#\n         * @param {!Object} object\n         * @param {Object} [options]\n         * @param {Object} [options.root] If set, `root` must be an inclusive ancestor\n         *        of the return value (or else null is returned). This check _assumes_\n         *        that `root` is also an inclusive ancestor of the given `object`\n         * @param {Boolean} [options.skipChildren=false] If set, ignore the children of `object`\n         * @return {?Object}\n         */Comment.Multiline
+\n        Text.Whitespace
+followingName.Otherboolean0.3551any0.2798complex0.0658object0.0164void0.0157
+(Punctuation
+objectName.Otherany0.5227object0.1105Object0.0750Node0.0145number0.0093
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1316Options0.0463Config0.0101ConnectionOptions0.0074Node0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+treeRootName.Otherany0.4627boolean0.2373number0.0214Node0.0121Function0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.1938Options0.0330complex0.0208Config0.0159ConnectionOptions0.0091
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.0976Options0.0349complex0.0155Config0.0123Node0.0112
+.Punctuation
+rootName.Otherany0.2275boolean0.1624string0.1124Node0.0771number0.0338
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+skipChildrenName.Otherany0.4509boolean0.4061number0.0244Function0.0057complex0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3488complex0.0286Options0.0254Config0.0132boolean0.0126
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3297Options0.0269complex0.0213Config0.0150boolean0.0109
+.Punctuation
+skipChildrenName.Otherany0.4475boolean0.3448number0.0784string0.0162void0.0082
+;Punctuation
+\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+firstChildName.Otherany0.3966boolean0.3092Node0.1023number0.0257Function0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+skipChildrenName.Otherany0.5505boolean0.2612Node0.0235number0.0180Function0.0166
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3023any0.2694Function0.0258Element0.0257T0.0178
+(Punctuation
+objectName.Otherany0.8499Object0.0342object0.0318complex0.0096Node0.0093
+)Punctuation
+.Punctuation
+firstChildName.Otherany0.7021Node0.1051boolean0.0351number0.0255complex0.0081
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+firstChildName.Otherany0.5890Node0.1408boolean0.0653number0.0199string0.0056
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+firstChildName.Otherany0.5949Node0.1315boolean0.0421Object0.0123number0.0109
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+currentName.Otherany0.7680Node0.0539boolean0.0179object0.0139Object0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.7578Object0.0882object0.0560string0.0208number0.0167
+;Punctuation
+\n\n                Text.Whitespace
+doKeyword
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+currentName.Otherany0.6556string0.1252number0.0515boolean0.0308Node0.0292
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+treeRootName.Otherany0.5292string0.1867number0.1749Node0.0164boolean0.0107
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextSiblingName.OtherNode0.6850any0.1376Node<Node>0.0322T0.0065Element0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.6055any0.1138Element0.0207Node<Node>0.0083Function0.0072
+(Punctuation
+currentName.Otherany0.6167Node0.2779Element0.0089string0.0064Function0.0055
+)Punctuation
+.Punctuation
+nextSiblingName.OtherNode0.7348any0.1627Node<Node>0.0117complex0.0040T0.0040
+;Punctuation
+\n\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextSiblingName.OtherNode0.7603any0.1280Node<Node>0.0144Element0.0039Function0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nextSiblingName.OtherNode0.6298any0.1905Node<Node>0.0204Element0.0054T0.0047
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+currentName.Otherany0.5604Node0.2220complex0.0083Node<Node>0.0079Function0.0077
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3832any0.1583Element0.0212Function0.0115View0.0066
+(Punctuation
+currentName.Otherany0.7262Node0.1259string0.0094Element0.0093T0.0061
+)Punctuation
+.Punctuation
+parentName.Otherany0.3895Node0.1361Node<Node>0.0191Element0.0122ViewBase0.0113
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+ Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+currentName.Otherany0.6538Node0.0574string0.0303Function0.0144complex0.0144
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Append all children of the given object to an array.\n         *\n         * * `O(n)` where `n` is the amount of children of the given `parent`\n         *\n         * @method childrenToArray\n         * @memberOf module:symbol-tree#\n         * @param {Object} parent\n         * @param {Object} [options]\n         * @param {Object[]} [options.array=[]]\n         * @param {Function} [options.filter] Function to test each object before it is added to the array.\n         *                            Invoked with arguments (object). Should return `true` if an object\n         *                            is to be included.\n         * @param {*} [options.thisArg] Value to use as `this` when executing `filter`.\n         * @return {Object[]}\n         */Comment.Multiline
+\n        Text.Whitespace
+childrenToArrayName.Otherany0.3407void0.1186boolean0.0987string0.0185number0.0184
+(Punctuation
+parentName.Otherany0.0834Node0.0662Element0.0187Node<Node>0.0159ViewBase0.0141
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2265Options0.0433ConnectionOptions0.0079Config0.0072Function0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+arrayName.Otherany0.5840any[]0.1032complex0.0177number[]0.0148string[]0.0124
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.2845Options0.0316complex0.0134ConnectionOptions0.0103Config0.0068
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.2208Options0.0298complex0.0107ConnectionOptions0.0106Node<Node>[]0.0078
+.Punctuation
+arrayName.Otherany0.5360any[]0.1177string[]0.0639complex0.0320boolean0.0160
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+filterName.Otherany0.7634boolean0.1022Filter0.0137complex0.0136void0.0053
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.3938Options0.0379complex0.0121ConnectionOptions0.0090Config0.0074
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1691Options0.0349ConnectionOptions0.0157complex0.0106Config0.0063
+.Punctuation
+filterName.Otherany0.5598complex0.1363boolean0.1051string0.0406Filter0.0159
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+returnTrueName.Otherany0.4487boolean0.4083string0.0337number0.0211complex0.0069
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+thisArgName.Otherany0.9594boolean0.0062complex0.0055number0.0028void0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.5218Options0.0238complex0.0223Config0.0079number0.0045
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.4751complex0.0278Options0.0275Config0.0112Node0.0056
+.Punctuation
+thisArgName.Otherany0.9220complex0.0198boolean0.0113number0.0076string0.0054
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.4566any0.3652Node<Node>0.0127Element0.0074complex0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.2761Node0.2556T0.0260number0.0206Element0.0189
+(Punctuation
+parentName.Otherany0.5571Node0.1562T0.0139Node<Node>0.0130Element0.0088
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+objectName.Otherany0.7977Node0.0458Object0.0248object0.0167complex0.0097
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentNodeName.OtherNode0.4594any0.4141complex0.0166Element0.0067Node<Node>0.0063
+.Punctuation
+firstChildName.Otherany0.7170Node0.1257number0.0422boolean0.0128complex0.0094
+;Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9708any0.0274boolean0.0005string0.0004complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\n                Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.8866Object0.0242object0.0179number0.0143complex0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeName.OtherNode0.3730any0.2092Element0.0375Node<Node>0.0247RowNode0.0175
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3188any0.1945Element0.0444T0.0258number0.0240
+(Punctuation
+objectName.Otherany0.8072object0.0535Object0.0238number0.0157Node0.0141
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+nodeName.Otherany0.4322Node0.1161Node<Node>0.0320RowNode0.0219complex0.0207
+.Punctuation
+setCachedIndexName.Otherany0.5113void0.1743boolean0.0600Node0.0395number0.0289
+(Punctuation
+parentNodeName.OtherNode0.4646any0.3110Element0.0110Node<Node>0.0087never0.0083
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.8204any0.1711string0.0036complex0.0009boolean0.0005
+)Punctuation
+;Punctuation
+\n\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+filterName.Otherany0.8810boolean0.0355complex0.0242Filter0.0068void0.0059
+.Punctuation
+callName.Otherany0.9580number0.0063boolean0.0060void0.0043string0.0038
+(Punctuation
+thisArgName.Otherany0.9446object0.0053number0.0033Object0.0029Node0.0020
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.7906object0.0649Object0.0473complex0.0167number0.0136
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+arrayName.Otherany[]0.4451any0.1043string[]0.0591T[]0.0485number[]0.0276
+.Punctuation
+pushName.Othernumber0.9873any0.0107boolean0.0006complex0.0004void0.0003
+(Punctuation
+objectName.Otherany0.8456Object0.0393object0.0367number0.0208string0.0111
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+objectName.Otherany0.7027Node0.0710Object0.0418object0.0353complex0.0232
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.4983Node0.2733complex0.0434Node<Node>0.0142Element0.0134
+.Punctuation
+nextSiblingName.OtherNode0.4680any0.3960number0.0151complex0.0100T0.0067
+;Punctuation
+\n                        Text.Whitespace
+++Operator
+indexName.Othernumber0.8940any0.1022string0.0017complex0.0008boolean0.0002
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayName.Otherany[]0.4000any0.3401T[]0.0256string[]0.0200number[]0.0170
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Append all inclusive ancestors of the given object to an array.\n         *\n         * * `O(n)` where `n` is the amount of ancestors of the given `object`\n         *\n         * @method ancestorsToArray\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @param {Object} [options]\n         * @param {Object[]} [options.array=[]]\n         * @param {Function} [options.filter] Function to test each object before it is added to the array.\n         *                            Invoked with arguments (object). Should return `true` if an object\n         *                            is to be included.\n         * @param {*} [options.thisArg] Value to use as `this` when executing `filter`.\n         * @return {Object[]}\n         */Comment.Multiline
+\n        Text.Whitespace
+ancestorsToArrayName.Otherany0.4209boolean0.1073void0.0470number0.0423string0.0234
+(Punctuation
+objectName.Otherany0.8406Object0.0361object0.0302number0.0069complex0.0054
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3419Options0.0761Config0.0096complex0.0053FormlyFormOptions0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+arrayName.Otherany0.6147any[]0.1306complex0.0232number[]0.0152string[]0.0143
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.3714Options0.0283complex0.0187Config0.0074ConnectionOptions0.0072
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.2855Options0.0289complex0.0127Node<Node>[]0.0086ConnectionOptions0.0076
+.Punctuation
+arrayName.Otherany0.5657any[]0.1370string[]0.0660complex0.0275number[]0.0169
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+filterName.Otherany0.7780boolean0.1223complex0.0143Filter0.0082number0.0046
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.4421Options0.0307complex0.0124number0.0070Config0.0067
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.2161Options0.0315ConnectionOptions0.0134complex0.0120Node0.0061
+.Punctuation
+filterName.Otherany0.5200complex0.1483boolean0.1427string0.0475Filter0.0130
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+returnTrueName.Otherboolean0.4911any0.3883string0.0362number0.0196complex0.0061
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+thisArgName.Otherany0.9663boolean0.0071complex0.0046number0.0026void0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.5989Options0.0260complex0.0208Config0.0061boolean0.0053
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.4853Options0.0304complex0.0221Config0.0090ConnectionOptions0.0056
+.Punctuation
+thisArgName.Otherany0.9215complex0.0187boolean0.0172void0.0060number0.0060
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+ancestorName.Otherany0.9344complex0.0176number0.0054string0.0039Node0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.8649number0.0338Object0.0308object0.0238complex0.0158
+;Punctuation
+\n\n                Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+ancestorName.Otherany0.8747complex0.0250Node0.0109number0.0092string0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+filterName.Otherany0.8401complex0.0462boolean0.0434void0.0107Filter0.0065
+.Punctuation
+callName.Otherany0.9558boolean0.0099number0.0080void0.0044complex0.0033
+(Punctuation
+thisArgName.Otherany0.9672number0.0027complex0.0024object0.0016Object0.0015
+,Punctuation
+ Text.Whitespace
+ancestorName.Otherany0.8227complex0.0755number0.0179string0.0077Node0.0071
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+arrayName.Otherany[]0.5214any0.1826string[]0.0376number[]0.0154T[]0.0119
+.Punctuation
+pushName.Othernumber0.9666any0.0303boolean0.0008void0.0006complex0.0006
+(Punctuation
+ancestorName.Otherany0.8808complex0.0302Node0.0105string0.0098number0.0075
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                        Text.Whitespace
+ancestorName.Otherany0.9174Node0.0178complex0.0107number0.0060string0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3308any0.1677Element0.0236Function0.0160number0.0133
+(Punctuation
+ancestorName.Otherany0.8320complex0.0322Node0.0305number0.0092Element0.0049
+)Punctuation
+.Punctuation
+parentName.Otherany0.5919Node0.0598Element0.0099Node<Node>0.0056string0.0047
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayName.Otherany0.3943any[]0.2916string[]0.0227number[]0.0171T[]0.0135
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Append all descendants of the given object to an array (in tree order).\n         *\n         * * `O(n)` where `n` is the amount of objects in the sub-tree of the given `object`\n         *\n         * @method treeToArray\n         * @memberOf module:symbol-tree#\n         * @param {Object} root\n         * @param {Object} [options]\n         * @param {Object[]} [options.array=[]]\n         * @param {Function} [options.filter] Function to test each object before it is added to the array.\n         *                            Invoked with arguments (object). Should return `true` if an object\n         *                            is to be included.\n         * @param {*} [options.thisArg] Value to use as `this` when executing `filter`.\n         * @return {Object[]}\n         */Comment.Multiline
+\n        Text.Whitespace
+treeToArrayName.Otherany0.3525boolean0.0399void0.0201number0.0102complex0.0101
+(Punctuation
+rootName.Otherany0.3658Node0.0761string0.0388Element0.0131SymbolicTensor0.0078
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3527Options0.0374Config0.0082ConnectionOptions0.0054Function0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+arrayName.Otherany0.6439any[]0.1444number[]0.0149string[]0.0148complex0.0140
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.3760Options0.0247complex0.0147Config0.0084ConnectionOptions0.0072
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3134Options0.0265complex0.0105ConnectionOptions0.0075Config0.0074
+.Punctuation
+arrayName.Otherany0.5446any[]0.1551string[]0.0773complex0.0250number[]0.0176
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+filterName.Otherany0.8154boolean0.1033complex0.0110Filter0.0070void0.0046
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.5172Options0.0239complex0.0099number0.0074Config0.0062
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.2455Options0.0274ConnectionOptions0.0106complex0.0090Config0.0063
+.Punctuation
+filterName.Otherany0.5741boolean0.1364complex0.1071string0.0452number0.0144
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+returnTrueName.Otherboolean0.4417any0.4395string0.0359number0.0206void0.0066
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+thisArgName.Otherany0.9726boolean0.0052complex0.0036number0.0023void0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6547Options0.0186complex0.0141number0.0059boolean0.0054
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.5486Options0.0228complex0.0143Config0.0093Node0.0045
+.Punctuation
+thisArgName.Otherany0.9395boolean0.0128complex0.0114number0.0063string0.0052
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+objectName.Otherany0.9336object0.0139Object0.0116number0.0083complex0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rootName.Otherany0.8635string0.0474Node0.0181number0.0080boolean0.0077
+;Punctuation
+\n\n                Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.9213Object0.0243object0.0170complex0.0053number0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+filterName.Otherany0.8909boolean0.0304complex0.0222void0.0079Filter0.0066
+.Punctuation
+callName.Otherany0.9674void0.0055boolean0.0046string0.0040number0.0035
+(Punctuation
+thisArgName.Otherany0.9491object0.0049number0.0025Object0.0024{}0.0022
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.7913object0.0821Object0.0456complex0.0116number0.0074
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+arrayName.Otherany[]0.5629any0.1072string[]0.0250T[]0.0218number[]0.0162
+.Punctuation
+pushName.Othernumber0.9729any0.0236boolean0.0009complex0.0006void0.0005
+(Punctuation
+objectName.Otherany0.8351object0.0541Object0.0383number0.0105complex0.0081
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.6811Object0.0708object0.0533complex0.0130Node0.0105
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+followingName.Otherany0.4272complex0.2040boolean0.1666object0.0240number0.0159
+(Punctuation
+objectName.Otherany0.7532Object0.0829object0.0625complex0.0119number0.0094
+,Punctuation
+ Text.Whitespace
+{Punctuation
+rootName.Otherany0.5972string0.1773Node0.0217number0.0160boolean0.0064
+:Operator
+ Text.Whitespace
+rootKeyword.Typeany0.5810string0.2618Node0.0174number0.0118boolean0.0063
+}Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayName.Otherany[]0.4448any0.2797string[]0.0191T[]0.0118number[]0.0102
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Iterate over all children of the given object\n         *\n         * * `O(1)` for a single iteration\n         *\n         * @method childrenIterator\n         * @memberOf module:symbol-tree#\n         * @param {Object} parent\n         * @param {Object} [options]\n         * @param {Boolean} [options.reverse=false]\n         * @return {Object} An iterable iterator (ES6)\n         */Comment.Multiline
+\n        Text.Whitespace
+childrenIteratorName.Otherany0.4852boolean0.0258string0.0187Node0.0149number0.0119
+(Punctuation
+parentName.Otherany0.1222Node0.0991Element0.0189string0.0112HTMLDivElement0.0105
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3996Options0.0253Config0.0103number0.0077Node0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reverseName.Otherany0.6113boolean0.2293any[]0.0235number0.0151complex0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3716Options0.0261complex0.0260Config0.0164number0.0070
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.4617complex0.0279Options0.0175Config0.0160any[]0.0118
+.Punctuation
+reverseName.Otherany0.6699boolean0.1997number0.0288any[]0.0230string0.0094
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.6079any0.1878Node<Node>0.0092RowNode0.0065Element0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2854any0.1916number0.0247Element0.0192T0.0174
+(Punctuation
+parentName.Otherany0.5045Node0.1596string0.0137Element0.0136T0.0090
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6525Node0.0268string0.0140number0.0089Element0.0076
+ Text.Whitespace
+TreeIteratorName.Otherany0.9556number0.0049complex0.0038Node0.0037boolean0.0019
+(Punctuation
+\n                        Text.Whitespace
+thisKeyword
+,Punctuation
+\n                        Text.Whitespace
+parentName.Otherany0.3456Node0.1076string0.0266Node<Node>0.0186Element0.0147
+,Punctuation
+\n                        Text.Whitespace
+reverseName.Otherboolean0.4770any0.2986number0.0283any[]0.0205object0.0118
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+parentNode.lastChildName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+parentNode.firstChildKeyword.Type
+,Punctuation
+\n                        Text.Whitespace
+reverseName.Otherboolean0.5087any0.2314number0.0340any[]0.0127object0.0100
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+TreeIterator.PREVName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+TreeIterator.NEXTKeyword.Type
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Iterate over all the previous siblings of the given object. (in reverse tree order)\n         *\n         * * `O(1)` for a single iteration\n         *\n         * @method previousSiblingsIterator\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object} An iterable iterator (ES6)\n         */Comment.Multiline
+\n        Text.Whitespace
+previousSiblingsIteratorName.Otherany0.4178Node0.0188number0.0161object0.0150string0.0109
+(Punctuation
+objectName.Otherany0.8220object0.0698Object0.0207number0.0118Node0.0060
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.7394string0.0137Node0.0131object0.0078number0.0064
+ Text.Whitespace
+TreeIteratorName.Otherany0.9914complex0.0022void0.0015number0.0010string0.0007
+(Punctuation
+\n                        Text.Whitespace
+thisKeyword
+,Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.5431object0.1875Object0.1091number0.0167Node0.0136
+,Punctuation
+\n                        Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2554any0.1609Element0.0277number0.0269Function0.0252
+(Punctuation
+objectName.Otherany0.7028object0.0905Object0.0495Node0.0216complex0.0151
+)Punctuation
+.Punctuation
+previousSiblingName.OtherNode0.4767any0.0901Node<Node>0.0372Element0.0174number0.0139
+,Punctuation
+\n                        Text.Whitespace
+TreeIteratorName.Otherany0.8967Node0.0176complex0.0081number0.0035Element0.0019
+.Punctuation
+PREVName.Otherany0.9781number0.0080string0.0055boolean0.0010void0.0009
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Iterate over all the next siblings of the given object. (in tree order)\n         *\n         * * `O(1)` for a single iteration\n         *\n         * @method nextSiblingsIterator\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object} An iterable iterator (ES6)\n         */Comment.Multiline
+\n        Text.Whitespace
+nextSiblingsIteratorName.Otherany0.4192Node0.0200boolean0.0187number0.0133Range0.0129
+(Punctuation
+objectName.Otherany0.7466object0.0953Object0.0294number0.0190Node0.0102
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6709Node0.0240string0.0160HTMLDivElement0.0081object0.0081
+ Text.Whitespace
+TreeIteratorName.Otherany0.9884complex0.0028void0.0023number0.0011boolean0.0009
+(Punctuation
+\n                        Text.Whitespace
+thisKeyword
+,Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.5306object0.1669Object0.1316Node0.0173number0.0159
+,Punctuation
+\n                        Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2947any0.1834Element0.0295Function0.0235number0.0223
+(Punctuation
+objectName.Otherany0.6556object0.0966Object0.0708Node0.0305complex0.0164
+)Punctuation
+.Punctuation
+nextSiblingName.OtherNode0.8006any0.0580Node<Node>0.0110T0.0046Element0.0037
+,Punctuation
+\n                        Text.Whitespace
+TreeIteratorName.Otherany0.7167Node0.0655Node<Node>0.0038complex0.0026SourceFile0.0024
+.Punctuation
+NEXTName.Otherany0.9778string0.0138number0.0022void0.0019boolean0.0009
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Iterate over all inclusive ancestors of the given object\n         *\n         * * `O(1)` for a single iteration\n         *\n         * @method ancestorsIterator\n         * @memberOf module:symbol-tree#\n         * @param {Object} object\n         * @return {Object} An iterable iterator (ES6)\n         */Comment.Multiline
+\n        Text.Whitespace
+ancestorsIteratorName.Otherany0.5212string0.0151object0.0149Node0.0138boolean0.0128
+(Punctuation
+objectName.Otherany0.8205object0.0751Object0.0228number0.0098string0.0098
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6737string0.0180Node0.0159HTMLDivElement0.0107boolean0.0088
+ Text.Whitespace
+TreeIteratorName.Otherany0.9884complex0.0042void0.0014number0.0012boolean0.0009
+(Punctuation
+\n                        Text.Whitespace
+thisKeyword
+,Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.4610object0.2099Object0.1204complex0.0229number0.0135
+,Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.5373object0.1747Object0.0928complex0.0237number0.0154
+,Punctuation
+\n                        Text.Whitespace
+TreeIteratorName.Otherany0.7097Node0.0158complex0.0112number0.0066object0.0047
+.Punctuation
+PARENTName.Otherany0.3487number0.2877string0.1097boolean0.0217object0.0181
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Iterate over all descendants of the given object (in tree order).\n         *\n         * Where `n` is the amount of objects in the sub-tree of the given `root`:\n         *\n         * * `O(n)` (worst case for a single iteration)\n         * * `O(n)` (amortized, when completing the iterator)\n         *\n         * @method treeIterator\n         * @memberOf module:symbol-tree#\n         * @param {Object} root\n         * @param {Object} [options]\n         * @param {Boolean} [options.reverse=false]\n         * @return {Object} An iterable iterator (ES6)\n         */Comment.Multiline
+\n        Text.Whitespace
+treeIteratorName.Otherany0.3007boolean0.0761number0.0350Node0.0282string0.0199
+(Punctuation
+rootName.OtherNode0.1376any0.1130string0.0462HTMLElement0.0189Element0.0134
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1782Options0.0275ConnectionOptions0.0060number0.0058Node0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reverseName.Otherany0.4473boolean0.3741number0.0200any[]0.0138string0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.1853Options0.0299complex0.0132ConnectionOptions0.0119Config0.0089
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1896Options0.0237complex0.0138Config0.0107ConnectionOptions0.0080
+.Punctuation
+reverseName.Otherany0.5015boolean0.2845number0.0275any[]0.0231complex0.0097
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6571Node0.0174string0.0171boolean0.0110number0.0100
+ Text.Whitespace
+TreeIteratorName.Otherany0.9109complex0.0097boolean0.0093number0.0086Node0.0045
+(Punctuation
+\n                        Text.Whitespace
+thisKeyword
+,Punctuation
+\n                        Text.Whitespace
+rootName.Otherany0.2217Node0.1509string0.1415boolean0.0147HTMLElement0.0129
+,Punctuation
+\n                        Text.Whitespace
+reverseName.Otherboolean0.4470any0.2955any[]0.0126number0.0125object0.0103
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+lastInclusiveDescendantName.Otherany0.2694Node0.0506boolean0.0324number0.0305string0.0234
+(Punctuation
+rootName.Otherany0.2510Node0.1591string0.0796Element0.0280HTMLElement0.0151
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+rootName.Otherany0.4480string0.1636Node0.1003number0.0165boolean0.0126
+,Punctuation
+\n                        Text.Whitespace
+reverseName.Otherboolean0.5057any0.2692number0.0272object0.0127any[]0.0121
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+TreeIterator.PRECEDINGName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+TreeIterator.FOLLOWINGKeyword.Type
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Find the index of the given object (the number of preceding siblings).\n         *\n         * * `O(n)` where `n` is the amount of preceding siblings\n         * * `O(1)` (amortized, if the tree is not modified)\n         *\n         * @method index\n         * @memberOf module:symbol-tree#\n         * @param {Object} child\n         * @return {Number} The number of preceding siblings, or -1 if the object has no parent\n         */Comment.Multiline
+\n        Text.Whitespace
+indexName.Othernumber0.9292any0.0448string0.0091boolean0.0025void0.0009
+(Punctuation
+childName.OtherNode0.3426any0.2240string0.0330number0.0315Element0.0247
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+childNodeName.OtherNode0.2137any0.0727RowNode0.0142Component0.0104DocumentFragment0.0096
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2783any0.1038number0.0542Element0.0281T0.0164
+(Punctuation
+childName.OtherNode0.6377any0.0906Element0.0202View0.0120string0.0095
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.7158any0.1369Node<Node>0.0093Element0.0077RowNode0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3543any0.0905number0.0569Element0.0220T0.0102
+(Punctuation
+childNodeName.OtherNode0.2409any0.1621complex0.0251RowNode0.0194Component0.0130
+.Punctuation
+parentName.Otherany0.2465Node0.2342string0.0227Node<Node>0.0148never0.0111
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+parentNodeName.OtherNode0.7367any0.0831RowNode0.0100Element0.0097Node<Node>0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+// In principal, you could also find out the number of preceding siblingsComment.Single
+\n                        Text.Whitespace
+// for objects that do not have a parent. This method limits itself only toComment.Single
+\n                        Text.Whitespace
+// objects that have a parent because that lets us optimize more.Comment.Single
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+currentIndexName.Othernumber0.5944any0.3939complex0.0031string0.0029boolean0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+childNodeName.Otherany0.2806Node0.1566number0.0202RowNode0.0194complex0.0154
+.Punctuation
+getCachedIndexName.Otherany0.3383number0.3334boolean0.0577Node0.0423string0.0362
+(Punctuation
+parentNodeName.OtherNode0.6115any0.1837RowNode0.0097never0.0093Node<Node>0.0078
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+currentIndexName.Othernumber0.9106any0.0842boolean0.0018string0.0014complex0.0005
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+currentIndexName.Othernumber0.8462any0.1469string0.0020boolean0.0015complex0.0013
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+currentIndexName.Othernumber0.9116any0.0834complex0.0012string0.0011boolean0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+objectName.Otherany0.7531Node0.0538Object0.0356object0.0244number0.0143
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentNodeName.OtherNode0.5470any0.3226complex0.0154Node<Node>0.0076Element0.0054
+.Punctuation
+firstChildName.Otherany0.5146Node0.2921number0.0208boolean0.0166complex0.0121
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.5662any0.3196Node<Node>0.0088complex0.0055Element0.0052
+.Punctuation
+childIndexCachedUpToName.Otherany0.5897number0.1274Node0.1250boolean0.0413string0.0226
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+cachedUpToNodeName.Otherany0.4355Node0.3152number0.0405Element0.0135Node<Node>0.0097
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.4843any0.1589Element0.0208number0.0169View0.0080
+(Punctuation
+parentNodeName.OtherNode0.5012any0.3963Node<Node>0.0077complex0.0076Element0.0042
+.Punctuation
+childIndexCachedUpToName.Otherany0.6289Node0.1471number0.0929string0.0373boolean0.0066
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.7420Node0.1031object0.0269Object0.0232number0.0156
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cachedUpToNodeName.Otherany0.5152Node0.3104Element0.0149Node<Node>0.0075complex0.0074
+.Punctuation
+nextSiblingName.OtherNode0.6639any0.2448number0.0078complex0.0073Node<Node>0.0067
+;Punctuation
+\n                        Text.Whitespace
+currentIndexName.Othernumber0.5597any0.4062string0.0271complex0.0028Node0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cachedUpToNodeName.Otherany0.8942Node0.0479number0.0145complex0.0055string0.0026
+.Punctuation
+getCachedIndexName.Otherany0.6092number0.2592string0.0647Node0.0284complex0.0062
+(Punctuation
+parentNodeName.OtherNode0.6724any0.2102Node<Node>0.0063Element0.0056string0.0044
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.8459Object0.0342object0.0298number0.0169Node0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeName.OtherNode0.5067any0.1818Node<Node>0.0263Element0.0193RowNode0.0153
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.4155any0.1599Element0.0295number0.0209T0.0145
+(Punctuation
+objectName.Otherany0.7392object0.0661Object0.0318number0.0262Node0.0236
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+nodeName.Otherany0.3014Node0.2257Node<Node>0.0404RowNode0.0349TreeNode0.0138
+.Punctuation
+setCachedIndexName.Otherany0.4239Node0.1205number0.1077boolean0.0804void0.0377
+(Punctuation
+parentNodeName.OtherNode0.6165any0.1895Node<Node>0.0116RowNode0.0097never0.0075
+,Punctuation
+ Text.Whitespace
+currentIndexName.Othernumber0.7684any0.2193string0.0065complex0.0018boolean0.0010
+)Punctuation
+;Punctuation
+\n\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.8213number0.0402Object0.0319object0.0206Node0.0191
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+childName.Otherany0.3845Node0.3556string0.0433number0.0272Element0.0201
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+breakKeyword
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+++Operator
+currentIndexName.Othernumber0.8033any0.1908complex0.0025string0.0010boolean0.0008
+;Punctuation
+\n                        Text.Whitespace
+objectName.Otherany0.7492Object0.0572Node0.0497number0.0321object0.0278
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.5804Node0.2632complex0.0241Node<Node>0.0121Element0.0082
+.Punctuation
+nextSiblingName.OtherNode0.6892any0.2024complex0.0077number0.0072Node<Node>0.0054
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+parentNodeName.OtherNode0.6184any0.2502Node<Node>0.0076complex0.0066Element0.0056
+.Punctuation
+childIndexCachedUpToName.Otherany0.7474number0.0886Node0.0796string0.0110boolean0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+childName.OtherNode0.4587any0.3423number0.0274string0.0166Element0.0138
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+currentIndexName.Othernumber0.7204any0.2659complex0.0050string0.0035boolean0.0018
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Calculate the number of children.\n         *\n         * * `O(n)` where `n` is the amount of children\n         * * `O(1)` (amortized, if the tree is not modified)\n         *\n         * @method childrenCount\n         * @memberOf module:symbol-tree#\n         * @param {Object} parent\n         * @return {Number}\n         */Comment.Multiline
+\n        Text.Whitespace
+childrenCountName.Othernumber0.4345string0.3859boolean0.0532any0.0364complex0.0112
+(Punctuation
+parentName.OtherNode0.1782any0.1727Element0.0221HTMLElement0.0219string0.0179
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.6286any0.2355Node<Node>0.0094Element0.0094complex0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3683any0.2169number0.0289Element0.0218T0.0119
+(Punctuation
+parentName.Otherany0.4339Node0.2038string0.0194Element0.0182Node<Node>0.0135
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+parentNodeName.OtherNode0.5810any0.2808Element0.0092Node<Node>0.0063complex0.0045
+.Punctuation
+lastChildName.Otherany0.5041Node0.3201number0.0201boolean0.0141Element0.0097
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+indexName.Othernumber0.9505any0.0425string0.0024boolean0.0009complex0.0008
+(Punctuation
+parentNodeName.Otherany0.4403Node0.4335Element0.0069Node<Node>0.0054complex0.0032
+.Punctuation
+lastChildName.Otherany0.5799Node0.2633number0.0187boolean0.0138string0.0126
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Compare the position of an object relative to another object. A bit set is returned:\n         *\n         * <ul>\n         *     <li>DISCONNECTED : 1</li>\n         *     <li>PRECEDING : 2</li>\n         *     <li>FOLLOWING : 4</li>\n         *     <li>CONTAINS : 8</li>\n         *     <li>CONTAINED_BY : 16</li>\n         * </ul>\n         *\n         * The semantics are the same as compareDocumentPosition in DOM, with the exception that\n         * DISCONNECTED never occurs with any other bit.\n         *\n         * where `n` and `m` are the amount of ancestors of `left` and `right`;\n         * where `o` is the amount of children of the lowest common ancestor of `left` and `right`:\n         *\n         * * `O(n + m + o)` (worst case)\n         * * `O(n + m)` (amortized, if the tree is not modified)\n         *\n         * @method compareTreePosition\n         * @memberOf module:symbol-tree#\n         * @param {Object} left\n         * @param {Object} right\n         * @return {Number}\n         */Comment.Multiline
+\n        Text.Whitespace
+compareTreePositionName.Otherany0.3527boolean0.2884number0.1911string0.0432void0.0093
+(Punctuation
+leftName.Otherany0.5425number0.3798string0.0213boolean0.0075Node0.0048
+,Punctuation
+ Text.Whitespace
+rightName.Otherany0.3092number0.2013string0.0828Node0.0298object0.0162
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+// In DOM terms:Comment.Single
+\n                Text.Whitespace
+// left = reference / context objectComment.Single
+\n                Text.Whitespace
+// right = otherComment.Single
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+leftName.Otherany0.6681number0.2825string0.0197complex0.0105boolean0.0062
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+rightName.Otherany0.4651number0.3545string0.0781Object0.0092Node0.0056
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+/* jshint -W016 */Comment.Multiline
+\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+leftAncestorsName.Otherany[]0.6932any0.1627complex0.0107number[]0.0081any[][]0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+// inclusiveComment.Single
+\n                        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+leftAncestorName.Otherany0.7366number0.2002boolean0.0149complex0.0058Function0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+leftName.Otherany0.5990number0.3206boolean0.0195complex0.0172string0.0125
+;Punctuation
+\n\n                        Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+leftAncestorName.Otherany0.6516boolean0.0879number0.0764string0.0157Node0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+leftAncestorName.Otherany0.7461number0.1514string0.0229boolean0.0162complex0.0147
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+rightName.Otherany0.5907number0.2332string0.0680boolean0.0094complex0.0078
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+TreePositionName.Otherany0.9624complex0.0086number0.0042Node0.0021string0.0010
+.Punctuation
+CONTAINSName.Otherany0.8228number0.1261string0.0109complex0.0095boolean0.0089
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+TreePositionName.Otherany0.9739number0.0067complex0.0024string0.0013Node0.0010
+.Punctuation
+PRECEDINGName.Otherany0.7255number0.2019string0.0216boolean0.0205complex0.0026
+;Punctuation
+\n                                        Text.Whitespace
+// other is ancestor of referenceComment.Single
+\n                                Text.Whitespace
+}Punctuation
+\n\n                                Text.Whitespace
+leftAncestorsName.Otherany0.4813any[]0.3052number[]0.0147number0.0108complex0.0099
+.Punctuation
+pushName.Othernumber0.9627any0.0328void0.0011boolean0.0011complex0.0005
+(Punctuation
+leftAncestorName.Otherany0.7106number0.0901string0.0346void0.0066any[]0.0062
+)Punctuation
+;Punctuation
+\n                                Text.Whitespace
+leftAncestorName.Otherany0.7587complex0.0121Node0.0078Function0.0076number0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+parentName.Otherany0.1856Node0.0483Element0.0221View0.0132any[]0.0112
+(Punctuation
+leftAncestorName.Otherany0.6759any[]0.0374number0.0296string0.0144Node0.0072
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rightAncestorsName.Otherany[]0.8093any0.0627number[]0.0077any[][]0.0066complex0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+rightAncestorName.Otherany0.7064number0.1145boolean0.0533Function0.0107string0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rightName.Otherany0.6716number0.1325string0.0263complex0.0146boolean0.0128
+;Punctuation
+\n\n                        Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+rightAncestorName.Otherany0.6067number0.0817boolean0.0712string0.0152Node0.0086
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+rightAncestorName.Otherany0.6832number0.1569boolean0.0262complex0.0248string0.0186
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+leftName.Othernumber0.4804any0.4139string0.0264boolean0.0139complex0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+TreePositionName.Otherany0.9552complex0.0110number0.0045Node0.0017string0.0007
+.Punctuation
+CONTAINED_BYName.Otherany0.8402number0.1099complex0.0093boolean0.0080string0.0070
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+TreePositionName.Otherany0.9747number0.0070complex0.0024string0.0010Node0.0007
+.Punctuation
+FOLLOWINGName.Otherany0.7613number0.1788boolean0.0191string0.0130complex0.0021
+;Punctuation
+\n                                Text.Whitespace
+}Punctuation
+\n\n                                Text.Whitespace
+rightAncestorsName.Otherany0.4730any[]0.3318number[]0.0124number0.0117string[]0.0090
+.Punctuation
+pushName.Othernumber0.9599any0.0352boolean0.0014void0.0011string0.0005
+(Punctuation
+rightAncestorName.Otherany0.6739number0.1140string0.0226void0.0073boolean0.0063
+)Punctuation
+;Punctuation
+\n                                Text.Whitespace
+rightAncestorName.Otherany0.6554number0.0167Node0.0120complex0.0095Function0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+parentName.Otherany0.1837Node0.0467Element0.0257View0.0162HTMLElement0.0079
+(Punctuation
+rightAncestorName.Otherany0.6318number0.0333any[]0.0179Node0.0108string0.0093
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rootName.Otherany0.3444Node0.0471string0.0456complex0.0344number0.0308
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reverseArrayIndexName.Otherany0.4797number0.0516complex0.0489Node0.0252string0.0204
+(Punctuation
+leftAncestorsName.Otherany0.5607number0.0928string0.0226Node0.0165complex0.0079
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+rootName.Otherany0.6910string0.0688Node0.0326boolean0.0259number0.0131
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+rootName.Otherany0.6547string0.1525number0.0576boolean0.0246complex0.0114
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+reverseArrayIndexName.Otherany0.5327number0.3006string0.0613boolean0.0397complex0.0099
+(Punctuation
+rightAncestorsName.Otherany0.6882number0.1743string0.0381Node0.0065boolean0.0049
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+// note: unlike DOM, preceding / following is not set hereComment.Single
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+TreePositionName.Otherany0.9346complex0.0132number0.0023Node0.0020{}0.0012
+.Punctuation
+DISCONNECTEDName.Otherany0.7236number0.1564boolean0.0437string0.0310complex0.0035
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+// find the lowest common ancestorComment.Single
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+commonAncestorIndexName.Othernumber0.9917any0.0058boolean0.0009string0.0005void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ancestorsMinLengthName.Othernumber0.9871any0.0063boolean0.0035string0.0010void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9998number0.0000ClientRect0.0000PointerCoordinates0.0000any0.0000
+.Punctuation
+minName.Othernumber0.9969any0.0011complex0.0004boolean0.0004string0.0002
+(Punctuation
+leftAncestorsName.Otherany0.7107any[]0.0413number[]0.0323number0.0169string[]0.0128
+.Punctuation
+lengthName.Othernumber0.8637any0.1341string0.0005void0.0004boolean0.0003
+,Punctuation
+ Text.Whitespace
+rightAncestorsName.Otherany0.7244any[]0.0592number0.0396number[]0.0329string[]0.0238
+.Punctuation
+lengthName.Othernumber0.9494any0.0491string0.0005void0.0003boolean0.0003
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9976any0.0019boolean0.0002string0.0001void0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9940any0.0052boolean0.0003string0.0002void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+ancestorsMinLengthName.Othernumber0.9829any0.0149string0.0007boolean0.0006void0.0001
+;Punctuation
+ Text.Whitespace
+++Operator
+iName.Othernumber0.9954any0.0039boolean0.0003string0.0002void0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+leftAncestorName.Otherany0.5055number0.3695boolean0.0200string0.0182any[]0.0096
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+reverseArrayIndexName.Otherany0.4175number0.3923string0.0335complex0.0199any[]0.0178
+(Punctuation
+leftAncestorsName.Otherany0.5173number0.4021string0.0230boolean0.0068any[]0.0033
+,Punctuation
+ Text.Whitespace
+iName.Othernumber0.9851any0.0129boolean0.0008string0.0004void0.0002
+)Punctuation
+;Punctuation
+\n                        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rightAncestorName.Otherany0.4432number0.3993boolean0.0540string0.0351void0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reverseArrayIndexName.Otherany0.4264number0.3357string0.0565boolean0.0281any[]0.0274
+(Punctuation
+rightAncestorsName.Otherany0.5277number0.3734string0.0421boolean0.0110any[]0.0041
+,Punctuation
+ Text.Whitespace
+iName.Othernumber0.9839any0.0136boolean0.0010string0.0007void0.0002
+)Punctuation
+;Punctuation
+\n\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+leftAncestorName.Othernumber0.6823any0.2492string0.0318boolean0.0256complex0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+rightAncestorName.Othernumber0.6789any0.2510string0.0372boolean0.0160void0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+breakKeyword
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+commonAncestorIndexName.Othernumber0.8513any0.1100string0.0169boolean0.0093void0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iName.Othernumber0.9807any0.0164boolean0.0009string0.0008void0.0002
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+// indexes within the common ancestorComment.Single
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+leftIndexName.Othernumber0.9435any0.0524string0.0026complex0.0005boolean0.0003
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+indexName.Othernumber0.9831any0.0148string0.0008complex0.0004boolean0.0002
+(Punctuation
+reverseArrayIndexName.Othernumber0.7687any0.1730string0.0244complex0.0047any[]0.0024
+(Punctuation
+leftAncestorsName.Othernumber0.7738any0.1912string0.0202boolean0.0011complex0.0004
+,Punctuation
+ Text.Whitespace
+commonAncestorIndexName.Othernumber0.9361any0.0576string0.0046boolean0.0006complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rightIndexName.Othernumber0.9082any0.0848string0.0053complex0.0004void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+indexName.Othernumber0.9829any0.0146string0.0008complex0.0004boolean0.0003
+(Punctuation
+reverseArrayIndexName.Othernumber0.8306any0.1121string0.0329complex0.0038boolean0.0032
+(Punctuation
+rightAncestorsName.Othernumber0.8317any0.1345string0.0160boolean0.0021complex0.0010
+,Punctuation
+ Text.Whitespace
+commonAncestorIndexName.Othernumber0.9598any0.0345string0.0037boolean0.0011complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+rightIndexName.Othernumber0.9105any0.0834string0.0032boolean0.0006complex0.0006
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+leftIndexName.Othernumber0.9275any0.0632string0.0023boolean0.0016complex0.0012
+\n                        Text.Whitespace
+?Operator
+ Text.Whitespace
+TreePosition.PRECEDINGName.Other
+\n                        Text.Whitespace
+:Operator
+ Text.Whitespace
+TreePosition.FOLLOWINGKeyword.Type
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Remove the object from this tree.\n         * Has no effect if already removed.\n         *\n         * * `O(1)`\n         *\n         * @method remove\n         * @memberOf module:symbol-tree#\n         * @param {Object} removeObject\n         * @return {Object} removeObject\n         */Comment.Multiline
+\n        Text.Whitespace
+removeName.Othervoid0.4599number0.0817any0.0780boolean0.0462complex0.0241
+(Punctuation
+removeObjectName.Otherany0.5097number0.2372string0.0441boolean0.0324Node0.0058
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+removeNodeName.Otherany0.8086Node0.0178number0.0141Function0.0067void0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3284Node0.1039number0.0577Element0.0206T0.0097
+(Punctuation
+removeObjectName.Otherany0.8208number0.0763Node0.0151string0.0135boolean0.0037
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.6236any0.1705Element0.0113Node<Node>0.0109RowNode0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2960any0.0930Element0.0272number0.0124T0.0102
+(Punctuation
+removeNodeName.Otherany0.8900Node0.0238complex0.0053Function0.0019void0.0019
+.Punctuation
+parentName.Otherany0.3685Node0.1840Node<Node>0.0146Element0.0134ViewBase0.0100
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+prevNodeName.Otherany0.2660Node0.1594Element0.0333number0.0221Node<Node>0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.2955any0.1143Element0.0294number0.0095Component0.0084
+(Punctuation
+removeNodeName.Otherany0.9450Node0.0162Function0.0022complex0.0020void0.0015
+.Punctuation
+previousSiblingName.OtherNode0.4576any0.2450Node<Node>0.0257number0.0169string0.0138
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextNodeName.OtherNode0.6256Node<Node>0.0747any0.0104TreeModel0.0041Range0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.5134any0.0506Element0.0206number0.0071Node<Node>0.0066
+(Punctuation
+removeNodeName.Otherany0.7191Node0.1416complex0.0051Function0.0038Element0.0031
+.Punctuation
+nextSiblingName.OtherNode0.8427any0.0573Node<Node>0.0091T0.0027Element0.0024
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.8006any0.0947Node<Node>0.0111Element0.0051RowNode0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.7243any0.1859Node<Node>0.0084Element0.0051RowNode0.0028
+.Punctuation
+firstChildName.Otherany0.4478Node0.4295number0.0210boolean0.0092Node<Node>0.0059
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+removeObjectName.Otherany0.6687Node0.1143number0.1079string0.0497boolean0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+parentNodeName.OtherNode0.8016any0.1209Node<Node>0.0080Element0.0043RowNode0.0028
+.Punctuation
+firstChildName.OtherNode0.5735any0.3279Node<Node>0.0070Element0.0035number0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+removeNodeName.Otherany0.7154Node0.2082complex0.0050Element0.0024View0.0022
+.Punctuation
+nextSiblingName.OtherNode0.8083any0.1119Node<Node>0.0083T0.0026Element0.0024
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.7139any0.2067Node<Node>0.0091Element0.0049RowNode0.0021
+.Punctuation
+lastChildName.Otherany0.4475Node0.4343number0.0257string0.0096boolean0.0069
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+removeObjectName.Otherany0.6549Node0.1298number0.0894string0.0594boolean0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+parentNodeName.OtherNode0.8073any0.1059Node<Node>0.0116Element0.0042RowNode0.0022
+.Punctuation
+lastChildName.OtherNode0.5943any0.2912Function0.0081boolean0.0080Node<Node>0.0075
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+removeNodeName.Otherany0.6991Node0.1900Function0.0082Node<Node>0.0039void0.0036
+.Punctuation
+previousSiblingName.Otherany0.4481Node0.3373Node<Node>0.0256Function0.0140string0.0104
+;Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prevNodeName.Otherany0.6320boolean0.0977Node0.0729number0.0270string0.0120
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+prevNodeName.OtherNode0.4303any0.3326Element0.0169Node<Node>0.0113View0.0047
+.Punctuation
+nextSiblingName.OtherNode0.7583any0.1191Node<Node>0.0133Function0.0054Element0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+removeNodeName.Otherany0.7031Node0.1877complex0.0061Function0.0057View0.0036
+.Punctuation
+nextSiblingName.OtherNode0.6497any0.2438Node<Node>0.0100T0.0043Function0.0042
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextNodeName.OtherNode0.6668Node<Node>0.0737any0.0369TreeModel0.0053View0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+nextNodeName.OtherNode0.6906Node<Node>0.0963any0.0298View0.0037TreeModel0.0032
+.Punctuation
+previousSiblingName.OtherNode0.5655any0.1016Node<Node>0.0792Function0.0134Element0.0110
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+removeNodeName.Otherany0.7609Node0.1319Function0.0091Node<Node>0.0050complex0.0043
+.Punctuation
+previousSiblingName.OtherNode0.4792any0.2275Node<Node>0.0446Function0.0139Element0.0083
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+removeNodeName.Otherany0.6875Node0.0872Function0.0108complex0.0097void0.0091
+.Punctuation
+parentName.OtherNode0.4283any0.2130Node<Node>0.0386ViewBase0.0100Function0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+removeNodeName.Otherany0.7959Node0.0704Function0.0140complex0.0047Node<Node>0.0041
+.Punctuation
+previousSiblingName.OtherNode0.4419any0.2924Node<Node>0.0306Function0.0280number0.0076
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+removeNodeName.Otherany0.7597Node0.0898Function0.0093complex0.0062Node<Node>0.0052
+.Punctuation
+nextSiblingName.OtherNode0.6770any0.2106Node<Node>0.0109Function0.0096number0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+removeNodeName.Otherany0.8197Node0.0257complex0.0096Function0.0032SourceFile0.0023
+.Punctuation
+cachedIndexName.Othernumber0.8549any0.1349boolean0.0036string0.0012void0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+;Punctuation
+\n                Text.Whitespace
+removeNodeName.Otherany0.5365Node0.0235complex0.0160SourceFile0.0063Range0.0058
+.Punctuation
+cachedIndexVersionName.Othernumber0.8733any0.1111boolean0.0091string0.0008void0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+NaNKeyword.Constantnumber0.9929any0.0053boolean0.0008string0.0003number[]0.0001
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.7032any0.2103Element0.0050Node<Node>0.0048never0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+parentNodeName.OtherNode0.5194any0.3738Node<Node>0.0047Element0.0039complex0.0036
+.Punctuation
+childrenChangedName.Otherany0.6074void0.2011number0.0387Node0.0351boolean0.0158
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+removeObjectName.Otherany0.8345number0.0351boolean0.0305Node0.0177string0.0085
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Insert the given object before the reference object.\n         * `newObject` is now the previous sibling of `referenceObject`.\n         *\n         * * `O(1)`\n         *\n         * @method insertBefore\n         * @memberOf module:symbol-tree#\n         * @param {Object} referenceObject\n         * @param {Object} newObject\n         * @throws {Error} If the newObject is already present in this SymbolTree\n         * @return {Object} newObject\n         */Comment.Multiline
+\n        Text.Whitespace
+insertBeforeName.OtherT0.3681any0.2495void0.1356Node0.0406number0.0169
+(Punctuation
+referenceObjectName.Otherany0.6897Node0.0819number0.0268string0.0124Element0.0107
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.8562string0.0288Node0.0227number0.0092T0.0090
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+referenceNodeName.Otherany0.4888Node0.1244number0.0285Element0.0279HTMLElement0.0110
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.2867Node0.2166Element0.0320number0.0267T0.0248
+(Punctuation
+referenceObjectName.Otherany0.8300Node0.0356number0.0288string0.0105Element0.0060
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+prevNodeName.Otherany0.5062Node0.1154number0.0321Element0.0312Node<Node>0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.2607Node0.2348Element0.0418Function0.0160T0.0150
+(Punctuation
+referenceNodeName.Otherany0.8859Node0.0430Element0.0053complex0.0027Function0.0015
+.Punctuation
+previousSiblingName.OtherNode0.4709any0.2667Node<Node>0.0262string0.0157Function0.0134
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newNodeName.Otherany0.3753Node0.3310Node<Node>0.0239complex0.0104Element0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3012Node0.2600Element0.0269number0.0260Function0.0217
+(Punctuation
+newObjectName.Otherany0.9032Node0.0180T0.0105string0.0095complex0.0073
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.4912any0.3846Node<Node>0.0078Element0.0077T0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3654Node0.3129Element0.0216number0.0133T0.0132
+(Punctuation
+referenceNodeName.Otherany0.8591Node0.0356complex0.0046Element0.0035View0.0018
+.Punctuation
+parentName.Otherany0.4425Node0.1723Node<Node>0.0149string0.0144ViewBase0.0112
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+newNodeName.Otherany0.6051Node0.2168complex0.0181Node<Node>0.0181TreeModel0.0056
+.Punctuation
+isAttachedName.Otherany0.9539boolean0.0142number0.0104Node0.0030complex0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+throwKeywordany0.8522Error0.1051ErrorConstructor0.0091string0.0039complex0.0036
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9997any0.0000Error0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+'Given object is already present in this SymbolTree, remove it first'Literal.String.Single
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+newNodeName.Otherany0.3857Node0.1661Node<Node>0.0297TreeModel0.0160Component0.0115
+.Punctuation
+parentName.OtherNode0.1935any0.1422Node<Node>0.0615never0.0203ViewBase0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceNodeName.Otherany0.7033Node0.0633complex0.0127Node<Node>0.0109Element0.0070
+.Punctuation
+parentName.Otherany0.2047Node0.1705Node<Node>0.0514never0.0239ViewBase0.0154
+;Punctuation
+\n                Text.Whitespace
+newNodeName.Otherany0.3269Node0.2691Node<Node>0.0492TreeModel0.0120Component0.0104
+.Punctuation
+previousSiblingName.OtherNode0.3749any0.3013Node<Node>0.0564T0.0124Element0.0121
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceNodeName.Otherany0.6734Node0.1525Node<Node>0.0135complex0.0096Element0.0079
+.Punctuation
+previousSiblingName.OtherNode0.3761any0.3654Node<Node>0.0375Function0.0102T0.0096
+;Punctuation
+\n                Text.Whitespace
+newNodeName.OtherNode0.4097any0.2525Node<Node>0.0452TreeModel0.0083Component0.0079
+.Punctuation
+nextSiblingName.OtherNode0.5869any0.2591Node<Node>0.0126T0.0095Function0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.7492Node0.1040number0.0163Function0.0108T0.0100
+;Punctuation
+\n                Text.Whitespace
+referenceNodeName.Otherany0.8248Node0.0894complex0.0088Node<Node>0.0046Function0.0020
+.Punctuation
+previousSiblingName.Otherany0.5325Node0.2471Node<Node>0.0267complex0.0157Function0.0124
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.7809T0.0505Node0.0354complex0.0163string0.0117
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prevNodeName.Otherany0.6670boolean0.1757number0.0205Node0.0194string0.0134
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+prevNodeName.Otherany0.8297Node0.0614complex0.0053Node<Node>0.0035Element0.0032
+.Punctuation
+nextSiblingName.Otherany0.5701Node0.3010T0.0131complex0.0121Function0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8360T0.0409Node0.0221complex0.0182string0.0101
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.5271any0.3420Node<Node>0.0126Element0.0074never0.0050
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+parentNodeName.OtherNode0.6080any0.2782Node<Node>0.0103complex0.0073Element0.0060
+.Punctuation
+firstChildName.Otherany0.6662Node0.1999number0.0288boolean0.0130complex0.0087
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.7250number0.1181string0.0589Node0.0434boolean0.0064
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+parentNodeName.Otherany0.4665Node0.4312Node<Node>0.0073complex0.0071T0.0048
+.Punctuation
+firstChildName.Otherany0.8362Node0.0817complex0.0106number0.0090boolean0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8694T0.0238string0.0163Node0.0161complex0.0097
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.6001any0.2752Node<Node>0.0088Element0.0081never0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+parentNodeName.Otherany0.4387Node0.4207Node<Node>0.0079Element0.0057complex0.0040
+.Punctuation
+childrenChangedName.Otherany0.7122void0.1275number0.0272Node0.0247boolean0.0204
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newObjectName.Otherany0.8439complex0.0197T0.0169Node0.0139string0.0106
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Insert the given object after the reference object.\n         * `newObject` is now the next sibling of `referenceObject`.\n         *\n         * * `O(1)`\n         *\n         * @method insertAfter\n         * @memberOf module:symbol-tree#\n         * @param {Object} referenceObject\n         * @param {Object} newObject\n         * @throws {Error} If the newObject is already present in this SymbolTree\n         * @return {Object} newObject\n         */Comment.Multiline
+\n        Text.Whitespace
+insertAfterName.Othervoid0.4826any0.3235number0.0192boolean0.0152complex0.0146
+(Punctuation
+referenceObjectName.Otherany0.8036number0.0498string0.0411Node0.0104boolean0.0085
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.8468string0.0409Node0.0121object0.0103number0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+referenceNodeName.Otherany0.4936Node0.0796number0.0331Element0.0278HTMLElement0.0106
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3067Node0.2017Element0.0368number0.0285T0.0136
+(Punctuation
+referenceObjectName.Otherany0.8311number0.0361Node0.0331string0.0160boolean0.0054
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextNodeName.OtherNode0.6151Node<Node>0.0575any0.0202Range0.0047Component0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3897any0.1260Element0.0342number0.0105T0.0098
+(Punctuation
+referenceNodeName.Otherany0.6745Node0.1923Element0.0107View0.0032complex0.0030
+.Punctuation
+nextSiblingName.OtherNode0.7838any0.1173Node<Node>0.0074Element0.0036T0.0035
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newNodeName.Otherany0.4181Node0.3518Node<Node>0.0171complex0.0108Element0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3151any0.2616Element0.0270number0.0180T0.0172
+(Punctuation
+newObjectName.Otherany0.9082Node0.0199string0.0099complex0.0076T0.0071
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentNodeName.OtherNode0.5224any0.3642Element0.0076Node<Node>0.0065RowNode0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.OtherNode0.3474any0.3300Element0.0244number0.0110T0.0105
+(Punctuation
+referenceNodeName.Otherany0.8561Node0.0386complex0.0048Element0.0036View0.0018
+.Punctuation
+parentName.Otherany0.4433Node0.1810string0.0166Node<Node>0.0132Element0.0104
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+newNodeName.Otherany0.5782Node0.2465complex0.0182Node<Node>0.0173RowNode0.0050
+.Punctuation
+isAttachedName.Otherany0.9574boolean0.0128number0.0098Node0.0029complex0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+throwKeywordany0.8355Error0.1239ErrorConstructor0.0082string0.0040complex0.0033
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9997Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+'Given object is already present in this SymbolTree, remove it first'Literal.String.Single
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+newNodeName.Otherany0.3587Node0.2002Node<Node>0.0313TreeModel0.0150Component0.0107
+.Punctuation
+parentName.OtherNode0.2134any0.1389Node<Node>0.0600never0.0198ViewBase0.0179
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceNodeName.Otherany0.7085Node0.0703complex0.0136Node<Node>0.0101View0.0079
+.Punctuation
+parentName.OtherNode0.2095any0.1995Node<Node>0.0456never0.0212ViewBase0.0179
+;Punctuation
+\n                Text.Whitespace
+newNodeName.OtherNode0.3610any0.2339Node<Node>0.0525TreeModel0.0120Component0.0097
+.Punctuation
+previousSiblingName.OtherNode0.4276any0.2285Node<Node>0.0531Element0.0143Function0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.5823Node0.1927number0.0211Node<Node>0.0140Element0.0108
+;Punctuation
+\n                Text.Whitespace
+newNodeName.OtherNode0.5034any0.2169Node<Node>0.0463Element0.0096TreeModel0.0070
+.Punctuation
+nextSiblingName.OtherNode0.7002any0.1782Node<Node>0.0121T0.0056Element0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceNodeName.Otherany0.5483Node0.3229complex0.0098Element0.0086Node<Node>0.0074
+.Punctuation
+nextSiblingName.OtherNode0.6985any0.2020Node<Node>0.0077T0.0069complex0.0067
+;Punctuation
+\n                Text.Whitespace
+referenceNodeName.Otherany0.7979Node0.1242complex0.0103Node<Node>0.0036Element0.0016
+.Punctuation
+nextSiblingName.Otherany0.5006Node0.3902complex0.0145Function0.0078Node<Node>0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8570Node0.0276T0.0262complex0.0198string0.0125
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextNodeName.OtherNode0.6180any0.0589Node<Node>0.0540complex0.0060TreeModel0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+nextNodeName.OtherNode0.6251Node<Node>0.0825any0.0472complex0.0064TreeModel0.0053
+.Punctuation
+previousSiblingName.OtherNode0.3861any0.2443Node<Node>0.0654complex0.0205Function0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.7703Node0.0460T0.0273complex0.0178string0.0131
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.5893any0.3060Node<Node>0.0096Element0.0075never0.0030
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+parentNodeName.OtherNode0.7128any0.1909Node<Node>0.0088Element0.0067complex0.0042
+.Punctuation
+lastChildName.Otherany0.5193Node0.3298number0.0361string0.0176boolean0.0108
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.7005Node0.0915number0.0744string0.0668boolean0.0056
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+parentNodeName.OtherNode0.5736any0.3308Node<Node>0.0065complex0.0046Element0.0038
+.Punctuation
+lastChildName.Otherany0.6553Node0.2360T0.0114complex0.0104boolean0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8806Node0.0246T0.0170string0.0124complex0.0102
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentNodeName.OtherNode0.6598any0.2199Node<Node>0.0069Element0.0064never0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+parentNodeName.Otherany0.4625Node0.4142Node<Node>0.0070complex0.0047Element0.0038
+.Punctuation
+childrenChangedName.Otherany0.7243void0.1345Node0.0264number0.0197boolean0.0154
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newObjectName.Otherany0.8727complex0.0184Node0.0140string0.0121T0.0107
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Insert the given object as the first child of the given reference object.\n         * `newObject` is now the first child of `referenceObject`.\n         *\n         * * `O(1)`\n         *\n         * @method prependChild\n         * @memberOf module:symbol-tree#\n         * @param {Object} referenceObject\n         * @param {Object} newObject\n         * @throws {Error} If the newObject is already present in this SymbolTree\n         * @return {Object} newObject\n         */Comment.Multiline
+\n        Text.Whitespace
+prependChildName.Otherany0.5831boolean0.0851string0.0483complex0.0332void0.0308
+(Punctuation
+referenceObjectName.Otherany0.8003string0.0531number0.0390Node0.0169boolean0.0083
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.8448string0.0406Node0.0185object0.0078number0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+referenceNodeName.Otherany0.5600Node0.0913number0.0287Element0.0167string0.0090
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3394Node0.1974Element0.0253number0.0235Function0.0150
+(Punctuation
+referenceObjectName.Otherany0.8903Node0.0234number0.0147string0.0109boolean0.0033
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newNodeName.Otherany0.5230Node0.2281Node<Node>0.0158complex0.0141Element0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.3132Node0.2724Element0.0252T0.0174number0.0124
+(Punctuation
+newObjectName.Otherany0.9000string0.0151Node0.0133complex0.0084T0.0078
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+newNodeName.Otherany0.6260Node0.1862complex0.0261Node<Node>0.0163TreeModel0.0039
+.Punctuation
+isAttachedName.Otherany0.9526boolean0.0179number0.0099complex0.0042string0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+throwKeywordany0.8390Error0.1155ErrorConstructor0.0102complex0.0042string0.0042
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9997any0.0000Error0.0000LogLevel.Error0.0000any[]0.0000
+(Punctuation
+'Given object is already present in this SymbolTree, remove it first'Literal.String.Single
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+referenceNodeName.Otherany0.7939complex0.0271Node0.0138boolean0.0085Element0.0037
+.Punctuation
+hasChildrenName.Otherboolean0.9642any0.0275number0.0019string0.0018complex0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+thisKeyword
+.Punctuation
+insertBeforeName.OtherT0.6024any0.1621void0.1248complex0.0114Promise<void>0.0089
+(Punctuation
+referenceNodeName.Otherany0.7428Node0.0848Element0.0122complex0.0074HTMLElement0.0034
+.Punctuation
+firstChildName.Otherany0.6714Node0.1770Component0.0089T0.0086number0.0060
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.7884string0.0475Node0.0217T0.0197object0.0128
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+newNodeName.Otherany0.5135Node0.2014complex0.0159Node<Node>0.0099Component0.0057
+.Punctuation
+parentName.Otherany0.4982Node0.1532string0.0133Node<Node>0.0117ViewBase0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.7938Node0.0391string0.0152number0.0130complex0.0087
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.8948Node0.0283complex0.0130Element0.0017Function0.0013
+.Punctuation
+firstChildName.Otherany0.8941Node0.0430complex0.0102number0.0057string0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8848T0.0186complex0.0129Node0.0116string0.0115
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.8775Node0.0359complex0.0059T0.0026Element0.0024
+.Punctuation
+lastChildName.Otherany0.7693Node0.1086T0.0197complex0.0136number0.0110
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8198T0.0441string0.0159complex0.0157Node0.0141
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.9039Node0.0131complex0.0020T0.0015number0.0013
+.Punctuation
+childrenChangedName.Otherany0.7470void0.1324number0.0311boolean0.0120string0.0117
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newObjectName.Otherany0.8236T0.0428complex0.0168string0.0161Node0.0117
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/**\n         * Insert the given object as the last child of the given reference object.\n         * `newObject` is now the last child of `referenceObject`.\n         *\n         * * `O(1)`\n         *\n         * @method appendChild\n         * @memberOf module:symbol-tree#\n         * @param {Object} referenceObject\n         * @param {Object} newObject\n         * @throws {Error} If the newObject is already present in this SymbolTree\n         * @return {Object} newObject\n         */Comment.Multiline
+\n        Text.Whitespace
+appendChildName.OtherT0.7157any0.1406void0.0291complex0.0123number0.0086
+(Punctuation
+referenceObjectName.Otherany0.6342Node0.0374number0.0234string0.0107object0.0061
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.8623string0.0177Node0.0145object0.0065T0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+referenceNodeName.Otherany0.5991Node0.0556number0.0225Element0.0110HTMLElement0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.4289Node0.1392number0.0213Element0.0162Function0.0118
+(Punctuation
+referenceObjectName.Otherany0.9066number0.0169Node0.0138string0.0087symbol0.0026
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newNodeName.Otherany0.6396Node0.1463Node<Node>0.0161complex0.0141number0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nodeName.Otherany0.4055Node0.2122number0.0153T0.0153Element0.0145
+(Punctuation
+newObjectName.Otherany0.9148string0.0106Node0.0094complex0.0069T0.0060
+)Punctuation
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+newNodeName.Otherany0.7086Node0.1230complex0.0235Node<Node>0.0165RowNode0.0039
+.Punctuation
+isAttachedName.Otherany0.9618boolean0.0128number0.0097complex0.0031string0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+throwKeywordany0.8568Error0.1021ErrorConstructor0.0097complex0.0035string0.0034
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9998any0.0000Error0.0000LogLevel.Error0.0000complex0.0000
+(Punctuation
+'Given object is already present in this SymbolTree, remove it first'Literal.String.Single
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+referenceNodeName.Otherany0.8276complex0.0170Node0.0082boolean0.0047Element0.0021
+.Punctuation
+hasChildrenName.Otherboolean0.9640any0.0283number0.0019string0.0015complex0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+thisKeyword
+.Punctuation
+insertAfterName.Othervoid0.7401any0.1460complex0.0290Promise<void>0.0073number0.0067
+(Punctuation
+referenceNodeName.Otherany0.6703Node0.0817Element0.0108complex0.0039void0.0034
+.Punctuation
+lastChildName.Otherany0.5221Node0.2710boolean0.0177number0.0177string0.0117
+,Punctuation
+ Text.Whitespace
+newObjectName.Otherany0.8142string0.0438Node0.0186T0.0186object0.0102
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n                Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+newNodeName.Otherany0.5194Node0.1614complex0.0138Node<Node>0.0131TreeModel0.0064
+.Punctuation
+parentName.Otherany0.4909Node0.1241Node<Node>0.0133T0.0115string0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+referenceObjectName.Otherany0.7967Node0.0300string0.0138number0.0127complex0.0075
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.8920Node0.0214complex0.0107Node<Node>0.0014Element0.0012
+.Punctuation
+firstChildName.Otherany0.9053Node0.0285complex0.0084number0.0060string0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8742T0.0190string0.0121complex0.0105Node0.0082
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.8664Node0.0231complex0.0065object0.0031T0.0027
+.Punctuation
+lastChildName.Otherany0.8052Node0.0650T0.0159complex0.0145number0.0124
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newObjectName.Otherany0.8100T0.0358complex0.0169string0.0136Node0.0107
+;Punctuation
+\n                        Text.Whitespace
+referenceNodeName.Otherany0.8940Node0.0075complex0.0030number0.0013object0.0012
+.Punctuation
+childrenChangedName.Otherany0.7045void0.1645number0.0302boolean0.0112complex0.0097
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newObjectName.Otherany0.8283string0.0222{}0.0147complex0.0128T0.0128
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+SymbolTreeName.Otherany0.7899number0.0516string0.0314void0.0141boolean0.0092
+;Punctuation
+\nText.Whitespace
+SymbolTreeName.Otherany0.8252complex0.0085Node0.0031number0.0016string0.0012
+.Punctuation
+TreePositionName.Otherany0.5906boolean0.0929string0.0737number0.0540void0.0167
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+TreePositionName.Otherany0.5006number0.0704boolean0.0676string0.0623void0.0113
+;Punctuation
+\nText.Whitespace

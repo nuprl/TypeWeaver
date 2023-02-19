@@ -1,0 +1,82 @@
+importKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.2283complex0.0781string0.0763number0.0736boolean0.0432
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseFlatten.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used as references for various `Number` constants. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+INFINITYName.Othernumber0.9639any0.0201string0.0048boolean0.0020complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * Recursively flattens `array`.\n *\n * @since 3.0.0\n * @category Array\n * @param {Array} array The array to flatten.\n * @returns {Array} Returns the new flattened array.\n * @see flatMap, flatMapDeep, flatMapDepth, flatten, flattenDepth\n * @example\n *\n * flattenDeep([1, [2, [3, [4]], 5]])\n * // => [1, 2, 3, 4, 5]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flattenDeepName.Othernumber0.5114any0.1754string0.1318boolean0.0474complex0.0402
+(Punctuation
+arrayName.Otherany0.5356number0.1038string0.0910any[]0.0736number[]0.0555
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.6471any0.3349string0.0112boolean0.0013complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.5680number0.2493any[]0.0591number[]0.0497string0.0158
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+lengthName.Othernumber0.8215any0.1600string0.0107boolean0.0021complex0.0011
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+baseFlattenName.Otherany0.3805number0.2767any[]0.0615complex0.0528number[]0.0294
+(Punctuation
+arrayName.Othernumber0.2464any0.2278any[]0.2163number[]0.1395string[]0.0279
+,Punctuation
+ Text.Whitespace
+INFINITYName.Othernumber0.5855any0.1453any[]0.0588number[]0.0439undefined[]0.0170
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flattenDeepName.Otherany0.4109number0.0538complex0.0224string0.0174any[]0.0154
+\nText.Whitespace

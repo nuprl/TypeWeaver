@@ -1,0 +1,110 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns a display name for a function\n *\n * @param  {Function} func\n * @returns {string}\n */Comment.Multiline
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+functionNameName.Otherstring0.9150any0.0758boolean0.0022void0.0017number0.0014
+(Punctuation
+funcName.Otherany0.4505string0.2106Function0.1318boolean0.0708String0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+funcName.Otherany0.4816string0.1749boolean0.1553Function0.0800never0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+funcName.Otherany0.4850Function0.0453string0.0219never0.0117boolean0.0096
+.Punctuation
+displayNameName.Otherany0.6458string0.3468complex0.0015number0.0007boolean0.0007
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+funcName.Otherany0.6061Function0.0587string0.0565boolean0.0507void0.0083
+.Punctuation
+nameName.Otherany0.6535string0.3381complex0.0021boolean0.0014String0.0006
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+// Use function decomposition as a last resort to get functionComment.Single
+\n            Text.Whitespace
+// name. Does not rely on function decomposition to work - if itComment.Single
+\n            Text.Whitespace
+// doesn't debugging will be slightly less informativeComment.Single
+\n            Text.Whitespace
+// (i.e. toString will say 'spy' rather than 'myFunc').Comment.Single
+\n            Text.Whitespace
+(Punctuation
+StringName.BuiltinStringConstructor0.9945String0.0025string0.0002any0.0001undefined0.0001
+(Punctuation
+funcName.Otherany0.4020string0.3224Function0.0936boolean0.0650String0.0111
+)Punctuation
+.Punctuation
+matchName.Otherany0.7174complex0.2731void0.0022boolean0.0014string0.0010
+(Punctuation
+/function ([^\s(]+)/Literal.String.Regex
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+)Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9946string0.0038number0.0007complex0.0003Error0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// Stringify may fail and we might get an exception, as a last-lastComment.Single
+\n        Text.Whitespace
+// resort fall back to empty string.Comment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

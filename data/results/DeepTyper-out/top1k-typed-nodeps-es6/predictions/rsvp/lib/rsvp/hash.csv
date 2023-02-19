@@ -1,0 +1,116 @@
+importKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9305any0.0521complex0.0040Promise<any>0.0032void0.0009
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./promise'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+PromiseHashName.Otherany0.7328void0.1202Promise<void>0.0516complex0.0276Promise<any>0.0139
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./promise-hash'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n  `hash` is similar to `all`, but takes an object instead of an array\n  for its `promises` argument.\n\n  Returns a promise that is fulfilled when all the given promises have been\n  fulfilled, or rejected if any of them become rejected. The returned promise\n  is fulfilled with a hash that has the same key names as the `promises` object\n  argument. If any of the values in the object are not promises, they will\n  simply be copied over to the fulfilled object.\n\n  Example:\n\n  ```javascript\n  let promises = {\n    myPromise: resolve(1),\n    yourPromise: resolve(2),\n    theirPromise: resolve(3),\n    notAPromise: 4\n  };\n\n  hash(promises).then(function(hash){\n    // hash here is an object that looks like:\n    // {\n    //   myPromise: 1,\n    //   yourPromise: 2,\n    //   theirPromise: 3,\n    //   notAPromise: 4\n    // }\n  });\n  ```\n\n  If any of the `promises` given to `hash` are rejected, the first promise\n  that is rejected will be given as the reason to the rejection handler.\n\n  Example:\n\n  ```javascript\n  let promises = {\n    myPromise: resolve(1),\n    rejectedPromise: reject(new Error('rejectedPromise')),\n    anotherRejectedPromise: reject(new Error('anotherRejectedPromise')),\n  };\n\n  hash(promises).then(function(hash){\n    // Code here never runs because there are rejected promises!\n  }, function(reason) {\n    // reason.message === 'rejectedPromise'\n  });\n  ```\n\n  An important note: `hash` is intended for plain JavaScript objects that\n  are just a set of keys and values. `hash` will NOT preserve prototype\n  chains.\n\n  Example:\n\n  ```javascript\n  import { hash, resolve } from 'rsvp';\n  function MyConstructor(){\n    this.example = resolve('Example');\n  }\n\n  MyConstructor.prototype = {\n    protoProperty: resolve('Proto Property')\n  };\n\n  let myObject = new MyConstructor();\n\n  hash(myObject).then(function(hash){\n    // protoProperty will not be present, instead you will just have an\n    // object that looks like:\n    // {\n    //   example: 'Example'\n    // }\n    //\n    // hash.hasOwnProperty('protoProperty'); // false\n    // 'undefined' === typeof hash.protoProperty\n  });\n  ```\n\n  @method hash\n  @public\n  @static\n  @for rsvp\n  @param {Object} object\n  @param {String} [label] optional string that describes the promise.\n  Useful for tooling.\n  @return {Promise} promise that is fulfilled when all properties of `promises`\n  have been fulfilled, or rejected if any of them become rejected.\n*/Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hashName.Otherany0.3467Promise<any>0.1794string0.1056Promise<{}>0.0715Promise<void>0.0578
+(Punctuation
+objectName.Otherany0.7432Object0.1083object0.0482string0.0468number0.0150
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.9021any0.0646Object0.0039number0.0026object0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9829any0.0139Promise<any>0.0008complex0.0004string0.0004
+.Punctuation
+resolveName.Othercomplex0.9784any0.0145string0.0018Promise<any>0.0011number0.0005
+(Punctuation
+objectName.Otherany0.6333Object0.1624string0.0999object0.0444number0.0172
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.8656any0.1053complex0.0054Promise<string>0.0042number0.0018
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+thenName.Otherany0.9691complex0.0218Promise<any>0.0022void0.0008string0.0006
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+objectName.Otherany0.8054Object0.0890string0.0344object0.0261number0.0185
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.7521Object0.1382object0.0498string0.0152number0.0117
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objectName.Otherany0.6731Object0.1889object0.0608string0.0154complex0.0140
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'object'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordcomplex0.3869any0.3511Error0.0591boolean0.0476{}0.0262
+ Text.Whitespace
+newOperator.Wordany0.3861complex0.1001boolean0.0804Error0.0568string0.0366
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9905ErrorConstructor0.0027BooleanConstructor0.0001MapConstructor0.0001undefined0.0001
+(Punctuation
+"Promise.hash must be called with an object"Literal.String.Double
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6949Promise<void>0.0167Promise<any>0.0154complex0.0128Error0.0117
+ Text.Whitespace
+PromiseHashName.Otherany0.9939complex0.0030void0.0009Promise<void>0.0003Promise<any>0.0003
+(Punctuation
+PromiseName.BuiltinPromiseConstructor0.9912any0.0063Promise<any>0.0005complex0.0003string0.0003
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.5144Object0.3038object0.0664string0.0170complex0.0158
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.4832any0.3955complex0.0138Object0.0054Promise<string>0.0051
+)Punctuation
+.Punctuation
+promiseName.OtherPromise<any>0.3089any0.2307Promise<void>0.1452Promise<number>0.0633void0.0467
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

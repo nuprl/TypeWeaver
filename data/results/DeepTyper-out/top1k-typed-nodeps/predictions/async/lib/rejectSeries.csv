@@ -1,0 +1,74 @@
+importKeyword
+ Text.Whitespace
+_rejectName.Othervoid0.4716any0.2689complex0.1088Function0.0068T0.0048
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/reject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+eachOfSeriesName.Othercomplex0.2696any0.1395void0.0953string0.0629boolean0.0339
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./eachOfSeries.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Othercomplex0.2345any0.1413void0.0906string0.0700boolean0.0354
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`reject`]{@link module:Collections.reject} but runs only a single async operation at a time.\n *\n * @name rejectSeries\n * @static\n * @memberOf module:Collections\n * @method\n * @see [async.reject]{@link module:Collections.reject}\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {Function} iteratee - An async truth test to apply to each item in\n * `coll`.\n * The should complete with a boolean value as its `result`.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called after all the\n * `iteratee` functions have finished. Invoked with (err, results).\n * @returns {Promise} a promise, if no callback is passed\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rejectSeriesName.Othercomplex0.2656any0.0842void0.0763string0.0396any[]0.0213
+ Text.Whitespace
+(Punctuation
+collName.Otherany0.6156any[]0.0451{}0.0193string0.0159complex0.0121
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7189string0.0266number0.0141any[]0.0054Error0.0053
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4352Function0.1638number0.0477void0.0183boolean0.0094
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+_rejectName.Othervoid0.5257any0.3426complex0.0576Function0.0075number0.0046
+(Punctuation
+eachOfSeriesName.Otherany0.3521void0.0831string0.0714any[]0.0444complex0.0282
+,Punctuation
+ Text.Whitespace
+collName.Otherany0.5888any[]0.0774{}0.0263complex0.0156string0.0064
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6487number0.0243any[]0.0150string0.0136{}0.0101
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5612Function0.1367void0.0562number0.0393boolean0.0103
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Othervoid0.5051any0.2596complex0.0785string0.0165number0.0147
+(Punctuation
+rejectSeriesName.Otherany0.3149number0.1587string0.0911void0.0419boolean0.0260
+,Punctuation
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

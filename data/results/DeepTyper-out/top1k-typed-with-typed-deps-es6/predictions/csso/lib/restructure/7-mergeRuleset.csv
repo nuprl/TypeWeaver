@@ -1,0 +1,493 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+walkName.Otherany0.8194void0.0956complex0.0272Function0.0231boolean0.0054
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'css-tree'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+unsafeToSkipNodeName.Otherany0.6224complex0.0959boolean0.0884string0.0451void0.0255
+,Punctuation
+ Text.Whitespace
+isEqualDeclarationsName.Otherany0.4464boolean0.2353complex0.0998string0.0555void0.0381
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./utils.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/*\n    At this step all rules has single simple selector. We try to join by equal\n    declaration blocks to first rule, e.g.\n\n    .a { color: red }\n    b { ... }\n    .b { color: red }\n    ->\n    .a, .b { color: red }\n    b { ... }\n*/Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+processRuleName.Otherboolean0.8669any0.0451string0.0277complex0.0117number0.0035
+(Punctuation
+nodeName.Otherany0.2611Node0.0976Element0.0326HTMLElement0.0169ITreeNode0.0162
+,Punctuation
+ Text.Whitespace
+itemName.Otherany0.6669string0.1162number0.0130Node0.0068HTMLElement0.0064
+,Punctuation
+ Text.Whitespace
+listName.Otherany0.5129string0.0251any[]0.0213complex0.0158boolean0.0088
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+selectorsName.Otherany0.6812complex0.0440any[]0.0118boolean0.0069Element0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.5335Node0.0215complex0.0180Element0.0172GomlNode0.0056
+.Punctuation
+preludeName.Otherany0.7975complex0.0271boolean0.0151string0.0148any[]0.0059
+.Punctuation
+childrenName.Otherany0.5627complex0.2388string0.0215any[]0.0204boolean0.0159
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+declarationsName.Othercomplex0.4772any[]0.1491any0.0643string[]0.0128number[]0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.3856complex0.1604Element0.0176any[]0.0175Node0.0156
+.Punctuation
+blockName.Otherany0.5587complex0.2510any[]0.0086number0.0049T0.0040
+.Punctuation
+childrenName.Otherany0.3654complex0.3048any[]0.0321string0.0175string[]0.0116
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeCompareMarkerName.Otherboolean0.5917any0.2304complex0.0587string0.0273number0.0178
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+selectorsName.Othercomplex0.6890any0.1665{}0.0164boolean0.0073any[]0.0029
+.Punctuation
+firstName.Othercomplex0.5452any0.1752boolean0.0106{}0.0093T0.0071
+.Punctuation
+compareMarkerName.Otherany0.4380boolean0.1904complex0.1887string0.0424number0.0191
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+skippedCompareMarkersName.Other{}0.3993any0.1774boolean0.0929complex0.0733true0.0078
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+listName.Othercomplex0.3588any0.2698void0.0110any[]0.0083{}0.0082
+.Punctuation
+nextUntilName.Othercomplex0.2586any0.2564void0.2358boolean0.1933string0.0085
+(Punctuation
+itemName.Otherany0.5812complex0.0317T0.0111string0.0067Node0.0045
+.Punctuation
+nextName.Otherany0.5045boolean0.0319complex0.0235void0.0149string0.0144
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nextName.Otherany0.1994string0.0144number0.0121any[]0.0117boolean0.0098
+,Punctuation
+ Text.Whitespace
+nextItemName.Otherany0.4516any[]0.0204void0.0183string0.0154{}0.0125
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// skip non-ruleset node if safeComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextName.Otherany0.0195IteratorResult<T>0.0141complex0.0078HttpHandler0.0034View0.0033
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'Rule'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+unsafeToSkipNodeName.Otherany0.5448boolean0.2639string0.0325void0.0142any[]0.0107
+.Punctuation
+callName.Otherany0.8955string0.0150complex0.0135number0.0122boolean0.0057
+(Punctuation
+selectorsName.Otherany0.2330complex0.0506{}0.0153any[]0.0110boolean0.0068
+,Punctuation
+ Text.Whitespace
+nextName.Otherany0.1661boolean0.0415complex0.0301string0.0239void0.0231
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.3524Node0.0229complex0.0131FileNode0.0116ITreeNode0.0098
+.Punctuation
+pseudoSignatureName.Otherany0.6851boolean0.1364number0.0821string0.0423complex0.0195
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+nextName.Otherany0.1152complex0.0649boolean0.0170Node0.0054Element0.0047
+.Punctuation
+pseudoSignatureName.Otherboolean0.3969any0.3621number0.1048string0.0789complex0.0257
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextFirstSelectorName.Otherboolean0.8918any0.0633string0.0200number0.0055complex0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextName.Othercomplex0.0238any0.0226IteratorResult<T>0.0152Element0.0080boolean0.0053
+.Punctuation
+preludeName.Otherany0.4105boolean0.1446string0.0618complex0.0382Promise<any>0.0058
+.Punctuation
+childrenName.Othercomplex0.3335any0.2390string0.0209boolean0.0203HTMLCollection0.0152
+.Punctuation
+headName.Otherstring0.2658any0.2424number0.1594complex0.0953boolean0.0620
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextDeclarationsName.Otherboolean0.5716any0.1914number0.0256complex0.0209string0.0159
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextName.Othercomplex0.0188any0.0139IteratorResult<T>0.0081Element0.0045Node0.0031
+.Punctuation
+blockName.Otherany0.1662complex0.1295BlockDTO0.0187Location0.0116T0.0102
+.Punctuation
+childrenName.Othercomplex0.2662any0.2099string0.0368any[]0.0278string[]0.0184
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextCompareMarkerName.Otherboolean0.6362any0.2044string0.0640complex0.0288number0.0181
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextFirstSelectorName.Otherany0.4330complex0.0571boolean0.0225{}0.0079string0.0063
+.Punctuation
+dataName.Othercomplex0.1890any0.1423boolean0.0048T0.0031string0.0029
+.Punctuation
+compareMarkerName.Otherany0.4014boolean0.2825complex0.0980string0.0880number0.0549
+;Punctuation
+\n\n        Text.Whitespace
+// if next ruleset has same marked as one of skipped then stop joiningComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextCompareMarkerName.Otherboolean0.5123string0.3071any0.1241number0.0290complex0.0123
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+skippedCompareMarkersName.Otherany0.4289complex0.1898boolean0.1128{}0.0296number0.0288
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// try to join by selectorsComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+selectorsName.Othercomplex0.3947any0.1254{}0.0280boolean0.0063void0.0042
+.Punctuation
+headName.Othercomplex0.2842any0.2669string0.1354number0.0751boolean0.0366
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+selectorsName.Othercomplex0.3560any0.0896{}0.0106boolean0.0049void0.0038
+.Punctuation
+tailName.Otherany0.4843string0.2628complex0.0832number0.0462boolean0.0100
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+selectorsName.Othercomplex0.3590any0.1262boolean0.0110{}0.0100void0.0035
+.Punctuation
+firstName.Othercomplex0.4380any0.1274boolean0.0122T0.0076{}0.0055
+.Punctuation
+idName.Otherany0.5868string0.2953complex0.0546number0.0386boolean0.0042
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nextFirstSelectorName.Otherany0.3633complex0.0717string0.0296boolean0.0087number0.0038
+.Punctuation
+dataName.Otherany0.2777complex0.0793string0.0089Location0.0040T0.0039
+.Punctuation
+idName.Otherany0.7479string0.1528number0.0528complex0.0296boolean0.0033
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+declarationsName.Othercomplex0.7325any0.0278any[]0.0112{}0.0046number0.0039
+.Punctuation
+appendListName.Othercomplex0.6807void0.0935boolean0.0805any0.0654number0.0132
+(Punctuation
+nextDeclarationsName.Otherany0.4872complex0.1940string0.1066boolean0.0694number0.0639
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+listName.Othercomplex0.3500any0.2714Set<any>0.0084List0.0076{}0.0060
+.Punctuation
+removeName.Othervoid0.6981any0.2142complex0.0583boolean0.0107number0.0037
+(Punctuation
+nextItemName.Otherany0.4626{}0.0698void0.0546number0.0320any[]0.0308
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+returnKeyword
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// try to join by propertiesComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isEqualDeclarationsName.Otherboolean0.9086any0.0409complex0.0319string0.0059number0.0021
+(Punctuation
+declarationsName.Othercomplex0.4870any0.1599any[]0.0188{}0.0117string0.0102
+,Punctuation
+ Text.Whitespace
+nextDeclarationsName.Otherany0.4866complex0.3135boolean0.0641string0.0197number0.0178
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextStrName.Otherany0.4789boolean0.3990number0.0330complex0.0313string0.0203
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextFirstSelectorName.Otherany0.6760complex0.0817boolean0.0071{}0.0051number0.0017
+.Punctuation
+dataName.Otherany0.2537complex0.2147T0.0034boolean0.0026string0.0022
+.Punctuation
+idName.Otherany0.7430string0.1000number0.0820complex0.0491boolean0.0080
+;Punctuation
+\n\n            Text.Whitespace
+selectorsName.Othercomplex0.3777any0.2242any[]0.0535{}0.0193Set<any>0.0064
+.Punctuation
+someName.Otherboolean0.3988complex0.3710any0.1634void0.0090number0.0029
+(Punctuation
+(Punctuation
+dataName.Otherany0.1989string0.0837complex0.0462Buffer0.0122T0.0107
+,Punctuation
+ Text.Whitespace
+itemName.Otherany0.4953string0.1678complex0.0415number0.0232T0.0112
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+curStrName.Otherboolean0.5797any0.2401string0.1150number0.0316complex0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherany0.2853complex0.0583StockData0.0053string0.0035T0.0030
+.Punctuation
+idName.Otherany0.6938string0.1505number0.1068complex0.0291boolean0.0064
+;Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextStrName.Otherboolean0.5109any0.2309number0.1433string0.0739complex0.0146
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+curStrName.Otherany0.3705boolean0.3203number0.1100string0.0717complex0.0637
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+selectorsName.Othercomplex0.4104any0.1164{}0.0315Set<any>0.0062any[]0.0043
+.Punctuation
+insertName.Otherany0.3033complex0.1898void0.1726boolean0.1641{}0.0146
+(Punctuation
+nextFirstSelectorName.Otherany0.4212boolean0.2102string0.2034number0.0441complex0.0410
+,Punctuation
+ Text.Whitespace
+itemName.Otherany0.7823string0.0759complex0.0275T0.0140number0.0108
+)Punctuation
+;Punctuation
+\n                    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+itemName.Otherany0.4837complex0.0537T0.0099string0.0085Node0.0083
+.Punctuation
+nextName.Otherany0.2364boolean0.2223complex0.0725void0.0091IteratorResult<T>0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+selectorsName.Othercomplex0.7784any0.0468{}0.0230any[]0.0044Set<any>0.0026
+.Punctuation
+insertName.Othercomplex0.2930boolean0.2020any0.1890void0.1562{}0.0197
+(Punctuation
+nextFirstSelectorName.Otherany0.5178boolean0.1605complex0.1239string0.0866number0.0400
+)Punctuation
+;Punctuation
+\n                    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n            Text.Whitespace
+listName.Otherany0.2526complex0.1744List0.0190Set<any>0.0097{}0.0070
+.Punctuation
+removeName.Othervoid0.7398any0.2105complex0.0255boolean0.0068Promise<void>0.0035
+(Punctuation
+nextItemName.Otherany0.5750void0.0546{}0.0531any[]0.0232number0.0187
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+returnKeyword
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// go to next ruleset if current one can be skipped (has no equal specificity nor element selector)Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextCompareMarkerName.Otherany0.4960boolean0.2387string0.1401number0.0623complex0.0354
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nodeCompareMarkerName.Otherany0.5503string0.1741boolean0.1139number0.0772complex0.0264
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+skippedCompareMarkersName.Otherany0.3156complex0.2470{}0.2319any[]0.0251boolean0.0196
+[Punctuation
+nextCompareMarkerName.Otherstring0.6259boolean0.1388any0.1298number0.0705void0.0090
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mergeRuleName.Othervoid0.3228any0.1490boolean0.0999complex0.0654any[]0.0135
+(Punctuation
+astName.Otherany0.1689TsSimpleAst0.0272Function0.0160boolean0.0109symbol0.0072
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+walkName.Othervoid0.4304any0.4202complex0.0217Function0.0178boolean0.0124
+(Punctuation
+astName.Otherany0.2818TsSimpleAst0.0301Function0.0253symbol0.0125boolean0.0116
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+visitName.Otherstring0.9931any0.0021RegExp0.0017boolean0.0008number0.0006
+:Operator
+ Text.Whitespace
+'Rule'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+enterName.Otherany0.5763string0.2552boolean0.0932number0.0401void0.0137
+:Operator
+ Text.Whitespace
+processRuleKeyword.Typeboolean0.4419any0.2364string0.1507number0.0781void0.0242
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

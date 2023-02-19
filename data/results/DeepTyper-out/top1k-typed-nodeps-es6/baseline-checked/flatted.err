@@ -1,0 +1,45 @@
+cjs/index.ts(13,7): error TS2322: Type '(_: any, value: any) => any' is not assignable to type 'void'.
+es.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+es.ts(2,371): error TS2538: Type 'String' cannot be used as an index type.
+es.ts(2,1239): error TS2554: Expected 2 arguments, but got 1.
+es.ts(2,1292): error TS2554: Expected 3 arguments, but got 1.
+esm.ts(2,319): error TS2538: Type 'String' cannot be used as an index type.
+esm.ts(2,741): error TS2339: Property 'call' does not exist on type 'number | ((t: any, e: any) => any)'.
+  Property 'call' does not exist on type 'number'.
+esm.ts(2,855): error TS2339: Property 'indexOf' does not exist on type 'never'.
+esm.ts(2,1209): error TS2554: Expected 3 arguments, but got 1.
+esm.ts(2,1227): error TS2554: Expected 2 arguments, but got 1.
+esm/index.ts(12,7): error TS2322: Type '(_: any, value: any) => any' is not assignable to type 'void'.
+index.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+index.ts(7,12): error TS2630: Cannot assign to '_typeof' because it is a function.
+index.ts(17,24): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'string[]'.
+index.ts(18,27): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+index.ts(25,29): error TS2322: Type '(_: any, value: any) => void' is not assignable to type 'void'.
+index.ts(30,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(30,41): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(34,47): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+index.ts(40,19): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+index.ts(44,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(69,22): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(83,36): error TS2322: Type '(value: any, replacer: any, space: any) => string' is not assignable to type 'string'.
+index.ts(122,19): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+min.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+min.ts(1,79): error TS2630: Cannot assign to 't' because it is a function.
+min.ts(2,245): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,415): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,418): error TS2367: This condition will always return 'true' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,786): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,891): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,1182): error TS2678: Type 'string' is not comparable to type 'boolean'.
+min.ts(2,1210): error TS2678: Type 'string' is not comparable to type 'boolean'.
+min.ts(2,1291): error TS2554: Expected 2 arguments, but got 1.
+min.ts(2,1359): error TS2554: Expected 3 arguments, but got 1.
+rollup/babel.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup/es.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+rollup/esm.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+

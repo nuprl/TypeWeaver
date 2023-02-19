@@ -1,0 +1,196 @@
+Text
+/**\n * Module dependencies.\n * Example to increase and decrease the value of a progress bar\n * to show the functionality of `terminate()`.\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ProgressBarName.Otherany0.9879string0.0072number0.0019void0.0010complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+barName.Otherany0.0879HTMLDivElement0.0116XMLHttpRequest0.0067HTMLInputElement0.0051EventEmitter0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9208string0.0078number0.0070complex0.0033Logger0.0012
+ Text.Whitespace
+ProgressBarName.Otherany0.9976complex0.0018number0.0002void0.0001string0.0001
+(Punctuation
+'  :title [:bar] :percent'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+completeName.Otherstring0.9957RegExp0.0012boolean0.0011any0.0008number0.0006
+:Operator
+ Text.Whitespace
+'='Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+incompleteName.Otherstring0.9909RegExp0.0050any0.0014number0.0009boolean0.0008
+:Operator
+ Text.Whitespace
+' 'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+widthName.Otherstring0.6166number0.3294any0.0406boolean0.0037void0.0035
+:Operator
+ Text.Whitespace
+30Keyword.Type
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+totalName.Othernumber0.5581any0.2120string0.2035boolean0.0182void0.0018
+:Operator
+ Text.Whitespace
+100Keyword.Type
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+forwardName.Othervoid0.9952any0.0022complex0.0010Promise<void>0.0003boolean0.0003
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+barName.Otherany0.9126complex0.0020number0.0015Assert0.0013XMLHttpRequest0.0008
+.Punctuation
+tickName.Otherany0.7764void0.1998number0.0076complex0.0064Promise<any>0.0013
+(Punctuation
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+titleName.Otherstring0.9986any0.0005number0.0003RegExp0.0003boolean0.0001
+:Operator
+ Text.Whitespace
+'forward 'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+barName.Otherany0.1906complex0.0115XMLHttpRequest0.0062number[]0.0034HTMLInputElement0.0031
+.Punctuation
+currName.Othernumber0.7195any0.2715string0.0051boolean0.0010complex0.0009
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+60Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+backwardName.Othervoid0.9755any0.0085string0.0043number0.0040complex0.0028
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+setTimeoutName.Othercomplex0.9959any0.0029number0.0003string0.0003void0.0003
+(Punctuation
+forwardName.Othervoid0.8565any0.0717complex0.0133any[]0.0045number0.0045
+,Punctuation
+ Text.Whitespace
+20Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+backwardName.Othervoid0.9967any0.0007string0.0006complex0.0005number0.0004
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+barName.Otherany0.8630complex0.0033Assert0.0020number0.0016XMLHttpRequest0.0014
+.Punctuation
+tickName.Otherany0.8141void0.1694number0.0077complex0.0031Promise<any>0.0008
+(Punctuation
+-Operator
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+titleName.Otherstring0.9986any0.0006number0.0003RegExp0.0001boolean0.0001
+:Operator
+ Text.Whitespace
+'backward'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+barName.Otherany0.1502complex0.0164XMLHttpRequest0.0064Slides0.0038HTMLInputElement0.0036
+.Punctuation
+currName.Othernumber0.7325any0.2598string0.0033complex0.0011boolean0.0009
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+barName.Otherany0.1870XMLHttpRequest0.0204HTMLInputElement0.0102complex0.0095number[]0.0049
+.Punctuation
+terminateName.Othervoid0.9093any0.0802Promise<void>0.0036complex0.0021number0.0021
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+setTimeoutName.Othercomplex0.9958any0.0031void0.0003number0.0003string0.0002
+(Punctuation
+backwardName.Othervoid0.7680number0.1746any0.0268string0.0116complex0.0037
+,Punctuation
+ Text.Whitespace
+20Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+forwardName.Othervoid0.9847any0.0063complex0.0012Promise<void>0.0010Promise<{}>0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

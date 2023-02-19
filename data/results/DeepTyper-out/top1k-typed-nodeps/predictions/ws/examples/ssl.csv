@@ -1,0 +1,243 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+httpsName.Otherany0.9965string0.0010complex0.0005void0.0004number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'https'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fsName.Otherany0.9960string0.0019complex0.0006number0.0002void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'fs'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+WebSocketName.Otherany0.6145complex0.3532string0.0125void0.0050Promise<void>0.0033
+,Punctuation
+ Text.Whitespace
+WebSocketServerName.Otherany0.9697void0.0115complex0.0044string0.0030Promise<void>0.0016
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'..'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+serverName.Otherany0.9875Server0.0026string0.0018void0.0017Promise<void>0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+httpsName.Otherany0.9969complex0.0017void0.0002string0.0002{}0.0001
+.Punctuation
+createServerName.Otherany0.9936string0.0009complex0.0008Server0.0006void0.0004
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+certName.Otherany0.9079string0.0567void0.0063number0.0055complex0.0032
+:Operator
+ Text.Whitespace
+fs.readFileSyncKeyword.Type
+(Punctuation
+'../test/fixtures/certificate.pem'Literal.String.Single
+)Punctuation
+,Punctuation
+\n  Text.Whitespace
+keyName.Otherany0.8244string0.1453complex0.0036any[]0.0035number0.0030
+:Operator
+ Text.Whitespace
+fs.readFileSyncKeyword.Type
+(Punctuation
+'../test/fixtures/key.pem'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wssName.Otherany0.9718Server0.0012string0.0007Buffer0.0006number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9920string0.0015void0.0006Buffer0.0004complex0.0003
+ Text.Whitespace
+WebSocketServerName.Otherany0.9966void0.0015complex0.0004string0.0003Promise<void>0.0002
+(Punctuation
+{Punctuation
+ Text.Whitespace
+serverName.Otherany0.8973Server0.0204string0.0196void0.0068OmniSharpServer0.0062
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+wssName.Otherany0.9875string0.0005Buffer0.0005number0.0004Logger0.0003
+.Punctuation
+onName.Otherany0.9796complex0.0133void0.0033Promise<void>0.0004Promise<any>0.0003
+(Punctuation
+'connection'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+connectionName.Othervoid0.8154any0.1514Promise<void>0.0079string0.0043complex0.0036
+(Punctuation
+wsName.Otherany0.9480Buffer0.0109string0.0043WebSocket0.0042complex0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+wsName.Otherany0.9933string0.0008WebSocket0.0005complex0.0005Buffer0.0004
+.Punctuation
+onName.Otherany0.9620complex0.0292void0.0056Promise<void>0.0004Promise<any>0.0003
+(Punctuation
+'message'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+messageName.Othervoid0.9785any0.0086complex0.0048string0.0041Promise<void>0.0014
+(Punctuation
+msgName.Otherany0.8175string0.1371void0.0086Message0.0053Buffer0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9993any0.0003void0.0002complex0.0000NumberConstructor0.0000
+.Punctuation
+logName.Othervoid0.9991any0.0005Promise<void>0.0001complex0.0001number0.0000
+(Punctuation
+msgName.Otherany0.9432string0.0333complex0.0037void0.0031Error0.0022
+.Punctuation
+toStringName.Otherany0.9345string0.0628complex0.0012void0.0003Error0.0002
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+serverName.Otherany0.9220Server0.0220void0.0031string0.0029OmniSharpServer0.0028
+.Punctuation
+listenName.Otherany0.8259void0.1048complex0.0338Promise<void>0.0094Promise<{}>0.0068
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+listeningName.Othervoid0.9691any0.0071complex0.0065Promise<void>0.0058string0.0025
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// If the `rejectUnauthorized` option is not `false`, the server certificateComment.Single
+\n  Text.Whitespace
+// is verified against a list of well-known CAs. An 'error' event is emittedComment.Single
+\n  Text.Whitespace
+// if verification fails.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// The certificate used in this example is self-signed so `rejectUnauthorized`Comment.Single
+\n  Text.Whitespace
+// is set to `false`.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wsName.Otherany0.9478WebSocket0.0081Buffer0.0047string0.0029complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9846complex0.0028string0.0020Buffer0.0008Error0.0006
+ Text.Whitespace
+WebSocketName.Otherany0.5157complex0.4802void0.0015string0.0005number0.0003
+(Punctuation
+`Literal.String.Backtick
+wss://localhost:Literal.String.Backtick
+${Literal.String.Interpol
+serverName.Otherany0.8623Server0.0218string0.0128void0.0094complex0.0058
+.Punctuation
+addressName.Otherany0.9831string0.0085complex0.0043void0.0011boolean0.0003
+(Punctuation
+)Punctuation
+.Punctuation
+portName.Otherany0.9532number0.0274string0.0157complex0.0020void0.0002
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+rejectUnauthorizedName.Otherboolean0.9941false0.0027any0.0009true0.0007string0.0006
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+wsName.Otherany0.9799WebSocket0.0034string0.0011complex0.0010Buffer0.0008
+.Punctuation
+onName.Otherany0.9249complex0.0563void0.0118Promise<void>0.0009Promise<any>0.0004
+(Punctuation
+'open'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+openName.Othervoid0.9882Promise<void>0.0043boolean0.0017any0.0015Promise<{}>0.0006
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+wsName.Otherany0.9815WebSocket0.0046string0.0014Buffer0.0009complex0.0008
+.Punctuation
+sendName.Otherany0.9568complex0.0260void0.0129Promise<void>0.0015Promise<any>0.0006
+(Punctuation
+'All glory to WebSockets!'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

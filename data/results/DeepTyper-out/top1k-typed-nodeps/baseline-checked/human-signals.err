@@ -1,0 +1,28 @@
+ava.config.ts(1,25): error TS2307: Cannot find module '@ehmicky/dev-tasks/ava.config.js' or its corresponding type declarations.
+gulpfile.ts(1,15): error TS2307: Cannot find module '@ehmicky/dev-tasks' or its corresponding type declarations.
+src/main.ts(9,29): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/main.ts(10,41): error TS2345: Argument of type 'void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => readonly [PropertyKey, never]'.
+src/main.ts(13,7): error TS2322: Type '({ name, number, description, supported, action, forced, standard, }: { name: any; number: any; description: any; supported: any; action: any; forced: any; standard: any; }) => any[]' is not assignable to type 'void'.
+src/main.ts(33,7): error TS2322: Type '() => any' is not assignable to type 'void'.
+src/main.ts(34,29): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/main.ts(37,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/main.ts(42,7): error TS2322: Type '(number: any, signals: any) => { [x: number]: { name: any; number: any; description: any; supported: any; action: any; forced: any; standard: any; }; }' is not assignable to type 'void'.
+src/main.ts(43,26): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+src/main.ts(49,11): error TS2339: Property 'name' does not exist on type 'Number'.
+src/main.ts(49,17): error TS2339: Property 'description' does not exist on type 'Number'.
+src/main.ts(49,30): error TS2339: Property 'supported' does not exist on type 'Number'.
+src/main.ts(49,41): error TS2339: Property 'action' does not exist on type 'Number'.
+src/main.ts(49,49): error TS2339: Property 'forced' does not exist on type 'Number'.
+src/main.ts(49,57): error TS2339: Property 'standard' does not exist on type 'Number'.
+src/main.ts(65,7): error TS2322: Type '(number: any, signals: any) => any' is not assignable to type 'number'.
+src/main.ts(75,40): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/signals.ts(8,14): error TS2322: Type '() => any' is not assignable to type 'void'.
+src/signals.ts(10,61): error TS2345: Argument of type 'void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
+src/signals.ts(20,7): error TS2322: Type '({ name, number: defaultNumber, description, action, forced, standard, }: { name: any; number: any; description: any; action: any; forced?: boolean; standard: any; }) => { name: any; number: any; description: any; supported: boolean; action: any; forced: boolean; standard: any; }' is not assignable to type 'void'.
+src/signals.ts(29,17): error TS2538: Type 'any' cannot be used as an index type.
+

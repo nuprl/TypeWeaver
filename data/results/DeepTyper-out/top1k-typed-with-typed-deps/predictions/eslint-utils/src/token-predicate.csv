@@ -1,0 +1,522 @@
+Text
+/**\n * Negate the result of `this` calling.\n * @param {Token} token The token to check.\n * @returns {boolean} `true` if the result of `this(token)` is `false`.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+negate0Name.Otherboolean0.5286string0.1033any0.0756number0.0204complex0.0121
+(Punctuation
+tokenName.Otherstring0.7145any0.1609Token0.0249number0.0089boolean0.0053
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+thisKeyword
+(Punctuation
+tokenName.Otherstring0.7369any0.1781Token0.0236number0.0095complex0.0049
+)Punctuation
+ Text.Whitespace
+//eslint-disable-line no-invalid-thisComment.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Creates the negate function of the given function.\n * @param {function(Token):boolean} f - The function to negate.\n * @returns {function(Token):boolean} Negated function.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+negateName.Otherboolean0.2814any0.1591string0.0304number0.0258Function0.0228
+(Punctuation
+fName.Otherstring0.5948any0.0958boolean0.0416Function0.0232number0.0157
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+negate0Name.Otherany0.5738boolean0.1860void0.0777string0.0474complex0.0132
+.Punctuation
+bindName.Otherany0.9416boolean0.0168string0.0152void0.0043Function0.0023
+(Punctuation
+fName.Otherstring0.7084any0.1249boolean0.0741number0.0092Function0.0085
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a PunctuatorToken with the given value\n * @param {Token} token - The token to check.\n * @param {string} value - The value to check.\n * @returns {boolean} `true` if the token is a PunctuatorToken with the given value.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherboolean0.7155any0.1255string0.0970number0.0167complex0.0044
+(Punctuation
+tokenName.Otherstring0.7286any0.1451Token0.0410number0.0094boolean0.0073
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5123string0.3189boolean0.0846number0.0295Date0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+tokenName.OtherToken0.3353any0.1973string0.1592Date0.0103AccessToken0.0071
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"Punctuator"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+tokenName.OtherToken0.4056any0.3052string0.1266boolean0.0052Date0.0042
+.Punctuation
+valueName.Otherany0.6869string0.2605number0.0188boolean0.0093complex0.0045
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+valueName.Otherstring0.4545any0.4249boolean0.0407number0.0337Date0.0075
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is an arrow token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is an arrow token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isArrowTokenName.Otherstring0.6080any0.2585boolean0.0472number0.0110complex0.0074
+(Punctuation
+tokenName.Otherstring0.8324any0.0889Token0.0176number0.0080boolean0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherany0.3778string0.3333boolean0.0375number0.0155complex0.0127
+(Punctuation
+tokenName.Otherstring0.7902any0.1282Token0.0277number0.0079Date0.0042
+,Punctuation
+ Text.Whitespace
+"=>"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a comma token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a comma token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isCommaTokenName.Otherstring0.4697any0.3028boolean0.0479number0.0166complex0.0109
+(Punctuation
+tokenName.Otherstring0.8209any0.0872Token0.0178number0.0089Date0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.3880any0.3504boolean0.0346number0.0151void0.0128
+(Punctuation
+tokenName.Otherstring0.8057any0.1224Token0.0230number0.0076Date0.0038
+,Punctuation
+ Text.Whitespace
+","Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a semicolon token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a semicolon token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isSemicolonTokenName.Otherstring0.4797any0.3034boolean0.0456number0.0164complex0.0102
+(Punctuation
+tokenName.Otherstring0.8250any0.0854Token0.0172number0.0086Date0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4126any0.3373boolean0.0346number0.0145void0.0128
+(Punctuation
+tokenName.Otherstring0.8131any0.1190Token0.0215number0.0074Date0.0038
+,Punctuation
+ Text.Whitespace
+";"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a colon token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a colon token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isColonTokenName.Otherstring0.4867any0.3031boolean0.0461number0.0160complex0.0096
+(Punctuation
+tokenName.Otherstring0.8283any0.0839Token0.0170number0.0084Date0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4301any0.3276boolean0.0351number0.0140void0.0126
+(Punctuation
+tokenName.Otherstring0.8183any0.1163Token0.0208number0.0073Date0.0038
+,Punctuation
+ Text.Whitespace
+":"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is an opening parenthesis token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is an opening parenthesis token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isOpeningParenTokenName.Otherstring0.4888any0.3036boolean0.0483number0.0158complex0.0091
+(Punctuation
+tokenName.Otherstring0.8303any0.0828Token0.0172number0.0082Date0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4411any0.3208boolean0.0363number0.0137void0.0124
+(Punctuation
+tokenName.Otherstring0.8216any0.1143Token0.0206number0.0072Date0.0038
+,Punctuation
+ Text.Whitespace
+"("Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a closing parenthesis token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a closing parenthesis token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isClosingParenTokenName.Otherstring0.4860any0.3050boolean0.0527number0.0158complex0.0088
+(Punctuation
+tokenName.Otherstring0.8309any0.0821Token0.0176number0.0081Date0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4474any0.3160boolean0.0384number0.0136void0.0124
+(Punctuation
+tokenName.Otherstring0.8238any0.1130Token0.0206number0.0071Date0.0038
+,Punctuation
+ Text.Whitespace
+")"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is an opening square bracket token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is an opening square bracket token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isOpeningBracketTokenName.Otherstring0.4786any0.3070boolean0.0602number0.0159complex0.0086
+(Punctuation
+tokenName.Otherstring0.8304any0.0818Token0.0183number0.0080Date0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4504any0.3122boolean0.0419number0.0136void0.0125
+(Punctuation
+tokenName.Otherstring0.8254any0.1120Token0.0206number0.0071Date0.0039
+,Punctuation
+ Text.Whitespace
+"["Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a closing square bracket token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a closing square bracket token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isClosingBracketTokenName.Otherstring0.4662any0.3092boolean0.0725number0.0162complex0.0084
+(Punctuation
+tokenName.Otherstring0.8288any0.0819Token0.0193number0.0079Date0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4508any0.3083boolean0.0477number0.0139void0.0129
+(Punctuation
+tokenName.Otherstring0.8275any0.1111Token0.0204number0.0071Date0.0038
+,Punctuation
+ Text.Whitespace
+"]"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is an opening brace token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is an opening brace token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isOpeningBraceTokenName.Otherstring0.4460any0.3112boolean0.0928number0.0166complex0.0083
+(Punctuation
+tokenName.Otherstring0.8260any0.0829Token0.0204number0.0078Date0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.4456any0.3026boolean0.0581number0.0145void0.0142
+(Punctuation
+tokenName.Otherstring0.8312any0.1095Token0.0198number0.0070Date0.0038
+,Punctuation
+ Text.Whitespace
+"{"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a closing brace token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a closing brace token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isClosingBraceTokenName.Otherstring0.4073any0.3085boolean0.1282number0.0180complex0.0085
+(Punctuation
+tokenName.Otherstring0.8195any0.0856Token0.0218number0.0078Date0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isPunctuatorTokenWithValueName.Otherstring0.3849any0.3041boolean0.0745void0.0192number0.0173
+(Punctuation
+tokenName.Otherstring0.8333any0.1049Token0.0214number0.0064Date0.0041
+,Punctuation
+ Text.Whitespace
+"}"Literal.String.Double
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if the given token is a comment token or not.\n * @param {Token} token - The token to check.\n * @returns {boolean} `true` if the token is a comment token.\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isCommentTokenName.Otherstring0.3693boolean0.1909any0.1830string[]0.0961complex0.0128
+(Punctuation
+tokenName.Otherstring0.7575any0.0827Token0.0463Date0.0086number0.0073
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+"Block"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"Line"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"Shebang"Literal.String.Double
+]Punctuation
+.Punctuation
+includesName.Otherboolean0.9640any0.0182complex0.0054string0.0044number0.0016
+(Punctuation
+tokenName.Otherstring0.4158Token0.2408any0.2098number0.0050boolean0.0047
+.Punctuation
+typeKeyword.Reserved
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotArrowTokenName.Otherany0.4471void0.2674number0.0612boolean0.0404string0.0307
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.1851void0.1367boolean0.0615number0.0313string0.0273
+(Punctuation
+isArrowTokenName.Otherany0.4449string0.3054boolean0.0531number0.0370void0.0147
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotCommaTokenName.Otherany0.5046void0.1654boolean0.0543number0.0538string0.0269
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2221void0.0996boolean0.0563number0.0339string0.0226
+(Punctuation
+isCommaTokenName.Otherany0.4844string0.2383boolean0.0544number0.0429void0.0165
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotSemicolonTokenName.Otherany0.4927void0.1494boolean0.0643number0.0582string0.0273
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2230void0.0959boolean0.0630number0.0370string0.0217
+(Punctuation
+isSemicolonTokenName.Otherany0.4768string0.2219boolean0.0609number0.0484void0.0167
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotColonTokenName.Otherany0.4775void0.1455boolean0.0718number0.0604string0.0266
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2158void0.0936boolean0.0677number0.0377string0.0209
+(Punctuation
+isColonTokenName.Otherany0.4657string0.2148boolean0.0661number0.0516void0.0171
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotOpeningParenTokenName.Otherany0.4663void0.1416boolean0.0780number0.0616string0.0261
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2097void0.0910boolean0.0709number0.0376string0.0203
+(Punctuation
+isOpeningParenTokenName.Otherany0.4576string0.2104boolean0.0695number0.0532void0.0173
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotClosingParenTokenName.Otherany0.4585void0.1364boolean0.0832number0.0621string0.0259
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2048void0.0876boolean0.0731number0.0372string0.0200
+(Punctuation
+isClosingParenTokenName.Otherany0.4516string0.2075boolean0.0713number0.0535void0.0172
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotOpeningBracketTokenName.Otherany0.4526void0.1294boolean0.0880number0.0621string0.0258
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.2004void0.0831boolean0.0745number0.0364string0.0199
+(Punctuation
+isOpeningBracketTokenName.Otherany0.4463string0.2060boolean0.0718number0.0528void0.0168
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotClosingBracketTokenName.Otherany0.4471void0.1200boolean0.0934number0.0621string0.0261
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.1959void0.0771boolean0.0757number0.0353string0.0200
+(Punctuation
+isClosingBracketTokenName.Otherany0.4409string0.2061boolean0.0713number0.0511void0.0161
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotOpeningBraceTokenName.Otherany0.4399void0.1082boolean0.1004number0.0624string0.0267
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.1901boolean0.0768void0.0696number0.0339string0.0203
+(Punctuation
+isOpeningBraceTokenName.Otherany0.4346string0.2081boolean0.0696number0.0481void0.0150
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotClosingBraceTokenName.Otherany0.4216boolean0.1073void0.0964number0.0620string0.0275
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.1771boolean0.0745void0.0601number0.0312string0.0205
+(Punctuation
+isClosingBraceTokenName.Otherany0.4142string0.2128boolean0.0686number0.0437void0.0141
+)Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isNotCommentTokenName.Otherany0.3251boolean0.1363void0.0879number0.0502string0.0332
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+negateName.Otherany0.1104boolean0.0717void0.0475number0.0207string0.0197
+(Punctuation
+isCommentTokenName.Otherany0.3147string0.2537boolean0.1174number0.0322void0.0104
+)Punctuation
+\nText.Whitespace

@@ -1,0 +1,10 @@
+export const pipe: string = require('pump');
+export const each: string = require('stream-each');
+export const pipeline: string = require('pumpify');
+export const duplex: string = require('duplexify');
+export const through: string = require('through2');
+export const concat: string = require('concat-stream');
+export const finished: string = require('end-of-stream');
+export const from: string = require('from2');
+export const to: string = require('flush-write-stream');
+export const parallel: string = require('parallel-transform');

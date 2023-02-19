@@ -1,0 +1,18 @@
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+lib/atob.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/atob.ts(57,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(92,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+lib/atob.ts(98,3): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/btoa.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/btoa.ts(25,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/btoa.ts(26,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/btoa.ts(28,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/btoa.ts(29,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/btoa.ts(32,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/btoa.ts(33,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/btoa.ts(39,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/btoa.ts(50,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18089,18): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18090,18): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+

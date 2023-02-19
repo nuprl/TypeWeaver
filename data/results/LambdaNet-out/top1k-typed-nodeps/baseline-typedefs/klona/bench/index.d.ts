@@ -1,0 +1,14 @@
+declare const join: any;
+declare const Suite: any;
+declare const lodash: string;
+declare const rfdc: Function;
+declare const clone: Function;
+declare const clonedeep: string;
+declare const deepcopy: string;
+declare const full: any[];
+declare const klona: any[];
+declare const lite: any[];
+declare const json: string;
+declare const naiive: Function;
+declare const clone_full: Function;
+declare function runner(name: string, contenders: object): void;

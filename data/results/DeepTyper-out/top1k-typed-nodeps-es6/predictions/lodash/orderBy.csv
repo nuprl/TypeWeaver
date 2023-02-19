@@ -1,0 +1,140 @@
+importKeyword
+ Text.Whitespace
+baseOrderByName.Otherany0.3201complex0.1391string[]0.0302boolean0.0234any[]0.0223
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseOrderBy.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `sortBy` except that it allows specifying the sort\n * orders of the iteratees to sort by. If `orders` is unspecified, all values\n * are sorted in ascending order. Otherwise, specify an order of "desc" for\n * descending or "asc" for ascending sort order of corresponding values.\n * You may also specify a compare function for an order.\n *\n * @since 4.0.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Array[]|Function[]|Object[]|string[]} [iteratees=[identity]]\n *  The iteratees to sort by.\n * @param {(string|function)[]} [orders] The sort orders of `iteratees`.\n * @returns {Array} Returns the new sorted array.\n * @see reverse\n * @example\n *\n * const users = [\n *   { 'user': 'fred',   'age': 48 },\n *   { 'user': 'barney', 'age': 34 },\n *   { 'user': 'fred',   'age': 40 },\n *   { 'user': 'barney', 'age': 36 }\n * ]\n *\n * // Sort by `user` in ascending order and by `age` in descending order.\n * orderBy(users, ['user', 'age'], ['asc', 'desc'])\n * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]\n *\n * // Sort by `user` then by `age` using custom compare functions for each\n * orderBy(users, ['user', 'age'], [\n *   (a, b) => a.localeCompare(b, 'de', { sensitivity: 'base' }),\n *   (a, b) => a - b,\n * ])\n *\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+orderByName.Othercomplex0.4790any0.2524any[]0.1022string0.0316string[]0.0290
+(Punctuation
+collectionName.Otherany0.0726TranslationCollection0.0479any[]0.0422complex0.0354string0.0245
+,Punctuation
+ Text.Whitespace
+iterateesName.Otherany0.3883string0.1001any[]0.0835boolean0.0682number0.0299
+,Punctuation
+ Text.Whitespace
+ordersName.Otherany[]0.1032Order[]0.0144any0.0137Set<any>0.0089Function[]0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+collectionName.Otherany0.2634any[]0.2564string0.0569complex0.0345boolean0.0093
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9995any0.0001ObjectConstructor0.0000complex0.0000any[]0.0000
+.Punctuation
+isArrayName.Othercomplex0.9932any[]0.0021any0.0019boolean0.0006{}0.0002
+(Punctuation
+iterateesName.Otherany0.4970any[]0.2658complex0.1875string[]0.0051string0.0044
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+iterateesName.Otherany0.5257any[]0.3004complex0.0485boolean0.0278number0.0240
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iterateesName.Otherany[]0.4248any0.3927complex0.0590number0.0241string[]0.0177
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+iterateesName.Otherstring0.3820any0.3165any[]0.0867number0.0655complex0.0264
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9996ObjectConstructor0.0000any0.0000complex0.0000Math0.0000
+.Punctuation
+isArrayName.Othercomplex0.9957any[]0.0009any0.0009boolean0.0004{}0.0002
+(Punctuation
+ordersName.Otherany[]0.2199Order[]0.0181any0.0171complex0.0104Set<any>0.0088
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ordersName.Otherany[]0.0786Order[]0.0319ErrorConstructor0.0106Function[]0.0074Set<any>0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ordersName.Otherany[]0.1386Order[]0.0264ErrorConstructor0.0123any0.0063ActorModel0.0053
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+ordersName.Otherany[]0.1733any0.0225Order[]0.0200ErrorConstructor0.0159Promise<{}>0.0065
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseOrderByName.Otherany[]0.4738any0.1838complex0.1387string0.0086Promise<{}>0.0061
+(Punctuation
+collectionName.Otherany[]0.2036complex0.0763any0.0531TranslationCollection0.0229Collection0.0142
+,Punctuation
+ Text.Whitespace
+iterateesName.Otherany[]0.4462any0.1353complex0.0401string0.0240boolean0.0181
+,Punctuation
+ Text.Whitespace
+ordersName.Otherany[]0.1024Order[]0.0174Promise<{}>0.0095ErrorConstructor0.0066Set<any>0.0058
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+orderByName.Otherany[]0.1884any0.1134string[]0.1084complex0.0618string0.0322
+\nText.Whitespace

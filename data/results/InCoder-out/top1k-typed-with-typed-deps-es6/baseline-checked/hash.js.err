@@ -1,0 +1,71 @@
+lib/hash/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/hmac.ts(19,43): error TS2304: Cannot find name 'Key'.
+lib/hash/hmac.ts(44,46): error TS2304: Cannot find name 'BinaryEncoder'.
+lib/hash/ripemd.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/ripemd.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/ripemd.ts(14,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/1.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/1.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/sha/1.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/224.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/224.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/256.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/sha/256.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/256.ts(41,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/384.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/384.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/512.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/sha/512.ts(66,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/512.ts(118,50): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
+lib/hash/sha/512.ts(146,45): error TS2554: Expected 5 arguments, but got 6.
+lib/hash/sha/512.ts(168,42): error TS2554: Expected 5 arguments, but got 6.
+lib/hash/sha/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/utils.ts(68,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
+lib/hash/utils.ts(86,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/hash/utils.ts(88,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
+lib/hash/utils.ts(128,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/hash/utils.ts(139,27): error TS2339: Property 'length' does not exist on type 'number'.
+lib/hash/utils.ts(140,34): error TS2339: Property 'length' does not exist on type 'number'.
+lib/hash/utils.ts(142,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/hash/utils.ts(212,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(212,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(212,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(212,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(212,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(212,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(212,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(212,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(227,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(227,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(227,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(227,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(227,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(227,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(227,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(227,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(233,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(233,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(233,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(233,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(233,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(233,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(233,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(233,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(233,97): error TS2749: 'eh' refers to a value, but is being used as a type here. Did you mean 'typeof eh'?
+lib/hash/utils.ts(233,106): error TS2749: 'el' refers to a value, but is being used as a type here. Did you mean 'typeof el'?
+lib/hash/utils.ts(250,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(250,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(250,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(250,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(250,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(250,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(250,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(250,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(250,97): error TS2749: 'eh' refers to a value, but is being used as a type here. Did you mean 'typeof eh'?
+lib/hash/utils.ts(250,106): error TS2749: 'el' refers to a value, but is being used as a type here. Did you mean 'typeof el'?
+

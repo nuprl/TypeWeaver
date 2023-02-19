@@ -1,0 +1,126 @@
+importKeyword
+ Text.Whitespace
+baseDifferenceName.Otherany0.0975complex0.0707void0.0220Promise<void>0.0207boolean0.0174
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseDifference.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.1432complex0.0657void0.0378string0.0376boolean0.0361
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseFlatten.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeObjectName.Otherany0.1710complex0.0632boolean0.0362void0.0325string0.0317
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLikeObject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+lastName.Otherany0.3768void0.0826complex0.0724string0.0403Promise<any>0.0345
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./last.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `difference` except that it accepts `comparator`\n * which is invoked to compare elements of `array` to `values`. The order and\n * references of result values are determined by the first array. The comparator\n * is invoked with two arguments: (arrVal, othVal).\n *\n * **Note:** Unlike `pullAllWith`, this method returns a new array.\n *\n * @since 4.0.0\n * @category Array\n * @param {Array} array The array to inspect.\n * @param {...Array} [values] The values to exclude.\n * @param {Function} [comparator] The comparator invoked per element.\n * @returns {Array} Returns the new array of filtered values.\n * @example\n *\n * const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]\n *\n * differenceWith(objects, [{ 'x': 1, 'y': 2 }], isEqual)\n * // => [{ 'x': 2, 'y': 1 }]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+differenceWithName.Otherany0.3443complex0.1836string0.0616void0.0242boolean0.0218
+(Punctuation
+arrayName.Otherany0.5381any[]0.0981complex0.0700string0.0289string[]0.0181
+,Punctuation
+ Text.Whitespace
+...Punctuation
+valuesName.Otherany0.5076any[]0.1788complex0.0314number[]0.0154T[]0.0141
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+comparatorName.Otherany0.6282complex0.0424boolean0.0331number0.0292string0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastName.Otherany0.8039complex0.0528string0.0162any[]0.0103T0.0082
+(Punctuation
+valuesName.Otherany0.6970any[]0.0693number0.0138complex0.0138string0.0116
+)Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayLikeObjectName.Otherany0.4701boolean0.3387complex0.1122any[]0.0119number0.0086
+(Punctuation
+comparatorName.Otherany0.7738number0.0415boolean0.0390complex0.0271string0.0160
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+comparatorName.Otherany0.7666number0.0768complex0.0359boolean0.0152string0.0096
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isArrayLikeObjectName.Otherany0.3648complex0.3470boolean0.0810any[]0.0293string0.0234
+(Punctuation
+arrayName.Otherany0.6922any[]0.0978string0.0433complex0.0262boolean0.0182
+)Punctuation
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+baseDifferenceName.Otherany0.8128complex0.0418boolean0.0238any[]0.0200string0.0131
+(Punctuation
+arrayName.Otherany0.3726any[]0.3654string[]0.0217number[]0.0180complex0.0172
+,Punctuation
+ Text.Whitespace
+baseFlattenName.Otherany0.4808complex0.1806any[]0.1499boolean0.0191string[]0.0104
+(Punctuation
+valuesName.Otherany0.8056any[]0.0365string0.0155number0.0154number[]0.0089
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+isArrayLikeObjectName.Otherany0.6360boolean0.1264string0.0226any[]0.0216complex0.0172
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+,Punctuation
+ Text.Whitespace
+undefinedKeyword.Constant
+,Punctuation
+ Text.Whitespace
+comparatorName.Otherany0.6004number0.1161complex0.0249any[]0.0193boolean0.0173
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+differenceWithName.Otherany0.4801complex0.0320any[]0.0160string0.0137boolean0.0113
+\nText.Whitespace

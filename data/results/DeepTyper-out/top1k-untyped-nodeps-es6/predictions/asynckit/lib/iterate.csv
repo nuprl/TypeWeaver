@@ -1,0 +1,303 @@
+importKeyword
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./async.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+abortName.Othervoid0.5927any0.1133Promise<void>0.0359Error0.0131void)0.0090
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./abort.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// APIComment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+iterateName.Otherany0.5235any[]0.0389void0.0251Promise<any>0.0212number0.0197
+;Punctuation
+\n\nText.Whitespace
+/**\n * Iterates over each job object\n *\n * @param {array|object} list - array or object (named list) to iterate over\n * @param {function} iterator - iterator to run\n * @param {object} state - current job status\n * @param {function} callback - invoked when all elements processed\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+iterateName.Otherany0.6549void0.1067Promise<any>0.0242any[]0.0179Promise<void>0.0098
+(Punctuation
+listName.Otherany0.6419List0.0113any[]0.0089string0.0067string[]0.0038
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.5963string0.0136symbol0.0117number0.0061boolean0.0046
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.8015number0.0075IState0.0062string0.0059Function0.0041
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7005Function0.1943Callback0.0060string0.0049void0.0038
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// store current indexComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keyName.Otherany0.7909string0.1993number0.0038{}0.0009complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateName.Otherany0.5749{}0.0433IState0.0121Object0.0104number0.0089
+[Punctuation
+'keyedList'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+stateName.Otherany0.8269{}0.0340complex0.0079number0.0063Object0.0050
+[Punctuation
+'keyedList'Literal.String.Single
+]Punctuation
+[Punctuation
+stateName.Otherany0.6301number0.0203complex0.0183IState0.0140State0.0132
+.Punctuation
+indexName.Otherany0.6818number0.2931string0.0209boolean0.0006complex0.0005
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+stateName.Otherany0.5380IState0.0276number0.0201complex0.0191State0.0184
+.Punctuation
+indexName.Otherany0.8062number0.1821string0.0059complex0.0009boolean0.0007
+;Punctuation
+\n\n  Text.Whitespace
+stateName.Otherany0.5285IState0.0257State0.0172complex0.0112{}0.0080
+.Punctuation
+jobsName.Otherany0.9697complex0.0043string0.0023boolean0.0012{}0.0012
+[Punctuation
+keyName.Otherstring0.6690any0.3251number0.0024complex0.0008void0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+runJobName.Otherany0.8988void0.0211string0.0140complex0.0105Promise<void>0.0049
+(Punctuation
+iteratorName.Otherany0.7443symbol0.0074string0.0060{}0.0034Config0.0033
+,Punctuation
+ Text.Whitespace
+keyName.Otherany0.5532string0.4394number0.0018complex0.0011boolean0.0003
+,Punctuation
+ Text.Whitespace
+listName.Otherany0.9610complex0.0044{}0.0015any[]0.0012string0.0010
+[Punctuation
+keyName.Otherstring0.5971any0.3947number0.0023complex0.0009void0.0008
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.8081Error0.1212string0.0271void0.0037boolean0.0032
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.9034string0.0440Error0.0062void0.0017Buffer0.0017
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// don't repeat yourselfComment.Single
+\n    Text.Whitespace
+// skip secondary callbacksComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+keyName.Otherstring0.7350any0.2578complex0.0023number0.0015boolean0.0007
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+stateName.Otherany0.2876State0.0189{}0.0188IState0.0137complex0.0095
+.Punctuation
+jobsName.Otherany0.9675complex0.0090string0.0071boolean0.0019{}0.0018
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// clean up jobsComment.Single
+\n    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+stateName.Otherany0.6936IState0.0139State0.0127{}0.0092complex0.0076
+.Punctuation
+jobsName.Otherany0.9821complex0.0041string0.0016{}0.0011boolean0.0007
+[Punctuation
+keyName.Otherstring0.7342any0.2607number0.0017complex0.0008void0.0004
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8671Error0.0900string0.0224boolean0.0025{}0.0018
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// don't process rest of the resultsComment.Single
+\n      Text.Whitespace
+// stop still active jobsComment.Single
+\n      Text.Whitespace
+// and reset the listComment.Single
+\n      Text.Whitespace
+abortName.Othervoid0.4901any0.4393Function0.0082Promise<void>0.0070Error0.0053
+(Punctuation
+stateName.Otherany0.8086number0.0173string0.0163IState0.0102void0.0071
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+stateName.Otherany0.7765complex0.0147IState0.0136{}0.0105State0.0058
+.Punctuation
+resultsName.Otherany0.9090complex0.0597{}0.0068void0.0035Promise<any>0.0008
+[Punctuation
+keyName.Otherstring0.7953any0.1970number0.0033complex0.0010void0.0005
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+outputName.Otherany0.9588string0.0140any[]0.0035void0.0023Error0.0016
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// return salvaged resultsComment.Single
+\n    Text.Whitespace
+callbackName.Otherany0.4825void0.2720Function0.0465Promise<void>0.0118Callback0.0089
+(Punctuation
+errorName.Otherany0.5050Error0.4082string0.0234void0.0045{}0.0027
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.5305IState0.0208complex0.0098State0.0079{}0.0071
+.Punctuation
+resultsName.Otherany0.7715complex0.0359any[]0.0159{}0.0053string0.0038
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Runs iterator over provided job element\n *\n * @param   {function} iterator - iterator to invoke\n * @param   {string|number} key - key/index of the element in the list of jobs\n * @param   {mixed} item - job description\n * @param   {function} callback - invoked after iterator is done with the job\n * @returns {function|mixed} - job abort function or something else\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+runJobName.Othervoid0.6194any0.1846Promise<void>0.0717Promise<{}>0.0259Promise<any>0.0089
+(Punctuation
+iteratorName.Otherany0.5106string0.0207{}0.0072Config0.0068symbol0.0054
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.6377any0.3549number0.0036complex0.0005void0.0002
+,Punctuation
+ Text.Whitespace
+itemName.Otherany0.9407string0.0304number0.0055Function0.0014void0.0011
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6614Function0.1914void0.0120Callback0.0073string0.0070
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+aborterName.Otherany0.8659void0.0717number0.0113string0.0090boolean0.0053
+;Punctuation
+\n\n  Text.Whitespace
+// allow shortcut if iterator expects only two argumentsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+iteratorName.Otherany0.5309string[]0.0155Config0.0099Promise<any>0.0089string0.0074
+.Punctuation
+lengthName.Othernumber0.6464any0.3485string0.0015complex0.0011boolean0.0006
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+aborterName.Otherany0.7690number0.0604Promise<void>0.0338Promise<{}>0.0259Promise<any>0.0173
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iteratorName.Otherany0.7802complex0.0055Promise<any>0.0047Promise<{}>0.0029Promise<number>0.0028
+(Punctuation
+itemName.Otherany0.9116string0.0194number0.0109T0.0026complex0.0022
+,Punctuation
+ Text.Whitespace
+asyncKeyword
+(Punctuation
+callbackName.Otherany0.7469Function0.0884void0.0143number0.0108Promise<void>0.0105
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// otherwise go with full three argumentsComment.Single
+\n  Text.Whitespace
+elseKeyword
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+aborterName.Otherany0.7062Promise<void>0.0757Promise<any>0.0445Promise<{}>0.0245number0.0240
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iteratorName.Otherany0.5391Promise<any>0.0108complex0.0069Promise<{}>0.0039Promise<boolean>0.0034
+(Punctuation
+itemName.Otherany0.8545string0.0497number0.0139T0.0032{}0.0019
+,Punctuation
+ Text.Whitespace
+keyName.Otherany0.5530string0.4265number0.0070complex0.0018{}0.0008
+,Punctuation
+ Text.Whitespace
+asyncKeyword
+(Punctuation
+callbackName.Otherany0.6905Function0.0888void0.0131Callback0.0091string0.0067
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aborterName.Otherany0.5764boolean0.0354Promise<void>0.0237number0.0221void0.0201
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

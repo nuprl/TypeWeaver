@@ -1,0 +1,35 @@
+index.ts(25,8): error TS2339: Property 'message' does not exist on type 'string'.
+index.ts(28,8): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(31,8): error TS2339: Property 'codes' does not exist on type 'string'.
+index.ts(34,8): error TS2339: Property 'redirect' does not exist on type 'string'.
+index.ts(45,8): error TS2339: Property 'empty' does not exist on type 'string'.
+index.ts(52,8): error TS2339: Property 'retry' does not exist on type 'string'.
+index.ts(66,39): error TS2345: Argument of type '(code: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'code' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+index.ts(71,17): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
+index.ts(83,42): error TS2345: Argument of type '(code: number) => number' is not assignable to parameter of type '(value: string, index: number, array: string[]) => number'.
+  Types of parameters 'code' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+index.ts(96,52): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(100,17): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(109,52): error TS2339: Property 'message' does not exist on type 'string'.
+index.ts(113,17): error TS2339: Property 'message' does not exist on type 'string'.
+scripts/build.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'codes' must be of type 'any', but here has type '{}'.
+scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-apache.ts(15,65): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-iana.ts(13,15): error TS2339: Property 'pipe' does not exist on type 'Response'.
+scripts/fetch-iana.ts(20,33): error TS2304: Cannot find name 'Row'.
+scripts/fetch-iana.ts(41,36): error TS2304: Cannot find name 'ny'.
+scripts/fetch-iana.ts(41,46): error TS2304: Cannot find name 'ny'.
+scripts/fetch-iana.ts(51,14): error TS2339: Property 'substr' does not exist on type 'string | string[]'.
+  Property 'substr' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(51,47): error TS2339: Property 'substr' does not exist on type 'string | string[]'.
+  Property 'substr' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(52,14): error TS2339: Property 'toUpperCase' does not exist on type 'number'.
+scripts/fetch-nginx.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-nginx.ts(15,63): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+scripts/fetch-node.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-node.ts(15,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+

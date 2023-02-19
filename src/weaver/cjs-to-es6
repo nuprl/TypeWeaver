@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# wrapper that uses the typeweaver-weaver container to execute cjs-to-es6
+
+# use podman by default
+# override by calling script with `DOCKER=docker ./run.sh`
+: ${DOCKER:=podman}
+
+$DOCKER run --rm \
+    --volume $(pwd)/../../data:/data:rw \
+    --entrypoint cjs-to-es6 \
+    typeweaver-weaver "$@"

@@ -1,0 +1,59 @@
+importKeyword
+ Text.Whitespace
+baseSetName.Otherany0.3607complex0.2448string0.0344void0.0300boolean0.0229
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseSet.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Sets the value at `path` of `object`. If a portion of `path` doesn't exist,\n * it's created. Arrays are created for missing index properties while objects\n * are created for all other missing properties. Use `setWith` to customize\n * `path` creation.\n *\n * **Note:** This method mutates `object`.\n *\n * @since 3.7.0\n * @category Object\n * @param {Object} object The object to modify.\n * @param {Array|string} path The path of the property to set.\n * @param {*} value The value to set.\n * @returns {Object} Returns `object`.\n * @see has, hasIn, get, unset\n * @example\n *\n * const object = { 'a': [{ 'b': { 'c': 3 } }] }\n *\n * set(object, 'a[0].b.c', 4)\n * console.log(object.a[0].b.c)\n * // => 4\n *\n * set(object, ['x', '0', 'y', 'z'], 5)\n * console.log(object.x[0].y.z)\n * // => 5\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+setName.Other
+(Punctuation
+objectName.Otherany0.7024Object0.0906string0.0540object0.0522number0.0125
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.8143any0.1586complex0.0038Path0.0036Object0.0023
+,Punctuation
+ Text.Whitespace
+valueName.Otherstring0.5268any0.3789number0.0371boolean0.0144object0.0086
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.6034Object0.1505object0.1119string0.0337number0.0195
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+objectName.Otherany0.4768complex0.1133Object0.1111object0.0806string0.0507
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseSetKeyword.Typeany0.8100complex0.0780void0.0321string0.0242Object0.0095
+(Punctuation
+objectName.Otherany0.7132Object0.1161object0.0665string0.0279complex0.0173
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.7265any0.2025complex0.0191Path0.0098Object0.0041
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.4340string0.3431number0.0487object0.0234boolean0.0151
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+setName.Other
+\nText.Whitespace

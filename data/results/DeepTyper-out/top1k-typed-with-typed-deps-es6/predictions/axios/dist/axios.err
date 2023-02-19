@@ -1,0 +1,71 @@
+Selected GPU[0] Quadro RTX 6000 as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Apr 23 2019 21:29:24
+		Last modified date: Tue Apr 23 21:05:52 2019
+		Build type: release
+		Build target: GPU
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 10.0.0
+		CUDNN version: 7.3.1
+		Build Branch: HEAD
+		Build SHA1: ae9c9c7c5f9e6072cc9c94c254f816dbdc1c5be6
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
+
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
+  warnings.warn('Unsupported Linux distribution (%s-%s). CNTK supports Ubuntu 16.04 and above, only.' % (__my_distro__, __my_distro_ver__))
+Traceback (most recent call last):
+  File "readout.py", line 227, in <module>
+    run_seq(content)
+  File "readout.py", line 190, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 103, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f20a5b52a29]                                                       + 0x7c5a29
+[0x7f20a5d13289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f216e146741]                                                       + 0x2d7741
+[0x7f2172a599e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f2172adf084]                                                       + 0x153084
+[0x7f2172ae450d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2172adeb9a]                                                       + 0x152b9a
+[0x7f2172adf1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f2172a31f1e]                                                       + 0xa5f1e
+[0x7f2172a02f2b]    PyObject_Call                                      + 0x4b
+[0x7f2172ae4770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f2172adeb9a]                                                       + 0x152b9a
+[0x7f2172adef94]                                                       + 0x152f94
+[0x7f2172ae450d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2172adeb9a]                                                       + 0x152b9a
+[0x7f2172adef94]                                                       + 0x152f94
+[0x7f2172ae450d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2172ade193]                                                       + 0x152193
+[0x7f2172adf15c]                                                       + 0x15315c
+[0x7f2172ae450d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2172adeb9a]                                                       + 0x152b9a
+[0x7f2172adef94]                                                       + 0x152f94
+[0x7f2172ae450d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2172adeb9a]                                                       + 0x152b9a
+[0x7f2172adf1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f2172adf1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f2172b143d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f2172b1456f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f2172b2e8e8]    Py_Main                                            + 0xff8
+[0x5606f43b92b8]    main                                               + 0x178
+[0x7f217279d083]    __libc_start_main                                  + 0xf3
+[0x5606f43b936e]    _start                                             + 0x2e
+
+

@@ -1,0 +1,54 @@
+index.ts(14,8): error TS1192: Module '"/mnt/typeweaver/data/InCoder-out/top1k-untyped-nodeps-es6/baseline/fs.realpath/old"' has no default export.
+index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'.
+index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(24,60): error TS2304: Cannot find name 'Callback'.
+index.ts(24,60): error TS4078: Parameter 'cb' of exported function has or is using private name 'Callback'.
+index.ts(26,28): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+  Overload 2 of 4, '(path: PathLike, options: BufferEncodingOption, callback: (err: ErrnoException, resolvedPath: Buffer) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
+  Overload 3 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string | Buffer) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+index.ts(33,19): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+  Overload 2 of 4, '(path: PathLike, options: BufferEncodingOption, callback: (err: ErrnoException, resolvedPath: Buffer) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
+  Overload 3 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string | Buffer) => void): void', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+index.ts(44,32): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+  Overload 2 of 3, '(path: PathLike, options: BufferEncodingOption): Buffer', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
+  Overload 3 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+index.ts(48,32): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+  Overload 2 of 3, '(path: PathLike, options: BufferEncodingOption): Buffer', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
+  Overload 3 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
+    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+index.ts(59,3): error TS2739: Type 'typeof realpath' is missing the following properties from type 'typeof realpath': __promisify__, native
+index.ts(60,3): error TS2741: Property 'native' is missing in type '(p: string | Buffer, cache: Cache) => any' but required in type 'typeof realpathSync'.
+old.ts(54,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
+old.ts(56,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
+old.ts(90,26): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
+old.ts(113,30): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
+old.ts(151,20): error TS2542: Index signature in type 'String' only permits reading.
+old.ts(170,18): error TS2542: Index signature in type 'String' only permits reading.
+old.ts(184,46): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+old.ts(184,70): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+old.ts(262,42): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
+old.ts(284,55): error TS2304: Cannot find name 'Target'.
+old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
+old.ts(291,43): error TS2304: Cannot find name 'Target'.
+old.ts(291,58): error TS2304: Cannot find name 'Target'.
+old.ts(299,42): error TS2304: Cannot find name 'ResolvedLink'.
+

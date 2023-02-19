@@ -1,0 +1,81 @@
+importKeyword
+ Text.Whitespace
+basePullAllName.Otherany0.1824complex0.1433boolean0.0796string0.0286void0.0260
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/basePullAll.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `pullAll` except that it accepts `iteratee` which is\n * invoked for each element of `array` and `values` to generate the criterion\n * by which they're compared. The iteratee is invoked with one argument: (value).\n *\n * **Note:** Unlike `differenceBy`, this method mutates `array`.\n *\n * @since 4.0.0\n * @category Array\n * @param {Array} array The array to modify.\n * @param {Array} values The values to remove.\n * @param {Function} iteratee The iteratee invoked per element.\n * @returns {Array} Returns `array`.\n * @see pull, pullAll, pullAllWith, pullAt, remove, reject\n * @example\n *\n * const array = [{ 'x': 1 }, { 'x': 2 }, { 'x': 3 }, { 'x': 1 }]\n *\n * pullAllBy(array, [{ 'x': 1 }, { 'x': 3 }], 'x')\n * console.log(array)\n * // => [{ 'x': 2 }]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+pullAllByName.Otherboolean0.2872any0.2156complex0.1593string0.0637any[]0.0327
+(Punctuation
+arrayName.Otherany0.3733any[]0.1473string[]0.0916string0.0354number[]0.0325
+,Punctuation
+ Text.Whitespace
+valuesName.Otherany0.6964any[]0.0404string0.0211number0.0153string[]0.0096
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.5860number0.1220string0.0843boolean0.0250Date0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+arrayName.Otherany0.7206any[]0.1044string[]0.0243string0.0224number[]0.0192
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+arrayName.Otherany0.4318any[]0.2631string[]0.0539number[]0.0379T[]0.0135
+.Punctuation
+lengthName.Othernumber0.6642any0.3253string0.0041complex0.0017boolean0.0011
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valuesName.Otherany0.8752any[]0.0312number0.0218string0.0180number[]0.0095
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valuesName.Otherany0.7691any[]0.0655string0.0319string[]0.0200number[]0.0139
+.Punctuation
+lengthName.Othernumber0.7174any0.2734string0.0044complex0.0011boolean0.0010
+)Punctuation
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+basePullAllName.Otherany0.6628complex0.0847number0.0528any[]0.0244string0.0201
+(Punctuation
+arrayName.Otherany0.4146any[]0.3094number[]0.0541string[]0.0298string0.0227
+,Punctuation
+ Text.Whitespace
+valuesName.Otherany0.6327any[]0.1272string0.0248number0.0225number[]0.0197
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.4327string0.1525number0.0807boolean0.0181Date0.0122
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+arrayName.Otherany0.5639any[]0.2013string[]0.0479number[]0.0360string0.0329
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+pullAllByName.Otherany0.4329complex0.0238number0.0100string0.0097any[]0.0091
+\nText.Whitespace

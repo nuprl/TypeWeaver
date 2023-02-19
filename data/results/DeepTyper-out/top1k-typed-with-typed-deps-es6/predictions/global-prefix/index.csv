@@ -1,0 +1,521 @@
+Text
+/*!\n * global-prefix <https://github.com/jonschlinkert/global-prefix>\n *\n * Copyright (c) 2015-present Jon Schlinkert.\n * Licensed under the MIT license.\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+fsName.Otherany0.9847string0.0078complex0.0037number0.0004void0.0003
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+osName.Otherany0.9878string0.0059complex0.0039void0.0004Promise<string>0.0002
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'os'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.8975string0.0838complex0.0091Path0.0017Promise<string>0.0008
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+iniName.Otherany0.4477string0.3279complex0.0344boolean0.0337void0.0217
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'ini'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+prefixName.Otherstring0.5838any0.4015number0.0036complex0.0013boolean0.0007
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getPrefixName.Otherany0.6974string0.2148boolean0.0208Promise<any>0.0047Promise<string>0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9949complex0.0031Process0.0005string0.0003T0.0001
+.Punctuation
+envName.Otherany0.9980complex0.0015string0.0002boolean0.0001void0.0000
+.Punctuation
+PREFIXName.Otherany0.9984complex0.0009string0.0004number0.0001void0.0000
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+processName.Otherany0.9944complex0.0041Process0.0003string0.0002void0.0001
+.Punctuation
+envName.Otherany0.9977complex0.0019string0.0002boolean0.0000void0.0000
+.Punctuation
+PREFIXName.Otherany0.9979complex0.0014string0.0005number0.0000any[]0.0000
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prefixName.Otherany0.5986string0.3818complex0.0050boolean0.0029number0.0010
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+prefixName.Otherany0.7780string0.2152boolean0.0009complex0.0007number0.0006
+;Punctuation
+\n\n  Text.Whitespace
+// Start by checking if the global prefix is set by the userComment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+homeName.Otherany0.8614string0.1182complex0.0063string[]0.0036boolean0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+osName.Otherany0.9987complex0.0007string0.0005any[]0.0000number0.0000
+.Punctuation
+homedirName.Otherany0.9774complex0.0108string0.0061boolean0.0013void0.0008
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// os.homedir() returns undefined if $HOME is not set; path.resolve requires stringsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+homeName.Otherany0.8857string0.0953complex0.0087boolean0.0043string[]0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+prefixName.Otherany0.5775string0.4165boolean0.0018complex0.0018number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tryConfigPathName.Otherany0.6207string0.3334complex0.0235boolean0.0132number0.0013
+(Punctuation
+pathName.Otherany0.9987string0.0008complex0.0004Path0.0000any[]0.0000
+.Punctuation
+resolveName.Otherany0.9779complex0.0186string0.0027void0.0003boolean0.0001
+(Punctuation
+homeName.Otherany0.8435string0.1360complex0.0120string[]0.0023any[]0.0011
+,Punctuation
+ Text.Whitespace
+'.npmrc'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prefixName.Otherany0.6092string0.3723complex0.0043boolean0.0028{}0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+prefixName.Otherany0.5575string0.4322boolean0.0019complex0.0016{}0.0010
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Otherwise find the path of npmComment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+npmName.Otherany0.5039string0.2294boolean0.1513complex0.0343string[]0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tryNpmPathName.Otherany0.5734string0.2784boolean0.0619complex0.0495string[]0.0065
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+npmName.Otherboolean0.6404any0.1997string0.1084complex0.0144string[]0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Check the built-in npm config fileComment.Single
+\n    Text.Whitespace
+prefixName.Otherany0.5749string0.4183boolean0.0022complex0.0017number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tryConfigPathName.Otherany0.5435string0.3995complex0.0307boolean0.0155number0.0015
+(Punctuation
+pathName.Otherany0.9988string0.0006complex0.0004Path0.0000any[]0.0000
+.Punctuation
+resolveName.Otherany0.9782complex0.0185string0.0019void0.0008boolean0.0002
+(Punctuation
+npmName.Otherstring0.5042any0.3349boolean0.0824complex0.0202string[]0.0146
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'npmrc'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prefixName.Otherany0.5733string0.4150boolean0.0040complex0.0016number0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Now the global npm config can also be checked.Comment.Single
+\n      Text.Whitespace
+prefixName.Otherany0.5569string0.4375boolean0.0022complex0.0011number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tryConfigPathName.Otherany0.4890string0.4730complex0.0157boolean0.0152number0.0013
+(Punctuation
+pathName.Otherany0.9987string0.0008complex0.0003Path0.0000number0.0000
+.Punctuation
+resolveName.Otherany0.9853complex0.0095string0.0045void0.0002boolean0.0001
+(Punctuation
+prefixName.Otherany0.6010string0.3948complex0.0013number0.0009boolean0.0006
+,Punctuation
+ Text.Whitespace
+'etc'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'npmrc'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+prefixName.Otherany0.6553string0.3391boolean0.0022number0.0008complex0.0006
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+prefixName.Otherany0.6199string0.3712complex0.0030boolean0.0016number0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+APPDATAName.Otherany0.7614string0.1952boolean0.0228complex0.0030number0.0024
+,Punctuation
+ Text.Whitespace
+DESTDIRName.Otherany0.7255string0.2064boolean0.0422complex0.0046number0.0026
+,Punctuation
+ Text.Whitespace
+OSTYPEName.Otherany0.7175string0.2392boolean0.0248complex0.0045number0.0019
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processName.Otherany0.9931complex0.0045string0.0005Process0.0004{}0.0001
+.Punctuation
+envName.Otherany0.9945complex0.0042string0.0008boolean0.0001void0.0000
+;Punctuation
+\n\n    Text.Whitespace
+// c:\node\node.exe --> prefix=c:\node\Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9958complex0.0024string0.0004Process0.0002{}0.0001
+.Punctuation
+platformName.Otherany0.9817string0.0158complex0.0013boolean0.0005number0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'win32'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+OSTYPEName.Otherstring0.5789any0.4107boolean0.0063complex0.0014number0.0007
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'msys'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+OSTYPEName.Otherstring0.5854any0.4055boolean0.0057complex0.0012number0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'cygwin'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+prefixName.Otherany0.7213string0.2751boolean0.0022number0.0005complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+APPDATAName.Otherany0.5644string0.3049boolean0.1259complex0.0014number0.0012
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+pathName.Otherany0.9989string0.0008complex0.0002any[]0.0000number0.0000
+.Punctuation
+joinName.Otherany0.9900complex0.0056string0.0042number0.0001any[]0.0000
+(Punctuation
+APPDATAName.Otherany0.5343string0.4613number0.0014boolean0.0010complex0.0005
+,Punctuation
+ Text.Whitespace
+'npm'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+pathName.Otherany0.9977string0.0017complex0.0004Path0.0000any[]0.0000
+.Punctuation
+dirnameName.Otherany0.9926complex0.0039string0.0030{}0.0001number0.0000
+(Punctuation
+processName.Otherany0.9968complex0.0021string0.0003Process0.0001{}0.0001
+.Punctuation
+execPathName.Otherany0.9705string0.0285complex0.0006number0.0002boolean0.0001
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+prefixName.Otherany0.6833string0.3104boolean0.0010complex0.0009{}0.0008
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// /usr/local/bin/node --> prefix=/usr/localComment.Single
+\n    Text.Whitespace
+prefixName.Otherany0.8459string0.1524complex0.0005boolean0.0003number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9975string0.0020complex0.0003Path0.0000any[]0.0000
+.Punctuation
+dirnameName.Otherany0.9931complex0.0032string0.0032Path0.0001{}0.0001
+(Punctuation
+pathName.Otherany0.9979string0.0015complex0.0005Path0.0001any[]0.0000
+.Punctuation
+dirnameName.Otherany0.9891complex0.0053string0.0047Path0.0002{}0.0001
+(Punctuation
+processName.Otherany0.9966complex0.0019string0.0005Process0.0001{}0.0001
+.Punctuation
+execPathName.Otherany0.9694string0.0296complex0.0006number0.0001boolean0.0001
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// destdir only is respected on UnixComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+DESTDIRName.Otherany0.6528string0.2210boolean0.1174complex0.0022number0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+prefixName.Otherany0.8056string0.1932complex0.0005number0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9982string0.0013complex0.0004any[]0.0000Path0.0000
+.Punctuation
+joinName.Otherany0.9841string0.0081complex0.0073number0.0001any[]0.0001
+(Punctuation
+DESTDIRName.Otherstring0.5502any0.4438number0.0014boolean0.0014complex0.0011
+,Punctuation
+ Text.Whitespace
+prefixName.Otherany0.5929string0.4039complex0.0007{}0.0005number0.0004
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+prefixName.Otherany0.6182string0.3669complex0.0029{}0.0018any[]0.0018
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tryNpmPathName.Otherany0.5805string0.4012boolean0.0059number0.0023complex0.0010
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fsName.Otherany0.9990string0.0008complex0.0002number0.0000any[]0.0000
+.Punctuation
+realpathSyncName.Otherany0.9964string0.0018complex0.0008T0.0003number0.0001
+(Punctuation
+requireName.Other
+(Punctuation
+'which'Literal.String.Single
+)Punctuation
+.Punctuation
+syncName.Otherany0.9980string0.0009complex0.0004void0.0002{}0.0001
+(Punctuation
+'npm'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9984string0.0007Error0.0004number0.0001{}0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+/* do nothing */Comment.Multiline
+ Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tryConfigPathName.Otherany0.6622string0.3093boolean0.0063number0.0040complex0.0036
+(Punctuation
+configPathName.Otherstring0.9455any0.0498number0.0019complex0.0005string[]0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+iniName.Otherany0.9665string0.0205complex0.0013Error0.0010boolean0.0005
+.Punctuation
+parseName.Otherany0.8963complex0.0246string0.0149number0.0071boolean0.0059
+(Punctuation
+fsName.Otherany0.9970string0.0017complex0.0010number0.0001any[]0.0000
+.Punctuation
+readFileSyncName.Otherany0.6082complex0.3737string0.0138void0.0005number0.0003
+(Punctuation
+configPathName.Otherstring0.8660any0.1278number0.0027complex0.0025string[]0.0001
+,Punctuation
+ Text.Whitespace
+'utf-8'Literal.String.Single
+)Punctuation
+)Punctuation
+.Punctuation
+prefixName.Otherany0.6996string0.2974complex0.0012number0.0006boolean0.0003
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9990string0.0005Error0.0002number0.0001complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+/* do nothing */Comment.Multiline
+ Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Expose `prefix`\n */Comment.Multiline
+\n\nText.Whitespace
+ReflectName.Builtinany0.9938complex0.0040string0.0003number0.0001void0.0001
+.Punctuation
+definePropertyName.Othercomplex0.8607any0.1359string0.0006void0.0003boolean0.0003
+(Punctuation
+moduleName.Other
+,Punctuation
+ Text.Whitespace
+'exports'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+getName.Other
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+getPrefixName.Otherstring0.5409any0.3496boolean0.0420number0.0172complex0.0119
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,261 @@
+importKeyword
+ Text.Whitespace
+arrayEachName.Otherany0.3458complex0.1208boolean0.0727string[]0.0295void0.0269
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/arrayEach.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseForOwnName.Otherany0.3927boolean0.1056complex0.0943string[]0.0482string0.0433
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseForOwn.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isBufferName.Otherany0.4527complex0.2427string0.0409void0.0225any[]0.0220
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isBuffer.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isObjectName.Othercomplex0.5582boolean0.2443any0.1176string[]0.0198void0.0129
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isObject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isTypedArrayName.Otherany0.6251complex0.1486string0.0500boolean0.0474void0.0316
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isTypedArray.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * An alternative to `reduce` this method transforms `object` to a new\n * `accumulator` object which is the result of running each of its own\n * enumerable string keyed properties thru `iteratee`, with each invocation\n * potentially mutating the `accumulator` object. If `accumulator` is not\n * provided, a new object with the same `[[Prototype]]` will be used. The\n * iteratee is invoked with four arguments: (accumulator, value, key, object).\n * Iteratee functions may exit iteration early by explicitly returning `false`.\n *\n * @since 1.3.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @param {*} [accumulator] The custom accumulator value.\n * @returns {*} Returns the accumulated value.\n * @see reduce, reduceRight\n * @example\n *\n * transform([2, 3, 4], (result, n) => {\n *   result.push(n *= n)\n *   return n % 2 == 0\n * }, [])\n * // => [4, 9]\n *\n * transform({ 'a': 1, 'b': 2, 'c': 1 }, (result, value, key) => {\n *   (result[value] || (result[value] = [])).push(key)\n * }, {})\n * // => { '1': ['a', 'c'], '2': ['b'] }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+transformName.Otherany0.5043void0.2199complex0.1285string0.0391{}0.0138
+(Punctuation
+objectName.Otherany0.9402Object0.0228object0.0113complex0.0105string0.0027
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.9715string0.0034Error0.0020any[]0.0010complex0.0009
+,Punctuation
+ Text.Whitespace
+accumulatorName.Otherany0.9128{}0.0109string0.0081complex0.0065object0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isArrName.Otherany0.7440any[]0.0671boolean0.0548string[]0.0310string0.0205
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9997ObjectConstructor0.0000Math0.0000any0.0000T[]0.0000
+.Punctuation
+isArrayName.Othercomplex0.9958any0.0019any[]0.0005void0.0003boolean0.0002
+(Punctuation
+objectName.Otherany0.8913complex0.0443Object0.0281object0.0111any[]0.0106
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isArrLikeName.Otherany0.6742any[]0.2054boolean0.0410complex0.0253number0.0077
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isArrName.Otherany0.7205any[]0.1004complex0.0685boolean0.0296number0.0149
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isBufferName.Otherany0.8031complex0.0984any[]0.0179string0.0075boolean0.0058
+(Punctuation
+objectName.Otherany0.9597complex0.0110object0.0081Object0.0080any[]0.0049
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isTypedArrayName.Otherany0.6008boolean0.1133any[]0.0806complex0.0717object0.0218
+(Punctuation
+objectName.Otherany0.9408object0.0171Object0.0126complex0.0113{}0.0043
+)Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+accumulatorName.Otherany0.9078complex0.0193{}0.0186any[]0.0114string0.0042
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+CtorName.Otherany0.7950any[]0.0448Object0.0195Function0.0154object0.0113
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.9181Object0.0444complex0.0113object0.0072any[]0.0036
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+objectName.Otherany0.9257Object0.0492complex0.0102object0.0046any[]0.0016
+.Punctuation
+constructorKeyword.Reserved
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrLikeName.Otherany0.6534boolean0.2371string0.0547any[]0.0181complex0.0058
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+accumulatorName.Otherany0.9259any[]0.0099{}0.0069boolean0.0048string0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isArrName.Otherany0.6743any[]0.1255boolean0.0386string[]0.0142{}0.0132
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+newOperator.Wordany0.5836undefined[]0.1174any[]0.0722{}0.0200Error0.0085
+ Text.Whitespace
+CtorName.Otherany0.5940any[]0.1652undefined[]0.1232{}0.0214complex0.0205
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isObjectName.Otherboolean0.6935complex0.1895any0.0967any[]0.0061{}0.0019
+(Punctuation
+objectName.Otherany0.8935Object0.0524complex0.0191object0.0172any[]0.0048
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+accumulatorName.Otherany0.9378{}0.0119Object0.0076boolean0.0072complex0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+CtorName.Otherany0.9034Function0.0156Object0.0137any[]0.0109object0.0065
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+\n        Text.Whitespace
+?Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002Object0.0001complex0.0000{}0.0000
+.Punctuation
+createName.Othercomplex0.9027any0.0486{}0.0118void0.0090Object0.0089
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9999any0.0000Object0.0000complex0.0000Object[]0.0000
+.Punctuation
+getPrototypeOfName.Otherany0.5399complex0.2745void0.0486Object0.0414{}0.0343
+(Punctuation
+objectName.Otherany0.8154Object0.1113{}0.0319complex0.0156object0.0152
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+accumulatorName.Otherany0.6788{}0.2733complex0.0090Object0.0045object0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+(Punctuation
+isArrLikeName.Otherany0.5565boolean0.2556string0.0355Object0.0273object0.0205
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+arrayEachName.Otherany0.7514string0.0610boolean0.0309any[]0.0251object0.0228
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseForOwnKeyword.Typeany0.7856string0.0363{}0.0238boolean0.0219complex0.0202
+)Punctuation
+(Punctuation
+objectName.Otherany0.8599Object0.0778object0.0247complex0.0149{}0.0051
+,Punctuation
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.6962number0.1039string0.0643Object0.0453object0.0293
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.6971any0.2846string0.0042Object0.0030complex0.0020
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.8941Object0.0492object0.0201number0.0089complex0.0071
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+\n    Text.Whitespace
+iterateeName.Otherany0.8193boolean0.0074complex0.0067Object0.0063{}0.0053
+(Punctuation
+accumulatorName.Otherany0.7469{}0.0581object0.0196Object0.0182complex0.0164
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7515number0.0648string0.0638Object0.0274object0.0211
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.7283any0.2493{}0.0036complex0.0031string0.0029
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.8224Object0.0877object0.0235complex0.0197number0.0098
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+accumulatorName.Otherany0.6868{}0.0934complex0.0122Object0.0111Error0.0098
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+transformName.Otherany0.2839complex0.0427void0.0317any[]0.0214string0.0194
+\nText.Whitespace

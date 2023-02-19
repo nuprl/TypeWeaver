@@ -1,0 +1,92 @@
+Text
+/**\n * Checks if `predicate` returns truthy for **all** properties of `object`.\n * Iteration is stopped once `predicate` returns falsey. The predicate is\n * invoked with three arguments: (value, key, object).\n *\n * **Note:** This method returns `true` for\n * [empty objects](https://en.wikipedia.org/wiki/Empty_set) because\n * [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of\n * elements of empty objects.\n *\n * @since 5.0.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {boolean} Returns `true` if all properties pass the predicate check,\n *  else `false`.\n * @example\n *\n * everyValue({ 'a': 0, 'b': 'yes', 'c': false }, Boolean)\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+everyValueName.Otherboolean0.3146any0.1442complex0.0510Object0.0450string0.0433
+(Punctuation
+objectName.Otherany0.5155Object0.3508object0.0556string0.0078{}0.0026
+,Punctuation
+ Text.Whitespace
+predicateName.Otherboolean0.9192any0.0466string0.0081Object0.0021false0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+objectName.OtherObject0.5939any0.2676object0.0796{}0.0063complex0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997Object0.0001any0.0000complex0.0000object0.0000
+(Punctuation
+objectName.OtherObject0.4361any0.4244object0.0720complex0.0202{}0.0095
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+propsName.Otherstring[]0.7063any[]0.0685complex0.0648any0.0594Object0.0276
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor1.0000Object0.0000complex0.0000any0.0000Object[]0.0000
+.Punctuation
+keysName.Otherstring[]0.9747complex0.0093any[]0.0035string0.0031boolean0.0017
+(Punctuation
+objectName.Otherany0.4027Object0.3961object0.0739complex0.0350{}0.0158
+)Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.8077any0.1733complex0.0068number0.0037Object0.0009
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+propsName.Otherany0.2719string[]0.2572complex0.1013string0.0779{}0.0517
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+predicateName.Otherboolean0.9707any0.0204complex0.0018string0.0018Boolean0.0005
+(Punctuation
+objectName.Otherany0.7900Object0.1235object0.0241complex0.0113{}0.0086
+[Punctuation
+keyName.Otherstring0.8459any0.1334number0.0077complex0.0069boolean0.0013
+]Punctuation
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.7457any0.2282number0.0070complex0.0046Object0.0026
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.4216Object0.3633object0.0910string0.0257complex0.0148
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+everyValueName.Otherany0.1954string0.0301boolean0.0176complex0.0113string[]0.0064
+\nText.Whitespace

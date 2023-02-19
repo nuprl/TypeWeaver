@@ -1,0 +1,4371 @@
+'use strict'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+// rfc7231 6.1Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+statusCodeCacheableByDefaultName.OtherSet<any>0.5076Set<string>0.2061Set<number>0.0431any0.0116{}0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.1913SetConstructor0.1399Set<any>0.1242Set<string>0.0626Set<number>0.0273
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9826Set<any>0.0060any0.0037Set<number>0.0006Set<string>0.0003
+(Punctuation
+[Punctuation
+\n    Text.Whitespace
+200Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+203Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+204Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+206Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+300Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+301Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+308Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+404Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+405Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+410Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+414Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+501Literal.Number.Float
+,Punctuation
+\nText.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// This implementation does not understand partial responses (206)Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+understoodStatusesName.OtherSet<any>0.6922Set<string>0.1507Set<number>0.0312SetConstructor0.0096any0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSetConstructor0.2769Set<any>0.1839Set<string>0.0971any0.0844Set<number>0.0382
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9809Set<any>0.0072any0.0031Set<number>0.0007number0.0003
+(Punctuation
+[Punctuation
+\n    Text.Whitespace
+200Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+203Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+204Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+300Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+301Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+302Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+303Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+307Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+308Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+404Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+405Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+410Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+414Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+501Literal.Number.Float
+,Punctuation
+\nText.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+errorStatusCodesName.OtherSet<any>0.6575Set<string>0.1609Set<number>0.0392SetConstructor0.0130PropertyDescriptor0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSetConstructor0.3241Set<any>0.1511Set<string>0.1035any0.0565Set<number>0.0323
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9845Set<any>0.0053any0.0016Set<number>0.0006number0.0004
+(Punctuation
+[Punctuation
+\n    Text.Whitespace
+500Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+502Literal.Number.Float
+,Punctuation
+\n    Text.Whitespace
+503Literal.Number.Float
+,Punctuation
+ \n    Text.Whitespace
+504Literal.Number.Float
+,Punctuation
+\nText.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hopByHopHeadersName.Othercomplex0.8825any0.0177boolean0.0076any[]0.0017number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+dateName.Otherboolean0.9979number0.0006any0.0005string0.0002false0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+ Text.Whitespace
+// included, because we add Age update DateComment.Single
+\n    Text.Whitespace
+connectionName.Otherboolean0.9937string0.0019number0.0019any0.0008false0.0007
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+'keep-alive'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+'proxy-authenticate'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+'proxy-authorization'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+teName.Otherboolean0.9990true0.0003false0.0002number0.0002string0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+trailerName.Otherboolean0.9990true0.0002false0.0002number0.0002string0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+'transfer-encoding'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+upgradeName.Otherboolean0.9991false0.0002true0.0002number0.0001any0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+excludedFromRevalidationUpdateName.Othercomplex0.9421any0.0206boolean0.0046{}0.0011number0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Since the old body is reused, it doesn't make sense to change properties of the bodyComment.Single
+\n    Text.Whitespace
+'content-length'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+'content-encoding'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+'transfer-encoding'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n    Text.Whitespace
+'content-range'Literal.String.Single
+:Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toNumberOrZeroName.Otherstring0.3000number0.1986boolean0.1812any0.1234complex0.1118
+(Punctuation
+sName.Otherstring0.8561any0.0538number0.0170Date0.0063String0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nName.Othernumber0.9965any0.0021string0.0005complex0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9968any0.0011string0.0008boolean0.0004complex0.0002
+(Punctuation
+sName.Otherstring0.8876any0.0573number0.0281Date0.0031String0.0026
+,Punctuation
+ Text.Whitespace
+10Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isFiniteName.Builtinboolean0.9930number0.0037any0.0009false0.0004complex0.0004
+(Punctuation
+nName.Othernumber0.9830any0.0118boolean0.0019string0.0014complex0.0006
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nName.Othernumber0.9848any0.0120string0.0010boolean0.0008Date0.0003
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// RFC 5861Comment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isErrorResponseName.Otherboolean0.4823any0.2717number0.0643complex0.0572string0.0428
+(Punctuation
+responseName.Otherany0.3853WebResponse0.0386Response0.0384IncomingMessage0.0204complex0.0185
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// consider undefined response as faultyComment.Single
+\n    Text.Whitespace
+ifKeyword
+(Punctuation
+!Operator
+responseName.Otherany0.5365complex0.0488Response0.0370boolean0.0213WebResponse0.0171
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+errorStatusCodesName.Othercomplex0.6492any0.1702Set<string>0.0365{}0.0321Set<any>0.0120
+.Punctuation
+hasName.Otherboolean0.9158any0.0577complex0.0086{}0.0030number0.0029
+(Punctuation
+responseName.Otherany0.5153complex0.0579Response0.0305WebResponse0.0211IResponse0.0162
+.Punctuation
+statusName.Otherany0.8198number0.1141string0.0401complex0.0079void0.0028
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parseCacheControlName.Otherboolean0.3986any0.2635string0.1257number0.0512string[]0.0429
+(Punctuation
+headerName.Otherstring0.6868any0.2826number0.0094boolean0.0034string[]0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ccName.Other{}0.8763any0.0442any[]0.0125string[]0.0086complex0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+headerName.Otherstring0.8058any0.1477boolean0.0150string[]0.0070number0.0050
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ccName.Otherstring[]0.4859any0.2623any[]0.1030boolean0.0504{}0.0239
+;Punctuation
+\n\n    Text.Whitespace
+// TODO: When there is more than one value present for a given directive (e.g., two Expires header fields, multiple Cache-Control: max-age directives),Comment.Single
+\n    Text.Whitespace
+// the directive's value is considered invalid. Caches are encouraged to consider responses that have invalid freshness information to be staleComment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+partsName.Otherstring[]0.9847any[]0.0089any0.0021number[]0.0018string0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+headerName.Otherstring0.8311any0.1416string[]0.0185boolean0.0025number0.0021
+.Punctuation
+trimName.Otherstring0.9358any0.0578complex0.0031string[]0.0018number0.0007
+(Punctuation
+)Punctuation
+.Punctuation
+splitName.Othercomplex0.8930any0.1010string[]0.0010string0.0008void0.0008
+(Punctuation
+/\s*,\s*/Literal.String.Regex
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// TODO: lame parsingComment.Single
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+partName.Otherstring0.7328any0.2625complex0.0013number0.0009string[]0.0009
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+partsName.Otherstring[]0.9687any[]0.0202number[]0.0035any0.0031string0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+kName.Otherstring0.9639any0.0271number0.0047string[]0.0021complex0.0012
+,Punctuation
+ Text.Whitespace
+vName.Otherstring0.6217any0.3125number0.0352string[]0.0135boolean0.0088
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+partName.Otherstring0.8333any0.1629complex0.0012number0.0009string[]0.0006
+.Punctuation
+splitName.Othercomplex0.9610any0.0344string[]0.0010void0.0008string0.0005
+(Punctuation
+/\s*=\s*/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ccName.Other{}0.4621string[]0.1998any[]0.1174any0.1026complex0.0654
+[Punctuation
+kName.Otherstring0.9340any0.0420number0.0186complex0.0028boolean0.0012
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vName.Otherany0.5422string0.3232number0.0705boolean0.0427complex0.0069
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+trueName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+v.replaceKeyword.Type
+(Punctuation
+/^"|"$/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// TODO: lame unquotingComment.Single
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ccName.Otherstring[]0.4493any[]0.3514boolean0.0450any0.0232{}0.0227
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+formatCacheControlName.Otherany[]0.3761string[]0.2921any0.0983boolean0.0250number[]0.0105
+(Punctuation
+ccName.Otherstring[]0.3894any[]0.2450any0.1405string0.0525boolean0.0360
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+partsName.Otherany[]0.8010string[]0.1748any0.0068number[]0.0056any[][]0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+kName.Otherstring0.9876any0.0095number0.0013string[]0.0006boolean0.0005
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+ccName.Otherstring[]0.2737any0.2296any[]0.1998{}0.0886complex0.0584
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+vName.Otherany0.7726string0.1986{}0.0082complex0.0080boolean0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ccName.Other{}0.3479any0.2969complex0.1221any[]0.0914string[]0.0718
+[Punctuation
+kName.Otherstring0.9810any0.0138number0.0028complex0.0012string[]0.0003
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+partsName.Otherstring[]0.8681any[]0.1242number[]0.0018any0.0014complex0.0004
+.Punctuation
+pushName.Othernumber0.9558any0.0201string0.0131boolean0.0075complex0.0015
+(Punctuation
+vName.Otherstring0.5352any0.3397boolean0.0889number0.0199complex0.0050
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+kName.Otherstring0.9775any0.0191number0.0024complex0.0003boolean0.0002
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+kKeyword.Typestring0.9077any0.0768number0.0129complex0.0012boolean0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'='Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+vName.Otherstring0.6731any0.2880number0.0256string[]0.0036any[]0.0035
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+partsName.Otherstring[]0.9413any[]0.0504any0.0023number[]0.0022string0.0005
+.Punctuation
+lengthName.Othernumber0.9696any0.0247string0.0044boolean0.0006complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+partsName.Otherstring[]0.8799any[]0.1079any0.0046number[]0.0023string0.0007
+.Punctuation
+joinName.Otherstring0.9521any0.0347string[]0.0045complex0.0035number0.0023
+(Punctuation
+', 'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+CachePolicyName.Otherany0.9975complex0.0010string0.0008number0.0002{}0.0001
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+\n        Text.Whitespace
+reqName.Otherany0.6942Request0.0793XMLHttpRequest0.0082complex0.0078string0.0058
+,Punctuation
+\n        Text.Whitespace
+resName.Otherany0.7102Response0.0404{}0.0200boolean0.0198complex0.0132
+,Punctuation
+\n        Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+sharedName.Otherany0.7869boolean0.0480number0.0413string0.0260any[]0.0115
+,Punctuation
+\n            Text.Whitespace
+cacheHeuristicName.Otherany0.4288boolean0.2432number0.0991string0.0487any[]0.0185
+,Punctuation
+\n            Text.Whitespace
+immutableMinTimeToLiveName.Otherany0.4144boolean0.3100number0.0849string0.0372any[]0.0156
+,Punctuation
+\n            Text.Whitespace
+ignoreCargoCultName.Otherany0.4048boolean0.3628number0.0749string0.0302any[]0.0132
+,Punctuation
+\n            Text.Whitespace
+_fromObjectName.Otherany0.4372boolean0.3918number0.0418string0.0190any[]0.0125
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n    Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+_fromObjectName.Otherboolean0.6959any0.2197string0.0155number0.0125complex0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_fromObjectName.Othervoid0.8250any0.0564boolean0.0557complex0.0144Function0.0071
+(Punctuation
+_fromObjectName.Otherany0.7153string0.0438number0.0407boolean0.0313complex0.0221
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+returnKeyword
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+resName.Otherany0.5103boolean0.1230Response0.0458complex0.0334{}0.0319
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+resName.Otherany0.7415complex0.0221Response0.0185{}0.0155ResponseWrapper0.0086
+.Punctuation
+headersName.Otherany0.7628complex0.1719{}0.0105boolean0.0059Object0.0058
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordany0.8132Error0.1245complex0.0186{}0.0135string0.0082
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000complex0.0000LogLevel.Error0.0000
+(Punctuation
+'Response headers missing'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_assertRequestHasHeadersName.Othervoid0.5916boolean0.2580any0.0493complex0.0234number0.0113
+(Punctuation
+reqName.Otherany0.7953Request0.0377complex0.0078boolean0.0057string0.0054
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_responseTimeName.Othernumber0.8086boolean0.1417any0.0307string0.0071Date0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+nowName.Othernumber0.9545Date0.0137any0.0114boolean0.0077complex0.0033
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.9891any0.0038number0.0036false0.0010string0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sharedName.Otherboolean0.5837any0.3342number0.0517string0.0088{}0.0025
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_cacheHeuristicName.Otherboolean0.8952number0.0536any0.0286string0.0097complex0.0015
+ Text.Whitespace
+=Operator
+\n            Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+cacheHeuristicName.Otherboolean0.8898any0.0432number0.0393string0.0084complex0.0041
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+cacheHeuristicName.Othernumber0.3217boolean0.2827any0.2597string0.0829complex0.0077
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0.1Keyword.Type
+;Punctuation
+ Text.Whitespace
+// 10% matches IEComment.Single
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_immutableMinTtlName.Otherboolean0.6174number0.2404any0.0876string0.0283complex0.0036
+ Text.Whitespace
+=Operator
+\n            Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+immutableMinTimeToLiveName.Otherboolean0.7248any0.1233number0.1199string0.0088complex0.0082
+\n                Text.Whitespace
+?Operator
+ Text.Whitespace
+immutableMinTimeToLiveName.Othernumber0.8491any0.1220string0.0148boolean0.0104complex0.0010
+\n                Text.Whitespace
+:Operator
+ Text.Whitespace
+24Keyword.Type
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+3600Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+1000Literal.Number.Float
+;Punctuation
+\n\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_statusName.Otherboolean0.3726string0.2526number0.2260any0.1076complex0.0116
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'status'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+resName.Otherany0.5472complex0.1949{}0.0745boolean0.0707Object0.0115
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+res.statusName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+200Keyword.Type
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherboolean0.2335any0.2269complex0.1434string0.0662number0.0385
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resName.Otherany0.8202complex0.0708Response0.0091{}0.0069ResponseWrapper0.0051
+.Punctuation
+headersName.Otherany0.8550complex0.1042any[]0.0050string0.0049Object0.0046
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherboolean0.1976string0.1931any0.1798string[]0.1256any[]0.0481
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseCacheControlName.Otherany0.2227complex0.1572string0.1360boolean0.1082string[]0.0808
+(Punctuation
+resName.Otherany0.9386complex0.0060Response0.0041ResponseWrapper0.0024{}0.0018
+.Punctuation
+headersName.Otherany0.9152complex0.0438Object0.0091{}0.0057any[]0.0043
+[Punctuation
+'cache-control'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8979any0.0658boolean0.0219number0.0057complex0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'method'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+reqName.Otherany0.7919complex0.0405Request0.0286{}0.0081string0.0077
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+reqName.Otherany0.8521complex0.0273Request0.0197XMLHttpRequest0.0071string0.0047
+.Punctuation
+methodName.Otherany0.7954string0.1991complex0.0016number0.0009boolean0.0009
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'GET'Literal.String.Single
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_urlName.Otherstring0.9582any0.0289number0.0052void0.0025boolean0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reqName.Otherany0.8980Request0.0216complex0.0090XMLHttpRequest0.0043string0.0034
+.Punctuation
+urlName.Otherany0.9109string0.0849complex0.0020number0.0012Object0.0001
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_hostName.Otherstring0.4796boolean0.2385any0.2072number0.0586complex0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reqName.Otherany0.9193complex0.0116Request0.0116string0.0054boolean0.0019
+.Punctuation
+headersName.Otherany0.9140complex0.0760Object0.0015any[]0.0014string0.0014
+.Punctuation
+hostName.Otherany0.9625string0.0272number0.0052complex0.0036boolean0.0004
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_noAuthorizationName.Otherboolean0.8214any0.0789string0.0310number0.0298complex0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+reqName.Otherany0.9632complex0.0083Request0.0034string0.0017boolean0.0014
+.Punctuation
+headersName.Otherany0.9254complex0.0675any[]0.0011string0.0008Object0.0008
+.Punctuation
+authorizationName.Otherany0.9888string0.0064complex0.0023number0.0015boolean0.0005
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_reqHeadersName.Otherany0.3326boolean0.3041string0.2804number0.0426complex0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resName.Otherany0.9221complex0.0199Response0.0073boolean0.0028string0.0020
+.Punctuation
+headersName.Otherany0.8862complex0.0938Object0.0027string0.0020any[]0.0016
+.Punctuation
+varyName.Otherany0.8911string0.0843boolean0.0131complex0.0078number0.0012
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+req.headersName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+;Punctuation
+ Text.Whitespace
+// Don't keep all request headers if they won't be usedComment.Single
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_reqccName.Otherboolean0.4117any0.2879string0.0897string[]0.0793any[]0.0164
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseCacheControlName.Otherboolean0.3659any0.3655string0.1470string[]0.0280number0.0169
+(Punctuation
+reqName.Otherany0.9418Request0.0067complex0.0023Response0.0011string0.0009
+.Punctuation
+headersName.Otherany0.9561complex0.0284{}0.0034any[]0.0029Object0.0023
+[Punctuation
+'cache-control'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// Assume that if someone uses legacy, non-standard uncecessary options they don't understand caching,Comment.Single
+\n        Text.Whitespace
+// so there's no point stricly adhering to the blindly copy&pasted directives.Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+ignoreCargoCultName.Otherboolean0.7661any0.1752string0.0301false0.0051number0.0049
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+'pre-check'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherboolean0.6229any0.1268complex0.0961{}0.0333string[]0.0287
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+'post-check'Literal.String.Single
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.3452complex0.2978boolean0.1639{}0.0627string[]0.0196
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4770{}0.2394complex0.1788Object0.0078string[]0.0054
+[Punctuation
+'pre-check'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4770{}0.2486complex0.1648string[]0.0068Object0.0062
+[Punctuation
+'post-check'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5565{}0.2111complex0.1362string[]0.0054any[]0.0049
+[Punctuation
+'no-cache'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5639{}0.2067complex0.1376any[]0.0049string[]0.0048
+[Punctuation
+'no-store'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5808{}0.2065complex0.1203string[]0.0059any[]0.0046
+[Punctuation
+'must-revalidate'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.3741complex0.1505boolean0.0755any[]0.0201{}0.0187
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999any0.0000Object0.0000complex0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.5160any0.3066{}0.0606boolean0.0362Object0.0263
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.5018boolean0.1143complex0.0813{}0.0323string0.0287
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+'cache-control'Literal.String.Single
+:Operator
+ Text.Whitespace
+formatCacheControlName.Otherstring0.3645any0.2530boolean0.1832complex0.0506void0.0361
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4431string0.2111number0.0675complex0.0475boolean0.0417
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.8889complex0.0408{}0.0025Set<any>0.0020number0.0015
+.Punctuation
+expiresName.Otherany0.9100number0.0445complex0.0150string0.0084boolean0.0066
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7336complex0.0551{}0.0098RegExp0.0082Object0.0037
+.Punctuation
+pragmaName.Otherany0.6647boolean0.1706string0.0732number0.0341complex0.0178
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// When the Cache-Control header field is not present in a request, caches MUST consider the no-cache request pragma-directiveComment.Single
+\n        Text.Whitespace
+// as having the same effect as if "Cache-Control: no-cache" were present (see Section 5.2.1).Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+resName.Otherany0.8970Response0.0119boolean0.0055{}0.0051complex0.0044
+.Punctuation
+headersName.Otherany0.9114complex0.0463{}0.0065Object0.0059any[]0.0034
+[Punctuation
+'cache-control'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+/no-cache/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9957any0.0016complex0.0008void0.0005string0.0004
+(Punctuation
+resName.Otherany0.9671complex0.0075string0.0037boolean0.0033{}0.0020
+.Punctuation
+headersName.Otherany0.9395complex0.0425string0.0029{}0.0020Object0.0019
+.Punctuation
+pragmaName.Otherany0.8958string0.0546boolean0.0227number0.0135complex0.0070
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Other{}0.4044any0.3437complex0.1468boolean0.0144any[]0.0085
+[Punctuation
+'no-cache'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+nowName.Othernumber0.9218any0.0290Date0.0213boolean0.0124string0.0088
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9996Date0.0000FunctionConstructor0.0000complex0.0000any0.0000
+.Punctuation
+nowName.Othernumber0.9832any0.0050Date0.0049boolean0.0021string0.0013
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+storableName.Otherboolean0.9727any0.0110string0.0060number0.0033complex0.0015
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// The "no-store" request directive indicates that a cache MUST NOT store any part of either this request or any response to it.Comment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+(Punctuation
+\n            Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_reqccName.Otherany0.6140complex0.1240{}0.0869boolean0.0159RegExp0.0123
+[Punctuation
+'no-store'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// A cache MUST NOT store a response to any request, unless:Comment.Single
+\n            Text.Whitespace
+// The request method is understood by the cache and defined as being cacheable, andComment.Single
+\n            Text.Whitespace
+(Punctuation
+'GET'Literal.String.Single
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8406any0.1120boolean0.0156complex0.0142number0.0080
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+'HEAD'Literal.String.Single
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8010any0.1251complex0.0273boolean0.0209number0.0099
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+(Punctuation
+'POST'Literal.String.Single
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8366any0.0926boolean0.0232complex0.0230number0.0132
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_hasExplicitExpirationName.Otherboolean0.9321any0.0358complex0.0178string0.0052number0.0024
+(Punctuation
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the response status code is understood by the cache, andComment.Single
+\n            Text.Whitespace
+understoodStatusesName.Othercomplex0.3714any0.1268Set<any>0.0628Set<string>0.0535{}0.0382
+.Punctuation
+hasName.Otherboolean0.9702any0.0205complex0.0030{}0.0009string0.0009
+(Punctuation
+thisKeyword
+.Punctuation
+_statusName.Otherany0.3285string0.1366number0.1312complex0.0875boolean0.0236
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the "no-store" cache directive does not appear in request or response header fields, andComment.Single
+\n            Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5012{}0.1857complex0.1149boolean0.0216any[]0.0113
+[Punctuation
+'no-store'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the "private" response directive does not appear in the response, if the cache is shared, andComment.Single
+\n            Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.8437any0.0908string0.0166complex0.0100number0.0099
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4128complex0.0291boolean0.0097Set<any>0.0077RegExp0.0066
+.Punctuation
+privateKeyword
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the Authorization header field does not appear in the request, if the cache is shared,Comment.Single
+\n            Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.6108any0.2482complex0.0367string0.0346number0.0110
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_noAuthorizationName.Otherboolean0.6934any0.1800complex0.0324string0.0245number0.0094
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_allowsStoringAuthenticatedName.Otherboolean0.9072any0.0620complex0.0153string0.0054number0.0018
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the response either:Comment.Single
+\n            Text.Whitespace
+// contains an Expires header field, orComment.Single
+\n            Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.8451complex0.0783{}0.0034boolean0.0020Set<any>0.0014
+.Punctuation
+expiresName.Otherany0.8836complex0.0457number0.0209boolean0.0187string0.0121
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+// contains a max-age response directive, orComment.Single
+\n                Text.Whitespace
+// contains a s-maxage response directive and the cache is shared, orComment.Single
+\n                Text.Whitespace
+// contains a public response directive.Comment.Single
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4021complex0.2610{}0.1648any[]0.0144boolean0.0105
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.4620any0.3290string0.0320complex0.0189number0.0162
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5217complex0.1503{}0.1136any[]0.0205boolean0.0174
+[Punctuation
+'s-maxage'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.2309complex0.1540Set<string>0.0229Set<any>0.0209{}0.0150
+.Punctuation
+publicKeyword
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+// has a status code that is defined as cacheable by defaultComment.Single
+\n                Text.Whitespace
+statusCodeCacheableByDefaultName.Othercomplex0.2353any0.1788Set<string>0.0762Set<any>0.0732boolean0.0438
+.Punctuation
+hasName.Otherboolean0.9659any0.0232complex0.0027number0.0013string0.0012
+(Punctuation
+thisKeyword
+.Punctuation
+_statusName.Othernumber0.2795any0.2422string0.1590complex0.0530boolean0.0229
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_hasExplicitExpirationName.Otherboolean0.7844any0.1154string0.0319number0.0149complex0.0124
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// 4.2.1 Calculating Freshness LifetimeComment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_isSharedName.Otherany0.6699string0.0724RegExp0.0540boolean0.0389number0.0089
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.7247{}0.0744complex0.0703string[]0.0106RegExp0.0081
+[Punctuation
+'s-maxage'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5744complex0.1724{}0.1033any[]0.0131string[]0.0121
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7453complex0.0922any[]0.0032boolean0.0031number0.0031
+.Punctuation
+expiresName.Otherany0.7378number0.1539boolean0.0282complex0.0232string0.0163
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_assertRequestHasHeadersName.Othervoid0.5693boolean0.3166any0.0600string0.0098number0.0053
+(Punctuation
+reqName.Otherany0.8205Request0.0447boolean0.0080string0.0066number0.0052
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+reqName.Otherany0.7847Request0.0254complex0.0099XMLHttpRequest0.0089boolean0.0053
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+reqName.Otherany0.7688Request0.0256complex0.0184XMLHttpRequest0.0106{}0.0030
+.Punctuation
+headersName.Otherany0.8918complex0.0816Object0.0043any[]0.0039{}0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordany0.8063Error0.1409complex0.0175{}0.0092string0.0074
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000complex0.0000any[]0.0000
+(Punctuation
+'Request headers missing'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+satisfiesWithoutRevalidationName.Otherboolean0.7952any0.0587void0.0304string0.0225number0.0094
+(Punctuation
+reqName.Otherany0.7534Request0.0535boolean0.0105string0.0098number0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_assertRequestHasHeadersName.Otherboolean0.3524void0.3408any0.1114complex0.0244number0.0212
+(Punctuation
+reqName.Otherany0.9023Request0.0232complex0.0042string0.0032Error0.0030
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// When presented with a request, a cache MUST NOT reuse a stored response, unless:Comment.Single
+\n        Text.Whitespace
+// the presented request does not contain the no-cache pragma (Section 5.4), nor the no-cache cache directive,Comment.Single
+\n        Text.Whitespace
+// unless the stored response is successfully validated (Section 4.3), andComment.Single
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+requestCCName.Otherboolean0.4721any0.3231string[]0.0348number0.0282any[]0.0280
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseCacheControlName.Otherboolean0.4272any0.3303string0.0899number0.0326complex0.0256
+(Punctuation
+reqName.Otherany0.9289Request0.0108complex0.0042any[]0.0015number0.0015
+.Punctuation
+headersName.Otherany0.9352complex0.0418any[]0.0051{}0.0050Object0.0030
+[Punctuation
+'cache-control'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+requestCCName.Otherany0.6900{}0.0894complex0.0610boolean0.0103any[]0.0101
+[Punctuation
+'no-cache'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+/no-cache/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9979any0.0007complex0.0003string0.0002false0.0002
+(Punctuation
+reqName.Otherany0.9449complex0.0059Request0.0037number0.0025string0.0022
+.Punctuation
+headersName.Otherany0.9373complex0.0468any[]0.0022Object0.0016number0.0016
+.Punctuation
+pragmaName.Otherany0.9279number0.0305string0.0160boolean0.0115complex0.0079
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+requestCCName.Otherany0.7436{}0.0760complex0.0346any[]0.0137boolean0.0114
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9655any0.0254boolean0.0044string0.0015complex0.0004
+(Punctuation
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+requestCCName.Otherany0.6409{}0.1164complex0.0435any[]0.0132number0.0058
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+requestCCName.Otherany0.6704{}0.0726complex0.0581any[]0.0171boolean0.0088
+[Punctuation
+'min-fresh'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+timeToLiveName.Otherboolean0.9333number0.0298any0.0189complex0.0071string0.0028
+(Punctuation
+)Punctuation
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+1000Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+requestCCName.Otherany0.7197{}0.0838complex0.0386number0.0133any[]0.0065
+[Punctuation
+'min-fresh'Literal.String.Single
+]Punctuation
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// the stored response is either:Comment.Single
+\n        Text.Whitespace
+// fresh, or allowed to be served staleComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+staleName.Otherboolean0.9666any0.0182complex0.0057string0.0034number0.0017
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+allowsStaleName.Otherany0.8223boolean0.0978string0.0183number0.0084complex0.0071
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+requestCCName.Otherany0.7234{}0.1014complex0.0543any[]0.0083boolean0.0068
+[Punctuation
+'max-stale'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4944complex0.1983{}0.1307boolean0.0542any[]0.0121
+[Punctuation
+'must-revalidate'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+(Punctuation
+trueKeyword.Constant
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+requestCCName.Otherany0.8990{}0.0398complex0.0196any[]0.0039string0.0034
+[Punctuation
+'max-stale'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n                    Text.Whitespace
+requestCCName.Otherany0.8556{}0.0475complex0.0163any[]0.0109boolean0.0061
+[Punctuation
+'max-stale'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9757any0.0182boolean0.0016string0.0013complex0.0005
+(Punctuation
+)Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.9211complex0.0346any0.0246string0.0081boolean0.0045
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+allowsStaleName.Otherboolean0.6858any0.1895number0.0501string0.0197false0.0105
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_requestMatchesName.Otherboolean0.7097any0.0879complex0.0827number0.0110any[]0.0090
+(Punctuation
+reqName.Otherany0.7507Request0.0989complex0.0121boolean0.0070Error0.0029
+,Punctuation
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_requestMatchesName.Otherboolean0.9855any0.0075string0.0017number0.0010complex0.0006
+(Punctuation
+reqName.Otherany0.7356Request0.0828boolean0.0188string0.0123number0.0065
+,Punctuation
+ Text.Whitespace
+allowHeadMethodName.Otherboolean0.5988any0.2630number0.0423string0.0264complex0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// The presented effective request URI and that of the stored response match, andComment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_urlName.Otherstring0.9387any0.0446number0.0053boolean0.0051void0.0014
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_urlName.Otherstring0.9299any0.0482boolean0.0088number0.0076complex0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+reqName.Otherany0.8847Request0.0188complex0.0056string0.0055boolean0.0019
+.Punctuation
+urlName.Otherany0.8505string0.1431complex0.0029number0.0013boolean0.0004
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_hostName.Otherboolean0.5116any0.2476string0.1733number0.0533complex0.0040
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+reqName.Otherany0.8910Request0.0143complex0.0080boolean0.0052string0.0039
+.Punctuation
+headersName.Otherany0.8809complex0.1000Object0.0038any[]0.0021string0.0011
+.Punctuation
+hostName.Otherany0.9675string0.0183complex0.0051boolean0.0049number0.0030
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// the request method associated with the stored response allows it to be used for the presented request, andComment.Single
+\n            Text.Whitespace
+(Punctuation
+!Operator
+reqName.Otherany0.7891Request0.0487complex0.0111XMLHttpRequest0.0077Error0.0034
+.Punctuation
+methodName.Otherany0.9103string0.0752boolean0.0053complex0.0048number0.0013
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8662any0.0818boolean0.0255number0.0107complex0.0107
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+reqName.Otherany0.9121Request0.0151string0.0081complex0.0081boolean0.0018
+.Punctuation
+methodName.Otherany0.9323string0.0571complex0.0040boolean0.0034number0.0010
+ Text.Whitespace
+||Operator
+\n                Text.Whitespace
+(Punctuation
+allowHeadMethodName.Otherboolean0.5917any0.3191string0.0611complex0.0065number0.0047
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+'HEAD'Literal.String.Single
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+reqName.Otherany0.9127complex0.0137Request0.0112string0.0075any[]0.0022
+.Punctuation
+methodName.Otherany0.9086string0.0789complex0.0048boolean0.0034number0.0013
+)Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+// selecting header fields nominated by the stored response (if any) match those presented, andComment.Single
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_varyMatchesName.Otherboolean0.9151any0.0373complex0.0153string0.0079number0.0039
+(Punctuation
+reqName.Otherany0.8618Request0.0379complex0.0108any[]0.0045string0.0039
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_allowsStoringAuthenticatedName.Otherboolean0.7649any0.1542string0.0456number0.0074complex0.0059
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+//  following Cache-Control response directives (Section 5.2.2) have such an effect: must-revalidate, public, and s-maxage.Comment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6979complex0.0785{}0.0649any[]0.0105RegExp0.0071
+[Punctuation
+'must-revalidate'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.8336complex0.0467RegExp0.0046{}0.0029boolean0.0022
+.Punctuation
+publicKeyword
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6336complex0.1621{}0.0754boolean0.0167any[]0.0148
+[Punctuation
+'s-maxage'Literal.String.Single
+]Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_varyMatchesName.Otherboolean0.9634any0.0178string0.0060number0.0018complex0.0015
+(Punctuation
+reqName.Otherany0.7602Request0.0560boolean0.0099string0.0068complex0.0060
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.3712RegExp0.0331complex0.0234boolean0.0107Set<any>0.0087
+.Punctuation
+varyName.Otherstring0.5862any0.3718complex0.0144boolean0.0140number0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// A Vary header field-value of "*" always fails to matchComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.4901complex0.0618RegExp0.0221Set<any>0.0184boolean0.0078
+.Punctuation
+varyName.Otherstring0.5424any0.4188boolean0.0144complex0.0139number0.0031
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'*'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fieldsName.Otherany0.7223string[]0.1211string0.0446any[]0.0372complex0.0280
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.4218complex0.2189RegExp0.0060Error0.0045any[]0.0042
+.Punctuation
+varyName.Otherstring0.7605any0.2277complex0.0039boolean0.0036string[]0.0016
+\n            Text.Whitespace
+.Punctuation
+trimName.Otherstring0.8597any0.1324complex0.0029string[]0.0016boolean0.0010
+(Punctuation
+)Punctuation
+\n            Text.Whitespace
+.Punctuation
+toLowerCaseName.Otherstring0.6671any0.3244string[]0.0029complex0.0021boolean0.0012
+(Punctuation
+)Punctuation
+\n            Text.Whitespace
+.Punctuation
+splitName.Othercomplex0.8821any0.1114string[]0.0010string0.0007any[]0.0006
+(Punctuation
+/\s*,\s*/Literal.String.Regex
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nameName.Otherstring0.6924any0.3047complex0.0008string[]0.0005number0.0005
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+fieldsName.Otherstring[]0.3972any0.3953any[]0.1010complex0.0328string0.0302
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+reqName.Otherany0.9100complex0.0126Request0.0119{}0.0017string0.0015
+.Punctuation
+headersName.Otherany0.8517complex0.1217{}0.0103Object0.0037any[]0.0029
+[Punctuation
+nameName.Otherstring0.8681any0.1256complex0.0028number0.0016boolean0.0004
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_reqHeadersName.Othercomplex0.4482{}0.2590any0.2518any[]0.0080Object0.0042
+[Punctuation
+nameName.Otherstring0.8975any0.0965complex0.0022number0.0016boolean0.0006
+]Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_copyWithoutHopByHopHeadersName.Otherboolean0.6390any0.1250string0.0608complex0.0323{}0.0271
+(Punctuation
+inHeadersName.Otherany0.6762string0.1446boolean0.0623number0.0159{}0.0111
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+headersName.Other{}0.5100any0.2993complex0.0335Object0.0200object0.0174
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nameName.Otherstring0.9692any0.0280complex0.0010string[]0.0008number0.0003
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+inHeadersName.Otherany0.5066complex0.2997{}0.0957any[]0.0166string[]0.0148
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hopByHopHeadersName.Otherany0.4652complex0.2969{}0.2078Object0.0038any[]0.0024
+[Punctuation
+nameName.Otherstring0.9501any0.0464complex0.0023number0.0002{}0.0002
+]Punctuation
+)Punctuation
+ Text.Whitespace
+continueKeyword
+;Punctuation
+\n            Text.Whitespace
+headersName.Othercomplex0.3783any0.3229{}0.2272Object0.0234object0.0071
+[Punctuation
+nameName.Otherstring0.8939any0.0985complex0.0051number0.0006string[]0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+inHeadersName.Otherany0.4392complex0.3144{}0.1877any[]0.0106Object0.0077
+[Punctuation
+nameName.Otherstring0.8816any0.1115complex0.0034number0.0009string[]0.0005
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+// 9.1.  ConnectionComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+inHeadersName.Otherany0.2061complex0.0975Set<string>0.0233{}0.0168Set<any>0.0168
+.Punctuation
+connectionName.Otherstring0.4276boolean0.3126any0.1426Connection0.0183number0.0122
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tokensName.Otherstring[]0.4050any0.4011string0.0663any[]0.0500complex0.0194
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+inHeadersName.Otherany0.2914complex0.0419string[]0.0381any[]0.0183RegExp0.0129
+.Punctuation
+connectionName.Otherstring0.7214any0.1803boolean0.0405string[]0.0141number0.0126
+.Punctuation
+trimName.Otherstring0.9094any0.0844complex0.0026string[]0.0014number0.0007
+(Punctuation
+)Punctuation
+.Punctuation
+splitName.Othercomplex0.8680any0.1263void0.0008string[]0.0007string0.0006
+(Punctuation
+/\s*,\s*/Literal.String.Regex
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nameName.Otherstring0.7739any0.2229complex0.0007string[]0.0006number0.0006
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+tokensName.Otherstring[]0.5353any0.2908any[]0.0877string0.0301complex0.0255
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.4191complex0.3067{}0.1759any[]0.0218Object0.0201
+[Punctuation
+nameName.Otherstring0.8946any0.0996complex0.0021number0.0017string[]0.0004
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+headersName.Otherany0.6176complex0.2440{}0.0121Headers0.0110any[]0.0100
+.Punctuation
+warningName.Otherstring0.6677any0.2820boolean0.0141number0.0139complex0.0137
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+warningsName.Otherstring[]0.7452any[]0.0730any0.0453string0.0241number[]0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+headersName.Otherany0.5472complex0.2815Headers0.0149{}0.0145any[]0.0117
+.Punctuation
+warningName.Otherstring0.8025any0.1855complex0.0043string[]0.0024number0.0023
+.Punctuation
+splitName.Othercomplex0.9167any0.0787string[]0.0011string0.0007boolean0.0004
+(Punctuation
+/,/Literal.String.Regex
+)Punctuation
+.Punctuation
+filterName.Othercomplex0.9237any0.0640boolean0.0020string0.0020v...0.0012
+(Punctuation
+warningName.Otherstring0.7578any0.2232boolean0.0067number0.0049RegExp0.0028
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+/^\s*1[0-9][0-9]/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9962string0.0009any0.0008complex0.0005number0.0004
+(Punctuation
+warningName.Otherstring0.7623any0.2308number0.0026boolean0.0017complex0.0008
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+warningsName.Otherstring[]0.7910any[]0.0417number[]0.0244RegExp[]0.0109any0.0083
+.Punctuation
+lengthName.Othernumber0.9749any0.0210string0.0027boolean0.0008complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.5860complex0.2705{}0.0192Headers0.0191any[]0.0146
+.Punctuation
+warningName.Otherstring0.6278any0.3172number0.0332boolean0.0076complex0.0053
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+headersName.Otherany0.4773complex0.4337any[]0.0217{}0.0134Headers0.0064
+.Punctuation
+warningName.Otherstring0.6923any0.2557number0.0294boolean0.0073complex0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+warningsName.Otherstring[]0.8271any[]0.1032any0.0230number[]0.0111string0.0048
+.Punctuation
+joinName.Otherstring0.8897any0.0933number0.0047complex0.0042string[]0.0041
+(Punctuation
+','Literal.String.Single
+)Punctuation
+.Punctuation
+trimName.Otherstring0.8624any0.1325number0.0018complex0.0017boolean0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+headersName.Otherany0.5169complex0.3054any[]0.0571{}0.0465Headers0.0089
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+responseHeadersName.Othervoid0.2807any0.1750complex0.1222number0.0817boolean0.0687
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+headersName.Othercomplex0.4470any0.3340{}0.0326number0.0242Headers0.0195
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_copyWithoutHopByHopHeadersName.Othernumber0.2676any0.2289complex0.1751string0.1051boolean0.0255
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Othernumber0.4771any0.3004string0.0874complex0.0186Date0.0151
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ageName.Othernumber0.9517any0.0392string0.0050boolean0.0015Date0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9813any0.0161string0.0009boolean0.0005Date0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// A cache SHOULD generate 113 warning if it heuristically chose a freshnessComment.Single
+\n        Text.Whitespace
+// lifetime greater than 24 hours and the response's age is greater than 24 hours.Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+ageName.Othernumber0.9558any0.0418string0.0016boolean0.0004Date0.0001
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+3600Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+24Literal.Number.Float
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_hasExplicitExpirationName.Otherboolean0.9114number0.0470any0.0222complex0.0070string0.0060
+(Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.8347complex0.0813any0.0648string0.0075boolean0.0052
+(Punctuation
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+3600Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+24Literal.Number.Float
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+headersName.Otherany0.5171complex0.4097Headers0.0105{}0.0102Object0.0055
+.Punctuation
+warningName.Otherany0.4958string0.4180number0.0371complex0.0191void0.0137
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+(Punctuation
+headersName.Otherany0.7157complex0.2043{}0.0131Headers0.0074any[]0.0054
+.Punctuation
+warningName.Otherany0.6014string0.3308boolean0.0292number0.0202complex0.0102
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+headersName.Otherany0.6111complex0.3027{}0.0215any[]0.0111Object0.0075
+.Punctuation
+warningName.Otherstring0.6077any0.3435number0.0306complex0.0063boolean0.0048
+}Literal.String.Interpol
+, Literal.String.Backtick
+`Literal.String.Backtick
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+\n                Text.Whitespace
+'113 - "rfc7234 5.5.4"'Literal.String.Single
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+headersName.Otherany0.4905complex0.3567Headers0.0186{}0.0177any[]0.0088
+.Punctuation
+ageName.Othernumber0.6681any0.3126string0.0137complex0.0025boolean0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+MathName.BuiltinMath0.9998number0.0000any0.0000complex0.0000number[]0.0000
+.Punctuation
+roundName.Othernumber0.9948any0.0037boolean0.0005complex0.0003void0.0003
+(Punctuation
+ageName.Othernumber0.9318any0.0592string0.0064Date0.0006complex0.0005
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n        Text.Whitespace
+headersName.Otherany0.5494complex0.3807any[]0.0136Headers0.0074Object0.0068
+.Punctuation
+dateName.Otherany0.7424number0.1287Date0.0641string0.0359boolean0.0108
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordDate0.7068string0.0738any0.0675number0.0556{}0.0087
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9997Date0.0001FunctionConstructor0.0001number0.0000any0.0000
+(Punctuation
+thisKeyword
+.Punctuation
+nowName.Othernumber0.8549Date0.1178string0.0088any0.0083boolean0.0036
+(Punctuation
+)Punctuation
+)Punctuation
+.Punctuation
+toUTCStringName.Otherstring0.8176any0.1278void0.0203number0.0109complex0.0051
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+headersName.Otherany0.6888complex0.1594any[]0.0570{}0.0282Object0.0154
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Value of the Date response header or current time if Date was invalid\n     * @return timestamp\n     */Comment.Multiline
+\n    Text.Whitespace
+dateName.OtherDate0.3963number0.2300any0.2097boolean0.0680string0.0396
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+serverDateName.Otherany0.4171Date0.2602number0.2241boolean0.0168any[]0.0158
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9986Date0.0002FunctionConstructor0.0002any0.0001complex0.0000
+.Punctuation
+parseName.Othernumber0.6237any0.1463complex0.0835boolean0.0297string0.0133
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.5313Date0.1227complex0.0781number0.0364string0.0209
+.Punctuation
+dateName.Otherany0.5481number0.3368string0.0455Date0.0365boolean0.0170
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isFiniteName.Builtinboolean0.9818any0.0076number0.0060complex0.0016string0.0010
+(Punctuation
+serverDateName.Otherany0.4633number0.4324boolean0.0251string0.0148Date0.0117
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+serverDateName.Othernumber0.5673any0.2914boolean0.0566string0.0368Date0.0189
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_responseTimeName.Othernumber0.6891any0.1305boolean0.0514string0.0406Date0.0292
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Value of the Age header, in seconds, updated for the current time.\n     * May be fractional.\n     *\n     * @return Number\n     */Comment.Multiline
+\n    Text.Whitespace
+ageName.Othernumber0.9643any0.0281string0.0045boolean0.0009Date0.0005
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+ageName.Othernumber0.9623any0.0263string0.0077Date0.0017boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_ageValueName.Othernumber0.8779any0.0634string0.0143complex0.0080Date0.0076
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+residentTimeName.Othernumber0.9121any0.0399string0.0324boolean0.0119Date0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+nowName.Othernumber0.9679Date0.0167any0.0106string0.0015boolean0.0010
+(Punctuation
+)Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_responseTimeName.Othernumber0.9356any0.0314Date0.0149string0.0096boolean0.0017
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+1000Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ageName.Othernumber0.9495any0.0397string0.0087Date0.0005boolean0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+residentTimeName.Othernumber0.8830any0.0638string0.0416boolean0.0055Date0.0017
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_ageValueName.Othernumber0.4338boolean0.3046string0.1220any0.1112complex0.0044
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+toNumberOrZeroName.Othernumber0.4160string0.1883boolean0.1702any0.1549complex0.0169
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7296complex0.0157number0.0137Date0.0088RegExp0.0033
+.Punctuation
+ageName.Othernumber0.8477any0.1430string0.0054complex0.0008boolean0.0007
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Value of applicable max-age (or heuristic equivalent) in seconds. This counts since response's `Date`.\n     *\n     * For an up-to-date value, see `timeToLive()`.\n     *\n     * @return Number\n     */Comment.Multiline
+\n    Text.Whitespace
+maxAgeName.Othernumber0.7791complex0.0770any0.0637string0.0493boolean0.0134
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+storableName.Otherboolean0.6770any0.1669string0.0571number0.0378complex0.0148
+(Punctuation
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6232complex0.1597{}0.1090number[]0.0088any[]0.0072
+[Punctuation
+'no-cache'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// Shared responses with cookies are cacheable according to the RFC, but IMHO it'd be unwise to do so by defaultComment.Single
+\n        Text.Whitespace
+// so this implementation requires explicit opt-in via public headerComment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.8464any0.1026string0.0122number0.0075complex0.0041
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7222complex0.0942{}0.0563Date0.0106RegExp0.0082
+[Punctuation
+'set-cookie'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6973RegExp0.0366Date0.0197complex0.0136HTMLElement0.0049
+.Punctuation
+publicKeyword
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resccName.Otherany0.8269complex0.0166Date0.0152number0.0050RegExp0.0032
+.Punctuation
+immutableName.Otherany0.6081boolean0.1893number0.1380string0.0205complex0.0149
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.6632complex0.0491RegExp0.0137Date0.0075Set<any>0.0048
+.Punctuation
+varyName.Otherany0.5375string0.4060complex0.0251boolean0.0174number0.0083
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'*'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.5254any0.3190number0.0508string0.0237complex0.0180
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5910complex0.1812{}0.1201any[]0.0087boolean0.0070
+[Punctuation
+'proxy-revalidate'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+// if a response includes the s-maxage directive, a shared cache recipient MUST ignore the Expires field.Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6062complex0.1983{}0.0794any[]0.0200string[]0.0105
+[Punctuation
+'s-maxage'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+toNumberOrZeroName.Otherany0.5312string0.0990boolean0.0866number0.0691complex0.0587
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6996complex0.1231{}0.0800any[]0.0097string[]0.0078
+[Punctuation
+'s-maxage'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// If a response includes a Cache-Control field with the max-age directive, a recipient MUST ignore the Expires field.Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.5655complex0.2510{}0.0854any[]0.0167string[]0.0092
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+toNumberOrZeroName.Otherany0.4866string0.1256number0.0858boolean0.0730complex0.0639
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6512complex0.1313{}0.0924any[]0.0143string[]0.0120
+[Punctuation
+'max-age'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+defaultMinTtlName.Othernumber0.5469any0.3434boolean0.0417string0.0386Date0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.7628complex0.0677Date0.0108number0.0068RegExp0.0040
+.Punctuation
+immutableName.Otherboolean0.3800any0.3564number0.1851complex0.0166string0.0130
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+this._immutableMinTtlName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+0Keyword.Type
+;Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+serverDateName.Otherany0.4507number0.3030Date0.0900string0.0525boolean0.0127
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+dateName.Otherany0.3603Date0.2633number0.2537string0.0348complex0.0270
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.8319complex0.0200Date0.0144HTMLElement0.0039number0.0037
+.Punctuation
+expiresName.Otherany0.8268number0.1106boolean0.0131Date0.0112complex0.0092
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+expiresName.Otherany0.6048number0.2695Date0.0663complex0.0143any[]0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9976any0.0006Date0.0004FunctionConstructor0.0001complex0.0001
+.Punctuation
+parseName.Othernumber0.7131any0.1450complex0.0397boolean0.0283string0.0095
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7820complex0.0785number0.0301Date0.0083any[]0.0051
+.Punctuation
+expiresName.Othernumber0.5100any0.4277string0.0270complex0.0120any[]0.0046
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+// A cache recipient MUST interpret invalid date formats, especially the value "0", as representing a time in the past (i.e., "already expired").Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+NumberName.BuiltinNumberConstructor0.9889Math0.0008Number0.0002Console0.0001Window0.0001
+.Punctuation
+isNaNName.Builtinboolean0.9748number0.0173complex0.0033any0.0020string0.0012
+(Punctuation
+expiresName.Othernumber0.7267any0.2436Date0.0066complex0.0063string0.0051
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+expiresName.Othernumber0.8223any0.1621string0.0049complex0.0036Date0.0025
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+serverDateName.Othernumber0.9432any0.0450boolean0.0033string0.0025complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+MathName.BuiltinMath0.9997number0.0000any0.0000complex0.0000ClientRect0.0000
+.Punctuation
+maxName.Othernumber0.9960any0.0027complex0.0007string0.0002boolean0.0001
+(Punctuation
+defaultMinTtlName.Othernumber0.9467any0.0442string0.0029complex0.0014number[]0.0013
+,Punctuation
+ Text.Whitespace
+(Punctuation
+expiresName.Othernumber0.5835any0.4086string0.0023Date0.0018complex0.0015
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+serverDateName.Othernumber0.9473any0.0473string0.0021Date0.0010boolean0.0008
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+1000Literal.Number.Float
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.4017complex0.2614{}0.2021boolean0.0184any[]0.0152
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lastModifiedName.Otherany0.7730number0.0942Date0.0789string0.0284boolean0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DateName.BuiltinDateConstructor0.9963Date0.0010any0.0007FunctionConstructor0.0002complex0.0001
+.Punctuation
+parseName.Othernumber0.4310any0.4080complex0.0683boolean0.0303void0.0098
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.6442{}0.1404complex0.0975Date0.0131any[]0.0118
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isFiniteName.Builtinboolean0.9848any0.0071number0.0050complex0.0012string0.0006
+(Punctuation
+lastModifiedName.Otherany0.5272number0.2783string0.1788boolean0.0068Date0.0041
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+serverDateName.Othernumber0.7382any0.2224boolean0.0252string0.0106complex0.0014
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+lastModifiedName.Othernumber0.5007any0.3747string0.1030Date0.0106boolean0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+returnKeyword
+ Text.Whitespace
+MathName.BuiltinMath0.9997number0.0001any0.0000complex0.0000ClientRect0.0000
+.Punctuation
+maxName.Othernumber0.9918any0.0050complex0.0019string0.0003Date0.0002
+(Punctuation
+\n                    Text.Whitespace
+defaultMinTtlName.Othernumber0.8170any0.1601string0.0064Date0.0035complex0.0029
+,Punctuation
+\n                    Text.Whitespace
+(Punctuation
+(Punctuation
+serverDateName.Othernumber0.8444any0.1505string0.0028boolean0.0012Date0.0005
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+lastModifiedName.Othernumber0.5113any0.4082string0.0597Date0.0125boolean0.0024
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+1000Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_cacheHeuristicName.Othernumber0.9390any0.0364string0.0076boolean0.0064Date0.0025
+\n                Text.Whitespace
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+defaultMinTtlName.Otherany0.3799number0.3018boolean0.1319string0.0338any[]0.0248
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+timeToLiveName.Otherboolean0.5001number0.1965any0.1351string0.0742void0.0242
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ageName.Othernumber0.9837any0.0129string0.0020boolean0.0006Date0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.9658any0.0161complex0.0102string0.0040boolean0.0020
+(Punctuation
+)Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9867any0.0113string0.0004void0.0003boolean0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+staleIfErrorAgeName.Othernumber0.4152any0.2701string0.2304boolean0.0777complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ageName.Othernumber0.9088any0.0684string0.0201boolean0.0013Date0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+toNumberOrZeroName.Othernumber0.6809any0.1614string0.1040boolean0.0221complex0.0090
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.6854{}0.0738complex0.0582number0.0331Date0.0108
+[Punctuation
+'stale-if-error'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+staleWhileRevalidateAgeName.Otherany0.4040number0.2633string0.2492boolean0.0743Date0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ageName.Othernumber0.8790any0.1020string0.0163boolean0.0013Date0.0004
+ Text.Whitespace
++Operator
+ Text.Whitespace
+toNumberOrZeroName.Othernumber0.6470any0.2137string0.0952boolean0.0206complex0.0088
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.7785{}0.0494complex0.0443number0.0281string[]0.0087
+[Punctuation
+'stale-while-revalidate'Literal.String.Single
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+MathName.BuiltinMath0.9994any0.0001number0.0001complex0.0000number[]0.0000
+.Punctuation
+maxName.Othernumber0.9944any0.0044complex0.0005string0.0002boolean0.0002
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+ageName.Othernumber0.9543any0.0433string0.0013Date0.0002boolean0.0002
+,Punctuation
+ Text.Whitespace
+staleIfErrorAgeName.Othernumber0.9335any0.0583boolean0.0033string0.0029Date0.0007
+,Punctuation
+ Text.Whitespace
+staleWhileRevalidateAgeName.Othernumber0.8453any0.1351boolean0.0089string0.0049Date0.0025
+)Punctuation
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+1000Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+staleName.Othernumber0.5215boolean0.4017any0.0454string0.0156complex0.0038
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.9425any0.0292complex0.0171string0.0046boolean0.0022
+(Punctuation
+)Punctuation
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9847any0.0131string0.0006void0.0004boolean0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_useStaleIfErrorName.Othernumber0.3665boolean0.2748string0.2009any0.1409complex0.0046
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.8785any0.0694complex0.0276string0.0186boolean0.0017
+(Punctuation
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+toNumberOrZeroName.Othernumber0.5796any0.2025string0.1708boolean0.0131complex0.0092
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.8672{}0.0261complex0.0235number0.0161Date0.0047
+[Punctuation
+'stale-if-error'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9558any0.0372void0.0022string0.0009boolean0.0009
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+useStaleWhileRevalidateName.Othernumber0.3236string0.2483boolean0.2340any0.1704complex0.0069
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+maxAgeName.Othernumber0.8302any0.0916complex0.0456string0.0240boolean0.0024
+(Punctuation
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+toNumberOrZeroName.Othernumber0.4858any0.2588string0.1827boolean0.0199complex0.0145
+(Punctuation
+thisKeyword
+.Punctuation
+_resccName.Otherany0.8517{}0.0314complex0.0278number0.0094Date0.0057
+[Punctuation
+'stale-while-revalidate'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+ageName.Othernumber0.9534any0.0366void0.0041boolean0.0011string0.0008
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+staticKeyword
+ Text.Whitespace
+fromObjectName.Otherany0.3573complex0.0493object0.0137Object0.0126Function0.0042
+(Punctuation
+objName.Otherany0.7687object0.0215complex0.0188Object0.0178Date0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.2090string0.0391Date0.0277{}0.0223Object0.0128
+ Text.Whitespace
+thisKeyword
+(Punctuation
+undefinedKeyword.Constant
+,Punctuation
+ Text.Whitespace
+undefinedKeyword.Constant
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+_fromObjectName.Otherany0.5342complex0.0950{}0.0589Object0.0476object0.0428
+:Operator
+ Text.Whitespace
+objKeyword.Typeany0.6217complex0.1510Object0.0430{}0.0303object0.0126
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_fromObjectName.Othervoid0.7987any0.0681boolean0.0382complex0.0151number0.0063
+(Punctuation
+objName.Otherany0.8845complex0.0069Object0.0030Error0.0028object0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_responseTimeName.Otherany0.5877boolean0.2378complex0.0691number0.0185string0.0102
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.8953Error0.0670complex0.0180string0.0038{}0.0020
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999any0.0000Error0.0000complex0.0000LogLevel.Error0.0000
+(Punctuation
+'Reinitialized'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+objName.Otherany0.8325complex0.0363boolean0.0049Error0.0042Object0.0036
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+objName.Otherany0.9099complex0.0126Error0.0026State0.0014Object0.0013
+.Punctuation
+vName.Otherany0.9359number0.0528boolean0.0033string0.0027complex0.0017
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.8472Error0.0894complex0.0294string0.0073number0.0063
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999any0.0000Error0.0000complex0.0000LogLevel.Error0.0000
+(Punctuation
+'Invalid serialization'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_responseTimeName.Othernumber0.3036any0.2982boolean0.2670string0.0569complex0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9211complex0.0189Error0.0017Object0.0014number0.0013
+.Punctuation
+tName.Otherany0.9506number0.0265boolean0.0073string0.0046complex0.0012
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_isSharedName.Otherboolean0.3820number0.2388any0.2333string0.0728complex0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9475complex0.0166number0.0014Object0.0012Error0.0009
+.Punctuation
+shName.Otherany0.8242number0.0840boolean0.0444string0.0195complex0.0112
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_cacheHeuristicName.Othernumber0.3643any0.2736boolean0.2121string0.1040void0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9291complex0.0181Object0.0018number0.0016Error0.0014
+.Punctuation
+chName.Otherany0.9151number0.0543string0.0164boolean0.0051complex0.0040
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_immutableMinTtlName.Othernumber0.4403boolean0.3123any0.1758string0.0400Date0.0044
+ Text.Whitespace
+=Operator
+\n            Text.Whitespace
+objName.Otherany0.9440complex0.0176number0.0018Object0.0014Date0.0010
+.Punctuation
+immName.Otherany0.9591string0.0253number0.0104complex0.0018boolean0.0014
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+obj.immName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+24Keyword.Type
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+3600Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+1000Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_statusName.Otherany0.3504number0.3359string0.0346complex0.0079boolean0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9359complex0.0183Error0.0023number0.0009Object0.0008
+.Punctuation
+stName.Otherany0.9737number0.0096string0.0056complex0.0037T0.0010
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.3989number0.1929boolean0.1724string0.1207complex0.0123
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9589complex0.0162Error0.0011number0.0009Object0.0007
+.Punctuation
+reshName.Otherany0.9064number0.0330boolean0.0192string0.0155complex0.0094
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_resccName.Otherany0.4893number0.1495string0.1120boolean0.1029complex0.0154
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9581complex0.0176Error0.0011Object0.0009number0.0008
+.Punctuation
+resccName.Otherany0.9271number0.0243boolean0.0129string0.0105complex0.0102
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.7728any0.1883number0.0102boolean0.0089void0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9593complex0.0197string0.0012void0.0009number0.0008
+.Punctuation
+mName.Otherany0.9691string0.0150number0.0082complex0.0025boolean0.0007
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_urlName.Otherstring0.9176any0.0509number0.0174void0.0041boolean0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9696complex0.0123string0.0016number0.0007Object0.0006
+.Punctuation
+uName.Otherany0.9828string0.0103number0.0039complex0.0008void0.0006
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_hostName.Otherany0.4450number0.3036string0.1784boolean0.0496complex0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9373complex0.0194number0.0021Object0.0012string0.0009
+.Punctuation
+hName.Otherany0.9253number0.0512string0.0091boolean0.0043complex0.0041
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_noAuthorizationName.Othernumber0.4728any0.2718string0.0921boolean0.0818Date0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9405complex0.0190number0.0020Object0.0014State0.0007
+.Punctuation
+aName.Otherany0.9158number0.0540string0.0125complex0.0052boolean0.0030
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_reqHeadersName.Otherany0.4172number0.2496string0.1320boolean0.1250complex0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9575complex0.0134number0.0020Object0.0010string0.0008
+.Punctuation
+reqhName.Otherany0.8487number0.0756boolean0.0335string0.0188complex0.0070
+;Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_reqccName.Othernumber0.3433any0.3358string0.1436boolean0.0946Date0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9416complex0.0162number0.0021Object0.0013string0.0008
+.Punctuation
+reqccName.Otherany0.8708number0.0638boolean0.0230string0.0204complex0.0059
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+toObjectName.Othercomplex0.4323any0.3448{}0.0124any[]0.0093Object0.0088
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+vName.Otherany0.5844string0.1948number0.1424boolean0.0517complex0.0058
+:Operator
+ Text.Whitespace
+1Keyword.Type
+,Punctuation
+\n            Text.Whitespace
+tName.Otherany0.5974number0.1804boolean0.1002string0.0822complex0.0040
+:Operator
+ Text.Whitespace
+this._responseTimeKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+shName.Otherany0.4337boolean0.2380number0.1649string0.0860any[]0.0115
+:Operator
+ Text.Whitespace
+this._isSharedKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+chName.Othernumber0.4053any0.3973string0.1508boolean0.0240complex0.0045
+:Operator
+ Text.Whitespace
+this._cacheHeuristicKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+immName.Otherany0.6539string0.2549number0.0745boolean0.0082complex0.0030
+:Operator
+ Text.Whitespace
+this._immutableMinTtlKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+stName.Otherany0.8197number0.0472string0.0466complex0.0222boolean0.0154
+:Operator
+ Text.Whitespace
+this._statusKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+reshName.Otherany0.4084boolean0.2681number0.1460string0.0649any[]0.0169
+:Operator
+ Text.Whitespace
+this._resHeadersKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+resccName.Otherany0.3733boolean0.2990number0.1540string0.0627any[]0.0202
+:Operator
+ Text.Whitespace
+this._resccKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+mName.Otherany0.5742number0.2014string0.1094boolean0.0378complex0.0116
+:Operator
+ Text.Whitespace
+this._methodKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+uName.Otherany0.4888number0.2331boolean0.1056string0.0746any[]0.0145
+:Operator
+ Text.Whitespace
+this._urlKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+hName.Othernumber0.4148any0.4074boolean0.0636string0.0600complex0.0137
+:Operator
+ Text.Whitespace
+this._hostKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+aName.Othernumber0.3911any0.3230boolean0.1483string0.0584complex0.0082
+:Operator
+ Text.Whitespace
+this._noAuthorizationKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+reqhName.Otherboolean0.4362any0.2293number0.1940string0.0446any[]0.0129
+:Operator
+ Text.Whitespace
+this._reqHeadersKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+reqccName.Otherboolean0.4544any0.2158number0.1746string0.0540any[]0.0166
+:Operator
+ Text.Whitespace
+this._reqccKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Headers for sending to the origin server to revalidate stale response.\n     * Allows server to return 304 to allow reuse of the previous response.\n     *\n     * Hop by hop headers are always stripped.\n     * Revalidation headers may be added or removed, depending on request.\n     */Comment.Multiline
+\n    Text.Whitespace
+revalidationHeadersName.Otherany0.2621void0.1905boolean0.1604complex0.0886string0.0564
+(Punctuation
+incomingReqName.Otherany0.7451string0.0829boolean0.0447number0.0353complex0.0082
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_assertRequestHasHeadersName.Othervoid0.5103any0.2057boolean0.1015complex0.0295number0.0282
+(Punctuation
+incomingReqName.Otherany0.7485string0.0469number0.0397complex0.0210boolean0.0171
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+headersName.Othercomplex0.4067any0.3926any[]0.0265Object0.0211{}0.0210
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_copyWithoutHopByHopHeadersName.Otherany0.3680complex0.2515boolean0.0667string0.0378any[]0.0175
+(Punctuation
+incomingReqName.Otherany0.8155complex0.0417{}0.0037Object0.0032object0.0029
+.Punctuation
+headersName.Otherany0.6989complex0.2239Object0.0141any[]0.0084object0.0070
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// This implementation does not understand range requestsComment.Single
+\n        Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.5997complex0.1338{}0.0680Object0.0404Headers0.0171
+[Punctuation
+'if-range'Literal.String.Single
+]Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_requestMatchesName.Otherboolean0.9020any0.0441complex0.0311string0.0083void0.0030
+(Punctuation
+incomingReqName.Otherany0.3942boolean0.3784string0.0879number0.0157RegExp0.0148
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+storableName.Otherboolean0.9767any0.0116string0.0045complex0.0029number0.0006
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// revalidation allowed via HEADComment.Single
+\n            Text.Whitespace
+// not for the same resource, or wasn't allowed to be cached anywayComment.Single
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.5935complex0.1081{}0.0692Object0.0422object0.0202
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.5994complex0.1240{}0.0629Object0.0428object0.0204
+[Punctuation
+'if-modified-since'Literal.String.Single
+]Punctuation
+;Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+headersName.Otherany0.5598complex0.2761{}0.0465any[]0.0309Object0.0160
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+/* MUST send that entity-tag in any cache validation request (using If-Match or If-None-Match) if an entity-tag has been provided by the origin server. */Comment.Multiline
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.3721complex0.0283RegExp0.0075Set<string>0.0045Set<any>0.0045
+.Punctuation
+etagName.Otherstring0.6613any0.3152boolean0.0088complex0.0086number0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+headersName.Otherany0.3896complex0.2796{}0.0952Object0.0476any[]0.0253
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+headersName.Otherany0.5804complex0.2018{}0.0496Object0.0370any[]0.0204
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+\n                Text.Whitespace
+?Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+headersName.Otherany0.7157complex0.1355{}0.0323Object0.0298any[]0.0121
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+}Literal.String.Interpol
+, Literal.String.Backtick
+${Literal.String.Interpol
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.5822complex0.0221string0.0137RegExp0.0069boolean0.0046
+.Punctuation
+etagName.Otherany0.4857string0.4846boolean0.0137complex0.0085number0.0033
+}Literal.String.Interpol
+`Literal.String.Backtick
+\n                Text.Whitespace
+:Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.6768complex0.0526string0.0047RegExp0.0044{}0.0030
+.Punctuation
+etagName.Otherany0.5158string0.4621complex0.0101boolean0.0048number0.0024
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// Clients MAY issue simple (non-subrange) GET requests with either weak validators or strong validators. Clients MUST NOT use weak validators in other forms of request.Comment.Single
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+forbidsWeakValidatorsName.Otherany0.6778boolean0.0834string0.0390RegExp0.0187complex0.0170
+ Text.Whitespace
+=Operator
+\n            Text.Whitespace
+headersName.Otherany0.5605complex0.1597{}0.0637Object0.0388object0.0342
+[Punctuation
+'accept-ranges'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+headersName.Otherany0.6846complex0.1305{}0.0487Object0.0267object0.0185
+[Punctuation
+'if-match'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+headersName.Otherany0.7173complex0.1113{}0.0415Object0.0269any[]0.0162
+[Punctuation
+'if-unmodified-since'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+\n            Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.8865any0.0596complex0.0200boolean0.0193number0.0077
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_methodName.Otherstring0.9141any0.0550complex0.0128number0.0074boolean0.0069
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+'GET'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+/* SHOULD send the Last-Modified value in non-subrange cache validation requests (using If-Modified-Since) if only a Last-Modified value has been provided by the origin server.\n        Note: This implementation does not understand partial responses (206) */Comment.Multiline
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+forbidsWeakValidatorsName.Otherboolean0.7803any0.1337string0.0279complex0.0097number0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.4931complex0.1813{}0.0861Object0.0461Headers0.0258
+[Punctuation
+'if-modified-since'Literal.String.Single
+]Punctuation
+;Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+headersName.Otherany0.4995complex0.2298{}0.0824Object0.0356any[]0.0279
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+etagsName.Otherany0.6426boolean0.0933string[]0.0307string0.0281any[]0.0203
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+headersName.Otherany0.5886complex0.1803Object0.0369{}0.0335any[]0.0203
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+\n                    Text.Whitespace
+.Punctuation
+splitName.Othercomplex0.9350any0.0607string[]0.0008string0.0006any[]0.0004
+(Punctuation
+/,/Literal.String.Regex
+)Punctuation
+\n                    Text.Whitespace
+.Punctuation
+filterName.Othercomplex0.8766any0.1029boolean0.0039string0.0031v...0.0016
+(Punctuation
+etagName.Otherstring0.7618any0.2260boolean0.0063complex0.0029number0.0015
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+/^\s*W\//Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9953any0.0013string0.0010complex0.0005void0.0004
+(Punctuation
+etagName.Otherstring0.7843any0.2097boolean0.0025complex0.0014number0.0011
+)Punctuation
+;Punctuation
+\n                    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+etagsName.Otherstring[]0.8013any0.0849string0.0462any[]0.0351RegExp0.0057
+.Punctuation
+lengthName.Othernumber0.9231any0.0665string0.0070boolean0.0019complex0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+headersName.Otherany0.5426complex0.1719{}0.1110Object0.0289any[]0.0205
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+headersName.Otherany0.5624complex0.2345{}0.0766Object0.0363any[]0.0247
+[Punctuation
+'if-none-match'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+etagsName.Otherstring[]0.7600any[]0.1550any0.0567complex0.0075string0.0046
+.Punctuation
+joinName.Otherstring0.9174any0.0727complex0.0034string[]0.0021number0.0018
+(Punctuation
+','Literal.String.Single
+)Punctuation
+.Punctuation
+trimName.Otherstring0.8824any0.1138complex0.0015number0.0008boolean0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n                Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Othercomplex0.3422any0.2722{}0.2320string[]0.0099RegExp0.0090
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+!Operator
+headersName.Otherany0.5677complex0.2166{}0.0801Object0.0259any[]0.0182
+[Punctuation
+'if-modified-since'Literal.String.Single
+]Punctuation
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+headersName.Othercomplex0.4104any0.3504{}0.1048Object0.0297any[]0.0190
+[Punctuation
+'if-modified-since'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Othercomplex0.3583any0.3331{}0.1850any[]0.0180string[]0.0174
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+headersName.Othercomplex0.4580any0.3238any[]0.0695{}0.0406Object0.0211
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+/**\n     * Creates new CachePolicy with information combined from the previews response,\n     * and the new revalidation response.\n     *\n     * Returns {policy, modified} where modified is a boolean indicating\n     * whether the response body has been modified, and old cached body can't be used.\n     *\n     * @return {Object} {policy: CachePolicy, modified: Boolean}\n     */Comment.Multiline
+\n    Text.Whitespace
+revalidatedPolicyName.Othervoid0.4266boolean0.1769any0.0928complex0.0583string0.0580
+(Punctuation
+requestName.Otherany0.5965string0.1075Request0.0329number0.0314complex0.0095
+,Punctuation
+ Text.Whitespace
+responseName.Otherany0.6562Response0.0649string0.0181complex0.0170IncomingMessage0.0112
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+_assertRequestHasHeadersName.Othervoid0.7201any0.0929boolean0.0629complex0.0285string0.0160
+(Punctuation
+requestName.Otherany0.7345string0.0417complex0.0308Request0.0256any[]0.0213
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+(Punctuation
+thisKeyword
+.Punctuation
+_useStaleIfErrorName.Otherboolean0.8565any0.0626complex0.0541string0.0044any[]0.0033
+(Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+isErrorResponseName.Otherboolean0.5286complex0.3574any0.0667any[]0.0123false0.0028
+(Punctuation
+responseName.Otherany0.6512Response0.0750complex0.0502boolean0.0097any[]0.0077
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+  Text.Whitespace
+// I consider the revalidation request unsuccessfulComment.Single
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+modifiedName.Otherboolean0.9979any0.0006false0.0003number0.0003string0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+matchesName.Otherboolean0.9955any0.0019false0.0008true0.0003string0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+policyName.Otherany0.6495void0.0621complex0.0375{}0.0196this0.0196
+:Operator
+ Text.Whitespace
+thisKeyword.Type
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+responseName.Otherany0.4229Response0.1405complex0.0553boolean0.0316WebResponse0.0181
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+responseName.Otherany0.5043Response0.0954complex0.0364WebResponse0.0225IncomingMessage0.0106
+.Punctuation
+headersName.Otherany0.7000complex0.2348any[]0.0104{}0.0083boolean0.0060
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordany0.8715Error0.0731complex0.0212{}0.0074string0.0063
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9998any0.0000Error0.0000complex0.0000any[]0.0000
+(Punctuation
+'Response headers missing'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// These aren't going to be supported exactly, since one CachePolicy objectComment.Single
+\n        Text.Whitespace
+// doesn't know about all the other cached objects.Comment.Single
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+matchesName.Otherboolean0.9895any0.0061false0.0019true0.0007string0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+responseName.Otherany0.4822Response0.0896IResponse0.0318WebResponse0.0249complex0.0234
+.Punctuation
+statusName.Otherany0.7509number0.1821string0.0247boolean0.0061complex0.0045
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+responseName.Otherany0.7705complex0.0356Response0.0336IResponse0.0109WebResponse0.0095
+.Punctuation
+statusName.Otherany0.5919number0.3812string0.0121boolean0.0047complex0.0023
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+304Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+matchesName.Otherboolean0.9743any0.0181false0.0019any[]0.0011complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n            Text.Whitespace
+responseName.Otherany0.8214complex0.0369Response0.0260boolean0.0067WebResponse0.0052
+.Punctuation
+headersName.Otherany0.8743complex0.0995Headers0.0033any[]0.0027boolean0.0026
+.Punctuation
+etagName.Otherany0.8536string0.1196boolean0.0127complex0.0106number0.0022
+ Text.Whitespace
+&&Operator
+\n            Text.Whitespace
+!Operator
+/^\s*W\//Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9968any0.0011complex0.0006string0.0004number0.0003
+(Punctuation
+responseName.Otherany0.9075complex0.0150Response0.0122string0.0049boolean0.0021
+.Punctuation
+headersName.Otherany0.9047complex0.0809string0.0035any[]0.0013Headers0.0009
+.Punctuation
+etagName.Otherany0.7456string0.2332complex0.0121boolean0.0056number0.0020
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// "All of the stored responses with the same strong validator are selected.Comment.Single
+\n            Text.Whitespace
+// If none of the stored responses contain the same strong validator,Comment.Single
+\n            Text.Whitespace
+// then the cache MUST NOT use the new response to update any stored responses."Comment.Single
+\n            Text.Whitespace
+matchesName.Otherboolean0.8729any0.1044string0.0086complex0.0038any[]0.0032
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7839complex0.0325boolean0.0033string0.0032RegExp0.0020
+.Punctuation
+etagName.Otherany0.5981string0.3807boolean0.0097complex0.0057number0.0036
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.6442complex0.0539Date0.0057RegExpMatchArray0.0054number0.0045
+.Punctuation
+etagName.Otherany0.5470string0.4416complex0.0046number0.0029boolean0.0022
+.Punctuation
+replaceName.Othercomplex0.9014any0.0933boolean0.0013string0.0010number0.0003
+(Punctuation
+/^\s*W\//Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+===Operator
+\n                    Text.Whitespace
+responseName.Otherany0.6396Response0.0411complex0.0308string0.0131WebResponse0.0081
+.Punctuation
+headersName.Otherany0.9232complex0.0566string0.0034Headers0.0020any[]0.0019
+.Punctuation
+etagName.Otherany0.8473string0.1431complex0.0043boolean0.0027number0.0017
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7621complex0.0192RegExp0.0053boolean0.0038string0.0024
+.Punctuation
+etagName.Otherany0.6618string0.3050boolean0.0177complex0.0099number0.0031
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+responseName.Otherany0.8390Response0.0174complex0.0137string0.0074IResponse0.0054
+.Punctuation
+headersName.Otherany0.9193complex0.0626string0.0039any[]0.0020Headers0.0010
+.Punctuation
+etagName.Otherany0.6623string0.3212complex0.0069boolean0.0056number0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// "If the new response contains a weak validator and that validator correspondsComment.Single
+\n            Text.Whitespace
+// to one of the cache's stored responses,Comment.Single
+\n            Text.Whitespace
+// then the most recent of those matching stored responses is selected for update."Comment.Single
+\n            Text.Whitespace
+matchesName.Otherboolean0.6763any0.2577string0.0304any[]0.0083complex0.0066
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.7192complex0.0367RegExpMatchArray0.0061Date0.0049number0.0032
+.Punctuation
+etagName.Otherany0.5694string0.4213complex0.0041number0.0020boolean0.0017
+.Punctuation
+replaceName.Othercomplex0.9023any0.0930string0.0011boolean0.0009number0.0003
+(Punctuation
+/^\s*W\//Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+===Operator
+\n                Text.Whitespace
+responseName.Otherany0.7659Response0.0358complex0.0149string0.0116IResponse0.0074
+.Punctuation
+headersName.Otherany0.9549complex0.0347string0.0019any[]0.0014{}0.0007
+.Punctuation
+etagName.Otherany0.8104string0.1858complex0.0021number0.0008boolean0.0005
+.Punctuation
+replaceName.Othercomplex0.8376any0.1574string0.0019boolean0.0006void0.0004
+(Punctuation
+/^\s*W\//Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.4202complex0.2623{}0.1647boolean0.0299RegExp0.0160
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+matchesName.Otherboolean0.5392any0.3675any[]0.0311complex0.0143string[]0.0131
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.5673complex0.1872{}0.0675RegExp0.0236boolean0.0211
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+===Operator
+\n                Text.Whitespace
+responseName.Otherany0.8406Response0.0198string0.0084complex0.0062IResponse0.0057
+.Punctuation
+headersName.Otherany0.9265complex0.0355{}0.0045any[]0.0035Object0.0034
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// If the new response does not include any form of validator (such as in the case whereComment.Single
+\n            Text.Whitespace
+// a client generates an If-Modified-Since request from a source other than the Last-ModifiedComment.Single
+\n            Text.Whitespace
+// response header field), and there is only one stored response, and that stored response alsoComment.Single
+\n            Text.Whitespace
+// lacks a validator, then that stored response is selected for update.Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n                Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.8161complex0.0216RegExp0.0126boolean0.0094string0.0030
+.Punctuation
+etagName.Otherany0.6798string0.2701boolean0.0346complex0.0102number0.0024
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_resHeadersName.Otherany0.5088complex0.1495{}0.1085RegExp0.0360boolean0.0334
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+responseName.Otherany0.8677complex0.0206Response0.0195boolean0.0091IResponse0.0045
+.Punctuation
+headersName.Otherany0.9455complex0.0393string0.0026boolean0.0016any[]0.0014
+.Punctuation
+etagName.Otherany0.8981string0.0845boolean0.0098complex0.0052number0.0012
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+!Operator
+responseName.Otherany0.8482Response0.0181IResponse0.0075complex0.0069boolean0.0037
+.Punctuation
+headersName.Otherany0.9178complex0.0416{}0.0051any[]0.0049Object0.0034
+[Punctuation
+'last-modified'Literal.String.Single
+]Punctuation
+\n            Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+matchesName.Otherboolean0.9867any0.0087true0.0012false0.0009number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+matchesName.Otherboolean0.8773any0.0847any[]0.0096complex0.0081string0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+policyName.Otherany0.8150string0.0201void0.0118complex0.0110boolean0.0092
+:Operator
+ Text.Whitespace
+newKeyword.Typeany0.4578string0.1241boolean0.0190number0.0185any[]0.0174
+ Text.Whitespace
+thisKeyword
+.Punctuation
+constructorKeyword.Reserved
+(Punctuation
+requestName.Otherany0.7375string0.0429number0.0425Request0.0195any[]0.0090
+,Punctuation
+ Text.Whitespace
+responseName.Otherany0.6677Response0.0837complex0.0339string0.0082IncomingMessage0.0078
+)Punctuation
+,Punctuation
+\n                Text.Whitespace
+// Client receiving 304 without body, even if it's invalid/mismatched has no optionComment.Single
+\n                Text.Whitespace
+// but to reuse a cached body. We don't have a good way to tell clients to doComment.Single
+\n                Text.Whitespace
+// error recovery in such case.Comment.Single
+\n                Text.Whitespace
+modifiedName.Otherboolean0.5259number0.4001any0.0445string0.0173complex0.0038
+:Operator
+ Text.Whitespace
+response.statusKeyword.Type
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+304Literal.Number.Float
+,Punctuation
+\n                Text.Whitespace
+matchesName.Otherboolean0.9951any0.0027false0.0007number0.0003string0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// use other header fields provided in the 304 (Not Modified) response to replace all instancesComment.Single
+\n        Text.Whitespace
+// of the corresponding header fields in the stored response.Comment.Single
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+headersName.Otherany0.3323{}0.2928complex0.0611object0.0549Object0.0374
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+kName.Otherstring0.9851any0.0115number0.0011boolean0.0007complex0.0006
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Othercomplex0.4743any0.2104boolean0.0872{}0.0540object0.0255
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+headersName.Othercomplex0.4650any0.2934{}0.1077Object0.0544object0.0233
+[Punctuation
+kName.Otherstring0.9790any0.0161number0.0024complex0.0014boolean0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+\n                Text.Whitespace
+kName.Otherstring0.9782any0.0170number0.0013complex0.0012boolean0.0010
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+responseName.Otherany0.6174complex0.1226{}0.0242Response0.0227object0.0166
+.Punctuation
+headersName.Othercomplex0.4844any0.4161Object0.0244{}0.0228object0.0128
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+excludedFromRevalidationUpdateName.Othercomplex0.6161any0.2032{}0.1023Object0.0103any[]0.0096
+[Punctuation
+kName.Otherstring0.9736any0.0210number0.0027complex0.0014boolean0.0003
+]Punctuation
+\n                    Text.Whitespace
+?Operator
+ Text.Whitespace
+responseName.Otherany0.6031complex0.0930Response0.0489{}0.0149IResponse0.0147
+.Punctuation
+headersName.Otherany0.6808complex0.2043{}0.0260Object0.0236object0.0132
+[Punctuation
+kName.Otherstring0.9696any0.0257number0.0025complex0.0011boolean0.0002
+]Punctuation
+\n                    Text.Whitespace
+:Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_resHeadersName.Othercomplex0.7470{}0.1572any0.0483Object0.0078any[]0.0066
+[Punctuation
+kName.Otherstring0.9583any0.0212number0.0125complex0.0051{}0.0003
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newResponseName.Otherany0.4668complex0.1462Object0.0343{}0.0297object0.0172
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000any0.0000complex0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.6513any0.1851{}0.0694Object0.0323boolean0.0107
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+responseName.Otherany0.4303complex0.0759Response0.0591{}0.0370object0.0299
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+statusName.Otherany0.3788string0.2760number0.2132complex0.0337boolean0.0223
+:Operator
+ Text.Whitespace
+this._statusKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+methodName.Otherstring0.6244any0.3200number0.0177boolean0.0133complex0.0095
+:Operator
+ Text.Whitespace
+this._methodKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+headersName.Othercomplex0.5322any0.2512{}0.0754any[]0.0359Object0.0206
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+policyName.Otherany0.7308complex0.0210void0.0169string0.0107{}0.0097
+:Operator
+ Text.Whitespace
+newKeyword.Typeany0.4132string0.0617Date0.0140number0.0108Error0.0101
+ Text.Whitespace
+thisKeyword
+.Punctuation
+constructorKeyword.Reserved
+(Punctuation
+requestName.Otherany0.2964Request0.0869complex0.0224IXHROptions0.0158number0.0113
+,Punctuation
+ Text.Whitespace
+newResponseName.Otherany0.5300boolean0.0754string0.0459number0.0427complex0.0314
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+sharedName.Otherboolean0.3457any0.3437number0.1367string0.0463any[]0.0140
+:Operator
+ Text.Whitespace
+this._isSharedKeyword.Type
+,Punctuation
+\n                Text.Whitespace
+cacheHeuristicName.Otherboolean0.6429any0.1260number0.1257string0.0603any[]0.0054
+:Operator
+ Text.Whitespace
+this._cacheHeuristicKeyword.Type
+,Punctuation
+\n                Text.Whitespace
+immutableMinTimeToLiveName.Otherboolean0.7728number0.0788any0.0748string0.0353any[]0.0048
+:Operator
+ Text.Whitespace
+this._immutableMinTtlKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n            Text.Whitespace
+modifiedName.Otherboolean0.9982false0.0004any0.0003true0.0002number0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+matchesName.Otherboolean0.9980true0.0006any0.0004false0.0003number0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

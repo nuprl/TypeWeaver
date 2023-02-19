@@ -1,0 +1,470 @@
+importKeyword
+ Text.Whitespace
+jQueryName.Otherany0.9947complex0.0011void0.0008string0.0007any[]0.0005
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../core.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+documentName.BuiltinDocument0.7236any0.0815void0.0559complex0.0443T0.0092
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../var/document.js"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+readyCallbacksName.Otherany[]0.9723number[]0.0046string[]0.0043any0.0042any[][]0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+\n\tText.Whitespace
+whenReadyName.Othervoid0.9955any0.0020Function0.0013Promise<void>0.0003number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.7911Function0.1850string0.0079void0.0044number0.0028
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+readyCallbacksName.Otherany[]0.7811any0.1909number[]0.0073string[]0.0072Function[]0.0013
+.Punctuation
+pushName.Othernumber0.8579any0.1336void0.0049string0.0010Function0.0008
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.7916Function0.1616void0.0208string0.0126number0.0049
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\tText.Whitespace
+executeReadyName.Othervoid0.9866any0.0075Function0.0024complex0.0009boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.7915Function0.1858string0.0065void0.0058number0.0039
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\tText.Whitespace
+// Prevent errors from freezing future callback execution (gh-1823)Comment.Single
+\n\t\tText.Whitespace
+// Not backwards-compatible as this does not execute syncComment.Single
+\n\t\tText.Whitespace
+windowName.BuiltinWindow0.9985any0.0009complex0.0001Function0.0000Document0.0000
+.Punctuation
+setTimeoutName.Othercomplex0.9068any0.0845number0.0058string0.0011void0.0008
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+fnName.Otherany0.7606Function0.1855void0.0313complex0.0073number0.0053
+.Punctuation
+callName.Otherany0.9968void0.0016number0.0007Function0.0003complex0.0001
+(Punctuation
+ Text.Whitespace
+documentName.BuiltinDocument0.6719any0.2700TextDocument0.0105number0.0094void0.0056
+,Punctuation
+ Text.Whitespace
+jQueryName.Otherany0.9621string0.0105any[]0.0058HTMLElement0.0020complex0.0017
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+jQueryName.Otherany0.9394JQuery0.0042complex0.0036Event0.0036any[]0.0033
+.Punctuation
+fnName.Otherany0.9888Function0.0041void0.0034complex0.0017boolean0.0003
+.Punctuation
+readyName.Otherany0.9571void0.0387Function0.0016complex0.0007boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.8498Function0.1324string0.0056void0.0040number0.0023
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+whenReadyName.Othervoid0.9631any0.0278Function0.0067number0.0006boolean0.0004
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.7840Function0.1818void0.0183string0.0060number0.0029
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+jQueryName.Otherany0.9384JQuery0.0071any[]0.0056Document0.0035boolean0.0033
+.Punctuation
+extendName.Otherany0.9956T0.0013void0.0008number0.0008complex0.0007
+(Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// Is the DOM ready to be used? Set to true once it occurs.Comment.Single
+\n\tText.Whitespace
+isReadyName.Otherboolean0.9942false0.0029any0.0012true0.0008void0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n\n\tText.Whitespace
+// A counter to track how many items to wait for beforeComment.Single
+\n\tText.Whitespace
+// the ready event fires. See trac-6781Comment.Single
+\n\tText.Whitespace
+readyWaitName.Otherany0.7222any[]0.1153boolean0.0528number0.0356void0.0306
+:Operator
+ Text.Whitespace
+1Keyword.Type
+,Punctuation
+\n\n\tText.Whitespace
+readyName.Othervoid0.9684any0.0106boolean0.0069any[]0.0040complex0.0021
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+ Text.Whitespace
+waitName.Otherany0.5743number0.2110boolean0.2021string0.0030complex0.0025
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\tText.Whitespace
+// Abort if there are pending holds or we're already readyComment.Single
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+waitName.Otherboolean0.5717any0.3141number0.0953complex0.0083void0.0019
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+--Operator
+jQuery.readyWaitName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+jQuery.isReadyKeyword.Type
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+// Remember that the DOM is readyComment.Single
+\n\t\tText.Whitespace
+jQueryName.Otherany0.9451any[]0.0041boolean0.0034void0.0032complex0.0030
+.Punctuation
+isReadyName.Otherany0.6975boolean0.2989number0.0011void0.0008string0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\n\t\tText.Whitespace
+// If a normal DOM Ready event fired, decrement, and wait if need beComment.Single
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+waitName.Otherboolean0.8368any0.1354number0.0183complex0.0029false0.0028
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+--Operator
+jQueryName.Otherany0.9819complex0.0030any[]0.0017number0.0015string0.0008
+.Punctuation
+readyWaitName.Otherany0.9517number0.0469string0.0004boolean0.0003void0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+whenReadyName.Othervoid0.9951any0.0032Function0.0008boolean0.0002number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.9147Function0.0731string0.0029void0.0022number0.0012
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+readyCallbacksName.Otherany[]0.5210any0.4538string[]0.0049number[]0.0038Function[]0.0014
+.Punctuation
+pushName.Othernumber0.6391any0.3542void0.0037string0.0010boolean0.0006
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.8606Function0.1075void0.0170string0.0048number0.0037
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+readyCallbacksName.Otherany0.8099any[]0.1622string[]0.0070number[]0.0020string0.0015
+.Punctuation
+lengthName.Otherany0.8009number0.1972string0.0008void0.0003complex0.0002
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+fnName.Otherany0.9305Function0.0443number0.0081void0.0048any[]0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+readyCallbacksName.Otherany0.8601any[]0.1193complex0.0055number[]0.0034string0.0018
+.Punctuation
+shiftName.Otherany0.9711string0.0145number0.0076Function0.0021complex0.0020
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+fnName.Otherany0.9233Function0.0486complex0.0058string0.0056void0.0055
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"function"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+executeReadyName.Othervoid0.7772any0.1945Function0.0147number0.0037any[]0.0023
+(Punctuation
+ Text.Whitespace
+fnName.Otherany0.8569Function0.1102string0.0093void0.0084number0.0077
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+whenReadyName.Othervoid0.9941any0.0033Function0.0016Promise<void>0.0003number0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Make jQuery.ready Promise consumable (gh-1778)Comment.Single
+\nText.Whitespace
+jQueryName.Otherany0.9874complex0.0025void0.0016any[]0.0008HTMLElement0.0006
+.Punctuation
+readyName.Otherany0.9940void0.0034complex0.0010Promise<void>0.0003any[]0.0001
+.Punctuation
+thenName.Otherany0.9996string0.0002number0.0001void0.0000boolean0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+jQueryName.Otherany0.9900complex0.0042void0.0012any[]0.0005string0.0004
+.Punctuation
+fnName.Otherany0.9937void0.0023complex0.0018Function0.0008number0.0003
+.Punctuation
+readyName.Otherany0.9776void0.0203Function0.0003complex0.0003boolean0.0003
+;Punctuation
+\n\nText.Whitespace
+/**\n * The ready event handler and self cleanup method\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+completedName.Othervoid0.9773any0.0147boolean0.0059number0.0005Function0.0004
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+documentName.BuiltinDocument0.9831any0.0071TextDocument0.0015HTMLElement0.0014number0.0003
+.Punctuation
+removeEventListenerName.Othercomplex0.9645any0.0237void0.0102v...0.0002number0.0002
+(Punctuation
+ Text.Whitespace
+"DOMContentLoaded"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+completedName.Othervoid0.8127boolean0.1041any0.0494number0.0105true0.0064
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+windowName.BuiltinWindow0.9982any0.0009HTMLElement0.0001Document0.0000Location0.0000
+.Punctuation
+removeEventListenerName.Othercomplex0.8997any0.0829void0.0139Window0.0011Function0.0004
+(Punctuation
+ Text.Whitespace
+"load"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+completedName.Othervoid0.6274boolean0.2279any0.0850number0.0192true0.0137
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+jQueryName.Otherany0.8939JQuery0.0088any[]0.0052Event0.0047void0.0047
+.Punctuation
+readyName.Otherany0.6576void0.3344boolean0.0014Promise<void>0.0013complex0.0008
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Catch cases where $(document).ready() is calledComment.Single
+\nText.Whitespace
+// after the browser event has already occurred.Comment.Single
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+documentName.BuiltinDocument0.9760any0.0091T0.0013complex0.0010HTMLElement0.0008
+.Punctuation
+readyStateName.Otherstring0.7776any0.1054number0.1044complex0.0074void0.0024
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"loading"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// Handle it asynchronously to allow scripts the opportunity to delay readyComment.Single
+\n\tText.Whitespace
+windowName.BuiltinWindow0.9986any0.0008complex0.0001number0.0000Function0.0000
+.Punctuation
+setTimeoutName.Othercomplex0.7901any0.1772number0.0179string0.0063void0.0046
+(Punctuation
+ Text.Whitespace
+jQueryName.Otherany0.9716complex0.0028void0.0026any[]0.0021HTMLElement0.0019
+.Punctuation
+readyName.Otherany0.8937void0.0975boolean0.0025string0.0007Promise<void>0.0006
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// Use the handy event callbackComment.Single
+\n\tText.Whitespace
+documentName.BuiltinDocument0.9840any0.0059TextDocument0.0010HTMLElement0.0009number0.0003
+.Punctuation
+addEventListenerName.Othercomplex0.9541any0.0400void0.0040number0.0003any...0.0003
+(Punctuation
+ Text.Whitespace
+"DOMContentLoaded"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+completedName.Othervoid0.7994boolean0.1237any0.0403number0.0097true0.0076
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+// A fallback to window.onload, that will always workComment.Single
+\n\tText.Whitespace
+windowName.BuiltinWindow0.9986any0.0004Document0.0000HTMLElement0.0000HTMLDivElement0.0000
+.Punctuation
+addEventListenerName.Othercomplex0.8872any0.0945void0.0111Window0.0016any...0.0009
+(Punctuation
+ Text.Whitespace
+"load"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+completedName.Othervoid0.5545boolean0.2636any0.0918true0.0245number0.0185
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

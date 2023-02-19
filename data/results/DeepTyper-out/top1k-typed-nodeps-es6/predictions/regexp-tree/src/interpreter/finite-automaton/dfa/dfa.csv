@@ -1,0 +1,1140 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+DFAMinimizerName.Otherany0.5807void0.0715complex0.0372string0.0365boolean0.0234
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./dfa-minimizer'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+EPSILON_CLOSUREName.Otherany0.8125string0.0385complex0.0223boolean0.0195void0.0148
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../special-symbols'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * DFA is build by converting from NFA (subset construction).\n */Comment.Multiline
+\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+DFAName.Otherany0.9983string0.0007complex0.0003number0.0002symbol0.0001
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+nfaName.Otherany0.3349string0.2210number0.0458boolean0.0284Error0.0121
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_nfaName.Otherstring0.1849any0.1801number0.1619boolean0.0929Function0.0286
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nfaName.Otherany0.2662string0.1775number0.1681boolean0.0898Function0.0213
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Minimizes DFA.\n   */Comment.Multiline
+\n  Text.Whitespace
+minimizeName.Othervoid0.9239any0.0373Function0.0048number0.0041Promise<void>0.0033
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Othervoid0.8574any0.0689Function0.0201Promise<void>0.0085boolean0.0068
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_originalAcceptingStateNumbersName.Otherany0.2007number0.0910boolean0.0693Function0.0352string0.0265
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherany0.2223number0.1890boolean0.0704string0.0468Function0.0172
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_originalTransitionTableName.Otherany0.2373number0.1679boolean0.0610Function0.0382string0.0205
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Otherany0.2929number0.1650boolean0.0910string0.0291Function0.0232
+;Punctuation
+\n\n    Text.Whitespace
+DFAMinimizerName.Otherany0.7760Function0.0111void0.0099number0.0065boolean0.0036
+.Punctuation
+minimizeName.Othervoid0.5316any0.4060number0.0162Function0.0104boolean0.0038
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns alphabet for this DFA.\n   */Comment.Multiline
+\n  Text.Whitespace
+getAlphabetName.Otherany0.3330boolean0.1052string0.0928number0.0199this0.0078
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nfaName.Otherany0.8076complex0.0066string0.0027Set<string>0.0017Set<any>0.0015
+.Punctuation
+getAlphabetName.Otherany0.5737boolean0.0801string0.0591number0.0271complex0.0114
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns accepting states.\n   */Comment.Multiline
+\n  Text.Whitespace
+getAcceptingStateNumbersName.Otherany0.3546string0.1567void0.0953boolean0.0783number0.0126
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherany0.3481boolean0.2762string0.0447Function0.0239number0.0099
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Accepting states are determined during table construction.Comment.Single
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Othervoid0.8123any0.0800Function0.0265boolean0.0110string0.0058
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherany0.2690string0.1567boolean0.0724number0.0354complex0.0140
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns original accepting states.\n   */Comment.Multiline
+\n  Text.Whitespace
+getOriginaAcceptingStateNumbersName.Otherany0.3514string0.1360void0.1280boolean0.0678this0.0265
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_originalAcceptingStateNumbersName.Otherany0.3493boolean0.2853string0.0407Function0.0259number0.0106
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Accepting states are determined during table construction.Comment.Single
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Othervoid0.7864any0.0905Function0.0316boolean0.0097Promise<void>0.0060
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_originalAcceptingStateNumbersName.Otherany0.3030string0.1405boolean0.0683number0.0276complex0.0149
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Sets transition table.\n   */Comment.Multiline
+\n  Text.Whitespace
+setTransitionTableName.Othervoid0.9467any0.0239string0.0040Function0.0027boolean0.0023
+(Punctuation
+tableName.Otherany0.5778string0.2835boolean0.0086Table0.0082Function0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Otherany0.4129string0.0438Function0.0332boolean0.0319Object0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tableName.Otherany0.5332string0.2954Table0.0172boolean0.0123complex0.0069
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Sets accepting states.\n   */Comment.Multiline
+\n  Text.Whitespace
+setAcceptingStateNumbersName.Othervoid0.8943any0.0383string0.0114boolean0.0066Function0.0030
+(Punctuation
+stateNumbersName.Otherany0.3179string0.2475number0.0396boolean0.0395Function0.0143
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherany0.2474string0.1478boolean0.0942number0.0599Function0.0199
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stateNumbersName.Otherany0.3104string0.1751boolean0.0767number0.0502Function0.0126
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * DFA transition table is built from NFA table.\n   */Comment.Multiline
+\n  Text.Whitespace
+getTransitionTableName.Otherstring0.2497any0.2433boolean0.1050void0.0318number0.0213
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_transitionTableName.Otherboolean0.3008any0.2114string0.0440number0.0175RegExp0.0090
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_transitionTableName.Otherany0.2280string0.1481boolean0.1146number0.0409string[]0.0113
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Calculate from NFA transition table.Comment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nfaTableName.Otherany0.5257string0.1183number0.0292string[]0.0120boolean0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nfaName.Otherany0.7847complex0.0064string0.0062RegExp0.0034number0.0027
+.Punctuation
+getTransitionTableName.Otherany0.3919string0.0909number0.0493complex0.0259boolean0.0213
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nfaStatesName.Otherstring[]0.8998any[]0.0233any0.0207string0.0128number[]0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999complex0.0000any0.0000Object0.0000Object[]0.0000
+.Punctuation
+keysName.Otherstring[]0.9911complex0.0034any[]0.0016string0.0007number[]0.0007
+(Punctuation
+nfaTableName.Otherany0.4041complex0.1197{}0.0475string[]0.0279Set<string>0.0238
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<string>0.3651Set<any>0.3638Set<number>0.0195any0.0119object0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.1591any0.1330SetConstructor0.1061Set<string>0.0903object0.0311
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9785any0.0067Set<any>0.0046Set<string>0.0007number0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// Start state of DFA is E(S[nfa])Comment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+startStateName.Otherany0.7271string0.0369complex0.0100number0.0079boolean0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nfaTableName.Otherany0.5323complex0.1117{}0.0285any[]0.0281string[]0.0164
+[Punctuation
+nfaStatesName.Otherany0.3372string[]0.1257any[]0.0538number[]0.0341complex0.0334
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+]Punctuation
+[Punctuation
+EPSILON_CLOSUREName.Otherstring0.6672any0.1573number0.0918symbol0.0161void0.0089
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// Init the worklist (states which should be in the DFA).Comment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+worklistName.Otherany0.2160any[]0.1866complex0.1184string[]0.0952any[][]0.0314
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+startStateName.Otherstring0.5589number0.1297any0.1273symbol0.0329string[]0.0089
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+alphabetName.Otherany0.4510string0.0855number0.0350string[]0.0256complex0.0252
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getAlphabetName.Otherany0.3095string0.1007complex0.0379number0.0351string[]0.0309
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nfaAcceptingStatesName.Otherany0.7146string0.0650number0.0295string[]0.0109any[]0.0076
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_nfaName.Otherany0.6269Set<string>0.0105complex0.0091Set<any>0.0069string0.0041
+.Punctuation
+getAcceptingStateNumbersName.Otherany0.5028string0.0484number0.0416complex0.0326string[]0.0203
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dfaTableName.Other{}0.6757any0.1577Set<string>0.0069Set<any>0.0058complex0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// Determine whether the combined DFA state is accepting.Comment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+updateAcceptingStatesName.Otherany0.6317void0.0707{}0.0200Function0.0150any[]0.0135
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+statesName.Otherany0.7516any[]0.1102string[]0.0179complex0.0129string0.0077
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nfaAcceptingStateName.Otherany0.7548string0.1216boolean0.0138number0.0129complex0.0083
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+nfaAcceptingStatesName.Otherany0.5060string[]0.1007any[]0.0792string0.0225number[]0.0150
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// If any of the states from NFA is accepting, DFA'sComment.Single
+\n        Text.Whitespace
+// state is accepting as well.Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+statesName.Otherstring[]0.7368any[]0.1023any0.0752number[]0.0193complex0.0070
+.Punctuation
+indexOfName.Othernumber0.9222any0.0691string0.0021boolean0.0018complex0.0016
+(Punctuation
+nfaAcceptingStateName.Otherany0.3969string0.3517number0.0911boolean0.0060Date0.0057
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<string>0.3988Set<any>0.2409any0.0546Set<number>0.0025Dictionary<string>0.0024
+.Punctuation
+addName.OtherSet<string>0.2544void0.2515any0.2265Set<any>0.1187boolean0.0112
+(Punctuation
+statesName.Otherstring[]0.3646any[]0.3267any0.2022complex0.0194number[]0.0181
+.Punctuation
+joinName.Otherstring0.8214any0.1637complex0.0041number0.0034string[]0.0027
+(Punctuation
+','Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+breakKeyword
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+worklistName.Otherany0.4608string[]0.0972any[]0.0670number[]0.0208string0.0203
+.Punctuation
+lengthName.Othernumber0.8757any0.1211string0.0013boolean0.0006complex0.0006
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+statesName.Otherany0.3543any[]0.3523string[]0.0748number[]0.0628complex0.0324
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+worklistName.Otherany[]0.3518string[]0.2638any0.1548number[]0.0458complex0.0208
+.Punctuation
+shiftName.Otherany0.6898string0.1043complex0.0378number0.0336any[]0.0216
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dfaStateLabelName.Otherany0.6812string0.2940number0.0078string[]0.0042boolean0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+statesName.Otherany[]0.3859string[]0.3540any0.1291number[]0.0208T[]0.0197
+.Punctuation
+joinName.Otherstring0.7570any0.2164complex0.0103number0.0049string[]0.0032
+(Punctuation
+','Literal.String.Single
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+dfaTableName.Other{}0.5774any0.2874complex0.0247any[]0.0061Object0.0032
+[Punctuation
+dfaStateLabelName.Otherstring0.7935any0.1370number0.0305{}0.0072symbol0.0037
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+symbolName.Other
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+alphabetName.Otherany0.3398any[]0.3365string[]0.1262complex0.0240string0.0166
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+onSymbolName.Otherany[]0.8918any0.0192string[]0.0122number[]0.0073Function[]0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+// Determine whether the combined state is accepting.Comment.Single
+\n        Text.Whitespace
+updateAcceptingStatesName.Othervoid0.7511any0.1284Function0.0126any[]0.0124complex0.0110
+(Punctuation
+statesName.Otherany0.6042any[]0.2462complex0.0288string[]0.0163string0.0061
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+stateName.Otherany0.8043string0.0521complex0.0175number0.0125T0.0041
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+statesName.Otherany[]0.4440any0.4136string[]0.0308complex0.0226number[]0.0152
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nfaStatesOnSymbolName.Otherany0.9136any[]0.0124complex0.0112{}0.0087string0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nfaTableName.Otherany0.7257{}0.0718complex0.0645any[]0.0268Object0.0037
+[Punctuation
+stateName.Otherany0.4604string0.3010number0.0621complex0.0151{}0.0059
+]Punctuation
+[Punctuation
+symbolName.Other
+]Punctuation
+;Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nfaStatesOnSymbolName.Otherany0.6490boolean0.1666string0.0410any[]0.0206complex0.0137
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+continueKeyword
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n\n          Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+nfaStateOnSymbolName.Otherany0.7816string0.0567{}0.0263complex0.0184void0.0053
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+nfaStatesOnSymbolName.Otherany0.5287any[]0.1864string[]0.0637complex0.0179string0.0175
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+nfaTableName.Otherany0.6156{}0.2177complex0.0427any[]0.0329Set<any>0.0056
+[Punctuation
+nfaStateOnSymbolName.Otherstring0.4934any0.3257number0.0359boolean0.0222{}0.0152
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+continueKeyword
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+onSymbolName.Otherany[]0.4775any0.1570string[]0.0283Function[]0.0261number[]0.0138
+.Punctuation
+pushName.Othernumber0.8828any0.0990void0.0054string0.0037complex0.0015
+(Punctuation
+...Punctuation
+nfaTableName.Otherany0.6925any[]0.0763{}0.0677complex0.0624Object0.0040
+[Punctuation
+nfaStateOnSymbolName.Otherstring0.3779any0.2984any[]0.0292number0.0285{}0.0197
+]Punctuation
+[Punctuation
+EPSILON_CLOSUREName.Otherany0.2808string0.1568number0.0348{}0.0312symbol0.0161
+]Punctuation
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dfaStatesOnSymbolSetName.OtherSet<any>0.3653Set<string>0.2284any0.0469SetConstructor0.0217Set<number>0.0189
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSetConstructor0.1919Set<any>0.1834any0.1764Set<string>0.0871{}0.0154
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9835any0.0069Set<any>0.0029number0.0004Set<string>0.0003
+(Punctuation
+onSymbolName.Otherany0.5017any[]0.0845string[]0.0323string0.0322SetConstructor0.0297
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dfaStatesOnSymbolName.Otherany0.2971any[]0.1861string[]0.0638Function[]0.0286complex0.0150
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+...Punctuation
+dfaStatesOnSymbolSetName.Otherany0.1768any[]0.1723string[]0.1068string0.0425Function[]0.0216
+]Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dfaStatesOnSymbolName.Otherany0.3829string[]0.2039any[]0.1742number[]0.0298complex0.0169
+.Punctuation
+lengthName.Othernumber0.8853any0.1112string0.0015boolean0.0007complex0.0006
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dfaOnSymbolStrName.Otherany0.8235string0.1395string[]0.0094any[]0.0088number0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dfaStatesOnSymbolName.Otherany[]0.4028string[]0.3177any0.0986number[]0.0090Function[]0.0073
+.Punctuation
+joinName.Otherstring0.8262any0.1592complex0.0041number0.0031string[]0.0021
+(Punctuation
+','Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n          Text.Whitespace
+dfaTableName.Otherany0.4754{}0.2273complex0.1892any[]0.0160Object0.0056
+[Punctuation
+dfaStateLabelName.Otherstring0.8371any0.1002number0.0363boolean0.0068symbol0.0033
+]Punctuation
+[Punctuation
+symbolName.Other
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dfaOnSymbolStrName.Otherany0.8254string0.0481complex0.0098{}0.0098any[]0.0094
+;Punctuation
+\n\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+dfaTableName.Otherany0.9091complex0.0175{}0.0033Set<any>0.0025PropertyDescriptor0.0019
+.Punctuation
+hasOwnPropertyName.Othercomplex0.5531any0.4247boolean0.0121string0.0027void0.0021
+(Punctuation
+dfaOnSymbolStrName.Otherstring0.6055any0.3512number0.0105boolean0.0086any[]0.0025
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+worklistName.Otherany[]0.4703any0.2865string[]0.0918number[]0.0344Function[]0.0133
+.Punctuation
+unshiftName.Othernumber0.9525any0.0398void0.0034string0.0012boolean0.0011
+(Punctuation
+dfaStatesOnSymbolName.Otherany0.7085string0.1654number0.0221{}0.0128complex0.0058
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+_transitionTableName.Otherany0.5247string0.1311number0.0347any[]0.0262complex0.0229
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_remapStateNumbersName.Otherany0.4284string0.1099complex0.0422number0.0285{}0.0266
+(Punctuation
+dfaTableName.Otherany0.7252string0.0184{}0.0159any[]0.0113complex0.0093
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Remaps state numbers in the resulting table:\n   * combined states '1,2,3' -> 1, '3,4' -> 2, etc.\n   */Comment.Multiline
+\n  Text.Whitespace
+_remapStateNumbersName.Otherany0.4050void0.1682complex0.0453string0.0441{}0.0431
+(Punctuation
+calculatedDFATableName.Otherany0.6214string0.1000number0.0169{}0.0129boolean0.0088
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newStatesMapName.Other{}0.7622any0.1561complex0.0097Object0.0030Set<any>0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_originalTransitionTableName.Otherany0.3120{}0.2639string0.0561complex0.0336any[]0.0219
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+calculatedDFATableName.Otherany0.4332{}0.2811string0.0276any[]0.0234complex0.0164
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+transitionTableName.Other{}0.8946any0.0703complex0.0070Object0.0019any[]0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998complex0.0001any0.0000Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9741complex0.0140any[]0.0047number[]0.0011string0.0009
+(Punctuation
+calculatedDFATableName.Otherany0.4385{}0.2401complex0.1202any[]0.0280Object0.0226
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.9119complex0.0647any0.0092v...0.0078{}0.0009
+(Punctuation
+(Punctuation
+originalNumberName.Otherstring0.6518any0.2448number0.0466{}0.0051Function0.0043
+,Punctuation
+ Text.Whitespace
+newNumberName.Otherstring0.6254any0.2460number0.0515Function0.0090boolean0.0076
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+newStatesMapName.Other{}0.4677any0.3250complex0.0897any[]0.0168Object0.0067
+[Punctuation
+originalNumberName.Otherstring0.8739number0.0824any0.0301boolean0.0033string[]0.0015
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newNumberName.Othernumber0.5026any0.2773string0.2082boolean0.0030void0.0014
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+originalNumberName.Otherstring0.9669any0.0255string[]0.0021boolean0.0015number0.0009
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+calculatedDFATableName.Otherany0.6041complex0.1299{}0.0534string[]0.0322string0.0315
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+originalRowName.Otherany0.8221{}0.0484string0.0462complex0.0211any[]0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+calculatedDFATableName.Otherany0.4466{}0.2614complex0.1259any[]0.0306string[]0.0127
+[Punctuation
+originalNumberName.Otherstring0.8676any0.0517number0.0148{}0.0121string[]0.0074
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rowName.Other{}0.7128any0.1986Object0.0148complex0.0042object0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+symbolName.Other
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+originalRowName.Otherany0.5471complex0.1819{}0.0891string0.0251Object0.0232
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+rowName.Otherany0.4973{}0.3136Object0.0662complex0.0527any[]0.0041
+[Punctuation
+symbolName.Other
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newStatesMapName.Otherany0.5335{}0.2282complex0.1761any[]0.0117Object0.0098
+[Punctuation
+originalRowName.Otherany0.6001{}0.2309complex0.1097string0.0100Object0.0072
+[Punctuation
+symbolName.Other
+]Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+transitionTableName.Otherany0.4011{}0.4006complex0.0977any[]0.0167Object0.0074
+[Punctuation
+newStatesMapName.Otherany0.5394{}0.1799complex0.0807string0.0241any[]0.0232
+[Punctuation
+originalNumberName.Otherstring0.8389any0.0554number0.0363symbol0.0076boolean0.0072
+]Punctuation
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rowName.Otherany0.4979{}0.1798Object0.0564complex0.0356string0.0256
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Remap accepting states.Comment.Single
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_originalAcceptingStateNumbersName.Otherany0.1913boolean0.1327Set<any>0.0511Set<string>0.0423number0.0234
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.Otherany0.2451boolean0.0568complex0.0525Set<any>0.0502{}0.0425
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<any>0.4788Set<string>0.2628any0.0319Set<number>0.0184{}0.0095
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordSet<any>0.2317any0.1868SetConstructor0.1118Set<string>0.1020Set<number>0.0184
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9721any0.0124Set<any>0.0061Set<string>0.0005number0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+originalNumberName.Otherany0.7394complex0.0401string0.0339Set<any>0.0063{}0.0061
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_originalAcceptingStateNumbersName.Otherany0.2495any[]0.0698Set<any>0.0690string[]0.0163Set<string>0.0112
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_acceptingStateNumbersName.OtherSet<any>0.3948any0.1740Set<string>0.1083complex0.0065{}0.0048
+.Punctuation
+addName.Otherany0.4594Set<any>0.1687Set<string>0.1054void0.0908complex0.0168
+(Punctuation
+newStatesMapName.Otherany0.5489complex0.0794{}0.0528any[]0.0486Set<any>0.0091
+[Punctuation
+originalNumberName.Otherstring0.4856any0.1688number0.0771boolean0.0164symbol0.0098
+]Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+transitionTableName.Otherany0.2902boolean0.1181any[]0.0900string0.0474{}0.0373
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns original DFA table, where state numbers\n   * are combined numbers from NFA.\n   */Comment.Multiline
+\n  Text.Whitespace
+getOriginalTransitionTableName.Otherany0.2616boolean0.1673string0.1063void0.0931this0.0183
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+_originalTransitionTableName.Otherany0.3390boolean0.3309string0.0273Function0.0058number0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Original table is determined during table construction.Comment.Single
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Othervoid0.8210any0.0607boolean0.0172Function0.0105complex0.0059
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_originalTransitionTableName.Otherany0.3040boolean0.0932any[]0.0629string0.0541{}0.0351
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Checks whether this DFA accepts a string.\n   */Comment.Multiline
+\n  Text.Whitespace
+matchesName.Otherboolean0.4976any0.1208complex0.1156string0.0098any[]0.0081
+(Punctuation
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+stateName.Othernumber0.8215any0.1002boolean0.0314string0.0242complex0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9924any0.0043string0.0015boolean0.0006number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tableName.Otherany0.5893string0.1985complex0.0263boolean0.0181Table0.0148
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getTransitionTableName.Otherany0.2711string0.1262boolean0.0852any[]0.0512string[]0.0366
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+[Punctuation
+iName.Othernumber0.9465any0.0328string0.0165boolean0.0010number[]0.0003
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+stateName.Otherany0.7111string0.0583number0.0195boolean0.0142State0.0118
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tableName.Otherany0.6577string0.0268{}0.0222complex0.0192Table0.0130
+[Punctuation
+stateName.Otherany0.3744string0.2523number0.1198boolean0.0142complex0.0130
+]Punctuation
+[Punctuation
+stringKeyword.Type
+[Punctuation
+iName.Othernumber0.9831any0.0107string0.0045boolean0.0005number[]0.0002
+++Operator
+]Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stateName.Otherany0.7120boolean0.0547string0.0422number0.0344complex0.0133
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+getAcceptingStateNumbersName.Otherboolean0.5721complex0.2948any0.0365any[]0.0161{}0.0099
+(Punctuation
+)Punctuation
+.Punctuation
+hasName.Otherboolean0.9762any0.0156string0.0023complex0.0009true0.0007
+(Punctuation
+stateName.Otherany0.5307string0.2373number0.0753boolean0.0257complex0.0198
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+DFAName.Otherany0.6418number0.0340string0.0316void0.0307boolean0.0300
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,12 @@
+declare var Promise: object;
+declare var TRUE: any[];
+declare var FALSE: any[];
+declare var NULL: any[];
+declare var UNDEFINED: any[];
+declare var ZERO: any[];
+declare var EMPTYSTRING: any[];
+declare function valuePromise(value: string): string;
+declare var iterableToArray: Function;
+declare function onSettledFulfill(value: string): object;
+declare function onSettledReject(reason: string): object;
+declare function mapAllSettled(item: any[]): Promise;

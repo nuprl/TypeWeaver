@@ -1,0 +1,19 @@
+clone.ts(102,41): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
+    Argument of type 'boolean' is not assignable to parameter of type 'string'.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
+    Argument of type 'boolean' is not assignable to parameter of type 'string'.
+clone.ts(161,13): error TS2367: This condition will always return 'false' since the types '(v: any) => void' and 'string' have no overlap.
+clone.ts(181,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(181,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(181,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(196,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(196,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(196,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(224,17): error TS2322: Type '() => void' is not assignable to type 'void'.
+clone.ts(225,5): error TS2339: Property 'prototype' does not exist on type 'void'.
+clone.ts(226,14): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+clone.ts(256,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
+clone.ts(264,3): error TS1258: A default export must be at the top level of a file or module declaration.
+

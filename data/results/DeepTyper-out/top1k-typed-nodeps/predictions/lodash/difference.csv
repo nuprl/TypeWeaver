@@ -1,0 +1,82 @@
+importKeyword
+ Text.Whitespace
+baseDifferenceName.Otherany0.0878complex0.0731boolean0.0239string0.0206string[]0.0166
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseDifference.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.1379complex0.0714string0.0581boolean0.0572string[]0.0324
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseFlatten.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeObjectName.Otherany0.2282complex0.0961string0.0647boolean0.0594string[]0.0402
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLikeObject.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an array of `array` values not included in the other given arrays\n * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * for equality comparisons. The order and references of result values are\n * determined by the first array.\n *\n * **Note:** Unlike `pullAll`, this method returns a new array.\n *\n * @since 0.1.0\n * @category Array\n * @param {Array} array The array to inspect.\n * @param {...Array} [values] The values to exclude.\n * @returns {Array} Returns the new array of filtered values.\n * @see union, unionBy, unionWith, without, xor, xorBy, xorWith,\n * @example\n *\n * difference([2, 1], [2, 3])\n * // => [1]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+differenceName.Otherany0.4448any[]0.1699T[]0.0527string[]0.0385complex0.0380
+(Punctuation
+arrayName.Otherany[]0.3404any0.3050number[]0.0334string[]0.0273string0.0250
+,Punctuation
+ Text.Whitespace
+...Punctuation
+valuesName.Otherany[]0.4450any0.2134number[]0.0500string[]0.0187T[]0.0151
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isArrayLikeObjectName.Otherany[]0.3350any0.2022complex0.1208boolean0.0719string0.0152
+(Punctuation
+arrayName.Otherany0.3126any[]0.2832string0.0395number[]0.0372string[]0.0245
+)Punctuation
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+baseDifferenceName.Otherany0.5530any[]0.1496complex0.0783boolean0.0287string0.0181
+(Punctuation
+arrayName.Otherany[]0.4898any0.1755number[]0.0634string[]0.0318string0.0140
+,Punctuation
+ Text.Whitespace
+baseFlattenName.Otherany[]0.3868any0.3049complex0.1252boolean0.0195string[]0.0183
+(Punctuation
+valuesName.Otherany0.5843any[]0.1566number[]0.0281string0.0227number0.0213
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+isArrayLikeObjectName.Otherany0.5611boolean0.1278any[]0.0920number0.0314string0.0200
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+differenceName.Otherany0.6388any[]0.1523complex0.0081number0.0052T[]0.0044
+\nText.Whitespace

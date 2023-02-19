@@ -1,0 +1,48 @@
+index.ts(5,7): error TS2322: Type 'typeof GENSYNC_START' is not assignable to type 'string'.
+index.ts(6,7): error TS2322: Type 'typeof GENSYNC_SUSPEND' is not assignable to type 'string'.
+index.ts(16,9): error TS2322: Type 'string' is not assignable to type 'Function'.
+index.ts(18,7): error TS2322: Type 'void' is not assignable to type 'Function'.
+index.ts(18,28): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ name: any; arity: any; sync: any; async: any; errback: any; }'.
+index.ts(20,7): error TS2322: Type 'string' is not assignable to type 'Function'.
+index.ts(29,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(31,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(33,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(43,23): error TS2345: Argument of type '(item: string, i: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Types of parameters 'i' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
+index.ts(45,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+index.ts(60,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(68,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(92,26): error TS2345: Argument of type '(resolve: any[], reject: string) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'any[]'.
+index.ts(93,48): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
+  Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+index.ts(113,63): error TS2345: Argument of type '(err: any[]) => any' is not assignable to parameter of type 'string'.
+index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
+index.ts(200,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+index.ts(200,36): error TS2339: Property 'name' does not exist on type 'any[]'.
+index.ts(200,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(201,18): error TS2339: Property 'apply' does not exist on type 'any[]'.
+index.ts(206,3): error TS2322: Type 'any[]' is not assignable to type 'void'.
+index.ts(206,43): error TS2345: Argument of type '(...args: any[]) => Generator<string, any, unknown>' is not assignable to parameter of type 'string'.
+index.ts(251,28): error TS2339: Property 'next' does not exist on type 'object'.
+index.ts(252,24): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+index.ts(254,3): error TS2322: Type 'string' is not assignable to type 'object'.
+index.ts(261,32): error TS2339: Property 'next' does not exist on type 'object'.
+index.ts(262,28): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+index.ts(269,33): error TS2339: Property 'next' does not exist on type 'object'.
+index.ts(278,23): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ value: any; done: any; }'.
+index.ts(289,14): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(298,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+index.ts(312,5): error TS2345: Argument of type 'object' is not assignable to parameter of type 'Function'.
+  Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(328,11): error TS2339: Property 'throw' does not exist on type 'any[]'.
+index.ts(328,22): error TS2339: Property 'throw' does not exist on type 'any[]'.
+index.ts(345,11): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
+index.ts(346,31): error TS2339: Property 'configurable' does not exist on type 'string'.
+index.ts(359,11): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'string'.
+index.ts(360,35): error TS2339: Property 'configurable' does not exist on type 'string'.
+index.ts(372,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
+

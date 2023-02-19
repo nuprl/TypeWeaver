@@ -1,0 +1,14 @@
+dangerous.ts(19,28): error TS2339: Property 'Buffer' does not exist on type '{}'.
+dangerous.ts(34,17): error TS2339: Property 'allocUnsafe' does not exist on type '{}'.
+dangerous.ts(35,14): error TS2339: Property 'allocUnsafe' does not exist on type '{}'.
+dangerous.ts(35,44): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+dangerous.ts(46,17): error TS2339: Property 'allocUnsafeSlow' does not exist on type '{}'.
+dangerous.ts(47,14): error TS2339: Property 'allocUnsafeSlow' does not exist on type '{}'.
+dangerous.ts(47,48): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+safer.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'safer' must be of type 'any', but here has type '{}'.
+safer.ts(18,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Safer' must be of type 'any', but here has type '{}'.
+safer.ts(48,23): error TS2339: Property 'length' does not exist on type 'number'.
+safer.ts(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
+

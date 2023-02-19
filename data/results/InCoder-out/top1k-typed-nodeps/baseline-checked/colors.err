@@ -1,0 +1,91 @@
+examples/normal-usage.ts(3,38): error TS2339: Property 'yellow' does not exist on type '"First some yellow text"'.
+examples/normal-usage.ts(5,35): error TS2339: Property 'yellow' does not exist on type '"Underline that text"'.
+examples/normal-usage.ts(7,36): error TS2339: Property 'red' does not exist on type '"Make it bold and red"'.
+examples/normal-usage.ts(9,46): error TS2339: Property 'rainbow' does not exist on type '"Double Raindows All Day Long"'.
+examples/normal-usage.ts(11,29): error TS2339: Property 'trap' does not exist on type '"Drop the bass"'.
+examples/normal-usage.ts(13,37): error TS2339: Property 'trap' does not exist on type '"DROP THE RAINBOW BASS"'.
+examples/normal-usage.ts(16,42): error TS2339: Property 'italic' does not exist on type '() => string'.
+examples/normal-usage.ts(19,19): error TS2339: Property 'green' does not exist on type '"So "'.
+examples/normal-usage.ts(19,33): error TS2339: Property 'underline' does not exist on type '"are"'.
+examples/normal-usage.ts(19,61): error TS2339: Property 'inverse' does not exist on type '"inverse"'.
+examples/normal-usage.ts(20,17): error TS2339: Property 'yellow' does not exist on type '" styles! "'.
+examples/normal-usage.ts(21,34): error TS2339: Property 'zebra' does not exist on type '"Zebras are so fun!"'.
+examples/normal-usage.ts(26,32): error TS2339: Property 'strikethrough' does not exist on type '"not"'.
+examples/normal-usage.ts(28,40): error TS2339: Property 'black' does not exist on type '"Background color attack!"'.
+examples/normal-usage.ts(29,48): error TS2339: Property 'random' does not exist on type '"Use random styles on everything!"'.
+examples/normal-usage.ts(30,35): error TS2339: Property 'america' does not exist on type '"America, Heck Yeah!"'.
+examples/normal-usage.ts(32,27): error TS2339: Property 'brightCyan' does not exist on type '"Blindingly "'.
+examples/normal-usage.ts(32,51): error TS2339: Property 'brightRed' does not exist on type '"bright? "'.
+examples/normal-usage.ts(32,70): error TS2339: Property 'brightYellow' does not exist on type '"Why "'.
+examples/normal-usage.ts(32,93): error TS2339: Property 'brightGreen' does not exist on type '"not?!"'.
+examples/normal-usage.ts(39,45): error TS2339: Property 'green' does not exist on type '"Generic logging theme as JSON"'.
+examples/normal-usage.ts(55,32): error TS2339: Property 'error' does not exist on type '"this is an error"'.
+examples/normal-usage.ts(58,33): error TS2339: Property 'warn' does not exist on type '"this is a warning"'.
+examples/normal-usage.ts(61,32): error TS2339: Property 'input' does not exist on type '"this is an input"'.
+examples/normal-usage.ts(63,45): error TS2339: Property 'green' does not exist on type '"Generic logging theme as file"'.
+examples/normal-usage.ts(73,32): error TS2339: Property 'error' does not exist on type '"this is an error"'.
+examples/normal-usage.ts(76,33): error TS2339: Property 'warn' does not exist on type '"this is a warning"'.
+examples/normal-usage.ts(79,32): error TS2339: Property 'input' does not exist on type '"this is an input"'.
+lib/colors.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'colors' must be of type 'any', but here has type '{}'.
+lib/colors.ts(78,40): error TS2304: Cannot find name 'ring'.
+lib/colors.ts(85,25): error TS2304: Cannot find name 'Styles'.
+lib/colors.ts(85,25): error TS4078: Parameter '_styles' of exported function has or is using private name 'Styles'.
+lib/colors.ts(89,11): error TS2339: Property '_styles' does not exist on type '() => any'.
+lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type '() => any'.
+lib/colors.ts(147,35): error TS2304: Cannot find name 'heme'.
+lib/colors.ts(177,9): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(186,41): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/colors.ts(208,6): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/trap.ts(1,65): error TS2304: Cannot find name 'TrapOptions'.
+lib/custom/trap.ts(4,3): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+lib/custom/trap.ts(35,8): error TS2339: Property 'forEach' does not exist on type 'String'.
+lib/custom/zalgo.ts(44,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/custom/zalgo.ts(70,5): error TS2322: Type 'string[]' is not assignable to type 'String'.
+lib/custom/zalgo.ts(79,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(80,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(81,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(84,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(85,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(86,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(89,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(90,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/custom/zalgo.ts(91,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
+lib/extendStringPrototype.ts(47,29): error TS2304: Cannot find name 'Style'.
+lib/extendStringPrototype.ts(53,30): error TS2304: Cannot find name 'Theme'.
+lib/extendStringPrototype.ts(68,47): error TS2304: Cannot find name 'Property'.
+lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist on type '"warn: "'.
+lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
+lib/extendStringPrototype.ts(96,37): error TS2304: Cannot find name 'heme'.
+lib/index.ts(22,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
+lib/maps/america.ts(2,27): error TS2749: 'letter' refers to a value, but is being used as a type here. Did you mean 'typeof letter'?
+lib/maps/america.ts(2,39): error TS2749: 'i' refers to a value, but is being used as a type here. Did you mean 'typeof i'?
+lib/maps/america.ts(2,53): error TS2749: 'exploded' refers to a value, but is being used as a type here. Did you mean 'typeof exploded'?
+lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type 'string[]'.
+lib/maps/america.ts(6,29): error TS2339: Property 'white' does not exist on type 'string[]'.
+lib/maps/america.ts(7,29): error TS2339: Property 'blue' does not exist on type 'string[]'.
+lib/maps/rainbow.ts(1,38): error TS2304: Cannot find name 'Color'.
+lib/maps/rainbow.ts(4,27): error TS2304: Cannot find name 'ar'.
+lib/maps/rainbow.ts(4,35): error TS2304: Cannot find name 'mber'.
+lib/maps/rainbow.ts(4,52): error TS2304: Cannot find name 'ploded'.
+lib/maps/random.ts(1,38): error TS2304: Cannot find name 'Color'.
+lib/maps/random.ts(5,27): error TS2749: 'letter' refers to a value, but is being used as a type here. Did you mean 'typeof letter'?
+lib/maps/random.ts(5,39): error TS2749: 'i' refers to a value, but is being used as a type here. Did you mean 'typeof i'?
+lib/maps/random.ts(5,53): error TS2749: 'exploded' refers to a value, but is being used as a type here. Did you mean 'typeof exploded'?
+lib/maps/zebra.ts(2,27): error TS2749: 'letter' refers to a value, but is being used as a type here. Did you mean 'typeof letter'?
+lib/maps/zebra.ts(2,39): error TS2749: 'i' refers to a value, but is being used as a type here. Did you mean 'typeof i'?
+lib/maps/zebra.ts(2,53): error TS2749: 'exploded' refers to a value, but is being used as a type here. Did you mean 'typeof exploded'?
+lib/maps/zebra.ts(3,42): error TS2339: Property 'inverse' does not exist on type 'string[]'.
+lib/styles.ts(93,9): error TS2339: Property 'open' does not exist on type 'any[]'.
+lib/styles.ts(94,9): error TS2339: Property 'close' does not exist on type 'any[]'.
+lib/system/has-flag.ts(31,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/system/supports-colors.ts(72,25): error TS2339: Property 'isTTY' does not exist on type 'ReadableStream'.
+lib/system/supports-colors.ts(95,62): error TS2345: Argument of type '(sign: number) => boolean' is not assignable to parameter of type '(value: string, index: number, array: string[]) => unknown'.
+  Types of parameters 'sign' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+lib/system/supports-colors.ts(142,34): error TS2304: Cannot find name 'Stream'.
+lib/system/supports-colors.ts(142,34): error TS4078: Parameter 'stream' of exported function has or is using private name 'Stream'.
+

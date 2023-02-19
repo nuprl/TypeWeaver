@@ -1,0 +1,177 @@
+cjs/index.ts(7,27): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+cjs/index.ts(10,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+cjs/index.ts(16,3): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+cjs/index.ts(16,20): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+cjs/index.ts(16,32): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+cjs/index.ts(20,36): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+cjs/index.ts(23,50): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+cjs/index.ts(28,9): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+cjs/index.ts(28,26): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+cjs/index.ts(48,31): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+cjs/index.ts(49,25): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+cjs/index.ts(55,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+cjs/index.ts(57,9): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+cjs/index.ts(66,9): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+cjs/index.ts(69,16): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+cjs/index.ts(76,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type '(key: string, value: string) => string' is not assignable to parameter of type '(string | number)[]'.
+es.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+es.ts(2,92): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+es.ts(2,118): error TS2322: Type '{}' is not assignable to type 'number'.
+es.ts(2,212): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+es.ts(2,225): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+es.ts(2,227): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+es.ts(2,286): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+es.ts(2,319): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+es.ts(2,446): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+es.ts(2,459): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+es.ts(2,717): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+es.ts(2,759): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+es.ts(2,851): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Type 'Function' provides no match for the signature '(this: any, key: string, value: any): any'.
+es.ts(2,876): error TS2322: Type 'number | Function' is not assignable to type 'Function'.
+  Type 'number' is not assignable to type 'Function'.
+es.ts(2,1018): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+es.ts(2,1110): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+es.ts(2,1459): error TS2339: Property 'fromJSON' does not exist on type 'object'.
+es.ts(2,1491): error TS2339: Property 'parse' does not exist on type 'object'.
+es.ts(2,1501): error TS2339: Property 'stringify' does not exist on type 'object'.
+es.ts(2,1515): error TS2339: Property 'toJSON' does not exist on type 'object'.
+esm.ts(2,59): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+esm.ts(2,66): error TS2322: Type '{}' is not assignable to type 'number'.
+esm.ts(2,141): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+esm.ts(2,154): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+esm.ts(2,156): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+esm.ts(2,221): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+esm.ts(2,254): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm.ts(2,381): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+esm.ts(2,394): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+esm.ts(2,658): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm.ts(2,700): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+esm.ts(2,792): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+esm.ts(2,817): error TS2322: Type 'number | Function' is not assignable to type 'Function'.
+  Type 'number' is not assignable to type 'Function'.
+esm.ts(2,965): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+esm.ts(2,1035): error TS2339: Property 'indexOf' does not exist on type 'never'.
+esm.ts(2,1063): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm/index.ts(6,27): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+esm/index.ts(9,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+esm/index.ts(15,3): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+esm/index.ts(15,20): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+esm/index.ts(15,32): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+esm/index.ts(19,36): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+esm/index.ts(22,50): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm/index.ts(27,9): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+esm/index.ts(27,26): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+esm/index.ts(47,31): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm/index.ts(48,25): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+esm/index.ts(54,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+esm/index.ts(56,9): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+esm/index.ts(64,9): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+esm/index.ts(67,16): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+esm/index.ts(74,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type '(key: string, value: string) => string' is not assignable to parameter of type '(string | number)[]'.
+index.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+index.ts(7,12): error TS2630: Cannot assign to '_typeof' because it is a function.
+index.ts(18,27): error TS2322: Type 'StringConstructor' is not assignable to type 'string'.
+index.ts(22,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(25,7): error TS2322: Type '(_: string, value: string) => string' is not assignable to type 'number'.
+index.ts(30,12): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+index.ts(30,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(30,41): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(34,12): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(34,47): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+index.ts(44,11): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+index.ts(44,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+index.ts(47,13): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(47,48): error TS2339: Property 'has' does not exist on type 'object'.
+index.ts(48,18): error TS2339: Property 'add' does not exist on type 'object'.
+index.ts(60,31): error TS2339: Property 'k' does not exist on type 'object'.
+index.ts(61,30): error TS2339: Property 'a' does not exist on type 'object'.
+index.ts(62,14): error TS2538: Type 'any[]' cannot be used as an index type.
+index.ts(68,43): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(69,25): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(77,9): error TS2322: Type 'string | number' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+index.ts(78,23): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(84,9): error TS2322: Type 'string | number | ((k: string, v: number) => number)' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+index.ts(84,35): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(87,16): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(97,19): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+index.ts(111,14): error TS2678: Type 'string' is not comparable to type 'boolean'.
+index.ts(114,14): error TS2678: Type 'string' is not comparable to type 'boolean'.
+index.ts(121,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(124,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(125,18): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+index.ts(128,11): error TS2339: Property 'fromJSON' does not exist on type 'object'.
+index.ts(129,11): error TS2339: Property 'parse' does not exist on type 'object'.
+index.ts(130,11): error TS2339: Property 'stringify' does not exist on type 'object'.
+index.ts(131,11): error TS2339: Property 'toJSON' does not exist on type 'object'.
+min.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
+min.ts(1,85): error TS2630: Cannot assign to 't' because it is a function.
+min.ts(2,152): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+min.ts(2,269): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+min.ts(2,341): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,354): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+min.ts(2,517): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+min.ts(2,552): error TS2367: This condition will always return 'true' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,564): error TS2339: Property 'has' does not exist on type 'object'.
+min.ts(2,593): error TS2339: Property 'add' does not exist on type 'object'.
+min.ts(2,732): error TS2339: Property 'k' does not exist on type 'object'.
+min.ts(2,745): error TS2339: Property 'a' does not exist on type 'object'.
+min.ts(2,749): error TS2538: Type 'any[]' cannot be used as an index type.
+min.ts(2,814): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+min.ts(2,973): error TS2322: Type 'string | Function' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
+min.ts(2,1000): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,1124): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+min.ts(2,1239): error TS2339: Property 'call' does not exist on type 'string | Function'.
+  Property 'call' does not exist on type 'string'.
+min.ts(2,1285): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+min.ts(2,1400): error TS2339: Property 'call' does not exist on type 'string | Function'.
+  Property 'call' does not exist on type 'string'.
+min.ts(2,1433): error TS2678: Type 'string' is not comparable to type 'boolean'.
+min.ts(2,1461): error TS2678: Type 'string' is not comparable to type 'boolean'.
+min.ts(2,1509): error TS2339: Property 'fromJSON' does not exist on type 'number'.
+min.ts(2,1547): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+min.ts(2,1556): error TS2339: Property 'parse' does not exist on type 'number'.
+min.ts(2,1566): error TS2339: Property 'stringify' does not exist on type 'number'.
+min.ts(2,1580): error TS2339: Property 'toJSON' does not exist on type 'number'.
+min.ts(2,1626): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
+rollup/babel.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup/es.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+rollup/esm.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+

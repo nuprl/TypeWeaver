@@ -1,0 +1,208 @@
+varKeyword.Declaration
+ Text.Whitespace
+iterateName.Otherany0.9612any[]0.0044string0.0032number0.0009JQuery0.0008
+    Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/iterate.js'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+initStateName.Otherany0.9450number0.0204string0.0103Function0.0027void0.0019
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/state.js'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+terminatorName.Otherany0.9697boolean0.0050void0.0035string0.0025Promise<any>0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/terminator.js'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+;Punctuation
+\n\nText.Whitespace
+// Public APIComment.Single
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parallelName.Otherany0.8601void0.0225number0.0176complex0.0139any[]0.0091
+;Punctuation
+\n\nText.Whitespace
+/**\n * Runs iterator over provided array elements in parallel\n *\n * @param   {array|object} list - array or object (named list) to iterate over\n * @param   {function} iterator - iterator to run\n * @param   {function} callback - invoked when all elements processed\n * @returns {function} - jobs terminator\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parallelName.Otherany0.3544void0.3366complex0.0317any[]0.0247number0.0181
+(Punctuation
+listName.Otherany0.8449any[]0.0159string[]0.0073number0.0068void0.0064
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.6901number0.0224symbol0.0135Function0.0095boolean0.0089
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5011Function0.2976void0.0384Callback0.0122boolean0.0068
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+stateName.Otherany0.5770number0.0996void0.0472boolean0.0344{}0.0282
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+initStateName.Otherany0.6752number0.1582void0.0194boolean0.0152Function0.0147
+(Punctuation
+listName.Otherany0.7070any[]0.0420complex0.0210string0.0154string[]0.0121
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.6368complex0.0328IState0.0142State0.0082{}0.0068
+.Punctuation
+indexName.Otherany0.6742number0.3105complex0.0045string0.0028void0.0019
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+(Punctuation
+stateName.Otherany0.7853{}0.0274number0.0109Object0.0095complex0.0089
+[Punctuation
+'keyedList'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+listName.Otherany0.7999any[]0.0331complex0.0151string[]0.0078string0.0075
+)Punctuation
+.Punctuation
+lengthName.Otherany0.7795number0.2171string0.0017void0.0006complex0.0003
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+iterateName.Otherany0.9471void0.0182any[]0.0070number0.0048complex0.0034
+(Punctuation
+listName.Otherany0.6526any[]0.0429List0.0204complex0.0190number0.0132
+,Punctuation
+ Text.Whitespace
+iteratorName.Otherany0.7521number0.0331boolean0.0259string0.0211void0.0113
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.6699number0.0268Object0.0206void0.0191complex0.0135
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.8055string0.0727Error0.0704number0.0090void0.0077
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.9214string0.0198number0.0086object0.0064Object0.0060
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.7571Error0.1433string0.0383boolean0.0123number0.0066
+)Punctuation
+\n      Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.4187void0.1737Function0.1149Callback0.0222{}0.0043
+(Punctuation
+errorName.Otherany0.7709Error0.1269string0.0482{}0.0053void0.0038
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8942string0.0207object0.0156{}0.0114Object0.0092
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+// looks like it's the last oneComment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9991complex0.0003any0.0002Object0.0001{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9872any[]0.0030complex0.0023any0.0009number[]0.0008
+(Punctuation
+stateName.Otherany0.6139complex0.0270{}0.0163Object0.0096IState0.0089
+.Punctuation
+jobsName.Otherany0.8519complex0.0905string0.0099string[]0.0065{}0.0055
+)Punctuation
+.Punctuation
+lengthName.Othernumber0.6178any0.3772string0.0026void0.0006complex0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+\n      Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.4230Function0.2554void0.1002Callback0.0182Promise<void>0.0058
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.5519complex0.0560IState0.0277Object0.0129{}0.0123
+.Punctuation
+resultsName.Otherany0.5121string0.0625complex0.0322number0.0247any[]0.0239
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+stateName.Otherany0.6053complex0.0959IState0.0144State0.0089Object0.0077
+.Punctuation
+indexName.Othernumber0.6415any0.3534string0.0021complex0.0009boolean0.0006
+++Operator
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+terminatorName.Otherany0.8654void0.0441boolean0.0341Promise<void>0.0129complex0.0095
+.Punctuation
+bindName.Otherany0.9820void0.0029complex0.0019Promise<any>0.0012Function0.0011
+(Punctuation
+stateName.Otherany0.5861string0.0618complex0.0391IState0.0149number0.0137
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4910Function0.1650void0.1474Callback0.0155boolean0.0122
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

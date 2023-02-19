@@ -1,0 +1,455 @@
+constKeyword.Declaration
+ Text.Whitespace
+wordName.Otherstring0.9441any0.0341RegExp0.0097boolean0.0018string[]0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[a-fA-F\\d:]'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+boundryName.Otherstring0.7444any0.1579RegExp0.0460boolean0.0238number0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4467string0.0499Options0.0368complex0.0292RegExp0.0257
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3169complex0.0523string0.0507RegExp0.0401Options0.0313
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.1936complex0.0654Options0.0554RegExp0.0376ConnectionOptions0.0297
+.Punctuation
+includeBoundariesName.Otherboolean0.6842any0.1483string0.1400string[]0.0082number0.0061
+\n\tText.Whitespace
+?Operator
+ Text.Whitespace
+`Literal.String.Backtick
+(?:(?<=Literal.String.Backtick
+\\Literal.String.Backtick
+s|^)(?=Literal.String.Backtick
+${Literal.String.Interpol
+wordName.Otherstring0.9717any0.0197number0.0031boolean0.0023string[]0.0007
+}Literal.String.Interpol
+)|(?<=Literal.String.Backtick
+${Literal.String.Interpol
+wordName.Otherstring0.9768any0.0178number0.0019boolean0.0015string[]0.0005
+}Literal.String.Interpol
+)(?=Literal.String.Backtick
+\\Literal.String.Backtick
+s|Literal.String.Backtick
+$Literal.String.Backtick
+))Literal.String.Backtick
+`Literal.String.Backtick
+\n\tText.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v4Name.OtherRegExp0.8372string0.1575any0.0024string[]0.0007boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v6segmentName.OtherRegExp0.8800string0.1152any0.0020string[]0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[a-fA-F\\d]{1,4}'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v6Name.OtherRegExp0.5198string0.4219any0.0342boolean0.0097number0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+\n(?:\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7382RegExp0.1359any0.0506boolean0.0264string[]0.0134
+}Literal.String.Interpol
+:){7}(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7934RegExp0.0819any0.0555boolean0.0222void0.0109
+}Literal.String.Interpol
+|:)|                                    // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7939RegExp0.0770any0.0584boolean0.0212void0.0119
+}Literal.String.Interpol
+:){6}(?:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7955RegExp0.0712any0.0610boolean0.0210void0.0125
+}Literal.String.Interpol
+|:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7965RegExp0.0661any0.0633boolean0.0211void0.0130
+}Literal.String.Interpol
+|:)|                             // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7965any0.0655RegExp0.0620boolean0.0212void0.0135
+}Literal.String.Interpol
+:){5}(?::Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7959any0.0676RegExp0.0586boolean0.0214void0.0139
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7951any0.0696RegExp0.0559boolean0.0216void0.0143
+}Literal.String.Interpol
+){1,2}|:)|                   // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7942any0.0713RegExp0.0536boolean0.0218void0.0146
+}Literal.String.Interpol
+:){4}(?:(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7934any0.0729RegExp0.0516boolean0.0220void0.0149
+}Literal.String.Interpol
+){0,1}:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7927any0.0743RegExp0.0499boolean0.0221void0.0151
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7922any0.0754RegExp0.0483boolean0.0223void0.0154
+}Literal.String.Interpol
+){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7917any0.0764RegExp0.0470boolean0.0224void0.0156
+}Literal.String.Interpol
+:){3}(?:(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7914any0.0772RegExp0.0457boolean0.0225void0.0159
+}Literal.String.Interpol
+){0,2}:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7912any0.0779RegExp0.0445boolean0.0226void0.0162
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7911any0.0786RegExp0.0433boolean0.0227void0.0165
+}Literal.String.Interpol
+){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7912any0.0792RegExp0.0421boolean0.0227void0.0168
+}Literal.String.Interpol
+:){2}(?:(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7913any0.0797RegExp0.0409boolean0.0226void0.0171
+}Literal.String.Interpol
+){0,3}:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7915any0.0803RegExp0.0398boolean0.0225void0.0175
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7919any0.0808RegExp0.0385boolean0.0224void0.0179
+}Literal.String.Interpol
+){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4\n(?:Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7925any0.0814RegExp0.0372boolean0.0223void0.0183
+}Literal.String.Interpol
+:){1}(?:(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7932any0.0821RegExp0.0357boolean0.0221void0.0187
+}Literal.String.Interpol
+){0,4}:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7940any0.0832RegExp0.0340boolean0.0219void0.0191
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7949any0.0851RegExp0.0318boolean0.0217void0.0195
+}Literal.String.Interpol
+){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4\n(?::(?:(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.7923any0.0898RegExp0.0290boolean0.0219void0.0204
+}Literal.String.Interpol
+){0,5}:Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.7995any0.0914RegExp0.0234boolean0.0219void0.0200
+}Literal.String.Interpol
+|(?::Literal.String.Backtick
+${Literal.String.Interpol
+v6segmentName.Otherstring0.8290any0.0857RegExp0.0201number0.0195void0.0152
+}Literal.String.Interpol
+){1,7}|:))             // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4\n)(?:%[0-9a-zA-Z]{1,})?                                             // %eth0            %1\nLiteral.String.Backtick
+`Literal.String.Backtick
+.Punctuation
+replaceName.Othercomplex0.9426any0.0536string0.0018boolean0.0006void0.0005
+(Punctuation
+/\s*\/\/.*$/gmLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+replaceName.Othercomplex0.8642any0.1277string0.0039boolean0.0012void0.0008
+(Punctuation
+/\n/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+trimName.Otherstring0.9047any0.0884number0.0018complex0.0014boolean0.0011
+(Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Pre-compile only the exact regexes because adding a global flag make regexes statefulComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v46ExactName.OtherRegExp0.9887string0.0063any0.0008RegExp[]0.0008boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordRegExp0.5411string0.2726any0.0569RegExpConstructor0.0151boolean0.0113
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9993RegExp0.0003any0.0001RegExp[]0.0000ErrorConstructor0.0000
+(Punctuation
+`Literal.String.Backtick
+(?:^Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.6979RegExp0.2294boolean0.0233any0.0180number0.0098
+}Literal.String.Interpol
+$Literal.String.Backtick
+)|(?:^Literal.String.Backtick
+${Literal.String.Interpol
+v6Name.Otherstring0.8139RegExp0.0534any0.0472boolean0.0344number0.0224
+}Literal.String.Interpol
+$Literal.String.Backtick
+)Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v4exactName.OtherRegExp0.9895string0.0060RegExp[]0.0009string[]0.0006any0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordRegExp0.5705string0.2482any0.0338RegExpConstructor0.0218boolean0.0152
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9996RegExp0.0001RegExp[]0.0000any0.0000ErrorConstructor0.0000
+(Punctuation
+`Literal.String.Backtick
+^Literal.String.Backtick
+${Literal.String.Interpol
+v4Name.Otherstring0.8057number0.0933any0.0465boolean0.0230RegExp0.0164
+}Literal.String.Interpol
+$Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+v6exactName.OtherRegExp0.9879string0.0077RegExp[]0.0007string[]0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.WordRegExp0.5533string0.2663any0.0339RegExpConstructor0.0218boolean0.0157
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9996RegExp0.0001ErrorConstructor0.0000RegExp[]0.0000any0.0000
+(Punctuation
+`Literal.String.Backtick
+^Literal.String.Backtick
+${Literal.String.Interpol
+v6Name.Otherstring0.8000number0.0861any0.0610boolean0.0173RegExp0.0148
+}Literal.String.Interpol
+$Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ipRegexName.Otherstring0.3611RegExp0.3236any0.2126boolean0.0486number0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4134complex0.0776RegExp0.0604string0.0240ConnectionOptions0.0150
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2393complex0.1419RegExp0.0881RegExpMatchArray0.0224string0.0208
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Othercomplex0.1717any0.1006RegExp0.0879ConnectionOptions0.0229RegExpMatchArray0.0140
+.Punctuation
+exactName.Otherboolean0.8212any0.1251string0.0282complex0.0119RegExp0.0036
+\n\tText.Whitespace
+?Operator
+ Text.Whitespace
+v46ExactName.OtherRegExp0.6278string0.2861any0.0484boolean0.0181string[]0.0048
+\n\tText.Whitespace
+:Operator
+ Text.Whitespace
+newKeyword.TypeRegExp0.3787string0.3489any0.1741boolean0.0151complex0.0081
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9991RegExp0.0003any0.0001ErrorConstructor0.0000RegExp[]0.0000
+(Punctuation
+`Literal.String.Backtick
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+boundryName.Otherstring0.8041RegExp0.1153any0.0313string[]0.0113boolean0.0092
+(Punctuation
+optionsName.Otherany0.2430RegExp0.0772complex0.0355string0.0260Options0.0220
+)Punctuation
+}Literal.String.Interpol
+${Literal.String.Interpol
+v4Name.Otherstring0.4918RegExp0.1852any0.1774number0.0310boolean0.0261
+}Literal.String.Interpol
+${Literal.String.Interpol
+boundryName.Otherstring0.5507any0.1471void0.1366RegExp0.0669boolean0.0166
+(Punctuation
+optionsName.Otherany0.2649complex0.0390RegExp0.0388Options0.0299ConnectionOptions0.0218
+)Punctuation
+}Literal.String.Interpol
+)|(?:Literal.String.Backtick
+${Literal.String.Interpol
+boundryName.Otherstring0.3589void0.2748any0.1615RegExp0.0672complex0.0235
+(Punctuation
+optionsName.Otherany0.2436complex0.0396RegExp0.0346ConnectionOptions0.0267Options0.0253
+)Punctuation
+}Literal.String.Interpol
+${Literal.String.Interpol
+v6Name.Otherstring0.4069RegExp0.1706any0.1533void0.0690number0.0375
+}Literal.String.Interpol
+${Literal.String.Interpol
+boundryName.Otherstring0.3558void0.2855any0.1714RegExp0.0582complex0.0302
+(Punctuation
+optionsName.Otherany0.1591complex0.0596RegExp0.0329ConnectionOptions0.0285Options0.0231
+)Punctuation
+}Literal.String.Interpol
+)Literal.String.Backtick
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+'g'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+ipRegexName.Otherany0.4575RegExp0.1778complex0.0201RegExpMatchArray0.0062Set<string>0.0062
+.Punctuation
+v4Name.Otherany0.7786string0.1261boolean0.0535number0.0123complex0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4459complex0.1188RegExp0.0296ConnectionOptions0.0267string0.0165
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3014complex0.1889RegExp0.0531ConnectionOptions0.0238string0.0159
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Othercomplex0.1769any0.0981RegExp0.0564ConnectionOptions0.0395RegExp[]0.0126
+.Punctuation
+exactName.Otherboolean0.7902any0.1470string0.0321complex0.0142RegExp0.0039
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+v4exactName.OtherRegExp0.6720string0.2465any0.0437boolean0.0154string[]0.0051
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+newKeyword.Typestring0.3710RegExp0.3477any0.1656boolean0.0162RegExpConstructor0.0116
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9992RegExp0.0002any0.0001ErrorConstructor0.0000RegExp[]0.0000
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+boundryName.Otherstring0.7735RegExp0.1471any0.0288string[]0.0101number0.0081
+(Punctuation
+optionsName.Otherany0.2065RegExp0.0791complex0.0358string0.0238ConnectionOptions0.0236
+)Punctuation
+}Literal.String.Interpol
+${Literal.String.Interpol
+v4Name.Otherstring0.4869RegExp0.1885any0.1649number0.0311boolean0.0290
+}Literal.String.Interpol
+${Literal.String.Interpol
+boundryName.Otherstring0.3929void0.2227any0.1943RegExp0.0662complex0.0266
+(Punctuation
+optionsName.Otherany0.1997complex0.0714RegExp0.0426ConnectionOptions0.0240Options0.0192
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+'g'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+ipRegexName.Otherany0.4407RegExp0.2089complex0.0161RegExpMatchArray0.0078Set<string>0.0061
+.Punctuation
+v6Name.Otherany0.7691string0.1277boolean0.0596number0.0142RegExp0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4324complex0.1074RegExp0.0411ConnectionOptions0.0264string0.0179
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2729complex0.1937RegExp0.0724ConnectionOptions0.0221string0.0170
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Othercomplex0.1789any0.0808RegExp0.0620ConnectionOptions0.0362RegExp[]0.0136
+.Punctuation
+exactName.Otherboolean0.8193any0.1219string0.0307complex0.0128number0.0036
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+v6exactName.OtherRegExp0.6813string0.2455any0.0371boolean0.0144string[]0.0054
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+newKeyword.Typestring0.3995RegExp0.3317any0.1576boolean0.0173RegExpConstructor0.0106
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9993RegExp0.0001any0.0001ErrorConstructor0.0000RegExp[]0.0000
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+boundryName.Otherstring0.8763RegExp0.0521any0.0249string[]0.0102number0.0087
+(Punctuation
+optionsName.Otherany0.2074RegExp0.0416complex0.0326string0.0286ConnectionOptions0.0244
+)Punctuation
+}Literal.String.Interpol
+${Literal.String.Interpol
+v6Name.Otherstring0.5974any0.1593RegExp0.0774number0.0409boolean0.0236
+}Literal.String.Interpol
+${Literal.String.Interpol
+boundryName.Otherstring0.4301void0.2362any0.1836RegExp0.0247number0.0177
+(Punctuation
+optionsName.Otherany0.1846complex0.0375ConnectionOptions0.0248RegExp0.0231Options0.0201
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+'g'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+ipRegexName.Otherany0.4218void0.1548number0.1396string0.0689boolean0.0394
+;Punctuation
+\nText.Whitespace

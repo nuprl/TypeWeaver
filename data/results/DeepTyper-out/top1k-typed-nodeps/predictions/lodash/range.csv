@@ -1,0 +1,27 @@
+importKeyword
+ Text.Whitespace
+createRangeName.OtherRange0.8593any0.0222complex0.0111Node0.0074Element0.0051
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/createRange.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an array of numbers (positive and/or negative) progressing from\n * `start` up to, but not including, `end`. A step of `-1` is used if a negative\n * `start` is specified without an `end` or `step`. If `end` is not specified,\n * it's set to `start`, and `start` is then set to `0`.\n *\n * **Note:** JavaScript follows the IEEE-754 standard for resolving\n * floating-point values which can produce unexpected results.\n *\n * @since 0.1.0\n * @category Util\n * @param {number} [start=0] The start of the range.\n * @param {number} end The end of the range.\n * @param {number} [step=1] The value to increment or decrement by.\n * @returns {Array} Returns the range of numbers.\n * @see inRange, rangeRight\n * @example\n *\n * range(4)\n * // => [0, 1, 2, 3]\n *\n * range(-4)\n * // => [0, -1, -2, -3]\n *\n * range(1, 5)\n * // => [1, 2, 3, 4]\n *\n * range(0, 20, 5)\n * // => [0, 5, 10, 15]\n *\n * range(0, -4, -1)\n * // => [0, -1, -2, -3]\n *\n * range(1, 4, 0)\n * // => [1, 1, 1]\n *\n * range(0)\n * // => []\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rangeName.OtherRange0.9742IRange0.0038Node0.0010number[]0.0010IterableX<number>0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+createRangeName.OtherRange0.9310IRange0.0037Node0.0031complex0.0024Element0.0022
+(Punctuation
+)Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+rangeName.OtherRange0.8979IRange0.0211IterableX<number>0.0034number[]0.0018Node0.0014
+\nText.Whitespace

@@ -1,0 +1,8 @@
+assert.ts(14,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+assert.ts(26,57): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+assert.ts(29,9): error TS2345: Argument of type '{ message: string; actual: any; expected: string; operator: string; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
+  Object literal may only specify known properties, and 'stackStartFunction' does not exist in type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
+assert.ts(94,61): error TS2339: Property 'test' does not exist on type 'string'.
+assert.ts(110,17): error TS2554: Expected 5 arguments, but got 3.
+

@@ -1,0 +1,26 @@
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+pseudomap.ts(14,19): error TS2345: Argument of type '(value: string, key: string) => void' is not assignable to parameter of type '(value: any, index: number, array: any[]) => void'.
+  Types of parameters 'key' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'string'.
+pseudomap.ts(18,33): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+pseudomap.ts(28,35): error TS2345: Argument of type '(k: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'k' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+pseudomap.ts(29,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+pseudomap.ts(35,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(39,7): error TS2322: Type 'string' is not assignable to type 'object'.
+pseudomap.ts(39,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(40,21): error TS2339: Property 'value' does not exist on type 'object'.
+pseudomap.ts(44,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+pseudomap.ts(48,7): error TS2322: Type 'string' is not assignable to type 'object'.
+pseudomap.ts(48,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'object'.
+pseudomap.ts(57,8): error TS2339: Property 'size' does not exist on type 'any[]'.
+pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+pseudomap.ts(97,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'object'.
+pseudomap.ts(112,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+

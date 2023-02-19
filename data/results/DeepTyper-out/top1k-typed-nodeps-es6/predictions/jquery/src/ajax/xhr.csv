@@ -1,0 +1,681 @@
+importKeyword
+ Text.Whitespace
+jQueryName.Otherany0.9970string0.0012complex0.0006any[]0.0002void0.0002
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../core.js"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"../ajax.js"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+jQueryName.Otherany0.9740HTMLElement0.0027complex0.0017Document0.0016string0.0013
+.Punctuation
+ajaxSettingsName.Otherany0.9958complex0.0014string0.0004void0.0004HTMLElement0.0001
+.Punctuation
+xhrName.Otherany0.9935complex0.0034void0.0008any[]0.0005XMLHttpRequest0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.5311string0.0606complex0.0546Event0.0362Object0.0309
+ Text.Whitespace
+windowName.BuiltinWindow0.9978any0.0007complex0.0003XMLHttpRequest0.0001Event0.0000
+.Punctuation
+XMLHttpRequestName.Othercomplex0.9547any0.0386void0.0046string0.0012number0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+xhrSuccessStatusName.Othercomplex0.6218any0.3519{}0.0066string0.0017Object0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// File protocol always yields status code 0, assume 200Comment.Single
+\n\tText.Whitespace
+0Name.Other
+:Operator
+ Text.Whitespace
+200Keyword.Type
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+jQueryName.Otherany0.9775complex0.0020Event0.0018string0.0017Document0.0013
+.Punctuation
+ajaxTransportName.Otherany0.8151void0.1502complex0.0163boolean0.0058string0.0025
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7489Options0.0298complex0.0123{}0.0078Config0.0064
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callbackName.Otherany0.5162Function0.3585void0.0485boolean0.0090number0.0037
+;Punctuation
+\n\n\tText.Whitespace
+// Cross domain only allowed if supported through XMLHttpRequestComment.Single
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+sendName.Othervoid0.8829any0.0625Promise<void>0.0209complex0.0168Promise<any>0.0054
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+ Text.Whitespace
+headersName.Otherany0.7904complex0.0916Object0.0322{}0.0208any[]0.0104
+,Punctuation
+ Text.Whitespace
+completeName.Otherany0.5918boolean0.3102void0.0200false0.0157Error0.0107
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.4354any0.4201string0.1305void0.0055boolean0.0027
+,Punctuation
+\n\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.5977any0.3323complex0.0067Object0.0028any[]0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3843Options0.0588XMLHttpRequest0.0492complex0.0319Config0.0122
+.Punctuation
+xhrName.Otherany0.5101XMLHttpRequest0.3419complex0.0667void0.0336number0.0062
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9594any0.0195complex0.0014Request0.0006Event0.0006
+.Punctuation
+openName.Othervoid0.8256any0.0773complex0.0665Function0.0061Promise<void>0.0034
+(Punctuation
+\n\t\t\t\tText.Whitespace
+optionsName.Otherany0.3565Options0.0723complex0.0612Config0.0125ConnectionOptions0.0078
+.Punctuation
+typeKeyword.Reserved
+,Punctuation
+\n\t\t\t\tText.Whitespace
+optionsName.Otherany0.4223Options0.0671complex0.0658Config0.0085ConnectionOptions0.0060
+.Punctuation
+urlName.Otherstring0.6865any0.3078complex0.0027number0.0013boolean0.0004
+,Punctuation
+\n\t\t\t\tText.Whitespace
+optionsName.Otherany0.3244complex0.1087Options0.0699Config0.0103{}0.0056
+.Punctuation
+asyncKeyword
+,Punctuation
+\n\t\t\t\tText.Whitespace
+optionsName.Otherany0.3339complex0.0416Options0.0303Promise<any>0.0115Config0.0082
+.Punctuation
+usernameName.Otherstring0.8181any0.1754number0.0028complex0.0024void0.0002
+,Punctuation
+\n\t\t\t\tText.Whitespace
+optionsName.Otherany0.6324complex0.0369Options0.0358never0.0044{}0.0042
+.Punctuation
+passwordName.Otherstring0.5765any0.4106complex0.0078number0.0017void0.0012
+\n\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// Apply custom fields if providedComment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5951Options0.0683complex0.0302Config0.0088{}0.0049
+.Punctuation
+xhrFieldsName.Otherboolean0.6105any0.2579string0.0896void0.0137number0.0101
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+iName.Otherstring0.7536any0.2393number0.0040boolean0.0010complex0.0004
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+optionsName.Otherany0.4305complex0.0671Options0.0614{}0.0102Config0.0071
+.Punctuation
+xhrFieldsName.Otherany0.6264complex0.1182string0.1105boolean0.0544void0.0357
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.8366any0.0857complex0.0125any[]0.0088Object0.0026
+[Punctuation
+ Text.Whitespace
+iName.Otherstring0.5355any0.3434number0.1131void0.0026complex0.0011
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.6432complex0.0623Options0.0329{}0.0040never0.0038
+.Punctuation
+xhrFieldsName.Otherany0.7426complex0.1119string[]0.0535string0.0337any[]0.0249
+[Punctuation
+ Text.Whitespace
+iName.Otherstring0.5809any0.2760number0.1364void0.0029boolean0.0007
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// Override mime type if neededComment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1920Options0.0613complex0.0480XMLHttpRequest0.0138Config0.0132
+.Punctuation
+mimeTypeName.Otherany0.6771string0.3004boolean0.0107void0.0047number0.0028
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.8924any0.0704complex0.0025void0.0010Request0.0009
+.Punctuation
+overrideMimeTypeName.Otherany0.7338void0.0988boolean0.0585string0.0410number0.0347
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9686any0.0117Date0.0005complex0.0005void0.0005
+.Punctuation
+overrideMimeTypeName.Othervoid0.8235any0.1382complex0.0144string0.0063number0.0062
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2451Options0.0652complex0.0411XMLHttpRequest0.0103ConnectionOptions0.0095
+.Punctuation
+mimeTypeName.Otherany0.6317string0.3548number0.0049boolean0.0027complex0.0022
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// X-Requested-With headerComment.Single
+\n\t\t\tText.Whitespace
+// For cross-domain requests, seeing as conditions for a preflight areComment.Single
+\n\t\t\tText.Whitespace
+// akin to a jigsaw puzzle, we simply never set it to be sure.Comment.Single
+\n\t\t\tText.Whitespace
+// (it can always be set on a per-request basis or even using ajaxSetup)Comment.Single
+\n\t\t\tText.Whitespace
+// For same-domain requests, won't change header if already provided.Comment.Single
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+optionsName.Otherany0.5316Options0.0537complex0.0488Config0.0069Object0.0044
+.Punctuation
+crossDomainName.Otherany0.4996boolean0.3997string0.0648number0.0129void0.0096
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+headersName.Otherany0.7614complex0.1106{}0.0402Object0.0335any[]0.0187
+[Punctuation
+ Text.Whitespace
+"X-Requested-With"Literal.String.Double
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+headersName.Otherany0.6860complex0.1571Object0.0483{}0.0395any[]0.0298
+[Punctuation
+ Text.Whitespace
+"X-Requested-With"Literal.String.Double
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"XMLHttpRequest"Literal.String.Double
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// Set headersComment.Single
+\n\t\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+iName.Otherany0.7345string0.2580number0.0057void0.0005boolean0.0004
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+headersName.Otherany0.4995complex0.3654Object0.0431{}0.0375any[]0.0199
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9165any0.0681complex0.0008Object0.0004Schema0.0004
+.Punctuation
+setRequestHeaderName.Othervoid0.9194any0.0711complex0.0029Function0.0022string0.0019
+(Punctuation
+ Text.Whitespace
+iName.Otherany0.8113string0.1221number0.0625void0.0017boolean0.0004
+,Punctuation
+ Text.Whitespace
+headersName.Otherany0.5402complex0.1592any[]0.1067Object0.0802{}0.0486
+[Punctuation
+ Text.Whitespace
+iName.Otherstring0.4169any0.3044number0.2722void0.0019boolean0.0011
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// CallbackComment.Single
+\n\t\t\tText.Whitespace
+callbackName.Othervoid0.7907Function0.0915any0.0906boolean0.0112number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6395Function0.2970boolean0.0192void0.0159string0.0069
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+callbackName.Otherany0.7474Function0.1639void0.0226string0.0150boolean0.0147
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9808any0.0091complex0.0005Request0.0003HTMLInputElement0.0003
+.Punctuation
+onloadName.Otherany0.9907string0.0027boolean0.0024number0.0011complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9834any0.0061complex0.0004Connection0.0003HTMLInputElement0.0002
+.Punctuation
+onerrorName.Otherany0.9690number0.0081boolean0.0071string0.0050void0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9433any0.0125Connection0.0015HTMLIFrameElement0.0015Event0.0008
+.Punctuation
+onabortName.Otherany0.7058string0.1038number0.0464boolean0.0456void0.0208
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9436any0.0261Connection0.0010HTMLIFrameElement0.0007Event0.0006
+.Punctuation
+ontimeoutName.Otherany0.8470string0.0764number0.0234complex0.0190void0.0097
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n\n\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"abort"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.7981any0.1651Error0.0013complex0.0011Request0.0010
+.Punctuation
+abortName.Othervoid0.9601any0.0366complex0.0016Function0.0003Promise<void>0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"error"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+completeName.Otherany0.4821void0.4696boolean0.0158complex0.0068Error0.0041
+(Punctuation
+\n\n\t\t\t\t\t\t\t\tText.Whitespace
+// File: protocol always yields status 0; see trac-8605, trac-14207Comment.Single
+\n\t\t\t\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9012any0.0747complex0.0015Request0.0011Error0.0008
+.Punctuation
+statusName.Othernumber0.5776any0.2807string0.0838complex0.0191void0.0101
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9541any0.0275complex0.0010Event0.0005Request0.0004
+.Punctuation
+statusTextName.Otherstring0.8494any0.1250number0.0111void0.0072complex0.0023
+\n\t\t\t\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+completeName.Otherany0.5493void0.3817boolean0.0418complex0.0117Function0.0014
+(Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+xhrSuccessStatusName.Otherany0.7794complex0.0860{}0.0288string0.0128boolean0.0093
+[Punctuation
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9656any0.0187complex0.0011Error0.0005Event0.0004
+.Punctuation
+statusName.Othernumber0.4762any0.3574string0.1198complex0.0176void0.0058
+ Text.Whitespace
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9531any0.0197complex0.0011Connection0.0009Request0.0005
+.Punctuation
+statusName.Othernumber0.4696any0.3011string0.1350complex0.0268void0.0146
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9790any0.0072complex0.0004Request0.0003Event0.0003
+.Punctuation
+statusTextName.Otherstring0.9282any0.0574number0.0058void0.0039complex0.0016
+,Punctuation
+\n\n\t\t\t\t\t\t\t\tText.Whitespace
+// For XHR2 non-text, let the caller handle it (gh-2498)Comment.Single
+\n\t\t\t\t\t\t\t\tText.Whitespace
+(Punctuation
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9755any0.0072Connection0.0009User0.0004Request0.0004
+.Punctuation
+responseTypeName.OtherXMLHttpRequestResponseType0.4850string0.1670any0.1606complex0.0205XMLHttpRequest0.0144
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+"text"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"text"Literal.String.Double
+ Text.Whitespace
+?Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+{Punctuation
+ Text.Whitespace
+textName.Otherstring0.8254any0.1592number0.0042complex0.0014void0.0014
+:Operator
+ Text.Whitespace
+xhr.responseTextKeyword.Type
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+:Operator
+\n\t\t\t\t\t\t\t\t\tText.Whitespace
+{Punctuation
+ Text.Whitespace
+binaryName.Otherstring0.4566any0.2473boolean0.1602number0.0376void0.0189
+:Operator
+ Text.Whitespace
+xhr.responseKeyword.Type
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9839any0.0026Error0.0003HTMLIFrameElement0.0003complex0.0003
+.Punctuation
+getAllResponseHeadersName.Otherstring0.9236any0.0408complex0.0198void0.0101boolean0.0022
+(Punctuation
+)Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// Listen to eventsComment.Single
+\n\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9927any0.0016HTMLIFrameElement0.0003complex0.0002Document0.0001
+.Punctuation
+onloadName.Otherany0.9929void0.0024boolean0.0010string0.0010complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbackName.Otherany0.6259Function0.1778void0.1484Event0.0036never0.0027
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9723any0.0105complex0.0007Event0.0005Document0.0005
+.Punctuation
+onabortName.Otherany0.8199string0.0924void0.0573number0.0063complex0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.9860any0.0030complex0.0004HTMLIFrameElement0.0002Object0.0002
+.Punctuation
+onerrorName.Otherany0.9669number0.0109string0.0076boolean0.0045void0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+xhrName.OtherXMLHttpRequest0.8803any0.0277HTMLIFrameElement0.0031Connection0.0016Location0.0015
+.Punctuation
+ontimeoutName.Otherany0.7478void0.1235string0.0306number0.0294boolean0.0255
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbackName.Otherany0.4584Function0.2775void0.0810boolean0.0138Callback0.0062
+(Punctuation
+ Text.Whitespace
+"error"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// Create the abort callbackComment.Single
+\n\t\t\tText.Whitespace
+callbackName.Otherany0.5643Function0.1863void0.1068boolean0.0153Callback0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbackName.Otherany0.4757Function0.2250void0.0389Callback0.0119boolean0.0077
+(Punctuation
+ Text.Whitespace
+"abort"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\tText.Whitespace
+// Do send the request (this may raise an exception)Comment.Single
+\n\t\t\t\tText.Whitespace
+xhrName.OtherXMLHttpRequest0.9711any0.0044HTMLIFrameElement0.0007Connection0.0004Date0.0004
+.Punctuation
+sendName.Othercomplex0.5975any0.2109void0.1397Promise<void>0.0124Promise<any>0.0098
+(Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1661Options0.1449Config0.0170complex0.0121FirebaseAppOptions0.0080
+.Punctuation
+hasContentName.Otherboolean0.9514any0.0310string0.0037number0.0024false0.0017
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3401Options0.0390complex0.0137Config0.0079FirebaseAppOptions0.0067
+.Punctuation
+dataName.Otherany0.8298string0.0913complex0.0340boolean0.0269number0.0046
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+eName.Otherany0.9988Error0.0003string0.0003number0.0001complex0.0001
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\tText.Whitespace
+// trac-14683: Only rethrow if this hasn't been notified as an error yetComment.Single
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6541Function0.2014void0.0676boolean0.0223never0.0073
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+throwKeywordany0.9172Error0.0383string0.0213number0.0050never0.0042
+ Text.Whitespace
+eName.Otherany0.9918Error0.0034string0.0019number0.0008never0.0003
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+abortName.Othervoid0.9977any0.0007Promise<void>0.0007complex0.0004string0.0001
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4050Function0.3998void0.0867boolean0.0378number0.0071
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+callbackName.Otherany0.5294Function0.2538void0.1201boolean0.0061never0.0044
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

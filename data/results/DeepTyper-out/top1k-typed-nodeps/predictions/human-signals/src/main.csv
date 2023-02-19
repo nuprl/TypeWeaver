@@ -1,0 +1,483 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+constantsName.Othercomplex0.6285any0.3628string0.0017Promise<void>0.0008void0.0007
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'os'Literal.String.Single
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+SIGRTMAXName.Otherany0.5573complex0.1584string0.0475boolean0.0383void0.0323
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./realtime.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+getSignalsName.Otherany0.5448complex0.2040string0.0404void0.0263boolean0.0261
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./signals.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+// Retrieve `signalsByName`, an object mapping signal name to signal properties.Comment.Single
+\nText.Whitespace
+// We make sure the object is sorted by `number`.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getSignalsByNameName.Othercomplex0.2559any0.1815void0.0817string0.0446string[]0.0397
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalsName.Otherstring[]0.3175any0.2701complex0.1696any[]0.1122number[]0.0238
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getSignalsName.Othercomplex0.3975any0.2699string[]0.1105any[]0.0689boolean0.0338
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor1.0000any0.0000Object0.0000PropertyDescriptor0.0000complex0.0000
+.Punctuation
+fromEntriesName.Othercomplex0.8293string[]0.0749any[]0.0199any0.0197boolean0.0068
+(Punctuation
+signalsName.Otherstring[]0.2483complex0.1347any[]0.1315any0.1146number[]0.0711
+.Punctuation
+mapName.OtherU[]0.8344complex0.1430any0.0126void0.0012Observable...0.0011
+(Punctuation
+getSignalByNameName.Otherany0.3147complex0.2141string0.1773number0.1069any[]0.0250
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getSignalByNameName.Othervoid0.3461complex0.3102any0.1291Promise<void>0.0468Promise<{}>0.0246
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+{Punctuation
+\n  Text.Whitespace
+nameName.Otherstring0.6871any0.3049number0.0040complex0.0015boolean0.0005
+,Punctuation
+\n  Text.Whitespace
+numberKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+descriptionName.Otherstring0.8760any0.1082number0.0075boolean0.0018complex0.0015
+,Punctuation
+\n  Text.Whitespace
+supportedName.Otherboolean0.8084any0.0867string0.0480number0.0231complex0.0041
+,Punctuation
+\n  Text.Whitespace
+actionName.Otherstring0.4023any0.2937number0.0744Action0.0547complex0.0355
+,Punctuation
+\n  Text.Whitespace
+forcedName.Otherany0.3430number0.2722string0.1337boolean0.1143complex0.0615
+,Punctuation
+\n  Text.Whitespace
+standardName.Otherany0.6962complex0.0890string0.0649number0.0491boolean0.0250
+,Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+nameName.Otherstring0.5213any0.4644complex0.0052number0.0044any[]0.0004
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+ Text.Whitespace
+nameName.Otherstring0.6179any0.3618number0.0124complex0.0040void0.0007
+,Punctuation
+ Text.Whitespace
+numberKeyword.Type
+,Punctuation
+ Text.Whitespace
+descriptionName.Otherstring0.7067any0.2616number0.0129complex0.0031boolean0.0030
+,Punctuation
+ Text.Whitespace
+supportedName.Otherboolean0.7551any0.0933number0.0344string0.0170void0.0073
+,Punctuation
+ Text.Whitespace
+actionName.Otherany0.3759string0.2474number0.1678Action0.0309complex0.0297
+,Punctuation
+ Text.Whitespace
+forcedName.Otherany0.4913number0.2684string0.0639boolean0.0356complex0.0260
+,Punctuation
+ Text.Whitespace
+standardName.Otherany0.7994number0.0429complex0.0337string0.0232boolean0.0059
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalsByNameName.Otherany0.3736complex0.1426number0.0912any[]0.0548void0.0452
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getSignalsByNameName.Otherany0.3530complex0.2305number0.0725string0.0594any[]0.0541
+(Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// Retrieve `signalsByNumber`, an object mapping signal number to signalComment.Single
+\nText.Whitespace
+// properties.Comment.Single
+\nText.Whitespace
+// We make sure the object is sorted by `number`.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getSignalsByNumberName.Othervoid0.3207any0.2111complex0.1199number0.0398any[]0.0323
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalsName.Othernumber[]0.2157any0.1996complex0.1751any[]0.1330string[]0.1161
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getSignalsName.Othercomplex0.2397number[]0.1953any0.1672any[]0.1213string[]0.0734
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.9401any0.0545string0.0026complex0.0011boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SIGRTMAXName.Othernumber0.9554any0.0355string0.0060complex0.0010number[]0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalsAName.Otherany0.3931number0.3758string0.0888any[]0.0347complex0.0292
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9984Math0.0001ObjectConstructor0.0001any0.0000NumberConstructor0.0000
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+{Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.9676any0.0288string0.0011complex0.0008void0.0003
+ Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+(Punctuation
+valueName.Othernumber0.5587any0.3781string0.0378complex0.0045number[]0.0023
+,Punctuation
+ Text.Whitespace
+numberKeyword.Type
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+\n    Text.Whitespace
+getSignalByNumberName.Otherany0.5638number0.3028complex0.0370boolean0.0315string0.0213
+(Punctuation
+numberKeyword.Type
+,Punctuation
+ Text.Whitespace
+signalsName.Othercomplex0.3635any0.2423any[]0.0682number[]0.0578number0.0515
+)Punctuation
+,Punctuation
+\n  Text.Whitespace
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999any0.0000Object0.0000complex0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.4445any0.1873void0.1252{}0.0876boolean0.0348
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+...Punctuation
+signalsAName.Otherany[]0.3711complex0.2041any0.1073number[]0.0879{}0.0315
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getSignalByNumberName.Othervoid0.3221complex0.2468any0.1201number0.1052Promise<void>0.0300
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+numberKeyword.Type
+,Punctuation
+ Text.Whitespace
+signalsName.Otherany0.2661complex0.2329number[]0.1355number0.0803string[]0.0562
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalName.Othernumber0.5927any0.2647string0.0778complex0.0351boolean0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+findSignalByNumberName.Othernumber0.6575any0.1452complex0.0947string0.0502number[]0.0126
+(Punctuation
+numberKeyword.Type
+,Punctuation
+ Text.Whitespace
+signalsName.Otherany0.2810complex0.1616number0.1336string0.0989number[]0.0829
+)Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+signalName.Otherany0.5438number0.2634string0.1719complex0.0075boolean0.0044
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+nameName.Otherany0.5536string0.4312number0.0079complex0.0033boolean0.0012
+,Punctuation
+ Text.Whitespace
+descriptionName.Otherstring0.5761any0.3960number0.0080complex0.0068boolean0.0024
+,Punctuation
+ Text.Whitespace
+supportedName.Otherboolean0.7583any0.1077number0.0250string0.0171complex0.0123
+,Punctuation
+ Text.Whitespace
+actionName.Otherany0.4718string0.2053number0.1151complex0.0515Action0.0280
+,Punctuation
+ Text.Whitespace
+forcedName.Otherany0.5685number0.2012string0.0756complex0.0626boolean0.0262
+,Punctuation
+ Text.Whitespace
+standardName.Otherany0.8958complex0.0412number0.0266string0.0105boolean0.0023
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+signalName.Otherany0.5840complex0.2014string0.1242number0.0762boolean0.0029
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+[Punctuation
+numberKeyword.Type
+]Punctuation
+:Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+nameName.Otherstring0.5281any0.4382number0.0220complex0.0050number[]0.0013
+,Punctuation
+\n      Text.Whitespace
+numberKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+descriptionName.Otherstring0.6644any0.2841number0.0219complex0.0049boolean0.0043
+,Punctuation
+\n      Text.Whitespace
+supportedName.Otherboolean0.7926number0.0477any0.0438string0.0093void0.0061
+,Punctuation
+\n      Text.Whitespace
+actionName.Othernumber0.2832any0.2612string0.2053Action0.0348complex0.0256
+,Punctuation
+\n      Text.Whitespace
+forcedName.Othernumber0.4249any0.3427boolean0.0507string0.0454complex0.0292
+,Punctuation
+\n      Text.Whitespace
+standardName.Otherany0.6594number0.1087complex0.0425string0.0243boolean0.0126
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Several signals might end up sharing the same number because of OS-specificComment.Single
+\nText.Whitespace
+// numbers, in which case those prevail.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+findSignalByNumberName.Othernumber0.2497void0.2302any0.1731complex0.1093boolean0.0458
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+numberKeyword.Type
+,Punctuation
+ Text.Whitespace
+signalsName.Otherany0.3137number[]0.0989number0.0696string[]0.0669complex0.0599
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalName.Otherany0.7842number0.0638string0.0361complex0.0264number[]0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+signalsName.Otherany0.3355complex0.1900number[]0.1288any[]0.0415string[]0.0384
+.Punctuation
+findName.Othercomplex0.6350any0.3379...0.0021number0.0019U[]0.0017
+(Punctuation
+(Punctuation
+{Punctuation
+ Text.Whitespace
+nameName.Otherany0.6117string0.3742number0.0083complex0.0016boolean0.0006
+ Text.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+constantsName.Otherany0.6967complex0.2410number0.0015string0.0010number[]0.0007
+.Punctuation
+signalsName.Othercomplex0.5946any0.3556boolean0.0072number0.0036number[]0.0028
+[Punctuation
+nameName.Otherstring0.6424any0.3357number0.0174complex0.0014boolean0.0013
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+numberKeyword.Type
+)Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+signalName.Otherany0.6122number0.2021string0.1713boolean0.0052complex0.0043
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+signalName.Otherany0.5268string0.2577number0.1936boolean0.0074complex0.0038
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+signalsName.Othercomplex0.2369number[]0.2005any0.0947any[]0.0889string[]0.0241
+.Punctuation
+findName.Othercomplex0.8112any0.1665U[]0.0025...0.0024number0.0014
+(Punctuation
+(Punctuation
+signalAName.Otherany0.3372number0.2919boolean0.1630complex0.0536string0.0308
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+signalAName.Otherany0.7541complex0.0632number0.0226boolean0.0110Promise<number>0.0056
+.Punctuation
+numberKeyword.Type
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+numberKeyword.Type
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signalsByNumberName.Othernumber0.2695any0.2631string0.0504complex0.0376boolean0.0260
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getSignalsByNumberName.Otherany0.2464number0.1858complex0.1043string0.0607any[]0.0212
+(Punctuation
+)Punctuation
+\nText.Whitespace

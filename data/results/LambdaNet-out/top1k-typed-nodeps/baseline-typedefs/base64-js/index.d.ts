@@ -1,0 +1,11 @@
+declare var lookup: object;
+declare var revLookup: object;
+declare var Arr: string;
+declare var code: string;
+declare function getLens(b64: string): any[];
+declare function byteLength(b64: string): number;
+declare function _byteLength(b64: string, validLen: number, placeHoldersLen: number): number;
+declare function toByteArray(b64: HTMLElement): object;
+declare function tripletToBase64(num: number): string;
+declare function encodeChunk(uint8: object, start: string, end: string): string;
+declare function fromByteArray(uint8: any[]): string;

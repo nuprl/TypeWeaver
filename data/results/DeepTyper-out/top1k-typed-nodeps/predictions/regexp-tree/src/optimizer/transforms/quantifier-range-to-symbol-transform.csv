@@ -1,0 +1,274 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * A regexp-tree plugin to replace different range-based quantifiers\n * with their symbol equivalents.\n *\n * a{0,} -> a*\n * a{1,} -> a+\n * a{1} -> a\n *\n * NOTE: the following is automatically handled in the generator:\n *\n * a{3,3} -> a{3}\n */Comment.Multiline
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+QuantifierName.Othervoid0.7782boolean0.0813string0.0572any0.0384complex0.0098
+(Punctuation
+pathName.Otherstring0.8545Path0.0638any0.0505complex0.0023string[]0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nodeName.Otherany0.9019string0.0181complex0.0159never0.0035Node0.0028
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.4762string0.3794Path0.0800complex0.0175string[]0.0015
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.8529complex0.0491Node0.0042string0.0030never0.0030
+.Punctuation
+kindName.Otherany0.8406string0.1370complex0.0042boolean0.0023string[]0.0006
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'Range'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// a{0,} -> a*Comment.Single
+\n    Text.Whitespace
+rewriteOpenZeroName.Othervoid0.8416any0.0673string0.0387boolean0.0098complex0.0042
+(Punctuation
+pathName.Otherstring0.8262any0.1056Path0.0433string[]0.0054complex0.0038
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// a{1,} -> a+Comment.Single
+\n    Text.Whitespace
+rewriteOpenOneName.Othervoid0.8315any0.0834string0.0465boolean0.0140complex0.0055
+(Punctuation
+pathName.Otherstring0.8330any0.0963Path0.0476string[]0.0049complex0.0040
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// a{1} -> aComment.Single
+\n    Text.Whitespace
+rewriteExactOneName.Othervoid0.7963any0.0944string0.0741boolean0.0100complex0.0065
+(Punctuation
+pathName.Otherstring0.7843Path0.0968any0.0893string[]0.0051complex0.0043
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rewriteOpenZeroName.Othervoid0.8208string0.0684any0.0562boolean0.0210complex0.0122
+(Punctuation
+pathName.Otherstring0.8117Path0.1242any0.0360complex0.0021string[]0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nodeName.Otherany0.8364complex0.0293string0.0242never0.0054Node0.0042
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherstring0.4382any0.3095Path0.1814complex0.0171Object0.0012
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.7867complex0.0354Node0.0081TreeModel0.0029never0.0027
+.Punctuation
+fromKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.6682complex0.0387Node0.0104TreeModel0.0079never0.0048
+.Punctuation
+toName.Otherany0.8131number0.0805string0.0759boolean0.0128complex0.0021
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+nodeName.Otherany0.5956complex0.0378Node0.0079TreeModel0.0065string0.0063
+.Punctuation
+kindName.Otherany0.6919string0.2723boolean0.0052complex0.0050RegExp0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'*'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.8591complex0.0237Node0.0032TreeModel0.0022string0.0018
+.Punctuation
+fromKeyword.Reserved
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rewriteOpenOneName.Othervoid0.7598string0.0949any0.0619boolean0.0392complex0.0149
+(Punctuation
+pathName.Otherstring0.8813any0.0497Path0.0435complex0.0030string[]0.0021
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nodeName.Otherany0.8743complex0.0242string0.0185never0.0045Node0.0033
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherstring0.4643any0.3323Path0.1365complex0.0169string[]0.0012
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.8310complex0.0292Node0.0060never0.0024TreeModel0.0021
+.Punctuation
+fromKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.6823complex0.0317Node0.0096TreeModel0.0074never0.0052
+.Punctuation
+toName.Otherany0.8270string0.0743number0.0713boolean0.0117complex0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+nodeName.Otherany0.6322complex0.0302Node0.0063string0.0060TreeModel0.0059
+.Punctuation
+kindName.Otherany0.7158string0.2509boolean0.0050complex0.0044RegExp0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'+'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+nodeName.Otherany0.8670complex0.0199Node0.0028TreeModel0.0021string0.0016
+.Punctuation
+fromKeyword.Reserved
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rewriteExactOneName.Othervoid0.5872string0.1551boolean0.1106any0.0802complex0.0197
+(Punctuation
+pathName.Otherstring0.8624Path0.0565any0.0514complex0.0030string[]0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nodeName.Otherany0.8654complex0.0238string0.0157never0.0041Node0.0033
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherstring0.4076any0.3133Path0.2016complex0.0164string[]0.0015
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nodeName.Otherany0.7852complex0.0274Node0.0055TreeModel0.0033ITreeNode0.0027
+.Punctuation
+fromKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nodeName.Otherany0.7888complex0.0255Node0.0078TreeModel0.0047number0.0025
+.Punctuation
+toName.Otherany0.7305number0.2482string0.0152boolean0.0010complex0.0007
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+pathName.OtherPath0.5957any0.1468complex0.0262string0.0082Url0.0018
+.Punctuation
+parentPathName.Otherany0.7583string0.2378complex0.0011string[]0.0002Path0.0002
+.Punctuation
+replaceName.Othercomplex0.4926any0.4901void0.0053string0.0051boolean0.0017
+(Punctuation
+pathName.Otherany0.6261string0.1343Path0.1213complex0.0535number0.0008
+.Punctuation
+parentPathName.Otherany0.9383string0.0439complex0.0066Path0.0007boolean0.0002
+.Punctuation
+nodeName.Otherany0.9785complex0.0119string0.0031Error0.0002number0.0001
+.Punctuation
+expressionName.Otherany0.8857string0.1089complex0.0015number0.0007string[]0.0003
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

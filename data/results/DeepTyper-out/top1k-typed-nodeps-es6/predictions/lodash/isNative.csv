@@ -1,0 +1,108 @@
+importKeyword
+ Text.Whitespace
+isObjectName.Otherboolean0.7763complex0.0739any0.0268string[]0.0225string0.0083
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isObject.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Used to match `RegExp`\n * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reRegExpCharName.OtherRegExp0.9924string0.0043any0.0007string[]0.0004boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/[\\^$.*+?()[\]{}|]/gLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/** Used to detect if a method is native. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reIsNativeName.OtherRegExp0.9793string0.0048string[]0.0031RegExpExecArray0.0019RegExp[]0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9972RegExp0.0007RegExpExecArray0.0001RegExp[]0.0001Configuration0.0000
+(Punctuation
+`Literal.String.Backtick
+^Literal.String.Backtick
+${Literal.String.Interpol
+\n  Text.Whitespace
+FunctionName.BuiltinFunctionConstructor0.7123Function0.1669any0.0629complex0.0219Object0.0102
+.Punctuation
+prototypeName.OtherObject0.5723Function0.1955any0.0248number0.0171void0.0142
+.Punctuation
+toStringName.Otherstring0.9486any0.0326complex0.0054number0.0022void0.0016
+.Punctuation
+callName.Otherany0.9242string0.0425void0.0114number0.0094complex0.0049
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997Object0.0001any0.0000complex0.0000FunctionConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.7820Function0.0222complex0.0196any0.0180any[]0.0156
+.Punctuation
+hasOwnPropertyName.Othercomplex0.8516any0.0681string0.0644boolean0.0038number0.0034
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+replaceName.Othercomplex0.8821any0.1024string0.0070void0.0044boolean0.0014
+(Punctuation
+reRegExpCharName.OtherRegExp0.9642string0.0282any0.0047boolean0.0010string[]0.0005
+,Punctuation
+ Text.Whitespace
+'\\$&'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+replaceName.Othercomplex0.8914any0.0991string0.0034void0.0021boolean0.0010
+(Punctuation
+/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+'$1.*?'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Literal.String.Interpol
+$Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if `value` is a pristine native function.\n *\n * @since 3.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a native function,\n *  else `false`.\n * @example\n *\n * isNative(Array.prototype.push)\n * // => true\n *\n * isNative(isDate)\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isNativeName.Otherboolean0.7935string0.1428any0.0342RegExp0.0121number0.0060
+(Punctuation
+valueName.Otherstring0.8296any0.1215boolean0.0280number0.0076RegExp0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isObjectName.Otherboolean0.9405any0.0254string0.0141complex0.0120number0.0015
+(Punctuation
+valueName.Otherstring0.5658any0.4049boolean0.0131number0.0061RegExp0.0028
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+reIsNativeName.OtherRegExp0.9820any0.0100string0.0032boolean0.0011string[]0.0006
+.Punctuation
+testName.Otherboolean0.9695any0.0196string0.0042complex0.0028void0.0012
+(Punctuation
+valueName.Otherstring0.7955any0.1777boolean0.0155number0.0047RegExp0.0012
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isNativeName.Otherany0.4185string0.1308RegExp0.0710boolean0.0232complex0.0185
+\nText.Whitespace

@@ -1,0 +1,3233 @@
+varKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9886string0.0098complex0.0007Path0.0001any[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'path'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// We only register on the final extension (like `.js`) due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353Comment.Single
+\nText.Whitespace
+// However, we use these matchers to apply the transform only if the full extension matchesComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInJsxName.Otherstring0.5256boolean0.4051any0.0506number0.0055string[]0.0051
+(Punctuation
+filenameName.Otherstring0.8402any0.1534boolean0.0026number0.0010Date0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.6273any0.3669boolean0.0031number0.0006Date0.0002
+.Punctuation
+endsWithName.Otherany0.5358boolean0.4237string0.0230complex0.0149void0.0007
+(Punctuation
+'.jsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInTsName.Otherstring0.4887boolean0.4641any0.0336string[]0.0042number0.0041
+(Punctuation
+filenameName.Otherstring0.8963any0.0973boolean0.0029number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7192any0.2752boolean0.0030number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5264any0.4301string0.0254complex0.0153void0.0008
+(Punctuation
+'.ts'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInTsxName.Otherboolean0.5127string0.4423any0.0321number0.0041string[]0.0039
+(Punctuation
+filenameName.Otherstring0.8993any0.0943boolean0.0031number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7368any0.2575boolean0.0032number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5449any0.4115string0.0258complex0.0151number0.0008
+(Punctuation
+'.tsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInBabelJsName.Otherboolean0.5371string0.4193any0.0311number0.0040string[]0.0038
+(Punctuation
+filenameName.Otherstring0.8994any0.0941boolean0.0032number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7443any0.2499boolean0.0033number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5526any0.4036string0.0260complex0.0151number0.0008
+(Punctuation
+'.babel.js'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInBabelJsxName.Otherboolean0.5508string0.4067any0.0303number0.0040string[]0.0036
+(Punctuation
+filenameName.Otherstring0.8994any0.0940boolean0.0033number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7489any0.2453boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5572any0.3988string0.0261complex0.0152number0.0008
+(Punctuation
+'.babel.jsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInBabelTsName.Otherboolean0.5589string0.3992any0.0297number0.0040string[]0.0036
+(Punctuation
+filenameName.Otherstring0.8996any0.0938boolean0.0033number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7522any0.2420boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5605any0.3951string0.0263complex0.0153number0.0008
+(Punctuation
+'.babel.ts'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInBabelTsxName.Otherboolean0.5640string0.3947any0.0293number0.0039string[]0.0035
+(Punctuation
+filenameName.Otherstring0.9000any0.0934boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7549any0.2392boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5633any0.3921string0.0264complex0.0155number0.0008
+(Punctuation
+'.babel.tsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInEsbuildJsName.Otherboolean0.5673string0.3918any0.0290number0.0039string[]0.0035
+(Punctuation
+filenameName.Otherstring0.9006any0.0928boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7573any0.2368boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5657any0.3893string0.0266complex0.0156number0.0008
+(Punctuation
+'.esbuild.js'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInEsbuildJsxName.Otherboolean0.5696string0.3898any0.0287number0.0039string[]0.0034
+(Punctuation
+filenameName.Otherstring0.9012any0.0922boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7596any0.2345boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5680any0.3868string0.0268complex0.0157number0.0008
+(Punctuation
+'.esbuild.jsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInEsbuildTsName.Otherboolean0.5714string0.3883any0.0285number0.0039string[]0.0034
+(Punctuation
+filenameName.Otherstring0.9019any0.0915boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7618any0.2323boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5700any0.3844string0.0269complex0.0159number0.0008
+(Punctuation
+'.esbuild.ts'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInEsbuildTsxName.Otherboolean0.5730string0.3869any0.0283number0.0039string[]0.0034
+(Punctuation
+filenameName.Otherstring0.9026any0.0908boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7639any0.2302boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5719any0.3822string0.0270complex0.0161number0.0008
+(Punctuation
+'.esbuild.tsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSucraseJsName.Otherboolean0.5747string0.3853any0.0281number0.0039string[]0.0034
+(Punctuation
+filenameName.Otherstring0.9033any0.0901boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7661any0.2281boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5734any0.3803string0.0272complex0.0163number0.0008
+(Punctuation
+'.sucrase.js'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSucraseJsxName.Otherboolean0.5768string0.3834any0.0280number0.0039string[]0.0034
+(Punctuation
+filenameName.Otherstring0.9039any0.0895boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7683any0.2259boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5746any0.3787string0.0273complex0.0166number0.0008
+(Punctuation
+'.sucrase.jsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSucraseTsName.Otherboolean0.5796string0.3807any0.0279number0.0039string[]0.0033
+(Punctuation
+filenameName.Otherstring0.9044any0.0890boolean0.0034number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7706any0.2236boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5753any0.3776string0.0274complex0.0168number0.0008
+(Punctuation
+'.sucrase.ts'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSucraseTsxName.Otherboolean0.5834string0.3770any0.0277number0.0039string[]0.0033
+(Punctuation
+filenameName.Otherstring0.9047any0.0886boolean0.0035number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7731any0.2211boolean0.0034number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5754any0.3771string0.0275complex0.0172number0.0008
+(Punctuation
+'.sucrase.tsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSwcJsName.Otherboolean0.5886string0.3719any0.0276number0.0039string[]0.0032
+(Punctuation
+filenameName.Otherstring0.9047any0.0885boolean0.0035number0.0010Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7759any0.2183boolean0.0033number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5744any0.3775string0.0276complex0.0175number0.0008
+(Punctuation
+'.swc.js'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSwcJsxName.Otherboolean0.5955string0.3651any0.0275number0.0039string[]0.0031
+(Punctuation
+filenameName.Otherstring0.9044any0.0887boolean0.0036number0.0009Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7792any0.2150boolean0.0033number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5717any0.3795string0.0278complex0.0180number0.0008
+(Punctuation
+'.swc.jsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSwcTsName.Otherboolean0.6091string0.3520any0.0272number0.0039string[]0.0030
+(Punctuation
+filenameName.Otherstring0.9032any0.0897boolean0.0037number0.0009Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7824any0.2119boolean0.0032number0.0006String0.0002
+.Punctuation
+endsWithName.Otherboolean0.5631any0.3876string0.0279complex0.0185number0.0008
+(Punctuation
+'.swc.ts'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+endsInSwcTsxName.Otherboolean0.6473string0.3163any0.0247number0.0041string[]0.0029
+(Punctuation
+filenameName.Otherstring0.8939any0.0980boolean0.0043number0.0011Date0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+filenameName.Otherstring0.7735any0.2205boolean0.0033number0.0006String0.0003
+.Punctuation
+endsWithName.Otherboolean0.5829any0.3640string0.0286complex0.0217number0.0008
+(Punctuation
+'.swc.tsx'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cjsStubName.Otherstring0.9225any0.0754boolean0.0009number0.0006string[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9981string0.0013complex0.0004any[]0.0001string[]0.0000
+.Punctuation
+joinName.Otherany0.7505complex0.2424string0.0057any[]0.0003void0.0002
+(Punctuation
+__dirnameName.Otherstring0.5711any0.4262number0.0010boolean0.0009void0.0002
+,Punctuation
+ Text.Whitespace
+'cjs-stub'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mjsStubName.Otherstring0.8872any0.1109boolean0.0008number0.0005string[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9984string0.0010complex0.0004any[]0.0001string[]0.0000
+.Punctuation
+joinName.Otherany0.7745complex0.2209string0.0033any[]0.0004number0.0002
+(Punctuation
+__dirnameName.Otherany0.5945string0.4028boolean0.0011number0.0008void0.0002
+,Punctuation
+ Text.Whitespace
+'mjs-stub'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isNodeModulesName.Otherstring0.7459any0.1538boolean0.0914number0.0023complex0.0021
+(Punctuation
+fileName.Otherstring0.9005any0.0943number0.0017File0.0008boolean0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pathName.Otherany0.9985string0.0013complex0.0001number0.0000boolean0.0000
+.Punctuation
+relativeName.Otherany0.9948string0.0030complex0.0013boolean0.0006any[]0.0000
+(Punctuation
+processName.Otherany0.9943complex0.0013string0.0013Process0.0010T0.0002
+.Punctuation
+cwdName.Otherany0.9934string0.0043complex0.0020boolean0.0001any[]0.0000
+(Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+fileName.Otherstring0.8669any0.1303number0.0009boolean0.0005string[]0.0003
+)Punctuation
+.Punctuation
+includesName.Otherany0.8851boolean0.0873string0.0140complex0.0104string[]0.0012
+(Punctuation
+'node_modules'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+extensionsName.Otherstring[]0.4275complex0.3021string0.0274RegExp0.0241any0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'.babel.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9860complex0.0045any0.0032string0.0028Promise<void>0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.7832string0.0677void0.0356number0.0051Error0.0014
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8522Config0.0267string0.0212complex0.0087boolean0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8256Config0.0449complex0.0331string0.0180IConfig0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8596complex0.0369Config0.0187string0.0142IConfig0.0025
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+rootModeName.Otherstring0.9652any0.0152RegExp0.0113boolean0.0034number0.0027
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+overridesName.Othercomplex0.9989any0.0006any[]0.0001string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+{Punctuation
+ Text.Whitespace
+onlyName.Othercomplex0.8881any[]0.0458string[]0.0287any0.0140number[]0.0029
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInBabelJsName.Otherstring0.9107any0.0476number0.0138string[]0.0082complex0.0073
+]Punctuation
+,Punctuation
+ Text.Whitespace
+presetsName.Otherstring[]0.9942any[]0.0021number[]0.0008complex0.0005string[][]0.0005
+:Operator
+ Text.Whitespace
+[Punctuation
+'@babel/preset-env'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.7337any0.2032string0.0056complex0.0035Function0.0031
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996any0.0003complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7201any0.1936{}0.0288void0.0135Object0.0122
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8120complex0.0793Config0.0145string0.0094string[]0.0028
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring0.6174RegExp0.1928string[]0.1819any0.0022complex0.0014
+:Operator
+ Text.Whitespace
+'.js'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.babel.jsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9875complex0.0040any0.0034string0.0017Promise<void>0.0016
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.7928string0.0585void0.0249number0.0047Config0.0017
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8369Config0.0378string0.0193complex0.0082IConfig0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8037Config0.0599complex0.0323string0.0159IConfig0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8463complex0.0387Config0.0246string0.0122IConfig0.0027
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+rootModeName.Otherstring0.9620RegExp0.0152any0.0136boolean0.0038number0.0029
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+overridesName.Othercomplex0.9990any0.0004any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n          Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+onlyName.Othercomplex0.8743any[]0.0577string[]0.0324any0.0132number[]0.0033
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInBabelJsxName.Otherstring0.8491any0.0826string[]0.0166number0.0146complex0.0116
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+presetsName.Otherstring[]0.9929any[]0.0025number[]0.0011string[][]0.0008complex0.0008
+:Operator
+ Text.Whitespace
+[Punctuation
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'@babel/preset-react'Literal.String.Single
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.7446any0.2004string0.0060complex0.0036Function0.0030
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996any0.0003complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7000any0.2093{}0.0313void0.0138Object0.0123
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8288complex0.0717Config0.0140string0.0093string[]0.0031
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring0.5671RegExp0.2162string[]0.2090any0.0020complex0.0014
+:Operator
+ Text.Whitespace
+'.jsx'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.babel.ts'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9847complex0.0050any0.0041string0.0024Promise<void>0.0017
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8078string0.0603void0.0217number0.0045Config0.0015
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8393Config0.0372string0.0203complex0.0084number0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.8112Config0.0579complex0.0324string0.0167IConfig0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8476complex0.0402Config0.0244string0.0131IConfig0.0025
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+rootModeName.Otherstring0.9646RegExp0.0133any0.0131boolean0.0037number0.0028
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+overridesName.Othercomplex0.9990any0.0004any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n            Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+onlyName.Othercomplex0.8711any[]0.0600string[]0.0345any0.0125number[]0.0031
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInBabelTsName.Otherstring0.8535any0.0781string[]0.0187number0.0132complex0.0124
+]Punctuation
+,Punctuation
+\n              Text.Whitespace
+presetsName.Otherstring[]0.9932any[]0.0025number[]0.0010string[][]0.0008complex0.0008
+:Operator
+ Text.Whitespace
+[Punctuation
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'@babel/preset-typescript'Literal.String.Single
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.7376any0.2029string0.0061complex0.0038Function0.0030
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996any0.0003complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7192any0.1912{}0.0305Object0.0132void0.0129
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8023complex0.0897Config0.0165string0.0103string[]0.0038
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring0.6202string[]0.2096RegExp0.1623any0.0022complex0.0016
+:Operator
+ Text.Whitespace
+'.ts'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.babel.tsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9806complex0.0068any0.0048string0.0030Promise<void>0.0018
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8046string0.0607void0.0178number0.0043Config0.0016
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8312Config0.0394string0.0201complex0.0089boolean0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8091Config0.0607complex0.0328string0.0157IConfig0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8451complex0.0394Config0.0264string0.0121IConfig0.0027
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+rootModeName.Otherstring0.9610RegExp0.0165any0.0132boolean0.0040number0.0027
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+overridesName.Othercomplex0.9990any0.0004any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n          Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+onlyName.Othercomplex0.8434any[]0.0758string[]0.0394any0.0157number[]0.0041
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInBabelTsxName.Otherstring0.8240any0.0901string[]0.0260complex0.0182number0.0114
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+presetsName.Otherstring[]0.8424complex0.1051any[]0.0300string[][]0.0063number[]0.0038
+:Operator
+ Text.Whitespace
+[Punctuation
+\n              Text.Whitespace
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+\n              Text.Whitespace
+'@babel/preset-react'Literal.String.Single
+,Punctuation
+\n              Text.Whitespace
+[Punctuation
+\n                Text.Whitespace
+'@babel/preset-typescript'Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+{Punctuation
+\n                  Text.Whitespace
+isTSXName.Otherboolean0.9957string0.0027any0.0005number0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n                  Text.Whitespace
+allExtensionsName.Otherboolean0.9979string0.0011any0.0003number0.0002false0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n                Text.Whitespace
+}Punctuation
+,Punctuation
+\n              Text.Whitespace
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+]Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.7131any0.2325string0.0056complex0.0049Function0.0025
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9995any0.0003complex0.0001Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7527any0.1801{}0.0257void0.0099string0.0085
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8442complex0.0760Config0.0144string0.0080string[]0.0026
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring0.5808string[]0.2249RegExp0.1861any0.0021complex0.0017
+:Operator
+ Text.Whitespace
+'.tsx'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.cjs'Literal.String.Single
+:Operator
+ Text.Whitespace
+cjsStubName.Otherstring0.5185boolean0.1151string[]0.1035any0.0731void0.0596
+,Punctuation
+\n  Text.Whitespace
+'.coffee'Literal.String.Single
+:Operator
+ Text.Whitespace
+'coffeescript/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.coffee.md'Literal.String.Single
+:Operator
+ Text.Whitespace
+'coffeescript/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9499complex0.0239any0.0121string0.0085string[]0.0014
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.9045string0.0679complex0.0185number0.0020void0.0011
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8750string0.0218Config0.0202complex0.0111string[]0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8562complex0.0409Config0.0331string0.0100IConfig0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8692complex0.0559Config0.0162string0.0071number0.0017
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+targetName.Otherstring0.9743any0.0216string[]0.0010number0.0007complex0.0007
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9585complex0.0258string0.0067any[]0.0011void0.0009
+.Punctuation
+versionName.Otherany0.8493string0.1415string[]0.0036complex0.0033void0.0006
+.Punctuation
+sliceName.Otherany0.8039string0.1645string[]0.0151complex0.0083any[]0.0028
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n        Text.Whitespace
+hookMatcherName.Otherstring0.6808boolean0.1064any0.1056number0.0335complex0.0302
+:Operator
+ Text.Whitespace
+endsInEsbuildJsKeyword.Typestring0.7356boolean0.0893any0.0787number0.0405complex0.0187
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+modName.Othercomplex0.6454any0.3301Object0.0027any[]0.0020string0.0015
+.Punctuation
+registerName.Othervoid0.8894any0.0645complex0.0313string0.0023boolean0.0022
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7276any0.2250{}0.0182Object0.0065void0.0064
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8457complex0.0872Config0.0144string0.0092string[]0.0068
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring[]0.9978string0.0004any[]0.0004RegExp0.0004RegExp[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'.js'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.jsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9410complex0.0267any0.0167string0.0095string[]0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.9089string0.0633complex0.0178number0.0019void0.0010
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8775string0.0221Config0.0208complex0.0098string[]0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8520complex0.0413Config0.0348string0.0095IConfig0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8734complex0.0525Config0.0168string0.0068number0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+targetName.Otherstring0.9750any0.0209string[]0.0010number0.0007complex0.0007
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9594complex0.0247string0.0065any[]0.0012void0.0008
+.Punctuation
+versionName.Otherany0.8494string0.1416string[]0.0034complex0.0032any[]0.0006
+.Punctuation
+sliceName.Otherany0.8080string0.1610string[]0.0143complex0.0078any[]0.0030
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n        Text.Whitespace
+hookMatcherName.Otherstring0.6433any0.1169boolean0.1133number0.0403complex0.0356
+:Operator
+ Text.Whitespace
+endsInEsbuildJsxKeyword.Typestring0.7066boolean0.0987any0.0865number0.0470complex0.0208
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+modName.Othercomplex0.6404any0.3352Object0.0026any[]0.0022void0.0015
+.Punctuation
+registerName.Othervoid0.8842any0.0698complex0.0311string0.0022boolean0.0021
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7124any0.2352{}0.0230void0.0065Object0.0063
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8545complex0.0844Config0.0128string0.0082string[]0.0057
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring[]0.9978any[]0.0005RegExp0.0004string0.0004RegExp[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'.jsx'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.ts'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9411complex0.0265any0.0170string0.0093string[]0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.9100string0.0625complex0.0173number0.0019void0.0010
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8806string0.0216Config0.0201complex0.0097string[]0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8570complex0.0405Config0.0332string0.0093IConfig0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8776complex0.0517Config0.0159string0.0066number0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+targetName.Otherstring0.9744any0.0215string[]0.0010number0.0007complex0.0007
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9606complex0.0242string0.0063any[]0.0012void0.0008
+.Punctuation
+versionName.Otherany0.8532string0.1379string[]0.0033complex0.0032any[]0.0006
+.Punctuation
+sliceName.Otherany0.8136string0.1559string[]0.0141complex0.0077any[]0.0030
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n        Text.Whitespace
+hookMatcherName.Otherstring0.6319any0.1207boolean0.1160number0.0427complex0.0365
+:Operator
+ Text.Whitespace
+endsInEsbuildTsKeyword.Typestring0.6953boolean0.1020any0.0893number0.0504complex0.0216
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+modName.Othercomplex0.6353any0.3405Object0.0025any[]0.0022void0.0015
+.Punctuation
+registerName.Othervoid0.8807any0.0729complex0.0314string0.0022boolean0.0021
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7094any0.2385{}0.0234void0.0064Object0.0061
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8571complex0.0839Config0.0122string0.0081string[]0.0055
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring[]0.9978any[]0.0005RegExp0.0004string0.0004RegExp[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'.ts'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.tsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9357complex0.0291any0.0185string0.0101string[]0.0014
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.9098string0.0629complex0.0171number0.0021void0.0010
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8849string0.0212Config0.0188complex0.0097string[]0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8633complex0.0399Config0.0308string0.0091IConfig0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8812complex0.0516Config0.0147string0.0065number0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+targetName.Otherstring0.9738any0.0220string[]0.0010number0.0007complex0.0007
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9609complex0.0242string0.0061any[]0.0012void0.0008
+.Punctuation
+versionName.Otherany0.8567string0.1345string[]0.0032complex0.0032any[]0.0006
+.Punctuation
+sliceName.Otherany0.8193string0.1504string[]0.0139complex0.0077any[]0.0030
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n        Text.Whitespace
+hookMatcherName.Otherstring0.6211any0.1250boolean0.1156number0.0479complex0.0375
+:Operator
+ Text.Whitespace
+endsInEsbuildTsxKeyword.Typestring0.6832boolean0.1041any0.0922number0.0562complex0.0224
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+modName.Othercomplex0.6327any0.3433Object0.0024any[]0.0023void0.0015
+.Punctuation
+registerName.Othervoid0.8692any0.0805complex0.0344string0.0023boolean0.0022
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7093any0.2391{}0.0240void0.0062Object0.0057
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8530complex0.0884Config0.0119string0.0080string[]0.0057
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring[]0.9979any[]0.0005string0.0004RegExp0.0004RegExp[]0.0002
+:Operator
+ Text.Whitespace
+[Punctuation
+'.tsx'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.esm.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esm'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9927any0.0029complex0.0019Promise<void>0.0007string0.0007
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.9150string0.0374void0.0073number0.0016complex0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// register on .js extension due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353Comment.Single
+\n      Text.Whitespace
+// which only captures the final extension (.esm.js -> .js)Comment.Single
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+esmLoaderName.Otherany0.5192string0.3564void0.0890number0.0126complex0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hookName.Otherany0.6001void0.2458string0.0810complex0.0141number0.0082
+(Punctuation
+moduleName.Other
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+requireName.Other
+.Punctuation
+extensionsName.Otherany0.6289string[]0.3096string0.0226{}0.0108complex0.0078
+[Punctuation
+'.js'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+esmLoaderName.Otherany0.3745string0.2787complex0.1458string[]0.0715void0.0323
+(Punctuation
+'module'Literal.String.Single
+)Punctuation
+.Punctuation
+_extensionsName.Otherany0.9539{}0.0139complex0.0104string0.0089string[]0.0070
+[Punctuation
+'.js'Literal.String.Single
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+'.json'Literal.String.Single
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+'.json5'Literal.String.Single
+:Operator
+ Text.Whitespace
+'json5/lib/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.jsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9852complex0.0054any0.0037string0.0018Promise<void>0.0017
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8348string0.0499void0.0201number0.0059complex0.0013
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8525Config0.0365string0.0162complex0.0090number0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.8369Config0.0528complex0.0286string0.0135Configuration0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8800complex0.0365Config0.0185string0.0107number0.0024
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+rootModeName.Otherstring0.9568any0.0164RegExp0.0159boolean0.0043number0.0041
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+overridesName.Othercomplex0.9989any0.0005any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n            Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+onlyName.Othercomplex0.8549any[]0.0817string[]0.0235any0.0150number[]0.0038
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInJsxName.Otherstring0.8084any0.1028number0.0222string[]0.0180complex0.0163
+]Punctuation
+,Punctuation
+\n              Text.Whitespace
+presetsName.Otherstring[]0.9928any[]0.0028number[]0.0011string[][]0.0009complex0.0008
+:Operator
+ Text.Whitespace
+[Punctuation
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'@babel/preset-react'Literal.String.Single
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.7561any0.1934string0.0051complex0.0037Function0.0029
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9996any0.0003complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7201any0.2018{}0.0276void0.0122Object0.0106
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8341complex0.0685Config0.0226string0.0090string[]0.0032
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+extensionsName.Otherstring0.5740string[]0.2192RegExp0.1986any0.0021complex0.0016
+:Operator
+ Text.Whitespace
+'.jsx'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+'sucrase/register/jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.litcoffee'Literal.String.Single
+:Operator
+ Text.Whitespace
+'coffeescript/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+// The mdx loader hooks both `.md` and `.mdx` when it is importedComment.Single
+\n  Text.Whitespace
+// but we only install the hook if `.mdx` is the first fileComment.Single
+\n  Text.Whitespace
+'.mdx'Literal.String.Single
+:Operator
+ Text.Whitespace
+'@mdx-js/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.mjs'Literal.String.Single
+:Operator
+ Text.Whitespace
+mjsStubName.Otherstring0.6861any0.0771number0.0557string[]0.0396void0.0388
+,Punctuation
+\n  Text.Whitespace
+'.node'Literal.String.Single
+:Operator
+ Text.Whitespace
+nullKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'sucrase/dist/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9867any0.0041complex0.0040string0.0018Promise<void>0.0011
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8521string0.0555void0.0175number0.0062complex0.0016
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8510Config0.0239string0.0171complex0.0110number0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8294complex0.0490Config0.0308string0.0086Object0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8120complex0.0540Config0.0259string0.0090IConfig0.0039
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+matcherName.Otherstring0.4165any0.3683string[]0.0541boolean0.0454complex0.0200
+:Operator
+ Text.Whitespace
+endsInSucraseJsKeyword.Typestring0.5455any0.2366boolean0.1039string[]0.0498complex0.0199
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Otherany0.7571void0.0529string0.0144complex0.0088Config0.0053
+.Punctuation
+registerJSName.Otherany0.5471void0.3901string0.0346complex0.0093number0.0039
+(Punctuation
+configName.Otherany0.8470complex0.0486string0.0269Config0.0164number0.0067
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.jsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'sucrase/dist/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9810any0.0064complex0.0055string0.0030Promise<void>0.0012
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8367string0.0678void0.0155number0.0062complex0.0017
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8360Config0.0306string0.0197complex0.0102number0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8219complex0.0478Config0.0353string0.0091IConfig0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8021complex0.0520Config0.0298string0.0097IConfig0.0049
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+matcherName.Otherstring0.4374any0.3546string[]0.0504boolean0.0452complex0.0184
+:Operator
+ Text.Whitespace
+endsInSucraseJsxKeyword.Typestring0.5573any0.2311boolean0.1041string[]0.0463complex0.0185
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Otherany0.7688void0.0491string0.0146complex0.0082Config0.0053
+.Punctuation
+registerJSXName.Otherany0.5576void0.3818string0.0329complex0.0089number0.0038
+(Punctuation
+configName.Otherany0.8525complex0.0438string0.0265Config0.0167number0.0067
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.ts'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'sucrase/dist/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9808any0.0065complex0.0057string0.0029Promise<void>0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8335string0.0683void0.0154number0.0062complex0.0017
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8311Config0.0321string0.0199complex0.0100number0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8170complex0.0481Config0.0371string0.0091IConfig0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.7965complex0.0522Config0.0312string0.0099IConfig0.0051
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+matcherName.Otherstring0.4396any0.3514string[]0.0508boolean0.0458RegExp0.0180
+:Operator
+ Text.Whitespace
+endsInSucraseTsKeyword.Typestring0.5580any0.2285boolean0.1066string[]0.0465complex0.0181
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Otherany0.7708void0.0475string0.0147complex0.0080Config0.0052
+.Punctuation
+registerTSName.Otherany0.5547void0.3848string0.0325complex0.0089number0.0037
+(Punctuation
+configName.Otherany0.8534complex0.0429string0.0267Config0.0169number0.0065
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.tsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'sucrase/dist/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9812any0.0062complex0.0057string0.0028Promise<void>0.0013
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8319string0.0685void0.0155number0.0057complex0.0017
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8265Config0.0333string0.0198complex0.0099number0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8129complex0.0485Config0.0387string0.0092Object0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.7905complex0.0524Config0.0329string0.0101IConfig0.0053
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+matcherName.Otherstring0.4410any0.3428string[]0.0559boolean0.0471RegExp0.0175
+:Operator
+ Text.Whitespace
+endsInSucraseTsxKeyword.Typestring0.5594any0.2184boolean0.1105string[]0.0524complex0.0176
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Otherany0.7716void0.0437string0.0152complex0.0075Config0.0052
+.Punctuation
+registerTSXName.Otherany0.5458void0.3937string0.0322complex0.0090boolean0.0037
+(Punctuation
+configName.Otherany0.8428complex0.0446string0.0271Config0.0210number0.0058
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.swc.js'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9909complex0.0031any0.0025Promise<void>0.0012string0.0009
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8149string0.0446void0.0253number0.0030Config0.0022
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8559Config0.0448string0.0117complex0.0109string[]0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8506Config0.0462complex0.0380string0.0065Object0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8518complex0.0572Config0.0239string0.0062IConfig0.0024
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+onlyName.Othercomplex0.7786any[]0.1155string[]0.0354any0.0238any[][]0.0096
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInSwcJsName.Otherstring0.8068any0.1099string[]0.0252number0.0194complex0.0160
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+ignoreName.Othercomplex0.5658any[]0.1924string[]0.1694any0.0214any[][]0.0105
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7165any0.1255number0.0457complex0.0388string[]0.0263
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+jscName.Othercomplex0.9965any0.0013string0.0006{}0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+parserName.Othercomplex0.9991any0.0006any[]0.0001string0.0000{}0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+syntaxName.Otherstring0.9908RegExp0.0041any0.0026number0.0008string[]0.0007
+:Operator
+ Text.Whitespace
+'ecmascript'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.8132any0.1511string0.0046complex0.0036Function0.0024
+(Punctuation
+\n        Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7576any0.1840{}0.0218Object0.0088void0.0082
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8010complex0.0977Config0.0191string0.0078string[]0.0030
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+extensionsName.Otherstring[]0.4456string0.3740RegExp0.1711complex0.0021any0.0021
+:Operator
+ Text.Whitespace
+'.js'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.swc.jsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9933complex0.0023any0.0017Promise<void>0.0011string0.0006
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8009string0.0408void0.0310number0.0027Config0.0023
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8579Config0.0413complex0.0112string0.0102boolean0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8359Config0.0485complex0.0415string0.0066Object0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8390complex0.0595Config0.0266string0.0059IConfig0.0028
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+onlyName.Othercomplex0.7752any[]0.1139string[]0.0405any0.0230any[][]0.0085
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInSwcJsxName.Otherstring0.8407any0.0867string[]0.0215number0.0165complex0.0133
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+ignoreName.Othercomplex0.5115string[]0.2079any[]0.2035any0.0222number[]0.0100
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7458any0.1058number0.0355complex0.0324string[]0.0289
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+jscName.Othercomplex0.9969any0.0010string0.0005{}0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+parserName.Othercomplex0.9992any0.0005string0.0001any[]0.0000{}0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+syntaxName.Otherstring0.9900RegExp0.0051any0.0023boolean0.0010string[]0.0006
+:Operator
+ Text.Whitespace
+'ecmascript'Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+jsxName.Otherboolean0.9988true0.0003false0.0003string0.0002number0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.8163any0.1478string0.0045complex0.0038Function0.0022
+(Punctuation
+\n        Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7565any0.1819{}0.0255Object0.0088void0.0077
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7959complex0.1030Config0.0184string0.0074string[]0.0029
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+extensionsName.Otherstring[]0.4388string0.3850RegExp0.1664complex0.0023any0.0022
+:Operator
+ Text.Whitespace
+'.jsx'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.swc.ts'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9929complex0.0025any0.0018Promise<void>0.0011string0.0006
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8028string0.0405void0.0305number0.0027Config0.0021
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8619Config0.0374complex0.0116string0.0101IConfig0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8323Config0.0476complex0.0441string0.0065Object0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8390complex0.0618Config0.0249string0.0058IConfig0.0029
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+onlyName.Othercomplex0.7826any[]0.1128string[]0.0363any0.0210any[][]0.0089
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInSwcTsName.Otherstring0.8327any0.0910string[]0.0238complex0.0155number0.0149
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+ignoreName.Othercomplex0.5860any[]0.1894string[]0.1540any0.0194any[][]0.0097
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7352any0.1109complex0.0396number0.0382string[]0.0273
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+jscName.Othercomplex0.9966any0.0012string0.0006{}0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+parserName.Othercomplex0.9991any0.0006any[]0.0001string0.0000{}0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+syntaxName.Otherstring0.9913RegExp0.0039any0.0024number0.0007string[]0.0007
+:Operator
+ Text.Whitespace
+'typescript'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.8221any0.1409string0.0045complex0.0037Function0.0023
+(Punctuation
+\n        Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7672any0.1699{}0.0260Object0.0088void0.0083
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7856complex0.1062Config0.0199string0.0077string[]0.0031
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+extensionsName.Otherstring[]0.4405string0.3788RegExp0.1711complex0.0023any0.0021
+:Operator
+ Text.Whitespace
+'.ts'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.swc.tsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9931complex0.0024any0.0017Promise<void>0.0011string0.0006
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.7956string0.0411void0.0313number0.0028Config0.0022
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8565Config0.0404complex0.0117string0.0101boolean0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+configName.Otherany0.8298Config0.0483complex0.0443string0.0066Object0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8332complex0.0631Config0.0260string0.0059IConfig0.0031
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+onlyName.Othercomplex0.7799any[]0.1150string[]0.0359any0.0216any[][]0.0085
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInSwcTsxName.Otherstring0.8420any0.0844string[]0.0213number0.0156complex0.0143
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+ignoreName.Othercomplex0.5466any[]0.2014string[]0.1748any0.0208number[]0.0096
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7515any0.1006complex0.0343number0.0337string[]0.0277
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+jscName.Othercomplex0.9968any0.0011string0.0005{}0.0003void0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+parserName.Othercomplex0.9992any0.0005string0.0000any[]0.0000{}0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+syntaxName.Otherstring0.9888RegExp0.0054any0.0029boolean0.0012number0.0007
+:Operator
+ Text.Whitespace
+'typescript'Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+tsxName.Otherboolean0.9972string0.0016any0.0004number0.0003false0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+,Punctuation
+\n      Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+hookName.Othervoid0.8209any0.1432string0.0042complex0.0037Function0.0022
+(Punctuation
+\n        Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7591any0.1778{}0.0278void0.0083Object0.0077
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8013complex0.1053Config0.0159string0.0076string[]0.0029
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+extensionsName.Otherstring[]0.4429string0.3813RegExp0.1660complex0.0024any0.0022
+:Operator
+ Text.Whitespace
+'.tsx'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.toml'Literal.String.Single
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'toml-require'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+registerName.Othervoid0.9940any0.0019complex0.0015Promise<void>0.0009string0.0006
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8284string0.0438void0.0409number0.0034complex0.0018
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8737Config0.0257string0.0069complex0.0062IConfig0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+hookName.Otherany0.9160void0.0135string0.0039Config0.0025complex0.0022
+.Punctuation
+installName.Otherany0.7148void0.2559complex0.0147Promise<void>0.0032string0.0014
+(Punctuation
+configName.Otherany0.8381complex0.0624Config0.0215string0.0202IConfig0.0035
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.ts'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+'ts-node/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'sucrase/register/ts'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9850complex0.0055any0.0038string0.0020Promise<void>0.0016
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.7980string0.0603void0.0275number0.0056Config0.0019
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8148Config0.0525string0.0222complex0.0097boolean0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.7869Config0.0724complex0.0370string0.0176Configuration0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8173complex0.0510Config0.0327string0.0145IConfig0.0027
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+rootModeName.Otherstring0.9642RegExp0.0136any0.0121boolean0.0040number0.0034
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+overridesName.Othercomplex0.9990any0.0004any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n            Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+onlyName.Othercomplex0.8823any[]0.0626string[]0.0238any0.0111number[]0.0028
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInTsName.Otherstring0.8457any0.0756string[]0.0180number0.0164complex0.0159
+]Punctuation
+,Punctuation
+\n              Text.Whitespace
+presetsName.Otherstring[]0.9930any[]0.0025number[]0.0011string[][]0.0009complex0.0008
+:Operator
+ Text.Whitespace
+[Punctuation
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'@babel/preset-typescript'Literal.String.Single
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.7727any0.1790string0.0055complex0.0037Function0.0028
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7314any0.1819{}0.0298Object0.0135void0.0125
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7796complex0.0947Config0.0258string0.0103string[]0.0045
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.4183string0.3913RegExp0.1809any0.0020complex0.0019
+:Operator
+ Text.Whitespace
+'.ts'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9472complex0.0241any0.0126string0.0096string[]0.0016
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.8692string0.0974complex0.0208number0.0023void0.0012
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8437string0.0292Config0.0278complex0.0108string[]0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.8141Config0.0507complex0.0463string0.0115IConfig0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8471complex0.0585Config0.0233string0.0086IConfig0.0018
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+targetName.Otherstring0.9772any0.0189string[]0.0010number0.0006complex0.0006
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9544complex0.0279string0.0080any[]0.0011void0.0008
+.Punctuation
+versionName.Otherany0.8319string0.1580string[]0.0041complex0.0035void0.0006
+.Punctuation
+sliceName.Otherany0.7780string0.1847string[]0.0191complex0.0087any[]0.0031
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n          Text.Whitespace
+hookMatcherName.Otherstring0.6591boolean0.1245any0.1060number0.0315complex0.0311
+:Operator
+ Text.Whitespace
+endsInTsKeyword.Typestring0.7135boolean0.1112any0.0791number0.0353complex0.0191
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+modName.Othercomplex0.6704any0.3047Object0.0031any[]0.0019string0.0016
+.Punctuation
+registerName.Othervoid0.8888any0.0644complex0.0314string0.0024boolean0.0023
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7368any0.2132{}0.0195Object0.0077void0.0061
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8107complex0.1056Config0.0204string0.0094string[]0.0079
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.9977any[]0.0005RegExp0.0004RegExp[]0.0004string0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'.ts'Literal.String.Single
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9935complex0.0021any0.0019Promise<void>0.0009string0.0006
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8343string0.0424void0.0315number0.0029complex0.0018
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8804Config0.0313complex0.0114string0.0110boolean0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.8362Config0.0457complex0.0439string0.0067Object0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8556complex0.0576Config0.0217string0.0061IConfig0.0024
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+onlyName.Othercomplex0.7653any[]0.1305string[]0.0328any0.0213any[][]0.0097
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInTsName.Otherstring0.8173any0.1041string[]0.0231number0.0151complex0.0151
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+ignoreName.Othercomplex0.5955any[]0.2042string[]0.1278any0.0215any[][]0.0101
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7282any0.1228complex0.0366number0.0344string[]0.0275
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+jscName.Othercomplex0.9963any0.0013string0.0006{}0.0004any[]0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+parserName.Othercomplex0.9991any0.0006any[]0.0001{}0.0000string0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+syntaxName.Otherstring0.9911RegExp0.0040any0.0024number0.0008string[]0.0006
+:Operator
+ Text.Whitespace
+'typescript'Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.8431any0.1248string0.0041complex0.0033Function0.0022
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7359any0.1845{}0.0395Object0.0096void0.0092
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8107complex0.0867Config0.0223string0.0088string[]0.0032
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.4131string0.3926RegExp0.1853any0.0019complex0.0018
+:Operator
+ Text.Whitespace
+'.ts'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.cts'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+'ts-node/register'Literal.String.Single
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.tsx'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+'ts-node/register'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'sucrase/register/tsx'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@babel/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9838complex0.0060any0.0038string0.0023Promise<void>0.0017
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.7916string0.0584void0.0286number0.0054Config0.0017
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8050Config0.0488string0.0203complex0.0104boolean0.0033
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.7756Config0.0735complex0.0380string0.0164Configuration0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8066complex0.0522Config0.0336string0.0135IConfig0.0031
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+rootModeName.Otherstring0.9634RegExp0.0147any0.0118boolean0.0045number0.0030
+:Operator
+ Text.Whitespace
+'upward-optional'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+overridesName.Othercomplex0.9991any0.0003any[]0.0002string[]0.0001{}0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n            Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+onlyName.Othercomplex0.8523any[]0.0826string[]0.0255any0.0129number[]0.0047
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInTsxName.Otherstring0.8122any0.0842string[]0.0260complex0.0245number0.0137
+]Punctuation
+,Punctuation
+\n              Text.Whitespace
+presetsName.Otherstring[]0.8044complex0.1322any[]0.0371string[][]0.0069number[]0.0048
+:Operator
+ Text.Whitespace
+[Punctuation
+\n                Text.Whitespace
+'@babel/preset-env'Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+'@babel/preset-react'Literal.String.Single
+,Punctuation
+\n                Text.Whitespace
+[Punctuation
+\n                  Text.Whitespace
+'@babel/preset-typescript'Literal.String.Single
+,Punctuation
+\n                  Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+isTSXName.Otherboolean0.9962string0.0023any0.0004number0.0003string[]0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n                    Text.Whitespace
+allExtensionsName.Otherboolean0.9981string0.0009any0.0002number0.0002false0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n                  Text.Whitespace
+}Punctuation
+,Punctuation
+\n                Text.Whitespace
+]Punctuation
+,Punctuation
+\n              Text.Whitespace
+]Punctuation
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.7749any0.1762string0.0048complex0.0045Function0.0021
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9996any0.0003complex0.0001Object0.0000string0.0000
+.Punctuation
+assignName.Othercomplex0.7678any0.1565{}0.0294Object0.0114void0.0096
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7593complex0.1092Config0.0268string0.0099string[]0.0039
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.4009string0.3923RegExp0.1971complex0.0021any0.0018
+:Operator
+ Text.Whitespace
+'.tsx'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'esbuild-register/dist/node'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9224complex0.0366any0.0168string0.0150string[]0.0022
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+modName.Otherany0.8579string0.1039complex0.0233number0.0026Object0.0013
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8214Config0.0315string0.0305complex0.0118string[]0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.7882Config0.0580complex0.0504string0.0119IConfig0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8314complex0.0638Config0.0250string0.0089IConfig0.0022
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+targetName.Otherstring0.9791any0.0170string[]0.0009number0.0007complex0.0006
+:Operator
+ Text.Whitespace
+'node'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+processName.Otherany0.9480complex0.0321string0.0086any[]0.0012Process0.0009
+.Punctuation
+versionName.Otherany0.8236string0.1660complex0.0039string[]0.0038any[]0.0006
+.Punctuation
+sliceName.Otherany0.7626string0.1992string[]0.0178complex0.0099any[]0.0033
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+,Punctuation
+\n          Text.Whitespace
+hookMatcherName.Otherstring0.6494boolean0.1374any0.0988complex0.0339number0.0338
+:Operator
+ Text.Whitespace
+endsInTsxKeyword.Typestring0.7097boolean0.1179any0.0751number0.0368complex0.0208
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+modName.Othercomplex0.6983any0.2758Object0.0034any[]0.0020string0.0016
+.Punctuation
+registerName.Othervoid0.8674any0.0732complex0.0401string0.0030boolean0.0028
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0001complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7508any0.1962{}0.0219Object0.0080void0.0061
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7849complex0.1185Config0.0236string0.0104string[]0.0081
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.9974any[]0.0005RegExp[]0.0005RegExp0.0005string0.0004
+:Operator
+ Text.Whitespace
+[Punctuation
+'.tsx'Literal.String.Single
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+'@swc/register'Literal.String.Single
+,Punctuation
+\n      Text.Whitespace
+registerName.Othervoid0.9882complex0.0041any0.0031string0.0013Promise<void>0.0012
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+hookName.Otherany0.8171string0.0507void0.0174number0.0036complex0.0020
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.8563Config0.0352complex0.0130string0.0123boolean0.0033
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+configName.Otherany0.7903Config0.0587complex0.0508string0.0073Object0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+configName.Otherany0.8211complex0.0645Config0.0258string0.0068IConfig0.0031
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+onlyName.Othercomplex0.7756any[]0.1235string[]0.0278any0.0178any[][]0.0108
+:Operator
+ Text.Whitespace
+[Punctuation
+endsInTsxName.Otherstring0.8244any0.0928string[]0.0213number0.0177complex0.0150
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+ignoreName.Othercomplex0.5773any[]0.2120string[]0.1321any0.0210any[][]0.0103
+:Operator
+ Text.Whitespace
+[Punctuation
+isNodeModulesName.Otherstring0.7489any0.1012number0.0328complex0.0320string[]0.0268
+]Punctuation
+,Punctuation
+\n          Text.Whitespace
+jscName.Othercomplex0.9963any0.0011string0.0006{}0.0005boolean0.0002
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+parserName.Othercomplex0.9992any0.0005string0.0001{}0.0001any[]0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+syntaxName.Otherstring0.9888RegExp0.0054any0.0025boolean0.0014number0.0008
+:Operator
+ Text.Whitespace
+'typescript'Literal.String.Single
+,Punctuation
+\n              Text.Whitespace
+tsxName.Otherboolean0.9975string0.0014any0.0003number0.0003false0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n            Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n          Text.Whitespace
+moduleName.Other
+:Operator
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'commonjs'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+hookName.Othervoid0.7304any0.2108string0.0080complex0.0056Function0.0030
+(Punctuation
+\n          Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0002complex0.0000Object0.0000{}0.0000
+.Punctuation
+assignName.Othercomplex0.7248any0.1905{}0.0417void0.0097Object0.0089
+(Punctuation
+{Punctuation
+}Punctuation
+,Punctuation
+ Text.Whitespace
+configName.Otherany0.7874complex0.0878Config0.0272string0.0116string[]0.0037
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+extensionsName.Otherstring[]0.4469string0.3841RegExp0.1594complex0.0018any0.0015
+:Operator
+ Text.Whitespace
+'.tsx'Literal.String.Single
+,Punctuation
+\n          Text.Whitespace
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+'.yaml'Literal.String.Single
+:Operator
+ Text.Whitespace
+'yaml-hook/register'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.yml'Literal.String.Single
+:Operator
+ Text.Whitespace
+'yaml-hook/register'Literal.String.Single
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+jsVariantExtensionsName.Otherstring[]0.9892string0.0033any[]0.0022RegExp[]0.0012RegExp0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n  Text.Whitespace
+'.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.babel.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.babel.jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.babel.ts'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.babel.tsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.ts'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esbuild.tsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.cjs'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.coffee'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.coffee.md'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.esm.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.litcoffee'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.mdx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.mjs'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.ts'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.sucrase.tsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.swc.js'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.swc.jsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.swc.ts'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.swc.tsx'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.ts'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'.tsx'Literal.String.Single
+,Punctuation
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+extensionsName.Otherstring[]0.9583string0.0202RegExp0.0064complex0.0029any[]0.0012
+:Operator
+ Text.Whitespace
+extensionsKeyword.Typestring[]0.9318string0.0375RegExp0.0052any0.0029any[]0.0028
+,Punctuation
+\n  Text.Whitespace
+jsVariantsName.Otherstring0.6634string[]0.1385any0.0929boolean0.0699complex0.0130
+:Operator
+ Text.Whitespace
+jsVariantExtensions.reduceKeyword.Type
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.6378string0.1905complex0.0227Object0.0146string[]0.0140
+,Punctuation
+ Text.Whitespace
+extName.Otherstring0.7223any0.1170number0.0187complex0.0085boolean0.0042
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany0.5754complex0.3011{}0.0418Object0.0260string0.0096
+[Punctuation
+extName.Otherstring0.7149any0.2185number0.0328complex0.0046boolean0.0021
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+extensionsName.Otherstring[]0.4899complex0.2225any0.0769string0.0477{}0.0419
+[Punctuation
+extName.Otherstring0.7823any0.1463number0.0278complex0.0058never0.0030
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.4068complex0.1670{}0.1629string0.0879Object0.0286
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

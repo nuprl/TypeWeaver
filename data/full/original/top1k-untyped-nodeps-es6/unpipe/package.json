@@ -1,0 +1,35 @@
+{
+  "name": "unpipe",
+  "description": "Unpipe a stream from all destinations",
+  "version": "1.0.0",
+  "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+  "license": "MIT",
+  "repository": "stream-utils/unpipe",
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-standard": "11.0.0",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-promise": "3.8.0",
+    "eslint-plugin-standard": "3.1.0",
+    "istanbul": "0.4.5",
+    "mocha": "2.5.3",
+    "readable-stream": "2.3.6"
+  },
+  "files": [
+    "HISTORY.md",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.8",
+    "npm": "1.2.8000 || >= 1.4.16"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  }
+}

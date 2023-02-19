@@ -1,0 +1,2 @@
+import '..';
+import '../es6';

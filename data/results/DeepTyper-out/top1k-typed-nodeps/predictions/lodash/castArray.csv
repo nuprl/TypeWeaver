@@ -1,0 +1,69 @@
+Text
+/**\n * Casts `value` as an array if it's not one.\n *\n * @since 4.4.0\n * @category Lang\n * @param {*} value The value to inspect.\n * @returns {Array} Returns the cast array.\n * @example\n *\n * castArray(1)\n * // => [1]\n *\n * castArray({ 'a': 1 })\n * // => [{ 'a': 1 }]\n *\n * castArray('abc')\n * // => ['abc']\n *\n * castArray(null)\n * // => [null]\n *\n * castArray(undefined)\n * // => [undefined]\n *\n * castArray()\n * // => []\n *\n * const array = [1, 2, 3]\n * console.log(castArray(array) === array)\n * // => true\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+castArrayName.Otherany0.1116complex0.0475string0.0339any[]0.0331void0.0270
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8964any0.0203string[]0.0119IArguments0.0043T[]0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+argsName.Otherany[]0.7309any0.1383string[]0.0505IArguments0.0132any[][]0.0028
+.Punctuation
+lengthName.Othernumber0.7777any0.2136string0.0047boolean0.0006any[]0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.7759any[]0.1434string0.0279string[]0.0056{}0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany[]0.8479any0.0940string[]0.0281IArguments0.0024any[][]0.0020
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9996ObjectConstructor0.0000any0.0000Array0.0000Math0.0000
+.Punctuation
+isArrayName.Othercomplex0.9932any[]0.0025any0.0015Object0.0002{}0.0002
+(Punctuation
+valueName.Otherany0.6205any[]0.2400complex0.0637{}0.0090string0.0069
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+valueName.Otherany[]0.8335any0.0569string[]0.0154complex0.0113{}0.0078
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+valueName.Otherany0.5474any[]0.1985string0.0987{}0.0137number0.0129
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+castArrayName.Otherany0.3262any[]0.0420string0.0142number0.0130complex0.0119
+\nText.Whitespace

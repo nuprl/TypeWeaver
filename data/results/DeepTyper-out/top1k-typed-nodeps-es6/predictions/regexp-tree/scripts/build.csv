@@ -1,0 +1,272 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+colorsName.Otherany0.7746complex0.1800string[]0.0048string0.0034any[]0.0025
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'colors'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+shellName.Otherany0.6302void0.0712complex0.0238Promise<void>0.0142string0.0107
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'shelljs'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// Whether we're in the watch mode (continuous JS code transpiling).Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+watchModeName.Otherany0.7563string0.1562boolean0.0415void0.0221number0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processName.Otherany0.9983complex0.0008string0.0001void0.0001Process0.0001
+.Punctuation
+argvName.Otherany0.9910string[]0.0039string0.0017complex0.0013number[]0.0004
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+watchMsgName.Otherstring0.6810RegExp0.2486any0.0596boolean0.0036string[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+watchModeName.Otherany0.3701boolean0.3027string0.2802number0.0249void0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+watchMsgName.Otherany0.5460string0.2662boolean0.1102number0.0392void0.0180
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+` (watch mode)`Literal.String.Backtick
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+consoleName.OtherConsole0.9995any0.0003void0.0002string0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9961any0.0018complex0.0011boolean0.0002Promise<void>0.0002
+(Punctuation
+colorsName.Otherany0.9978complex0.0015string0.0003number0.0001any[]0.0000
+.Punctuation
+boldName.Otherany0.9952complex0.0030string0.0007void0.0006boolean0.0001
+(Punctuation
+`Literal.String.Backtick
+BuildingLiteral.String.Backtickany0.5754string0.1975RegExp0.1702string[]0.0170complex0.0106
+${Literal.String.Interpol
+watchMsgName.Otherstring0.5951any0.3250string[]0.0172RegExp0.0130boolean0.0124
+}Literal.String.Interpol
+...Literal.String.Backtick
+\nLiteral.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// ----------------------------------------------------------Comment.Single
+\nText.Whitespace
+// Rebuild parser.Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9967complex0.0013any0.0011Promise<void>0.0002boolean0.0002
+(Punctuation
+colorsName.Otherany0.9968complex0.0022string0.0004number0.0001any[]0.0000
+.Punctuation
+boldName.Otherany0.9974complex0.0013void0.0004string0.0004boolean0.0001
+(Punctuation
+'[1/3] Generating parser module...\n'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+shellName.Otherany0.6026RegExp0.0277void0.0189RegExpExecArray0.0178complex0.0112
+.Punctuation
+execName.Otherany0.8560void0.1213complex0.0089Promise<void>0.0030Promise<number>0.0019
+(Punctuation
+\n  Text.Whitespace
+`node node_modules/syntax-cli/bin/syntax -g src/parser/regexp.bnf -o src/parser/generated/regexp-tree.js -m lalr1 --loc`Literal.String.Backtick
+\nText.Whitespace
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// ----------------------------------------------------------Comment.Single
+\nText.Whitespace
+// Git hooks.Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9996any0.0002void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9947complex0.0023any0.0017Promise<void>0.0003boolean0.0002
+(Punctuation
+colorsName.Otherany0.9970complex0.0020string0.0004number0.0001any[]0.0000
+.Punctuation
+boldName.Otherany0.9955complex0.0022void0.0011string0.0006boolean0.0001
+(Punctuation
+'[2/3] Installing Git hooks...\n'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Setup pre-commit hook.Comment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9950complex0.0028any0.0010Promise<void>0.0003boolean0.0002
+(Punctuation
+'  - pre-commit: .git/hooks/pre-commit'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.6184RegExpExecArray0.0238void0.0164RegExp0.0113ToolRunner0.0073
+.Punctuation
+execName.Otherany0.8127void0.1468complex0.0207Promise<void>0.0036Promise<number>0.0021
+(Punctuation
+'unlink .git/hooks/pre-commit'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.3283Console0.0124ToolRunner0.0122RegExpExecArray0.0121this0.0118
+.Punctuation
+chmodName.Othervoid0.8256any0.1385complex0.0162Promise<void>0.0102string0.0034
+(Punctuation
+'+x'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'./scripts/git-pre-commit'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.3625void0.0150Shell0.0097RegExpExecArray0.0092ToolRunner0.0089
+.Punctuation
+lnName.Otherany0.6724complex0.1673void0.1508number0.0015Promise<void>0.0014
+(Punctuation
+'-s'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'../../scripts/git-pre-commit'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'.git/hooks/pre-commit'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Setup pre-push hook.Comment.Single
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9956complex0.0025any0.0007Promise<void>0.0002boolean0.0002
+(Punctuation
+'  - pre-push:   .git/hooks/pre-push\n'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.5398RegExpExecArray0.0281void0.0185ToolRunner0.0095complex0.0090
+.Punctuation
+execName.Otherany0.7802void0.1694complex0.0287Promise<void>0.0042Promise<number>0.0024
+(Punctuation
+'unlink .git/hooks/pre-push'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.3101Console0.0128this0.0122RegExpExecArray0.0121ToolRunner0.0118
+.Punctuation
+chmodName.Othervoid0.8477any0.1116complex0.0186Promise<void>0.0123string0.0032
+(Punctuation
+'+x'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'./scripts/git-pre-push'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+shellName.Otherany0.3494void0.0151RegExpExecArray0.0106Shell0.0088Console0.0083
+.Punctuation
+lnName.Otherany0.6381complex0.2051void0.1479number0.0015Promise<void>0.0014
+(Punctuation
+'-s'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'../../scripts/git-pre-push'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'.git/hooks/pre-push'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// ----------------------------------------------------------Comment.Single
+\nText.Whitespace
+// Transform code for older Node versions.Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9960complex0.0020any0.0009Promise<void>0.0003boolean0.0002
+(Punctuation
+colorsName.Otherany0.9957complex0.0033string0.0005number0.0001any[]0.0000
+.Punctuation
+boldName.Otherany0.9956complex0.0025void0.0009string0.0004Promise<string>0.0001
+(Punctuation
+'[3/3] Transpiling JS code...\n'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+shellName.Otherany0.7475RegExpExecArray0.0220void0.0115complex0.0074RegExp0.0062
+.Punctuation
+execName.Otherany0.8499void0.1114complex0.0226Promise<void>0.0042Promise<number>0.0021
+(Punctuation
+\n  Text.Whitespace
+`Literal.String.Backtick
+NODE_ENV=production "node_modules/.bin/babel" Literal.String.Backtick
+${Literal.String.Interpol
+processName.Otherany0.9983complex0.0011string0.0002void0.0001Process0.0000
+.Punctuation
+argvName.Otherany0.9693string[]0.0114string0.0099complex0.0030any[]0.0014
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+\n    Text.Whitespace
+''Literal.String.Single
+}Literal.String.Interpol
+ src/ --out-dir dist/ --ignore __tests__Literal.String.Backtick
+`Literal.String.Backtick
+\nText.Whitespace
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0001Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9963complex0.0016any0.0013boolean0.0002Promise<void>0.0002
+(Punctuation
+colorsName.Otherany0.9959complex0.0028string0.0004number0.0001any[]0.0000
+.Punctuation
+boldName.Otherany0.9958complex0.0022void0.0007string0.0006boolean0.0001
+(Punctuation
+'\nAll done.\n'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

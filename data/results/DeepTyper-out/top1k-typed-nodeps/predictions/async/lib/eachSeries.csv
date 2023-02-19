@@ -1,0 +1,65 @@
+importKeyword
+ Text.Whitespace
+eachLimitName.Otherany0.1139complex0.0428void0.0349boolean0.0338Promise<void>0.0187
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./eachLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.1579boolean0.0616complex0.0427string0.0415void0.0397
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`each`]{@link module:Collections.each} but runs only a single async operation at a time.\n *\n * Note, that unlike [`each`]{@link module:Collections.each}, this function applies iteratee to each item\n * in series and therefore the iteratee functions will complete in order.\n\n * @name eachSeries\n * @static\n * @memberOf module:Collections\n * @method\n * @see [async.each]{@link module:Collections.each}\n * @alias forEachSeries\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {AsyncFunction} iteratee - An async function to apply to each\n * item in `coll`.\n * The array index is not passed to the iteratee.\n * If you need the index, use `eachOfSeries`.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called when all\n * `iteratee` functions have finished, or an error occurs. Invoked with (err).\n * @returns {Promise} a promise, if a callback is omitted\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+eachSeriesName.Otherany0.2805boolean0.0612string0.0550any[]0.0445Promise<any>0.0433
+(Punctuation
+collName.Otherany0.4676any[]0.0650string0.0270object0.0108{}0.0103
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6326string0.0620number0.0416boolean0.0059object0.0058
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4774Function0.1269number0.0955string0.0171boolean0.0106
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+eachLimitName.Otherany0.4098void0.0893complex0.0505{}0.0223any[]0.0158
+(Punctuation
+collName.Otherany0.6278any[]0.0613{}0.0283object0.0110string0.0106
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7251string0.0216number0.0157any[]0.0127Object0.0055
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6564Function0.0966number0.0443void0.0302{}0.0114
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Othervoid0.4689any0.3711complex0.0347Promise<void>0.0108number0.0103
+(Punctuation
+eachSeriesName.Otherany0.3690number0.0809string0.0393object0.0375Promise<any>0.0360
+,Punctuation
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

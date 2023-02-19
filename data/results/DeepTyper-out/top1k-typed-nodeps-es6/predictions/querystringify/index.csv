@@ -1,0 +1,537 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hasName.Otherboolean0.7195string0.1121any0.0785{}0.0251Object0.0159
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000complex0.0000{}0.0000
+.Punctuation
+prototypeName.OtherObject0.8993{}0.0160complex0.0131any0.0045object0.0030
+.Punctuation
+hasOwnPropertyName.Othercomplex0.7877Object0.0795any0.0602string0.0323boolean0.0149
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+undefName.Otherany0.6372string0.3134Object0.0141Function0.0040{}0.0033
+;Punctuation
+\n\nText.Whitespace
+/**\n * Decode a URI encoded string.\n *\n * @param {String} input The URI encoded string.\n * @returns {String|Null} The decoded string.\n * @api private\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+decodeName.Otherstring0.9226any0.0561string[]0.0098complex0.0038number0.0009
+(Punctuation
+inputName.Otherstring0.8374any0.1315Date0.0058number0.0042Object0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+decodeURIComponentName.Builtinstring0.9907any0.0078number0.0005complex0.0004boolean0.0001
+(Punctuation
+inputName.Otherstring0.9453any0.0513number0.0010Date0.0005complex0.0003
+.Punctuation
+replaceName.Othercomplex0.9732any0.0225string0.0025void0.0004boolean0.0002
+(Punctuation
+/\+/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+' 'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9989string0.0008complex0.0001number0.0001Error0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Attempts to encode a given input.\n *\n * @param {String} input The string that needs to be encoded.\n * @returns {String|Null} The encoded string.\n * @api private\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+encodeName.Otherstring0.9199any0.0382complex0.0118Date0.0027string[]0.0023
+(Punctuation
+inputName.Otherstring0.9311any0.0510Date0.0033number0.0028Object0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+encodeURIComponentName.Builtinstring0.9937any0.0015complex0.0015string[]0.0011RegExp0.0003
+(Punctuation
+inputName.Otherstring0.9557any0.0373number0.0015Date0.0013string[]0.0005
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9992string0.0006number0.0001complex0.0001Error0.0000
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Simple query string parser.\n *\n * @param {String} query The query string that needs to be parsed.\n * @returns {Object}\n * @api public\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+querystringName.Otherany0.9533complex0.0051string0.0039Function0.0016void0.0013
+(Punctuation
+queryName.Otherstring0.5987any0.3767boolean0.0061number0.0054Date0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+parserName.OtherRegExp0.7160any0.0905string0.0601Date0.0105RegExpExecArray0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/([^=?#&]+)=?([^&]*)/gLiteral.String.Regex
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+resultName.Other{}0.6044any0.3225Object0.0151object0.0128complex0.0096
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+partName.Otherany0.7176string0.0680{}0.0111complex0.0067never0.0044
+;Punctuation
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+partName.Otherany0.6594string0.2101RegExpExecArray0.0371RegExp0.0139{}0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parserName.OtherRegExp0.8634any0.0455RegExpExecArray0.0276string0.0104Date0.0032
+.Punctuation
+execName.OtherRegExpExecArray0.9582any0.0131complex0.0019string0.0015boolean0.0012
+(Punctuation
+queryName.Otherstring0.5183any0.4664RegExpExecArray0.0034number0.0034boolean0.0018
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.6425any0.3410complex0.0084number0.0022{}0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+decodeName.Otherstring0.5467any0.4118string[]0.0156complex0.0074number0.0051
+(Punctuation
+partName.Otherany0.7139string0.0377any[]0.0325{}0.0188RegExpExecArray0.0176
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+\n      Text.Whitespace
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7583string0.1802{}0.0131complex0.0107string[]0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+decodeName.Otherstring0.4914any0.4503string[]0.0205complex0.0133number0.0050
+(Punctuation
+partName.Otherany0.6494string0.0481any[]0.0402string[]0.0228{}0.0199
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// Prevent overriding of existing properties. This ensures that build-inComment.Single
+\n    Text.Whitespace
+// methods like `toString` or __proto__ are not overriden by maliciousComment.Single
+\n    Text.Whitespace
+// querystrings.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// In the case if failed decoding, we want to omit the key/value pairsComment.Single
+\n    Text.Whitespace
+// from the result.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.5718any0.4073complex0.0096number0.0039{}0.0015
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valueName.Otherany0.8825string0.1004complex0.0057boolean0.0031number0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+keyName.Otherstring0.7743any0.2157complex0.0054boolean0.0014number0.0014
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+resultName.Otherany0.4117{}0.3448complex0.0703Object0.0540object0.0430
+)Punctuation
+ Text.Whitespace
+continueKeyword
+;Punctuation
+\n    Text.Whitespace
+resultName.Other{}0.6793any0.1544complex0.1064Object0.0130object0.0050
+[Punctuation
+keyName.Otherstring0.9288any0.0562complex0.0098number0.0027void0.0003
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.6411string0.3162complex0.0090{}0.0069boolean0.0053
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.4579{}0.3218complex0.0461Object0.0356string0.0183
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Transform a query string to an object.\n *\n * @param {Object} obj Object that should be transformed.\n * @param {String} prefix Optional prefix.\n * @returns {String}\n * @api public\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+querystringifyName.Otherstring0.5859any0.2569boolean0.0361string[]0.0138complex0.0138
+(Punctuation
+objName.Otherany0.8372string0.0401Object0.0393object0.0313{}0.0035
+,Punctuation
+ Text.Whitespace
+prefixName.Otherstring0.9213any0.0716number0.0014boolean0.0010string[]0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+prefixName.Otherstring0.8958any0.1007number0.0011boolean0.0007complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+prefixName.Otherstring0.8931any0.1034number0.0009boolean0.0005string[]0.0004
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+pairsName.Otherany[]0.5495string[]0.2426any0.0314number[]0.0123any[][]0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8907string0.0913number0.0037boolean0.0028any[]0.0022
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5028any0.4866complex0.0039number0.0037any[]0.0006
+;Punctuation
+\n\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// Optionally prefix with a '?' if neededComment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'string'Literal.String.Single
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+prefixName.Otherany0.5108string0.4652complex0.0097any[]0.0031string[]0.0019
+)Punctuation
+ Text.Whitespace
+prefixName.Otherstring0.8539any0.1397string[]0.0017number0.0009complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'?'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.8315any0.1624complex0.0033number0.0008string[]0.0006
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+objName.Otherany0.8556{}0.0420Object0.0394object0.0257complex0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hasName.Otherany0.5765boolean0.3105string0.0376{}0.0300any[]0.0113
+.Punctuation
+callName.Otherany0.9678string0.0191boolean0.0028complex0.0027void0.0013
+(Punctuation
+objName.Otherany0.8802object0.0278Object0.0233{}0.0171string0.0153
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.6615any0.3218complex0.0087any[]0.0017{}0.0012
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.9591string0.0203complex0.0050{}0.0031any[]0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objName.Otherany0.9199{}0.0194Object0.0129complex0.0078object0.0069
+[Punctuation
+keyName.Otherstring0.9359any0.0545complex0.0042number0.0026void0.0005
+]Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+// Edge cases where we actually want to encode the value to an emptyComment.Single
+\n      Text.Whitespace
+// string instead of the stringified value.Comment.Single
+\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.8251string0.1465boolean0.0111complex0.0056number0.0034
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.9382string0.0432complex0.0054number0.0036{}0.0024
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valueName.Otherany0.8643string0.1146number0.0064complex0.0055boolean0.0029
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefName.Otherany0.7236string0.2611number0.0093boolean0.0010{}0.0008
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isNaNName.Builtinboolean0.9932complex0.0018any0.0014string0.0013number0.0005
+(Punctuation
+valueName.Otherany0.6390string0.3097number0.0326boolean0.0071complex0.0048
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherstring0.7159any0.2644number0.0044boolean0.0039complex0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+keyName.Otherstring0.7408any0.2478complex0.0049number0.0017any[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+encodeName.Otherstring0.4755any0.3731complex0.0443string[]0.0314any[]0.0150
+(Punctuation
+keyName.Otherstring0.7992any0.1808complex0.0091number0.0049any[]0.0016
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+valueName.Otherany0.8583string0.1241complex0.0060number0.0022any[]0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+encodeName.Otherany0.4482string0.3001complex0.0698string[]0.0312any[]0.0251
+(Punctuation
+valueName.Otherany0.8188string0.1427complex0.0114any[]0.0092number0.0042
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+// If we failed to encode the strings, we should bail out as we don'tComment.Single
+\n      Text.Whitespace
+// want to add invalid strings to the query.Comment.Single
+\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.5619any0.4075complex0.0165number0.0063any[]0.0019
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valueName.Otherany0.8412string0.1271complex0.0080boolean0.0051number0.0047
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+continueKeyword
+;Punctuation
+\n      Text.Whitespace
+pairsName.Otherany[]0.5476string[]0.4034any0.0063number[]0.0043Function[]0.0018
+.Punctuation
+pushName.Othernumber0.9866any0.0081string0.0027boolean0.0011void0.0007
+(Punctuation
+keyName.Otherstring0.8302any0.1619number0.0048complex0.0020void0.0001
+ Text.Whitespace
++Operator
+'='Literal.String.Single
++Operator
+ Text.Whitespace
+valueName.Otherstring0.5839any0.3895number0.0152any[]0.0025complex0.0024
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pairsName.Otherany[]0.5099string[]0.3374any0.0165Function[]0.0043number[]0.0039
+.Punctuation
+lengthName.Othernumber0.8522any0.1235string0.0166boolean0.0035complex0.0022
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+prefixName.Otherstring0.8192any0.1656number0.0128complex0.0006boolean0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+pairsName.Otherany[]0.5065string[]0.4562any0.0126number[]0.0030complex0.0019
+.Punctuation
+joinName.Otherstring0.9573any0.0307complex0.0041number0.0030string[]0.0018
+(Punctuation
+'&'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+//Comment.Single
+\nText.Whitespace
+// Expose the module.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stringifyName.Otherstring0.7611any0.1298number0.0145complex0.0120any[]0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+querystringifyName.Otherany0.5208string0.1566any[]0.0492string[]0.0205complex0.0158
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parseName.Otherany0.2131any[]0.0402number0.0209string0.0193{}0.0168
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+querystringName.Otherany0.8801any[]0.0122string0.0036number0.0019complex0.0013
+;Punctuation
+\nText.Whitespace

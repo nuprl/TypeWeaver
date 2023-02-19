@@ -1,0 +1,18 @@
+name: 'Tests: node.js + core-js'
+
+on: [pull_request, push]
+
+jobs:
+  tests:
+    uses: ljharb/actions/.github/workflows/node.yml@main
+    with:
+      range: '0.10 - 0.12 || >= 1'
+      type: majors
+      command: npm run tests:corejs
+
+  node:
+    name: 'node + core-js'
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo tests completed'

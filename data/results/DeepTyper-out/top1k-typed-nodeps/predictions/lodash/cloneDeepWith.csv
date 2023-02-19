@@ -1,0 +1,87 @@
+importKeyword
+ Text.Whitespace
+baseCloneName.Otherany0.3134complex0.0965string0.0594boolean0.0483number0.0297
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseClone.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to compose bitmasks for cloning. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Othernumber0.7816any0.0842string0.0400boolean0.0338complex0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+CLONE_SYMBOLS_FLAGName.Othernumber0.6102any0.1682boolean0.0687string0.0538complex0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+4Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * This method is like `cloneWith` except that it recursively clones `value`.\n * The customizer is invoked with up to four arguments\n * (value [, index|key, object, stack]).\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to recursively clone.\n * @param {Function} [customizer] The function to customize cloning.\n * @returns {*} Returns the deep cloned value.\n * @see cloneWith\n * @example\n *\n * function customizer(value) {\n *   if (isElement(value)) {\n *     return value.cloneNode(true)\n *   }\n * }\n *\n * const el = cloneDeepWith(document.body, customizer)\n *\n * console.log(el === document.body)\n * // => false\n * console.log(el.nodeName)\n * // => 'BODY'\n * console.log(el.childNodes.length)\n * // => 20\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+cloneDeepWithName.Otherany0.3103string0.2451number0.1465boolean0.0834complex0.0392
+(Punctuation
+valueName.Otherstring0.5167any0.3558number0.0796boolean0.0149Date0.0033
+,Punctuation
+ Text.Whitespace
+customizerName.Otherany0.4266string0.2484number0.1579boolean0.1294complex0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+customizerName.Otherany0.6113string0.1514boolean0.1083number0.1046complex0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+customizerName.Otherany0.7797string0.1029number0.0379complex0.0353boolean0.0166
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+customizerName.Otherstring0.4099any0.3712number0.1279boolean0.0361complex0.0108
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Type
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseCloneName.Otherany0.2910complex0.2342string0.1301void0.1031number0.0935
+(Punctuation
+valueName.Otherstring0.3460number0.3311any0.2957boolean0.0061Date0.0025
+,Punctuation
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Otherany0.5549number0.3376string0.0517complex0.0215boolean0.0087
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+CLONE_SYMBOLS_FLAGName.Otherany0.6878number0.2355string0.0357boolean0.0176void0.0065
+,Punctuation
+ Text.Whitespace
+customizerName.Othernumber0.5209any0.2288boolean0.0918string0.0709void0.0289
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+cloneDeepWithName.Otherany0.4472string0.0418complex0.0292number0.0262boolean0.0170
+\nText.Whitespace

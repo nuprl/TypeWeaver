@@ -1,0 +1,9 @@
+index.ts(2,11): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(3,2): error TS2322: Type '() => void' is not assignable to type 'any[]'.
+index.ts(4,4): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<HTMLElement>'?
+index.ts(9,9): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(13,8): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(14,2): error TS2740: Type 'Function' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+

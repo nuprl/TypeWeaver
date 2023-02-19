@@ -1,0 +1,12 @@
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'propertyToValueAliases'.
+index.ts(6,22): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(6,51): error TS2339: Property 'get' does not exist on type 'any[]'.
+scripts/build.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'propertyToValueAliases'.
+scripts/build.ts(6,31): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+scripts/build.ts(6,45): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]>): Map<unknown, unknown>', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 2 of 4, '(entries?: readonly (readonly [unknown, unknown])[]): Map<unknown, unknown>', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'readonly (readonly [unknown, unknown])[]'.
+scripts/build.ts(10,10): error TS2339: Property 'set' does not exist on type 'string'.
+

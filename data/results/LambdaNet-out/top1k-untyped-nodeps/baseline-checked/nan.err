@@ -1,0 +1,20 @@
+examples/async_pi_estimate/addon.ts(10,5): error TS2322: Type 'string | 100000000' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+examples/async_pi_estimate/addon.ts(20,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+examples/async_pi_estimate/addon.ts(24,30): error TS2339: Property 'calculateSync' does not exist on type 'string'.
+examples/async_pi_estimate/addon.ts(25,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+examples/async_pi_estimate/addon.ts(30,7): error TS2322: Type 'string | 16' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+examples/async_pi_estimate/addon.ts(47,11): error TS2339: Property 'calculateAsync' does not exist on type 'string'.
+tools/1to2.ts(17,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'length' must be of type 'number', but here has type 'string'.
+tools/1to2.ts(20,4): error TS2339: Property 'readFile' does not exist on type 'string'.
+tools/1to2.ts(26,8): error TS2339: Property 'version' does not exist on type 'any[]'.
+tools/1to2.ts(26,27): error TS2345: Argument of type 'object' is not assignable to parameter of type 'string'.
+tools/1to2.ts(31,15): error TS2339: Property 'outputHelp' does not exist on type 'any[]'.
+tools/1to2.ts(187,1): error TS2304: Cannot find name 'master'.
+tools/1to2.ts(187,45): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+tools/1to2.ts(390,6): error TS2339: Property 'readFile' does not exist on type 'string'.
+tools/1to2.ts(396,8): error TS2339: Property 'writeFile' does not exist on type 'string'.
+tools/1to2.ts(396,37): error TS2304: Cannot find name 'master'.
+tools/1to2.ts(396,62): error TS2304: Cannot find name 'master'.
+

@@ -1,0 +1,728 @@
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+globName.Otherstring0.7368any0.1692string[]0.0435number0.0116complex0.0050
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.7480complex0.0223Options0.0219boolean0.0114string0.0106
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+globName.Otherstring0.5580any0.2791string[]0.0598complex0.0434boolean0.0182
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4040complex0.3193boolean0.0927Error0.0357string0.0328
+ Text.Whitespace
+newOperator.Wordany0.3374complex0.1188boolean0.1059string0.1007string[]0.0343
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9937ErrorConstructor0.0010BooleanConstructor0.0001MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+'Expected a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+strName.Otherstring0.8820any0.0814string[]0.0116complex0.0096String0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9990String0.0007string0.0000NumberConstructor0.0000complex0.0000
+(Punctuation
+globName.Otherstring0.8563any0.0840number0.0179string[]0.0160complex0.0061
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// The regexp we are building, as a string.Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+reStrName.Otherstring0.9150RegExp0.0609any0.0127boolean0.0057number0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\n  Text.Whitespace
+// Whether we are matching so called "extended" globs (like bash) and shouldComment.Single
+\n  Text.Whitespace
+// support single character matching, matching ranges of characters, groupComment.Single
+\n  Text.Whitespace
+// matching, etc.Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+extendedName.Otherboolean0.7161any0.2195number0.0287string0.0215complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.6411boolean0.2259complex0.0237number0.0140string0.0068
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+!Operator
+!Operator
+opts.extendedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+;Punctuation
+\n\n  Text.Whitespace
+// When globstar is _false_ (default), '/foo/*' is translated a regexp likeComment.Single
+\n  Text.Whitespace
+// '^\/foo\/.*$' which will match any string beginning with '/foo/'Comment.Single
+\n  Text.Whitespace
+// When globstar is _true_, '/foo/*' is translated to regexp likeComment.Single
+\n  Text.Whitespace
+// '^\/foo\/[^/]*$' which will match any string beginning with '/foo/' BUTComment.Single
+\n  Text.Whitespace
+// which does not have a '/' to the right of it.Comment.Single
+\n  Text.Whitespace
+// E.g. with '/foo/*' these will match: '/foo/bar', '/foo/bar.txt' butComment.Single
+\n  Text.Whitespace
+// these will not '/foo/bar/baz', '/foo/bar/baz.txt'Comment.Single
+\n  Text.Whitespace
+// Lastely, when globstar is _true_, '/foo/**' is equivelant to '/foo/*' whenComment.Single
+\n  Text.Whitespace
+// globstar is _false_Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+globstarName.Otherboolean0.9853any0.0102string0.0013complex0.0011false0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.5515boolean0.2809complex0.1055Object0.0061Options0.0052
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+!Operator
+!Operator
+opts.globstarName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+;Punctuation
+\n\n  Text.Whitespace
+// If we are doing extended matching, this boolean is true when we are insideComment.Single
+\n  Text.Whitespace
+// a group (eg {*.html,*.js}), and false otherwise.Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+inGroupName.Otherboolean0.9954any0.0015number0.0011string0.0007false0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n  Text.Whitespace
+// RegExp flags (eg "i" ) to pass in to RegExp constructor.Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+flagsName.Otherstring0.3618any0.2790number0.2397string[]0.0618complex0.0197
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.6843complex0.1169boolean0.0470number0.0184Options0.0108
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+(Punctuation
+ Text.Whitespace
+optsName.Otherany0.7151complex0.0781Options0.0231number0.0079boolean0.0075
+.Punctuation
+flagsName.Otherany0.6400string0.1728number0.0898complex0.0472string[]0.0253
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"string"Literal.String.Double
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+optsName.Otherany0.7434complex0.0839Options0.0129number0.0092boolean0.0054
+.Punctuation
+flagsName.Otherstring0.5129any0.4634number0.0075string[]0.0062RegExp0.0030
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cName.Otherany0.5414string0.2087number0.1665void0.0335boolean0.0114
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9958any0.0035string0.0004complex0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+lenName.Othernumber0.9185any0.0779string0.0019boolean0.0004complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+strName.Otherstring0.3658any0.3051string[]0.1948any[]0.0666complex0.0259
+.Punctuation
+lengthName.Othernumber0.9519any0.0455string0.0016complex0.0004void0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9692any0.0292string0.0007void0.0003boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lenName.Othernumber0.8729any0.1246string0.0010complex0.0005boolean0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9767any0.0222string0.0006boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+cName.Otherstring0.5112any0.4004number0.0751complex0.0031boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+strName.Otherstring[]0.3491any0.2777string0.1164any[]0.1143number[]0.0653
+[Punctuation
+iName.Othernumber0.9847any0.0128string0.0019void0.0002boolean0.0002
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+cName.Otherstring0.6912any0.2373number0.0457boolean0.0093void0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"/"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"$"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"^"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"+"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"."Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"("Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+")"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"="Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"!"Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"|"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+reStrName.Otherstring0.9338any0.0438number0.0163void0.0024boolean0.0022
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"\\"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cName.Otherany0.5674string0.2848number0.1364boolean0.0042void0.0026
+;Punctuation
+\n      Text.Whitespace
+breakKeyword
+;Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"?"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extendedName.Otherboolean0.5459any0.3308string0.0544number0.0347complex0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+reStrName.Otherstring0.9298any0.0517number0.0093boolean0.0048void0.0018
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"."Literal.String.Double
+;Punctuation
+\n\t    Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"["Literal.String.Double
+:Operator
+\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"]"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extendedName.Otherboolean0.6664any0.2228number0.0408string0.0360complex0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+reStrName.Otherstring0.5324number0.3808any0.0501boolean0.0240void0.0069
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+cName.Otherany0.3889string0.3789number0.2046boolean0.0139void0.0055
+;Punctuation
+\n\t    Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"{"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extendedName.Otherboolean0.6487any0.2399string0.0506number0.0306complex0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+inGroupName.Otherboolean0.9911any0.0034number0.0024string0.0015false0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\t    Text.Whitespace
+reStrName.Otherstring0.9214any0.0554number0.0103boolean0.0061void0.0036
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"("Literal.String.Double
+;Punctuation
+\n\t    Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"}"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extendedName.Otherboolean0.6118any0.2725string0.0521number0.0350complex0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+inGroupName.Otherboolean0.9896any0.0039number0.0029string0.0020false0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t    Text.Whitespace
+reStrName.Otherstring0.9448any0.0394number0.0076boolean0.0040void0.0024
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+")"Literal.String.Double
+;Punctuation
+\n\t    Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+","Literal.String.Double
+:Operator
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+inGroupName.Otherboolean0.8250string0.0756any0.0554number0.0364false0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+reStrName.Otherstring0.9527any0.0363number0.0057boolean0.0022void0.0015
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"|"Literal.String.Double
+;Punctuation
+\n\t    Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+reStrName.Otherstring0.9708any0.0165number0.0086boolean0.0018void0.0013
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"\\"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cName.Otherany0.5310string0.3336number0.1214void0.0046boolean0.0044
+;Punctuation
+\n      Text.Whitespace
+breakKeyword
+;Punctuation
+\n\n    Text.Whitespace
+caseKeyword
+ Text.Whitespace
+"*"Literal.String.Double
+:Operator
+\n      Text.Whitespace
+// Move over all consecutive "*"'s.Comment.Single
+\n      Text.Whitespace
+// Also store the previous and next charactersComment.Single
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+prevCharName.Otherstring0.5790number0.1891any0.1817boolean0.0202complex0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+strName.Otherstring[]0.3224number[]0.2421any[]0.1395any0.1341complex0.0849
+[Punctuation
+iName.Othernumber0.9427any0.0534string0.0030complex0.0004void0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+starCountName.Othernumber0.9802any0.0125boolean0.0033string0.0032void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n      Text.Whitespace
+whileKeyword
+(Punctuation
+strName.Otherany0.4231any[]0.1439string[]0.1425string0.0978number[]0.0976
+[Punctuation
+iName.Othernumber0.9585any0.0388string0.0018complex0.0003boolean0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"*"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+starCountName.Othernumber0.9840any0.0125string0.0019boolean0.0010void0.0003
+++Operator
+;Punctuation
+\n        Text.Whitespace
+iName.Othernumber0.9884any0.0106string0.0005boolean0.0002void0.0001
+++Operator
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+nextCharName.Otherany0.7867number0.1430string0.0530complex0.0106boolean0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+strName.Otherstring[]0.3003any0.2546number[]0.1800any[]0.1318complex0.0619
+[Punctuation
+iName.Othernumber0.9207any0.0759string0.0024complex0.0004void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+globstarName.Otherboolean0.9466any0.0417string0.0039complex0.0025void0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// globstar is disabled, so treat any number of "*" as oneComment.Single
+\n        Text.Whitespace
+reStrName.Otherstring0.8748any0.0938number0.0193boolean0.0051complex0.0041
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+".*"Literal.String.Double
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// globstar is enabled, so determine if this is a globstar segmentComment.Single
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isGlobstarName.Otherboolean0.6631number0.1851string0.0891any0.0555void0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+starCountName.Othernumber0.8014any0.1022string0.0731boolean0.0206complex0.0009
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+                      Text.Whitespace
+// multiple "*"'sComment.Single
+\n          Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+prevCharName.Otherstring0.7586any0.1901boolean0.0239number0.0203complex0.0019
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+prevCharName.Otherstring0.4791any0.1974boolean0.1898number0.1217void0.0038
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+   Text.Whitespace
+// from the start of the segmentComment.Single
+\n          Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+nextCharName.Otherany0.8228string0.0864number0.0583complex0.0173boolean0.0082
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nextCharName.Otherany0.6188number0.3300string0.0339boolean0.0074complex0.0052
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+   Text.Whitespace
+// to the end of the segmentComment.Single
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isGlobstarName.Otherboolean0.7658string0.0931any0.0679number0.0665complex0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+// it's a globstar, so match zero or more path segmentsComment.Single
+\n          Text.Whitespace
+reStrName.Otherstring0.9266any0.0525number0.0158boolean0.0029complex0.0006
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"((?:[^/]*(?:\/|$))*)"Literal.String.Double
+;Punctuation
+\n          Text.Whitespace
+iName.Othernumber0.9820any0.0162string0.0014boolean0.0001void0.0001
+++Operator
+;Punctuation
+ Text.Whitespace
+// move over the "/"Comment.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+// it's not a globstar, so only match one path segmentComment.Single
+\n          Text.Whitespace
+reStrName.Otherstring0.9508any0.0370number0.0087boolean0.0015void0.0008
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+"([^/]*)"Literal.String.Double
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+breakKeyword
+;Punctuation
+\n\n    Text.Whitespace
+defaultName.Other
+:Operator
+\n      Text.Whitespace
+reStrKeyword.Typestring0.8277number0.1067any0.0588boolean0.0029void0.0014
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+cName.Otherstring0.6854any0.2468number0.0581boolean0.0028void0.0023
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// When regexp 'g' flag is specified don'tComment.Single
+\n  Text.Whitespace
+// constrain the regular expression with ^ & $Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+flagsName.Otherstring0.5466any0.2054number0.1012string[]0.0881complex0.0200
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+~Operator
+flagsName.Otherstring0.6141any0.3033string[]0.0519number0.0116RegExp0.0080
+.Punctuation
+indexOfName.Othernumber0.7813any0.2122string0.0033complex0.0018boolean0.0005
+(Punctuation
+'g'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+reStrName.Otherstring0.9517any0.0394number0.0045boolean0.0014RegExp0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"^"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+reStrName.Otherstring0.4887number0.3413any0.1573boolean0.0085complex0.0015
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"$"Literal.String.Double
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordstring0.2539any0.1309RegExp0.1268Date0.0316RegExpConstructor0.0273
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9997RegExp0.0000ErrorConstructor0.0000BooleanConstructor0.0000RegExp[]0.0000
+(Punctuation
+reStrName.Otherstring0.9359number0.0304any0.0158boolean0.0093RegExp0.0046
+,Punctuation
+ Text.Whitespace
+flagsName.Otherstring0.8910any0.0343number0.0301string[]0.0246RegExp0.0084
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,183 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+picoName.Otherany0.9660string0.0091void0.0079boolean0.0018Function0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'..'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * See: https://github.com/gulpjs/glob-parent/issues/39#issuecomment-794075641\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+filesName.Otherstring[]0.9899any[]0.0057string[][]0.0009any0.0007number[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n  Text.Whitespace
+'data/100-123a_files/0/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123a_files/1/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123a_files/2/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123a_files/3/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123b_files/0/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123b_files/1/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123b_files/2/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123b_files/3/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123a_files/4/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123ax_files/0/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123A_files/0/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123A_files/1/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123A_files/2/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123A_files/3/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123B_files/0/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123B_files/1/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123B_files/2/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123B_files/3/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123A_files/4/'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'data/100-123AX_files/0/'Literal.String.Single
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+// ? is a wildcard for matching one characterComment.Single
+\nText.Whitespace
+// by escaping \\{0,3}, and then using `{ unescape: true }, we tellComment.Single
+\nText.Whitespace
+// picomatch to treat those characters as a regex quantifier, versusComment.Single
+\nText.Whitespace
+// a brace pattern.Comment.Single
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isMatchName.Otherboolean0.9348any0.0349number0.0061string0.0061void0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picoName.Otherany0.6007boolean0.1699string0.0803complex0.0589number0.0104
+(Punctuation
+'data/100-123?\\{0,3}_files/{0..3}/'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+unescapeName.Otherboolean0.9963any0.0014string0.0009true0.0004number0.0003
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0000Function0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9988any0.0004complex0.0003boolean0.0001Promise<void>0.0001
+(Punctuation
+filesName.Otherstring[]0.6374any0.2375any[]0.0653complex0.0065string[][]0.0052
+.Punctuation
+filterName.Otherany0.6542complex0.3338v...0.0016any[]0.0014void0.0011
+(Punctuation
+nameName.Otherany0.7383string0.2485boolean0.0044complex0.0041number0.0013
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+isMatchName.Otherboolean0.9332any0.0396void0.0141complex0.0048number0.0021
+(Punctuation
+nameName.Otherany0.5458string0.4440complex0.0033boolean0.0018string[]0.0015
+)Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Alternatively, we can use a regex character class to be more specificComment.Single
+\nText.Whitespace
+// In the following example, we'll only match uppercase alpha charactersComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isMatch2Name.Otherany0.9026string0.0267boolean0.0157number0.0089void0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+picoName.Otherany0.8299complex0.0477string0.0387boolean0.0175void0.0116
+(Punctuation
+'data/100-123[A-Z]*_files/{0..3}/'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+unescapeName.Otherboolean0.9967any0.0013string0.0007true0.0004number0.0003
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0000Function0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9987any0.0004complex0.0003boolean0.0001Promise<void>0.0001
+(Punctuation
+filesName.Otherstring[]0.5011any0.2856any[]0.0930string[][]0.0079complex0.0077
+.Punctuation
+filterName.Otherany0.5985complex0.3823v...0.0026any[]0.0016valu...0.0016
+(Punctuation
+nameName.Otherany0.6541string0.3329complex0.0052boolean0.0028number0.0012
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+isMatch2Name.Otherany0.5072boolean0.2259string0.1735complex0.0315void0.0223
+(Punctuation
+nameName.Otherany0.6638string0.3236complex0.0041boolean0.0022any[]0.0010
+)Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,26 @@
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+"*"Literal.String.Double
+:Operator
+ Text.Whitespace
+[Punctuation
+"prettier --write --ignore-unknown"Literal.String.Double
+]Punctuation
+,Punctuation
+\n  Text.Whitespace
+"*.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+[Punctuation
+"eslint --cache --fix"Literal.String.Double
+]Punctuation
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

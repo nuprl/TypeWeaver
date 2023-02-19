@@ -1,0 +1,8 @@
+index.ts(3,2): error TS2322: Type '(_: Function, stack: string) => string' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+  Types of parameters '_' and 'err' are incompatible.
+    Type 'Error' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+index.ts(4,8): error TS2322: Type 'string' is not assignable to type 'any[]'.
+index.ts(5,2): error TS2322: Type 'object' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+  Type '{}' provides no match for the signature '(err: Error, stackTraces: CallSite[]): any'.
+index.ts(6,2): error TS2322: Type 'any[]' is not assignable to type 'string'.
+

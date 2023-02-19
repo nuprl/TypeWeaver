@@ -1,0 +1,66 @@
+cache.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'string'.
+cache.ts(6,30): error TS2339: Property 'basename' does not exist on type 'string'.
+cache.ts(7,28): error TS2339: Property 'dirname' does not exist on type 'string'.
+cache.ts(14,40): error TS2339: Property 'load' does not exist on type 'any[]'.
+cache.ts(18,42): error TS2339: Property 'keys' does not exist on type 'HTMLElement'.
+cache.ts(22,14): error TS2339: Property 'statSync' does not exist on type 'string'.
+cache.ts(25,19): error TS2339: Property 'removeKey' does not exist on type 'HTMLElement'.
+cache.ts(47,23): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+cache.ts(71,9): error TS2322: Type 'number | undefined[]' is not assignable to type 'number'.
+  Type 'undefined[]' is not assignable to type 'number'.
+cache.ts(79,12): error TS2339: Property 'normalizeEntries' does not exist on type 'any[]'.
+cache.ts(80,21): error TS2339: Property 'changed' does not exist on type 'object'.
+cache.ts(81,17): error TS2339: Property 'changedFiles' does not exist on type 'object'.
+cache.ts(81,41): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(84,21): error TS2339: Property 'notFound' does not exist on type 'object'.
+cache.ts(85,17): error TS2339: Property 'notFoundFiles' does not exist on type 'object'.
+cache.ts(85,42): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(88,15): error TS2339: Property 'notChangedFiles' does not exist on type 'object'.
+cache.ts(88,42): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(97,22): error TS2339: Property 'statSync' does not exist on type 'string'.
+cache.ts(111,34): error TS2339: Property 'getKey' does not exist on type 'HTMLElement'.
+cache.ts(114,35): error TS2339: Property 'size' does not exist on type 'object'.
+cache.ts(115,35): error TS2339: Property 'mtime' does not exist on type 'object'.
+cache.ts(123,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+cache.ts(123,44): error TS2339: Property 'mtime' does not exist on type 'object'.
+cache.ts(124,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+cache.ts(124,44): error TS2339: Property 'size' does not exist on type 'object'.
+cache.ts(127,13): error TS2322: Type '{ key: string; changed: number | true; meta: object; }' is not assignable to type 'number'.
+cache.ts(137,34): error TS2339: Property 'getKey' does not exist on type 'HTMLElement'.
+cache.ts(142,30): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+cache.ts(144,11): error TS2322: Type 'string' is not assignable to type 'number'.
+cache.ts(153,39): error TS2339: Property 'hash' does not exist on type 'object'.
+cache.ts(156,13): error TS2322: Type '{ key: string; changed: boolean; meta: object; }' is not assignable to type 'number'.
+cache.ts(175,9): error TS2322: Type 'number | undefined[]' is not assignable to type 'number'.
+  Type 'undefined[]' is not assignable to type 'number'.
+cache.ts(178,12): error TS2339: Property 'normalizeEntries' does not exist on type 'any[]'.
+cache.ts(180,26): error TS2339: Property 'changed' does not exist on type 'object'.
+cache.ts(183,26): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(198,21): error TS2339: Property 'getFileDescriptor' does not exist on type 'HTMLElement'.
+cache.ts(214,15): error TS2339: Property 'removeKey' does not exist on type 'HTMLElement'.
+cache.ts(222,15): error TS2339: Property 'removeCacheFile' does not exist on type 'HTMLElement'.
+cache.ts(230,15): error TS2339: Property 'destroy' does not exist on type 'HTMLElement'.
+cache.ts(234,40): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+cache.ts(234,64): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(236,53): error TS2339: Property 'meta' does not exist on type 'object'.
+cache.ts(237,21): error TS2339: Property 'size' does not exist on type 'object'.
+cache.ts(238,21): error TS2339: Property 'mtime' does not exist on type 'object'.
+cache.ts(243,31): error TS2339: Property 'statSync' does not exist on type 'string'.
+cache.ts(243,51): error TS2339: Property 'key' does not exist on type 'object'.
+cache.ts(244,53): error TS2339: Property 'meta' does not exist on type 'object'.
+cache.ts(245,22): error TS2339: Property 'size' does not exist on type 'object'.
+cache.ts(246,23): error TS2339: Property 'mtime' does not exist on type 'object'.
+cache.ts(248,21): error TS2339: Property 'hash' does not exist on type 'object'.
+cache.ts(259,9): error TS2322: Type 'number | true' is not assignable to type 'number'.
+  Type 'boolean' is not assignable to type 'number'.
+cache.ts(275,20): error TS2339: Property '_getMetaForFileUsingCheckSum' does not exist on type 'HTMLElement'.
+cache.ts(276,20): error TS2339: Property '_getMetaForFileUsingMtimeAndSize' does not exist on type 'HTMLElement'.
+cache.ts(277,19): error TS2339: Property 'setKey' does not exist on type 'HTMLElement'.
+cache.ts(287,15): error TS2339: Property 'save' does not exist on type 'HTMLElement'.
+perf.ts(6,35): error TS2339: Property 'resolve' does not exist on type 'string'.
+perf.ts(12,38): error TS2339: Property 'createFromFile' does not exist on type 'string'.
+perf.ts(13,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+perf.ts(17,11): error TS2339: Property 'hasFileChanged' does not exist on type 'object'.
+perf.ts(21,9): error TS2339: Property 'deleteCacheFile' does not exist on type 'object'.
+perf.ts(22,6): error TS2339: Property 'unlinkSync' does not exist on type 'string'.
+

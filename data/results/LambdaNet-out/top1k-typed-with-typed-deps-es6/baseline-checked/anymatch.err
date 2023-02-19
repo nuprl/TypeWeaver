@@ -1,0 +1,17 @@
+examples.ts(49,42): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(predicate: (value: string, index: number, array: string[]) => value is string, thisArg?: any): string[]', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(value: string, index: number, array: string[]) => value is string'.
+      Type 'Function' provides no match for the signature '(value: string, index: number, array: string[]): value is string'.
+  Overload 2 of 2, '(predicate: (value: string, index: number, array: string[]) => unknown, thisArg?: any): string[]', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(value: string, index: number, array: string[]) => unknown'.
+      Type 'Function' provides no match for the signature '(value: string, index: number, array: string[]): unknown'.
+index.ts(30,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+index.ts(31,40): error TS2339: Property 'test' does not exist on type 'never'.
+index.ts(76,67): error TS2322: Type 'object' is not assignable to type 'boolean'.
+index.ts(81,37): error TS2339: Property 'returnIndex' does not exist on type 'object'.
+index.ts(88,10): error TS2345: Argument of type '(item: string) => picomatch.Matcher' is not assignable to parameter of type '(value: any[], index: number, array: any[][]) => Matcher'.
+  Types of parameters 'item' and 'value' are incompatible.
+    Type 'any[]' is not assignable to type 'string'.
+index.ts(94,33): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(103,10): error TS2339: Property 'default' does not exist on type 'Function'.
+

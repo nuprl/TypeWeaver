@@ -1,0 +1,98 @@
+importKeyword
+ Text.Whitespace
+sliceName.Otherstring[]0.3151string0.0513T[]0.0418any0.0279any[]0.0234
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./slice.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+toIntegerName.Otherstring[]0.1587string0.1440any0.1311complex0.0748boolean0.0680
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toInteger.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a slice of `array` with `n` elements dropped from the beginning.\n *\n * @since 0.5.0\n * @category Array\n * @param {Array} array The array to query.\n * @param {number} [n=1] The number of elements to drop.\n * @returns {Array} Returns the slice of `array`.\n * @example\n *\n * drop([1, 2, 3])\n * // => [2, 3]\n *\n * drop([1, 2, 3], 2)\n * // => [3]\n *\n * drop([1, 2, 3], 5)\n * // => []\n *\n * drop([1, 2, 3], 0)\n * // => [1, 2, 3]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+dropName.Otherany0.1377number0.0709complex0.0218Promise<any>0.0215any[]0.0213
+(Punctuation
+arrayName.Otherany0.2084any[]0.2049number[]0.0856number0.0416string[]0.0337
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9046any0.0818string0.0047boolean0.0010complex0.0007
+=Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.7044any0.2753string0.0104any[]0.0013complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.5320number0.1784any[]0.1071number[]0.0835complex0.0159
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+lengthName.Othernumber0.6539any0.2990string0.0312boolean0.0023any[]0.0019
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+sliceName.Otherany0.4879string0.1684any[]0.0964number0.0507string[]0.0316
+(Punctuation
+arrayName.Otherany[]0.2428any0.2194number0.1925number[]0.1661complex0.0199
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.9485any0.0458string0.0014boolean0.0005complex0.0005
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+toIntegerKeyword.Typeany0.5197any[]0.1295number0.0891number[]0.0339string[]0.0287
+(Punctuation
+nName.Othernumber0.8754any0.1094string0.0074boolean0.0006complex0.0005
+)Punctuation
+,Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.7727any0.2090string0.0046void0.0010any[]0.0010
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+dropName.Otherany0.3345Promise<any>0.0267number0.0235complex0.0106any[]0.0064
+\nText.Whitespace

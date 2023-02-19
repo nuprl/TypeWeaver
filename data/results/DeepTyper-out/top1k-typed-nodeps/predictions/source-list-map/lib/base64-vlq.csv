@@ -1,0 +1,700 @@
+Text
+/* -*- Mode: js; js-indent-level: 2; -*- */Comment.Multiline
+\nText.Whitespace
+/*\n * Copyright 2011 Mozilla Foundation and contributors\n * Licensed under the New BSD license. See LICENSE or:\n * http://opensource.org/licenses/BSD-3-Clause\n *\n * Based on the Base 64 VLQ implementation in Closure Compiler:\n * https://code.google.com/p/closure-compiler/source/browse/trunk/src/com/google/debugging/sourcemap/Base64VLQ.java\n *\n * Copyright 2011 The Closure Compiler Authors. All rights reserved.\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are\n * met:\n *\n *  * Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n *  * Redistributions in binary form must reproduce the above\n *    copyright notice, this list of conditions and the following\n *    disclaimer in the documentation and/or other materials provided\n *    with the distribution.\n *  * Neither the name of Google Inc. nor the names of its\n *    contributors may be used to endorse or promote products derived\n *    from this software without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */Comment.Multiline
+\n\nText.Whitespace
+/*eslint no-bitwise:0,quotes:0,global-strict:0*/Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+charToIntMapName.Other{}0.9362any0.0231Object0.0045complex0.0020object0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+intToCharMapName.Other{}0.9768any0.0102Object0.0029complex0.0009object0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'Literal.String.Single
+\n  Text.Whitespace
+.Punctuation
+splitName.Othercomplex0.9067any0.0801void0.0032string[]0.0016Object0.0016
+(Punctuation
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+.Punctuation
+forEachName.Othervoid0.9372any0.0426complex0.0102{}0.0019v...0.0018
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+chName.Otherstring0.8440any0.1017number0.0462{}0.0015void0.0013
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.7372any0.2319string0.0218{}0.0027complex0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+charToIntMapName.Other{}0.6571any0.2330complex0.0519Object0.0163any[]0.0087
+[Punctuation
+chName.Otherstring0.7415number0.1823any0.0673complex0.0024void0.0009
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+indexName.Othernumber0.5231any0.4424string0.0212{}0.0031complex0.0029
+;Punctuation
+\n    Text.Whitespace
+intToCharMapName.Other{}0.2451any0.2215string[]0.1812any[]0.1236number[]0.0559
+[Punctuation
+indexName.Othernumber0.7800any0.1201string0.0926complex0.0018{}0.0014
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+chName.Otherstring0.7912any0.1168number0.0781void0.0024complex0.0023
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+base64Name.Other{}0.9552any0.0227Object0.0044complex0.0042any[]0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\nText.Whitespace
+/**\n * Encode an integer in the range of 0 to 63 to a single base 64 digit.\n */Comment.Multiline
+\nText.Whitespace
+base64Name.Otherany0.7208complex0.1088{}0.0540Object0.0076any[]0.0054
+.Punctuation
+encodeName.Otherany0.8216void0.0805string0.0277complex0.0243{}0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+base64_encodeName.Otherany0.4440void0.1577string0.1276complex0.0451any[]0.0357
+(Punctuation
+aNumberName.Otherany0.6047string0.2464string[]0.0172any[]0.0147{}0.0102
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+aNumberName.Otherstring0.8544any0.1234boolean0.0096number0.0050string[]0.0020
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+intToCharMapName.Otherany0.6473{}0.1146complex0.0559string0.0482any[]0.0237
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+intToCharMapName.Otherany0.4924{}0.3108complex0.1038any[]0.0399Object0.0093
+[Punctuation
+aNumberName.Otherstring0.8527any0.0566number0.0549{}0.0103string[]0.0030
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+throwKeywordany0.3299complex0.2315{}0.1795Error0.0843string0.0661
+ Text.Whitespace
+newOperator.Wordany0.3423{}0.1791complex0.0874string0.0832Error0.0465
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9940ErrorConstructor0.0007MapConstructor0.0001BooleanConstructor0.0001complex0.0000
+(Punctuation
+"Must be between 0 and 63: "Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+aNumberName.Otherstring0.5913any0.1998number0.1645{}0.0065Error0.0046
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Decode a single base 64 digit to an integer.\n */Comment.Multiline
+\nText.Whitespace
+base64Name.Otherany0.4842complex0.0524{}0.0105Object0.0073Error0.0055
+.Punctuation
+decodeName.Otherany0.9777string0.0165complex0.0011number0.0008Object0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+base64_decodeName.Otherany0.5377string0.1886void0.0663any[]0.0346string[]0.0257
+(Punctuation
+aCharName.Otherany0.6156string0.2779string[]0.0118number0.0110any[]0.0085
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+aCharName.Otherstring0.8253any0.1543boolean0.0088number0.0058string[]0.0014
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+charToIntMapName.Otherany0.6921{}0.0782string0.0486complex0.0436number0.0237
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+charToIntMapName.Otherany0.6256{}0.2116complex0.0776any[]0.0328Object0.0110
+[Punctuation
+aCharName.Otherstring0.8412any0.0675number0.0626{}0.0053boolean0.0021
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+throwKeywordany0.3862complex0.1327{}0.1318Error0.1215string0.0980
+ Text.Whitespace
+newOperator.Wordany0.3402{}0.1283string0.0948Error0.0563complex0.0500
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9930ErrorConstructor0.0006MapConstructor0.0001BooleanConstructor0.0001SymbolConstructor0.0001
+(Punctuation
+"Not a valid base 64 digit: "Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+aCharName.Othernumber0.4959string0.3582any0.1176never0.0043boolean0.0026
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\n\nText.Whitespace
+// A single base 64 digit can contain 6 bits of data. For the base 64 variableComment.Single
+\nText.Whitespace
+// length quantities we use in the source map spec, the first bit is the sign,Comment.Single
+\nText.Whitespace
+// the next four bits are the actual value, and the 6th bit is theComment.Single
+\nText.Whitespace
+// continuation bit. The continuation bit tells us whether there are moreComment.Single
+\nText.Whitespace
+// digits in this value following this digit.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+//   ContinuationComment.Single
+\nText.Whitespace
+//   |    SignComment.Single
+\nText.Whitespace
+//   |    |Comment.Single
+\nText.Whitespace
+//   V    VComment.Single
+\nText.Whitespace
+//   101011Comment.Single
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+VLQ_BASE_SHIFTName.Othernumber0.9927any0.0042boolean0.0007string0.0006void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+5Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+// binary: 100000Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+VLQ_BASEName.Othernumber0.6660any0.0796boolean0.0715string0.0251{}0.0148
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+VLQ_BASE_SHIFTName.Othernumber0.3677any0.1504number[]0.0135any[]0.0089string0.0067
+;Punctuation
+\n\nText.Whitespace
+// binary: 011111Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+VLQ_BASE_MASKName.Othernumber0.9869any0.0088boolean0.0013string0.0010void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+VLQ_BASEName.Othernumber0.9786any0.0160string0.0016boolean0.0009void0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+// binary: 100000Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+VLQ_CONTINUATION_BITName.Othernumber0.8296any0.0472boolean0.0458string0.0209{}0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+VLQ_BASEName.Othernumber0.8194any0.0566string0.0205boolean0.0179any[]0.0057
+;Punctuation
+\n\nText.Whitespace
+/**\n * Converts from a two-complement value to a value where the sign bit is\n * placed in the least significant bit.  For example, as decimals:\n *   1 becomes 2 (10 binary), -1 becomes 3 (11 binary)\n *   2 becomes 4 (100 binary), -2 becomes 5 (101 binary)\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toVLQSignedName.Othernumber0.7384boolean0.1312string0.0589any0.0269{}0.0034
+(Punctuation
+aValueName.Othernumber0.7439string0.0790any0.0717boolean0.0149Date0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aValueName.Othernumber0.9740any0.0133string0.0059boolean0.0032void0.0005
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+-Operator
+aValueName.Othernumber0.9612any0.0174string0.0094Object0.0013number[]0.0009
+)Punctuation
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+(Punctuation
+aValueName.Othernumber0.9666string0.0147any0.0145boolean0.0014number[]0.0004
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Converts to a two-complement value from a value where the sign bit is\n * placed in the least significant bit.  For example, as decimals:\n *   2 (10 binary) becomes 1, 3 (11 binary) becomes -1\n *   4 (100 binary) becomes 2, 5 (101 binary) becomes -2\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+fromVLQSignedName.Othernumber0.3884boolean0.3864any0.0649string0.0501void0.0185
+(Punctuation
+aValueName.Othernumber0.3788any0.1970string0.1748boolean0.0614Object0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isNegativeName.Otherboolean0.9771number0.0158any0.0032void0.0016string0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+aValueName.Othernumber0.9546any0.0299boolean0.0042string0.0018{}0.0007
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+shiftedName.Othernumber0.9621any0.0249string0.0057boolean0.0052void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+aValueName.Othernumber0.9281any0.0530string0.0069boolean0.0036complex0.0009
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isNegativeName.Otherboolean0.9684number0.0154any0.0116string0.0014void0.0006
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+shiftedName.Othernumber0.8277any0.0951boolean0.0347string0.0240{}0.0020
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+shiftedKeyword.Typenumber0.8220any0.0894string0.0404boolean0.0320{}0.0029
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Returns the base 64 VLQ encoded value.\n */Comment.Multiline
+\nText.Whitespace
+exportsName.Otherany0.5134complex0.2549Object0.0338{}0.0221void0.0051
+.Punctuation
+encodeName.Otherany0.8983complex0.0419void0.0260string0.0114number0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+base64VLQ_encodeName.Othervoid0.3085any0.1554string0.1233number0.0786complex0.0545
+(Punctuation
+aValueName.Otherany0.4657string0.2986number0.1229boolean0.0091{}0.0070
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+encodedName.Otherstring0.9428any0.0423RegExp0.0028number0.0026string[]0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+digitName.Otherany0.4978number0.2637string0.1518void0.0575{}0.0024
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+vlqName.Othernumber0.3642string0.3300any0.1988void0.0283boolean0.0237
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toVLQSignedName.Otherstring0.3616number0.2349any0.1932void0.0246boolean0.0239
+(Punctuation
+aValueName.Otherany0.3409string0.3277number0.2400boolean0.0084{}0.0080
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+doKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+digitName.Othernumber0.6345any0.2518string0.0665void0.0144{}0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vlqName.Othernumber0.4962any0.3736string0.0399{}0.0163complex0.0056
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+VLQ_BASE_MASKName.Othernumber0.5980any0.2821string0.0777boolean0.0048{}0.0039
+;Punctuation
+\n    Text.Whitespace
+vlqName.Othernumber0.4401any0.3531string0.0727void0.0393boolean0.0236
+ Text.Whitespace
+>>>=Operator
+ Text.Whitespace
+VLQ_BASE_SHIFTName.Othernumber0.6510any0.1927string0.0641void0.0356boolean0.0219
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+vlqName.Othernumber0.9462any0.0410boolean0.0059string0.0046void0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// There are still more digits in this value, so we must make sure theComment.Single
+\n      Text.Whitespace
+// continuation bit is marked.Comment.Single
+\n      Text.Whitespace
+digitName.Othernumber0.8020any0.0969string0.0667void0.0112{}0.0042
+ Text.Whitespace
+|=Operator
+ Text.Whitespace
+VLQ_CONTINUATION_BITName.Othernumber0.6605any0.2458string0.0525void0.0149boolean0.0038
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+encodedName.Otherstring0.9152any0.0664number0.0103void0.0027boolean0.0012
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+base64Name.Otherany0.9449string0.0140complex0.0130{}0.0035number0.0020
+.Punctuation
+encodeName.Otherany0.7835string0.1508complex0.0203void0.0122{}0.0081
+(Punctuation
+digitName.Otherstring0.3815any0.3440number0.1876{}0.0374void0.0132
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+vlqName.Othernumber0.8939any0.0883string0.0117boolean0.0013{}0.0009
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+encodedName.Otherstring0.6628any0.3044number0.0097boolean0.0060{}0.0030
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Decodes the next base 64 VLQ value from the given string and returns the\n * value and the rest of the string via the out parameter.\n */Comment.Multiline
+\nText.Whitespace
+exportsName.Othercomplex0.4730any0.2624Object0.0316{}0.0203any[]0.0058
+.Punctuation
+decodeName.Otherany0.9672string0.0105complex0.0073void0.0020Object0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+base64VLQ_decodeName.Othervoid0.4870any0.1985string0.0325number0.0287complex0.0278
+(Punctuation
+aStrName.Otherany0.4813string0.1859number0.0839any[]0.0105Object0.0086
+,Punctuation
+ Text.Whitespace
+aOutParamName.Otherany0.5296string0.1847number0.1131boolean0.0141any[]0.0099
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9826any0.0156string0.0005void0.0003boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+strLenName.Othernumber0.7890any0.1898string0.0045void0.0040complex0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+aStrName.Otherany0.5215any[]0.1324string[]0.0977string0.0499number[]0.0166
+.Punctuation
+lengthName.Othernumber0.8407any0.1542string0.0021complex0.0007void0.0004
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resultName.Othernumber0.9471any0.0451string0.0036void0.0009boolean0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+shiftName.Othernumber0.6155any0.3422string0.0319complex0.0017void0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+continuationName.Othervoid0.4420number0.1734any0.1312boolean0.0555string0.0322
+,Punctuation
+ Text.Whitespace
+digitName.Otherany0.3987string0.2615number0.2274void0.0527{}0.0057
+;Punctuation
+\n\n  Text.Whitespace
+doKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+iName.Othernumber0.8659any0.1290string0.0024boolean0.0009void0.0005
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+strLenName.Othernumber0.8453any0.1175void0.0112string0.0087complex0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.6493Error0.2644{}0.0253complex0.0231string0.0081
+ Text.Whitespace
+newOperator.Wordany0.4964ErrorConstructor0.2706Error0.1473string0.0243{}0.0153
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000complex0.0000never0.0000
+(Punctuation
+"Expected more digits in base 64 VLQ value."Literal.String.Double
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+digitName.Otherany0.6280string0.2933number0.0313void0.0133Error0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+base64Name.Otherany0.7809complex0.0401string0.0284Error0.0204{}0.0058
+.Punctuation
+decodeName.Otherany0.8420string0.1365number0.0040string[]0.0033complex0.0031
+(Punctuation
+aStrName.Otherstring0.7881any0.2047number0.0025void0.0008boolean0.0006
+.Punctuation
+charAtName.Otherstring0.8295any0.1649number0.0012void0.0012complex0.0007
+(Punctuation
+iName.Othernumber0.9210any0.0714string0.0039void0.0020boolean0.0006
+++Operator
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+continuationName.Otherboolean0.7250void0.1174any0.0825number0.0518string0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+!Operator
+(Punctuation
+digitName.Othernumber0.4487any0.4005string0.0610void0.0468{}0.0118
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+VLQ_CONTINUATION_BITName.Otherany0.4857number0.4530string0.0353void0.0115boolean0.0032
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+digitName.Otherany0.5439string0.2027number0.1813void0.0533{}0.0052
+ Text.Whitespace
+&=Operator
+ Text.Whitespace
+VLQ_BASE_MASKName.Othernumber0.4140any0.3902string0.1368void0.0214boolean0.0100
+;Punctuation
+\n    Text.Whitespace
+resultName.Othernumber0.4441any0.2747string0.2543void0.0133boolean0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resultName.Othernumber0.6164any0.1803string0.1792void0.0122boolean0.0042
+ Text.Whitespace
++Operator
+ Text.Whitespace
+(Punctuation
+digitName.Othernumber0.5141string0.2575any0.1975void0.0163{}0.0034
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+shiftName.Otherany0.3834number0.3412string0.2111number[]0.0071any[]0.0066
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+shiftName.Otherstring0.5924number0.2391any0.1567complex0.0023void0.0021
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+VLQ_BASE_SHIFTName.Othernumber0.3943string0.2887any0.2809{}0.0045boolean0.0032
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+continuationName.Othervoid0.7412any0.0903boolean0.0693number0.0244string0.0150
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+aOutParamName.Otherany0.3891complex0.0147void0.0060{}0.0050never0.0025
+.Punctuation
+valueName.Otherany0.8298string0.0983number0.0147void0.0111complex0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fromVLQSignedName.Otherany0.4258string0.1494void0.1183number0.0642complex0.0516
+(Punctuation
+resultName.Otherany0.4726number0.2101string0.1986void0.0330boolean0.0124
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+aOutParamName.Otherany0.1489void0.0121number[]0.0101complex0.0083any[]0.0072
+.Punctuation
+restName.Otherany0.4178string[]0.1331any[]0.1168string0.0976number[]0.0308
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+aStrName.Otherstring[]0.2936any0.2326string0.1937any[]0.1508number[]0.0227
+.Punctuation
+sliceName.Otherstring0.4942any0.2433string[]0.1039any[]0.0455complex0.0144
+(Punctuation
+iName.Othernumber0.9756any0.0182string0.0027void0.0012boolean0.0007
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,8 @@
+java.util.concurrent.TimeoutException: Futures timed out after [2 minutes]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:259)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:263)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:220)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:57)
+	at scala.concurrent.Await$.result(package.scala:146)
+	at lambdanet.TypeInferenceService$.main(TypeInferenceService.scala:120)
+	at lambdanet.TypeInferenceService.main(TypeInferenceService.scala)

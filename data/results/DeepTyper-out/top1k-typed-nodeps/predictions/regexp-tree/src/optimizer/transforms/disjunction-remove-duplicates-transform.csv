@@ -1,0 +1,181 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+NodePathName.Otherany0.9544string0.0220{}0.0013number0.0008Error0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../../traverse/node-path'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+disjunctionToListName.Otherany0.8363string0.0865complex0.0217boolean0.0113void0.0090
+,Punctuation
+\n  Text.Whitespace
+listToDisjunctionName.Otherany0.7954string0.0905complex0.0436boolean0.0163void0.0084
+,Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../../transform/utils'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Removes duplicates from a disjunction sequence:\n *\n * /(ab|bc|ab)+(xy|xy)+/ -> /(ab|bc)+(xy)+/\n */Comment.Multiline
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+DisjunctionName.Otherany0.3165string0.3103boolean0.1641complex0.0599void0.0588
+(Punctuation
+pathName.Otherstring0.9155any0.0607Path0.0129complex0.0018string[]0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nodeName.Otherany0.9522string0.0283complex0.0057Error0.0008never0.0007
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherstring0.4709any0.4551Path0.0254complex0.0220string[]0.0026
+;Punctuation
+\n\n    Text.Whitespace
+// Make unique nodes.Comment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+uniqueNodesMapName.Other{}0.7358any0.1478complex0.0203object0.0055boolean0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+partsName.Otherany0.4570string[]0.1349any[]0.1135complex0.0589{}0.0272
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+disjunctionToListName.Otherany0.4662complex0.2544any[]0.0951string[]0.0455string0.0400
+(Punctuation
+nodeName.Otherany0.9597string0.0109complex0.0087any[]0.0019{}0.0017
+)Punctuation
+.Punctuation
+filterName.Otherany0.6753complex0.3088v...0.0038string0.0024boolean0.0011
+(Punctuation
+partName.Otherany0.7292string0.2440{}0.0097complex0.0061boolean0.0010
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+encodedName.Otherstring0.5219any0.4270boolean0.0254complex0.0069{}0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+partName.Otherany0.6598string0.3020{}0.0086complex0.0060boolean0.0046
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+NodePathName.Otherany0.8234string0.0288{}0.0104Error0.0053RegExp0.0032
+.Punctuation
+getForNodeName.Otherany0.7229string0.2166boolean0.0200complex0.0141{}0.0054
+(Punctuation
+partName.Otherany0.6745string0.3076{}0.0068complex0.0024number0.0008
+)Punctuation
+.Punctuation
+jsonEncodeName.Otherany0.6796string0.2818boolean0.0148{}0.0040complex0.0031
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'null'Literal.String.Single
+;Punctuation
+\n\n      Text.Whitespace
+// Already recorded this part, filter out.Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+uniqueNodesMapName.Otherany0.7586complex0.0361boolean0.0193{}0.0152string0.0050
+.Punctuation
+hasOwnPropertyName.Otherany0.7483complex0.1451boolean0.0649string0.0324number0.0016
+(Punctuation
+encodedName.Otherstring0.8022any0.1824number0.0029boolean0.0027complex0.0026
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+uniqueNodesMapName.Otherany0.5034{}0.2457complex0.0826string0.0343any[]0.0328
+[Punctuation
+encodedName.Otherstring0.9067any0.0773number0.0053boolean0.0042complex0.0012
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+partName.Otherany0.7818string0.1913{}0.0113complex0.0036number0.0010
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// Replace with the optimized disjunction.Comment.Single
+\n    Text.Whitespace
+pathName.Otherany0.5378string0.4218Path0.0155complex0.0063string[]0.0014
+.Punctuation
+replaceName.Otherany0.6124complex0.3730string0.0044void0.0040boolean0.0013
+(Punctuation
+listToDisjunctionName.Otherany0.5502string0.1612RegExp0.1381complex0.0303{}0.0217
+(Punctuation
+partsName.Otherany0.4954string[]0.1170RegExp0.1113any[]0.0408string0.0358
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

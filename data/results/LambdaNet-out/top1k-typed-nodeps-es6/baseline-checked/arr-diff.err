@@ -1,0 +1,42 @@
+benchmark/check.ts(4,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
+benchmark/check.ts(19,40): error TS2339: Property 'apply' does not exist on type 'string'.
+benchmark/code/arr-diff-3.0.0.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/arr-diff-3.0.0.ts(18,9): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
+benchmark/code/reduce-concat.ts(6,21): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any, initialValue: any): any', gave the following error.
+    Argument of type '(acc: object, ele: string, i: string) => any' is not assignable to parameter of type '(previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any'.
+      Types of parameters 'i' and 'currentIndex' are incompatible.
+        Type 'number' is not assignable to type 'string'.
+  Overload 2 of 3, '(callbackfn: (previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any, initialValue: any): any', gave the following error.
+    Argument of type '(acc: object, ele: string, i: string) => any' is not assignable to parameter of type '(previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any'.
+      Types of parameters 'i' and 'currentIndex' are incompatible.
+        Type 'number' is not assignable to type 'string'.
+benchmark/code/reduce-concat.ts(8,18): error TS2339: Property 'concat' does not exist on type 'object'.
+benchmark/code/reduce-push.ts(6,21): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any, initialValue: any): any', gave the following error.
+    Argument of type '(acc: any[], ele: string, i: string) => any[]' is not assignable to parameter of type '(previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any'.
+      Types of parameters 'i' and 'currentIndex' are incompatible.
+        Type 'number' is not assignable to type 'string'.
+  Overload 2 of 3, '(callbackfn: (previousValue: any[], currentValue: any, currentIndex: number, array: any[]) => any[], initialValue: any[]): any[]', gave the following error.
+    Argument of type '(acc: any[], ele: string, i: string) => any[]' is not assignable to parameter of type '(previousValue: any[], currentValue: any, currentIndex: number, array: any[]) => any[]'.
+      Types of parameters 'i' and 'currentIndex' are incompatible.
+        Type 'number' is not assignable to type 'string'.
+benchmark/code/while-arguments.ts(9,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+benchmark/code/while-arguments.ts(9,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/code/while-arguments.ts(11,3): error TS2322: Type 'string' is not assignable to type 'object'.
+benchmark/code/while-splice-args.ts(15,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/code/while-splice-for.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/while-splice-for.ts(17,9): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
+benchmark/code/while-splice-pop-flatten.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/while-splice-pop-flatten.ts(9,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/code/while-splice-pop.ts(7,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/code/while-splice-recurse.ts(7,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/index.ts(4,25): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+benchmark/index.ts(7,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(10,54): error TS2339: Property 'f' does not exist on type 'object'.
+benchmark/index.ts(11,46): error TS2339: Property 'c' does not exist on type 'object'.
+benchmark/index.ts(15,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+index.ts(14,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+index.ts(14,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+index.ts(16,3): error TS2322: Type 'string' is not assignable to type 'object'.
+

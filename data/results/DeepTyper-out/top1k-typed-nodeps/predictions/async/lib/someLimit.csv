@@ -1,0 +1,89 @@
+importKeyword
+ Text.Whitespace
+createTesterName.Otherany0.0741complex0.0593boolean0.0281string0.0242void0.0183
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/createTester.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+eachOfLimitName.Otherany0.1133boolean0.0778string0.0738complex0.0568void0.0223
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/eachOfLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.1315boolean0.1042string0.0780complex0.0747void0.0217
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`some`]{@link module:Collections.some} but runs a maximum of `limit` async operations at a time.\n *\n * @name someLimit\n * @static\n * @memberOf module:Collections\n * @method\n * @see [async.some]{@link module:Collections.some}\n * @alias anyLimit\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {number} limit - The maximum number of async operations at a time.\n * @param {AsyncFunction} iteratee - An async truth test to apply to each item\n * in the collections in parallel.\n * The iteratee should complete with a boolean `result` value.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called as soon as any\n * iteratee returns `true`, or after all the iteratee functions have finished.\n * Result will be either `true` or `false` depending on the values of the async\n * tests. Invoked with (err, result).\n * @returns {Promise} a promise, if no callback provided\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+someLimitName.Otherany0.1418complex0.0849string0.0787boolean0.0718any[]0.0244
+(Punctuation
+collName.Otherany0.5611any[]0.0487string0.0243Buffer0.0121number0.0066
+,Punctuation
+ Text.Whitespace
+limitName.Othernumber0.7242any0.1852string0.0488boolean0.0042any[]0.0034
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6429number0.0998string0.0700boolean0.0097Buffer0.0054
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.3849number0.0975Function0.0826boolean0.0207string0.0186
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+createTesterName.Otherany0.3752complex0.1793boolean0.0566void0.0339number0.0234
+(Punctuation
+BooleanName.BuiltinBooleanConstructor0.9782Boolean0.0013any0.0012boolean0.0005false0.0003
+,Punctuation
+ Text.Whitespace
+resName.Otherany0.6081Response0.0799complex0.0263void0.0254any[]0.0195
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+resName.Otherany0.5402void0.0807complex0.0612number0.0307any[]0.0259
+)Punctuation
+(Punctuation
+eachOfLimitName.Otherany0.3186complex0.2868any[]0.0542string0.0393boolean0.0387
+(Punctuation
+limitName.Othernumber0.8592any0.1106string0.0165boolean0.0033any[]0.0018
+)Punctuation
+,Punctuation
+ Text.Whitespace
+collName.Otherany0.6661any[]0.1258{}0.0136string0.0086Object0.0085
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6448number0.0293string0.0257any[]0.0148Object0.0103
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6171Function0.0901number0.0564boolean0.0195void0.0168
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.3633void0.3074complex0.0827string0.0247number0.0161
+(Punctuation
+someLimitName.Otherany0.3657number0.1878string0.0909boolean0.0602complex0.0196
+,Punctuation
+ Text.Whitespace
+4Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

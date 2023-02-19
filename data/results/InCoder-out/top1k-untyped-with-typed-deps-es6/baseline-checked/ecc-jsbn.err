@@ -1,0 +1,59 @@
+index.ts(10,14): error TS2339: Property 'length' does not exist on type 'number'.
+index.ts(10,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(13,38): error TS2304: Cannot find name 'Curve'.
+index.ts(13,51): error TS2503: Cannot find namespace 'Curve'.
+index.ts(13,75): error TS2503: Cannot find namespace 'Curve'.
+index.ts(34,28): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: string, b?: number): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+  Overload 2 of 5, '(a: number[], b?: number): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'number[]'.
+      Type 'Buffer' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+  Overload 3 of 5, '(a: BigInteger): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'BigInteger'.
+      Type 'Buffer' is missing the following properties from type 'BigInteger': s, t, data, DB, and 73 more.
+index.ts(51,45): error TS2304: Cannot find name 'ny'.
+lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
+lib/ec.ts(33,28): error TS2304: Cannot find name 'feFp'.
+lib/ec.ts(47,52): error TS2339: Property 'toBigInteger' does not exist on type 'BigInteger'.
+lib/ec.ts(50,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(57,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(71,23): error TS2339: Property 'toBigInteger' does not exist on type 'BigInteger'.
+lib/ec.ts(84,15): error TS2339: Property 'shiftLeft' does not exist on type 'number'.
+lib/ec.ts(95,27): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(95,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'CurveFp'.
+lib/ec.ts(128,31): error TS2304: Cannot find name 'PointFp'.
+lib/ec.ts(163,9): error TS2339: Property 'isInfinity' does not exist on type 'BigInteger'.
+lib/ec.ts(166,13): error TS2339: Property 'y' does not exist on type 'BigInteger'.
+lib/ec.ts(169,48): error TS2339: Property 'z' does not exist on type 'BigInteger'.
+lib/ec.ts(172,13): error TS2339: Property 'x' does not exist on type 'BigInteger'.
+lib/ec.ts(175,48): error TS2339: Property 'z' does not exist on type 'BigInteger'.
+lib/ec.ts(188,14): error TS2339: Property 'x' does not exist on type 'BigInteger'.
+lib/ec.ts(189,14): error TS2339: Property 'y' does not exist on type 'BigInteger'.
+lib/ec.ts(199,17): error TS2339: Property 'z' does not exist on type 'BigInteger'.
+lib/ec.ts(209,17): error TS2339: Property 'z' does not exist on type 'BigInteger'.
+lib/ec.ts(215,17): error TS2339: Property 'z' does not exist on type 'BigInteger'.
+lib/ec.ts(279,29): error TS2304: Cannot find name 'BigNumber'.
+lib/ec.ts(307,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(307,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(307,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(308,14): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(314,11): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(315,13): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(321,13): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(365,31): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(377,39): error TS2345: Argument of type 'BigInteger' is not assignable to parameter of type 'number'.
+lib/ec.ts(384,35): error TS2304: Cannot find name 'Point'.
+lib/ec.ts(439,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(447,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(459,9): error TS2339: Property 'isInfinity' does not exist on type 'BigInteger'.
+lib/ec.ts(461,6): error TS2339: Property 'getX' does not exist on type 'BigInteger'.
+lib/ec.ts(470,8): error TS2339: Property 'getY' does not exist on type 'BigInteger'.
+lib/ec.ts(496,52): error TS2304: Cannot find name 'umber'.
+lib/sec.ts(7,10): error TS2614: Module '"./ec.js"' has no exported member 'ECCurveFp'. Did you mean to use 'import ECCurveFp from "./ec.js"' instead?
+lib/sec.ts(13,32): error TS2304: Cannot find name 'Curve'.
+lib/sec.ts(13,43): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(13,54): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(13,65): error TS2304: Cannot find name 'Point'.
+

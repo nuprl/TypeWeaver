@@ -1,0 +1,11 @@
+index.ts(40,14): error TS2554: Expected 2 arguments, but got 1.
+index.ts(52,65): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(53,18): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+index.ts(59,19): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+index.ts(64,31): error TS2304: Cannot find name 'TypedArray'.
+index.ts(70,74): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+

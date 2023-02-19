@@ -1,0 +1,618 @@
+constKeyword.Declaration
+ Text.Whitespace
+copyPropertyName.Othervoid0.3460boolean0.2717any0.0618complex0.0369string0.0305
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+toName.Otherstring0.6422any0.1306number0.1156Object0.0070Date0.0051
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.9500any0.0280complex0.0017number0.0016boolean0.0009
+,Punctuation
+ Text.Whitespace
+ignoreNonConfigurableName.Otherboolean0.3128string0.2856any0.1483number0.0957PropertyDescriptor0.0047
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+// `Function#length` should reflect the parameters of `to` not `from` since we keep its body.Comment.Single
+\n\tText.Whitespace
+// `Function#prototype` is non-writable and non-configurable so can never be modified.Comment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+propertyName.Otherstring0.8708any0.0995complex0.0055boolean0.0033number0.0015
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'length'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+propertyName.Otherstring0.9063any0.0750complex0.0032boolean0.0031number0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'prototype'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+// `Function#arguments` and `Function#caller` should not be copied. They were reported to be present in `Reflect.ownKeys` for some devices in React Native (#41), so we explicitly ignore them here.Comment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+propertyName.Otherstring0.8597any0.1058complex0.0086boolean0.0048never0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'arguments'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+propertyName.Otherstring0.8873any0.0906complex0.0044boolean0.0041number0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'caller'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+toDescriptorName.OtherPropertyDescriptor0.5627Object0.0275ObjectConstructor0.0203boolean0.0196object0.0103
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000PropertyDescriptor0.0000Object[]0.0000FunctionConstructor0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9953any0.0008void0.0006T0.0002PropertyDescriptor0.0002
+(Punctuation
+toName.Otherstring0.5696any0.1504Object0.0481complex0.0324number0.0256
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.5627complex0.0736any0.0683PropertyKey0.0144PropertyDescriptor0.0122
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fromDescriptorName.OtherPropertyDescriptor0.9090Object0.0103boolean0.0031ObjectConstructor0.0028any0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997PropertyDescriptor0.0001Object0.0000Object[]0.0000FunctionConstructor0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9928any0.0015void0.0009Object0.0004PropertyDescriptor0.0004
+(Punctuation
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.7872any0.0680complex0.0421PropertyDescriptor0.0060Object0.0056
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+canCopyPropertyName.Otherboolean0.9517PropertyDescriptor0.0130complex0.0086any0.0061string0.0022
+(Punctuation
+toDescriptorName.Otherboolean0.3959PropertyDescriptor0.2775any0.0872string0.0105Object0.0097
+,Punctuation
+ Text.Whitespace
+fromDescriptorName.Otherboolean0.3822PropertyDescriptor0.3218any0.0574Object0.0137string0.0110
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+ignoreNonConfigurableName.Otherboolean0.6847PropertyDescriptor0.1412any0.0283string0.0079true0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998PropertyDescriptor0.0000Object0.0000Object[]0.0000any0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9955void0.0012any0.0012boolean0.0003string0.0002
+(Punctuation
+toName.Otherany0.2597string0.1816Object0.0911complex0.0640number0.0199
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.4010complex0.0734any0.0683Property0.0212never0.0126
+,Punctuation
+ Text.Whitespace
+fromDescriptorName.OtherPropertyDescriptor0.1829any0.1703boolean0.1430complex0.0432string0.0314
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+// `Object.defineProperty()` throws if the property exists, is not configurable and either:Comment.Single
+\nText.Whitespace
+// - one its descriptors is changedComment.Single
+\nText.Whitespace
+// - it is non-writable and its value is changedComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+canCopyPropertyName.Otherboolean0.8585PropertyDescriptor0.0414any0.0385Function0.0029number0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+toDescriptorName.Otherany0.1823PropertyDescriptor0.1442boolean0.0810Object0.0114string0.0095
+,Punctuation
+ Text.Whitespace
+fromDescriptorName.OtherPropertyDescriptor0.1886boolean0.1642any0.1615string0.0137Object0.0096
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+toDescriptorName.Otherany0.4337boolean0.1505PropertyDescriptor0.1283string0.0270number0.0184
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+toDescriptorName.OtherPropertyDescriptor0.4664any0.1296complex0.0078boolean0.0070Set<any>0.0066
+.Punctuation
+configurableName.Otherboolean0.6512any0.2907complex0.0293string0.0166number0.0030
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+\n\t\tText.Whitespace
+toDescriptorName.OtherPropertyDescriptor0.3483any0.3122complex0.0331boolean0.0084Set<any>0.0037
+.Punctuation
+writableName.Otherany0.4933boolean0.4154number0.0536string0.0264complex0.0058
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fromDescriptorName.Otherany0.6025PropertyDescriptor0.1091complex0.0371boolean0.0095Set<any>0.0030
+.Punctuation
+writableName.Otherany0.4730boolean0.4562number0.0338string0.0280complex0.0041
+ Text.Whitespace
+&&Operator
+\n\t\tText.Whitespace
+toDescriptorName.Otherany0.6376PropertyDescriptor0.1309boolean0.0433complex0.0332Set<any>0.0034
+.Punctuation
+enumerableName.Otherany0.4954boolean0.4679string0.0168number0.0126complex0.0027
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fromDescriptorName.Otherany0.6151PropertyDescriptor0.1023complex0.0136boolean0.0047Set<any>0.0037
+.Punctuation
+enumerableName.Otherany0.6247boolean0.3464string0.0114number0.0102complex0.0020
+ Text.Whitespace
+&&Operator
+\n\t\tText.Whitespace
+toDescriptorName.OtherPropertyDescriptor0.5504any0.0712Set<any>0.0099complex0.0086boolean0.0082
+.Punctuation
+configurableName.Otherboolean0.7091any0.2129complex0.0442string0.0168void0.0038
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fromDescriptorName.Otherany0.8414PropertyDescriptor0.0438complex0.0184Set<any>0.0027boolean0.0022
+.Punctuation
+configurableName.Otherany0.5827boolean0.3551complex0.0289string0.0178number0.0040
+ Text.Whitespace
+&&Operator
+\n\t\tText.Whitespace
+(Punctuation
+toDescriptorName.OtherPropertyDescriptor0.3071any0.2852complex0.0385boolean0.0079Tensor<Rank>0.0047
+.Punctuation
+writableName.Otherboolean0.5507any0.3972number0.0234string0.0192complex0.0046
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+toDescriptorName.Otherany0.6470PropertyDescriptor0.1116complex0.0508boolean0.0247void0.0059
+.Punctuation
+valueName.Otherany0.8427string0.1218number0.0131complex0.0100boolean0.0058
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fromDescriptorName.Otherany0.8178PropertyDescriptor0.0207complex0.0179string0.0046Error0.0030
+.Punctuation
+valueName.Otherany0.8104string0.1615number0.0133boolean0.0046complex0.0036
+)Punctuation
+\n\tText.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+changePrototypeName.Othervoid0.9593boolean0.0143any0.0091complex0.0058number0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+toName.Otherstring0.3626number0.2554any0.2249Object0.0444Date0.0129
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fromPrototypeName.Otherany0.6715boolean0.1522PropertyDescriptor0.0737Object0.0267number0.0102
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000PropertyDescriptor0.0000any0.0000Object[]0.0000
+.Punctuation
+getPrototypeOfName.Otherany0.9519complex0.0199boolean0.0075number0.0064Object0.0061
+(Punctuation
+fromKeyword.Reserved
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+fromPrototypeName.Otherany0.7863boolean0.0929string0.0516number0.0208PropertyDescriptor0.0145
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999Object0.0000any0.0000PropertyDescriptor0.0000Object[]0.0000
+.Punctuation
+getPrototypeOfName.Otherany0.8309boolean0.0714complex0.0356number0.0254Object0.0137
+(Punctuation
+toName.Otherany0.5604string0.1569Object0.1076number0.0893complex0.0157
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0000any0.0000PropertyDescriptor0.0000Object[]0.0000
+.Punctuation
+setPrototypeOfName.Otherany0.6678complex0.3170void0.0045boolean0.0036string0.0030
+(Punctuation
+toName.Otherstring0.6387any0.2248number0.1130complex0.0059Object0.0040
+,Punctuation
+ Text.Whitespace
+fromPrototypeName.Otherany0.8519string0.0434number0.0413boolean0.0306void0.0048
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wrappedToStringName.Otherany0.4055void0.2113string0.1947boolean0.1192number0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+withNameName.Otherany0.4509string0.3339number0.0441boolean0.0280Object0.0111
+,Punctuation
+ Text.Whitespace
+fromBodyName.Otherstring0.4197any0.2931boolean0.1283number0.0884Object0.0075
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+`Literal.String.Backtick
+/* Wrapped Literal.String.Backtick
+${Literal.String.Interpol
+withNameName.Otherstring0.4660boolean0.3052any0.1249number0.0339void0.0165
+}Literal.String.Interpol
+*/Literal.String.Backtick
+\nLiteral.String.Backtick
+${Literal.String.Interpol
+fromBodyName.Otherstring0.4172boolean0.1570any0.1562void0.0878number0.0460
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+toStringDescriptorName.OtherPropertyDescriptor0.6582Object0.0608object0.0131ObjectConstructor0.0110Set<string>0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999PropertyDescriptor0.0000Object0.0000Object[]0.0000any0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9948void0.0008any0.0008PropertyDescriptor0.0004Object0.0003
+(Punctuation
+FunctionName.BuiltinFunctionConstructor0.9646Function0.0167Object0.0042any0.0010DateConstructor0.0009
+.Punctuation
+prototypeName.OtherObject0.2431Function0.1119void0.0212Date0.0162{}0.0137
+,Punctuation
+ Text.Whitespace
+'toString'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+toStringNameName.OtherPropertyDescriptor0.8437Object0.0289Object[]0.0072ObjectConstructor0.0047object0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998PropertyDescriptor0.0000Object0.0000Object[]0.0000FunctionConstructor0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9934void0.0010any0.0009PropertyDescriptor0.0005Object0.0004
+(Punctuation
+FunctionName.BuiltinFunctionConstructor0.9611Function0.0167Object0.0048any0.0018DateConstructor0.0007
+.Punctuation
+prototypeName.OtherObject0.5265Function0.1233void0.0271any0.0131Date0.0076
+.Punctuation
+toStringName.Otherstring0.9592any0.0194number0.0028Object0.0025string)0.0019
+,Punctuation
+ Text.Whitespace
+'name'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// We call `from.toString()` early (not lazily) to ensure `from` can be garbage collected.Comment.Single
+\nText.Whitespace
+// We use `bind()` instead of a closure for the same reason.Comment.Single
+\nText.Whitespace
+// Calling `from.toString()` early also allows caching it in case `to.toString()` is called several times.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+changeToStringName.Othervoid0.7559boolean0.1103any0.0307complex0.0190string0.0139
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+toName.Otherstring0.6557number0.1932any0.0809Object0.0186Date0.0082
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+nameName.Otherstring0.9327any0.0624number0.0017boolean0.0005complex0.0003
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+withNameName.Otherboolean0.8064string0.1095any0.0626number0.0052complex0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nameName.Otherstring0.8284any0.1626boolean0.0020complex0.0015number0.0015
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+`Literal.String.Backtick
+with Literal.String.Backtickstring0.9343any0.0586boolean0.0015number0.0013Object0.0008
+${Literal.String.Interpol
+nameName.Otherstring0.8924any0.1038number0.0011complex0.0009boolean0.0003
+.Punctuation
+trimName.Otherstring0.9562any0.0395number0.0016complex0.0012boolean0.0004
+(Punctuation
+)Punctuation
+}Literal.String.Interpol
+() Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+newToStringName.Otherany0.7832void0.1044string0.0203number0.0188boolean0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrappedToStringName.Otherany0.6405void0.1578complex0.0416boolean0.0244Object0.0115
+.Punctuation
+bindName.Otherany0.9849string0.0030void0.0021complex0.0018number0.0015
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+withNameName.Otherboolean0.2489any0.2225string0.1836number0.1793Object0.0437
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+.Punctuation
+toStringName.Otherstring0.8964any0.0833complex0.0045number0.0032boolean0.0022
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+// Ensure `to.toString.toString` is non-enumerable and has the same `same`Comment.Single
+\n\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000PropertyDescriptor0.0000Object[]0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9945void0.0021any0.0017boolean0.0002Object0.0001
+(Punctuation
+newToStringName.Otherany0.7111PropertyDescriptor0.0260void0.0216complex0.0212string0.0207
+,Punctuation
+ Text.Whitespace
+'name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+toStringNameName.Otherany0.3063PropertyDescriptor0.1383string0.0774boolean0.0764complex0.0727
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9995Object0.0002PropertyDescriptor0.0000any0.0000Object[]0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9953any0.0018void0.0013string0.0002boolean0.0002
+(Punctuation
+toName.Otherany0.5477string0.2599complex0.0505Object0.0247number0.0218
+,Punctuation
+ Text.Whitespace
+'toString'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+...Punctuation
+toStringDescriptorName.Otherany0.4272complex0.0762any[]0.0575boolean0.0521{}0.0491
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.6945string0.1426boolean0.0376number0.0210complex0.0170
+:Operator
+ Text.Whitespace
+newToStringKeyword.Typeany0.3302boolean0.2362string0.1119void0.0453number0.0422
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mimicFunctionName.Othervoid0.4590any0.1538complex0.1281boolean0.0895string0.0129
+(Punctuation
+toName.Otherstring0.4982any0.3325number0.0689Object0.0155Date0.0058
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ignoreNonConfigurableName.Otherboolean0.9838any0.0074number0.0019false0.0018string0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+nameName.Otherany0.6128string0.3760complex0.0027number0.0022never0.0007
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toName.Otherany0.4161string0.2839complex0.0581number0.0302Object0.0200
+;Punctuation
+\n\n\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+propertyName.Otherstring0.5141complex0.1615any0.0809{}0.0116Object0.0069
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+ReflectName.Builtinany0.9717complex0.0163{}0.0018Object0.0007void0.0006
+.Punctuation
+ownKeysName.OtherPropertyKey[]0.7253string[][]0.0011Object[]0.0010ChildProcess0.0008object0.0007
+(Punctuation
+fromKeyword.Reserved
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+copyPropertyName.Othervoid0.5844any0.1383complex0.0827Object0.0138{}0.0108
+(Punctuation
+toName.Otherstring0.4816number0.1152any0.0954Object0.0548complex0.0455
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.6911complex0.0744any0.0527PropertyKey0.0131Object0.0077
+,Punctuation
+ Text.Whitespace
+ignoreNonConfigurableName.Otherany0.1851string0.1017complex0.0924boolean0.0593number0.0590
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+changePrototypeName.Othervoid0.3765any0.1058boolean0.0843complex0.0407string0.0304
+(Punctuation
+toName.Otherstring0.5091number0.1675any0.0738Object0.0366complex0.0235
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+changeToStringName.Othervoid0.4437any0.1705boolean0.0803complex0.0380string0.0219
+(Punctuation
+toName.Otherstring0.4573number0.2187any0.0909Object0.0555complex0.0185
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+nameName.Otherstring0.8087any0.1625number0.0033complex0.0023Object0.0017
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+toName.Otherstring0.3982number0.0887any0.0835complex0.0308{}0.0258
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

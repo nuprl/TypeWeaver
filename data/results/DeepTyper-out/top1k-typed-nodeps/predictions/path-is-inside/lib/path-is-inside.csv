@@ -1,0 +1,200 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9800string0.0166complex0.0010Path0.0005void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"path"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+thePathName.Otherany0.5074string0.4386boolean0.0157number0.0055string[]0.0049
+,Punctuation
+ Text.Whitespace
+potentialParentName.Otherstring0.4759any0.4595boolean0.0338number0.0087string[]0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// For inside-directory checking, we want to allow trailing slashes, so normalize.Comment.Single
+\n    Text.Whitespace
+thePathName.Otherstring0.6583any0.2770boolean0.0159string[]0.0148number0.0099
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stripTrailingSepName.Otherstring0.6720any0.2361boolean0.0243string[]0.0172number0.0118
+(Punctuation
+thePathName.Otherstring0.6682any0.3040number0.0087boolean0.0048string[]0.0044
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+potentialParentName.Otherstring0.7512any0.1862boolean0.0227string[]0.0118number0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stripTrailingSepName.Otherstring0.6943any0.2070boolean0.0297string[]0.0173complex0.0128
+(Punctuation
+potentialParentName.Otherstring0.6365any0.3353string[]0.0053number0.0044boolean0.0044
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+// Node treats only Windows as case-insensitive in its path module; we follow those conventions.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9868complex0.0027Process0.0008string0.0007this0.0002
+.Punctuation
+platformName.Otherany0.9483string0.0472complex0.0010boolean0.0007number0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"win32"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thePathName.Otherstring0.7542any0.2380number0.0041boolean0.0011complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thePathName.Otherstring0.7860any0.2088number0.0022boolean0.0006complex0.0005
+.Punctuation
+toLowerCaseName.Otherstring0.7161any0.2810number0.0011complex0.0006string[]0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+potentialParentName.Otherstring0.7706any0.2165number0.0073boolean0.0026complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+potentialParentName.Otherstring0.8235any0.1721number0.0020boolean0.0005complex0.0004
+.Punctuation
+toLowerCaseName.Otherstring0.7563any0.2404number0.0014complex0.0006string[]0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thePathName.Otherany0.6988string[]0.1003string0.0963complex0.0217any[]0.0137
+.Punctuation
+lastIndexOfName.Othernumber0.7736any0.2172string0.0055complex0.0014void0.0007
+(Punctuation
+potentialParentName.Otherstring0.5684any0.3468number0.0748string[]0.0027complex0.0020
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+\n\t\tText.Whitespace
+(Punctuation
+\n\t\t\tText.Whitespace
+thePathName.Otherany0.9025string0.0297string[]0.0181any[]0.0147complex0.0052
+[Punctuation
+potentialParentName.Otherany0.4817string0.4648string[]0.0371any[]0.0050number0.0016
+.Punctuation
+lengthName.Othernumber0.5598any0.4244string0.0146complex0.0004boolean0.0003
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+pathName.Otherany0.9984string0.0009complex0.0003number0.0001Error0.0000
+.Punctuation
+sepName.Otherany0.9906string0.0081number0.0007complex0.0001boolean0.0001
+ Text.Whitespace
+||Operator
+\n\t\t\tText.Whitespace
+thePathName.Otherany0.6346string[]0.1356string0.1200any[]0.0421complex0.0180
+[Punctuation
+potentialParentName.Otherstring0.5491any0.2724string[]0.1528any[]0.0095number[]0.0028
+.Punctuation
+lengthName.Othernumber0.7579any0.2269string0.0137complex0.0004boolean0.0004
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+stripTrailingSepName.Otherstring0.4464any0.3998void0.0306number0.0238boolean0.0173
+(Punctuation
+thePathName.Otherstring0.5071any0.4321number0.0171string[]0.0087boolean0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thePathName.Otherany0.6993string[]0.1080any[]0.0419string0.0281complex0.0263
+[Punctuation
+thePathName.Otherstring0.4593any0.3197string[]0.1826any[]0.0096complex0.0042
+.Punctuation
+lengthName.Othernumber0.7693any0.2214string0.0079complex0.0006boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+pathName.Otherany0.9966string0.0021complex0.0006number0.0001Path0.0000
+.Punctuation
+sepName.Otherany0.9806string0.0174number0.0010complex0.0003string[]0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thePathName.Otherstring0.6715any0.1709string[]0.1161any[]0.0120complex0.0045
+.Punctuation
+sliceName.Otherstring0.7539any0.1473string[]0.0355complex0.0170any[]0.0111
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thePathName.Otherstring0.5680any0.2808number0.0409boolean0.0262string[]0.0183
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

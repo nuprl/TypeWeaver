@@ -1,0 +1,26 @@
+Selected GPU[0] Quadro RTX 6000 as the process wide default device.
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Apr 23 2019 21:29:24
+		Last modified date: Tue Apr 23 21:05:52 2019
+		Build type: release
+		Build target: GPU
+		With ASGD: yes
+		Math lib: mkl
+		CUDA version: 10.0.0
+		CUDNN version: 7.3.1
+		Build Branch: HEAD
+		Build SHA1: ae9c9c7c5f9e6072cc9c94c254f816dbdc1c5be6
+		MPI distribution: Open MPI
+		MPI version: 1.10.7
+-------------------------------------------------------------------
+/mnt/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py_init.py:56: UserWarning: Unsupported Linux distribution (ubuntu-20.04). CNTK supports Ubuntu 16.04 and above, only.
+  warnings.warn('Unsupported Linux distribution (%s-%s). CNTK supports Ubuntu 16.04 and above, only.' % (__my_distro__, __my_distro_ver__))
+Traceback (most recent call last):
+  File "readout.py", line 227, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    pr = pred[ix]
+IndexError: index 1606 is out of bounds for axis 0 with size 1606
+

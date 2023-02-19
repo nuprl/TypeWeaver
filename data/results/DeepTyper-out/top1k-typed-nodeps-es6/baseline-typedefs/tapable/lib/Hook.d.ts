@@ -1,0 +1,24 @@
+declare class Hook {
+    constructor(args?: any[], name?: any);
+    compile(options: any): void;
+    _createCall(type: any): void;
+    _tap(type: any, options: any, fn: any): void;
+    tap(options: any, fn: any): void;
+    tapAsync(options: any, fn: any): void;
+    tapPromise(options: any, fn: any): void;
+    _runRegisterInterceptors(options: any): any;
+    withOptions(options: any): {
+        name: any;
+        tap: (opt: any, fn: Function) => void;
+        tapAsync: (opt: any, fn: Function) => void;
+        tapPromise: (opt: any, fn: Function) => void;
+        intercept: (interceptor: any) => void;
+        isUsed: () => boolean;
+        withOptions: (opt: any) => any;
+    };
+    isUsed(): boolean;
+    intercept(interceptor: any): void;
+    _resetCompilation(): void;
+    _insert(item: any): void;
+}
+export default Hook;

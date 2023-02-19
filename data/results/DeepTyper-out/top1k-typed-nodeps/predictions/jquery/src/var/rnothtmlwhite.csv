@@ -1,0 +1,18 @@
+Text
+// Only count HTML whitespaceComment.Single
+\nText.Whitespace
+// Other whitespace should count in valuesComment.Single
+\nText.Whitespace
+// https://infra.spec.whatwg.org/#ascii-whitespaceComment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+/[^\x20\t\r\n\f]+/gLiteral.String.Regex
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

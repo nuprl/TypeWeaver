@@ -1,0 +1,275 @@
+letKeyword.Declaration
+ Text.Whitespace
+globalPnpApiName.Otherany0.3346string0.1461boolean0.0680number0.0588void0.0446
+;Punctuation
+\nText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+globalPnpApiName.Otherany0.8878string0.0580void0.0138number0.0113Function0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+`pnpapi`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Just ignore if we don't have a global PnP instance - perhapsComment.Single
+\n    Text.Whitespace
+// we'll eventually find one at runtime due to multi-treeComment.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+createRequireName.Otherany0.9825string0.0070number0.0025void0.0018Function0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+`./createRequire`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getDefaultResolverName.Otherany0.9814string0.0070void0.0027number0.0025Function0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+`./getDefaultResolver`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+requestName.Otherany0.7887string0.0455Request0.0255number0.0082complex0.0061
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9003number0.0069Options0.0055string0.0054{}0.0048
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+basedirName.Otherany0.8812string0.0772complex0.0218number0.0023any[]0.0013
+,Punctuation
+ Text.Whitespace
+defaultResolverName.Otherany0.5888string0.2696boolean0.0459number0.0305complex0.0173
+,Punctuation
+ Text.Whitespace
+extensionsName.Otherany0.5438string0.1084complex0.0502boolean0.0404{}0.0218
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.8461complex0.0360string0.0105number0.0092any[]0.0081
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9722complex0.0155any[]0.0009T0.0007Process0.0006
+.Punctuation
+versionsName.Otherany0.9564complex0.0349any[]0.0028{}0.0010void0.0009
+.Punctuation
+pnpName.Otherany0.9508complex0.0280string0.0137void0.0023number0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+pnpApiName.Otherany0.6103string0.1970boolean0.0796number0.0560void0.0118
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+globalPnpApiName.Otherany0.6257string0.2331number0.0541boolean0.0204void0.0202
+;Punctuation
+\n\n    Text.Whitespace
+// While technically it would be more correct to run this codeComment.Single
+\n    Text.Whitespace
+// everytime (since they file being run *may* belong to aComment.Single
+\n    Text.Whitespace
+// different dependency tree than the one owning Jest), inComment.Single
+\n    Text.Whitespace
+// practice this doesn't happen anywhere else than on the JestComment.Single
+\n    Text.Whitespace
+// repository itself (in the test env). So in order to preserveComment.Single
+\n    Text.Whitespace
+// the performances, we can afford a slight incoherence here.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+pnpApiName.Otherboolean0.4094any0.3929string0.1345number0.0177complex0.0117
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+baseReqName.Otherany0.7753string0.1745number0.0116complex0.0110boolean0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+createRequireName.Otherany0.7453string0.1528complex0.0518number0.0083boolean0.0046
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+basedirName.Otherany0.5344string0.4011complex0.0259number0.0080void0.0024
+}Literal.String.Interpol
+/internal.jsLiteral.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+pnpApiName.Otherany0.6293string0.1661void0.0829number0.0411complex0.0107
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+baseReqName.Otherany0.6593string0.1694void0.0383number0.0296complex0.0242
+(Punctuation
+`pnpapi`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// The file isn't part of a PnP dependency tree, so we canComment.Single
+\n        Text.Whitespace
+// just use the default Jest resolver.Comment.Single
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+pnpApiName.Otherboolean0.4621any0.3464string0.0887number0.0284complex0.0246
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resolutionName.Otherany0.7890string0.1288number0.0674complex0.0079any[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pnpApiName.Otherany0.9592complex0.0160string0.0079number0.0039Error0.0009
+.Punctuation
+resolveRequestName.Otherany0.7565string0.1309complex0.0404number0.0377boolean0.0031
+(Punctuation
+requestName.Otherany0.6258string0.1169number0.0411complex0.0256Request0.0251
+,Punctuation
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+basedirName.Otherany0.5599string0.3441number0.0423complex0.0326Error0.0019
+}Literal.String.Interpol
+/Literal.String.Backtick
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+{Punctuation
+extensionsName.Otherany0.3733complex0.1953string0.0988number0.0649{}0.0604
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// When the request is a native module, Jest expects to get the string back unmodified, but pnp returns null instead.Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolutionName.Otherany0.8482string0.0693number0.0689complex0.0080boolean0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+requestName.Otherany0.6595string0.0665number0.0345complex0.0277Request0.0188
+;Punctuation
+\n\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resolutionName.Otherany0.7614number0.1244string0.0911complex0.0089any[]0.0026
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+defaultResolverName.Otherany0.4349boolean0.3178string0.0626complex0.0483void0.0279
+)Punctuation
+\n    Text.Whitespace
+defaultResolverName.Otherany0.5221boolean0.1067string0.0834void0.0550complex0.0500
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getDefaultResolverName.Otherany0.5116string0.0883complex0.0846boolean0.0801void0.0403
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+defaultResolverName.Otherany0.3986complex0.1784boolean0.1034void0.0744string0.0329
+(Punctuation
+requestName.Otherany0.3802Request0.0907complex0.0359string0.0250any[]0.0134
+,Punctuation
+ Text.Whitespace
+{Punctuation
+...Punctuation
+optionsName.Otherany0.6242complex0.0223any[]0.0215number0.0181{}0.0138
+,Punctuation
+ Text.Whitespace
+allowPnpName.Otherboolean0.9862any0.0036true0.0022false0.0020number0.0012
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

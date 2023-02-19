@@ -1,0 +1,87 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/**\n * A Rollup plugin accepting a file overrides map and changing\n * module sources to the overridden ones where provided. Files\n * without overrides are loaded from disk.\n *\n * @param {Map<string, string>} fileOverrides\n */Comment.Multiline
+\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+fileOverridesName.Otherany0.2481string0.0554complex0.0181number0.0099boolean0.0084
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+nameName.Otherstring0.9941any0.0017RegExp0.0012number0.0005string[]0.0004
+:Operator
+ Text.Whitespace
+"jquery-file-overrides"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+loadName.Otherany0.2258string0.1707Promise<string>0.0186boolean0.0110complex0.0081
+(Punctuation
+ Text.Whitespace
+idName.Otherstring0.7380any0.1652number0.0725complex0.0079Object0.0008
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+fileOverridesName.Othercomplex0.2108any0.0632Set<any>0.0625Set<string>0.0475{}0.0080
+.Punctuation
+hasName.Otherboolean0.9722any0.0098string0.0074complex0.0031number0.0011
+(Punctuation
+ Text.Whitespace
+idName.Otherstring0.9369any0.0336number0.0215complex0.0018boolean0.0011
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\t\tText.Whitespace
+// Replace the module by a fake source.Comment.Single
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+fileOverridesName.Othercomplex0.4319any0.3639string0.0037{}0.0036Object0.0033
+.Punctuation
+getName.Other
+(Punctuation
+ Text.Whitespace
+idName.Otherstring0.9583any0.0227number0.0157complex0.0007boolean0.0005
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\tText.Whitespace
+// Handle this module via the file system.Comment.Single
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

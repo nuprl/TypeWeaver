@@ -1,0 +1,261 @@
+Text
+// Based on https://gist.github.com/mathiasbynens/6334847 by @mathiasComment.Single
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+regenerateName.Otherany0.2936string0.0760complex0.0522void0.0345boolean0.0269
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'regenerate'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// Which Unicode version should be used?Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+versionName.Otherstring0.9823any0.0134RegExp0.0013number0.0012string[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'11.0.0'Literal.String.Single
+;Punctuation
+ Text.Whitespace
+// note: also update `package.json` when this changesComment.Single
+\n\nText.Whitespace
+// Shorthand functionComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+getName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+whatName.Otherany0.6990string0.2915number0.0040string[]0.0010complex0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'unicode-'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+versionName.Otherstring0.7328any0.2225number0.0422complex0.0011boolean0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'/'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+whatName.Otherstring0.5356any0.4538number0.0091complex0.0003void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'/code-points'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Get the Unicode properties needed to construct the regex.Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ID_StartName.Otherany0.6404string0.0379void0.0078complex0.0074{}0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getName.Other
+(Punctuation
+'Binary_Property/ID_Start'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+ID_ContinueName.Otherany0.7388string0.0331number0.0087{}0.0056complex0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getName.Other
+(Punctuation
+'Binary_Property/ID_Continue'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+generateRegexName.Otherany0.4082void0.2473string0.0497complex0.0453number0.0150
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// https://tc39.github.io/ecma262/#sec-identifier-names-static-semantics-early-errorsComment.Single
+\n  Text.Whitespace
+// http://unicode.org/reports/tr31/#Default_Identifier_SyntaxComment.Single
+\n  Text.Whitespace
+// https://bugs.ecmascript.org/show_bug.cgi?id=2717#c0Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+identifierStartName.Otherany0.7365string0.0918number0.0370complex0.0052boolean0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regenerateName.Otherany0.7087string0.1150number0.0282complex0.0181boolean0.0037
+(Punctuation
+'$'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'_'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+// Note: this already includes `Other_ID_Start`. http://git.io/wRCAfQComment.Single
+\n    Text.Whitespace
+.Punctuation
+addName.Otherany0.8893complex0.0253void0.0100T0.0036Set<any>0.0036
+(Punctuation
+ID_StartName.Otherany0.7101string0.1708number0.0759void0.0145complex0.0047
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+removeRangeName.Otherany0.8344void0.0444string0.0239number0.0226complex0.0102
+(Punctuation
+0x0Literal.Number.Hex
+,Punctuation
+ Text.Whitespace
+0x7FLiteral.Number.Hex
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// remove ASCII symbols (regjsparser-specific)Comment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+identifierPartOnlyName.Otherany0.7088string0.1294number0.0708complex0.0048boolean0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regenerateName.Otherany0.7330string0.1056number0.0348complex0.0223{}0.0019
+(Punctuation
+'\u200C'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'\u200D'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+// Note: `ID_Continue` already includes `Other_ID_Continue`. http://git.io/wRCAfQComment.Single
+\n    Text.Whitespace
+.Punctuation
+addName.Otherany0.9088complex0.0257void0.0037Set<any>0.0030number0.0026
+(Punctuation
+ID_ContinueName.Otherany0.7700string0.1216number0.0715void0.0072complex0.0061
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+removeName.Otherany0.9488complex0.0242void0.0084string0.0039number0.0036
+(Punctuation
+ID_StartName.Otherany0.6906number0.1566string0.1143void0.0104complex0.0050
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+removeRangeName.Otherany0.8847number0.0295void0.0260string0.0239complex0.0099
+(Punctuation
+0x0Literal.Number.Hex
+,Punctuation
+ Text.Whitespace
+0x7FLiteral.Number.Hex
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// remove ASCII symbols (regjsparser-specific)Comment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+'NonAsciiIdentifierStart'Literal.String.Single
+:Operator
+ Text.Whitespace
+identifierStartName.Otherany0.8247number0.0968string0.0450void0.0075boolean0.0038
+.Punctuation
+toStringName.Otherany0.6627string0.3276complex0.0034number0.0022void0.0009
+(Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+'NonAsciiIdentifierPartOnly'Literal.String.Single
+:Operator
+ Text.Whitespace
+identifierPartOnlyName.Otherany0.7932string0.0987number0.0796boolean0.0032void0.0030
+.Punctuation
+toStringName.Otherany0.6845string0.3088complex0.0019number0.0014void0.0007
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.5608void0.0749string0.0517complex0.0283number0.0201
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+generateRegexName.Otherany0.5019string0.0930complex0.0811void0.0712number0.0423
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0000void0.0000Assert0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9972complex0.0010any0.0010number0.0001Promise<void>0.0001
+(Punctuation
+\n  Text.Whitespace
+'// ECMAScript (Unicode v%s) NonAsciiIdentifierStart:\n\n%s\n'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+versionName.Otherstring0.6179any0.2686number0.1071complex0.0017string[]0.0008
+,Punctuation
+\n  Text.Whitespace
+resultName.Otherany0.6510complex0.0071void0.0040string0.0034Console0.0032
+.Punctuation
+NonAsciiIdentifierStartName.Otherany0.8125number0.0747string0.0545void0.0301boolean0.0165
+\nText.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0000void0.0000Function0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9974complex0.0009any0.0008number0.0001Promise<void>0.0001
+(Punctuation
+\n  Text.Whitespace
+'// ECMAScript (Unicode v%s) NonAsciiIdentifierPartOnly:\n\n%s'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+versionName.Otherstring0.7269any0.1813number0.0843complex0.0017string[]0.0010
+,Punctuation
+\n  Text.Whitespace
+resultName.Otherany0.6037complex0.0144void0.0046string0.0030{}0.0027
+.Punctuation
+NonAsciiIdentifierPartOnlyName.Otherany0.7578number0.0932string0.0779void0.0309boolean0.0147
+\nText.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

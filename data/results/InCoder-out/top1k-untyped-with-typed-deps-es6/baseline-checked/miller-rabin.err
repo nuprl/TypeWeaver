@@ -1,0 +1,25 @@
+lib/mr.ts(5,23): error TS2554: Expected 1 arguments, but got 0.
+lib/mr.ts(9,44): error TS2304: Cannot find name 'Rand'.
+lib/mr.ts(14,15): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/mr.ts(21,16): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'BN'.
+  Type 'Uint8Array' is missing the following properties from type 'BN': clone, toNumber, toJSON, toArray, and 83 more.
+lib/mr.ts(28,19): error TS2339: Property 'sub' does not exist on type 'number'.
+lib/mr.ts(29,16): error TS2339: Property 'add' does not exist on type 'number'.
+lib/mr.ts(33,15): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/mr.ts(34,21): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'BN'.
+lib/mr.ts(38,5): error TS2322: Type 'number' is not assignable to type 'Uint8Array'.
+lib/mr.ts(41,14): error TS2339: Property 'subn' does not exist on type 'Uint8Array'.
+lib/mr.ts(43,13): error TS2339: Property 'shrn' does not exist on type 'Uint8Array'.
+lib/mr.ts(48,10): error TS2365: Operator '>' cannot be applied to types 'Uint8Array' and 'number'.
+lib/mr.ts(48,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(51,7): error TS2349: This expression is not callable.
+  Type 'Uint8Array' has no call signatures.
+lib/mr.ts(74,15): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/mr.ts(75,21): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'BN'.
+lib/mr.ts(79,5): error TS2322: Type 'number' is not assignable to type 'Uint8Array'.
+lib/mr.ts(82,14): error TS2339: Property 'subn' does not exist on type 'Uint8Array'.
+lib/mr.ts(84,13): error TS2339: Property 'shrn' does not exist on type 'Uint8Array'.
+lib/mr.ts(88,10): error TS2365: Operator '>' cannot be applied to types 'Uint8Array' and 'number'.
+lib/mr.ts(88,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(91,15): error TS2339: Property 'gcd' does not exist on type 'Uint8Array'.
+

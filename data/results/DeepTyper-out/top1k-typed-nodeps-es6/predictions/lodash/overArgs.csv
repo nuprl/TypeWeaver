@@ -1,0 +1,122 @@
+Text
+/**\n * Creates a function that invokes `func` with its arguments transformed.\n *\n * @since 4.0.0\n * @category Function\n * @param {Function} func The function to wrap.\n * @param {Function[]} [transforms=[identity]]\n *  The argument transforms.\n * @returns {Function} Returns the new function.\n * @example\n *\n * function doubled(n) {\n *   return n * 2\n * }\n *\n * function square(n) {\n *   return n * n\n * }\n *\n * const func = overArgs((x, y) => [x, y], [square, doubled])\n *\n * func(9, 3)\n * // => [81, 6]\n *\n * func(10, 5)\n * // => [100, 10]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+overArgsName.Othervoid0.6996any0.0921complex0.0215number0.0144Function0.0139
+(Punctuation
+funcName.OtherFunction0.6287any0.1884string0.0348boolean0.0249void0.0221
+,Punctuation
+ Text.Whitespace
+transformsName.Otherany[]0.2761any0.2162Function[]0.0090Function0.0083void0.0078
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+funcsLengthName.Otherany0.5360number0.2472any[]0.0494boolean0.0437void0.0432
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+transformsName.Otherany[]0.4657any0.1560Function[]0.0084complex0.0078number[][]0.0036
+.Punctuation
+lengthName.Othernumber0.8620any0.1330string0.0023complex0.0006void0.0006
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8939any0.0719string[]0.0058IArguments0.0020number[]0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9622any0.0366string0.0007boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.9651any0.0335string0.0006boolean0.0003void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9999number0.0000any0.0000ClientRect0.0000ArrayConstructor0.0000
+.Punctuation
+minName.Othernumber0.9938any0.0034boolean0.0008string0.0004complex0.0003
+(Punctuation
+argsName.Otherany[]0.5882any0.2973string[]0.0275IArguments0.0112number[]0.0043
+.Punctuation
+lengthName.Othernumber0.6606any0.3365string0.0010void0.0005complex0.0004
+,Punctuation
+ Text.Whitespace
+funcsLengthName.Othernumber0.8075any0.1662boolean0.0108string0.0086void0.0029
+)Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9583any0.0405string0.0005boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9045any0.0936string0.0008void0.0002boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+argsName.Otherany[]0.6113any0.2772string[]0.0254IArguments0.0185number[]0.0030
+[Punctuation
+indexName.Othernumber0.9129any0.0827string0.0029boolean0.0003any[]0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+transformsName.Otherany[]0.4261any0.3014number0.0055number[][]0.0045Function[]0.0033
+[Punctuation
+indexName.Othernumber0.8947any0.1017string0.0021void0.0003boolean0.0002
+]Punctuation
+.Punctuation
+callName.Otherany0.9922number0.0042void0.0015complex0.0003Function0.0002
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.5718any0.2460IArguments0.0333string[]0.0323any[][]0.0048
+[Punctuation
+indexName.Othernumber0.9375any0.0579string0.0032void0.0003boolean0.0002
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.OtherFunction0.6385any0.2334void0.0369boolean0.0162number0.0059
+.Punctuation
+applyName.Otherany0.9793void0.0097Function0.0048number0.0017complex0.0008
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.7879any0.0891IArguments0.0451string[]0.0149number[]0.0016
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+overArgsName.Otherany0.3756number0.0246void0.0178any[]0.0173string0.0133
+\nText.Whitespace

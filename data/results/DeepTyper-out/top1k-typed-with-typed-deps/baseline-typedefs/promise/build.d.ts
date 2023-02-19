@@ -1,0 +1,11 @@
+declare var fs: any;
+declare var rimraf: any;
+declare var acorn: any;
+declare var walk: any;
+declare var crypto: any;
+declare var shasum: any;
+declare const names: {};
+declare const characterSet: string;
+declare let i: number;
+declare function getIdFor(name: string): string;
+declare function fixup(src: string): any;

@@ -1,0 +1,29 @@
+bench/fixtures/default.ts(3,8): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/fixtures/default.ts(4,8): error TS2339: Property 'items' does not exist on type 'Test'.
+bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/index.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(7,20): error TS2307: Cannot find module 'lodash/clonedeep' or its corresponding type declarations.
+bench/index.ts(11,18): error TS2307: Cannot find module 'rfdc' or its corresponding type declarations.
+bench/index.ts(19,23): error TS2307: Cannot find module 'clone-deep' or its corresponding type declarations.
+bench/index.ts(23,22): error TS2307: Cannot find module 'deep-copy' or its corresponding type declarations.
+bench/index.ts(27,18): error TS2307: Cannot find module 'klona/full' or its corresponding type declarations.
+bench/index.ts(31,19): error TS2307: Cannot find module 'klona' or its corresponding type declarations.
+bench/index.ts(35,18): error TS2307: Cannot find module 'klona/lite' or its corresponding type declarations.
+bench/index.ts(39,18): error TS2307: Cannot find module 'klona/json' or its corresponding type declarations.
+bench/index.ts(82,2): error TS2345: Argument of type '{ 'JSON.stringify': (x: any) => any; lodash: any; rfdc: any; clone: typeof clone; 'clone/include': (x: any) => any; 'clone-deep': any; 'deep-copy': any; 'klona/full': any; klona: any; 'klona/lite': any; 'klona/json': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''JSON.stringify'' does not exist in type 'string[]'.
+bench/index.ts(96,2): error TS2345: Argument of type '{ lodash: any; clone: typeof clone; 'clone/include': (x: any) => any; 'clone-deep': any; 'klona/full': any; klona: any; 'klona/lite': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/index.ts(106,2): error TS2345: Argument of type '{ lodash: any; clone: typeof clone; 'clone/include': (x: any) => any; 'klona/full': any; klona: any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/index.ts(115,2): error TS2345: Argument of type '{ lodash: any; 'clone/include': (x: any) => any; 'klona/full': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/validate/json.ts(1,20): error TS2307: Cannot find module 'uvu/assert' or its corresponding type declarations.
+bench/validate/lite.ts(1,20): error TS2307: Cannot find module 'uvu/assert' or its corresponding type declarations.
+src/full.ts(8,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
+src/full.ts(8,26): error TS4078: Parameter 'x' of exported function has or is using private name 'bject'.
+src/index.ts(1,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
+src/index.ts(1,26): error TS4078: Parameter 'x' of exported function has or is using private name 'bject'.
+src/lite.ts(1,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
+src/lite.ts(1,26): error TS4078: Parameter 'x' of exported function has or is using private name 'bject'.
+

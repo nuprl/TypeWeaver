@@ -1,0 +1,24 @@
+index.ts(31,14): error TS2742: The inferred type of 'mime' cannot be named without a reference to 'send/node_modules/@types/mime'. This is likely not portable. A type annotation is necessary.
+index.ts(40,56): error TS2304: Cannot find name 'ServeStaticOptions'.
+index.ts(40,56): error TS4078: Parameter 'options' of exported function has or is using private name 'ServeStaticOptions'.
+index.ts(74,69): error TS2304: Cannot find name 'NextFunction'.
+index.ts(81,11): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+index.ts(82,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(83,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(84,11): error TS2339: Property 'end' does not exist on type 'Response'.
+index.ts(89,41): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'IncomingMessage'.
+  Type 'Request' is missing the following properties from type 'IncomingMessage': aborted, httpVersion, httpVersionMajor, httpVersionMinor, and 48 more.
+index.ts(90,25): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'IncomingMessage'.
+index.ts(98,23): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'Readable'.
+  Type 'Request' is missing the following properties from type 'Readable': readableAborted, readable, readableDidRead, readableEncoding, and 37 more.
+index.ts(118,33): error TS2339: Property 'statusCode' does not exist on type 'Error'.
+index.ts(127,17): error TS2345: Argument of type 'Response' is not assignable to parameter of type 'WritableStream'.
+  Type 'Response' is missing the following properties from type 'WritableStream': writable, write, end, addListener, and 14 more.
+index.ts(204,9): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+index.ts(205,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(206,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(207,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(208,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(209,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
+index.ts(210,9): error TS2339: Property 'end' does not exist on type 'Response'.
+

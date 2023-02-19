@@ -1,0 +1,83 @@
+importKeyword
+ Text.Whitespace
+mapLimitName.Otherany0.0989complex0.0366string0.0199void0.0134boolean0.0103
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./mapLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+rangeName.Otherany0.2777complex0.2757string0.0485number[]0.0268T[]0.0161
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/range.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.2330string0.0899complex0.0590number0.0247boolean0.0200
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [times]{@link module:ControlFlow.times} but runs a maximum of `limit` async operations at a\n * time.\n *\n * @name timesLimit\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @see [async.times]{@link module:ControlFlow.times}\n * @category Control Flow\n * @param {number} count - The number of times to run the function.\n * @param {number} limit - The maximum number of async operations at a time.\n * @param {AsyncFunction} iteratee - The async function to call `n` times.\n * Invoked with the iteration index and a callback: (n, next).\n * @param {Function} callback - see [async.map]{@link module:Collections.map}.\n * @returns {Promise} a promise, if no callback is provided\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+timesLimitName.Otherany0.2123number0.1393string0.0958complex0.0587boolean0.0125
+(Punctuation
+countName.Othernumber0.8986any0.0748string0.0169boolean0.0013Date0.0004
+,Punctuation
+ Text.Whitespace
+limitName.Othernumber0.8867any0.0889string0.0174boolean0.0028complex0.0005
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6355number0.2609string0.0466boolean0.0106Date0.0015
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6870number0.1093Function0.0752string0.0230boolean0.0124
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_iterateeName.Otherany0.4360number0.2345string0.1710boolean0.0263any[]0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.4081string0.2281number0.1841complex0.0265boolean0.0138
+(Punctuation
+iterateeName.Otherany0.7129number0.1326string0.0748boolean0.0035any[]0.0032
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+mapLimitName.Otherany0.5216number0.2139string0.1023complex0.0338any[]0.0125
+(Punctuation
+rangeName.Otherany0.8682complex0.0498number0.0125number[]0.0098string0.0097
+(Punctuation
+countName.Othernumber0.9636any0.0293string0.0049void0.0005boolean0.0004
+)Punctuation
+,Punctuation
+ Text.Whitespace
+limitName.Othernumber0.9305any0.0548string0.0098complex0.0013boolean0.0009
+,Punctuation
+ Text.Whitespace
+_iterateeName.Othernumber0.5219any0.2897string0.0877boolean0.0206void0.0109
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5493number0.1743Function0.0820void0.0527string0.0312
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

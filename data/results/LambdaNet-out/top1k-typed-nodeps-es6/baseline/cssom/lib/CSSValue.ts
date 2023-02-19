@@ -1,0 +1,43 @@
+//.CommonJS
+var CSSOM: HTMLElement = {};
+///CommonJS
+
+
+/**
+ * @constructor
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue
+ *
+ * TODO: add if needed
+ */
+CSSOM.CSSValue = function CSSValue(): Promise {
+};
+
+CSSOM.CSSValue.prototype = {
+	constructor: CSSOM.CSSValue,
+
+	// @see: http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue
+	set cssText(text) {
+		var name = this._getConstructorName();
+
+		throw new Error('DOMException: property "cssText" of "' + name + '" is readonly and can not be replaced with "' + text + '"!');
+	},
+
+	get cssText() {
+		var name = this._getConstructorName();
+
+		throw new Error('getter "cssText" of "' + name + '" is not implemented!');
+	},
+
+	_getConstructorName: function() {
+		var s: string = this.constructor.toString(),
+				c: object = s.match(/function\s([^\(]+)/),
+				name: string = c[1];
+
+		return name;
+	}
+};
+
+
+//.CommonJS
+export const CSSValue: string = CSSOM.CSSValue;
+///CommonJS

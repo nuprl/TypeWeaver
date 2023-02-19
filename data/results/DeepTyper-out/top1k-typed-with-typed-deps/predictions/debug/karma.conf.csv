@@ -1,0 +1,196 @@
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+configName.Otherany0.6654Config0.1231string0.0070IConfig0.0056ConfigService0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+configName.Otherany0.6856Config0.1875complex0.0190IConfig0.0056string0.0044
+.Punctuation
+setName.Other
+(Punctuation
+{Punctuation
+\n\t\tText.Whitespace
+// Frameworks to useComment.Single
+\n\t\tText.Whitespace
+// available frameworks: https://npmjs.org/browse/keyword/karma-adapterComment.Single
+\n\t\tText.Whitespace
+frameworksName.Otherstring[]0.9952any[]0.0012RegExp[]0.0011string[][]0.0006number[]0.0004
+:Operator
+ Text.Whitespace
+[Punctuation
+'browserify'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'mocha'Literal.String.Single
+]Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// List of files / patterns to load in the browserComment.Single
+\n\t\tText.Whitespace
+filesName.Otherstring[]0.9974string[][]0.0007any[]0.0007RegExp[]0.0004number[]0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+\n\t\t\tText.Whitespace
+'src/browser.js'Literal.String.Single
+,Punctuation
+\n\t\t\tText.Whitespace
+'src/common.js'Literal.String.Single
+,Punctuation
+\n\t\t\tText.Whitespace
+'test.js'Literal.String.Single
+\n\t\tText.Whitespace
+]Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Test results reporter to useComment.Single
+\n\t\tText.Whitespace
+// possible values: 'dots', 'progress'Comment.Single
+\n\t\tText.Whitespace
+// available reporters: https://npmjs.org/browse/keyword/karma-reporterComment.Single
+\n\t\tText.Whitespace
+reportersName.Otherstring[]0.9904string[][]0.0027RegExp[]0.0019any[]0.0009undefined[]0.0006
+:Operator
+ Text.Whitespace
+[Punctuation
+'progress'Literal.String.Single
+]Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Web server portComment.Single
+\n\t\tText.Whitespace
+portName.Otherstring0.4653number0.3260any0.1766complex0.0150boolean0.0051
+:Operator
+ Text.Whitespace
+9876Keyword.Type
+,Punctuation
+\n\n\t\tText.Whitespace
+// Enable / disable colors in the output (reporters and logs)Comment.Single
+\n\t\tText.Whitespace
+colorsName.Otherboolean0.9965false0.0014true0.0007string[]0.0002any0.0002
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n\n\t\tText.Whitespace
+// Level of loggingComment.Single
+\n\t\tText.Whitespace
+// possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUGComment.Single
+\n\t\tText.Whitespace
+logLevelName.Otherany0.7648string0.0709boolean0.0682number0.0372complex0.0272
+:Operator
+ Text.Whitespace
+config.LOG_DEBUGKeyword.Type
+,Punctuation
+\n\n\t\tText.Whitespace
+// Start these browsersComment.Single
+\n\t\tText.Whitespace
+// available browser launchers: https://npmjs.org/browse/keyword/karma-launcherComment.Single
+\n\t\tText.Whitespace
+browsersName.Otherstring[]0.9974RegExp[]0.0007any[]0.0005string[][]0.0004number[]0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+'HeadlessChrome'Literal.String.Single
+]Punctuation
+,Punctuation
+\n\t\tText.Whitespace
+customLaunchersName.Othercomplex0.9993any0.0003any[]0.0001void0.0000{}0.0000
+:Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+HeadlessChromeName.Othercomplex0.9971any0.0016{}0.0003string0.0002void0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+baseName.Otherstring0.9953RegExp0.0019any0.0009string[]0.0009boolean0.0005
+:Operator
+ Text.Whitespace
+'ChromeHeadless'Literal.String.Single
+,Punctuation
+\n\t\t\t\tText.Whitespace
+flagsName.Otherstring[]0.9990any[]0.0002RegExp[]0.0002string0.0001string[][]0.0001
+:Operator
+ Text.Whitespace
+[Punctuation
+'--no-sandbox'Literal.String.Single
+]Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+preprocessorsName.Othercomplex0.9987any0.0004{}0.0002string[]0.0002any[]0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+// *Sigh* what a glob, folks!Comment.Single
+\n\t\t\tText.Whitespace
+'{{!(node_modules),*.js},!(node_modules)/**/*.js}'Literal.String.Single
+:Operator
+ Text.Whitespace
+[Punctuation
+'browserify'Literal.String.Single
+]Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+browserifyName.Othercomplex0.9983any0.0009void0.0001{}0.0001any[]0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+debugName.Otherboolean0.9990string0.0002false0.0002true0.0002any0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n\t\t\tText.Whitespace
+transformName.Otherstring[]0.9956any[]0.0015RegExp[]0.0012number[]0.0003string[][]0.0002
+:Operator
+ Text.Whitespace
+[Punctuation
+'brfs'Literal.String.Single
+]Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\t\tText.Whitespace
+// Continuous Integration modeComment.Single
+\n\t\tText.Whitespace
+// if true, Karma captures browsers, runs the tests and exitsComment.Single
+\n\t\tText.Whitespace
+singleRunName.Otherboolean0.9968number0.0009false0.0006true0.0004any0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n\n\t\tText.Whitespace
+// Concurrency levelComment.Single
+\n\t\tText.Whitespace
+// how many browser should be started simultaneousComment.Single
+\n\t\tText.Whitespace
+concurrencyName.Othernumber0.9534any0.0221string0.0170complex0.0024any[]0.0006
+:Operator
+ Text.Whitespace
+1Keyword.Type
+\n\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,23 @@
+exports.files = [
+	"CSSStyleDeclaration",
+	"CSSRule",
+	"CSSStyleRule",
+	"CSSGroupingRule",
+	"CSSConditionRule",
+	"MediaList",
+	"CSSMediaRule",
+	"CSSSupportsRule",
+	"CSSImportRule",
+	"CSSFontFaceRule",
+	"CSSHostRule",
+	"StyleSheet",
+	"CSSStyleSheet",
+	"CSSKeyframesRule",
+	"CSSKeyframeRule",
+	"MatcherList",
+	"CSSDocumentRule",
+	"CSSValue",
+	"CSSValueExpression",
+	"parse",
+	"clone"
+];

@@ -1,0 +1,14 @@
+lib/called-in-order.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'every'. Did you mean to use 'import every from "./prototypes/array"' instead?
+lib/called-in-order.ts(8,32): error TS2304: Cannot find name 'CallMap'.
+lib/called-in-order.ts(8,47): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(19,38): error TS2304: Cannot find name 'CallMap'.
+lib/called-in-order.ts(19,53): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(19,82): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(49,37): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(49,37): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.
+lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'Function'.
+lib/order-by-first-call.ts(3,10): error TS2614: Module '"./prototypes/array"' has no exported member 'sort'. Did you mean to use 'import sort from "./prototypes/array"' instead?
+lib/order-by-first-call.ts(4,10): error TS2614: Module '"./prototypes/array"' has no exported member 'slice'. Did you mean to use 'import slice from "./prototypes/array"' instead?
+lib/order-by-first-call.ts(32,40): error TS2304: Cannot find name 'Spy'.
+lib/order-by-first-call.ts(32,40): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.
+

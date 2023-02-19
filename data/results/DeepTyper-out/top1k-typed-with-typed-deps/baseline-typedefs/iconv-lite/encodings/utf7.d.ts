@@ -1,0 +1,12 @@
+declare var Buffer: any;
+declare function Utf7Codec(codecOptions: string, iconv: any): void;
+declare var nonDirectChars: string;
+declare function Utf7Encoder(options: any, codec: string): string;
+declare function Utf7Decoder(options: any, codec: string): void;
+declare var base64Regex: string;
+declare var base64Chars: any[];
+declare var plusChar: number, minusChar: number, andChar: number;
+declare function Utf7IMAPCodec(codecOptions: string, iconv: any): void;
+declare function Utf7IMAPEncoder(options: any, codec: string): void;
+declare function Utf7IMAPDecoder(options: any, codec: string): void;
+declare var base64IMAPChars: any;

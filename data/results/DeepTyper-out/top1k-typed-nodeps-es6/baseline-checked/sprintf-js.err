@@ -1,0 +1,35 @@
+benchmark/benchmark.ts(1,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/benchmark.ts(2,23): error TS2306: File 'src/sprintf.ts' is not a module.
+dist/angular-sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+dist/angular-sprintf.min.ts(2,26): error TS2304: Cannot find name 'angular'.
+dist/angular-sprintf.min.ts(2,108): error TS2304: Cannot find name 'sprintf'.
+dist/angular-sprintf.min.ts(2,272): error TS2304: Cannot find name 'vsprintf'.
+dist/sprintf.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+dist/sprintf.min.ts(2,747): error TS2554: Expected 1 arguments, but got 3.
+dist/sprintf.min.ts(2,1035): error TS2554: Expected 1 arguments, but got 2.
+dist/sprintf.min.ts(2,3470): error TS2551: Property 'sprintf' does not exist on type 'Window & typeof globalThis'. Did you mean 'print'?
+dist/sprintf.min.ts(2,3487): error TS2339: Property 'vsprintf' does not exist on type 'Window & typeof globalThis'.
+dist/sprintf.min.ts(2,3517): error TS2304: Cannot find name 'define'.
+dist/sprintf.min.ts(2,3525): error TS2304: Cannot find name 'define'.
+dist/sprintf.min.ts(2,3537): error TS2304: Cannot find name 'define'.
+gulpfile.ts(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+gulpfile.ts(4,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
+gulpfile.ts(5,20): error TS2307: Cannot find module 'gulp-uglify' or its corresponding type declarations.
+gulpfile.ts(6,20): error TS2307: Cannot find module 'gulp-rename' or its corresponding type declarations.
+gulpfile.ts(7,24): error TS2307: Cannot find module 'gulp-sourcemaps' or its corresponding type declarations.
+gulpfile.ts(8,20): error TS2307: Cannot find module 'gulp-header' or its corresponding type declarations.
+gulpfile.ts(9,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.
+gulpfile.ts(10,19): error TS2307: Cannot find module 'gulp-mocha' or its corresponding type declarations.
+gulpfile.ts(11,23): error TS2307: Cannot find module 'gulp-benchmark' or its corresponding type declarations.
+src/angular-sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
+src/angular-sprintf.ts(10,24): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
+src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
+src/sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+src/sprintf.ts(45,118): error TS2554: Expected 1 arguments, but got 3.
+src/sprintf.ts(62,92): error TS2554: Expected 1 arguments, but got 2.
+src/sprintf.ts(206,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
+src/sprintf.ts(221,20): error TS2304: Cannot find name 'define'.
+src/sprintf.ts(221,45): error TS2304: Cannot find name 'define'.
+src/sprintf.ts(222,13): error TS2304: Cannot find name 'define'.
+

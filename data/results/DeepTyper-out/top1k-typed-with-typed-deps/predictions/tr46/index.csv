@@ -1,0 +1,2268 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+punycodeName.Otherany0.9445string0.0241boolean0.0073number0.0047RegExp0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"punycode"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexesName.Otherany0.8968complex0.0092RegExp0.0033{}0.0029boolean0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./lib/regexes.js"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+mappingTableName.Otherany0.9680string0.0110boolean0.0048number0.0030RegExp0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./lib/mappingTable.json"Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8617boolean0.0569string0.0453number0.0075complex0.0049
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./lib/statusMapping.js"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+containsNonASCIIName.Otherboolean0.8704string0.0803any0.0319number0.0052RegExp0.0029
+(Punctuation
+strName.Otherany0.5606string0.4223boolean0.0041number0.0031complex0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+/[^\x00-\x7F]/uLiteral.String.Regex
+.Punctuation
+testName.Otherboolean0.9887any0.0044string0.0021complex0.0012void0.0009
+(Punctuation
+strName.Otherstring0.8082any0.1846number0.0027boolean0.0017complex0.0007
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+findStatusName.Otherany0.4297complex0.1668void0.0895string0.0864boolean0.0389
+(Punctuation
+valName.Otherany0.6990string0.1737number0.0786boolean0.0067complex0.0032
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+useSTD3ASCIIRulesName.Otherany0.4341string0.2720boolean0.1690number0.0929RegExp0.0033
+ Text.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+startName.Othernumber0.9819any0.0158string0.0012boolean0.0002complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+endName.Othernumber0.8837any0.0991string0.0077boolean0.0020complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mappingTableName.Otherany0.8087string[]0.0460string0.0302any[]0.0213complex0.0151
+.Punctuation
+lengthName.Othernumber0.7607any0.2360string0.0015complex0.0007boolean0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+startName.Othernumber0.9646any0.0322string0.0020boolean0.0004complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+endName.Othernumber0.9412any0.0418string0.0073complex0.0032boolean0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+midName.Othernumber0.9820string0.0081any0.0081boolean0.0007complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9997number0.0000any0.0000NumberConstructor0.0000ClientRect0.0000
+.Punctuation
+floorName.Othernumber0.9966any0.0021string0.0006boolean0.0002complex0.0002
+(Punctuation
+(Punctuation
+startName.Othernumber0.9290any0.0676string0.0026complex0.0002boolean0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+endName.Othernumber0.9533any0.0374string0.0063complex0.0006boolean0.0004
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.5337Object0.0699any[]0.0620complex0.0444string[]0.0406
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mappingTableName.Othercomplex0.5587any0.2570any[]0.0266{}0.0238number[]0.0152
+[Punctuation
+midName.Othernumber0.6443string0.2989any0.0445complex0.0040number[]0.0010
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+minName.Otherany0.6069number0.3046complex0.0391string0.0130boolean0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9997Math0.0000ObjectConstructor0.0000Array0.0000JSON0.0000
+.Punctuation
+isArrayName.Othercomplex0.9974any0.0008any[]0.0005{}0.0001boolean0.0001
+(Punctuation
+targetName.Otherany[]0.5943any0.0998number[]0.0618string[]0.0594any[][]0.0163
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+targetName.Otherany[]0.5142any0.1291number[]0.0543string[]0.0417complex0.0312
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+targetName.Otherany[]0.4441any0.1495number[]0.0931string[]0.0702any[][]0.0226
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+maxName.Otherany0.8146number0.0823complex0.0547string0.0125any[]0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9998Math0.0000ObjectConstructor0.0000Array0.0000JSON0.0000
+.Punctuation
+isArrayName.Othercomplex0.9971any0.0008any[]0.0007{}0.0001boolean0.0001
+(Punctuation
+targetName.Otherany[]0.6487any0.0963number[]0.0556string[]0.0393complex0.0118
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+targetName.Otherany[]0.5839any0.1179number[]0.0511string[]0.0286complex0.0239
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+targetName.Otherany[]0.5662any0.1294number[]0.0785string[]0.0464complex0.0128
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+minName.Otherany0.6759number0.2574complex0.0454boolean0.0037string0.0032
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+valName.Otherany0.6149number0.3257complex0.0161string0.0117any[]0.0065
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+maxName.Otherany0.6672number0.3119complex0.0071string0.0069any[]0.0006
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+valName.Otherany0.4869number0.4607complex0.0092string0.0083any[]0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+useSTD3ASCIIRulesName.Otherboolean0.7933any0.1409string0.0150number0.0145complex0.0102
+ Text.Whitespace
+&&Operator
+\n          Text.Whitespace
+(Punctuation
+targetName.Otherany[]0.4389any0.2854number[]0.0815string[]0.0402complex0.0186
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8881complex0.0269string0.0065any[]0.0055number[]0.0041
+.Punctuation
+disallowed_STD3_validName.Otherany0.8486string0.0873number0.0288boolean0.0124any[]0.0058
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+targetName.Otherany[]0.4585any0.1916number[]0.1353string[]0.1190complex0.0227
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8767complex0.0489string0.0090any[]0.0031number[]0.0026
+.Punctuation
+disallowed_STD3_mappedName.Otherany0.7606string0.1579number0.0488complex0.0103any[]0.0044
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+STATUS_MAPPINGName.Otherany0.8321complex0.1207string0.0046any[]0.0022{}0.0015
+.Punctuation
+disallowedName.Otherany0.5895string0.2792number0.0473string[]0.0170boolean0.0167
+,Punctuation
+ Text.Whitespace
+...Punctuation
+targetName.Otherany[]0.5902string[]0.1525any0.1173number[]0.0462complex0.0142
+.Punctuation
+sliceName.Otherany[]0.3856string[]0.1816any0.1625complex0.0562number[]0.0547
+(Punctuation
+2Literal.Number.Float
+)Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+targetName.Otherany[]0.4638any0.1664number[]0.1146string[]0.0875complex0.0177
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8513complex0.0550string0.0071number[]0.0032any[]0.0030
+.Punctuation
+disallowed_STD3_validName.Otherany0.7382string0.1595number0.0598boolean0.0109complex0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+STATUS_MAPPINGName.Otherany0.8844complex0.0586{}0.0038string0.0031any[]0.0026
+.Punctuation
+validName.Otherany0.8110string0.0716boolean0.0644number0.0214string[]0.0066
+,Punctuation
+ Text.Whitespace
+...Punctuation
+targetName.Otherany[]0.5064string[]0.1833any0.1359number[]0.0509complex0.0165
+.Punctuation
+sliceName.Otherany[]0.2921string[]0.2552any0.1711complex0.0574number[]0.0518
+(Punctuation
+2Literal.Number.Float
+)Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+targetName.Otherany[]0.4046any0.2254number[]0.1066string[]0.0932complex0.0248
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8555complex0.0606string0.0067{}0.0022any[]0.0020
+.Punctuation
+disallowed_STD3_mappedName.Otherany0.7036string0.2077number0.0557boolean0.0114complex0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+STATUS_MAPPINGName.Otherany0.7977complex0.1001string0.0083{}0.0032number[]0.0023
+.Punctuation
+mappedName.Otherstring0.4721any0.3902string[]0.0271number[]0.0254any[]0.0249
+,Punctuation
+ Text.Whitespace
+...Punctuation
+targetName.Otherany[]0.6118string[]0.2016any0.0780number[]0.0325complex0.0131
+.Punctuation
+sliceName.Otherstring[]0.3125any[]0.3117any0.1412complex0.0608string0.0554
+(Punctuation
+2Literal.Number.Float
+)Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+targetName.Otherany[]0.4741string[]0.1912any0.1073number[]0.0652complex0.0130
+.Punctuation
+sliceName.Otherany[]0.2606any0.2452string[]0.1793string0.0768complex0.0650
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+minName.Otherany0.5492number0.3970complex0.0293boolean0.0098string0.0041
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+valName.Otherany0.5565number0.3713string0.0276complex0.0207boolean0.0068
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+endName.Othernumber0.9328any0.0612string0.0032complex0.0009boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+midName.Othernumber0.7928any0.1803string0.0242complex0.0009boolean0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+startName.Othernumber0.9414any0.0543string0.0032boolean0.0004complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+midName.Othernumber0.8974any0.0807string0.0202boolean0.0006complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapCharsName.Othervoid0.3037any0.2451boolean0.1402complex0.1086string0.0962
+(Punctuation
+domainNameName.Otherstring0.7469any0.2172boolean0.0078number0.0066complex0.0049
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+useSTD3ASCIIRulesName.Otherany0.5329boolean0.2386string0.1611number0.0273RegExp0.0069
+,Punctuation
+ Text.Whitespace
+processingOptionName.Otherboolean0.3940any0.3870string0.1673number0.0315complex0.0023
+ Text.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+hasErrorName.Otherboolean0.9764false0.0128true0.0051any0.0030number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+processedName.Otherstring0.9753any0.0162RegExp0.0045string[]0.0009number0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+chName.Otherstring0.8216any0.1460complex0.0143number0.0082boolean0.0017
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+domainNameName.Otherany0.4418string0.3138complex0.1041string[]0.0250any[]0.0219
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+statusName.Otherany0.4409number0.3153string0.1761complex0.0243Status0.0044
+,Punctuation
+ Text.Whitespace
+mappingName.Otherany0.3839string0.3274complex0.1224number0.0812any[]0.0052
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+findStatusName.Otherany0.4432complex0.2188string0.1677number0.0617boolean0.0319
+(Punctuation
+chName.Otherany0.7760complex0.0509string0.0212number0.0062RegExp0.0061
+.Punctuation
+codePointAtName.Otherany0.6378string0.1629complex0.0840number0.0335boolean0.0262
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+useSTD3ASCIIRulesName.Otherany0.3782string0.2839boolean0.1470number0.1279complex0.0177
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+statusName.Otherany0.5287number0.2066string0.1667complex0.0319Status0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+STATUS_MAPPING.disallowedName.Other
+:Operator
+\n        Text.Whitespace
+hasErrorKeyword.Typeboolean0.9749true0.0098any0.0057false0.0053complex0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+processedName.Otherstring0.9040number0.0442any0.0432complex0.0061void0.0010
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+chName.Otherstring0.5978any0.2020number0.1714complex0.0171boolean0.0035
+;Punctuation
+\n        Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+STATUS_MAPPING.ignoredName.Other
+:Operator
+\n        Text.Whitespace
+breakKeyword.Type
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+STATUS_MAPPING.mappedName.Other
+:Operator
+\n        Text.Whitespace
+processedKeyword.Typestring0.8666number0.0796any0.0426complex0.0070void0.0017
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+mappingName.Otherany0.5867string0.1478complex0.0884number0.0675void0.0148
+;Punctuation
+\n        Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+STATUS_MAPPING.deviationName.Other
+:Operator
+\n        Text.Whitespace
+ifKeyword.Type
+ Text.Whitespace
+(Punctuation
+processingOptionName.Otherstring0.5390any0.3694boolean0.0580complex0.0147number0.0078
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"transitional"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+processedName.Otherstring0.9053any0.0613number0.0228complex0.0084void0.0007
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+mappingName.Otherany0.5251string0.3506number0.0699complex0.0189void0.0033
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+processedName.Otherstring0.9312any0.0481number0.0169complex0.0027void0.0003
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+chName.Otherstring0.7559any0.1803number0.0532complex0.0068boolean0.0012
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+caseKeyword
+ Text.Whitespace
+STATUS_MAPPING.validName.Other
+:Operator
+\n        Text.Whitespace
+processedKeyword.Typestring0.9019number0.0544any0.0378complex0.0044void0.0007
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+chName.Otherstring0.5197any0.2786number0.1722complex0.0209boolean0.0017
+;Punctuation
+\n        Text.Whitespace
+breakKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+stringKeyword.Type
+:Operator
+ Text.Whitespace
+processedName.Otherstring0.6353any0.2937complex0.0348number0.0300boolean0.0011
+,Punctuation
+\n    Text.Whitespace
+errorName.Otherboolean0.9825string0.0063any0.0063false0.0015number0.0013
+:Operator
+ Text.Whitespace
+hasErrorKeyword.Typeboolean0.9685any0.0122false0.0075true0.0042string0.0026
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+validateLabelName.Otherboolean0.5355any0.2498string0.1045complex0.0533number0.0089
+(Punctuation
+labelName.Otherstring0.7677any0.2205number0.0018complex0.0012boolean0.0007
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+checkHyphensName.Otherany0.4315boolean0.2718string0.2405number0.0282RegExp0.0041
+,Punctuation
+ Text.Whitespace
+checkBidiName.Otherboolean0.5390any0.2781string0.1310number0.0265RegExp0.0038
+,Punctuation
+ Text.Whitespace
+checkJoinersName.Otherboolean0.6239any0.2298string0.0959number0.0273RegExp0.0027
+,Punctuation
+ Text.Whitespace
+processingOptionName.Otherboolean0.6453any0.2117string0.0870number0.0296RegExp0.0026
+,Punctuation
+ Text.Whitespace
+useSTD3ASCIIRulesName.Otherboolean0.6853any0.1935string0.0764number0.0274complex0.0016
+ Text.Whitespace
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+labelName.Otherany0.8632string0.1044complex0.0030Path0.0016RegExp0.0013
+.Punctuation
+normalizeName.Otherany0.6659complex0.2429string0.0410{}0.0078RegExp0.0074
+(Punctuation
+"NFC"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+labelName.Otherstring0.7908any0.2024number0.0019complex0.0018boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+codePointsName.Otherany0.2492string[]0.1878boolean0.1728string0.1063complex0.0893
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9995any0.0000ObjectConstructor0.0000Math0.0000complex0.0000
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+labelName.Otherstring0.5858any0.3853complex0.0093string[]0.0037any[]0.0031
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+checkHyphensName.Otherboolean0.4558any0.3684string0.0658number0.0120complex0.0105
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+codePointsName.Otherany0.3809string[]0.2072any[]0.1283boolean0.0844RegExpMatchArray0.0464
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"-"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+codePointsName.Otherany0.4111string[]0.2159any[]0.1254boolean0.0911RegExpMatchArray0.0354
+[Punctuation
+3Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"-"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+(Punctuation
+labelName.Otherstring0.5357any0.4593boolean0.0012number0.0011complex0.0006
+.Punctuation
+startsWithName.Otherboolean0.7687any0.2212complex0.0037string0.0031number0.0017
+(Punctuation
+"-"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+labelName.Otherany0.5247string0.4660boolean0.0052number0.0015complex0.0008
+.Punctuation
+endsWithName.Otherboolean0.9012any0.0902complex0.0035string0.0032number0.0006
+(Punctuation
+"-"Literal.String.Double
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+labelName.Otherstring0.6473any0.3374string[]0.0087boolean0.0013any[]0.0013
+.Punctuation
+includesName.Otherany0.5329boolean0.3870complex0.0491string0.0135string[]0.0107
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+ Text.Whitespace
+||Operator
+\n      Text.Whitespace
+(Punctuation
+codePointsName.Otherany0.6977string[]0.1292string0.0982any[]0.0206boolean0.0122
+.Punctuation
+lengthName.Othernumber0.6176any0.3764string0.0021complex0.0016boolean0.0015
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+regexesName.Otherany0.2008complex0.1241RegExp0.0626boolean0.0182RegExp[]0.0171
+.Punctuation
+combiningMarksName.OtherRegExp0.7814any0.1098boolean0.0654string0.0127string[]0.0083
+.Punctuation
+testName.Otherboolean0.9867any0.0083complex0.0010string0.0010number0.0007
+(Punctuation
+codePointsName.Otherany0.7583string[]0.0348any[]0.0344RegExpMatchArray0.0288string0.0263
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+chName.Otherstring0.5005any0.4319complex0.0398number0.0122boolean0.0026
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+codePointsName.Otherany0.5364string[]0.1382any[]0.0651string0.0639complex0.0513
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+statusName.Otherany0.4060string0.3526number0.1995complex0.0248boolean0.0029
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+findStatusName.Otherany0.3526boolean0.3452complex0.1148string0.0871number0.0301
+(Punctuation
+chName.Otherany0.8635complex0.0270string0.0167number0.0054RegExp0.0036
+.Punctuation
+codePointAtName.Otherany0.6828boolean0.1166string0.0819complex0.0563number0.0271
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+useSTD3ASCIIRulesName.Otherany0.3964boolean0.3017string0.2121number0.0405complex0.0123
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+processingOptionName.Otherany0.5920string0.1994boolean0.1553complex0.0130RegExp0.0114
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"transitional"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+statusName.Otherany0.6530string0.2299number0.0713complex0.0143boolean0.0110
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.9591complex0.0073string0.0048boolean0.0029RegExpMatchArray0.0013
+.Punctuation
+validName.Otherany0.9346string0.0352boolean0.0254number0.0019complex0.0013
+)Punctuation
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+(Punctuation
+processingOptionName.Otherany0.6266string0.2951boolean0.0577RegExp0.0043number0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"nontransitional"Literal.String.Double
+ Text.Whitespace
+&&Operator
+\n         Text.Whitespace
+statusName.Otherany0.6933string0.1860number0.0787complex0.0122boolean0.0079
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.9577complex0.0099string0.0039boolean0.0022RegExpMatchArray0.0010
+.Punctuation
+validName.Otherany0.9134boolean0.0507string0.0276number0.0040complex0.0021
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+statusName.Otherany0.6947string0.1441number0.0996complex0.0164boolean0.0101
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+STATUS_MAPPINGName.Otherany0.8542complex0.0252string0.0060boolean0.0040RegExpMatchArray0.0018
+.Punctuation
+deviationName.Otherany0.8820number0.0504boolean0.0339string0.0162complex0.0088
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// https://tools.ietf.org/html/rfc5892#appendix-AComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+checkJoinersName.Otherboolean0.5971any0.2777string0.0437number0.0217complex0.0115
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+lastName.Othernumber0.9442any0.0483string0.0040boolean0.0011complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+iName.Othernumber0.7782any0.1549string0.0564complex0.0031boolean0.0026
+,Punctuation
+ Text.Whitespace
+chName.Otherstring0.5362any0.2502number0.1033complex0.0778boolean0.0024
+]Punctuation
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+codePointsName.Othercomplex0.5951any0.2858any[]0.0263string[]0.0093RegExp0.0069
+.Punctuation
+entriesName.Othercomplex0.7245any0.2254boolean0.0125any[]0.0065string0.0035
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+chName.Otherstring0.5653any0.3743complex0.0335number0.0126boolean0.0041
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"\u200C"Literal.String.Double
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+chName.Otherstring0.6647any0.2977complex0.0164number0.0108boolean0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"\u200D"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+iName.Othernumber0.8622any0.1279string0.0067boolean0.0021complex0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+regexesName.Othercomplex0.1700RegExp0.1035any0.0790RegExp[]0.0158boolean0.0137
+.Punctuation
+combiningClassViramaName.OtherRegExp0.9668boolean0.0130any0.0081string0.0027string[]0.0017
+.Punctuation
+testName.Otherboolean0.9925any0.0028void0.0008string0.0008number0.0007
+(Punctuation
+codePointsName.Otherany0.6204string[]0.1147string0.0574any[]0.0332complex0.0305
+[Punctuation
+iName.Othernumber0.8941any0.0953string0.0089boolean0.0008complex0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+continueKeyword
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+chName.Otherstring0.5571any0.4012complex0.0206number0.0111boolean0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"\u200C"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// TODO: make this more efficientComment.Single
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextName.Othernumber0.4696any0.3712string0.0823boolean0.0273complex0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+codePointsName.Otherstring0.5677any0.3156string[]0.0580RegExp0.0122number0.0121
+.Punctuation
+indexOfName.Othernumber0.8749any0.1084complex0.0065string0.0051boolean0.0016
+(Punctuation
+"\u200C"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+iName.Othernumber0.7999any0.1901string0.0071boolean0.0017complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+testName.Otherboolean0.5832any0.3162string0.0245number0.0224complex0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextName.Othernumber0.5243any0.3593string0.0366boolean0.0143complex0.0141
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+codePointsName.Otherany0.6790string0.1676string[]0.0297RegExp0.0284any[]0.0186
+.Punctuation
+sliceName.Otherany0.3753string0.2692string[]0.1146any[]0.0961complex0.0296
+(Punctuation
+lastName.Othernumber0.3459string0.3443any0.2873complex0.0084boolean0.0050
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+codePointsName.Otherany0.4066string0.2660string[]0.1004any[]0.0398RegExp0.0319
+.Punctuation
+sliceName.Otherany0.2810string0.2668string[]0.1619any[]0.0840complex0.0252
+(Punctuation
+lastName.Othernumber0.4121any0.3021string0.2578boolean0.0097complex0.0063
+,Punctuation
+ Text.Whitespace
+nextName.Otherany0.3425number0.1703string0.1046void0.0754boolean0.0720
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+regexesName.Othercomplex0.1905RegExp0.1060any0.0758boolean0.0224RegExp[]0.0168
+.Punctuation
+validZWNJName.OtherRegExp0.9439boolean0.0319any0.0089string0.0065string[]0.0021
+.Punctuation
+testName.Otherboolean0.9926any0.0027complex0.0010void0.0007string0.0006
+(Punctuation
+testName.Otherboolean0.6277any0.1144complex0.0656RegExp0.0518string[]0.0225
+.Punctuation
+joinName.Otherstring0.8821any0.1030boolean0.0071number0.0027complex0.0025
+(Punctuation
+""Literal.String.Double
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+lastName.Othernumber0.4725any0.3622string0.1587boolean0.0029void0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iName.Othernumber0.8201any0.1659string0.0116boolean0.0012void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n              Text.Whitespace
+continueKeyword
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// https://tools.ietf.org/html/rfc5893#section-2Comment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+checkBidiName.Otherboolean0.8444any0.0966string0.0352number0.0047complex0.0033
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+rtlName.Otherboolean0.9496any0.0287string0.0049number0.0035true0.0033
+;Punctuation
+\n\n    Text.Whitespace
+// 1Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+regexesName.Othercomplex0.1259any0.1137RegExp0.0691boolean0.0472RegExpExecArray0.0189
+.Punctuation
+bidiS1LTRName.OtherRegExp0.9420boolean0.0262any0.0163string0.0045string[]0.0016
+.Punctuation
+testName.Otherboolean0.9946any0.0023void0.0006complex0.0005string0.0005
+(Punctuation
+codePointsName.Otherany0.5476any[]0.0721RegExpMatchArray0.0671string[]0.0550boolean0.0499
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+rtlName.Otherboolean0.9899any0.0059true0.0013number0.0010false0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+regexesName.Othercomplex0.2304RegExp0.1187any0.1032boolean0.0518RegExpExecArray0.0186
+.Punctuation
+bidiS1RTLName.OtherRegExp0.9599boolean0.0208any0.0075string0.0025string[]0.0011
+.Punctuation
+testName.Otherboolean0.9952any0.0016void0.0005complex0.0005string0.0004
+(Punctuation
+codePointsName.Otherany0.6325any[]0.0666boolean0.0439string[]0.0410RegExpMatchArray0.0403
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+rtlName.Otherboolean0.9883any0.0068true0.0019number0.0007false0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+rtlName.Otherboolean0.9647any0.0171string0.0040true0.0026number0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// 2-4Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+regexesName.Othercomplex0.1298RegExp0.0935any0.0568boolean0.0480false0.0175
+.Punctuation
+bidiS2Name.OtherRegExp0.9340boolean0.0412any0.0059string0.0021string[]0.0017
+.Punctuation
+testName.Otherboolean0.9965any0.0009complex0.0005true0.0003string0.0003
+(Punctuation
+labelName.Otherstring0.7925any0.1984complex0.0039number0.0020boolean0.0008
+)Punctuation
+ Text.Whitespace
+||Operator
+\n          Text.Whitespace
+!Operator
+regexesName.OtherRegExp0.1165complex0.1121boolean0.0653any0.0653boolean[]0.0222
+.Punctuation
+bidiS3Name.OtherRegExp0.8835boolean0.0842any0.0101string0.0027string[]0.0020
+.Punctuation
+testName.Otherboolean0.9971any0.0008complex0.0004void0.0003true0.0002
+(Punctuation
+labelName.Otherstring0.7765any0.2145complex0.0042number0.0016boolean0.0013
+)Punctuation
+ Text.Whitespace
+||Operator
+\n          Text.Whitespace
+(Punctuation
+regexesName.OtherRegExp0.0976complex0.0821any0.0402boolean0.0281boolean[]0.0217
+.Punctuation
+bidiS4ENName.OtherRegExp0.9234boolean0.0451any0.0088string0.0029string[]0.0023
+.Punctuation
+testName.Otherboolean0.9966any0.0009complex0.0006void0.0003true0.0003
+(Punctuation
+labelName.Otherstring0.7877any0.2032complex0.0037number0.0020boolean0.0011
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+regexesName.OtherRegExp0.0846complex0.0584any0.0278boolean[]0.0237boolean0.0211
+.Punctuation
+bidiS4ANName.OtherRegExp0.9210boolean0.0561any0.0045string0.0028string[]0.0020
+.Punctuation
+testName.Otherboolean0.9971any0.0007string0.0003complex0.0003true0.0003
+(Punctuation
+labelName.Otherstring0.7643any0.2273complex0.0028number0.0019boolean0.0006
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+regexesName.Othercomplex0.1247RegExp0.1244any0.0393boolean0.0279false0.0209
+.Punctuation
+bidiS5Name.OtherRegExp0.9308boolean0.0435any0.0040string[]0.0022false0.0020
+.Punctuation
+testName.Otherboolean0.9964any0.0007complex0.0005true0.0005false0.0004
+(Punctuation
+labelName.Otherstring0.8091any0.1823complex0.0042number0.0016boolean0.0006
+)Punctuation
+ Text.Whitespace
+||Operator
+\n               Text.Whitespace
+!Operator
+regexesName.Othercomplex0.1187RegExp0.1169any0.0615boolean0.0479boolean[]0.0212
+.Punctuation
+bidiS6Name.OtherRegExp0.8582boolean0.1060any0.0103string0.0030string[]0.0029
+.Punctuation
+testName.Otherboolean0.9978any0.0005complex0.0003true0.0002string0.0002
+(Punctuation
+labelName.Otherstring0.7965any0.1957complex0.0026number0.0021boolean0.0006
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+// 5-6Comment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isBidiDomainName.Otherboolean0.3718string0.2393any0.1414complex0.0554any[]0.0504
+(Punctuation
+labelsName.Otherany[]0.3341string[]0.2852any0.1790string0.0410number[]0.0221
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+domainName.Otherany[]0.3696any0.3229string[]0.1754string0.0680number[]0.0134
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+labelsName.Otherany[]0.3687any0.3610string[]0.2064string0.0144number[]0.0098
+.Punctuation
+mapName.OtherU[]0.9040any0.0692complex0.0163any[]0.0010U,...0.0006
+(Punctuation
+labelName.Otherstring0.5631any0.4270complex0.0020number0.0013any[]0.0004
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+labelName.Otherstring0.6934any0.3016number0.0015boolean0.0012complex0.0007
+.Punctuation
+startsWithName.Otherboolean0.8425any0.1406complex0.0068string0.0055number0.0020
+(Punctuation
+"xn--"Literal.String.Double
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+punycodeName.Otherany0.8320string0.0462complex0.0195boolean0.0072RegExp0.0055
+.Punctuation
+decodeName.Otherany0.7500string0.2316string[]0.0061complex0.0039boolean0.0016
+(Punctuation
+labelName.Otherstring0.5757any0.4213complex0.0007number0.0005boolean0.0003
+.Punctuation
+substringName.Otherstring0.5859any0.4081complex0.0027number0.0011boolean0.0006
+(Punctuation
+4Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9959string0.0017Error0.0008number0.0006complex0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+""Literal.String.Double
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+labelName.Otherstring0.7278any0.2630boolean0.0018number0.0013complex0.0007
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+.Punctuation
+joinName.Otherstring0.7311any0.2467complex0.0130number0.0029boolean0.0022
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+regexesName.OtherRegExp0.1002any0.0727complex0.0356false0.0241boolean0.0238
+.Punctuation
+bidiDomainName.OtherRegExp0.8712any0.0507boolean0.0407string0.0149string[]0.0022
+.Punctuation
+testName.Otherboolean0.9909any0.0043string0.0010complex0.0006RegExp0.0006
+(Punctuation
+domainName.Otherstring0.7004any0.2573string[]0.0127any[]0.0072RegExp0.0047
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+processingName.Othervoid0.5599complex0.2471boolean0.0319any0.0262string0.0243
+(Punctuation
+domainNameName.Otherstring0.7174any0.2568number0.0076complex0.0031boolean0.0031
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6814Options0.0598string0.0178number0.0100object0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+processingOptionName.Otherany0.7703string0.1410boolean0.0347number0.0169complex0.0091
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.4070complex0.0696Options0.0665{}0.0188string0.0146
+;Punctuation
+\n\n  Text.Whitespace
+// 1. Map.Comment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+stringKeyword.Type
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.4592boolean0.2451string0.1675Error0.0488void0.0241
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mapCharsName.Otherany0.3453complex0.3253string0.2246boolean0.0378any[]0.0101
+(Punctuation
+domainNameName.Otherstring0.7470any0.2106complex0.0202number0.0057boolean0.0049
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7685complex0.0485Options0.0359string0.0232number0.0119
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// 2. Normalize.Comment.Single
+\n  Text.Whitespace
+stringKeyword.Type
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringKeyword.Type
+.Punctuation
+normalizeName.Othercomplex0.4594any0.4133string0.0900RegExp0.0055{}0.0053
+(Punctuation
+"NFC"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// 3. Break.Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+labelsName.Otherstring[]0.9208any0.0303string0.0280any[]0.0154complex0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringKeyword.Type
+.Punctuation
+splitName.Othercomplex0.9234any0.0722string0.0013string[]0.0012void0.0005
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isBidiName.Otherstring0.3244string[]0.3113any0.1992any[]0.0375boolean0.0286
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isBidiDomainName.Otherstring[]0.2954string0.2823any0.1556complex0.0605boolean0.0565
+(Punctuation
+labelsName.Otherstring[]0.6831any0.1286string0.1067any[]0.0527RegExp0.0059
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// 4. Convert/Validate.Comment.Single
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+[Punctuation
+iName.Othernumber0.4215string0.3097any0.2599complex0.0014boolean0.0011
+,Punctuation
+ Text.Whitespace
+origLabelName.Otherstring0.7293any0.2088number0.0254string[]0.0091complex0.0069
+]Punctuation
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+labelsName.Otherstring[]0.3655any0.3286any[]0.1018complex0.0976string0.0062
+.Punctuation
+entriesName.Othercomplex0.6659any0.2609string[]0.0160any[]0.0122string0.0066
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+labelName.Otherstring0.9291any0.0667number0.0014string[]0.0010boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+origLabelName.Otherstring0.8640any0.1093number0.0082boolean0.0069string[]0.0063
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+curProcessingName.Otherstring0.7105any0.2160boolean0.0307string[]0.0189number0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processingOptionName.Otherstring0.6504any0.2633boolean0.0417number0.0139string[]0.0134
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+labelName.Otherstring0.9144any0.0820string[]0.0008boolean0.0008number0.0008
+.Punctuation
+startsWithName.Otherboolean0.8710any0.1037complex0.0140string0.0058number0.0020
+(Punctuation
+"xn--"Literal.String.Double
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+labelName.Otherstring0.6682any0.3275complex0.0017number0.0008string[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+punycodeName.Otherany0.4990string0.2159complex0.1034string[]0.1008RegExp0.0058
+.Punctuation
+decodeName.Otherstring0.6625any0.3024string[]0.0233complex0.0054number0.0015
+(Punctuation
+labelName.Otherstring0.6821any0.3150string[]0.0008complex0.0008number0.0005
+.Punctuation
+substringName.Otherstring0.6598any0.3347complex0.0027number0.0008void0.0008
+(Punctuation
+4Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+labelsName.Otherstring[]0.6332any0.1670any[]0.1412string0.0139number[]0.0112
+[Punctuation
+iName.Othernumber0.8826string0.0793any0.0351boolean0.0018void0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+labelName.Otherstring0.8279any0.1678number0.0011boolean0.0009complex0.0007
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9961string0.0014Error0.0014number0.0004boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+errorName.Otherboolean0.9813any0.0136string0.0018false0.0012number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+continueKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+curProcessingName.Otherstring0.9101any0.0536RegExp0.0240boolean0.0051string[]0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"nontransitional"Literal.String.Double
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// No need to validate if we already know there is an error.Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherboolean0.4875any0.2799string0.1142Error0.0817false0.0110
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+continueKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+validationName.Otherany0.6550complex0.1189boolean0.0389any[]0.0247string0.0184
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+validateLabelName.Otherany0.3677complex0.2427boolean0.1384string0.1291any[]0.0129
+(Punctuation
+labelName.Otherstring0.7097any0.2800complex0.0029number0.0017boolean0.0004
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+...Punctuation
+optionsName.Otherany0.5908Options0.0315any[]0.0251complex0.0238number0.0122
+,Punctuation
+\n      Text.Whitespace
+processingOptionName.Otherboolean0.4807any0.2731string0.1517number0.0263complex0.0123
+:Operator
+ Text.Whitespace
+curProcessingKeyword.Typeboolean0.5300any0.2003string0.1651number0.0253any[]0.0140
+,Punctuation
+\n      Text.Whitespace
+checkBidiName.Otherboolean0.8028any0.1136string0.0572number0.0089complex0.0032
+:Operator
+ Text.Whitespace
+options.checkBidiKeyword.Type
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+isBidiName.Otherboolean0.6061any0.2532string0.0955number0.0139complex0.0059
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+validationName.Otherany0.8836boolean0.0313complex0.0233any[]0.0177string0.0093
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+errorName.Otherboolean0.9774any0.0172string0.0015false0.0012number0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+stringKeyword.Type
+:Operator
+ Text.Whitespace
+labelsName.Otherstring[]0.7896any0.1243any[]0.0468string0.0111number[]0.0022
+.Punctuation
+joinName.Otherstring0.8414any0.1495complex0.0023string[]0.0015boolean0.0014
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+errorName.Otherany0.4071string0.2518boolean0.2070Error0.0739number0.0093
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toASCIIName.Otherany0.4101string0.1512boolean0.1490complex0.0743void0.0393
+(Punctuation
+domainNameName.Otherstring0.8606any0.1249boolean0.0041number0.0022complex0.0009
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+checkHyphensName.Otherboolean0.9929any0.0035string0.0013false0.0010number0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+checkBidiName.Otherboolean0.9933any0.0027false0.0017string0.0010true0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+checkJoinersName.Otherboolean0.9924any0.0034false0.0018string0.0009true0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+useSTD3ASCIIRulesName.Otherboolean0.9912any0.0041false0.0019string0.0009true0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+processingOptionName.Otherstring0.5024RegExp0.2058any0.2032boolean0.0709string[]0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"nontransitional"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+verifyDNSLengthName.Otherboolean0.9852any0.0076false0.0023string0.0015true0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processingOptionName.Otherstring0.5146any0.3281boolean0.1136RegExp0.0149number0.0086
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"transitional"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+processingOptionName.Otherstring0.6796any0.2501boolean0.0488number0.0062RegExp0.0049
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"nontransitional"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.4460Error0.3820string0.0218number0.0105never0.0076
+ Text.Whitespace
+newOperator.WordError0.0779any0.0660Type0.0247string0.0247HTMLDivElement0.0147
+ Text.Whitespace
+RangeErrorName.ExceptionRangeErrorConstructor0.7872SetConstructor0.0029ErrorConstructor0.0025Promise<T>0.0010IState0.0008
+(Punctuation
+"processingOption must be either transitional or nontransitional"Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.7270complex0.0601boolean0.0447number0.0386void0.0235
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processingName.Othercomplex0.8957void0.0328any0.0096any[]0.0076boolean0.0065
+(Punctuation
+domainNameName.Otherstring0.8968any0.0785complex0.0053number0.0043boolean0.0027
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+processingOptionName.Otherstring0.5226any0.2815boolean0.0723number0.0468string[]0.0180
+,Punctuation
+\n    Text.Whitespace
+checkHyphensName.Otherstring0.3919any0.3069boolean0.1597number0.0530string[]0.0219
+,Punctuation
+\n    Text.Whitespace
+checkBidiName.Otherstring0.3339any0.3145boolean0.2074number0.0535string[]0.0225
+,Punctuation
+\n    Text.Whitespace
+checkJoinersName.Otherany0.3381string0.3107boolean0.2176number0.0459string[]0.0221
+,Punctuation
+\n    Text.Whitespace
+useSTD3ASCIIRulesName.Otherstring0.3875any0.2722boolean0.2372number0.0458string[]0.0154
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+labelsName.Otherstring[]0.5703any0.2737string0.1255any[]0.0165complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resultName.Otherany0.7959complex0.0195string[]0.0122string0.0103boolean0.0042
+.Punctuation
+stringKeyword.Type
+.Punctuation
+splitName.Othercomplex0.8242any0.1645string0.0030void0.0017string[]0.0017
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+labelsName.Otherstring[]0.7559any0.1259string0.0502any[]0.0500number[]0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+labelsName.Otherstring[]0.8035any0.1059any[]0.0434string0.0304number[]0.0049
+.Punctuation
+mapName.OtherU[]0.9740any0.0137complex0.0069U,...0.0005Observable...0.0002
+(Punctuation
+lName.Otherstring0.8233any0.1519number0.0147complex0.0027string[]0.0011
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+containsNonASCIIName.Otherstring0.6563boolean0.1691any0.1389number0.0101complex0.0077
+(Punctuation
+lName.Otherstring0.8090any0.1673number0.0152complex0.0014boolean0.0011
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+xn--Literal.String.Backtick
+${Literal.String.Interpol
+punycodeName.Otherany0.8261string0.0791complex0.0527string[]0.0021RegExp0.0014
+.Punctuation
+encodeName.Otherstring0.7584any0.2075complex0.0074void0.0052string[]0.0036
+(Punctuation
+lName.Otherstring0.7278any0.2388number0.0246complex0.0012boolean0.0012
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9987string0.0004complex0.0003Error0.0002number0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+resultName.Otherany0.3786boolean0.0556complex0.0555false0.0102Error0.0058
+.Punctuation
+errorName.Otherboolean0.9376any0.0545string0.0025number0.0014void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+lName.Otherstring0.6317any0.3113number0.0302boolean0.0184complex0.0009
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+verifyDNSLengthName.Otherboolean0.6806any0.1785string0.0922string[]0.0095complex0.0054
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+totalName.Otherany0.6145number0.3289string0.0495complex0.0021boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+labelsName.Otherstring[]0.7308any0.1736any[]0.0428string0.0221number[]0.0041
+.Punctuation
+joinName.Otherstring0.5961any0.3834complex0.0093number0.0026string[]0.0024
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+.Punctuation
+lengthName.Otherany0.7035number0.2881string0.0054complex0.0012boolean0.0006
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+totalName.Othernumber0.5566any0.4299string0.0081boolean0.0032complex0.0012
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+253Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+totalName.Othernumber0.7068any0.2769string0.0113boolean0.0023complex0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.Otherany0.5416complex0.0343boolean0.0270void0.0067IGitResult0.0048
+.Punctuation
+errorName.Otherboolean0.9291any0.0648string0.0016number0.0015void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9935any0.0047string0.0012boolean0.0003void0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9869any0.0090string0.0029boolean0.0004void0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+labelsName.Otherstring[]0.5593any0.2493string0.1079any[]0.0399number[]0.0064
+.Punctuation
+lengthName.Othernumber0.8263any0.1688string0.0032complex0.0004void0.0004
+;Punctuation
+ Text.Whitespace
+++Operator
+iName.Othernumber0.9864any0.0097string0.0029boolean0.0005void0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+labelsName.Otherany0.3904string[]0.3747any[]0.1465number[]0.0124string0.0086
+[Punctuation
+iName.Othernumber0.9539any0.0236string0.0200boolean0.0015void0.0003
+]Punctuation
+.Punctuation
+lengthName.Othernumber0.5836any0.4110string0.0029boolean0.0009complex0.0007
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+63Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+labelsName.Otherstring[]0.4377any0.3649any[]0.1092number[]0.0118string0.0106
+[Punctuation
+iName.Othernumber0.9343any0.0316string0.0309boolean0.0018void0.0004
+]Punctuation
+.Punctuation
+lengthName.Otherany0.5040number0.4893string0.0037boolean0.0010complex0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+resultName.Otherany0.5480complex0.0595boolean0.0546void0.0067Error0.0059
+.Punctuation
+errorName.Otherboolean0.9473any0.0463string0.0019number0.0018void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+breakKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.4044complex0.0262boolean0.0156string0.0061void0.0057
+.Punctuation
+errorName.Otherany0.4867boolean0.3361string0.1259number0.0150Error0.0095
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+labelsName.Otherstring[]0.7670any[]0.1033any0.0774string0.0104number[]0.0047
+.Punctuation
+joinName.Otherstring0.8599any0.1288complex0.0032number0.0021string[]0.0016
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toUnicodeName.Otherstring0.3755any0.3044void0.1510complex0.0645boolean0.0117
+(Punctuation
+domainNameName.Otherstring0.8629any0.1228number0.0035boolean0.0030complex0.0009
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+checkHyphensName.Otherboolean0.9946any0.0022string0.0012false0.0007number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+checkBidiName.Otherboolean0.9941any0.0026false0.0010string0.0009number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+checkJoinersName.Otherboolean0.9929any0.0033false0.0013string0.0010number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+useSTD3ASCIIRulesName.Otherboolean0.9923any0.0036false0.0014string0.0010number0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n  Text.Whitespace
+processingOptionName.Otherstring0.5692any0.2689RegExp0.0759boolean0.0587string[]0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"nontransitional"Literal.String.Double
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.7429boolean0.0760complex0.0758number0.0253string0.0168
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+processingName.Othercomplex0.9333void0.0158any0.0107boolean0.0057any[]0.0053
+(Punctuation
+domainNameName.Otherstring0.8398any0.1299complex0.0072number0.0060boolean0.0044
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+processingOptionName.Otherstring0.5249any0.3059boolean0.0795number0.0332complex0.0166
+,Punctuation
+\n    Text.Whitespace
+checkHyphensName.Otherstring0.3774any0.3401boolean0.1635number0.0360void0.0240
+,Punctuation
+\n    Text.Whitespace
+checkBidiName.Otherany0.3400string0.3165boolean0.2203number0.0355void0.0247
+,Punctuation
+\n    Text.Whitespace
+checkJoinersName.Otherany0.3542string0.2748boolean0.2521number0.0311void0.0229
+,Punctuation
+\n    Text.Whitespace
+useSTD3ASCIIRulesName.Otherany0.3108boolean0.3095string0.2841number0.0392complex0.0124
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+domainName.Otherstring0.6938any0.2604boolean0.0092number0.0088any[]0.0043
+:Operator
+ Text.Whitespace
+result.stringKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+errorName.Otherboolean0.3755string0.3026any0.2543number0.0303Error0.0092
+:Operator
+ Text.Whitespace
+result.errorKeyword.Type
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+toASCIIName.Otherstring0.4144any0.3694boolean0.1117number0.0443void0.0129
+,Punctuation
+\n  Text.Whitespace
+toUnicodeName.Otherany0.5220string0.4457void0.0085complex0.0060boolean0.0029
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,250 @@
+'use strict'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+/**\n * Copyright (C) 2017-present by Andrea Giammarchi - @WebReflection\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the "Software"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+replaceName.Otherany0.7220complex0.1324void0.0570string0.0450boolean0.0171
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// escapeComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+esName.Otherstring0.8859RegExp0.0728any0.0134string[]0.0118boolean0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34);/gLiteral.String.Regex
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+caName.Otherstring0.5067RegExp0.3799string[]0.0865any0.0088boolean0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/[&<>'"]/gLiteral.String.Regex
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+escaName.Othercomplex0.8338any0.1030string0.0056{}0.0034any[]0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'&'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&amp;'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'<'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&lt;'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'>'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&gt;'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+"'"Literal.String.Double
+:Operator
+ Text.Whitespace
+'&#39;'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'"'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&quot;'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+peName.Otherany0.7398complex0.0793string0.0739any[]0.0128void0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mName.Otherany0.7141string0.1436complex0.0372number0.0121any[]0.0063
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+escaName.Othercomplex0.5990any0.2850{}0.0419any[]0.0140string[]0.0033
+[Punctuation
+mName.Otherstring0.7415any0.1606number0.0610complex0.0125void0.0016
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Safely escape HTML entities such as `&`, `<`, `>`, `"`, and `'`.\n * @param {string} es the input to safely escape\n * @returns {string} the escaped input, and it **throws** an error if\n *  the input type is unexpected, except for boolean and numbers,\n *  converted as string.\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+escapeName.Otherstring0.9722any0.0246complex0.0009string[]0.0008boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+esName.Otherany0.6537string0.3388any[]0.0016complex0.0009boolean0.0008
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+replaceName.Otherany0.8316void0.0777complex0.0571string0.0128boolean0.0072
+.Punctuation
+callName.Otherany0.9483complex0.0295void0.0065string0.0043number0.0015
+(Punctuation
+esName.Otherany0.6896string0.2928complex0.0019void0.0018boolean0.0016
+,Punctuation
+ Text.Whitespace
+caName.Otherstring0.5530any0.3054string[]0.0626void0.0320complex0.0162
+,Punctuation
+ Text.Whitespace
+peName.Otherany0.7746complex0.1274string0.0532void0.0147any[]0.0055
+)Punctuation
+;Punctuation
+\nText.Whitespace
+exportsName.Otherany0.7687complex0.1289string0.0061Object0.0054any[]0.0034
+.Punctuation
+escapeName.Otherstring0.8510any0.1399complex0.0061void0.0010number0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+escapeName.Otherstring0.9688any0.0205complex0.0089number0.0005string[]0.0004
+;Punctuation
+\n\n\nText.Whitespace
+// unescapeComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unesName.Othercomplex0.8992any0.0808string0.0039{}0.0011any[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+'&amp;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&#38;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'&'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&lt;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'<'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&#60;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'<'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&gt;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'>'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&#62;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'>'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&apos;'Literal.String.Single
+:Operator
+ Text.Whitespace
+"'"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+'&#39;'Literal.String.Single
+:Operator
+ Text.Whitespace
+"'"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+'&quot;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'"'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+'&#34;'Literal.String.Single
+:Operator
+ Text.Whitespace
+'"'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+capeName.Otherany0.7842complex0.0674string0.0608any[]0.0151void0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+mName.Otherany0.7427string0.1299complex0.0311number0.0115any[]0.0077
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+unesName.Othercomplex0.4926any0.4163{}0.0372any[]0.0129string0.0020
+[Punctuation
+mName.Otherstring0.7010any0.2027number0.0603complex0.0118void0.0013
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Safely unescape previously escaped entities such as `&`, `<`, `>`, `"`,\n * and `'`.\n * @param {string} un a previously escaped string\n * @returns {string} the unescaped input, and it **throws** an error if\n *  the input type is unexpected, except for boolean and numbers,\n *  converted as string.\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unescapeName.Otherany0.8530string0.1348complex0.0028any[]0.0024number0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+unName.Otherany0.9340string0.0335complex0.0140any[]0.0105{}0.0014
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+replaceName.Otherany0.8962void0.0464complex0.0433string0.0047boolean0.0036
+.Punctuation
+callName.Otherany0.9479complex0.0300void0.0057string0.0048T0.0013
+(Punctuation
+unName.Otherany0.7404complex0.1205string0.0730any[]0.0157void0.0121
+,Punctuation
+ Text.Whitespace
+esName.Otherany0.7966string0.1805complex0.0046void0.0025any[]0.0021
+,Punctuation
+ Text.Whitespace
+capeName.Otherany0.8094complex0.1170string0.0277void0.0099any[]0.0095
+)Punctuation
+;Punctuation
+\nText.Whitespace
+exportsName.Otherany0.8329complex0.0701any[]0.0080Object0.0040string0.0025
+.Punctuation
+unescapeName.Otherany0.9241string0.0668complex0.0033number0.0018boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+unescapeName.Otherany0.7593string0.2068complex0.0131number0.0060any[]0.0026
+;Punctuation
+\nText.Whitespace

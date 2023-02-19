@@ -1,0 +1,242 @@
+constKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9929string0.0042complex0.0012Path0.0002any[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'path'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fsName.Otherany0.9950string0.0018complex0.0010any[]0.0002Buffer0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'fs'Literal.String.Single
+)Punctuation
+.Punctuation
+promisesName.Otherany0.9862string0.0069Promise<any>0.0011complex0.0010void0.0008
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+packBrowsersName.Otherany0.9698string0.0066void0.0043Promise<any>0.0037any[]0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./browsers'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+runTasksName.Otherany0.9753string0.0075void0.0046Promise<any>0.0036any[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../lib/runTasks'Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+Text
+/* Subsequent tasks need to be lazily loaded as the generator order matters,\n   and the files are destroyed/re-created on each packing step. */Comment.Multiline
+\n\nText.Whitespace
+runTasksName.Otherany0.6572void0.2181string0.0438Promise<void>0.0335Promise<any>0.0137
+(Punctuation
+[Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.9977any0.0010RegExp0.0004number0.0003boolean0.0001
+:Operator
+ Text.Whitespace
+'Create folders'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+taskName.OtherPromise<void>0.4327any0.1815string0.0850Promise<string>0.0752Promise<any>0.0526
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+fsName.Otherany0.9938complex0.0017string0.0013any[]0.0002Buffer0.0002
+.Punctuation
+mkdirName.Otherany0.9704complex0.0132Promise<void>0.0064string0.0033Promise<string>0.0018
+(Punctuation
+pathName.Otherany0.9981string0.0010complex0.0008number0.0000any[]0.0000
+.Punctuation
+joinName.Otherany0.8942complex0.1038string0.0012number0.0001{}0.0001
+(Punctuation
+__dirnameName.Otherany0.7101string0.2846number0.0018boolean0.0009complex0.0006
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'data'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'features'Literal.String.Single
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+recursiveName.Otherboolean0.9989true0.0003false0.0002any0.0001number0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+fsName.Otherany0.9885complex0.0047string0.0014any[]0.0007number0.0003
+.Punctuation
+mkdirName.Otherany0.9702complex0.0178Promise<void>0.0036string0.0027void0.0011
+(Punctuation
+pathName.Otherany0.9981complex0.0010string0.0007any[]0.0000number0.0000
+.Punctuation
+joinName.Otherany0.8439complex0.1542string0.0010any[]0.0002void0.0001
+(Punctuation
+__dirnameName.Otherany0.7390string0.2543number0.0018boolean0.0012complex0.0010
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'..'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'data'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'regions'Literal.String.Single
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+recursiveName.Otherboolean0.9987true0.0004any0.0002false0.0002number0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.9967any0.0017RegExp0.0006number0.0004boolean0.0001
+:Operator
+ Text.Whitespace
+'Browsers - Mangle application name'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+taskName.Otherany0.4632string0.4196boolean0.0202void0.0137number0.0132
+:Operator
+ Text.Whitespace
+packBrowsersKeyword.Typeany0.5926string0.2520void0.0406number0.0217complex0.0194
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.9966any0.0016RegExp0.0009number0.0003string[]0.0001
+:Operator
+ Text.Whitespace
+'Browsers - Mangle version naming & agents usage'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+taskName.Otherany0.8404string0.1396number0.0030void0.0030Promise<any>0.0011
+:Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./agents'Literal.String.Single
+)Punctuation
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.9977any0.0011RegExp0.0005number0.0002string[]0.0001
+:Operator
+ Text.Whitespace
+'Features - Mangle support data'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+taskName.Otherany0.8365string0.1427number0.0036void0.0035Promise<any>0.0013
+:Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./feature'Literal.String.Single
+)Punctuation
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.9980any0.0009RegExp0.0004number0.0003string[]0.0001
+:Operator
+ Text.Whitespace
+'Regional - Mangle browser usage data'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+taskName.Otherany0.7756string0.1976number0.0064void0.0046boolean0.0014
+:Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./region'Literal.String.Single
+)Punctuation
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+]Punctuation
+)Punctuation
+\nText.Whitespace

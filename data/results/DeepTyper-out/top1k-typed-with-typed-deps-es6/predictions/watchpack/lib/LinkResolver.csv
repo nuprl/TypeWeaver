@@ -1,0 +1,718 @@
+Text
+/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+fsName.Otherany0.9812string0.0065complex0.0051number0.0006void0.0005
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.9213string0.0622complex0.0060Path0.0026string[]0.0007
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// macOS, Linux, and Windows all rely on these errorsComment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+EXPECTED_ERRORSName.OtherSet<string>0.4552Set<any>0.3468any0.0309Set<number>0.0144any[]0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.5989Set<any>0.0930Set<string>0.0756symbol0.0234object0.0136
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9813any0.0074Set<any>0.0054Set<string>0.0007Set<number>0.0003
+(Punctuation
+[Punctuation
+"EINVAL"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"ENOENT"Literal.String.Double
+]Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// On Windows there is also this error in some casesComment.Single
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+processName.Otherany0.9871complex0.0047Set<any>0.0007this0.0004boolean0.0003
+.Punctuation
+platformName.Otherany0.9755string0.0156boolean0.0034complex0.0013number0.0007
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"win32"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+EXPECTED_ERRORSName.Otherany0.5477Set<any>0.2051Set<string>0.0729RegExp0.0103ILogger0.0034
+.Punctuation
+addName.Otherany0.7420Set<any>0.0796void0.0632Set<string>0.0594boolean0.0062
+(Punctuation
+"UNKNOWN"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+LinkResolverName.Otherany0.9979complex0.0006string0.0006number0.0002symbol0.0001
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+cacheName.Othercomplex0.9178any0.0648{}0.0045void0.0010Set<any>0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6582complex0.0904string0.0625MapConstructor0.0223{}0.0130
+ Text.Whitespace
+MapName.BuiltinMapConstructor0.9933any0.0027SetConstructor0.0003FunctionConstructor0.0002symbol0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+/**\n\t * @param {string} file path to file or directory\n\t * @returns {string[]} array of file and all symlinks contributed in the resolving process (first item is the resolved file)\n\t */Comment.Multiline
+\n\tText.Whitespace
+resolveName.Otherany0.7628void0.0489complex0.0455string0.0363boolean0.0100
+(Punctuation
+fileName.Otherstring0.5641any0.1956File0.0905Path0.0036ResolvedUrl0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+cacheEntryName.Otherany0.8390complex0.0107string0.0086number0.0061boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+cacheName.Othercomplex0.7283any0.2325{}0.0052T0.0041Cache0.0011
+.Punctuation
+getName.Other
+(Punctuation
+fileName.Otherstring0.5573any0.4071File0.0059complex0.0035number0.0022
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cacheEntryName.Otherany0.8949string0.0506number0.0095complex0.0089boolean0.0081
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+cacheEntryName.Otherany0.8345string0.0773boolean0.0123{}0.0075complex0.0071
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentName.Otherany0.9221string0.0731complex0.0011number0.0004T0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9961string0.0014complex0.0011Path0.0006any[]0.0001
+.Punctuation
+dirnameName.Otherany0.9817complex0.0109string0.0050Path0.0003{}0.0002
+(Punctuation
+fileName.Otherstring0.8090any0.1798File0.0015complex0.0013number0.0010
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentName.Otherany0.7244string0.2489complex0.0113T0.0021number0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+fileName.Otherstring0.6504any0.3268File0.0045complex0.0021number0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+// At root of filesystem there can't be a linkComment.Single
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.2989complex0.1637string[]0.1068Object0.0559any[]0.0457
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998complex0.0000Object0.0000any0.0000ArrayConstructor0.0000
+.Punctuation
+freezeName.Othercomplex0.9960any0.0019boolean0.0002void0.0002string0.0002
+(Punctuation
+[Punctuation
+fileName.Otherstring0.6885any0.2839complex0.0060File0.0029number0.0021
+]Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+cacheName.Othercomplex0.8223any0.1572{}0.0042void0.0025T0.0010
+.Punctuation
+setName.Other
+(Punctuation
+fileName.Otherstring0.6244any0.3093File0.0135complex0.0056number0.0035
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.5010complex0.0702string0.0410{}0.0336any[]0.0229
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.5317any[]0.0601{}0.0413complex0.0368string[]0.0327
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+// resolve the parent directory to find links there and get the real pathComment.Single
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parentResolvedName.Otherany0.8801string0.0175number0.0065complex0.0060void0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+resolveName.Otherany0.7987complex0.1228Function0.0133string0.0098void0.0089
+(Punctuation
+parentName.Otherany0.5529string0.3998complex0.0057T0.0020number0.0014
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+realFileName.Otherany0.7511string0.0828complex0.0044File0.0033RegExpMatchArray0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fileName.Otherany0.6102string0.3170File0.0173complex0.0037number0.0036
+;Punctuation
+\n\n\t\tText.Whitespace
+// is the parent directory really somewhere else?Comment.Single
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentResolvedName.Otherany0.6002RegExpMatchArray0.0810string[]0.0554complex0.0342any[]0.0329
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+parentName.Otherstring0.7037any0.2701number0.0061complex0.0018never0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+// get the real location of fileComment.Single
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+basenameName.Otherany0.9621string0.0358complex0.0007number0.0006boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9989string0.0007complex0.0002Path0.0000number0.0000
+.Punctuation
+basenameName.Otherany0.9894string0.0058complex0.0036number0.0002void0.0001
+(Punctuation
+fileName.Otherstring0.7285any0.2623number0.0039boolean0.0010complex0.0008
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+realFileName.Otherany0.9567string0.0372number0.0037boolean0.0005void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9988string0.0004complex0.0003Path0.0001number0.0001
+.Punctuation
+resolveName.Otherany0.9862complex0.0082string0.0016void0.0009number0.0008
+(Punctuation
+parentResolvedName.Otherany0.6806any[]0.0863string[]0.0617complex0.0286number[]0.0246
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+basenameName.Otherany0.8786string0.1152number0.0023complex0.0007boolean0.0004
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+// try to read the link contentComment.Single
+\n\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+linkContentName.Otherany0.9308string0.0364string[]0.0038number0.0038any[]0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9981complex0.0007string0.0006number0.0001any[]0.0001
+.Punctuation
+readlinkSyncName.Otherany0.9417complex0.0266string0.0172number0.0031any[]0.0019
+(Punctuation
+realFileName.Otherany0.8140string0.1403number0.0129complex0.0102string[]0.0039
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// resolve the link content relative to the parent directoryComment.Single
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resolvedLinkName.Otherany0.9942string0.0037number0.0007complex0.0002boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9988string0.0004complex0.0002Path0.0001number0.0000
+.Punctuation
+resolveName.Otherany0.9896complex0.0058string0.0011void0.0009number0.0004
+(Punctuation
+parentResolvedName.Otherany0.6081string[]0.1138any[]0.0917complex0.0307number[]0.0219
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+linkContentName.Otherany0.8887string0.0507number0.0098void0.0060boolean0.0059
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// recursive resolve the link content for more links in the structureComment.Single
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+linkResolvedName.Otherany0.9706Function0.0030number0.0027string0.0023void0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+resolveName.Otherany0.8878complex0.0539void0.0133Function0.0102string0.0070
+(Punctuation
+resolvedLinkName.Otherany0.8777string0.0726string[]0.0082any[]0.0054number0.0053
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+// merge parent and link resolve resultsComment.Single
+\n\t\t\tText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.9399string0.0163any[]0.0100number[]0.0036boolean0.0035
+;Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+linkResolvedName.Otherany0.8384string[]0.0565any[]0.0263string0.0171number[]0.0117
+.Punctuation
+lengthName.Othernumber0.5902any0.4054string0.0017complex0.0011boolean0.0007
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+parentResolvedName.Otherany0.8909string[]0.0245any[]0.0218number[]0.0099string0.0076
+.Punctuation
+lengthName.Othernumber0.5045any0.4912string0.0017complex0.0011boolean0.0005
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+// when both contain links we need to duplicate them with a SetComment.Single
+\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultSetName.OtherSet<any>0.4944Set<string>0.2116any0.0563SetConstructor0.0246Set<number>0.0191
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3733Set<any>0.1673Set<string>0.1087SetConstructor0.1083Set<number>0.0178
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9661any0.0191Set<any>0.0065Set<string>0.0007number0.0004
+(Punctuation
+linkResolvedName.Otherany0.7515any[]0.0404number0.0239string[]0.0195string0.0186
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+// add the linkComment.Single
+\n\t\t\t\tText.Whitespace
+resultSetName.OtherSet<any>0.3636any0.1871Set<string>0.0904SetConstructor0.0227any[]0.0042
+.Punctuation
+addName.Otherany0.6848Set<any>0.0992Set<string>0.0927void0.0476boolean0.0082
+(Punctuation
+realFileName.Otherany0.8099number0.0316string0.0300number[]0.0190string[]0.0190
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+// add all symlinks of the parentComment.Single
+\n\t\t\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9918any0.0071string0.0003boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9790any0.0192string0.0006void0.0003boolean0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+parentResolvedName.Otherany0.6285string[]0.0689any[]0.0603number[]0.0185complex0.0101
+.Punctuation
+lengthName.Othernumber0.8971any0.1007string0.0009void0.0003boolean0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9591any0.0394boolean0.0005string0.0004void0.0003
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+resultSetName.Otherany0.3608Set<any>0.1692Set<string>0.0400SetConstructor0.0093ILogger0.0065
+.Punctuation
+addName.Otherany0.8086void0.0546Set<any>0.0431Set<string>0.0393complex0.0080
+(Punctuation
+parentResolvedName.Otherany0.7562any[]0.0624string[]0.0403complex0.0236number[]0.0115
+[Punctuation
+iName.Othernumber0.9729any0.0220string0.0032boolean0.0003void0.0002
+]Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+resultName.Otherany0.5293complex0.1866any[]0.0543string[]0.0463Object0.0244
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997complex0.0001any0.0001Object0.0000{}0.0000
+.Punctuation
+freezeName.Othercomplex0.9965any0.0022void0.0003{}0.0001boolean0.0001
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9990ObjectConstructor0.0002any0.0001Math0.0000complex0.0000
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+resultSetName.Otherany0.1176any[]0.0360RegExpMatchArray0.0166Set<any>0.0145number[]0.0095
+)Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+parentResolvedName.Otherany0.5587string[]0.1396any[]0.1339complex0.0259number[]0.0232
+.Punctuation
+lengthName.Othernumber0.8230any0.1724string0.0019complex0.0011boolean0.0006
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+// we have links in the parent but not for the link content locationComment.Single
+\n\t\t\t\tText.Whitespace
+resultName.Otherany0.4490any[]0.2433string[]0.1137complex0.0321number[]0.0196
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentResolvedName.Otherany0.4442string[]0.1815any[]0.1789complex0.0460string0.0229
+.Punctuation
+sliceName.Otherany0.2771string[]0.1865any[]0.1351complex0.1047string0.0869
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+resultName.Otherany[]0.2613any0.2612number[]0.1143complex0.0640string[]0.0560
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+linkResolvedName.Otherany0.6741any[]0.0998string[]0.0474complex0.0414number[]0.0229
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+// add the linkComment.Single
+\n\t\t\t\tText.Whitespace
+resultName.Otherany[]0.4473any0.2230string[]0.1371number[]0.0373complex0.0230
+.Punctuation
+pushName.Othernumber0.9331any0.0570void0.0030boolean0.0019complex0.0014
+(Punctuation
+realFileName.Otherany0.8798string0.0456complex0.0148number0.0110string[]0.0057
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9990complex0.0003any0.0003Object0.0001{}0.0000
+.Punctuation
+freezeName.Othercomplex0.9778any0.0128void0.0050string[]0.0008string0.0006
+(Punctuation
+resultName.Otherany0.7151string[]0.0456any[]0.0359string0.0340{}0.0243
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+linkResolvedName.Otherany0.7464string[]0.1065any[]0.0499complex0.0187string0.0102
+.Punctuation
+lengthName.Othernumber0.7473any0.2479string0.0020complex0.0013boolean0.0005
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+// we can return the link content location resultComment.Single
+\n\t\t\t\tText.Whitespace
+resultName.Otherany0.5131any[]0.1521string[]0.1405complex0.0465string0.0177
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+linkResolvedName.Otherany0.4573string[]0.2335any[]0.1377complex0.0389string0.0245
+.Punctuation
+sliceName.Otherstring[]0.3139any0.2982any[]0.1038string0.0875complex0.0524
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+// add the linkComment.Single
+\n\t\t\t\tText.Whitespace
+resultName.Otherany[]0.5135string[]0.1580any0.1516number[]0.0309complex0.0205
+.Punctuation
+pushName.Othernumber0.9429any0.0477void0.0024boolean0.0023complex0.0013
+(Punctuation
+realFileName.Otherany0.8496string0.0625complex0.0154number0.0121string[]0.0068
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9992complex0.0002any0.0002Object0.0001{}0.0000
+.Punctuation
+freezeName.Othercomplex0.9839any0.0087void0.0044string[]0.0004string0.0004
+(Punctuation
+resultName.Otherany0.6819{}0.0391complex0.0298string0.0262object0.0254
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+// neither link content location nor parent have linksComment.Single
+\n\t\t\t\tText.Whitespace
+// this link is the only link hereComment.Single
+\n\t\t\t\tText.Whitespace
+resultName.Otherany0.4785complex0.1091string[]0.0998any[]0.0698Object0.0312
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998complex0.0001any0.0000Object0.0000{}0.0000
+.Punctuation
+freezeName.Othercomplex0.9961any0.0023void0.0003string[]0.0002boolean0.0001
+(Punctuation
+[Punctuation
+\n\t\t\t\t\tText.Whitespace
+// the resolve real locationComment.Single
+\n\t\t\t\t\tText.Whitespace
+linkResolvedName.Otherany0.4715complex0.1573string[]0.1320any[]0.0560number[]0.0201
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+// add the linkComment.Single
+\n\t\t\t\t\tText.Whitespace
+realFileName.Otherany0.6450string0.1281complex0.0204number0.0142void0.0119
+\n\t\t\t\tText.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+cacheName.Othercomplex0.8092any0.1591{}0.0067void0.0030Cache0.0009
+.Punctuation
+setName.Other
+(Punctuation
+fileName.Otherstring0.5516any0.3431File0.0223complex0.0087number0.0037
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.4215complex0.0729any[]0.0298string0.0211{}0.0207
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.5321any[]0.0730complex0.0486string0.0279{}0.0222
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9982Error0.0004complex0.0004string0.0003number0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+EXPECTED_ERRORSName.Othercomplex0.5057any0.2205Set<any>0.0801Set<string>0.0462{}0.0134
+.Punctuation
+hasName.Otherboolean0.9721any0.0155complex0.0055{}0.0013string0.0011
+(Punctuation
+eName.Otherany0.9820Error0.0033complex0.0025string0.0009Event0.0007
+.Punctuation
+codeName.Otherany0.9211number0.0400string0.0337complex0.0024boolean0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+throwKeywordany0.9181Error0.0420string0.0172complex0.0070number0.0058
+ Text.Whitespace
+eName.Otherany0.9591Error0.0211string0.0040complex0.0019number0.0015
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\tText.Whitespace
+// no linkComment.Single
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.4144string[]0.1753any[]0.1193string0.0710complex0.0416
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parentResolvedName.Otherany0.5141string[]0.2228string0.0695any[]0.0575complex0.0444
+.Punctuation
+sliceName.Otherany0.3217string[]0.2172string0.1270complex0.0927any[]0.0590
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+resultName.Otherany0.2935any[]0.1690complex0.1181number[]0.1010string[]0.0619
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+realFileName.Otherany0.7049complex0.1183string0.0568number0.0326void0.0073
+;Punctuation
+\n\t\t\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9988complex0.0004any0.0003Object0.0001{}0.0000
+.Punctuation
+freezeName.Othercomplex0.9909any0.0048void0.0017boolean0.0004string0.0004
+(Punctuation
+resultName.Otherany0.5968complex0.0772{}0.0418string0.0270object0.0165
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+cacheName.Othercomplex0.8850any0.0878{}0.0077void0.0023T0.0010
+.Punctuation
+setName.Other
+(Punctuation
+fileName.Otherstring0.5952any0.3308File0.0160complex0.0073number0.0053
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.4694{}0.0394complex0.0337string0.0185object0.0166
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.5013{}0.1163any[]0.0463complex0.0301string0.0240
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+LinkResolverName.Otherany0.8346number0.0191string0.0179complex0.0141boolean0.0111
+;Punctuation
+\nText.Whitespace

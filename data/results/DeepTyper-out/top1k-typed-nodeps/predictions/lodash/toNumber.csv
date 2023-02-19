@@ -1,0 +1,323 @@
+importKeyword
+ Text.Whitespace
+isObjectName.Otherboolean0.6353complex0.1585any0.0516string[]0.0179number0.0118
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isObject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isSymbolName.Othercomplex0.3526any0.3477number0.0964string0.0817boolean0.0174
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isSymbol.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used as references for various `Number` constants. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+NANName.Othernumber0.9141any0.0544string0.0246boolean0.0027complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n\nText.Whitespace
+Text
+/** Used to match leading and trailing whitespace. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reTrimName.OtherRegExp0.5023string0.2674any0.1338number0.0739boolean0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^\s+|\s+$/gLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/** Used to detect bad signed hexadecimal string values. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reIsBadHexName.OtherRegExp0.8062string0.1325any0.0337number0.0158boolean0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^[-+]0x[0-9a-f]+$/iLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/** Used to detect binary string values. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reIsBinaryName.OtherRegExp0.8538string0.1044any0.0210number0.0112boolean0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^0b[01]+$/iLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/** Used to detect octal string values. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reIsOctalName.OtherRegExp0.8398string0.1190any0.0187number0.0121boolean0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^0o[0-7]+$/iLiteral.String.Regex
+\n\nText.Whitespace
+Text
+/** Built-in method references without a dependency on `root`. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+freeParseIntName.Othernumber0.9123string0.0460any0.0318boolean0.0042Date0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9517any0.0401string0.0051boolean0.0008complex0.0008
+\n\nText.Whitespace
+Text
+/**\n * Converts `value` to a number.\n *\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to process.\n * @returns {number} Returns the number.\n * @see isInteger, toInteger, isNumber\n * @example\n *\n * toNumber(3.2)\n * // => 3.2\n *\n * toNumber(Number.MIN_VALUE)\n * // => 5e-324\n *\n * toNumber(Infinity)\n * // => Infinity\n *\n * toNumber('3.2')\n * // => 3.2\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toNumberName.Otherany0.5321number0.4507complex0.0052boolean0.0037string0.0033
+(Punctuation
+valueName.Otherany0.6054string0.3545number0.0319boolean0.0026complex0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9184string0.0503complex0.0153number0.0097boolean0.0014
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherstring0.5852any0.3294number0.0518boolean0.0229Date0.0033
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isSymbolName.Otherany0.3828boolean0.3080complex0.1979number0.0735string0.0265
+(Punctuation
+valueName.Otherany0.7478string0.1840number0.0476complex0.0102boolean0.0036
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+NANName.Otherstring0.3726any0.3256number0.2059boolean0.0548Date0.0077
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isObjectName.Otherboolean0.8662complex0.0616any0.0566string0.0061number0.0052
+(Punctuation
+valueName.Otherany0.8070string0.1481number0.0220complex0.0135boolean0.0048
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+otherName.Otherany0.8130number0.1005string0.0405complex0.0165Date0.0104
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8860string0.0555complex0.0251Date0.0150number0.0096
+.Punctuation
+valueOfName.Otherany0.9140number0.0422string0.0185complex0.0112boolean0.0087
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+valueName.Otherany0.5412string0.4343number0.0123Date0.0033complex0.0028
+.Punctuation
+valueOfName.Otherany0.8323number0.0786string0.0678boolean0.0109complex0.0057
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+valueName.Otherstring0.4844any0.4203number0.0608boolean0.0207complex0.0083
+\n    Text.Whitespace
+valueName.Otherstring0.4649any0.4528number0.0433boolean0.0228complex0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isObjectName.Otherboolean0.7457complex0.0962any0.0926string0.0383number0.0213
+(Punctuation
+otherName.Otherany0.7542number0.1406string0.0436complex0.0206Date0.0151
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+otherName.Otherany0.6433number0.2276string0.0878complex0.0123Date0.0068
+}Literal.String.Interpol
+`Literal.String.Backtick
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+otherName.Otherany0.7898number0.1013string0.0486Date0.0123complex0.0071
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8261string0.1130complex0.0316number0.0194boolean0.0028
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.6361string0.2101number0.1346boolean0.0071complex0.0059
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+valueName.Otherstring0.5490any0.3974number0.0459complex0.0027boolean0.0027
+ Text.Whitespace
+:Operator
+ Text.Whitespace
++Operator
+valueName.Otherstring0.5545any0.3619number0.0675complex0.0056boolean0.0050
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+valueName.Otherstring0.6583any0.2915number0.0324complex0.0101boolean0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherstring0.6157any0.3686number0.0099complex0.0024Date0.0011
+.Punctuation
+replaceName.Othercomplex0.7837any0.2114string0.0018boolean0.0010number0.0006
+(Punctuation
+reTrimName.OtherRegExp0.9798string0.0094any0.0074boolean0.0009number0.0005
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isBinaryName.Otherboolean0.9418any0.0245RegExp0.0113string0.0081number0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reIsBinaryName.OtherRegExp0.9800any0.0085boolean0.0029string0.0029RegExpMatchArray0.0009
+.Punctuation
+testName.Otherboolean0.9742any0.0118complex0.0057string0.0031number0.0023
+(Punctuation
+valueName.Otherstring0.6239any0.3027number0.0371boolean0.0275complex0.0052
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+isBinaryName.Otherboolean0.8796any0.0632string0.0230number0.0159RegExp0.0073
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+reIsOctalName.OtherRegExp0.9750any0.0120string0.0059boolean0.0026RegExpMatchArray0.0007
+.Punctuation
+testName.Otherboolean0.9808any0.0092complex0.0031string0.0029number0.0024
+(Punctuation
+valueName.Otherstring0.6777any0.2624number0.0243boolean0.0222complex0.0088
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+freeParseIntName.Otherstring0.5854any0.2202number0.0864boolean0.0644complex0.0129
+(Punctuation
+valueName.Otherstring0.6655any0.3067number0.0091boolean0.0058complex0.0049
+.Punctuation
+sliceName.Otherany0.4913string0.4328complex0.0154any[]0.0153string[]0.0150
+(Punctuation
+2Literal.Number.Float
+)Punctuation
+,Punctuation
+ Text.Whitespace
+isBinaryName.Otherboolean0.9766number0.0075any0.0069string0.0038complex0.0026
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+2Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+8Keyword.Type
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+(Punctuation
+reIsBadHexName.OtherRegExp0.9467any0.0218string0.0147Date0.0030boolean0.0017
+.Punctuation
+testName.Otherboolean0.9613number0.0124any0.0116string0.0064complex0.0048
+(Punctuation
+valueName.Otherstring0.5371any0.3098number0.1059boolean0.0303complex0.0095
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+NANName.Othernumber0.5874string0.2639any0.1354boolean0.0087complex0.0007
+ Text.Whitespace
+:Operator
+ Text.Whitespace
++Operator
+valueName.Otherstring0.6138number0.2401any0.1208boolean0.0108complex0.0052
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+toNumberName.Othernumber0.5174any0.4578complex0.0055string0.0025boolean0.0019
+\nText.Whitespace

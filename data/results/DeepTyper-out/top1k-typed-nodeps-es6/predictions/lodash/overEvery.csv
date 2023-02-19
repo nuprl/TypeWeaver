@@ -1,0 +1,64 @@
+importKeyword
+ Text.Whitespace
+everyName.Otherboolean0.5986complex0.1850any0.1054void0.0070string[]0.0063
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./every.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a function that checks if **all** of the `predicates` return\n * truthy when invoked with the arguments it receives.\n *\n * @since 4.0.0\n * @category Util\n * @param {Function[]} [predicates=[identity]]\n *  The predicates to check.\n * @returns {Function} Returns the new function.\n * @example\n *\n * const func = overEvery([Boolean, isFinite])\n *\n * func('1')\n * // => true\n *\n * func(null)\n * // => false\n *\n * func(NaN)\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+overEveryName.Otherboolean0.9631any0.0132string0.0086number0.0030complex0.0019
+(Punctuation
+iterateesName.Otherboolean0.7241any0.1131string0.0854number0.0275Function0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8911any0.0459string[]0.0151string0.0026complex0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+everyName.Otherboolean0.5376any0.2548complex0.1614void0.0069any[]0.0066
+(Punctuation
+iterateesName.Otherany0.4643boolean0.3659string0.0595any[]0.0215number0.0153
+,Punctuation
+ Text.Whitespace
+(Punctuation
+iterateeName.Otherany0.7519Function0.0361string0.0283boolean0.0161number0.0072
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.8584Function0.0486void0.0145boolean0.0072string0.0061
+.Punctuation
+applyName.Otherany0.9862void0.0037Function0.0027number0.0021complex0.0010
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.8444any0.0590IArguments0.0214string[]0.0125string0.0018
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+overEveryName.Otherany0.2192boolean0.0217string0.0214number0.0144any[]0.0101
+\nText.Whitespace

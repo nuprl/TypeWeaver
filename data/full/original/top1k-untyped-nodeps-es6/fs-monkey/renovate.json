@@ -1,0 +1,10 @@
+{
+  "extends": ["config:base"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 3am on the first day of the month"]
+  },
+  "rangeStrategy": "replace",
+  "postUpdateOptions": ["yarnDedupeHighest"]
+}

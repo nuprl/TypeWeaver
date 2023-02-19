@@ -1,0 +1,21 @@
+declare const _default: {
+    ArgumentParser: any;
+    ArgumentError: (...args: any[]) => any;
+    ArgumentTypeError: (...args: any[]) => any;
+    BooleanOptionalAction: any;
+    FileType: (...args: any[]) => any;
+    HelpFormatter: any;
+    ArgumentDefaultsHelpFormatter: any;
+    RawDescriptionHelpFormatter: any;
+    RawTextHelpFormatter: any;
+    MetavarTypeHelpFormatter: any;
+    Namespace: (...args: any[]) => any;
+    Action: any;
+    ONE_OR_MORE: string;
+    OPTIONAL: string;
+    PARSER: string;
+    REMAINDER: string;
+    SUPPRESS: string;
+    ZERO_OR_MORE: string;
+};
+export default _default;

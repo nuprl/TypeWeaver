@@ -1,0 +1,73 @@
+Text
+/**\n * Creates a function that invokes `func` with arguments reversed.\n *\n * @since 4.0.0\n * @category Function\n * @param {Function} func The function to flip arguments for.\n * @returns {Function} Returns the new flipped function.\n * @see reverse\n * @example\n *\n * const flipped = flip((...args) => args)\n *\n * flipped('a', 'b', 'c', 'd')\n * // => ['d', 'c', 'b', 'a']\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flipName.Othervoid0.3481any0.0986boolean0.0856string0.0270complex0.0190
+(Punctuation
+funcName.Otherany0.4264Function0.3949boolean0.0514string0.0450number0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+funcName.Otherany0.4245Function0.2434boolean0.0958string0.0916void0.0071
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.5296complex0.2591Error0.0605boolean0.0285{}0.0280
+ Text.Whitespace
+newOperator.Wordany0.3707boolean0.1205complex0.1102string0.0616Error0.0439
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9911ErrorConstructor0.0018complex0.0001BooleanConstructor0.0001undefined0.0001
+(Punctuation
+'Expected a function'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.9216any0.0170string[]0.0091IArguments0.0018Function[]0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.OtherFunction0.7383any0.1547void0.0280boolean0.0245string0.0046
+.Punctuation
+applyName.Otherany0.9376void0.0234Function0.0197any[]0.0032Promise<void>0.0019
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.8562string[]0.0404any0.0337IArguments0.0034Function[]0.0027
+.Punctuation
+reverseName.Otherany[]0.7377string[]0.1034any0.0505number[]0.0262T[]0.0043
+(Punctuation
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flipName.Otherany0.0790void0.0682any[]0.0544complex0.0145Promise<void>0.0112
+\nText.Whitespace

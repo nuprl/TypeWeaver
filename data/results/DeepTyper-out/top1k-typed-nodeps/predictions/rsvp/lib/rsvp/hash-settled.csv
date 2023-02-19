@@ -1,0 +1,192 @@
+importKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9010any0.0753complex0.0093Promise<any>0.0026string0.0013
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./promise'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+asKeyword.Reserved
+ Text.Whitespace
+EnumeratorName.Otherany0.9969string0.0011complex0.0011void0.0004number0.0001
+,Punctuation
+\n  Text.Whitespace
+setSettledResultName.Otherany0.9136complex0.0390void0.0177Promise<void>0.0060string0.0047
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./enumerator'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+PromiseHashName.Otherany0.9378void0.0184complex0.0182string0.0065Promise<void>0.0052
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./promise-hash'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+HashSettledName.Otherany0.9984complex0.0007void0.0003string0.0003number0.0001
+ Text.Whitespace
+extendsKeyword
+ Text.Whitespace
+PromiseHashName.Otherany0.9909complex0.0070void0.0007string0.0003Promise<void>0.0002
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+ConstructorName.Otherany0.7093string0.0883boolean0.0279number0.0095void0.0077
+,Punctuation
+ Text.Whitespace
+objectName.Otherobject0.4146Object0.3462any0.1358string0.0209number0.0144
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.9531any0.0157number0.0010complex0.0010ArrayBuffer0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+superKeyword
+(Punctuation
+ConstructorName.Otherany0.9320string0.0491boolean0.0044void0.0023number0.0019
+,Punctuation
+ Text.Whitespace
+objectName.OtherObject0.3739object0.2857any0.2588complex0.0163string0.0135
+,Punctuation
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.8348any0.1236complex0.0058Object0.0023number0.0019
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+HashSettledName.Otherany0.9265void0.0269complex0.0170Promise<void>0.0110Promise<{}>0.0021
+.Punctuation
+prototypeName.Otherany0.3979Object0.0226Context0.0144void0.0108Promise<void>0.0092
+.Punctuation
+_setResultAtName.Otherany0.5290string0.0718Promise<void>0.0541complex0.0347void0.0275
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+setSettledResultName.Otherany0.7428complex0.0416void0.0360Promise<void>0.0296string0.0273
+;Punctuation
+\n\nText.Whitespace
+/**\n  `hashSettled` is similar to `allSettled`, but takes an object\n  instead of an array for its `promises` argument.\n\n  Unlike `all` or `hash`, which implement a fail-fast method,\n  but like `allSettled`, `hashSettled` waits until all the\n  constituent promises have returned and then shows you all the results\n  with their states and values/reasons. This is useful if you want to\n  handle multiple promises' failure states together as a set.\n\n  Returns a promise that is fulfilled when all the given promises have been\n  settled, or rejected if the passed parameters are invalid.\n\n  The returned promise is fulfilled with a hash that has the same key names as\n  the `promises` object argument. If any of the values in the object are not\n  promises, they will be copied over to the fulfilled object and marked with state\n  'fulfilled'.\n\n  Example:\n\n  ```javascript\n  import { hashSettled, resolve } from 'rsvp';\n\n  let promises = {\n    myPromise: resolve(1),\n    yourPromise: resolve(2),\n    theirPromise: resolve(3),\n    notAPromise: 4\n  };\n\n  hashSettled(promises).then(function(hash){\n    // hash here is an object that looks like:\n    // {\n    //   myPromise: { state: 'fulfilled', value: 1 },\n    //   yourPromise: { state: 'fulfilled', value: 2 },\n    //   theirPromise: { state: 'fulfilled', value: 3 },\n    //   notAPromise: { state: 'fulfilled', value: 4 }\n    // }\n  });\n  ```\n\n  If any of the `promises` given to `hash` are rejected, the state will\n  be set to 'rejected' and the reason for rejection provided.\n\n  Example:\n\n  ```javascript\n  import { hashSettled, reject, resolve } from 'rsvp';\n\n  let promises = {\n    myPromise: resolve(1),\n    rejectedPromise: reject(new Error('rejection')),\n    anotherRejectedPromise: reject(new Error('more rejection')),\n  };\n\n  hashSettled(promises).then(function(hash){\n    // hash here is an object that looks like:\n    // {\n    //   myPromise:              { state: 'fulfilled', value: 1 },\n    //   rejectedPromise:        { state: 'rejected', reason: Error },\n    //   anotherRejectedPromise: { state: 'rejected', reason: Error },\n    // }\n    // Note that for rejectedPromise, reason.message == 'rejection',\n    // and for anotherRejectedPromise, reason.message == 'more rejection'.\n  });\n  ```\n\n  An important note: `hashSettled` is intended for plain JavaScript objects that\n  are just a set of keys and values. `hashSettled` will NOT preserve prototype\n  chains.\n\n  Example:\n\n  ```javascript\n  import Promise, { hashSettled, resolve } from 'rsvp';\n\n  function MyConstructor(){\n    this.example = resolve('Example');\n  }\n\n  MyConstructor.prototype = {\n    protoProperty: Promise.resolve('Proto Property')\n  };\n\n  let myObject = new MyConstructor();\n\n  hashSettled(myObject).then(function(hash){\n    // protoProperty will not be present, instead you will just have an\n    // object that looks like:\n    // {\n    //   example: { state: 'fulfilled', value: 'Example' }\n    // }\n    //\n    // hash.hasOwnProperty('protoProperty'); // false\n    // 'undefined' === typeof hash.protoProperty\n  });\n  ```\n\n  @method hashSettled\n  @public\n  @for rsvp\n  @param {Object} object\n  @param {String} [label] optional string that describes the promise.\n  Useful for tooling.\n  @return {Promise} promise that is fulfilled when when all properties of `promises`\n  have been settled.\n  @static\n*/Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hashSettledName.Otherany0.5830Promise<void>0.0809Promise<{}>0.0370complex0.0362Promise<any>0.0247
+(Punctuation
+objectName.Otherany0.5062Object0.1972object0.1421string0.0457number0.0171
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.9053any0.0486number0.0028Object0.0022object0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9847any0.0126complex0.0006Promise<any>0.0004string0.0004
+.Punctuation
+resolveName.Othercomplex0.9887any0.0077string0.0012Promise<any>0.0004number0.0003
+(Punctuation
+objectName.Otherany0.4913Object0.2169object0.1369string0.0713complex0.0283
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.8902any0.0778complex0.0052Promise<string>0.0044object0.0019
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+thenName.Otherany0.9661complex0.0256Promise<any>0.0014void0.0012string0.0007
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+objectName.Otherany0.6719Object0.1270object0.1040string0.0289number0.0233
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.5195object0.2105Object0.1960number0.0155complex0.0148
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objectName.Otherany0.5207Object0.2112object0.1773complex0.0289number0.0142
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'object'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordcomplex0.5152any0.2739boolean0.0487Error0.0379string0.0135
+ Text.Whitespace
+newOperator.Wordany0.3795complex0.1121boolean0.0962Error0.0420string0.0302
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9903ErrorConstructor0.0023BooleanConstructor0.0001MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+"hashSettled must be called with an object"Literal.String.Double
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6975Promise<void>0.0164complex0.0162boolean0.0123string0.0115
+ Text.Whitespace
+HashSettledName.Otherany0.9947complex0.0035void0.0004Promise<void>0.0003string0.0002
+(Punctuation
+PromiseName.BuiltinPromiseConstructor0.9930any0.0050complex0.0006Promise<any>0.0002string0.0001
+,Punctuation
+ Text.Whitespace
+objectName.OtherObject0.5076any0.1711object0.1259complex0.0417number0.0115
+,Punctuation
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.5908any0.3052complex0.0133Promise<string>0.0055Object0.0025
+)Punctuation
+.Punctuation
+promiseName.OtherPromise<void>0.2907Promise<any>0.1784any0.1370Promise<number>0.0690void0.0594
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

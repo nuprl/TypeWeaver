@@ -1,0 +1,16 @@
+lib/env-options.ts(5,11): error TS2339: Property 'encoding' does not exist on type '{}'.
+lib/env-options.ts(9,11): error TS2339: Property 'path' does not exist on type '{}'.
+lib/env-options.ts(13,11): error TS2339: Property 'debug' does not exist on type '{}'.
+lib/env-options.ts(17,11): error TS2339: Property 'override' does not exist on type '{}'.
+lib/main.ts(8,10): error TS2300: Duplicate identifier 'parse'.
+lib/main.ts(55,10): error TS2300: Duplicate identifier 'config'.
+lib/main.ts(72,69): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
+    Type 'string' is not assignable to type 'null'.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+lib/main.ts(107,14): error TS2300: Duplicate identifier 'config'.
+lib/main.ts(108,14): error TS2300: Duplicate identifier 'parse'.
+

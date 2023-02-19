@@ -1,0 +1,38 @@
+examples.ts(10,3): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+examples.ts(11,3): error TS2322: Type '(string: any) => boolean' is not assignable to type 'string'.
+examples.ts(17,24): error TS2322: Type '(...args: any[]) => void' is not assignable to type 'void'.
+examples.ts(25,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(26,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(27,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(28,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(29,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(32,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(33,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(36,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(37,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(38,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(39,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+examples.ts(40,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(13,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(14,24): error TS2304: Cannot find name 'IChunkifyOptions'.
+index.ts(62,18): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(62,40): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(86,6): error TS2339: Property 'filter' does not exist on type 'boolean'.
+index.ts(86,56): error TS2367: This condition will always return 'false' since the types 'string' and 'RegExp' have no overlap.
+index.ts(90,6): error TS2339: Property 'filter' does not exist on type 'boolean'.
+index.ts(90,85): error TS2367: This condition will always return 'true' since the types 'string' and 'RegExp' have no overlap.
+

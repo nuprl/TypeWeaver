@@ -1,0 +1,55 @@
+importKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.3795complex0.0513string0.0475boolean0.0306string[]0.0180
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseFlatten.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+mapName.Otherany0.3155complex0.1400U[]0.1348string0.0160string[]0.0104
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./map.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a flattened array of values by running each element in `collection`\n * thru `iteratee` and flattening the mapped results. The iteratee is invoked\n * with three arguments: (value, index|key, collection).\n *\n * @since 4.0.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns the new flattened array.\n * @see flatMapDeep, flatMapDepth, flatten, flattenDeep, flattenDepth, map, mapKeys, mapValues\n * @example\n *\n * function duplicate(n) {\n *   return [n, n]\n * }\n *\n * flatMap([1, 2], duplicate)\n * // => [1, 1, 2, 2]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flatMapName.Otherany0.1548U[]0.0556complex0.0474boolean0.0091Promise<any>0.0076
+(Punctuation
+collectionName.Otherany0.3506string0.2277complex0.0329any[]0.0091number0.0075
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7136string0.1927number0.0284complex0.0060boolean0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.5332complex0.0674string0.0497any[]0.0434string[]0.0080
+(Punctuation
+mapName.Otherany0.7939complex0.0703U[]0.0601{}0.0044string0.0037
+(Punctuation
+collectionName.Otherany0.2672string0.1953complex0.0647any[]0.0213number0.0126
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6127string0.1687number0.0748complex0.0101{}0.0095
+)Punctuation
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flatMapName.OtherU[]0.0439any0.0383complex0.0329Promise<any>0.0087Promise0.0070
+\nText.Whitespace

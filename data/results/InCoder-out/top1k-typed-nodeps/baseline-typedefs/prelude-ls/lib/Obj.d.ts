@@ -1,0 +1,1 @@
+declare var values: any, keys: any, pairsToObj: any, objToPairs: any, listsToObj: any, objToLists: any, empty: any, each: any, map: any, compact: any, filter: any, reject: any, partition: any, find: any;

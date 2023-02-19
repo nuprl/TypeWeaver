@@ -1,0 +1,261 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+includeKeysName.Otherany0.5951complex0.0690boolean0.0430string0.0396string[]0.0286
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'filter-obj'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// Benchmark `filter-obj`.Comment.Single
+\nText.Whitespace
+// Higher `loopCount` give more precise results but last longer.Comment.Single
+\nText.Whitespace
+// `objectSize` gives different results based on how big the input object is.Comment.Single
+\nText.Whitespace
+// `predicateSize` is similar but for predicate arrays. When `undefined`, a predicate function is used instead.Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+benchmarkName.Othervoid0.9372any0.0367complex0.0073boolean0.0028Promise<void>0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+loopCountName.Otherany0.5942string0.1004number0.0537boolean0.0454void0.0219
+,Punctuation
+ Text.Whitespace
+objectSizeName.Otherany0.4881string0.1575boolean0.1148number0.1067void0.0151
+,Punctuation
+ Text.Whitespace
+predicateSizeName.Otherany0.4419string0.1775boolean0.1533number0.1220string[]0.0139
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bigObjectName.Otherany0.4003string0.1634number0.1085string[]0.0905boolean0.0663
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999any0.0000Object0.0000PropertyDescriptor0.0000Object[]0.0000
+.Punctuation
+fromEntriesName.Othercomplex0.7043boolean0.0538string[]0.0493string0.0437any0.0284
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9990ObjectConstructor0.0001Math0.0001any0.0000JSON0.0000
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+{Punctuation
+lengthName.Othernumber0.9756any0.0127string0.0057boolean0.0013complex0.0012
+:Operator
+ Text.Whitespace
+objectSizeKeyword.Typenumber0.8475any0.0516string0.0316boolean0.0150any[]0.0097
+}Punctuation
+,Punctuation
+ Text.Whitespace
+getObjectKeyPairName.Othernumber0.3738any0.3601string0.0751boolean0.0336complex0.0298
+)Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+predicateName.Otherboolean0.8922any0.0801number0.0134complex0.0031string0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+predicateSizeName.Otherboolean0.5518any0.2238number0.1494string0.0240complex0.0135
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+isEvenName.Otherboolean0.9209any0.0574number0.0097string0.0040void0.0015
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+Array.fromKeyword.Type
+(Punctuation
+{Punctuation
+lengthName.Othernumber0.9544any0.0367string0.0045boolean0.0021void0.0005
+:Operator
+ Text.Whitespace
+predicateSizeKeyword.Typenumber0.9218any0.0400boolean0.0136string0.0116void0.0021
+}Punctuation
+,Punctuation
+ Text.Whitespace
+getPredicateKeyName.Othernumber0.5481any0.1529boolean0.1350void0.0515string0.0351
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+consoleName.OtherConsole0.9998any0.0000void0.0000PropertyDescriptor0.0000Assert0.0000
+.Punctuation
+timeName.Othervoid0.8839number0.0883any0.0218complex0.0022Promise<void>0.0009
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9970any0.0023string0.0003boolean0.0001complex0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9894any0.0079string0.0005void0.0005complex0.0004
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+loopCountName.Othernumber0.9242any0.0583string0.0102boolean0.0017complex0.0011
+;Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9958any0.0032string0.0005boolean0.0002void0.0002
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+includeKeysName.Othervoid0.8375any0.0591number0.0385complex0.0103string0.0077
+(Punctuation
+bigObjectName.Othernumber0.4779string0.2188any0.1778boolean0.0453any[]0.0069
+,Punctuation
+ Text.Whitespace
+predicateName.Otherboolean0.9068any0.0403number0.0254string0.0078false0.0021
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+consoleName.OtherConsole0.9997any0.0000void0.0000PropertyDescriptor0.0000number0.0000
+.Punctuation
+timeEndName.Othervoid0.9842number0.0075any0.0052boolean0.0018complex0.0003
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getObjectKeyPairName.Otherboolean0.3214any[]0.1624any0.1407string[]0.0827complex0.0752
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+_Name.Otherany0.4990string0.1545number0.0950any[]0.0184string[]0.0150
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9477any0.0464string0.0023boolean0.0005any[]0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+`Literal.String.Backtick
+aLiteral.String.Backtickany0.4641string0.4149number0.0654RegExp0.0080{}0.0038
+${Literal.String.Interpol
+indexName.Othernumber0.9168any0.0749string0.0047complex0.0005{}0.0004
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9646any0.0305string0.0031void0.0002complex0.0002
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getPredicateKeyName.Otherboolean0.3461string0.2663number0.1554any0.1435any[]0.0139
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+_Name.Otherany0.4274string0.2633number0.1183HTMLElement0.0107Date0.0106
+,Punctuation
+ Text.Whitespace
+indexName.Othernumber0.9395any0.0547string0.0024Date0.0006boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+aLiteral.String.Backtickstring0.4555any0.4126number0.0881RegExp0.0054Date0.0044
+${Literal.String.Interpol
+indexName.Othernumber0.9518any0.0411string0.0040boolean0.0007complex0.0004
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isEvenName.Otherboolean0.9820number0.0060any0.0057string0.0013false0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+keyName.Otherany0.5307string0.3001number0.1408boolean0.0077complex0.0032
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5035number0.4456string0.0257boolean0.0129Date0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Othernumber0.4929any0.4827boolean0.0095string0.0092{}0.0012
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+2Literal.Number.Float
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+benchmarkName.Othervoid0.9353any0.0311complex0.0054number0.0019boolean0.0013
+(Punctuation
+1e3Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+1e4Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

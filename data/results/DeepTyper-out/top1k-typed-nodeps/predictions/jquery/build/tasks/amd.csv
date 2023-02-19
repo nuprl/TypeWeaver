@@ -1,0 +1,320 @@
+Text
+/**\n * Compiles sources from ES Modules in `src/` to AMD in `amd/`.\n */Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+gruntName.Otherany0.1716IGrunt0.0581Path0.0303string0.0238Buffer0.0082
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9947string0.0040Path0.0004complex0.0003number0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"path"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rimrafName.Otherany0.9915string0.0055void0.0010complex0.0002number0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"rimraf"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rollupName.Otherany0.9947string0.0015Error0.0006complex0.0006number0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"rollup"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+srcFolderName.Otherany0.9598string0.0378number0.0007boolean0.0003void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9988string0.0008complex0.0002number0.0000Promise<any>0.0000
+.Punctuation
+resolveName.Otherany0.9977complex0.0012string0.0007void0.0001Promise<any>0.0001
+(Punctuation
+ Text.Whitespace
+__dirnameName.Otherany0.9874string0.0118number0.0003boolean0.0002void0.0001
+,Punctuation
+ Text.Whitespace
+".."Literal.String.Double
+,Punctuation
+ Text.Whitespace
+".."Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"src"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+amdFolderName.Otherany0.9716string0.0259number0.0007boolean0.0005void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9987string0.0010complex0.0002number0.0000Promise<any>0.0000
+.Punctuation
+resolveName.Otherany0.9969complex0.0014string0.0011void0.0001Promise<any>0.0001
+(Punctuation
+ Text.Whitespace
+srcFolderName.Otherany0.7967string0.1748number0.0109boolean0.0057complex0.0026
+,Punctuation
+ Text.Whitespace
+".."Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"amd"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+inputFileNameName.Otherstring0.6630RegExp0.2385any0.0751boolean0.0077number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"jquery.js"Literal.String.Double
+;Punctuation
+\n\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+inputRollupOptionsName.Othercomplex0.4438any0.3520boolean0.0227string0.0199number0.0089
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+inputName.Otherstring0.7460any0.1820boolean0.0266number0.0149complex0.0114
+:Operator
+ Text.Whitespace
+path.resolveKeyword.Type
+(Punctuation
+ Text.Whitespace
+srcFolderName.Otherstring0.7419any0.1598boolean0.0605number0.0221complex0.0026
+,Punctuation
+ Text.Whitespace
+inputFileNameName.Otherstring0.6585boolean0.1489any0.1444number0.0302complex0.0056
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\t\tText.Whitespace
+preserveModulesName.Otherboolean0.9967string0.0010number0.0007any0.0005false0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+outputRollupOptionsName.Othercomplex0.4639any0.2488Route0.0131Command0.0121string0.0110
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+formatName.Otherstring0.9973RegExp0.0008any0.0006boolean0.0005number0.0002
+:Operator
+ Text.Whitespace
+"amd"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+dirName.Otherstring0.9972RegExp0.0011any0.0008boolean0.0003number0.0002
+:Operator
+ Text.Whitespace
+"amd"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+indentName.Otherboolean0.9983false0.0005string0.0005true0.0002number0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+gruntName.Otherany0.9943string0.0020void0.0007complex0.0006number0.0002
+.Punctuation
+registerTaskName.Otherany0.9814void0.0135complex0.0026string0.0014Promise<void>0.0004
+(Punctuation
+\n\t\tText.Whitespace
+"amd"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"Convert ES modules from `src/` to AMD modules in `amd/`"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+asyncKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+doneName.Otherany0.6446Promise<void>0.1295void0.1136Promise<{}>0.0155Promise<any>0.0155
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+asyncKeyword
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+gruntName.Otherany0.9979string0.0010complex0.0002number0.0002void0.0002
+.Punctuation
+verboseName.Otherany0.9993string0.0002void0.0001number0.0001boolean0.0001
+.Punctuation
+writelnName.Otherany0.9976void0.0013string0.0005Promise<void>0.0001Function0.0001
+(Punctuation
+ Text.Whitespace
+"Removing the 'amd' directory..."Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+rimrafName.Otherany0.9951void0.0023complex0.0007string0.0007Promise<void>0.0002
+(Punctuation
+ Text.Whitespace
+amdFolderName.Otherany0.8073string0.1617void0.0092complex0.0040number0.0035
+,Punctuation
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bundleName.Otherany0.9877string0.0060complex0.0011void0.0009Promise<void>0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+awaitKeyword
+ Text.Whitespace
+rollupName.Otherany0.9870complex0.0054string0.0008Error0.0004Promise<any>0.0003
+.Punctuation
+rollupName.Otherany0.9965complex0.0008string0.0008void0.0004Error0.0002
+(Punctuation
+ Text.Whitespace
+inputRollupOptionsName.Otherany0.7786string0.1168complex0.0418number0.0207boolean0.0118
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+awaitKeyword
+ Text.Whitespace
+bundleName.Otherany0.9830Promise<void>0.0014complex0.0013string0.0009Promise<any>0.0007
+.Punctuation
+writeName.Otherany0.7525Promise<void>0.1682void0.0191complex0.0167Promise<any>0.0150
+(Punctuation
+ Text.Whitespace
+outputRollupOptionsName.Otherany0.5100string0.3495number0.0469boolean0.0374void0.0126
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+gruntName.Otherany0.9967string0.0008void0.0006complex0.0003number0.0002
+.Punctuation
+logName.Otherany0.9995string0.0002void0.0001complex0.0000number0.0000
+.Punctuation
+okName.Otherany0.9989void0.0007string0.0001complex0.0001boolean0.0000
+(Punctuation
+ Text.Whitespace
+"Sources from 'src' converted to AMD in 'amd'."Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+doneName.Otherany0.9280void0.0463Function0.0135number0.0017boolean0.0017
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+errName.Otherany0.9955Error0.0021string0.0012number0.0004complex0.0004
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+doneName.Otherany0.8860void0.0741Function0.0227boolean0.0021Promise<void>0.0019
+(Punctuation
+ Text.Whitespace
+errName.Otherany0.9863Error0.0101string0.0016complex0.0009number0.0003
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,18 @@
+Text
+// rtagName captures the name from the first start tag in a string of HTMLComment.Single
+\nText.Whitespace
+// https://html.spec.whatwg.org/multipage/syntax.html#tag-open-stateComment.Single
+\nText.Whitespace
+// https://html.spec.whatwg.org/multipage/syntax.html#tag-name-stateComment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+/<([a-z][^\/\0>\x20\t\r\n\f]*)/iLiteral.String.Regex
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

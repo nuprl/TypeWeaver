@@ -1,0 +1,635 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isPromiseName.Otherboolean0.9427complex0.0333any0.0153Promise<boolean>0.0013string0.0012
+(Punctuation
+objName.Otherany0.9803boolean0.0057string0.0026complex0.0019Object0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+objName.Otherany0.9857boolean0.0054string0.0013complex0.0010Object0.0009
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9890complex0.0023string0.0020boolean0.0018Object0.0009
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9796boolean0.0059string0.0051complex0.0031Object0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+objName.Otherany0.9893complex0.0029Promise<any>0.0009boolean0.0009string0.0006
+.Punctuation
+thenName.Otherany0.9964complex0.0023boolean0.0003string0.0002void0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return a function that will run a function asynchronously or synchronously\n *\n * example:\n * runAsync(wrappedFunction, callback)(...args);\n *\n * @param   {Function} func  Function to run\n * @param   {Function} cb    Callback function passed the `func` returned value\n * @return  {Function(arguments)} Arguments to pass to `func`. This function will in turn\n *                                return a Promise (Node >= 0.12) or call the callbacks.\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+runAsyncName.Othervoid0.9842any0.0070boolean0.0041Function0.0013Promise<void>0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+funcName.Otherany0.5804Function0.3122void0.0551boolean0.0251string0.0107
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.5989Function0.2289void0.1339boolean0.0195number0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+cbName.Otherany0.5351void0.2193Function0.1949boolean0.0131Promise<{}>0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cbName.Otherany0.5585Function0.2868void0.1041boolean0.0170complex0.0039
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+argsName.Otherany0.4370IArguments0.2763any[]0.2124string[]0.0093string0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9717any0.0116any[]0.0040string0.0007number0.0005
+;Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+promiseName.OtherPromise<{}>0.4386any0.2491Promise<any>0.0776Promise<void>0.0656Promise<number>0.0246
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7657Promise<{}>0.0414PromiseConstructor0.0238void0.0212Promise<any>0.0137
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.8834any0.1037void0.0061complex0.0022Promise<any>0.0012
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+resolveName.Othervoid0.8980any0.0934Function0.0046number0.0009string0.0008
+,Punctuation
+ Text.Whitespace
+rejectName.Othervoid0.9409any0.0511Function0.0043boolean0.0014string0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resolvedName.Otherboolean0.9677any0.0162false0.0082void0.0029true0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wrappedResolveName.Othervoid0.9838boolean0.0083any0.0053Function0.0007Promise<void>0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.8963string0.0447boolean0.0340void0.0105number0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolvedName.Otherboolean0.7618any0.2106false0.0059string0.0058void0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+consoleName.OtherConsole0.9985any0.0007void0.0004Function0.0000number0.0000
+.Punctuation
+warnName.Othervoid0.9955any0.0026complex0.0007Function0.0002boolean0.0002
+(Punctuation
+'Run-async promise already resolved.'Literal.String.Single
+)Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+resolvedName.Otherboolean0.8987any0.0683true0.0126void0.0083false0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+resolveName.Othervoid0.9814any0.0148Function0.0017boolean0.0006complex0.0004
+(Punctuation
+valueName.Otherany0.8817string0.0787boolean0.0150void0.0078number0.0042
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+rejectedName.Otherboolean0.9070any0.0675void0.0085false0.0061number0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wrappedRejectName.Othervoid0.9842boolean0.0070any0.0058Function0.0008Promise<void>0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.8885boolean0.0464string0.0378void0.0111number0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+rejectedName.Otherboolean0.5564any0.3195void0.0902false0.0069number0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+consoleName.OtherConsole0.9985any0.0007void0.0004Function0.0000number0.0000
+.Punctuation
+warnName.Othervoid0.9934any0.0040complex0.0008Function0.0003boolean0.0002
+(Punctuation
+'Run-async promise already rejected.'Literal.String.Single
+)Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+rejectedName.Otherboolean0.7387any0.2099void0.0281true0.0051any[]0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+rejectName.Othervoid0.9757any0.0194Function0.0016boolean0.0009complex0.0007
+(Punctuation
+valueName.Otherany0.9221string0.0416boolean0.0140void0.0070number0.0052
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+usingCallbackName.Otherboolean0.9784false0.0087any0.0051true0.0030void0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callbackConflictName.Otherboolean0.9858false0.0066any0.0030true0.0020void0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+contextEndedName.Otherboolean0.9857false0.0064any0.0028true0.0023void0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+answerName.Otherany0.7703number0.0756void0.0618Function0.0246string0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+funcName.OtherFunction0.7052any0.1510void0.0391Promise<any>0.0092T0.0080
+.Punctuation
+applyName.Otherany0.9635Function0.0115void0.0085number0.0039Promise<any>0.0016
+(Punctuation
+{Punctuation
+\n        Text.Whitespace
+asyncName.Other
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+contextEndedName.Otherboolean0.8883any0.0719void0.0119false0.0097string0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+consoleName.OtherConsole0.9988any0.0005void0.0003Function0.0000number0.0000
+.Punctuation
+warnName.Othervoid0.9978any0.0010Promise<void>0.0003complex0.0002Function0.0002
+(Punctuation
+'Run-async async() called outside a valid run-async context, callback will be ignored.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbackConflictName.Otherboolean0.8583any0.0673void0.0280false0.0262string0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+consoleName.OtherConsole0.9991any0.0003void0.0002Function0.0000number0.0000
+.Punctuation
+warnName.Othervoid0.9969any0.0013complex0.0004Promise<void>0.0003Function0.0002
+(Punctuation
+'Run-async wrapped function (async) returned a promise.\nCalls to async() callback can have unexpected results.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+usingCallbackName.Otherboolean0.9664any0.0131void0.0075true0.0054false0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7543Error0.2112string0.0111void0.0044boolean0.0023
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8937string0.0565boolean0.0312number0.0051void0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7914Error0.1809string0.0110boolean0.0040void0.0027
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+wrappedRejectName.Othervoid0.9568any0.0288boolean0.0036Function0.0021Promise<void>0.0020
+(Punctuation
+errName.Otherany0.7664Error0.2119string0.0075void0.0016{}0.0014
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+wrappedResolveName.Othervoid0.9272any0.0545boolean0.0052Function0.0043Promise<void>0.0019
+(Punctuation
+valueName.Otherany0.9032string0.0766boolean0.0059number0.0032void0.0028
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9994any[]0.0000any0.0000ObjectConstructor0.0000complex0.0000
+.Punctuation
+prototypeName.Otherany[]0.9622any0.0084string[]0.0073Object0.0016T[]0.0013
+.Punctuation
+sliceName.Otherany[]0.9561string[]0.0141number[]0.0047T[]0.0044complex0.0028
+.Punctuation
+callName.Otherany0.9757number0.0095void0.0048complex0.0024any[]0.0020
+(Punctuation
+argsName.Otherany0.4786any[]0.4275string[]0.0266IArguments0.0209string0.0093
+)Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+usingCallbackName.Otherboolean0.8347any0.1275string0.0066void0.0060false0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isPromiseName.Otherboolean0.7558complex0.1235any0.0934void0.0052number0.0036
+(Punctuation
+answerName.Otherany0.9706string0.0054number0.0033any[]0.0025Promise<any>0.0016
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+consoleName.OtherConsole0.9984any0.0008void0.0003Function0.0000number0.0000
+.Punctuation
+warnName.Othervoid0.9937any0.0029Promise<void>0.0009complex0.0006Function0.0004
+(Punctuation
+'Run-async wrapped function (sync) returned a promise but async() callback must be executed to resolve.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isPromiseName.Otherboolean0.8661complex0.0659any0.0496void0.0031Promise<boolean>0.0023
+(Punctuation
+answerName.Otherany0.9545string0.0093number0.0050Promise<any>0.0024boolean0.0020
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+callbackConflictName.Otherboolean0.9727any0.0126false0.0049true0.0037void0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n          Text.Whitespace
+answerName.Otherany0.7040Promise<any>0.0657Promise<void>0.0495Promise<{}>0.0403number0.0397
+.Punctuation
+thenName.Otherany0.9875Promise<any>0.0021complex0.0019void0.0017Promise<void>0.0012
+(Punctuation
+wrappedResolveName.Othervoid0.3847any0.3515boolean0.1685string0.0235number0.0213
+,Punctuation
+ Text.Whitespace
+wrappedRejectName.Otherany0.3321void0.3056boolean0.2741number0.0299string0.0170
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+wrappedResolveName.Othervoid0.8504any0.0792boolean0.0177Promise<void>0.0151Function0.0054
+(Punctuation
+answerName.Otherany0.8212string0.0846number0.0503any[]0.0043T0.0028
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+contextEndedName.Otherboolean0.9734any0.0106true0.0063false0.0039void0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+promiseName.Otherany0.5731Promise<any>0.1734Promise<void>0.0909Promise<{}>0.0467Promise<number>0.0204
+.Punctuation
+thenName.Otherany0.9662complex0.0105void0.0075Promise<any>0.0044Promise<void>0.0036
+(Punctuation
+cbName.Othervoid0.5400any0.2877Function0.1197boolean0.0111complex0.0056
+.Punctuation
+bindName.Otherany0.9622void0.0159Function0.0040complex0.0022T0.0017
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.4541void0.2756Function0.2369boolean0.0064number0.0031
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+promiseName.Otherany0.6591Promise<any>0.1224Promise<void>0.0526Promise<{}>0.0401void0.0169
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+runAsyncName.Othervoid0.5240any0.3248boolean0.0616Function0.0137number0.0116
+;Punctuation
+\n\nText.Whitespace
+runAsyncName.Otherany0.6318void0.0726complex0.0195Promise<any>0.0180Function0.0163
+.Punctuation
+cbName.Otherany0.5524void0.3314Function0.0841boolean0.0148number0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+funcName.Otherany0.7041Function0.2023boolean0.0376void0.0236string0.0156
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.7492Function0.1895void0.0344boolean0.0101string0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+runAsyncName.Otherany0.4438void0.2594boolean0.1589Function0.0317{}0.0155
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+argsName.Otherany0.8531any[]0.1059string[]0.0082string0.0043Function0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9989any[]0.0001any0.0000ObjectConstructor0.0000Array0.0000
+.Punctuation
+prototypeName.Otherany[]0.9657string[]0.0077any0.0057T[]0.0015Function[]0.0010
+.Punctuation
+sliceName.Otherany[]0.9646string[]0.0135T[]0.0046number[]0.0032Function[]0.0013
+.Punctuation
+callName.Otherany0.9780number0.0074any[]0.0040complex0.0018void0.0018
+(Punctuation
+argumentsName.OtherIArguments0.9849any[]0.0048any0.0029string[]0.0005string0.0002
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+argsName.Otherany[]0.6307any0.2522string[]0.0647IArguments0.0286string0.0025
+.Punctuation
+lengthName.Othernumber0.6587any0.3368string0.0014boolean0.0005void0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+funcName.Otherany0.6684Function0.1878string0.0296any[]0.0257Promise<any>0.0106
+.Punctuation
+lengthName.Otherany0.5264number0.4690string0.0011void0.0007Function0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+argsName.Otherany[]0.7264any0.1847string[]0.0296IArguments0.0204number[]0.0013
+.Punctuation
+pushName.Othernumber0.8739any0.1058void0.0043Promise<any>0.0040Promise<void>0.0014
+(Punctuation
+thisKeyword
+.Punctuation
+asyncKeyword
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.OtherFunction0.4809any0.4324void0.0216boolean0.0114Promise<any>0.0089
+.Punctuation
+applyName.Otherany0.9771void0.0075Function0.0070Promise<any>0.0013number0.0010
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.7605any0.1459IArguments0.0453string[]0.0174string0.0019
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+cbName.Othervoid0.4635any0.2613Function0.2374boolean0.0088number0.0051
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

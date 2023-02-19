@@ -1,0 +1,21 @@
+index.ts(4,20): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(10,7): error TS2322: Type 'Promise<void>' is not assignable to type 'Promise<{}>'.
+  Type 'void' is not assignable to type '{}'.
+index.ts(10,26): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(11,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(14,24): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(20,7): error TS2322: Type 'Promise<void>' is not assignable to type 'Promise<{}>'.
+index.ts(45,3): error TS2322: Type '(fn: Function, self: any, args: any) => Promise<{}>' is not assignable to type 'void'.
+index.ts(60,3): error TS2322: Type '(fn: any) => any' is not assignable to type 'void'.
+index.ts(126,12): error TS2339: Property 'length' does not exist on type 'number'.
+index.ts(134,27): error TS2339: Property 'pop' does not exist on type 'number'.
+perf.ts(7,35): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+perf.ts(7,71): error TS2345: Argument of type 'void' is not assignable to parameter of type 'Function'.
+

@@ -1,0 +1,17 @@
+examples.ts(22,43): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+examples.ts(42,17): error TS2554: Expected 2-3 arguments, but got 1.
+examples.ts(43,1): error TS2349: This expression is not callable.
+  Not all constituents of type 'number | boolean | ((testString: any, ri?: boolean) => number | boolean)' are callable.
+    Type 'number' has no call signatures.
+examples.ts(44,1): error TS2349: This expression is not callable.
+  Not all constituents of type 'number | boolean | ((testString: any, ri?: boolean) => number | boolean)' are callable.
+    Type 'number' has no call signatures.
+examples.ts(49,42): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(predicate: (value: string, index: number, array: string[]) => value is string, thisArg?: any): string[]', gave the following error.
+    Argument of type 'number | boolean | ((testString: any, ri?: boolean) => number | boolean)' is not assignable to parameter of type '(value: string, index: number, array: string[]) => value is string'.
+      Type 'number' is not assignable to type '(value: string, index: number, array: string[]) => value is string'.
+  Overload 2 of 2, '(predicate: (value: string, index: number, array: string[]) => unknown, thisArg?: any): string[]', gave the following error.
+    Argument of type 'number | boolean | ((testString: any, ri?: boolean) => number | boolean)' is not assignable to parameter of type '(value: string, index: number, array: string[]) => unknown'.
+      Type 'number' is not assignable to type '(value: string, index: number, array: string[]) => unknown'.
+index.ts(88,34): error TS2559: Type '{ returnIndex: boolean; }' has no properties in common with type 'PicomatchOptions'.
+

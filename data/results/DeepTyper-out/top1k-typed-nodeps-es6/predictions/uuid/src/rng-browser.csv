@@ -1,0 +1,116 @@
+Text
+// Unique ID creation requires a high quality random # generator. In the browser we thereforeComment.Single
+\nText.Whitespace
+// require the crypto API and do not support built-in fallback to lower quality random numberComment.Single
+\nText.Whitespace
+// generators (like Math.random()).Comment.Single
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+getRandomValuesName.Otherany0.2739string0.0801number0.0685boolean0.0635void0.0238
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rnds8Name.Otherany0.8574string0.0121void0.0068number0.0045Error0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7427string0.0770Error0.0208number0.0118complex0.0085
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.9814string0.0046complex0.0026void0.0025number0.0017
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rngName.Otherany0.3583void0.2595boolean0.1046complex0.0264string0.0134
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// lazy load so that environments that need to polyfill have a chance to do soComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+getRandomValuesName.Otherboolean0.7428any0.1427string0.0579number0.0070complex0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.Comment.Single
+\n    Text.Whitespace
+getRandomValuesName.Otherany0.5944boolean0.3300string0.0432number0.0058void0.0020
+ Text.Whitespace
+=Operator
+\n      Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+cryptoName.Otherany0.9205string0.0112boolean0.0079complex0.0062number0.0039
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+cryptoName.Otherany0.9121complex0.0129boolean0.0049string0.0012number0.0007
+.Punctuation
+getRandomValuesName.Otherany0.5507boolean0.3604string0.0524number0.0085void0.0082
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+cryptoName.Otherany0.9551boolean0.0075complex0.0054void0.0018string0.0009
+.Punctuation
+getRandomValuesName.Otherany0.6414boolean0.2573void0.0600string0.0099complex0.0044
+.Punctuation
+bindName.Otherany0.9861boolean0.0028string0.0019void0.0018number0.0010
+(Punctuation
+cryptoName.Otherany0.8002string0.0475boolean0.0143complex0.0080number0.0063
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+getRandomValuesName.Otherboolean0.6139any0.2625string0.0657number0.0081false0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.5056Error0.4275complex0.0147string0.0115{}0.0047
+ Text.Whitespace
+newOperator.Wordany0.4664Error0.2567ErrorConstructor0.1387string0.0746complex0.0070
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000LogLevel.Error0.0000never0.0000
+(Punctuation
+\n        Text.Whitespace
+'crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported'Literal.String.Single
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+getRandomValuesName.Otherany0.5702string0.0672boolean0.0503void0.0392complex0.0116
+(Punctuation
+rnds8Name.Otherany0.5477string0.1981boolean0.0450number0.0215Error0.0135
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

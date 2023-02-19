@@ -1,0 +1,336 @@
+Text
+/*\nHow it works:\n`this.#head` is an instance of `Node` which keeps track of its current value and nests another instance of `Node` that keeps the value that comes after it. When a value is provided to `.enqueue()`, the code needs to iterate through `this.#head`, going deeper and deeper to find the last value. However, iterating through every single item is slow. This problem is solved by saving a reference to the last value as `this.#tail` so that it can reference it to add a new value.\n*/Comment.Multiline
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+NodeName.Otherany0.9701complex0.0287string0.0003number0.0002Node0.0002
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+valueName.Othernumber0.5131any0.2152string0.1243boolean0.0529complex0.0238
+;Punctuation
+\n\tText.Whitespace
+nextName.Otherany0.2465number0.1363void0.1304Function0.1230string0.0620
+;Punctuation
+\n\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+valueName.Othernumber0.5084string0.2116any0.1050boolean0.0886never0.0060
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+valueName.Othernumber0.3655string0.2763any0.0915boolean0.0377complex0.0174
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Othernumber0.3841string0.2094any0.1730boolean0.0733T0.0079
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+QueueName.Otherany0.9989number0.0005complex0.0002string0.0002symbol0.0000
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+#Error
+headName.Othernumber0.3860any0.2487complex0.0552string0.0252boolean0.0092
+;Punctuation
+\n\tText.Whitespace
+#Error
+tailName.Otherany0.1502number0.0771complex0.0279Tensor<Rank>0.0113Range0.0086
+;Punctuation
+\n\tText.Whitespace
+#Error
+sizeName.Othernumber0.9433any0.0490string0.0038complex0.0013void0.0006
+;Punctuation
+\n\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+clearName.Othervoid0.9924any0.0030number0.0013Promise<void>0.0013boolean0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+enqueueName.Othervoid0.9658any0.0183boolean0.0062number0.0027string0.0016
+(Punctuation
+valueName.Otherstring0.4745number0.2897any0.1377boolean0.0647never0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeName.OtherNode0.4053any0.1535Node<Node>0.0750Element0.0578T0.0211
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6075Node0.1307complex0.0233Element0.0185HTMLElement0.0140
+ Text.Whitespace
+NodeName.Otherany0.9371complex0.0608Node0.0007number0.0002string0.0002
+(Punctuation
+valueName.Otherstring0.2569number0.2338boolean0.1200any0.0996complex0.0368
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.5916any0.1319boolean0.0802string0.0413complex0.0083
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+tailName.Otherany0.1323Node0.0870complex0.0227number0.0171Range0.0120
+.Punctuation
+nextName.Otherany0.4500number0.1161void0.0496Node0.0451boolean0.0387
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.4992Node0.2129T0.0223complex0.0187Node<Node>0.0172
+;Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+tailName.Othernumber0.1129Node0.0904any0.0597T0.0158complex0.0146
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.OtherNode0.2978any0.2616Element0.0259T0.0243number0.0239
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.4593any0.3268string0.0414boolean0.0143complex0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.Otherany0.3262Node0.1871number0.0290complex0.0194Node<Node>0.0174
+;Punctuation
+\n\t\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+tailName.Othernumber0.1867Node0.0846any0.0738string0.0204T0.0166
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nodeName.OtherNode0.2762any0.2309number0.0404T0.0389never0.0246
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+sizeName.Othernumber0.9971any0.0019string0.0005boolean0.0003void0.0000
+++Operator
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+dequeueName.Othernumber0.3458boolean0.0862Node0.0698void0.0416complex0.0328
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+currentName.Otherany0.0926number0.0533Node0.0474complex0.0428boolean0.0385
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.4178any0.2448string0.0436boolean0.0148complex0.0126
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+currentName.Otherany0.1048boolean0.0848Node0.0569T0.0253number0.0216
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.9123any0.0475string0.0116boolean0.0063complex0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Otherany0.3414number0.2327complex0.0267Point0.0127string0.0101
+.Punctuation
+nextName.Othernumber0.7868any0.0914string0.0198complex0.0078boolean0.0062
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+sizeName.Othernumber0.9951any0.0038string0.0005boolean0.0002complex0.0001
+--Operator
+;Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+currentName.Otherany0.1091Node0.0271T0.0199complex0.0129Node<Node>0.0123
+.Punctuation
+valueName.Othernumber0.3771string0.2309any0.2221boolean0.1021T0.0165
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+clearName.Othervoid0.9839number0.0067any0.0038Promise<void>0.0014boolean0.0010
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.7461any0.1269string0.0137complex0.0121boolean0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+tailName.Othernumber0.4224any0.1146complex0.0221string0.0217undefined0.0184
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+#Error
+sizeName.Othernumber0.9953any0.0033string0.0005boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+getName.Other
+ Text.Whitespace
+sizeName.Othernumber0.9912any0.0038string0.0026boolean0.0010complex0.0006
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+#Error
+sizeName.Othernumber0.9822any0.0119string0.0024complex0.0008boolean0.0004
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+*Operator
+ Text.Whitespace
+[Punctuation
+SymbolName.BuiltinSymbolConstructor0.9923symbol0.0009IterableIterator<number>0.0001IterableIterator<any>0.0001Point0.0001
+.Punctuation
+iteratorName.Othersymbol0.9509any0.0225number0.0087Promise<number>0.0018string0.0017
+]Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+currentName.Otherany0.1262boolean0.0386Node0.0369number0.0311T0.0294
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+#Error
+headName.Othernumber0.3221any0.2613string0.0162boolean0.0107complex0.0100
+;Punctuation
+\n\n\t\tText.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+currentName.Otherboolean0.0930any0.0869Node0.0557T0.0265complex0.0126
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+yieldKeyword
+ Text.Whitespace
+currentName.Otherany0.2054Node0.0546T0.0132Node<Node>0.0131complex0.0116
+.Punctuation
+valueName.Otherany0.5861string0.0937number0.0499T0.0309boolean0.0243
+;Punctuation
+\n\t\t\tText.Whitespace
+currentName.Otherany0.1873Node0.0751T0.0624complex0.0158never0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+currentName.Otherany0.1647Node0.0629T0.0170complex0.0144Node<Node>0.0133
+.Punctuation
+nextName.Otherany0.4956string0.0706number0.0389void0.0174Function0.0159
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

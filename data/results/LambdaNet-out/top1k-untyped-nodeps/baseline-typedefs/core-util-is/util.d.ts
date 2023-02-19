@@ -1,0 +1,15 @@
+declare function isArray(arg: string): boolean;
+declare function isBoolean(arg: string): boolean;
+declare function isNull(arg: number): boolean;
+declare function isNullOrUndefined(arg: number): boolean;
+declare function isNumber(arg: string): boolean;
+declare function isString(arg: string): boolean;
+declare function isSymbol(arg: string): boolean;
+declare function isUndefined(arg: number): boolean;
+declare function isRegExp(re: string): boolean;
+declare function isObject(arg: string): boolean;
+declare function isDate(d: string): boolean;
+declare function isError(e: string): boolean;
+declare function isFunction(arg: string): boolean;
+declare function isPrimitive(arg: string): boolean;
+declare function objectToString(o: string): boolean;

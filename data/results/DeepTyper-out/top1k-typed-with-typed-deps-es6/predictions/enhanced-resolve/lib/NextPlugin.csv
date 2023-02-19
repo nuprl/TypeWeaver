@@ -1,0 +1,136 @@
+Text
+/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/** @typedef {import("./Resolver")} Resolver */Comment.Multiline
+\nText.Whitespace
+/** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+NextPluginName.Otherany0.9978string0.0009complex0.0007void0.0002number0.0002
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+/**\n\t * @param {string | ResolveStepHook} source source\n\t * @param {string | ResolveStepHook} target target\n\t */Comment.Multiline
+\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+sourceName.Otherstring0.4485any0.0857number0.0425Object0.0162Buffer0.0113
+,Punctuation
+ Text.Whitespace
+targetName.OtherObject0.2877Function0.1518number0.1291any0.1004string0.0912
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+sourceName.Otherstring0.2179any0.0615number0.0294Object0.0106Date0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sourceName.Otherstring0.4290any0.1753number0.0324Object0.0103ArrayBuffer0.0091
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.2591Function0.1552Object0.1504string0.0602number0.0494
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+targetName.OtherObject0.2749any0.1681Function0.1040number0.1011string0.0502
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+/**\n\t * @param {Resolver} resolver the resolver\n\t * @returns {void}\n\t */Comment.Multiline
+\n\tText.Whitespace
+applyName.Othervoid0.9371any0.0272complex0.0161Function0.0036Promise<void>0.0021
+(Punctuation
+resolverName.OtherComponentFactoryResolver0.0799Resolver0.0479any0.0245Range0.0131Buffer0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+targetName.OtherObject0.1936any0.0980string0.0514number0.0456Target0.0419
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resolverName.Otherany0.1454ComponentFactoryResolver0.0374Resolver0.0165void0.0101number0.0077
+.Punctuation
+ensureHookName.Otherany0.3399complex0.1806number0.0923string0.0826void0.0398
+(Punctuation
+thisKeyword
+.Punctuation
+targetName.OtherObject0.2862any0.1502Function0.0535string0.0499object0.0422
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+resolverName.Otherany0.1670Resolver0.0240ComponentFactoryResolver0.0207void0.0095Range0.0062
+\n\t\t\tText.Whitespace
+.Punctuation
+getHookName.Othervoid0.3954any0.3603complex0.1000Function0.0182string0.0117
+(Punctuation
+thisKeyword
+.Punctuation
+sourceName.Otherstring0.4080any0.2222number0.0221complex0.0157void0.0058
+)Punctuation
+\n\t\t\tText.Whitespace
+.Punctuation
+tapAsyncName.Otherany0.6406void0.1485complex0.0865string0.0228number0.0070
+(Punctuation
+"NextPlugin"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+(Punctuation
+requestName.Otherany0.6850Request0.0435string0.0358complex0.0277number0.0177
+,Punctuation
+ Text.Whitespace
+resolveContextName.Otherany0.5192void0.1985number0.0485string0.0457Function0.0324
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.5287any0.2154void0.0834number0.0353boolean0.0145
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+resolverName.Otherany0.0902ComponentFactoryResolver0.0304Resolver0.0261void0.0071Function0.0062
+.Punctuation
+doResolveName.Othervoid0.4881any0.3642complex0.1004number0.0093boolean0.0045
+(Punctuation
+targetName.OtherObject0.3136any0.2473number0.0929string0.0640Function0.0344
+,Punctuation
+ Text.Whitespace
+requestName.Otherany0.4248complex0.1074string0.0513Request0.0504number0.0269
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+resolveContextName.Otherany0.3353void0.2279complex0.0744number0.0636string0.0627
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.3420any0.2705void0.1817number0.0520boolean0.0335
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

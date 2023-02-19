@@ -1,0 +1,172 @@
+Text
+/*!\n * compressible\n * Copyright(c) 2013 Jonathan Ong\n * Copyright(c) 2014 Jeremiah Senkpiel\n * Copyright(c) 2015 Douglas Christopher Wilson\n * MIT Licensed\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Module dependencies.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+dbName.Otherany0.5629complex0.1073string0.0853number0.0313T0.0240
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'mime-db'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Module variables.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+COMPRESSIBLE_TYPE_REGEXPName.OtherRegExp0.7559string0.2079any0.0133boolean0.0052string[]0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^text\/|\+(?:json|text|xml)$/iLiteral.String.Regex
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+EXTRACT_TYPE_REGEXPName.OtherRegExp0.5826string0.2968any0.0406boolean0.0169string[]0.0124
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^\s*([^;\s]*)(?:;|\s|$)/Literal.String.Regex
+\n\nText.Whitespace
+Text
+/**\n * Module exports.\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+compressibleName.Otherany0.3987string0.2755boolean0.0642number0.0456RegExp0.0392
+;Punctuation
+\n\nText.Whitespace
+/**\n * Checks if a type is compressible.\n *\n * @param {string} type\n * @return {Boolean} compressible\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+compressibleName.Otherboolean0.7383string0.2028any0.0335number0.0061complex0.0033
+ Text.Whitespace
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+typeKeyword.Reserved
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// strip parametersComment.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.7526any0.2105RegExpMatchArray0.0105boolean0.0097RegExp0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+EXTRACT_TYPE_REGEXPName.OtherRegExp0.9228any0.0410RegExpExecArray0.0199string0.0051RegExpMatchArray0.0020
+.Punctuation
+execName.OtherRegExpExecArray0.9557any0.0272string0.0024RegExp0.0023boolean0.0011
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mimeName.Otherany0.6158string0.3742number0.0038boolean0.0020string[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.Otherany0.6185RegExpExecArray0.3004string0.0555boolean0.0097RegExpMatchArray0.0041
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.7135any0.2457string0.0189RegExpMatchArray0.0052boolean0.0043
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.6008any0.3944number0.0010boolean0.0009complex0.0007
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+dataName.Otherany0.7822RegExpExecArray0.0132string0.0119RegExpMatchArray0.0087Buffer0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dbName.Otherany0.9240complex0.0128string0.0127{}0.0078number0.0041
+[Punctuation
+mimeName.Otherstring0.5116any0.4755number0.0073boolean0.0010string[]0.0004
+]Punctuation
+\n\n  Text.Whitespace
+// return database informationComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+dataName.Otherany0.8332string0.0117RegExpExecArray0.0117boolean0.0063complex0.0038
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+dataName.Otherany0.6838RegExpExecArray0.0078complex0.0057Buffer0.0039string0.0033
+.Punctuation
+compressibleName.Otherany0.8858string0.0699boolean0.0131number0.0096complex0.0033
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+dataName.Otherany0.5303RegExpExecArray0.0091complex0.0069RegExp0.0055RegExpMatchArray0.0049
+.Punctuation
+compressibleName.Otherany0.8174string0.0949boolean0.0424number0.0162RegExp0.0041
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// fallback to regexp or unknownComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+COMPRESSIBLE_TYPE_REGEXPName.OtherRegExp0.9410any0.0240string0.0036RegExpExecArray0.0030string[]0.0019
+.Punctuation
+testName.Otherboolean0.9015any0.0689string0.0103complex0.0062number0.0031
+(Punctuation
+mimeName.Otherstring0.6331any0.3578number0.0046boolean0.0013string[]0.0003
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

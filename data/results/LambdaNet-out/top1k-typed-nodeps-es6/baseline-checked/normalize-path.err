@@ -1,0 +1,19 @@
+benchmark/code/node-path.ts(2,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+benchmark/code/node-path.ts(6,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/regex.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/slice-trailing.ts(4,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/split.ts(2,13): error TS2339: Property 'split' does not exist on type 'any[]'.
+benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
+benchmark/code/v2.ts(15,7): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/v2.ts(18,3): error TS2322: Type 'string' is not assignable to type 'any[]'.
+benchmark/code/while.ts(16,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+benchmark/code/while.ts(18,11): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+benchmark/code/while.ts(31,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+index.ts(23,9): error TS2322: Type 'string' is not assignable to type 'number'.
+index.ts(24,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(24,24): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(31,7): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+

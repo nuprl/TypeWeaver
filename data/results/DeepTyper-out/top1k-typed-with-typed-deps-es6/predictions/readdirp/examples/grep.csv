@@ -1,0 +1,360 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+createReadStreamName.Otherany0.9942complex0.0046string0.0003void0.0001number0.0001
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+esName.Otherany0.7465string0.0137Function0.0094symbol0.0060string[]0.0047
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'event-stream'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+readdirpName.Otherany0.7565string0.0730boolean0.0127void0.0101Promise<void>0.0095
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'..'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+findLinesMatchingName.Otherany0.8098void0.0094string0.0089Promise<any>0.0062boolean0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+searchTermName.Otherstring0.5610any0.2411number0.0814Function0.0052symbol0.0034
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+esName.Otherany0.6662string0.0084Function0.0043symbol0.0032OmniSharpServer0.0024
+.Punctuation
+throughName.Otherany0.7048complex0.1193string0.0111Promise<any>0.0096Promise<string>0.0031
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+entryName.Otherany0.0463FileEntry0.0129WaterfallEntry0.0097Entry0.0056LogEntry0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+linenoName.Othernumber0.9892any0.0071string0.0020boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+matchingLinesName.Otherany[]0.9048string[]0.0174any0.0119any[][]0.0104number[]0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fileStreamName.Otherany0.7174any[]0.0217void0.0080this0.0045Function0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n    Text.Whitespace
+createReadStreamName.Otherany0.9908complex0.0060any[]0.0002string0.0002void0.0001
+(Punctuation
+entryName.Otherany0.4486complex0.0115any[]0.0065Action0.0048LogEntry0.0033
+.Punctuation
+fullPathName.Otherany0.6339string0.3566complex0.0025boolean0.0013number0.0011
+,Punctuation
+ Text.Whitespace
+{Punctuation
+encodingName.Otherstring0.9984any0.0008number0.0003boolean0.0001RegExp0.0001
+:Operator
+ Text.Whitespace
+'utf-8'Literal.String.Single
+}Punctuation
+)Punctuation
+\n      Text.Whitespace
+// handle file contents line by lineComment.Single
+\n      Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9955complex0.0019string0.0008number0.0004boolean0.0002
+(Punctuation
+esName.Otherany0.9704string0.0279number0.0006boolean0.0001Date0.0001
+.Punctuation
+splitName.Otherany0.8691complex0.1241string0.0012any[]0.0007number0.0005
+(Punctuation
+'\n'Literal.String.Single
+)Punctuation
+)Punctuation
+\n      Text.Whitespace
+// filter, keep only the lines that matched the termComment.Single
+\n      Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9912complex0.0029string0.0012number0.0008boolean0.0004
+(Punctuation
+esName.Otherany0.9790string0.0033any[]0.0007number0.0007Function0.0003
+.Punctuation
+mapSyncName.Otherany0.9757string0.0066any[]0.0020complex0.0017number0.0013
+(Punctuation
+(Punctuation
+lineName.Otherstring0.6328any0.3251number0.0388string[]0.0004any[]0.0004
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+linenoName.Othernumber0.9902any0.0080string0.0014boolean0.0001complex0.0001
+++Operator
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+~Operator
+lineName.Otherany0.8014string0.1889number0.0061any[]0.0011string[]0.0009
+.Punctuation
+indexOfName.Othernumber0.5210any0.4742string0.0033boolean0.0004complex0.0004
+(Punctuation
+searchTermName.Otherstring0.7204any0.1940number0.0805boolean0.0020Function0.0005
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+linenoName.Othernumber0.9550any0.0307string0.0112boolean0.0009complex0.0003
+}Literal.String.Interpol
+: Literal.String.Backtick
+${Literal.String.Interpol
+lineName.Otherany0.6002string0.3036number0.0890any[]0.0015complex0.0013
+}Literal.String.Interpol
+`Literal.String.Backtick
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\n      Text.Whitespace
+// aggregate matching lines and delegate control back to the file streamComment.Single
+\n      Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9951complex0.0022string0.0005number0.0003Promise<any>0.0002
+(Punctuation
+esName.Otherany0.9901string0.0021Function0.0005any[]0.0003number0.0003
+.Punctuation
+throughName.Otherany0.8990complex0.0728Promise<any>0.0049string0.0026any[]0.0023
+(Punctuation
+\n        Text.Whitespace
+(Punctuation
+dataName.Otherstring0.5079any0.4153any[]0.0157number0.0138Buffer0.0090
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+matchingLinesName.Otherany[]0.7483any0.0924string[]0.0474Function[]0.0085number[]0.0084
+.Punctuation
+pushName.Othernumber0.9577any0.0361string0.0018void0.0009boolean0.0007
+(Punctuation
+dataName.Otherstring0.5754any0.3694number0.0137any[]0.0108complex0.0027
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+// drop files that had no matchesComment.Single
+\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+matchingLinesName.Otherany[]0.3756any0.2678string[]0.2505string0.0307complex0.0115
+.Punctuation
+lengthName.Othernumber0.8966any0.0977string0.0032complex0.0008boolean0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Othercomplex0.6627any0.2790string0.0067{}0.0066number0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+fileName.Otherany0.6872string0.1473complex0.0439File0.0218number0.0045
+:Operator
+ Text.Whitespace
+entryKeyword.Typeany0.1390string0.1083complex0.0639any[]0.0409{}0.0184
+,Punctuation
+ Text.Whitespace
+linesName.Otherstring[]0.6035any0.1028any[]0.1022string0.0277complex0.0187
+:Operator
+ Text.Whitespace
+matchingLinesKeyword.Typeany0.2312string[]0.1954any[]0.1914string0.1676number0.0253
+ Text.Whitespace
+}Punctuation
+;Punctuation
+\n            Text.Whitespace
+fileStreamName.Otherany0.9755complex0.0029any[]0.0006void0.0003Observable0.0003
+.Punctuation
+emitName.Otherany0.9360void0.0309complex0.0247Promise<void>0.0014Promise<any>0.0009
+(Punctuation
+'data'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.3950complex0.3285{}0.0959any[]0.0534string0.0378
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// pass result on to file streamComment.Single
+\n          Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+thisKeyword
+.Punctuation
+emitName.Otherany0.6368void0.3028complex0.0381Promise<void>0.0054boolean0.0026
+(Punctuation
+'end'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+// create a stream of all javascript files found in this and all sub directoriesComment.Single
+\nText.Whitespace
+// find all lines matching the termComment.Single
+\nText.Whitespace
+// for each file (if none found, that file is ignored)Comment.Single
+\nText.Whitespace
+readdirpName.Otherany0.6197complex0.1822void0.0971Promise<void>0.0144Promise<any>0.0133
+(Punctuation
+__dirnameName.Otherstring0.5579any0.3096Date0.0097{}0.0056Object0.0048
+,Punctuation
+ Text.Whitespace
+{Punctuation
+fileFilterName.Otherstring0.9886RegExp0.0065any0.0025string[]0.0005number0.0003
+:Operator
+ Text.Whitespace
+'*.js'Literal.String.Single
+}Punctuation
+)Punctuation
+\n  Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9940complex0.0026string0.0013number0.0002boolean0.0002
+(Punctuation
+findLinesMatchingName.Otherany0.9802string0.0092complex0.0036any[]0.0008boolean0.0007
+(Punctuation
+'arguments'Literal.String.Single
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9949complex0.0021string0.0011boolean0.0004number0.0002
+(Punctuation
+esName.Otherany0.9841string0.0053Function0.0006any[]0.0006Response0.0003
+.Punctuation
+mapSyncName.Otherany0.9720string0.0150complex0.0019any[]0.0016Promise<any>0.0011
+(Punctuation
+(Punctuation
+resName.Otherany0.7034string0.2050Response0.0431any[]0.0039complex0.0039
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// format the results and outputComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+\nLiteral.String.Backtick
+\nLiteral.String.Backtick
+${Literal.String.Interpol
+resName.Otherany0.8999complex0.0663string0.0141{}0.0025Response0.0022
+.Punctuation
+fileName.Otherany0.9093complex0.0504string0.0127File0.0021Promise<string>0.0017
+.Punctuation
+pathName.Otherany0.7187string0.2706complex0.0054string[]0.0012{}0.0009
+}Literal.String.Interpol
+\nLiteral.String.Backtick
+\tLiteral.String.Backtick
+${Literal.String.Interpol
+resName.Otherany0.9482complex0.0218string0.0057Response0.0034void0.0027
+.Punctuation
+linesName.Otherstring[]0.5255any0.4092any[]0.0272string0.0088complex0.0034
+.Punctuation
+joinName.Otherstring0.7604any0.2318number0.0025complex0.0015boolean0.0009
+(Punctuation
+'\n\t'Literal.String.Single
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9777complex0.0108string0.0035number0.0011boolean0.0008
+(Punctuation
+processName.Otherany0.9988complex0.0006any[]0.0001string0.0001{}0.0000
+.Punctuation
+stdoutName.Otherany0.9974string0.0019complex0.0002number0.0001void0.0001
+)Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,907 @@
+Text
+/*!\n * accepts\n * Copyright(c) 2014 Jonathan Ong\n * Copyright(c) 2015 Douglas Christopher Wilson\n * MIT Licensed\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Module dependencies.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+NegotiatorName.Otherany0.5980complex0.0496string0.0259void0.0142string[]0.0122
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'negotiator'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+mimeName.Otherany0.7724string0.1098void0.0075string[]0.0036number0.0032
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'mime-types'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Module exports.\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+AcceptsName.Otherany0.8527string0.0195number0.0181complex0.0107void0.0105
+;Punctuation
+\n\nText.Whitespace
+/**\n * Create a new Accepts object for the given req.\n *\n * @param {object} req\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+AcceptsName.Otherany0.5951string0.1588boolean0.0737any[]0.0220complex0.0129
+ Text.Whitespace
+(Punctuation
+reqName.Otherany0.7571Request0.0483string0.0209boolean0.0073number0.0068
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+thisKeyword
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+AcceptsName.Otherany0.9868string0.0026complex0.0025number0.0011symbol0.0004
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.8275string0.0519Error0.0055complex0.0047boolean0.0040
+ Text.Whitespace
+AcceptsName.Otherany0.9879string0.0041complex0.0026boolean0.0009void0.0004
+(Punctuation
+reqName.Otherany0.8132Request0.0506complex0.0168string0.0156void0.0061
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+thisKeyword
+.Punctuation
+headersName.Otherany0.8464complex0.0735Headers0.0133Object0.0107number0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reqName.Otherany0.8099Request0.0645complex0.0122XMLHttpRequest0.0097Object0.0022
+.Punctuation
+headersName.Otherany0.9503complex0.0269Headers0.0030Object0.0029any[]0.0013
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.7519any[]0.0081complex0.0080Object0.0038string0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8108string0.0115complex0.0098Error0.0071any[]0.0061
+ Text.Whitespace
+NegotiatorName.Otherany0.9821complex0.0051void0.0017string0.0015any[]0.0011
+(Punctuation
+reqName.Otherany0.8044Request0.0602complex0.0196string0.0064void0.0062
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Check if the given `type(s)` is acceptable, returning\n * the best match when true, otherwise `undefined`, in which\n * case you should respond with 406 "Not Acceptable".\n *\n * The `type` value may be a single mime type string\n * such as "application/json", the extension name\n * such as "json" or an array `["json", "html", "text/plain"]`. When a list\n * or array is given the _best_ match, if any is returned.\n *\n * Examples:\n *\n *     // Accept: text/html\n *     this.types('html');\n *     // => "html"\n *\n *     // Accept: text/*, application/json\n *     this.types('html');\n *     // => "html"\n *     this.types('text/html');\n *     // => "text/html"\n *     this.types('json', 'text');\n *     // => "json"\n *     this.types('application/json');\n *     // => "application/json"\n *\n *     // Accept: text/*, application/json\n *     this.types('image/png');\n *     this.types('png');\n *     // => undefined\n *\n *     // Accept: text/*;q=.5, application/json\n *     this.types(['html', 'json']);\n *     this.types('html', 'json');\n *     // => "json"\n *\n * @param {String|Array} types...\n * @return {String|Array|Boolean}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+AcceptsName.Otherany0.8403complex0.0387void0.0336{}0.0040Function0.0038
+.Punctuation
+prototypeName.Otherany0.8166Object0.0131Function0.0105void0.0080any[]0.0068
+.Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.9601complex0.0138string0.0056Function0.0030void0.0025
+.Punctuation
+prototypeName.Otherany0.9309Object0.0083string0.0077Function0.0024any[]0.0023
+.Punctuation
+typesName.Otherany0.7330string[]0.0991any[]0.0686complex0.0329string0.0101
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+types_Name.Otherany0.8798string0.0703any[]0.0094string[]0.0077complex0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+typesName.Otherany0.6902string[]0.1726any[]0.0592complex0.0127string0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+types_Name.Otherany0.8534string[]0.0382any[]0.0172string0.0155complex0.0085
+\n\n  Text.Whitespace
+// support flattened argumentsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typesName.Otherany0.7471string[]0.1412complex0.0280any[]0.0251string0.0117
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+ArrayName.BuiltinArrayConstructor0.9994any0.0001Math0.0000ObjectConstructor0.0000Array0.0000
+.Punctuation
+isArrayName.Othercomplex0.9933any0.0033any[]0.0010boolean0.0005string[]0.0002
+(Punctuation
+typesName.Otherany0.6064any[]0.2007complex0.1177string[]0.0462number[]0.0029
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+typesName.Otherany[]0.8161string[]0.1054any0.0257complex0.0148number[]0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3445any[]0.3152string[]0.0973complex0.0237number[]0.0152
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9989any[]0.0000any0.0000Math0.0000ObjectConstructor0.0000
+(Punctuation
+argumentsName.OtherIArguments0.9327any[]0.0430string[]0.0036any0.0031any[][]0.0007
+.Punctuation
+lengthName.Othernumber0.9766any0.0218string0.0005void0.0003complex0.0002
+)Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9887any0.0106string0.0002boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9725any0.0264string0.0003void0.0002complex0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+typesName.Otherany[]0.3885any0.3224string[]0.2002complex0.0164T[]0.0122
+.Punctuation
+lengthName.Othernumber0.8464any0.1515string0.0007complex0.0005void0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9357any0.0631string0.0005boolean0.0002complex0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+typesName.Otherany[]0.6002any0.1826string[]0.1546complex0.0189number[]0.0053
+[Punctuation
+iName.Othernumber0.9469any0.0477string0.0040boolean0.0003complex0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9414any[]0.0393any0.0043string[]0.0036any[][]0.0005
+[Punctuation
+iName.Othernumber0.9611any0.0338string0.0036boolean0.0004complex0.0003
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// no types, return all requested typesComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+typesName.Otherstring[]0.4592any0.2538any[]0.2409complex0.0117number[]0.0071
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typesName.Otherany0.3589string[]0.3383any[]0.2558complex0.0078number[]0.0057
+.Punctuation
+lengthName.Othernumber0.6417any0.3551string0.0011complex0.0008boolean0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9572complex0.0063any[]0.0014number0.0008{}0.0007
+.Punctuation
+mediaTypesName.Otherany0.8947number0.0262string0.0191complex0.0119any[]0.0082
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// no accept header, return first given typeComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+headersName.Otherany0.9090complex0.0415Object0.0060Headers0.0041number0.0018
+.Punctuation
+acceptName.Otherany0.8940number0.0456string0.0186boolean0.0169complex0.0100
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typesName.Otherany[]0.5261any0.2171string[]0.1590complex0.0348number[]0.0101
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+mimesName.Otherany0.6682string[]0.2675any[]0.0473string0.0074number[]0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typesName.Otherany0.6169string[]0.2175any[]0.1302complex0.0105number[]0.0021
+.Punctuation
+mapName.Otherany0.8649U[]0.0832complex0.0325any[]0.0043void0.0019
+(Punctuation
+extToMimeName.Otherany0.8797string0.0504complex0.0171any[]0.0125string[]0.0089
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+acceptsName.Otherany0.8714boolean0.0567string0.0413any[]0.0099number0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9861complex0.0025string0.0013any[]0.0007number0.0005
+.Punctuation
+mediaTypesName.Otherany0.9296boolean0.0121string0.0107complex0.0097any[]0.0085
+(Punctuation
+mimesName.Otherany0.5358string[]0.3564any[]0.0840string0.0120number[]0.0023
+.Punctuation
+filterName.Otherany0.7499complex0.2315string0.0072boolean0.0033any[]0.0015
+(Punctuation
+validMimeName.Otherany0.8952string0.0591any[]0.0071complex0.0062boolean0.0058
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+firstName.Otherany0.9012string0.0609boolean0.0281number0.0034any[]0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+acceptsName.Otherany0.7087any[]0.1607boolean0.0404string[]0.0301complex0.0156
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+firstName.Otherany0.9572boolean0.0250string0.0071complex0.0010{}0.0010
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+typesName.Otherany0.9333any[]0.0262{}0.0102complex0.0100string[]0.0095
+[Punctuation
+mimesName.Otherany0.5017string[]0.3692string0.0841any[]0.0352number[]0.0016
+.Punctuation
+indexOfName.Otherany0.5718number0.4214string0.0045boolean0.0008complex0.0004
+(Punctuation
+firstName.Otherany0.6678string0.3136boolean0.0063number0.0052complex0.0008
+)Punctuation
+]Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return accepted encodings or best fit based on `encodings`.\n *\n * Given `Accept-Encoding: gzip, deflate`\n * an array sorted by quality is returned:\n *\n *     ['gzip', 'deflate']\n *\n * @param {String|Array} encodings...\n * @return {String|Array}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+AcceptsName.Otherany0.8829void0.0636complex0.0369string0.0020{}0.0019
+.Punctuation
+prototypeName.Otherany0.9510void0.0080Object0.0072any[]0.0033string0.0028
+.Punctuation
+encodingName.Otherany0.9812complex0.0049string0.0039void0.0030Object0.0008
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.8925complex0.0441void0.0253string0.0078Object0.0032
+.Punctuation
+prototypeName.Otherany0.9445Object0.0103any[]0.0061void0.0047string0.0037
+.Punctuation
+encodingsName.Otherany0.9659any[]0.0102string0.0059complex0.0047number0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+encodings_Name.Otherany0.9505string0.0126any[]0.0116complex0.0043boolean0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+encodingsName.Otherany0.9728any[]0.0122string0.0036complex0.0028boolean0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+encodings_Name.Otherany0.9471any[]0.0179complex0.0077{}0.0025string0.0023
+\n\n  Text.Whitespace
+// support flattened argumentsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+encodingsName.Otherany0.9685any[]0.0081string0.0072complex0.0036number0.0029
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+ArrayName.BuiltinArrayConstructor0.9996any0.0001Math0.0000any[]0.0000ObjectConstructor0.0000
+.Punctuation
+isArrayName.Othercomplex0.9847any0.0095any[]0.0021boolean0.0007void0.0003
+(Punctuation
+encodingsName.Otherany0.9170any[]0.0567complex0.0146number0.0020string[]0.0017
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+encodingsName.Otherany[]0.4959any0.4269complex0.0321string[]0.0128Object0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3933any[]0.2682string[]0.0782complex0.0265ArrayConstructor0.0232
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9992any[]0.0001any0.0000ObjectConstructor0.0000Math0.0000
+(Punctuation
+argumentsName.OtherIArguments0.9323any[]0.0472string[]0.0036any0.0031any[][]0.0005
+.Punctuation
+lengthName.Othernumber0.9722any0.0259string0.0006void0.0003complex0.0002
+)Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9838any0.0154string0.0003boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9253any0.0729string0.0006boolean0.0003void0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+encodingsName.Otherany0.8657any[]0.1085string[]0.0070string0.0044complex0.0035
+.Punctuation
+lengthName.Othernumber0.6492any0.3482string0.0008void0.0007complex0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.8585any0.1399string0.0008boolean0.0003void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+encodingsName.Otherany0.8877any[]0.0914complex0.0043string[]0.0028Object0.0021
+[Punctuation
+iName.Othernumber0.8801any0.1132string0.0055boolean0.0003complex0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9425any[]0.0408any0.0042string[]0.0021any[][]0.0004
+[Punctuation
+iName.Othernumber0.9424any0.0510string0.0049boolean0.0004complex0.0003
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// no encodings, return all requested encodingsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+encodingsName.Otherany0.9706any[]0.0118boolean0.0048string0.0038number0.0032
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+encodingsName.Otherany0.9196any[]0.0599string0.0070string[]0.0032complex0.0031
+.Punctuation
+lengthName.Othernumber0.5527any0.4441string0.0011complex0.0007void0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9906complex0.0020any[]0.0009number0.0002void0.0002
+.Punctuation
+encodingsName.Otherany0.9693any[]0.0073number0.0070complex0.0027boolean0.0024
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9909complex0.0020any[]0.0012number0.0004void0.0001
+.Punctuation
+encodingsName.Otherany0.9658any[]0.0128number0.0063complex0.0031boolean0.0017
+(Punctuation
+encodingsName.Otherany0.9489any[]0.0255complex0.0076number0.0052string0.0042
+)Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return accepted charsets or best fit based on `charsets`.\n *\n * Given `Accept-Charset: utf-8, iso-8859-1;q=0.2, utf-7;q=0.5`\n * an array sorted by quality is returned:\n *\n *     ['utf-8', 'utf-7', 'iso-8859-1']\n *\n * @param {String|Array} charsets...\n * @return {String|Array}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+AcceptsName.Otherany0.8746complex0.0622void0.0308Promise<void>0.0025string0.0022
+.Punctuation
+prototypeName.Otherany0.8834any[]0.0157Object0.0116void0.0071string0.0059
+.Punctuation
+charsetName.Otherany0.9639string0.0243complex0.0053number0.0008void0.0007
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.9450complex0.0166string0.0095void0.0087{}0.0022
+.Punctuation
+prototypeName.Otherany0.9395Object0.0102any[]0.0056string0.0052void0.0027
+.Punctuation
+charsetsName.Otherany0.9345string0.0211complex0.0106any[]0.0094string[]0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+charsets_Name.Otherany0.9237string0.0319any[]0.0146string[]0.0035complex0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+charsetsName.Otherany0.9185boolean0.0168string0.0102complex0.0097any[]0.0086
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+charsets_Name.Otherany0.9020any[]0.0176string0.0173boolean0.0091complex0.0087
+\n\n  Text.Whitespace
+// support flattened argumentsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+charsetsName.Otherany0.8642boolean0.0614string0.0162complex0.0106any[]0.0066
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+ArrayName.BuiltinArrayConstructor0.9995any0.0001Math0.0000ObjectConstructor0.0000any[]0.0000
+.Punctuation
+isArrayName.Othercomplex0.9889any0.0059any[]0.0016boolean0.0008void0.0003
+(Punctuation
+charsetsName.Otherany0.8401complex0.0734any[]0.0587string[]0.0027number[]0.0018
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+charsetsName.Otherany[]0.7459any0.1114string[]0.0358complex0.0216ArrayConstructor0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3991any[]0.2636string[]0.0604ArrayConstructor0.0288complex0.0253
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9991any[]0.0001any0.0000ObjectConstructor0.0000Math0.0000
+(Punctuation
+argumentsName.OtherIArguments0.9345any[]0.0439string[]0.0030any0.0025any[][]0.0006
+.Punctuation
+lengthName.Othernumber0.9731any0.0251string0.0006void0.0003complex0.0002
+)Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9867any0.0124string0.0003complex0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9680any0.0307string0.0004void0.0002boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+charsetsName.Otherany0.6264any[]0.1703string[]0.0647complex0.0172T[]0.0071
+.Punctuation
+lengthName.Othernumber0.8619any0.1359string0.0007complex0.0004void0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9245any0.0741string0.0005boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+charsetsName.Otherany0.5319any[]0.3377string[]0.0267complex0.0129any[][]0.0048
+[Punctuation
+iName.Othernumber0.9328any0.0621string0.0038boolean0.0003complex0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9497any[]0.0333any0.0030string[]0.0026any[][]0.0004
+[Punctuation
+iName.Othernumber0.9587any0.0359string0.0037boolean0.0003complex0.0003
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// no charsets, return all requested charsetsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+charsetsName.Otherany0.6541any[]0.1394string[]0.0829boolean0.0536string0.0153
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+charsetsName.Otherany0.7501any[]0.1390string[]0.0593complex0.0099string0.0069
+.Punctuation
+lengthName.Othernumber0.6616any0.3347string0.0014complex0.0008boolean0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9453complex0.0099any[]0.0033number0.0008{}0.0006
+.Punctuation
+charsetsName.Otherany0.8449number0.0328boolean0.0234any[]0.0202complex0.0157
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.9549complex0.0138any[]0.0036Object0.0005number0.0004
+.Punctuation
+charsetsName.Otherany0.8454complex0.0476any[]0.0468boolean0.0120number0.0075
+(Punctuation
+charsetsName.Otherany0.8817any[]0.0493complex0.0209string0.0083string[]0.0076
+)Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return accepted languages or best fit based on `langs`.\n *\n * Given `Accept-Language: en;q=0.8, es, pt`\n * an array sorted by quality is returned:\n *\n *     ['es', 'pt', 'en']\n *\n * @param {String|Array} langs...\n * @return {Array|String}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+AcceptsName.Otherany0.7837complex0.1152void0.0539Promise<void>0.0035{}0.0035
+.Punctuation
+prototypeName.Otherany0.7605any[]0.0386Object0.0233void0.0123string[]0.0116
+.Punctuation
+langName.Otherany0.8699complex0.0466string0.0398Object0.0089any[]0.0081
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.8146complex0.0901string0.0161any[]0.0117void0.0091
+.Punctuation
+prototypeName.Otherany0.7457any[]0.0664Object0.0373string[]0.0152{}0.0121
+.Punctuation
+langsName.Otherany0.8479complex0.0895any[]0.0190string[]0.0140string0.0064
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.8295complex0.0863void0.0149Object0.0088{}0.0087
+.Punctuation
+prototypeName.Otherany0.8432Object0.0326any[]0.0202string[]0.0070{}0.0059
+.Punctuation
+languageName.Otherany0.9312string0.0366complex0.0069number0.0054Object0.0039
+ Text.Whitespace
+=Operator
+\nText.Whitespace
+AcceptsName.Otherany0.9053complex0.0323string0.0094Object0.0076void0.0055
+.Punctuation
+prototypeName.Otherany0.8771Object0.0288any[]0.0188string[]0.0065string0.0062
+.Punctuation
+languagesName.Otherany0.6800any[]0.1579complex0.0531string[]0.0449number[]0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+languages_Name.Otherany0.8781string0.0306any[]0.0241string[]0.0095complex0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+languagesName.Otherany0.4572string[]0.1897any[]0.1736complex0.0311number[]0.0166
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+languages_Name.Otherany0.7779any[]0.0559string[]0.0367complex0.0172string0.0149
+\n\n  Text.Whitespace
+// support flattened argumentsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+languagesName.Otherany0.5263string[]0.1882any[]0.0792complex0.0259number[]0.0166
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+ArrayName.BuiltinArrayConstructor0.9995any0.0001Math0.0000any[]0.0000Array0.0000
+.Punctuation
+isArrayName.Othercomplex0.9820any0.0081any[]0.0031boolean0.0019number0.0004
+(Punctuation
+languagesName.Otherany0.6963any[]0.1539string[]0.0549complex0.0303number[]0.0103
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+languagesName.Otherany[]0.6618string[]0.1284any0.0900number[]0.0248complex0.0148
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany[]0.3571any0.2378string[]0.1122string0.0217number[]0.0216
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9989any[]0.0000any0.0000ObjectConstructor0.0000Math0.0000
+(Punctuation
+argumentsName.OtherIArguments0.9266any[]0.0524string[]0.0036any0.0017any[][]0.0005
+.Punctuation
+lengthName.Othernumber0.9791any0.0190string0.0006void0.0003boolean0.0002
+)Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9909any0.0083string0.0003boolean0.0001number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9817any0.0171string0.0004boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+languagesName.Otherstring[]0.3932any[]0.3230any0.1017T[]0.0326number[]0.0194
+.Punctuation
+lengthName.Othernumber0.9022any0.0956string0.0007void0.0003complex0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9417any0.0568string0.0006boolean0.0003void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+languagesName.Otherany[]0.4907string[]0.1991any0.1789number[]0.0165T[]0.0155
+[Punctuation
+iName.Othernumber0.9128any0.0780string0.0071boolean0.0004any[]0.0003
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9132any[]0.0673string[]0.0049any0.0026any[][]0.0004
+[Punctuation
+iName.Othernumber0.9625any0.0298string0.0061boolean0.0004complex0.0002
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// no languages, return all requested languagesComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+languagesName.Otherstring[]0.3545any0.3193any[]0.2229number[]0.0171string0.0131
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+languagesName.Otherstring[]0.4969any[]0.2355any0.1359number[]0.0177T[]0.0136
+.Punctuation
+lengthName.Othernumber0.8950any0.1022string0.0012boolean0.0004complex0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.7982any[]0.0376complex0.0353string[]0.0032T[]0.0016
+.Punctuation
+languagesName.Otherany0.4002any[]0.2239string[]0.0864complex0.0470T[]0.0176
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+negotiatorName.Otherany0.7166any[]0.0690complex0.0558string[]0.0077number[]0.0024
+.Punctuation
+languagesName.Otherany[]0.2952any0.2116string[]0.1615complex0.0374T[]0.0324
+(Punctuation
+languagesName.Otherany0.4267any[]0.1933string[]0.1487number[]0.0173complex0.0157
+)Punctuation
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+falseKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Convert extnames to mime.\n *\n * @param {String} type\n * @return {String}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+extToMimeName.Otherboolean0.5403any0.3079string0.0769number0.0157any[]0.0156
+ Text.Whitespace
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+indexOfName.Otherany0.5412number0.4466string0.0054complex0.0019boolean0.0006
+(Punctuation
+'/'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+mimeName.Otherany0.9825string0.0067number0.0011complex0.0005Error0.0004
+.Punctuation
+lookupName.Otherany0.6687boolean0.1353string0.1257number0.0376complex0.0055
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+typeKeyword.Reserved
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Check if mime is valid.\n *\n * @param {String} type\n * @return {String}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+validMimeName.Otherboolean0.5049any0.3661string0.0740complex0.0088number0.0067
+ Text.Whitespace
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

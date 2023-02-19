@@ -1,0 +1,117 @@
+importKeyword
+ Text.Whitespace
+reflectName.Otherany0.5551number0.1079complex0.0760T0.0387void0.0205
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./reflect.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * A helper function that wraps an array or an object of functions with `reflect`.\n *\n * @name reflectAll\n * @static\n * @memberOf module:Utils\n * @method\n * @see [async.reflect]{@link module:Utils.reflect}\n * @category Util\n * @param {Array|Object|Iterable} tasks - The collection of\n * [async functions]{@link AsyncFunction} to wrap in `async.reflect`.\n * @returns {Array} Returns an array of async functions, each wrapped in\n * `async.reflect`\n * @example\n *\n * let tasks = [\n *     function(callback) {\n *         setTimeout(function() {\n *             callback(null, 'one');\n *         }, 200);\n *     },\n *     function(callback) {\n *         // do some more stuff but error ...\n *         callback(new Error('bad stuff happened'));\n *     },\n *     function(callback) {\n *         setTimeout(function() {\n *             callback(null, 'two');\n *         }, 100);\n *     }\n * ];\n *\n * async.parallel(async.reflectAll(tasks),\n * // optional callback\n * function(err, results) {\n *     // values\n *     // results[0].value = 'one'\n *     // results[1].error = Error('bad stuff happened')\n *     // results[2].value = 'two'\n * });\n *\n * // an example using an object instead of an array\n * let tasks = {\n *     one: function(callback) {\n *         setTimeout(function() {\n *             callback(null, 'one');\n *         }, 200);\n *     },\n *     two: function(callback) {\n *         callback('two');\n *     },\n *     three: function(callback) {\n *         setTimeout(function() {\n *             callback(null, 'three');\n *         }, 100);\n *     }\n * };\n *\n * async.parallel(async.reflectAll(tasks),\n * // optional callback\n * function(err, results) {\n *     // values\n *     // results.one.value = 'one'\n *     // results.two.error = 'two'\n *     // results.three.value = 'three'\n * });\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+reflectAllName.Otherany0.3242complex0.1333string0.1201void0.1047number0.0190
+(Punctuation
+tasksName.Otherany0.7362string0.0353complex0.0175any[]0.0121string[]0.0115
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resultsName.Otherany0.9220complex0.0083any[]0.0082string0.0075{}0.0017
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9997ObjectConstructor0.0000any0.0000Math0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9907any0.0023any[]0.0022boolean0.0012void0.0004
+(Punctuation
+tasksName.Otherany0.5916any[]0.2767complex0.0218string[]0.0144string0.0041
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+resultsName.Otherany0.7308any[]0.1779complex0.0196{}0.0084string[]0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tasksName.Otherany0.4153any[]0.4085string[]0.0180complex0.0089T[]0.0032
+.Punctuation
+mapName.OtherU[]0.9022any0.0486complex0.0278any[]0.0018void0.0017
+(Punctuation
+reflectName.Otherany0.8244number0.0967complex0.0121{}0.0091string0.0089
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+resultsName.Other{}0.4936any0.3716any[]0.0274complex0.0259object0.0165
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n        Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0000complex0.0000Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9870any[]0.0049complex0.0027string0.0019any0.0011
+(Punctuation
+tasksName.Otherany0.6977any[]0.1154complex0.0464string[]0.0100{}0.0067
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.9836any0.0074complex0.0050v...0.0011Promise<void>0.0005
+(Punctuation
+keyName.Otherstring0.9034any0.0891number0.0028complex0.0024void0.0006
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+resultsName.Otherany0.9100complex0.0480{}0.0211any[]0.0038void0.0012
+[Punctuation
+keyName.Otherstring0.9651any0.0290number0.0029complex0.0017void0.0003
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reflectName.Otherany0.7377number0.1308void0.0260string0.0200complex0.0138
+.Punctuation
+callName.Otherany0.9893complex0.0029void0.0024string0.0012number0.0011
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+tasksName.Otherany0.9376complex0.0034any[]0.0026{}0.0022Object0.0011
+[Punctuation
+keyName.Otherstring0.9560any0.0348number0.0031complex0.0021void0.0007
+]Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultsName.Otherany0.6442any[]0.0505complex0.0166{}0.0156object0.0080
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

@@ -1,0 +1,279 @@
+Text
+/**\n * Module dependencies.\n */Comment.Multiline
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+cryptoName.Otherany0.9944complex0.0008string0.0005void0.0003number0.0003
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'crypto'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Sign the given `val` with `secret`.\n *\n * @param {String} val\n * @param {String} secret\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+signName.Otherany0.3594string0.1922boolean0.1447complex0.1046void0.0872
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valName.Otherany0.7056string0.2720number0.0130boolean0.0031Date0.0009
+,Punctuation
+ Text.Whitespace
+secretName.Otherstring0.8472any0.1488number0.0008boolean0.0006complex0.0005
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'string'Literal.String.Single
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valName.Otherany0.8058string0.0711complex0.0565number0.0266boolean0.0134
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4752complex0.3640string0.0433boolean0.0267Error0.0226
+ Text.Whitespace
+newOperator.Wordany0.3738complex0.1530boolean0.1107string0.0855Error0.0381
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9921ErrorConstructor0.0015BooleanConstructor0.0002MapConstructor0.0001complex0.0001
+(Punctuation
+"Cookie value must be provided as a string."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nullKeyword.Constant
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+secretName.Otherstring0.9509any0.0420complex0.0017never0.0009boolean0.0008
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4385complex0.3622string0.0622Error0.0387boolean0.0276
+ Text.Whitespace
+newOperator.Wordany0.3231string0.1208boolean0.1174complex0.1146Error0.0508
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9914ErrorConstructor0.0016BooleanConstructor0.0001MapConstructor0.0001complex0.0001
+(Punctuation
+"Secret key must be provided."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valName.Otherany0.6010string0.3317number0.0548complex0.0034boolean0.0025
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cryptoName.Otherany0.9994complex0.0001string0.0001number0.0001void0.0000
+\n    Text.Whitespace
+.Punctuation
+createHmacName.Otherany0.9968complex0.0025string0.0001boolean0.0001void0.0001
+(Punctuation
+'sha256'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+secretName.Otherstring0.9342any0.0637number0.0004boolean0.0003complex0.0003
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+updateName.Otherany0.9904string0.0044Promise<any>0.0018number0.0011complex0.0004
+(Punctuation
+valName.Otherstring0.6176any0.3426number0.0284boolean0.0039Date0.0013
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+digestName.Otherany0.9724complex0.0229string0.0008number0.0007boolean0.0003
+(Punctuation
+'base64'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+.Punctuation
+replaceName.Otherany0.7888complex0.2059void0.0022string0.0007number0.0003
+(Punctuation
+/\=+$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Unsign and decode the given `input` with `secret`,\n * returning `false` if the signature is invalid.\n *\n * @param {String} input\n * @param {String} secret\n * @return {String|Boolean}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unsignName.Othervoid0.4634boolean0.3440any0.0991string0.0335complex0.0127
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+inputName.Otherstring0.6855any0.2802complex0.0032number0.0029string[]0.0026
+,Punctuation
+ Text.Whitespace
+secretName.Otherstring0.8331any0.1620number0.0008complex0.0007boolean0.0006
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'string'Literal.String.Single
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.5845complex0.2005string0.1290any[]0.0284string[]0.0130
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4369complex0.3950string0.0373boolean0.0279{}0.0267
+ Text.Whitespace
+newOperator.Wordany0.3677complex0.1333boolean0.1112string0.0746Error0.0354
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9929ErrorConstructor0.0013BooleanConstructor0.0002MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+"Signed cookie string must be provided."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nullKeyword.Constant
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+secretName.Otherstring0.9405any0.0493complex0.0020never0.0009boolean0.0008
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4604complex0.3807Error0.0355string0.0309{}0.0230
+ Text.Whitespace
+newOperator.Wordany0.3475boolean0.1120complex0.1044string0.0857Error0.0493
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9933ErrorConstructor0.0012BooleanConstructor0.0001MapConstructor0.0001NumberConstructor0.0001
+(Punctuation
+"Secret key must be provided."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+tentativeValueName.Otherstring0.7127any0.1462number0.0555boolean0.0410string[]0.0228
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+inputName.Otherstring0.8943any0.0648string[]0.0165any[]0.0029number0.0028
+.Punctuation
+sliceName.Otherstring0.8170any0.0895string[]0.0432complex0.0097any[]0.0074
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+inputName.Otherstring0.8180any0.1428number0.0196complex0.0029any[]0.0022
+.Punctuation
+lastIndexOfName.Othernumber0.9201any0.0591string0.0051complex0.0035void0.0029
+(Punctuation
+'.'Literal.String.Single
+)Punctuation
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+expectedInputName.Otherany0.3866boolean0.2508string0.1853number0.1630void0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+signName.Otherany0.5134string0.1742complex0.1177boolean0.0434number0.0252
+(Punctuation
+tentativeValueName.Otherstring0.6624any0.1876boolean0.0764number0.0561string[]0.0040
+,Punctuation
+ Text.Whitespace
+secretName.Otherstring0.9470any0.0503boolean0.0006number0.0006string[]0.0002
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+expectedBufferName.Otherany0.8984number0.0374string0.0373boolean0.0234void0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+BufferName.Otherany0.9948string0.0012number0.0005void0.0004Buffer0.0003
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+expectedInputName.Otherstring0.7564any0.1151boolean0.0638number0.0519string[]0.0037
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+inputBufferName.Otherany0.8532number0.0530boolean0.0482string0.0411any[]0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+BufferName.Otherany0.9910string0.0012Buffer0.0008void0.0006number0.0006
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+inputName.Otherstring0.9323any0.0534number0.0052boolean0.0035complex0.0017
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n    Text.Whitespace
+expectedBufferName.Otherany0.6955string0.1432string[]0.0810any[]0.0569complex0.0030
+.Punctuation
+lengthName.Otherany0.5077number0.4785string0.0104complex0.0012boolean0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+inputBufferName.Otherstring0.5765any0.2464string[]0.0935any[]0.0350number0.0123
+.Punctuation
+lengthName.Othernumber0.8536any0.1317string0.0122complex0.0009boolean0.0006
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+cryptoName.Otherany0.9965number0.0006complex0.0005string0.0003boolean0.0003
+.Punctuation
+timingSafeEqualName.Otherboolean0.5707any0.3984string0.0152number0.0089complex0.0015
+(Punctuation
+expectedBufferName.Otherstring0.5079any0.2063boolean0.1712number0.1031any[]0.0019
+,Punctuation
+ Text.Whitespace
+inputBufferName.Otherstring0.3787boolean0.3389any0.2169number0.0550complex0.0014
+)Punctuation
+\n   Text.Whitespace
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+tentativeValueName.Otherboolean0.9823any0.0123number0.0023string0.0016true0.0004
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

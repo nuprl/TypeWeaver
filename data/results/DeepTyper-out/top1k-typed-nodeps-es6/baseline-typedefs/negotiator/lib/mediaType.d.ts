@@ -1,0 +1,10 @@
+declare var simpleMediaTypeRegExp: RegExp;
+declare function parseAccept(accept: string): string;
+declare function parseMediaType(str: string, i: number): string;
+declare function getMediaTypePriority(type: any, accepted: any, index: number): any;
+declare function preferredMediaTypes(accept: string, provided: string): any;
+declare function getFullType(spec: any): string;
+declare function quoteCount(string: any): string;
+declare function splitKeyValuePair(str: string): string;
+declare function splitMediaTypes(accept: string): string;
+declare function splitParameters(str: string): string;

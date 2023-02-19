@@ -1,0 +1,161 @@
+importKeyword
+ Text.Whitespace
+setImmediateName.Othercomplex0.9085any0.0811number0.0028string0.0012void0.0005
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/setImmediate.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+isAsyncName.Otherboolean0.7879any0.1688complex0.0256void0.0061string0.0031
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Wrap an async function and ensure it calls its callback on a later tick of\n * the event loop.  If the function already calls its callback on a next tick,\n * no extra deferral is added. This is useful for preventing stack overflows\n * (`RangeError: Maximum call stack size exceeded`) and generally keeping\n * [Zalgo](http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony)\n * contained. ES2017 `async` functions are returned as-is -- they are immune\n * to Zalgo's corrupting influences, as they always resolve on a later tick.\n *\n * @name ensureAsync\n * @static\n * @memberOf module:Utils\n * @method\n * @category Util\n * @param {AsyncFunction} fn - an async function, one that expects a node-style\n * callback as its last argument.\n * @returns {AsyncFunction} Returns a wrapped function with the exact same call\n * signature as the function passed in.\n * @example\n *\n * function sometimesAsync(arg, callback) {\n *     if (cache[arg]) {\n *         return callback(null, cache[arg]); // this would be synchronous!!\n *     } else {\n *         doSomeIO(arg, callback); // this IO would be asynchronous\n *     }\n * }\n *\n * // this has a risk of stack overflows if many results are cached in a row\n * async.mapSeries(args, sometimesAsync, done);\n *\n * // this will defer sometimesAsync's callback if necessary,\n * // preventing stack overflows\n * async.mapSeries(args, async.ensureAsync(sometimesAsync), done);\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+ensureAsyncName.Othervoid0.9495any0.0234string0.0033complex0.0032Function0.0027
+(Punctuation
+fnName.Otherany0.5585Function0.2713void0.0673number0.0200string0.0159
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isAsyncName.Otherboolean0.9079any0.0689complex0.0123void0.0037false0.0014
+(Punctuation
+fnName.Otherany0.5215Function0.3488void0.0497boolean0.0190number0.0115
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.Otherany0.5027Function0.2634void0.1844number0.0121boolean0.0091
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8780any0.0799string[]0.0141Function[]0.0027void0.0018
+/*, callback*/Comment.Multiline
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+callbackName.Otherany0.6785boolean0.1314void0.0519Function0.0424number0.0217
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany[]0.6589any0.2552string[]0.0419number[]0.0030complex0.0020
+.Punctuation
+popName.Otherany0.8998any[]0.0285boolean0.0118string0.0108complex0.0075
+(Punctuation
+)Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+syncName.Otherboolean0.9740any0.0124false0.0037true0.0028any[]0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+argsName.Otherany[]0.9505any0.0161string[]0.0111Function[]0.0021IArguments0.0017
+.Punctuation
+pushName.Othernumber0.9524any0.0322void0.0093boolean0.0011any[]0.0008
+(Punctuation
+(Punctuation
+...Punctuation
+innerArgsName.Otherany[]0.9736any0.0126string[]0.0075number[]0.0008complex0.0007
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+syncName.Otherboolean0.9617any0.0199false0.0066any[]0.0019number0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+setImmediateName.Othercomplex0.8390any0.1521number0.0039void0.0010string0.0006
+(Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4195void0.4127Function0.0750boolean0.0167string0.0069
+(Punctuation
+...Punctuation
+innerArgsName.Otherany[]0.9717any0.0147string[]0.0080number[]0.0010complex0.0007
+)Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+callbackName.Otherany0.5717void0.2857Function0.0867boolean0.0088string0.0065
+(Punctuation
+...Punctuation
+innerArgsName.Otherany[]0.9689any0.0173string[]0.0085complex0.0009number[]0.0008
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+fnName.OtherFunction0.5931any0.2386void0.1303{}0.0051boolean0.0034
+.Punctuation
+applyName.Otherany0.8811void0.0938Function0.0151number0.0023Promise<void>0.0011
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.9589any0.0197string[]0.0071IArguments0.0020number[]0.0016
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+syncName.Otherboolean0.9871any0.0045false0.0038true0.0013any[]0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

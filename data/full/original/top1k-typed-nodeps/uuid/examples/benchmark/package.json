@@ -1,0 +1,17 @@
+{
+  "name": "uuid-benchmark",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "true",
+    "start": "npm run build && npx http-server . -o",
+    "test": "node node.js"
+  },
+  "dependencies": {
+    "uuid": "file:../../.local/uuid"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "type": "module"
+}

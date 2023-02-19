@@ -1,0 +1,19 @@
+example.ts(13,25): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+      Type 'Function' provides no match for the signature '(...args: any[]): void'.
+example.ts(27,16): error TS2554: Expected 3 arguments, but got 2.
+index.ts(3,40): error TS2304: Cannot find name 'DuplexOptions'.
+index.ts(3,40): error TS4078: Parameter 'options' of exported function has or is using private name 'DuplexOptions'.
+index.ts(3,66): error TS2304: Cannot find name 'Writable'.
+index.ts(3,66): error TS4078: Parameter 'writable' of exported function has or is using private name 'Writable'.
+index.ts(3,87): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(3,87): error TS4078: Parameter 'readable' of exported function has or is using private name 'Readable'.
+index.ts(10,2): error TS2684: The 'this' context of type 'typeof Duplex' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+index.ts(69,43): error TS2304: Cannot find name 'DuplexOptions'.
+index.ts(69,43): error TS4078: Parameter 'options' of exported function has or is using private name 'DuplexOptions'.
+index.ts(69,69): error TS2304: Cannot find name 'Writable'.
+index.ts(69,69): error TS4078: Parameter 'writable' of exported function has or is using private name 'Writable'.
+

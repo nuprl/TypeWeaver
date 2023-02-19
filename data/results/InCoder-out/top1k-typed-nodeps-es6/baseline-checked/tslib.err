@@ -1,0 +1,67 @@
+modules/index.ts(1,19): error TS2306: File 'tslib.ts' is not a module.
+tslib.es6.ts(33,5): error TS2322: Type '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' is not assignable to type '() => any'.
+tslib.es6.ts(48,25): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
+tslib.es6.ts(57,55): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(57,92): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(67,55): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(67,95): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(71,58): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+tslib.es6.ts(71,74): error TS2351: This expression is not constructable.
+  Type 'Promise<any>' has no construct signatures.
+tslib.es6.ts(72,16): error TS2351: This expression is not constructable.
+  Not all constituents of type 'Promise<any> | PromiseConstructor' are constructable.
+    Type 'Promise<any>' has no construct signatures.
+tslib.es6.ts(72,27): error TS2739: Type 'PromiseConstructor' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+tslib.es6.ts(73,35): error TS2304: Cannot find name 'T'.
+tslib.es6.ts(73,61): error TS2339: Property 'next' does not exist on type 'GeneratorFunction'.
+tslib.es6.ts(75,31): error TS2304: Cannot find name 'ny'.
+tslib.es6.ts(95,111): error TS2322: Type 'number' is not assignable to type '{ label: number; sent: () => any; trys: any[]; ops: any[]; }'.
+tslib.es6.ts(111,38): error TS2339: Property '__esModule' does not exist on type 'number'.
+tslib.es6.ts(121,90): error TS2554: Expected 4 arguments, but got 3.
+tslib.es6.ts(127,23): error TS2339: Property 'length' does not exist on type 'Iterable<any>'.
+tslib.es6.ts(129,29): error TS2339: Property 'length' does not exist on type 'Iterable<any>'.
+tslib.es6.ts(156,24): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(180,59): error TS2350: Only a void function can be called with the 'new' keyword.
+tslib.es6.ts(189,22): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
+tslib.es6.ts(197,20): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(197,81): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(198,31): error TS2304: Cannot find name 'y'.
+tslib.es6.ts(210,104): error TS2339: Property 'raw' does not exist on type 'boolean'.
+tslib.es6.ts(223,110): error TS2554: Expected 4 arguments, but got 3.
+tslib.es6.ts(233,9): error TS2367: This condition will always return 'false' since the types 'Symbol' and 'string' have no overlap.
+tslib.es6.ts(235,12): error TS2367: This condition will always return 'false' since the types 'Symbol' and 'string' have no overlap.
+tslib.es6.ts(235,31): error TS2367: This condition will always return 'false' since the types 'Symbol' and 'string' have no overlap.
+tslib.ts(43,16): error TS2304: Cannot find name 'define'.
+tslib.ts(43,41): error TS2304: Cannot find name 'define'.
+tslib.ts(44,9): error TS2304: Cannot find name 'define'.
+tslib.ts(44,93): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(47,38): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(50,17): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(58,17): error TS1184: Modifiers cannot appear here.
+tslib.ts(61,26): error TS2300: Duplicate identifier 'id'.
+tslib.ts(62,13): error TS1184: Modifiers cannot appear here.
+tslib.ts(62,26): error TS2300: Duplicate identifier 'id'.
+tslib.ts(66,22): error TS2304: Cannot find name 'Exporter'.
+tslib.ts(71,30): error TS2304: Cannot find name 'te'.
+tslib.ts(71,38): error TS2304: Cannot find name 'bi'.
+tslib.ts(92,29): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
+tslib.ts(101,59): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.ts(101,96): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.ts(106,57): error TS2304: Cannot find name 'Decorator'.
+tslib.ts(111,59): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.ts(111,99): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.ts(117,39): error TS2304: Cannot find name 'T'.
+tslib.ts(119,35): error TS2304: Cannot find name 'ny'.
+tslib.ts(139,115): error TS2322: Type 'number' is not assignable to type '{ label: number; sent: () => any; trys: any[]; ops: any[]; }'.
+tslib.ts(152,32): error TS2304: Cannot find name 'Model'.
+tslib.ts(214,70): error TS2339: Property 'length' does not exist on type 'number'.
+tslib.ts(215,30): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+tslib.ts(220,19): error TS2339: Property 'concat' does not exist on type 'number'.
+tslib.ts(229,27): error TS2339: Property 'apply' does not exist on type 'Generator<unknown, any, unknown>'.
+tslib.ts(233,26): error TS2304: Cannot find name 'esponse'.
+tslib.ts(241,24): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(241,85): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(242,35): error TS2304: Cannot find name 'y'.
+tslib.ts(289,46): error TS2304: Cannot find name 'State'.
+tslib.ts(289,64): error TS2304: Cannot find name 'Receiver'.
+

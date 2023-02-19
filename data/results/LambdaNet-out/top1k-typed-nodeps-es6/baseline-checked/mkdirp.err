@@ -1,0 +1,79 @@
+.github/workflows/package-json-repo.ts(6,9): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(10,6): error TS2339: Property 'repository' does not exist on type 'any[]'.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'string'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'string'.
+bin/cmd.ts(50,10): error TS2339: Property 'mode' does not exist on type 'object'.
+bin/cmd.ts(56,40): error TS2339: Property 'manual' does not exist on type 'Function'.
+bin/cmd.ts(63,22): error TS2339: Property 'message' does not exist on type 'HTMLElement'.
+bin/cmd.ts(64,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+bin/cmd.ts(65,37): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+index.ts(3,10): error TS2614: Module '"./lib/mkdirp-native.js"' has no exported member 'mkdirpNative'. Did you mean to use 'import mkdirpNative from "./lib/mkdirp-native.js"' instead?
+index.ts(3,24): error TS2614: Module '"./lib/mkdirp-native.js"' has no exported member 'mkdirpNativeSync'. Did you mean to use 'import mkdirpNativeSync from "./lib/mkdirp-native.js"' instead?
+index.ts(4,10): error TS2614: Module '"./lib/mkdirp-manual.js"' has no exported member 'mkdirpManual'. Did you mean to use 'import mkdirpManual from "./lib/mkdirp-manual.js"' instead?
+index.ts(4,24): error TS2614: Module '"./lib/mkdirp-manual.js"' has no exported member 'mkdirpManualSync'. Did you mean to use 'import mkdirpManualSync from "./lib/mkdirp-manual.js"' instead?
+index.ts(5,10): error TS2614: Module '"./lib/use-native.js"' has no exported member 'useNative'. Did you mean to use 'import useNative from "./lib/use-native.js"' instead?
+index.ts(5,21): error TS2614: Module '"./lib/use-native.js"' has no exported member 'useNativeSync'. Did you mean to use 'import useNativeSync from "./lib/use-native.js"' instead?
+index.ts(24,8): error TS2339: Property 'sync' does not exist on type 'Function'.
+index.ts(25,8): error TS2339: Property 'native' does not exist on type 'Function'.
+index.ts(26,8): error TS2339: Property 'manual' does not exist on type 'Function'.
+index.ts(27,8): error TS2339: Property 'nativeSync' does not exist on type 'Function'.
+index.ts(28,8): error TS2339: Property 'manualSync' does not exist on type 'Function'.
+lib/find-made.ts(8,15): error TS2339: Property 'statAsync' does not exist on type 'object'.
+lib/find-made.ts(9,23): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.
+lib/find-made.ts(10,24): error TS2339: Property 'code' does not exist on type 'object'.
+lib/find-made.ts(21,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(4,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(5,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/mkdirp-manual.ts(6,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/mkdirp-manual.ts(7,17): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(10,14): error TS2339: Property 'code' does not exist on type 'object'.
+lib/mkdirp-manual.ts(15,15): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(21,17): error TS2339: Property 'statAsync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(22,14): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.
+lib/mkdirp-manual.ts(31,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/mkdirp-manual.ts(32,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(34,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/mkdirp-manual.ts(36,19): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(48,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(56,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-native.ts(2,10): error TS2614: Module '"./find-made.js"' has no exported member 'findMade'. Did you mean to use 'import findMade from "./find-made.js"' instead?
+lib/mkdirp-native.ts(2,20): error TS2614: Module '"./find-made.js"' has no exported member 'findMadeSync'. Did you mean to use 'import findMadeSync from "./find-made.js"' instead?
+lib/mkdirp-native.ts(3,10): error TS2614: Module '"./mkdirp-manual.js"' has no exported member 'mkdirpManual'. Did you mean to use 'import mkdirpManual from "./mkdirp-manual.js"' instead?
+lib/mkdirp-native.ts(3,24): error TS2614: Module '"./mkdirp-manual.js"' has no exported member 'mkdirpManualSync'. Did you mean to use 'import mkdirpManualSync from "./mkdirp-manual.js"' instead?
+lib/mkdirp-native.ts(6,8): error TS2339: Property 'recursive' does not exist on type 'object'.
+lib/mkdirp-native.ts(7,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/mkdirp-native.ts(8,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/mkdirp-native.ts(9,17): error TS2339: Property 'mkdirAsync' does not exist on type 'object'.
+lib/mkdirp-native.ts(12,10): error TS2339: Property 'mkdirAsync' does not exist on type 'object'.
+lib/mkdirp-native.ts(14,14): error TS2339: Property 'code' does not exist on type 'object'.
+lib/mkdirp-native.ts(22,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
+lib/mkdirp-native.ts(23,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/mkdirp-native.ts(24,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/mkdirp-native.ts(25,17): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-native.ts(29,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+lib/opts-arg.ts(15,8): error TS2339: Property 'mkdir' does not exist on type 'object'.
+lib/opts-arg.ts(15,21): error TS2339: Property 'mkdir' does not exist on type 'object'.
+lib/opts-arg.ts(15,35): error TS2339: Property 'fs' does not exist on type 'object'.
+lib/opts-arg.ts(16,8): error TS2339: Property 'mkdirAsync' does not exist on type 'object'.
+lib/opts-arg.ts(16,36): error TS2339: Property 'mkdir' does not exist on type 'object'.
+lib/opts-arg.ts(17,8): error TS2339: Property 'stat' does not exist on type 'object'.
+lib/opts-arg.ts(17,20): error TS2339: Property 'stat' does not exist on type 'object'.
+lib/opts-arg.ts(17,33): error TS2339: Property 'fs' does not exist on type 'object'.
+lib/opts-arg.ts(18,8): error TS2339: Property 'statAsync' does not exist on type 'object'.
+lib/opts-arg.ts(18,35): error TS2339: Property 'stat' does not exist on type 'object'.
+lib/opts-arg.ts(19,8): error TS2339: Property 'statSync' does not exist on type 'object'.
+lib/opts-arg.ts(19,24): error TS2339: Property 'statSync' does not exist on type 'object'.
+lib/opts-arg.ts(19,41): error TS2339: Property 'fs' does not exist on type 'object'.
+lib/opts-arg.ts(20,8): error TS2339: Property 'mkdirSync' does not exist on type 'object'.
+lib/opts-arg.ts(20,25): error TS2339: Property 'mkdirSync' does not exist on type 'object'.
+lib/opts-arg.ts(20,43): error TS2339: Property 'fs' does not exist on type 'object'.
+lib/path-arg.ts(1,7): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/path-arg.ts(16,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/use-native.ts(5,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/use-native.ts(7,79): error TS2339: Property 'mkdir' does not exist on type 'object'.
+lib/use-native.ts(8,7): error TS2322: Type '(opts: HTMLElement) => boolean' is not assignable to type 'any[]'.
+lib/use-native.ts(8,85): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+

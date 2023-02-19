@@ -1,0 +1,87 @@
+importKeyword
+ Text.Whitespace
+queueName.Otherany0.3242complex0.1145T[]0.0326string[]0.0117void0.0110
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/queue.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.2620complex0.0533void0.0346string0.0209boolean0.0186
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * A queue of tasks for the worker function to complete.\n * @typedef {Iterable} QueueObject\n * @memberOf module:ControlFlow\n * @property {Function} length - a function returning the number of items\n * waiting to be processed. Invoke with `queue.length()`.\n * @property {boolean} started - a boolean indicating whether or not any\n * items have been pushed and processed by the queue.\n * @property {Function} running - a function returning the number of items\n * currently being processed. Invoke with `queue.running()`.\n * @property {Function} workersList - a function returning the array of items\n * currently being processed. Invoke with `queue.workersList()`.\n * @property {Function} idle - a function returning false if there are items\n * waiting or being processed, or true if not. Invoke with `queue.idle()`.\n * @property {number} concurrency - an integer for determining how many `worker`\n * functions should be run in parallel. This property can be changed after a\n * `queue` is created to alter the concurrency on-the-fly.\n * @property {number} payload - an integer that specifies how many items are\n * passed to the worker function at a time. only applies if this is a\n * [cargo]{@link module:ControlFlow.cargo} object\n * @property {AsyncFunction} push - add a new task to the `queue`. Calls `callback`\n * once the `worker` has finished processing the task. Instead of a single task,\n * a `tasks` array can be submitted. The respective callback is used for every\n * task in the list. Invoke with `queue.push(task, [callback])`,\n * @property {AsyncFunction} unshift - add a new task to the front of the `queue`.\n * Invoke with `queue.unshift(task, [callback])`.\n * @property {AsyncFunction} pushAsync - the same as `q.push`, except this returns\n * a promise that rejects if an error occurs.\n * @property {AsyncFunction} unshiftAsync - the same as `q.unshift`, except this returns\n * a promise that rejects if an error occurs.\n * @property {Function} remove - remove items from the queue that match a test\n * function.  The test function will be passed an object with a `data` property,\n * and a `priority` property, if this is a\n * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.\n * Invoked with `queue.remove(testFn)`, where `testFn` is of the form\n * `function ({data, priority}) {}` and returns a Boolean.\n * @property {Function} saturated - a function that sets a callback that is\n * called when the number of running workers hits the `concurrency` limit, and\n * further tasks will be queued.  If the callback is omitted, `q.saturated()`\n * returns a promise for the next occurrence.\n * @property {Function} unsaturated - a function that sets a callback that is\n * called when the number of running workers is less than the `concurrency` &\n * `buffer` limits, and further tasks will not be queued. If the callback is\n * omitted, `q.unsaturated()` returns a promise for the next occurrence.\n * @property {number} buffer - A minimum threshold buffer in order to say that\n * the `queue` is `unsaturated`.\n * @property {Function} empty - a function that sets a callback that is called\n * when the last item from the `queue` is given to a `worker`. If the callback\n * is omitted, `q.empty()` returns a promise for the next occurrence.\n * @property {Function} drain - a function that sets a callback that is called\n * when the last item from the `queue` has returned from the `worker`. If the\n * callback is omitted, `q.drain()` returns a promise for the next occurrence.\n * @property {Function} error - a function that sets a callback that is called\n * when a task errors. Has the signature `function(error, task)`. If the\n * callback is omitted, `error()` returns a promise that rejects on the next\n * error.\n * @property {boolean} paused - a boolean for determining whether the queue is\n * in a paused state.\n * @property {Function} pause - a function that pauses the processing of tasks\n * until `resume()` is called. Invoke with `queue.pause()`.\n * @property {Function} resume - a function that resumes the processing of\n * queued tasks when the queue is paused. Invoke with `queue.resume()`.\n * @property {Function} kill - a function that removes the `drain` callback and\n * empties remaining tasks from the queue forcing it to go idle. No more tasks\n * should be pushed to the queue after calling this function. Invoke with `queue.kill()`.\n *\n * @example\n * const q = async.queue(worker, 2)\n * q.push(item1)\n * q.push(item2)\n * q.push(item3)\n * // queues are iterable, spread into an array to inspect\n * const items = [...q] // [item1, item2, item3]\n * // or use for of\n * for (let item of q) {\n *     console.log(item)\n * }\n *\n * q.drain(() => {\n *     console.log('all done')\n * })\n * // or\n * await q.drain()\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * Creates a `queue` object with the specified `concurrency`. Tasks added to the\n * `queue` are processed in parallel (up to the `concurrency` limit). If all\n * `worker`s are in progress, the task is queued until one becomes available.\n * Once a `worker` completes a `task`, that `task`'s callback is called.\n *\n * @name queue\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @category Control Flow\n * @param {AsyncFunction} worker - An async function for processing a queued task.\n * If you want to handle errors from an individual task, pass a callback to\n * `q.push()`. Invoked with (task, callback).\n * @param {number} [concurrency=1] - An `integer` for determining how many\n * `worker` functions should be run in parallel.  If omitted, the concurrency\n * defaults to `1`.  If the concurrency is `0`, an error is thrown.\n * @returns {module:ControlFlow.QueueObject} A queue object to manage the tasks. Callbacks can be\n * attached as certain properties to listen for specific events during the\n * lifecycle of the queue.\n * @example\n *\n * // create a queue object with concurrency 2\n * var q = async.queue(function(task, callback) {\n *     console.log('hello ' + task.name);\n *     callback();\n * }, 2);\n *\n * // assign a callback\n * q.drain(function() {\n *     console.log('all items have been processed');\n * });\n * // or await the end\n * await q.drain()\n *\n * // assign an error callback\n * q.error(function(err, task) {\n *     console.error('task experienced an error');\n * });\n *\n * // add some items to the queue\n * q.push({name: 'foo'}, function(err) {\n *     console.log('finished processing foo');\n * });\n * // callback is optional\n * q.push({name: 'bar'});\n *\n * // add some items to the queue (batch-wise)\n * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err) {\n *     console.log('finished processing item');\n * });\n *\n * // add some items to the front of the queue\n * q.unshift({name: 'bar'}, function (err) {\n *     console.log('finished processing bar');\n * });\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+workerName.Otherany0.3274number0.0759Worker0.0531symbol0.0083string0.0075
+,Punctuation
+ Text.Whitespace
+concurrencyName.Othernumber0.9877any0.0079string0.0020void0.0003Function0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_workerName.Otherany0.3739number0.2449string0.0119complex0.0115any[]0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.3154number0.2708complex0.0235string0.0140void0.0084
+(Punctuation
+workerName.Othernumber0.2943any0.2484Worker0.0257string0.0165symbol0.0044
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+queueName.Otherany0.7925complex0.0976void0.0094number0.0090Promise<void>0.0080
+(Punctuation
+(Punctuation
+itemsName.Otherany0.8500any[]0.0306number0.0248number[]0.0029string0.0028
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.5735Function0.2493number0.0578void0.0518boolean0.0037
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+_workerName.Othervoid0.7733any0.1162complex0.0189Function0.0110number0.0085
+(Punctuation
+itemsName.Otherany0.5969any[]0.0790number[]0.0123string[]0.0114number0.0110
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.6156Function0.2313void0.0922number0.0241boolean0.0057
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+concurrencyName.Othernumber0.9837any0.0088void0.0029string0.0021complex0.0004
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

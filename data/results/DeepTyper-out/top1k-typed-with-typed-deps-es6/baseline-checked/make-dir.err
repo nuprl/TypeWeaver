@@ -1,0 +1,16 @@
+index.ts(7,7): error TS2322: Type 'boolean' is not assignable to type 'string'.
+index.ts(17,10): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(39,8): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(40,8): error TS2339: Property 'errno' does not exist on type 'Error'.
+index.ts(41,8): error TS2339: Property 'path' does not exist on type 'Error'.
+index.ts(42,8): error TS2339: Property 'syscall' does not exist on type 'Error'.
+index.ts(46,32): error TS2322: Type '(input: string, options: any) => Promise<any>' is not assignable to type 'Promise<void>'.
+index.ts(64,30): error TS2322: Type '(pth: any) => Promise<any>' is not assignable to type 'Promise<void>'.
+index.ts(83,11): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+index.ts(85,12): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+index.ts(101,9): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+index.ts(106,14): error TS2322: Type '(input: string, options: any) => any' is not assignable to type 'void'.
+

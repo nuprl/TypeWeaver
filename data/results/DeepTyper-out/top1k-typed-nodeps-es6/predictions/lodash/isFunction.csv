@@ -1,0 +1,30 @@
+Text
+/**\n * Checks if `value` is classified as a `Function` object.\n *\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a function, else `false`.\n * @example\n *\n * isFunction(class Any{})\n * // => true\n *\n * isFunction(() => {})\n * // => true\n *\n * isFunction(async () => {})\n * // => true\n *\n * isFunction(function * Any() {})\n * // => true\n *\n * isFunction(Math.round)\n * // => true\n *\n * isFunction(/abc/)\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isFunctionName.Otherboolean0.9237any0.0303complex0.0232string0.0020Function0.0019
+(Punctuation
+valueName.Otherany0.9668boolean0.0141string0.0052complex0.0037number0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9729complex0.0078string0.0075boolean0.0027number0.0023
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isFunctionName.Othercomplex0.3789boolean0.3328any0.1477Function0.0072string0.0052
+\nText.Whitespace

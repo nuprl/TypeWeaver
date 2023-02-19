@@ -1,0 +1,20 @@
+rollup.config.ts(2,25): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
+rollup.config.ts(3,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup.config.ts(4,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
+rollup.config.ts(5,24): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+rollup.config.ts(6,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+rollup.config.ts(9,7): error TS2322: Type '(string: any) => any' is not assignable to type 'string'.
+rollup.config.ts(15,22): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/index.ts(63,39): error TS2322: Type '(o: any) => string[]' is not assignable to type 'string[]'.
+src/index.ts(64,7): error TS2322: Type '(o: any) => symbol[]' is not assignable to type 'boolean'.
+src/index.ts(65,54): error TS2560: Value of type '(o: any, p: PropertyKey) => PropertyDescriptor' has no properties in common with type 'PropertyDescriptor'. Did you mean to call it?
+src/index.ts(69,63): error TS2304: Cannot find name 'Component'.
+src/index.ts(69,63): error TS4078: Parameter 'targetComponent' of exported function has or is using private name 'Component'.
+src/index.ts(79,30): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+src/index.ts(82,32): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+src/index.ts(95,56): error TS2349: This expression is not callable.
+  Type 'PropertyDescriptor' has no call signatures.
+

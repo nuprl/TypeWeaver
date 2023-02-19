@@ -1,0 +1,1998 @@
+Text
+// Partial port of python's argparse module, version 3.9.0 (only wrap and fill functions):Comment.Single
+\nText.Whitespace
+// https://github.com/python/cpython/blob/v3.9.0b4/Lib/textwrap.pyComment.Single
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/*\n * Text wrapping and filling.\n */Comment.Multiline
+\n\nText.Whitespace
+// Copyright (C) 1999-2001 Gregory P. Ward.Comment.Single
+\nText.Whitespace
+// Copyright (C) 2002, 2003 Python Software Foundation.Comment.Single
+\nText.Whitespace
+// Copyright (C) 2020 argparse.js authorsComment.Single
+\nText.Whitespace
+// Originally written by Greg Ward <gward@python.net>Comment.Single
+\n\nText.Whitespace
+// Hardcode the recognized whitespace characters to the US-ASCIIComment.Single
+\nText.Whitespace
+// whitespace characters.  The main reason for doing this is thatComment.Single
+\nText.Whitespace
+// some Unicode spaces (like \u00a0) are non-breaking whitespaces.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// This less funky little regex just split on recognized spaces. E.g.Comment.Single
+\nText.Whitespace
+//   "Hello there -- you goof-ball, use the -b option!"Comment.Single
+\nText.Whitespace
+// splits intoComment.Single
+\nText.Whitespace
+//   Hello/ /there/ /--/ /you/ /goof-ball,/ /use/ /the/ /-b/ /option!/Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wordsep_simple_reName.Otherstring0.7557RegExp0.1568any0.0501string[]0.0069number0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/([\t\n\x0b\x0c\r ]+)/Literal.String.Regex
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+TextWrapperName.Otherany0.9935string0.0039number0.0010complex0.0009{}0.0001
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/*\n     *  Object for wrapping/filling text.  The public interface consists of\n     *  the wrap() and fill() methods; the other methods are just there for\n     *  subclasses to override in order to tweak the default behaviour.\n     *  If you want to completely replace the main wrapping algorithm,\n     *  you'll probably have to override _wrap_chunks().\n     *\n     *  Several instance attributes control various aspects of wrapping:\n     *    width (default: 70)\n     *      the maximum width of wrapped lines (unless break_long_words\n     *      is false)\n     *    initial_indent (default: "")\n     *      string that will be prepended to the first line of wrapped\n     *      output.  Counts towards the line's width.\n     *    subsequent_indent (default: "")\n     *      string that will be prepended to all lines save the first\n     *      of wrapped output; also counts towards each line's width.\n     *    expand_tabs (default: true)\n     *      Expand tabs in input text to spaces before further processing.\n     *      Each tab will become 0 .. 'tabsize' spaces, depending on its position\n     *      in its line.  If false, each tab is treated as a single character.\n     *    tabsize (default: 8)\n     *      Expand tabs in input text to 0 .. 'tabsize' spaces, unless\n     *      'expand_tabs' is false.\n     *    replace_whitespace (default: true)\n     *      Replace all whitespace characters in the input text by spaces\n     *      after tab expansion.  Note that if expand_tabs is false and\n     *      replace_whitespace is true, every tab will be converted to a\n     *      single space!\n     *    fix_sentence_endings (default: false)\n     *      Ensure that sentence-ending punctuation is always followed\n     *      by two spaces.  Off by default because the algorithm is\n     *      (unavoidably) imperfect.\n     *    break_long_words (default: true)\n     *      Break words longer than 'width'.  If false, those words will not\n     *      be broken, and some lines might be longer than 'width'.\n     *    break_on_hyphens (default: true)\n     *      Allow breaking hyphenated words. If true, wrapping will occur\n     *      preferably on whitespaces and right after hyphens part of\n     *      compound words.\n     *    drop_whitespace (default: true)\n     *      Drop leading and trailing whitespace from lines.\n     *    max_lines (default: None)\n     *      Truncate wrapped lines.\n     *    placeholder (default: ' [...]')\n     *      Append to the last line of truncated text.\n     */Comment.Multiline
+\n\n    Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+optionsName.Other{}0.3324any0.1101Options0.0425T0.0105never0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+widthName.Othernumber0.9663any0.0277string0.0043complex0.0008boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+70Literal.Number.Float
+,Punctuation
+\n            Text.Whitespace
+initial_indentName.Otherstring0.7410any0.1483RegExp0.0681number0.0192boolean0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+subsequent_indentName.Otherstring0.8025RegExp0.0954any0.0738number0.0072string[]0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+,Punctuation
+\n            Text.Whitespace
+expand_tabsName.Otherboolean0.9863any0.0044string0.0035number0.0029true0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+replace_whitespaceName.Otherboolean0.9877any0.0050number0.0022string0.0021false0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+fix_sentence_endingsName.Otherboolean0.9857any0.0062number0.0028string0.0021false0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+break_long_wordsName.Otherboolean0.9874any0.0047number0.0027string0.0018false0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+drop_whitespaceName.Otherboolean0.9851any0.0061number0.0028string0.0019true0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+break_on_hyphensName.Otherboolean0.9820any0.0084number0.0024string0.0017true0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+tabsizeName.Othernumber0.6865any0.2259boolean0.0405string0.0366complex0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+8Literal.Number.Float
+,Punctuation
+\n            Text.Whitespace
+max_linesName.Otherany0.5319string0.1817boolean0.1254number0.1113RegExp0.0147
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+,Punctuation
+\n            Text.Whitespace
+placeholderName.Otherstring0.9330any0.0495RegExp0.0060number0.0040string[]0.0025
+=Operator
+' [...]'Literal.String.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3639Options0.0749complex0.0503number0.0221{}0.0103
+\n\n        Text.Whitespace
+thisKeyword
+.Punctuation
+widthName.Othernumber0.9113any0.0660string0.0130complex0.0044boolean0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+widthName.Othernumber0.8596any0.1103string0.0179complex0.0059number[]0.0009
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+initial_indentName.Othernumber0.5179any0.2632string0.1589string[]0.0101boolean0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+initial_indentName.Otherany0.4617number0.2828string0.1832complex0.0118string[]0.0070
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+subsequent_indentName.Othernumber0.4220any0.2877string0.2024string[]0.0141boolean0.0131
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+subsequent_indentName.Otherany0.4864number0.2371string0.1911complex0.0126boolean0.0091
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+expand_tabsName.Othernumber0.3912any0.3128string0.1959string[]0.0148boolean0.0145
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+expand_tabsName.Otherany0.4927number0.2285string0.1880complex0.0132boolean0.0101
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+replace_whitespaceName.Othernumber0.3790any0.3199string0.1946boolean0.0156string[]0.0149
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+replace_whitespaceName.Otherany0.4979number0.2235string0.1856complex0.0131boolean0.0107
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+fix_sentence_endingsName.Othernumber0.3742any0.3214string0.1964boolean0.0160string[]0.0144
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fix_sentence_endingsName.Otherany0.5004number0.2224string0.1852complex0.0128boolean0.0109
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+break_long_wordsName.Othernumber0.3758any0.3193string0.2002boolean0.0159string[]0.0132
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+break_long_wordsName.Otherany0.4985number0.2260string0.1869complex0.0123boolean0.0109
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+drop_whitespaceName.Othernumber0.3846any0.3126string0.2061boolean0.0152string[]0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+drop_whitespaceName.Otherany0.4895number0.2363string0.1917complex0.0116boolean0.0107
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+break_on_hyphensName.Othernumber0.4049any0.2983string0.2140boolean0.0140string[]0.0086
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+break_on_hyphensName.Otherany0.4699number0.2552string0.2001complex0.0105boolean0.0105
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+tabsizeName.Othernumber0.4526any0.2683string0.2156boolean0.0123string[]0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tabsizeName.Otherany0.4210number0.3016string0.2109boolean0.0105complex0.0095
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+max_linesName.Othernumber0.4979any0.2325string0.2222boolean0.0101string[]0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+max_linesName.Otherany0.3813number0.3096string0.2565boolean0.0073complex0.0044
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.8776any0.0714number0.0370string[]0.0017boolean0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+placeholderName.Otherstring0.8408any0.1088number0.0255string[]0.0039boolean0.0031
+\n    Text.Whitespace
+}Punctuation
+\n\n\n    Text.Whitespace
+// -- Private methods -----------------------------------------------Comment.Single
+\n    Text.Whitespace
+// (possibly useful for subclasses to override)Comment.Single
+\n\n    Text.Whitespace
+_munge_whitespaceName.Otherstring0.7504any0.1273number0.0377boolean0.0215void0.0130
+(Punctuation
+textName.Otherstring0.6335any0.3601number0.0021complex0.0007boolean0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  _munge_whitespace(text : string) -> string\n         *\n         *  Munge whitespace in text: expand tabs and convert all other\n         *  whitespace characters to spaces.  Eg. " foo\\tbar\\n\\nbaz"\n         *  becomes " foo    bar  baz".\n         */Comment.Multiline
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+expand_tabsName.Otherboolean0.6750string0.1921any0.0811number0.0330string[]0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+textName.Otherstring0.5978any0.3998number0.0010complex0.0005boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherstring0.6333any0.3646number0.0006complex0.0004string[]0.0002
+.Punctuation
+replaceName.Othercomplex0.8813any0.1132string0.0028boolean0.0008void0.0004
+(Punctuation
+/\t/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+' 'Literal.String.Single
+.Punctuation
+repeatName.Otherstring0.8979any0.0346boolean0.0290complex0.0117number0.0088
+(Punctuation
+thisKeyword
+.Punctuation
+tabsizeName.Otherstring0.7882any0.0956number0.0833boolean0.0142string[]0.0041
+)Punctuation
+)Punctuation
+ Text.Whitespace
+// not strictly correct in jsComment.Single
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+replace_whitespaceName.Otherboolean0.8322string0.0693any0.0574number0.0295string[]0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+textName.Otherstring0.6338any0.3640number0.0012complex0.0003boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherstring0.5913any0.4067number0.0007complex0.0004string[]0.0002
+.Punctuation
+replaceName.Othercomplex0.8725any0.1221string0.0028boolean0.0006number0.0004
+(Punctuation
+/[\t\n\x0b\x0c\r]/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+' 'Literal.String.Single
+)Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+textName.Otherstring0.8052any0.1861number0.0016string[]0.0011any[]0.0010
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_splitName.Otherstring0.4936any0.1741boolean0.0976string[]0.0709any[]0.0299
+(Punctuation
+textName.Otherstring0.7128any0.2822number0.0011string[]0.0007complex0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  _split(text : string) -> [string]\n         *\n         *  Split the text to wrap into indivisible chunks.  Chunks are\n         *  not quite the same as words; see _wrap_chunks() for full\n         *  details.  As an example, the text\n         *    Look, goof-ball -- use the -b option!\n         *  breaks into the following chunks:\n         *    'Look,', ' ', 'goof-', 'ball', ' ', '--', ' ',\n         *    'use', ' ', 'the', ' ', '-b', ' ', 'option!'\n         *  if break_on_hyphens is True, or in:\n         *    'Look,', ' ', 'goof-ball', ' ', '--', ' ',\n         *    'use', ' ', 'the', ' ', '-b', ' ', option!'\n         *  otherwise.\n         */Comment.Multiline
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+chunksName.Otherstring[]0.8042any[]0.0837any0.0611string0.0182complex0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherstring0.8070any0.1894string[]0.0009number0.0008complex0.0007
+.Punctuation
+splitName.Othercomplex0.9157any0.0770string[]0.0019string0.0011boolean0.0007
+(Punctuation
+wordsep_simple_reName.Otherstring0.3468any0.2461string[]0.1497boolean0.0684number0.0607
+)Punctuation
+\n        Text.Whitespace
+chunksName.Otherstring[]0.6165any[]0.2654any0.0421number[]0.0150complex0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+chunksName.Otherstring[]0.6526any[]0.2089any0.0646complex0.0190number[]0.0105
+.Punctuation
+filterName.Othercomplex0.9816any0.0093boolean0.0012v...0.0009string0.0007
+(Punctuation
+BooleanName.BuiltinBooleanConstructor0.9173Boolean0.0095boolean0.0089any0.0037string0.0019
+)Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+chunksName.Otherstring[]0.4986string0.1467any[]0.1374any0.0862number0.0419
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_handle_long_wordName.Othervoid0.4513any0.1110string0.1107boolean0.0940number0.0700
+(Punctuation
+reversed_chunksName.Otherstring0.5453any0.2157number0.1752boolean0.0349string[]0.0071
+,Punctuation
+ Text.Whitespace
+cur_lineName.Otherstring0.4223number0.2730any0.2129boolean0.0729string[]0.0045
+,Punctuation
+ Text.Whitespace
+cur_lenName.Otherstring0.3889number0.3166any0.2055boolean0.0752string[]0.0032
+,Punctuation
+ Text.Whitespace
+widthName.Othernumber0.8102any0.1162string0.0674complex0.0026boolean0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  _handle_long_word(chunks : [string],\n         *                    cur_line : [string],\n         *                    cur_len : int, width : int)\n         *\n         *  Handle a chunk of text (most likely a word, not whitespace) that\n         *  is too long to fit in any line.\n         */Comment.Multiline
+\n        Text.Whitespace
+// Figure out when indent is larger than the specified width, and makeComment.Single
+\n        Text.Whitespace
+// sure at least one character is stripped off on every passComment.Single
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+space_leftName.Othernumber0.3256any0.3253string0.2230boolean0.0855void0.0060
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+widthName.Othernumber0.9318any0.0598string0.0056boolean0.0012complex0.0010
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+space_leftName.Othernumber0.9756any0.0158string0.0058boolean0.0016void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+space_leftName.Othernumber0.8857any0.0746string0.0327boolean0.0048complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+widthName.Othernumber0.8230any0.1600string0.0136complex0.0022boolean0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+cur_lenName.Othernumber0.8236any0.1109string0.0541boolean0.0063complex0.0015
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// If we're allowed to break long words, then do so: put as muchComment.Single
+\n        Text.Whitespace
+// of the next chunk onto the current line as will fit.Comment.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+break_long_wordsName.Otherboolean0.4914number0.2661any0.1089string0.1033string[]0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+cur_lineName.Otherstring[]0.6441any[]0.0993number[]0.0922any0.0783string0.0066
+.Punctuation
+pushName.Othernumber0.9887any0.0084string0.0008boolean0.0008void0.0007
+(Punctuation
+reversed_chunksName.Otherany0.5790string[]0.2091string0.0641complex0.0295number[]0.0163
+[Punctuation
+reversed_chunksName.Otherstring[]0.4600string0.2522any0.2268number[]0.0080any[]0.0078
+.Punctuation
+lengthName.Othernumber0.8345any0.1609string0.0032complex0.0006boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+sliceName.Otherstring0.4345any0.4333string[]0.0441number0.0149complex0.0116
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+space_leftName.Othernumber0.5990string0.1973any0.1617boolean0.0112complex0.0102
+)Punctuation
+)Punctuation
+\n            Text.Whitespace
+reversed_chunksName.Otherany0.5078string[]0.1990number[]0.1122complex0.0310string0.0248
+[Punctuation
+reversed_chunksName.Otherstring[]0.5580string0.1978any0.1757number[]0.0179any[]0.0130
+.Punctuation
+lengthName.Othernumber0.9127any0.0837string0.0024complex0.0004boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+reversed_chunksName.Otherany0.5008string[]0.2331number[]0.0702string0.0503complex0.0332
+[Punctuation
+reversed_chunksName.Otherstring[]0.5671string0.2027any0.1562number[]0.0175any[]0.0115
+.Punctuation
+lengthName.Othernumber0.8977any0.0979string0.0031complex0.0006boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+sliceName.Otherstring0.4493any0.4345string[]0.0271number0.0190void0.0136
+(Punctuation
+space_leftName.Othernumber0.5194string0.2816any0.1540boolean0.0150string[]0.0087
+)Punctuation
+\n\n        Text.Whitespace
+// Otherwise, we have to preserve the long word intact.  Only addComment.Single
+\n        Text.Whitespace
+// it to the current line if there's nothing already there --Comment.Single
+\n        Text.Whitespace
+// that minimizes how much we violate the width constraint.Comment.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+cur_lineName.Otherboolean0.4447any0.2645string0.1510number0.0935complex0.0097
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+cur_lineName.Otherstring[]0.6363any[]0.1564any0.1002number[]0.0482string0.0049
+.Punctuation
+pushName.Othernumber0.9861any0.0109string0.0012boolean0.0007void0.0006
+(Punctuation
+...Punctuation
+reversed_chunksName.Otherstring[]0.6582any[]0.1747any0.0876number[]0.0266complex0.0076
+.Punctuation
+popName.Otherany0.4803string0.2922number0.0874complex0.0663boolean0.0144
+(Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// If we're not allowed to break long words, and there's alreadyComment.Single
+\n        Text.Whitespace
+// text on the current line, do nothing.  Next time through theComment.Single
+\n        Text.Whitespace
+// main loop of _wrap_chunks(), we'll wind up here again, butComment.Single
+\n        Text.Whitespace
+// cur_len will be zero, so the next line will be entirelyComment.Single
+\n        Text.Whitespace
+// devoted to the long word that we can't handle right now.Comment.Single
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_wrap_chunksName.Othervoid0.2439boolean0.1852any0.1067string[]0.0932string0.0577
+(Punctuation
+chunksName.Otherstring[]0.3682any0.2449string0.2015any[]0.0621number0.0566
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  _wrap_chunks(chunks : [string]) -> [string]\n         *\n         *  Wrap a sequence of text chunks and return a list of lines of\n         *  length 'self.width' or less.  (If 'break_long_words' is false,\n         *  some lines may be longer than this.)  Chunks correspond roughly\n         *  to words and the whitespace between them: each chunk is\n         *  indivisible (modulo 'break_long_words'), but a line break can\n         *  come between any two chunks.  Chunks should not have internal\n         *  whitespace; ie. a chunk is either all whitespace or a "word".\n         *  Whitespace chunks will be removed from the beginning and end of\n         *  lines, but apart from that whitespace is preserved.\n         */Comment.Multiline
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+linesName.Otherstring[]0.6703any[]0.1634number[]0.0574any0.0478T[]0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indentName.Otherstring0.5003number0.3431any0.1491complex0.0025boolean0.0011
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+widthName.Othernumber0.9686any0.0270string0.0027complex0.0008boolean0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+throwKeywordany0.8464Error0.0649number0.0298string0.0271complex0.0157
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9998any0.0000Error0.0000complex0.0000void0.0000
+(Punctuation
+`Literal.String.Backtick
+invalid width Literal.String.Backtick
+${Literal.String.Interpol
+thisKeyword
+.Punctuation
+widthName.Othernumber0.8789string0.0609any0.0525complex0.0050boolean0.0007
+}Literal.String.Interpol
+ (must be > 0)Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+max_linesName.Othernumber0.3967any0.2440string0.2314boolean0.0800complex0.0089
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+max_linesName.Othernumber0.9640any0.0219boolean0.0088string0.0038number[]0.0003
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+indentName.Othernumber0.7795string0.1500any0.0568complex0.0064void0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+subsequent_indentName.Othernumber0.7062string0.2020any0.0583boolean0.0075number[]0.0037
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+indentName.Othernumber0.6132string0.3059any0.0690complex0.0043void0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+initial_indentName.Othernumber0.5834string0.2995any0.0717boolean0.0121number[]0.0050
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indentName.Otherstring0.8595any0.0989number0.0145string[]0.0108any[]0.0055
+.Punctuation
+lengthName.Othernumber0.9329any0.0641string0.0019complex0.0005boolean0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.4881any0.3173number0.0365RegExp0.0106complex0.0098
+.Punctuation
+trimStartName.Otherany0.6499string0.1232complex0.0946string[]0.0087any[]0.0065
+(Punctuation
+)Punctuation
+.Punctuation
+lengthName.Othernumber0.8638any0.1333string0.0019complex0.0004boolean0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+widthName.Othernumber0.9553any0.0305string0.0100complex0.0023boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+throwKeywordany0.8898Error0.0560string0.0115number0.0113complex0.0112
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000complex0.0000any[]0.0000
+(Punctuation
+'placeholder too large for max width'Literal.String.Single
+)Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+// Arrange in reverse order so items can be efficiently poppedComment.Single
+\n        Text.Whitespace
+// from a stack of chucks.Comment.Single
+\n        Text.Whitespace
+chunksName.Otherany[]0.6260string[]0.2381any0.0517number[]0.0220string0.0133
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+chunksName.Otherany[]0.6566string[]0.2211any0.0510number[]0.0184complex0.0056
+.Punctuation
+reverseName.Otherany0.3334string[]0.2754any[]0.2741number[]0.0285string0.0140
+(Punctuation
+)Punctuation
+\n\n        Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+chunksName.Otherany[]0.5632string[]0.2695any0.0811number[]0.0326complex0.0061
+.Punctuation
+lengthName.Othernumber0.9772any0.0214string0.0007complex0.0002boolean0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n            Text.Whitespace
+// Start the list of chunks that will make up the current line.Comment.Single
+\n            Text.Whitespace
+// cur_len is just the length of all the chunks in cur_line.Comment.Single
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+cur_lineName.Otherany[]0.9331string[]0.0274number[]0.0112any0.0073any[][]0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+cur_lenName.Othernumber0.9076any0.0521string0.0286boolean0.0093complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n\n            Text.Whitespace
+// Figure out which static string will prefix this line.Comment.Single
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indentName.Otherstring0.5674number0.2826any0.1357complex0.0038boolean0.0027
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+linesName.Otherstring[]0.8451any[]0.0384any0.0353number[]0.0155string0.0074
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+indentName.Othernumber0.7629string0.1651any0.0619complex0.0051any[]0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+subsequent_indentName.Othernumber0.6953string0.1990any0.0790boolean0.0103complex0.0037
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+indentName.Othernumber0.7356string0.1932any0.0630complex0.0032boolean0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+initial_indentName.Othernumber0.7811string0.1236any0.0648boolean0.0162complex0.0040
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+// Maximum width for this line.Comment.Single
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+widthName.Othernumber0.8827any0.0868string0.0253complex0.0033boolean0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+widthName.Othernumber0.9527any0.0403string0.0048complex0.0013boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+indentName.Otherstring0.6232number0.1753any0.1583any[]0.0132string[]0.0096
+.Punctuation
+lengthName.Othernumber0.9479any0.0484string0.0021boolean0.0005complex0.0005
+\n\n            Text.Whitespace
+// First chunk on line is whitespace -- drop it, unless thisComment.Single
+\n            Text.Whitespace
+// is the very beginning of the text (ie. no lines started yet).Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+drop_whitespaceName.Otherboolean0.5775number0.2532string0.0775any0.0614any[]0.0037
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+chunksName.Otherany[]0.6812string[]0.1343any0.0708number[]0.0319complex0.0064
+[Punctuation
+chunksName.Otherany[]0.5010string[]0.3707any0.0353number[]0.0313string0.0139
+.Punctuation
+lengthName.Othernumber0.9814any0.0170string0.0010boolean0.0002complex0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+trimName.Otherstring0.7913any0.1739number0.0153void0.0076boolean0.0051
+(Punctuation
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+linesName.Otherstring[]0.8657any0.0437any[]0.0437number[]0.0148string0.0020
+.Punctuation
+lengthName.Othernumber0.9644any0.0338string0.0011complex0.0002boolean0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+chunksName.Otherany[]0.8185string[]0.1078any0.0228number[]0.0217complex0.0041
+.Punctuation
+popName.Othernumber0.3667string0.2729any0.2372complex0.0524boolean0.0255
+(Punctuation
+)Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+chunksName.Otherany[]0.5015string[]0.2721any0.0988number[]0.0431string0.0169
+.Punctuation
+lengthName.Othernumber0.9721any0.0266string0.0007complex0.0002boolean0.0002
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+lName.Othernumber0.6034any0.2538string0.1314boolean0.0036void0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+chunksName.Otherany[]0.7303string[]0.0944number[]0.0471any0.0377complex0.0096
+[Punctuation
+chunksName.Otherany[]0.4970string[]0.3801any0.0369number[]0.0338string0.0141
+.Punctuation
+lengthName.Othernumber0.9779any0.0205string0.0010complex0.0002boolean0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+lengthName.Othernumber0.7626any0.2337string0.0021boolean0.0006complex0.0004
+\n\n                Text.Whitespace
+// Can at least squeeze this chunk onto the current line.Comment.Single
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cur_lenName.Othernumber0.8811any0.0766string0.0233boolean0.0174complex0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+lName.Othernumber0.9194any0.0521string0.0275boolean0.0003complex0.0002
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+widthName.Othernumber0.9461any0.0407string0.0106complex0.0011boolean0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+cur_lineName.Otherany[]0.5848string[]0.2714number[]0.0661any0.0326number0.0075
+.Punctuation
+pushName.Othernumber0.9942any0.0041string0.0006boolean0.0004void0.0003
+(Punctuation
+chunksName.Otherany[]0.5625string[]0.3416any0.0406number[]0.0245complex0.0063
+.Punctuation
+popName.Otherstring0.4234number0.2686any0.2574complex0.0233any[]0.0068
+(Punctuation
+)Punctuation
+)Punctuation
+\n                    Text.Whitespace
+cur_lenName.Othernumber0.6879string0.2257any0.0752boolean0.0063complex0.0011
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+lName.Otherstring0.5128number0.3905any0.0890boolean0.0024void0.0006
+\n\n                Text.Whitespace
+// Nope, this line is full.Comment.Single
+\n                Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+breakKeyword
+\n                Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+// The current line is full, and the next chunk is too big toComment.Single
+\n            Text.Whitespace
+// fit on *any* line (not just this one).Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+chunksName.Otherany[]0.7595string[]0.1631number[]0.0203any0.0138complex0.0097
+.Punctuation
+lengthName.Othernumber0.9776any0.0195string0.0014boolean0.0006complex0.0004
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+chunksName.Otherany[]0.8072string[]0.0847any0.0267number[]0.0235complex0.0146
+[Punctuation
+chunksName.Otherany[]0.6176string[]0.2875any0.0306number[]0.0189complex0.0094
+.Punctuation
+lengthName.Othernumber0.9759any0.0222string0.0011complex0.0003boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+lengthName.Othernumber0.8132any0.1843string0.0014complex0.0003boolean0.0003
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+widthName.Othernumber0.9341any0.0496string0.0121complex0.0027boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+thisKeyword
+.Punctuation
+_handle_long_wordName.Othervoid0.5691any0.0955number0.0841complex0.0660boolean0.0610
+(Punctuation
+chunksName.Otherany[]0.4273string[]0.2262any0.1478number0.0599string0.0481
+,Punctuation
+ Text.Whitespace
+cur_lineName.Othernumber0.5364string0.2473any0.1425boolean0.0520any[]0.0069
+,Punctuation
+ Text.Whitespace
+cur_lenName.Othernumber0.5412string0.2149any0.1793boolean0.0485any[]0.0046
+,Punctuation
+ Text.Whitespace
+widthName.Othernumber0.7934any0.1442string0.0519complex0.0072boolean0.0008
+)Punctuation
+\n                Text.Whitespace
+cur_lenName.Otherany0.4354number0.3411string0.1073string[]0.0351boolean0.0259
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cur_lineName.Otherany0.4080string[]0.2302any[]0.1776number[]0.0779number0.0359
+.Punctuation
+mapName.OtherU[]0.8447any0.0862complex0.0456number0.0054any[]0.0014
+(Punctuation
+lName.Otherstring0.4802number0.2824any0.2295boolean0.0019complex0.0009
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+lName.Otherstring0.7241any0.1999number0.0510any[]0.0070string[]0.0042
+.Punctuation
+lengthName.Othernumber0.9292any0.0673string0.0027complex0.0003boolean0.0002
+)Punctuation
+.Punctuation
+reduceName.Otherany0.5201complex0.3721number0.0841any...0.0093string0.0020
+(Punctuation
+(Punctuation
+aName.Othernumber0.5943string0.3127any0.0878boolean0.0015complex0.0007
+,Punctuation
+ Text.Whitespace
+bName.Othernumber0.4979string0.3039any0.1830boolean0.0046complex0.0008
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+aName.Othernumber0.6619string0.2374any0.0966boolean0.0015complex0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+bName.Othernumber0.5936string0.2460any0.1528boolean0.0016complex0.0008
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+// If the last chunk on this line is all whitespace, drop it.Comment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+drop_whitespaceName.Otherboolean0.5386string0.2128any0.1073number0.0642string[]0.0298
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+cur_lineName.Otherstring[]0.3240any0.3173string0.1509any[]0.1208number[]0.0264
+.Punctuation
+lengthName.Othernumber0.9433any0.0542string0.0013boolean0.0004complex0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+cur_lineName.Otherany0.3528string[]0.1565any[]0.1524number[]0.0719boolean0.0535
+[Punctuation
+cur_lineName.Otherstring[]0.5227string0.1488any[]0.1155any0.1087number[]0.0299
+.Punctuation
+lengthName.Othernumber0.9326any0.0643string0.0021complex0.0004boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+trimName.Otherstring0.7991any0.1681number0.0183complex0.0046boolean0.0039
+(Punctuation
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+cur_lenName.Othernumber0.6958any0.2603string0.0383boolean0.0025complex0.0007
+ Text.Whitespace
+-=Operator
+ Text.Whitespace
+cur_lineName.Otherany0.5379number0.1484number[]0.1238any[]0.0374complex0.0273
+[Punctuation
+cur_lineName.Otherstring[]0.3368any0.2151string0.2025any[]0.1112number[]0.0596
+.Punctuation
+lengthName.Othernumber0.9349any0.0626string0.0016complex0.0003boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+lengthName.Othernumber0.6771any0.3171string0.0035boolean0.0006complex0.0006
+\n                Text.Whitespace
+cur_lineName.Otherany0.2475number[]0.2138string[]0.1915any[]0.1816number0.0885
+.Punctuation
+popName.Otherany0.4670number0.3151string0.1598complex0.0264boolean0.0110
+(Punctuation
+)Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cur_lineName.Otherboolean0.5865any0.2009number0.1071string0.0711complex0.0074
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+max_linesName.Otherboolean0.4653number0.2537any0.1607string0.0943complex0.0048
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+||Operator
+\n                    Text.Whitespace
+linesName.Otherstring[]0.8122any0.0862any[]0.0429number[]0.0146string0.0036
+.Punctuation
+lengthName.Othernumber0.9174any0.0802string0.0011boolean0.0005complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+max_linesName.Othernumber0.6084any0.1476string0.1373boolean0.0755string[]0.0071
+ Text.Whitespace
+||Operator
+\n                    Text.Whitespace
+(Punctuation
+chunksName.Otherany[]0.4983string[]0.3172any0.1257number[]0.0186string0.0113
+.Punctuation
+lengthName.Othernumber0.9350any0.0622string0.0013boolean0.0005complex0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+||Operator
+\n                     Text.Whitespace
+thisKeyword
+.Punctuation
+drop_whitespaceName.Otherboolean0.4626number0.1824string0.1633any0.1504string[]0.0117
+ Text.Whitespace
+&&Operator
+\n                     Text.Whitespace
+chunksName.Otherany[]0.4626string[]0.4009any0.0701number[]0.0228string0.0119
+.Punctuation
+lengthName.Othernumber0.9598any0.0378string0.0010boolean0.0006complex0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+&&Operator
+\n                     Text.Whitespace
+!Operator
+chunksName.Otherany[]0.5364string[]0.2553any0.1023number[]0.0359string0.0176
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+.Punctuation
+trimName.Otherstring0.8086any0.1687number0.0105boolean0.0067complex0.0023
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+cur_lenName.Othernumber0.8416any0.1174string0.0302boolean0.0094complex0.0005
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+widthName.Othernumber0.8767any0.0933string0.0246complex0.0032boolean0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+// Convert current line back to a string and store it inComment.Single
+\n                    Text.Whitespace
+// list of all lines (return value).Comment.Single
+\n                    Text.Whitespace
+linesName.Otherstring[]0.8972any[]0.0563any0.0235number[]0.0125string0.0023
+.Punctuation
+pushName.Othernumber0.9880any0.0103string0.0008boolean0.0003void0.0002
+(Punctuation
+indentName.Otherstring0.4520number0.3748any0.1705complex0.0012any[]0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cur_lineName.Otherstring[]0.5783any[]0.2381any0.0983string0.0264number[]0.0257
+.Punctuation
+joinName.Otherstring0.9243any0.0593number0.0114complex0.0015string[]0.0011
+(Punctuation
+''Literal.String.Single
+)Punctuation
+)Punctuation
+\n                Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+had_breakName.Otherboolean0.9702any0.0148number0.0081string0.0051false0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+\n                    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+cur_lineName.Otherboolean0.4377any0.3415string0.1253number0.0702complex0.0059
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+cur_lineName.Otherany0.5313boolean0.1118any[]0.1027string[]0.0681complex0.0302
+[Punctuation
+cur_lineName.Otherstring0.2876any0.2548string[]0.2447any[]0.1216number[]0.0157
+.Punctuation
+lengthName.Othernumber0.9240any0.0732string0.0017boolean0.0004complex0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+trimName.Otherstring0.7377any0.2096number0.0290boolean0.0116void0.0062
+(Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n                            Text.Whitespace
+cur_lenName.Othernumber0.7714any0.1079string0.0739boolean0.0440void0.0009
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.9234any0.0496string[]0.0079number0.0051any[]0.0030
+.Punctuation
+lengthName.Othernumber0.9528any0.0450string0.0013boolean0.0004complex0.0003
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+widthName.Othernumber0.9337any0.0513string0.0125complex0.0012boolean0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                            Text.Whitespace
+cur_lineName.Otherstring[]0.5277any[]0.3172number[]0.0710any0.0393string0.0142
+.Punctuation
+pushName.Othernumber0.9929any0.0053boolean0.0006string0.0005void0.0003
+(Punctuation
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.9573any0.0181number0.0174boolean0.0029string[]0.0010
+)Punctuation
+\n                            Text.Whitespace
+linesName.Otherstring[]0.9316any[]0.0311any0.0153number[]0.0099string0.0013
+.Punctuation
+pushName.Othernumber0.9901any0.0082string0.0008boolean0.0004void0.0002
+(Punctuation
+indentName.Otherstring0.6882number0.2163any0.0930complex0.0007any[]0.0004
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cur_lineName.Otherstring[]0.7021any[]0.1524any0.0650string0.0260number[]0.0228
+.Punctuation
+joinName.Otherstring0.9278any0.0537number0.0114boolean0.0020complex0.0015
+(Punctuation
+''Literal.String.Single
+)Punctuation
+)Punctuation
+\n                            Text.Whitespace
+had_breakName.Otherboolean0.9227number0.0295any0.0269string0.0137false0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n                            Text.Whitespace
+breakKeyword
+\n                        Text.Whitespace
+}Punctuation
+\n                        Text.Whitespace
+cur_lenName.Othernumber0.6532any0.2189string0.1141boolean0.0051void0.0023
+ Text.Whitespace
+-=Operator
+ Text.Whitespace
+cur_lineName.Otherany0.4210any[]0.1672string[]0.1053number[]0.0842number0.0739
+[Punctuation
+-Operator
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+lengthName.Othernumber0.5847any0.4087string0.0040complex0.0008boolean0.0005
+\n                        Text.Whitespace
+cur_lineName.Otherany0.3035string[]0.2517any[]0.1674number[]0.1091number0.0626
+.Punctuation
+popName.Otherany0.5447number0.2184string0.1841complex0.0243boolean0.0062
+(Punctuation
+)Punctuation
+\n                    Text.Whitespace
+}Punctuation
+\n                    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+had_breakName.Otherboolean0.7092any0.1031string0.0920number0.0539complex0.0091
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+linesName.Otherstring[]0.8248any0.0755any[]0.0386number[]0.0148string0.0088
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+prev_lineName.Otherstring0.4287any0.2994number0.2518boolean0.0099string[]0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+linesName.Otherstring[]0.8646any[]0.0368any0.0269number[]0.0141T[]0.0017
+[Punctuation
+linesName.Otherstring[]0.9424any[]0.0162any0.0142number[]0.0082string0.0023
+.Punctuation
+lengthName.Othernumber0.9738any0.0241string0.0016boolean0.0001complex0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+trimEndName.Otherstring0.8063any0.1533number0.0182void0.0051complex0.0024
+(Punctuation
+)Punctuation
+\n                            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+prev_lineName.Otherstring0.5161string[]0.2249any0.1383any[]0.0492number[]0.0107
+.Punctuation
+lengthName.Othernumber0.9460any0.0510string0.0019complex0.0005boolean0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.9561any0.0215string[]0.0076number0.0034any[]0.0019
+.Punctuation
+lengthName.Othernumber0.9688any0.0286string0.0018complex0.0003boolean0.0002
+ Text.Whitespace
+<=Operator
+\n                                    Text.Whitespace
+thisKeyword
+.Punctuation
+widthName.Othernumber0.9561string0.0210any0.0205complex0.0011boolean0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                                Text.Whitespace
+linesName.Otherstring[]0.9242any[]0.0253any0.0169number[]0.0122string0.0012
+[Punctuation
+linesName.Otherstring[]0.9532any0.0135any[]0.0115number[]0.0092string0.0026
+.Punctuation
+lengthName.Othernumber0.9726any0.0254string0.0015complex0.0001boolean0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+prev_lineName.Othernumber0.8470string0.1092any0.0381boolean0.0035complex0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.8706any0.0576number0.0564boolean0.0058string[]0.0020
+\n                                Text.Whitespace
+breakKeyword
+\n                            Text.Whitespace
+}Punctuation
+\n                        Text.Whitespace
+}Punctuation
+\n                        Text.Whitespace
+linesName.Otherstring[]0.8601any[]0.0676number[]0.0253any0.0169string0.0023
+.Punctuation
+pushName.Othernumber0.9959any0.0029string0.0006boolean0.0003void0.0001
+(Punctuation
+indentName.Otherstring0.6043number0.3263any0.0669complex0.0010any[]0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+placeholderName.Otherstring0.3201any0.1675number0.0313RegExp0.0149complex0.0121
+.Punctuation
+lstripName.Otherstring0.7365number0.1383any0.0755boolean0.0269string[]0.0058
+(Punctuation
+)Punctuation
+)Punctuation
+\n                    Text.Whitespace
+}Punctuation
+\n                    Text.Whitespace
+breakKeyword
+\n                Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+linesName.Otherstring[]0.8915any[]0.0421number[]0.0129any0.0044string0.0018
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+_split_chunksName.Otherstring0.2626string[]0.1634boolean0.0937any[]0.0772any0.0750
+(Punctuation
+textName.Otherstring0.8129any0.1795number0.0025complex0.0012string[]0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+textName.Otherstring0.8730any0.1206number0.0022complex0.0016string[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_munge_whitespaceName.Otherstring0.8369any0.0665boolean0.0304number0.0192string[]0.0118
+(Punctuation
+textName.Otherstring0.8744any0.1189number0.0021complex0.0018any[]0.0005
+)Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_splitName.Otherstring0.6253any0.1392number0.0624boolean0.0517complex0.0206
+(Punctuation
+textName.Otherstring0.6109any0.3776complex0.0030number0.0020any[]0.0013
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// -- Public interface ----------------------------------------------Comment.Single
+\n\n    Text.Whitespace
+wrapName.Otherstring0.7278any0.1202boolean0.0309void0.0177number0.0171
+(Punctuation
+textName.Otherstring0.7571any0.2371number0.0023complex0.0007string[]0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  wrap(text : string) -> [string]\n         *\n         *  Reformat the single paragraph in 'text' so it fits in lines of\n         *  no more than 'self.width' columns, and return a list of wrapped\n         *  lines.  Tabs in 'text' are expanded with string.expandtabs(),\n         *  and all other whitespace characters (including newline) are\n         *  converted to space.\n         */Comment.Multiline
+\n        Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+chunksName.Otherstring[]0.4664any[]0.2229string0.0930any0.0638number[]0.0212
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_split_chunksName.Otherstring0.6169any0.1066string[]0.0578complex0.0453boolean0.0448
+(Punctuation
+textName.Otherstring0.8289any0.1621complex0.0027number0.0025any[]0.0008
+)Punctuation
+\n        Text.Whitespace
+// not implemented in jsComment.Single
+\n        Text.Whitespace
+//if (this.fix_sentence_endings) {Comment.Single
+\n        Text.Whitespace
+//    this._fix_sentence_endings(chunks)Comment.Single
+\n        Text.Whitespace
+//}Comment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_wrap_chunksName.Otherstring0.7274any0.0876number0.0642boolean0.0457any[]0.0149
+(Punctuation
+chunksName.Otherstring[]0.3096any[]0.2544string0.1797any0.1654number0.0283
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+fillName.Otherany0.2609any[]0.2017string0.1318this0.0918string[]0.0384
+(Punctuation
+textName.Otherstring0.6819any0.3096number0.0025string[]0.0011complex0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+/*\n         *  fill(text : string) -> string\n         *\n         *  Reformat the single paragraph in 'text' to fit in lines of no\n         *  more than 'self.width' columns, and return a new string\n         *  containing the entire wrapped paragraph.\n         */Comment.Multiline
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+wrapName.Otherstring0.8598any0.0634any[]0.0154string[]0.0151number0.0100
+(Punctuation
+textName.Otherstring0.7106any0.2818string[]0.0016number0.0016any[]0.0014
+)Punctuation
+.Punctuation
+joinName.Otherstring0.9724any0.0212number0.0024string[]0.0010complex0.0007
+(Punctuation
+'\n'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\n\nText.Whitespace
+Text
+// -- Convenience interface ---------------------------------------------Comment.Single
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wrapName.Otherstring0.6693any0.1666number0.0196void0.0104string[]0.0077
+(Punctuation
+textName.Otherstring0.9360any0.0593number0.0029string[]0.0002complex0.0002
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.1650any0.1167Options0.0278string0.0093RequestOptions0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/*\n     *  Wrap a single paragraph of text, returning a list of wrapped lines.\n     *\n     *  Reformat the single paragraph in 'text' so it fits in lines of no\n     *  more than 'width' columns, and return a list of wrapped lines.  By\n     *  default, tabs in 'text' are expanded with string.expandtabs(), and\n     *  all other whitespace characters (including newline) are converted to\n     *  space.  See TextWrapper class for available keyword args to customize\n     *  wrapping behaviour.\n     */Comment.Multiline
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+widthName.Othernumber0.8455any0.1261string0.0248complex0.0015boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+70Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+...Punctuation
+kwargsName.Otherany0.7094complex0.1718any[]0.0567{}0.0148string[]0.0116
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.2112Options0.0475complex0.0173{}0.0145number0.0065
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+wName.Otherany0.1828number0.0051SymbolicTensor0.0047Options0.0032Change0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6061string0.1256number0.0214complex0.0107boolean0.0048
+ Text.Whitespace
+TextWrapperName.Otherany0.9376number0.0235string0.0163complex0.0101boolean0.0044
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9995any0.0001Object0.0001complex0.0000number0.0000
+.Punctuation
+assignName.Othercomplex0.7184any0.0822number0.0285void0.0266boolean0.0194
+(Punctuation
+{Punctuation
+ Text.Whitespace
+widthName.Othernumber0.5407any0.3907string0.0341complex0.0264{}0.0008
+ Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+kwargsName.Otherany0.8149complex0.1225any[]0.0326string[]0.0054{}0.0035
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wName.Otherany0.7473number0.0022SymbolicTensor0.0013this0.0012void0.0012
+.Punctuation
+wrapName.Otherany0.8004string0.0554void0.0212complex0.0127number0.0080
+(Punctuation
+textName.Otherstring0.5150any0.4749complex0.0027number0.0018any[]0.0013
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+fillName.Otherany0.2424string0.0897this0.0892any[]0.0610void0.0268
+(Punctuation
+textName.Otherstring0.6956any0.2984number0.0028complex0.0004string[]0.0003
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2018{}0.1232Options0.0231string0.0050object0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/*\n     *  Fill a single paragraph of text, returning a new string.\n     *\n     *  Reformat the single paragraph in 'text' to fit in lines of no more\n     *  than 'width' columns, and return a new string containing the entire\n     *  wrapped paragraph.  As with wrap(), tabs are expanded and other\n     *  whitespace characters converted to space.  See TextWrapper class for\n     *  available keyword args to customize wrapping behaviour.\n     */Comment.Multiline
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+widthName.Othernumber0.8568any0.1248string0.0159complex0.0010boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+70Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+...Punctuation
+kwargsName.Otherany0.8198complex0.0902any[]0.0449{}0.0092string[]0.0076
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.2595Options0.0412{}0.0135complex0.0135number0.0075
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+wName.Otherany0.1951SymbolicTensor0.0066number0.0058Tests0.0030Options0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.6459string0.1017number0.0209complex0.0077Error0.0047
+ Text.Whitespace
+TextWrapperName.Otherany0.9409number0.0266string0.0128complex0.0079boolean0.0041
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9994any0.0002Object0.0001complex0.0000number0.0000
+.Punctuation
+assignName.Othercomplex0.6899any0.1110number0.0386void0.0304boolean0.0230
+(Punctuation
+{Punctuation
+ Text.Whitespace
+widthName.Otherany0.5316number0.4344string0.0172complex0.0118any[]0.0009
+ Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+kwargsName.Otherany0.8577any[]0.0577complex0.0576string[]0.0054{}0.0042
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wName.Otherany0.8855number0.0020any[]0.0020this0.0017void0.0015
+.Punctuation
+fillName.Otherany0.8419any[]0.0609void0.0189complex0.0080string0.0047
+(Punctuation
+textName.Otherany0.5577string0.4339number0.0020complex0.0018any[]0.0015
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// -- Loosely related functionality -------------------------------------Comment.Single
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_whitespace_only_reName.OtherRegExp0.5244string0.4216any0.0412string[]0.0047number0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^[ \t]+$/mgLiteral.String.Regex
+\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+_leading_whitespace_reName.Otherstring0.7825RegExp0.1479any0.0502string[]0.0081number0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/(^[ \t]*)(?:[^ \t\n])/mgLiteral.String.Regex
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+dedentName.Otherany0.5486string0.3114any[]0.0284boolean0.0185number0.0107
+(Punctuation
+textName.Otherstring0.7381any0.2580number0.0019complex0.0005string[]0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/*\n     *  Remove any common leading whitespace from every line in `text`.\n     *\n     *  This can be used to make triple-quoted strings line up with the left\n     *  edge of the display, while still presenting them in the source code\n     *  in indented form.\n     *\n     *  Note that tabs and spaces are both treated as whitespace, but they\n     *  are not equal: the lines "  hello" and "\\thello" are\n     *  considered to have no common leading whitespace.\n     *\n     *  Entirely blank lines are normalized to a newline character.\n     */Comment.Multiline
+\n    Text.Whitespace
+// Look for the longest leading string of spaces and tabs common toComment.Single
+\n    Text.Whitespace
+// all lines.Comment.Single
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+marginName.Otherany0.8352string0.0559any[]0.0252number0.0207complex0.0147
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n    Text.Whitespace
+textName.Otherany0.7789string0.2166number0.0024complex0.0007any[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherany0.6352string0.3626number0.0011complex0.0003string[]0.0001
+.Punctuation
+replaceName.Othercomplex0.7289any0.2621string0.0035boolean0.0019number0.0011
+(Punctuation
+_whitespace_only_reName.OtherRegExp0.6573any0.1670string0.1024string[]0.0140boolean0.0140
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indentsName.Otherany0.7133string0.1007RegExpMatchArray0.0648string[]0.0303boolean0.0290
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherany0.6582string0.3389number0.0009complex0.0006string[]0.0002
+.Punctuation
+matchName.Otherany0.5340complex0.4528string0.0030any[]0.0022boolean0.0018
+(Punctuation
+_leading_whitespace_reName.Otherstring0.3774any0.2317RegExp0.2008RegExpMatchArray0.0491string[]0.0352
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+indentName.Otherstring0.4781number0.2721any0.2412complex0.0036number[]0.0006
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+indentsName.Otherany0.3846number0.1385string[]0.1222any[]0.1000string0.0795
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+indentName.Otherstring0.6211any0.1956number0.1755complex0.0024any[]0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+indentName.Otherstring0.8624any0.0921number0.0360string[]0.0039any[]0.0016
+.Punctuation
+sliceName.Otherstring0.7266any0.1906string[]0.0251number0.0237any[]0.0107
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+marginName.Otherany0.7235number0.1623string0.0795complex0.0145any[]0.0048
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+marginName.Otherany0.6335string0.2595number0.0591complex0.0105number[]0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+indentName.Otherstring0.4553number0.3615any0.1762complex0.0020number[]0.0010
+\n\n        Text.Whitespace
+// Current line more deeply indented than previous winner:Comment.Single
+\n        Text.Whitespace
+// no change (previous winner is still on top).Comment.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indentName.Otherstring0.6989any0.2636number0.0318boolean0.0019complex0.0009
+.Punctuation
+startsWithName.Otherboolean0.8841any0.0949number0.0082string0.0074complex0.0031
+(Punctuation
+marginName.Otherany0.6434number0.1748string0.1573complex0.0080any[]0.0034
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+// passComment.Single
+\n\n        Text.Whitespace
+// Current line consistent with and no deeper than previous winner:Comment.Single
+\n        Text.Whitespace
+// it's the new winner.Comment.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+marginName.Otherany0.7318string0.1929number0.0284complex0.0143any[]0.0052
+.Punctuation
+startsWithName.Otherboolean0.6724any0.2898number0.0162string0.0115complex0.0073
+(Punctuation
+indentName.Otherstring0.4988any0.2828number0.2110complex0.0034boolean0.0011
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+marginName.Otherany0.6204string0.2318number0.1042complex0.0095any[]0.0076
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+indentName.Othernumber0.5086string0.3492any0.1356complex0.0021number[]0.0009
+\n\n        Text.Whitespace
+// Find the largest common whitespace between current line and previousComment.Single
+\n        Text.Whitespace
+// winner.Comment.Single
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9899any0.0092string0.0006boolean0.0001complex0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9805any0.0185string0.0006boolean0.0002void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+marginName.Otherany0.3637any[]0.1170number[]0.1037string[]0.0663string0.0431
+.Punctuation
+lengthName.Othernumber0.8813any0.1159string0.0018boolean0.0003complex0.0003
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+iName.Othernumber0.9563any0.0418string0.0011boolean0.0004void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+indentName.Otherstring0.5567any0.3261number0.0897string[]0.0097any[]0.0074
+.Punctuation
+lengthName.Othernumber0.9238any0.0742string0.0012boolean0.0002complex0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9621any0.0365string0.0009boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+marginName.Otherany0.5981number[]0.0843complex0.0733any[]0.0625string[]0.0423
+[Punctuation
+iName.Othernumber0.9743any0.0224string0.0027boolean0.0003void0.0001
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+indentName.Otherstring0.3897any0.3210number0.1935string[]0.0311any[]0.0228
+[Punctuation
+iName.Othernumber0.9717any0.0242string0.0036boolean0.0002void0.0001
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                    Text.Whitespace
+marginName.Otherany0.6724string0.0995number0.0727any[]0.0456number[]0.0392
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+marginName.Otherany0.6040string0.1187any[]0.0556number[]0.0532number0.0397
+.Punctuation
+sliceName.Otherany0.4459string0.2958any[]0.0686string[]0.0447number[]0.0441
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+iName.Othernumber0.9550any0.0422string0.0021boolean0.0003void0.0001
+)Punctuation
+\n                    Text.Whitespace
+breakKeyword
+\n                Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+marginName.Otherany0.5927number0.1858string0.1506complex0.0168any[]0.0140
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+textName.Otherany0.5548string0.4415number0.0024complex0.0003boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+textName.Otherany0.5710string0.4267number0.0013complex0.0002boolean0.0001
+.Punctuation
+replaceName.Othercomplex0.6930any0.2951string0.0038boolean0.0022number0.0017
+(Punctuation
+newOperator.Wordany0.3773string0.3450RegExp0.1955boolean0.0193complex0.0050
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9969RegExp0.0005any0.0001BooleanConstructor0.0000ErrorConstructor0.0000
+(Punctuation
+'^'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+marginName.Othernumber0.3828any0.3153string0.2391any[]0.0133complex0.0104
+,Punctuation
+ Text.Whitespace
+'mg'Literal.String.Single
+)Punctuation
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+textName.Otherstring0.6652any0.3258number0.0024any[]0.0018complex0.0007
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+wrapName.Otherstring0.4506any0.4317void0.0252boolean0.0228number0.0148
+,Punctuation
+ Text.Whitespace
+fillName.Otherany0.6838any[]0.1390string0.0419void0.0146never0.0138
+,Punctuation
+ Text.Whitespace
+dedentName.Otherany0.9710boolean0.0129string0.0102number0.0024any[]0.0007
+ Text.Whitespace
+}Punctuation
+\nText.Whitespace

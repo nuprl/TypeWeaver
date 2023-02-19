@@ -1,0 +1,153 @@
+importKeyword
+ Text.Whitespace
+isSymbolName.Othercomplex0.3845any0.3361boolean0.0396void0.0201number0.0165
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isSymbol.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `min` except that it accepts `iteratee` which is\n * invoked for each element in `array` to generate the criterion by which\n * the value is ranked. The iteratee is invoked with one argument: (value).\n *\n * @since 4.0.0\n * @category Math\n * @param {Array} array The array to iterate over.\n * @param {Function} iteratee The iteratee invoked per element.\n * @returns {*} Returns the minimum value.\n * @example\n *\n * const objects = [{ 'n': 1 }, { 'n': 2 }]\n *\n * minBy(objects, ({ n }) => n)\n * // => { 'n': 1 }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+minByName.Othercomplex0.5278any0.3891void0.0121number0.0110string0.0062
+(Punctuation
+arrayName.Otherany0.8534any[]0.0610string0.0206number0.0119complex0.0078
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.9058string0.0155number0.0069any[]0.0036boolean0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.9470boolean0.0094string0.0072number0.0069complex0.0062
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+arrayName.Otherany0.9234any[]0.0332number0.0114complex0.0083string0.0065
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.8878boolean0.0290string0.0145number0.0132{}0.0082
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+computedName.Otherany0.9008number0.0229string0.0153boolean0.0134complex0.0029
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.9653string0.0149number0.0045T0.0023complex0.0020
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+arrayName.Otherany0.7717any[]0.1866complex0.0063string0.0062number0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+currentName.Otherany0.9532boolean0.0109string0.0076number0.0048any[]0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iterateeName.Otherany0.9355string0.0059complex0.0036any[]0.0028boolean0.0025
+(Punctuation
+valueName.Otherany0.9498string0.0251number0.0036complex0.0035any[]0.0024
+)Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+currentName.Otherany0.9794string0.0036number0.0032boolean0.0031complex0.0017
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+computedName.Otherany0.9221number0.0268boolean0.0206string0.0199complex0.0025
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n      Text.Whitespace
+?Operator
+ Text.Whitespace
+(Punctuation
+currentName.Otherany0.9466string0.0301number0.0096boolean0.0043complex0.0022
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+currentName.Otherany0.9191string0.0455boolean0.0136number0.0118complex0.0014
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+isSymbolName.Otherany0.6496boolean0.1545complex0.1082number0.0312string0.0058
+(Punctuation
+currentName.Otherany0.9200number0.0450string0.0142boolean0.0101T0.0015
+)Punctuation
+)Punctuation
+\n      Text.Whitespace
+:Operator
+ Text.Whitespace
+(Punctuation
+currentName.Otherany0.8967number0.0768string0.0105boolean0.0033T0.0026
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+computedName.Otherany0.9361number0.0343string0.0138boolean0.0061complex0.0016
+)Punctuation
+\n    Text.Whitespace
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+computedName.Otherany0.8930string0.0490number0.0307boolean0.0113{}0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+currentName.Otherany0.9386string0.0230number0.0130boolean0.0080{}0.0036
+\n      Text.Whitespace
+resultName.Otherany0.9102string0.0341number0.0157boolean0.0109{}0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.8781string0.0538number0.0170{}0.0101T0.0086
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.7994{}0.0238string0.0172any[]0.0160number0.0097
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+minByName.Otherany0.5348complex0.3145number0.0122{}0.0099any[]0.0096
+\nText.Whitespace

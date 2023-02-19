@@ -1,0 +1,942 @@
+Text
+/*!\n * on-finished\n * Copyright(c) 2013 Jonathan Ong\n * Copyright(c) 2014 Douglas Christopher Wilson\n * MIT Licensed\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Module exports.\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+onFinishedName.Otherany0.5856string0.2435complex0.0574boolean0.0177RegExp0.0048
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.isFinishedName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+isFinishedName.Otherany0.6056boolean0.1936string0.0992complex0.0143{}0.0130
+\n\nText.Whitespace
+Text
+/**\n * Module dependencies.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+asyncHooksName.Otherany0.4572string0.1808boolean0.1800complex0.0492string[]0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tryRequireAsyncHooksName.Otherany0.4384string0.1765complex0.1409boolean0.0933any[]0.0165
+(Punctuation
+)Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+firstName.Otherany0.4771complex0.2805boolean0.0310string0.0252void0.0210
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'ee-first'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Variables.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+/* istanbul ignore next */Comment.Multiline
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+deferName.Otherboolean0.4263any0.3911complex0.0384string0.0281number0.0164
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+setImmediateName.Othercomplex0.9198any0.0689number0.0034string0.0032void0.0012
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+\n  Text.Whitespace
+?Operator
+ Text.Whitespace
+setImmediateName.Othercomplex0.6369any0.1413void0.1404number0.0472string0.0173
+\n  Text.Whitespace
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+ Text.Whitespace
+(Punctuation
+fnName.Otherany0.7243Function0.1963void0.0217string0.0069complex0.0057
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+processName.Otherany0.9671Process0.0052complex0.0024void0.0014Function0.0013
+.Punctuation
+nextTickName.Otherany0.9493void0.0326Function0.0073complex0.0025Promise<{}>0.0004
+(Punctuation
+fnName.Otherany0.4857Function0.2614void0.1882complex0.0328boolean0.0048
+.Punctuation
+bindName.Otherany0.9857void0.0064Function0.0026complex0.0018boolean0.0005
+.Punctuation
+applyName.Otherany0.9967complex0.0011void0.0008Function0.0005number0.0002
+(Punctuation
+fnName.Otherany0.6379Function0.2292void0.0374complex0.0238string0.0146
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9839any[]0.0060any0.0022complex0.0004{}0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Invoke callback when the response has finished, useful for\n * cleaning up resources afterwards.\n *\n * @param {object} msg\n * @param {function} listener\n * @return {object}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onFinishedName.Otherany0.6968void0.1117boolean0.0675complex0.0463string0.0346
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.8881string0.0485complex0.0081any[]0.0058Message0.0037
+,Punctuation
+ Text.Whitespace
+listenerName.Otherany0.8947Function0.0374void0.0062string0.0043complex0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isFinishedName.Otherboolean0.5250any0.4427complex0.0065string0.0054{}0.0029
+(Punctuation
+msgName.Otherany0.8545complex0.0160string0.0135Message0.0068any[]0.0039
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+deferName.Otherany0.8700complex0.0935boolean0.0092Error0.0025string0.0019
+(Punctuation
+listenerName.Otherany0.8975Function0.0281void0.0145complex0.0113string0.0017
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+msgName.Otherany0.8592string0.0329complex0.0299any[]0.0065Message0.0050
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+msgName.Otherany0.7600complex0.0389any[]0.0311string0.0282void0.0142
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// attach the listener to the messageComment.Single
+\n  Text.Whitespace
+attachListenerName.Otherany0.6467void0.1348complex0.1263any[]0.0110string0.0101
+(Punctuation
+msgName.Otherany0.7729string0.0736complex0.0661any[]0.0119Message0.0070
+,Punctuation
+ Text.Whitespace
+wrapName.Otherany0.7450string0.1088boolean0.0493complex0.0280void0.0219
+(Punctuation
+listenerName.Otherany0.9207Function0.0212complex0.0064void0.0054string0.0022
+)Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+msgName.Otherany0.7769complex0.0354any[]0.0208string0.0177Message0.0108
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Determine if message is already finished.\n *\n * @param {object} msg\n * @return {boolean}\n * @public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isFinishedName.Otherany0.6683boolean0.2229complex0.0163void0.0143string0.0140
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.8122string0.0313Message0.0127complex0.0099any[]0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+socketName.Otherany0.9788complex0.0030string0.0024number0.0016any[]0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+msgName.Otherany0.9114complex0.0107Message0.0041string0.0031any[]0.0028
+.Punctuation
+socketName.Otherany0.9880string0.0032complex0.0023number0.0017boolean0.0008
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+msgName.Otherany0.9023complex0.0414any[]0.0028Message0.0024string0.0019
+.Punctuation
+finishedName.Otherany0.7226boolean0.2515complex0.0108string0.0069number0.0028
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'boolean'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// OutgoingMessageComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+BooleanName.BuiltinBooleanConstructor0.9676boolean0.0069Boolean0.0054any0.0040false0.0006
+(Punctuation
+msgName.Otherany0.8658complex0.0097Message0.0084void0.0022string0.0020
+.Punctuation
+finishedName.Otherboolean0.5547any0.4305string0.0053number0.0034complex0.0020
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+socketName.Otherany0.9716complex0.0037boolean0.0031number0.0019string0.0015
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+socketName.Otherany0.9602complex0.0083T0.0013boolean0.0013{}0.0013
+.Punctuation
+writableName.Otherany0.9670boolean0.0126number0.0081string0.0040complex0.0024
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+msgName.Otherany0.8250complex0.0501Message0.0042any[]0.0035string0.0029
+.Punctuation
+completeName.Otherany0.9641complex0.0131boolean0.0126string0.0053void0.0010
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'boolean'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// IncomingMessageComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+BooleanName.BuiltinBooleanConstructor0.9747boolean0.0040any0.0040Boolean0.0039false0.0005
+(Punctuation
+msgName.Otherany0.8623Message0.0141complex0.0124void0.0022string0.0014
+.Punctuation
+upgradeName.Otherany0.9277boolean0.0522string0.0078number0.0031void0.0026
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+socketName.Otherany0.9797boolean0.0037complex0.0028string0.0028number0.0010
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+socketName.Otherany0.9866complex0.0017Error0.0015boolean0.0014string0.0006
+.Punctuation
+readableName.Otherany0.9937string0.0038complex0.0011number0.0003void0.0002
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9382complex0.0157Message0.0026void0.0021string0.0011
+.Punctuation
+completeName.Otherany0.9729boolean0.0175string0.0032complex0.0019void0.0014
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+msgName.Otherany0.9721complex0.0101void0.0022string0.0017Message0.0009
+.Punctuation
+readableName.Otherany0.9855string0.0128complex0.0005number0.0004void0.0002
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// don't knowComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+undefinedKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Attach a finished listener to the message.\n *\n * @param {object} msg\n * @param {function} callback\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+attachFinishedListenerName.Othervoid0.8484any0.1134complex0.0136boolean0.0035string0.0033
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9325string0.0325complex0.0030Buffer0.0023void0.0021
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8525Function0.0962void0.0128boolean0.0063string0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+eeMsgName.Otherany0.8392boolean0.1009void0.0267string0.0042complex0.0039
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+eeSocketName.Otherany0.7501boolean0.1969void0.0169number0.0047complex0.0032
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+finishedName.Otherboolean0.9706any0.0205false0.0040void0.0010true0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onFinishName.Othervoid0.9225any0.0271boolean0.0155Function0.0072Promise<void>0.0042
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.8600Error0.0990string0.0078boolean0.0013Function0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+eeMsgName.Otherany0.9701complex0.0041void0.0013Error0.0009{}0.0004
+.Punctuation
+cancelName.Otherany0.9270void0.0340boolean0.0266complex0.0027Function0.0023
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+eeSocketName.Otherany0.9666complex0.0048void0.0047boolean0.0014Error0.0007
+.Punctuation
+cancelName.Otherany0.8058boolean0.1509void0.0324Function0.0019complex0.0016
+(Punctuation
+)Punctuation
+\n\n    Text.Whitespace
+finishedName.Otherboolean0.8684any0.1189number0.0028void0.0023false0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n    Text.Whitespace
+callbackName.Otherany0.6359void0.2174Function0.0528boolean0.0401number0.0031
+(Punctuation
+errorName.Otherany0.6905Error0.2265string0.0169false0.0049{}0.0048
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// finished on first message eventComment.Single
+\n  Text.Whitespace
+eeMsgName.Otherany0.9387void0.0117boolean0.0115complex0.0074string0.0060
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+eeSocketName.Otherany0.9574complex0.0111boolean0.0084string0.0050void0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+firstName.Otherany0.7656complex0.1887boolean0.0103void0.0072string0.0059
+(Punctuation
+[Punctuation
+[Punctuation
+msgName.Otherany0.7317string0.0642complex0.0187Message0.0059void0.0052
+,Punctuation
+ Text.Whitespace
+'end'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'finish'Literal.String.Single
+]Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+onFinishName.Otherany0.4285void0.2395boolean0.1657string0.0243Function0.0164
+)Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onSocketName.Otherany0.4429void0.4021boolean0.0942string0.0129complex0.0117
+ Text.Whitespace
+(Punctuation
+socketName.Otherany0.9671string0.0039Buffer0.0031Error0.0019void0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// remove listenerComment.Single
+\n    Text.Whitespace
+msgName.Otherany0.9650string0.0029complex0.0022void0.0015Message0.0011
+.Punctuation
+removeListenerName.Otherany0.9668void0.0189complex0.0061string0.0031boolean0.0012
+(Punctuation
+'socket'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onSocketName.Otherany0.5162void0.2971string0.0642boolean0.0581number0.0318
+)Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+finishedName.Otherboolean0.8783any0.1018number0.0036false0.0034string0.0032
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+eeMsgName.Otherany0.8573number0.0460string0.0455boolean0.0261complex0.0103
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+eeSocketName.Otherany0.8029string0.0684number0.0406boolean0.0367void0.0179
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n\n    Text.Whitespace
+// finished on first socket eventComment.Single
+\n    Text.Whitespace
+eeSocketName.Otherany0.9563boolean0.0110string0.0096complex0.0070number0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+firstName.Otherany0.7449complex0.1943boolean0.0200string0.0102void0.0047
+(Punctuation
+[Punctuation
+[Punctuation
+socketName.Otherany0.9322string0.0100{}0.0046complex0.0035number0.0031
+,Punctuation
+ Text.Whitespace
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'close'Literal.String.Single
+]Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+onFinishName.Otherany0.3823void0.2828boolean0.1546string0.0279Promise<void>0.0147
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9515string0.0042Message0.0032complex0.0028void0.0025
+.Punctuation
+socketName.Otherany0.9899string0.0048void0.0010complex0.0009boolean0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// socket already assignedComment.Single
+\n    Text.Whitespace
+onSocketName.Othervoid0.7010any0.2281boolean0.0155complex0.0154string0.0149
+(Punctuation
+msgName.Otherany0.9401complex0.0061string0.0040Message0.0036void0.0030
+.Punctuation
+socketName.Otherany0.9834string0.0064complex0.0021void0.0015{}0.0009
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// wait for socket to be assignedComment.Single
+\n  Text.Whitespace
+msgName.Otherany0.9458complex0.0061string0.0032Message0.0031void0.0030
+.Punctuation
+onName.Otherany0.9028complex0.0424void0.0136{}0.0016string0.0015
+(Punctuation
+'socket'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onSocketName.Othervoid0.4902any0.4095string0.0477number0.0113boolean0.0094
+)Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9434complex0.0053string0.0034void0.0033Message0.0032
+.Punctuation
+socketName.Otherany0.9884string0.0041number0.0020complex0.0011void0.0011
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// istanbul ignore next: node.js 0.8 patchComment.Single
+\n    Text.Whitespace
+patchAssignSocketName.Othervoid0.7422any0.2130complex0.0149boolean0.0089string0.0033
+(Punctuation
+msgName.Otherany0.8759string0.0314complex0.0196any[]0.0108void0.0047
+,Punctuation
+ Text.Whitespace
+onSocketName.Otherany0.7614void0.0747string0.0542boolean0.0343any[]0.0185
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Attach the listener to the message.\n *\n * @param {object} msg\n * @return {function}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+attachListenerName.Othervoid0.8812any0.0847complex0.0145Promise<void>0.0032boolean0.0019
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9036string0.0337complex0.0087void0.0045Message0.0036
+,Punctuation
+ Text.Whitespace
+listenerName.Otherany0.8117Function0.0692void0.0494complex0.0035string0.0033
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+attachedName.Otherany0.6655void0.2224complex0.0370boolean0.0082any[]0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+msgName.Otherany0.8454complex0.0154void0.0082Message0.0031string0.0019
+.Punctuation
+__onFinishedName.Otherany0.9424complex0.0211void0.0168string0.0047any[]0.0017
+\n\n  Text.Whitespace
+// create a private single listener with queueComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+attachedName.Otherany0.5404void0.1842complex0.1028boolean0.0138any[]0.0107
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+attachedName.Otherany0.4495void0.1790complex0.1660any[]0.0117Promise<{}>0.0092
+.Punctuation
+queueName.Otherany0.8269complex0.0305any[]0.0270void0.0221number0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+attachedName.Otherany0.6490void0.2259complex0.0737number0.0066any[]0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+msgName.Otherany0.8583complex0.0361void0.0095Message0.0026string0.0026
+.Punctuation
+__onFinishedName.Otherany0.8326complex0.0865string0.0266void0.0161any[]0.0097
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+createListenerName.Otherany0.6751complex0.1995void0.0459string0.0212any[]0.0127
+(Punctuation
+msgName.Otherany0.8916complex0.0397string0.0190any[]0.0140void0.0071
+)Punctuation
+\n    Text.Whitespace
+attachFinishedListenerName.Othervoid0.5813any0.3010complex0.0680string0.0092Promise<void>0.0055
+(Punctuation
+msgName.Otherany0.8338complex0.0714string0.0281any[]0.0146void0.0103
+,Punctuation
+ Text.Whitespace
+attachedName.Othervoid0.3853any0.2723complex0.1395any[]0.0399{}0.0178
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+attachedName.Othercomplex0.3278any0.2720void0.1829any[]0.0203Promise<{}>0.0194
+.Punctuation
+queueName.Otherany0.7786any[]0.0887complex0.0417void0.0061string[]0.0047
+.Punctuation
+pushName.Othernumber0.7899any0.1743void0.0201complex0.0046string0.0022
+(Punctuation
+listenerName.Otherany0.7096void0.1326complex0.0301Function0.0294{}0.0132
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Create listener on message.\n *\n * @param {object} msg\n * @return {function}\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+createListenerName.Othervoid0.4151any0.4039complex0.0715boolean0.0134any[]0.0099
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.8425string0.0466complex0.0102any[]0.0083Message0.0064
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+listenerName.Otherany0.8544void0.0605Function0.0218complex0.0091Error0.0034
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8515Error0.1147string0.0055Event0.0017complex0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+msgName.Otherany0.9071complex0.0137Message0.0038void0.0032string0.0026
+.Punctuation
+__onFinishedName.Otherany0.9549string0.0239complex0.0065void0.0047number0.0031
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+listenerName.Otherany0.9025Function0.0345void0.0183string0.0112number0.0050
+)Punctuation
+ Text.Whitespace
+msgName.Otherany0.9180complex0.0112void0.0024Message0.0023string0.0022
+.Punctuation
+__onFinishedName.Otherany0.9838string0.0066complex0.0022void0.0018boolean0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+listenerName.Otherany0.8898Function0.0128complex0.0064void0.0063any[]0.0017
+.Punctuation
+queueName.Otherany0.9718number0.0061any[]0.0043complex0.0019void0.0015
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+queueName.Otherany0.7949any[]0.0963complex0.0073number0.0071string[]0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+listenerName.Otherany0.8118complex0.0077any[]0.0070void0.0068Function0.0051
+.Punctuation
+queueName.Otherany0.9436any[]0.0082number0.0070void0.0045complex0.0045
+\n    Text.Whitespace
+listenerName.Otherany0.8878void0.0084complex0.0048Function0.0037number0.0027
+.Punctuation
+queueName.Otherany0.9530any[]0.0080number0.0071complex0.0024void0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9814any0.0176string0.0004complex0.0001void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9584any0.0398string0.0007void0.0004boolean0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+queueName.Otherany0.8610any[]0.0362complex0.0111string[]0.0092number0.0034
+.Punctuation
+lengthName.Othernumber0.5198any0.4774string0.0009void0.0006complex0.0005
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9573any0.0416string0.0005void0.0003boolean0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+queueName.Otherany0.8095any[]0.0845complex0.0091void0.0064string[]0.0055
+[Punctuation
+iName.Othernumber0.9702any0.0269string0.0017void0.0004complex0.0002
+]Punctuation
+(Punctuation
+errName.Otherany0.8250Error0.1495string0.0074complex0.0018number0.0016
+,Punctuation
+ Text.Whitespace
+msgName.Otherany0.8846string0.0282complex0.0123any[]0.0096void0.0052
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+listenerName.Otherany0.9072void0.0132any[]0.0061Function0.0052complex0.0046
+.Punctuation
+queueName.Otherany0.9452any[]0.0274complex0.0031{}0.0018void0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+listenerName.Otherany0.8068void0.0949Function0.0163complex0.0097{}0.0077
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Patch ServerResponse.prototype.assignSocket for node.js 0.8.\n *\n * @param {ServerResponse} res\n * @param {function} callback\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+// istanbul ignore next: node.js 0.8 patchComment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+patchAssignSocketName.Otherany0.8104void0.0623complex0.0489boolean0.0148any[]0.0090
+ Text.Whitespace
+(Punctuation
+resName.Otherany0.8867Response0.0255void0.0088string0.0053Buffer0.0048
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8446Function0.1017void0.0092boolean0.0057string0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+assignSocketName.Otherany0.8687boolean0.0516string0.0192void0.0191complex0.0111
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resName.Otherany0.9446complex0.0122void0.0049Response0.0030boolean0.0024
+.Punctuation
+assignSocketName.Otherany0.9527complex0.0176boolean0.0075string0.0069void0.0035
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+assignSocketName.Otherany0.9017string0.0362complex0.0220boolean0.0145number0.0073
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n\n  Text.Whitespace
+// res.on('socket', callback) is broken in 0.8Comment.Single
+\n  Text.Whitespace
+resName.Otherany0.9739complex0.0039Response0.0035void0.0034boolean0.0007
+.Punctuation
+assignSocketName.Otherany0.9619void0.0160boolean0.0102complex0.0032string0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+_assignSocketName.Othervoid0.6814any0.2426boolean0.0350string0.0137complex0.0120
+ Text.Whitespace
+(Punctuation
+socketName.Otherany0.9766string0.0065void0.0021Buffer0.0015number0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+assignSocketName.Otherany0.9150void0.0643boolean0.0041string0.0041complex0.0033
+.Punctuation
+callName.Otherany0.9933void0.0036number0.0011string0.0009complex0.0004
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+socketName.Otherany0.9760string0.0040number0.0028void0.0026Error0.0018
+)Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.7861void0.1298Function0.0258boolean0.0184number0.0099
+(Punctuation
+socketName.Otherany0.9724string0.0029Error0.0019Buffer0.0014void0.0012
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Try to require async_hooks\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tryRequireAsyncHooksName.Otherany0.9099string0.0544boolean0.0061complex0.0053void0.0050
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'async_hooks'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9987string0.0003complex0.0003{}0.0002Error0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Wrap function with async resource, if possible.\n * AsyncResource.bind static method backported.\n * @private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wrapName.Otherany0.6524string0.1085void0.1001complex0.0223boolean0.0139
+ Text.Whitespace
+(Punctuation
+fnName.Otherany0.6983Function0.2070string0.0181void0.0104number0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resName.Otherany0.8573Response0.0173complex0.0122void0.0039any[]0.0023
+\n\n  Text.Whitespace
+// create anonymous resourceComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+asyncHooksName.Otherany0.9163complex0.0109boolean0.0016string0.0012Response0.0012
+.Punctuation
+AsyncResourceName.Otherany0.7805boolean0.1327string0.0412complex0.0153number0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resName.Otherany0.9458string0.0049complex0.0043Response0.0034boolean0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9420string0.0098complex0.0095Error0.0019{}0.0015
+ Text.Whitespace
+asyncHooksName.Otherany0.9911complex0.0051string0.0007void0.0001{}0.0001
+.Punctuation
+AsyncResourceName.Otherany0.9638complex0.0231string0.0033boolean0.0019void0.0018
+(Punctuation
+fnName.Otherany0.8754Function0.0404complex0.0150string0.0125void0.0046
+.Punctuation
+nameName.Otherany0.8546string0.1413complex0.0021number0.0004boolean0.0002
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+'bound-anonymous-fn'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// incompatible node.jsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+resName.Otherany0.8020Response0.0420boolean0.0359complex0.0257void0.0096
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+resName.Otherany0.8981complex0.0237Response0.0146void0.0034boolean0.0031
+.Punctuation
+runInAsyncScopeName.Otherany0.8592boolean0.0930string0.0146void0.0114complex0.0068
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+fnName.Otherany0.8551Function0.0644string0.0299void0.0183number0.0086
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// return bound functionComment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resName.Otherany0.9166complex0.0175Response0.0119void0.0107boolean0.0011
+.Punctuation
+runInAsyncScopeName.Otherany0.9098void0.0596complex0.0111boolean0.0061string0.0017
+.Punctuation
+bindName.Otherany0.9844void0.0060complex0.0018string0.0011boolean0.0009
+(Punctuation
+resName.Otherany0.6207void0.0770complex0.0646Response0.0420string0.0207
+,Punctuation
+ Text.Whitespace
+fnName.Otherany0.6803Function0.1791void0.0344string0.0294complex0.0152
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

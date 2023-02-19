@@ -1,0 +1,764 @@
+Text
+/*!\n *  Copyright 2010 LearnBoost <dev@learnboost.com>\n *\n * Licensed under the Apache License, Version 2.0 (the "License");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an "AS IS" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */Comment.Multiline
+\n\nText.Whitespace
+/**\n * Module dependencies.\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cryptoName.Otherany0.9924string0.0023complex0.0004NodeRequire0.0003number0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'crypto'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+parseName.Otherany0.9529string0.0063complex0.0026number0.0022any[]0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'url'Literal.String.Single
+)Punctuation
+.Punctuation
+parseName.Otherany0.9904complex0.0026string0.0010number0.0007any[]0.0006
+\n  Text.Whitespace
+;Punctuation
+\n\nText.Whitespace
+/**\n * Valid keys.\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+keysName.Otherstring[]0.9938any[]0.0026string0.0018any0.0007number[]0.0002
+ Text.Whitespace
+=Operator
+ \n  Text.Whitespace
+[Punctuation
+ Text.Whitespace
+'acl'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'location'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'logging'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'notification'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'partNumber'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'policy'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'requestPayment'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'torrent'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'uploadId'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'uploads'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'versionId'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'versioning'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'versions'Literal.String.Single
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+'website'Literal.String.Single
+\n  Text.Whitespace
+]Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Return an "Authorization" header value with the given `options`\n * in the form of "AWS <key>:<signature>"\n *\n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+authorizationName.Otherstring0.8768any0.1104number0.0041complex0.0032boolean0.0011
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6515Options0.0469string0.0431number0.0161complex0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'AWS 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8527complex0.0167string0.0122Options0.0113number0.0031
+.Punctuation
+keyName.Otherany0.6893string0.3014number0.0047complex0.0037void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+':'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+signName.Otherany0.4722string0.4415complex0.0441number0.0135void0.0130
+(Punctuation
+optionsName.Otherany0.7700string0.0391Options0.0345complex0.0202number0.0142
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+authorizationName.Otherany0.5509string0.4310complex0.0089number0.0024boolean0.0013
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.authorizationName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+authorizationName.Otherany0.5603string0.4237complex0.0052string[]0.0021number0.0017
+\n\nText.Whitespace
+Text
+/**\n * Simple HMAC-SHA1 Wrapper\n *\n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+ \n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hmacSha1Name.Otherstring0.6229any0.3470string[]0.0047number0.0039complex0.0030
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6812Options0.0349string0.0319number0.0050RequestOptions0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+cryptoName.Otherany0.9991string0.0003complex0.0002number0.0001boolean0.0000
+.Punctuation
+createHmacName.Otherany0.9985complex0.0007string0.0002boolean0.0001number0.0000
+(Punctuation
+'sha1'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3322Options0.0889complex0.0085ConnectionOptions0.0073string0.0071
+.Punctuation
+secretName.Otherstring0.9216any0.0752number0.0013complex0.0005boolean0.0005
+)Punctuation
+.Punctuation
+updateName.Otherany0.9951void0.0022string0.0006complex0.0006number0.0003
+(Punctuation
+optionsName.Otherany0.7248complex0.0294Options0.0284string0.0151number0.0069
+.Punctuation
+messageName.Otherstring0.6310any0.3625complex0.0023number0.0016string[]0.0010
+)Punctuation
+.Punctuation
+digestName.Otherany0.9936complex0.0051string0.0004number0.0002void0.0001
+(Punctuation
+'base64'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exports.hmacSha1Name.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hmacSha1Name.Otherany0.6143string0.3366void0.0167complex0.0054number0.0035
+\n\nText.Whitespace
+Text
+/**\n * Create a base64 sha1 HMAC for `options`. \n * \n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+signName.Otherany0.5457string0.2798void0.0421complex0.0298number0.0079
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.7286Options0.0303string0.0275number0.0043Function0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.7264Options0.0238string0.0103complex0.0100Function0.0046
+.Punctuation
+messageName.Otherany0.7012string0.2821complex0.0079string[]0.0014number0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringToSignName.Otherstring0.6368any0.3013complex0.0244string[]0.0076void0.0055
+(Punctuation
+optionsName.Otherany0.7122string0.0384Options0.0245complex0.0177number0.0130
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hmacSha1Name.Otherany0.3751string0.3233void0.1741complex0.0405number0.0105
+(Punctuation
+optionsName.Otherany0.7197Options0.0473string0.0137complex0.0117number0.0080
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.signName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+signName.Otherany0.7688string0.1399complex0.0346void0.0126number0.0057
+\n\nText.Whitespace
+Text
+/**\n * Create a base64 sha1 HMAC for `options`. \n *\n * Specifically to be used with S3 presigned URLs\n * \n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+signQueryName.Otherstring0.5229any0.2930void0.0836complex0.0216number0.0087
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6821Options0.0393string0.0304number0.0059Config0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.6997Options0.0328complex0.0118string0.0113Object0.0045
+.Punctuation
+messageName.Otherany0.6791string0.3021complex0.0096string[]0.0016number0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+queryStringToSignName.Otherstring0.6479any0.2856complex0.0265string[]0.0081void0.0052
+(Punctuation
+optionsName.Otherany0.7263string0.0384Options0.0257complex0.0192number0.0133
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+hmacSha1Name.Otherany0.3790string0.3504void0.1173complex0.0461any[]0.0111
+(Punctuation
+optionsName.Otherany0.7513Options0.0367string0.0166number0.0095complex0.0093
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.signQueryName.Other
+=Operator
+ Text.Whitespace
+signQueryName.Otherstring0.6321any0.3102string[]0.0087complex0.0080number0.0075
+\n\nText.Whitespace
+Text
+/**\n * Return a string for sign() with the given `options`.\n *\n * Spec:\n * \n *    <verb>\n\n *    <md5>\n\n *    <content-type>\n\n *    <date>\n\n *    [headers\n]\n *    <resource>\n *\n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+stringToSignName.Otherstring0.7981any0.1384complex0.0122number0.0097void0.0094
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6548string0.0434Options0.0369number0.0070Object0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+headersName.Otherany0.7118string0.2020complex0.0445Object0.0087any[]0.0082
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.5870Options0.0324string0.0228complex0.0185RegExp0.0102
+.Punctuation
+amazonHeadersName.Otherany0.6401string0.3254complex0.0084RegExp0.0077boolean0.0054
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+headersName.Otherany0.4195complex0.3977string0.0927Object0.0243any[]0.0140
+)Punctuation
+ Text.Whitespace
+headersName.Otherstring0.5048any0.4197complex0.0437number0.0063Object0.0058
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+'\n'Literal.String.Single
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+rName.Otherstring0.4325string[]0.2378any0.2349any[]0.0422complex0.0196
+ Text.Whitespace
+=Operator
+ \n    Text.Whitespace
+[Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2192Options0.0454string0.0231complex0.0193Config0.0116
+.Punctuation
+verbName.Otherstring0.8892any0.1008number0.0032boolean0.0028complex0.0010
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2666Options0.0628string0.0164RegExp0.0126complex0.0076
+.Punctuation
+md5Name.Otherstring0.6087any0.3389number0.0158boolean0.0155complex0.0042
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1950Options0.0674string0.0114complex0.0110ConnectionOptions0.0101
+.Punctuation
+contentTypeName.Otherstring0.9776any0.0192number0.0014boolean0.0008string[]0.0003
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4259string0.0461Options0.0393Object0.0123Date0.0111
+.Punctuation
+dateName.Otherany0.6735string0.2631boolean0.0274number0.0090Date0.0068
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+optionsName.Otherany0.7719string0.0399Options0.0156complex0.0061Date0.0057
+.Punctuation
+dateName.Otherany0.8868string0.0847Date0.0087boolean0.0039number0.0038
+.Punctuation
+toUTCStringName.Otherstring0.5900any0.4000complex0.0038number0.0018boolean0.0010
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+headersName.Otherstring0.5223any0.4348complex0.0281number0.0069any[]0.0025
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8190complex0.0248string0.0232Options0.0064number0.0049
+.Punctuation
+resourceName.Otherstring0.7360any0.2593number0.0021complex0.0017boolean0.0003
+\n    Text.Whitespace
+]Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+rName.Otherstring[]0.5032any0.2476any[]0.1953string0.0155number[]0.0089
+.Punctuation
+joinName.Otherstring0.7510any0.2382complex0.0046number0.0022string[]0.0016
+(Punctuation
+'\n'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.stringToSignName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringToSignName.Otherstring0.7813any0.2036number0.0044complex0.0021boolean0.0020
+\n\nText.Whitespace
+Text
+/**\n * Return a string for sign() with the given `options`, but is meant exclusively\n * for S3 presigned URLs\n *\n * Spec:\n * \n *    <date>\n\n *    <resource>\n *\n * @param {Object} options\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+queryStringToSignName.Otherstring0.9073any0.0658number0.0099boolean0.0061complex0.0029
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.7627string0.0370Options0.0163number0.0130complex0.0055
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'GET\n\n\n'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8011string0.0192Options0.0105complex0.0098number0.0042
+.Punctuation
+dateName.Otherany0.8890string0.0906number0.0102boolean0.0035complex0.0026
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'\n'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.7795string0.0308Options0.0154complex0.0144number0.0091
+.Punctuation
+resourceName.Otherany0.6807string0.3129number0.0025complex0.0022boolean0.0004
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.queryStringToSignName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+queryStringToSignName.Otherstring0.6217any0.2686string[]0.0379any[]0.0185complex0.0117
+\n\nText.Whitespace
+Text
+/**\n * Perform the following:\n *\n *  - ignore non-amazon headers\n *  - lowercase fields\n *  - sort lexicographically\n *  - trim whitespace between ":"\n *  - join with newline\n *\n * @param {Object} headers\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+canonicalizeHeadersName.Otherstring0.5322any0.3357any[]0.0277string[]0.0205complex0.0198
+ Text.Whitespace
+(Punctuation
+headersName.Otherany0.7660string0.0906complex0.0569any[]0.0272Object0.0254
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+bufName.Otherany[]0.9483number[]0.0155any[][]0.0087string[]0.0079any0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+fieldsName.Otherstring[]0.8091any[]0.1377any0.0180number[]0.0119string0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999any0.0000Object0.0000complex0.0000any[]0.0000
+.Punctuation
+keysName.Otherstring[]0.9914any[]0.0048string0.0016complex0.0007number[]0.0005
+(Punctuation
+headersName.Otherany0.3963complex0.3747{}0.0930any[]0.0590Object0.0382
+)Punctuation
+\n    Text.Whitespace
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9907any0.0077string0.0010complex0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+lenName.Othernumber0.8429any0.1336string0.0209boolean0.0007complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fieldsName.Otherstring[]0.8413any[]0.1159any0.0154string0.0037number[]0.0035
+.Punctuation
+lengthName.Othernumber0.9597any0.0368string0.0023complex0.0005void0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9172any0.0785string0.0030boolean0.0003void0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lenName.Othernumber0.8606any0.1362string0.0020complex0.0002boolean0.0002
+;Punctuation
+ Text.Whitespace
+++Operator
+iName.Othernumber0.9651any0.0299string0.0040boolean0.0005complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+fieldName.Otherstring0.7571any0.2264string[]0.0088complex0.0020number0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fieldsName.Otherstring[]0.6614any[]0.2481any0.0531number[]0.0082complex0.0053
+[Punctuation
+iName.Othernumber0.8689any0.0668string0.0623boolean0.0007complex0.0003
+]Punctuation
+\n      Text.Whitespace
+,Punctuation
+ Text.Whitespace
+valName.Otherany0.8826string0.1068number0.0042boolean0.0020complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+headersName.Otherany0.5373complex0.2248{}0.0691any[]0.0617Object0.0505
+[Punctuation
+fieldName.Otherstring0.9535any0.0425number0.0011string[]0.0009complex0.0007
+]Punctuation
+\n      Text.Whitespace
+,Punctuation
+ Text.Whitespace
+fieldName.Otherstring0.8072any0.1869string[]0.0014number0.0011boolean0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fieldName.Otherstring0.7624any0.2309string[]0.0026number0.0008boolean0.0006
+.Punctuation
+toLowerCaseName.Otherany0.5753string0.4202number0.0010complex0.0010string[]0.0008
+(Punctuation
+)Punctuation
+\n      Text.Whitespace
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+0Literal.Number.Float
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+fieldName.Otherstring0.9279any0.0673string[]0.0028number0.0008any[]0.0004
+.Punctuation
+indexOfName.Othernumber0.8762any0.1153string0.0050complex0.0017boolean0.0007
+(Punctuation
+'x-amz'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+continueKeyword
+\n    Text.Whitespace
+bufName.Otherany[]0.7944string[]0.1448any0.0205number[]0.0185string0.0035
+.Punctuation
+pushName.Othernumber0.9707any0.0255string0.0014boolean0.0009complex0.0006
+(Punctuation
+fieldName.Otherstring0.8933any0.1028number0.0011string[]0.0008complex0.0008
+ Text.Whitespace
++Operator
+ Text.Whitespace
+':'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+valName.Otherany0.5393string0.4308number0.0162any[]0.0034boolean0.0031
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+bufName.Otherany[]0.7504string[]0.1043any0.0617T[]0.0093number[]0.0084
+.Punctuation
+sortName.Otherany[]0.4669string[]0.3067any0.1762number[]0.0162complex0.0070
+(Punctuation
+)Punctuation
+.Punctuation
+joinName.Otherstring0.7404any0.2488number0.0028complex0.0021string[]0.0021
+(Punctuation
+'\n'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.canonicalizeHeadersName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+canonicalizeHeadersName.Otherstring0.4390any0.4050any[]0.0640string[]0.0213complex0.0092
+\n\nText.Whitespace
+Text
+/**\n * Perform the following:\n *\n *  - ignore non sub-resources\n *  - sort lexicographically\n *\n * @param {String} resource\n * @return {String}\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+canonicalizeResourceName.Otherany0.4189string0.3922any[]0.0569string[]0.0165complex0.0127
+ Text.Whitespace
+(Punctuation
+resourceName.Otherstring0.7733any0.2155boolean0.0012string[]0.0006complex0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+urlName.Otherany0.9533complex0.0058string0.0047any[]0.0035{}0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseName.Otherany0.9028complex0.0223any[]0.0150{}0.0051boolean0.0030
+(Punctuation
+resourceName.Otherstring0.8717any0.1248boolean0.0007complex0.0005number0.0004
+,Punctuation
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+pathName.Otherany0.8817string0.1146complex0.0015number0.0006any[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+urlName.Otherany0.9617complex0.0070string0.0024any[]0.0013{}0.0012
+.Punctuation
+pathnameName.Otherany0.7651string0.2258complex0.0057{}0.0005any[]0.0005
+\n    Text.Whitespace
+,Punctuation
+ Text.Whitespace
+bufName.Otherany[]0.9313string[]0.0308any[][]0.0066any0.0066T[]0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+;Punctuation
+\n\n  Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998any0.0000complex0.0000Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9925any[]0.0043string0.0012complex0.0006any0.0004
+(Punctuation
+urlName.Otherany0.8709complex0.0073{}0.0039Url0.0028URL0.0017
+.Punctuation
+queryName.Otherany0.8701complex0.0948string0.0170any[]0.0054{}0.0029
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.9247any0.0453complex0.0148v...0.0023any[]0.0022
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+keyName.Otherstring0.8106any0.1824number0.0045complex0.0013string[]0.0002
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+~Operator
+keysName.Otherstring[]0.9601any[]0.0163any0.0128string0.0086number[]0.0005
+.Punctuation
+indexOfName.Othernumber0.9687any0.0282string0.0015complex0.0006boolean0.0004
+(Punctuation
+keyName.Otherstring0.6916any0.3017number0.0039complex0.0016{}0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valName.Otherany0.4981string0.4878boolean0.0046complex0.0023number0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+urlName.Otherany0.9384complex0.0068string0.0042Url0.0016any[]0.0011
+.Punctuation
+queryName.Otherany0.9345complex0.0549any[]0.0024string0.0022{}0.0020
+[Punctuation
+keyName.Otherstring0.9397any0.0546number0.0033complex0.0014boolean0.0003
+]Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'='Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+encodeURIComponentName.Builtinstring0.9862any0.0068complex0.0043string[]0.0009any[]0.0003
+(Punctuation
+urlName.Otherany0.9315complex0.0072Url0.0040string0.0031{}0.0020
+.Punctuation
+queryName.Otherany0.8584complex0.1267string0.0041any[]0.0032{}0.0027
+[Punctuation
+keyName.Otherstring0.9413any0.0520number0.0031complex0.0027string[]0.0002
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+bufName.Otherany[]0.6905string[]0.2294number[]0.0179any0.0144T[]0.0083
+.Punctuation
+pushName.Othernumber0.9761any0.0204string0.0018boolean0.0006complex0.0005
+(Punctuation
+keyName.Otherstring0.7053any0.2790number0.0130complex0.0020any[]0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+valName.Otherstring0.5875any0.3840number0.0166complex0.0036boolean0.0027
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pathName.Otherstring0.5968any0.3953number0.0043complex0.0015any[]0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+(Punctuation
+bufName.Otherany[]0.7287any0.0904string[]0.0856string0.0188T[]0.0149
+.Punctuation
+lengthName.Otherany0.5506number0.4353string0.0076complex0.0036any[]0.0008
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'?'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+bufName.Otherany[]0.6809string[]0.1630any0.0588T[]0.0173number[]0.0106
+.Punctuation
+sortName.Otherstring[]0.3758any[]0.3323any0.2291complex0.0147number[]0.0121
+(Punctuation
+)Punctuation
+.Punctuation
+joinName.Otherstring0.5934any0.3951complex0.0037number0.0025string[]0.0016
+(Punctuation
+'&'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+moduleKeyword.Reserved
+.exports.canonicalizeResourceName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+canonicalizeResourceName.Otherany0.4936string0.2267any[]0.0187complex0.0115number0.0113
+\nText.Whitespace

@@ -1,0 +1,233 @@
+Text
+/* eslint-disable no-console */Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns a function that will invoke the supplied function and print a\n * deprecation warning to the console each time it is called.\n *\n * @param  {Function} func\n * @param  {string} msg\n * @returns {Function}\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+wrapName.Othervoid0.8686any0.0477Function0.0288boolean0.0114string0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+funcName.Otherany0.4798Function0.3940boolean0.0274string0.0273void0.0242
+,Punctuation
+ Text.Whitespace
+msgName.Otherany0.5350string0.4248any[]0.0058void0.0052Function0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+wrappedName.Othervoid0.5972any0.2837Function0.0541this0.0055boolean0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+printWarningName.Othervoid0.8347any0.1136Function0.0148string0.0092complex0.0038
+(Punctuation
+msgName.Otherany0.5903string0.3626any[]0.0126Error0.0051void0.0032
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.OtherFunction0.5943any0.2816void0.0191boolean0.0071T0.0064
+.Punctuation
+applyName.Otherany0.9792Function0.0072void0.0029Promise<any>0.0015complex0.0013
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9944any[]0.0018any0.0005{}0.0001string0.0001
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+funcName.Otherany0.4644Function0.3171void0.0526boolean0.0462never0.0051
+.Punctuation
+prototypeName.Otherany0.7420Function0.0358boolean0.0209void0.0150any[]0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+wrappedName.Otherany0.8274void0.0797Function0.0388this0.0024boolean0.0019
+.Punctuation
+prototypeName.Otherany0.7498Function0.0636void0.0445boolean0.0068T0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+funcName.Otherany0.5212Function0.3055void0.0366T0.0172boolean0.0062
+.Punctuation
+prototypeName.Otherany0.8476Function0.0306void0.0201T0.0065Date0.0050
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wrappedName.Otherany0.8612void0.0714Function0.0130never0.0055string0.0047
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Returns a string which can be supplied to `wrap()` to notify the user that a\n * particular part of the sinon API has been deprecated.\n *\n * @param  {string} packageName\n * @param  {string} funcName\n * @returns {string}\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+defaultMsgName.Otherany0.3410string0.2595void0.2465boolean0.0750number0.0167
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+packageNameName.Otherstring0.9117any0.0788number0.0074complex0.0004boolean0.0002
+,Punctuation
+ Text.Whitespace
+funcNameName.Otherstring0.8903any0.1032number0.0031complex0.0014boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n        Text.Whitespace
+packageNameName.Otherstring0.8762any0.1181number0.0045complex0.0004void0.0002
+ Text.Whitespace
++Operator
+\n        Text.Whitespace
+"."Literal.String.Double
+ Text.Whitespace
++Operator
+\n        Text.Whitespace
+funcNameName.Otherstring0.8606any0.1341number0.0036complex0.0007void0.0002
+ Text.Whitespace
++Operator
+\n        Text.Whitespace
+" is deprecated and will be removed from the public API in a future version of "Literal.String.Double
+ Text.Whitespace
++Operator
+\n        Text.Whitespace
+packageNameName.Otherstring0.8643any0.1199number0.0141void0.0003complex0.0003
+ Text.Whitespace
++Operator
+\n        Text.Whitespace
+"."Literal.String.Double
+\n    Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Prints a warning on the console, when it exists\n *\n * @param  {string} msg\n * @returns {undefined}\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+printWarningName.Othervoid0.9889any0.0054Function0.0010Promise<void>0.0007string0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+msgName.Otherany0.6257string0.2877any[]0.0073complex0.0059Error0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/* istanbul ignore next */Comment.Multiline
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+processName.Otherany0.9584complex0.0171string0.0056void0.0022boolean0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"object"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+processName.Otherany0.9846complex0.0033string0.0011Process0.0010void0.0009
+.Punctuation
+emitWarningName.Otherany0.9119boolean0.0397void0.0306string0.0108complex0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// Emit Warnings in NodeComment.Single
+\n        Text.Whitespace
+processName.Otherany0.9852complex0.0023string0.0019Process0.0009void0.0005
+.Punctuation
+emitWarningName.Otherany0.7621void0.2106boolean0.0076string0.0049complex0.0044
+(Punctuation
+msgName.Otherstring0.7835any0.1977any[]0.0018boolean0.0016string[]0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+consoleName.OtherConsole0.9988any0.0005void0.0002Function0.0000complex0.0000
+.Punctuation
+infoName.Othervoid0.9834any0.0088boolean0.0029string0.0008Function0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+consoleName.OtherConsole0.9996any0.0002void0.0001Function0.0000DOMTokenList0.0000
+.Punctuation
+infoName.Othervoid0.9982any0.0010complex0.0002Function0.0001boolean0.0001
+(Punctuation
+msgName.Otherstring0.8141any0.1626string[]0.0038any[]0.0031void0.0023
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+consoleName.OtherConsole0.9996any0.0002void0.0001Function0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9990any0.0005Promise<void>0.0001complex0.0001Function0.0000
+(Punctuation
+msgName.Otherstring0.6865any0.2907any[]0.0053string[]0.0031complex0.0019
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

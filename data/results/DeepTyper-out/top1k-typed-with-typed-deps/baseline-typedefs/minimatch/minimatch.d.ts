@@ -1,0 +1,32 @@
+declare const minimatch: any;
+declare const path: any;
+declare const GLOBSTAR: any;
+declare const expand: any;
+declare const plTypes: any;
+declare const qmark: RegExp;
+declare const star: string;
+declare const twoStarDot: RegExp;
+declare const twoStarNoDot: RegExp;
+declare const charSet: string[];
+declare const reSpecials: string;
+declare const addPatternStartSet: string;
+declare const slashSplit: string;
+declare const ext: any;
+declare const braceExpand: any;
+declare const MAX_PATTERN_LENGTH: number;
+declare const assertValidPattern: any;
+declare const SUBPARSE: symbol;
+declare const globUnescape: any;
+declare const regExpEscape: any;
+declare class Minimatch {
+    constructor(pattern: any, options: any);
+    debug(): void;
+    make(): void;
+    parseNegate(): void;
+    matchOne(file: any, pattern: any, partial: any): any;
+    braceExpand(): any;
+    parse(pattern: any, isSub: any): any;
+    makeRe(): any;
+    match(f: any, partial?: any): any;
+    static defaults(def: any): any;
+}

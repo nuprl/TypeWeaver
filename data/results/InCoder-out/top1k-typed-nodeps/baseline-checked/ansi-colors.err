@@ -1,0 +1,53 @@
+bench/colors.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
+bench/colors.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+bench/colors.ts(45,23): error TS2554: Expected 2 arguments, but got 1.
+bench/colors.ts(78,23): error TS2304: Cannot find name 'Library'.
+bench/colors.ts(78,23): error TS4078: Parameter 'lib' of exported function has or is using private name 'Library'.
+examples/alias.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/chained.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+examples/chained.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/colors.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/colors.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'cyan'.
+examples/nested.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/nesting-bug.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'bold'.
+examples/nesting-bug.ts(3,15): error TS2451: Cannot redeclare block-scoped variable 'cyan'.
+examples/nesting-bug.ts(3,34): error TS2451: Cannot redeclare block-scoped variable 'red'.
+examples/nesting-bug.ts(15,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
+examples/readme-examples.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+examples/readme-examples.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'c'.
+examples/screenshot-table.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/screenshot.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/styles.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+examples/styles.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'c'.
+examples/theme-custom-fn.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/theme.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/theme.ts(15,33): error TS2451: Cannot redeclare block-scoped variable 'red'.
+examples/theme.ts(15,38): error TS2451: Cannot redeclare block-scoped variable 'bold'.
+examples/theme2.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/unstyle.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+index.ts(66,16): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(69,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
+index.ts(71,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
+index.ts(124,10): error TS2339: Property 'ansiRegex' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(125,10): error TS2339: Property 'hasColor' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(125,28): error TS2339: Property 'hasAnsi' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(126,12): error TS2339: Property 'ansiRegex' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(127,60): error TS2339: Property 'ansiRegex' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(130,10): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(147,16): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(150,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
+index.ts(152,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
+index.ts(158,10): error TS2339: Property 'theme' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(161,14): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(166,10): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(168,14): error TS2339: Property 'ansiRegex' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(169,33): error TS2339: Property 'ansiRegex' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(174,10): error TS2339: Property 'alias' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(175,10): error TS2339: Property 'none' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(175,24): error TS2339: Property 'clear' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(175,39): error TS2339: Property 'noop' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(177,10): error TS2339: Property 'stripColor' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(177,30): error TS2339: Property 'unstyle' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(178,10): error TS2339: Property 'symbols' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+index.ts(179,10): error TS2339: Property 'define' does not exist on type '{ enabled: boolean; visible: boolean; styles: {}; keys: {}; }'.
+

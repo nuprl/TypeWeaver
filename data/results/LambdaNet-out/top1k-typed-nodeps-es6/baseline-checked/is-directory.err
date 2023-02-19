@@ -1,0 +1,8 @@
+index.ts(26,21): error TS2345: Argument of type '(err: object, stats: any[]) => void' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
+  Types of parameters 'stats' and 'stats' are incompatible.
+    Type 'StatsBase<number>' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+index.ts(28,15): error TS2339: Property 'code' does not exist on type 'object'.
+index.ts(35,20): error TS2339: Property 'isDirectory' does not exist on type 'any[]'.
+index.ts(49,9): error TS2322: Type 'Stats' is not assignable to type 'string'.
+index.ts(50,17): error TS2339: Property 'isDirectory' does not exist on type 'string'.
+

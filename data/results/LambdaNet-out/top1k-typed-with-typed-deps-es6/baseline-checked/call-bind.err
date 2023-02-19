@@ -1,0 +1,15 @@
+callBound.ts(6,5): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+callBound.ts(6,35): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'any[]'.
+  Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+callBound.ts(9,6): error TS2322: Type 'unknown' is not assignable to type 'any[]'.
+index.ts(6,5): error TS2322: Type '(this: Function, thisArg: any, argArray?: any) => any' is not assignable to type 'string'.
+index.ts(7,5): error TS2322: Type '(this: Function, thisArg: any, ...argArray: any[]) => any' is not assignable to type 'string'.
+index.ts(8,82): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(func: (this: string, ...args: unknown[]) => unknown, thisArg: string): (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type '(this: string, ...args: unknown[]) => unknown'.
+  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+index.ts(27,12): error TS2339: Property 'configurable' does not exist on type 'any[]'.
+index.ts(39,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(46,5): error TS1184: Modifiers cannot appear here.
+

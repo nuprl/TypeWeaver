@@ -1,0 +1,42 @@
+fetch.ts(49,30): error TS2304: Cannot find name 'ring'.
+fetch.ts(59,32): error TS2304: Cannot find name 'ring'.
+fetch.ts(70,25): error TS2339: Property 'shift' does not exist on type 'Iterable<any>'.
+fetch.ts(84,34): error TS2304: Cannot find name 'HeadersArg'.
+fetch.ts(84,34): error TS4078: Parameter 'headers' of exported function has or is using private name 'HeadersArg'.
+fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
+fetch.ts(105,27): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(106,12): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(115,36): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(166,8): error TS2540: Cannot assign to 'bodyUsed' because it is a read-only property.
+fetch.ts(170,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
+fetch.ts(170,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
+fetch.ts(241,48): error TS2339: Property 'buffer' does not exist on type 'Body'.
+fetch.ts(245,43): error TS2345: Argument of type 'Body' is not assignable to parameter of type 'Buffer'.
+  Type 'Body' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 97 more.
+fetch.ts(335,24): error TS2339: Property 'toUpperCase' does not exist on type 'string | Function'.
+  Property 'toUpperCase' does not exist on type 'Function'.
+fetch.ts(339,32): error TS2552: Cannot find name 'RequestInput'. Did you mean 'RequestInit'?
+fetch.ts(339,32): error TS4078: Parameter 'input' of exported function has or is using private name 'RequestInput'.
+fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
+fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
+fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type '{}'.
+fetch.ts(356,25): error TS2339: Property 'method' does not exist on type '{}'.
+fetch.ts(357,23): error TS2339: Property 'mode' does not exist on type '{}'.
+fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type '{}'.
+fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+fetch.ts(409,6): error TS2339: Property 'trim' does not exist on type 'Buffer'.
+fetch.ts(413,27): error TS2339: Property 'split' does not exist on type 'Uint8Array'.
+fetch.ts(423,17): error TS2554: Expected 1 arguments, but got 0.
+fetch.ts(432,27): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
+fetch.ts(485,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fetch.ts(507,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
+fetch.ts(507,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
+fetch.ts(526,15): error TS2339: Property 'url' does not exist on type '{ status: number; statusText: string; headers: any; }'.
+fetch.ts(581,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+fetch.ts(581,64): error TS2538: Type 'String' cannot be used as an index type.
+
