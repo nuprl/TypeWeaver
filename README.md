@@ -1,7 +1,15 @@
 # TypeWeaver
 
-This is the code for the submitted ECOOP 2023 paper:
+This is the code for the ECOOP 2023 paper:
 _Do Machine Learning Models Produce TypeScript Types that Type Check?_
+
+The [`main`](https://github.com/nuprl/TypeWeaver/tree/main) branch of this
+repository is the latest development branch.
+
+The
+[`ecoop2023-artifact`](https://github.com/nuprl/TypeWeaver/tree/ecoop2023-artifact)
+branch is a snapshot of the repository that was used to prepare the ECOOP 2023
+artifact.
 
 ## Dependencies
 
