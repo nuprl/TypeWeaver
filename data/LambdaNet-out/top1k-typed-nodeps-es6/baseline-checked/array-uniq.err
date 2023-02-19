@@ -1,8 +1,0 @@
-index.ts(2,21): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(iterable?: Iterable<unknown>): Set<unknown>', gave the following error.
-    Argument of type 'object' is not assignable to parameter of type 'Iterable<unknown>'.
-      Property '[Symbol.iterator]' is missing in type '{}' but required in type 'Iterable<unknown>'.
-  Overload 2 of 2, '(values?: readonly any[]): Set<any>', gave the following error.
-    Argument of type 'object' is not assignable to parameter of type 'readonly any[]'.
-      Type '{}' is missing the following properties from type 'readonly any[]': length, concat, join, slice, and 18 more.
-

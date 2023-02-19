@@ -1,2 +1,0 @@
-import '..';
-import '../es6';

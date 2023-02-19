@@ -1,6 +1,0 @@
-example.ts(10,22): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
-  Types of parameters 'resolve' and 'resolve' are incompatible.
-    Type '(value: unknown) => void' is not assignable to type 'void'.
-index.ts(63,3): error TS2322: Type '(code: any) => any' is not assignable to type '(code?: number) => never'.
-  Type 'any' is not assignable to type 'never'.
-

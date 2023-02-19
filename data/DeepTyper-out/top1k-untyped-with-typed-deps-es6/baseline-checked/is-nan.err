@@ -1,8 +1,0 @@
-index.ts(9,30): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(target: (this: NumberConstructor, ...args: readonly unknown[]) => unknown, thisArg: NumberConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'number' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
-  Overload 2 of 3, '(originalFunction: (this: NumberConstructor, ...args: readonly unknown[]) => unknown, thisArg: NumberConstructor): (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type 'number' is not assignable to parameter of type '(this: NumberConstructor, ...args: readonly unknown[]) => unknown'.
-polyfill.ts(7,3): error TS2322: Type '(number: unknown) => boolean' is not assignable to type 'number'.
-polyfill.ts(9,2): error TS2322: Type '(value: number) => boolean' is not assignable to type 'number'.
-

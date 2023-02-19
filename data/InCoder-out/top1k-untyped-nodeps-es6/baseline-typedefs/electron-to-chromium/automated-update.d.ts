@@ -1,1 +1,0 @@
-import 'shelljs/global';

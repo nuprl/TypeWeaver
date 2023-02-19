@@ -1,5 +1,0 @@
-polyfill.ts(6,2): error TS2322: Type 'string | { <T>(o: { [s: string]: T; } | ArrayLike<T>): [string, T][]; (o: {}): [string, any][]; }' is not assignable to type 'string'.
-  Type '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): [string, T][]; (o: {}): [string, any][]; }' is not assignable to type 'string'.
-shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): [string, T][]; (o: {}): [string, any][]; }' and 'string' have no overlap.
-shim.ts(13,2): error TS2322: Type 'string' is not assignable to type 'boolean'.
-

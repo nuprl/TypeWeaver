@@ -1,9 +1,0 @@
-index.ts(20,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'BinaryLike | KeyObject'.
-index.ts(41,7): error TS2740: Type 'Buffer' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
-index.ts(41,43): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'object' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
-index.ts(42,7): error TS2322: Type 'Buffer' is not assignable to type 'any[]'.
-index.ts(45,28): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'ArrayBufferView'.
-  Type 'any[]' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
-

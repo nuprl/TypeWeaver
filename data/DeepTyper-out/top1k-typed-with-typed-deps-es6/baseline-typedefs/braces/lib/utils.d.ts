@@ -1,9 +1,0 @@
-export declare const isInteger: boolean;
-export declare const find: boolean;
-export declare const exceedsLimit: boolean;
-export declare const escapeNode: boolean;
-export declare const encloseBrace: boolean;
-export declare const isInvalidBrace: boolean;
-export declare const isOpenOrClose: boolean;
-export declare const reduce: any;
-export declare const flatten: any;

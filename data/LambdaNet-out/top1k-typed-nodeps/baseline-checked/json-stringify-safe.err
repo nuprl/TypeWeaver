@@ -1,9 +1,0 @@
-stringify.ts(5,30): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
-      Type 'Function' provides no match for the signature '(this: any, key: string, value: any): any'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type '(string | number)[]'.
-      Type 'Function' is missing the following properties from type '(string | number)[]': pop, push, concat, join, and 28 more.
-stringify.ts(5,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-

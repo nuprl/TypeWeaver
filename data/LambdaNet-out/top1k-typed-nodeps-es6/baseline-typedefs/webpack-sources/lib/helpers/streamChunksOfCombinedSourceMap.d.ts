@@ -1,2 +1,0 @@
-declare const streamChunksOfCombinedSourceMap: Function;
-export default streamChunksOfCombinedSourceMap;

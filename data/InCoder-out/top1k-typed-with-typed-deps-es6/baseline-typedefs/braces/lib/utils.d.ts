@@ -1,9 +1,0 @@
-export declare const isInteger: (num: any) => boolean;
-export declare const find: (node: any, type: any) => any;
-export declare const exceedsLimit: (min: any, max: any, step: number, limit: any) => boolean;
-export declare const escapeNode: (block: any, n: number, type: any) => void;
-export declare const encloseBrace: (node: any) => boolean;
-export declare const isInvalidBrace: (block: any) => boolean;
-export declare const isOpenOrClose: (node: any) => boolean;
-export declare const reduce: (nodes: any) => any;
-export declare const flatten: (...args: any[]) => any[];

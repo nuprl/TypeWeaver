@@ -1,9 +1,0 @@
-export declare const _reset: Function;
-export declare const releaseExit: Function;
-export declare const captureExit: Function;
-export declare const _handlers: any[];
-export declare const _flush: Function;
-export declare const onExit: Function;
-export declare const offExit: Function;
-export declare const exit: Function;
-export declare const listenerCount: Function;
