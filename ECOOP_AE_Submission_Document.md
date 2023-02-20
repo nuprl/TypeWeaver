@@ -1,4 +1,4 @@
-/ Artifact Submission Template
+# Artifact Submission Template
 
 Please answer the following questions concisely, either with bullet lists or
 short paragraphs.
