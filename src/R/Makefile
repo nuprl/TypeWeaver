@@ -16,5 +16,9 @@ test-r:
 		--entrypoint R \
 		typeweaver-r-script:ecoop2023-artifact \
 		-s -e "suppressMessages(library(tidyverse)); suppressMessages(library(extrafont))"
+	$(DOCKER) run --rm \
+		--entrypoint gs \
+		typeweaver-r-script:ecoop2023-artifact \
+		--version > /dev/null
 
 .PHONY: build shell test-r
