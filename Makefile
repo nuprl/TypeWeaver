@@ -247,10 +247,13 @@ figures:
 		rm $$temp_fig; \
 	done
 
+REPO_NAME=$(shell basename $$PWD)
+BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
+TARBALL=$(REPO_NAME)_$(BRANCH)
 archive:
-	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ ecoop2023-artifact
-	sha1sum $(shell basename $$PWD).tar.gz
-	md5sum $(shell basename $$PWD).tar.gz
+	git archive --format=tar.gz -o $(TARBALL).tar.gz --prefix=$(TARBALL)/ $(BRANCH)
+	sha1sum $(TARBALL).tar.gz
+	md5sum $(TARBALL).tar.gz
 
 .PHONY: build micro clean-micro full clean-full playground playground-es6 clean-playground
 .PHONY: partial-predictions partial-weaving partial-checking
