@@ -237,6 +237,15 @@ partial-checking: partial-weaving
 figures:
 	cp -R data/results/csv data/full
 	(cd src/R && ./run.sh /data/full)
+	for i in $$(ls data/full/figures/*.pdf); do \
+		echo "Embedding fonts for $$i..."; \
+		temp_fig=$${i/.pdf/_.pdf}; \
+		mv $$i $$temp_fig; \
+		(cd src/R && ./gs -q -dSAFER -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress \
+			-dCompatibilityLevel=1.5 -sDEVICE=pdfwrite \
+			-sOutputFile="/$$i" -f "/$$temp_fig"); \
+		rm $$temp_fig; \
+	done
 
 archive:
 	git archive --format=tar.gz -o $(shell basename $$PWD).tar.gz --prefix=$(shell basename $$PWD)/ ecoop2023-artifact

@@ -432,7 +432,7 @@ error_cdf.pdf <-
   ggplot(errors_per_package, aes(x=errors, color=system, linetype=system)) +
   scale_x_continuous(name="Errors", breaks=seq(0, 2500, by=500)) +
   scale_y_continuous(name="Packages", breaks=seq(0, 1, by=0.2), labels=scales::percent) +
-  stat_ecdf() +
+  stat_ecdf(linewidth=1) +
   facet_wrap(vars(dataset), ncol=2) +
   scale_color_brewer(palette=brewer3, direction=-1)
 
