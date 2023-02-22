@@ -10,6 +10,7 @@ The
 [`ecoop2023-artifact`](https://github.com/nuprl/TypeWeaver/tree/ecoop2023-artifact)
 branch is a snapshot of the repository that was used to prepare the ECOOP 2023
 artifact.
+* [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7662708.svg)](https://doi.org/10.5281/zenodo.7662708)
 
 ## Dependencies
 
