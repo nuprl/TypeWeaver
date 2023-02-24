@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument(
         "--model",
         required=True,
-        choices=["DeepTyper", "LambdaNet", "InCoder"],
+        choices=["DeepTyper", "LambdaNet", "InCoder", "SantaCoder"],
         help="model to use for type prediction, also determines the CSV format for type weaving and directory for type checking")
     parser.add_argument(
         "--directory",
@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument(
         "--predict-out",
         default="baseline",
-        help="name of directory (within DIRECTORY) to write TypeScript, when the model is InCoder; defaults to baseline")
+        help="name of directory (within DIRECTORY) to write TypeScript, when the model is InCoder or SantaCoder; defaults to baseline")
     parser.add_argument(
         "--workers",
         type=int,
@@ -97,6 +97,9 @@ def main():
         elif args.model == "InCoder":
             incoder = type_prediction.InCoder(args)
             incoder.run()
+        elif args.model == "SantaCoder":
+            santacoder = type_prediction.SantaCoder(args)
+            santacoder.run()
 
     if args.weave:
         type_weaver = type_weaving.TypeWeaver(args)
