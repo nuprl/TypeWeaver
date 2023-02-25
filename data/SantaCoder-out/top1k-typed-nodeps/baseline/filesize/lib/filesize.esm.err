@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/SantaCoder/src/main.py", line 54, in _infer_on_file
+    result = typeinf.infer(input_file)
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/SantaCoder/src/type_inference.py", line 132, in infer
+    lines = [self._templatize_function(line) for line in lines]
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/SantaCoder/src/type_inference.py", line 132, in <listcomp>
+    lines = [self._templatize_function(line) for line in lines]
+  File "/work/arjunguha-research-group/mhyee/not-type-inference/SantaCoder/src/type_inference.py", line 26, in _templatize_function
+    function_end = line.index(")", function_start)
+ValueError: substring not found
