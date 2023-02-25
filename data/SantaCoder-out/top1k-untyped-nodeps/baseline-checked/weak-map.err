@@ -1,0 +1,29 @@
+bench.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'WeakMap' must be of type 'WeakMapConstructor', but here has type 'any'.
+bench.ts(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(11,5): error TS2304: Cannot find name 'bench'.
+bench.ts(16,5): error TS2304: Cannot find name 'bench'.
+bench.ts(22,5): error TS2304: Cannot find name 'bench'.
+bench.ts(28,5): error TS2304: Cannot find name 'bench'.
+bench.ts(35,5): error TS2304: Cannot find name 'bench'.
+weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
+weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
+weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
+weak-map.ts(120,42): error TS2314: Generic type 'WeakMap<K, V>' requires 2 type argument(s).
+weak-map.ts(126,14): error TS2304: Cannot find name 'ses'.
+weak-map.ts(127,5): error TS2304: Cannot find name 'ses'.
+weak-map.ts(261,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+weak-map.ts(515,53): error TS2304: Cannot find name 'T'.
+weak-map.ts(605,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(605,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(608,34): error TS2554: Expected 1 arguments, but got 2.
+weak-map.ts(613,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(619,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(620,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(621,35): error TS2350: Only a void function can be called with the 'new' keyword.
+weak-map.ts(630,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(632,37): error TS2350: Only a void function can be called with the 'new' keyword.
+weak-map.ts(636,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(643,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(654,17): error TS2367: This comparison appears to be unintentional because the types 'string' and '(map: any) => void' have no overlap.
+

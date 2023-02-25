@@ -1,0 +1,60 @@
+bin/nopt.ts(2,5): error TS2300: Duplicate identifier 'nopt'.
+bin/nopt.ts(41,47): error TS2345: Argument of type '(t: number) => any[]' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any[]'.
+  Types of parameters 't' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+bin/nopt.ts(44,49): error TS2304: Cannot find name 'MappedType'.
+bin/nopt.ts(50,5): error TS2542: Index signature in type 'String' only permits reading.
+docs/examples/my-program.ts(6,5): error TS2300: Duplicate identifier 'nopt'.
+lib/nopt.ts(28,10): error TS2300: Duplicate identifier 'nopt'.
+lib/nopt.ts(30,3): error TS2322: Type 'string[] | {}' is not assignable to type 'string[]'.
+  Type '{}' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
+lib/nopt.ts(31,3): error TS2322: Type 'string[] | {}' is not assignable to type 'string[]'.
+  Type '{}' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
+lib/nopt.ts(36,9): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(46,15): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
+lib/nopt.ts(49,8): error TS2339: Property 'argv' does not exist on type '{}'.
+lib/nopt.ts(50,30): error TS2339: Property 'argv' does not exist on type '{}'.
+lib/nopt.ts(82,11): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(83,11): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(87,15): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(95,17): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(97,17): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(100,17): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(117,13): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(122,17): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(126,13): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(135,13): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(138,13): error TS2554: Expected 0 arguments, but got 3.
+lib/nopt.ts(144,11): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(175,9): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(184,9): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(192,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/nopt.ts(241,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'ArrayConstructor' have no overlap.
+lib/nopt.ts(253,11): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(260,11): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(271,11): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(274,21): error TS2339: Property 'name' does not exist on type 'string'.
+lib/nopt.ts(275,15): error TS2339: Property 'name' does not exist on type 'string'.
+lib/nopt.ts(289,9): error TS2554: Expected 0 arguments, but got 5.
+lib/nopt.ts(298,9): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(305,11): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(327,13): error TS2554: Expected 0 arguments, but got 3.
+lib/nopt.ts(329,15): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(403,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/nopt.ts(452,49): error TS2304: Cannot find name 'AbbrShorthand'.
+lib/nopt.ts(452,77): error TS2304: Cannot find name 'AbbrShorthand'.
+lib/nopt.ts(452,103): error TS2304: Cannot find name 'AbbrShorthand'.
+lib/nopt.ts(475,28): error TS2339: Property '___singles' does not exist on type 'AbbrShorthand[]'.
+lib/nopt.ts(479,15): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
+    Argument of type '(l: number, r: number) => number' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
+      Types of parameters 'l' and 'previousValue' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+  Overload 2 of 3, '(callbackfn: (previousValue: number, currentValue: string, currentIndex: number, array: string[]) => number, initialValue: number): number', gave the following error.
+    Argument of type '(l: number, r: number) => number' is not assignable to parameter of type '(previousValue: number, currentValue: string, currentIndex: number, array: string[]) => number'.
+      Types of parameters 'r' and 'currentValue' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+lib/nopt.ts(483,16): error TS2339: Property '___singles' does not exist on type 'AbbrShorthand[]'.
+lib/nopt.ts(484,11): error TS2554: Expected 0 arguments, but got 2.
+lib/nopt.ts(495,16): error TS2339: Property 'concat' does not exist on type 'number'.
+

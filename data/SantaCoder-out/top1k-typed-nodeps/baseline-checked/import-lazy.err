@@ -1,0 +1,5 @@
+fixtures/class.ts(5,8): error TS2339: Property 'message' does not exist on type 'TestClass'.
+index.ts(25,36): error TS2345: Argument of type '{ get: (target: any, property: any) => any; apply: (target: any, thisArgument: any, argumentsList: any) => unknown; construct: (target: any, argumentsList: any) => unknown; }' is not assignable to parameter of type 'ProxyHandler<any>'.
+  The types returned by 'construct(...)' are incompatible between these types.
+    Type 'unknown' is not assignable to type 'object'.
+

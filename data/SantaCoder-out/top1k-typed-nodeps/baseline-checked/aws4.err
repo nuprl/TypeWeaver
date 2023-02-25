@@ -1,0 +1,35 @@
+aws4.ts(4,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+aws4.ts(10,54): error TS2304: Cannot find name 'Encoding'.
+aws4.ts(11,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
+aws4.ts(15,17): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+aws4.ts(45,33): error TS2304: Cannot find name 'AxiosRequestConfig'.
+aws4.ts(45,66): error TS2552: Cannot find name 'AxiosRequestCredentials'. Did you mean 'RequestCredentials'?
+aws4.ts(212,13): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(213,15): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(214,16): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(215,20): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(274,14): error TS2339: Property 'pop' does not exist on type 'string'.
+aws4.ts(277,14): error TS2339: Property 'push' does not exist on type 'string'.
+aws4.ts(371,31): error TS2304: Cannot find name 'AxiosRequestConfig'.
+aws4.ts(371,64): error TS2552: Cannot find name 'AxiosRequestCredentials'. Did you mean 'RequestCredentials'?
+example.ts(5,75): error TS2339: Property 'pipe' does not exist on type 'Response'.
+example.ts(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
+example.ts(20,77): error TS2322: Type '{ host: string; path: string; signQuery: boolean; }' is not assignable to type '{ host: string; path: string; service: string; region: string; }'.
+  Object literal may only specify known properties, and 'signQuery' does not exist in type '{ host: string; path: string; service: string; region: string; }'.
+example.ts(23,1): error TS2741: Property 'host' is missing in type '{ service: string; region: string; path: string; }' but required in type '{ host: string; path: string; service: string; region: string; }'.
+example.ts(26,1): error TS2739: Type '{ service: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': host, region
+lru.ts(33,42): error TS2552: Cannot find name 'INode'. Did you mean 'Node'?
+lru.ts(59,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(60,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(62,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(63,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(64,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(79,27): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(80,19): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(81,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(81,27): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(84,26): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(85,19): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(86,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(86,27): error TS2339: Property 'prev' does not exist on type 'Node'.
+

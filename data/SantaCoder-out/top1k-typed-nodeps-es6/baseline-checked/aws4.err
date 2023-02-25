@@ -1,0 +1,49 @@
+aws4.ts(9,54): error TS2304: Cannot find name 'Encoding'.
+aws4.ts(14,68): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BinaryToTextEncoding'.
+aws4.ts(19,47): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(c: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'c' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+aws4.ts(20,20): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
+aws4.ts(44,33): error TS2304: Cannot find name 'AxiosRequestConfig'.
+aws4.ts(44,66): error TS2552: Cannot find name 'AxiosRequestCredentials'. Did you mean 'RequestCredentials'?
+aws4.ts(211,13): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(212,15): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(213,16): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(214,20): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(273,14): error TS2339: Property 'pop' does not exist on type 'string'.
+aws4.ts(276,14): error TS2339: Property 'push' does not exist on type 'string'.
+aws4.ts(370,31): error TS2304: Cannot find name 'AxiosRequestConfig'.
+aws4.ts(370,64): error TS2552: Cannot find name 'AxiosRequestCredentials'. Did you mean 'RequestCredentials'?
+browser/index.ts(1,18): error TS2307: Cannot find module 'aws4' or its corresponding type declarations.
+example.ts(2,18): error TS2307: Cannot find module '.' or its corresponding type declarations.
+example.ts(5,45): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
+    Argument of type '(res: Response) => void' is not assignable to parameter of type '(res: IncomingMessage) => void'.
+      Types of parameters 'res' and 'res' are incompatible.
+        Type 'IncomingMessage' is missing the following properties from type 'Response': ok, redirected, status, statusText, and 9 more.
+  Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
+    Type '(res: Response) => void' has no properties in common with type 'RequestOptions'.
+example.ts(5,75): error TS2339: Property 'pipe' does not exist on type 'Response'.
+example.ts(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
+example.ts(20,77): error TS2322: Type '{ host: string; path: string; signQuery: boolean; }' is not assignable to type '{ host: string; path: string; service: string; region: string; }'.
+  Object literal may only specify known properties, and 'signQuery' does not exist in type '{ host: string; path: string; service: string; region: string; }'.
+example.ts(23,1): error TS2741: Property 'host' is missing in type '{ service: string; region: string; path: string; }' but required in type '{ host: string; path: string; service: string; region: string; }'.
+example.ts(26,1): error TS2739: Type '{ service: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': host, region
+lru.ts(25,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lru.ts(33,42): error TS2552: Cannot find name 'INode'. Did you mean 'Node'?
+lru.ts(59,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(60,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(62,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(63,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(64,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(79,27): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(80,19): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(81,10): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(81,27): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(84,26): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(85,19): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(86,10): error TS2339: Property 'next' does not exist on type 'Node'.
+lru.ts(86,27): error TS2339: Property 'prev' does not exist on type 'Node'.
+

@@ -1,0 +1,49 @@
+bench.ts(4,5): error TS2300: Duplicate identifier 'async'.
+bench.ts(22,38): error TS2304: Cannot find name 'Deferred'.
+bench.ts(44,46): error TS2304: Cannot find name 'Deferred'.
+lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
+lib/abort.ts(9,23): error TS2304: Cannot find name 'State'.
+lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
+lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
+lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
+lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
+lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
+lib/iterate.ts(21,85): error TS2304: Cannot find name 'IOutput'.
+lib/iterate.ts(64,16): error TS2339: Property 'length' does not exist on type 'Iterator<any, any, undefined>'.
+lib/iterate.ts(66,15): error TS2349: This expression is not callable.
+  Type 'Iterator<any, any, undefined>' has no call signatures.
+lib/iterate.ts(71,15): error TS2349: This expression is not callable.
+  Type 'Iterator<any, any, undefined>' has no call signatures.
+lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
+lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
+lib/readable_serial.ts(1,5): error TS2300: Duplicate identifier 'serial'.
+lib/readable_serial.ts(14,10): error TS2300: Duplicate identifier 'ReadableSerial'.
+lib/readable_serial_ordered.ts(18,10): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+lib/state.ts(30,30): error TS2345: Argument of type 'string | ((a: any, b: any) => any)' is not assignable to parameter of type '(a: string, b: string) => number'.
+  Type 'string' is not assignable to type '(a: string, b: string) => number'.
+lib/state.ts(32,14): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/streamify.ts(29,18): error TS2339: Property 'length' does not exist on type 'Iterator<any, any, undefined>'.
+lib/streamify.ts(31,17): error TS2349: This expression is not callable.
+  Type 'Iterator<any, any, undefined>' has no call signatures.
+lib/streamify.ts(36,17): error TS2349: This expression is not callable.
+  Type 'Iterator<any, any, undefined>' has no call signatures.
+lib/streamify.ts(78,41): error TS2304: Cannot find name 'IOutput'.
+lib/streamify.ts(110,38): error TS2551: Property 'value' does not exist on type 'string'. Did you mean 'valueOf'?
+lib/streamify.ts(119,36): error TS2551: Property 'value' does not exist on type 'string'. Did you mean 'valueOf'?
+lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
+lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
+parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+parallel.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+parallel.ts(17,10): error TS2300: Duplicate identifier 'parallel'.
+serial.ts(1,5): error TS2300: Duplicate identifier 'serialOrdered'.
+serial.ts(14,10): error TS2300: Duplicate identifier 'serial'.
+serialOrdered.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+serialOrdered.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+serialOrdered.ts(21,10): error TS2300: Duplicate identifier 'serialOrdered'.
+stream.ts(3,5): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+stream.ts(4,5): error TS2300: Duplicate identifier 'ReadableParallel'.
+stream.ts(5,5): error TS2300: Duplicate identifier 'ReadableSerial'.
+stream.ts(6,5): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+

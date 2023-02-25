@@ -1,0 +1,44 @@
+lib/parser.ts(23,20): error TS2345: Argument of type '(value: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+lib/parser.ts(24,26): error TS2339: Property 'match' does not exist on type 'number'.
+lib/pipeline/functor.ts(5,33): error TS2304: Cannot find name 'Session'.
+lib/pipeline/functor.ts(31,11): error TS2447: The '^' operator is not allowed for boolean types. Consider using '!==' instead.
+lib/pipeline/functor.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
+lib/pipeline/index.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Cell' must be of type '(tuple: any) => void', but here has type 'any'.
+lib/pipeline/index.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Pipeline' must be of type 'any', but here has type '(sessions: Session[]) => void'.
+lib/pipeline/index.ts(6,35): error TS2304: Cannot find name 'Session'.
+lib/pipeline/index.ts(7,50): error TS2304: Cannot find name 'Session'.
+lib/pipeline/index.ts(39,65): error TS2304: Cannot find name 'IMessage'.
+lib/pipeline/pledge.ts(12,29): error TS2304: Cannot find name 'List'.
+lib/pipeline/ring_buffer.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'RingBuffer' must be of type 'any', but here has type '(bufferSize: number) => void'.
+lib/websocket_extensions.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Parser' must be of type '{ parseHeader: (header: string) => any; serializeParams: (name: string, params: any) => string; }', but here has type 'any'.
+lib/websocket_extensions.ts(15,12): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type '() => void'.
+lib/websocket_extensions.ts(19,20): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(20,13): error TS2339: Property 'type' does not exist on type 'string'.
+lib/websocket_extensions.ts(22,20): error TS2339: Property 'rsv1' does not exist on type 'string'.
+lib/websocket_extensions.ts(23,20): error TS2339: Property 'rsv2' does not exist on type 'string'.
+lib/websocket_extensions.ts(24,20): error TS2339: Property 'rsv3' does not exist on type 'string'.
+lib/websocket_extensions.ts(26,41): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(27,60): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(29,22): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(39,25): error TS2339: Property 'createClientSession' does not exist on type 'string'.
+lib/websocket_extensions.ts(44,17): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(50,47): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(97,37): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(100,25): error TS2339: Property 'createServerSession' does not exist on type 'string'.
+lib/websocket_extensions.ts(105,48): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(114,34): error TS2304: Cannot find name 'Frame'.
+lib/websocket_extensions.ts(118,20): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type '() => void'.
+lib/websocket_extensions.ts(132,45): error TS2304: Cannot find name 'IMessage'.
+lib/websocket_extensions.ts(136,45): error TS2304: Cannot find name 'IMessage'.
+lib/websocket_extensions.ts(146,37): error TS2339: Property 'rsv1' does not exist on type 'string'.
+lib/websocket_extensions.ts(146,49): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(147,37): error TS2339: Property 'rsv2' does not exist on type 'string'.
+lib/websocket_extensions.ts(147,49): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(148,37): error TS2339: Property 'rsv3' does not exist on type 'string'.
+lib/websocket_extensions.ts(148,49): error TS2339: Property 'name' does not exist on type 'string'.
+lib/websocket_extensions.ts(152,27): error TS2339: Property 'rsv1' does not exist on type 'string'.
+lib/websocket_extensions.ts(153,27): error TS2339: Property 'rsv2' does not exist on type 'string'.
+lib/websocket_extensions.ts(154,27): error TS2339: Property 'rsv3' does not exist on type 'string'.
+

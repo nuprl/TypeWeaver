@@ -1,0 +1,16 @@
+src/index.ts(29,70): error TS2304: Cannot find name 'Graph'.
+src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist on type '{}'.
+src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type '{}'.
+src/index.ts(59,36): error TS2339: Property 'failOnWrongOrder' does not exist on type '{}'.
+src/index.ts(80,59): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Set<string>'.
+  Type '{}' is missing the following properties from type 'Set<string>': add, clear, delete, forEach, and 7 more.
+src/index.ts(120,63): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Set<string>'.
+src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
+src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
+src/topologicalSort.ts(4,41): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
+src/topologicalSort.ts(17,39): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(17,53): error TS2304: Cannot find name 'WalkState'.
+src/topologicalSort.ts(17,72): error TS2304: Cannot find name 'WalkResult'.
+src/topologicalSort.ts(56,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
+

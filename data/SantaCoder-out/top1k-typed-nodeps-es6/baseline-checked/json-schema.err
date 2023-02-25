@@ -1,0 +1,37 @@
+lib/links.ts(6,16): error TS2304: Cannot find name 'define'.
+lib/links.ts(6,41): error TS2304: Cannot find name 'define'.
+lib/links.ts(8,9): error TS2304: Cannot find name 'define'.
+lib/links.ts(15,9): error TS1258: A default export must be at the top level of a file or module declaration.
+lib/links.ts(23,5): error TS1184: Modifiers cannot appear here.
+lib/links.ts(25,5): error TS1184: Modifiers cannot appear here.
+lib/links.ts(25,47): error TS2304: Cannot find name 'Relation'.
+lib/links.ts(25,80): error TS2304: Cannot find name 'Schema'.
+lib/links.ts(45,32): error TS2339: Property 'rel' does not exist on type 'string'.
+lib/links.ts(45,44): error TS2339: Property 'href' does not exist on type 'string'.
+lib/links.ts(48,24): error TS2339: Property 'cacheLinks' does not exist on type '{}'.
+lib/links.ts(56,5): error TS1184: Modifiers cannot appear here.
+lib/links.ts(57,54): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(t: number, property: string) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 't' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+lib/validate.ts(15,16): error TS2304: Cannot find name 'define'.
+lib/validate.ts(15,41): error TS2304: Cannot find name 'define'.
+lib/validate.ts(17,9): error TS2304: Cannot find name 'define'.
+lib/validate.ts(31,9): error TS2339: Property 'Integer' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.ts(40,9): error TS2339: Property 'validate' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.ts(41,10): error TS2300: Duplicate identifier 'validate'.
+lib/validate.ts(54,37): error TS2554: Expected 2 arguments, but got 3.
+lib/validate.ts(56,9): error TS2339: Property 'checkPropertyChange' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.ts(64,34): error TS2554: Expected 2 arguments, but got 3.
+lib/validate.ts(66,5): error TS2300: Duplicate identifier 'validate'.
+lib/validate.ts(66,24): error TS2339: Property '_validate' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.ts(71,27): error TS2304: Cannot find name 'Schema'.
+lib/validate.ts(110,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/validate.ts(123,6): error TS2554: Expected 4 arguments, but got 3.
+lib/validate.ts(222,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/validate.ts(245,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/validate.ts(248,63): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/validate.ts(257,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/validate.ts(261,9): error TS2339: Property 'mustBeValid' does not exist on type '(instance: any, schema: any) => any'.
+

@@ -1,0 +1,82 @@
+examples/accept.ts(26,44): error TS2503: Cannot find namespace 'express'.
+examples/accept.ts(26,66): error TS2503: Cannot find namespace 'express'.
+examples/charset.ts(31,44): error TS2503: Cannot find namespace 'express'.
+examples/charset.ts(31,66): error TS2503: Cannot find namespace 'express'.
+examples/encoding.ts(36,13): error TS2339: Property 'writeHead' does not exist on type 'Response'.
+examples/encoding.ts(39,20): error TS2339: Property 'end' does not exist on type 'Response'.
+examples/encoding.ts(41,13): error TS2339: Property 'writeHead' does not exist on type 'Response'.
+examples/encoding.ts(42,20): error TS2339: Property 'end' does not exist on type 'Response'.
+examples/language.ts(23,44): error TS2503: Cannot find namespace 'express'.
+examples/language.ts(23,66): error TS2503: Cannot find namespace 'express'.
+index.ts(11,5): error TS2300: Duplicate identifier 'preferredCharsets'.
+index.ts(12,5): error TS2300: Duplicate identifier 'preferredEncodings'.
+index.ts(13,5): error TS2300: Duplicate identifier 'preferredLanguages'.
+index.ts(14,5): error TS2300: Duplicate identifier 'preferredMediaTypes'.
+index.ts(32,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/charset.ts(38,7): error TS2322: Type '{ charset: string; q: number; i: number; }' is not assignable to type 'string'.
+lib/charset.ts(101,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(103,11): error TS2339: Property 'charset' does not exist on type 'string'.
+lib/charset.ts(105,19): error TS2339: Property 'charset' does not exist on type 'string'.
+lib/charset.ts(111,13): error TS2339: Property 'i' does not exist on type 'string'.
+lib/charset.ts(112,13): error TS2339: Property 'q' does not exist on type 'string'.
+lib/charset.ts(122,10): error TS2300: Duplicate identifier 'preferredCharsets'.
+lib/charset.ts(139,71): error TS2345: Argument of type '(priority: number) => string' is not assignable to parameter of type '(value: { o: number; q: number; s: number; }, index: number, array: { o: number; q: number; s: number; }[]) => string'.
+  Types of parameters 'priority' and 'value' are incompatible.
+    Type '{ o: number; q: number; s: number; }' is not assignable to type 'number'.
+lib/charset.ts(140,40): error TS2345: Argument of type 'number' is not assignable to parameter of type '{ o: number; q: number; s: number; }'.
+lib/charset.ts(149,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(149,26): error TS2304: Cannot find name 'Spec'.
+lib/charset.ts(149,35): error TS2304: Cannot find name 'Spec'.
+lib/charset.ts(158,31): error TS2304: Cannot find name 'Spec'.
+lib/charset.ts(167,10): error TS2393: Duplicate function implementation.
+lib/charset.ts(167,26): error TS2304: Cannot find name 'QualitySpec'.
+lib/encoding.ts(40,7): error TS2322: Type '{ encoding: string; q: number; i: number; }' is not assignable to type 'string'.
+lib/encoding.ts(41,7): error TS2322: Type 'true | ({ i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; })' is not assignable to type 'boolean'.
+  Type '{ i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; } & { i: number; o: any; q: any; s: number; }' is not assignable to type 'boolean'.
+lib/encoding.ts(41,36): error TS2554: Expected 3 arguments, but got 2.
+lib/encoding.ts(51,5): error TS2322: Type '{ encoding: string; q: number; i: number; }' is not assignable to type 'string'.
+lib/encoding.ts(117,10): error TS2393: Duplicate function implementation.
+lib/encoding.ts(117,28): error TS2304: Cannot find name 'Encoding'.
+lib/encoding.ts(117,44): error TS2304: Cannot find name 'Spec'.
+lib/encoding.ts(138,10): error TS2300: Duplicate identifier 'preferredEncodings'.
+lib/encoding.ts(154,71): error TS2345: Argument of type '(priority: number) => string' is not assignable to parameter of type '(value: { o: number; q: number; s: number; }, index: number, array: { o: number; q: number; s: number; }[]) => string'.
+  Types of parameters 'priority' and 'value' are incompatible.
+    Type '{ o: number; q: number; s: number; }' is not assignable to type 'number'.
+lib/encoding.ts(155,40): error TS2345: Argument of type 'number' is not assignable to parameter of type '{ o: number; q: number; s: number; }'.
+lib/encoding.ts(164,10): error TS2393: Duplicate function implementation.
+lib/encoding.ts(164,26): error TS2304: Cannot find name 'Spec'.
+lib/encoding.ts(164,35): error TS2304: Cannot find name 'Spec'.
+lib/encoding.ts(173,32): error TS2304: Cannot find name 'IEncodingSpec'.
+lib/encoding.ts(182,10): error TS2393: Duplicate function implementation.
+lib/encoding.ts(182,26): error TS2304: Cannot find name 'QualitySpec'.
+lib/language.ts(38,7): error TS2322: Type '{ prefix: string; suffix: string; q: number; i: number; full: string; }' is not assignable to type 'string'.
+lib/language.ts(105,10): error TS2393: Duplicate function implementation.
+lib/language.ts(105,42): error TS2304: Cannot find name 'Spec'.
+lib/language.ts(106,11): error TS2554: Expected 2 arguments, but got 1.
+lib/language.ts(132,10): error TS2300: Duplicate identifier 'preferredLanguages'.
+lib/language.ts(149,71): error TS2345: Argument of type '(priority: number) => string' is not assignable to parameter of type '(value: { o: number; q: number; s: number; }, index: number, array: { o: number; q: number; s: number; }[]) => string'.
+  Types of parameters 'priority' and 'value' are incompatible.
+    Type '{ o: number; q: number; s: number; }' is not assignable to type 'number'.
+lib/language.ts(150,40): error TS2345: Argument of type 'number' is not assignable to parameter of type '{ o: number; q: number; s: number; }'.
+lib/language.ts(159,10): error TS2393: Duplicate function implementation.
+lib/language.ts(159,26): error TS2304: Cannot find name 'Spec'.
+lib/language.ts(159,35): error TS2304: Cannot find name 'Spec'.
+lib/language.ts(168,32): error TS2304: Cannot find name 'LanguageSpec'.
+lib/language.ts(177,10): error TS2393: Duplicate function implementation.
+lib/language.ts(177,26): error TS2304: Cannot find name 'QualitySpec'.
+lib/mediaType.ts(38,7): error TS2322: Type '{ type: string; subtype: string; params: any; q: number; i: number; }' is not assignable to type 'string'.
+lib/mediaType.ts(118,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(118,38): error TS2304: Cannot find name 'Spec'.
+lib/mediaType.ts(119,11): error TS2554: Expected 2 arguments, but got 1.
+lib/mediaType.ts(162,10): error TS2300: Duplicate identifier 'preferredMediaTypes'.
+lib/mediaType.ts(179,71): error TS2345: Argument of type '(priority: number) => string' is not assignable to parameter of type '(value: { o: number; q: number; s: number; }, index: number, array: { o: number; q: number; s: number; }[]) => string'.
+  Types of parameters 'priority' and 'value' are incompatible.
+    Type '{ o: number; q: number; s: number; }' is not assignable to type 'number'.
+lib/mediaType.ts(180,40): error TS2345: Argument of type 'number' is not assignable to parameter of type '{ o: number; q: number; s: number; }'.
+lib/mediaType.ts(189,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(189,26): error TS2304: Cannot find name 'Spec'.
+lib/mediaType.ts(189,35): error TS2304: Cannot find name 'Spec'.
+lib/mediaType.ts(198,28): error TS2304: Cannot find name 'ITypeSpec'.
+lib/mediaType.ts(207,10): error TS2393: Duplicate function implementation.
+lib/mediaType.ts(207,26): error TS2304: Cannot find name 'Spec'.
+

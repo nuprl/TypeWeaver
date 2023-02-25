@@ -1,0 +1,58 @@
+examples/custom-option-arrayOfCommaSepString.ts(18,33): error TS2304: Cannot find name 'IPart'.
+examples/custom-option-duration.ts(37,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-duration.ts(40,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-duration.ts(43,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-duration.ts(46,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-fruit.ts(40,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]'.
+examples/custom-option-time-ago.ts(29,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-time-ago.ts(32,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-time-ago.ts(35,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-time-ago.ts(38,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/ddcompletion.ts(23,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { ...; } | { ...; } | { ...; })[]'.
+examples/foo.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; env?: undefined; helpArg?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; env?: undefined; helpArg?: undefined; } | { ...; } | { ...; })[]'.
+examples/hello.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/help.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/option-groups.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; group?: undefined; } | { group: string; names?: undefined; type?: undefined; })[]'.
+lib/dashdash.ts(16,66): error TS2552: Cannot find name 'Match'. Did you mean 'Math'?
+lib/dashdash.ts(258,25): error TS2304: Cannot find name 'ParserConfig'.
+lib/dashdash.ts(353,67): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(353,74): error TS2304: Cannot find name 'T'.
+lib/dashdash.ts(393,39): error TS2339: Property 'type' does not exist on type 'string'.
+lib/dashdash.ts(578,44): error TS2304: Cannot find name 'IOption'.
+lib/dashdash.ts(578,52): error TS2304: Cannot find name 'T'.
+lib/dashdash.ts(588,10): error TS2339: Property '_order' does not exist on type '{}'.
+lib/dashdash.ts(589,10): error TS2339: Property '_args' does not exist on type '{}'.
+lib/dashdash.ts(624,47): error TS2304: Cannot find name 'IConfig'.
+lib/dashdash.ts(654,44): error TS2304: Cannot find name 'IOptions'.
+lib/dashdash.ts(705,44): error TS2304: Cannot find name 'IOption'.
+lib/dashdash.ts(705,52): error TS2304: Cannot find name 'T'.
+lib/dashdash.ts(753,33): error TS2304: Cannot find name 'IEvent'.
+lib/dashdash.ts(785,27): error TS2339: Property 'length' does not exist on type 'number'.
+lib/dashdash.ts(829,38): error TS2345: Argument of type '{ name: any; specExtra: any; argtypes: any; options: any; }' is not assignable to parameter of type 'string'.
+lib/dashdash.ts(877,24): error TS2339: Property 'options' does not exist on type 'string[]'.
+lib/dashdash.ts(878,32): error TS2339: Property 'context' does not exist on type 'string[]'.
+lib/dashdash.ts(879,30): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
+lib/dashdash.ts(880,39): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
+lib/dashdash.ts(882,24): error TS2339: Property 'context' does not exist on type 'string[]'.
+lib/dashdash.ts(884,14): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
+lib/dashdash.ts(884,57): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
+lib/dashdash.ts(890,11): error TS2339: Property 'options' does not exist on type 'string[]'.
+lib/dashdash.ts(890,52): error TS2304: Cannot find name 'IOptions'.
+lib/dashdash.ts(942,14): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
+lib/dashdash.ts(947,22): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
+lib/dashdash.ts(974,24): error TS2339: Property 'options' does not exist on type 'string'.
+lib/dashdash.ts(975,24): error TS2339: Property 'name' does not exist on type 'string'.
+lib/dashdash.ts(976,32): error TS2339: Property 'specExtra' does not exist on type 'string'.
+lib/dashdash.ts(977,39): error TS2339: Property 'argtypes' does not exist on type 'string'.
+lib/dashdash.ts(981,20): error TS2339: Property 'name' does not exist on type 'string'.
+lib/dashdash.ts(984,13): error TS2345: Argument of type '{ options: any; argtypes: any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and 'options' does not exist in type 'string[]'.
+lib/dashdash.ts(984,27): error TS2339: Property 'options' does not exist on type 'string'.
+lib/dashdash.ts(985,28): error TS2339: Property 'argtypes' does not exist on type 'string'.
+lib/dashdash.ts(988,14): error TS2339: Property 'specExtra' does not exist on type 'string'.
+lib/dashdash.ts(989,36): error TS2339: Property 'specExtra' does not exist on type 'string'.
+lib/dashdash.ts(999,31): error TS2304: Cannot find name 'ParserConfig'.
+lib/dashdash.ts(1010,25): error TS2304: Cannot find name 'IConfig'.
+lib/dashdash.ts(1045,36): error TS2304: Cannot find name 'OptionType'.
+lib/dashdash.ts(1080,29): error TS2304: Cannot find name 'SynopsisFromOpt'.
+

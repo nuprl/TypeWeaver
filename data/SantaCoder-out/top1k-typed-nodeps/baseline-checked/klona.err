@@ -1,0 +1,103 @@
+bench/fixtures/default.ts(3,8): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/fixtures/default.ts(4,8): error TS2339: Property 'items' does not exist on type 'Test'.
+bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/index.ts(82,2): error TS2345: Argument of type '{ 'JSON.stringify': (x: any) => any; lodash: any; rfdc: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'deep-copy': any; 'klona/full': any; klona: any; 'klona/lite': any; 'klona/json': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''JSON.stringify'' does not exist in type 'string[]'.
+bench/index.ts(96,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'klona/full': any; klona: any; 'klona/lite': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/index.ts(106,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'klona/full': any; klona: any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/index.ts(115,2): error TS2345: Argument of type '{ lodash: any; 'clone/include': (x: any) => any; 'klona/full': any; }' is not assignable to parameter of type 'string[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/validate/default.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+bench/validate/default.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'boolean'.
+bench/validate/default.ts(8,24): error TS2339: Property 'regexp' does not exist on type 'string'.
+bench/validate/default.ts(11,8): error TS2339: Property 'array' does not exist on type 'string'.
+bench/validate/default.ts(12,23): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(14,7): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(14,32): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(15,24): error TS2339: Property 'array' does not exist on type 'string'.
+bench/validate/default.ts(18,8): error TS2339: Property 'set' does not exist on type 'string'.
+bench/validate/default.ts(19,20): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(21,11): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(22,29): error TS2339: Property 'set' does not exist on type 'string'.
+bench/validate/default.ts(23,28): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(26,8): error TS2339: Property 'map' does not exist on type 'string'.
+bench/validate/default.ts(27,20): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(29,11): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(30,29): error TS2339: Property 'map' does not exist on type 'string'.
+bench/validate/default.ts(31,28): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(34,8): error TS2339: Property 'custom' does not exist on type 'string'.
+bench/validate/default.ts(35,20): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(37,8): error TS2339: Property 'custom' does not exist on type 'string'.
+bench/validate/default.ts(38,24): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(40,7): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(41,21): error TS2339: Property 'custom' does not exist on type 'string'.
+bench/validate/default.ts(44,7): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/default.ts(45,21): error TS2339: Property 'int8arr' does not exist on type 'string'.
+bench/validate/default.ts(47,8): error TS2339: Property 'int8arr' does not exist on type 'string'.
+bench/validate/default.ts(48,20): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/default.ts(51,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(52,21): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/default.ts(54,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(55,24): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/default.ts(55,40): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(57,23): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(58,8): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/default.ts(59,20): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(62,8): error TS2339: Property 'dataview' does not exist on type 'string'.
+bench/validate/default.ts(63,21): error TS2339: Property 'dataview' does not exist on type 'string'.
+bench/validate/default.ts(64,20): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/default.ts(66,7): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/default.ts(67,21): error TS2339: Property 'dataview' does not exist on type 'string'.
+bench/validate/default.ts(68,20): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/full.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+bench/validate/full.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'boolean'.
+bench/validate/full.ts(8,24): error TS2339: Property 'regexp' does not exist on type 'string'.
+bench/validate/full.ts(11,8): error TS2339: Property 'array' does not exist on type 'string'.
+bench/validate/full.ts(12,23): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(14,7): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(14,32): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(15,24): error TS2339: Property 'array' does not exist on type 'string'.
+bench/validate/full.ts(18,8): error TS2339: Property 'set' does not exist on type 'string'.
+bench/validate/full.ts(19,20): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(21,11): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(22,29): error TS2339: Property 'set' does not exist on type 'string'.
+bench/validate/full.ts(23,28): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(26,8): error TS2339: Property 'map' does not exist on type 'string'.
+bench/validate/full.ts(27,20): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(29,11): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(30,29): error TS2339: Property 'map' does not exist on type 'string'.
+bench/validate/full.ts(31,28): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(34,7): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/full.ts(35,21): error TS2339: Property 'int8arr' does not exist on type 'string'.
+bench/validate/full.ts(37,8): error TS2339: Property 'int8arr' does not exist on type 'string'.
+bench/validate/full.ts(38,20): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/full.ts(41,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(42,21): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/full.ts(44,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(45,24): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/full.ts(45,40): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(47,23): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(48,8): error TS2339: Property 'buffer' does not exist on type 'string'.
+bench/validate/full.ts(49,20): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(52,21): error TS2339: Property 'symbol1' does not exist on type 'string'.
+bench/validate/full.ts(52,35): error TS2339: Property 'symbol1' does not exist on type 'boolean'.
+bench/validate/full.ts(53,21): error TS2339: Property 'symbol2' does not exist on type 'string'.
+bench/validate/full.ts(53,35): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(56,27): error TS2339: Property 'symbol1' does not exist on type 'string'.
+bench/validate/full.ts(57,25): error TS2339: Property 'symbol1' does not exist on type 'boolean'.
+bench/validate/full.ts(59,14): error TS2339: Property 'symbol2' does not exist on type 'string'.
+bench/validate/full.ts(59,23): error TS2339: Property 'push' does not exist on type 'string'.
+bench/validate/full.ts(60,27): error TS2339: Property 'symbol2' does not exist on type 'string'.
+bench/validate/full.ts(61,25): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(63,12): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(64,27): error TS2339: Property 'symbol2' does not exist on type 'string'.
+bench/validate/full.ts(65,25): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(80,21): error TS2339: Property 'secret' does not exist on type 'string'.
+bench/validate/full.ts(80,34): error TS2339: Property 'secret' does not exist on type 'boolean'.
+bench/validate/full.ts(82,7): error TS2339: Property 'hidden2' does not exist on type 'boolean'.
+bench/validate/full.ts(83,21): error TS2339: Property 'hidden2' does not exist on type 'string'.
+bench/validate/json.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+bench/validate/lite.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+

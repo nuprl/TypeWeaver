@@ -1,0 +1,80 @@
+lib/CachedSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/CachedSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
+lib/CachedSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
+lib/CachedSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'streamAndGetSourceAndMap'.
+lib/CompatSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/ConcatSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/ConcatSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
+lib/ConcatSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
+lib/ConcatSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
+lib/ConcatSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
+lib/OriginalSource.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
+lib/OriginalSource.ts(7,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
+lib/OriginalSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+lib/OriginalSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
+lib/OriginalSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/OriginalSource.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoPotentialTokens'.
+lib/PrefixSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/PrefixSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
+lib/PrefixSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
+lib/PrefixSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
+lib/PrefixSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
+lib/RawSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
+lib/RawSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/RawSource.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
+lib/ReplaceSource.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
+lib/ReplaceSource.ts(7,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
+lib/ReplaceSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
+lib/ReplaceSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/ReplaceSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+lib/ReplaceSource.ts(24,8): error TS2339: Property 'start' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(25,8): error TS2339: Property 'end' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(26,8): error TS2339: Property 'content' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(27,8): error TS2339: Property 'name' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(29,9): error TS2339: Property 'index' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(124,41): error TS2552: Cannot find name 'IRange'. Did you mean 'Range'?
+lib/ReplaceSource.ts(124,52): error TS2552: Cannot find name 'IRange'. Did you mean 'Range'?
+lib/ReplaceSource.ts(133,41): error TS2304: Cannot find name 'ITextChange'.
+lib/ReplaceSource.ts(133,57): error TS2304: Cannot find name 'ITextChange'.
+lib/SizeOnlySource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/Source.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/Source.ts(15,22): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/SourceMapSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
+lib/SourceMapSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
+lib/SourceMapSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfCombinedSourceMap'.
+lib/SourceMapSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
+lib/SourceMapSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
+lib/helpers/__mocks__/createMappingsSerializer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
+lib/helpers/__mocks__/createMappingsSerializer.ts(3,34): error TS2304: Cannot find name 'jest'.
+lib/helpers/createMappingsSerializer.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'ALPHABET'.
+lib/helpers/createMappingsSerializer.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'CONTINUATION_BIT'.
+lib/helpers/createMappingsSerializer.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
+lib/helpers/getFromStreamChunks.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
+lib/helpers/getGeneratedSourceInfo.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
+lib/helpers/getSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getSource'.
+lib/helpers/readMappings.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'ALPHABET'.
+lib/helpers/readMappings.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'CONTINUATION_BIT'.
+lib/helpers/readMappings.ts(21,22): error TS2339: Property 'charCodeAt' does not exist on type 'string[]'.
+lib/helpers/readMappings.ts(33,7): error TS2451: Cannot redeclare block-scoped variable 'readMappings'.
+lib/helpers/splitIntoLines.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+lib/helpers/splitIntoPotentialTokens.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoPotentialTokens'.
+lib/helpers/streamAndGetSourceAndMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
+lib/helpers/streamAndGetSourceAndMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
+lib/helpers/streamAndGetSourceAndMap.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'streamAndGetSourceAndMap'.
+lib/helpers/streamChunks.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
+lib/helpers/streamChunks.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfCombinedSourceMap'.
+lib/helpers/streamChunksOfRawSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
+lib/helpers/streamChunksOfRawSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+lib/helpers/streamChunksOfRawSource.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
+lib/helpers/streamChunksOfSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
+lib/helpers/streamChunksOfSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getSource'.
+lib/helpers/streamChunksOfSourceMap.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'readMappings'.
+lib/helpers/streamChunksOfSourceMap.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
+

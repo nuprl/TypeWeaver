@@ -1,0 +1,17 @@
+index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+index.ts(5,14): error TS2339: Property 'install' does not exist on type '{ new (message?: string, name?: string): DOMException; prototype: DOMException; readonly ABORT_ERR: number; readonly DATA_CLONE_ERR: number; readonly DOMSTRING_SIZE_ERR: number; ... 21 more ...; readonly WRONG_DOCUMENT_ERR: number; }'.
+index.ts(7,37): error TS2339: Property 'DOMException' does not exist on type '{ Array: ArrayConstructor; Error: ErrorConstructor; Object: ObjectConstructor; Promise: PromiseConstructor; String: StringConstructor; TypeError: TypeErrorConstructor; }'.
+lib/DOMException-impl.ts(7,10): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(8,10): error TS2339: Property 'message' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(12,34): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+scripts/generate.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/get-latest-platform-tests.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/get-latest-platform-tests.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+scripts/get-latest-platform-tests.ts(35,14): error TS2339: Property 'pipe' does not exist on type 'ReadableStream<Uint8Array>'.
+webidl2js-wrapper.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+webidl2js-wrapper.ts(6,40): error TS2304: Cannot find name 'GlobalObject'.
+webidl2js-wrapper.ts(11,16): error TS2339: Property 'install' does not exist on type '{ new (message?: string, name?: string): DOMException; prototype: DOMException; readonly ABORT_ERR: number; readonly DATA_CLONE_ERR: number; readonly DOMSTRING_SIZE_ERR: number; ... 21 more ...; readonly WRONG_DOCUMENT_ERR: number; }'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3916,11): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3948,13): error TS2451: Cannot redeclare block-scoped variable 'DOMException'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18281,18): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+

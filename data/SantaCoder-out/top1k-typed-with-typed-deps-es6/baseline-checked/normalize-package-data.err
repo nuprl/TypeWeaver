@@ -1,0 +1,53 @@
+lib/extract_description.ts(13,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
+lib/extract_description.ts(23,24): error TS2339: Property 'join' does not exist on type 'string'.
+lib/fixer.ts(9,19): error TS2732: Cannot find module './typos.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/fixer.ts(17,39): error TS2304: Cannot find name 'IRepository'.
+lib/fixer.ts(18,14): error TS2339: Property 'repositories' does not exist on type 'IRepository[]'.
+lib/fixer.ts(20,12): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(20,30): error TS2339: Property 'repositories' does not exist on type 'IRepository[]'.
+lib/fixer.ts(22,15): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(25,21): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(26,12): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(28,19): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(31,18): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(35,18): error TS2339: Property 'repository' does not exist on type 'IRepository[]'.
+lib/fixer.ts(72,34): error TS2304: Cannot find name 'IFileChangeData'.
+lib/fixer.ts(89,32): error TS2552: Cannot find name 'BinResponse'. Did you mean 'Response'?
+lib/fixer.ts(124,54): error TS2304: Cannot find name 'IFilteredResult'.
+lib/fixer.ts(124,70): error TS2304: Cannot find name 'T'.
+lib/fixer.ts(147,50): error TS2345: Argument of type '(deps: string[]) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'deps' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'string[]'.
+lib/fixer.ts(148,13): error TS2322: Type 'string[]' is not assignable to type 'string | number | symbol'.
+lib/fixer.ts(151,17): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(151,38): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(153,21): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(156,24): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(157,22): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(160,23): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(162,49): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(164,16): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(177,37): error TS2304: Cannot find name 'IData'.
+lib/fixer.ts(211,30): error TS2304: Cannot find name 'Person'.
+lib/fixer.ts(216,47): error TS2304: Cannot find name 'AxiosRequestConfig'.
+lib/fixer.ts(255,35): error TS2304: Cannot find name 'Readme'.
+lib/fixer.ts(374,30): error TS2304: Cannot find name 'People'.
+lib/fixer.ts(386,33): error TS2304: Cannot find name 'Person'.
+lib/fixer.ts(407,9): error TS2339: Property 'name' does not exist on type '{}'.
+lib/fixer.ts(410,9): error TS2339: Property 'email' does not exist on type '{}'.
+lib/fixer.ts(413,9): error TS2339: Property 'url' does not exist on type '{}'.
+lib/fixer.ts(418,39): error TS2304: Cannot find name 'IDependencyData'.
+lib/fixer.ts(430,30): error TS2304: Cannot find name 'DepObject'.
+lib/fixer.ts(435,17): error TS2339: Property 'trim' does not exist on type 'never'.
+lib/fixer.ts(445,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
+lib/fixer.ts(446,16): error TS2339: Property 'shift' does not exist on type 'string'.
+lib/fixer.ts(447,16): error TS2339: Property 'join' does not exist on type 'string'.
+lib/fixer.ts(464,27): error TS2304: Cannot find name 'Bugs'.
+lib/fixer.ts(470,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/make_warning.ts(2,22): error TS2732: Cannot find module './warning_messages.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/normalize.ts(29,5): error TS2322: Type '(msg: IMessage) => void' is not assignable to type 'boolean'.
+lib/normalize.ts(29,27): error TS2304: Cannot find name 'IMessage'.
+lib/normalize.ts(38,5): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+
