@@ -18,11 +18,13 @@ class Model:
         self,
         max_tokens: int = 50,
         temperature: float = 0.2,
-        top_p: float = 0.95
+        top_p: float = 0.95,
+        max_context_length: int = 70
     ):
         self.max_tokens = max_tokens
         self.temperature = temperature
         self.top_p = top_p
+        self.max_context_length = max_context_length
 
         self.model = AutoModelForCausalLM.from_pretrained(
             self.MODEL_NAME,
@@ -45,7 +47,7 @@ class Model:
             "pad_token": self.ENDOFTEXT,
         })
 
-    def _extract_fim_part(self, s: str):
+    def _extract_fim_part(self, s: str) -> str:
         """
         Find the index of <fim-middle>
         """
