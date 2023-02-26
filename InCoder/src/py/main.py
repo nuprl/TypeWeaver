@@ -41,8 +41,8 @@ def _templatize_function(line: str):
         return line
     function_start = function_start.end()
     # Find the first occurrence of ")"
-    function_end = line.index(")", function_start)
-    if function_end == function_start:
+    function_end = line.find(")", function_start)
+    if function_end == -1 or function_end == function_start:
         return line
     arg_list = line[function_start:function_end].split(",")
     arg_list = "???, ".join(arg_list)

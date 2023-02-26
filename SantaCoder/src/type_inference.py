@@ -23,10 +23,10 @@ class TypeInference:
         function_start = match.end()
 
         # Find the first occurrence of ")"
-        function_end = line.index(")", function_start)
+        function_end = line.find(")", function_start)
 
-        # No parameters
-        if function_start == function_end:
+        # Multi-line signature or no parameters
+        if function_end == -1 or function_start == function_end:
             return line
 
         param_list = line[function_start:function_end].split(",")
