@@ -1,5 +1,8 @@
 from enum import Enum
 from pathlib import Path
+from tqdm import tqdm as std_tqdm
+from tqdm.utils import (_unicode, disp_len)
+import sys
 
 src_root = Path(Path(__file__).parent, "..").resolve()
 
@@ -35,3 +38,30 @@ class Result:
 
 def send_data_to(proc, data):
     proc.communicate(data)
+
+class tqdm(std_tqdm):
+    """
+    Override tqdm.status_printer to handle non-TTY cases, i.e. redirecting
+    output to a file.
+    """
+    @staticmethod
+    def status_printer(file):
+        fp = file
+        fp_flush = getattr(fp, 'flush', lambda: None)  # pragma: no cover
+        if fp in (sys.stderr, sys.stdout):
+            getattr(sys.stderr, 'flush', lambda: None)()
+            getattr(sys.stdout, 'flush', lambda: None)()
+
+        def fp_write(s):
+            fp.write(_unicode(s))
+            fp_flush()
+
+        last_len = [0]
+
+        def print_status(s):
+            len_s = disp_len(s)
+            char = '\r' if hasattr(fp, "isatty") and file.isatty() else '\n'
+            fp_write(char + s + (' ' * max(last_len[0] - len_s, 0)))
+            last_len[0] = len_s
+
+        return print_status

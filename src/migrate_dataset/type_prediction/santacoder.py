@@ -1,10 +1,9 @@
 from pathlib import Path
 from subprocess import PIPE
-from tqdm import tqdm
 import shutil, subprocess, time
 
 import util
-from util import Result, ResultStatus
+from util import Result, ResultStatus, tqdm
 
 class SantaCoder:
     SLEEP_TIME = 5

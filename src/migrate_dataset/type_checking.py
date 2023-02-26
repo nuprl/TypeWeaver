@@ -1,11 +1,10 @@
 from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
-from tqdm import tqdm
 import os, subprocess
 
 import util
-from util import Result, ResultStatus
+from util import Result, ResultStatus, tqdm
 
 class TypeChecker:
     def __init__(self, args):
