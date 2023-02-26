@@ -3,6 +3,7 @@ lib/asn1/api.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'enco
 lib/asn1/api.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'decoders'.
 lib/asn1/api.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/api.ts(13,37): error TS2304: Cannot find name 'EntityBody'.
+lib/asn1/api.ts(13,37): error TS4078: Parameter 'body' of exported function has or is using private name 'EntityBody'.
 lib/asn1/api.ts(24,30): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/api.ts(28,64): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/api.ts(43,83): error TS2552: Cannot find name 'DecodeOptions'. Did you mean 'TextDecodeOptions'?
@@ -11,6 +12,7 @@ lib/asn1/base/buffer.ts(3,7): error TS2451: Cannot redeclare block-scoped variab
 lib/asn1/base/buffer.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/buffer.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/base/buffer.ts(7,47): error TS2552: Cannot find name 'DecoderOptions'. Did you mean 'TextDecoderOptions'?
+lib/asn1/base/buffer.ts(7,47): error TS4078: Parameter 'options' of exported function has or is using private name 'DecoderOptions'.
 lib/asn1/base/buffer.ts(16,22): error TS2339: Property 'length' does not exist on type 'number'.
 lib/asn1/base/buffer.ts(48,15): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(49,21): error TS2339: Property 'offset' does not exist on type 'boolean'.
@@ -19,6 +21,7 @@ lib/asn1/base/buffer.ts(53,46): error TS2339: Property 'reporter' does not exist
 lib/asn1/base/buffer.ts(73,15): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(85,38): error TS2339: Property 'offset' does not exist on type 'true'.
 lib/asn1/base/buffer.ts(88,46): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
+lib/asn1/base/buffer.ts(88,46): error TS4078: Parameter 'reporter' of exported function has or is using private name 'Reporter'.
 lib/asn1/base/buffer.ts(91,43): error TS2304: Cannot find name 'IEncoderBuffer'.
 lib/asn1/base/buffer.ts(93,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/base/buffer.ts(138,39): error TS2304: Cannot find name 'IItem'.
@@ -27,6 +30,7 @@ lib/asn1/base/buffer.ts(146,11): error TS2339: Property 'write' does not exist o
 lib/asn1/base/node.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/node.ts(32,10): error TS2300: Duplicate identifier 'Node'.
 lib/asn1/base/node.ts(32,20): error TS2304: Cannot find name 'Encoding'.
+lib/asn1/base/node.ts(32,20): error TS4078: Parameter 'enc' of exported function has or is using private name 'Encoding'.
 lib/asn1/base/node.ts(36,9): error TS2339: Property 'name' does not exist on type '{}'.
 lib/asn1/base/node.ts(37,9): error TS2339: Property 'enc' does not exist on type '{}'.
 lib/asn1/base/node.ts(39,9): error TS2339: Property 'parent' does not exist on type '{}'.
@@ -153,6 +157,7 @@ lib/asn1/base/node.ts(636,16): error TS2339: Property '_isPrintstr' does not exi
 lib/asn1/base/reporter.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/base/reporter.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/reporter.ts(5,28): error TS2304: Cannot find name 'ReporterOptions'.
+lib/asn1/base/reporter.ts(5,28): error TS4078: Parameter 'options' of exported function has or is using private name 'ReporterOptions'.
 lib/asn1/base/reporter.ts(25,53): error TS2304: Cannot find name 'ReporterState'.
 lib/asn1/base/reporter.ts(62,61): error TS2304: Cannot find name 'ReporterState'.
 lib/asn1/base/reporter.ts(74,21): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
@@ -223,6 +228,7 @@ lib/asn1/decoders/der.ts(245,61): error TS2749: 'Buffer' refers to a value, but 
 lib/asn1/decoders/der.ts(255,22): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(264,47): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/decoders/der.ts(272,28): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(272,28): error TS4078: Parameter 'buf' of exported function has or is using private name 'Buffer'.
 lib/asn1/decoders/der.ts(306,17): error TS2339: Property 'readUInt8' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(307,11): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(323,16): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
@@ -239,6 +245,7 @@ lib/asn1/encoders/der.ts(5,7): error TS2451: Cannot redeclare block-scoped varia
 lib/asn1/encoders/der.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/encoders/der.ts(10,10): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
 lib/asn1/encoders/der.ts(10,29): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
+lib/asn1/encoders/der.ts(10,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/encoders/der.ts(21,68): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/encoders/der.ts(27,10): error TS2393: Duplicate function implementation.
@@ -260,6 +267,7 @@ lib/asn1/encoders/der.ts(249,67): error TS2749: 'Buffer' refers to a value, but 
 lib/asn1/encoders/der.ts(249,85): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/encoders/der.ts(249,103): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/encoders/der.ts(271,77): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
+lib/asn1/encoders/der.ts(271,77): error TS4078: Parameter 'reporter' of exported function has or is using private name 'Reporter'.
 lib/asn1/encoders/der.ts(292,30): error TS2538: Type 'true' cannot be used as an index type.
 lib/asn1/encoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/encoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.

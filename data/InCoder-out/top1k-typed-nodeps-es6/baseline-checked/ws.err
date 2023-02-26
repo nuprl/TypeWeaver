@@ -607,8 +607,8 @@ lib/websocket.ts(482,14): error TS2339: Property '_socket' does not exist on typ
 lib/websocket.ts(483,12): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
 lib/websocket.ts(483,36): error TS2339: Property 'CLOSING' does not exist on type 'typeof WebSocket'.
 lib/websocket.ts(484,12): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
-lib/websocket.ts(604,21): error TS2339: Property 'addEventListener' does not exist on type 'WebSocket'.
-lib/websocket.ts(605,21): error TS2339: Property 'removeEventListener' does not exist on type 'WebSocket'.
+lib/websocket.ts(604,21): error TS2551: Property 'addEventListener' does not exist on type 'WebSocket'. Did you mean 'addListener'?
+lib/websocket.ts(605,21): error TS2551: Property 'removeEventListener' does not exist on type 'WebSocket'. Did you mean 'removeListener'?
 lib/websocket.ts(665,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/websocket.ts(667,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(675,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?

@@ -1,0 +1,19 @@
+declare const Hook: any;
+declare const HookCodeFactory: any;
+declare class SyncBailHookCodeFactory extends HookCodeFactory {
+    content({ onError, onResult, resultReturns, onDone, rethrowIfPossible }: {
+        onError: any;
+        onResult: any;
+        resultReturns: any;
+        onDone: any;
+        rethrowIfPossible: any;
+    }): any;
+}
+declare const factory: SyncBailHookCodeFactory;
+declare const TAP_ASYNC: () => never;
+declare const TAP_PROMISE: () => never;
+declare const COMPILE: (options: IOptions) => any;
+declare function SyncBailHook(args: any[], SyncBailHookArgs: any, name: any, string: any): any;
+declare namespace SyncBailHook {
+    var prototype: any;
+}

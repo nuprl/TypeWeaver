@@ -31,7 +31,7 @@ lib/ec.ts(188,14): error TS2339: Property 'y' does not exist on type 'Uint8Array
 lib/ec.ts(198,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
 lib/ec.ts(208,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
 lib/ec.ts(214,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
-lib/ec.ts(278,29): error TS2304: Cannot find name 'BigNumber'.
+lib/ec.ts(278,29): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 lib/ec.ts(278,29): error TS4078: Parameter 'k' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(306,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
@@ -74,6 +74,6 @@ lib/sec.ts(12,54): error TS2304: Cannot find name 'Point'.
 lib/sec.ts(12,54): error TS4078: Parameter 'n' of exported function has or is using private name 'Point'.
 lib/sec.ts(12,65): error TS2304: Cannot find name 'Point'.
 lib/sec.ts(12,65): error TS4078: Parameter 'h' of exported function has or is using private name 'Point'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18107,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18270,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18293,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 

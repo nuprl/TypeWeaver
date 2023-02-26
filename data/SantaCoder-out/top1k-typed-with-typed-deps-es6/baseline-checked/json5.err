@@ -2,6 +2,7 @@ build/package.ts(4,17): error TS2732: Cannot find module '../package.json'. Cons
 lib/cli.ts(4,17): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 lib/cli.ts(38,27): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(13,55): error TS2304: Cannot find name 'Reviver'.
+lib/parse.ts(13,55): error TS4078: Parameter 'reviver' of exported function has or is using private name 'Reviver'.
 lib/parse.ts(42,59): error TS2304: Cannot find name 'Reviver'.
 lib/parse.ts(133,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.

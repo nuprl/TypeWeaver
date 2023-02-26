@@ -1,5 +1,7 @@
 index.ts(19,25): error TS2304: Cannot find name 'Writable'.
+index.ts(19,25): error TS4078: Parameter 'writer' of exported function has or is using private name 'Writable'.
 index.ts(19,43): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(19,43): error TS4078: Parameter 'reader' of exported function has or is using private name 'Readable'.
 index.ts(38,12): error TS2339: Property 'writable' does not exist on type 'internal'.
 index.ts(39,12): error TS2339: Property 'readable' does not exist on type 'internal'.
 

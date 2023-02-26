@@ -55,5 +55,7 @@ benchmarks/template.ts(18,34): error TS2304: Cannot find name 'SyntheticEvent'.
 index.ts(29,32): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(41,10): error TS2300: Duplicate identifier 'EE'.
 index.ts(58,31): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+index.ts(58,31): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(80,30): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+index.ts(80,30): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 

@@ -1,4 +1,7 @@
-declare var Parser: any, Pipeline: any;
+declare var Parser: {
+    parseHeader: (header: Header) => any;
+    serializeParams: (name: String, params: Object) => string;
+}, Pipeline: any;
 declare var Extensions: () => void;
 declare var instance: {
     add: (ext: Extension) => void;

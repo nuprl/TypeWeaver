@@ -13,11 +13,12 @@ lib/des/des.ts(34,55): error TS2304: Cannot find name 'State'.
 lib/des/des.ts(34,68): error TS2304: Cannot find name 'Key'.
 lib/des/des.ts(92,51): error TS2304: Cannot find name 'IState'.
 lib/des/des.ts(118,51): error TS2304: Cannot find name 'IState'.
+lib/des/ede.ts(6,5): error TS2300: Duplicate identifier 'Cipher'.
 lib/des/ede.ts(10,20): error TS2339: Property 'length' does not exist on type 'number'.
 lib/des/ede.ts(12,16): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/des/ede.ts(13,16): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/des/ede.ts(14,16): error TS2339: Property 'slice' does not exist on type 'number'.
-lib/des/ede.ts(16,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/des/ede.ts(16,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/des/ede.ts(31,23): error TS2304: Cannot find name 'CipherCCMOption'.
 lib/des/ede.ts(31,23): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherCCMOption'.
 lib/des/ede.ts(41,39): error TS2304: Cannot find name 'EDEOption'.

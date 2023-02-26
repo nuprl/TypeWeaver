@@ -34,7 +34,7 @@ v8-compile-cache.ts(64,12): error TS2339: Property '_dirty' does not exist on ty
 v8-compile-cache.ts(65,19): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(70,17): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(75,39): error TS2345: Argument of type '{}' is not assignable to parameter of type 'readonly Uint8Array[]'.
-  Type '{}' is missing the following properties from type 'readonly Uint8Array[]': length, concat, join, slice, and 18 more.
+  Type '{}' is missing the following properties from type 'readonly Uint8Array[]': length, concat, join, slice, and 19 more.
 v8-compile-cache.ts(79,23): error TS2339: Property '_directory' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(80,29): error TS2339: Property '_lockFilename' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(87,29): error TS2339: Property '_blobFilename' does not exist on type 'FileSystemBlobStore'.
@@ -70,5 +70,5 @@ v8-compile-cache.ts(249,12): error TS2551: Property '_cacheStore' does not exist
 v8-compile-cache.ts(251,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(281,7): error TS2554: Expected 2 arguments, but got 1.
 v8-compile-cache.ts(282,7): error TS2554: Expected 2 arguments, but got 1.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18270,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 

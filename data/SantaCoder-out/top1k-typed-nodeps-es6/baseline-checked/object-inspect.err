@@ -7,6 +7,7 @@ example/inspect.ts(10,13): error TS2554: Expected 4 arguments, but got 1.
 index.ts(33,74): error TS2367: This comparison appears to be unintentional because the types 'string' and 'boolean' have no overlap.
 index.ts(39,8): error TS2339: Property '__proto__' does not exist on type 'undefined[]'.
 index.ts(72,53): error TS2304: Cannot find name 'InspectOptions'.
+index.ts(72,53): error TS4078: Parameter 'options' of exported function has or is using private name 'InspectOptions'.
 index.ts(126,55): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 index.ts(138,9): error TS2740: Type 'undefined[]' is missing the following properties from type 'Set<string>': add, clear, delete, has, and 2 more.
 index.ts(139,24): error TS2345: Argument of type 'Set<string>' is not assignable to parameter of type 'any[]'.

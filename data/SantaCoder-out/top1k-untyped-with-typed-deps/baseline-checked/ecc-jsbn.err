@@ -5,18 +5,30 @@ index.ts(52,24): error TS2339: Property 'P' does not exist on type 'string'.
 index.ts(53,19): error TS2339: Property 'P' does not exist on type 'string'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/ec.ts(26,30): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(26,30): error TS4078: Parameter 'q' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(26,44): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(26,44): error TS4078: Parameter 'x' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'number'.
 lib/ec.ts(49,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(49,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(56,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(56,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(67,24): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(67,24): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(94,27): error TS2749: 'ECCurveFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECCurveFp'?
+lib/ec.ts(94,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'ECCurveFp'.
 lib/ec.ts(94,41): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(94,41): error TS4078: Parameter 'x' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(94,55): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(94,55): error TS4078: Parameter 'y' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(94,69): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(94,69): error TS4078: Parameter 'z' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(127,31): error TS2304: Cannot find name 'PointFp'.
+lib/ec.ts(127,31): error TS4078: Parameter 'other' of exported function has or is using private name 'PointFp'.
 lib/ec.ts(160,24): error TS2304: Cannot find name 'PointFp'.
+lib/ec.ts(160,24): error TS4078: Parameter 'b' of exported function has or is using private name 'PointFp'.
 lib/ec.ts(278,29): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(278,29): error TS4078: Parameter 'k' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(306,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
@@ -27,8 +39,11 @@ lib/ec.ts(320,13): error TS2339: Property 'testBit' does not exist on type 'numb
 lib/ec.ts(344,10): error TS2300: Duplicate identifier 'ECCurveFp'.
 lib/ec.ts(348,19): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(364,31): error TS2304: Cannot find name 'CurveFp'.
+lib/ec.ts(364,31): error TS4078: Parameter 'other' of exported function has or is using private name 'CurveFp'.
 lib/ec.ts(375,35): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(375,35): error TS4078: Parameter 'x' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(383,35): error TS2304: Cannot find name 'Point'.
+lib/ec.ts(383,35): error TS4078: Parameter 'p' of exported function has or is using private name 'Point'.
 lib/ec.ts(438,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(446,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(457,60): error TS2304: Cannot find name 'BigNumber'.
@@ -46,9 +61,13 @@ lib/ec.ts(571,84): error TS2304: Cannot find name 'BigNumber'.
 lib/sec.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/sec.ts(6,7): error TS2300: Duplicate identifier 'ECCurveFp'.
 lib/sec.ts(12,32): error TS2304: Cannot find name 'ECCurve'.
+lib/sec.ts(12,32): error TS4078: Parameter 'curve' of exported function has or is using private name 'ECCurve'.
 lib/sec.ts(12,44): error TS2304: Cannot find name 'BigNumber'.
+lib/sec.ts(12,44): error TS4078: Parameter 'g' of exported function has or is using private name 'BigNumber'.
 lib/sec.ts(12,58): error TS2304: Cannot find name 'BigNumber'.
+lib/sec.ts(12,58): error TS4078: Parameter 'n' of exported function has or is using private name 'BigNumber'.
 lib/sec.ts(12,72): error TS2304: Cannot find name 'BigNumber'.
+lib/sec.ts(12,72): error TS4078: Parameter 'h' of exported function has or is using private name 'BigNumber'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18270,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18293,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 

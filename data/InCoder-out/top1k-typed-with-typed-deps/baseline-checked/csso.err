@@ -1,16 +1,16 @@
 .gh-pages/libs/base64.ts(2,11): error TS2502: 'global' is referenced directly or indirectly in its own type annotation.
 .gh-pages/libs/base64.ts(2,630): error TS2403: Subsequent variable declarations must have the same type.  Variable 'cc' must be of type 'any', but here has type 'number'.
 .gh-pages/libs/cssbeautify.ts(35,44): error TS2304: Cannot find name 'Options'.
-.gh-pages/libs/cssbeautify.ts(55,21): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(55,36): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(55,52): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(55,68): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(55,84): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(59,21): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-.gh-pages/libs/cssbeautify.ts(59,37): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(55,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(55,36): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(55,52): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(55,68): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(55,84): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(59,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(59,37): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 .gh-pages/libs/cssbeautify.ts(67,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 .gh-pages/libs/cssbeautify.ts(445,52): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-.gh-pages/libs/cssbeautify.ts(445,52): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+.gh-pages/libs/cssbeautify.ts(445,52): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 .gh-pages/libs/cssbeautify.ts(467,16): error TS2339: Property 'cssbeautify' does not exist on type 'Window & typeof globalThis'.
 .gh-pages/libs/diff.ts(38,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 .gh-pages/libs/diff.ts(38,14): error TS2304: Cannot find name 'A'.
@@ -139,15 +139,15 @@ lib/replace/AttributeSelector.ts(14,31): error TS4078: Parameter 'node' of expor
 lib/replace/Dimension.ts(33,19): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Dimension.ts(33,35): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Dimension.ts(35,10): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/replace/Dimension.ts(37,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/replace/Dimension.ts(37,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/replace/Dimension.ts(38,27): error TS2339: Property 'unit' does not exist on type 'Node'.
 lib/replace/Dimension.ts(57,14): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/Dimension.ts(59,23): error TS2339: Property 'loc' does not exist on type 'Node'.
 lib/replace/Number.ts(14,33): error TS2339: Property 'prev' does not exist on type 'number'.
 lib/replace/Number.ts(14,87): error TS2339: Property 'prev' does not exist on type 'number'.
 lib/replace/Number.ts(27,5): error TS2322: Type 'string' is not assignable to type 'number'.
-lib/replace/Number.ts(29,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/replace/Number.ts(29,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/replace/Number.ts(29,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/replace/Number.ts(29,25): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/replace/Number.ts(30,9): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/replace/Number.ts(39,10): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Number.ts(39,18): error TS2554: Expected 2 arguments, but got 1.
@@ -172,7 +172,7 @@ lib/replace/color.ts(243,18): error TS2339: Property 'length' does not exist on 
 lib/replace/color.ts(246,42): error TS2749: 'functionArgs' refers to a value, but is being used as a type here. Did you mean 'typeof functionArgs'?
 lib/replace/color.ts(246,64): error TS2503: Cannot find namespace 'functionArgs'.
 lib/replace/color.ts(246,91): error TS2749: 'rgb' refers to a value, but is being used as a type here. Did you mean 'typeof rgb'?
-lib/replace/color.ts(324,37): error TS2339: Property 'value' does not exist on type 'number'.
+lib/replace/color.ts(324,37): error TS2551: Property 'value' does not exist on type 'number'. Did you mean 'valueOf'?
 lib/replace/color.ts(326,21): error TS2339: Property 'type' does not exist on type 'number'.
 lib/replace/color.ts(356,53): error TS2304: Cannot find name 'Item'.
 lib/replace/color.ts(356,53): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.

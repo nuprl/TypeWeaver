@@ -1,15 +1,16 @@
 lib/CodeNode.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'getNumberOfLines'.
 lib/CodeNode.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getUnfinishedLine'.
 lib/CodeNode.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'CodeNode'.
-lib/CodeNode.ts(12,8): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(16,28): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(20,15): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(24,39): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(27,69): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(35,70): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(45,8): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(49,33): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
-lib/CodeNode.ts(59,9): error TS2339: Property 'generatedCode' does not exist on type 'CodeNode'.
+lib/CodeNode.ts(12,8): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(16,28): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(20,15): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(24,39): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(27,69): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(35,70): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(45,8): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(49,33): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(59,9): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
+lib/CodeNode.ts(59,36): error TS2551: Property 'generatedCode' does not exist on type 'CodeNode'. Did you mean 'getGeneratedCode'?
 lib/MappingsContext.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'MappingsContext'.
 lib/MappingsContext.ts(9,8): error TS2339: Property 'sourcesIndices' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(10,8): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
@@ -28,39 +29,39 @@ lib/SingleLineNode.ts(8,7): error TS2451: Cannot redeclare block-scoped variable
 lib/SingleLineNode.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getUnfinishedLine'.
 lib/SingleLineNode.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'LINE_MAPPING'.
 lib/SingleLineNode.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'SingleLineNode'.
-lib/SingleLineNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(16,8): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(19,8): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(20,8): error TS2339: Property '_numberOfLines' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(20,47): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(20,47): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(21,8): error TS2339: Property '_endsWithNewLine' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(25,34): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(25,34): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(25,54): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(25,67): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(25,88): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(29,15): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(33,12): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(29,15): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
+lib/SingleLineNode.ts(33,12): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(35,22): error TS2339: Property '_numberOfLines' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(36,55): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(36,68): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(41,37): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(44,46): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(45,100): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(61,33): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(45,100): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
+lib/SingleLineNode.ts(61,33): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(62,49): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(62,62): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(62,83): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(73,11): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(74,9): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(75,12): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(76,10): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(76,10): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(77,10): error TS2339: Property '_numberOfLines' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(78,10): error TS2339: Property '_endsWithNewLine' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(80,19): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(81,10): error TS2339: Property '_endsWithNewLine' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(82,10): error TS2339: Property '_numberOfLines' does not exist on type 'SingleLineNode'.
-lib/SingleLineNode.ts(84,32): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
+lib/SingleLineNode.ts(84,32): error TS2551: Property 'generatedCode' does not exist on type 'SingleLineNode'. Did you mean 'getGeneratedCode'?
 lib/SingleLineNode.ts(84,78): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(84,91): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(84,112): error TS2339: Property 'line' does not exist on type 'SingleLineNode'.
@@ -93,6 +94,7 @@ lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(66,39): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'ISyntaxNode'.
+lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(97,23): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
@@ -105,44 +107,44 @@ lib/SourceNode.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'ge
 lib/SourceNode.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getUnfinishedLine'.
 lib/SourceNode.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'LINE_MAPPING'.
 lib/SourceNode.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'SourceNode'.
-lib/SourceNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(16,8): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(19,8): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(20,8): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(20,47): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(20,47): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(21,8): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(25,30): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(25,30): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(25,50): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(25,63): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(25,84): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(29,15): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(33,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(29,15): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
+lib/SourceNode.ts(33,8): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(34,8): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(35,8): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(39,12): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(39,12): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(41,22): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(42,55): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(42,68): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(47,37): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(50,46): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(51,100): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(51,100): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(70,26): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(71,28): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(71,28): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(80,56): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(80,69): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(99,11): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(100,9): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(101,9): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(101,29): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(102,9): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(102,9): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(103,9): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(104,9): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(111,11): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(112,9): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(113,9): error TS2339: Property 'startingLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(113,29): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
-lib/SourceNode.ts(122,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
+lib/SourceNode.ts(122,8): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
 lib/SourceNode.ts(123,8): error TS2339: Property '_numberOfLines' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(124,8): error TS2339: Property '_endsWithNewLine' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(129,7): error TS2451: Cannot redeclare block-scoped variable 'SingleLineNode'.
@@ -163,6 +165,7 @@ lib/fromStringWithSourceMap.ts(33,36): error TS2304: Cannot find name 'SourceCod
 lib/fromStringWithSourceMap.ts(33,57): error TS2304: Cannot find name 'SourceCode'.
 lib/fromStringWithSourceMap.ts(33,86): error TS2304: Cannot find name 'SourceCode'.
 lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'IInplaceReplaceSupport'.
+lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
 lib/fromStringWithSourceMap.ts(68,35): error TS2304: Cannot find name 'Mapping'.
 lib/fromStringWithSourceMap.ts(68,51): error TS2304: Cannot find name 'Line'.
 lib/fromStringWithSourceMap.ts(68,66): error TS2304: Cannot find name 'Ignore'.

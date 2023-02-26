@@ -1,0 +1,15 @@
+export declare const URL: any;
+export declare const URLSearchParams: any;
+export declare const parseURL: any;
+export declare const basicURLParse: any;
+export declare const serializeURL: any;
+export declare const serializePath: any;
+export declare const serializeHost: any;
+export declare const serializeInteger: any;
+export declare const serializeURLOrigin: any;
+export declare const setTheUsername: any;
+export declare const setThePassword: any;
+export declare const cannotHaveAUsernamePasswordPort: any;
+export declare const hasAnOpaquePath: any;
+export declare const percentDecodeString: (input: string) => Uint8Array;
+export declare const percentDecodeBytes: (input: string) => Uint8Array;

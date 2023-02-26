@@ -1,0 +1,54 @@
+/// <reference types="node" />
+/// <reference types="node" />
+import Stream from 'stream';
+declare const MAYBE_EMIT_END: unique symbol;
+declare const READ: unique symbol;
+declare const FLUSH: unique symbol;
+declare const FLUSHCHUNK: unique symbol;
+declare const RESUME: unique symbol;
+declare const BUFFERPUSH: unique symbol;
+declare const BUFFERSHIFT: unique symbol;
+declare const EMITDATA: unique symbol;
+declare const EMITEND: unique symbol;
+declare const EMITEND2: unique symbol;
+export default class Minipass extends Stream {
+    constructor(options: any);
+    get bufferLength(): any;
+    get encoding(): any;
+    set encoding(enc: any);
+    setEncoding(enc: any): void;
+    get objectMode(): any;
+    set objectMode(om: any);
+    get ['async'](): any;
+    set ['async'](a: any);
+    write(chunk: any, encoding: any, cb: any): any;
+    read(n: any): any;
+    [READ](n: any, chunk: any): any;
+    end(chunk: any, encoding: any, cb: any): this;
+    [RESUME](): void;
+    resume(): void;
+    pause(): void;
+    get destroyed(): any;
+    get flowing(): any;
+    get paused(): any;
+    [BUFFERPUSH](chunk: any): void;
+    [BUFFERSHIFT](): any;
+    [FLUSH](noDrain: any): void;
+    [FLUSHCHUNK](chunk: any): any;
+    pipe(dest: any, opts: any): any;
+    unpipe(dest: any): void;
+    addListener(ev: any, fn: any): this;
+    on(ev: any, fn: any): this;
+    get emittedEnd(): any;
+    [MAYBE_EMIT_END](): void;
+    emit(ev: any, data: any, ...extra: any[]): boolean | void | Promise<void>;
+    [EMITDATA](data: any): boolean;
+    [EMITEND](): void;
+    [EMITEND2](): boolean;
+    collect(): Promise<any[]>;
+    concat(): Promise<string | Buffer>;
+    promise(): Promise<unknown>;
+    destroy(er: any): this;
+    static isStream(s: any): boolean;
+}
+export {};

@@ -13,7 +13,7 @@ scripts/fetch-apache.ts(66,10): error TS2393: Duplicate function implementation.
 scripts/fetch-apache.ts(66,49): error TS2304: Cannot find name 'Extension'.
 scripts/fetch-apache.ts(79,10): error TS2393: Duplicate function implementation.
 scripts/fetch-apache.ts(95,10): error TS2393: Duplicate function implementation.
-scripts/fetch-apache.ts(95,49): error TS2304: Cannot find name 'RequestCallback'.
+scripts/fetch-apache.ts(95,49): error TS2552: Cannot find name 'RequestCallback'. Did you mean 'IdleRequestCallback'?
 scripts/fetch-apache.ts(96,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
 scripts/fetch-iana.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
 scripts/fetch-iana.ts(94,70): error TS2304: Cannot find name 'Extension'.
@@ -27,8 +27,8 @@ scripts/fetch-iana.ts(181,47): error TS2345: Argument of type 'Buffer' is not as
 scripts/fetch-iana.ts(183,58): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(191,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
 scripts/fetch-iana.ts(192,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
-scripts/fetch-iana.ts(198,7): error TS2367: This condition will always return 'false' since the types 'string[]' and 'string' have no overlap.
-scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input
+scripts/fetch-iana.ts(198,7): error TS2367: This comparison appears to be unintentional because the types 'string[]' and 'string' have no overlap.
+scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input, 0
 scripts/fetch-iana.ts(207,52): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(211,43): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(219,38): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
@@ -39,7 +39,7 @@ scripts/fetch-iana.ts(236,12): error TS2393: Duplicate function implementation.
 scripts/fetch-iana.ts(248,35): error TS2304: Cannot find name 'Row'.
 scripts/fetch-iana.ts(286,40): error TS2304: Cannot find name 'ring'.
 scripts/fetch-iana.ts(286,55): error TS2304: Cannot find name 'ring'.
-scripts/fetch-iana.ts(302,49): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+scripts/fetch-iana.ts(302,49): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 scripts/fetch-iana.ts(331,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(331,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(336,36): error TS2304: Cannot find name 'ny'.
@@ -65,6 +65,6 @@ scripts/fetch-nginx.ts(60,10): error TS2393: Duplicate function implementation.
 scripts/fetch-nginx.ts(60,49): error TS2304: Cannot find name 'Extension'.
 scripts/fetch-nginx.ts(73,10): error TS2393: Duplicate function implementation.
 scripts/fetch-nginx.ts(89,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(89,49): error TS2304: Cannot find name 'RequestCallback'.
-scripts/fetch-nginx.ts(90,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
+scripts/fetch-nginx.ts(89,49): error TS2552: Cannot find name 'RequestCallback'. Did you mean 'IdleRequestCallback'?
+scripts/fetch-nginx.ts(90,44): error TS2304: Cannot find name 'esponse'.
 

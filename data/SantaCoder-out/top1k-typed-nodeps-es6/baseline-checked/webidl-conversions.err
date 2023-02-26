@@ -1,8 +1,10 @@
 lib/index.ts(3,69): error TS2304: Cannot find name 'IExceptionOptions'.
+lib/index.ts(3,69): error TS4078: Parameter 'options' of exported function has or is using private name 'IExceptionOptions'.
 lib/index.ts(5,43): error TS2339: Property 'name' does not exist on type 'string'.
 lib/index.ts(7,14): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 lib/index.ts(10,43): error TS2304: Cannot find name 'ParseOptions'.
+lib/index.ts(10,43): error TS4078: Parameter 'options' of exported function has or is using private name 'ParseOptions'.
 lib/index.ts(12,25): error TS2345: Argument of type 'TypeErrorConstructor' is not assignable to parameter of type 'string'.
 lib/index.ts(79,17): error TS2339: Property 'enforceRange' does not exist on type '{}'.
 lib/index.ts(81,29): error TS2345: Argument of type 'TypeErrorConstructor' is not assignable to parameter of type 'string'.

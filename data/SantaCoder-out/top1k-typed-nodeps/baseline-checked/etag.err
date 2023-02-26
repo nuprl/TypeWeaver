@@ -18,9 +18,12 @@ benchmark/stats.ts(48,44): error TS2304: Cannot find name 'CycleEvent'.
 index.ts(21,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 index.ts(29,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(39,29): error TS2304: Cannot find name 'Entity'.
+index.ts(39,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 index.ts(47,6): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 index.ts(70,24): error TS2304: Cannot find name 'Entity'.
+index.ts(70,24): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 index.ts(70,41): error TS2304: Cannot find name 'EtagOptions'.
+index.ts(70,41): error TS4078: Parameter 'options' of exported function has or is using private name 'EtagOptions'.
 index.ts(127,20): error TS2339: Property 'mtime' does not exist on type 'string'.
 index.ts(128,19): error TS2339: Property 'size' does not exist on type 'string'.
 ../../../../node_modules/@types/node/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.

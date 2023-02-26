@@ -542,13 +542,69 @@ dist/js-yaml.ts(331,23): error TS1005: ')' expected.
 dist/js-yaml.ts(334,9): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(337,5): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(343,3): error TS1128: Declaration or statement expected.
+dist/js-yaml.ts(346,33): error TS4078: Parameter 'definition' of exported function has or is using private name 'SchemaDefinition'.
+dist/js-yaml.ts(1145,33): error TS4078: Parameter 'c' of exported function has or is using private name 'umber'.
+dist/js-yaml.ts(1227,27): error TS4078: Parameter 'input' of exported function has or is using private name 'TokenStream'.
+dist/js-yaml.ts(1227,50): error TS4078: Parameter 'options' of exported function has or is using private name 'StateOptions'.
+dist/js-yaml.ts(1268,33): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1282,30): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1286,32): error TS4078: Parameter 'state' of exported function has or is using private name 'CompilerState'.
+dist/js-yaml.ts(1362,34): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1384,33): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1384,54): error TS4078: Parameter 'destination' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1384,70): error TS4078: Parameter 'source' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1474,33): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1495,39): error TS4078: Parameter 'state' of exported function has or is using private name 'LexerState'.
+dist/js-yaml.ts(1536,41): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1560,36): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1569,35): error TS4078: Parameter 'state' of exported function has or is using private name 'ParseState'.
+dist/js-yaml.ts(1569,91): error TS4078: Parameter 'withinFlowCollection' of exported function has or is using private name 'FlowCollection'.
+dist/js-yaml.ts(1678,42): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1723,42): error TS4078: Parameter 'state' of exported function has or is using private name 'ParserState'.
+dist/js-yaml.ts(1802,38): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(1914,35): error TS4078: Parameter 'state' of exported function has or is using private name 'ParserState'.
+dist/js-yaml.ts(2057,37): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2127,36): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2304,35): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2404,38): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2431,29): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2461,31): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2461,75): error TS4078: Parameter 'nodeContext' of exported function has or is using private name 'NodeContext'.
+dist/js-yaml.ts(2640,32): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2791,29): error TS4078: Parameter 'input' of exported function has or is using private name 'InputStream'.
+dist/js-yaml.ts(2791,86): error TS4078: Parameter 'options' of exported function has or is using private name 'AsyncIteratorOptions'.
+dist/js-yaml.ts(2809,35): error TS4078: Parameter 'input' of exported function has or is using private name 'Readable'.
+dist/js-yaml.ts(2809,55): error TS4078: Parameter 'options' of exported function has or is using private name 'LoadOptions'.
+dist/js-yaml.ts(2890,36): error TS4078: Parameter 'schema' of exported function has or is using private name 'Schema'.
+dist/js-yaml.ts(2890,50): error TS4078: Parameter 'map' of exported function has or is using private name 'StyleMap'.
+dist/js-yaml.ts(2942,27): error TS4078: Parameter 'options' of exported function has or is using private name 'StateOptions'.
+dist/js-yaml.ts(2995,36): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(2999,41): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3074,32): error TS4078: Parameter 'c' of exported function has or is using private name 'SafeFirst'.
+dist/js-yaml.ts(3222,31): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3389,37): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3389,69): error TS4078: Parameter 'object' of exported function has or is using private name 'FlowSequence'.
+dist/js-yaml.ts(3417,38): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3417,70): error TS4078: Parameter 'object' of exported function has or is using private name 'BlockSequence'.
+dist/js-yaml.ts(3454,36): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3454,68): error TS4078: Parameter 'object' of exported function has or is using private name 'FlowMapping'.
+dist/js-yaml.ts(3500,37): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3500,69): error TS4078: Parameter 'object' of exported function has or is using private name 'BlockMapping'.
+dist/js-yaml.ts(3578,30): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3624,29): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+dist/js-yaml.ts(3624,74): error TS4078: Parameter 'block' of exported function has or is using private name 'Block'.
+dist/js-yaml.ts(3731,56): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
 dist/js-yaml.ts(3874,1): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(3874,2): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(3874,3): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(3874,4): error TS1128: Declaration or statement expected.
+lib/common.ts(4,29): error TS4078: Parameter 'subject' of exported function has or is using private name 'Subject'.
 lib/schema.ts(32,35): error TS1138: Parameter declaration expected.
 lib/schema.ts(32,42): error TS1005: ',' expected.
 lib/schema.ts(32,48): error TS1005: ',' expected.
 lib/schema.ts(32,52): error TS1005: ',' expected.
 lib/schema.ts(32,54): error TS1109: Expression expected.
+lib/schema.ts(62,29): error TS4078: Parameter 'definition' of exported function has or is using private name 'SchemaDefinition'.
+lib/snippet.ts(35,28): error TS4078: Parameter 'mark' of exported function has or is using private name 'Mark'.
+lib/snippet.ts(35,44): error TS4078: Parameter 'options' of exported function has or is using private name 'SnippetOptions'.
 

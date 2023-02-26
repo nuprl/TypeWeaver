@@ -55,6 +55,7 @@ examples/server-stats/index.ts(3,7): error TS2451: Cannot redeclare block-scoped
 examples/server-stats/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 examples/server-stats/index.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'WebSocketServer'.
 examples/server-stats/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'app'.
+examples/server-stats/index.ts(10,29): error TS2339: Property 'join' does not exist on type '""'.
 examples/server-stats/index.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'server'.
 examples/server-stats/index.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
 examples/ssl.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'https'.
@@ -108,6 +109,7 @@ lib/event-target.ts(157,63): error TS2339: Property 'data' does not exist on typ
 lib/event-target.ts(176,7): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
 lib/event-target.ts(236,17): error TS2339: Property 'once' does not exist on type '{}'.
 lib/extension.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
+lib/extension.ts(27,10): error TS2393: Duplicate function implementation.
 lib/extension.ts(27,10): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/extension.ts(41,19): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
 lib/extension.ts(118,42): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
@@ -331,9 +333,9 @@ lib/stream.ts(140,25): error TS2339: Property 'resume' does not exist on type 'W
 lib/stream.ts(145,10): error TS2339: Property 'once' does not exist on type 'WebSocket'.
 lib/stream.ts(151,20): error TS2554: Expected 1 arguments, but got 2.
 lib/subprotocol.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
+lib/subprotocol.ts(12,10): error TS2393: Duplicate function implementation.
 lib/subprotocol.ts(12,10): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/subprotocol.ts(12,24): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
-lib/subprotocol.ts(12,24): error TS4078: Parameter 'header' of exported function has or is using private name 'Header'.
 lib/validation.ts(15,7): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
 lib/validation.ts(33,10): error TS2451: Cannot redeclare block-scoped variable 'isValidStatusCode'.
 lib/websocket-server.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
@@ -438,25 +440,25 @@ lib/websocket.ts(1091,20): error TS2551: Property '_bufferedAmount' does not exi
 lib/websocket.ts(1210,25): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 lib/websocket.ts(1210,25): error TS4078: Parameter 'stream' of exported function has or is using private name 'Readable'.
 lib/websocket.ts(1295,10): error TS2393: Duplicate function implementation.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3630,11): error TS2300: Duplicate identifier 'CloseEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3639,13): error TS2300: Duplicate identifier 'CloseEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5000,11): error TS2300: Duplicate identifier 'ErrorEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5008,13): error TS2300: Duplicate identifier 'ErrorEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5014,11): error TS2300: Duplicate identifier 'Event'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5056,13): error TS2300: Duplicate identifier 'Event'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5120,11): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5143,13): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(9684,11): error TS2300: Duplicate identifier 'MessageEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(9699,13): error TS2300: Duplicate identifier 'MessageEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14341,11): error TS2451: Cannot redeclare block-scoped variable 'URL'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14358,13): error TS2451: Cannot redeclare block-scoped variable 'URL'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16541,11): error TS2300: Duplicate identifier 'WebSocket'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16541,11): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16580,13): error TS2300: Duplicate identifier 'WebSocket'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16580,13): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18102,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18103,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18104,18): error TS2451: Cannot redeclare block-scoped variable 'removeEventListener'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18105,18): error TS2451: Cannot redeclare block-scoped variable 'removeEventListener'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3767,11): error TS2300: Duplicate identifier 'CloseEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3776,13): error TS2300: Duplicate identifier 'CloseEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5170,11): error TS2300: Duplicate identifier 'ErrorEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5178,13): error TS2300: Duplicate identifier 'ErrorEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5184,11): error TS2300: Duplicate identifier 'Event'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5227,13): error TS2300: Duplicate identifier 'Event'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5291,11): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5314,13): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(9741,11): error TS2300: Duplicate identifier 'MessageEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(9756,13): error TS2300: Duplicate identifier 'MessageEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(14499,11): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(14516,13): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(16703,11): error TS2300: Duplicate identifier 'WebSocket'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(16703,11): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(16742,13): error TS2300: Duplicate identifier 'WebSocket'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(16742,13): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18270,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18288,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18289,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18290,18): error TS2451: Cannot redeclare block-scoped variable 'removeEventListener'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18291,18): error TS2451: Cannot redeclare block-scoped variable 'removeEventListener'.
 

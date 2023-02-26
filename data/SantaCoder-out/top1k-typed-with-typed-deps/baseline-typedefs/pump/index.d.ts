@@ -1,0 +1,12 @@
+declare var once: any;
+declare var eos: any;
+declare var fs: any;
+declare var noop: () => void;
+declare var ancient: boolean;
+declare var isFn: (fn: Function) => boolean;
+declare var isFS: (stream: Readable) => boolean;
+declare var isRequest: (stream: Readable) => boolean;
+declare var destroyer: (stream: Readable, reading: boolean, writing: boolean, callback: any) => (err: Error) => any;
+declare var call: (fn: any) => void;
+declare var pipe: (from: Observable<T>, to: Observable<T>) => any;
+declare var pump: () => any;

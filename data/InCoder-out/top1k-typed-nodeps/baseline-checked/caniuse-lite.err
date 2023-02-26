@@ -8,12 +8,12 @@ commit.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
 consumer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'features'.
 copy-mdn.ts(8,49): error TS2304: Cannot find name 'BCDBrowser'.
 copy-mdn.ts(8,49): error TS4078: Parameter 'bcdBrowser' of exported function has or is using private name 'BCDBrowser'.
-copy-mdn.ts(40,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+copy-mdn.ts(40,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 copy-mdn.ts(44,56): error TS2339: Property 'includes' does not exist on type 'never'.
 copy-mdn.ts(45,33): error TS2339: Property 'version_added' does not exist on type 'never'.
 copy-mdn.ts(49,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 copy-mdn.ts(49,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-copy-mdn.ts(56,45): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+copy-mdn.ts(56,45): error TS2367: This comparison appears to be unintentional because the types 'number' and 'boolean' have no overlap.
 copy-mdn.ts(59,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 copy-mdn.ts(59,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 copy-mdn.ts(75,19): error TS2339: Property 'spec_url' does not exist on type 'number'.

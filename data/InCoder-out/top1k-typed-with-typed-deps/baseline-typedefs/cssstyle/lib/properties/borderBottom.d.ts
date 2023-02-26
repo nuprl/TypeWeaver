@@ -1,7 +1,9 @@
 declare var shorthandSetter: any;
 declare var shorthandGetter: any;
 declare var shorthand_for: {
-    'border-left-width': any;
-    'border-left-style': any;
-    'border-left-color': any;
+    'background-color': any;
+    'background-image': any;
+    'background-repeat': any;
+    'background-attachment': any;
+    'background-position': any;
 };

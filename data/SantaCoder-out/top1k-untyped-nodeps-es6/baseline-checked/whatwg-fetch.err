@@ -1,7 +1,9 @@
 fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
 fetch.ts(162,25): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 fetch.ts(339,32): error TS2552: Cannot find name 'IRequest'. Did you mean 'Request'?
+fetch.ts(339,32): error TS4078: Parameter 'input' of exported function has or is using private name 'IRequest'.
 fetch.ts(339,51): error TS2552: Cannot find name 'IRequestOptions'. Did you mean 'IdleRequestOptions'?
+fetch.ts(339,51): error TS4078: Parameter 'options' of exported function has or is using private name 'IRequestOptions'.
 fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
 fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
 fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
@@ -18,7 +20,9 @@ fetch.ts(411,14): error TS2345: Argument of type '(bytes: Uint8Array) => void' i
 fetch.ts(413,27): error TS2339: Property 'split' does not exist on type 'Uint8Array'.
 fetch.ts(423,17): error TS2554: Expected 1 arguments, but got 0.
 fetch.ts(448,50): error TS2304: Cannot find name 'AxiosRequestConfig'.
+fetch.ts(448,50): error TS4078: Parameter 'options' of exported function has or is using private name 'AxiosRequestConfig'.
 fetch.ts(506,44): error TS2304: Cannot find name 'FetchInit'.
+fetch.ts(506,44): error TS4078: Parameter 'init' of exported function has or is using private name 'FetchInit'.
 fetch.ts(526,15): error TS2339: Property 'url' does not exist on type '{ status: number; statusText: string; headers: any; }'.
 fetch.ts(527,57): error TS2339: Property 'responseText' does not exist on type 'never'.
 

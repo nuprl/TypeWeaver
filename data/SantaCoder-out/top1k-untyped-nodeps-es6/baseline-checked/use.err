@@ -8,5 +8,7 @@ gulpfile.ts(4,19): error TS2307: Cannot find module 'gulp-mocha' or its correspo
 gulpfile.ts(5,22): error TS2307: Cannot find module 'gulp-istanbul' or its corresponding type declarations.
 gulpfile.ts(6,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.
 index.ts(10,35): error TS2503: Cannot find namespace 'Express'.
+index.ts(10,35): error TS4078: Parameter 'app' of exported function has or is using private name 'Express'.
 index.ts(10,65): error TS2304: Cannot find name 'IOptions'.
+index.ts(10,65): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 

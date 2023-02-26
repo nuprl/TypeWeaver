@@ -13,7 +13,7 @@ bench/impls/minipass-current-async.ts(4,13): error TS2339: Property 'async' does
 bench/impls/push-through.ts(5,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(6,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(7,10): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
-bench/impls/push-through.ts(8,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(8,10): error TS2551: Property 'ended' does not exist on type 'PushThrough'. Did you mean 'end'?
 bench/impls/push-through.ts(9,10): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(10,10): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(17,14): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
@@ -29,11 +29,11 @@ bench/impls/push-through.ts(60,33): error TS2339: Property 'dests' does not exis
 bench/impls/push-through.ts(62,16): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(62,30): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(66,14): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
-bench/impls/push-through.ts(67,14): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(67,14): error TS2551: Property 'ended' does not exist on type 'PushThrough'. Did you mean 'end'?
 bench/impls/push-through.ts(67,28): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(68,28): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(76,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
-bench/impls/push-through.ts(80,14): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(80,14): error TS2551: Property 'ended' does not exist on type 'PushThrough'. Did you mean 'end'?
 bench/impls/push-through.ts(83,15): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(83,36): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(84,12): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
@@ -41,7 +41,7 @@ bench/impls/push-through.ts(87,29): error TS2339: Property 'dests' does not exis
 bench/impls/push-through.ts(89,12): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(89,26): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(91,18): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
-bench/impls/push-through.ts(95,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
+bench/impls/push-through.ts(95,10): error TS2551: Property 'ended' does not exist on type 'PushThrough'. Did you mean 'end'?
 bench/impls/through2.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'through2'.
 bench/impls/through2.ts(5,3): error TS2304: Cannot find name 's'.
 bench/impls/through2.ts(7,5): error TS2304: Cannot find name 's'.

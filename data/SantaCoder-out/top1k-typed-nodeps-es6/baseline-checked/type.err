@@ -2,6 +2,7 @@ array-like/ensure.ts(7,16): error TS2554: Expected 1 arguments, but got 2.
 array/ensure.ts(18,59): error TS2554: Expected 1 arguments, but got 2.
 array/is.ts(17,7): error TS2304: Cannot find name 'hasOwnProperty'.
 ensure.ts(14,115): error TS2304: Cannot find name 'ValidationDatum'.
+ensure.ts(14,115): error TS4078: Parameter 'validationDatum1' of exported function has or is using private name 'ValidationDatum'.
 error/is.ts(18,16): error TS2339: Property 'name' does not exist on type 'string'.
 error/is.ts(20,20): error TS2339: Property 'message' does not exist on type 'string'.
 finite/coerce.ts(6,2): error TS2322: Type 'string' is not assignable to type 'number'.
@@ -10,8 +11,11 @@ function/is.ts(8,7): error TS2304: Cannot find name 'hasOwnProperty'.
 iterable/ensure.ts(17,17): error TS2554: Expected 1 arguments, but got 2.
 iterable/ensure.ts(20,59): error TS2554: Expected 1 arguments, but got 2.
 lib/ensure/min.ts(5,61): error TS2304: Cannot find name 'IOptions'.
+lib/ensure/min.ts(5,61): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 lib/resolve-error-message.ts(6,74): error TS2304: Cannot find name 'InputOptions'.
+lib/resolve-error-message.ts(6,74): error TS4078: Parameter 'inputOptions' of exported function has or is using private name 'InputOptions'.
 lib/resolve-exception.ts(6,79): error TS2304: Cannot find name 'InputOptions'.
+lib/resolve-exception.ts(6,79): error TS4078: Parameter 'inputOptions' of exported function has or is using private name 'InputOptions'.
 map/is.ts(14,20): error TS2339: Property 'set' does not exist on type 'true'.
 map/is.ts(15,20): error TS2339: Property 'get' does not exist on type 'true'.
 map/is.ts(16,20): error TS2339: Property 'has' does not exist on type 'true'.

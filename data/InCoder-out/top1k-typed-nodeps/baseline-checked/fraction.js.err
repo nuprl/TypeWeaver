@@ -2,11 +2,21 @@ bigfraction.ts(45,16): error TS2739: Type '(n: number) => number' is missing the
 bigfraction.ts(68,18): error TS2345: Argument of type 'BigInt' is not assignable to parameter of type 'string | number | bigint | boolean'.
 bigfraction.ts(72,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(72,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(78,9): error TS2367: This condition will always return 'false' since the types 'number' and 'bigint' have no overlap.
+bigfraction.ts(78,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'bigint' have no overlap.
 bigfraction.ts(104,14): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(105,9): error TS2365: Operator '/=' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(106,17): error TS2538: Type 'bigint' cannot be used as an index type.
 bigfraction.ts(106,31): error TS2538: Type 'bigint' cannot be used as an index type.
+bigfraction.ts(136,18): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(136,31): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(137,20): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(138,20): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(139,20): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(140,22): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(141,23): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(142,20): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(143,18): error TS18047: 'p1' is possibly 'null'.
+bigfraction.ts(144,22): error TS18047: 'p1' is possibly 'null'.
 bigfraction.ts(145,18): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 bigfraction.ts(189,15): error TS2322: Type 'number' is not assignable to type 'bigint'.
 bigfraction.ts(190,15): error TS2322: Type 'number' is not assignable to type 'bigint'.
@@ -46,7 +56,7 @@ bigfraction.ts(311,12): error TS2365: Operator '%' cannot be applied to types 'n
 bigfraction.ts(312,7): error TS2365: Operator '/=' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(315,12): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(316,7): error TS2365: Operator '/=' cannot be applied to types 'number' and 'bigint'.
-bigfraction.ts(319,9): error TS2367: This condition will always return 'false' since the types 'number' and 'bigint' have no overlap.
+bigfraction.ts(319,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'bigint' have no overlap.
 bigfraction.ts(327,15): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(331,13): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(342,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'BigInt'.
@@ -71,7 +81,7 @@ bigfraction.ts(471,24): error TS2749: 'Fraction' refers to a value, but is being
 bigfraction.ts(471,38): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 bigfraction.ts(475,9): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(497,63): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
-bigfraction.ts(501,11): error TS2367: This condition will always return 'false' since the types 'number' and 'bigint' have no overlap.
+bigfraction.ts(501,11): error TS2367: This comparison appears to be unintentional because the types 'number' and 'bigint' have no overlap.
 bigfraction.ts(520,9): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(536,30): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(536,55): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
@@ -156,6 +166,16 @@ fraction.min.ts(19,3): error TS2339: Property 'Fraction' does not exist on type 
 fraction.min.ts(19,16): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'number'.
 fraction.ts(58,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 fraction.ts(61,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+fraction.ts(136,24): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(136,37): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(137,19): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(138,19): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(139,26): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(140,21): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(141,29): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(142,19): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(143,24): error TS18047: 'p1' is possibly 'null'.
+fraction.ts(144,21): error TS18047: 'p1' is possibly 'null'.
 fraction.ts(213,20): error TS2339: Property 'match' does not exist on type 'never'.
 fraction.ts(225,19): error TS2339: Property 'length' does not exist on type 'number'.
 fraction.ts(226,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.

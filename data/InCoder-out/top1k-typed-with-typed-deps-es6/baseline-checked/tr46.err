@@ -23,7 +23,9 @@ index.ts(175,51): error TS2304: Cannot find name 'Options'.
 scripts/generateMappingTable.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/generateMappingTable.ts(6,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/generateRegexes.ts(29,21): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(29,21): error TS4078: Parameter 'strings' of exported function has or is using private name 'tring'.
 scripts/generateRegexes.ts(29,40): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(29,40): error TS4078: Parameter 'regs' of exported function has or is using private name 'tring'.
 scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
   Type 'TemplateStringsArray' is missing the following properties from type 'tring[]': pop, push, reverse, shift, and 6 more.
 scripts/generateRegexes.ts(50,26): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.

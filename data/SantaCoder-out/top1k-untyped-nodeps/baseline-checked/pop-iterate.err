@@ -6,6 +6,7 @@ object-iterator.ts(7,10): error TS2300: Duplicate identifier 'ObjectIterator'.
 pop-iterate.ts(3,5): error TS2300: Duplicate identifier 'ArrayIterator'.
 pop-iterate.ts(4,5): error TS2300: Duplicate identifier 'ObjectIterator'.
 pop-iterate.ts(7,37): error TS2304: Cannot find name 'T'.
+pop-iterate.ts(7,37): error TS4078: Parameter 'iterable' of exported function has or is using private name 'T'.
 pop-iterate.ts(9,16): error TS2304: Cannot find name 'empty'.
 pop-iterate.ts(12,32): error TS2339: Property 'next' does not exist on type 'Iterable<T>'.
 pop-iterate.ts(14,32): error TS2339: Property 'iterate' does not exist on type 'Iterable<T>'.

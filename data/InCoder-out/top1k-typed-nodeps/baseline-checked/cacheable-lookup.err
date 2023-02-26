@@ -5,7 +5,7 @@ source/index.ts(94,8): error TS2339: Property 'maxTtl' does not exist on type 'C
 source/index.ts(95,8): error TS2339: Property 'errorTtl' does not exist on type 'CacheableLookup'.
 source/index.ts(97,8): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
 source/index.ts(98,8): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
-source/index.ts(99,8): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(99,8): error TS2551: Property '_dnsLookup' does not exist on type 'CacheableLookup'. Did you mean '_lookup'?
 source/index.ts(100,8): error TS2339: Property 'stats' does not exist on type 'CacheableLookup'.
 source/index.ts(105,12): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
 source/index.ts(106,9): error TS2551: Property '_resolve4' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
@@ -48,16 +48,16 @@ source/index.ts(234,10): error TS2339: Property 'stats' does not exist on type '
 source/index.ts(238,18): error TS2339: Property '_pending' does not exist on type 'CacheableLookup'.
 source/index.ts(253,30): error TS2551: Property '_resolve4' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
 source/index.ts(254,30): error TS2551: Property '_resolve6' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
-source/index.ts(301,31): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
-source/index.ts(302,31): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(301,31): error TS2551: Property '_dnsLookup' does not exist on type 'CacheableLookup'. Did you mean '_lookup'?
+source/index.ts(302,31): error TS2551: Property '_dnsLookup' does not exist on type 'CacheableLookup'. Did you mean '_lookup'?
 source/index.ts(321,12): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
 source/index.ts(322,39): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
 source/index.ts(326,16): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
 source/index.ts(330,17): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
 source/index.ts(336,24): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
 source/index.ts(343,12): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
-source/index.ts(344,16): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
-source/index.ts(349,42): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(344,16): error TS2551: Property '_dnsLookup' does not exist on type 'CacheableLookup'. Did you mean '_lookup'?
+source/index.ts(349,42): error TS2551: Property '_dnsLookup' does not exist on type 'CacheableLookup'. Did you mean '_lookup'?
 source/index.ts(352,43): error TS2339: Property 'fallbackDuration' does not exist on type 'CacheableLookup'.
 source/index.ts(354,10): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
 source/index.ts(358,54): error TS2339: Property 'errorTtl' does not exist on type 'CacheableLookup'.

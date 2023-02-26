@@ -85,6 +85,7 @@ lib/extension.ts(3,10): error TS2614: Module '"./validation"' has no exported me
 lib/extension.ts(80,48): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/extension.ts(160,27): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/extension.ts(179,29): error TS2304: Cannot find name 'IExtensionInfo'.
+lib/extension.ts(179,29): error TS4078: Parameter 'extensions' of exported function has or is using private name 'IExtensionInfo'.
 lib/limiter.ts(19,12): error TS2339: Property 'pending' does not exist on type 'Limiter'.
 lib/limiter.ts(22,10): error TS2339: Property 'concurrency' does not exist on type 'Limiter'.
 lib/limiter.ts(23,10): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
@@ -419,6 +420,7 @@ lib/sender.ts(470,12): error TS2339: Property '_socket' does not exist on type '
 lib/sender.ts(472,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/stream.ts(11,28): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 lib/stream.ts(49,56): error TS2304: Cannot find name 'WebSocketStreamOptions'.
+lib/stream.ts(49,56): error TS4078: Parameter 'options' of exported function has or is using private name 'WebSocketStreamOptions'.
 lib/stream.ts(60,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 lib/stream.ts(62,27): error TS2339: Property '_readableState' does not exist on type 'Duplex'.
 lib/stream.ts(64,32): error TS2339: Property 'pause' does not exist on type 'WebSocket'.

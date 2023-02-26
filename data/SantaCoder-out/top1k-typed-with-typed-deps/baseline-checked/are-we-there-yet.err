@@ -1,5 +1,6 @@
 lib/tracker-group.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'TrackerBase' must be of type '(name: string) => void', but here has type 'any'.
 lib/tracker-group.ts(19,38): error TS2749: 'TrackerGroup' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerGroup'?
+lib/tracker-group.ts(19,38): error TS4078: Parameter 'trackerGroup' of exported function has or is using private name 'TrackerGroup'.
 lib/tracker-group.ts(20,63): error TS2749: 'Tracker' refers to a value, but is being used as a type here. Did you mean 'typeof Tracker'?
 lib/tracker-group.ts(39,50): error TS2304: Cannot find name 'Unit'.
 lib/tracker-group.ts(82,64): error TS2304: Cannot find name 'Todo'.
@@ -9,6 +10,7 @@ lib/tracker-group.ts(110,25): error TS2339: Property 'debug' does not exist on t
 lib/tracker-stream.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'TrackerStream' must be of type 'any', but here has type '(name: string, size: number, options: IFileOptions) => void'.
 lib/tracker-stream.ts(7,85): error TS2552: Cannot find name 'IFileOptions'. Did you mean 'IIRFilterOptions'?
 lib/tracker-stream.ts(16,41): error TS2304: Cannot find name 'Observable'.
+lib/tracker-stream.ts(16,41): error TS4078: Parameter 'trackerStream' of exported function has or is using private name 'Observable'.
 lib/tracker-stream.ts(17,46): error TS2304: Cannot find name 'CompletionItem'.
 lib/tracker-stream.ts(17,73): error TS2304: Cannot find name 'CompletionItemTracker'.
 lib/tracker.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'TrackerBase' must be of type '(name: string) => void', but here has type 'any'.

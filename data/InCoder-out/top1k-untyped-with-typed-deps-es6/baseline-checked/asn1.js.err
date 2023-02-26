@@ -28,6 +28,7 @@ lib/asn1/base/node.ts(3,10): error TS2459: Module '"../base/reporter"' declares 
 lib/asn1/base/node.ts(4,10): error TS2459: Module '"../base/buffer"' declares 'EncoderBuffer' locally, but it is not exported.
 lib/asn1/base/node.ts(5,10): error TS2459: Module '"../base/buffer"' declares 'DecoderBuffer' locally, but it is not exported.
 lib/asn1/base/node.ts(32,20): error TS2304: Cannot find name 'Encoder'.
+lib/asn1/base/node.ts(32,20): error TS4078: Parameter 'enc' of exported function has or is using private name 'Encoder'.
 lib/asn1/base/node.ts(36,9): error TS2339: Property 'name' does not exist on type '{}'.
 lib/asn1/base/node.ts(37,9): error TS2339: Property 'enc' does not exist on type '{}'.
 lib/asn1/base/node.ts(39,9): error TS2339: Property 'parent' does not exist on type '{}'.
@@ -123,6 +124,7 @@ lib/asn1/base/reporter.ts(80,38): error TS2554: Expected 2 arguments, but got 3.
 lib/asn1/decoders/der.ts(5,10): error TS2459: Module '"../base/buffer"' declares 'DecoderBuffer' locally, but it is not exported.
 lib/asn1/decoders/der.ts(9,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
 lib/asn1/decoders/der.ts(11,29): error TS2304: Cannot find name 'Entity'.
+lib/asn1/decoders/der.ts(11,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 lib/asn1/decoders/der.ts(17,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/decoders/der.ts(32,26): error TS2749: 'DERNode' refers to a value, but is being used as a type here. Did you mean 'typeof DERNode'?
 lib/asn1/decoders/der.ts(38,14): error TS2339: Property 'isEmpty' does not exist on type 'Buffer'.
@@ -199,8 +201,10 @@ lib/asn1/decoders/der.ts(306,11): error TS2339: Property 'isError' does not exis
 lib/asn1/decoders/der.ts(322,16): error TS2339: Property 'error' does not exist on type 'Buffer'.
 lib/asn1/decoders/der.ts(328,13): error TS2339: Property 'isError' does not exist on type 'Buffer'.
 lib/asn1/decoders/pem.ts(7,29): error TS2304: Cannot find name 'Entity'.
+lib/asn1/decoders/pem.ts(7,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 lib/asn1/encoders/der.ts(8,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
 lib/asn1/encoders/der.ts(10,29): error TS2304: Cannot find name 'Entity'.
+lib/asn1/encoders/der.ts(10,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/encoders/der.ts(21,69): error TS2304: Cannot find name 'Reporter'.
 lib/asn1/encoders/der.ts(27,26): error TS2749: 'DERNode' refers to a value, but is being used as a type here. Did you mean 'typeof DERNode'?
@@ -219,6 +223,7 @@ lib/asn1/encoders/der.ts(275,5): error TS2322: Type 'string' is not assignable t
 lib/asn1/encoders/der.ts(276,12): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(277,5): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/asn1/encoders/pem.ts(6,29): error TS2304: Cannot find name 'Entity'.
+lib/asn1/encoders/pem.ts(6,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 rfc/2560/index.ts(3,18): error TS2307: Cannot find module 'asn1.js' or its corresponding type declarations.
 rfc/2560/index.ts(4,21): error TS2307: Cannot find module 'asn1.js-rfc5280' or its corresponding type declarations.
 rfc/5280/index.ts(3,18): error TS2307: Cannot find module 'asn1.js' or its corresponding type declarations.

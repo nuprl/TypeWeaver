@@ -1,0 +1,25 @@
+declare function percentDecodeBytes(input: string): Uint8Array;
+declare function percentDecodeString(input: string): Uint8Array;
+declare function isC0ControlPercentEncode(c: number): boolean;
+declare function isFragmentPercentEncode(c: string): boolean;
+declare function isQueryPercentEncode(c: string): boolean;
+declare function isSpecialQueryPercentEncode(c: string): boolean;
+declare function isPathPercentEncode(c: string): boolean;
+declare function isUserinfoPercentEncode(c: string): boolean;
+declare function isURLEncodedPercentEncode(c: string): boolean;
+declare function utf8PercentEncodeCodePoint(codePoint: number, percentEncodePredicate: any): string;
+declare function utf8PercentEncodeString(input: string, percentEncodePredicate: any, spaceAsPlus: boolean, boolean: any): string;
+declare const _default: {
+    isC0ControlPercentEncode: typeof isC0ControlPercentEncode;
+    isFragmentPercentEncode: typeof isFragmentPercentEncode;
+    isQueryPercentEncode: typeof isQueryPercentEncode;
+    isSpecialQueryPercentEncode: typeof isSpecialQueryPercentEncode;
+    isPathPercentEncode: typeof isPathPercentEncode;
+    isUserinfoPercentEncode: typeof isUserinfoPercentEncode;
+    isURLEncodedPercentEncode: typeof isURLEncodedPercentEncode;
+    percentDecodeString: typeof percentDecodeString;
+    percentDecodeBytes: typeof percentDecodeBytes;
+    utf8PercentEncodeString: typeof utf8PercentEncodeString;
+    utf8PercentEncodeCodePoint: typeof utf8PercentEncodeCodePoint;
+};
+export default _default;

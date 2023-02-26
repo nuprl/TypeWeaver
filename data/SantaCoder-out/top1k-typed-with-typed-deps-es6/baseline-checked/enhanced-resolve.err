@@ -348,6 +348,7 @@ lib/SymlinkPlugin.ts(22,8): error TS2339: Property 'target' does not exist on ty
 lib/SymlinkPlugin.ts(30,43): error TS2339: Property 'target' does not exist on type 'SymlinkPlugin'.
 lib/SymlinkPlugin.ts(33,18): error TS2339: Property 'source' does not exist on type 'SymlinkPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS2304: Cannot find name 'IFileSystem'.
+lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS4078: Parameter 'fs' of exported function has or is using private name 'IFileSystem'.
 lib/TryNextPlugin.ts(18,8): error TS2339: Property 'source' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(19,8): error TS2339: Property 'message' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(20,8): error TS2339: Property 'target' does not exist on type 'TryNextPlugin'.
@@ -376,7 +377,9 @@ lib/UseFilePlugin.ts(30,18): error TS2339: Property 'source' does not exist on t
 lib/UseFilePlugin.ts(32,55): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
 lib/UseFilePlugin.ts(38,48): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
 lib/getInnerRequest.ts(8,51): error TS2552: Cannot find name 'IRequestResolver'. Did you mean 'RequireResolve'?
+lib/getInnerRequest.ts(8,51): error TS4078: Parameter 'resolver' of exported function has or is using private name 'IRequestResolver'.
 lib/getInnerRequest.ts(8,83): error TS2552: Cannot find name 'IRequest'. Did you mean 'Request'?
+lib/getInnerRequest.ts(8,83): error TS4078: Parameter 'request' of exported function has or is using private name 'IRequest'.
 lib/index.ts(10,8): error TS1192: Module '"lib/ResolverFactory"' has no default export.
 lib/index.ts(31,27): error TS2304: Cannot find name 'ResolveContext'.
 lib/index.ts(31,66): error TS2304: Cannot find name 'ResolvedRequest'.

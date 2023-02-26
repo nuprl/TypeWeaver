@@ -1,9 +1,10 @@
 bin.ts(2,5): error TS2300: Duplicate identifier 'colorSupport'.
-browser.ts(3,10): error TS2393: Duplicate function implementation.
+browser.ts(3,10): error TS2300: Duplicate identifier 'colorSupport'.
 browser.ts(3,32): error TS2304: Cannot find name 'ColorOptions'.
+browser.ts(3,32): error TS4078: Parameter 'options' of exported function has or is using private name 'ColorOptions'.
 browser.ts(3,52): error TS2304: Cannot find name 'ColorObject'.
+browser.ts(3,52): error TS4078: Parameter 'obj' of exported function has or is using private name 'ColorObject'.
 index.ts(39,10): error TS2300: Duplicate identifier 'colorSupport'.
-index.ts(39,10): error TS2393: Duplicate function implementation.
 index.ts(45,22): error TS2339: Property 'level' does not exist on type 'Object'.
 index.ts(46,21): error TS2339: Property 'level' does not exist on type 'Object'.
 index.ts(58,7): error TS2339: Property 'level' does not exist on type 'Object'.

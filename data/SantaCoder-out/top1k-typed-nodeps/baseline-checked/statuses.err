@@ -10,6 +10,7 @@ index.ts(109,52): error TS2339: Property 'message' does not exist on type 'strin
 index.ts(113,17): error TS2339: Property 'message' does not exist on type 'string'.
 scripts/build.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'codes' must be of type 'any', but here has type '{}'.
 scripts/build.ts(24,23): error TS2304: Cannot find name 'Database'.
+scripts/build.ts(24,23): error TS4078: Parameter 'db' of exported function has or is using private name 'Database'.
 scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(11,64): error TS2304: Cannot find name 'AxiosResponse'.
 scripts/fetch-iana.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.

@@ -12,7 +12,7 @@ build/packer/base2.ts(92,14): error TS2339: Property 'init' does not exist on ty
 build/packer/base2.ts(92,27): error TS2339: Property 'init' does not exist on type '{ (): any; ancestor: any; base: () => number; prototype: any; "#implements": any[]; "#implemented_by": any[]; }'.
 build/packer/base2.ts(112,11): error TS2554: Expected 2 arguments, but got 1.
 build/packer/base2.ts(114,31): error TS2304: Cannot find name 'Class'.
-build/packer/base2.ts(120,45): error TS2304: Cannot find name 'Block'.
+build/packer/base2.ts(120,45): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
 build/packer/base2.ts(144,35): error TS2304: Cannot find name 'private'.
 build/packer/base2.ts(144,54): error TS2304: Cannot find name 'public'.
 build/packer/base2.ts(151,45): error TS2554: Expected 1 arguments, but got 3.
@@ -44,7 +44,7 @@ build/packer/base2.ts(356,20): error TS2304: Cannot find name 'StopIteration'.
 build/packer/base2.ts(361,42): error TS2694: Namespace '_' has no exported member 'Matcher'.
 build/packer/base2.ts(374,76): error TS2304: Cannot find name 'Item'.
 build/packer/base2.ts(376,24): error TS2304: Cannot find name 'Item'.
-build/packer/base2.ts(381,41): error TS2304: Cannot find name 'Block'.
+build/packer/base2.ts(381,41): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
 build/packer/base2.ts(383,5): error TS2554: Expected 4 arguments, but got 2.
 build/packer/base2.ts(390,44): error TS2304: Cannot find name 'ny'.
 build/packer/base2.ts(395,41): error TS2503: Cannot find namespace 'Blockly'.
@@ -107,7 +107,7 @@ build/packer/base2.ts(907,24): error TS2538: Type 'Object' cannot be used as an 
 build/packer/base2.ts(911,20): error TS2538: Type 'Object' cannot be used as an index type.
 build/packer/base2.ts(923,13): error TS2339: Property 'ancestor' does not exist on type 'Function'.
 build/packer/base2.ts(924,13): error TS2339: Property 'ancestor' does not exist on type 'Function'.
-build/packer/base2.ts(925,9): error TS2367: This condition will always return 'false' since the types 'Function' and 'Node' have no overlap.
+build/packer/base2.ts(925,9): error TS2367: This comparison appears to be unintentional because the types 'Function' and 'Node' have no overlap.
 build/packer/base2.ts(946,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(955,12): error TS2304: Cannot find name 'StopIteration'.
 build/packer/base2.ts(956,3): error TS2304: Cannot find name 'StopIteration'.
@@ -216,8 +216,8 @@ build/packer/packer.ts(48,13): error TS2304: Cannot find name 'Collection'.
 build/packer/packer.ts(59,26): error TS2304: Cannot find name 'Sorter'.
 build/packer/packer.ts(62,21): error TS2339: Property 'count' does not exist on type 'string'.
 build/packer/packer.ts(62,35): error TS2339: Property 'count' does not exist on type 'string'.
-build/packer/packer.ts(62,52): error TS2339: Property 'index' does not exist on type 'string'.
-build/packer/packer.ts(62,66): error TS2339: Property 'index' does not exist on type 'string'.
+build/packer/packer.ts(62,52): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
+build/packer/packer.ts(62,66): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
 build/packer/packer.ts(67,33): error TS2304: Cannot find name 'K'.
 build/packer/packer.ts(68,23): error TS2304: Cannot find name 'K'.
 build/packer/packer.ts(81,15): error TS2304: Cannot find name 'Base'.
@@ -355,7 +355,7 @@ src/nwsapi.ts(339,135): error TS2345: Argument of type 'number' is not assignabl
 src/nwsapi.ts(340,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(341,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(342,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-src/nwsapi.ts(371,28): error TS2339: Property 'all' does not exist on type 'Object'.
+src/nwsapi.ts(371,32): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(374,18): error TS2304: Cannot find name 'i'.
 src/nwsapi.ts(374,25): error TS2304: Cannot find name 'l'.
 src/nwsapi.ts(374,52): error TS2304: Cannot find name 'l'.
@@ -372,7 +372,7 @@ src/nwsapi.ts(440,7): error TS2740: Type 'RegExp' is missing the following prope
 src/nwsapi.ts(442,18): error TS2339: Property 'test' does not exist on type 'String'.
 src/nwsapi.ts(450,41): error TS2304: Cannot find name 'AnimationDirection'.
 src/nwsapi.ts(493,41): error TS2304: Cannot find name 'AnimationDirection'.
-src/nwsapi.ts(541,15): error TS2339: Property 'contentType' does not exist on type 'Node'.
+src/nwsapi.ts(541,27): error TS2339: Property 'indexOf' does not exist on type 'unknown'.
 src/nwsapi.ts(542,15): error TS2339: Property 'createElement' does not exist on type 'Node'.
 src/nwsapi.ts(547,22): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 src/nwsapi.ts(570,28): error TS2339: Property 'DOMException' does not exist on type 'Window'.
@@ -420,7 +420,7 @@ src/nwsapi.ts(1342,28): error TS2345: Argument of type 'string[]' is not assigna
 src/nwsapi.ts(1343,9): error TS2322: Type 'string' is not assignable to type 'string[]'.
 src/nwsapi.ts(1343,29): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
 src/nwsapi.ts(1347,30): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLElement'.
-  Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 113 more.
+  Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 116 more.
 src/nwsapi.ts(1363,38): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 src/nwsapi.ts(1373,37): error TS2538: Type 'string[]' cannot be used as an index type.
 src/nwsapi.ts(1374,44): error TS2538: Type 'string[]' cannot be used as an index type.
@@ -436,7 +436,7 @@ src/nwsapi.ts(1414,9): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1418,22): error TS2538: Type 'string[]' cannot be used as an index type.
 src/nwsapi.ts(1420,42): error TS2538: Type 'string[]' cannot be used as an index type.
 src/nwsapi.ts(1429,32): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Document'.
-  Type 'HTMLElement' is missing the following properties from type 'Document': URL, alinkColor, all, anchors, and 91 more.
+  Type 'HTMLElement' is missing the following properties from type 'Document': URL, alinkColor, all, anchors, and 92 more.
 src/nwsapi.ts(1443,84): error TS2702: 'Document' only refers to a type, but is being used as a namespace here.
 src/nwsapi.ts(1450,41): error TS2538: Type 'string[]' cannot be used as an index type.
 src/nwsapi.ts(1486,9): error TS2554: Expected 2 arguments, but got 1.

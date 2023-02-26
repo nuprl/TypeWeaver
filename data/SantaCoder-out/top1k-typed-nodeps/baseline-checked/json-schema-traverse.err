@@ -6,13 +6,21 @@ index.ts(30,10): error TS2339: Property 'arrayKeywords' does not exist on type '
 index.ts(37,10): error TS2339: Property 'propsKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
 index.ts(45,10): error TS2339: Property 'skipKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
 index.ts(67,26): error TS2304: Cannot find name 'SchemaTraverseOptions'.
+index.ts(67,26): error TS4078: Parameter 'opts' of exported function has or is using private name 'SchemaTraverseOptions'.
 index.ts(67,54): error TS2304: Cannot find name 'SchemaTraverseCallback'.
+index.ts(67,54): error TS4078: Parameter 'pre' of exported function has or is using private name 'SchemaTraverseCallback'.
 index.ts(67,77): error TS2304: Cannot find name 'SchemaNode'.
+index.ts(67,77): error TS4078: Parameter 'pre' of exported function has or is using private name 'SchemaNode'.
 index.ts(67,96): error TS2304: Cannot find name 'SchemaNodeCallback'.
+index.ts(67,96): error TS4078: Parameter 'post' of exported function has or is using private name 'SchemaNodeCallback'.
 index.ts(67,115): error TS2304: Cannot find name 'SchemaNode'.
+index.ts(67,115): error TS4078: Parameter 'post' of exported function has or is using private name 'SchemaNode'.
 index.ts(67,136): error TS2304: Cannot find name 'SchemaNode'.
+index.ts(67,136): error TS4078: Parameter 'schema' of exported function has or is using private name 'SchemaNode'.
 index.ts(67,177): error TS2304: Cannot find name 'Schema'.
+index.ts(67,177): error TS4078: Parameter 'rootSchema' of exported function has or is using private name 'Schema'.
 index.ts(67,245): error TS2304: Cannot find name 'Schema'.
+index.ts(67,245): error TS4078: Parameter 'parentSchema' of exported function has or is using private name 'Schema'.
 index.ts(73,29): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
 index.ts(77,34): error TS2339: Property 'propsKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
 index.ts(80,134): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.

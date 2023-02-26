@@ -11,6 +11,7 @@ examples/custom-option-time-ago.ts(45,26): error TS2554: Expected 3 arguments, b
 lib/dashdash.ts(17,66): error TS2552: Cannot find name 'Match'. Did you mean 'Math'?
 lib/dashdash.ts(52,16): error TS2554: Expected 4 arguments, but got 1.
 lib/dashdash.ts(259,25): error TS2304: Cannot find name 'IParserConfig'.
+lib/dashdash.ts(259,25): error TS4078: Parameter 'config' of exported function has or is using private name 'IParserConfig'.
 lib/dashdash.ts(354,67): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(354,74): error TS2304: Cannot find name 'T'.
 lib/dashdash.ts(393,29): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
@@ -55,7 +56,11 @@ lib/dashdash.ts(986,28): error TS2339: Property 'argtypes' does not exist on typ
 lib/dashdash.ts(989,14): error TS2339: Property 'specExtra' does not exist on type 'string'.
 lib/dashdash.ts(990,36): error TS2339: Property 'specExtra' does not exist on type 'string'.
 lib/dashdash.ts(1000,31): error TS2304: Cannot find name 'ParserConfig'.
+lib/dashdash.ts(1000,31): error TS4078: Parameter 'config' of exported function has or is using private name 'ParserConfig'.
 lib/dashdash.ts(1011,25): error TS2304: Cannot find name 'IConfig'.
+lib/dashdash.ts(1011,25): error TS4078: Parameter 'config_' of exported function has or is using private name 'IConfig'.
 lib/dashdash.ts(1046,36): error TS2304: Cannot find name 'OptionType'.
+lib/dashdash.ts(1046,36): error TS4078: Parameter 'optionType' of exported function has or is using private name 'OptionType'.
 lib/dashdash.ts(1081,29): error TS2304: Cannot find name 'ICommandOption'.
+lib/dashdash.ts(1081,29): error TS4078: Parameter 'o' of exported function has or is using private name 'ICommandOption'.
 

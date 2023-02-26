@@ -1,10 +1,8 @@
 benchmark/code/kind-of.ts(1,5): error TS2300: Duplicate identifier 'typeOf'.
 benchmark/code/lib-type-of.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-type-of.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
-benchmark/code/lib-type-of.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/lib-typeof.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-typeof.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
-benchmark/code/lib-typeof.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/lib-typeof.ts(20,5): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/regex-exec.ts(3,39): error TS2304: Cannot find name 'mixed'.
 benchmark/code/regex-replace.ts(3,39): error TS2304: Cannot find name 'mixed'.
@@ -73,5 +71,5 @@ index.ts(101,21): error TS2339: Property 'throw' does not exist on type 'unknown
 index.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
 index.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
 index.ts(124,10): error TS2393: Duplicate function implementation.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(17967,18): error TS2300: Duplicate identifier 'toString'.
 

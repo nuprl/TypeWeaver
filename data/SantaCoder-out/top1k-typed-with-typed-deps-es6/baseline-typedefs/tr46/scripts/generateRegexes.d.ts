@@ -1,0 +1,36 @@
+declare const fs: any;
+declare const path: any;
+declare const regenerate: any;
+declare const unicodeVersion: any;
+declare const cp: {
+    Mark: any;
+    JT: any;
+    CombiningClassVirama: any;
+    L: any;
+    R: any;
+    AL: any;
+    EN: any;
+    ES: any;
+    ET: any;
+    AN: any;
+    CS: any;
+    NSM: any;
+    BN: any;
+    ON: any;
+};
+declare function r(strings: string[], ...regs: RegExp[]): string;
+declare const regexes: {
+    combiningMarks: string;
+    combiningClassVirama: string;
+    validZWNJ: string;
+    bidiDomain: string;
+    bidiS1LTR: string;
+    bidiS1RTL: string;
+    bidiS2: string;
+    bidiS3: string;
+    bidiS4EN: string;
+    bidiS4AN: string;
+    bidiS5: string;
+    bidiS6: string;
+};
+declare let out: string;

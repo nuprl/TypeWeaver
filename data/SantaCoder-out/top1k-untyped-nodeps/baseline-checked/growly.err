@@ -2,6 +2,7 @@ example/bakery.ts(18,78): error TS2304: Cannot find name 'Action'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
 lib/gntp.ts(15,35): error TS2552: Cannot find name 'GNTPOptions'. Did you mean 'GainOptions'?
+lib/gntp.ts(15,35): error TS4078: Parameter 'opts' of exported function has or is using private name 'GNTPOptions'.
 lib/gntp.ts(47,43): error TS2304: Cannot find name 'AxiosResponse'.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
 lib/gntp.ts(55,9): error TS2322: Type 'string[]' is not assignable to type 'string'.

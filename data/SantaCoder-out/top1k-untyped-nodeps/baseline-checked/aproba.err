@@ -1,6 +1,9 @@
 index.ts(20,29): error TS2304: Cannot find name 'Schema'.
+index.ts(20,29): error TS4078: Parameter 'schema' of exported function has or is using private name 'Schema'.
 index.ts(25,32): error TS2304: Cannot find name 'Schema'.
+index.ts(25,32): error TS4078: Parameter 'rawSchemas' of exported function has or is using private name 'Schema'.
 index.ts(25,48): error TS2304: Cannot find name 'SchemaArgs'.
+index.ts(25,48): error TS4078: Parameter 'args' of exported function has or is using private name 'SchemaArgs'.
 index.ts(26,55): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'number'.
 index.ts(27,48): error TS2554: Expected 1 arguments, but got 2.
 index.ts(28,42): error TS2554: Expected 1 arguments, but got 2.
@@ -17,6 +20,7 @@ index.ts(87,31): error TS2345: Argument of type 'number' is not assignable to pa
 index.ts(88,25): error TS2339: Property 'every' does not exist on type 'number'.
 index.ts(91,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(94,36): error TS2304: Cannot find name 'Schema'.
+index.ts(94,36): error TS4078: Parameter 'schema' of exported function has or is using private name 'Schema'.
 index.ts(95,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(101,7): error TS2339: Property 'code' does not exist on type 'Error'.
 

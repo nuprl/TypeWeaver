@@ -1,0 +1,28 @@
+export declare const Type: any;
+export declare const Schema: any;
+export declare const FAILSAFE_SCHEMA: any;
+export declare const JSON_SCHEMA: any;
+export declare const CORE_SCHEMA: any;
+export declare const DEFAULT_SCHEMA: any;
+export declare const load: any;
+export declare const loadAll: any;
+export declare const dump: any;
+export declare const YAMLException: any;
+export declare const types: {
+    binary: any;
+    float: any;
+    map: any;
+    null: any;
+    pairs: any;
+    set: any;
+    timestamp: any;
+    bool: any;
+    int: any;
+    merge: any;
+    omap: any;
+    seq: any;
+    str: any;
+};
+export declare const safeLoad: () => never;
+export declare const safeLoadAll: () => never;
+export declare const safeDump: () => never;

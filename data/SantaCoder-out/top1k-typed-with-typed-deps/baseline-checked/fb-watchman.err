@@ -44,6 +44,7 @@ watchman/node/bser/index.ts(571,13): error TS2554: Expected 1 arguments, but got
 watchman/node/example.ts(20,84): error TS2304: Cannot find name 'AxiosResponse'.
 watchman/node/example.ts(96,44): error TS2304: Cannot find name 'AxiosResponse'.
 watchman/node/index.ts(25,26): error TS2304: Cannot find name 'ClientOptions'.
+watchman/node/index.ts(25,26): error TS4078: Parameter 'options' of exported function has or is using private name 'ClientOptions'.
 watchman/node/index.ts(69,30): error TS2304: Cannot find name 'ICommand'.
 watchman/node/index.ts(89,11): error TS2322: Type 'string' is not assignable to type 'boolean'.
 watchman/node/index.ts(100,17): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.

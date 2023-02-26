@@ -9,8 +9,8 @@ index.ts(55,57): error TS2769: No overload matches this call.
   Overload 2 of 2, '(callback: VoidFunction): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'VoidFunction'.
       Type 'Function' provides no match for the signature '(): void'.
-index.ts(61,14): error TS2304: Cannot find name 'WebKitMutationObserver'.
-index.ts(61,71): error TS2304: Cannot find name 'WebKitMutationObserver'.
+index.ts(61,14): error TS2552: Cannot find name 'WebKitMutationObserver'. Did you mean 'MutationObserver'?
+index.ts(61,71): error TS2552: Cannot find name 'WebKitMutationObserver'. Did you mean 'MutationObserver'?
 index.ts(67,24): error TS2304: Cannot find name 'Callback'.
 index.ts(67,55): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callback: () => void): Immediate', gave the following error.

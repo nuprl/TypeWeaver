@@ -6,6 +6,7 @@ tslib.es6.ts(49,19): error TS2339: Property 'indexOf' does not exist on type 'nu
 tslib.es6.ts(57,55): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(57,92): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(62,56): error TS2304: Cannot find name 'Decorator'.
+tslib.es6.ts(62,56): error TS4078: Parameter 'decorator' of exported function has or is using private name 'Decorator'.
 tslib.es6.ts(67,55): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(67,95): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(73,35): error TS2304: Cannot find name 'T'.
@@ -23,7 +24,9 @@ tslib.es6.ts(191,42): error TS2345: Argument of type 'string' is not assignable 
 tslib.es6.ts(197,20): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(197,76): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(201,34): error TS2552: Cannot find name '__AsyncIterable'. Did you mean 'AsyncIterable'?
+tslib.es6.ts(201,34): error TS4078: Parameter 'o' of exported function has or is using private name '__AsyncIterable'.
 tslib.es6.ts(201,50): error TS2304: Cannot find name 'T'.
+tslib.es6.ts(201,50): error TS4078: Parameter 'o' of exported function has or is using private name 'T'.
 tslib.es6.ts(210,104): error TS2339: Property 'raw' does not exist on type 'string'.
 tslib.es6.ts(223,110): error TS2554: Expected 4 arguments, but got 3.
 tslib.es6.ts(233,9): error TS2367: This comparison appears to be unintentional because the types '"get"' and '"a"' have no overlap.
@@ -32,6 +35,7 @@ tslib.es6.ts(235,12): error TS2367: This comparison appears to be unintentional 
 tslib.es6.ts(235,31): error TS2367: This comparison appears to be unintentional because the types '"get"' and '"a"' have no overlap.
 tslib.es6.ts(235,85): error TS2339: Property 'get' does not exist on type 'string'.
 tslib.es6.ts(245,46): error TS2304: Cannot find name 'State'.
+tslib.es6.ts(245,46): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
 tslib.ts(41,21): error TS2552: Cannot find name 'IFactory'. Did you mean 'IDBFactory'?
 tslib.ts(43,16): error TS2304: Cannot find name 'define'.
 tslib.ts(43,41): error TS2304: Cannot find name 'define'.

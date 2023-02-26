@@ -29,6 +29,7 @@ index.ts(221,19): error TS2339: Property 'removeListeners' does not exist on typ
 index.ts(222,19): error TS2339: Property 'removeAllListeners' does not exist on type 'Emitter'.
 index.ts(223,19): error TS2339: Property 'removeEventListener' does not exist on type 'Emitter'.
 index.ts(230,51): error TS2304: Cannot find name 'EventEmitterListener'.
+index.ts(230,51): error TS4078: Parameter 'listeners' of exported function has or is using private name 'EventEmitterListener'.
 index.ts(247,16): error TS2345: Argument of type 'Emitter' is not assignable to parameter of type 'string'.
 index.ts(248,16): error TS2345: Argument of type 'Emitter' is not assignable to parameter of type 'string'.
 

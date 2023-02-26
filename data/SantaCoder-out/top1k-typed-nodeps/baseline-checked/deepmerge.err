@@ -1,6 +1,9 @@
 index.ts(7,61): error TS2304: Cannot find name 'CloneOptions'.
+index.ts(7,61): error TS4078: Parameter 'options' of exported function has or is using private name 'CloneOptions'.
 index.ts(13,63): error TS2304: Cannot find name 'MergeOptions'.
+index.ts(13,63): error TS4078: Parameter 'options' of exported function has or is using private name 'MergeOptions'.
 index.ts(19,49): error TS2304: Cannot find name 'MergeOptions'.
+index.ts(19,49): error TS4078: Parameter 'options' of exported function has or is using private name 'MergeOptions'.
 index.ts(29,49): error TS2769: No overload matches this call.
   Overload 1 of 2, '(predicate: (value: symbol, index: number, array: symbol[]) => value is symbol, thisArg?: any): symbol[]', gave the following error.
     Argument of type '(symbol: string) => any' is not assignable to parameter of type '(value: symbol, index: number, array: symbol[]) => value is symbol'.
@@ -20,7 +23,9 @@ index.ts(36,36): error TS2769: No overload matches this call.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
 index.ts(54,57): error TS2304: Cannot find name 'MergeOptions'.
+index.ts(54,57): error TS4078: Parameter 'options' of exported function has or is using private name 'MergeOptions'.
 index.ts(75,55): error TS2304: Cannot find name 'DeepMergeOptions'.
+index.ts(75,55): error TS4078: Parameter 'options' of exported function has or is using private name 'DeepMergeOptions'.
 index.ts(96,62): error TS2304: Cannot find name 'DeepMergeOptions'.
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.

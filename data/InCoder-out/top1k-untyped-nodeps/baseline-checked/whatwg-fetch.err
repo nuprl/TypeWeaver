@@ -1,7 +1,7 @@
 fetch.ts(49,30): error TS2304: Cannot find name 'ring'.
 fetch.ts(59,32): error TS2304: Cannot find name 'ring'.
 fetch.ts(70,25): error TS2339: Property 'shift' does not exist on type 'Iterable<any>'.
-fetch.ts(84,34): error TS2304: Cannot find name 'HeadersArg'.
+fetch.ts(84,34): error TS2552: Cannot find name 'HeadersArg'. Did you mean 'Headers'?
 fetch.ts(84,34): error TS4078: Parameter 'headers' of exported function has or is using private name 'HeadersArg'.
 fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
 fetch.ts(105,27): error TS2538: Type 'String' cannot be used as an index type.
@@ -36,6 +36,7 @@ fetch.ts(485,32): error TS2345: Argument of type 'Number' is not assignable to p
 fetch.ts(507,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
 fetch.ts(507,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
 fetch.ts(526,15): error TS2339: Property 'url' does not exist on type '{ status: number; statusText: string; headers: any; }'.
+fetch.ts(527,57): error TS2339: Property 'responseText' does not exist on type 'never'.
 fetch.ts(581,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 fetch.ts(581,64): error TS2538: Type 'String' cannot be used as an index type.

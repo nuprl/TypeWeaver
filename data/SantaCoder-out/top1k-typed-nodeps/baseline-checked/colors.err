@@ -60,5 +60,7 @@ lib/styles.ts(93,9): error TS2339: Property 'open' does not exist on type 'any[]
 lib/styles.ts(94,9): error TS2339: Property 'close' does not exist on type 'any[]'.
 lib/system/has-flag.ts(31,31): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/system/supports-colors.ts(58,32): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+lib/system/supports-colors.ts(58,32): error TS4078: Parameter 'stream' of exported function has or is using private name 'Readable'.
 lib/system/supports-colors.ts(142,34): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+lib/system/supports-colors.ts(142,34): error TS4078: Parameter 'stream' of exported function has or is using private name 'Readable'.
 

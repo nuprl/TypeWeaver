@@ -3,6 +3,7 @@ bench.ts(22,38): error TS2304: Cannot find name 'Deferred'.
 bench.ts(44,46): error TS2304: Cannot find name 'Deferred'.
 lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
 lib/abort.ts(9,23): error TS2304: Cannot find name 'State'.
+lib/abort.ts(9,23): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
 lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
 lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
 lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.

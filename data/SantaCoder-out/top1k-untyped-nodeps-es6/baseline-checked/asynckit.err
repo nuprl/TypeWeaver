@@ -3,6 +3,7 @@ bench.ts(24,38): error TS2304: Cannot find name 'Deferred'.
 bench.ts(37,32): error TS2304: Cannot find name 'Schema$Operation'.
 bench.ts(46,46): error TS2304: Cannot find name 'Deferred'.
 lib/abort.ts(9,23): error TS2304: Cannot find name 'State'.
+lib/abort.ts(9,23): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
 lib/iterate.ts(63,16): error TS2339: Property 'length' does not exist on type 'Iterator<any, any, undefined>'.
 lib/iterate.ts(65,15): error TS2349: This expression is not callable.
   Type 'Iterator<any, any, undefined>' has no call signatures.
@@ -12,6 +13,7 @@ lib/readable_asynckit.ts(13,20): error TS2339: Property 'super_' does not exist 
 lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: any[], iterator: any, callback: any) => any'.
 lib/readable_serial.ts(14,31): error TS2304: Cannot find name 'SerialList'.
+lib/readable_serial.ts(14,31): error TS4078: Parameter 'list' of exported function has or is using private name 'SerialList'.
 lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: SerialList, iterator: any, callback: any) => any'.
 lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.

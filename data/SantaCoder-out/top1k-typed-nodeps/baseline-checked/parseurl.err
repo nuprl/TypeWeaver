@@ -14,6 +14,9 @@ benchmark/slash.ts(49,44): error TS2304: Cannot find name 'CycleEvent'.
 benchmark/slash.ts(53,44): error TS2304: Cannot find name 'CycleEvent'.
 benchmark/slash.ts(63,10): error TS2393: Duplicate function implementation.
 index.ts(35,25): error TS2304: Cannot find name 'IncomingMessage'.
+index.ts(35,25): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
 index.ts(65,28): error TS2503: Cannot find namespace 'express'.
+index.ts(65,28): error TS4078: Parameter 'req' of exported function has or is using private name 'express'.
 index.ts(153,41): error TS2304: Cannot find name 'ParsedUrl'.
+index.ts(153,41): error TS4078: Parameter 'parsedUrl' of exported function has or is using private name 'ParsedUrl'.
 

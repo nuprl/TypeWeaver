@@ -22,6 +22,7 @@ index.ts(36,36): error TS2769: No overload matches this call.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
 index.ts(54,57): error TS2304: Cannot find name 'MergeOptions'.
 index.ts(75,55): error TS2304: Cannot find name 'DeepMergeOptions'.
+index.ts(75,55): error TS4078: Parameter 'options' of exported function has or is using private name 'DeepMergeOptions'.
 index.ts(96,62): error TS2304: Cannot find name 'DeepMergeOptions'.
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.

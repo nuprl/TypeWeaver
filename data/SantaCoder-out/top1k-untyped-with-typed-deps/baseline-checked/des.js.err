@@ -4,13 +4,16 @@ lib/des/cbc.ts(38,7): error TS2339: Property '_cbcInit' does not exist on type '
 lib/des/cbc.ts(43,7): error TS2339: Property '_update' does not exist on type '{}'.
 lib/des/cipher.ts(5,10): error TS2300: Duplicate identifier 'Cipher'.
 lib/des/cipher.ts(5,26): error TS2304: Cannot find name 'CipherOptions'.
+lib/des/cipher.ts(5,26): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherOptions'.
 lib/des/des.ts(7,5): error TS2300: Duplicate identifier 'Cipher'.
 lib/des/des.ts(14,23): error TS2552: Cannot find name 'DESOptions'. Did you mean 'DelayOptions'?
+lib/des/des.ts(14,23): error TS4078: Parameter 'options' of exported function has or is using private name 'DESOptions'.
 lib/des/des.ts(25,39): error TS2552: Cannot find name 'DESOptions'. Did you mean 'DelayOptions'?
 lib/des/des.ts(34,55): error TS2304: Cannot find name 'State'.
 lib/des/des.ts(92,51): error TS2304: Cannot find name 'CipherState'.
 lib/des/des.ts(118,51): error TS2304: Cannot find name 'CipherState'.
 lib/des/ede.ts(6,5): error TS2300: Duplicate identifier 'Cipher'.
 lib/des/ede.ts(31,23): error TS2304: Cannot find name 'CipherOptions'.
+lib/des/ede.ts(31,23): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherOptions'.
 lib/des/ede.ts(41,39): error TS2304: Cannot find name 'IOptions'.
 

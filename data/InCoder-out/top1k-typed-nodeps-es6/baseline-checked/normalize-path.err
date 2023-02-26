@@ -8,8 +8,8 @@ benchmark/code/node-path.ts(5,3): error TS2322: Type 'string' is not assignable 
 benchmark/code/node-path.ts(5,23): error TS2345: Argument of type 'File' is not assignable to parameter of type 'string'.
 benchmark/code/node-path.ts(9,13): error TS2339: Property 'replace' does not exist on type 'File'.
 benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
-benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+benchmark/code/while.ts(39,10): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+benchmark/code/while.ts(39,25): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 benchmark/index.ts(9,25): error TS2304: Cannot find name 'Stats'.
 index.ts(8,31): error TS2304: Cannot find name 'ring'.

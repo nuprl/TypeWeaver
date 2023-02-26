@@ -7,7 +7,7 @@ lib/DOMException-impl.ts(12,34): error TS2339: Property 'name' does not exist on
 scripts/generate.ts(3,25): error TS2307: Cannot find module 'webidl2js' or its corresponding type declarations.
 scripts/get-latest-platform-tests.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 webidl2js-wrapper.ts(2,26): error TS2307: Cannot find module './lib/DOMException.js' or its corresponding type declarations.
-webidl2js-wrapper.ts(7,27): error TS2339: Property 'Error' does not exist on type 'Window'.
+webidl2js-wrapper.ts(7,27): error TS2551: Property 'Error' does not exist on type 'Window'. Did you mean 'onerror'?
 webidl2js-wrapper.ts(12,38): error TS2339: Property 'DOMException' does not exist on type 'Window'.
-webidl2js-wrapper.ts(12,75): error TS2339: Property 'Error' does not exist on type 'Window'.
+webidl2js-wrapper.ts(12,75): error TS2551: Property 'Error' does not exist on type 'Window'. Did you mean 'onerror'?
 

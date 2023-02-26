@@ -1,1 +1,4 @@
-declare var CSSOM: {};
+declare var CSSOM: {
+    CSSRule: any;
+    CSSGroupingRule: any;
+};

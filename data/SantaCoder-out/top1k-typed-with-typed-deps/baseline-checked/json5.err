@@ -13,6 +13,7 @@ lib/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
 lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/parse.ts(13,57): error TS2304: Cannot find name 'Reviver'.
 lib/parse.ts(42,59): error TS2304: Cannot find name 'Reviver'.
+lib/parse.ts(42,59): error TS4078: Parameter 'reviver' of exported function has or is using private name 'Reviver'.
 lib/parse.ts(133,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(220,29): error TS2345: Argument of type '"punctuator"' is not assignable to parameter of type '"address"'.

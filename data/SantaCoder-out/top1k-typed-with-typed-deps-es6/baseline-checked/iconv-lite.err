@@ -1,3 +1,6 @@
+encodings/dbcs-codec.ts(22,34): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'DBCSCodecOptions'.
+encodings/internal.ts(25,38): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'ICodecOptions'.
+encodings/internal.ts(25,60): error TS4078: Parameter 'iconv' of exported function has or is using private name 'IIconv'.
 encodings/sbcs-data-generated.ts(118,20): error TS1002: Unterminated string literal.
 encodings/sbcs-data-generated.ts(119,1): error TS1127: Invalid character.
 encodings/sbcs-data-generated.ts(119,2): error TS1127: Invalid character.
@@ -1210,4 +1213,17 @@ encodings/sbcs-data-generated.ts(469,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(470,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(471,12): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(473,1): error TS1128: Declaration or statement expected.
+encodings/utf16.ts(79,35): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'ICodecOptions'.
+encodings/utf16.ts(79,57): error TS4078: Parameter 'iconv' of exported function has or is using private name 'IIconv'.
+encodings/utf32.ts(9,35): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'ICodecOptions'.
+encodings/utf32.ts(9,57): error TS4078: Parameter 'iconv' of exported function has or is using private name 'IIconv'.
+encodings/utf32.ts(197,34): error TS4078: Parameter 'options' of exported function has or is using private name 'IAutoCodecOptions'.
+encodings/utf32.ts(197,60): error TS4078: Parameter 'iconv' of exported function has or is using private name 'IIconv'.
+encodings/utf7.ts(135,38): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'IMapCodecOptions'.
+encodings/utf7.ts(135,63): error TS4078: Parameter 'iconv' of exported function has or is using private name 'IIconv'.
+lib/bom-handling.ts(6,37): error TS4078: Parameter 'encoder' of exported function has or is using private name 'EncodingEncoder'.
+lib/bom-handling.ts(6,63): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/bom-handling.ts(29,35): error TS4078: Parameter 'decoder' of exported function has or is using private name 'Decoder'.
+lib/bom-handling.ts(29,53): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/streams.ts(7,40): error TS4078: Parameter 'stream_module' of exported function has or is using private name 'StreamModule'.
 

@@ -4,7 +4,7 @@ lib/des/cbc.ts(38,7): error TS2339: Property '_cbcInit' does not exist on type '
 lib/des/cbc.ts(43,7): error TS2339: Property '_update' does not exist on type '{}'.
 lib/des/cipher.ts(5,26): error TS2304: Cannot find name 'CipherConstructorOptions'.
 lib/des/cipher.ts(5,26): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherConstructorOptions'.
-lib/des/des.ts(5,8): error TS1192: Module '"lib/des/utils"' has no default export.
+lib/des/des.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline/des.js/lib/des/utils"' has no default export.
 lib/des/des.ts(13,23): error TS2304: Cannot find name 'CipherCCMOption'.
 lib/des/des.ts(13,23): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherCCMOption'.
 lib/des/des.ts(24,39): error TS2552: Cannot find name 'DESOptions'. Did you mean 'DelayOptions'?
@@ -16,7 +16,7 @@ lib/des/ede.ts(9,20): error TS2339: Property 'length' does not exist on type 'nu
 lib/des/ede.ts(11,16): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/des/ede.ts(12,16): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/des/ede.ts(13,16): error TS2339: Property 'slice' does not exist on type 'number'.
-lib/des/ede.ts(15,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/des/ede.ts(15,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/des/ede.ts(30,23): error TS2304: Cannot find name 'CipherCCMOption'.
 lib/des/ede.ts(30,23): error TS4078: Parameter 'options' of exported function has or is using private name 'CipherCCMOption'.
 lib/des/ede.ts(40,39): error TS2304: Cannot find name 'EDEOption'.

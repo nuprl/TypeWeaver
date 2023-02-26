@@ -1,2 +1,13 @@
 declare var inspect: any;
-declare var obj: (number | ((n: number) => number))[];
+declare var obj: {
+    a: number;
+    b: number[];
+    c: any;
+    d: any;
+    e: {
+        regex: RegExp;
+        buf: any;
+        holes: string[];
+    };
+    now: Date;
+};

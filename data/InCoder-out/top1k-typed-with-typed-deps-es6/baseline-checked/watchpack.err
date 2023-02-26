@@ -1,4 +1,4 @@
-lib/DirectoryWatcher.ts(10,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
+lib/DirectoryWatcher.ts(10,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
 lib/DirectoryWatcher.ts(38,8): error TS2339: Property 'directoryWatcher' does not exist on type 'Watcher'.
 lib/DirectoryWatcher.ts(39,8): error TS2339: Property 'path' does not exist on type 'Watcher'.
 lib/DirectoryWatcher.ts(40,8): error TS2339: Property 'startTime' does not exist on type 'Watcher'.
@@ -12,11 +12,11 @@ lib/DirectoryWatcher.ts(69,8): error TS2339: Property 'directories' does not exi
 lib/DirectoryWatcher.ts(70,8): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(71,8): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(72,8): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(73,8): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(73,8): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(74,8): error TS2339: Property 'polledWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(80,8): error TS2339: Property 'timeout' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(81,8): error TS2339: Property 'initialScanRemoved' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(82,8): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(82,8): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(84,8): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(85,8): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(86,8): error TS2339: Property 'refs' does not exist on type 'DirectoryWatcher'.
@@ -38,7 +38,7 @@ lib/DirectoryWatcher.ts(122,25): error TS2339: Property 'watchers' does not exis
 lib/DirectoryWatcher.ts(131,12): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(132,9): error TS2339: Property 'initialScanRemoved' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(135,29): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(137,13): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(137,13): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(138,9): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(142,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(148,24): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
@@ -57,15 +57,15 @@ lib/DirectoryWatcher.ts(229,12): error TS2339: Property 'ignored' does not exist
 lib/DirectoryWatcher.ts(230,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(232,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(237,21): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(241,14): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(241,14): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(244,11): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(259,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(269,24): error TS2339: Property 'watcherManager' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(271,29): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(277,8): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(281,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(282,9): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(283,13): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(281,12): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
+lib/DirectoryWatcher.ts(282,9): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
+lib/DirectoryWatcher.ts(283,13): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(284,34): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(288,45): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(290,11): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
@@ -85,7 +85,7 @@ lib/DirectoryWatcher.ts(356,19): error TS2339: Property 'initialScan' does not e
 lib/DirectoryWatcher.ts(357,13): error TS2339: Property 'initialScanRemoved' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(359,15): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(364,10): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(365,32): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(365,32): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(368,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(376,12): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(386,35): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
@@ -140,9 +140,9 @@ lib/DirectoryWatcher.ts(546,13): error TS2551: Property 'closed' does not exist 
 lib/DirectoryWatcher.ts(547,20): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(548,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(555,11): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(556,11): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(556,11): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(558,35): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(560,41): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(560,41): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(569,15): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(570,12): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(571,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
@@ -155,11 +155,11 @@ lib/DirectoryWatcher.ts(592,11): error TS2339: Property 'scanAgain' does not exi
 lib/DirectoryWatcher.ts(597,15): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(598,11): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(599,11): error TS2339: Property 'initialScanRemoved' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(600,11): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(600,11): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(602,44): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(603,47): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(608,30): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/DirectoryWatcher.ts(609,41): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(609,41): error TS2551: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'. Did you mean 'onScanFinished'?
 lib/DirectoryWatcher.ts(618,15): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(619,12): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(620,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
@@ -169,14 +169,14 @@ lib/DirectoryWatcher.ts(645,26): error TS2345: Argument of type 'Date' is not as
 lib/DirectoryWatcher.ts(655,30): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(673,23): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(674,36): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(679,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(679,12): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(680,25): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(688,13): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(690,13): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(691,32): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(704,23): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(705,36): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(710,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(710,12): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(711,25): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(720,28): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(721,33): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
@@ -190,7 +190,7 @@ lib/DirectoryWatcher.ts(750,8): error TS2339: Property 'initialScan' does not ex
 lib/DirectoryWatcher.ts(751,12): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(752,9): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(753,9): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
-lib/DirectoryWatcher.ts(755,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(755,12): error TS2551: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'. Did you mean 'setNestedWatching'?
 lib/DirectoryWatcher.ts(756,25): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(759,9): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(761,12): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
@@ -257,7 +257,7 @@ lib/watchEventSource.ts(173,27): error TS2339: Property 'watcher' does not exist
 lib/watchEventSource.ts(176,54): error TS2339: Property 'rootPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(183,15): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchpack.ts(7,8): error TS1192: Module '"lib/getWatcherManager"' has no default export.
-lib/watchpack.ts(11,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
+lib/watchpack.ts(11,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
 lib/watchpack.ts(16,37): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(16,58): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.

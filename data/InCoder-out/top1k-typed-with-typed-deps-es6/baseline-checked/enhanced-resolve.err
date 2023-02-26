@@ -388,6 +388,7 @@ lib/SymlinkPlugin.ts(22,8): error TS2339: Property 'target' does not exist on ty
 lib/SymlinkPlugin.ts(30,43): error TS2339: Property 'target' does not exist on type 'SymlinkPlugin'.
 lib/SymlinkPlugin.ts(33,18): error TS2339: Property 'source' does not exist on type 'SymlinkPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS2304: Cannot find name 'SyncFileSystem'.
+lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS4078: Parameter 'fs' of exported function has or is using private name 'SyncFileSystem'.
 lib/TryNextPlugin.ts(18,8): error TS2339: Property 'source' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(19,8): error TS2339: Property 'message' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(20,8): error TS2339: Property 'target' does not exist on type 'TryNextPlugin'.
@@ -419,6 +420,7 @@ lib/UseFilePlugin.ts(30,18): error TS2339: Property 'source' does not exist on t
 lib/UseFilePlugin.ts(32,55): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
 lib/UseFilePlugin.ts(38,48): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
 lib/getInnerRequest.ts(8,51): error TS2304: Cannot find name 'Resolver'.
+lib/getInnerRequest.ts(8,51): error TS4078: Parameter 'resolver' of exported function has or is using private name 'Resolver'.
 lib/getInnerRequest.ts(10,18): error TS2339: Property '__innerRequest' does not exist on type 'Request'.
 lib/getInnerRequest.ts(11,11): error TS2339: Property '__innerRequest_request' does not exist on type 'Request'.
 lib/getInnerRequest.ts(11,46): error TS2339: Property 'request' does not exist on type 'Request'.
@@ -436,6 +438,7 @@ lib/getInnerRequest.ts(25,10): error TS2339: Property '__innerRequest_relativePa
 lib/getInnerRequest.ts(25,48): error TS2339: Property 'relativePath' does not exist on type 'Request'.
 lib/getInnerRequest.ts(26,18): error TS2339: Property '__innerRequest' does not exist on type 'Request'.
 lib/getPaths.ts(8,40): error TS2304: Cannot find name 'Path'.
+lib/getPaths.ts(8,40): error TS4078: Parameter 'path' of exported function has or is using private name 'Path'.
 lib/getPaths.ts(35,17): error TS2339: Property 'substr' does not exist on type 'string | Buffer'.
   Property 'substr' does not exist on type 'Buffer'.
 lib/index.ts(10,8): error TS1192: Module '"lib/ResolverFactory"' has no default export.
@@ -472,6 +475,7 @@ lib/util/entrypoints.ts(441,87): error TS2749: 'conditionNames' refers to a valu
 lib/util/entrypoints.ts(565,43): error TS2304: Cannot find name 'Field'.
 lib/util/entrypoints.ts(633,43): error TS2304: Cannot find name 'Field'.
 lib/util/identifier.ts(14,38): error TS2304: Cannot find name 'Identifier'.
+lib/util/identifier.ts(14,38): error TS4078: Parameter 'identifier' of exported function has or is using private name 'Identifier'.
 tooling/format-file-header.ts(116,32): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'unknown' is not assignable to parameter of type 'PathOrFileDescriptor'.

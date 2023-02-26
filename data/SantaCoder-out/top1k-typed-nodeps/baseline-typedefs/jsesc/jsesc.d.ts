@@ -1,0 +1,33 @@
+declare const object: {};
+declare const hasOwnProperty: (v: PropertyKey) => boolean;
+declare const forOwn: (object: any, callback: any) => void;
+declare const extend: (destination: any, source: any) => any;
+declare const forEach: (array: any, callback: any) => void;
+declare const fourHexEscape: (hex: any) => string;
+declare const hexadecimal: (code: any, lowercase: any) => any;
+declare const toString: () => string;
+declare const isArray: (arg: any) => arg is any[];
+declare const isBuffer: (value: any) => boolean;
+declare const isObject: (value: any) => boolean;
+declare const isString: (value: any) => boolean;
+declare const isNumber: (value: any) => boolean;
+declare const isFunction: (value: any) => boolean;
+declare const isMap: (value: any) => boolean;
+declare const isSet: (value: any) => boolean;
+declare const singleEscapes: {
+    '\\': string;
+    '\b': string;
+    '\f': string;
+    '\n': string;
+    '\r': string;
+    '\t': string;
+};
+declare const regexSingleEscape: RegExp;
+declare const regexDigit: RegExp;
+declare const regexWhitespace: RegExp;
+declare const escapeEverythingRegex: RegExp;
+declare const escapeNonAsciiRegex: RegExp;
+declare const jsesc: {
+    (argument: any, options: any): any;
+    version: string;
+};

@@ -75,6 +75,8 @@ benchmarks/run/remove-emit.ts(24,70): error TS2709: Cannot use namespace 'EventE
 benchmarks/template.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 index.ts(29,32): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(58,31): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+index.ts(58,31): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(80,30): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+index.ts(80,30): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(335,3): error TS1258: A default export must be at the top level of a file or module declaration.
 

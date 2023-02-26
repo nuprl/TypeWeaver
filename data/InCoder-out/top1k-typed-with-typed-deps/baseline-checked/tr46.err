@@ -1,13 +1,17 @@
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 index.ts(12,58): error TS2304: Cannot find name 'Options'.
+index.ts(12,58): error TS4078: Parameter '{ useSTD3ASCIIRules }' of exported function has or is using private name 'Options'.
 index.ts(44,31): error TS2304: Cannot find name 'DomainName'.
+index.ts(44,31): error TS4078: Parameter 'domainName' of exported function has or is using private name 'DomainName'.
 index.ts(44,101): error TS2552: Cannot find name 'IParsingOptions'. Did you mean 'GainOptions'?
+index.ts(44,101): error TS4078: Parameter '{ useSTD3ASCIIRules: useSTD3ASCIIR,  processingOption }' of exported function has or is using private name 'IParsingOptions'.
 index.ts(49,63): error TS2552: Cannot find name 'useSTD3ASCIIRules'. Did you mean 'useSTD3ASCIIR'?
 index.ts(80,67): error TS2300: Duplicate identifier 'boolean'.
 index.ts(80,88): error TS2300: Duplicate identifier 'boolean'.
 index.ts(80,112): error TS2300: Duplicate identifier 'boolean'.
 index.ts(80,180): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+index.ts(80,180): error TS4078: Parameter '{ checkHyphens: boolean,  checkBidi: boolean,  checkJoiners: boolean,  processingOption: ProcessingOption,  useSTD3ASCIIRules }' of exported function has or is using private name 'Option'.
 index.ts(81,13): error TS2339: Property 'normalize' does not exist on type 'string | string[]'.
   Property 'normalize' does not exist on type 'string[]'.
 index.ts(87,7): error TS2304: Cannot find name 'checkHyphens'.
@@ -20,6 +24,7 @@ index.ts(102,10): error TS2552: Cannot find name 'processingOption'. Did you mea
 index.ts(109,7): error TS2304: Cannot find name 'checkJoiners'.
 index.ts(133,7): error TS2304: Cannot find name 'checkBidi'.
 index.ts(175,51): error TS2304: Cannot find name 'Options'.
+index.ts(175,51): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 scripts/generateMappingTable.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generateMappingTable.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
@@ -35,7 +40,9 @@ scripts/generateRegexes.ts(3,7): error TS2451: Cannot redeclare block-scoped var
 scripts/generateRegexes.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generateRegexes.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
 scripts/generateRegexes.ts(29,21): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(29,21): error TS4078: Parameter 'strings' of exported function has or is using private name 'tring'.
 scripts/generateRegexes.ts(29,40): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(29,40): error TS4078: Parameter 'regs' of exported function has or is using private name 'tring'.
 scripts/generateRegexes.ts(39,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
   Type 'TemplateStringsArray' is missing the following properties from type 'tring[]': pop, push, reverse, shift, and 6 more.

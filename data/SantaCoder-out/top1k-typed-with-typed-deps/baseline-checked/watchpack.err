@@ -8,6 +8,7 @@ lib/DirectoryWatcher.ts(55,7): error TS2451: Cannot redeclare block-scoped varia
 lib/DirectoryWatcher.ts(606,43): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
 lib/DirectoryWatcher.ts(609,30): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/DirectoryWatcher.ts(773,36): error TS2304: Cannot find name 'IEntry'.
+lib/DirectoryWatcher.ts(773,36): error TS4078: Parameter 'entry' of exported function has or is using private name 'IEntry'.
 lib/LinkResolver.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/LinkResolver.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/LinkResolver.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'LinkResolver'.
@@ -78,6 +79,7 @@ lib/watchpack.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'Lin
 lib/watchpack.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
 lib/watchpack.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'watchEventSource'.
 lib/watchpack.ts(16,37): error TS2552: Cannot find name 'Watchers'. Did you mean 'Watcher'?
+lib/watchpack.ts(16,37): error TS4078: Parameter 'watchers' of exported function has or is using private name 'Watchers'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(72,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.

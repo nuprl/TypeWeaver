@@ -3,10 +3,13 @@ index.ts(16,35): error TS2339: Property 'port' does not exist on type 'never'.
 index.ts(16,54): error TS2339: Property 'localAddress' does not exist on type 'never'.
 index.ts(16,75): error TS2339: Property 'localAddress' does not exist on type 'never'.
 index.ts(21,32): error TS2304: Cannot find name 'ForeverAgentOptions'.
+index.ts(21,32): error TS4078: Parameter 'options' of exported function has or is using private name 'ForeverAgentOptions'.
 index.ts(29,36): error TS2503: Cannot find namespace 'net'.
 index.ts(61,51): error TS2503: Cannot find namespace 'express'.
 index.ts(66,20): error TS2339: Property 'port' does not exist on type 'never'.
 index.ts(67,20): error TS2339: Property 'host' does not exist on type 'never'.
 index.ts(110,36): error TS2304: Cannot find name 'ForeverAgentSSLOptions'.
+index.ts(110,36): error TS4078: Parameter 'options' of exported function has or is using private name 'ForeverAgentSSLOptions'.
 index.ts(118,68): error TS2304: Cannot find name 'ConnectionOptions'.
+index.ts(118,68): error TS4078: Parameter 'options' of exported function has or is using private name 'ConnectionOptions'.
 

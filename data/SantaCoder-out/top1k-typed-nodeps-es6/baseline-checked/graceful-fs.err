@@ -50,6 +50,7 @@ graceful-fs.ts(415,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(419,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(434,13): error TS2554: Expected 0 arguments, but got 3.
 legacy-streams.ts(5,22): error TS2304: Cannot find name 'Fs'.
+legacy-streams.ts(5,22): error TS4078: Parameter 'fs' of exported function has or is using private name 'Fs'.
 legacy-streams.ts(11,47): error TS2304: Cannot find name 'ReadStreamOptions'.
 legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
 legacy-streams.ts(14,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
@@ -59,6 +60,7 @@ legacy-streams.ts(75,48): error TS2304: Cannot find name 'WriteStreamOptions'.
 legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
 legacy-streams.ts(78,5): error TS2684: The 'this' context of type 'typeof Stream' is not assignable to method's 'this' of type 'Function'.
 polyfills.ts(29,21): error TS2304: Cannot find name 'Fs'.
+polyfills.ts(29,21): error TS4078: Parameter 'fs' of exported function has or is using private name 'Fs'.
 polyfills.ts(98,29): error TS2503: Cannot find namespace 'fs'.
 polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Error'.
 polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Error'.

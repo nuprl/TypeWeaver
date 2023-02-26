@@ -12,7 +12,7 @@ declare var colorRegEx3: RegExp;
 declare var calcRegEx: RegExp;
 declare var colorRegEx4: RegExp;
 declare var angleRegEx: RegExp;
-declare var dashedToCamelCase: (dashed: boolean) => string;
+declare var dashedToCamelCase: any;
 declare var is_space: RegExp;
 declare var opening_deliminators: string[];
 declare var closing_deliminators: string[];

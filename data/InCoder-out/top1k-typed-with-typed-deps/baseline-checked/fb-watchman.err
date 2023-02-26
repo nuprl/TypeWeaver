@@ -13,7 +13,9 @@ watchman/node/bser/index.ts(10,5): error TS2451: Cannot redeclare block-scoped v
 watchman/node/bser/index.ts(125,49): error TS2304: Cannot find name 'ByteArray'.
 watchman/node/bser/index.ts(222,14): error TS2554: Expected 1 arguments, but got 0.
 watchman/node/bser/index.ts(464,27): error TS2304: Cannot find name 'mut'.
+watchman/node/bser/index.ts(464,27): error TS4078: Parameter 'buf' of exported function has or is using private name 'mut'.
 watchman/node/bser/index.ts(464,38): error TS2304: Cannot find name 'i64'.
+watchman/node/bser/index.ts(464,38): error TS4078: Parameter 'val' of exported function has or is using private name 'i64'.
 watchman/node/bser/index.ts(484,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
 watchman/node/bser/index.ts(485,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
 watchman/node/bser/index.ts(487,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
@@ -40,6 +42,7 @@ watchman/node/example.ts(118,20): error TS2339: Property 'files' does not exist 
 watchman/node/example.ts(143,21): error TS2339: Property 'clock' does not exist on type 'Response'.
 watchman/node/example.ts(150,44): error TS2339: Property 'subscribe' does not exist on type 'Response'.
 watchman/node/index.ts(25,26): error TS2304: Cannot find name 'ClientOptions'.
+watchman/node/index.ts(25,26): error TS4078: Parameter 'options' of exported function has or is using private name 'ClientOptions'.
 watchman/node/index.ts(69,30): error TS2304: Cannot find name 'Command'.
 watchman/node/index.ts(77,31): error TS2304: Cannot find name 'SocketName'.
 watchman/node/index.ts(89,11): error TS2322: Type 'string' is not assignable to type 'boolean'.

@@ -81,7 +81,7 @@ index.ts(629,40): error TS2304: Cannot find name 'Token'.
 index.ts(629,40): error TS4078: Parameter 'token' of exported function has or is using private name 'Token'.
 index.ts(629,55): error TS2304: Cannot find name 'ASTNode'.
 index.ts(629,55): error TS4078: Parameter 'clone' of exported function has or is using private name 'ASTNode'.
-index.ts(644,34): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
+index.ts(644,34): error TS2367: This comparison appears to be unintentional because the types 'Function' and 'boolean' have no overlap.
 index.ts(652,13): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(654,26): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(655,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
@@ -97,8 +97,8 @@ index.ts(689,22): error TS4078: Parameter 'node' of exported function has or is 
 index.ts(694,36): error TS2304: Cannot find name 'VisitCallback'.
 index.ts(694,36): error TS4078: Parameter 'fn' of exported function has or is using private name 'VisitCallback'.
 index.ts(695,8): error TS2339: Property 'nodes' does not exist on type 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2300: Duplicate identifier 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2451: Cannot redeclare block-scoped variable 'Node'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(10083,11): error TS2300: Duplicate identifier 'Node'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(10083,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(10165,13): error TS2300: Duplicate identifier 'Node'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(10165,13): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 

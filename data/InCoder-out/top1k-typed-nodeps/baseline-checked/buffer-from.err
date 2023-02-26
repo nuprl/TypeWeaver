@@ -1,5 +1,5 @@
 index.ts(3,5): error TS2300: Duplicate identifier 'toString'.
-index.ts(41,39): error TS2367: This condition will always return 'false' since the types 'BufferEncoding' and '""' have no overlap.
+index.ts(41,39): error TS2367: This comparison appears to be unintentional because the types 'BufferEncoding' and '""' have no overlap.
 index.ts(50,19): error TS2769: No overload matches this call.
   Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
     Argument of type 'string | DataView | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
@@ -22,5 +22,5 @@ index.ts(69,18): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'ArrayBuffer | ArrayBufferView' is not assignable to parameter of type 'Buffer'.
       Type 'ArrayBuffer' is not assignable to type 'Buffer'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(17967,18): error TS2300: Duplicate identifier 'toString'.
 

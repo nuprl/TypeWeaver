@@ -321,8 +321,11 @@ lib/ResolverFactory.ts(10,18): error TS2451: Cannot redeclare block-scoped varia
 lib/ResolverFactory.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'SyncAsyncFileSystemDecorator'.
 lib/ResolverFactory.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'RootsPlugin'.
 lib/ResolverFactory.ts(120,38): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/ResolverFactory.ts(120,38): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
 lib/ResolverFactory.ts(136,32): error TS2304: Cannot find name 'Alias'.
+lib/ResolverFactory.ts(136,32): error TS4078: Parameter 'alias' of exported function has or is using private name 'Alias'.
 lib/ResolverFactory.ts(156,33): error TS2304: Cannot find name 'IOption'.
+lib/ResolverFactory.ts(156,33): error TS4078: Parameter 'options' of exported function has or is using private name 'IOption'.
 lib/ResolverFactory.ts(157,40): error TS2339: Property 'mainFields' does not exist on type 'IOption[]'.
 lib/ResolverFactory.ts(173,30): error TS2339: Property 'name' does not exist on type 'unknown'.
 lib/ResolverFactory.ts(173,43): error TS2339: Property 'name' does not exist on type 'unknown'.
@@ -401,6 +404,7 @@ lib/SymlinkPlugin.ts(30,43): error TS2339: Property 'target' does not exist on t
 lib/SymlinkPlugin.ts(33,18): error TS2339: Property 'source' does not exist on type 'SymlinkPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(15,10): error TS2451: Cannot redeclare block-scoped variable 'SyncAsyncFileSystemDecorator'.
 lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS2552: Cannot find name 'SyncFileSystem'. Did you mean 'FileSystem'?
+lib/SyncAsyncFileSystemDecorator.ts(15,43): error TS4078: Parameter 'fs' of exported function has or is using private name 'SyncFileSystem'.
 lib/TryNextPlugin.ts(18,8): error TS2339: Property 'source' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(19,8): error TS2339: Property 'message' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(20,8): error TS2339: Property 'target' does not exist on type 'TryNextPlugin'.
@@ -452,27 +456,43 @@ lib/getPaths.ts(35,17): error TS2339: Property 'substr' does not exist on type '
   Property 'substr' does not exist on type 'Buffer'.
 lib/index.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/index.ts(31,27): error TS2304: Cannot find name 'RequestContext'.
+lib/index.ts(31,27): error TS4078: Parameter 'context' of exported function has or is using private name 'RequestContext'.
 lib/index.ts(31,50): error TS2304: Cannot find name 'RequestPath'.
+lib/index.ts(31,50): error TS4078: Parameter 'path' of exported function has or is using private name 'RequestPath'.
 lib/index.ts(31,99): error TS2304: Cannot find name 'ResolveContext'.
+lib/index.ts(31,99): error TS4078: Parameter 'resolveContext' of exported function has or is using private name 'ResolveContext'.
 lib/index.ts(31,126): error TS2304: Cannot find name 'ResolveCallback'.
+lib/index.ts(31,126): error TS4078: Parameter 'callback' of exported function has or is using private name 'ResolveCallback'.
 lib/index.ts(51,31): error TS2304: Cannot find name 'RequestContext'.
+lib/index.ts(51,31): error TS4078: Parameter 'context' of exported function has or is using private name 'RequestContext'.
 lib/index.ts(51,54): error TS2304: Cannot find name 'RequestPath'.
+lib/index.ts(51,54): error TS4078: Parameter 'path' of exported function has or is using private name 'RequestPath'.
 lib/index.ts(60,26): error TS2304: Cannot find name 'FileSystemOptions'.
+lib/index.ts(60,26): error TS4078: Parameter 'options' of exported function has or is using private name 'FileSystemOptions'.
 lib/index.ts(81,30): error TS2304: Cannot find name 'IConfigurationServiceOptions'.
+lib/index.ts(81,30): error TS4078: Parameter 'options' of exported function has or is using private name 'IConfigurationServiceOptions'.
 lib/util/entrypoints.ts(83,7): error TS2451: Cannot redeclare block-scoped variable 'slashCode'.
 lib/util/entrypoints.ts(84,7): error TS2451: Cannot redeclare block-scoped variable 'dotCode'.
 lib/util/entrypoints.ts(121,41): error TS2304: Cannot find name 'TreeNode'.
+lib/util/entrypoints.ts(121,41): error TS4078: Parameter 'treeRoot' of exported function has or is using private name 'TreeNode'.
 lib/util/entrypoints.ts(121,72): error TS2304: Cannot find name 'AssertRequest'.
+lib/util/entrypoints.ts(121,72): error TS4078: Parameter 'assertRequest' of exported function has or is using private name 'AssertRequest'.
 lib/util/entrypoints.ts(121,102): error TS2304: Cannot find name 'AssertTarget'.
+lib/util/entrypoints.ts(121,102): error TS4078: Parameter 'assertTarget' of exported function has or is using private name 'AssertTarget'.
 lib/util/entrypoints.ts(147,35): error TS2339: Property 'length' does not exist on type 'Request'.
 lib/util/entrypoints.ts(150,15): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(151,15): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(167,45): error TS2304: Cannot find name 'ExportsFieldRequest'.
+lib/util/entrypoints.ts(167,45): error TS4078: Parameter 'request' of exported function has or is using private name 'ExportsFieldRequest'.
 lib/util/entrypoints.ts(186,45): error TS2304: Cannot find name 'ImportRequest'.
+lib/util/entrypoints.ts(186,45): error TS4078: Parameter 'request' of exported function has or is using private name 'ImportRequest'.
 lib/util/entrypoints.ts(207,34): error TS2304: Cannot find name 'ExportTarget'.
+lib/util/entrypoints.ts(207,34): error TS4078: Parameter 'exp' of exported function has or is using private name 'ExportTarget'.
 lib/util/entrypoints.ts(238,34): error TS2304: Cannot find name 'ImportDeclaration'.
+lib/util/entrypoints.ts(238,34): error TS4078: Parameter 'imp' of exported function has or is using private name 'ImportDeclaration'.
 lib/util/entrypoints.ts(241,6): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
 lib/util/entrypoints.ts(260,49): error TS2304: Cannot find name 'TreeNode'.
+lib/util/entrypoints.ts(260,49): error TS4078: Parameter 'treeRoot' of exported function has or is using private name 'TreeNode'.
 lib/util/entrypoints.ts(261,14): error TS2339: Property 'length' does not exist on type 'Request'.
 lib/util/entrypoints.ts(274,34): error TS2339: Property 'length' does not exist on type 'Request'.
 lib/util/entrypoints.ts(279,27): error TS2339: Property 'indexOf' does not exist on type 'Request'.
@@ -481,12 +501,18 @@ lib/util/entrypoints.ts(332,24): error TS2339: Property 'indexOf' does not exist
 lib/util/entrypoints.ts(336,35): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(341,26): error TS2339: Property 'length' does not exist on type 'Request'.
 lib/util/entrypoints.ts(355,40): error TS2304: Cannot find name 'Mapping'.
+lib/util/entrypoints.ts(355,40): error TS4078: Parameter 'mapping' of exported function has or is using private name 'Mapping'.
 lib/util/entrypoints.ts(441,50): error TS2304: Cannot find name 'ConditionalMapping'.
+lib/util/entrypoints.ts(441,50): error TS4078: Parameter 'conditionalMapping_' of exported function has or is using private name 'ConditionalMapping'.
 lib/util/entrypoints.ts(441,87): error TS2749: 'conditionNames' refers to a value, but is being used as a type here. Did you mean 'typeof conditionNames'?
+lib/util/entrypoints.ts(441,87): error TS4078: Parameter 'conditionNames' of exported function has or is using private name 'conditionNames'.
 lib/util/entrypoints.ts(565,43): error TS2304: Cannot find name 'Field'.
+lib/util/entrypoints.ts(565,43): error TS4078: Parameter 'field' of exported function has or is using private name 'Field'.
 lib/util/entrypoints.ts(633,43): error TS2304: Cannot find name 'Field'.
+lib/util/entrypoints.ts(633,43): error TS4078: Parameter 'field' of exported function has or is using private name 'Field'.
 lib/util/identifier.ts(14,10): error TS2451: Cannot redeclare block-scoped variable 'parseIdentifier'.
 lib/util/identifier.ts(14,38): error TS2304: Cannot find name 'Identifier'.
+lib/util/identifier.ts(14,38): error TS4078: Parameter 'identifier' of exported function has or is using private name 'Identifier'.
 lib/util/path.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/util/path.ts(26,7): error TS2451: Cannot redeclare block-scoped variable 'PathType'.
 lib/util/path.ts(40,7): error TS2451: Cannot redeclare block-scoped variable 'getType'.

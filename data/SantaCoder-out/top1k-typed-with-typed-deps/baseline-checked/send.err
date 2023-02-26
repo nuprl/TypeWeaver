@@ -1,7 +1,11 @@
 index.ts(83,21): error TS2304: Cannot find name 'AxiosRequestConfig'.
+index.ts(83,21): error TS4078: Parameter 'req' of exported function has or is using private name 'AxiosRequestConfig'.
 index.ts(83,64): error TS2552: Cannot find name 'AxiosRequestOptions'. Did you mean 'IdleRequestOptions'?
+index.ts(83,64): error TS4078: Parameter 'options' of exported function has or is using private name 'AxiosRequestOptions'.
 index.ts(96,27): error TS2304: Cannot find name 'AxiosRequestConfig'.
+index.ts(96,27): error TS4078: Parameter 'req' of exported function has or is using private name 'AxiosRequestConfig'.
 index.ts(96,70): error TS2304: Cannot find name 'AxiosRequestConfig'.
+index.ts(96,70): error TS4078: Parameter 'options' of exported function has or is using private name 'AxiosRequestConfig'.
 index.ts(335,32): error TS2367: This comparison appears to be unintentional because the types 'RegExpMatchArray' and 'string' have no overlap.
 index.ts(413,17): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(521,13): error TS2339: Property 'indexOf' does not exist on type 'string | number'.
@@ -27,12 +31,14 @@ index.ts(774,3): error TS2554: Expected 1 arguments, but got 0.
 index.ts(785,71): error TS2304: Cannot find name 'ReadableOptions'.
 index.ts(852,74): error TS2503: Cannot find namespace 'fs'.
 index.ts(893,29): error TS2304: Cannot find name 'IncomingMessage'.
+index.ts(893,29): error TS4078: Parameter 'res' of exported function has or is using private name 'IncomingMessage'.
 index.ts(945,38): error TS2339: Property 'start' does not exist on type 'number'.
 index.ts(945,58): error TS2339: Property 'end' does not exist on type 'number'.
 index.ts(1014,21): error TS2339: Property 'getHeaderNames' does not exist on type 'Response'.
 index.ts(1015,23): error TS2551: Property '_headers' does not exist on type 'Response'. Did you mean 'headers'?
 index.ts(1016,11): error TS2339: Property 'getHeaderNames' does not exist on type 'Response'.
 index.ts(1031,33): error TS2304: Cannot find name 'EventEmitter'.
+index.ts(1031,33): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(1048,21): error TS2339: Property 'headersSent' does not exist on type 'Response'.
 index.ts(1049,19): error TS2551: Property '_header' does not exist on type 'Response'. Did you mean 'headers'?
 index.ts(1050,11): error TS2339: Property 'headersSent' does not exist on type 'Response'.

@@ -28,6 +28,7 @@ lib/charset.ts(149,10): error TS2393: Duplicate function implementation.
 lib/charset.ts(149,26): error TS2304: Cannot find name 'Spec'.
 lib/charset.ts(149,35): error TS2304: Cannot find name 'Spec'.
 lib/charset.ts(158,31): error TS2304: Cannot find name 'Spec'.
+lib/charset.ts(158,31): error TS4078: Parameter 'spec' of exported function has or is using private name 'Spec'.
 lib/charset.ts(167,10): error TS2393: Duplicate function implementation.
 lib/charset.ts(167,26): error TS2304: Cannot find name 'QualitySpec'.
 lib/encoding.ts(40,7): error TS2322: Type '{ encoding: string; q: number; i: number; }' is not assignable to type 'string'.
@@ -45,6 +46,7 @@ lib/encoding.ts(164,10): error TS2393: Duplicate function implementation.
 lib/encoding.ts(164,26): error TS2304: Cannot find name 'Spec'.
 lib/encoding.ts(164,35): error TS2304: Cannot find name 'Spec'.
 lib/encoding.ts(173,32): error TS2304: Cannot find name 'EncodingSpec'.
+lib/encoding.ts(173,32): error TS4078: Parameter 'spec' of exported function has or is using private name 'EncodingSpec'.
 lib/encoding.ts(182,10): error TS2393: Duplicate function implementation.
 lib/encoding.ts(182,26): error TS2304: Cannot find name 'QualitySpec'.
 lib/language.ts(38,7): error TS2322: Type '{ prefix: string; suffix: string; q: number; i: number; full: string; }' is not assignable to type 'string'.
@@ -59,6 +61,7 @@ lib/language.ts(159,10): error TS2393: Duplicate function implementation.
 lib/language.ts(159,26): error TS2304: Cannot find name 'Spec'.
 lib/language.ts(159,35): error TS2304: Cannot find name 'Spec'.
 lib/language.ts(168,32): error TS2304: Cannot find name 'Spec'.
+lib/language.ts(168,32): error TS4078: Parameter 'spec' of exported function has or is using private name 'Spec'.
 lib/language.ts(177,10): error TS2393: Duplicate function implementation.
 lib/language.ts(177,26): error TS2304: Cannot find name 'QualitySpec'.
 lib/mediaType.ts(38,7): error TS2322: Type '{ type: string; subtype: string; params: any; q: number; i: number; }' is not assignable to type 'string'.
@@ -74,6 +77,7 @@ lib/mediaType.ts(189,10): error TS2393: Duplicate function implementation.
 lib/mediaType.ts(189,26): error TS2304: Cannot find name 'Spec'.
 lib/mediaType.ts(189,35): error TS2304: Cannot find name 'Spec'.
 lib/mediaType.ts(198,28): error TS2304: Cannot find name 'ITypeSpec'.
+lib/mediaType.ts(198,28): error TS4078: Parameter 'spec' of exported function has or is using private name 'ITypeSpec'.
 lib/mediaType.ts(207,10): error TS2393: Duplicate function implementation.
 lib/mediaType.ts(207,26): error TS2304: Cannot find name 'QualitySpec'.
 

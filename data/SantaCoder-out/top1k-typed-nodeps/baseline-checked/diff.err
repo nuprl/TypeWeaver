@@ -1,3 +1,20 @@
+src/convert/dmp.ts(2,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
+src/convert/xml.ts(1,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
+src/diff/character.ts(4,68): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
+src/diff/json.ts(22,61): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
+src/diff/word.ts(53,68): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
+src/diff/word.ts(58,77): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
 src/patch/apply.ts(4,73): error TS1005: ',' expected.
+src/patch/apply.ts(132,39): error TS4078: Parameter 'uniDiff' of exported function has or is using private name 'IUniDiff'.
+src/patch/apply.ts(132,58): error TS4078: Parameter 'options' of exported function has or is using private name 'IApplyPatchOptions'.
+src/patch/create.ts(3,154): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
+src/patch/create.ts(138,158): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
+src/patch/create.ts(142,126): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
+src/patch/merge.ts(6,37): error TS4078: Parameter 'hunk' of exported function has or is using private name 'Hunk'.
+src/patch/merge.ts(22,29): error TS4078: Parameter 'mine' of exported function has or is using private name 'IMergeable'.
+src/patch/merge.ts(22,49): error TS4078: Parameter 'theirs' of exported function has or is using private name 'IMergeable'.
+src/patch/merge.ts(22,67): error TS4078: Parameter 'base' of exported function has or is using private name 'IMergeable'.
 src/patch/parse.ts(1,57): error TS1005: ',' expected.
+src/util/params.ts(1,42): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
+src/util/params.ts(1,62): error TS4078: Parameter 'defaults' of exported function has or is using private name 'IOptions'.
 

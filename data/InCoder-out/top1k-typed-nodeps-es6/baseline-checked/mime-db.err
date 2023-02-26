@@ -8,7 +8,7 @@ scripts/fetch-apache.ts(14,21): error TS2307: Cannot find module 'raw-body' or i
 scripts/fetch-apache.ts(42,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-apache.ts(44,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 scripts/fetch-apache.ts(67,49): error TS2304: Cannot find name 'Extension'.
-scripts/fetch-apache.ts(96,49): error TS2304: Cannot find name 'RequestCallback'.
+scripts/fetch-apache.ts(96,49): error TS2552: Cannot find name 'RequestCallback'. Did you mean 'IdleRequestCallback'?
 scripts/fetch-apache.ts(97,13): error TS2769: No overload matches this call.
   Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'string | Request' is not assignable to parameter of type 'string | URL | RequestOptions'.
@@ -37,8 +37,8 @@ scripts/fetch-iana.ts(181,47): error TS2345: Argument of type 'Buffer' is not as
 scripts/fetch-iana.ts(183,58): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(191,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
 scripts/fetch-iana.ts(192,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
-scripts/fetch-iana.ts(198,7): error TS2367: This condition will always return 'false' since the types 'string[]' and 'string' have no overlap.
-scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input
+scripts/fetch-iana.ts(198,7): error TS2367: This comparison appears to be unintentional because the types 'string[]' and 'string' have no overlap.
+scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input, 0
 scripts/fetch-iana.ts(207,52): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(211,43): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 scripts/fetch-iana.ts(219,38): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
@@ -48,7 +48,7 @@ scripts/fetch-iana.ts(229,28): error TS2304: Cannot find name 'xtension'.
 scripts/fetch-iana.ts(248,35): error TS2304: Cannot find name 'Row'.
 scripts/fetch-iana.ts(286,40): error TS2304: Cannot find name 'ring'.
 scripts/fetch-iana.ts(286,55): error TS2304: Cannot find name 'ring'.
-scripts/fetch-iana.ts(302,49): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+scripts/fetch-iana.ts(302,49): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 scripts/fetch-iana.ts(331,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(331,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(336,36): error TS2304: Cannot find name 'ny'.
@@ -74,5 +74,5 @@ scripts/fetch-nginx.ts(91,13): error TS2769: No overload matches this call.
     Argument of type 'string | Request' is not assignable to parameter of type 'string | URL | RequestOptions'.
   Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'string | Request' is not assignable to parameter of type 'string | URL'.
-scripts/fetch-nginx.ts(91,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
+scripts/fetch-nginx.ts(91,44): error TS2304: Cannot find name 'esponse'.
 

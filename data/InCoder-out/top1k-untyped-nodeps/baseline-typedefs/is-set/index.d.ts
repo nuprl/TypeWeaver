@@ -1,5 +1,5 @@
-declare var $Map: MapConstructor;
-declare var $Set: SetConstructor;
+declare var $Map: MapConstructor & Function;
+declare var $Set: SetConstructor & Function;
 declare var exported: any;
-declare var $mapHas: (key: any) => boolean;
-declare var $setHas: (value: any) => boolean;
+declare var $mapHas: any;
+declare var $setHas: any;

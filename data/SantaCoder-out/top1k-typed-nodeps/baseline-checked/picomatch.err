@@ -8,6 +8,7 @@ bench/glob-parent.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 
 bench/glob-parent.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'cycle'.
 bench/glob-parent.ts(17,10): error TS2451: Cannot redeclare block-scoped variable 'bench'.
 bench/glob-parent.ts(17,39): error TS2304: Cannot find name 'BenchmarkOptions'.
+bench/glob-parent.ts(17,39): error TS4078: Parameter 'options' of exported function has or is using private name 'BenchmarkOptions'.
 bench/glob-parent.ts(34,21): error TS2554: Expected 2 arguments, but got 1.
 bench/glob-parent.ts(45,1): error TS2554: Expected 2 arguments, but got 1.
 bench/glob-parent.ts(47,32): error TS2349: This expression is not callable.

@@ -471,6 +471,7 @@ lib/eventsource-polyfill.ts(1,5): error TS2403: Subsequent variable declarations
 lib/eventsource-polyfill.ts(4,10): error TS2339: Property 'EventSourcePolyfill' does not exist on type 'Window & typeof globalThis'.
 lib/eventsource.ts(35,10): error TS2300: Duplicate identifier 'EventSource'.
 lib/eventsource.ts(35,57): error TS2304: Cannot find name 'EventSourceInitDict'.
+lib/eventsource.ts(35,57): error TS4078: Parameter 'eventSourceInitDict' of exported function has or is using private name 'EventSourceInitDict'.
 lib/eventsource.ts(58,11): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(58,40): error TS2345: Argument of type '{ message: any; }' is not assignable to parameter of type 'EventInit'.
   Object literal may only specify known properties, and 'message' does not exist in type 'EventInit'.
@@ -508,6 +509,7 @@ lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on
 lib/eventsource.ts(450,10): error TS2300: Duplicate identifier 'Event'.
 lib/eventsource.ts(467,10): error TS2300: Duplicate identifier 'MessageEvent'.
 lib/eventsource.ts(467,53): error TS2304: Cannot find name 'MessageEventInitDict'.
+lib/eventsource.ts(467,53): error TS4078: Parameter 'eventInitDict' of exported function has or is using private name 'MessageEventInitDict'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5184,11): error TS2300: Duplicate identifier 'Event'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5227,13): error TS2300: Duplicate identifier 'Event'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5259,11): error TS2300: Duplicate identifier 'EventSource'.

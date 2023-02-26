@@ -6,6 +6,7 @@ lib/attributes.ts(117,73): error TS2554: Expected 1 arguments, but got 2.
 lib/serialize.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'xnv'.
 lib/serialize.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'NAMESPACES'.
 lib/serialize.ts(25,46): error TS2552: Cannot find name 'IElement'. Did you mean 'Element'?
+lib/serialize.ts(25,46): error TS4078: Parameter 'element' of exported function has or is using private name 'IElement'.
 lib/serialize.ts(151,48): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/serialize.ts(155,15): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/serialize.ts(278,12): error TS2339: Property 'content' does not exist on type 'Element'.

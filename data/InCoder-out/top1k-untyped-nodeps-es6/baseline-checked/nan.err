@@ -6,7 +6,7 @@ tools/1to2.ts(191,1): error TS2304: Cannot find name 'master'.
 tools/1to2.ts(394,15): error TS2769: No overload matches this call.
   Overload 1 of 4, '(path: PathOrFileDescriptor, options: { encoding?: null; flag?: string; } & Abortable, callback: (err: ErrnoException, data: Buffer) => void): void', gave the following error.
     Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'File' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 96 more.
+      Type 'File' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 95 more.
   Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string; } & Abortable), callback: (err: ErrnoException, data: string) => void): void', gave the following error.
     Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string; } & Abortable), callback: (err: ErrnoException, data: string | Buffer) => void): void', gave the following error.

@@ -1,4 +1,3 @@
-lib/CSSStyleDeclaration.ts(10,7): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashedToCamelCase' must be of type '(dashed: boolean) => string', but here has type 'any'.
 lib/CSSStyleDeclaration.ts(17,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'CSSStyleDeclaration' must be of type '{ new (): CSSStyleDeclaration; prototype: CSSStyleDeclaration; }', but here has type '(onChangeCallback: any) => void'.
 lib/CSSStyleDeclaration.ts(51,3): error TS2322: Type '(name: String, value: String, priority: Number) => void' is not assignable to type '(property: string, value: string, priority?: string) => void'.
   Types of parameters 'priority' and 'priority' are incompatible.
@@ -12,6 +11,7 @@ lib/CSSStyleDeclaration.ts(244,42): error TS2304: Cannot find name 'Property'.
 lib/CSSStyleDeclaration.ts(252,47): error TS2304: Cannot find name 'Property'.
 lib/parsers.ts(390,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/parsers.ts(391,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/parsers.ts(451,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashedToCamelCase' must be of type 'any', but here has type '(dashed: boolean) => string'.
 lib/parsers.ts(455,26): error TS2339: Property 'length' does not exist on type 'boolean'.
 lib/parsers.ts(543,32): error TS2304: Cannot find name 'Part'.
 lib/parsers.ts(545,59): error TS2304: Cannot find name 'Property'.
@@ -31,35 +31,51 @@ lib/parsers.ts(677,77): error TS2749: 'isValid' refers to a value, but is being 
 lib/parsers.ts(677,95): error TS2749: 'parser' refers to a value, but is being used as a type here. Did you mean 'typeof parser'?
 lib/parsers.ts(683,7): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/parsers.ts(714,46): error TS2749: 'camel_case' refers to a value, but is being used as a type here. Did you mean 'typeof camel_case'?
-lib/properties/background.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }'.
-lib/properties/backgroundAttachment.ts(5,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
+lib/properties/backgroundColor.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundColor.ts(19,46): error TS2304: Cannot find name 'ny'.
+lib/properties/backgroundImage.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundImage.ts(19,46): error TS2304: Cannot find name 'ny'.
 lib/properties/backgroundPosition.ts(7,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundPosition.ts(45,46): error TS2304: Cannot find name 'ny'.
 lib/properties/backgroundRepeat.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundRepeat.ts(19,46): error TS2304: Cannot find name 'ny'.
-lib/properties/border.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-width': any; 'border-style': any; 'border-color': any; }'.
-lib/properties/borderBottom.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-bottom-width': any; 'border-bottom-style': any; 'border-bottom-color': any; }'.
+lib/properties/border.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'border-width': any; 'border-style': any; 'border-color': any; }'.
+lib/properties/borderBottom.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'border-bottom-width': any; 'border-bottom-style': any; 'border-bottom-color': any; }'.
+lib/properties/borderBottomColor.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderBottomStyle.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderBottomWidth.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
 lib/properties/borderCollapse.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/borderColor.ts(6,44): error TS2304: Cannot find name 'y'.
-lib/properties/borderRight.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-right-width': any; 'border-right-style': any; 'border-right-color': any; }'.
+lib/properties/borderColor.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderLeft.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }'.
+lib/properties/borderLeftColor.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderLeftStyle.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderLeftWidth.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderRight.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'border-right-width': any; 'border-right-style': any; 'border-right-color': any; }'.
+lib/properties/borderRightColor.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderRightStyle.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderRightWidth.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
 lib/properties/borderSpacing.ts(9,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/borderSpacing.ts(23,32): error TS2304: Cannot find name 'Part'.
-lib/properties/borderTop.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'border-top-width': any; 'border-top-style': any; 'border-top-color': any; }'.
+lib/properties/borderStyle.ts(22,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderTop.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'border-top-width': any; 'border-top-style': any; 'border-top-color': any; }'.
+lib/properties/borderTopColor.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderTopStyle.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderTopWidth.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
+lib/properties/borderWidth.ts(26,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type '(v: any) => boolean', but here has type 'any'.
 lib/properties/clip.ts(7,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/clip.ts(26,42): error TS2304: Cannot find name 'Part'.
-lib/properties/flex.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'flex-grow': any; 'flex-shrink': any; 'flex-basis': any; }'.
+lib/properties/flex.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'flex-grow': any; 'flex-shrink': any; 'flex-basis': any; }'.
 lib/properties/flex.ts(20,20): error TS2304: Cannot find name 'ny'.
 lib/properties/flexBasis.ts(5,10): error TS2300: Duplicate identifier 'parse'.
 lib/properties/flexBasis.ts(15,46): error TS2304: Cannot find name 'ny'.
-lib/properties/font.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'border-left-width': any; 'border-left-style': any; 'border-left-color': any; }', but here has type '{ 'font-family': any; 'font-size': any; 'font-style': any; 'font-variant': any; 'font-weight': any; 'line-height': any; }'.
+lib/properties/font.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'shorthand_for' must be of type '{ 'background-color': any; 'background-image': any; 'background-repeat': any; 'background-attachment': any; 'background-position': any; }', but here has type '{ 'font-family': any; 'font-size': any; 'font-style': any; 'font-variant': any; 'font-weight': any; 'line-height': any; }'.
 lib/properties/fontSize.ts(20,10): error TS2300: Duplicate identifier 'parse'.
 lib/properties/fontStyle.ts(5,38): error TS2304: Cannot find name 'ny'.
 lib/properties/height.ts(5,10): error TS2300: Duplicate identifier 'parse'.
-lib/properties/margin.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
-lib/properties/padding.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'isValid' must be of type 'any', but here has type '(v: any) => boolean'.
 lib/properties/width.ts(5,10): error TS2300: Duplicate identifier 'parse'.
+scripts/download_latest_properties.ts(21,5): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/download_latest_properties.ts(22,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/download_latest_properties.ts(26,9): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
 scripts/download_latest_properties.ts(39,26): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 scripts/download_latest_properties.ts(40,39): error TS2345: Argument of type 'Body' is not assignable to parameter of type 'string'.
@@ -72,8 +88,6 @@ scripts/generate_implemented_properties.ts(6,7): error TS2451: Cannot redeclare 
 scripts/generate_implemented_properties.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
 scripts/generate_implemented_properties.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'out_file'.
 scripts/generate_implemented_properties.ts(25,7): error TS2451: Cannot redeclare block-scoped variable 'statements'.
-scripts/generate_properties.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'fs'.
-scripts/generate_properties.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generate_properties.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 't'.
 scripts/generate_properties.ts(7,5): error TS2451: Cannot redeclare block-scoped variable 'generate'.
 scripts/generate_properties.ts(11,5): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.

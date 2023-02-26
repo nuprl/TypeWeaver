@@ -7,6 +7,7 @@ tools/get-keys-from-ts.ts(67,22): error TS2339: Property 'type' does not exist o
 tools/get-keys-from-ts.ts(68,29): error TS2339: Property 'types' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(70,25): error TS2339: Property 'literal' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(92,49): error TS2304: Cannot find name 'IKeyInterface'.
+tools/get-keys-from-ts.ts(92,49): error TS4078: Parameter 'initialNodes' of exported function has or is using private name 'IKeyInterface'.
 tools/get-keys-from-ts.ts(154,36): error TS2304: Cannot find name 'DeclarationNode'.
 tools/get-keys-from-ts.ts(189,48): error TS2304: Cannot find name 'DeclarationNode'.
 tools/get-keys-from-ts.ts(189,64): error TS2552: Cannot find name 'PropertyDeclaration'. Did you mean 'PropertyDecorator'?
@@ -27,4 +28,5 @@ tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either h
 tools/get-keys-from-ts.ts(488,44): error TS2345: Argument of type '{}' is not assignable to parameter of type 'IKeyInterface[]'.
   Type '{}' is missing the following properties from type 'IKeyInterface[]': length, pop, push, concat, and 29 more.
 tools/get-keys-from-ts.ts(536,57): error TS2304: Cannot find name 'GetKeysFromTsFileOptions'.
+tools/get-keys-from-ts.ts(536,57): error TS4078: Parameter 'options' of exported function has or is using private name 'GetKeysFromTsFileOptions'.
 

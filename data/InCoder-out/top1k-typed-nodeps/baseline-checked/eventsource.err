@@ -195,7 +195,7 @@ example/eventsource-polyfill.ts(2923,45): error TS2749: 'Url' refers to a value,
 example/eventsource-polyfill.ts(2931,51): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
 example/eventsource-polyfill.ts(2936,50): error TS2749: 'relative' refers to a value, but is being used as a type here. Did you mean 'typeof relative'?
 example/eventsource-polyfill.ts(3210,5): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
-example/eventsource-polyfill.ts(3211,9): error TS2367: This condition will always return 'true' since the types 'RegExpExecArray' and 'string' have no overlap.
+example/eventsource-polyfill.ts(3211,9): error TS2367: This comparison appears to be unintentional because the types 'RegExpExecArray' and 'string' have no overlap.
 example/eventsource-polyfill.ts(3212,24): error TS2339: Property 'substr' does not exist on type 'RegExpExecArray'.
 example/eventsource-polyfill.ts(3261,15): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
@@ -239,7 +239,7 @@ example/eventsource-polyfill.ts(3830,53): error TS2304: Cannot find name 'global
 example/eventsource-polyfill.ts(3910,47): error TS2304: Cannot find name 'Process'.
 example/eventsource-polyfill.ts(3910,82): error TS2749: 'global' refers to a value, but is being used as a type here. Did you mean 'typeof global'?
 example/eventsource-polyfill.ts(3922,134): error TS2304: Cannot find name 'RequestTimer'.
-example/eventsource-polyfill.ts(3940,6): error TS2367: This condition will always return 'false' since the types 'RequestMode' and '"fetch"' have no overlap.
+example/eventsource-polyfill.ts(3940,6): error TS2367: This comparison appears to be unintentional because the types 'RequestMode' and '"fetch"' have no overlap.
 example/eventsource-polyfill.ts(3958,31): error TS2351: This expression is not constructable.
   Type 'Buffer' has no construct signatures.
 example/eventsource-polyfill.ts(3996,19): error TS2351: This expression is not constructable.
@@ -304,8 +304,8 @@ example/eventsource-polyfill.ts(4819,8): error TS2339: Property 'emit' does not 
 example/eventsource-polyfill.ts(4830,27): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4860,20): error TS2339: Property 'emit' does not exist on type 'Buffer'.
 example/eventsource-polyfill.ts(4887,8): error TS2339: Property 'emit' does not exist on type 'Buffer'.
-example/eventsource-polyfill.ts(4897,7): error TS2367: This condition will always return 'false' since the types 'Event' and 'string' have no overlap.
-example/eventsource-polyfill.ts(4900,14): error TS2367: This condition will always return 'false' since the types 'Event' and 'string' have no overlap.
+example/eventsource-polyfill.ts(4897,7): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
+example/eventsource-polyfill.ts(4900,14): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
 example/eventsource-polyfill.ts(4917,33): error TS2304: Cannot find name 'StreamReader'.
 example/eventsource-polyfill.ts(4934,25): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4934,43): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
@@ -654,10 +654,10 @@ lib/eventsource.ts(420,1): error TS2322: Type '(event: Event) => void' is not as
 lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on type 'EventListener'.
 lib/eventsource.ts(450,10): error TS2300: Duplicate identifier 'Event'.
 lib/eventsource.ts(467,10): error TS2300: Duplicate identifier 'MessageEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5014,11): error TS2300: Duplicate identifier 'Event'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5056,13): error TS2300: Duplicate identifier 'Event'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5088,11): error TS2300: Duplicate identifier 'EventSource'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5111,13): error TS2300: Duplicate identifier 'EventSource'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(9684,11): error TS2300: Duplicate identifier 'MessageEvent'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(9699,13): error TS2300: Duplicate identifier 'MessageEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5184,11): error TS2300: Duplicate identifier 'Event'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5227,13): error TS2300: Duplicate identifier 'Event'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5259,11): error TS2300: Duplicate identifier 'EventSource'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5282,13): error TS2300: Duplicate identifier 'EventSource'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(9741,11): error TS2300: Duplicate identifier 'MessageEvent'.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(9756,13): error TS2300: Duplicate identifier 'MessageEvent'.
 

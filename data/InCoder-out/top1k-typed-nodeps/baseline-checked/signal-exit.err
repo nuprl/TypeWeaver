@@ -2,7 +2,7 @@ index.ts(12,20): error TS2339: Property 'reallyExit' does not exist on type 'Pro
 index.ts(88,36): error TS2304: Cannot find name 'Signature'.
 index.ts(99,36): error TS2304: Cannot find name 'EventEmitter'.
 index.ts(156,45): error TS2304: Cannot find name 'Signature'.
-index.ts(186,9): error TS2367: This condition will always return 'false' since the types 'Event' and 'string' have no overlap.
-../../../../node_modules/@types/node/ts4.8/globals.d.ts(27,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
-../../../../node_modules/@types/node/ts4.8/process.d.ts(5,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+index.ts(186,9): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
+../../../../node_modules/@types/node/globals.d.ts(27,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+../../../../node_modules/@types/node/process.d.ts(5,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
 

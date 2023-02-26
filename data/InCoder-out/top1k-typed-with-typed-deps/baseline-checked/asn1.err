@@ -1,7 +1,7 @@
 lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
-lib/ber/reader.ts(18,23): error TS2304: Cannot find name 'uffer'.
+lib/ber/reader.ts(18,23): error TS2552: Cannot find name 'uffer'. Did you mean 'Buffer'?
 lib/ber/reader.ts(18,23): error TS4078: Parameter 'data' of exported function has or is using private name 'uffer'.
 lib/ber/reader.ts(128,48): error TS2304: Cannot find name 'Tag'.
 lib/ber/reader.ts(160,46): error TS2503: Cannot find namespace 'ASN1'.
@@ -15,7 +15,7 @@ lib/ber/writer.ts(74,42): error TS2552: Cannot find name 'umber'. Did you mean '
 lib/ber/writer.ts(74,55): error TS2304: Cannot find name 'ny'.
 lib/ber/writer.ts(109,50): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
 lib/ber/writer.ts(109,63): error TS2304: Cannot find name 'ny'.
-lib/ber/writer.ts(119,46): error TS2552: Cannot find name 'oolean'. Did you mean 'boolean'?
+lib/ber/writer.ts(119,46): error TS2304: Cannot find name 'oolean'.
 lib/ber/writer.ts(119,60): error TS2304: Cannot find name 'ny'.
 lib/ber/writer.ts(132,45): error TS2304: Cannot find name 'ring'.
 lib/ber/writer.ts(132,57): error TS2304: Cannot find name 'g'.
@@ -47,6 +47,6 @@ lib/ber/writer.ts(211,33): error TS2345: Argument of type 'number' is not assign
 lib/ber/writer.ts(224,47): error TS2304: Cannot find name 'umber'.
 lib/ber/writer.ts(249,49): error TS2304: Cannot find name 'umber'.
 lib/ber/writer.ts(288,44): error TS2304: Cannot find name 'umber'.
-../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
-../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
+../../../../node_modules/@types/node/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../node_modules/@types/node/buffer.d.ts(2208,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
 

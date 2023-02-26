@@ -19,53 +19,75 @@ src/runtime/injectStylesIntoStyleTag.ts(68,34): error TS2339: Property 'sourceMa
 src/runtime/injectStylesIntoStyleTag.ts(69,33): error TS2339: Property 'supports' does not exist on type 'HTMLElement'.
 src/runtime/injectStylesIntoStyleTag.ts(70,30): error TS2339: Property 'layer' does not exist on type 'HTMLElement'.
 src/runtime/insertStyleElement.ts(2,38): error TS2304: Cannot find name 'StyleElementOptions'.
+src/runtime/insertStyleElement.ts(2,38): error TS4078: Parameter 'options' of exported function has or is using private name 'StyleElementOptions'.
 src/runtime/isEqualLocals.ts(1,27): error TS2304: Cannot find name 'ILocal'.
+src/runtime/isEqualLocals.ts(1,27): error TS4078: Parameter 'a' of exported function has or is using private name 'ILocal'.
 src/runtime/isEqualLocals.ts(1,38): error TS2304: Cannot find name 'ILocal'.
+src/runtime/isEqualLocals.ts(1,38): error TS4078: Parameter 'b' of exported function has or is using private name 'ILocal'.
 src/runtime/setAttributesWithAttributes.ts(2,85): error TS2304: Cannot find name 'HTMLAttributes'.
+src/runtime/setAttributesWithAttributes.ts(2,85): error TS4078: Parameter 'attributes' of exported function has or is using private name 'HTMLAttributes'.
 src/runtime/setAttributesWithAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithAttributesAndNonce.ts(2,85): error TS2304: Cannot find name 'HTMLAttributes'.
+src/runtime/setAttributesWithAttributesAndNonce.ts(2,85): error TS4078: Parameter 'attributes' of exported function has or is using private name 'HTMLAttributes'.
 src/runtime/setAttributesWithoutAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithoutAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/singletonStyleDomAPI.ts(52,20): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/runtime/singletonStyleDomAPI.ts(53,18): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/runtime/singletonStyleDomAPI.ts(76,26): error TS2304: Cannot find name 'DomAPIOptions'.
+src/runtime/singletonStyleDomAPI.ts(76,26): error TS4078: Parameter 'options' of exported function has or is using private name 'DomAPIOptions'.
 src/runtime/styleDomAPI.ts(2,57): error TS2304: Cannot find name 'StyleApplyOptions'.
 src/runtime/styleDomAPI.ts(56,26): error TS2304: Cannot find name 'DomAPIOptions'.
+src/runtime/styleDomAPI.ts(56,26): error TS4078: Parameter 'options' of exported function has or is using private name 'DomAPIOptions'.
 src/runtime/styleTagTransform.ts(3,20): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/runtime/styleTagTransform.ts(4,18): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/utils.ts(16,42): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(16,42): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(26,28): error TS2339: Property 'split' does not exist on type 'Request'.
 src/utils.ts(59,65): error TS2304: Cannot find name 'ImportContext'.
+src/utils.ts(59,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'ImportContext'.
 src/utils.ts(62,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(70,69): error TS2304: Cannot find name 'WebpackContext'.
+src/utils.ts(70,69): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackContext'.
 src/utils.ts(71,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(78,66): error TS2304: Cannot find name 'ImportStyleAPICodeLoaderContext'.
+src/utils.ts(78,66): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'ImportStyleAPICodeLoaderContext'.
 src/utils.ts(81,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(97,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(101,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(117,70): error TS2304: Cannot find name 'WebpackContext'.
+src/utils.ts(117,70): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackContext'.
 src/utils.ts(118,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(134,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(143,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(155,42): error TS2304: Cannot find name 'InsertType'.
+src/utils.ts(155,42): error TS4078: Parameter 'insertType' of exported function has or is using private name 'InsertType'.
 src/utils.ts(155,63): error TS2552: Cannot find name 'InsertOptions'. Did you mean 'InsertPosition'?
+src/utils.ts(155,63): error TS4078: Parameter 'options' of exported function has or is using private name 'InsertOptions'.
 src/utils.ts(172,76): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(172,76): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(175,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(183,60): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(183,60): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(184,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(258,58): error TS2304: Cannot find name 'WebpackContext'.
+src/utils.ts(258,58): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackContext'.
 src/utils.ts(259,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(288,65): error TS2304: Cannot find name 'WebpackOptionsApplyContext'.
+src/utils.ts(288,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackOptionsApplyContext'.
 src/utils.ts(291,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(313,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(324,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(337,42): error TS2304: Cannot find name 'StyleTagTransformOptions'.
+src/utils.ts(337,42): error TS4078: Parameter 'options' of exported function has or is using private name 'StyleTagTransformOptions'.
 src/utils.ts(346,63): error TS2304: Cannot find name 'WebpackOptionsApply'.
+src/utils.ts(346,63): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackOptionsApply'.
 src/utils.ts(347,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(355,67): error TS2304: Cannot find name 'WebpackContext'.
+src/utils.ts(355,67): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackContext'.
 src/utils.ts(356,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(364,65): error TS2304: Cannot find name 'WebpackOptionsApplyLoaderContext'.
+src/utils.ts(364,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackOptionsApplyLoaderContext'.
 src/utils.ts(372,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(379,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/utils.ts(384,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.

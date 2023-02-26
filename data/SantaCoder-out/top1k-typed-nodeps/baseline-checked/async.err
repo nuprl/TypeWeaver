@@ -47,10 +47,61 @@ docs/v3/scripts/prettify/lang-css.ts(2,27): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(2,62): error TS1109: Expression expected.
 docs/v3/scripts/prettify/lang-css.ts(3,172): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(3,173): error TS1005: ',' expected.
+lib/auto.ts(151,37): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/cargo.ts(49,56): error TS4078: Parameter 'payload' of exported function has or is using private name 'CargoPayload'.
+lib/internal/asyncEachOfLimit.ts(4,67): error TS4078: Parameter 'generator' of exported function has or is using private name 'T'.
 lib/internal/awaitify.ts(3,76): error TS1005: ',' expected.
+lib/internal/wrapAsync.ts(15,29): error TS4078: Parameter 'asyncFn' of exported function has or is using private name 'AsyncFunction'.
 lib/memoize.ts(45,62): error TS1005: ',' expected.
+lib/parallel.ts(163,41): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/parallelLimit.ts(24,46): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
 lib/priorityQueue.ts(55,46): error TS1005: ',' expected.
 lib/priorityQueue.ts(59,51): error TS1005: ',' expected.
+lib/reflectAll.ts(70,43): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/retry.ts(98,37): error TS4078: Parameter 'opts' of exported function has or is using private name 'RetryOptions'.
+lib/retry.ts(98,57): error TS4078: Parameter 'task' of exported function has or is using private name 'Task'.
+lib/retryable.ts(35,42): error TS4078: Parameter 'opts' of exported function has or is using private name 'RetryableOptions'.
+lib/retryable.ts(35,66): error TS4078: Parameter 'task' of exported function has or is using private name 'Task'.
+lib/series.ts(169,39): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+perf/benchmark.ts(106,26): error TS4078: Parameter 'suite' of exported function has or is using private name 'TestSuite'.
+perf/benchmark.ts(112,41): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+perf/benchmark.ts(118,58): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+perf/benchmark.ts(124,31): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+perf/benchmark.ts(129,35): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+perf/benchmark.ts(133,36): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+perf/benchmark.ts(137,35): error TS4078: Parameter 'suiteConfig' of exported function has or is using private name 'ITestConfig'.
+support/build/compile-module.ts(13,33): error TS4078: Parameter 'options' of exported function has or is using private name 'CompileOptions'.
+support/generate-index.ts(50,34): error TS4078: Parameter 'entries' of exported function has or is using private name 'IEntry'.
+support/generate-index.ts(50,53): error TS4078: Parameter 'aliases' of exported function has or is using private name 'IAlias'.
+support/generate-index.ts(50,73): error TS4078: Parameter 'template' of exported function has or is using private name 'ITemplate'.
+support/jsdoc/jsdoc-fix-html.ts(20,52): error TS4078: Parameter '$page' of exported function has or is using private name 'HTMLPage'.
+support/jsdoc/jsdoc-fix-html.ts(67,37): error TS4078: Parameter 'data' of exported function has or is using private name 'Cheerio'.
+support/jsdoc/jsdoc-fix-html.ts(88,30): error TS4078: Parameter '$page' of exported function has or is using private name 'JQuery'.
+support/jsdoc/jsdoc-fix-html.ts(88,44): error TS4078: Parameter '$nav' of exported function has or is using private name 'JQuery'.
+support/jsdoc/jsdoc-fix-html.ts(113,23): error TS4078: Parameter 'file' of exported function has or is using private name 'IFile'.
+support/jsdoc/jsdoc-fix-html.ts(113,37): error TS4078: Parameter '$page' of exported function has or is using private name 'IPage'.
+support/jsdoc/jsdoc-fix-html.ts(113,57): error TS4078: Parameter 'moduleFiles' of exported function has or is using private name 'IModuleFiles'.
+support/jsdoc/jsdoc-fix-html.ts(144,27): error TS4078: Parameter '$page' of exported function has or is using private name 'JQuery'.
+support/jsdoc/theme/publish.ts(24,21): error TS4078: Parameter 'spec' of exported function has or is using private name 'Spec'.
+support/jsdoc/theme/publish.ts(28,33): error TS4078: Parameter 'tutorial' of exported function has or is using private name 'Tutorial'.
+support/jsdoc/theme/publish.ts(32,35): error TS4078: Parameter 'doclet' of exported function has or is using private name 'Doclet'.
+support/jsdoc/theme/publish.ts(36,29): error TS4078: Parameter 'doclet' of exported function has or is using private name 'Doclet'.
+support/jsdoc/theme/publish.ts(45,33): error TS4078: Parameter 'doclet' of exported function has or is using private name 'Doclet'.
+support/jsdoc/theme/publish.ts(66,39): error TS4078: Parameter 'item' of exported function has or is using private name 'IItem'.
+support/jsdoc/theme/publish.ts(83,31): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
+support/jsdoc/theme/publish.ts(99,37): error TS4078: Parameter 'params' of exported function has or is using private name 'IParamAttributes'.
+support/jsdoc/theme/publish.ts(105,37): error TS4078: Parameter 'item' of exported function has or is using private name 'ItemType'.
+support/jsdoc/theme/publish.ts(117,38): error TS4078: Parameter 'attribs' of exported function has or is using private name 'Attribs'.
+support/jsdoc/theme/publish.ts(127,39): error TS4078: Parameter 'items' of exported function has or is using private name 'IAttribute'.
+support/jsdoc/theme/publish.ts(142,33): error TS4078: Parameter 'f' of exported function has or is using private name 'FunctionDeclaration'.
+support/jsdoc/theme/publish.ts(181,24): error TS4078: Parameter 'f' of exported function has or is using private name 'IFeature'.
+support/jsdoc/theme/publish.ts(198,36): error TS4078: Parameter 'doclet' of exported function has or is using private name 'Doclet'.
+support/jsdoc/theme/publish.ts(227,43): error TS4078: Parameter 'sourceFiles' of exported function has or is using private name 'IResolvedSourceFiles'.
+support/jsdoc/theme/publish.ts(227,75): error TS4078: Parameter 'encoding' of exported function has or is using private name 'EncodingKind'.
+support/jsdoc/theme/publish.ts(262,39): error TS4078: Parameter 'doclets' of exported function has or is using private name 'Doclet'.
+support/jsdoc/theme/publish.ts(262,58): error TS4078: Parameter 'modules' of exported function has or is using private name 'ModuleInfo'.
+support/jsdoc/theme/publish.ts(292,32): error TS4078: Parameter 'items' of exported function has or is using private name 'MemberItem'.
+support/jsdoc/theme/publish.ts(353,28): error TS4078: Parameter 'members' of exported function has or is using private name 'Member'.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(1,82): error TS1002: Unterminated string literal.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,1): error TS1005: ',' expected.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,8): error TS1005: ',' expected.

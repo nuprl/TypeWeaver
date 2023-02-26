@@ -26,13 +26,13 @@ lib/sax.ts(173,12): error TS2350: Only a void function can be called with the 'n
 lib/sax.ts(176,46): error TS2304: Cannot find name 'Options'.
 lib/sax.ts(178,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(183,20): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(287,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(287,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(287,39): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(287,53): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(291,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(291,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/sax.ts(295,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,12): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,25): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,39): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(287,53): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,12): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,25): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/sax.ts(295,12): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/sax.ts(302,29): error TS2304: Cannot find name 'egExp'.
 lib/sax.ts(302,40): error TS2304: Cannot find name 'gExp'.
 lib/sax.ts(623,26): error TS2304: Cannot find name 'Parser'.
@@ -210,5 +210,5 @@ lib/sax.ts(1474,31): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist
 lib/sax.ts(1478,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'number'.
 lib/sax.ts(1479,31): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'number'.
 lib/sax.ts(1500,35): error TS2554: Expected 0-1 arguments, but got 2.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17768,18): error TS2394: This overload signature is not compatible with its implementation signature.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(17952,18): error TS2394: This overload signature is not compatible with its implementation signature.
 

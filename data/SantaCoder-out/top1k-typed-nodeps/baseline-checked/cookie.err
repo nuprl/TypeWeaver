@@ -6,8 +6,11 @@ benchmark/parse.ts(52,44): error TS2552: Cannot find name 'CycleEvent'. Did you 
 benchmark/parse.ts(56,44): error TS2552: Cannot find name 'CycleEvent'. Did you mean 'CloseEvent'?
 benchmark/parse.ts(66,10): error TS2393: Duplicate function implementation.
 index.ts(47,38): error TS2304: Cannot find name 'ParseOptions'.
+index.ts(47,38): error TS4078: Parameter 'options' of exported function has or is using private name 'ParseOptions'.
 index.ts(111,53): error TS2304: Cannot find name 'SerializationOptions'.
+index.ts(111,53): error TS4078: Parameter 'options' of exported function has or is using private name 'SerializationOptions'.
 index.ts(264,41): error TS2304: Cannot find name 'DecodeFunction'.
+index.ts(264,41): error TS4078: Parameter 'decode' of exported function has or is using private name 'DecodeFunction'.
 scripts/update-benchmark.ts(12,69): error TS2304: Cannot find name 'Cookies'.
 scripts/update-benchmark.ts(28,36): error TS2304: Cannot find name 'AxiosResponse'.
 scripts/update-benchmark.ts(41,33): error TS2304: Cannot find name 'Site'.

@@ -1,0 +1,26 @@
+declare const path: any;
+declare const CHAR_HASH: number;
+declare const CHAR_SLASH: number;
+declare const CHAR_BACKSLASH: number;
+declare const CHAR_A: number;
+declare const CHAR_Z: number;
+declare const CHAR_LOWER_A: number;
+declare const CHAR_LOWER_Z: number;
+declare const CHAR_DOT: number;
+declare const CHAR_COLON: number;
+declare const posixNormalize: any;
+declare const winNormalize: any;
+declare const PathType: Readonly<{
+    Empty: 0;
+    Normal: 1;
+    Relative: 2;
+    AbsoluteWin: 3;
+    AbsolutePosix: 4;
+    Internal: 5;
+}>;
+declare const getType: (p: any) => any;
+declare const normalize: (p: any) => any;
+declare const join: (rootPath: any, request: any) => any;
+declare const joinCache: Map<any, any>;
+declare const cachedJoin: (rootPath: any, request: any) => any;
+declare const checkImportsExportsFieldTarget: (relativePath: any) => Error;

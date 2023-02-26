@@ -33,11 +33,11 @@ examples/match.ts(26,27): error TS2339: Property 'onMatch' does not exist on typ
 examples/match.ts(26,45): error TS2339: Property 'onMatch' does not exist on type '{}'.
 examples/windows.ts(25,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
 examples/windows.ts(35,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
-lib/parse.ts(4,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/parse.ts(4,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/parse.ts(144,22): error TS2339: Property 'peek' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
 lib/parse.ts(145,25): error TS2339: Property 'advance' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
 lib/parse.ts(264,15): error TS2339: Property 'negatedExtglob' does not exist on type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }'.
-lib/parse.ts(308,9): error TS2367: This condition will always return 'false' since the types 'false' and 'true' have no overlap.
+lib/parse.ts(308,9): error TS2367: This comparison appears to be unintentional because the types 'false' and 'true' have no overlap.
 lib/parse.ts(392,16): error TS2339: Property 'posix' does not exist on type '{ type: string; value: string; output: any; }'.
 lib/parse.ts(517,16): error TS2339: Property 'posix' does not exist on type '{ type: string; value: string; output: any; }'.
 lib/parse.ts(802,51): error TS2339: Property 'star' does not exist on type '{ type: string; value: string; output: any; }'.
@@ -45,7 +45,7 @@ lib/parse.ts(804,12): error TS2339: Property 'star' does not exist on type '{ ty
 lib/parse.ts(825,26): error TS2339: Property 'prev' does not exist on type '{ type: string; value: string; output: any; }'.
 lib/parse.ts(989,17): error TS2339: Property 'suffix' does not exist on type '{ type: string; value: string; output: any; }'.
 lib/parse.ts(990,31): error TS2339: Property 'suffix' does not exist on type '{ type: string; value: string; output: any; }'.
-lib/picomatch.ts(6,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/picomatch.ts(6,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/picomatch.ts(63,5): error TS2322: Type '((str: any) => any) | { (input: any, returnObject?: boolean): boolean | { glob: any; state: any; regex: any; posix: any; input: any; output: any; match: boolean; isMatch: boolean; }; state: any; }' is not assignable to type '() => boolean'.
   Type '(str: any) => any' is not assignable to type '() => boolean'.
 lib/picomatch.ts(79,19): error TS2554: Expected 0 arguments, but got 1.
@@ -56,7 +56,7 @@ lib/picomatch.ts(293,15): error TS2339: Property 'fastpaths' does not exist on t
 lib/picomatch.ts(294,12): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
 lib/picomatch.ts(297,15): error TS2339: Property 'output' does not exist on type '{ negated: boolean; fastpaths: boolean; }'.
 lib/picomatch.ts(298,5): error TS2741: Property 'fastpaths' is missing in type '{ input: any; index: number; start: number; dot: boolean; consumed: string; output: string; prefix: string; backtrack: boolean; negated: boolean; brackets: number; braces: number; parens: number; quotes: number; globstar: boolean; tokens: { ...; }[]; }' but required in type '{ negated: boolean; fastpaths: boolean; }'.
-lib/scan.ts(3,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/scan.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/scan.ts(6,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_ASTERISK'. Did you mean to use 'import CHAR_ASTERISK from "./constants"' instead?
 lib/scan.ts(7,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_AT'. Did you mean to use 'import CHAR_AT from "./constants"' instead?
 lib/scan.ts(8,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_BACKWARD_SLASH'. Did you mean to use 'import CHAR_BACKWARD_SLASH from "./constants"' instead?
@@ -77,7 +77,7 @@ lib/scan.ts(104,31): error TS2339: Property 'backslashes' does not exist on type
 lib/scan.ts(115,27): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
 lib/scan.ts(127,27): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
 lib/scan.ts(143,29): error TS2339: Property 'isBrace' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
-lib/scan.ts(181,27): error TS2339: Property 'isExtglob' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
+lib/scan.ts(181,27): error TS2551: Property 'isExtglob' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'. Did you mean 'isGlob'?
 lib/scan.ts(190,35): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
 lib/scan.ts(208,54): error TS2339: Property 'isGlobstar' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.
 lib/scan.ts(231,31): error TS2339: Property 'backslashes' does not exist on type '{ value: string; depth: number; isGlob: boolean; }'.

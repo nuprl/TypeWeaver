@@ -132,7 +132,9 @@ bigfraction.ts(886,14): error TS2304: Cannot find name 'define'.
 bigfraction.ts(886,39): error TS2304: Cannot find name 'define'.
 bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
 examples/hesse-convergence.ts(54,22): error TS2304: Cannot find name 'Matrix4'.
+examples/hesse-convergence.ts(54,22): error TS4078: Parameter 'm' of exported function has or is using private name 'Matrix4'.
 examples/hesse-convergence.ts(54,34): error TS2304: Cannot find name 'Vector3'.
+examples/hesse-convergence.ts(54,34): error TS4078: Parameter 'v' of exported function has or is using private name 'Vector3'.
 examples/hesse-convergence.ts(95,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
 examples/hesse-convergence.ts(111,11): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'number'.
 examples/tape-measure.ts(17,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.

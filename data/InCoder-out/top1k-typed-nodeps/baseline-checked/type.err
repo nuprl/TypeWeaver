@@ -1,10 +1,10 @@
 array-length/ensure.ts(6,56): error TS2304: Cannot find name 'mixed'.
 array-like/ensure.ts(6,55): error TS2304: Cannot find name 'DateOptions'.
 array-like/is.ts(16,23): error TS2339: Property 'length' does not exist on type 'Object'.
-array/is.ts(17,7): error TS2304: Cannot find name 'hasOwnProperty'.
+array/is.ts(17,7): error TS2552: Cannot find name 'hasOwnProperty'. Did you mean 'objHasOwnProperty'?
 finite/ensure.ts(6,56): error TS2304: Cannot find name 'mixed'.
 function/is.ts(5,35): error TS2304: Cannot find name 'ny'.
-function/is.ts(8,7): error TS2304: Cannot find name 'hasOwnProperty'.
+function/is.ts(8,7): error TS2552: Cannot find name 'hasOwnProperty'. Did you mean 'objHasOwnProperty'?
 integer/ensure.ts(6,56): error TS2304: Cannot find name 'mixed'.
 lib/to-short-string.ts(15,9): error TS2678: Type 'string' is not comparable to type 'number'.
 lib/to-short-string.ts(17,9): error TS2678: Type 'string' is not comparable to type 'number'.
@@ -12,7 +12,7 @@ lib/to-short-string.ts(19,9): error TS2678: Type 'string' is not comparable to t
 lib/to-short-string.ts(21,9): error TS2678: Type 'string' is not comparable to type 'number'.
 natural-number/ensure.ts(7,55): error TS2304: Cannot find name 'DateOptions'.
 number/ensure.ts(6,56): error TS2304: Cannot find name 'mixed'.
-object/is.ts(10,9): error TS2304: Cannot find name 'hasOwnProperty'.
+object/is.ts(10,9): error TS2552: Cannot find name 'hasOwnProperty'. Did you mean 'objHasOwnProperty'?
 plain-object/is.ts(9,15): error TS2339: Property '__proto__' does not exist on type '{}'.
 plain-object/is.ts(26,20): error TS2304: Cannot find name 'hasOwnProperty'.
 reg-exp/is.ts(14,7): error TS2304: Cannot find name 'hasOwnProperty'.

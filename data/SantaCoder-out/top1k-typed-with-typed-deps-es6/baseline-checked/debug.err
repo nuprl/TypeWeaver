@@ -1,10 +1,12 @@
 karma.conf.ts(1,34): error TS2304: Cannot find name 'IConfig'.
+karma.conf.ts(1,34): error TS4078: Parameter 'config' of exported function has or is using private name 'IConfig'.
 src/browser.ts(119,73): error TS2339: Property 'type' does not exist on type 'Process'.
 src/browser.ts(119,111): error TS2339: Property '__nwjs' does not exist on type 'Process'.
 src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exist on type 'CSSStyleDeclaration'. Did you mean 'webkitAppearance'?
 src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
 src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
 src/common.ts(7,21): error TS2304: Cannot find name 'IEnvironment'.
+src/common.ts(7,21): error TS4078: Parameter 'env' of exported function has or is using private name 'IEnvironment'.
 src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: string, delimiter: string) => ...; destroy: () => void; }; debug: ...; default: ...; ... 9 more ...; selectColor: (namespace: string) => any; }'.
 src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: string): { (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: string, delimiter: string) => ...; destroy: () => void; }; debug: ...; default: ...; ... 9 more ...; selectColor: (namespace: string) => any; }'.
 src/common.ts(68,15): error TS2339: Property 'enabled' does not exist on type '{ (...args: any[]): void; namespace: string; useColors: any; color: any; extend: (namespace: string, delimiter: string) => ...; destroy: () => void; }'.

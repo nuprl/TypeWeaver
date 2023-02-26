@@ -1,4 +1,6 @@
+index.ts(31,14): error TS2742: The inferred type of 'mime' cannot be named without a reference to 'send/node_modules/@types/mime'. This is likely not portable. A type annotation is necessary.
 index.ts(40,46): error TS2304: Cannot find name 'ServeStaticOptions'.
+index.ts(40,46): error TS4078: Parameter 'options' of exported function has or is using private name 'ServeStaticOptions'.
 index.ts(74,67): error TS2552: Cannot find name 'NextFunction'. Did you mean 'Function'?
 index.ts(81,11): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 index.ts(82,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.

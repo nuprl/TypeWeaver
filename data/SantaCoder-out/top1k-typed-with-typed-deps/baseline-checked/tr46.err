@@ -1,10 +1,13 @@
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 index.ts(12,57): error TS2304: Cannot find name 'FindStatusOptions'.
+index.ts(12,57): error TS4078: Parameter '{ useSTD3ASCIIRules }' of exported function has or is using private name 'FindStatusOptions'.
 index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(80,176): error TS2304: Cannot find name 'IOptions'.
+index.ts(80,176): error TS4078: Parameter '{ checkHyphens: checkHyphens, checkBidi: checkBidi, checkJoiners: checkJoiners, processingOption: processingOption, useSTD3ASCIIRules }' of exported function has or is using private name 'IOptions'.
 index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(175,50): error TS2304: Cannot find name 'IOptions'.
+index.ts(175,50): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 scripts/generateMappingTable.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generateMappingTable.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.

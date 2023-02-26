@@ -3,10 +3,15 @@ configure/request-next.ts(42,38): error TS2304: Cannot find name 'AxiosRequestCo
 configure/request2.ts(9,37): error TS2304: Cannot find name 'IOptions'.
 configure/request2.ts(36,90): error TS2304: Cannot find name 'AxiosRequestConfig'.
 lib/errors.ts(4,44): error TS2304: Cannot find name 'AxiosRequestConfig'.
+lib/errors.ts(4,44): error TS4078: Parameter 'options' of exported function has or is using private name 'AxiosRequestConfig'.
 lib/errors.ts(4,74): error TS2304: Cannot find name 'AxiosResponse'.
+lib/errors.ts(4,74): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
 lib/errors.ts(22,66): error TS2304: Cannot find name 'AxiosRequestConfig'.
+lib/errors.ts(22,66): error TS4078: Parameter 'options' of exported function has or is using private name 'AxiosRequestConfig'.
 lib/errors.ts(22,96): error TS2304: Cannot find name 'AxiosResponse'.
+lib/errors.ts(22,96): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
 lib/errors.ts(40,61): error TS2304: Cannot find name 'AxiosResponse'.
+lib/errors.ts(40,61): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
 lib/plumbing.ts(10,37): error TS2304: Cannot find name 'IOptions'.
 lib/plumbing.ts(32,14): error TS2339: Property 'init' does not exist on type '{}'.
 lib/plumbing.ts(32,47): error TS2304: Cannot find name 'AxiosRequestConfig'.

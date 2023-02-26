@@ -7,6 +7,7 @@ check.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
 commit.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
 consumer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'features'.
 copy-mdn.ts(8,49): error TS2304: Cannot find name 'BcdBrowser'.
+copy-mdn.ts(8,49): error TS4078: Parameter 'bcdBrowser' of exported function has or is using private name 'BcdBrowser'.
 copy-mdn.ts(45,33): error TS2339: Property 'version_added' does not exist on type 'string'.
 copy-mdn.ts(56,45): error TS2367: This comparison appears to be unintentional because the types 'string' and 'boolean' have no overlap.
 copy-mdn.ts(75,19): error TS2339: Property 'spec_url' does not exist on type 'string'.
@@ -25,6 +26,7 @@ dist/unpacker/feature.ts(4,7): error TS2451: Cannot redeclare block-scoped varia
 dist/unpacker/feature.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
 dist/unpacker/feature.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'versions'.
 dist/unpacker/feature.ts(10,32): error TS2304: Cannot find name 'Cipher'.
+dist/unpacker/feature.ts(10,32): error TS4078: Parameter 'cipher' of exported function has or is using private name 'Cipher'.
 dist/unpacker/feature.ts(31,12): error TS2551: Property 'stats' does not exist on type '{ status: any; title: any; }'. Did you mean 'status'?
 dist/unpacker/region.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
 src/lib/base62.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'sum'.
@@ -32,12 +34,15 @@ src/lib/base62.ts(6,10): error TS2451: Cannot redeclare block-scoped variable 'e
 src/lib/generateCode.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 't'.
 src/lib/generateCode.ts(4,10): error TS2451: Cannot redeclare block-scoped variable 'generateCode'.
 src/lib/generateCode.ts(4,42): error TS2304: Cannot find name 'ProgramStatement'.
+src/lib/generateCode.ts(4,42): error TS4078: Parameter 'programStatements' of exported function has or is using private name 'ProgramStatement'.
 src/lib/getContents.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 src/lib/getContents.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 src/lib/moduleExports.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 't'.
 src/lib/moduleExports.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'moduleExports'.
 src/lib/moduleExports.ts(3,36): error TS2304: Cannot find name 'Expression'.
+src/lib/moduleExports.ts(3,36): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
 src/lib/runTasks.ts(1,27): error TS2304: Cannot find name 'Task'.
+src/lib/runTasks.ts(1,27): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
 src/lib/runTasks.ts(11,43): error TS2304: Cannot find name 'Task'.
 src/lib/stringifyObject.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 't'.
 src/lib/stringifyObject.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'generateCode'.
@@ -50,16 +55,21 @@ src/packer/agents.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 
 src/packer/agents.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'invertObj'.
 src/packer/agents.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
 src/packer/agents.ts(12,31): error TS2304: Cannot find name 'Agent'.
+src/packer/agents.ts(12,31): error TS4078: Parameter 'agents' of exported function has or is using private name 'Agent'.
 src/packer/agents.ts(12,50): error TS2304: Cannot find name 'Version'.
+src/packer/agents.ts(12,50): error TS4078: Parameter 'versions' of exported function has or is using private name 'Version'.
 src/packer/agents.ts(12,73): error TS2304: Cannot find name 'Agent'.
+src/packer/agents.ts(12,73): error TS4078: Parameter 'fullAgents' of exported function has or is using private name 'Agent'.
 src/packer/agents.ts(38,13): error TS2339: Property 'D' does not exist on type '{ A: any; B: any; C: any; E: any; F: any; }'.
 src/packer/agents.ts(51,38): error TS2304: Cannot find name 'Agent'.
+src/packer/agents.ts(51,38): error TS4078: Parameter 'agents' of exported function has or is using private name 'Agent'.
 src/packer/browsers.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 src/packer/browsers.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 src/packer/browsers.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'stringifyObject'.
 src/packer/browsers.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'encode'.
 src/packer/browsers.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
 src/packer/browsers.ts(10,32): error TS2304: Cannot find name 'BrowsersResponse'.
+src/packer/browsers.ts(10,32): error TS4078: Parameter '{ data }' of exported function has or is using private name 'BrowsersResponse'.
 src/packer/feature.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 src/packer/feature.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 src/packer/feature.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 't'.
@@ -79,7 +89,9 @@ src/packer/feature.ts(18,7): error TS2451: Cannot redeclare block-scoped variabl
 src/packer/feature.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'base'.
 src/packer/feature.ts(27,7): error TS2451: Cannot redeclare block-scoped variable 'getContents'.
 src/packer/feature.ts(32,33): error TS2304: Cannot find name 'IFeature'.
+src/packer/feature.ts(32,33): error TS4078: Parameter 'features' of exported function has or is using private name 'IFeature'.
 src/packer/feature.ts(42,35): error TS2304: Cannot find name 'SupportData'.
+src/packer/feature.ts(42,35): error TS4078: Parameter 'supportData' of exported function has or is using private name 'SupportData'.
 src/packer/feature.ts(60,14): error TS2339: Property 'A' does not exist on type '{}'.
 src/packer/feature.ts(71,24): error TS2538: Type 'unknown' cannot be used as an index type.
 src/packer/feature.ts(72,21): error TS2538: Type 'unknown' cannot be used as an index type.

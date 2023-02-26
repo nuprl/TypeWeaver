@@ -1,8 +1,13 @@
 lib/called-in-order.ts(8,32): error TS2304: Cannot find name 'CallMap'.
+lib/called-in-order.ts(8,32): error TS4078: Parameter 'callMap' of exported function has or is using private name 'CallMap'.
 lib/called-in-order.ts(8,46): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(8,46): error TS4078: Parameter 'spy' of exported function has or is using private name 'Spy'.
 lib/called-in-order.ts(19,38): error TS2304: Cannot find name 'CallMap'.
+lib/called-in-order.ts(19,38): error TS4078: Parameter 'callMap' of exported function has or is using private name 'CallMap'.
 lib/called-in-order.ts(19,52): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(19,52): error TS4078: Parameter 'spy' of exported function has or is using private name 'Spy'.
 lib/called-in-order.ts(19,79): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(19,79): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.
 lib/deprecated.ts(48,38): error TS2304: Cannot find name 'RPCMessage'.
 lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'string'.
 lib/function-name.ts(17,18): error TS2339: Property 'name' does not exist on type 'string'.

@@ -1,17 +1,22 @@
 benchmark/wrapfunction.ts(36,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 benchmark/wrapproperty.ts(30,44): error TS2552: Cannot find name 'CycleEvent'. Did you mean 'CloseEvent'?
 index.ts(85,36): error TS2304: Cannot find name 'Stack'.
+index.ts(85,36): error TS4078: Parameter 'stack' of exported function has or is using private name 'Stack'.
 index.ts(103,10): error TS2393: Duplicate function implementation.
 index.ts(141,35): error TS2304: Cannot find name 'EventEmitter'.
+index.ts(141,35): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
 index.ts(251,18): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '"deprecation"' is not assignable to parameter of type 'Signals'.
 index.ts(267,38): error TS2304: Cannot find name 'CallSite'.
+index.ts(267,38): error TS4078: Parameter 'callSite' of exported function has or is using private name 'CallSite'.
 index.ts(278,8): error TS2339: Property 'callSite' does not exist on type 'any[]'.
 index.ts(279,8): error TS2339: Property 'name' does not exist on type 'any[]'.
 index.ts(288,32): error TS2304: Cannot find name 'Site'.
+index.ts(288,32): error TS4078: Parameter 'site' of exported function has or is using private name 'Site'.
 index.ts(371,36): error TS2304: Cannot find name 'CallSite'.
+index.ts(371,36): error TS4078: Parameter 'callSite' of exported function has or is using private name 'CallSite'.
 index.ts(393,19): error TS2339: Property 'stack' does not exist on type '{}'.
 index.ts(413,10): error TS2393: Duplicate function implementation.
 index.ts(422,8): error TS2339: Property 'name' does not exist on type 'any[]'.

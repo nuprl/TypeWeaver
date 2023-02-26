@@ -1,0 +1,15 @@
+export declare const endianness: () => string;
+export declare const hostname: () => string;
+export declare const loadavg: () => any[];
+export declare const uptime: () => number;
+export declare const freemem: () => number;
+export declare const totalmem: () => number;
+export declare const cpus: () => any[];
+export declare const type: () => string;
+export declare const release: () => string;
+export declare const networkInterfaces: () => {};
+export declare const arch: () => string;
+export declare const platform: () => string;
+export declare const tmpdir: () => string;
+export declare const EOL = "\n";
+export declare const homedir: () => string;

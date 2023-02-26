@@ -1,0 +1,10 @@
+import RSVP from 'rsvp';
+export declare const _reset: () => void;
+export declare const releaseExit: () => void;
+export declare const captureExit: () => void;
+export declare const _handlers: any[];
+export declare const _flush: (lastTime: number, code: number) => RSVP.Promise<void>;
+export declare const onExit: (cb: any) => void;
+export declare const offExit: (cb: Function) => void;
+export declare const exit: () => void;
+export declare const listenerCount: () => number;

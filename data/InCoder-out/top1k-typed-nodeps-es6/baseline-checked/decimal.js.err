@@ -30,7 +30,7 @@ decimal.ts(428,5): error TS2339: Property 'decimalPlaces' does not exist on type
 decimal.ts(428,23): error TS2339: Property 'dp' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(468,5): error TS2339: Property 'dividedBy' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(468,19): error TS2339: Property 'div' does not exist on type '{ toStringTag: string; }'.
-decimal.ts(468,38): error TS2304: Cannot find name 'BigNumber'.
+decimal.ts(468,38): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(469,12): error TS2554: Expected 6 arguments, but got 2.
 decimal.ts(478,5): error TS2339: Property 'dividedToIntegerBy' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(478,28): error TS2339: Property 'divToInt' does not exist on type '{ toStringTag: string; }'.
@@ -150,7 +150,7 @@ decimal.ts(1635,7): error TS2339: Property 'e' does not exist on type 'number'.
 decimal.ts(1637,23): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(1647,5): error TS2339: Property 'precision' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1647,19): error TS2339: Property 'sd' does not exist on type '{ toStringTag: string; }'.
-decimal.ts(1647,37): error TS2304: Cannot find name 'BigNumber'.
+decimal.ts(1647,37): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(1669,5): error TS2339: Property 'round' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1673,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(1692,5): error TS2339: Property 'sine' does not exist on type '{ toStringTag: string; }'.
@@ -427,12 +427,12 @@ decimal.ts(3860,17): error TS2339: Property 'e' does not exist on type 'number'.
 decimal.ts(3870,65): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(3872,23): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(3923,14): error TS2339: Property 's' does not exist on type 'number'.
-decimal.ts(3990,19): error TS2304: Cannot find name 'BigNumber'.
-decimal.ts(4013,21): error TS2304: Cannot find name 'BigNumber'.
-decimal.ts(4038,20): error TS2304: Cannot find name 'BigNumber'.
-decimal.ts(4050,21): error TS2304: Cannot find name 'BigNumber'.
+decimal.ts(3990,19): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+decimal.ts(4013,21): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+decimal.ts(4038,20): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+decimal.ts(4050,21): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(4062,20): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-decimal.ts(4074,21): error TS2304: Cannot find name 'BigNumber'.
+decimal.ts(4074,21): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(4113,12): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(4113,20): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(4117,19): error TS2339: Property 'd' does not exist on type 'number'.
@@ -452,7 +452,7 @@ decimal.ts(4132,18): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(4135,21): error TS2554: Expected 6 arguments, but got 4.
 decimal.ts(4139,13): error TS2339: Property 's' does not exist on type 'number'.
 decimal.ts(4141,21): error TS2554: Expected 6 arguments, but got 4.
-decimal.ts(4155,20): error TS2304: Cannot find name 'BigNumber'.
+decimal.ts(4155,20): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(4166,20): error TS2304: Cannot find name 'BigNumber'.
 decimal.ts(4167,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(4229,47): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.

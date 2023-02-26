@@ -528,6 +528,12 @@ dist/js-yaml.min.ts(3,25986): error TS1128: Declaration or statement expected.
 dist/js-yaml.min.ts(3,25987): error TS1128: Declaration or statement expected.
 dist/js-yaml.ts(316,37): error TS1138: Parameter declaration expected.
 dist/js-yaml.ts(316,42): error TS1005: ',' expected.
+lib/common.ts(14,28): error TS4078: Parameter 'sequence' of exported function has or is using private name 'Sequence'.
+lib/common.ts(14,37): error TS4078: Parameter 'sequence' of exported function has or is using private name 'T'.
+lib/exception.ts(25,46): error TS4078: Parameter 'mark' of exported function has or is using private name 'YAMLMark'.
 lib/schema.ts(32,35): error TS1138: Parameter declaration expected.
 lib/schema.ts(32,40): error TS1005: ',' expected.
+lib/schema.ts(62,29): error TS4078: Parameter 'definition' of exported function has or is using private name 'SchemaDefinition'.
+lib/snippet.ts(35,45): error TS4078: Parameter 'options' of exported function has or is using private name 'SnippetOptions'.
+lib/type.ts(38,37): error TS4078: Parameter 'options' of exported function has or is using private name 'TypeOptions'.
 

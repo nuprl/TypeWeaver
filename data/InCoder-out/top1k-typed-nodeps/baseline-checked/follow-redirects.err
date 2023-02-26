@@ -8,7 +8,7 @@ index.ts(24,24): error TS2554: Expected 3 arguments, but got 2.
 index.ts(28,29): error TS2554: Expected 3 arguments, but got 2.
 index.ts(32,34): error TS2554: Expected 3 arguments, but got 2.
 index.ts(36,26): error TS2554: Expected 3 arguments, but got 2.
-index.ts(42,39): error TS2304: Cannot find name 'RequestOptions'.
+index.ts(42,39): error TS2552: Cannot find name 'RequestOptions'. Did you mean 'IdleRequestOptions'?
 index.ts(42,39): error TS4078: Parameter 'options' of exported function has or is using private name 'RequestOptions'.
 index.ts(42,74): error TS2304: Cannot find name 'ResponseCallback'.
 index.ts(42,74): error TS4078: Parameter 'responseCallback' of exported function has or is using private name 'ResponseCallback'.
@@ -28,12 +28,12 @@ index.ts(371,24): error TS2554: Expected 1 arguments, but got 0.
 index.ts(381,22): error TS2339: Property 'req' does not exist on type 'Response'.
 index.ts(479,59): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 index.ts(482,48): error TS2304: Cannot find name 'RequestOptionsArgs'.
-index.ts(482,79): error TS2304: Cannot find name 'RequestCallback'.
+index.ts(482,79): error TS2552: Cannot find name 'RequestCallback'. Did you mean 'IdleRequestCallback'?
 index.ts(487,41): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'string | URL'.
 index.ts(499,9): error TS2740: Type '{ protocol: any; hostname: any; hash: any; search: any; pathname: any; path: any; href: any; }' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
 index.ts(504,19): error TS2322: Type '{ protocol: string; }' is not assignable to type 'Request'.
   Object literal may only specify known properties, and 'protocol' does not exist in type 'Request'.
-index.ts(546,34): error TS2304: Cannot find name 'UrlObject'.
+index.ts(546,34): error TS2552: Cannot find name 'UrlObject'. Did you mean 'Object'?
 index.ts(546,34): error TS4078: Parameter 'urlObject' of exported function has or is using private name 'UrlObject'.
 index.ts(560,13): error TS2339: Property 'port' does not exist on type '{ protocol: any; hostname: any; hash: any; search: any; pathname: any; path: any; href: any; }'.
 index.ts(587,31): error TS2351: This expression is not constructable.

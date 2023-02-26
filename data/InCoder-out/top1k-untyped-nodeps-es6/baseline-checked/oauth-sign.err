@@ -3,7 +3,7 @@ index.ts(40,22): error TS2304: Cannot find name 'mber'.
 index.ts(40,32): error TS2304: Cannot find name 'er'.
 index.ts(44,36): error TS2304: Cannot find name 'HttpMethod'.
 index.ts(44,59): error TS2304: Cannot find name 'Uri'.
-index.ts(58,9): error TS2345: Argument of type '(a: number, b: number) => 1 | -1 | 0' is not assignable to parameter of type '(a: string[], b: string[]) => number'.
+index.ts(58,9): error TS2345: Argument of type '(a: number, b: number) => 0 | 1 | -1' is not assignable to parameter of type '(a: string[], b: string[]) => number'.
   Types of parameters 'a' and 'a' are incompatible.
     Type 'string[]' is not assignable to type 'number'.
 index.ts(86,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.

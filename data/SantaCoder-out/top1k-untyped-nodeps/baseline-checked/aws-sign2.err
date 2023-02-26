@@ -1,10 +1,17 @@
 index.ts(22,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 index.ts(56,34): error TS2304: Cannot find name 'AuthorizationOptions'.
+index.ts(56,34): error TS4078: Parameter 'options' of exported function has or is using private name 'AuthorizationOptions'.
 index.ts(71,29): error TS2304: Cannot find name 'HmacSha1Options'.
+index.ts(71,29): error TS4078: Parameter 'options' of exported function has or is using private name 'HmacSha1Options'.
 index.ts(72,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
 index.ts(85,25): error TS2552: Cannot find name 'SignOptions'. Did you mean 'GainOptions'?
+index.ts(85,25): error TS4078: Parameter 'options' of exported function has or is using private name 'SignOptions'.
 index.ts(101,30): error TS2552: Cannot find name 'SignQueryOptions'. Did you mean 'ClientQueryOptions'?
+index.ts(101,30): error TS4078: Parameter 'options' of exported function has or is using private name 'SignQueryOptions'.
 index.ts(124,33): error TS2304: Cannot find name 'IOptions'.
+index.ts(124,33): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 index.ts(152,38): error TS2304: Cannot find name 'QueryStringToSignOptions'.
+index.ts(152,38): error TS4078: Parameter 'options' of exported function has or is using private name 'QueryStringToSignOptions'.
 index.ts(198,42): error TS2304: Cannot find name 'Resource'.
+index.ts(198,42): error TS4078: Parameter 'resource' of exported function has or is using private name 'Resource'.
 

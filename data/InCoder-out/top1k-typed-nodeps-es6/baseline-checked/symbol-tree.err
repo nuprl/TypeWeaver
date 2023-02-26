@@ -16,7 +16,7 @@ lib/SymbolTreeNode.ts(9,22): error TS2339: Property 'firstChild' does not exist 
 lib/SymbolTreeNode.ts(10,22): error TS2339: Property 'lastChild' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(13,22): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(15,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(19,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(19,22): error TS2551: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'. Did you mean 'getCachedIndex'?
 lib/SymbolTreeNode.ts(20,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(24,37): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(24,52): error TS2339: Property 'previousSibling' does not exist on type 'SymbolTreeNode'.
@@ -27,9 +27,9 @@ lib/SymbolTreeNode.ts(34,46): error TS2339: Property 'childrenVersion' does not 
 lib/SymbolTreeNode.ts(35,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(40,26): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(41,30): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(46,29): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(46,29): error TS2551: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'. Did you mean 'getCachedIndex'?
 lib/SymbolTreeNode.ts(51,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(52,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
+lib/SymbolTreeNode.ts(52,22): error TS2551: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'. Did you mean 'getCachedIndex'?
 lib/TreeIterator.ts(60,14): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
 lib/TreeIterator.ts(61,14): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
 lib/TreeIterator.ts(62,14): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.

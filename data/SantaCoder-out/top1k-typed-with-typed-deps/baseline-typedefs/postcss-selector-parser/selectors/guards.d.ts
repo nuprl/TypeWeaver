@@ -1,0 +1,17 @@
+export declare function isNode(node: any): any;
+export declare const isAttribute: any;
+export declare const isClassName: any;
+export declare const isCombinator: any;
+export declare const isComment: any;
+export declare const isIdentifier: any;
+export declare const isNesting: any;
+export declare const isPseudo: any;
+export declare const isRoot: any;
+export declare const isSelector: any;
+export declare const isString: any;
+export declare const isTag: any;
+export declare const isUniversal: any;
+export declare function isPseudoElement(node: Node): any;
+export declare function isPseudoClass(node: Node): boolean;
+export declare function isContainer(node: Node): boolean;
+export declare function isNamespace(node: Node): any;

@@ -21,11 +21,16 @@ index.ts(230,26): error TS2554: Expected 3 arguments, but got 1.
 index.ts(236,26): error TS2554: Expected 3 arguments, but got 1.
 index.ts(247,49): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
 index.ts(254,60): error TS2304: Cannot find name 'IStyleOptions'.
+index.ts(254,60): error TS4078: Parameter 'opts' of exported function has or is using private name 'IStyleOptions'.
 index.ts(316,22): error TS2304: Cannot find name 'T'.
+index.ts(316,22): error TS4078: Parameter 'xs' of exported function has or is using private name 'T'.
 index.ts(316,30): error TS2304: Cannot find name 'T'.
+index.ts(316,30): error TS4078: Parameter 'x' of exported function has or is using private name 'T'.
 index.ts(407,43): error TS2304: Cannot find name 'InspectStringOptions'.
+index.ts(407,43): error TS4078: Parameter 'opts' of exported function has or is using private name 'InspectStringOptions'.
 index.ts(446,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'T[]'.
 index.ts(453,26): error TS2304: Cannot find name 'IOptions'.
+index.ts(453,26): error TS4078: Parameter 'opts' of exported function has or is using private name 'IOptions'.
 index.ts(470,36): error TS2339: Property 'prev' does not exist on type 'number'.
 index.ts(470,50): error TS2339: Property 'base' does not exist on type 'number'.
 index.ts(471,74): error TS2339: Property 'prev' does not exist on type 'number'.

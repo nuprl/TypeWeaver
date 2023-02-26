@@ -47,10 +47,24 @@ docs/v3/scripts/prettify/lang-css.ts(2,27): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(2,62): error TS1109: Expression expected.
 docs/v3/scripts/prettify/lang-css.ts(3,172): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(3,173): error TS1005: ',' expected.
+karma.conf.ts(1,33): error TS4078: Parameter 'config' of exported function has or is using private name 'karma'.
+lib/auto.ts(151,37): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/internal/asyncEachOfLimit.ts(4,75): error TS4078: Parameter 'generator' of exported function has or is using private name 'T'.
+lib/internal/awaitify.ts(3,44): error TS4078: Parameter 'asyncFn' of exported function has or is using private name 'AsyncFunction'.
 lib/internal/awaitify.ts(3,81): error TS1005: ',' expected.
+lib/internal/queue.ts(6,39): error TS4078: Parameter 'worker' of exported function has or is using private name 'WorkerFunction'.
+lib/internal/wrapAsync.ts(15,29): error TS4078: Parameter 'asyncFn' of exported function has or is using private name 'AsyncFunction'.
 lib/memoize.ts(45,57): error TS1005: ',' expected.
+lib/parallel.ts(163,41): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/parallelLimit.ts(24,46): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
 lib/priorityQueue.ts(55,46): error TS1005: ',' expected.
 lib/priorityQueue.ts(59,51): error TS1005: ',' expected.
+lib/reflectAll.ts(70,43): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/retry.ts(98,37): error TS4078: Parameter 'opts' of exported function has or is using private name 'IRetryOptions'.
+lib/retry.ts(98,58): error TS4078: Parameter 'task' of exported function has or is using private name 'ITask'.
+lib/retryable.ts(35,42): error TS4078: Parameter 'opts' of exported function has or is using private name 'RetryableOptions'.
+lib/retryable.ts(35,66): error TS4078: Parameter 'task' of exported function has or is using private name 'Task'.
+lib/series.ts(169,39): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(1,82): error TS1002: Unterminated string literal.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,1): error TS1005: ',' expected.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,8): error TS1005: ',' expected.

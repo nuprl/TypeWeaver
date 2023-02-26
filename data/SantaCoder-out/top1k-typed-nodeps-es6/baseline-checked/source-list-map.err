@@ -139,6 +139,7 @@ lib/base64-vlq.ts(167,13): error TS2551: Property 'value' does not exist on type
 lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'number[]'.
 lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/fromStringWithSourceMap.ts(12,68): error TS2304: Cannot find name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(12,68): error TS4078: Parameter 'map' of exported function has or is using private name 'SourceMap'.
 lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not exist on type 'SourceNode'.
 lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'IMapping'.
 lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.

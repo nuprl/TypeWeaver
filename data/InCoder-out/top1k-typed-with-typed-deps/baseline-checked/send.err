@@ -1,6 +1,9 @@
 index.ts(83,37): error TS2304: Cannot find name 'Path'.
+index.ts(83,37): error TS4078: Parameter 'path' of exported function has or is using private name 'Path'.
 index.ts(96,27): error TS2503: Cannot find namespace 'http'.
+index.ts(96,27): error TS4078: Parameter 'req' of exported function has or is using private name 'http'.
 index.ts(96,65): error TS2503: Cannot find namespace 'url'.
+index.ts(96,65): error TS4078: Parameter 'path' of exported function has or is using private name 'url'.
 index.ts(281,18): error TS2339: Property 'headers' does not exist on type 'Error'.
 index.ts(282,25): error TS2339: Property 'headers' does not exist on type 'Error'.
 index.ts(335,32): error TS2367: This comparison appears to be unintentional because the types 'RegExp' and 'string' have no overlap.
@@ -37,7 +40,9 @@ index.ts(1014,21): error TS2339: Property 'getHeaderNames' does not exist on typ
 index.ts(1015,23): error TS2551: Property '_headers' does not exist on type 'Response'. Did you mean 'headers'?
 index.ts(1016,11): error TS2339: Property 'getHeaderNames' does not exist on type 'Response'.
 index.ts(1031,33): error TS2304: Cannot find name 'EventEmitter'.
+index.ts(1031,33): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 index.ts(1047,28): error TS2503: Cannot find namespace 'http'.
+index.ts(1047,28): error TS4078: Parameter 'res' of exported function has or is using private name 'http'.
 index.ts(1081,38): error TS2345: Argument of type 'string | Date' is not assignable to parameter of type 'string'.
   Type 'Date' is not assignable to type 'string'.
 index.ts(1141,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
