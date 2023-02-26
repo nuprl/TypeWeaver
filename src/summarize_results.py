@@ -21,7 +21,8 @@ import argparse, json, os, re, shutil, subprocess
 SYSTEMS = {
     "DeepTyper": "dt",
     "LambdaNet": "ln",
-    "InCoder": "ic"
+    "InCoder": "ic",
+    "SantaCoder": "sc"
 }
 
 def check_exists(path):
