@@ -108,7 +108,7 @@ function runSuite(suite: TestSuite, callback: any) {
     }).run({async: true});
 }
 
-function setDefaultOptions(suiteConfig: any) {
+function setDefaultOptions(suiteConfig: ITestConfig) {
     suiteConfig.args = suiteConfig.args || [[]];
     suiteConfig.setup = suiteConfig.setup || function () {};
     return suiteConfig;
@@ -120,7 +120,7 @@ function handleMultipleArgs(list: string[], suiteConfig: ITestConfig) {
     }));
 }
 
-function setName(suiteConfig: ITestConfig) {
+function setName(suiteConfig: SuiteConfig) {
     suiteConfig.name = suiteConfig.name + "(" + suiteConfig.args.join(",") + ")";
     return suiteConfig;
 }

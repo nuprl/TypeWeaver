@@ -28,7 +28,7 @@ import awaitify from './internal/awaitify.js'
  *     function(callback: any) {
  *         callback(null, 'one', 'two');
  *     },
- *     function(arg1: any, arg2: any, callback: any) {
+ *     function(arg1: string, arg2: number, callback: any) {
  *         // arg1 now equals 'one' and arg2 now equals 'two'
  *         callback(null, 'three');
  *     },
@@ -48,14 +48,14 @@ import awaitify from './internal/awaitify.js'
  * ], function (err: Error, result: string) {
  *     // result now equals 'done'
  * });
- * function myFirstFunction(callback: any) {
+ * function myFirstFunction(callback: Function) {
  *     callback(null, 'one', 'two');
  * }
- * function mySecondFunction(arg1: string, arg2: number, callback: any) {
+ * function mySecondFunction(arg1: number, arg2: string, callback: any) {
  *     // arg1 now equals 'one' and arg2 now equals 'two'
  *     callback(null, 'three');
  * }
- * function myLastFunction(arg1: number, callback: any) {
+ * function myLastFunction(arg1: string, callback: any) {
  *     // arg1 now equals 'three'
  *     callback(null, 'done');
  * }

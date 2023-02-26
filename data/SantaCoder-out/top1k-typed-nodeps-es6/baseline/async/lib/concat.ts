@@ -95,7 +95,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function concat(coll: IEnumerable<T>, iteratee: any, callback: any) {
+function concat(coll: any, iteratee: any, callback: any) {
     return concatLimit(coll, Infinity, iteratee, callback)
 }
 export default awaitify(concat, 3);

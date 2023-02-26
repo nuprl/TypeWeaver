@@ -55,7 +55,7 @@ function modulesToDom(list: Module[], options: ModuleOptions) {
   return identifiers;
 }
 
-function addElementStyle(obj: HTMLElement, options: IStyleOptions) {
+function addElementStyle(obj: HTMLElement, options: StyleOptions) {
   const api = options.domAPI(options);
 
   api.update(obj);

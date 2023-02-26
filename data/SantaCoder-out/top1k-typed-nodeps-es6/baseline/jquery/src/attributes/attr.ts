@@ -19,7 +19,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	attr: function( elem: HTMLElement, name: string, value : string) {
+	attr: function( elem: Element, name: string, value : any) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -101,7 +101,7 @@ if ( isIE ) {
 
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number, name : string) {
 	jQuery.attrHooks[ name ] = {
-		get: function( elem : Element) {
+		get: function( elem : Node) {
 			var ret,
 				isXML = jQuery.isXMLDoc( elem ),
 				lowercaseName = name.toLowerCase();

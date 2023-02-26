@@ -48,7 +48,7 @@ import mapValuesLimit from './mapValuesLimit.js'
  * };
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: File, key: string, callback: any) {
+ * function getFileSizeInBytes(file: Blob, key: string, callback: any) {
  *     fs.stat(file, function(err: Error, stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);

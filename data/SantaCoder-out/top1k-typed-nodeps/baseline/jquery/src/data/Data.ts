@@ -11,7 +11,7 @@ Data.uid = 1;
 
 Data.prototype = {
 
-	cache: function( owner : any) {
+	cache: function( owner : string) {
 
 		// Check if the owner object already has a cache
 		var value = owner[ this.expando ];
@@ -44,7 +44,7 @@ Data.prototype = {
 
 		return value;
 	},
-	set: function( owner: any, data: any, value : any) {
+	set: function( owner: string, data: string, value : number) {
 		var prop,
 			cache = this.cache( owner );
 
@@ -63,14 +63,14 @@ Data.prototype = {
 		}
 		return cache;
 	},
-	get: function( owner: string, key : string) {
+	get: function( owner: any, key : string) {
 		return key === undefined ?
 			this.cache( owner ) :
 
 			// Always use camelCase key (gh-2257)
 			owner[ this.expando ] && owner[ this.expando ][ camelCase( key ) ];
 	},
-	access: function( owner: string, key: string, value : any) {
+	access: function( owner: any, key: string, value : any) {
 
 		// In cases where either:
 		//

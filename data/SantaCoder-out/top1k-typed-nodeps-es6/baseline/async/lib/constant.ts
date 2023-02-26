@@ -34,7 +34,7 @@
  * async.auto({
  *     hostname: async.constant("https://server.net/"),
  *     port: findFreePort,
- *     launchServer: ["hostname", "port", function (options: IServerOptions, cb: any) {
+ *     launchServer: ["hostname", "port", function (options: IOptions, cb: any) {
  *         startServer(options, cb);
  *     }],
  *     //...

@@ -124,7 +124,7 @@ function buildAttribsString(attribs: Attribs) {
     return attribsString;
 }
 
-function addNonParamAttributes(items: any) {
+function addNonParamAttributes(items: IAttribute[]) {
     let types = [];
 
     items.forEach(item => {
@@ -224,7 +224,7 @@ function generate(type: string, title: string, docs: string, filename: string, r
     fs.writeFileSync(outpath, html, 'utf8');
 }
 
-function generateSourceFiles(sourceFiles: IResolvedSourceFiles, encoding: Encoding) {
+function generateSourceFiles(sourceFiles: IResolvedSourceFiles, encoding: EncodingKind) {
     encoding = encoding || 'utf8';
     const sourceFilenames = [];
     Object.keys(sourceFiles).forEach(file => {
@@ -289,7 +289,7 @@ function attachModuleSymbols(doclets: Doclet[], modules: ModuleInfo[]) {
     });
 }
 
-function buildMemberNav(items: MemberNavItem[], itemHeading: string, itemsSeen: number, linktoFn: any) {
+function buildMemberNav(items: MemberItem[], itemHeading: string, itemsSeen: number, linktoFn: any) {
     let nav = '';
 
     if (items && items.length) {

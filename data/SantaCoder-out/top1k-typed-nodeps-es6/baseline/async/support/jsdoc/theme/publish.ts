@@ -124,7 +124,7 @@ function buildAttribsString(attribs: Attribs) {
     return attribsString;
 }
 
-function addNonParamAttributes(items: any) {
+function addNonParamAttributes(items: IAttribute[]) {
     let types = [];
 
     items.forEach(item => {
@@ -289,7 +289,7 @@ function attachModuleSymbols(doclets: Doclet[], modules: ModuleInfo[]) {
     });
 }
 
-function buildMemberNav(items: MemberNavItem[], itemHeading: string, itemsSeen: boolean, linktoFn: any) {
+function buildMemberNav(items: MemberItem[], itemHeading: string, itemsSeen: number, linktoFn: any) {
     let nav = '';
 
     if (items && items.length) {
@@ -684,7 +684,7 @@ export const publish = (taffyData, opts, tutorials) => {
     });
 
     // TODO: move the tutorial functions to templateHelper.js
-    function generateTutorial(title: string, tutorial: string, filename: string) {
+    function generateTutorial(title: string, tutorial: Tutorial, filename: string) {
         const tutorialData = {
             title: title,
             header: tutorial.title,

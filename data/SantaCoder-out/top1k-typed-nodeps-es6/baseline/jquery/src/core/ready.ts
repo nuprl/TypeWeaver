@@ -15,7 +15,7 @@ jQuery.fn.ready = function( fn : Function) {
 		// Wrap jQuery.readyException in a function so that the lookup
 		// happens at the time of error handling instead of callback
 		// registration.
-		.catch( function( error : any) {
+		.catch( function( error : Error) {
 			jQuery.readyException( error );
 		} );
 

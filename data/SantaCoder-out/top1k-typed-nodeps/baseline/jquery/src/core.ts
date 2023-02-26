@@ -54,7 +54,7 @@ jQuery.fn = jQuery.prototype = {
 
 	// Take an array of elements and push it onto the stack
 	// (returning the new matched element set)
-	pushStack: function( elems : jQuery<HTMLElement>) {
+	pushStack: function( elems : jQuery) {
 
 		// Build a new jQuery matched element set
 		var ret = jQuery.merge( this.constructor(), elems );
@@ -72,7 +72,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	map: function( callback : Function) {
-		return this.pushStack( jQuery.map( this, function( elem: HTMLElement, i : number) {
+		return this.pushStack( jQuery.map( this, function( elem: Element, i : number) {
 			return callback.call( elem, i, elem );
 		} ) );
 	},
@@ -230,7 +230,7 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: number, options: ICodeEditorOptions, doc : ITextDocument) {
+	globalEval: function( code: number, options: ICompilerOptions, doc : ICompilerDiagnostic[]) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
@@ -305,7 +305,7 @@ jQuery.extend( {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
-	isXMLDoc: function( elem : Node) {
+	isXMLDoc: function( elem : HTMLElement) {
 		var namespace = elem && elem.namespaceURI,
 			docElem = elem && ( elem.ownerDocument || elem ).documentElement;
 
@@ -328,7 +328,7 @@ jQuery.extend( {
 		return first;
 	},
 
-	grep: function( elems: string[], callback: Function, invert : boolean) {
+	grep: function( elems: Array<HTMLElement>, callback: any, invert : boolean) {
 		var callbackInverse,
 			matches = [],
 			i = 0,
@@ -348,7 +348,7 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: Element[], callback: Function, arg : any) {
+	map: function( elems: string, callback: Function, arg : any) {
 		var length, value,
 			i = 0,
 			ret = [];

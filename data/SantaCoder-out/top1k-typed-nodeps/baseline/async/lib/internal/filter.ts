@@ -1,7 +1,7 @@
 import isArrayLike from './isArrayLike.js'
 import wrapAsync from './wrapAsync.js'
 
-function filterArray(eachfn: any, arr: any, iteratee: any, callback: any) {
+function filterArray(eachfn: any, arr: any[], iteratee: any, callback: any) {
     var truthValues = new Array(arr.length);
     eachfn(arr, (x, index, iterCb) => {
         iteratee(x, (err, v) => {

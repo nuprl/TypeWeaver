@@ -49,10 +49,10 @@ var
 originAnchor.href = location.href;
 
 // Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
-function addToPrefiltersOrTransports( structure : ITransportStructure) {
+function addToPrefiltersOrTransports( structure : IStructure) {
 
 	// dataTypeExpression is optional and defaults to "*"
-	return function( dataTypeExpression: string, func : Function) {
+	return function( dataTypeExpression: DataTypeExpression, func : FunctionExpression) {
 
 		if ( typeof dataTypeExpression !== "string" ) {
 			func = dataTypeExpression;
@@ -83,7 +83,7 @@ function addToPrefiltersOrTransports( structure : ITransportStructure) {
 }
 
 // Base inspection function for prefilters and transports
-function inspectPrefiltersOrTransports( structure: PrefilterStructure, options: PrefilterOptions, originalOptions: any, jqXHR : any) {
+function inspectPrefiltersOrTransports( structure: IPrefilterStructure, options: IPrefilterOptions, originalOptions: any, jqXHR : any) {
 
 	var inspected = {},
 		seekingTransport = ( structure === transports );
@@ -190,7 +190,7 @@ function ajaxHandleResponses( s: string, jqXHR: XMLHttpRequest, responses : any)
 /* Chain conversions given the request and the original response
  * Also sets the responseXXX fields on the jqXHR instance
  */
-function ajaxConvert( s: string, response: any, jqXHR: XMLHttpRequest, isSuccess : boolean) {
+function ajaxConvert( s: string, response: any, jqXHR: any, isSuccess : boolean) {
 	var conv2, current, conv, tmp, prev,
 		converters = {},
 
@@ -838,7 +838,7 @@ jQuery.extend( {
 		return jQuery.get( url, data, callback, "json" );
 	},
 
-	getScript: function( url: string, callback : any) {
+	getScript: function( url: string, callback : Function) {
 		return jQuery.get( url, undefined, callback, "script" );
 	}
 } );

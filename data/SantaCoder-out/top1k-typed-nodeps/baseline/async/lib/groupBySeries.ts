@@ -19,6 +19,6 @@ import groupByLimit from './groupByLimit.js'
  * properties are arrays of values which returned the corresponding key.
  * @returns {Promise} a promise, if no callback is passed
  */
-export default function groupBySeries (coll: any, iteratee: any, callback: any) {
+export default function groupBySeries (coll: any[], iteratee: any, callback: any) {
     return groupByLimit(coll, 1, iteratee, callback)
 }

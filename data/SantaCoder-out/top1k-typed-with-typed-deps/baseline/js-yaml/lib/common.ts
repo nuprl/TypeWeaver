@@ -11,7 +11,7 @@ function isObject(subject: any) {
 }
 
 
-function toArray(sequence: IEnumerable<any>) {
+function toArray(sequence: Sequence<T>) {
   if (Array.isArray(sequence)) return sequence;
   else if (isNothing(sequence)) return [];
 

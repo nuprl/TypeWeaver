@@ -95,7 +95,7 @@ function constant(value: any) {
 const DEFAULT_TIMES = 5;
 const DEFAULT_INTERVAL = 0;
 
-export default function retry(opts: RetryOptions, task: Task<any>, callback: any) {
+export default function retry(opts: RetryOptions, task: Task, callback: any) {
     var options = {
         times: DEFAULT_TIMES,
         intervalFunc: constant(DEFAULT_INTERVAL)
@@ -133,7 +133,7 @@ export default function retry(opts: RetryOptions, task: Task<any>, callback: any
     return callback[PROMISE_SYMBOL]
 }
 
-function parseTimes(acc: number, t: string) {
+function parseTimes(acc: TimeParseResult, t: string) {
     if (typeof t === 'object') {
         acc.times = +t.times || DEFAULT_TIMES;
 

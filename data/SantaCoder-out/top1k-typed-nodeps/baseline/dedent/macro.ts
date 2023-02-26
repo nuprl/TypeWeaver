@@ -3,7 +3,7 @@ const dedent = require("./dedent.js").default;
 
 module.exports = createMacro(prevalMacros);
 
-function prevalMacros({ references: references, state: state, babel }: BabelContext) {
+function prevalMacros({ references: refs, state: state, babel }: BabelNode) {
   references.default.forEach(referencePath => {
     if (referencePath.parentPath.type === "TaggedTemplateExpression") {
       asTag(referencePath.parentPath.get("quasi"), state, babel);
@@ -26,7 +26,7 @@ function asTag(quasiPath: string, { file: { opts: { filename } } }: any, babel: 
   quasiPath.parentPath.replaceWith(t.stringLiteral(dedent(string)));
 }
 
-function asFunction(argumentsPaths: string[], { file: { opts: { filename } } }: Babel.Options, babel: Babel.BabelOptions) {
+function asFunction(argumentsPaths: string[], { file: { opts: { filename } } }: Babel.Options, babel: Babel.Options) {
   const string = argumentsPaths[0].evaluate().value;
   const { types: t } = babel;
 

@@ -136,7 +136,7 @@ function encode(str: string) {
   return result;
 }
 
-function decode(data: Uint8Array) {
+function decode(data: string) {
   var value, code, idx = 0,
       bytes = [],
       leftbits = 0, // number of bits decoded, but yet to be appended

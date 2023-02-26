@@ -76,7 +76,7 @@ jQuery.fn.extend( {
 	not: function( selector : String) {
 		return this.pushStack( winnow( this, selector || [], true ) );
 	},
-	is: function( selector : elector) {
+	is: function( selector : tring) {
 		return !!winnow(
 			this,
 

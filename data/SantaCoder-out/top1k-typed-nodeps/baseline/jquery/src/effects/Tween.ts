@@ -57,7 +57,7 @@ Tween.prototype.init.prototype = Tween.prototype;
 
 Tween.propHooks = {
 	_default: {
-		get: function( tween : Tween) {
+		get: function( tween : TweenLite.Tween) {
 			var result;
 
 			// Use a property on the element directly when it is not a DOM element,
@@ -76,7 +76,7 @@ Tween.propHooks = {
 			// Empty strings, null, undefined and "auto" are converted to 0.
 			return !result || result === "auto" ? 0 : result;
 		},
-		set: function( tween : TweenLite) {
+		set: function( tween : TweenLite.Tween) {
 
 			// Use step hook for back compat.
 			// Use cssHook if its there.

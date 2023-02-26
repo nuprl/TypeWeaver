@@ -31,7 +31,7 @@ function isPunctuatorTokenWithValue(token: Token, value: string) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an arrow token.
  */
-export function isArrowToken(token: IToken) {
+export function isArrowToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "=>")
 }
 
@@ -67,7 +67,7 @@ export function isColonToken(token: Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening parenthesis token.
  */
-export function isOpeningParenToken(token: SyntaxKind.OpeningParenToken) {
+export function isOpeningParenToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "(")
 }
 
@@ -76,7 +76,7 @@ export function isOpeningParenToken(token: SyntaxKind.OpeningParenToken) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing parenthesis token.
  */
-export function isClosingParenToken(token: SyntaxKind.ClosingParenToken) {
+export function isClosingParenToken(token: Token) {
     return isPunctuatorTokenWithValue(token, ")")
 }
 
@@ -121,7 +121,7 @@ export function isClosingBraceToken(token: Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comment token.
  */
-export function isCommentToken(token: Token) {
+export function isCommentToken(token: IToken) {
     return ["Block", "Line", "Shebang"].includes(token.type)
 }
 

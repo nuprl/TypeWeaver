@@ -29,14 +29,14 @@ big.ts(181,31): error TS2339: Property 'c' does not exist on type 'number'.
 big.ts(181,43): error TS2339: Property 'charAt' does not exist on type 'number'.
 big.ts(197,16): error TS2339: Property 'c' does not exist on type 'BigInt'.
 big.ts(199,46): error TS2339: Property 'RM' does not exist on type 'Function'.
-big.ts(200,9): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
-big.ts(200,21): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
-big.ts(200,33): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
-big.ts(200,45): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'number' have no overlap.
+big.ts(200,9): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
+big.ts(200,21): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
+big.ts(200,33): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
+big.ts(200,45): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
 big.ts(204,9): error TS2365: Operator '<' cannot be applied to types 'BigInt' and 'number'.
 big.ts(205,7): error TS2322: Type 'boolean | BigInt' is not assignable to type 'BigInt'.
   Type 'boolean' is not assignable to type 'BigInt'.
-big.ts(206,42): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'number' have no overlap.
+big.ts(206,42): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
 big.ts(216,11): error TS2339: Property 'e' does not exist on type 'BigInt'.
 big.ts(216,17): error TS2339: Property 'e' does not exist on type 'BigInt'.
 big.ts(216,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -46,7 +46,7 @@ big.ts(226,7): error TS2322: Type 'number | boolean | BigInt' is not assignable 
 big.ts(229,23): error TS2365: Operator '+' cannot be applied to types 'BigInt' and 'number'.
 big.ts(229,51): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 big.ts(239,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-big.ts(241,15): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'number' have no overlap.
+big.ts(241,15): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'number' have no overlap.
 big.ts(242,17): error TS2339: Property 'e' does not exist on type 'BigInt'.
 big.ts(250,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 big.ts(262,15): error TS2339: Property 'e' does not exist on type 'BigInt'.
@@ -54,7 +54,7 @@ big.ts(263,13): error TS2339: Property 'c' does not exist on type 'BigInt'.
 big.ts(284,14): error TS2339: Property 's' does not exist on type 'BigInt'.
 big.ts(294,5): error TS2339: Property 'abs' does not exist on type '{}'.
 big.ts(306,5): error TS2339: Property 'cmp' does not exist on type '{}'.
-big.ts(306,24): error TS2304: Cannot find name 'BigNumber'.
+big.ts(306,24): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 big.ts(325,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 big.ts(331,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 big.ts(335,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -102,10 +102,10 @@ big.ts(838,5): error TS2339: Property 'times' does not exist on type '{}'.
 big.ts(838,15): error TS2339: Property 'mul' does not exist on type '{}'.
 big.ts(838,34): error TS2749: 'Big' refers to a value, but is being used as a type here. Did you mean 'typeof Big'?
 big.ts(913,5): error TS2339: Property 'toExponential' does not exist on type '{}'.
-big.ts(918,11): error TS2367: This condition will always return 'true' since the types 'Date' and 'number' have no overlap.
+big.ts(918,11): error TS2367: This comparison appears to be unintentional because the types 'Date' and 'number' have no overlap.
 big.ts(921,11): error TS2554: Expected 4 arguments, but got 3.
 big.ts(939,5): error TS2339: Property 'toFixed' does not exist on type '{}'.
-big.ts(944,11): error TS2367: This condition will always return 'true' since the types 'Date' and 'number' have no overlap.
+big.ts(944,11): error TS2367: This comparison appears to be unintentional because the types 'Date' and 'number' have no overlap.
 big.ts(947,11): error TS2554: Expected 4 arguments, but got 3.
 big.ts(950,12): error TS2322: Type 'string' is not assignable to type 'Date'.
 big.ts(963,5): error TS2339: Property 'toJSON' does not exist on type '{}'.
@@ -116,7 +116,7 @@ big.ts(1032,14): error TS2304: Cannot find name 'define'.
 big.ts(1032,39): error TS2304: Cannot find name 'define'.
 big.ts(1033,5): error TS2304: Cannot find name 'define'.
 big.ts(1037,5): error TS1258: A default export must be at the top level of a file or module declaration.
-perf/bigtime.ts(2,28): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/big.js/perf/lib/bigdecimal_GWT/bigdecimal.ts' is not a module.
+perf/bigtime.ts(2,28): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/big.js/perf/lib/bigdecimal_GWT/bigdecimal.ts' is not a module.
 perf/bigtime.ts(3,17): error TS2306: File 'big.ts' is not a module.
 perf/bigtime.ts(93,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 perf/bigtime.ts(93,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -224,7 +224,7 @@ perf/lib/bigdecimal_GWT/bigdecimal.ts(211,18): error TS2304: Cannot find name 'I
 perf/lib/bigdecimal_GWT/bigdecimal.ts(211,24): error TS2304: Cannot find name 'I'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(212,18): error TS2304: Cannot find name 'A'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(212,24): error TS2304: Cannot find name 'B'.
-perf/lib/bigdecimal_GWT/bigdecimal.ts(220,21): error TS2531: Object is possibly 'null'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(220,21): error TS18050: The value 'null' cannot be used here.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(221,18): error TS2749: 'wk' refers to a value, but is being used as a type here. Did you mean 'typeof wk'?
 perf/lib/bigdecimal_GWT/bigdecimal.ts(225,18): error TS2304: Cannot find name 'A'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(225,24): error TS2304: Cannot find name 'B'.
@@ -343,7 +343,7 @@ perf/lib/bigdecimal_GWT/bigdecimal.ts(369,129): error TS2339: Property 'd' does 
 perf/lib/bigdecimal_GWT/bigdecimal.ts(369,135): error TS2339: Property 'd' does not exist on type 'number'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(369,142): error TS2339: Property 'g' does not exist on type 'number'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(369,148): error TS2339: Property 'd' does not exist on type 'number'.
-perf/lib/bigdecimal_GWT/bigdecimal.ts(370,81): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(370,81): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(376,18): error TS2304: Cannot find name 'A'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(376,24): error TS2304: Cannot find name 'B'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(378,61): error TS2339: Property 'l' does not exist on type 'number'.
@@ -926,7 +926,7 @@ perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3182): error TS2339: Property 'shiftRi
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3257): error TS2339: Property 'signum' does not exist on type 'Object'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3332): error TS2339: Property 'subtract' does not exist on type 'Object'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3420): error TS2339: Property 'testBit' does not exist on type 'Object'.
-perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3499): error TS2339: Property 'toString_va' does not exist on type 'Object'.
+perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3499): error TS2551: Property 'toString_va' does not exist on type 'Object'. Did you mean 'toString'?
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3571): error TS2339: Property 'xor' does not exist on type 'Object'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3654): error TS2339: Property 'divideAndRemainder' does not exist on type 'Object'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(535,3752): error TS2339: Property 'longValue' does not exist on type 'Object'.
@@ -1088,7 +1088,7 @@ perf/lib/bigdecimal_GWT/bigdecimal.ts(567,37): error TS2339: Property 'inner_met
 perf/lib/bigdecimal_GWT/bigdecimal.ts(581,28): error TS2339: Property 'inner_method' does not exist on type '() => any'.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(588,5): error TS1184: Modifiers cannot appear here.
 perf/lib/bigdecimal_GWT/bigdecimal.ts(588,18): error TS2300: Duplicate identifier 'class_name'.
-perf/lib/bigdecimal_GWT/bugs.ts(4,28): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/big.js/perf/lib/bigdecimal_GWT/bigdecimal.ts' is not a module.
+perf/lib/bigdecimal_GWT/bugs.ts(4,28): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/big.js/perf/lib/bigdecimal_GWT/bigdecimal.ts' is not a module.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(16,120): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'any', but here has type 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,47): error TS2339: Property 'PLAIN' does not exist on type '() => void'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,75): error TS2339: Property 'SCIENTIFIC' does not exist on type '() => void'.
@@ -1104,15 +1104,15 @@ perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(17,467): error TS2339: Prop
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(19,27): error TS2554: Expected 0 arguments, but got 4.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,292): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,300): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,330): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,393): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,401): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,330): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,393): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,401): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,410): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(20,417): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,139): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,175): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,377): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,404): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,377): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(21,404): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(22,1): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(23,324): error TS2403: Subsequent variable declarations must have the same type.  Variable 'l' must be of type 'number', but here has type 'any'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.min.ts(30,501): error TS2403: Subsequent variable declarations must have the same type.  Variable 'g' must be of type 'number', but here has type 'any'.
@@ -1169,16 +1169,16 @@ perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1164,60): error TS2554: Expecte
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1174,61): error TS2554: Expected 0 arguments, but got 1.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1470,8): error TS2365: Operator '>=' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1471,9): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1477,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1484,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1485,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1477,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1484,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1485,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1487,11): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1487,21): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1516,9): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1518,9): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1528,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1548,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1555,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1548,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1555,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1561,10): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1584,10): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(1585,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1197,13 +1197,13 @@ perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4880,20): error TS2339: Propert
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4881,17): error TS2339: Property 'mant' does not exist on type 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4885,24): error TS2339: Property 'exp' does not exist on type 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4885,50): error TS2339: Property 'mant' does not exist on type 'number'.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4888,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4890,10): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4888,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4890,10): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4898,24): error TS2339: Property 'ind' does not exist on type 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(4908,12): error TS2339: Property 'mant' does not exist on type 'number'.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5001,8): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,8): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,21): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5001,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,8): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5016,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5037,68): error TS2339: Property 'exp' does not exist on type 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5080,26): error TS2339: Property 'roundingMode' does not exist on type 'number'.
 perf/lib/bigdecimal_ICU4J/BigDecimal-all-last.ts(5215,13): error TS2339: Property 'length' does not exist on type 'number'.

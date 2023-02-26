@@ -36,7 +36,7 @@ import { isAsync } from './internal/wrapAsync.js'
  * // preventing stack overflows
  * async.mapSeries(args, async.ensureAsync(sometimesAsync), done);
  */
-export default function ensureAsync(fn: Function) {
+export default function ensureAsync(fn: any) {
     if (isAsync(fn)) return fn;
     return function (...args/*: any[], callback*/: any) {
         var callback = args.pop()

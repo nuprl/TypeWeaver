@@ -1,0 +1,45 @@
+lib/attributes.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'xnv'.
+lib/attributes.ts(5,9): error TS2451: Cannot redeclare block-scoped variable 'NAMESPACES'.
+lib/attributes.ts(30,6): error TS2339: Property 'replace' does not exist on type 'false'.
+lib/attributes.ts(100,11): error TS2554: Expected 1 arguments, but got 2.
+lib/attributes.ts(117,73): error TS2554: Expected 1 arguments, but got 2.
+lib/serialize.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'xnv'.
+lib/serialize.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'NAMESPACES'.
+lib/serialize.ts(61,56): error TS2304: Cannot find name 'Uri'.
+lib/serialize.ts(61,73): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(61,104): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(62,50): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(68,26): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(69,13): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(69,44): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(74,34): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/serialize.ts(75,12): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(76,32): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(77,19): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(80,12): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(81,25): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(150,75): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(150,106): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(161,33): error TS2304: Cannot find name 'CommentNode'.
+lib/serialize.ts(161,58): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(161,81): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(161,112): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(175,54): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(175,77): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(175,124): error TS2304: Cannot find name 'Ref'.
+lib/serialize.ts(189,5): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLElement'.
+  Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 116 more.
+lib/serialize.ts(226,62): error TS2339: Property 'prefixIndex' does not exist on type 'Ref[]'.
+lib/serialize.ts(278,12): error TS2339: Property 'content' does not exist on type 'Element'.
+lib/serialize.ts(285,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/serialize.ts(306,51): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(306,74): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(306,121): error TS2304: Cannot find name 'Ref'.
+lib/serialize.ts(310,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
+  Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+lib/serialize.ts(327,28): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Text'.
+  Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
+lib/serialize.ts(353,36): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CDATASection'.
+lib/serialize.ts(363,5): error TS2345: Argument of type '{ prefixIndex: number; }' is not assignable to parameter of type 'Ref[]'.
+  Object literal may only specify known properties, and 'prefixIndex' does not exist in type 'Ref[]'.
+

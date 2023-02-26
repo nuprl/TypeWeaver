@@ -32,7 +32,7 @@ function padStart(string: string, max: number) {
 }
 
 
-function makeSnippet(mark: Mark, options: SnippetOptions) {
+function makeSnippet(mark: string, options: SnippetOptions) {
   options = Object.create(options || null);
 
   if (!mark.buffer) return null;

@@ -18,7 +18,7 @@ function buildParams( prefix: string, obj: any, traditional: boolean, add : bool
 	if ( Array.isArray( obj ) ) {
 
 		// Serialize array item.
-		jQuery.each( obj, function( i: number, v : number) {
+		jQuery.each( obj, function( i: number, v : any) {
 			if ( traditional || rbracket.test( prefix ) ) {
 
 				// Treat each array item as a scalar.

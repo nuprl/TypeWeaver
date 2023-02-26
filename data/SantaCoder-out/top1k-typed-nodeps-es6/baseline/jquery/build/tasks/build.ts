@@ -6,7 +6,7 @@
 
 "use strict";
 
-export default function( grunt : any) {
+export default function( grunt : grunt.Grunt) {
 	const fs = require( "fs" );
 	const path = require( "path" );
 	const rollup = require( "rollup" );
@@ -344,7 +344,7 @@ export default function( grunt : any) {
 			if ( trackingAllowed ) {
 
 				// Track individuals
-				tracks.forEach( function( module : any) {
+				tracks.forEach( function( module : Module) {
 					const path = defaultPath.concat( [ "individual" ], module );
 
 					insight.track.apply( insight, path );

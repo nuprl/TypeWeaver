@@ -47,7 +47,7 @@ function readEntries (cb: any) {
     })
 }
 
-function renderTemplate(entries: string[], aliases: string[], template: string) {
+function renderTemplate(entries: IEntry[], aliases: IAlias[], template: ITemplate) {
     return template
         .replace(
             `/*__imports__*/`,

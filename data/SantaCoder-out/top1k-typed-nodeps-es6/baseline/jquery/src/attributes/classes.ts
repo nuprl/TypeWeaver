@@ -19,7 +19,7 @@ function classesToArray( value : any) {
 }
 
 jQuery.fn.extend( {
-	addClass: function( value : any) {
+	addClass: function( value : number) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {

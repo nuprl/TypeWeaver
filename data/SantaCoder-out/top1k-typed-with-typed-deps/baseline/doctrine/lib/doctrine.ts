@@ -773,7 +773,7 @@
             return this._tag;
         };
 
-        function parseTag(options: any) {
+        function parseTag(options: ParseOptions) {
             var title, parser, tag;
 
             // skip to tag

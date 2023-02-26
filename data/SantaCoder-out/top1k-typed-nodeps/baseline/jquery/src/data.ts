@@ -42,7 +42,7 @@ function getData( data : string) {
 	return data;
 }
 
-function dataAttr( elem: HTMLElement, key: string, data : any) {
+function dataAttr( elem: HTMLElement, key: string, data : string) {
 	var name;
 
 	// If nothing was found internally, try to fetch any
@@ -74,7 +74,7 @@ jQuery.extend( {
 		return dataUser.access( elem, name, data );
 	},
 
-	removeData: function( elem: Element, name : string) {
+	removeData: function( elem: HTMLElement, name : string) {
 		dataUser.remove( elem, name );
 	},
 

@@ -22,7 +22,7 @@ function formatError(exception: any, compact: boolean) {
 }
 
 
-function YAMLException(reason: string, mark: Mark) {
+function YAMLException(reason: string, mark: YAMLMark) {
   // Super constructor
   Error.call(this);
 

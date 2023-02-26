@@ -6,7 +6,7 @@ import splice from "../var/splice.js";
 var hasDuplicate;
 
 // Document order sorting
-function sortOrder( a: number, b : number) {
+function sortOrder( a: string, b : string) {
 
 	// Flag for duplicate removal
 	if ( a === b ) {

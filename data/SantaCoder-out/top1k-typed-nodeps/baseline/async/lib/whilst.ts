@@ -36,7 +36,7 @@ import awaitify from './internal/awaitify.js'
  *     }
  * );
  */
-function whilst(test: any, iteratee: any, callback: any) {
+function whilst(test: Function, iteratee: Function, callback: Function) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);

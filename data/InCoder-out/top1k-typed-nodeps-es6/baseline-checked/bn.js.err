@@ -145,25 +145,25 @@ benchmarks/index.ts(493,13): error TS2339: Property 'a1j' does not exist on type
 lib/bn.ts(6,31): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string'.
   Type 'Error' is not assignable to type 'string'.
 lib/bn.ts(12,10): error TS2339: Property 'super_' does not exist on type 'Function'.
-lib/bn.ts(34,11): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/bn.ts(34,28): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(34,11): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/bn.ts(34,28): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(61,33): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(71,14): error TS2339: Property 'cmp' does not exist on type 'number'.
 lib/bn.ts(76,14): error TS2339: Property 'cmp' does not exist on type 'number'.
-lib/bn.ts(89,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(89,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(92,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(94,21): error TS2339: Property 'toString' does not exist on type 'never'.
 lib/bn.ts(101,24): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(106,13): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(106,13): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(128,7): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(137,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(137,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(145,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(145,26): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(146,16): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(152,36): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(160,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(160,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(161,23): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(171,16): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(171,16): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(172,37): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(210,89): error TS2304: Cannot find name 'Endian'.
 lib/bn.ts(212,37): error TS2339: Property 'length' does not exist on type 'number'.
@@ -186,9 +186,9 @@ lib/bn.ts(341,10): error TS2339: Property 'red' does not exist on type 'Buffer'.
 lib/bn.ts(341,20): error TS2339: Property 'red' does not exist on type 'Buffer'.
 lib/bn.ts(349,13): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(349,13): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(475,24): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(475,24): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(562,52): error TS2304: Cannot find name 'Endian'.
-lib/bn.ts(582,19): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(582,19): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(630,7): error TS2322: Type 'number' is not assignable to type 'Buffer'.
 lib/bn.ts(632,9): error TS2322: Type 'number' is not assignable to type 'Buffer'.
 lib/bn.ts(635,9): error TS2322: Type 'number' is not assignable to type 'Buffer'.
@@ -340,12 +340,12 @@ lib/bn.ts(2361,13): error TS2339: Property 'ushln' does not exist on type 'numbe
 lib/bn.ts(2363,15): error TS2339: Property 'words' does not exist on type 'number'.
 lib/bn.ts(2363,23): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(2367,26): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2370,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(2370,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(2371,11): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2371,11): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2388,27): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(2389,20): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2414,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+lib/bn.ts(2414,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(2429,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2429,17): error TS2339: Property 'isZero' does not exist on type 'BigInt'.
 lib/bn.ts(2433,14): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -353,21 +353,21 @@ lib/bn.ts(2433,14): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2434,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2434,14): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2439,36): error TS2339: Property 'negative' does not exist on type 'BigInt'.
-lib/bn.ts(2442,11): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'string' have no overlap.
-lib/bn.ts(2446,11): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2442,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2446,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
 lib/bn.ts(2459,36): error TS2339: Property 'negative' does not exist on type 'BigInt'.
 lib/bn.ts(2460,29): error TS2339: Property 'neg' does not exist on type 'BigInt'.
-lib/bn.ts(2462,11): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2462,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
 lib/bn.ts(2472,30): error TS2339: Property 'negative' does not exist on type 'BigInt'.
 lib/bn.ts(2473,35): error TS2339: Property 'neg' does not exist on type 'BigInt'.
-lib/bn.ts(2475,11): error TS2367: This condition will always return 'true' since the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2475,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
 lib/bn.ts(2491,13): error TS2339: Property 'length' does not exist on type 'BigInt'.
 lib/bn.ts(2493,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2493,14): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2499,13): error TS2339: Property 'length' does not exist on type 'BigInt'.
-lib/bn.ts(2500,11): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2500,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
 lib/bn.ts(2502,30): error TS2339: Property 'words' does not exist on type 'BigInt'.
-lib/bn.ts(2507,11): error TS2367: This condition will always return 'false' since the types 'BigInt' and 'string' have no overlap.
+lib/bn.ts(2507,11): error TS2367: This comparison appears to be unintentional because the types 'BigInt' and 'string' have no overlap.
 lib/bn.ts(2510,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2510,16): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2510,38): error TS2339: Property 'words' does not exist on type 'BigInt'.

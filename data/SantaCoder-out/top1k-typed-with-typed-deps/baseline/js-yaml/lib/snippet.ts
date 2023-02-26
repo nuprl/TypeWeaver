@@ -5,7 +5,7 @@ var common = require('./common');
 
 
 // get snippet for a single line, respecting maxLength
-function getLine(buffer: Buffer, lineStart: number, lineEnd: number, position: number, maxLineLength: number) {
+function getLine(buffer: IBuffer, lineStart: number, lineEnd: number, position: number, maxLineLength: number) {
   var head = '';
   var tail = '';
   var maxHalfLength = Math.floor(maxLineLength / 2) - 1;

@@ -17,7 +17,7 @@ const requireCall = { require: { [CALL]: true } }
  * @param {Variable} variable The variable to check.
  * @returns {boolean} `true` if the variable is modified.
  */
-function isModifiedGlobal(variable: Variable) {
+function isModifiedGlobal(variable: IVariable) {
     return (
         variable == null ||
         variable.defs.length !== 0 ||

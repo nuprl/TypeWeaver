@@ -69,7 +69,7 @@
    * @return {String}             Readable file size String
    */
 
-  function filesize(arg: number) {
+  function filesize(arg: string) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref$bits = _ref.bits,
         bits = _ref$bits === void 0 ? false : _ref$bits,

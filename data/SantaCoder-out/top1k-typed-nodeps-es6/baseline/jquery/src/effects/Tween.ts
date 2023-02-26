@@ -57,7 +57,7 @@ Tween.prototype.init.prototype = Tween.prototype;
 
 Tween.propHooks = {
 	_default: {
-		get: function( tween : Tween) {
+		get: function( tween : TweenLite.Tween) {
 			var result;
 
 			// Use a property on the element directly when it is not a DOM element,

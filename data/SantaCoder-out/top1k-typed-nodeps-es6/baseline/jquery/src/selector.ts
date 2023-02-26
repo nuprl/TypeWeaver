@@ -113,7 +113,7 @@ var i,
 	// https://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 	runescape = new RegExp( "\\\\[\\da-fA-F]{1,6}" + whitespace +
 		"?|\\\\([^\\r\\n\\f])", "g" ),
-	funescape = function( escape: string, nonHex : string) {
+	funescape = function( escape: boolean, nonHex : boolean) {
 		var high = "0x" + escape.slice( 1 ) - 0x10000;
 
 		if ( nonHex ) {
@@ -470,7 +470,7 @@ find.matches = function( expr: Expression, elements : Expression[]) {
 	return find( expr, null, null, elements );
 };
 
-find.matchesSelector = function( elem: HTMLElement, expr : string) {
+find.matchesSelector = function( elem: Node, expr : string) {
 	setDocument( elem );
 
 	if ( documentIsHTML &&
@@ -700,7 +700,7 @@ Expr = jQuery.expr = {
 					return !!elem.parentNode;
 				} :
 
-				function( elem: HTMLElement, _context: any, xml : any) {
+				function( elem: Element, _context: any, xml : any) {
 					var cache, outerCache, node, nodeIndex, start,
 						dir = simple !== forward ? "nextSibling" : "previousSibling",
 						parent = elem.parentNode,
@@ -850,7 +850,7 @@ Expr = jQuery.expr = {
 				matcher = compile( selector.replace( rtrim, "$1" ) );
 
 			return matcher[ expando ] ?
-				markFunction( function( seed: string, matches: string[], _context: string, xml : string) {
+				markFunction( function( seed: string, matches: string[], _context: any, xml : string) {
 					var elem,
 						unmatched = matcher( seed, null, xml, [] ),
 						i = seed.length;
@@ -972,7 +972,7 @@ Expr = jQuery.expr = {
 			return true;
 		},
 
-		parent: function( elem : Node) {
+		parent: function( elem : Element) {
 			return !Expr.pseudos.empty( elem );
 		},
 
@@ -1023,7 +1023,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		lt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : string) {
+		lt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : any) {
 			var i;
 
 			if ( argument < 0 ) {
@@ -1147,7 +1147,7 @@ function toSelector( tokens : string[]) {
 	return selector;
 }
 
-function addCombinator( matcher: Matcher, combinator: string, base : string) {
+function addCombinator( matcher: Matcher<T>, combinator: Matcher<T>, base : Matcher<T>) {
 	var dir = combinator.dir,
 		skip = combinator.next,
 		key = skip || dir,
@@ -1157,7 +1157,7 @@ function addCombinator( matcher: Matcher, combinator: string, base : string) {
 	return combinator.first ?
 
 		// Check against closest ancestor/preceding element
-		function( elem: HTMLElement, context: any, xml : any) {
+		function( elem: HTMLElement, context: any, xml : string) {
 			while ( ( elem = elem[ dir ] ) ) {
 				if ( elem.nodeType === 1 || checkNonElements ) {
 					return matcher( elem, context, xml );
@@ -1167,7 +1167,7 @@ function addCombinator( matcher: Matcher, combinator: string, base : string) {
 		} :
 
 		// Check against all ancestor/preceding elements
-		function( elem: Element, context: any, xml : any) {
+		function( elem: Element, context: Document, xml : string) {
 			var oldCache, outerCache,
 				newCache = [ dirruns, doneName ];
 
@@ -1209,9 +1209,9 @@ function addCombinator( matcher: Matcher, combinator: string, base : string) {
 		};
 }
 
-function elementMatcher( matchers : IElementMatcher[]) {
+function elementMatcher( matchers : Matcher[]) {
 	return matchers.length > 1 ?
-		function( elem: Node, context: Node, xml : string) {
+		function( elem: HTMLElement, context: any, xml : any) {
 			var i = matchers.length;
 			while ( i-- ) {
 				if ( !matchers[ i ]( elem, context, xml ) ) {
@@ -1223,7 +1223,7 @@ function elementMatcher( matchers : IElementMatcher[]) {
 		matchers[ 0 ];
 }
 
-function multipleContexts( selector: string, contexts: string[], results : string[]) {
+function multipleContexts( selector: string, contexts: string[], results : any[]) {
 	var i = 0,
 		len = contexts.length;
 	for ( ; i < len; i++ ) {
@@ -1232,7 +1232,7 @@ function multipleContexts( selector: string, contexts: string[], results : strin
 	return results;
 }
 
-function condense( unmatched: string[], map: string[], filter: string[], context: any, xml : string) {
+function condense( unmatched: string[], map: string[], filter: (string), context: any, xml : string) {
 	var elem,
 		newUnmatched = [],
 		i = 0,
@@ -1260,7 +1260,7 @@ function setMatcher( preFilter: any, selector: any, matcher: any, postFilter: an
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
 	}
-	return markFunction( function( seed: number, results: number, context: any, xml : any) {
+	return markFunction( function( seed: number, results: number[], context: any, xml : any) {
 		var temp, i, elem, matcherOut,
 			preMap = [],
 			postMap = [],
@@ -1360,7 +1360,7 @@ function matcherFromTokens( tokens : Token[]) {
 		i = leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
-		matchContext = addCombinator( function( elem : HTMLElement) {
+		matchContext = addCombinator( function( elem : Element) {
 			return elem === checkContext;
 		}, implicitRelative, true ),
 		matchAnyContext = addCombinator( function( elem : HTMLElement) {
@@ -1415,10 +1415,10 @@ function matcherFromTokens( tokens : Token[]) {
 	return elementMatcher( matchers );
 }
 
-function matcherFromGroupMatchers( elementMatchers: MatcherGroup[], setMatchers : MatcherGroup[]) {
+function matcherFromGroupMatchers( elementMatchers: Array<Matcher>, setMatchers : Array<Matcher>) {
 	var bySet = setMatchers.length > 0,
 		byElement = elementMatchers.length > 0,
-		superMatcher = function( seed: number, context: any, xml: any, results: any[], outermost : boolean) {
+		superMatcher = function( seed: number, context: any, xml: string, results: any[], outermost : boolean) {
 			var elem, j, matcher,
 				matchedCount = 0,
 				i = "0",
@@ -1537,7 +1537,7 @@ function matcherFromGroupMatchers( elementMatchers: MatcherGroup[], setMatchers 
 		superMatcher;
 }
 
-function compile( selector: string, match /* Internal Use Only */ : MatchResult) {
+function compile( selector: string, match /* Internal Use Only */ : Match) {
 	var i,
 		setMatchers = [],
 		elementMatchers = [],

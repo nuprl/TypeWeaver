@@ -49,7 +49,7 @@ var
 originAnchor.href = location.href;
 
 // Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
-function addToPrefiltersOrTransports( structure : IStructure) {
+function addToPrefiltersOrTransports( structure : ITransportStructure) {
 
 	// dataTypeExpression is optional and defaults to "*"
 	return function( dataTypeExpression: string, func : Function) {
@@ -83,7 +83,7 @@ function addToPrefiltersOrTransports( structure : IStructure) {
 }
 
 // Base inspection function for prefilters and transports
-function inspectPrefiltersOrTransports( structure: PrefiltersOrTransports, options: PrefilterOptions, originalOptions: any, jqXHR : any) {
+function inspectPrefiltersOrTransports( structure: PrefilterStructure, options: PrefilterOptions, originalOptions: any, jqXHR : any) {
 
 	var inspected = {},
 		seekingTransport = ( structure === transports );
@@ -91,7 +91,7 @@ function inspectPrefiltersOrTransports( structure: PrefiltersOrTransports, optio
 	function inspect( dataType : string) {
 		var selected;
 		inspected[ dataType ] = true;
-		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : Prefilter) {
+		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : any) {
 			var dataTypeOrTransport = prefilterOrFactory( options, originalOptions, jqXHR );
 			if ( typeof dataTypeOrTransport === "string" &&
 				!seekingTransport && !inspected[ dataTypeOrTransport ] ) {
@@ -838,7 +838,7 @@ jQuery.extend( {
 		return jQuery.get( url, data, callback, "json" );
 	},
 
-	getScript: function( url: string, callback : any) {
+	getScript: function( url: string, callback : Function) {
 		return jQuery.get( url, undefined, callback, "script" );
 	}
 } );

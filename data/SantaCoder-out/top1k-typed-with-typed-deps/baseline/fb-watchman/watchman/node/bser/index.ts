@@ -461,7 +461,7 @@ function byteswap64(buf: Buffer) {
   return swap;
 }
 
-function dump_int64(buf: number, val: number) {
+function dump_int64(buf: Uint8Array, val: number) {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be = val.toBuffer();
 
@@ -478,7 +478,7 @@ function dump_int64(buf: number, val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: Uint8Array, val: number) {
+function dump_int(buf: number, val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
@@ -494,7 +494,7 @@ function dump_int(buf: Uint8Array, val: number) {
   }
 }
 
-function dump_any(buf: any, val: any) {
+function dump_any(buf: Uint8Array, val: any) {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

@@ -120,7 +120,7 @@ Node.prototype._useArgs = function useArgs(args: any) {
     state.children = children;
 
     // Replace parent to maintain backward link
-    children.forEach(function(child: IBaseState) {
+    children.forEach(function(child: IBaseChild) {
       child._baseState.parent = this;
     }, this);
   }
@@ -172,7 +172,7 @@ tags.forEach(function(tag: string) {
   };
 });
 
-Node.prototype.use = function use(item: any) {
+Node.prototype.use = function use(item: IItem) {
   assert(item);
   const state = this._baseState;
 
@@ -247,7 +247,7 @@ Node.prototype.any = function any() {
   return this;
 };
 
-Node.prototype.choice = function choice(obj: any) {
+Node.prototype.choice = function choice(obj: Choice) {
   const state = this._baseState;
 
   assert(state.choice === null);
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: any) {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Uint8Array, options: IDecodeOptions) {
+Node.prototype._decode = function decode(input: string, options: DecodeOptions) {
   const state = this._baseState;
 
   // Decode root node
@@ -432,7 +432,7 @@ Node.prototype._decodeGeneric = function decodeGeneric(tag: number, input: Uint8
   }
 };
 
-Node.prototype._getUse = function _getUse(entity: Entity, obj: Entity) {
+Node.prototype._getUse = function _getUse(entity: Entity, obj: any) {
 
   const state = this._baseState;
   // Create altered use decoder if implicit is set
@@ -446,7 +446,7 @@ Node.prototype._getUse = function _getUse(entity: Entity, obj: Entity) {
   return state.useDecoder;
 };
 
-Node.prototype._decodeChoice = function decodeChoice(input: any, options: any) {
+Node.prototype._decodeChoice = function decodeChoice(input: string, options: IChoiceOptions) {
   const state = this._baseState;
   let result = null;
   let match = false;
@@ -478,7 +478,7 @@ Node.prototype._decodeChoice = function decodeChoice(input: any, options: any) {
 // Encoding
 //
 
-Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: Uint8Array) {
+Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: any) {
   return new EncoderBuffer(data, this.reporter);
 };
 
@@ -559,7 +559,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
 
       const child = this.clone();
       child._baseState.implicit = null;
-      content = this._createEncoderBuffer(data.map(function(item: IItem) {
+      content = this._createEncoderBuffer(data.map(function(item: any) {
         const state = this._baseState;
 
         return this._getUse(state.args[0], data)._encode(item, reporter);

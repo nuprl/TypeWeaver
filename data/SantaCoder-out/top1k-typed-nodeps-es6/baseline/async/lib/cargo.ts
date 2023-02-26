@@ -46,6 +46,6 @@ import queue from './internal/queue.js'
  * await cargo.push({name: 'baz'});
  * console.log('finished processing baz');
  */
-export default function cargo(worker: Worker, payload: CargoPayload) {
+export default function cargo(worker: Worker, payload: any) {
     return queue(worker, 1, payload);
 }

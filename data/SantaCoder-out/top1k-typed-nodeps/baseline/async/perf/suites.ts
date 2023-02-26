@@ -325,7 +325,7 @@ module.exports = [{
 
         var completedCnt = 0;
 
-        function worker(task: Task, callback: any) {
+        function worker(task: WorkerTask, callback: any) {
             completedCnt++;
             if (completedCnt === numEntries) {
                 return done();

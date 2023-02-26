@@ -6,7 +6,7 @@ const inherits = require('inherits');
 
 const api = exports;
 
-api.define = function define(name: string, body: Function) {
+api.define = function define(name: string, body: string) {
   return new Entity(name, body);
 };
 
@@ -40,7 +40,7 @@ Entity.prototype._getDecoder = function _getDecoder(enc: string) {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: string, enc: string, options: DecodeOptions) {
+Entity.prototype.decode = function decode(data: Uint8Array, enc: string, options: DecodeOptions) {
   return this._getDecoder(enc).decode(data, options);
 };
 

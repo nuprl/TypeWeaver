@@ -49,7 +49,7 @@ function constructYamlFloat(data: string) {
 
 var SCIENTIFIC_WITHOUT_DOT = /^[-+]?[0-9]+e/;
 
-function representYamlFloat(object: number, style: string) {
+function representYamlFloat(object: any, style: string) {
   var res;
 
   if (isNaN(object)) {

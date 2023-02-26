@@ -58,7 +58,7 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: Sample) {
   IMPLS.forEach(function (impl: ITestImplementation) {
     suite.add(impl.name, {
 
-      onCycle: function onCycle(event: CycleEvent) {
+      onCycle: function onCycle(event: IEvent<ICursor>) {
         cursor.horizontalAbsolute();
         cursor.eraseLine();
         cursor.write(' > ' + event.target);
@@ -80,7 +80,7 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: Sample) {
 });
 
 
-function select(patterns: Pattern[]) {
+function select(patterns: string[]) {
   var result = [];
 
   if (!(patterns instanceof Array)) patterns = [ patterns ];
@@ -111,7 +111,7 @@ function run(files: string[]) {
     console.log("There isn't any sample matches any of these patterns: %s", util.inspect(files));
   }
 
-  selected.forEach(function (sample: Sample) {
+  selected.forEach(function (sample: SuiteSample) {
     sample.suite.run();
   });
 }

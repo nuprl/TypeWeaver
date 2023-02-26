@@ -145,7 +145,7 @@ function isGetter(object: any, name: string) {
  * @param {Scope|undefined} initialScope The initial scope to find variables.
  * @returns {any[]|null} The value list if all nodes are constant. Otherwise, null.
  */
-function getElementValues(nodeList: NodeListOf<HTMLElement>, initialScope: any) {
+function getElementValues(nodeList: NodeListOf<HTMLElement>, initialScope: string) {
     const valueList = []
 
     for (let i = 0; i < nodeList.length; ++i) {
@@ -521,7 +521,7 @@ const operations = Object.freeze({
  * @param {Scope|undefined} initialScope The scope to start finding variable.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the node, or `null`.
  */
-function getStaticValueR(node: Expression, initialScope: Scope) {
+function getStaticValueR(node: Node, initialScope: Scope) {
     if (node != null && Object.hasOwnProperty.call(operations, node.type)) {
         return operations[node.type](node, initialScope)
     }

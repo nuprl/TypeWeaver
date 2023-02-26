@@ -18,7 +18,7 @@ var version = "@VERSION",
 	rhtmlSuffix = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery = function( selector: string, context : Node) {
+	jQuery = function( selector: string, context : any) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -72,7 +72,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	map: function( callback : Function) {
-		return this.pushStack( jQuery.map( this, function( elem: any, i : number) {
+		return this.pushStack( jQuery.map( this, function( elem: T, i : number) {
 			return callback.call( elem, i, elem );
 		} ) );
 	},
@@ -230,7 +230,7 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: number, options: IOptions, doc : Document) {
+	globalEval: function( code: number, options: ICodeFixOptions, doc : ITextDocument) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
@@ -328,7 +328,7 @@ jQuery.extend( {
 		return first;
 	},
 
-	grep: function( elems: Array<HTMLElement>, callback: Function, invert : boolean) {
+	grep: function( elems: Array<HTMLElement>, callback: any, invert : boolean) {
 		var callbackInverse,
 			matches = [],
 			i = 0,
@@ -348,7 +348,7 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: Element[], callback: Function, arg : any) {
+	map: function( elems: Array<HTMLElement>, callback: Function, arg : any) {
 		var length, value,
 			i = 0,
 			ret = [];

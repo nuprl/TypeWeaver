@@ -390,7 +390,7 @@ declare var it: {
    */
   concurrent(name: string, fn?: Function): ?Promise<void>,
 };
-declare function fit(name: string: string, fn: Function: any): ?Promise<void>;
+declare function fit(name: string: any, fn: Function: any): ?Promise<void>;
 /** An individual test unit */
 declare var test: typeof it;
 /** A disabled group of tests */

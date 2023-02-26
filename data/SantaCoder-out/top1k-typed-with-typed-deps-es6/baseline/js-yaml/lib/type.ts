@@ -35,7 +35,7 @@ function compileStyleAliases(map: any) {
   return result;
 }
 
-function Type(tag: number, options: ITypeOptions) {
+function Type(tag: number, options: TypeOptions) {
   options = options || {};
 
   Object.keys(options).forEach(function (name: string) {

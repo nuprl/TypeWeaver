@@ -1,4 +1,4 @@
-index.ts(41,39): error TS2367: This condition will always return 'false' since the types 'BufferEncoding' and '""' have no overlap.
+index.ts(41,39): error TS2367: This comparison appears to be unintentional because the types 'BufferEncoding' and '""' have no overlap.
 index.ts(50,19): error TS2769: No overload matches this call.
   Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
     Argument of type 'string | DataView | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.

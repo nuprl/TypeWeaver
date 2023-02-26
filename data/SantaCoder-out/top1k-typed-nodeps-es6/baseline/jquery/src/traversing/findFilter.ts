@@ -41,7 +41,7 @@ jQuery.filter = function( expr: Expression, elems: Expression[], not : boolean) 
 		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Element) {
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Node) {
 		return elem.nodeType === 1;
 	} ) );
 };

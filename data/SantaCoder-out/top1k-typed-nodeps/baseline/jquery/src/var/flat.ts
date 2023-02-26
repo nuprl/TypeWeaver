@@ -4,6 +4,6 @@ import arr from "./arr.js";
 // IE doesn't have Array#flat; provide a fallback.
 export default arr.flat ? function( array : Array<any>) {
 	return arr.flat.call( array );
-} : function( array : Array<any>) {
+} : function( array : any[]) {
 	return arr.concat.apply( [], array );
 };

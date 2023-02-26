@@ -22,7 +22,7 @@ Reporter.prototype.save = function save() {
   return { obj: state.obj, pathLen: state.path.length };
 };
 
-Reporter.prototype.restore = function restore(data: any) {
+Reporter.prototype.restore = function restore(data: ReporterState) {
   const state = this._reporterState;
 
   state.obj = data.obj;

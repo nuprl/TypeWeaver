@@ -1,7 +1,7 @@
 import dataPriv from "../data/var/dataPriv.js";
 
 // Mark scripts as having already been evaluated
-function setGlobalEval( elems: NodeListOf<HTMLElement>, refElements : Array<HTMLElement>) {
+function setGlobalEval( elems: NodeListOf<HTMLElement>, refElements : IListOf<HTMLElement>) {
 	var i = 0,
 		l = elems.length;
 

@@ -34,7 +34,7 @@ function stripComments(string: string) {
     return stripped;
 }
 
-function parseParams(func: Function) {
+function parseParams(func: string) {
     const src = stripComments(func.toString());
     let match = src.match(FN_ARGS);
     if (!match) {
@@ -94,7 +94,7 @@ function parseParams(func: Function) {
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: GetData, make_folder: MakeFolder, callback: Callback<void>) {
+ *     write_file: function(get_data: GetDataCallback, make_folder: MakeFolderCallback, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
@@ -131,7 +131,7 @@ function parseParams(func: Function) {
  *     console.log('email_link = ', results.email_link);
  * });
  */
-export default function autoInject(tasks: any, callback: any) {
+export default function autoInject(tasks: any, callback: Function) {
     var newTasks = {};
 
     Object.keys(tasks).forEach(key => {

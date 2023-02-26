@@ -1,7 +1,7 @@
 import isArrayLike from './isArrayLike.js'
 import getIterator from './getIterator.js'
 
-function createArrayIterator(coll: ArrayLike<any>) {
+function createArrayIterator(coll: any) {
     var i = -1;
     var len = coll.length;
     return function next() {

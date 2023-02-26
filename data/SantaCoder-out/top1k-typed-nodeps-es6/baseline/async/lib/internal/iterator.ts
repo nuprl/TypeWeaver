@@ -9,7 +9,7 @@ function createArrayIterator(coll: any) {
     }
 }
 
-function createES2015Iterator(iterator: Iterator<any>) {
+function createES2015Iterator(iterator: Iterator<T>) {
     var i = -1;
     return function next() {
         var item = iterator.next();
@@ -33,7 +33,7 @@ function createObjectIterator(obj: any) {
     };
 }
 
-export default function createIterator(coll: Iterable<T>) {
+export default function createIterator(coll: any) {
     if (isArrayLike(coll)) {
         return createArrayIterator(coll);
     }

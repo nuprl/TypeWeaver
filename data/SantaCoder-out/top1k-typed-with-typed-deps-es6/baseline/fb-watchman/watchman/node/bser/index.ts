@@ -187,7 +187,7 @@ Accumulator.prototype.writeInt = function(value: number, size: number) {
   this.writeOffset += size;
 }
 
-Accumulator.prototype.writeDouble = function(value: number) {
+Accumulator.prototype.writeDouble = function(value: BigNumber) {
   this.reserve(8);
   if (isBigEndian) {
     this.buf.writeDoubleBE(value, this.writeOffset);
@@ -462,7 +462,7 @@ function byteswap64(buf: Buffer) {
   return swap;
 }
 
-function dump_int64(buf: number, val: number) {
+function dump_int64(buf: number[], val: number) {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be = val.toBuffer();
 
@@ -479,7 +479,7 @@ function dump_int64(buf: number, val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: Uint8Array, val: number) {
+function dump_int(buf: number, val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);

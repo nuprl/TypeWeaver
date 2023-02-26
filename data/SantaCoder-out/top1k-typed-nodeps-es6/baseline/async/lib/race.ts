@@ -34,7 +34,7 @@ import awaitify from './internal/awaitify.js'
  *     }
  * ],
  * // main callback
- * function(err: any, result: any) {
+ * function(err: Error, result: any) {
  *     // the result will be equal to 'two' as it finishes earlier
  * });
  */

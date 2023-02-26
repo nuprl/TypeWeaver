@@ -28,7 +28,7 @@ import awaitify from './internal/awaitify.js'
  *     function(callback: any) {
  *         callback(null, 'one', 'two');
  *     },
- *     function(arg1: string, arg2: string, callback: any) {
+ *     function(arg1: any, arg2: any, callback: any) {
  *         // arg1 now equals 'one' and arg2 now equals 'two'
  *         callback(null, 'three');
  *     },
@@ -55,7 +55,7 @@ import awaitify from './internal/awaitify.js'
  *     // arg1 now equals 'one' and arg2 now equals 'two'
  *     callback(null, 'three');
  * }
- * function myLastFunction(arg1: string, callback: any) {
+ * function myLastFunction(arg1: any, callback: Function) {
  *     // arg1 now equals 'three'
  *     callback(null, 'done');
  * }
@@ -71,7 +71,7 @@ function waterfall (tasks: Task[], callback: any) {
         task(...args, onlyOnce(next));
     }
 
-    function next(err: Error, ...args: any[]) {
+    function next(err: any, ...args: any[]) {
         if (err === false) return
         if (err || taskIndex === tasks.length) {
             return callback(err, ...args);

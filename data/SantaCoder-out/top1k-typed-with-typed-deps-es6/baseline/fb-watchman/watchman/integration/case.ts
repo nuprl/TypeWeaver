@@ -24,7 +24,7 @@ if (platform == 'darwin' || platform == 'win32') {
     var bar = path.join(foo, 'bar');
     var BAR = path.join(FOO, 'bar');
 
-    fs.mkdir(BAR, function(err_mk_dir_bar: Error) {
+    fs.mkdir(BAR, function(err_mk_dir_bar: any) {
       assert.equal(err_mk_dir_bar, null, 'no errors');
 
       client.command(['watch', bar], function (error: any, resp: AxiosResponse) {

@@ -10,7 +10,7 @@ api.define = function define(name: string, body: Function) {
   return new Entity(name, body);
 };
 
-function Entity(name: string, body: EntityBody) {
+function Entity(name: string, body: any) {
   this.name = name;
   this.body = body;
 
@@ -40,7 +40,7 @@ Entity.prototype._getDecoder = function _getDecoder(enc: string) {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: Uint8Array, enc: string, options: IDecodeOptions) {
+Entity.prototype.decode = function decode(data: string, enc: string, options: DecodeOptions) {
   return this._getDecoder(enc).decode(data, options);
 };
 

@@ -20,8 +20,8 @@ import wrapAsync from './internal/wrapAsync.js'
  * Invoke this function with the same parameters as you would `asyncFunc`.
  * @example
  *
- * function myFunction(foo: string, callback: any) {
- *     doAsyncTask(foo, function(err: Error, data: any) {
+ * function myFunction(foo: string, callback: Function) {
+ *     doAsyncTask(foo, function(err: any, data: any) {
  *         // handle errors
  *         if (err) return callback(err);
  *
@@ -35,7 +35,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * var wrapped = async.timeout(myFunction, 1000);
  *
  * // call `wrapped` as you would `myFunction`
- * wrapped({ bar: 'bar' }, function(err: Error, data: any) {
+ * wrapped({ bar: 'bar' }, function(err: any, data: any) {
  *     // if `myFunction` takes < 1000 ms to execute, `err`
  *     // and `data` will have their expected values
  *

@@ -245,7 +245,7 @@ function defaultPrefilter( elem: HTMLElement, props: PrefilterOptions, opts : Pr
 	}
 }
 
-function propFilter( props: string[], specialEasing : string[]) {
+function propFilter( props: IProperty[], specialEasing : IProperty[]) {
 	var index, name, easing, value, hooks;
 
 	// camelCase, specialEasing and expand cssHook pass
@@ -518,7 +518,7 @@ jQuery.fn.extend( {
 			this.queue( optall.queue, doAnimation );
 	},
 	stop: function( type: string, clearQueue: boolean, gotoEnd : boolean) {
-		var stopQueue = function( hooks : IHooks) {
+		var stopQueue = function( hooks : IHook[]) {
 			var stop = hooks.stop;
 			delete hooks.stop;
 			stop( gotoEnd );
@@ -569,7 +569,7 @@ jQuery.fn.extend( {
 			}
 		} );
 	},
-	finish: function( type : boolean) {
+	finish: function( type : string) {
 		if ( type !== false ) {
 			type = type || "fx";
 		}

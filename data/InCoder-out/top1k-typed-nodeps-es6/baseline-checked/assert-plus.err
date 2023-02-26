@@ -1,5 +1,5 @@
 assert.ts(29,9): error TS2345: Argument of type '{ message: string; actual: any; expected: any; operator: any; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
-  Object literal may only specify known properties, and 'stackStartFunction' does not exist in type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
+  Object literal may only specify known properties, but 'stackStartFunction' does not exist in type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'. Did you mean to write 'stackStartFn'?
 assert.ts(52,31): error TS2304: Cannot find name 'ny'.
 assert.ts(100,30): error TS2304: Cannot find name 'Ndebug'.
 assert.ts(110,17): error TS2554: Expected 5 arguments, but got 3.

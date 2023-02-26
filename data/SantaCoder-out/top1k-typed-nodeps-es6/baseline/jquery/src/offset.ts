@@ -8,7 +8,7 @@ import "./css.js";
 import "./selector.js"; // contains
 
 jQuery.offset = {
-	setOffset: function( elem: HTMLElement, options: any, i : number) {
+	setOffset: function( elem: HTMLElement, options: IOptions, i : number) {
 		var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition,
 			position = jQuery.css( elem, "position" ),
 			curElem = jQuery( elem ),
@@ -170,7 +170,7 @@ jQuery.fn.extend( {
 jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method: string, prop : string) {
 	var top = "pageYOffset" === prop;
 
-	jQuery.fn[ method ] = function( val : number) {
+	jQuery.fn[ method ] = function( val : string) {
 		return access( this, function( elem: HTMLElement, method: string, val : any) {
 
 			// Coalesce documents and windows

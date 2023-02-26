@@ -10,7 +10,7 @@ function Thrower( ex : any) {
 	throw ex;
 }
 
-function adoptValue( value: any, resolve: any, reject: any, noValue : any) {
+function adoptValue( value: any, resolve: Function, reject: Function, noValue : boolean) {
 	var method;
 
 	try {

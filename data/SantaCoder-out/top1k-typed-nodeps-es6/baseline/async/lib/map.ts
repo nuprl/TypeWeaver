@@ -44,7 +44,7 @@ import awaitify from './internal/awaitify.js'
  * const withMissingFileList = ['file1.txt','file2.txt','file4.txt'];
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: Blob, callback: any) {
+ * function getFileSizeInBytes(file: File, callback: any) {
  *     fs.stat(file, function(err: Error, stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);

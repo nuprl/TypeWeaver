@@ -18,7 +18,7 @@ if (platform == 'darwin' || platform == 'win32') {
   var foo = path.join(tmp, 'foo');
   var FOO = path.join(tmp, 'FOO');
 
-  fs.mkdir(FOO, function(err_mk_dir_foo: Error) {
+  fs.mkdir(FOO, function(err_mk_dir_foo: any) {
     assert.equal(err_mk_dir_foo, null, 'no errors');
     var bar = path.join(foo, 'bar');
     var BAR = path.join(FOO, 'bar');
@@ -26,7 +26,7 @@ if (platform == 'darwin' || platform == 'win32') {
     fs.mkdir(BAR, function(err_mk_dir_bar: string) {
       assert.equal(err_mk_dir_bar, null, 'no errors');
 
-      client.command(['watch', bar], function (error: any, resp: AxiosResponse) {
+      client.command(['watch', bar], function (error: AxiosError, resp: AxiosResponse) {
         assert.equal('RootResolveError: unable to resolve root ' + bar
                       + ": \"" + bar + "\" resolved to \"" + BAR
                       + "\" but we were unable to examine \""

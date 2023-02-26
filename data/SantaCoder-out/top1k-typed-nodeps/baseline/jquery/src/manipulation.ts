@@ -196,7 +196,7 @@ jQuery.extend( {
 		return html;
 	},
 
-	clone: function( elem: HTMLElement, dataAndEvents: DataAndEvents, deepDataAndEvents : any) {
+	clone: function( elem: HTMLElement, dataAndEvents: DataAndEvents, deepDataAndEvents : DeepDataAndEvents) {
 		var i, l, srcElements, destElements,
 			clone = elem.cloneNode( true ),
 			inPage = isAttached( elem );

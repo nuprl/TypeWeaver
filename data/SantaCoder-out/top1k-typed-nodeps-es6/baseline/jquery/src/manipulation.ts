@@ -245,7 +245,7 @@ jQuery.extend( {
 		return clone;
 	},
 
-	cleanData: function( elems : Array<HTMLElement>) {
+	cleanData: function( elems : Element[]) {
 		var data, elem, type,
 			special = jQuery.event.special,
 			i = 0;
@@ -320,7 +320,7 @@ jQuery.fn.extend( {
 	},
 
 	before: function() {
-		return domManip( this, arguments, function( elem : Element) {
+		return domManip( this, arguments, function( elem : HTMLElement) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this );
 			}
@@ -328,7 +328,7 @@ jQuery.fn.extend( {
 	},
 
 	after: function() {
-		return domManip( this, arguments, function( elem : HTMLElement) {
+		return domManip( this, arguments, function( elem : Element) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this.nextSibling );
 			}
@@ -353,7 +353,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	clone: function( dataAndEvents: DataAndEvents, deepDataAndEvents : DataAndEvents) {
+	clone: function( dataAndEvents: IDataAndEvents, deepDataAndEvents : IDataAndEvents) {
 		dataAndEvents = dataAndEvents == null ? false : dataAndEvents;
 		deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;
 
@@ -362,8 +362,8 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	html: function( value : number) {
-		return access( this, function( value : number) {
+	html: function( value : any) {
+		return access( this, function( value : string) {
 			var elem = this[ 0 ] || {},
 				i = 0,
 				l = this.length;

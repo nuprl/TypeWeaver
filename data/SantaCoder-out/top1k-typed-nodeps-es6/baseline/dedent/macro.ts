@@ -3,7 +3,7 @@ import dedent from './dedent.js';
 
 export default createMacro(prevalMacros);
 
-function prevalMacros({ references: references, state: state, babel }: BabelState) {
+function prevalMacros({ references: refs, state: state, babel }: BabelState) {
   references.default.forEach(referencePath => {
     if (referencePath.parentPath.type === "TaggedTemplateExpression") {
       asTag(referencePath.parentPath.get("quasi"), state, babel);

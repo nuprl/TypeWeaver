@@ -31,7 +31,7 @@ function expectSync( elem: HTMLElement, type : string) {
 	return ( elem === document.activeElement ) === ( type === "focus" );
 }
 
-function on( elem: Element, types: string, selector: string, data: any, fn: Function, one : boolean) {
+function on( elem: HTMLElement, types: string, selector: string, data: any, fn: Function, one : boolean) {
 	var origFn, type;
 
 	// Types can be a map of types/handlers
@@ -77,7 +77,7 @@ function on( elem: Element, types: string, selector: string, data: any, fn: Func
 
 	if ( one === 1 ) {
 		origFn = fn;
-		fn = function( event : MouseEvent) {
+		fn = function( event : Event) {
 
 			// Can use an empty set, since event contains the info
 			jQuery().off( event );
@@ -133,7 +133,7 @@ jQuery.event = {
 			events = elemData.events = Object.create( null );
 		}
 		if ( !( eventHandle = elemData.handle ) ) {
-			eventHandle = elemData.handle = function( e : any) {
+			eventHandle = elemData.handle = function( e : Event) {
 
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
@@ -210,7 +210,7 @@ jQuery.event = {
 	},
 
 	// Detach an event or set of events from an element
-	remove: function( elem: HTMLElement, types: string[], handler: Function, selector: string, mappedTypes : any[]) {
+	remove: function( elem: HTMLElement, types: string[], handler: Function, selector: string, mappedTypes : any) {
 
 		var j, origCount, tmp,
 			events, t, handleObj,
@@ -351,7 +351,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	handlers: function( event: Event, handlers : IEventHandler[]) {
+	handlers: function( event: Event, handlers : IEventHandler<any>) {
 		var i, handleObj, sel, matchedHandlers, matchedSelectors,
 			handlerQueue = [],
 			delegateCount = handlers.delegateCount,
@@ -405,7 +405,7 @@ jQuery.event = {
 		return handlerQueue;
 	},
 
-	addProp: function( name: string, hook : Function) {
+	addProp: function( name: string, hook : IHook) {
 		Object.defineProperty( jQuery.Event.prototype, name, {
 			enumerable: true,
 			configurable: true,
@@ -525,7 +525,7 @@ function leverageNative( el: HTMLElement, type: string, expectSync : boolean) {
 	dataPriv.set( el, type, false );
 	jQuery.event.add( el, type, {
 		namespace: false,
-		handler: function( event : IEvent<any>) {
+		handler: function( event : IEvent) {
 			var notAsync, result,
 				saved = dataPriv.get( this, type );
 
@@ -789,13 +789,13 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 
-	on: function( types: IType[], selector: ISelector, data: any, fn : IFunction) {
+	on: function( types: IType[], selector: ISelector, data: any, fn : any) {
 		return on( this, types, selector, data, fn );
 	},
-	one: function( types: IType[], selector: ISelector, data: any, fn : any) {
+	one: function( types: IType[], selector: ISelector, data: IData, fn : any) {
 		return on( this, types, selector, data, fn, 1 );
 	},
-	off: function( types: Array<string>, selector: string, fn : any) {
+	off: function( types: Array<string>, selector: string, fn : Function) {
 		var handleObj, type;
 		if ( types && types.preventDefault && types.handleObj ) {
 

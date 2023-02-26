@@ -46,7 +46,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * //Using Callbacks
  * async.auto({
- *     get_data: function(callback: any) {
+ *     get_data: function(callback: Function) {
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
@@ -55,12 +55,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: ['get_data', 'make_folder', function(results: any, callback: Function) {
+ *     write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(results: IResults, callback: any) {
+ *     email_link: ['write_file', function(results: any, callback: Function) {
  *         // once the file is written let's email a link to it...
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
@@ -79,7 +79,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * //Using Promises
  * async.auto({
- *     get_data: function(callback: any) {
+ *     get_data: function(callback: Function) {
  *         console.log('in get_data');
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
@@ -95,7 +95,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(results: any, callback: any) {
+ *     email_link: ['write_file', function(results: IResults<any>, callback: any) {
  *         // once the file is written let's email a link to it...
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
@@ -119,12 +119,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *                 // async code to get some data
  *                 callback(null, 'data', 'converted to array');
  *             },
- *             make_folder: function(callback: Function) {
+ *             make_folder: function(callback: any) {
  *                 // async code to create a directory to store a file in
  *                 // this is run at the same time as getting the data
  *                 callback(null, 'folder');
  *             },
- *             write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
+ *             write_file: ['get_data', 'make_folder', function(results: IResults<IResult<any>>, callback: any) {
  *                 // once there is some data and the directory exists,
  *                 // write the data to a file in the directory
  *                 callback(null, 'filename');

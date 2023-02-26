@@ -36,7 +36,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * and a `priority` property, if this is a
  * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
  * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
- * `function ({data: any, priority}: any) {}` and returns a Boolean.
+ * `function ({data: any, priority}: IMessage) {}` and returns a Boolean.
  * @property {Function} saturated - a function that sets a callback that is
  * called when the number of running workers hits the `concurrency` limit, and
  * further tasks will be queued.  If the callback is omitted, `q.saturated()`

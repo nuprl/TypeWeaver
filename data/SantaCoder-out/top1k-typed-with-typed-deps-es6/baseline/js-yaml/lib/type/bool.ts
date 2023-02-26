@@ -2,7 +2,7 @@
 
 import Type from '../type';
 
-function resolveYamlBoolean(data: any) {
+function resolveYamlBoolean(data: string) {
   if (data === null) return false;
 
   var max = data.length;

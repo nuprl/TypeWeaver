@@ -5,7 +5,7 @@ import rneedsContext from "./var/rneedsContext.js";
 import "../selector.js";
 
 // Implement the identical functionality for filter and not
-function winnow( elements: IElement[], qualifier: string, not : boolean) {
+function winnow( elements: Element[], qualifier: string, not : boolean) {
 	if ( typeof qualifier === "function" ) {
 		return jQuery.grep( elements, function( elem: HTMLElement, i : number) {
 			return !!qualifier.call( elem, i, elem ) !== not;
@@ -41,7 +41,7 @@ jQuery.filter = function( expr: Expression, elems: Expression[], not : boolean) 
 		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Element) {
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Node) {
 		return elem.nodeType === 1;
 	} ) );
 };

@@ -52,7 +52,7 @@ export default function queue(worker: WorkerFunction, concurrency: number, paylo
         q.started = true;
 
         var res, rej;
-        function promiseCallback (err: Error, ...args: any[]) {
+        function promiseCallback (err: any, ...args: any[]) {
             // we don't care about the error, let the global error handler
             // deal with it
             if (err) return rejectOnError ? rej(err) : res()

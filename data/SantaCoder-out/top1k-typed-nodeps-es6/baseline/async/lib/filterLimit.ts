@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee` functions have finished. Invoked with (err, results).
  * @returns {Promise} a promise, if no callback provided
  */
-function filterLimit (coll: Array<any>, limit: number, iteratee: any, callback: any) {
+function filterLimit (coll: Collection<any>, limit: number, iteratee: any, callback: any) {
     return _filter(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(filterLimit, 4);

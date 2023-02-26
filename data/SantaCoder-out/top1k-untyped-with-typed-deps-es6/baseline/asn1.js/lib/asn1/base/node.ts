@@ -132,7 +132,7 @@ Node.prototype._useArgs = function useArgs(args: string[]) {
         return arg;
 
       const res = {};
-      Object.keys(arg).forEach(function(key: string) {
+      Object.keys(arg).forEach(function(key: number) {
         if (key == (key | 0))
           key |= 0;
         const value = arg[key];
@@ -247,7 +247,7 @@ Node.prototype.any = function any() {
   return this;
 };
 
-Node.prototype.choice = function choice(obj: ChoiceObject) {
+Node.prototype.choice = function choice(obj: any) {
   const state = this._baseState;
 
   assert(state.choice === null);
@@ -446,7 +446,7 @@ Node.prototype._getUse = function _getUse(entity: Entity, obj: Entity) {
   return state.useDecoder;
 };
 
-Node.prototype._decodeChoice = function decodeChoice(input: string, options: IChoiceOptions) {
+Node.prototype._decodeChoice = function decodeChoice(input: any, options: any) {
   const state = this._baseState;
   let result = null;
   let match = false;
@@ -559,7 +559,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
 
       const child = this.clone();
       child._baseState.implicit = null;
-      content = this._createEncoderBuffer(data.map(function(item: IItem) {
+      content = this._createEncoderBuffer(data.map(function(item: IStateItem) {
         const state = this._baseState;
 
         return this._getUse(state.args[0], data)._encode(item, reporter);
@@ -593,7 +593,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
   return result;
 };
 
-Node.prototype._encodeChoice = function encodeChoice(data: Choice, reporter: Reporter) {
+Node.prototype._encodeChoice = function encodeChoice(data: IChoice, reporter: IReporter) {
   const state = this._baseState;
 
   const node = state.choice[data.type];

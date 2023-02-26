@@ -102,7 +102,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function eachLimit(coll: Collection<any>, iteratee: any, callback: any) {
+function eachLimit(coll: any, iteratee: any, callback: any) {
     return eachOf(coll, withoutIndex(wrapAsync(iteratee)), callback);
 }
 

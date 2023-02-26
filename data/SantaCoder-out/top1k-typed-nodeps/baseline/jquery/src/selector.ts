@@ -150,7 +150,7 @@ function selectorError( msg : string) {
 	throw new Error( "Syntax error, unrecognized expression: " + msg );
 }
 
-function find( selector: string, context: Node, results: Node[], seed : number) {
+function find( selector: string, context: Node, results: Node[], seed : Node) {
 	var m, i, elem, nid, match, groups, newSelector,
 		newContext = context && context.ownerDocument,
 
@@ -408,7 +408,7 @@ function createDisabledPseudo( disabled : boolean) {
 function createPositionalPseudo( fn : Function) {
 	return markFunction( function( argument : number) {
 		argument = +argument;
-		return markFunction( function( seed: number, matches : number) {
+		return markFunction( function( seed: number, matches : Array<Match>) {
 			var j,
 				matchIndexes = fn( [], seed.length, argument ),
 				i = matchIndexes.length;
@@ -470,7 +470,7 @@ find.matches = function( expr: Expression, elements : Expression[]) {
 	return find( expr, null, null, elements );
 };
 
-find.matchesSelector = function( elem: Element, expr : string) {
+find.matchesSelector = function( elem: HTMLElement, expr : string) {
 	setDocument( elem );
 
 	if ( documentIsHTML &&
@@ -580,7 +580,7 @@ Expr = jQuery.expr = {
 			return match;
 		},
 
-		PSEUDO: function( match : MatchResult) {
+		PSEUDO: function( match : Match) {
 			var excess,
 				unquoted = !match[ 6 ] && match[ 2 ];
 
@@ -638,7 +638,7 @@ Expr = jQuery.expr = {
 			return pattern ||
 				( pattern = new RegExp( "(^|" + whitespace + ")" + className +
 					"(" + whitespace + "|$)" ) ) &&
-				classCache( className, function( elem : HTMLElement) {
+				classCache( className, function( elem : string) {
 					return pattern.test(
 						typeof elem.className === "string" && elem.className ||
 							typeof elem.getAttribute !== "undefined" &&
@@ -649,7 +649,7 @@ Expr = jQuery.expr = {
 		},
 
 		ATTR: function( name: string, operator: string, check : Function) {
-			return function( elem : HTMLElement) {
+			return function( elem : Element) {
 				var result = jQuery.attr( elem, name );
 
 				if ( result == null ) {
@@ -688,7 +688,7 @@ Expr = jQuery.expr = {
 			};
 		},
 
-		CHILD: function( type: string, what: string, _argument: any, first: boolean, last : boolean) {
+		CHILD: function( type: string, what: any, _argument: any, first: boolean, last : boolean) {
 			var simple = type.slice( 0, 3 ) !== "nth",
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
@@ -696,7 +696,7 @@ Expr = jQuery.expr = {
 			return first === 1 && last === 0 ?
 
 				// Shortcut for :nth-*(n)
-				function( elem : Element) {
+				function( elem : HTMLElement) {
 					return !!elem.parentNode;
 				} :
 
@@ -874,7 +874,7 @@ Expr = jQuery.expr = {
 		} ),
 
 		has: markFunction( function( selector : string) {
-			return function( elem : HTMLElement) {
+			return function( elem : Element) {
 				return find( selector, elem ).length > 0;
 			};
 		} ),
@@ -943,7 +943,7 @@ Expr = jQuery.expr = {
 				( nodeName( elem, "option" ) && !!elem.selected );
 		},
 
-		selected: function( elem : HTMLElement) {
+		selected: function( elem : Element) {
 
 			// Support: IE <=11+
 			// Accessing the selectedIndex property
@@ -1040,7 +1040,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		gt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : any) {
+		gt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : string) {
 			var i = argument < 0 ? argument + length : argument;
 			for ( ; ++i < length; ) {
 				matchIndexes.push( i );
@@ -1137,7 +1137,7 @@ function tokenize( selector: string, parseOnly : boolean) {
 		tokenCache( selector, groups ).slice( 0 );
 }
 
-function toSelector( tokens : string[]) {
+function toSelector( tokens : IToken[]) {
 	var i = 0,
 		len = tokens.length,
 		selector = "";
@@ -1147,7 +1147,7 @@ function toSelector( tokens : string[]) {
 	return selector;
 }
 
-function addCombinator( matcher: Matcher, combinator: string, base : Matcher) {
+function addCombinator( matcher: Matcher, combinator: Matcher, base : Matcher) {
 	var dir = combinator.dir,
 		skip = combinator.next,
 		key = skip || dir,
@@ -1167,7 +1167,7 @@ function addCombinator( matcher: Matcher, combinator: string, base : Matcher) {
 		} :
 
 		// Check against all ancestor/preceding elements
-		function( elem: HTMLElement, context: any, xml : any) {
+		function( elem: Element, context: any, xml : any) {
 			var oldCache, outerCache,
 				newCache = [ dirruns, doneName ];
 
@@ -1211,7 +1211,7 @@ function addCombinator( matcher: Matcher, combinator: string, base : Matcher) {
 
 function elementMatcher( matchers : Matcher[]) {
 	return matchers.length > 1 ?
-		function( elem: Node, context: Node, xml : string) {
+		function( elem: HTMLElement, context: any, xml : any) {
 			var i = matchers.length;
 			while ( i-- ) {
 				if ( !matchers[ i ]( elem, context, xml ) ) {
@@ -1223,7 +1223,7 @@ function elementMatcher( matchers : Matcher[]) {
 		matchers[ 0 ];
 }
 
-function multipleContexts( selector: string, contexts: string[], results : any[]) {
+function multipleContexts( selector: string, contexts: string[], results : string[]) {
 	var i = 0,
 		len = contexts.length;
 	for ( ; i < len; i++ ) {
@@ -1232,7 +1232,7 @@ function multipleContexts( selector: string, contexts: string[], results : any[]
 	return results;
 }
 
-function condense( unmatched: string[], map: string[], filter: string[], context: any, xml : any) {
+function condense( unmatched: string[], map: string[], filter: any, context: any, xml : any) {
 	var elem,
 		newUnmatched = [],
 		i = 0,
@@ -1366,7 +1366,7 @@ function matcherFromTokens( tokens : Token[]) {
 		matchAnyContext = addCombinator( function( elem : HTMLElement) {
 			return indexOf.call( checkContext, elem ) > -1;
 		}, implicitRelative, true ),
-		matchers = [ function( elem: HTMLElement, context: any, xml : any) {
+		matchers = [ function( elem: HTMLElement, context: any, xml : string) {
 			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
 				( checkContext = context ).nodeType ?
 					matchContext( elem, context, xml ) :
@@ -1418,7 +1418,7 @@ function matcherFromTokens( tokens : Token[]) {
 function matcherFromGroupMatchers( elementMatchers: Matcher[], setMatchers : Matcher[]) {
 	var bySet = setMatchers.length > 0,
 		byElement = elementMatchers.length > 0,
-		superMatcher = function( seed: number, context: any, xml: string, results: any[], outermost : boolean) {
+		superMatcher = function( seed: string, context: any, xml: string, results: any, outermost : boolean) {
 			var elem, j, matcher,
 				matchedCount = 0,
 				i = "0",

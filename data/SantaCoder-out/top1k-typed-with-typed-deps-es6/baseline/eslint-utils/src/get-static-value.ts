@@ -145,7 +145,7 @@ function isGetter(object: any, name: string) {
  * @param {Scope|undefined} initialScope The initial scope to find variables.
  * @returns {any[]|null} The value list if all nodes are constant. Otherwise, null.
  */
-function getElementValues(nodeList: NodeListOf<HTMLElement>, initialScope: Scope) {
+function getElementValues(nodeList: NodeListOf<HTMLElement>, initialScope: any) {
     const valueList = []
 
     for (let i = 0; i < nodeList.length; ++i) {

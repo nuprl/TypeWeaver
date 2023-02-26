@@ -103,7 +103,7 @@ async.eachSeries(versionNames, cloneVersion, (err) => {
     });
 });
 
-function runSuite(suite: Suite, callback: any) {
+function runSuite(suite: TestSuite, callback: any) {
     suite.on("complete", () => {
         callback();
     }).run({async: true});
@@ -130,7 +130,7 @@ function matchesGrep(suiteConfig: ITestConfig) {
     return !!grep.exec(suiteConfig.name);
 }
 
-function doesNotMatch(suiteConfig: SuiteConfig) {
+function doesNotMatch(suiteConfig: ITestConfig) {
     return !reject.exec(suiteConfig.name);
 }
 

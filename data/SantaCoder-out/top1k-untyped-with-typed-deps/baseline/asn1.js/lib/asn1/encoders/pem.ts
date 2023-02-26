@@ -11,7 +11,7 @@ function PEMEncoder(entity: string) {
 inherits(PEMEncoder, DEREncoder);
 module.exports = PEMEncoder;
 
-PEMEncoder.prototype.encode = function encode(data: any, options: IEncodeOptions) {
+PEMEncoder.prototype.encode = function encode(data: any, options: EncodeOptions) {
   const buf = DEREncoder.prototype.encode.call(this, data);
 
   const p = buf.toString('base64');

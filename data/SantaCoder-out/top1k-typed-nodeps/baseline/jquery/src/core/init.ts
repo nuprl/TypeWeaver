@@ -15,7 +15,7 @@ var rootjQuery,
 	// Shortcut simple #id case for speed
 	rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,
 
-	init = jQuery.fn.init = function( selector: string, context : Node) {
+	init = jQuery.fn.init = function( selector: string, context : any) {
 		var match, elem;
 
 		// HANDLE: $(""), $(null), $(undefined), $(false)

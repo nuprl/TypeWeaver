@@ -41,7 +41,7 @@ $(function initSearchBar() {
             cache: true,
             wildcard: '%QUERY',
             transform: function(response: AxiosResponse) {
-                return $.map(response.items, function(issue: Issue) {
+                return $.map(response.items, function(issue: IIssue) {
                     // if (issue.state !== 'open') {
                     //     return null;
                     // }
@@ -80,7 +80,7 @@ $(function initSearchBar() {
         templates: {
             header: '<h3 class="search-bar-header">Issues</h3>'
         }
-    }).on('typeahead:select', function(ev: any, suggestion: any) {
+    }).on('typeahead:select', function(ev: IKeyboardEvent, suggestion: ITelemetrySuggestion) {
         var host;
         if (location.origin != "null") {
             host = location.origin;

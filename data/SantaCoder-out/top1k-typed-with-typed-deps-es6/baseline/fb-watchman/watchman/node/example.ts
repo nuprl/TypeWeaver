@@ -18,7 +18,7 @@ client.on('error', function(error: any) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: Error, resp: AxiosResponse) {
+client.capabilityCheck({required:['relative_root']}, function (error: any, resp: AxiosResponse) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;
@@ -27,7 +27,7 @@ client.capabilityCheck({required:['relative_root']}, function (error: Error, res
 });
 
 // Example of the error case
-client.command(['invalid-command-never-will-work'], function(error: Error, resp: AxiosResponse) {
+client.command(['invalid-command-never-will-work'], function(error: any, resp: any) {
   if (error) {
     console.error('failed to subscribe: ', error);
     return;

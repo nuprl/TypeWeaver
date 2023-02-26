@@ -111,7 +111,7 @@ function run(files: string[]) {
     console.log("There isn't any sample matches any of these patterns: %s", util.inspect(files));
   }
 
-  selected.forEach(function (sample: ITestSample) {
+  selected.forEach(function (sample: Sample) {
     sample.suite.run();
   });
 }

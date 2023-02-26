@@ -1,7 +1,7 @@
 /**
  * An "async function" in the context of Async is an asynchronous function with
  * a variable number of parameters, with the final parameter being a callback.
- * (`function (arg1: string, arg2: string, ...: any[], callback: any) {}`)
+ * (`function (arg1: any, arg2: any, ...: any[], callback: any) {}`)
  * The final callback is of the form `callback(err, results...)`, which must be
  * called once the function is completed.  The callback should be called with a
  * Error as its first argument to signal that an error occurred.

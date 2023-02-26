@@ -5,7 +5,7 @@
 
 "use strict";
 
-export default function getInnerRequest(resolver: IRequestResolver, request: IRequest) {
+export default function getInnerRequest(resolver: IRequestResolver<any>, request: IRequest<any>) {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&

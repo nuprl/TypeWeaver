@@ -21,7 +21,7 @@ var rparentsprev = /^(?:parents|prev(?:Until|All))/,
 	};
 
 jQuery.fn.extend( {
-	has: function( target : jQuery) {
+	has: function( target : HTMLElement) {
 		var targets = jQuery( target, this ),
 			l = targets.length;
 
@@ -66,7 +66,7 @@ jQuery.fn.extend( {
 	},
 
 	// Determine the position of an element within the set
-	index: function( elem : HTMLElement) {
+	index: function( elem : Element) {
 
 		// No argument, return index in parent
 		if ( !elem ) {
@@ -111,7 +111,7 @@ jQuery.each( {
 		var parent = elem.parentNode;
 		return parent && parent.nodeType !== 11 ? parent : null;
 	},
-	parents: function( elem : Element) {
+	parents: function( elem : Node) {
 		return dir( elem, "parentNode" );
 	},
 	parentsUntil: function( elem: HTMLElement, _i: number, until : number) {
@@ -141,7 +141,7 @@ jQuery.each( {
 	children: function( elem : Node) {
 		return siblings( elem.firstChild );
 	},
-	contents: function( elem : HTMLElement) {
+	contents: function( elem : Node) {
 		if ( elem.contentDocument != null &&
 
 			// Support: IE 11+

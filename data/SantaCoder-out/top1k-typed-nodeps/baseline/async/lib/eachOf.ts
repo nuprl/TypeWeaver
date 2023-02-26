@@ -148,7 +148,7 @@ function eachOfGeneric (coll: any, iteratee: any, callback: any) {
  * }
  *
  */
-function eachOf(coll: Collection<any>, iteratee: any, callback: any) {
+function eachOf(coll: any, iteratee: any, callback: any) {
     var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
     return eachOfImplementation(coll, wrapAsync(iteratee), callback);
 }

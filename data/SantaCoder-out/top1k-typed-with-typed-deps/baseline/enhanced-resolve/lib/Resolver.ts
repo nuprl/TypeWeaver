@@ -61,7 +61,7 @@ const {
  * @property {function(string: string, object=: any): (Buffer | string)[] | FileSystemDirent[]} readdirSync
  * @property {(function(string: string, object=: any): object)=} readJsonSync
  * @property {function(string: string, object=: any): Buffer | string} readlinkSync
- * @property {function(string: string, object=: undefined): FileSystemStats=} lstatSync
+ * @property {function(string: string, object=: any): FileSystemStats=} lstatSync
  * @property {function(string: string, object=: any): FileSystemStats} statSync
  */
 

@@ -20,7 +20,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	prop: function( elem: HTMLElement, name: string, value : any) {
+	prop: function( elem: HTMLElement, name: string, value : string) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -94,7 +94,7 @@ jQuery.extend( {
 // is disabled for this code since it considers such accessions noop.
 if ( isIE ) {
 	jQuery.propHooks.selected = {
-		get: function( elem : Element) {
+		get: function( elem : HTMLElement) {
 
 			var parent = elem.parentNode;
 			if ( parent && parent.parentNode ) {

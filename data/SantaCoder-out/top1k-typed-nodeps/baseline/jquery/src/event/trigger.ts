@@ -161,7 +161,7 @@ jQuery.extend( jQuery.event, {
 
 	// Piggyback on a donor event to simulate a different one
 	// Used only for `focus(in | out)` events
-	simulate: function( type: string, elem: HTMLElement, event : MouseEvent) {
+	simulate: function( type: string, elem: jQuery.Event, event : JQuery.Event) {
 		var e = jQuery.extend(
 			new jQuery.Event(),
 			event,

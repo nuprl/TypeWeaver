@@ -29,7 +29,7 @@
  *     function(callback: any) {
  *         fs.writeFile('testfile1', 'test1', callback);
  *     },
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         fs.writeFile('testfile2', 'test2', callback);
  *     }
  * ]);

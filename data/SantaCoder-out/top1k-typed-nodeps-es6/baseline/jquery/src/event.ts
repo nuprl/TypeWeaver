@@ -133,7 +133,7 @@ jQuery.event = {
 			events = elemData.events = Object.create( null );
 		}
 		if ( !( eventHandle = elemData.handle ) ) {
-			eventHandle = elemData.handle = function( e : any) {
+			eventHandle = elemData.handle = function( e : Event) {
 
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
@@ -283,7 +283,7 @@ jQuery.event = {
 		}
 	},
 
-	dispatch: function( nativeEvent : NativeSyntheticMouseEvent<HTMLElement>) {
+	dispatch: function( nativeEvent : MouseEvent) {
 
 		var i, j, ret, matched, handleObj, handlerQueue,
 			args = new Array( arguments.length ),
@@ -351,7 +351,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	handlers: function( event: Event, handlers : IEventHandler<any>) {
+	handlers: function( event: Event, handlers : Array<Function>) {
 		var i, handleObj, sel, matchedHandlers, matchedSelectors,
 			handlerQueue = [],
 			delegateCount = handlers.delegateCount,
@@ -525,7 +525,7 @@ function leverageNative( el: HTMLElement, type: string, expectSync : boolean) {
 	dataPriv.set( el, type, false );
 	jQuery.event.add( el, type, {
 		namespace: false,
-		handler: function( event : Event) {
+		handler: function( event : IEvent<any>) {
 			var notAsync, result,
 				saved = dataPriv.get( this, type );
 
@@ -792,7 +792,7 @@ jQuery.fn.extend( {
 	on: function( types: IType[], selector: ISelector, data: IData, fn : any) {
 		return on( this, types, selector, data, fn );
 	},
-	one: function( types: Type<T>, selector: Selector<T>, data: T, fn : any) {
+	one: function( types: IType[], selector: ISelector, data: IData, fn : any) {
 		return on( this, types, selector, data, fn, 1 );
 	},
 	off: function( types: string[], selector: string, fn : Function) {

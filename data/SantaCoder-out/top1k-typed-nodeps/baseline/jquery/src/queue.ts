@@ -5,7 +5,7 @@ import "./deferred.js";
 import "./callbacks.js";
 
 jQuery.extend( {
-	queue: function( elem: Element, type: string, data : any) {
+	queue: function( elem: HTMLElement, type: string, data : any) {
 		var queue;
 
 		if ( elem ) {

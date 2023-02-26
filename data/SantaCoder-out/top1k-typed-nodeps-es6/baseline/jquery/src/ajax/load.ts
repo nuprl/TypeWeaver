@@ -60,7 +60,7 @@ jQuery.fn.load = function( url: string, params: any, callback : Function) {
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
 		// but they are ignored because response was set above.
 		// If it fails, this function gets "jqXHR", "status", "error"
-		} ).always( callback && function( jqXHR: JQueryXHR, status : string) {
+		} ).always( callback && function( jqXHR: jQuery.jqXHR, status : string) {
 			self.each( function() {
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
 			} );

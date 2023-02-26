@@ -224,7 +224,7 @@ function generate(type: string,  title: string,  docs: string,  filename: string
     fs.writeFileSync(outpath, html, 'utf8');
 }
 
-function generateSourceFiles(sourceFiles: SourceFile[],  encoding: string | null) {
+function generateSourceFiles(sourceFiles: SourceFile[],  encoding: Encoding) {
     encoding = encoding || 'utf8';
     const sourceFilenames = [];
     Object.keys(sourceFiles).forEach(file => {

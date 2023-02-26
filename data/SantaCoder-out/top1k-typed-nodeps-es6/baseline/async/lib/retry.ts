@@ -133,7 +133,7 @@ export default function retry(opts: IRetryOptions, task: ITask, callback: any) {
     return callback[PROMISE_SYMBOL]
 }
 
-function parseTimes(acc: number, t: string) {
+function parseTimes(acc: Times, t: string) {
     if (typeof t === 'object') {
         acc.times = +t.times || DEFAULT_TIMES;
 

@@ -71,7 +71,7 @@ function eachOfGeneric (coll: any, iteratee: any, callback: any) {
  *
  * // asynchronous function that reads a json file and parses the contents as json object
  * function parseFile(file: string, key: string, callback: any) {
- *     fs.readFile(file, "utf8", function(err: any, data: any) {
+ *     fs.readFile(file, "utf8", function(err: Error, data: any) {
  *         if (err) return calback(err);
  *         try {
  *             configs[key] = JSON.parse(data);

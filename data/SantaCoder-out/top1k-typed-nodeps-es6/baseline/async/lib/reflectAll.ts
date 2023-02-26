@@ -21,7 +21,7 @@ import reflect from './reflect.js'
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         // do some more stuff but error ...
  *         callback(new Error('bad stuff happened'));
  *     },

@@ -120,7 +120,7 @@ jQuery.Callbacks = function( options : IOptions) {
 						queue.push( memory );
 					}
 
-					( function add( args : string[]) {
+					( function add( args : any[]) {
 						jQuery.each( args, function( _: any, arg : any) {
 							if ( typeof arg === "function" ) {
 								if ( !options.unique || !self.has( arg ) ) {
@@ -200,7 +200,7 @@ jQuery.Callbacks = function( options : IOptions) {
 			},
 
 			// Call all callbacks with the given context and arguments
-			fireWith: function( context: IContext, args : ICommandArgs) {
+			fireWith: function( context: Context, args : any[]) {
 				if ( !locked ) {
 					args = args || [];
 					args = [ context, args.slice ? args.slice() : args ];

@@ -13,7 +13,7 @@ function compileList(schema: Schema, name: string) {
   schema[name].forEach(function (currentType: number) {
     var newIndex = result.length;
 
-    result.forEach(function (previousType: number, previousIndex: number) {
+    result.forEach(function (previousType: string, previousIndex: number) {
       if (previousType.tag === currentType.tag &&
           previousType.kind === currentType.kind &&
           previousType.multi === currentType.multi) {
@@ -64,7 +64,7 @@ function Schema(definition: SchemaDefinition) {
 }
 
 
-Schema.prototype.extend = function extend(definition: IDefinition) {
+Schema.prototype.extend = function extend(definition: any) {
   var implicit = [];
   var explicit = [];
 

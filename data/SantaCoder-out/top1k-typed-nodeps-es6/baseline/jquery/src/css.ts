@@ -43,7 +43,7 @@ function setPositiveNumber( _elem: HTMLElement, value: number, subtract : boolea
 		value;
 }
 
-function boxModelAdjustment( elem: HTMLElement, dimension: string, box: Box, isBorderBox: boolean, styles: CSSProperties, computedVal : number) {
+function boxModelAdjustment( elem: HTMLElement, dimension: string, box: string, isBorderBox: boolean, styles: CSSProperties, computedVal : string) {
 	var i = dimension === "width" ? 1 : 0,
 		extra = 0,
 		delta = 0;
@@ -111,7 +111,7 @@ function boxModelAdjustment( elem: HTMLElement, dimension: string, box: Box, isB
 	return delta;
 }
 
-function getWidthOrHeight( elem: HTMLElement, dimension: "width", extra : "px") {
+function getWidthOrHeight( elem: HTMLElement, dimension: string, extra : any) {
 
 	// Start with computed style
 	var styles = getStyles( elem ),
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: HTMLElement, name: string, value: string, extra : string) {
+	style: function( elem: HTMLElement, name: string, value: string, extra : any) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -332,7 +332,7 @@ jQuery.each( [ "height", "width" ], function( _i: number, dimension : number) {
 			}
 		},
 
-		set: function( elem: HTMLElement, value: string, extra : any) {
+		set: function( elem: HTMLElement, value: string, extra : string) {
 			var matches,
 				styles = getStyles( elem ),
 
@@ -369,7 +369,7 @@ jQuery.each( {
 	border: "Width"
 }, function( prefix: string, suffix : string) {
 	jQuery.cssHooks[ prefix + suffix ] = {
-		expand: function( value : string) {
+		expand: function( value : any) {
 			var i = 0,
 				expanded = {},
 
@@ -392,7 +392,7 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 	css: function( name: string, value : any) {
-		return access( this, function( elem: HTMLElement, name: string, value : string) {
+		return access( this, function( elem: HTMLElement, name: string, value : any) {
 			var styles, len,
 				map = {},
 				i = 0;

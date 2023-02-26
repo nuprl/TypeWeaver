@@ -48,7 +48,7 @@ const syncResolver = ResolverFactory.createResolver({
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
 });
-function resolveSync(context: ResolvedContext, path: string, request: Request) {
+function resolveSync(context: ResolveContext, path: string, request: ResolveRequest) {
 	if (typeof context === "string") {
 		request = path;
 		path = context;
@@ -57,7 +57,7 @@ function resolveSync(context: ResolvedContext, path: string, request: Request) {
 	return syncResolver.resolveSync(context, path, request);
 }
 
-function create(options: ICreateOptions) {
+function create(options: IOptions) {
 	options = {
 		fileSystem: nodeFileSystem,
 		...options
@@ -85,7 +85,7 @@ function createSync(options: IOptions) {
 		...options
 	};
 	const resolver = ResolverFactory.createResolver(options);
-	return function (context: Context, path: string, request: Request) {
+	return function (context: Context, path: string, request: IncomingMessage) {
 		if (typeof context === "string") {
 			request = path;
 			path = context;

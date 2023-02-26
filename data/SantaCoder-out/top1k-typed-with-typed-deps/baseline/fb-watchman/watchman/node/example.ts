@@ -17,7 +17,7 @@ client.on('error', function(error: any) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: any, resp: AxiosResponse) {
+client.capabilityCheck({required:['relative_root']}, function (error: Error, resp: AxiosResponse) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;
@@ -35,7 +35,7 @@ client.command(['invalid-command-never-will-work'], function(error: any, resp: a
 
 // Initiate a watch.  You can repeatedly ask to watch the same dir without
 // error; Watchman will re-use an existing watch.
-client.command(['watch-project', process.cwd()], function(error: Error, resp: AxiosResponse) {
+client.command(['watch-project', process.cwd()], function(error: any, resp: any) {
   if (error) {
     console.error('Error initiating watch:', error);
     return;

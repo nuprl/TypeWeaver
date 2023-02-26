@@ -101,7 +101,7 @@ if ( isIE ) {
 
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number, name : string) {
 	jQuery.attrHooks[ name ] = {
-		get: function( elem : Node) {
+		get: function( elem : jQuery.Element) {
 			var ret,
 				isXML = jQuery.isXMLDoc( elem ),
 				lowercaseName = name.toLowerCase();

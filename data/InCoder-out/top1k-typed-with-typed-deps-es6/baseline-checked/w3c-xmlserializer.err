@@ -1,0 +1,42 @@
+lib/attributes.ts(29,6): error TS2339: Property 'replace' does not exist on type 'false'.
+lib/attributes.ts(99,11): error TS2554: Expected 1 arguments, but got 2.
+lib/attributes.ts(116,73): error TS2554: Expected 1 arguments, but got 2.
+lib/serialize.ts(4,8): error TS1192: Module '"lib/attributes"' has no default export.
+lib/serialize.ts(60,56): error TS2304: Cannot find name 'Uri'.
+lib/serialize.ts(60,73): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(60,104): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(61,50): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(67,26): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(68,13): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(68,44): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(73,34): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/serialize.ts(74,12): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(75,32): error TS2339: Property 'publicId' does not exist on type 'Node'.
+lib/serialize.ts(76,19): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(79,12): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(80,25): error TS2339: Property 'systemId' does not exist on type 'Node'.
+lib/serialize.ts(149,75): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(149,106): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(160,33): error TS2304: Cannot find name 'CommentNode'.
+lib/serialize.ts(160,58): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(160,81): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(160,112): error TS2749: 'requireWellFormed' refers to a value, but is being used as a type here. Did you mean 'typeof requireWellFormed'?
+lib/serialize.ts(174,54): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(174,77): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(174,124): error TS2304: Cannot find name 'Ref'.
+lib/serialize.ts(188,5): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLElement'.
+  Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 116 more.
+lib/serialize.ts(225,62): error TS2339: Property 'prefixIndex' does not exist on type 'Ref[]'.
+lib/serialize.ts(277,12): error TS2339: Property 'content' does not exist on type 'Element'.
+lib/serialize.ts(284,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/serialize.ts(305,51): error TS2304: Cannot find name 'Namespace'.
+lib/serialize.ts(305,74): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(305,121): error TS2304: Cannot find name 'Ref'.
+lib/serialize.ts(309,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
+  Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+lib/serialize.ts(326,28): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Text'.
+  Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
+lib/serialize.ts(352,36): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CDATASection'.
+lib/serialize.ts(362,5): error TS2345: Argument of type '{ prefixIndex: number; }' is not assignable to parameter of type 'Ref[]'.
+  Object literal may only specify known properties, and 'prefixIndex' does not exist in type 'Ref[]'.
+

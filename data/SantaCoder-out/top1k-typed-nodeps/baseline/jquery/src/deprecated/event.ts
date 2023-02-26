@@ -5,7 +5,7 @@ import "../event/trigger.js";
 
 jQuery.fn.extend( {
 
-	bind: function( types: Types, data: any, fn : Function) {
+	bind: function( types: IType[], data: IData, fn : any) {
 		return this.on( types, null, data, fn );
 	},
 	unbind: function( types: string[], fn : Function) {

@@ -54,7 +54,7 @@ jQuery.fn.extend( {
 				val += "";
 
 			} else if ( Array.isArray( val ) ) {
-				val = jQuery.map( val, function( value : any) {
+				val = jQuery.map( val, function( value : string) {
 					return value == null ? "" : value + "";
 				} );
 			}

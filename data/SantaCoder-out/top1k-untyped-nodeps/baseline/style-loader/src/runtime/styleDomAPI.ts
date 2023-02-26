@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function apply(styleElement: HTMLStyleElement, options: ApplyOptions, obj: any) {
+function apply(styleElement: HTMLStyleElement, options: IStyleApplyOptions, obj: IStyleApplyOptions) {
   let css = "";
 
   if (obj.supports) {

@@ -22,7 +22,7 @@ optional();
 function required() {
   var client = new watchman.Client();
   client.capabilityCheck({required: ['will-never-exist']},
-      function (error: any, resp: AxiosResponse) {
+      function (error: Error, resp: AxiosResponse) {
         assert.equal('client required capability `will-never-exist` is not' +
                      ' supported by this server', error.message);
         client.end();

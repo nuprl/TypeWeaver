@@ -40,7 +40,7 @@ export default function queue(worker: Worker,  concurrency: number,  payload: an
         events[event] = events[event].filter(ev => ev !== handler)
     }
 
-    function trigger (event: vent,  ...args: ny[]) {
+    function trigger (event: tring | symbol,  ...args: ny[]) {
         events[event].forEach(handler => handler(...args))
     }
 

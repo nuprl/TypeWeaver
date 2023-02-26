@@ -1,6 +1,6 @@
 import asyncify from '../asyncify.js'
 
-function isAsync(fn: Function) {
+function isAsync(fn: any) {
     return fn[Symbol.toStringTag] === 'AsyncFunction';
 }
 

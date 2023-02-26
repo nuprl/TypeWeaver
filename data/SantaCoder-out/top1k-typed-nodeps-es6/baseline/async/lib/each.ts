@@ -52,7 +52,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  * // Error Handling
- * async.each(withMissingFileList, deleteFile, function(err: any){
+ * async.each(withMissingFileList, deleteFile, function(err: Error){
  *     console.log(err);
  *     // [ Error: ENOENT: no such file or directory ]
  *     // since dir4/file2.txt does not exist

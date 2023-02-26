@@ -99,7 +99,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function some(coll: any[], iteratee: any, callback: any) {
+function some(coll: any, iteratee: any, callback: any) {
     return createTester(Boolean, res => res)(eachOf, coll, iteratee, callback)
 }
 export default awaitify(some, 3);

@@ -43,7 +43,7 @@ function setPositiveNumber( _elem: HTMLElement, value: number, subtract : boolea
 		value;
 }
 
-function boxModelAdjustment( elem: HTMLElement, dimension: string, box: string, isBorderBox: boolean, styles: CSSProperties, computedVal : string) {
+function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel, isBorderBox: boolean, styles: CSSProperties, computedVal : number) {
 	var i = dimension === "width" ? 1 : 0,
 		extra = 0,
 		delta = 0;
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: HTMLElement, name: string, value: string, extra : any) {
+	style: function( elem: HTMLElement, name: string, value: string, extra : string[]) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -392,7 +392,7 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 	css: function( name: string, value : any) {
-		return access( this, function( elem: HTMLElement, name: string, value : any) {
+		return access( this, function( elem: HTMLElement, name: string, value : string) {
 			var styles, len,
 				map = {},
 				i = 0;

@@ -77,7 +77,7 @@ function createTween( value: number, prop: string, animation : Animation) {
 	}
 }
 
-function defaultPrefilter( elem: Element, props: PrefilterOptions, opts : PrefilterOptions) {
+function defaultPrefilter( elem: Element, props: IStyleDeclaration, opts : IStyleDeclarationOptions) {
 	var prop, value, toggle, hooks, oldfire, propTween, restoreDisplay, display,
 		isBox = "width" in props || "height" in props,
 		anim = this,
@@ -245,7 +245,7 @@ function defaultPrefilter( elem: Element, props: PrefilterOptions, opts : Prefil
 	}
 }
 
-function propFilter( props: IProperty[], specialEasing : IProperty[]) {
+function propFilter( props: any, specialEasing : any) {
 	var index, name, easing, value, hooks;
 
 	// camelCase, specialEasing and expand cssHook pass
@@ -414,7 +414,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 		} ]
 	},
 
-	tweener: function( props: IProps, callback : any) {
+	tweener: function( props: IProps, callback : Function) {
 		if ( typeof props === "function" ) {
 			callback = props;
 			props = [ "*" ];
@@ -517,7 +517,7 @@ jQuery.fn.extend( {
 			this.each( doAnimation ) :
 			this.queue( optall.queue, doAnimation );
 	},
-	stop: function( type: "queue", clearQueue: boolean, gotoEnd : boolean) {
+	stop: function( type: string, clearQueue: boolean, gotoEnd : boolean) {
 		var stopQueue = function( hooks : IHook[]) {
 			var stop = hooks.stop;
 			delete hooks.stop;
@@ -569,7 +569,7 @@ jQuery.fn.extend( {
 			}
 		} );
 	},
-	finish: function( type : string) {
+	finish: function( type : boolean) {
 		if ( type !== false ) {
 			type = type || "fx";
 		}

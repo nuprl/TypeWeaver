@@ -1,0 +1,71 @@
+watchman/integration/capabilities.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
+watchman/integration/capabilities.ts(17,27): error TS2339: Property 'capabilities' does not exist on type 'Response'.
+watchman/integration/capabilities.ts(37,3): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(39,16): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(41,3): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(43,16): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(45,3): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(47,16): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(49,3): error TS2304: Cannot find name 'resp'.
+watchman/integration/capabilities.ts(52,45): error TS2304: Cannot find name 'resp'.
+watchman/integration/case.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
+watchman/integration/node_basic.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
+watchman/integration/node_basic.ts(23,51): error TS2339: Property 'version' does not exist on type 'Response'.
+watchman/node/bser/index.ts(13,19): error TS2307: Cannot find module 'node-int64' or its corresponding type declarations.
+watchman/node/bser/index.ts(126,49): error TS2304: Cannot find name 'ByteArray'.
+watchman/node/bser/index.ts(222,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+watchman/node/bser/index.ts(223,14): error TS2554: Expected 1 arguments, but got 0.
+watchman/node/bser/index.ts(465,27): error TS2304: Cannot find name 'mut'.
+watchman/node/bser/index.ts(465,38): error TS2304: Cannot find name 'i64'.
+watchman/node/bser/index.ts(485,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(486,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(488,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(489,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(491,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(492,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(505,13): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(506,13): error TS2551: Property 'writeDouble' does not exist on type 'Buffer'. Did you mean 'writeDoubleLE'?
+watchman/node/bser/index.ts(510,11): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(512,11): error TS2339: Property 'append' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(515,11): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(519,13): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(527,13): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(534,11): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(572,13): error TS2554: Expected 1 arguments, but got 0.
+watchman/node/example.ts(8,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
+watchman/node/example.ts(26,51): error TS2339: Property 'version' does not exist on type 'Response'.
+watchman/node/example.ts(61,19): error TS2339: Property 'watch' does not exist on type 'Response'.
+watchman/node/example.ts(63,5): error TS2322: Type 'unknown' is not assignable to type 'string'.
+watchman/node/example.ts(89,42): error TS2339: Property 'subscribe' does not exist on type 'Response'.
+watchman/node/example.ts(117,22): error TS2339: Property 'root' does not exist on type 'Response'.
+watchman/node/example.ts(117,33): error TS2339: Property 'subscription' does not exist on type 'Response'.
+watchman/node/example.ts(118,24): error TS2339: Property 'files' does not exist on type 'Response'.
+watchman/node/example.ts(119,20): error TS2339: Property 'files' does not exist on type 'Response'.
+watchman/node/example.ts(144,21): error TS2339: Property 'clock' does not exist on type 'Response'.
+watchman/node/example.ts(151,44): error TS2339: Property 'subscribe' does not exist on type 'Response'.
+watchman/node/index.ts(14,18): error TS2307: Cannot find module 'bser' or its corresponding type declarations.
+watchman/node/index.ts(25,26): error TS2304: Cannot find name 'ClientOptions'.
+watchman/node/index.ts(27,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+watchman/node/index.ts(69,30): error TS2304: Cannot find name 'Command'.
+watchman/node/index.ts(77,31): error TS2304: Cannot find name 'SocketName'.
+watchman/node/index.ts(89,11): error TS2322: Type 'string' is not assignable to type 'boolean'.
+watchman/node/index.ts(100,17): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
+watchman/node/index.ts(165,15): error TS2339: Property 'code' does not exist on type 'Error'.
+watchman/node/index.ts(165,42): error TS2339: Property 'errno' does not exist on type 'Error'.
+watchman/node/index.ts(168,22): error TS2339: Property 'code' does not exist on type 'Error'.
+watchman/node/index.ts(168,49): error TS2339: Property 'errno' does not exist on type 'Error'.
+watchman/node/index.ts(192,5): error TS2322: Type 'string' is not assignable to type 'Buffer'.
+watchman/node/index.ts(200,36): error TS2304: Cannot find name 'umber'.
+watchman/node/index.ts(200,52): error TS2304: Cannot find name 'umber'.
+watchman/node/index.ts(212,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
+watchman/node/index.ts(281,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+watchman/node/index.ts(282,23): error TS2538: Type 'String' cannot be used as an index type.
+watchman/node/index.ts(291,51): error TS2503: Cannot find namespace 'caps'.
+watchman/node/index.ts(291,73): error TS2749: 'done' refers to a value, but is being used as a type here. Did you mean 'typeof done'?
+watchman/node/index.ts(307,16): error TS2339: Property 'error' does not exist on type 'Response'.
+watchman/node/index.ts(308,32): error TS2339: Property 'error' does not exist on type 'Response'.
+watchman/node/index.ts(309,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
+

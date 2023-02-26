@@ -6,7 +6,7 @@ import { getInnermostScope } from "./get-innermost-scope"
  * @param {string|Node} nameOrNode The variable name to find. If this is a Node object then it should be an Identifier node.
  * @returns {Variable|null} The found variable or null.
  */
-export function findVariable(initialScope: Scope, nameOrNode: Node) {
+export function findVariable(initialScope: Scope, nameOrNode: string) {
     let name = ""
     let scope = initialScope
 

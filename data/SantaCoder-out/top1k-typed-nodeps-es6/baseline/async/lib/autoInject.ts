@@ -34,7 +34,7 @@ function stripComments(string: string) {
     return stripped;
 }
 
-function parseParams(func: Function) {
+function parseParams(func: string) {
     const src = stripComments(func.toString());
     let match = src.match(FN_ARGS);
     if (!match) {
@@ -89,12 +89,12 @@ function parseParams(func: Function) {
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
- *     make_folder: function(callback: any) {
+ *     make_folder: function(callback: Function) {
  *         // async code to create a directory to store a file in
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: GetData, make_folder: MakeFolder, callback: any) {
+ *     write_file: function(get_data: GetData, make_folder: MakeFolder, callback: Callback<void>) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');

@@ -1,0 +1,33 @@
+lib/index.ts(23,25): error TS2304: Cannot find name 'Key'.
+tools/build-keys-from-ts.ts(17,53): error TS2554: Expected 2 arguments, but got 1.
+tools/build-keys-from-ts.ts(25,49): error TS2345: Argument of type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is not assignable to parameter of type 'Node[]'.
+  Type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is missing the following properties from type 'Node[]': length, pop, push, concat, and 29 more.
+tools/get-keys-from-ts.ts(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
+tools/get-keys-from-ts.ts(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
+tools/get-keys-from-ts.ts(66,38): error TS2304: Cannot find name 'ExcludedItem'.
+tools/get-keys-from-ts.ts(79,80): error TS2749: 'excludedProperties' refers to a value, but is being used as a type here. Did you mean 'typeof excludedProperties'?
+tools/get-keys-from-ts.ts(100,35): error TS2304: Cannot find name 'TypeA'.
+tools/get-keys-from-ts.ts(100,52): error TS2304: Cannot find name 'TypeB'.
+tools/get-keys-from-ts.ts(119,41): error TS2304: Cannot find name 'Type'.
+tools/get-keys-from-ts.ts(119,55): error TS2304: Cannot find name 'Type'.
+tools/get-keys-from-ts.ts(142,14): error TS2339: Property 'sort' does not exist on type 'Node'.
+tools/get-keys-from-ts.ts(154,36): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(154,62): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(189,48): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(189,79): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(267,56): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(278,46): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(289,66): error TS2304: Cannot find name 'PropertyTypeAnnotation'.
+tools/get-keys-from-ts.ts(320,50): error TS2304: Cannot find name 'InterfaceName'.
+tools/get-keys-from-ts.ts(414,65): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(414,88): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(414,130): error TS2749: 'excludedProperties' refers to a value, but is being used as a type here. Did you mean 'typeof excludedProperties'?
+tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
+tools/get-keys-from-ts.ts(485,54): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Node'.
+  Type '{}' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
+tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+tools/get-keys-from-ts.ts(488,44): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Node[]'.
+  Type '{}' is missing the following properties from type 'Node[]': length, pop, push, concat, and 29 more.
+tools/get-keys-from-ts.ts(536,40): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(536,65): error TS2503: Cannot find namespace 'ts'.
+

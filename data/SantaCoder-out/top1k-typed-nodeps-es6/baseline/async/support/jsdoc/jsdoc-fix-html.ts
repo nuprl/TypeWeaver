@@ -15,7 +15,7 @@ var HTMLFileBegin = '<!DOCTYPE html>\n<html lang="en">\n<head>\n';
 var HTMLFileHeadBodyJoin = '</head>\n<body>';
 var HTMLFileEnd = '</body>';
 
-function generateHTMLFile(filename: string, $page: HTMLPage, callback: any) {
+function generateHTMLFile(filename: string, $page: Page, callback: any) {
     var methodName = filename.match(/\/(\w+)\.js\.html$/);
     if (methodName) {
         var $thisMethodDocLink = $page.find('#toc').find('a[href="'+docFilename+'#'+methodName[1]+'"]');
@@ -83,7 +83,7 @@ function applyPreCheerioFixes(data: string) {
 }
 
 
-function scrollSpyFix($page: JQuery, $nav: JQuery) {
+function scrollSpyFix($page: JQuery<HTMLElement>, $nav: JQuery<HTMLElement>) {
     // move everything into one big ul (for Bootstrap scroll-spy)
     var $ul = $nav.children('ul');
     $ul.addClass('nav').addClass('methods');
@@ -108,7 +108,7 @@ function scrollSpyFix($page: JQuery, $nav: JQuery) {
     });
 }
 
-function fixToc(file: string, $page: Page, moduleFiles: string[]) {
+function fixToc(file: IFile, $page: ITocPage, moduleFiles: IModuleFiles) {
     // remove `async` listing from toc
     $page.find('a[href="'+mainModuleFile+'"]').parent().remove();
 
@@ -139,7 +139,7 @@ function fixToc(file: string, $page: Page, moduleFiles: string[]) {
     });
 }
 
-function fixFooter($page: JQuery<HTMLElement>) {
+function fixFooter($page: JQuery) {
     var $footer = $page.find('footer');
     $page.find(mainScrollableSection).append($footer);
 }
@@ -185,7 +185,7 @@ fs.readdir(docsDir, (readErr, files) => {
         async.asyncify(() => {
             HTMLFiles.push(docFilename)
         }),
-        function(callback: Function) {
+        function(callback: any) {
             fixModuleLinks(HTMLFiles, callback);
         }
     ], (err) => {

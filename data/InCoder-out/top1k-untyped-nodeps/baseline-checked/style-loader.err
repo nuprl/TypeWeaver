@@ -1,0 +1,95 @@
+src/index.ts(23,20): error TS2732: Cannot find module './options.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+src/index.ts(35,20): error TS2339: Property 'attributes' does not exist on type '{}'.
+src/index.ts(39,20): error TS2339: Property 'base' does not exist on type '{}'.
+src/runtime/injectStylesIntoLinkTag.ts(8,14): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/injectStylesIntoLinkTag.ts(8,50): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/injectStylesIntoStyleTag.ts(3,43): error TS2304: Cannot find name 'Identifier'.
+src/runtime/insertBySelector.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'memo'.
+src/runtime/insertBySelector.ts(5,19): error TS2538: Type 'HTMLElement' cannot be used as an index type.
+src/runtime/insertBySelector.ts(6,46): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(selectors: keyof HTMLElementTagNameMap): HTMLElement | HTMLCanvasElement | HTMLImageElement | ... 59 more ... | HTMLUListElement', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type 'keyof HTMLElementTagNameMap'.
+  Overload 2 of 3, '(selectors: keyof SVGElementTagNameMap): SVGImageElement | SVGScriptElement | SVGSVGElement | ... 59 more ... | SVGUseElement', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type 'keyof SVGElementTagNameMap'.
+  Overload 3 of 3, '(selectors: string): Element', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type 'string'.
+src/runtime/insertBySelector.ts(23,10): error TS2538: Type 'HTMLElement' cannot be used as an index type.
+src/runtime/insertBySelector.ts(26,15): error TS2538: Type 'HTMLElement' cannot be used as an index type.
+src/runtime/insertBySelector.ts(30,35): error TS2304: Cannot find name 'InsertFunction'.
+src/runtime/insertBySelector.ts(30,59): error TS2304: Cannot find name 'Style'.
+src/runtime/insertStyleElement.ts(2,38): error TS2304: Cannot find name 'InsertCSSOptions'.
+src/runtime/isOldIE.ts(1,5): error TS2451: Cannot redeclare block-scoped variable 'memo'.
+src/runtime/isOldIE.ts(11,5): error TS2588: Cannot assign to 'memo' because it is a constant.
+src/runtime/setAttributesWithAttributes.ts(2,10): error TS2393: Duplicate function implementation.
+src/runtime/setAttributesWithAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/setAttributesWithAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/setAttributesWithAttributes.ts(7,16): error TS2339: Property 'nonce' does not exist on type 'string[]'.
+src/runtime/setAttributesWithAttributesAndNonce.ts(2,10): error TS2393: Duplicate function implementation.
+src/runtime/setAttributesWithoutAttributes.ts(2,10): error TS2393: Duplicate function implementation.
+src/runtime/setAttributesWithoutAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/setAttributesWithoutAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/singletonStyleDomAPI.ts(13,10): error TS2393: Duplicate function implementation.
+src/runtime/singletonStyleDomAPI.ts(21,13): error TS2339: Property 'supports' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(22,32): error TS2339: Property 'supports' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(25,13): error TS2339: Property 'media' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(26,28): error TS2339: Property 'media' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(29,34): error TS2339: Property 'layer' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(32,27): error TS2339: Property 'layer' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(32,54): error TS2339: Property 'layer' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(35,16): error TS2339: Property 'css' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(41,13): error TS2339: Property 'media' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(45,13): error TS2339: Property 'supports' does not exist on type 'object'.
+src/runtime/singletonStyleDomAPI.ts(76,10): error TS2393: Duplicate function implementation.
+src/runtime/styleDomAPI.ts(2,10): error TS2393: Duplicate function implementation.
+src/runtime/styleDomAPI.ts(56,10): error TS2393: Duplicate function implementation.
+src/runtime/styleTagTransform.ts(3,20): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
+src/runtime/styleTagTransform.ts(4,18): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
+src/utils.ts(3,27): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps/baseline/style-loader/src/runtime/isEqualLocals.ts' is not a module.
+src/utils.ts(8,32): error TS2345: Argument of type 'string | URL | Buffer' is not assignable to parameter of type 'string'.
+  Type 'URL' is not assignable to type 'string'.
+src/utils.ts(8,62): error TS2345: Argument of type 'string | URL | Buffer' is not assignable to parameter of type 'string'.
+  Type 'URL' is not assignable to type 'string'.
+src/utils.ts(12,33): error TS2345: Argument of type 'string | RegExp' is not assignable to parameter of type 'string'.
+  Type 'RegExp' is not assignable to type 'string'.
+src/utils.ts(16,42): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(26,28): error TS2339: Property 'split' does not exist on type 'Request'.
+src/utils.ts(59,41): error TS2304: Cannot find name 'ESModule'.
+src/utils.ts(59,67): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(62,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(70,66): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(71,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(78,79): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(81,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(97,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(101,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(117,67): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(118,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(134,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(143,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(155,42): error TS2304: Cannot find name 'InsertType'.
+src/utils.ts(155,64): error TS2552: Cannot find name 'InsertOptions'. Did you mean 'InsertPosition'?
+src/utils.ts(172,52): error TS2749: 'esModule' refers to a value, but is being used as a type here. Did you mean 'typeof esModule'?
+src/utils.ts(172,78): error TS2749: 'loaderContext' refers to a value, but is being used as a type here. Did you mean 'typeof loaderContext'?
+src/utils.ts(175,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(184,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(258,35): error TS2503: Cannot find namespace 'esModules'.
+src/utils.ts(258,71): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(259,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(288,62): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(291,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(313,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(324,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(337,42): error TS2304: Cannot find name 'StyleTagOptions'.
+src/utils.ts(346,60): error TS2304: Cannot find name 'LoaderContext'.
+src/utils.ts(347,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(355,43): error TS2304: Cannot find name 'esModuleType'.
+src/utils.ts(355,73): error TS2749: 'loaderContext' refers to a value, but is being used as a type here. Did you mean 'typeof loaderContext'?
+src/utils.ts(355,98): error TS2749: 'request' refers to a value, but is being used as a type here. Did you mean 'typeof request'?
+src/utils.ts(356,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(364,41): error TS2749: 'esModule' refers to a value, but is being used as a type here. Did you mean 'typeof esModule'?
+src/utils.ts(364,67): error TS2749: 'loaderContext' refers to a value, but is being used as a type here. Did you mean 'typeof loaderContext'?
+src/utils.ts(364,92): error TS2304: Cannot find name 'loaderOptions'.
+src/utils.ts(372,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(379,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+src/utils.ts(384,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
+

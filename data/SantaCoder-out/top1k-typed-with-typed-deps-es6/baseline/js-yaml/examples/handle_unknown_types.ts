@@ -15,7 +15,7 @@ class CustomTag {
 }
 
 
-const tags = [ 'scalar', 'sequence', 'mapping' ].map(function (kind: "error") {
+const tags = [ 'scalar', 'sequence', 'mapping' ].map(function (kind: string) {
   // first argument here is a prefix, so this type will handle anything starting with !
   return new yaml.Type('!', {
     kind: kind,
@@ -23,11 +23,11 @@ const tags = [ 'scalar', 'sequence', 'mapping' ].map(function (kind: "error") {
     representName: function (object: IObject) {
       return object.type;
     },
-    represent: function (object: any) {
+    represent: function (object: IModelObject) {
       return object.data;
     },
     instanceOf: CustomTag,
-    construct: function (data: CustomTagData, type: CustomTagType) {
+    construct: function (data: any, type: string) {
       return new CustomTag(type, data);
     }
   });

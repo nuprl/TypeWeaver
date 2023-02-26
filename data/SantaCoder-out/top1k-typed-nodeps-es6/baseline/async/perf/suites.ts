@@ -263,7 +263,7 @@ export default [{
             dep1 (cb) { cb(null, 1); }
         };
         _.times(num, (n) => {
-            var task = ['dep' + (n+1), function(results: any, cb: Function) {
+            var task = ['dep' + (n+1), function(results: Array<any>, cb: any) {
                 setImmediate(cb, null, n);
             }];
             if (n > 2) task.unshift('dep' + n);
@@ -295,7 +295,7 @@ export default [{
             });
         }
 
-        function worker(task: WorkerTask, callback: any) {
+        function worker(task: Task, callback: any) {
             if (task.num === numEntries) {
                 return done();
             }
@@ -325,7 +325,7 @@ export default [{
 
         var completedCnt = 0;
 
-        function worker(task: Task, callback: any) {
+        function worker(task: WorkerTask, callback: any) {
             completedCnt++;
             if (completedCnt === numEntries) {
                 return done();

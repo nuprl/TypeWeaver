@@ -3,7 +3,7 @@
  * @param {Token} token The token to check.
  * @returns {boolean} `true` if the result of `this(token)` is `false`.
  */
-function negate0(token: Token) {
+function negate0(token: string) {
     return !this(token) //eslint-disable-line no-invalid-this
 }
 
@@ -31,7 +31,7 @@ function isPunctuatorTokenWithValue(token: Token, value: string) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an arrow token.
  */
-export function isArrowToken(token: Token) {
+export function isArrowToken(token: IToken) {
     return isPunctuatorTokenWithValue(token, "=>")
 }
 
@@ -67,7 +67,7 @@ export function isColonToken(token: Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening parenthesis token.
  */
-export function isOpeningParenToken(token: SyntaxKind.OpenBraceToken) {
+export function isOpeningParenToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "(")
 }
 
@@ -112,7 +112,7 @@ export function isOpeningBraceToken(token: SyntaxKind.OpenBraceToken) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing brace token.
  */
-export function isClosingBraceToken(token: Token) {
+export function isClosingBraceToken(token: SyntaxKind.ClosingBraceToken) {
     return isPunctuatorTokenWithValue(token, "}")
 }
 
@@ -121,7 +121,7 @@ export function isClosingBraceToken(token: Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comment token.
  */
-export function isCommentToken(token: IToken) {
+export function isCommentToken(token: Token) {
     return ["Block", "Line", "Shebang"].includes(token.type)
 }
 

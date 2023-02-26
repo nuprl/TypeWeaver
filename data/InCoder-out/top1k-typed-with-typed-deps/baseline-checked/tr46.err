@@ -1,0 +1,62 @@
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
+index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
+index.ts(12,58): error TS2304: Cannot find name 'Options'.
+index.ts(44,31): error TS2304: Cannot find name 'DomainName'.
+index.ts(44,101): error TS2552: Cannot find name 'IParsingOptions'. Did you mean 'GainOptions'?
+index.ts(49,63): error TS2552: Cannot find name 'useSTD3ASCIIRules'. Did you mean 'useSTD3ASCIIR'?
+index.ts(80,67): error TS2300: Duplicate identifier 'boolean'.
+index.ts(80,88): error TS2300: Duplicate identifier 'boolean'.
+index.ts(80,112): error TS2300: Duplicate identifier 'boolean'.
+index.ts(80,180): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+index.ts(81,13): error TS2339: Property 'normalize' does not exist on type 'string | string[]'.
+  Property 'normalize' does not exist on type 'string[]'.
+index.ts(87,7): error TS2304: Cannot find name 'checkHyphens'.
+index.ts(89,16): error TS2339: Property 'startsWith' does not exist on type 'string | string[]'.
+  Property 'startsWith' does not exist on type 'string[]'.
+index.ts(89,41): error TS2339: Property 'endsWith' does not exist on type 'string | string[]'.
+  Property 'endsWith' does not exist on type 'string[]'.
+index.ts(101,10): error TS2552: Cannot find name 'processingOption'. Did you mean 'ProcessingOption'?
+index.ts(102,10): error TS2552: Cannot find name 'processingOption'. Did you mean 'ProcessingOption'?
+index.ts(109,7): error TS2304: Cannot find name 'checkJoiners'.
+index.ts(133,7): error TS2304: Cannot find name 'checkBidi'.
+index.ts(175,51): error TS2304: Cannot find name 'Options'.
+scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/generateMappingTable.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/generateMappingTable.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+scripts/generateMappingTable.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
+scripts/generateMappingTable.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
+scripts/generateMappingTable.ts(9,16): error TS2393: Duplicate function implementation.
+scripts/generateMappingTable.ts(28,5): error TS2322: Type 'number | number[]' is not assignable to type 'string'.
+  Type 'number' is not assignable to type 'string'.
+scripts/generateMappingTable.ts(44,7): error TS2322: Type 'number[]' is not assignable to type 'string[]'.
+  Type 'number' is not assignable to type 'string'.
+scripts/generateMappingTable.ts(48,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+scripts/generateRegexes.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/generateRegexes.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/generateRegexes.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
+scripts/generateRegexes.ts(29,21): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(29,40): error TS2304: Cannot find name 'tring'.
+scripts/generateRegexes.ts(39,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
+scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+  Type 'TemplateStringsArray' is missing the following properties from type 'tring[]': pop, push, reverse, shift, and 6 more.
+scripts/generateRegexes.ts(50,26): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(54,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(56,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(61,16): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(64,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(65,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(68,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(84,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(94,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(95,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(98,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateRegexes.ts(112,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'tring[]'.
+scripts/generateUnicodeCodePoints.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement can only be used within a function body.
+scripts/getLatestTests.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/getLatestTests.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/getLatestTests.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+scripts/getLatestTests.ts(14,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
+scripts/getLatestTests.ts(18,16): error TS2393: Duplicate function implementation.
+../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(18281,18): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
+

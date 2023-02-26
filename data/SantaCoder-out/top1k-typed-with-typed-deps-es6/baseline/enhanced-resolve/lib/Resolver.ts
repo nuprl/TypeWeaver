@@ -44,7 +44,7 @@ import { normalize, cachedJoin as join, getType, PathType } from './util/path';
  * @typedef {Object} FileSystem
  * @property {(function(string, FileSystemCallback<Buffer | string>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} readFile
  * @property {(function(string, FileSystemCallback<(Buffer | string)[] | FileSystemDirent[]>): void) & function(string: string, object: any, FileSystemCallback<(Buffer | string: FileSystemDirent)[] | FileSystemDirent[]>): void} readdir
- * @property {((function(string, FileSystemCallback<object>): void) & function(string: string, object: object, FileSystemCallback<object>: FileSystemCallback<object>): void)=} readJson
+ * @property {((function(string, FileSystemCallback<object>): void) & function(string: string, object: object, FileSystemCallback<object>: FileSystemCallback<any>): void)=} readJson
  * @property {(function(string, FileSystemCallback<Buffer | string>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} readlink
  * @property {(function(string, FileSystemCallback<FileSystemStats>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void=} lstat
  * @property {(function(string, FileSystemCallback<FileSystemStats>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} stat
@@ -99,7 +99,7 @@ import { normalize, cachedJoin as join, getType, PathType } from './util/path';
  * @property {WriteOnlySet<string>=} missingDependencies dependencies that was not found on file system
  * @property {Set<StackEntry>=} stack set of hooks' calls. For instance, `resolve → parsedResolve → describedResolve`,
  * @property {(function(string: string): void)=} log log function
- * @property {(function (ResolveRequest: ResolveRequestCallback<any>): void)=} yield yield result, if provided plugins can return several results
+ * @property {(function (ResolveRequest: ResolveRequest): void)=} yield yield result, if provided plugins can return several results
  */
 
 /** @typedef {AsyncSeriesBailHook<[ResolveRequest, ResolveContext], ResolveRequest | null>} ResolveStepHook */

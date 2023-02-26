@@ -59,7 +59,7 @@ DecoderBuffer.prototype.isEmpty = function isEmpty() {
   return this.offset === this.length;
 };
 
-DecoderBuffer.prototype.readUInt8 = function readUInt8(fail: boolean) {
+DecoderBuffer.prototype.readUInt8 = function readUInt8(fail: any) {
   if (this.offset + 1 <= this.length)
     return this.base.readUInt8(this.offset++, true);
   else
@@ -135,7 +135,7 @@ EncoderBuffer.prototype.join = function join(out: string, offset: number) {
     return out;
 
   if (Array.isArray(this.value)) {
-    this.value.forEach(function(item: IItem) {
+    this.value.forEach(function(item: IJoinItem) {
       item.join(out, offset);
       offset += item.length;
     });

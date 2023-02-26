@@ -27,12 +27,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * async.auto({
  *     dep1: async.retryable(3, getFromFlakyService),
- *     process: ["dep1", async.retryable(3, function (results: IResult<IQueryResults>, cb: any) {
+ *     process: ["dep1", async.retryable(3, function (results: string[], cb: any) {
  *         maybeProcessData(results.dep1, cb);
  *     })]
  * }, callback);
  */
-export default function retryable (opts: RetryableOptions, task: Task<any>) {
+export default function retryable (opts: RetryableOptions, task: Task) {
     if (!task) {
         task = opts;
         opts = null;
