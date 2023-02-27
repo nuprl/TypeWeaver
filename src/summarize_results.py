@@ -1,16 +1,14 @@
 # This script parses the results and error output to produce summaries:
-#   - Overall summary: did a package type check?
-#       dataset, package, DeepTyper type checks, LambdaNet type checks, InCoder type checks
-#   - A summary for each system
-#       dataset, package, filename, num errors in that file
-#   - Accuracy of type annotations, compared to ground truth type definitions
+#   - typecheck.system.csv (does a package type check?)
+#       system, dataset, package, type checks
+#   - error.system.csv (counting the kinds of errors per file)
+#       system, dataset, package, file, error code, count
+#   - accuracy.system.csv (comparing type annotations against ground truth)
 #       system, dataset, package, num sigs compared,
 #       num correct annotations, num inferred any annotations,
 #       num of non-any annotations checked, num of any ground truth annotations skipped
-#   - Error codes per file, for each system
-#       dataset, package, filename, error code, count
-#   - Annotations per file, for each system
-#       dataset, package, filename, number of anys, number of any[], number of Function, number of annotations
+#   - annotations.system.csv (counting trivial annotations)
+#       system, dataset, package, filename, number of anys, number of any[], number of Function, number of annotations
 
 from concurrent import futures
 from pathlib import Path
@@ -25,12 +23,285 @@ SYSTEMS = {
     "SantaCoder": "sc"
 }
 
-def check_exists(path):
-    if not Path(path).exists():
-        print(f"error: directory does not exist: {path}")
-        exit(2)
+class Summarizer:
+    def __init__(self, args):
+        self.data_dir = Path(args.data).resolve()
+        self.csv_dir = Path(self.data_dir, "notes", "csv")
+        self.triples = self._system_dataset_package_triples()
+        self.containers = not args.no_containers
+        self.debug = args.debug
+        self.workers = args.workers
+
+    def _system_dataset_package_triples(self, subdir = "baseline"):
+        triples = []
+        for s in SYSTEMS.keys():
+            datasets = sorted([d for d in Path(self.data_dir, "original").iterdir()])
+            for d in datasets:
+                ts_dataset = Path(self.data_dir, f"{s}-out", d.parts[-1], subdir)
+                if not ts_dataset.exists():
+                    continue
+                packages = sorted([p for p in ts_dataset.iterdir()])
+                for p in packages:
+                    triples.append((s, ts_dataset, p.parts[-1]))
+        return triples
+
+    def _prepare_headers(self, filename, header):
+        for s in SYSTEMS.values():
+            output_csv = Path(self.csv_dir, f"{filename}.{s}.csv")
+            with open(output_csv, "w") as file:
+                file.write(header + "\n")
+
+    def _iterate_triples(self, triples, desc, file_prefix, iterate_package):
+        file_handles = {}
+        for s in SYSTEMS.values():
+            filename = f"{file_prefix}.{s}.csv"
+            output_csv = Path(self.csv_dir, filename)
+            file_handles[filename] = open(output_csv, "a")
+
+        with futures.ProcessPoolExecutor(max_workers=self.workers) as executor:
+            fs = [executor.submit(iterate_package, file_prefix, s, d, p)
+                  for s, d, p in triples]
+            for future in tqdm(fs, desc):
+                entries, filename = future.result()
+                file = file_handles[filename]
+                for e in entries:
+                    file.write(e + "\n")
+
+        for f in file_handles.values():
+            f.close()
+
+    def copy_loc(self):
+        original_loc = Path(self.data_dir, "notes", "original", "file_loc.csv")
+        target_loc = Path(self.csv_dir, "file_loc.csv")
+
+        shutil.copyfile(original_loc, target_loc)
+
+    def _typechecks_per_package(self, file_prefix, system, ts_dataset, package_out):
+        # result of type checking
+        # extension is .out if package type checked, .err otherwise
+        output = Path(ts_dataset, package_out)
+
+        dataset = ts_dataset.parts[-2]
+        package = Path(package_out).with_suffix("")
+        result = "1" if output.suffix == ".out" else "0"
+
+        entries = [f"{system},{dataset},{package},{result}"]
+        filename = f"{file_prefix}.{SYSTEMS[system]}.csv"
+
+        return entries, filename
+
+    def typecheck_summary(self):
+        triples = self._system_dataset_package_triples("baseline-checked")
+        self._prepare_headers("typecheck",
+                              '"System","Dataset","Package","Type checks"')
+        self._iterate_triples(triples, "Type checks", "typecheck",
+                              self._typechecks_per_package)
+
+    def _errors_per_package(self, file_prefix, system, ts_dataset, package):
+        # Regex for matching error messages
+        #   <filename.ts>(row,col): error <TScode>
+        # negative lookahead so we don't match if file starts with .., but we want to match .
+        ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
+
+        dataset = ts_dataset.parts[-2]
+        output_file = f"{file_prefix}.{SYSTEMS[system]}.csv"
+        err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
+        entries = []
+        errors = {}
+
+        if err_file.exists():
+            with open(err_file, encoding="utf-8") as f:
+                for line in f:
+                    matches = ERROR_CODES_RE.match(line)
+                    if matches:
+                        filename = matches.group(1)
+                        code = matches.group(2)
+                        if filename in errors:
+                            file_map = errors[filename]
+                            file_map.setdefault(code, 0)
+                            file_map[code] += 1
+                        else:
+                            errors[filename] = {code: 1}
+
+        for filename, file_map in errors.items():
+            for code, count in file_map.items():
+                entries.append(f"{system},{dataset},{package},{filename},{code},{count}")
+
+        return entries, output_file
+
+    def error_summary(self):
+        self._prepare_headers("error",
+                              '"System","Dataset","Package","File","Error code","Count')
+        self._iterate_triples(self.triples, "Errors", "error",
+                              self._errors_per_package)
+
+    def _clean_type(self, t):
+        t = re.sub("typeof", "", t)
+        t = re.sub("readonly", "", t)
+        return t.strip()
+
+    def _get_param_type(self, string):
+        def clean_param(p):
+            # Split on : and remove the first part
+            # Annotations may contain : if it's a function or struct type
+            t = ":".join(p.split(":")[1:])
+            return self._clean_type(t)
+
+        res = [clean_param(p) for p in string.split(",")]
+        if len(res) == 1 and not res[0]:
+            return []
+        else:
+            return res
+
+    def _read_function_signatures(self, package):
+        # Regex for matching function declarations
+        #   function <name>(<params>): <return type>
+        FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
+
+        signatures = {}
+        files = [f for f in package.rglob("*.d.ts")]
+        for f in files:
+            with open(f, encoding="utf-8") as f:
+                for line in f:
+                    matches = FUNCTION_DECL_RE.match(line)
+                    if matches:
+                        name = matches.group(1)
+                        params = self._get_param_type(matches.group(2))
+                        return_type = self._clean_type(matches.group(3))
+
+                        # Key encoding: <name>@<num params>
+                        # Value encoding: return type is last element of list
+                        key = f"{name}@{len(params)}"
+                        signatures[key] = [*params, return_type]
+        return signatures
+
+    def _compare_annotations(self, inferred, truth):
+        correct, inferred_anys, total, truth_anys = [0, 0, 0, 0]
+        if inferred == "any":
+            inferred_anys += 1
+        if truth == "any":
+            truth_anys += 1
+        else:
+            total += 1
+            if truth == inferred:
+                correct += 1
+        return [correct, inferred_anys, total, truth_anys]
+
+    def _accuracy_per_package(self, file_prefix, system, ts_dataset, package):
+        groundtruth_dir = Path(self.data_dir, "groundtruth", package)
+        package_dir = Path(ts_dataset, package)
+        dataset = ts_dataset.parts[-2]
+
+        ground_truth_sigs = self._read_function_signatures(groundtruth_dir)
+        inferred_sigs = self._read_function_signatures(package_dir)
+
+        # Loop over all inferred signatures and compare to ground truth signatures
+        # Inferred annotations must match ground truth annotations exactly
+        # Skip ground truth annotation if it is "any"
+        # Skip cases where a signature is missing from the other set
+        # (e.g. no ground truth exists, or no inferred signature exists)
+        num_signatures = 0
+        correct = 0
+        inferred_anys = 0
+        total = 0
+        truth_anys = 0
+        for k, inferred in inferred_sigs.items():
+            if k in ground_truth_sigs.keys():
+                num_signatures += 1
+                truth = ground_truth_sigs[k]
+                for i, t in zip(inferred, truth):
+                    c, ia, n, ta = self._compare_annotations(i, t)
+                    correct += c
+                    inferred_anys += ia
+                    total += n
+                    truth_anys += ta
+
+        ### Code to print out signature comparisons
+        if self.debug:
+            if num_signatures > 0:
+                print("*" * 80)
+                print(package_dir)
+                for k, inferred in inferred_sigs.items():
+                    if k in ground_truth_sigs.keys():
+                        truth = ground_truth_sigs[k]
+                        print(k)
+                        print("\tInferred\tGround truth\t\tMatch?")
+                        for i, t in zip(inferred, truth):
+                            if i == t:
+                                match = 1
+                            else:
+                                match = 0
+                            print(f"\t{i:16}{t:24}{match}")
+                print("Sigs:", num_signatures, "Correct types:", correct, "Total:", total, "Inferred anys:", inferred_anys, "Truth anys:", truth_anys)
+
+        output_file = f"{file_prefix}.{SYSTEMS[system]}.csv"
+        entries = [f"{system},{dataset},{package},{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"]
+
+        return entries, output_file
+
+    def accuracy_summary(self):
+        # TODO: use parser to compare declarations?
+        triples = self._system_dataset_package_triples("baseline-typedefs")
+        self._prepare_headers("accuracy",
+                              '"System","Dataset","Package","Number of function signatures compared","Number of correct annotations","Number of inferred anys","Number of annotations checked","Number of ground truth anys skipped"')
+        self._iterate_triples(triples, "Accuracy", "accuracy",
+                             self._accuracy_per_package)
+
+    def _annotations_for_file(self, file_prefix, system, ts_dataset, package, file):
+        package_dir = Path(ts_dataset, package)
+        dataset = ts_dataset.parts[-2]
+        output_file = f"{file_prefix}.{SYSTEMS[system]}.csv"
+        entry = f"{system},{dataset},{package},{file},0,0,0,0"
+
+        # TODO: use tree-sitter instead of node/tsc?
+        if self.containers:
+            path = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
+            containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
+            args = [path, containerized_file]
+        else:
+            path = Path(Path(__file__).parent, "weaver", "src", "count_annotations.js").resolve()
+            args = ["node", path, Path(package_dir, file)]
+
+        result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=path.parent)
+        if len(result.stdout) > 0:
+            data = json.loads(result.stdout)
+            if data:
+                entry = f"{system},{dataset},{package},{file},{data['anys']},{data['anyArrays']},{data['functionTypes']},{data['total']}"
+
+        return entry, output_file
+
+    def annotation_summary(self):
+        self._prepare_headers("annotations",
+                              '"Dataset","Package","File","Number of anys","Number of any[]","Number of Function","Total annotations"')
+
+        # Don't use _iterate_triples because we want a worker per file, not per package
+        inputs = [(s, td, p, str(f))
+                for s, td, p in self.triples
+                for pd in [Path(td, p)]
+                for f in sorted([f.relative_to(pd) for f in pd.rglob("*.ts")])]
+        file_handles = {}
+        for s in SYSTEMS.values():
+            filename = f"annotations.{s}.csv"
+            output_csv = Path(self.csv_dir, filename)
+            file_handles[filename] = open(output_csv, "a")
+
+        with futures.ProcessPoolExecutor(max_workers=self.workers) as executor:
+            fs = [executor.submit(self._annotations_for_file, "annotations", s, td, p, f)
+                for s, td, p, f in inputs]
+            for future in tqdm(fs, "Annotations"):
+                entry, filename = future.result()
+                file = file_handles[filename]
+                file.write(entry + "\n")
+
+        for f in file_handles.values():
+            f.close()
 
 def parse_args():
+    def check_exists(path):
+        if not Path(path).exists():
+            print(f"error: directory does not exist: {path}")
+            exit(2)
+
     cpu_count = os.cpu_count();
 
     parser = argparse.ArgumentParser(description="Summarizes results")
@@ -63,296 +334,17 @@ def parse_args():
 
     return args
 
-def system_dataset_package_triples(data_dir, subdir):
-    triples = []
-    for s in SYSTEMS.keys():
-        datasets = sorted([d for d in Path(data_dir, "original").iterdir()])
-        for d in datasets:
-            ts_dataset = Path(data_dir, f"{s}-out", d.parts[-1], subdir)
-            if not ts_dataset.exists():
-                continue
-            packages = sorted([p for p in ts_dataset.iterdir()])
-            for p in packages:
-                triples.append((s, ts_dataset, p.parts[-1]))
-    return triples
-
-def prepare_headers(data_dir, csv_dir, filename, header):
-    for s in SYSTEMS.keys():
-        output_csv = Path(csv_dir, f"{filename}.{SYSTEMS[s]}.csv")
-        with open(output_csv, "w") as file:
-            file.write(header)
-
-def iterate_triples(triples, csv_dir, desc, filename, iterate_package):
-    for s, ts_dataset, p in tqdm(triples, desc):
-        output_csv = Path(csv_dir, f"{filename}.{SYSTEMS[s]}.csv")
-        with open(output_csv, "a") as file:
-            entries = iterate_package(ts_dataset, p)
-            for e in entries:
-                file.write(e + "\n")
-
-def copy_loc(data_dir, csv_dir):
-    original_loc = Path(data_dir, "notes", "original", "file_loc.csv")
-    target_loc = Path(csv_dir, "file_loc.csv")
-
-    shutil.copyfile(original_loc, target_loc)
-
-def did_package_typecheck(data_dir, dataset, package, system):
-    out_file = Path(data_dir, f"{system}-out", dataset, "baseline-checked", f"{package}.out")
-    err_file = Path(data_dir, f"{system}-out", dataset, "baseline-checked", f"{package}.err")
-
-    if out_file.exists():
-        return "1"
-    elif err_file.exists():
-        return "0"
-    else:
-        return "NA"
-
-def typecheck_summary(data_dir, csv_dir):
-    summary_csv = Path(csv_dir, "typecheck_summary.csv")
-    with open(summary_csv, "w") as file:
-        system_headers = [f'"{s} type checks"' for s in SYSTEMS.keys()]
-        header = '"Dataset","Package",' + ",".join(system_headers) + "\n"
-        file.write(header)
-
-        datasets = [d for d in Path(data_dir, "original").iterdir()]
-        pairs = [(d.parts[-1], p.parts[-1])
-                 for d in sorted(datasets)
-                 for p in sorted(d.iterdir())]
-        for d, p in tqdm(pairs, desc="Type check summary"):
-            res = [did_package_typecheck(data_dir, d, p, s) for s in SYSTEMS.keys()]
-            entry = ",".join([d, p, *res]) + "\n"
-            file.write(entry)
-
-def count_errors_in_file(err_file, src_file):
-    count = 0
-    with open(err_file) as f:
-        for line in f:
-            if line.startswith(str(src_file)):
-                count += 1
-    return str(count)
-
-def errors_per_file_for_package(ts_dataset, package):
-    package_dir = Path(ts_dataset, package)
-    dataset = ts_dataset.parts[-2]
-    out_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.out").resolve()
-    err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
-    entries = []
-
-    files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
-    for file in files:
-        entry = f"{dataset},{package},{file},"
-
-        if out_file.exists():
-            entries.append(entry + "0")
-        elif err_file.exists():
-            entries.append(entry + count_errors_in_file(err_file, file))
-    return entries
-
-def errors_per_file_summary(data_dir, csv_dir):
-    triples = system_dataset_package_triples(data_dir, "baseline")
-    prepare_headers(data_dir, csv_dir, "errors_per_file",
-                    'Dataset,Package,File,"Number of errors"\n')
-    iterate_triples(triples, csv_dir, "Error counts", "errors_per_file",
-                    errors_per_file_for_package)
-
-def clean_type(t):
-    t = re.sub("typeof", "", t)
-    t = re.sub("readonly", "", t)
-    return t.strip()
-
-def get_param_type(string):
-    def clean_param(p):
-        # Split on : and remove the first part
-        # Annotations may contain : if it's a function or struct type
-        t = ":".join(p.split(":")[1:])
-        return clean_type(t)
-
-    res = [clean_param(p) for p in string.split(",")]
-    if len(res) == 1 and not res[0]:
-        return []
-    else:
-        return res
-
-def read_function_signatures(package):
-    # Regex for matching function declarations
-    #   function <name>(<params>): <return type>
-    FUNCTION_DECL_RE = re.compile("^.*function\s+([a-zA-Z_$][\w_$]*)\((.*)\):\s*([^;]*);?$")
-
-    signatures = {}
-    files = [f for f in package.rglob("*.d.ts")]
-    for f in files:
-        with open(f, encoding="utf-8") as f:
-            for line in f:
-                matches = FUNCTION_DECL_RE.match(line)
-                if matches:
-                    name = matches.group(1)
-                    params = get_param_type(matches.group(2))
-                    return_type = clean_type(matches.group(3))
-
-                    # Key encoding: <name>@<num params>
-                    # Value encoding: return type is last element of list
-                    key = f"{name}@{len(params)}"
-                    signatures[key] = [*params, return_type]
-    return signatures
-
-def compare_annotations(inferred, truth):
-    correct, inferred_anys, total, truth_anys = [0, 0, 0, 0]
-    if inferred == "any":
-        inferred_anys += 1
-    if truth == "any":
-        truth_anys += 1
-    else:
-        total += 1
-        if truth == inferred:
-            correct += 1
-    return [correct, inferred_anys, total, truth_anys]
-
-def compute_accuracy_for_package(data_dir, ts_dataset, package, debug = False):
-    groundtruth_dir = Path(data_dir, "groundtruth", package)
-    package_dir = Path(ts_dataset, package)
-
-    ground_truth_sigs = read_function_signatures(groundtruth_dir)
-    inferred_sigs = read_function_signatures(package_dir)
-
-    # Loop over all inferred signatures and compare to ground truth signatures
-    # Inferred annotations must match ground truth annotations exactly
-    # Skip ground truth annotation if it is "any"
-    # Skip cases where a signature is missing from the other set
-    # (e.g. no ground truth exists, or no inferred signature exists)
-    num_signatures = 0
-    correct = 0
-    inferred_anys = 0
-    total = 0
-    truth_anys = 0
-    for k, inferred in inferred_sigs.items():
-        if k in ground_truth_sigs.keys():
-            num_signatures += 1
-            truth = ground_truth_sigs[k]
-            for i, t in zip(inferred, truth):
-                c, ia, n, ta = compare_annotations(i, t)
-                correct += c
-                inferred_anys += ia
-                total += n
-                truth_anys += ta
-
-    ### Code to print out signature comparisons
-    if debug:
-        if num_signatures > 0:
-            print("*" * 80)
-            print(package_dir)
-            for k, inferred in inferred_sigs.items():
-                if k in ground_truth_sigs.keys():
-                    truth = ground_truth_sigs[k]
-                    print(k)
-                    print("\tInferred\tGround truth\t\tMatch?")
-                    for i, t in zip(inferred, truth):
-                        if i == t:
-                            match = 1
-                        else:
-                            match = 0
-                        print(f"\t{i:16}{t:24}{match}")
-            print("Sigs:", num_signatures, "Correct types:", correct, "Total:", total, "Inferred anys:", inferred_anys, "Truth anys:", truth_anys)
-
-    return f"{num_signatures},{correct},{inferred_anys},{total},{truth_anys}"
-
-def compute_accuracy(data_dir, csv_dir, debug = False):
-    triples = system_dataset_package_triples(data_dir, "baseline-typedefs")
-
-    accuracy_csv = Path(csv_dir, "accuracy_summary.csv")
-    with open(accuracy_csv, "w") as file:
-        file.write('"System","Dataset","Package","Number of function signatures compared","Number of correct annotations","Number of inferred anys","Number of annotations checked","Number of ground truth anys skipped"\n')
-        for s, ts_dataset, p in tqdm(triples, desc="Accuracy"):
-            res = compute_accuracy_for_package(data_dir, ts_dataset, p, debug)
-            file.write(f"{s.lower()},{ts_dataset.parts[-2]},{p},{res}\n")
-
-def error_codes_for_package(ts_dataset, package):
-    # Regex for matching error messages
-    #   <filename.ts>(row,col): error <TScode>
-    # negative lookahead so we don't match if file starts with .., but we want to match .
-    ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
-
-    package_dir = Path(ts_dataset, package)
-    err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
-    entries = []
-    errors = {}
-
-    if err_file.exists():
-        with open(err_file, encoding="utf-8") as f:
-            for line in f:
-                matches = ERROR_CODES_RE.match(line)
-                if matches:
-                    filename = matches.group(1)
-                    code = matches.group(2)
-                    if filename in errors:
-                        file_map = errors[filename]
-                        file_map.setdefault(code, 0)
-                        file_map[code] += 1
-                    else:
-                        errors[filename] = {code: 1}
-
-    for filename, file_map in errors.items():
-        for code, count in file_map.items():
-            entries.append(f"{ts_dataset.parts[-2]},{package},{filename},{code},{count}")
-
-    return entries
-
-def count_error_codes(data_dir, csv_dir):
-    triples = system_dataset_package_triples(data_dir, "baseline")
-    prepare_headers(data_dir, csv_dir, "error_codes",
-                    'Dataset,Package,File,"Error code",Count\n')
-    iterate_triples(triples, csv_dir, "Error codes", "error_codes",
-                    error_codes_for_package)
-
-def annotations_for_file(data_dir, system, ts_dataset, package, file, containers):
-    package_dir = Path(ts_dataset, package)
-    dataset = ts_dataset.parts[-2]
-
-    if containers:
-        path = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
-        containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
-        args = [path, containerized_file]
-    else:
-        path = Path(Path(__file__).parent, "weaver", "src", "count_annotations.js").resolve()
-        args = ["node", path, Path(package_dir, file)]
-
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=path.parent)
-    if len(result.stdout) > 0:
-        data = json.loads(result.stdout)
-        if data:
-            return system, dataset, package, file, data["anys"], data["anyArrays"], data["functionTypes"], data["total"]
-    return system, dataset, package, file, 0, 0, 0, 0
-
-def count_annotations(data_dir, csv_dir, workers, containers):
-    triples = system_dataset_package_triples(data_dir, "baseline")
-    inputs = [(s, td, p, str(f))
-              for s, td, p in triples
-              for pd in [Path(td, p)]
-              for f in sorted([f.relative_to(pd) for f in pd.rglob("*.ts")])]
-    prepare_headers(data_dir, csv_dir, "annotations_per_file",
-                    'Dataset,Package,File,"Number of anys","Number of any[]","Number of Function","Total annotations"\n')
-
-    with futures.ProcessPoolExecutor(max_workers=workers) as executor:
-        fs = [executor.submit(annotations_for_file, data_dir, s, td, p, f, containers)
-              for s, td, p, f in inputs]
-        for future in tqdm(fs, "Annotations per file"):
-            s, d, p, f, anys, anyArrays, functionTypes, total = future.result()
-            output_csv = Path(csv_dir, f"annotations_per_file.{SYSTEMS[s]}.csv")
-            with open(output_csv, "a") as file:
-                file.write(f"{d},{p},{f},{anys},{anyArrays},{functionTypes},{total}\n")
-
 def main():
     args = parse_args()
-    data_dir = Path(args.data).resolve()
-    csv_dir = Path(data_dir, "notes", "csv")
+    summarizer = Summarizer(args)
 
     # Copy dataset loc from notes
-    copy_loc(data_dir, csv_dir)
+    summarizer.copy_loc()
 
-    typecheck_summary(data_dir, csv_dir)
-    errors_per_file_summary(data_dir, csv_dir)
-    compute_accuracy(data_dir, csv_dir, args.debug)
-    count_error_codes(data_dir, csv_dir)
-    count_annotations(data_dir, csv_dir, args.workers, not args.no_containers)
+    summarizer.typecheck_summary()
+    summarizer.error_summary()
+    summarizer.accuracy_summary()
+    summarizer.annotation_summary()
 
 if __name__ == "__main__":
     main()
