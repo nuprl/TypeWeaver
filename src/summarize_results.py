@@ -46,14 +46,18 @@ class Summarizer:
         return triples
 
     def _prepare_headers(self, filename, header):
-        for s in SYSTEMS.values():
+        for system, s in SYSTEMS.items():
+            if not Path(self.data_dir, f"{system}-out").exists():
+                continue
             output_csv = Path(self.csv_dir, f"{filename}.{s}.csv")
             with open(output_csv, "w") as file:
                 file.write(header + "\n")
 
     def _iterate_triples(self, triples, desc, file_prefix, iterate_package):
         file_handles = {}
-        for s in SYSTEMS.values():
+        for system, s in SYSTEMS.items():
+            if not Path(self.data_dir, f"{system}-out").exists():
+                continue
             filename = f"{file_prefix}.{s}.csv"
             output_csv = Path(self.csv_dir, filename)
             file_handles[filename] = open(output_csv, "a")
@@ -280,7 +284,9 @@ class Summarizer:
                 for pd in [Path(td, p)]
                 for f in sorted([f.relative_to(pd) for f in pd.rglob("*.ts")])]
         file_handles = {}
-        for s in SYSTEMS.values():
+        for system, s in SYSTEMS.items():
+            if not Path(self.data_dir, f"{system}-out").exists():
+                continue
             filename = f"annotations.{s}.csv"
             output_csv = Path(self.csv_dir, filename)
             file_handles[filename] = open(output_csv, "a")
