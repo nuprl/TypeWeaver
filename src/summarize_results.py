@@ -276,7 +276,7 @@ class Summarizer:
 
     def annotation_summary(self):
         self._prepare_headers("annotation",
-                              '"Dataset","Package","File","Number of anys","Number of any[]","Number of Function","Total annotations"')
+                              '"System","Dataset","Package","File","Number of anys","Number of any[]","Number of Function","Total annotations"')
 
         # Don't use _iterate_triples because we want a worker per file, not per package
         inputs = [(s, td, p, str(f))
