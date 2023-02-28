@@ -7,7 +7,7 @@
 #       system, dataset, package, num sigs compared,
 #       num correct annotations, num inferred any annotations,
 #       num of non-any annotations checked, num of any ground truth annotations skipped
-#   - annotations.system.csv (counting trivial annotations)
+#   - annotation.system.csv (counting trivial annotations)
 #       system, dataset, package, filename, number of anys, number of any[], number of Function, number of annotations
 
 from concurrent import futures
@@ -135,7 +135,7 @@ class Summarizer:
 
     def error_summary(self):
         self._prepare_headers("error",
-                              '"System","Dataset","Package","File","Error code","Count')
+                              '"System","Dataset","Package","File","Error code","Count"')
         self._iterate_triples(self.triples, "Errors", "error",
                               self._errors_per_package)
 
@@ -275,7 +275,7 @@ class Summarizer:
         return entry, output_file
 
     def annotation_summary(self):
-        self._prepare_headers("annotations",
+        self._prepare_headers("annotation",
                               '"Dataset","Package","File","Number of anys","Number of any[]","Number of Function","Total annotations"')
 
         # Don't use _iterate_triples because we want a worker per file, not per package
@@ -287,12 +287,12 @@ class Summarizer:
         for system, s in SYSTEMS.items():
             if not Path(self.data_dir, f"{system}-out").exists():
                 continue
-            filename = f"annotations.{s}.csv"
+            filename = f"annotation.{s}.csv"
             output_csv = Path(self.csv_dir, filename)
             file_handles[filename] = open(output_csv, "a")
 
         with futures.ProcessPoolExecutor(max_workers=self.workers) as executor:
-            fs = [executor.submit(self._annotations_for_file, "annotations", s, td, p, f)
+            fs = [executor.submit(self._annotations_for_file, "annotation", s, td, p, f)
                 for s, td, p, f in inputs]
             for future in tqdm(fs, "Annotations"):
                 entry, filename = future.result()
