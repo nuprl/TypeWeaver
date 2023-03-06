@@ -9,6 +9,9 @@ reusability. Nevertheless, they may still be helpful.
   the DefinitelyTyped repository, to determine if the package and its
   dependencies have type definitions in DefinitelyTyped
 
+* `check_dataset_with_tsc.py`: checks that a dataset (JavaScript or TypeScript)
+  is syntactically valid, by using `tsc`. Does not perform type checking.
+
 * `collect_dataset_stats.py`: collects statistics (e.g. number of dependencies,
   lines of code) and reports for each package
 
