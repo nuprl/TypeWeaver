@@ -16,6 +16,11 @@ import argparse, json, subprocess
 
 import util
 
+CLOC_PATH = Path(Path(__file__).parent, "node_modules", ".bin", "cloc").resolve()
+if not Path(CLOC_PATH).exists():
+    print("Could not find cloc: {}".format(CLOC_PATH))
+    exit(1)
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Collects statistics for a JavaScript dataset")
     parser.add_argument(
@@ -29,7 +34,7 @@ def parse_args():
     return args
 
 def get_loc(path):
-    args = ["cloc", "--include-lang=JavaScript,TypeScript", "--json", path]
+    args = [CLOC_PATH, "--include-lang=JavaScript,TypeScript", "--json", path]
     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8")
     if len(result.stdout) > 0:
         data = json.loads(result.stdout)

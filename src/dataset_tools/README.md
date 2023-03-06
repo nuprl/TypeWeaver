@@ -31,7 +31,6 @@ reusability. Nevertheless, they may still be helpful.
 
 * Python +3.6 with tqdm
 * Node +16
-* cloc
 * git
 
 Install NPM dependencies:
