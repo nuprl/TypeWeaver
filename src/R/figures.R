@@ -471,7 +471,7 @@ error_codes.total <- error_codes %>%
   mutate(`Error code`="Total")
 
 # Error messages from:
-# https://github.com/Microsoft/TypeScript/blob/v4.7.3/src/compiler/diagnosticMessages.json
+# https://github.com/microsoft/TypeScript/blob/v4.9.4/src/compiler/diagnosticMessages.json
 error_codes_desc <- tribble(
   ~`Error code`, ~Description,
   "TS2339", "Property '{0}' does not exist on type '{1}.'",
@@ -479,11 +479,11 @@ error_codes_desc <- tribble(
   "TS2345", "Argument of type '{0}' is not assignable to parameter of type '{1}'.",
   "TS2304", "Cannot find name '{0}'.",
   "TS2554", "Expected {0} arguments, but got {1}.",
-  "TS1127", "Invalid character.",
   "TS2349", "This expression is not callable.",
-  "TS2367", "This condition will always return '{0}' since the types '{1}' and '{2}' have no overlap.",
-  "TS2307", "Cannot find module '{0}' or its corresponding type declarations.",
   "TS2551", "Property '{0}' does not exist on type '{1}'. Did you mean '{2}'?",
+  "TS2307", "Cannot find module '{0}' or its corresponding type declarations.",
+  "TS4078", "Parameter '{0}' of exported function has or is using private name '{1}'.",
+  "TS2367", "This comparison appears to be unintentional because the types '{0}' and '{1}' have no overlap.",
   "Other", "",
   "Total", "")
 
