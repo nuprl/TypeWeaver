@@ -15,11 +15,16 @@ reusability. Nevertheless, they may still be helpful.
 * `collect_dataset_stats.py`: collects statistics (e.g. number of dependencies,
   lines of code) and reports for each package
 
+* `count_types_in_the_stack.py`: load the Stack Smol and count how many types,
+  interfaces, and classes are defined and used
+
 * `download_pkg_src_from_github.py`: takes a JavaScript dataset and downloads
   package source code from GitHub
 
 * `install_dependency_type_defs.py`: takes a JavaScript dataset and installs
   type definitions for each package's dependencies
+
+* `package_file_loc.py`: use `cloc` to compute lines of code for each package
 
 * `save_ground_truth_typings.py`: given a JavaScript dataset, copies the `.d.ts`
   type definitions from the provided DefinitelyTyped directory; if no type
@@ -39,3 +44,9 @@ reusability. Nevertheless, they may still be helpful.
 Install NPM dependencies:
 
     npm install
+
+Install tree-sitter:
+
+    pip install tree-sitter
+    # from the dataset_tools directory
+    git clone git@github.com:tree-sitter/tree-sitter-typescript.git
