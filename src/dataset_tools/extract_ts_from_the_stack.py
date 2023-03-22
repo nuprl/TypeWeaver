@@ -112,13 +112,14 @@ def parse_args():
 
 def load(from_hf, dataset_dir, workers):
     if from_hf:
+        revision = "v1.1" if THE_STACK == "bigcode/the-stack-dedup" else "v1.0"
         # features: content, avg_line_length, max_line_length, alphanum_fraction,
         # licenses, repository_name, path, size, lang
         print("Loading dataset from Hugging Face...", flush=True)
         return load_dataset(THE_STACK,
                             data_dir="data/typescript",
                             split="train",
-                            revision="v1.1",
+                            revision=revision,
                             num_proc=workers)
     else:
         print(f"Loading dataset from disk ({dataset_dir})...", flush=True)
@@ -215,16 +216,19 @@ def filter_typechecks(dataset, args):
     filtered = dataset.filter(lambda d: self_contained(get_content(d)),
                               num_proc=workers)
 
-    # This is slow, but setting up workers is even slower
-    print("Already typechecked:", len(checkpoint), flush=True)
-    to_typecheck = [f for f in tqdm(filtered, desc="Applying checkpoint", unit="example")
-                    if needs_processing(checkpoint, f)]
+    if len(checkpoint) == 0:
+        to_typecheck = filtered
+    else:
+        # This is slow, but setting up workers is even slower
+        print("Already typechecked:", len(checkpoint), flush=True)
+        to_typecheck = [f for f in tqdm(filtered, desc="Applying checkpoint")
+                        if needs_processing(checkpoint, f)]
 
     print("To typecheck:", len(to_typecheck), flush=True)
     with futures.ProcessPoolExecutor(max_workers=workers) as executor:
         fs = [executor.submit(run_tsc, get_key(d), get_content(d))
-              for d in to_typecheck]
-        for i, f in enumerate(tqdm(fs, desc="Type checking", unit="file", miniters=1)):
+            for d in tqdm(to_typecheck, desc="Preparing workers")]
+        for i, f in enumerate(tqdm(fs, desc="Type checking", miniters=1)):
             key, result = f.result()
             checkpoint[key] = result
             if (i + 1) % checkpoint_steps == 0:
