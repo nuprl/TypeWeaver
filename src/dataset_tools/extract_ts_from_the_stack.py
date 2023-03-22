@@ -1,4 +1,6 @@
 from concurrent import futures
+from datasets import load_dataset, load_from_disk
+from datetime import date, datetime
 from pathlib import Path
 from subprocess import PIPE
 from tempfile import NamedTemporaryFile
@@ -10,6 +12,8 @@ import util
 
 # THE_STACK = "bigcode/the-stack-smol"
 THE_STACK = "bigcode/the-stack-dedup"
+
+DEFAULT_CUTOFF = datetime(2021, 12, 31)
 
 TSC_PATH = Path(Path(__file__).parent, "node_modules", ".bin", "tsc").resolve()
 if not Path(TSC_PATH).exists():
@@ -29,16 +33,18 @@ TS_LANGUAGE = Language(f"{Path(__file__).parent}/build/languages.so", 'typescrip
 PARSER = Parser()
 PARSER.set_language(TS_LANGUAGE)
 
-EMPTY_TREE = PARSER.parse(bytes("", "utf-8"))
-
 def parse_args():
     cpu_count = os.cpu_count();
 
-    parser = argparse.ArgumentParser(description="Extracts self-contained TypeScript files that type check")
+    parser = argparse.ArgumentParser(description="Extracts and processes TypeScript files from The Stack")
     parser.add_argument(
-        "--dataset-out",
+        "--dataset",
         type=str,
-        help=f"output directory to save resulting dataset")
+        help="directory to read dataset")
+    parser.add_argument(
+        "--from-hf",
+        action="store_true",
+        help="load dataset from Hugging Face, otherwise load from DATASET")
     parser.add_argument(
         "--checkpoint",
         type=str,
@@ -49,19 +55,102 @@ def parse_args():
         default=1000,
         help="number of steps to save a checkpoint, defaults to 1000")
     parser.add_argument(
+        "--output",
+        type=str,
+        help="directory to write dataset to")
+    parser.add_argument(
         "--workers",
         type=int,
         default=cpu_count,
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
+    group = parser.add_argument_group(title="task to run")
+    group.add_argument(
+        "--typecheck",
+        action="store_true",
+        help="filter dataset for files that type check")
+    group.add_argument(
+        "--metrics",
+        action="store_true",
+        help="add columns for dataset metrics")
+    group.add_argument(
+        "--tokenize",
+        action="store_true",
+        help="add a column with the number of tokens")
+    group.add_argument(
+        "--unannotate",
+        action="store_true",
+        help="add a column with the file content, with type annotations removed")
+    group.add_argument(
+        "--cutoff",
+        nargs="?",
+        const=DEFAULT_CUTOFF.strftime('%Y-%m-%d'),
+        help=f"filter dataset for files after the specified cutoff date, in YYYY-MM-DD format; defaults to {DEFAULT_CUTOFF.strftime('%Y-%m-%d')}")
+
     args = parser.parse_args()
-    if args.dataset_out:
-        util.check_exists(args.dataset_out)
+    if not (args.dataset or args.from_hf):
+        parser.print_usage()
+        print("error: must provide --dataset or --from-hf")
+        exit(2)
+    elif args.dataset and args.from_hf:
+        parser.print_usage()
+        print("error: must provide only one of --dataset and --from-hf")
+        exit(2)
+    if args.dataset:
+        util.check_exists(args.dataset)
+    if args.output:
+        util.check_exists(args.output)
+    if args.cutoff is not None:
+        try:
+            args.cutoff = datetime.strptime(args.cutoff, "%Y-%m-%d")
+        except:
+            parser.print_usage()
+            print("error: --cutoff argument must be in YYYY-MM-DD format")
+            exit(2)
 
     return args
 
+def load(from_hf, dataset_dir, workers):
+    if from_hf:
+        # features: content, avg_line_length, max_line_length, alphanum_fraction,
+        # licenses, repository_name, path, size, lang
+        print("Loading dataset from Hugging Face...", flush=True)
+        return load_dataset(THE_STACK,
+                            data_dir="data/typescript",
+                            split="train",
+                            revision="v1.1",
+                            num_proc=workers)
+    else:
+        print(f"Loading dataset from disk ({dataset_dir})...", flush=True)
+        return load_from_disk(dataset_dir)
+
+def is_after_cutoff(dataset_example, cutoff):
+    def parsedate(string):
+        if string is None:
+            return None
+        else:
+            return datetime.strptime(string, "%Y-%m-%dT%H:%M:%S.%fZ")
+
+    if THE_STACK == "bigcode/the-stack-smol":
+        # The Stack Smol has no timestamps so we can't filter
+        return TRUE
+    else:
+        stars_date = parsedate(dataset_example["max_stars_repo_stars_event_min_datetime"])
+        forks_date = parsedate(dataset_example["max_forks_repo_forks_event_min_datetime"])
+        issues_date = parsedate(dataset_example["max_issues_repo_issues_event_min_datetime"])
+
+        timestamps = [t for t in [stars_date, forks_date, issues_date]
+                      if t is not None]
+
+        if not timestamps:
+            # If there is no timestamp, conservatively reject.
+            # Affects about 10% of dataset.
+            return False
+
+        # We want ALL the timestamps to be after the cutoff
+        return all(cutoff < t for t in timestamps)
+
 def load_checkpoint(checkpoint_file):
-    # TODO: may want to compress file
     checkpoint = {}
     if checkpoint_file and Path(checkpoint_file).exists():
         with open(checkpoint_file, 'rb') as f:
@@ -69,9 +158,9 @@ def load_checkpoint(checkpoint_file):
     return checkpoint
 
 def save_checkpoint(checkpoint, checkpoint_file, message=None):
-    if message:
-        print(message, flush=True)
     if checkpoint_file:
+        if message:
+            print(message, flush=True)
         with open(checkpoint_file, 'wb') as f:
             pickle.dump(checkpoint, f)
 
@@ -85,7 +174,6 @@ def self_contained(content):
     return not matches
 
 def run_tsc(key, content):
-    # TODO: could this be done with pipes instead of temp files?
     with NamedTemporaryFile(mode="w", suffix=".ts", encoding="utf-8") as f:
         # Save content to temp file
         print(content, file=f, end="", flush=True)
@@ -115,30 +203,19 @@ def get_repo_and_path(dataset_example):
 def needs_processing(checkpoint, dataset_example):
     return get_key(dataset_example) not in checkpoint
 
-def extract_ts(args):
-    from datasets import load_dataset
-
+def filter_typechecks(dataset, args):
     workers = args.workers
     checkpoint_file = args.checkpoint
     checkpoint_steps = args.checkpoint_steps
-    dataset_out = args.dataset_out
 
     # Load checkpoint file if it exists
     checkpoint = load_checkpoint(checkpoint_file)
 
-    # features: content, avg_line_length, max_line_length, alphanum_fraction,
-    # licenses, repository_name, path, size, lang
-    print("Loading dataset", flush=True)
-    dataset = load_dataset(THE_STACK,
-                           data_dir="data/typescript",
-                           split="train",
-                           num_proc=workers)
-
     print("Filtering out import/export/require", flush=True)
-    filtered = dataset.filter(lambda d: self_contained(d["content"]),
+    filtered = dataset.filter(lambda d: self_contained(get_content(d)),
                               num_proc=workers)
 
-    # TODO: this is very slow, could be parallelized
+    # This is slow, but setting up workers is even slower
     print("Already typechecked:", len(checkpoint), flush=True)
     to_typecheck = [f for f in tqdm(filtered, desc="Applying checkpoint", unit="example")
                     if needs_processing(checkpoint, f)]
@@ -158,10 +235,6 @@ def extract_ts(args):
     print("Filtering dataset for files that type check", flush=True)
     typechecks = filtered.filter(lambda d: checkpoint[get_key(d)],
                                  num_proc=workers)
-
-    if dataset_out:
-        print("Saving result to", dataset_out, flush=True)
-        typechecks.save_to_disk(dataset_out)
 
     print("Original dataset size:", len(dataset))
     print("Filtered dataset size:", len(filtered))
@@ -312,13 +385,39 @@ def count_type_defs(tree):
 def main():
     args = parse_args()
     workers = args.workers
-    dataset_out = args.dataset_out
+    dataset_dir = args.dataset
+    from_hf = args.from_hf
+    output_dir = args.output
+    cutoff = args.cutoff
 
-    # TODO: filter for cutoff date
+    dataset = load(from_hf, dataset_dir, workers)
+    print("Dataset size:", len(dataset))
 
-    # dataset = extract_ts(args)
-    from datasets import load_from_disk
-    dataset = load_from_disk(dataset_out)
+    if args.typecheck:
+        dataset = filter_typechecks(dataset, args)
+
+    if args.metrics:
+        # TODO
+        pass
+
+    if args.tokenize:
+        # TODO
+        pass
+
+    if args.unannotate:
+        # TODO
+        pass
+
+    if cutoff:
+        print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
+        dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
+                                num_proc=workers)
+        print("Size after filtering:", len(dataset))
+        # TODO: skim over dataset to check
+
+    if output_dir:
+        print("Saving result to", output_dir, flush=True)
+        dataset.save_to_disk(output_dir, num_proc=workers)
 
 if __name__ == "__main__":
     main()
