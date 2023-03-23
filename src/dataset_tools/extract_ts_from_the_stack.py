@@ -257,8 +257,6 @@ def create_query(query):
 
 def run_query(tree, query):
     captures = query.captures(tree.root_node)
-    for i, c in enumerate(captures):
-        print(i + 1, node_to_str(c[0]))
     return len(captures)
 
 def count_funcs(tree):
@@ -270,8 +268,10 @@ def count_funcs(tree):
 [
   (function_declaration) @func
   (function) @func
+  (function_signature) @func
   (arrow_function) @func
   (method_definition) @func
+  (method_signature) @func
 ]
 """)
     return run_query(tree, QUERY)
@@ -289,10 +289,18 @@ def count_func_params(tree):
   (function
     parameters: (formal_parameters
       [(required_parameter) (optional_parameter)] @param))
+  (function_signature
+    parameters: (formal_parameters
+      [(required_parameter) (optional_parameter)] @param))
   (arrow_function
     parameters: (formal_parameters
       [(required_parameter) (optional_parameter)] @param))
+  (arrow_function
+    parameter: (identifier) @param)
   (method_definition
+    parameters: (formal_parameters
+      [(required_parameter) (optional_parameter)] @param))
+  (method_signature
     parameters: (formal_parameters
       [(required_parameter) (optional_parameter)] @param))
 ]
@@ -352,22 +360,6 @@ def count_predefined_types(tree):
 """)
     return run_query(tree, QUERY)
 
-def compute_dynamism_heuristic(tree):
-    """
-    A heuristic for how "dynamic" a program is (and therefore less suitable for TypeScript).
-    Counts occurrences of "eval", "typeof", "instanceof", and "with".
-    This is not an exhaustive list.
-    """
-    QUERY = create_query(r"""
-[
-  (unary_expression) @node
-  (binary_expression) @node
-  (with_statement) @node
-  (#match? @node "(^eval$|^typeof\\b|\\binstanceof\\b|\\bwith\\b)")
-]
-""")
-    return run_query(tree, QUERY)
-
 def count_type_defs(tree):
     """
     Count type definitions, i.e. type aliases, class definitions, and interface definitions.
@@ -385,6 +377,54 @@ def count_type_defs(tree):
 ]
 """)
     return run_query(tree, QUERY)
+
+def compute_dynamism_heuristic(tree):
+    """
+    A heuristic for how "dynamic" a program is (and therefore less suitable for TypeScript).
+    Counts occurrences of "eval", "typeof", "instanceof", and "with".
+    This is not an exhaustive list.
+    """
+    EVAL_QUERY = create_query("""
+(
+  (call_expression
+    function: (identifier) @id)
+  (#eq? @id "eval")
+)
+""")
+    num_eval = run_query(tree, EVAL_QUERY)
+
+    WITH_QUERY = create_query("(with_statement) @node")
+    num_with = run_query(tree, WITH_QUERY)
+
+    TYPEOF_QUERY = create_query("(unary_expression) @node")
+    num_typeof = 0
+    for c in TYPEOF_QUERY.captures(tree.root_node):
+        children = c[0].children
+        if children and children[0].type == "typeof":
+            num_typeof += 1
+
+    INSTANCEOF_QUERY = create_query("(binary_expression) @node")
+    num_instanceof = 0
+    for c in INSTANCEOF_QUERY.captures(tree.root_node):
+        children = c[0].children
+        if len(children) > 1 and children[1].type == "instanceof":
+            num_instanceof += 1
+
+    return num_eval + num_with + num_typeof + num_instanceof
+
+def compute_metrics(content):
+    tree = str_to_tree(content)
+
+    return {
+        "functions": count_funcs(tree),
+        "function_parameters": count_func_params(tree),
+        "variable_declarations": count_var_decls(tree),
+        "property_declarations": count_prop_decls(tree),
+        "trivial_types": count_trivial_types(tree),
+        "predefined_types": count_predefined_types(tree),
+        "type_definitions": count_type_defs(tree),
+        "dynamism_heuristic": compute_dynamism_heuristic(tree)
+    }
 
 def main():
     args = parse_args()
@@ -417,7 +457,10 @@ def main():
         dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
                                 num_proc=workers)
         print("Size after filtering:", len(dataset))
-        # TODO: skim over dataset to check
+
+    # TODO: also want to do some filtering on the metrics, probably want to compute ratios,
+    # e.g. a really long file with only one annotation site is bad
+    # probably not worth filtering dynamism, there are legitimate uses and it's only a small percentage of files
 
     if output_dir:
         print("Saving result to", output_dir, flush=True)
