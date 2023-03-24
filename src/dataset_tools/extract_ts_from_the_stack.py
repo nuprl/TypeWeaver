@@ -5,8 +5,10 @@ from pathlib import Path
 from subprocess import PIPE
 from tempfile import NamedTemporaryFile
 from tqdm import tqdm
+from transformers import AutoTokenizer
+from transformers.utils import logging
 from tree_sitter import Language, Parser, Node, Tree
-import argparse, os, pickle, re, subprocess
+import argparse, os, pickle, pprint, re, subprocess
 
 import util
 
@@ -86,6 +88,10 @@ def parse_args():
         nargs="?",
         const=DEFAULT_CUTOFF.strftime('%Y-%m-%d'),
         help=f"filter dataset for files after the specified cutoff date, in YYYY-MM-DD format; defaults to {DEFAULT_CUTOFF.strftime('%Y-%m-%d')}")
+    group.add_argument(
+        "--skim",
+        action="store_true",
+        help="browse through the dataset, one example at a time")
 
     args = parser.parse_args()
     if not (args.dataset or args.from_hf):
@@ -434,6 +440,10 @@ def add_metrics(example):
 
     return example
 
+def add_token_count(tokenizer, example):
+    example["estimated_tokens"] = len(tokenizer(example["content"]).input_ids)
+    return example
+
 def main():
     args = parse_args()
     workers = args.workers
@@ -452,8 +462,13 @@ def main():
         dataset = dataset.map(add_metrics, num_proc=workers)
 
     if args.tokenize:
-        # TODO
-        pass
+        # Supress warnings about token sequence length being too long
+        logging.set_verbosity(logging.ERROR)
+        tokenizer = AutoTokenizer.from_pretrained("bigcode/santacoder")
+        dataset = dataset.map(lambda e: add_token_count(tokenizer, e),
+                              num_proc=workers)
+        # Reset warning level
+        logging.set_verbosity(logging.WARN)
 
     if args.unannotate:
         # TODO
@@ -473,15 +488,14 @@ def main():
         print("Saving result to", output_dir, flush=True)
         dataset.save_to_disk(output_dir, num_proc=workers)
 
-    # import pprint
-    # pp = pprint.PrettyPrinter()
-    # for d in tqdm(dataset):
-    #     content = get_content(d)
-    #     print("===REPO===")
-    #     print(get_repo_file_name(d))
-    #     print("===CONTENT===")
-    #     pp.pprint(d)
-    #     input("===EOF===")
+    if args.skim:
+        pp = pprint.PrettyPrinter()
+        for d in dataset:
+            print("===REPO===")
+            print(get_repo_file_name(d))
+            print("===CONTENT===")
+            pp.pprint(d)
+            input("===EOF===")
 
 if __name__ == "__main__":
     main()
