@@ -192,6 +192,12 @@ def get_key(dataset_example):
     else:
         return dataset_example["hexsha"]
 
+def get_repo_file_name(example):
+    if THE_STACK == "bigcode/the-stack-smol":
+        return example["repository_name"] + " " + example["path"]
+    else:
+        return example["max_stars_repo_name"] + " " + example["max_stars_repo_path"]
+
 def get_content(dataset_example):
     return dataset_example["content"]
 
@@ -412,19 +418,21 @@ def compute_dynamism_heuristic(tree):
 
     return num_eval + num_with + num_typeof + num_instanceof
 
-def compute_metrics(content):
+def add_metrics(example):
+    content = example["content"]
     tree = str_to_tree(content)
 
-    return {
-        "functions": count_funcs(tree),
-        "function_parameters": count_func_params(tree),
-        "variable_declarations": count_var_decls(tree),
-        "property_declarations": count_prop_decls(tree),
-        "trivial_types": count_trivial_types(tree),
-        "predefined_types": count_predefined_types(tree),
-        "type_definitions": count_type_defs(tree),
-        "dynamism_heuristic": compute_dynamism_heuristic(tree)
-    }
+    example["loc"] = len(example["content"].split("\n"))
+    example["functions"] = count_funcs(tree)
+    example["function_parameters"] = count_func_params(tree)
+    example["variable_declarations"] = count_var_decls(tree)
+    example["property_declarations"] = count_prop_decls(tree)
+    example["trivial_types"] = count_trivial_types(tree)
+    example["predefined_types"] = count_predefined_types(tree)
+    example["type_definitions"] = count_type_defs(tree)
+    example["dynamism_heuristic"] = compute_dynamism_heuristic(tree)
+
+    return example
 
 def main():
     args = parse_args()
@@ -441,8 +449,7 @@ def main():
         dataset = filter_typechecks(dataset, args)
 
     if args.metrics:
-        # TODO
-        pass
+        dataset = dataset.map(add_metrics, num_proc=workers)
 
     if args.tokenize:
         # TODO
@@ -465,6 +472,16 @@ def main():
     if output_dir:
         print("Saving result to", output_dir, flush=True)
         dataset.save_to_disk(output_dir, num_proc=workers)
+
+    # import pprint
+    # pp = pprint.PrettyPrinter()
+    # for d in tqdm(dataset):
+    #     content = get_content(d)
+    #     print("===REPO===")
+    #     print(get_repo_file_name(d))
+    #     print("===CONTENT===")
+    #     pp.pprint(d)
+    #     input("===EOF===")
 
 if __name__ == "__main__":
     main()
