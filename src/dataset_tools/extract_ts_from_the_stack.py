@@ -216,7 +216,7 @@ def get_repo_and_path(dataset_example):
 def needs_processing(checkpoint, dataset_example):
     return get_key(dataset_example) not in checkpoint
 
-def filter_typechecks(dataset, args):
+def filter_typechecks(dataset, args, content_key="content"):
     workers = args.workers
     checkpoint_file = args.checkpoint
     checkpoint_steps = args.checkpoint_steps
@@ -238,7 +238,7 @@ def filter_typechecks(dataset, args):
 
     print("To typecheck:", len(to_typecheck), flush=True)
     with futures.ProcessPoolExecutor(max_workers=workers) as executor:
-        fs = [executor.submit(run_tsc, get_key(d), get_content(d))
+        fs = [executor.submit(run_tsc, get_key(d), d[content_key])
             for d in tqdm(to_typecheck, desc="Preparing workers")]
         for i, f in enumerate(tqdm(fs, desc="Type checking", miniters=1)):
             key, result = f.result()
@@ -428,7 +428,7 @@ def add_metrics(example):
     content = example["content"]
     tree = str_to_tree(content)
 
-    example["loc"] = len(example["content"].split("\n"))
+    example["loc"] = len(content.split("\n"))
     example["functions"] = count_funcs(tree)
     example["function_parameters"] = count_func_params(tree)
     example["variable_declarations"] = count_var_decls(tree)
@@ -441,7 +441,68 @@ def add_metrics(example):
     return example
 
 def add_token_count(tokenizer, example):
-    example["estimated_tokens"] = len(tokenizer(example["content"]).input_ids)
+    example["estimated_tokens"] = len(tokenizer.encode(example["content"],
+                                                       add_special_tokens=True))
+    return example
+
+def has_no_index_signature(dataset_example):
+    QUERY = create_query("""
+  (index_signature) @sig
+""")
+    content = dataset_example["content"]
+    tree = str_to_tree(content)
+    return run_query(tree, QUERY) == 0
+
+def strip_annotations(content):
+    def is_child_type_annotation(node):
+        """Checks if any of the parent nodes is an annotation node."""
+        node = node.parent
+        while node is not None:
+            if node.type == "type_annotation" or node.type == "opting_type_annotation" or node.type == "omitting_type_annotation":
+                return True
+            node = node.parent
+        return False
+
+    QUERY = create_query("""
+[
+  (type_annotation) @annotation
+  (opting_type_annotation) @annotation
+  (omitting_type_annotation) @annotation
+]
+""")
+    tree = str_to_tree(content)
+
+    # Each capture has a start_byte and end_byte; these are the indices of the
+    # type annotation. We want to invert these indices, i.e. get the substrings
+    # between the captures (and also the substring before the first capture and
+    # the substring after the last capture).
+    captures = QUERY.captures(tree.root_node)
+
+    # Need to operate on byte string, not characters
+    content_bytes = content.encode("utf-8")
+
+    # Flatten the capture indices into a list (but skip over child type
+    # annotations). But we also want to prepend 0 and append the last index of
+    # content, so we can re-pair the indices,
+    # e.g. [(s1, e1), (s2, e2)]
+    #   -> [0, s1, e1, s2, e2, n]
+    #   -> [(0, s1), (e1, s2), (e2, n)]
+    indices = [0] + [i
+                     for c in captures
+                     for i in [c[0].start_byte, c[0].end_byte]
+                     if not is_child_type_annotation(c[0])]
+    indices.append(len(content_bytes))
+
+    # We zip the list with itself (offset by 1), moving by 2 elements each time.
+    chunks = []
+    for s, e in zip(indices[::2], indices[1::2]):
+        chunks.append(content_bytes[s:e].decode("utf-8"))
+    new_content = "".join(chunks)
+
+    return new_content
+
+def add_stripped_annotations_column(example):
+    example["content_without_annotations"] = strip_annotations(example["content"])
     return example
 
 def main():
@@ -459,9 +520,11 @@ def main():
         dataset = filter_typechecks(dataset, args)
 
     if args.metrics:
+        print("Adding metrics columns")
         dataset = dataset.map(add_metrics, num_proc=workers)
 
     if args.tokenize:
+        print("Adding estimated_tokens column")
         # Supress warnings about token sequence length being too long
         logging.set_verbosity(logging.ERROR)
         tokenizer = AutoTokenizer.from_pretrained("bigcode/santacoder")
@@ -471,8 +534,15 @@ def main():
         logging.set_verbosity(logging.WARN)
 
     if args.unannotate:
-        # TODO
-        pass
+        # First, filter out files with index_signatures, since it doesn't make
+        # sense to remove those annotations
+        print("Removing files that can't be unannotated")
+        dataset = dataset.filter(has_no_index_signature, num_proc=workers)
+        print("Size after filtering: ", len(dataset))
+
+        print("Adding new column with type annotations removed")
+        dataset = dataset.map(add_stripped_annotations_column,
+                              num_proc=workers)
 
     if cutoff:
         print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
