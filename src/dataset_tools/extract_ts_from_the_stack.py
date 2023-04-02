@@ -280,9 +280,20 @@ def count_funcs(tree):
 [
   (function_declaration) @func
   (function) @func
-  (function_signature) @func
   (arrow_function) @func
   (method_definition) @func
+]
+""")
+    return run_query(tree, QUERY)
+
+def count_func_sigs(tree):
+    """
+    Counts the number of function and method signatures. These are function
+    declarations without function bodies.
+    """
+    QUERY = create_query("""
+[
+  (function_signature) @func
   (method_signature) @func
 ]
 """)
@@ -430,6 +441,7 @@ def add_metrics(example):
 
     example["loc"] = len(content.split("\n"))
     example["functions"] = count_funcs(tree)
+    example["function_signatures"] = count_func_sigs(tree)
     example["function_parameters"] = count_func_params(tree)
     example["variable_declarations"] = count_var_decls(tree)
     example["property_declarations"] = count_prop_decls(tree)
