@@ -271,6 +271,50 @@ def run_query(tree, query):
     captures = query.captures(tree.root_node)
     return len(captures)
 
+def delete_between_indices(content, pairs):
+    """
+    Given a content string and a list of pairs of indices representing nodes
+    (specifically, their start and end bytes in the byte array), return a new
+    string with those nodes deleted.
+    """
+    # Need to operate on byte string, not characters
+    content_bytes = content.encode("utf-8")
+
+    # Flatten the pairs of indices into a list. But we also want to prepend 0
+    # and append the last index of content, so we can re-pair the indices later
+    # e.g. [(s1, e1), (s2, e2)]
+    #   -> [0, s1, e1, s2, e2, n]
+    indices = [0] + [i
+                     for p in pairs
+                     for i in p]
+    indices.append(len(content_bytes))
+
+    # We zip the list with itself (offset by 1), moving by 2 elements each time,
+    # e.g. [0, s1, e1, s2, e2, n]
+    #   -> [(0, s1), (e1, s2), (e2, n)]
+    chunks = []
+    for s, e in zip(indices[::2], indices[1::2]):
+        chunks.append(content_bytes[s:e].decode("utf-8"))
+    new_content = "".join(chunks)
+
+    return new_content
+
+def get_loc(content):
+    # Parse the string to get comment AST nodes
+    QUERY = create_query("(comment) @comment")
+    tree = str_to_tree(content)
+    captures = QUERY.captures(tree.root_node)
+    pairs = [[c[0].start_byte, c[0].end_byte] for c in captures]
+
+    # Delete comments from the string
+    no_comments = delete_between_indices(content, pairs)
+
+    # Split string by newlines, delete empty lines
+    lines = no_comments.split("\n")
+    no_blanks = [l for l in lines if l.strip()]
+
+    return len(no_blanks)
+
 def count_funcs(tree):
     """
     Counts the number of functions in the tree. This is a proxy for the number
@@ -439,7 +483,7 @@ def add_metrics(example):
     content = example["content"]
     tree = str_to_tree(content)
 
-    example["loc"] = len(content.split("\n"))
+    example["loc"] = get_loc(content)
     example["functions"] = count_funcs(tree)
     example["function_signatures"] = count_func_sigs(tree)
     example["function_parameters"] = count_func_params(tree)
@@ -483,35 +527,12 @@ def strip_annotations(content):
 ]
 """)
     tree = str_to_tree(content)
-
-    # Each capture has a start_byte and end_byte; these are the indices of the
-    # type annotation. We want to invert these indices, i.e. get the substrings
-    # between the captures (and also the substring before the first capture and
-    # the substring after the last capture).
     captures = QUERY.captures(tree.root_node)
+    pairs = [[c[0].start_byte, c[0].end_byte]
+             for c in captures
+             if not is_child_type_annotation(c[0])]
 
-    # Need to operate on byte string, not characters
-    content_bytes = content.encode("utf-8")
-
-    # Flatten the capture indices into a list (but skip over child type
-    # annotations). But we also want to prepend 0 and append the last index of
-    # content, so we can re-pair the indices,
-    # e.g. [(s1, e1), (s2, e2)]
-    #   -> [0, s1, e1, s2, e2, n]
-    #   -> [(0, s1), (e1, s2), (e2, n)]
-    indices = [0] + [i
-                     for c in captures
-                     for i in [c[0].start_byte, c[0].end_byte]
-                     if not is_child_type_annotation(c[0])]
-    indices.append(len(content_bytes))
-
-    # We zip the list with itself (offset by 1), moving by 2 elements each time.
-    chunks = []
-    for s, e in zip(indices[::2], indices[1::2]):
-        chunks.append(content_bytes[s:e].decode("utf-8"))
-    new_content = "".join(chunks)
-
-    return new_content
+    return delete_between_indices(content, pairs)
 
 def add_stripped_annotations_column(example):
     example["content_without_annotations"] = strip_annotations(example["content"])
