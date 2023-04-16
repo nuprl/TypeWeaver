@@ -68,6 +68,10 @@ def parse_args():
 
     group = parser.add_argument_group(title="task to run")
     group.add_argument(
+        "--parse",
+        action="store_true",
+        help="filter dataset for files that parse")
+    group.add_argument(
         "--typecheck",
         action="store_true",
         help="filter dataset for files that type check")
@@ -131,20 +135,20 @@ def load(from_hf, dataset_dir, workers):
         print(f"Loading dataset from disk ({dataset_dir})...", flush=True)
         return load_from_disk(dataset_dir)
 
-def is_after_cutoff(dataset_example, cutoff):
-    def parsedate(string):
-        if string is None:
-            return None
-        else:
-            return datetime.strptime(string, "%Y-%m-%dT%H:%M:%S.%fZ")
+def _parsedate(string):
+    if string is None:
+        return None
+    else:
+        return datetime.strptime(string, "%Y-%m-%dT%H:%M:%S.%fZ")
 
+def is_after_cutoff(dataset_example, cutoff):
     if THE_STACK == "bigcode/the-stack-smol":
         # The Stack Smol has no timestamps so we can't filter
         return TRUE
     else:
-        stars_date = parsedate(dataset_example["max_stars_repo_stars_event_min_datetime"])
-        forks_date = parsedate(dataset_example["max_forks_repo_forks_event_min_datetime"])
-        issues_date = parsedate(dataset_example["max_issues_repo_issues_event_min_datetime"])
+        stars_date = _parsedate(dataset_example["max_stars_repo_stars_event_min_datetime"])
+        forks_date = _parsedate(dataset_example["max_forks_repo_forks_event_min_datetime"])
+        issues_date = _parsedate(dataset_example["max_issues_repo_issues_event_min_datetime"])
 
         timestamps = [t for t in [stars_date, forks_date, issues_date]
                       if t is not None]
@@ -156,6 +160,43 @@ def is_after_cutoff(dataset_example, cutoff):
 
         # We want ALL the timestamps to be after the cutoff
         return all(cutoff < t for t in timestamps)
+
+def is_typescript(example):
+    # Remove non-ts extensions (i.e. tsx extensions)
+    if example["ext"] != "ts":
+        return False
+
+    content = example["content"]
+
+    # Qt TS (translations), in XML format
+    if "<!DOCTYPE TS>" in content:
+        return False
+
+    # TSurf data file
+    if "GOCAD TSurf" in content:
+        return False
+
+    # Time series data
+    if "@problemName" in content:
+        return False
+
+    return True
+
+def parses(content):
+    root = str_to_tree(content).root_node
+    return not root.has_error
+
+def filter_parses(dataset, args):
+    print("Filtering for actual TypeScript files")
+    dataset = dataset.filter(is_typescript, num_proc=args.workers)
+    print("Number of TypeScript files:", len(dataset))
+
+    print("Parsing files")
+    dataset = dataset.filter(lambda e: parses(get_content(e)),
+                             num_proc=args.workers)
+    print("Files that parse: ", len(dataset))
+
+    return dataset
 
 def load_checkpoint(checkpoint_file):
     checkpoint = {}
@@ -175,9 +216,7 @@ def self_contained(content):
     matches = any(l for l in content.splitlines()
                   if IMPORT_RE.match(l)
                   or REQUIRE_RE.match(l)
-                  or (EXPORT_RE.match(l)
-                      and not EXPORT_RE2.match(l))
-                  or "<!DOCTYPE TS>" in l)
+                  or (EXPORT_RE.match(l) and not EXPORT_RE2.match(l)))
     return not matches
 
 def run_tsc(key, content):
@@ -258,8 +297,8 @@ def filter_typechecks(dataset, args, content_key="content"):
 
     return typechecks
 
-def str_to_tree(contents):
-    return PARSER.parse(bytes(contents, "utf-8"))
+def str_to_tree(content):
+    return PARSER.parse(bytes(content, "utf-8"))
 
 def node_to_str(node):
     return node.text.decode("utf-8")
@@ -509,16 +548,16 @@ def has_no_index_signature(dataset_example):
     tree = str_to_tree(content)
     return run_query(tree, QUERY) == 0
 
-def strip_annotations(content):
-    def is_child_type_annotation(node):
-        """Checks if any of the parent nodes is an annotation node."""
+def is_child_type_annotation(node):
+    """Checks if any of the parent nodes is an annotation node."""
+    node = node.parent
+    while node is not None:
+        if node.type == "type_annotation" or node.type == "opting_type_annotation" or node.type == "omitting_type_annotation":
+            return True
         node = node.parent
-        while node is not None:
-            if node.type == "type_annotation" or node.type == "opting_type_annotation" or node.type == "omitting_type_annotation":
-                return True
-            node = node.parent
-        return False
+    return False
 
+def strip_annotations(content):
     QUERY = create_query("""
 [
   (type_annotation) @annotation
@@ -548,6 +587,9 @@ def main():
 
     dataset = load(from_hf, dataset_dir, workers)
     print("Dataset size:", len(dataset))
+
+    if args.parse:
+        dataset = filter_parses(dataset, args)
 
     if args.typecheck:
         dataset = filter_typechecks(dataset, args)
