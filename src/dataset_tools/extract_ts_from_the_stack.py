@@ -123,8 +123,6 @@ def parse_args():
 def load(from_hf, dataset_dir, workers):
     if from_hf:
         revision = "v1.1" if THE_STACK == "bigcode/the-stack-dedup" else "v1.0"
-        # features: content, avg_line_length, max_line_length, alphanum_fraction,
-        # licenses, repository_name, path, size, lang
         print("Loading dataset from Hugging Face...", flush=True)
         return load_dataset(THE_STACK,
                             data_dir="data/typescript",
@@ -487,7 +485,7 @@ def count_type_defs(tree):
 def compute_dynamism_heuristic(tree):
     """
     A heuristic for how "dynamic" a program is (and therefore less suitable for TypeScript).
-    Counts occurrences of "eval", "typeof", "instanceof", and "with".
+    Counts occurrences of "eval", "as", "with", "typeof", and "instanceof".
     This is not an exhaustive list.
     """
     EVAL_QUERY = create_query("""
@@ -498,6 +496,9 @@ def compute_dynamism_heuristic(tree):
 )
 """)
     num_eval = run_query(tree, EVAL_QUERY)
+
+    AS_QUERY = create_query("(as_expression) @node")
+    num_as = run_query(tree, AS_QUERY)
 
     WITH_QUERY = create_query("(with_statement) @node")
     num_with = run_query(tree, WITH_QUERY)
@@ -516,7 +517,31 @@ def compute_dynamism_heuristic(tree):
         if len(children) > 1 and children[1].type == "instanceof":
             num_instanceof += 1
 
-    return num_eval + num_with + num_typeof + num_instanceof
+    return num_eval + num_as + num_with + num_typeof + num_instanceof
+
+def loc_per_function(content):
+    QUERY = create_query("""
+[
+  (function_declaration
+    body: (_) @body)
+  (function
+    body: (_) @body)
+  (arrow_function
+    body: (_) @body)
+  (method_definition
+    body: (_) @body)
+]
+""")
+    tree = str_to_tree(content)
+    captures = QUERY.captures(tree.root_node)
+    nodes = [c[0] for c in captures]
+
+    # Remove whitespace and open/close braces
+    fun_loc = [get_loc(node_to_str(n).strip().strip("{}"))
+               for n in nodes]
+    avg_loc = sum(fun_loc) / len(fun_loc) if fun_loc else 0.0
+
+    return avg_loc
 
 def add_metrics(example):
     content = example["content"]
@@ -532,6 +557,7 @@ def add_metrics(example):
     example["predefined_types"] = count_predefined_types(tree)
     example["type_definitions"] = count_type_defs(tree)
     example["dynamism_heuristic"] = compute_dynamism_heuristic(tree)
+    example["loc_per_function"] = loc_per_function(content)
 
     return example
 
@@ -625,10 +651,6 @@ def main():
                                 num_proc=workers)
         print("Size after filtering:", len(dataset))
 
-    # TODO: also want to do some filtering on the metrics, probably want to compute ratios,
-    # e.g. a really long file with only one annotation site is bad
-    # probably not worth filtering dynamism, there are legitimate uses and it's only a small percentage of files
-
     if output_dir:
         print("Saving result to", output_dir, flush=True)
         dataset.save_to_disk(output_dir, num_proc=workers)
@@ -641,6 +663,8 @@ def main():
             print("===CONTENT===")
             pp.pprint(d)
             input("===EOF===")
+
+    # TODO: maybe have the script read/write parquet files
 
 if __name__ == "__main__":
     main()
