@@ -108,7 +108,7 @@ def parse_args():
         exit(2)
     if args.dataset:
         util.check_exists(args.dataset)
-    if args.output:
+    if args.output and not args.output.endswith(".parquet"):
         Path(args.output).mkdir(parents=True, exist_ok=True)
     if args.cutoff is not None:
         try:
@@ -546,6 +546,45 @@ def loc_per_function(content):
 
     return avg_loc
 
+def count_function_usages(content):
+    """
+    Counts the number of function usages in the given content string.
+    Matches function/method calls to function declarations (including assigning
+    an anonymous function to a local variable) by comparing the identifiers.
+    """
+    FUN_QUERY = create_query("""
+[
+  (function_declaration
+    name: (_) @name)
+  (function
+    name: (_) @name)
+  (method_definition
+    name: (_) @name)
+  (variable_declarator
+    name: (identifier) @name
+    value: [(arrow_function) (function)]
+  )
+]
+""")
+
+    CALL_QUERY = create_query("""
+[
+  (call_expression
+    function: (identifier) @call)
+  (call_expression
+    function: (member_expression
+      property: (_) @call))
+]
+""")
+
+    root = str_to_tree(content).root_node
+
+    fun_nodes = { node_to_str(c[0]) for c in FUN_QUERY.captures(root) }
+    call_nodes = { node_to_str(c[0]) for c in CALL_QUERY.captures(root) }
+    overlap = fun_nodes & call_nodes
+
+    return len(overlap)
+
 def add_metrics(example):
     content = example["content"]
     tree = str_to_tree(content)
@@ -556,6 +595,7 @@ def add_metrics(example):
     example["function_parameters"] = count_func_params(tree)
     example["variable_declarations"] = count_var_decls(tree)
     example["property_declarations"] = count_prop_decls(tree)
+    example["function_usages"] = count_function_usages(content)
     example["trivial_types"] = count_trivial_types(tree)
     example["predefined_types"] = count_predefined_types(tree)
     example["type_definitions"] = count_type_defs(tree)
