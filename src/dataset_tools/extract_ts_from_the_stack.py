@@ -1,5 +1,5 @@
 from concurrent import futures
-from datasets import load_dataset, load_from_disk
+from datasets import Dataset, load_dataset, load_from_disk
 from datetime import date, datetime
 from pathlib import Path
 from subprocess import PIPE
@@ -109,7 +109,7 @@ def parse_args():
     if args.dataset:
         util.check_exists(args.dataset)
     if args.output:
-        util.check_exists(args.output)
+        Path(args.output).mkdir(parents=True, exist_ok=True)
     if args.cutoff is not None:
         try:
             args.cutoff = datetime.strptime(args.cutoff, "%Y-%m-%d")
@@ -129,6 +129,9 @@ def load(from_hf, dataset_dir, workers):
                             split="train",
                             revision=revision,
                             num_proc=workers)
+    elif dataset_dir.endswith(".parquet"):
+        print(f"Loading dataset from Parquet file ({dataset_dir})...", flush=True)
+        return Dataset.from_parquet(dataset_dir)
     else:
         print(f"Loading dataset from disk ({dataset_dir})...", flush=True)
         return load_from_disk(dataset_dir)
@@ -653,7 +656,10 @@ def main():
 
     if output_dir:
         print("Saving result to", output_dir, flush=True)
-        dataset.save_to_disk(output_dir, num_proc=workers)
+        if output_dir.endswith(".parquet"):
+            dataset.to_parquet(output_dir)
+        else:
+            dataset.save_to_disk(output_dir, num_proc=workers)
 
     if args.skim:
         pp = pprint.PrettyPrinter()
@@ -663,8 +669,6 @@ def main():
             print("===CONTENT===")
             pp.pprint(d)
             input("===EOF===")
-
-    # TODO: maybe have the script read/write parquet files
 
 if __name__ == "__main__":
     main()
