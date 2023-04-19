@@ -562,8 +562,14 @@ def count_function_usages(content):
     name: (_) @name)
   (variable_declarator
     name: (identifier) @name
-    value: [(arrow_function) (function)]
-  )
+    value: [(arrow_function) (function)])
+  (assignment_expression
+    left: (identifier) @name
+    right: [(arrow_function) (function)])
+  (assignment_expression
+    left: (member_expression
+      property: (_) @name)
+    right: [(arrow_function) (function)])
 ]
 """)
 
