@@ -1,0 +1,761 @@
+---
+title: "Exploring the TypeScript dataset"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r Libraries, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(cowplot)
+library(arrow)
+options(arrow.skip_nul=TRUE)
+```
+
+This dataset is derived from [The Stack
+(dedup)](https://huggingface.co/datasets/bigcode/the-stack-dedup/). It
+contains TypeScript files from The Stack that do not contain
+`import`/`export`/`require` and type check (with `tsc`). The dataset
+includes un-annotated versions of each file, which necessitated the
+removal of files that use index signatures (since it doesn't make sense
+to completely remove an index signature from a type).
+
+This filters the 12M TypeScript files down to about 1M.
+
+The goal here is to do some final filtering, by removing files that are
+"uninteresting" and not valuable to keep for an evaluation dataset.
+
+# Load the dataset
+
+```{r Load dataset0}
+dataset0 <- read_parquet("../../../datasets/ts-dataset-full.parquet",
+                         as_data_frame=TRUE) %>%
+  as_tibble %>%
+  select(hexsha, size, loc, tokens = estimated_tokens, content,
+         repo_path = max_stars_repo_path, repo_name = max_stars_repo_name,
+         funs = functions, fun_sigs = function_signatures,
+         fun_params = function_parameters, var_decls = variable_declarations,
+         prop_decls = property_declarations, fun_usages = function_usages,
+         trivial_types, predefined_types, type_defs = type_definitions,
+         dynamism = dynamism_heuristic, loc_per_fun = loc_per_function)
+```
+
+There are `r nrow(dataset0)` files in the dataset.
+
+# Helper functions
+
+```{r helper functions}
+# Peek at the first 20 lines of a random sample of files
+peek_sample <- function(filtered, samples=10, truncate=TRUE, loc=20) {
+  examples <- filtered %>% slice_sample(n=samples) %>% pull(content)
+  for (e in examples) {
+    if (truncate) {
+      split <- unlist(str_split(e, "\n"))
+      trimmed <- split[1:loc] %>% discard(is.na)
+      output <- paste0(trimmed, collapse="\n")
+    } else {
+      output <- e
+    }
+    cat("=====\n")
+    cat(output, "\n")
+  }
+}
+
+# Calculate z-scores (number of standard deviations above/below the mean)
+zscore <- function(data) {
+  mean <- mean(data)
+  sd <- sd(data)
+  (data - mean) / sd
+}
+
+# Normalize values to the range [0,1]
+normalize <- function(data) {
+  min <- min(data)
+  max <- max(data)
+  (data - min) / (max - min)
+}
+```
+
+# Annotation sites
+
+Let's first look at type annotation sites. Clearly, a file with 0
+annotation sites is not useful for evaluation, as there is nothing to
+type annotate.
+
+The number of annotation sites is defined as:
+
+$$
+\textrm{annotation sites} = \textrm{functions} + \textrm{function signatures} +
+                            \textrm{parameters} +
+                            \textrm{var decls} + \textrm{prop decls}
+$$
+
+`functions` and `function signatures` gives the number of function
+return type annotation sites. `functions` refers to functions with
+bodies while `function signatures` do not have bodies. `parameters` are
+counted for both functions and function signatures. `var decls` may be
+an overestimate because not all variable declarations (e.g., in a `for`
+loop) can be annotated.
+
+## Filtering
+
+We can immediately remove files with no annotation sites.
+
+```{r dataset1 add ann_sites and filter ann_sites > 0, warning=FALSE}
+dataset1 <- dataset0 %>%
+  mutate(ann_sites = funs + fun_sigs + fun_params + var_decls + prop_decls) %>%
+  filter(ann_sites > 0)
+```
+
+This removes `r nrow(dataset0) - nrow(dataset1)` files, leaving
+`r nrow(dataset1)`.
+
+```{r dataset1 histogram/ecdf ann_sites, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset1, aes(x=ann_sites)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset1, aes(x=ann_sites)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+# Size, lines of code, and tokens
+
+Size is in bytes. Lines of code ignores comments and lines that only
+contain whitespace. Token counts were estimated by running the
+SantaCoder tokenizer.
+
+```{r dataset1 histogram/ecdf size/loc/tokens, warning=FALSE, fig.width=8, fig.height=9}
+plot_grid(
+  ggplot(dataset1, aes(x=size)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset1, aes(x=size)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset1, aes(x=loc)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset1, aes(x=loc)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset1, aes(x=tokens)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset1, aes(x=tokens)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ncol=2)
+```
+
+## Filtering
+
+We'd like to filter out files that are too small. We could use size
+(which is in bytes) or tokens, but those counts include comments. Lines
+of code (which excludes blanks and comments) might be a better measure
+of what a programmer actually writes, but lines of code have different
+lengths, and some programs put everything onto a single line.
+
+Let's start by looking at the single-line programs. (We'll do this in
+the REPL since the output is too long to include in this notebook.)
+
+```{r peek loc is 1, eval=FALSE, warning=FALSE}
+dataset1 %>% filter(loc == 1) %>% slice_max(size) %>% peek_sample(samples=1, truncate=FALSE)
+dataset1 %>% filter(loc == 1) %>% slice_min(size, n=10) %>% peek_sample
+dataset1 %>% filter(loc == 1) %>% slice_max(ann_sites) %>% peek_sample(samples=1, truncate=FALSE)
+```
+
+Looking at some of these files, we see files that are very large but
+meaningless (e.g., base64-encoded data), very small and meaningless, or
+declaring hundreds of variables but containing no other content. In
+other words, they do not appear to be useful, human-written programs.
+
+```{r peek loc < 50, eval=FALSE, warning=FALSE}
+dataset1 %>% filter(loc < 50) %>% peek_sample
+```
+
+Looking at files with less than 50 lines of code, most of them are
+declarations with little functionality, or very small functions. Let's
+use this as our cutoff for now.
+
+```{r dataset2 filter loc > 50}
+dataset2 <- dataset1 %>% filter(loc >= 50)
+```
+
+This removes `r nrow(dataset1) - nrow(dataset2)` files and leaves
+`r nrow(dataset2)`.
+
+# Number of functions
+
+Next, let's look at the number of functions in each file.
+
+```{r dataset2 histogram/ecdf functions, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset2, aes(funs)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset2, aes(x=funs)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Filtering
+
+We prefer having more functions, since that is code that is actually
+computing something, and therefore more interesting to type annotate (as
+opposed to type definitions, which may already be type annotated).
+
+```{r peek funs is 0, eval=FALSE}
+dataset2 %>% filter(funs == 0) %>% slice_max(fun_params, n=10) %>% peek_sample(truncate=FALSE)
+dataset2 %>% filter(funs == 0) %>% slice_max(var_decls, n=10) %>% peek_sample
+dataset2 %>% filter(funs == 0) %>% slice_max(prop_decls, n=10) %>% peek_sample(truncate=FALSE)
+```
+
+We see that files with no functions are exporting functions (so there
+are function parameters but no function bodies), exporting constants, or
+declaring interfaces/classes.
+
+Additionally, predicting types makes more sense when there is code that
+uses the types; a class/interface definition provides little information
+for property types, other than the property names.
+
+Also, when predicting types for JavaScript, only modern JavaScript code
+(i.e. ES6) will have class definitions.
+
+Therefore, we want files with function definitions. We'll set our cutoff
+to 1 for now.
+
+```{r dataset3 filter funs > 0}
+dataset3 <- dataset2 %>% filter(funs > 0)
+```
+
+This removes `r nrow(dataset2) - nrow(dataset3)` files and leaves
+`r nrow(dataset3)`.
+
+# Lines of code per function
+
+We prefer functions with more lines of code, since those functions are
+more likely to be doing some computation (that involves types), instead
+of doing something simple such as getting/setting properties.
+
+```{r dataset3 histogram/ecdf loc_per_fun, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset3, aes(loc_per_fun)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset3, aes(x=loc_per_fun)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Filtering
+
+Let's peek at some of the files with the fewest and most lines of code
+per function.
+
+```{r peek loc_per_fun is 0, eval=FALSE}
+dataset3 %>% filter(loc_per_fun > 0) %>% slice_min(loc_per_fun, n=10) %>% peek_sample(truncate=FALSE)
+dataset3 %>% filter(loc > 0 & loc_per_fun < 5) %>% peek_sample(truncate=FALSE)
+dataset3 %>% filter(loc > 5 & loc_per_fun < 10) %>% peek_sample(truncate=FALSE)
+dataset3 %>% slice_max(loc_per_fun, n=10) %>% peek_sample
+```
+
+There are many files with empty functions, so we should filter those
+out. We also see that the really large functions are returning large
+dictionaries and other constants. Hopefully we can mitigate this by
+preferring a higher annotation density.
+
+```{r dataset4 filter loc_per_fun > 5}
+dataset4 <- dataset3 %>% filter(loc_per_fun >= 5)
+```
+
+This removes `r nrow(dataset3) - nrow(dataset4)` files and leaves
+`r nrow(dataset4)`.
+
+# Function usages
+
+Are the functions defined within a file also used by that file? We
+prefer files where this is true, because our type prediction algorithm
+can take advantage of function usages and provide them as additional
+context to the type prediction model.
+
+```{r dataset4 histogram/ecdf fun_usages, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset4, aes(x=fun_usages)) +
+    geom_histogram(bins=30),
+  ggplot(dataset4, aes(x=fun_usages)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b")
+  )
+```
+
+```{r peek fun_usages is 0, eval=FALSE, warning=FALSE}
+dataset4 %>% filter(fun_usages == 0) %>% peek_sample
+dataset4 %>% filter(fun_usages == 0 & funs > 0) %>% peek_sample
+```
+
+At this point, all the files with at least one function usage also have
+at least one function definition. Therefore, for now, we do not set a
+cutoff for function usages.
+
+# Type annotation density
+
+Let's return to type annotation sites. But now we want a measure of
+"density," to avoid very large files with few annotations.
+
+However, it will be more useful to separate the annotation sites into
+function annotations (including parameters and function returns),
+variable annotations, and property annotations, and compute three
+separate annotation densities. This is because we prefer certain
+annotation sites over others.
+
+$$
+\begin{aligned}
+  \textrm{function annotation density} &= \frac{\textrm{functions + parameters}}{\textrm{tokens}}
+  \\\\
+  \textrm{variable annotation density} &= \frac{\textrm{variable declarations}}{\textrm{tokens}}
+  \\\\
+  \textrm{property annotation density} &= \frac{\textrm{property declarations}}{\textrm{tokens}}
+\end{aligned}
+$$
+
+`loc` does not make sense as the denominator, because some programs are
+all on one line, so we could have density \> 1. `tokens` seems to be
+more spread out than `size`, so we will use that as the denominator.
+
+```{r dataset4 add ann_density}
+dataset4 <- dataset4 %>%
+  mutate(ann_density = ann_sites / tokens,
+         fun_ann_density = (funs + fun_params) / tokens,
+         var_ann_density = var_decls / tokens,
+         prop_ann_density = prop_decls / tokens)
+```
+
+```{r dataset4 histogram/ecdf ann_density, warning=FALSE, fig.width=8, fig.height=12}
+plot_grid(
+  ggplot(dataset4, aes(x=ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset4, aes(x=ann_density)) +
+    stat_ecdf() +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ggplot(dataset4, aes(x=fun_ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset4, aes(x=fun_ann_density)) +
+    stat_ecdf() +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ggplot(dataset4, aes(x=var_ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset4, aes(x=var_ann_density)) +
+    stat_ecdf() +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ggplot(dataset4, aes(x=prop_ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset4, aes(x=prop_ann_density)) +
+    stat_ecdf() +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ncol=2)
+```
+
+It's not clear if we should set a cutoff for annotation density.
+
+# Type definition density
+
+A type definition is defined as a class definition, interface
+definition, or type alias. We prefer examples with more type
+definitions, because this suggests interesting, user-defined types,
+instead of builtin types. Furthermore, class and interface definitions
+have properties which can be type annotated.
+
+```{r dataset4 add typedef_density}
+dataset4 <- dataset4 %>% mutate(typedef_density = type_defs / tokens)
+```
+
+We calculate the type definition density, using `tokens` as the
+denominator:
+
+$$
+\textrm{type definition density} = \frac{\textrm{type definitions}}{\textrm{tokens}}
+$$
+
+```{r dataset4 histogram/ecdf type_defs, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset4, aes(x=type_defs)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=type_defs)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+```{r dataset4 histogram/ecdf typedef_density, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset4, aes(x=typedef_density)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=typedef_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)))
+```
+
+It may be useful to prefer files with higher type definition density,
+but we don't want to set a cutoff: many usable examples may have few (if
+any) type definitions.
+
+# Dynamism
+
+Certain constructs like `eval` make type inference challenging.
+Similarly, `instanceof` and `typeof` are escape hatches, though there
+are legitimate uses in TypeScript.
+
+Let's compute the "dynamism density":
+
+$$
+\textrm{dynamism density} = \frac{\textrm{dynamism}}{\textrm{tokens}}
+$$
+
+```{r dataset4 add dynamism_density}
+dataset4 <- dataset4 %>% mutate(dynamism_density = dynamism / tokens)
+```
+
+```{r dataset4 histogram/ecdf dynamism, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset4, aes(x=dynamism)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides = "l"),
+  ggplot(dataset4, aes(x=dynamism)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+```{r dataset4 histogram/ecdf dynamism_density, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset4, aes(x=dynamism_density)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=dynamism_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)))
+```
+
+It's not clear if we should have a cutoff for dynamism density. We may
+prefer files with less dynamism, but there are many legitimate use
+cases.
+
+# Trivial and predefined type density
+
+A trivial type annotation is any occurrence of `any` or `Function`. This
+includes type arguments, e.g. `any[]` and `Array<any>` are counted as
+trivial types, and `MyType<any, any>` counts `any` twice.
+
+A predefined type is any occurrence of `number`, `boolean`, `string`,
+`symbol`, `void`, `unknown`, `never`, or `object`. Like our definition
+for trivial types, this includes type arguments, so
+`MyType<number, string>` and `number | string` each count as two
+predefined types but only one annotation site. The motivation is that a
+file with mostly predefined types is less interesting than a file with
+user-defined types.
+
+We calculate the trivial type density, using the number of annotation
+sites as the denominator. This is an approximation, because the type
+`MyType<any, any>` has two trivial types but counts for a single
+annotation site.
+
+$$
+\textrm{trivial type density} = \frac{\textrm{trivial types}}{\textrm{annotation sites}}
+$$
+
+We calculate the predefined type density, using annotation sites as the
+denominator.
+
+$$
+\textrm{predefined type density} = \frac{\textrm{predefined types}}{\textrm{annotation sites}}
+$$
+
+```{r dataset4 add trivial_density/predefined_density}
+dataset4 <- dataset4 %>% mutate(predefined_density = predefined_types / ann_sites,
+                                trivial_density = trivial_types / ann_sites)
+```
+
+```{r dataset4 histogram/ecdf trivial/predefined types, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset4, aes(x=trivial_types)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() + 
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=trivial_types)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset4, aes(x=predefined_types)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() + 
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=predefined_types)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+```{r dataset4 histogram/ecdf trivial/predefined density, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset4, aes(x=trivial_density)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=trivial_density)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset4, aes(x=predefined_density)) +
+    geom_histogram(bins=30) +
+    scale_y_log10() +
+    annotation_logticks(sides="l"),
+  ggplot(dataset4, aes(x=predefined_density)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+# Combined metric
+
+So far, we have looked at individual metrics, and used some of them as
+cutoffs to filter out low-quality examples.
+
+However, there are certain metrics we would like to optimize and not use
+as cutoffs:
+
+-   Higher {function,variable,property} annotation density
+-   Higher type definition density
+-   Lower dynamism density
+-   Lower {trivial,predefined} type density
+-   Higher lines of code per function
+-   Higher function usages
+
+To do so we will compute z-scores for each metric, which indicate how
+many standard deviations above or below the mean. We negate the scores
+that we want to minimize.
+
+```{r add_zscores}
+add_zscores <- function(dataset) {
+  dataset %>%
+    mutate(z.fun_ann_density = zscore(fun_ann_density),
+           z.var_ann_density = zscore(var_ann_density),
+           z.prop_ann_density = zscore(prop_ann_density),
+           z.typedef_density = zscore(typedef_density),
+           z.dynamism_density = -zscore(dynamism_density),
+           z.trivial_density = -zscore(trivial_density),
+           z.predefined_density = -zscore(predefined_density),
+           z.loc_per_fun = zscore(loc_per_fun),
+           z.fun_usages = zscore(fun_usages))
+}
+```
+
+Next we normalize the scores.
+
+```{r add_normalized}
+add_normalized <- function(dataset) {
+  dataset %>%
+    mutate(m.fun_ann_density = normalize(z.fun_ann_density),
+           m.var_ann_density = normalize(z.var_ann_density),
+           m.prop_ann_density = normalize(z.prop_ann_density),
+           m.typedef_density = normalize(z.typedef_density),
+           m.dynamism_density = normalize(z.dynamism_density),
+           m.trivial_density = normalize(z.trivial_density),
+           m.predefined_density = normalize(z.predefined_density),
+           m.loc_per_fun = normalize(z.loc_per_fun),
+           m.fun_usages = normalize(z.fun_usages))
+}
+```
+
+Finally, we compute a weighted sum of the metrics.
+
+-   The most important factors are function and variable annotation
+    density: we want files with functions and variables to annotate.
+-   Higher property annotation density is generally good, but we are
+    less interested in type annotating properties. Furthermore, to avoid
+    double counting (since type definition density is another metric,
+    and type definitions are correlated with properties), we weight
+    property annotation density to 0.
+-   Type definition density is useful to have more interesting types,
+    but too much weight on this metric means files that are only
+    declaring types and don't have functions.
+-   Dynamism density has very little weight, as it is generally
+    uncommon.
+-   Trivial type density and predefined type density are not as
+    important, but trivial types are "worse" than predefined types so it
+    should have more weight.
+-   We prefer files with larger functions, but not to the extent where a
+    single function can dominate the entire file.
+-   We also prefer more function usages.
+
+```{r weighted_score}
+add_weighted_score <- function(dataset) {
+  w.fun_ann_density <- 25
+  w.var_ann_density <- 25
+  w.prop_ann_density <- 0
+  w.typedef_density <- 11
+  w.dynamism_density <- 1
+  w.trivial_density <- 11
+  w.predefined_density <- 5
+  w.loc_per_fun <- 11
+  w.fun_usages <- 11
+
+  w.sum <- w.fun_ann_density +
+    w.var_ann_density +
+    w.prop_ann_density +
+    w.typedef_density +
+    w.dynamism_density +
+    w.trivial_density +
+    w.predefined_density +
+    w.loc_per_fun +
+    w.fun_usages
+
+  dataset %>%
+    mutate(metric = (
+      w.fun_ann_density * m.fun_ann_density +
+      w.var_ann_density * m.var_ann_density +
+      w.prop_ann_density * m.prop_ann_density +
+      w.typedef_density * m.typedef_density +
+      w.dynamism_density * m.dynamism_density +
+      w.trivial_density * m.trivial_density +
+      w.predefined_density * m.predefined_density +
+      w.loc_per_fun * m.loc_per_fun +
+      w.fun_usages * m.fun_usages)
+    / w.sum) %>%
+   select(-c(z.fun_ann_density, z.var_ann_density, z.prop_ann_density,
+             z.typedef_density, z.dynamism_density,
+             z.trivial_density, z.predefined_density,
+             z.loc_per_fun, z.fun_usages))
+}
+```
+
+Now that we've defined our functions (to avoid polluting the global
+namespace), we can run them on our dataset.
+
+```{r dataset5 combined_metric}
+dataset5 <- dataset4 %>%
+  add_zscores %>%
+  add_normalized %>%
+  add_weighted_score
+```
+
+```{r dataset5 histogram/ecdf metric, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset5, aes(x=metric)) +
+    geom_histogram(bins=30) +
+    geom_vline(aes(xintercept=mean(metric)), color="black") +
+    geom_vline(aes(xintercept=mean(metric)-sd(metric)), color="grey") +
+    geom_vline(aes(xintercept=mean(metric)+sd(metric)), color="grey") +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)),
+  ggplot(dataset5, aes(x=metric)) +
+    stat_ecdf() +
+    scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)))
+```
+
+```{r peek metric, eval=FALSE, warning=FALSE}
+dataset5 %>% slice_max(metric, n=10) %>% peek_sample()
+dataset5 %>% slice_min(metric, n=10) %>% peek_sample()
+
+metric_cutoff <- mean(dataset5$metric) - sd(dataset5$metric)
+dataset5 %>% filter(metric < metric_cutoff) %>% slice_max(metric, n=10) %>% peek_sample()
+```
+
+The files with the lowest metric are uninteresting. Some are long and
+only return large data structures, some only define types and enums, and
+some use a lot of dynamism.
+
+Next we look at the files with metrics more than 1 standard deviation
+below the mean; specifically we look at the ones with the highest
+metric, i.e. the ones that just barely got cut off. Most of these files
+are not very interesting, so we use -1 std.dev.
+(`r mean(dataset5$metric) - sd(dataset5$metric)`) as our cutoff.
+
+```{r dataset6 filter metric > 1 std dev below}
+metric_cutoff <- mean(dataset5$metric) - sd(dataset5$metric)
+dataset6 <- dataset5 %>% filter(metric >= metric_cutoff)
+```
+
+This removes `r nrow(dataset5) - nrow(dataset6)` files and leaves
+`r nrow(dataset6)`.
+
+# Write dataset
+
+```{r write dataset6, eval=FALSE, warning=FALSE}
+write_dataset <- function(dataset) {
+  original <- read_parquet("../../../datasets/ts-dataset-full.parquet",
+                         as_data_frame=TRUE) %>% as_tibble
+  hexsha <- dataset %>% select(hexsha)
+  output <- right_join(original, hexsha, by="hexsha")
+  write_parquet(output, "../../../datasets/ts-dataset-filtered-r.parquet")
+}
+write_dataset(dataset6)
+```
+
+# Summary of filtering steps
+
+1.  Start with The Stack: 12,817,789
+2.  Filter for files that are self-contained (no
+    `import`/`export`/`require`) and type check: 1,141,871
+3.  Filter `ann_sites > 0`: 949,073
+4.  Filter `loc >= 50`: 94,766
+5.  Filter `funs > 0`: 33,815
+6.  Filter `loc_per_fun >= 5`: 21,464
+7.  Filter `metric >= mean(metric) - sd(metric)`: 17,254
+8.  Filter after 2021-12-31 cutoff: 867
+9.  Remove type annotations: 744
+
+The metric is a weighted sum of the following factors:
+
+| Factor                      | Weight |
+|-----------------------------|--------|
+| function annotation density | 25%    |
+| variable annotation density | 25%    |
+| type definition density     | 11%    |
+| dynamism density            | 1%     |
+| trivial types density       | 11%    |
+| predefined types density    | 5%     |
+| lines of code per function  | 11%    |
+| number of function usages   | 11%    |
