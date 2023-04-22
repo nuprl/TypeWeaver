@@ -21,6 +21,15 @@ reusability. Nevertheless, they may still be helpful.
 * `download_pkg_src_from_github.py`: takes a JavaScript dataset and downloads
   package source code from GitHub
 
+* `explore_ts_dataset.Rmd`: R markdown file for exploring the TypeScript
+  dataset and prototyping quality filters. The HTML rendered version is
+  committed and can be previewed
+  [here](https://raw.rawgit.net/nuprl/TypeWeaver/main/src/dataset_tools/explore_ts_dataset.html)
+
+* `extract_ts_from_the_stack.py`: loads the TypeScript dataset from The Stack,
+  and processes and filters the dataset to produce a much smaller evaluation
+  dataset
+
 * `install_dependency_type_defs.py`: takes a JavaScript dataset and installs
   type definitions for each package's dependencies
 
