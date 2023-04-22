@@ -8,7 +8,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer
 from transformers.utils import logging
 from tree_sitter import Language, Parser, Node, Tree
-import argparse, os, pickle, pprint, re, subprocess
+import argparse, numpy as np, os, pickle, pprint, re, subprocess
 
 import util
 
@@ -84,14 +84,18 @@ def parse_args():
         action="store_true",
         help="add a column with the number of tokens")
     group.add_argument(
-        "--unannotate",
+        "--filter",
         action="store_true",
-        help="add a column with the file content, with type annotations removed")
+        help="filter out 'low quality' examples")
     group.add_argument(
         "--cutoff",
         nargs="?",
         const=DEFAULT_CUTOFF.strftime('%Y-%m-%d'),
         help=f"filter dataset for files after the specified cutoff date, in YYYY-MM-DD format; defaults to {DEFAULT_CUTOFF.strftime('%Y-%m-%d')}")
+    group.add_argument(
+        "--unannotate",
+        action="store_true",
+        help="add a column with the file content, with type annotations removed")
     group.add_argument(
         "--skim",
         action="store_true",
@@ -136,7 +140,7 @@ def load(from_hf, dataset_dir, workers):
         print(f"Loading dataset from disk ({dataset_dir})...", flush=True)
         return load_from_disk(dataset_dir)
 
-def _parsedate(string):
+def parsedate(string):
     if string is None:
         return None
     else:
@@ -147,9 +151,9 @@ def is_after_cutoff(dataset_example, cutoff):
         # The Stack Smol has no timestamps so we can't filter
         return TRUE
     else:
-        stars_date = _parsedate(dataset_example["max_stars_repo_stars_event_min_datetime"])
-        forks_date = _parsedate(dataset_example["max_forks_repo_forks_event_min_datetime"])
-        issues_date = _parsedate(dataset_example["max_issues_repo_issues_event_min_datetime"])
+        stars_date = parsedate(dataset_example["max_stars_repo_stars_event_min_datetime"])
+        forks_date = parsedate(dataset_example["max_forks_repo_forks_event_min_datetime"])
+        issues_date = parsedate(dataset_example["max_issues_repo_issues_event_min_datetime"])
 
         timestamps = [t for t in [stars_date, forks_date, issues_date]
                       if t is not None]
@@ -652,6 +656,117 @@ def add_stripped_annotations_column(example):
     example["content_without_annotations"] = strip_annotations(example["content"])
     return example
 
+def get_ann_sites(example):
+    funs = example["functions"]
+    fun_sigs = example["function_signatures"]
+    fun_params = example["function_parameters"]
+    var_decls = example["variable_declarations"]
+    prop_decls = example["property_declarations"]
+
+    return funs + fun_sigs + fun_params + var_decls + prop_decls
+
+def add_density_metrics(e):
+    tokens = e["estimated_tokens"]
+    if tokens == 0:
+        e["fun_ann_density"] = 0
+        e["var_ann_density"] = 0
+        e["prop_ann_density"] = 0
+        e["typedef_density"] = 0
+        e["dynamism_density"] = 0
+    else:
+        e["fun_ann_density"] = (e["functions"] + e["function_parameters"]) / tokens
+        e["var_ann_density"] = e["variable_declarations"] / tokens
+        e["prop_ann_density"] = e["property_declarations"] / tokens
+        e["typedef_density"] = e["type_definitions"] / tokens
+        e["dynamism_density"] = e["dynamism_heuristic"] / tokens
+
+    ann_sites = get_ann_sites(e)
+    if ann_sites == 0:
+        e["trivial_density"] = 0
+        e["predefined_density"] = 0
+    else:
+        e["trivial_density"] = e["trivial_types"] / ann_sites
+        e["predefined_density"] = e["predefined_types"] / ann_sites
+
+    return e
+
+def zscore(data, negate=False):
+    a = np.array(data)
+    mean = np.mean(a)
+    sd = np.std(a, ddof=1)
+    res = (a - mean) / sd
+    return res
+
+def normalize(data):
+    a = np.array(data)
+    minimum = np.min(a)
+    maximum = np.max(a)
+    res = (a - minimum) / (maximum - minimum)
+    return res
+
+def compute_weighted_metric(dataset, args):
+    fun_ann_density = normalize(zscore(dataset["fun_ann_density"]))
+    var_ann_density = normalize(zscore(dataset["var_ann_density"]))
+    prop_ann_density = normalize(zscore(dataset["prop_ann_density"]))
+    typedef_density = normalize(zscore(dataset["typedef_density"]))
+    dynamism_density = normalize(-zscore(dataset["dynamism_density"]))
+    trivial_density = normalize(-zscore(dataset["trivial_density"]))
+    predefined_density = normalize(-zscore(dataset["predefined_density"]))
+    loc_per_fun = normalize(zscore(dataset["loc_per_function"]))
+    fun_usages = normalize(zscore(dataset["function_usages"]))
+
+    # Same order as given above
+    weights = np.array([25, 25, 0, 11, 1, 11, 5, 11, 11])
+    weights = weights / np.sum(weights)
+
+    factors = np.stack((fun_ann_density,
+                        var_ann_density,
+                        prop_ann_density,
+                        typedef_density,
+                        dynamism_density,
+                        trivial_density,
+                        predefined_density,
+                        loc_per_fun,
+                        fun_usages), axis=-1)
+
+    metric = np.matmul(factors, weights)
+    dataset = dataset.add_column("metric", metric)
+
+    return dataset
+
+def filter_quality(dataset, args):
+    workers = args.workers
+
+    print("Filtering for annotation sites > 0", flush=True)
+    dataset = dataset.filter(lambda d: get_ann_sites(d) > 0, num_proc=workers)
+    print("Size after filtering:", len(dataset))
+
+    print("Filtering for lines of code >= 50", flush=True)
+    dataset = dataset.filter(lambda d: d["loc"] >= 50, num_proc=workers)
+    print("Size after filtering:", len(dataset))
+
+    print("Filtering for functions > 0", flush=True)
+    dataset = dataset.filter(lambda d: d["functions"] > 0, num_proc=workers)
+    print("Size after filtering:", len(dataset))
+
+    print("Filtering for lines of code per function >= 5", flush=True)
+    dataset = dataset.filter(lambda d: d["loc_per_function"] >= 5, num_proc=workers)
+    print("Size after filtering:", len(dataset))
+
+    print("Adding density metrics", flush=True)
+    dataset = dataset.map(add_density_metrics, num_proc=workers)
+
+    print("Computing weighted metric", flush=True)
+    dataset = compute_weighted_metric(dataset, args)
+
+    metrics = np.array(dataset["metric"])
+    cutoff = np.mean(metrics) - np.std(metrics, ddof=1)
+    print(f"Filtering on combined metric (cutoff={cutoff})", flush=True)
+    dataset = dataset.filter(lambda d: d["metric"] >= cutoff, num_proc=workers)
+    print("Size after filtering:", len(dataset))
+
+    return dataset
+
 def main():
     args = parse_args()
     workers = args.workers
@@ -683,6 +798,15 @@ def main():
         # Reset warning level
         logging.set_verbosity(logging.WARN)
 
+    if args.filter:
+        dataset = filter_quality(dataset, args)
+
+    if cutoff:
+        print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
+        dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
+                                num_proc=workers)
+        print("Size after filtering:", len(dataset))
+
     if args.unannotate:
         # First, filter out files with index_signatures, since it doesn't make
         # sense to remove those annotations
@@ -693,12 +817,6 @@ def main():
         print("Adding new column with type annotations removed")
         dataset = dataset.map(add_stripped_annotations_column,
                               num_proc=workers)
-
-    if cutoff:
-        print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
-        dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
-                                num_proc=workers)
-        print("Size after filtering:", len(dataset))
 
     if output_dir:
         print("Saving result to", output_dir, flush=True)
