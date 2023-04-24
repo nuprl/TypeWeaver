@@ -8,7 +8,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer
 from transformers.utils import logging
 from tree_sitter import Language, Parser, Node, Tree
-import argparse, numpy as np, os, pickle, pprint, re, subprocess
+import argparse, numpy as np, os, pickle, pprint, random, re, subprocess
 
 import util
 
@@ -65,6 +65,14 @@ def parse_args():
         type=int,
         default=cpu_count,
         help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
+    parser.add_argument(
+        "--sample",
+        type=str,
+        help="number or proportion (as a percentage) of elements to sample")
+    parser.add_argument(
+        "--skim",
+        action="store_true",
+        help="browse through the dataset, one example at a time")
 
     group = parser.add_argument_group(title="task to run")
     group.add_argument(
@@ -96,10 +104,6 @@ def parse_args():
         "--unannotate",
         action="store_true",
         help="add a column with the file content, with type annotations removed")
-    group.add_argument(
-        "--skim",
-        action="store_true",
-        help="browse through the dataset, one example at a time")
 
     args = parser.parse_args()
     if not (args.dataset or args.from_hf):
@@ -112,7 +116,7 @@ def parse_args():
         exit(2)
     if args.dataset:
         util.check_exists(args.dataset)
-    if args.output and not args.output.endswith(".parquet"):
+    if args.output and not (args.output.endswith(".parquet") or args.output.endswith(".jsonl")):
         Path(args.output).mkdir(parents=True, exist_ok=True)
     if args.cutoff is not None:
         try:
@@ -774,6 +778,7 @@ def main():
     from_hf = args.from_hf
     output_dir = args.output
     cutoff = args.cutoff
+    sample = args.sample
 
     dataset = load(from_hf, dataset_dir, workers)
     print("Dataset size:", len(dataset))
@@ -818,10 +823,23 @@ def main():
         dataset = dataset.map(add_stripped_annotations_column,
                               num_proc=workers)
 
+    if sample:
+        total = len(dataset)
+        if sample.endswith("%"):
+            pct = float(sample.rstrip("%")) / 100
+            sample = round(total * pct)
+        else:
+            sample = int(sample)
+        choices = random.sample(range(total), k=sample)
+        dataset = dataset.select(choices)
+        print("Size after sampling:", len(dataset))
+
     if output_dir:
         print("Saving result to", output_dir, flush=True)
         if output_dir.endswith(".parquet"):
             dataset.to_parquet(output_dir)
+        elif output_dir.endswith(".jsonl"):
+            dataset.to_json(output_dir)
         else:
             dataset.save_to_disk(output_dir, num_proc=workers)
 
