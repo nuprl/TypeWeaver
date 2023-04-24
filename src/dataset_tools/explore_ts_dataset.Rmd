@@ -761,3 +761,195 @@ Note: this dataset is written to disk for reference; the actual filtering is
 re-done in a Python script. That script does two further steps (#8 and #9 in
 the summary below). "Remove type annotations" also filters out files where
 removing the type annotations doesn't make sense, e.g. index signatures.
+
+# Exploring the evaluation dataset
+
+```{r load dataset9}
+dataset9 <- read_parquet("../../../datasets/ts-eval.parquet",
+                         as_data_frame=TRUE) %>%
+  as_tibble %>%
+  mutate(tokens = estimated_tokens, repo_path = max_stars_repo_path,
+         repo_name = max_stars_repo_name, funs = functions,
+         fun_sigs = function_signatures, fun_params = function_parameters,
+         var_decls = variable_declarations, prop_decls = property_declarations,
+         fun_usages = function_usages, trivial_types, predefined_types,
+         type_defs = type_definitions, dynamism = dynamism_heuristic,
+         loc_per_fun = loc_per_function)
+```
+
+## Annotation sites
+
+```{r dataset9 histogram/ecdf ann_sites, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset9, aes(x=funs + fun_sigs + fun_params + var_decls + prop_decls)) +
+    geom_histogram(bins=30) +
+    xlab("ann_sites") +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=funs + fun_sigs + fun_params + var_decls + prop_decls)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    xlab("ann_sites") +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Lines of code and tokens
+
+```{r dataset9 histogram/ecdf loc/tokens, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset9, aes(x=loc)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=loc)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=tokens)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=tokens)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ncol=2)
+```
+
+## Functions
+
+```{r dataset9 histogram/ecdf functions, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset9, aes(funs)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=funs)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Lines of code per function
+
+```{r dataset9 histogram/ecdf loc_per_fun, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset9, aes(loc_per_fun)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=loc_per_fun)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Function usages
+
+```{r dataset9 histogram/ecdf fun_usages, warning=FALSE, fig.width=8, fig.height=3}
+plot_grid(
+  ggplot(dataset9, aes(x=fun_usages)) +
+    geom_histogram(bins=30) +
+    scale_x_log10() +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=fun_usages)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"))
+```
+
+## Type annotation density
+
+```{r dataset9 histogram/ecdf ann_density, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset9, aes(x=fun_ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=fun_ann_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ggplot(dataset9, aes(x=var_ann_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=var_ann_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ncol=2)
+```
+
+## Type definition density
+
+```{r dataset9 histogram/ecdf type_defs, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset9, aes(x=type_defs)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=type_defs)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=typedef_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=typedef_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ncol=2)
+```
+
+## Dynamism density
+
+```{r dataset9 histogram/ecdf dynamism, warning=FALSE, fig.width=8, fig.height=6}
+plot_grid(
+  ggplot(dataset9, aes(x=dynamism)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=dynamism)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=dynamism_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=dynamism_density)) +
+    stat_ecdf() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)),
+  ncol=2)
+```
+
+## Trivial and predefined types density
+
+```{r dataset9 histogram/ecdf trivial/predefined types, warning=FALSE, fig.width=8, fig.height=12}
+plot_grid(
+  ggplot(dataset9, aes(x=trivial_types)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=trivial_types)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=trivial_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=trivial_density)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=predefined_types)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=predefined_types)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ggplot(dataset9, aes(x=predefined_density)) +
+    geom_histogram(bins=30),
+  ggplot(dataset9, aes(x=predefined_density)) +
+    stat_ecdf() +
+    scale_x_log10() +
+    scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
+    annotation_logticks(sides="b"),
+  ncol=2)
+```
