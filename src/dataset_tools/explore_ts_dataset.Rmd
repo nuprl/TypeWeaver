@@ -17,39 +17,7 @@ library(arrow)
 options(arrow.skip_nul=TRUE)
 ```
 
-This dataset is derived from [The Stack
-(dedup)](https://huggingface.co/datasets/bigcode/the-stack-dedup/). It
-contains TypeScript files from The Stack that do not contain
-`import`/`export`/`require` and type check (with `tsc`). The dataset
-includes un-annotated versions of each file, which necessitated the
-removal of files that use index signatures (since it doesn't make sense
-to completely remove an index signature from a type).
-
-This filters the 12M TypeScript files down to about 1M.
-
-The goal here is to do some final filtering, by removing files that are
-"uninteresting" and not valuable to keep for an evaluation dataset.
-
-# Load the dataset
-
-```{r Load dataset0}
-dataset0 <- read_parquet("../../../datasets/ts-dataset-full.parquet",
-                         as_data_frame=TRUE) %>%
-  as_tibble %>%
-  select(hexsha, size, loc, tokens = estimated_tokens, content,
-         repo_path = max_stars_repo_path, repo_name = max_stars_repo_name,
-         funs = functions, fun_sigs = function_signatures,
-         fun_params = function_parameters, var_decls = variable_declarations,
-         prop_decls = property_declarations, fun_usages = function_usages,
-         trivial_types, predefined_types, type_defs = type_definitions,
-         dynamism = dynamism_heuristic, loc_per_fun = loc_per_function)
-```
-
-There are `r nrow(dataset0)` files in the dataset.
-
-# Helper functions
-
-```{r helper functions}
+```{r helper functions, include=FALSE}
 # Peek at the first 20 lines of a random sample of files
 peek_sample <- function(filtered, samples=10, truncate=TRUE, loc=20) {
   examples <- filtered %>% slice_sample(n=samples) %>% pull(content)
@@ -81,7 +49,36 @@ normalize <- function(data) {
 }
 ```
 
-# Annotation sites
+# 1. Original dataset
+
+The original dataset comes from [The Stack
+(dedup)](https://huggingface.co/datasets/bigcode/the-stack-dedup/), and contains
+12,817,789 files.
+
+# 2. TypeScript files that type check
+
+We pre-process The Stack by filtering for files that do not contain
+`import`/`export`/`require` and type check (with `tsc`).
+
+```{r Load dataset2}
+dataset2 <- read_parquet("../../../datasets/ts-dataset-full.parquet",
+                         as_data_frame=TRUE) %>%
+  as_tibble %>%
+  select(hexsha, size, loc, tokens = estimated_tokens, content,
+         repo_path = max_stars_repo_path, repo_name = max_stars_repo_name,
+         funs = functions, fun_sigs = function_signatures,
+         fun_params = function_parameters, var_decls = variable_declarations,
+         prop_decls = property_declarations, fun_usages = function_usages,
+         trivial_types, predefined_types, type_defs = type_definitions,
+         dynamism = dynamism_heuristic, loc_per_fun = loc_per_function)
+```
+
+This reduces the dataset down to `r nrow(dataset2)` TypeScript files.
+
+Our task now is to do some further filtering, by removing files that are
+"uninteresting" and not valuable to keep for an evaluation dataset.
+
+# 3. Annotation sites
 
 Let's first look at type annotation sites. Clearly, a file with 0
 annotation sites is not useful for evaluation, as there is nothing to
@@ -106,59 +103,59 @@ loop) can be annotated.
 
 We can immediately remove files with no annotation sites.
 
-```{r dataset1 add ann_sites and filter ann_sites > 0, warning=FALSE}
-dataset1 <- dataset0 %>%
+```{r dataset3 add ann_sites and filter ann_sites > 0, warning=FALSE}
+dataset3 <- dataset2 %>%
   mutate(ann_sites = funs + fun_sigs + fun_params + var_decls + prop_decls) %>%
   filter(ann_sites > 0)
 ```
 
-This removes `r nrow(dataset0) - nrow(dataset1)` files, leaving
-`r nrow(dataset1)`.
+This removes `r nrow(dataset2) - nrow(dataset3)` files, leaving
+`r nrow(dataset3)`.
 
-```{r dataset1 histogram/ecdf ann_sites, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset3 histogram/ecdf ann_sites, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset1, aes(x=ann_sites)) +
+  ggplot(dataset3, aes(x=ann_sites)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset1, aes(x=ann_sites)) +
+  ggplot(dataset3, aes(x=ann_sites)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"))
 ```
 
-# Size, lines of code, and tokens
+# 4. Size, lines of code, and tokens
 
 Size is in bytes. Lines of code ignores comments and lines that only
 contain whitespace. Token counts were estimated by running the
 SantaCoder tokenizer.
 
-```{r dataset1 histogram/ecdf size/loc/tokens, warning=FALSE, fig.width=8, fig.height=9}
+```{r dataset3 histogram/ecdf size/loc/tokens, warning=FALSE, fig.width=8, fig.height=9}
 plot_grid(
-  ggplot(dataset1, aes(x=size)) +
+  ggplot(dataset3, aes(x=size)) +
     geom_histogram(bins=30) +
     scale_x_log10() +
     annotation_logticks(sides="b"),
-  ggplot(dataset1, aes(x=size)) +
+  ggplot(dataset3, aes(x=size)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"),
-  ggplot(dataset1, aes(x=loc)) +
+  ggplot(dataset3, aes(x=loc)) +
     geom_histogram(bins=30) +
     scale_x_log10() +
     annotation_logticks(sides="b"),
-  ggplot(dataset1, aes(x=loc)) +
+  ggplot(dataset3, aes(x=loc)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"),
-  ggplot(dataset1, aes(x=tokens)) +
+  ggplot(dataset3, aes(x=tokens)) +
     geom_histogram(bins=30) +
     scale_x_log10() +
     annotation_logticks(sides="b"),
-  ggplot(dataset1, aes(x=tokens)) +
+  ggplot(dataset3, aes(x=tokens)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
@@ -178,9 +175,9 @@ Let's start by looking at the single-line programs. (We'll do this in
 the REPL since the output is too long to include in this notebook.)
 
 ```{r peek loc is 1, eval=FALSE, warning=FALSE}
-dataset1 %>% filter(loc == 1) %>% slice_max(size) %>% peek_sample(samples=1, truncate=FALSE)
-dataset1 %>% filter(loc == 1) %>% slice_min(size, n=10) %>% peek_sample
-dataset1 %>% filter(loc == 1) %>% slice_max(ann_sites) %>% peek_sample(samples=1, truncate=FALSE)
+dataset3 %>% filter(loc == 1) %>% slice_max(size) %>% peek_sample(samples=1, truncate=FALSE)
+dataset3 %>% filter(loc == 1) %>% slice_min(size, n=10) %>% peek_sample
+dataset3 %>% filter(loc == 1) %>% slice_max(ann_sites) %>% peek_sample(samples=1, truncate=FALSE)
 ```
 
 Looking at some of these files, we see files that are very large but
@@ -189,31 +186,31 @@ declaring hundreds of variables but containing no other content. In
 other words, they do not appear to be useful, human-written programs.
 
 ```{r peek loc < 50, eval=FALSE, warning=FALSE}
-dataset1 %>% filter(loc < 50) %>% peek_sample
+dataset3 %>% filter(loc < 50) %>% peek_sample
 ```
 
 Looking at files with less than 50 lines of code, most of them are
 declarations with little functionality, or very small functions. Let's
 use this as our cutoff for now.
 
-```{r dataset2 filter loc > 50}
-dataset2 <- dataset1 %>% filter(loc >= 50)
+```{r dataset4 filter loc > 50}
+dataset4 <- dataset3 %>% filter(loc >= 50)
 ```
 
-This removes `r nrow(dataset1) - nrow(dataset2)` files and leaves
-`r nrow(dataset2)`.
+This removes `r nrow(dataset3) - nrow(dataset4)` files and leaves
+`r nrow(dataset4)`.
 
-# Number of functions
+# 5. Number of functions
 
 Next, let's look at the number of functions in each file.
 
-```{r dataset2 histogram/ecdf functions, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset4 histogram/ecdf functions, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset2, aes(funs)) +
+  ggplot(dataset4, aes(funs)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset2, aes(x=funs)) +
+  ggplot(dataset4, aes(x=funs)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
@@ -227,9 +224,9 @@ computing something, and therefore more interesting to type annotate (as
 opposed to type definitions, which may already be type annotated).
 
 ```{r peek funs is 0, eval=FALSE}
-dataset2 %>% filter(funs == 0) %>% slice_max(fun_params, n=10) %>% peek_sample(truncate=FALSE)
-dataset2 %>% filter(funs == 0) %>% slice_max(var_decls, n=10) %>% peek_sample
-dataset2 %>% filter(funs == 0) %>% slice_max(prop_decls, n=10) %>% peek_sample(truncate=FALSE)
+dataset4 %>% filter(funs == 0) %>% slice_max(fun_params, n=10) %>% peek_sample(truncate=FALSE)
+dataset4 %>% filter(funs == 0) %>% slice_max(var_decls, n=10) %>% peek_sample
+dataset4 %>% filter(funs == 0) %>% slice_max(prop_decls, n=10) %>% peek_sample(truncate=FALSE)
 ```
 
 We see that files with no functions are exporting functions (so there
@@ -246,26 +243,26 @@ Also, when predicting types for JavaScript, only modern JavaScript code
 Therefore, we want files with function definitions. We'll set our cutoff
 to 1 for now.
 
-```{r dataset3 filter funs > 0}
-dataset3 <- dataset2 %>% filter(funs > 0)
+```{r dataset5 filter funs > 0}
+dataset5 <- dataset4 %>% filter(funs > 0)
 ```
 
-This removes `r nrow(dataset2) - nrow(dataset3)` files and leaves
-`r nrow(dataset3)`.
+This removes `r nrow(dataset4) - nrow(dataset5)` files and leaves
+`r nrow(dataset5)`.
 
-# Lines of code per function
+# 6. Lines of code per function
 
 We prefer functions with more lines of code, since those functions are
 more likely to be doing some computation (that involves types), instead
 of doing something simple such as getting/setting properties.
 
-```{r dataset3 histogram/ecdf loc_per_fun, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset5 histogram/ecdf loc_per_fun, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset3, aes(loc_per_fun)) +
+  ggplot(dataset5, aes(loc_per_fun)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset3, aes(x=loc_per_fun)) +
+  ggplot(dataset5, aes(x=loc_per_fun)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
@@ -278,10 +275,10 @@ Let's peek at some of the files with the fewest and most lines of code
 per function.
 
 ```{r peek loc_per_fun is 0, eval=FALSE}
-dataset3 %>% filter(loc_per_fun > 0) %>% slice_min(loc_per_fun, n=10) %>% peek_sample(truncate=FALSE)
-dataset3 %>% filter(loc > 0 & loc_per_fun < 5) %>% peek_sample(truncate=FALSE)
-dataset3 %>% filter(loc > 5 & loc_per_fun < 10) %>% peek_sample(truncate=FALSE)
-dataset3 %>% slice_max(loc_per_fun, n=10) %>% peek_sample
+dataset5 %>% filter(loc_per_fun > 0) %>% slice_min(loc_per_fun, n=10) %>% peek_sample(truncate=FALSE)
+dataset5 %>% filter(loc > 0 & loc_per_fun < 5) %>% peek_sample(truncate=FALSE)
+dataset5 %>% filter(loc > 5 & loc_per_fun < 10) %>% peek_sample(truncate=FALSE)
+dataset5 %>% slice_max(loc_per_fun, n=10) %>% peek_sample
 ```
 
 There are many files with empty functions, so we should filter those
@@ -289,42 +286,47 @@ out. We also see that the really large functions are returning large
 dictionaries and other constants. Hopefully we can mitigate this by
 preferring a higher annotation density.
 
-```{r dataset4 filter loc_per_fun > 5}
-dataset4 <- dataset3 %>% filter(loc_per_fun >= 5)
+```{r dataset6 filter loc_per_fun > 5}
+dataset6 <- dataset5 %>% filter(loc_per_fun >= 5)
 ```
 
-This removes `r nrow(dataset3) - nrow(dataset4)` files and leaves
-`r nrow(dataset4)`.
+This removes `r nrow(dataset5) - nrow(dataset6)` files and leaves
+`r nrow(dataset6)`.
 
-# Function usages
+# 7. Combined metric
+
+There are other criteria we can use to filter the dataset; however, they do not
+seem suitable as hard cutoffs. For now, we examine them, and will use them in
+a combined metric.
+
+## Function usages
 
 Are the functions defined within a file also used by that file? We
 prefer files where this is true, because our type prediction algorithm
 can take advantage of function usages and provide them as additional
 context to the type prediction model.
 
-```{r dataset4 histogram/ecdf fun_usages, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf fun_usages, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset4, aes(x=fun_usages)) +
+  ggplot(dataset6, aes(x=fun_usages)) +
     geom_histogram(bins=30),
-  ggplot(dataset4, aes(x=fun_usages)) +
+  ggplot(dataset6, aes(x=fun_usages)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
-    annotation_logticks(sides="b")
-  )
+    annotation_logticks(sides="b"))
 ```
 
 ```{r peek fun_usages is 0, eval=FALSE, warning=FALSE}
-dataset4 %>% filter(fun_usages == 0) %>% peek_sample
-dataset4 %>% filter(fun_usages == 0 & funs > 0) %>% peek_sample
+dataset6 %>% filter(fun_usages == 0) %>% peek_sample
+dataset6 %>% filter(fun_usages == 0 & funs > 0) %>% peek_sample
 ```
 
 At this point, all the files with at least one function usage also have
 at least one function definition. Therefore, for now, we do not set a
 cutoff for function usages.
 
-# Type annotation density
+## Type annotation density
 
 Let's return to type annotation sites. But now we want a measure of
 "density," to avoid very large files with few annotations.
@@ -349,37 +351,37 @@ $$
 all on one line, so we could have density \> 1. `tokens` seems to be
 more spread out than `size`, so we will use that as the denominator.
 
-```{r dataset4 add ann_density}
-dataset4 <- dataset4 %>%
+```{r dataset6 add ann_density}
+dataset6 <- dataset6 %>%
   mutate(ann_density = ann_sites / tokens,
          fun_ann_density = (funs + fun_params) / tokens,
          var_ann_density = var_decls / tokens,
          prop_ann_density = prop_decls / tokens)
 ```
 
-```{r dataset4 histogram/ecdf ann_density, warning=FALSE, fig.width=8, fig.height=12}
+```{r dataset6 histogram/ecdf ann_density, warning=FALSE, fig.width=8, fig.height=12}
 plot_grid(
-  ggplot(dataset4, aes(x=ann_density)) +
+  ggplot(dataset6, aes(x=ann_density)) +
     geom_histogram(bins=30),
-  ggplot(dataset4, aes(x=ann_density)) +
+  ggplot(dataset6, aes(x=ann_density)) +
     stat_ecdf() +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)),
-  ggplot(dataset4, aes(x=fun_ann_density)) +
+  ggplot(dataset6, aes(x=fun_ann_density)) +
     geom_histogram(bins=30),
-  ggplot(dataset4, aes(x=fun_ann_density)) +
+  ggplot(dataset6, aes(x=fun_ann_density)) +
     stat_ecdf() +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)),
-  ggplot(dataset4, aes(x=var_ann_density)) +
+  ggplot(dataset6, aes(x=var_ann_density)) +
     geom_histogram(bins=30),
-  ggplot(dataset4, aes(x=var_ann_density)) +
+  ggplot(dataset6, aes(x=var_ann_density)) +
     stat_ecdf() +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)),
-  ggplot(dataset4, aes(x=prop_ann_density)) +
+  ggplot(dataset6, aes(x=prop_ann_density)) +
     geom_histogram(bins=30),
-  ggplot(dataset4, aes(x=prop_ann_density)) +
+  ggplot(dataset6, aes(x=prop_ann_density)) +
     stat_ecdf() +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)),
@@ -388,7 +390,7 @@ plot_grid(
 
 It's not clear if we should set a cutoff for annotation density.
 
-# Type definition density
+## Type definition density
 
 A type definition is defined as a class definition, interface
 definition, or type alias. We prefer examples with more type
@@ -396,8 +398,8 @@ definitions, because this suggests interesting, user-defined types,
 instead of builtin types. Furthermore, class and interface definitions
 have properties which can be type annotated.
 
-```{r dataset4 add typedef_density}
-dataset4 <- dataset4 %>% mutate(typedef_density = type_defs / tokens)
+```{r dataset6 add typedef_density}
+dataset6 <- dataset6 %>% mutate(typedef_density = type_defs / tokens)
 ```
 
 We calculate the type definition density, using `tokens` as the
@@ -407,26 +409,26 @@ $$
 \textrm{type definition density} = \frac{\textrm{type definitions}}{\textrm{tokens}}
 $$
 
-```{r dataset4 histogram/ecdf type_defs, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf type_defs, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset4, aes(x=type_defs)) +
+  ggplot(dataset6, aes(x=type_defs)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=type_defs)) +
+  ggplot(dataset6, aes(x=type_defs)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"))
 ```
 
-```{r dataset4 histogram/ecdf typedef_density, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf typedef_density, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset4, aes(x=typedef_density)) +
+  ggplot(dataset6, aes(x=typedef_density)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=typedef_density)) +
+  ggplot(dataset6, aes(x=typedef_density)) +
     stat_ecdf() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)))
 ```
@@ -435,7 +437,7 @@ It may be useful to prefer files with higher type definition density,
 but we don't want to set a cutoff: many usable examples may have few (if
 any) type definitions.
 
-# Dynamism
+## Dynamism
 
 Certain constructs like `eval` make type inference challenging.
 Similarly, `instanceof` and `typeof` are escape hatches, though there
@@ -447,30 +449,30 @@ $$
 \textrm{dynamism density} = \frac{\textrm{dynamism}}{\textrm{tokens}}
 $$
 
-```{r dataset4 add dynamism_density}
-dataset4 <- dataset4 %>% mutate(dynamism_density = dynamism / tokens)
+```{r dataset6 add dynamism_density}
+dataset6 <- dataset6 %>% mutate(dynamism_density = dynamism / tokens)
 ```
 
-```{r dataset4 histogram/ecdf dynamism, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf dynamism, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset4, aes(x=dynamism)) +
+  ggplot(dataset6, aes(x=dynamism)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides = "l"),
-  ggplot(dataset4, aes(x=dynamism)) +
+  ggplot(dataset6, aes(x=dynamism)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"))
 ```
 
-```{r dataset4 histogram/ecdf dynamism_density, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf dynamism_density, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset4, aes(x=dynamism_density)) +
+  ggplot(dataset6, aes(x=dynamism_density)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=dynamism_density)) +
+  ggplot(dataset6, aes(x=dynamism_density)) +
     stat_ecdf() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)))
 ```
@@ -479,7 +481,7 @@ It's not clear if we should have a cutoff for dynamism density. We may
 prefer files with less dynamism, but there are many legitimate use
 cases.
 
-# Trivial and predefined type density
+## Trivial and predefined type density
 
 A trivial type annotation is any occurrence of `any` or `Function`. This
 includes type arguments, e.g. `any[]` and `Array<any>` are counted as
@@ -509,56 +511,56 @@ $$
 \textrm{predefined type density} = \frac{\textrm{predefined types}}{\textrm{annotation sites}}
 $$
 
-```{r dataset4 add trivial_density/predefined_density}
-dataset4 <- dataset4 %>% mutate(predefined_density = predefined_types / ann_sites,
+```{r dataset6 add trivial_density/predefined_density}
+dataset6 <- dataset6 %>% mutate(predefined_density = predefined_types / ann_sites,
                                 trivial_density = trivial_types / ann_sites)
 ```
 
-```{r dataset4 histogram/ecdf trivial/predefined types, warning=FALSE, fig.width=8, fig.height=6}
+```{r dataset6 histogram/ecdf trivial/predefined types, warning=FALSE, fig.width=8, fig.height=6}
 plot_grid(
-  ggplot(dataset4, aes(x=trivial_types)) +
+  ggplot(dataset6, aes(x=trivial_types)) +
     geom_histogram(bins=30) +
     scale_y_log10() + 
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=trivial_types)) +
+  ggplot(dataset6, aes(x=trivial_types)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"),
-  ggplot(dataset4, aes(x=predefined_types)) +
+  ggplot(dataset6, aes(x=predefined_types)) +
     geom_histogram(bins=30) +
     scale_y_log10() + 
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=predefined_types)) +
+  ggplot(dataset6, aes(x=predefined_types)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"))
 ```
 
-```{r dataset4 histogram/ecdf trivial/predefined density, warning=FALSE, fig.width=8, fig.height=6}
+```{r dataset6 histogram/ecdf trivial/predefined density, warning=FALSE, fig.width=8, fig.height=6}
 plot_grid(
-  ggplot(dataset4, aes(x=trivial_density)) +
+  ggplot(dataset6, aes(x=trivial_density)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=trivial_density)) +
+  ggplot(dataset6, aes(x=trivial_density)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"),
-  ggplot(dataset4, aes(x=predefined_density)) +
+  ggplot(dataset6, aes(x=predefined_density)) +
     geom_histogram(bins=30) +
     scale_y_log10() +
     annotation_logticks(sides="l"),
-  ggplot(dataset4, aes(x=predefined_density)) +
+  ggplot(dataset6, aes(x=predefined_density)) +
     stat_ecdf() +
     scale_x_log10() +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)) +
     annotation_logticks(sides="b"))
 ```
 
-# Combined metric
+## Defining the combined metric
 
 So far, we have looked at individual metrics, and used some of them as
 cutoffs to filter out low-quality examples.
@@ -663,44 +665,39 @@ add_weighted_score <- function(dataset) {
       w.predefined_density * m.predefined_density +
       w.loc_per_fun * m.loc_per_fun +
       w.fun_usages * m.fun_usages)
-    / w.sum) %>%
-   select(-c(z.fun_ann_density, z.var_ann_density, z.prop_ann_density,
-             z.typedef_density, z.dynamism_density,
-             z.trivial_density, z.predefined_density,
-             z.loc_per_fun, z.fun_usages))
+    / w.sum)
 }
 ```
 
 Now that we've defined our functions (to avoid polluting the global
 namespace), we can run them on our dataset.
 
-```{r dataset5 combined_metric}
-dataset5 <- dataset4 %>%
-  add_zscores %>%
-  add_normalized %>%
-  add_weighted_score
+```{r dataset6 combined_metric}
+dataset6 <- dataset6 %>% add_zscores %>% add_normalized %>% add_weighted_score
 ```
 
-```{r dataset5 histogram/ecdf metric, warning=FALSE, fig.width=8, fig.height=3}
+```{r dataset6 histogram/ecdf metric, warning=FALSE, fig.width=8, fig.height=3}
 plot_grid(
-  ggplot(dataset5, aes(x=metric)) +
+  ggplot(dataset6, aes(x=metric)) +
     geom_histogram(bins=30) +
     geom_vline(aes(xintercept=mean(metric)), color="black") +
     geom_vline(aes(xintercept=mean(metric)-sd(metric)), color="grey") +
     geom_vline(aes(xintercept=mean(metric)+sd(metric)), color="grey") +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)),
-  ggplot(dataset5, aes(x=metric)) +
+  ggplot(dataset6, aes(x=metric)) +
     stat_ecdf() +
     scale_x_continuous(breaks=scales::pretty_breaks(n=10)) +
     scale_y_continuous(breaks=seq(0, 1, by=0.2)))
 ```
 
-```{r peek metric, eval=FALSE, warning=FALSE}
-dataset5 %>% slice_max(metric, n=10) %>% peek_sample()
-dataset5 %>% slice_min(metric, n=10) %>% peek_sample()
+## Filtering
 
-metric_cutoff <- mean(dataset5$metric) - sd(dataset5$metric)
-dataset5 %>% filter(metric < metric_cutoff) %>% slice_max(metric, n=10) %>% peek_sample()
+```{r peek metric, eval=FALSE, warning=FALSE}
+dataset6 %>% slice_max(metric, n=10) %>% peek_sample()
+dataset6 %>% slice_min(metric, n=10) %>% peek_sample()
+
+metric_cutoff <- mean(dataset6$metric) - sd(dataset6$metric)
+dataset6 %>% filter(metric < metric_cutoff) %>% slice_max(metric, n=10) %>% peek_sample()
 ```
 
 The files with the lowest metric are uninteresting. Some are long and
@@ -711,28 +708,15 @@ Next we look at the files with metrics more than 1 standard deviation
 below the mean; specifically we look at the ones with the highest
 metric, i.e. the ones that just barely got cut off. Most of these files
 are not very interesting, so we use -1 std.dev.
-(`r mean(dataset5$metric) - sd(dataset5$metric)`) as our cutoff.
+(`r mean(dataset6$metric) - sd(dataset6$metric)`) as our cutoff.
 
-```{r dataset6 filter metric > 1 std dev below}
-metric_cutoff <- mean(dataset5$metric) - sd(dataset5$metric)
-dataset6 <- dataset5 %>% filter(metric >= metric_cutoff)
+```{r dataset7 filter metric > 1 std dev below}
+metric_cutoff <- mean(dataset6$metric) - sd(dataset6$metric)
+dataset7 <- dataset6 %>% filter(metric >= metric_cutoff)
 ```
 
-This removes `r nrow(dataset5) - nrow(dataset6)` files and leaves
-`r nrow(dataset6)`.
-
-# Write dataset
-
-```{r write dataset6, eval=FALSE, warning=FALSE}
-write_dataset <- function(dataset) {
-  original <- read_parquet("../../../datasets/ts-dataset-full.parquet",
-                         as_data_frame=TRUE) %>% as_tibble
-  hexsha <- dataset %>% select(hexsha)
-  output <- right_join(original, hexsha, by="hexsha")
-  write_parquet(output, "../../../datasets/ts-dataset-filtered-r.parquet")
-}
-write_dataset(dataset6)
-```
+This removes `r nrow(dataset6) - nrow(dataset7)` files and leaves
+`r nrow(dataset7)`.
 
 # Summary of filtering steps
 
@@ -759,3 +743,21 @@ The metric is a weighted sum of the following factors:
 | predefined types density    | 5%     |
 | lines of code per function  | 11%    |
 | number of function usages   | 11%    |
+
+# Write dataset
+
+```{r write dataset7, eval=FALSE, warning=FALSE}
+write_dataset <- function(dataset) {
+  original <- read_parquet("../../../datasets/ts-dataset-full.parquet",
+                         as_data_frame=TRUE) %>% as_tibble
+  hexsha <- dataset %>% select(hexsha)
+  output <- right_join(original, hexsha, by="hexsha")
+  write_parquet(output, "../../../datasets/ts-dataset-filtered-r.parquet")
+}
+write_dataset(dataset7)
+```
+
+Note: this dataset is written to disk for reference; the actual filtering is
+re-done in a Python script. That script does two further steps (#8 and #9 in
+the summary below). "Remove type annotations" also filters out files where
+removing the type annotations doesn't make sense, e.g. index signatures.
