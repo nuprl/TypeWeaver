@@ -13,11 +13,13 @@ class Model:
         self,
         max_tokens: int = 50,
         temperature: float = 0.2,
-        top_p: float = 0.95
+        top_p: float = 0.95,
+        max_context_length: int = 70
     ):
         self.max_tokens = max_tokens
         self.temperature = temperature
         self.top_p = top_p
+        self.max_context_length = max_context_length
 
         if not Path(self.ENDPOINT_FILE).exists():
             print("Unknown API endpoint; make sure .BIGCODE15B_ENDPOINT exists and contains the endpoint URL.")
@@ -37,7 +39,7 @@ class Model:
 
         output = self.client.generate(prompt,
                                       do_sample=True,
-                                      max_new_tokens=max_tokens,
+                                      max_new_tokens=self.max_tokens,
                                       temperature=self.temperature,
                                       top_p=self.top_p
                                       ).generated_text
