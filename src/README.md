@@ -15,3 +15,10 @@
 ## Dependencies
 
 * Python +3.6 with tqdm
+* git
+
+Install tree-sitter:
+
+    pip install tree-sitter
+    # from the src directory
+    git clone git@github.com:tree-sitter/tree-sitter-typescript.git

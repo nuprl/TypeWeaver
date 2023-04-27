@@ -48,14 +48,7 @@ reusability. Nevertheless, they may still be helpful.
 
 * Python +3.6 with tqdm
 * Node +16
-* git
 
 Install NPM dependencies:
 
     npm install
-
-Install tree-sitter:
-
-    pip install tree-sitter
-    # from the dataset_tools directory
-    git clone git@github.com:tree-sitter/tree-sitter-typescript.git

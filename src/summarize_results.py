@@ -14,6 +14,7 @@ from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
 from tqdm import tqdm
+from tree_sitter import Language, Parser, Node, Tree
 import argparse, json, os, re, shutil, subprocess
 
 SYSTEMS = {
@@ -22,6 +23,14 @@ SYSTEMS = {
     "InCoder": "ic",
     "SantaCoder": "sc"
 }
+
+Language.build_library(
+    f"{Path(__file__).parent}/build/languages.so",
+    [f"{Path(__file__).parent}/tree-sitter-typescript/typescript"]
+)
+TS_LANGUAGE = Language(f"{Path(__file__).parent}/build/languages.so", 'typescript')
+PARSER = Parser()
+PARSER.set_language(TS_LANGUAGE)
 
 class Summarizer:
     def __init__(self, args):
@@ -257,20 +266,20 @@ class Summarizer:
         output_file = f"{file_prefix}.{SYSTEMS[system]}.csv"
         entry = f"{system},{dataset},{package},{file},0,0,0,0"
 
-        # TODO: use tree-sitter instead of node/tsc?
-        if self.containers:
-            path = Path(Path(__file__).parent, "weaver", "count_annotations").resolve()
-            containerized_file = Path("/data", Path(package_dir, file).relative_to(data_dir))
-            args = [path, containerized_file]
-        else:
-            path = Path(Path(__file__).parent, "weaver", "src", "count_annotations.js").resolve()
-            args = ["node", path, Path(package_dir, file)]
+        query = TS_LANGUAGE.query("(type_annotation) @annotation")
 
-        result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=path.parent)
-        if len(result.stdout) > 0:
-            data = json.loads(result.stdout)
-            if data:
-                entry = f"{system},{dataset},{package},{file},{data['anys']},{data['anyArrays']},{data['functionTypes']},{data['total']}"
+        content_bytes = Path(package_dir, file).read_bytes()
+        tree = PARSER.parse(content_bytes)
+        annotations = [c[0].named_children[0].text.decode("utf-8")
+                       for c in query.captures(tree.root_node)]
+
+        num_any = len([ann for ann in annotations if ann == "any"])
+        num_arr = len([ann for ann in annotations
+                       if ann == "any[]" or ann == "Array<any>"])
+        num_fun = len([ann for ann in annotations if ann == "Function"])
+        total = len(annotations)
+
+        entry = f"{system},{dataset},{package},{file},{num_any},{num_arr},{num_fun},{total}"
 
         return entry, output_file
 

@@ -28,10 +28,10 @@ EXPORT_RE = re.compile("export[^\w_$]")
 EXPORT_RE2 = re.compile("export[^\w_$]\s*(function|class|interface|type|enum|const|declare|default|async)")
 
 Language.build_library(
-    f"{Path(__file__).parent}/build/languages.so",
-    [f"{Path(__file__).parent}/tree-sitter-typescript/typescript"]
+    f"{Path(__file__).parent.parent}/build/languages.so",
+    [f"{Path(__file__).parent.parent}/tree-sitter-typescript/typescript"]
 )
-TS_LANGUAGE = Language(f"{Path(__file__).parent}/build/languages.so", 'typescript')
+TS_LANGUAGE = Language(f"{Path(__file__).parent.parent}/build/languages.so", 'typescript')
 PARSER = Parser()
 PARSER.set_language(TS_LANGUAGE)
 
