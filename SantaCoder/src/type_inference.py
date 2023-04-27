@@ -76,7 +76,7 @@ class TypeInference:
         giving up and returning `any`.
         """
         for _ in range(retries):
-            generated = self.model.infill((prefix, suffix))
+            generated = self.model.infill(prefix, suffix)
 
             # Split on whitespace and keep only the first element
             generated = generated.split()[0]

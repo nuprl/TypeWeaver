@@ -1,91 +1,45 @@
-import os, torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
-
-# This is necessary to avoid crazy warnings when the program creates a subprocess (forks).
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+from pathlib import Path
+from text_generation import Client
 
 class Model:
-    DEVICE = "cuda"
-    MODEL_NAME = "noahshinn024/santacoder-ts"
-    MODEL_REVISION = "main"
-    FIM_PREFIX = "<fim-prefix>"
-    FIM_MIDDLE = "<fim-middle>"
-    FIM_SUFFIX = "<fim-suffix>"
-    FIM_PAD = "<fim-pad>"
+    FIM_PREFIX = "<fim_prefix>"
+    FIM_MIDDLE = "<fim_middle>"
+    FIM_SUFFIX = "<fim_suffix>"
+    FIM_PAD = "<fim_pad>"
     ENDOFTEXT = "<|endoftext|>"
+    ENDPOINT_FILE = ".BIGCODE15B_ENDPOINT"
 
     def __init__(
         self,
         max_tokens: int = 50,
         temperature: float = 0.2,
-        top_p: float = 0.95,
-        max_context_length: int = 70
+        top_p: float = 0.95
     ):
         self.max_tokens = max_tokens
         self.temperature = temperature
         self.top_p = top_p
-        self.max_context_length = max_context_length
 
-        self.model = AutoModelForCausalLM.from_pretrained(
-            self.MODEL_NAME,
-            revision=self.MODEL_REVISION,
-            trust_remote_code=True
-        ).to(self.DEVICE)
-
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            self.MODEL_NAME, padding_side="left")
-
-        # Note that the special tokens must be listed in the order below.
-        self.tokenizer.add_special_tokens({
-            "additional_special_tokens": [
-                self.ENDOFTEXT,
-                self.FIM_PREFIX,
-                self.FIM_MIDDLE,
-                self.FIM_SUFFIX,
-                self.FIM_PAD
-            ],
-            "pad_token": self.ENDOFTEXT,
-        })
+        if not Path(self.ENDPOINT_FILE).exists():
+            print("Unknown API endpoint; make sure .BIGCODE15B_ENDPOINT exists and contains the endpoint URL.")
+            exit(2)
+        endpoint = Path(self.ENDPOINT_FILE).read_text().strip()
+        self.client = Client(endpoint)
 
     def _extract_fim_part(self, s: str) -> str:
         """
         Find the index of <fim-middle>
         """
-        start = s.find(self.FIM_MIDDLE) + len(self.FIM_MIDDLE)
-        stop = s.find(self.ENDOFTEXT, start) or len(s)
-        return s[start:stop]
+        stop = s.find(self.ENDOFTEXT) or len(s)
+        return s[:stop]
 
-    def infill(self, prefix_suffix_tuples):
-        output_list = True
-        if type(prefix_suffix_tuples) == tuple:
-            prefix_suffix_tuples = [prefix_suffix_tuples]
-            output_list = False
-        prompts = [f"{self.FIM_PREFIX}{p}{self.FIM_SUFFIX}{s}{self.FIM_MIDDLE}"
-                for p, s in prefix_suffix_tuples]
+    def infill(self, prefix, suffix):
+        prompt = f"{self.FIM_PREFIX}{prefix}{self.FIM_SUFFIX}{suffix}{self.FIM_MIDDLE}"
 
-        # `return_token_type_ids=False` is essential, or we get nonsense output.
-        inputs = self.tokenizer(
-            prompts,
-            return_tensors="pt",
-            padding=True,
-            return_token_type_ids=False
-        ).to(self.DEVICE)
-        max_length = inputs.input_ids[0].size(0) + self.max_tokens
+        output = self.client.generate(prompt,
+                                      do_sample=True,
+                                      max_new_tokens=max_tokens,
+                                      temperature=self.temperature,
+                                      top_p=self.top_p
+                                      ).generated_text
 
-        with torch.no_grad():
-            outputs = self.model.generate(
-                **inputs,
-                do_sample=True,
-                top_p=self.top_p,
-                temperature=self.temperature,
-                max_length=max_length,
-                pad_token_id=self.tokenizer.pad_token_id
-            )
-        # WARNING: cannot use skip_special_tokens, because it blows away the
-        # FIM special tokens.
-        result = [
-            self._extract_fim_part(
-                self.tokenizer.decode(tensor, skip_special_tokens=False))
-            for tensor in outputs
-        ]
-        return result if output_list else result[0]
+        return self._extract_fim_part(output)
